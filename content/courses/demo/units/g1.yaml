@@ -1,0 +1,47 @@
+id: g1
+title: Bases de grammaire
+subtitle: Constructions simples
+icon: compass
+color: violet
+level: A1
+
+lessons:
+  - id: g1-l1
+    title: Présent simple
+    notes: |
+      Le présent simple sert pour les faits habituels et les vérités générales.
+
+      - À la troisième personne du singulier, le verbe prend un **-s**.
+        She works every morning.
+      - À la forme négative, on utilise `do not` / `does not` + base verbale.
+        They do not live here.
+    points:
+      - id: g1-present-1
+        sentence: He ___ to the office every day.
+        answer: goes
+        options:
+          - goes
+          - go
+          - going
+        translation: Il va au bureau tous les jours.
+        explanation: "Troisième personne du singulier : le verbe prend -s (go → goes)."
+
+      - id: g1-present-2
+        sentence: We ___ not speak Italian.
+        answer: do
+        options:
+          - do
+          - does
+          - did
+        translation: Nous ne parlons pas italien.
+        explanation: "Négation au présent simple avec un sujet pluriel : do not."
+
+      - id: g1-present-3
+        sentence: She ___ a book every week.
+        answer: reads
+        options:
+          - reads
+          - read
+          - reading
+        translation: Elle lit un livre chaque semaine.
+        explanation: "Troisième personne du singulier : le verbe prend -s (read → reads)."

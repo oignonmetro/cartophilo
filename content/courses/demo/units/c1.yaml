@@ -1,0 +1,39 @@
+id: c1
+title: Verbes de base
+subtitle: Présent et passé
+icon: clock
+color: sky
+level: A1
+
+lessons:
+  - id: c1-l1
+    title: To be au présent
+    notes: |
+      `to be` est irrégulier : une forme différente à chaque personne.
+    verbs:
+      - verb: to be
+        translation: être
+        tense: présent
+        note: Verbe irrégulier, à apprendre par cœur.
+        forms:
+          - id: c1-be-1
+            person: I
+            answer: am
+          - id: c1-be-2
+            person: you / we / they
+            answer: are
+          - id: c1-be-3
+            person: he / she / it
+            answer: is
+
+      - verb: to have
+        translation: avoir
+        tense: présent
+        note: Irrégulier à la troisième personne du singulier.
+        forms:
+          - id: c1-have-1
+            person: I / you / we / they
+            answer: have
+          - id: c1-have-2
+            person: he / she / it
+            answer: has

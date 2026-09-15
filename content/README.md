@@ -23,17 +23,17 @@ npm run content:build   # compile vers public/content/
 `course.yaml` déclare un `layout`, qui décide de l'écran d'accueil.
 
 - **`path`** — parcours guidé : les leçons se suivent, la première étoile
-  débloque la suivante. C'est le cours grand débutant (`fr-en`, archivé).
+  débloque la suivante.
 - **`library`** — accès libre : des **pistes** s'affichent en onglets, et
-  l'apprenant choisit ses unités dans l'ordre qu'il veut. C'est le cours B2
-  (`fr-en-b2`).
+  l'apprenant choisit ses unités dans l'ordre qu'il veut. C'est le cours
+  d'exemple (`demo`).
 
 Un contenu qui exige un ordre n'appelle pas pour autant `path` : le parcours
 *interne* d'une unité est déjà ordonné (leçon, révision, consolidation, séance
-finale), seule la bibliothèque qui les contient est libre. L'alphabet russe
-(`fr-ru-a1`) en profite — ses trente-trois lettres et les mots qui les
-réemploient tiennent dans une seule unité, dont l'ordre des leçons garantit
-qu'on ne lit jamais un signe qu'on n'a pas appris.
+finale), seule la bibliothèque qui les contient est libre. Un alphabet en
+profiterait ainsi — ses lettres et les mots qui les réemploient tiendraient
+dans une seule unité, dont l'ordre des leçons garantirait qu'on ne lit jamais
+un signe qu'on n'a pas appris.
 
 ## Les trois natures de contenu
 
@@ -244,7 +244,7 @@ celui que l'app ouvre tant que l'apprenant n'a rien choisi lui-même via le
 sélecteur de niveau (le badge drapeau + niveau, en haut de l'écran). Sans ce
 marqueur explicite, le premier cours par ordre alphabétique de dossier ferait
 office de défaut — ce qui a réellement affiché un niveau vide en premier avant
-que ce champ n'existe. Aujourd'hui c'est `fr-en-b2` qui le porte.
+que ce champ n'existe. Aujourd'hui c'est `demo` qui le porte.
 
 ## Archiver un cours
 

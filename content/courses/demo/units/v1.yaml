@@ -1,0 +1,48 @@
+id: v1
+title: Premiers mots
+subtitle: Vocabulaire de base
+icon: book
+color: teal
+level: A1
+
+lessons:
+  - id: v1-l1
+    title: Le quotidien
+    vocab:
+      - id: demo-to-eat
+        term: to eat
+        translation: manger
+        alt:
+          - se nourrir
+        pos: verbe
+        hint: Verbe de base, très irrégulier au passé (ate, eaten).
+        example:
+          text: We eat dinner at seven every day.
+          translation: Nous mangeons le dîner à sept heures chaque jour.
+
+      - id: demo-house
+        term: house
+        translation: maison
+        pos: nom
+        example:
+          text: Their house has a small garden.
+          translation: Leur maison a un petit jardin.
+
+      - id: demo-happy
+        term: happy
+        translation: heureux
+        alt:
+          - content
+        pos: adjectif
+        example:
+          text: She looks happy today.
+          translation: Elle a l'air heureuse aujourd'hui.
+
+      - id: demo-to-walk
+        term: to walk
+        translation: marcher
+        pos: verbe
+        gap: walked
+        example:
+          text: They walked to school this morning.
+          translation: Ils ont marché jusqu'à l'école ce matin.
