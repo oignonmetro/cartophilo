@@ -101,6 +101,40 @@ En pratique, il n'y a rien à installer localement : le workflow
 `.github/workflows/android.yml` produit l'APK sur GitHub (manuellement, ou
 automatiquement sur un tag `v*`), et l'attache à la release.
 
+### Signature de release
+
+Un tag `v*` (ou un déclenchement manuel avec une version) construit un APK de
+**release**, signé par une clé dédiée — distincte de `debug.keystore`, versionné
+pour que la CI signe toujours pareil. Cette clé de release, elle, ne doit
+**jamais** être versionnée : sa compromission permettrait de publier un faux
+APK que les appareils existants accepteraient comme mise à jour légitime de
+l'app (même mécanisme qui impose une clé stable — voir le commentaire dans
+`android/app/build.gradle`).
+
+À créer une seule fois :
+
+```bash
+keytool -genkeypair -v -keystore release.keystore -alias cartophilo \
+  -keyalg RSA -keysize 2048 -validity 10000
+```
+
+Puis, dans les réglages du dépôt GitHub (**Settings → Secrets and variables →
+Actions**), créer ces secrets :
+
+| Secret | Valeur |
+|---|---|
+| `RELEASE_KEYSTORE_BASE64` | `base64 -w0 release.keystore` |
+| `RELEASE_KEYSTORE_PASSWORD` | mot de passe du keystore |
+| `RELEASE_KEY_ALIAS` | alias choisi ci-dessus |
+| `RELEASE_KEY_PASSWORD` | mot de passe de la clé |
+
+Sans ces secrets, une release échoue explicitement plutôt que de publier un
+APK non signé.
+
+Pour signer un build local, copier `android/keystore.properties.example` vers
+`android/keystore.properties` (gitignored) et le remplir ; `storeFile` y est
+relatif à `android/`, comme `debug.keystore`.
+
 ## Déploiement
 
 - **GitHub Pages** — chaque push sur `main` publie le site. Activer une fois

@@ -28,6 +28,32 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        // Même raisonnement que pour la clé de debug ci-dessus — les mises à
+        // jour en place exigent une signature stable d'une release à l'autre
+        // — mais ici la clé ne doit JAMAIS être versionnée : sa compromission
+        // permettrait à quiconque de publier un faux APK que les appareils
+        // existants accepteraient comme mise à jour légitime. Elle est fournie
+        // par variables d'environnement (voir .github/workflows/android.yml,
+        // qui les peuple depuis les secrets du dépôt), ou localement via
+        // android/keystore.properties (gitignored — voir keystore.properties.example).
+        release {
+            def props = new Properties()
+            def propsFile = rootProject.file('keystore.properties')
+            if (propsFile.exists()) {
+                propsFile.withInputStream { props.load(it) }
+            }
+            def resolvedStoreFile = System.getenv('RELEASE_KEYSTORE_FILE') ?: props.getProperty('storeFile')
+            storePassword = System.getenv('RELEASE_KEYSTORE_PASSWORD') ?: props.getProperty('storePassword')
+            keyAlias = System.getenv('RELEASE_KEY_ALIAS') ?: props.getProperty('keyAlias')
+            keyPassword = System.getenv('RELEASE_KEY_PASSWORD') ?: props.getProperty('keyPassword')
+            if (resolvedStoreFile) {
+                // rootProject (android/), pas ce module (android/app/) : place
+                // le chemin relatif de keystore.properties au même niveau que
+                // debug.keystore, et fonctionne aussi bien avec un chemin
+                // absolu (celui que fournit la CI).
+                storeFile rootProject.file(resolvedStoreFile)
+            }
+        }
     }
     buildTypes {
         debug {
@@ -36,6 +62,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // Ne s'applique que si signingConfigs.release a bien trouvé une
+            // clé (voir ci-dessus) ; sans ça, un `assembleRelease` local sans
+            // secrets produit un APK release non signé plutôt que d'échouer.
+            if (signingConfigs.release.storeFile != null) {
+                signingConfig signingConfigs.release
+            }
         }
     }
 }
