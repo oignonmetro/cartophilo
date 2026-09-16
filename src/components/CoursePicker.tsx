@@ -25,6 +25,12 @@ import { CheckIcon } from './icons'
  * `library` comme le russe A1 garde sa phrase de présentation tant qu'il
  * reste le seul niveau de sa langue, et la mérite tout autant qu'un cours
  * guidé.
+ *
+ * Un groupe d'un seul cours (aucun autre partageant son `learning` — un
+ * sujet autonome comme « Plotin », pas un niveau parmi d'autres d'une même
+ * langue) saute l'en-tête séparé : `entry.level ?? entry.name` y répéterait
+ * `group.name` mot pour mot faute de niveau à afficher. Le drapeau rejoint
+ * alors la ligne du bouton plutôt que de rester seul au-dessus.
  */
 export function CoursePicker({
   courses,
@@ -73,16 +79,21 @@ export function CoursePicker({
 
         <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto [&>*]:shrink-0">
           {groups.map((group) => {
+            // Un seul cours dans le groupe : pas de niveau à distinguer d'un
+            // autre, donc pas d'en-tête séparé (voir la remarque plus haut).
+            const single = group.courses.length === 1
             const withTagline = group.courses.filter((entry) => entry.tagline)
             const bareLevels = group.courses.filter((entry) => !entry.tagline)
             return (
               <div key={group.learning} className="flex flex-col gap-2">
-                <p className="flex items-center gap-2 px-1 text-xs font-black tracking-wide text-ink-faint uppercase">
-                  <span className="text-base" aria-hidden>
-                    {group.flag}
-                  </span>
-                  {group.name}
-                </p>
+                {!single && (
+                  <p className="flex items-center gap-2 px-1 text-xs font-black tracking-wide text-ink-faint uppercase">
+                    <span className="text-base" aria-hidden>
+                      {group.flag}
+                    </span>
+                    {group.name}
+                  </p>
+                )}
 
                 {withTagline.length > 0 && (
                   <ul className="flex flex-col gap-2">
@@ -96,10 +107,15 @@ export function CoursePicker({
                             entry.id === activeId ? 'border-teal bg-teal/10' : 'border-line bg-paper'
                           }`}
                         >
+                          {single && (
+                            <span className="text-xl" aria-hidden>
+                              {entry.flag}
+                            </span>
+                          )}
                           <span className="flex-1">
-                            {/* Le drapeau et la langue sont déjà dans l'en-tête
-                                du groupe : la ligne ne porte plus que ce qui
-                                distingue un niveau de l'autre. */}
+                            {/* Sans groupe (single), le drapeau est déjà sur la
+                                ligne : elle ne porte plus que ce qui distingue
+                                un niveau de l'autre — ou, seul, son propre nom. */}
                             <span className="text-sm font-extrabold">{entry.level ?? entry.name}</span>
                             {entry.tagline && (
                               <span className="mt-0.5 block text-xs text-ink-soft">{entry.tagline}</span>
@@ -127,10 +143,13 @@ export function CoursePicker({
                           type="button"
                           onClick={() => pick(entry.id)}
                           disabled={switchingTo !== null}
-                          className={`w-full rounded-2xl border-2 py-3 text-center text-sm font-extrabold transition-colors disabled:opacity-60 ${
+                          className={`flex w-full items-center justify-center gap-1.5 rounded-2xl border-2 py-3 text-center text-sm font-extrabold transition-colors disabled:opacity-60 ${
                             entry.id === activeId ? 'border-teal bg-teal/15 text-teal' : 'border-line text-ink-soft'
                           }`}
                         >
+                          {single && (
+                            <span aria-hidden>{entry.flag}</span>
+                          )}
                           {switchingTo === entry.id ? '…' : entry.level ?? entry.name}
                         </button>
                       </li>
