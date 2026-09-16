@@ -88,6 +88,46 @@ const TRACK_TONES: Record<string, { text: string; bg: string; soft: string; bord
     css: 'var(--color-amber)',
     deep: 'var(--color-amber-deep)',
   },
+  yellow: {
+    text: 'text-yellow',
+    bg: 'bg-yellow',
+    soft: 'bg-yellow/10',
+    border: 'border-yellow',
+    css: 'var(--color-yellow)',
+    deep: 'var(--color-yellow-deep)',
+  },
+  green: {
+    text: 'text-green',
+    bg: 'bg-green',
+    soft: 'bg-green/10',
+    border: 'border-green',
+    css: 'var(--color-green)',
+    deep: 'var(--color-green-deep)',
+  },
+  red: {
+    text: 'text-red',
+    bg: 'bg-red',
+    soft: 'bg-red/10',
+    border: 'border-red',
+    css: 'var(--color-red)',
+    deep: 'var(--color-red-deep)',
+  },
+  orange: {
+    text: 'text-orange',
+    bg: 'bg-orange',
+    soft: 'bg-orange/10',
+    border: 'border-orange',
+    css: 'var(--color-orange)',
+    deep: 'var(--color-orange-deep)',
+  },
+  blue: {
+    text: 'text-blue',
+    bg: 'bg-blue',
+    soft: 'bg-blue/10',
+    border: 'border-blue',
+    css: 'var(--color-blue)',
+    deep: 'var(--color-blue-deep)',
+  },
 }
 
 export function LibraryScreen({ course }: { course: LibraryCourse }) {

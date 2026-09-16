@@ -63,6 +63,20 @@
   --color-sky: #38bdf8;
   --color-sky-deep: #0c92cf;
 
+  /* Palette étendue : six pistes distinctes (hors-programme) dépassaient les
+     cinq teintes ci-dessus sans recouper ni le rouge sémantique (`error`)
+     ni les teintes déjà prises. */
+  --color-yellow: #f5d033;
+  --color-yellow-deep: #c9a400;
+  --color-green: #4caf6d;
+  --color-green-deep: #2e8b57;
+  --color-red: #e63946;
+  --color-red-deep: #b4232e;
+  --color-orange: #ff9248;
+  --color-orange-deep: #d9720a;
+  --color-blue: #4b8fe3;
+  --color-blue-deep: #2e5fa3;
+
   --color-success: #34c759;
   --color-success-deep: #1f9b41;
   --color-error: #ff5a5a;

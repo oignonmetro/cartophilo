@@ -24,6 +24,7 @@ import { parse as parseYaml } from 'yaml'
 import { z } from 'zod'
 import {
   courseSchema,
+  unitColorSchema,
   unitSchema,
   GAP,
   type ConjugationLesson,
@@ -68,7 +69,7 @@ const courseFileSchema = z.discriminatedUnion('layout', [
           title: z.string(),
           subtitle: z.string().optional(),
           kind: z.enum(['vocab', 'grammar', 'conjugation']),
-          color: z.enum(['teal', 'violet', 'coral', 'amber', 'sky']).default('teal'),
+          color: unitColorSchema.default('teal'),
           icon: z.string().default('book'),
           dividerBefore: z.boolean().default(false),
           // Vide, une piste publie le squelette d'un niveau avant tout contenu.

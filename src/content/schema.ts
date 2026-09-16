@@ -139,7 +139,18 @@ export const lessonSchema = z.discriminatedUnion('kind', [
   conjugationLessonSchema,
 ])
 
-export const unitColorSchema = z.enum(['teal', 'violet', 'coral', 'amber', 'sky'])
+export const unitColorSchema = z.enum([
+  'teal',
+  'violet',
+  'coral',
+  'amber',
+  'sky',
+  'yellow',
+  'green',
+  'red',
+  'orange',
+  'blue',
+])
 
 export const unitSchema = z.object({
   id: slug,

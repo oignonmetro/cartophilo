@@ -217,6 +217,13 @@ const UNIT_ICONS: Record<string, (props: IconProps) => React.ReactElement> = {
       <path d="m20 20-4.8-4.8" />
     </svg>
   ),
+  /** Ampoule : une thèse, l'idée qu'on défend par des arguments. */
+  bulb: (props) => (
+    <svg {...svgProps(props)}>
+      <path d="M12 3a6.5 6.5 0 0 0-6.5 6.5c0 2.6 1.6 4.2 2.7 5.3.8.8 1.1 1.5 1.1 2.2h5.4c0-.7.3-1.4 1.1-2.2 1.1-1.1 2.7-2.7 2.7-5.3A6.5 6.5 0 0 0 12 3z" />
+      <path d="M9.5 20.5h5M10.3 22.5h3.4" />
+    </svg>
+  ),
 }
 
 export function UnitIcon({ name, ...props }: IconProps & { name: string }) {
@@ -231,4 +238,9 @@ export const UNIT_TONES: Record<UnitColor, { bg: string; deep: string; text: str
   coral: { bg: 'bg-coral', deep: 'var(--color-coral-deep)', text: 'text-coral', ring: 'ring-coral' },
   amber: { bg: 'bg-amber', deep: 'var(--color-amber-deep)', text: 'text-amber', ring: 'ring-amber' },
   sky: { bg: 'bg-sky', deep: 'var(--color-sky-deep)', text: 'text-sky', ring: 'ring-sky' },
+  yellow: { bg: 'bg-yellow', deep: 'var(--color-yellow-deep)', text: 'text-yellow', ring: 'ring-yellow' },
+  green: { bg: 'bg-green', deep: 'var(--color-green-deep)', text: 'text-green', ring: 'ring-green' },
+  red: { bg: 'bg-red', deep: 'var(--color-red-deep)', text: 'text-red', ring: 'ring-red' },
+  orange: { bg: 'bg-orange', deep: 'var(--color-orange-deep)', text: 'text-orange', ring: 'ring-orange' },
+  blue: { bg: 'bg-blue', deep: 'var(--color-blue-deep)', text: 'text-blue', ring: 'ring-blue' },
 }
