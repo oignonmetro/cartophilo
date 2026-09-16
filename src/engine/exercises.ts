@@ -2,6 +2,7 @@ import type { ConjugationForm, ConjugationVerb, GrammarPoint, Lesson, PracticeIt
 import { GAP } from '@/content/schema'
 import { itemsOfLesson } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
+import { splitNoteSections } from '@/content/notes'
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
 import type { CardState } from './srs'
 
@@ -9,14 +10,10 @@ import type { CardState } from './srs'
  * Génération des exercices d'une session.
  *
  * Pour le vocabulaire, une leçon se découpe en blocs de trois-quatre mots
- * nouveaux : chaque bloc les présente, puis les fait travailler avant de
- * passer aux suivants, plutôt que de présenter tous les mots d'un coup pour
- * les noyer ensuite dans un grand mélange. Cinq familles d'exercices :
- *   - `intro`     : présentation d'un mot nouveau, avec auto-évaluation en trois
- *                   boutons — tout est déjà visible, inutile de le redemander
- *                   aussitôt dans une flashcard séparée. Réservée aux mots
- *                   sans carte de révision : rejouer une leçon déjà sue ne
- *                   la réintroduit pas ;
+ * nouveaux : chaque bloc les fait travailler avant de passer aux suivants,
+ * plutôt que de tout mélanger d'un coup. Aucun mot n'a d'écran de
+ * présentation à part (voir `buildVocabSession`) : quatre familles
+ * d'exercices, chacune déjà un vrai test, pas une auto-évaluation :
  *   - `match`     : relier des mots à leurs traductions ;
  *   - `choice`    : reconnaître la bonne traduction parmi des leurres (QCM) ;
  *   - `cloze`     : compléter une phrase en piochant dans une banque de mots ;
@@ -25,8 +22,8 @@ import type { CardState } from './srs'
  *                   mots déjà rencontrés plutôt qu'une leçon neuve. `flashcard`
  *                   n'y sert qu'en dernier ressort, quand le bassin est trop
  *                   pauvre pour un QCM et le mot sans exemple pour une phrase
- *                   à trou : l'auto-évaluation ne se redemande pas une fois
- *                   qu'elle a eu lieu à la présentation.
+ *                   à trou : l'auto-évaluation, là, reste la seule façon de
+ *                   faire avancer la carte.
  *
  * La grammaire et la conjugaison ne se ramènent pas à des paires
  * terme/traduction : elles ont leurs propres exercices, et suivent elles le
@@ -600,17 +597,14 @@ function between(min: number, max: number, rng: Rng): number {
  *
  * `level` ne joue que pour la grammaire et la conjugaison : c'est le nombre
  * d'étoiles déjà obtenues (0 à 2), qui détermine la difficulté du passage
- * suivant (présentation puis reconnaissance, puis production). Le
- * vocabulaire l'ignore : ses blocs suivent toujours la même progression,
- * quel que soit le nombre de passages sur la leçon — sauf pour la
- * présentation elle-même, qui suit `cards` plutôt que `level` (voir
- * `buildVocabSession`).
+ * suivant (reconnaissance puis production). Le vocabulaire l'ignore : ses
+ * blocs suivent toujours la même progression, quel que soit le nombre de
+ * passages sur la leçon.
  */
 export function buildLessonSession(
   lesson: Lesson,
   level: number,
   seed?: number,
-  cards: Record<string, CardState> = {},
   /**
    * L'appareil sait-il prononcer ? Passé en paramètre plutôt que lu depuis
    * `lib/speech` : le moteur reste pur, testable sans navigateur, et une
@@ -628,7 +622,7 @@ export function buildLessonSession(
   const resolved = seed ?? seedFrom(lesson.id, level)
   switch (lesson.kind) {
     case 'vocab':
-      return buildVocabSession(lesson.id, lesson.vocab, lesson.notes, lesson.title, cards, resolved, canSpeak, rank)
+      return buildVocabSession(lesson.id, lesson.vocab, lesson.notes, lesson.title, resolved, canSpeak, rank)
     case 'grammar':
       return buildGrammarSession(lesson.id, lesson.points, lesson.notes, lesson.title, level, resolved, canSpeak)
     case 'conjugation':
@@ -753,25 +747,28 @@ function serveLeastFirst<T>(
  * piochent dans tous les mots déjà présentés, pas seulement les siens — le
  * chemin révise en avançant plutôt que de cloisonner chaque bloc.
  *
- * `cards` dit quels mots ont déjà une carte de révision, donc ont déjà été
- * présentés au moins une fois — dans cette leçon lors d'un essai précédent,
- * ou ailleurs si le même mot est enseigné à deux endroits. Un mot connu ne
- * reçoit pas de nouvel écran de présentation : rejouer une leçon déjà sue ne
- * doit pas rouvrir son cours du premier jour, seulement remettre ses mots au
- * travail dans les blocs qui suivent.
+ * Un mot n'a pas d'écran de présentation à part : la première rencontre se
+ * fait dans la manche d'association qui suit, où le terme et sa traduction
+ * apparaissent déjà côte à côte, sans qu'aucune mauvaise réponse ne soit
+ * jamais proposée comme vraie ; c'est elle qui introduit, le QCM et la
+ * phrase à trou qui testent ensuite. L'auto-évaluation à trois boutons
+ * (savais / incertain / nouveau) a existé ici, mais elle se déclarait
+ * fiable sur un mot qu'on vient de découvrir dans la même respiration ;
+ * mieux vaut la remplacer par un vrai test, fût-il plus indulgent au
+ * premier tour.
  *
- * `notes`, quand la leçon en porte, ouvre la session par un rappel — le seul
- * endroit où le vocabulaire a besoin d'expliquer une règle plutôt que de la
- * laisser se déduire des mots : l'accord numéral-nom du russe change la
- * forme du nom compté à chaque leçon de chiffres, sans qu'aucun mot pris
- * isolément ne le montre.
+ * `notes`, quand la leçon en porte, ouvre la session par un rappel. Le
+ * texte peut se couper en plusieurs rappels distincts sur une ligne
+ * `===` (voir `splitNoteSections`) : chacun s'affiche avant le bloc de
+ * mots qui lui correspond, plutôt que de tout dire avant le premier
+ * exercice, utile dès que le rappel est long, ou qu'il a plus à
+ * expliquer que ce qu'un seul mot pris isolément peut montrer.
  */
 function buildVocabSession(
   lessonId: string,
   vocab: readonly Vocab[],
   notes: string | undefined,
   title: string,
-  cards: Record<string, CardState>,
   seed: number,
   canSpeak: boolean,
   rank: number,
@@ -785,10 +782,12 @@ function buildVocabSession(
   // d'un mot dans sa leçon plutôt que le mot lui-même.
   const presented = vocab.every((word) => word.pos === 'nombre') ? vocab : shuffle(vocab, rng)
   const blocks = blocksOf(presented)
+  // Un seul rappel sans marqueur `===` reste un seul rappel, devant le
+  // premier bloc : le comportement d'origine, celui de tout le contenu déjà
+  // écrit.
+  const sections = notes ? splitNoteSections(notes) : []
 
-  const exercises: Exercise[] = notes
-    ? [{ kind: 'rule', id: `rule:${lessonId}`, title, notes, topic: 'vocab' }]
-    : []
+  const exercises: Exercise[] = []
   const pool: Vocab[] = []
   const served: Served = new Map()
   // La rampe des manches d'association traverse les blocs au lieu de repartir
@@ -797,12 +796,13 @@ function buildVocabSession(
   // que deux leçons — sans ce report, la sixième paire n'apparaîtrait jamais.
   let ramp = rank
 
-  for (const block of blocks) {
+  blocks.forEach((block, blockIndex) => {
     pool.push(...block)
 
-    const blockExercises: Exercise[] = block
-      .filter((word) => !cards[word.id])
-      .map((word): IntroExercise => ({ kind: 'intro', id: `intro:${word.id}`, vocab: word }))
+    const section = sections[blockIndex]
+    const blockExercises: Exercise[] = section
+      ? [{ kind: 'rule', id: `rule:${lessonId}:${blockIndex}`, title, notes: section, topic: 'vocab' }]
+      : []
 
     const rounds = matchRounds(pool, between(...MATCH_ROUNDS_PER_BLOCK, rng), rng, ramp, canSpeak)
     ramp += rounds.length
@@ -873,10 +873,10 @@ function buildVocabSession(
     // mot, ou une phrase à trou reprendre celui du QCM qui la précède : ces
     // chocs locaux sont désamorcés à l'intérieur du bloc. La correction reste
     // bornée au bloc plutôt qu'à la session entière, sinon elle pourrait
-    // aller chercher un mot du bloc suivant et faire apparaître sa
-    // présentation en avance, avant même le reste de son propre bloc.
+    // aller chercher un mot du bloc suivant et faire apparaître sa première
+    // rencontre en avance, avant même le reste de son propre bloc.
     exercises.push(...avoidAdjacentRepeats(blockExercises))
-  }
+  })
   return exercises
 }
 

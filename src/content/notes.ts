@@ -184,3 +184,30 @@ export function splitAside(text: string): { main: string; aside: string | null }
   if (!match) return { main: text, aside: null }
   return { main: match[1], aside: match[2] }
 }
+
+const SECTION_BREAK = /^={3,}$/
+
+/**
+ * Sépare des `notes:` en plusieurs rappels distincts, sur une ligne ne
+ * portant que `===`.
+ *
+ * Un rappel trop long à avaler d'un coup gagne à se répartir sur la session
+ * plutôt qu'à tout dire avant le premier exercice (voir `buildVocabSession`,
+ * qui présente le rappel `i` avant le bloc de mots `i`). Sans marqueur, tout
+ * le texte reste un seul rappel : le comportement d'origine, celui de tout
+ * le contenu déjà écrit.
+ */
+export function splitNoteSections(notes: string): string[] {
+  const sections: string[] = []
+  let current: string[] = []
+  for (const raw of notes.split('\n')) {
+    if (SECTION_BREAK.test(raw.trim())) {
+      sections.push(current.join('\n'))
+      current = []
+      continue
+    }
+    current.push(raw)
+  }
+  sections.push(current.join('\n'))
+  return sections.map((section) => section.trim()).filter((section) => section.length > 0)
+}

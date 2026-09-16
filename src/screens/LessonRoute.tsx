@@ -55,7 +55,6 @@ function LessonSession({ lessonId }: { lessonId: string }) {
       // L'avancement entre dans la graine : rouvrir une leçon un autre jour ne
       // doit pas redonner la même session, exercice pour exercice.
       seedFrom(entry.lesson.id, level, attempt, lessonProgress(entry.lesson, cards)),
-      cards,
       undefined,
       sectionRank(entry.unit, entry.lesson.id),
     )

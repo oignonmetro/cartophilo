@@ -49,120 +49,39 @@ function kinds(session: Exercise[]): string[] {
 }
 
 describe('session de leçon', () => {
-  it('présente et note chaque mot en un seul écran', () => {
-    // La présentation montre déjà tout (terme, traduction, exemple) : une
-    // flashcard séparée juste après ne testerait rien de plus, elle ne ferait
-    // que répéter ce qui vient d'être lu. L'auto-évaluation est donc portée
-    // par l'écran de présentation lui-même.
-    const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0)
-    const intros = session.filter((exercise) => exercise.kind === 'intro')
-    expect(intros).toHaveLength(LESSON.length)
-    for (const intro of intros) {
-      expect(itemIdsOf(intro)).toEqual([intro.vocab.id])
-    }
-  })
-
-  it('alterne présentations et exercices au lieu de tout présenter d’un coup', () => {
-    // Six mots donnent deux blocs de trois : on découvre la moitié des mots,
-    // on les travaille, puis on découvre l'autre moitié. Présenter les six
-    // d'affilée demanderait de tout retenir avant le premier exercice.
-    const session = kinds(buildLessonSession(lessonOf('u1-l1', LESSON), 0))
-    const introIndexes = session
-      .map((kind, index) => (kind === 'intro' ? index : -1))
-      .filter((index) => index !== -1)
-    expect(introIndexes).toHaveLength(LESSON.length)
-
-    // Des exercices s'intercalent : les présentations ne sont pas toutes
-    // groupées en tête de session.
-    const firstNonIntro = session.findIndex((kind) => kind !== 'intro')
-    expect(introIndexes.some((index) => index > firstNonIntro)).toBe(true)
-    expect(session.slice(0, firstNonIntro)).toHaveLength(Math.ceil(LESSON.length / 2))
-  })
-
-  it('présente chaque mot avant de le faire travailler', () => {
-    // La contrainte que le découpage en blocs doit préserver : aucun exercice
-    // ne peut porter sur un mot qui n'a pas encore été présenté.
+  it('ne construit jamais d’écran de présentation à part (`intro`)', () => {
+    // Un mot n'a plus de flashcard séparée où s'auto-évaluer avant tout test
+    // réel : sa première rencontre se fait déjà dans un exercice qui compte
+    // (association, QCM, phrase à trou).
     for (const seed of [1, 2, 3, 4, 5]) {
-      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, {}, true)
-      const introduced = new Set<string>()
-      for (const exercise of session) {
-        if (exercise.kind === 'intro') {
-          introduced.add(exercise.vocab.id)
-          continue
-        }
-        for (const id of itemIdsOf(exercise)) expect(introduced.has(id)).toBe(true)
-      }
+      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed)
+      expect(kinds(session)).not.toContain('intro')
     }
   })
 
-  it('répartit les mots entre les blocs plutôt que d’entasser le reste', () => {
-    // La taille des blocs vise quatre, mais le reste se répartit : cinq mots
-    // font 3 + 2, six font 3 + 3, sept font 4 + 3. Sans ça, un reliquat trop
-    // maigre était recollé au bloc précédent et l'on retombait sur un bloc
-    // unique — toutes les présentations d'affilée.
-    const introRuns = (count: number): number[] => {
-      const words = Array.from({ length: count }, (_, i) => word(`w${i}`, `word${i}`, `mot${i}`, `Example ${i}.`))
-      const session = kinds(buildLessonSession(lessonOf('u1-l1', words), 0))
-      const runs: number[] = []
-      let run = 0
-      for (const kind of session) {
-        if (kind === 'intro') run += 1
-        else if (run > 0) {
-          runs.push(run)
-          run = 0
-        }
-      }
-      if (run > 0) runs.push(run)
-      return runs
+  it('répartit un rappel à plusieurs sections avant chaque bloc plutôt que tout dire au début', () => {
+    // Douze mots (`blocksOf(12, 4)`) donnent trois blocs de quatre : un
+    // rappel coupé en trois sections sur des lignes `===` doit donc
+    // apparaître trois fois, chacune devant le bloc qu'elle introduit — pas
+    // les trois d'affilée avant le premier exercice.
+    const big = [...LESSON, ...LESSON.map((w) => ({ ...w, id: `${w.id}-2` }))]
+    const withNotes: VocabLesson = {
+      kind: 'vocab',
+      id: 'big',
+      title: 'Grande leçon',
+      vocab: big,
+      notes: 'Premier rappel.\n===\nDeuxième rappel.\n===\nTroisième rappel.',
     }
+    const session = buildLessonSession(withNotes, 0)
+    const rules = session.filter((exercise) => exercise.kind === 'rule')
+    expect(rules.map((rule) => rule.notes)).toEqual(['Premier rappel.', 'Deuxième rappel.', 'Troisième rappel.'])
 
-    expect(introRuns(5)).toEqual([3, 2])
-    expect(introRuns(6)).toEqual([3, 3])
-    expect(introRuns(7)).toEqual([4, 3])
-    expect(introRuns(8)).toEqual([4, 4])
+    const ruleIndexes = session.map((exercise, index) => (exercise.kind === 'rule' ? index : -1)).filter((i) => i !== -1)
+    expect(ruleIndexes[1]! - ruleIndexes[0]!).toBeGreaterThan(1)
+    expect(ruleIndexes[2]! - ruleIndexes[1]!).toBeGreaterThan(1)
   })
 
-  it('présente les chiffres dans l’ordre de l’auteur, jamais mélangés', () => {
-    // Mélanger « un, deux, trois » retire tout ce que l'ordre enseigne : un
-    // chiffre appris avant les précédents ne dit rien tant qu'on ne sait pas
-    // encore où il tombe dans la suite. Ne vaut que pour une leçon entièrement
-    // faite de chiffres — le reste continue de mélanger.
-    const numbers: Vocab[] = ['un', 'deux', 'trois', 'quatre', 'cinq', 'six'].map((translation, i) => ({
-      ...word(`n${i}`, `w${i}`, translation),
-      pos: 'nombre',
-    }))
-    for (const seed of [1, 2, 3, 4, 5]) {
-      const session = buildLessonSession(lessonOf('u7-l1', numbers), 0, seed)
-      const order = session.filter((exercise) => exercise.kind === 'intro').map((exercise) => exercise.vocab.id)
-      expect(order).toEqual(numbers.map((n) => n.id))
-    }
-  })
-
-  it('mélange toujours une leçon qui ne porte pas que des chiffres', () => {
-    const mixed: Vocab[] = [
-      { ...word('n0', 'w0', 'un'), pos: 'nombre' },
-      { ...word('n1', 'w1', 'deux'), pos: 'nombre' },
-      { ...word('n2', 'w2', 'trois'), pos: 'nombre' },
-      { ...word('w3', 'w3', 'nombre'), pos: 'nom' },
-    ]
-    const orders = new Set<string>()
-    for (const seed of [1, 2, 3, 4, 5]) {
-      const session = buildLessonSession(lessonOf('u4-l1', mixed), 0, seed)
-      const order = session.filter((exercise) => exercise.kind === 'intro').map((exercise) => exercise.vocab.id)
-      orders.add(order.join())
-    }
-    expect(orders.size).toBeGreaterThan(1)
-  })
-
-  it('ne compte pas la découverte d’un mot dans le score de la leçon', () => {
-    // Déclarer nouveau un mot jamais vu n'est pas une faute : compté comme
-    // telle, huit mots annoncés nouveaux suffisaient à faire échouer la
-    // leçon d'un apprenant honnête.
-    const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0)
-    expect(session.filter((exercise) => exercise.kind === 'intro').every(isPresentation)).toBe(true)
-  })
-
-  it('propose des manches d’association, des QCM puis des phrases à trou après la présentation', () => {
+  it('propose des manches d’association, des QCM puis des phrases à trou', () => {
     const session = kinds(buildLessonSession(lessonOf('u1-l1', LESSON), 0))
     expect(session).toContain('match')
     expect(session).toContain('choice')
@@ -175,7 +94,7 @@ describe('session de leçon', () => {
     // écriture non latine (l'alphabet russe), lire sans jamais tracer laisse
     // la moitié du travail non fait.
     for (const seed of [1, 2, 3, 4, 5]) {
-      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, {}, true)
+      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, true)
       const themes = session.filter((exercise) => exercise.kind === 'type')
       expect(themes.length).toBeGreaterThan(0)
       expect(themes.every((exercise) => exercise.direction === 'to-learning')).toBe(true)
@@ -195,7 +114,7 @@ describe('session de leçon', () => {
     // transcrire dans un alphabet nouveau.
     const cues = new Set<string>()
     for (const seed of [1, 2, 3, 4, 5, 6, 7, 8]) {
-      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, {}, true)
+      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, true)
       for (const exercise of session.filter((e) => e.kind === 'type')) cues.add(exercise.cue)
     }
     expect(cues).toEqual(new Set(['text', 'audio']))
@@ -203,7 +122,7 @@ describe('session de leçon', () => {
 
   it('ne propose jamais de dictée sans synthèse vocale', () => {
     for (const seed of [1, 2, 3, 4, 5]) {
-      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, {}, false)
+      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, false)
       expect(session.filter((e) => e.kind === 'type').every((e) => e.cue === 'text')).toBe(true)
     }
   })
@@ -213,7 +132,7 @@ describe('session de leçon', () => {
     // lecture, quel que soit le nombre de manches sur toute une leçon.
     const cues = new Set<string>()
     for (const seed of [1, 2, 3, 4, 5, 6, 7, 8]) {
-      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, {}, true)
+      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, true)
       for (const exercise of session.filter((e) => e.kind === 'match')) cues.add(exercise.cue)
     }
     expect(cues).toEqual(new Set(['text', 'audio']))
@@ -221,7 +140,7 @@ describe('session de leçon', () => {
 
   it('ne propose jamais de manche d’association à l’audio sans synthèse vocale', () => {
     for (const seed of [1, 2, 3, 4, 5]) {
-      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, {}, false)
+      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, false)
       expect(session.filter((e) => e.kind === 'match').every((e) => e.cue === 'text')).toBe(true)
     }
   })
@@ -273,7 +192,7 @@ describe('session de leçon', () => {
     // l'énoncé (le sens quand on montre le mot, la forme sinon), et une option
     // qui vaudrait la réponse offrirait deux bonnes cases.
     for (const seed of [1, 2, 3, 4, 5]) {
-      const choices = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, {}, true).filter(
+      const choices = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, true).filter(
         (e) => e.kind === 'choice',
       )
       expect(choices.length).toBeGreaterThan(0)
@@ -340,41 +259,6 @@ describe('session de leçon', () => {
     expect(kinds(buildLessonSession(lessonOf('x', tiny), 0))).not.toContain('match')
   })
 
-  it('ne réintroduit pas un mot qui a déjà une carte de révision', () => {
-    // Régression : rejouer une leçon déjà sue rouvrait sa présentation en
-    // entier, huit écrans « nouveau mot » avant le premier vrai exercice —
-    // exactement ce que `lessonDifficulty` était censé éviter avant que le
-    // vocabulaire ne passe aux blocs.
-    const known: Record<string, CardState> = Object.fromEntries(
-      LESSON.map((v) => [v.id, createCard(v.id, T0)]),
-    )
-    const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, undefined, known)
-    expect(kinds(session)).not.toContain('intro')
-    // Le reste du bloc continue de faire travailler ces mots.
-    expect(kinds(session)).toContain('match')
-    expect(kinds(session)).toContain('choice')
-    expect(kinds(session)).toContain('cloze')
-  })
-
-  it('ne présente que les mots réellement nouveaux d’une leçon en partie connue', () => {
-    const known: Record<string, CardState> = { [LESSON[0].id]: createCard(LESSON[0].id, T0) }
-    const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, undefined, known)
-    const introduced = session.filter((e) => e.kind === 'intro').map((e) => e.vocab.id)
-    expect(introduced).not.toContain(LESSON[0].id)
-    expect(introduced).toHaveLength(LESSON.length - 1)
-  })
-
-  it('répartit une grande leçon sur plusieurs blocs plutôt que de tout présenter d’un coup', () => {
-    const big = [...LESSON, ...LESSON.map((w) => ({ ...w, id: `${w.id}-2` }))] // 12 mots
-    const session = kinds(buildLessonSession(lessonOf('big', big), 0))
-    expect(session.filter((kind) => kind === 'intro')).toHaveLength(big.length)
-    // Au moins deux groupes d'intros séparés par d'autres exercices.
-    let groups = 0
-    for (let i = 0; i < session.length; i++) {
-      if (session[i] === 'intro' && session[i - 1] !== 'intro') groups++
-    }
-    expect(groups).toBeGreaterThan(1)
-  })
 })
 
 describe('taille des manches d’association', () => {
@@ -383,7 +267,7 @@ describe('taille des manches d’association', () => {
   )
 
   const matchSizes = (lesson: Vocab[], seed: number, rank = 0, id = 'big') =>
-    buildLessonSession(lessonOf(id, lesson), 0, seed, {}, true, rank)
+    buildLessonSession(lessonOf(id, lesson), 0, seed, true, rank)
       .filter((e) => e.kind === 'match')
       .map((e) => e.pairs.length)
 
@@ -467,7 +351,7 @@ describe('variété des exercices de vocabulaire', () => {
     // même phrase, même trou — parce que chaque bloc repiochait dans tout le
     // bassin sans mémoire de ce qui avait déjà été servi.
     for (const seed of [1, 2, 3, 4, 5]) {
-      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, {}, true)
+      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, true)
       const sigs = targeted(session).map(signature)
       expect(new Set(sigs).size).toBe(sigs.length)
     }
@@ -477,7 +361,7 @@ describe('variété des exercices de vocabulaire', () => {
     // Régression : un tirage uniforme laissait des mots sans le moindre
     // exercice ciblé — vus à la présentation, noyés ensuite dans les paires.
     for (const seed of [1, 2, 3, 4, 5]) {
-      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, {}, true)
+      const session = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, true)
       const touched = new Set(targeted(session).flatMap(itemIdsOf))
       expect(touched.size).toBe(LESSON.length)
     }
@@ -486,7 +370,7 @@ describe('variété des exercices de vocabulaire', () => {
   it('varie l’énoncé des QCM au lieu de toujours demander la forme anglaise', () => {
     const cues = new Set<string>()
     for (const seed of [1, 2, 3, 4, 5]) {
-      for (const exercise of buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, {}, true)) {
+      for (const exercise of buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, true)) {
         if (exercise.kind === 'choice') cues.add(exercise.cue)
       }
     }
@@ -497,7 +381,7 @@ describe('variété des exercices de vocabulaire', () => {
     // Régression : au premier bloc le bassin fait exactement MATCH_SIZE, si
     // bien que trois manches d'affilée portaient les mêmes quatre mots.
     for (const seed of [1, 2, 3, 4, 5]) {
-      const rounds = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, {}, true)
+      const rounds = buildLessonSession(lessonOf('u1-l1', LESSON), 0, seed, true)
         .filter((e) => e.kind === 'match')
         .map((e) => e.pairs.map((p) => p.id).sort().join())
       expect(new Set(rounds).size).toBe(rounds.length)
@@ -505,7 +389,7 @@ describe('variété des exercices de vocabulaire', () => {
   })
 
   it('ne demande le mot à l’oreille que si l’appareil sait prononcer', () => {
-    const silent = buildLessonSession(lessonOf('u1-l1', LESSON), 0, 1, {}, false)
+    const silent = buildLessonSession(lessonOf('u1-l1', LESSON), 0, 1, false)
     expect(silent.some((e) => e.kind === 'choice' && e.cue === 'audio')).toBe(false)
   })
 
@@ -591,7 +475,7 @@ describe('ne pas retomber sur les mêmes exercices', () => {
     for (let pass = 0; pass < 4; pass++) {
       const seed = seedFrom(lesson.id, 0, 0, lessonProgress(lesson, cards))
       sessions.push(
-        buildLessonSession(lesson, 0, seed, cards, true)
+        buildLessonSession(lesson, 0, seed, true)
           .map((exercise) => exercise.id)
           .join('|'),
       )
@@ -609,7 +493,7 @@ describe('ne pas retomber sur les mêmes exercices', () => {
       LESSON.map((vocab) => [vocab.id, createCard(vocab.id, T0)]),
     )
     const build = () =>
-      buildLessonSession(lesson, 0, seedFrom(lesson.id, 0, 0, lessonProgress(lesson, cards)), cards, true)
+      buildLessonSession(lesson, 0, seedFrom(lesson.id, 0, 0, lessonProgress(lesson, cards)), true)
         .map((exercise) => exercise.id)
         .join('|')
     expect(build()).toBe(build())
@@ -888,7 +772,7 @@ describe('session de grammaire', () => {
     // une fois sans que le test devienne hasardeux.
     const cues = new Set<string>()
     for (let seed = 1; seed <= 25; seed++) {
-      const session = buildLessonSession(GRAMMAR, 0, seed, {}, true).filter((e) => e.kind === 'grammar-choice')
+      const session = buildLessonSession(GRAMMAR, 0, seed, true).filter((e) => e.kind === 'grammar-choice')
       for (const exercise of session) cues.add(exercise.cue)
     }
     expect(cues).toContain('audio')
@@ -975,7 +859,7 @@ describe('session de conjugaison', () => {
     // et association.
     const cues = new Set<string>()
     for (const seed of [1, 2, 3, 4, 5, 6, 7, 8]) {
-      const session = buildLessonSession(CONJUGATION, 0, seed, {}, true).filter((e) => e.kind === 'conjugation-choice')
+      const session = buildLessonSession(CONJUGATION, 0, seed, true).filter((e) => e.kind === 'conjugation-choice')
       for (const exercise of session) cues.add(exercise.cue)
     }
     expect(cues).toContain('audio')

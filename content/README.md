@@ -42,7 +42,7 @@ unités puis aux leçons. Les fichiers d'unités n'ont donc pas à le répéter.
 
 | `kind` | Données | Exercices générés |
 |---|---|---|
-| `vocab` | `vocab:` (mots et traductions) | flashcard, association, phrase à trou, saisie |
+| `vocab` | `vocab:` (mots et traductions) | association, QCM, phrase à trou, saisie |
 | `grammar` | `points:` (phrases trouées) | rappel de cours, phrase à trou (banque puis clavier) |
 | `conjugation` | `verbs:` (verbes et leurs formes) | rappel, association personnes/formes, production |
 
@@ -76,6 +76,12 @@ ce qu'un francophone taperait spontanément, et ajoutez-le.
 
 Une leçon de vocabulaire a besoin d'**au moins quatre mots** : en dessous,
 l'exercice d'association ne peut pas se construire.
+
+Aucun mot n'a d'écran de présentation à part : sa première rencontre se fait
+déjà dans un exercice qui compte (association d'abord, où la bonne réponse
+est toujours visible à côté). Autant dire que **`example` mérite d'être
+rempli systématiquement** : c'est de lui que dépend la phrase à trou, le plus
+indulgent des premiers contacts avec un mot nouveau.
 
 ## Ajouter un point de grammaire (`kind: grammar`)
 
@@ -142,6 +148,15 @@ règles ou les pièges :
 Le plus utile est le premier : sur `` `must have` ``, l'œil repère la forme
 étrangère sans avoir à lire la phrase. Les trois autres se paient en
 lisibilité dès qu'on en abuse (deux ou trois par rappel suffisent).
+
+**Vocabulaire seulement (`kind: vocab`) :** une ligne ne portant que `===`
+coupe le rappel en plusieurs sections. Chacune s'affiche avant le bloc de
+mots qui lui correspond (le premier avant les trois-quatre premiers mots, le
+second avant les suivants, etc.), plutôt que tout dire avant le premier
+exercice. Utile dès qu'un rappel est trop long à lire d'un coup, ou couvre
+plusieurs idées qui gagnent à arriver au fil de la leçon plutôt qu'en bloc.
+Sans `===`, tout le texte reste un seul rappel, affiché avant le premier
+bloc.
 
 Le premier paragraphe est l'attaque du rappel : il s'affiche plus grand et
 plus sombre. Écrivez-y l'idée directrice, et laissez les détails aux règles.
