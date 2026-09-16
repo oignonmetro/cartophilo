@@ -1,9 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
-  <!-- Logo : un phi (Φ), la lettre grecque de la philosophie — dessiné en
+  <!-- Logo : deux cartes empilées (l'app est un jeu de fiches) portant un
+       phi minuscule (φ), la lettre grecque de la philosophie — dessiné en
        formes pleines plutôt qu'en glyphe de police, pour rester net et
        cohérent quel que soit le moteur de rendu qui rasterise ce fichier
        (favicon, icônes PWA, lanceur Android — voir tools/icons/build.ts). -->
   <rect width="120" height="120" rx="28" fill="#14B8A6"/>
-  <ellipse cx="60" cy="52" rx="30" ry="26" fill="none" stroke="#FFF8EE" stroke-width="14"/>
-  <rect x="53" y="20" width="14" height="80" rx="7" fill="#FFF8EE"/>
+  <!-- carte du dessous, décalée et pivotée -->
+  <rect x="36" y="30" width="58" height="70" rx="13" fill="#FFF8EE" transform="rotate(9 65 65)"/>
+  <!-- carte du dessus -->
+  <rect x="26" y="22" width="58" height="70" rx="13" fill="#FFF8EE"/>
+  <!-- phi minuscule : une boucle pleine hauteur de carte, puis une hampe
+       qui descend en dessous — pas d'ascendante, pour lire comme une
+       minuscule et non une capitale. -->
+  <ellipse cx="55" cy="50" rx="13" ry="16" fill="none" stroke="#14B8A6" stroke-width="8"/>
+  <rect x="51" y="34" width="8" height="60" rx="4" fill="#14B8A6"/>
 </svg>
