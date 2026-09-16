@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import { Button } from '@/components/Button'
-import { Mascot } from '@/components/Mascot'
 import { ChevronLeftIcon, RefreshIcon } from '@/components/icons'
 
 /**
@@ -79,15 +78,12 @@ export function HardWordsScreen() {
       <main className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto px-4 pt-5 pb-10 [&>*]:shrink-0">
         {/* L'accroche, sans cadre : elle n'est pas cliquable, et lui donner la
             carte des lignes en dessous laisserait croire le contraire. */}
-        <section className="flex items-start gap-3">
-          <Mascot mood="reassuring" size={72} className="-mt-2 shrink-0" />
-          <div className="flex-1 pt-1">
-            <h2 className="text-lg leading-tight font-black text-balance">Vos mots coriaces</h2>
-            <p className="mt-1 text-sm leading-snug text-ink-soft">
-              Tout le monde en a. Ce sont même ceux sur lesquels votre temps rapporte le plus —
-              les autres, vous les savez déjà.
-            </p>
-          </div>
+        <section>
+          <h2 className="text-lg leading-tight font-black text-balance">Vos mots coriaces</h2>
+          <p className="mt-1 text-sm leading-snug text-ink-soft">
+            Tout le monde en a. Ce sont même ceux sur lesquels votre temps rapporte le plus —
+            les autres, vous les savez déjà.
+          </p>
         </section>
 
         <p className="text-xs font-bold uppercase tracking-wide text-ink-faint">

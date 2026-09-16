@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import type { IntroExercise } from '@/engine/exercises'
 import type { Rating } from '@/engine/srs'
 import { Button } from '@/components/Button'
-import { Mascot } from '@/components/Mascot'
 import { speechFor } from '@/lib/speech'
 import { SpeakButton } from './SpeakButton'
 
@@ -41,7 +40,6 @@ export function VocabIntro({ exercise, onRate }: { exercise: IntroExercise; onRa
           transition={{ type: 'spring', stiffness: 320, damping: 24 }}
           className="card-3d flex flex-col items-center gap-3 px-6 py-8 text-center"
         >
-          <Mascot mood="happy" size={84} />
           {/* Le mot et son haut-parleur restent sur la même ligne : c'est le
               mot qu'on écoute, pas l'écran. */}
           <div className="flex items-center justify-center gap-3">

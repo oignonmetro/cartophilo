@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import type { ChoiceCue, ChoiceExercise } from '@/engine/exercises'
 import { choiceAnswer, choicePrompt, choicePromptIsLearningLanguage, normalizeAnswer } from '@/engine/exercises'
 import { Button } from '@/components/Button'
-import { Mascot } from '@/components/Mascot'
 import { learningLanguage, speechFor } from '@/lib/speech'
 import { highlightDiffWords } from './highlightDiffWords'
 import { ListeningPrompt } from './ListeningPrompt'
@@ -53,24 +52,21 @@ export function ChoiceQuestion({
     <div className="flex flex-1 flex-col gap-6">
       <p className="text-center text-sm font-bold uppercase tracking-wide text-ink-faint">{PROMPTS[cue]}</p>
 
-      <div className="flex items-end justify-center gap-3">
-        <Mascot mood={checked ? (correct ? 'happy' : 'disappointed') : 'idle'} size={64} />
-        <div className="card-3d relative flex-1 px-4 py-3 text-center before:absolute before:top-5 before:-left-2 before:h-4 before:w-4 before:rotate-45 before:border-b-2 before:border-l-2 before:border-line before:bg-paper">
-          {cue === 'audio' ? (
-            // L'énoncé est le son lui-même : le mot ne doit pas s'écrire, sinon
-            // il ne reste plus rien à reconnaître. Il se rejoue à volonté, et
-            // part tout seul à l'affichage — sans quoi l'écran est muet et la
-            // question sans énoncé.
-            <ListeningPrompt text={speechFor(vocab)} size={26} onCantListen={onCantListen} />
-          ) : (
-            <span
-              lang={choicePromptIsLearningLanguage(cue) ? learningLanguage() : 'fr'}
-              className="text-xl font-black break-words"
-            >
-              {choicePrompt(vocab, cue)}
-            </span>
-          )}
-        </div>
+      <div className="card-3d px-4 py-3 text-center">
+        {cue === 'audio' ? (
+          // L'énoncé est le son lui-même : le mot ne doit pas s'écrire, sinon
+          // il ne reste plus rien à reconnaître. Il se rejoue à volonté, et
+          // part tout seul à l'affichage — sans quoi l'écran est muet et la
+          // question sans énoncé.
+          <ListeningPrompt text={speechFor(vocab)} size={26} onCantListen={onCantListen} />
+        ) : (
+          <span
+            lang={choicePromptIsLearningLanguage(cue) ? learningLanguage() : 'fr'}
+            className="text-xl font-black break-words"
+          >
+            {choicePrompt(vocab, cue)}
+          </span>
+        )}
       </div>
 
       <OptionList

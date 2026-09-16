@@ -6,7 +6,6 @@ import { courseLabel } from '@/content/course'
 import { buildPath, dayKey, displayedStreak, levelFromXp, type LessonNode } from '@/engine/progress'
 import { dueCards } from '@/engine/srs'
 import { EMPTY_CARDS, EMPTY_LESSON_PROGRESS, useProgress } from '@/store/progressStore'
-import { Mascot } from '@/components/Mascot'
 import { BoltIcon, CheckIcon, ChestIcon, FlameIcon, LockIcon, StarIcon, UnitIcon, UNIT_TONES } from '@/components/icons'
 
 /**
@@ -204,7 +203,6 @@ function ChestNode({ unlocked }: { unlocked: boolean }) {
       >
         <ChestIcon size={30} />
       </div>
-      {unlocked && <Mascot mood="happy" size={70} />}
     </div>
   )
 }

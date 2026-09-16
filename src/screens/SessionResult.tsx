@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/Button'
-import { Mascot } from '@/components/Mascot'
 import { BoltIcon } from '@/components/icons'
 import { COMBO_TIER_LABELS } from '@/components/session/ComboBadge'
 import { accuracyOf, type SessionOutcome } from '@/engine/progress'
@@ -35,14 +34,6 @@ export function SessionResult({
 
   return (
     <div className="flex h-full flex-col items-center justify-center gap-6 overflow-y-auto px-6 py-10 text-center [&>*]:shrink-0">
-      <motion.div
-        initial={{ scale: 0.7, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ type: 'spring', stiffness: 260, damping: 18 }}
-      >
-        <Mascot mood={passed ? 'cheer' : 'disappointed'} size={150} />
-      </motion.div>
-
       <h1 className="text-3xl font-black">{passed ? 'Bien joué !' : 'Presque…'}</h1>
       <p className="max-w-xs text-sm text-ink-soft">
         {passed

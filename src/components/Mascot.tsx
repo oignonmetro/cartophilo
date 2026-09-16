@@ -5,6 +5,11 @@ import { motion } from 'framer-motion'
  * La mascotte : une petite tortue, dessinée en SVG pour rester nette
  * à toutes les tailles et légère dans l'APK. Les expressions changent en
  * échangeant les yeux et la bouche ; la carapace, elle, ne bouge pas.
+ *
+ * ARCHIVÉ — retirée de tous les écrans (design temporaire hérité de
+ * Cartolang, à remplacer). Le composant reste ici comme référence plutôt
+ * que supprimé, au cas où il resservirait ; ce n'est plus du code mort par
+ * oubli, c'est volontaire.
  */
 
 export type MascotMood = 'idle' | 'happy' | 'disappointed' | 'reassuring' | 'cheer' | 'think'

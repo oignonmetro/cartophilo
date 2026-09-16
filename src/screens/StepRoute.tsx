@@ -16,7 +16,6 @@ import { canSpeak } from '@/lib/speech'
 import { SessionScreen } from './SessionScreen'
 import { SessionResult } from './SessionResult'
 import { Button } from '@/components/Button'
-import { Mascot } from '@/components/Mascot'
 
 /** Sessions courtes, comme la révision : on préfère revenir souvent. */
 const STEP_LIMIT = 15
@@ -106,7 +105,6 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
     // impasse, d'où l'échappatoire ci-dessous.
     return (
       <div className="flex h-full flex-col items-center justify-center gap-5 overflow-y-auto px-8 text-center [&>*]:shrink-0">
-        <Mascot mood="think" size={130} />
         <h1 className="text-2xl font-black">Rien à travailler</h1>
         <p className="max-w-xs text-sm text-ink-soft">
           Cette étape reprend ce que vous avez déjà rencontré. Faites d'abord les leçons qui la précèdent, ou

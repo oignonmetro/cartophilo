@@ -9,7 +9,6 @@ import { EMPTY_CARDS, useProgress } from '@/store/progressStore'
 import { SessionScreen } from './SessionScreen'
 import { SessionResult } from './SessionResult'
 import { Button } from '@/components/Button'
-import { Mascot } from '@/components/Mascot'
 import type { PracticeItem } from '@/content/schema'
 
 /** Nombre maximal d'éléments par session de révision : on garde des sessions courtes. */
@@ -52,7 +51,6 @@ export function ReviewRoute() {
   if (exercises.length === 0) {
     return (
       <div className="flex h-full flex-col items-center justify-center gap-5 overflow-y-auto px-8 text-center [&>*]:shrink-0">
-        <Mascot mood="happy" size={130} />
         <h1 className="text-2xl font-black">Rien à réviser</h1>
         <p className="max-w-xs text-sm text-ink-soft">
           Tout est à jour. Travaillez de nouvelles leçons, les révisions reviendront d'elles-mêmes.

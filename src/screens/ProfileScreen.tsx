@@ -10,7 +10,6 @@ import { EMPTY_CARDS, EMPTY_LESSON_PROGRESS, useProgress } from '@/store/progres
 import { canInstallVoice, canSpeak, installSpokenLanguage, isSpokenLanguageInstalled } from '@/lib/speech'
 import { canVibrate } from '@/lib/haptics'
 import { Button } from '@/components/Button'
-import { Mascot } from '@/components/Mascot'
 import { AppUpdateCard } from '@/components/AppUpdateCard'
 import { BoltIcon, ChestIcon, ChevronLeftIcon, FlameIcon } from '@/components/icons'
 
@@ -128,17 +127,14 @@ export function ProfileScreen() {
       </header>
 
       <main className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto px-4 pt-5 pb-16 [&>*]:shrink-0">
-        <section className="card-3d flex items-center gap-4 px-5 py-5">
-          <Mascot mood="idle" size={80} />
-          <div className="flex-1">
-            <p className="text-sm font-bold text-ink-soft">Niveau {level}</p>
-            <div className="mt-2 h-3 overflow-hidden rounded-full bg-line">
-              <div className="h-full rounded-full bg-violet" style={{ width: `${(into / span) * 100}%` }} />
-            </div>
-            <p className="mt-1 text-xs text-ink-faint">
-              {into} / {span} XP vers le niveau {level + 1}
-            </p>
+        <section className="card-3d px-5 py-5">
+          <p className="text-sm font-bold text-ink-soft">Niveau {level}</p>
+          <div className="mt-2 h-3 overflow-hidden rounded-full bg-line">
+            <div className="h-full rounded-full bg-violet" style={{ width: `${(into / span) * 100}%` }} />
           </div>
+          <p className="mt-1 text-xs text-ink-faint">
+            {into} / {span} XP vers le niveau {level + 1}
+          </p>
         </section>
 
         <section className="grid grid-cols-3 gap-3">
