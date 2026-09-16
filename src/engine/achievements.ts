@@ -1,38 +1,42 @@
-import type { ItemLocation } from '@/content/course'
+import type { CourseBucket } from '@/store/progressStore'
 import type { LessonProgressMap } from './progress'
 import type { CardState } from './srs'
 
 /**
  * Succès : des paliers qu'on débloque une fois pour toutes, à côté de la
  * série et du combo qui ne récompensent que l'instant présent. Trois natures
- * d'effort, chacune avec cinq paliers — mots rencontrés, série la plus
+ * d'effort, chacune avec cinq paliers — éléments rencontrés, série la plus
  * longue jamais tenue, leçons menées à leur terme.
  *
- * Propres au cours actif plutôt que cumulés sur tous les cours : le contenu
- * des cours qu'on n'a pas ouverts n'est pas chargé (voir `CourseProvider`),
- * impossible donc de savoir combien de cartes d'un autre cours sont des mots
- * plutôt que des points de grammaire. Et « 300 mots » veut de toute façon
- * mieux dire quelque chose rapporté à une seule langue qu'à un total qui
- * mélangerait anglais et russe. La série fait exception : elle porte sur les
- * jours pratiqués, pas sur un cours en particulier, et reste donc globale
- * (voir `ProgressSnapshot.streak`).
+ * Communs à tous les cours plutôt que propres au cours actif : Cartophilo
+ * juxtapose plusieurs cours d'une même préparation (hors-programme, la vie,
+ * Plotin, Marx) plutôt que plusieurs langues sans rapport entre elles — un
+ * même tableau de succès a donc plus de sens qu'un par cours, qui
+ * repartirait de zéro à chaque changement d'onglet. `itemsLearnedCount` et
+ * `lessonsCompletedCount` somment donc `ProgressSnapshot.cards`/`.lessons`
+ * sur tous les cours du bocal (`CourseBucket`), pas seulement le cours
+ * actif — ce qui suppose de renoncer à ne compter que le vocabulaire
+ * (`kind: 'vocab'`) : le contenu d'un cours non actif n'est pas chargé (voir
+ * `CourseProvider`), impossible donc de savoir quelle nature a chacune de
+ * ses cartes. La série fait exception de longue date : elle porte sur les
+ * jours pratiqués, pas sur un cours en particulier (voir
+ * `ProgressSnapshot.streak`).
  *
- * Les seuils sont calés sur le contenu réel plutôt que ronds au hasard : le
- * russe A1, le plus fourni des cours actuels, compte environ 160 mots et 48
- * leçons — le dernier palier de chaque échelle suppose donc plusieurs cours
- * menés de front, pas un seul poussé à l'extrême.
+ * Les seuils datent de Cartolang (calés sur un seul cours à la fois) et
+ * n'ont pas été recalibrés pour une somme sur plusieurs cours : à revoir une
+ * fois le contenu réel de Cartophilo écrit.
  */
 export interface AchievementTier {
   threshold: number
   label: string
 }
 
-export type AchievementId = 'words' | 'streak' | 'lessons'
+export type AchievementId = 'items' | 'streak' | 'lessons'
 
 export interface AchievementFamily {
   id: AchievementId
   title: string
-  /** Unité affichée dans le texte de progression : « mots », « jours »… */
+  /** Unité affichée dans le texte de progression : « éléments », « jours »… */
   unit: string
   /** Croissants : `achievementStatus` s'arrête au premier seuil non atteint. */
   tiers: readonly AchievementTier[]
@@ -40,14 +44,14 @@ export interface AchievementFamily {
 
 export const ACHIEVEMENTS: readonly AchievementFamily[] = [
   {
-    id: 'words',
-    title: 'Mots appris',
-    unit: 'mots',
+    id: 'items',
+    title: 'Éléments appris',
+    unit: 'éléments',
     tiers: [
-      { threshold: 10, label: 'Premiers mots' },
+      { threshold: 10, label: 'Premiers acquis' },
       { threshold: 50, label: 'Ça prend racine' },
       { threshold: 150, label: 'Bon bagage' },
-      { threshold: 300, label: 'Riche vocabulaire' },
+      { threshold: 300, label: 'Solide bagage' },
       { threshold: 600, label: 'Mémoire d’éléphant' },
     ],
   },
@@ -97,23 +101,22 @@ export function achievementStatus(family: AchievementFamily, value: number): Ach
 }
 
 /**
- * Mots du cours actif effectivement rencontrés : les cartes qui portent sur
- * un élément de vocabulaire, pas une règle de grammaire ni une forme
- * conjuguée — les deux autres piliers d'un cours, mais qu'« appris » ne
- * décrit pas de la même manière.
+ * Éléments effectivement rencontrés, tous cours confondus — mot de
+ * vocabulaire, point de grammaire ou forme de conjugaison sans distinction
+ * (voir la remarque en tête de fichier sur pourquoi ce n'est plus filtré
+ * par nature).
  */
-export function wordsLearnedCount(
-  cards: Record<string, CardState>,
-  itemsById: ReadonlyMap<string, ItemLocation>,
-): number {
+export function itemsLearnedCount(cards: CourseBucket<Record<string, CardState>>): number {
   let count = 0
-  for (const id of Object.keys(cards)) {
-    if (itemsById.get(id)?.item.kind === 'vocab') count += 1
-  }
+  for (const bucket of Object.values(cards)) count += Object.keys(bucket).length
   return count
 }
 
-/** Leçons du cours actif menées à leur terme au moins une fois. */
-export function lessonsCompletedCount(lessons: LessonProgressMap): number {
-  return Object.values(lessons).filter((entry) => entry.level >= 1).length
+/** Leçons menées à leur terme au moins une fois, tous cours confondus. */
+export function lessonsCompletedCount(lessons: CourseBucket<LessonProgressMap>): number {
+  let count = 0
+  for (const bucket of Object.values(lessons)) {
+    count += Object.values(bucket).filter((entry) => entry.level >= 1).length
+  }
+  return count
 }

@@ -1,15 +1,14 @@
 import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useCourse } from '@/content/CourseProvider'
 import {
   ACHIEVEMENTS,
   achievementStatus,
+  itemsLearnedCount,
   lessonsCompletedCount,
-  wordsLearnedCount,
   type AchievementId,
   type AchievementStatus,
 } from '@/engine/achievements'
-import { EMPTY_CARDS, EMPTY_LESSON_PROGRESS, useProgress } from '@/store/progressStore'
+import { useProgress } from '@/store/progressStore'
 import { BookIcon, CheckIcon, ChevronLeftIcon, FlameIcon } from '@/components/icons'
 
 /**
@@ -20,25 +19,24 @@ import { BookIcon, CheckIcon, ChevronLeftIcon, FlameIcon } from '@/components/ic
  * dans le source.
  */
 const FAMILY_STYLE: Record<AchievementId, { Icon: typeof BookIcon; badge: string; bar: string }> = {
-  words: { Icon: BookIcon, badge: 'bg-teal/15 text-teal', bar: 'bg-teal' },
+  items: { Icon: BookIcon, badge: 'bg-teal/15 text-teal', bar: 'bg-teal' },
   streak: { Icon: FlameIcon, badge: 'bg-coral/15 text-coral', bar: 'bg-coral' },
   lessons: { Icon: CheckIcon, badge: 'bg-violet/15 text-violet', bar: 'bg-violet' },
 }
 
 export function AchievementsScreen() {
   const navigate = useNavigate()
-  const { course, itemsById } = useCourse()
-  const cards = useProgress((state) => state.cards[course.id] ?? EMPTY_CARDS)
-  const lessons = useProgress((state) => state.lessons[course.id] ?? EMPTY_LESSON_PROGRESS)
+  const cards = useProgress((state) => state.cards)
+  const lessons = useProgress((state) => state.lessons)
   const streakBest = useProgress((state) => state.streak.best)
 
   const values: Record<AchievementId, number> = useMemo(
     () => ({
-      words: wordsLearnedCount(cards, itemsById),
+      items: itemsLearnedCount(cards),
       streak: streakBest,
       lessons: lessonsCompletedCount(lessons),
     }),
-    [cards, itemsById, streakBest, lessons],
+    [cards, streakBest, lessons],
   )
 
   const statuses = ACHIEVEMENTS.map((family) => achievementStatus(family, values[family.id]))
@@ -58,9 +56,7 @@ export function AchievementsScreen() {
       </header>
 
       <main className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto px-4 pt-5 pb-16 [&>*]:shrink-0">
-        <p className="text-sm text-ink-soft">
-          Propres à {course.name} : un autre cours a ses propres paliers, à son propre rythme.
-        </p>
+        <p className="text-sm text-ink-soft">Communs à tous les cours : le même tableau, quel que soit celui ouvert.</p>
         {statuses.map((status) => (
           <AchievementCard key={status.family.id} status={status} />
         ))}

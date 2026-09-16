@@ -4,8 +4,8 @@ import { useCourse } from '@/content/CourseProvider'
 import { itemsOfCourse } from '@/content/course'
 import { dayKey, displayedStreak, levelFromXp } from '@/engine/progress'
 import { cardStrength, dueCards } from '@/engine/srs'
-import { ACHIEVEMENTS, achievementStatus, lessonsCompletedCount, wordsLearnedCount } from '@/engine/achievements'
-import { EMPTY_CARDS, EMPTY_LESSON_PROGRESS, useProgress } from '@/store/progressStore'
+import { ACHIEVEMENTS, achievementStatus, itemsLearnedCount, lessonsCompletedCount } from '@/engine/achievements'
+import { EMPTY_CARDS, useProgress } from '@/store/progressStore'
 import { canInstallVoice, canSpeak, installSpokenLanguage, isSpokenLanguageInstalled } from '@/lib/speech'
 import { canVibrate } from '@/lib/haptics'
 import { Button } from '@/components/Button'
@@ -39,7 +39,7 @@ const THEME_OPTIONS: { value: 'system' | 'light' | 'dark'; label: string }[] = [
 
 export function ProfileScreen() {
   const navigate = useNavigate()
-  const { course, itemsById } = useCourse()
+  const { course } = useCourse()
   const state = useProgress()
   const [message, setMessage] = useState<string | null>(null)
   const fileInput = useRef<HTMLInputElement>(null)
@@ -74,11 +74,11 @@ export function ProfileScreen() {
 
   const achievementValues = useMemo(
     () => ({
-      words: wordsLearnedCount(state.cards[course.id] ?? EMPTY_CARDS, itemsById),
+      items: itemsLearnedCount(state.cards),
       streak: state.streak.best,
-      lessons: lessonsCompletedCount(state.lessons[course.id] ?? EMPTY_LESSON_PROGRESS),
+      lessons: lessonsCompletedCount(state.lessons),
     }),
-    [state.cards, state.lessons, state.streak.best, course.id, itemsById],
+    [state.cards, state.lessons, state.streak.best],
   )
   const achievementsUnlocked = ACHIEVEMENTS.reduce(
     (total, family) => total + achievementStatus(family, achievementValues[family.id]).unlocked,
