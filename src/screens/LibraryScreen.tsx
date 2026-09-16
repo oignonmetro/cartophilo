@@ -189,6 +189,8 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
       </header>
 
       <main className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto px-4 pt-4 pb-16 [&>*]:shrink-0">
+        <TrackTitle track={track} tone={tone} />
+
         {/* Avant le résumé de piste, et non dedans : c'est l'action du jour,
             celle qui fait revenir ce qui a été appris. Elle vaut pour les
             trois pistes à la fois — mélanger les natures d'exercices vaut
@@ -227,6 +229,13 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   )
 }
 
+/**
+ * Onglets à icône seule : un libellé sous chaque icône se tronquait dès
+ * qu'un cours avait plus de trois ou quatre pistes (« LA MÉ... »,
+ * « L'ÉPIS... » sur les six domaines du hors-programme). Le titre complet
+ * de la piste active s'affiche ailleurs, une seule fois, au lieu de se
+ * répéter en miniature illisible sous chaque icône (voir `TrackTitle`).
+ */
 function TrackTabs({
   tracks,
   activeId,
@@ -247,8 +256,9 @@ function TrackTabs({
             type="button"
             role="tab"
             aria-selected={active}
+            aria-label={track.title}
             onClick={() => onSelect(track.id)}
-            className="relative min-w-0 flex-1 rounded-xl px-2 py-2 text-center"
+            className="relative min-w-0 flex-1 rounded-xl px-2 py-2.5 text-center"
           >
             {/* La pilule glisse d'un onglet à l'autre : le changement se voit sans clignoter. */}
             {active && (
@@ -258,23 +268,34 @@ function TrackTabs({
                 className={`absolute inset-0 rounded-xl ${tone.soft} border-2 ${tone.border}`}
               />
             )}
-            <span
-              className={`relative flex min-w-0 flex-col items-center gap-0.5 text-[0.7rem] font-extrabold uppercase tracking-wide ${
-                active ? tone.text : 'text-ink-faint'
-              }`}
-            >
-              <UnitIcon name={track.icon} size={18} />
-              {/* `min-w-0` sur les ancêtres flex ne suffit pas à lui seul : un
-                  mot sans espace (« CONJUGAISON ») refuse encore de rétrécir
-                  sous sa propre largeur et pousse la ligne d'onglets hors de
-                  l'écran. `truncate` lui donne enfin une largeur bornée par
-                  la colonne, quitte à finir en points de suspension. */}
-              <span className="w-full truncate">{track.title}</span>
+            <span className={`relative flex items-center justify-center ${active ? tone.text : 'text-ink-faint'}`}>
+              <UnitIcon name={track.icon} size={22} />
             </span>
           </button>
         )
       })}
     </div>
+  )
+}
+
+/**
+ * Titre de la piste active, affiché une seule fois au-dessus de son contenu
+ * — ce que l'icône seule, dans l'onglet, ne dit plus (voir `TrackTabs`).
+ */
+function TrackTitle({ track, tone }: { track: Track; tone: (typeof TRACK_TONES)[string] }) {
+  return (
+    <AnimatePresence mode="wait">
+      <motion.h2
+        key={track.id}
+        initial={{ opacity: 0, y: -4 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.15 }}
+        className={`px-1 text-lg font-extrabold ${tone.text}`}
+      >
+        {track.title}
+      </motion.h2>
+    </AnimatePresence>
   )
 }
 
