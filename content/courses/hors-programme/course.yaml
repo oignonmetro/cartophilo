@@ -1,0 +1,60 @@
+# Squelette à vide : six pistes, une par domaine philosophique, sans la
+# moindre unité pour l'instant (voir content/README.md « Publier le
+# squelette d'un niveau avant son contenu »). Le `kind` de chaque piste est
+# un choix provisoire (voir CLAUDE.md « Non encore décidé ») — à ajuster
+# une fois la correspondance entre contenu philosophique et types
+# d'exercice tranchée.
+
+id: hors-programme
+name: Hors-programme
+learning: hors-programme
+known: fr
+flag: 🧭
+tagline: Dissertation hors-programme — tout peut tomber.
+status: available
+default: true
+layout: library
+version: 1
+
+tracks:
+  - id: morale
+    title: La morale
+    kind: vocab
+    color: coral
+    icon: people
+    units: []
+
+  - id: metaphysique
+    title: La métaphysique
+    kind: vocab
+    color: violet
+    icon: compass
+    units: []
+
+  - id: esthetique
+    title: L'esthétique
+    kind: vocab
+    color: amber
+    icon: wave
+    units: []
+
+  - id: politique
+    title: La politique
+    kind: vocab
+    color: sky
+    icon: book
+    units: []
+
+  - id: sciences-humaines
+    title: Les sciences humaines
+    kind: vocab
+    color: teal
+    icon: clock
+    units: []
+
+  - id: epistemologie
+    title: L'épistémologie
+    kind: vocab
+    color: violet
+    icon: compass
+    units: []

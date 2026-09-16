@@ -2,11 +2,12 @@
 # de contenu : il montre les trois pistes (vocabulaire, grammaire,
 # conjugaison) en onglets, et suffit à déclencher tous les types d'exercice
 # de l'application (présentation, association, phrase à trou, saisie,
-# rappel de cours, QCM).
+# rappel de cours, QCM). Utile pour vérifier le moteur indépendamment du
+# contenu réel (voir content/courses/hors-programme, la-vie, plotin, marx).
 #
-# À remplacer par votre propre contenu — voir content/README.md pour la
-# syntaxe de chaque piste. `default: true` doit toujours porter sur
-# exactement un cours : gardez-le ici, ou déplacez-le sur le vôtre.
+# `default: true` est passé sur `hors-programme` : c'est lui qui s'ouvre par
+# défaut désormais. `default: true` doit toujours porter sur exactement un
+# cours.
 
 id: demo
 name: Exemple
@@ -16,7 +17,7 @@ flag: 📘
 level: A1
 tagline: Cours d'exemple — remplacez-moi par votre propre contenu.
 status: available
-default: true
+default: false
 layout: library
 version: 1
 
