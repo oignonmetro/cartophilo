@@ -8,8 +8,8 @@ import type { CapacitorConfig } from '@capacitor/cli'
  * d'aucun serveur — tout, contenu des cours compris, est embarqué.
  */
 const config: CapacitorConfig = {
-  appId: 'app.cartolang',
-  appName: 'Cartolang',
+  appId: 'app.cartophilo',
+  appName: 'Cartophilo',
   webDir: 'dist',
   android: {
     backgroundColor: '#FFF8EE',

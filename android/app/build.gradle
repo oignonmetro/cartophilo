@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace = "app.cartolang"
+    namespace = "app.cartophilo"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "app.cartolang"
+        applicationId "app.cartophilo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

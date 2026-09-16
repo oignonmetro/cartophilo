@@ -98,7 +98,7 @@ export function ProfileScreen() {
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
     link.href = url
-    link.download = `cartolang-${today}.json`
+    link.download = `cartophilo-${today}.json`
     link.click()
     URL.revokeObjectURL(url)
     setMessage('Sauvegarde exportée.')
@@ -359,7 +359,7 @@ export function ProfileScreen() {
           </Button>
           <p className="text-center text-xs text-ink-faint">
             {appVersion
-              ? `Cartolang v${appVersion.versionName} (${appVersion.build})`
+              ? `Cartophilo v${appVersion.versionName} (${appVersion.build})`
               : `${courseLabel(course)} · contenu v${course.version}`}
           </p>
         </section>

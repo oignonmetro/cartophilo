@@ -12,7 +12,7 @@ import { courseSchema, manifestSchema, type Course, type Manifest } from './sche
  * tolérante à un stockage absent, corrompu ou plein.
  */
 
-const STORAGE_KEY = 'cartolang.content-cache.v1'
+const STORAGE_KEY = 'cartophilo.content-cache.v1'
 
 interface Cache {
   manifest: Manifest | null

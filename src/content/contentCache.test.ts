@@ -115,14 +115,14 @@ describe('cache de contenu', () => {
   })
 
   it('ignore un contenu corrompu plutôt que de faire échouer la lecture', () => {
-    localStorage.setItem('cartolang.content-cache.v1', '{ ceci n’est pas du JSON')
+    localStorage.setItem('cartophilo.content-cache.v1', '{ ceci n’est pas du JSON')
     expect(cachedManifest()).toBeNull()
     expect(cachedCourse('fr-en-b2')).toBeNull()
   })
 
   it('ignore une entrée de cours invalide sans perdre les autres', () => {
     localStorage.setItem(
-      'cartolang.content-cache.v1',
+      'cartophilo.content-cache.v1',
       JSON.stringify({ manifest: MANIFEST, courses: { 'fr-en-b2': COURSE, cassé: { id: 'cassé' } } }),
     )
     expect(cachedCourse('fr-en-b2')).toEqual(COURSE)

@@ -10,7 +10,7 @@ import { cachedCourse, cachedManifest } from './contentCache'
  * où un cours sera téléchargé depuis le réseau.
  */
 
-/** `import.meta.env.BASE_URL` vaut "/" en local et dans l'APK, "/cartolang/" sur GitHub Pages. */
+/** `import.meta.env.BASE_URL` vaut "/" en local et dans l'APK, "/cartophilo/" sur GitHub Pages. */
 function contentUrl(path: string): string {
   return `${import.meta.env.BASE_URL}content/${path}`.replace(/([^:]\/)\/+/g, '$1')
 }

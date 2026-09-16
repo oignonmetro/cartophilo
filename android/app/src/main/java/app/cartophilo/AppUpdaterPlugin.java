@@ -1,4 +1,4 @@
-package app.cartolang;
+package app.cartophilo;
 
 import android.app.DownloadManager;
 import android.content.Context;
@@ -27,7 +27,7 @@ import com.getcapacitor.annotation.CapacitorPlugin;
  * venu d'ailleurs que d'un store : ce plugin ne contourne rien, il évite
  * seulement l'aller-retour par le navigateur et le gestionnaire de fichiers.
  * L'autorisation « installer des applications inconnues », une fois accordée
- * à Cartolang, reste valable pour les mises à jour suivantes.
+ * à Cartophilo, reste valable pour les mises à jour suivantes.
  */
 @CapacitorPlugin(name = "AppUpdater")
 public class AppUpdaterPlugin extends Plugin {
@@ -73,10 +73,10 @@ public class AppUpdaterPlugin extends Plugin {
         }
 
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-        request.setTitle("Cartolang");
+        request.setTitle("Cartophilo");
         request.setDescription("Téléchargement de la mise à jour…");
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setDestinationInExternalFilesDir(getContext(), Environment.DIRECTORY_DOWNLOADS, "cartolang-update.apk");
+        request.setDestinationInExternalFilesDir(getContext(), Environment.DIRECTORY_DOWNLOADS, "cartophilo-update.apk");
         request.setMimeType("application/vnd.android.package-archive");
 
         final long id = manager.enqueue(request);

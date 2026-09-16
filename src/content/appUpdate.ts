@@ -39,7 +39,7 @@ export type DownloadOutcome = 'started' | 'permission-required' | 'failed'
 
 /**
  * Télécharge l'APK et ouvre l'installateur système. `permission-required`
- * signale que Android a ouvert ses réglages pour autoriser Cartolang à
+ * signale que Android a ouvert ses réglages pour autoriser Cartophilo à
  * installer des applications — une fois accordée, l'utilisateur n'a qu'à
  * retaper sur le bouton, l'autorisation reste valable pour la suite.
  */

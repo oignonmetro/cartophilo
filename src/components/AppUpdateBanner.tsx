@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useAppUpdate } from '@/content/useAppUpdate'
 import { RefreshIcon } from './icons'
 
-const DISMISSED_KEY = 'cartolang.dismissed-app-version'
+const DISMISSED_KEY = 'cartophilo.dismissed-app-version'
 
 /**
  * Bandeau de mise à jour de l'app (APK), pendant de `UpdatePrompt.tsx` côté
@@ -55,7 +55,7 @@ export function AppUpdateBanner() {
         </div>
         {status === 'permission-required' && (
           <p className="text-xs text-white/80">
-            Autorisez Cartolang à installer des applications dans les réglages qui viennent de s'ouvrir, puis retapez
+            Autorisez Cartophilo à installer des applications dans les réglages qui viennent de s'ouvrir, puis retapez
             sur « Télécharger ».
           </p>
         )}

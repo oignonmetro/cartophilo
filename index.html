@@ -17,7 +17,7 @@
       // phase si l'un des deux change.
       ;(function () {
         try {
-          var raw = localStorage.getItem('cartolang.progress.v1')
+          var raw = localStorage.getItem('cartophilo.progress.v1')
           var theme = raw && JSON.parse(raw).state && JSON.parse(raw).state.theme
           if (theme === 'light' || theme === 'dark') {
             document.documentElement.dataset.theme = theme
@@ -29,7 +29,7 @@
     <meta name="description" content="Apprendre du vocabulaire, leçon par leçon, même hors-ligne." />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-    <title>Cartolang</title>
+    <title>Cartophilo</title>
   </head>
   <body>
     <div id="root"></div>

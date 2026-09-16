@@ -21,7 +21,7 @@ import { createCard, DAY, review, type CardState, type Rating } from '@/engine/s
  * de l'APK. La sauvegarde peut être exportée et réimportée depuis le profil.
  */
 
-export const STORAGE_KEY = 'cartolang.progress.v1'
+export const STORAGE_KEY = 'cartophilo.progress.v1'
 /**
  * Format 2 : les cartes suivent des « éléments » (mot, point de grammaire,
  * forme conjuguée) et non plus seulement des mots — `vocabId` est devenu

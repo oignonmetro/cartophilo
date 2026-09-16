@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// `APP_BASE` is set to "/cartolang/" by the GitHub Pages workflow.
+// `APP_BASE` is set to "/cartophilo/" by the GitHub Pages workflow.
 // The Capacitor build keeps the default "/" since the APK serves from the web root.
 const base = process.env.APP_BASE ?? '/'
 
@@ -22,8 +22,8 @@ export default defineConfig({
       registerType: 'prompt',
       includeAssets: ['favicon.svg', 'icons/*.png'],
       manifest: {
-        name: 'Cartolang',
-        short_name: 'Cartolang',
+        name: 'Cartophilo',
+        short_name: 'Cartophilo',
         description: "Apprendre du vocabulaire, leçon par leçon, même hors-ligne.",
         lang: 'fr',
         theme_color: '#14B8A6',

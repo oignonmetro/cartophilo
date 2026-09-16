@@ -2,7 +2,7 @@ import { useId } from 'react'
 import { motion } from 'framer-motion'
 
 /**
- * Kartu, la mascotte : une petite tortue, dessinée en SVG pour rester nette
+ * La mascotte : une petite tortue, dessinée en SVG pour rester nette
  * à toutes les tailles et légère dans l'APK. Les expressions changent en
  * échangeant les yeux et la bouche ; la carapace, elle, ne bouge pas.
  */
@@ -140,7 +140,7 @@ export function Mascot({ mood = 'idle', size = 120, className }: MascotProps) {
       height={(size * 150) / 120}
       className={className}
       role="img"
-      aria-label="Kartu, la mascotte"
+      aria-label="La mascotte"
       animate={animation}
       transition={{
         duration: mood === 'cheer' ? 0.6 : 2.4,

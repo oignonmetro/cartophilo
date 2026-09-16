@@ -1,22 +1,18 @@
-# Cartolang
+# Cartophilo
 
-Application mobile d'apprentissage des langues, hors-ligne, en français.
-Des flashcards, des exercices d'application, et une révision espacée qui fait
-revenir au bon moment ce qui est fragile.
+Application mobile d'apprentissage, hors-ligne, en français. Des flashcards,
+des exercices d'application, et une révision espacée qui fait revenir au bon
+moment ce qui est fragile.
 
-Trois niveaux d'anglais pour francophones — **B1**, **B2**, **C1** — choisis
-depuis un sélecteur en un clic (le badge drapeau + niveau en haut de l'écran).
-Chacun est structuré de la même façon : quinze unités réparties sur trois
-pistes (vocabulaire, grammaire, conjugaison) que l'apprenant parcourt
-librement, dans l'ordre qu'il veut. Environ 760 éléments en tout.
-
-Le moteur est générique : un cours n'est qu'un jeu de fichiers YAML.
+Le moteur est générique : un cours n'est qu'un jeu de fichiers YAML, structuré
+en unités réparties sur trois pistes (vocabulaire, grammaire, conjugaison) que
+l'apprenant parcourt librement.
 
 ## État
 
 | | |
 |---|---|
-| Cours | B1, B2, C1 (`fr-en-b1/b2/c1`), écrits et jouables ; B2 par défaut. Le cours grand débutant `fr-en` est archivé |
+| Cours | `demo` — cours minimal de démonstration, à remplacer par le vrai contenu (voir `content/README.md`) |
 | Agencements | `library` — pistes en onglets, accès libre ; `path` — parcours guidé |
 | Vocabulaire | flashcard auto-évaluée, association de paires, phrase à trou, saisie clavier |
 | Grammaire | rappel de cours, phrase à trou avec banque de formes puis au clavier |

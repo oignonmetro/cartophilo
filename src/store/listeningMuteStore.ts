@@ -33,7 +33,7 @@ export const useListeningMuteStore = create<ListeningMuteState>()(
       mutedUntil: null,
       muteListening: () => set({ mutedUntil: Date.now() + MUTE_MINUTES * 60_000 }),
     }),
-    { name: 'cartolang.listening-mute.v1' },
+    { name: 'cartophilo.listening-mute.v1' },
   ),
 )
 
