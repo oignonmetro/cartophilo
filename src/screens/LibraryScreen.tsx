@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { Fragment, useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { LibraryCourse, Track, Unit } from '@/content/schema'
@@ -251,27 +251,33 @@ function TrackTabs({
         const tone = TRACK_TONES[track.color] ?? TRACK_TONES.teal
         const active = track.id === activeId
         return (
-          <button
-            key={track.id}
-            type="button"
-            role="tab"
-            aria-selected={active}
-            aria-label={track.title}
-            onClick={() => onSelect(track.id)}
-            className="relative min-w-0 flex-1 rounded-xl px-2 py-2.5 text-center"
-          >
-            {/* La pilule glisse d'un onglet à l'autre : le changement se voit sans clignoter. */}
-            {active && (
-              <motion.span
-                layoutId="track-pill"
-                transition={{ type: 'spring', stiffness: 420, damping: 34 }}
-                className={`absolute inset-0 rounded-xl ${tone.soft} border-2 ${tone.border}`}
-              />
-            )}
-            <span className={`relative flex items-center justify-center ${active ? tone.text : 'text-ink-faint'}`}>
-              <UnitIcon name={track.icon} size={22} />
-            </span>
-          </button>
+          <Fragment key={track.id}>
+            {/* Isole un sous-ensemble de pistes plutôt que de les distinguer
+                par la couleur ou l'ordre seuls — la morale, par exemple,
+                reste aussi à l'oral quand les autres pistes du hors-programme
+                n'y sont pas. */}
+            {track.dividerBefore && <span aria-hidden className="my-2 w-px shrink-0 bg-line" />}
+            <button
+              type="button"
+              role="tab"
+              aria-selected={active}
+              aria-label={track.title}
+              onClick={() => onSelect(track.id)}
+              className="relative min-w-0 flex-1 rounded-xl px-2 py-2.5 text-center"
+            >
+              {/* La pilule glisse d'un onglet à l'autre : le changement se voit sans clignoter. */}
+              {active && (
+                <motion.span
+                  layoutId="track-pill"
+                  transition={{ type: 'spring', stiffness: 420, damping: 34 }}
+                  className={`absolute inset-0 rounded-xl ${tone.soft} border-2 ${tone.border}`}
+                />
+              )}
+              <span className={`relative flex items-center justify-center ${active ? tone.text : 'text-ink-faint'}`}>
+                <UnitIcon name={track.icon} size={22} />
+              </span>
+            </button>
+          </Fragment>
         )
       })}
     </div>

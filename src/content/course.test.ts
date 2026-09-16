@@ -32,6 +32,7 @@ const COURSE: LibraryCourse = {
       kind: 'vocab',
       color: 'teal',
       icon: 'book',
+      dividerBefore: false,
       units: [unit('v1', ['v1-l1', 'v1-l2']), unit('v2', ['v2-l1'])],
     },
     {
@@ -40,6 +41,7 @@ const COURSE: LibraryCourse = {
       kind: 'vocab',
       color: 'violet',
       icon: 'compass',
+      dividerBefore: false,
       units: [unit('g1', ['g1-l1'])],
     },
   ],

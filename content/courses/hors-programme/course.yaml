@@ -10,7 +10,7 @@ name: Hors-programme
 learning: hors-programme
 known: fr
 flag: 🧭
-tagline: Dissertation hors-programme — tout peut tomber.
+tagline: "Sujet libre : tout peut tomber."
 status: available
 default: true
 layout: library
@@ -29,6 +29,9 @@ tracks:
     kind: vocab
     color: violet
     icon: infinity
+    # Sépare la morale du reste : elle seule, parmi ces six pistes, est
+    # aussi au programme de l'oral.
+    dividerBefore: true
     units: []
 
   - id: esthetique

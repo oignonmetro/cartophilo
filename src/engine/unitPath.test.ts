@@ -48,8 +48,8 @@ const COURSE: LibraryCourse = {
   version: 1,
   layout: 'library',
   tracks: [
-    { id: 'vocabulaire', title: 'Vocabulaire', kind: 'vocab', color: 'teal', icon: 'book', units: [U3] },
-    { id: 'grammaire', title: 'Grammaire', kind: 'vocab', color: 'violet', icon: 'compass', units: [U2] },
+    { id: 'vocabulaire', title: 'Vocabulaire', kind: 'vocab', color: 'teal', icon: 'book', dividerBefore: false, units: [U3] },
+    { id: 'grammaire', title: 'Grammaire', kind: 'vocab', color: 'violet', icon: 'compass', dividerBefore: false, units: [U2] },
   ],
 }
 

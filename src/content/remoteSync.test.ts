@@ -67,6 +67,7 @@ function courseWith(version: number): Course {
         kind: 'vocab',
         color: 'teal',
         icon: 'book',
+        dividerBefore: false,
         units: [
           {
             id: 'v1',

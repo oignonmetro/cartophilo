@@ -170,6 +170,8 @@ export const trackSchema = z.object({
   kind: lessonKindSchema,
   color: unitColorSchema.default('teal'),
   icon: z.string().default('book'),
+  /** Trait vertical avant cet onglet, pour isoler un sous-ensemble de pistes. */
+  dividerBefore: z.boolean().default(false),
   units: z.array(unitSchema),
 })
 

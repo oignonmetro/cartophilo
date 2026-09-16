@@ -62,6 +62,7 @@ const COURSE: Course = {
       kind: 'vocab',
       color: 'teal',
       icon: 'book',
+      dividerBefore: false,
       units: [
         {
           id: 'v1',

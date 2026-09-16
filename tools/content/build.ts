@@ -70,6 +70,7 @@ const courseFileSchema = z.discriminatedUnion('layout', [
           kind: z.enum(['vocab', 'grammar', 'conjugation']),
           color: z.enum(['teal', 'violet', 'coral', 'amber', 'sky']).default('teal'),
           icon: z.string().default('book'),
+          dividerBefore: z.boolean().default(false),
           // Vide, une piste publie le squelette d'un niveau avant tout contenu.
           units: z.array(z.string()),
         }),
