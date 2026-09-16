@@ -3,29 +3,20 @@ import { motion } from 'framer-motion'
 import type { TypeExercise } from '@/engine/exercises'
 import { isAnswerCorrect } from '@/engine/exercises'
 import { Button } from '@/components/Button'
-import { learningLanguage, learningLanguageName, speechFor } from '@/lib/speech'
+import { learningLanguage, learningLanguageName } from '@/lib/speech'
 import { CorrectionGap } from './CorrectionGap'
-import { ListeningPrompt } from './ListeningPrompt'
 import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
 
-/**
- * Traduction au clavier, sans contexte : l'exercice le plus exigeant.
- *
- * En dictée (`cue === 'audio'`), l'énoncé écrit disparaît : seul le mot
- * prononcé reste, et c'est lui qui doit guider l'orthographe — voir `TypeCue`.
- */
+/** Traduction au clavier, sans contexte : l'exercice le plus exigeant. */
 export function TypeAnswer({
   exercise,
   onAnswer,
-  onCantListen,
 }: {
   exercise: TypeExercise
   onAnswer: (correct: boolean) => void
-  onCantListen: () => void
 }) {
-  const { vocab, direction, cue } = exercise
-  const dictation = cue === 'audio'
+  const { vocab, direction } = exercise
   const prompt = direction === 'to-known' ? vocab.term : vocab.translation
   const expected = direction === 'to-known' ? vocab.translation : vocab.term
   const [value, setValue] = useState('')
@@ -58,24 +49,13 @@ export function TypeAnswer({
           navigateur fait remonter le champ dans cet espace réduit — sans
           `sticky`, la consigne se retrouvait poussée au-dessus, hors champ. */}
       <p className="sticky top-0 z-10 bg-cream py-1 text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
-        {dictation
-          ? 'Écrivez le mot que vous entendez'
-          : direction === 'to-known'
-            ? 'Traduisez en français'
-            : `Traduisez en ${learningLanguageName()}`}
+        {direction === 'to-known' ? 'Traduisez en français' : `Traduisez en ${learningLanguageName()}`}
       </p>
 
       <div className="card-3d mt-auto flex flex-col items-center gap-2 px-5 py-8 text-center">
-        {dictation ? (
-          // L'énoncé est le son lui-même : voir la même remarque dans
-          // `ChoiceQuestion`. Il part tout seul à l'affichage et se rejoue à
-          // volonté, sans jamais s'écrire.
-          <ListeningPrompt text={speechFor(vocab)} size={32} onCantListen={onCantListen} />
-        ) : (
-          <span lang={direction === 'to-known' ? learningLanguage() : 'fr'} className="text-4xl font-black break-words">
-            {prompt}
-          </span>
-        )}
+        <span lang={direction === 'to-known' ? learningLanguage() : 'fr'} className="text-4xl font-black break-words">
+          {prompt}
+        </span>
         {vocab.pos && <span className="text-xs font-bold uppercase tracking-widest text-ink-faint">{vocab.pos}</span>}
       </div>
 

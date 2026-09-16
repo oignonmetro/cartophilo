@@ -22,16 +22,16 @@ npm run content:build   # compile vers public/content/
 
 `course.yaml` déclare un `layout`, qui décide de l'écran d'accueil.
 
-- **`path`** — parcours guidé : les leçons se suivent, la première étoile
+- **`path`** : parcours guidé, les leçons se suivent, la première étoile
   débloque la suivante.
-- **`library`** — accès libre : des **pistes** s'affichent en onglets, et
+- **`library`** : accès libre, des **pistes** s'affichent en onglets, et
   l'apprenant choisit ses unités dans l'ordre qu'il veut. C'est le cours
   d'exemple (`demo`).
 
 Un contenu qui exige un ordre n'appelle pas pour autant `path` : le parcours
 *interne* d'une unité est déjà ordonné (leçon, révision, consolidation, séance
 finale), seule la bibliothèque qui les contient est libre. Un alphabet en
-profiterait ainsi — ses lettres et les mots qui les réemploient tiendraient
+profiterait ainsi, ses lettres et les mots qui les réemploient tiendraient
 dans une seule unité, dont l'ordre des leçons garantirait qu'on ne lit jamais
 un signe qu'on n'a pas appris.
 
@@ -42,9 +42,9 @@ unités puis aux leçons. Les fichiers d'unités n'ont donc pas à le répéter.
 
 | `kind` | Données | Exercices générés |
 |---|---|---|
-| `vocab` | `vocab:` — mots et traductions | flashcard, association, phrase à trou, saisie |
-| `grammar` | `points:` — phrases trouées | rappel de cours, phrase à trou (banque puis clavier) |
-| `conjugation` | `verbs:` — verbes et leurs formes | rappel, association personnes/formes, production |
+| `vocab` | `vocab:` (mots et traductions) | flashcard, association, phrase à trou, saisie |
+| `grammar` | `points:` (phrases trouées) | rappel de cours, phrase à trou (banque puis clavier) |
+| `conjugation` | `verbs:` (verbes et leurs formes) | rappel, association personnes/formes, production |
 
 ## Ajouter un mot (`kind: vocab`)
 
@@ -70,7 +70,7 @@ que de laisser un mot sans exercice.
 
 Soyez généreux sur **`alt`**. En saisie, seules `translation` et `alt` sont
 acceptées : sans variantes, un apprenant qui tape « bouillir » pour
-`to boil` — traduit « faire bouillir » — est compté faux alors qu'il sait le
+`to boil` (traduit « faire bouillir ») est compté faux alors qu'il sait le
 mot. La règle utile : dès que la traduction fait plus d'un mot, demandez-vous
 ce qu'un francophone taperait spontanément, et ajoutez-le.
 
@@ -122,7 +122,7 @@ notes: |
 
 | Écriture | Rendu |
 |---|---|
-| lignes qui se suivent | un seul paragraphe — repliez librement à 80 colonnes |
+| lignes qui se suivent | un seul paragraphe, repliez librement à 80 colonnes |
 | ligne vide | sépare deux paragraphes |
 | `- …` | une règle, dans un panneau teinté ; les règles voisines forment une liste |
 | `- étiquette : …` | l'étiquette passe en gras coloré (jusqu'à ~48 caractères) |
@@ -134,14 +134,14 @@ règles ou les pièges :
 
 | Écriture | Rendu | À réserver à |
 |---|---|---|
-| `` `will` `` | forme anglaise sur fond léger | une forme citée au milieu du français |
+| `` `will` `` | mot étranger en italique | une forme citée au milieu du français |
 | `**texte**` | gras | l'idée directrice, une opposition |
 | `__texte__` | souligné | le mot qui décide, dans une règle |
 | `*texte*` | italique | une nuance, une glose |
 
 Le plus utile est le premier : sur `` `must have` ``, l'œil repère la forme
-anglaise sans avoir à lire la phrase. Les trois autres se paient en lisibilité
-dès qu'on en abuse — deux ou trois par rappel suffisent.
+étrangère sans avoir à lire la phrase. Les trois autres se paient en
+lisibilité dès qu'on en abuse (deux ou trois par rappel suffisent).
 
 Le premier paragraphe est l'attaque du rappel : il s'affiche plus grand et
 plus sombre. Écrivez-y l'idée directrice, et laissez les détails aux règles.
@@ -150,7 +150,7 @@ Un commentaire final entre parenthèses est automatiquement mis en retrait :
 `- I will call you as soon as I arrive. (jamais « as soon as I will arrive »)`.
 
 **Une règle peut se replier librement**, comme la prose : tant que sa ligne
-reste en suspens — sans point final — la ligne indentée suivante la poursuit.
+reste en suspens (sans point final), la ligne indentée suivante la poursuit.
 C'est la ponctuation qui décide, pas l'indentation.
 
 ```yaml
@@ -163,23 +163,11 @@ C'est la ponctuation qui décide, pas l'indentation.
 Corollaire : **terminez une règle par un point** dès que la ligne indentée qui
 suit doit être lue comme son exemple. Sans cela, l'exemple serait recollé à la
 règle. Une règle qui se termine par une forme citée (`` …`Children learn
-fast.` ``) est bien considérée comme achevée — l'accent grave ne la laisse pas
+fast.` ``) est bien considérée comme achevée : l'accent grave ne la laisse pas
 en suspens.
 
 La validation signale par ailleurs tout accent grave orphelin, qui s'afficherait
 tel quel à l'écran.
-
-### Ce qui se fait entendre
-
-Un bouton d'écoute s'affiche à côté d'une règle dès qu'une forme anglaise y
-est **sûrement** identifiable : une phrase d'exemple complète de préférence,
-sinon les formes citées entre accents graves. Les notes mêlant les deux
-langues, souvent sur la même ligne, tout ce qui n'est pas certainement anglais
-est écarté — mieux vaut pas de bouton qu'une voix anglaise lisant du français.
-Un article seul (`` `a` ``) ne déclenche rien : trop bref pour s'entendre.
-
-En exercice, le bouton n'apparaît **qu'après la réponse**, et lit la forme
-attendue ou la phrase complétée — l'entendre plus tôt donnerait la solution.
 
 ## Ajouter un tableau de conjugaison (`kind: conjugation`)
 
@@ -212,7 +200,7 @@ de problème : l'association compare les libellés, pas les identifiants.
 
 ## Ajouter une unité
 
-1. Créer `units/v5.yaml` — le nom du fichier doit être l'`id` de l'unité.
+1. Créer `units/v5.yaml` (le nom du fichier doit être l'`id` de l'unité).
 2. Référencer `v5` dans la liste `units:` de la piste (ou de la section).
 
 ```yaml
@@ -230,7 +218,7 @@ la validation : le contenu ne peut pas contenir de trou.
 
 ## Publier le squelette d'un niveau avant son contenu
 
-Une piste (`kind: library`) peut avoir `units: []` — aucune unité. L'écran
+Une piste (`kind: library`) peut avoir `units: []`, aucune unité. L'écran
 affiche alors un état « à venir » pour cette piste plutôt qu'une page vide qui
 ressemblerait à un bug. C'est ainsi que les niveaux B1 et C1 ont existé dans
 le sélecteur avant d'avoir leur contenu ; aujourd'hui les trois cours sont
@@ -243,8 +231,8 @@ Un seul cours devrait porter `default: true` dans son `course.yaml` : c'est
 celui que l'app ouvre tant que l'apprenant n'a rien choisi lui-même via le
 sélecteur de niveau (le badge drapeau + niveau, en haut de l'écran). Sans ce
 marqueur explicite, le premier cours par ordre alphabétique de dossier ferait
-office de défaut — ce qui a réellement affiché un niveau vide en premier avant
-que ce champ n'existe. Aujourd'hui c'est `demo` qui le porte.
+office de défaut (ce qui a réellement affiché un niveau vide en premier avant
+que ce champ n'existe). Aujourd'hui c'est `demo` qui le porte.
 
 ## Archiver un cours
 
@@ -264,13 +252,13 @@ proposent la mise à jour au prochain démarrage avec du réseau.
 ## Ce que la validation vérifie
 
 - identifiants uniques (éléments et leçons) sur tout le cours ;
-- traduction distincte du terme — signalée en remarque, pas bloquante :
+- traduction distincte du terme (signalée en remarque, pas bloquante) :
   une carte « motif → motif » n'enseigne rien et l'association afficherait le
   même mot des deux côtés. Donnez une traduction qui informe, et gardez la
   forme identique dans `alt` ;
-- verbe noté à l'infinitif (`to yield`) — remarque : c'est la convention du
+- verbe noté à l'infinitif (`to yield`), remarque : c'est la convention du
   corpus, et elle indique la forme attendue à la saisie ;
-- deux mots d'une même leçon qui accepteraient la même réponse — remarque :
+- deux mots d'une même leçon qui accepteraient la même réponse, remarque :
   la saisie ne peut plus les distinguer, et le couple perd son intérêt ;
 - nom de fichier d'unité cohérent avec son `id` ;
 - toute unité référencée existe, et toute unité existante est référencée ;
@@ -293,20 +281,20 @@ raison qu'enseigne le point.** Un distracteur qu'on écarte autrement laisse
 résoudre l'exercice sans la règle visée, et la leçon cesse alors de valoir son
 niveau sans que rien ne le signale.
 
-- **Distracteur impossible à l'oreille** — un « an » devant un son de consonne
+- **Distracteur impossible à l'oreille** : un « an » devant un son de consonne
   (`an car`) s'élimine par la seule règle a/an, sans rien savoir de la règle
   testée. Le contrôle se tait quand le point porte justement sur a/an.
-- **Distracteur qui casse l'accord** — dans « ___ in this bottle is not
+- **Distracteur qui casse l'accord** : dans « ___ in this bottle is not
   drinkable », l'option « The waters » se repère à l'accord avec `is`, pas à la
   règle d'article. Même chose pour un attribut au pluriel nu après `is`
   (« she is now researchers »). Le contrôle se tait quand le trou est
   lui-même le verbe, l'accord étant alors ce qu'on enseigne.
-- **Paire de conjugaison qu'un seul mot sépare** — « will win » et
+- **Paire de conjugaison qu'un seul mot sépare** : « will win » et
   « will not win » se relient en repérant `not`, sans rien savoir de la
   construction. Opposez deux constructions réelles (« would have passed » /
   « would pass »). Toléré en B1, où la négation et la question sont encore
   l'objet du cours ; signalé à partir de B2.
-- **Phrase reprise d'un cours à l'autre** — un niveau qui rejoue l'exemple du
+- **Phrase reprise d'un cours à l'autre** : un niveau qui rejoue l'exemple du
   niveau précédent n'approfondit rien, même quand la règle affichée diffère.
   Vaut pour les phrases d'exercice comme pour les exemples des cartes.
 

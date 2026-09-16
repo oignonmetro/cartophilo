@@ -64,10 +64,10 @@ const NATIVE_CALLS: Record<Buzz, () => Promise<void>> = {
 /**
  * Y a-t-il une chance que l'appareil vibre ?
  *
- * Sert à ne pas afficher le réglage là où il ne ferait rien — un ordinateur
- * de bureau, un navigateur sans l'API. Optimiste comme `canSpeak` : sur
- * l'appareil on répond oui sans interroger le moteur, et l'API web déclarée
- * mais inopérante (le cas de Chrome sur ordinateur) reste indétectable.
+ * Sert à ne pas afficher le réglage là où il ne ferait rien (un ordinateur
+ * de bureau, un navigateur sans l'API) : sur l'appareil on répond oui sans
+ * interroger le moteur, et l'API web déclarée mais inopérante (le cas de
+ * Chrome sur ordinateur) reste indétectable.
  */
 export const canVibrate: boolean =
   native || (typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function')

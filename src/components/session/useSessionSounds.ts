@@ -12,8 +12,7 @@ import { useProgress } from '@/store/progressStore'
  * rattache plus à rien.
  *
  * Le réglage se lit ici plutôt que dans `lib/sound.ts` : le module de son
- * reste sans dépendance à React ni au store, comme `lib/speech.ts` dont
- * `SpeakButton` lit de la même façon le réglage de prononciation.
+ * reste sans dépendance à React ni au store.
  */
 export function useSessionSounds(): {
   /** Réussite d'un exercice entier : à appeler à la validation de la réponse. */

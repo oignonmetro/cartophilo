@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion'
 import type { RuleExercise } from '@/engine/exercises'
-import { parseInline, parseNotes, ruleSpeech, splitAside, type Inline, type NoteRule } from '@/content/notes'
+import { parseInline, parseNotes, splitAside, type Inline, type NoteRule } from '@/content/notes'
 import { Button } from '@/components/Button'
-import { learningLanguage } from '@/lib/speech'
-import { SpeakButton } from './SpeakButton'
 
 /**
  * Rappel de cours affiché avant la pratique, à la découverte d'une leçon.
@@ -135,9 +133,6 @@ export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext:
 
 function RuleBody({ rule, labelClass }: { rule: NoteRule; labelClass: string }) {
   const { main, aside } = splitAside(rule.body)
-  // Rien à entendre pour une règle purement française : le bouton ne s'affiche
-  // que là où une forme anglaise est sûrement identifiable (voir ruleSpeech).
-  const spoken = ruleSpeech(rule)
 
   return (
     <div className="flex min-w-0 flex-col gap-1">
@@ -161,20 +156,10 @@ function RuleBody({ rule, labelClass }: { rule: NoteRule; labelClass: string }) 
           </span>
         )}
       </p>
-      {(rule.example || spoken) && (
-        <div className="flex items-start gap-2">
-          {rule.example && (
-            <p className="min-w-0 flex-1 text-sm leading-snug font-bold text-ink-soft italic">
-              <Rich text={rule.example} />
-            </p>
-          )}
-          {/* Pas `auto`, à la différence des autres boutons d'écoute de la
-              session : un rappel porte plusieurs règles à la fois, chacune
-              avec la sienne. Toutes lancées au montage se couperaient les
-              unes les autres — `speak()` interrompt la lecture en cours
-              avant de parler — et l'apprenant n'entendrait que des bribes. */}
-          {spoken && <SpeakButton text={spoken} size={16} className="shrink-0 !p-1.5" />}
-        </div>
+      {rule.example && (
+        <p className="text-sm leading-snug font-bold text-ink-soft italic">
+          <Rich text={rule.example} />
+        </p>
       )}
     </div>
   )
@@ -183,11 +168,9 @@ function RuleBody({ rule, labelClass }: { rule: NoteRule; labelClass: string }) 
 /**
  * Rend le texte enrichi d'un rappel.
  *
- * `form` — une forme anglaise citée — reçoit un fond très léger plutôt qu'une
- * couleur : dans un paragraphe déjà teinté, la couleur se perdrait, alors que
- * le liseré tient sur tous les fonds de l'écran. Le rembourrage est donné en
- * `em` et reste serré, pour que la ponctuation qui suit ne paraisse pas
- * décrochée du mot.
+ * `form` — un mot étranger cité (allemand, latin…), en alphabet latin —
+ * s'affiche en italique, convention typographique classique pour un mot
+ * étranger au milieu d'une phrase française.
  */
 export function Rich({ text }: { text: string }) {
   return <Spans spans={parseInline(text)} />
@@ -217,19 +200,10 @@ function Spans({ spans }: { spans: Inline[] }) {
               </span>
             )
           case 'form':
-            // Une forme courte ne doit pas se couper en deux (« depend / on »).
-            // Une phrase citée entière, si : l'empêcher de se replier la ferait
-            // déborder de la colonne, sous le bouton d'écoute.
             return (
-              <span
-                key={index}
-                lang={learningLanguage()}
-                className={`rounded bg-ink/6 px-[0.15em] font-bold text-ink ${
-                  span.text.length <= 24 ? 'whitespace-nowrap' : ''
-                }`}
-              >
+              <em key={index} className="text-ink italic">
                 {span.text}
-              </span>
+              </em>
             )
           default:
             return <span key={index}>{span.text}</span>

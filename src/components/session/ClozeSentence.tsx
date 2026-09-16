@@ -5,7 +5,6 @@ import { normalizeForm } from '@/engine/exercises'
 import { Button } from '@/components/Button'
 import { CorrectionGap } from './CorrectionGap'
 import { ExpectedAnswer } from './ExpectedAnswer'
-import { SpeakButton } from './SpeakButton'
 import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
 
@@ -118,19 +117,14 @@ export function ClozeSentence({
             Vérifier
           </Button>
         ) : (
-          <div className="flex items-center gap-3">
-            {/* Le mot attendu, pas la phrase : c'est lui qu'on apprend, et
-                l'écouter avant d'avoir répondu donnerait la réponse. */}
-            <SpeakButton text={sentence.match} auto className="shrink-0" />
-            <Button
-              block
-              tone={checked ? 'success' : 'error'}
-              disabled={!checked && !bank && !gapResolved}
-              onClick={() => onAnswer(checked)}
-            >
-              Continuer
-            </Button>
-          </div>
+          <Button
+            block
+            tone={checked ? 'success' : 'error'}
+            disabled={!checked && !bank && !gapResolved}
+            onClick={() => onAnswer(checked)}
+          >
+            Continuer
+          </Button>
         )}
       </div>
     </div>

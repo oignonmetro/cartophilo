@@ -63,35 +63,6 @@ describe('reprise des échéances gonflées', () => {
   })
 })
 
-describe('réglage de prononciation', () => {
-  it('est activé par défaut', () => {
-    expect(useProgress.getState().autoSpeak).toBe(true)
-  })
-
-  it('se coupe et revient', () => {
-    useProgress.getState().setAutoSpeak(false)
-    expect(useProgress.getState().autoSpeak).toBe(false)
-    useProgress.getState().setAutoSpeak(true)
-    expect(useProgress.getState().autoSpeak).toBe(true)
-  })
-
-  it('survit à un aller-retour export / import', () => {
-    useProgress.getState().setAutoSpeak(false)
-    const payload = useProgress.getState().exportSave()
-    useProgress.getState().setAutoSpeak(true)
-    useProgress.getState().importSave(payload)
-    expect(useProgress.getState().autoSpeak).toBe(false)
-  })
-
-  it('reste activé en important une sauvegarde antérieure au réglage', () => {
-    // Les formats 1 à 3 ne connaissent pas le champ : mieux vaut entendre le
-    // mot que d'hériter d'un silence qu'on n'a jamais demandé.
-    useProgress.getState().setAutoSpeak(false)
-    useProgress.getState().importSave(JSON.stringify({ format: 3, cards: {}, lessons: {} }))
-    expect(useProgress.getState().autoSpeak).toBe(true)
-  })
-})
-
 describe('réglage des sons de réussite', () => {
   it('est activé par défaut', () => {
     useProgress.getState().reset()

@@ -2,8 +2,6 @@ import { motion } from 'framer-motion'
 import type { IntroExercise } from '@/engine/exercises'
 import type { Rating } from '@/engine/srs'
 import { Button } from '@/components/Button'
-import { speechFor } from '@/lib/speech'
-import { SpeakButton } from './SpeakButton'
 
 /**
  * Présentation d'un mot nouveau, avec auto-évaluation immédiate.
@@ -40,12 +38,7 @@ export function VocabIntro({ exercise, onRate }: { exercise: IntroExercise; onRa
           transition={{ type: 'spring', stiffness: 320, damping: 24 }}
           className="card-3d flex flex-col items-center gap-3 px-6 py-8 text-center"
         >
-          {/* Le mot et son haut-parleur restent sur la même ligne : c'est le
-              mot qu'on écoute, pas l'écran. */}
-          <div className="flex items-center justify-center gap-3">
-            <span className="text-4xl font-black break-words">{vocab.term}</span>
-            <SpeakButton text={speechFor(vocab)} auto className="shrink-0" />
-          </div>
+          <span className="text-4xl font-black break-words">{vocab.term}</span>
           {vocab.pos && (
             <span className="text-xs font-bold uppercase tracking-widest text-ink-faint">{vocab.pos}</span>
           )}

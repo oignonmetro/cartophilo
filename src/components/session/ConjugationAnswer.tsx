@@ -5,7 +5,6 @@ import { matchesAnswer } from '@/engine/exercises'
 import { Button } from '@/components/Button'
 import { learningLanguage } from '@/lib/speech'
 import { CorrectionGap } from './CorrectionGap'
-import { SpeakButton } from './SpeakButton'
 import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
 
@@ -143,19 +142,14 @@ export function ConjugationAnswer({
             Vérifier
           </Button>
         ) : (
-          <div className="flex items-center gap-3">
-            {/* Les formes composées ne se devinent pas à l'écrit : « would have
-                been » s'entend « would've been ». Après la réponse seulement. */}
-            <SpeakButton text={form.answer} auto className="shrink-0" />
-            <Button
-              block
-              tone={checked ? 'success' : 'error'}
-              disabled={!checked && !gapResolved}
-              onClick={() => onAnswer(checked)}
-            >
-              Continuer
-            </Button>
-          </div>
+          <Button
+            block
+            tone={checked ? 'success' : 'error'}
+            disabled={!checked && !gapResolved}
+            onClick={() => onAnswer(checked)}
+          >
+            Continuer
+          </Button>
         )}
       </div>
     </div>

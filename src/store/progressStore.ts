@@ -64,16 +64,10 @@ export interface ProgressSnapshot {
   dailyGoal: number
   streak: Streak
   /**
-   * Prononcer le mot tout seul à sa découverte. Se coupe : on révise aussi
-   * dans le train, et un son qui part sans qu'on l'ait demandé y est un
-   * défaut, pas un service. Le bouton, lui, reste toujours disponible.
-   */
-  autoSpeak: boolean
-  /**
-   * Les petits sons de réussite (voir `lib/sound.ts`). Se coupe pour la même
-   * raison que la prononciation, et plus encore : ceux-là partent à chaque
-   * bonne réponse, sans qu'on les ait demandés une seule fois. Rien ne s'y
-   * joue d'irremplaçable — ce qu'ils signalent est déjà à l'écran.
+   * Les petits sons de réussite (voir `lib/sound.ts`). Se coupe : ils
+   * partent à chaque bonne réponse, sans qu'on les ait demandés une seule
+   * fois, et rien ne s'y joue d'irremplaçable (ce qu'ils signalent est déjà
+   * à l'écran).
    */
   sounds: boolean
   /**
@@ -135,7 +129,6 @@ interface ProgressState extends ProgressSnapshot {
    */
   skipTo: (courseId: string, lessonIds: readonly string[], stepIds: readonly string[]) => void
   setDailyGoal: (goal: number) => void
-  setAutoSpeak: (on: boolean) => void
   setSounds: (on: boolean) => void
   setHaptics: (on: boolean) => void
   setTargetedCorrection: (on: boolean) => void
@@ -166,7 +159,6 @@ const initial: ProgressSnapshot = {
   xp: 0,
   xpByDay: {},
   dailyGoal: 30,
-  autoSpeak: true,
   sounds: true,
   haptics: false,
   targetedCorrection: false,
@@ -463,8 +455,6 @@ export const useProgress = create<ProgressState>()(
 
       setDailyGoal: (goal) => set({ dailyGoal: Math.max(10, Math.round(goal)) }),
 
-      setAutoSpeak: (on) => set({ autoSpeak: on }),
-
       setSounds: (on) => set({ sounds: on }),
 
       setHaptics: (on) => set({ haptics: on }),
@@ -474,7 +464,7 @@ export const useProgress = create<ProgressState>()(
       setTheme: (theme) => set({ theme }),
 
       exportSave: () => {
-        const { lessons, cards, steps, xp, xpByDay, dailyGoal, streak, autoSpeak, sounds, haptics, targetedCorrection, theme } =
+        const { lessons, cards, steps, xp, xpByDay, dailyGoal, streak, sounds, haptics, targetedCorrection, theme } =
           get()
         return JSON.stringify(
           {
@@ -487,7 +477,6 @@ export const useProgress = create<ProgressState>()(
             xpByDay,
             dailyGoal,
             streak,
-            autoSpeak,
             sounds,
             haptics,
             targetedCorrection,
@@ -507,7 +496,6 @@ export const useProgress = create<ProgressState>()(
           xp?: number
           xpByDay?: Record<string, number>
           dailyGoal?: number
-          autoSpeak?: boolean
           sounds?: boolean
           haptics?: boolean
           targetedCorrection?: boolean
@@ -556,7 +544,6 @@ export const useProgress = create<ProgressState>()(
           xp: parsed.xp ?? 0,
           xpByDay: parsed.xpByDay ?? {},
           dailyGoal: parsed.dailyGoal ?? initial.dailyGoal,
-          autoSpeak: parsed.autoSpeak ?? initial.autoSpeak,
           sounds: parsed.sounds ?? initial.sounds,
           haptics: parsed.haptics ?? initial.haptics,
           targetedCorrection: parsed.targetedCorrection ?? initial.targetedCorrection,
@@ -618,7 +605,6 @@ export const useProgress = create<ProgressState>()(
         xpByDay,
         dailyGoal,
         streak,
-        autoSpeak,
         sounds,
         haptics,
         targetedCorrection,
@@ -630,7 +616,6 @@ export const useProgress = create<ProgressState>()(
         xp,
         xpByDay,
         dailyGoal,
-        autoSpeak,
         sounds,
         haptics,
         targetedCorrection,

@@ -3,11 +3,9 @@ import { motion } from 'framer-motion'
 import type { ChoiceCue, ChoiceExercise } from '@/engine/exercises'
 import { choiceAnswer, choicePrompt, choicePromptIsLearningLanguage, normalizeAnswer } from '@/engine/exercises'
 import { Button } from '@/components/Button'
-import { learningLanguage, speechFor } from '@/lib/speech'
+import { learningLanguage } from '@/lib/speech'
 import { highlightDiffWords } from './highlightDiffWords'
-import { ListeningPrompt } from './ListeningPrompt'
 import { OptionList } from './OptionList'
-import { SpeakButton } from './SpeakButton'
 import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
 
@@ -29,11 +27,9 @@ const PROMPTS: Record<ChoiceCue, string> = {
 export function ChoiceQuestion({
   exercise,
   onAnswer,
-  onCantListen,
 }: {
   exercise: ChoiceExercise
   onAnswer: (correct: boolean) => void
-  onCantListen: () => void
 }) {
   const { vocab, cue, options } = exercise
   const answer = choiceAnswer(vocab, cue)
@@ -53,20 +49,12 @@ export function ChoiceQuestion({
       <p className="text-center text-sm font-bold uppercase tracking-wide text-ink-faint">{PROMPTS[cue]}</p>
 
       <div className="card-3d px-4 py-3 text-center">
-        {cue === 'audio' ? (
-          // L'énoncé est le son lui-même : le mot ne doit pas s'écrire, sinon
-          // il ne reste plus rien à reconnaître. Il se rejoue à volonté, et
-          // part tout seul à l'affichage — sans quoi l'écran est muet et la
-          // question sans énoncé.
-          <ListeningPrompt text={speechFor(vocab)} size={26} onCantListen={onCantListen} />
-        ) : (
-          <span
-            lang={choicePromptIsLearningLanguage(cue) ? learningLanguage() : 'fr'}
-            className="text-xl font-black break-words"
-          >
-            {choicePrompt(vocab, cue)}
-          </span>
-        )}
+        <span
+          lang={choicePromptIsLearningLanguage(cue) ? learningLanguage() : 'fr'}
+          className="text-xl font-black break-words"
+        >
+          {choicePrompt(vocab, cue)}
+        </span>
       </div>
 
       <OptionList
@@ -84,16 +72,7 @@ export function ChoiceQuestion({
 
       <div className="mt-auto">
         {checked && (
-          <motion.div
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex items-center gap-3"
-          >
-            {/* Le son n'arrive qu'à la correction : l'entendre avant de
-                répondre désignerait la bonne case. Sauf quand le son EST la
-                question — il a alors déjà servi d'énoncé, et le bouton reste
-                là-haut. */}
-            {cue !== 'audio' && <SpeakButton text={speechFor(vocab)} auto className="shrink-0" />}
+          <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}>
             <Button block tone={correct ? 'success' : 'error'} onClick={() => onAnswer(correct)}>
               Continuer
             </Button>
