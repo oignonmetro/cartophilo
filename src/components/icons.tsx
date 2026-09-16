@@ -180,6 +180,43 @@ const UNIT_ICONS: Record<string, (props: IconProps) => React.ReactElement> = {
       <path d="M12 4 5.5 20M12 4l6.5 16M8 14h8" />
     </svg>
   ),
+  /** Balance à deux plateaux : la morale, l'arbitrage entre des raisons. */
+  scale: (props) => (
+    <svg {...svgProps(props)}>
+      <path d="M12 4v15M6 20h12M5 6h14" />
+      <path d="M5 6 2.5 11a3 3 0 0 0 5 0z" />
+      <path d="m19 6-2.5 5a3 3 0 0 0 5 0z" />
+    </svg>
+  ),
+  /** Deux cercles noués : ce qui excède le physique, saisi par superposition. */
+  infinity: (props) => (
+    <svg {...svgProps(props)}>
+      <circle cx="9" cy="12" r="5.5" />
+      <circle cx="15" cy="12" r="5.5" />
+    </svg>
+  ),
+  /** Palette de peintre, avec ses touches de couleur. */
+  palette: (props) => (
+    <svg {...svgProps(props)}>
+      <path d="M12 4c-5 0-8.5 3.4-8.5 7.6 0 2.7 2 4.4 4.3 4.4h1a1.7 1.7 0 0 1 1.7 1.7c0 .7-.3 1.1-.3 1.8 0 1.1 1 1.5 1.8 1.5 5 0 9-3.8 9-8.5C21 7.6 17 4 12 4z" />
+      <circle cx="8.5" cy="10.5" r="1" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="8.5" r="1" fill="currentColor" stroke="none" />
+      <circle cx="15.5" cy="10" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  /** Colonne cannelée : la cité, l'architecture du politique. */
+  column: (props) => (
+    <svg {...svgProps(props)}>
+      <path d="M4 4h16M4 20h16M7 7v10M11 7v10M13 7v10M17 7v10" />
+    </svg>
+  ),
+  /** Loupe : l'examen critique d'une prétention à savoir. */
+  magnify: (props) => (
+    <svg {...svgProps(props)}>
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="m20 20-4.8-4.8" />
+    </svg>
+  ),
 }
 
 export function UnitIcon({ name, ...props }: IconProps & { name: string }) {
