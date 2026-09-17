@@ -179,9 +179,11 @@ replie jamais : elle doit tenir sur une seule ligne du fichier, même
 longue, d'où l'intérêt d'y garder des cellules courtes (une notion, une
 glose), pas des phrases entières.
 
-Un titre d'œuvre s'italicise toujours (`*Groundwork*`, `*Critique du
-jugement*`), même s'il est aussi en langue étrangère : c'est `*texte*` qu'il
-faut alors, jamais `` `terme` `` (réservé à une forme citée hors titre — un
+Un titre d'œuvre s'italicise toujours (`*Fondements de la métaphysique des
+mœurs*`, `*Critique de la faculté de juger*`), toujours traduit en français
+quand l'auteur n'écrit pas en français, jamais laissé dans une langue tierce
+(l'anglais d'un titre déjà traduit ne sert à rien) : c'est `*texte*` qu'il
+faut alors, jamais `` `terme` `` (réservé à une forme citée hors titre, un
 mot, une expression), pour ne pas confondre deux marqueurs qui rendent tous
 deux en italique mais ne signalent pas la même chose.
 
