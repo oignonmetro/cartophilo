@@ -98,22 +98,27 @@ l'affichage.
    textuellement, en allant du plus général au plus précis : l'œuvre, puis la
    partie ou le paragraphe numéroté, puis sa position dans ce mouvement du
    texte (par son avancement propre, début / milieu / fin, ou par rapport
-   à un autre moment marquant proche). Une référence de pagination (Akademie,
-   Bekker, Stéphanus…) peut venir en plus dans `explanation`, à titre
-   documentaire, quand la source ne l'indique pas explicitement pour le
-   passage testé.
+   à un autre moment marquant proche).
 
-   > **Toujours transposer une référence de passage donnée par la source.**
-   > Quand l'article qui sert de source à la leçon indique explicitement où
-   > se situe un passage cité ou discuté (numéro de paragraphe, pagination
-   > Bekker, pagination Stéphanus, pagination Akademie, section numérotée…),
-   > cette référence n'est plus seulement documentaire : elle doit apparaître
-   > dans le rappel (`notes`), **et** être testée par un point de
-   > localisation dédié, construit comme n'importe quel autre point de cette
-   > famille (`sentence` fluide, sans repère de position, un trou sur la
-   > référence elle-même comme `answer`). Ne jamais laisser une référence que
-   > la source donne disparaître dans le seul `explanation` d'un autre point,
-   > à titre de simple décoration.
+   > **Toujours transposer un repère de passage donné directement par la
+   > source.** Quand l'article ou le PDF qui sert de source à la leçon
+   > indique explicitement où se situe un passage cité ou discuté, par un
+   > repère qui se lit et se retient (un numéro de paragraphe : « §10 » ; un
+   > chapitre ou une section nommée : « Fondements, Première section » ; une
+   > pagination Bekker ou Stéphanus), ce repère n'est plus seulement
+   > documentaire : il doit apparaître dans le rappel (`notes`), **et** être
+   > testé par un point de localisation dédié (`sentence` fluide, sans
+   > repère de position, un trou sur le repère lui-même comme `answer`,
+   > éventuellement précédé du nom de l'œuvre quand la référence à elle
+   > seule resterait ambiguë : « §10 » suffit si l'œuvre est claire par
+   > ailleurs dans la leçon, « Critique de la faculté de juger, §10 » sinon).
+   > **Abandonner** ce point sans en chercher un substitut quand la source ne
+   > donne pas un tel repère pour ce passage précis. Une pagination d'édition
+   > (Akademie ou autre) qui ne s'accompagnerait d'aucun numéro de paragraphe
+   > ou de section nommée n'entre pas dans cette règle : ni assez lisible ni
+   > assez mémorisable pour servir de réponse, elle reste au mieux une
+   > décoration dans `explanation`, jamais dans `sentence` ni exigée dans
+   > `answer`.
 5. **Citation** : un blanc marqué `___` au milieu d'une citation reproduite
    fidèlement depuis le texte source (jamais reconstituée de mémoire). Pour
    un passage jugé particulièrement important, plutôt qu'un seul point,
