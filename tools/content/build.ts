@@ -134,24 +134,54 @@ function withKind(raw: unknown, kind: LessonKind): unknown {
   }
 }
 
+/**
+ * Charge chaque fichier d'unité indépendamment des autres : une unité mal
+ * formée ne doit pas empêcher de voir les problèmes des suivantes. Avant ce
+ * correctif, la première erreur (YAML illisible, schéma invalide…) stoppait
+ * la lecture du dossier et masquait tout le reste du cours ; c'est ainsi
+ * qu'une coquille dans `m4.yaml` avait caché, une session durant, une
+ * coquille indépendante dans `m5.yaml`, jamais signalée avant qu'on la
+ * cherche à la main.
+ */
 function loadUnits(dir: string, kindOf: (unitId: string) => LessonKind): Map<string, Unit> {
   const unitsDir = join(dir, 'units')
   if (!existsSync(unitsDir)) fail(unitsDir, 'dossier units/ manquant')
 
   const units = new Map<string, Unit>()
+  const problems: string[] = []
+
   for (const name of readdirSync(unitsDir).sort()) {
     if (!name.endsWith('.yaml') && !name.endsWith('.yml')) continue
     const file = join(unitsDir, name)
     const expected = basename(name).replace(/\.ya?ml$/, '')
 
-    const parsed = unitSchema.safeParse(withKind(readYaml(file), kindOf(expected)))
-    if (!parsed.success) fail(file, formatIssues(parsed.error))
+    let raw: unknown
+    try {
+      raw = parseYaml(readFileSync(file, 'utf8'))
+    } catch (error) {
+      problems.push(`${file}\n    YAML illisible : ${(error as Error).message}`)
+      continue
+    }
+
+    const parsed = unitSchema.safeParse(withKind(raw, kindOf(expected)))
+    if (!parsed.success) {
+      problems.push(`${file}\n    ${formatIssues(parsed.error)}`)
+      continue
+    }
     const unit = parsed.data
 
-    if (unit.id !== expected) fail(file, `l'identifiant "${unit.id}" ne correspond pas au fichier "${expected}"`)
-    if (units.has(unit.id)) fail(file, `unité "${unit.id}" définie deux fois`)
+    if (unit.id !== expected) {
+      problems.push(`${file}\n    l'identifiant "${unit.id}" ne correspond pas au fichier "${expected}"`)
+      continue
+    }
+    if (units.has(unit.id)) {
+      problems.push(`${file}\n    unité "${unit.id}" définie deux fois`)
+      continue
+    }
     units.set(unit.id, unit)
   }
+
+  if (problems.length) fail(dir, problems.join('\n\n  '))
   return units
 }
 
@@ -254,7 +284,64 @@ function checkCoherence(course: Course, dir: string) {
     .filter((lesson): lesson is GrammarLesson => lesson.kind === 'grammar')
   for (const remark of philosophyContentRemarks(course.learning, grammarLessons)) warn(`cours "${course.id}"`, remark)
 
+  checkEmDashes(course)
+
   if (problems.length) fail(dir, problems.join('\n    '))
+}
+
+const EM_DASH = '—'
+
+/**
+ * Aucun champ de contenu ne doit porter de tiret cadratin (—) : consigne
+ * app-wide, pas seulement philosophique (voir CLAUDE.md). Un aller-retour
+ * de nettoyage a déjà été nécessaire une fois sur dix fichiers réécrits ;
+ * ce contrôle attrape la régression dès la prochaine unité générée, plutôt
+ * qu'au terme d'un passage de relecture séparé.
+ */
+function checkEmDashes(course: Course) {
+  for (const { lesson } of lessonsOf(course)) {
+    const fields: [string, string | undefined][] = [['le rappel (notes)', lesson.notes]]
+
+    if (lesson.kind === 'vocab') {
+      for (const v of lesson.vocab) {
+        fields.push(
+          [`mot "${v.id}" (term)`, v.term],
+          [`mot "${v.id}" (translation)`, v.translation],
+          [`mot "${v.id}" (hint)`, v.hint],
+          [`mot "${v.id}" (example)`, v.example?.text],
+          [`mot "${v.id}" (example.translation)`, v.example?.translation],
+        )
+        v.alt.forEach((a, i) => fields.push([`mot "${v.id}" (alt[${i}])`, a]))
+      }
+    }
+    if (lesson.kind === 'grammar') {
+      for (const p of lesson.points) {
+        fields.push(
+          [`point "${p.id}" (sentence)`, p.sentence],
+          [`point "${p.id}" (answer)`, p.answer],
+          [`point "${p.id}" (explanation)`, p.explanation],
+          [`point "${p.id}" (translation)`, p.translation],
+        )
+        p.alt.forEach((a, i) => fields.push([`point "${p.id}" (alt[${i}])`, a]))
+        p.options.forEach((o, i) => fields.push([`point "${p.id}" (options[${i}])`, o]))
+      }
+    }
+    if (lesson.kind === 'conjugation') {
+      for (const v of lesson.verbs) {
+        fields.push([`verbe "${v.verb}" (translation)`, v.translation], [`verbe "${v.verb}" (note)`, v.note])
+        for (const f of v.forms) {
+          fields.push([`verbe "${v.verb}" forme "${f.person}" (answer)`, f.answer])
+          f.alt.forEach((a, i) => fields.push([`verbe "${v.verb}" forme "${f.person}" (alt[${i}])`, a]))
+        }
+      }
+    }
+
+    for (const [where, text] of fields) {
+      if (text?.includes(EM_DASH)) {
+        warn(`leçon "${lesson.id}"`, `${where} contient un tiret cadratin (—) ; remplacez-le (deux-points, virgule, parenthèses)`)
+      }
+    }
+  }
 }
 
 /**
