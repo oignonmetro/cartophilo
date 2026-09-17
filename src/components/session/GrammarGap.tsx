@@ -41,7 +41,16 @@ export function GrammarGap({
     setValue('')
     setChecked(null)
     setGapResolved(false)
-    if (!bank) input.current?.focus()
+    if (bank) return
+    // Différé : mettre le focus dès le montage fait parfois défiler le
+    // navigateur, pour garder le champ visible sous le clavier qui s'ouvre,
+    // avant que la transition d'entrée de l'exercice (voir `SessionScreen`)
+    // et le redimensionnement du clavier n'aient fini de stabiliser la mise
+    // en page — le calcul du défilement se fait alors sur une hauteur
+    // provisoire, et coupe le haut de la carte au lieu de la garder entière
+    // au-dessus du clavier.
+    const id = window.setTimeout(() => input.current?.focus(), 250)
+    return () => window.clearTimeout(id)
   }, [exercise.id, bank])
 
   const filled = value.trim().length > 0

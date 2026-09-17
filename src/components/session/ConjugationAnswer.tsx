@@ -39,7 +39,9 @@ export function ConjugationAnswer({
     setValue('')
     setChecked(null)
     setGapResolved(false)
-    input.current?.focus()
+    // Différé : voir la même remarque dans `GrammarGap`.
+    const id = window.setTimeout(() => input.current?.focus(), 250)
+    return () => window.clearTimeout(id)
   }, [exercise.id])
 
   const filled = value.trim().length > 0

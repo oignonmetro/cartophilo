@@ -33,7 +33,10 @@ export function ClozeSentence({
     setValue('')
     setChecked(null)
     setGapResolved(false)
-    if (!bank) input.current?.focus()
+    if (bank) return
+    // Différé : voir la même remarque dans `GrammarGap`.
+    const id = window.setTimeout(() => input.current?.focus(), 250)
+    return () => window.clearTimeout(id)
   }, [exercise.id, bank])
 
   const filled = value.trim().length > 0

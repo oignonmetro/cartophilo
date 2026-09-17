@@ -30,7 +30,12 @@ export function TypeAnswer({
     setValue('')
     setChecked(null)
     setGapResolved(false)
-    input.current?.focus()
+    // Différé : voir la même remarque dans `GrammarGap`. Mettre le focus dès
+    // le montage fait parfois défiler le navigateur sur une mise en page pas
+    // encore stabilisée (transition d'entrée, redimensionnement du clavier),
+    // ce qui coupe le haut de la carte au lieu de la garder entière.
+    const id = window.setTimeout(() => input.current?.focus(), 250)
+    return () => window.clearTimeout(id)
   }, [exercise.id])
 
   const filled = value.trim().length > 0
