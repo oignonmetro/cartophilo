@@ -1,0 +1,295 @@
+# Laissé de côté : le débat interprétatif sur la « portée » (large ou étroite)
+# des impératifs hypothétiques chez Kant (Hill 1973 ; Schroeder 2009 ; Rippon
+# 2014). Le texte source signale l'existence du débat sans jamais indiquer
+# qui, de ces trois commentateurs, défend la lecture large et qui défend la
+# lecture étroite : aucun point attributionnel fiable n'en est donc tirable
+# (voir content/philosophie.md, famille « attributionnel commentateur »).
+id: m2
+title: L'impératif catégorique et la loi universelle
+subtitle: Impératifs, maximes et la formule de la loi universelle
+icon: compass
+color: yellow
+
+lessons:
+  - id: m2-l1
+    title: Impératifs catégoriques et hypothétiques
+    notes: |
+      Le devoir fondamental que nous impose la morale est, selon Kant, un
+      **impératif catégorique** : un commandement, adressé à des agents qui
+      pourraient s'y conformer sans nécessairement le faire, et qui s'applique
+      __inconditionnellement__, du seul fait que nous possédons une volonté
+      rationnelle, sans référence à aucune fin que nous pourrions avoir ou non.
+
+      Un **impératif hypothétique**, à l'inverse, s'applique à nous en vertu de
+      notre volonté rationnelle, mais seulement à la condition que nous ayons
+      par avance voulu une fin donnée : il prend la forme d'un commandement
+      conditionnel.
+
+      - Toute forme conditionnelle n'en fait pas pour autant un impératif
+        hypothétique au sens de Kant : « si tu es content et que tu le sais,
+        frappe des mains ! » ne pose comme condition aucune fin voulue, mais
+        seulement un état affectif.
+      - Vouloir une fin, pour Kant, suppose plus que la simple désirer : cela
+        exige de choisir ou de s'engager activement envers elle. Un
+        commandement qui s'appliquerait à nous du seul fait que nous
+        désirons une fin ne serait donc pas non plus un impératif hypothétique
+        en son sens strict.
+    points:
+      - id: m2-l1-p1
+        sentence: Un impératif catégorique s'applique à nous inconditionnellement, du seul fait que nous possédons une volonté rationnelle, sans référence à aucune ___ que nous pourrions avoir ou non.
+        answer: fin
+      - id: m2-l1-p2
+        sentence: Contrairement à l'impératif catégorique, un impératif ___ ne s'applique à nous qu'à la condition que nous ayons par avance voulu une fin donnée.
+        answer: hypothétique
+      - id: m2-l1-p3
+        sentence: "« Si tu es content et que tu le sais, frappe des mains ! » est un commandement de forme conditionnelle qui n'est pourtant pas, au sens de Kant, un impératif hypothétique, car sa condition n'est pas une fin voulue mais seulement ___."
+        answer: un état affectif
+      - id: m2-l1-p4
+        sentence: Pour Kant, vouloir une fin exige plus que la simple désirer, à savoir choisir ou s'engager ___ envers elle.
+        answer: activement
+
+  - id: m2-l2
+    title: Impératifs problématiques et assertoriques ; le bonheur comme fin nécessaire
+    notes: |
+      Kant distingue deux sortes d'impératifs hypothétiques, selon la manière
+      dont la fin est voulue.
+
+      - L'impératif est **problématique** quand la fin posée n'est qu'une fin
+        __possible__, qu'on pourrait vouloir ou ne pas vouloir : presque tous
+        les impératifs rationnels non moraux sont de ce type, car il n'existe
+        guère de fin que nous voulions par nécessité en tant qu'êtres humains.
+      - L'impératif est **assertorique** quand il porte sur la seule fin que
+        nous voulions par nécessité naturelle : notre propre bonheur.
+
+      La raison ne peut cependant délivrer aucun impératif assertorique précis
+      concernant le bonheur, parce que le bonheur est une fin indéterminée,
+      vague, et dont la définition nous revient à chacun. Des conseils comme
+      épargner pour l'avenir ou soigner sa santé ne sont ainsi, au sens strict,
+      que des **conseils de prudence**, non de véritables impératifs.
+
+      ! L'évaluation morale et prudentielle porte d'abord, chez Kant, sur la
+        __volonté__ elle-même, non sur les actes extérieurs : on ne manque
+        pas de rationalité en échouant à atteindre une fin voulue, ni même en
+        ne désirant pas les moyens qui y mènent, mais seulement en ne
+        __voulant__ pas ces moyens.
+    points:
+      - id: m2-l2-p1
+        sentence: Quand la fin posée par un impératif hypothétique n'est qu'une fin possible, qu'on pourrait vouloir ou ne pas vouloir, Kant qualifie cet impératif de ___.
+        answer: problématique
+      - id: m2-l2-p2
+        sentence: Quand un impératif hypothétique porte sur la seule fin que nous voulons par nécessité naturelle, à savoir notre propre bonheur, Kant le qualifie d'___.
+        answer: assertorique
+      - id: m2-l2-p3
+        sentence: La raison ne peut délivrer aucun impératif assertorique précis concernant le bonheur, parce que le bonheur est une fin ___, dont la définition nous revient à chacun.
+        answer: indéterminée
+      - id: m2-l2-p4
+        sentence: "Des recommandations comme épargner pour l'avenir ou soigner sa santé ne sont, au sens strict, que des ___, non de véritables impératifs."
+        answer: conseils de prudence
+      - id: m2-l2-p5
+        sentence: L'évaluation morale et prudentielle porte d'abord, selon Kant, non sur les actes extérieurs mais sur ce que l'agent ___.
+        answer: veut
+        explanation: On ne manque de rationalité qu'en ne voulant pas les moyens nécessaires à une fin qu'on s'est donnée, non en échouant simplement à l'atteindre.
+
+  - id: m2-l3
+    title: Les maximes, principe subjectif du vouloir
+    notes: |
+      Kant décrit la volonté comme opérant sur la base de principes
+      subjectifs qu'il nomme des **maximes**. La forme d'une maxime est :
+      « Je ferai A dans la circonstance C afin de réaliser la fin E », où A
+      est un type d'acte, C un type de circonstance et E une fin visée.
+
+      - Une maxime est __subjective__ parce qu'elle n'énonce que ce qu'un
+        agent particulier veut ; un principe qui vaudrait pour toute volonté
+        rationnelle serait au contraire un principe __objectif__ du vouloir,
+        que Kant nomme une **loi pratique**.
+      - Toute volonté humaine, pour compter comme telle, se fonde sur une
+        maxime poursuivant une fin par des moyens : elle relève donc déjà,
+        par sa forme même, du raisonnement moyens-fins évalué par les
+        impératifs hypothétiques.
+    points:
+      - id: m2-l3-p1
+        sentence: Kant nomme ___ le principe subjectif de la forme « Je ferai A dans la circonstance C afin de réaliser la fin E » sur lequel repose l'exercice de la volonté.
+        answer: maxime
+      - id: m2-l3-p2
+        sentence: Une maxime est dite subjective parce qu'elle n'énonce que ce qu'un agent particulier veut ; un principe qui vaudrait pour toute volonté rationnelle est en revanche appelé par Kant un principe ___ du vouloir.
+        answer: objectif
+      - id: m2-l3-p3
+        sentence: Kant nomme ___ pratique le principe objectif qui gouverne toute volonté rationnelle, par opposition à la maxime, principe seulement subjectif.
+        answer: loi
+      - id: m2-l3-p4
+        sentence: "Parce que toute volonté humaine se fonde sur une maxime poursuivant une fin par des moyens, elle relève déjà, par sa forme même, du raisonnement évalué par les impératifs ___."
+        answer: hypothétiques
+
+  - id: m2-l4
+    title: La procédure en quatre étapes de la formule de la loi universelle
+    notes: |
+      La première formulation de l'impératif catégorique énonce qu'on ne doit
+      agir que selon la maxime dont on peut en même temps vouloir qu'elle
+      devienne une loi universelle. O'Neill et Rawls y voient un résumé d'une
+      procédure de raisonnement moral en quatre étapes.
+
+      1. Formuler la maxime qui caractérise le plan d'action envisagé.
+      2. La reformuler comme une loi universelle de la nature, valant pour
+         tous les agents rationnels par nécessité naturelle.
+      3. Se demander si cette maxime est seulement __concevable__ dans un
+         monde régi par cette nouvelle loi.
+      4. Si elle l'est, se demander si l'on pourrait rationnellement
+         __vouloir__ agir sur cette maxime dans un tel monde.
+
+      Si la maxime échoue à la troisième étape, on a un **devoir parfait** de
+      s'en abstenir, sans exception possible en faveur de l'inclination ; si
+      elle échoue seulement à la quatrième, on a un **devoir imparfait**,
+      admettant des exceptions. Si elle passe les quatre étapes, agir sur elle
+      est moralement permis.
+    points:
+      - id: m2-l4-p1
+        sentence: La première étape de la procédure de la formule de la loi universelle consiste à ___ la maxime qui caractérise le plan d'action envisagé.
+        answer: formuler
+      - id: m2-l4-p2
+        sentence: La deuxième étape consiste à reformuler la maxime envisagée comme une loi de la nature valant, par nécessité naturelle, pour ___.
+        answer: tous les agents rationnels
+      - id: m2-l4-p3
+        sentence: La troisième étape de la procédure demande si la maxime, une fois érigée en loi de nature, est seulement ___ dans un monde régi par cette loi.
+        answer: concevable
+      - id: m2-l4-p4
+        sentence: Si la maxime échoue à la troisième étape, celle de la concevabilité, on a un devoir ___ de s'abstenir d'agir sur elle, sans exception possible en faveur de l'inclination.
+        answer: parfait
+      - id: m2-l4-p5
+        sentence: La quatrième étape de la procédure demande, une fois la maxime jugée concevable comme loi de nature, si l'on pourrait rationnellement ___ agir sur elle dans un tel monde.
+        answer: vouloir
+      - id: m2-l4-p6
+        sentence: Si la maxime échoue seulement à la quatrième étape, celle du vouloir rationnel, on a un devoir ___, qui admet des exceptions.
+        answer: imparfait
+      - id: m2-l4-p7
+        sentence: La lecture de la formule de la loi universelle comme une procédure de raisonnement moral en quatre étapes est proposée notamment par O'Neill et ___.
+        answer: Rawls
+
+  - id: m2-l5
+    title: Devoirs parfaits et imparfaits, devoirs envers soi et envers autrui
+    notes: |
+      En croisant la distinction entre devoirs parfaits et imparfaits avec
+      celle entre devoirs envers soi-même et devoirs envers autrui, Kant
+      obtient quatre catégories exhaustives de devoirs, illustrées dans le
+      Groundwork par un exemple chacune.
+
+      - Devoir __parfait__ envers soi-même : ne pas se suicider pour échapper
+        à des souffrances futures.
+      - Devoir __parfait__ envers autrui : ne pas faire de promesses qu'on
+        n'a pas l'intention de tenir.
+      - Devoir __imparfait__ envers soi-même : développer ses talents.
+      - Devoir __imparfait__ envers autrui : contribuer au bonheur d'autrui.
+
+      Suivant Hill, on peut formuler cette différence de forme entre les deux
+      types de devoir : un devoir parfait a la forme « on ne doit jamais (ou
+      toujours) φ, autant que possible, dans la circonstance C », tandis
+      qu'un devoir imparfait, parce qu'il exige seulement l'adoption d'une
+      fin, a la forme « on doit parfois et dans une certaine mesure φ dans la
+      circonstance C ».
+    points:
+      - id: m2-l5-p1
+        sentence: Ne pas se suicider pour échapper à des souffrances futures est, pour Kant, un devoir parfait envers ___.
+        answer: soi-même
+      - id: m2-l5-p2
+        sentence: Ne pas faire de promesses qu'on n'a pas l'intention de tenir est, pour Kant, un devoir parfait envers ___.
+        answer: autrui
+      - id: m2-l5-p3
+        sentence: Développer ses talents est, pour Kant, un devoir ___ envers soi-même.
+        answer: imparfait
+      - id: m2-l5-p4
+        sentence: Contribuer au bonheur d'autrui est, pour Kant, un devoir ___ envers autrui.
+        answer: imparfait
+      - id: m2-l5-p5
+        sentence: "Suivant Hill, un devoir parfait a la forme « on ne doit jamais (ou toujours) φ, autant que possible, dans la circonstance C », tandis qu'un devoir imparfait a la forme « on doit ___ et dans une certaine mesure φ dans la circonstance C »."
+        answer: parfois
+
+  - id: m2-l6
+    title: L'exemple de la fausse promesse
+    notes: |
+      Kant illustre le devoir parfait envers autrui par l'exemple de la
+      **fausse promesse** : on envisage d'emprunter de l'argent en promettant
+      de le rendre, sans en avoir l'intention, afin d'obtenir la somme voulue.
+
+      La maxime « je ferai de fausses promesses quand cela me procure ce que
+      je veux » ne se contredit pas elle-même prise isolément, à la différence
+      d'une maxime comme « je chercherai un célibataire marié ». Mais elle
+      échoue au test de la __concevabilité__ une fois érigée en loi de nature.
+
+      - Concevoir un monde où chacun, par nécessité naturelle, doit tromper
+        autrui dès que cela lui procure ce qu'il veut, c'est concevoir un
+        monde où nul ne pourrait jamais donner sa parole, et où ce fait serait
+        universellement connu.
+      - Or ma maxime exige, comme moyen nécessaire, qu'existe une pratique de
+        la parole donnée, pour que quelqu'un puisse me croire sur parole.
+      - Je suis donc conduit à concevoir à la fois un monde sans pratique de
+        la promesse et un monde où une telle pratique existe et fonctionne :
+        une contradiction logique. C'est pourquoi cette maxime échoue au test
+        de la **contradiction dans la conception**.
+
+      ! Il ne faut pas confondre cet argument avec un simple appel aux
+        conséquences fâcheuses du mensonge généralisé : ce que vise Kant,
+        c'est l'impossibilité logique de concevoir la pratique de la promesse
+        dans un monde où mentir pour son avantage serait une loi de nature.
+    points:
+      - id: m2-l6-p1
+        sentence: Dans l'exemple kantien de la fausse promesse, l'agent envisage d'emprunter de l'argent en promettant de le rendre sans en avoir ___.
+        answer: l'intention
+      - id: m2-l6-p2
+        sentence: "La maxime « je ferai de fausses promesses quand cela me procure ce que je veux » ne se contredit pas elle-même prise isolément, à la différence d'une maxime comme « je chercherai un ___ »."
+        answer: célibataire marié
+      - id: m2-l6-p3
+        sentence: Concevoir un monde où chacun doit, par nécessité naturelle, tromper autrui dès que cela lui procure ce qu'il veut, c'est concevoir un monde où nul ne pourrait jamais donner sa ___.
+        answer: parole
+      - id: m2-l6-p4
+        sentence: La maxime de la fausse promesse exige pourtant, comme moyen nécessaire à sa réussite, qu'existe une pratique de la parole donnée à laquelle ___.
+        answer: on puisse croire
+      - id: m2-l6-p5
+        sentence: "En m'obligeant à concevoir à la fois un monde sans pratique de la promesse et un monde où une telle pratique existe et fonctionne, la maxime de la fausse promesse échoue au test de la contradiction dans la ___."
+        answer: conception
+      - id: m2-l6-p6
+        sentence: L'argument kantien contre la fausse promesse ne repose pas sur les conséquences fâcheuses du mensonge généralisé, mais sur l'impossibilité ___ de concevoir la pratique de la promesse dans le monde ainsi imaginé.
+        answer: logique
+
+  - id: m2-l7
+    title: L'exemple des talents à développer
+    notes: |
+      Kant illustre le devoir imparfait envers soi-même par l'exemple d'un
+      homme qui envisage de renoncer à développer tous ses talents pour se
+      consacrer entièrement à la jouissance.
+
+      À la différence de la fausse promesse, cette maxime __passe__ le test de
+      la concevabilité : un monde sans développement des talents, plus
+      primitif que le nôtre, reste concevable. Elle échoue en revanche au test
+      suivant, celui de la **contradiction dans la volonté** : il n'est pas
+      possible, selon Kant, de vouloir __rationnellement__ un tel monde.
+
+      Kant mobilise pour cela trois prémisses supplémentaires.
+      - Par nécessité naturelle, chacun veut son propre bonheur comme fin.
+      - Un moyen nécessaire au bonheur humain ordinaire est que d'autres,
+        et pas seulement soi-même, développent certaines de leurs capacités
+        (jouer du piano suppose que quelqu'un ait fabriqué le piano).
+      - Toute volonté rationnelle veut les moyens nécessaires et disponibles
+        à ses fins.
+
+      ! L'argument de Kant lui-même, selon lequel nous voudrions déjà
+        rationnellement le développement de __tous__ nos talents, est peu
+        convaincant : il suffirait, pour bloquer la maxime, que nous voulions
+        rationnellement le développement de __certains__ talents, pas de tous.
+    points:
+      - id: m2-l7-p1
+        sentence: À la différence de la maxime de la fausse promesse, la maxime consistant à renoncer à développer tous ses talents pour se consacrer à la jouissance ___ le test de la concevabilité comme loi de nature.
+        answer: passe
+      - id: m2-l7-p2
+        sentence: La maxime du renoncement aux talents échoue en revanche au test suivant, celui de la contradiction dans la ___.
+        answer: volonté
+      - id: m2-l7-p3
+        sentence: La première prémisse mobilisée par Kant pour bloquer la maxime des talents est que, par nécessité naturelle, chacun veut son propre ___ comme fin.
+        answer: bonheur
+      - id: m2-l7-p4
+        sentence: La deuxième prémisse est qu'un moyen nécessaire au bonheur humain ordinaire est que d'autres que soi-même développent certaines de leurs ___.
+        answer: capacités
+      - id: m2-l7-p5
+        sentence: La troisième prémisse, déjà établie à propos des impératifs hypothétiques, est que toute volonté rationnelle veut les moyens nécessaires et disponibles à ___.
+        answer: ses fins
+      - id: m2-l7-p6
+        sentence: L'argument de Kant selon lequel nous voudrions déjà rationnellement le développement de tous nos talents est jugé peu convaincant, car il suffirait que nous voulions rationnellement le développement de ___ d'entre eux.
+        answer: certains

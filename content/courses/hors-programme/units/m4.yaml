@@ -1,0 +1,418 @@
+id: m4
+title: Unité des formules et autonomie
+subtitle: L'unité des formules de l'impératif catégorique et l'idée d'autonomie
+icon: infinity
+color: yellow
+
+lessons:
+  - id: m4-l1
+    title: Les formules sont-elles équivalentes ?
+    notes: |
+      Kant affirme que les formulations de l'impératif catégorique sont
+      __équivalentes__, chacune « unissant en elle les deux autres », sans
+      jamais préciser en quel sens exact il faut entendre cette équivalence.
+      Trois lectures se dégagent chez ses commentateurs.
+
+      - Les formules seraient équivalentes __en signification__ : on pourrait
+        dériver analytiquement l'une de l'autre. Certains soutiennent ainsi
+        que l'exigence de toujours traiter l'humanité comme fin en soi
+        entraîne celle de n'agir que sur des maximes universalisables sans
+        contradiction, et réciproquement.
+      - À défaut d'être équivalentes en signification, elles pourraient être
+        __logiquement interdérivables__ les unes des autres — sans pour
+        autant que la formule de la loi universelle se réduise, comme
+        certains l'ont suggéré, au seul principe de non-contradiction, ce qui
+        ferait de l'impératif catégorique une vérité logique, chose que Kant
+        récuse expressément.
+      - La lecture la plus directe, défendue par Allison, tient qu'appliquer
+        chaque formule engendrerait __tous les mêmes devoirs, et seulement
+        ceux-là__ : respecter l'humanité comme fin en soi ne pourrait jamais
+        conduire à agir sur une maxime qui se contredirait en devenant
+        universelle, et réciproquement.
+
+      ! Ce que Kant appelle des différences « plus subjectivement
+        qu'objectivement pratiques » entre les formules désigne, sur cette
+        troisième lecture, des différences de __sens__ compatibles avec une
+        absence totale de différence __pratique__ dans les devoirs engendrés.
+    points:
+      - id: m4-l1-p1
+        sentence: Kant affirme que les formulations de l'impératif catégorique sont équivalentes, chacune « unissant en elle les ___ autres ».
+        answer: deux
+        explanation: "G 4:436."
+      - id: m4-l1-p2
+        sentence: Une première lecture de l'équivalence des formules tient qu'on pourrait dériver ___ l'une de l'autre, comme l'exigence de traiter l'humanité comme fin en soi et celle de n'agir que sur des maximes universalisables sans contradiction.
+        answer: analytiquement
+      - id: m4-l1-p3
+        sentence: Une deuxième lecture tient les formules pour logiquement ___ les unes des autres, sans pour autant les réduire au seul principe de non-contradiction — ce qui ferait de l'impératif catégorique une simple vérité logique, chose que Kant récuse.
+        answer: interdérivables
+      - id: m4-l1-p4
+        sentence: La lecture la plus directe de l'équivalence des formules, défendue par le commentateur ___, tient qu'appliquer chacune d'elles engendrerait tous les mêmes devoirs, et seulement ceux-là.
+        answer: Allison
+      - id: m4-l1-p5
+        sentence: Sur la lecture d'Allison, respecter l'humanité comme fin en soi ne pourrait jamais conduire à agir sur une maxime qui se contredirait en devenant ___, et réciproquement.
+        answer: universelle
+      - id: m4-l1-p6
+        sentence: Ce que Kant appelle des différences « plus subjectivement qu'objectivement pratiques » entre les formules désigne, sur la lecture d'Allison, des différences de sens compatibles avec une absence totale de différence ___ dans les devoirs engendrés.
+        answer: pratique
+
+  - id: m4-l2
+    title: La tentative de dérivation depuis la valeur absolue de l'humanité
+    notes: |
+      Dans sa discussion de la formule de l'humanité, Kant écrit que seule une
+      chose « dont l'existence en soi aurait une valeur absolue » pourrait
+      fonder une loi qui oblige catégoriquement, avant d'affirmer, comme un
+      __postulat__ qu'il promet de justifier au dernier chapitre du
+      Groundwork, que l'humanité est précisément cette chose absolument
+      précieuse.
+
+      On peut y lire une tentative de dériver la formule de la loi universelle
+      __à partir__ de la formule de l'humanité : si quelque chose a une valeur
+      absolue, alors on ne doit agir que sur des maximes universalisables ; or
+      l'humanité a une valeur absolue ; donc on ne doit agir que sur des
+      maximes universalisables.
+
+      ! Cette dérivation exige cependant d'admettre une prémisse
+        __synthétique__ substantielle — que l'humanité a bien une valeur
+        absolue —, ce qui contredit l'insistance de Kant selon laquelle
+        l'argumentation du second chapitre du Groundwork serait purement
+        __analytique__ et se bornerait à établir le contenu de la loi morale.
+    points:
+      - id: m4-l2-p1
+        sentence: "Dans sa discussion de la formule de l'humanité, Kant écrit que seule une chose dont l'existence en soi aurait une valeur ___ pourrait fonder une loi qui oblige catégoriquement."
+        answer: absolue
+        explanation: "G 4:428."
+      - id: m4-l2-p2
+        sentence: Kant affirme que l'humanité a une valeur absolue non pas comme une conclusion démontrée, mais comme un ___ qu'il promet de justifier au dernier chapitre du Groundwork.
+        answer: postulat
+        explanation: "G 4:429, note."
+      - id: m4-l2-p3
+        sentence: La dérivation qui va de la valeur absolue de l'humanité à la formule de la loi universelle exige d'admettre une prémisse ___ substantielle, à savoir que l'humanité a bien une valeur absolue.
+        answer: synthétique
+      - id: m4-l2-p4
+        sentence: Cette prémisse synthétique contredit l'insistance de Kant selon laquelle l'argumentation du second chapitre du Groundwork serait purement ___ et se bornerait à établir le contenu de la loi morale.
+        answer: analytique
+
+  - id: m4-l3
+    title: L'autonomie, idée centrale, et l'analogie avec la liberté politique
+    notes: |
+      L'idée d'**autonomie** est au cœur de la théorie morale de Kant :
+      comprendre l'autonomie est, selon lui, la clef pour comprendre et
+      justifier l'autorité qu'ont sur nous les exigences morales. Comme chez
+      Rousseau, dont les vues l'ont influencé, la liberté ne consiste pas à
+      n'être lié par __aucune__ loi, mais par des lois qui sont, en un sens,
+      __de notre propre fabrication__.
+
+      Reath propose de saisir cette idée par analogie avec la liberté
+      politique. Un État est libre lorsque ses citoyens ne sont liés que par
+      des lois de leur propre fabrication — votées ou adoptées par des
+      représentants élus : l'autorité de ces lois est alors __interne__ aux
+      citoyens, non externe. À l'inverse, un État soumis aux lois d'un autre
+      État, comme lors d'une occupation, __manque d'autonomie__, et ces lois
+      n'ont sur lui aucune autorité légitime.
+
+      De même, une personne est libre lorsqu'elle n'est liée que par sa propre
+      volonté et non par celle d'une autre. L'autorité des principes qui la
+      lient vient alors de ce qu'elle les a elle-même __voulus__. Selon Kant,
+      la loi morale est précisément un tel principe : sa légitimité tient à ce
+      qu'elle exprime la volonté rationnelle propre de l'agent qu'elle oblige.
+    points:
+      - id: m4-l3-p1
+        sentence: Comprendre l'idée d'autonomie est, selon Kant, la clef pour comprendre et justifier l'autorité qu'ont sur nous les exigences ___.
+        answer: morales
+      - id: m4-l3-p2
+        sentence: Comme chez Rousseau, dont les vues l'ont influencé, la liberté ne consiste pas, pour Kant, à n'être lié par aucune loi, mais par des lois qui sont, en un sens, ___.
+        answer: de notre propre fabrication
+      - id: m4-l3-p3
+        sentence: L'analogie entre l'autonomie individuelle et la liberté politique, selon laquelle un État est libre quand ses citoyens ne sont liés que par des lois de leur propre fabrication, est proposée par le commentateur ___.
+        answer: Reath
+      - id: m4-l3-p4
+        sentence: Un État soumis aux lois d'un autre État, comme lors d'une occupation ou d'une colonisation, manque, dans cette analogie, d'___, et ces lois n'ont sur lui aucune autorité légitime.
+        answer: autonomie
+      - id: m4-l3-p5
+        sentence: Une personne est autonome lorsqu'elle n'est liée que par sa propre volonté ; l'autorité des principes qui la lient vient alors de ce qu'elle les a elle-même ___.
+        answer: voulus
+      - id: m4-l3-p6
+        sentence: Selon Kant, la légitimité de la loi morale tient à ce qu'elle exprime la volonté rationnelle propre de l'agent qu'elle ___.
+        answer: oblige
+
+  - id: m4-l4
+    title: La liberté négative et l'agir « sous l'idée » de la liberté
+    notes: |
+      L'idée d'une volonté autonome naît, chez Kant, de celle d'une volonté
+      libre __en un sens négatif__ : une volonté qui n'opère pas sous
+      l'influence de facteurs extérieurs à son propre exercice de la raison.
+      Une volonté déterminée par des lois naturelles — biologiques ou
+      psychologiques — ne peut, à ce titre, être pensée comme opérant par sa
+      capacité de raisonner : la détermination par des lois naturelles est
+      donc __incompatible__ avec la liberté au sens négatif.
+
+      Un moment décisif de l'argument kantien est l'idée qu'une volonté
+      rationnelle ne peut agir __que sous l'idée__ de sa propre liberté (G
+      4:448). Cette expression ne signifie pas qu'une volonté rationnelle
+      doive __croire__ qu'elle est libre : déterministes et libertariens
+      agissent, selon Kant, tout autant les uns que les autres sous l'idée de
+      la liberté.
+
+      - Kant lui-même soutient, dans la Critique de la raison pure, que nous
+        n'avons aucune base rationnelle pour croire nos volontés libres, ce
+        qui exigerait de connaître nos volontés comme choses en soi.
+      - L'analogie proposée pour comprendre cette idée est celle de l'agir
+        « sous l'idée » d'une finalité dans la nature : un biologiste qui
+        cherche la fonction d'un organe n'a besoin, pour cela, ni de croire
+        que cet organe fut conçu par un créateur, ni d'éprouver un
+        quelconque sentiment de finalité.
+
+      Une volonté qui ne peut s'exercer que sous l'idée de sa liberté est,
+      dit Kant, libre __d'un point de vue pratique__ (*im practischer
+      Absicht*) : cela signifie que la délibération pratique nous autorise à
+      nous tenir aux mêmes principes que ceux auxquels serait tenue une
+      volonté autonome et véritablement libre.
+    points:
+      - id: m4-l4-p1
+        sentence: Une volonté déterminée par des lois naturelles biologiques ou psychologiques ne peut être pensée comme opérant par sa capacité de raisonner ; la détermination par des lois naturelles est donc ___ avec la liberté au sens négatif.
+        answer: incompatible
+      - id: m4-l4-p2
+        sentence: Selon Kant, une volonté rationnelle ne peut agir que sous l'idée de sa propre ___.
+        answer: liberté
+        explanation: "G 4:448."
+      - id: m4-l4-p3
+        sentence: Agir sous l'idée de sa liberté ne signifie pas qu'une volonté rationnelle doive croire qu'elle est libre ; déterministes et libertariens agissent, selon Kant, tout autant ___ sous cette idée.
+        answer: les uns que les autres
+      - id: m4-l4-p4
+        sentence: Kant soutient, dans la Critique de la raison pure, que nous n'avons aucune base rationnelle pour croire nos volontés libres, ce qui exigerait de les connaître comme des ___.
+        answer: choses en soi
+      - id: m4-l4-p5
+        sentence: L'analogie proposée pour comprendre l'idée d'agir sous l'idée de la liberté est celle du biologiste qui cherche la fonction d'un organe sans croire pour autant que celui-ci fut conçu par un ___.
+        answer: créateur
+      - id: m4-l4-p6
+        sentence: Une volonté qui ne peut s'exercer que sous l'idée de sa liberté est dite par Kant libre d'un point de vue ___, ce qui l'autorise à se tenir aux principes d'une volonté autonome.
+        answer: pratique
+        explanation: "Im practischer Absicht."
+      - id: m4-l4-p7
+        sentence: Kant nomme, en allemand, ce point de vue pratique d'où une volonté peut être dite libre bien qu'elle n'en ait aucune preuve théorique ___.
+        answer: im practischer Absicht
+
+  - id: m4-l5
+    title: De la liberté négative à l'autonomie ; le fait de la raison
+    notes: |
+      Kant argumente qu'une volonté rationnelle libre __au sens négatif__ doit
+      être __autonome__. Vouloir, en effet, c'est causer une action ; or toute
+      causalité, selon un principe humien que Kant reprend à son compte,
+      suppose une régularité universelle reliant cause et effet — c'est-à-dire
+      une **loi**. Cette loi ne peut être une loi naturelle, biologique ou
+      psychologique, sans quoi la volonté ne serait plus libre au sens
+      négatif : elle doit donc être une loi dont la volonté rationnelle est
+      elle-même l'auteur — ce qui est la définition même de l'**autonomie**.
+
+      ! Des commentateurs, dont Hill, ont relevé un **écart** dans cet
+        argument : établir que toute volonté autonome se conforme aux lois
+        universellement valables qu'elle se donne ne montre pas encore
+        pourquoi ces lois devraient prendre la forme précise de la formule de
+        la loi universelle de la nature.
+
+      Dans le Groundwork, Kant tente ainsi d'établir l'autonomie à partir
+      d'un argument sur la liberté négative — argument que lui-même juge
+      insuffisant, faute de prouver que nous sommes réellement libres. Dans
+      la seconde Critique, il inverse la démarche : il pose comme un
+      **fait de la raison** (*Factum der Vernunft*) que notre volonté est liée
+      par l'impératif catégorique, et en tire notre autonomie.
+
+      Face à l'échec apparent de l'argument du Groundwork, certains
+      commentateurs, comme Korsgaard et Wood, ont cherché à établir
+      l'existence d'une **fin en soi** de façon indépendante, en s'appuyant
+      sur l'argument selon lequel l'humanité est une fin en soi ; Guyer, de
+      son côté, y voit plutôt un argument en faveur de la liberté elle-même
+      comme fin en soi.
+    points:
+      - id: m4-l5-p1
+        sentence: Selon un principe humien que Kant reprend à son compte, toute causalité suppose une régularité universelle reliant cause et effet, c'est-à-dire une ___.
+        answer: loi
+      - id: m4-l5-p2
+        sentence: Cette loi qui relie la volonté à son effet ne peut être une loi naturelle, biologique ou psychologique, sans quoi la volonté ne serait plus libre au sens négatif ; elle doit donc être une loi dont la volonté rationnelle est elle-même ___.
+        answer: l'auteur
+      - id: m4-l5-p3
+        sentence: Une volonté qui se donne elle-même la loi universelle à laquelle elle se conforme est dite, par Kant, ___.
+        answer: autonome
+      - id: m4-l5-p4
+        sentence: Le commentateur ___ relève un écart dans l'argument de Kant, entre établir que toute volonté autonome se conforme aux lois universellement valables qu'elle se donne, et montrer que ces lois prennent la forme précise de la loi universelle de la nature.
+        answer: Hill
+      - id: m4-l5-p5
+        sentence: "Dans la seconde Critique, à la différence du Groundwork, Kant pose comme un fait de la raison, en allemand ___, que notre volonté est liée par l'impératif catégorique, et en tire notre autonomie."
+        answer: Factum der Vernunft
+      - id: m4-l5-p6
+        sentence: Le fait que notre volonté soit liée par l'impératif catégorique porte, dans la seconde Critique de Kant, le nom français de fait de la ___.
+        answer: raison
+      - id: m4-l5-p7
+        sentence: Face à l'échec apparent de l'argument du Groundwork pour établir l'autonomie, les commentateurs Korsgaard et Wood cherchent à établir indépendamment que l'humanité est une ___, tandis que Guyer y voit plutôt un argument en faveur de la liberté elle-même.
+        answer: fin en soi
+
+  - id: m4-l6
+    title: Deux lectures alternatives de l'autonomie
+    notes: |
+      Si la plupart des lecteurs de Kant tiennent l'autonomie pour une
+      propriété des __volontés__ rationnelles, deux lectures alternatives
+      méritent d'être distinguées.
+
+      - Thomas E. Hill, Jr. soutient que l'autonomie est d'abord, chez Kant,
+        une propriété des __principes__, non des volontés. L'idée centrale
+        est que toute théorie morale antérieure à Kant aurait fait dépendre
+        les principes moraux fondamentaux des intérêts et désirs de ceux
+        qu'ils obligent — des principes que Kant qualifie d'**hétéronomes**.
+        Parce qu'aucun intérêt n'est nécessairement universel, de telles
+        théories excluraient par construction la possibilité même d'une
+        moralité universellement obligatoire ; l'impératif catégorique, lui,
+        ne consacrant aucun intérêt préexistant, est un principe **autonome**.
+      - Une autre lecture, développée notamment par Wolff, identifie la
+        volonté à la raison pratique elle-même : vouloir quelque chose, sur
+        cette lecture, c'est se gouverner selon la raison, si bien que nous
+        agirions soit rationnellement (et donc de façon autonome), soit sous
+        l'effet de forces non rationnelles (et donc de façon hétéronome).
+
+      ! Cette seconde lecture se heurte à une conséquence peu plausible :
+        elle implique que tout acte irrationnel, donc tout acte immoral, ne
+        serait __pas voulu__ et donc __pas libre__ — ce que la plupart des
+        interprètes de Kant refusent, tout en reconnaissant, pour certains
+        d'entre eux, une part de vérité dans l'idée que nous agissons
+        toujours sous le « visage du bien ».
+    points:
+      - id: m4-l6-p1
+        sentence: Alors que la plupart des lecteurs de Kant tiennent l'autonomie pour une propriété des volontés rationnelles, le commentateur ___ soutient qu'elle est d'abord une propriété des principes.
+        answer: Hill
+      - id: m4-l6-p2
+        sentence: "Dans la lecture de Hill, Kant reproche à toute théorie morale antérieure à la sienne de faire dépendre les principes moraux fondamentaux des intérêts et désirs de ceux qu'ils obligent : de tels principes sont dits ___."
+        answer: hétéronomes
+      - id: m4-l6-p3
+        sentence: Parce qu'aucun intérêt n'est nécessairement universel, des principes hétéronomes excluraient par construction la possibilité même d'une moralité universellement obligatoire ; l'impératif catégorique, qui ne consacre aucun intérêt préexistant, est au contraire un principe ___.
+        answer: autonome
+      - id: m4-l6-p4
+        sentence: Une autre lecture de l'autonomie, développée notamment par ___, identifie la volonté à la raison pratique elle-même, de sorte que vouloir consiste à se gouverner selon la raison.
+        answer: Wolff
+      - id: m4-l6-p5
+        sentence: Sur la lecture de Wolff, nous agirions donc soit rationnellement et de façon autonome, soit sous l'effet de forces non rationnelles et de façon ___.
+        answer: hétéronome
+      - id: m4-l6-p6
+        sentence: La lecture de Wolff se heurte à une conséquence peu plausible, à savoir que tout acte irrationnel, donc tout acte immoral, ne serait ni voulu ni ___.
+        answer: libre
+
+  - id: m4-l7
+    title: Statut moral, êtres non rationnels et handicap
+    notes: |
+      Ce que Kant tient pour la source de notre statut moral spécial n'est,
+      selon lui, ni une propriété biologique contingente, ni l'espèce à
+      laquelle nous appartenons, ni même la capacité de ressentir la douleur,
+      mais la **nature rationnelle**, c'est-à-dire les capacités et
+      dispositions morales à légiférer et suivre des principes moraux. Ce
+      statut moral fondamental, chez Kant, __ne comporte pas de degrés__ : les
+      nourrissons, les personnes trisomiques ou autistes, ou une personne
+      endormie ou dans le coma, conservent, selon Kant, un statut moral égal à
+      celui de n'importe qui, même si leurs capacités morales demeurent
+      sous-développées, non pleinement exercées ou temporairement dormantes.
+
+      ! Une difficulté majeure surgit pour les êtres humains atteints des
+        handicaps cognitifs les plus sévères, qui semblent, chez Kant,
+        dépourvus même des dispositions les plus élémentaires à reconnaître
+        et suivre des normes morales, et donc exclus de la communauté morale
+        d'une façon aux conséquences pratiques inacceptables.
+
+      Trois stratégies s'offrent aux défenseurs de Kant face à cette
+      difficulté.
+      - __Accepter la conséquence__ : certains, dont Wood et Sussman,
+        admettent que ces êtres humains n'ont pas le statut moral fondamental
+        que nous partageons, tout en soutenant qu'on peut avoir des devoirs
+        __à leur égard__ sans avoir de devoirs __envers eux__ — par exemple
+        des devoirs de perfectionnement moral de soi, ou de bienveillance
+        envers leurs proches.
+      - __Étendre les faits biologiques et psychologiques__ : Kain soutient
+        que, selon les propres théories biologiques et psychologiques de
+        Kant, tout être humain, y compris atteint d'un handicap cognitif
+        sévère, possède nécessairement les traits requis de la personnalité
+        morale.
+      - __Compléter la théorie kantienne__ : Korsgaard soutient que, parce
+        que nous valorisons des choses, nous devons nous valoriser
+        nous-mêmes comme fins, ce qui nous engage à valoriser comme fins tous
+        les animaux humains et non humains ; Sensen fait du respect dû à tout
+        être humain un trait constitutif de l'agentivité rationnelle,
+        indépendant des propriétés intrinsèques de son objet.
+    points:
+      - id: m4-l7-p1
+        sentence: Ce que Kant tient pour la source de notre statut moral spécial n'est ni une propriété biologique contingente ni l'espèce à laquelle nous appartenons, mais la nature ___, c'est-à-dire les capacités et dispositions morales à légiférer et suivre des principes moraux.
+        answer: rationnelle
+      - id: m4-l7-p2
+        sentence: Le statut moral fondamental, chez Kant, ne comporte pas de degrés ; c'est pourquoi un nourrisson ou une personne endormie conservent, selon Kant, un statut moral égal à celui de n'importe qui, même si leurs capacités morales demeurent ___.
+        answer: sous-développées
+      - id: m4-l7-p3
+        sentence: Une difficulté majeure pour la théorie kantienne du statut moral concerne les êtres humains atteints des handicaps cognitifs les plus sévères, qui semblent, chez Kant, dépourvus même des dispositions les plus élémentaires à reconnaître et suivre des normes ___.
+        answer: morales
+      - id: m4-l7-p4
+        sentence: "La première stratégie de défense de Kant sur ce point, associée aux commentateurs Wood et Sussman, consiste à accepter la conséquence que ces êtres humains n'ont pas le statut moral fondamental que nous partageons, tout en distinguant des devoirs envers eux et des devoirs ___."
+        answer: à leur égard
+      - id: m4-l7-p5
+        sentence: La deuxième stratégie, défendue par le commentateur ___, soutient que, selon les propres théories biologiques et psychologiques de Kant, tout être humain possède nécessairement les traits requis de la personnalité morale.
+        answer: Kain
+      - id: m4-l7-p6
+        sentence: La troisième stratégie, défendue par Korsgaard, part de l'idée que, parce que nous valorisons des choses, nous devons nous valoriser nous-mêmes comme fins, ce qui nous engage à valoriser comme fins tous les animaux humains et ___.
+        answer: non humains
+      - id: m4-l7-p7
+        sentence: Une variante de cette troisième stratégie, défendue par le commentateur ___, fait du respect dû à tout être humain un trait constitutif de l'agentivité rationnelle, indépendant des propriétés intrinsèques de son objet.
+        answer: Sensen
+
+  - id: m4-l8
+    title: Handicap, bienfaisance et respect
+    notes: |
+      Kant s'est d'abord attaché à formuler des principes valables pour toute
+      circonstance humaine, mais il reconnaissait qu'un système complet de
+      devoirs devait aussi s'appliquer à des contextes et à des groupes
+      particuliers. Des kantiens contemporains, en particulier Cureton, ont
+      développé cette application aux personnes en situation de handicap.
+
+      - Le choix de parents prospectifs de ne pas avoir d'enfant susceptible
+        d'être en situation de handicap peut exprimer, sans que ce soit son
+        intention, une attitude __irrespectueuse__ envers les personnes
+        handicapées déjà existantes.
+      - Les personnes handicapées sont souvent ridiculisées, infantilisées,
+        et privées d'occasions de continuer à développer leurs capacités
+        naturelles — par exemple dans des établissements qui privilégient
+        leur confort plutôt que leur développement —, ou exclues de
+        relations d'amitié et de solidarité : autant de manquements, selon
+        ces kantiens, à des devoirs que Kant décrit lui-même. Elles
+        rencontrent aussi des obstacles au respect de soi lorsqu'elles sont
+        perçues comme un fardeau, comme simulant leur condition, ou comme des
+        curiosités.
+
+      ! La bienfaisance envers une personne handicapée doit être
+        __tempérée par le respect__ qui lui est dû comme personne : imposer
+        une gratitude pesante à une personne aveugle qui préférerait se
+        repérer seule, « aider » une personne sourde en payant un implant
+        cochléaire qu'elle ne désire pas, terminer avec condescendance les
+        phrases d'une personne qui bégaie, ou confondre un devoir strict —
+        installer une rampe d'accès — avec un simple devoir facultatif de
+        charité, sont autant de façons de manquer, sous couvert de
+        bienfaisance, au respect qui est dû.
+    points:
+      - id: m4-l8-p1
+        sentence: Bien que Kant se soit d'abord attaché à formuler des principes valables pour toute circonstance humaine, il reconnaissait qu'un système complet de devoirs devait aussi s'appliquer à des contextes et des groupes ___.
+        answer: particuliers
+      - id: m4-l8-p2
+        sentence: Le choix de parents prospectifs de ne pas avoir d'enfant susceptible d'être en situation de handicap peut exprimer, sans que ce soit son intention, une attitude ___ envers les personnes handicapées déjà existantes.
+        answer: irrespectueuse
+      - id: m4-l8-p3
+        sentence: Les personnes handicapées sont souvent privées d'occasions de continuer à développer leurs capacités naturelles, par exemple dans des établissements qui privilégient leur confort plutôt que leur ___.
+        answer: développement
+      - id: m4-l8-p4
+        sentence: Selon ces kantiens contemporains, les personnes handicapées rencontrent aussi des obstacles au respect de soi lorsqu'elles sont perçues comme un fardeau, comme simulant leur condition, ou comme des ___.
+        answer: curiosités
+      - id: m4-l8-p5
+        sentence: La bienfaisance envers une personne handicapée doit être, selon ces kantiens, tempérée par le ___ qui lui est dû comme personne, sous peine de verser dans la condescendance.
+        answer: respect
+      - id: m4-l8-p6
+        sentence: Imposer à une personne aveugle qui préférerait se repérer seule une obligation de gratitude qu'elle vivrait comme un ___ illustre une forme de bienfaisance qui manque de respect envers la personne aidée.
+        answer: fardeau
+      - id: m4-l8-p7
+        sentence: Payer à une personne sourde un implant ___ qu'elle ne désire pas, en croyant ainsi l'aider, est un autre exemple de bienfaisance qui manque de respect envers son propre choix.
+        answer: cochléaire
+      - id: m4-l8-p8
+        sentence: Terminer par avance les phrases d'une personne qui bégaie, de façon à exprimer de la pitié plutôt qu'une aide neutre, est un troisième exemple de bienfaisance empreinte de ___.
+        answer: condescendance
+      - id: m4-l8-p9
+        sentence: Confondre l'installation d'une rampe d'accès en fauteuil roulant, devoir strict envers les personnes handicapées, avec un simple devoir facultatif de ___, est une dernière façon de manquer de respect sous couvert de bienfaisance.
+        answer: charité
