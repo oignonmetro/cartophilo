@@ -401,6 +401,89 @@ export interface LexiconSources {
   drilled: readonly string[]
 }
 
+/**
+ * Cours qui écrivent leur contenu selon `content/philosophie.md` plutôt que
+ * pour l'apprentissage d'une langue. Identifiés par `learning`, qui n'y porte
+ * pas un code de langue naturelle.
+ */
+const PHILOSOPHY_LEARNING_CODES = new Set(['hors-programme', 'la-vie', 'plotin', 'marx'])
+
+/**
+ * Tournures qui référencent la matérialité de la source plutôt que de
+ * fusionner l'information dans la phrase (voir `content/philosophie.md`,
+ * « Règles éditoriales »). Liste non exhaustive : elle attrape les tournures
+ * réellement rencontrées, pas toutes les formulations possibles.
+ */
+const SOURCE_MATERIALITY_PATTERNS: RegExp[] = [
+  /\bselon (?:le texte|l'article|la source|cet auteur)\b/i,
+  /\b(?:le texte|l'article|la source|la sep)\s+(?:dit|précise|indique|explique|montre|note|rapporte)\s+que\b/i,
+  /\bcomme (?:le texte|l'article|la source) (?:le )?(?:montre|indique|précise|note)\b/i,
+  /\bd'après (?:le texte|l'article|la source)\b/i,
+  /\b(?:dans|selon) cet article\b/i,
+]
+
+/** Un point de localisation tourné en question plutôt qu'en phrase fluide. */
+const LOCALISATION_QUESTION_PATTERNS: RegExp[] = [/\boù (?:se trouve|se situe|situer|placer)\b/i, /^où\b/i]
+
+/** Une réponse au-delà de cette longueur sent la paraphrase, pas le terme ou la référence précise. */
+const ANSWER_WORD_LIMIT = 8
+
+interface PhilosophyLesson {
+  id: string
+  notes?: string
+  points: readonly GrammarPoint[]
+}
+
+/**
+ * Les remarques propres au contenu philosophique (voir `content/philosophie.md`).
+ *
+ * Ne s'applique qu'aux cours qui suivent ce document ; ailleurs (le cours
+ * `demo`, un futur cours de langue), `options` et `translation` sur un point
+ * de grammaire restent légitimes, et une réponse longue n'a rien d'anormal.
+ */
+export function philosophyContentRemarks(learning: string, lessons: readonly PhilosophyLesson[]): string[] {
+  if (!PHILOSOPHY_LEARNING_CODES.has(learning)) return []
+
+  const remarks: string[] = []
+
+  const flagMateriality = (where: string, field: string, text: string | undefined) => {
+    if (!text) return
+    if (SOURCE_MATERIALITY_PATTERNS.some((pattern) => pattern.test(text))) {
+      remarks.push(`${where} : ${field} référence la matérialité de la source ; fusionnez l'information dans la phrase`)
+    }
+  }
+
+  for (const lesson of lessons) {
+    flagMateriality(`leçon "${lesson.id}"`, 'le rappel', lesson.notes)
+
+    for (const point of lesson.points) {
+      const where = `point "${point.id}"`
+      if (point.options.length > 0) {
+        remarks.push(`${where} : porte \`options\` dans un cours philosophique ; supprimez-le, sinon l'exercice peut se jouer en banque de formes (un QCM déguisé)`)
+      }
+      if (point.translation) {
+        remarks.push(`${where} : porte \`translation\` dans un cours philosophique ; ce champ n'a pas sa place ici (voir content/philosophie.md)`)
+      }
+
+      flagMateriality(where, 'sentence', point.sentence)
+      flagMateriality(where, 'explanation', point.explanation)
+
+      for (const [field, text] of [['sentence', point.sentence], ['explanation', point.explanation]] as const) {
+        if (text && LOCALISATION_QUESTION_PATTERNS.some((pattern) => pattern.test(text.trim()))) {
+          remarks.push(`${where} : ${field} tourné en question de localisation (« où… ? ») ; reformulez en phrase fluide intégrée`)
+        }
+      }
+
+      const wordCount = point.answer.trim().split(/\s+/).filter(Boolean).length
+      if (wordCount > ANSWER_WORD_LIMIT) {
+        remarks.push(`${where} : réponse de ${wordCount} mots (« ${point.answer} ») ; ça sent la paraphrase plutôt qu'un terme, un nom ou une référence précise`)
+      }
+    }
+  }
+
+  return remarks
+}
+
 export function vocabularyScopeRemarks(
   sources: LexiconSources,
   sentences: readonly { where: string; text: string }[],

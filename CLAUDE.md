@@ -47,30 +47,31 @@ l'épreuve :
 ## Non encore décidé
 
 - Le détail des sous-onglets de « La vie ».
-- La correspondance technique entre ces contenus philosophiques et les
-  `kind` du moteur de contenu (`vocab` / `grammar` / `conjugation`,
-  voir `content/README.md`) : reprendre ces trois `kind` tels quels par
-  analogie (`vocab` pour le glossaire, etc.), ou en introduire de nouveaux
-  adaptés (ex. un `kind` dédié au repérage dans une œuvre), à trancher au
-  moment d'écrire le premier contenu réel.
-- Le contenu réel de `content/courses/` reste à écrire ; seul le cours
-  `demo` minimal (garde les trois types d'exercice) y existe pour l'instant.
+
+## Décidé : la correspondance technique avec le moteur de contenu
+
+Toutes les pistes des quatre cours philosophiques utilisent `kind: grammar`
+(jamais `vocab` ni `conjugation`) : rappel de cours puis phrase à trou, sans
+`options` ni `translation` sur les points, ce qui exclut mécaniquement
+l'association et le QCM. Voir `content/philosophie.md` pour le détail — ce
+fichier adapte au format YAML de ce dépôt les principes de la skill
+**quizlet-fiche-sep** (réponse unique non paraphrasable, six familles de
+points, règles éditoriales, déroulé de rédaction) et prime sur toute autre
+consigne de contenu ci-dessous pour les quatre cours philosophiques.
+
+Ceci répond aussi à l'ancienne consigne « restreindre ou exclure
+l'association et le QCM pour Glossaire et Repérage » : elle vaut désormais,
+par construction du `kind` choisi, pour toutes les pistes philosophiques —
+pas seulement Glossaire et Repérage.
 
 ## Consigne pour le contenu à écrire
 
-- Pour les pistes **Glossaire** et **Repérage** (Plotin, Marx) : une fois leur
-  `kind` technique tranché (voir ci-dessus), restreindre ou exclure les
-  exercices d'association (matching pairs) et de QCM. Ces deux pistes visent
-  une consultation ponctuelle (une notion, un repère), pas un enchaînement
-  d'exercices construit autour d'un raisonnement suivi ; l'association et le
-  QCM s'y prêtent moins bien que la phrase à trou ou la saisie.
-- Le moteur de vocabulaire (`kind: vocab`) n'a plus d'écran de présentation à
-  part (l'ancienne auto-évaluation « nouveau / incertain / je savais ») : un
-  mot rencontre directement un vrai exercice. Cette suppression vaut pour
-  toutes les pistes sauf peut-être Glossaire et Repérage, où une notion isolée
-  (sans phrase, sans raisonnement suivi) pourrait avoir encore besoin d'un
-  premier écran de simple présentation, à revoir une fois leur `kind`
-  technique tranché.
+- Contenu philosophique (Hors-programme, La vie, Plotin, Marx) : suivre
+  `content/philosophie.md` à la lettre.
+- Le moteur de vocabulaire (`kind: vocab`, cours `demo` uniquement
+  désormais) n'a plus d'écran de présentation à part (l'ancienne
+  auto-évaluation « nouveau / incertain / je savais ») : un mot rencontre
+  directement un vrai exercice.
 - Remplissez systématiquement `example` sur chaque mot de vocabulaire : c'est
   ce qui permet la phrase à trou, l'exercice à privilégier maintenant que la
   première rencontre avec un mot se fait dans un exercice qui compte (voir

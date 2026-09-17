@@ -1,8 +1,9 @@
 # Squelette à vide : trois pistes communes aux deux auteurs de l'explication
-# de texte (voir content/courses/plotin/course.yaml). Le `kind` de chaque
-# piste est un choix provisoire (voir CLAUDE.md « Non encore décidé »), à
-# ajuster une fois la correspondance entre contenu philosophique et types
-# d'exercice tranchée.
+# de texte (voir content/courses/plotin/course.yaml). `kind: grammar` sur les
+# trois : c'est la nature de contenu décidée pour l'explication de texte
+# (voir CLAUDE.md « Non encore décidé » et content/philosophie.md) — rappel
+# de cours puis phrase à trou, sans association ni QCM, ce que demandait déjà
+# CLAUDE.md pour Glossaire et Repérage, et qui convient tout autant à Idées.
 
 id: marx
 name: Marx
@@ -13,13 +14,13 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 1
+version: 2
 
 tracks:
   - id: glossaire
     title: Glossaire
     subtitle: Notions centrales
-    kind: vocab
+    kind: grammar
     color: teal
     icon: book
     units: []
@@ -35,7 +36,7 @@ tracks:
   - id: reperage
     title: Repérage
     subtitle: Se situer dans les œuvres
-    kind: conjugation
+    kind: grammar
     color: sky
     icon: compass
     units: []

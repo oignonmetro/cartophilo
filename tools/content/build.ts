@@ -43,6 +43,7 @@ import {
   conjugationVerbRemarks,
   duplicateAcrossCourses,
   grammarPointRemarks,
+  philosophyContentRemarks,
   vocabularyScopeRemarks,
 } from './difficulty.ts'
 
@@ -247,6 +248,11 @@ function checkCoherence(course: Course, dir: string) {
   for (const remark of alphabetGatingRemarks(vocabLessons)) warn(`cours "${course.id}"`, remark)
 
   for (const remark of checkVocabularyScope(course)) warn(`cours "${course.id}"`, remark)
+
+  const grammarLessons = lessonsOf(course)
+    .map(({ lesson }) => lesson)
+    .filter((lesson): lesson is GrammarLesson => lesson.kind === 'grammar')
+  for (const remark of philosophyContentRemarks(course.learning, grammarLessons)) warn(`cours "${course.id}"`, remark)
 
   if (problems.length) fail(dir, problems.join('\n    '))
 }

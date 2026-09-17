@@ -1,9 +1,12 @@
-# Squelette à vide : six pistes, une par domaine philosophique, sans la
-# moindre unité pour l'instant (voir content/README.md « Publier le
-# squelette d'un niveau avant son contenu »). Le `kind` de chaque piste est
-# un choix provisoire (voir CLAUDE.md « Non encore décidé »), à ajuster
-# une fois la correspondance entre contenu philosophique et types
-# d'exercice tranchée.
+# Squelette : six pistes, une par domaine philosophique (voir content/README.md
+# « Publier le squelette d'un niveau avant son contenu »).
+#
+# `kind: grammar` sur chaque piste : c'est la nature de contenu décidée pour
+# ce cours (voir CLAUDE.md « Non encore décidé » et content/philosophie.md).
+# Le moteur grammar ne produit qu'un rappel de cours puis une phrase à trou,
+# sans association ni QCM (à condition de ne jamais renseigner `options` sur
+# un point) — exactement le format demandé pour un contenu qui teste des
+# notions et des raisonnements plutôt que des paires terme/traduction.
 
 id: hors-programme
 name: Hors-programme
@@ -14,19 +17,24 @@ tagline: "Sujet libre : tout peut tomber."
 status: available
 default: true
 layout: library
-version: 1
+version: 2
 
 tracks:
   - id: morale
     title: La morale
-    kind: vocab
+    kind: grammar
     color: yellow
     icon: scale
-    units: []
+    units:
+      - m1
+      - m2
+      - m3
+      - m4
+      - m5
 
   - id: metaphysique
     title: La métaphysique
-    kind: vocab
+    kind: grammar
     color: green
     icon: infinity
     # Sépare la morale du reste : elle seule, parmi ces six pistes, est
@@ -36,29 +44,33 @@ tracks:
 
   - id: esthetique
     title: L'esthétique
-    kind: vocab
+    kind: grammar
     color: violet
     icon: palette
     units:
-      - e1
+      - ea1
+      - ea2
+      - ea3
+      - ea4
+      - ea5
 
   - id: politique
     title: La politique
-    kind: vocab
+    kind: grammar
     color: red
     icon: column
     units: []
 
   - id: sciences-humaines
     title: Les sciences humaines
-    kind: vocab
+    kind: grammar
     color: orange
     icon: people
     units: []
 
   - id: epistemologie
     title: L'épistémologie
-    kind: vocab
+    kind: grammar
     color: blue
     icon: magnify
     units: []
