@@ -90,8 +90,8 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
               key={index}
               className={
                 lead
-                  ? 'text-[0.975rem] leading-relaxed font-semibold text-ink'
-                  : 'text-sm leading-relaxed text-ink-soft'
+                  ? 'text-justify text-[0.975rem] leading-relaxed font-semibold text-ink'
+                  : 'text-justify text-sm leading-relaxed text-ink-soft'
               }
             >
               <Rich text={block.text} />
@@ -108,10 +108,43 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
               <span aria-hidden className="text-base leading-tight">
                 ⚠
               </span>
-              <span>
+              <span className="text-justify">
                 <Rich text={block.text} />
               </span>
             </p>
+          )
+        }
+
+        if (block.kind === 'table') {
+          return (
+            <div key={index} className={`overflow-hidden rounded-2xl ${tone.panel}`}>
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr>
+                    <th className="w-0" />
+                    {block.columns.map((column, i) => (
+                      <th key={i} className={`px-3 py-2 text-left font-black ${tone.label}`}>
+                        <Rich text={column} />
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.rows.map((row, i) => (
+                    <tr key={i} className="border-t border-ink/8">
+                      <th className={`px-3 py-2 text-left align-top font-black whitespace-nowrap ${tone.label}`}>
+                        <Rich text={row.label} />
+                      </th>
+                      {row.cells.map((cell, j) => (
+                        <td key={j} className="px-3 py-2 align-top leading-snug text-ink-soft">
+                          <Rich text={cell} />
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )
         }
 
@@ -169,7 +202,7 @@ function RuleBody({ rule, labelClass }: { rule: NoteRule; labelClass: string }) 
 
   return (
     <div className="flex min-w-0 flex-col gap-1">
-      <p className="text-sm leading-snug text-ink">
+      <p className="text-justify text-sm leading-snug text-ink">
         {/* Le deux-points d'origine sert de séparateur : il se lit aussi bien
             derrière une catégorie (« Une syllabe : ») que derrière une règle
             entière (« must n'a pas de passé propre : »). */}

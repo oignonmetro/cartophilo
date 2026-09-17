@@ -134,6 +134,7 @@ notes: |
 | `- étiquette : …` | l'étiquette passe en gras coloré (jusqu'à ~48 caractères) |
 | ligne indentée sous une règle | l'exemple de cette règle, en italique |
 | `! …` | un piège, encadré en ambre |
+| `\| … \| … \| …` | une rangée de tableau ; la ligne suivante qui commence aussi par `\|` en ajoute une autre |
 
 Cinq marqueurs enrichissent le texte, dans les paragraphes comme dans les
 règles ou les pièges :
@@ -159,6 +160,24 @@ Le plus utile des quatre premiers est `` `will` `` : sur `` `must have` ``,
 l'œil repère la forme étrangère sans avoir à lire la phrase. Les trois
 suivants se paient en
 lisibilité dès qu'on en abuse (deux ou trois par rappel suffisent).
+
+**Le tableau** croise deux classifications plutôt que d'égrener leurs
+combinaisons en liste (utile en philosophie pour une notion qui se divise
+selon deux axes, comme la finalité kantienne en subjective/objective et
+formelle/matérielle) :
+
+```
+|              | Subjective | Objective |
+| **Formelle** | …          | …         |
+| **Matérielle** | …        | …         |
+```
+
+La première ligne pose les colonnes (sa première cellule, le coin, ne
+s'affiche pas) ; chaque ligne suivante ajoute une rangée, son étiquette dans
+la première cellule. Contrairement au reste de `notes`, une rangée ne se
+replie jamais : elle doit tenir sur une seule ligne du fichier, même
+longue, d'où l'intérêt d'y garder des cellules courtes (une notion, une
+glose), pas des phrases entières.
 
 Un titre d'œuvre s'italicise toujours (`*Groundwork*`, `*Critique du
 jugement*`), même s'il est aussi en langue étrangère : c'est `*texte*` qu'il

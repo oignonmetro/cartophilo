@@ -16,7 +16,10 @@ import { unitColorSchema, type UnitColor } from './schema'
  *   - une ligne vide sépare deux paragraphes ;
  *   - une ligne ouverte par « - » est une règle, mise en valeur ;
  *   - une ligne indentée sous une règle en est l'exemple ;
- *   - une ligne ouverte par « ! » est un piège, signalé comme tel.
+ *   - une ligne ouverte par « ! » est un piège, signalé comme tel ;
+ *   - une ligne ouverte par « | » est une rangée de tableau, ligne suivante
+ *     comprise ; contrairement au reste, elle ne se replie pas : chaque
+ *     rangée tient sur une seule ligne du fichier, même longue.
  *
  * Le format reste du texte : pas de moteur Markdown à embarquer, et un auteur
  * qui ne connaît aucune de ces conventions obtient malgré tout des paragraphes
@@ -93,14 +96,35 @@ export interface NoteRule {
   example: string | null
 }
 
+/** Une ligne d'un tableau : son étiquette de rangée, et une cellule par colonne. */
+export interface NoteTableRow {
+  label: string
+  cells: string[]
+}
+
 export type NoteBlock =
   | { kind: 'paragraph'; text: string }
   /** Suite de règles consécutives : elles s'affichent comme une seule liste. */
   | { kind: 'rules'; rules: NoteRule[] }
   | { kind: 'warning'; text: string }
+  /** Croise deux classifications ; voir la ligne d'en-tête dans `parseNotes`. */
+  | { kind: 'table'; columns: string[]; rows: NoteTableRow[] }
 
 const RULE = /^-\s*/
 const WARNING = /^!\s*/
+const TABLE_ROW = /^\|/
+
+/**
+ * Une ligne `| a | b | c |` en cellules nettoyées : les barres verticales de
+ * bord sont facultatives à l'écriture, ignorées si présentes.
+ */
+function parseTableRow(line: string): string[] {
+  return line
+    .replace(/^\|/, '')
+    .replace(/\|$/, '')
+    .split('|')
+    .map((cell) => cell.trim())
+}
 
 /**
  * Sépare « étiquette : corps » quand la ligne s'y prête.
@@ -168,6 +192,19 @@ export function parseNotes(notes: string): NoteBlock[] {
     if (WARNING.test(line)) {
       flush()
       pending = { kind: 'warning', lines: [line.replace(WARNING, '')] }
+      continue
+    }
+
+    if (TABLE_ROW.test(line)) {
+      flush()
+      const cells = parseTableRow(line)
+      const last = blocks[blocks.length - 1]
+      // La première ligne `|...|` rencontrée pose les colonnes (sa première
+      // cellule, le coin, ne sert qu'à aligner l'écriture et n'est pas
+      // affichée) ; chaque ligne suivante ajoute une rangée, tant qu'aucun
+      // autre bloc ne s'intercale.
+      if (last?.kind === 'table') last.rows.push({ label: cells[0], cells: cells.slice(1) })
+      else blocks.push({ kind: 'table', columns: cells.slice(1), rows: [] })
       continue
     }
 

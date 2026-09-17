@@ -96,6 +96,40 @@ describe('rappels de cours', () => {
     expect(parseNotes('')).toEqual([])
     expect(parseNotes('\n  \n')).toEqual([])
   })
+
+  it('lit un tableau : la première rangée pose les colonnes', () => {
+    const blocks = parseNotes(
+      '|            | Subjective | Objective |\n' +
+        '| Formelle   | beau       | figures   |\n' +
+        '| Matérielle | agréable   | organisme |\n',
+    )
+    expect(blocks).toEqual([
+      {
+        kind: 'table',
+        columns: ['Subjective', 'Objective'],
+        rows: [
+          { label: 'Formelle', cells: ['beau', 'figures'] },
+          { label: 'Matérielle', cells: ['agréable', 'organisme'] },
+        ],
+      },
+    ])
+  })
+
+  it('tolère une rangée sans barre verticale de fermeture', () => {
+    const blocks = parseNotes('| | A | B |\n| Ligne | 1 | 2')
+    expect(blocks).toEqual([
+      {
+        kind: 'table',
+        columns: ['A', 'B'],
+        rows: [{ label: 'Ligne', cells: ['1', '2'] }],
+      },
+    ])
+  })
+
+  it('referme un tableau sur une ligne vide, comme les autres blocs', () => {
+    const blocks = parseNotes('| | A |\n| L | x |\n\nAprès.')
+    expect(blocks.map((block) => block.kind)).toEqual(['table', 'paragraph'])
+  })
 })
 
 describe('mise en forme dans le texte', () => {

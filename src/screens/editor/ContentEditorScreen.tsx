@@ -305,7 +305,7 @@ export default function ContentEditorScreen() {
                 <ToolbarButton title="Gras (Ctrl+B)" onClick={() => wrapSelection('**', '**')}>
                   <strong>G</strong>
                 </ToolbarButton>
-                <ToolbarButton title="Italique — nuance, titre d'œuvre (Ctrl+I)" onClick={() => wrapSelection('*', '*')}>
+                <ToolbarButton title="Italique : nuance, titre d'œuvre (Ctrl+I)" onClick={() => wrapSelection('*', '*')}>
                   <em>I</em>
                 </ToolbarButton>
                 <ToolbarButton title="Souligné (Ctrl+U)" onClick={() => wrapSelection('__', '__')}>
@@ -319,6 +319,17 @@ export default function ContentEditorScreen() {
                 </ToolbarButton>
                 <ToolbarButton title="Piège (! )" onClick={() => prefixLines('! ')}>
                   ⚠ Piège
+                </ToolbarButton>
+                <ToolbarButton
+                  title="Tableau : deux classifications croisées"
+                  onClick={() =>
+                    wrapSelection(
+                      '\n|              | Colonne A | Colonne B |\n| **Ligne 1**  | …         | …         |\n| **Ligne 2**  | …         | …         |\n',
+                      '',
+                    )
+                  }
+                >
+                  ⊞ Tableau
                 </ToolbarButton>
                 {trackKind === 'vocab' && (
                   <ToolbarButton title="Nouvelle section (===)" onClick={() => wrapSelection('\n===\n', '')}>
