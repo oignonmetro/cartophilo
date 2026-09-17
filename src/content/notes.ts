@@ -1,3 +1,5 @@
+import { unitColorSchema, type UnitColor } from './schema'
+
 /**
  * Mise en forme des rappels de cours.
  *
@@ -21,11 +23,17 @@
  * corrects.
  */
 
+/** Les dix teintes déjà utilisées ailleurs dans l'app (pistes, unités). */
+const COLOR_NAMES = unitColorSchema.options
+
 /**
  * Fragment de texte enrichi.
  *
  * `form` marque un mot étranger cité au milieu d'une explication française
  * (allemand, latin…) — voir `RuleNote.tsx`, qui l'affiche en italique.
+ * `color` teinte un passage dans l'une des dix couleurs déjà en usage dans
+ * l'app, pour distinguer deux notions qui reviennent tout au long d'un
+ * rappel (une thèse et l'objection qu'on lui oppose, par exemple).
  */
 export type Inline =
   | { kind: 'text'; text: string }
@@ -34,16 +42,22 @@ export type Inline =
   | { kind: 'underline'; children: Inline[] }
   /** Mot étranger cité : littéral, rien ne s'y imbrique. */
   | { kind: 'form'; text: string }
+  | { kind: 'color'; color: UnitColor; children: Inline[] }
 
-const INLINE = /\*\*([^*]+)\*\*|__([^_]+)__|\*([^*]+)\*|`([^`]+)`/g
+const INLINE = new RegExp(
+  `\\*\\*([^*]+)\\*\\*|__([^_]+)__|\\*([^*]+)\\*|\`([^\`]+)\`|\\{(${COLOR_NAMES.join('|')})\\}([\\s\\S]*?)\\{/\\5\\}`,
+  'g',
+)
 
 /**
- * `**gras**`, `*italique*`, `__souligné__`, `` `mot étranger` ``.
+ * `**gras**`, `*italique*`, `__souligné__`, `` `mot étranger` ``,
+ * `{couleur}teinté{/couleur}`.
  *
- * Les trois premiers s'imbriquent — « **pas de `to`** » met bien la forme en
- * valeur à l'intérieur du gras. Le quatrième est littéral, comme du code.
- * Un texte sans aucun marqueur ressort en un seul fragment, ce qui rend la
- * fonction sûre à appliquer partout.
+ * Les quatre premiers s'imbriquent — « **pas de `to`** » met bien la forme en
+ * valeur à l'intérieur du gras, et une couleur peut elle aussi contenir du
+ * gras. Le quatrième (la forme citée) est littéral, comme du code. Un texte
+ * sans aucun marqueur ressort en un seul fragment, ce qui rend la fonction
+ * sûre à appliquer partout.
  */
 export function parseInline(text: string): Inline[] {
   const spans: Inline[] = []
@@ -53,11 +67,14 @@ export function parseInline(text: string): Inline[] {
     const at = match.index
     if (at > last) spans.push({ kind: 'text', text: text.slice(last, at) })
 
-    const [, strong, underline, em, form] = match
+    const [, strong, underline, em, form, color, colorText] = match
     if (strong !== undefined) spans.push({ kind: 'strong', children: parseInline(strong) })
     else if (underline !== undefined) spans.push({ kind: 'underline', children: parseInline(underline) })
     else if (em !== undefined) spans.push({ kind: 'em', children: parseInline(em) })
     else if (form !== undefined) spans.push({ kind: 'form', text: form })
+    else if (color !== undefined) {
+      spans.push({ kind: 'color', color: color as UnitColor, children: parseInline(colorText ?? '') })
+    }
 
     last = at + match[0].length
   }

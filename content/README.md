@@ -135,7 +135,7 @@ notes: |
 | ligne indentée sous une règle | l'exemple de cette règle, en italique |
 | `! …` | un piège, encadré en ambre |
 
-Quatre marqueurs enrichissent le texte, dans les paragraphes comme dans les
+Cinq marqueurs enrichissent le texte, dans les paragraphes comme dans les
 règles ou les pièges :
 
 | Écriture | Rendu | À réserver à |
@@ -144,9 +144,20 @@ règles ou les pièges :
 | `**texte**` | gras | l'idée directrice, une opposition |
 | `__texte__` | souligné | le mot qui décide, dans une règle |
 | `*texte*` | italique | une nuance, une glose |
+| `{violet}texte{/violet}` | teinté (gras) | distinguer deux notions qui reviennent tout au long d'un rappel |
 
-Le plus utile est le premier : sur `` `must have` ``, l'œil repère la forme
-étrangère sans avoir à lire la phrase. Les trois autres se paient en
+`{couleur}…{/couleur}` accepte les dix teintes déjà en usage ailleurs dans
+l'app : `teal`, `violet`, `coral`, `amber`, `sky`, `yellow`, `green`, `red`,
+`orange`, `blue`. Utile pour opposer deux notions sur toute la longueur d'un
+rappel (une thèse et l'objection qui lui répond, un auteur et son
+commentateur) plutôt qu'à l'intérieur d'une seule phrase, où le gras suffit
+déjà ; deux ou trois couleurs par rappel au plus, au-delà l'effet se perd.
+Peut contenir du gras (`{amber}une **thèse** centrale{/amber}`), mais pas
+l'inverse : une couleur ne s'ouvre pas à l'intérieur d'un gras.
+
+Le plus utile des quatre premiers est `` `will` `` : sur `` `must have` ``,
+l'œil repère la forme étrangère sans avoir à lire la phrase. Les trois
+suivants se paient en
 lisibilité dès qu'on en abuse (deux ou trois par rappel suffisent).
 
 **Vocabulaire seulement (`kind: vocab`) :** une ligne ne portant que `===`

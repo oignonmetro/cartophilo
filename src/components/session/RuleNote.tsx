@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import type { RuleExercise } from '@/engine/exercises'
 import { parseInline, parseNotes, splitAside, type Inline, type NoteRule } from '@/content/notes'
+import type { UnitColor } from '@/content/schema'
 import { Button } from '@/components/Button'
 
 /**
@@ -46,6 +47,25 @@ const TONES = {
     label: 'text-teal-deep',
     button: 'teal',
   },
+} as const
+
+/**
+ * Classe de chaque couleur du marqueur `{couleur}…{/couleur}`, en toutes
+ * lettres : Tailwind ne génère que les classes qu'il peut lire littéralement
+ * dans le source, un nom composé à l'exécution (`` `text-${color}-deep` ``)
+ * ne produirait rien (voir la même remarque dans `SessionScreen.tsx`).
+ */
+const INLINE_COLORS: Record<UnitColor, string> = {
+  teal: 'text-teal-deep',
+  violet: 'text-violet-deep',
+  coral: 'text-coral-deep',
+  amber: 'text-amber-deep',
+  sky: 'text-sky-deep',
+  yellow: 'text-yellow-deep',
+  green: 'text-green-deep',
+  red: 'text-red-deep',
+  orange: 'text-orange-deep',
+  blue: 'text-blue-deep',
 } as const
 
 export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext: () => void }) {
@@ -204,6 +224,12 @@ function Spans({ spans }: { spans: Inline[] }) {
               <em key={index} className="text-ink italic">
                 {span.text}
               </em>
+            )
+          case 'color':
+            return (
+              <span key={index} className={`font-bold ${INLINE_COLORS[span.color]}`}>
+                <Spans spans={span.children} />
+              </span>
             )
           default:
             return <span key={index}>{span.text}</span>

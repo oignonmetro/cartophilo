@@ -103,8 +103,8 @@ describe('mise en forme dans le texte', () => {
     expect(parseInline('Rien à signaler.')).toEqual([{ kind: 'text', text: 'Rien à signaler.' }])
   })
 
-  it('reconnaît les quatre marqueurs', () => {
-    expect(parseInline('**g** *i* __s__ `f`')).toEqual([
+  it('reconnaît les cinq marqueurs', () => {
+    expect(parseInline('**g** *i* __s__ `f` {violet}c{/violet}')).toEqual([
       { kind: 'strong', children: [{ kind: 'text', text: 'g' }] },
       { kind: 'text', text: ' ' },
       { kind: 'em', children: [{ kind: 'text', text: 'i' }] },
@@ -112,7 +112,31 @@ describe('mise en forme dans le texte', () => {
       { kind: 'underline', children: [{ kind: 'text', text: 's' }] },
       { kind: 'text', text: ' ' },
       { kind: 'form', text: 'f' },
+      { kind: 'text', text: ' ' },
+      { kind: 'color', color: 'violet', children: [{ kind: 'text', text: 'c' }] },
     ])
+  })
+
+  it('imbrique du gras à l’intérieur d’une couleur', () => {
+    expect(parseInline('{amber}une **thèse** centrale{/amber}')).toEqual([
+      {
+        kind: 'color',
+        color: 'amber',
+        children: [
+          { kind: 'text', text: 'une ' },
+          { kind: 'strong', children: [{ kind: 'text', text: 'thèse' }] },
+          { kind: 'text', text: ' centrale' },
+        ],
+      },
+    ])
+  })
+
+  it('n’ouvre pas de couleur sur un nom qui n’est pas dans la palette', () => {
+    expect(parseInline('{rose}texte{/rose}')).toEqual([{ kind: 'text', text: '{rose}texte{/rose}' }])
+  })
+
+  it('n’ouvre pas de couleur dont la fermeture porte un autre nom', () => {
+    expect(parseInline('{violet}texte{/amber}')).toEqual([{ kind: 'text', text: '{violet}texte{/amber}' }])
   })
 
   it('ne confond pas le gras avec l’italique', () => {

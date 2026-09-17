@@ -183,16 +183,28 @@ points (contrairement au vocabulaire, la marque `===` de
 `content/README.md` n'y a pas d'effet de découpage). Ce rappel doit donc
 suffire à lui seul à situer tous les points de la lesson : c'est lui qui
 porte la synthèse de la section du texte source, ses moments ou étapes, ses
-règles, et les pièges d'interprétation courants — en s'appuyant sur les
+règles, et les pièges d'interprétation courants, en s'appuyant sur les
 mêmes conventions d'écriture que `content/README.md` documente
 (paragraphes, listes `- …`, étiquettes `- terme : …`, pièges `! …`, et les
-quatre marqueurs `` `terme` ``, `**gras**`, `__souligné__`, `*italique*`).
+cinq marqueurs `` `terme` ``, `**gras**`, `__souligné__`, `*italique*`,
+`{couleur}texte{/couleur}`).
+
+**N'hésitez pas sur la mise en forme.** Un rappel purement en prose se lit
+mal à l'écran ; mettez en gras l'idée directrice de chaque paragraphe, et
+réservez une couleur à une opposition qui traverse tout le rappel (une thèse
+et l'objection qu'on lui oppose, un auteur et son commentateur) plutôt que de
+tout laisser au ton neutre. Vaut pour toute lesson écrite désormais, et pour
+les lessons déjà écrites : une relecture qui ajoute du gras et de la couleur
+à un rappel resté trop uniforme est toujours bienvenue.
 
 **« De nombreux rappels »** ne veut donc pas dire un rappel exceptionnellement
 long, mais **de nombreuses lessons**, chacune bornée à une section ou
 sous-section cohérente du texte source (une lesson par « moment » du beau
 chez Kant, par exemple, plutôt qu'une lesson unique pour les quatre), chacune
-avec son propre rappel.
+avec son propre rappel. Un rappel qui déborde d'un écran est le signal qu'une
+lesson couvre en réalité deux sections : mieux vaut la couper en deux
+lessons successives, chacune avec son rappel et son lot de points, que de
+la laisser grossir.
 
 ## Déroulé de rédaction
 
