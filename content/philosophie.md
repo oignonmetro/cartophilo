@@ -69,6 +69,29 @@ perspective), mais ne dispense jamais `sentence` de porter seul l'essentiel
 de la clarté : c'est `sentence` qui s'affiche d'abord, et il arrive qu'on
 retrouve un point sans jamais dérouler son `explanation`.
 
+## Autonomie de chaque carte
+
+Une carte se réaffiche seule : la révision espacée la présente hors de
+l'ordre où elle a été écrite, sans les cartes voisines ni le rappel sous
+les yeux, parfois des semaines plus tard. `sentence` ne doit donc jamais
+dépendre d'un repère posé ailleurs et non répété :
+
+- **ni un ordinal renvoyant à une énumération tue**, du genre « la deuxième
+  raison » ou « le second moment », sans dire de quoi il s'agit. Quand le
+  texte source énumère plusieurs éléments (trois raisons, quatre moments,
+  deux lectures) et qu'une carte en isole un, `sentence` doit nommer
+  l'ensemble en même temps que le rang : « La deuxième des trois raisons
+  kantiennes en faveur de… tient à ce que… », jamais « La deuxième raison
+  tient à ce que… » tout court ;
+- **ni un démonstratif renvoyant à une notion posée ailleurs**, du genre
+  « cette distinction », « ce principe » ou « cette thèse », sans la
+  rappeler en quelques mots au passage.
+
+Avant de valider, se demander : « si cette carte apparaît seule, est-ce que
+je sais de quoi « la deuxième » ou « cette distinction » parle, sans avoir
+vu aucune autre carte de la lesson ? » Si la réponse est non, développer
+`sentence` jusqu'à ce qu'elle tienne debout seule.
+
 ## Six familles de points, dans l'ordre du texte source
 
 Les points d'une leçon suivent l'ordre du texte source, sans en-tête indiquant
