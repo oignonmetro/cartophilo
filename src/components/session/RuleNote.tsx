@@ -196,27 +196,34 @@ export function Rich({ text }: { text: string }) {
   return <Spans spans={parseInline(text)} />
 }
 
-function Spans({ spans }: { spans: Inline[] }) {
+/**
+ * `colorClass` porte la teinte d'un `color` ancestor jusqu'aux `strong`
+ * qu'il contient : un `<strong>` fixe sa propre couleur (`text-ink` par
+ * défaut), qui gagnerait sinon toujours sur la couleur héritée de son
+ * parent — la couleur ne se voit sur le texte en gras que si on la lui
+ * passe explicitement.
+ */
+function Spans({ spans, colorClass }: { spans: Inline[]; colorClass?: string }) {
   return (
     <>
       {spans.map((span, index) => {
         switch (span.kind) {
           case 'strong':
             return (
-              <strong key={index} className="font-black text-ink">
-                <Spans spans={span.children} />
+              <strong key={index} className={`font-black ${colorClass ?? 'text-ink'}`}>
+                <Spans spans={span.children} colorClass={colorClass} />
               </strong>
             )
           case 'em':
             return (
               <em key={index} className="italic">
-                <Spans spans={span.children} />
+                <Spans spans={span.children} colorClass={colorClass} />
               </em>
             )
           case 'underline':
             return (
               <span key={index} className="font-bold underline decoration-2 underline-offset-[3px]">
-                <Spans spans={span.children} />
+                <Spans spans={span.children} colorClass={colorClass} />
               </span>
             )
           case 'form':
@@ -225,12 +232,14 @@ function Spans({ spans }: { spans: Inline[] }) {
                 {span.text}
               </em>
             )
-          case 'color':
+          case 'color': {
+            const tint = INLINE_COLORS[span.color]
             return (
-              <span key={index} className={`font-bold ${INLINE_COLORS[span.color]}`}>
-                <Spans spans={span.children} />
+              <span key={index} className={`font-bold ${tint}`}>
+                <Spans spans={span.children} colorClass={tint} />
               </span>
             )
+          }
           default:
             return <span key={index}>{span.text}</span>
         }
