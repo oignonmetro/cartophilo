@@ -231,6 +231,25 @@ lessons: …
 Une unité oubliée dans `course.yaml`, ou référencée sans fichier, fait échouer
 la validation : le contenu ne peut pas contenir de trou.
 
+### Regrouper plusieurs unités sous un même repli
+
+`group` (facultatif) rassemble sous un même en-tête repliable les unités
+*consécutives* qui le partagent, dans la bibliothèque (`layout: library`)
+seulement :
+
+```yaml
+id: ea2
+title: La déduction du jugement de goût et ses débats
+group: L'esthétique de Kant   # même valeur que ea1, ea3, ea4, ea5
+```
+
+Utile dès qu'une piste couvre plusieurs unités sur un même auteur ou une
+même œuvre : sans lui, cinq unités s'étalent l'une sous l'autre dans la
+liste ; avec lui, elles se replient derrière un seul en-tête, dans l'ordre
+où elles sont déclarées. Une unité sans `group` reste seule, comme avant ce
+champ ; deux plages du même `group` séparées par une unité d'un autre
+`group` forment deux replis distincts plutôt qu'un seul.
+
 ## Publier le squelette d'un niveau avant son contenu
 
 Une piste (`kind: library`) peut avoir `units: []`, aucune unité. L'écran

@@ -6,7 +6,7 @@ import { countLabel, courseLabel, itemsOfUnit, unitLetters } from '@/content/cou
 import type { LessonProgressMap } from '@/engine/progress'
 import { dayKey, displayedStreak, levelFromXp, masteryOf, unitMastery } from '@/engine/progress'
 import { buildUnitPath, currentDestination } from '@/engine/unitPath'
-import { dueCards } from '@/engine/srs'
+import { dueCards, type CardState } from '@/engine/srs'
 import { EMPTY_CARDS, EMPTY_LESSON_PROGRESS, EMPTY_STEPS, useProgress } from '@/store/progressStore'
 import { useCourse } from '@/content/CourseProvider'
 import { availableCourses } from '@/content/loader'
@@ -35,6 +35,34 @@ function doneNodes(
 ): { count: number; total: number } {
   const path = buildUnitPath(unit, lessons, steps)
   return { count: path.filter((node) => node.status === 'done').length, total: path.length }
+}
+
+type UnitOrGroup = { kind: 'unit'; unit: Unit } | { kind: 'group'; group: string; units: Unit[] }
+
+/**
+ * Replie les unités consécutives qui portent le même `group` (voir
+ * `content/README.md`), pour une piste trop longue à parcourir d'un seul
+ * tenant — cinq unités sur l'esthétique de Kant, par exemple. Une unité sans
+ * `group` reste seule, exactement comme avant ce repli.
+ *
+ * Seules les unités *consécutives* se replient ensemble : un même `group`
+ * qui reprendrait plus loin, séparé par une unité d'un autre groupe,
+ * formerait un second repli plutôt que de rouvrir le premier — la piste
+ * garde ainsi l'ordre de déclaration du contenu.
+ */
+function groupUnits(units: readonly Unit[]): UnitOrGroup[] {
+  const result: UnitOrGroup[] = []
+  for (const unit of units) {
+    const last = result[result.length - 1]
+    if (unit.group && last?.kind === 'group' && last.group === unit.group) {
+      last.units.push(unit)
+    } else if (unit.group) {
+      result.push({ kind: 'group', group: unit.group, units: [unit] })
+    } else {
+      result.push({ kind: 'unit', unit })
+    }
+  }
+  return result
 }
 
 /**
@@ -150,6 +178,22 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
     setActiveTrackId(defaultTrackId(course.tracks))
   }, [course.id])
 
+  // Les replis de groupe (voir `groupUnits`) partent fermés, et se
+  // réinitialisent au changement de piste plutôt que de garder ouvert un
+  // groupe qu'on ne reverra qu'en y revenant plus tard.
+  const [openGroups, setOpenGroups] = useState<Set<string>>(new Set())
+  useEffect(() => {
+    setOpenGroups(new Set())
+  }, [activeTrackId])
+  const toggleGroup = (group: string) => {
+    setOpenGroups((current) => {
+      const next = new Set(current)
+      if (next.has(group)) next.delete(group)
+      else next.add(group)
+      return next
+    })
+  }
+
   // Ouvrir une unité mène droit à son étape courante — pas à un écran de
   // parcours à traverser pour la retrouver (voir `currentDestination`).
   const openUnit = (unit: Unit) => {
@@ -242,16 +286,39 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
         {track.units.length === 0 ? (
           <EmptyTrack tone={tone} />
         ) : (
-          track.units.map((unit) => (
-            <UnitCard
-              key={unit.id}
-              unit={unit}
-              tone={tone}
-              mastery={unitMastery(unit, cards)}
-              done={doneNodes(unit, lessons, steps)}
-              onOpen={() => openUnit(unit)}
-            />
-          ))
+          groupUnits(track.units).map((entry) =>
+            entry.kind === 'group' ? (
+              <GroupSection
+                key={entry.group}
+                group={entry.group}
+                units={entry.units}
+                tone={tone}
+                cards={cards}
+                open={openGroups.has(entry.group)}
+                onToggle={() => toggleGroup(entry.group)}
+              >
+                {entry.units.map((unit) => (
+                  <UnitCard
+                    key={unit.id}
+                    unit={unit}
+                    tone={tone}
+                    mastery={unitMastery(unit, cards)}
+                    done={doneNodes(unit, lessons, steps)}
+                    onOpen={() => openUnit(unit)}
+                  />
+                ))}
+              </GroupSection>
+            ) : (
+              <UnitCard
+                key={entry.unit.id}
+                unit={entry.unit}
+                tone={tone}
+                mastery={unitMastery(entry.unit, cards)}
+                done={doneNodes(entry.unit, lessons, steps)}
+                onOpen={() => openUnit(entry.unit)}
+              />
+            ),
+          )
         )}
       </main>
 
@@ -457,5 +524,75 @@ function UnitCard({
         </span>
       </button>
     </section>
+  )
+}
+
+/**
+ * Repli d'unités qui partagent un même `group` (voir `groupUnits`) : un
+ * en-tête au même gabarit qu'une carte d'unité, qui déroule ses unités en
+ * dessous plutôt que de les étaler toutes dans la liste — utile dès qu'une
+ * piste couvre plusieurs unités sur un même auteur ou une même œuvre.
+ */
+function GroupSection({
+  group,
+  units,
+  tone,
+  cards,
+  open,
+  onToggle,
+  children,
+}: {
+  group: string
+  units: Unit[]
+  tone: (typeof TRACK_TONES)[string]
+  cards: Record<string, CardState>
+  open: boolean
+  onToggle: () => void
+  children: React.ReactNode
+}) {
+  const itemIds = useMemo(() => units.flatMap((unit) => itemsOfUnit(unit).map((item) => item.id)), [units])
+  const mastery = masteryOf(itemIds, cards)
+
+  return (
+    <div className="flex flex-col gap-3">
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        className="card-3d flex w-full items-center gap-4 px-4 py-4 text-left"
+      >
+        <ProgressRing
+          ratio={mastery.ratio}
+          seenRatio={mastery.total === 0 ? 0 : mastery.seen / mastery.total}
+          color={tone.css}
+        />
+        <span className="flex-1">
+          <span className="text-base leading-tight font-extrabold">{group}</span>
+          <span className="mt-0.5 block text-xs font-bold text-ink-faint">
+            {units.length} unité{units.length > 1 ? 's' : ''}
+          </span>
+        </span>
+        <span className={`text-ink-faint transition-transform ${open ? 'rotate-90' : '-rotate-90'}`}>
+          <ChevronLeftIcon size={20} />
+        </span>
+      </button>
+
+      {/* Un simple repli plutôt qu'une hauteur animée : aucun autre écran de
+          l'app n'anime `height: auto`, et le fondu suffit à faire sentir
+          l'ouverture sans réinventer un mécanisme absent d'ailleurs. */}
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+            className="ml-3 flex flex-col gap-3 border-l-2 border-line pl-3"
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   )
 }

@@ -162,6 +162,14 @@ export const unitSchema = z.object({
   color: unitColorSchema.default('teal'),
   /** Repère de difficulté affiché tel quel, par exemple « B2.1 ». */
   level: z.string().optional(),
+  /**
+   * Regroupe plusieurs unités d'une même piste sous un même repli
+   * (voir `LibraryScreen`), par exemple « L'esthétique de Kant » pour
+   * plusieurs unités qui en couvrent chacune une partie. Deux unités
+   * consécutives portant le même `group` tombent dans le même repli ;
+   * sans lui, l'unité s'affiche seule, comme avant.
+   */
+  group: z.string().optional(),
   /** Nature du contenu ; héritée de la piste par le compilateur. */
   kind: lessonKindSchema,
   lessons: z.array(lessonSchema).min(1),

@@ -88,10 +88,17 @@ export function indexItems(course: Course): Map<string, ItemLocation> {
   return byId
 }
 
-/** Libellé d'une nature de contenu : « 12 règles », « 1 forme ». */
+/**
+ * Libellé d'une nature de contenu : « 12 points », « 1 forme ».
+ *
+ * `grammar` porte aussi bien une règle de langue (le cours `demo`) qu'un
+ * fait philosophique isolé (les quatre cours de philosophie, voir
+ * `content/philosophie.md`) : « point », déjà le nom du champ `points:` dans
+ * le contenu, couvre les deux sans trancher pour l'un contre l'autre.
+ */
 export const KIND_LABELS: Record<LessonKind, { one: string; many: string }> = {
   vocab: { one: 'mot', many: 'mots' },
-  grammar: { one: 'règle', many: 'règles' },
+  grammar: { one: 'point', many: 'points' },
   conjugation: { one: 'forme', many: 'formes' },
 }
 
