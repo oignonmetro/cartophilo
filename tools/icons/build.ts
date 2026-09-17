@@ -1,5 +1,7 @@
 /**
- * Génère les icônes PNG de l'application à partir de `public/favicon.svg`.
+ * Génère les icônes PNG de l'application à partir de `public/favicon.svg`
+ * (icônes plates) et `public/favicon-foreground.svg` (calque avant des
+ * icônes adaptatives/maskable, sans le fond).
  *
  *   npm run icons
  *
@@ -13,13 +15,25 @@ import sharp from 'sharp'
 
 const root = resolve(fileURLToPath(new URL('../..', import.meta.url)))
 const source = readFileSync(join(root, 'public', 'favicon.svg'))
+const foreground = readFileSync(join(root, 'public', 'favicon-foreground.svg'))
 const outDir = join(root, 'public', 'icons')
 
-/** L'icône masquable garde 20 % de marge : Android en rogne les bords. */
+/** Fond plein du logo (voir favicon.svg) : celui des icônes adaptatives. */
+const PURPLE = '#3B2748'
+
+/**
+ * Marge du calque avant d'une icône adaptative/maskable : l'OS (Android, ou
+ * Chrome pour le PWA « ajouter à l'écran d'accueil ») découpe la forme finale
+ * lui-même (cercle, carré arrondi...) et doit pouvoir rogner jusqu'à cette
+ * marge sans jamais mordre sur le dessin. Le fond, lui, doit couvrir tout le
+ * canevas : c'est lui qui remplit une fois la forme découpée, jamais une
+ * copie réduite du logo entier sur un fond vide (voir le calque avant,
+ * `favicon-foreground.svg`, qui ne contient que le dessin, pas le fond).
+ */
 const MASKABLE_PADDING = 0.2
 
 async function render(size: number, name: string, padding = 0) {
-  await write(outDir, name, size, padding, '#FFF8EE')
+  await write(outDir, name, size, source, padding, PURPLE)
   console.log(`  ✓ icons/${name} (${size}×${size})`)
 }
 
@@ -47,25 +61,37 @@ async function renderAndroid() {
     const legacy = Math.round(48 * scale)
     const adaptive = Math.round(108 * scale)
 
-    await write(dir, 'ic_launcher.png', legacy, 0, '#FFF8EE')
-    await write(dir, 'ic_launcher_round.png', legacy, 0, '#FFF8EE')
-    // Le fond du calque avant reste transparent : Android le compose lui-même.
-    await write(dir, 'ic_launcher_foreground.png', adaptive, ADAPTIVE_PADDING, null)
+    await write(dir, 'ic_launcher.png', legacy, source, 0, PURPLE)
+    await write(dir, 'ic_launcher_round.png', legacy, source, 0, PURPLE)
+    // Calque avant : seulement le dessin, le fond est composé par Android
+    // à partir de ic_launcher_background (transparent ici pour le laisser
+    // transparaître).
+    await write(dir, 'ic_launcher_foreground.png', adaptive, foreground, ADAPTIVE_PADDING, null)
   }
 
-  // Le fond de l'icône adaptative doit s'accorder au thème de l'application.
+  // Fond plein de l'icône adaptative : le violet du logo, jamais la couleur
+  // de la page (voir le calque avant) — sans quoi la forme finale, une fois
+  // découpée par Android, montrerait un liseré ou un fond vide autour d'un
+  // dessin réduit au lieu d'être remplie jusqu'au bord.
   writeFileSync(
     join(resDir, 'values', 'ic_launcher_background.xml'),
-    '<?xml version="1.0" encoding="utf-8"?>\n<resources>\n    <color name="ic_launcher_background">#FFF8EE</color>\n</resources>\n',
+    `<?xml version="1.0" encoding="utf-8"?>\n<resources>\n    <color name="ic_launcher_background">${PURPLE}</color>\n</resources>\n`,
     'utf8',
   )
 
   console.log('  ✓ icônes de lanceur Android (5 densités)')
 }
 
-async function write(dir: string, name: string, size: number, padding: number, background: string | null) {
+async function write(
+  dir: string,
+  name: string,
+  size: number,
+  svg: Buffer,
+  padding: number,
+  background: string | null,
+) {
   const inner = Math.round(size * (1 - padding * 2))
-  const art = await sharp(source, { density: 384 }).resize(inner, inner).png().toBuffer()
+  const art = await sharp(svg, { density: 384 }).resize(inner, inner).png().toBuffer()
   const offset = Math.round((size - inner) / 2)
 
   await sharp({
@@ -85,12 +111,16 @@ async function main() {
   mkdirSync(outDir, { recursive: true })
   await render(192, 'icon-192.png')
   await render(512, 'icon-512.png')
-  await render(512, 'icon-512-maskable.png', MASKABLE_PADDING)
+  // Icône maskable : fond plein (violet) jusqu'au bord, calque avant seul
+  // (sans fond) dans la marge de sécurité — jamais le logo entier réduit
+  // sur un fond de page, qui laisserait un grand vide une fois découpé.
+  await write(outDir, 'icon-512-maskable.png', 512, foreground, MASKABLE_PADDING, PURPLE)
+  console.log(`  ✓ icons/icon-512-maskable.png (512×512)`)
   await renderAndroid()
 
   writeFileSync(
     join(outDir, 'README.md'),
-    'Icônes générées par `npm run icons` à partir de `public/favicon.svg`.\nNe pas éditer à la main.\n',
+    'Icônes générées par `npm run icons` à partir de `public/favicon.svg` et\n`public/favicon-foreground.svg`.\nNe pas éditer à la main.\n',
     'utf8',
   )
 }
