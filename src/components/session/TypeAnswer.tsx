@@ -47,6 +47,16 @@ export function TypeAnswer({
     haptics.answered(exercise, correct)
   }
 
+  // Toujours faux : abandonner compte comme une réponse manquée, et efface
+  // ce qui restait tapé pour que la correction n'affiche pas un essai
+  // partiel comme si c'était la tentative de l'apprenant.
+  function giveUp() {
+    setValue('')
+    setChecked(false)
+    sounds.success(false)
+    haptics.answered(exercise, false)
+  }
+
   return (
     <div className="flex flex-1 flex-col gap-6">
       {/* Épinglée en haut de la zone qui défile : sur mobile, le clavier qui
@@ -103,11 +113,20 @@ export function TypeAnswer({
         </motion.div>
       )}
 
-      <div className="mt-auto">
+      <div className="mt-auto flex flex-col items-center gap-3">
         {checked === null ? (
-          <Button block disabled={!filled} onClick={check}>
-            Vérifier
-          </Button>
+          <>
+            <Button block disabled={!filled} onClick={check}>
+              Vérifier
+            </Button>
+            <button
+              type="button"
+              onClick={giveUp}
+              className="text-sm font-bold text-ink-faint underline decoration-dotted underline-offset-4 transition-colors hover:text-ink-soft"
+            >
+              Je ne sais pas
+            </button>
+          </>
         ) : (
           <Button
             block

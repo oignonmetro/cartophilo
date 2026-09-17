@@ -114,11 +114,22 @@ export function ClozeSentence({
         onGapResolved={() => setGapResolved(true)}
       />
 
-      <div className="mt-auto">
+      <div className="mt-auto flex flex-col items-center gap-3">
         {checked === null ? (
-          <Button block disabled={!filled} onClick={() => check(value)}>
-            Vérifier
-          </Button>
+          <>
+            <Button block disabled={!filled} onClick={() => check(value)}>
+              Vérifier
+            </Button>
+            {!bank && (
+              <button
+                type="button"
+                onClick={() => check('')}
+                className="text-sm font-bold text-ink-faint underline decoration-dotted underline-offset-4 transition-colors hover:text-ink-soft"
+              >
+                Je ne sais pas
+              </button>
+            )}
+          </>
         ) : (
           <Button
             block

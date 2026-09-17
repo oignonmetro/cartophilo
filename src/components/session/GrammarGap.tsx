@@ -151,11 +151,22 @@ export function GrammarGap({
         </motion.div>
       )}
 
-      <div className="mt-auto">
+      <div className="mt-auto flex flex-col items-center gap-3">
         {checked === null ? (
-          <Button block tone="violet" disabled={!filled} onClick={() => check(value)}>
-            Vérifier
-          </Button>
+          <>
+            <Button block tone="violet" disabled={!filled} onClick={() => check(value)}>
+              Vérifier
+            </Button>
+            {!bank && (
+              <button
+                type="button"
+                onClick={() => check('')}
+                className="text-sm font-bold text-ink-faint underline decoration-dotted underline-offset-4 transition-colors hover:text-ink-soft"
+              >
+                Je ne sais pas
+              </button>
+            )}
+          </>
         ) : (
           <Button
             block

@@ -53,6 +53,16 @@ export function ConjugationAnswer({
     haptics.answered(exercise, correct)
   }
 
+  // Toujours faux : abandonner compte comme une réponse manquée, et efface
+  // ce qui restait tapé pour que la correction n'affiche pas un essai
+  // partiel comme si c'était la tentative de l'apprenant.
+  function giveUp() {
+    setValue('')
+    setChecked(false)
+    sounds.success(false)
+    haptics.answered(exercise, false)
+  }
+
   return (
     <div className="flex flex-1 flex-col gap-5">
       {/* Épinglée : voir la même remarque dans `TypeAnswer`. */}
@@ -138,11 +148,20 @@ export function ConjugationAnswer({
         </motion.div>
       )}
 
-      <div>
+      <div className="flex flex-col items-center gap-3">
         {checked === null ? (
-          <Button block tone="sky" disabled={!filled} onClick={check}>
-            Vérifier
-          </Button>
+          <>
+            <Button block tone="sky" disabled={!filled} onClick={check}>
+              Vérifier
+            </Button>
+            <button
+              type="button"
+              onClick={giveUp}
+              className="text-sm font-bold text-ink-faint underline decoration-dotted underline-offset-4 transition-colors hover:text-ink-soft"
+            >
+              Je ne sais pas
+            </button>
+          </>
         ) : (
           <Button
             block
