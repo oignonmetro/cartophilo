@@ -22,7 +22,7 @@ import { Button } from '@/components/Button'
  * structure. Voir content/README.md pour les conventions d'écriture.
  */
 
-const TONES = {
+export const TONES = {
   grammar: {
     accent: 'bg-violet',
     eyebrow: 'text-violet',
@@ -68,8 +68,69 @@ const INLINE_COLORS: Record<UnitColor, string> = {
   blue: 'text-blue-deep',
 } as const
 
+export type Tone = (typeof TONES)[keyof typeof TONES]
+
+/**
+ * Le corps d'un rappel : ses blocs (prose, pièges, règles), sans l'en-tête ni
+ * le bouton. Extrait de `RuleNote` pour que l'éditeur de contenu affiche le
+ * même rendu en aperçu, sans dupliquer ces règles de mise en page.
+ */
+export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
+  const blocks = parseNotes(notes)
+
+  return (
+    <>
+      {blocks.map((block, index) => {
+        if (block.kind === 'paragraph') {
+          // La première prose est l'attaque du rappel : plus grande et plus
+          // sombre, elle porte l'idée que tout le reste vient détailler.
+          const lead = index === 0
+          return (
+            <p
+              key={index}
+              className={
+                lead
+                  ? 'text-[0.975rem] leading-relaxed font-semibold text-ink'
+                  : 'text-sm leading-relaxed text-ink-soft'
+              }
+            >
+              <Rich text={block.text} />
+            </p>
+          )
+        }
+
+        if (block.kind === 'warning') {
+          return (
+            <p
+              key={index}
+              className="flex gap-2.5 rounded-2xl border-2 border-amber/40 bg-amber/10 px-4 py-3 text-sm leading-relaxed text-ink"
+            >
+              <span aria-hidden className="text-base leading-tight">
+                ⚠
+              </span>
+              <span>
+                <Rich text={block.text} />
+              </span>
+            </p>
+          )
+        }
+
+        return (
+          <ul key={index} className={`flex flex-col rounded-2xl ${tone.panel} px-4 py-1`}>
+            {block.rules.map((rule, position) => (
+              <li key={position} className="flex gap-3 border-b border-ink/8 py-3 last:border-b-0">
+                <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${tone.marker}`} />
+                <RuleBody rule={rule} labelClass={tone.label} />
+              </li>
+            ))}
+          </ul>
+        )
+      })}
+    </>
+  )
+}
+
 export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext: () => void }) {
-  const blocks = parseNotes(exercise.notes)
   const tone = TONES[exercise.topic]
 
   return (
@@ -91,55 +152,7 @@ export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext:
           <h2 className="text-2xl leading-tight font-black text-balance">{exercise.title}</h2>
         </header>
 
-        {blocks.map((block, index) => {
-          if (block.kind === 'paragraph') {
-            // La première prose est l'attaque du rappel : plus grande et plus
-            // sombre, elle porte l'idée que tout le reste vient détailler.
-            const lead = index === 0
-            return (
-              <p
-                key={index}
-                className={
-                  lead
-                    ? 'text-[0.975rem] leading-relaxed font-semibold text-ink'
-                    : 'text-sm leading-relaxed text-ink-soft'
-                }
-              >
-                <Rich text={block.text} />
-              </p>
-            )
-          }
-
-          if (block.kind === 'warning') {
-            return (
-              <p
-                key={index}
-                className="flex gap-2.5 rounded-2xl border-2 border-amber/40 bg-amber/10 px-4 py-3 text-sm leading-relaxed text-ink"
-              >
-                <span aria-hidden className="text-base leading-tight">
-                  ⚠
-                </span>
-                <span>
-                  <Rich text={block.text} />
-                </span>
-              </p>
-            )
-          }
-
-          return (
-            <ul key={index} className={`flex flex-col rounded-2xl ${tone.panel} px-4 py-1`}>
-              {block.rules.map((rule, position) => (
-                <li
-                  key={position}
-                  className="flex gap-3 border-b border-ink/8 py-3 last:border-b-0"
-                >
-                  <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${tone.marker}`} />
-                  <RuleBody rule={rule} labelClass={tone.label} />
-                </li>
-              ))}
-            </ul>
-          )
-        })}
+        <NoteBlocks notes={exercise.notes} tone={tone} />
       </motion.div>
 
       <div className="mt-auto w-full max-w-lg self-center pt-4">

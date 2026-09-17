@@ -1,6 +1,7 @@
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import type { ServerResponse } from 'node:http'
 import type { Plugin, Connect } from 'vite'
 import { parseDocument, Document } from 'yaml'
 
@@ -33,6 +34,7 @@ interface TreeUnit {
 interface TreeTrack {
   id: string
   title: string
+  kind: string
   units: TreeUnit[]
 }
 
@@ -63,41 +65,40 @@ function buildTree(): TreeCourse[] {
     } catch {
       continue
     }
-    const name = String(courseDoc.get('name') ?? courseId)
-    const layout = courseDoc.get('layout')
-    if (layout !== 'library') continue // les sections `path` n'ont pas encore de contenu réel
+    // `Document.get` renvoie le nœud `yaml` (YAMLSeq/YAMLMap), pas un
+    // tableau/objet JS : `.toJS()` convertit tout le document d'un coup, ce
+    // qui suffit pour la simple lecture de l'arborescence (la préservation
+    // du style ne compte que pour l'écriture, voir le PUT plus bas).
+    const courseData = courseDoc.toJS() as Record<string, unknown>
+    const name = String(courseData.name ?? courseId)
+    if (courseData.layout !== 'library') continue // les sections `path` n'ont pas encore de contenu réel
 
-    const tracksNode = courseDoc.get('tracks')
+    const tracksData = Array.isArray(courseData.tracks) ? (courseData.tracks as Record<string, unknown>[]) : []
     const tracks: TreeTrack[] = []
-    if (Array.isArray(tracksNode)) {
-      for (const track of tracksNode as unknown[]) {
-        const t = track as Record<string, unknown>
-        const unitIds = Array.isArray(t.units) ? (t.units as string[]) : []
-        const units: TreeUnit[] = []
-        for (const unitId of unitIds) {
-          const unitFile = join(contentDir, courseId, 'units', `${unitId}.yaml`)
-          let unitDoc: Document
-          try {
-            unitDoc = readYamlDoc(unitFile)
-          } catch {
-            continue
-          }
-          const lessonsNode = unitDoc.get('lessons')
-          const lessons: TreeLesson[] = Array.isArray(lessonsNode)
-            ? (lessonsNode as unknown[]).map((lesson) => {
-                const l = lesson as Record<string, unknown>
-                return { id: String(l.id), title: String(l.title ?? l.id) }
-              })
-            : []
-          units.push({
-            id: unitId,
-            title: String(unitDoc.get('title') ?? unitId),
-            group: unitDoc.get('group') ? String(unitDoc.get('group')) : null,
-            lessons,
-          })
+    for (const t of tracksData) {
+      const unitIds = Array.isArray(t.units) ? (t.units as string[]) : []
+      const units: TreeUnit[] = []
+      for (const unitId of unitIds) {
+        const unitFile = join(contentDir, courseId, 'units', `${unitId}.yaml`)
+        let unitData: Record<string, unknown>
+        try {
+          unitData = readYamlDoc(unitFile).toJS() as Record<string, unknown>
+        } catch {
+          continue
         }
-        tracks.push({ id: String(t.id), title: String(t.title ?? t.id), units })
+        const lessonsData = Array.isArray(unitData.lessons) ? (unitData.lessons as Record<string, unknown>[]) : []
+        const lessons: TreeLesson[] = lessonsData.map((l) => ({
+          id: String(l.id),
+          title: String(l.title ?? l.id),
+        }))
+        units.push({
+          id: unitId,
+          title: String(unitData.title ?? unitId),
+          group: unitData.group ? String(unitData.group) : null,
+          lessons,
+        })
       }
+      tracks.push({ id: String(t.id), title: String(t.title ?? t.id), kind: String(t.kind ?? 'grammar'), units })
     }
     courses.push({ id: courseId, name, tracks })
   }
@@ -107,12 +108,12 @@ function buildTree(): TreeCourse[] {
 
 /** Trouve l'index d'une leçon dans le tableau `lessons` d'un document d'unité. */
 function findLessonIndex(unitDoc: Document, lessonId: string): number {
-  const lessonsNode = unitDoc.get('lessons')
-  if (!Array.isArray(lessonsNode)) return -1
-  return (lessonsNode as unknown[]).findIndex((lesson) => (lesson as Record<string, unknown>).id === lessonId)
+  const lessons = (unitDoc.toJS() as Record<string, unknown>).lessons
+  if (!Array.isArray(lessons)) return -1
+  return (lessons as Record<string, unknown>[]).findIndex((lesson) => lesson.id === lessonId)
 }
 
-function sendJson(res: Connect.ServerResponse | any, status: number, body: unknown) {
+function sendJson(res: ServerResponse, status: number, body: unknown) {
   res.statusCode = status
   res.setHeader('Content-Type', 'application/json; charset=utf-8')
   res.end(JSON.stringify(body))
@@ -156,8 +157,9 @@ export function contentEditorApi(): Plugin {
               sendJson(res, 404, { error: `leçon "${lesson}" introuvable dans ${unit}` })
               return
             }
-            const lessonNode = doc.getIn(['lessons', idx]) as Record<string, unknown>
-            sendJson(res, 200, { title: String(lessonNode.title ?? lesson), notes: String(lessonNode.notes ?? '') })
+            const lessons = (doc.toJS() as Record<string, unknown>).lessons as Record<string, unknown>[]
+            const lessonData = lessons[idx]
+            sendJson(res, 200, { title: String(lessonData.title ?? lesson), notes: String(lessonData.notes ?? '') })
           } catch (error) {
             sendJson(res, 500, { error: String((error as Error).message) })
           }

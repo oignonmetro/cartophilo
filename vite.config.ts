@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
+import { contentEditorApi } from './tools/content-editor/api-plugin.ts'
 
 // `APP_BASE` is set to "/cartophilo/" by the GitHub Pages workflow.
 // The Capacitor build keeps the default "/" since the APK serves from the web root.
@@ -18,6 +19,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    contentEditorApi(),
     VitePWA({
       registerType: 'prompt',
       includeAssets: ['favicon.svg', 'icons/*.png'],

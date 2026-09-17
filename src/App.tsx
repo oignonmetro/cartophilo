@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { CourseProvider } from '@/content/CourseProvider'
 import { HomeScreen } from '@/screens/HomeScreen'
@@ -10,6 +11,10 @@ import { AchievementsScreen } from '@/screens/AchievementsScreen'
 import { UpdatePrompt } from '@/components/UpdatePrompt'
 import { AppUpdateBanner } from '@/components/AppUpdateBanner'
 import { ThemeEffect } from '@/components/ThemeEffect'
+
+// Outil de développement uniquement (voir tools/content-editor/) : jamais
+// chargé en production, `import.meta.env.DEV` retire la route au build.
+const ContentEditorScreen = lazy(() => import('@/screens/editor/ContentEditorScreen'))
 
 /**
  * Routage par ancre (`#/...`) : c'est le seul mode qui fonctionne à la fois
@@ -30,6 +35,16 @@ export default function App() {
           <Route path="/succes" element={<AchievementsScreen />} />
           {/* Prototype de conception, données en dur — pas encore relié au moteur. */}
           <Route path="/difficiles" element={<HardWordsScreen />} />
+          {import.meta.env.DEV && (
+            <Route
+              path="/editeur"
+              element={
+                <Suspense fallback={null}>
+                  <ContentEditorScreen />
+                </Suspense>
+              }
+            />
+          )}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <UpdatePrompt />
