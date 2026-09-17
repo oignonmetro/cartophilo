@@ -425,6 +425,37 @@ const SOURCE_MATERIALITY_PATTERNS: RegExp[] = [
 /** Un point de localisation tourné en question plutôt qu'en phrase fluide. */
 const LOCALISATION_QUESTION_PATTERNS: RegExp[] = [/\boù (?:se trouve|se situe|situer|placer)\b/i, /^où\b/i]
 
+/**
+ * Anglais laissé par erreur dans un cours philosophique, dont les auteurs
+ * n'écrivent pour l'essentiel ni en anglais ni pour un public anglophone
+ * (Kant, Plotin, Marx). Deux façons de le repérer, ni l'une ni l'autre
+ * exhaustive :
+ *
+ *   - une liste de termes déjà rencontrés à tort dans ce corpus (« Groundwork »
+ *     pour les Fondements de la métaphysique des mœurs, des gloses anglaises
+ *     redondantes une fois le terme français en place) ; grandit avec ce
+ *     qu'on trouve réellement, comme `SOURCE_MATERIALITY_PATTERNS` ;
+ *   - un mot-outil anglais à l'intérieur d'un marqueur `*italique*` ou
+ *     `` `forme citée` `` : ces deux marqueurs signalent une nuance, un
+ *     titre, ou un mot étranger cité (voir content/README.md) — jamais une
+ *     glose anglaise. Le français, l'allemand et le latin ne partagent aucun
+ *     de ces mots, le risque de faux positif est donc faible.
+ *
+ * Un terme allemand ou latin cité (`` `Zweck` ``, `` `sensus communis` ``)
+ * n'a aucune raison de contenir l'un de ces mots-outils, il passe donc au
+ * travers sans être signalé.
+ */
+const STRAY_ENGLISH_TERMS = [
+  'Groundwork',
+  'Highest Good',
+  'Kingdom of Ends',
+  'appraisal respect',
+  'recognition respect',
+  'seek out',
+  'establish',
+]
+const ENGLISH_FUNCTION_WORDS_IN_MARKUP = /(?:\*|`)[^*`]*\b(?:the|and|of|is|are|with|which|that)\b[^*`]*(?:\*|`)/i
+
 /** Une réponse au-delà de cette longueur sent la paraphrase, pas le terme ou la référence précise. */
 const ANSWER_WORD_LIMIT = 8
 
@@ -453,8 +484,19 @@ export function philosophyContentRemarks(learning: string, lessons: readonly Phi
     }
   }
 
+  const flagEnglish = (where: string, field: string, text: string | undefined) => {
+    if (!text) return
+    const found = STRAY_ENGLISH_TERMS.find((term) => new RegExp(`\\b${term}\\b`).test(text))
+    if (found) {
+      remarks.push(`${where} : ${field} contient « ${found} », de l'anglais déjà rencontré à tort ici ; traduisez ou supprimez`)
+    } else if (ENGLISH_FUNCTION_WORDS_IN_MARKUP.test(text)) {
+      remarks.push(`${where} : ${field} porte un mot-outil anglais à l'intérieur d'un marqueur \`*italique*\` ou \`forme\` ; ces marqueurs ne servent jamais à une glose anglaise`)
+    }
+  }
+
   for (const lesson of lessons) {
     flagMateriality(`leçon "${lesson.id}"`, 'le rappel', lesson.notes)
+    flagEnglish(`leçon "${lesson.id}"`, 'le rappel', lesson.notes)
 
     for (const point of lesson.points) {
       const where = `point "${point.id}"`
@@ -467,6 +509,8 @@ export function philosophyContentRemarks(learning: string, lessons: readonly Phi
 
       flagMateriality(where, 'sentence', point.sentence)
       flagMateriality(where, 'explanation', point.explanation)
+      flagEnglish(where, 'sentence', point.sentence)
+      flagEnglish(where, 'explanation', point.explanation)
 
       for (const [field, text] of [['sentence', point.sentence], ['explanation', point.explanation]] as const) {
         if (text && LOCALISATION_QUESTION_PATTERNS.some((pattern) => pattern.test(text.trim()))) {
