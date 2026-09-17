@@ -308,7 +308,7 @@ export default function ContentEditorScreen() {
                     type="button"
                     title={color}
                     onClick={() => wrapSelection(`{${color}}`, `{/${color}}`)}
-                    className={`h-6 w-6 shrink-0 rounded-full border-2 border-white shadow ${SWATCH[color]}`}
+                    className={`h-6 w-6 shrink-0 rounded-full border-2 border-paper shadow ${SWATCH[color]}`}
                   />
                 ))}
               </div>
@@ -317,7 +317,7 @@ export default function ContentEditorScreen() {
                 value={notes}
                 onChange={(event) => setNotes(event.target.value)}
                 spellCheck={false}
-                className="min-h-0 flex-1 resize-none rounded-2xl border-2 border-line bg-white p-4 font-mono text-sm leading-relaxed text-ink outline-none focus:border-teal"
+                className="min-h-0 flex-1 resize-none rounded-2xl border-2 border-line bg-paper p-4 font-mono text-sm leading-relaxed text-ink outline-none focus:border-teal"
               />
             </div>
 
@@ -352,7 +352,7 @@ function ToolbarButton({
       type="button"
       title={title}
       onClick={onClick}
-      className="rounded-lg border-2 border-line bg-white px-2.5 py-1.5 text-xs font-bold text-ink-soft transition hover:border-ink/20 hover:text-ink"
+      className="rounded-lg border-2 border-line bg-paper px-2.5 py-1.5 text-xs font-bold text-ink-soft transition hover:border-ink/20 hover:text-ink"
     >
       {children}
     </button>
