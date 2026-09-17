@@ -143,7 +143,7 @@ règles ou les pièges :
 | `` `will` `` | mot étranger en italique | une forme citée au milieu du français |
 | `**texte**` | gras | l'idée directrice, une opposition |
 | `__texte__` | souligné | le mot qui décide, dans une règle |
-| `*texte*` | italique | une nuance, une glose |
+| `*texte*` | italique | une nuance, une glose, un titre d'œuvre |
 | `{violet}texte{/violet}` | teinté (gras) | distinguer deux notions qui reviennent tout au long d'un rappel |
 
 `{couleur}…{/couleur}` accepte les dix teintes déjà en usage ailleurs dans
@@ -159,6 +159,12 @@ Le plus utile des quatre premiers est `` `will` `` : sur `` `must have` ``,
 l'œil repère la forme étrangère sans avoir à lire la phrase. Les trois
 suivants se paient en
 lisibilité dès qu'on en abuse (deux ou trois par rappel suffisent).
+
+Un titre d'œuvre s'italicise toujours (`*Groundwork*`, `*Critique du
+jugement*`), même s'il est aussi en langue étrangère : c'est `*texte*` qu'il
+faut alors, jamais `` `terme` `` (réservé à une forme citée hors titre — un
+mot, une expression), pour ne pas confondre deux marqueurs qui rendent tous
+deux en italique mais ne signalent pas la même chose.
 
 **Vocabulaire seulement (`kind: vocab`) :** une ligne ne portant que `===`
 coupe le rappel en plusieurs sections. Chacune s'affiche avant le bloc de

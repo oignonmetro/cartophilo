@@ -181,6 +181,27 @@ export default function ContentEditorScreen() {
     })
   }
 
+  /** Raccourcis clavier dans le textarea : mêmes marqueurs que la barre d'outils. */
+  function handleFormattingShortcut(event: React.KeyboardEvent<HTMLTextAreaElement>) {
+    if (!(event.metaKey || event.ctrlKey)) return
+    const key = event.key.toLowerCase()
+
+    if (key === 'b') {
+      event.preventDefault()
+      wrapSelection('**', '**')
+    } else if (key === 'i' && event.shiftKey) {
+      // Mot étranger cité : distinct de l'italique générique, voir le bouton dédié.
+      event.preventDefault()
+      wrapSelection('`', '`')
+    } else if (key === 'i') {
+      event.preventDefault()
+      wrapSelection('*', '*')
+    } else if (key === 'u') {
+      event.preventDefault()
+      wrapSelection('__', '__')
+    }
+  }
+
   const tone = TONES[trackKind]
 
   return (
@@ -281,14 +302,17 @@ export default function ContentEditorScreen() {
             <div className="flex min-h-0 flex-1 flex-col gap-2 border-r-2 border-line px-4 py-3">
               <p className="text-sm font-black text-ink">{title}</p>
               <div className="flex flex-wrap items-center gap-1.5">
-                <ToolbarButton title="Gras" onClick={() => wrapSelection('**', '**')}>
+                <ToolbarButton title="Gras (Ctrl+B)" onClick={() => wrapSelection('**', '**')}>
                   <strong>G</strong>
                 </ToolbarButton>
-                <ToolbarButton title="Souligné" onClick={() => wrapSelection('__', '__')}>
+                <ToolbarButton title="Italique — nuance, titre d'œuvre (Ctrl+I)" onClick={() => wrapSelection('*', '*')}>
+                  <em>I</em>
+                </ToolbarButton>
+                <ToolbarButton title="Souligné (Ctrl+U)" onClick={() => wrapSelection('__', '__')}>
                   <span className="underline">S</span>
                 </ToolbarButton>
-                <ToolbarButton title="Mot étranger (italique)" onClick={() => wrapSelection('`', '`')}>
-                  <em>I</em>
+                <ToolbarButton title="Mot étranger cité (Ctrl+Maj+I)" onClick={() => wrapSelection('`', '`')}>
+                  `m`
                 </ToolbarButton>
                 <ToolbarButton title="Règle (- )" onClick={() => prefixLines('- ')}>
                   - Règle
@@ -316,6 +340,7 @@ export default function ContentEditorScreen() {
                 ref={textareaRef}
                 value={notes}
                 onChange={(event) => setNotes(event.target.value)}
+                onKeyDown={handleFormattingShortcut}
                 spellCheck={false}
                 className="min-h-0 flex-1 resize-none rounded-2xl border-2 border-line bg-paper p-4 font-mono text-sm leading-relaxed text-ink outline-none focus:border-teal"
               />
