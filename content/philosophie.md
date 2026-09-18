@@ -150,6 +150,18 @@ l'affichage.
    trou se déplaçant d'un point à l'autre, jusqu'à ce que toutes les clauses
    importantes aient été testées une à une. La répétition intégrale y est
    volontaire, elle ne compte pas comme redondance à élaguer.
+
+   > **Un seul `___` par `sentence`, toujours.** Le moteur (`splitGap`, voir
+   > `src/engine/exercises.ts`) ne trouve que le premier `___` d'une phrase :
+   > un second trou dans la même `sentence` s'affiche comme du texte figé,
+   > sans champ de saisie. Cette règle déborde donc la famille Citation : dès
+   > qu'une phrase source teste plusieurs informations à la fois (une
+   > énumération à plusieurs trous, deux termes grecs introduits ensemble,
+   > deux arguments cités côte à côte), la décliner en autant de points que
+   > de trous, chacun ne portant qu'un `___`, les autres blancs de la phrase
+   > d'origine étant remplis par leur vraie valeur. C'est la même méthode
+   > que pour une citation cascade, appliquée plus largement.
+
 6. **Distinction** : `sentence` isole un pôle conceptuel par une question ou
    une phrase à trou (« Par opposition à la beauté libre, la beauté ___
    suppose un concept de la perfection de l'objet. ») ; `answer` est le terme
@@ -212,6 +224,18 @@ de cette traduction anglaise pour en donner une traduction française fidèle
 plutôt que d'aller chercher une édition française tierce non vérifiée par
 cette session.
 
+> **Ponctuation d'une citation reprise depuis une source externe (PDF,
+> export Quizlet ou autre) :** l'entourer de guillemets français `«…»` ;
+> si elle contient elle-même une citation ou une réplique de dialogue,
+> garder cette dernière entre guillemets droits `"…"` (jamais `«…»` en
+> double, imbriqué dans `«…»`). Et quel que soit le style de tiret que la
+> source utilise pour ses propres titres ou séparateurs, le remplacer par
+> une virgule ou un deux-points avant import : l'interdiction du tiret
+> cadratin (—), plus bas dans cette section, vaut aussi pour le texte
+> repris d'une source externe, pas seulement pour la prose composée pour
+> cette leçon. `npm run content:check` échoue sur le premier tiret cadratin
+> trouvé, d'où qu'il vienne.
+
 **Points laissés de côté :** si un point du texte source paraît important
 mais n'est qu'effleuré (renvoi à une note, à une référence bibliographique
 non développée), le signaler dans un commentaire YAML plutôt que de produire
@@ -247,6 +271,14 @@ avec son propre rappel. Un rappel qui déborde d'un écran est le signal qu'une
 lesson couvre en réalité deux sections : mieux vaut la couper en deux
 lessons successives, chacune avec son rappel et son lot de points, que de
 la laisser grossir.
+
+> **Trois points minimum par lesson.** `npm run content:check` refuse toute
+> lesson de grammaire à moins de trois points (voir `tools/content/build.ts`)
+> : ce plancher n'a rien à voir avec le découpage éditorial ci-dessus, c'est
+> une contrainte du moteur. Une section source trop courte pour donner trois
+> points distincts (un fait isolé, une seule citation courte) se rattache à
+> la lesson voisine la plus proche par le sujet, plutôt que de rester seule
+> et de faire échouer la validation.
 
 ## Déroulé de rédaction
 
