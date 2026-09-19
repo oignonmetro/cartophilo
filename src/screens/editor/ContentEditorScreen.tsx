@@ -244,7 +244,7 @@ export default function ContentEditorScreen() {
         <h1 className="text-sm font-black uppercase tracking-widest text-ink-soft">Éditeur de contenu</h1>
 
         {selection && trackKind === 'grammar' && (
-          <div className="flex flex-col gap-0.5 rounded-xl border-2 border-line p-1">
+          <div className="flex gap-0.5 rounded-xl border-2 border-line p-1">
             <ViewTabButton active={view === 'notes'} onClick={() => setView('notes')}>
               Rappel
             </ViewTabButton>
