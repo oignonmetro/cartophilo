@@ -3,7 +3,7 @@ import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { ServerResponse } from 'node:http'
 import type { Plugin, Connect } from 'vite'
-import { parseDocument, Document } from 'yaml'
+import { parseDocument, Document, Scalar, YAMLSeq, YAMLMap, isMap } from 'yaml'
 
 /**
  * API de développement pour l'éditeur de contenu : lit et réécrit les
@@ -42,6 +42,20 @@ interface TreeCourse {
   id: string
   name: string
   tracks: TreeTrack[]
+}
+
+/**
+ * Un point de grammaire tel que renvoyé/reçu par l'API — mêmes champs que
+ * `grammarPointSchema` (`src/content/schema.ts`), sans `options` ni
+ * `translation` : l'éditeur ne les touche jamais, voir `content/philosophie.md`
+ * (jamais renseignés sur un point de grammaire philosophique).
+ */
+interface PointDTO {
+  id: string
+  sentence: string
+  answer: string
+  alt: string[]
+  explanation?: string
 }
 
 function readYamlDoc(path: string): Document {
@@ -119,6 +133,69 @@ function sendJson(res: ServerResponse, status: number, body: unknown) {
   res.end(JSON.stringify(body))
 }
 
+/** Chaîne entre guillemets doubles, le style déjà en usage dans tout le contenu. */
+function dq(value: string): Scalar {
+  const scalar = new Scalar(value)
+  scalar.type = Scalar.QUOTE_DOUBLE
+  return scalar
+}
+
+/** `alt: ["…", "…"]` en flux sur une ligne, ou `alt: []` si vide — jamais en bloc. */
+function altSeq(values: string[]): YAMLSeq {
+  const seq = new YAMLSeq()
+  seq.flow = true
+  for (const value of values) seq.items.push(dq(value))
+  return seq
+}
+
+/** Construit le nœud d'un point tout neuf, avec le style de guillemets déjà en usage. */
+function buildPointNode(point: PointDTO): YAMLMap {
+  const map = new YAMLMap()
+  map.set('id', point.id)
+  map.set('sentence', dq(point.sentence))
+  map.set('answer', dq(point.answer))
+  map.set('alt', altSeq(point.alt))
+  if (point.explanation) map.set('explanation', dq(point.explanation))
+  return map
+}
+
+/**
+ * Applique la liste de points reçue à la `YAMLSeq` existante : un point dont
+ * l'id existe déjà voit ses champs mis à jour en place (ce qui préserve le
+ * style du nœud existant, comme pour `notes` plus bas) ; un id absent du
+ * document est un point tout neuf, créé avec le style de guillemets déjà en
+ * usage ; un id présent dans le document mais absent de la liste reçue a été
+ * supprimé côté éditeur. L'ordre final suit celui de la liste reçue — un
+ * simple réordonnancement ne recrée donc aucun nœud, il ne fait que
+ * réordonner les mêmes.
+ */
+function syncPoints(seq: YAMLSeq, points: PointDTO[]): void {
+  const existingById = new Map<string, unknown>()
+  for (const item of seq.items) {
+    if (isMap(item)) existingById.set(String(item.get('id')), item)
+  }
+
+  seq.items = points.map((point) => {
+    const existing = existingById.get(point.id)
+    if (existing && isMap(existing)) {
+      setScalar(existing, 'sentence', point.sentence)
+      setScalar(existing, 'answer', point.answer)
+      existing.set('alt', altSeq(point.alt))
+      if (point.explanation) setScalar(existing, 'explanation', point.explanation)
+      else existing.delete('explanation')
+      return existing
+    }
+    return buildPointNode(point)
+  })
+}
+
+/** Modifie la valeur d'un scalaire existant en place, plutôt que de le remplacer. */
+function setScalar(map: YAMLMap, key: string, value: string): void {
+  const node = map.get(key, true) as { value: unknown } | undefined
+  if (node && typeof node === 'object' && 'value' in node) node.value = value
+  else map.set(key, dq(value))
+}
+
 function readBody(req: Connect.IncomingMessage): Promise<string> {
   return new Promise((resolve, reject) => {
     let data = ''
@@ -159,7 +236,14 @@ export function contentEditorApi(): Plugin {
             }
             const lessons = (doc.toJS() as Record<string, unknown>).lessons as Record<string, unknown>[]
             const lessonData = lessons[idx]
-            sendJson(res, 200, { title: String(lessonData.title ?? lesson), notes: String(lessonData.notes ?? '') })
+            const kind = String(lessonData.kind ?? 'grammar')
+            const points = kind === 'grammar' ? (lessonData.points as PointDTO[] | undefined) : undefined
+            sendJson(res, 200, {
+              title: String(lessonData.title ?? lesson),
+              notes: String(lessonData.notes ?? ''),
+              kind,
+              points: points ?? null,
+            })
           } catch (error) {
             sendJson(res, 500, { error: String((error as Error).message) })
           }
@@ -168,7 +252,7 @@ export function contentEditorApi(): Plugin {
 
         if (req.method === 'PUT') {
           try {
-            const body = JSON.parse(await readBody(req)) as { notes: string }
+            const body = JSON.parse(await readBody(req)) as { notes: string; points?: PointDTO[] }
             const doc = readYamlDoc(unitFile)
             const idx = findLessonIndex(doc, lesson)
             if (idx === -1) {
@@ -185,7 +269,14 @@ export function contentEditorApi(): Plugin {
             } else {
               doc.setIn(['lessons', idx, 'notes'], body.notes)
             }
-            writeFileSync(unitFile, doc.toString({ lineWidth: 0 }), 'utf8')
+            if (body.points) {
+              const pointsSeq = doc.getIn(['lessons', idx, 'points'])
+              if (pointsSeq instanceof YAMLSeq) syncPoints(pointsSeq, body.points)
+              else doc.setIn(['lessons', idx, 'points'], body.points.map(buildPointNode))
+            }
+            // Jamais d'espace après `[` ni avant `]` dans un tableau en flux
+            // (`alt: ["a", "b"]`) : le style déjà en usage dans tout le contenu.
+            writeFileSync(unitFile, doc.toString({ lineWidth: 0, flowCollectionPadding: false }), 'utf8')
             sendJson(res, 200, { ok: true })
           } catch (error) {
             sendJson(res, 500, { error: String((error as Error).message) })

@@ -48,6 +48,31 @@ interface Selection {
   lesson: string
 }
 
+/** Même forme que `grammarPointSchema` (`src/content/schema.ts`), sans `options` ni `translation`. */
+interface PointDTO {
+  id: string
+  sentence: string
+  answer: string
+  alt: string[]
+  explanation?: string
+}
+
+/**
+ * Id de la prochaine carte d'une leçon, sur le même gabarit que celles déjà
+ * en place (`<leçon>-p<n>`) : le numéro le plus haut trouvé, plus un — jamais
+ * de trou ni de doublon, même après suppression d'une carte au milieu.
+ */
+function nextPointId(lessonId: string, points: PointDTO[]): string {
+  const prefix = `${lessonId}-p`
+  let max = 0
+  for (const point of points) {
+    if (!point.id.startsWith(prefix)) continue
+    const n = Number(point.id.slice(prefix.length))
+    if (Number.isFinite(n)) max = Math.max(max, n)
+  }
+  return `${prefix}${max + 1}`
+}
+
 const COLORS = ['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'orange', 'blue'] as const
 
 const SWATCH: Record<UnitColor, string> = {
@@ -80,14 +105,17 @@ export default function ContentEditorScreen() {
 
   const [selection, setSelection] = useState<Selection | null>(null)
   const [trackKind, setTrackKind] = useState<TrackKind>('grammar')
+  const [view, setView] = useState<'notes' | 'points'>('notes')
   const [title, setTitle] = useState('')
   const [notes, setNotes] = useState('')
   const [original, setOriginal] = useState('')
+  const [points, setPoints] = useState<PointDTO[] | null>(null)
+  const [originalPoints, setOriginalPoints] = useState<PointDTO[] | null>(null)
   const [status, setStatus] = useState<'idle' | 'loading' | 'saving' | 'saved' | 'error'>('idle')
   const [error, setError] = useState<string | null>(null)
 
   const textareaRef = useRef<HTMLTextAreaElement | null>(null)
-  const dirty = notes !== original
+  const dirty = notes !== original || JSON.stringify(points) !== JSON.stringify(originalPoints)
 
   useEffect(() => {
     fetch('/api/tree')
@@ -99,6 +127,9 @@ export default function ContentEditorScreen() {
   const openLesson = useCallback(async (course: string, track: TreeTrack, unit: string, lesson: string) => {
     setSelection({ course, unit, lesson })
     setTrackKind(track.kind)
+    // Une leçon de vocabulaire ou de conjugaison n'a pas d'onglet Exercices
+    // (voir plus bas) : y rester dessus laisserait le panneau vide.
+    if (track.kind !== 'grammar') setView('notes')
     setStatus('loading')
     setError(null)
     try {
@@ -108,6 +139,8 @@ export default function ContentEditorScreen() {
       setTitle(data.title)
       setNotes(data.notes)
       setOriginal(data.notes)
+      setPoints(data.points)
+      setOriginalPoints(data.points)
       setStatus('idle')
     } catch (err) {
       setStatus('error')
@@ -123,17 +156,18 @@ export default function ContentEditorScreen() {
       const res = await fetch(`/api/lesson?course=${selection.course}&unit=${selection.unit}&lesson=${selection.lesson}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ notes }),
+        body: JSON.stringify({ notes, points: points ?? undefined }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? res.statusText)
       setOriginal(notes)
+      setOriginalPoints(points)
       setStatus('saved')
     } catch (err) {
       setStatus('error')
       setError(String((err as Error).message))
     }
-  }, [selection, notes])
+  }, [selection, notes, points])
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -218,7 +252,10 @@ export default function ContentEditorScreen() {
             <SaveStatus status={status} dirty={dirty} error={error} />
             <button
               type="button"
-              onClick={() => setNotes(original)}
+              onClick={() => {
+                setNotes(original)
+                setPoints(originalPoints)
+              }}
               disabled={!dirty}
               className="rounded-lg border-2 border-line px-3 py-1.5 font-bold text-ink-soft disabled:opacity-40"
             >
@@ -297,7 +334,22 @@ export default function ContentEditorScreen() {
           </div>
         )}
 
-        {selection && (
+        {selection && trackKind === 'grammar' && (
+          <div className="flex shrink-0 gap-1.5 border-b-2 border-line px-4 pt-2">
+            <ViewTabButton active={view === 'notes'} onClick={() => setView('notes')}>
+              Rappel
+            </ViewTabButton>
+            <ViewTabButton active={view === 'points'} onClick={() => setView('points')}>
+              Exercices{points ? ` (${points.length})` : ''}
+            </ViewTabButton>
+          </div>
+        )}
+
+        {selection && view === 'points' && points && (
+          <PointsEditor lessonId={selection.lesson} points={points} onChange={setPoints} />
+        )}
+
+        {selection && view === 'notes' && (
           <div className="flex min-h-0 flex-1">
             <div className="flex min-h-0 flex-1 flex-col gap-2 border-r-2 border-line px-4 py-3">
               <p className="text-sm font-black text-ink">{title}</p>
@@ -410,4 +462,172 @@ function SaveStatus({
   if (dirty) return <span className="font-bold text-amber-deep">Modifications non enregistrées</span>
   if (status === 'saved') return <span className="text-teal-deep">Enregistré</span>
   return null
+}
+
+function ViewTabButton({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean
+  onClick: () => void
+  children: React.ReactNode
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`rounded-t-lg px-3 py-1.5 text-sm font-bold transition ${
+        active ? 'border-2 border-b-0 border-line bg-paper text-ink' : 'text-ink-faint hover:text-ink-soft'
+      }`}
+    >
+      {children}
+    </button>
+  )
+}
+
+/**
+ * Liste à plat des points d'une leçon, une carte par ligne (terme à gauche,
+ * définition à droite), sur le modèle de l'éditeur Quizlet plutôt que d'un
+ * onglet par carte : une leçon peut porter plus d'une dizaine de points, et
+ * l'arborescence de gauche s'arrête déjà à la leçon — y ajouter un niveau
+ * par carte la rendrait vite impraticable à parcourir.
+ *
+ * Le réordonnancement déplace les cartes dans le tableau sans jamais changer
+ * leur `id` : l'id encode un rang dans le nom (`<leçon>-p3`), mais rien ne
+ * garantit qu'il reste synchrone avec la position réelle une fois qu'on a pu
+ * réordonner ou supprimer une carte au milieu — l'id reste la seule chose
+ * qui compte pour la révision espacée (`progressStore`), le renommer
+ * perdrait la progression déjà enregistrée sur cette carte.
+ */
+function PointsEditor({
+  lessonId,
+  points,
+  onChange,
+}: {
+  lessonId: string
+  points: PointDTO[]
+  onChange: (points: PointDTO[]) => void
+}) {
+  function update(index: number, patch: Partial<PointDTO>) {
+    onChange(points.map((point, i) => (i === index ? { ...point, ...patch } : point)))
+  }
+
+  function remove(index: number) {
+    onChange(points.filter((_, i) => i !== index))
+  }
+
+  function move(index: number, direction: -1 | 1) {
+    const target = index + direction
+    if (target < 0 || target >= points.length) return
+    const next = points.slice()
+    ;[next[index], next[target]] = [next[target]!, next[index]!]
+    onChange(next)
+  }
+
+  function add() {
+    onChange([...points, { id: nextPointId(lessonId, points), sentence: '', answer: '', alt: [] }])
+  }
+
+  return (
+    <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto px-4 py-4">
+      {points.length === 0 && (
+        <p className="py-8 text-center text-sm text-ink-faint">Aucune carte pour l'instant.</p>
+      )}
+      {points.map((point, index) => (
+        <div key={point.id} className="card-3d flex flex-col gap-2 p-4">
+          <div className="flex items-start gap-3">
+            <span className="mt-2 w-6 shrink-0 text-right text-sm font-black text-ink-faint">{index + 1}</span>
+            <div className="grid flex-1 grid-cols-2 gap-3">
+              <div className="flex flex-col gap-1">
+                <textarea
+                  value={point.sentence}
+                  onChange={(event) => update(index, { sentence: event.target.value })}
+                  spellCheck={false}
+                  rows={3}
+                  placeholder="Phrase avec ___"
+                  className="min-h-16 resize-y rounded-xl border-2 border-line bg-paper p-2.5 text-sm leading-snug text-ink outline-none focus:border-teal"
+                />
+                <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">Terme</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <textarea
+                  value={point.answer}
+                  onChange={(event) => update(index, { answer: event.target.value })}
+                  spellCheck={false}
+                  rows={3}
+                  placeholder="Réponse"
+                  className="min-h-16 resize-y rounded-xl border-2 border-line bg-paper p-2.5 text-sm leading-snug text-ink outline-none focus:border-teal"
+                />
+                <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">Définition</span>
+              </div>
+            </div>
+            <div className="flex shrink-0 flex-col items-center gap-1">
+              <button
+                type="button"
+                title="Monter"
+                onClick={() => move(index, -1)}
+                disabled={index === 0}
+                className="rounded-md px-1.5 py-0.5 text-ink-faint hover:text-ink disabled:opacity-30"
+              >
+                ↑
+              </button>
+              <button
+                type="button"
+                title="Descendre"
+                onClick={() => move(index, 1)}
+                disabled={index === points.length - 1}
+                className="rounded-md px-1.5 py-0.5 text-ink-faint hover:text-ink disabled:opacity-30"
+              >
+                ↓
+              </button>
+              <button
+                type="button"
+                title="Supprimer la carte"
+                onClick={() => remove(index)}
+                className="rounded-md px-1.5 py-0.5 text-error hover:bg-error/10"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 pl-9 text-xs">
+            <label className="flex items-center gap-1.5 text-ink-faint">
+              <span className="font-bold uppercase tracking-wide">Autres réponses</span>
+              <input
+                value={point.alt.join('; ')}
+                onChange={(event) =>
+                  update(index, {
+                    alt: event.target.value
+                      .split(';')
+                      .map((v) => v.trim())
+                      .filter(Boolean),
+                  })
+                }
+                placeholder="séparées par ;"
+                className="w-48 rounded-md border border-line bg-paper px-2 py-1 text-ink outline-none focus:border-teal"
+              />
+            </label>
+            <label className="flex flex-1 items-center gap-1.5 text-ink-faint">
+              <span className="font-bold uppercase tracking-wide">Précision</span>
+              <input
+                value={point.explanation ?? ''}
+                onChange={(event) => update(index, { explanation: event.target.value })}
+                placeholder="référence, complément…"
+                className="min-w-32 flex-1 rounded-md border border-line bg-paper px-2 py-1 text-ink outline-none focus:border-teal"
+              />
+            </label>
+          </div>
+        </div>
+      ))}
+      <button
+        type="button"
+        onClick={add}
+        className="self-start rounded-lg border-2 border-dashed border-line px-3 py-1.5 text-sm font-bold text-ink-soft hover:border-teal hover:text-teal-deep"
+      >
+        + Ajouter une carte
+      </button>
+    </div>
+  )
 }
