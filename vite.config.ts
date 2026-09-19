@@ -16,6 +16,18 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  server: {
+    watch: {
+      // L'éditeur de contenu (`tools/content-editor/api-plugin.ts`) écrit
+      // directement dans ces fichiers à l'enregistrement d'un rappel ou d'un
+      // exercice : sans cette exclusion, Vite les voit changer comme
+      // n'importe quel fichier du dépôt et recharge la page entière, ce qui
+      // fait perdre la sélection en cours dans l'éditeur. Cette source n'est
+      // de toute façon jamais importée par le bundle (l'app lit le JSON déjà
+      // compilé sous `public/content/`), rien ne dépend donc de ce rechargement.
+      ignored: ['**/content/courses/**'],
+    },
+  },
   plugins: [
     react(),
     tailwindcss(),
