@@ -67,24 +67,59 @@ interface SessionScreenProps {
  * peut lire littéralement dans le source, un nom composé à l'exécution ne
  * produirait rien.
  */
-const SESSION_KIND: Record<UnitNodeKind, { label: string; Icon: typeof BookIcon; tone: string }> = {
-  lesson: { label: 'Leçon', Icon: BookIcon, tone: 'bg-teal/15 text-teal' },
-  review: { label: 'Révision', Icon: RefreshIcon, tone: 'bg-sky/15 text-sky' },
-  drill: { label: 'Approfondissement', Icon: StarIcon, tone: 'bg-violet/15 text-violet' },
-  workout: { label: 'Entraînement', Icon: FlagIcon, tone: 'bg-coral/15 text-coral' },
-  final: { label: 'Séance finale', Icon: ChestIcon, tone: 'bg-amber/15 text-amber' },
+const SESSION_KIND: Record<UnitNodeKind, { label: string; Icon: typeof BookIcon; tone: string; bubble: string }> = {
+  lesson: { label: 'Leçon', Icon: BookIcon, tone: 'bg-teal/15 text-teal', bubble: 'bg-teal' },
+  review: { label: 'Révision', Icon: RefreshIcon, tone: 'bg-sky/15 text-sky', bubble: 'bg-sky' },
+  drill: { label: 'Approfondissement', Icon: StarIcon, tone: 'bg-violet/15 text-violet', bubble: 'bg-violet' },
+  workout: { label: 'Entraînement', Icon: FlagIcon, tone: 'bg-coral/15 text-coral', bubble: 'bg-coral' },
+  final: { label: 'Séance finale', Icon: ChestIcon, tone: 'bg-amber/15 text-amber', bubble: 'bg-amber' },
 }
 
+/** Combien de temps le rappel du badge reste affiché avant de s'effacer seul. */
+const KIND_HINT_MS = 2600
+
+/**
+ * L'icône de nature de séance (leçon, révision…) ne porte son intitulé qu'en
+ * `title`, un attribut que le tactile ne révèle jamais : sur mobile, elle
+ * reste muette tant que personne ne l'a expliquée une fois. Une bulle sous
+ * l'icône répète donc le même intitulé au premier affichage de la séance,
+ * puis s'efface d'elle-même — un rappel, pas un élément permanent de
+ * l'interface, sur le modèle de `ComboBadge` (même minuteur `setTimeout` +
+ * sortie en fondu).
+ */
 function SessionKindBadge({ kind }: { kind: UnitNodeKind }) {
-  const { label, Icon, tone } = SESSION_KIND[kind]
+  const { label, Icon, tone, bubble } = SESSION_KIND[kind]
+  const [hint, setHint] = useState(true)
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setHint(false), KIND_HINT_MS)
+    return () => clearTimeout(timeout)
+  }, [])
+
   return (
-    <span
-      role="img"
-      aria-label={label}
-      title={label}
-      className={`flex shrink-0 items-center justify-center rounded-full p-2 ${tone}`}
-    >
-      <Icon size={18} />
+    <span className="relative flex shrink-0">
+      <span
+        role="img"
+        aria-label={label}
+        title={label}
+        className={`flex shrink-0 items-center justify-center rounded-full p-2 ${tone}`}
+      >
+        <Icon size={18} />
+      </span>
+      <AnimatePresence>
+        {hint && (
+          <motion.span
+            initial={{ opacity: 0, y: -4, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -4, scale: 0.9 }}
+            transition={{ type: 'spring', stiffness: 320, damping: 24 }}
+            className={`pointer-events-none absolute top-full left-0 z-20 mt-2 rounded-lg px-2.5 py-1.5 text-xs font-bold whitespace-nowrap text-white shadow-lg ${bubble}`}
+          >
+            <span className={`absolute -top-1 left-3 h-2 w-2 rotate-45 ${bubble}`} />
+            {label}
+          </motion.span>
+        )}
+      </AnimatePresence>
     </span>
   )
 }
