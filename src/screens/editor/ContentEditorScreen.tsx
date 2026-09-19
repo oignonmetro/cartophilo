@@ -241,12 +241,19 @@ export default function ContentEditorScreen() {
   return (
     <div className="flex h-screen flex-col bg-paper text-ink">
       <header className="flex items-center justify-between border-b-2 border-line px-4 py-2.5">
-        <div className="flex items-center gap-3">
-          <a href="#/" className="text-sm font-bold text-ink-soft hover:text-ink">
-            ← Appli
-          </a>
-          <h1 className="text-sm font-black uppercase tracking-widest text-ink-soft">Éditeur de contenu</h1>
-        </div>
+        <h1 className="text-sm font-black uppercase tracking-widest text-ink-soft">Éditeur de contenu</h1>
+
+        {selection && trackKind === 'grammar' && (
+          <div className="flex flex-col gap-0.5 rounded-xl border-2 border-line p-1">
+            <ViewTabButton active={view === 'notes'} onClick={() => setView('notes')}>
+              Rappel
+            </ViewTabButton>
+            <ViewTabButton active={view === 'points'} onClick={() => setView('points')}>
+              Exercices{points ? ` (${points.length})` : ''}
+            </ViewTabButton>
+          </div>
+        )}
+
         {selection && (
           <div className="flex items-center gap-3 text-sm">
             <SaveStatus status={status} dirty={dirty} error={error} />
@@ -331,17 +338,6 @@ export default function ContentEditorScreen() {
         {!selection && (
           <div className="flex flex-1 items-center justify-center text-ink-faint">
             Choisis une leçon dans l'arborescence.
-          </div>
-        )}
-
-        {selection && trackKind === 'grammar' && (
-          <div className="flex shrink-0 gap-1.5 border-b-2 border-line px-4 pt-2">
-            <ViewTabButton active={view === 'notes'} onClick={() => setView('notes')}>
-              Rappel
-            </ViewTabButton>
-            <ViewTabButton active={view === 'points'} onClick={() => setView('points')}>
-              Exercices{points ? ` (${points.length})` : ''}
-            </ViewTabButton>
           </div>
         )}
 
@@ -477,8 +473,8 @@ function ViewTabButton({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-t-lg px-3 py-1.5 text-sm font-bold transition ${
-        active ? 'border-2 border-b-0 border-line bg-paper text-ink' : 'text-ink-faint hover:text-ink-soft'
+      className={`rounded-lg px-3 py-1 text-xs font-bold whitespace-nowrap transition ${
+        active ? 'bg-teal text-white' : 'text-ink-faint hover:bg-ink/5 hover:text-ink-soft'
       }`}
     >
       {children}
