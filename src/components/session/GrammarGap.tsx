@@ -4,6 +4,7 @@ import type { GrammarGapExercise } from '@/engine/exercises'
 import { matchesAnswer, splitGap } from '@/engine/exercises'
 import { Button } from '@/components/Button'
 import { learningLanguage } from '@/lib/speech'
+import { sentenceTextSize } from '@/lib/textDensity'
 import { CorrectionGap } from './CorrectionGap'
 import { ExpectedAnswer } from './ExpectedAnswer'
 import { useSessionHaptics } from './useSessionHaptics'
@@ -30,6 +31,7 @@ export function GrammarGap({
 }) {
   const { point, bank, cue } = exercise
   const gap = useMemo(() => splitGap(point.sentence), [point.sentence])
+  const textSize = sentenceTextSize('text-xl', point.sentence.length)
   const [value, setValue] = useState('')
   const [checked, setChecked] = useState<null | boolean>(null)
   const [gapResolved, setGapResolved] = useState(false)
@@ -73,7 +75,7 @@ export function GrammarGap({
       </p>
 
       <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center">
-        <p className="text-xl leading-relaxed font-bold">
+        <p className={`${textSize} leading-relaxed font-bold`}>
           {gap.before}
           <Blank value={value} state={checked} />
           {gap.after}

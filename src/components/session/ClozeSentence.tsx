@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import type { ClozeExercise } from '@/engine/exercises'
 import { normalizeForm } from '@/engine/exercises'
 import { Button } from '@/components/Button'
+import { sentenceTextSize } from '@/lib/textDensity'
 import { CorrectionGap } from './CorrectionGap'
 import { ExpectedAnswer } from './ExpectedAnswer'
 import { useSessionHaptics } from './useSessionHaptics'
@@ -22,6 +23,7 @@ export function ClozeSentence({
   onAnswer: (correct: boolean) => void
 }) {
   const { vocab, sentence, bank } = exercise
+  const textSize = sentenceTextSize('text-2xl', sentence.before.length + sentence.match.length + sentence.after.length)
   const [value, setValue] = useState('')
   const [checked, setChecked] = useState<null | boolean>(null)
   const [gapResolved, setGapResolved] = useState(false)
@@ -59,7 +61,7 @@ export function ClozeSentence({
       </p>
 
       <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center">
-        <p className="text-2xl leading-relaxed font-bold">
+        <p className={`${textSize} leading-relaxed font-bold`}>
           {sentence.before}
           <Blank value={value} state={checked} />
           {sentence.after}
