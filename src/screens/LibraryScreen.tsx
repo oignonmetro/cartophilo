@@ -756,12 +756,12 @@ function TreatiseSheet({ entry, onClose }: { entry: TreatiseEntry; onClose: () =
         onClick={(event) => event.stopPropagation()}
         className="flex max-h-[85dvh] w-full max-w-md flex-col gap-4 rounded-blob bg-paper p-5"
       >
-        <div className="shrink-0">
-          <p className={`text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}>
+        <h2 className="shrink-0 text-lg leading-tight font-extrabold text-ink">
+          <span className={`font-black ${tone.eyebrow}`}>
             {ENNEAD_NUMERALS[entry.ennead - 1]}, {entry.numberInEnnead} [{entry.chrono}]
-          </p>
-          <h2 className="mt-1 text-lg leading-tight font-extrabold text-ink">{entry.title}</h2>
-        </div>
+          </span>{' '}
+          <span className="text-ink-faint">:</span> <em>{entry.title}</em>
+        </h2>
 
         <div className="min-h-0 flex-1 overflow-y-auto">
           {entry.summary ? (
