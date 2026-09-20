@@ -40,3 +40,280 @@ tracks:
     color: sky
     icon: compass
     units: []
+    # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
+    # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
+    # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
+    # voir la Vie de Plotin). Cliquer un traité ouvrira son résumé (à
+    # rédiger) ; les exercices viendront séparément, communs à toute la
+    # piste plutôt que propres à chaque traité (voir `treatiseEntrySchema`).
+    entries:
+      - id: t-1-1
+        title: "Qu'est-ce que l'animal et qu'est-ce que l'homme ?"
+        ennead: 1
+        numberInEnnead: 1
+        chrono: 53
+      - id: t-1-2
+        title: "Des vertus"
+        ennead: 1
+        numberInEnnead: 2
+        chrono: 19
+      - id: t-1-3
+        title: "De la dialectique"
+        ennead: 1
+        numberInEnnead: 3
+        chrono: 20
+      - id: t-1-4
+        title: "Du bonheur"
+        ennead: 1
+        numberInEnnead: 4
+        chrono: 46
+      - id: t-1-5
+        title: "Le bonheur s'accroît-il dans le temps ?"
+        ennead: 1
+        numberInEnnead: 5
+        chrono: 36
+      - id: t-1-6
+        title: "Du Beau"
+        ennead: 1
+        numberInEnnead: 6
+        chrono: 1
+      - id: t-1-7
+        title: "Du souverain bien et des autres biens"
+        ennead: 1
+        numberInEnnead: 7
+        chrono: 54
+      - id: t-1-8
+        title: "Que sont les maux et d'où viennent-ils ?"
+        ennead: 1
+        numberInEnnead: 8
+        chrono: 51
+      - id: t-1-9
+        title: "Du suicide raisonnable"
+        ennead: 1
+        numberInEnnead: 9
+        chrono: 16
+      - id: t-2-1
+        title: "Du ciel"
+        ennead: 2
+        numberInEnnead: 1
+        chrono: 40
+      - id: t-2-2
+        title: "Du mouvement du ciel"
+        ennead: 2
+        numberInEnnead: 2
+        chrono: 14
+      - id: t-2-3
+        title: "Si les astres agissent"
+        ennead: 2
+        numberInEnnead: 3
+        chrono: 52
+      - id: t-2-4
+        title: "Des deux matières"
+        ennead: 2
+        numberInEnnead: 4
+        chrono: 12
+      - id: t-2-5
+        title: "Que veut dire en puissance et en acte ?"
+        ennead: 2
+        numberInEnnead: 5
+        chrono: 25
+      - id: t-2-6
+        title: "De la qualité et de la forme"
+        ennead: 2
+        numberInEnnead: 6
+        chrono: 17
+      - id: t-2-7
+        title: "Du mélange total"
+        ennead: 2
+        numberInEnnead: 7
+        chrono: 37
+      - id: t-2-8
+        title: "Pourquoi les objets lointains paraissent petits"
+        ennead: 2
+        numberInEnnead: 8
+        chrono: 35
+      - id: t-2-9
+        title: "Contre les Gnostiques"
+        ennead: 2
+        numberInEnnead: 9
+        chrono: 33
+      - id: t-3-1
+        title: "Du destin"
+        ennead: 3
+        numberInEnnead: 1
+        chrono: 3
+      - id: t-3-2
+        title: "De la Providence I"
+        ennead: 3
+        numberInEnnead: 2
+        chrono: 47
+      - id: t-3-3
+        title: "De la Providence II"
+        ennead: 3
+        numberInEnnead: 3
+        chrono: 48
+      - id: t-3-4
+        title: "Du démon qui nous a reçus en partage"
+        ennead: 3
+        numberInEnnead: 4
+        chrono: 15
+      - id: t-3-5
+        title: "De l'amour"
+        ennead: 3
+        numberInEnnead: 5
+        chrono: 50
+      - id: t-3-6
+        title: "De l'impassibilité des incorporels"
+        ennead: 3
+        numberInEnnead: 6
+        chrono: 26
+      - id: t-3-7
+        title: "De l'éternité et du temps"
+        ennead: 3
+        numberInEnnead: 7
+        chrono: 45
+      - id: t-3-8
+        title: "De la nature, de la contemplation et de l'Un"
+        ennead: 3
+        numberInEnnead: 8
+        chrono: 30
+      - id: t-3-9
+        title: "Questions diverses"
+        ennead: 3
+        numberInEnnead: 9
+        chrono: 13
+      - id: t-4-1
+        title: "De l'essence de l'âme II"
+        ennead: 4
+        numberInEnnead: 1
+        chrono: 21
+      - id: t-4-2
+        title: "De l'essence de l'âme"
+        ennead: 4
+        numberInEnnead: 2
+        chrono: 4
+      - id: t-4-3
+        title: "Des difficultés relatives à l'âme I"
+        ennead: 4
+        numberInEnnead: 3
+        chrono: 27
+      - id: t-4-4
+        title: "Des difficultés relatives à l'âme II"
+        ennead: 4
+        numberInEnnead: 4
+        chrono: 28
+      - id: t-4-5
+        title: "Des difficultés relatives à l'âme III"
+        ennead: 4
+        numberInEnnead: 5
+        chrono: 29
+      - id: t-4-6
+        title: "De la sensation et de la mémoire"
+        ennead: 4
+        numberInEnnead: 6
+        chrono: 41
+      - id: t-4-7
+        title: "De l'immortalité de l'âme"
+        ennead: 4
+        numberInEnnead: 7
+        chrono: 2
+      - id: t-4-8
+        title: "De la descente de l'âme dans les corps"
+        ennead: 4
+        numberInEnnead: 8
+        chrono: 6
+      - id: t-4-9
+        title: "Toutes les âmes sont-elles une ?"
+        ennead: 4
+        numberInEnnead: 9
+        chrono: 8
+      - id: t-5-1
+        title: "Des trois hypostases qui ont rang de principes"
+        ennead: 5
+        numberInEnnead: 1
+        chrono: 10
+      - id: t-5-2
+        title: "De l'origine et de l'ordre de ce qui vient après le Premier"
+        ennead: 5
+        numberInEnnead: 2
+        chrono: 11
+      - id: t-5-3
+        title: "Des hypostases qui connaissent"
+        ennead: 5
+        numberInEnnead: 3
+        chrono: 49
+      - id: t-5-4
+        title: "Comment vient ce qui est après le Premier et de l'Un"
+        ennead: 5
+        numberInEnnead: 4
+        chrono: 7
+      - id: t-5-5
+        title: "Que les intelligibles ne sont pas hors de l'Intelligence / Du Bien"
+        ennead: 5
+        numberInEnnead: 5
+        chrono: 32
+      - id: t-5-6
+        title: "Que les intelligibles ne sont pas hors de l'Intelligence"
+        ennead: 5
+        numberInEnnead: 6
+        chrono: 24
+      - id: t-5-7
+        title: "Y a-t-il des idées des individus ?"
+        ennead: 5
+        numberInEnnead: 7
+        chrono: 18
+      - id: t-5-8
+        title: "De la beauté intelligible"
+        ennead: 5
+        numberInEnnead: 8
+        chrono: 31
+      - id: t-5-9
+        title: "De l'Intellect, des Formes et de l'être"
+        ennead: 5
+        numberInEnnead: 9
+        chrono: 5
+      - id: t-6-1
+        title: "Des genres de l'être I"
+        ennead: 6
+        numberInEnnead: 1
+        chrono: 42
+      - id: t-6-2
+        title: "Des genres de l'être II"
+        ennead: 6
+        numberInEnnead: 2
+        chrono: 43
+      - id: t-6-3
+        title: "Des genres de l'être III"
+        ennead: 6
+        numberInEnnead: 3
+        chrono: 44
+      - id: t-6-4
+        title: "Que l'être un et le même est partout tout entier I"
+        ennead: 6
+        numberInEnnead: 4
+        chrono: 22
+      - id: t-6-5
+        title: "Que l'être un et le même est partout tout entier II"
+        ennead: 6
+        numberInEnnead: 5
+        chrono: 23
+      - id: t-6-6
+        title: "Des nombres"
+        ennead: 6
+        numberInEnnead: 6
+        chrono: 34
+      - id: t-6-7
+        title: "Comment est née la multiplicité des idées ; du Bien"
+        ennead: 6
+        numberInEnnead: 7
+        chrono: 38
+      - id: t-6-8
+        title: "Du volontaire et de la volonté de l'Un"
+        ennead: 6
+        numberInEnnead: 8
+        chrono: 39
+      - id: t-6-9
+        title: "Du Bien ou de l'Un"
+        ennead: 6
+        numberInEnnead: 9
+        chrono: 9

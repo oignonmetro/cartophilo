@@ -24,6 +24,7 @@ import { parse as parseYaml } from 'yaml'
 import { z } from 'zod'
 import {
   courseSchema,
+  treatiseEntrySchema,
   unitColorSchema,
   unitSchema,
   GAP,
@@ -32,6 +33,7 @@ import {
   type GrammarLesson,
   type LessonKind,
   type Manifest,
+  type TreatiseEntry,
   type Unit,
   type VocabLesson,
 } from '../../src/content/schema.ts'
@@ -75,6 +77,9 @@ const courseFileSchema = z.discriminatedUnion('layout', [
           dividerBefore: z.boolean().default(false),
           // Vide, une piste publie le squelette d'un niveau avant tout contenu.
           units: z.array(z.string()),
+          // Index de référence pure (voir Plotin, piste Repérage) : entrées
+          // écrites en clair ici, jamais renvoyées à units/ comme les leçons.
+          entries: z.array(treatiseEntrySchema).optional(),
         }),
       )
       .min(1),
@@ -284,9 +289,38 @@ function checkCoherence(course: Course, dir: string) {
     .filter((lesson): lesson is GrammarLesson => lesson.kind === 'grammar')
   for (const remark of philosophyContentRemarks(course.learning, grammarLessons)) warn(`cours "${course.id}"`, remark)
 
+  if (course.layout === 'library') {
+    for (const track of course.tracks) {
+      if (track.entries) checkIndexTrack(track.id, track.entries, problems)
+    }
+  }
+
   checkEmDashes(course)
 
   if (problems.length) fail(dir, problems.join('\n    '))
+}
+
+/**
+ * Un index de référence (voir `treatiseEntrySchema`) échappe au moteur de
+ * leçons, donc aux contrôles ci-dessus : identifiants et repères doivent
+ * rester cohérents à l'intérieur de la piste elle-même.
+ */
+function checkIndexTrack(trackId: string, entries: readonly TreatiseEntry[], problems: string[]) {
+  const ids = new Set<string>()
+  const positions = new Map<string, string>()
+  for (const entry of entries) {
+    if (ids.has(entry.id)) problems.push(`piste "${trackId}" : entrée "${entry.id}" définie deux fois`)
+    ids.add(entry.id)
+
+    const position = `${entry.ennead},${entry.numberInEnnead}`
+    const owner = positions.get(position)
+    if (owner) {
+      problems.push(
+        `piste "${trackId}" : entrées "${owner}" et "${entry.id}" partagent la même position (Ennéade ${entry.ennead}, n°${entry.numberInEnnead})`,
+      )
+    }
+    positions.set(position, entry.id)
+  }
 }
 
 const EM_DASH = '—'
@@ -339,6 +373,22 @@ function checkEmDashes(course: Course) {
     for (const [where, text] of fields) {
       if (text?.includes(EM_DASH)) {
         warn(`leçon "${lesson.id}"`, `${where} contient un tiret cadratin (—) ; remplacez-le (deux-points, virgule, parenthèses)`)
+      }
+    }
+  }
+
+  if (course.layout === 'library') {
+    for (const track of course.tracks) {
+      for (const entry of track.entries ?? []) {
+        const fields: [string, string | undefined][] = [
+          [`entrée "${entry.id}" (title)`, entry.title],
+          [`entrée "${entry.id}" (summary)`, entry.summary],
+        ]
+        for (const [where, text] of fields) {
+          if (text?.includes(EM_DASH)) {
+            warn(`piste "${track.id}"`, `${where} contient un tiret cadratin (—) ; remplacez-le (deux-points, virgule, parenthèses)`)
+          }
+        }
       }
     }
   }

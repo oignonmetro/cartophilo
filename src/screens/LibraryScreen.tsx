@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import type { LibraryCourse, Track, Unit } from '@/content/schema'
+import type { LibraryCourse, Track, TreatiseEntry, Unit } from '@/content/schema'
 import { countLabel, courseLabel, itemsOfUnit, unitLetters } from '@/content/course'
 import type { LessonProgressMap } from '@/engine/progress'
 import { dayKey, displayedStreak, levelFromXp, masteryOf, unitMastery } from '@/engine/progress'
@@ -12,6 +12,7 @@ import { useCourse } from '@/content/CourseProvider'
 import { availableCourses } from '@/content/loader'
 import { ProgressRing } from '@/components/ProgressRing'
 import { CoursePicker } from '@/components/CoursePicker'
+import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { BoltIcon, ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
 
 /**
@@ -63,6 +64,24 @@ function groupUnits(units: readonly Unit[]): UnitOrGroup[] {
     }
   }
   return result
+}
+
+const ENNEAD_NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI'] as const
+
+/** Entrées d'un index (voir `treatiseEntrySchema`), groupées par Ennéade et triées dans l'ordre de Porphyre. */
+function groupEntries(entries: readonly TreatiseEntry[]): { ennead: number; entries: TreatiseEntry[] }[] {
+  const byEnnead = new Map<number, TreatiseEntry[]>()
+  for (const entry of entries) {
+    const bucket = byEnnead.get(entry.ennead) ?? []
+    bucket.push(entry)
+    byEnnead.set(entry.ennead, bucket)
+  }
+  return [...byEnnead.entries()]
+    .sort(([a], [b]) => a - b)
+    .map(([ennead, group]) => ({
+      ennead,
+      entries: group.slice().sort((a, b) => a.numberInEnnead - b.numberInEnnead),
+    }))
 }
 
 /**
@@ -194,6 +213,14 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
     })
   }
 
+  // Fiche ouverte d'un index de référence (voir `TreatiseIndexView`) : nulle
+  // hors d'une telle piste, réinitialisée au changement de piste comme les
+  // replis ci-dessus.
+  const [openTreatise, setOpenTreatise] = useState<TreatiseEntry | null>(null)
+  useEffect(() => {
+    setOpenTreatise(null)
+  }, [activeTrackId])
+
   // Ouvrir une unité mène droit à son étape courante — pas à un écran de
   // parcours à traverser pour la retrouver (voir `currentDestination`).
   const openUnit = (unit: Unit) => {
@@ -283,7 +310,15 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
 
         <TrackSummary track={track} known={trackMastery.known} seen={trackMastery.seen} />
 
-        {track.units.length === 0 ? (
+        {track.entries ? (
+          <TreatiseIndexView
+            entries={track.entries}
+            tone={tone}
+            openGroups={openGroups}
+            onToggleGroup={toggleGroup}
+            onOpenTreatise={setOpenTreatise}
+          />
+        ) : track.units.length === 0 ? (
           <EmptyTrack tone={tone} />
         ) : (
           groupUnits(track.units).map((entry) =>
@@ -331,6 +366,10 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
             onClose={() => setPickerOpen(false)}
           />
         )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {openTreatise && <TreatiseSheet entry={openTreatise} onClose={() => setOpenTreatise(null)} />}
       </AnimatePresence>
     </div>
   )
@@ -594,5 +633,148 @@ function GroupSection({
         )}
       </AnimatePresence>
     </div>
+  )
+}
+
+/**
+ * Piste-index de référence (voir Plotin, Repérage) : une liste plate
+ * d'entrées cliquables, groupées par Ennéade en replis, même gabarit que
+ * `GroupSection` mais sans anneau de maîtrise ni révision espacée, ces
+ * entrées n'étant pas des cartes pratiquées (voir `treatiseEntrySchema`).
+ * Cliquer une entrée ouvre sa fiche (voir `TreatiseSheet`) ; les exercices,
+ * quand ils existeront, viendront d'un bouton commun à toute la piste
+ * plutôt que d'ici.
+ */
+function TreatiseIndexView({
+  entries,
+  tone,
+  openGroups,
+  onToggleGroup,
+  onOpenTreatise,
+}: {
+  entries: readonly TreatiseEntry[]
+  tone: (typeof TRACK_TONES)[string]
+  openGroups: Set<string>
+  onToggleGroup: (group: string) => void
+  onOpenTreatise: (entry: TreatiseEntry) => void
+}) {
+  const groups = useMemo(() => groupEntries(entries), [entries])
+
+  return (
+    <>
+      {groups.map(({ ennead, entries: group }) => {
+        const key = `ennead-${ennead}`
+        const open = openGroups.has(key)
+        return (
+          <div key={key} className="flex flex-col gap-3">
+            <button
+              type="button"
+              onClick={() => onToggleGroup(key)}
+              aria-expanded={open}
+              className="card-3d flex w-full items-center gap-4 px-4 py-4 text-left"
+            >
+              <span
+                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} text-sm font-black ${tone.text}`}
+              >
+                {ENNEAD_NUMERALS[ennead - 1]}
+              </span>
+              <span className="flex-1">
+                <span className="text-base leading-tight font-extrabold">Ennéade {ENNEAD_NUMERALS[ennead - 1]}</span>
+                <span className="mt-0.5 block text-xs font-bold text-ink-faint">
+                  {group.length} traité{group.length > 1 ? 's' : ''}
+                </span>
+              </span>
+              <span className={`text-ink-faint transition-transform ${open ? 'rotate-90' : '-rotate-90'}`}>
+                <ChevronLeftIcon size={20} />
+              </span>
+            </button>
+
+            {/* Même mécanique de repli que `GroupSection` : voir sa remarque
+                sur le choix d'un fondu plutôt qu'une hauteur animée. */}
+            <AnimatePresence initial={false}>
+              {open && (
+                <motion.div
+                  initial={{ opacity: 0, y: -6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.15 }}
+                  className="ml-3 flex flex-col gap-2 border-l-2 border-line pl-3"
+                >
+                  {group.map((entry) => (
+                    <button
+                      key={entry.id}
+                      type="button"
+                      onClick={() => onOpenTreatise(entry)}
+                      className="card-3d flex w-full items-center gap-3 px-4 py-3 text-left"
+                    >
+                      <span className={`shrink-0 text-xs font-black ${tone.text}`}>
+                        {ENNEAD_NUMERALS[entry.ennead - 1]}, {entry.numberInEnnead}
+                      </span>
+                      <span className="flex-1 text-sm leading-snug font-bold text-ink">{entry.title}</span>
+                      <span
+                        className="shrink-0 text-[0.65rem] font-bold text-ink-faint"
+                        title="Rang chronologique de rédaction"
+                      >
+                        n°{entry.chrono}
+                      </span>
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        )
+      })}
+    </>
+  )
+}
+
+/**
+ * Fiche d'un traité, en feuille depuis le bas (même mécanique que
+ * `CoursePicker`) : sa position chez Porphyre et son rang chronologique de
+ * rédaction, puis son résumé, pas encore rédigé pour la plupart des
+ * traités, d'où le message d'attente plutôt qu'un bloc vide.
+ */
+function TreatiseSheet({ entry, onClose }: { entry: TreatiseEntry; onClose: () => void }) {
+  const tone = TONES.grammar
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-30 flex items-end justify-center bg-scrim/40 p-4"
+      onClick={onClose}
+    >
+      <motion.div
+        initial={{ y: 60 }}
+        animate={{ y: 0 }}
+        exit={{ y: 60 }}
+        onClick={(event) => event.stopPropagation()}
+        className="flex max-h-[85dvh] w-full max-w-md flex-col gap-4 rounded-blob bg-paper p-5"
+      >
+        <div className="shrink-0">
+          <p className={`text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}>
+            Ennéade {ENNEAD_NUMERALS[entry.ennead - 1]}, {entry.numberInEnnead} · n°{entry.chrono} chronologique
+          </p>
+          <h2 className="mt-1 text-lg leading-tight font-extrabold text-ink">{entry.title}</h2>
+        </div>
+
+        <div className="min-h-0 flex-1 overflow-y-auto">
+          {entry.summary ? (
+            <NoteBlocks notes={entry.summary} tone={tone} />
+          ) : (
+            <p className="text-sm text-ink-faint">Résumé à venir.</p>
+          )}
+        </div>
+
+        <button
+          type="button"
+          onClick={onClose}
+          className="mt-1 shrink-0 rounded-2xl border-2 border-line py-3 text-center font-extrabold text-ink-soft"
+        >
+          Fermer
+        </button>
+      </motion.div>
+    </motion.div>
   )
 }

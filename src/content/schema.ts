@@ -139,6 +139,27 @@ export const lessonSchema = z.discriminatedUnion('kind', [
   conjugationLessonSchema,
 ])
 
+/**
+ * Une entrée d'index de référence pure (voir Plotin, piste Repérage) : un
+ * traité des Ennéades, identifié par son rang chez Porphyre (l'ordre de
+ * lecture retenu) et son rang chronologique (l'ordre d'écriture, selon la
+ * Vie de Plotin). `summary` reste facultatif : la fiche existe avant d'avoir
+ * son résumé, affichée alors avec un simple message d'attente.
+ */
+export const treatiseEntrySchema = z.object({
+  id: slug,
+  title: z.string().min(1),
+  /** Numéro de l'Ennéade chez Porphyre, 1 à 6 (I à VI). */
+  ennead: z.number().int().min(1).max(6),
+  /** Rang du traité au sein de son Ennéade, 1 à 9. */
+  numberInEnnead: z.number().int().min(1).max(9),
+  /** Rang chronologique de rédaction, 1 à 54 (voir la Vie de Plotin). */
+  chrono: z.number().int().min(1).max(54),
+  /** Résumé affiché au clic ; absent tant qu'il n'a pas encore été rédigé. */
+  summary: z.string().optional(),
+})
+export type TreatiseEntry = z.infer<typeof treatiseEntrySchema>
+
 export const unitColorSchema = z.enum([
   'teal',
   'violet',
@@ -192,6 +213,13 @@ export const trackSchema = z.object({
   /** Trait vertical avant cet onglet, pour isoler un sous-ensemble de pistes. */
   dividerBefore: z.boolean().default(false),
   units: z.array(unitSchema),
+  /**
+   * Index de référence pur : une liste plate d'entrées cliquables, chacune
+   * ouvrant un résumé, sans jamais passer par le moteur de leçons ni la
+   * révision espacée (voir `treatiseEntrySchema`). `units` reste vide pour
+   * une telle piste ; `undefined` pour toute piste ordinaire.
+   */
+  entries: z.array(treatiseEntrySchema).optional(),
 })
 
 export const sectionSchema = z.object({
