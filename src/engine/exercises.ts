@@ -1335,8 +1335,11 @@ const PRODUCTION_INTERVAL = 7
  *   `produce`    : elle a tenu plusieurs jours, elle peut se produire de
  *                  mémoire dans la langue apprise.
  *
- * Une rechute remet l'intervalle à zéro et rend la carte à l'apprentissage :
- * un mot oublié redescend donc de lui-même à la reconnaissance.
+ * Une rechute réduit l'intervalle sans revenir à l'apprentissage (voir
+ * `review`, srs.ts) : un mot oublié redescend donc de lui-même vers le rappel
+ * aidé, sauf s'il tenait depuis assez longtemps pour rester au-dessus de
+ * `PRODUCTION_INTERVAL` malgré la réduction — un seul oubli ne suffit alors
+ * pas à faire retomber une carte mûre jusqu'à la reconnaissance.
  */
 type RecallStage = 'recognize' | 'comprehend' | 'produce'
 

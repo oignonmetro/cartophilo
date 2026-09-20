@@ -6,8 +6,10 @@
  *   apprentissage : paliers courts (1 min, 10 min) le jour de la découverte ;
  *   révision      : intervalles en jours, multipliés par un facteur de facilité.
  *
- * Une erreur renvoie la carte au premier palier et réduit sa facilité, ce qui
- * la fait revenir plus souvent tant qu'elle n'est pas solide.
+ * Une erreur pendant l'apprentissage renvoie la carte au premier palier.
+ * Une rechute en révision réduit sa facilité et raccourcit son intervalle
+ * sans la faire ressortir dans la minute : elle revient plus souvent tant
+ * qu'elle n'est pas solide, mais reste espacée dans le temps.
  */
 
 export type Rating = 'again' | 'hard' | 'good' | 'easy'
@@ -43,6 +45,8 @@ const MAX_EASE = 2.8
 const DEFAULT_EASE = 2.5
 /** Plafond volontairement bas : un cours de vocabulaire n'a pas besoin de plus. */
 const MAX_INTERVAL = 365
+/** Fraction de l'ancien intervalle conservée après une rechute en révision. */
+const LAPSE_FACTOR = 0.3
 
 export function createCard(itemId: string, now: number): CardState {
   return {
@@ -104,11 +108,21 @@ export function review(card: CardState, rating: Rating, now: number): CardState 
 
   // Phase de révision.
   if (rating === 'again') {
+    /*
+     * Une rechute revenait tout droit au premier palier d'apprentissage,
+     * donc due dans la minute : la carte ressurgissait avant même la fin de
+     * la séance en cours, et les cartes ratées finissaient par tourner en
+     * boucle sur elles-mêmes plutôt que d'être espacées dans le temps.
+     *
+     * On la garde en révision — pas de retour aux paliers minute par minute,
+     * réservés à l'acquisition d'une carte neuve — avec un intervalle réduit
+     * à une fraction du précédent : plus il était long, plus tard elle
+     * revient, jamais moins d'un jour.
+     */
     next.lapses = card.lapses + 1
     next.ease = clampEase(card.ease - 0.2)
-    next.interval = 0
-    next.step = 0
-    next.due = now + LEARNING_STEPS[0] * MINUTE
+    next.interval = clampInterval(Math.max(1, card.interval) * LAPSE_FACTOR)
+    next.due = now + next.interval * DAY
     return next
   }
 

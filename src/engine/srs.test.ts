@@ -73,36 +73,24 @@ describe('phase de révision', () => {
     expect(next.interval).toBeGreaterThan(20)
   })
 
-  it('renvoie en apprentissage et compte une rechute sur « again »', () => {
+  it('réduit l’intervalle à une fraction du précédent et compte une rechute sur « again »', () => {
     const card = { ...graduate(createCard('hello', T0)), interval: 30 }
     const next = review(card, 'again', card.due)
-    expect(next.step).toBe(0)
-    expect(next.interval).toBe(0)
+    expect(next.step).toBeNull()
+    expect(next.interval).toBe(9)
+    expect(next.due).toBe(card.due + 9 * DAY)
     expect(next.lapses).toBe(1)
     expect(next.ease).toBeCloseTo(2.3, 5)
   })
 
   it('garde la facilité dans ses bornes', () => {
-    // Une rechute ne coûte de la facilité qu'une fois : la carte repasse
-    // ensuite en apprentissage, où l'ease n'est plus touché. On la fait donc
-    // ressortir en révision entre chaque échec.
     let card = { ...graduate(createCard('hello', T0)), interval: 5 }
-    for (let i = 0; i < 20; i++) {
-      card = review(card, 'again', card.due)
-      card = { ...graduate(card, card.due), ease: card.ease }
-    }
+    for (let i = 0; i < 20; i++) card = review(card, 'again', card.due)
     expect(card.ease).toBe(1.3)
 
     let easy = { ...graduate(createCard('world', T0)), interval: 5 }
     for (let i = 0; i < 20; i++) easy = review(easy, 'easy', easy.due)
     expect(easy.ease).toBe(2.8)
-  })
-
-  it('ne pénalise pas deux fois une carte déjà retombée en apprentissage', () => {
-    const lapsed = review({ ...graduate(createCard('hello', T0)), interval: 30 }, 'again', T0 + DAY)
-    const again = review(lapsed, 'again', lapsed.due)
-    expect(again.ease).toBe(lapsed.ease)
-    expect(again.lapses).toBe(1)
   })
 
   it('plafonne l’intervalle à un an', () => {
@@ -144,12 +132,12 @@ describe('révision anticipée', () => {
 
   it('compte quand même l’échec', () => {
     // Oublier un mot qu'on vient de voir est une information : la carte
-    // repart en apprentissage même si son échéance était encore loin.
+    // revient plus vite même si son échéance était encore loin.
     const card = { ...graduate(createCard('hello', T0)), interval: 30 }
     const next = review(card, 'again', card.due - 10 * DAY)
-    expect(next.step).toBe(0)
+    expect(next.step).toBeNull()
     expect(next.lapses).toBe(1)
-    expect(next.interval).toBe(0)
+    expect(next.interval).toBe(9)
   })
 
   it('reprend sa progression une fois l’échéance atteinte', () => {
