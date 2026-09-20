@@ -715,7 +715,7 @@ function TreatiseIndexView({
                         className="shrink-0 text-[0.65rem] font-bold text-ink-faint"
                         title="Rang chronologique de rédaction"
                       >
-                        n°{entry.chrono}
+                        [{entry.chrono}]
                       </span>
                     </button>
                   ))}
@@ -754,7 +754,7 @@ function TreatiseSheet({ entry, onClose }: { entry: TreatiseEntry; onClose: () =
       >
         <div className="shrink-0">
           <p className={`text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}>
-            Ennéade {ENNEAD_NUMERALS[entry.ennead - 1]}, {entry.numberInEnnead} · n°{entry.chrono} chronologique
+            {ENNEAD_NUMERALS[entry.ennead - 1]}, {entry.numberInEnnead} [{entry.chrono}]
           </p>
           <h2 className="mt-1 text-lg leading-tight font-extrabold text-ink">{entry.title}</h2>
         </div>
