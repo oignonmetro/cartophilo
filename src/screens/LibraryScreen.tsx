@@ -712,14 +712,17 @@ function TreatiseIndexView({
                       key={entry.id}
                       type="button"
                       onClick={() => onOpenTreatise(entry)}
-                      className="card-3d flex w-full items-center px-4 py-3 text-left"
+                      className="card-3d flex w-full items-center gap-3 px-4 py-3 text-left"
                     >
-                      <span className="text-sm leading-snug">
-                        <span className={`font-black ${tone.text}`}>
-                          {ENNEAD_NUMERALS[entry.ennead - 1]}, {entry.numberInEnnead}{' '}
-                          <span title="Rang chronologique de rédaction">[{entry.chrono}]</span>
-                        </span>{' '}
-                        <span className="text-ink-faint">:</span> <em className="font-bold text-ink">{entry.title}</em>
+                      <span className={`shrink-0 text-xs font-black ${tone.text}`}>
+                        {ENNEAD_NUMERALS[entry.ennead - 1]}, {entry.numberInEnnead}
+                      </span>
+                      <span className="flex-1 text-sm leading-snug font-bold text-ink">{entry.title}</span>
+                      <span
+                        className="shrink-0 text-[0.65rem] font-bold text-ink-faint"
+                        title="Rang chronologique de rédaction"
+                      >
+                        [{entry.chrono}]
                       </span>
                     </button>
                   ))}
