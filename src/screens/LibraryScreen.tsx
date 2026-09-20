@@ -68,6 +68,13 @@ function groupUnits(units: readonly Unit[]): UnitOrGroup[] {
 
 const ENNEAD_NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI'] as const
 
+/**
+ * Titre thématique que Porphyre donne à chaque Ennéade en organisant les
+ * cinquante-quatre traités (Vie de Plotin, 24-26) : de l'éthique, la plus
+ * accessible, vers l'Un, le plus haut principe.
+ */
+const ENNEAD_TITLES = ['Éthique', 'Physique', 'Cosmologie', "L'âme", "L'intellect", "L'être, le nombre, l'Un"] as const
+
 /** Entrées d'un index (voir `treatiseEntrySchema`), groupées par Ennéade et triées dans l'ordre de Porphyre. */
 function groupEntries(entries: readonly TreatiseEntry[]): { ennead: number; entries: TreatiseEntry[] }[] {
   const byEnnead = new Map<number, TreatiseEntry[]>()
@@ -679,7 +686,7 @@ function TreatiseIndexView({
                 {ENNEAD_NUMERALS[ennead - 1]}
               </span>
               <span className="flex-1">
-                <span className="text-base leading-tight font-extrabold">Ennéade {ENNEAD_NUMERALS[ennead - 1]}</span>
+                <span className="text-base leading-tight font-extrabold">{ENNEAD_TITLES[ennead - 1]}</span>
                 <span className="mt-0.5 block text-xs font-bold text-ink-faint">
                   {group.length} traité{group.length > 1 ? 's' : ''}
                 </span>
