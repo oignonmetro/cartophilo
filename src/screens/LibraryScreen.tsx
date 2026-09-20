@@ -69,11 +69,22 @@ function groupUnits(units: readonly Unit[]): UnitOrGroup[] {
 const ENNEAD_NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI'] as const
 
 /**
- * Titre thématique que Porphyre donne à chaque Ennéade en organisant les
- * cinquante-quatre traités (Vie de Plotin, 24-26) : de l'éthique, la plus
- * accessible, vers l'Un, le plus haut principe.
+ * Titre thématique de chaque Ennéade, dans la progression voulue par
+ * Porphyre en organisant les cinquante-quatre traités : des questions
+ * morales et anthropologiques les plus accessibles (Ennéade I), au monde
+ * sensible et aux principes qui le régissent (II et III), puis aux trois
+ * hypostases supra-sensibles de plus en plus élusives, l'âme (IV),
+ * l'intellect (V) et l'Un (VI), le principe le plus haut d'où procède toute
+ * la réalité sensible.
  */
-const ENNEAD_TITLES = ['Éthique', 'Physique', 'Cosmologie', "L'âme", "L'intellect", "L'être, le nombre, l'Un"] as const
+const ENNEAD_TITLES = [
+  'Morale et anthropologie',
+  'Le monde sensible',
+  'Les principes du monde sensible',
+  "L'âme",
+  "L'intellect",
+  "L'Un",
+] as const
 
 /** Entrées d'un index (voir `treatiseEntrySchema`), groupées par Ennéade et triées dans l'ordre de Porphyre. */
 function groupEntries(entries: readonly TreatiseEntry[]): { ennead: number; entries: TreatiseEntry[] }[] {
