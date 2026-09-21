@@ -80,7 +80,7 @@ const ENNEAD_NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI'] as const
 const ENNEAD_TITLES = [
   'Morale et anthropologie',
   'Le monde sensible',
-  'Les principes du monde sensible',
+  'Le monde sensible',
   "L'âme",
   "L'intellect",
   "L'Un",
