@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { ServerResponse } from 'node:http'
@@ -197,6 +197,93 @@ function setScalar(map: YAMLMap, key: string, value: string): void {
   else map.set(key, dq(value))
 }
 
+/**
+ * Écrit `notes`, en choisissant le style bloc (`|`) dès que le texte tient
+ * sur plusieurs lignes — celui qu'un rappel écrit à la main prend toujours,
+ * et le seul lisible une fois relu tel quel. Sans ce choix explicite, une
+ * leçon créée depuis l'éditeur (voir `buildNewLessonNode`) démarre avec un
+ * `notes: ''` en guillemets, et le premier rappel un peu long qu'on y tape
+ * resterait figé dans ce même style — une longue ligne entre guillemets,
+ * les retours à la ligne échappés en `\n`, illisible à la main.
+ */
+function setNotes(doc: Document, lessonIdx: number, notes: string): void {
+  const wantsBlock = notes.includes('\n')
+  const existing = doc.getIn(['lessons', lessonIdx, 'notes'], true)
+  if (existing instanceof Scalar) {
+    existing.value = notes
+    existing.type = wantsBlock ? Scalar.BLOCK_LITERAL : undefined
+    return
+  }
+  const scalar = new Scalar(notes)
+  if (wantsBlock) scalar.type = Scalar.BLOCK_LITERAL
+  doc.setIn(['lessons', lessonIdx, 'notes'], scalar)
+}
+
+const slugPattern = /^[a-z0-9][a-z0-9-]*$/
+
+/** Le champ qui porte le contenu d'une leçon, selon la nature héritée de sa piste. */
+function lessonContentKey(kind: string): 'vocab' | 'verbs' | 'points' {
+  if (kind === 'vocab') return 'vocab'
+  if (kind === 'conjugation') return 'verbs'
+  return 'points'
+}
+
+/**
+ * Nature (`vocab`/`grammar`/`conjugation`) de la piste qui référence cette
+ * unité dans `course.yaml` — une leçon en hérite pour savoir sous quel champ
+ * ranger son contenu (voir `lessonContentKey`). `grammar` par défaut si la
+ * piste reste introuvable : c'est la nature de tout le contenu philosophique
+ * actif (voir `content/philosophie.md`).
+ */
+function findTrackKindForUnit(courseId: string, unitId: string): string {
+  try {
+    const tracks = (readYamlDoc(join(contentDir, courseId, 'course.yaml')).toJS() as Record<string, unknown>).tracks
+    if (Array.isArray(tracks)) {
+      for (const track of tracks as Record<string, unknown>[]) {
+        const units = Array.isArray(track.units) ? (track.units as string[]) : []
+        if (units.includes(unitId)) return String(track.kind ?? 'grammar')
+      }
+    }
+  } catch {
+    // Fichier illisible ou absent : retombe sur le défaut ci-dessous.
+  }
+  return 'grammar'
+}
+
+/**
+ * Id de la prochaine leçon d'une unité, sur le même gabarit que celles déjà
+ * en place (`<unité>-l<n>`) — même principe que `nextPointId` côté client,
+ * appliqué ici aux leçons.
+ */
+function nextLessonId(unitId: string, existingIds: string[]): string {
+  const prefix = `${unitId}-l`
+  let max = 0
+  for (const id of existingIds) {
+    if (!id.startsWith(prefix)) continue
+    const n = Number(id.slice(prefix.length))
+    if (Number.isFinite(n)) max = Math.max(max, n)
+  }
+  return `${prefix}${max + 1}`
+}
+
+/**
+ * Nœud d'une leçon toute neuve : titre donné, rappel vide, et un tableau de
+ * contenu vide (`points`/`vocab`/`verbs` selon `kind`) — vide, donc
+ * momentanément en dessous du minimum que `content:check` exige (trois
+ * points, voir `content/philosophie.md`) : la leçon existe pour qu'on la
+ * remplisse depuis l'éditeur, pas pour rester telle quelle.
+ */
+function buildNewLessonNode(id: string, title: string, kind: string): YAMLMap {
+  const map = new YAMLMap()
+  map.set('id', id)
+  map.set('title', title)
+  map.set('notes', '')
+  const seq = new YAMLSeq()
+  seq.flow = true
+  map.set(lessonContentKey(kind), seq)
+  return map
+}
+
 function readBody(req: Connect.IncomingMessage): Promise<string> {
   return new Promise((resolve, reject) => {
     let data = ''
@@ -242,11 +329,43 @@ export function contentEditorApi(): Plugin {
         const unit = url.searchParams.get('unit')
         const lesson = url.searchParams.get('lesson')
 
-        if (!course || !unit || !lesson) {
-          sendJson(res, 400, { error: 'course, unit et lesson sont requis' })
+        if (!course || !unit) {
+          sendJson(res, 400, { error: 'course et unit sont requis' })
           return
         }
         const unitFile = join(contentDir, course, 'units', `${unit}.yaml`)
+
+        // Pas de `lesson` : création d'une leçon toute neuve dans cette unité,
+        // plutôt que d'en modifier une qui existe déjà (voir GET/PUT plus bas).
+        if (req.method === 'POST') {
+          try {
+            const body = JSON.parse(await readBody(req)) as { title?: string }
+            const title = body.title?.trim()
+            if (!title) {
+              sendJson(res, 400, { error: 'titre requis' })
+              return
+            }
+            const doc = readYamlDoc(unitFile)
+            const existingIds = ((doc.toJS() as Record<string, unknown>).lessons as Record<string, unknown>[] | undefined ?? []).map(
+              (l) => String(l.id),
+            )
+            const id = nextLessonId(unit, existingIds)
+            const kind = findTrackKindForUnit(course, unit)
+            const lessonsSeq = doc.getIn(['lessons'])
+            if (!(lessonsSeq instanceof YAMLSeq)) throw new Error(`"${unit}" n'a pas de tableau lessons`)
+            lessonsSeq.items.push(buildNewLessonNode(id, title, kind))
+            writeFileSync(unitFile, doc.toString({ lineWidth: 0, flowCollectionPadding: false }), 'utf8')
+            sendJson(res, 200, { ok: true, lesson: { id, title } })
+          } catch (error) {
+            sendJson(res, 500, { error: String((error as Error).message) })
+          }
+          return
+        }
+
+        if (!lesson) {
+          sendJson(res, 400, { error: 'lesson est requis' })
+          return
+        }
 
         if (req.method === 'GET') {
           try {
@@ -287,16 +406,7 @@ export function contentEditorApi(): Plugin {
               sendJson(res, 404, { error: `leçon "${lesson}" introuvable dans ${unit}` })
               return
             }
-            // On modifie le scalaire existant plutôt que de remplacer le nœud :
-            // ça garde son style bloc (`|`) au lieu de retomber sur un style
-            // par défaut (guillemets, échappement des retours à la ligne) qui
-            // rendrait le fichier illisible à la main par la suite.
-            const notesScalar = doc.getIn(['lessons', idx, 'notes'], true) as { value: unknown } | undefined
-            if (notesScalar && typeof notesScalar === 'object' && 'value' in notesScalar) {
-              notesScalar.value = body.notes
-            } else {
-              doc.setIn(['lessons', idx, 'notes'], body.notes)
-            }
+            setNotes(doc, idx, body.notes)
             if (body.points) {
               const pointsSeq = doc.getIn(['lessons', idx, 'points'])
               if (pointsSeq instanceof YAMLSeq) syncPoints(pointsSeq, body.points)
@@ -313,6 +423,80 @@ export function contentEditorApi(): Plugin {
         }
 
         sendJson(res, 405, { error: 'méthode non supportée' })
+      })
+
+      // Une unité toute neuve, dans une piste existante. `unitSchema.lessons`
+      // exige au moins une leçon (voir `src/content/schema.ts`) : la
+      // création groupe donc toujours l'unité et sa première leçon, jamais
+      // l'une sans l'autre — sans quoi le fichier écrit serait invalide dès
+      // sa naissance, pas seulement momentanément le temps de le remplir.
+      server.middlewares.use('/api/unit', async (req, res) => {
+        if (req.method !== 'POST') {
+          sendJson(res, 405, { error: 'méthode non supportée' })
+          return
+        }
+        const url = new URL(req.url ?? '', 'http://localhost')
+        const course = url.searchParams.get('course')
+        const track = url.searchParams.get('track')
+        if (!course || !track) {
+          sendJson(res, 400, { error: 'course et track sont requis' })
+          return
+        }
+        try {
+          const body = JSON.parse(await readBody(req)) as {
+            id?: string
+            title?: string
+            firstLessonTitle?: string
+          }
+          const id = body.id?.trim() ?? ''
+          const title = body.title?.trim()
+          const firstLessonTitle = body.firstLessonTitle?.trim()
+          if (!slugPattern.test(id)) {
+            sendJson(res, 400, { error: 'identifiant : minuscules, chiffres et tirets, ne commence jamais par un tiret' })
+            return
+          }
+          if (!title || !firstLessonTitle) {
+            sendJson(res, 400, { error: 'titre et titre de la première leçon requis' })
+            return
+          }
+
+          const courseFile = join(contentDir, course, 'course.yaml')
+          const courseDoc = readYamlDoc(courseFile)
+          const courseData = courseDoc.toJS() as Record<string, unknown>
+          const tracksData = Array.isArray(courseData.tracks) ? (courseData.tracks as Record<string, unknown>[]) : []
+          const trackIdx = tracksData.findIndex((t) => t.id === track)
+          if (trackIdx === -1) {
+            sendJson(res, 404, { error: `piste "${track}" introuvable` })
+            return
+          }
+          const alreadyUsed = tracksData.some((t) => (Array.isArray(t.units) ? (t.units as string[]) : []).includes(id))
+          const unitFile = join(contentDir, course, 'units', `${id}.yaml`)
+          if (alreadyUsed || existsSync(unitFile)) {
+            sendJson(res, 409, { error: `l'identifiant "${id}" est déjà pris dans ce cours` })
+            return
+          }
+
+          const kind = String(tracksData[trackIdx]!.kind ?? 'grammar')
+          const firstLessonId = `${id}-l1`
+
+          const unitMap = new YAMLMap()
+          unitMap.set('id', id)
+          unitMap.set('title', title)
+          const lessonsSeq = new YAMLSeq()
+          lessonsSeq.items.push(buildNewLessonNode(firstLessonId, firstLessonTitle, kind))
+          unitMap.set('lessons', lessonsSeq)
+          const unitDoc = new Document(unitMap)
+          writeFileSync(unitFile, unitDoc.toString({ lineWidth: 0, flowCollectionPadding: false }), 'utf8')
+
+          const unitsSeq = courseDoc.getIn(['tracks', trackIdx, 'units'])
+          if (unitsSeq instanceof YAMLSeq) unitsSeq.items.push(id)
+          else courseDoc.setIn(['tracks', trackIdx, 'units'], [id])
+          writeFileSync(courseFile, courseDoc.toString({ lineWidth: 0, flowCollectionPadding: false }), 'utf8')
+
+          sendJson(res, 200, { ok: true, unit: { id, title }, lesson: { id: firstLessonId, title: firstLessonTitle } })
+        } catch (error) {
+          sendJson(res, 500, { error: String((error as Error).message) })
+        }
       })
     },
   }

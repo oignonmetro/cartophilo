@@ -131,12 +131,18 @@ export default function ContentEditorScreen() {
   const textareaRef = useRef<HTMLTextAreaElement | null>(null)
   const dirty = notes !== original || JSON.stringify(points) !== JSON.stringify(originalPoints)
 
-  useEffect(() => {
-    fetch('/api/tree')
-      .then((res) => res.json())
-      .then(setTree)
-      .catch((err) => setTreeError(String(err)))
+  const loadTree = useCallback(async () => {
+    try {
+      const res = await fetch('/api/tree')
+      setTree(await res.json())
+    } catch (err) {
+      setTreeError(String(err))
+    }
   }, [])
+
+  useEffect(() => {
+    void loadTree()
+  }, [loadTree])
 
   const openLesson = useCallback(async (course: string, track: TreeTrack, unit: string, lesson: string) => {
     setSelection({ course, unit, lesson })
@@ -161,6 +167,63 @@ export default function ContentEditorScreen() {
       setError(String((err as Error).message))
     }
   }, [])
+
+  /**
+   * Une leçon toute neuve (id attribué par l'API, voir `nextLessonId` côté
+   * serveur), ouverte aussitôt créée : rappel et exercices restent à
+   * écrire, mais autant s'y mettre directement plutôt que de retourner
+   * chercher la leçon dans l'arborescence après coup.
+   */
+  const createLesson = useCallback(
+    async (course: string, track: TreeTrack, unit: string) => {
+      const title = window.prompt('Titre de la nouvelle leçon :')?.trim()
+      if (!title) return
+      try {
+        const res = await fetch(`/api/lesson?course=${course}&unit=${unit}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ title }),
+        })
+        const data = await res.json()
+        if (!res.ok) throw new Error(data.error ?? res.statusText)
+        await loadTree()
+        void openLesson(course, track, unit, data.lesson.id)
+      } catch (err) {
+        window.alert(`Impossible de créer la leçon : ${(err as Error).message}`)
+      }
+    },
+    [loadTree, openLesson],
+  )
+
+  /**
+   * Une unité toute neuve dans une piste existante, avec sa première leçon
+   * (voir `content-editor/api-plugin.ts` : une unité sans la moindre leçon
+   * ne respecte pas le schéma, la création groupe donc toujours les deux).
+   */
+  const createUnit = useCallback(
+    async (course: string, track: TreeTrack) => {
+      const id = window.prompt('Identifiant de la nouvelle unité (minuscules, chiffres, tirets) :')?.trim()
+      if (!id) return
+      const title = window.prompt('Titre de la nouvelle unité :')?.trim()
+      if (!title) return
+      const firstLessonTitle = window.prompt('Titre de sa première leçon :')?.trim()
+      if (!firstLessonTitle) return
+      try {
+        const res = await fetch(`/api/unit?course=${course}&track=${track.id}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id, title, firstLessonTitle }),
+        })
+        const data = await res.json()
+        if (!res.ok) throw new Error(data.error ?? res.statusText)
+        await loadTree()
+        void openLesson(course, track, data.unit.id, data.lesson.id)
+      } catch (err) {
+        window.alert(`Impossible de créer l'unité : ${(err as Error).message}`)
+      }
+    },
+    [loadTree, openLesson],
+  )
 
   const save = useCallback(async () => {
     if (!selection) return
@@ -309,6 +372,13 @@ export default function ContentEditorScreen() {
                       {track.units.length === 0 && <span className="ml-1 font-normal text-ink-faint">(vide)</span>}
                     </summary>
                     <div className="ml-2 border-l-2 border-line pl-2">
+                      <button
+                        type="button"
+                        onClick={() => void createUnit(course.id, track)}
+                        className="mb-0.5 rounded-lg px-2 py-1 text-left text-xs font-bold text-ink-faint hover:bg-ink/5 hover:text-teal-deep"
+                      >
+                        + Nouvelle unité
+                      </button>
                       {groupUnits(track.units).map((entry, index) => (
                         <div key={index} className="mb-0.5">
                           {entry.label && <p className="px-2 py-1 text-xs font-black text-ink-faint">{entry.label}</p>}
@@ -336,6 +406,13 @@ export default function ContentEditorScreen() {
                                     </button>
                                   )
                                 })}
+                                <button
+                                  type="button"
+                                  onClick={() => void createLesson(course.id, track, unit.id)}
+                                  className="rounded-lg px-2 py-1 text-left text-xs font-bold text-ink-faint hover:bg-ink/5 hover:text-teal-deep"
+                                >
+                                  + Nouvelle leçon
+                                </button>
                               </div>
                             </details>
                           ))}
