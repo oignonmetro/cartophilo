@@ -242,7 +242,13 @@ export function contentEditorApi(): Plugin {
               title: String(lessonData.title ?? lesson),
               notes: String(lessonData.notes ?? ''),
               kind,
-              points: points ?? null,
+              // `alt` est optionnel dans le contenu (beaucoup de points n'en ont
+              // jamais eu besoin, voir content/courses/hors-programme) mais pas
+              // dans le DTO envoyé au client, qui suppose un tableau toujours
+              // présent (`point.alt.join(...)` dans `PointsEditor`) : sans ce
+              // filet, une leçon dont aucun point ne porte `alt` fait planter
+              // l'onglet Exercices dès l'ouverture.
+              points: points ? points.map((point) => ({ ...point, alt: point.alt ?? [] })) : null,
             })
           } catch (error) {
             sendJson(res, 500, { error: String((error as Error).message) })
