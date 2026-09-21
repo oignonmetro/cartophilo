@@ -4,6 +4,7 @@ import type { ClozeExercise } from '@/engine/exercises'
 import { normalizeForm } from '@/engine/exercises'
 import { Button } from '@/components/Button'
 import { sentenceTextSize, sentenceTextSizeMd } from '@/lib/textDensity'
+import { useIsDesktop } from '@/lib/useIsDesktop'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
 import { CorrectionGap } from './CorrectionGap'
 import { ExpectedAnswer } from './ExpectedAnswer'
@@ -19,9 +20,12 @@ import { useSessionSounds } from './useSessionSounds'
 export function ClozeSentence({
   exercise,
   onAnswer,
+  shortcutsEnabled = true,
 }: {
   exercise: ClozeExercise
   onAnswer: (correct: boolean) => void
+  /** Faux tant qu'une boîte de dialogue (quitter la session…) est ouverte par-dessus. */
+  shortcutsEnabled?: boolean
 }) {
   const { vocab, sentence, bank } = exercise
   const textSize = sentenceTextSize('text-2xl', sentence.before.length + sentence.match.length + sentence.after.length)
@@ -34,6 +38,7 @@ export function ClozeSentence({
   const haptics = useSessionHaptics()
   // Voir la même remarque dans `GrammarGap`.
   const keyboardOpen = useKeyboardOpen()
+  const isDesktop = useIsDesktop()
 
   // Voir la même remarque dans `GrammarGap`.
   useEffect(() => {
@@ -59,6 +64,31 @@ export function ClozeSentence({
     sounds.success(correct)
     haptics.answered(exercise, correct)
   }
+
+  // Raccourci clavier, réservé à l'ordinateur : voir la même remarque dans `GrammarGap`.
+  useEffect(() => {
+    if (!isDesktop || !shortcutsEnabled) return
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== 'Enter') return
+      if (checked !== null) {
+        if (!checked && !bank && !gapResolved) return
+        event.preventDefault()
+        onAnswer(checked)
+        return
+      }
+      if (bank) return
+      if (!filled) {
+        event.preventDefault()
+        check('')
+        return
+      }
+      if (document.activeElement === input.current) return
+      event.preventDefault()
+      check(value)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [isDesktop, shortcutsEnabled, checked, bank, gapResolved, filled, value, onAnswer])
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-[safe_center]">

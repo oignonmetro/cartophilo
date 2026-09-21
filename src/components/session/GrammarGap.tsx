@@ -5,6 +5,7 @@ import { matchesAnswer, splitGap } from '@/engine/exercises'
 import { Button } from '@/components/Button'
 import { learningLanguage } from '@/lib/speech'
 import { sentenceTextSize, sentenceTextSizeMd } from '@/lib/textDensity'
+import { useIsDesktop } from '@/lib/useIsDesktop'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
 import { CorrectionGap } from './CorrectionGap'
 import { ExpectedAnswer } from './ExpectedAnswer'
@@ -26,9 +27,12 @@ import { useSessionSounds } from './useSessionSounds'
 export function GrammarGap({
   exercise,
   onAnswer,
+  shortcutsEnabled = true,
 }: {
   exercise: GrammarGapExercise
   onAnswer: (correct: boolean) => void
+  /** Faux tant qu'une boîte de dialogue (quitter la session…) est ouverte par-dessus. */
+  shortcutsEnabled?: boolean
 }) {
   const { point, bank, cue } = exercise
   const gap = useMemo(() => splitGap(point.sentence), [point.sentence])
@@ -44,6 +48,7 @@ export function GrammarGap({
   // seule zone du bas (champ, correction, boutons) — voir `useKeyboardOpen`.
   // On l'allège alors pour rendre le plus de place possible à la carte.
   const keyboardOpen = useKeyboardOpen()
+  const isDesktop = useIsDesktop()
 
   // La carte défile pour son propre compte (voir plus bas) : rien ne garantit
   // que le trou tombe dans la portion visible par défaut (le haut de la
@@ -78,6 +83,37 @@ export function GrammarGap({
     sounds.success(correct)
     haptics.answered(exercise, correct)
   }
+
+  // Raccourci clavier, réservé à l'ordinateur (voir `useIsDesktop`) : Entrée
+  // fait avancer l'exercice comme un clic sur le bouton principal du moment
+  // — Vérifier, Je ne sais pas si le champ est vide, ou Continuer une fois
+  // la réponse corrigée. Le mode banque (`bank`) n'a rien à valider par
+  // Entrée : la réponse s'y choisit au clic, jamais au clavier.
+  useEffect(() => {
+    if (!isDesktop || !shortcutsEnabled) return
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== 'Enter') return
+      if (checked !== null) {
+        if (!checked && !bank && !gapResolved) return // « Continuer » est alors désactivé
+        event.preventDefault()
+        onAnswer(checked)
+        return
+      }
+      if (bank) return
+      if (!filled) {
+        event.preventDefault()
+        check('')
+        return
+      }
+      // Déjà géré par le champ lui-même quand il a le focus (voir son onKeyDown) :
+      // éviter de vérifier deux fois la même réponse.
+      if (document.activeElement === input.current) return
+      event.preventDefault()
+      check(value)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [isDesktop, shortcutsEnabled, checked, bank, gapResolved, filled, value, onAnswer])
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-[safe_center]">

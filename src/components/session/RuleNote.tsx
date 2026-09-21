@@ -1,8 +1,10 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import type { RuleExercise } from '@/engine/exercises'
 import { parseInline, parseNotes, splitAside, type Inline, type NoteRule } from '@/content/notes'
 import type { UnitColor } from '@/content/schema'
 import { Button } from '@/components/Button'
+import { useIsDesktop } from '@/lib/useIsDesktop'
 
 /**
  * Rappel de cours affiché avant la pratique, à la découverte d'une leçon.
@@ -163,8 +165,31 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
   )
 }
 
-export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext: () => void }) {
+export function RuleNote({
+  exercise,
+  onNext,
+  shortcutsEnabled = true,
+}: {
+  exercise: RuleExercise
+  onNext: () => void
+  /** Faux tant qu'une boîte de dialogue (quitter la session…) est ouverte par-dessus. */
+  shortcutsEnabled?: boolean
+}) {
   const tone = TONES[exercise.topic]
+  const isDesktop = useIsDesktop()
+
+  // Raccourci clavier, réservé à l'ordinateur (voir `useIsDesktop`) : Entrée
+  // enchaîne sur les exercices, comme un clic sur « C'est parti ».
+  useEffect(() => {
+    if (!isDesktop || !shortcutsEnabled) return
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== 'Enter') return
+      event.preventDefault()
+      onNext()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [isDesktop, shortcutsEnabled, onNext])
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-[safe_center]">

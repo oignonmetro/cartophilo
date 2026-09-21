@@ -334,9 +334,15 @@ function SessionRunner({
             {current.kind === 'choice' && (
               <ChoiceQuestion exercise={current} onAnswer={(correct) => answer(current, correct)} />
             )}
-            {current.kind === 'rule' && <RuleNote exercise={current} onNext={() => advance(false)} />}
+            {current.kind === 'rule' && (
+              <RuleNote exercise={current} onNext={() => advance(false)} shortcutsEnabled={!confirmQuit} />
+            )}
             {current.kind === 'grammar-gap' && (
-              <GrammarGap exercise={current} onAnswer={(correct) => answer(current, correct)} />
+              <GrammarGap
+                exercise={current}
+                onAnswer={(correct) => answer(current, correct)}
+                shortcutsEnabled={!confirmQuit}
+              />
             )}
             {current.kind === 'grammar-choice' && (
               <GrammarSentenceChoice exercise={current} onAnswer={(correct) => answer(current, correct)} />
@@ -351,7 +357,11 @@ function SessionRunner({
               <ConjugationMatch exercise={current} onDone={({ missedIds }) => answerMatch(current, missedIds)} />
             )}
             {current.kind === 'cloze' && (
-              <ClozeSentence exercise={current} onAnswer={(correct) => answer(current, correct)} />
+              <ClozeSentence
+                exercise={current}
+                onAnswer={(correct) => answer(current, correct)}
+                shortcutsEnabled={!confirmQuit}
+              />
             )}
             {current.kind === 'type' && (
               <TypeAnswer exercise={current} onAnswer={(correct) => answer(current, correct)} />
