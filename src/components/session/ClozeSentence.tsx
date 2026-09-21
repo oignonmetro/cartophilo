@@ -4,6 +4,7 @@ import type { ClozeExercise } from '@/engine/exercises'
 import { normalizeForm } from '@/engine/exercises'
 import { Button } from '@/components/Button'
 import { sentenceTextSize } from '@/lib/textDensity'
+import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
 import { CorrectionGap } from './CorrectionGap'
 import { ExpectedAnswer } from './ExpectedAnswer'
 import { useSessionHaptics } from './useSessionHaptics'
@@ -30,6 +31,8 @@ export function ClozeSentence({
   const input = useRef<HTMLInputElement>(null)
   const sounds = useSessionSounds()
   const haptics = useSessionHaptics()
+  // Voir la même remarque dans `GrammarGap`.
+  const keyboardOpen = useKeyboardOpen()
 
   useEffect(() => {
     setValue('')
@@ -53,9 +56,12 @@ export function ClozeSentence({
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">
-      <p className="shrink-0 text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
-        Complétez la phrase
-      </p>
+      {/* Retirée pendant que le clavier est ouvert : voir la même remarque dans `GrammarGap`. */}
+      {!keyboardOpen && (
+        <p className="shrink-0 text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
+          Complétez la phrase
+        </p>
+      )}
 
       {/* La carte défile pour son propre compte : voir la même remarque dans `GrammarGap`. */}
       <div className="min-h-0 flex-1 overflow-y-auto">
@@ -69,7 +75,7 @@ export function ClozeSentence({
         </div>
       </div>
 
-      <div className="flex shrink-0 flex-col gap-3">
+      <div className={`flex shrink-0 flex-col ${keyboardOpen ? 'gap-2' : 'gap-3'}`}>
         {bank ? (
           <div className="grid grid-cols-2 gap-3">
             {bank.map((word) => (
@@ -104,7 +110,9 @@ export function ClozeSentence({
             spellCheck={false}
             placeholder="Le mot manquant…"
             aria-label="Mot manquant"
-            className="w-full rounded-2xl border-2 border-line bg-paper px-4 py-4 text-lg font-bold outline-none focus:border-teal disabled:opacity-70"
+            className={`w-full rounded-2xl border-2 border-line bg-paper px-4 text-lg font-bold outline-none focus:border-teal disabled:opacity-70 ${
+              keyboardOpen ? 'py-2.5' : 'py-4'
+            }`}
           />
         )}
 
@@ -117,13 +125,13 @@ export function ClozeSentence({
           onGapResolved={() => setGapResolved(true)}
         />
 
-        <div className="flex flex-col items-center gap-3">
+        <div className={`flex flex-col items-center ${keyboardOpen ? 'gap-1.5' : 'gap-3'}`}>
           {checked === null ? (
             <>
-              <Button block disabled={!filled} onClick={() => check(value)}>
+              <Button block disabled={!filled} onClick={() => check(value)} className={keyboardOpen ? 'py-2' : ''}>
                 Vérifier
               </Button>
-              {!bank && (
+              {!bank && !keyboardOpen && (
                 <button
                   type="button"
                   onClick={() => check('')}

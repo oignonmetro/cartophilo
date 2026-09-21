@@ -5,6 +5,7 @@ import { matchesAnswer, splitGap } from '@/engine/exercises'
 import { Button } from '@/components/Button'
 import { learningLanguage } from '@/lib/speech'
 import { sentenceTextSize } from '@/lib/textDensity'
+import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
 import { CorrectionGap } from './CorrectionGap'
 import { ExpectedAnswer } from './ExpectedAnswer'
 import { useSessionHaptics } from './useSessionHaptics'
@@ -38,6 +39,10 @@ export function GrammarGap({
   const input = useRef<HTMLInputElement>(null)
   const sounds = useSessionSounds()
   const haptics = useSessionHaptics()
+  // Le clavier peut réduire la fenêtre visible à moins que la hauteur de la
+  // seule zone du bas (champ, correction, boutons) — voir `useKeyboardOpen`.
+  // On l'allège alors pour rendre le plus de place possible à la carte.
+  const keyboardOpen = useKeyboardOpen()
 
   useEffect(() => {
     setValue('')
@@ -65,9 +70,14 @@ export function GrammarGap({
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">
-      <p className="shrink-0 text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
-        Complétez la phrase
-      </p>
+      {/* Retirée pendant que le clavier est ouvert : la consigne ne change
+          jamais, la carte a plus besoin de ces quelques pixels qu'elle
+          n'a besoin d'être répétée à chaque exercice. */}
+      {!keyboardOpen && (
+        <p className="shrink-0 text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
+          Complétez la phrase
+        </p>
+      )}
 
       {/*
        * La carte défile pour son propre compte, dans l'espace qu'il reste
@@ -95,7 +105,7 @@ export function GrammarGap({
         </div>
       </div>
 
-      <div className="flex shrink-0 flex-col gap-3">
+      <div className={`flex shrink-0 flex-col ${keyboardOpen ? 'gap-2' : 'gap-3'}`}>
         {bank ? (
           <div className="grid grid-cols-2 gap-3">
             {bank.map((option) => (
@@ -133,9 +143,9 @@ export function GrammarGap({
             lang={learningLanguage()}
             placeholder="La forme manquante…"
             aria-label="Forme manquante"
-            className={`w-full rounded-2xl border-2 bg-paper px-4 py-4 text-lg font-bold outline-none disabled:opacity-70 ${
-              checked === null ? 'border-line focus:border-violet' : checked ? 'border-success' : 'border-error'
-            }`}
+            className={`w-full rounded-2xl border-2 bg-paper px-4 text-lg font-bold outline-none disabled:opacity-70 ${
+              keyboardOpen ? 'py-2.5' : 'py-4'
+            } ${checked === null ? 'border-line focus:border-violet' : checked ? 'border-success' : 'border-error'}`}
           />
         )}
 
@@ -164,13 +174,22 @@ export function GrammarGap({
           </motion.div>
         )}
 
-        <div className="flex flex-col items-center gap-3">
+        <div className={`flex flex-col items-center ${keyboardOpen ? 'gap-1.5' : 'gap-3'}`}>
           {checked === null ? (
             <>
-              <Button block tone="violet" disabled={!filled} onClick={() => check(value)}>
+              <Button
+                block
+                tone="violet"
+                disabled={!filled}
+                onClick={() => check(value)}
+                className={keyboardOpen ? 'py-2' : ''}
+              >
                 Vérifier
               </Button>
-              {!bank && (
+              {/* Retiré pendant que le clavier est ouvert, avec la consigne
+                  ci-dessus : un raccourci secondaire, pas une action qu'on
+                  doive pouvoir atteindre sans jamais fermer le clavier. */}
+              {!bank && !keyboardOpen && (
                 <button
                   type="button"
                   onClick={() => check('')}
