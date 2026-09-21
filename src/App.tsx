@@ -11,6 +11,7 @@ import { AchievementsScreen } from '@/screens/AchievementsScreen'
 import { UpdatePrompt } from '@/components/UpdatePrompt'
 import { AppUpdateBanner } from '@/components/AppUpdateBanner'
 import { ThemeEffect } from '@/components/ThemeEffect'
+import { ViewportHeightEffect } from '@/components/ViewportHeightEffect'
 
 // Outil de développement uniquement (voir tools/content-editor/) : jamais
 // chargé en production, `import.meta.env.DEV` retire la route au build.
@@ -25,6 +26,7 @@ export default function App() {
   return (
     <HashRouter>
       <ThemeEffect />
+      <ViewportHeightEffect />
       <CourseProvider>
         <Routes>
           <Route path="/" element={<HomeScreen />} />

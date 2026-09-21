@@ -141,7 +141,6 @@ export function GrammarGap({
             // La forme manquante se tape dans la langue apprise, jamais en
             // français : c'est elle qui doit décider du clavier proposé.
             lang={learningLanguage()}
-            placeholder="La forme manquante…"
             aria-label="Forme manquante"
             className={`w-full rounded-2xl border-2 bg-paper px-4 text-lg font-bold outline-none disabled:opacity-70 ${
               keyboardOpen ? 'py-2.5' : 'py-4'

@@ -255,15 +255,18 @@ function SessionRunner({
   if (!current) return null
 
   return (
-    // `h-dvh`, pas `h-full` : `#root` ne porte qu'un `min-height` (voir
+    // Pas `h-full` : `#root` ne porte qu'un `min-height` (voir
     // `CourseProvider`), donc un pourcentage ne résout contre rien et la
     // div reprenait la hauteur de son seul contenu — sans jamais vraiment
     // remplir l'écran, ni donc avoir quoi que ce soit à couper avec
-    // `overflow-hidden`. `dvh` se mesure contre le viewport directement,
-    // pas contre le parent. Une leçon ne doit jamais pouvoir défiler, le
-    // contenu est conçu pour tenir dans l'écran — d'où `overflow-hidden`
-    // plutôt que `min-h-dvh`, qui laisserait grandir au lieu de couper.
-    <div className="flex h-dvh flex-col overflow-hidden">
+    // `overflow-hidden`. `height: var(--app-vh, 100dvh)` (voir
+    // `ViewportHeightEffect`) se mesure contre le viewport directement, pas
+    // contre le parent, et surtout reste juste quand le clavier virtuel
+    // s'ouvre sur un navigateur où `100dvh` seul ne suit pas. Une leçon ne
+    // doit jamais pouvoir défiler, le contenu est conçu pour tenir dans
+    // l'écran — d'où `overflow-hidden` plutôt qu'une hauteur minimale, qui
+    // laisserait grandir au lieu de couper.
+    <div className="flex flex-col overflow-hidden" style={{ height: 'var(--app-vh, 100dvh)' }}>
       <header className="flex items-center gap-3 px-4 py-3">
         <button
           type="button"
