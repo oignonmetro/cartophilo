@@ -302,7 +302,7 @@ function SessionRunner({
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -24 }}
             transition={{ duration: 0.18 }}
-            className="flex flex-1 flex-col"
+            className="flex min-h-0 flex-1 flex-col"
           >
             {current.kind === 'intro' && (
               <VocabIntro exercise={current} onRate={(rating) => answer(current, rating !== 'again', rating)} />

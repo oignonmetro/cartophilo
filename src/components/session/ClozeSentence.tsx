@@ -52,96 +52,98 @@ export function ClozeSentence({
   }
 
   return (
-    <div className="flex flex-1 flex-col gap-6">
-      {/* Épinglée : voir la même remarque dans `TypeAnswer`. Vaut surtout
-          quand la réponse se tape (`bank` absent) — sans effet visible
-          sinon, la banque de mots ne réclamant jamais le clavier. */}
-      <p className="sticky top-0 z-10 bg-cream py-1 text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
+    <div className="flex min-h-0 flex-1 flex-col gap-3">
+      <p className="shrink-0 text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
         Complétez la phrase
       </p>
 
-      <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center">
-        <p className={`${textSize} leading-relaxed font-bold`}>
-          {sentence.before}
-          <Blank value={value} state={checked} />
-          {sentence.after}
-        </p>
-        {vocab.example && <p className="text-sm text-ink-soft">{vocab.example.translation}</p>}
+      {/* La carte défile pour son propre compte : voir la même remarque dans `GrammarGap`. */}
+      <div className="min-h-0 flex-1 overflow-y-auto">
+        <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center">
+          <p className={`${textSize} leading-relaxed font-bold`}>
+            {sentence.before}
+            <Blank value={value} state={checked} />
+            {sentence.after}
+          </p>
+          {vocab.example && <p className="text-sm text-ink-soft">{vocab.example.translation}</p>}
+        </div>
       </div>
 
-      {bank ? (
-        <div className="grid grid-cols-2 gap-3">
-          {bank.map((word) => (
-            <button
-              key={word}
-              type="button"
-              disabled={checked !== null}
-              onClick={() => check(word)}
-              className={`min-h-14 rounded-2xl border-2 px-3 py-3 font-bold transition-colors ${
-                value === word && checked !== null
-                  ? checked
-                    ? 'border-success bg-success/15 text-success'
-                    : 'border-error bg-error/15 text-error'
-                  : 'border-line bg-paper'
-              } disabled:opacity-60`}
-            >
-              {word}
-            </button>
-          ))}
-        </div>
-      ) : (
-        <input
-          ref={input}
-          value={value}
-          onChange={(event) => setValue(event.target.value)}
-          onKeyDown={(event) => {
-            if (event.key === 'Enter' && filled && checked === null) check(value)
-          }}
-          disabled={checked !== null}
-          autoCapitalize="off"
-          autoCorrect="off"
-          spellCheck={false}
-          placeholder="Le mot manquant…"
-          aria-label="Mot manquant"
-          className="w-full rounded-2xl border-2 border-line bg-paper px-4 py-4 text-lg font-bold outline-none focus:border-teal disabled:opacity-70"
-        />
-      )}
-
-      <Feedback
-        state={checked}
-        expected={sentence.match}
-        translation={vocab.translation}
-        typed={value}
-        bank={bank}
-        onGapResolved={() => setGapResolved(true)}
-      />
-
-      <div className="mt-auto flex flex-col items-center gap-3">
-        {checked === null ? (
-          <>
-            <Button block disabled={!filled} onClick={() => check(value)}>
-              Vérifier
-            </Button>
-            {!bank && (
+      <div className="flex shrink-0 flex-col gap-3">
+        {bank ? (
+          <div className="grid grid-cols-2 gap-3">
+            {bank.map((word) => (
               <button
+                key={word}
                 type="button"
-                onClick={() => check('')}
-                className="text-sm font-bold text-ink-faint underline decoration-dotted underline-offset-4 transition-colors hover:text-ink-soft"
+                disabled={checked !== null}
+                onClick={() => check(word)}
+                className={`min-h-14 rounded-2xl border-2 px-3 py-3 font-bold transition-colors ${
+                  value === word && checked !== null
+                    ? checked
+                      ? 'border-success bg-success/15 text-success'
+                      : 'border-error bg-error/15 text-error'
+                    : 'border-line bg-paper'
+                } disabled:opacity-60`}
               >
-                Je ne sais pas
+                {word}
               </button>
-            )}
-          </>
+            ))}
+          </div>
         ) : (
-          <Button
-            block
-            tone={checked ? 'success' : 'error'}
-            disabled={!checked && !bank && !gapResolved}
-            onClick={() => onAnswer(checked)}
-          >
-            Continuer
-          </Button>
+          <input
+            ref={input}
+            value={value}
+            onChange={(event) => setValue(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter' && filled && checked === null) check(value)
+            }}
+            disabled={checked !== null}
+            autoCapitalize="off"
+            autoCorrect="off"
+            spellCheck={false}
+            placeholder="Le mot manquant…"
+            aria-label="Mot manquant"
+            className="w-full rounded-2xl border-2 border-line bg-paper px-4 py-4 text-lg font-bold outline-none focus:border-teal disabled:opacity-70"
+          />
         )}
+
+        <Feedback
+          state={checked}
+          expected={sentence.match}
+          translation={vocab.translation}
+          typed={value}
+          bank={bank}
+          onGapResolved={() => setGapResolved(true)}
+        />
+
+        <div className="flex flex-col items-center gap-3">
+          {checked === null ? (
+            <>
+              <Button block disabled={!filled} onClick={() => check(value)}>
+                Vérifier
+              </Button>
+              {!bank && (
+                <button
+                  type="button"
+                  onClick={() => check('')}
+                  className="text-sm font-bold text-ink-faint underline decoration-dotted underline-offset-4 transition-colors hover:text-ink-soft"
+                >
+                  Je ne sais pas
+                </button>
+              )}
+            </>
+          ) : (
+            <Button
+              block
+              tone={checked ? 'success' : 'error'}
+              disabled={!checked && !bank && !gapResolved}
+              onClick={() => onAnswer(checked)}
+            >
+              Continuer
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   )
