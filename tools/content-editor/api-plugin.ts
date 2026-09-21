@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import type { ServerResponse } from 'node:http'
 import type { Plugin, Connect } from 'vite'
 import { parseDocument, Document, Scalar, YAMLSeq, YAMLMap, isMap } from 'yaml'
+import { importQuizletRows } from '../content/quizletImport.ts'
 
 /**
  * API de développement pour l'éditeur de contenu : lit et réécrit les
@@ -212,6 +213,27 @@ export function contentEditorApi(): Plugin {
     configureServer(server) {
       server.middlewares.use('/api/tree', (_req, res) => {
         sendJson(res, 200, buildTree())
+      })
+
+      // Même conversion que `tools/content/from-quizlet.ts`, mais qui rend
+      // directement des points exploitables par `PointsEditor` au lieu
+      // d'écrire un bassin YAML à recopier à la main (voir `quizletImport.ts`).
+      server.middlewares.use('/api/import-points', async (req, res) => {
+        if (req.method !== 'POST') {
+          sendJson(res, 405, { error: 'méthode non supportée' })
+          return
+        }
+        try {
+          const body = JSON.parse(await readBody(req)) as { text: string; termSep?: string; rowSep?: string }
+          if (!body.text || !body.text.trim()) {
+            sendJson(res, 400, { error: 'texte vide' })
+            return
+          }
+          const result = importQuizletRows(body.text, { termSep: body.termSep, rowSep: body.rowSep })
+          sendJson(res, 200, result)
+        } catch (error) {
+          sendJson(res, 500, { error: String((error as Error).message) })
+        }
       })
 
       server.middlewares.use('/api/lesson', async (req, res) => {

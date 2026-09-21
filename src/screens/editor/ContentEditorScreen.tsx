@@ -57,6 +57,20 @@ interface PointDTO {
   explanation?: string
 }
 
+/** Même forme que la réponse de `POST /api/import-points` (voir `tools/content/quizletImport.ts`). */
+interface ImportedPointDTO {
+  sentence: string
+  answer: string
+  needsReview: boolean
+  sourceLine: number
+}
+
+interface SkippedRowDTO {
+  line: number
+  reason: string
+  row: string
+}
+
 /**
  * Id de la prochaine carte d'une leçon, sur le même gabarit que celles déjà
  * en place (`<leçon>-p<n>`) : le numéro le plus haut trouvé, plus un — jamais
@@ -505,6 +519,16 @@ function PointsEditor({
   points: PointDTO[]
   onChange: (points: PointDTO[]) => void
 }) {
+  const [importOpen, setImportOpen] = useState(false)
+  const [importText, setImportText] = useState('')
+  const [importStatus, setImportStatus] = useState<'idle' | 'loading' | 'error'>('idle')
+  const [importError, setImportError] = useState<string | null>(null)
+  const [importSummary, setImportSummary] = useState<{
+    added: number
+    reviewCount: number
+    skipped: SkippedRowDTO[]
+  } | null>(null)
+
   function update(index: number, patch: Partial<PointDTO>) {
     onChange(points.map((point, i) => (i === index ? { ...point, ...patch } : point)))
   }
@@ -525,8 +549,121 @@ function PointsEditor({
     onChange([...points, { id: nextPointId(lessonId, points), sentence: '', answer: '', alt: [] }])
   }
 
+  /**
+   * Même conversion que `tools/content/from-quizlet.ts`, servie par
+   * `/api/import-points` (voir `tools/content-editor/api-plugin.ts`) : colle
+   * une carte par ligne (phrase avec `___`, tabulation, réponse) plutôt que
+   * de les saisir une par une. Les cartes importées s'ajoutent à la suite
+   * des cartes déjà là, jamais à leur place — regrouper en leçons, écrire
+   * les rappels et relire les lignes marquées « à vérifier » restent un
+   * travail de lecture, pas quelque chose que l'import puisse faire à la
+   * place (voir `content/philosophie.md`).
+   */
+  async function importList() {
+    if (!importText.trim() || importStatus === 'loading') return
+    setImportStatus('loading')
+    setImportError(null)
+    try {
+      const res = await fetch('/api/import-points', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: importText }),
+      })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error ?? res.statusText)
+      const imported = data.points as ImportedPointDTO[]
+      const skipped = data.skipped as SkippedRowDTO[]
+
+      const newPoints: PointDTO[] = []
+      for (const point of imported) {
+        newPoints.push({
+          id: nextPointId(lessonId, [...points, ...newPoints]),
+          sentence: point.sentence,
+          answer: point.answer,
+          alt: [],
+        })
+      }
+      onChange([...points, ...newPoints])
+      setImportSummary({
+        added: newPoints.length,
+        reviewCount: imported.filter((point) => point.needsReview).length,
+        skipped,
+      })
+      setImportText('')
+      setImportStatus('idle')
+    } catch (error) {
+      setImportStatus('error')
+      setImportError(String((error as Error).message))
+    }
+  }
+
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto px-4 py-4">
+      <div className="flex flex-wrap items-center gap-2">
+        <button
+          type="button"
+          onClick={() => setImportOpen((open) => !open)}
+          className="rounded-lg border-2 border-dashed border-line px-3 py-1.5 text-sm font-bold text-ink-soft hover:border-teal hover:text-teal-deep"
+        >
+          {importOpen ? 'Fermer l’import' : 'Importer une liste'}
+        </button>
+      </div>
+
+      {importOpen && (
+        <div className="card-3d flex flex-col gap-2 p-4">
+          <p className="text-xs text-ink-faint">
+            Une carte par ligne : phrase avec <code>___</code>, une tabulation, puis la réponse (export Quizlet
+            standard). Plusieurs trous sur une ligne : réponses séparées par <code>;</code>, dans le même ordre.
+          </p>
+          <textarea
+            value={importText}
+            onChange={(event) => setImportText(event.target.value)}
+            spellCheck={false}
+            rows={6}
+            placeholder={'Phrase avec ___.\tRéponse'}
+            className="min-h-32 resize-y rounded-xl border-2 border-line bg-paper p-2.5 font-mono text-sm leading-snug text-ink outline-none focus:border-teal"
+          />
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => void importList()}
+              disabled={!importText.trim() || importStatus === 'loading'}
+              className="rounded-lg border-2 border-teal-deep bg-teal px-3 py-1.5 text-sm font-bold text-white disabled:opacity-40"
+            >
+              {importStatus === 'loading' ? 'Import…' : 'Importer'}
+            </button>
+            {importStatus === 'error' && <span className="text-xs font-bold text-error">Erreur : {importError}</span>}
+          </div>
+
+          {importSummary && (
+            <div className="rounded-lg bg-ink/5 p-2.5 text-xs text-ink-soft">
+              <p>
+                <span className="font-bold text-teal-deep">{importSummary.added}</span> carte(s) ajoutée(s) en fin de
+                liste
+                {importSummary.reviewCount > 0 && (
+                  <span className="font-bold text-amber-deep"> · {importSummary.reviewCount} à vérifier (guillemets)</span>
+                )}
+                .
+              </p>
+              {importSummary.skipped.length > 0 && (
+                <details className="mt-1">
+                  <summary className="cursor-pointer font-bold text-ink-faint">
+                    {importSummary.skipped.length} ligne(s) ignorée(s)
+                  </summary>
+                  <ul className="mt-1 flex flex-col gap-1">
+                    {importSummary.skipped.map((row) => (
+                      <li key={row.line}>
+                        ligne {row.line} : {row.reason}
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
       {points.length === 0 && (
         <p className="py-8 text-center text-sm text-ink-faint">Aucune carte pour l'instant.</p>
       )}
