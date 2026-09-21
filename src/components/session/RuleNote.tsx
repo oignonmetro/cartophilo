@@ -192,26 +192,25 @@ export function RuleNote({
   }, [isDesktop, shortcutsEnabled, onNext])
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-[safe_center]">
+    <div className="flex min-h-0 flex-1 flex-col gap-3">
       <p className={`shrink-0 text-center text-xs font-black uppercase tracking-widest ${tone.eyebrow}`}>Rappel</p>
 
       {/*
        * La carte défile pour son propre compte, dans l'espace qu'il reste
-       * une fois le bouton posé en dessous (voir plus bas), sur le même
-       * principe que `GrammarGap`/`ClozeSentence` : sans lui, un rappel plus
-       * long que l'écran (ou une fenêtre de bureau simplement moins haute)
-       * repousse « C'est parti » hors du cadre, sans aucun signe qu'il faille
-       * faire défiler pour l'atteindre — visible d'un bout à l'autre, jamais
-       * caché sous une carte qui déborde. Sur ordinateur, `md:flex-none
-       * md:overflow-visible` annule ce découpage (voir la même remarque dans
-       * `GrammarGap`) et `justify-[safe_center]` (ci-dessus) recentre le bloc
-       * entier — `safe` (et non un simple `justify-center`) compte : sans
-       * lui, un rappel encore trop long pour une fenêtre de bureau plus
-       * basse déborderait de façon centrée, à parts égales au-dessus ET en
-       * dessous de la zone visible, poussant « C'est parti » encore plus
-       * bas au lieu de le laisser atteignable par un simple défilement.
+       * une fois le bouton posé en dessous (voir plus bas), toujours en
+       * `flex-1 overflow-y-auto` — sur mobile comme sur ordinateur (voir la
+       * remarque détaillée dans `GrammarGap`, même principe ici) :
+       * « C'est parti » reste à une position fixe, toujours visible sans
+       * défiler la page, quelle que soit la longueur du rappel ou la
+       * hauteur de la fenêtre — un écran de bureau courant (1366×768 ou
+       * moins) ne suffit pas toujours à montrer un rappel entier d'un
+       * coup. `md:flex md:flex-col md:justify-[safe_center]` centre la
+       * carte *dans* cette zone sur ordinateur plutôt que d'agrandir la
+       * zone elle-même, pour qu'un rappel court n'y laisse pas un grand
+       * vide au-dessus du bouton ; `safe` retombe sur un alignement en
+       * haut dès que le rappel ne tient plus dans l'espace disponible.
        */}
-      <div className="min-h-0 flex-1 overflow-y-auto md:flex-none md:overflow-visible">
+      <div className="min-h-0 flex-1 overflow-y-auto md:flex md:flex-col md:justify-[safe_center]">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

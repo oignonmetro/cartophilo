@@ -116,7 +116,7 @@ export function GrammarGap({
   }, [isDesktop, shortcutsEnabled, checked, bank, gapResolved, filled, value, onAnswer])
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-[safe_center]">
+    <div className="flex min-h-0 flex-1 flex-col gap-3">
       {/* Retirée pendant que le clavier est ouvert : la consigne ne change
           jamais, la carte a plus besoin de ces quelques pixels qu'elle
           n'a besoin d'être répétée à chaque exercice. */}
@@ -129,31 +129,34 @@ export function GrammarGap({
       {/*
        * La carte défile pour son propre compte, dans l'espace qu'il reste
        * une fois le champ, la correction et les boutons posés en dessous
-       * (voir plus bas) : sur mobile, le clavier qui s'ouvre réduit cet
-       * espace, et une citation longue n'y tient plus en entier. Avant ce
-       * découpage, tout défilait ensemble dans `<main>` (voir
-       * `SessionScreen`) et le navigateur, en ramenant le champ sous le
-       * clavier, ne laissait voir de la carte qu'un fragment quelconque —
-       * parfois seulement la fin de la phrase, sans le trou. Ici, le champ
-       * (et le bouton Vérifier) restent toujours visibles quoi qu'il
-       * arrive ; seule la carte se réduit, et reste lisible en la faisant
-       * défiler à la main.
+       * (voir plus bas), toujours en `flex-1 overflow-y-auto` — sur mobile
+       * comme sur ordinateur. Sur mobile, c'est le clavier qui réduit cet
+       * espace ; sur ordinateur, c'est simplement la hauteur de la fenêtre
+       * (un écran de bureau courant, en 1366×768 ou moins, tient largement
+       * moins qu'un exercice long une fois l'en-tête posé). Dans les deux
+       * cas, le champ et le bouton Vérifier restent à une position fixe,
+       * toujours visibles sans avoir à faire défiler la page : ils suivent
+       * la carte, jamais l'inverse — seule la carte se réduit, lisible en
+       * la faisant défiler à la main. Une précédente version ne gardait ce
+       * découpage que sur mobile (`md:flex-none md:overflow-visible`, avec
+       * un `justify-center` pour recentrer la carte sur ordinateur) : ça
+       * fonctionnait tant que le contenu tenait dans la fenêtre, mais un
+       * écran de bureau plus bas qu'un certain seuil (1366×768, très
+       * courant) repoussait quand même le bouton hors champ, sans qu'aucun
+       * signe n'indique qu'il fallait défiler pour l'atteindre — exactement
+       * le bug que ce découpage doit éviter.
        *
-       * Sur ordinateur, ce découpage ne sert plus à rien (il n'y a pas de
-       * clavier virtuel à esquiver) et devient même gênant : `flex-1`
-       * forcerait la carte à s'étirer jusqu'en bas de la fenêtre, avec un
-       * grand vide avant le champ de saisie. `md:flex-none md:overflow-visible`
-       * annule ce comportement à partir d'un écran de bureau, et
-       * `justify-[safe_center]` sur le conteneur (ci-dessus) centre alors le
-       * bloc entier (consigne, carte, saisie, boutons) dans la hauteur
-       * disponible plutôt que de l'étirer. Le mot-clé `safe` compte : un
-       * simple `justify-center` déborderait à parts égales au-dessus ET en
-       * dessous de la zone visible si une citation restait malgré tout trop
-       * longue pour une fenêtre de bureau basse — `safe` retombe sur un
-       * alignement en haut dans ce cas, pour ne perdre ni le haut de la
-       * carte ni le bouton en bas.
+       * `md:flex md:flex-col md:justify-[safe_center]` recentre la carte
+       * *à l'intérieur* de cette zone plutôt que d'agrandir la zone
+       * elle-même : sur un grand écran, une carte courte se retrouve
+       * centrée dans l'espace qui lui est propre, sans le grand vide qu'un
+       * simple `flex-1` sans centrage aurait laissé en dessous d'elle —
+       * et sans jamais toucher à la position du champ ni du bouton, qui
+       * restent des frères posés après cette zone, toujours à leur place.
+       * `safe` retombe sur un alignement en haut dès que la carte ne tient
+       * plus dans l'espace disponible, pour ne jamais perdre son début.
        */}
-      <div className="min-h-0 flex-1 overflow-y-auto md:flex-none md:overflow-visible">
+      <div className="min-h-0 flex-1 overflow-y-auto md:flex md:flex-col md:justify-[safe_center]">
         <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center md:gap-4 md:px-10 md:py-12">
           <p className={`${textSize} ${sentenceTextSizeMd(textSize)} leading-relaxed font-bold`}>
             {gap.before}

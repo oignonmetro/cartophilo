@@ -344,13 +344,15 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
         ) : track.units.length === 0 ? (
           <EmptyTrack tone={tone} />
         ) : (
-          // `md:grid md:grid-cols-2` : une liste d'unités qui reste sur une
-          // seule colonne s'étire dans le vide dès que le conteneur
-          // s'élargit sur ordinateur (voir `md:max-w-3xl` plus haut). Un
-          // repli de groupe (voir `GroupSection`) garde sa pleine largeur
-          // (`md:col-span-2`, posé sur le composant lui-même) : c'est un
-          // en-tête avant tout, pas une carte à côté d'une autre.
-          <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:items-start md:gap-3">
+          // Pas de grille ici : la liste de tête mélange des unités seules et
+          // des replis de groupe (voir `GroupSection`), deux formes qui ne
+          // tiennent pas la même largeur — une grille à deux colonnes y
+          // laissait les unités seules à moitié de la largeur à côté d'un
+          // vide, quand les replis (pleine largeur) tombaient bien. La
+          // grille à deux colonnes reste posée une fois un repli ouvert
+          // (dans `GroupSection`) : là, tout ce qu'elle affiche est bien de
+          // la même forme (des cartes d'unité), et le rendu est net.
+          <div className="flex flex-col gap-3">
             {groupUnits(track.units).map((entry) =>
               entry.kind === 'group' ? (
                 <GroupSection
@@ -624,7 +626,7 @@ function GroupSection({
   const mastery = masteryOf(itemIds, cards)
 
   return (
-    <div className="flex flex-col gap-3 md:col-span-2">
+    <div className="flex flex-col gap-3">
       <button
         type="button"
         onClick={onToggle}
@@ -692,12 +694,12 @@ function TreatiseIndexView({
   const groups = useMemo(() => groupEntries(entries), [entries])
 
   return (
-    <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:items-start md:gap-3">
+    <div className="flex flex-col gap-3">
       {groups.map(({ ennead, entries: group }) => {
         const key = `ennead-${ennead}`
         const open = openGroups.has(key)
         return (
-          <div key={key} className="flex flex-col gap-3 md:col-span-2">
+          <div key={key} className="flex flex-col gap-3">
             <button
               type="button"
               onClick={() => onToggleGroup(key)}

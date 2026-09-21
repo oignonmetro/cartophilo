@@ -91,7 +91,7 @@ export function ClozeSentence({
   }, [isDesktop, shortcutsEnabled, checked, bank, gapResolved, filled, value, onAnswer])
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-[safe_center]">
+    <div className="flex min-h-0 flex-1 flex-col gap-3">
       {/* Retirée pendant que le clavier est ouvert : voir la même remarque dans `GrammarGap`. */}
       {!keyboardOpen && (
         <p className="shrink-0 text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
@@ -99,8 +99,8 @@ export function ClozeSentence({
         </p>
       )}
 
-      {/* La carte défile pour son propre compte, et se recentre sur ordinateur : voir la même remarque dans `GrammarGap`. */}
-      <div className="min-h-0 flex-1 overflow-y-auto md:flex-none md:overflow-visible">
+      {/* La carte défile pour son propre compte, centrée dans son espace sur ordinateur : voir la même remarque dans `GrammarGap`. */}
+      <div className="min-h-0 flex-1 overflow-y-auto md:flex md:flex-col md:justify-[safe_center]">
         <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center md:gap-4 md:px-10 md:py-12">
           <p className={`${textSize} ${sentenceTextSizeMd(textSize)} leading-relaxed font-bold`}>
             {sentence.before}
