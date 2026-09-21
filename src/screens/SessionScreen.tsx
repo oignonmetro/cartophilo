@@ -266,7 +266,16 @@ function SessionRunner({
     // doit jamais pouvoir défiler, le contenu est conçu pour tenir dans
     // l'écran — d'où `overflow-hidden` plutôt qu'une hauteur minimale, qui
     // laisserait grandir au lieu de couper.
-    <div className="flex flex-col overflow-hidden" style={{ height: 'var(--app-vh, 100dvh)' }}>
+    //
+    // `mx-auto w-full max-w-md`, comme tous les autres écrans (voir
+    // `LibraryScreen`, `ProfileScreen`…) : sans lui, une fenêtre de bureau
+    // large étirait l'en-tête et les cartes sur toute sa largeur au lieu de
+    // garder la colonne pensée pour un téléphone, centrée dans le reste de
+    // la fenêtre.
+    <div
+      className="mx-auto flex w-full max-w-md flex-col overflow-hidden"
+      style={{ height: 'var(--app-vh, 100dvh)' }}
+    >
       <header className="flex items-center gap-3 px-4 py-3">
         <button
           type="button"
