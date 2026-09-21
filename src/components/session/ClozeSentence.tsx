@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import type { ClozeExercise } from '@/engine/exercises'
 import { normalizeForm } from '@/engine/exercises'
 import { Button } from '@/components/Button'
-import { sentenceTextSize } from '@/lib/textDensity'
+import { sentenceTextSize, sentenceTextSizeMd } from '@/lib/textDensity'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
 import { CorrectionGap } from './CorrectionGap'
 import { ExpectedAnswer } from './ExpectedAnswer'
@@ -61,7 +61,7 @@ export function ClozeSentence({
   }
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3">
+    <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-center">
       {/* Retirée pendant que le clavier est ouvert : voir la même remarque dans `GrammarGap`. */}
       {!keyboardOpen && (
         <p className="shrink-0 text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
@@ -69,10 +69,10 @@ export function ClozeSentence({
         </p>
       )}
 
-      {/* La carte défile pour son propre compte : voir la même remarque dans `GrammarGap`. */}
-      <div className="min-h-0 flex-1 overflow-y-auto">
-        <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center">
-          <p className={`${textSize} leading-relaxed font-bold`}>
+      {/* La carte défile pour son propre compte, et se recentre sur ordinateur : voir la même remarque dans `GrammarGap`. */}
+      <div className="min-h-0 flex-1 overflow-y-auto md:flex-none md:overflow-visible">
+        <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center md:gap-4 md:px-10 md:py-12">
+          <p className={`${textSize} ${sentenceTextSizeMd(textSize)} leading-relaxed font-bold`}>
             {sentence.before}
             <Blank ref={blank} value={value} state={checked} />
             {sentence.after}
@@ -116,7 +116,7 @@ export function ClozeSentence({
             spellCheck={false}
             placeholder="Le mot manquant…"
             aria-label="Mot manquant"
-            className={`w-full rounded-2xl border-2 border-line bg-paper px-4 text-lg font-bold outline-none focus:border-teal disabled:opacity-70 ${
+            className={`w-full rounded-2xl border-2 border-line bg-paper px-4 text-lg font-bold outline-none focus:border-teal disabled:opacity-70 md:px-5 md:py-5 md:text-xl ${
               keyboardOpen ? 'py-2.5' : 'py-4'
             }`}
           />
@@ -134,7 +134,12 @@ export function ClozeSentence({
         <div className={`flex flex-col items-center ${keyboardOpen ? 'gap-1.5' : 'gap-3'}`}>
           {checked === null ? (
             <>
-              <Button block disabled={!filled} onClick={() => check(value)} className={keyboardOpen ? 'py-2' : ''}>
+              <Button
+                block
+                disabled={!filled}
+                onClick={() => check(value)}
+                className={keyboardOpen ? 'py-2' : 'md:py-4 md:text-lg'}
+              >
                 Vérifier
               </Button>
               {!bank && !keyboardOpen && (
@@ -153,6 +158,7 @@ export function ClozeSentence({
               tone={checked ? 'success' : 'error'}
               disabled={!checked && !bank && !gapResolved}
               onClick={() => onAnswer(checked)}
+              className="md:py-4 md:text-lg"
             >
               Continuer
             </Button>

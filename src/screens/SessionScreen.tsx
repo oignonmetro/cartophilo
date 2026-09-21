@@ -270,13 +270,16 @@ function SessionRunner({
     // `mx-auto w-full max-w-md`, comme tous les autres écrans (voir
     // `LibraryScreen`, `ProfileScreen`…) : sans lui, une fenêtre de bureau
     // large étirait l'en-tête et les cartes sur toute sa largeur au lieu de
-    // garder la colonne pensée pour un téléphone, centrée dans le reste de
-    // la fenêtre.
+    // garder une colonne centrée. `md:max-w-3xl` élargit cette colonne à
+    // partir d'un écran de bureau plutôt que de garder la largeur pensée
+    // pour un téléphone : le clavier virtuel qui motive tout le reste de ce
+    // fichier (voir `useKeyboardOpen`, plus bas) n'existe simplement pas
+    // sur un ordinateur, la carte peut y respirer.
     <div
-      className="mx-auto flex w-full max-w-md flex-col overflow-hidden"
+      className="mx-auto flex w-full max-w-md flex-col overflow-hidden md:max-w-3xl"
       style={{ height: 'var(--app-vh, 100dvh)' }}
     >
-      <header className="flex items-center gap-3 px-4 py-3">
+      <header className="flex items-center gap-3 px-4 py-3 md:py-5">
         <button
           type="button"
           onClick={() => setConfirmQuit(true)}
@@ -286,7 +289,7 @@ function SessionRunner({
           <CloseIcon size={22} />
         </button>
         <SessionKindBadge kind={kind} />
-        <div className="h-4 flex-1 overflow-hidden rounded-full bg-line">
+        <div className="h-4 flex-1 overflow-hidden rounded-full bg-line md:h-5">
           <motion.div
             className="h-full rounded-full bg-teal"
             animate={{ width: `${progress * 100}%` }}
@@ -306,7 +309,7 @@ function SessionRunner({
           grammaire trop long pour l'écran doit rester lisible en entier
           plutôt que couper son bouton, même si l'intention reste que rien
           n'ait normalement besoin de défiler ici. */}
-      <main className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 pb-6">
+      <main className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 pb-6 md:pb-10">
         <AnimatePresence mode="wait">
           <motion.div
             key={`${current.id}:${position}`}

@@ -4,7 +4,7 @@ import type { GrammarGapExercise } from '@/engine/exercises'
 import { matchesAnswer, splitGap } from '@/engine/exercises'
 import { Button } from '@/components/Button'
 import { learningLanguage } from '@/lib/speech'
-import { sentenceTextSize } from '@/lib/textDensity'
+import { sentenceTextSize, sentenceTextSizeMd } from '@/lib/textDensity'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
 import { CorrectionGap } from './CorrectionGap'
 import { ExpectedAnswer } from './ExpectedAnswer'
@@ -80,7 +80,7 @@ export function GrammarGap({
   }
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3">
+    <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-center">
       {/* Retirée pendant que le clavier est ouvert : la consigne ne change
           jamais, la carte a plus besoin de ces quelques pixels qu'elle
           n'a besoin d'être répétée à chaque exercice. */}
@@ -102,10 +102,19 @@ export function GrammarGap({
        * (et le bouton Vérifier) restent toujours visibles quoi qu'il
        * arrive ; seule la carte se réduit, et reste lisible en la faisant
        * défiler à la main.
+       *
+       * Sur ordinateur, ce découpage ne sert plus à rien (il n'y a pas de
+       * clavier virtuel à esquiver) et devient même gênant : `flex-1`
+       * forcerait la carte à s'étirer jusqu'en bas de la fenêtre, avec un
+       * grand vide avant le champ de saisie. `md:flex-none md:overflow-visible`
+       * annule ce comportement à partir d'un écran de bureau, et
+       * `justify-center` sur le conteneur (ci-dessus) centre alors le bloc
+       * entier (consigne, carte, saisie, boutons) dans la hauteur
+       * disponible plutôt que de l'étirer.
        */}
-      <div className="min-h-0 flex-1 overflow-y-auto">
-        <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center">
-          <p className={`${textSize} leading-relaxed font-bold`}>
+      <div className="min-h-0 flex-1 overflow-y-auto md:flex-none md:overflow-visible">
+        <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center md:gap-4 md:px-10 md:py-12">
+          <p className={`${textSize} ${sentenceTextSizeMd(textSize)} leading-relaxed font-bold`}>
             {gap.before}
             <Blank ref={blank} value={value} state={checked} />
             {gap.after}
@@ -153,7 +162,7 @@ export function GrammarGap({
             // français : c'est elle qui doit décider du clavier proposé.
             lang={learningLanguage()}
             aria-label="Forme manquante"
-            className={`w-full rounded-2xl border-2 bg-paper px-4 text-lg font-bold outline-none disabled:opacity-70 ${
+            className={`w-full rounded-2xl border-2 bg-paper px-4 text-lg font-bold outline-none disabled:opacity-70 md:px-5 md:py-5 md:text-xl ${
               keyboardOpen ? 'py-2.5' : 'py-4'
             } ${checked === null ? 'border-line focus:border-violet' : checked ? 'border-success' : 'border-error'}`}
           />
@@ -192,7 +201,7 @@ export function GrammarGap({
                 tone="violet"
                 disabled={!filled}
                 onClick={() => check(value)}
-                className={keyboardOpen ? 'py-2' : ''}
+                className={keyboardOpen ? 'py-2' : 'md:py-4 md:text-lg'}
               >
                 Vérifier
               </Button>
@@ -215,6 +224,7 @@ export function GrammarGap({
               tone={checked ? 'success' : 'error'}
               disabled={!checked && !bank && !gapResolved}
               onClick={() => onAnswer(checked)}
+              className="md:py-4 md:text-lg"
             >
               Continuer
             </Button>

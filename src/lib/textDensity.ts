@@ -1,6 +1,20 @@
-const TEXT_SIZE_LADDER = ['text-sm', 'text-base', 'text-lg', 'text-xl', 'text-2xl'] as const
+const TEXT_SIZE_LADDER = ['text-sm', 'text-base', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl'] as const
 
 type TextSize = (typeof TEXT_SIZE_LADDER)[number]
+
+/** Classe `md:` compagne de `sentenceTextSize` : un cran plus grand à partir d'un écran de bureau, où la carte a plus de place qu'un téléphone. */
+const MD_TEXT_SIZE: Record<TextSize, string> = {
+  'text-sm': 'md:text-base',
+  'text-base': 'md:text-lg',
+  'text-lg': 'md:text-xl',
+  'text-xl': 'md:text-2xl',
+  'text-2xl': 'md:text-3xl',
+  'text-3xl': 'md:text-4xl',
+}
+
+export function sentenceTextSizeMd(size: TextSize): string {
+  return MD_TEXT_SIZE[size]
+}
 
 /**
  * Taille de police d'une phrase à trou, réduite selon sa longueur.
