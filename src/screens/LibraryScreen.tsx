@@ -63,7 +63,12 @@ function groupUnits(units: readonly Unit[]): UnitOrGroup[] {
       result.push({ kind: 'unit', unit })
     }
   }
-  return result
+  // Un groupe qui ne finit par ne contenir qu'une seule unité (son seul
+  // membre déclaré, ou le seul resté après un voisin d'un autre groupe)
+  // n'apporte plus rien : le repli n'a de sens qu'à partir de deux unités à
+  // distinguer sous un même en-tête, sans quoi il double la carte de l'unité
+  // d'un niveau de repli vide.
+  return result.map((entry) => (entry.kind === 'group' && entry.units.length === 1 ? { kind: 'unit', unit: entry.units[0]! } : entry))
 }
 
 const ENNEAD_NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI'] as const
