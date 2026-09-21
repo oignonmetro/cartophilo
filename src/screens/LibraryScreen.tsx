@@ -283,9 +283,9 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   const due = useMemo(() => dueCards(Object.values(cards), Date.now()).length, [cards])
 
   return (
-    <div className="mx-auto flex h-full w-full max-w-md flex-col overflow-hidden">
+    <div className="mx-auto flex h-full w-full max-w-md flex-col overflow-hidden md:max-w-3xl">
       <header className="sticky top-0 z-20 shrink-0 border-b-2 border-line bg-cream/95 backdrop-blur">
-        <div className="flex items-center justify-between gap-3 px-4 py-3">
+        <div className="flex items-center justify-between gap-3 px-4 py-3 md:px-2">
           <button
             type="button"
             onClick={() => setPickerOpen(true)}
@@ -322,7 +322,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
         <TrackTabs tracks={course.tracks} activeId={track.id} onSelect={selectTrack} />
       </header>
 
-      <main className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto px-4 pt-4 pb-16 [&>*]:shrink-0">
+      <main className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto px-4 pt-4 pb-16 [&>*]:shrink-0 md:px-2">
         <TrackTitle track={track} tone={tone} />
 
         {/* Avant le résumé de piste, et non dedans : c'est l'action du jour,
@@ -344,39 +344,47 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
         ) : track.units.length === 0 ? (
           <EmptyTrack tone={tone} />
         ) : (
-          groupUnits(track.units).map((entry) =>
-            entry.kind === 'group' ? (
-              <GroupSection
-                key={entry.group}
-                group={entry.group}
-                units={entry.units}
-                tone={tone}
-                cards={cards}
-                open={openGroups.has(entry.group)}
-                onToggle={() => toggleGroup(entry.group)}
-              >
-                {entry.units.map((unit) => (
-                  <UnitCard
-                    key={unit.id}
-                    unit={unit}
-                    tone={tone}
-                    mastery={unitMastery(unit, cards)}
-                    done={doneNodes(unit, lessons, steps)}
-                    onOpen={() => openUnit(unit)}
-                  />
-                ))}
-              </GroupSection>
-            ) : (
-              <UnitCard
-                key={entry.unit.id}
-                unit={entry.unit}
-                tone={tone}
-                mastery={unitMastery(entry.unit, cards)}
-                done={doneNodes(entry.unit, lessons, steps)}
-                onOpen={() => openUnit(entry.unit)}
-              />
-            ),
-          )
+          // `md:grid md:grid-cols-2` : une liste d'unités qui reste sur une
+          // seule colonne s'étire dans le vide dès que le conteneur
+          // s'élargit sur ordinateur (voir `md:max-w-3xl` plus haut). Un
+          // repli de groupe (voir `GroupSection`) garde sa pleine largeur
+          // (`md:col-span-2`, posé sur le composant lui-même) : c'est un
+          // en-tête avant tout, pas une carte à côté d'une autre.
+          <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:items-start md:gap-3">
+            {groupUnits(track.units).map((entry) =>
+              entry.kind === 'group' ? (
+                <GroupSection
+                  key={entry.group}
+                  group={entry.group}
+                  units={entry.units}
+                  tone={tone}
+                  cards={cards}
+                  open={openGroups.has(entry.group)}
+                  onToggle={() => toggleGroup(entry.group)}
+                >
+                  {entry.units.map((unit) => (
+                    <UnitCard
+                      key={unit.id}
+                      unit={unit}
+                      tone={tone}
+                      mastery={unitMastery(unit, cards)}
+                      done={doneNodes(unit, lessons, steps)}
+                      onOpen={() => openUnit(unit)}
+                    />
+                  ))}
+                </GroupSection>
+              ) : (
+                <UnitCard
+                  key={entry.unit.id}
+                  unit={entry.unit}
+                  tone={tone}
+                  mastery={unitMastery(entry.unit, cards)}
+                  done={doneNodes(entry.unit, lessons, steps)}
+                  onOpen={() => openUnit(entry.unit)}
+                />
+              ),
+            )}
+          </div>
         )}
       </main>
 
@@ -616,7 +624,7 @@ function GroupSection({
   const mastery = masteryOf(itemIds, cards)
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 md:col-span-2">
       <button
         type="button"
         onClick={onToggle}
@@ -649,7 +657,7 @@ function GroupSection({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
-            className="ml-3 flex flex-col gap-3 border-l-2 border-line pl-3"
+            className="ml-3 flex flex-col gap-3 border-l-2 border-line pl-3 md:grid md:grid-cols-2 md:items-start md:gap-3"
           >
             {children}
           </motion.div>
@@ -684,12 +692,12 @@ function TreatiseIndexView({
   const groups = useMemo(() => groupEntries(entries), [entries])
 
   return (
-    <>
+    <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:items-start md:gap-3">
       {groups.map(({ ennead, entries: group }) => {
         const key = `ennead-${ennead}`
         const open = openGroups.has(key)
         return (
-          <div key={key} className="flex flex-col gap-3">
+          <div key={key} className="flex flex-col gap-3 md:col-span-2">
             <button
               type="button"
               onClick={() => onToggleGroup(key)}
@@ -721,7 +729,7 @@ function TreatiseIndexView({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.15 }}
-                  className="ml-3 flex flex-col gap-2 border-l-2 border-line pl-3"
+                  className="ml-3 flex flex-col gap-2 border-l-2 border-line pl-3 md:grid md:grid-cols-2 md:items-start md:gap-2"
                 >
                   {group.map((entry) => (
                     <button
@@ -748,7 +756,7 @@ function TreatiseIndexView({
           </div>
         )
       })}
-    </>
+    </div>
   )
 }
 

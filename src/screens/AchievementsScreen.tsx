@@ -42,8 +42,8 @@ export function AchievementsScreen() {
   const statuses = ACHIEVEMENTS.map((family) => achievementStatus(family, values[family.id]))
 
   return (
-    <div className="mx-auto flex h-full w-full max-w-md flex-col overflow-hidden">
-      <header className="flex shrink-0 items-center gap-2 px-4 pt-4">
+    <div className="mx-auto flex h-full w-full max-w-md flex-col overflow-hidden md:max-w-3xl">
+      <header className="flex shrink-0 items-center gap-2 px-4 pt-4 md:px-2">
         <button
           type="button"
           onClick={() => navigate(-1)}
@@ -55,11 +55,16 @@ export function AchievementsScreen() {
         <h1 className="text-xl font-black">Succès</h1>
       </header>
 
-      <main className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto px-4 pt-5 pb-16 [&>*]:shrink-0">
+      <main className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto px-4 pt-5 pb-16 [&>*]:shrink-0 md:px-2">
         <p className="text-sm text-ink-soft">Communs à tous les cours : le même tableau, quel que soit celui ouvert.</p>
-        {statuses.map((status) => (
-          <AchievementCard key={status.family.id} status={status} />
-        ))}
+        {/* Exactement trois familles de succès : un tableau à trois colonnes
+            sur ordinateur les utilise toutes, plutôt que d'étirer une
+            colonne unique de cartes sur toute la largeur. */}
+        <div className="flex flex-col gap-4 md:grid md:grid-cols-3 md:items-start md:gap-4">
+          {statuses.map((status) => (
+            <AchievementCard key={status.family.id} status={status} />
+          ))}
+        </div>
       </main>
     </div>
   )
@@ -78,7 +83,11 @@ function AchievementCard({ status }: { status: AchievementStatus }) {
         </span>
         <div className="min-w-0 flex-1">
           <h2 className="text-xs font-extrabold uppercase tracking-wide text-ink-faint">{family.title}</h2>
-          <p className="truncate text-lg font-black">{currentLabel}</p>
+          {/* Pas de `truncate` : une carte plus étroite dans le tableau à
+              trois colonnes d'un écran de bureau (voir `AchievementsScreen`)
+              coupait « Pas encore débloqué » en plein mot. La carte a assez
+              de hauteur à donner pour laisser le texte passer à la ligne. */}
+          <p className="text-lg leading-tight font-black">{currentLabel}</p>
         </div>
       </div>
 

@@ -60,8 +60,8 @@ export function HardWordsScreen() {
   const navigate = useNavigate()
 
   return (
-    <div className="mx-auto flex h-full w-full max-w-md flex-col overflow-hidden">
-      <header className="sticky top-0 z-20 shrink-0 border-b-2 border-line bg-cream/95 px-4 py-3 backdrop-blur">
+    <div className="mx-auto flex h-full w-full max-w-md flex-col overflow-hidden md:max-w-3xl">
+      <header className="sticky top-0 z-20 shrink-0 border-b-2 border-line bg-cream/95 px-4 py-3 backdrop-blur md:px-2">
         <div className="flex items-center gap-2">
           <button
             type="button"
@@ -75,7 +75,7 @@ export function HardWordsScreen() {
         </div>
       </header>
 
-      <main className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto px-4 pt-5 pb-10 [&>*]:shrink-0">
+      <main className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto px-4 pt-5 pb-10 [&>*]:shrink-0 md:px-2">
         {/* L'accroche, sans cadre : elle n'est pas cliquable, et lui donner la
             carte des lignes en dessous laisserait croire le contraire. */}
         <section>
@@ -90,7 +90,7 @@ export function HardWordsScreen() {
           Les plus tenaces d'abord
         </p>
 
-        <ul className="flex flex-col gap-3">
+        <ul className="flex flex-col gap-3 md:grid md:grid-cols-2 md:items-start md:gap-3">
           {WORDS.map((word) => (
             <li key={word.id}>
               {/* Terme et traduction sur la même ligne de base : l'œil les

@@ -61,7 +61,7 @@ export function ClozeSentence({
   }
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-center">
+    <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-[safe_center]">
       {/* Retirée pendant que le clavier est ouvert : voir la même remarque dans `GrammarGap`. */}
       {!keyboardOpen && (
         <p className="shrink-0 text-center text-sm font-bold uppercase tracking-wide text-ink-faint">

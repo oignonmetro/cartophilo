@@ -80,7 +80,7 @@ export function GrammarGap({
   }
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-center">
+    <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-[safe_center]">
       {/* Retirée pendant que le clavier est ouvert : la consigne ne change
           jamais, la carte a plus besoin de ces quelques pixels qu'elle
           n'a besoin d'être répétée à chaque exercice. */}
@@ -108,9 +108,14 @@ export function GrammarGap({
        * forcerait la carte à s'étirer jusqu'en bas de la fenêtre, avec un
        * grand vide avant le champ de saisie. `md:flex-none md:overflow-visible`
        * annule ce comportement à partir d'un écran de bureau, et
-       * `justify-center` sur le conteneur (ci-dessus) centre alors le bloc
-       * entier (consigne, carte, saisie, boutons) dans la hauteur
-       * disponible plutôt que de l'étirer.
+       * `justify-[safe_center]` sur le conteneur (ci-dessus) centre alors le
+       * bloc entier (consigne, carte, saisie, boutons) dans la hauteur
+       * disponible plutôt que de l'étirer. Le mot-clé `safe` compte : un
+       * simple `justify-center` déborderait à parts égales au-dessus ET en
+       * dessous de la zone visible si une citation restait malgré tout trop
+       * longue pour une fenêtre de bureau basse — `safe` retombe sur un
+       * alignement en haut dans ce cas, pour ne perdre ni le haut de la
+       * carte ni le bouton en bas.
        */}
       <div className="min-h-0 flex-1 overflow-y-auto md:flex-none md:overflow-visible">
         <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center md:gap-4 md:px-10 md:py-12">

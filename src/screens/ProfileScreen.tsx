@@ -90,8 +90,8 @@ export function ProfileScreen() {
   }
 
   return (
-    <div className="mx-auto flex h-full w-full max-w-md flex-col overflow-hidden">
-      <header className="flex shrink-0 items-center gap-2 px-4 pt-4">
+    <div className="mx-auto flex h-full w-full max-w-md flex-col overflow-hidden md:max-w-3xl">
+      <header className="flex shrink-0 items-center gap-2 px-4 pt-4 md:px-2">
         <button
           type="button"
           onClick={() => navigate(-1)}
@@ -103,8 +103,15 @@ export function ProfileScreen() {
         <h1 className="text-xl font-black">Profil</h1>
       </header>
 
-      <main className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto px-4 pt-5 pb-16 [&>*]:shrink-0">
-        <section className="card-3d px-5 py-5">
+      {/* `md:grid md:grid-cols-2` : une longue colonne de réglages devient
+          vide dès qu'on l'étire à la largeur d'un écran de bureau. Chaque
+          section garde sa propre carte (pas de fusion visuelle), mais les
+          plus courtes (objectif, thème, sons…) se retrouvent deux par
+          rangée plutôt qu'une sous l'autre ; les sections qui veulent
+          rester pleine largeur (niveau, statistiques, succès, contenu
+          travaillé, réinitialiser) portent `md:col-span-2`. */}
+      <main className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto px-4 pt-5 pb-16 [&>*]:shrink-0 md:grid md:grid-cols-2 md:items-start md:gap-5 md:px-2">
+        <section className="card-3d px-5 py-5 md:col-span-2">
           <p className="text-sm font-bold text-ink-soft">Niveau {level}</p>
           <div className="mt-2 h-3 overflow-hidden rounded-full bg-line">
             <div className="h-full rounded-full bg-violet" style={{ width: `${(into / span) * 100}%` }} />
@@ -114,7 +121,7 @@ export function ProfileScreen() {
           </p>
         </section>
 
-        <section className="grid grid-cols-3 gap-3">
+        <section className="grid grid-cols-3 gap-3 md:col-span-2">
           <Tile label="Série" value={String(displayedStreak(state.streak, today))} icon={<FlameIcon size={18} />} tone="text-coral" />
           <Tile label="XP total" value={String(state.xp)} icon={<BoltIcon size={18} />} tone="text-amber" />
           <Tile label="À réviser" value={String(due)} tone="text-teal" />
@@ -123,7 +130,7 @@ export function ProfileScreen() {
         <button
           type="button"
           onClick={() => navigate('/succes')}
-          className="card-3d flex items-center gap-3 px-5 py-4 text-left"
+          className="card-3d flex items-center gap-3 px-5 py-4 text-left md:col-span-2"
         >
           <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber">
             <ChestIcon size={20} />
@@ -137,7 +144,7 @@ export function ProfileScreen() {
           <ChevronLeftIcon size={18} className="rotate-180 shrink-0 text-ink-faint" />
         </button>
 
-        <section className="card-3d px-5 py-5">
+        <section className="card-3d px-5 py-5 md:col-span-2">
           <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Contenu travaillé</h2>
           <p className="mt-1 text-2xl font-black">
             {cards.length}
@@ -269,9 +276,11 @@ export function ProfileScreen() {
           {message && <p className="text-xs font-bold text-teal">{message}</p>}
         </section>
 
-        <AppUpdateCard />
+        <div className="md:col-span-2">
+          <AppUpdateCard />
+        </div>
 
-        <section className="flex flex-col gap-2">
+        <section className="flex flex-col gap-2 md:col-span-2">
           <Button
             tone="error"
             onClick={() => {

@@ -167,28 +167,42 @@ export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext:
   const tone = TONES[exercise.topic]
 
   return (
-    <div className="flex flex-1 flex-col gap-4">
-      <p className={`text-center text-xs font-black uppercase tracking-widest ${tone.eyebrow}`}>Rappel</p>
+    <div className="flex min-h-0 flex-1 flex-col gap-3 md:justify-[safe_center]">
+      <p className={`shrink-0 text-center text-xs font-black uppercase tracking-widest ${tone.eyebrow}`}>Rappel</p>
 
-      {/* Un rappel se lit de haut en bas : le texte commence tout de suite,
-          sous le fil d'Ariane, plutôt que de flotter au centre de l'écran.
-          La colonne se borne en largeur, au-delà les lignes deviennent trop
-          longues pour être suivies confortablement. */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.25 }}
-        className="card-3d flex w-full max-w-lg flex-col gap-4 self-center px-6 py-6"
-      >
-        <header className="flex flex-col gap-3">
-          <span className={`h-1.5 w-10 rounded-full ${tone.accent}`} />
-          <h2 className="text-2xl leading-tight font-black text-balance">{exercise.title}</h2>
-        </header>
+      {/*
+       * La carte défile pour son propre compte, dans l'espace qu'il reste
+       * une fois le bouton posé en dessous (voir plus bas), sur le même
+       * principe que `GrammarGap`/`ClozeSentence` : sans lui, un rappel plus
+       * long que l'écran (ou une fenêtre de bureau simplement moins haute)
+       * repousse « C'est parti » hors du cadre, sans aucun signe qu'il faille
+       * faire défiler pour l'atteindre — visible d'un bout à l'autre, jamais
+       * caché sous une carte qui déborde. Sur ordinateur, `md:flex-none
+       * md:overflow-visible` annule ce découpage (voir la même remarque dans
+       * `GrammarGap`) et `justify-[safe_center]` (ci-dessus) recentre le bloc
+       * entier — `safe` (et non un simple `justify-center`) compte : sans
+       * lui, un rappel encore trop long pour une fenêtre de bureau plus
+       * basse déborderait de façon centrée, à parts égales au-dessus ET en
+       * dessous de la zone visible, poussant « C'est parti » encore plus
+       * bas au lieu de le laisser atteignable par un simple défilement.
+       */}
+      <div className="min-h-0 flex-1 overflow-y-auto md:flex-none md:overflow-visible">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25 }}
+          className="card-3d mx-auto flex w-full max-w-lg flex-col gap-4 px-6 py-6 md:px-10 md:py-10"
+        >
+          <header className="flex flex-col gap-3">
+            <span className={`h-1.5 w-10 rounded-full ${tone.accent}`} />
+            <h2 className="text-2xl leading-tight font-black text-balance md:text-3xl">{exercise.title}</h2>
+          </header>
 
-        <NoteBlocks notes={exercise.notes} tone={tone} />
-      </motion.div>
+          <NoteBlocks notes={exercise.notes} tone={tone} />
+        </motion.div>
+      </div>
 
-      <div className="mt-auto w-full max-w-lg self-center pt-4">
+      <div className="w-full max-w-lg shrink-0 self-center pt-1">
         <Button block tone={tone.button} onClick={onNext}>
           C'est parti
         </Button>
