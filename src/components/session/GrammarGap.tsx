@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import type { GrammarGapExercise } from '@/engine/exercises'
 import { matchesAnswer, splitGap } from '@/engine/exercises'
@@ -37,12 +37,23 @@ export function GrammarGap({
   const [checked, setChecked] = useState<null | boolean>(null)
   const [gapResolved, setGapResolved] = useState(false)
   const input = useRef<HTMLInputElement>(null)
+  const blank = useRef<HTMLSpanElement>(null)
   const sounds = useSessionSounds()
   const haptics = useSessionHaptics()
   // Le clavier peut réduire la fenêtre visible à moins que la hauteur de la
   // seule zone du bas (champ, correction, boutons) — voir `useKeyboardOpen`.
   // On l'allège alors pour rendre le plus de place possible à la carte.
   const keyboardOpen = useKeyboardOpen()
+
+  // La carte défile pour son propre compte (voir plus bas) : rien ne garantit
+  // que le trou tombe dans la portion visible par défaut (le haut de la
+  // carte) sur une citation longue. On centre systématiquement dessus plutôt
+  // que de compter sur l'apprenant pour aller le chercher à la main — refait
+  // à l'ouverture du clavier, dont le retrait de hauteur (voir plus bas)
+  // décale ce qui était déjà centré.
+  useEffect(() => {
+    blank.current?.scrollIntoView({ block: 'center', behavior: 'smooth' })
+  }, [exercise.id, keyboardOpen])
 
   useEffect(() => {
     setValue('')
@@ -96,7 +107,7 @@ export function GrammarGap({
         <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center">
           <p className={`${textSize} leading-relaxed font-bold`}>
             {gap.before}
-            <Blank value={value} state={checked} />
+            <Blank ref={blank} value={value} state={checked} />
             {gap.after}
           </p>
           {point.translation && (cue === 'translation' || checked !== null) && (
@@ -214,7 +225,10 @@ export function GrammarGap({
   )
 }
 
-function Blank({ value, state }: { value: string; state: null | boolean }) {
+const Blank = forwardRef<HTMLSpanElement, { value: string; state: null | boolean }>(function Blank(
+  { value, state },
+  ref,
+) {
   const tone =
     state === null
       ? 'border-ink-faint text-ink'
@@ -223,8 +237,8 @@ function Blank({ value, state }: { value: string; state: null | boolean }) {
         : 'border-error text-error line-through'
 
   return (
-    <span className={`mx-1 inline-block min-w-28 border-b-4 px-2 text-center align-baseline ${tone}`}>
+    <span ref={ref} className={`mx-1 inline-block min-w-28 border-b-4 px-2 text-center align-baseline ${tone}`}>
       {value || ' '}
     </span>
   )
-}
+})

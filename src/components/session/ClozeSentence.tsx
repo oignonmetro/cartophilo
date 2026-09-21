@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { forwardRef, useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import type { ClozeExercise } from '@/engine/exercises'
 import { normalizeForm } from '@/engine/exercises'
@@ -29,10 +29,16 @@ export function ClozeSentence({
   const [checked, setChecked] = useState<null | boolean>(null)
   const [gapResolved, setGapResolved] = useState(false)
   const input = useRef<HTMLInputElement>(null)
+  const blank = useRef<HTMLSpanElement>(null)
   const sounds = useSessionSounds()
   const haptics = useSessionHaptics()
   // Voir la même remarque dans `GrammarGap`.
   const keyboardOpen = useKeyboardOpen()
+
+  // Voir la même remarque dans `GrammarGap`.
+  useEffect(() => {
+    blank.current?.scrollIntoView({ block: 'center', behavior: 'smooth' })
+  }, [exercise.id, keyboardOpen])
 
   useEffect(() => {
     setValue('')
@@ -68,7 +74,7 @@ export function ClozeSentence({
         <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center">
           <p className={`${textSize} leading-relaxed font-bold`}>
             {sentence.before}
-            <Blank value={value} state={checked} />
+            <Blank ref={blank} value={value} state={checked} />
             {sentence.after}
           </p>
           {vocab.example && <p className="text-sm text-ink-soft">{vocab.example.translation}</p>}
@@ -157,7 +163,10 @@ export function ClozeSentence({
   )
 }
 
-function Blank({ value, state }: { value: string; state: null | boolean }) {
+const Blank = forwardRef<HTMLSpanElement, { value: string; state: null | boolean }>(function Blank(
+  { value, state },
+  ref,
+) {
   const tone =
     state === null
       ? 'border-ink-faint text-ink'
@@ -166,13 +175,11 @@ function Blank({ value, state }: { value: string; state: null | boolean }) {
         : 'border-error text-error line-through'
 
   return (
-    <span
-      className={`mx-1 inline-block min-w-24 border-b-4 px-2 text-center align-baseline ${tone}`}
-    >
+    <span ref={ref} className={`mx-1 inline-block min-w-24 border-b-4 px-2 text-center align-baseline ${tone}`}>
       {value || ' '}
     </span>
   )
-}
+})
 
 function Feedback({
   state,
