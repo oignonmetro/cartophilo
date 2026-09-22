@@ -121,6 +121,7 @@ export default function ContentEditorScreen() {
   const [trackKind, setTrackKind] = useState<TrackKind>('grammar')
   const [view, setView] = useState<'notes' | 'points'>('notes')
   const [title, setTitle] = useState('')
+  const [originalTitle, setOriginalTitle] = useState('')
   const [notes, setNotes] = useState('')
   const [original, setOriginal] = useState('')
   const [points, setPoints] = useState<PointDTO[] | null>(null)
@@ -129,7 +130,7 @@ export default function ContentEditorScreen() {
   const [error, setError] = useState<string | null>(null)
 
   const textareaRef = useRef<HTMLTextAreaElement | null>(null)
-  const dirty = notes !== original || JSON.stringify(points) !== JSON.stringify(originalPoints)
+  const dirty = title !== originalTitle || notes !== original || JSON.stringify(points) !== JSON.stringify(originalPoints)
 
   const loadTree = useCallback(async () => {
     try {
@@ -157,6 +158,7 @@ export default function ContentEditorScreen() {
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? res.statusText)
       setTitle(data.title)
+      setOriginalTitle(data.title)
       setNotes(data.notes)
       setOriginal(data.notes)
       setPoints(data.points)
@@ -225,6 +227,33 @@ export default function ContentEditorScreen() {
     [loadTree, openLesson],
   )
 
+  /**
+   * Renomme une unité déjà là, à part de tout le reste (une leçon ouverte
+   * dedans, elle, se renomme avec son propre bouton Enregistrer, voir `save`
+   * plus bas) : `window.prompt`, sur le même modèle que `createUnit` et
+   * `createLesson`, plutôt qu'un champ dédié — la sidebar n'a pas de panneau
+   * d'édition propre à une unité, seulement à une leçon.
+   */
+  const renameUnit = useCallback(
+    async (course: string, unit: TreeUnit) => {
+      const title = window.prompt('Nouveau titre de l’unité :', unit.title)?.trim()
+      if (!title || title === unit.title) return
+      try {
+        const res = await fetch(`/api/unit?course=${course}&unit=${unit.id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ title }),
+        })
+        const data = await res.json()
+        if (!res.ok) throw new Error(data.error ?? res.statusText)
+        await loadTree()
+      } catch (err) {
+        window.alert(`Impossible de renommer l'unité : ${(err as Error).message}`)
+      }
+    },
+    [loadTree],
+  )
+
   const save = useCallback(async () => {
     if (!selection) return
     setStatus('saving')
@@ -233,18 +262,24 @@ export default function ContentEditorScreen() {
       const res = await fetch(`/api/lesson?course=${selection.course}&unit=${selection.unit}&lesson=${selection.lesson}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ notes, points: points ?? undefined }),
+        body: JSON.stringify({ title, notes, points: points ?? undefined }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? res.statusText)
+      setOriginalTitle(title)
       setOriginal(notes)
       setOriginalPoints(points)
       setStatus('saved')
+      // Le titre affiché dans l'arborescence vient de sa propre copie
+      // (`tree`), indépendante de l'état d'édition : sans ce rechargement,
+      // un renommage resterait invisible dans la barre latérale tant qu'on
+      // ne rouvre pas complètement l'éditeur.
+      if (title !== originalTitle) void loadTree()
     } catch (err) {
       setStatus('error')
       setError(String((err as Error).message))
     }
-  }, [selection, notes, points])
+  }, [selection, title, originalTitle, notes, points, loadTree])
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -337,6 +372,7 @@ export default function ContentEditorScreen() {
             <button
               type="button"
               onClick={() => {
+                setTitle(originalTitle)
                 setNotes(original)
                 setPoints(originalPoints)
               }}
@@ -384,8 +420,20 @@ export default function ContentEditorScreen() {
                           {entry.label && <p className="px-2 py-1 text-xs font-black text-ink-faint">{entry.label}</p>}
                           {entry.units.map((unit) => (
                             <details key={unit.id} className="mb-0.5">
-                              <summary className="cursor-pointer rounded-lg px-2 py-1 text-xs font-bold">
-                                {unit.title}
+                              <summary className="group flex cursor-pointer items-center gap-1 rounded-lg px-2 py-1 text-xs font-bold">
+                                <span className="flex-1">{unit.title}</span>
+                                <button
+                                  type="button"
+                                  title="Renommer l'unité"
+                                  onClick={(event) => {
+                                    event.preventDefault()
+                                    event.stopPropagation()
+                                    void renameUnit(course.id, unit)
+                                  }}
+                                  className="rounded px-1 text-ink-faint opacity-0 hover:text-teal-deep group-hover:opacity-100"
+                                >
+                                  ✎
+                                </button>
                               </summary>
                               <div className="ml-2 flex flex-col border-l-2 border-line pl-2">
                                 {unit.lessons.map((lesson) => {
@@ -439,7 +487,13 @@ export default function ContentEditorScreen() {
         {selection && view === 'notes' && (
           <div className="flex min-h-0 flex-1">
             <div className="flex min-h-0 flex-1 flex-col gap-2 border-r-2 border-line px-4 py-3">
-              <p className="text-sm font-black text-ink">{title}</p>
+              <input
+                value={title}
+                onChange={(event) => setTitle(event.target.value)}
+                placeholder="Titre de la leçon"
+                aria-label="Titre de la leçon"
+                className="rounded-lg border-2 border-transparent bg-transparent px-1 py-0.5 text-sm font-black text-ink outline-none focus:border-teal focus:bg-paper"
+              />
               <div className="flex flex-wrap items-center gap-1.5">
                 <ToolbarButton title="Gras (Ctrl+B)" onClick={() => wrapSelection('**', '**')}>
                   <strong>G</strong>

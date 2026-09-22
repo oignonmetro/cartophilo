@@ -63,6 +63,21 @@ function readYamlDoc(path: string): Document {
   return parseDocument(readFileSync(path, 'utf8'))
 }
 
+/**
+ * Réécrit un document YAML entier (pas seulement le nœud modifié : `toString`
+ * régénère tout le fichier) avec le style déjà en usage dans tout le contenu
+ * du dépôt : jamais d'espace dans un tableau en flux (`alt: ["a", "b"]`),
+ * jamais de retour à la ligne forcé (`lineWidth: 0`, une leçon existante
+ * pliée à la main resterait sinon coincée sur une seule longue ligne dès son
+ * premier passage par l'éditeur), et surtout `indentSeq: false` : sans lui,
+ * `lessons:\n- id: …` (le style de tout le contenu existant) se réécrirait
+ * en `lessons:\n  - id: …` (le défaut de la bibliothèque `yaml`) au moindre
+ * enregistrement, un fichier entier reformaté pour un seul champ changé.
+ */
+function writeYamlDoc(path: string, doc: Document): void {
+  writeFileSync(path, doc.toString({ lineWidth: 0, flowCollectionPadding: false, indentSeq: false }), 'utf8')
+}
+
 function courseIds(): string[] {
   return readdirSync(contentDir, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
@@ -354,7 +369,7 @@ export function contentEditorApi(): Plugin {
             const lessonsSeq = doc.getIn(['lessons'])
             if (!(lessonsSeq instanceof YAMLSeq)) throw new Error(`"${unit}" n'a pas de tableau lessons`)
             lessonsSeq.items.push(buildNewLessonNode(id, title, kind))
-            writeFileSync(unitFile, doc.toString({ lineWidth: 0, flowCollectionPadding: false }), 'utf8')
+            writeYamlDoc(unitFile, doc)
             sendJson(res, 200, { ok: true, lesson: { id, title } })
           } catch (error) {
             sendJson(res, 500, { error: String((error as Error).message) })
@@ -399,12 +414,21 @@ export function contentEditorApi(): Plugin {
 
         if (req.method === 'PUT') {
           try {
-            const body = JSON.parse(await readBody(req)) as { notes: string; points?: PointDTO[] }
+            const body = JSON.parse(await readBody(req)) as { title?: string; notes: string; points?: PointDTO[] }
             const doc = readYamlDoc(unitFile)
             const idx = findLessonIndex(doc, lesson)
             if (idx === -1) {
               sendJson(res, 404, { error: `leçon "${lesson}" introuvable dans ${unit}` })
               return
+            }
+            if (body.title !== undefined) {
+              const title = body.title.trim()
+              if (!title) {
+                sendJson(res, 400, { error: 'titre requis' })
+                return
+              }
+              const lessonNode = doc.getIn(['lessons', idx])
+              if (isMap(lessonNode)) setScalar(lessonNode, 'title', title)
             }
             setNotes(doc, idx, body.notes)
             if (body.points) {
@@ -412,9 +436,7 @@ export function contentEditorApi(): Plugin {
               if (pointsSeq instanceof YAMLSeq) syncPoints(pointsSeq, body.points)
               else doc.setIn(['lessons', idx, 'points'], body.points.map(buildPointNode))
             }
-            // Jamais d'espace après `[` ni avant `]` dans un tableau en flux
-            // (`alt: ["a", "b"]`) : le style déjà en usage dans tout le contenu.
-            writeFileSync(unitFile, doc.toString({ lineWidth: 0, flowCollectionPadding: false }), 'utf8')
+            writeYamlDoc(unitFile, doc)
             sendJson(res, 200, { ok: true })
           } catch (error) {
             sendJson(res, 500, { error: String((error as Error).message) })
@@ -431,12 +453,41 @@ export function contentEditorApi(): Plugin {
       // l'une sans l'autre — sans quoi le fichier écrit serait invalide dès
       // sa naissance, pas seulement momentanément le temps de le remplir.
       server.middlewares.use('/api/unit', async (req, res) => {
+        const url = new URL(req.url ?? '', 'http://localhost')
+        const course = url.searchParams.get('course')
+
+        // Renomme une unité déjà là, plutôt que d'en créer une (voir POST
+        // plus bas) : ne touche que son `title`, jamais son id ni ses leçons.
+        if (req.method === 'PUT') {
+          const unit = url.searchParams.get('unit')
+          if (!course || !unit) {
+            sendJson(res, 400, { error: 'course et unit sont requis' })
+            return
+          }
+          try {
+            const body = JSON.parse(await readBody(req)) as { title?: string }
+            const title = body.title?.trim()
+            if (!title) {
+              sendJson(res, 400, { error: 'titre requis' })
+              return
+            }
+            const unitFile = join(contentDir, course, 'units', `${unit}.yaml`)
+            const doc = readYamlDoc(unitFile)
+            const root = doc.contents
+            if (!isMap(root)) throw new Error(`"${unit}" n'a pas de nœud racine exploitable`)
+            setScalar(root, 'title', title)
+            writeYamlDoc(unitFile, doc)
+            sendJson(res, 200, { ok: true, unit: { id: unit, title } })
+          } catch (error) {
+            sendJson(res, 500, { error: String((error as Error).message) })
+          }
+          return
+        }
+
         if (req.method !== 'POST') {
           sendJson(res, 405, { error: 'méthode non supportée' })
           return
         }
-        const url = new URL(req.url ?? '', 'http://localhost')
-        const course = url.searchParams.get('course')
         const track = url.searchParams.get('track')
         if (!course || !track) {
           sendJson(res, 400, { error: 'course et track sont requis' })
@@ -486,12 +537,12 @@ export function contentEditorApi(): Plugin {
           lessonsSeq.items.push(buildNewLessonNode(firstLessonId, firstLessonTitle, kind))
           unitMap.set('lessons', lessonsSeq)
           const unitDoc = new Document(unitMap)
-          writeFileSync(unitFile, unitDoc.toString({ lineWidth: 0, flowCollectionPadding: false }), 'utf8')
+          writeYamlDoc(unitFile, unitDoc)
 
           const unitsSeq = courseDoc.getIn(['tracks', trackIdx, 'units'])
           if (unitsSeq instanceof YAMLSeq) unitsSeq.items.push(id)
           else courseDoc.setIn(['tracks', trackIdx, 'units'], [id])
-          writeFileSync(courseFile, courseDoc.toString({ lineWidth: 0, flowCollectionPadding: false }), 'utf8')
+          writeYamlDoc(courseFile, courseDoc)
 
           sendJson(res, 200, { ok: true, unit: { id, title }, lesson: { id: firstLessonId, title: firstLessonTitle } })
         } catch (error) {
