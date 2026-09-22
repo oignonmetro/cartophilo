@@ -190,6 +190,11 @@ function loadUnits(dir: string, kindOf: (unitId: string) => LessonKind): Map<str
   return units
 }
 
+/** Tri alphabétique insensible à la casse et aux accents (Â se classe avec A). */
+function sortByTitle<T extends { title: string }>(items: T[]): T[] {
+  return [...items].sort((a, b) => a.title.localeCompare(b.title, 'fr', { sensitivity: 'base' }))
+}
+
 function buildCourse(courseId: string): Course {
   const dir = join(contentDir, courseId)
   const courseFile = join(dir, 'course.yaml')
@@ -224,10 +229,14 @@ function buildCourse(courseId: string): Course {
     meta.data.layout === 'library'
       ? {
           ...meta.data,
-          tracks: meta.data.tracks.map((track) => ({
-            ...track,
-            units: track.units.map((unitId) => take(unitId, `la piste "${track.id}"`)),
-          })),
+          tracks: meta.data.tracks.map((track) => {
+            const resolved = track.units.map((unitId) => take(unitId, `la piste "${track.id}"`))
+            // Le glossaire se consulte comme un vrai glossaire, ses entrées
+            // triées alphabétiquement plutôt que dans l'ordre où elles ont
+            // été ajoutées ; les autres pistes gardent l'ordre déclaré
+            // (Idées suit le texte source, Repérage l'ordre des Ennéades).
+            return { ...track, units: track.id === 'glossaire' ? sortByTitle(resolved) : resolved }
+          }),
         }
       : {
           ...meta.data,

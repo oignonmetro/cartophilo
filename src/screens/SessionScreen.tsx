@@ -37,7 +37,6 @@ import type { UnitNodeKind } from '@/engine/unitPath'
  */
 
 interface SessionScreenProps {
-  title: string
   /**
    * Nature de la séance — leçon, révision, approfondissement, entraînement,
    * bilan final (voir `UnitNodeKind`). Se lit sur un petit repère dans
@@ -146,7 +145,6 @@ export function SessionScreen(props: SessionScreenProps) {
 }
 
 function SessionRunner({
-  title,
   kind,
   exercises,
   onQuit,
@@ -160,7 +158,6 @@ function SessionRunner({
   const [queue, setQueue] = useState<Exercise[]>(exercises)
   const [position, setPosition] = useState(0)
   const [attempt, setAttempt] = useState<Attempt>({ seen: new Set(), correct: 0, total: 0 })
-  const [confirmQuit, setConfirmQuit] = useState(false)
 
   const current = queue[position]
   const graded = useMemo(() => exercises.filter((exercise) => !isPresentation(exercise)).length, [exercises])
@@ -282,7 +279,7 @@ function SessionRunner({
       <header className="flex items-center gap-3 px-4 py-3 md:py-5">
         <button
           type="button"
-          onClick={() => setConfirmQuit(true)}
+          onClick={onQuit}
           aria-label="Quitter la session"
           className="rounded-full p-2 text-ink-faint transition-colors hover:text-ink"
         >
@@ -334,15 +331,9 @@ function SessionRunner({
             {current.kind === 'choice' && (
               <ChoiceQuestion exercise={current} onAnswer={(correct) => answer(current, correct)} />
             )}
-            {current.kind === 'rule' && (
-              <RuleNote exercise={current} onNext={() => advance(false)} shortcutsEnabled={!confirmQuit} />
-            )}
+            {current.kind === 'rule' && <RuleNote exercise={current} onNext={() => advance(false)} />}
             {current.kind === 'grammar-gap' && (
-              <GrammarGap
-                exercise={current}
-                onAnswer={(correct) => answer(current, correct)}
-                shortcutsEnabled={!confirmQuit}
-              />
+              <GrammarGap exercise={current} onAnswer={(correct) => answer(current, correct)} />
             )}
             {current.kind === 'grammar-choice' && (
               <GrammarSentenceChoice exercise={current} onAnswer={(correct) => answer(current, correct)} />
@@ -357,11 +348,7 @@ function SessionRunner({
               <ConjugationMatch exercise={current} onDone={({ missedIds }) => answerMatch(current, missedIds)} />
             )}
             {current.kind === 'cloze' && (
-              <ClozeSentence
-                exercise={current}
-                onAnswer={(correct) => answer(current, correct)}
-                shortcutsEnabled={!confirmQuit}
-              />
+              <ClozeSentence exercise={current} onAnswer={(correct) => answer(current, correct)} />
             )}
             {current.kind === 'type' && (
               <TypeAnswer exercise={current} onAnswer={(correct) => answer(current, correct)} />
@@ -369,53 +356,6 @@ function SessionRunner({
           </motion.div>
         </AnimatePresence>
       </main>
-
-      <AnimatePresence>
-        {confirmQuit && (
-          <QuitDialog title={title} onCancel={() => setConfirmQuit(false)} onConfirm={onQuit} />
-        )}
-      </AnimatePresence>
     </div>
-  )
-}
-
-function QuitDialog({ title, onCancel, onConfirm }: { title: string; onCancel: () => void; onConfirm: () => void }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-20 flex items-end justify-center bg-scrim/40 p-4"
-      onClick={onCancel}
-    >
-      <motion.div
-        initial={{ y: 40 }}
-        animate={{ y: 0 }}
-        exit={{ y: 40 }}
-        onClick={(event) => event.stopPropagation()}
-        className="w-full max-w-md rounded-blob bg-paper p-6"
-      >
-        <h2 className="text-lg font-extrabold">Quitter « {title} » ?</h2>
-        <p className="mt-2 text-sm text-ink-soft">
-          Les mots déjà répondus restent enregistrés, mais la session ne comptera pas d'étoile.
-        </p>
-        <div className="mt-5 flex gap-3">
-          <button
-            type="button"
-            onClick={onCancel}
-            className="flex-1 rounded-2xl border-2 border-line py-3 font-extrabold text-ink-soft"
-          >
-            Continuer
-          </button>
-          <button
-            type="button"
-            onClick={onConfirm}
-            className="flex-1 rounded-2xl bg-error py-3 font-extrabold text-white"
-          >
-            Quitter
-          </button>
-        </div>
-      </motion.div>
-    </motion.div>
   )
 }

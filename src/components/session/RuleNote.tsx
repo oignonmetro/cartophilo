@@ -165,23 +165,14 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
   )
 }
 
-export function RuleNote({
-  exercise,
-  onNext,
-  shortcutsEnabled = true,
-}: {
-  exercise: RuleExercise
-  onNext: () => void
-  /** Faux tant qu'une boîte de dialogue (quitter la session…) est ouverte par-dessus. */
-  shortcutsEnabled?: boolean
-}) {
+export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext: () => void }) {
   const tone = TONES[exercise.topic]
   const isDesktop = useIsDesktop()
 
   // Raccourci clavier, réservé à l'ordinateur (voir `useIsDesktop`) : Entrée
   // enchaîne sur les exercices, comme un clic sur « C'est parti ».
   useEffect(() => {
-    if (!isDesktop || !shortcutsEnabled) return
+    if (!isDesktop) return
     function onKeyDown(event: KeyboardEvent) {
       if (event.key !== 'Enter') return
       event.preventDefault()
@@ -189,7 +180,7 @@ export function RuleNote({
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [isDesktop, shortcutsEnabled, onNext])
+  }, [isDesktop, onNext])
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">

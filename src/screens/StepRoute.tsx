@@ -128,7 +128,6 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
 
   return (
     <SessionScreen
-      title={`${node.title} (${unit.title})`}
       kind={node.kind}
       exercises={exercises}
       onQuit={backHome}

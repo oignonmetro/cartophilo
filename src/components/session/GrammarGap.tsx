@@ -27,12 +27,9 @@ import { useSessionSounds } from './useSessionSounds'
 export function GrammarGap({
   exercise,
   onAnswer,
-  shortcutsEnabled = true,
 }: {
   exercise: GrammarGapExercise
   onAnswer: (correct: boolean) => void
-  /** Faux tant qu'une boîte de dialogue (quitter la session…) est ouverte par-dessus. */
-  shortcutsEnabled?: boolean
 }) {
   const { point, bank, cue } = exercise
   const gap = useMemo(() => splitGap(point.sentence), [point.sentence])
@@ -90,7 +87,7 @@ export function GrammarGap({
   // la réponse corrigée. Le mode banque (`bank`) n'a rien à valider par
   // Entrée : la réponse s'y choisit au clic, jamais au clavier.
   useEffect(() => {
-    if (!isDesktop || !shortcutsEnabled) return
+    if (!isDesktop) return
     function onKeyDown(event: KeyboardEvent) {
       if (event.key !== 'Enter') return
       if (checked !== null) {
@@ -113,7 +110,7 @@ export function GrammarGap({
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [isDesktop, shortcutsEnabled, checked, bank, gapResolved, filled, value, onAnswer])
+  }, [isDesktop, checked, bank, gapResolved, filled, value, onAnswer])
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">

@@ -103,7 +103,6 @@ function LessonSession({ lessonId }: { lessonId: string }) {
       // La file d'exercices est un état interne de la session : recommencer
       // doit repartir de zéro, sinon l'ancienne file resterait affichée.
       key={attempt}
-      title={entry.lesson.title}
       kind="lesson"
       exercises={exercises}
       onQuit={backHome}
