@@ -10,20 +10,21 @@
  *
  * Usage :
  *   tsx tools/content/from-quizlet.ts <export.txt> <bassin.yaml> \
- *     [--term-sep TAB] [--row-sep '\n']
+ *     [--term-sep '::'] [--row-sep '\n']
  *
- * Le format attendu par défaut est celui de l'export standard Quizlet :
- * une carte par ligne, terme et définition séparés par une tabulation.
- * Quizlet permet de choisir d'autres séparateurs à l'export ; --term-sep
- * et --row-sep suivent ce même choix (accepte un caractère littéral, ou
- * les échappements \t \n).
+ * Le format attendu par défaut : une carte par ligne, terme et définition
+ * séparés par `::`, plusieurs bonnes réponses (une carte à plusieurs `___`)
+ * séparées par `//`, dans le même ordre que les trous. --term-sep et
+ * --row-sep permettent d'utiliser d'autres séparateurs (accepte un
+ * caractère littéral, ou les échappements \t \n) — l'export standard de
+ * Quizlet, par exemple, sépare terme et définition par une tabulation.
  */
 import { readFileSync, writeFileSync } from 'node:fs'
 import { importQuizletRows, unescapeSep } from './quizletImport.ts'
 
 function parseArgs(argv: string[]) {
   const positional: string[] = []
-  let termSep = '\t'
+  let termSep = '::'
   let rowSep = '\n'
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i]
@@ -37,7 +38,7 @@ function parseArgs(argv: string[]) {
   }
   const [inputPath, outputPath] = positional
   if (!inputPath || !outputPath) {
-    console.error('Usage: tsx tools/content/from-quizlet.ts <export.txt> <bassin.yaml> [--term-sep TAB] [--row-sep \\n]')
+    console.error("Usage: tsx tools/content/from-quizlet.ts <export.txt> <bassin.yaml> [--term-sep '::'] [--row-sep '\\n']")
     process.exit(1)
   }
   return { inputPath, outputPath, termSep, rowSep }

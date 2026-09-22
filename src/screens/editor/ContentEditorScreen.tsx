@@ -689,15 +689,15 @@ function PointsEditor({
       {importOpen && (
         <div className="card-3d flex flex-col gap-2 p-4">
           <p className="text-xs text-ink-faint">
-            Une carte par ligne : phrase avec <code>___</code>, une tabulation, puis la réponse (export Quizlet
-            standard). Plusieurs trous sur une ligne : réponses séparées par <code>;</code>, dans le même ordre.
+            Une carte par ligne : phrase avec <code>___</code>, puis <code>::</code>, puis la réponse. Plusieurs trous
+            sur une ligne : réponses séparées par <code>//</code>, dans le même ordre.
           </p>
           <textarea
             value={importText}
             onChange={(event) => setImportText(event.target.value)}
             spellCheck={false}
             rows={6}
-            placeholder={'Phrase avec ___.\tRéponse'}
+            placeholder="Phrase avec ___. :: Réponse"
             className="min-h-32 resize-y rounded-xl border-2 border-line bg-paper p-2.5 font-mono text-sm leading-snug text-ink outline-none focus:border-teal"
           />
           <div className="flex items-center gap-3">

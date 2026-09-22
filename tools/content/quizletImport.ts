@@ -73,13 +73,12 @@ function normalize(s: string): { text: string; needsReview: boolean } {
 }
 
 /**
- * Décline une carte à N trous (`___` répétés, réponse jointe par `;`, la
- * convention déjà en usage dans le contenu existant pour une énumération)
- * en N points à un seul trou chacun, les autres blancs étant remplis par
- * leur vraie valeur.
+ * Décline une carte à N trous (`___` répétés, réponses jointes par `//`,
+ * dans le même ordre que les trous) en N points à un seul trou chacun, les
+ * autres blancs étant remplis par leur vraie valeur.
  */
 function splitMultiBlank(front: string, answerJoined: string): Array<{ sentence: string; answer: string }> | null {
-  const answers = answerJoined.split(';').map((a) => a.trim())
+  const answers = answerJoined.split('//').map((a) => a.trim())
   const parts = front.split('___')
   if (parts.length !== answers.length + 1) return null
   const out: Array<{ sentence: string; answer: string }> = []
@@ -96,13 +95,12 @@ function splitMultiBlank(front: string, answerJoined: string): Array<{ sentence:
 
 /**
  * Convertit un export brut (une carte par ligne, terme et définition
- * séparés par une tabulation par défaut) en points de grammaire bruts.
- * `termSep`/`rowSep` suivent le choix de séparateurs fait à l'export
- * (Quizlet en propose plusieurs) ; les valeurs par défaut correspondent à
- * son export standard.
+ * séparés par `::` par défaut) en points de grammaire bruts. `termSep`/
+ * `rowSep` suivent le choix de séparateurs fait à l'export, au besoin
+ * (Quizlet, entre autres, en propose plusieurs).
  */
 export function importQuizletRows(raw: string, opts: { termSep?: string; rowSep?: string } = {}): ImportResult {
-  const termSep = opts.termSep ?? '\t'
+  const termSep = opts.termSep ?? '::'
   const rowSep = opts.rowSep ?? '\n'
 
   const rows = raw
