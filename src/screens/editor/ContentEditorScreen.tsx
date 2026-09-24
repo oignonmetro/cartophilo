@@ -128,6 +128,11 @@ export default function ContentEditorScreen() {
   const [originalPoints, setOriginalPoints] = useState<PointDTO[] | null>(null)
   const [status, setStatus] = useState<'idle' | 'loading' | 'saving' | 'saved' | 'error'>('idle')
   const [error, setError] = useState<string | null>(null)
+  // Incrémenté à chaque Annuler : force `PointsEditor` (voir plus bas) à se
+  // remonter entièrement, pour que le texte brut tapé dans « Autres réponses »
+  // (état local à `AltField`, voir pourquoi) revienne lui aussi à sa valeur
+  // d'origine plutôt que de rester affiché tel quel malgré l'annulation.
+  const [resetToken, setResetToken] = useState(0)
 
   const textareaRef = useRef<HTMLTextAreaElement | null>(null)
   const dirty = title !== originalTitle || notes !== original || JSON.stringify(points) !== JSON.stringify(originalPoints)
@@ -375,6 +380,7 @@ export default function ContentEditorScreen() {
                 setTitle(originalTitle)
                 setNotes(original)
                 setPoints(originalPoints)
+                setResetToken((n) => n + 1)
               }}
               disabled={!dirty}
               className="rounded-lg border-2 border-line px-3 py-1.5 font-bold text-ink-soft disabled:opacity-40"
@@ -481,7 +487,12 @@ export default function ContentEditorScreen() {
         )}
 
         {selection && view === 'points' && points && (
-          <PointsEditor lessonId={selection.lesson} points={points} onChange={setPoints} />
+          <PointsEditor
+            key={`${selection.lesson}:${resetToken}`}
+            lessonId={selection.lesson}
+            points={points}
+            onChange={setPoints}
+          />
         )}
 
         {selection && view === 'notes' && (
@@ -859,19 +870,7 @@ function PointsEditor({
           <div className="flex flex-wrap items-center gap-3 pl-9 text-xs">
             <label className="flex items-center gap-1.5 text-ink-faint">
               <span className="font-bold uppercase tracking-wide">Autres réponses</span>
-              <input
-                value={point.alt.join('; ')}
-                onChange={(event) =>
-                  update(index, {
-                    alt: event.target.value
-                      .split(';')
-                      .map((v) => v.trim())
-                      .filter(Boolean),
-                  })
-                }
-                placeholder="séparées par ;"
-                className="w-48 rounded-md border border-line bg-paper px-2 py-1 text-ink outline-none focus:border-teal"
-              />
+              <AltField alt={point.alt} onChange={(alt) => update(index, { alt })} />
             </label>
             <label className="flex flex-1 items-center gap-1.5 text-ink-faint">
               <span className="font-bold uppercase tracking-wide">Précision</span>
@@ -893,5 +892,35 @@ function PointsEditor({
         + Ajouter une carte
       </button>
     </div>
+  )
+}
+
+/**
+ * Le champ « Autres réponses » a besoin de son propre état local pour le
+ * texte brut tapé, séparé du tableau `alt` qu'il encode : un champ contrôlé
+ * directement par `alt.join('; ')` réanalyse et réaffiche la valeur à
+ * chaque frappe, ce qui avale aussitôt un espace ou un `;` en cours de
+ * saisie (« a; » redevient « a » avant même d'avoir pu taper le terme
+ * suivant). `text` reste donc fidèle à ce qui a été tapé ; `alt` n'est
+ * dérivé de lui, vers le parent, qu'en silence à côté.
+ */
+function AltField({ alt, onChange }: { alt: string[]; onChange: (alt: string[]) => void }) {
+  const [text, setText] = useState(alt.join('; '))
+  return (
+    <input
+      value={text}
+      onChange={(event) => {
+        const next = event.target.value
+        setText(next)
+        onChange(
+          next
+            .split(';')
+            .map((v) => v.trim())
+            .filter(Boolean),
+        )
+      }}
+      placeholder="séparées par ;"
+      className="w-48 rounded-md border border-line bg-paper px-2 py-1 text-ink outline-none focus:border-teal"
+    />
   )
 }
