@@ -204,17 +204,17 @@ export default function ContentEditorScreen() {
    */
   const createUnit = useCallback(
     async (course: string, track: TreeTrack) => {
-      const id = window.prompt('Identifiant de la nouvelle unité (minuscules, chiffres, tirets) :')?.trim()
-      if (!id) return
       const title = window.prompt('Titre de la nouvelle unité :')?.trim()
       if (!title) return
       const firstLessonTitle = window.prompt('Titre de sa première leçon :')?.trim()
       if (!firstLessonTitle) return
       try {
+        // Pas d'identifiant demandé : le serveur le dérive du titre (voir
+        // `slugify`/`uniqueUnitId` dans `api-plugin.ts`).
         const res = await fetch(`/api/unit?course=${course}&track=${track.id}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ id, title, firstLessonTitle }),
+          body: JSON.stringify({ title, firstLessonTitle }),
         })
         const data = await res.json()
         if (!res.ok) throw new Error(data.error ?? res.statusText)

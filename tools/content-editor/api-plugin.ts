@@ -236,6 +236,45 @@ function setNotes(doc: Document, lessonIdx: number, notes: string): void {
 
 const slugPattern = /^[a-z0-9][a-z0-9-]*$/
 
+/**
+ * Dérive un identifiant d'unité à partir de son titre : minuscules, accents
+ * retirés, tout ce qui n'est pas `a-z0-9` réduit à un tiret unique, jamais de
+ * tiret en tête ni en queue — le format qu'exige `slugPattern`. Un titre qui
+ * ne laisserait aucun caractère exploitable (uniquement des accents ou de la
+ * ponctuation) retombe sur `unite` plutôt que de produire un identifiant vide.
+ */
+function slugify(title: string): string {
+  const slug = title
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+  return slugPattern.test(slug) ? slug : 'unite'
+}
+
+/**
+ * Un identifiant d'unité unique dans le cours, dérivé du titre par `slugify`
+ * : ajoute `-2`, `-3`… au premier qui entrerait en collision, avec une unité
+ * déjà référencée dans `course.yaml` ou un fichier déjà présent sur disque
+ * (une unité retirée de `course.yaml` sans que son fichier soit supprimé,
+ * par exemple).
+ */
+function uniqueUnitId(course: string, title: string, tracksData: Record<string, unknown>[]): string {
+  const used = new Set<string>()
+  for (const t of tracksData) {
+    for (const unitId of Array.isArray(t.units) ? (t.units as string[]) : []) used.add(unitId)
+  }
+  const base = slugify(title)
+  let id = base
+  let n = 2
+  while (used.has(id) || existsSync(join(contentDir, course, 'units', `${id}.yaml`))) {
+    id = `${base}-${n}`
+    n++
+  }
+  return id
+}
+
 /** Le champ qui porte le contenu d'une leçon, selon la nature héritée de sa piste. */
 function lessonContentKey(kind: string): 'vocab' | 'verbs' | 'points' {
   if (kind === 'vocab') return 'vocab'
@@ -495,17 +534,11 @@ export function contentEditorApi(): Plugin {
         }
         try {
           const body = JSON.parse(await readBody(req)) as {
-            id?: string
             title?: string
             firstLessonTitle?: string
           }
-          const id = body.id?.trim() ?? ''
           const title = body.title?.trim()
           const firstLessonTitle = body.firstLessonTitle?.trim()
-          if (!slugPattern.test(id)) {
-            sendJson(res, 400, { error: 'identifiant : minuscules, chiffres et tirets, ne commence jamais par un tiret' })
-            return
-          }
           if (!title || !firstLessonTitle) {
             sendJson(res, 400, { error: 'titre et titre de la première leçon requis' })
             return
@@ -520,12 +553,10 @@ export function contentEditorApi(): Plugin {
             sendJson(res, 404, { error: `piste "${track}" introuvable` })
             return
           }
-          const alreadyUsed = tracksData.some((t) => (Array.isArray(t.units) ? (t.units as string[]) : []).includes(id))
+          // Dérivé du titre plutôt que demandé à part : voir `uniqueUnitId`
+          // pour la déduplication (le titre seul ne garantit rien).
+          const id = uniqueUnitId(course, title, tracksData)
           const unitFile = join(contentDir, course, 'units', `${id}.yaml`)
-          if (alreadyUsed || existsSync(unitFile)) {
-            sendJson(res, 409, { error: `l'identifiant "${id}" est déjà pris dans ce cours` })
-            return
-          }
 
           const kind = String(tracksData[trackIdx]!.kind ?? 'grammar')
           const firstLessonId = `${id}-l1`
