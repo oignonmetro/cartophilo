@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync, unlinkSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { ServerResponse } from 'node:http'
@@ -65,17 +65,23 @@ function readYamlDoc(path: string): Document {
 
 /**
  * Réécrit un document YAML entier (pas seulement le nœud modifié : `toString`
- * régénère tout le fichier) avec le style déjà en usage dans tout le contenu
- * du dépôt : jamais d'espace dans un tableau en flux (`alt: ["a", "b"]`),
- * jamais de retour à la ligne forcé (`lineWidth: 0`, une leçon existante
- * pliée à la main resterait sinon coincée sur une seule longue ligne dès son
- * premier passage par l'éditeur), et surtout `indentSeq: false` : sans lui,
- * `lessons:\n- id: …` (le style de tout le contenu existant) se réécrirait
- * en `lessons:\n  - id: …` (le défaut de la bibliothèque `yaml`) au moindre
- * enregistrement, un fichier entier reformaté pour un seul champ changé.
+ * régénère tout le fichier) avec le style déjà en usage dans le contenu du
+ * dépôt : jamais d'espace dans un tableau en flux (`alt: ["a", "b"]`), jamais
+ * de retour à la ligne forcé (`lineWidth: 0`, une leçon existante pliée à la
+ * main resterait sinon coincée sur une seule longue ligne dès son premier
+ * passage par l'éditeur).
+ *
+ * `indentSeq` diffère selon le fichier, et il faut le préciser au bon
+ * endroit plutôt que de le fixer une bonne fois ici : un fichier d'unité
+ * écrit ses listes (`lessons:`, `points:`…) sans indentation propre
+ * (`lessons:\n- id: …`, le défaut ici), alors que chaque `course.yaml`
+ * indente les siennes (`tracks:\n  - id: …`, le défaut de la bibliothèque
+ * `yaml`, à demander explicitement). Se tromper de style reformate tout le
+ * fichier au passage, pour un seul champ changé.
  */
-function writeYamlDoc(path: string, doc: Document): void {
-  writeFileSync(path, doc.toString({ lineWidth: 0, flowCollectionPadding: false, indentSeq: false }), 'utf8')
+function writeYamlDoc(path: string, doc: Document, opts: { indentSeq?: boolean } = {}): void {
+  const indentSeq = opts.indentSeq ?? false
+  writeFileSync(path, doc.toString({ lineWidth: 0, flowCollectionPadding: false, indentSeq }), 'utf8')
 }
 
 function courseIds(): string[] {
@@ -483,6 +489,34 @@ export function contentEditorApi(): Plugin {
           return
         }
 
+        if (req.method === 'DELETE') {
+          try {
+            const doc = readYamlDoc(unitFile)
+            const idx = findLessonIndex(doc, lesson)
+            if (idx === -1) {
+              sendJson(res, 404, { error: `leçon "${lesson}" introuvable dans ${unit}` })
+              return
+            }
+            const lessonsSeq = doc.getIn(['lessons'])
+            if (!(lessonsSeq instanceof YAMLSeq)) throw new Error(`"${unit}" n'a pas de tableau lessons`)
+            // `unitSchema.lessons` exige au moins une leçon (voir
+            // `src/content/schema.ts`) : retirer la dernière laisserait
+            // l'unité invalide, pas seulement momentanément vide.
+            if (lessonsSeq.items.length <= 1) {
+              sendJson(res, 400, {
+                error: "impossible de supprimer la dernière leçon d'une unité : supprimez l'unité entière",
+              })
+              return
+            }
+            lessonsSeq.items.splice(idx, 1)
+            writeYamlDoc(unitFile, doc)
+            sendJson(res, 200, { ok: true })
+          } catch (error) {
+            sendJson(res, 500, { error: String((error as Error).message) })
+          }
+          return
+        }
+
         sendJson(res, 405, { error: 'méthode non supportée' })
       })
 
@@ -517,6 +551,46 @@ export function contentEditorApi(): Plugin {
             setScalar(root, 'title', title)
             writeYamlDoc(unitFile, doc)
             sendJson(res, 200, { ok: true, unit: { id: unit, title } })
+          } catch (error) {
+            sendJson(res, 500, { error: String((error as Error).message) })
+          }
+          return
+        }
+
+        // Supprime une unité déjà là : la retire de la piste qui la
+        // référence dans course.yaml, puis efface son fichier. Contrairement
+        // à une leçon (voir DELETE /api/lesson), une piste peut toujours
+        // redescendre à zéro unité (voir content/README.md « Publier le
+        // squelette d'un niveau »).
+        if (req.method === 'DELETE') {
+          const unit = url.searchParams.get('unit')
+          if (!course || !unit) {
+            sendJson(res, 400, { error: 'course et unit sont requis' })
+            return
+          }
+          try {
+            const courseFile = join(contentDir, course, 'course.yaml')
+            const courseDoc = readYamlDoc(courseFile)
+            const courseData = courseDoc.toJS() as Record<string, unknown>
+            const tracksData = Array.isArray(courseData.tracks) ? (courseData.tracks as Record<string, unknown>[]) : []
+            const trackIdx = tracksData.findIndex((t) =>
+              (Array.isArray(t.units) ? (t.units as string[]) : []).includes(unit),
+            )
+            if (trackIdx === -1) {
+              sendJson(res, 404, { error: `unité "${unit}" introuvable dans ce cours` })
+              return
+            }
+            const units = tracksData[trackIdx]!.units as string[]
+            const itemIdx = units.indexOf(unit)
+            const unitsSeq = courseDoc.getIn(['tracks', trackIdx, 'units'])
+            if (!(unitsSeq instanceof YAMLSeq)) throw new Error(`piste "${tracksData[trackIdx]!.id}" sans tableau units`)
+            unitsSeq.items.splice(itemIdx, 1)
+            writeYamlDoc(courseFile, courseDoc, { indentSeq: true })
+
+            const unitFile = join(contentDir, course, 'units', `${unit}.yaml`)
+            if (existsSync(unitFile)) unlinkSync(unitFile)
+
+            sendJson(res, 200, { ok: true })
           } catch (error) {
             sendJson(res, 500, { error: String((error as Error).message) })
           }
@@ -573,7 +647,7 @@ export function contentEditorApi(): Plugin {
           const unitsSeq = courseDoc.getIn(['tracks', trackIdx, 'units'])
           if (unitsSeq instanceof YAMLSeq) unitsSeq.items.push(id)
           else courseDoc.setIn(['tracks', trackIdx, 'units'], [id])
-          writeYamlDoc(courseFile, courseDoc)
+          writeYamlDoc(courseFile, courseDoc, { indentSeq: true })
 
           sendJson(res, 200, { ok: true, unit: { id, title }, lesson: { id: firstLessonId, title: firstLessonTitle } })
         } catch (error) {

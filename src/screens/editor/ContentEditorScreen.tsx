@@ -259,6 +259,59 @@ export default function ContentEditorScreen() {
     [loadTree],
   )
 
+  /**
+   * Supprime une unité entière, et toutes ses leçons avec elle : demande
+   * confirmation d'abord, rien ne permet de revenir en arrière une fois le
+   * fichier effacé. Referme l'éditeur si la leçon ouverte appartenait à
+   * cette unité, pour ne pas le laisser pointer sur un contenu disparu.
+   */
+  const deleteUnit = useCallback(
+    async (course: string, unit: TreeUnit) => {
+      const count = unit.lessons.length
+      if (
+        !window.confirm(
+          `Supprimer l'unité « ${unit.title} » et ${count === 1 ? 'sa leçon' : `ses ${count} leçons`} ? Cette action est irréversible.`,
+        )
+      ) {
+        return
+      }
+      try {
+        const res = await fetch(`/api/unit?course=${course}&unit=${unit.id}`, { method: 'DELETE' })
+        const data = await res.json()
+        if (!res.ok) throw new Error(data.error ?? res.statusText)
+        if (selection?.course === course && selection?.unit === unit.id) setSelection(null)
+        await loadTree()
+      } catch (err) {
+        window.alert(`Impossible de supprimer l'unité : ${(err as Error).message}`)
+      }
+    },
+    [loadTree, selection],
+  )
+
+  /**
+   * Supprime une leçon. Le serveur refuse de retirer la dernière d'une
+   * unité (voir `DELETE /api/lesson`, `content/README.md` : une unité a
+   * toujours au moins une leçon) plutôt que d'écrire un fichier invalide ;
+   * le message d'erreur renvoyé l'explique directement.
+   */
+  const deleteLesson = useCallback(
+    async (course: string, unit: string, lesson: TreeLesson) => {
+      if (!window.confirm(`Supprimer la leçon « ${lesson.title} » ?`)) return
+      try {
+        const res = await fetch(`/api/lesson?course=${course}&unit=${unit}&lesson=${lesson.id}`, { method: 'DELETE' })
+        const data = await res.json()
+        if (!res.ok) throw new Error(data.error ?? res.statusText)
+        if (selection?.course === course && selection?.unit === unit && selection?.lesson === lesson.id) {
+          setSelection(null)
+        }
+        await loadTree()
+      } catch (err) {
+        window.alert(`Impossible de supprimer la leçon : ${(err as Error).message}`)
+      }
+    },
+    [loadTree, selection],
+  )
+
   const save = useCallback(async () => {
     if (!selection) return
     setStatus('saving')
@@ -440,6 +493,18 @@ export default function ContentEditorScreen() {
                                 >
                                   ✎
                                 </button>
+                                <button
+                                  type="button"
+                                  title="Supprimer l'unité"
+                                  onClick={(event) => {
+                                    event.preventDefault()
+                                    event.stopPropagation()
+                                    void deleteUnit(course.id, unit)
+                                  }}
+                                  className="rounded px-1 text-ink-faint opacity-0 hover:text-error group-hover:opacity-100"
+                                >
+                                  ✕
+                                </button>
                               </summary>
                               <div className="ml-2 flex flex-col border-l-2 border-line pl-2">
                                 {unit.lessons.map((lesson) => {
@@ -448,16 +513,25 @@ export default function ContentEditorScreen() {
                                     selection?.unit === unit.id &&
                                     selection?.lesson === lesson.id
                                   return (
-                                    <button
-                                      key={lesson.id}
-                                      type="button"
-                                      onClick={() => openLesson(course.id, track, unit.id, lesson.id)}
-                                      className={`rounded-lg px-2 py-1 text-left text-xs ${
-                                        active ? 'bg-teal/15 font-bold text-teal-deep' : 'text-ink-soft hover:bg-ink/5'
-                                      }`}
-                                    >
-                                      {lesson.title}
-                                    </button>
+                                    <div key={lesson.id} className="group flex items-center gap-1">
+                                      <button
+                                        type="button"
+                                        onClick={() => openLesson(course.id, track, unit.id, lesson.id)}
+                                        className={`flex-1 rounded-lg px-2 py-1 text-left text-xs ${
+                                          active ? 'bg-teal/15 font-bold text-teal-deep' : 'text-ink-soft hover:bg-ink/5'
+                                        }`}
+                                      >
+                                        {lesson.title}
+                                      </button>
+                                      <button
+                                        type="button"
+                                        title="Supprimer la leçon"
+                                        onClick={() => void deleteLesson(course.id, unit.id, lesson)}
+                                        className="rounded px-1 text-ink-faint opacity-0 hover:text-error group-hover:opacity-100"
+                                      >
+                                        ✕
+                                      </button>
+                                    </div>
                                   )
                                 })}
                                 <button
