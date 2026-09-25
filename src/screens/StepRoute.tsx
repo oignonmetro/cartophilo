@@ -16,8 +16,12 @@ import { SessionScreen } from './SessionScreen'
 import { SessionResult } from './SessionResult'
 import { Button } from '@/components/Button'
 
-/** Sessions courtes, comme la révision : on préfère revenir souvent. */
-const STEP_LIMIT = 15
+/**
+ * Sessions courtes : une étape de parcours reprend l'essentiel, la révision
+ * espacée se charge du reste. Quinze cartes à l'origine, ramenées à dix
+ * quand les étapes sont devenues plus rares (voir `layout`, unitPath.ts).
+ */
+const STEP_LIMIT = 10
 
 /**
  * Étape de parcours qui n'est pas une leçon : révision de l'unité,

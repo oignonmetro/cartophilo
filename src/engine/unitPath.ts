@@ -48,30 +48,46 @@ export function stepKey(unitId: string, nodeId: string): string {
   return `${unitId}:${nodeId}`
 }
 
+/** Une révision toutes les `REVIEW_EVERY` leçons. */
+const REVIEW_EVERY = 2
+/** Une consolidation (entraînement ou approfondissement) toutes les `CONSOLIDATE_EVERY` leçons. */
+const CONSOLIDATE_EVERY = 4
+
 /**
  * Suite des nœuds d'une unité, avant calcul des états.
  *
- * Chaque leçon est immédiatement suivie d'une révision puis d'une
- * consolidation, qui alterne entraînement (points fragiles, dans et hors de
- * l'unité) et approfondissement (production sur l'unité seule) — le cycle
- * s'ouvre par l'entraînement. Rien n'a le temps de s'oublier entre deux
- * leçons. L'unité se clôt par une séance finale unique, bilan complet une
- * fois toutes les leçons vues.
+ * Les leçons vont par deux : chaque paire est suivie d'une révision, et une
+ * paire sur deux, en plus, d'une consolidation, qui alterne entraînement
+ * (points fragiles, dans et hors de l'unité) et approfondissement
+ * (production sur l'unité seule), en commençant par l'entraînement. L'unité
+ * se clôt par une séance finale unique, bilan complet une fois toutes les
+ * leçons vues : une dernière leçon restée seule y est donc reprise d'office.
+ *
+ * Un cycle révision + consolidation après *chaque* leçon a d'abord été la
+ * règle : rien n'avait le temps de s'oublier, mais les étapes de pratique
+ * pesaient deux fois plus que les leçons elles-mêmes (vingt-huit étapes pour
+ * une unité de neuf leçons), et la révision espacée, qui fait déjà revenir
+ * les cartes échues, rendait ce rythme redondant.
+ *
+ * Les identifiants restent ceux de l'ancien découpage (`review-<rang de la
+ * leçon qui précède>`, `consolidate-<rang>`) : une étape qui existait déjà au
+ * même endroit reste reconnue comme faite.
  */
 function layout(unit: Unit): { id: string; kind: UnitNodeKind; lesson: Lesson | null; cycle: number }[] {
   const nodes: { id: string; kind: UnitNodeKind; lesson: Lesson | null; cycle: number }[] = []
 
   unit.lessons.forEach((lesson, index) => {
-    nodes.push({ id: lesson.id, kind: 'lesson', lesson, cycle: index })
-    nodes.push({ id: `review-${index}`, kind: 'review', lesson: null, cycle: index })
-    nodes.push({
-      id: `consolidate-${index}`,
-      kind: index % 2 === 0 ? 'workout' : 'drill',
-      lesson: null,
-      cycle: index,
-    })
+    const cycle = Math.floor(index / REVIEW_EVERY)
+    nodes.push({ id: lesson.id, kind: 'lesson', lesson, cycle })
+    if ((index + 1) % REVIEW_EVERY === 0) {
+      nodes.push({ id: `review-${index}`, kind: 'review', lesson: null, cycle })
+    }
+    if ((index + 1) % CONSOLIDATE_EVERY === 0) {
+      const rank = (index + 1) / CONSOLIDATE_EVERY - 1
+      nodes.push({ id: `consolidate-${index}`, kind: rank % 2 === 0 ? 'workout' : 'drill', lesson: null, cycle })
+    }
   })
-  nodes.push({ id: 'final', kind: 'final', lesson: null, cycle: unit.lessons.length })
+  nodes.push({ id: 'final', kind: 'final', lesson: null, cycle: Math.ceil(unit.lessons.length / REVIEW_EVERY) })
   return nodes
 }
 

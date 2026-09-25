@@ -57,48 +57,59 @@ const done: LessonProgressMap[string] = { level: 1, completions: 1, lastAt: 0, b
 const kinds = (nodes: ReturnType<typeof buildUnitPath>) => nodes.map((node) => node.kind)
 const statuses = (nodes: ReturnType<typeof buildUnitPath>) => nodes.map((node) => node.status)
 
+const U4 = unit('q4', 4)
+const U8 = unit('h8', 8)
+
 describe('composition du parcours', () => {
-  it('suit chaque leçon d’une révision puis d’une consolidation alternée, et clôt par une séance finale', () => {
-    expect(kinds(buildUnitPath(U3, {}, {}))).toEqual([
+  it('fait suivre chaque paire de leçons d’une révision, et clôt par une séance finale', () => {
+    expect(kinds(buildUnitPath(U2, {}, {}))).toEqual(['lesson', 'lesson', 'review', 'final'])
+  })
+
+  it('laisse une dernière leçon seule enchaîner sur la séance finale', () => {
+    expect(kinds(buildUnitPath(U3, {}, {}))).toEqual(['lesson', 'lesson', 'review', 'lesson', 'final'])
+  })
+
+  it('ajoute une consolidation toutes les quatre leçons, entraînement puis approfondissement', () => {
+    expect(kinds(buildUnitPath(U8, {}, {}))).toEqual([
+      'lesson',
+      'lesson',
+      'review',
+      'lesson',
       'lesson',
       'review',
       'workout',
+      'lesson',
+      'lesson',
+      'review',
+      'lesson',
       'lesson',
       'review',
       'drill',
-      'lesson',
-      'review',
-      'workout',
       'final',
     ])
   })
 
-  it('alterne entraînement et approfondissement en commençant par l’entraînement', () => {
-    expect(kinds(buildUnitPath(U2, {}, {}))).toEqual([
-      'lesson',
-      'review',
-      'workout',
-      'lesson',
-      'review',
-      'drill',
+  it('garde les identifiants d’étape de l’ancien découpage, là où l’étape existait déjà', () => {
+    expect(buildUnitPath(U4, {}, {}).filter((node) => !node.lesson).map((node) => node.id)).toEqual([
+      'review-1',
+      'review-3',
+      'consolidate-3',
       'final',
     ])
   })
 
-  it('regroupe chaque leçon avec sa pratique, et isole la séance finale', () => {
-    expect(buildUnitPath(U2, {}, {}).map((node) => node.cycle)).toEqual([0, 0, 0, 1, 1, 1, 2])
+  it('regroupe chaque paire de leçons avec sa pratique, et isole la séance finale', () => {
+    expect(buildUnitPath(U3, {}, {}).map((node) => node.cycle)).toEqual([0, 0, 0, 1, 2])
   })
 })
 
 describe('rang d’une leçon dans son unité', () => {
-  const U = unit('a', 4)
-
   it('compte d’un bout à l’autre de l’unité', () => {
-    expect(U.lessons.map((lesson) => sectionRank(U, lesson.id))).toEqual([0, 1, 2, 3])
+    expect(U4.lessons.map((lesson) => sectionRank(U4, lesson.id))).toEqual([0, 1, 2, 3])
   })
 
   it('retombe sur le plancher pour une leçon étrangère à l’unité', () => {
-    expect(sectionRank(U, 'inconnue')).toBe(0)
+    expect(sectionRank(U4, 'inconnue')).toBe(0)
   })
 })
 
@@ -107,14 +118,15 @@ describe('destination courante d’une unité', () => {
     expect(currentDestination('v1', buildUnitPath(U3, {}, {}))).toEqual({ lessonId: 'v1-l1' })
   })
 
-  it('mène à l’étape courante, révision ou consolidation comprise', () => {
-    const path = buildUnitPath(U3, { 'v1-l1': done }, {})
-    expect(currentDestination('v1', path)).toEqual({ unitId: 'v1', stepId: 'review-0' })
+  it('mène à l’étape courante, révision comprise', () => {
+    const path = buildUnitPath(U3, { 'v1-l1': done, 'v1-l2': done }, {})
+    expect(currentDestination('v1', path)).toEqual({ unitId: 'v1', stepId: 'review-1' })
   })
 
-  it('reprend la leçon suivante une fois l’étape franchie', () => {
-    const path = buildUnitPath(U3, { 'v1-l1': done }, { [stepKey('v1', 'review-0')]: 1 })
-    expect(currentDestination('v1', path)).toEqual({ unitId: 'v1', stepId: 'consolidate-0' })
+  it('reprend l’étape suivante une fois la révision franchie', () => {
+    const lessons = { 'q4-l1': done, 'q4-l2': done, 'q4-l3': done, 'q4-l4': done }
+    const steps = { [stepKey('q4', 'review-1')]: 1, [stepKey('q4', 'review-3')]: 1 }
+    expect(currentDestination('q4', buildUnitPath(U4, lessons, steps))).toEqual({ unitId: 'q4', stepId: 'consolidate-3' })
   })
 
   it('retombe sur la dernière étape quand l’unité est entièrement faite', () => {
@@ -129,15 +141,7 @@ describe('destination courante d’une unité', () => {
 
 describe('progression dans le parcours', () => {
   it('n’ouvre que la première étape au démarrage', () => {
-    expect(statuses(buildUnitPath(U2, {}, {}))).toEqual([
-      'available',
-      'locked',
-      'locked',
-      'locked',
-      'locked',
-      'locked',
-      'locked',
-    ])
+    expect(statuses(buildUnitPath(U2, {}, {}))).toEqual(['available', 'locked', 'locked', 'locked'])
   })
 
   it('ouvre l’étape suivante quand la précédente est faite', () => {
@@ -146,13 +150,14 @@ describe('progression dans le parcours', () => {
   })
 
   it('reconnaît une étape de révision franchie', () => {
-    const path = buildUnitPath(U3, { 'v1-l1': done }, {})
-    expect(path[1]!.status).toBe('available')
-    expect(path[2]!.status).toBe('locked')
+    const lessons = { 'v1-l1': done, 'v1-l2': done }
+    const path = buildUnitPath(U3, lessons, {})
+    expect(path[2]!.status).toBe('available')
+    expect(path[3]!.status).toBe('locked')
 
-    const opened = buildUnitPath(U3, { 'v1-l1': done }, { [stepKey('v1', path[1]!.id)]: 1 })
-    expect(opened[1]!.status).toBe('done')
-    expect(opened[2]!.status).toBe('available')
+    const opened = buildUnitPath(U3, lessons, { [stepKey('v1', path[2]!.id)]: 1 })
+    expect(opened[2]!.status).toBe('done')
+    expect(opened[3]!.status).toBe('available')
   })
 
   it('laisse une étape déjà faite accessible', () => {
@@ -161,7 +166,7 @@ describe('progression dans le parcours', () => {
     expect(path[0]!.status).toBe('done')
   })
 
-  it('n’ouvre la séance finale qu’après la dernière consolidation', () => {
+  it('n’ouvre la séance finale qu’après la dernière étape', () => {
     const path = buildUnitPath(U2, {}, {})
     const final = path.find((node) => node.kind === 'final')!
     expect(final.status).toBe('locked')
@@ -170,8 +175,9 @@ describe('progression dans le parcours', () => {
 
 describe('étape suivante', () => {
   it('donne le nœud d’après, révision comprise', () => {
-    const path = buildUnitPath(U3, { 'v1-l1': done }, {})
-    expect(nextNodeAfter(path, 'v1-l1')?.kind).toBe('review')
+    const path = buildUnitPath(U3, { 'v1-l1': done, 'v1-l2': done }, {})
+    expect(nextNodeAfter(path, 'v1-l1')?.id).toBe('v1-l2')
+    expect(nextNodeAfter(path, 'v1-l2')?.kind).toBe('review')
   })
 
   it('renvoie null au bout du parcours', () => {

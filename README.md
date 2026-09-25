@@ -29,12 +29,13 @@ quoi commencer ; une fois dans une unité, un parcours ordonné le mène de la
 découverte à la maîtrise (`/unite/:unitId`, voir `src/engine/unitPath.ts`) :
 
 ```
-leçon → révision → entraînement → leçon → révision → approfondissement → leçon → révision → entraînement → séance finale
+leçon → leçon → révision → leçon → leçon → révision → entraînement → leçon → leçon → révision → … → séance finale
 ```
 
-Chaque leçon est immédiatement suivie d'une révision puis d'une consolidation,
-qui alterne entraînement et approfondissement — assez rapproché pour que rien
-ne s'oublie entre deux. Cinq natures d'étapes, chacune avec son rôle :
+Chaque paire de leçons est suivie d'une révision, et toutes les quatre leçons
+d'une consolidation, qui alterne entraînement et approfondissement. La révision
+espacée fait revenir entre-temps ce qui est échu. Cinq natures d'étapes,
+chacune avec son rôle :
 
 - **Leçon** — la découverte. Sa difficulté suit ce que l'apprenant sait déjà de
   ses éléments : la découvrir donne la présentation, la reprendre une fois sue
