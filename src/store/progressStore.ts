@@ -100,12 +100,22 @@ export interface ProgressSnapshot {
   /**
    * Comment se jouent les cartes d'un texte (voir `PassageCard`) : `reveal`
    * montre la réponse et laisse s'auto-évaluer, comme une flashcard ;
-   * `write` la fait saisir. Révéler par défaut : une citation entière se
-   * tape mal sur un téléphone. Le choix se fait sur la carte elle-même, et
-   * vaut ensuite pour toutes.
+   * `write` la fait saisir. Un réglage par type d'écran, parce que le bon
+   * défaut n'est pas le même : sur ordinateur, avec un vrai clavier, écrire
+   * une citation entière ne coûte rien ; sur téléphone, elle se tape mal,
+   * on la révèle. Le choix se fait sur la carte elle-même et vaut ensuite
+   * pour toutes, sur ce type d'écran seulement.
+   *
+   * Remplace un ancien `passageMode` unique, révéler par défaut partout : il
+   * n'est pas repris, sans quoi sa valeur enregistrée d'office masquerait le
+   * nouveau défaut sur ordinateur.
    */
-  passageMode: 'reveal' | 'write'
+  passageModes: Record<PassageDevice, PassageMode>
 }
+
+export type PassageMode = 'reveal' | 'write'
+/** `desktop` : écran large, voir `useIsDesktop` ; `mobile` : téléphone et appli. */
+export type PassageDevice = 'desktop' | 'mobile'
 
 interface ProgressState extends ProgressSnapshot {
   /** Enregistre la réponse à un élément et met à jour sa carte de révision. */
@@ -141,7 +151,7 @@ interface ProgressState extends ProgressSnapshot {
   setHaptics: (on: boolean) => void
   setTargetedCorrection: (on: boolean) => void
   setTheme: (theme: 'light' | 'dark' | 'system') => void
-  setPassageMode: (mode: 'reveal' | 'write') => void
+  setPassageMode: (device: PassageDevice, mode: PassageMode) => void
   exportSave: () => string
   importSave: (payload: string) => void
   reset: () => void
@@ -172,7 +182,7 @@ const initial: ProgressSnapshot = {
   haptics: false,
   targetedCorrection: false,
   theme: 'system',
-  passageMode: 'reveal',
+  passageModes: { desktop: 'write', mobile: 'reveal' },
   streak: { current: 0, best: 0, lastDay: null },
 }
 
@@ -473,7 +483,8 @@ export const useProgress = create<ProgressState>()(
 
       setTheme: (theme) => set({ theme }),
 
-      setPassageMode: (passageMode) => set({ passageMode }),
+      setPassageMode: (device, mode) =>
+        set((state) => ({ passageModes: { ...state.passageModes, [device]: mode } })),
 
       exportSave: () => {
         const {
@@ -488,7 +499,7 @@ export const useProgress = create<ProgressState>()(
           haptics,
           targetedCorrection,
           theme,
-          passageMode,
+          passageModes,
         } = get()
         return JSON.stringify(
           {
@@ -505,7 +516,7 @@ export const useProgress = create<ProgressState>()(
             haptics,
             targetedCorrection,
             theme,
-            passageMode,
+            passageModes,
           },
           null,
           2,
@@ -525,7 +536,7 @@ export const useProgress = create<ProgressState>()(
           haptics?: boolean
           targetedCorrection?: boolean
           theme?: 'light' | 'dark' | 'system'
-          passageMode?: 'reveal' | 'write'
+          passageModes?: Partial<Record<PassageDevice, PassageMode>>
           streak?: Streak
         }
         // Les formats antérieurs n'ont rien perdu : leurs champs manquants
@@ -574,7 +585,7 @@ export const useProgress = create<ProgressState>()(
           haptics: parsed.haptics ?? initial.haptics,
           targetedCorrection: parsed.targetedCorrection ?? initial.targetedCorrection,
           theme: parsed.theme ?? initial.theme,
-          passageMode: parsed.passageMode ?? initial.passageMode,
+          passageModes: { ...initial.passageModes, ...parsed.passageModes },
           streak: parsed.streak ?? initial.streak,
         })
       },
@@ -636,7 +647,7 @@ export const useProgress = create<ProgressState>()(
         haptics,
         targetedCorrection,
         theme,
-        passageMode,
+        passageModes,
       }) => ({
         lessons,
         cards,
@@ -648,7 +659,7 @@ export const useProgress = create<ProgressState>()(
         haptics,
         targetedCorrection,
         theme,
-        passageMode,
+        passageModes,
         streak,
       }),
     },

@@ -3,11 +3,11 @@ import { motion } from 'framer-motion'
 import type { PassageExercise } from '@/engine/exercises'
 import { matchesAnswer, splitGaps } from '@/engine/exercises'
 import type { Rating } from '@/engine/srs'
-import { Button } from '@/components/Button'
+import { Button, type ButtonTone } from '@/components/Button'
 import { sentenceTextSize, sentenceTextSizeMd } from '@/lib/textDensity'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
-import { useProgress } from '@/store/progressStore'
+import { useProgress, type PassageMode } from '@/store/progressStore'
 import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
 
@@ -16,7 +16,7 @@ import { useSessionSounds } from './useSessionSounds'
  * explication à trou (voir content/textes.md).
  *
  * Deux façons de la jouer, au choix de l'apprenant et retenues ensuite pour
- * toutes (voir `passageMode`) :
+ * toutes, sur ce type d'écran (voir `passageModes`) :
  *
  *   - révéler puis s'auto-évaluer, comme une flashcard. Le défaut : une
  *     réponse de dix mots, exacte à la virgule près, se tape mal sur un
@@ -39,12 +39,16 @@ export function PassageCard({
   onAnswer: (correct: boolean, rating?: Rating) => void
 }) {
   const { point, passage } = exercise
-  const mode = useProgress((state) => state.passageMode)
-  const setMode = useProgress((state) => state.setPassageMode)
+  const isDesktop = useIsDesktop()
+  // Écrire par défaut sur ordinateur, révéler sur téléphone : un réglage par
+  // type d'écran (voir `passageModes`).
+  const device = isDesktop ? 'desktop' : 'mobile'
+  const mode = useProgress((state) => state.passageModes[device])
+  const setPassageMode = useProgress((state) => state.setPassageMode)
+  const setMode = (next: PassageMode) => setPassageMode(device, next)
   const { parts, fills } = useMemo(() => splitGaps(point.sentence, point.answer), [point.sentence, point.answer])
   const gapCount = parts.length - 1
   const textSize = sentenceTextSize('text-lg', point.sentence.length)
-  const isDesktop = useIsDesktop()
   const keyboardOpen = useKeyboardOpen()
   const sounds = useSessionSounds()
   const haptics = useSessionHaptics()
@@ -84,6 +88,12 @@ export function PassageCard({
   useEffect(() => {
     if (!isDesktop) return
     function onKeyDown(event: KeyboardEvent) {
+      // Une frappe déjà traitée par le champ (Entrée qui vérifie la réponse)
+      // ne doit pas servir une seconde fois : la carte est redessinée avant
+      // que la même frappe n'atteigne ce raccourci, qui y verrait alors la
+      // réponse corrigée et enchaînerait aussitôt sur « Continuer », sans
+      // laisser le temps de lire la correction.
+      if (event.defaultPrevented) return
       if (mode === 'reveal' && checked === null) {
         if (!revealed && event.key === 'Enter') {
           event.preventDefault()
@@ -91,10 +101,10 @@ export function PassageCard({
           return
         }
         if (revealed) {
-          const rating = ({ '1': 'again', '2': 'hard', '3': 'good' } as const)[event.key as '1' | '2' | '3']
-          if (rating) {
+          const match = RATINGS.find((candidate) => candidate.key === event.key)
+          if (match) {
             event.preventDefault()
-            onAnswer(rating !== 'again', rating)
+            onAnswer(match.rating !== 'again', match.rating)
           }
         }
         return
@@ -178,12 +188,15 @@ export function PassageCard({
             {checked ? (
               <p className="font-extrabold text-success">Exact.</p>
             ) : value.trim() ? (
-              <p className="text-error">
-                <span className="font-bold">Votre réponse : </span>
-                <span className="line-through">{value}</span>
-              </p>
+              <>
+                <p className="text-error">
+                  <span className="font-bold">Votre réponse : </span>
+                  <span className="line-through">{value}</span>
+                </p>
+                <p className="text-ink-soft">La bonne réponse est affichée dans le texte.</p>
+              </>
             ) : (
-              <p className="font-bold text-error">La réponse est affichée ci-dessus.</p>
+              <p className="font-bold text-error">La bonne réponse est affichée dans le texte.</p>
             )}
           </motion.div>
         )}
@@ -209,21 +222,30 @@ export function PassageCard({
           </Button>
         ) : mode === 'reveal' && revealed ? (
           <div className="grid grid-cols-3 gap-2">
-            <Button tone="error" onClick={() => onAnswer(false, 'again')} className="text-xs">
-              À revoir
-            </Button>
-            <Button tone="amber" onClick={() => onAnswer(true, 'hard')} className="text-xs">
-              Hésitant
-            </Button>
-            <Button tone="success" onClick={() => onAnswer(true, 'good')} className="text-xs">
-              Je savais
-            </Button>
+            {RATINGS.map(({ rating, label, tone, key }) => (
+              <Button key={rating} tone={tone} onClick={() => onAnswer(rating !== 'again', rating)} className="text-xs">
+                {/* Sur ordinateur, la touche qui déclenche le bouton (voir
+                    les raccourcis plus haut) : sans elle, rien ne dit qu'elle
+                    existe. */}
+                {isDesktop && (
+                  <kbd className="mr-2 rounded-md bg-black/15 px-1.5 py-0.5 font-sans text-[0.7rem] font-black">{key}</kbd>
+                )}
+                {label}
+              </Button>
+            ))}
           </div>
         ) : null}
       </div>
     </div>
   )
 }
+
+/** Les trois auto-évaluations, dans l'ordre des boutons et de leurs touches 1, 2, 3. */
+const RATINGS = [
+  { rating: 'again', label: 'À revoir', tone: 'error', key: '1' },
+  { rating: 'hard', label: 'Hésitant', tone: 'amber', key: '2' },
+  { rating: 'good', label: 'Je savais', tone: 'success', key: '3' },
+] as const satisfies readonly { rating: Rating; label: string; tone: ButtonTone; key: string }[]
 
 /**
  * Repère du paragraphe, « §1 · 1/3 », et son intitulé : ce qui situe la carte
@@ -282,7 +304,8 @@ function Fill({ text, shown, state }: { text: string; shown: boolean; state: nul
   const tone = !shown
     ? 'border-ink-faint'
     : state === false
-      ? 'border-error text-error'
+      ? // La réponse affichée est la bonne : seul le soulignement dit l'erreur.
+        'border-error text-teal-deep'
       : state === true
         ? 'border-success text-success'
         : 'border-teal text-teal-deep'
