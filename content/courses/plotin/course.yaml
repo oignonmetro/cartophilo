@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 4
+version: 5
 
 tracks:
   - id: glossaire
@@ -41,7 +41,7 @@ tracks:
     icon: page
     # Une unité par texte étudié (voir content/textes.md) : ses leçons
     # suivent les paragraphes, cartes jouées dans l'ordre écrit.
-    units: []
+    units: [t10c1]
 
   - id: reperage
     title: Repérage
