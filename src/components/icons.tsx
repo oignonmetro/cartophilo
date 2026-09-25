@@ -217,6 +217,19 @@ const UNIT_ICONS: Record<string, (props: IconProps) => React.ReactElement> = {
       <path d="m20 20-4.8-4.8" />
     </svg>
   ),
+  /** Deux entrées de lexique, un terme puis sa définition en retrait : le glossaire. */
+  glossary: (props) => (
+    <svg {...svgProps(props)}>
+      <path d="M4 5h7M8 9.5h12M4 14.5h7M8 19h12" />
+    </svg>
+  ),
+  /** Feuille au coin corné, couverte de lignes : un texte qu'on étudie mot à mot. */
+  page: (props) => (
+    <svg {...svgProps(props)}>
+      <path d="M6 3h8.5L19 7.5V21H6z" />
+      <path d="M14.5 3v4.5H19M9 12h7M9 15.5h7M9 19h4.5" />
+    </svg>
+  ),
   /** Ampoule : une thèse, l'idée qu'on défend par des arguments. */
   bulb: (props) => (
     <svg {...svgProps(props)}>

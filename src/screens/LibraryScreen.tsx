@@ -621,7 +621,7 @@ function UnitCard({
           onClick={onRead}
           className={`flex w-full items-center justify-center gap-2 border-t-2 border-line py-2.5 text-xs font-black tracking-wide uppercase ${tone.text} transition-colors hover:bg-ink/5`}
         >
-          <UnitIcon name="book" size={16} />
+          <UnitIcon name="page" size={16} />
           Lire le texte
         </button>
       )}

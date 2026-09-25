@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 3
+version: 4
 
 tracks:
   - id: glossaire
@@ -22,7 +22,7 @@ tracks:
     subtitle: Notions centrales
     kind: grammar
     color: teal
-    icon: book
+    icon: glossary
     units: []
 
   - id: idees
@@ -33,6 +33,16 @@ tracks:
     icon: bulb
     units: []
 
+  - id: textes
+    title: Textes
+    subtitle: Explications suivies, paragraphe par paragraphe
+    kind: grammar
+    color: coral
+    icon: page
+    # Une unité par texte étudié (voir content/textes.md) : ses leçons
+    # suivent les paragraphes, cartes jouées dans l'ordre écrit.
+    units: [n1841]
+
   - id: reperage
     title: Repérage
     subtitle: Se situer dans les œuvres
@@ -40,13 +50,3 @@ tracks:
     color: sky
     icon: compass
     units: []
-
-  - id: textes
-    title: Textes
-    subtitle: Explications suivies, paragraphe par paragraphe
-    kind: grammar
-    color: coral
-    icon: letters
-    # Une unité par texte étudié (voir content/textes.md) : ses leçons
-    # suivent les paragraphes, cartes jouées dans l'ordre écrit.
-    units: [n1841]
