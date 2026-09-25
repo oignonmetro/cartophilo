@@ -35,6 +35,9 @@ l'épreuve :
     arguments déployés pour les défendre.
   - **Repérage** : se repérer dans les différentes œuvres, savoir où se
     situe tel texte clef, etc.
+  - **Textes** : une unité par texte étudié, qui fait savoir le citer
+    (paragraphe par paragraphe, cartes-citation puis cartes-explication).
+    Format et consignes dans `content/textes.md`.
 - **Hors-programme**, un sous-onglet par domaine philosophique :
   - La morale
   - La métaphysique
@@ -67,7 +70,8 @@ pas seulement Glossaire et Repérage.
 ## Consigne pour le contenu à écrire
 
 - Contenu philosophique (Hors-programme, La vie, Plotin, Marx) : suivre
-  `content/philosophie.md` à la lettre.
+  `content/philosophie.md` à la lettre ; pour une unité de texte (piste
+  Textes), `content/textes.md` en précise les écarts.
 - Le moteur de vocabulaire (`kind: vocab`, cours `demo` uniquement
   désormais) n'a plus d'écran de présentation à part (l'ancienne
   auto-évaluation « nouveau / incertain / je savais ») : un mot rencontre

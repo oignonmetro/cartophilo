@@ -4,6 +4,7 @@ import type { RuleExercise } from '@/engine/exercises'
 import { parseInline, parseNotes, splitAside, type Inline, type NoteRule } from '@/content/notes'
 import type { UnitColor } from '@/content/schema'
 import { Button } from '@/components/Button'
+import { PassageText } from '@/components/PassageText'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 
 /**
@@ -184,7 +185,9 @@ export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext:
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">
-      <p className={`shrink-0 text-center text-xs font-black uppercase tracking-widest ${tone.eyebrow}`}>Rappel</p>
+      <p className={`shrink-0 text-center text-xs font-black uppercase tracking-widest ${tone.eyebrow}`}>
+        {exercise.passage ? `Le texte · ${exercise.passage.label}` : 'Rappel'}
+      </p>
 
       {/*
        * La carte défile pour son propre compte, dans l'espace qu'il reste
@@ -213,7 +216,16 @@ export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext:
             <h2 className="text-2xl leading-tight font-black text-balance md:text-3xl">{exercise.title}</h2>
           </header>
 
-          <NoteBlocks notes={exercise.notes} tone={tone} />
+          {/* Leçon de texte : l'introduction de l'unité (première leçon
+              seulement), le paragraphe cité, puis le commentaire éventuel. */}
+          {exercise.intro && (
+            <section className="flex flex-col gap-3">
+              <p className={`text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}>Introduction</p>
+              <NoteBlocks notes={exercise.intro} tone={tone} />
+            </section>
+          )}
+          {exercise.passage && <PassageText text={exercise.passage.text} />}
+          {exercise.notes.trim() && <NoteBlocks notes={exercise.notes} tone={tone} />}
         </motion.div>
       </div>
 

@@ -57,6 +57,9 @@ function LessonSession({ lessonId }: { lessonId: string }) {
       seedFrom(entry.lesson.id, level, attempt, lessonProgress(entry.lesson, cards)),
       undefined,
       sectionRank(entry.unit, entry.lesson.id),
+      // L'introduction d'une unité de texte précède son premier paragraphe,
+      // et lui seul : elle ne se relit pas à chaque leçon.
+      entry.unit.lessons[0]?.id === entry.lesson.id ? entry.unit.intro : undefined,
     )
   }, [entry, attempt, level, course.id])
 

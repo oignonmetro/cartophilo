@@ -1,6 +1,8 @@
 import type {
   Course,
+  GrammarLesson,
   Lesson,
+  Passage,
   LessonKind,
   ManifestEntry,
   PracticeItem,
@@ -49,13 +51,25 @@ export function itemsOfLesson(lesson: Lesson): PracticeItem[] {
   switch (lesson.kind) {
     case 'vocab':
       return lesson.vocab.map((vocab) => ({ kind: 'vocab' as const, id: vocab.id, vocab }))
-    case 'grammar':
-      return lesson.points.map((point) => ({ kind: 'grammar' as const, id: point.id, point }))
+    case 'grammar': {
+      const passage = lesson.passage ? { label: lesson.passage.label, heading: lesson.title } : undefined
+      return lesson.points.map((point) => ({ kind: 'grammar' as const, id: point.id, point, passage }))
+    }
     case 'conjugation':
       return lesson.verbs.flatMap((verb) =>
         verb.forms.map((form) => ({ kind: 'conjugation' as const, id: form.id, form, verb })),
       )
   }
+}
+
+/** Une leçon de texte : un paragraphe cité, puis ses cartes, dans l'ordre (voir `passageSchema`). */
+export function isPassageLesson(lesson: Lesson): lesson is GrammarLesson & { passage: Passage } {
+  return lesson.kind === 'grammar' && lesson.passage !== undefined
+}
+
+/** Une unité consacrée à un texte : au moins une de ses leçons en cite un paragraphe. */
+export function isTextUnit(unit: Unit): boolean {
+  return unit.lessons.some(isPassageLesson)
 }
 
 export function itemsOfUnit(unit: Unit): PracticeItem[] {

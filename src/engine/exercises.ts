@@ -1,6 +1,16 @@
-import type { ConjugationForm, ConjugationVerb, GrammarPoint, Lesson, PracticeItem, Vocab } from '@/content/schema'
+import type {
+  ConjugationForm,
+  ConjugationVerb,
+  GrammarLesson,
+  GrammarPoint,
+  Lesson,
+  Passage,
+  PassageContext,
+  PracticeItem,
+  Vocab,
+} from '@/content/schema'
 import { GAP } from '@/content/schema'
-import { itemsOfLesson } from '@/content/course'
+import { isPassageLesson, itemsOfLesson } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
 import { splitNoteSections } from '@/content/notes'
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
@@ -176,6 +186,25 @@ export interface RuleExercise {
   notes: string
   /** Nature de la leçon : l'écran s'accorde à la couleur de sa piste. */
   topic: 'grammar' | 'conjugation' | 'vocab'
+  /** Leçon de texte : le paragraphe cité en entier, lu avant d'en reconstituer les fragments. */
+  passage?: Passage
+  /** Introduction de l'unité de texte, affichée avant son premier paragraphe seulement. */
+  intro?: string
+}
+
+/**
+ * Carte d'une leçon de texte (voir `passageSchema`) : fragment cité à
+ * compléter, ou explication à trou. Pas d'échelle d'exigence ici, à la
+ * différence de `grammar-gap` : c'est l'apprenant qui choisit, une fois pour
+ * toutes, de révéler et s'auto-évaluer ou d'écrire la réponse (voir
+ * `PassageCard`), une citation entière se prêtant mal à la seule saisie
+ * exacte sur un téléphone.
+ */
+export interface PassageExercise {
+  kind: 'passage'
+  id: string
+  point: GrammarPoint
+  passage: PassageContext
 }
 
 /**
@@ -291,6 +320,7 @@ export type Exercise =
   | RuleExercise
   | GrammarGapExercise
   | GrammarChoiceExercise
+  | PassageExercise
   | ConjugationExercise
   | ConjugationChoiceExercise
   | ConjugationMatchExercise
@@ -355,6 +385,7 @@ export function itemIdsOf(exercise: Exercise): string[] {
       return exercise.verbs.flatMap((verb) => verb.forms.map((form) => form.id))
     case 'grammar-gap':
     case 'grammar-choice':
+    case 'passage':
       return [exercise.point.id]
     case 'conjugation':
     case 'conjugation-choice':
@@ -618,7 +649,10 @@ export function buildLessonSession(
    * défaut : hors parcours, une leçon part du plancher.
    */
   rank = 0,
+  /** Introduction de l'unité, pour la seule première leçon d'une unité de texte. */
+  intro?: string,
 ): Exercise[] {
+  if (isPassageLesson(lesson)) return buildPassageSession(lesson, level, intro)
   const resolved = seed ?? seedFrom(lesson.id, level)
   switch (lesson.kind) {
     case 'vocab':
@@ -1111,6 +1145,61 @@ function buildGrammarSession(
   return exercises
 }
 
+/**
+ * Leçon de texte : le paragraphe se lit en entier, puis ses cartes se jouent
+ * une fois chacune, dans l'ordre où elles sont écrites (les fragments cités,
+ * puis ce qui les explique), jamais mélangées : reconstituer un texte suit
+ * son fil, et une carte d'explication suppose le fragment qu'elle commente.
+ * La révision espacée, elle, les reprendra ensuite dans le désordre.
+ */
+function buildPassageSession(
+  lesson: GrammarLesson & { passage: Passage },
+  level: number,
+  intro: string | undefined,
+): Exercise[] {
+  const context: PassageContext = { label: lesson.passage.label, heading: lesson.title }
+  const rule: Exercise[] =
+    level <= 0
+      ? [
+          {
+            kind: 'rule',
+            id: `rule:${lesson.id}`,
+            title: lesson.title,
+            notes: lesson.notes ?? '',
+            topic: 'grammar',
+            passage: lesson.passage,
+            intro,
+          },
+        ]
+      : []
+  return [...rule, ...lesson.points.map((point) => passageExercise(point, context))]
+}
+
+function passageExercise(point: GrammarPoint, passage: PassageContext): PassageExercise {
+  return { kind: 'passage', id: `passage:${point.id}`, point, passage }
+}
+
+/** Séparateur des réponses d'une carte à plusieurs trous, dans l'ordre des trous. */
+export const GAP_ANSWER_SEPARATOR = ';'
+
+/**
+ * Découpe une phrase à trous et répartit la réponse entre ses trous.
+ *
+ * Une carte de texte peut porter plusieurs `___`, sa réponse les remplissant
+ * dans l'ordre, séparées par « ; » (« l'accommodement ; moralement »). Si le
+ * compte ne tombe pas juste, la réponse entière va au premier trou plutôt que
+ * d'en laisser un vide : mieux vaut une carte mal découpée qu'une réponse
+ * perdue.
+ */
+export function splitGaps(sentence: string, answer: string): { parts: string[]; fills: string[] } {
+  const parts = sentence.split(GAP)
+  const gaps = parts.length - 1
+  const pieces = answer.split(GAP_ANSWER_SEPARATOR).map((piece) => piece.trim())
+  const fills =
+    gaps > 1 && pieces.length === gaps ? pieces : Array.from({ length: gaps }, (_, i) => (i === 0 ? answer : ''))
+  return { parts, fills }
+}
+
 /** Nombre de formes proposées (la bonne comprise) dans un QCM de conjugaison. */
 const CONJUGATION_CHOICE_SIZE = 3
 
@@ -1475,6 +1564,11 @@ function buildMixedSession(
   const exercises = entries.map(({ card, item }): Exercise => {
     const unaided = drill || card.interval >= UNAIDED_INTERVAL
     const turn = turnOf(card, drill)
+
+    // Une carte de texte revient telle qu'on l'a apprise, avec l'en-tête de
+    // son paragraphe : seule, en révision, c'est lui qui dit de quel texte
+    // elle vient.
+    if (item.kind === 'grammar' && item.passage) return passageExercise(item.point, item.passage)
 
     if (item.kind === 'grammar') {
       // Reconnaître avant de produire : tant que la carte est jeune, la

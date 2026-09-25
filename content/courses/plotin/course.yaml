@@ -33,6 +33,16 @@ tracks:
     icon: bulb
     units: [id1, id2, id3, id4, id5, id6, id7, id8]
 
+  - id: textes
+    title: Textes
+    subtitle: Explications suivies, paragraphe par paragraphe
+    kind: grammar
+    color: coral
+    icon: letters
+    # Une unité par texte étudié (voir content/textes.md) : ses leçons
+    # suivent les paragraphes, cartes jouées dans l'ordre écrit.
+    units: []
+
   - id: reperage
     title: Repérage
     subtitle: Se situer dans les œuvres

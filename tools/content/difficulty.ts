@@ -463,6 +463,8 @@ interface PhilosophyLesson {
   id: string
   notes?: string
   points: readonly GrammarPoint[]
+  /** Leçon de texte (voir content/textes.md) : ses citations sont longues par nature. */
+  passage?: unknown
 }
 
 /**
@@ -518,8 +520,10 @@ export function philosophyContentRemarks(learning: string, lessons: readonly Phi
         }
       }
 
+      // Une leçon de texte fait citer des phrases entières : une réponse
+      // longue y est le propre de la carte-citation, pas une paraphrase.
       const wordCount = point.answer.trim().split(/\s+/).filter(Boolean).length
-      if (wordCount > ANSWER_WORD_LIMIT) {
+      if (wordCount > ANSWER_WORD_LIMIT && !lesson.passage) {
         remarks.push(`${where} : réponse de ${wordCount} mots (« ${point.answer} ») ; ça sent la paraphrase plutôt qu'un terme, un nom ou une référence précise`)
       }
     }

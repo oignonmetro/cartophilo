@@ -97,6 +97,14 @@ export interface ProgressSnapshot {
    * thème.
    */
   theme: 'light' | 'dark' | 'system'
+  /**
+   * Comment se jouent les cartes d'un texte (voir `PassageCard`) : `reveal`
+   * montre la réponse et laisse s'auto-évaluer, comme une flashcard ;
+   * `write` la fait saisir. Révéler par défaut : une citation entière se
+   * tape mal sur un téléphone. Le choix se fait sur la carte elle-même, et
+   * vaut ensuite pour toutes.
+   */
+  passageMode: 'reveal' | 'write'
 }
 
 interface ProgressState extends ProgressSnapshot {
@@ -133,6 +141,7 @@ interface ProgressState extends ProgressSnapshot {
   setHaptics: (on: boolean) => void
   setTargetedCorrection: (on: boolean) => void
   setTheme: (theme: 'light' | 'dark' | 'system') => void
+  setPassageMode: (mode: 'reveal' | 'write') => void
   exportSave: () => string
   importSave: (payload: string) => void
   reset: () => void
@@ -163,6 +172,7 @@ const initial: ProgressSnapshot = {
   haptics: false,
   targetedCorrection: false,
   theme: 'system',
+  passageMode: 'reveal',
   streak: { current: 0, best: 0, lastDay: null },
 }
 
@@ -463,9 +473,23 @@ export const useProgress = create<ProgressState>()(
 
       setTheme: (theme) => set({ theme }),
 
+      setPassageMode: (passageMode) => set({ passageMode }),
+
       exportSave: () => {
-        const { lessons, cards, steps, xp, xpByDay, dailyGoal, streak, sounds, haptics, targetedCorrection, theme } =
-          get()
+        const {
+          lessons,
+          cards,
+          steps,
+          xp,
+          xpByDay,
+          dailyGoal,
+          streak,
+          sounds,
+          haptics,
+          targetedCorrection,
+          theme,
+          passageMode,
+        } = get()
         return JSON.stringify(
           {
             format: SAVE_FORMAT,
@@ -481,6 +505,7 @@ export const useProgress = create<ProgressState>()(
             haptics,
             targetedCorrection,
             theme,
+            passageMode,
           },
           null,
           2,
@@ -500,6 +525,7 @@ export const useProgress = create<ProgressState>()(
           haptics?: boolean
           targetedCorrection?: boolean
           theme?: 'light' | 'dark' | 'system'
+          passageMode?: 'reveal' | 'write'
           streak?: Streak
         }
         // Les formats antérieurs n'ont rien perdu : leurs champs manquants
@@ -548,6 +574,7 @@ export const useProgress = create<ProgressState>()(
           haptics: parsed.haptics ?? initial.haptics,
           targetedCorrection: parsed.targetedCorrection ?? initial.targetedCorrection,
           theme: parsed.theme ?? initial.theme,
+          passageMode: parsed.passageMode ?? initial.passageMode,
           streak: parsed.streak ?? initial.streak,
         })
       },
@@ -609,6 +636,7 @@ export const useProgress = create<ProgressState>()(
         haptics,
         targetedCorrection,
         theme,
+        passageMode,
       }) => ({
         lessons,
         cards,
@@ -620,6 +648,7 @@ export const useProgress = create<ProgressState>()(
         haptics,
         targetedCorrection,
         theme,
+        passageMode,
         streak,
       }),
     },

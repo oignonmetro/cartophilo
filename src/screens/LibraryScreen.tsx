@@ -2,7 +2,7 @@ import { Fragment, useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { LibraryCourse, Track, TreatiseEntry, Unit } from '@/content/schema'
-import { countLabel, courseLabel, itemsOfUnit, unitLetters } from '@/content/course'
+import { countLabel, courseLabel, isTextUnit, itemsOfUnit, unitLetters } from '@/content/course'
 import type { LessonProgressMap } from '@/engine/progress'
 import { dayKey, displayedStreak, levelFromXp, masteryOf, unitMastery } from '@/engine/progress'
 import { buildUnitPath, currentDestination } from '@/engine/unitPath'
@@ -12,6 +12,7 @@ import { useCourse } from '@/content/CourseProvider'
 import { availableCourses } from '@/content/loader'
 import { ProgressRing } from '@/components/ProgressRing'
 import { CoursePicker } from '@/components/CoursePicker'
+import { TextSheet } from '@/components/TextSheet'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { BoltIcon, ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
 
@@ -25,7 +26,16 @@ import { BoltIcon, ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/comp
  * élément que le clic lui-même ne montre jamais.
  */
 function defaultTrackId(tracks: readonly Track[]): string {
-  return (tracks.find((track) => track.units.length !== 1) ?? tracks[0]!).id
+  return (tracks.find((track) => !opensUnitDirectly(track)) ?? tracks[0]!).id
+}
+
+/**
+ * Une piste à une seule unité mène droit à elle (voir `selectTrack`), sauf
+ * si c'est une unité de texte : sa carte porte aussi « Lire le texte », que
+ * le raccourci rendrait inaccessible.
+ */
+function opensUnitDirectly(track: Track): boolean {
+  return track.units.length === 1 && !isTextUnit(track.units[0]!)
 }
 
 /** Avancement d'une unité sur son parcours, pour la carte de la bibliothèque. */
@@ -244,6 +254,9 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
     setOpenTreatise(null)
   }, [activeTrackId])
 
+  // Texte intégral ouvert d'une unité de texte (voir `TextSheet`).
+  const [openText, setOpenText] = useState<Unit | null>(null)
+
   // Ouvrir une unité mène droit à son étape courante — pas à un écran de
   // parcours à traverser pour la retrouver (voir `currentDestination`).
   const openUnit = (unit: Unit) => {
@@ -258,7 +271,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   // suite. Ce n'est donc jamais l'onglet actif — `defaultTrackId` l'exclut.
   const selectTrack = (id: string) => {
     const target = course.tracks.find((candidate) => candidate.id === id)
-    if (target && target.units.length === 1) {
+    if (target && opensUnitDirectly(target)) {
       openUnit(target.units[0]!)
       return
     }
@@ -372,6 +385,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                       mastery={unitMastery(unit, cards)}
                       done={doneNodes(unit, lessons, steps)}
                       onOpen={() => openUnit(unit)}
+                      onRead={isTextUnit(unit) ? () => setOpenText(unit) : undefined}
                     />
                   ))}
                 </GroupSection>
@@ -383,6 +397,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                   mastery={unitMastery(entry.unit, cards)}
                   done={doneNodes(entry.unit, lessons, steps)}
                   onOpen={() => openUnit(entry.unit)}
+                  onRead={isTextUnit(entry.unit) ? () => setOpenText(entry.unit) : undefined}
                 />
               ),
             )}
@@ -404,6 +419,8 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
       <AnimatePresence>
         {openTreatise && <TreatiseSheet entry={openTreatise} onClose={() => setOpenTreatise(null)} />}
       </AnimatePresence>
+
+      <AnimatePresence>{openText && <TextSheet unit={openText} onClose={() => setOpenText(null)} />}</AnimatePresence>
     </div>
   )
 }
@@ -560,6 +577,7 @@ function UnitCard({
   mastery,
   done,
   onOpen,
+  onRead,
 }: {
   unit: Unit
   tone: (typeof TRACK_TONES)[string]
@@ -567,6 +585,8 @@ function UnitCard({
   /** Étapes franchies sur le parcours de l'unité, et total. */
   done: { count: number; total: number }
   onOpen: () => void
+  /** Unité de texte seulement : ouvre son texte intégral (voir `TextSheet`). */
+  onRead?: () => void
 }) {
   // Pour une unité d'alphabet, les lettres qu'elle enseigne disent mieux ce
   // qui attend l'apprenant qu'une phrase de description — elles remplacent
@@ -595,6 +615,16 @@ function UnitCard({
           <ChevronLeftIcon size={20} />
         </span>
       </button>
+      {onRead && (
+        <button
+          type="button"
+          onClick={onRead}
+          className={`flex w-full items-center justify-center gap-2 border-t-2 border-line py-2.5 text-xs font-black tracking-wide uppercase ${tone.text} transition-colors hover:bg-ink/5`}
+        >
+          <UnitIcon name="book" size={16} />
+          Lire le texte
+        </button>
+      )}
     </section>
   )
 }

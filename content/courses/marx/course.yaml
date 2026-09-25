@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 2
+version: 3
 
 tracks:
   - id: glossaire
@@ -40,3 +40,13 @@ tracks:
     color: sky
     icon: compass
     units: []
+
+  - id: textes
+    title: Textes
+    subtitle: Explications suivies, paragraphe par paragraphe
+    kind: grammar
+    color: coral
+    icon: letters
+    # Une unité par texte étudié (voir content/textes.md) : ses leçons
+    # suivent les paragraphes, cartes jouées dans l'ordre écrit.
+    units: [n1841]

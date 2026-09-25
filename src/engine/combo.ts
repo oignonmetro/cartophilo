@@ -97,6 +97,10 @@ export function effortOf(exercise: Exercise): number {
       return 2
     case 'grammar-gap':
       return exercise.bank ? 2 : 3
+    // Une carte de texte ne passe par ici qu'écrite (voir `PassageCard`) :
+    // révélée, elle s'auto-évalue et reste transparente, comme la flashcard.
+    case 'passage':
+      return 3
 
     // Produire sans filet, au clavier.
     case 'type':

@@ -334,8 +334,9 @@ proposent la mise à jour au prochain démarrage avec du réseau.
   la saisie ne peut plus les distinguer, et le couple perd son intérêt ;
 - nom de fichier d'unité cohérent avec son `id` ;
 - toute unité référencée existe, et toute unité existante est référencée ;
-- au moins 4 mots par leçon de vocabulaire, 3 points par leçon de grammaire,
-  4 formes par leçon de conjugaison ;
+- au moins 4 mots par leçon de vocabulaire, 3 points par leçon de grammaire
+  (sauf leçon de texte, voir `content/textes.md`), 4 formes par leçon de
+  conjugaison ;
 - pas de terme en double dans une leçon, ni de personne en double dans un verbe ;
 - phrases d'exemple dont la forme à masquer est réellement présente ;
 - phrases de grammaire contenant le marqueur `___`, et réponse figurant bien

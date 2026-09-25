@@ -86,6 +86,25 @@ export const grammarPointSchema = z.object({
   options: z.array(z.string().min(1)).default([]),
   translation: z.string().optional(),
   explanation: z.string().optional(),
+  /**
+   * Repère d'un fragment cité, « 1/3 » par exemple, dans une leçon de texte
+   * (voir `passageSchema`) : quand un paragraphe est trop long pour tenir sur
+   * une carte, il se cite en plusieurs morceaux, et la carte dit lequel.
+   * Affiché en tête de carte, jamais dans la phrase elle-même.
+   */
+  fragment: z.string().optional(),
+})
+
+/**
+ * Le paragraphe étudié par une leçon de texte (voir content/textes.md) :
+ * `label` le repère (« §1 », « Ouverture »), `text` le cite en entier. Sa
+ * présence fait d'une leçon de grammaire une leçon de texte : cartes jouées
+ * dans l'ordre écrit, en auto-évaluation par défaut, texte intégral lisible
+ * depuis la bibliothèque.
+ */
+export const passageSchema = z.object({
+  label: z.string().min(1),
+  text: z.string().min(1),
 })
 
 /** Une forme conjuguée : la personne et la forme attendue. */
@@ -125,6 +144,7 @@ export const grammarLessonSchema = z.object({
   ...lessonBase,
   kind: z.literal('grammar'),
   points: z.array(grammarPointSchema).min(1),
+  passage: passageSchema.optional(),
 })
 
 export const conjugationLessonSchema = z.object({
@@ -191,6 +211,11 @@ export const unitSchema = z.object({
    * sans lui, l'unité s'affiche seule, comme avant.
    */
   group: z.string().optional(),
+  /**
+   * Introduction d'une unité de texte (contexte, grandes idées), facultative :
+   * affichée en tête du texte intégral et avant le premier paragraphe.
+   */
+  intro: z.string().optional(),
   /** Nature du contenu ; héritée de la piste par le compilateur. */
   kind: lessonKindSchema,
   lessons: z.array(lessonSchema).min(1),
@@ -276,6 +301,7 @@ export const courseSchema = z.discriminatedUnion('layout', [pathCourseSchema, li
 export type Example = z.infer<typeof exampleSchema>
 export type Vocab = z.infer<typeof vocabSchema>
 export type GrammarPoint = z.infer<typeof grammarPointSchema>
+export type Passage = z.infer<typeof passageSchema>
 export type ConjugationForm = z.infer<typeof conjugationFormSchema>
 export type ConjugationVerb = z.infer<typeof conjugationVerbSchema>
 export type VocabLesson = z.infer<typeof vocabLessonSchema>
@@ -297,8 +323,19 @@ export type UnitColor = z.infer<typeof unitColorSchema>
  */
 export type PracticeItem =
   | { kind: 'vocab'; id: string; vocab: Vocab }
-  | { kind: 'grammar'; id: string; point: GrammarPoint }
+  | { kind: 'grammar'; id: string; point: GrammarPoint; passage?: PassageContext }
   | { kind: 'conjugation'; id: string; form: ConjugationForm; verb: ConjugationVerb }
+
+/**
+ * D'où vient un point de leçon de texte : ce qu'en affiche l'en-tête de sa
+ * carte, y compris en révision, où il revient seul, loin de sa leçon.
+ */
+export interface PassageContext {
+  /** « §1 », « Ouverture »… */
+  label: string
+  /** L'intitulé du paragraphe, c'est-à-dire le titre de sa leçon. */
+  heading: string
+}
 
 /** Entrée du manifeste listant les cours disponibles. */
 export const manifestEntrySchema = z.object({

@@ -335,6 +335,15 @@ function checkIndexTrack(trackId: string, entries: readonly TreatiseEntry[], pro
 const EM_DASH = '—'
 
 /**
+ * Le tiret cadratin d'une citation appartient à son auteur, pas au rédacteur :
+ * on le garde entre guillemets français (voir content/philosophie.md), on ne
+ * cherche donc le tiret qu'en dehors d'eux.
+ */
+function hasUnquotedEmDash(text: string): boolean {
+  return text.replace(/«[^»]*»/g, '').includes(EM_DASH)
+}
+
+/**
  * Aucun champ de contenu ne doit porter de tiret cadratin (—) : consigne
  * app-wide, pas seulement philosophique (voir CLAUDE.md). Un aller-retour
  * de nettoyage a déjà été nécessaire une fois sur dix fichiers réécrits ;
@@ -379,9 +388,11 @@ function checkEmDashes(course: Course) {
       }
     }
 
+    // `passage.text` n'est pas contrôlé : c'est le texte de l'auteur, tout
+    // entier une citation.
     for (const [where, text] of fields) {
-      if (text?.includes(EM_DASH)) {
-        warn(`leçon "${lesson.id}"`, `${where} contient un tiret cadratin (—) ; remplacez-le (deux-points, virgule, parenthèses)`)
+      if (text && hasUnquotedEmDash(text)) {
+        warn(`leçon "${lesson.id}"`, `${where} contient un tiret cadratin (—) hors citation ; remplacez-le (deux-points, virgule, parenthèses)`)
       }
     }
   }
@@ -541,7 +552,10 @@ function checkNotesMarkup(lessonId: string, notes: string | undefined) {
 }
 
 function checkGrammarLesson(lesson: GrammarLesson, problems: string[]) {
-  if (lesson.points.length < 3) {
+  // Une leçon de texte joue ses cartes une à une, dans l'ordre (voir
+  // `buildPassageSession`) : aucun bloc à remplir, un paragraphe court, une
+  // ouverture, peuvent n'en porter qu'une seule.
+  if (lesson.points.length < 3 && !lesson.passage) {
     problems.push(`leçon "${lesson.id}" : ${lesson.points.length} point(s), il en faut au moins 3`)
   }
 

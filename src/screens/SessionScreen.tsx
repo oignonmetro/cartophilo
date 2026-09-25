@@ -14,6 +14,7 @@ import { VocabIntro } from '@/components/session/VocabIntro'
 import { RuleNote } from '@/components/session/RuleNote'
 import { GrammarGap } from '@/components/session/GrammarGap'
 import { GrammarSentenceChoice } from '@/components/session/GrammarSentenceChoice'
+import { PassageCard } from '@/components/session/PassageCard'
 import { ConjugationAnswer } from '@/components/session/ConjugationAnswer'
 import { ConjugationChoice } from '@/components/session/ConjugationChoice'
 import { ConjugationMatch } from '@/components/session/ConjugationMatch'
@@ -41,8 +42,8 @@ interface SessionScreenProps {
    * Nature de la séance — leçon, révision, approfondissement, entraînement,
    * bilan final (voir `UnitNodeKind`). Se lit sur un petit repère dans
    * l'en-tête (voir `SessionKindBadge`) : depuis l'archivage du parcours
-   * visuel, une leçon enchaîne directement sur sa révision puis sa
-   * consolidation sans jamais repasser par un écran de parcours qui le
+   * visuel, une leçon enchaîne directement sur la suivante, sa révision ou
+   * sa consolidation sans jamais repasser par un écran de parcours qui le
    * disait — sans ce repère, rien à l'écran ne distingue plus les deux.
    */
   kind: UnitNodeKind
@@ -337,6 +338,9 @@ function SessionRunner({
             )}
             {current.kind === 'grammar-choice' && (
               <GrammarSentenceChoice exercise={current} onAnswer={(correct) => answer(current, correct)} />
+            )}
+            {current.kind === 'passage' && (
+              <PassageCard exercise={current} onAnswer={(correct, rating) => answer(current, correct, rating)} />
             )}
             {current.kind === 'conjugation' && (
               <ConjugationAnswer exercise={current} onAnswer={(correct) => answer(current, correct)} />

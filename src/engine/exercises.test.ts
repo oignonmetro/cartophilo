@@ -13,6 +13,7 @@ import {
   matchesAnswer,
   normalizeAnswer,
   splitGap,
+  splitGaps,
   type Exercise,
 } from './exercises'
 import { seedFrom } from './rng'
@@ -1130,5 +1131,55 @@ describe('correction grammaire et conjugaison', () => {
     const vocab: Vocab = { id: 'w', term: 'to tackle', translation: "s'attaquer à", alt: [] }
     expect(isAnswerCorrect(vocab, 'to-learning', 'tackle')).toBe(true)
     expect(isAnswerCorrect(vocab, 'to-learning', 'to tackle')).toBe(true)
+  })
+})
+
+describe('leçon de texte', () => {
+  const text: GrammarLesson = {
+    kind: 'grammar',
+    id: 'n-p1',
+    title: 'Contre l’explication morale',
+    notes: '',
+    passage: { label: '§1', text: 'C’est par pure ignorance que les disciples de Hegel…' },
+    points: [
+      { id: 'n-p1-1', fragment: '1/3', sentence: '« C’est par ___ que… »', answer: 'pure ignorance', alt: [], options: [] },
+      { id: 'n-p1-2', fragment: '1/3', sentence: '« par ___, en un mot : ___. »', answer: 'l’accommodement ; moralement', alt: [], options: [] },
+      { id: 'n-p1-3', sentence: 'Marx vise une méthode d’explication par la ___.', answer: 'convenance', alt: [], options: [] },
+    ],
+  }
+
+  it('lit le paragraphe, puis joue chaque carte une fois, dans l’ordre écrit', () => {
+    const session = buildLessonSession(text, 0, 42, false, 0, 'Une introduction.')
+    expect(session[0]).toMatchObject({ kind: 'rule', passage: text.passage, intro: 'Une introduction.' })
+    expect(session.slice(1).map((exercise) => exercise.kind)).toEqual(['passage', 'passage', 'passage'])
+    expect(session.slice(1).flatMap(itemIdsOf)).toEqual(['n-p1-1', 'n-p1-2', 'n-p1-3'])
+  })
+
+  it('garde le même ordre quelle que soit la graine, et ne relit plus le texte une fois la leçon sue', () => {
+    const order = (seed: number) => buildLessonSession(text, 1, seed).flatMap(itemIdsOf)
+    expect(order(1)).toEqual(order(99))
+    expect(buildLessonSession(text, 1, 1).some((exercise) => exercise.kind === 'rule')).toBe(false)
+  })
+
+  it('revient en révision avec l’en-tête de son paragraphe', () => {
+    const item: PracticeItem = { kind: 'grammar', id: 'n-p1-3', point: text.points[2]!, passage: { label: '§1', heading: text.title } }
+    const [exercise] = buildReviewSession([{ card: createCard('n-p1-3', T0), item }], 7)
+    expect(exercise).toMatchObject({ kind: 'passage', passage: { label: '§1', heading: text.title } })
+  })
+
+  it('répartit les réponses d’une carte à plusieurs trous, séparées par « ; »', () => {
+    expect(splitGaps('par ___, en un mot : ___.', 'l’accommodement ; moralement').fills).toEqual([
+      'l’accommodement',
+      'moralement',
+    ])
+    // Compte faux : la réponse entière au premier trou plutôt qu'un trou vide.
+    expect(splitGaps('a ___ b ___', 'x').fills).toEqual(['x', ''])
+    // Un seul trou : un « ; » éventuel reste dans la réponse.
+    expect(splitGaps('a ___', 'x ; y').fills).toEqual(['x ; y'])
+  })
+
+  it('accepte la réponse saisie d’une carte à plusieurs trous, séparateur compris ou non', () => {
+    expect(matchesAnswer('l’accommodement ; moralement', [], 'l’accommodement ; moralement')).toBe(true)
+    expect(matchesAnswer('l’accommodement ; moralement', [], 'l’accommodement moralement')).toBe(true)
   })
 })
