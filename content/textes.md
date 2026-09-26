@@ -18,15 +18,22 @@ Chaque unité suit le même schéma :
 1. **Une introduction, facultative** (`intro` sur l'unité) : le contexte, les
    grandes idées. Elle s'affiche avant le premier paragraphe et en tête du texte
    intégral.
-2. **Une leçon par paragraphe** (`§1`, `§2`…), dans l'ordre du texte. Chacune
-   présente d'abord le paragraphe cité en entier, puis ses cartes, **jouées dans
-   l'ordre écrit** (jamais mélangées) :
+2. **Des leçons d'introduction, dès que le texte est difficile ou que la
+   matière fournie le permet** (`<id>-i1`, `<id>-i2`…, `passage` avec
+   `label: "Introduction"` et sans `text`) : un rappel qui donne le problème,
+   les notions et les débats nécessaires pour comprendre le texte, puis des
+   cartes-explication. On ne fait pas apprendre par cœur un texte qu'on ne
+   comprend pas encore.
+3. **Une leçon par paragraphe** (`§1`, `§2`…), dans l'ordre du texte. Chacune
+   présente d'abord le paragraphe cité en entier, **suivi de son explication**
+   (`notes` : ce que dit le paragraphe, comment il s'articule, les pièges),
+   puis ses cartes, **jouées dans l'ordre écrit** (jamais mélangées) :
    - d'abord les **cartes-citation** : le fragment cité, avec un trou sur un
      terme, une formule ou une phrase clef ;
    - puis les **cartes-explication**, elles aussi à trou, qui font trouver une
      information centrale sur ce fragment (sa portée, ce qu'une image veut
      dire, le contresens à éviter).
-3. **Une ouverture, facultative** : un court prolongement hors du texte (un
+4. **Une ouverture, facultative** : un court prolongement hors du texte (un
    autre texte de l'auteur, la postérité d'une formule), traité comme un
    paragraphe de plus, avec son propre texte et au moins une carte.
 

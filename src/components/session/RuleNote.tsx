@@ -186,7 +186,11 @@ export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext:
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">
       <p className={`shrink-0 text-center text-xs font-black uppercase tracking-widest ${tone.eyebrow}`}>
-        {exercise.passage ? `Le texte · ${exercise.passage.label}` : 'Rappel'}
+        {exercise.passage?.text
+          ? `Le texte · ${exercise.passage.label}`
+          : exercise.passage
+            ? exercise.passage.label
+            : 'Rappel'}
       </p>
 
       {/*
@@ -220,11 +224,17 @@ export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext:
               seulement), le paragraphe cité, puis le commentaire éventuel. */}
           {exercise.intro && (
             <section className="flex flex-col gap-3">
-              <p className={`text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}>Introduction</p>
+              <p className={`text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}>Présentation</p>
               <NoteBlocks notes={exercise.intro} tone={tone} />
             </section>
           )}
-          {exercise.passage && <PassageText text={exercise.passage.text} />}
+          {exercise.passage?.text && <PassageText text={exercise.passage.text} />}
+          {/* Sous le paragraphe cité, son explication : le titre les
+              distingue, pour qu'on ne lise pas le commentaire comme la
+              suite du texte. */}
+          {exercise.passage?.text && exercise.notes.trim() && (
+            <p className={`text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}>Explication</p>
+          )}
           {exercise.notes.trim() && <NoteBlocks notes={exercise.notes} tone={tone} />}
         </motion.div>
       </div>

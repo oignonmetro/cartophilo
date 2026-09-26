@@ -15,7 +15,9 @@ import { NoteBlocks, TONES } from '@/components/session/RuleNote'
  */
 export function TextSheet({ unit, onClose }: { unit: Unit; onClose: () => void }) {
   const tone = TONES.grammar
-  const passages = unit.lessons.filter(isPassageLesson)
+  // Les leçons d'introduction n'ont pas de paragraphe cité : le texte
+  // intégral ne reprend que les autres.
+  const passages = unit.lessons.filter(isPassageLesson).filter((lesson) => lesson.passage.text)
 
   return (
     <motion.div
@@ -40,7 +42,7 @@ export function TextSheet({ unit, onClose }: { unit: Unit; onClose: () => void }
         <div className="flex min-h-0 flex-1 flex-col gap-6 overflow-y-auto pr-1">
           {unit.intro && (
             <section className="flex flex-col gap-3">
-              <p className={`text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}>Introduction</p>
+              <p className={`text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}>Présentation</p>
               <NoteBlocks notes={unit.intro} tone={tone} />
             </section>
           )}
@@ -50,7 +52,7 @@ export function TextSheet({ unit, onClose }: { unit: Unit; onClose: () => void }
                 <span className={`font-black ${tone.eyebrow}`}>{lesson.passage.label}</span>{' '}
                 <span className="text-ink-faint">·</span> {lesson.title}
               </h3>
-              <PassageText text={lesson.passage.text} />
+              <PassageText text={lesson.passage.text ?? ''} />
             </section>
           ))}
         </div>

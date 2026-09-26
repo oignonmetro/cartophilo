@@ -454,7 +454,11 @@ const STRAY_ENGLISH_TERMS = [
   'seek out',
   'establish',
 ]
-const ENGLISH_FUNCTION_WORDS_IN_MARKUP = /(?:\*|`)[^*`]*\b(?:the|and|of|is|are|with|which|that)\b[^*`]*(?:\*|`)/i
+// Frontières de mot en Unicode (`\p{L}`), pas `\b` : `\b` ne connaît que
+// l'ASCII, et prenait le début de `theôria` (« the » suivi de « ô ») pour
+// l'article anglais.
+const ENGLISH_FUNCTION_WORDS_IN_MARKUP =
+  /(?:\*|`)[^*`]*(?<!\p{L})(?:the|and|of|is|are|with|which|that)(?!\p{L})[^*`]*(?:\*|`)/iu
 
 /** Une réponse au-delà de cette longueur sent la paraphrase, pas le terme ou la référence précise. */
 const ANSWER_WORD_LIMIT = 8

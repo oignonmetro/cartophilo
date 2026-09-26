@@ -104,7 +104,12 @@ export const grammarPointSchema = z.object({
  */
 export const passageSchema = z.object({
   label: z.string().min(1),
-  text: z.string().min(1),
+  /**
+   * Absent pour une leçon d'introduction (`label: "Introduction"`) : elle
+   * prépare la lecture par son rappel et ses cartes-explication, sans
+   * paragraphe cité à apprendre.
+   */
+  text: z.string().min(1).optional(),
 })
 
 /** Une forme conjuguée : la personne et la forme attendue. */

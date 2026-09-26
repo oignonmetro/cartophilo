@@ -156,8 +156,28 @@ lien avec un autre paragraphe, un repère de localisation.
 - Un commentateur n'est une réponse que s'il y a un débat interprétatif
   réel ; sinon son nom va dans la phrase.
 
-**Introduction** (`intro`, facultative) : contexte et enjeux, seulement si
-la matière fournie le permet. **Ouverture** (facultative) : un prolongement
+## 4 bis. Faire comprendre avant de faire apprendre
+
+Les cartes-citation font apprendre le texte par cœur : elles ne doivent pas
+venir avant qu'on le comprenne.
+
+- **Chaque leçon-paragraphe a un rappel complet** (`notes`), affiché sous le
+  texte cité avec le titre « Explication » : la thèse du paragraphe, son
+  argument pas à pas, sa place dans le texte, les pièges d'interprétation.
+  C'est un vrai commentaire du paragraphe, pas un résumé d'une ligne. Mise en
+  forme : des paragraphes ouverts sur l'idée directrice en gras, un tableau
+  dès qu'une notion se compare sur deux axes (quatre exemples, deux vertus,
+  trois lectures), peu de puces, un piège `!` en fin.
+- **Des leçons d'introduction** (`<id>-i1`, `<id>-i2`… placées avant la
+  première leçon-paragraphe) dès que le texte est difficile ou que la matière
+  fournie donne un contexte : le problème auquel répond le texte, les notions
+  qu'il suppose, les débats qu'il ouvre. `passage: {label: "Introduction"}`
+  sans `text` ; un rappel complet (un écran au plus, sinon deux leçons), puis
+  des cartes-explication. Les cartes de contexte général (débats
+  d'interprétation, place dans l'œuvre) vont là, pas dans les paragraphes.
+
+**Introduction** (`intro` de l'unité, facultative) : deux ou trois phrases de
+situation, affichées avant la première leçon. **Ouverture** (facultative) : un prolongement
 hors du texte (autre texte de l'auteur, postérité d'une formule), en leçon
 `<id>-ouverture`, `label: "Ouverture"`, avec son texte et au moins une carte.
 

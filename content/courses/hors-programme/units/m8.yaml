@@ -22,8 +22,189 @@ intro: |-
   aux **biens extérieurs**, après avoir dit pourquoi le bonheur de la vertu
   morale n'est qu'humain.
 lessons:
+- id: m8-i1
+  title: "Prudence et sagesse : deux excellences de l'intelligence"
+  notes: |-
+    L'*Éthique à Nicomaque* **dépeint d'abord la vie heureuse comme une vie essentiellement sociale** : l'homme accompli est celui qui entretient des rapports excellents, c'est-à-dire vertueux, avec ses amis, ses proches, ses concitoyens. Mais la fin de l'ouvrage présente un tableau du bonheur qui tranche avec ce portrait. Pour le comprendre, il faut revenir à la distinction du livre VI entre deux excellences de l'intelligence.
+
+    |  | Vertu pratique | Vertu théorique |
+    | **Excellence** | la prudence (`phronēsis`) | la sagesse (`sophia`) |
+    | **Figure** | le prudent (`phronimos`) : Périclès | le sage (`sophos`) : Thalès |
+    | **Objet** | des situations particulières, en partie contingentes | des vérités éternelles et nécessaires |
+    | **Acte** | l'action (`praxis`) | la contemplation (`theôria`) |
+
+    **Le mot `theôria` désigne d'abord un pèlerinage** : se rendre dans une cité étrangère pour assister à un spectacle d'importance (les jeux d'Olympie, l'oracle de Delphes). À partir de Platon, il devient le paradigme de l'activité philosophique : le philosophe accomplit un pèlerinage hors de la caverne pour y contempler les idées.
+
+    **Chez Socrate et Platon, il n'y a pas deux formes d'intelligence.** `Phronēsis` y est synonyme de `sophia` : la vertu est une, elle réside dans la connaissance du Bien, qui est l'unique cause de l'action bonne (dans le *Ménon*, on ne peut vouloir le mal, l'action mauvaise ne vient que de l'ignorance). D'où, dans la *République*, la condition de la cité idéale : que les philosophes soient rois ou que les rois soient philosophes.
+
+    **Aristote refuse cette réduction et affirme l'autonomie de la sphère pratique.** Le prudent a une excellence propre, calculative (`logistikos`), qui tient à la bonne appréhension d'une situation particulière, indépendante de celle du sage : selon la formule de Chaintreuil, il n'est pas besoin d'être Thalès pour être Périclès. L'éthique d'Aristote en devient plus optimiste que celle de Platon : le Bien pratique est accessible, parce que radicalement humain.
+
+    ! Le domaine de l'action n'est pas *absolument* contingent : il y a des régularités dans l'action humaine, comme il y a dans la nature ce qui arrive « le plus souvent » (`hōs epi to polu`). Chaintreuil nuance ici Aubenque, qui insiste sur le lien entre la prudence et la contingence.
+  passage:
+    label: "Introduction"
+  points:
+  - id: m8-i1-1
+    sentence: "L'excellence de l'intelligence pratique, qui porte sur des situations particulières et en partie contingentes, est chez Aristote la ___, en grec `phronēsis`."
+    answer: "prudence"
+    alt: []
+  - id: m8-i1-2
+    sentence: "L'excellence de l'intelligence qui porte sur les vérités éternelles et nécessaires est chez Aristote la ___, en grec `sophia`."
+    answer: "sagesse"
+    alt: []
+  - id: m8-i1-3
+    sentence: "L'acte de l'intelligence théorique, la connaissance des vérités les plus hautes, est la contemplation, en grec, translittéré, ___."
+    answer: "theōria"
+    alt: []
+  - id: m8-i1-4
+    sentence: "Dans le grec courant de l'époque classique, une `theôria` est d'abord une sorte de ___ : se rendre dans une cité étrangère pour assister à un spectacle d'importance."
+    answer: "pèlerinage"
+    alt: []
+  - id: m8-i1-5
+    sentence: "Chez Platon, la `theôria` devient le paradigme de l'activité philosophique : le philosophe accomplit un pèlerinage hors de la ___ pour y contempler les idées."
+    answer: "caverne"
+    alt: []
+  - id: m8-i1-6
+    sentence: "Dans les dialogues socratiques et presque toujours chez Platon, `phronēsis` est synonyme de ___ : signe de l'unité de la vertu platonicienne."
+    answer: "sophia"
+    alt: []
+  - id: m8-i1-7
+    sentence: "Pour Socrate et Platon, la connaissance du ___ est l'unique cause de l'action bonne."
+    answer: "Bien"
+    alt: []
+  - id: m8-i1-8
+    sentence: "Dans le *Ménon*, Socrate montre qu'on ne peut pas vouloir le mal : l'action mauvaise ne peut découler que de l'___."
+    answer: "ignorance"
+    alt: []
+  - id: m8-i1-9
+    sentence: "La cité idéale de la *République* repose sur une seule condition : que les philosophes soient ___ ou que les rois soient philosophes."
+    answer: "rois"
+    alt: []
+  - id: m8-i1-10
+    sentence: "Contre Socrate et Platon, Aristote affirme l'autonomie de la sphère ___, dont l'excellence n'est en rien subordonnée à l'excellence théorique."
+    answer: "pratique"
+    alt: []
+  - id: m8-i1-11
+    sentence: "Selon la formule de Chaintreuil, pour Aristote, il n'est pas besoin d'être ___ pour être Périclès."
+    answer: "Thalès"
+    alt: []
+  - id: m8-i1-12
+    sentence: "L'excellence du prudent est indépendante de celle du sage parce qu'elle est calculative, en grec, translittéré, ___."
+    answer: "logistikos"
+    alt: []
+  - id: m8-i1-13
+    sentence: "Pour Chaintreuil, l'éthique aristotélicienne est plus ___ que l'éthique platonicienne : le Bien pratique y devient accessible, car radicalement humain."
+    answer: "optimiste"
+    alt: []
+  - id: m8-i1-14
+    sentence: "Contre une disjonction trop forte entre contingent et nécessaire, Chaintreuil rappelle que les réalités naturelles arrivent « le plus souvent », en grec, translittéré, ___."
+    answer: "hōs epi to polu"
+    alt: []
+- id: m8-i2
+  title: "Le problème du bonheur du sage ; l'activité de la vertu et sa matière"
+  notes: |-
+    **Les chapitres 6 à 9 du livre X décrivent le sage et son activité, la contemplation, et le placent au-dessus du prudent** : le prudent représente une excellence proprement humaine, le sage l'excellence de la part divine de l'homme. Huit arguments en ce sens sont donnés au chapitre 7. On croit voir un retour à la position platonicienne qui subordonne la pratique à la théorie, et le reste de l'ouvrage paraît démenti.
+
+    Cette tension nourrit un vaste débat, dont les termes ont été fixés par Hardie (1965), mais que Natali retrouve dès les commentateurs anciens :
+
+    |  | Ce qu'elle soutient | Son appui |
+    | **Lecture « dominante »** | la vie n'est pleinement heureuse que dans la contemplation | le ton assertif de X, 7-9 |
+    | **Lecture « inclusive »** | la vie heureuse inclut une pluralité de biens | la cohérence de l'ensemble de l'*Éthique* |
+    | **Lecture « aporétique »** | une faille irrésolue, une fracture de la nature humaine | Aubenque |
+
+    L'approche « génétique », qui voyait dans le livre X un texte de jeunesse platonicienne, est difficilement tenable : le livre X est anticipé par les livres I et VI, et l'hypothèse repose sur une pétition de principe. Chaintreuil réduit plutôt l'incohérence : les « deux visages du bonheur » (Charlotte Murgier) ont en commun d'être des **activités** (`energeiai`).
+
+    **C'est le second pivot : pour Aristote, le bien pratique est un `prakton`, une action réalisée, et non une disposition.** La vertu n'est pas seulement la capacité de bien agir, elle est l'action bonne réalisée : elle est de l'ordre de l'`energeia`. Elle dépend donc de conditions extérieures, les **biens extérieurs**, qui sont en quelque sorte sa **matière** : il faut de l'argent pour être libéral (comme pour être avare ou prodigue), des guerres pour se montrer courageux, des amis, des concitoyens. D'où le refus des paradoxes stoïciens : dire heureux « l'homme attaché à la roue » est un non-sens (VII, 14).
+
+    ! Les biens extérieurs ne font pas la valeur de l'action : ils en sont la condition de possibilité, pour l'action vicieuse comme pour l'action vertueuse. Et la disposition (`hexis`) ne suffit pas : le vertueux qui dort n'est pas vertueux en acte ; aux Jeux olympiques, ce ne sont pas les plus beaux et les plus forts qui sont couronnés, mais ceux qui combattent (I, 9).
+  passage:
+    label: "Introduction"
+  points:
+  - id: m8-i2-1
+    sentence: "Les chapitres ___ du livre X de l'*Éthique à Nicomaque* décrivent le sage et son activité, la contemplation, et ont souvent été jugés « déconcertants »."
+    answer: "6 à 9"
+    alt: []
+  - id: m8-i2-2
+    sentence: "À la fin de l'*Éthique à Nicomaque*, le sage est placé au-dessus du prudent parce qu'il représente l'excellence de la part ___ de l'homme."
+    answer: "divine"
+    alt: []
+  - id: m8-i2-3
+    sentence: "Au chapitre 7 du livre X de l'*Éthique à Nicomaque*, Aristote donne ___ arguments en faveur de la supériorité du bonheur de la contemplation sur celui de l'activité pratique."
+    answer: "huit"
+    alt: []
+  - id: m8-i2-4
+    sentence: "Le quatrième des huit arguments du chapitre 7 du livre X en faveur de la supériorité de la vie contemplative tient à sa plus grande autosuffisance, en grec, translittéré, ___."
+    answer: "autarkeia"
+    alt: []
+  - id: m8-i2-5
+    sentence: "Le quatrième argument du livre X de l'*Éthique à Nicomaque* en faveur de la vie contemplative, celui de son autarcie, que X, 8 développe, se lit en ___."
+    answer: "1177a27-b1"
+    alt: []
+  - id: m8-i2-6
+    sentence: "Le débat contemporain sur le bonheur aristotélicien, dont Hardie a fixé les termes en 1965, oppose une interprétation « inclusive » et une interprétation « ___ »."
+    answer: "dominante"
+    alt: []
+  - id: m8-i2-7
+    sentence: "Pour les partisans de l'interprétation « dominante » du bonheur aristotélicien, la fin du livre X de l'*Éthique à Nicomaque* est l'aboutissement de la vie humaine : celle-ci ne serait pleinement heureuse que dans la ___."
+    answer: "contemplation"
+    alt: []
+  - id: m8-i2-8
+    sentence: "Selon Natali, le débat entre lecture « inclusive » et lecture « dominante » du bonheur aristotélicien se trouve déjà chez les commentateurs ___ d'Aristote."
+    answer: "anciens"
+    alt: []
+  - id: m8-i2-9
+    sentence: "Entre lecture « dominante » et lecture « inclusive » du bonheur aristotélicien, la lecture « aporétique » d'___ voit dans l'éthique d'Aristote une fracture de la nature humaine entre temps et éternité, contingent et nécessaire."
+    answer: "Aubenque"
+    alt: []
+  - id: m8-i2-10
+    sentence: "L'approche « génétique » de l'*Éthique à Nicomaque* fait du livre X un texte issu de la « jeunesse ___ » d'Aristote, hypothèse que Chaintreuil juge difficilement tenable."
+    answer: "platonicienne"
+    alt: []
+  - id: m8-i2-11
+    sentence: "Chaintreuil réduit l'incohérence entre les deux bonheurs aristotéliciens, les « deux visages du bonheur » selon Charlotte Murgier, en notant qu'ils sont tous deux des activités, en grec, translittéré, ___."
+    answer: "energeiai"
+    alt: []
+  - id: m8-i2-12
+    sentence: "Aristote définit le bien pratique comme un ___ : non une disposition, mais l'action réalisée."
+    answer: "prakton"
+    alt: []
+  - id: m8-i2-13
+    sentence: "Par « bien extérieur », il faut entendre une forme de ___ de la vertu, sur laquelle elle se déploie et dont elle doit faire usage dans son activité."
+    answer: "matière"
+    alt: []
+  - id: m8-i2-14
+    sentence: "Pour être libéral, il faut avoir de l'argent : le pauvre ne peut pas être libéral, pas plus qu'il ne peut être ___ ou prodigue."
+    answer: "avare"
+    alt: []
+  - id: m8-i2-15
+    sentence: "Ceux qui prétendent que l'homme attaché à la ___ est heureux à condition qu'il soit bon profèrent un non-sens (VII, 14, 1153b17-20)."
+    answer: "roue"
+    alt: []
+  - id: m8-i2-16
+    sentence: "En faisant de la vertu une activité qui a besoin de biens extérieurs, Aristote rejette les paradoxes des ___, que porte en germe l'éthique socratique."
+    answer: "stoïciens"
+    alt: []
+  - id: m8-i2-17
+    sentence: "La disposition seule, en grec `hexis`, peut exister sans produire aucun bien : ainsi du vertueux qui ___, et qui n'est pas vertueux en acte."
+    answer: "dort"
+    alt: []
+  - id: m8-i2-18
+    sentence: "« De même qu'aux Jeux olympiques, ce ne sont pas les plus beaux et les plus forts qui sont couronnés, mais ceux qui ___ » (I, 9) : la vertu ne se réduit pas à la disposition."
+    answer: "combattent"
+    alt: []
 - id: m8-p1
   title: "Le bonheur de la vertu morale est humain"
+  notes: |-
+    **Aristote vient d'établir, au chapitre 7, que la vie la plus heureuse est celle de l'intellect ; il en vient ici au bonheur de « la vertu qui reste », la vertu morale.** Il ne lui reconnaît la première place qu'« à titre secondaire » : non que cette vie soit moins heureuse, mais son bonheur, parfait en son genre, est moins *le* bonheur que celui de la vie intellectuelle (Bodéüs).
+
+    La raison : les activités de la vertu morale sont **humaines**. Aristote le montre en trois constats, qui font d'elles des vertus du **composé**, l'âme unie au corps :
+
+    - Relations : les actes justes ou courageux se font « en relation les uns avec les autres », dans les contrats, les services, la vie affective ; les vertus morales sont des vertus sociales.
+    - Corps et affections : la vertu du caractère semble parfois « venir du corps » (la tempérance naturelle) et elle est intimement liée aux affections.
+    - Sagacité : la sagacité (`phronēsis`) est en conjonction avec la vertu du caractère ; ses principes traduisent les vertus morales, et leur rectitude traduit la sagacité (VI, 13).
+
+    Or les vertus du composé sont humaines ; donc aussi la vie qui les exprime, et le bonheur qui leur correspond.
+
+    ! « Humaines » s'entend en deux sens difficilement dissociables : par opposition au **divin**, ce qui fait de ce bonheur un bonheur secondaire ; par opposition à ce qui n'est pas humain dans l'homme, ce qui en fait un bonheur **parfait** en son genre.
   passage:
     label: "1178a9-22"
     text: "Cependant, à titre secondaire, la vie la plus heureuse est celle qui traduit la vertu qui reste. C'est que les activités correspondant à cette vertu sont humaines. En effet, quand nous exécutons des actes justes ou courageux ou tous les autres actes vertueux, c'est en relation les uns avec les autres et que ce soit lors de contrats, de services et d'actions de toutes sortes ou que ce soit dans la vie affective, nous veillons constamment à ce qui convient à chacun. Or ces actes paraissent être, sans exception, des actes humains. Dans certains cas, d'ailleurs, la vertu du caractère semble venir du corps, et dans beaucoup de cas, elle semble intimement liée aux affections. Du reste, la sagacité elle aussi est en conjonction avec la vertu du caractère, comme celle-ci est en conjonction avec la sagacité, puisque aussi bien les principes de la sagacité traduisent les vertus morales, tandis que la rectitude de celles-ci traduit la sagacité. Et comme elles sont également rattachées aux affections, ces vertus doivent mettre en jeu le composé. Or les vertus du composé sont humaines. Donc, c'est aussi le cas de l'existence qui les exprime, ainsi que du bonheur qui leur correspond."
@@ -143,6 +324,19 @@ lessons:
     alt: []
 - id: m8-p2
   title: "Le bonheur de l'intelligence est indépendant"
+  notes: |-
+    **Voici la thèse du texte : le bonheur de l'intelligence est « indépendant » (Tricot : « séparé »), c'est-à-dire plus autarcique que celui de la vertu morale.** Aristote développe ici le quatrième argument du chapitre 7 (l'autarcie, 1177a27-b1) en examinant le rapport des deux vertus aux **biens extérieurs** ; certains lisent d'ailleurs ce passage comme un doublet.
+
+    **Cela ne va pourtant pas de soi.** Les stoïciens pensent la vertu pratique comme parfaitement autarcique : l'archer de Caton (Cicéron, *De finibus*) vise la cible, mais sa fin est de bien viser, et un coup de vent n'y change rien. Et la contemplation elle-même exige des conditions matérielles. Il faut donc ou bien renoncer à fonder la supériorité du sage sur son autarcie, ou bien montrer que la vertu pratique implique **par essence** une plus grande dépendance. Le texte prend la seconde voie.
+
+    |  | Moment du texte |
+    | **1178a22-28** | la thèse, et un premier rapport aux biens extérieurs |
+    | **1178a28-33** | quatre exemples de vertus morales qui en dépendent |
+    | **1178a33-b7** | la justification : décision et action |
+
+    Aristote commence par une **égalité** : les deux vertus ont besoin, et à titre égal, des biens nécessaires à la vie. La différence n'est d'abord qu'une différence de degré, avancée avec prudence (« on peut penser », le verbe `dokein` à l'optatif) : le besoin des services extérieurs est « modeste » pour la vertu intellectuelle, « certainement moindre » que pour la vertu morale. La parenthèse sur l'homme politique, qui « se tracasse » davantage de son corps, s'éclaire par l'argument du loisir (`scholē`) au chapitre 7.
+
+    ! « Indépendant » ne veut pas dire absolument indépendant : le sage, comme le prudent, a besoin de vivre, de se nourrir, de se loger.
   passage:
     label: "1178a22-28"
     text: "Le bonheur de l'intelligence en revanche est indépendant. On n'en dira en effet pas plus à son sujet, car un exposé rigoureux outrepasse notre propos, mais on peut penser que même le besoin des services extérieurs est modeste dans le cas de la vertu intellectuelle, ou certainement moindre que dans le cas de la vertu morale. En effet, les biens nécessaires sont requis dans les deux cas et même à titre égal, admettons-le, quoique l'homme politique se tracasse en permanence de son corps et de toutes les choses du même ordre ; mais laissons, car cela ne peut faire qu'une petite différence."
@@ -186,30 +380,6 @@ lessons:
     sentence: "Le passage où Aristote affirme que « le bonheur de l'intelligence en revanche est indépendant » et qu'il a moins besoin des services extérieurs que la vertu morale se trouve dans l'*Éthique à Nicomaque* au livre ___."
     answer: "X, 8"
     alt: []
-  - id: m8-p2-11
-    sentence: "Au chapitre 7 du livre X de l'*Éthique à Nicomaque*, Aristote donne ___ arguments en faveur de la supériorité du bonheur de la contemplation sur celui de l'activité pratique."
-    answer: "huit"
-    alt: []
-  - id: m8-p2-12
-    sentence: "Le quatrième des huit arguments du chapitre 7 du livre X en faveur de la supériorité de la vie contemplative tient à sa plus grande autosuffisance, en grec, translittéré, ___."
-    answer: "autarkeia"
-    alt: []
-  - id: m8-p2-13
-    sentence: "Le quatrième argument du livre X de l'*Éthique à Nicomaque* en faveur de la vie contemplative, celui de son autarcie, que X, 8 développe, se lit en ___."
-    answer: "1177a27-b1"
-    alt: []
-  - id: m8-p2-14
-    sentence: "Le débat contemporain sur le bonheur aristotélicien, dont Hardie a fixé les termes en 1965, oppose une interprétation « inclusive » et une interprétation « ___ »."
-    answer: "dominante"
-    alt: []
-  - id: m8-p2-15
-    sentence: "Pour les partisans de l'interprétation « dominante » du bonheur aristotélicien, la fin du livre X de l'*Éthique à Nicomaque* est l'aboutissement de la vie humaine : celle-ci ne serait pleinement heureuse que dans la ___."
-    answer: "contemplation"
-    alt: []
-  - id: m8-p2-16
-    sentence: "Entre lecture « dominante » et lecture « inclusive » du bonheur aristotélicien, la lecture « aporétique » d'___ voit dans l'éthique d'Aristote une fracture de la nature humaine entre temps et éternité, contingent et nécessaire."
-    answer: "Aubenque"
-    alt: []
   - id: m8-p2-17
     sentence: "Le bonheur de l'intelligence, que Bodéüs dit « indépendant » et Tricot « séparé » de la condition corporelle, est qualifié en grec, translittéré, de ___ (1178a22)."
     answer: "kechōrismenē"
@@ -238,8 +408,28 @@ lessons:
     sentence: "Le passage 1178a24-b7 reprend en les amplifiant des considérations de 1177a27-b1 : certains y voient un ___, version ancienne de ce qui précède conservée au mauvais endroit, ce que Bodéüs juge indémontrable."
     answer: "doublet"
     alt: []
+  - id: m8-p2-24
+    sentence: "Pour montrer que la vertu pratique pourrait être elle aussi autarcique, Chaintreuil rappelle la métaphore de l'___ que Cicéron prête au stoïcien Caton dans le *De finibus*."
+    answer: "archer"
+    alt: []
+  - id: m8-p2-25
+    sentence: "Dans la métaphore stoïcienne de l'archer, la fin (`telos`), bien viser, se distingue du but, en grec, translittéré, ___ : atteindre la cible, ce qui ne dépend pas de l'archer."
+    answer: "skopos"
+    alt: []
 - id: m8-p3
   title: "Quatre exemples : la vertu morale a besoin de biens extérieurs"
+  notes: |-
+    **Ce qui semblait une différence de degré devient une différence de nature.** Aristote ne parle plus des conditions préalables de l'activité (survivre), mais de ce **sur quoi** elle s'exerce : le prudent agit *sur* des biens extérieurs, qui sont la matière même de sa vertu ; le sage, non.
+
+    |  | A besoin de | Pour |
+    | **Libéralité** | l'argent | exercer ses libéralités |
+    | **Justice** | l'argent | acquitter ce qu'on doit |
+    | **Courage** | la puissance (`dunamis`) | moyens militaires, armement |
+    | **Tempérance** | la liberté d'agir (`exousia`) | pouvoir prendre les plaisirs qui conviennent |
+
+    La parenthèse sur la justice a une portée générale : les souhaits ne se voient pas, et même les injustes prétendent vouloir agir justement. La vertu ne se réduit donc pas au souhait (`boulēsis`) ; c'est ce qu'expliquera le dernier moment du texte, en distinguant la décision et l'acte.
+
+    ! La tempérance n'a pas besoin de l'intempérance : Tricot glose « une possibilité de se livrer à l'intempérance », mais le grec dit seulement `exousia`, la liberté d'agir. Se montrer modéré, c'est aussi prendre plaisir à ce qui convient, et il faut en avoir les moyens (Chaintreuil).
   passage:
     label: "1178a28-33"
     text: "En revanche, si l'on considère leurs activités respectives, la différence sera considérable. L'homme libéral en effet aura besoin d'argent pour exercer la libéralité ainsi que l'homme juste par conséquent, pour acquitter ce qu'il doit. Les souhaits de justice en effet ne sont pas évidents et même les gens qui ne sont pas justes font mine de souhaiter agir justement. De son côté, l'homme courageux aura besoin de puissance si tant est qu'il veuille mener jusqu'au bout une entreprise qui traduise sa vertu, et l'homme tempérant, de la liberté qu'on lui laisse d'agir à son gré."
@@ -345,6 +535,14 @@ lessons:
     alt: []
 - id: m8-p4
   title: "Décision et actions ; celui qui médite vit en homme"
+  notes: |-
+    **La raison de fond : la vertu consiste à la fois dans la décision (`proairesis`) et dans l'action (`praxis`), et sa perfection réunit les deux.** C'est la décision qui fait la vertu (VIII, 15) : sans elle, l'action n'est vertueuse que par accident. Mais sans l'action, la décision se réduit à l'intention. Or l'action requiert des appuis extérieurs, d'autant plus nombreux qu'elle est plus grande et plus belle.
+
+    **Celui qui médite, au contraire, n'a besoin d'aucun appui pour son activité même** ; les choses extérieures y sont même des obstacles, qui ôtent le loisir de contempler. Qu'on pense au mathématicien : connaître des principes et des théorèmes ne demande la possession d'aucun bien extérieur.
+
+    **Nuance finale : en tant qu'homme vivant parmi d'autres, il choisit aussi d'agir**, et il aura besoin d'appuis « pour vivre en homme » ; s'il ne vivait que de contemplation, il serait un dieu. Selon Bodéüs, la vie méditative inclut donc nécessairement les vertus morales, mais la réciproque n'est pas vraie.
+
+    ! La conclusion n'est pas l'indépendance absolue du sage : le caractère séparé de la contemplation fonde une supériorité **de degré** dans l'autarcie.
   passage:
     label: "1178a33-b7"
     text: "Comment en effet, lui ou un autre pourrait-il, sinon, manifester sa vertu, alors qu'on balance sur la question de savoir ce qui, de la décision ou des actions, détermine le mieux la vertu ? On se le demande dans l'idée qu'elle réside dans les deux à la fois ; par conséquent, la perfection complète implique évidemment les deux, mais en fonction des actions, elle demande beaucoup d'appuis extérieurs et d'autant plus que ces actions sont meilleures et plus belles. Celui qui médite, en revanche, ne requiert aucun appui de ce genre, du moins pour son activité. Au contraire, les choses extérieures sont pour ainsi dire des obstacles, du moins à sa méditation. Mais en tant qu'homme et en tant qu'il partage la vie d'un assez grand nombre, il choisit d'exécuter les actes qui traduisent la vertu. Il aura donc besoin de ces sortes d'appuis pour vivre en homme."
