@@ -254,6 +254,9 @@ structurer avec un court script Python (lancé avec `PYTHONUTF8=1`) :
   trahit une coquille, à corriger et à signaler.
 - **Ordre** : cartes-citation puis cartes-explication, l'ordre du fichier
   gardé dans chaque groupe.
+- Le script `.claude/skills/verifier-liste/check_list.ts` fait d'un coup
+  les contrôles mécaniques (format, fragments, coquilles, fidélité avec
+  `--texte`) : le lancer avant de structurer.
 - Appliquer ensuite la règle des trous (§ 5) et proposer les rappels et
   l'introduction (§ 3, § 4) ; corriger seulement les coquilles évidentes, et
   signaler le reste sans le réécrire.
