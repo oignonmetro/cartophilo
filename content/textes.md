@@ -132,7 +132,3 @@ préfixes `§n, Intitulé :`. Le découpage se retouche avant création : « ✂
 ici » entre deux cartes, « Fusionner avec la précédente », repère et titre de
 chaque leçon, texte du paragraphe reconstitué depuis les cartes-citation (deux
 cartes qui ne redonnent pas le même texte sont signalées).
-
-Avant de coller une liste, la skill `verifier-liste` en contrôle le format,
-la fidélité au texte de référence et le choix des trous, et en rend une
-version corrigée.

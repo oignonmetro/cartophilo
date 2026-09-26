@@ -38,9 +38,7 @@ l'épreuve :
   - **Textes** : une unité par texte étudié, qui fait savoir le citer
     (paragraphe par paragraphe, cartes-citation puis cartes-explication).
     Format et consignes dans `content/textes.md` ; pour en créer une,
-    utiliser la skill `unite-texte` (`.claude/skills/unite-texte/`) ; pour
-    contrôler une liste avant de la coller dans l'éditeur, la skill
-    `verifier-liste`.
+    utiliser la skill `unite-texte` (`.claude/skills/unite-texte/`).
 - **Hors-programme**, un sous-onglet par domaine philosophique :
   - La morale
   - La métaphysique
