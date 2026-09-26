@@ -121,7 +121,7 @@ export function PassageCard({
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">
       <div className="flex shrink-0 items-center justify-between gap-3">
-        <PassageHeader label={passage.label} heading={passage.heading} fragment={point.fragment} />
+        <PassageHeader label={passage.label} heading={passage.heading} source={passage.source} fragment={point.fragment} />
         <ModeSwitch mode={mode} disabled={answered} onChange={setMode} />
       </div>
 
@@ -248,11 +248,25 @@ const RATINGS = [
 
 /**
  * Repère du paragraphe, « §1 · 1/3 », et son intitulé : ce qui situe la carte
- * dans le texte, surtout en révision, où elle revient seule.
+ * dans le texte, surtout en révision, où elle revient seule. `source`
+ * (l'ouvrage cité) ne s'affiche que dans une unité qui en articule plusieurs
+ * (voir `passageSchema.source`) : sans lui, deux « §1 » d'œuvres différentes
+ * seraient indiscernables une fois la carte détachée de sa leçon.
  */
-function PassageHeader({ label, heading, fragment }: { label: string; heading: string; fragment?: string }) {
+function PassageHeader({
+  label,
+  heading,
+  source,
+  fragment,
+}: {
+  label: string
+  heading: string
+  source?: string
+  fragment?: string
+}) {
   return (
     <div className="flex min-w-0 flex-col">
+      {source && <span className="text-[0.65rem] font-bold text-ink-faint uppercase">{source}</span>}
       <span className="text-xs font-black tracking-wide text-violet uppercase">
         {label}
         {fragment && <span className="text-ink-faint"> · {fragment}</span>}

@@ -94,6 +94,49 @@ lessons:
 - **Pas de limite de longueur pour `answer`** : une carte-citation peut faire
   retrouver une phrase entière.
 
+## Une unité, plusieurs textes
+
+Un commentaire articule parfois deux textes d'un même auteur autour d'une
+seule démonstration (l'un cité, expliqué, puis repris pour illustrer l'analyse
+de l'autre) : les séparer en deux unités couperait ce va-et-vient, et
+répéterait dans chacune la thèse commune qui les tient ensemble. Dans ce cas,
+une seule unité peut les citer l'un après l'autre, à condition que chaque
+paragraphe porte sa référence propre dans **`passage.source`** (l'ouvrage
+cité, par exemple `"Discours sur l'origine de l'inégalité"` ou `"Du contrat
+social, I, 8"`) :
+
+```yaml
+lessons:
+- id: <id>-l1
+  title: "…"
+  passage:
+    source: "Discours sur l'origine et les fondements de l'inégalité"
+    label: "Fragment 1"     # voir plus bas : pas de §n ici
+    text: "…"
+- id: <id>-l4
+  title: "…"
+  passage:
+    source: "Du contrat social, I, 8"
+    label: "§1"
+    text: "…"
+```
+
+`source` s'affiche avec `label`, dans « Lire le texte » (un repère sépare
+visuellement le passage à un nouvel ouvrage) comme en tête de carte, y compris
+en révision : sans lui, deux fragments d'œuvres différentes portant le même
+repère (deux « §1 », par exemple) seraient indiscernables une fois la carte
+détachée de sa leçon.
+
+**Le repère change de nature avec l'ouvrage**, et recommence à chaque fois
+qu'on change de texte : rien n'oblige `label` à suivre `§1, §2…` d'un bout à
+l'autre de l'unité. Un texte au découpage en paragraphes reconnu (le Contrat
+social, par exemple, dont les chapitres sont courts et numérotés dans les
+éditions de référence) garde `§1`, `§2`… Un texte qu'on ne cite pas
+habituellement par paragraphe (le Second Discours, par exemple), ou dont
+l'extrait est fragmenté sans suivre les alinéas du texte, prend un repère qui
+ne prétend à aucune réalité textuelle — `"Fragment 1"`, `"Fragment 2"`… —
+plutôt qu'un faux `§n`.
+
 ## Dans l'app
 
 - La carte se joue au choix en **révélant la réponse puis en s'auto-évaluant**
@@ -119,7 +162,9 @@ la main, sans toucher au YAML.
 « + Nouvelle unité » demande d'abord le genre de l'unité (classique ou de
 texte), puis, dans le même formulaire, la référence, la présentation et le
 repère de la première leçon (`§1`, `Introduction`…). Chaque leçon d'une unité
-de texte gagne un onglet **Texte** : on y colle le paragraphe, puis on
+de texte gagne un onglet **Texte** : on y colle le paragraphe, un champ
+« Référence » facultatif y renseigne `passage.source` (utile seulement si
+l'unité articule plusieurs textes, voir plus haut), puis on
 sélectionne le morceau à faire retrouver et « Trouer dans sa phrase » (ou
 « dans tout le paragraphe ») crée la carte-citation correspondante. Dans
 l'onglet Exercices, chaque carte porte son genre (citation ou explication) et

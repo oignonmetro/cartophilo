@@ -27,7 +27,11 @@ puis citations, puis explications ciblées.
   le Hors-programme ou La vie, la piste du domaine (par exemple `morale`),
   sans onglet Textes dédié, avec un `group` (« La morale d'Aristote »).
 - **Le texte**, dans la traduction que l'utilisateur veut faire apprendre (le
-  lui demander si le commentaire en cite une autre).
+  lui demander si le commentaire en cite une autre). **Si le commentaire en
+  articule deux** (un même auteur, une seule démonstration qui va de l'un à
+  l'autre), juger s'il vaut mieux les séparer en deux unités ou les traiter
+  comme une seule (§ 1 « Plusieurs textes »), et le dire à l'utilisateur avant
+  de créer quoi que ce soit s'il n'a pas déjà tranché.
 - **La référence** : œuvre, livre, chapitre, lignes (Bekker, Stephanus,
   Ennéades…), traduction.
 - **Le commentaire et les notes**, s'il y en a : ce sont eux qui disent ce qui
@@ -75,6 +79,26 @@ Ne demander que ce qui manque vraiment, en une seule question groupée.
   chaque paragraphe, la thèse, les notions, les images, et ce que le
   commentateur désigne comme décisif. C'est la carte des trous (§ 5).
 
+### Plusieurs textes
+
+Rare, mais parfois le bon choix (voir § 0) : un commentaire construit une
+seule démonstration à partir de deux textes du même auteur, s'appuyant sur
+l'un pour éclairer l'autre. Les séparer romprait ce mouvement et dupliquerait
+dans les deux unités la thèse qui les tient ensemble ; une seule unité peut
+alors les citer l'un après l'autre, à condition que chaque leçon porte sa
+référence dans **`passage.source`** (l'ouvrage cité, par exemple `"Discours
+sur l'origine et les fondements de l'inégalité"`), affichée avec `label`
+partout où la carte peut revenir détachée de sa leçon (révision, « Lire le
+texte »).
+
+`label` change de nature avec l'ouvrage, et **recommence** à chaque
+changement de texte plutôt que de continuer la numérotation du texte
+précédent : `§1, §2…` pour un texte qu'on cite habituellement par paragraphe
+(des chapitres courts et numérotés dans l'édition de référence, comme *Du
+contrat social*) ; sinon, un repère qui ne prétend à aucune réalité textuelle
+— `"Fragment 1"`, `"Fragment 2"`… — plutôt qu'un faux `§n`, surtout si
+l'extrait est fragmenté sans suivre les alinéas du texte.
+
 ## 2. Écrire au fil de l'eau
 
 Une leçon à la fois, directement dans le fichier : ne jamais rédiger toute
@@ -120,6 +144,7 @@ lessons:
     <Explication du paragraphe, voir § 4.>
   passage:
     label: "§1"                    # ou les lignes : "1178a9-22"
+    # source: "<Ouvrage cité>"     # seulement si l'unité en articule plusieurs, voir § 1
     text: "<Le paragraphe en entier, tel quel, sans guillemets autour>"
   points:
   - id: <id>-p1-1

@@ -186,11 +186,13 @@ export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext:
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">
       <p className={`shrink-0 text-center text-xs font-black uppercase tracking-widest ${tone.eyebrow}`}>
-        {exercise.passage?.text
-          ? `Le texte · ${exercise.passage.label}`
-          : exercise.passage
-            ? exercise.passage.label
-            : 'Rappel'}
+        {exercise.passage?.source
+          ? `${exercise.passage.source} · ${exercise.passage.label}`
+          : exercise.passage?.text
+            ? `Le texte · ${exercise.passage.label}`
+            : exercise.passage
+              ? exercise.passage.label
+              : 'Rappel'}
       </p>
 
       {/*

@@ -69,6 +69,8 @@ interface PointDTO {
 interface PassageDTO {
   label: string
   text: string
+  /** L'ouvrage cité, seulement utile dans une unité qui en articule plusieurs (voir `passageSchema.source`). */
+  source?: string
 }
 
 /** Une leçon à créer d'un coup, avec son contenu (voir `POST /api/lessons`). */
@@ -280,6 +282,7 @@ function passageNode(passage: PassageDTO): YAMLMap {
     scalar.type = text.includes('\n') ? Scalar.BLOCK_LITERAL : Scalar.QUOTE_DOUBLE
     map.set('text', scalar)
   }
+  if (passage.source?.trim()) map.set('source', dq(passage.source.trim()))
   return map
 }
 
@@ -602,7 +605,13 @@ export function contentEditorApi(): Plugin {
             sendJson(res, 200, {
               title: String(lessonData.title ?? lesson),
               notes: String(lessonData.notes ?? ''),
-              passage: passage ? { label: String(passage.label ?? ''), text: String(passage.text ?? '') } : null,
+              passage: passage
+                ? {
+                    label: String(passage.label ?? ''),
+                    text: String(passage.text ?? ''),
+                    source: passage.source ? String(passage.source) : undefined,
+                  }
+                : null,
               kind,
               // `alt` est optionnel dans le contenu (beaucoup de points n'en ont
               // jamais eu besoin, voir content/courses/hors-programme) mais pas

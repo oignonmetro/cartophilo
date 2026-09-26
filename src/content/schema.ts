@@ -110,6 +110,15 @@ export const passageSchema = z.object({
    * paragraphe cité à apprendre.
    */
   text: z.string().min(1).optional(),
+  /**
+   * L'ouvrage ou la référence cités par ce paragraphe : seulement utile
+   * quand une même unité articule plusieurs textes (voir content/textes.md
+   * « Une unité, plusieurs textes »). Affiché avec `label`, y compris en
+   * révision où une carte revient seule, loin de sa leçon — sans lui, deux
+   * fragments d'œuvres différentes portant le même repère (deux « §1 », par
+   * exemple) seraient indiscernables.
+   */
+  source: z.string().min(1).optional(),
 })
 
 /** Une forme conjuguée : la personne et la forme attendue. */
@@ -340,6 +349,8 @@ export interface PassageContext {
   label: string
   /** L'intitulé du paragraphe, c'est-à-dire le titre de sa leçon. */
   heading: string
+  /** Voir `passageSchema.source`. */
+  source?: string
 }
 
 /** Entrée du manifeste listant les cours disponibles. */

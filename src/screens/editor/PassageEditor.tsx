@@ -70,6 +70,22 @@ export function PassageEditor({
           ))}
         </div>
 
+        {/*
+         * Facultatif : seulement utile quand l'unité articule plusieurs
+         * textes (voir content/textes.md « Une unité, plusieurs textes »),
+         * pour que « Lire le texte » et l'en-tête de révision distinguent de
+         * quel ouvrage vient ce paragraphe.
+         */}
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs font-black tracking-wide text-ink-soft uppercase">Référence</span>
+          <input
+            value={passage.source ?? ''}
+            onChange={(event) => onChange({ ...passage, source: event.target.value || undefined })}
+            placeholder="Facultatif : l'ouvrage cité, si l'unité en articule plusieurs"
+            className={`${inputClass} min-w-64 flex-1 py-1`}
+          />
+        </div>
+
         {isIntro ? (
           <p className="rounded-xl bg-ink/4 p-4 text-sm text-ink-soft">
             Leçon d’introduction : pas de texte cité. Elle prépare la lecture par son <strong>rappel</strong> (le
@@ -133,6 +149,7 @@ export function PassageEditor({
         </p>
         <div className="card-3d mx-auto flex w-full max-w-lg flex-col gap-3 self-center px-6 py-6">
           <p className="text-xs font-black tracking-widest text-violet uppercase">
+            {passage.source && `${passage.source} · `}
             {isIntro ? passage.label : `Le texte · ${passage.label || '…'}`}
           </p>
           {!isIntro && passage.text.trim() ? (

@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { motion } from 'framer-motion'
 import { isPassageLesson } from '@/content/course'
 import type { Unit } from '@/content/schema'
@@ -46,15 +47,31 @@ export function TextSheet({ unit, onClose }: { unit: Unit; onClose: () => void }
               <NoteBlocks notes={unit.intro} tone={tone} />
             </section>
           )}
-          {passages.map((lesson) => (
-            <section key={lesson.id} className="flex flex-col gap-2">
-              <h3 className="text-sm leading-snug font-extrabold text-ink">
-                <span className={`font-black ${tone.eyebrow}`}>{lesson.passage.label}</span>{' '}
-                <span className="text-ink-faint">·</span> {lesson.title}
-              </h3>
-              <PassageText text={lesson.passage.text ?? ''} />
-            </section>
-          ))}
+          {passages.map((lesson, index) => {
+            // Une unité qui articule plusieurs textes (voir content/textes.md
+            // « Une unité, plusieurs textes ») annonce chacun d'un repère : sans
+            // lui, leurs paragraphes s'enchaîneraient comme un texte unique.
+            const source = lesson.passage.source
+            const newSource = source && source !== passages[index - 1]?.passage.source
+            return (
+              <Fragment key={lesson.id}>
+                {newSource && (
+                  <p
+                    className={`-mb-2 border-t-2 border-line pt-4 text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}
+                  >
+                    {source}
+                  </p>
+                )}
+                <section className="flex flex-col gap-2">
+                  <h3 className="text-sm leading-snug font-extrabold text-ink">
+                    <span className={`font-black ${tone.eyebrow}`}>{lesson.passage.label}</span>{' '}
+                    <span className="text-ink-faint">·</span> {lesson.title}
+                  </h3>
+                  <PassageText text={lesson.passage.text ?? ''} />
+                </section>
+              </Fragment>
+            )
+          })}
         </div>
 
         <button

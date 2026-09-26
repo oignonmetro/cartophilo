@@ -1157,7 +1157,7 @@ function buildPassageSession(
   level: number,
   intro: string | undefined,
 ): Exercise[] {
-  const context: PassageContext = { label: lesson.passage.label, heading: lesson.title }
+  const context: PassageContext = { label: lesson.passage.label, heading: lesson.title, source: lesson.passage.source }
   const rule: Exercise[] =
     level <= 0
       ? [
