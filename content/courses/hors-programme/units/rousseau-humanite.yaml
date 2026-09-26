@@ -1,0 +1,374 @@
+id: rousseau-humanite
+title: "Rousseau : l'homme naturel et l'homme social"
+subtitle: "Discours sur l'inégalité ; Du contrat social, I, 8"
+icon: page
+color: orange
+intro: |-
+  Deux textes de Rousseau, lus l'un à la lumière de l'autre : un extrait du *Discours sur
+  l'origine et les fondements de l'inégalité* (le Second Discours), sur l'origine du langage,
+  puis le chapitre huit du premier livre du *Contrat social*, sur le passage de l'état de
+  nature à l'état civil. Ensemble, ils permettent d'élucider le statut de l'homme naturel dans
+  la philosophie de Rousseau, et de comprendre ce que la société lui apporte.
+lessons:
+- id: rousseau-humanite-i1
+  title: "Rousseau, penseur de la nature ou père des sciences sociales ?"
+  notes: |-
+    Rousseau est reçu comme le penseur par excellence de l'état de nature et de la bonté originelle de l'homme, au point que Voltaire a pu le caricaturer en ardent défenseur d'un retour à la vie naturelle. Mais cette image entre en tension avec un autre héritage : Durkheim voit très tôt en Rousseau celui qui reconnaît à la société un niveau de réalité qui dépasse les individus et agit sur eux, le plaçant ainsi dans la préhistoire de la sociologie ; Lévi-Strauss, de son côté, fait de lui l'un des pères des sciences humaines, notamment à cause des longues notes du *Second Discours*, où Rousseau décrit avec précision la variabilité des modes de vie de l'humanité, intégrant un regard ethnographique à sa démarche philosophique.
+
+    Il y a donc un paradoxe à faire de Rousseau à la fois le chantre de l'état de nature et l'un des précurseurs des sciences de l'homme, qui posent pourtant comme axiome que l'homme est indissociable de la société, déterminé par son appartenance à elle. L'élucider suppose d'abord de préciser le statut de l'homme naturel dans la philosophie de Rousseau, puis de comprendre ce que la société lui apporte : c'est ce que les deux textes de cette unité, l'un tiré du *Discours sur l'origine de l'inégalité* (le Second Discours), l'autre du *Contrat social*, permettent d'établir l'un après l'autre.
+  passage:
+    label: "Introduction"
+  points:
+  - id: rousseau-humanite-i1-1
+    sentence: "Selon Durkheim, Rousseau reconnaît que la société possède un niveau de réalité qui ___ les individus et agit sur eux."
+    answer: "dépasse"
+    alt: []
+  - id: rousseau-humanite-i1-2
+    sentence: "Lévi-Strauss voit en Rousseau l'un des pères des sciences humaines, en particulier à cause des longues notes du Second Discours consacrées à la ___ des modes de vie de l'humanité."
+    answer: "variabilité"
+    alt: []
+  - id: rousseau-humanite-i1-3
+    sentence: "Voltaire a pu caricaturer Rousseau en faisant de lui l'ardent défenseur d'un retour à la ___."
+    answer: "vie naturelle"
+    alt: []
+- id: rousseau-humanite-i2
+  title: "Dépouiller l'homme civil pour trouver l'homme naturel"
+  notes: |-
+    D'un point de vue méthodologique, Rousseau procède par **dépouillement** à partir de l'homme civil : c'est de lui, et de lui seul, qu'on peut partir pour remonter vers l'homme naturel, dont la nature se trouve masquée par les artifices de la société. Il expose lui-même cette difficulté dès la préface du Second Discours, par une image désormais célèbre : la défiguration de l'homme social est comparable à celle de la statue de Glaucus, rendue méconnaissable par les flots, au point qu'il devient problématique, sinon impossible, de déterminer ce qu'est véritablement la nature de l'homme.
+
+    Menée rigoureusement, à condition de ne jamais confondre ce qui ressort de la nature et ce qui ressort de la société, cette démarche permet pourtant à Rousseau d'établir un résultat décisif : l'homme naturel est un individu autarcique, se suffisant à lui-même, sans la moindre relation avec ses congénères. Contre Aristote, pour qui l'homme est par nature un animal politique qui ne peut accomplir sa nature qu'au sein de la communauté, et contre l'école du droit naturel (le *jusnaturalisme*), pour qui l'homme est naturellement porté à la sociabilité, Rousseau soutient que rien, dans l'état de nature, ne prédispose l'homme à la société, pas même la famille. C'est cette thèse que les deux textes qui suivent mettent chacun à l'épreuve : le premier en montrant l'aporie de toute explication naturaliste de l'origine du langage, le second en décrivant ce que la société, une fois instituée, change effectivement dans la conduite de l'homme.
+
+    ! Piège : ne pas confondre cette absence de prédisposition sociale avec une malveillance native : Rousseau conteste tout autant la thèse hobbesienne d'un état de nature belliqueux.
+  passage:
+    label: "Introduction"
+  points:
+  - id: rousseau-humanite-i2-1
+    sentence: "Rousseau compare, dès la préface du Second Discours, la défiguration de l'homme social à celle de la statue de ___, rendue méconnaissable par les flots."
+    answer: "Glaucus"
+    alt: []
+  - id: rousseau-humanite-i2-2
+    sentence: "Contre Aristote et contre l'école du droit naturel, Rousseau soutient que rien dans l'état de nature ne prédispose l'homme à la ___."
+    answer: "société"
+    alt: []
+  - id: rousseau-humanite-i2-3
+    sentence: "Au terme de la méthode du dépouillement, l'homme naturel se révèle un individu ___, se suffisant à lui-même."
+    answer: "autarcique"
+    alt: []
+- id: rousseau-humanite-f1
+  title: "Le problème de l'origine des langues et la critique de Condillac"
+  notes: |-
+    Rousseau commence par écarter une fausse facilité : il pourrait se contenter de renvoyer aux recherches de Condillac sur l'origine du langage, qu'il dit connaître et approuver. Étienne de Condillac avait en effet consacré, dans son *Essai sur l'origine des connaissances humaines* (1746), quelques pages à cette question, imaginant la fiction de deux enfants isolés dans un désert : les secours qu'ils se portent mutuellement passent par des cris, qui deviennent peu à peu des signes arbitraires, puis, la génération suivante venue, un langage articulé.
+
+    Mais Rousseau refuse cette solution, pour une raison de principe qui commande toute la suite de son propos : Condillac, en imaginant deux enfants capables de coopérer et de se comprendre, **suppose déjà entre eux une forme de société** (précisément ce dont il faudrait expliquer l'apparition). La critique n'est donc pas de détail : c'est la méthode naturaliste elle-même, qui explique l'origine du langage par des capacités qu'elle présuppose sans le dire, que Rousseau met en cause dès l'ouverture de son propos.
+
+    ! Piège : Rousseau ne nie pas la valeur des travaux de Condillac (il dit confirmer « pleinement [son] sentiment ») ; il leur reproche seulement de déplacer, plutôt que de lever, la difficulté qu'ils prétendent traiter.
+  passage:
+    source: "Discours sur l'origine et les fondements de l'inégalité"
+    label: "Fragment 1"
+    text: "Qu'il me soit permis de considérer un instant les embarras de l'origine des langues. Je pourrais me contenter de citer ou de répéter ici les recherches que M. l'abbé de Condillac a faites sur cette matière, qui toutes confirment pleinement mon sentiment, et qui, peut-être, m'en ont donné la première idée. Mais la manière dont ce philosophe résout les difficultés qu'il se fait à lui-même sur l'origine des signes institués, montrant qu'il a supposé ce que je mets en question, savoir une sorte de société déjà établie entre les inventeurs du langage, je crois en renvoyant à ses réflexions devoir y joindre les miennes pour exposer les mêmes difficultés dans le jour qui convient à mon sujet."
+  points:
+  - id: rousseau-humanite-f1-1
+    fragment: "1/2"
+    sentence: "« Qu'il me soit permis de considérer un instant ___. Je pourrais me contenter de citer ou de répéter ici les recherches que M. l'abbé de Condillac a faites sur cette matière, qui toutes confirment pleinement mon sentiment, et qui, peut-être, m'en ont donné la première idée. »"
+    answer: "les embarras de l'origine des langues"
+    alt: []
+  - id: rousseau-humanite-f1-2
+    fragment: "2/2"
+    sentence: "« Mais la manière dont ce philosophe résout les difficultés qu'il se fait à lui-même sur l'origine des signes institués, montrant qu'___, savoir une sorte de société déjà établie entre les inventeurs du langage, je crois en renvoyant à ses réflexions devoir y joindre les miennes pour exposer les mêmes difficultés dans le jour qui convient à mon sujet. »"
+    answer: "il a supposé ce que je mets en question"
+    alt: []
+  - id: rousseau-humanite-f1-3
+    fragment: "2/2"
+    sentence: "« Mais la manière dont ce philosophe résout les difficultés qu'il se fait à lui-même sur l'origine des signes institués, montrant qu'il a supposé ce que je mets en question, savoir ___, je crois en renvoyant à ses réflexions devoir y joindre les miennes pour exposer les mêmes difficultés dans le jour qui convient à mon sujet. »"
+    answer: "une sorte de société déjà établie entre les inventeurs du langage"
+    alt: []
+  - id: rousseau-humanite-f1-4
+    sentence: "Dans son Essai sur l'origine des connaissances humaines (1746), Condillac imagine la fiction de deux ___ isolés dans un désert, qui en viennent à lier des idées à des signes arbitraires."
+    answer: "enfants"
+    alt: []
+  - id: rousseau-humanite-f1-5
+    sentence: "Le geste de Condillac s'inscrit dans la lignée de la philosophie empiriste anglaise, pour qui les comportements de l'homme civil trouveraient leur origine dans le développement naturel d'une ___ naturelle."
+    answer: "sensibilité"
+    alt: []
+- id: rousseau-humanite-f2
+  title: "Pourquoi la famille n'explique pas l'invention du langage"
+  notes: |-
+    Rousseau écarte ensuite l'explication la plus immédiate : les langues seraient nées dans le commerce domestique des pères, des mères et des enfants. Cette hypothèse, dit-il, commet **la faute de ceux qui raisonnent sur l'état de nature en y transportant les idées prises dans la société** : elle imagine une famille rassemblée dans une même habitation, unie par des liens aussi intimes et permanents que les nôtres, alors que rien, dans l'état primitif, ne fixe durablement les hommes ensemble.
+
+    Rousseau développe alors, contre Locke, une thèse essentielle : la famille n'est pas un fait de nature, mais une institution qui suppose déjà la société. Dans l'état primitif, chacun se loge au hasard, les unions sont fortuites, et la mère elle-même n'allaite et ne nourrit son enfant que par intérêt immédiat ; l'enfant, sitôt en état de chercher sa pâture, la quitte, et ils cessent bientôt de se reconnaître. Plus surprenant encore : puisque c'est l'enfant qui a le plus de besoins à faire comprendre, **c'est lui, et non la mère, qui invente l'essentiel de son propre langage** ; ce qui, loin d'unifier une langue commune, la multiplierait autant qu'il y a d'individus. Le paragraphe se referme sur une distinction décisive, qui vaut pour toute la suite du texte : que la mère dicte à l'enfant des mots montre seulement comment on *enseigne* des langues déjà formées ; cela n'apprend rien sur la manière dont elles se *forment*.
+
+    ! Piège : ce paragraphe ne nie pas que des enfants apprennent une langue de leurs parents (un fait patent) ; il nie seulement que ce fait explique l'invention du langage, qui suppose déjà résolu ce qui reste à expliquer.
+  passage:
+    source: "Discours sur l'origine et les fondements de l'inégalité"
+    label: "Fragment 2"
+    text: "La première qui se présente est d'imaginer comment elles purent devenir nécessaires ; car les hommes n'ayant nulle correspondance entre eux, ni aucun besoin d'en avoir, on ne conçoit ni la nécessité de cette invention, ni sa possibilité, si elle ne fut pas indispensable. Je dirais bien, comme beaucoup d'autres, que les langues sont nées dans le commerce domestique des pères, des mères, et des enfants : mais outre que cela ne résoudrait point les objections, ce serait commettre la faute de ceux qui raisonnant sur l'état de nature, y transportent les idées prises dans la société, voient toujours la famille rassemblée dans une même habitation, et ses membres gardant entre eux une union aussi intime et aussi permanente que parmi nous, où tant d'intérêts communs les réunissent. Au lieu que dans cet état primitif, n'ayant ni maison, ni cabanes, ni propriété d'aucune espèce, chacun se logeait au hasard, et souvent pour une seule nuit ; les mâles, et les femelles s'unissaient fortuitement selon la rencontre, l'occasion, et le désir, sans que la parole fût un interprète fort nécessaire des choses qu'ils avaient à se dire : ils se quittaient avec la même facilité. La mère allaitait d'abord ses enfants pour son propre besoin ; puis l'habitude les lui ayant rendus chers, elle les nourrissait ensuite pour le leur ; sitôt qu'ils avaient la force de chercher leur pâture, ils ne tardaient pas à quitter la mère elle-même ; et comme il n'y avait presque point d'autre moyen de se retrouver que de ne se pas perdre de vue, ils en étaient bientôt au point de ne pas même se reconnaître les uns les autres. Remarquez encore que l'enfant ayant tous ses besoins à expliquer, et par conséquent plus de choses à dire à la mère, que la mère à l'enfant, c'est lui qui doit faire les plus grands frais de l'invention, et que la langue qu'il emploie doit être en grande partie son propre ouvrage ; ce qui multiplie autant les langues qu'il y a d'individus pour les parler, à quoi contribue encore la vie errante, et vagabonde qui ne laisse à aucun idiome le temps de prendre de la consistance. Car de dire que la mère dicte à l'enfant les mots dont il devra se servir pour lui demander telle, ou telle chose, cela montre bien comment on enseigne des langues déjà formées, mais cela n'apprend point comment elles se forment."
+  points:
+  - id: rousseau-humanite-f2-1
+    fragment: "1/5"
+    sentence: "« La première qui se présente est d'imaginer comment elles purent devenir nécessaires ; car les hommes n'ayant nulle correspondance entre eux, ni aucun besoin d'en avoir, on ne conçoit ni la nécessité de cette invention, ni sa possibilité, si elle ne fut pas indispensable. Je dirais bien, comme beaucoup d'autres, que les langues sont nées dans le commerce domestique des pères, des mères, et des enfants : mais outre que cela ne résoudrait point les objections, ce serait commettre ___, voient toujours la famille rassemblée dans une même habitation, et ses membres gardant entre eux une union aussi intime et aussi permanente que parmi nous, où tant d'intérêts communs les réunissent. »"
+    answer: "la faute de ceux qui raisonnant sur l'état de nature, y transportent les idées prises dans la société"
+    alt: []
+  - id: rousseau-humanite-f2-2
+    fragment: "1/5"
+    sentence: "« La première qui se présente est d'imaginer comment elles purent devenir nécessaires ; car les hommes n'ayant nulle correspondance entre eux, ni aucun besoin d'en avoir, on ne conçoit ni la nécessité de cette invention, ni sa possibilité, si elle ne fut pas indispensable. Je dirais bien, comme beaucoup d'autres, que les langues sont nées dans le commerce domestique des pères, des mères, et des enfants : mais outre que cela ne résoudrait point les objections, ce serait commettre la faute de ceux qui raisonnant sur l'état de nature, y transportent les idées prises dans la société, ___, où tant d'intérêts communs les réunissent. »"
+    answer: "voient toujours la famille rassemblée dans une même habitation, et ses membres gardant entre eux une union aussi intime et aussi permanente que parmi nous"
+    alt: []
+  - id: rousseau-humanite-f2-3
+    fragment: "2/5"
+    sentence: "« Au lieu que dans cet état primitif, n'ayant ni maison, ni cabanes, ni propriété d'aucune espèce, ___ ; les mâles, et les femelles s'unissaient fortuitement selon la rencontre, l'occasion, et le désir, sans que la parole fût un interprète fort nécessaire des choses qu'ils avaient à se dire : ils se quittaient avec la même facilité. »"
+    answer: "chacun se logeait au hasard, et souvent pour une seule nuit"
+    alt: []
+  - id: rousseau-humanite-f2-4
+    fragment: "2/5"
+    sentence: "« Au lieu que dans cet état primitif, n'ayant ni maison, ni cabanes, ni propriété d'aucune espèce, chacun se logeait au hasard, et souvent pour une seule nuit ; les mâles, et les femelles s'unissaient fortuitement selon la rencontre, l'occasion, et le désir, sans que la parole fût un interprète fort nécessaire des choses qu'ils avaient à se dire : ___. »"
+    answer: "ils se quittaient avec la même facilité"
+    alt: []
+  - id: rousseau-humanite-f2-5
+    fragment: "3/5"
+    sentence: "« La mère allaitait d'abord ses enfants pour son propre besoin ; puis l'habitude les lui ayant rendus chers, elle les nourrissait ensuite pour le leur ; sitôt qu'ils avaient la force de chercher leur pâture, ___ ; et comme il n'y avait presque point d'autre moyen de se retrouver que de ne se pas perdre de vue, ils en étaient bientôt au point de ne pas même se reconnaître les uns les autres. »"
+    answer: "ils ne tardaient pas à quitter la mère elle-même"
+    alt: []
+  - id: rousseau-humanite-f2-6
+    fragment: "4/5"
+    sentence: "« Remarquez encore que l'enfant ayant tous ses besoins à expliquer, et par conséquent plus de choses à dire à la mère, que la mère à l'enfant, ___, et que la langue qu'il emploie doit être en grande partie son propre ouvrage ; ce qui multiplie autant les langues qu'il y a d'individus pour les parler, à quoi contribue encore la vie errante, et vagabonde qui ne laisse à aucun idiome le temps de prendre de la consistance. »"
+    answer: "c'est lui qui doit faire les plus grands frais de l'invention"
+    alt: []
+  - id: rousseau-humanite-f2-7
+    fragment: "5/5"
+    sentence: "« Car de dire que la mère dicte à l'enfant les mots dont il devra se servir pour lui demander telle, ou telle chose, ___. »"
+    answer: "cela montre bien comment on enseigne des langues déjà formées, mais cela n'apprend point comment elles se forment"
+    alt: []
+  - id: rousseau-humanite-f2-8
+    sentence: "Cette critique de l'hypothèse familiale vise notamment Locke, pour qui la famille humaine serait ___, alors que Rousseau soutient au contraire qu'elle suppose la société pour acquérir une existence durable."
+    answer: "naturelle"
+    alt: []
+  - id: rousseau-humanite-f2-9
+    sentence: "Rousseau développe cette thèse contre Locke dans l'une de ses propres notes savantes, désignée par le chiffre romain ___."
+    answer: "XII"
+    alt: []
+- id: rousseau-humanite-f3
+  title: "Le double cercle : parler pour penser, penser pour parler"
+  notes: |-
+    Rousseau formule ici le problème central de toute l'unité : l'institution du langage se heurte à deux cercles logiques, liés l'un à l'autre. Le premier tient à ce qui a déjà été établi (fragment précédent) : il faut une société pour parler, or il faut parler pour instituer une société. Le second, énoncé dans ce fragment, est plus profond encore : **« si les hommes ont eu besoin de la parole pour apprendre à penser, ils ont eu bien plus besoin encore de savoir penser pour trouver l'art de la parole »**. Autrement dit, il faut penser pour parler, mais il faut tout autant parler pour penser.
+
+    Ce second cercle porte précisément sur le lien entre parole et abstraction. Les mots ne désignent pas seulement des objets singuliers (sans quoi les langues seraient des collections de noms propres) ; ils renvoient à des catégories générales, qui supposent une activité de pensée irréductible aux sensations immédiates. Mais cette généralisation elle-même n'est concevable qu'à l'aide de mots : les idées générales, précise Rousseau ailleurs dans le même texte, ne peuvent s'introduire dans l'esprit qu'à l'aide des mots. Le problème se complique encore pour les êtres purement abstraits (matière, esprit, substance), qu'aucun geste, aucune onomatopée, ne peut indiquer.
+
+    Rousseau conclut par un aveu de modestie qui est aussi une mise en garde : cet « art sublime » de communiquer ses pensées reste si loin de sa perfection qu'aucun homme, si hardi soit-il, ne saurait garantir qu'il y parviendra un jour, quand bien même des siècles entiers y seraient consacrés sans interruption.
+
+    ! Piège : le double cercle n'est pas un simple embarras rhétorique ; c'est une aporie logique, qui interdit toute explication continuiste (naturaliste) du passage entre l'absence de langage et le langage humain.
+  passage:
+    source: "Discours sur l'origine et les fondements de l'inégalité"
+    label: "Fragment 3"
+    text: "Supposons cette première difficulté vaincue : franchissons pour un moment l'espace immense qui dut se trouver entre le pur état de nature et le besoin des langues ; et cherchons, en les supposant nécessaires, comment elles purent commencer à s'établir. Nouvelle difficulté pire encore que la précédente ; car si les hommes ont eu besoin de la parole pour apprendre à penser, ils ont eu bien plus besoin encore de savoir penser pour trouver l'art de la parole. Et quand on comprendrait comment les sons de la voix ont été pris pour les interprètes conventionnels de nos idées, il resterait toujours à savoir quels ont pu être les interprètes mêmes de cette convention pour les idées qui, n'ayant point un objet sensible, ne pouvaient s'indiquer ni par le geste, ni par la voix, de sorte qu'à peine peut-on former des conjectures supportables sur la naissance de cet art de communiquer ses pensées, et d'établir un commerce entre les esprits : art sublime qui est déjà si loin de son origine, mais que le philosophe voit encore à une si prodigieuse distance de sa perfection, qu'il n'y a point d'homme assez hardi, pour assurer qu'il y arriverait jamais, quand les révolutions que le temps amène nécessairement seraient suspendues en sa faveur, que les préjugés sortiraient des académies ou se tairaient devant elles, et qu'elles pourraient s'occuper de cet objet épineux, durant des siècles entiers sans interruption."
+  points:
+  - id: rousseau-humanite-f3-1
+    fragment: "1/2"
+    sentence: "« Supposons cette première difficulté vaincue : franchissons pour un moment ___ ; et cherchons, en les supposant nécessaires, comment elles purent commencer à s'établir. Nouvelle difficulté pire encore que la précédente ; car si les hommes ont eu besoin de la parole pour apprendre à penser, ils ont eu bien plus besoin encore de savoir penser pour trouver l'art de la parole. »"
+    answer: "l'espace immense qui dut se trouver entre le pur état de nature et le besoin des langues"
+    alt: []
+  - id: rousseau-humanite-f3-2
+    fragment: "1/2"
+    sentence: "« Supposons cette première difficulté vaincue : franchissons pour un moment l'espace immense qui dut se trouver entre le pur état de nature et le besoin des langues ; et cherchons, en les supposant nécessaires, comment elles purent commencer à s'établir. Nouvelle difficulté pire encore que la précédente ; car ___. »"
+    answer: "si les hommes ont eu besoin de la parole pour apprendre à penser, ils ont eu bien plus besoin encore de savoir penser pour trouver l'art de la parole"
+    alt: []
+  - id: rousseau-humanite-f3-3
+    fragment: "2/2"
+    sentence: "« Et quand on comprendrait comment les sons de la voix ont été pris pour les interprètes conventionnels de nos idées, il resterait toujours à savoir ___, de sorte qu'à peine peut-on former des conjectures supportables sur la naissance de cet art de communiquer ses pensées, et d'établir un commerce entre les esprits : art sublime qui est déjà si loin de son origine, mais que le philosophe voit encore à une si prodigieuse distance de sa perfection, qu'il n'y a point d'homme assez hardi, pour assurer qu'il y arriverait jamais, quand les révolutions que le temps amène nécessairement seraient suspendues en sa faveur, que les préjugés sortiraient des académies ou se tairaient devant elles, et qu'elles pourraient s'occuper de cet objet épineux, durant des siècles entiers sans interruption. »"
+    answer: "quels ont pu être les interprètes mêmes de cette convention pour les idées qui, n'ayant point un objet sensible, ne pouvaient s'indiquer ni par le geste, ni par la voix"
+    alt: []
+  - id: rousseau-humanite-f3-4
+    fragment: "2/2"
+    sentence: "« Et quand on comprendrait comment les sons de la voix ont été pris pour les interprètes conventionnels de nos idées, il resterait toujours à savoir quels ont pu être les interprètes mêmes de cette convention pour les idées qui, n'ayant point un objet sensible, ne pouvaient s'indiquer ni par le geste, ni par la voix, de sorte qu'à peine peut-on former des conjectures supportables sur la naissance de cet art de communiquer ses pensées, et d'établir un commerce entre les esprits : ___ qui est déjà si loin de son origine, mais que le philosophe voit encore à une si prodigieuse distance de sa perfection, qu'il n'y a point d'homme assez hardi, pour assurer qu'il y arriverait jamais, quand les révolutions que le temps amène nécessairement seraient suspendues en sa faveur, que les préjugés sortiraient des académies ou se tairaient devant elles, et qu'elles pourraient s'occuper de cet objet épineux, durant des siècles entiers sans interruption. »"
+    answer: "art sublime"
+    alt: []
+  - id: rousseau-humanite-f3-5
+    fragment: "2/2"
+    sentence: "« Et quand on comprendrait comment les sons de la voix ont été pris pour les interprètes conventionnels de nos idées, il resterait toujours à savoir quels ont pu être les interprètes mêmes de cette convention pour les idées qui, n'ayant point un objet sensible, ne pouvaient s'indiquer ni par le geste, ni par la voix, de sorte qu'à peine peut-on former des conjectures supportables sur la naissance de cet art de communiquer ses pensées, et d'établir un commerce entre les esprits : art sublime qui est déjà si loin de son origine, mais que le philosophe voit encore à une si prodigieuse distance de sa perfection, qu'___, quand les révolutions que le temps amène nécessairement seraient suspendues en sa faveur, que les préjugés sortiraient des académies ou se tairaient devant elles, et qu'elles pourraient s'occuper de cet objet épineux, durant des siècles entiers sans interruption. »"
+    answer: "il n'y a point d'homme assez hardi, pour assurer qu'il y arriverait jamais"
+    alt: []
+  - id: rousseau-humanite-f3-6
+    sentence: "Le second cercle porte sur le lien entre parole et abstraction : les mots ne désignent pas seulement des objets singuliers, ils renvoient à des ___."
+    answer: "catégories générales"
+    alt: []
+  - id: rousseau-humanite-f3-7
+    sentence: "Une phrase ultérieure du même texte, extérieure à ce fragment, précise que les idées générales ne peuvent s'introduire dans l'esprit qu'à l'aide des ___."
+    answer: "mots"
+    alt: []
+- id: rousseau-humanite-f4
+  title: "Du cri de la nature au langage articulé"
+  notes: |-
+    Après avoir montré que le langage humain ne peut naître d'aucun processus naturel continu, Rousseau retrace malgré tout, à titre d'hypothèse, une genèse : le premier langage de l'homme n'est pas encore un langage instauré, mais **le cri de la nature**, une réaction purement instinctive qui implore du secours dans le danger. Ce cri suffit dans les occasions pressantes ; il ne sert guère dans le cours ordinaire de la vie, où les sentiments sont plus modérés.
+
+    Quand les échanges se multiplient, les hommes cherchent des signes plus nombreux : ils combinent d'abord la voix et le **geste**, plus expressif et moins conventionnel. Mais le geste a ses limites (il ne vaut que pour ce qui est visible et présent, il échoue dans l'obscurité) ; aussi finit-on par lui substituer les articulations de la voix comme **signes institués**, c'est-à-dire des signes purement conventionnels, sans rapport naturel avec ce qu'ils désignent.
+
+    Le texte se referme sur la formule qui clôt tout le développement : une telle substitution ne pouvait se faire que d'un commun consentement, un accord qui devait lui-même être motivé ; or **la parole paraît avoir été fort nécessaire, pour établir l'usage de la parole**. Le cercle initial (fragment 3) se referme ainsi exactement là où il s'était ouvert.
+
+    ! Piège : le « cri de la nature » n'est pas un premier stade du langage humain proprement dit, mais son exact opposé : un signal naturel et univoque, quand le langage institué est conventionnel et arbitraire. C'est justement le passage de l'un à l'autre qui reste inexpliqué.
+  passage:
+    source: "Discours sur l'origine et les fondements de l'inégalité"
+    label: "Fragment 4"
+    text: "Le premier langage de l'homme, le langage le plus universel, le plus énergique, et le seul dont il eut besoin, avant qu'il fallût persuader des hommes assemblés, est le cri de la nature. Comme ce cri n'était arraché que par une sorte d'instinct dans les occasions pressantes, pour implorer du secours dans les grands dangers, ou du soulagement dans les maux violents, il n'était pas d'un grand usage dans le cours ordinaire de la vie, où règnent des sentiments plus modérés. Quand les idées des hommes commencèrent à s'étendre et à se multiplier, et qu'il s'établit entre eux une communication plus étroite, ils cherchèrent des signes plus nombreux et un langage plus étendu : ils multiplièrent les inflexions de la voix, et y joignirent les gestes, qui, par leur nature, sont plus expressifs, et dont le sens dépend moins d'une détermination antérieure. Ils exprimaient donc les objets visibles et mobiles par des gestes, et ceux qui frappent l'ouïe, par des sons imitatifs. Mais comme le geste n'indique guère que les objets présents, ou faciles à décrire, et les actions visibles ; qu'il n'est pas d'un usage universel, puisque l'obscurité, ou l'interposition d'un corps le rendent inutile, et qu'il exige l'attention plutôt qu'il ne l'excite ; on s'avisa enfin de lui substituer les articulations de la voix, qui, sans avoir le même rapport avec certaines idées, sont plus propres à les représenter toutes, comme signes institués ; substitution qui ne put se faire que d'un commun consentement, et d'une manière assez difficile à pratiquer pour des hommes dont les organes grossiers n'avaient encore aucun exercice, et plus difficile encore à concevoir en elle-même, puisque cet accord unanime dut être motivé, et que la parole paraît avoir été fort nécessaire, pour établir l'usage de la parole."
+  points:
+  - id: rousseau-humanite-f4-1
+    fragment: "1/3"
+    sentence: "« Le premier langage de l'homme, le langage le plus universel, le plus énergique, et le seul dont il eut besoin, avant qu'il fallût persuader des hommes assemblés, est ___. Comme ce cri n'était arraché que par une sorte d'instinct dans les occasions pressantes, pour implorer du secours dans les grands dangers, ou du soulagement dans les maux violents, il n'était pas d'un grand usage dans le cours ordinaire de la vie, où règnent des sentiments plus modérés. »"
+    answer: "le cri de la nature"
+    alt: []
+  - id: rousseau-humanite-f4-2
+    fragment: "1/3"
+    sentence: "« Le premier langage de l'homme, le langage le plus universel, le plus énergique, et le seul dont il eut besoin, avant qu'il fallût persuader des hommes assemblés, est le cri de la nature. Comme ce cri n'était arraché que par une sorte d'instinct dans les occasions pressantes, pour implorer du secours dans les grands dangers, ou du soulagement dans les maux violents, ___. »"
+    answer: "il n'était pas d'un grand usage dans le cours ordinaire de la vie, où règnent des sentiments plus modérés"
+    alt: []
+  - id: rousseau-humanite-f4-3
+    fragment: "2/3"
+    sentence: "« Quand les idées des hommes commencèrent à s'étendre et à se multiplier, et qu'il s'établit entre eux une communication plus étroite, ils cherchèrent des signes plus nombreux et un langage plus étendu : ils multiplièrent les inflexions de la voix, et y joignirent les gestes, qui, par leur nature, sont plus expressifs, et dont le sens dépend moins d'une détermination antérieure. Ils exprimaient donc ___. »"
+    answer: "les objets visibles et mobiles par des gestes, et ceux qui frappent l'ouïe, par des sons imitatifs"
+    alt: []
+  - id: rousseau-humanite-f4-4
+    fragment: "3/3"
+    sentence: "« Mais comme le geste n'indique guère que les objets présents, ou faciles à décrire, et les actions visibles ; qu'il n'est pas d'un usage universel, puisque ___, et qu'il exige l'attention plutôt qu'il ne l'excite ; on s'avisa enfin de lui substituer les articulations de la voix, qui, sans avoir le même rapport avec certaines idées, sont plus propres à les représenter toutes, comme signes institués ; substitution qui ne put se faire que d'un commun consentement, et d'une manière assez difficile à pratiquer pour des hommes dont les organes grossiers n'avaient encore aucun exercice, et plus difficile encore à concevoir en elle-même, puisque cet accord unanime dut être motivé, et que la parole paraît avoir été fort nécessaire, pour établir l'usage de la parole. »"
+    answer: "l'obscurité, ou l'interposition d'un corps le rendent inutile"
+    alt: []
+  - id: rousseau-humanite-f4-5
+    fragment: "3/3"
+    sentence: "« Mais comme le geste n'indique guère que les objets présents, ou faciles à décrire, et les actions visibles ; qu'il n'est pas d'un usage universel, puisque l'obscurité, ou l'interposition d'un corps le rendent inutile, et qu'il exige l'attention plutôt qu'il ne l'excite ; on s'avisa enfin de lui substituer les articulations de la voix, qui, sans avoir le même rapport avec certaines idées, sont plus propres à les représenter toutes, comme ___ ; substitution qui ne put se faire que d'un commun consentement, et d'une manière assez difficile à pratiquer pour des hommes dont les organes grossiers n'avaient encore aucun exercice, et plus difficile encore à concevoir en elle-même, puisque cet accord unanime dut être motivé, et que la parole paraît avoir été fort nécessaire, pour établir l'usage de la parole. »"
+    answer: "signes institués"
+    alt: []
+  - id: rousseau-humanite-f4-6
+    fragment: "3/3"
+    sentence: "« Mais comme le geste n'indique guère que les objets présents, ou faciles à décrire, et les actions visibles ; qu'il n'est pas d'un usage universel, puisque l'obscurité, ou l'interposition d'un corps le rendent inutile, et qu'il exige l'attention plutôt qu'il ne l'excite ; on s'avisa enfin de lui substituer les articulations de la voix, qui, sans avoir le même rapport avec certaines idées, sont plus propres à les représenter toutes, comme signes institués ; substitution qui ne put se faire que ___, et d'une manière assez difficile à pratiquer pour des hommes dont les organes grossiers n'avaient encore aucun exercice, et plus difficile encore à concevoir en elle-même, puisque cet accord unanime dut être motivé, et que la parole paraît avoir été fort nécessaire, pour établir l'usage de la parole. »"
+    answer: "d'un commun consentement"
+    alt: []
+  - id: rousseau-humanite-f4-7
+    fragment: "3/3"
+    sentence: "« Mais comme le geste n'indique guère que les objets présents, ou faciles à décrire, et les actions visibles ; qu'il n'est pas d'un usage universel, puisque l'obscurité, ou l'interposition d'un corps le rendent inutile, et qu'il exige l'attention plutôt qu'il ne l'excite ; on s'avisa enfin de lui substituer les articulations de la voix, qui, sans avoir le même rapport avec certaines idées, sont plus propres à les représenter toutes, comme signes institués ; substitution qui ne put se faire que d'un commun consentement, et d'une manière assez difficile à pratiquer pour des hommes dont les organes grossiers n'avaient encore aucun exercice, et plus difficile encore à concevoir en elle-même, puisque cet accord unanime dut être motivé, et que ___. »"
+    answer: "la parole paraît avoir été fort nécessaire, pour établir l'usage de la parole"
+    alt: []
+  - id: rousseau-humanite-f4-8
+    sentence: "La formule finale du texte, « la parole paraît avoir été fort nécessaire, pour établir l'usage de la parole », fait écho à l'énigme théorique par laquelle Rousseau ouvrait son propos : celle du double ___."
+    answer: "cercle"
+    alt: []
+  - id: rousseau-humanite-f4-9
+    sentence: "Cette digression sur l'origine des langues révèle, au peu de soin qu'a pris la nature de faciliter aux hommes l'usage de la parole, combien elle a peu préparé leur ___."
+    answer: "sociabilité"
+    alt: []
+- id: rousseau-humanite-cs1
+  title: "Le passage de l'état de nature à l'état civil"
+  notes: |-
+    Avec le *Contrat social*, Rousseau décrit enfin ce que la société apporte réellement à l'homme, une fois légitimement instituée. Le passage à l'état civil produit un changement que Rousseau qualifie lui-même de « très remarquable » : **la justice se substitue à l'instinct**, et les actions de l'homme acquièrent une moralité qu'elles n'avaient pas auparavant. Concrètement, « la voix du devoir » succède à « l'impulsion physique », et « le droit » à « l'appétit » : l'homme, qui ne regardait jusque-là que lui-même, doit désormais consulter sa raison avant d'écouter ses penchants.
+
+    Rousseau détaille ensuite le bénéfice de ce changement : les facultés de l'homme s'exercent et se développent, ses idées s'étendent, ses sentiments s'ennoblissent, son âme tout entière s'élève, au point qu'il devrait bénir sans cesse l'instant qui, « d'un animal stupide et borné », fit de lui « un être intelligent et un homme ». Mais cette formule si positive porte en elle une réserve capitale, qu'il ne faut pas manquer de relever : **les abus de la condition civile peuvent dégrader l'homme au-dessous même de l'état dont il est sorti**. Le schéma n'est donc pas binaire (état de nature bon, état civil mauvais, ou l'inverse), mais ternaire : état de nature, état civil corrompu (celui que le Second Discours a décrit et dénoncé), état civil légitime, dont ce chapitre du *Contrat social* entend précisément établir les fondements.
+
+    ! Piège : ce paragraphe ne fait pas l'éloge inconditionnel de la société telle qu'elle existe. Rousseau rappellera ailleurs (*Lettre à Christophe de Beaumont*) que l'homme de l'état de nature est « borné au seul instinct physique, il est nul, il est bête » : c'est la perfectibilité *virtuelle* que révèle le passage à l'état civil, non une garantie de progrès.
+  passage:
+    source: "Du contrat social, I, 8"
+    label: "§1"
+    text: "Ce passage de l'état de nature à l'état civil produit dans l'homme un changement très remarquable, en substituant dans sa conduite la justice à l'instinct, et donnant à ses actions la moralité qui leur manquait auparavant. C'est alors seulement que la voix du devoir succédant à l'impulsion physique et le droit à l'appétit, l'homme, qui jusque-là n'avait regardé que lui-même, se voit forcé d'agir sur d'autres principes, et de consulter sa raison avant d'écouter ses penchants. Quoiqu'il se prive dans cet état de plusieurs avantages qu'il tient de la nature, il en regagne de si grands, ses facultés s'exercent et se développent, ses idées s'étendent, ses sentiments s'ennoblissent, son âme tout entière s'élève à tel point, que si les abus de cette nouvelle condition ne le dégradaient souvent au-dessous de celle dont il est sorti, il devrait bénir sans cesse l'instant heureux qui l'en arracha pour jamais, et qui, d'un animal stupide et borné, fit un être intelligent et un homme."
+  points:
+  - id: rousseau-humanite-cs1-1
+    fragment: "1/2"
+    sentence: "« Ce passage de l'état de nature à l'état civil produit dans l'homme un changement très remarquable, en ___. C'est alors seulement que la voix du devoir succédant à l'impulsion physique et le droit à l'appétit, l'homme, qui jusque-là n'avait regardé que lui-même, se voit forcé d'agir sur d'autres principes, et de consulter sa raison avant d'écouter ses penchants. »"
+    answer: "substituant dans sa conduite la justice à l'instinct, et donnant à ses actions la moralité qui leur manquait auparavant"
+    alt: []
+  - id: rousseau-humanite-cs1-2
+    fragment: "1/2"
+    sentence: "« Ce passage de l'état de nature à l'état civil produit dans l'homme un changement très remarquable, en substituant dans sa conduite la justice à l'instinct, et donnant à ses actions la moralité qui leur manquait auparavant. C'est alors seulement que ___, l'homme, qui jusque-là n'avait regardé que lui-même, se voit forcé d'agir sur d'autres principes, et de consulter sa raison avant d'écouter ses penchants. »"
+    answer: "la voix du devoir succédant à l'impulsion physique et le droit à l'appétit"
+    alt: []
+  - id: rousseau-humanite-cs1-3
+    fragment: "1/2"
+    sentence: "« Ce passage de l'état de nature à l'état civil produit dans l'homme un changement très remarquable, en substituant dans sa conduite la justice à l'instinct, et donnant à ses actions la moralité qui leur manquait auparavant. C'est alors seulement que la voix du devoir succédant à l'impulsion physique et le droit à l'appétit, l'homme, qui jusque-là n'avait regardé que lui-même, se voit forcé d'agir sur d'autres principes, et de ___. »"
+    answer: "consulter sa raison avant d'écouter ses penchants"
+    alt: []
+  - id: rousseau-humanite-cs1-4
+    fragment: "2/2"
+    sentence: "« Quoiqu'il se prive dans cet état de plusieurs avantages qu'il tient de la nature, il en regagne de si grands, ses facultés s'exercent et se développent, ses idées s'étendent, ses sentiments s'ennoblissent, son âme tout entière s'élève à tel point, que si ___, il devrait bénir sans cesse l'instant heureux qui l'en arracha pour jamais, et qui, d'un animal stupide et borné, fit un être intelligent et un homme. »"
+    answer: "les abus de cette nouvelle condition ne le dégradaient souvent au-dessous de celle dont il est sorti"
+    alt: []
+  - id: rousseau-humanite-cs1-5
+    fragment: "2/2"
+    sentence: "« Quoiqu'il se prive dans cet état de plusieurs avantages qu'il tient de la nature, il en regagne de si grands, ses facultés s'exercent et se développent, ses idées s'étendent, ses sentiments s'ennoblissent, son âme tout entière s'élève à tel point, que si les abus de cette nouvelle condition ne le dégradaient souvent au-dessous de celle dont il est sorti, il devrait bénir sans cesse l'instant heureux qui l'en arracha pour jamais, et qui, ___. »"
+    answer: "d'un animal stupide et borné, fit un être intelligent et un homme"
+    alt: []
+  - id: rousseau-humanite-cs1-6
+    sentence: "Selon la note qui accompagne ce paragraphe, le schéma de la pensée de Rousseau n'est pas binaire mais ___ : état de nature, état civil corrompu, état civil légitime."
+    answer: "ternaire"
+    alt: []
+  - id: rousseau-humanite-cs1-7
+    sentence: "Rousseau rappellera, dans la Lettre à Christophe de Beaumont, que dans l'état de nature l'homme est borné au seul instinct physique, il est nul, il est ___."
+    answer: "bête"
+    alt: []
+  - id: rousseau-humanite-cs1-8
+    sentence: "C'est le passage à l'état civil, révélant la ___ virtuelle de l'homme, qui développe les passions, la raison et la moralité."
+    answer: "perfectibilité"
+    alt: []
+- id: rousseau-humanite-cs2
+  title: "Ce que l'homme perd et gagne : les deux libertés"
+  notes: |-
+    Rousseau dresse ici le bilan précis de ce que l'homme perd et gagne au contrat social. Il perd sa **liberté naturelle**, un droit illimité à tout ce qu'il désire et peut atteindre ; il gagne la **liberté civile**, et la **propriété** de ce qu'il possède, là où il n'avait auparavant que la simple possession.
+
+    Le paragraphe distingue ensuite, terme à terme, les deux couples de notions que la confusion guette : la liberté naturelle n'a pour bornes que les forces de l'individu, quand la liberté civile est limitée par la volonté générale ; la possession n'est que l'effet de la force ou le droit du premier occupant, quand la propriété suppose un titre positif, c'est-à-dire une reconnaissance instituée par le droit. Liberté et propriété sont ainsi les deux concepts sous lesquels Rousseau reprend les grandes divisions du droit civil héritées du droit romain : les choses et les personnes.
+
+    ! Piège : la « liberté civile » dont il est ici question est celle du *sujet* de droit civil, non celle du *citoyen* : il serait absurde d'en conclure que la liberté du citoyen serait, elle aussi, limitée par la volonté générale. La liberté du citoyen, comme celle du souverain dont elle est partie constitutive, n'a d'autre borne que la nature du contrat.
+  passage:
+    source: "Du contrat social, I, 8"
+    label: "§2"
+    text: "Réduisons toute cette balance à des termes faciles à comparer. Ce que l'homme perd par le contrat social, c'est sa liberté naturelle et un droit illimité à tout ce qui le tente et qu'il peut atteindre ; ce qu'il gagne, c'est la liberté civile et la propriété de tout ce qu'il possède. Pour ne pas se tromper dans ces compensations, il faut bien distinguer la liberté naturelle qui n'a pour bornes que les forces de l'individu, de la liberté civile qui est limitée par la volonté générale, et la possession qui n'est que l'effet de la force ou le droit du premier occupant, de la propriété qui ne peut être fondée que sur un titre positif."
+  points:
+  - id: rousseau-humanite-cs2-1
+    fragment: "1/2"
+    sentence: "« Réduisons toute cette balance à des termes faciles à comparer. Ce que l'homme perd par le contrat social, c'est ___ ; ce qu'il gagne, c'est la liberté civile et la propriété de tout ce qu'il possède. »"
+    answer: "sa liberté naturelle et un droit illimité à tout ce qui le tente et qu'il peut atteindre"
+    alt: []
+  - id: rousseau-humanite-cs2-2
+    fragment: "1/2"
+    sentence: "« Réduisons toute cette balance à des termes faciles à comparer. Ce que l'homme perd par le contrat social, c'est sa liberté naturelle et un droit illimité à tout ce qui le tente et qu'il peut atteindre ; ce qu'il gagne, c'est ___. »"
+    answer: "la liberté civile et la propriété de tout ce qu'il possède"
+    alt: []
+  - id: rousseau-humanite-cs2-3
+    fragment: "2/2"
+    sentence: "« Pour ne pas se tromper dans ces compensations, il faut bien distinguer ___, de ___, et la possession qui n'est que l'effet de la force ou le droit du premier occupant, de la propriété qui ne peut être fondée que sur un titre positif. »"
+    answer: "la liberté naturelle qui n'a pour bornes que les forces de l'individu ; la liberté civile qui est limitée par la volonté générale"
+    alt: []
+  - id: rousseau-humanite-cs2-4
+    fragment: "2/2"
+    sentence: "« Pour ne pas se tromper dans ces compensations, il faut bien distinguer la liberté naturelle qui n'a pour bornes que les forces de l'individu, de la liberté civile qui est limitée par la volonté générale, et ___, de ___. »"
+    answer: "la possession qui n'est que l'effet de la force ou le droit du premier occupant ; la propriété qui ne peut être fondée que sur un titre positif"
+    alt: []
+  - id: rousseau-humanite-cs2-5
+    sentence: "Liberté et propriété sont les deux concepts sous lesquels Rousseau prend en charge les grandes divisions du droit civil issues du droit romain : les choses et les ___."
+    answer: "personnes"
+    alt: []
+  - id: rousseau-humanite-cs2-6
+    sentence: "La liberté civile dont parle ici Rousseau est celle du sujet de droit civil, non celle du ___ : il serait absurde d'en conclure que la liberté de ce dernier est limitée par la volonté générale."
+    answer: "citoyen"
+    alt: []
+- id: rousseau-humanite-cs3
+  title: "La liberté morale, condition de la maîtrise de soi"
+  notes: |-
+    Rousseau ajoute, pour finir, un troisième acquis à ceux du paragraphe précédent : la **liberté morale**, celle-là seule qui rend l'homme véritablement maître de lui-même. La formule qui la définit est l'une des plus citées du chapitre : « l'impulsion du seul appétit est esclavage, et l'obéissance à la loi qu'on s'est prescrite est liberté ». Être libre, au sens moral, ce n'est donc pas suivre ses penchants sans entrave, mais obéir à une loi que l'on s'est soi-même donnée : c'est ce que l'*Émile*, en particulier la Profession de foi du vicaire savoyard, étudiera plus longuement.
+
+    Rousseau referme aussitôt la question, par une remarque qui n'est pas seulement une clause de style : le sens philosophique du mot liberté déborde son sujet ici, qui est le contrat social, non une théorie générale de la liberté.
+
+    ! Piège : cette liberté morale n'est ni la liberté naturelle, ni la liberté civile distinguées au paragraphe précédent ; elle porte sur le rapport de l'homme à lui-même, non sur ses rapports aux autres hommes ou à leurs biens.
+  passage:
+    source: "Du contrat social, I, 8"
+    label: "§3"
+    text: "On pourrait sur ce qui précède ajouter à l'acquis de l'état civil la liberté morale, qui seule rend l'homme vraiment maître de lui ; car l'impulsion du seul appétit est esclavage, et l'obéissance à la loi qu'on s'est prescrite est liberté. Mais je n'en ai déjà que trop dit sur cet article, et le sens philosophique du mot liberté n'est pas ici de mon sujet."
+  points:
+  - id: rousseau-humanite-cs3-1
+    sentence: "« On pourrait sur ce qui précède ajouter à l'acquis de l'état civil ___ ; car l'impulsion du seul appétit est esclavage, et l'obéissance à la loi qu'on s'est prescrite est liberté. Mais je n'en ai déjà que trop dit sur cet article, et le sens philosophique du mot liberté n'est pas ici de mon sujet. »"
+    answer: "la liberté morale, qui seule rend l'homme vraiment maître de lui"
+    alt: []
+  - id: rousseau-humanite-cs3-2
+    sentence: "« On pourrait sur ce qui précède ajouter à l'acquis de l'état civil la liberté morale, qui seule rend l'homme vraiment maître de lui ; car l'impulsion du seul appétit est esclavage, et ___. Mais je n'en ai déjà que trop dit sur cet article, et le sens philosophique du mot liberté n'est pas ici de mon sujet. »"
+    answer: "l'obéissance à la loi qu'on s'est prescrite est liberté"
+    alt: []
+  - id: rousseau-humanite-cs3-3
+    sentence: "La liberté morale, selon la note qui commente ce passage, est celle que l'homme acquiert dans son rapport à lui-même, lorsque sa conscience, éclairée par la raison, lui permet de discerner ce qui véritablement lui ___."
+    answer: "importe"
+    alt: []
+  - id: rousseau-humanite-cs3-4
+    sentence: "C'est l'Émile, et en particulier la Profession de foi du ___ savoyard, qui étudiera en détail cette liberté morale."
+    answer: "vicaire"
+    alt: []
