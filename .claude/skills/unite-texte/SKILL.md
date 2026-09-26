@@ -107,6 +107,35 @@ contiennent des deux-points. Un guillemet droit à l'intérieur s'échappe
 - **La réponse est exactement le texte masqué**, même si c'est une phrase
   entière : pas de limite de longueur ici.
 
+### Choisir les trous
+
+Le trou porte sur **ce qu'il faudrait restituer en citant la phrase dans une
+copie**. Se demander : « si je cite cette phrase, quel morceau dois-je
+absolument savoir ? » C'est lui, le trou.
+
+1. **D'abord la thèse de la phrase** : le sujet dont elle parle et ce qu'elle
+   en affirme (« Cependant, à titre secondaire, ___ est celle qui traduit la
+   vertu qui reste » : « la vie la plus heureuse »). Puis les notions et
+   termes techniques, puis les images et formules frappantes.
+2. **Le groupe qui porte le sens**, pas un mot isolé qui en dépend : « qui
+   leur est propre » (l'automotricité) plutôt que « mouvement considérable » ;
+   « arrachés à leurs parents » (l'image) plutôt que « dès la naissance ».
+3. **Jamais de trou sur** :
+   - une modalité ou une incise (« à titre secondaire », « en effet ») ;
+   - une remarque de méthode (« un exposé rigoureux outrepasse notre
+     propos ») ;
+   - un mot que le contexte ou une symétrie fait deviner (« la vertu
+     morale » juste après « la vertu intellectuelle », « servira ») ; si le
+     mot compte quand même, l'associer à un autre trou de la même carte
+     (« leurs activités respectives ; considérable »).
+4. **Une idée, un trou** : ne pas tester deux fois la même idée dans un même
+   fragment (« humaines », puis « des actes humains »). Un terme important
+   mais secondaire dans la phrase, comme une modalité (`deuterōs`), se teste
+   par une carte-explication, pas par la citation.
+5. **Ne pas laisser la thèse sans carte** : relire chaque fragment et
+   vérifier que ce qu'il affirme d'essentiel (« celui qui médite ne requiert
+   aucun appui de ce genre ») a sa carte.
+
 ## 4. Les cartes-explication (ensuite, en fin de paragraphe)
 
 Elles font trouver ce qu'il faut savoir *sur* le paragraphe : la portée d'une

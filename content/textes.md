@@ -73,6 +73,11 @@ lessons:
   leçons (voir `content/philosophie.md`) : `answer` donne leurs réponses dans
   l'ordre, séparées par `;`. Si le nombre de réponses ne correspond pas au
   nombre de trous, toute la réponse va dans le premier trou.
+- **Choisir les trous avec pertinence** : le trou porte sur ce qu'il faudrait
+  restituer en citant la phrase, d'abord sa thèse (« ___ est celle qui traduit
+  la vertu qui reste » : « la vie la plus heureuse »), jamais une modalité,
+  une incise, une remarque de méthode ou un mot que le contexte fait deviner.
+  Règles détaillées dans la skill `unite-texte`.
 - **Pas de minimum de trois points** : une ouverture peut n'en avoir qu'un.
 - **Pas de limite de longueur pour `answer`** : une carte-citation peut faire
   retrouver une phrase entière.
