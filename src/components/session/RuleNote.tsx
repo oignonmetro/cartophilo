@@ -1,8 +1,8 @@
-import { useEffect } from 'react'
+import { Fragment, useEffect, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import type { RuleExercise } from '@/engine/exercises'
 import { parseInline, parseNotes, splitAside, type Inline, type NoteRule } from '@/content/notes'
-import type { UnitColor } from '@/content/schema'
+import { GAP, type UnitColor } from '@/content/schema'
 import { Button } from '@/components/Button'
 import { PassageText } from '@/components/PassageText'
 import { useIsDesktop } from '@/lib/useIsDesktop'
@@ -284,13 +284,46 @@ export function Rich({ text }: { text: string }) {
 }
 
 /**
+ * Caractère réservé qui tient la place d'un trou pendant l'analyse : laissé
+ * tel quel, `___` serait lu comme l'ouverture d'un soulignement (`__…__`).
+ */
+const GAP_MARK = ''
+
+/**
+ * Une phrase à trou, avec les mêmes marqueurs qu'un rappel (`*titre*`,
+ * `**gras**`, `__souligné__`, `` `forme` ``, `{couleur}…{/couleur}`) :
+ * chaque `___` est remplacé, dans l'ordre, par ce que rend `renderGap`,
+ * même à l'intérieur d'un marqueur (un trou dans un titre en italique).
+ */
+export function RichGaps({ text, renderGap }: { text: string; renderGap: (index: number) => ReactNode }) {
+  const gaps = { next: 0, render: renderGap }
+  return <Spans spans={parseInline(text.split(GAP).join(GAP_MARK))} gaps={gaps} />
+}
+
+interface GapSlots {
+  next: number
+  render: (index: number) => ReactNode
+}
+
+/** Un texte brut, ses trous éventuels remplacés par leur rendu. */
+function withGaps(text: string, gaps: GapSlots | undefined): ReactNode {
+  if (!gaps || !text.includes(GAP_MARK)) return text
+  return text.split(GAP_MARK).map((piece, index) => (
+    <Fragment key={index}>
+      {index > 0 && gaps.render(gaps.next++)}
+      {piece}
+    </Fragment>
+  ))
+}
+
+/**
  * `colorClass` porte la teinte d'un `color` ancestor jusqu'aux `strong`
  * qu'il contient : un `<strong>` fixe sa propre couleur (`text-ink` par
  * défaut), qui gagnerait sinon toujours sur la couleur héritée de son
  * parent — la couleur ne se voit sur le texte en gras que si on la lui
  * passe explicitement.
  */
-function Spans({ spans, colorClass }: { spans: Inline[]; colorClass?: string }) {
+function Spans({ spans, colorClass, gaps }: { spans: Inline[]; colorClass?: string; gaps?: GapSlots }) {
   return (
     <>
       {spans.map((span, index) => {
@@ -298,37 +331,37 @@ function Spans({ spans, colorClass }: { spans: Inline[]; colorClass?: string }) 
           case 'strong':
             return (
               <strong key={index} className={`font-black ${colorClass ?? 'text-ink'}`}>
-                <Spans spans={span.children} colorClass={colorClass} />
+                <Spans spans={span.children} colorClass={colorClass} gaps={gaps} />
               </strong>
             )
           case 'em':
             return (
               <em key={index} className="italic">
-                <Spans spans={span.children} colorClass={colorClass} />
+                <Spans spans={span.children} colorClass={colorClass} gaps={gaps} />
               </em>
             )
           case 'underline':
             return (
               <span key={index} className="font-bold underline decoration-2 underline-offset-[3px]">
-                <Spans spans={span.children} colorClass={colorClass} />
+                <Spans spans={span.children} colorClass={colorClass} gaps={gaps} />
               </span>
             )
           case 'form':
             return (
               <em key={index} className="text-ink italic">
-                {span.text}
+                {withGaps(span.text, gaps)}
               </em>
             )
           case 'color': {
             const tint = INLINE_COLORS[span.color]
             return (
               <span key={index} className={`font-bold ${tint}`}>
-                <Spans spans={span.children} colorClass={tint} />
+                <Spans spans={span.children} colorClass={tint} gaps={gaps} />
               </span>
             )
           }
           default:
-            return <span key={index}>{span.text}</span>
+            return <span key={index}>{withGaps(span.text, gaps)}</span>
         }
       })}
     </>

@@ -1,13 +1,14 @@
-import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
+import { forwardRef, useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import type { GrammarGapExercise } from '@/engine/exercises'
-import { matchesAnswer, splitGap } from '@/engine/exercises'
+import { matchesAnswer } from '@/engine/exercises'
 import { Button } from '@/components/Button'
 import { learningLanguage } from '@/lib/speech'
 import { sentenceTextSize, sentenceTextSizeMd } from '@/lib/textDensity'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
 import { CorrectionGap } from './CorrectionGap'
+import { Rich, RichGaps } from './RuleNote'
 import { ExpectedAnswer } from './ExpectedAnswer'
 import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
@@ -32,7 +33,6 @@ export function GrammarGap({
   onAnswer: (correct: boolean) => void
 }) {
   const { point, bank, cue } = exercise
-  const gap = useMemo(() => splitGap(point.sentence), [point.sentence])
   const textSize = sentenceTextSize('text-xl', point.sentence.length)
   const [value, setValue] = useState('')
   const [checked, setChecked] = useState<null | boolean>(null)
@@ -156,9 +156,12 @@ export function GrammarGap({
       <div className="min-h-0 flex-1 overflow-y-auto md:flex md:flex-col md:justify-[safe_center]">
         <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center md:gap-4 md:px-10 md:py-12">
           <p className={`${textSize} ${sentenceTextSizeMd(textSize)} leading-relaxed font-bold`}>
-            {gap.before}
-            <Blank ref={blank} value={value} state={checked} />
-            {gap.after}
+            {/* Un seul trou compte (voir `splitGap`) : un `___` suivant, s'il
+                y en a, reste affiché tel quel, comme avant. */}
+            <RichGaps
+              text={point.sentence}
+              renderGap={(index) => (index === 0 ? <Blank ref={blank} value={value} state={checked} /> : '___')}
+            />
           </p>
           {point.translation && (cue === 'translation' || checked !== null) && (
             <p className="text-sm text-ink-soft">{point.translation}</p>
@@ -230,7 +233,11 @@ export function GrammarGap({
                 <CorrectionGap typed={value} expected={point.answer} onResolved={() => setGapResolved(true)} />
               </div>
             )}
-            {point.explanation && <p className="mt-1 text-ink-soft">{point.explanation}</p>}
+            {point.explanation && (
+              <p className="mt-1 text-ink-soft">
+                <Rich text={point.explanation} />
+              </p>
+            )}
           </motion.div>
         )}
 

@@ -8,6 +8,7 @@ import { sentenceTextSize, sentenceTextSizeMd } from '@/lib/textDensity'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
 import { useProgress, type PassageMode } from '@/store/progressStore'
+import { Rich, RichGaps } from './RuleNote'
 import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
 
@@ -127,16 +128,14 @@ export function PassageCard({
       <div className="min-h-0 flex-1 overflow-y-auto md:flex md:flex-col md:justify-[safe_center]">
         <div className="card-3d flex flex-col gap-3 px-5 py-6 md:px-10 md:py-10">
           <p className={`${textSize} ${sentenceTextSizeMd(textSize)} text-left leading-relaxed font-semibold`}>
-            {parts.map((part, index) => (
-              <span key={index}>
-                {part}
-                {index < gapCount && <Fill text={fills[index] ?? ''} shown={answered} state={checked} />}
-              </span>
-            ))}
+            <RichGaps
+              text={point.sentence}
+              renderGap={(index) => <Fill text={fills[index] ?? ''} shown={answered} state={checked} />}
+            />
           </p>
           {answered && point.explanation && (
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm text-ink-soft">
-              {point.explanation}
+              <Rich text={point.explanation} />
             </motion.p>
           )}
         </div>
