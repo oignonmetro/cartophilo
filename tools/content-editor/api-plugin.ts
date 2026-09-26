@@ -411,6 +411,30 @@ function buildNewLessonNode(
   return map
 }
 
+/**
+ * Ajoute plusieurs leçons neuves d'un coup à `lessonsSeq`, en leur attribuant
+ * des id séquentiels (`nextLessonId`) — partagé entre `POST /api/lessons`
+ * (une unité déjà là) et `POST /api/unit` (import dès la création d'une
+ * unité, voir `ImportSplitDialog` en mode « nouvelle unité ») pour ne pas
+ * dupliquer cette boucle.
+ */
+function appendLessons(
+  lessonsSeq: YAMLSeq,
+  unitId: string,
+  kind: string,
+  lessons: NewLessonDTO[],
+  existingIds: string[],
+): { id: string; title: string }[] {
+  const created: { id: string; title: string }[] = []
+  for (const lesson of lessons) {
+    const title = lesson.title.trim() || 'Leçon sans titre'
+    const id = nextLessonId(unitId, [...existingIds, ...created.map((c) => c.id)])
+    lessonsSeq.items.push(buildNewLessonNode(id, title, kind, lesson))
+    created.push({ id, title })
+  }
+  return created
+}
+
 /** Une unité est-elle une unité de texte ? Au moins une leçon porte un `passage`. */
 function isTextUnitDoc(doc: Document): boolean {
   const lessons = (doc.toJS() as Record<string, unknown>).lessons
@@ -507,13 +531,7 @@ export function contentEditorApi(): Plugin {
             (l) => String(l.id),
           )
           const kind = findTrackKindForUnit(course, unit)
-          const created: { id: string; title: string }[] = []
-          for (const lesson of body.lessons) {
-            const title = lesson.title.trim() || 'Leçon sans titre'
-            const id = nextLessonId(unit, [...existingIds, ...created.map((c) => c.id)])
-            lessonsSeq.items.push(buildNewLessonNode(id, title, kind, lesson))
-            created.push({ id, title })
-          }
+          const created = appendLessons(lessonsSeq, unit, kind, body.lessons, existingIds)
           writeYamlDoc(unitFile, doc)
           sendJson(res, 200, { ok: true, lessons: created })
         } catch (error) {
@@ -811,11 +829,19 @@ export function contentEditorApi(): Plugin {
             intro?: string
             /** Repère de la première leçon d'une unité de texte (« §1 », « Introduction »). */
             firstLessonLabel?: string
+            /**
+             * Alternative à `firstLessonTitle` : une unité créée directement
+             * depuis une liste importée (voir `ImportSplitDialog` en mode
+             * « nouvelle unité »), sans leçon écrite à la main au passage —
+             * ces leçons-là sont ses seules leçons, dans l'ordre donné.
+             */
+            lessons?: NewLessonDTO[]
           }
           const title = body.title?.trim()
           const firstLessonTitle = body.firstLessonTitle?.trim()
-          if (!title || !firstLessonTitle) {
-            sendJson(res, 400, { error: 'titre et titre de la première leçon requis' })
+          const importedLessons = body.lessons?.filter((l) => l.title?.trim())
+          if (!title || (!firstLessonTitle && !importedLessons?.length)) {
+            sendJson(res, 400, { error: 'titre requis, et une première leçon (écrite ou importée)' })
             return
           }
 
@@ -834,7 +860,6 @@ export function contentEditorApi(): Plugin {
           const unitFile = join(contentDir, course, 'units', `${id}.yaml`)
 
           const kind = String(tracksData[trackIdx]!.kind ?? 'grammar')
-          const firstLessonId = `${id}-l1`
 
           const isText = body.type === 'text'
           const unitMap = new YAMLMap()
@@ -854,11 +879,18 @@ export function contentEditorApi(): Plugin {
             unitMap.set('intro', intro)
           }
           const lessonsSeq = new YAMLSeq()
-          lessonsSeq.items.push(
-            buildNewLessonNode(firstLessonId, firstLessonTitle, kind, {
-              passage: isText ? { label: body.firstLessonLabel?.trim() ?? '', text: '' } : undefined,
-            }),
-          )
+          // Soit une première leçon écrite à la main, soit toutes celles
+          // d'une liste importée : jamais les deux (voir `importedLessons`
+          // ci-dessus).
+          const created = importedLessons?.length
+            ? appendLessons(lessonsSeq, id, kind, importedLessons, [])
+            : appendLessons(
+                lessonsSeq,
+                id,
+                kind,
+                [{ title: firstLessonTitle!, passage: isText ? { label: body.firstLessonLabel?.trim() ?? '', text: '' } : undefined, points: [] }],
+                [],
+              )
           unitMap.set('lessons', lessonsSeq)
           const unitDoc = new Document(unitMap)
           writeYamlDoc(unitFile, unitDoc)
@@ -868,7 +900,10 @@ export function contentEditorApi(): Plugin {
           else courseDoc.setIn(['tracks', trackIdx, 'units'], [id])
           writeYamlDoc(courseFile, courseDoc, { indentSeq: true })
 
-          sendJson(res, 200, { ok: true, unit: { id, title }, lesson: { id: firstLessonId, title: firstLessonTitle } })
+          // `lesson` (le premier) reste pour l'appelant qui n'a besoin que
+          // d'ouvrir une leçon ; `lessons` porte le lot complet, utile côté
+          // import pour afficher le nombre créé.
+          sendJson(res, 200, { ok: true, unit: { id, title }, lesson: created[0]!, lessons: created })
         } catch (error) {
           sendJson(res, 500, { error: String((error as Error).message) })
         }

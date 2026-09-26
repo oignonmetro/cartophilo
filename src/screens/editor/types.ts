@@ -65,6 +65,27 @@ export interface SkippedRowDTO {
   row: string
 }
 
+/** Une leçon à créer d'un coup, avec son contenu (voir `POST /api/lessons` et `POST /api/unit`). */
+export interface NewLessonDTO {
+  title: string
+  notes?: string
+  passage?: PassageDTO
+  points: Omit<PointDTO, 'id'>[]
+}
+
+/**
+ * Les réglages d'une unité pas encore créée, réunis par `NewUnitDialog` avant
+ * de choisir comment lui donner ses premières leçons (écrites à la main, ou
+ * importées — voir `ImportSplitDialog`).
+ */
+export interface NewUnitMeta {
+  type: 'classic' | 'text'
+  title: string
+  subtitle: string
+  group: string
+  intro: string
+}
+
 /** Appel JSON à l'API de l'éditeur, qui lève l'erreur renvoyée par le serveur. */
 export async function api<T>(url: string, init?: { method?: string; body?: unknown }): Promise<T> {
   const res = await fetch(url, {

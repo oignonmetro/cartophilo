@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Field, inputClass, Modal } from './Modal'
 import { nextParagraphLabel } from './textUnit'
-import { api, type TreeTrack, type TreeUnit } from './types'
+import { api, type NewUnitMeta, type TreeTrack, type TreeUnit } from './types'
 
 type UnitType = 'classic' | 'text'
+/** Comment l'unité reçoit ses premières leçons : écrites à la main, ou par un import qui suit. */
+type Start = 'write' | 'import'
 
 const UNIT_TYPES: { id: UnitType; title: string; description: string; example: string }[] = [
   {
@@ -23,20 +25,29 @@ const UNIT_TYPES: { id: UnitType; title: string; description: string; example: s
 
 /**
  * Création d'une unité : son genre d'abord (classique ou de texte), puis ses
- * réglages et sa première leçon, en un seul formulaire plutôt qu'une suite
- * de questions. Le genre ne se choisit qu'ici : c'est la première leçon qui
- * le porte (un `passage`), et toutes celles qu'on ajoute ensuite en héritent.
+ * réglages, en un seul formulaire plutôt qu'une suite de questions. Le genre
+ * ne se choisit qu'ici : c'est la première leçon qui le porte (un
+ * `passage`), et toutes celles qu'on ajoute ensuite en héritent.
+ *
+ * Les premières leçons viennent d'une seule des deux sources, jamais des
+ * deux : écrites ici à la main (`onCreated`, comme avant), ou fournies par
+ * l'import qui suit (`onImport` ferme cette fenêtre et ouvre
+ * `ImportSplitDialog` en mode « nouvelle unité » — voir `ContentEditorScreen`)
+ * — sans quoi une leçon-titre écrite pour la forme resterait orpheline à
+ * côté de celles de la liste importée.
  */
 export function NewUnitDialog({
   course,
   track,
   onClose,
   onCreated,
+  onImport,
 }: {
   course: string
   track: TreeTrack
   onClose: () => void
   onCreated: (unitId: string, lessonId: string) => void
+  onImport: (meta: NewUnitMeta) => void
 }) {
   // Une piste « Textes » ne contient que des unités de texte : le genre y est proposé d'emblée.
   const [type, setType] = useState<UnitType>(track.id === 'textes' ? 'text' : 'classic')
@@ -44,15 +55,20 @@ export function NewUnitDialog({
   const [subtitle, setSubtitle] = useState('')
   const [group, setGroup] = useState('')
   const [intro, setIntro] = useState('')
+  const [start, setStart] = useState<Start>('write')
   const [lessonTitle, setLessonTitle] = useState('')
   const [lessonLabel, setLessonLabel] = useState('§1')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const groups = [...new Set(track.units.map((unit) => unit.group).filter((g): g is string => Boolean(g)))]
-  const ready = title.trim() && lessonTitle.trim()
+  const ready = title.trim() && (start === 'import' || lessonTitle.trim())
 
   async function submit() {
+    if (start === 'import') {
+      onImport({ type, title: title.trim(), subtitle: subtitle.trim(), group: group.trim(), intro: type === 'text' ? intro.trim() : '' })
+      return
+    }
     setBusy(true)
     setError(null)
     try {
@@ -83,7 +99,7 @@ export function NewUnitDialog({
       title={`Nouvelle unité dans « ${track.title} »`}
       onClose={onClose}
       onSubmit={() => void submit()}
-      submitLabel="Créer l’unité"
+      submitLabel={start === 'import' ? 'Continuer vers l’import →' : 'Créer l’unité'}
       submitDisabled={!ready}
       busy={busy}
       error={error}
@@ -151,27 +167,59 @@ export function NewUnitDialog({
       )}
 
       <div className="rounded-xl bg-ink/4 p-3">
-        <p className="mb-2 text-xs font-black tracking-wide text-ink-soft uppercase">Première leçon</p>
-        <div className={type === 'text' ? 'grid grid-cols-[8rem_1fr] gap-3' : ''}>
-          {type === 'text' && (
-            <Field label="Repère">
-              <LabelInput value={lessonLabel} onChange={setLessonLabel} />
-            </Field>
-          )}
-          <Field label="Titre">
-            <input
-              value={lessonTitle}
-              onChange={(event) => setLessonTitle(event.target.value)}
-              placeholder={type === 'text' ? 'Le bonheur de la vertu morale est humain' : 'Titre de la leçon'}
-              className={inputClass}
-            />
-          </Field>
+        <p className="mb-2 text-xs font-black tracking-wide text-ink-soft uppercase">Premières cartes</p>
+        <div className="grid grid-cols-2 gap-2">
+          <button
+            type="button"
+            onClick={() => setStart('write')}
+            aria-pressed={start === 'write'}
+            className={`flex flex-col gap-0.5 rounded-lg border-2 p-2.5 text-left transition ${
+              start === 'write' ? 'border-teal bg-teal/10' : 'border-line hover:border-ink/20'
+            }`}
+          >
+            <span className="text-sm font-bold">Écrire la première leçon</span>
+            <span className="text-xs text-ink-faint">Un titre (et son repère) à la main, tout de suite.</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setStart('import')}
+            aria-pressed={start === 'import'}
+            className={`flex flex-col gap-0.5 rounded-lg border-2 p-2.5 text-left transition ${
+              start === 'import' ? 'border-teal bg-teal/10' : 'border-line hover:border-ink/20'
+            }`}
+          >
+            <span className="text-sm font-bold">Importer une liste</span>
+            <span className="text-xs text-ink-faint">Coller une liste de cartes juste après : elle fournit les premières leçons.</span>
+          </button>
         </div>
-        {type === 'text' && (
+        {start === 'write' ? (
+          <>
+            <div className={`mt-3 ${type === 'text' ? 'grid grid-cols-[8rem_1fr] gap-3' : ''}`}>
+              {type === 'text' && (
+                <Field label="Repère">
+                  <LabelInput value={lessonLabel} onChange={setLessonLabel} />
+                </Field>
+              )}
+              <Field label="Titre">
+                <input
+                  value={lessonTitle}
+                  onChange={(event) => setLessonTitle(event.target.value)}
+                  placeholder={type === 'text' ? 'Le bonheur de la vertu morale est humain' : 'Titre de la leçon'}
+                  className={inputClass}
+                />
+              </Field>
+            </div>
+            {type === 'text' && (
+              <p className="mt-2 text-xs text-ink-faint">
+                Un texte difficile ? Commencez par une leçon « Introduction » (sans texte cité) qui pose le problème
+                et les notions.
+              </p>
+            )}
+          </>
+        ) : (
           <p className="mt-2 text-xs text-ink-faint">
-            Un texte difficile ? Commencez par une leçon « Introduction » (sans texte cité) qui pose le problème et
-            les notions. Pour une longue liste de cartes déjà écrites, créez l’unité puis utilisez « Importer une
-            liste ».
+            L’étape suivante propose de coller la liste et de la découper en leçons ; chacune devient une leçon de
+            cette unité, sans leçon écrite à part à gérer en plus.
           </p>
         )}
       </div>

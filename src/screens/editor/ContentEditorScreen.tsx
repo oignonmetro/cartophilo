@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { PassageText } from '@/components/PassageText'
 import type { UnitColor } from '@/content/schema'
-import { ImportSplitDialog } from './ImportSplitDialog'
+import { ImportSplitDialog, type ImportTarget } from './ImportSplitDialog'
 import { PassageEditor } from './PassageEditor'
 import { isCitation } from './textUnit'
 import type { PassageDTO, PointDTO, SkippedRowDTO, TrackKind, TreeCourse, TreeLesson, TreeTrack, TreeUnit } from './types'
@@ -32,7 +32,7 @@ type Dialog =
   | { kind: 'newUnit'; course: string; track: TreeTrack }
   | { kind: 'newLesson'; course: string; track: TreeTrack; unit: TreeUnit }
   | { kind: 'unitSettings'; course: string; unit: TreeUnit }
-  | { kind: 'import'; course: string; track: TreeTrack; unit: TreeUnit }
+  | { kind: 'import'; course: string; track: TreeTrack; target: ImportTarget }
 
 /** Même forme que la réponse de `POST /api/import-points` (voir `tools/content/quizletImport.ts`). */
 interface ImportedPointDTO {
@@ -472,7 +472,9 @@ export default function ContentEditorScreen() {
                                 </button>
                                 <button
                                   type="button"
-                                  onClick={() => setDialog({ kind: 'import', course: course.id, track, unit })}
+                                  onClick={() =>
+                                    setDialog({ kind: 'import', course: course.id, track, target: { kind: 'existing', unit } })
+                                  }
                                   title="Coller une longue liste de cartes et la découper en plusieurs leçons"
                                   className="rounded-lg px-2 py-1 text-left text-xs font-bold text-ink-faint hover:bg-ink/5 hover:text-teal-deep"
                                 >
@@ -612,6 +614,14 @@ export default function ContentEditorScreen() {
           track={dialog.track}
           onClose={() => setDialog(null)}
           onCreated={(unit, lesson) => void afterCreate(dialog.course, dialog.track, unit, lesson)}
+          onImport={(meta) =>
+            setDialog({
+              kind: 'import',
+              course: dialog.course,
+              track: dialog.track,
+              target: { kind: 'new', track: dialog.track.id, meta },
+            })
+          }
         />
       )}
       {dialog?.kind === 'newLesson' && (
@@ -636,9 +646,9 @@ export default function ContentEditorScreen() {
       {dialog?.kind === 'import' && (
         <ImportSplitDialog
           course={dialog.course}
-          unit={dialog.unit}
+          target={dialog.target}
           onClose={() => setDialog(null)}
-          onCreated={(lesson) => void afterCreate(dialog.course, dialog.track, dialog.unit.id, lesson)}
+          onCreated={(unit, lesson) => void afterCreate(dialog.course, dialog.track, unit, lesson)}
         />
       )}
     </div>

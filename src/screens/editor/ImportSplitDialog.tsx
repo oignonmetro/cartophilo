@@ -1,7 +1,16 @@
 import { Fragment, useMemo, useState } from 'react'
 import { inputClass, Modal } from './Modal'
 import { isCitation, reconstructPassage, splitMultiGap } from './textUnit'
-import { api, type ImportedTextCardDTO, type SkippedRowDTO, type TreeUnit } from './types'
+import { api, type ImportedTextCardDTO, type NewUnitMeta, type SkippedRowDTO, type TreeUnit } from './types'
+
+/**
+ * Ce que l'import remplit : une unité déjà là (les leçons s'ajoutent à la
+ * suite, via `POST /api/lessons`), ou une unité encore à créer — quand
+ * `NewUnitDialog` a renvoyé vers l'import plutôt que d'écrire une première
+ * leçon à la main (voir sa docstring) : la liste fournit alors les leçons de
+ * la création elle-même, via `POST /api/unit`.
+ */
+export type ImportTarget = { kind: 'existing'; unit: TreeUnit } | { kind: 'new'; track: string; meta: NewUnitMeta }
 
 interface SegmentMeta {
   title: string
@@ -30,16 +39,17 @@ Quand Marx dit « en un mot : moralement », il vise une méthode d'explication 
  */
 export function ImportSplitDialog({
   course,
-  unit,
+  target,
   onClose,
   onCreated,
 }: {
   course: string
-  unit: TreeUnit
+  target: ImportTarget
   onClose: () => void
-  onCreated: (firstLessonId: string) => void
+  onCreated: (unitId: string, lessonId: string) => void
 }) {
-  const isText = unit.isText
+  const isText = target.kind === 'existing' ? target.unit.isText : target.meta.type === 'text'
+  const unitTitle = target.kind === 'existing' ? target.unit.title : target.meta.title
   const [step, setStep] = useState<'paste' | 'split'>('paste')
   const [raw, setRaw] = useState('')
   const [cards, setCards] = useState<ImportedTextCardDTO[]>([])
@@ -133,11 +143,20 @@ export function ImportSplitDialog({
           points,
         }
       })
-      const data = await api<{ lessons: { id: string }[] }>(`/api/lessons?course=${course}&unit=${unit.id}`, {
-        method: 'POST',
-        body: { lessons },
-      })
-      onCreated(data.lessons[0]!.id)
+      if (target.kind === 'existing') {
+        const data = await api<{ lessons: { id: string }[] }>(`/api/lessons?course=${course}&unit=${target.unit.id}`, {
+          method: 'POST',
+          body: { lessons },
+        })
+        onCreated(target.unit.id, data.lessons[0]!.id)
+      } else {
+        const { type, title, subtitle, group, intro } = target.meta
+        const data = await api<{ unit: { id: string }; lessons: { id: string }[] }>(
+          `/api/unit?course=${course}&track=${target.track}`,
+          { method: 'POST', body: { type, title, subtitle, group, intro, lessons } },
+        )
+        onCreated(data.unit.id, data.lessons[0]!.id)
+      }
     } catch (err) {
       setError((err as Error).message)
       setBusy(false)
@@ -147,7 +166,7 @@ export function ImportSplitDialog({
   if (step === 'paste') {
     return (
       <Modal
-        title={`Importer une liste dans « ${unit.title} »`}
+        title={`Importer une liste dans « ${unitTitle} »`}
         onClose={onClose}
         onSubmit={() => void analyze()}
         submitLabel="Analyser la liste →"
@@ -184,10 +203,14 @@ export function ImportSplitDialog({
   const review = cards.filter((card) => card.needsReview).length
   return (
     <Modal
-      title={`Découper en leçons · « ${unit.title} »`}
+      title={`Découper en leçons · « ${unitTitle} »`}
       onClose={onClose}
       onSubmit={() => void create()}
-      submitLabel={`Créer ${segments.length} leçon${segments.length > 1 ? 's' : ''}`}
+      submitLabel={
+        target.kind === 'new'
+          ? `Créer l’unité et ${segments.length} leçon${segments.length > 1 ? 's' : ''}`
+          : `Créer ${segments.length} leçon${segments.length > 1 ? 's' : ''}`
+      }
       busy={busy}
       error={error}
       wide
