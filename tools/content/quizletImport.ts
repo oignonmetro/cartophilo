@@ -165,3 +165,125 @@ export function importQuizletRows(raw: string, opts: { termSep?: string; rowSep?
 
   return { points, skipped, rowCount: rows.length }
 }
+
+/**
+ * Une carte d'unité de texte, telle que lue dans une liste collée (voir
+ * `importTextUnitRows`). Contrairement à `ImportedPoint`, une carte à
+ * plusieurs trous reste une seule carte : une leçon de texte les affiche
+ * telles quelles, réponses séparées par « ; » (voir content/textes.md).
+ */
+export interface ImportedTextCard {
+  sentence: string
+  /** Réponses des trous, dans l'ordre, jointes par « ; ». */
+  answer: string
+  /** « 1/3 », tiré d'un « (1/3) » final. */
+  fragment?: string
+  /** Paragraphe annoncé par un préfixe « §4, Intitulé : ». */
+  paragraph?: { number: string; heading: string }
+  /** Citation : porte un fragment ou s'ouvre sur « ; sinon explication. */
+  kind: 'citation' | 'explication'
+  /** Guillemets à relire, ou nombre de réponses différent du nombre de trous. */
+  needsReview: boolean
+  sourceLine: number
+}
+
+export interface TextUnitImport {
+  cards: ImportedTextCard[]
+  skipped: SkippedRow[]
+  rowCount: number
+}
+
+const PARAGRAPH_PREFIX = /^§\s*(\d+)\s*,\s*(.+?)\s*:\s+([\s\S]*)$/
+const FRAGMENT_SUFFIX = /\s*\((\d+\s*\/\s*\d+)\)\s*$/
+
+/**
+ * Le tiret cadratin d'une citation appartient à son auteur : on ne le retire
+ * qu'en dehors des guillemets français (voir content/textes.md).
+ */
+function stripEmDashOutsideQuotes(s: string): string {
+  return s
+    .split(/(«[^»]*»)/)
+    .map((part) => (part.startsWith('«') ? part : stripEmDash(part)))
+    .join('')
+}
+
+/**
+ * Lit une liste de cartes pour une unité de texte, une par ligne (`recto ::
+ * verso`, ou recto et verso séparés par une tabulation, comme dans un export
+ * Quizlet) :
+ *
+ *   - un préfixe « §4, Intitulé : » rattache la carte à son paragraphe ; les
+ *     cartes sans préfixe qui suivent restent dans le même ;
+ *   - un « (1/3) » final devient le repère de fragment ;
+ *   - plusieurs trous restent une seule carte, leurs réponses séparées par
+ *     « ; » (ou `//`, converti) ;
+ *   - guillemets droits d'une citation simple passés en guillemets
+ *     français, tirets cadratins retirés hors citation.
+ *
+ * Le regroupement en leçons, lui, reste à faire dans l'éditeur (voir
+ * `ImportSplitDialog`) : ce module ne fait que lire.
+ */
+export function importTextUnitRows(raw: string): TextUnitImport {
+  const rows = raw
+    .split('\n')
+    .map((r) => r.trim())
+    .filter((r) => r.length > 0)
+  const cards: ImportedTextCard[] = []
+  const skipped: SkippedRow[] = []
+  let paragraph: ImportedTextCard['paragraph']
+
+  rows.forEach((row, i) => {
+    const sep = row.includes('::') ? '::' : row.includes('\t') ? '\t' : null
+    if (!sep) {
+      skipped.push({ line: i + 1, reason: 'pas de séparateur « :: » ni de tabulation entre recto et verso', row })
+      return
+    }
+    const at = row.indexOf(sep)
+    let front = row.slice(0, at).trim()
+    const back = row.slice(at + sep.length).trim()
+
+    const prefix = front.match(PARAGRAPH_PREFIX)
+    if (prefix) {
+      paragraph = { number: prefix[1]!, heading: prefix[2]!.trim() }
+      front = prefix[3]!.trim()
+    }
+    let fragment: string | undefined
+    const suffix = front.match(FRAGMENT_SUFFIX)
+    if (suffix) {
+      fragment = suffix[1]!.replace(/\s+/g, '')
+      front = front.slice(0, suffix.index).trim()
+    }
+    if (!front.includes('___')) {
+      skipped.push({ line: i + 1, reason: 'aucun ___ au recto', row })
+      return
+    }
+    // Majuscule rendue à une phrase dont on vient d'ôter le préfixe.
+    if (/^[a-zà-ÿ]/.test(front)) front = front[0]!.toUpperCase() + front.slice(1)
+
+    const quoted = frenchifyQuotes(front)
+    const sentence = stripEmDashOutsideQuotes(quoted.text)
+    const gaps = sentence.split('___').length - 1
+    // Un seul trou : la réponse reste entière, même si elle contient un
+    // « ; » qui appartient au texte cité.
+    const answers =
+      gaps > 1
+        ? back
+            .split(/\s*(?:\/\/|;)\s*/)
+            .map((a) => stripEmDash(a.trim()))
+            .filter(Boolean)
+        : [stripEmDash(back)]
+    const answer = answers.join(' ; ')
+
+    cards.push({
+      sentence,
+      answer,
+      fragment,
+      paragraph,
+      kind: fragment || sentence.startsWith('«') ? 'citation' : 'explication',
+      needsReview: quoted.needsReview || (gaps > 1 && answers.length !== gaps),
+      sourceLine: i + 1,
+    })
+  })
+
+  return { cards, skipped, rowCount: rows.length }
+}

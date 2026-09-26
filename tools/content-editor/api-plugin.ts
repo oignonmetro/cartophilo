@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import type { ServerResponse } from 'node:http'
 import type { Plugin, Connect } from 'vite'
 import { parseDocument, Document, Scalar, YAMLSeq, YAMLMap, isMap } from 'yaml'
-import { importQuizletRows } from '../content/quizletImport.ts'
+import { importQuizletRows, importTextUnitRows } from '../content/quizletImport.ts'
 
 /**
  * API de développement pour l'éditeur de contenu : lit et réécrit les
@@ -23,12 +23,16 @@ const contentDir = join(root, 'content', 'courses')
 interface TreeLesson {
   id: string
   title: string
+  /** Repère d'une leçon de texte (« §1 », « Introduction ») ; `null` ailleurs. */
+  label: string | null
 }
 
 interface TreeUnit {
   id: string
   title: string
   group: string | null
+  /** Unité de texte : au moins une de ses leçons porte un `passage`. */
+  isText: boolean
   lessons: TreeLesson[]
 }
 
@@ -57,6 +61,22 @@ interface PointDTO {
   answer: string
   alt: string[]
   explanation?: string
+  /** Repère de fragment d'une carte-citation (« 1/3 »), leçons de texte seulement. */
+  fragment?: string
+}
+
+/** Le paragraphe cité d'une leçon de texte ; `text` vide pour une introduction. */
+interface PassageDTO {
+  label: string
+  text: string
+}
+
+/** Une leçon à créer d'un coup, avec son contenu (voir `POST /api/lessons`). */
+interface NewLessonDTO {
+  title: string
+  notes?: string
+  passage?: PassageDTO
+  points: Omit<PointDTO, 'id'>[]
 }
 
 function readYamlDoc(path: string): Document {
@@ -126,11 +146,13 @@ function buildTree(): TreeCourse[] {
         const lessons: TreeLesson[] = lessonsData.map((l) => ({
           id: String(l.id),
           title: String(l.title ?? l.id),
+          label: l.passage ? String((l.passage as Record<string, unknown>).label ?? '') : null,
         }))
         units.push({
           id: unitId,
           title: String(unitData.title ?? unitId),
           group: unitData.group ? String(unitData.group) : null,
+          isText: lessonsData.some((l) => Boolean(l.passage)),
           lessons,
         })
       }
@@ -174,6 +196,7 @@ function altSeq(values: string[]): YAMLSeq {
 function buildPointNode(point: PointDTO): YAMLMap {
   const map = new YAMLMap()
   map.set('id', point.id)
+  if (point.fragment) map.set('fragment', dq(point.fragment))
   map.set('sentence', dq(point.sentence))
   map.set('answer', dq(point.answer))
   map.set('alt', altSeq(point.alt))
@@ -205,6 +228,8 @@ function syncPoints(seq: YAMLSeq, points: PointDTO[]): void {
       existing.set('alt', altSeq(point.alt))
       if (point.explanation) setScalar(existing, 'explanation', point.explanation)
       else existing.delete('explanation')
+      if (point.fragment) setScalar(existing, 'fragment', point.fragment)
+      else existing.delete('fragment')
       return existing
     }
     return buildPointNode(point)
@@ -238,6 +263,37 @@ function setNotes(doc: Document, lessonIdx: number, notes: string): void {
   const scalar = new Scalar(notes)
   if (wantsBlock) scalar.type = Scalar.BLOCK_LITERAL
   doc.setIn(['lessons', lessonIdx, 'notes'], scalar)
+}
+
+/**
+ * Écrit le `passage` d'une leçon de texte : son repère, et son texte s'il y
+ * en a un (une leçon d'introduction n'en a pas, voir `passageSchema`). Le
+ * texte passe en style bloc dès qu'il compte plusieurs alinéas, comme
+ * `notes` (voir `setNotes`).
+ */
+function passageNode(passage: PassageDTO): YAMLMap {
+  const map = new YAMLMap()
+  map.set('label', dq(passage.label))
+  const text = passage.text.trim()
+  if (text) {
+    const scalar = new Scalar(text)
+    scalar.type = text.includes('\n') ? Scalar.BLOCK_LITERAL : Scalar.QUOTE_DOUBLE
+    map.set('text', scalar)
+  }
+  return map
+}
+
+function setPassage(doc: Document, lessonIdx: number, passage: PassageDTO): void {
+  const lesson = doc.getIn(['lessons', lessonIdx], true)
+  if (!isMap(lesson)) return
+  // Remis à sa place habituelle, juste avant `points`, pour que le fichier
+  // reste lisible à la main dans l'ordre titre, rappel, texte, cartes.
+  lesson.delete('passage')
+  const node = passageNode(passage)
+  const pointsIdx = lesson.items.findIndex((pair) => String((pair.key as Scalar | string)?.toString()) === 'points')
+  const pair = doc.createPair('passage', node)
+  if (pointsIdx === -1) lesson.items.push(pair)
+  else lesson.items.splice(pointsIdx, 0, pair)
 }
 
 const slugPattern = /^[a-z0-9][a-z0-9-]*$/
@@ -333,15 +389,32 @@ function nextLessonId(unitId: string, existingIds: string[]): string {
  * points, voir `content/philosophie.md`) : la leçon existe pour qu'on la
  * remplisse depuis l'éditeur, pas pour rester telle quelle.
  */
-function buildNewLessonNode(id: string, title: string, kind: string): YAMLMap {
+function buildNewLessonNode(
+  id: string,
+  title: string,
+  kind: string,
+  content: { notes?: string; passage?: PassageDTO; points?: Omit<PointDTO, 'id'>[] } = {},
+): YAMLMap {
   const map = new YAMLMap()
   map.set('id', id)
-  map.set('title', title)
-  map.set('notes', '')
+  map.set('title', dq(title))
+  const notes = content.notes ?? ''
+  const notesScalar = new Scalar(notes)
+  if (notes.includes('\n')) notesScalar.type = Scalar.BLOCK_LITERAL
+  map.set('notes', notesScalar)
+  if (content.passage) map.set('passage', passageNode(content.passage))
   const seq = new YAMLSeq()
-  seq.flow = true
+  const points = content.points ?? []
+  if (points.length === 0) seq.flow = true
+  points.forEach((point, index) => seq.items.push(buildPointNode({ ...point, id: `${id}-p${index + 1}` })))
   map.set(lessonContentKey(kind), seq)
   return map
+}
+
+/** Une unité est-elle une unité de texte ? Au moins une leçon porte un `passage`. */
+function isTextUnitDoc(doc: Document): boolean {
+  const lessons = (doc.toJS() as Record<string, unknown>).lessons
+  return Array.isArray(lessons) && (lessons as Record<string, unknown>[]).some((lesson) => Boolean(lesson.passage))
 }
 
 function readBody(req: Connect.IncomingMessage): Promise<string> {
@@ -383,6 +456,71 @@ export function contentEditorApi(): Plugin {
         }
       })
 
+      // Lecture d'une longue liste de cartes pour la découper ensuite en
+      // leçons dans l'éditeur (voir `ImportSplitDialog`) : les cartes à
+      // plusieurs trous y restent entières, et les préfixes « §n, titre : »
+      // et « (k/n) » sont reconnus (voir `importTextUnitRows`).
+      server.middlewares.use('/api/import-text-cards', async (req, res) => {
+        if (req.method !== 'POST') {
+          sendJson(res, 405, { error: 'méthode non supportée' })
+          return
+        }
+        try {
+          const body = JSON.parse(await readBody(req)) as { text: string }
+          if (!body.text || !body.text.trim()) {
+            sendJson(res, 400, { error: 'texte vide' })
+            return
+          }
+          sendJson(res, 200, importTextUnitRows(body.text))
+        } catch (error) {
+          sendJson(res, 500, { error: String((error as Error).message) })
+        }
+      })
+
+      // Plusieurs leçons d'un coup, ajoutées à la fin d'une unité, avec leur
+      // contenu : c'est la dernière étape du découpage d'une liste importée.
+      // Les identifiants (leçons, cartes) sont attribués ici, jamais par le
+      // client.
+      server.middlewares.use('/api/lessons', async (req, res) => {
+        if (req.method !== 'POST') {
+          sendJson(res, 405, { error: 'méthode non supportée' })
+          return
+        }
+        const url = new URL(req.url ?? '', 'http://localhost')
+        const course = url.searchParams.get('course')
+        const unit = url.searchParams.get('unit')
+        if (!course || !unit) {
+          sendJson(res, 400, { error: 'course et unit sont requis' })
+          return
+        }
+        try {
+          const body = JSON.parse(await readBody(req)) as { lessons: NewLessonDTO[] }
+          if (!Array.isArray(body.lessons) || body.lessons.length === 0) {
+            sendJson(res, 400, { error: 'aucune leçon à créer' })
+            return
+          }
+          const unitFile = join(contentDir, course, 'units', `${unit}.yaml`)
+          const doc = readYamlDoc(unitFile)
+          const lessonsSeq = doc.getIn(['lessons'])
+          if (!(lessonsSeq instanceof YAMLSeq)) throw new Error(`"${unit}" n'a pas de tableau lessons`)
+          const existingIds = (((doc.toJS() as Record<string, unknown>).lessons as Record<string, unknown>[]) ?? []).map(
+            (l) => String(l.id),
+          )
+          const kind = findTrackKindForUnit(course, unit)
+          const created: { id: string; title: string }[] = []
+          for (const lesson of body.lessons) {
+            const title = lesson.title.trim() || 'Leçon sans titre'
+            const id = nextLessonId(unit, [...existingIds, ...created.map((c) => c.id)])
+            lessonsSeq.items.push(buildNewLessonNode(id, title, kind, lesson))
+            created.push({ id, title })
+          }
+          writeYamlDoc(unitFile, doc)
+          sendJson(res, 200, { ok: true, lessons: created })
+        } catch (error) {
+          sendJson(res, 500, { error: String((error as Error).message) })
+        }
+      })
+
       server.middlewares.use('/api/lesson', async (req, res) => {
         const url = new URL(req.url ?? '', 'http://localhost')
         const course = url.searchParams.get('course')
@@ -399,13 +537,16 @@ export function contentEditorApi(): Plugin {
         // plutôt que d'en modifier une qui existe déjà (voir GET/PUT plus bas).
         if (req.method === 'POST') {
           try {
-            const body = JSON.parse(await readBody(req)) as { title?: string }
+            const body = JSON.parse(await readBody(req)) as { title?: string; label?: string }
             const title = body.title?.trim()
             if (!title) {
               sendJson(res, 400, { error: 'titre requis' })
               return
             }
             const doc = readYamlDoc(unitFile)
+            // Dans une unité de texte, toute leçon neuve a son repère, même
+            // vide : c'est ce qui la fait jouer comme une leçon de texte.
+            const passage = isTextUnitDoc(doc) ? { label: body.label?.trim() ?? '', text: '' } : undefined
             const existingIds = ((doc.toJS() as Record<string, unknown>).lessons as Record<string, unknown>[] | undefined ?? []).map(
               (l) => String(l.id),
             )
@@ -413,7 +554,7 @@ export function contentEditorApi(): Plugin {
             const kind = findTrackKindForUnit(course, unit)
             const lessonsSeq = doc.getIn(['lessons'])
             if (!(lessonsSeq instanceof YAMLSeq)) throw new Error(`"${unit}" n'a pas de tableau lessons`)
-            lessonsSeq.items.push(buildNewLessonNode(id, title, kind))
+            lessonsSeq.items.push(buildNewLessonNode(id, title, kind, { passage }))
             writeYamlDoc(unitFile, doc)
             sendJson(res, 200, { ok: true, lesson: { id, title } })
           } catch (error) {
@@ -439,9 +580,11 @@ export function contentEditorApi(): Plugin {
             const lessonData = lessons[idx]
             const kind = String(lessonData.kind ?? 'grammar')
             const points = kind === 'grammar' ? (lessonData.points as PointDTO[] | undefined) : undefined
+            const passage = lessonData.passage as Record<string, unknown> | undefined
             sendJson(res, 200, {
               title: String(lessonData.title ?? lesson),
               notes: String(lessonData.notes ?? ''),
+              passage: passage ? { label: String(passage.label ?? ''), text: String(passage.text ?? '') } : null,
               kind,
               // `alt` est optionnel dans le contenu (beaucoup de points n'en ont
               // jamais eu besoin, voir content/courses/hors-programme) mais pas
@@ -459,7 +602,12 @@ export function contentEditorApi(): Plugin {
 
         if (req.method === 'PUT') {
           try {
-            const body = JSON.parse(await readBody(req)) as { title?: string; notes: string; points?: PointDTO[] }
+            const body = JSON.parse(await readBody(req)) as {
+              title?: string
+              notes: string
+              points?: PointDTO[]
+              passage?: PassageDTO | null
+            }
             const doc = readYamlDoc(unitFile)
             const idx = findLessonIndex(doc, lesson)
             if (idx === -1) {
@@ -476,6 +624,7 @@ export function contentEditorApi(): Plugin {
               if (isMap(lessonNode)) setScalar(lessonNode, 'title', title)
             }
             setNotes(doc, idx, body.notes)
+            if (body.passage) setPassage(doc, idx, body.passage)
             if (body.points) {
               const pointsSeq = doc.getIn(['lessons', idx, 'points'])
               if (pointsSeq instanceof YAMLSeq) syncPoints(pointsSeq, body.points)
@@ -529,8 +678,33 @@ export function contentEditorApi(): Plugin {
         const url = new URL(req.url ?? '', 'http://localhost')
         const course = url.searchParams.get('course')
 
-        // Renomme une unité déjà là, plutôt que d'en créer une (voir POST
-        // plus bas) : ne touche que son `title`, jamais son id ni ses leçons.
+        // Réglages d'une unité déjà là (voir `UnitSettingsDialog`).
+        if (req.method === 'GET') {
+          const unit = url.searchParams.get('unit')
+          if (!course || !unit) {
+            sendJson(res, 400, { error: 'course et unit sont requis' })
+            return
+          }
+          try {
+            const doc = readYamlDoc(join(contentDir, course, 'units', `${unit}.yaml`))
+            const data = doc.toJS() as Record<string, unknown>
+            sendJson(res, 200, {
+              title: String(data.title ?? unit),
+              subtitle: String(data.subtitle ?? ''),
+              group: String(data.group ?? ''),
+              intro: String(data.intro ?? ''),
+              isText: isTextUnitDoc(doc),
+            })
+          } catch (error) {
+            sendJson(res, 500, { error: String((error as Error).message) })
+          }
+          return
+        }
+
+        // Modifie les réglages d'une unité déjà là : titre (requis),
+        // sous-titre, groupe, présentation. Un champ absent du corps n'est pas
+        // touché ; un champ vide est retiré du fichier. Jamais l'id ni les
+        // leçons.
         if (req.method === 'PUT') {
           const unit = url.searchParams.get('unit')
           if (!course || !unit) {
@@ -538,7 +712,12 @@ export function contentEditorApi(): Plugin {
             return
           }
           try {
-            const body = JSON.parse(await readBody(req)) as { title?: string }
+            const body = JSON.parse(await readBody(req)) as {
+              title?: string
+              subtitle?: string
+              group?: string
+              intro?: string
+            }
             const title = body.title?.trim()
             if (!title) {
               sendJson(res, 400, { error: 'titre requis' })
@@ -549,6 +728,21 @@ export function contentEditorApi(): Plugin {
             const root = doc.contents
             if (!isMap(root)) throw new Error(`"${unit}" n'a pas de nœud racine exploitable`)
             setScalar(root, 'title', title)
+            for (const key of ['subtitle', 'group'] as const) {
+              const value = body[key]
+              if (value === undefined) continue
+              if (value.trim()) setScalar(root, key, value.trim())
+              else root.delete(key)
+            }
+            if (body.intro !== undefined) {
+              const intro = body.intro.trim()
+              if (!intro) root.delete('intro')
+              else {
+                const scalar = new Scalar(intro)
+                scalar.type = Scalar.BLOCK_LITERAL
+                root.set('intro', scalar)
+              }
+            }
             writeYamlDoc(unitFile, doc)
             sendJson(res, 200, { ok: true, unit: { id: unit, title } })
           } catch (error) {
@@ -610,6 +804,13 @@ export function contentEditorApi(): Plugin {
           const body = JSON.parse(await readBody(req)) as {
             title?: string
             firstLessonTitle?: string
+            /** `text` : unité de texte (voir content/textes.md) ; `classic` par défaut. */
+            type?: 'classic' | 'text'
+            subtitle?: string
+            group?: string
+            intro?: string
+            /** Repère de la première leçon d'une unité de texte (« §1 », « Introduction »). */
+            firstLessonLabel?: string
           }
           const title = body.title?.trim()
           const firstLessonTitle = body.firstLessonTitle?.trim()
@@ -635,11 +836,29 @@ export function contentEditorApi(): Plugin {
           const kind = String(tracksData[trackIdx]!.kind ?? 'grammar')
           const firstLessonId = `${id}-l1`
 
+          const isText = body.type === 'text'
           const unitMap = new YAMLMap()
           unitMap.set('id', id)
-          unitMap.set('title', title)
+          unitMap.set('title', dq(title))
+          if (body.subtitle?.trim()) unitMap.set('subtitle', dq(body.subtitle.trim()))
+          // Une unité de texte porte l'icône de la feuille et la couleur de
+          // sa piste, comme celles déjà écrites (voir content/textes.md).
+          if (isText) {
+            unitMap.set('icon', 'page')
+            unitMap.set('color', String(tracksData[trackIdx]!.color ?? 'coral'))
+          }
+          if (body.group?.trim()) unitMap.set('group', dq(body.group.trim()))
+          if (body.intro?.trim()) {
+            const intro = new Scalar(body.intro.trim())
+            intro.type = Scalar.BLOCK_LITERAL
+            unitMap.set('intro', intro)
+          }
           const lessonsSeq = new YAMLSeq()
-          lessonsSeq.items.push(buildNewLessonNode(firstLessonId, firstLessonTitle, kind))
+          lessonsSeq.items.push(
+            buildNewLessonNode(firstLessonId, firstLessonTitle, kind, {
+              passage: isText ? { label: body.firstLessonLabel?.trim() ?? '', text: '' } : undefined,
+            }),
+          )
           unitMap.set('lessons', lessonsSeq)
           const unitDoc = new Document(unitMap)
           writeYamlDoc(unitFile, unitDoc)

@@ -110,3 +110,25 @@ Les tirets cadratins (—) sont gardés à l'intérieur des guillemets français
 parce qu'ils appartiennent au texte cité. Partout ailleurs, on les remplace
 (virgule, deux-points, parenthèses). `npm run content:check` ne signale que
 ceux qui sont hors citation.
+
+## Dans l'éditeur visuel
+
+L'éditeur (`npm run dev`, puis `/#/editeur`) sait créer une unité de texte à
+la main, sans toucher au YAML.
+
+« + Nouvelle unité » demande d'abord le genre de l'unité (classique ou de
+texte), puis, dans le même formulaire, la référence, la présentation et le
+repère de la première leçon (`§1`, `Introduction`…). Chaque leçon d'une unité
+de texte gagne un onglet **Texte** : on y colle le paragraphe, puis on
+sélectionne le morceau à faire retrouver et « Trouer dans sa phrase » (ou
+« dans tout le paragraphe ») crée la carte-citation correspondante. Dans
+l'onglet Exercices, chaque carte porte son genre (citation ou explication) et
+son repère de fragment, et « Trier : citations d'abord » regroupe les
+cartes-explication en fin de leçon.
+
+Pour une longue liste déjà écrite (au format Quizlet décrit plus haut),
+« ⇪ Importer une liste… » sous l'unité découpe la liste en leçons d'après les
+préfixes `§n, Intitulé :`. Le découpage se retouche avant création : « ✂ Couper
+ici » entre deux cartes, « Fusionner avec la précédente », repère et titre de
+chaque leçon, texte du paragraphe reconstitué depuis les cartes-citation (deux
+cartes qui ne redonnent pas le même texte sont signalées).

@@ -1,6 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
+import { PassageText } from '@/components/PassageText'
 import type { UnitColor } from '@/content/schema'
+import { ImportSplitDialog } from './ImportSplitDialog'
+import { PassageEditor } from './PassageEditor'
+import { isCitation } from './textUnit'
+import type { PassageDTO, PointDTO, SkippedRowDTO, TrackKind, TreeCourse, TreeLesson, TreeTrack, TreeUnit } from './types'
+import { NewLessonDialog, NewUnitDialog, UnitSettingsDialog } from './UnitDialogs'
 
 /**
  * Éditeur visuel des rappels de cours, réservé au développement (`npm run
@@ -15,47 +21,18 @@ import type { UnitColor } from '@/content/schema'
  * l'apprenant.
  */
 
-interface TreeLesson {
-  id: string
-  title: string
-}
-
-interface TreeUnit {
-  id: string
-  title: string
-  group: string | null
-  lessons: TreeLesson[]
-}
-
-type TrackKind = 'vocab' | 'grammar' | 'conjugation'
-
-interface TreeTrack {
-  id: string
-  title: string
-  kind: TrackKind
-  units: TreeUnit[]
-}
-
-interface TreeCourse {
-  id: string
-  name: string
-  tracks: TreeTrack[]
-}
-
 interface Selection {
   course: string
   unit: string
   lesson: string
 }
 
-/** Même forme que `grammarPointSchema` (`src/content/schema.ts`), sans `options` ni `translation`. */
-interface PointDTO {
-  id: string
-  sentence: string
-  answer: string
-  alt: string[]
-  explanation?: string
-}
+/** Fenêtre ouverte : création d'unité ou de leçon, réglages d'unité, import d'une liste. */
+type Dialog =
+  | { kind: 'newUnit'; course: string; track: TreeTrack }
+  | { kind: 'newLesson'; course: string; track: TreeTrack; unit: TreeUnit }
+  | { kind: 'unitSettings'; course: string; unit: TreeUnit }
+  | { kind: 'import'; course: string; track: TreeTrack; unit: TreeUnit }
 
 /** Même forme que la réponse de `POST /api/import-points` (voir `tools/content/quizletImport.ts`). */
 interface ImportedPointDTO {
@@ -65,11 +42,6 @@ interface ImportedPointDTO {
   sourceLine: number
 }
 
-interface SkippedRowDTO {
-  line: number
-  reason: string
-  row: string
-}
 
 /**
  * Id de la prochaine carte d'une leçon, sur le même gabarit que celles déjà
@@ -119,7 +91,11 @@ export default function ContentEditorScreen() {
 
   const [selection, setSelection] = useState<Selection | null>(null)
   const [trackKind, setTrackKind] = useState<TrackKind>('grammar')
-  const [view, setView] = useState<'notes' | 'points'>('notes')
+  const [view, setView] = useState<'notes' | 'text' | 'points'>('notes')
+  const [dialog, setDialog] = useState<Dialog | null>(null)
+  // Paragraphe cité d'une leçon de texte ; `null` pour une leçon classique.
+  const [passage, setPassage] = useState<PassageDTO | null>(null)
+  const [originalPassage, setOriginalPassage] = useState<PassageDTO | null>(null)
   const [title, setTitle] = useState('')
   const [originalTitle, setOriginalTitle] = useState('')
   const [notes, setNotes] = useState('')
@@ -135,7 +111,11 @@ export default function ContentEditorScreen() {
   const [resetToken, setResetToken] = useState(0)
 
   const textareaRef = useRef<HTMLTextAreaElement | null>(null)
-  const dirty = title !== originalTitle || notes !== original || JSON.stringify(points) !== JSON.stringify(originalPoints)
+  const dirty =
+    title !== originalTitle ||
+    notes !== original ||
+    JSON.stringify(points) !== JSON.stringify(originalPoints) ||
+    JSON.stringify(passage) !== JSON.stringify(originalPassage)
 
   const loadTree = useCallback(async () => {
     try {
@@ -168,6 +148,10 @@ export default function ContentEditorScreen() {
       setOriginal(data.notes)
       setPoints(data.points)
       setOriginalPoints(data.points)
+      setPassage(data.passage)
+      setOriginalPassage(data.passage)
+      // L'onglet Texte n'existe que pour une leçon de texte.
+      if (!data.passage) setView((current) => (current === 'text' ? 'notes' : current))
       setStatus('idle')
     } catch (err) {
       setStatus('error')
@@ -175,88 +159,14 @@ export default function ContentEditorScreen() {
     }
   }, [])
 
-  /**
-   * Une leçon toute neuve (id attribué par l'API, voir `nextLessonId` côté
-   * serveur), ouverte aussitôt créée : rappel et exercices restent à
-   * écrire, mais autant s'y mettre directement plutôt que de retourner
-   * chercher la leçon dans l'arborescence après coup.
-   */
-  const createLesson = useCallback(
-    async (course: string, track: TreeTrack, unit: string) => {
-      const title = window.prompt('Titre de la nouvelle leçon :')?.trim()
-      if (!title) return
-      try {
-        const res = await fetch(`/api/lesson?course=${course}&unit=${unit}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ title }),
-        })
-        const data = await res.json()
-        if (!res.ok) throw new Error(data.error ?? res.statusText)
-        await loadTree()
-        void openLesson(course, track, unit, data.lesson.id)
-      } catch (err) {
-        window.alert(`Impossible de créer la leçon : ${(err as Error).message}`)
-      }
+  /** Après création dans une fenêtre : l'arborescence se recharge et la nouvelle leçon s'ouvre. */
+  const afterCreate = useCallback(
+    async (course: string, track: TreeTrack, unit: string, lesson: string) => {
+      setDialog(null)
+      await loadTree()
+      void openLesson(course, track, unit, lesson)
     },
     [loadTree, openLesson],
-  )
-
-  /**
-   * Une unité toute neuve dans une piste existante, avec sa première leçon
-   * (voir `content-editor/api-plugin.ts` : une unité sans la moindre leçon
-   * ne respecte pas le schéma, la création groupe donc toujours les deux).
-   */
-  const createUnit = useCallback(
-    async (course: string, track: TreeTrack) => {
-      const title = window.prompt('Titre de la nouvelle unité :')?.trim()
-      if (!title) return
-      const firstLessonTitle = window.prompt('Titre de sa première leçon :')?.trim()
-      if (!firstLessonTitle) return
-      try {
-        // Pas d'identifiant demandé : le serveur le dérive du titre (voir
-        // `slugify`/`uniqueUnitId` dans `api-plugin.ts`).
-        const res = await fetch(`/api/unit?course=${course}&track=${track.id}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ title, firstLessonTitle }),
-        })
-        const data = await res.json()
-        if (!res.ok) throw new Error(data.error ?? res.statusText)
-        await loadTree()
-        void openLesson(course, track, data.unit.id, data.lesson.id)
-      } catch (err) {
-        window.alert(`Impossible de créer l'unité : ${(err as Error).message}`)
-      }
-    },
-    [loadTree, openLesson],
-  )
-
-  /**
-   * Renomme une unité déjà là, à part de tout le reste (une leçon ouverte
-   * dedans, elle, se renomme avec son propre bouton Enregistrer, voir `save`
-   * plus bas) : `window.prompt`, sur le même modèle que `createUnit` et
-   * `createLesson`, plutôt qu'un champ dédié — la sidebar n'a pas de panneau
-   * d'édition propre à une unité, seulement à une leçon.
-   */
-  const renameUnit = useCallback(
-    async (course: string, unit: TreeUnit) => {
-      const title = window.prompt('Nouveau titre de l’unité :', unit.title)?.trim()
-      if (!title || title === unit.title) return
-      try {
-        const res = await fetch(`/api/unit?course=${course}&unit=${unit.id}`, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ title }),
-        })
-        const data = await res.json()
-        if (!res.ok) throw new Error(data.error ?? res.statusText)
-        await loadTree()
-      } catch (err) {
-        window.alert(`Impossible de renommer l'unité : ${(err as Error).message}`)
-      }
-    },
-    [loadTree],
   )
 
   /**
@@ -320,24 +230,26 @@ export default function ContentEditorScreen() {
       const res = await fetch(`/api/lesson?course=${selection.course}&unit=${selection.unit}&lesson=${selection.lesson}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title, notes, points: points ?? undefined }),
+        body: JSON.stringify({ title, notes, points: points ?? undefined, passage: passage ?? undefined }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? res.statusText)
       setOriginalTitle(title)
       setOriginal(notes)
       setOriginalPoints(points)
+      setOriginalPassage(passage)
       setStatus('saved')
       // Le titre affiché dans l'arborescence vient de sa propre copie
       // (`tree`), indépendante de l'état d'édition : sans ce rechargement,
       // un renommage resterait invisible dans la barre latérale tant qu'on
       // ne rouvre pas complètement l'éditeur.
-      if (title !== originalTitle) void loadTree()
+      // Le repère d'une leçon de texte s'y affiche aussi.
+      if (title !== originalTitle || passage?.label !== originalPassage?.label) void loadTree()
     } catch (err) {
       setStatus('error')
       setError(String((err as Error).message))
     }
-  }, [selection, title, originalTitle, notes, points, loadTree])
+  }, [selection, title, originalTitle, notes, points, passage, originalPassage, loadTree])
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -418,6 +330,11 @@ export default function ContentEditorScreen() {
             <ViewTabButton active={view === 'notes'} onClick={() => setView('notes')}>
               Rappel
             </ViewTabButton>
+            {passage && (
+              <ViewTabButton active={view === 'text'} onClick={() => setView('text')}>
+                Texte
+              </ViewTabButton>
+            )}
             <ViewTabButton active={view === 'points'} onClick={() => setView('points')}>
               Exercices{points ? ` (${points.length})` : ''}
             </ViewTabButton>
@@ -433,6 +350,7 @@ export default function ContentEditorScreen() {
                 setTitle(originalTitle)
                 setNotes(original)
                 setPoints(originalPoints)
+                setPassage(originalPassage)
                 setResetToken((n) => n + 1)
               }}
               disabled={!dirty}
@@ -469,7 +387,7 @@ export default function ContentEditorScreen() {
                     <div className="ml-2 border-l-2 border-line pl-2">
                       <button
                         type="button"
-                        onClick={() => void createUnit(course.id, track)}
+                        onClick={() => setDialog({ kind: 'newUnit', course: course.id, track })}
                         className="mb-0.5 rounded-lg px-2 py-1 text-left text-xs font-bold text-ink-faint hover:bg-ink/5 hover:text-teal-deep"
                       >
                         + Nouvelle unité
@@ -481,13 +399,21 @@ export default function ContentEditorScreen() {
                             <details key={unit.id} className="mb-0.5">
                               <summary className="group flex cursor-pointer items-center gap-1 rounded-lg px-2 py-1 text-xs font-bold">
                                 <span className="flex-1">{unit.title}</span>
+                                {unit.isText && (
+                                  <span
+                                    title="Unité de texte"
+                                    className="rounded bg-coral/15 px-1 text-[0.6rem] font-black text-coral-deep uppercase"
+                                  >
+                                    texte
+                                  </span>
+                                )}
                                 <button
                                   type="button"
-                                  title="Renommer l'unité"
+                                  title="Réglages de l'unité (titre, sous-titre, groupe, présentation)"
                                   onClick={(event) => {
                                     event.preventDefault()
                                     event.stopPropagation()
-                                    void renameUnit(course.id, unit)
+                                    setDialog({ kind: 'unitSettings', course: course.id, unit })
                                   }}
                                   className="rounded px-1 text-ink-faint opacity-0 hover:text-teal-deep group-hover:opacity-100"
                                 >
@@ -521,6 +447,9 @@ export default function ContentEditorScreen() {
                                           active ? 'bg-teal/15 font-bold text-teal-deep' : 'text-ink-soft hover:bg-ink/5'
                                         }`}
                                       >
+                                        {lesson.label && (
+                                          <span className="mr-1 font-black text-violet">{lesson.label}</span>
+                                        )}
                                         {lesson.title}
                                       </button>
                                       <button
@@ -536,10 +465,18 @@ export default function ContentEditorScreen() {
                                 })}
                                 <button
                                   type="button"
-                                  onClick={() => void createLesson(course.id, track, unit.id)}
+                                  onClick={() => setDialog({ kind: 'newLesson', course: course.id, track, unit })}
                                   className="rounded-lg px-2 py-1 text-left text-xs font-bold text-ink-faint hover:bg-ink/5 hover:text-teal-deep"
                                 >
                                   + Nouvelle leçon
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => setDialog({ kind: 'import', course: course.id, track, unit })}
+                                  title="Coller une longue liste de cartes et la découper en plusieurs leçons"
+                                  className="rounded-lg px-2 py-1 text-left text-xs font-bold text-ink-faint hover:bg-ink/5 hover:text-teal-deep"
+                                >
+                                  ⇪ Importer une liste…
                                 </button>
                               </div>
                             </details>
@@ -560,12 +497,26 @@ export default function ContentEditorScreen() {
           </div>
         )}
 
+        {selection && view === 'text' && passage && (
+          <PassageEditor
+            passage={passage}
+            onChange={setPassage}
+            points={points ?? []}
+            onAddCard={(card) => {
+              const current = points ?? []
+              setPoints([...current, { id: nextPointId(selection.lesson, current), ...card, alt: [] }])
+            }}
+            onShowCards={() => setView('points')}
+          />
+        )}
+
         {selection && view === 'points' && points && (
           <PointsEditor
             key={`${selection.lesson}:${resetToken}`}
             lessonId={selection.lesson}
             points={points}
             onChange={setPoints}
+            isText={Boolean(passage)}
           />
         )}
 
@@ -642,12 +593,54 @@ export default function ContentEditorScreen() {
                   <span className={`h-1.5 w-10 rounded-full ${tone.accent}`} />
                   <h2 className="text-2xl leading-tight font-black text-balance">{title}</h2>
                 </header>
+                {passage?.text.trim() && (
+                  <>
+                    <PassageText text={passage.text} />
+                    <p className={`text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}>Explication</p>
+                  </>
+                )}
                 <NoteBlocks notes={notes} tone={tone} />
               </div>
             </div>
           </div>
         )}
       </div>
+
+      {dialog?.kind === 'newUnit' && (
+        <NewUnitDialog
+          course={dialog.course}
+          track={dialog.track}
+          onClose={() => setDialog(null)}
+          onCreated={(unit, lesson) => void afterCreate(dialog.course, dialog.track, unit, lesson)}
+        />
+      )}
+      {dialog?.kind === 'newLesson' && (
+        <NewLessonDialog
+          course={dialog.course}
+          unit={dialog.unit}
+          onClose={() => setDialog(null)}
+          onCreated={(lesson) => void afterCreate(dialog.course, dialog.track, dialog.unit.id, lesson)}
+        />
+      )}
+      {dialog?.kind === 'unitSettings' && (
+        <UnitSettingsDialog
+          course={dialog.course}
+          unit={dialog.unit}
+          onClose={() => setDialog(null)}
+          onSaved={() => {
+            setDialog(null)
+            void loadTree()
+          }}
+        />
+      )}
+      {dialog?.kind === 'import' && (
+        <ImportSplitDialog
+          course={dialog.course}
+          unit={dialog.unit}
+          onClose={() => setDialog(null)}
+          onCreated={(lesson) => void afterCreate(dialog.course, dialog.track, dialog.unit.id, lesson)}
+        />
+      )}
     </div>
   )
 }
@@ -730,10 +723,13 @@ function PointsEditor({
   lessonId,
   points,
   onChange,
+  isText = false,
 }: {
   lessonId: string
   points: PointDTO[]
   onChange: (points: PointDTO[]) => void
+  /** Leçon de texte : repère de fragment, genre de chaque carte, tri citations d'abord. */
+  isText?: boolean
 }) {
   const [importOpen, setImportOpen] = useState(false)
   const [importText, setImportText] = useState('')
@@ -760,6 +756,11 @@ function PointsEditor({
     ;[next[index], next[target]] = [next[target]!, next[index]!]
     onChange(next)
   }
+
+  // Dans une leçon de texte, les cartes-citation passent avant les cartes-explication
+  // (tri stable : l'ordre au sein de chaque genre ne bouge pas).
+  const citationsFirst = points.slice().sort((a, b) => Number(isCitation(b)) - Number(isCitation(a)))
+  const sorted = citationsFirst.every((point, i) => point === points[i])
 
   function add() {
     onChange([...points, { id: nextPointId(lessonId, points), sentence: '', answer: '', alt: [] }])
@@ -823,6 +824,17 @@ function PointsEditor({
         >
           {importOpen ? 'Fermer l’import' : 'Importer une liste'}
         </button>
+        {isText && (
+          <button
+            type="button"
+            onClick={() => onChange(citationsFirst)}
+            disabled={sorted}
+            title="Regroupe les cartes-explication après les cartes-citation, sans changer l’ordre à l’intérieur de chaque groupe"
+            className="rounded-lg border-2 border-line px-3 py-1.5 text-sm font-bold text-ink-soft hover:border-teal hover:text-teal-deep disabled:opacity-40"
+          >
+            Trier : citations d’abord
+          </button>
+        )}
       </div>
 
       {importOpen && (
@@ -886,7 +898,23 @@ function PointsEditor({
       {points.map((point, index) => (
         <div key={point.id} className="card-3d flex flex-col gap-2 p-4">
           <div className="flex items-start gap-3">
-            <span className="mt-2 w-6 shrink-0 text-right text-sm font-black text-ink-faint">{index + 1}</span>
+            <div className="mt-2 flex w-6 shrink-0 flex-col items-end gap-1">
+              <span className="text-sm font-black text-ink-faint">{index + 1}</span>
+              {isText && (
+                <span
+                  title={
+                    isCitation(point)
+                      ? 'Carte-citation : fait retrouver un morceau du texte'
+                      : 'Carte-explication : fait retrouver une idée du commentaire'
+                  }
+                  className={`rounded px-1 text-[0.6rem] font-black uppercase ${
+                    isCitation(point) ? 'bg-violet/15 text-violet' : 'bg-teal/15 text-teal-deep'
+                  }`}
+                >
+                  {isCitation(point) ? 'cit.' : 'expl.'}
+                </span>
+              )}
+            </div>
             <div className="grid flex-1 grid-cols-2 gap-3">
               <div className="flex flex-col gap-1">
                 <textarea
@@ -894,10 +922,10 @@ function PointsEditor({
                   onChange={(event) => update(index, { sentence: event.target.value })}
                   spellCheck={false}
                   rows={3}
-                  placeholder="Phrase avec ___"
+                  placeholder={isText ? '« Citation avec ___ » (plusieurs trous possibles)' : 'Phrase avec ___'}
                   className="min-h-16 resize-y rounded-xl border-2 border-line bg-paper p-2.5 text-sm leading-snug text-ink outline-none focus:border-teal"
                 />
-                <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">Terme</span>
+                <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">{isText ? 'Phrase à trous' : 'Terme'}</span>
               </div>
               <div className="flex flex-col gap-1">
                 <textarea
@@ -905,10 +933,10 @@ function PointsEditor({
                   onChange={(event) => update(index, { answer: event.target.value })}
                   spellCheck={false}
                   rows={3}
-                  placeholder="Réponse"
+                  placeholder={isText ? 'Réponse ; réponse du 2e trou…' : 'Réponse'}
                   className="min-h-16 resize-y rounded-xl border-2 border-line bg-paper p-2.5 text-sm leading-snug text-ink outline-none focus:border-teal"
                 />
-                <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">Définition</span>
+                <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">{isText ? 'Réponse(s)' : 'Définition'}</span>
               </div>
             </div>
             <div className="flex shrink-0 flex-col items-center gap-1">
@@ -942,6 +970,20 @@ function PointsEditor({
           </div>
 
           <div className="flex flex-wrap items-center gap-3 pl-9 text-xs">
+            {isText && (
+              <label
+                className="flex items-center gap-1.5 text-ink-faint"
+                title="Pour un paragraphe cité en plusieurs morceaux : 1/3, 2/3… Laisser vide sinon."
+              >
+                <span className="font-bold uppercase tracking-wide">Fragment</span>
+                <input
+                  value={point.fragment ?? ''}
+                  onChange={(event) => update(index, { fragment: event.target.value || undefined })}
+                  placeholder="1/3"
+                  className="w-14 rounded-md border border-line bg-paper px-2 py-1 text-ink outline-none focus:border-teal"
+                />
+              </label>
+            )}
             <label className="flex items-center gap-1.5 text-ink-faint">
               <span className="font-bold uppercase tracking-wide">Autres réponses</span>
               <AltField alt={point.alt} onChange={(alt) => update(index, { alt })} />
