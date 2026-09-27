@@ -25,16 +25,16 @@ work:
       parts:
         - id: l2-1-5
           label: chap. 1-5
-          question: Quelles sont les propriétés du pouvoir souverain, et jusqu'où s'étend-il ?
+          question: Quelles sont les propriétés du pouvoir souverain (le pouvoir de faire les lois), et jusqu'où s'étend-il ?
           parts:
             - id: l2-1-3
               label: chap. 1-3
-              question: Que tient la souveraineté de n'être que l'exercice de la volonté générale ?
               parts:
                 - id: l2-1
                   label: II, 1
                   title: Que la souveraineté est inaliénable
-                  summary: "le pouvoir se transmet, pas la volonté"
+                  summary: "La souveraineté est inaliénable"
+                  gloss: "le peuple ne peut ni la céder ni se faire représenter"
                   points:
                     - id: cs2-1
                       sentence: "La souveraineté, n'étant que l'exercice de la volonté générale, ne peut s'aliéner ni être représentée : « le pouvoir peut bien se transmettre, mais non pas la ___ »."
@@ -43,7 +43,8 @@ work:
                 - id: l2-2
                   label: II, 2
                   title: Que la souveraineté est indivisible
-                  summary: "ce qu'on prend pour ses parties n'en sont que des émanations"
+                  summary: "La souveraineté est indivisible"
+                  gloss: "on ne peut la partager entre plusieurs pouvoirs (législatif, exécutif…)"
                   rel: declinaison
                   points:
                     - id: cs2-2
@@ -53,7 +54,8 @@ work:
                 - id: l2-3
                   label: II, 3
                   title: Si la volonté générale peut errer
-                  summary: "toujours droite, mais le peuple peut être trompé"
+                  summary: "La volonté générale ne peut errer"
+                  gloss: "le peuple veut toujours son bien, mais les factions peuvent le tromper"
                   rel: declinaison
                   points:
                     - id: cs2-3a
@@ -69,13 +71,13 @@ work:
                       explanation: "D'où la conclusion du chapitre : pour que la volonté générale s'énonce bien, il ne doit pas y avoir de société partielle dans l'État."
             - id: l2-4-5
               label: chap. 4-5
-              question: Jusqu'où s'étend le pouvoir souverain ?
               rel: limite
               parts:
                 - id: l2-4
                   label: II, 4
                   title: Des bornes du pouvoir souverain
-                  summary: "absolu, mais borné aux objets généraux"
+                  summary: "Le souverain est absolu, mais borné"
+                  gloss: "il ne décide que de ce qui concerne tous les citoyens également"
                   points:
                     - id: cs2-4a
                       sentence: "Le pouvoir souverain est absolu, mais borné par la généralité de la volonté qui le dirige : la volonté générale perd sa rectitude dès qu'elle tend à un objet ___ et déterminé."
@@ -89,7 +91,8 @@ work:
                 - id: l2-5
                   label: II, 5
                   title: Du droit de vie et de mort
-                  summary: "risquer sa vie pour la conserver ; le criminel, un ennemi"
+                  summary: "Le souverain peut exiger la vie du citoyen"
+                  gloss: "pour défendre l'État, ou pour punir le criminel, devenu un ennemi"
                   rel: application
                   points:
                     - id: cs2-5a
@@ -103,7 +106,8 @@ work:
         - id: l2-6
           label: II, 6
           title: De la loi
-          summary: "tout le peuple statue sur tout le peuple ; mais il lui faut un guide"
+          summary: "La loi : tout le peuple statue sur tout le peuple"
+          gloss: "mais le peuple ne voit pas toujours son bien : il lui faut un guide"
           rel: consequence
           points:
             - id: cs2-6a
@@ -116,13 +120,14 @@ work:
               explanation: "Au chapitre 3, le peuple qui ne voit pas son bien est trompé par les brigues ; au chapitre 6, il manque de lumières pour rédiger ses lois. Le problème n'est plus politique mais d'entendement."
         - id: l2-7-12
           label: chap. 7-12
-          question: Comment un peuple reçoit-il ses lois ?
+          question: Comment le peuple peut-il se donner de bonnes lois ?
           rel: probleme-solution
           parts:
             - id: l2-7
               label: II, 7
               title: Du Législateur
-              summary: "il propose les lois sans aucun droit législatif"
+              summary: "Le Législateur propose les lois, le peuple les adopte"
+              gloss: "un guide sans pouvoir, qui s'appuie sur l'autorité des dieux"
               points:
                 - id: cs2-7a
                   sentence: "« Celui qui ose entreprendre d'instituer un peuple doit se sentir en état de changer, pour ainsi dire, la ___ humaine », faire de chaque individu, tout parfait et solitaire, la partie d'un plus grand tout."
@@ -136,13 +141,13 @@ work:
                   alt: [dieux]
             - id: l2-8-10
               label: chap. 8-10
-              question: À quel peuple peut-on donner des lois ?
               rel: application
               parts:
                 - id: l2-8
                   label: II, 8
                   title: Du peuple
-                  summary: "un peuple encore assez jeune pour recevoir des lois"
+                  summary: "Le peuple doit être encore jeune"
+                  gloss: "des coutumes enracinées ne se réforment plus"
                   points:
                     - id: cs2-8a
                       sentence: "« Comme avant d'élever un grand édifice l'architecte observe et sonde le sol, [...] le sage instituteur ne commence pas par rédiger de bonnes lois en elles-mêmes, mais il examine auparavant si le peuple auquel il les destine est propre à les ___. »"
@@ -153,7 +158,7 @@ work:
                 - id: l2-9
                   label: II, 9
                   title: Suite
-                  summary: "un État ni trop grand ni trop petit"
+                  summary: "L'État ne doit être ni trop grand ni trop petit"
                   rel: declinaison
                   points:
                     - id: cs2-9
@@ -162,7 +167,8 @@ work:
                 - id: l2-10
                   label: II, 10
                   title: Suite
-                  summary: "assez de terre pour ses habitants, dans la paix"
+                  summary: "La terre doit nourrir ses habitants"
+                  gloss: "et le peuple s'instituer dans la paix et l'abondance"
                   rel: declinaison
                   points:
                     - id: cs2-10a
@@ -176,7 +182,8 @@ work:
             - id: l2-11
               label: II, 11
               title: Des divers systèmes de Législation
-              summary: "liberté et égalité, adaptées à chaque peuple"
+              summary: "Les lois doivent viser la liberté et l'égalité"
+              gloss: "en s'adaptant à la situation et au caractère de chaque peuple"
               rel: consequence
               points:
                 - id: cs2-11a
@@ -189,7 +196,8 @@ work:
             - id: l2-12
               label: II, 12
               title: Division des Lois
-              summary: "lois politiques, civiles, criminelles, et surtout les mœurs"
+              summary: "Il y a quatre sortes de lois"
+              gloss: "politiques, civiles, criminelles, et surtout les mœurs et l'opinion"
               rel: consequence
               points:
                 - id: cs2-12a

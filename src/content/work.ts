@@ -17,6 +17,16 @@ export const RELATION_LABELS: Record<WorkRelation, string> = {
   'objection-reponse': 'objection → réponse',
 }
 
+/**
+ * L'emplacement tel que la carte d'un livre l'écrit : « chap. 3 » plutôt que
+ * « II, 3 », le livre allant de soi à l'intérieur de son propre plan. Une
+ * carte de révision, qui revient seule, garde l'emplacement complet.
+ */
+export function shortLabel(label: string): string {
+  const match = /^[IVXLCDM]+, (.+)$/.exec(label)
+  return match ? `chap. ${match[1]}` : label
+}
+
 /** Toutes les parties d'un sous-arbre, la racine comprise, dans l'ordre du plan. */
 export function nodesOf(node: WorkNode): WorkNode[] {
   return [node, ...node.parts.flatMap(nodesOf)]

@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useId, useLayoutEffect, useRef, useState, type ReactNode } from 'react'
 import type { GrammarPoint, Work, WorkNode } from '@/content/schema'
-import { isDrawn, isLeaf, nodesOf, thesisFills } from '@/content/work'
+import { isDrawn, isLeaf, nodesOf, shortLabel, thesisFills } from '@/content/work'
 import { RichGaps } from '@/components/session/RuleNote'
 
 /**
@@ -164,25 +164,42 @@ function parallel(node: WorkNode): boolean {
   return node.parts.length > 1 && node.parts.slice(1).every((part) => part.rel === 'declinaison')
 }
 
+/** Un bloc a sa bulle s'il pose une question ; sinon il n'est qu'un regroupement de cases. */
+function hasHead(node: WorkNode): boolean {
+  return !isLeaf(node) && node.question !== undefined
+}
+
 /**
- * Les flèches d'un sous-arbre. Une bulle mène à toutes ses parties quand
- * elles sont de même plan, à la première seulement sinon ; entre parties
- * voisines, une flèche pour toute relation autre que de même plan. La racine
- * n'a pas de bulle (son titre est celui de l'écran).
+ * Où arrive une flèche qui mène à une partie : sa case, ou la bulle de son
+ * bloc ; pour un bloc sans bulle, directement ses cases, toutes si elles
+ * sont de même plan (l'éventail part alors de ce qui précède le bloc, comme
+ * du chapitre 7 aux chapitres 8, 9 et 10), la première sinon.
+ */
+function entriesOf(node: WorkNode): string[] {
+  if (isLeaf(node)) return [`box:${node.id}`]
+  if (hasHead(node)) return [`head:${node.id}`]
+  return parallel(node) ? node.parts.flatMap(entriesOf) : entriesOf(node.parts[0]!)
+}
+
+/**
+ * Les flèches d'un sous-arbre. Une bulle mène à ses parties (toutes si elles
+ * sont de même plan, la première sinon) ; entre parties voisines, une flèche
+ * pour toute relation autre que de même plan. La racine n'a pas de bulle (son
+ * titre est celui de l'écran).
  */
 function edgesOf(root: WorkNode): Edge[] {
   const edges: Edge[] = []
+  const link = (from: string, targets: string[]) => {
+    for (const to of targets) edges.push({ from, to, fan: targets.length > 1 })
+  }
   const visit = (node: WorkNode, isRoot: boolean) => {
     const parts = node.parts
     if (parts.length === 0) return
-    if (!isRoot) {
-      const targets = parallel(node) ? parts : parts.slice(0, 1)
-      for (const part of targets) edges.push({ from: `head:${node.id}`, to: `box:${part.id}`, fan: targets.length > 1 })
+    if (!isRoot && hasHead(node)) {
+      link(`head:${node.id}`, parallel(node) ? parts.flatMap(entriesOf) : entriesOf(parts[0]!))
     }
     parts.forEach((part, index) => {
-      if (index > 0 && part.rel && part.rel !== 'declinaison') {
-        edges.push({ from: `box:${parts[index - 1]!.id}`, to: `box:${part.id}`, fan: false })
-      }
+      if (index > 0 && part.rel && part.rel !== 'declinaison') link(`box:${parts[index - 1]!.id}`, entriesOf(part))
       visit(part, false)
     })
   }
@@ -278,39 +295,54 @@ function Children(props: TreeProps & { node: WorkNode }) {
   )
 }
 
-/** Un bloc : sa bulle (emplacement, question), puis ses parties. */
+/**
+ * Un bloc : sa bulle (emplacement, question), puis ses parties. Seuls les
+ * grands blocs posent une question ; un simple regroupement de chapitres
+ * (chapitres 1 à 3 de même plan, par exemple) n'a pas de bulle, pour ne pas
+ * empiler des questions qui s'emboîtent sans se répondre.
+ */
 function GroupView(props: TreeProps & { node: WorkNode }) {
   const { node } = props
   const register = useContext(RegisterContext)
   return (
     <div ref={register(node.id, 'box')} className="flex w-full flex-col items-center gap-7">
-      <div
-        ref={register(node.id, 'head')}
-        className="max-w-xl rounded-[2rem] border-2 border-violet/70 bg-paper px-5 py-2 text-center"
-      >
-        <p className="text-sm leading-snug font-black text-ink">{node.label}</p>
-        {node.question && <p className="text-sm leading-snug text-ink-soft">{node.question}</p>}
-      </div>
+      {hasHead(node) && (
+        <div
+          ref={register(node.id, 'head')}
+          className="max-w-xl rounded-[2rem] border-2 border-violet/70 bg-paper px-5 py-2 text-center"
+        >
+          <p className="text-sm leading-snug font-black text-ink">{node.label}</p>
+          <p className="text-sm leading-snug text-ink-soft">{node.question}</p>
+        </div>
+      )}
       <Children {...props} />
     </div>
   )
 }
 
-/** Une case de chapitre : emplacement, titre, glose ; ses thèses dépliées à la demande, ou toujours en plan à trous. */
+/**
+ * Une case de chapitre, comme dans un schéma de manuel : l'emplacement, ce
+ * que le chapitre affirme (`summary`), sa précision en italique (`gloss`).
+ * Dépliée, elle montre le titre de l'auteur et les thèses. En plan à trous,
+ * l'affirmation laisse place au titre de l'auteur, qui ne donne pas la
+ * réponse, et les thèses restent affichées.
+ */
 function LeafBox({ node, mode = 'map', renderPoint, leafBorder }: TreeProps & { node: WorkNode }) {
   const register = useContext(RegisterContext)
   const [open, setOpen] = useState(false)
   const border = leafBorder?.(node) ?? 'border-violet/40'
   const showTheses = mode === 'plan' || open
+  const headline = mode === 'map' ? (node.summary ?? node.title) : node.title
 
   const content = (
     <>
-      <p className="text-sm leading-snug">
-        <span className="font-black text-violet-deep">{node.label}</span>
-        {node.title && <span className="font-extrabold text-ink"> · {node.title}</span>}
-      </p>
-      {node.summary && mode === 'map' && (
-        <p className="mt-0.5 text-sm leading-snug text-ink-soft italic">{node.summary}</p>
+      <p className="text-xs leading-snug font-black text-violet-deep">{shortLabel(node.label)}</p>
+      {headline && <p className="mt-0.5 text-sm leading-snug font-extrabold text-ink">{headline}</p>}
+      {node.gloss && mode === 'map' && (
+        <p className="mt-0.5 text-sm leading-snug text-ink-soft italic">= {node.gloss}</p>
+      )}
+      {open && mode === 'map' && node.summary && node.title && (
+        <p className="mt-2 text-xs text-ink-faint">Titre du chapitre : «&nbsp;{node.title}&nbsp;»</p>
       )}
       {showTheses && (
         <ul className="mt-2 flex flex-col gap-1.5 border-t border-line pt-2 text-left">

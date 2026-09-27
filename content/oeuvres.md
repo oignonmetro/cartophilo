@@ -63,23 +63,39 @@ Chaque partie (`parts`) porte :
 | `id` | identifiant, unique dans l'unité |
 | `label` | emplacement : « Livre II », « chap. 1-5 », « II, 3 » |
 | `title` | titre donné par l'auteur, tel quel (facultatif) |
-| `question` | question à laquelle répond un bloc : **affichée dans sa bulle, jamais interrogée** |
-| `summary` | glose de quelques mots sous le titre d'un chapitre, dans la carte (« le pouvoir se transmet, pas la volonté ») : **affichée, jamais interrogée** |
+| `question` | question à laquelle répond un **grand** bloc, dans sa bulle : **affichée, jamais interrogée** |
+| `summary` | ce que la case d'un chapitre affirme, en réponse à la question de son bloc (« La souveraineté est inaliénable ») |
+| `gloss` | ce qui précise l'affirmation, en italique sous elle (« = le peuple ne peut ni la céder ni se faire représenter ») |
 | `rel` | relation avec la partie qui la précède au même niveau (jamais sur la première) |
 | `points` | thèses de la partie, phrases trouées (même format qu'un point de grammaire) |
 | `parts` | sous-parties |
 
 Une partie sans sous-partie doit porter au moins une thèse : elle n'aurait
-sinon rien à replacer dans le plan à trous. Elle devrait aussi porter une
-glose (`summary`), que `content:check` réclame : la carte, comme un schéma de
-manuel, ne montre d'un chapitre que son emplacement, son titre et cette
-glose, les thèses ne s'ouvrant qu'au toucher. Une glose tient sur une ligne
-ou deux, sans guillemets (ce n'est pas une citation) et sans reprendre la
-thèse mot pour mot.
+sinon rien à replacer dans le plan à trous.
 
-**Emplacements** : « II, 3 » pour un chapitre, « II, 1-6 » pour un bloc ;
-quand le livre est évident (à l'intérieur de son arbre), « chap. 3 » ou
-« chap. 1-6 » suffit.
+**La carte se lit comme un schéma de manuel**, et c'est ce que `question`,
+`summary` et `gloss` doivent servir (ils ne sont jamais interrogés) :
+
+- **Une question par grand bloc seulement** (« chap. 1-5 : Quelles sont les
+  propriétés du pouvoir souverain ? », « chap. 7-12 : Comment le peuple
+  peut-il se donner de bonnes lois ? »). Un simple regroupement de chapitres
+  (1 à 3 de même plan, 4 et 5, 8 à 10) n'a pas de question, donc pas de
+  bulle : des questions emboîtées qui ne se répondent pas brouillent la
+  progression au lieu de la montrer.
+- **Chaque case répond à la question de son bloc**, par une affirmation
+  claire, en mots simples : « La souveraineté est indivisible », pas le titre
+  de l'auteur, qui n'est souvent qu'un intitulé (« Si la volonté générale
+  peut errer ») ; le titre reste lisible en dépliant la case. Relire les
+  cases d'un bloc à la suite de sa question doit donner le raisonnement de
+  l'auteur.
+- **La précision (`gloss`) tient en une ligne**, sans jargon ni citation :
+  ce qu'on écrirait derrière un « = » dans un schéma.
+
+`content:check` signale un chapitre sans `summary`.
+
+**Emplacements** : « II, 3 » pour un chapitre, « chap. 1-6 » pour un bloc.
+La carte, qui ne montre qu'un livre, écrit d'elle-même « chap. 3 » ; les
+cartes de révision, qui reviennent seules, gardent « II, 3 ».
 
 ## Les relations
 

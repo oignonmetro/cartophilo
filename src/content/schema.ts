@@ -246,12 +246,14 @@ export interface WorkNode {
   /** Question à laquelle répond un bloc : affichée en tête, jamais interrogée. */
   question?: string
   /**
-   * Glose de quelques mots, sous le titre dans la carte de l'œuvre (« le
-   * pouvoir se transmet, pas la volonté ») : ce que la case dit d'un coup
-   * d'œil, les thèses complètes ne s'ouvrant qu'à la demande. Jamais
-   * interrogée.
+   * Ce que la case d'un chapitre affirme dans la carte, en réponse à la
+   * question de son bloc (« La souveraineté est inaliénable ») : une phrase
+   * claire, pas le titre de l'auteur, qui n'est souvent qu'un intitulé
+   * (« Si la volonté générale peut errer »). Jamais interrogée.
    */
   summary?: string
+  /** Ce qui précise l'affirmation, sous elle, en italique : « = le peuple ne peut y renoncer ». */
+  gloss?: string
   rel?: WorkRelation
   points: GrammarPoint[]
   parts: WorkNode[]
@@ -263,6 +265,7 @@ export const workNodeSchema: z.ZodType<WorkNode, unknown> = z.object({
   title: z.string().min(1).optional(),
   question: z.string().min(1).optional(),
   summary: z.string().min(1).optional(),
+  gloss: z.string().min(1).optional(),
   rel: workRelationSchema.optional(),
   points: z.array(grammarPointSchema).default([]),
   parts: z.array(z.lazy(() => workNodeSchema)).default([]),
