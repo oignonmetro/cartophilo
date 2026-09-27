@@ -2,7 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { unitSchema, type GrammarPoint, type Work, type WorkNode } from './schema'
 import { itemsOfUnit } from './course'
 import { isDrawn, lessonsFromWork, linksOf, pointsOf, thesisFills, workContextOf } from './work'
-import { buildLessonSession, itemIdsOf, type WorkPlanExercise } from '@/engine/exercises'
+import { buildLessonSession, itemIdsOf, workLocateFor, type WorkPlanExercise } from '@/engine/exercises'
+import { createRng } from '@/engine/rng'
 
 function point(id: string): GrammarPoint {
   return { id, sentence: `Thèse ${id} : ___.`, answer: id, alt: [], options: [] }
@@ -51,7 +52,7 @@ describe('plan d’une unité-œuvre', () => {
   })
 
   it('situe une thèse dans l’œuvre, et la carte d’un lien entre ses deux extrémités', () => {
-    expect(workContextOf(WORK, 'p-b2')).toEqual({ label: 'B2', title: undefined })
+    expect(workContextOf(WORK, 'p-b2')).toEqual({ label: 'B2', title: undefined, nodeId: 'b2' })
     expect(workContextOf(WORK, 'lien-a3')).toEqual({ label: 'A3 → PIVOT', title: 'reprise' })
   })
 
@@ -79,7 +80,7 @@ describe('plan d’une unité-œuvre', () => {
     const items = itemsOfUnit(unit)
     expect(items).toHaveLength(9)
     const first = items[0]
-    expect(first?.kind === 'grammar' && first.work).toEqual({ label: 'A1', title: undefined })
+    expect(first?.kind === 'grammar' && first.work).toEqual({ label: 'A1', title: undefined, nodeId: 'a1' })
   })
 })
 
@@ -121,5 +122,41 @@ describe('séance d’une leçon d’unité-œuvre', () => {
     const session = buildLessonSession(lesson, 1, 1, false, 0, undefined, WORK)
     expect(session[0]?.kind).toBe('work-plan')
     expect((session[0] as WorkPlanExercise).holes).toHaveLength(Math.ceil(all.length / 2))
+  })
+
+  it('à la découverte, fait localiser jusqu’à trois thèses par bloc, jamais une carte de lien', () => {
+    const session = buildLessonSession(lesson, 0, 1, false, 0, undefined, WORK)
+    const located = session.filter((exercise) => exercise.kind === 'work-locate').flatMap(itemIdsOf)
+    expect(located).toHaveLength(3 + 1 + 3)
+    expect(located.some((id) => id.startsWith('lien'))).toBe(false)
+  })
+
+  it('rejouée, chaque thèse est soit restituée, soit localisée', () => {
+    const session = buildLessonSession(lesson, 1, 7, false, 0, undefined, WORK)
+    const asked = session
+      .filter((exercise) => exercise.kind === 'grammar-gap' || exercise.kind === 'work-locate')
+      .flatMap(itemIdsOf)
+    expect([...asked].sort()).toEqual([...lesson.points.map((p) => p.id)].sort())
+    expect(session.some((exercise) => exercise.kind === 'work-locate')).toBe(true)
+  })
+})
+
+describe('localiser une thèse', () => {
+  const pointOf = (id: string) => pointsOf(WORK.parts[0]!).find((p) => p.id === id)!
+
+  it('propose l’emplacement juste et ses plus proches voisins, dans l’ordre du plan', () => {
+    const exercise = workLocateFor(pointOf('p-a2'), WORK, workContextOf(WORK, 'p-a2'), createRng(3))!
+    expect(exercise.options).toContain('A2')
+    expect(exercise.options).toHaveLength(4)
+    const order = ['A1', 'A2', 'A3', 'PIVOT', 'B1', 'B2', 'B3']
+    expect(exercise.options).toEqual([...exercise.options].sort((a, b) => order.indexOf(a) - order.indexOf(b)))
+    // Les leurres viennent des cinq voisins les plus proches : B3, le plus éloigné, n'y est jamais.
+    expect(exercise.options).not.toContain('B3')
+  })
+
+  it('ne localise pas la carte d’un lien, qui n’a pas d’emplacement propre', () => {
+    const [raw] = lessonsFromWork('u', WORK)
+    const lien = raw!.points.find((p) => p.id === 'lien-a3')!
+    expect(workLocateFor(lien, WORK, workContextOf(WORK, 'lien-a3'), createRng(1))).toBeNull()
   })
 })

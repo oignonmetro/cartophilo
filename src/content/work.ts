@@ -70,7 +70,18 @@ export function lessonsFromWork(unitId: string, work: Work) {
 }
 
 function contextOf(node: WorkNode): WorkContext {
-  return { label: node.label, title: node.title }
+  return { label: node.label, title: node.title, nodeId: node.id }
+}
+
+/**
+ * Les emplacements entre lesquels localiser une thèse de `nodeId` : les
+ * parties à thèses (des chapitres, en général) de la même partie de premier
+ * niveau, dans l'ordre du plan. Localiser, c'est situer dans un livre, pas
+ * choisir entre deux livres.
+ */
+export function placesAround(work: Work, nodeId: string): WorkNode[] {
+  const top = work.parts.find((part) => nodesOf(part).some((node) => node.id === nodeId))
+  return top ? nodesOf(top).filter((node) => node.points.length > 0) : []
 }
 
 /** Où se trouve la thèse `pointId` : sa partie, ou le lien dont elle est la carte. */

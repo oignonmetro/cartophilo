@@ -130,21 +130,32 @@ Une leçon par livre, qui suit l'ordre du plan :
    bloc autant que possible, à replacer depuis une banque.
 3. **Bloc par bloc**, chaque thèse en carte à trou, au clavier, avec son
    emplacement en tête de carte (« II, 3 · Si la volonté générale peut
-   errer »), puis les cartes des liens qui aboutissent là ; et, pour un bloc
-   d'au moins trois thèses, un plan à trous où tout le bloc est retiré.
+   errer »), puis les cartes des liens qui aboutissent là ; ensuite trois
+   thèses du bloc à **localiser** ; et, pour un bloc d'au moins trois thèses,
+   un plan à trous où tout le bloc est retiré.
 4. **Le plan entier à trous** pour finir.
 
-Rejouée, la leçon saute la lecture et ouvre sur un plan à moitié vide. La
-séance finale de l'unité se termine par le plan de chaque livre, toutes
-thèses retirées. En révision, chaque thèse revient seule, avec son
-emplacement.
+Rejouée, la leçon saute la lecture et ouvre sur un plan à moitié vide ;
+chaque thèse y est soit restituée, soit localisée, une sur deux. La séance
+finale de l'unité se termine par le plan de chaque livre, toutes thèses
+retirées. En révision, chaque thèse revient seule, avec son emplacement, et
+une révision sur deux la fait localiser plutôt que restituer.
+
+**Localiser** : la thèse est donnée en entier, et on choisit son emplacement
+parmi quatre (« II, 3 », « II, 4 »…), sans les titres des chapitres, qui
+désigneraient souvent la réponse. Les leurres sont les emplacements les plus
+proches dans le plan, tirés parmi les cinq voisins : c'est entre chapitres
+voisins qu'on se trompe. La correction rappelle le titre du chapitre juste.
+Une carte de lien, qui n'a pas d'emplacement unique, ne se localise jamais.
+Localiser, restituer et replacer dans le plan sont trois façons d'interroger
+la même thèse : une seule carte de révision espacée pour les trois.
 
 Depuis la bibliothèque, **« Voir la carte »** ouvre le plan de toute l'œuvre,
 chaque chapitre coloré selon ce qui en est su.
 
 ## Pas encore construit
 
-Exercices envisagés, à ajouter sur le même arbre : localiser (d'une thèse à
-son emplacement, QCM aux distracteurs voisins puis saisie), association de
+Exercices envisagés, à ajouter sur le même arbre : localiser au clavier
+(saisir « II, 4 » plutôt que le choisir) pour une carte mûre, association de
 paires entre chapitres de même plan, remise en ordre des enchaînements (jamais
 des chapitres de même plan, dont l'ordre est sans portée).

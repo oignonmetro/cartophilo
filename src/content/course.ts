@@ -65,6 +65,7 @@ export function itemsOfLesson(lesson: Lesson, unit?: Unit): PracticeItem[] {
         point,
         passage,
         work: work ? workContextOf(work, point.id) : undefined,
+        workTree: work,
       }))
     }
     case 'conjugation':

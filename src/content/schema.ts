@@ -432,7 +432,15 @@ export type UnitColor = z.infer<typeof unitColorSchema>
  */
 export type PracticeItem =
   | { kind: 'vocab'; id: string; vocab: Vocab }
-  | { kind: 'grammar'; id: string; point: GrammarPoint; passage?: PassageContext; work?: WorkContext }
+  | {
+      kind: 'grammar'
+      id: string
+      point: GrammarPoint
+      passage?: PassageContext
+      work?: WorkContext
+      /** Le plan entier de l'unité-œuvre : de quoi proposer d'autres emplacements (voir `WorkLocateExercise`). */
+      workTree?: Work
+    }
   | { kind: 'conjugation'; id: string; form: ConjugationForm; verb: ConjugationVerb }
 
 /**
@@ -457,6 +465,8 @@ export interface WorkContext {
   label: string
   /** Titre de la partie, quand l'auteur lui en donne un. */
   title?: string
+  /** La partie qui porte la thèse ; absente pour la carte d'un lien, qui n'a pas d'emplacement unique. */
+  nodeId?: string
 }
 
 /** Entrée du manifeste listant les cours disponibles. */

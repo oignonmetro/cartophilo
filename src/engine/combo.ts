@@ -81,6 +81,7 @@ export function effortOf(exercise: Exercise): number {
     // Reconnaître parmi des options proposées : la forme la plus assistée.
     case 'choice':
     case 'grammar-choice':
+    case 'work-locate':
     case 'conjugation-choice':
       return 1
 

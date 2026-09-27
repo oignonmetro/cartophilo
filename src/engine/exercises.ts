@@ -15,7 +15,7 @@ import { GAP } from '@/content/schema'
 import { isPassageLesson, itemsOfLesson } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
 import { splitNoteSections } from '@/content/notes'
-import { findNode, nodesOf, pointsOf, workContextOf } from '@/content/work'
+import { findNode, nodesOf, placesAround, pointsOf, workContextOf } from '@/content/work'
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
 import type { CardState } from './srs'
 
@@ -54,7 +54,8 @@ import type { CardState } from './srs'
  * Une unité-œuvre (voir `workSchema`) ajoute deux exercices qui portent sur
  * son plan plutôt que sur une thèse isolée :
  *   - `work-map`  : le plan d'une partie de l'œuvre, à lire, avant pratique ;
- *   - `work-plan` : le même plan à trous, où replacer les thèses retirées.
+ *   - `work-plan` : le même plan à trous, où replacer les thèses retirées ;
+ *   - `work-locate` : une thèse, à situer parmi quelques emplacements voisins.
  */
 
 export type Direction = 'to-known' | 'to-learning'
@@ -269,6 +270,24 @@ export interface WorkPlanExercise {
 }
 
 /**
+ * Localiser : une thèse, donnée en entier, à situer dans l'œuvre parmi
+ * quelques emplacements (« II, 4 », « II, 5 »…). Les leurres sont les
+ * emplacements les plus proches dans le plan : c'est entre chapitres voisins
+ * qu'on se trompe, pas entre le début et la fin du livre. Seuls les
+ * emplacements s'affichent, sans les titres des chapitres, qui désigneraient
+ * souvent la réponse d'eux-mêmes ; la correction les rappelle.
+ */
+export interface WorkLocateExercise {
+  kind: 'work-locate'
+  id: string
+  point: GrammarPoint
+  /** L'emplacement juste. */
+  answer: WorkContext
+  /** Emplacements proposés, le juste compris, dans l'ordre du plan. */
+  options: string[]
+}
+
+/**
  * Ce qui désigne la phrase correcte quand on ne l'a pas encore trouvée.
  *
  *   `translation` : la traduction française de la phrase, quand l'auteur l'a
@@ -364,6 +383,7 @@ export type Exercise =
   | ConjugationMatchExercise
   | WorkMapExercise
   | WorkPlanExercise
+  | WorkLocateExercise
 
 /** Nombre de paires minimal pour tenter une manche d'association. */
 export const MATCH_SIZE = 4
@@ -429,6 +449,7 @@ export function itemIdsOf(exercise: Exercise): string[] {
     case 'grammar-gap':
     case 'grammar-choice':
     case 'passage':
+    case 'work-locate':
       return [exercise.point.id]
     case 'conjugation':
     case 'conjugation-choice':
@@ -1233,6 +1254,12 @@ function passageExercise(point: GrammarPoint, passage: PassageContext): PassageE
 const WORK_OPENING_HOLES = 3
 /** En deçà, un bloc n'a pas son propre plan à trous : deux thèses se replacent sans y penser. */
 const WORK_BLOCK_PLAN_MIN = 3
+/** Thèses à localiser par bloc, à la découverte. */
+const WORK_LOCATE_PER_BLOCK = 3
+/** Emplacements proposés pour localiser une thèse, le juste compris. */
+const WORK_LOCATE_OPTIONS = 4
+/** Parmi combien de voisins les plus proches se tirent les leurres : assez pour varier d'une fois à l'autre. */
+const WORK_LOCATE_NEIGHBOURS = 5
 
 /**
  * Leçon d'unité-œuvre, pour une partie de premier niveau (un livre).
@@ -1243,9 +1270,12 @@ const WORK_BLOCK_PLAN_MIN = 3
  *   2. aussitôt, un plan à quelques trous, un par bloc autant que possible ;
  *   3. puis, bloc par bloc, chaque thèse dans l'ordre du plan (phrase à
  *      trou, au clavier), suivie des cartes des liens qui aboutissent dans
- *      le bloc, et d'un plan à trous où tout le bloc est retiré ;
+ *      le bloc, de quelques thèses du bloc à localiser, et d'un plan à trous
+ *      où tout le bloc est retiré ;
  *   4. enfin, le plan de toute la partie, toutes thèses retirées.
- * Rejouée, la leçon saute la lecture et ouvre sur un plan à moitié vide.
+ * Rejouée, la leçon saute la lecture et ouvre sur un plan à moitié vide ;
+ * chaque thèse y est alors soit restituée (phrase à trou), soit localisée,
+ * une sur deux, plutôt que les deux à la suite.
  *
  * Les thèses se jouent dans l'ordre du plan, jamais mélangées : c'est la
  * progression de l'œuvre qu'on apprend, et la révision espacée les
@@ -1269,13 +1299,28 @@ function buildWorkSession(lesson: GrammarLesson, work: Work, level: number, seed
   exercises.push(workPlan(work, root.id, opening, 'opening', rng))
 
   for (const block of blocks) {
+    const points = pointsOf(block)
+    // Rejouée, la leçon localise une thèse sur deux au lieu de la restituer.
+    const located = new Set(level <= 0 ? [] : sample(points, Math.floor(points.length / 2), rng).map((point) => point.id))
+
     // Chaque partie du bloc, dans l'ordre du plan : ses thèses, puis les
     // cartes des liens qui y aboutissent, au moment même où le lien se fait.
     for (const node of nodesOf(block)) {
       const cards = [...node.points, ...work.links.filter((link) => link.to === node.id).flatMap((link) => link.points)]
-      for (const point of cards) exercises.push(workGapExercise(point, workContextOf(work, point.id)))
+      for (const point of cards) {
+        const context = workContextOf(work, point.id)
+        const locate = located.has(point.id) ? workLocateFor(point, work, context, rng) : null
+        exercises.push(locate ?? workGapExercise(point, context))
+      }
     }
-    const points = pointsOf(block)
+    // À la découverte, quelques thèses du bloc tout juste vues, à situer.
+    if (level <= 0) {
+      for (const point of sample(points, WORK_LOCATE_PER_BLOCK, rng)) {
+        const locate = workLocateFor(point, work, workContextOf(work, point.id), rng)
+        if (locate) exercises.push(locate)
+      }
+    }
+
     if (blocks.length > 1 && points.length >= WORK_BLOCK_PLAN_MIN) {
       exercises.push(workPlan(work, root.id, points.map((point) => point.id), block.id, rng))
     }
@@ -1314,6 +1359,37 @@ export function workPlan(work: Work, rootId: string, holes: readonly string[], t
     rootId,
     holes: inPlan,
     bank: shuffle(inPlan, rng),
+  }
+}
+
+/**
+ * Localiser une thèse, si elle a un emplacement propre (pas la carte d'un
+ * lien) et au moins un voisin pour servir de leurre.
+ */
+export function workLocateFor(
+  point: GrammarPoint,
+  work: Work,
+  context: WorkContext | undefined,
+  rng: Rng,
+): WorkLocateExercise | null {
+  if (!context?.nodeId) return null
+  const places = placesAround(work, context.nodeId)
+  const at = places.findIndex((node) => node.id === context.nodeId)
+  if (at === -1) return null
+  const neighbours = places
+    .map((node, index) => ({ node, distance: Math.abs(index - at) }))
+    .filter(({ node }) => node.id !== context.nodeId && node.label !== context.label)
+    .sort((a, b) => a.distance - b.distance)
+    .slice(0, WORK_LOCATE_NEIGHBOURS)
+    .map(({ node }) => node)
+  if (neighbours.length === 0) return null
+  const picked = new Set([context.nodeId, ...sample(neighbours, WORK_LOCATE_OPTIONS - 1, rng).map((node) => node.id)])
+  return {
+    kind: 'work-locate',
+    id: `locate:${point.id}`,
+    point,
+    answer: context,
+    options: places.filter((node) => picked.has(node.id)).map((node) => node.label),
   }
 }
 
@@ -1718,7 +1794,11 @@ function buildMixedSession(
     if (item.kind === 'grammar' && item.passage) return passageExercise(item.point, item.passage)
     // Une thèse d'unité-œuvre revient avec son emplacement dans l'œuvre : seule,
     // en révision, c'est lui qui dit de quel chapitre il s'agit.
-    if (item.kind === 'grammar' && item.work) return workGapExercise(item.point, item.work)
+    // Une révision sur deux la fait localiser plutôt que restituer.
+    if (item.kind === 'grammar' && item.work) {
+      const locate = item.workTree && turn % 2 === 1 ? workLocateFor(item.point, item.workTree, item.work, rng) : null
+      return locate ?? workGapExercise(item.point, item.work)
+    }
 
     if (item.kind === 'grammar') {
       // Reconnaître avant de produire : tant que la carte est jeune, la

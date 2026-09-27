@@ -21,6 +21,7 @@ import { ConjugationChoice } from '@/components/session/ConjugationChoice'
 import { ConjugationMatch } from '@/components/session/ConjugationMatch'
 import { WorkMapNote } from '@/components/work/WorkMapNote'
 import { WorkPlan } from '@/components/work/WorkPlan'
+import { WorkLocate } from '@/components/work/WorkLocate'
 import {
   SessionHapticsProvider,
   useHaptics,
@@ -386,6 +387,9 @@ function SessionRunner({
             )}
             {current.kind === 'rule' && <RuleNote exercise={current} onNext={() => advance(false)} />}
             {current.kind === 'work-map' && <WorkMapNote exercise={current} onNext={() => advance(false)} />}
+            {current.kind === 'work-locate' && (
+              <WorkLocate exercise={current} onAnswer={(correct) => answer(current, correct)} />
+            )}
             {current.kind === 'work-plan' && (
               <WorkPlan exercise={current} onDone={({ missedIds }) => answerMatch(current, missedIds)} />
             )}
