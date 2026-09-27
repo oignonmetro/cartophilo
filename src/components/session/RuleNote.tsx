@@ -121,12 +121,23 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
         if (block.kind === 'table') {
           return (
             <div key={index} className={`overflow-hidden rounded-2xl ${tone.panel}`}>
-              <table className="w-full border-collapse text-sm">
+              {/* `table-fixed` : sans lui, la mise en page « auto » donne à
+                  chaque colonne la largeur que réclame son contenu, quitte à
+                  dépasser l'écran — sur téléphone, un tableau à deux colonnes
+                  de prose sortait du cadre et `overflow-hidden` en coupait la
+                  fin plutôt que d'y renvoyer. La colonne d'étiquette garde une
+                  largeur fixe modeste (`w-20`) plutôt que `w-0` : sous
+                  `table-fixed`, une largeur nulle se serait littéralement
+                  appliquée et aurait réduit « Matérielle » à une lettre par
+                  ligne. Les colonnes de contenu se partagent le reste à
+                  égalité et portent `break-words`, pour qu'un mot trop long
+                  plie plutôt que d'élargir sa colonne. */}
+              <table className="w-full table-fixed border-collapse text-sm">
                 <thead>
                   <tr>
-                    <th className="w-0" />
+                    <th className="w-20" />
                     {block.columns.map((column, i) => (
-                      <th key={i} className={`px-3 py-2 text-left font-black ${tone.label}`}>
+                      <th key={i} className={`px-3 py-2 text-left font-black break-words ${tone.label}`}>
                         <Rich text={column} />
                       </th>
                     ))}
@@ -135,11 +146,11 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
                 <tbody>
                   {block.rows.map((row, i) => (
                     <tr key={i} className="border-t border-ink/8">
-                      <th className={`px-3 py-2 text-left align-top font-black whitespace-nowrap ${tone.label}`}>
+                      <th className={`w-20 px-3 py-2 text-left align-top font-black ${tone.label}`}>
                         <Rich text={row.label} />
                       </th>
                       {row.cells.map((cell, j) => (
-                        <td key={j} className="px-3 py-2 align-top leading-snug text-ink-soft">
+                        <td key={j} className="px-3 py-2 align-top leading-snug break-words text-ink-soft">
                           <Rich text={cell} />
                         </td>
                       ))}
