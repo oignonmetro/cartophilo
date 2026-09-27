@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { unitSchema, type GrammarPoint, type Work, type WorkNode } from './schema'
 import { itemsOfUnit } from './course'
 import { isDrawn, lessonsFromWork, linksOf, pointsOf, thesisFills, threadOf, workContextOf } from './work'
-import { buildLessonSession, itemIdsOf, workLocateFor, workOrder, workOrderItems, type WorkPlanExercise } from '@/engine/exercises'
+import { buildLessonSession, itemIdsOf, workLocateFor, workMatchesFor, workMatchItems, workOrder, workOrderItems, type WorkPlanExercise } from '@/engine/exercises'
 import { createRng } from '@/engine/rng'
 
 function point(id: string): GrammarPoint {
@@ -187,5 +187,30 @@ describe('remettre le raisonnement dans l’ordre', () => {
     const [raw] = lessonsFromWork('u', WORK)
     const session = buildLessonSession({ ...raw!, notes: undefined }, 0, 1, false, 0, undefined, WORK)
     expect(session.slice(-2).map((exercise) => exercise.kind)).toEqual(['work-order', 'work-plan'])
+  })
+})
+
+describe('associer chaque chapitre à ce qu’il affirme', () => {
+  const [livre] = WORK.parts
+
+  it('fait une manche par bloc d’au moins trois chapitres, dans l’ordre du plan', () => {
+    const [a, pivot] = livre!.parts
+    const [round] = workMatchesFor(WORK, a!)
+    expect(round?.pairs.map((pair) => pair.id)).toEqual(['a1', 'a2', 'a3'])
+    expect(round?.pairs[0]).toEqual({ id: 'a1', left: 'A1', right: 'A1' })
+    expect(workMatchesFor(WORK, pivot!)).toEqual([])
+    expect(workMatchItems(round!, ['a2'])).toEqual(['p-a2'])
+  })
+
+  it('coupe un long bloc en manches égales plutôt que de laisser un reste de deux', () => {
+    const many: WorkNode = { id: 'm', label: 'M', points: [], parts: Array.from({ length: 8 }, (_, i) => leaf(`m${i}`)) }
+    const rounds = workMatchesFor({ parts: [many], links: [] }, many)
+    expect(rounds.map((round) => round.pairs.length)).toEqual([4, 4])
+  })
+
+  it('a sa place dans la leçon, bloc par bloc', () => {
+    const [raw] = lessonsFromWork('u', WORK)
+    const session = buildLessonSession({ ...raw!, notes: undefined }, 0, 1, false, 0, undefined, WORK)
+    expect(session.filter((exercise) => exercise.kind === 'work-match')).toHaveLength(2)
   })
 })

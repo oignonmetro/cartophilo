@@ -23,6 +23,7 @@ import { WorkMapNote } from '@/components/work/WorkMapNote'
 import { WorkPlan } from '@/components/work/WorkPlan'
 import { WorkLocate } from '@/components/work/WorkLocate'
 import { WorkOrder } from '@/components/work/WorkOrder'
+import { WorkMatch } from '@/components/work/WorkMatch'
 import {
   SessionHapticsProvider,
   useHaptics,
@@ -390,6 +391,9 @@ function SessionRunner({
             {current.kind === 'work-map' && <WorkMapNote exercise={current} onNext={() => advance(false)} />}
             {current.kind === 'work-locate' && (
               <WorkLocate exercise={current} onAnswer={(correct) => answer(current, correct)} />
+            )}
+            {current.kind === 'work-match' && (
+              <WorkMatch exercise={current} onDone={({ missedIds }) => answerMatch(current, missedIds)} />
             )}
             {current.kind === 'work-order' && (
               <WorkOrder exercise={current} onDone={({ missedIds }) => answerMatch(current, missedIds)} />

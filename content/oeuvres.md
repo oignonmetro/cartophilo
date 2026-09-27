@@ -166,8 +166,9 @@ Une leçon par livre, qui suit l'ordre du plan :
 3. **Bloc par bloc**, chaque thèse en carte à trou, au clavier, avec son
    emplacement en tête de carte (« II, 3 · Si la volonté générale peut
    errer »), puis les cartes des liens qui aboutissent là ; ensuite trois
-   thèses du bloc à **localiser** ; et, pour un bloc d'au moins trois thèses,
-   un plan à trous où tout le bloc est retiré.
+   thèses du bloc à **localiser**, une **association** entre les chapitres
+   du bloc et ce qu'ils affirment ; et, pour un bloc d'au moins trois
+   thèses, un plan à trous où tout le bloc est retiré.
 4. **La remise en ordre**, puis **le plan entier à trous** pour finir.
 
 Rejouée, la leçon saute la lecture et ouvre sur un plan à moitié vide ;
@@ -184,6 +185,13 @@ voisins qu'on se trompe. La correction rappelle le titre du chapitre juste.
 Une carte de lien, qui n'a pas d'emplacement unique, ne se localise jamais.
 Localiser, restituer et replacer dans le plan sont trois façons d'interroger
 la même thèse : une seule carte de révision espacée pour les trois.
+
+**Associer** : les chapitres d'un bloc (« chap. 3 ») à relier à ce qu'ils
+affirment (« La volonté générale ne peut errer », à défaut le titre de
+l'auteur), sur le plateau d'association habituel. Une manche par bloc d'au
+moins trois chapitres, six au plus : un bloc plus long se coupe en manches
+égales. C'est entre voisins qu'on confond, d'où des manches tirées d'un seul
+bloc. Une paire manquée compte pour les thèses de son chapitre.
 
 **Remettre dans l'ordre** : les étapes du raisonnement d'un livre, mélangées,
 à toucher dans l'ordre. Une étape est un chapitre, ou plusieurs chapitres de
@@ -204,5 +212,4 @@ montrant alors les thèses à replacer plutôt que les gloses.
 ## Pas encore construit
 
 Exercices envisagés, à ajouter sur le même arbre : localiser au clavier
-(saisir « II, 4 » plutôt que le choisir) pour une carte mûre, association de
-paires entre chapitres de même plan.
+(saisir « II, 4 » plutôt que le choisir) pour une carte mûre.

@@ -98,6 +98,8 @@ export function effortOf(exercise: Exercise): number {
     // Une étape vaut un élément : la noter par thèse gonflerait l'élan.
     case 'work-order':
       return Math.ceil(exercise.steps.length / 2)
+    case 'work-match':
+      return Math.ceil(exercise.pairs.length / 2)
 
     // Restituer, mais avec les mots sous les yeux.
     case 'cloze':

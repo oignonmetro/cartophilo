@@ -10,12 +10,13 @@ import type {
   Vocab,
   Work,
   WorkContext,
+  WorkNode,
 } from '@/content/schema'
 import { GAP } from '@/content/schema'
 import { isPassageLesson, itemsOfLesson } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
 import { splitNoteSections } from '@/content/notes'
-import { findNode, nodesOf, placesAround, pointsOf, threadOf, workContextOf } from '@/content/work'
+import { findNode, headlineOf, nodesOf, placesAround, pointsOf, shortLabel, threadOf, workContextOf } from '@/content/work'
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
 import type { CardState } from './srs'
 
@@ -56,7 +57,8 @@ import type { CardState } from './srs'
  *   - `work-map`  : le plan d'une partie de l'œuvre, à lire, avant pratique ;
  *   - `work-plan` : le même plan à trous, où replacer les thèses retirées ;
  *   - `work-locate` : une thèse, à situer parmi quelques emplacements voisins ;
- *   - `work-order` : les étapes du raisonnement d'un livre, à remettre dans l'ordre.
+ *   - `work-order` : les étapes du raisonnement d'un livre, à remettre dans l'ordre ;
+ *   - `work-match` : des chapitres voisins à relier à ce qu'ils affirment.
  */
 
 export type Direction = 'to-known' | 'to-learning'
@@ -288,6 +290,20 @@ export interface WorkOrderExercise {
 }
 
 /**
+ * Association : des chapitres voisins d'un même bloc, à relier à ce qu'ils
+ * affirment (« chap. 3 » ↔ « La volonté générale ne peut errer »). C'est
+ * entre voisins qu'on confond, d'où des manches tirées d'un seul bloc, dans
+ * l'ordre du plan. Une paire manquée compte pour les thèses de son chapitre.
+ */
+export interface WorkMatchExercise {
+  kind: 'work-match'
+  id: string
+  work: Work
+  /** Une paire par chapitre : son emplacement à gauche, son affirmation à droite. */
+  pairs: { id: string; left: string; right: string }[]
+}
+
+/**
  * Localiser : une thèse, donnée en entier, à situer dans l'œuvre parmi
  * quelques emplacements (« II, 4 », « II, 5 »…). Les leurres sont les
  * emplacements les plus proches dans le plan : c'est entre chapitres voisins
@@ -403,6 +419,7 @@ export type Exercise =
   | WorkPlanExercise
   | WorkLocateExercise
   | WorkOrderExercise
+  | WorkMatchExercise
 
 /** Nombre de paires minimal pour tenter une manche d'association. */
 export const MATCH_SIZE = 4
@@ -463,6 +480,8 @@ export function itemIdsOf(exercise: Exercise): string[] {
       return exercise.holes
     case 'work-order':
       return workOrderItems(exercise, exercise.steps.map((_, index) => index))
+    case 'work-match':
+      return workMatchItems(exercise, exercise.pairs.map((pair) => pair.id))
     case 'match':
       return exercise.pairs.map((pair) => pair.id)
     case 'conjugation-match':
@@ -1291,8 +1310,9 @@ const WORK_LOCATE_NEIGHBOURS = 5
  *   2. aussitôt, un plan à quelques trous, un par bloc autant que possible ;
  *   3. puis, bloc par bloc, chaque thèse dans l'ordre du plan (phrase à
  *      trou, au clavier), suivie des cartes des liens qui aboutissent dans
- *      le bloc, de quelques thèses du bloc à localiser, et d'un plan à trous
- *      où tout le bloc est retiré ;
+ *      le bloc, de quelques thèses du bloc à localiser, d'une association
+ *      entre ses chapitres et ce qu'ils affirment, et d'un plan à trous où
+ *      tout le bloc est retiré ;
  *   4. enfin, les étapes du raisonnement à remettre dans l'ordre, puis le
  *      plan de toute la partie, toutes thèses retirées.
  * Rejouée, la leçon saute la lecture et ouvre sur un plan à moitié vide ;
@@ -1343,6 +1363,7 @@ function buildWorkSession(lesson: GrammarLesson, work: Work, level: number, seed
       }
     }
 
+    exercises.push(...workMatchesFor(work, block))
     if (blocks.length > 1 && points.length >= WORK_BLOCK_PLAN_MIN) {
       exercises.push(workPlan(work, root.id, points.map((point) => point.id), block.id, rng))
     }
@@ -1352,6 +1373,38 @@ function buildWorkSession(lesson: GrammarLesson, work: Work, level: number, seed
   if (order) exercises.push(order)
   exercises.push(workPlan(work, root.id, all, 'full', rng))
   return exercises
+}
+
+/** Chapitres par manche d'association : au moins trois, pas plus que la grille n'en montre. */
+const WORK_MATCH_MIN = 3
+const WORK_MATCH_MAX = 6
+
+/**
+ * Les manches d'association d'un bloc : ses chapitres dans l'ordre du plan,
+ * par manches d'au plus six ; un reste trop court rejoint la manche d'avant
+ * plutôt que de former une manche à deux paires, qui se résoudrait seule.
+ */
+export function workMatchesFor(work: Work, block: WorkNode): WorkMatchExercise[] {
+  const places = nodesOf(block).filter((node) => node.parts.length === 0 && node.points.length > 0)
+  if (places.length < WORK_MATCH_MIN) return []
+  const rounds = Math.ceil(places.length / WORK_MATCH_MAX)
+  const size = Math.ceil(places.length / rounds)
+  const result: WorkMatchExercise[] = []
+  for (let start = 0; start < places.length; start += size) {
+    const chunk = places.slice(start, start + size)
+    result.push({
+      kind: 'work-match',
+      id: `work-match:${chunk.map((node) => node.id).join('+')}`,
+      work,
+      pairs: chunk.map((node) => ({ id: node.id, left: shortLabel(node.label), right: headlineOf(node) })),
+    })
+  }
+  return result
+}
+
+/** Les thèses des chapitres `nodeIds` : ce que la révision espacée note pour une association. */
+export function workMatchItems(exercise: WorkMatchExercise, nodeIds: readonly string[]): string[] {
+  return nodeIds.flatMap((id) => findNode(exercise.work, id)?.points.map((point) => point.id) ?? [])
 }
 
 /** En deçà de trois étapes, il n'y a pas d'ordre à retrouver, seulement un choix. */
