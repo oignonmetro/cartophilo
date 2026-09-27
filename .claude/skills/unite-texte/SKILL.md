@@ -177,7 +177,9 @@ qu'il suppose (tableau comparatif dès qu'il y en a deux), les positions
 rivales et leurs tenants, sa place dans l'œuvre. Un rappel par leçon, un
 écran au plus : au-delà, couper en deux leçons. Puis des cartes-explication
 (§ 6). Les cartes de contexte général (débats d'interprétation, arguments
-voisins, place dans l'œuvre) vont là, pas dans les paragraphes.
+voisins, place dans l'œuvre) vont là, pas dans les paragraphes — sauf quand
+le commentaire les développe à propos d'une ligne précise du texte : elles
+suivent alors le commentaire (§ 6, « Tout le commentaire »).
 
 ## 4. Le rappel de chaque paragraphe
 
@@ -247,6 +249,17 @@ formule, le sens d'une image, un terme technique et son grec, le contresens à
 
 - **Source** : le commentaire, les notes, le rappel ; chaque carte reprend un
   point du rappel ou des notes, jamais une affirmation non attestée.
+- **Tout le commentaire**, digressions comprises : ce qu'il explique sans
+  porter directement sur le texte (autres œuvres de l'auteur, notions de
+  fond, débats, réception) se fait carte dès que cela aide à comprendre le
+  texte, même indirectement. C'est ce qui ouvre l'unité sur les textes voisins
+  qui comptent. Chaque carte va dans la leçon dont traite la section du
+  commentaire (une section qui commente les lignes 3-4 va dans leur leçon ;
+  un exposé de fond sans ligne précise, dans une leçon d'introduction, à
+  créer au besoin), et, dans cette leçon, **à sa place dans l'ordre du
+  commentaire** parmi les autres cartes-explication : relire le scan page à
+  page pour l'insérer au bon endroit. Le rappel en dit l'essentiel en une ou
+  deux phrases.
 - **Réponse unique, non paraphrasable** : un terme, un nom, une référence
   courte. Sinon, déplacer le trou sur un mot pivot.
 - **Carte autonome** : elle revient seule en révision ; pas de « ce
@@ -305,6 +318,8 @@ Pour toute l'unité, vérifier :
       aucune thèse sans carte ;
 - [ ] chaque carte-explication attestée par une source ; les points douteux
       signalés, pas appris ;
+- [ ] tout le commentaire couvert, digressions comprises, chaque carte dans
+      la bonne leçon et dans l'ordre du commentaire (§ 6) ;
 - [ ] pas d'italique dans un gras, pas de tiret cadratin hors citation ;
 - [ ] `version:` du cours incrémentée.
 
