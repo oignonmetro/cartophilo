@@ -159,6 +159,12 @@ export const grammarLessonSchema = z.object({
   kind: z.literal('grammar'),
   points: z.array(grammarPointSchema).min(1),
   passage: passageSchema.optional(),
+  /**
+   * Leçon d'une unité-œuvre (voir `workSchema`) : l'identifiant de la partie
+   * de l'œuvre qu'elle couvre, un livre en général. Jamais écrit à la main :
+   * le compilateur l'ajoute en dérivant les leçons de l'arbre de l'œuvre.
+   */
+  work: z.string().optional(),
 })
 
 export const conjugationLessonSchema = z.object({
@@ -193,6 +199,90 @@ export const treatiseEntrySchema = z.object({
   summary: z.string().optional(),
 })
 export type TreatiseEntry = z.infer<typeof treatiseEntrySchema>
+
+/**
+ * Ce qui relie une partie d'une œuvre à la précédente (voir `workNodeSchema`,
+ * champ `rel`), ou deux parties éloignées (voir `workLinkSchema`). Liste
+ * fermée : c'est ce qui permet de dessiner le plan d'une œuvre toujours avec
+ * les mêmes signes, et de décider quels exercices ont un sens (on ne fait pas
+ * remettre dans l'ordre des chapitres qui déclinent une même idée).
+ *
+ *   `declinaison`            : même plan que la précédente, une autre face du même objet ;
+ *   `limite`                 : borne ce que la précédente vient de poser ;
+ *   `application`            : cas particulier, mise en œuvre de la précédente ;
+ *   `consequence`            : se déduit de la précédente ;
+ *   `probleme-solution`      : résout la difficulté que la précédente fait surgir ;
+ *   `changement-de-question` : ouvre une autre question ;
+ *   `reprise`                : reprend une idée déjà formulée, pour un autre usage ;
+ *   `objection-reponse`      : répond à une objection faite à la précédente.
+ */
+export const workRelationSchema = z.enum([
+  'declinaison',
+  'limite',
+  'application',
+  'consequence',
+  'probleme-solution',
+  'changement-de-question',
+  'reprise',
+  'objection-reponse',
+])
+export type WorkRelation = z.infer<typeof workRelationSchema>
+
+/**
+ * Une partie d'une œuvre : livre, bloc de chapitres, chapitre. L'arbre qu'elles
+ * forment est le plan de l'œuvre (voir `workSchema`).
+ *
+ * `rel` dit ce qui la relie à la partie qui la précède au même niveau ; la
+ * première d'un niveau n'en a pas. Une partie porte ses propres thèses
+ * (`points`, phrases trouées comme n'importe quel point de grammaire), ses
+ * sous-parties (`parts`), ou les deux.
+ */
+export interface WorkNode {
+  id: string
+  /** Emplacement dans l'œuvre : « Livre II », « chap. 1-5 », « II, 3 ». */
+  label: string
+  /** Titre donné par l'auteur (« Si la volonté générale peut errer »). */
+  title?: string
+  /** Question à laquelle répond un bloc : affichée en tête, jamais interrogée. */
+  question?: string
+  rel?: WorkRelation
+  points: GrammarPoint[]
+  parts: WorkNode[]
+}
+
+export const workNodeSchema: z.ZodType<WorkNode, unknown> = z.object({
+  id: slug,
+  label: z.string().min(1),
+  title: z.string().min(1).optional(),
+  question: z.string().min(1).optional(),
+  rel: workRelationSchema.optional(),
+  points: z.array(grammarPointSchema).default([]),
+  parts: z.array(z.lazy(() => workNodeSchema)).default([]),
+})
+
+/**
+ * Un lien entre deux parties que l'arbre ne rend pas voisines : le chapitre 6
+ * qui reprend une formule du chapitre 3, par exemple. `points` porte les
+ * cartes qui justifient le lien, le cas échéant.
+ */
+export const workLinkSchema = z.object({
+  from: slug,
+  to: slug,
+  rel: workRelationSchema,
+  points: z.array(grammarPointSchema).default([]),
+})
+export type WorkLink = z.infer<typeof workLinkSchema>
+
+/**
+ * Plan d'une unité-œuvre : ses parties de premier niveau sont les livres (une
+ * leçon chacun, dérivée par le compilateur), et `links` relie les parties
+ * éloignées. Voir content/oeuvres.md.
+ */
+export const workSchema = z.object({
+  parts: z.array(workNodeSchema).min(1),
+  links: z.array(workLinkSchema).default([]),
+})
+export type Work = z.infer<typeof workSchema>
 
 export const unitColorSchema = z.enum([
   'teal',
@@ -230,6 +320,11 @@ export const unitSchema = z.object({
    * affichée en tête du texte intégral et avant le premier paragraphe.
    */
   intro: z.string().optional(),
+  /**
+   * Plan d'une unité-œuvre (voir `workSchema`). Sa présence dispense d'écrire
+   * `lessons` : le compilateur en dérive une leçon par partie de premier niveau.
+   */
+  work: workSchema.optional(),
   /** Nature du contenu ; héritée de la piste par le compilateur. */
   kind: lessonKindSchema,
   lessons: z.array(lessonSchema).min(1),
@@ -337,7 +432,7 @@ export type UnitColor = z.infer<typeof unitColorSchema>
  */
 export type PracticeItem =
   | { kind: 'vocab'; id: string; vocab: Vocab }
-  | { kind: 'grammar'; id: string; point: GrammarPoint; passage?: PassageContext }
+  | { kind: 'grammar'; id: string; point: GrammarPoint; passage?: PassageContext; work?: WorkContext }
   | { kind: 'conjugation'; id: string; form: ConjugationForm; verb: ConjugationVerb }
 
 /**
@@ -351,6 +446,17 @@ export interface PassageContext {
   heading: string
   /** Voir `passageSchema.source`. */
   source?: string
+}
+
+/**
+ * Où se trouve, dans l'œuvre, la thèse que porte un point d'unité-œuvre : ce
+ * qu'en affiche l'en-tête de sa carte, y compris en révision.
+ */
+export interface WorkContext {
+  /** « II, 3 », ou « II, 6 → chap. 7-12 » pour la carte d'un lien. */
+  label: string
+  /** Titre de la partie, quand l'auteur lui en donne un. */
+  title?: string
 }
 
 /** Entrée du manifeste listant les cours disponibles. */

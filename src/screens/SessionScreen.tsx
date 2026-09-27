@@ -19,6 +19,8 @@ import { SessionPause } from '@/components/session/SessionPause'
 import { ConjugationAnswer } from '@/components/session/ConjugationAnswer'
 import { ConjugationChoice } from '@/components/session/ConjugationChoice'
 import { ConjugationMatch } from '@/components/session/ConjugationMatch'
+import { WorkMapNote } from '@/components/work/WorkMapNote'
+import { WorkPlan } from '@/components/work/WorkPlan'
 import {
   SessionHapticsProvider,
   useHaptics,
@@ -383,6 +385,10 @@ function SessionRunner({
               <ChoiceQuestion exercise={current} onAnswer={(correct) => answer(current, correct)} />
             )}
             {current.kind === 'rule' && <RuleNote exercise={current} onNext={() => advance(false)} />}
+            {current.kind === 'work-map' && <WorkMapNote exercise={current} onNext={() => advance(false)} />}
+            {current.kind === 'work-plan' && (
+              <WorkPlan exercise={current} onDone={({ missedIds }) => answerMatch(current, missedIds)} />
+            )}
             {current.kind === 'grammar-gap' && (
               <GrammarGap exercise={current} onAnswer={(correct) => answer(current, correct)} />
             )}

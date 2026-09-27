@@ -8,11 +8,14 @@ import type {
   PassageContext,
   PracticeItem,
   Vocab,
+  Work,
+  WorkContext,
 } from '@/content/schema'
 import { GAP } from '@/content/schema'
 import { isPassageLesson, itemsOfLesson } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
 import { splitNoteSections } from '@/content/notes'
+import { findNode, nodesOf, pointsOf, workContextOf } from '@/content/work'
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
 import type { CardState } from './srs'
 
@@ -47,6 +50,11 @@ import type { CardState } from './srs'
  *   - `conjugation-choice` : reconnaître une forme parmi celles du paradigme ;
  *   - `conjugation`  : produire une forme à partir du verbe, du temps, de la personne ;
  *   - `conjugation-match` : relier les personnes aux formes, d'un verbe ou de plusieurs mélangés.
+ *
+ * Une unité-œuvre (voir `workSchema`) ajoute deux exercices qui portent sur
+ * son plan plutôt que sur une thèse isolée :
+ *   - `work-map`  : le plan d'une partie de l'œuvre, à lire, avant pratique ;
+ *   - `work-plan` : le même plan à trous, où replacer les thèses retirées.
  */
 
 export type Direction = 'to-known' | 'to-learning'
@@ -228,6 +236,36 @@ export interface GrammarGapExercise {
   cue: GrammarCue
   /** Formes proposées, ou `null` quand la réponse se saisit au clavier. */
   bank: string[] | null
+  /** Thèse d'une unité-œuvre : où elle se trouve dans l'œuvre, affiché en tête de carte. */
+  work?: WorkContext
+}
+
+/**
+ * Plan d'une partie d'une œuvre (un livre), à lire avant de s'y exercer :
+ * pendant, pour une unité-œuvre, du rappel de cours (`rule`).
+ */
+export interface WorkMapExercise {
+  kind: 'work-map'
+  id: string
+  work: Work
+  /** La partie dont on montre le plan. */
+  rootId: string
+}
+
+/**
+ * Plan à trous : le plan d'une partie de l'œuvre, certaines thèses retirées,
+ * à replacer depuis une banque. Chaque trou est une thèse notée par la
+ * révision espacée (voir `itemIdsOf`).
+ */
+export interface WorkPlanExercise {
+  kind: 'work-plan'
+  id: string
+  work: Work
+  rootId: string
+  /** Thèses retirées du plan, par identifiant de point, dans l'ordre du plan. */
+  holes: string[]
+  /** Les mêmes, dans l'ordre où la banque les propose. */
+  bank: string[]
 }
 
 /**
@@ -324,6 +362,8 @@ export type Exercise =
   | ConjugationExercise
   | ConjugationChoiceExercise
   | ConjugationMatchExercise
+  | WorkMapExercise
+  | WorkPlanExercise
 
 /** Nombre de paires minimal pour tenter une manche d'association. */
 export const MATCH_SIZE = 4
@@ -352,7 +392,7 @@ const CHOICE_SIZE = 3
  * servent à amorcer la révision espacée, pas à noter.
  */
 export function isPresentation(exercise: Exercise): boolean {
-  return exercise.kind === 'rule' || exercise.kind === 'intro'
+  return exercise.kind === 'rule' || exercise.kind === 'intro' || exercise.kind === 'work-map'
 }
 
 /**
@@ -378,7 +418,10 @@ export function isListeningExercise(exercise: Exercise): boolean {
 export function itemIdsOf(exercise: Exercise): string[] {
   switch (exercise.kind) {
     case 'rule':
+    case 'work-map':
       return []
+    case 'work-plan':
+      return exercise.holes
     case 'match':
       return exercise.pairs.map((pair) => pair.id)
     case 'conjugation-match':
@@ -651,9 +694,12 @@ export function buildLessonSession(
   rank = 0,
   /** Introduction de l'unité, pour la seule première leçon d'une unité de texte. */
   intro?: string,
+  /** Plan de l'unité, pour une leçon d'unité-œuvre (voir `buildWorkSession`). */
+  work?: Work,
 ): Exercise[] {
   if (isPassageLesson(lesson)) return buildPassageSession(lesson, level, intro)
   const resolved = seed ?? seedFrom(lesson.id, level)
+  if (lesson.kind === 'grammar' && lesson.work && work) return buildWorkSession(lesson, work, level, resolved)
   switch (lesson.kind) {
     case 'vocab':
       return buildVocabSession(lesson.id, lesson.vocab, lesson.notes, lesson.title, resolved, canSpeak, rank)
@@ -1179,6 +1225,107 @@ function passageExercise(point: GrammarPoint, passage: PassageContext): PassageE
   return { kind: 'passage', id: `passage:${point.id}`, point, passage }
 }
 
+/**
+ * Trous du premier plan à trous d'une leçon d'unité-œuvre, à la découverte :
+ * juste de quoi rappeler aussitôt le plan qu'on vient de lire, pas encore de
+ * quoi le reconstituer.
+ */
+const WORK_OPENING_HOLES = 3
+/** En deçà, un bloc n'a pas son propre plan à trous : deux thèses se replacent sans y penser. */
+const WORK_BLOCK_PLAN_MIN = 3
+
+/**
+ * Leçon d'unité-œuvre, pour une partie de premier niveau (un livre).
+ *
+ * Le plan à trous n'attend pas la fin : il revient à difficulté croissante,
+ * et c'est lui qui structure la leçon.
+ *   1. à la découverte, le plan de la partie, à lire (`work-map`) ;
+ *   2. aussitôt, un plan à quelques trous, un par bloc autant que possible ;
+ *   3. puis, bloc par bloc, chaque thèse dans l'ordre du plan (phrase à
+ *      trou, au clavier), suivie des cartes des liens qui aboutissent dans
+ *      le bloc, et d'un plan à trous où tout le bloc est retiré ;
+ *   4. enfin, le plan de toute la partie, toutes thèses retirées.
+ * Rejouée, la leçon saute la lecture et ouvre sur un plan à moitié vide.
+ *
+ * Les thèses se jouent dans l'ordre du plan, jamais mélangées : c'est la
+ * progression de l'œuvre qu'on apprend, et la révision espacée les
+ * reprendra ensuite dans le désordre.
+ */
+function buildWorkSession(lesson: GrammarLesson, work: Work, level: number, seed: number): Exercise[] {
+  const root = lesson.work ? findNode(work, lesson.work) : null
+  if (!root) return lesson.points.map((point) => workGapExercise(point, workContextOf(work, point.id)))
+  const rng = createRng(seed)
+  const exercises: Exercise[] = []
+
+  if (level <= 0) exercises.push({ kind: 'work-map', id: `work-map:${root.id}`, work, rootId: root.id })
+
+  // Un livre sans blocs se traite comme un seul bloc.
+  const blocks = root.parts.length > 0 ? root.parts : [root]
+  const all = pointsOf(root).map((point) => point.id)
+  const opening =
+    level <= 0
+      ? spreadHoles(blocks.map((block) => pointsOf(block).map((point) => point.id)), WORK_OPENING_HOLES, rng)
+      : sample(all, Math.ceil(all.length / 2), rng)
+  exercises.push(workPlan(work, root.id, opening, 'opening', rng))
+
+  for (const block of blocks) {
+    // Chaque partie du bloc, dans l'ordre du plan : ses thèses, puis les
+    // cartes des liens qui y aboutissent, au moment même où le lien se fait.
+    for (const node of nodesOf(block)) {
+      const cards = [...node.points, ...work.links.filter((link) => link.to === node.id).flatMap((link) => link.points)]
+      for (const point of cards) exercises.push(workGapExercise(point, workContextOf(work, point.id)))
+    }
+    const points = pointsOf(block)
+    if (blocks.length > 1 && points.length >= WORK_BLOCK_PLAN_MIN) {
+      exercises.push(workPlan(work, root.id, points.map((point) => point.id), block.id, rng))
+    }
+  }
+
+  exercises.push(workPlan(work, root.id, all, 'full', rng))
+  return exercises
+}
+
+/**
+ * `count` trous répartis entre les blocs : un par bloc tant qu'il en reste,
+ * pour que le premier plan à trous touche toute la partie plutôt que de
+ * vider son seul début.
+ */
+function spreadHoles(blocks: readonly string[][], count: number, rng: Rng): string[] {
+  const pools = blocks.map((ids) => shuffle(ids, rng)).filter((ids) => ids.length > 0)
+  const picked: string[] = []
+  while (picked.length < count && pools.some((pool) => pool.length > 0)) {
+    for (const pool of pools) {
+      const next = pool.shift()
+      if (next !== undefined && picked.length < count) picked.push(next)
+    }
+  }
+  return picked
+}
+
+/** Un plan à trous : `holes` remis dans l'ordre du plan, la banque mélangée. */
+export function workPlan(work: Work, rootId: string, holes: readonly string[], tag: string, rng: Rng): WorkPlanExercise {
+  const root = findNode(work, rootId)
+  const wanted = new Set(holes)
+  const inPlan = root ? pointsOf(root).map((point) => point.id).filter((id) => wanted.has(id)) : [...holes]
+  return {
+    kind: 'work-plan',
+    id: `work-plan:${rootId}:${tag}`,
+    work,
+    rootId,
+    holes: inPlan,
+    bank: shuffle(inPlan, rng),
+  }
+}
+
+/**
+ * Carte d'une thèse d'unité-œuvre : au clavier d'emblée, comme tout le contenu
+ * philosophique (aucune banque, voir content/philosophie.md), l'emplacement
+ * de la thèse en tête de carte.
+ */
+function workGapExercise(point: GrammarPoint, work: WorkContext | undefined): GrammarGapExercise {
+  return { kind: 'grammar-gap', id: `gap:${point.id}`, point, cue: 'sentence', bank: null, work }
+}
+
 /** Séparateur des réponses d'une carte à plusieurs trous, dans l'ordre des trous. */
 export const GAP_ANSWER_SEPARATOR = ';'
 
@@ -1569,6 +1716,9 @@ function buildMixedSession(
     // son paragraphe : seule, en révision, c'est lui qui dit de quel texte
     // elle vient.
     if (item.kind === 'grammar' && item.passage) return passageExercise(item.point, item.passage)
+    // Une thèse d'unité-œuvre revient avec son emplacement dans l'œuvre : seule,
+    // en révision, c'est lui qui dit de quel chapitre il s'agit.
+    if (item.kind === 'grammar' && item.work) return workGapExercise(item.point, item.work)
 
     if (item.kind === 'grammar') {
       // Reconnaître avant de produire : tant que la carte est jeune, la

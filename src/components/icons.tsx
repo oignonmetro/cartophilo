@@ -230,6 +230,15 @@ const UNIT_ICONS: Record<string, (props: IconProps) => React.ReactElement> = {
       <path d="M14.5 3v4.5H19M9 12h7M9 15.5h7M9 19h4.5" />
     </svg>
   ),
+  /** Organigramme, une case qui se divise en deux : le plan d'une œuvre. */
+  map: (props) => (
+    <svg {...svgProps(props)}>
+      <rect x="8.5" y="3" width="7" height="5" rx="1.2" />
+      <rect x="3" y="16" width="7" height="5" rx="1.2" />
+      <rect x="14" y="16" width="7" height="5" rx="1.2" />
+      <path d="M12 8v4M6.5 16v-4h11v4" />
+    </svg>
+  ),
   /** Ampoule : une thèse, l'idée qu'on défend par des arguments. */
   bulb: (props) => (
     <svg {...svgProps(props)}>

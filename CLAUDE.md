@@ -34,7 +34,8 @@ l'épreuve :
   - **Idées** : thèses centrales chez l'auteur, en se concentrant sur les
     arguments déployés pour les défendre.
   - **Repérage** : se repérer dans les différentes œuvres, savoir où se
-    situe tel texte clef, etc.
+    situe tel texte clef, etc. Une œuvre s'y traite en unité-œuvre (voir
+    plus bas).
   - **Textes** : une unité par texte étudié, qui fait savoir le citer
     (paragraphe par paragraphe, cartes-citation puis cartes-explication).
     Format et consignes dans `content/textes.md` ; pour en créer une,
@@ -73,6 +74,12 @@ pas seulement Glossaire et Repérage.
 - Contenu philosophique (Hors-programme, La vie, Plotin, Marx) : suivre
   `content/philosophie.md` à la lettre ; pour une unité de texte (piste
   Textes), `content/textes.md` en précise les écarts.
+- Unité-œuvre (se repérer dans une œuvre entière : où se trouve chaque idée,
+  fil rouge, relations entre chapitres) : format et consignes dans
+  `content/oeuvres.md`. On n'y écrit que le plan (`work`), jamais `lessons`.
+  Exception assumée à « pas de QCM ni d'association » : le plan à trous est
+  une banque, parce que ce qu'on y replace (une thèse à son emplacement) est
+  un ensemble fermé, pas une réponse paraphrasable.
 - Le moteur de vocabulaire (`kind: vocab`, cours `demo` uniquement
   désormais) n'a plus d'écran de présentation à part (l'ancienne
   auto-évaluation « nouveau / incertain / je savais ») : un mot rencontre

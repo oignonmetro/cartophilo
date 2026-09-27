@@ -2,7 +2,7 @@ import { Fragment, useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { LibraryCourse, Track, TreatiseEntry, Unit } from '@/content/schema'
-import { countLabel, courseLabel, isTextUnit, itemsOfUnit, unitLetters } from '@/content/course'
+import { countLabel, courseLabel, isTextUnit, isWorkUnit, itemsOfUnit, unitLetters } from '@/content/course'
 import type { LessonProgressMap } from '@/engine/progress'
 import { dayKey, displayedStreak, levelFromXp, masteryOf, unitMastery } from '@/engine/progress'
 import { buildUnitPath, currentDestination } from '@/engine/unitPath'
@@ -13,6 +13,7 @@ import { availableCourses } from '@/content/loader'
 import { ProgressRing } from '@/components/ProgressRing'
 import { CoursePicker } from '@/components/CoursePicker'
 import { TextSheet } from '@/components/TextSheet'
+import { WorkSheet } from '@/components/work/WorkSheet'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { BoltIcon, ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
 
@@ -256,6 +257,16 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
 
   // Texte intégral ouvert d'une unité de texte (voir `TextSheet`).
   const [openText, setOpenText] = useState<Unit | null>(null)
+  // Carte ouverte d'une unité-œuvre (voir `WorkSheet`).
+  const [openWork, setOpenWork] = useState<Unit | null>(null)
+
+  /** Ce qu'une unité donne à lire hors exercice : son texte intégral, ou la carte de l'œuvre. */
+  const readerOf = (unit: Unit) =>
+    isWorkUnit(unit)
+      ? { label: 'Voir la carte', icon: 'map', onRead: () => setOpenWork(unit) }
+      : isTextUnit(unit)
+        ? { label: 'Lire le texte', icon: 'page', onRead: () => setOpenText(unit) }
+        : undefined
 
   // Ouvrir une unité mène droit à son étape courante — pas à un écran de
   // parcours à traverser pour la retrouver (voir `currentDestination`).
@@ -385,7 +396,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                       mastery={unitMastery(unit, cards)}
                       done={doneNodes(unit, lessons, steps)}
                       onOpen={() => openUnit(unit)}
-                      onRead={isTextUnit(unit) ? () => setOpenText(unit) : undefined}
+                      reader={readerOf(unit)}
                     />
                   ))}
                 </GroupSection>
@@ -397,7 +408,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                   mastery={unitMastery(entry.unit, cards)}
                   done={doneNodes(entry.unit, lessons, steps)}
                   onOpen={() => openUnit(entry.unit)}
-                  onRead={isTextUnit(entry.unit) ? () => setOpenText(entry.unit) : undefined}
+                  reader={readerOf(entry.unit)}
                 />
               ),
             )}
@@ -421,6 +432,10 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
       </AnimatePresence>
 
       <AnimatePresence>{openText && <TextSheet unit={openText} onClose={() => setOpenText(null)} />}</AnimatePresence>
+
+      <AnimatePresence>
+        {openWork && <WorkSheet unit={openWork} cards={cards} onClose={() => setOpenWork(null)} />}
+      </AnimatePresence>
     </div>
   )
 }
@@ -577,7 +592,7 @@ function UnitCard({
   mastery,
   done,
   onOpen,
-  onRead,
+  reader,
 }: {
   unit: Unit
   tone: (typeof TRACK_TONES)[string]
@@ -585,8 +600,12 @@ function UnitCard({
   /** Étapes franchies sur le parcours de l'unité, et total. */
   done: { count: number; total: number }
   onOpen: () => void
-  /** Unité de texte seulement : ouvre son texte intégral (voir `TextSheet`). */
-  onRead?: () => void
+  /**
+   * Ce que l'unité donne à lire hors exercice, s'il y a lieu : le texte
+   * intégral d'une unité de texte (voir `TextSheet`), la carte d'une
+   * unité-œuvre (voir `WorkSheet`).
+   */
+  reader?: { label: string; icon: string; onRead: () => void }
 }) {
   // Pour une unité d'alphabet, les lettres qu'elle enseigne disent mieux ce
   // qui attend l'apprenant qu'une phrase de description — elles remplacent
@@ -615,14 +634,14 @@ function UnitCard({
           <ChevronLeftIcon size={20} />
         </span>
       </button>
-      {onRead && (
+      {reader && (
         <button
           type="button"
-          onClick={onRead}
+          onClick={reader.onRead}
           className={`flex w-full items-center justify-center gap-2 border-t-2 border-line py-2.5 text-xs font-black tracking-wide uppercase ${tone.text} transition-colors hover:bg-ink/5`}
         >
-          <UnitIcon name="page" size={16} />
-          Lire le texte
+          <UnitIcon name={reader.icon} size={16} />
+          {reader.label}
         </button>
       )}
     </section>

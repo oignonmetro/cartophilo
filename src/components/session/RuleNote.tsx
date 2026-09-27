@@ -319,23 +319,28 @@ const GAP_MARK = ''
  * même à l'intérieur d'un marqueur (un trou dans un titre en italique).
  */
 export function RichGaps({ text, renderGap }: { text: string; renderGap: (index: number) => ReactNode }) {
-  const gaps = { next: 0, render: renderGap }
-  return <Spans spans={parseInline(text.split(GAP).join(GAP_MARK))} gaps={gaps} />
+  // Chaque trou porte son rang entre deux marques (`<marque>0<marque>`) : le
+  // rendu n'a ainsi aucun compteur à faire avancer. Un compteur incrémenté
+  // pendant le rendu se décalait au second passage que React fait en
+  // développement (`StrictMode`), où le premier trou recevait le rang 1.
+  const numbered = text
+    .split(GAP)
+    .map((piece, index) => (index === 0 ? piece : `${GAP_MARK}${index - 1}${GAP_MARK}${piece}`))
+    .join('')
+  return <Spans spans={parseInline(numbered)} gaps={{ render: renderGap }} />
 }
 
 interface GapSlots {
-  next: number
   render: (index: number) => ReactNode
 }
 
-/** Un texte brut, ses trous éventuels remplacés par leur rendu. */
+/** Un texte brut, ses trous éventuels (`<marque>rang<marque>`) remplacés par leur rendu. */
 function withGaps(text: string, gaps: GapSlots | undefined): ReactNode {
   if (!gaps || !text.includes(GAP_MARK)) return text
+  // Découpé sur la marque, le texte alterne morceaux de phrase (rangs pairs)
+  // et rangs de trou (rangs impairs).
   return text.split(GAP_MARK).map((piece, index) => (
-    <Fragment key={index}>
-      {index > 0 && gaps.render(gaps.next++)}
-      {piece}
-    </Fragment>
+    <Fragment key={index}>{index % 2 === 1 ? gaps.render(Number(piece)) : piece}</Fragment>
   ))
 }
 

@@ -27,6 +27,7 @@ import {
   treatiseEntrySchema,
   unitColorSchema,
   unitSchema,
+  workSchema,
   GAP,
   type ConjugationLesson,
   type Course,
@@ -36,10 +37,12 @@ import {
   type TreatiseEntry,
   type Unit,
   type VocabLesson,
+  type Work,
 } from '../../src/content/schema.ts'
+import { allNodes, lessonsFromWork } from '../../src/content/work.ts'
 import { findVocabGap } from '../../src/content/text.ts'
 import { parseNotes } from '../../src/content/notes.ts'
-import { itemsOfCourse, itemsOfLesson, lessonsOf } from '../../src/content/course.ts'
+import { itemsOfCourse, itemsOfLesson, lessonsOf, unitsOf as unitsOfCourse } from '../../src/content/course.ts'
 import {
   alphabetGatingRemarks,
   conjugationVerbRemarks,
@@ -140,6 +143,21 @@ function withKind(raw: unknown, kind: LessonKind): unknown {
 }
 
 /**
+ * Une unité-œuvre n'écrit que son plan (`work`) : ses leçons, une par partie
+ * de premier niveau, en sont dérivées ici, avant validation, pour être
+ * contrôlées exactement comme des leçons écrites à la main. Un plan mal formé
+ * est laissé tel quel : la validation de l'unité le signalera à sa place.
+ */
+function withWorkLessons(raw: unknown): unknown {
+  if (typeof raw !== 'object' || raw === null) return raw
+  const unit = raw as Record<string, unknown>
+  if (unit.work === undefined || unit.lessons !== undefined || typeof unit.id !== 'string') return raw
+  const work = workSchema.safeParse(unit.work)
+  if (!work.success) return raw
+  return { ...unit, lessons: lessonsFromWork(unit.id, work.data) }
+}
+
+/**
  * Charge chaque fichier d'unité indépendamment des autres : une unité mal
  * formée ne doit pas empêcher de voir les problèmes des suivantes. Avant ce
  * correctif, la première erreur (YAML illisible, schéma invalide…) stoppait
@@ -168,7 +186,7 @@ function loadUnits(dir: string, kindOf: (unitId: string) => LessonKind): Map<str
       continue
     }
 
-    const parsed = unitSchema.safeParse(withKind(raw, kindOf(expected)))
+    const parsed = unitSchema.safeParse(withKind(withWorkLessons(raw), kindOf(expected)))
     if (!parsed.success) {
       problems.push(`${file}\n    ${formatIssues(parsed.error)}`)
       continue
@@ -263,6 +281,10 @@ function checkCoherence(course: Course, dir: string) {
   const lessonIds = new Set<string>()
   const problems: string[] = []
 
+  for (const { unit } of unitsOfCourse(course)) {
+    if (unit.work) checkWork(unit.id, unit.work, problems)
+  }
+
   for (const { lesson, unit } of lessonsOf(course)) {
     if (lessonIds.has(lesson.id)) problems.push(`leçon "${lesson.id}" définie deux fois`)
     lessonIds.add(lesson.id)
@@ -307,6 +329,40 @@ function checkCoherence(course: Course, dir: string) {
   checkEmDashes(course)
 
   if (problems.length) fail(dir, problems.join('\n    '))
+}
+
+/**
+ * Le plan d'une unité-œuvre : identifiants uniques, liens qui visent des
+ * parties existantes, pas de relation (`rel`) sur la première partie d'un
+ * niveau (aucune voisine ne la précède), et au moins une thèse par partie
+ * sans sous-partie (un chapitre vide n'aurait rien à replacer dans le plan à
+ * trous).
+ */
+function checkWork(unitId: string, work: Work, problems: string[]) {
+  const where = `unité "${unitId}"`
+  const ids = new Set<string>()
+  for (const node of allNodes(work)) {
+    if (ids.has(node.id)) problems.push(`${where} : partie "${node.id}" définie deux fois`)
+    ids.add(node.id)
+    if (node.parts.length === 0 && node.points.length === 0) {
+      problems.push(`${where} : la partie "${node.id}" n'a ni sous-partie ni thèse`)
+    }
+    const first = node.parts[0]
+    if (first?.rel) problems.push(`${where} : "${first.id}" ouvre son niveau, elle ne peut pas porter de relation (rel)`)
+    for (const [field, text] of [['label', node.label], ['title', node.title], ['question', node.question]] as const) {
+      if (text && hasUnquotedEmDash(text)) {
+        warn(where, `partie "${node.id}" (${field}) contient un tiret cadratin (—) hors citation ; remplacez-le`)
+      }
+    }
+  }
+  for (const part of work.parts) {
+    if (part.rel) problems.push(`${where} : "${part.id}" est une partie de premier niveau, sans relation (rel)`)
+  }
+  for (const link of work.links) {
+    for (const end of [link.from, link.to]) {
+      if (!ids.has(end)) problems.push(`${where} : le lien ${link.from} → ${link.to} vise une partie inconnue "${end}"`)
+    }
+  }
 }
 
 /**

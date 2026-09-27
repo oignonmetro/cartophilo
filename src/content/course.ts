@@ -9,6 +9,7 @@ import type {
   Track,
   Unit,
 } from './schema'
+import { workContextOf } from './work'
 
 /**
  * Accès au contenu d'un cours, indépendamment de son agencement.
@@ -46,14 +47,25 @@ export function findLesson(course: Course, lessonId: string): LessonEntry | null
 /**
  * Les éléments pratiquables d'une leçon, à plat.
  * C'est cette liste qui alimente la révision espacée : un élément, une carte.
+ *
+ * `unit` n'est utile qu'à une leçon d'unité-œuvre : c'est le plan de l'unité
+ * qui dit où se trouve chaque thèse (voir `WorkContext`). Sans lui, les
+ * identifiants restent justes, seul l'en-tête des cartes manque.
  */
-export function itemsOfLesson(lesson: Lesson): PracticeItem[] {
+export function itemsOfLesson(lesson: Lesson, unit?: Unit): PracticeItem[] {
   switch (lesson.kind) {
     case 'vocab':
       return lesson.vocab.map((vocab) => ({ kind: 'vocab' as const, id: vocab.id, vocab }))
     case 'grammar': {
       const passage = lesson.passage ? { label: lesson.passage.label, heading: lesson.title } : undefined
-      return lesson.points.map((point) => ({ kind: 'grammar' as const, id: point.id, point, passage }))
+      const work = lesson.work ? unit?.work : undefined
+      return lesson.points.map((point) => ({
+        kind: 'grammar' as const,
+        id: point.id,
+        point,
+        passage,
+        work: work ? workContextOf(work, point.id) : undefined,
+      }))
     }
     case 'conjugation':
       return lesson.verbs.flatMap((verb) =>
@@ -72,8 +84,13 @@ export function isTextUnit(unit: Unit): boolean {
   return unit.lessons.some(isPassageLesson)
 }
 
+/** Une unité-œuvre : son plan tient lieu de contenu, ses leçons en dérivent (voir `workSchema`). */
+export function isWorkUnit(unit: Unit): unit is Unit & { work: NonNullable<Unit['work']> } {
+  return unit.work !== undefined
+}
+
 export function itemsOfUnit(unit: Unit): PracticeItem[] {
-  return unit.lessons.flatMap(itemsOfLesson)
+  return unit.lessons.flatMap((lesson) => itemsOfLesson(lesson, unit))
 }
 
 export function findUnit(course: Course, unitId: string): Unit | null {
@@ -95,7 +112,7 @@ export interface ItemLocation {
 export function indexItems(course: Course): Map<string, ItemLocation> {
   const byId = new Map<string, ItemLocation>()
   for (const { lesson, unit, track } of lessonsOf(course)) {
-    for (const item of itemsOfLesson(lesson)) {
+    for (const item of itemsOfLesson(lesson, unit)) {
       byId.set(item.id, { item, lessonId: lesson.id, unitId: unit.id, trackId: track?.id ?? null })
     }
   }

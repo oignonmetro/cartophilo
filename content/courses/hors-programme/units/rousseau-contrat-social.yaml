@@ -1,0 +1,207 @@
+# Unité-œuvre (voir content/oeuvres.md) : le plan du *Contrat social*, livre
+# par livre. Seul le livre II est écrit pour l'instant.
+#
+# Source du plan : un schéma de manuel, corrigé d'après les réponses de
+# l'utilisateur (fichier « rousseau contrat social livre II.odt », 2026-09-27).
+# Deux écarts avec le schéma : le chapitre 6 devient une charnière entre les
+# deux blocs (1-5 et 7-12) au lieu de clore le premier, et les thèses des
+# chapitres 2 et 4 sont rectifiées (émanations prises pour des parties ;
+# généralité de l'objet), là où le schéma les résumait par « la loi est faite
+# par le peuple entier » et « sauf guerre ou crime ».
+#
+# Citations : GF Flammarion (éd. Bruno Bernardi), telles que fournies par
+# l'utilisateur ; les autres thèses sont reformulées, sans guillemets.
+
+id: rousseau-contrat-social
+title: "Du contrat social : le plan"
+subtitle: "Rousseau · Livre II"
+icon: map
+color: red
+group: "Rousseau, Du contrat social"
+work:
+  parts:
+    - id: l2
+      label: Livre II
+      parts:
+        - id: l2-1-5
+          label: chap. 1-5
+          question: Quelles sont les propriétés du pouvoir souverain, et jusqu'où s'étend-il ?
+          parts:
+            - id: l2-1-3
+              label: chap. 1-3
+              question: Que tient la souveraineté de n'être que l'exercice de la volonté générale ?
+              parts:
+                - id: l2-1
+                  label: II, 1
+                  title: Que la souveraineté est inaliénable
+                  points:
+                    - id: cs2-1
+                      sentence: "La souveraineté, n'étant que l'exercice de la volonté générale, ne peut s'aliéner ni être représentée : « le pouvoir peut bien se transmettre, mais non pas la ___ »."
+                      answer: volonté
+                      explanation: "« Je dis donc que la souveraineté n'étant que l'exercice de la volonté générale ne peut jamais s'aliéner, et que le souverain, qui n'est qu'un être collectif, ne peut être représenté que par lui-même ; le pouvoir peut bien se transmettre, mais non pas la volonté. »"
+                - id: l2-2
+                  label: II, 2
+                  title: Que la souveraineté est indivisible
+                  rel: declinaison
+                  points:
+                    - id: cs2-2
+                      sentence: "La souveraineté est indivisible : Grotius et Barbeyrac, qui la découpent en puissance législative et exécutive, en droits de guerre, de justice ou d'impôt, prennent pour des parties de l'autorité souveraine ce qui n'en est que des ___."
+                      answer: émanations
+                      explanation: "« Par la même raison que la souveraineté est inaliénable, elle est indivisible. Car la volonté est générale, ou elle ne l'est pas ; elle est celle du corps du peuple, ou seulement d'une partie. » La déclaration de guerre, par exemple, n'est pas une loi mais une application de la loi. Rousseau compare ces théoriciens aux charlatans du Japon, qui dépècent un enfant et le font retomber vivant et rassemblé."
+                - id: l2-3
+                  label: II, 3
+                  title: Si la volonté générale peut errer
+                  rel: declinaison
+                  points:
+                    - id: cs2-3a
+                      sentence: "« Il s'ensuit de ce qui précède que la volonté générale est toujours droite et tend toujours à l'utilité publique : mais il ne s'ensuit pas que les ___ du peuple aient toujours la même rectitude. »"
+                      answer: délibérations
+                      explanation: "La suite : « On veut toujours son bien, mais on ne le voit pas toujours. » C'est la thèse même du chapitre ; la formule reviendra au chapitre 6, pour un autre usage."
+                    - id: cs2-3b
+                      sentence: "Il faut distinguer de la volonté générale, qui ne regarde qu'à l'intérêt commun, la volonté de ___, qui regarde à l'intérêt privé et n'est qu'une somme de volontés particulières."
+                      answer: tous
+                    - id: cs2-3c
+                      sentence: "Le peuple n'est jamais corrompu, mais il est souvent trompé : par les brigues et les associations ___, qui font prévaloir un intérêt de groupe sur l'intérêt commun."
+                      answer: partielles
+                      explanation: "D'où la conclusion du chapitre : pour que la volonté générale s'énonce bien, il ne doit pas y avoir de société partielle dans l'État."
+            - id: l2-4-5
+              label: chap. 4-5
+              question: Jusqu'où s'étend le pouvoir souverain ?
+              rel: limite
+              parts:
+                - id: l2-4
+                  label: II, 4
+                  title: Des bornes du pouvoir souverain
+                  points:
+                    - id: cs2-4a
+                      sentence: "Le pouvoir souverain est absolu, mais borné par la généralité de la volonté qui le dirige : la volonté générale perd sa rectitude dès qu'elle tend à un objet ___ et déterminé, comme punir tel homme ou nommer tel chef."
+                      answer: individuel
+                      alt: [particulier]
+                      explanation: "Pour être vraiment générale, la volonté doit partir de tous pour s'appliquer à tous. Le souverain ne peut donc charger un sujet plus qu'un autre : l'affaire deviendrait particulière et passerait sa compétence."
+                    - id: cs2-4b
+                      sentence: "Rousseau conclut : « On voit par là que le pouvoir Souverain, tout absolu, tout sacré, tout inviolable qu'il est, ne passe ni ne peut passer les bornes des conventions ___ »"
+                      answer: générales
+                      explanation: "La suite : « et tout homme peut disposer pleinement de ce qui lui a été laissé de ses biens et de sa liberté par ces conventions. »"
+                - id: l2-5
+                  label: II, 5
+                  title: Du droit de vie et de mort
+                  rel: application
+                  points:
+                    - id: cs2-5a
+                      sentence: "Au droit de vie et de mort, Rousseau répond que la question est mal posée : « Le traité social a pour fin la ___ des contractants. Qui veut la fin veut aussi les moyens. »"
+                      answer: conservation
+                      explanation: "L'objection : des particuliers qui n'ont pas le droit de disposer de leur vie ne peuvent le transmettre au souverain. La réponse : le citoyen qui s'expose pour l'État ne fait que lui rendre sa vie, devenue un « don conditionnel de l'État »."
+                    - id: cs2-5b
+                      sentence: "Le malfaiteur qui viole les lois rompt le traité social et cesse d'être membre de l'État : la peine de mort le frappe moins comme citoyen que comme ___."
+                      answer: ennemi
+                      explanation: "Le droit de grâce n'appartient qu'au souverain, et son usage doit rester rare : dans un État bien gouverné, il y a peu de punitions parce qu'il y a peu de criminels."
+        - id: l2-6
+          label: II, 6
+          title: De la loi
+          rel: consequence
+          points:
+            - id: cs2-6a
+              sentence: "La loi réunit l'universalité de la volonté et celle de l'objet : « quand tout le peuple statue sur tout le peuple [...]. Alors la ___ sur laquelle on statue est générale comme la volonté qui statue. C'est cet acte que j'appelle une loi. »"
+              answer: matière
+              explanation: "Le pacte social a donné au corps politique l'existence et la vie ; la législation lui donne le mouvement et la volonté."
+            - id: cs2-6b
+              sentence: "Le peuple soumis aux lois doit en être l'auteur, mais une multitude ___, qui souvent ne sait ce qu'elle veut, ne peut concevoir d'elle-même un système de législation."
+              answer: aveugle
+              explanation: "Au chapitre 3, le peuple qui ne voit pas son bien est trompé par les brigues ; au chapitre 6, il manque de lumières pour rédiger ses lois. Le problème n'est plus politique mais d'entendement."
+        - id: l2-7-12
+          label: chap. 7-12
+          question: Comment un peuple reçoit-il ses lois ?
+          rel: probleme-solution
+          parts:
+            - id: l2-7
+              label: II, 7
+              title: Du Législateur
+              points:
+                - id: cs2-7a
+                  sentence: "« Celui qui ose entreprendre d'instituer un peuple doit se sentir en état de changer, pour ainsi dire, la ___ humaine », faire de chaque individu, tout parfait et solitaire, la partie d'un plus grand tout."
+                  answer: nature
+                - id: cs2-7b
+                  sentence: "Le Législateur n'est ni magistrat ni souverain : celui qui rédige les lois n'a aucun droit ___, seul le peuple pouvant les faire siennes par ses suffrages."
+                  answer: législatif
+                - id: cs2-7c
+                  sentence: "Ne pouvant employer ni la force ni le raisonnement pour persuader le peuple, le Législateur recourt à une autorité d'un autre ordre, en attribuant ses lois aux ___."
+                  answer: dieux
+                  alt: [immortels]
+            - id: l2-8-10
+              label: chap. 8-10
+              question: À quel peuple peut-on donner des lois ?
+              rel: application
+              parts:
+                - id: l2-8
+                  label: II, 8
+                  title: Du peuple
+                  points:
+                    - id: cs2-8a
+                      sentence: "« Comme avant d'élever un grand édifice l'architecte observe et sonde le sol, [...] le sage instituteur ne commence pas par rédiger de bonnes lois en elles-mêmes, mais il examine auparavant si le peuple auquel il les destine est propre à les ___. »"
+                      answer: supporter
+                    - id: cs2-8b
+                      sentence: "La première des conditions qui rendent un peuple propre à recevoir des lois tient à son âge : les peuples, comme les hommes, ne sont dociles que dans leur ___ ; une fois les coutumes établies et les préjugés enracinés, il est trop tard pour les réformer."
+                      answer: jeunesse
+                - id: l2-9
+                  label: II, 9
+                  title: Suite
+                  rel: declinaison
+                  points:
+                    - id: cs2-9
+                      sentence: "La deuxième des conditions qui rendent un peuple propre à recevoir des lois tient à l'étendue de l'État, ni trop grand pour être bien gouverné, ni trop petit pour se maintenir : « Plus le lien social s'étend, plus il se ___, et en général un petit État est proportionnellement plus fort qu'un grand. »"
+                      answer: relâche
+                - id: l2-10
+                  label: II, 10
+                  title: Suite
+                  rel: declinaison
+                  points:
+                    - id: cs2-10a
+                      sentence: "La troisième des conditions qui rendent un peuple propre à recevoir des lois tient au rapport entre le territoire et la population : « ce rapport est donc que la terre suffise à l'entretien de ses habitants, et qu'il y ait autant d'habitants que la terre en peut ___ »."
+                      answer: nourrir
+                      explanation: "« Ce sont les hommes qui font l'État, et c'est le terrain qui nourrit les hommes ; ce rapport est donc que la terre suffise à l'entretien de ses habitants, et qu'il y ait autant d'habitants que la terre en peut nourrir. »"
+                    - id: cs2-10b
+                      sentence: "Aux conditions qui rendent un peuple propre à recevoir des lois (âge, étendue, rapport entre terre et habitants) s'en ajoute une de moment : on n'institue un peuple que s'il jouit de l'abondance et de la ___, le temps où l'État s'ordonne étant celui où il résiste le moins."
+                      answer: paix
+                      explanation: "C'est au terme de ce chapitre que Rousseau nomme la Corse, seul pays d'Europe encore capable de recevoir une législation."
+            - id: l2-11
+              label: II, 11
+              title: Des divers systèmes de Législation
+              rel: consequence
+              points:
+                - id: cs2-11a
+                  sentence: "« Si l'on recherche en quoi consiste précisément le plus grand bien de tous, qui doit être la fin de tout système de législation, on trouvera qu'il se réduit à ces deux objets principaux, la liberté et l'___. »"
+                  answer: égalité
+                  explanation: "« La liberté, parce que toute dépendance particulière est autant de force ôtée au corps de l'État ; l'égalité, parce que la liberté ne peut subsister sans elle. »"
+                - id: cs2-11b
+                  sentence: "Les deux fins de toute législation, liberté et égalité, se modifient en chaque pays selon la situation locale et le ___ des habitants : chaque peuple reçoit un système de législation qui lui est propre."
+                  answer: caractère
+            - id: l2-12
+              label: II, 12
+              title: Division des Lois
+              rel: consequence
+              points:
+                - id: cs2-12a
+                  sentence: "Des quatre espèces de lois, les lois ___, ou fondamentales, règlent le rapport du tout au tout, du Souverain à l'État : ce sont les seules dont traite l'ouvrage, d'où le passage au gouvernement."
+                  answer: politiques
+                  explanation: "Les trois autres : les lois civiles (rapports des membres entre eux ou avec le corps entier), les lois criminelles (rapport de la désobéissance à la peine), et les mœurs."
+                - id: cs2-12b
+                  sentence: "« À ces trois sortes de lois, il s'en joint une quatrième, la plus importante de toutes ; qui ne se grave ni sur le marbre ni sur l'airain, mais dans les cœurs des citoyens [...] Je parle des mœurs, des coutumes, et surtout de l'___. »"
+                  answer: opinion
+  links:
+    - from: l2-3
+      to: l2-6
+      rel: reprise
+      points:
+        - id: cs2-lien-3-6
+          sentence: "« On veut toujours son bien, mais on ne le voit pas toujours » : même formule en II, 3 et en II, 6, deux usages. En II, 3, le peuple qui ne voit pas son bien est ___ par les brigues ; en II, 6, il est aveugle, incapable de concevoir seul un code de lois."
+          answer: trompé
+    - from: l2-6
+      to: l2-7
+      rel: probleme-solution
+      points:
+        - id: cs2-lien-6-7
+          sentence: "Le peuple, auteur légitime des lois, veut le bien sans toujours le voir ; il faut unir l'entendement à la volonté dans le corps social : « Voilà d'où naît la nécessité d'un ___. »"
+          answer: Législateur
+    - from: l2-1-5
+      to: l2-7-12
+      rel: changement-de-question

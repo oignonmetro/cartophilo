@@ -75,6 +75,7 @@ export function effortOf(exercise: Exercise): number {
     case 'rule':
     case 'intro':
     case 'flashcard':
+    case 'work-map':
       return 0
 
     // Reconnaître parmi des options proposées : la forme la plus assistée.
@@ -90,6 +91,8 @@ export function effortOf(exercise: Exercise): number {
     // manche. La moitié tient les deux bouts.
     case 'match':
     case 'conjugation-match':
+    // Même raisonnement pour un plan à trous : reconnaître, mais en gros.
+    case 'work-plan':
       return Math.ceil(itemIdsOf(exercise).length / 2)
 
     // Restituer, mais avec les mots sous les yeux.

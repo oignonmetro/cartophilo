@@ -155,6 +155,17 @@ export function GrammarGap({
        */}
       <div className="min-h-0 flex-1 overflow-y-auto md:flex md:flex-col md:justify-[safe_center]">
         <div className="card-3d flex flex-col items-center gap-3 px-5 py-6 text-center md:gap-4 md:px-10 md:py-12">
+          {/* Thèse d'une unité-œuvre : son emplacement dans l'œuvre, sans
+              lequel une carte revenue seule en révision ne dirait pas de
+              quel chapitre elle parle. */}
+          {exercise.work && (
+            <p className="text-xs leading-snug font-black tracking-widest text-violet-deep uppercase">
+              {exercise.work.label}
+              {exercise.work.title && (
+                <span className="font-semibold tracking-normal text-ink-faint normal-case"> · {exercise.work.title}</span>
+              )}
+            </p>
+          )}
           <p className={`${textSize} ${sentenceTextSizeMd(textSize)} leading-relaxed font-bold`}>
             {/* Un seul trou compte (voir `splitGap`) : un `___` suivant, s'il
                 y en a, reste affiché tel quel, comme avant. */}

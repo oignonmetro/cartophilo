@@ -2,7 +2,9 @@ import { useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useCourse } from '@/content/CourseProvider'
 import { findUnit, itemsOfUnit } from '@/content/course'
-import { buildPracticeSession, buildReviewSession } from '@/engine/exercises'
+import { buildPracticeSession, buildReviewSession, workPlan } from '@/engine/exercises'
+import { createRng, seedFrom } from '@/engine/rng'
+import { pointsOf } from '@/content/work'
 import type { SessionOutcome } from '@/engine/progress'
 import {
   buildUnitPath,
@@ -70,10 +72,18 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
     if (!node) return []
     // L'approfondissement et la séance finale forcent la production ; les
     // deux autres suivent l'état réel de chaque carte.
-    return node.kind === 'drill' || node.kind === 'final'
-      ? buildPracticeSession(entries)
-      : buildReviewSession(entries)
-  }, [entries, node])
+    const session =
+      node.kind === 'drill' || node.kind === 'final' ? buildPracticeSession(entries) : buildReviewSession(entries)
+    // Une unité-œuvre se clôt en reconstituant son plan entier, livre par
+    // livre, toutes thèses retirées : c'est le bilan qui lui est propre.
+    if (node.kind !== 'final' || !unit?.work || session.length === 0) return session
+    const work = unit.work
+    const rng = createRng(seedFrom('final-plan', unit.id, entries.length))
+    const plans = work.parts.map((part) =>
+      workPlan(work, part.id, pointsOf(part).map((point) => point.id), 'final', rng),
+    )
+    return [...session, ...plans]
+  }, [entries, node, unit])
 
   if (!unit || !node || node.kind === 'lesson') return <Navigate to="/" replace />
 
