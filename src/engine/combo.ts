@@ -95,6 +95,9 @@ export function effortOf(exercise: Exercise): number {
     // Même raisonnement pour un plan à trous : reconnaître, mais en gros.
     case 'work-plan':
       return Math.ceil(itemIdsOf(exercise).length / 2)
+    // Une étape vaut un élément : la noter par thèse gonflerait l'élan.
+    case 'work-order':
+      return Math.ceil(exercise.steps.length / 2)
 
     // Restituer, mais avec les mots sous les yeux.
     case 'cloze':

@@ -168,12 +168,12 @@ Une leçon par livre, qui suit l'ordre du plan :
    errer »), puis les cartes des liens qui aboutissent là ; ensuite trois
    thèses du bloc à **localiser** ; et, pour un bloc d'au moins trois thèses,
    un plan à trous où tout le bloc est retiré.
-4. **Le plan entier à trous** pour finir.
+4. **La remise en ordre**, puis **le plan entier à trous** pour finir.
 
 Rejouée, la leçon saute la lecture et ouvre sur un plan à moitié vide ;
 chaque thèse y est soit restituée, soit localisée, une sur deux. La séance
 finale de l'unité se termine par le plan de chaque livre, toutes thèses
-retirées. En révision, chaque thèse revient seule, avec son emplacement, et
+retirées, précédé de la remise en ordre de chaque livre. En révision, chaque thèse revient seule, avec son emplacement, et
 une révision sur deux la fait localiser plutôt que restituer.
 
 **Localiser** : la thèse est donnée en entier, et on choisit son emplacement
@@ -185,6 +185,16 @@ Une carte de lien, qui n'a pas d'emplacement unique, ne se localise jamais.
 Localiser, restituer et replacer dans le plan sont trois façons d'interroger
 la même thèse : une seule carte de révision espacée pour les trois.
 
+**Remettre dans l'ordre** : les étapes du raisonnement d'un livre, mélangées,
+à toucher dans l'ordre. Une étape est un chapitre, ou plusieurs chapitres de
+même plan réunis (les chapitres 1 à 3 du livre II forment une seule étape :
+leur ordre entre eux est sans portée) ; pour le livre II, huit étapes. Chaque
+étape ne montre que son affirmation (`summary`, à défaut le titre de
+l'auteur) ; son emplacement ne se révèle qu'une fois placée, sans quoi il
+suffirait de ranger des numéros. Une erreur se signale aussitôt, et compte
+manquée pour les thèses des chapitres de l'étape attendue. Un livre de moins
+de trois étapes n'a pas de remise en ordre.
+
 Depuis la bibliothèque, **« Voir la carte »** ouvre le plan de toute l'œuvre
 dessiné comme un schéma (bulles des blocs, cases des chapitres, flèches),
 chaque case colorée selon ce qui en est su et dépliable sur ses thèses. Le
@@ -195,5 +205,4 @@ montrant alors les thèses à replacer plutôt que les gloses.
 
 Exercices envisagés, à ajouter sur le même arbre : localiser au clavier
 (saisir « II, 4 » plutôt que le choisir) pour une carte mûre, association de
-paires entre chapitres de même plan, remise en ordre des enchaînements (jamais
-des chapitres de même plan, dont l'ordre est sans portée).
+paires entre chapitres de même plan.

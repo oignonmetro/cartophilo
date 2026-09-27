@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useCourse } from '@/content/CourseProvider'
 import { findUnit, itemsOfUnit } from '@/content/course'
-import { buildPracticeSession, buildReviewSession, workPlan } from '@/engine/exercises'
+import { buildPracticeSession, buildReviewSession, workOrder, workPlan, type Exercise } from '@/engine/exercises'
 import { createRng, seedFrom } from '@/engine/rng'
 import { pointsOf } from '@/content/work'
 import type { SessionOutcome } from '@/engine/progress'
@@ -79,10 +79,12 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
     if (node.kind !== 'final' || !unit?.work || session.length === 0) return session
     const work = unit.work
     const rng = createRng(seedFrom('final-plan', unit.id, entries.length))
-    const plans = work.parts.map((part) =>
-      workPlan(work, part.id, pointsOf(part).map((point) => point.id), 'final', rng),
-    )
-    return [...session, ...plans]
+    const closing = work.parts.flatMap((part): Exercise[] => {
+      const order = workOrder(work, part.id, rng)
+      const plan = workPlan(work, part.id, pointsOf(part).map((point) => point.id), 'final', rng)
+      return order ? [order, plan] : [plan]
+    })
+    return [...session, ...closing]
   }, [entries, node, unit])
 
   if (!unit || !node || node.kind === 'lesson') return <Navigate to="/" replace />

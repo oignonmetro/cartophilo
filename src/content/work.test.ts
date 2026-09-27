@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { unitSchema, type GrammarPoint, type Work, type WorkNode } from './schema'
 import { itemsOfUnit } from './course'
-import { isDrawn, lessonsFromWork, linksOf, pointsOf, thesisFills, workContextOf } from './work'
-import { buildLessonSession, itemIdsOf, workLocateFor, type WorkPlanExercise } from '@/engine/exercises'
+import { isDrawn, lessonsFromWork, linksOf, pointsOf, thesisFills, threadOf, workContextOf } from './work'
+import { buildLessonSession, itemIdsOf, workLocateFor, workOrder, workOrderItems, type WorkPlanExercise } from '@/engine/exercises'
 import { createRng } from '@/engine/rng'
 
 function point(id: string): GrammarPoint {
@@ -158,5 +158,34 @@ describe('localiser une thèse', () => {
     const [raw] = lessonsFromWork('u', WORK)
     const lien = raw!.points.find((p) => p.id === 'lien-a3')!
     expect(workLocateFor(lien, WORK, workContextOf(WORK, 'lien-a3'), createRng(1))).toBeNull()
+  })
+})
+
+describe('remettre le raisonnement dans l’ordre', () => {
+  it('suit le fil du livre, les chapitres de même plan réunis en une étape', () => {
+    expect(threadOf(WORK.parts[0]!).map((step) => step.map((node) => node.id))).toEqual([
+      ['a1', 'a2', 'a3'],
+      ['pivot'],
+      ['b1'],
+      ['b2'],
+      ['b3'],
+    ])
+  })
+
+  it('mélange les étapes sans jamais rendre l’ordre juste, et note les thèses des étapes manquées', () => {
+    for (let seed = 0; seed < 20; seed++) {
+      const exercise = workOrder(WORK, 'livre', createRng(seed))!
+      expect([...exercise.bank].sort()).toEqual([0, 1, 2, 3, 4])
+      expect(exercise.bank).not.toEqual([0, 1, 2, 3, 4])
+    }
+    const exercise = workOrder(WORK, 'livre', createRng(1))!
+    expect(workOrderItems(exercise, [0])).toEqual(['p-a1', 'p-a2', 'p-a3'])
+    expect(itemIdsOf(exercise)).toHaveLength(7)
+  })
+
+  it('vient juste avant le plan entier, à la fin de la leçon', () => {
+    const [raw] = lessonsFromWork('u', WORK)
+    const session = buildLessonSession({ ...raw!, notes: undefined }, 0, 1, false, 0, undefined, WORK)
+    expect(session.slice(-2).map((exercise) => exercise.kind)).toEqual(['work-order', 'work-plan'])
   })
 })

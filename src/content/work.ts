@@ -45,6 +45,25 @@ export function pointsOf(node: WorkNode): GrammarPoint[] {
   return nodesOf(node).flatMap((each) => each.points)
 }
 
+/**
+ * Le fil du raisonnement d'une partie : ses étapes dans l'ordre, chacune
+ * étant un chapitre, ou plusieurs chapitres de même plan réunis (leur ordre
+ * entre eux est sans portée : on ne demande pas de le retrouver). Pour le
+ * livre II du *Contrat social* : chapitres 1 à 3, 4, 5, 6, 7, 8 à 10, 11, 12.
+ */
+export function threadOf(node: WorkNode): WorkNode[][] {
+  if (isLeaf(node)) return [[node]]
+  if (node.parts.length > 1 && node.parts.slice(1).every((part) => part.rel === 'declinaison')) {
+    return [nodesOf(node).filter((each) => isLeaf(each) && each.points.length > 0)]
+  }
+  return node.parts.flatMap(threadOf)
+}
+
+/** Ce que la carte affirme d'un chapitre : son affirmation, à défaut le titre de l'auteur. */
+export function headlineOf(node: WorkNode): string {
+  return node.summary ?? node.title ?? node.label
+}
+
 /** Une partie qui porte des thèses sans sous-partie : un chapitre, en général. */
 export function isLeaf(node: WorkNode): boolean {
   return node.parts.length === 0

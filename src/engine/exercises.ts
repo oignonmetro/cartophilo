@@ -15,7 +15,7 @@ import { GAP } from '@/content/schema'
 import { isPassageLesson, itemsOfLesson } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
 import { splitNoteSections } from '@/content/notes'
-import { findNode, nodesOf, placesAround, pointsOf, workContextOf } from '@/content/work'
+import { findNode, nodesOf, placesAround, pointsOf, threadOf, workContextOf } from '@/content/work'
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
 import type { CardState } from './srs'
 
@@ -55,7 +55,8 @@ import type { CardState } from './srs'
  * son plan plutôt que sur une thèse isolée :
  *   - `work-map`  : le plan d'une partie de l'œuvre, à lire, avant pratique ;
  *   - `work-plan` : le même plan à trous, où replacer les thèses retirées ;
- *   - `work-locate` : une thèse, à situer parmi quelques emplacements voisins.
+ *   - `work-locate` : une thèse, à situer parmi quelques emplacements voisins ;
+ *   - `work-order` : les étapes du raisonnement d'un livre, à remettre dans l'ordre.
  */
 
 export type Direction = 'to-known' | 'to-learning'
@@ -270,6 +271,23 @@ export interface WorkPlanExercise {
 }
 
 /**
+ * Remise en ordre : les étapes du raisonnement d'un livre (voir `threadOf`),
+ * mélangées, à toucher dans l'ordre. Seuls les enchaînements réels se
+ * remettent en ordre : des chapitres de même plan forment une seule étape.
+ * Chaque étape mal placée compte manquée pour les thèses de ses chapitres.
+ */
+export interface WorkOrderExercise {
+  kind: 'work-order'
+  id: string
+  work: Work
+  rootId: string
+  /** Les étapes dans l'ordre juste, chacune la liste de ses chapitres (voir `threadOf`). */
+  steps: string[][]
+  /** Rangs des étapes, dans l'ordre où la banque les propose. */
+  bank: number[]
+}
+
+/**
  * Localiser : une thèse, donnée en entier, à situer dans l'œuvre parmi
  * quelques emplacements (« II, 4 », « II, 5 »…). Les leurres sont les
  * emplacements les plus proches dans le plan : c'est entre chapitres voisins
@@ -384,6 +402,7 @@ export type Exercise =
   | WorkMapExercise
   | WorkPlanExercise
   | WorkLocateExercise
+  | WorkOrderExercise
 
 /** Nombre de paires minimal pour tenter une manche d'association. */
 export const MATCH_SIZE = 4
@@ -442,6 +461,8 @@ export function itemIdsOf(exercise: Exercise): string[] {
       return []
     case 'work-plan':
       return exercise.holes
+    case 'work-order':
+      return workOrderItems(exercise, exercise.steps.map((_, index) => index))
     case 'match':
       return exercise.pairs.map((pair) => pair.id)
     case 'conjugation-match':
@@ -1272,7 +1293,8 @@ const WORK_LOCATE_NEIGHBOURS = 5
  *      trou, au clavier), suivie des cartes des liens qui aboutissent dans
  *      le bloc, de quelques thèses du bloc à localiser, et d'un plan à trous
  *      où tout le bloc est retiré ;
- *   4. enfin, le plan de toute la partie, toutes thèses retirées.
+ *   4. enfin, les étapes du raisonnement à remettre dans l'ordre, puis le
+ *      plan de toute la partie, toutes thèses retirées.
  * Rejouée, la leçon saute la lecture et ouvre sur un plan à moitié vide ;
  * chaque thèse y est alors soit restituée (phrase à trou), soit localisée,
  * une sur deux, plutôt que les deux à la suite.
@@ -1326,8 +1348,33 @@ function buildWorkSession(lesson: GrammarLesson, work: Work, level: number, seed
     }
   }
 
+  const order = workOrder(work, root.id, rng)
+  if (order) exercises.push(order)
   exercises.push(workPlan(work, root.id, all, 'full', rng))
   return exercises
+}
+
+/** En deçà de trois étapes, il n'y a pas d'ordre à retrouver, seulement un choix. */
+const WORK_ORDER_MIN = 3
+
+/** La remise en ordre d'une partie, si son fil compte assez d'étapes. */
+export function workOrder(work: Work, rootId: string, rng: Rng): WorkOrderExercise | null {
+  const root = findNode(work, rootId)
+  if (!root) return null
+  const steps = threadOf(root).map((step) => step.map((node) => node.id))
+  if (steps.length < WORK_ORDER_MIN) return null
+  const order = steps.map((_, index) => index)
+  let bank = shuffle(order, rng)
+  // Un mélange qui rendrait l'ordre juste ne demanderait rien : on le décale d'un cran.
+  if (bank.every((value, index) => value === index)) bank = [...bank.slice(1), bank[0]!]
+  return { kind: 'work-order', id: `work-order:${rootId}`, work, rootId, steps, bank }
+}
+
+/** Les thèses des étapes `indexes` d'une remise en ordre : ce que la révision espacée note. */
+export function workOrderItems(exercise: WorkOrderExercise, indexes: readonly number[]): string[] {
+  return indexes.flatMap((index) =>
+    (exercise.steps[index] ?? []).flatMap((id) => findNode(exercise.work, id)?.points.map((point) => point.id) ?? []),
+  )
 }
 
 /**
