@@ -159,23 +159,32 @@ précisions propres à l'unité-œuvre :
 
 Une leçon par livre, qui suit l'ordre du plan :
 
-1. **Le plan**, à lire (première fois seulement) : l'arbre du livre, thèses
-   complètes.
-2. **Un premier plan à trous**, aussitôt : trois thèses retirées, une par
-   bloc autant que possible, à replacer depuis une banque.
-3. **Bloc par bloc**, chaque thèse en carte à trou, au clavier, avec son
+1. **Le plan**, à lire (première fois seulement) : le schéma du livre.
+2. **Bloc par bloc**, chaque thèse en carte à trou, au clavier, avec son
    emplacement en tête de carte (« II, 3 · Si la volonté générale peut
    errer »), puis les cartes des liens qui aboutissent là ; ensuite trois
    thèses du bloc à **localiser**, une **association** entre les chapitres
-   du bloc et ce qu'ils affirment ; et, pour un bloc d'au moins trois
-   thèses, un plan à trous où tout le bloc est retiré.
-4. **La remise en ordre**, puis **le plan entier à trous** pour finir.
+   du bloc et ce qu'ils affirment, et les **plans à trous** dont les
+   chapitres viennent d'être vus.
+3. **La remise en ordre** du raisonnement pour finir.
 
-Rejouée, la leçon saute la lecture et ouvre sur un plan à moitié vide ;
-chaque thèse y est soit restituée, soit localisée, une sur deux. La séance
-finale de l'unité se termine par le plan de chaque livre, toutes thèses
-retirées, précédé de la remise en ordre de chaque livre. En révision, chaque thèse revient seule, avec son emplacement, et
-une révision sur deux la fait localiser plutôt que restituer.
+Rejouée, la leçon saute la lecture ; chaque thèse y est soit restituée, soit
+localisée, une sur deux. La séance finale de l'unité se termine, pour chaque
+livre, par la remise en ordre puis tous ses plans à trous. En révision,
+chaque thèse revient seule, avec son emplacement, et une révision sur deux
+la fait localiser plutôt que restituer.
+
+**Plan à trous** : le schéma du livre, vidé de son texte : restent les
+bulles et leurs questions, et les cases des chapitres réduites à leur numéro
+(« chap. 3 », sans le titre, qui donnerait souvent la réponse). On y replace
+ce que dit chaque chapitre d'un même niveau du schéma : son argument (« car
+… »), à défaut son affirmation, plus courts que les thèses et plus
+essentiels. Une manche par niveau : des chapitres de même plan en forment
+une (chapitres 1 à 3, 8 à 10 du livre II) ; les chapitres qui s'enchaînent
+entre deux tels groupes en forment une autre (4 à 7, puis 11 et 12), coupée
+en manches égales au-delà de quatre ; un chapitre qui resterait seul rejoint
+la manche voisine. Chaque manche arrive dans la leçon après le bloc de son
+dernier chapitre. Un chapitre manqué compte pour ses thèses.
 
 **Localiser** : la thèse est donnée en entier, et on choisit son emplacement
 parmi quatre (« II, 3 », « II, 4 »…), sans les titres des chapitres, qui
@@ -213,5 +222,5 @@ de trois étapes n'a pas de remise en ordre.
 Depuis la bibliothèque, **« Voir la carte »** ouvre le plan de toute l'œuvre
 dessiné comme un schéma (bulles des blocs, cases des chapitres, flèches),
 chaque case colorée selon ce qui en est su et dépliable sur ses thèses. Le
-plan lu avant une leçon est le même dessin ; le plan à trous aussi, ses cases
-montrant alors les thèses à replacer plutôt que les gloses.
+plan lu avant une leçon est le même dessin ; le plan à trous aussi, vidé de
+son texte.

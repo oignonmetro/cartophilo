@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { unitSchema, type GrammarPoint, type Work, type WorkNode } from './schema'
 import { itemsOfUnit } from './course'
-import { isDrawn, lessonsFromWork, linksOf, matchesLocation, pointsOf, thesisFills, threadOf, workContextOf } from './work'
+import { isDrawn, lessonsFromWork, linksOf, matchesLocation, planRoundsOf, planTextOf, pointsOf, thesisFills, threadOf, workContextOf } from './work'
 import { buildLessonSession, itemIdsOf, workLocateFor, workMatchesFor, workMatchItems, workOrder, workOrderItems, type WorkLocateExercise, type WorkPlanExercise } from '@/engine/exercises'
 import { createRng } from '@/engine/rng'
 
@@ -87,41 +87,30 @@ describe('plan d’une unité-œuvre', () => {
 describe('séance d’une leçon d’unité-œuvre', () => {
   const [raw] = lessonsFromWork('u', WORK)
   const lesson = { ...raw!, notes: undefined, points: raw!.points }
-  const all = pointsOf(WORK.parts[0]!).map((p) => p.id)
 
-  it('à la découverte : le plan à lire, un plan à trois trous, puis bloc par bloc, et le plan entier pour finir', () => {
+  it('à la découverte : le plan à lire, puis bloc par bloc, les plans à trous arrivant après leurs chapitres', () => {
     const session = buildLessonSession(lesson, 0, 1, false, 0, undefined, WORK)
     expect(session[0]?.kind).toBe('work-map')
-
-    const opening = session[1] as WorkPlanExercise
-    expect(opening.kind).toBe('work-plan')
-    expect(opening.holes).toHaveLength(3)
-    // Un trou par bloc : A, la charnière, B.
-    expect(new Set(opening.holes.map((id) => id.slice(2, 3)))).toEqual(new Set(['a', 'p', 'b']))
-
-    const last = session[session.length - 1] as WorkPlanExercise
-    expect(last.kind).toBe('work-plan')
-    expect(last.holes).toEqual(all)
-    expect([...last.bank].sort()).toEqual([...all].sort())
 
     // Chaque thèse et chaque carte de lien passe au moins une fois en carte à trou.
     const gaps = session.filter((exercise) => exercise.kind === 'grammar-gap').flatMap(itemIdsOf)
     expect(gaps).toEqual(['p-a1', 'p-a2', 'p-a3', 'p-pivot', 'lien-a3', 'p-b1', 'lien-pivot', 'p-b2', 'p-b3'])
 
-    // Les blocs d'au moins trois thèses ont leur propre plan à trous.
-    const blockPlans = session.filter((exercise) => exercise.kind === 'work-plan').map((exercise) => exercise.id)
-    expect(blockPlans).toEqual([
-      'work-plan:livre:opening',
-      'work-plan:livre:a',
-      'work-plan:livre:b',
-      'work-plan:livre:full',
+    // Un plan à trous par niveau du schéma, chacun après le bloc de son dernier chapitre.
+    const plans = session.filter((exercise): exercise is WorkPlanExercise => exercise.kind === 'work-plan')
+    expect(plans.map((plan) => plan.holes)).toEqual([
+      ['a1', 'a2', 'a3'],
+      ['pivot', 'b1', 'b2', 'b3'],
     ])
+    expect(session.indexOf(plans[0]!)).toBeLessThan(session.findIndex((exercise) => itemIdsOf(exercise).includes('p-pivot')))
+    expect([...plans[1]!.bank].sort()).toEqual(['b1', 'b2', 'b3', 'pivot'])
+    // Un chapitre manqué compte pour ses thèses.
+    expect(itemIdsOf(plans[0]!)).toEqual(['p-a1', 'p-a2', 'p-a3'])
   })
 
-  it('rejouée : pas de plan à lire, et un premier plan à moitié vide', () => {
+  it('rejouée : pas de plan à lire', () => {
     const session = buildLessonSession(lesson, 1, 1, false, 0, undefined, WORK)
-    expect(session[0]?.kind).toBe('work-plan')
-    expect((session[0] as WorkPlanExercise).holes).toHaveLength(Math.ceil(all.length / 2))
+    expect(session.some((exercise) => exercise.kind === 'work-map')).toBe(false)
   })
 
   it('à la découverte, fait localiser jusqu’à trois thèses par bloc, jamais une carte de lien', () => {
@@ -183,10 +172,10 @@ describe('remettre le raisonnement dans l’ordre', () => {
     expect(itemIdsOf(exercise)).toHaveLength(7)
   })
 
-  it('vient juste avant le plan entier, à la fin de la leçon', () => {
+  it('clôt la leçon', () => {
     const [raw] = lessonsFromWork('u', WORK)
     const session = buildLessonSession({ ...raw!, notes: undefined }, 0, 1, false, 0, undefined, WORK)
-    expect(session.slice(-2).map((exercise) => exercise.kind)).toEqual(['work-order', 'work-plan'])
+    expect(session[session.length - 1]?.kind).toBe('work-order')
   })
 })
 
@@ -236,5 +225,68 @@ describe('saisir l’emplacement au clavier', () => {
     expect(locates(1).every((exercise) => !exercise.typed)).toBe(true)
     expect(locates(2).length).toBeGreaterThan(0)
     expect(locates(2).every((exercise) => exercise.typed && exercise.options.length === 0)).toBe(true)
+  })
+})
+
+describe('les manches du plan à trous', () => {
+  const chapter = (id: string, rel?: WorkNode['rel']) => leaf(id, rel)
+
+  it('suivent les niveaux du schéma, comme au livre II du Contrat social', () => {
+    // chap. 1-3 de même plan ; 4 → 5 ; 6 ; 7 ; 8-10 de même plan ; 11 ; 12.
+    const livre: WorkNode = {
+      id: 'l2',
+      label: 'Livre II',
+      points: [],
+      parts: [
+        {
+          id: 'l2-1-5',
+          label: 'chap. 1-5',
+          question: '?',
+          points: [],
+          parts: [
+            { id: 'l2-1-3', label: 'chap. 1-3', points: [], parts: [chapter('c1'), chapter('c2', 'declinaison'), chapter('c3', 'declinaison')] },
+            { id: 'l2-4-5', label: 'chap. 4-5', rel: 'limite', points: [], parts: [chapter('c4'), chapter('c5', 'application')] },
+          ],
+        },
+        chapter('c6', 'consequence'),
+        {
+          id: 'l2-7-12',
+          label: 'chap. 7-12',
+          question: '?',
+          rel: 'probleme-solution',
+          points: [],
+          parts: [
+            chapter('c7'),
+            { id: 'l2-8-10', label: 'chap. 8-10', rel: 'application', points: [], parts: [chapter('c8'), chapter('c9', 'declinaison'), chapter('c10', 'declinaison')] },
+            chapter('c11', 'consequence'),
+            chapter('c12', 'consequence'),
+          ],
+        },
+      ],
+    }
+    expect(planRoundsOf(livre).map((round) => round.map((node) => node.id))).toEqual([
+      ['c1', 'c2', 'c3'],
+      ['c4', 'c5', 'c6', 'c7'],
+      ['c8', 'c9', 'c10'],
+      ['c11', 'c12'],
+    ])
+  })
+
+  it('ne laissent jamais un chapitre seul', () => {
+    const livre: WorkNode = {
+      id: 'l',
+      label: 'L',
+      points: [],
+      parts: [
+        { id: 'g', label: 'G', points: [], parts: [chapter('x1'), chapter('x2', 'declinaison')] },
+        chapter('x3', 'consequence'),
+      ],
+    }
+    expect(planRoundsOf(livre).map((round) => round.map((node) => node.id))).toEqual([['x1', 'x2', 'x3']])
+  })
+
+  it('font replacer l’argument, à défaut l’affirmation', () => {
+    expect(planTextOf({ ...chapter('r'), reason: 'qui veut la fin veut les moyens' })).toBe('car qui veut la fin veut les moyens')
+    expect(planTextOf({ ...chapter('s'), summary: 'Le souverain est absolu' })).toBe('Le souverain est absolu')
   })
 })

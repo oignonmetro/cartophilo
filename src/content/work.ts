@@ -106,6 +106,60 @@ export function threadOf(node: WorkNode): WorkNode[][] {
   return node.parts.flatMap(threadOf)
 }
 
+/** Chapitres par manche de plan à trous : au-delà, une suite de chapitres se coupe en manches égales. */
+const PLAN_ROUND_MAX = 4
+
+/**
+ * Les manches du plan à trous d'une partie : chacune porte sur un même niveau
+ * du schéma, là où les chapitres se ressemblent assez pour qu'on les
+ * confonde. Des chapitres de même plan forment une manche (chapitres 1 à 3,
+ * 8 à 10 du livre II) ; les chapitres qui s'enchaînent entre deux tels
+ * groupes en forment une autre (4 à 7, puis 11 et 12), coupée en manches
+ * égales au-delà de quatre. Un chapitre qui resterait seul rejoint la manche
+ * voisine : seul, il n'aurait rien à différencier.
+ */
+export function planRoundsOf(root: WorkNode): WorkNode[][] {
+  const rounds: WorkNode[][] = []
+  let run: WorkNode[] = []
+  const flush = () => {
+    const count = Math.ceil(run.length / PLAN_ROUND_MAX)
+    const size = Math.ceil(run.length / Math.max(count, 1))
+    for (let start = 0; start < run.length; start += size) rounds.push(run.slice(start, start + size))
+    run = []
+  }
+  const visit = (node: WorkNode) => {
+    if (isLeaf(node)) {
+      if (node.points.length > 0) run.push(node)
+      return
+    }
+    const parallel = node.parts.length > 1 && node.parts.slice(1).every((part) => part.rel === 'declinaison')
+    if (parallel && node.parts.every(isLeaf)) {
+      flush()
+      rounds.push(node.parts.filter((part) => part.points.length > 0))
+      return
+    }
+    node.parts.forEach(visit)
+  }
+  visit(root)
+  flush()
+
+  // Une manche d'un seul chapitre rejoint la précédente (la suivante, en tête).
+  const merged: WorkNode[][] = []
+  for (const round of rounds) {
+    if (round.length === 0) continue
+    const last = merged[merged.length - 1]
+    if (round.length === 1 && last) last.push(...round)
+    else merged.push([...round])
+  }
+  if (merged.length > 1 && merged[0]!.length === 1) merged[1]!.unshift(...merged.shift()!)
+  return merged
+}
+
+/** Ce que le plan à trous fait replacer dans la case d'un chapitre : son argument, à défaut son affirmation. */
+export function planTextOf(node: WorkNode): string {
+  return node.reason ? `car ${node.reason}` : headlineOf(node)
+}
+
 /** Ce que la carte affirme d'un chapitre : son affirmation, à défaut le titre de l'auteur. */
 export function headlineOf(node: WorkNode): string {
   return node.summary ?? node.title ?? node.label

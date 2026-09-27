@@ -2,9 +2,8 @@ import { useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useCourse } from '@/content/CourseProvider'
 import { findUnit, itemsOfUnit } from '@/content/course'
-import { buildPracticeSession, buildReviewSession, workOrder, workPlan, type Exercise } from '@/engine/exercises'
+import { buildPracticeSession, buildReviewSession, workOrder, workPlansFor, type Exercise } from '@/engine/exercises'
 import { createRng, seedFrom } from '@/engine/rng'
-import { pointsOf } from '@/content/work'
 import type { SessionOutcome } from '@/engine/progress'
 import {
   buildUnitPath,
@@ -74,15 +73,15 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
     // deux autres suivent l'état réel de chaque carte.
     const session =
       node.kind === 'drill' || node.kind === 'final' ? buildPracticeSession(entries) : buildReviewSession(entries)
-    // Une unité-œuvre se clôt en reconstituant son plan entier, livre par
-    // livre, toutes thèses retirées : c'est le bilan qui lui est propre.
+    // Une unité-œuvre se clôt en reconstituant son plan, livre par livre :
+    // le fil du raisonnement, puis chaque niveau du schéma.
     if (node.kind !== 'final' || !unit?.work || session.length === 0) return session
     const work = unit.work
     const rng = createRng(seedFrom('final-plan', unit.id, entries.length))
     const closing = work.parts.flatMap((part): Exercise[] => {
       const order = workOrder(work, part.id, rng)
-      const plan = workPlan(work, part.id, pointsOf(part).map((point) => point.id), 'final', rng)
-      return order ? [order, plan] : [plan]
+      const plans = workPlansFor(work, part, rng)
+      return order ? [order, ...plans] : plans
     })
     return [...session, ...closing]
   }, [entries, node, unit])

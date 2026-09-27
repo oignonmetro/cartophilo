@@ -16,7 +16,7 @@ import { GAP } from '@/content/schema'
 import { isPassageLesson, itemsOfLesson } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
 import { splitNoteSections } from '@/content/notes'
-import { findNode, headlineOf, nodesOf, placesAround, pointsOf, shortLabel, threadOf, workContextOf } from '@/content/work'
+import { findNode, headlineOf, nodesOf, placesAround, planRoundsOf, pointsOf, shortLabel, threadOf, workContextOf } from '@/content/work'
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
 import type { CardState } from './srs'
 
@@ -55,7 +55,7 @@ import type { CardState } from './srs'
  * Une unité-œuvre (voir `workSchema`) ajoute deux exercices qui portent sur
  * son plan plutôt que sur une thèse isolée :
  *   - `work-map`  : le plan d'une partie de l'œuvre, à lire, avant pratique ;
- *   - `work-plan` : le même plan à trous, où replacer les thèses retirées ;
+ *   - `work-plan` : le même schéma vidé de son texte, où replacer ce que disent les chapitres ;
  *   - `work-locate` : une thèse, à situer parmi quelques emplacements voisins ;
  *   - `work-order` : les étapes du raisonnement d'un livre, à remettre dans l'ordre ;
  *   - `work-match` : des chapitres voisins à relier à ce qu'ils affirment.
@@ -257,16 +257,18 @@ export interface WorkMapExercise {
 }
 
 /**
- * Plan à trous : le plan d'une partie de l'œuvre, certaines thèses retirées,
- * à replacer depuis une banque. Chaque trou est une thèse notée par la
- * révision espacée (voir `itemIdsOf`).
+ * Plan à trous : le schéma d'une partie de l'œuvre vidé de son texte (restent
+ * les bulles et leurs questions, les numéros des chapitres), où replacer ce
+ * que disent quelques chapitres d'un même niveau (voir `planRoundsOf`) : leur
+ * argument, plus court que les thèses et plus essentiel (voir `planTextOf`).
+ * Chaque chapitre manqué compte pour ses thèses (voir `itemIdsOf`).
  */
 export interface WorkPlanExercise {
   kind: 'work-plan'
   id: string
   work: Work
   rootId: string
-  /** Thèses retirées du plan, par identifiant de point, dans l'ordre du plan. */
+  /** Chapitres à remplir, par identifiant de partie, dans l'ordre du plan. */
   holes: string[]
   /** Les mêmes, dans l'ordre où la banque les propose. */
   bank: string[]
@@ -483,7 +485,7 @@ export function itemIdsOf(exercise: Exercise): string[] {
     case 'work-map':
       return []
     case 'work-plan':
-      return exercise.holes
+      return workNodeItems(exercise.work, exercise.holes)
     case 'work-order':
       return workOrderItems(exercise, exercise.steps.map((_, index) => index))
     case 'work-match':
@@ -1293,14 +1295,6 @@ function passageExercise(point: GrammarPoint, passage: PassageContext): PassageE
 }
 
 /**
- * Trous du premier plan à trous d'une leçon d'unité-œuvre, à la découverte :
- * juste de quoi rappeler aussitôt le plan qu'on vient de lire, pas encore de
- * quoi le reconstituer.
- */
-const WORK_OPENING_HOLES = 3
-/** En deçà, un bloc n'a pas son propre plan à trous : deux thèses se replacent sans y penser. */
-const WORK_BLOCK_PLAN_MIN = 3
-/**
  * Niveau de leçon (étoiles déjà obtenues) à partir duquel on saisit
  * l'emplacement plutôt que de le choisir : la troisième fois qu'on la joue.
  */
@@ -1315,21 +1309,18 @@ const WORK_LOCATE_NEIGHBOURS = 5
 /**
  * Leçon d'unité-œuvre, pour une partie de premier niveau (un livre).
  *
- * Le plan à trous n'attend pas la fin : il revient à difficulté croissante,
- * et c'est lui qui structure la leçon.
  *   1. à la découverte, le plan de la partie, à lire (`work-map`) ;
- *   2. aussitôt, un plan à quelques trous, un par bloc autant que possible ;
- *   3. puis, bloc par bloc, chaque thèse dans l'ordre du plan (phrase à
+ *   2. puis, bloc par bloc, chaque thèse dans l'ordre du plan (phrase à
  *      trou, au clavier), suivie des cartes des liens qui aboutissent dans
  *      le bloc, de quelques thèses du bloc à localiser, d'une association
- *      entre ses chapitres et ce qu'ils affirment, et d'un plan à trous où
- *      tout le bloc est retiré ;
- *   4. enfin, les étapes du raisonnement à remettre dans l'ordre, puis le
- *      plan de toute la partie, toutes thèses retirées.
- * Rejouée, la leçon saute la lecture et ouvre sur un plan à moitié vide ;
- * chaque thèse y est alors soit restituée (phrase à trou), soit localisée,
- * une sur deux, plutôt que les deux à la suite ; à partir de la troisième
- * fois, l'emplacement se saisit au clavier.
+ *      entre ses chapitres et ce qu'ils affirment, et des plans à trous du
+ *      schéma dont les chapitres viennent d'être vus (un par niveau du
+ *      schéma, voir `planRoundsOf`) ;
+ *   3. enfin, les étapes du raisonnement à remettre dans l'ordre.
+ * Rejouée, la leçon saute la lecture ; chaque thèse y est alors soit
+ * restituée (phrase à trou), soit localisée, une sur deux, plutôt que les
+ * deux à la suite ; à partir de la troisième fois, l'emplacement se saisit
+ * au clavier.
  *
  * Les thèses se jouent dans l'ordre du plan, jamais mélangées : c'est la
  * progression de l'œuvre qu'on apprend, et la révision espacée les
@@ -1345,12 +1336,8 @@ function buildWorkSession(lesson: GrammarLesson, work: Work, level: number, seed
 
   // Un livre sans blocs se traite comme un seul bloc.
   const blocks = root.parts.length > 0 ? root.parts : [root]
-  const all = pointsOf(root).map((point) => point.id)
-  const opening =
-    level <= 0
-      ? spreadHoles(blocks.map((block) => pointsOf(block).map((point) => point.id)), WORK_OPENING_HOLES, rng)
-      : sample(all, Math.ceil(all.length / 2), rng)
-  exercises.push(workPlan(work, root.id, opening, 'opening', rng))
+  // Chaque manche du schéma arrive après le bloc où se trouve son dernier chapitre.
+  const pending = workPlansFor(work, root, rng)
 
   for (const block of blocks) {
     const points = pointsOf(block)
@@ -1376,15 +1363,35 @@ function buildWorkSession(lesson: GrammarLesson, work: Work, level: number, seed
     }
 
     exercises.push(...workMatchesFor(work, block))
-    if (blocks.length > 1 && points.length >= WORK_BLOCK_PLAN_MIN) {
-      exercises.push(workPlan(work, root.id, points.map((point) => point.id), block.id, rng))
-    }
+    const inBlock = new Set(nodesOf(block).map((node) => node.id))
+    while (pending[0] && inBlock.has(pending[0].holes[pending[0].holes.length - 1]!)) exercises.push(pending.shift()!)
   }
+  exercises.push(...pending)
 
   const order = workOrder(work, root.id, rng)
   if (order) exercises.push(order)
-  exercises.push(workPlan(work, root.id, all, 'full', rng))
   return exercises
+}
+
+/**
+ * Les plans à trous d'une partie, un par manche (voir `planRoundsOf`), dans
+ * l'ordre du plan.
+ */
+export function workPlansFor(work: Work, root: WorkNode, rng: Rng): WorkPlanExercise[] {
+  return planRoundsOf(root).map((round) =>
+    workPlan(
+      work,
+      root.id,
+      round.map((node) => node.id),
+      round.map((node) => node.id).join('+'),
+      rng,
+    ),
+  )
+}
+
+/** Les thèses des chapitres `nodeIds` : ce que la révision espacée note pour un exercice qui porte sur des chapitres. */
+export function workNodeItems(work: Work, nodeIds: readonly string[]): string[] {
+  return nodeIds.flatMap((id) => findNode(work, id)?.points.map((point) => point.id) ?? [])
 }
 
 /** Chapitres par manche d'association : au moins trois, pas plus que la grille n'en montre. */
@@ -1442,35 +1449,21 @@ export function workOrderItems(exercise: WorkOrderExercise, indexes: readonly nu
   )
 }
 
-/**
- * `count` trous répartis entre les blocs : un par bloc tant qu'il en reste,
- * pour que le premier plan à trous touche toute la partie plutôt que de
- * vider son seul début.
- */
-function spreadHoles(blocks: readonly string[][], count: number, rng: Rng): string[] {
-  const pools = blocks.map((ids) => shuffle(ids, rng)).filter((ids) => ids.length > 0)
-  const picked: string[] = []
-  while (picked.length < count && pools.some((pool) => pool.length > 0)) {
-    for (const pool of pools) {
-      const next = pool.shift()
-      if (next !== undefined && picked.length < count) picked.push(next)
-    }
-  }
-  return picked
-}
-
-/** Un plan à trous : `holes` remis dans l'ordre du plan, la banque mélangée. */
+/** Un plan à trous : les chapitres `holes` remis dans l'ordre du plan, la banque mélangée. */
 export function workPlan(work: Work, rootId: string, holes: readonly string[], tag: string, rng: Rng): WorkPlanExercise {
   const root = findNode(work, rootId)
   const wanted = new Set(holes)
-  const inPlan = root ? pointsOf(root).map((point) => point.id).filter((id) => wanted.has(id)) : [...holes]
+  const inPlan = root ? nodesOf(root).map((node) => node.id).filter((id) => wanted.has(id)) : [...holes]
+  let bank = shuffle(inPlan, rng)
+  // Une banque déjà dans l'ordre des cases ne demanderait rien : on la décale d'un cran.
+  if (bank.length > 1 && bank.every((id, index) => id === inPlan[index])) bank = [...bank.slice(1), bank[0]!]
   return {
     kind: 'work-plan',
     id: `work-plan:${rootId}:${tag}`,
     work,
     rootId,
     holes: inPlan,
-    bank: shuffle(inPlan, rng),
+    bank,
   }
 }
 

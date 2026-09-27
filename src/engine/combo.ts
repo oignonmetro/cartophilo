@@ -91,9 +91,10 @@ export function effortOf(exercise: Exercise): number {
     // manche. La moitié tient les deux bouts.
     case 'match':
     case 'conjugation-match':
-    // Même raisonnement pour un plan à trous : reconnaître, mais en gros.
-    case 'work-plan':
       return Math.ceil(itemIdsOf(exercise).length / 2)
+    // Même raisonnement pour un plan à trous, par chapitre à replacer.
+    case 'work-plan':
+      return Math.ceil(exercise.holes.length / 2)
     // Une étape vaut un élément : la noter par thèse gonflerait l'élan.
     case 'work-order':
       return Math.ceil(exercise.steps.length / 2)

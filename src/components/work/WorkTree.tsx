@@ -25,8 +25,9 @@ import { RichGaps } from '@/components/session/RuleNote'
  * Deux usages :
  *   `map`  : la carte ; chaque case montre son titre, ce qu'elle affirme et
  *            sa précision, et se déplie au toucher sur ses thèses ;
- *   `plan` : le plan à trous ; les thèses sont toujours affichées, par
- *            `renderPoint` (une case vide, une thèse replacée…).
+ *   `plan` : le plan à trous ; le schéma vidé de son texte, chaque case
+ *            réduite à son numéro, et ce que `renderLeaf` y met (une case
+ *            à remplir, un argument replacé…).
  */
 
 export type WorkTreeLayout = 'vertical' | 'chart'
@@ -35,8 +36,8 @@ interface TreeProps {
   work: Work
   layout: WorkTreeLayout
   mode?: 'map' | 'plan'
-  /** Rendu d'une thèse ; par défaut, la phrase complète, sa réponse soulignée. */
-  renderPoint?: (point: GrammarPoint) => ReactNode
+  /** Plan à trous : ce qu'une case de chapitre contient sous son numéro ; rien si `null`. */
+  renderLeaf?: (node: WorkNode) => ReactNode
   /** Classe de bordure d'un chapitre, pour colorer la carte selon la maîtrise. */
   leafBorder?: (node: WorkNode) => string | undefined
 }
@@ -403,35 +404,49 @@ function GroupView(props: TreeProps & { node: WorkNode }) {
  * Une case de chapitre, comme dans un schéma de manuel, en deux styles
  * seulement : en gras, l'emplacement, le titre de l'auteur et ce que le
  * chapitre affirme (`summary`) ; en gris, l'argument qui le justifie
- * (`reason`), introduit par « car ». Dépliée, elle montre les thèses. En plan
- * à trous, l'affirmation et l'argument s'effacent (ils donneraient la
- * réponse) et les thèses restent affichées.
+ * (`reason`), introduit par « car ». Dépliée, elle montre les thèses.
+ *
+ * En plan à trous, la case n'a plus que son numéro (le titre donnerait
+ * souvent la réponse) et ce que `renderLeaf` y met.
  */
-function LeafBox({ node, mode = 'map', renderPoint, leafBorder }: TreeProps & { node: WorkNode }) {
+function LeafBox({ node, mode = 'map', renderLeaf, leafBorder }: TreeProps & { node: WorkNode }) {
   const register = useContext(RegisterContext)
   const [open, setOpen] = useState(false)
   const border = leafBorder?.(node) ?? 'border-violet/40'
-  const showTheses = mode === 'plan' || open
 
   // Le titre dans un bandeau teinté, en tête de case : en gras comme
   // l'affirmation, il s'y confondait tant qu'ils partageaient la même
   // couleur sur le même fond. Le bandeau le fait lire comme un intitulé.
-  const body = (mode === 'map' && (node.summary || node.reason)) || showTheses
+  const band = (
+    <p className="border-b-2 border-violet/20 bg-violet/12 px-3 py-1.5 text-xs leading-snug font-black text-violet-deep">
+      {shortLabel(node.label)}
+      {mode === 'map' && node.title && <span className="text-violet-deep/85"> · {node.title}</span>}
+    </p>
+  )
+  const className = `flex h-full w-full flex-col overflow-hidden rounded-xl border-2 bg-paper text-center ${border}`
+
+  if (mode === 'plan') {
+    const inside = renderLeaf?.(node)
+    return (
+      <div ref={register(node.id, 'box')} className={className}>
+        {band}
+        {inside != null && <div className="flex flex-1 flex-col justify-center px-2 py-2">{inside}</div>}
+      </div>
+    )
+  }
+
   const content = (
     <>
-      <p className="border-b-2 border-violet/20 bg-violet/12 px-3 py-1.5 text-xs leading-snug font-black text-violet-deep">
-        {shortLabel(node.label)}
-        {node.title && <span className="text-violet-deep/85"> · {node.title}</span>}
-      </p>
-      {body && (
+      {band}
+      {(node.summary || node.reason || open) && (
         <div className="flex flex-col gap-1 px-3 py-2">
-          {mode === 'map' && node.summary && <p className="text-sm leading-snug font-black text-ink">{node.summary}</p>}
-          {mode === 'map' && node.reason && <p className="text-sm leading-snug text-ink-soft">car {node.reason}</p>}
-          {showTheses && (
-            <ul className={`flex flex-col gap-1.5 ${mode === 'map' ? 'mt-1 border-t border-line pt-2' : ''}`}>
+          {node.summary && <p className="text-sm leading-snug font-black text-ink">{node.summary}</p>}
+          {node.reason && <p className="text-sm leading-snug text-ink-soft">car {node.reason}</p>}
+          {open && (
+            <ul className="mt-1 flex flex-col gap-1.5 border-t border-line pt-2">
               {node.points.map((point) => (
                 <li key={point.id} className="text-sm leading-snug text-ink">
-                  {renderPoint ? renderPoint(point) : <ThesisText point={point} />}
+                  <ThesisText point={point} />
                 </li>
               ))}
             </ul>
@@ -440,15 +455,6 @@ function LeafBox({ node, mode = 'map', renderPoint, leafBorder }: TreeProps & { 
       )}
     </>
   )
-
-  const className = `flex h-full w-full flex-col overflow-hidden rounded-xl border-2 bg-paper text-center ${border}`
-  if (mode === 'plan') {
-    return (
-      <div ref={register(node.id, 'box')} className={className}>
-        {content}
-      </div>
-    )
-  }
   return (
     <button
       ref={register(node.id, 'box')}
