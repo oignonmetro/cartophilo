@@ -15,6 +15,7 @@ import { RuleNote } from '@/components/session/RuleNote'
 import { GrammarGap } from '@/components/session/GrammarGap'
 import { GrammarSentenceChoice } from '@/components/session/GrammarSentenceChoice'
 import { PassageCard } from '@/components/session/PassageCard'
+import { SessionPause } from '@/components/session/SessionPause'
 import { ConjugationAnswer } from '@/components/session/ConjugationAnswer'
 import { ConjugationChoice } from '@/components/session/ConjugationChoice'
 import { ConjugationMatch } from '@/components/session/ConjugationMatch'
@@ -77,6 +78,17 @@ const SESSION_KIND: Record<UnitNodeKind, { label: string; Icon: typeof BookIcon;
 
 /** Combien de temps le rappel du badge reste affiché avant de s'effacer seul. */
 const KIND_HINT_MS = 2600
+
+/**
+ * Taille d'un lot d'exercices avant la pause (voir `SessionPause`).
+ *
+ * Une leçon garde tous ses exercices — ce plafond ne touche ni au contenu
+ * ni au calcul de réussite, seulement au rythme d'affichage : la file
+ * entière continue de tourner en mémoire, la pause ne fait qu'interrompre
+ * son rendu à intervalles réguliers plutôt que d'enchaîner vingt exercices
+ * d'un bloc.
+ */
+const BATCH_SIZE = 10
 
 /**
  * L'icône de nature de séance (leçon, révision…) ne porte son intitulé qu'en
@@ -159,10 +171,31 @@ function SessionRunner({
   const [queue, setQueue] = useState<Exercise[]>(exercises)
   const [position, setPosition] = useState(0)
   const [attempt, setAttempt] = useState<Attempt>({ seen: new Set(), correct: 0, total: 0 })
+  // Nombre d'exercices déjà faits au début du lot courant : la pause suivante
+  // tombe dix exercices plus loin, pas au premier multiple de dix atteint
+  // dans l'absolu (sans quoi reprendre juste après une pause en déclencherait
+  // aussitôt une autre au dixième exercice de la leçon, pas au vingtième).
+  const [batchStart, setBatchStart] = useState(0)
+  const [paused, setPaused] = useState(false)
 
   const current = queue[position]
   const graded = useMemo(() => exercises.filter((exercise) => !isPresentation(exercise)).length, [exercises])
   const progress = graded === 0 ? 1 : Math.min(1, attempt.seen.size / graded)
+
+  // Coupe la session tous les `BATCH_SIZE` exercices faits, réussis ou non.
+  // Pas de pause si la file est déjà vide : la session se termine alors
+  // normalement (voir l'effet de clôture plus bas), une pause n'y ajouterait
+  // qu'un écran de plus avant l'écran de fin.
+  useEffect(() => {
+    if (paused || !current) return
+    if (attempt.seen.size - batchStart < BATCH_SIZE) return
+    setPaused(true)
+  }, [attempt.seen.size, batchStart, current, paused])
+
+  const resume = useCallback(() => {
+    setBatchStart(attempt.seen.size)
+    setPaused(false)
+  }, [attempt.seen.size])
 
   /** Avance dans la file, en réinsérant l'exercice raté un peu plus loin. */
   const advance = useCallback(
@@ -251,6 +284,23 @@ function SessionRunner({
   }, [attempt.correct, attempt.total, current, haptics, onFinish, peakTier])
 
   if (!current) return null
+
+  if (paused) {
+    return (
+      <div
+        className="mx-auto flex w-full max-w-md flex-col overflow-hidden md:max-w-3xl"
+        style={{ height: 'var(--app-vh, 100dvh)' }}
+      >
+        <SessionPause
+          done={attempt.seen.size}
+          graded={graded}
+          correct={attempt.correct}
+          onContinue={resume}
+          onQuit={onQuit}
+        />
+      </div>
+    )
+  }
 
   return (
     // Pas `h-full` : `#root` ne porte qu'un `min-height` (voir
