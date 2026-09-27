@@ -317,8 +317,14 @@ export interface WorkLocateExercise {
   point: GrammarPoint
   /** L'emplacement juste. */
   answer: WorkContext
-  /** Emplacements proposés, le juste compris, dans l'ordre du plan. */
+  /** Emplacements proposés, le juste compris, dans l'ordre du plan ; vide quand l'emplacement se saisit. */
   options: string[]
+  /**
+   * L'emplacement se tape au clavier (« II, 4 », « chap. 4 », « 4 ») au lieu
+   * de se choisir : pour une carte mûre, qui n'a plus besoin de voir les
+   * voisins pour s'en souvenir (voir `matchesLocation`).
+   */
+  typed: boolean
 }
 
 /**
@@ -1294,6 +1300,11 @@ function passageExercise(point: GrammarPoint, passage: PassageContext): PassageE
 const WORK_OPENING_HOLES = 3
 /** En deçà, un bloc n'a pas son propre plan à trous : deux thèses se replacent sans y penser. */
 const WORK_BLOCK_PLAN_MIN = 3
+/**
+ * Niveau de leçon (étoiles déjà obtenues) à partir duquel on saisit
+ * l'emplacement plutôt que de le choisir : la troisième fois qu'on la joue.
+ */
+const WORK_LOCATE_TYPED_LEVEL = 2
 /** Thèses à localiser par bloc, à la découverte. */
 const WORK_LOCATE_PER_BLOCK = 3
 /** Emplacements proposés pour localiser une thèse, le juste compris. */
@@ -1317,7 +1328,8 @@ const WORK_LOCATE_NEIGHBOURS = 5
  *      plan de toute la partie, toutes thèses retirées.
  * Rejouée, la leçon saute la lecture et ouvre sur un plan à moitié vide ;
  * chaque thèse y est alors soit restituée (phrase à trou), soit localisée,
- * une sur deux, plutôt que les deux à la suite.
+ * une sur deux, plutôt que les deux à la suite ; à partir de la troisième
+ * fois, l'emplacement se saisit au clavier.
  *
  * Les thèses se jouent dans l'ordre du plan, jamais mélangées : c'est la
  * progression de l'œuvre qu'on apprend, et la révision espacée les
@@ -1351,7 +1363,7 @@ function buildWorkSession(lesson: GrammarLesson, work: Work, level: number, seed
       const cards = [...node.points, ...work.links.filter((link) => link.to === node.id).flatMap((link) => link.points)]
       for (const point of cards) {
         const context = workContextOf(work, point.id)
-        const locate = located.has(point.id) ? workLocateFor(point, work, context, rng) : null
+        const locate = located.has(point.id) ? workLocateFor(point, work, context, rng, level >= WORK_LOCATE_TYPED_LEVEL) : null
         exercises.push(locate ?? workGapExercise(point, context))
       }
     }
@@ -1464,15 +1476,17 @@ export function workPlan(work: Work, rootId: string, holes: readonly string[], t
 
 /**
  * Localiser une thèse, si elle a un emplacement propre (pas la carte d'un
- * lien) et au moins un voisin pour servir de leurre.
+ * lien) et, pour le choisir, au moins un voisin pour servir de leurre.
  */
 export function workLocateFor(
   point: GrammarPoint,
   work: Work,
   context: WorkContext | undefined,
   rng: Rng,
+  typed = false,
 ): WorkLocateExercise | null {
   if (!context?.nodeId) return null
+  if (typed) return { kind: 'work-locate', id: `locate-typed:${point.id}`, point, answer: context, options: [], typed }
   const places = placesAround(work, context.nodeId)
   const at = places.findIndex((node) => node.id === context.nodeId)
   if (at === -1) return null
@@ -1490,6 +1504,7 @@ export function workLocateFor(
     point,
     answer: context,
     options: places.filter((node) => picked.has(node.id)).map((node) => node.label),
+    typed,
   }
 }
 
@@ -1896,7 +1911,8 @@ function buildMixedSession(
     // en révision, c'est lui qui dit de quel chapitre il s'agit.
     // Une révision sur deux la fait localiser plutôt que restituer.
     if (item.kind === 'grammar' && item.work) {
-      const locate = item.workTree && turn % 2 === 1 ? workLocateFor(item.point, item.workTree, item.work, rng) : null
+      // Une carte qui tient (ou l'approfondissement) saisit l'emplacement au lieu de le choisir.
+      const locate = item.workTree && turn % 2 === 1 ? workLocateFor(item.point, item.workTree, item.work, rng, unaided) : null
       return locate ?? workGapExercise(item.point, item.work)
     }
 

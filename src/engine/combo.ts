@@ -81,7 +81,6 @@ export function effortOf(exercise: Exercise): number {
     // Reconnaître parmi des options proposées : la forme la plus assistée.
     case 'choice':
     case 'grammar-choice':
-    case 'work-locate':
     case 'conjugation-choice':
       return 1
 
@@ -115,6 +114,9 @@ export function effortOf(exercise: Exercise): number {
     case 'type':
     case 'conjugation':
       return 3
+    // Localiser : choisir parmi des voisins, ou saisir l'emplacement.
+    case 'work-locate':
+      return exercise.typed ? 3 : 1
   }
 }
 

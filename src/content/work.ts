@@ -27,6 +27,53 @@ export function shortLabel(label: string): string {
   return match ? `chap. ${match[1]}` : label
 }
 
+const ROMAN: Record<string, number> = { i: 1, v: 5, x: 10, l: 50, c: 100, d: 500, m: 1000 }
+
+/** « iv » → 4 ; `null` si ce ne sont pas des chiffres romains. */
+function fromRoman(text: string): number | null {
+  if (!/^[ivxlcdm]+$/.test(text)) return null
+  let total = 0
+  for (let i = 0; i < text.length; i++) {
+    const value = ROMAN[text[i]!]!
+    const next = ROMAN[text[i + 1] ?? ''] ?? 0
+    total += value < next ? -value : value
+  }
+  return total
+}
+
+/** Les nombres d'un emplacement, dans l'ordre : « II, 4 » → [2, 4], « chap. 4 » → [4]. */
+function numbersOf(text: string): number[] {
+  const words = text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/\b(livre|chapitres?|chap|ch)\b\.?/g, ' ')
+    .split(/[^a-z0-9]+/)
+    .filter(Boolean)
+  const numbers = words.map((word) => (/^\d+$/.test(word) ? Number(word) : fromRoman(word)))
+  return numbers.every((n) => n !== null) ? (numbers as number[]) : []
+}
+
+/**
+ * Un emplacement saisi au clavier désigne-t-il `label` ? Pour « II, 4 », on
+ * accepte « II, 4 », « II 4 », « 2, 4 », « 2.4 », « livre II chap. 4 », mais
+ * aussi le chapitre seul (« 4 », « chap. 4 », « chapitre 4 ») : le livre va
+ * de soi, puisque la question porte sur un livre donné. S'il est précisé, il
+ * doit être le bon. Un emplacement d'une autre forme se compare tel quel, à
+ * la casse et aux accents près.
+ */
+export function matchesLocation(label: string, value: string): boolean {
+  const expected = numbersOf(label)
+  const given = numbersOf(value)
+  if (expected.length === 2 && given.length > 0) {
+    if (given.length === 1) return given[0] === expected[1]
+    return given.length === 2 && given[0] === expected[0] && given[1] === expected[1]
+  }
+  const plain = (text: string) =>
+    text.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim()
+  return plain(value).length > 0 && plain(value) === plain(label)
+}
+
 /** Toutes les parties d'un sous-arbre, la racine comprise, dans l'ordre du plan. */
 export function nodesOf(node: WorkNode): WorkNode[] {
   return [node, ...node.parts.flatMap(nodesOf)]

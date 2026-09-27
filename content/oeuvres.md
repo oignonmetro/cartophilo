@@ -183,6 +183,13 @@ désigneraient souvent la réponse. Les leurres sont les emplacements les plus
 proches dans le plan, tirés parmi les cinq voisins : c'est entre chapitres
 voisins qu'on se trompe. La correction rappelle le titre du chapitre juste.
 Une carte de lien, qui n'a pas d'emplacement unique, ne se localise jamais.
+
+Une carte mûre **saisit l'emplacement au clavier** au lieu de le choisir : en
+révision, dès qu'elle a tenu quelques jours (ou à l'approfondissement) ; dans
+la leçon, à partir de la troisième fois qu'on la joue. Sont acceptés « II,
+4 », « II 4 », « 2, 4 », « livre II chap. 4 », et le chapitre seul (« 4 »,
+« chap. 4 », « chapitre 4 ») : le livre va de soi, mais s'il est donné, il
+doit être le bon.
 Localiser, restituer et replacer dans le plan sont trois façons d'interroger
 la même thèse : une seule carte de révision espacée pour les trois.
 
@@ -208,8 +215,3 @@ dessiné comme un schéma (bulles des blocs, cases des chapitres, flèches),
 chaque case colorée selon ce qui en est su et dépliable sur ses thèses. Le
 plan lu avant une leçon est le même dessin ; le plan à trous aussi, ses cases
 montrant alors les thèses à replacer plutôt que les gloses.
-
-## Pas encore construit
-
-Exercices envisagés, à ajouter sur le même arbre : localiser au clavier
-(saisir « II, 4 » plutôt que le choisir) pour une carte mûre.

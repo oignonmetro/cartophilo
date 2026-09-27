@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { unitSchema, type GrammarPoint, type Work, type WorkNode } from './schema'
 import { itemsOfUnit } from './course'
-import { isDrawn, lessonsFromWork, linksOf, pointsOf, thesisFills, threadOf, workContextOf } from './work'
-import { buildLessonSession, itemIdsOf, workLocateFor, workMatchesFor, workMatchItems, workOrder, workOrderItems, type WorkPlanExercise } from '@/engine/exercises'
+import { isDrawn, lessonsFromWork, linksOf, matchesLocation, pointsOf, thesisFills, threadOf, workContextOf } from './work'
+import { buildLessonSession, itemIdsOf, workLocateFor, workMatchesFor, workMatchItems, workOrder, workOrderItems, type WorkLocateExercise, type WorkPlanExercise } from '@/engine/exercises'
 import { createRng } from '@/engine/rng'
 
 function point(id: string): GrammarPoint {
@@ -212,5 +212,29 @@ describe('associer chaque chapitre à ce qu’il affirme', () => {
     const [raw] = lessonsFromWork('u', WORK)
     const session = buildLessonSession({ ...raw!, notes: undefined }, 0, 1, false, 0, undefined, WORK)
     expect(session.filter((exercise) => exercise.kind === 'work-match')).toHaveLength(2)
+  })
+})
+
+describe('saisir l’emplacement au clavier', () => {
+  it('accepte les façons courantes d’écrire un emplacement, et refuse un autre livre', () => {
+    for (const value of ['II, 4', 'ii,4', 'II 4', '2, 4', '2.4', 'livre II chap. 4', 'chap. 4', 'chap.4', 'chapitre 4', '4']) {
+      expect(matchesLocation('II, 4', value), value).toBe(true)
+    }
+    for (const value of ['II, 5', 'III, 4', '5', 'chap. 14', '', 'quatre']) {
+      expect(matchesLocation('II, 4', value), value).toBe(false)
+    }
+    expect(matchesLocation('Préface', 'preface')).toBe(true)
+  })
+
+  it('se saisit à partir de la troisième fois qu’on joue la leçon', () => {
+    const [raw] = lessonsFromWork('u', WORK)
+    const lesson = { ...raw!, notes: undefined }
+    const locates = (level: number) =>
+      buildLessonSession(lesson, level, 7, false, 0, undefined, WORK).filter(
+        (exercise): exercise is WorkLocateExercise => exercise.kind === 'work-locate',
+      )
+    expect(locates(1).every((exercise) => !exercise.typed)).toBe(true)
+    expect(locates(2).length).toBeGreaterThan(0)
+    expect(locates(2).every((exercise) => exercise.typed && exercise.options.length === 0)).toBe(true)
   })
 })
