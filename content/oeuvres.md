@@ -65,7 +65,7 @@ Chaque partie (`parts`) porte :
 | `title` | titre donné par l'auteur, tel quel (facultatif) |
 | `question` | question à laquelle répond un **grand** bloc, dans sa bulle : **affichée, jamais interrogée** |
 | `summary` | ce que la case d'un chapitre affirme, en réponse à la question de son bloc (« La volonté générale ne peut errer »), quand le titre de l'auteur ne le dit pas déjà |
-| `gloss` | ce qui précise l'affirmation, en italique sous elle (« = le peuple ne peut ni la céder ni se faire représenter ») |
+| `reason` | l'argument de l'auteur, sous l'affirmation, en gris, que la carte introduit par « car » (« car le pouvoir peut se transmettre, mais non la volonté ») ; écrit sans ce « car » |
 | `outcome` | ce qui découle d'une partie et mène à la suite, affiché dans un encadré pointillé sur la flèche qui en part (« Mais le peuple ne voit pas toujours son bien : il lui faut un guide ») |
 | `rel` | relation avec la partie qui la précède au même niveau (jamais sur la première) |
 | `points` | thèses de la partie, phrases trouées (même format qu'un point de grammaire) |
@@ -75,7 +75,7 @@ Une partie sans sous-partie doit porter au moins une thèse : elle n'aurait
 sinon rien à replacer dans le plan à trous.
 
 **La carte se lit comme un schéma de manuel**, et c'est ce que `question`,
-`summary` et `gloss` doivent servir (ils ne sont jamais interrogés) :
+`summary` et `reason` doivent servir (ils ne sont jamais interrogés) :
 
 - **Une question par grand bloc seulement** (« chap. 1-5 : Quelles sont les
   propriétés du pouvoir souverain ? », « chap. 7-12 : Comment le peuple
@@ -94,10 +94,14 @@ sinon rien à replacer dans le plan à trous.
 - **Ce qui fait passer d'une partie à la suivante** (le problème que pose un
   chapitre et que résout le bloc suivant) va dans `outcome`, sur la flèche,
   pas dans la précision de la case : il n'appartient à aucun des deux.
-- **La précision (`gloss`) tient en une ligne**, sans jargon ni citation :
-  ce qu'on écrirait derrière un « = » dans un schéma.
+- **Deux styles seulement** : en gras, ce qui s'affirme (titre, affirmation) ;
+  en gris, ce qui le justifie. **L'argument (`reason`) est celui de
+  l'auteur**, pas une reformulation de l'affirmation : ce qui fait qu'elle
+  est vraie selon lui (« car qui veut la fin veut les moyens »). Il tient en
+  une ou deux lignes, en reprenant ses mots quand ils sont clairs, sans
+  guillemets (la carte n'est pas un relevé de citations).
 
-`content:check` signale un chapitre qui n'a ni `summary` ni `gloss`.
+`content:check` signale un chapitre qui n'a ni `summary` ni `reason`.
 
 **Emplacements** : « II, 3 » pour un chapitre, « chap. 1-6 » pour un bloc.
 La carte, qui ne montre qu'un livre, écrit d'elle-même « chap. 3 » ; les

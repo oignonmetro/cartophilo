@@ -33,7 +33,7 @@ work:
                 - id: l2-1
                   label: II, 1
                   title: Que la souveraineté est inaliénable
-                  gloss: "le peuple ne peut ni la céder ni se faire représenter"
+                  reason: "le pouvoir peut se transmettre, mais non la volonté : un peuple qui promet d'obéir à un maître cesse d'être un peuple"
                   points:
                     - id: cs2-1
                       sentence: "La souveraineté, n'étant que l'exercice de la volonté générale, ne peut s'aliéner ni être représentée : « le pouvoir peut bien se transmettre, mais non pas la ___ »."
@@ -42,7 +42,7 @@ work:
                 - id: l2-2
                   label: II, 2
                   title: Que la souveraineté est indivisible
-                  gloss: "on ne peut la partager entre plusieurs pouvoirs (législatif, exécutif…)"
+                  reason: "la volonté est générale ou ne l'est pas : pouvoir législatif, exécutif, droit de guerre n'en sont que des émanations"
                   rel: declinaison
                   points:
                     - id: cs2-2
@@ -53,7 +53,7 @@ work:
                   label: II, 3
                   title: Si la volonté générale peut errer
                   summary: "La volonté générale ne peut errer"
-                  gloss: "le peuple veut toujours son bien, mais les factions peuvent le tromper"
+                  reason: "elle ne regarde qu'à l'intérêt commun ; seules les factions, qui font prévaloir un intérêt de groupe, trompent le peuple"
                   rel: declinaison
                   points:
                     - id: cs2-3a
@@ -75,7 +75,7 @@ work:
                   label: II, 4
                   title: Des bornes du pouvoir souverain
                   summary: "Le souverain est absolu, mais borné"
-                  gloss: "il ne décide que de ce qui concerne tous les citoyens également"
+                  reason: "la volonté générale doit partir de tous pour s'appliquer à tous : tournée vers un objet particulier, elle perd sa rectitude"
                   points:
                     - id: cs2-4a
                       sentence: "Le pouvoir souverain est absolu, mais borné par la généralité de la volonté qui le dirige : la volonté générale perd sa rectitude dès qu'elle tend à un objet ___ et déterminé."
@@ -90,7 +90,7 @@ work:
                   label: II, 5
                   title: Du droit de vie et de mort
                   summary: "Le souverain peut exiger la vie du citoyen"
-                  gloss: "pour défendre l'État, ou pour punir le criminel, devenu un ennemi"
+                  reason: "qui veut la fin veut les moyens : le citoyen n'a vécu en sûreté qu'à condition d'exposer sa vie pour l'État"
                   rel: application
                   points:
                     - id: cs2-5a
@@ -105,7 +105,7 @@ work:
           label: II, 6
           title: De la loi
           summary: "La loi : tout le peuple statue sur tout le peuple"
-          gloss: "la loi vient de tous et s'applique à tous"
+          reason: "nul n'est injuste envers lui-même : la loi, qui vient de tous et s'applique à tous, ne peut être injuste"
           outcome: "Mais le peuple ne voit pas toujours son bien : il lui faut un guide"
           rel: consequence
           points:
@@ -126,7 +126,7 @@ work:
               label: II, 7
               title: Du Législateur
               summary: "Le Législateur propose les lois, le peuple les adopte"
-              gloss: "un guide sans pouvoir, qui s'appuie sur l'autorité des dieux"
+              reason: "seule la volonté générale oblige les particuliers : celui qui rédige les lois ne peut rien imposer"
               points:
                 - id: cs2-7a
                   sentence: "« Celui qui ose entreprendre d'instituer un peuple doit se sentir en état de changer, pour ainsi dire, la ___ humaine », faire de chaque individu, tout parfait et solitaire, la partie d'un plus grand tout."
@@ -146,7 +146,7 @@ work:
                   label: II, 8
                   title: Du peuple
                   summary: "Le peuple doit être encore jeune"
-                  gloss: "des coutumes enracinées ne se réforment plus"
+                  reason: "une fois les coutumes établies et les préjugés enracinés, il est dangereux et vain de vouloir les réformer"
                   points:
                     - id: cs2-8a
                       sentence: "« Comme avant d'élever un grand édifice l'architecte observe et sonde le sol, [...] le sage instituteur ne commence pas par rédiger de bonnes lois en elles-mêmes, mais il examine auparavant si le peuple auquel il les destine est propre à les ___. »"
@@ -158,7 +158,7 @@ work:
                   label: II, 9
                   title: Suite
                   summary: "L'État ne doit être ni trop grand ni trop petit"
-                  gloss: "plus le lien social s'étend, plus il se relâche"
+                  reason: "plus le lien social s'étend, plus il se relâche : un petit État est proportionnellement plus fort qu'un grand"
                   rel: declinaison
                   points:
                     - id: cs2-9
@@ -168,7 +168,7 @@ work:
                   label: II, 10
                   title: Suite
                   summary: "La terre doit nourrir ses habitants"
-                  gloss: "et le peuple s'instituer dans la paix et l'abondance"
+                  reason: "ce sont les hommes qui font l'État, et c'est le terrain qui nourrit les hommes"
                   rel: declinaison
                   points:
                     - id: cs2-10a
@@ -183,7 +183,7 @@ work:
               label: II, 11
               title: Des divers systèmes de Législation
               summary: "Les lois doivent viser la liberté et l'égalité"
-              gloss: "en s'adaptant à la situation et au caractère de chaque peuple"
+              reason: "toute dépendance particulière ôte autant de force à l'État, et la liberté ne peut subsister sans l'égalité"
               rel: consequence
               points:
                 - id: cs2-11a
@@ -196,8 +196,8 @@ work:
             - id: l2-12
               label: II, 12
               title: Division des Lois
-              summary: "Il y a quatre sortes de lois"
-              gloss: "politiques, civiles, criminelles, et surtout les mœurs et l'opinion"
+              summary: "Il y a quatre sortes de lois, dont la plus importante : les mœurs"
+              reason: "chacune règle un rapport différent ; et les mœurs, gravées dans les cœurs des citoyens, font la véritable constitution de l'État"
               rel: consequence
               points:
                 - id: cs2-12a

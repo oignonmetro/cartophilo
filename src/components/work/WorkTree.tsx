@@ -330,7 +330,7 @@ function Children(props: TreeProps & { node: WorkNode }) {
   if (columns) {
     return (
       <div
-        className={`grid w-full ${parallel(node) ? 'gap-3' : 'gap-x-10 gap-y-6'}`}
+        className={`grid w-full ${parallel(node) ? 'gap-3' : 'gap-x-10 gap-y-12'}`}
         style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` }}
       >
         {node.parts.map((part) => (
@@ -341,7 +341,7 @@ function Children(props: TreeProps & { node: WorkNode }) {
   }
 
   return (
-    <div className={`flex w-full flex-col items-center ${railed(node, layout) ? 'gap-3 pl-7' : 'gap-7'}`}>
+    <div className={`flex w-full flex-col items-center ${railed(node, layout) ? 'gap-3 pl-7' : 'gap-12'}`}>
       {node.parts.map((part) => (
         <PartInColumn key={part.id} {...props} node={part} />
       ))}
@@ -366,7 +366,7 @@ function PartInColumn(props: TreeProps & { node: WorkNode }) {
       {part}
       <p
         ref={register(node.id, 'out')}
-        className="max-w-sm rounded-xl border-2 border-dashed border-violet/40 px-3 py-1.5 text-center text-sm leading-snug text-ink-soft italic"
+        className="max-w-sm rounded-xl border-2 border-dashed border-violet/40 px-3 py-1.5 text-center text-sm leading-snug text-ink-soft"
       >
         {node.outcome}
       </p>
@@ -384,7 +384,7 @@ function GroupView(props: TreeProps & { node: WorkNode }) {
   const { node } = props
   const register = useContext(RegisterContext)
   return (
-    <div ref={register(node.id, 'box')} className="flex w-full flex-col items-center gap-7">
+    <div ref={register(node.id, 'box')} className="flex w-full flex-col items-center gap-12">
       {hasHead(node) && (
         <div
           ref={register(node.id, 'head')}
@@ -400,11 +400,12 @@ function GroupView(props: TreeProps & { node: WorkNode }) {
 }
 
 /**
- * Une case de chapitre, comme dans un schéma de manuel : en tête, en gras,
- * l'emplacement et le titre de l'auteur ; puis ce que le chapitre affirme
- * (`summary`), et sa précision en italique (`gloss`). Dépliée, elle montre
- * les thèses. En plan à trous, l'affirmation et sa précision s'effacent
- * (elles donneraient la réponse) et les thèses restent affichées.
+ * Une case de chapitre, comme dans un schéma de manuel, en deux styles
+ * seulement : en gras, l'emplacement, le titre de l'auteur et ce que le
+ * chapitre affirme (`summary`) ; en gris, l'argument qui le justifie
+ * (`reason`), introduit par « car ». Dépliée, elle montre les thèses. En plan
+ * à trous, l'affirmation et l'argument s'effacent (ils donneraient la
+ * réponse) et les thèses restent affichées.
  */
 function LeafBox({ node, mode = 'map', renderPoint, leafBorder }: TreeProps & { node: WorkNode }) {
   const register = useContext(RegisterContext)
@@ -418,10 +419,8 @@ function LeafBox({ node, mode = 'map', renderPoint, leafBorder }: TreeProps & { 
         <span className="text-violet-deep">{shortLabel(node.label)}</span>
         {node.title && <span className="text-ink"> · {node.title}</span>}
       </p>
-      {mode === 'map' && node.summary && <p className="mt-1 text-sm leading-snug text-ink">{node.summary}</p>}
-      {mode === 'map' && node.gloss && (
-        <p className="mt-0.5 text-sm leading-snug text-ink-soft italic">= {node.gloss}</p>
-      )}
+      {mode === 'map' && node.summary && <p className="mt-1 text-sm leading-snug font-black text-ink">{node.summary}</p>}
+      {mode === 'map' && node.reason && <p className="mt-1 text-sm leading-snug text-ink-soft">car {node.reason}</p>}
       {showTheses && (
         <ul className="mt-2 flex flex-col gap-1.5 border-t border-line pt-2">
           {node.points.map((point) => (

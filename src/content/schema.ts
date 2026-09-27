@@ -252,8 +252,12 @@ export interface WorkNode {
    * (« Si la volonté générale peut errer »). Jamais interrogée.
    */
   summary?: string
-  /** Ce qui précise l'affirmation, sous elle, en italique : « = le peuple ne peut y renoncer ». */
-  gloss?: string
+  /**
+   * L'argument de l'auteur, sous l'affirmation, introduit par « car » à
+   * l'affichage : « car le pouvoir peut se transmettre, mais non la volonté ».
+   * Écrit sans ce « car ». Jamais interrogé.
+   */
+  reason?: string
   /**
    * Ce qui découle de la partie et mène à la suite, affiché sur la flèche qui
    * en part (après le chapitre 6 : « mais le peuple ne voit pas toujours son
@@ -271,7 +275,7 @@ export const workNodeSchema: z.ZodType<WorkNode, unknown> = z.object({
   title: z.string().min(1).optional(),
   question: z.string().min(1).optional(),
   summary: z.string().min(1).optional(),
-  gloss: z.string().min(1).optional(),
+  reason: z.string().min(1).optional(),
   outcome: z.string().min(1).optional(),
   rel: workRelationSchema.optional(),
   points: z.array(grammarPointSchema).default([]),

@@ -350,10 +350,10 @@ function checkWork(unitId: string, work: Work, problems: string[]) {
     const first = node.parts[0]
     if (first?.rel) problems.push(`${where} : "${first.id}" ouvre son niveau, elle ne peut pas porter de relation (rel)`)
     // Sans glose, la case de la carte n'a que son titre à montrer tant qu'on ne la déplie pas.
-    if (node.parts.length === 0 && !node.summary && !node.gloss) {
-      warn(where, `partie "${node.id}" sans affirmation ni précision (summary, gloss) : sa case, dans la carte, n'aura que le titre de l'auteur`)
+    if (node.parts.length === 0 && !node.summary && !node.reason) {
+      warn(where, `partie "${node.id}" sans affirmation ni argument (summary, reason) : sa case, dans la carte, n'aura que le titre de l'auteur`)
     }
-    for (const [field, text] of [['label', node.label], ['title', node.title], ['question', node.question], ['summary', node.summary], ['gloss', node.gloss], ['outcome', node.outcome]] as const) {
+    for (const [field, text] of [['label', node.label], ['title', node.title], ['question', node.question], ['summary', node.summary], ['reason', node.reason], ['outcome', node.outcome]] as const) {
       if (text && hasUnquotedEmDash(text)) {
         warn(where, `partie "${node.id}" (${field}) contient un tiret cadratin (—) hors citation ; remplacez-le`)
       }
