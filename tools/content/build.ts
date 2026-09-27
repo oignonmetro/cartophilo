@@ -349,7 +349,11 @@ function checkWork(unitId: string, work: Work, problems: string[]) {
     }
     const first = node.parts[0]
     if (first?.rel) problems.push(`${where} : "${first.id}" ouvre son niveau, elle ne peut pas porter de relation (rel)`)
-    for (const [field, text] of [['label', node.label], ['title', node.title], ['question', node.question]] as const) {
+    // Sans glose, la case de la carte n'a que son titre à montrer tant qu'on ne la déplie pas.
+    if (node.parts.length === 0 && !node.summary) {
+      warn(where, `partie "${node.id}" sans glose (summary) : sa case, dans la carte, n'aura que son titre`)
+    }
+    for (const [field, text] of [['label', node.label], ['title', node.title], ['question', node.question], ['summary', node.summary]] as const) {
       if (text && hasUnquotedEmDash(text)) {
         warn(where, `partie "${node.id}" (${field}) contient un tiret cadratin (—) hors citation ; remplacez-le`)
       }

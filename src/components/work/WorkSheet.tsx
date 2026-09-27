@@ -33,7 +33,7 @@ export function WorkSheet({
     )
     if (mastery.total > 0 && mastery.known === mastery.total) return 'border-success'
     if (mastery.seen > 0) return 'border-amber'
-    return 'border-line'
+    return undefined
   }
 
   return (
@@ -86,20 +86,42 @@ export function WorkSheet({
   )
 }
 
+/**
+ * La légende : les trois couleurs de maîtrise, et les deux traits du plan.
+ * Le pointillé ne se devine pas seul : une ligne suffit à le dire une fois,
+ * plutôt que de l'écrire sur chaque flèche.
+ */
 function Legend() {
   const items = [
     { className: 'border-success', label: 'su' },
     { className: 'border-amber', label: 'en cours' },
-    { className: 'border-line', label: 'pas encore vu' },
+    { className: 'border-violet/40', label: 'pas encore vu' },
   ]
   return (
-    <ul className="flex flex-wrap gap-3 text-[0.7rem] font-bold text-ink-soft">
-      {items.map((item) => (
-        <li key={item.label} className="flex items-center gap-1.5">
-          <span className={`h-3 w-3 rounded border-2 ${item.className}`} />
-          {item.label}
+    <div className="flex flex-col gap-1.5 text-[0.7rem] font-bold text-ink-soft">
+      <ul className="flex flex-wrap gap-3">
+        {items.map((item) => (
+          <li key={item.label} className="flex items-center gap-1.5">
+            <span className={`h-3 w-3 rounded border-2 ${item.className}`} />
+            {item.label}
+          </li>
+        ))}
+      </ul>
+      <ul className="flex flex-wrap gap-3">
+        <li className="flex items-center gap-1.5">
+          <svg width="22" height="8" aria-hidden>
+            <path d="M1 4 H20" className="stroke-violet" strokeWidth="2" />
+          </svg>
+          enchaînement
         </li>
-      ))}
-    </ul>
+        <li className="flex items-center gap-1.5">
+          <svg width="22" height="8" aria-hidden>
+            <path d="M1 4 H20" className="stroke-violet" strokeWidth="1.8" strokeDasharray="5 4" />
+          </svg>
+          reprise d'une idée
+        </li>
+        <li>Touchez une case pour lire ses thèses.</li>
+      </ul>
+    </div>
   )
 }

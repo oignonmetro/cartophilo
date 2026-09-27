@@ -48,6 +48,7 @@ export function WorkMapNote({ exercise, onNext }: { exercise: WorkMapExercise; o
             </h2>
             {root.question && <p className="text-sm font-semibold text-ink-soft italic">{root.question}</p>}
           </header>
+          <p className="-mt-2 text-xs font-bold text-ink-faint">Touchez une case pour lire ses thèses.</p>
           <WorkTree work={exercise.work} root={root} layout={isDesktop ? 'chart' : 'vertical'} />
         </motion.div>
       </div>

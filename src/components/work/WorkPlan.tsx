@@ -116,6 +116,7 @@ export function WorkPlan({
           work={exercise.work}
           root={root}
           layout={isDesktop ? 'chart' : 'vertical'}
+          mode="plan"
           renderPoint={renderPoint}
         />
       </div>

@@ -34,6 +34,7 @@ work:
                 - id: l2-1
                   label: II, 1
                   title: Que la souveraineté est inaliénable
+                  summary: "le pouvoir se transmet, pas la volonté"
                   points:
                     - id: cs2-1
                       sentence: "La souveraineté, n'étant que l'exercice de la volonté générale, ne peut s'aliéner ni être représentée : « le pouvoir peut bien se transmettre, mais non pas la ___ »."
@@ -42,6 +43,7 @@ work:
                 - id: l2-2
                   label: II, 2
                   title: Que la souveraineté est indivisible
+                  summary: "ce qu'on prend pour ses parties n'en sont que des émanations"
                   rel: declinaison
                   points:
                     - id: cs2-2
@@ -51,6 +53,7 @@ work:
                 - id: l2-3
                   label: II, 3
                   title: Si la volonté générale peut errer
+                  summary: "toujours droite, mais le peuple peut être trompé"
                   rel: declinaison
                   points:
                     - id: cs2-3a
@@ -72,6 +75,7 @@ work:
                 - id: l2-4
                   label: II, 4
                   title: Des bornes du pouvoir souverain
+                  summary: "absolu, mais borné aux objets généraux"
                   points:
                     - id: cs2-4a
                       sentence: "Le pouvoir souverain est absolu, mais borné par la généralité de la volonté qui le dirige : la volonté générale perd sa rectitude dès qu'elle tend à un objet ___ et déterminé."
@@ -85,6 +89,7 @@ work:
                 - id: l2-5
                   label: II, 5
                   title: Du droit de vie et de mort
+                  summary: "risquer sa vie pour la conserver ; le criminel, un ennemi"
                   rel: application
                   points:
                     - id: cs2-5a
@@ -98,6 +103,7 @@ work:
         - id: l2-6
           label: II, 6
           title: De la loi
+          summary: "tout le peuple statue sur tout le peuple ; mais il lui faut un guide"
           rel: consequence
           points:
             - id: cs2-6a
@@ -116,6 +122,7 @@ work:
             - id: l2-7
               label: II, 7
               title: Du Législateur
+              summary: "il propose les lois sans aucun droit législatif"
               points:
                 - id: cs2-7a
                   sentence: "« Celui qui ose entreprendre d'instituer un peuple doit se sentir en état de changer, pour ainsi dire, la ___ humaine », faire de chaque individu, tout parfait et solitaire, la partie d'un plus grand tout."
@@ -135,6 +142,7 @@ work:
                 - id: l2-8
                   label: II, 8
                   title: Du peuple
+                  summary: "un peuple encore assez jeune pour recevoir des lois"
                   points:
                     - id: cs2-8a
                       sentence: "« Comme avant d'élever un grand édifice l'architecte observe et sonde le sol, [...] le sage instituteur ne commence pas par rédiger de bonnes lois en elles-mêmes, mais il examine auparavant si le peuple auquel il les destine est propre à les ___. »"
@@ -145,6 +153,7 @@ work:
                 - id: l2-9
                   label: II, 9
                   title: Suite
+                  summary: "un État ni trop grand ni trop petit"
                   rel: declinaison
                   points:
                     - id: cs2-9
@@ -153,6 +162,7 @@ work:
                 - id: l2-10
                   label: II, 10
                   title: Suite
+                  summary: "assez de terre pour ses habitants, dans la paix"
                   rel: declinaison
                   points:
                     - id: cs2-10a
@@ -166,6 +176,7 @@ work:
             - id: l2-11
               label: II, 11
               title: Des divers systèmes de Législation
+              summary: "liberté et égalité, adaptées à chaque peuple"
               rel: consequence
               points:
                 - id: cs2-11a
@@ -178,6 +189,7 @@ work:
             - id: l2-12
               label: II, 12
               title: Division des Lois
+              summary: "lois politiques, civiles, criminelles, et surtout les mœurs"
               rel: consequence
               points:
                 - id: cs2-12a
@@ -202,6 +214,3 @@ work:
         - id: cs2-lien-6-7
           sentence: "Le peuple, auteur légitime des lois, veut le bien sans toujours le voir ; il faut unir l'entendement à la volonté dans le corps social : « Voilà d'où naît la nécessité d'un ___. »"
           answer: Législateur
-    - from: l2-1-5
-      to: l2-7-12
-      rel: changement-de-question

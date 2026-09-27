@@ -245,6 +245,13 @@ export interface WorkNode {
   title?: string
   /** Question à laquelle répond un bloc : affichée en tête, jamais interrogée. */
   question?: string
+  /**
+   * Glose de quelques mots, sous le titre dans la carte de l'œuvre (« le
+   * pouvoir se transmet, pas la volonté ») : ce que la case dit d'un coup
+   * d'œil, les thèses complètes ne s'ouvrant qu'à la demande. Jamais
+   * interrogée.
+   */
+  summary?: string
   rel?: WorkRelation
   points: GrammarPoint[]
   parts: WorkNode[]
@@ -255,6 +262,7 @@ export const workNodeSchema: z.ZodType<WorkNode, unknown> = z.object({
   label: z.string().min(1),
   title: z.string().min(1).optional(),
   question: z.string().min(1).optional(),
+  summary: z.string().min(1).optional(),
   rel: workRelationSchema.optional(),
   points: z.array(grammarPointSchema).default([]),
   parts: z.array(z.lazy(() => workNodeSchema)).default([]),

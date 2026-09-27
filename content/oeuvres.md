@@ -63,13 +63,19 @@ Chaque partie (`parts`) porte :
 | `id` | identifiant, unique dans l'unité |
 | `label` | emplacement : « Livre II », « chap. 1-5 », « II, 3 » |
 | `title` | titre donné par l'auteur, tel quel (facultatif) |
-| `question` | question à laquelle répond un bloc : **affichée, jamais interrogée** |
+| `question` | question à laquelle répond un bloc : **affichée dans sa bulle, jamais interrogée** |
+| `summary` | glose de quelques mots sous le titre d'un chapitre, dans la carte (« le pouvoir se transmet, pas la volonté ») : **affichée, jamais interrogée** |
 | `rel` | relation avec la partie qui la précède au même niveau (jamais sur la première) |
 | `points` | thèses de la partie, phrases trouées (même format qu'un point de grammaire) |
 | `parts` | sous-parties |
 
 Une partie sans sous-partie doit porter au moins une thèse : elle n'aurait
-sinon rien à replacer dans le plan à trous.
+sinon rien à replacer dans le plan à trous. Elle devrait aussi porter une
+glose (`summary`), que `content:check` réclame : la carte, comme un schéma de
+manuel, ne montre d'un chapitre que son emplacement, son titre et cette
+glose, les thèses ne s'ouvrant qu'au toucher. Une glose tient sur une ligne
+ou deux, sans guillemets (ce n'est pas une citation) et sans reprendre la
+thèse mot pour mot.
 
 **Emplacements** : « II, 3 » pour un chapitre, « II, 1-6 » pour un bloc ;
 quand le livre est évident (à l'intérieur de son arbre), « chap. 3 » ou
@@ -77,26 +83,29 @@ quand le livre est évident (à l'intérieur de son arbre), « chap. 3 » ou
 
 ## Les relations
 
-Liste fermée : c'est ce qui permet de toujours dessiner le plan avec les
-mêmes signes. Elle sert au dessin et au choix des exercices, pas à un QCM
-« quel est ce lien ? ».
+Liste fermée. Elle décide de la forme du plan et du choix des exercices ;
+elle ne s'écrit jamais sur la carte, et ne fait l'objet d'aucun QCM « quel
+est ce lien ? ». Une flèche suffit : le lecteur voit l'enchaînement, le mot
+« conséquence » ou « limite » écrit dessus n'ajoutait que du texte.
 
 | `rel` | Sens | Dessin |
 |---|---|---|
-| `declinaison` | même plan : une autre face du même objet | repère « même plan », sans flèche ; côte à côte sur ordinateur |
-| `limite` | borne ce que la précédente vient de poser | flèche nommée |
-| `application` | cas particulier, mise en œuvre | flèche nommée |
-| `consequence` | se déduit de la précédente | flèche nommée |
-| `probleme-solution` | résout la difficulté que la précédente fait surgir | flèche nommée |
-| `changement-de-question` | ouvre une autre question | flèche nommée |
-| `reprise` | reprend une idée déjà formulée, pour un autre usage | flèche nommée |
-| `objection-reponse` | répond à une objection faite à la précédente | flèche nommée |
+| `declinaison` | même plan : une autre face du même objet | éventail depuis la bulle du bloc : côte à côte sur ordinateur, suspendues à un rail sur téléphone |
+| `limite` | borne ce que la précédente vient de poser | flèche |
+| `application` | cas particulier, mise en œuvre | flèche |
+| `consequence` | se déduit de la précédente | flèche |
+| `probleme-solution` | résout la difficulté que la précédente fait surgir | flèche |
+| `changement-de-question` | ouvre une autre question | flèche |
+| `reprise` | reprend une idée déjà formulée, pour un autre usage | flèche |
+| `objection-reponse` | répond à une objection faite à la précédente | flèche |
 
 `rel` ne relie que deux voisines. Pour deux parties éloignées (le chapitre 6
-qui reprend une formule du chapitre 3), écrire un lien dans `links` : il
-s'affiche sous chacune des deux parties. Un lien que l'arbre dessine déjà
-(le chapitre 6 vers le chapitre 7, quand la flèche du chapitre 6 vers le bloc
-7-12 le montre) ne s'affiche pas en double : il ne sert alors qu'à porter sa
+qui reprend une formule du chapitre 3), écrire un lien dans `links` : il se
+dessine en **flèche pointillée** qui les joint par la droite. N'en écrire que
+pour un lien qui se voit mal autrement : une longue courbe de plus entre deux
+blocs déjà reliés par des flèches n'apporte rien. Un lien que l'arbre dessine
+déjà (le chapitre 6 vers le chapitre 7, quand la flèche du chapitre 6 vers le
+bloc 7-12 le montre) n'est pas retracé : il ne sert alors qu'à porter sa
 carte.
 
 ## Les thèses
@@ -150,8 +159,11 @@ Une carte de lien, qui n'a pas d'emplacement unique, ne se localise jamais.
 Localiser, restituer et replacer dans le plan sont trois façons d'interroger
 la même thèse : une seule carte de révision espacée pour les trois.
 
-Depuis la bibliothèque, **« Voir la carte »** ouvre le plan de toute l'œuvre,
-chaque chapitre coloré selon ce qui en est su.
+Depuis la bibliothèque, **« Voir la carte »** ouvre le plan de toute l'œuvre
+dessiné comme un schéma (bulles des blocs, cases des chapitres, flèches),
+chaque case colorée selon ce qui en est su et dépliable sur ses thèses. Le
+plan lu avant une leçon est le même dessin ; le plan à trous aussi, ses cases
+montrant alors les thèses à replacer plutôt que les gloses.
 
 ## Pas encore construit
 
