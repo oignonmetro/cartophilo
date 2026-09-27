@@ -413,27 +413,35 @@ function LeafBox({ node, mode = 'map', renderPoint, leafBorder }: TreeProps & { 
   const border = leafBorder?.(node) ?? 'border-violet/40'
   const showTheses = mode === 'plan' || open
 
+  // Le titre dans un bandeau teinté, en tête de case : en gras comme
+  // l'affirmation, il s'y confondait tant qu'ils partageaient la même
+  // couleur sur le même fond. Le bandeau le fait lire comme un intitulé.
+  const body = (mode === 'map' && (node.summary || node.reason)) || showTheses
   const content = (
     <>
-      <p className="text-sm leading-snug font-black">
-        <span className="text-violet-deep">{shortLabel(node.label)}</span>
-        {node.title && <span className="text-ink"> · {node.title}</span>}
+      <p className="border-b-2 border-violet/20 bg-violet/12 px-3 py-1.5 text-xs leading-snug font-black text-violet-deep">
+        {shortLabel(node.label)}
+        {node.title && <span className="text-violet-deep/85"> · {node.title}</span>}
       </p>
-      {mode === 'map' && node.summary && <p className="mt-1 text-sm leading-snug font-black text-ink">{node.summary}</p>}
-      {mode === 'map' && node.reason && <p className="mt-1 text-sm leading-snug text-ink-soft">car {node.reason}</p>}
-      {showTheses && (
-        <ul className="mt-2 flex flex-col gap-1.5 border-t border-line pt-2">
-          {node.points.map((point) => (
-            <li key={point.id} className="text-sm leading-snug text-ink">
-              {renderPoint ? renderPoint(point) : <ThesisText point={point} />}
-            </li>
-          ))}
-        </ul>
+      {body && (
+        <div className="flex flex-col gap-1 px-3 py-2">
+          {mode === 'map' && node.summary && <p className="text-sm leading-snug font-black text-ink">{node.summary}</p>}
+          {mode === 'map' && node.reason && <p className="text-sm leading-snug text-ink-soft">car {node.reason}</p>}
+          {showTheses && (
+            <ul className={`flex flex-col gap-1.5 ${mode === 'map' ? 'mt-1 border-t border-line pt-2' : ''}`}>
+              {node.points.map((point) => (
+                <li key={point.id} className="text-sm leading-snug text-ink">
+                  {renderPoint ? renderPoint(point) : <ThesisText point={point} />}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       )}
     </>
   )
 
-  const className = `h-full w-full rounded-xl border-2 bg-paper px-3 py-2.5 text-center ${border}`
+  const className = `flex h-full w-full flex-col overflow-hidden rounded-xl border-2 bg-paper text-center ${border}`
   if (mode === 'plan') {
     return (
       <div ref={register(node.id, 'box')} className={className}>
