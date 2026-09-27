@@ -430,7 +430,8 @@ function LeafBox({ node, mode = 'map', renderLeaf, leafBorder }: TreeProps & { n
     return (
       <div ref={register(node.id, 'box')} className={className}>
         {band}
-        {inside != null && <div className="flex flex-1 flex-col justify-center px-2 py-2">{inside}</div>}
+        {/* Centré dans ce qui reste de la case, qui s'étire à la hauteur de ses voisines. */}
+        {inside != null && <div className="flex flex-1 flex-col items-center justify-center px-3 py-3">{inside}</div>}
       </div>
     )
   }

@@ -10,6 +10,14 @@ Hors-programme, ou la piste Repérage de Marx et de Plotin.
 Premier exemple : `hors-programme/units/rousseau-contrat-social.yaml`
 (*Du contrat social*, livre II).
 
+> **Archivé (2026-09-27).** L'unité-œuvre est mise de côté : l'unité du
+> *Contrat social* porte `status: archived` (voir `content/README.md`,
+> « Archiver une unité »), elle n'apparaît plus dans l'application mais
+> reste validée par `content:check`. Tout le fonctionnement (format `work`,
+> carte, exercices) reste en place dans le code et ne s'active que pour une
+> unité qui porte un plan : retirer `status: archived` suffit à tout
+> réactiver.
+
 ## Principe : on écrit le plan, pas les leçons
 
 L'unité ne porte qu'un champ `work` : l'arbre de l'œuvre (livres, blocs de

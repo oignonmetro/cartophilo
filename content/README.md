@@ -315,6 +315,15 @@ avait ce cours sélectionné bascule automatiquement sur le cours par défaut.
 
 La compilation échoue si **tous** les cours sont archivés.
 
+## Archiver une unité
+
+`status: archived` en tête d'un fichier d'unité la retire de l'application
+sans rien supprimer : elle reste référencée dans `course.yaml` et validée par
+`content:check` comme les autres, mais le compilateur ne la met pas dans le
+cours publié. Retirer le champ (ou écrire `available`) la remet en service ;
+la progression déjà faite sur ses cartes est conservée. Pensez à incrémenter
+`version` du cours, pour que les appareils reçoivent le changement.
+
 ## Publier une mise à jour de contenu
 
 Incrémenter `version:` dans `course.yaml`, puis pousser sur `main`. Le

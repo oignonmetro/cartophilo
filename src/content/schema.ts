@@ -347,6 +347,13 @@ export const unitSchema = z.object({
    * `lessons` : le compilateur en dérive une leçon par partie de premier niveau.
    */
   work: workSchema.optional(),
+  /**
+   * `archived` retire l'unité de l'application sans la supprimer : le fichier
+   * reste validé par `content:check`, mais le compilateur ne la met pas dans
+   * le cours publié. Retirer le champ (ou écrire `available`) suffit à la
+   * réactiver ; absent, l'unité est disponible.
+   */
+  status: z.enum(['available', 'archived']).optional(),
   /** Nature du contenu ; héritée de la piste par le compilateur. */
   kind: lessonKindSchema,
   lessons: z.array(lessonSchema).min(1),

@@ -271,8 +271,27 @@ function buildCourse(courseId: string): Course {
   const parsed = courseSchema.safeParse(assembled)
   if (!parsed.success) fail(courseFile, formatIssues(parsed.error))
 
+  // Les unités archivées sont contrôlées comme les autres, puis retirées du
+  // cours publié : l'application ne les voit pas, le dépôt les garde prêtes.
   checkCoherence(parsed.data, dir)
-  return parsed.data
+  return withoutArchivedUnits(parsed.data)
+}
+
+/**
+ * Le cours tel que l'application le reçoit : sans ses unités archivées (voir
+ * `unitSchema.status`). Une section de parcours qui n'aurait plus d'unité
+ * disparaît avec elles ; une piste de bibliothèque reste, vide, comme une
+ * piste en préparation.
+ */
+function withoutArchivedUnits(course: Course): Course {
+  const keep = (units: Unit[]) => units.filter((unit) => unit.status !== 'archived')
+  if (course.layout === 'library') {
+    return { ...course, tracks: course.tracks.map((track) => ({ ...track, units: keep(track.units) })) }
+  }
+  return {
+    ...course,
+    sections: course.sections.map((section) => ({ ...section, units: keep(section.units) })).filter((section) => section.units.length > 0),
+  }
 }
 
 /** Règles qui dépassent la validation fichier par fichier. */

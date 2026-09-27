@@ -88,7 +88,7 @@ export function WorkPlan({
         onClick={() => setActive(node.id)}
         aria-label="Case vide"
         aria-pressed={isActive}
-        className={`block min-h-10 w-full rounded-lg border-2 border-dashed text-center text-xs font-black transition-colors ${
+        className={`flex min-h-10 w-full max-w-60 items-center justify-center rounded-lg border-2 border-dashed px-3 py-2 text-center text-xs font-black transition-colors ${
           isActive ? 'border-violet bg-violet/12 text-violet-deep' : 'border-line bg-cream/60 text-ink-faint'
         }`}
       >
