@@ -5,15 +5,17 @@ import { RichGaps } from '@/components/session/RuleNote'
 
 /**
  * Le plan d'une partie d'une œuvre, dessiné comme un schéma de manuel : des
- * bulles pour les blocs (leur emplacement et la question à laquelle ils
- * répondent), des cases pour les chapitres, et des flèches entre elles.
+ * bulles pour les grands blocs (leur emplacement et la question à laquelle
+ * ils répondent), des cases pour les chapitres, et des flèches entre elles.
  *
  * Les relations (voir `workRelationSchema`) ne s'écrivent pas : elles se
- * voient. Des parties de même plan (`declinaison`) partent en éventail de la
- * bulle de leur bloc, côte à côte ; toutes les autres s'enchaînent par une
- * simple flèche ; un lien entre parties éloignées (la reprise d'une formule
- * du chapitre 3 au chapitre 6) est une flèche en pointillé qui les joint par
- * la droite.
+ * voient. Des parties de même plan (`declinaison`) partent en éventail de ce
+ * qui les précède, côte à côte, et s'en vont ensemble : leurs traits se
+ * rejoignent sur une barre, d'où repart une seule flèche. Toutes les autres
+ * relations sont une simple flèche. Un lien entre parties éloignées (la
+ * reprise d'une formule du chapitre 3 au chapitre 6) est une flèche en
+ * pointillé qui les joint par la droite. Ce qui découle d'un chapitre et
+ * mène à la suite (`outcome`) s'intercale sur la flèche qui en part.
  *
  * Les cases se placent en CSS (grille ou colonne) ; les flèches sont
  * tracées ensuite, dans un calque SVG unique, d'après la position mesurée
@@ -21,8 +23,8 @@ import { RichGaps } from '@/components/session/RuleNote'
  * fenêtre redimensionnée).
  *
  * Deux usages :
- *   `map`  : la carte ; chaque case ne montre que son emplacement, son titre
- *            et sa glose (`summary`), et se déplie au toucher sur ses thèses ;
+ *   `map`  : la carte ; chaque case montre son titre, ce qu'elle affirme et
+ *            sa précision, et se déplie au toucher sur ses thèses ;
  *   `plan` : le plan à trous ; les thèses sont toujours affichées, par
  *            `renderPoint` (une case vide, une thèse replacée…).
  */
@@ -54,16 +56,35 @@ export function ThesisText({ point }: { point: GrammarPoint }) {
   )
 }
 
-/** Où s'enregistrent les cases et les bulles, pour que le calque des flèches les retrouve. */
-type Register = (id: string, part: 'box' | 'head') => (element: HTMLElement | null) => void
+/**
+ * Où s'enregistrent les éléments que les flèches relient : `box` une case ou
+ * un bloc, `head` la bulle d'un bloc, `out` ce qui découle d'un chapitre.
+ */
+type Part = 'box' | 'head' | 'out'
+type Register = (id: string, part: Part) => (element: HTMLElement | null) => void
 const RegisterContext = createContext<Register>(() => () => {})
+
+interface Rect {
+  left: number
+  right: number
+  top: number
+  bottom: number
+}
+
+interface Stroke {
+  d: string
+  dashed?: boolean
+  /** Sans pointe : un trait qui ne fait que rejoindre une barre. */
+  plain?: boolean
+}
 
 /** Le plan d'une partie, sans son propre en-tête : c'est l'écran qui le titre. */
 export function WorkTree({ root, ...props }: TreeProps & { root: WorkNode }) {
   const container = useRef<HTMLDivElement>(null)
   const elements = useRef(new Map<string, HTMLElement>())
-  const [paths, setPaths] = useState<{ d: string; dashed: boolean }[]>([])
+  const [strokes, setStrokes] = useState<Stroke[]>([])
   const marker = useId().replace(/:/g, '')
+  const { work, layout } = props
 
   const register = useCallback<Register>(
     (id, part) => (element) => {
@@ -73,10 +94,8 @@ export function WorkTree({ root, ...props }: TreeProps & { root: WorkNode }) {
     [],
   )
 
-  const farLinks = props.work.links.filter((link) => {
-    const ids = new Set(nodesOf(root).map((node) => node.id))
-    return ids.has(link.from) && ids.has(link.to) && !isDrawn(props.work, link)
-  })
+  const ids = new Set(nodesOf(root).map((node) => node.id))
+  const hasFarLinks = work.links.some((link) => ids.has(link.from) && ids.has(link.to) && !isDrawn(work, link))
 
   const measure = useCallback(() => {
     const box = container.current
@@ -88,24 +107,22 @@ export function WorkTree({ root, ...props }: TreeProps & { root: WorkNode }) {
       const r = element.getBoundingClientRect()
       return { left: r.left - origin.left, right: r.right - origin.left, top: r.top - origin.top, bottom: r.bottom - origin.top }
     }
-    const next: { d: string; dashed: boolean }[] = []
-    for (const edge of edgesOf(root)) {
-      const from = rectOf(edge.from)
-      const to = rectOf(edge.to)
-      if (!from || !to) continue
-      // Sur téléphone, l'éventail descend le long d'un rail à gauche des cases empilées.
-      const d = edge.fan && props.layout === 'vertical' ? railPath(from, to) : arrowPath(from, to, edge.fan)
-      next.push({ d, dashed: false })
+    const next: Stroke[] = []
+    for (const edge of edgesOf(root, layout)) {
+      const sources = edge.from.keys.map(rectOf).filter((rect): rect is Rect => rect !== null)
+      const targets = edge.to.map(rectOf).filter((rect): rect is Rect => rect !== null)
+      if (sources.length === 0 || targets.length === 0) continue
+      next.push(...connect(sources, targets, edge.from.shape, layout))
     }
-    for (const link of farLinks) {
+    const inside = new Set(nodesOf(root).map((node) => node.id))
+    for (const link of work.links) {
+      if (!inside.has(link.from) || !inside.has(link.to) || isDrawn(work, link)) continue
       const from = rectOf(`box:${link.from}`)
       const to = rectOf(`box:${link.to}`)
       if (from && to) next.push({ d: farPath(from, to, origin.width), dashed: true })
     }
-    setPaths(next)
-    // `farLinks` se recalcule à chaque rendu, mais ne dépend que de `root` et `work`.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [root, props.work, props.layout])
+    setStrokes(next)
+  }, [root, work, layout])
 
   useLayoutEffect(() => {
     measure()
@@ -118,7 +135,7 @@ export function WorkTree({ root, ...props }: TreeProps & { root: WorkNode }) {
 
   return (
     <RegisterContext.Provider value={register}>
-      <div ref={container} className={`relative ${farLinks.length > 0 ? 'pr-6' : ''}`}>
+      <div ref={container} className={`relative ${hasFarLinks ? 'pr-6' : ''}`}>
         {isLeaf(root) ? <LeafBox node={root} {...props} /> : <Children node={root} {...props} />}
         <svg className="pointer-events-none absolute inset-0 h-full w-full overflow-visible" aria-hidden>
           <defs>
@@ -126,37 +143,23 @@ export function WorkTree({ root, ...props }: TreeProps & { root: WorkNode }) {
               <path d="M0 0 L10 5 L0 10 z" className="fill-violet" />
             </marker>
           </defs>
-          {paths.map((path, index) => (
+          {strokes.map((stroke, index) => (
             <path
               key={index}
-              d={path.d}
+              d={stroke.d}
               fill="none"
               className="stroke-violet"
-              strokeWidth={path.dashed ? 1.8 : 2}
-              strokeDasharray={path.dashed ? '5 4' : undefined}
+              strokeWidth={stroke.dashed ? 1.8 : 2}
+              strokeDasharray={stroke.dashed ? '5 4' : undefined}
               strokeLinejoin="round"
-              markerEnd={`url(#${marker})`}
+              strokeLinecap="round"
+              markerEnd={stroke.plain ? undefined : `url(#${marker})`}
             />
           ))}
         </svg>
       </div>
     </RegisterContext.Provider>
   )
-}
-
-interface Rect {
-  left: number
-  right: number
-  top: number
-  bottom: number
-}
-
-/** Une flèche à tracer, entre deux éléments enregistrés (`box:` une case ou un bloc, `head:` une bulle). */
-interface Edge {
-  from: string
-  to: string
-  /** Éventail depuis une bulle : la flèche descend, puis rejoint sa case à angle droit. */
-  fan: boolean
 }
 
 /** Des parties de même plan : toutes, après la première, se déclinent de la précédente. */
@@ -167,6 +170,44 @@ function parallel(node: WorkNode): boolean {
 /** Un bloc a sa bulle s'il pose une question ; sinon il n'est qu'un regroupement de cases. */
 function hasHead(node: WorkNode): boolean {
   return !isLeaf(node) && node.question !== undefined
+}
+
+/**
+ * Des cases côte à côte : sur ordinateur seulement, tout groupe d'au plus
+ * quatre chapitres. Sur téléphone, tout s'empile : trois cases de front y
+ * seraient illisibles, et deux par rangée forcent les flèches à en traverser.
+ */
+function rowOf(node: WorkNode, layout: WorkTreeLayout): number | null {
+  const count = node.parts.length
+  if (layout !== 'chart' || count < 2 || count > 4 || !node.parts.every(isLeaf)) return null
+  return count
+}
+
+/** Parties de même plan empilées sur téléphone, suspendues au rail de leur éventail. */
+function railed(node: WorkNode, layout: WorkTreeLayout): boolean {
+  return layout === 'vertical' && parallel(node)
+}
+
+/**
+ * D'où part une flèche qui quitte une partie :
+ *   `single`  : une seule case (ou ce qui découle d'un chapitre) ;
+ *   `collect` : plusieurs cases côte à côte, dont les traits se rejoignent
+ *               sur une barre avant de repartir en une flèche ;
+ *   `rail`    : plusieurs cases empilées sur téléphone, dont le rail se
+ *               prolonge jusqu'à la suite.
+ */
+interface Exit {
+  shape: 'single' | 'collect' | 'rail'
+  keys: string[]
+}
+
+function exitOf(node: WorkNode, layout: WorkTreeLayout): Exit {
+  if (node.outcome) return { shape: 'single', keys: [`out:${node.id}`] }
+  if (isLeaf(node)) return { shape: 'single', keys: [`box:${node.id}`] }
+  const boxes = node.parts.map((part) => `box:${part.id}`)
+  if (railed(node, layout)) return { shape: 'rail', keys: boxes }
+  if (parallel(node) || rowOf(node, layout)) return { shape: 'collect', keys: boxes }
+  return exitOf(node.parts[node.parts.length - 1]!, layout)
 }
 
 /**
@@ -181,25 +222,34 @@ function entriesOf(node: WorkNode): string[] {
   return parallel(node) ? node.parts.flatMap(entriesOf) : entriesOf(node.parts[0]!)
 }
 
+interface Edge {
+  from: Exit
+  to: string[]
+}
+
 /**
  * Les flèches d'un sous-arbre. Une bulle mène à ses parties (toutes si elles
  * sont de même plan, la première sinon) ; entre parties voisines, une flèche
- * pour toute relation autre que de même plan. La racine n'a pas de bulle (son
- * titre est celui de l'écran).
+ * pour toute relation autre que de même plan ; d'un chapitre à ce qui en
+ * découle, une flèche aussi. La racine n'a pas de bulle (son titre est celui
+ * de l'écran).
  */
-function edgesOf(root: WorkNode): Edge[] {
+function edgesOf(root: WorkNode, layout: WorkTreeLayout): Edge[] {
   const edges: Edge[] = []
-  const link = (from: string, targets: string[]) => {
-    for (const to of targets) edges.push({ from, to, fan: targets.length > 1 })
-  }
   const visit = (node: WorkNode, isRoot: boolean) => {
+    if (node.outcome) edges.push({ from: { shape: 'single', keys: [`box:${node.id}`] }, to: [`out:${node.id}`] })
     const parts = node.parts
     if (parts.length === 0) return
     if (!isRoot && hasHead(node)) {
-      link(`head:${node.id}`, parallel(node) ? parts.flatMap(entriesOf) : entriesOf(parts[0]!))
+      edges.push({
+        from: { shape: 'single', keys: [`head:${node.id}`] },
+        to: parallel(node) ? parts.flatMap(entriesOf) : entriesOf(parts[0]!),
+      })
     }
     parts.forEach((part, index) => {
-      if (index > 0 && part.rel && part.rel !== 'declinaison') link(`box:${parts[index - 1]!.id}`, entriesOf(part))
+      if (index > 0 && part.rel && part.rel !== 'declinaison') {
+        edges.push({ from: exitOf(parts[index - 1]!, layout), to: entriesOf(part) })
+      }
       visit(part, false)
     })
   }
@@ -207,58 +257,70 @@ function edgesOf(root: WorkNode): Edge[] {
   return edges
 }
 
-const GAP_BEFORE_HEAD = 3
-
-/** Une flèche entre deux éléments : vers le bas si la cible est dessous, vers la droite si elle est à côté. */
-function arrowPath(a: Rect, b: Rect, fan: boolean): string {
-  const ax = (a.left + a.right) / 2
-  const bx = (b.left + b.right) / 2
-  if (b.top >= a.bottom - 1) {
-    const end = b.top - GAP_BEFORE_HEAD
-    if (Math.abs(ax - bx) < 2) return `M${ax} ${a.bottom} V${end}`
-    const turn = fan ? a.bottom + Math.max(8, (end - a.bottom) / 2) : (a.bottom + end) / 2
-    return `M${ax} ${a.bottom} V${turn} H${bx} V${end}`
-  }
-  if (b.left >= a.right - 1) {
-    const y = (Math.max(a.top, b.top) + Math.min(a.bottom, b.bottom)) / 2
-    return `M${a.right} ${y} H${b.left - GAP_BEFORE_HEAD}`
-  }
-  const ay = (a.top + a.bottom) / 2
-  const by = (b.top + b.bottom) / 2
-  return `M${ax} ${ay} L${bx} ${by}`
-}
-
+/** Espace laissé entre la pointe d'une flèche et ce qu'elle vise. */
+const TIP_GAP = 3
 /** Distance entre le rail d'un éventail et les cases qu'il dessert, sur téléphone. */
 const RAIL_OFFSET = 14
 
-/**
- * Éventail sur téléphone : les parties de même plan s'empilent en retrait, et
- * la flèche descend d'un rail vertical avant d'entrer dans chacune par la
- * gauche. Un éventail à angle droit, lui, traverserait les cases du dessus.
- */
-function railPath(head: Rect, b: Rect): string {
-  const x = b.left - RAIL_OFFSET
-  const y = (b.top + b.bottom) / 2
-  return `M${x} ${head.bottom} V${y} H${b.left - GAP_BEFORE_HEAD}`
+const centerX = (rect: Rect) => (rect.left + rect.right) / 2
+const centerY = (rect: Rect) => (rect.top + rect.bottom) / 2
+
+/** Les traits qui relient des sources à des cibles, selon la forme du départ. */
+function connect(sources: Rect[], targets: Rect[], shape: Exit['shape'], layout: WorkTreeLayout): Stroke[] {
+  // Deux cases côte à côte : une flèche horizontale de l'une à l'autre.
+  const [source] = sources
+  const [target] = targets
+  if (shape === 'single' && targets.length === 1 && source && target && target.left >= source.right - 1 && target.top < source.bottom) {
+    const y = (Math.max(source.top, target.top) + Math.min(source.bottom, target.bottom)) / 2
+    return [{ d: `M${source.right} ${y} H${target.left - TIP_GAP}` }]
+  }
+
+  const top = Math.min(...targets.map((rect) => rect.top))
+
+  // Téléphone : les cases empilées de même plan partent par leur rail, prolongé.
+  if (shape === 'rail') {
+    const x = Math.min(...sources.map((rect) => rect.left)) - RAIL_OFFSET
+    const last = sources.reduce((a, b) => (b.bottom > a.bottom ? b : a))
+    const bottom = Math.max(...sources.map((rect) => rect.bottom))
+    const turn = (bottom + top) / 2
+    return [
+      { d: `M${x} ${centerY(last)} V${turn}`, plain: true },
+      ...targets.map((rect) => ({ d: `M${x} ${turn} H${centerX(rect)} V${rect.top - TIP_GAP}` })),
+    ]
+  }
+
+  // Téléphone : un éventail descend d'un rail à gauche des cases qu'il dessert.
+  if (layout === 'vertical' && targets.length > 1 && source) {
+    const x = Math.min(...targets.map((rect) => rect.left)) - RAIL_OFFSET
+    return targets.map((rect) => ({ d: `M${x} ${source.bottom} V${centerY(rect)} H${rect.left - TIP_GAP}` }))
+  }
+
+  // Sinon : les sources descendent sur une barre (si elles sont plusieurs),
+  // d'où partent les flèches vers les cibles, à angle droit.
+  const bottom = Math.max(...sources.map((rect) => rect.bottom))
+  const bar = bottom + Math.max(8, (top - bottom) / 2)
+  const strokes: Stroke[] = []
+  if (sources.length > 1) {
+    const xs = [...sources.map(centerX), ...targets.map(centerX)]
+    for (const rect of sources) strokes.push({ d: `M${centerX(rect)} ${rect.bottom} V${bar}`, plain: true })
+    strokes.push({ d: `M${Math.min(...xs)} ${bar} H${Math.max(...xs)}`, plain: true })
+    for (const rect of targets) strokes.push({ d: `M${centerX(rect)} ${bar} V${rect.top - TIP_GAP}` })
+    return strokes
+  }
+  const x = centerX(source!)
+  for (const rect of targets) {
+    const tx = centerX(rect)
+    strokes.push({
+      d: Math.abs(tx - x) < 2 ? `M${x} ${source!.bottom} V${rect.top - TIP_GAP}` : `M${x} ${source!.bottom} V${bar} H${tx} V${rect.top - TIP_GAP}`,
+    })
+  }
+  return strokes
 }
 
 /** Un lien éloigné : une courbe qui sort à droite d'une case et rentre à droite de l'autre. */
 function farPath(a: Rect, b: Rect, width: number): string {
-  const ay = (a.top + a.bottom) / 2
-  const by = (b.top + b.bottom) / 2
   const out = Math.min(width - 4, Math.max(a.right, b.right) + 20)
-  return `M${a.right} ${ay} C${out} ${ay}, ${out} ${by}, ${b.right + GAP_BEFORE_HEAD} ${by}`
-}
-
-/**
- * Des cases côte à côte : sur ordinateur seulement, tout groupe d'au plus
- * quatre chapitres. Sur téléphone, tout s'empile : trois cases de front y
- * seraient illisibles, et deux par rangée forcent les flèches à en traverser.
- */
-function rowOf(node: WorkNode, layout: WorkTreeLayout): number | null {
-  const count = node.parts.length
-  if (layout !== 'chart' || count < 2 || count > 4 || !node.parts.every(isLeaf)) return null
-  return count
+  return `M${a.right} ${centerY(a)} C${out} ${centerY(a)}, ${out} ${centerY(b)}, ${b.right + TIP_GAP} ${centerY(b)}`
 }
 
 function Children(props: TreeProps & { node: WorkNode }) {
@@ -278,20 +340,37 @@ function Children(props: TreeProps & { node: WorkNode }) {
     )
   }
 
-  // Sur téléphone, des parties de même plan s'empilent en retrait, sous le rail de leur éventail.
-  const railed = layout === 'vertical' && parallel(node)
   return (
-    <div className={`flex w-full flex-col items-center ${railed ? 'gap-3 pl-7' : 'gap-7'}`}>
-      {node.parts.map((part) =>
-        isLeaf(part) ? (
-          <div key={part.id} className="w-full max-w-md">
-            <LeafBox {...props} node={part} />
-          </div>
-        ) : (
-          <GroupView key={part.id} {...props} node={part} />
-        ),
-      )}
+    <div className={`flex w-full flex-col items-center ${railed(node, layout) ? 'gap-3 pl-7' : 'gap-7'}`}>
+      {node.parts.map((part) => (
+        <PartInColumn key={part.id} {...props} node={part} />
+      ))}
     </div>
+  )
+}
+
+/** Une partie dans une colonne, suivie de ce qui en découle, s'il y a lieu. */
+function PartInColumn(props: TreeProps & { node: WorkNode }) {
+  const { node } = props
+  const register = useContext(RegisterContext)
+  const part = isLeaf(node) ? (
+    <div className="w-full max-w-md">
+      <LeafBox {...props} />
+    </div>
+  ) : (
+    <GroupView {...props} />
+  )
+  if (!node.outcome) return part
+  return (
+    <>
+      {part}
+      <p
+        ref={register(node.id, 'out')}
+        className="max-w-sm rounded-xl border-2 border-dashed border-violet/40 px-3 py-1.5 text-center text-sm leading-snug text-ink-soft italic"
+      >
+        {node.outcome}
+      </p>
+    </>
   )
 }
 
@@ -321,31 +400,30 @@ function GroupView(props: TreeProps & { node: WorkNode }) {
 }
 
 /**
- * Une case de chapitre, comme dans un schéma de manuel : l'emplacement, ce
- * que le chapitre affirme (`summary`), sa précision en italique (`gloss`).
- * Dépliée, elle montre le titre de l'auteur et les thèses. En plan à trous,
- * l'affirmation laisse place au titre de l'auteur, qui ne donne pas la
- * réponse, et les thèses restent affichées.
+ * Une case de chapitre, comme dans un schéma de manuel : en tête, en gras,
+ * l'emplacement et le titre de l'auteur ; puis ce que le chapitre affirme
+ * (`summary`), et sa précision en italique (`gloss`). Dépliée, elle montre
+ * les thèses. En plan à trous, l'affirmation et sa précision s'effacent
+ * (elles donneraient la réponse) et les thèses restent affichées.
  */
 function LeafBox({ node, mode = 'map', renderPoint, leafBorder }: TreeProps & { node: WorkNode }) {
   const register = useContext(RegisterContext)
   const [open, setOpen] = useState(false)
   const border = leafBorder?.(node) ?? 'border-violet/40'
   const showTheses = mode === 'plan' || open
-  const headline = mode === 'map' ? (node.summary ?? node.title) : node.title
 
   const content = (
     <>
-      <p className="text-xs leading-snug font-black text-violet-deep">{shortLabel(node.label)}</p>
-      {headline && <p className="mt-0.5 text-sm leading-snug font-extrabold text-ink">{headline}</p>}
-      {node.gloss && mode === 'map' && (
+      <p className="text-sm leading-snug font-black">
+        <span className="text-violet-deep">{shortLabel(node.label)}</span>
+        {node.title && <span className="text-ink"> · {node.title}</span>}
+      </p>
+      {mode === 'map' && node.summary && <p className="mt-1 text-sm leading-snug text-ink">{node.summary}</p>}
+      {mode === 'map' && node.gloss && (
         <p className="mt-0.5 text-sm leading-snug text-ink-soft italic">= {node.gloss}</p>
       )}
-      {open && mode === 'map' && node.summary && node.title && (
-        <p className="mt-2 text-xs text-ink-faint">Titre du chapitre : «&nbsp;{node.title}&nbsp;»</p>
-      )}
       {showTheses && (
-        <ul className="mt-2 flex flex-col gap-1.5 border-t border-line pt-2 text-left">
+        <ul className="mt-2 flex flex-col gap-1.5 border-t border-line pt-2">
           {node.points.map((point) => (
             <li key={point.id} className="text-sm leading-snug text-ink">
               {renderPoint ? renderPoint(point) : <ThesisText point={point} />}

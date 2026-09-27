@@ -254,6 +254,12 @@ export interface WorkNode {
   summary?: string
   /** Ce qui précise l'affirmation, sous elle, en italique : « = le peuple ne peut y renoncer ». */
   gloss?: string
+  /**
+   * Ce qui découle de la partie et mène à la suite, affiché sur la flèche qui
+   * en part (après le chapitre 6 : « mais le peuple ne voit pas toujours son
+   * bien : il lui faut un guide »). Jamais interrogé.
+   */
+  outcome?: string
   rel?: WorkRelation
   points: GrammarPoint[]
   parts: WorkNode[]
@@ -266,6 +272,7 @@ export const workNodeSchema: z.ZodType<WorkNode, unknown> = z.object({
   question: z.string().min(1).optional(),
   summary: z.string().min(1).optional(),
   gloss: z.string().min(1).optional(),
+  outcome: z.string().min(1).optional(),
   rel: workRelationSchema.optional(),
   points: z.array(grammarPointSchema).default([]),
   parts: z.array(z.lazy(() => workNodeSchema)).default([]),

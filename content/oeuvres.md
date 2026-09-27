@@ -64,8 +64,9 @@ Chaque partie (`parts`) porte :
 | `label` | emplacement : « Livre II », « chap. 1-5 », « II, 3 » |
 | `title` | titre donné par l'auteur, tel quel (facultatif) |
 | `question` | question à laquelle répond un **grand** bloc, dans sa bulle : **affichée, jamais interrogée** |
-| `summary` | ce que la case d'un chapitre affirme, en réponse à la question de son bloc (« La souveraineté est inaliénable ») |
+| `summary` | ce que la case d'un chapitre affirme, en réponse à la question de son bloc (« La volonté générale ne peut errer »), quand le titre de l'auteur ne le dit pas déjà |
 | `gloss` | ce qui précise l'affirmation, en italique sous elle (« = le peuple ne peut ni la céder ni se faire représenter ») |
+| `outcome` | ce qui découle d'une partie et mène à la suite, affiché dans un encadré pointillé sur la flèche qui en part (« Mais le peuple ne voit pas toujours son bien : il lui faut un guide ») |
 | `rel` | relation avec la partie qui la précède au même niveau (jamais sur la première) |
 | `points` | thèses de la partie, phrases trouées (même format qu'un point de grammaire) |
 | `parts` | sous-parties |
@@ -82,16 +83,21 @@ sinon rien à replacer dans le plan à trous.
   (1 à 3 de même plan, 4 et 5, 8 à 10) n'a pas de question, donc pas de
   bulle : des questions emboîtées qui ne se répondent pas brouillent la
   progression au lieu de la montrer.
-- **Chaque case répond à la question de son bloc**, par une affirmation
-  claire, en mots simples : « La souveraineté est indivisible », pas le titre
-  de l'auteur, qui n'est souvent qu'un intitulé (« Si la volonté générale
-  peut errer ») ; le titre reste lisible en dépliant la case. Relire les
-  cases d'un bloc à la suite de sa question doit donner le raisonnement de
-  l'auteur.
+- **Chaque case répond à la question de son bloc.** Elle a pour titre, en
+  gras, l'emplacement et le titre de l'auteur (« chap. 3 · Si la volonté
+  générale peut errer ») ; quand ce titre n'est qu'un intitulé ou une
+  question, `summary` dit en mots simples ce que le chapitre affirme (« La
+  volonté générale ne peut errer »). Quand le titre l'affirme déjà (« Que la
+  souveraineté est inaliénable »), pas de `summary` : la case se répéterait.
+  Relire les cases d'un bloc à la suite de sa question doit donner le
+  raisonnement de l'auteur.
+- **Ce qui fait passer d'une partie à la suivante** (le problème que pose un
+  chapitre et que résout le bloc suivant) va dans `outcome`, sur la flèche,
+  pas dans la précision de la case : il n'appartient à aucun des deux.
 - **La précision (`gloss`) tient en une ligne**, sans jargon ni citation :
   ce qu'on écrirait derrière un « = » dans un schéma.
 
-`content:check` signale un chapitre sans `summary`.
+`content:check` signale un chapitre qui n'a ni `summary` ni `gloss`.
 
 **Emplacements** : « II, 3 » pour un chapitre, « chap. 1-6 » pour un bloc.
 La carte, qui ne montre qu'un livre, écrit d'elle-même « chap. 3 » ; les
