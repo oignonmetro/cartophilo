@@ -368,3 +368,20 @@ describe('philosophyContentRemarks', () => {
     expect(philosophyContentRemarks('la-vie', lessons('La ___.', notes))).toEqual([])
   })
 })
+
+describe('philosophyContentRemarks, longueur des réponses', () => {
+  const lessons = (sentence: string, answer: string) => [{ id: 'l1', points: [point({ sentence, answer })] }]
+
+  it('signale une réponse longue hors citation', () => {
+    expect(
+      philosophyContentRemarks('hors-programme', lessons('Cette affirmation se trouve ___.', 'juste avant l\'introduction du principe cardinal sur l\'injustice (47e-48a)')),
+    ).toHaveLength(1)
+  })
+
+  it('laisse passer une réponse longue citée entre « », même imbriqués', () => {
+    const sentence = '« comme pour dire : « Parmi vous, humains, celui-là est le plus savant qui ___. » »'
+    expect(
+      philosophyContentRemarks('hors-programme', lessons(sentence, 'a reconnu que réellement il ne vaut rien pour ce qui est du savoir')),
+    ).toEqual([])
+  })
+})

@@ -234,9 +234,12 @@ la phrase dans une copie**, et c'est le commentaire qui dit ce qui compte.
    après « la vertu intellectuelle ») ; s'il compte, il partage sa carte avec
    un autre trou (« objective ; subjectif »). Pas de trou sur une remarque de
    méthode (« un exposé rigoureux outrepasse notre propos »).
-5. **Une idée, un trou** : ne pas tester deux fois la même idée (« humaines »
-   puis « des actes humains » ; une formule entière et, ailleurs, ses deux
-   moitiés).
+5. **Pas de doublon parfait** : jamais deux cartes identiques, ni deux trous
+   qui ne diffèrent que par un mot sans rien apprendre de plus (« humaines »
+   puis « des actes humains »). En revanche, **garder** les cartes qui se
+   recoupent pour varier l'information (trous différents sur la même phrase)
+   ou pour apprendre une citation pas à pas : d'abord la partie A, puis A+B,
+   puis A+B+C. Cette progression est voulue.
 6. **Aucune thèse sans carte** : relire chaque fragment et vérifier que ce
    qu'il affirme d'essentiel a sa carte (« celui qui médite ne requiert aucun
    appui de ce genre »).

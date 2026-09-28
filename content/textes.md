@@ -85,7 +85,9 @@ lessons:
   traduit la vertu qui reste » : « la vie la plus heureuse »), puis ce que le
   commentaire désigne comme décisif, fût-ce une modalité (« à titre
   secondaire », cœur du passage selon Bodéüs) ; jamais une remarque de
-  méthode, un mot que le contexte fait deviner, ni deux fois la même idée.
+  méthode, un mot que le contexte fait deviner, ni une carte en double. Des
+  cartes qui se recoupent restent utiles quand elles varient les trous ou
+  font apprendre une citation pas à pas (A, puis A+B, puis A+B+C).
   Règles détaillées dans la skill `unite-texte`.
 - **Rappels** : jamais d'italique à l'intérieur d'un gras
   (`**L'*Éthique* dit…**`) ; l'analyseur ne sait pas les imbriquer et affiche

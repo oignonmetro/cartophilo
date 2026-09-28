@@ -471,6 +471,12 @@ const ENGLISH_TITLE_WITH_YEAR = /\*[^*]+\*(?=,? \(?\d{4}\b)/gu
 /** Une réponse au-delà de cette longueur sent la paraphrase, pas le terme ou la référence précise. */
 const ANSWER_WORD_LIMIT = 8
 
+/** Le premier trou tombe-t-il à l'intérieur de guillemets français, au besoin imbriqués ? */
+function gapIsQuoted(sentence: string): boolean {
+  const before = sentence.slice(0, Math.max(0, sentence.indexOf(GAP)))
+  return (before.match(/«/g)?.length ?? 0) > (before.match(/»/g)?.length ?? 0)
+}
+
 interface PhilosophyLesson {
   id: string
   notes?: string
@@ -533,9 +539,11 @@ export function philosophyContentRemarks(learning: string, lessons: readonly Phi
       }
 
       // Une leçon de texte fait citer des phrases entières : une réponse
-      // longue y est le propre de la carte-citation, pas une paraphrase.
+      // longue y est le propre de la carte-citation, pas une paraphrase. De
+      // même, ailleurs, pour un trou pris entre « » : la réponse est le texte
+      // cité mot pour mot.
       const wordCount = point.answer.trim().split(/\s+/).filter(Boolean).length
-      if (wordCount > ANSWER_WORD_LIMIT && !lesson.passage) {
+      if (wordCount > ANSWER_WORD_LIMIT && !lesson.passage && !gapIsQuoted(point.sentence)) {
         remarks.push(`${where} : réponse de ${wordCount} mots (« ${point.answer} ») ; ça sent la paraphrase plutôt qu'un terme, un nom ou une référence précise`)
       }
     }
