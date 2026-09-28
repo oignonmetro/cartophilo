@@ -422,8 +422,12 @@ const SOURCE_MATERIALITY_PATTERNS: RegExp[] = [
   /\b(?:dans|selon) cet article\b/i,
 ]
 
-/** Un point de localisation tourné en question plutôt qu'en phrase fluide. */
-const LOCALISATION_QUESTION_PATTERNS: RegExp[] = [/\boù (?:se trouve|se situe|situer|placer)\b/i, /^où\b/i]
+/**
+ * Un point de localisation tourné en question plutôt qu'en phrase fluide.
+ * « là où se trouve » n'est pas une question : c'est la tournure d'une
+ * citation (« Il y a vie là où se trouve… », *De l'âme*, II, 2).
+ */
+const LOCALISATION_QUESTION_PATTERNS: RegExp[] = [/(?<!\blà )\boù (?:se trouve|se situe|situer|placer)\b/i, /^où\b/i]
 
 /**
  * Anglais laissé par erreur dans un cours philosophique, dont les auteurs
@@ -459,6 +463,10 @@ const STRAY_ENGLISH_TERMS = [
 // l'article anglais.
 const ENGLISH_FUNCTION_WORDS_IN_MARKUP =
   /(?:\*|`)[^*`]*(?<!\p{L})(?:the|and|of|is|are|with|which|that)(?!\p{L})[^*`]*(?:\*|`)/iu
+// Le titre d'un ouvrage anglais cité en référence, suivi de son année
+// (`*Passions and Persuasion in Aristotle's Rhetoric*, 2015`) : l'italique y
+// est de rigueur, et l'anglais légitime. Retiré avant le contrôle précédent.
+const ENGLISH_TITLE_WITH_YEAR = /\*[^*]+\*(?=,? \(?\d{4}\b)/gu
 
 /** Une réponse au-delà de cette longueur sent la paraphrase, pas le terme ou la référence précise. */
 const ANSWER_WORD_LIMIT = 8
@@ -495,7 +503,7 @@ export function philosophyContentRemarks(learning: string, lessons: readonly Phi
     const found = STRAY_ENGLISH_TERMS.find((term) => new RegExp(`\\b${term}\\b`).test(text))
     if (found) {
       remarks.push(`${where} : ${field} contient « ${found} », de l'anglais déjà rencontré à tort ici ; traduisez ou supprimez`)
-    } else if (ENGLISH_FUNCTION_WORDS_IN_MARKUP.test(text)) {
+    } else if (ENGLISH_FUNCTION_WORDS_IN_MARKUP.test(text.replace(ENGLISH_TITLE_WITH_YEAR, ''))) {
       remarks.push(`${where} : ${field} porte un mot-outil anglais à l'intérieur d'un marqueur \`*italique*\` ou \`forme\` ; ces marqueurs ne servent jamais à une glose anglaise`)
     }
   }

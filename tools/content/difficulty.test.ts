@@ -7,6 +7,7 @@ import {
   initialSound,
   insertedToken,
   phraseNumber,
+  philosophyContentRemarks,
   vocabularyScopeRemarks,
 } from './difficulty.ts'
 import type { ConjugationVerb, GrammarPoint } from '../../src/content/schema.ts'
@@ -340,5 +341,30 @@ describe('vocabularyScopeRemarks', () => {
         { where: 'point "p1"', text: 'Всё что угодно.' },
       ]),
     ).toEqual([])
+  })
+})
+
+describe('philosophyContentRemarks', () => {
+  const lessons = (sentence: string, notes?: string) => [
+    { id: 'l1', notes, points: [point({ sentence, answer: 'x' })] },
+  ]
+
+  it('signale une localisation tournée en question', () => {
+    expect(philosophyContentRemarks('la-vie', lessons("Où se trouve la définition de l'âme ? ___"))).toHaveLength(1)
+  })
+
+  it('laisse passer « là où se trouve » dans une citation', () => {
+    expect(
+      philosophyContentRemarks('la-vie', lessons("« Il y a vie là où se trouve ne serait-ce qu'une seule quelconque des ___. »")),
+    ).toEqual([])
+  })
+
+  it('signale une glose anglaise en italique', () => {
+    expect(philosophyContentRemarks('la-vie', lessons('La ___ (*the highest good*).'))).toHaveLength(1)
+  })
+
+  it('laisse passer le titre anglais d\'un ouvrage cité avec son année', () => {
+    const notes = "Selon Jamie Dow (*Passions and Persuasion in Aristotle's Rhetoric*, 2015), les émotions *sont* des affections."
+    expect(philosophyContentRemarks('la-vie', lessons('La ___.', notes))).toEqual([])
   })
 })
