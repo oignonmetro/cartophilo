@@ -1,0 +1,442 @@
+# Unité classique (voir content/philosophie.md) tirée de l'exposé d'Ulysse
+# Chaintreuil, « Aristote et la sensibilité : une faculté fondamentale »
+# (scan agrégation, p. 101-148), dans l'ordre de l'exposé ; citations dans les
+# traductions qu'il donne (Bodéüs pour le De l'âme, Morel pour les Parva
+# naturalia, souvent « trad. modifiée »).
+#
+# Repères de la source laissés hors des cartes parce que douteux :
+# Seconds Analytiques « II, 18 » (81a38-39 est en I, 18) ; De la sensation
+# « chapitre 6 » pour les odeurs (443a17-445a4 relève du chapitre 5) ;
+# Rhétorique « 1038a31-33 » (lire 1378a31-33) ; « 417a3-5 » (lire 417b3-5) ;
+# appétit orthographié « horexis » / « horesis » (écrit ici orexis).
+
+id: sens3
+title: "Immatérialité et intermédiaire"
+subtitle: "Aristote : les formes sensibles sans la matière, l'intermédiaire, sentir à distance"
+icon: wave
+color: teal
+group: "La sensibilité selon Aristote"
+lessons:
+- id: sens3-l1
+  title: "Les formes sensibles sans la matière"
+  notes: |
+    Si toute sensation identifie la sensibilité au sensible, faut-il y voir un transfert de matière ? Beaucoup de prédécesseurs l'ont pensé : l'âme serait composée des **éléments** (feu, air, eau, terre), afin d'« expliquer la sensation et la connaissance de chacune des réalités » (*De l'âme*, I, 5). Ils font de l'âme un corps pour qu'elle se rende semblable à ce qu'elle connaît : « en posant que la connaissance du semblable s'opère par le semblable, c'est comme si l'on posait une équation entre l'âme et les choses ».
+
+    Aristote récuse qu'on fasse de l'âme un corps ; surtout, cette thèse rend mal compte de la sensation, car le transfert qu'elle opère est **immatériel**. « On doit concevoir l'idée que le sens constitue ce qui est propre à recevoir les formes sensibles sans la matière » (*De l'âme*, II, 12, début). Et d'illustrer : « Ainsi la cire reçoit la marque de la bague sans le fer et l'or ; elle prend la marque d'or ou celle de bronze, mais pas en tant qu'or ou bronze. » Le cachet transmet non sa matière, mais sa seule **forme**, ses contours. Quand je sens l'encens qui brûle, je perçois la qualité sensible, non l'encens et sa combustion : l'odeur sans sa matière.
+
+    Première limite de l'analogie : la sensibilité est sensible non à l'objet, mais à certaines de ses qualités ; non à la **substance**, mais à certains de ses **accidents**. L'odorat sent l'odeur de l'encens, non l'encens ; la vue, les couleurs de Socrate, non Socrate. Nul besoin, donc, d'un contact matériel entre la sensibilité et l'objet.
+
+    ! Sentir n'est pas recevoir la chose, fût-ce en petit : c'est recevoir sa forme sensible.
+  points:
+  - id: sens3-l1-p1
+    sentence: "De nombreux philosophes antérieurs à Aristote ont pensé que l'âme se compose des ___ fondamentaux de la matière : le feu, l'air, l'eau et la terre."
+    answer: "éléments"
+    alt: []
+  - id: sens3-l1-p2
+    sentence: "Ces philosophes composent l'âme des éléments afin d'« expliquer la ___ et la connaissance de chacune des réalités »."
+    answer: "sensation"
+    alt: []
+    explanation: "De l'âme, I, 5, 409b24-25."
+  - id: sens3-l1-p3
+    sentence: "L'examen des philosophes antérieurs pour qui l'âme se compose des éléments, afin d'expliquer la sensation et la connaissance, se trouve dans ___."
+    answer: "De l'âme, I, 5"
+    alt: ["DA I, 5", "De anima I, 5"]
+    explanation: "409b19-411b30."
+  - id: sens3-l1-p4
+    sentence: "« Car, en posant que la connaissance du ___ s'opère par le semblable, c'est comme si l'on posait une équation entre l'âme et les choses. »"
+    answer: "semblable"
+    alt: []
+    explanation: "De l'âme, I, 5, 409b26-28."
+  - id: sens3-l1-p5
+    sentence: "« Car, en posant que la connaissance du semblable s'opère par le semblable, c'est comme si l'on posait une ___ entre l'âme et les choses. »"
+    answer: "équation"
+    alt: []
+    explanation: "De l'âme, I, 5, 409b26-28."
+  - id: sens3-l1-p6
+    sentence: "Faire de l'âme un corps rendrait matériel le transfert opéré dans la sensation ; pour Aristote, au contraire, ce transfert se fait sans la ___."
+    answer: "matière"
+    alt: []
+  - id: sens3-l1-p7
+    sentence: "« On doit concevoir l'idée que le sens constitue ce qui est propre à recevoir les ___ sensibles sans la matière. »"
+    answer: "formes"
+    alt: []
+  - id: sens3-l1-p8
+    sentence: "L'affirmation que le sens est propre à recevoir les formes sensibles sans la matière ouvre ___."
+    answer: "De l'âme, II, 12"
+    alt: ["DA II, 12", "De anima II, 12"]
+    explanation: "424a18-19."
+  - id: sens3-l1-p9
+    sentence: "Aristote compare la sensation à l'impression d'un cachet dans de la ___ chaude."
+    answer: "cire"
+    alt: []
+  - id: sens3-l1-p10
+    sentence: "« Ainsi la cire reçoit la marque de la ___ sans le fer et l'or ; elle prend la marque d'or ou celle de bronze, mais pas en tant qu'or ou bronze. »"
+    answer: "bague"
+    alt: []
+    explanation: "De l'âme, II, 12, 424a19-21."
+  - id: sens3-l1-p11
+    sentence: "« Ainsi la cire reçoit la marque de la bague sans le fer et l'or ; elle prend la marque d'or ou celle de bronze, mais pas en tant qu'or ou ___. »"
+    answer: "bronze"
+    alt: []
+    explanation: "De l'âme, II, 12, 424a19-21."
+  - id: sens3-l1-p12
+    sentence: "Ce qui est transféré dans la cire par le cachet, ce n'est pas sa matière, mais sa seule ___, ses contours sensibles."
+    answer: "forme"
+    alt: []
+  - id: sens3-l1-p13
+    sentence: "La sensibilité reçoit les qualités sensibles sans la matière et, plus généralement, sans le ___ auquel ces qualités sont attribuées."
+    answer: "sujet"
+    alt: []
+  - id: sens3-l1-p14
+    sentence: "Quand je perçois l'odeur de l'___ qui brûle, je perçois la qualité sensible, et non la chose et sa combustion."
+    answer: "encens"
+    alt: []
+  - id: sens3-l1-p15
+    sentence: "Première limite de l'analogie de la cire : la sensibilité est sensible non à la substance, mais à certains ___ déterminés de cette substance."
+    answer: "accidents"
+    alt: []
+  - id: sens3-l1-p16
+    sentence: "La vision n'est pas sensible à Socrate lui-même, mais aux ___ de Socrate."
+    answer: "couleurs"
+    alt: []
+  - id: sens3-l1-p17
+    sentence: "Ce qui « impressionne » les sens, ce n'est pas le sujet matériel des qualités sensibles, mais immédiatement ces qualités : nul besoin d'un ___ physique, au sens de matériel, entre la sensibilité et l'objet sensible."
+    answer: "contact"
+    alt: []
+- id: sens3-l2
+  title: "La seconde limite de l'analogie de la cire"
+  notes: |
+    Seconde limite : l'impression du cachet est une **altération**, non une réalisation, le passage d'une puissance **première** à un acte. La cire prend la forme du cachet et **perd** la sienne, ou son caractère informe : sa détermination précédente est détruite. Or la sensibilité est une disposition, une puissance **seconde** : son passage à l'acte est une réalisation, car son essence est la sensation. Le sujet sentant ne perd pas ses propres prédicats au profit de ce qu'il sent.
+
+    L'altération par le sensible existe pourtant : c'est la **destruction** de la sensibilité, par celle de ses organes, sous l'effet de qualités trop intenses. « À l'occasion, les perceptions sensibles à l'excès détruisent les organes sensoriels. En effet, chaque fois que le mouvement de l'organe sensoriel devient trop fort, sa raison (c'est-à-dire le sens), se dissipe » (*De l'âme*, II, 12). Regarder trop longtemps le soleil abîme l'œil. C'est aussi pourquoi les **plantes** sont altérées par le chaud et le froid, qualités tactiles, sans les « sentir » : une fleur peut geler sans jamais **expérimenter** le froid.
+
+    |                               | Affecté par le froid               | Sent le froid |
+    | La fleur qui gèle             | oui : ses constituants sont détruits | non         |
+    | L'animal qui touche la glace  | non : ses fonctions restent intactes | oui         |
+
+    Être sensible, ce n'est donc pas pouvoir être affecté par les qualités sensibles, mais pouvoir en faire l'expérience **sans** en être altéré. D'où l'insistance d'Aristote sur l'immatérialité : la sensibilité est une capacité d'« abstraction » (`aphairesis`) des formes sensibles hors de leur substrat matériel. Ce n'est pas le cachet qui impressionne la sensibilité, c'est elle qui **abstrait** du cachet sa forme.
+
+    ! La cire est une puissance première qui s'altère ; la sensibilité, une puissance seconde qui se réalise.
+  points:
+  - id: sens3-l2-p1
+    sentence: "Seconde limite de l'analogie de la cire : l'impression du cachet est un exemple d'___, et non de réalisation."
+    answer: "altération"
+    alt: []
+  - id: sens3-l2-p2
+    sentence: "L'impression du cachet est le passage d'une puissance ___, et non d'une puissance seconde, à un acte."
+    answer: "première"
+    alt: []
+  - id: sens3-l2-p3
+    sentence: "Dans l'impression, la cire prend la forme du cachet et ___ la forme qu'elle avait auparavant, ou son caractère informe."
+    answer: "perd"
+    alt: []
+  - id: sens3-l2-p4
+    sentence: "La sensation n'implique pas que le sujet sentant perde ses propres ___ au profit de ceux qu'il sent : sa sensibilité réalise son essence propre."
+    answer: "prédicats"
+    alt: []
+  - id: sens3-l2-p5
+    sentence: "Une altération par la qualité sensible impliquerait la ___ de la sensibilité elle-même, via celle des organes qui la supportent."
+    answer: "destruction"
+    alt: []
+  - id: sens3-l2-p6
+    sentence: "« À l'occasion, les perceptions sensibles à l'___ détruisent les organes sensoriels. »"
+    answer: "excès"
+    alt: []
+  - id: sens3-l2-p7
+    sentence: "« En effet, chaque fois que le mouvement de l'organe sensoriel devient trop fort, sa ___ (c'est-à-dire le sens), se dissipe. »"
+    answer: "raison"
+    alt: []
+  - id: sens3-l2-p8
+    sentence: "La remarque selon laquelle les perceptions sensibles à l'excès détruisent les organes sensoriels se trouve dans ___."
+    answer: "De l'âme, II, 12"
+    alt: ["DA II, 12", "De anima II, 12"]
+    explanation: "424a29-32."
+  - id: sens3-l2-p9
+    sentence: "Regarder trop longtemps une source de lumière trop intense, comme le ___, détruit ou du moins abîme l'œil."
+    answer: "soleil"
+    alt: []
+  - id: sens3-l2-p10
+    sentence: "Les plantes peuvent être altérées par le chaud et le froid, qualités ___, sans pour autant les sentir."
+    answer: "tactiles"
+    alt: []
+    explanation: "De l'âme, II, 12, 424a32-b2."
+  - id: sens3-l2-p11
+    sentence: "Une ___ peut geler et voir certaines de ses fonctions altérées sans jamais expérimenter le toucher du froid."
+    answer: "fleur"
+    alt: []
+  - id: sens3-l2-p12
+    sentence: "Être sensible, ce n'est pas pouvoir être affecté par des qualités sensibles, mais pouvoir en faire l'___ sensible sans nécessairement être altéré par elles."
+    answer: "expérience"
+    alt: []
+  - id: sens3-l2-p13
+    sentence: "Un animal qui touche la ___ en sent le froid sans que ce froid altère ses fonctions."
+    answer: "glace"
+    alt: []
+  - id: sens3-l2-p14
+    sentence: "La sensibilité est une capacité d'« abstraction », en grec ___, des formes sensibles hors de leur substrat matériel."
+    answer: "aphairesis"
+    alt: []
+  - id: sens3-l2-p15
+    sentence: "Ce n'est pas le cachet qui impressionne la sensibilité comme il impressionne la cire : c'est la sensibilité qui ___ du cachet sa forme sensible."
+    answer: "abstrait"
+    alt: []
+- id: sens3-l3
+  title: "L'âme sent, par le corps"
+  notes: |
+    L'immatérialité du **contenu** de la sensation ne signifie pas que tout le processus soit indépendant de la matière. Le point a fait débat chez les spécialistes à la fin du XXᵉ siècle : Myles **Burnyeat** (« Aristote voit du rouge et entend un "do" : combien se passe-t-il de choses ? ») soutient que la transmission de la forme sensible n'implique **aucune** opération matérielle, et que la théorie aristotélicienne relève non de processus physiologiques, mais uniquement d'états psychologiques ; le rôle de l'intermédiaire semble aller dans ce sens.
+
+    Il n'est pourtant pas besoin que tout le processus soit immatériel pour que son contenu le soit. Le *De la sensation et des sensibles* développe les **conditions corporelles** de chaque type de sensation : la sensibilité s'exerce sur fond de processus physiologiques, dans des organes aux propriétés matérielles déterminées. Mais **ce n'est pas le corps qui sent, c'est l'âme**, même si elle sent nécessairement par l'intermédiaire du corps.
+
+    Exemple : pour **Démocrite** (*De la sensation et des sensibles*, 2), l'œil voit parce qu'il est fait d'eau, la vision étant un certain reflet. Aristote refuse : la vision n'est pas une propriété matérielle comme la réflexion, puisque d'autres choses reflètent sans être sensibles. Mais Démocrite a raison sur un point : l'eau de l'œil, **transparente**, peut servir d'intermédiaire en « transportant » l'activité commune du sensible et de la sensibilité. Les propriétés de l'œil sont nécessaires à la vision, sans que la sensibilité s'y réduise.
+
+    ! Aristote n'est ni matérialiste (le corps ne sent pas) ni partisan d'une âme qui sentirait sans organes.
+  points:
+  - id: sens3-l3-p1
+    sentence: "L'immatérialité du ___ de la sensation ne signifie pas que l'ensemble du processus de sensation se fasse indépendamment de tout processus matériel."
+    answer: "contenu"
+    alt: []
+  - id: sens3-l3-p2
+    sentence: "Selon Myles ___, la transmission de la forme sensible par la sensation n'implique aucune opération matérielle."
+    answer: "Burnyeat"
+    alt: []
+  - id: sens3-l3-p3
+    sentence: "Pour Myles Burnyeat, la théorie aristotélicienne de la sensation n'est pas affaire de processus physiologiques, mais uniquement d'états ___."
+    answer: "psychologiques"
+    alt: []
+  - id: sens3-l3-p4
+    sentence: "L'article de Myles Burnyeat traduit en français s'intitule « Aristote voit du rouge et entend un \"___\" : combien se passe-t-il de choses ? »."
+    answer: "do"
+    alt: []
+  - id: sens3-l3-p5
+    sentence: "Le traité *De la sensation et des sensibles* développe les conditions ___ qui rendent possible chaque type de sensation."
+    answer: "corporelles"
+    alt: []
+  - id: sens3-l3-p6
+    sentence: "La sensibilité se fait sur fond de processus ___ déterminés, qui ont lieu dans certains organes particuliers."
+    answer: "physiologiques"
+    alt: []
+  - id: sens3-l3-p7
+    sentence: "Ce n'est pas le corps qui sent, mais bien l'___, même si elle sent nécessairement par l'intermédiaire du corps et de la matière."
+    answer: "âme"
+    alt: []
+  - id: sens3-l3-p8
+    sentence: "Selon Démocrite, c'est l'œil qui voit, parce qu'il est fait d'___."
+    answer: "eau"
+    alt: []
+  - id: sens3-l3-p9
+    sentence: "L'opinion de Démocrite selon laquelle l'œil voit parce qu'il est fait d'eau est rapportée dans ___."
+    answer: "De la sensation et des sensibles, 2"
+    alt: ["De sens. 2", "De sensu 2", "De la sensation 2"]
+  - id: sens3-l3-p10
+    sentence: "Pour Démocrite, la vision est un certain ___."
+    answer: "reflet"
+    alt: []
+  - id: sens3-l3-p11
+    sentence: "Aristote refuse l'explication de Démocrite : la vision n'est pas une propriété matérielle comme la ___, puisque d'autres choses reflètent sans être dotées de sensibilité."
+    answer: "réflexion"
+    alt: []
+  - id: sens3-l3-p12
+    sentence: "Démocrite a pourtant raison de donner un rôle à l'eau de l'œil : celle-ci est ___ et peut jouer un rôle d'intermédiaire entre le sensible et la sensibilité."
+    answer: "transparente"
+    alt: []
+  - id: sens3-l3-p13
+    sentence: "La sensibilité est une capacité de l'âme dont la réalisation est impossible sans certaines propriétés et certains ___ du corps."
+    answer: "organes"
+    alt: []
+- id: sens3-l4
+  title: "L'intermédiaire"
+  notes: |
+    Toute sensation suppose un « **intermédiaire** » (`metaxu`) entre l'objet sensible et la sensibilité. Sa nature varie selon les sens, que *De l'âme*, II, 7 à 11 examinent un à un :
+
+    | Chapitre du *De l'âme* | Sens    |
+    | II, 7                  | vue     |
+    | II, 8                  | ouïe    |
+    | II, 9                  | odorat  |
+    | II, 10                 | goût    |
+    | II, 11                 | toucher |
+
+    Ces chapitres insistent systématiquement sur la **nécessité** de l'intermédiaire, qui transmet l'activité du sensible aux sens ; chaque sens a le sien, capable de transporter l'activité de son sensible propre (la couleur pour la vue, le son pour l'ouïe). Pour la vue, c'est le « **diaphane** » ou transparent (`diaphanès`) : non un corps, mais une propriété de certains corps (l'air, l'eau, le verre, la glace). L'activité du transparent est la **lumière** (*De l'âme*, II, 7) : en acte, il transmet les couleurs jusqu'à l'œil. « Il en est, du reste, un indice évident : si l'on vient, en effet, à placer l'objet coloré sur <l'organe de> la vue elle-même, il ne se verra pas. Mais, en fait, la couleur imprime un mouvement au transparent, l'air, par exemple : et c'est donc celui-ci qui, contigu à l'organe sensoriel, met ce dernier en mouvement. »
+
+    De même pour le son et l'odeur : c'est le milieu intermédiaire qui est ébranlé, et « si l'on place, en revanche, l'objet du sonore ou l'objet odorant sur le sensoriel lui-même, on ne produira aucune sensation ». L'intermédiaire est un **relais** de la sensation.
+
+    ! Le transparent n'est pas une chose, mais une propriété des corps comme l'air ou l'eau.
+  points:
+  - id: sens3-l4-p1
+    sentence: "Toute sensation suppose la présence d'un « intermédiaire », en grec ___, entre l'objet sensible et la sensibilité."
+    answer: "metaxu"
+    alt: []
+  - id: sens3-l4-p2
+    sentence: "Les chapitres ___ à 11 du livre II du *De l'âme* examinent successivement les cinq sens."
+    answer: "7"
+    alt: []
+  - id: sens3-l4-p3
+    sentence: "Dans le *De l'âme*, la vue est examinée au chapitre 7 du livre II, l'ouïe au chapitre 8, l'odorat au chapitre ___, le goût au chapitre 10 et le toucher au chapitre 11."
+    answer: "9"
+    alt: []
+  - id: sens3-l4-p4
+    sentence: "Dans le *De l'âme*, le toucher est examiné au chapitre ___ du livre II."
+    answer: "11"
+    alt: []
+  - id: sens3-l4-p5
+    sentence: "L'intermédiaire a pour fonction de ___ l'activité du sensible aux sens."
+    answer: "transmettre"
+    alt: []
+  - id: sens3-l4-p6
+    sentence: "L'intermédiaire de la vision est le « ___ » ou « transparence »."
+    answer: "diaphane"
+    alt: []
+  - id: sens3-l4-p7
+    sentence: "La « transparence » se dit en grec ___."
+    answer: "diaphanès"
+    alt: ["diaphanes"]
+  - id: sens3-l4-p8
+    sentence: "La transparence n'est pas par elle-même un corps, mais une ___ d'un corps, comme l'air, l'eau, le verre ou la glace, qui sont dits transparents."
+    answer: "propriété"
+    alt: []
+  - id: sens3-l4-p9
+    sentence: "L'activité de la transparence est la ___."
+    answer: "lumière"
+    alt: []
+  - id: sens3-l4-p10
+    sentence: "La thèse selon laquelle l'activité de la transparence est la lumière se trouve dans ___."
+    answer: "De l'âme, II, 7"
+    alt: ["DA II, 7", "De anima II, 7"]
+    explanation: "418b9-10."
+  - id: sens3-l4-p11
+    sentence: "En acte, la transparence transmet les ___, qualités sensibles propres à la vision, jusqu'à l'œil."
+    answer: "couleurs"
+    alt: []
+  - id: sens3-l4-p12
+    sentence: "« si l'on vient, en effet, à placer l'objet coloré sur <l'organe de> la vue elle-même, il ne se ___ pas. »"
+    answer: "verra"
+    alt: []
+  - id: sens3-l4-p13
+    sentence: "« Mais, en fait, la couleur imprime un mouvement au ___, l'air, par exemple : et c'est donc celui-ci qui, contigu à l'organe sensoriel, met ce dernier en mouvement. »"
+    answer: "transparent"
+    alt: []
+  - id: sens3-l4-p14
+    sentence: "« Mais, en fait, la couleur imprime un mouvement au transparent, l'air, par exemple : et c'est donc celui-ci qui, ___ à l'organe sensoriel, met ce dernier en mouvement. »"
+    answer: "contigu"
+    alt: []
+  - id: sens3-l4-p15
+    sentence: "L'indice de l'objet coloré placé sur l'organe de la vue, qui ne se voit pas, se trouve dans ___."
+    answer: "De l'âme, II, 7"
+    alt: ["DA II, 7", "De anima II, 7"]
+    explanation: "419a11-15."
+  - id: sens3-l4-p16
+    sentence: "« Le même argument vaut aussi pour le son et l'___. Car aucune de ces réalités ne touche le sensoriel pour produire une sensation. »"
+    answer: "odeur"
+    alt: []
+  - id: sens3-l4-p17
+    sentence: "« Au contraire, sous l'effet d'une odeur ou d'un son, c'est le milieu intermédiaire qui se trouve ___, et c'est par celui-ci que l'est chacun des organes sensoriels. »"
+    answer: "ébranlé"
+    alt: []
+  - id: sens3-l4-p18
+    sentence: "« Si l'on place, en revanche, l'objet du sonore ou l'objet odorant sur le sensoriel lui-même, on ne produira ___ sensation. »"
+    answer: "aucune"
+    alt: []
+    explanation: "De l'âme, II, 7, 419a25-30."
+  - id: sens3-l4-p19
+    sentence: "L'intermédiaire est une sorte de ___ de la sensation."
+    answer: "relais"
+    alt: []
+- id: sens3-l5
+  title: "Sentir à distance"
+  notes: |
+    L'essentiel : la sensation suppose l'**absence de contact** physique, une **mise à distance** des qualités sensibles. C'est l'une des grandes **originalités** d'Aristote : la plupart des théories antiques expliquent la sensation par un contact (de l'objet ou de ses émanations avec le sujet ou ses émanations), conception **doxique** qu'il récuse.
+
+    Et le **toucher** et le **goût**, qui semblent exiger le contact ? Aristote fait l'hypothèse que la **langue** et la **chair** ne sont pas des organes sensibles, mais l'extrémité d'un corps servant d'intermédiaire avec le véritable organe, le **cœur** : sa biologie est **cardiocentrique**, le cœur et non le cerveau étant le siège de l'âme. Ce n'est pas la chair qui touche ni la langue qui goûte, mais le cœur, à travers elles, comme l'œil voit à travers le transparent : « Il semble bien qu'il en aille de la chair et de la langue comme il en va de l'air ou de l'eau en rapport avec la vue, l'ouïe et l'odorat […]. Quand, d'ailleurs, l'organe sensoriel lui-même est touché, il ne peut y avoir sensation, ni là ni ici » (*De l'âme*, II, 11).
+
+    Aristote n'explicite pas la raison de son insistance ; trois éléments y président sans doute :
+    - que la sensation soit l'acte d'une qualité **sans la matière**, non l'arrivée d'« effluves » ;
+    - qu'elle soit toujours l'**examen** d'un objet par un sujet : contre la bipartition du *Philèbe* entre sens nobles « à distance » (vue, ouïe, odorat) et sens vils « par contact » (goût, toucher), Aristote rend son éminence à toute la sensibilité ; toute sensation est **critique**, non parce qu'elle juge, mais parce qu'elle *est* la distinction de différences sensibles ;
+    - surtout, fournir un **unique modèle d'intelligibilité** : les cinq sens ont une unité fonctionnelle par **analogie** (`kath'analogian`).
+
+    ! Même le toucher sent à distance : la chair n'est pas l'organe, mais l'intermédiaire.
+  points:
+  - id: sens3-l5-p1
+    sentence: "L'essentiel est que la sensation suppose l'absence de ___ physique entre le sensible et la sensibilité."
+    answer: "contact"
+    alt: []
+  - id: sens3-l5-p2
+    sentence: "La sensation est en ce sens une mise à ___ des qualités sensibles."
+    answer: "distance"
+    alt: []
+  - id: sens3-l5-p3
+    sentence: "L'absence de contact dans la sensation est sans doute l'une des grandes ___ de la théorie aristotélicienne de la sensation."
+    answer: "originalités"
+    alt: []
+  - id: sens3-l5-p4
+    sentence: "La très grande majorité des théories antiques expliquent la sensation par une forme de contact : c'est une conception ___ de la sensibilité, à laquelle Aristote est fondamentalement opposé."
+    answer: "doxique"
+    alt: []
+  - id: sens3-l5-p5
+    sentence: "Le toucher et le ___ semblent pourtant impliquer le contact entre l'objet sensible et l'organe."
+    answer: "goût"
+    alt: []
+  - id: sens3-l5-p6
+    sentence: "Selon Aristote, la ___ et la chair ne sont pas des organes sensibles, mais l'extrémité d'un corps servant d'intermédiaire avec le véritable organe."
+    answer: "langue"
+    alt: []
+  - id: sens3-l5-p7
+    sentence: "Le véritable organe sensible, pour le toucher et le goût, est le ___, ou du moins la région cardiaque."
+    answer: "cœur"
+    alt: ["coeur"]
+  - id: sens3-l5-p8
+    sentence: "Aristote développe une biologie ___ : le cœur, et non le cerveau, est le véritable siège de l'âme."
+    answer: "cardiocentrique"
+    alt: []
+  - id: sens3-l5-p9
+    sentence: "Pour Aristote, le véritable siège de l'âme est le cœur, et non le ___."
+    answer: "cerveau"
+    alt: []
+  - id: sens3-l5-p10
+    sentence: "« Il semble bien qu'il en aille de la chair et de la langue comme il en va de l'air ou de l'___ en rapport avec la vue, l'ouïe et l'odorat »"
+    answer: "eau"
+    alt: []
+  - id: sens3-l5-p11
+    sentence: "« Quand, d'ailleurs, l'organe sensoriel lui-même est ___, il ne peut y avoir sensation, ni là ni ici. »"
+    answer: "touché"
+    alt: []
+  - id: sens3-l5-p12
+    sentence: "Le passage qui assimile la chair et la langue à l'air ou à l'eau dans leur rapport à l'organe sensoriel se trouve dans ___."
+    answer: "De l'âme, II, 11"
+    alt: ["DA II, 11", "De anima II, 11"]
+    explanation: "423b17-22."
+  - id: sens3-l5-p13
+    sentence: "Première raison de l'insistance d'Aristote sur la distance : ce que transmet la sensation est une activité, un état, et non des « ___ » matériels."
+    answer: "effluves"
+    alt: []
+  - id: sens3-l5-p14
+    sentence: "Dans le *___*, Platon oppose les sens plus nobles, qui sentent à distance, aux sens plus vils, qui sentent par contact."
+    answer: "Philèbe"
+    alt: ["Philebe"]
+    explanation: "51a-52a."
+  - id: sens3-l5-p15
+    sentence: "Selon la bipartition platonicienne, les sens qui sentent « à distance » sont la vue, l'ouïe et l'___."
+    answer: "odorat"
+    alt: []
+  - id: sens3-l5-p16
+    sentence: "Selon la bipartition platonicienne, les sens qui sentent « par contact », le goût et le toucher, sont les plus ___ et ne permettent pas la connaissance de leur objet."
+    answer: "vils"
+    alt: []
+  - id: sens3-l5-p17
+    sentence: "En faisant de la sensation l'examen d'un objet par un sujet, la systématisation de l'intermédiaire rend son ___ à l'ensemble de la sensibilité."
+    answer: "éminence"
+    alt: []
+  - id: sens3-l5-p18
+    sentence: "Toute sensation est une opération ___, non pas en ce qu'elle juge, mais en ce qu'elle est la distinction entre des différences sensibles."
+    answer: "critique"
+    alt: []
+  - id: sens3-l5-p19
+    sentence: "Le schéma de l'intermédiaire fournit surtout un unique modèle d'___ de la sensation."
+    answer: "intelligibilité"
+    alt: []
+  - id: sens3-l5-p20
+    sentence: "Malgré leur diversité, les cinq sens ont une unité fonctionnelle par analogie, en grec ___."
+    answer: "kath'analogian"
+    alt: ["kath analogian", "kathanalogian"]
+  - id: sens3-l5-p21
+    sentence: "Sous son apparente diversité, la sensibilité est ramenée à une unique faculté, dont l'unité est au moins celle d'une analogie ___."
+    answer: "fonctionnelle"
+    alt: []

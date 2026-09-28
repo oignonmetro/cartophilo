@@ -1,0 +1,671 @@
+# Unité classique (voir content/philosophie.md) tirée de l'exposé d'Ulysse
+# Chaintreuil, « Aristote et la sensibilité : une faculté fondamentale »
+# (scan agrégation, p. 101-148), dans l'ordre de l'exposé ; citations dans les
+# traductions qu'il donne (Bodéüs pour le De l'âme, Morel pour les Parva
+# naturalia, souvent « trad. modifiée »).
+#
+# Repères de la source laissés hors des cartes parce que douteux :
+# Seconds Analytiques « II, 18 » (81a38-39 est en I, 18) ; De la sensation
+# « chapitre 6 » pour les odeurs (443a17-445a4 relève du chapitre 5) ;
+# Rhétorique « 1038a31-33 » (lire 1378a31-33) ; « 417a3-5 » (lire 417b3-5) ;
+# appétit orthographié « horexis » / « horesis » (écrit ici orexis).
+
+id: sens4
+title: "Pluralité des sens, unité de la sensibilité"
+subtitle: "Aristote : sensibles propres et communs, sensation commune, hiérarchie des sens"
+icon: palette
+color: teal
+group: "La sensibilité selon Aristote"
+lessons:
+- id: sens4-l1
+  title: "Contre la réduction de tous les sens au toucher"
+  notes: |
+    Si le fonctionnement unique des sens donne à la sensibilité une unité **analogique**, Aristote fait aussi droit à la **pluralité** des sens, irréductibles les uns aux autres. La sensibilité n'est pourtant pas une simple collection de facultés : son unité supérieure a pour principe la « **sensation commune** ».
+
+    La théorie de l'intermédiaire s'oppose de front à la manière démocritéenne, et plus largement matérialiste, de faire de la sensation un **contact** de l'objet ou de ses « effluves » avec l'organe. Paradoxalement, c'est elle qui permet la pluralité des sens : si tout était contact, tous les sens seraient du toucher. « Démocrite et la plupart des physiciens qui traitent de la sensation font quelque chose de tout à fait absurde. Ils font en effet de tous les sensibles les objets du toucher. Pourtant s'il en allait ainsi, il est évident que chacun des autres sens serait une sorte de toucher. Or il n'est pas difficile de s'apercevoir que c'est impossible. » (*De la sensation et des sensibles*, 4)
+
+    Pour Démocrite, les qualités sensibles sont transmises par les **simulacres** des objets et, selon un témoignage de Théophraste, par les **figures** des atomes qui heurtent les organes. Il « dit en effet du blanc et du noir que ce dernier est rugueux et l'autre lisse, et rapporte les saveurs aux figures » : couleurs et saveurs deviennent des qualités tactiles. Contre ce **réductionnisme**, chaque sens possède des qualités qu'il sent en propre, étrangères aux autres : les « sensibles propres ».
+
+    ! La théorie du contact n'unifie pas les sens : elle les supprime tous au profit du toucher.
+  points:
+  - id: sens4-l1-p1
+    sentence: "Si la sensibilité possède un unique modèle de fonctionnement, Aristote fait en même temps droit à la ___ des sens."
+    answer: "pluralité"
+    alt: []
+  - id: sens4-l1-p2
+    sentence: "L'intérêt d'Aristote pour la diversité des sens n'implique pas que la sensibilité soit une somme de facultés dont l'unité ne serait qu'___."
+    answer: "analogique"
+    alt: []
+  - id: sens4-l1-p3
+    sentence: "Le principe de la forme supérieure d'unité de la faculté sensible est ce qu'Aristote appelle la « sensation ___ »."
+    answer: "commune"
+    alt: []
+  - id: sens4-l1-p4
+    sentence: "La théorie de l'intermédiaire s'oppose frontalement à la manière ___, et plus largement matérialiste, de faire de la sensation un contact de l'objet ou de ses effluves avec l'organe."
+    answer: "démocritéenne"
+    alt: []
+  - id: sens4-l1-p5
+    sentence: "Si la sensation se faisait par contact, comme chez Démocrite, tous les sens seraient en réalité réduits au ___, ce qui reviendrait à nier la pluralité de fait de la sensibilité."
+    answer: "toucher"
+    alt: []
+  - id: sens4-l1-p6
+    sentence: "« Démocrite et la plupart des ___ qui traitent de la sensation font quelque chose de tout à fait absurde. »"
+    answer: "physiciens"
+    alt: []
+  - id: sens4-l1-p7
+    sentence: "« Ils font en effet de tous les sensibles les objets du ___. Pourtant s'il en allait ainsi, il est évident que chacun des autres sens serait une sorte de toucher. »"
+    answer: "toucher"
+    alt: []
+  - id: sens4-l1-p8
+    sentence: "« Pourtant s'il en allait ainsi, il est évident que chacun des autres sens serait une sorte de toucher. Or il n'est pas difficile de s'apercevoir que c'est ___. »"
+    answer: "impossible"
+    alt: []
+  - id: sens4-l1-p9
+    sentence: "La critique de Démocrite et des physiciens qui font de tous les sensibles des objets du toucher se trouve dans ___."
+    answer: "De la sensation et des sensibles, 4"
+    alt: ["De sens. 4", "De sensu 4", "De la sensation 4"]
+    explanation: "442a29-b2."
+  - id: sens4-l1-p10
+    sentence: "Selon Démocrite, les qualités sensibles sont transmises par les ___ des objets sensibles, et donc par les propriétés des atomes."
+    answer: "simulacres"
+    alt: []
+  - id: sens4-l1-p11
+    sentence: "Selon un témoignage de ___, Démocrite rapporte la sensation aux figures des atomes qui heurtent les organes des sens."
+    answer: "Théophraste"
+    alt: []
+    explanation: "Diels-Kranz, 68A135."
+  - id: sens4-l1-p12
+    sentence: "Selon ce témoignage, ce sont les ___ des atomes qui, en heurtant les organes des sens, transmettent les qualités sensibles."
+    answer: "figures"
+    alt: []
+  - id: sens4-l1-p13
+    sentence: "Démocrite « dit en effet du blanc et du noir que ce dernier est rugueux et l'autre ___, et rapporte les saveurs aux figures »."
+    answer: "lisse"
+    alt: []
+    explanation: "De la sensation et des sensibles, 4, 442b11-12."
+  - id: sens4-l1-p14
+    sentence: "Pour Démocrite, le noir est ___ et le blanc lisse : les qualités propres à chaque sens sont réduites à des qualités tactiles."
+    answer: "rugueux"
+    alt: []
+  - id: sens4-l1-p15
+    sentence: "La doctrine de la sensation par contact aboutit à une forme de ___, puisqu'elle rapporte la diversité de la sensibilité et des sensibles à un seul sens."
+    answer: "réductionnisme"
+    alt: []
+  - id: sens4-l1-p16
+    sentence: "Chaque sens possède des qualités sensibles qu'il sent en propre et qui sont étrangères aux autres sens : ce qu'Aristote appelle les « sensibles ___ »."
+    answer: "propres"
+    alt: []
+- id: sens4-l2
+  title: "Les sensibles propres, ou la diversité des sens"
+  notes: |
+    Les **sensibles propres** sont perçus en propre par un seul sens ; les **sensibles communs**, par plusieurs. Cette distinction, objet de *De l'âme*, II, 6 et reprise en de nombreux lieux du corpus, est fondamentale pour articuler la pluralité et l'unité de la sensibilité.
+
+    Les sensibles propres sont « ceux qui ne se laissent pas sentir par un autre sens » : « ainsi, la vue sent la couleur, l'ouïe, le son, et le goût, la saveur ». La saveur ne peut être vue, ni la couleur entendue. « Le toucher, lui, comporte effectivement un plus grand nombre de différences, mais il n'en reste pas moins que chaque sens est juge de ses différences » : on touche en propre le rugueux et le lisse, le froid et le chaud.
+
+    Chaque sensible propre est structuré par un **couple de contraires** : la couleur par le blanc et le noir, le son par l'aigu et le grave. Ce sont ces contraires que chaque sens est « en puissance », et dont la sensation est l'activité.
+
+    Chaque sens « juge » ou « distingue » (`krinein`) les « différences » (`diaphorai`) de ses sensibles. La sensation n'est pas pour autant un **jugement**, la prédication d'un attribut à un sujet, du moins pas immédiatement : elle est une faculté « **critique** » au sens de `krinein`, qui constate et établit des différences. L'acte du sensible, c'est sa différence ; et cette différence est aussi l'acte de la sensibilité qui la sent : d'où leur acte commun.
+
+    ! « Critique » ne veut pas dire ici « qui juge », mais « qui distingue ».
+  points:
+  - id: sens4-l2-p1
+    sentence: "Les sensibles perçus en propre par un seul sens s'opposent aux sensibles ___, perçus par plusieurs sens."
+    answer: "communs"
+    alt: []
+  - id: sens4-l2-p2
+    sentence: "La distinction entre sensibles propres et sensibles communs, fondamentale pour penser l'articulation de la pluralité et de l'unité de la sensibilité, est l'objet de ___."
+    answer: "De l'âme, II, 6"
+    alt: ["DA II, 6", "De anima II, 6"]
+    explanation: "418a11-20."
+  - id: sens4-l2-p3
+    sentence: "Les sensibles propres sont « ceux qui ne se laissent pas sentir par un ___ sens » que celui auquel ils sont propres."
+    answer: "autre"
+    alt: []
+  - id: sens4-l2-p4
+    sentence: "« ainsi, la vue sent la ___, l'ouïe, le son, et le goût, la saveur. »"
+    answer: "couleur"
+    alt: []
+    explanation: "De l'âme, II, 6, 418a11-13."
+  - id: sens4-l2-p5
+    sentence: "« ainsi, la vue sent la couleur, l'ouïe, le son, et le goût, la ___. »"
+    answer: "saveur"
+    alt: []
+    explanation: "De l'âme, II, 6, 418a11-13."
+  - id: sens4-l2-p6
+    sentence: "« Le toucher, lui, comporte effectivement un plus grand nombre de ___, mais il n'en reste pas moins que chaque sens est juge de ses différences. »"
+    answer: "différences"
+    alt: []
+    explanation: "De l'âme, II, 6, 418a14-15."
+  - id: sens4-l2-p7
+    sentence: "« Le toucher, lui, comporte effectivement un plus grand nombre de différences, mais il n'en reste pas moins que chaque sens est ___ de ses différences. »"
+    answer: "juge"
+    alt: []
+    explanation: "De l'âme, II, 6, 418a14-15."
+  - id: sens4-l2-p8
+    sentence: "Le toucher sent en propre plusieurs différences tactiles : le rugueux et le lisse, le froid et le ___."
+    answer: "chaud"
+    alt: []
+  - id: sens4-l2-p9
+    sentence: "Chaque sensible propre est structuré par un couple de ___ que sent le sens."
+    answer: "contraires"
+    alt: []
+  - id: sens4-l2-p10
+    sentence: "La couleur, sensible propre de la vue, est structurée par le blanc et le ___."
+    answer: "noir"
+    alt: []
+  - id: sens4-l2-p11
+    sentence: "Le son, sensible propre de l'ouïe, est structuré par l'aigu et le ___."
+    answer: "grave"
+    alt: []
+  - id: sens4-l2-p12
+    sentence: "Les contraires que sent chaque sens, ce sens les est « en ___ », et la sensation en est l'activité."
+    answer: "puissance"
+    alt: []
+  - id: sens4-l2-p13
+    sentence: "Chaque sens a vocation à « juger » ou « distinguer », en grec ___, les différences des sensibles qui lui sont propres."
+    answer: "krinein"
+    alt: []
+  - id: sens4-l2-p14
+    sentence: "Les « différences » que distingue chaque sens se disent en grec ___."
+    answer: "diaphorai"
+    alt: []
+  - id: sens4-l2-p15
+    sentence: "La sensation n'est pas, du moins pas immédiatement, un ___, c'est-à-dire une prédication d'un attribut à un sujet."
+    answer: "jugement"
+    alt: []
+  - id: sens4-l2-p16
+    sentence: "La sensation est une faculté « ___ » au sens du verbe grec krinein : elle constate et établit des différences."
+    answer: "critique"
+    alt: []
+  - id: sens4-l2-p17
+    sentence: "L'acte du sensible, c'est sa ___, qui est aussi l'acte de la sensibilité lorsqu'elle la sent."
+    answer: "différence"
+    alt: []
+- id: sens4-l3
+  title: "Les sensibles communs, ou l'unité de la sensibilité"
+  notes: |
+    Les sens ne sont pas absolument imperméables : certains sensibles sont **communs** à plusieurs. « Quant aux sensibles qu'on appelle communs, ce sont le mouvement, le repos, le nombre, la figure, la grandeur, vu que pareils objets ne sont propres à aucun sens, mais sont communs à tous ; en effet, un mouvement sensible au toucher l'est aussi à la vue » (*De l'âme*, II, 6). Je peux voir et toucher du mouvement, non voir du chaud ni toucher une couleur.
+
+    Il n'y a pour autant que **cinq sens** : les sensibles communs n'ont pas de sens particulier (*De l'âme*, III, 1). « Mais il ne saurait y avoir non plus, pour les sensibles communs, quelque organe sensoriel propre. Ce sont des déterminations que chaque sens nous permet de percevoir par coïncidence, comme le mouvement, la stabilité, la figure, la grandeur, le nombre et l'unité. »
+
+    Ils sont sentis « **par coïncidence** » (`kata sumbebèkos`) : chaque sens les perçoit **au travers** de ses sensibles propres. Quand une mouche marche sur mon bras, son mouvement est « touché » par coïncidence avec le rugueux de ses pattes et « vu » par coïncidence avec la couleur noire qui se déplace.
+
+    Ce n'est pas un acte **prédicatif** : je ne prédique pas le mouvement de la couleur, je le **sens** immédiatement avec elle ; le mouvement est littéralement vu et touché. Il y a du sensible commun dès qu'il y a un sens, jamais sans un sens. Le sensible commun est une **passerelle** entre les sens : la sensibilité est proprement **une** faculté, dont les sens sont les instances.
+
+    ! Sentir « par coïncidence » n'est pas inférer : le mouvement de la mouche est bel et bien senti.
+  points:
+  - id: sens4-l3-p1
+    sentence: "Il n'y a pas d'imperméabilité absolue des sens entre eux : certains sensibles sont « ___ » à plusieurs sens, dans la mesure où plusieurs sens peuvent les distinguer."
+    answer: "communs"
+    alt: []
+  - id: sens4-l3-p2
+    sentence: "« Quant aux sensibles qu'on appelle communs, ce sont le ___, le repos, le nombre, la figure, la grandeur, vu que pareils objets ne sont propres à aucun sens, mais sont communs à tous ; en effet, un mouvement sensible au toucher l'est aussi à la vue. »"
+    answer: "mouvement"
+    alt: []
+  - id: sens4-l3-p3
+    sentence: "« Quant aux sensibles qu'on appelle communs, ce sont le mouvement, le repos, le nombre, la ___, la grandeur, vu que pareils objets ne sont propres à aucun sens, mais sont communs à tous ; en effet, un mouvement sensible au toucher l'est aussi à la vue. »"
+    answer: "figure"
+    alt: []
+  - id: sens4-l3-p4
+    sentence: "« Quant aux sensibles qu'on appelle communs, ce sont le mouvement, le repos, le nombre, la figure, la grandeur, vu que pareils objets ne sont propres à ___ sens, mais sont communs à tous ; en effet, un mouvement sensible au toucher l'est aussi à la vue. »"
+    answer: "aucun"
+    alt: []
+  - id: sens4-l3-p5
+    sentence: "« Quant aux sensibles qu'on appelle communs, ce sont le mouvement, le repos, le nombre, la figure, la grandeur, vu que pareils objets ne sont propres à aucun sens, mais sont communs à tous ; en effet, un mouvement sensible au toucher l'est aussi à la ___. »"
+    answer: "vue"
+    alt: []
+    explanation: "De l'âme, II, 6, 418a17-20."
+  - id: sens4-l3-p6
+    sentence: "Je peux voir et toucher du mouvement, mais je ne peux pas voir du chaud ou toucher une ___."
+    answer: "couleur"
+    alt: []
+  - id: sens4-l3-p7
+    sentence: "Aristote insiste, au chapitre 1 du livre III du *De l'âme*, sur le fait que les sensibles communs ne font pas l'objet d'un sens particulier et qu'il n'y a que ___ sens."
+    answer: "cinq"
+    alt: ["5"]
+  - id: sens4-l3-p8
+    sentence: "« Mais il ne saurait y avoir non plus, pour les sensibles communs, quelque ___ sensoriel propre. Ce sont des déterminations que chaque sens nous permet de percevoir par coïncidence, comme le mouvement, la stabilité, la figure, la grandeur, le nombre et l'unité. »"
+    answer: "organe"
+    alt: []
+  - id: sens4-l3-p9
+    sentence: "« Mais il ne saurait y avoir non plus, pour les sensibles communs, quelque organe sensoriel propre. Ce sont des déterminations que chaque sens nous permet de percevoir par ___, comme le mouvement, la stabilité, la figure, la grandeur, le nombre et l'unité. »"
+    answer: "coïncidence"
+    alt: []
+  - id: sens4-l3-p10
+    sentence: "L'affirmation qu'il n'existe pas d'organe sensoriel propre aux sensibles communs, perçus par coïncidence, se trouve dans ___."
+    answer: "De l'âme, III, 1"
+    alt: ["DA III, 1", "De anima III, 1"]
+    explanation: "425a14-16."
+  - id: sens4-l3-p11
+    sentence: "« Par coïncidence » se dit en grec ___."
+    answer: "kata sumbebèkos"
+    alt: ["kata sumbebekos"]
+  - id: sens4-l3-p12
+    sentence: "Chaque sens perçoit les sensibles communs au ___ de ses sensibles propres."
+    answer: "travers"
+    alt: []
+  - id: sens4-l3-p13
+    sentence: "Quand je vois et touche le mouvement d'une ___ sur mon bras, ce mouvement est touché par coïncidence avec le rugueux de ses pattes."
+    answer: "mouche"
+    alt: []
+  - id: sens4-l3-p14
+    sentence: "Le mouvement de la mouche sur mon bras est « vu » par coïncidence avec la couleur ___ qui se déplace."
+    answer: "noire"
+    alt: []
+  - id: sens4-l3-p15
+    sentence: "La sensation du sensible commun n'est pas l'objet d'un acte mental de type ___ : je ne prédique pas le mouvement à la couleur, je le sens immédiatement."
+    answer: "prédicatif"
+    alt: []
+  - id: sens4-l3-p16
+    sentence: "Il y a du sensible commun dès qu'il y a un seul ___, et il n'y en a pas sans qu'il y ait un sens."
+    answer: "sens"
+    alt: []
+  - id: sens4-l3-p17
+    sentence: "Le sensible commun établit une forme de ___ entre les différents sens."
+    answer: "passerelle"
+    alt: []
+  - id: sens4-l3-p18
+    sentence: "La sensibilité est plus qu'une somme de facultés au fonctionnement analogue : elle est proprement une faculté dont les sens sont les ___."
+    answer: "instances"
+    alt: []
+- id: sens4-l4
+  title: "La sensation commune : comparer les sens"
+  notes: |
+    Aristote accorde à la **sensation commune**, outre la perception des sensibles communs, deux fonctions qui établissent la véritable unité de la sensibilité.
+
+    D'abord, la **commensurabilité** des sens : sentir les différences *entre* les sensibles propres. « Si, par exemple, la vue distingue le blanc du noir, le goût, par contre, distingue le doux de l'amer, et il en va de même pour les autres sens. Toutefois, dès lors que nous discernons aussi le blanc du doux et chacun des sensibles par rapport à chaque autre, c'est qu'un certain moyen nous permet de sentir cette différence » (*De l'âme*, III, 2). Ce « moyen », c'est la sensation du sensible commun : la sensibilité compare **par une sensation** les sensibles des différents sens, et les subsume sans les réduire à un seul.
+
+    Le sens commun n'est donc pas une opération judicative : il s'agit de « sentir une certaine différence » (`tini aisthanometha diapherei`). La sensibilité est **autonome** : nul besoin de la raison ni d'une faculté de juger pour établir identités et différences entre les contenus des sens.
+
+    Aristote prend ainsi ses distances avec Platon, pour qui, dans le *Théétète*, c'est **l'âme et non la sensation** qui connaît la différence entre les sensations des différents sens. Le même reproche vaudrait contre toute approche **intellectualiste** de la perception, comme celle de Descartes : dans le « morceau de cire » des *Méditations métaphysiques* (II), les qualités senties sont unifiées par un **jugement** de l'entendement. Dans ces cadres, la différence entre sensibles n'est pas *sentie*, et l'unité vient d'une opération **extérieure** à la sensibilité.
+
+    ! Aristote rend les sens commensurables sans les réduire à un seul, comme le faisait Démocrite.
+  points:
+  - id: sens4-l4-p1
+    sentence: "Outre sentir les sensibles communs, la sensation commune a deux ___ qui établissent le fait que la sensibilité est une faculté dotée d'une véritable unité."
+    answer: "fonctions"
+    alt: []
+  - id: sens4-l4-p2
+    sentence: "La sensation du sensible commun assure une forme de ___ des sens entre eux, en rendant possible la sensation des différences entre les sensibles propres."
+    answer: "commensurabilité"
+    alt: []
+  - id: sens4-l4-p3
+    sentence: "« Si, par exemple, la vue distingue le blanc du noir, le goût, par contre, distingue le doux de l'___, et il en va de même pour les autres sens. Toutefois, dès lors que nous discernons aussi le blanc du doux et chacun des sensibles par rapport à chaque autre, c'est qu'un certain moyen nous permet de sentir cette différence. »"
+    answer: "amer"
+    alt: []
+  - id: sens4-l4-p4
+    sentence: "« Si, par exemple, la vue distingue le blanc du noir, le goût, par contre, distingue le doux de l'amer, et il en va de même pour les autres sens. Toutefois, dès lors que nous discernons aussi le blanc du ___ et chacun des sensibles par rapport à chaque autre, c'est qu'un certain moyen nous permet de sentir cette différence. »"
+    answer: "doux"
+    alt: []
+  - id: sens4-l4-p5
+    sentence: "« Si, par exemple, la vue distingue le blanc du noir, le goût, par contre, distingue le doux de l'amer, et il en va de même pour les autres sens. Toutefois, dès lors que nous discernons aussi le blanc du doux et chacun des sensibles par rapport à chaque autre, c'est qu'un certain ___ nous permet de sentir cette différence. »"
+    answer: "moyen"
+    alt: []
+  - id: sens4-l4-p6
+    sentence: "Le passage qui demande par quel moyen nous discernons le blanc du doux se trouve dans ___."
+    answer: "De l'âme, III, 2"
+    alt: ["DA III, 2", "De anima III, 2"]
+    explanation: "426b10-14."
+  - id: sens4-l4-p7
+    sentence: "Le « moyen » qui permet de discerner le blanc du doux, c'est la sensation du sensible ___."
+    answer: "commun"
+    alt: []
+  - id: sens4-l4-p8
+    sentence: "La sensation commune permet à la sensibilité d'établir et de comparer par une ___ les sensibles propres aux différents sens."
+    answer: "sensation"
+    alt: []
+  - id: sens4-l4-p9
+    sentence: "La sensibilité n'est pas l'addition de sens hétérogènes, mais une unique faculté qui les ___ et dont ils sont les instances, sans les réduire à un seul."
+    answer: "subsume"
+    alt: []
+  - id: sens4-l4-p10
+    sentence: "Le sens commun n'est pas une opération ___ ou un acte mental, mais bien un acte de la sensibilité."
+    answer: "judicative"
+    alt: []
+  - id: sens4-l4-p11
+    sentence: "« Sentir une certaine différence » se dit en grec ___."
+    answer: "tini aisthanometha diapherei"
+    alt: []
+    explanation: "De l'âme, III, 2, 426b14."
+  - id: sens4-l4-p12
+    sentence: "La sensibilité est une faculté ___ : elle n'a pas besoin de la raison ou d'une faculté de juger pour établir des liens d'identité et de différence entre le contenu des différents sens."
+    answer: "autonome"
+    alt: []
+  - id: sens4-l4-p13
+    sentence: "Dans le *___*, Platon affirme que c'est l'âme et non la sensation qui prend connaissance de la différence entre les sensations des différents sens."
+    answer: "Théétète"
+    alt: ["Theetete"]
+    explanation: "185c-186a."
+  - id: sens4-l4-p14
+    sentence: "Selon le *Théétète*, c'est l'___, et non la sensation, qui connaît la différence entre les sensations des différents sens."
+    answer: "âme"
+    alt: []
+  - id: sens4-l4-p15
+    sentence: "Aristote reproche implicitement à Platon de ne pas parvenir à penser une ___ suffisante de la sensibilité, qui lui permette de différencier par elle-même les sens."
+    answer: "unité"
+    alt: []
+  - id: sens4-l4-p16
+    sentence: "Le reproche d'Aristote à Platon vaudrait pour toutes les approches ___ de la perception, comme l'approche cartésienne."
+    answer: "intellectualistes"
+    alt: []
+  - id: sens4-l4-p17
+    sentence: "Dans le passage du « morceau de ___ » des *Méditations métaphysiques*, Descartes fait unifier les qualités senties par les différents sens par une opération de l'entendement."
+    answer: "cire"
+    alt: []
+  - id: sens4-l4-p18
+    sentence: "Chez Descartes, les qualités senties par les différents sens sont unifiées par un jugement de l'___."
+    answer: "entendement"
+    alt: []
+  - id: sens4-l4-p19
+    sentence: "Le « morceau de cire » de Descartes se trouve dans la Méditation ___ des *Méditations métaphysiques*."
+    answer: "II"
+    alt: ["seconde", "deuxième", "2"]
+  - id: sens4-l4-p20
+    sentence: "Dans les approches intellectualistes, l'unité des différents sens est assurée par une opération ___ à la sensibilité elle-même."
+    answer: "extérieure"
+    alt: []
+- id: sens4-l5
+  title: "La sensation commune : la conscience de sentir"
+  notes: |
+    Seconde fonction, connexe : la sensation commune assure une « **conscience de sentir** » ; c'est par elle que l'on *sent que* l'on voit, goûte ou touche. *De l'âme*, III, 2 est embarrassé sur ce point, mais le traité *Du sommeil et de la veille*, l'un des *Parva naturalia*, l'établit clairement, comme l'a montré Jacques Brunschwig dans un article fameux (« Les multiples chemins aristotéliciens de la sensation commune », 1991) : « Posons par ailleurs que chaque sens en particulier possède d'une part quelque chose de propre, d'autre part quelque chose de commun (ainsi la vue possède-t-elle en propre le voir, l'ouïe l'entendre et chaque sens les autres facultés de la même manière) ; posons d'autre part qu'il y a aussi une faculté commune qui les accompagne (`akolouthein`) tous, et par laquelle on sent que l'on voit et que l'on entend. »
+
+    La sensation commune est une opération distincte des sens, qui ne va pas sans l'un d'eux. Aristote se démarque encore de la conception intellectualiste (Platon, puis le cartésianisme), selon laquelle on ne *sent* pas que l'on sent, on *juge* que l'on sent : il maintient la conscience de sentir **à même la sensation**. La sensation commune **parachève** les sens particuliers : chacun ne s'exerce pleinement que si elle s'exerce en même temps.
+
+    Aristote tient ainsi ensemble le **pluralisme** de la sensibilité, dont il veut rendre la richesse et la variété sans la réduire, et son **unification immanente et organique** : une faculté, et une pluralité plus ou moins unifiée, sans opération mentale extérieure.
+
+    ! La conscience de sentir n'est pas un jugement ajouté à la sensation : elle est sentie.
+  points:
+  - id: sens4-l5-p1
+    sentence: "La sensation commune a vocation à assurer une forme de « conscience de ___ »."
+    answer: "sentir"
+    alt: []
+  - id: sens4-l5-p2
+    sentence: "Par la sensation commune, on ___ que l'on voit, goûte ou touche, plutôt qu'on ne le juge."
+    answer: "sent"
+    alt: []
+  - id: sens4-l5-p3
+    sentence: "Le chapitre 2 du livre III du *De l'âme* est assez ___ par la question de la conscience de sentir."
+    answer: "embarrassé"
+    alt: []
+  - id: sens4-l5-p4
+    sentence: "Le traité *Du sommeil et de la ___*, l'un des *Parva naturalia*, établit clairement que la conscience de sentir est une fonction de la sensation commune."
+    answer: "veille"
+    alt: []
+  - id: sens4-l5-p5
+    sentence: "Jacques Brunschwig a montré, dans un article fameux, que la conscience de sentir est une fonction de la ___ commune."
+    answer: "sensation"
+    alt: []
+  - id: sens4-l5-p6
+    sentence: "L'article de Jacques Brunschwig s'intitule « Les multiples ___ aristotéliciens de la sensation commune »."
+    answer: "chemins"
+    alt: []
+    explanation: "Revue de métaphysique et de morale, 1991."
+  - id: sens4-l5-p7
+    sentence: "« Posons par ailleurs que chaque sens en particulier possède d'une part quelque chose de ___, d'autre part quelque chose de commun (ainsi la vue possède-t-elle en propre le voir, l'ouïe l'entendre et chaque sens les autres facultés de la même manière) »"
+    answer: "propre"
+    alt: []
+  - id: sens4-l5-p8
+    sentence: "« Posons par ailleurs que chaque sens en particulier possède d'une part quelque chose de propre, d'autre part quelque chose de commun (ainsi la vue possède-t-elle en propre le voir, l'ouïe l'___ et chaque sens les autres facultés de la même manière) »"
+    answer: "entendre"
+    alt: []
+  - id: sens4-l5-p9
+    sentence: "« posons d'autre part qu'il y a aussi une faculté ___ qui les accompagne tous, et par laquelle on sent que l'on voit et que l'on entend. »"
+    answer: "commune"
+    alt: []
+  - id: sens4-l5-p10
+    sentence: "« posons d'autre part qu'il y a aussi une faculté commune qui les ___ tous, et par laquelle on sent que l'on voit et que l'on entend. »"
+    answer: "accompagne"
+    alt: []
+  - id: sens4-l5-p11
+    sentence: "Le verbe grec qui dit que la faculté commune « accompagne » tous les sens est ___."
+    answer: "akolouthein"
+    alt: []
+  - id: sens4-l5-p12
+    sentence: "La faculté commune qui accompagne tous les sens, et par laquelle on sent que l'on voit et que l'on entend, est posée au chapitre 2 du traité *___*."
+    answer: "Du sommeil et de la veille"
+    alt: []
+    explanation: "455a12-17."
+  - id: sens4-l5-p13
+    sentence: "La sensation commune est une opération distincte des sens, mais qui ne va pas sans le fonctionnement d'un sens ___."
+    answer: "particulier"
+    alt: []
+  - id: sens4-l5-p14
+    sentence: "Selon la conception intellectualiste de la sensation, on ne sent pas que l'on sent, mais on ___ que l'on sent."
+    answer: "juge"
+    alt: []
+  - id: sens4-l5-p15
+    sentence: "Aristote maintient la conscience de sentir à ___ la sensation."
+    answer: "même"
+    alt: []
+  - id: sens4-l5-p16
+    sentence: "La sensation commune ___ et complète les sens particuliers, en produisant la sensation du fait que ces sens fonctionnent."
+    answer: "parachève"
+    alt: []
+  - id: sens4-l5-p17
+    sentence: "Chaque sens ne s'exerce véritablement et pleinement qu'à condition que la sensation commune s'exerce en même ___."
+    answer: "temps"
+    alt: []
+  - id: sens4-l5-p18
+    sentence: "Aristote maintient une forme de ___ de la sensibilité : il veut rendre compte de la richesse et de la variété de ses formes sans la réduire."
+    answer: "pluralisme"
+    alt: []
+  - id: sens4-l5-p19
+    sentence: "Aristote garantit l'unification ___ et organique de la sensibilité, qui ne dépend d'aucune opération mentale extérieure."
+    answer: "immanente"
+    alt: []
+- id: sens4-l6
+  title: "Toucher et goût, sens de la vie"
+  notes: |
+    L'unité sans réduction n'empêche pas une **hiérarchie** des sens. Le **toucher** est commun à tous les animaux : « Sans le toucher, aucun autre sens ne saurait être attribué » (*De l'âme*, III, 13 ; ce dernier chapitre du traité est une sorte d'appendice sur ce sens). Deux raisons à sa particularité : on sent les qualités tactiles à travers le **corps entier**, non à travers une région spécifique ; et perdre le toucher, c'est **mourir**. Un animal peut devenir aveugle, sourd, perdre le goût, mais « il est clair qu'il s'agit du seul sens dont la privation entraîne nécessairement la mort des animaux ». Être un animal, c'est posséder au moins le toucher.
+
+    Le **goût**, commun lui aussi à tous les animaux, peut être perdu sans mourir. Il est nécessaire « à cause de la nutrition. C'est en effet le sens qui distingue entre le plaisant et le désagréable dans la nourriture, de sorte que l'on se détourne de l'un et que l'on recherche l'autre et, d'une manière générale, la saveur est une propriété de ce qui est nutritif » (*De la sensation et des sensibles*, 1). Certains animaux immobiles, comme les **huîtres**, n'ont que le toucher et le goût : « S'il n'a pas de sensation quand il est touché, l'animal sera incapable de fuir ceci et de prendre cela. Or, dans ces conditions, il lui sera impossible d'assurer sa conservation. C'est pourquoi le goût, lui aussi, se présente comme une sorte de toucher » (*De l'âme*, III, 12).
+
+    La remarque a troublé les commentateurs : si la gustation est « la sensation du tangible qui fait office d'aliment », le goût ne serait qu'un cas du toucher, contre l'irréductibilité des sens. G. Romeyer Dherbey y voit une **évolution** : une bipartition platonicienne (le *Philèbe*) entre sens du contact et sens à distance aurait précédé la division en cinq sens, proprement aristotélicienne. Ulysse Chaintreuil juge l'hypothèse inutile : Aristote rapproche toucher et goût parce qu'ils servent la **nutrition**, nécessaire à tout animal, même le plus simple.
+
+    ! Le goût est « une sorte de toucher » par sa fonction nutritive, non parce qu'il se confondrait avec le toucher.
+  points:
+  - id: sens4-l6-p1
+    sentence: "L'unité de la sensibilité n'empêche pas Aristote de penser une certaine organisation ___ des sens entre eux."
+    answer: "hiérarchique"
+    alt: []
+  - id: sens4-l6-p2
+    sentence: "Le toucher est un sens particulier en ce qu'il est commun à tous les ___, c'est-à-dire à toutes les sensibilités."
+    answer: "animaux"
+    alt: []
+  - id: sens4-l6-p3
+    sentence: "Le dernier chapitre du *De l'âme* se présente comme une forme d'___ à propos du toucher."
+    answer: "appendice"
+    alt: []
+  - id: sens4-l6-p4
+    sentence: "« Sans le toucher, aucun autre sens ne saurait être ___ » aux animaux."
+    answer: "attribué"
+    alt: []
+  - id: sens4-l6-p5
+    sentence: "L'affirmation que, sans le toucher, aucun autre sens ne saurait être attribué aux animaux se trouve dans ___."
+    answer: "De l'âme, III, 13"
+    alt: ["DA III, 13", "De anima III, 13"]
+    explanation: "435b2-3."
+  - id: sens4-l6-p6
+    sentence: "Première raison de la particularité du toucher : on sent les qualités tactiles à travers le corps ___, et non à travers une région spécifique du corps."
+    answer: "entier"
+    alt: []
+  - id: sens4-l6-p7
+    sentence: "Seconde raison de la particularité du toucher : sa disparition signifie la ___ de l'animal, ce qui n'est pas le cas pour les autres sens."
+    answer: "mort"
+    alt: []
+  - id: sens4-l6-p8
+    sentence: "« il est clair qu'il s'agit du seul sens dont la ___ entraîne nécessairement la mort des animaux »"
+    answer: "privation"
+    alt: []
+    explanation: "De l'âme, III, 13, 435b4-6."
+  - id: sens4-l6-p9
+    sentence: "Le toucher est la condition ___ de la sensibilité animale : être un animal veut dire posséder au moins le toucher."
+    answer: "minimale"
+    alt: []
+  - id: sens4-l6-p10
+    sentence: "Le goût est par nature commun à tous les animaux, mais il peut être perdu sans que l'animal cesse de ___."
+    answer: "vivre"
+    alt: []
+  - id: sens4-l6-p11
+    sentence: "Le goût est nécessaire « à cause de la ___. C'est en effet le sens qui distingue entre le plaisant et le désagréable dans la nourriture, de sorte que l'on se détourne de l'un et que l'on recherche l'autre et, d'une manière générale, la saveur est une propriété de ce qui est nutritif. »"
+    answer: "nutrition"
+    alt: []
+  - id: sens4-l6-p12
+    sentence: "Le goût est nécessaire « à cause de la nutrition. C'est en effet le sens qui distingue entre le plaisant et le ___ dans la nourriture, de sorte que l'on se détourne de l'un et que l'on recherche l'autre et, d'une manière générale, la saveur est une propriété de ce qui est nutritif. »"
+    answer: "désagréable"
+    alt: []
+  - id: sens4-l6-p13
+    sentence: "Le goût est nécessaire « à cause de la nutrition. C'est en effet le sens qui distingue entre le plaisant et le désagréable dans la nourriture, de sorte que l'on se détourne de l'un et que l'on recherche l'autre et, d'une manière générale, la saveur est une propriété de ce qui est ___. »"
+    answer: "nutritif"
+    alt: []
+  - id: sens4-l6-p14
+    sentence: "Le passage qui rattache le goût à la nutrition, parce qu'il distingue le plaisant du désagréable dans la nourriture, se trouve dans ___."
+    answer: "De la sensation et des sensibles, 1"
+    alt: ["De sens. 1", "De sensu 1", "De la sensation 1"]
+    explanation: "436b15-18."
+  - id: sens4-l6-p15
+    sentence: "Certains animaux marins qui ne peuvent pas se déplacer, comme les ___, ne possèdent que le toucher et le goût."
+    answer: "huîtres"
+    alt: []
+  - id: sens4-l6-p16
+    sentence: "« S'il n'a pas de sensation quand il est touché, l'animal sera incapable de ___ ceci et de prendre cela. Or, dans ces conditions, il lui sera impossible d'assurer sa conservation. C'est pourquoi le goût, lui aussi, se présente comme une sorte de toucher. »"
+    answer: "fuir"
+    alt: []
+  - id: sens4-l6-p17
+    sentence: "« S'il n'a pas de sensation quand il est touché, l'animal sera incapable de fuir ceci et de prendre cela. Or, dans ces conditions, il lui sera impossible d'assurer sa ___. C'est pourquoi le goût, lui aussi, se présente comme une sorte de toucher. »"
+    answer: "conservation"
+    alt: []
+  - id: sens4-l6-p18
+    sentence: "« S'il n'a pas de sensation quand il est touché, l'animal sera incapable de fuir ceci et de prendre cela. Or, dans ces conditions, il lui sera impossible d'assurer sa conservation. C'est pourquoi le goût, lui aussi, se présente comme une sorte de ___. »"
+    answer: "toucher"
+    alt: []
+  - id: sens4-l6-p19
+    sentence: "Le passage selon lequel le goût se présente, lui aussi, comme une sorte de toucher se trouve dans ___."
+    answer: "De l'âme, III, 12"
+    alt: ["DA III, 12", "De anima III, 12"]
+    explanation: "434b16-18."
+  - id: sens4-l6-p20
+    sentence: "La gustation est dite être « la sensation du ___ qui fait office d'aliment »."
+    answer: "tangible"
+    alt: []
+    explanation: "De l'âme, III, 12, 434b22-23."
+  - id: sens4-l6-p21
+    sentence: "Selon G. Romeyer Dherbey, la théorie aristotélicienne de la sensation a connu une ___ : une bipartition entre sens du contact et sens à distance aurait précédé la division de la sensibilité en cinq sens."
+    answer: "évolution"
+    alt: []
+  - id: sens4-l6-p22
+    sentence: "Pour G. Romeyer Dherbey, la première bipartition des sens, entre sens du contact et sens à distance, serait ___."
+    answer: "platonicienne"
+    alt: []
+  - id: sens4-l6-p23
+    sentence: "Selon Ulysse Chaintreuil, Aristote rassemble le toucher et le goût parce qu'ils permettent la nutrition animale, nécessaire à la vie de tout animal, y compris des plus ___ : ceux qui ne se meuvent pas."
+    answer: "simples"
+    alt: []
+- id: sens4-l7
+  title: "Les sens à distance et la vie bonne"
+  notes: |
+    Les sens qui perçoivent **à distance**, au contraire, « ont pour but le bien-être et sont donnés, non d'emblée à n'importe quel genre d'animal au hasard, mais à certains, comme le genre capable de locomotion, qui les possèdent nécessairement » (*De l'âme*, III, 12 ; argument voisin en *De la sensation et des sensibles*, 1). La sensibilité de chaque animal répond à son **mode de vie** : les huîtres, immobiles, n'ont pas besoin de sentir ce qui se passe loin d'elles ; les animaux qui se déplacent ont besoin des sens à distance pour s'**orienter**. La bipartition correspond à deux manières de vivre.
+
+    Un passage « fascinant » du *De la sensation et des sensibles* (1) va plus loin : « pour les animaux qui possèdent l'intelligence (`phronèsis`), ces sensations », l'ouïe, la vue et l'odorat, « existent en vue du bien. Elles annoncent en effet un grand nombre de différences d'où proviennent à la fois l'intelligence des intelligibles et celle des actions à accomplir. » Les sens ont part à la **vie bonne** de l'être humain, dont l'excellence (prudence et sagesse) est l'exercice de l'intelligence, qui consiste elle aussi à établir des différences. L'intelligence ne se réduit pas aux sens ; mais ceux-ci ne sont pas exclus de son exercice.
+
+    | Sens qui a le plus part à la vie bonne | Pourquoi |
+    | Par elle-même : la **vue** | « tous les corps ont part à la couleur », et c'est par elle qu'on perçoit le mieux les sensibles communs |
+    | Par accident : l'**ouïe** | le discours (`logos`) est audible et « est cause du savoir » |
+
+    Les Grecs ne pratiquaient pas, ou très peu, la **lecture silencieuse** : on lisait ou se faisait lire les textes à voix haute. La sensibilité n'est pas en vase clos : **il y a autant de types de sensibilité que d'espèces animales**.
+
+    ! Chez l'homme, les sens ne servent pas seulement la survie : ils existent aussi en vue du bien.
+  points:
+  - id: sens4-l7-p1
+    sentence: "Les sens qui perçoivent à distance « ont pour but le ___ et sont donnés, non d'emblée à n'importe quel genre d'animal au hasard, mais à certains, comme le genre capable de locomotion, qui les possèdent nécessairement »."
+    answer: "bien-être"
+    alt: []
+  - id: sens4-l7-p2
+    sentence: "Les sens qui perçoivent à distance « ont pour but le bien-être et sont donnés, non d'emblée à n'importe quel genre d'animal au hasard, mais à certains, comme le genre capable de ___, qui les possèdent nécessairement »."
+    answer: "locomotion"
+    alt: []
+  - id: sens4-l7-p3
+    sentence: "Le passage qui donne pour but aux sens à distance le bien-être des animaux capables de locomotion se trouve dans ___."
+    answer: "De l'âme, III, 12"
+    alt: ["DA III, 12", "De anima III, 12"]
+    explanation: "434b24-27 ; argument voisin en De la sensation et des sensibles, 1, 436b18-21."
+  - id: sens4-l7-p4
+    sentence: "La sensibilité spécifique de chaque animal correspond à son ___ de vie propre et au reste de ses facultés."
+    answer: "mode"
+    alt: []
+  - id: sens4-l7-p5
+    sentence: "Les animaux capables de se déplacer ont besoin des sens qui permettent la sensation à distance pour pouvoir s'___ dans l'espace."
+    answer: "orienter"
+    alt: []
+  - id: sens4-l7-p6
+    sentence: "La bipartition de la sensibilité correspond à deux manières de ___ pour les animaux, selon qu'ils ont besoin ou non de se déplacer pour trouver leur nourriture."
+    answer: "vivre"
+    alt: []
+  - id: sens4-l7-p7
+    sentence: "« pour les animaux qui possèdent l'intelligence, ces sensations », l'ouïe, la vue et l'odorat, « existent en vue du ___. »"
+    answer: "bien"
+    alt: []
+  - id: sens4-l7-p8
+    sentence: "L'intelligence dont il est question dans le passage du *De la sensation et des sensibles* sur les sens « en vue du bien » se dit en grec ___."
+    answer: "phronèsis"
+    alt: ["phronesis"]
+  - id: sens4-l7-p9
+    sentence: "« Elles annoncent en effet un grand nombre de ___ d'où proviennent à la fois l'intelligence des intelligibles et celle des actions à accomplir. »"
+    answer: "différences"
+    alt: []
+  - id: sens4-l7-p10
+    sentence: "« Elles annoncent en effet un grand nombre de différences d'où proviennent à la fois l'intelligence des ___ et celle des actions à accomplir. »"
+    answer: "intelligibles"
+    alt: []
+  - id: sens4-l7-p11
+    sentence: "Le passage selon lequel, pour les animaux intelligents, l'ouïe, la vue et l'odorat existent en vue du bien se trouve dans ___."
+    answer: "De la sensation et des sensibles, 1"
+    alt: ["De sens. 1", "De sensu 1", "De la sensation 1"]
+    explanation: "437a1-3."
+  - id: sens4-l7-p12
+    sentence: "L'exercice excellent de l'intelligence, la prudence et la ___, est l'excellence de la vie humaine."
+    answer: "sagesse"
+    alt: []
+  - id: sens4-l7-p13
+    sentence: "Les sens ont part à la vie ___ de l'être intelligent qu'est l'être humain."
+    answer: "bonne"
+    alt: []
+  - id: sens4-l7-p14
+    sentence: "Par elle-même, c'est la ___ qui, parmi les sens, a le plus part à la vie bonne."
+    answer: "vue"
+    alt: []
+  - id: sens4-l7-p15
+    sentence: "La vue « nous révèle un grand nombre de différences de toute sorte parce que tous les corps ont part à la ___, si bien que c'est également par son intermédiaire que l'on perçoit le mieux les <sensibles> communs. »"
+    answer: "couleur"
+    alt: []
+    explanation: "De la sensation et des sensibles, 1, 437a5-8."
+  - id: sens4-l7-p16
+    sentence: "La vue « nous révèle un grand nombre de différences de toute sorte parce que tous les corps ont part à la couleur, si bien que c'est également par son intermédiaire que l'on perçoit le mieux les <sensibles> ___. »"
+    answer: "communs"
+    alt: []
+    explanation: "De la sensation et des sensibles, 1, 437a5-8."
+  - id: sens4-l7-p17
+    sentence: "« Par accident », c'est l'___ qui participe le plus de l'intelligence."
+    answer: "ouïe"
+    alt: []
+  - id: sens4-l7-p18
+    sentence: "L'ouïe participe le plus de l'intelligence parce que le « discours », en grec ___, est essentiellement audible."
+    answer: "logos"
+    alt: []
+  - id: sens4-l7-p19
+    sentence: "Le discours, qui s'entend, « est cause du ___ »."
+    answer: "savoir"
+    alt: []
+    explanation: "De la sensation et des sensibles, 1, 437a12-13."
+  - id: sens4-l7-p20
+    sentence: "« Est cause du savoir » se dit en grec ___."
+    answer: "aition esti tès mathèseôs"
+    alt: ["aition esti tes matheseos"]
+  - id: sens4-l7-p21
+    sentence: "Les Grecs ne pratiquaient pas, ou très peu, la lecture ___ : ils lisaient ou se faisaient lire les textes à voix haute."
+    answer: "silencieuse"
+    alt: []
+  - id: sens4-l7-p22
+    sentence: "La sensibilité aristotélicienne ne fonctionne pas en vase clos : il y a autant de types de sensibilité que d'___ animales."
+    answer: "espèces"
+    alt: []

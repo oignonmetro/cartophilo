@@ -1,0 +1,364 @@
+# Unité classique (voir content/philosophie.md) tirée de l'exposé d'Ulysse
+# Chaintreuil, « Aristote et la sensibilité : une faculté fondamentale »
+# (scan agrégation, p. 101-148), dans l'ordre de l'exposé ; citations dans les
+# traductions qu'il donne (Bodéüs pour le De l'âme, Morel pour les Parva
+# naturalia, souvent « trad. modifiée »).
+#
+# Repères de la source laissés hors des cartes parce que douteux :
+# Seconds Analytiques « II, 18 » (81a38-39 est en I, 18) ; De la sensation
+# « chapitre 6 » pour les odeurs (443a17-445a4 relève du chapitre 5) ;
+# Rhétorique « 1038a31-33 » (lire 1378a31-33) ; « 417a3-5 » (lire 417b3-5) ;
+# appétit orthographié « horexis » / « horesis » (écrit ici orexis).
+
+id: sens1
+title: "La place de la sensibilité"
+subtitle: "Aristote : la faculté de sentir, critère de l'animal et fondement de sa psychologie"
+icon: compass
+color: teal
+group: "La sensibilité selon Aristote"
+lessons:
+- id: sens1-l1
+  title: "Une faculté de l'âme"
+  notes: |
+    Parmi les sens que l'on donne aujourd'hui à « sensibilité », Aristote privilégie la **faculté de sentir** : celle que possèdent certains vivants, les animaux à l'exclusion des plantes, et qui leur permet de sentir les qualités sensibles des choses qui les entourent.
+
+    Contrairement à une attitude très répandue dans l'histoire de la philosophie, son intérêt n'est **pas d'abord critique** : il ne cherche pas au premier chef à savoir si la sensibilité trompe ou si elle produit des connaissances. Cet intérêt est d'abord **biologique** (une faculté du vivant) et plus précisément **psychologique** (la sensation est l'une des opérations fondamentales de l'âme, en rapport singulier avec ses autres facultés). Aristote en tire des considérations gnoséologiques, mais ce n'est pas le but principal de sa théorie.
+
+    La sensation est centrale pour l'existence de l'animal : elle est le critère qui l'identifie au sein du vivant, mais surtout la manière dont il se rapporte au monde.
+
+    L'exposé suit quatre temps :
+    - pourquoi la sensibilité occupe une place centrale dans la pensée du vivant ;
+    - un unique mécanisme, la sensation, analogue pour tous les sens ;
+    - la pluralité des sens, irréductible, face à l'unité de la sensibilité ;
+    - la sensibilité, fondement de la vie psychique complexe des animaux.
+
+    ! « Sensibilité » ne désigne pas ici l'affectivité ni le goût esthétique, mais d'abord la faculté de sentir.
+  points:
+  - id: sens1-l1-p1
+    sentence: "Parmi les différents sens que l'on donne aujourd'hui à la notion de sensibilité, Aristote accorde une importance particulière à la « faculté de ___ »."
+    answer: "sentir"
+    alt: []
+  - id: sens1-l1-p2
+    sentence: "La faculté de sentir appartient, selon Aristote, aux animaux à l'exclusion des ___."
+    answer: "plantes"
+    alt: []
+  - id: sens1-l1-p3
+    sentence: "Contrairement à une attitude très répandue dans l'histoire de la philosophie, l'intérêt d'Aristote pour la sensibilité n'est pas d'abord ___ : il ne cherche pas au premier chef à savoir si elle trompe ou si elle produit des connaissances."
+    answer: "critique"
+    alt: []
+  - id: sens1-l1-p4
+    sentence: "L'intérêt d'Aristote pour la faculté de sentir est d'abord ___, puisqu'il s'agit de l'une des facultés du vivant."
+    answer: "biologique"
+    alt: []
+  - id: sens1-l1-p5
+    sentence: "Plus précisément, l'intérêt d'Aristote pour la sensibilité est ___ : la sensation est l'une des opérations fondamentales de l'âme et entretient des rapports singuliers avec ses autres facultés."
+    answer: "psychologique"
+    alt: []
+  - id: sens1-l1-p6
+    sentence: "Aristote tire bien de sa théorie de la sensation des considérations ___, portant sur la connaissance, mais ce n'en est pas le but principal."
+    answer: "gnoséologiques"
+    alt: []
+  - id: sens1-l1-p7
+    sentence: "Pour Aristote, la sensibilité est avant tout une ___ de l'âme, dont l'opération, la sensation, est centrale pour l'existence de l'animal."
+    answer: "faculté"
+    alt: []
+  - id: sens1-l1-p8
+    sentence: "La sensation n'est pas seulement le critère qui identifie l'animal au sein du règne du vivant : elle est surtout la manière dont l'animal se rapporte au ___."
+    answer: "monde"
+    alt: []
+  - id: sens1-l1-p9
+    sentence: "Aristote théorise un unique mécanisme pour l'activité de la sensibilité, la sensation, qui s'applique de façon ___ à tous les sens."
+    answer: "analogue"
+    alt: []
+  - id: sens1-l1-p10
+    sentence: "Selon Aristote, la pluralité des sens est ___, ce qui pose un problème pour l'unité de la sensibilité."
+    answer: "irréductible"
+    alt: []
+  - id: sens1-l1-p11
+    sentence: "La sensibilité est, pour Aristote, le fondement de la vie ___ complexe des animaux."
+    answer: "psychique"
+    alt: []
+- id: sens1-l2
+  title: "L'âme, principe de vie"
+  notes: |
+    La sensibilité est une faculté centrale de la « psychologie » d'Aristote, son discours (`logos`) sur l'âme (`psuchè`). De manière étonnante pour nous, l'étude de l'âme n'y est pas « métaphysique » : cette habitude vient de la tradition **chrétienne** et de sa manière de penser la relation de l'âme et du corps, où l'âme est un objet mystérieux, au statut ontologique flou, décisif pour penser ce que « je » suis.
+
+    Aristote conçoit d'abord l'âme comme **le principe qui fait que les vivants sont en vie**. La psychologie est une partie de la **biologie** : elle étudie les « puissances » ou « facultés » (`dunameis`) propres au vivant, qui le distinguent de l'inerte (nutrition, reproduction, sensibilité, appétit, intelligence ou `nous`, motricité). « Il y a vie là où se trouve ne serait-ce qu'une seule quelconque des manifestations telles que l'intelligence, la sensation, le mouvement local et le repos, ou encore le mouvement nutritif, dépérissement et croissance. » (*De l'âme*, II, 2)
+
+    Les développements sur la sensibilité sont quantitativement sans égal :
+
+    | Faculté      | *De l'âme*                     | *Parva naturalia*            |
+    | Sensibilité  | neuf chapitres (II, 5 à III, 2) | tout le *De la sensation et des sensibles*, sept chapitres |
+    | Nutrition    | un chapitre (II, 4)            | jamais abordée en propre     |
+    | Intelligence | trois chapitres (III, 4-6)     | aucun développement propre   |
+
+    Les *Parva naturalia* (*Petits traités d'histoire naturelle*) prolongent le *De l'âme* sur certaines facultés (sensibilité, mémoire) et des faits zoologiques transversaux (sommeil, rêves, longévité, mort des animaux).
+
+    Cette importance quantitative reflète une **double importance théorique** : la sensibilité fait la spécificité du règne animal, littéralement la manière de vivre des animaux ; et, surtout, elle fonde la diversité des autres opérations (désir, imagination, remémoration, intelligence), qui toutes « dérivent » à leur manière de la sensation.
+
+    ! Pour Aristote, l'âme n'est pas un objet mystérieux distinct du vivant : c'est son principe de vie.
+  points:
+  - id: sens1-l2-p1
+    sentence: "La « psychologie » d'Aristote est son discours, en grec ___, sur l'âme."
+    answer: "logos"
+    alt: []
+  - id: sens1-l2-p2
+    sentence: "L'âme se dit en grec ___."
+    answer: "psuchè"
+    alt: ["psyche", "psukhe", "psuche"]
+  - id: sens1-l2-p3
+    sentence: "De manière étonnante pour nous, l'étude de l'âme n'est pas, chez Aristote, une réflexion que nous qualifierions de « ___ »."
+    answer: "métaphysique"
+    alt: []
+  - id: sens1-l2-p4
+    sentence: "L'habitude de faire de l'âme un objet mystérieux, au statut ontologique flou et décisif pour penser ce que « je » suis, nous vient de la tradition ___ et de sa manière de penser la relation de l'âme et du corps."
+    answer: "chrétienne"
+    alt: []
+  - id: sens1-l2-p5
+    sentence: "Aristote conçoit l'âme avant tout comme le ___ qui fait que les êtres vivants sont en vie."
+    answer: "principe"
+    alt: []
+  - id: sens1-l2-p6
+    sentence: "Pour Aristote, la psychologie est une partie de la ___."
+    answer: "biologie"
+    alt: []
+  - id: sens1-l2-p7
+    sentence: "L'étude de l'âme est l'étude des « puissances » ou « facultés » propres au vivant, en grec les ___."
+    answer: "dunameis"
+    alt: []
+  - id: sens1-l2-p8
+    sentence: "L'étude de l'âme est une réflexion transversale sur les opérations propres au vivant, celles qui le distinguent de l'___."
+    answer: "inerte"
+    alt: []
+  - id: sens1-l2-p9
+    sentence: "« Il y a vie là où se trouve ne serait-ce qu'une seule quelconque des ___ telles que l'intelligence, la sensation, le mouvement local et le repos, ou encore le mouvement nutritif, dépérissement et croissance. »"
+    answer: "manifestations"
+    alt: []
+  - id: sens1-l2-p10
+    sentence: "« Il y a vie là où se trouve ne serait-ce qu'une seule quelconque des manifestations telles que l'intelligence, la sensation, le mouvement ___ et le repos, ou encore le mouvement nutritif, dépérissement et croissance. »"
+    answer: "local"
+    alt: []
+  - id: sens1-l2-p11
+    sentence: "Le passage qui reconnaît la vie à la présence d'une seule quelconque de ses manifestations (intelligence, sensation, mouvement local, mouvement nutritif) se trouve dans ___."
+    answer: "De l'âme, II, 2"
+    alt: ["DA II, 2", "De anima II, 2"]
+    explanation: "413a22-25."
+  - id: sens1-l2-p12
+    sentence: "Les développements d'Aristote sur la sensibilité occupent ___ chapitres du traité *De l'âme*, de II, 5 à III, 2."
+    answer: "neuf"
+    alt: ["9"]
+  - id: sens1-l2-p13
+    sentence: "Un petit traité d'Aristote est entièrement consacré à la sensibilité : le *De la sensation et des ___*."
+    answer: "sensibles"
+    alt: []
+  - id: sens1-l2-p14
+    sentence: "Le traité *De la sensation et des sensibles* compte ___ chapitres, tous consacrés à la sensibilité."
+    answer: "sept"
+    alt: ["7"]
+  - id: sens1-l2-p15
+    sentence: "Le *De la sensation et des sensibles* fait partie des *Petits traités d'histoire naturelle*, en latin les *___*."
+    answer: "Parva naturalia"
+    alt: []
+  - id: sens1-l2-p16
+    sentence: "Les *Parva naturalia* prolongent le *De l'âme* par des réflexions sur certaines facultés, comme la sensibilité et la mémoire, ou sur des faits zoologiques transversaux : le sommeil, les rêves, la longévité et la ___ des animaux."
+    answer: "mort"
+    alt: []
+  - id: sens1-l2-p17
+    sentence: "L'examen de la nutrition n'occupe qu'un seul chapitre du *De l'âme*, le chapitre ___ du livre II, et n'est jamais abordé en propre dans les *Parva naturalia*."
+    answer: "4"
+    alt: []
+  - id: sens1-l2-p18
+    sentence: "L'intelligence, en grec ___, ne fait l'objet que de trois chapitres du *De l'âme* (III, 4-6), malgré son rôle crucial dans les réflexions éthiques et épistémologiques d'Aristote."
+    answer: "nous"
+    alt: []
+  - id: sens1-l2-p19
+    sentence: "La sensibilité détermine la spécificité du règne animal au sein du vivant : elle est littéralement la manière qu'ont les animaux de ___."
+    answer: "vivre"
+    alt: []
+  - id: sens1-l2-p20
+    sentence: "Le désir, l'imagination, la remémoration et l'intelligence elle-même ne sont possibles que dans un être doué de sensibilité, parce que chacune « ___ » à sa manière de la sensation."
+    answer: "dérive"
+    alt: []
+- id: sens1-l3
+  title: "Le critère de l'animal"
+  notes: |
+    Tous les vivants ont une âme, mais tous n'ont pas toutes ses facultés. Aristote a une conception **extensive** du vivant : contre de nombreux Grecs, qui font de la respiration « la norme de la vie » et excluent par là les plantes (qui, pour eux, ne respirent pas), il tient les plantes pour vivantes. La « norme de la vie » est pour lui la faculté de **se nourrir**, dont découle celle de se reproduire : la nutrition maintient la vie dans le temps au niveau de l'individu, la reproduction au niveau de l'espèce.
+
+    Les animaux ont davantage de facultés (mobilité, mémoire, plaisir et douleur, donc désir et crainte), au point qu'il y a un **saut de nature**, et non une simple différence de degré, entre règne végétal et règne animal. Ce qui fonde ce saut, c'est la sensibilité : tous les animaux l'ont, aucune plante ne l'a. Même les plus simples, que la biologie moderne nommera « zoophytes », comme les éponges de mer, ont au moins le toucher, vraisemblablement aussi le goût. D'autres facultés n'appartiennent qu'à certains animaux : l'intelligence à l'homme, la motricité à ceux qui ne sont pas, comme les huîtres, fixés.
+
+    « Donc c'est en vertu de ce principe [la nutrition] que la vie est dévolue aux vivants, bien que l'animal soit fondamentalement identifiable grâce au critère de la sensation. » (*De l'âme*, II, 2) ; « c'est par cela que nous distinguons ce qui est animal et ce qui ne l'est pas » (*De la sensation et des sensibles*, 1).
+
+    | Vivant  | Facultés                          | Cas limite                        |
+    | Plante  | nutrition, reproduction           |                                   |
+    | Animal  | + sensibilité, au moins le toucher | l'éponge de mer, zoophyte ; l'huître, sans motricité |
+    | Homme   | + intelligence (`nous`)           |                                   |
+
+    ! La sensibilité n'est pas une propriété de plus parmi d'autres : elle fonde la division même du domaine vivant.
+  points:
+  - id: sens1-l3-p1
+    sentence: "Aristote a une conception particulièrement ___ du domaine du vivant, puisqu'il y inclut les plantes."
+    answer: "extensive"
+    alt: []
+  - id: sens1-l3-p2
+    sentence: "De nombreux Grecs faisaient de la ___ « la norme de la vie », excluant ainsi les plantes du règne du vivant."
+    answer: "respiration"
+    alt: []
+  - id: sens1-l3-p3
+    sentence: "L'expression « la norme de la vie », que de nombreux Grecs appliquent à la respiration, est relevée par Aristote dans ___."
+    answer: "De l'âme, I, 2"
+    alt: ["DA I, 2", "De anima I, 2"]
+    explanation: "404a9."
+  - id: sens1-l3-p4
+    sentence: "Les Grecs, Aristote compris, considèrent que les plantes ne ___ pas."
+    answer: "respirent"
+    alt: []
+    explanation: "De la respiration, 1, 470b26-27."
+  - id: sens1-l3-p5
+    sentence: "Pour Aristote, la « norme de la vie » est la faculté de se ___, dont découle celle de se reproduire."
+    answer: "nourrir"
+    alt: []
+  - id: sens1-l3-p6
+    sentence: "La nutrition maintient la vie dans le temps au niveau de l'individu ; la reproduction la maintient au niveau de l'___."
+    answer: "espèce"
+    alt: []
+  - id: sens1-l3-p7
+    sentence: "Entre le règne végétal et le règne animal, il y a selon Aristote un saut de ___, et pas seulement une différence de degré."
+    answer: "nature"
+    alt: []
+  - id: sens1-l3-p8
+    sentence: "Ce qui fonde le saut de nature entre les plantes et les animaux, c'est la ___ des animaux."
+    answer: "sensibilité"
+    alt: []
+  - id: sens1-l3-p9
+    sentence: "Les animaux les plus simples, qui ressemblent fort à des plantes, sont ceux que la biologie moderne nommera les « ___ »."
+    answer: "zoophytes"
+    alt: []
+  - id: sens1-l3-p10
+    sentence: "Les ___ de mer sont l'exemple d'animaux qui ressemblent à des plantes, mais possèdent au moins un sens."
+    answer: "éponges"
+    alt: []
+  - id: sens1-l3-p11
+    sentence: "Même les animaux les plus simples doivent posséder au moins un sens, le ___, et vraisemblablement aussi le goût, sans quoi ils ne seraient pas des animaux."
+    answer: "toucher"
+    alt: []
+  - id: sens1-l3-p12
+    sentence: "Certaines facultés ne sont possédées que par certains animaux : ainsi la motricité, dont sont dépourvus certains animaux marins comme les ___."
+    answer: "huîtres"
+    alt: []
+  - id: sens1-l3-p13
+    sentence: "La sensibilité, commune à tous les animaux, est le ___ qui consacre le saut de nature entre les plantes et les animaux."
+    answer: "critère"
+    alt: []
+  - id: sens1-l3-p14
+    sentence: "« Donc c'est en vertu de ce principe [la ___] que la vie est dévolue aux vivants, bien que l'animal soit fondamentalement identifiable grâce au critère de la sensation. »"
+    answer: "nutrition"
+    alt: []
+  - id: sens1-l3-p15
+    sentence: "« Donc c'est en vertu de ce principe [la nutrition] que la vie est dévolue aux vivants, bien que l'animal soit fondamentalement identifiable grâce au critère de la ___. »"
+    answer: "sensation"
+    alt: []
+  - id: sens1-l3-p16
+    sentence: "La phrase qui fait de la nutrition le principe de la vie et de la sensation le critère de l'animal se trouve dans ___."
+    answer: "De l'âme, II, 2"
+    alt: ["DA II, 2", "De anima II, 2"]
+    explanation: "413b1-2."
+  - id: sens1-l3-p17
+    sentence: "À propos de la sensation, Aristote écrit : « c'est par cela que nous distinguons ce qui est ___ et ce qui ne l'est pas »."
+    answer: "animal"
+    alt: []
+  - id: sens1-l3-p18
+    sentence: "La remarque selon laquelle c'est par la sensation « que nous distinguons ce qui est animal et ce qui ne l'est pas » se trouve dans ___."
+    answer: "De la sensation et des sensibles, 1"
+    alt: ["De sens. 1", "De sensu 1", "De la sensation 1"]
+    explanation: "436b11-13."
+  - id: sens1-l3-p19
+    sentence: "La sensibilité, critère de l'organisation du domaine biologique, est aussi à l'origine de la diversité de la ___ animale, c'est-à-dire de ses facultés."
+    answer: "psychologie"
+    alt: []
+- id: sens1-l4
+  title: "Sensibilité, psychologie animale et intérêt pour l'animal"
+  notes: |
+    Désirer et craindre (la faculté **appétitive**) sont aussi communs à tous les animaux, mais ils « dérivent » de la sensibilité : c'est **dans** le contenu de ses sensations que l'animal trouve du plaisant et du douloureux, qu'il peut dès lors désirer ou craindre. La sensibilité est la condition de l'appétitif, sans s'y réduire : goûter une saveur n'est pas la même chose que désirer manger tel plat. La sensation est une condition nécessaire et suffisante pour éprouver désir et crainte.
+
+    De même pour l'imagination (`phantasia`) et la remémoration, et même, en un sens, pour la motricité (qui implique le désir) et l'intelligence (`nous`, qui implique l'imagination, faculté de se représenter une qualité sensible **absente**). Chaque faculté a ses objets et ses opérations propres ; mais aucune n'existe hors d'un être sensible. La sensibilité est la **condition de possibilité** de toute la psychologie animale.
+
+    D'où l'importance de l'animal : la majorité du corpus biologique d'Aristote est zoologique, les plantes n'y sont qu'évoquées. On l'attribue souvent à une anecdote douteuse : Aristote et son disciple Théophraste se seraient partagé le vivant, les animaux au maître, les plantes au disciple, dont on a conservé plusieurs traités sur les plantes. Deux raisons théoriques sont plus probables :
+    - l'animal est plus **complet** : davantage de « fonctions » (`erga`) et de « facultés » (`dunameis`), un plus grand « achèvement » (`teleion`) ;
+    - le monde animal est plus **divers**, et l'attention à la diversité est un trait de la philosophie d'Aristote.
+
+    Complétude et diversité sont l'effet de la sensibilité, qui ouvre l'animal à des opérations complexes et unifie cette diversité sous un seul critère, sa manière de vivre.
+
+    ! Dire que les autres facultés « dérivent » de la sensation ne veut pas dire qu'elles s'y réduisent.
+  points:
+  - id: sens1-l4-p1
+    sentence: "La faculté de désirer et de craindre, commune à tous les animaux, s'appelle la faculté ___."
+    answer: "appétitive"
+    alt: []
+  - id: sens1-l4-p2
+    sentence: "La faculté appétitive « dérive » de la sensibilité : c'est dans le contenu de ses sensations que l'animal trouve le ___ et le douloureux."
+    answer: "plaisant"
+    alt: []
+  - id: sens1-l4-p3
+    sentence: "L'appétitif est une sorte d'___ de la sensibilité : il n'est possible que pour un être ressentant du plaisir et de la peine."
+    answer: "extension"
+    alt: []
+  - id: sens1-l4-p4
+    sentence: "La sensibilité est la condition de la faculté appétitive, mais l'appétitif n'est pas ___ à la sensibilité, car leurs opérations sont clairement distinctes."
+    answer: "réductible"
+    alt: []
+  - id: sens1-l4-p5
+    sentence: "Sentir, par exemple goûter une ___, n'est pas la même chose que désirer, par exemple désirer manger tel plat."
+    answer: "saveur"
+    alt: []
+  - id: sens1-l4-p6
+    sentence: "La sensation est une condition nécessaire et ___ pour pouvoir éprouver du désir et de la crainte."
+    answer: "suffisante"
+    alt: []
+  - id: sens1-l4-p7
+    sentence: "La faculté d'imagination se dit en grec ___."
+    answer: "phantasia"
+    alt: []
+  - id: sens1-l4-p8
+    sentence: "L'imagination est la faculté de se représenter la sensation d'une qualité sensible ___."
+    answer: "absente"
+    alt: []
+  - id: sens1-l4-p9
+    sentence: "L'intelligence implique en un certain sens l'___, qui dérive elle-même de la sensibilité."
+    answer: "imagination"
+    alt: []
+  - id: sens1-l4-p10
+    sentence: "La motricité dérive en un sens de la sensibilité, parce qu'elle implique le ___."
+    answer: "désir"
+    alt: []
+  - id: sens1-l4-p11
+    sentence: "Toutes les facultés animales ne peuvent exister et fonctionner que dans un être doué de sensibilité : celle-ci est leur condition de ___."
+    answer: "possibilité"
+    alt: []
+  - id: sens1-l4-p12
+    sentence: "La sensibilité n'est pas seulement un critère « pour nous » : elle est aussi, et sans doute d'abord, la ___ de vivre de l'animal."
+    answer: "manière"
+    alt: []
+  - id: sens1-l4-p13
+    sentence: "Quantitativement, la majorité du corpus biologique d'Aristote est ___ : parler de la vie, pour lui, c'est essentiellement parler de l'animal."
+    answer: "zoologique"
+    alt: []
+  - id: sens1-l4-p14
+    sentence: "Selon une anecdote d'origine douteuse, Aristote se serait réservé l'étude des animaux et aurait laissé celle des plantes à son disciple ___."
+    answer: "Théophraste"
+    alt: []
+  - id: sens1-l4-p15
+    sentence: "Les animaux possèdent davantage de « fonctions », en grec ___, que les plantes."
+    answer: "erga"
+    alt: []
+  - id: sens1-l4-p16
+    sentence: "Aristote affirme à plusieurs reprises le plus grand « achèvement », en grec ___, de l'animal sur la plante."
+    answer: "teleion"
+    alt: []
+  - id: sens1-l4-p17
+    sentence: "Parce qu'ils sont plus complets, les animaux sont aussi plus variés : l'attention à la ___ est l'un des traits de la philosophie d'Aristote."
+    answer: "diversité"
+    alt: []
+  - id: sens1-l4-p18
+    sentence: "Complétude et diversité de la psychologie animale sont l'effet de la ___, qui ouvre l'animal à des opérations complexes et unifie cette diversité sous un seul critère."
+    answer: "sensibilité"
+    alt: []

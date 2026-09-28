@@ -1,0 +1,825 @@
+# Unité classique (voir content/philosophie.md) tirée de l'exposé d'Ulysse
+# Chaintreuil, « Aristote et la sensibilité : une faculté fondamentale »
+# (scan agrégation, p. 101-148), dans l'ordre de l'exposé ; citations dans les
+# traductions qu'il donne (Bodéüs pour le De l'âme, Morel pour les Parva
+# naturalia, souvent « trad. modifiée »).
+#
+# Repères de la source laissés hors des cartes parce que douteux :
+# Seconds Analytiques « II, 18 » (81a38-39 est en I, 18) ; De la sensation
+# « chapitre 6 » pour les odeurs (443a17-445a4 relève du chapitre 5) ;
+# Rhétorique « 1038a31-33 » (lire 1378a31-33) ; « 417a3-5 » (lire 417b3-5) ;
+# appétit orthographié « horexis » / « horesis » (écrit ici orexis).
+
+id: sens5
+title: "La sensibilité, fondement des autres facultés"
+subtitle: "Aristote : phantasia, intelligence, appétit, passions"
+icon: bulb
+color: teal
+group: "La sensibilité selon Aristote"
+lessons:
+- id: sens5-l1
+  title: "La phantasia"
+  notes: |
+    Toutes les facultés propres aux animaux, soit toutes sauf la **nutrition** (qui englobe reproduction et croissance), dérivent de la sensibilité : l'intelligence, l'appétit (`orexis`), le mouvement. Geste philosophique **fort** : des opérations tenues ailleurs pour les plus éminentes, la pensée ou le raisonnement, se trouvent fondées sur la sensation, sans lui être réductibles.
+
+    La première est la `phantasia`, souvent traduite « imagination » ou « représentation » : la faculté de produire des `phantasmata`, des images sensibles, qui se distinguent de celles de la sensation par l'**absence** de leur objet. « Les contenus de la `phantasia` sont, en effet, comme des données du sens, sauf qu'ils sont sans matière » (*De l'âme*, III, 8). Je sens une couleur quand je la vois sur un objet présent ; j'en ai un `phantasma` quand je m'en représente l'image, l'objet absent. En termes techniques : la `phantasia` est l'acte de la **seule** sensibilité, sans celui du sensible, alors que la sensation est leur acte **commun**.
+
+    Elle englobe le rêve et la remémoration, d'où l'embarras des traducteurs. Dans le *De l'âme*, seul III, 3 lui est consacré ; mais plusieurs *Parva naturalia* traitent d'opérations qui en relèvent : *Sur la mémoire et la réminiscence*, et les trois traités sur le sommeil et le rêve.
+
+    Son activité dérive littéralement de la sensation : « la `phantasia` est le mouvement qui se produit sous l'effet de la sensation en acte » (*De l'âme*, III, 3 ; même affirmation dans *Des rêves*, 1). Elle est d'abord **rétention** des sensations en images mentales, puis **recomposition** et transformation (dans le rêve), intentionnelle ou non ; son objet reste celui de la sensibilité : des qualités sensibles.
+
+    ! La `phantasia` n'est pas seulement l'imagination créatrice : c'est toute présence d'une image sensible en l'absence de son objet.
+  points:
+  - id: sens5-l1-p1
+    sentence: "Toutes les facultés de l'âme propres aux animaux dérivent de la sensibilité, excepté la ___, qui englobe la reproduction et la croissance."
+    answer: "nutrition"
+    alt: []
+  - id: sens5-l1-p2
+    sentence: "L'appétit, faculté qui dérive de la sensibilité, se dit en grec ___."
+    answer: "orexis"
+    alt: []
+  - id: sens5-l1-p3
+    sentence: "Aristote accomplit un geste philosophique ___ en fondant sur la sensation des facultés que d'autres philosophes tiennent pour les plus éminentes, comme la pensée ou le raisonnement."
+    answer: "fort"
+    alt: []
+  - id: sens5-l1-p4
+    sentence: "La première des facultés qui dérivent de la sensibilité est la ___."
+    answer: "phantasia"
+    alt: []
+  - id: sens5-l1-p5
+    sentence: "La *phantasia* est souvent traduite par « imagination » ou par « ___ »."
+    answer: "représentation"
+    alt: []
+  - id: sens5-l1-p6
+    sentence: "La *phantasia* est la faculté de produire des ___, c'est-à-dire des images sensibles."
+    answer: "phantasmata"
+    alt: []
+  - id: sens5-l1-p7
+    sentence: "Les images de la *phantasia* se distinguent de celles de la sensation par l'___ des objets qui supportent les qualités sensibles dont elles sont les images."
+    answer: "absence"
+    alt: []
+  - id: sens5-l1-p8
+    sentence: "« les contenus de la *phantasia* sont, en effet, comme des données du sens, sauf qu'ils sont sans ___ »"
+    answer: "matière"
+    alt: []
+  - id: sens5-l1-p9
+    sentence: "L'affirmation que les contenus de la *phantasia* sont comme des données du sens, mais sans matière, se trouve dans ___."
+    answer: "De l'âme, III, 8"
+    alt: ["DA III, 8", "De anima III, 8"]
+    explanation: "432a9-10."
+  - id: sens5-l1-p10
+    sentence: "J'ai un ___ d'une couleur lorsque je m'en représente l'image mentale, alors que la chose dont elle est la couleur n'est pas actuellement présente."
+    answer: "phantasma"
+    alt: []
+  - id: sens5-l1-p11
+    sentence: "L'exercice de la *phantasia* est l'acte de la seule sensibilité, ___ celui du sensible."
+    answer: "sans"
+    alt: []
+  - id: sens5-l1-p12
+    sentence: "La sensation est l'acte ___ de la sensibilité et du sensible ; la *phantasia*, l'acte de la seule sensibilité."
+    answer: "commun"
+    alt: []
+  - id: sens5-l1-p13
+    sentence: "La *phantasia* englobe des phénomènes mentaux comme le ___ ou la remémoration, d'où l'embarras des traducteurs pour rendre le terme en français."
+    answer: "rêve"
+    alt: []
+  - id: sens5-l1-p14
+    sentence: "Dans le *De l'âme*, seul le chapitre ___ du livre III porte sur la *phantasia*."
+    answer: "3"
+    alt: []
+  - id: sens5-l1-p15
+    sentence: "Parmi les *Parva naturalia*, le traité *Sur la mémoire et la ___* aborde des opérations qui relèvent de la *phantasia*."
+    answer: "réminiscence"
+    alt: []
+  - id: sens5-l1-p16
+    sentence: "Outre *Sur la mémoire et la réminiscence*, ___ traités des *Parva naturalia* sur le sommeil et le rêve abordent largement la *phantasia*."
+    answer: "trois"
+    alt: ["3"]
+  - id: sens5-l1-p17
+    sentence: "« la *phantasia* est le ___ qui se produit sous l'effet de la sensation en acte. »"
+    answer: "mouvement"
+    alt: []
+  - id: sens5-l1-p18
+    sentence: "« la *phantasia* est le mouvement qui se produit sous l'effet de la sensation en ___. »"
+    answer: "acte"
+    alt: []
+  - id: sens5-l1-p19
+    sentence: "La définition de la *phantasia* comme le mouvement qui se produit sous l'effet de la sensation en acte se trouve dans ___."
+    answer: "De l'âme, III, 3"
+    alt: ["DA III, 3", "De anima III, 3"]
+    explanation: "429a1-2 ; même affirmation dans Des rêves, 1, 459a17-18."
+  - id: sens5-l1-p20
+    sentence: "Les activités de la *phantasia* (remémoration, imagination, rêve) trouvent leur origine dans le contenu de la sensation, qu'elles ___ après la disparition de l'objet."
+    answer: "perpétuent"
+    alt: []
+  - id: sens5-l1-p21
+    sentence: "La *phantasia* est d'abord une capacité de ___ des sensations sous la forme d'images mentales."
+    answer: "rétention"
+    alt: []
+  - id: sens5-l1-p22
+    sentence: "La *phantasia* est aussi une capacité de ___ et de transformation des images sensibles, comme dans le rêve."
+    answer: "recomposition"
+    alt: []
+  - id: sens5-l1-p23
+    sentence: "L'objet de la *phantasia* reste identique à celui de la sensibilité, puisqu'elle distingue des ___ sensibles."
+    answer: "qualités"
+    alt: []
+- id: sens5-l2
+  title: "La phantasia, faculté de transition"
+  notes: |
+    Traduite par « imagination », la `phantasia` n'est pas aussi **suspecte** pour Aristote que ce terme en général. Beaucoup ont violemment critiqué l'imagination, Platon au premier chef, qui dévalorise **ontologiquement et épistémologiquement** les `phantasmata`. La `phantasia` aristotélicienne peut être fausse, mais elle est d'abord la faculté qui assure la **transition** entre la sensibilité et l'intelligence : elle fournit à la pensée son substrat sensible. Comme pour la sensibilité, l'approche est psychologique avant d'être critique.
+
+    Aristote la rapproche donc étroitement de la sensibilité, jusqu'à en faire une sorte de sensation : « La <faculté> imaginative et la <faculté> sensible sont la même chose, bien que, dans leur essence, la <faculté> imaginative et la <faculté> sensible diffèrent l'une de l'autre » (*Des rêves*, 1). Certains commentateurs, comme Pierre-Marie **Morel**, font ainsi de la `phantasia` une espèce de sensation et du `phantasma` une sensation à part entière ; elle opère d'ailleurs au niveau de l'organe de la sensation commune, le **cœur**.
+
+    Mais les deux facultés « diffèrent dans leur essence » (`to d'einai heteron`) : deux processus distincts sur une même matière, les qualités sensibles. La sensation est acte commun avec un sensible extérieur ; la `phantasia` opère seule. Certains animaux ont la sensibilité sans la `phantasia`. Et d'autres passages en font une dimension de l'**intellect**, en raison de l'absence de son objet (« si l'on veut bien poser que la `phantasia` est comme une sorte d'intellection », *De l'âme*, III, 10) : d'où l'idée qu'il y aurait **deux** `phantasiai`.
+
+    Plus prudemment : la `phantasia` est une **faculté de transition**, qui prolonge la sensibilité et que prolonge l'intellection. L'âme animale n'est pas une somme de facultés closes, mais une totalité **organique**, un *continuum* d'activités.
+
+    ! Rapprocher `phantasia` et sensation n'est pas les confondre : leur « être » diffère.
+  points:
+  - id: sens5-l2-p1
+    sentence: "Pour Aristote, la *phantasia* n'est pas aussi ___ que l'est en général le terme d'imagination."
+    answer: "suspecte"
+    alt: []
+  - id: sens5-l2-p2
+    sentence: "___ opère une véritable dévalorisation ontologique et épistémologique des *phantasmata*."
+    answer: "Platon"
+    alt: []
+  - id: sens5-l2-p3
+    sentence: "Si la *phantasia* aristotélicienne peut être fausse ou erronée, elle est d'abord la faculté qui assure la ___ entre la sensibilité et l'intelligence."
+    answer: "transition"
+    alt: []
+  - id: sens5-l2-p4
+    sentence: "La *phantasia* fournit en quelque sorte le ___ sensible sur lequel s'appuie la pensée."
+    answer: "substrat"
+    alt: []
+  - id: sens5-l2-p5
+    sentence: "Comme pour la sensibilité, l'approche aristotélicienne de la *phantasia* n'est pas au premier chef critique, mais principalement ___."
+    answer: "psychologique"
+    alt: []
+  - id: sens5-l2-p6
+    sentence: "« La <faculté> imaginative et la <faculté> sensible sont la même ___, bien que, dans leur essence, la <faculté> imaginative et la <faculté> sensible diffèrent l'une de l'autre. »"
+    answer: "chose"
+    alt: []
+  - id: sens5-l2-p7
+    sentence: "« La <faculté> imaginative et la <faculté> sensible sont la même chose, bien que, dans leur ___, la <faculté> imaginative et la <faculté> sensible diffèrent l'une de l'autre. »"
+    answer: "essence"
+    alt: []
+  - id: sens5-l2-p8
+    sentence: "L'affirmation que la faculté imaginative et la faculté sensible sont la même chose, tout en différant dans leur essence, se trouve à la fin de ___."
+    answer: "Des rêves, 1"
+    alt: []
+    explanation: "459a15-17."
+  - id: sens5-l2-p9
+    sentence: "Certains commentateurs, comme Pierre-Marie ___, font de l'activité de la *phantasia* une espèce de sensation et du *phantasma* une sensation à part entière."
+    answer: "Morel"
+    alt: []
+    explanation: "Aristote, une philosophie de l'activité, 2003, p. 146-151."
+  - id: sens5-l2-p10
+    sentence: "La *phantasia* opère au niveau de l'organe de la sensation commune, le ___ ou la région cardiaque."
+    answer: "cœur"
+    alt: ["coeur"]
+  - id: sens5-l2-p11
+    sentence: "*Phantasia* et sensation « diffèrent dans leur être », en grec ___."
+    answer: "to d'einai heteron"
+    alt: ["to deinai heteron", "to d einai heteron"]
+  - id: sens5-l2-p12
+    sentence: "La sensation est un acte commun de la sensibilité et d'un sensible extérieur, alors que la *phantasia* opère ___."
+    answer: "seule"
+    alt: []
+  - id: sens5-l2-p13
+    sentence: "Certains animaux possèdent la sensibilité sans posséder la ___."
+    answer: "phantasia"
+    alt: []
+  - id: sens5-l2-p14
+    sentence: "« si l'on veut bien poser que la *phantasia* est comme une sorte d'___ »"
+    answer: "intellection"
+    alt: []
+  - id: sens5-l2-p15
+    sentence: "Le passage qui pose la *phantasia* comme une sorte d'intellection se trouve dans ___."
+    answer: "De l'âme, III, 10"
+    alt: ["DA III, 10", "De anima III, 10"]
+    explanation: "433a9-10."
+  - id: sens5-l2-p16
+    sentence: "Parce que certains passages rattachent la *phantasia* à la sensation et d'autres à l'intellect, certains interprètes considèrent qu'il y a ___ *phantasiai*."
+    answer: "deux"
+    alt: ["2"]
+  - id: sens5-l2-p17
+    sentence: "Plus prudemment, la *phantasia* est une faculté de transition, qui ___ la sensibilité et qui est prolongée par l'intellection."
+    answer: "prolonge"
+    alt: []
+  - id: sens5-l2-p18
+    sentence: "La psychologie animale n'est pas une somme de facultés closes sur elles-mêmes, mais une totalité ___ qui fonctionne de concert dans chaque animal."
+    answer: "organique"
+    alt: []
+  - id: sens5-l2-p19
+    sentence: "L'âme animale prend la plupart du temps la forme d'un ___ d'activités plutôt que d'une collection de facultés distinctes."
+    answer: "continuum"
+    alt: []
+- id: sens5-l3
+  title: "Sensibilité et intelligence : analogie et écart"
+  notes: |
+    La pensée (`nous`), propre à l'homme, s'appuie de manière **médiate** sur la sensibilité. *De l'âme*, III, 4-6 la présente comme **analogue** à la sensibilité : comme la sensation est l'activité commune du sensible et de la sensibilité, l'intellection est l'activité commune d'un **intelligible** et de l'intelligence ; comme elle, l'intelligence saisit des **différences**. D'où Aristote les réunit, au début de *De l'âme*, III, 9, sous une unique « **faculté critique** ». Les différences entre facultés sont **plastiques**, et l'intelligence se comprend à l'aune de la sensibilité.
+
+    Mais l'écart est réel : Aristote refuse toujours de **réduire** l'intelligence à la sensibilité.
+
+    |                     | Sensibilité  | Intelligence                                   |
+    | Différences saisies | sensibles    | intelligibles                                  |
+    | Objets              | particuliers | universels (propriétés mathématiques, concepts) |
+
+    L'intelligence n'est pas une sensation **raffinée**, comme peut-être la `phantasia`, mais une faculté d'un tout autre ordre. Elle fonde la distinction de l'homme et des autres animaux : non de degré, mais de **nature**, comparable à l'écart entre plantes et animaux. Dans les *Éthiques*, le bien proprement humain, le bonheur, coïncide avec l'exercice excellent de l'intelligence, pratique ou théorique, et non de la sensibilité : la vie humaine est *plus* qu'animale, *plus* que sensible. Mais la sensibilité n'en est pas absente : l'homme est *aussi* un animal.
+
+    ! L'analogie entre sentir et penser ne supprime pas l'écart de nature entre le sensible et l'intelligible.
+  points:
+  - id: sens5-l3-p1
+    sentence: "La pensée, faculté propre aux êtres humains, s'appuie de manière ___ sur l'activité de la sensibilité."
+    answer: "médiate"
+    alt: []
+  - id: sens5-l3-p2
+    sentence: "Les chapitres 4 à 6 du livre III du *De l'âme* présentent l'intelligence comme ___ à la sensibilité."
+    answer: "analogue"
+    alt: []
+  - id: sens5-l3-p3
+    sentence: "Comme la sensation est l'activité commune du sensible et de la sensibilité, l'intellection est l'activité commune d'un ___ et de l'intelligence."
+    answer: "intelligible"
+    alt: []
+  - id: sens5-l3-p4
+    sentence: "Comme la sensation, l'intelligence est une opération de saisie des ___, intelligibles et non sensibles."
+    answer: "différences"
+    alt: []
+  - id: sens5-l3-p5
+    sentence: "Au début du chapitre 9 du livre III du *De l'âme*, Aristote réunit sensibilité et intelligence sous une unique faculté, la « faculté ___ »."
+    answer: "critique"
+    alt: []
+  - id: sens5-l3-p6
+    sentence: "La réunion de la sensibilité et de l'intelligence sous une unique « faculté critique » se trouve au début de ___."
+    answer: "De l'âme, III, 9"
+    alt: ["DA III, 9", "De anima III, 9"]
+    explanation: "432a17."
+  - id: sens5-l3-p7
+    sentence: "La réunion de la sensibilité et de l'intelligence sous une même faculté indique le caractère ___ des différences entre les facultés de la psychologie aristotélicienne."
+    answer: "plastique"
+    alt: []
+  - id: sens5-l3-p8
+    sentence: "Aristote refuse de manière systématique de ___ l'intelligence à la sensibilité."
+    answer: "réduire"
+    alt: []
+  - id: sens5-l3-p9
+    sentence: "Les différences distinguées par la sensibilité sont celles d'objets particuliers ; celles distinguées par l'intelligence, d'objets ___."
+    answer: "universels"
+    alt: []
+  - id: sens5-l3-p10
+    sentence: "Les objets universels de l'intelligence sont, par exemple, les propriétés ___ ou les concepts."
+    answer: "mathématiques"
+    alt: []
+  - id: sens5-l3-p11
+    sentence: "L'intelligence n'est pas une sensation ___, comme c'est peut-être le cas de la *phantasia*, mais une faculté d'un tout autre ordre."
+    answer: "raffinée"
+    alt: []
+  - id: sens5-l3-p12
+    sentence: "La distinction entre l'espèce humaine et les autres animaux n'est pas seulement une distinction de degré, mais un écart de ___."
+    answer: "nature"
+    alt: []
+  - id: sens5-l3-p13
+    sentence: "L'écart entre l'homme et les autres animaux est comparable à celui qui existe entre les plantes et les ___."
+    answer: "animaux"
+    alt: []
+  - id: sens5-l3-p14
+    sentence: "L'intelligence ouvre la vie humaine à l'appréhension des réalités intelligibles, universelles, qui sont irréductibles aux ___."
+    answer: "particuliers"
+    alt: []
+  - id: sens5-l3-p15
+    sentence: "Dans les *Éthiques*, le bien proprement humain, le ___, coïncide avec l'exercice excellent de l'intelligence et non avec celui de la sensibilité."
+    answer: "bonheur"
+    alt: []
+  - id: sens5-l3-p16
+    sentence: "Le bonheur coïncide avec l'exercice excellent de l'intelligence, qu'elle soit pratique ou ___."
+    answer: "théorique"
+    alt: []
+  - id: sens5-l3-p17
+    sentence: "L'intelligence fait basculer la vie humaine dans une vie *plus* qu'___, c'est-à-dire *plus* que sensible."
+    answer: "animale"
+    alt: []
+  - id: sens5-l3-p18
+    sentence: "La sensibilité n'est pas absente de la vie humaine la plus accomplie : l'homme est *aussi* un ___."
+    answer: "animal"
+    alt: []
+- id: sens5-l4
+  title: "Penser avec des images"
+  notes: |
+    L'intelligence n'est ni **exclusive** de la sensibilité, ni seulement analogue à elle : son exercice et son contenu doivent s'**incarner** dans un `phantasma`. « L'âme ne pense jamais sans `phantasma` » (*De l'âme*, III, 7). Non que l'objet de la pensée soit une image : la pensée a besoin d'un **support sensible**, fût-ce une image mentale. « La faculté intellective saisit les formes (`eidè`) immanentes aux `phantasmata` » : les intelligibles ne sont pas des images, mais ils ne sont pas donnés *sans* images.
+
+    Solution nuancée entre deux approches :
+
+    | Approche         | Thèse                                          | Représentants |
+    | Sensualiste      | les idées se réduisent à des impressions       | l'empirisme de Hume ; dans l'Antiquité, Démocrite et les épicuriens |
+    | Intellectualiste | la pensée est indépendante des données sensibles, qui peuvent seulement susciter l'interrogation | l'épistémologie de Platon ; sous une autre forme, la tradition cartésienne |
+
+    Exemple : le **géomètre** ne s'interroge pas sur ce triangle-ci, tracé au tableau ou imaginé, mais sur les propriétés de tout triangle, sur ce que Platon appellerait le « triangle en soi », son **essence**. Mais il ne les pense pas sans l'image d'un triangle particulier.
+
+    La science s'appuie ainsi sur la sensation sans s'y réduire : aucune sensation ne constitue un savoir, qui porte sur l'universel ; c'est ce qui distingue Aristote des **empirismes** anciens et modernes auxquels on veut trop souvent le ramener. Mais « si une sensation manquait, nécessairement un savoir scientifique manquerait aussi, et il nous serait impossible de l'acquérir » (*Seconds Analytiques*) : la sensibilité offre à la science ses possibilités de **figuration**. D'où la définition de l'homme comme « animal **rationnel** », vivant *sensible* doué de raison. La connaissance n'est ni réductible à la sensation, dont elle tire un matériau, ni un dépassement voué à s'en affranchir, comme dans le platonisme.
+
+    ! « Ne jamais penser sans image » ne veut pas dire que penser, c'est imaginer.
+  points:
+  - id: sens5-l4-p1
+    sentence: "L'exercice et le contenu de l'intelligence doivent en quelque sorte s'___ dans un *phantasma* qui dérive de l'exercice de la sensibilité."
+    answer: "incarner"
+    alt: []
+  - id: sens5-l4-p2
+    sentence: "« l'âme ne pense jamais sans ___. »"
+    answer: "phantasma"
+    alt: []
+  - id: sens5-l4-p3
+    sentence: "La thèse selon laquelle l'âme ne pense jamais sans *phantasma* se trouve dans ___."
+    answer: "De l'âme, III, 7"
+    alt: ["DA III, 7", "De anima III, 7"]
+    explanation: "431a16-17."
+  - id: sens5-l4-p4
+    sentence: "La pensée a besoin d'un ___ sensible, y compris sous la forme d'une image mentale, pour concevoir des propriétés intelligibles."
+    answer: "support"
+    alt: []
+  - id: sens5-l4-p5
+    sentence: "« la faculté intellective saisit les ___ immanentes aux *phantasmata*. »"
+    answer: "formes"
+    alt: []
+    explanation: "De l'âme, III, 7, 431b2."
+  - id: sens5-l4-p6
+    sentence: "Les « formes » que saisit la faculté intellective se disent en grec ___."
+    answer: "eidè"
+    alt: ["eide"]
+  - id: sens5-l4-p7
+    sentence: "Les intelligibles ne sont pas des images sensibles, mais ils ne sont pas non plus donnés à l'intelligence ___ images sensibles."
+    answer: "sans"
+    alt: []
+  - id: sens5-l4-p8
+    sentence: "L'approche ___ du fonctionnement de l'intelligence consiste à réduire les idées à des impressions."
+    answer: "sensualiste"
+    alt: []
+  - id: sens5-l4-p9
+    sentence: "On trouve l'approche sensualiste, qui réduit les idées à des impressions, dans l'empirisme ___."
+    answer: "humien"
+    alt: []
+  - id: sens5-l4-p10
+    sentence: "L'approche sensualiste a ses avatars antiques, chez Démocrite et chez les ___."
+    answer: "épicuriens"
+    alt: []
+  - id: sens5-l4-p11
+    sentence: "L'approche ___ postule que la pensée est absolument indépendante des données sensibles, même si celles-ci peuvent jouer un rôle dans sa genèse via l'interrogation qu'elles suscitent."
+    answer: "intellectualiste"
+    alt: []
+  - id: sens5-l4-p12
+    sentence: "L'indépendance de la pensée à l'égard des données sensibles est l'un des fondements de l'épistémologie ___."
+    answer: "platonicienne"
+    alt: []
+  - id: sens5-l4-p13
+    sentence: "L'approche intellectualiste se retrouve, sous une forme différente, dans la tradition ___."
+    answer: "cartésienne"
+    alt: []
+  - id: sens5-l4-p14
+    sentence: "Le travail du ___ n'est pas de s'interroger sur les propriétés du triangle tracé au tableau, mais sur celles de tout triangle en général."
+    answer: "géomètre"
+    alt: []
+  - id: sens5-l4-p15
+    sentence: "Ce que Platon appellerait le « triangle en soi » est, en termes aristotéliciens, l'___ du triangle et les propriétés qui en découlent nécessairement."
+    answer: "essence"
+    alt: []
+  - id: sens5-l4-p16
+    sentence: "Aucune sensation ne saurait constituer un ___, puisque celui-ci est une connaissance des propriétés universelles."
+    answer: "savoir"
+    alt: []
+  - id: sens5-l4-p17
+    sentence: "La différence de nature entre connaissance de l'universel et perception du particulier sépare Aristote des ___ modernes et anciens auxquels on veut trop souvent le ramener."
+    answer: "empirismes"
+    alt: []
+  - id: sens5-l4-p18
+    sentence: "« si une sensation manquait, nécessairement un savoir ___ manquerait aussi, et il nous serait impossible de l'acquérir. »"
+    answer: "scientifique"
+    alt: []
+  - id: sens5-l4-p19
+    sentence: "L'affirmation que si une sensation manquait, un savoir scientifique manquerait aussi, se trouve dans les *___*."
+    answer: "Seconds Analytiques"
+    alt: []
+  - id: sens5-l4-p20
+    sentence: "Les possibilités de ___ offertes par la sensibilité constituent un outil nécessaire à l'exercice de la science et à la construction d'un savoir scientifique."
+    answer: "figuration"
+    alt: []
+  - id: sens5-l4-p21
+    sentence: "Aristote définit l'être humain comme un « animal ___ », c'est-à-dire comme un être vivant sensible doué de raison."
+    answer: "rationnel"
+    alt: []
+  - id: sens5-l4-p22
+    sentence: "La connaissance n'est ni réductible à la sensation, même si elle y trouve un ___, ni un dépassement voué à devenir absolument indépendant de la sensation, comme dans le platonisme."
+    answer: "matériau"
+    alt: []
+- id: sens5-l5
+  title: "Plaisir et peine"
+  notes: |
+    La sensibilité ouvre aussi à l'**appétit**, à la motricité et aux passions. « Mais on ne trouve, chez les plantes, que la faculté nutritive, tandis qu'ailleurs, celle-ci va de pair avec la faculté sensitive. Or, dans ces conditions, la faculté appétitive est également présente. L'appétit est, en effet, désir, ardeur et souhait. Or tous les animaux ont l'un des sens, le toucher ; et qui se trouve doué de sensation, est aussi accessible au plaisir et à la peine, à ce qui est agréable et douloureux ; et, dans ces conditions, il est également doué du désir, puisque ce dernier est l'appétit de l'agréable » (*De l'âme*, II, 3). La dérivation se fait en **deux temps**.
+
+    D'abord, la sensibilité rend **immédiatement** accessible au plaisir et à la peine : la saveur « distingue entre le plaisant et le désagréable dans la nourriture ». Une plante gelée ne **souffre** pas du froid, parce qu'elle ne le **sent** pas ; un animal souffre du froid parce qu'il le sent. Telle sensation *est* plaisante ou douloureuse : sensation, plaisir et peine sont **contemporains**. Il y a pourtant une **postériorité logique** du plaisir et de la peine : certaines sensations ne sont ni plaisantes ni douloureuses, l'inverse n'est pas vrai.
+
+    Parenthèse sur les **odeurs**, que traite le *De la sensation et des sensibles* :
+
+    | Odeurs plaisantes | Exemple | Pour qui |
+    | par accident | celles de la nourriture | tout être doué d'odorat : elles signalent à distance nourriture et danger |
+    | par soi | l'odeur d'une fleur | les seuls êtres humains |
+
+    Aristote explique les secondes physiologiquement : l'odeur des plantes réglerait la température de notre cerveau. Explication peu satisfaisante : pourquoi seuls les humains auraient-ils ce besoin ?
+
+    ! Plaisir et sensation sont contemporains, mais le plaisir suppose la sensation, non l'inverse.
+  points:
+  - id: sens5-l5-p1
+    sentence: "« Mais on ne trouve, chez les plantes, que la faculté ___, tandis qu'ailleurs, celle-ci va de pair avec la faculté sensitive. Or, dans ces conditions, la faculté appétitive est également présente. »"
+    answer: "nutritive"
+    alt: []
+  - id: sens5-l5-p2
+    sentence: "« L'appétit est, en effet, désir, ___ et souhait. Or tous les animaux ont l'un des sens, le toucher »"
+    answer: "ardeur"
+    alt: []
+  - id: sens5-l5-p3
+    sentence: "« et qui se trouve doué de sensation, est aussi accessible au plaisir et à la ___, à ce qui est agréable et douloureux »"
+    answer: "peine"
+    alt: []
+  - id: sens5-l5-p4
+    sentence: "« et, dans ces conditions, il est également doué du désir, puisque ce dernier est l'appétit de l'___. »"
+    answer: "agréable"
+    alt: []
+  - id: sens5-l5-p5
+    sentence: "Le passage qui fait découler l'appétit de la sensation, parce que l'être sensible est accessible au plaisir et à la peine, se trouve dans ___."
+    answer: "De l'âme, II, 3"
+    alt: ["DA II, 3", "De anima II, 3"]
+    explanation: "414a32-b3."
+  - id: sens5-l5-p6
+    sentence: "La dérivation de l'appétit à partir de la sensibilité se fait en ___ temps."
+    answer: "deux"
+    alt: ["2"]
+  - id: sens5-l5-p7
+    sentence: "La capacité à sentir des qualités sensibles est, de manière ___, une capacité à sentir du plaisir et de la peine."
+    answer: "immédiate"
+    alt: []
+  - id: sens5-l5-p8
+    sentence: "L'expérience du plaisir et de la peine peut être plus raffinée lorsqu'elle implique la représentation et l'___, comme dans les passions."
+    answer: "opinion"
+    alt: []
+  - id: sens5-l5-p9
+    sentence: "Une plante dont l'organisme est affecté par le gel ne ___ pas du froid, parce qu'elle ne sent pas le froid."
+    answer: "souffre"
+    alt: []
+  - id: sens5-l5-p10
+    sentence: "Sensation, plaisir et peine sont ___ : le fait de souffrir et de prendre du plaisir est immédiatement contenu dans la sensation."
+    answer: "contemporains"
+    alt: []
+  - id: sens5-l5-p11
+    sentence: "Il y a pourtant une postériorité ___ du plaisir et de la peine sur la sensation, car il y a des sensations qui ne sont ni plaisantes ni douloureuses."
+    answer: "logique"
+    alt: []
+  - id: sens5-l5-p12
+    sentence: "La sensibilité ouvre immédiatement à une autre dimension de l'existence : la ___ et le plaisir."
+    answer: "souffrance"
+    alt: []
+  - id: sens5-l5-p13
+    sentence: "Certaines odeurs sont plaisantes « par ___ », parce qu'elles correspondent en réalité à des saveurs : ce sont les odeurs de la nourriture."
+    answer: "accident"
+    alt: []
+  - id: sens5-l5-p14
+    sentence: "D'autres odeurs sont plaisantes « par ___ », parce qu'elles sont immédiatement plaisantes à l'odorat, comme l'odeur d'une fleur."
+    answer: "soi"
+    alt: []
+  - id: sens5-l5-p15
+    sentence: "Les odeurs plaisantes par accident sont nécessaires à la ___ de tous les êtres doués d'odorat : elles indiquent, à distance, les sources potentielles de nourriture et de danger."
+    answer: "survie"
+    alt: []
+  - id: sens5-l5-p16
+    sentence: "Les odeurs plaisantes par soi, comme celle d'une fleur, ne sont plaisantes, selon Aristote, que pour les êtres ___."
+    answer: "humains"
+    alt: []
+  - id: sens5-l5-p17
+    sentence: "Selon l'explication physiologique d'Aristote, l'odeur plaisante des plantes permettrait de réguler la température de notre ___."
+    answer: "cerveau"
+    alt: []
+- id: sens5-l6
+  title: "Le logos et le plaisir de l'harmonie"
+  notes: |
+    Pourquoi seuls les humains auraient-ils de tels besoins ? Pierre **Pellegrin** (*Des Animaux dans le monde*, 2022) formule une autre hypothèse, à partir des fragments des *Problèmes* (texte dont on n'a que des parties, d'authenticité douteuse) : l'homme apprécie des formes d'**harmonie** dans ses sensations parce qu'il possède le `logos`. Or `logos` signifie à la fois la raison, le langage, et l'harmonie musicale ou mathématique. L'homme éprouverait ainsi, à même les sensations, un plaisir inaccessible aux autres animaux et non ramené à sa survie : celui de l'harmonie entre les qualités sensibles.
+
+    On pourrait alors relier la théorie de la sensibilité au plaisir pris au spectacle **tragique**, dont parle la *Poétique* (13 et 14) : « Or, c'est le plaisir issu de la pitié et de la peur au moyen de la représentation que le poète doit procurer. » L'homme jouit de l'harmonie dans ce qu'il sent : l'odeur d'une fleur, le son d'une cithare, le spectacle d'une tragédie.
+
+    Est-ce un plaisir **intellectuel** ? Les indices manquent, la réponse ne peut être que spéculative ; on peut penser que non : le plaisir propre d'un sens est éprouvé *dans* la sensation, **senti** et non pensé. Mais il ne va pas sans l'intellect, sa **condition de possibilité**, comme l'intellection du triangle en soi ne va pas sans image. La sensibilité fonde la diversité de la vie psychique, mais elle en est modifiée **en retour** : l'intelligence rend l'homme sensible au plaisir particulier de l'expérience **artistique**.
+
+    ! Le plaisir artistique reste senti : l'intellect le rend possible sans le produire.
+  points:
+  - id: sens5-l6-p1
+    sentence: "Pierre Pellegrin fait l'hypothèse que l'homme peut apprécier des formes d'___ dans ses sensations parce qu'il possède la raison."
+    answer: "harmonie"
+    alt: []
+  - id: sens5-l6-p2
+    sentence: "Pierre Pellegrin formule son hypothèse à partir des fragments des *___*, texte d'Aristote dont on ne possède que quelques parties et dont l'authenticité est douteuse."
+    answer: "Problèmes"
+    alt: ["Problemes"]
+  - id: sens5-l6-p3
+    sentence: "Le livre de Pierre Pellegrin s'intitule *Des Animaux dans le ___, cinq questions sur la biologie d'Aristote*."
+    answer: "monde"
+    alt: []
+    explanation: "CNRS éditions, 2022, p. 275-280."
+  - id: sens5-l6-p4
+    sentence: "Le terme ___ possède en grec une vaste polysémie : il signifie à la fois la raison, le langage et l'harmonie musicale ou mathématique."
+    answer: "logos"
+    alt: []
+  - id: sens5-l6-p5
+    sentence: "Selon l'hypothèse de Pellegrin, le plaisir que l'homme trouve dans ses sensations n'est pas ramené à sa propre alimentation ou à sa propre ___."
+    answer: "survie"
+    alt: []
+  - id: sens5-l6-p6
+    sentence: "L'homme éprouverait un plaisir inaccessible aux autres animaux : celui de l'harmonie entre les qualités ___."
+    answer: "sensibles"
+    alt: []
+  - id: sens5-l6-p7
+    sentence: "Cette hypothèse permet de relier la théorie de la sensibilité au plaisir pris au spectacle d'une représentation ___, évoqué aux chapitres 13 et 14 de la *Poétique*."
+    answer: "tragique"
+    alt: []
+  - id: sens5-l6-p8
+    sentence: "« Or, c'est le plaisir issu de la ___ et de la peur au moyen de la représentation que le poète doit procurer. »"
+    answer: "pitié"
+    alt: []
+  - id: sens5-l6-p9
+    sentence: "« Or, c'est le plaisir issu de la pitié et de la ___ au moyen de la représentation que le poète doit procurer. »"
+    answer: "peur"
+    alt: []
+  - id: sens5-l6-p10
+    sentence: "Le passage selon lequel le poète doit procurer le plaisir issu de la pitié et de la peur se trouve dans ___."
+    answer: "Poétique, 14"
+    alt: []
+    explanation: "1453b11-13."
+  - id: sens5-l6-p11
+    sentence: "L'homme peut jouir de l'harmonie dans l'odeur d'une fleur, dans le son d'une ___ ou dans la vue d'un spectacle tragique."
+    answer: "cithare"
+    alt: []
+  - id: sens5-l6-p12
+    sentence: "Le plaisir propre d'un sens, même lorsqu'il correspond à l'expérience artistique, est éprouvé dans la sensation : il est littéralement ___ et non pensé."
+    answer: "senti"
+    alt: []
+  - id: sens5-l6-p13
+    sentence: "L'intellect n'est pas la cause du plaisir artistique, mais sa condition de ___ : c'est pourquoi les autres animaux ne l'éprouvent pas."
+    answer: "possibilité"
+    alt: []
+  - id: sens5-l6-p14
+    sentence: "La sensibilité fonde la diversité de la vie psychique des animaux, mais elle est elle-même ___, par une manière de retour, par cette diversité."
+    answer: "modifiée"
+    alt: []
+  - id: sens5-l6-p15
+    sentence: "L'intelligence de l'homme modifie sa sensibilité, en le rendant sensible à cette classe de plaisir particulier qu'est l'expérience ___."
+    answer: "artistique"
+    alt: []
+- id: sens5-l7
+  title: "Le désir, principe du mouvement"
+  notes: |
+    Second temps de la dérivation : l'animal sensible au plaisir et à la douleur est « également doué du désir, puisque ce dernier est l'appétit de l'agréable ». La sensibilité intervient aussi à un niveau **médiat** : désirer suppose de se représenter de manière **prospective** le plaisir ou la peine à venir, donc la `phantasia`. L'appétitif repose ainsi sur la sensibilité de **deux façons** : il y trouve ses objets, et, médiatement, il passe par la `phantasia`.
+
+    Or c'est l'appétitif, plus précisément l'**objet désiré**, qu'Aristote consacre comme **principe du mouvement** et des décisions de l'individu : c'est la thèse centrale de *De l'âme*, III, 9 et 10 (voir l'unité « Désir, mouvement et action »). Thèse **polémique** : elle s'oppose à la conception **intellectualiste** de la volonté du socratisme, qui place le principe de l'action dans le **jugement** (une chose est désirée parce qu'on la juge bonne : voir le *Ménon*, 77b-78a). Pour Aristote, l'intellect et la faculté opinative sont à eux seuls **impuissants** à faire désirer ; le désir en est indépendant, car l'agréable et le douloureux résident dans la sensation. L'intelligence peut l'informer, l'influencer, non en être la source.
+
+    D'où la justification psychologique de toute l'**éthique** d'Aristote : éduquer à la vertu n'est pas seulement transmettre une connaissance du bien (comme chez Socrate et, dans une certaine mesure, chez Platon, dont Marion Pollaert nuance l'intellectualisme), mais d'abord **former le caractère** par les plaisirs et les peines, véritables principes de l'action (*Éthique à Nicomaque*, II, 1). Connaissance et intellect n'agissent sur le caractère que par le plaisant et le douloureux. Le mouvement animal est assis sur la sensibilité aux plaisirs et aux peines, non sur les facultés « supérieures ».
+
+    ! Aristote ne nie pas le rôle de l'intellect dans l'action : il nie qu'il puisse, seul, faire désirer.
+  points:
+  - id: sens5-l7-p1
+    sentence: "L'animal sensible au plaisir et à la douleur est « également doué du ___, puisque ce dernier est l'appétit de l'agréable »."
+    answer: "désir"
+    alt: []
+  - id: sens5-l7-p2
+    sentence: "La sensibilité intervient aussi à un second niveau, ___, dans la constitution de la faculté appétitive."
+    answer: "médiat"
+    alt: []
+  - id: sens5-l7-p3
+    sentence: "La faculté appétitive exige de pouvoir se représenter de manière ___ le plaisir et la peine à venir."
+    answer: "prospective"
+    alt: []
+  - id: sens5-l7-p4
+    sentence: "L'appétitif est ainsi assis sur la ___, qui est elle-même un prolongement de la sensibilité."
+    answer: "phantasia"
+    alt: []
+  - id: sens5-l7-p5
+    sentence: "L'appétitif repose sur la sensibilité de deux façons : en ce qu'il y trouve ses ___, et, de manière médiate, via la phantasia."
+    answer: "objets"
+    alt: []
+  - id: sens5-l7-p6
+    sentence: "Aristote consacre l'objet ___ comme le principe du mouvement, c'est-à-dire des décisions de l'individu."
+    answer: "désiré"
+    alt: []
+  - id: sens5-l7-p7
+    sentence: "La thèse selon laquelle l'objet désiré est le principe du mouvement est la thèse centrale des chapitres 9 et 10 du livre ___ du *De l'âme*."
+    answer: "III"
+    alt: ["3"]
+  - id: sens5-l7-p8
+    sentence: "Les animaux qui peuvent se déplacer trouvent au principe de leur déplacement la représentation ___ d'un objet qu'ils veulent atteindre."
+    answer: "désirable"
+    alt: []
+  - id: sens5-l7-p9
+    sentence: "La thèse d'Aristote sur le désir est immédiatement ___, puisqu'elle s'oppose frontalement à la conception intellectualiste de la volonté."
+    answer: "polémique"
+    alt: []
+  - id: sens5-l7-p10
+    sentence: "La conception intellectualiste de la volonté qu'on trouve dans le ___ place le principe de l'action dans le jugement de l'individu."
+    answer: "socratisme"
+    alt: []
+  - id: sens5-l7-p11
+    sentence: "Selon la conception intellectualiste de la volonté, une chose est désirée parce qu'on la ___ bonne."
+    answer: "juge"
+    alt: []
+  - id: sens5-l7-p12
+    sentence: "Le fameux texte du *___*, en 77b-78a, illustre la conception socratique selon laquelle on désire ce qu'on juge bon."
+    answer: "Ménon"
+    alt: ["Menon"]
+  - id: sens5-l7-p13
+    sentence: "Pour Aristote, l'intellect et la faculté ___ sont à eux seuls impuissants à faire désirer."
+    answer: "opinative"
+    alt: []
+  - id: sens5-l7-p14
+    sentence: "Le désir possède une ___ par rapport à l'intellect, parce que l'agréable et le douloureux, principes de l'appétit, résident à même la sensation."
+    answer: "indépendance"
+    alt: []
+  - id: sens5-l7-p15
+    sentence: "L'intelligence peut ___ le désir, ou du moins l'influencer."
+    answer: "informer"
+    alt: []
+  - id: sens5-l7-p16
+    sentence: "Le désir découle du contenu plaisant d'une sensation, et non d'une opération ___, même si une telle opération peut modifier les objets du désir."
+    answer: "judicative"
+    alt: []
+  - id: sens5-l7-p17
+    sentence: "Pour Aristote, l'éducation à la vertu est avant tout la formation du ___ par le biais des plaisirs et des peines."
+    answer: "caractère"
+    alt: []
+  - id: sens5-l7-p18
+    sentence: "Marion Pollaert nuance l'___ de Platon, pour qui l'éducation à la vertu serait, comme pour Socrate, la transmission d'une connaissance du bien."
+    answer: "intellectualisme"
+    alt: []
+  - id: sens5-l7-p19
+    sentence: "Le chapitre qui insiste sur la formation du caractère par les plaisirs et les peines dans l'éducation morale est ___."
+    answer: "Éthique à Nicomaque, II, 1"
+    alt: []
+  - id: sens5-l7-p20
+    sentence: "Le mouvement animal est fermement assis sur la sensibilité aux plaisirs et aux peines, et non sur les facultés « ___ » ou éminentes de l'âme."
+    answer: "supérieures"
+    alt: []
+- id: sens5-l8
+  title: "Les passions"
+  notes: |
+    Dernier élément : la théorie des « **passions** » ou « émotions » (`pathai`). Aux chapitres 1 à 11 du livre II de la *Rhétorique*, Aristote développe ce qu'on a pu appeler un « **traité des passions** » : cherchant les moyens dont dispose le rhéteur pour persuader une foule, il examine les passions qu'il peut susciter, leurs objets, les situations qui les provoquent et les caractères qui y sont disposés.
+
+    Les émotions y sont des **mélanges complexes** de plaisir, de douleur, de désir et de crainte, éprouvés dans des situations et envers des individus particuliers. Selon Jamie Dow (*Passions and Persuasion in Aristotle's Rhetoric*, 2015), toutes les émotions dont Aristote fait la théorie *sont* des affections de la sensibilité, du plaisir et de la douleur. Ainsi la **colère**, émotion paradigmatique : « l'appétit accompagné de douleur de ce qui apparaît comme une vengeance à cause de ce qui apparaît comme un acte de dépréciation atteignant nous-même ou nos proches, quand cette dépréciation n'est pas justifiée » (*Rhétorique*, II, 2). Désir issu d'une douleur, celle d'une **dépréciation** jugée injuste, elle est suscitée par le `phantasma` plaisant d'une possible **vengeance** : un entrelacs de plaisirs et de douleurs issus de représentations.
+
+    Olivier Renaut (*La Rhétorique des passions*, 2022) : « Plaisirs et douleurs constituent le lieu d'une expérience où s'articulent désir, sensation et représentation, et où se greffent anticipation et mémoire, opinion et même intellection, ces dernières opérations pouvant susciter des états affectifs complexes (le plaisir du deuil), de second ordre (la honte face au plaisir), ou redoublés (la peur d'avoir peur). » La sensibilité ouvre donc à une **vie émotionnelle** complexe : être sensible, c'est in fine être sensible à certaines émotions.
+
+    ! Une passion n'est pas une sensation simple : c'est un entrelacs de plaisirs, de douleurs et de représentations.
+  points:
+  - id: sens5-l8-p1
+    sentence: "Les « passions » ou « émotions » se disent en grec ___."
+    answer: "pathai"
+    alt: []
+  - id: sens5-l8-p2
+    sentence: "Aux chapitres 1 à 11 du livre II de la *___*, Aristote développe ce qu'on a pu appeler un « traité des passions »."
+    answer: "Rhétorique"
+    alt: ["Rhetorique"]
+  - id: sens5-l8-p3
+    sentence: "Dans ce « traité des passions », Aristote s'intéresse aux moyens dont dispose le ___ pour convaincre et persuader une foule."
+    answer: "rhéteur"
+    alt: []
+  - id: sens5-l8-p4
+    sentence: "Les émotions sont décrites par Aristote comme des ___ complexes de plaisir, de douleur, de désir et de crainte, éprouvés dans des situations et envers des individus particuliers."
+    answer: "mélanges"
+    alt: []
+  - id: sens5-l8-p5
+    sentence: "Selon Jamie Dow, toutes les émotions dont Aristote fait la théorie sont des affections de la ___, c'est-à-dire du plaisir et de la douleur."
+    answer: "sensibilité"
+    alt: []
+    explanation: "Passions and Persuasion in Aristotle's Rhetoric, 2015, chapitre 9."
+  - id: sens5-l8-p6
+    sentence: "La ___ est l'émotion paradigmatique que définit la *Rhétorique*."
+    answer: "colère"
+    alt: []
+  - id: sens5-l8-p7
+    sentence: "« l'appétit accompagné de ___ de ce qui apparaît comme une vengeance à cause de ce qui apparaît comme un acte de dépréciation atteignant nous-même ou nos proches, quand cette dépréciation n'est pas justifiée. »"
+    answer: "douleur"
+    alt: []
+  - id: sens5-l8-p8
+    sentence: "« l'appétit accompagné de douleur de ce qui apparaît comme une ___ à cause de ce qui apparaît comme un acte de dépréciation atteignant nous-même ou nos proches, quand cette dépréciation n'est pas justifiée. »"
+    answer: "vengeance"
+    alt: []
+  - id: sens5-l8-p9
+    sentence: "« l'appétit accompagné de douleur de ce qui apparaît comme une vengeance à cause de ce qui apparaît comme un acte de ___ atteignant nous-même ou nos proches, quand cette dépréciation n'est pas justifiée. »"
+    answer: "dépréciation"
+    alt: []
+  - id: sens5-l8-p10
+    sentence: "La définition de la colère comme l'appétit, accompagné de douleur, d'une vengeance à cause d'une dépréciation injustifiée se trouve dans ___."
+    answer: "Rhétorique, II, 2"
+    alt: []
+    explanation: "1378a31-33."
+  - id: sens5-l8-p11
+    sentence: "La colère est suscitée par le ___ plaisant d'une possible vengeance."
+    answer: "phantasma"
+    alt: []
+  - id: sens5-l8-p12
+    sentence: "Le livre d'Olivier Renaut sur le livre II de la *Rhétorique* s'intitule *La Rhétorique des ___*."
+    answer: "passions"
+    alt: []
+    explanation: "Classiques Garnier, 2022."
+  - id: sens5-l8-p13
+    sentence: "« Plaisirs et douleurs constituent le lieu d'une expérience où s'articulent désir, sensation et représentation, et où se greffent anticipation et mémoire, opinion et même intellection, ces dernières opérations pouvant susciter des états affectifs complexes (le plaisir du ___), de second ordre (la honte face au plaisir), ou redoublés (la peur d'avoir peur). »"
+    answer: "deuil"
+    alt: []
+  - id: sens5-l8-p14
+    sentence: "« Plaisirs et douleurs constituent le lieu d'une expérience où s'articulent désir, sensation et représentation, et où se greffent anticipation et mémoire, opinion et même intellection, ces dernières opérations pouvant susciter des états affectifs complexes (le plaisir du deuil), de second ordre (la ___ face au plaisir), ou redoublés (la peur d'avoir peur). »"
+    answer: "honte"
+    alt: []
+  - id: sens5-l8-p15
+    sentence: "« Plaisirs et douleurs constituent le lieu d'une expérience où s'articulent désir, sensation et représentation, et où se greffent anticipation et mémoire, opinion et même intellection, ces dernières opérations pouvant susciter des états affectifs complexes (le plaisir du deuil), de second ordre (la honte face au plaisir), ou redoublés (la peur d'avoir ___). »"
+    answer: "peur"
+    alt: []
+    explanation: "O. Renaut, La Rhétorique des passions, 2022, p. 106."
+  - id: sens5-l8-p16
+    sentence: "La sensibilité ouvre également les sujets qui la possèdent à une vie ___ complexe."
+    answer: "émotionnelle"
+    alt: []
+- id: sens5-l9
+  title: "La sensation, principe architectonique"
+  notes: |
+    Un texte explicite le rôle fondamental de la sensibilité dans la vie psychique : « Toutes [les facultés communes à l'âme et au corps dont il est question dans les *Parva naturalia*] surviennent, pour les unes avec la sensation, pour les autres par la sensation. Certaines sont précisément des affections de la sensation, d'autres des dispositions de la sensation, d'autres assurent sa protection et sa sauvegarde, d'autres enfin provoquent sa destruction et sa privation » (*De la sensation et des sensibles*, 1).
+
+    La répartition est peu claire, mais probablement :
+
+    | Ce qui survient…     | Grec             | Exemples probables   |
+    | *avec* la sensation  | `met'aisthèseôs` | plaisir et peine     |
+    | *par* la sensation   | `di'aisthèseôs`  | appétit et mouvement |
+
+    Les **affections** (`pathai`) de la sensation sont le plaisir et la douleur, ou les émotions complexes qu'ils constituent ; ses **dispositions** (`hexeis`), probablement les opérations de la `phantasia` (mémoire, rêve). Pierre-Marie Morel (*Aristote, une philosophie de l'activité*, 2003) : « Ce que montre ici Aristote, c'est que l'animal n'est pas une addition de facultés et de parties, mais une unité à la fois organique et fonctionnelle, un système d'activités dans lequel la sensation joue le rôle de principe architectonique ou organisateur. »
+
+    Conclusion : la sensibilité n'est pas seulement le **critère** qui distingue l'animal de la plante ; elle est le **fondement** de sa vie psychique complexe et sa manière de se rapporter au monde. D'où l'effort d'Aristote pour montrer qu'elle est **une** faculté malgré l'irréductibilité des cinq sens : son unité n'est pas qu'analogique, car la **sensation commune** les rend commensurables sans les réduire à un seul. Unité **organique**, elle est le **principe architectonique** de la vie animale.
+
+    ! La sensibilité n'est pas une faculté parmi d'autres : toutes les autres, sauf la nutrition, en dépendent d'une manière ou d'une autre.
+  points:
+  - id: sens5-l9-p1
+    sentence: "« Toutes [les facultés communes à l'âme et au corps] surviennent, pour les unes ___ la sensation, pour les autres par la sensation. »"
+    answer: "avec"
+    alt: []
+  - id: sens5-l9-p2
+    sentence: "« Toutes [les facultés communes à l'âme et au corps] surviennent, pour les unes avec la sensation, pour les autres ___ la sensation. »"
+    answer: "par"
+    alt: []
+  - id: sens5-l9-p3
+    sentence: "« Certaines sont précisément des ___ de la sensation, d'autres des dispositions de la sensation, d'autres assurent sa protection et sa sauvegarde, d'autres enfin provoquent sa destruction et sa privation. »"
+    answer: "affections"
+    alt: []
+  - id: sens5-l9-p4
+    sentence: "« Certaines sont précisément des affections de la sensation, d'autres des dispositions de la sensation, d'autres assurent sa protection et sa ___, d'autres enfin provoquent sa destruction et sa privation. »"
+    answer: "sauvegarde"
+    alt: []
+  - id: sens5-l9-p5
+    sentence: "Le passage selon lequel les facultés communes à l'âme et au corps surviennent avec la sensation ou par la sensation se trouve dans ___."
+    answer: "De la sensation et des sensibles, 1"
+    alt: ["De sens. 1", "De sensu 1", "De la sensation 1"]
+    explanation: "436b3-6."
+  - id: sens5-l9-p6
+    sentence: "Ce qui survient « avec » la sensation se dit en grec ___."
+    answer: "met'aisthèseôs"
+    alt: ["met aistheseos", "metaistheseos"]
+  - id: sens5-l9-p7
+    sentence: "Ce qui survient « par » la sensation se dit en grec ___."
+    answer: "di'aisthèseôs"
+    alt: ["di aistheseos", "diaistheseos"]
+  - id: sens5-l9-p8
+    sentence: "Le plaisir et la peine sont sans doute produits avec la sensation ; l'appétit et le ___ sont produits par elle, au moyen d'elle ou à sa suite."
+    answer: "mouvement"
+    alt: []
+  - id: sens5-l9-p9
+    sentence: "Les dispositions, en grec ___, de la sensation sont probablement les opérations de la phantasia, comme la mémoire ou le rêve."
+    answer: "hexeis"
+    alt: []
+  - id: sens5-l9-p10
+    sentence: "« Ce que montre ici Aristote, c'est que l'animal n'est pas une ___ de facultés et de parties, mais une unité à la fois organique et fonctionnelle, un système d'activités dans lequel la sensation joue le rôle de principe architectonique ou organisateur. »"
+    answer: "addition"
+    alt: []
+  - id: sens5-l9-p11
+    sentence: "« Ce que montre ici Aristote, c'est que l'animal n'est pas une addition de facultés et de parties, mais une unité à la fois ___ et fonctionnelle, un système d'activités dans lequel la sensation joue le rôle de principe architectonique ou organisateur. »"
+    answer: "organique"
+    alt: []
+  - id: sens5-l9-p12
+    sentence: "« Ce que montre ici Aristote, c'est que l'animal n'est pas une addition de facultés et de parties, mais une unité à la fois organique et fonctionnelle, un système d'activités dans lequel la sensation joue le rôle de principe ___ ou organisateur. »"
+    answer: "architectonique"
+    alt: []
+    explanation: "P.-M. Morel, 2003, p. 151."
+  - id: sens5-l9-p13
+    sentence: "Le livre de Pierre-Marie Morel s'intitule *Aristote, une philosophie de l'___*."
+    answer: "activité"
+    alt: []
+  - id: sens5-l9-p14
+    sentence: "La sensibilité est bien plus qu'un critère : elle est le ___ de la vie psychique complexe de l'animal et de sa manière de se rapporter au monde."
+    answer: "fondement"
+    alt: []
+  - id: sens5-l9-p15
+    sentence: "L'unité des sens n'est pas qu'analogique : ils perçoivent certains sensibles en commun, et c'est la sensation commune qui les rend ___."
+    answer: "commensurables"
+    alt: []
+  - id: sens5-l9-p16
+    sentence: "La sensibilité est le principe architectonique de la vie de l'animal : elle l'ouvre à la complexité et à la ___ de sa vie."
+    answer: "variété"
+    alt: []

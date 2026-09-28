@@ -1,0 +1,512 @@
+# Unité classique (voir content/philosophie.md) tirée de l'exposé d'Ulysse
+# Chaintreuil, « Aristote et la sensibilité : une faculté fondamentale »
+# (scan agrégation, p. 101-148), dans l'ordre de l'exposé ; citations dans les
+# traductions qu'il donne (Bodéüs pour le De l'âme, Morel pour les Parva
+# naturalia, souvent « trad. modifiée »).
+#
+# Repères de la source laissés hors des cartes parce que douteux :
+# Seconds Analytiques « II, 18 » (81a38-39 est en I, 18) ; De la sensation
+# « chapitre 6 » pour les odeurs (443a17-445a4 relève du chapitre 5) ;
+# Rhétorique « 1038a31-33 » (lire 1378a31-33) ; « 417a3-5 » (lire 417b3-5) ;
+# appétit orthographié « horexis » / « horesis » (écrit ici orexis).
+
+id: sens2
+title: "La sensation, activité commune"
+subtitle: "Aristote : activité ou réception ? l'identité de l'acte du sensible et de la sensibilité"
+icon: infinity
+color: teal
+group: "La sensibilité selon Aristote"
+lessons:
+- id: sens2-l1
+  title: "L'identité de l'acte du sensible et de la sensibilité"
+  notes: |
+    Une faculté est une « disposition » (`hexis`) ; toute disposition, en tant que « puissance » (`dunamis`), se connaît par son « activité » (`energeia`). Aristote le dit des facultés de l'âme : « il faut encore préciser au préalable ce qu'est le fait de penser, et ce qu'est le fait de sentir, parce que les facultés sont précédées par les actes et les actions, selon l'ordre logique » (*De l'âme*, II, 3). Penser la faculté sensitive, c'est donc examiner ce qui se passe quand un animal sent.
+
+    Pour Aristote, la sensation est une **identification** de l'objet senti et de la faculté de sentir. C'est la fameuse formule : « l'acte du sensible et celui de la sensibilité sont un seul et même <acte> » (*De l'âme*, III, 2) ; leurs activités sont « une et identiques » (`autè kai mia`). Conséquence : la sensibilité n'est pas une faculté essentiellement **suspecte ou trompeuse**, même si elle peut l'être ; elle donne la connaissance des réalités sensibles **particulières** qui entourent le sujet.
+
+    Cette thèse prétend dépasser l'opposition de deux familles de conceptions, que portent des traditions différentes :
+
+    | Conception | La sensation est…              | Le sujet | L'objet            |
+    | Active     | une activité, une saisie       | actif    | strictement passif |
+    | Passive    | une altération, une réception  | passif   | actif              |
+
+    ! L'identité de l'acte ne supprime ni le sujet ni l'objet : c'est leur activité, dans la sensation, qui est une.
+  points:
+  - id: sens2-l1-p1
+    sentence: "Toute faculté est une « disposition », en grec ___."
+    answer: "hexis"
+    alt: []
+  - id: sens2-l1-p2
+    sentence: "En tant que « puissance », en grec ___, toute disposition est connue par son activité."
+    answer: "dunamis"
+    alt: []
+  - id: sens2-l1-p3
+    sentence: "L'« activité » ou « acte » se dit en grec ___."
+    answer: "energeia"
+    alt: []
+  - id: sens2-l1-p4
+    sentence: "« il faut encore préciser au préalable ce qu'est le fait de penser, et ce qu'est le fait de sentir, parce que les facultés sont précédées par les ___ et les actions, selon l'ordre logique. »"
+    answer: "actes"
+    alt: []
+  - id: sens2-l1-p5
+    sentence: "« il faut encore préciser au préalable ce qu'est le fait de penser, et ce qu'est le fait de sentir, parce que les facultés sont précédées par les actes et les actions, selon l'ordre ___. »"
+    answer: "logique"
+    alt: []
+  - id: sens2-l1-p6
+    sentence: "Le principe selon lequel les facultés de l'âme sont précédées, selon l'ordre logique, par leurs actes, se trouve dans ___."
+    answer: "De l'âme, II, 3"
+    alt: ["DA II, 3", "De anima II, 3"]
+    explanation: "415a16-19."
+  - id: sens2-l1-p7
+    sentence: "Penser la faculté sensitive, c'est examiner ce qui se passe lorsqu'un animal a une ___."
+    answer: "sensation"
+    alt: []
+  - id: sens2-l1-p8
+    sentence: "Pour Aristote, la sensation est une forme d'___ entre l'objet senti et la faculté de le sentir."
+    answer: "identification"
+    alt: []
+  - id: sens2-l1-p9
+    sentence: "« l'acte du sensible et celui de la sensibilité sont un seul et même <___>. »"
+    answer: "acte"
+    alt: []
+  - id: sens2-l1-p10
+    sentence: "La fameuse formule selon laquelle l'acte du sensible et celui de la sensibilité sont un seul et même acte se trouve dans ___."
+    answer: "De l'âme, III, 2"
+    alt: ["DA III, 2", "De anima III, 2"]
+    explanation: "425b26-27."
+  - id: sens2-l1-p11
+    sentence: "Les activités de la chose sentie et de la sensibilité sont dites « une et identiques », en grec ___."
+    answer: "autè kai mia"
+    alt: ["aute kai mia"]
+  - id: sens2-l1-p12
+    sentence: "Si la sensation identifie la faculté de sentir et l'objet senti, la sensibilité n'est pas une faculté essentiellement suspecte ou ___, même si elle peut l'être."
+    answer: "trompeuse"
+    alt: []
+  - id: sens2-l1-p13
+    sentence: "La sensibilité donne la connaissance des réalités sensibles ___ qui entourent le sujet."
+    answer: "particulières"
+    alt: []
+  - id: sens2-l1-p14
+    sentence: "Selon la première famille de conceptions de la sensibilité, la sensation est une ___ du sujet, qui saisit des objets strictement passifs."
+    answer: "activité"
+    alt: []
+  - id: sens2-l1-p15
+    sentence: "Selon la seconde famille de conceptions de la sensibilité, la sensation est une ___ du sujet, c'est-à-dire une réception purement passive d'une activité extérieure."
+    answer: "altération"
+    alt: []
+  - id: sens2-l1-p16
+    sentence: "Selon la conception passive, la sensibilité est la capacité à recevoir ___ l'activité des objets extérieurs."
+    answer: "passivement"
+    alt: []
+  - id: sens2-l1-p17
+    sentence: "Aristote prétend ___ l'opposition entre deux familles de conceptions de la sensibilité, l'une active, l'autre passive."
+    answer: "dépasser"
+    alt: []
+- id: sens2-l2
+  title: "Sentir, c'est faire : Platon et Empédocle"
+  notes: |
+    Une première conception fait de la sensation une **saisie** active du sujet, idée courante aujourd'hui encore. Chez certains prédécesseurs d'Aristote, elle prend la forme d'**émanations** partant des organes des sens vers les objets, qui s'en trouvent comme « éclairés ». Aristote l'attribue à Platon et à Empédocle : « la vision se produit parce que de la lumière sort [de l'œil] comme d'une lanterne » (*De la sensation et des sensibles*, 2), ou, dirait-on aujourd'hui, d'un projecteur.
+
+    Dans le *Timée*, les yeux sont « porteurs de lumière » (`phôsphora`) : un **feu** s'en écoule en flux continu et se mêle à la lumière extérieure ; ce tout, s'il touche quelque chose, « en transmet les mouvements à travers tout le corps jusqu'à l'âme, et nous procure cette sensation grâce à laquelle précisément nous disons que "nous voyons" ». Sans lumière extérieure, ce feu s'éteint : d'où l'absence de vision dans l'obscurité. La suite explique la réflexion de la lumière dans les miroirs.
+
+    Ces explications ont un caractère **mythique** ; Aristote les lit **littéralement** pour en montrer l'absurdité. Mais elles imagent une vérité qu'il retient : sentir, c'est **faire**, non simplement recevoir. La sensibilité n'est pas une « scène de théâtre » où joueraient les qualités sensibles (l'image est de Hume), mais une faculté de saisie.
+
+    D'où l'**analogie** entre sensation et intellection (*De l'âme*, II, 5) : elles diffèrent non par leur fonctionnement, mais par leurs **objets**, qui « viennent de l'extérieur » (les sensibles, particuliers) ou « résident en quelque sorte dans l'âme elle-même » (les intelligibles, universels). Or l'intellection est une activité, et même, à la fin de l'*Éthique à Nicomaque*, l'une de celles qui s'identifient au bonheur. La sensation est donc elle aussi une activité : une saisie **précognitive**.
+
+    ! Aristote récuse les émanations de l'œil, pas la dimension active de la sensibilité.
+  points:
+  - id: sens2-l2-p1
+    sentence: "Selon une conception courante, aujourd'hui encore, la sensation est une « ___ » par le sujet des qualités sensibles d'un objet."
+    answer: "saisie"
+    alt: []
+  - id: sens2-l2-p2
+    sentence: "Certains prédécesseurs d'Aristote pensent la sensation comme des ___ partant des organes des sens vers les objets sentis, qui s'en trouvent en quelque sorte éclairés."
+    answer: "émanations"
+    alt: []
+  - id: sens2-l2-p3
+    sentence: "Aristote attribue à Platon et à ___ l'idée que la vision se produit parce que de la lumière sort de l'œil."
+    answer: "Empédocle"
+    alt: []
+  - id: sens2-l2-p4
+    sentence: "« la vision se produit parce que de la lumière sort [de l'œil] comme d'une ___ »"
+    answer: "lanterne"
+    alt: []
+  - id: sens2-l2-p5
+    sentence: "La présentation de la vision comme une lumière qui sort de l'œil comme d'une lanterne se trouve dans ___."
+    answer: "De la sensation et des sensibles, 2"
+    alt: ["De sens. 2", "De sensu 2", "De la sensation 2"]
+    explanation: "437b13."
+  - id: sens2-l2-p6
+    sentence: "Dans le *Timée*, Platon affirme que les yeux sont « porteurs de ___ »."
+    answer: "lumière"
+    alt: []
+    explanation: "Timée, 46b3."
+  - id: sens2-l2-p7
+    sentence: "« Porteurs de lumière » se dit, dans le *Timée*, ___."
+    answer: "phôsphora"
+    alt: ["phosphora"]
+  - id: sens2-l2-p8
+    sentence: "Selon le *Timée*, les yeux contiennent un ___ qui s'en écoule en flux continu vers l'extérieur et se mélange à la lumière extérieure."
+    answer: "feu"
+    alt: []
+  - id: sens2-l2-p9
+    sentence: "« […] il en transmet les mouvements à travers tout le corps jusqu'à l'âme, et nous procure cette sensation grâce à laquelle précisément nous disons que \"nous ___\" »"
+    answer: "voyons"
+    alt: []
+    explanation: "Timée, 45b6-45d3."
+  - id: sens2-l2-p10
+    sentence: "Selon le *Timée*, on ne voit pas dans l'___, parce que le feu des yeux, faute de rencontrer une lumière extérieure, s'éteint aussitôt."
+    answer: "obscurité"
+    alt: []
+  - id: sens2-l2-p11
+    sentence: "La suite du *Timée* explique par les mêmes principes la réflexion de la lumière dans les surfaces polies et les ___."
+    answer: "miroirs"
+    alt: []
+  - id: sens2-l2-p12
+    sentence: "Les explications du *Timée* sur la vision sont imagées et ont un caractère ___."
+    answer: "mythique"
+    alt: []
+  - id: sens2-l2-p13
+    sentence: "Aristote interprète le passage du *Timée* sur la vision de manière strictement ___ pour en montrer l'absurdité."
+    answer: "littérale"
+    alt: []
+  - id: sens2-l2-p14
+    sentence: "La théorie des émanations a pourtant le mérite d'imager la dimension ___ de la sensibilité : sentir, c'est faire quelque chose, et non simplement recevoir quelque chose."
+    answer: "active"
+    alt: []
+  - id: sens2-l2-p15
+    sentence: "La sensibilité n'est pas un réceptacle qu'on pourrait assimiler à une « ___ » sur laquelle viendraient « jouer » les qualités sensibles."
+    answer: "scène de théâtre"
+    alt: []
+  - id: sens2-l2-p16
+    sentence: "L'image de l'esprit comme scène de théâtre où jouent les qualités sensibles est empruntée à ___."
+    answer: "Hume"
+    alt: []
+  - id: sens2-l2-p17
+    sentence: "Au chapitre 5 du livre II du *De l'âme*, Aristote développe une ___ entre l'activité de l'intelligence et celle de la sensibilité."
+    answer: "analogie"
+    alt: []
+  - id: sens2-l2-p18
+    sentence: "Selon *De l'âme*, II, 5, la différence entre sensation et intellection ne réside pas dans leur mode de fonctionnement, mais dans leurs ___."
+    answer: "objets"
+    alt: []
+    explanation: "417b17-27."
+  - id: sens2-l2-p19
+    sentence: "La sensibilité appréhende des objets qui « viennent de l'___ »."
+    answer: "extérieur"
+    alt: []
+  - id: sens2-l2-p20
+    sentence: "L'intelligence appréhende des objets qui « résident en quelque sorte dans l'___ elle-même »."
+    answer: "âme"
+    alt: []
+  - id: sens2-l2-p21
+    sentence: "Les objets de la sensation sont particuliers ; ceux de l'intelligence sont ___."
+    answer: "universels"
+    alt: []
+  - id: sens2-l2-p22
+    sentence: "Dans les derniers chapitres de l'*Éthique à Nicomaque*, l'intellection est l'une des activités qui s'identifient au ___."
+    answer: "bonheur"
+    alt: []
+  - id: sens2-l2-p23
+    sentence: "Rapprochée de la pensée, la sensation apparaît comme une opération de saisie ___."
+    answer: "précognitive"
+    alt: []
+- id: sens2-l3
+  title: "Recevoir : Démocrite, les épicuriens, la cire"
+  notes: |
+    D'autres prédécesseurs ont soutenu au contraire que la sensibilité **reçoit passivement** une activité extérieure : les choses perçues pénètrent en quelque sorte dans le sujet, qui reçoit leurs **effluves** ou leurs émanations. La sensation serait l'**impression** que font sur nous les objets. C'est encore le cas chez Hume, pour qui les sensations sont des impressions externes produites sur la scène mentale qu'est l'esprit (*Traité de la nature humaine*, I, IV, 6).
+
+    La conception est paradigmatique chez **Démocrite**, qui conçoit la vision « comme la réception de l'image réfléchie des objets visibles ». Elle deviendra chez les épicuriens la théorie des **simulacres** (Épicure, *Lettre à Hérodote*) : un flux continu d'atomes se détache de la surface des corps, réplique de l'objet ou de son apparence, qui nous fait connaître ses qualités en touchant nos organes. Aristote vise sans doute ce type de thèse quand il évoque ceux qui disent « que la couleur est un effluve et que l'on voit par une cause de ce type » (l'effluve semble chez lui associé à Empédocle). D'où l'image d'une sensation analogue à l'**impression d'un cachet dans la cire**.
+
+    Aristote admet que la sensation modifie le sujet : « toute sensation réside dans le fait de recevoir un mouvement et d'être affecté, comme on l'a dit, puisqu'elle passe pour être une forme d'altération » (*De l'âme*, II, 5). Mais l'« altération » (`alloiôsis`) n'est qu'une opinion admise (« elle passe pour… », `dokei`), un `endoxon`, approximation temporairement valable : la sensation fait passer la sensibilité à l'« acte » (`energeia`), elle est la « réalisation » (`entelecheia`) de sa puissance. Il reprend aussi l'analogie, sans doute démocritéenne, du cachet, et reconnaît à l'objet sensible une activité décisive.
+
+    L'enjeu : comprendre comment la sensibilité peut être à la fois capacité à **recevoir** le mouvement d'un objet et capacité à le **saisir**. Empédocle avançait déjà les deux sans les concilier : tantôt on voit parce que la lumière sort de l'œil, tantôt « à cause des effluves en provenance des objets vus ».
+
+    ! Quand Aristote dit que la sensation « passe pour » une altération, il ne l'affirme pas en son nom propre.
+  points:
+  - id: sens2-l3-p1
+    sentence: "Selon la conception passive, le sujet sentant est simplement capable de recevoir les ___ ou les émanations des objets sensibles."
+    answer: "effluves"
+    alt: []
+  - id: sens2-l3-p2
+    sentence: "Selon la conception passive, la sensation serait l'___ que font sur nous les objets sensibles."
+    answer: "impression"
+    alt: []
+  - id: sens2-l3-p3
+    sentence: "___ identifie les sensations à des impressions externes qui viennent se produire sur la scène mentale qu'est notre esprit."
+    answer: "Hume"
+    alt: []
+    explanation: "Traité de la nature humaine, I, IV, 6."
+  - id: sens2-l3-p4
+    sentence: "La conception passive de la sensation est à l'œuvre de manière paradigmatique chez ___, qui conçoit la vision comme la réception de l'image réfléchie des objets visibles."
+    answer: "Démocrite"
+    alt: []
+  - id: sens2-l3-p5
+    sentence: "Démocrite conçoit la vision « comme la réception de l'___ réfléchie des objets visibles »."
+    answer: "image"
+    alt: []
+    explanation: "Diels-Kranz, 67A29."
+  - id: sens2-l3-p6
+    sentence: "La conception démocritéenne de la vision correspond à ce qui deviendra, chez les épicuriens, la théorie des ___."
+    answer: "simulacres"
+    alt: []
+  - id: sens2-l3-p7
+    sentence: "La théorie épicurienne des simulacres est exposée par Épicure dans la *Lettre à ___*."
+    answer: "Hérodote"
+    alt: []
+    explanation: "§ 46-52."
+  - id: sens2-l3-p8
+    sentence: "Selon les épicuriens, on perçoit les objets sensibles parce qu'un flux continu d'___ se détache de leur surface, du fait des mouvements incessants à l'intérieur des corps."
+    answer: "atomes"
+    alt: []
+  - id: sens2-l3-p9
+    sentence: "Aristote évoque les anciens philosophes qui disent « que la couleur est un ___ et que l'on voit par une cause de ce type »."
+    answer: "effluve"
+    alt: []
+  - id: sens2-l3-p10
+    sentence: "L'évocation des anciens philosophes pour qui la couleur est un effluve se trouve dans ___."
+    answer: "De la sensation et des sensibles, 3"
+    alt: ["De sens. 3", "De sensu 3", "De la sensation 3"]
+    explanation: "440a15-16."
+  - id: sens2-l3-p11
+    sentence: "Derrière l'idée que la sensation est une « impression » des qualités sensibles sur le sujet se trouve l'analogie avec l'impression d'un ___ dans la cire."
+    answer: "cachet"
+    alt: []
+  - id: sens2-l3-p12
+    sentence: "« toute sensation réside dans le fait de recevoir un mouvement et d'être ___, comme on l'a dit, puisqu'elle passe pour être une forme d'altération »"
+    answer: "affecté"
+    alt: []
+  - id: sens2-l3-p13
+    sentence: "« toute sensation réside dans le fait de recevoir un mouvement et d'être affecté, comme on l'a dit, puisqu'elle passe pour être une forme d'___ »"
+    answer: "altération"
+    alt: []
+  - id: sens2-l3-p14
+    sentence: "La phrase qui ouvre l'examen de la sensation en la présentant comme le fait de recevoir un mouvement et d'être affecté se trouve au début de ___."
+    answer: "De l'âme, II, 5"
+    alt: ["DA II, 5", "De anima II, 5"]
+    explanation: "416b31-35."
+  - id: sens2-l3-p15
+    sentence: "L'« altération » se dit en grec ___."
+    answer: "alloiôsis"
+    alt: ["alloiosis"]
+  - id: sens2-l3-p16
+    sentence: "La sensation n'altère pas la sensibilité : elle la fait passer à l'acte, elle est la « réalisation », en grec ___, de sa puissance."
+    answer: "entelecheia"
+    alt: ["entelekheia", "entéléchie"]
+  - id: sens2-l3-p17
+    sentence: "La qualification d'altération n'est pas proprement aristotélicienne : c'est une opinion admise, en grec un ___, qui constitue une approximation temporairement valable."
+    answer: "endoxon"
+    alt: []
+  - id: sens2-l3-p18
+    sentence: "Le verbe grec qui signale cette opinion admise, « elle passe pour… », est ___."
+    answer: "dokei"
+    alt: []
+  - id: sens2-l3-p19
+    sentence: "L'analogie entre l'impression d'un cachet dans la cire et la sensation est sans doute d'origine ___, et antérieure à Aristote."
+    answer: "démocritéenne"
+    alt: []
+  - id: sens2-l3-p20
+    sentence: "Aristote reconnaît à l'objet sensible une forme d'___, décisive dans l'opération de sensation qui impressionne notre sensibilité."
+    answer: "activité"
+    alt: []
+  - id: sens2-l3-p21
+    sentence: "Empédocle semble avancer les deux aspects de la sensibilité, réception et saisie, sans tenter de les ___ ni d'expliquer leur coexistence."
+    answer: "concilier"
+    alt: []
+  - id: sens2-l3-p22
+    sentence: "« Tantôt, donc il dit que c'est ainsi que l'on voit, mais tantôt, que c'est à cause des ___ en provenance des objets vus. »"
+    answer: "effluves"
+    alt: []
+  - id: sens2-l3-p23
+    sentence: "Le passage où Aristote relève que, pour Empédocle, on voit tantôt par une lumière qui sort de l'œil, tantôt par des effluves venus des objets, se trouve dans ___."
+    answer: "De la sensation et des sensibles, 2"
+    alt: ["De sens. 2", "De sensu 2", "De la sensation 2"]
+    explanation: "437b24-438a5."
+- id: sens2-l4
+  title: "Deux sens de la puissance"
+  notes: |
+    La doctrine de « l'identité et de l'unité de l'acte » (`energeia autè kai mia`) de la sensibilité et du sensible surmonte la contradiction. Aristote admet avec **Démocrite** que la sensibilité n'est pas immédiatement l'agent de sa propre activité : c'est le sensible, extérieur, qui « met en mouvement ». On ne sent pas ce qui n'est pas présent (sinon, c'est mémoire ou imagination) : pour sentir, « il faut nécessairement disposer du sensible » (*De l'âme*, II, 5). Mais la sensibilité s'accomplit selon sa propre nature quand le sensible la meut : la sensation est une **co-activité** du sensible et de la sensibilité, où celle-ci s'identifie à celui-là.
+
+    Pour le montrer, Aristote distingue deux manières d'être en puissance (*De l'âme*, II, 5, fin), sur l'exemple du savant :
+
+    | Modalité           | L'homme savant                                           |
+    | Puissance première | tout homme, même l'enfant ou l'ignorant : son genre « fournit la matière » de la science |
+    | Puissance seconde  | Aristote qui mange ou dort : il possède la science, une `hexis`, sans l'exercer |
+    | Acte               | Aristote « bel et bien en train de spéculer », « savant par réalisation » |
+
+    D'où deux passages à l'acte. Quand le disciple apprend, il **change** de nature : il devient littéralement « différent » ; il y a « destruction sous l'effet du contraire », l'ignorance étant détruite par la science. Quand Aristote spécule, il reste savant : « le progrès va du même au même dans le sens de la réalisation », c'est une « préservation de l'être potentiel par l'être réalisé ». Dans un cas, une chose se transforme ; dans l'autre, elle se **réalise**.
+
+    ! La disposition (`hexis`) est un état intermédiaire entre la puissance et l'acte : elle implique déjà une forme minimale d'activité.
+  points:
+  - id: sens2-l4-p1
+    sentence: "La doctrine de « l'identité et de l'unité de l'acte » de la sensibilité et du sensible se dit en grec ___."
+    answer: "energeia autè kai mia"
+    alt: ["energeia aute kai mia"]
+  - id: sens2-l4-p2
+    sentence: "Aristote admet avec ___ que la sensibilité n'est pas immédiatement l'agent de sa propre activité : c'est le sensible, extérieur, qui la met en mouvement."
+    answer: "Démocrite"
+    alt: []
+  - id: sens2-l4-p3
+    sentence: "On ne peut pas sentir ce avec quoi l'on n'est pas en présence : sans objet présent, il s'agit de mémoire ou d'___."
+    answer: "imagination"
+    alt: []
+  - id: sens2-l4-p4
+    sentence: "Pour sentir, « il faut nécessairement ___ du sensible »."
+    answer: "disposer"
+    alt: []
+  - id: sens2-l4-p5
+    sentence: "L'affirmation que, pour sentir, il faut nécessairement disposer du sensible se trouve dans ___."
+    answer: "De l'âme, II, 5"
+    alt: ["DA II, 5", "De anima II, 5"]
+    explanation: "417b25."
+  - id: sens2-l4-p6
+    sentence: "La sensibilité n'est pas une pure faculté ___ : elle s'accomplit selon sa propre nature lorsque le sensible la meut."
+    answer: "réceptive"
+    alt: []
+  - id: sens2-l4-p7
+    sentence: "Aristote fait de la sensation une ___ du sensible et de la sensibilité, dans laquelle la sensibilité s'identifie au sensible."
+    answer: "co-activité"
+    alt: ["coactivité"]
+  - id: sens2-l4-p8
+    sentence: "Un homme est savant en puissance au premier sens parce qu'il « se range parmi les êtres savants qui détiennent la capacité de ___ »."
+    answer: "science"
+    alt: []
+    explanation: "De l'âme, II, 5, 417b23-24."
+  - id: sens2-l4-p9
+    sentence: "Tout homme est savant en puissance au premier sens « parce que son ___ est tel et fournit la matière »."
+    answer: "genre"
+    alt: []
+    explanation: "De l'âme, II, 5, 417b27."
+  - id: sens2-l4-p10
+    sentence: "Au premier sens de la puissance, même l'___ ou l'ignorant est savant en puissance."
+    answer: "enfant"
+    alt: []
+  - id: sens2-l4-p11
+    sentence: "Le premier sens de la puissance, pure possibilité, donnée par la nature de la chose, d'acquérir une disposition, s'appelle la puissance ___."
+    answer: "première"
+    alt: []
+  - id: sens2-l4-p12
+    sentence: "Aristote, lorsqu'il mange ou dort, possède encore la science sans l'exercer : il est savant selon la puissance ___."
+    answer: "seconde"
+    alt: []
+  - id: sens2-l4-p13
+    sentence: "Le savant qui mange ou qui dort n'a pas besoin de tout ___ à la fin du repas ou au réveil."
+    answer: "rapprendre"
+    alt: []
+  - id: sens2-l4-p14
+    sentence: "La science que possède le savant qui n'en fait pas usage est une « disposition », état intermédiaire entre l'acte et la ___."
+    answer: "puissance"
+    alt: []
+  - id: sens2-l4-p15
+    sentence: "Le savant n'est pleinement en acte que lorsqu'il est « bel et bien en train de ___ »."
+    answer: "spéculer"
+    alt: []
+  - id: sens2-l4-p16
+    sentence: "Le savant en acte « est savant par réalisation et connaît ___ »."
+    answer: "souverainement"
+    alt: []
+    explanation: "De l'âme, II, 5, 417b28-29."
+  - id: sens2-l4-p17
+    sentence: "Quand le disciple devient savant par l'apprentissage, il ___ sa nature : il cesse d'être un disciple ignorant pour entrer dans l'état opposé."
+    answer: "change"
+    alt: []
+  - id: sens2-l4-p18
+    sentence: "Le passage de la puissance première à la puissance seconde est une « destruction sous l'effet du ___ » : l'ignorance est détruite par la science."
+    answer: "contraire"
+    alt: []
+    explanation: "De l'âme, II, 5, 417b3."
+  - id: sens2-l4-p19
+    sentence: "Quand le savant spécule, « le progrès va du même au ___ dans le sens de la réalisation »."
+    answer: "même"
+    alt: []
+    explanation: "De l'âme, II, 5, 417b6-7."
+  - id: sens2-l4-p20
+    sentence: "« ce qui serait plutôt une ___ de l'être potentiel par l'être réalisé, auquel il ressemble, comme la puissance en face de sa réalisation »"
+    answer: "préservation"
+    alt: []
+    explanation: "De l'âme, II, 5."
+  - id: sens2-l4-p21
+    sentence: "Dans le passage de la puissance première à la puissance seconde, une chose se transforme ; dans le passage de la puissance seconde à l'acte, elle se ___."
+    answer: "réalise"
+    alt: []
+- id: sens2-l5
+  title: "La sensation, réalisation de la sensibilité"
+  notes: |
+    La sensibilité, comme toute faculté de l'âme et comme l'âme elle-même, est une **puissance seconde**. Elle est donnée comme disposition (`hexis`) dès la conception de l'embryon : l'animal, sauf malformation, possède dès sa naissance la capacité de sentir, comme le savant possède la science ; endormi, il la conserve sans l'exercer. « Nous parlons de sentir avec deux significations. De celui qui a la capacité d'entendre ou de voir, nous disons, en effet, qu'il entend ou voit, même si d'aventure il dort », « et nous disons également de celui qui exerce bel et bien ces activités qu'il sent » (*De l'âme*, II, 5).
+
+    La sensation est donc le passage à l'acte d'une puissance seconde, **non une altération** : elle ne transforme pas la sensibilité, elle la **réalise et la parachève**. La sensibilité n'est pas détruite et remplacée par la sensation, comme l'ignorance l'est par la connaissance dans l'apprentissage ; la sensation est la réalisation, l'achèvement et donc l'**essence** de la sensibilité, comme la spéculation l'est de la science du savant.
+
+    D'où l'identité : l'activité du sensible et celle de la sensibilité sont une seule et même chose, et il est vain de demander qui est actif et qui est passif. « La sensibilité, par ailleurs, est potentiellement identique au sensible déjà réalisé, comme on l'a dit. Donc, au moment où elle est affectée, elle n'est pas semblable à celui-ci, mais une fois qu'elle a été affectée, elle se trouve assimilée à lui. » Endormi, le sujet est en puissance identique au sensible ; éveillé et sentant, il l'est en acte.
+
+    ! La sensibilité de l'animal endormi n'a pas disparu : c'est une puissance seconde, non une simple puissance première.
+  points:
+  - id: sens2-l5-p1
+    sentence: "La sensibilité, comme toute faculté de l'âme et comme l'âme elle-même, se présente comme une puissance ___ et non comme une puissance première."
+    answer: "seconde"
+    alt: []
+  - id: sens2-l5-p2
+    sentence: "La sensibilité est immédiatement donnée comme une disposition dans le processus de conception de l'___ animal."
+    answer: "embryon"
+    alt: []
+  - id: sens2-l5-p3
+    sentence: "L'animal qui ___ conserve sa capacité à sentir, même s'il ne l'exerce pas actuellement."
+    answer: "dort"
+    alt: []
+  - id: sens2-l5-p4
+    sentence: "« Nous parlons de sentir avec deux ___. De celui qui a la capacité d'entendre ou de voir, nous disons, en effet, qu'il entend ou voit, même si d'aventure il dort »"
+    answer: "significations"
+    alt: []
+  - id: sens2-l5-p5
+    sentence: "« Nous parlons de sentir avec deux significations. De celui qui a la ___ d'entendre ou de voir, nous disons, en effet, qu'il entend ou voit, même si d'aventure il dort »"
+    answer: "capacité"
+    alt: []
+  - id: sens2-l5-p6
+    sentence: "« et nous disons également de celui qui exerce bel et bien ces ___ qu'il sent »"
+    answer: "activités"
+    alt: []
+  - id: sens2-l5-p7
+    sentence: "La distinction entre deux significations du verbe « sentir », selon qu'on a la capacité de sentir ou qu'on l'exerce, se trouve dans ___."
+    answer: "De l'âme, II, 5"
+    alt: ["DA II, 5", "De anima II, 5"]
+    explanation: "417a9-13."
+  - id: sens2-l5-p8
+    sentence: "La sensation est le passage à l'acte d'une puissance seconde : ce n'est donc pas une « ___ » du sujet sensible et de sa sensibilité."
+    answer: "altération"
+    alt: []
+  - id: sens2-l5-p9
+    sentence: "La sensibilité n'est pas transformée par la sensation : la sensation la réalise et la ___."
+    answer: "parachève"
+    alt: []
+  - id: sens2-l5-p10
+    sentence: "La sensibilité n'est pas détruite et remplacée par la sensation, comme l'___ est détruite et remplacée par la connaissance dans l'apprentissage."
+    answer: "ignorance"
+    alt: []
+  - id: sens2-l5-p11
+    sentence: "La sensation est la réalisation, l'achèvement et donc l'___ de la sensibilité."
+    answer: "essence"
+    alt: []
+  - id: sens2-l5-p12
+    sentence: "La sensation est à la sensibilité ce que la ___ est à la science que possède le savant."
+    answer: "spéculation"
+    alt: []
+  - id: sens2-l5-p13
+    sentence: "Puisque le sensible et la sensibilité ont une même activité commune, il n'y a pas lieu de demander lequel est actif et lequel est ___ dans la sensation."
+    answer: "passif"
+    alt: []
+  - id: sens2-l5-p14
+    sentence: "« La sensibilité, par ailleurs, est potentiellement ___ au sensible déjà réalisé, comme on l'a dit. »"
+    answer: "identique"
+    alt: []
+  - id: sens2-l5-p15
+    sentence: "« Donc, au moment où elle est affectée, elle n'est pas semblable à celui-ci, mais une fois qu'elle a été affectée, elle se trouve ___ à lui. »"
+    answer: "assimilée"
+    alt: []
+  - id: sens2-l5-p16
+    sentence: "La conclusion selon laquelle la sensibilité, une fois affectée, se trouve assimilée au sensible se trouve dans ___."
+    answer: "De l'âme, II, 5"
+    alt: ["DA II, 5", "De anima II, 5"]
+    explanation: "418a3-6."
+  - id: sens2-l5-p17
+    sentence: "Lorsque le sujet dort, sa sensibilité est identique au sensible en ___ ; éveillé et sentant, elle lui devient identique en acte."
+    answer: "puissance"
+    alt: []
