@@ -278,15 +278,24 @@ seulement :
 ```yaml
 id: ea2
 title: La déduction du jugement de goût et ses débats
-group: L'esthétique de Kant   # même valeur que ea1, ea3, ea4, ea5
+group: "Kant : l'esthétique"   # même valeur que ea1, ea3, ea4
 ```
 
 Utile dès qu'une piste couvre plusieurs unités sur un même auteur ou une
-même œuvre : sans lui, cinq unités s'étalent l'une sous l'autre dans la
+même œuvre : sans lui, quatre unités s'étalent l'une sous l'autre dans la
 liste ; avec lui, elles se replient derrière un seul en-tête, dans l'ordre
 où elles sont déclarées. Une unité sans `group` reste seule, comme avant ce
 champ ; deux plages du même `group` séparées par une unité d'un autre
 `group` forment deux replis distincts plutôt qu'un seul.
+
+Dans une piste qui couvre plusieurs auteurs (Hors-programme, La vie…), le
+nom du groupe se dit **« Auteur : thème »** (« Kant : l'esthétique »,
+« Aristote : la sensibilité »), comme le titre d'une unité qui n'est pas
+groupée (« Rousseau : l'homme naturel et l'homme social »). Le sous-titre
+de chaque unité membre n'a alors plus besoin de répéter le nom de
+l'auteur, déjà donné par le groupe qui la contient. Dans une piste ou un
+cours consacré à un seul auteur (Plotin, Marx), le nom du groupe s'en
+passe : le répéter à chaque groupe serait aussi redondant qu'au sous-titre.
 
 ## Publier le squelette d'un niveau avant son contenu
 

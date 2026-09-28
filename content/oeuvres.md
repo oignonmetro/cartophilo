@@ -31,7 +31,7 @@ title: "Du contrat social : le plan"
 subtitle: "Rousseau · Livre II"
 icon: map
 color: red
-group: "Rousseau, Du contrat social"
+group: "Rousseau : Du contrat social"
 work:
   parts:
     - id: l2                        # un livre : une leçon
