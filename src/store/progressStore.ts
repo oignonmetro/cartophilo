@@ -106,16 +106,28 @@ export interface ProgressSnapshot {
    * on la révèle. Le choix se fait sur la carte elle-même et vaut ensuite
    * pour toutes, sur ce type d'écran seulement.
    *
+   * Indépendant de `gapModes` : une citation entière et un mot ou une
+   * référence à retrouver n'appellent pas forcément le même choix.
+   *
    * Remplace un ancien `passageMode` unique, révéler par défaut partout : il
    * n'est pas repris, sans quoi sa valeur enregistrée d'office masquerait le
    * nouveau défaut sur ordinateur.
    */
-  passageModes: Record<PassageDevice, PassageMode>
+  passageModes: Record<AnswerDevice, AnswerMode>
+  /**
+   * Même choix que `passageModes` (révéler puis s'auto-évaluer, ou écrire),
+   * mais pour une carte à trou d'une unité classique (voir `GrammarGap`) —
+   * un point de grammaire ou de philosophie, sans le paragraphe qui fait
+   * d'une leçon une unité de texte. Réglage indépendant et par type d'écran,
+   * pour la même raison : `write` par défaut sur ordinateur, `reveal` sur
+   * téléphone.
+   */
+  gapModes: Record<AnswerDevice, AnswerMode>
 }
 
-export type PassageMode = 'reveal' | 'write'
+export type AnswerMode = 'reveal' | 'write'
 /** `desktop` : écran large, voir `useIsDesktop` ; `mobile` : téléphone et appli. */
-export type PassageDevice = 'desktop' | 'mobile'
+export type AnswerDevice = 'desktop' | 'mobile'
 
 interface ProgressState extends ProgressSnapshot {
   /** Enregistre la réponse à un élément et met à jour sa carte de révision. */
@@ -151,7 +163,8 @@ interface ProgressState extends ProgressSnapshot {
   setHaptics: (on: boolean) => void
   setTargetedCorrection: (on: boolean) => void
   setTheme: (theme: 'light' | 'dark' | 'system') => void
-  setPassageMode: (device: PassageDevice, mode: PassageMode) => void
+  setPassageMode: (device: AnswerDevice, mode: AnswerMode) => void
+  setGapMode: (device: AnswerDevice, mode: AnswerMode) => void
   exportSave: () => string
   importSave: (payload: string) => void
   reset: () => void
@@ -183,6 +196,7 @@ const initial: ProgressSnapshot = {
   targetedCorrection: false,
   theme: 'system',
   passageModes: { desktop: 'write', mobile: 'reveal' },
+  gapModes: { desktop: 'write', mobile: 'reveal' },
   streak: { current: 0, best: 0, lastDay: null },
 }
 
@@ -486,6 +500,9 @@ export const useProgress = create<ProgressState>()(
       setPassageMode: (device, mode) =>
         set((state) => ({ passageModes: { ...state.passageModes, [device]: mode } })),
 
+      setGapMode: (device, mode) =>
+        set((state) => ({ gapModes: { ...state.gapModes, [device]: mode } })),
+
       exportSave: () => {
         const {
           lessons,
@@ -500,6 +517,7 @@ export const useProgress = create<ProgressState>()(
           targetedCorrection,
           theme,
           passageModes,
+          gapModes,
         } = get()
         return JSON.stringify(
           {
@@ -517,6 +535,7 @@ export const useProgress = create<ProgressState>()(
             targetedCorrection,
             theme,
             passageModes,
+            gapModes,
           },
           null,
           2,
@@ -536,7 +555,8 @@ export const useProgress = create<ProgressState>()(
           haptics?: boolean
           targetedCorrection?: boolean
           theme?: 'light' | 'dark' | 'system'
-          passageModes?: Partial<Record<PassageDevice, PassageMode>>
+          passageModes?: Partial<Record<AnswerDevice, AnswerMode>>
+          gapModes?: Partial<Record<AnswerDevice, AnswerMode>>
           streak?: Streak
         }
         // Les formats antérieurs n'ont rien perdu : leurs champs manquants
@@ -586,6 +606,7 @@ export const useProgress = create<ProgressState>()(
           targetedCorrection: parsed.targetedCorrection ?? initial.targetedCorrection,
           theme: parsed.theme ?? initial.theme,
           passageModes: { ...initial.passageModes, ...parsed.passageModes },
+          gapModes: { ...initial.gapModes, ...parsed.gapModes },
           streak: parsed.streak ?? initial.streak,
         })
       },
@@ -648,6 +669,7 @@ export const useProgress = create<ProgressState>()(
         targetedCorrection,
         theme,
         passageModes,
+        gapModes,
       }) => ({
         lessons,
         cards,
@@ -660,6 +682,7 @@ export const useProgress = create<ProgressState>()(
         targetedCorrection,
         theme,
         passageModes,
+        gapModes,
         streak,
       }),
     },

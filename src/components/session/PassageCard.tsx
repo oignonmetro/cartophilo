@@ -3,12 +3,14 @@ import { motion } from 'framer-motion'
 import type { PassageExercise } from '@/engine/exercises'
 import { matchesAnswer, splitGaps } from '@/engine/exercises'
 import type { Rating } from '@/engine/srs'
-import { Button, type ButtonTone } from '@/components/Button'
+import { Button } from '@/components/Button'
 import { sentenceTextSize, sentenceTextSizeMd } from '@/lib/textDensity'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
-import { useProgress, type PassageMode } from '@/store/progressStore'
+import { useProgress, type AnswerMode } from '@/store/progressStore'
 import { Rich, RichGaps } from './RuleNote'
+import { AnswerModeSwitch } from './AnswerModeSwitch'
+import { RATINGS, RevealButtons } from './RevealButtons'
 import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
 
@@ -46,7 +48,7 @@ export function PassageCard({
   const device = isDesktop ? 'desktop' : 'mobile'
   const mode = useProgress((state) => state.passageModes[device])
   const setPassageMode = useProgress((state) => state.setPassageMode)
-  const setMode = (next: PassageMode) => setPassageMode(device, next)
+  const setMode = (next: AnswerMode) => setPassageMode(device, next)
   const { parts, fills } = useMemo(() => splitGaps(point.sentence, point.answer), [point.sentence, point.answer])
   const gapCount = parts.length - 1
   const textSize = sentenceTextSize('text-lg', point.sentence.length)
@@ -122,7 +124,7 @@ export function PassageCard({
     <div className="flex min-h-0 flex-1 flex-col gap-3">
       <div className="flex shrink-0 items-center justify-between gap-3">
         <PassageHeader label={passage.label} heading={passage.heading} source={passage.source} fragment={point.fragment} />
-        <ModeSwitch mode={mode} disabled={answered} onChange={setMode} />
+        <AnswerModeSwitch mode={mode} disabled={answered} onChange={setMode} />
       </div>
 
       <div className="min-h-0 flex-1 overflow-y-auto md:flex md:flex-col md:justify-[safe_center]">
@@ -220,31 +222,12 @@ export function PassageCard({
             Révéler
           </Button>
         ) : mode === 'reveal' && revealed ? (
-          <div className="grid grid-cols-3 gap-2">
-            {RATINGS.map(({ rating, label, tone, key }) => (
-              <Button key={rating} tone={tone} onClick={() => onAnswer(rating !== 'again', rating)} className="text-xs">
-                {/* Sur ordinateur, la touche qui déclenche le bouton (voir
-                    les raccourcis plus haut) : sans elle, rien ne dit qu'elle
-                    existe. */}
-                {isDesktop && (
-                  <kbd className="mr-2 rounded-md bg-black/15 px-1.5 py-0.5 font-sans text-[0.7rem] font-black">{key}</kbd>
-                )}
-                {label}
-              </Button>
-            ))}
-          </div>
+          <RevealButtons isDesktop={isDesktop} onRate={(rating) => onAnswer(rating !== 'again', rating)} />
         ) : null}
       </div>
     </div>
   )
 }
-
-/** Les trois auto-évaluations, dans l'ordre des boutons et de leurs touches 1, 2, 3. */
-const RATINGS = [
-  { rating: 'again', label: 'À revoir', tone: 'error', key: '1' },
-  { rating: 'hard', label: 'Hésitant', tone: 'amber', key: '2' },
-  { rating: 'good', label: 'Je savais', tone: 'success', key: '3' },
-] as const satisfies readonly { rating: Rating; label: string; tone: ButtonTone; key: string }[]
 
 /**
  * Repère du paragraphe, « §1 · 1/3 », et son intitulé : ce qui situe la carte
@@ -274,40 +257,6 @@ function PassageHeader({
       <span className="line-clamp-2 text-sm leading-snug font-bold text-ink-soft" title={heading}>
         {heading}
       </span>
-    </div>
-  )
-}
-
-function ModeSwitch({
-  mode,
-  disabled,
-  onChange,
-}: {
-  mode: 'reveal' | 'write'
-  disabled: boolean
-  onChange: (mode: 'reveal' | 'write') => void
-}) {
-  const options = [
-    { id: 'reveal', label: 'Révéler' },
-    { id: 'write', label: 'Écrire' },
-  ] as const
-  return (
-    <div role="radiogroup" aria-label="Mode de réponse" className="flex shrink-0 rounded-full border-2 border-line p-0.5">
-      {options.map((option) => (
-        <button
-          key={option.id}
-          type="button"
-          role="radio"
-          aria-checked={mode === option.id}
-          disabled={disabled}
-          onClick={() => onChange(option.id)}
-          className={`rounded-full px-3 py-1 text-xs font-extrabold transition-colors disabled:opacity-60 ${
-            mode === option.id ? 'bg-violet text-white' : 'text-ink-faint hover:text-ink-soft'
-          }`}
-        >
-          {option.label}
-        </button>
-      ))}
     </div>
   )
 }

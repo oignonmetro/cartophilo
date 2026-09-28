@@ -2,23 +2,34 @@ import { forwardRef, useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import type { GrammarGapExercise } from '@/engine/exercises'
 import { matchesAnswer } from '@/engine/exercises'
+import type { Rating } from '@/engine/srs'
 import { Button } from '@/components/Button'
 import { learningLanguage } from '@/lib/speech'
 import { sentenceTextSize, sentenceTextSizeMd } from '@/lib/textDensity'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
+import { useProgress } from '@/store/progressStore'
 import { CorrectionGap } from './CorrectionGap'
 import { Rich, RichGaps } from './RuleNote'
 import { ExpectedAnswer } from './ExpectedAnswer'
+import { AnswerModeSwitch } from './AnswerModeSwitch'
+import { RATINGS, RevealButtons } from './RevealButtons'
 import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
 
 /**
- * Phrase de grammaire à compléter.
+ * Phrase de grammaire à compléter — la carte d'une unité classique (voir
+ * `content/philosophie.md`, `content/README.md`), par opposition au
+ * paragraphe cité d'une unité de texte (voir `PassageCard`).
  *
- * Aux premiers passages, les formes plausibles sont proposées : l'apprenant
- * choisit, et c'est la comparaison entre les formes qui enseigne la règle.
- * Ensuite la réponse se saisit, sans filet.
+ * Aux premiers passages, les formes plausibles sont proposées (`bank`) :
+ * l'apprenant choisit, et c'est la comparaison entre les formes qui enseigne
+ * la règle. Sans banque, deux façons de répondre, au choix de l'apprenant et
+ * retenues ensuite pour toutes, sur ce type d'écran (voir `gapModes`) : même
+ * choix, pour les mêmes raisons, que sur une carte de texte (voir
+ * `PassageCard`) — écrire, jugé au mot près, ou révéler puis s'auto-évaluer,
+ * pour une réponse qui se tape mal (une citation, un terme accentué) ou dont
+ * la formulation exacte importe peu à mémoriser mot pour mot.
  *
  * La traduction française suit le même retrait : tant qu'elle est là, le sens
  * visé est acquis et il ne reste qu'à trouver la forme ; une fois retirée,
@@ -30,13 +41,25 @@ export function GrammarGap({
   onAnswer,
 }: {
   exercise: GrammarGapExercise
-  onAnswer: (correct: boolean) => void
+  /** `rating` : présent pour une auto-évaluation (mode révéler), absent pour une réponse écrite. */
+  onAnswer: (correct: boolean, rating?: Rating) => void
 }) {
   const { point, bank, cue } = exercise
   const textSize = sentenceTextSize('text-xl', point.sentence.length)
+  const isDesktop = useIsDesktop()
+  // Écrire par défaut sur ordinateur, révéler sur téléphone : un réglage par
+  // type d'écran (voir `gapModes`), indépendant de celui d'une carte de texte.
+  const device = isDesktop ? 'desktop' : 'mobile'
+  const mode = useProgress((state) => state.gapModes[device])
+  const setGapMode = useProgress((state) => state.setGapMode)
+  // Une banque de formes n'est jamais une saisie : le choix écrire/révéler
+  // ne la concerne pas, seule la production libre en a besoin.
+  const revealable = !bank
+
   const [value, setValue] = useState('')
   const [checked, setChecked] = useState<null | boolean>(null)
   const [gapResolved, setGapResolved] = useState(false)
+  const [revealed, setRevealed] = useState(false)
   const input = useRef<HTMLInputElement>(null)
   const blank = useRef<HTMLSpanElement>(null)
   const sounds = useSessionSounds()
@@ -45,7 +68,6 @@ export function GrammarGap({
   // seule zone du bas (champ, correction, boutons) — voir `useKeyboardOpen`.
   // On l'allège alors pour rendre le plus de place possible à la carte.
   const keyboardOpen = useKeyboardOpen()
-  const isDesktop = useIsDesktop()
 
   // La carte défile pour son propre compte (voir plus bas) : rien ne garantit
   // que le trou tombe dans la portion visible par défaut (le haut de la
@@ -61,7 +83,15 @@ export function GrammarGap({
     setValue('')
     setChecked(null)
     setGapResolved(false)
-    if (bank) return
+    setRevealed(false)
+  }, [exercise.id, bank])
+
+  // Effet séparé du précédent : le focus dépend du mode courant (révéler
+  // n'a pas de champ à focaliser), qui peut changer sans que la carte elle-
+  // même change — sans quoi basculer sur « écrire » n'ouvrirait pas le
+  // clavier de lui-même.
+  useEffect(() => {
+    if (bank || (revealable && mode === 'reveal')) return
     // Différé pour laisser la transition d'entrée de l'exercice (voir
     // `SessionScreen`) se terminer avant d'ouvrir le clavier par-dessus.
     // Contrairement à une ancienne version de ce délai, il ne s'agit plus de
@@ -69,9 +99,10 @@ export function GrammarGap({
     // défile désormais elle-même, indépendamment du champ, voir plus bas.
     const id = window.setTimeout(() => input.current?.focus(), 250)
     return () => window.clearTimeout(id)
-  }, [exercise.id, bank])
+  }, [exercise.id, bank, revealable, mode])
 
   const filled = value.trim().length > 0
+  const answered = checked !== null || revealed
 
   function check(candidate: string) {
     const correct = matchesAnswer(point.answer, point.alt, candidate)
@@ -85,10 +116,25 @@ export function GrammarGap({
   // fait avancer l'exercice comme un clic sur le bouton principal du moment
   // — Vérifier, Je ne sais pas si le champ est vide, ou Continuer une fois
   // la réponse corrigée. Le mode banque (`bank`) n'a rien à valider par
-  // Entrée : la réponse s'y choisit au clic, jamais au clavier.
+  // Entrée : la réponse s'y choisit au clic, jamais au clavier. En mode
+  // révéler, mêmes touches qu'une carte de texte : Entrée révèle, 1/2/3 notent.
   useEffect(() => {
     if (!isDesktop) return
     function onKeyDown(event: KeyboardEvent) {
+      if (revealable && mode === 'reveal') {
+        if (!revealed) {
+          if (event.key !== 'Enter') return
+          event.preventDefault()
+          setRevealed(true)
+          return
+        }
+        const match = RATINGS.find((candidate) => candidate.key === event.key)
+        if (match) {
+          event.preventDefault()
+          onAnswer(match.rating !== 'again', match.rating)
+        }
+        return
+      }
       if (event.key !== 'Enter') return
       if (checked !== null) {
         if (!checked && !bank && !gapResolved) return // « Continuer » est alors désactivé
@@ -110,17 +156,27 @@ export function GrammarGap({
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [isDesktop, checked, bank, gapResolved, filled, value, onAnswer])
+  }, [isDesktop, revealable, mode, revealed, checked, bank, gapResolved, filled, value, onAnswer])
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">
       {/* Retirée pendant que le clavier est ouvert : la consigne ne change
           jamais, la carte a plus besoin de ces quelques pixels qu'elle
-          n'a besoin d'être répétée à chaque exercice. */}
+          n'a besoin d'être répétée à chaque exercice. Trois colonnes égales
+          pour que la consigne reste centrée que le commutateur soit affiché
+          ou non (une banque de formes ne l'affiche pas, voir `revealable`). */}
       {!keyboardOpen && (
-        <p className="shrink-0 text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
-          Complétez la phrase
-        </p>
+        <div className="grid shrink-0 grid-cols-[1fr_auto_1fr] items-center gap-2">
+          <span aria-hidden />
+          <p className="text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
+            {revealable && mode === 'reveal' ? (revealed ? 'Notez-vous' : 'Révélez la réponse') : 'Complétez la phrase'}
+          </p>
+          <div className="flex justify-end">
+            {revealable && (
+              <AnswerModeSwitch mode={mode} disabled={answered} onChange={(next) => setGapMode(device, next)} />
+            )}
+          </div>
+        </div>
       )}
 
       {/*
@@ -171,11 +227,29 @@ export function GrammarGap({
                 y en a, reste affiché tel quel, comme avant. */}
             <RichGaps
               text={point.sentence}
-              renderGap={(index) => (index === 0 ? <Blank ref={blank} value={value} state={checked} /> : '___')}
+              renderGap={(index) =>
+                index === 0 ? (
+                  <Blank
+                    ref={blank}
+                    value={revealable && mode === 'reveal' ? (revealed ? point.answer : '') : value}
+                    state={revealable && mode === 'reveal' ? (revealed ? 'revealed' : null) : checked}
+                  />
+                ) : (
+                  '___'
+                )
+              }
             />
           </p>
-          {point.translation && (cue === 'translation' || checked !== null) && (
+          {point.translation && (cue === 'translation' || answered) && (
             <p className="text-sm text-ink-soft">{point.translation}</p>
+          )}
+          {/* Hors banque et hors correction (qui affiche déjà l'explication
+              plus bas), le mode révéler n'a pas de carton de correction :
+              l'explication paraît ici, comme sur une carte de texte. */}
+          {revealable && mode === 'reveal' && revealed && point.explanation && (
+            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm text-ink-soft">
+              <Rich text={point.explanation} />
+            </motion.p>
           )}
         </div>
       </div>
@@ -201,7 +275,7 @@ export function GrammarGap({
               </button>
             ))}
           </div>
-        ) : (
+        ) : revealable && mode === 'reveal' ? null : (
           <input
             ref={input}
             value={value}
@@ -253,7 +327,30 @@ export function GrammarGap({
         )}
 
         <div className={`flex flex-col items-center ${keyboardOpen ? 'gap-1.5' : 'gap-3'}`}>
-          {checked === null ? (
+          {checked !== null ? (
+            <Button
+              block
+              tone={checked ? 'success' : 'error'}
+              disabled={!checked && !bank && !gapResolved}
+              onClick={() => onAnswer(checked)}
+              className="md:py-4 md:text-lg"
+            >
+              Continuer
+            </Button>
+          ) : revealable && mode === 'reveal' ? (
+            revealed ? (
+              <RevealButtons isDesktop={isDesktop} onRate={(rating) => onAnswer(rating !== 'again', rating)} />
+            ) : (
+              <Button
+                block
+                tone="violet"
+                onClick={() => setRevealed(true)}
+                className={keyboardOpen ? 'py-2' : 'md:py-4 md:text-lg'}
+              >
+                Révéler
+              </Button>
+            )
+          ) : (
             <>
               <Button
                 block
@@ -277,16 +374,6 @@ export function GrammarGap({
                 </button>
               )}
             </>
-          ) : (
-            <Button
-              block
-              tone={checked ? 'success' : 'error'}
-              disabled={!checked && !bank && !gapResolved}
-              onClick={() => onAnswer(checked)}
-              className="md:py-4 md:text-lg"
-            >
-              Continuer
-            </Button>
           )}
         </div>
       </div>
@@ -294,16 +381,20 @@ export function GrammarGap({
   )
 }
 
-const Blank = forwardRef<HTMLSpanElement, { value: string; state: null | boolean }>(function Blank(
+const Blank = forwardRef<HTMLSpanElement, { value: string; state: null | boolean | 'revealed' }>(function Blank(
   { value, state },
   ref,
 ) {
   const tone =
     state === null
       ? 'border-ink-faint text-ink'
-      : state
-        ? 'border-success text-success'
-        : 'border-error text-error line-through'
+      : state === 'revealed'
+        ? // Révélée mais pas encore auto-évaluée : ni juste ni fausse, une
+          // teinte neutre distincte du vert et du rouge de la saisie.
+          'border-teal text-teal-deep'
+        : state
+          ? 'border-success text-success'
+          : 'border-error text-error line-through'
 
   return (
     <span ref={ref} className={`mx-1 inline-block min-w-28 border-b-4 px-2 text-center align-baseline ${tone}`}>

@@ -402,7 +402,7 @@ function SessionRunner({
               <WorkPlan exercise={current} onDone={({ missedIds }) => answerMatch(current, missedIds)} />
             )}
             {current.kind === 'grammar-gap' && (
-              <GrammarGap exercise={current} onAnswer={(correct) => answer(current, correct)} />
+              <GrammarGap exercise={current} onAnswer={(correct, rating) => answer(current, correct, rating)} />
             )}
             {current.kind === 'grammar-choice' && (
               <GrammarSentenceChoice exercise={current} onAnswer={(correct) => answer(current, correct)} />
