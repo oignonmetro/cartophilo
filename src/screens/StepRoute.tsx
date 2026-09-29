@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useCourse } from '@/content/CourseProvider'
 import { findUnit, itemsOfUnit } from '@/content/course'
+import { WORK_DIAGRAMS } from '@/content/work'
 import { buildPracticeSession, buildReviewSession, workOrder, workPlansFor, type Exercise } from '@/engine/exercises'
 import { createRng, seedFrom } from '@/engine/rng'
 import type { SessionOutcome } from '@/engine/progress'
@@ -74,13 +75,14 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
     const session =
       node.kind === 'drill' || node.kind === 'final' ? buildPracticeSession(entries) : buildReviewSession(entries)
     // Une unité-œuvre se clôt en reconstituant son plan, livre par livre :
-    // le fil du raisonnement, puis chaque niveau du schéma.
+    // le fil du raisonnement, puis chaque niveau du schéma (tant que les
+    // schémas ne sont pas archivés, voir `WORK_DIAGRAMS`).
     if (node.kind !== 'final' || !unit?.work || session.length === 0) return session
     const work = unit.work
     const rng = createRng(seedFrom('final-plan', unit.id, entries.length))
     const closing = work.parts.flatMap((part): Exercise[] => {
       const order = workOrder(work, part.id, rng)
-      const plans = workPlansFor(work, part, rng)
+      const plans = WORK_DIAGRAMS ? workPlansFor(work, part, rng) : []
       return order ? [order, ...plans] : plans
     })
     return [...session, ...closing]

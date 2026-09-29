@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { LibraryCourse, Track, TreatiseEntry, Unit } from '@/content/schema'
 import { countLabel, courseLabel, isTextUnit, isWorkUnit, itemsOfUnit, unitLetters } from '@/content/course'
+import { WORK_DIAGRAMS } from '@/content/work'
 import type { LessonProgressMap } from '@/engine/progress'
 import { dayKey, displayedStreak, levelFromXp, masteryOf, unitMastery } from '@/engine/progress'
 import { buildUnitPath, currentDestination } from '@/engine/unitPath'
@@ -260,10 +261,16 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   // Carte ouverte d'une unité-œuvre (voir `WorkSheet`).
   const [openWork, setOpenWork] = useState<Unit | null>(null)
 
-  /** Ce qu'une unité donne à lire hors exercice : son texte intégral, ou la carte de l'œuvre. */
+  /**
+   * Ce qu'une unité donne à lire hors exercice : son texte intégral, ou la
+   * carte de l'œuvre (rien, tant que les schémas sont archivés, voir
+   * `WORK_DIAGRAMS`).
+   */
   const readerOf = (unit: Unit) =>
     isWorkUnit(unit)
-      ? { label: 'Voir la carte', icon: 'map', onRead: () => setOpenWork(unit) }
+      ? WORK_DIAGRAMS
+        ? { label: 'Voir la carte', icon: 'map', onRead: () => setOpenWork(unit) }
+        : undefined
       : isTextUnit(unit)
         ? { label: 'Lire le texte', icon: 'page', onRead: () => setOpenText(unit) }
         : undefined

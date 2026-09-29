@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { unitSchema, type GrammarPoint, type Work, type WorkNode } from './schema'
 import { itemsOfUnit } from './course'
 import { isDrawn, lessonsFromWork, linksOf, matchesLocation, planRoundsOf, planTextOf, pointsOf, thesisFills, threadOf, workContextOf } from './work'
-import { buildLessonSession, itemIdsOf, workLocateFor, workMatchesFor, workMatchItems, workOrder, workOrderItems, type WorkLocateExercise, type WorkPlanExercise } from '@/engine/exercises'
+import { buildLessonSession, buildWorkSession, itemIdsOf, workLocateFor, workMatchesFor, workMatchItems, workOrder, workOrderItems, type WorkLocateExercise, type WorkPlanExercise } from '@/engine/exercises'
 import { createRng } from '@/engine/rng'
 
 function point(id: string): GrammarPoint {
@@ -88,8 +88,17 @@ describe('séance d’une leçon d’unité-œuvre', () => {
   const [raw] = lessonsFromWork('u', WORK)
   const lesson = { ...raw!, notes: undefined, points: raw!.points }
 
-  it('à la découverte : le plan à lire, puis bloc par bloc, les plans à trous arrivant après leurs chapitres', () => {
+  it('schémas archivés : ni plan à lire ni plan à trous, le reste de la leçon inchangé', () => {
     const session = buildLessonSession(lesson, 0, 1, false, 0, undefined, WORK)
+    expect(session.some((exercise) => exercise.kind === 'work-map' || exercise.kind === 'work-plan')).toBe(false)
+    const gaps = session.filter((exercise) => exercise.kind === 'grammar-gap').flatMap(itemIdsOf)
+    expect(gaps).toEqual(['p-a1', 'p-a2', 'p-a3', 'p-pivot', 'lien-a3', 'p-b1', 'lien-pivot', 'p-b2', 'p-b3'])
+    expect(session.some((exercise) => exercise.kind === 'work-match')).toBe(true)
+    expect(session[session.length - 1]?.kind).toBe('work-order')
+  })
+
+  it('schémas réactivés, à la découverte : le plan à lire, puis bloc par bloc, les plans à trous arrivant après leurs chapitres', () => {
+    const session = buildWorkSession(lesson, WORK, 0, 1, true)
     expect(session[0]?.kind).toBe('work-map')
 
     // Chaque thèse et chaque carte de lien passe au moins une fois en carte à trou.
@@ -108,8 +117,8 @@ describe('séance d’une leçon d’unité-œuvre', () => {
     expect(itemIdsOf(plans[0]!)).toEqual(['p-a1', 'p-a2', 'p-a3'])
   })
 
-  it('rejouée : pas de plan à lire', () => {
-    const session = buildLessonSession(lesson, 1, 1, false, 0, undefined, WORK)
+  it('schémas réactivés, rejouée : pas de plan à lire', () => {
+    const session = buildWorkSession(lesson, WORK, 1, 1, true)
     expect(session.some((exercise) => exercise.kind === 'work-map')).toBe(false)
   })
 

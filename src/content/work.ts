@@ -5,6 +5,16 @@ import type { GrammarPoint, Work, WorkContext, WorkLink, WorkNode, WorkRelation 
  * leçons, retrouver où se trouve une thèse, et dessiner les relations.
  */
 
+/**
+ * Les schémas de l'unité-œuvre, archivés le 2026-09-29 : le plan dessiné (lu
+ * en tête de leçon, `work-map`, et ouvert par « Voir la carte »), et le plan
+ * à trous qui s'y joue (`work-plan`). Tout leur code reste en place
+ * (`WorkTree`, `WorkMapNote`, `WorkPlan`, `WorkSheet`, `workPlansFor`) :
+ * repasser ce drapeau à `true` les réactive partout. Sans eux, l'unité-œuvre
+ * fait restituer, localiser, associer et remettre dans l'ordre.
+ */
+export const WORK_DIAGRAMS = false
+
 /** Libellé affiché de chaque relation, sans ponctuation expressive. */
 export const RELATION_LABELS: Record<WorkRelation, string> = {
   declinaison: 'même plan',

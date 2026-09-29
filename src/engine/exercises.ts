@@ -16,7 +16,18 @@ import { GAP } from '@/content/schema'
 import { isPassageLesson, itemsOfLesson } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
 import { splitNoteSections } from '@/content/notes'
-import { findNode, headlineOf, nodesOf, placesAround, planRoundsOf, pointsOf, shortLabel, threadOf, workContextOf } from '@/content/work'
+import {
+  findNode,
+  headlineOf,
+  nodesOf,
+  placesAround,
+  planRoundsOf,
+  pointsOf,
+  shortLabel,
+  threadOf,
+  WORK_DIAGRAMS,
+  workContextOf,
+} from '@/content/work'
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
 import type { CardState } from './srs'
 
@@ -1325,19 +1336,28 @@ const WORK_LOCATE_NEIGHBOURS = 5
  * Les thèses se jouent dans l'ordre du plan, jamais mélangées : c'est la
  * progression de l'œuvre qu'on apprend, et la révision espacée les
  * reprendra ensuite dans le désordre.
+ *
+ * Tant que les schémas sont archivés (`diagrams`, voir `WORK_DIAGRAMS`), ni
+ * plan à lire ni plan à trous : le reste de la leçon est inchangé.
  */
-function buildWorkSession(lesson: GrammarLesson, work: Work, level: number, seed: number): Exercise[] {
+export function buildWorkSession(
+  lesson: GrammarLesson,
+  work: Work,
+  level: number,
+  seed: number,
+  diagrams = WORK_DIAGRAMS,
+): Exercise[] {
   const root = lesson.work ? findNode(work, lesson.work) : null
   if (!root) return lesson.points.map((point) => workGapExercise(point, workContextOf(work, point.id)))
   const rng = createRng(seed)
   const exercises: Exercise[] = []
 
-  if (level <= 0) exercises.push({ kind: 'work-map', id: `work-map:${root.id}`, work, rootId: root.id })
+  if (diagrams && level <= 0) exercises.push({ kind: 'work-map', id: `work-map:${root.id}`, work, rootId: root.id })
 
   // Un livre sans blocs se traite comme un seul bloc.
   const blocks = root.parts.length > 0 ? root.parts : [root]
   // Chaque manche du schéma arrive après le bloc où se trouve son dernier chapitre.
-  const pending = workPlansFor(work, root, rng)
+  const pending = diagrams ? workPlansFor(work, root, rng) : []
 
   for (const block of blocks) {
     const points = pointsOf(block)

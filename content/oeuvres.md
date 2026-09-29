@@ -10,13 +10,17 @@ Hors-programme, ou la piste Repérage de Marx et de Plotin.
 Premier exemple : `hors-programme/units/rousseau-contrat-social.yaml`
 (*Du contrat social*, livre II).
 
-> **Archivé (2026-09-27).** L'unité-œuvre est mise de côté : l'unité du
-> *Contrat social* porte `status: archived` (voir `content/README.md`,
-> « Archiver une unité »), elle n'apparaît plus dans l'application mais
-> reste validée par `content:check`. Tout le fonctionnement (format `work`,
-> carte, exercices) reste en place dans le code et ne s'active que pour une
-> unité qui porte un plan : retirer `status: archived` suffit à tout
-> réactiver.
+> **Réactivée (2026-09-29), sans ses schémas.** L'unité-œuvre est de
+> nouveau en service (le *Contrat social* n'est plus archivé), mais tout ce
+> qui dessine le plan reste mis de côté : le plan à lire en tête de leçon,
+> « Voir la carte » dans la bibliothèque, et le plan à trous, dans la leçon
+> comme dans la séance finale. Le reste fonctionne : restituer, localiser,
+> associer, remettre dans l'ordre. Le code des schémas est intact ;
+> repasser `WORK_DIAGRAMS` à `true` (`src/content/work.ts`) les réactive
+> partout. Les passages ci-dessous qui les décrivent (le plan à lire, le
+> plan à trous, « Voir la carte ») valent pour ce jour-là ; `question`, `summary`,
+> `reason` et `outcome` restent à écrire, l'association et la remise en ordre
+> s'en servent.
 
 ## Principe : on écrit le plan, pas les leçons
 
