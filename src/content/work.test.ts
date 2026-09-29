@@ -224,6 +224,13 @@ describe('saisir l’emplacement au clavier', () => {
     expect(matchesLocation('Préface', 'preface')).toBe(true)
   })
 
+  it('accepte un paragraphe par son seul numéro, sans le prendre pour un livre et un chapitre', () => {
+    for (const value of ['§16', '§ 16', '16', 'paragraphe 16']) expect(matchesLocation('§16', value), value).toBe(true)
+    for (const value of ['§17', '6', '1, 16', '']) expect(matchesLocation('§16', value), value).toBe(false)
+    expect(matchesLocation('§10-12', '10-12')).toBe(true)
+    expect(matchesLocation('§10-12', '12')).toBe(false)
+  })
+
   it('se saisit à partir de la troisième fois qu’on joue la leçon', () => {
     const [raw] = lessonsFromWork('u', WORK)
     const lesson = { ...raw!, notes: undefined }

@@ -57,7 +57,7 @@ function numbersOf(text: string): number[] {
     .toLowerCase()
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
-    .replace(/\b(livre|chapitres?|chap|ch)\b\.?/g, ' ')
+    .replace(/\b(livre|chapitres?|chap|ch|paragraphes?)\b\.?/g, ' ')
     .split(/[^a-z0-9]+/)
     .filter(Boolean)
   const numbers = words.map((word) => (/^\d+$/.test(word) ? Number(word) : fromRoman(word)))
@@ -75,6 +75,13 @@ function numbersOf(text: string): number[] {
 export function matchesLocation(label: string, value: string): boolean {
   const expected = numbersOf(label)
   const given = numbersOf(value)
+  // Un paragraphe (« §16 », « §10-12 », œuvres découpées en paragraphes
+  // numérotés, comme la troisième Critique) : ses seuls numéros suffisent
+  // (« 16 », « § 16 », « paragraphe 16 »), sans quoi « §10-12 » passerait
+  // pour le livre 10, chapitre 12.
+  if (/^§+\s*\d+(\s*-\s*\d+)?$/.test(label.trim())) {
+    return given.length === expected.length && given.every((n, i) => n === expected[i])
+  }
   if (expected.length === 2 && given.length > 0) {
     if (given.length === 1) return given[0] === expected[1]
     return given.length === 2 && given[0] === expected[0] && given[1] === expected[1]

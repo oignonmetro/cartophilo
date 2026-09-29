@@ -1,0 +1,631 @@
+# Unité-œuvre (voir content/oeuvres.md) : le plan de l'Analytique de la
+# faculté de juger esthétique (Kant, Critique de la faculté de juger, §§1-29).
+# Livre I : Analytique du beau (§§1-22) ; Livre II : Analytique du sublime,
+# jusqu'au §29 et à sa Remarque générale. La Déduction des jugements
+# esthétiques purs (§§30-54), que Kant range encore dans le livre II, est
+# traitée par les unités ea2 et kant-beaux-arts.
+#
+# Plan d'après une aide fournie par l'utilisateur (découpage en groupes de
+# paragraphes), approfondi : les exemples de Kant et les distinctions peu
+# connues (sensation objective et subjective, parure, Idée normale,
+# subreption, colossal et monstrueux…) vont en thèses. Pas de titres de
+# paragraphes (traductions variables) : chaque case dit son affirmation
+# (summary) et son argument (reason). Les citations entre guillemets sont
+# celles déjà vérifiées dans les unités ea1-ea4 ; les autres thèses
+# reformulent Kant.
+
+id: kant-analytique
+title: "L'Analytique du beau et du sublime : le plan"
+subtitle: "Kant · Critique de la faculté de juger, §§1-29"
+icon: map
+color: violet
+group: "Kant : l'esthétique"
+work:
+  parts:
+    - id: beau
+      label: "Livre I"
+      title: "Analytique du beau"
+      parts:
+        - id: m1
+          label: "§1-5"
+          question: "Selon la qualité : quelle satisfaction le beau procure-t-il ?"
+          outcome: "Une satisfaction sans intérêt ne tient à rien de privé : on la suppose en tout autre"
+          parts:
+            - id: b1-4
+              label: "§1-4"
+              parts:
+                - id: p1
+                  label: "§1"
+                  summary: "Le jugement de goût est esthétique, non logique"
+                  reason: "son principe déterminant n'est pas un concept de l'objet, mais le rapport de la représentation au sentiment du sujet"
+                  points:
+                    - id: ka1a
+                      sentence: "Dans le jugement de goût, la représentation n'est pas rapportée à l'objet, pour le connaître, mais au sujet et à son sentiment de ___ ou de peine."
+                      answer: "plaisir"
+                    - id: ka1b
+                      sentence: "Le sentiment de plaisir ou de peine ne désigne rien dans l'objet : en lui, le sujet se sent lui-même, tel qu'il est ___ par la représentation."
+                      answer: "affecté"
+                      explanation: "C'est pourquoi un jugement de goût ne peut être que subjectif : il ne fait rien connaître, pas même le sujet, qu'il ne fait que sentir."
+                - id: p2
+                  label: "§2"
+                  summary: "La satisfaction qui détermine le jugement de goût est désintéressée"
+                  reason: "pour juger une chose belle, il faut être indifférent à son existence : seule compte sa représentation"
+                  rel: declinaison
+                  points:
+                    - id: ka2a
+                      sentence: "On nomme intérêt la satisfaction que nous lions à la représentation de l'___ d'un objet."
+                      answer: "existence"
+                      explanation: "L'intérêt a donc toujours rapport à la faculté de désirer. Le jugement de goût, lui, est simplement contemplatif."
+                    - id: ka2b
+                      sentence: "À qui demande si un palais est beau, on peut répondre à côté, en blâmant, à la manière de Rousseau, la ___ des grands qui dépensent la sueur du peuple pour des choses superflues."
+                      answer: "vanité"
+                      explanation: "Réponse légitime, mais qui ne dit rien de la beauté : la question porte sur la représentation du palais, non sur son existence."
+                    - id: ka2c
+                      sentence: "Le sachem iroquois, à qui rien ne plaisait plus à Paris que les ___, répond lui aussi à côté de la question du beau."
+                      answer: "rôtisseries"
+                - id: p3
+                  label: "§3"
+                  summary: "L'agréable est lié à un intérêt"
+                  reason: "il plaît aux sens dans la sensation, et fait désirer l'existence d'objets semblables"
+                  rel: declinaison
+                  points:
+                    - id: ka3a
+                      sentence: "« Est agréable ce qui plaît aux ___ dans la sensation. »"
+                      answer: "sens"
+                    - id: ka3b
+                      sentence: "La couleur verte d'une prairie relève de la sensation ___, qui représente un objet ; son agrément relève du sentiment, qui ne représente rien."
+                      answer: "objective"
+                      explanation: "Kant distingue ainsi deux sens du mot « sensation » : la sensation objective (perception d'une chose) et la sensation subjective, le sentiment, qu'il vaut mieux ne pas appeler sensation."
+                - id: p4
+                  label: "§4"
+                  summary: "Le bon est lié à un intérêt de la raison"
+                  reason: "utile ou bon en soi, il suppose toujours le concept d'une fin, donc un rapport au vouloir"
+                  rel: declinaison
+                  points:
+                    - id: ka4a
+                      sentence: "Est bon ce qui plaît, par l'intermédiaire de la raison, par le simple ___."
+                      answer: "concept"
+                    - id: ka4b
+                      sentence: "Pour trouver une chose bonne, il faut savoir ce qu'elle doit être ; les fleurs, les ___ libres, les rinceaux ne signifient rien, et plaisent pourtant."
+                      answer: "dessins"
+                      explanation: "Le beau n'a pas besoin de concept ; le bon, si. D'où la confusion fréquente entre l'agréable et le bon, que Kant écarte : l'un et l'autre sont intéressés, le beau non."
+            - id: p5
+              label: "§5"
+              summary: "Des trois satisfactions, seule celle du beau n'est contrainte par rien"
+              reason: "l'agréable fait plaisir, le bon est estimé, le beau seul plaît sans qu'aucun intérêt force l'assentiment"
+              rel: consequence
+              points:
+                - id: ka5a
+                  sentence: "À l'agréable répond l'inclination, au bon le respect, au beau la ___."
+                  answer: "faveur"
+                - id: ka5b
+                  sentence: "L'agréable vaut aussi pour les animaux privés de raison ; la beauté, seulement pour les ___ ; le bon, pour tout être raisonnable."
+                  answer: "hommes"
+                  alt: ["humains", "êtres humains"]
+                  explanation: "La beauté suppose des êtres à la fois animaux et raisonnables : sensibles, pour avoir une représentation, et raisonnables, pour en juger sans intérêt."
+                - id: ka5c
+                  sentence: "La satisfaction prise au beau est « la seule satisfaction ___ » : aucun intérêt, ni des sens ni de la raison, n'arrache l'assentiment."
+                  answer: "libre"
+                - id: ka5d
+                  sentence: "« Le goût est la faculté de juger d'un objet ou d'un mode de représentation, sans aucun ___, par une satisfaction ou une insatisfaction. »"
+                  answer: "intérêt"
+                  explanation: "Définition du beau tirée du premier moment : « On appelle beau l'objet d'une telle satisfaction. »"
+        - id: m2
+          label: "§6-9"
+          question: "Selon la quantité : pour qui le beau vaut-il ?"
+          outcome: "Mais que vise ce plaisir universel, s'il n'a ni intérêt ni concept ?"
+          rel: consequence
+          parts:
+            - id: b6-8
+              label: "§6-8"
+              parts:
+                - id: p6
+                  label: "§6"
+                  summary: "Le beau est représenté sans concept comme objet d'une satisfaction universelle"
+                  reason: "une satisfaction désintéressée ne repose sur rien de propre à celui qui juge : il la suppose donc en chacun"
+                  points:
+                    - id: ka6a
+                      sentence: "Celui qui juge une chose belle ne trouve au fondement de sa satisfaction aucune condition ___ : il doit donc croire qu'elle vaut pour chacun."
+                      answer: "privée"
+                    - id: ka6b
+                      sentence: "Il parle alors du beau comme si la beauté était une ___ de l'objet, et son jugement un jugement logique."
+                      answer: "propriété"
+                      explanation: "L'universalité se déduit ici du désintéressement : c'est pourquoi le second moment découle du premier."
+                - id: p7
+                  label: "§7"
+                  summary: "L'agréable vaut pour chacun, le beau pour tous"
+                  reason: "pour l'agréable, chacun a son goût ; qui dit une chose belle exige l'adhésion des autres"
+                  rel: declinaison
+                  points:
+                    - id: ka7a
+                      sentence: "Pour l'agréable vaut le principe : « à chacun son ___ »."
+                      answer: "goût"
+                      explanation: "Kant précise : son goût des sens."
+                    - id: ka7b
+                      sentence: "Qui dit « le vin des ___ est agréable » accepte d'être corrigé : il faudrait dire qu'il lui est agréable."
+                      answer: "Canaries"
+                    - id: ka7c
+                      sentence: "Dire qu'une chose est belle, ce n'est pas compter sur l'accord des autres pour l'avoir souvent constaté : c'est l'___ d'eux."
+                      answer: "exiger"
+                      explanation: "Le bon, lui aussi, prétend valoir pour tous, mais par un concept : son universalité est logique."
+                - id: p8
+                  label: "§8"
+                  summary: "« Cette rose est belle » : un jugement sur un seul objet, qui vaut pour tous"
+                  reason: "il porte toujours sur une représentation singulière, mais prétend valoir pour tous les sujets, sans concept"
+                  rel: declinaison
+                  points:
+                    - id: ka8a
+                      sentence: "Selon la quantité logique, tout jugement de goût est un jugement ___ : « cette rose est belle »."
+                      answer: "singulier"
+                    - id: ka8b
+                      sentence: "« Les roses en général sont belles » n'est plus un jugement esthétique, mais un jugement ___ fondé sur des jugements esthétiques."
+                      answer: "logique"
+                    - id: ka8c
+                      sentence: "Dans le jugement de goût, rien n'est postulé qu'une ___ universelle (allgemeine Stimme) touchant la satisfaction."
+                      answer: "voix"
+                    - id: ka8d
+                      sentence: "L'agréable relève du goût des sens, le beau du goût de la ___."
+                      answer: "réflexion"
+                      explanation: "Kant nomme validité commune (Gemeingültigkeit) cette validité pour tous les sujets, qui n'est pas celle d'un concept pour tous les objets."
+            - id: p9
+              label: "§9"
+              summary: "Le jugement précède le plaisir, et en est le fondement"
+              reason: "un plaisir antérieur au jugement ne serait qu'agrément privé ; c'est l'état d'esprit universellement communicable, le libre jeu des facultés, qui le fonde"
+              rel: probleme-solution
+              points:
+                - id: ka9a
+                  sentence: "Savoir si le plaisir précède le jugement ou le jugement le plaisir : Kant fait de ce problème la ___ de la critique du goût."
+                  answer: "clé"
+                - id: ka9b
+                  sentence: "Si le plaisir précédait le jugement, il ne serait que l'agrément de la sensation, et n'aurait qu'une validité ___."
+                  answer: "privée"
+                - id: ka9c
+                  sentence: "Ce qui précède le plaisir, c'est l'état d'esprit dans le libre ___ de l'imagination et de l'entendement."
+                  answer: "jeu"
+                  explanation: "Cet état, parce qu'il est la condition subjective de toute connaissance, doit valoir pour chacun : sa communicabilité universelle fonde le plaisir."
+                - id: ka9d
+                  sentence: "« Est beau ce qui plaît universellement sans ___. »"
+                  answer: "concept"
+                  explanation: "Définition du beau tirée du second moment."
+        - id: m3
+          label: "§10-17"
+          question: "Selon la relation : quelle finalité perçoit-on dans le beau ?"
+          outcome: "Reste à dire de quel droit ce plaisir s'impose à tous : sa nécessité"
+          rel: changement-de-question
+          parts:
+            - id: b10-12
+              label: "§10-12"
+              parts:
+                - id: p10
+                  label: "§10"
+                  summary: "Ce qu'est la finalité, et une finalité sans fin"
+                  reason: "une chose est finale quand on ne peut comprendre sa possibilité qu'en la dérivant d'une volonté"
+                  points:
+                    - id: ka10a
+                      sentence: "« La ___ d'un concept par rapport à son objet est la finalité (forma finalis). »"
+                      answer: "causalité"
+                    - id: ka10b
+                      sentence: "Une forme peut être finale sans fin : nous n'en plaçons pas la cause dans une ___, mais ne pouvons comprendre sa possibilité qu'en l'en dérivant."
+                      answer: "volonté"
+                      explanation: "C'est la finalité sans fin : une finalité selon la forme, sans qu'on pose une fin comme matière."
+                - id: p11
+                  label: "§11"
+                  summary: "Le jugement de goût n'a pour fondement que la forme de la finalité"
+                  reason: "une fin subjective le rendrait intéressé, une fin objective le soumettrait à un concept"
+                  rel: declinaison
+                  points:
+                    - id: ka11a
+                      sentence: "Le jugement de goût ne repose ni sur une fin subjective, qui le rendrait ___, ni sur une fin objective, qui supposerait un concept."
+                      answer: "intéressé"
+                - id: p12
+                  label: "§12"
+                  summary: "La contemplation du beau se prolonge d'elle-même"
+                  reason: "la conscience de la finalité formelle dans le jeu des facultés est le plaisir même, qui tend à se conserver"
+                  rel: declinaison
+                  points:
+                    - id: ka12a
+                      sentence: "La conscience de la finalité purement formelle dans le jeu des facultés de connaître est le ___ lui-même."
+                      answer: "plaisir"
+                    - id: ka12b
+                      sentence: "Nous nous ___ à la contemplation du beau, parce que cette contemplation se fortifie et se reproduit elle-même."
+                      answer: "attardons"
+                      alt: ["attardons à la contemplation"]
+            - id: b13-15
+              label: "§13-15"
+              rel: consequence
+              parts:
+                - id: p13
+                  label: "§13"
+                  summary: "Attrait et émotion n'ont pas de part au jugement de goût"
+                  reason: "un jugement mêlé d'attrait (Reiz) ou d'émotion (Rührung) mesure un intérêt des sens, non la beauté"
+                  points:
+                    - id: ka13a
+                      sentence: "Un jugement de goût sur lequel l'attrait et l'émotion n'ont aucune influence s'appelle un jugement de goût ___."
+                      answer: "pur"
+                    - id: ka13b
+                      sentence: "« Le goût est toujours ___ quand il a besoin du mélange des attraits et des émotions pour la satisfaction, et même quand il en fait la mesure de son assentiment. »"
+                      answer: "barbare"
+                - id: p14
+                  label: "§14"
+                  summary: "Seule la forme est l'objet propre du goût"
+                  reason: "dans les arts plastiques, l'essentiel est le dessin ; en musique, la composition ; les couleurs et les sons agréables relèvent de l'attrait"
+                  rel: declinaison
+                  points:
+                    - id: ka14a
+                      sentence: "Dans la peinture, la sculpture, l'architecture, l'essentiel est le ___ : les couleurs qui l'enluminent relèvent de l'attrait."
+                      answer: "dessin"
+                    - id: ka14b
+                      sentence: "Un ornement (parergon) qui plaît non par sa forme mais par son attrait, comme le cadre doré d'un tableau, n'est plus qu'une ___, et nuit à la beauté."
+                      answer: "parure"
+                      explanation: "Les ornements, cadres des tableaux, draperies des statues, colonnades des palais, n'appartiennent pas à la représentation, mais peuvent accroître la satisfaction par leur forme."
+                - id: p15
+                  label: "§15"
+                  summary: "Juger du beau n'est pas juger de ce que la chose doit être"
+                  reason: "la perfection suppose le concept de ce que la chose doit être, une fin objective : la juger, c'est connaître"
+                  rel: declinaison
+                  points:
+                    - id: ka15a
+                      sentence: "La finalité objective interne d'une chose, l'accord de son divers avec le concept de ce qu'elle doit être, est sa ___."
+                      answer: "perfection"
+                    - id: ka15b
+                      sentence: "Contre l'esthétique rationaliste de l'école de Wolff, Kant refuse de tenir la beauté pour une perfection ___ perçue."
+                      answer: "confusément"
+                      explanation: "Si la beauté était une perfection confuse, le jugement de goût serait une connaissance obscure, et la différence entre beau et bon ne serait que de clarté : Kant la tient pour une différence de nature."
+            - id: p16
+              label: "§16"
+              summary: "Seule la beauté qui ne suppose aucun concept donne un jugement sans mélange"
+              reason: "seule la beauté qui ne suppose aucun concept de ce que l'objet doit être donne lieu à un jugement de goût pur"
+              rel: consequence
+              points:
+                - id: ka16a
+                  sentence: "La beauté libre, qui ne présuppose aucun concept de ce que l'objet doit être, se dit en latin pulchritudo ___."
+                  answer: "vaga"
+                - id: ka16b
+                  sentence: "La beauté adhérente, qui présuppose un concept et la perfection de l'objet d'après lui, se dit en latin pulchritudo ___."
+                  answer: "adhaerens"
+                - id: ka16c
+                  sentence: "Le botaniste sait que la fleur est l'organe de ___ de la plante, mais quand il la juge belle, il ne prend pas garde à cette fin naturelle."
+                  answer: "fécondation"
+                  alt: ["reproduction"]
+                - id: ka16d
+                  sentence: "La beauté d'un homme, d'un cheval, d'un édifice (église, palais, ___, pavillon de jardin) suppose un concept de fin : elle est adhérente."
+                  answer: "arsenal"
+                - id: ka16e
+                  sentence: "On pourrait orner une figure de toutes sortes de traits, comme le font les Néo-Zélandais avec leur ___, si ce n'était un homme."
+                  answer: "tatouage"
+                  alt: ["tatouages"]
+                  explanation: "La fin de l'objet borne la liberté de l'imagination : la beauté adhérente impose des conditions à ce qui peut plaire."
+                - id: ka16f
+                  sentence: "Un jugement de goût sur un objet à fin déterminée ne serait pur que si celui qui juge n'avait aucun concept de cette fin, ou en faisait ___."
+                  answer: "abstraction"
+                - id: ka16g
+                  sentence: "Deux juges du goût se disputent souvent parce que l'un juge d'après la beauté libre, l'autre d'après la beauté ___ : chacun a raison à sa manière."
+                  answer: "adhérente"
+            - id: p17
+              label: "§17"
+              summary: "Un modèle achevé de la beauté n'est possible que pour la figure humaine"
+              reason: "l'idéal suppose une beauté fixée par une fin objective ; seul l'homme se donne ses fins par la raison"
+              rel: changement-de-question
+              points:
+                - id: ka17a
+                  sentence: "Il ne peut y avoir de règle objective du goût, qui déterminerait par des ___ ce qui est beau."
+                  answer: "concepts"
+                - id: ka17b
+                  sentence: "Une Idée est un concept de la raison ; la représentation d'un être singulier adéquat à cette Idée est un ___."
+                  answer: "idéal"
+                - id: ka17c
+                  sentence: "L'idéal de la beauté n'est pas celui d'une beauté vague, mais d'une beauté ___ par un concept de finalité objective."
+                  answer: "fixée"
+                - id: ka17d
+                  sentence: "L'Idée normale esthétique est une image ___ que l'imagination forme en superposant d'innombrables figures d'une même espèce."
+                  answer: "moyenne"
+                  explanation: "Kant imagine qu'on superpose mille figures d'hommes : la taille moyenne qui en ressort est la mesure du bel homme, pour ce pays."
+                - id: ka17e
+                  sentence: "Le Doryphore de ___ était tenu pour la règle des proportions humaines : l'exemple d'une Idée normale."
+                  answer: "Polyclète"
+                  explanation: "Comme la vache de Myron pour son espèce."
+                - id: ka17f
+                  sentence: "L'idéal de la beauté consiste dans l'expression du ___ dans la figure humaine."
+                  answer: "moral"
+                  alt: ["moralité"]
+                  explanation: "Un jugement d'après un idéal de la beauté n'est donc jamais un jugement de goût pur."
+                - id: ka17g
+                  sentence: "Les outils de pierre trouvés dans les anciens tombeaux montrent une finalité sans qu'on en connaisse la fin, mais on ne les dit pas beaux : on les tient pour des produits de l'___."
+                  answer: "art"
+                  explanation: "Une tulipe, au contraire, est belle : on y perçoit une finalité que l'on ne rapporte à aucune fin."
+                - id: ka17h
+                  sentence: "« La beauté est la forme de la ___ d'un objet en tant qu'elle est perçue en celui-ci sans représentation d'une fin. »"
+                  answer: "finalité"
+                  explanation: "Définition du beau tirée du troisième moment."
+        - id: m4
+          label: "§18-22"
+          question: "Selon la modalité : de quelle nécessité le beau s'accompagne-t-il ?"
+          rel: changement-de-question
+          parts:
+            - id: b18-19
+              label: "§18-19"
+              parts:
+                - id: p18
+                  label: "§18"
+                  summary: "La nécessité du beau est exemplaire"
+                  reason: "elle n'est ni théorique ni pratique : l'adhésion de tous vaut comme exemple d'une règle qu'on ne peut énoncer"
+                  points:
+                    - id: ka18a
+                      sentence: "La nécessité liée au beau n'est ni théorique et objective, ni ___ comme celle de la loi morale."
+                      answer: "pratique"
+                    - id: ka18b
+                      sentence: "C'est la nécessité de l'adhésion de tous à un jugement considéré comme l'exemple d'une règle universelle qu'on ne peut pas ___."
+                      answer: "énoncer"
+                      alt: ["indiquer"]
+                - id: p19
+                  label: "§19"
+                  summary: "Chacun doit donner son assentiment, si j'ai bien jugé"
+                  reason: "on exige l'assentiment de chacun, à condition d'être assuré d'avoir bien subsumé sous le principe commun"
+                  rel: declinaison
+                  points:
+                    - id: ka19a
+                      sentence: "Le « devoir » du jugement de goût (chacun doit donner son assentiment) n'est prononcé que de manière ___."
+                      answer: "conditionnée"
+                      alt: ["conditionnelle", "conditionnellement"]
+            - id: b20-22
+              label: "§20-22"
+              rel: probleme-solution
+              parts:
+                - id: p20
+                  label: "§20"
+                  summary: "La condition de cette nécessité est l'Idée d'un sens commun"
+                  reason: "il faut un principe subjectif qui détermine par le sentiment seul, et pourtant universellement, ce qui plaît"
+                  points:
+                    - id: ka20a
+                      sentence: "Le sens commun esthétique n'est pas l'entendement commun, qui juge par des ___, fussent-ils obscurs."
+                      answer: "concepts"
+                    - id: ka20b
+                      sentence: "Le sens commun est un principe ___ qui détermine, par le sentiment seul, ce qui plaît ou déplaît, mais avec une validité universelle."
+                      answer: "subjectif"
+                - id: p21
+                  label: "§21"
+                  summary: "On a de bonnes raisons de présupposer un sens commun"
+                  reason: "la communicabilité universelle des connaissances suppose celle de l'accord des facultés qui les rend possibles"
+                  rel: declinaison
+                  points:
+                    - id: ka21a
+                      sentence: "Connaissances et jugements doivent pouvoir se communiquer universellement, sans quoi ils ne seraient qu'un jeu ___ des facultés de représentation, comme le veut le scepticisme."
+                      answer: "subjectif"
+                    - id: ka21b
+                      sentence: "La proportion des facultés de connaître varie selon les objets ; celle qui est la plus favorable à leur animation mutuelle ne peut être déterminée que par le ___."
+                      answer: "sentiment"
+                - id: p22
+                  label: "§22"
+                  summary: "Le sens commun dit ce qui doit être, non ce qui est"
+                  reason: "il ne dit pas que chacun s'accordera avec mon jugement, mais qu'il doit s'accorder"
+                  rel: declinaison
+                  points:
+                    - id: ka22a
+                      sentence: "Le sens commun n'est qu'une norme ___ : il ne dit pas que chacun s'accordera avec mon jugement, mais qu'il le doit."
+                      answer: "idéale"
+                    - id: ka22b
+                      sentence: "Kant laisse ouverte la question : le sens commun est-il un principe constitutif, ou un principe ___ de la raison qui nous impose de le produire en nous ?"
+                      answer: "régulateur"
+                    - id: ka22c
+                      sentence: "« Est beau ce qui est reconnu sans concept comme objet d'une satisfaction ___. »"
+                      answer: "nécessaire"
+                      explanation: "Définition du beau tirée du quatrième moment."
+        - id: rg1
+          label: "Remarque générale"
+          summary: "Le goût juge un libre accord de l'imagination avec l'entendement"
+          reason: "l'imagination, libre, s'accorde d'elle-même avec la légalité de l'entendement : une légalité sans loi"
+          rel: consequence
+          points:
+            - id: ka-rg1a
+              sentence: "Le goût est la faculté de juger d'un objet en rapport avec la libre ___ de l'imagination."
+              answer: "légalité"
+            - id: ka-rg1b
+              sentence: "L'accord libre de l'imagination avec l'entendement est une légalité sans ___ (Gesetzmäßigkeit ohne Gesetz)."
+              answer: "loi"
+            - id: ka-rg1c
+              sentence: "Les formes d'une régularité raide, proches de la régularité géométrique, ne retiennent pas longtemps : elles causent l'___."
+              answer: "ennui"
+            - id: ka-rg1d
+              sentence: "Marsden, décrivant ___, trouvait plus beau le désordre de la forêt sauvage que les jardins de poivriers aux allées régulières."
+              answer: "Sumatra"
+            - id: ka-rg1e
+              sentence: "Le chant des ___, qu'aucune règle musicale ne ramène, semble contenir plus de liberté, et donc plus pour le goût, que le chant humain."
+              answer: "oiseaux"
+    - id: sublime
+      label: "Livre II"
+      title: "Analytique du sublime"
+      parts:
+        - id: s1
+          label: "§23-24"
+          question: "En quoi le sublime diffère-t-il du beau ?"
+          parts:
+            - id: p23
+              label: "§23"
+              summary: "Le sublime diffère du beau"
+              reason: "le beau tient à la forme limitée de l'objet ; le sublime se trouve dans l'informe et l'illimité, et n'est que dans l'esprit"
+              points:
+                - id: ks23a
+                  sentence: "Le beau et le sublime plaisent par eux-mêmes et présupposent tous deux un jugement de ___, non un jugement déterminant."
+                  answer: "réflexion"
+                - id: ks23b
+                  sentence: "Le beau concerne la forme de l'objet, qui consiste dans sa ___ ; le sublime peut se trouver dans un objet informe."
+                  answer: "limitation"
+                - id: ks23c
+                  sentence: "Le beau est la présentation d'un concept indéterminé de l'entendement ; le sublime, d'un concept indéterminé de la ___."
+                  answer: "raison"
+                - id: ks23d
+                  sentence: "Le beau s'accompagne d'un sentiment d'intensification de la vie ; le sublime naît d'un ___ momentané des forces vitales, suivi d'un épanchement d'autant plus fort."
+                  answer: "arrêt"
+                  alt: ["inhibition"]
+                - id: ks23e
+                  sentence: "La satisfaction prise au sublime est ___ : moins un plaisir positif que de l'admiration ou du respect."
+                  answer: "négative"
+                  alt: ["un plaisir négatif"]
+                - id: ks23f
+                  sentence: "Ce qui suscite le sentiment du sublime paraît, dans sa forme, contraire à la ___ pour notre faculté de juger : il semble faire violence à l'imagination."
+                  answer: "finalité"
+                - id: ks23g
+                  sentence: "L'océan démonté n'est pas sublime : son spectacle est ___ ; il faut avoir l'esprit déjà rempli d'Idées pour qu'il éveille un sentiment sublime."
+                  answer: "horrible"
+                  alt: ["affreux", "effrayant"]
+                  explanation: "Le véritable sublime n'est contenu dans aucune forme sensible : il ne concerne que des Idées de la raison. On ne peut donc dire d'un objet naturel qu'il est sublime, seulement qu'il est propre à présenter une sublimité qui est dans l'esprit."
+            - id: p24
+              label: "§24"
+              summary: "Le sublime est mathématique ou dynamique"
+              reason: "le mouvement de l'esprit qu'il suscite est rapporté soit à la faculté de connaître, soit à la faculté de désirer"
+              rel: consequence
+              points:
+                - id: ks24a
+                  sentence: "Le sublime mathématique rapporte le mouvement de l'esprit à la faculté de ___."
+                  answer: "connaître"
+                - id: ks24b
+                  sentence: "Le sublime dynamique rapporte le mouvement de l'esprit à la faculté de ___."
+                  answer: "désirer"
+                - id: ks24c
+                  sentence: "Parce que le sublime peut se trouver dans l'informe, son analyse commence par le moment de la ___, et non de la qualité."
+                  answer: "quantité"
+        - id: s2
+          label: "§25-27"
+          question: "Qu'est-ce qui est absolument grand, et que nous fait-il éprouver ?"
+          outcome: "Après la grandeur de la nature, sa puissance"
+          rel: consequence
+          parts:
+            - id: p25
+              label: "§25"
+              summary: "Le sublime est ce qui est grand au-delà de toute comparaison"
+              reason: "rien dans la nature n'est absolument grand : c'est la disposition de l'esprit qui pense l'infini qui est sublime"
+              points:
+                - id: ks25a
+                  sentence: "Nous nommons sublime ce qui est ___ grand (absolute magnum)."
+                  answer: "absolument"
+                - id: ks25b
+                  sentence: "« Est sublime ce en comparaison de quoi tout le reste est ___. »"
+                  answer: "petit"
+                - id: ks25c
+                  sentence: "« Est sublime ce qui, par cela seul qu'on peut le penser, démontre une faculté de l'âme qui dépasse toute mesure des ___. »"
+                  answer: "sens"
+                - id: ks25d
+                  sentence: "La tendance de l'imagination à progresser à l'infini, et la prétention de la raison à une ___ absolue, éveillent le sentiment d'une faculté suprasensible."
+                  answer: "totalité"
+            - id: p26
+              label: "§26"
+              summary: "L'imagination rencontre une limite quand elle veut tout saisir d'un coup"
+              reason: "l'appréhension peut aller à l'infini, mais la compréhension, qui saisit d'un coup, rencontre vite sa limite"
+              rel: consequence
+              points:
+                - id: ks26a
+                  sentence: "L'évaluation ___ des grandeurs, par les nombres, n'a pas de maximum ; l'évaluation esthétique, dans l'intuition, en a un."
+                  answer: "mathématique"
+                - id: ks26b
+                  sentence: "Pour saisir une grandeur dans l'intuition, l'imagination dispose de deux opérations : l'appréhension (apprehensio) et la ___ esthétique (comprehensio aesthetica)."
+                  answer: "compréhension"
+                - id: ks26c
+                  sentence: "« L'appréhension ne fait aucune difficulté, car elle peut se poursuivre à l'___. »"
+                  answer: "infini"
+                - id: ks26d
+                  sentence: "Selon Savary, pour éprouver toute l'émotion que donne la grandeur des ___ d'Égypte, il ne faut ni s'en approcher trop, ni en rester trop éloigné."
+                  answer: "pyramides"
+                - id: ks26e
+                  sentence: "Entrant dans Saint-___ de Rome, le spectateur éprouve une stupeur ou une sorte de perplexité : l'imagination atteint son maximum."
+                  answer: "Pierre"
+                - id: ks26f
+                  sentence: "Est ___ la simple présentation d'un concept presque trop grand pour toute présentation ; est monstrueux l'objet dont la grandeur anéantit la fin qui constitue son concept."
+                  answer: "colossal"
+                  alt: ["colossale"]
+            - id: p27
+              label: "§27"
+              summary: "Le sublime : un déplaisir qui éveille la conscience de notre destination"
+              reason: "l'imagination échoue à saisir le tout que la raison exige ; cet échec révèle la supériorité de notre destination rationnelle"
+              rel: consequence
+              points:
+                - id: ks27a
+                  sentence: "« Le sentiment de l'inadéquation de notre pouvoir à atteindre une Idée, qui pour nous est loi, est le ___. »"
+                  answer: "respect"
+                - id: ks27b
+                  sentence: "Le respect pour l'objet naturel est dû, par une sorte de ___, au respect pour l'Idée de l'humanité en nous."
+                  answer: "subreption"
+                  explanation: "La subreption substitue le respect pour l'objet à celui qui est dû à l'Idée de l'humanité en notre sujet : le sublime semble dans la nature, il est en nous."
+                - id: ks27c
+                  sentence: "Dans le sublime, « l'objet est accueilli comme sublime avec un plaisir qui n'est possible que par la médiation d'une ___ »."
+                  answer: "peine"
+                - id: ks27d
+                  sentence: "Ce mouvement de l'esprit est comparable à un ébranlement : une rapide alternance de répulsion et d'___ par un même objet."
+                  answer: "attraction"
+                - id: ks27e
+                  sentence: "L'imagination y subit une ___ : poussée par la raison au-delà de ce qu'elle peut comprendre, elle éprouve son impuissance."
+                  answer: "violence"
+        - id: s3
+          label: "§28-29"
+          question: "Quand la puissance de la nature est-elle sublime ?"
+          rel: declinaison
+          parts:
+            - id: p28
+              label: "§28"
+              summary: "La nature redoutable, sans pouvoir sur notre personne, est dynamiquement sublime"
+              reason: "sa force nous fait connaître notre faiblesse physique, mais révèle en nous une résistance d'un autre ordre"
+              points:
+                - id: ks28a
+                  sentence: "La nature est dynamiquement sublime quand elle est considérée comme une puissance (Macht) qui n'a sur nous aucune ___ (Gewalt)."
+                  answer: "domination"
+                - id: ks28b
+                  sentence: "Celui qui a ___ ne peut pas juger du sublime de la nature, pas plus que celui qu'égare l'inclination ne juge du beau."
+                  answer: "peur"
+                - id: ks28c
+                  sentence: "Rochers surplombants, nuages orageux, volcans, ouragans : leur spectacle est d'autant plus attirant qu'il est effrayant, pourvu que nous soyons en ___."
+                  answer: "sécurité"
+                - id: ks28d
+                  sentence: "La ___ elle-même, menée avec ordre et respect des droits civils, a quelque chose de sublime ; une longue paix favorise le simple esprit mercantile."
+                  answer: "guerre"
+                - id: ks28e
+                  sentence: "La ___ ne fonde dans l'âme que la crainte et l'angoisse devant l'être tout-puissant ; la religion, le respect de sa grandeur."
+                  answer: "superstition"
+            - id: p29
+              label: "§29"
+              summary: "Juger du sublime demande une préparation, mais repose sur une disposition naturelle"
+              reason: "sans le développement des Idées morales, la nature terrible n'inspire que l'effroi ; mais tout homme a la disposition au sentiment moral"
+              rel: changement-de-question
+              points:
+                - id: ks29a
+                  sentence: "Le jugement sur le sublime de la nature requiert, bien plus que celui sur le beau, une ___."
+                  answer: "culture"
+                - id: ks29b
+                  sentence: "Le bon paysan ___, homme au demeurant sensé, tenait pour des fous les amateurs de montagnes glacées, rapporte Saussure."
+                  answer: "savoyard"
+                - id: ks29c
+                  sentence: "Ce jugement n'est pourtant pas un produit de la culture ni une convention : il a son fondement dans la disposition au sentiment ___."
+                  answer: "moral"
+                - id: ks29d
+                  sentence: "Comme nous reprochons le manque de goût à qui reste indifférent au beau, nous disons de qui reste insensible au sublime qu'il n'a pas de ___."
+                  answer: "sentiment"
+        - id: rg2
+          label: "Remarque générale"
+          summary: "Beau et sublime préparent au sentiment moral"
+          reason: "tous deux ont une finalité à l'égard du sentiment moral"
+          rel: consequence
+          points:
+            - id: ks-rg2a
+              sentence: "« Le beau nous prépare à ___ quelque chose, même la nature, sans intérêt ; le sublime, à l'estimer, même contre notre intérêt (sensible). »"
+              answer: "aimer"
+            - id: ks-rg2b
+              sentence: "Il n'y a peut-être pas de passage plus sublime dans l'Ancien Testament que le commandement : « Tu ne te feras aucune ___ taillée, ni aucune représentation de ce qui est dans le ciel, sur la terre ou sous la terre. »"
+              answer: "image"
+            - id: ks-rg2c
+              sentence: "L'enthousiasme est sublime ; mais l'___ d'un esprit qui suit fermement ses principes l'est plus encore, parce qu'elle a de plus l'approbation de la raison pure."
+              answer: "apathie"
+              explanation: "Kant parle d'absence d'affect (apatheia), au bon sens du terme : non l'indifférence, mais la fermeté d'un esprit que ne dérangent pas les émotions."
+  links:
+    - from: p5
+      to: p27
+      rel: reprise
+      points:
+        - id: kl-respect
+          sentence: "Le sentiment du sublime reprend, à l'égard de notre propre destination, le respect que le §5 réservait au ___."
+          answer: "bon"
+          alt: ["bien"]
+    - from: p22
+      to: p29
+      rel: reprise
+      points:
+        - id: kl-modalite
+          sentence: "Ce que le sens commun est au beau (§22), la disposition au sentiment ___ l'est au sublime (§29) : le fondement de sa nécessité."
+          answer: "moral"
