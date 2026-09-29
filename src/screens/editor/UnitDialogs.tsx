@@ -237,7 +237,7 @@ function LabelInput({
   onChange: (value: string) => void
   suggestion?: string
 }) {
-  const chips = [...new Set([suggestion ?? '§1', 'Introduction', 'Ouverture'])]
+  const chips = [...new Set([suggestion ?? '§1', 'Introduction', 'Prolongement', 'Ouverture'])]
   return (
     <div className="flex flex-col gap-1.5">
       <input value={value} onChange={(event) => onChange(event.target.value)} className={inputClass} />

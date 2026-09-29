@@ -16,7 +16,14 @@
  * repèrent les tournures qui ont réellement posé problème dans ce corpus,
  * pas l'anglais en général.
  */
-import { GAP, type ConjugationVerb, type GrammarPoint, type Vocab } from '../../src/content/schema.ts'
+import {
+  GAP,
+  isTextlessPassageLabel,
+  TEXTLESS_PASSAGE_LABELS,
+  type ConjugationVerb,
+  type GrammarPoint,
+  type Vocab,
+} from '../../src/content/schema.ts'
 
 /** Mots dont la première lettre ment sur le son initial. */
 const SILENT_H = new Set([
@@ -482,7 +489,7 @@ interface PhilosophyLesson {
   notes?: string
   points: readonly GrammarPoint[]
   /** Leçon de texte (voir content/textes.md) : ses citations sont longues par nature. */
-  passage?: unknown
+  passage?: { label: string; text?: string }
 }
 
 /**
@@ -517,6 +524,14 @@ export function philosophyContentRemarks(learning: string, lessons: readonly Phi
   for (const lesson of lessons) {
     flagMateriality(`leçon "${lesson.id}"`, 'le rappel', lesson.notes)
     flagEnglish(`leçon "${lesson.id}"`, 'le rappel', lesson.notes)
+
+    // Une leçon de texte sans paragraphe cité disparaît de « Lire le texte » :
+    // légitime pour une introduction ou un prolongement, un oubli ailleurs.
+    if (lesson.passage && !lesson.passage.text && !isTextlessPassageLabel(lesson.passage.label)) {
+      remarks.push(
+        `leçon "${lesson.id}" : leçon de texte « ${lesson.passage.label} » sans paragraphe cité ; ajoutez son \`text\`, ou donnez-lui le repère ${TEXTLESS_PASSAGE_LABELS.map((label) => `« ${label} »`).join(' ou ')}`,
+      )
+    }
 
     for (const point of lesson.points) {
       const where = `point "${point.id}"`

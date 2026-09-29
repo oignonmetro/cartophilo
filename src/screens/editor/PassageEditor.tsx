@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import { PassageText } from '@/components/PassageText'
+import { isTextlessPassageLabel } from '@/content/schema'
 import { inputClass } from './Modal'
 import { citationCardFromSelection, isCitation } from './textUnit'
 import type { PassageDTO, PointDTO } from './types'
@@ -9,8 +10,8 @@ import type { PassageDTO, PointDTO } from './types'
  * qu'il sera lu dans l'app, et de quoi en tirer des cartes-citation sans
  * rien recopier : on sélectionne le morceau à faire retrouver, on choisit la
  * portée (sa phrase, ou tout le paragraphe), la carte est créée trouée à cet
- * endroit. Une leçon d'introduction n'a pas de texte : le rappel et les
- * cartes-explication suffisent.
+ * endroit. Une leçon d'introduction ou de prolongement n'a pas de texte : le
+ * rappel et les cartes-explication suffisent (voir `isTextlessPassageLabel`).
  */
 export function PassageEditor({
   passage,
@@ -28,6 +29,7 @@ export function PassageEditor({
   const textareaRef = useRef<HTMLTextAreaElement>(null)
   const [selection, setSelection] = useState<{ start: number; end: number } | null>(null)
   const [lastAdded, setLastAdded] = useState<string | null>(null)
+  const textless = isTextlessPassageLabel(passage.label)
   const isIntro = passage.label.trim().toLowerCase() === 'introduction'
   const citations = points.filter(isCitation).length
 
@@ -58,7 +60,7 @@ export function PassageEditor({
             placeholder="§1, l. 1-3, 1178a9-22…"
             className={`${inputClass} w-44 py-1`}
           />
-          {['Introduction', 'Ouverture'].map((chip) => (
+          {['Introduction', 'Prolongement', 'Ouverture'].map((chip) => (
             <button
               key={chip}
               type="button"
@@ -86,10 +88,20 @@ export function PassageEditor({
           />
         </div>
 
-        {isIntro ? (
+        {textless ? (
           <p className="rounded-xl bg-ink/4 p-4 text-sm text-ink-soft">
-            Leçon d’introduction : pas de texte cité. Elle prépare la lecture par son <strong>rappel</strong> (le
-            problème, les notions, les débats) et ses <strong>cartes-explication</strong>.
+            {isIntro ? (
+              <>
+                Leçon d’introduction : pas de texte cité. Elle prépare la lecture par son <strong>rappel</strong>{' '}
+                (le problème, les notions, les débats) et ses <strong>cartes-explication</strong>.
+              </>
+            ) : (
+              <>
+                Leçon de prolongement : pas de texte cité. Elle poursuit la lecture hors du texte par son{' '}
+                <strong>rappel</strong> (un exposé de fond, une notion voisine, la suite du commentaire) et ses{' '}
+                <strong>cartes-explication</strong>. Pour citer un autre texte, choisissez plutôt « Ouverture ».
+              </>
+            )}
           </p>
         ) : (
           <>
@@ -150,12 +162,12 @@ export function PassageEditor({
         <div className="card-3d mx-auto flex w-full max-w-lg flex-col gap-3 self-center px-6 py-6">
           <p className="text-xs font-black tracking-widest text-violet uppercase">
             {passage.source && `${passage.source} · `}
-            {isIntro ? passage.label : `Le texte · ${passage.label || '…'}`}
+            {textless ? passage.label : `Le texte · ${passage.label || '…'}`}
           </p>
-          {!isIntro && passage.text.trim() ? (
+          {!textless && passage.text.trim() ? (
             <PassageText text={passage.text} />
           ) : (
-            <p className="text-sm text-ink-faint">{isIntro ? 'Pas de texte cité.' : 'Le texte apparaîtra ici.'}</p>
+            <p className="text-sm text-ink-faint">{textless ? 'Pas de texte cité.' : 'Le texte apparaîtra ici.'}</p>
           )}
         </div>
       </div>

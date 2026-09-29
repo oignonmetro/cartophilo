@@ -105,9 +105,10 @@ export const grammarPointSchema = z.object({
 export const passageSchema = z.object({
   label: z.string().min(1),
   /**
-   * Absent pour une leçon d'introduction (`label: "Introduction"`) : elle
-   * prépare la lecture par son rappel et ses cartes-explication, sans
-   * paragraphe cité à apprendre.
+   * Absent pour une leçon d'introduction (`label: "Introduction"`), qui
+   * prépare la lecture, ou de prolongement (`label: "Prolongement"`), qui la
+   * poursuit hors du texte : son rappel et ses cartes-explication suffisent,
+   * sans paragraphe cité à apprendre (voir `isTextlessPassageLabel`).
    */
   text: z.string().min(1).optional(),
   /**
@@ -120,6 +121,18 @@ export const passageSchema = z.object({
    */
   source: z.string().min(1).optional(),
 })
+
+/**
+ * Les repères des leçons de texte sans paragraphe cité : l'introduction, avant
+ * le texte, et le prolongement, après lui (un exposé de fond, une notion
+ * voisine, la suite du commentaire). Toute autre leçon de texte cite le sien.
+ */
+export const TEXTLESS_PASSAGE_LABELS = ['Introduction', 'Prolongement'] as const
+
+export function isTextlessPassageLabel(label: string): boolean {
+  const normalized = label.trim().toLowerCase()
+  return TEXTLESS_PASSAGE_LABELS.some((textless) => textless.toLowerCase() === normalized)
+}
 
 /** Une forme conjuguée : la personne et la forme attendue. */
 export const conjugationFormSchema = z.object({

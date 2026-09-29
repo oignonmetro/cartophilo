@@ -62,7 +62,8 @@ Ne demander que ce qui manque vraiment, en une seule question groupée.
 
 - **Identifiant de l'unité** : court, sans accent, unique dans le cours
   (`n1841`, `t10c1`, `m8`). Leçons `<id>-i1`, `<id>-i2`… (introduction),
-  `<id>-p1`, `<id>-p2`… (paragraphes), `<id>-ouverture` ; cartes
+  `<id>-p1`, `<id>-p2`… (paragraphes), `<id>-o1`, `<id>-o2`…
+  (prolongement), `<id>-ouverture` ; cartes
   `<id>-p1-1`… Un identifiant ne se réutilise jamais : la révision espacée
   s'y rattache.
 - **Découpage en paragraphes** : la numérotation du texte s'il en a une ;
@@ -181,6 +182,15 @@ voisins, place dans l'œuvre) vont là, pas dans les paragraphes — sauf quand
 le commentaire les développe à propos d'une ligne précise du texte : elles
 suivent alors le commentaire (§ 6, « Tout le commentaire »).
 
+**Leçons de prolongement** : leur pendant après les paragraphes, pour ce que
+le commentaire développe *après* le texte sans le commenter ligne à ligne (un
+exposé de fond, une notion voisine, la conclusion d'un essai thématique).
+Même forme qu'une introduction : `label: "Prolongement"`, pas de `text`, un
+rappel et des cartes-explication. Le choix entre les deux suit l'ordre du
+commentaire : ce qui prépare la lecture va en introduction, ce qui la
+prolonge va en prolongement. Pour faire apprendre un autre texte, c'est une
+ouverture (§ 6), avec son texte.
+
 ## 4. Le rappel de chaque paragraphe
 
 Affiché sous le texte cité, avec le titre « Explication ». C'est un vrai
@@ -258,8 +268,9 @@ formule, le sens d'une image, un terme technique et son grec, le contresens à
   texte, même indirectement. C'est ce qui ouvre l'unité sur les textes voisins
   qui comptent. Chaque carte va dans la leçon dont traite la section du
   commentaire (une section qui commente les lignes 3-4 va dans leur leçon ;
-  un exposé de fond sans ligne précise, dans une leçon d'introduction, à
-  créer au besoin), et, dans cette leçon, **à sa place dans l'ordre du
+  un exposé de fond sans ligne précise, dans une leçon d'introduction ou,
+  s'il vient après le texte dans le commentaire, de prolongement, à créer
+  au besoin), et, dans cette leçon, **à sa place dans l'ordre du
   commentaire** parmi les autres cartes-explication : relire le scan page à
   page pour l'insérer au bon endroit. Le rappel en dit l'essentiel en une ou
   deux phrases.
@@ -312,8 +323,9 @@ ouvrir l'app dans le navigateur : l'utilisateur regarde l'unité en ligne.
 
 Pour toute l'unité, vérifier :
 
-- [ ] des leçons d'introduction si le texte est difficile, chacune avec son
-      rappel et ses cartes ;
+- [ ] des leçons d'introduction si le texte est difficile, et de
+      prolongement si le commentaire continue après le texte, chacune avec
+      son rappel et ses cartes ;
 - [ ] un rappel complet (thèse, argument, tableau s'il y a lieu, piège) pour
       chaque paragraphe ;
 - [ ] chaque trou choisi d'après la règle (§ 5) : thèse d'abord, ce que le

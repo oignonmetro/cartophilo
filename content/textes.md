@@ -36,6 +36,17 @@ Chaque unité suit le même schéma :
 4. **Une ouverture, facultative** : un court prolongement hors du texte (un
    autre texte de l'auteur, la postérité d'une formule), traité comme un
    paragraphe de plus, avec son propre texte et au moins une carte.
+5. **Des leçons de prolongement, facultatives** (`<id>-o1`, `<id>-o2`…,
+   `passage` avec `label: "Prolongement"` et sans `text`) : le pendant des
+   leçons d'introduction, après les paragraphes. Un rappel et des
+   cartes-explication pour ce que le commentaire développe après le texte,
+   sans citer de passage : un exposé de fond, une notion voisine, la
+   conclusion d'un essai. Pour faire apprendre un autre texte, préférer
+   l'ouverture.
+
+Une leçon de texte sans `text` qui n'est ni une introduction ni un
+prolongement est signalée par `npm run content:check` : elle disparaîtrait de
+« Lire le texte ».
 
 Un paragraphe peut être sauté s'il ne mérite pas d'être appris : ses voisins
 gardent leur numéro (§2 puis §4).
@@ -163,7 +174,7 @@ la main, sans toucher au YAML.
 
 « + Nouvelle unité » demande d'abord le genre de l'unité (classique ou de
 texte), puis, dans le même formulaire, la référence, la présentation et le
-repère de la première leçon (`§1`, `Introduction`…). Chaque leçon d'une unité
+repère de la première leçon (`§1`, `Introduction`, `Prolongement`…). Chaque leçon d'une unité
 de texte gagne un onglet **Texte** : on y colle le paragraphe, un champ
 « Référence » facultatif y renseigne `passage.source` (utile seulement si
 l'unité articule plusieurs textes, voir plus haut), puis on

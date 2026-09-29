@@ -298,7 +298,7 @@ export function ImportSplitDialog({
                       · cartes divergentes pour le fragment {conflicts.join(', ')} : à vérifier
                     </span>
                   )}
-                  {!m.text && <span className="text-ink-faint"> · vide : à coller, ou « Introduction »</span>}
+                  {!m.text && <span className="text-ink-faint"> · vide : à coller, ou « Introduction » / « Prolongement »</span>}
                 </summary>
                 <textarea
                   value={m.text}

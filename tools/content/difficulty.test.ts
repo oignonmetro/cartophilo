@@ -385,3 +385,22 @@ describe('philosophyContentRemarks, longueur des réponses', () => {
     ).toEqual([])
   })
 })
+
+describe('philosophyContentRemarks, leçons de texte sans paragraphe', () => {
+  const lesson = (label: string, text?: string) => [
+    { id: 'u-p1', passage: { label, text }, points: [point({ sentence: 'La ___.', answer: 'thèse' })] },
+  ]
+
+  it('signale une leçon de paragraphe sans texte cité', () => {
+    expect(philosophyContentRemarks('la-vie', lesson('§1'))).toHaveLength(1)
+  })
+
+  it('laisse passer une introduction et un prolongement', () => {
+    expect(philosophyContentRemarks('la-vie', lesson('Introduction'))).toEqual([])
+    expect(philosophyContentRemarks('la-vie', lesson('prolongement'))).toEqual([])
+  })
+
+  it('laisse passer un paragraphe cité', () => {
+    expect(philosophyContentRemarks('la-vie', lesson('§1', 'Le texte.'))).toEqual([])
+  })
+})
