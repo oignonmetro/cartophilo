@@ -172,19 +172,21 @@ précisions propres à l'unité-œuvre :
 Une leçon par livre, qui suit l'ordre du plan :
 
 1. **Le plan**, à lire (première fois seulement) : le schéma du livre.
-2. **Bloc par bloc**, chaque thèse en carte à trou, au clavier, avec son
-   emplacement en tête de carte (« II, 3 · Si la volonté générale peut
-   errer »), puis les cartes des liens qui aboutissent là ; ensuite trois
-   thèses du bloc à **localiser**, une **association** entre les chapitres
-   du bloc et ce qu'ils affirment, et les **plans à trous** dont les
-   chapitres viennent d'être vus.
+2. **Bloc par bloc**, chaque thèse à **localiser** dans l'œuvre, dès la
+   première fois qu'on la rencontre (voir plus bas), puis les cartes des
+   liens qui aboutissent là ; ensuite une **association** entre les
+   chapitres du bloc et ce qu'ils affirment, et les **plans à trous** dont
+   les chapitres viennent d'être vus.
 3. **La remise en ordre** du raisonnement pour finir.
 
-Rejouée, la leçon saute la lecture ; chaque thèse y est soit restituée, soit
-localisée, une sur deux. La séance finale de l'unité se termine, pour chaque
-livre, par la remise en ordre puis tous ses plans à trous. En révision,
-chaque thèse revient seule, avec son emplacement, et une révision sur deux
-la fait localiser plutôt que restituer.
+Une unité-œuvre fait savoir *où* se trouve une idée, pas la citer au mot
+près (c'est le travail de l'unité de texte, `content/textes.md`) : la
+phrase à trou au clavier ne sert donc que de repli, pour une thèse sans
+emplacement propre (la carte d'un lien) ou sans voisin pour servir de
+leurre. Rejouée, la leçon saute la lecture ; chaque thèse continue de s'y
+localiser. La séance finale de l'unité se termine, pour chaque livre, par
+la remise en ordre puis tous ses plans à trous. En révision, chaque thèse
+revient seule, avec son emplacement, et continue de s'y localiser.
 
 **Plan à trous** : le schéma du livre, vidé de son texte : restent les
 bulles et leurs questions, et les cases des chapitres réduites à leur numéro

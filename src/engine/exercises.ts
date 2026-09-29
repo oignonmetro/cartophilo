@@ -22,7 +22,6 @@ import {
   nodesOf,
   placesAround,
   planRoundsOf,
-  pointsOf,
   shortLabel,
   threadOf,
   WORK_DIAGRAMS,
@@ -1310,8 +1309,6 @@ function passageExercise(point: GrammarPoint, passage: PassageContext): PassageE
  * l'emplacement plutôt que de le choisir : la troisième fois qu'on la joue.
  */
 const WORK_LOCATE_TYPED_LEVEL = 2
-/** Thèses à localiser par bloc, à la découverte. */
-const WORK_LOCATE_PER_BLOCK = 3
 /** Emplacements proposés pour localiser une thèse, le juste compris. */
 const WORK_LOCATE_OPTIONS = 4
 /** Parmi combien de voisins les plus proches se tirent les leurres : assez pour varier d'une fois à l'autre. */
@@ -1321,17 +1318,20 @@ const WORK_LOCATE_NEIGHBOURS = 5
  * Leçon d'unité-œuvre, pour une partie de premier niveau (un livre).
  *
  *   1. à la découverte, le plan de la partie, à lire (`work-map`) ;
- *   2. puis, bloc par bloc, chaque thèse dans l'ordre du plan (phrase à
- *      trou, au clavier), suivie des cartes des liens qui aboutissent dans
- *      le bloc, de quelques thèses du bloc à localiser, d'une association
- *      entre ses chapitres et ce qu'ils affirment, et des plans à trous du
- *      schéma dont les chapitres viennent d'être vus (un par niveau du
- *      schéma, voir `planRoundsOf`) ;
+ *   2. puis, bloc par bloc, chaque thèse dans l'ordre du plan, à localiser
+ *      dans l'œuvre plutôt que restituée au mot près (voir `workLocateFor`),
+ *      suivie des cartes des liens qui aboutissent dans le bloc, d'une
+ *      association entre ses chapitres et ce qu'ils affirment, et des plans
+ *      à trous du schéma dont les chapitres viennent d'être vus (un par
+ *      niveau du schéma, voir `planRoundsOf`) ;
  *   3. enfin, les étapes du raisonnement à remettre dans l'ordre.
- * Rejouée, la leçon saute la lecture ; chaque thèse y est alors soit
- * restituée (phrase à trou), soit localisée, une sur deux, plutôt que les
- * deux à la suite ; à partir de la troisième fois, l'emplacement se saisit
- * au clavier.
+ * Une unité-œuvre fait savoir *où* se trouve une idée, pas la citer au mot
+ * près (c'est le travail de l'unité de texte, `content/textes.md`) : la
+ * phrase à trou au clavier (`grammar-gap`) n'y sert donc que de repli, pour
+ * une thèse sans emplacement propre à situer (la carte d'un lien) ou sans
+ * voisin pour servir de leurre (voir `workLocateFor`). À partir de la
+ * troisième fois qu'une leçon est rejouée, l'emplacement se saisit au
+ * clavier au lieu de se choisir.
  *
  * Les thèses se jouent dans l'ordre du plan, jamais mélangées : c'est la
  * progression de l'œuvre qu'on apprend, et la révision espacée les
@@ -1360,25 +1360,14 @@ export function buildWorkSession(
   const pending = diagrams ? workPlansFor(work, root, rng) : []
 
   for (const block of blocks) {
-    const points = pointsOf(block)
-    // Rejouée, la leçon localise une thèse sur deux au lieu de la restituer.
-    const located = new Set(level <= 0 ? [] : sample(points, Math.floor(points.length / 2), rng).map((point) => point.id))
-
     // Chaque partie du bloc, dans l'ordre du plan : ses thèses, puis les
     // cartes des liens qui y aboutissent, au moment même où le lien se fait.
     for (const node of nodesOf(block)) {
       const cards = [...node.points, ...work.links.filter((link) => link.to === node.id).flatMap((link) => link.points)]
       for (const point of cards) {
         const context = workContextOf(work, point.id)
-        const locate = located.has(point.id) ? workLocateFor(point, work, context, rng, level >= WORK_LOCATE_TYPED_LEVEL) : null
+        const locate = workLocateFor(point, work, context, rng, level >= WORK_LOCATE_TYPED_LEVEL)
         exercises.push(locate ?? workGapExercise(point, context))
-      }
-    }
-    // À la découverte, quelques thèses du bloc tout juste vues, à situer.
-    if (level <= 0) {
-      for (const point of sample(points, WORK_LOCATE_PER_BLOCK, rng)) {
-        const locate = workLocateFor(point, work, workContextOf(work, point.id), rng)
-        if (locate) exercises.push(locate)
       }
     }
 
@@ -1920,12 +1909,12 @@ function buildMixedSession(
     // son paragraphe : seule, en révision, c'est lui qui dit de quel texte
     // elle vient.
     if (item.kind === 'grammar' && item.passage) return passageExercise(item.point, item.passage)
-    // Une thèse d'unité-œuvre revient avec son emplacement dans l'œuvre : seule,
-    // en révision, c'est lui qui dit de quel chapitre il s'agit.
-    // Une révision sur deux la fait localiser plutôt que restituer.
+    // Une thèse d'unité-œuvre revient localisée, jamais restituée au mot
+    // près : seule, en révision, c'est son emplacement qui dit de quel
+    // chapitre il s'agit (voir `buildWorkSession`, même principe).
     if (item.kind === 'grammar' && item.work) {
       // Une carte qui tient (ou l'approfondissement) saisit l'emplacement au lieu de le choisir.
-      const locate = item.workTree && turn % 2 === 1 ? workLocateFor(item.point, item.workTree, item.work, rng, unaided) : null
+      const locate = item.workTree ? workLocateFor(item.point, item.workTree, item.work, rng, unaided) : null
       return locate ?? workGapExercise(item.point, item.work)
     }
 

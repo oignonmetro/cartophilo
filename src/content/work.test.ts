@@ -91,8 +91,9 @@ describe('séance d’une leçon d’unité-œuvre', () => {
   it('schémas archivés : ni plan à lire ni plan à trous, le reste de la leçon inchangé', () => {
     const session = buildLessonSession(lesson, 0, 1, false, 0, undefined, WORK)
     expect(session.some((exercise) => exercise.kind === 'work-map' || exercise.kind === 'work-plan')).toBe(false)
+    // Seules les cartes de lien, sans emplacement propre à localiser, passent en carte à trou.
     const gaps = session.filter((exercise) => exercise.kind === 'grammar-gap').flatMap(itemIdsOf)
-    expect(gaps).toEqual(['p-a1', 'p-a2', 'p-a3', 'p-pivot', 'lien-a3', 'p-b1', 'lien-pivot', 'p-b2', 'p-b3'])
+    expect(gaps).toEqual(['lien-a3', 'lien-pivot'])
     expect(session.some((exercise) => exercise.kind === 'work-match')).toBe(true)
     expect(session[session.length - 1]?.kind).toBe('work-order')
   })
@@ -101,9 +102,9 @@ describe('séance d’une leçon d’unité-œuvre', () => {
     const session = buildWorkSession(lesson, WORK, 0, 1, true)
     expect(session[0]?.kind).toBe('work-map')
 
-    // Chaque thèse et chaque carte de lien passe au moins une fois en carte à trou.
+    // Seules les cartes de lien passent en carte à trou, faute d'emplacement propre à localiser.
     const gaps = session.filter((exercise) => exercise.kind === 'grammar-gap').flatMap(itemIdsOf)
-    expect(gaps).toEqual(['p-a1', 'p-a2', 'p-a3', 'p-pivot', 'lien-a3', 'p-b1', 'lien-pivot', 'p-b2', 'p-b3'])
+    expect(gaps).toEqual(['lien-a3', 'lien-pivot'])
 
     // Un plan à trous par niveau du schéma, chacun après le bloc de son dernier chapitre.
     const plans = session.filter((exercise): exercise is WorkPlanExercise => exercise.kind === 'work-plan')
@@ -122,20 +123,21 @@ describe('séance d’une leçon d’unité-œuvre', () => {
     expect(session.some((exercise) => exercise.kind === 'work-map')).toBe(false)
   })
 
-  it('à la découverte, fait localiser jusqu’à trois thèses par bloc, jamais une carte de lien', () => {
+  it('dès la découverte, localise toute thèse qui a un emplacement propre, jamais une carte de lien', () => {
     const session = buildLessonSession(lesson, 0, 1, false, 0, undefined, WORK)
     const located = session.filter((exercise) => exercise.kind === 'work-locate').flatMap(itemIdsOf)
-    expect(located).toHaveLength(3 + 1 + 3)
+    expect([...located].sort()).toEqual(['p-a1', 'p-a2', 'p-a3', 'p-b1', 'p-b2', 'p-b3', 'p-pivot'])
     expect(located.some((id) => id.startsWith('lien'))).toBe(false)
   })
 
-  it('rejouée, chaque thèse est soit restituée, soit localisée', () => {
+  it('rejouée, chaque thèse reste localisée ; seules les cartes de lien restent des phrases à trou', () => {
     const session = buildLessonSession(lesson, 1, 7, false, 0, undefined, WORK)
     const asked = session
       .filter((exercise) => exercise.kind === 'grammar-gap' || exercise.kind === 'work-locate')
       .flatMap(itemIdsOf)
     expect([...asked].sort()).toEqual([...lesson.points.map((p) => p.id)].sort())
-    expect(session.some((exercise) => exercise.kind === 'work-locate')).toBe(true)
+    const gaps = session.filter((exercise) => exercise.kind === 'grammar-gap').flatMap(itemIdsOf)
+    expect([...gaps].sort()).toEqual(['lien-a3', 'lien-pivot'])
   })
 })
 
