@@ -1,0 +1,751 @@
+# Unité de texte (voir content/textes.md) : Aristote, Politiques, I, 2,
+# 1253a3-18, dans la traduction du commentaire « Cité, homme, lógos » (scan
+# agrégation, p. 17-29 : « notre traduction, nous numérotons et soulignons »),
+# dont viennent le découpage en trois thèses (1), (2), (3), les rappels et les
+# cartes, dans l'ordre de ses sections. Les deux sections qui suivent
+# l'analyse des thèses vont en prolongement.
+
+id: aristote-cite-homme-logos
+title: "Cité, homme, lógos"
+subtitle: "Aristote, Politiques, I, 2, 1253a3-18"
+icon: page
+color: red
+group: "Aristote : la politique"
+intro: |-
+  Le passage célèbre du livre I des *Politiques* où Aristote noue trois thèses : la cité fait partie des choses naturelles ; l'homme est par nature un animal politique ; seul de tous les animaux, il a le *lógos*.
+
+  Le commentaire en tire une spécificité de l'humain, enracinée dans la cité par le *lógos*, puis interroge ce que les hommes font de cette nature, et le statut de la politique comme science humaine.
+lessons:
+- id: aristote-cite-homme-logos-i1
+  title: "Cité, homme, lógos : trois thèses"
+  notes: |-
+    Au début des *Politiques*, **Aristote établit un lien essentiel entre le fait d'être doué de lógos et le fait de vivre en cités.** Les cités sont le milieu naturel de toute existence humaine, en même temps que sa finalité. Étudier l'homme, c'est donc l'étudier dans ses rapports avec ses semblables, dans la cité, et faire la genèse de ces communautés spécifiquement humaines. Les cités existent à la fois *pour* permettre à l'homme d'exercer son *lógos* et *parce qu'*il en est doué.
+
+    Le texte tire les conséquences conceptuelles du récit de la genèse des cités qui le précède. Il imbrique trois thèses, restées célèbres tant elles sont fondatrices pour toute la philosophie politique, et qui articulent, dans cet ordre, la cité, l'homme et le langage :
+
+    | Thèse | Porte sur | Ce qu'elle affirme |
+    | (1) | la cité (`pólis`) | une réalité naturelle, finalité de la famille et du village |
+    | (2) | l'homme | « l'homme est par nature un animal politique » |
+    | (3) | le `lógos` | la spécificité et la supériorité de la nature politique humaine |
+
+    Le texte définit ainsi une spécificité de l'humain en l'enracinant dans la cité par le biais du *lógos*. Reste une question, qui ouvre et ferme le commentaire : la politique aristotélicienne est-elle une science humaine à part entière ?
+
+    ! Le *lógos* n'est pas seulement le langage : c'est ce qui fait de l'homme un être de cité.
+  passage:
+    label: "Introduction"
+  points:
+  - id: aristote-cite-homme-logos-i1-1
+    sentence: "Au début des *Politiques*, Aristote établit un lien essentiel entre le fait pour l'homme d'être doué de ___ et le fait de vivre dans des cités."
+    answer: "lógos"
+    alt: ["logos"]
+  - id: aristote-cite-homme-logos-i1-2
+    sentence: "Les cités constituent le milieu naturel de toute existence humaine, en même temps que sa ___."
+    answer: "finalité"
+    alt: []
+  - id: aristote-cite-homme-logos-i1-3
+    sentence: "Les trois thèses qui articulent la cité, l'homme et le langage se trouvent dans les *Politiques*, I, 2, en ___."
+    answer: "1253a3-18"
+    alt: ["1253a"]
+  - id: aristote-cite-homme-logos-i1-4
+    sentence: "Dans ce texte, Aristote tire les conséquences conceptuelles du récit de la ___ des cités qu'il vient de livrer."
+    answer: "genèse"
+    alt: []
+  - id: aristote-cite-homme-logos-i1-5
+    sentence: "Les trois thèses du texte articulent, dans cet ordre, la cité, l'homme et le ___."
+    answer: "langage"
+    alt: ["lógos"]
+  - id: aristote-cite-homme-logos-i1-6
+    sentence: "Le texte définit une spécificité de l'humain en l'enracinant dans la cité par le biais du ___."
+    answer: "lógos"
+    alt: ["logos"]
+- id: aristote-cite-homme-logos-i2
+  title: "Communauté plutôt que société"
+  notes: |-
+    **Mieux vaut parler de communauté ou de cité que de société : la communauté vise une fin commune, la société pas nécessairement.** Le grec n'a pas vraiment d'équivalent de ce que nous entendons par « société », mot d'origine latine (*societas*). Le terme le plus proche est *koinonia*, généralement traduit par « communauté », dont la cité est une espèce ou une partie.
+
+    Toute communauté implique la visée d'une finalité commune dès lors qu'elle est politique ; tel n'est pas nécessairement le cas d'une société, selon la distinction de Tönnies (1887). On peut très bien faire partie d'une société sans viser la même finalité que ses camarades.
+
+    | | Société | Communauté, cité |
+    | Point de départ | des individus isolés, des « atomes » | le tout et sa finalité |
+    | Fin | aucune fin unique : chacun son intérêt (la « société civile » de Hegel) | une seule fin commune, son étai et son `telos` |
+    | Démarche | des parties vers leur association | holistique : du tout vers ses éléments |
+
+    Dans une communauté, les éléments n'ont pas vraiment d'existence autonome ou séparée : on les ressaisit à partir du tout.
+
+    ! Traduire *koinonia* par « société », c'est perdre la fin commune qui définit la cité.
+  passage:
+    label: "Introduction"
+  points:
+  - id: aristote-cite-homme-logos-i2-1
+    sentence: "Il n'y a pas, en grec, d'équivalent de ce que nous entendons par « société », terme d'origine latine (*___*)."
+    answer: "societas"
+    alt: []
+  - id: aristote-cite-homme-logos-i2-2
+    sentence: "Le terme grec le plus proche de « société » est ___, généralement traduit par « communauté »."
+    answer: "koinonia"
+    alt: ["koinônia", "koinōnia"]
+  - id: aristote-cite-homme-logos-i2-3
+    sentence: "Toute communauté implique la visée d'une finalité ___ dès lors qu'elle est politique."
+    answer: "commune"
+    alt: []
+  - id: aristote-cite-homme-logos-i2-4
+    sentence: "Tönnies (1887) a distingué la communauté et la ___."
+    answer: "société"
+    alt: []
+  - id: aristote-cite-homme-logos-i2-5
+    sentence: "La société part d'individus isolés, des « ___ », et pense leur association sans la lier à la visée d'une finalité unique."
+    answer: "atomes"
+    alt: []
+  - id: aristote-cite-homme-logos-i2-6
+    sentence: "La notion de « société ___ » chez Hegel atteste que chacun peut rechercher son intérêt particulier au sein d'une société."
+    answer: "civile"
+    alt: []
+  - id: aristote-cite-homme-logos-i2-7
+    sentence: "La finalité commune est l'étai en même temps que la finalité, le ___, de la communauté."
+    answer: "telos"
+    alt: []
+  - id: aristote-cite-homme-logos-i2-8
+    sentence: "Les notions de communauté et de cité impliquent une démarche ___ : on part du tout et de sa finalité pour ressaisir ses éléments."
+    answer: "holistique"
+    alt: []
+- id: aristote-cite-homme-logos-p1
+  title: "La cité, réalité naturelle"
+  notes: |-
+    **La cité est une réalité naturelle : le terme et la finalité d'un processus lui-même naturel, non le fruit d'un contrat.** « À partir de là » renvoie au récit de la genèse des cités qui précède. Elle n'est pas une convention entre les hommes, mais une donnée originaire, dans laquelle leur existence s'enracine spontanément : toute étude de l'homme l'inscrira dans cet horizon politique naturel.
+
+    | | La cité, par rapport aux familles et aux villages |
+    | Chronologiquement | elle apparaît après eux |
+    | Ontologiquement | elle est leur finalité |
+
+    « Plus » que la somme de ses parties, la cité intègre ces communautés : elle n'en est pas la négation, mais l'intégration. La perspective d'Aristote est **téléologique** : « la nature ne fait rien en vain », et tout être naturel tend spontanément vers une fin immanente. Familles et villages existent *en vue de* la cité, parties indispensables et nécessaires mais non suffisantes : le tout précède et excède ses parties, comme une main n'existe jamais indépendamment d'un organisme vivant. La cité est « plus grande » en deux sens : numérique (plus de personnes) et surtout qualitatif (supérieure par sa fin).
+
+    | Communauté | Ce en vue de quoi elle naît |
+    | la famille | perpétuer l'espèce humaine |
+    | le village | la subsistance des familles |
+    | la cité | non une exigence biologique : le bien-vivre, « les belles actions », le bonheur |
+
+    Selon Pierre Pellegrin, « la cité quitte en quelque sorte la sphère du besoin ». Aristote s'écarte ici de Platon, pour qui la cité avait d'abord vocation à satisfaire nos besoins, d'où la différenciation des fonctions (*République*, II, 369b-e). La cité est « communauté de la vie heureuse » (*Politiques*, III, 9, 1280b34) : il y va de la réalisation de soi, indissociable de *notre* bonheur, au sens collectif. Dans le prolongement de l'éthique, le texte montre pourquoi la cité est le lieu où l'homme s'accomplit en tant qu'homme.
+
+    ! La cité n'est pas un contrat entre individus qui lui préexisteraient : elle est première par la fin, même si elle vient après dans le temps.
+  passage:
+    label: "(1)"
+    text: "À partir de là, il est donc manifeste que la cité fait partie des choses naturelles,"
+  points:
+  - id: aristote-cite-homme-logos-p1-1
+    sentence: "« À partir de là, il est donc manifeste que ___ fait partie des choses naturelles, »"
+    answer: "la cité"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-2
+    sentence: "« À partir de là, il est donc manifeste que la cité ___, »"
+    answer: "fait partie des choses naturelles"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-3
+    sentence: "« ___, il est donc manifeste que la cité fait partie des choses naturelles, »"
+    answer: "À partir de là"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-4
+    sentence: "La cité est une réalité naturelle car elle constitue le terme, en même temps que la ___, d'un processus lui-même naturel."
+    answer: "finalité"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-5
+    sentence: "La cité n'est pas le fruit d'un ___ ou d'une convention entre les hommes, mais une réalité originaire."
+    answer: "contrat"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-6
+    sentence: "La pólis apparaît ___ après la formation des familles et des villages."
+    answer: "chronologiquement"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-7
+    sentence: "Tout en étant « plus » que la somme de ses parties, la cité n'est pas la négation des familles et des villages, mais leur ___."
+    answer: "intégration"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-8
+    sentence: "La pólis constitue ___ la finalité des familles et des villages."
+    answer: "ontologiquement"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-9
+    sentence: "La perspective d'Aristote est ___ : « la nature ne fait rien en vain », et tout être naturel tend vers une finalité immanente."
+    answer: "téléologique"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-10
+    sentence: "Familles et villages sont des parties indispensables et nécessaires de la cité, bien que non ___ : le tout précède et excède ses parties."
+    answer: "suffisantes"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-11
+    sentence: "De même qu'une ___ n'existe jamais indépendamment d'un organisme vivant, familles et villages n'existent qu'en tant que parties de la cité."
+    answer: "main"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-12
+    sentence: "La cité est « plus grande » que ses parties en un sens numérique, et surtout en un sens ___ : elle leur est supérieure par sa finalité."
+    answer: "qualitatif"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-13
+    sentence: "La famille naît pour perpétuer l'espèce humaine ; le village permet la ___ des différentes familles."
+    answer: "subsistance"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-14
+    sentence: "Selon Pierre Pellegrin, « la cité quitte en quelque sorte la sphère du ___ »."
+    answer: "besoin"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-15
+    sentence: "Pour Platon, la cité a d'abord vocation à satisfaire nos besoins, d'où la différenciation des ___ en son sein (*République*, II, 369b-e)."
+    answer: "fonctions"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-16
+    sentence: "La cité vise non pas tant le vivre-ensemble que le ___, ou « les belles actions »."
+    answer: "bien-vivre"
+    alt: ["bien vivre"]
+  - id: aristote-cite-homme-logos-p1-17
+    sentence: "La cité est « communauté de la vie ___ » (*Politiques*, III, 9, 1280b34)."
+    answer: "heureuse"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-18
+    sentence: "« communauté de la vie heureuse » : *Politiques*, III, 9, ___."
+    answer: "1280b34"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-19
+    sentence: "Dans la cité, il va de la réalisation de soi, indissociable de notre bonheur, « notre » étant à entendre en son sens ___."
+    answer: "collectif"
+    alt: []
+  - id: aristote-cite-homme-logos-p1-20
+    sentence: "Dans le prolongement de l'___, le texte fait comprendre pourquoi la cité est le lieu où l'homme s'accomplit en tant qu'homme."
+    answer: "éthique"
+    alt: []
+- id: aristote-cite-homme-logos-p2
+  title: "L'homme, animal politique par nature"
+  notes: |-
+    **« L'homme est par nature un animal politique » : le politique n'est pas le propre de l'homme, mais il fait partie de ce qu'il est ; hors de la cité, il n'est plus pleinement homme.** Aristote envisage l'homme comme un animal, en continuité et non en rupture avec les autres espèces. Être politique « par nature » n'est d'ailleurs pas propre à l'homme : l'*Histoire des animaux* (I, 1, 487b33-488a14) appelle politiques, en un sens qui n'est pas seulement métaphorique (Labarrière, 2004), des animaux qui visent une fin commune, comme les abeilles, à la différence des animaux solitaires ou simplement grégaires, qui vivent en société sans fin commune.
+
+    Pierre Pellegrin en tire que « politique » « n'entre pas dans la définition de l'homme », sans être pour autant accidentel : c'est un « accident par soi », une propriété qui appartient par soi à un sujet sans être une partie de son essence. Le commentaire lui donne raison, mais entend « par nature » (*physei*) en un sens plus essentiel : l'homme ne peut s'accomplir *en tant que tel* que dans la cité, forme politique spécifiquement humaine.
+
+    | Le concept « politique » | Par rapport à l'humain |
+    | en extension | plus large : d'autres espèces sont politiques |
+    | en compréhension | partie intégrante : supprimer sa nature politique détruirait ce qu'il y a d'humain en nous |
+
+    D'où le corollaire : qui vit hors cité est soit « dépravé », inférieur, soit « supérieur à l'homme ». L'homme est un milieu entre la dépravation morale (des bêtes sauvages) et la perfection divine. La précision « par nature et non du fait de la fortune » fixe les conditions de l'assertion : elle vise l'individu spontanément sauvage ou isolé, sans aucune velléité d'appartenir à une cité, non celui qu'une décision du corps politique a déchu de sa citoyenneté (l'ostracisme), dont l'exclusion résulte de sa condition politique même. L'« exclu naturel », en excès *infra* ou *extra*-humain, a rompu avec sa quiddité : il est, dans la région humaine, l'équivalent du monstre dans la nature (*Physique*, II, 8, 199b1-5). Aristote corrèle ainsi humain *et* politique, non-humain *et* apolitique.
+
+    ! L'ostracisé n'est pas « hors cité par nature » : son exclusion est un acte politique, non une rupture avec son humanité.
+  passage:
+    label: "(2)"
+    text: "et que l'homme est par nature un animal politique, et que celui qui est hors cité, naturellement et non du fait de la fortune, est soit “un être” dépravé soit “un être” plus grand que l'homme. Il est ainsi comme celui qu'injurie Homère : “sans lignage, sans loi, sans foyer”. Car en même temps, un tel homme est par nature avide de guerre, étant comme un pion isolé au jeu de trictrac."
+  points:
+  - id: aristote-cite-homme-logos-p2-1
+    sentence: "« et que l'homme est ___, et que celui qui est hors cité, naturellement et non du fait de la fortune, est soit “un être” dépravé soit “un être” plus grand que l'homme. Il est ainsi comme celui qu'injurie Homère : “sans lignage, sans loi, sans foyer”. Car en même temps, un tel homme est par nature avide de guerre, étant comme un pion isolé au jeu de trictrac. »"
+    answer: "par nature un animal politique"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-2
+    sentence: "« et que l'homme est par nature un animal politique, et que ___, naturellement et non du fait de la fortune, est soit “un être” dépravé soit “un être” plus grand que l'homme. Il est ainsi comme celui qu'injurie Homère : “sans lignage, sans loi, sans foyer”. Car en même temps, un tel homme est par nature avide de guerre, étant comme un pion isolé au jeu de trictrac. »"
+    answer: "celui qui est hors cité"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-3
+    sentence: "« et que l'homme est par nature un animal politique, et que celui qui est hors cité, ___, est soit “un être” dépravé soit “un être” plus grand que l'homme. Il est ainsi comme celui qu'injurie Homère : “sans lignage, sans loi, sans foyer”. Car en même temps, un tel homme est par nature avide de guerre, étant comme un pion isolé au jeu de trictrac. »"
+    answer: "naturellement et non du fait de la fortune"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-4
+    sentence: "« et que l'homme est par nature un animal politique, et que celui qui est hors cité, naturellement et non du fait de la fortune, est soit ___. Il est ainsi comme celui qu'injurie Homère : “sans lignage, sans loi, sans foyer”. Car en même temps, un tel homme est par nature avide de guerre, étant comme un pion isolé au jeu de trictrac. »"
+    answer: "“un être” dépravé soit “un être” plus grand que l'homme"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-5
+    sentence: "« et que l'homme est par nature un animal politique, et que celui qui est hors cité, naturellement et non du fait de la fortune, est soit “un être” dépravé soit “un être” plus grand que l'homme. Il est ainsi comme ___ : “sans lignage, sans loi, sans foyer”. Car en même temps, un tel homme est par nature avide de guerre, étant comme un pion isolé au jeu de trictrac. »"
+    answer: "celui qu'injurie Homère"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-6
+    sentence: "« et que l'homme est par nature un animal politique, et que celui qui est hors cité, naturellement et non du fait de la fortune, est soit “un être” dépravé soit “un être” plus grand que l'homme. Il est ainsi comme celui qu'injurie Homère : ___. Car en même temps, un tel homme est par nature avide de guerre, étant comme un pion isolé au jeu de trictrac. »"
+    answer: "“sans lignage, sans loi, sans foyer”"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-7
+    sentence: "« et que l'homme est par nature un animal politique, et que celui qui est hors cité, naturellement et non du fait de la fortune, est soit “un être” dépravé soit “un être” plus grand que l'homme. Il est ainsi comme celui qu'injurie Homère : “sans lignage, sans loi, sans foyer”. Car en même temps, un tel homme est par nature ___, étant comme un pion isolé au jeu de trictrac. »"
+    answer: "avide de guerre"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-8
+    sentence: "« et que l'homme est par nature un animal politique, et que celui qui est hors cité, naturellement et non du fait de la fortune, est soit “un être” dépravé soit “un être” plus grand que l'homme. Il est ainsi comme celui qu'injurie Homère : “sans lignage, sans loi, sans foyer”. Car en même temps, un tel homme est par nature avide de guerre, étant ___. »"
+    answer: "comme un pion isolé au jeu de trictrac"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-9
+    sentence: "Aristote envisage l'homme comme un animal, donc en ___, et non en rupture, avec les autres espèces."
+    answer: "continuité"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-10
+    sentence: "Être un animal « par nature politique » n'est pas un caractère ___ de l'homme."
+    answer: "propre"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-11
+    sentence: "Dans l'*Histoire des animaux*, Aristote qualifie de politiques d'autres animaux, en un sens qui n'est pas seulement ___."
+    answer: "métaphorique"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-12
+    sentence: "Les ___ sont des animaux politiques, parce qu'elles visent une finalité commune."
+    answer: "abeilles"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-13
+    sentence: "Les animaux simplement ___ vivent en société sans viser de finalité commune."
+    answer: "grégaires"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-14
+    sentence: "La distinction des animaux politiques, solitaires et grégaires se trouve dans l'*Histoire des animaux*, I, 1, en ___."
+    answer: "487b33-488a14"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-15
+    sentence: "Selon Pierre Pellegrin, le caractère « politique » « n'entre pas dans la ___ de l'homme », n'étant ni son essence ni une partie de son essence."
+    answer: "définition"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-16
+    sentence: "Selon Pierre Pellegrin, « politique » est ce qu'Aristote nomme un « accident ___ » : une propriété qui appartient par soi à un sujet, sans être une partie de son essence."
+    answer: "par soi"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-17
+    sentence: "« Par nature » (*___*) signifie aussi que l'homme ne peut s'accomplir en tant que tel que dans la cité."
+    answer: "physei"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-18
+    sentence: "En ___, le concept « politique » est plus large que l'humain, puisque d'autres espèces animales le sont aussi."
+    answer: "extension"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-19
+    sentence: "En ___, le politique fait partie intégrante de l'homme : supprimer sa nature politique reviendrait à détruire ce qu'il y a d'humain en nous."
+    answer: "compréhension"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-20
+    sentence: "Celui qui vivrait hors de la cité serait soit un être « dépravé », c'est-à-dire ___, soit un être « supérieur à l'homme »."
+    answer: "inférieur"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-21
+    sentence: "L'homme se définit comme un milieu entre la dépravation morale, caractéristique des bêtes sauvages, et la perfection ___."
+    answer: "divine"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-22
+    sentence: "La précision « par nature et non du fait de la fortune » fixe les ___ dans lesquelles vaut l'assertion d'Aristote."
+    answer: "conditions"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-23
+    sentence: "L'assertion ne vaut pas pour celui qu'une décision du corps politique a déchu de son statut de citoyen, par exemple dans le cas de l'___."
+    answer: "ostracisme"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-24
+    sentence: "L'« exclu ___ », en excès infra ou extra-humain, a rompu avec sa nature politique, qui faisait son humanité."
+    answer: "naturel"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-25
+    sentence: "L'exclu naturel est l'équivalent, dans la région humaine, du ___ dans la nature aristotélicienne (*Physique*, II, 8, 199b1-5)."
+    answer: "monstre"
+    alt: []
+  - id: aristote-cite-homme-logos-p2-26
+    sentence: "Aristote établit une corrélation essentielle entre humain et politique d'une part, non-humain et ___ d'autre part."
+    answer: "apolitique"
+    alt: []
+- id: aristote-cite-homme-logos-p3
+  title: "Le lógos, propre de l'homme"
+  notes: |-
+    **Le lógos, faculté de percevoir les valeurs et de les exprimer, fait la spécificité et la supériorité de la nature politique humaine, et explique pourquoi l'homme se réalise dans la cité.** Tout en maintenant la continuité homme-animal (« plus que toute abeille »), la troisième thèse répond à la question que laissait la deuxième. Plus que le seul langage, le *lógos* désigne à la fois, et de façon indissociable, une **faculté perceptive** (percevoir, outre nos sensations, des valeurs éthiques) et une **faculté expressive** (les communiquer par la parole).
+
+    Aristote le caractérise en deux temps. D'abord, il le distingue de la voix, *phōnḕ*, qui exprime douleur ou plaisir : tous deux sont des facultés expressives, tournées vers l'extériorité. Ensuite, ils n'expriment pas la même chose :
+
+    | | La voix (`phōnḕ`) | Le langage (`lógos`) |
+    | Ce qu'elle signifie | le douloureux et l'agréable : des sensations | l'avantageux et le dommageable, le juste et l'injuste : des valeurs |
+    | Qui l'a | tous les animaux | l'homme seul |
+    | Ce qu'elle fonde | des communautés rivées à une fin biologique | la famille et la cité |
+
+    Deux points comptent. D'abord, seuls les humains perçoivent les valeurs : Aristote l'affirme, selon Pierre Pellegrin, « avec une insistance qui confine au pléonasme », en disant ce trait « propre (*idion*) » et l'homme « le seul (*monon*) » à le posséder (1253a15). Ensuite, il parle de perception (*aisthesis*) : le *lógos* s'y enracine. Pour Franco Volpi, dans le pratico-politique, le *lógos* ne révèle que lié à « une ouverture matérielle sensible ». On ne saurait donc le confondre avec notre rationalité, faculté d'agencer des idées : c'est d'abord une manière de percevoir et d'être-au-monde, antérieure à tout discours, puis une faculté expressive par la parole (*dialektos*), « l'articulation de la voix par la langue » (*Histoire des animaux*, IV, 9, 535a31).
+
+    Le *lógos* est ainsi la condition de possibilité de toute cité et la condition d'accomplissement de l'humain. On retrouve l'éthique : le bonheur est « activité de l'âme conforme à la raison » (*Éthique à Nicomaque*, I). La cité est le lieu où l'on débat, s'accorde ou se désaccorde sur les valeurs éthico-politiques : horizon d'un bonheur spécifiquement humain. Être animal politique est plus qu'être animal social, confusion contre laquelle Hannah Arendt mettait en garde. S'il n'y a pas de coextension homme-politique, il y en a une entre homme et cité, par le *lógos* : la *pólis* est le signifiant empirique qui manifeste le *lógos*, son signifié.
+
+    ! Le *lógos* n'est pas d'abord la raison qui combine des idées : c'est une perception des valeurs, enracinée dans la sensibilité.
+  passage:
+    label: "(3)"
+    text: "Que l'homme soit un animal politique plus que toute abeille et que tout animal grégaire, c'est évident. Car, comme nous le disons, la nature ne fait rien en vain ; or, de tous les animaux, l'homme est le seul à avoir le langage (lógon). Tandis que la voix (phōnḕ) est signe du douloureux et de l'agréable, ce pour quoi elle existe aussi chez les autres animaux (leur nature, en effet, est parvenue jusqu'au point d'avoir la perception du douloureux et de l'agréable et de se les signifier mutuellement), le langage existe quant à lui en vue de manifester l'avantageux et le dommageable, et par suite aussi le juste et l'injuste. Car il n'y a qu'une chose qui soit propre aux hommes par différence avec les autres animaux : le fait que seuls ils aient la perception du bien, du mal, du juste, de l'injuste et des autres “notions de ce genre”. Or avoir de telles “notions” en commun c'est ce qui fait une famille et une cité."
+  points:
+  - id: aristote-cite-homme-logos-p3-1
+    fragment: "1/3"
+    sentence: "« Que l'homme soit un animal politique ___, c'est évident. Car, comme nous le disons, la nature ne fait rien en vain ; or, de tous les animaux, l'homme est le seul à avoir le langage (lógon). »"
+    answer: "plus que toute abeille et que tout animal grégaire"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-2
+    fragment: "1/3"
+    sentence: "« Que l'homme soit un animal politique plus que toute abeille et que tout animal grégaire, c'est évident. Car, comme nous le disons, ___ ; or, de tous les animaux, l'homme est le seul à avoir le langage (lógon). »"
+    answer: "la nature ne fait rien en vain"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-3
+    fragment: "1/3"
+    sentence: "« Que l'homme soit un animal politique plus que toute abeille et que tout animal grégaire, c'est évident. Car, comme nous le disons, la nature ne fait rien en vain ; or, de tous les animaux, ___. »"
+    answer: "l'homme est le seul à avoir le langage (lógon)"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-4
+    fragment: "2/3"
+    sentence: "« Tandis que la voix (phōnḕ) ___, ce pour quoi elle existe aussi chez les autres animaux (leur nature, en effet, est parvenue jusqu'au point d'avoir la perception du douloureux et de l'agréable et de se les signifier mutuellement), le langage existe quant à lui en vue de manifester l'avantageux et le dommageable, et par suite aussi le juste et l'injuste. »"
+    answer: "est signe du douloureux et de l'agréable"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-5
+    fragment: "2/3"
+    sentence: "« Tandis que la voix (phōnḕ) est signe du douloureux et de l'agréable, ___ (leur nature, en effet, est parvenue jusqu'au point d'avoir la perception du douloureux et de l'agréable et de se les signifier mutuellement), le langage existe quant à lui en vue de manifester l'avantageux et le dommageable, et par suite aussi le juste et l'injuste. »"
+    answer: "ce pour quoi elle existe aussi chez les autres animaux"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-6
+    fragment: "2/3"
+    sentence: "« Tandis que la voix (phōnḕ) est signe du douloureux et de l'agréable, ce pour quoi elle existe aussi chez les autres animaux (leur nature, en effet, est parvenue jusqu'au point ___), le langage existe quant à lui en vue de manifester l'avantageux et le dommageable, et par suite aussi le juste et l'injuste. »"
+    answer: "d'avoir la perception du douloureux et de l'agréable et de se les signifier mutuellement"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-7
+    fragment: "2/3"
+    sentence: "« Tandis que la voix (phōnḕ) est signe du douloureux et de l'agréable, ce pour quoi elle existe aussi chez les autres animaux (leur nature, en effet, est parvenue jusqu'au point d'avoir la perception du douloureux et de l'agréable et de se les signifier mutuellement), le langage existe quant à lui ___, et par suite aussi le juste et l'injuste. »"
+    answer: "en vue de manifester l'avantageux et le dommageable"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-8
+    fragment: "2/3"
+    sentence: "« Tandis que la voix (phōnḕ) est signe du douloureux et de l'agréable, ce pour quoi elle existe aussi chez les autres animaux (leur nature, en effet, est parvenue jusqu'au point d'avoir la perception du douloureux et de l'agréable et de se les signifier mutuellement), le langage existe quant à lui en vue de manifester l'avantageux et le dommageable, ___. »"
+    answer: "et par suite aussi le juste et l'injuste"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-9
+    fragment: "2/3"
+    sentence: "« Tandis que la voix (phōnḕ) est signe ___, ce pour quoi elle existe aussi chez les autres animaux (leur nature, en effet, est parvenue jusqu'au point d'avoir la perception du douloureux et de l'agréable et de se les signifier mutuellement), le langage existe quant à lui en vue de manifester ___, et par suite aussi le juste et l'injuste. »"
+    answer: "du douloureux et de l'agréable ; l'avantageux et le dommageable"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-10
+    fragment: "3/3"
+    sentence: "« Car ___ par différence avec les autres animaux : le fait que seuls ils aient la perception du bien, du mal, du juste, de l'injuste et des autres “notions de ce genre”. Or avoir de telles “notions” en commun c'est ce qui fait une famille et une cité. »"
+    answer: "il n'y a qu'une chose qui soit propre aux hommes"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-11
+    fragment: "3/3"
+    sentence: "« Car il n'y a qu'une chose qui soit propre aux hommes par différence avec les autres animaux : le fait ___ et des autres “notions de ce genre”. Or avoir de telles “notions” en commun c'est ce qui fait une famille et une cité. »"
+    answer: "que seuls ils aient la perception du bien, du mal, du juste, de l'injuste"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-12
+    fragment: "3/3"
+    sentence: "« Car il n'y a qu'une chose qui soit propre aux hommes par différence avec les autres animaux : le fait que seuls ils aient la perception du bien, du mal, du juste, de l'injuste et des autres “notions de ce genre”. Or ___ c'est ce qui fait une famille et une cité. »"
+    answer: "avoir de telles “notions” en commun"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-13
+    fragment: "3/3"
+    sentence: "« Car il n'y a qu'une chose qui soit propre aux hommes par différence avec les autres animaux : le fait que seuls ils aient la perception du bien, du mal, du juste, de l'injuste et des autres “notions de ce genre”. Or avoir de telles “notions” en commun ___. »"
+    answer: "c'est ce qui fait une famille et une cité"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-14
+    sentence: "La spécificité et la ___ de la nature politique humaine sur celle des autres espèces tiennent au lógos."
+    answer: "supériorité"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-15
+    sentence: "Le lógos désigne à la fois une faculté ___, qui saisit des valeurs éthiques, et une faculté expressive, la parole."
+    answer: "perceptive"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-16
+    sentence: "Aristote distingue d'abord le lógos de la voix, ___, qui exprime douleur ou plaisir."
+    answer: "phōnḕ"
+    alt: ["phonè", "phônè", "phone"]
+  - id: aristote-cite-homme-logos-p3-17
+    sentence: "Lógos et voix sont tous deux des facultés ___, tournées vers l'extériorité."
+    answer: "expressives"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-18
+    sentence: "La voix rive les communautés animales à une finalité ___, enracinée dans leurs besoins et leurs sensations."
+    answer: "biologique"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-19
+    sentence: "Le lógos manifeste des valeurs qualifiables d'___ : le bien et le mal, le juste et l'injuste."
+    answer: "éthico-politiques"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-20
+    sentence: "Selon Pierre Pellegrin, Aristote affirme la spécificité humaine « avec une insistance qui confine au ___ »."
+    answer: "pléonasme"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-21
+    sentence: "Aristote dit de la perception du bien et du juste qu'elle est « propre (*___*) » aux hommes (1253a15)."
+    answer: "idion"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-22
+    sentence: "L'homme est « le seul (*___*) » à posséder la perception du bien et du mal, du juste et de l'injuste (1253a15)."
+    answer: "monon"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-23
+    sentence: "En parlant de perception (*___*), Aristote indique que le lógos s'enracine dans la sensibilité."
+    answer: "aisthesis"
+    alt: ["aisthèsis"]
+  - id: aristote-cite-homme-logos-p3-24
+    sentence: "Selon Franco Volpi, le lógos pratico-politique ne peut révéler que lié à « une ouverture matérielle ___ »."
+    answer: "sensible"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-25
+    sentence: "On ne saurait confondre le lógos avec notre ___, c'est-à-dire notre faculté d'agencer et de combiner des idées."
+    answer: "rationalité"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-26
+    sentence: "La parole (*dialektos*) est « l'articulation de la voix par la ___ » (*Histoire des animaux*, IV, 9, 535a31)."
+    answer: "langue"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-27
+    sentence: "Le lógos constitue la condition de ___ de toute cité et, de façon indissociable, la condition d'accomplissement de l'humain."
+    answer: "possibilité"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-28
+    sentence: "Aristote définit le bonheur comme « activité de l'âme conforme à la ___ » (*Éthique à Nicomaque*, I)."
+    answer: "raison"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-29
+    sentence: "La cité est le lieu où les humains peuvent ___, échanger, s'accorder ou se désaccorder au sujet des valeurs."
+    answer: "débattre"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-30
+    sentence: "Être un animal par nature politique est plus qu'être un animal ___, confusion contre laquelle Hannah Arendt mettait en garde."
+    answer: "social"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-31
+    sentence: "S'il n'existe pas de coextension homme-politique, il en existe une entre l'homme et la ___, qui provient du lógos."
+    answer: "cité"
+    alt: []
+  - id: aristote-cite-homme-logos-p3-32
+    sentence: "La pólis peut être interprétée comme le ___ empirique qui manifeste la présence du lógos, son signifié."
+    answer: "signifiant"
+    alt: []
+- id: aristote-cite-homme-logos-o1
+  title: "Ce que les hommes font de la cité"
+  notes: |-
+    **Que l'homme soit politique par nature ne veut pas dire que cette nature s'accomplisse d'elle-même : le lógos qui rend la cité possible peut aussi la défaire, et c'est aux citoyens de faire advenir le juste.** Le mot « nature » revient six fois dans l'extrait. Mais « la nature ne fait rien en vain » n'implique pas un accomplissement automatique ou mécanique, quels que soient nos choix et nos efforts.
+
+    Le *lógos*, *medium* de la cité, est aussi ce par quoi la *pólis* peut être défaite, dissoute, ou du moins remise en question : les deux possibilités sont données ensemble. « Enraciner les valeurs dans une perception originaire, c'est reconnaître, d'un seul et même mouvement, le caractère universel (universellement humain) de notre aptitude à les saisir puis à les exprimer, en même temps que leur caractère éminemment relatif » (Rogan, 2021) : chaque citoyen les perçoit selon sa position géographique, sa condition sociale, sa disposition éthique. Pour Francis Wolff, le juste et l'injuste, objets d'une expérience individuelle, « n'accèdent à l'existence, dans la vie commune, que par la discussion qui suppose la contradiction et implique une remise en question permanente ».
+
+    À la fin du chapitre 2, Aristote le dit : « l'homme naît pourvu d'armes en vue <d'acquérir> prudence et vertu, dont il peut se servir à des fins absolument inverses » (1253a35). L'homme est responsable de son bonheur et de celui de la cité. Un usage nul ou tronqué du *lógos* mène à la *stasis*, où les citoyens s'opposent, par une perception erronée du juste.
+
+    | | Platon | Aristote |
+    | Les valeurs | des Idées, des essences, indépendantes des citoyens | perçues par les citoyens grâce au `lógos` |
+    | Ce qui les fait valoir dans la cité | leur connaissance | la discussion, l'effort réitéré pour s'accorder |
+
+    La politique n'est donc pas inféodée à la nature : c'est l'effort réitéré des citoyens pour s'entendre. Qu'on n'y parvienne pas toujours tient à l'absence de nécessité absolue de la région sublunaire, où se loge tout le défi de la politique humaine.
+
+    ! « Par nature » ne veut pas dire « automatiquement » : la cité peut échouer par un mauvais usage du *lógos*.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: aristote-cite-homme-logos-o1-1
+    sentence: "Aristote fait référence à la « nature » à ___ reprises dans l'extrait des *Politiques*, I, 2."
+    answer: "six"
+    alt: ["6"]
+  - id: aristote-cite-homme-logos-o1-2
+    sentence: "Dire que l'homme est « par nature » politique n'implique pas que cette nature s'accomplisse ___ ou mécaniquement."
+    answer: "automatiquement"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-3
+    sentence: "Le lógos, medium de la cité, est aussi ce par quoi la pólis peut être ___ et dissoute, ou du moins remise en question."
+    answer: "défaite"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-4
+    sentence: "Enraciner les valeurs dans une perception originaire, c'est reconnaître à la fois le caractère universel de notre aptitude à les saisir et leur caractère éminemment ___."
+    answer: "relatif"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-5
+    sentence: "Les citoyens perçoivent les valeurs différemment selon leur position géographique, leur condition sociale ou leur disposition ___ (vice, vertu)."
+    answer: "éthique"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-6
+    sentence: "Selon Francis Wolff, le juste et l'injuste n'accèdent à l'existence, dans la vie commune, que par la ___, qui suppose la contradiction."
+    answer: "discussion"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-7
+    sentence: "« l'homme naît pourvu d'___ en vue <d'acquérir> prudence et vertu, dont il peut se servir à des fins absolument inverses » (1253a35)."
+    answer: "armes"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-8
+    sentence: "L'homme est ___ de son bonheur, et de celui de la cité."
+    answer: "responsable"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-9
+    sentence: "Un usage nul ou tronqué du lógos conduit les citoyens à s'opposer les uns aux autres dans la ___."
+    answer: "stasis"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-10
+    sentence: "La stasis procède d'une perception ___ du juste."
+    answer: "erronée"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-11
+    sentence: "Chez Aristote, les valeurs ne sont plus, comme chez Platon, des ___ ou des essences existant indépendamment des citoyens."
+    answer: "Idées"
+    alt: ["idées"]
+  - id: aristote-cite-homme-logos-o1-12
+    sentence: "La politique devient chez Aristote l'effort ___ de tous les citoyens pour s'entendre et se mettre d'accord sur les valeurs."
+    answer: "réitéré"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-13
+    sentence: "L'absence de nécessité absolue caractérise la région ___, où se loge tout le défi de la politique humaine."
+    answer: "sublunaire"
+    alt: []
+- id: aristote-cite-homme-logos-o2
+  title: "Deux régions, trois sciences"
+  notes: |-
+    **La politique porte sur les affaires humaines, dans la région sublunaire du changement, qu'on ne peut expliquer par des principes immuables : elle relève des sciences pratiques.** Est-elle une science humaine à part entière ? D'abord, Aristote circonscrit les « choses » ou « affaires humaines » (*ta pragmata*), qui appartiennent à la région sublunaire.
+
+    | Région | Ce qu'elle contient | Son caractère |
+    | sublunaire, « d'ici » | les êtres humains, la nature au sens le plus propre | génération et corruption, part irréductible de contingence, bien que globalement ordonnée |
+    | supralunaire, « d'en haut » | des corps fixes et immuables (les étoiles) | permanente et incorruptible : nécessité et harmonie |
+
+    Chaque région a ses principes propres : on ne rend pas raison du changeant par des principes immuables, et réciproquement. Cela tient à l'incommunicabilité des genres et, corrélativement, des sciences (*Métaphysique*, K, 7). Aristote distingue trois types de sciences :
+
+    | Sciences | Objet | Fin |
+    | poïétiques | la production (`poïesis`), comme la technique artisanale | extérieure à l'agent |
+    | pratiques | l'action (`praxis`) | immanente à celui qui l'accomplit |
+    | théorétiques | la contemplation (`theoria`), la connaissance des causes : physique, mathématiques | la connaissance |
+
+    ! Confondre pratique et poïétique, c'est oublier que la fin de l'action est dans l'agent, non dans un produit.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: aristote-cite-homme-logos-o2-1
+    sentence: "Aristote circonscrit les « choses » ou « affaires humaines » (*___*), qui appartiennent à la région sublunaire."
+    answer: "ta pragmata"
+    alt: []
+  - id: aristote-cite-homme-logos-o2-2
+    sentence: "La région ___, ou région « d'ici », est celle des êtres humains et de la nature, au sens le plus propre du terme."
+    answer: "sublunaire"
+    alt: []
+  - id: aristote-cite-homme-logos-o2-3
+    sentence: "Permanente et incorruptible, la région supralunaire est le lieu de la nécessité et de l'___."
+    answer: "harmonie"
+    alt: []
+  - id: aristote-cite-homme-logos-o2-4
+    sentence: "Soumise à la génération et à la corruption, la région sublunaire contient une part irréductible de ___."
+    answer: "contingence"
+    alt: []
+  - id: aristote-cite-homme-logos-o2-5
+    sentence: "On ne saurait rendre raison du changeant à partir de principes immuables, en raison de l'___ entre les genres et entre les sciences."
+    answer: "incommunicabilité"
+    alt: []
+  - id: aristote-cite-homme-logos-o2-6
+    sentence: "L'incommunicabilité entre les genres et entre les sciences est établie dans la *Métaphysique*, livre ___, chapitre 7."
+    answer: "K"
+    alt: []
+  - id: aristote-cite-homme-logos-o2-7
+    sentence: "Les sciences ___ se rapportent à la production (poïesis), comme la technique artisanale, dont la fin est extérieure à l'agent."
+    answer: "poïétiques"
+    alt: ["poiétiques"]
+  - id: aristote-cite-homme-logos-o2-8
+    sentence: "Les sciences pratiques sont relatives à l'action (praxis), dont la fin est ___ à celui qui l'accomplit."
+    answer: "immanente"
+    alt: []
+  - id: aristote-cite-homme-logos-o2-9
+    sentence: "Les sciences théorétiques sont relatives à la contemplation (*theoria*) et à la connaissance des ___, comme la physique ou les mathématiques."
+    answer: "causes"
+    alt: []
+- id: aristote-cite-homme-logos-o3
+  title: "Une science pratique et architectonique"
+  notes: |-
+    **La praxis devient chez Aristote un champ d'étude autonome : la politique tire ses principes de l'action même, se règle sur la prudence et non sur des Idées, et commande, en architecte, les autres sciences pratiques.** La tripartition fait de l'action humaine, indissociable du choix réfléchi (*prohairesis*) et du *lógos*, un domaine à part entière, dont se saisissent les sciences pratiques, l'éthique et la politique, à partir de principes propres. On ne rend raison de l'action qu'à partir d'elle-même, non de vérités théorétiques ou contemplatives.
+
+    La thèse vise Platon, qui adossait la politique à une métaphysique : gouverner *justement*, c'est gouverner selon *l'Idée du juste*, principe immuable, intelligible et transcendant. D'où les philosophes-rois, seuls à connaître et contempler les Idées par la dialectique (*République*, V, 471c-474c). Pour Aristote, le juste n'existe pas en soi comme une substance indépendante de la cité : il émane des perceptions des citoyens doués de *lógos*. Des vérités immuables, à supposer qu'elles existent, ne seraient d'aucun secours pour agir.
+
+    | | Platon | Aristote |
+    | Ce qui règle l'action politique | la connaissance de l'Idée du juste | la prudence (`phronèsis`) |
+    | Qui gouverne | le philosophe-roi | le politique prudent |
+    | La méthode | la dialectique | l'observation des cités et de leur histoire |
+
+    La prudence n'est ni une science ni un art, mais une « disposition, accompagnée de règle vraie, capable d'agir dans la sphère de ce qui est bon ou mauvais pour un être humain » (*Éthique à Nicomaque*, VI, 5, 1140b1-5), l'une des vertus du politique. D'où la méthode empirique des *Politiques* : Aristote aurait constitué avec ses élèves une collection de cent-cinquante-huit constitutions (Crubellier et Pellegrin, 2002). La politique est la science humaine par excellence, et « architectonique » : elle porte sur le souverain bien, englobe les autres sciences pratiques et constitue leur fin, le bien de la cité l'emportant sur celui de l'individu (*Éthique à Nicomaque*, I, 1, 1094a25-b10).
+
+    ! Pour Aristote, bien gouverner ne suppose pas de contempler le juste en soi, mais d'agir avec prudence dans le contingent.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: aristote-cite-homme-logos-o3-1
+    sentence: "La praxis est indissociable du choix réfléchi, la ___, et de l'exercice du lógos."
+    answer: "prohairesis"
+    alt: []
+  - id: aristote-cite-homme-logos-o3-2
+    sentence: "On ne saurait rendre raison de l'action humaine qu'à partir d'elle-même, et non à partir de vérités ___ ou contemplatives."
+    answer: "théorétiques"
+    alt: []
+  - id: aristote-cite-homme-logos-o3-3
+    sentence: "Pour Platon, gouverner justement, c'est gouverner selon l'___ du juste."
+    answer: "Idée"
+    alt: ["idée"]
+  - id: aristote-cite-homme-logos-o3-4
+    sentence: "Chez Platon, les philosophes doivent être ___ et gouverner les cités, car seuls ils connaissent les Idées (*République*, V, 471c-474c)."
+    answer: "rois"
+    alt: []
+  - id: aristote-cite-homme-logos-o3-5
+    sentence: "Chez Aristote, le juste n'existe pas en soi comme une ___ indépendante de la cité : il émane des perceptions des citoyens."
+    answer: "substance"
+    alt: []
+  - id: aristote-cite-homme-logos-o3-6
+    sentence: "Pour agir, il faut faire preuve de prudence (*___*), qui n'est ni une science ni un art."
+    answer: "phronèsis"
+    alt: ["phronesis", "phronêsis"]
+  - id: aristote-cite-homme-logos-o3-7
+    sentence: "La prudence est une « disposition, accompagnée de règle ___, capable d'agir dans la sphère de ce qui est bon ou mauvais pour un être humain »."
+    answer: "vraie"
+    alt: []
+  - id: aristote-cite-homme-logos-o3-8
+    sentence: "La définition de la prudence comme disposition accompagnée de règle vraie se trouve dans l'*Éthique à Nicomaque*, VI, 5, en ___."
+    answer: "1140b1-5"
+    alt: []
+  - id: aristote-cite-homme-logos-o3-9
+    sentence: "La méthode d'Aristote dans les *Politiques* est ___ : observer les cités telles qu'elles existent, et leur histoire."
+    answer: "empirique"
+    alt: []
+  - id: aristote-cite-homme-logos-o3-10
+    sentence: "Aristote aurait constitué, avec ses élèves, une collection de ___ constitutions."
+    answer: "cent-cinquante-huit"
+    alt: ["158", "cent cinquante-huit"]
+  - id: aristote-cite-homme-logos-o3-11
+    sentence: "La politique est dite « ___ » parce qu'elle porte sur le souverain bien et englobe les autres sciences pratiques."
+    answer: "architectonique"
+    alt: []
+  - id: aristote-cite-homme-logos-o3-12
+    sentence: "Le statut architectonique de la politique s'explique par la supériorité du bien de la cité sur le bien d'un ___ (*Éthique à Nicomaque*, I, 1)."
+    answer: "individu"
+    alt: []
+- id: aristote-cite-homme-logos-o4
+  title: "Politique et biologie"
+  notes: |-
+    **Le recours à la biologie ne ruine pas l'autonomie de la politique : l'homme est à la fois un vivant et un être éthique, et la politique, science humaine par excellence, prend appui sur la biologie sans s'y réduire.** La référence constante d'Aristote à la biologie quand il traite de l'humain dans les cités ne va pas de soi. N'enfreint-elle pas l'incommunicabilité des sciences, en mêlant une science théorétique (celle du vivant) et une science pratique ? Aristote serait-il le précurseur de la sociobiologie, fondée au XXe siècle par Edward O. Wilson (1978), étude du fondement biologique des comportements sociaux ?
+
+    Pierre Pellegrin répond que « ce schéma explicatif a un pied dans la physique et un autre dans les sciences pratiques » : il n'y a pas « de réelle subversion du grand principe aristotélicien selon lequel des domaines différents relèvent de sciences différentes ». Cela tient à la nature de l'homme, être **duel** : vivant à l'instar des autres espèces, *et* être éthique et politique, apte à percevoir les valeurs. Sa constitution biologique rend possible sa condition éthico-politique. D'où le mot d'ordre de Nicole Loraux : « il faut savoir tout prendre en même temps chez Aristote, sans choisir une entrée au détriment de l'autre ».
+
+    | | Ce qui la rend supérieure |
+    | la politique | architectonique : elle englobe et commande les sciences pratiques |
+    | la contemplation (`theoria`) | sa visée ; et c'est l'éthique, plus que la politique, qui y mène |
+
+    Reste l'articulation de l'éthique et de la politique, qui demanderait une autre analyse. Cette axiologie des sciences suggère que les sciences humaines tendent chez Aristote vers leur propre dépassement : elles ne sont pas le dernier mot des sciences.
+
+    ! S'appuyer sur la biologie n'est pas réduire la politique à la biologie : l'homme vivant rend possible l'homme politique.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: aristote-cite-homme-logos-o4-1
+    sentence: "La référence constante d'Aristote à la ___ lorsqu'il traite de l'humain dans les cités semble enfreindre le principe d'incommunicabilité des sciences."
+    answer: "biologie"
+    alt: []
+  - id: aristote-cite-homme-logos-o4-2
+    sentence: "Edward O. Wilson a fondé au XXe siècle la ___, étude systématique du fondement biologique des comportements sociaux."
+    answer: "sociobiologie"
+    alt: []
+  - id: aristote-cite-homme-logos-o4-3
+    sentence: "Selon Pierre Pellegrin, le schéma explicatif biologique appliqué en politique « a un pied dans la ___ et un autre dans les sciences pratiques »."
+    answer: "physique"
+    alt: []
+  - id: aristote-cite-homme-logos-o4-4
+    sentence: "Il n'y a pas de réelle subversion du grand principe aristotélicien selon lequel des domaines différents relèvent de ___ différentes."
+    answer: "sciences"
+    alt: []
+  - id: aristote-cite-homme-logos-o4-5
+    sentence: "L'homme est un être ___ : un vivant à l'instar des autres espèces, et un être éthique et politique."
+    answer: "duel"
+    alt: []
+  - id: aristote-cite-homme-logos-o4-6
+    sentence: "La constitution biologique de l'homme rend possible sa condition ___."
+    answer: "éthico-politique"
+    alt: []
+  - id: aristote-cite-homme-logos-o4-7
+    sentence: "Selon Nicole Loraux, « il faut savoir tout prendre en même temps chez Aristote, sans choisir une ___ au détriment de l'autre »."
+    answer: "entrée"
+    alt: []
+  - id: aristote-cite-homme-logos-o4-8
+    sentence: "Que les sciences pratiques trouvent leur point d'appui dans la biologie ne signifie pas qu'elles s'y ___."
+    answer: "réduisent"
+    alt: []
+  - id: aristote-cite-homme-logos-o4-9
+    sentence: "Si la politique est architectonique, la contemplation (*theoria*) semble supérieure par sa ___."
+    answer: "visée"
+    alt: []
+  - id: aristote-cite-homme-logos-o4-10
+    sentence: "C'est l'___, plus que la politique, qui semble mener à la contemplation."
+    answer: "éthique"
+    alt: []
+  - id: aristote-cite-homme-logos-o4-11
+    sentence: "L'axiologie des sciences suggère que les sciences humaines tendent chez Aristote vers leur propre ___."
+    answer: "dépassement"
+    alt: []
