@@ -1,22 +1,21 @@
-# Unité-œuvre (voir content/oeuvres.md) : le plan de l'Analytique de la
-# faculté de juger esthétique (Kant, Critique de la faculté de juger, §§1-29).
-# Livre I : Analytique du beau (§§1-22) ; Livre II : Analytique du sublime,
-# jusqu'au §29 et à sa Remarque générale. La Déduction des jugements
-# esthétiques purs (§§30-54), que Kant range encore dans le livre II, est
-# traitée par les unités ea2 et kant-beaux-arts.
+# Unité-œuvre (voir content/oeuvres.md) : le plan de la Critique de la faculté
+# de juger esthétique (Kant, §§1-60), en quatre parties, une leçon chacune :
+# Livre I, Analytique du beau (§§1-22) ; Livre II, Analytique du sublime
+# (§§23-29) ; la Déduction des jugements esthétiques purs (§§30-54), que Kant
+# range encore dans le livre II ; la Dialectique (§§55-60). Les unités ea1-ea4
+# et kant-beaux-arts en développent le contenu.
 #
-# Plan d'après une aide fournie par l'utilisateur (découpage en groupes de
-# paragraphes), approfondi : les exemples de Kant et les distinctions peu
-# connues (sensation objective et subjective, parure, Idée normale,
-# subreption, colossal et monstrueux…) vont en thèses. Pas de titres de
-# paragraphes (traductions variables) : chaque case dit son affirmation
-# (summary) et son argument (reason). Les citations entre guillemets sont
-# celles déjà vérifiées dans les unités ea1-ea4 ; les autres thèses
-# reformulent Kant.
+# Plan d'après les aides fournies par l'utilisateur (Analytique, Dialectique),
+# approfondi : les exemples de Kant et les distinctions peu connues vont en
+# thèses. Pas de titres de paragraphes (traductions variables) : chaque case
+# dit son affirmation (summary) et son argument (reason), qui ne soufflent
+# jamais la réponse d'une thèse. Les citations entre guillemets sont celles
+# déjà vérifiées dans les unités ea1-ea4 et kant-beaux-arts ; les autres
+# thèses reformulent Kant.
 
 id: kant-analytique
-title: "L'Analytique du beau et du sublime : le plan"
-subtitle: "Kant · Critique de la faculté de juger, §§1-29"
+title: "La Critique de la faculté de juger esthétique : le plan"
+subtitle: "Kant · Analytique, Déduction et Dialectique, §§1-60"
 icon: map
 color: violet
 group: "Kant : l'esthétique"
@@ -613,6 +612,482 @@ work:
               sentence: "L'enthousiasme est sublime ; mais l'___ d'un esprit qui suit fermement ses principes l'est plus encore, parce qu'elle a de plus l'approbation de la raison pure."
               answer: "apathie"
               explanation: "Kant parle d'absence d'affect (apatheia), au bon sens du terme : non l'indifférence, mais la fermeté d'un esprit que ne dérangent pas les émotions."
+    - id: deduction
+      label: "§30-54"
+      title: "Déduction des jugements esthétiques purs"
+      parts:
+        - id: d1
+          label: "§30-31"
+          question: "Quels jugements esthétiques ont besoin d'une déduction, et pourquoi ?"
+          parts:
+            - id: p30
+              label: "§30"
+              summary: "Le sublime n'a pas à être légitimé à part ; le beau naturel, si"
+              reason: "le sublime n'est que dans l'usage de nos facultés : l'exposer, c'est déjà le légitimer ; le beau, lui, tient à la forme de l'objet"
+              points:
+                - id: kd30a
+                  sentence: "L'exposition des jugements sur le sublime de la nature en est en même temps la ___."
+                  answer: "déduction"
+                - id: kd30b
+                  sentence: "Le beau de la nature appelle une déduction, parce qu'il concerne la ___ de l'objet, que l'on juge accordée à notre faculté de juger."
+                  answer: "forme"
+            - id: p31
+              label: "§31"
+              summary: "Un jugement qui prétend à la nécessité doit montrer de quel droit"
+              reason: "la déduction garantit la légitimité d'une sorte de jugements ; le jugement de goût, singulier, prétend valoir a priori pour tous"
+              rel: consequence
+              points:
+                - id: kd31a
+                  sentence: "Une déduction est la garantie de la ___ d'une sorte de jugements : elle n'est requise que pour ceux qui prétendent à la nécessité."
+                  answer: "légitimité"
+                - id: kd31b
+                  sentence: "Ce qu'il faut légitimer n'est pas un concept objectif, mais la validité universelle d'un jugement ___."
+                  answer: "singulier"
+        - id: d2
+          label: "§32-34"
+          question: "Qu'est-ce qui rend le jugement de goût si difficile à légitimer ?"
+          rel: consequence
+          parts:
+            - id: p32
+              label: "§32"
+              summary: "Il revendique l'adhésion de chacun, comme s'il était objectif"
+              reason: "il détermine son objet par la satisfaction, et ne se laisse dicter son verdict ni par les autres ni par l'exemple"
+              points:
+                - id: kd32a
+                  sentence: "Le jugement de goût doit être énoncé a priori, non par ___, parce qu'une chose plairait effectivement à tous."
+                  answer: "imitation"
+                - id: kd32b
+                  sentence: "Le jeune poète ne se laisse pas persuader par le public ni par ses amis que son poème est mauvais : le goût ne prétend qu'à l'___."
+                  answer: "autonomie"
+                - id: kd32c
+                  sentence: "Les œuvres des Anciens ne sont pas à copier : on les suit, en puisant aux mêmes ___ qu'eux, et en empruntant seulement leur façon de s'y prendre."
+                  answer: "sources"
+            - id: p33
+              label: "§33"
+              summary: "Aucune preuve ne le détermine, comme s'il était seulement subjectif"
+              reason: "ni l'avis du grand nombre ni les règles des critiques ne peuvent forcer l'assentiment : il faut que l'objet plaise"
+              rel: declinaison
+              points:
+                - id: kd33a
+                  sentence: "Si l'on m'oppose Batteux ou ___ contre mon jugement de goût, je me bouche les oreilles : je ne veux pas que des raisons décident de ma satisfaction."
+                  answer: "Lessing"
+                - id: kd33b
+                  sentence: "Qu'on m'énumère tous les ___ d'un mets en m'assurant qu'ils sont agréables : c'est avec ma langue et mon palais que j'en juge."
+                  answer: "ingrédients"
+            - id: p34
+              label: "§34"
+              summary: "Il n'y a pas de principe objectif du goût"
+              reason: "aucune règle ne peut démontrer une beauté ; la critique du goût n'est science que comme critique transcendantale"
+              rel: consequence
+              points:
+                - id: kd34a
+                  sentence: "Quand elle montre sur des exemples le jeu des facultés, la critique du goût est un ___, non une science."
+                  answer: "art"
+                - id: kd34b
+                  sentence: "Elle n'est une science que comme critique ___, qui dérive la possibilité du jugement de la nature de nos facultés."
+                  answer: "transcendantale"
+        - id: d3
+          label: "§35-38"
+          question: "Comment un jugement de goût est-il possible, et de quel droit vaut-il pour tous ?"
+          rel: consequence
+          parts:
+            - id: p35
+              label: "§35"
+              summary: "Le principe du goût est celui de la faculté de juger en général"
+              reason: "le goût subsume, non une intuition sous un concept, mais l'imagination elle-même, dans sa liberté, sous l'entendement, dans sa légalité"
+              points:
+                - id: kd35a
+                  sentence: "La liberté de l'imagination, dans le jugement de goût, consiste en ce qu'elle ___ sans concept."
+                  answer: "schématise"
+                - id: kd35b
+                  sentence: "« Le jugement de goût doit se fonder uniquement sur le sentiment que l'imagination dans sa liberté et l'entendement dans sa ___ s'animent réciproquement. »"
+                  answer: "légalité"
+            - id: p36
+              label: "§36"
+              summary: "Le problème : comment des jugements de goût sont-ils possibles ?"
+              reason: "ils lient a priori un plaisir à une représentation, pour tous, sans concept"
+              rel: consequence
+              points:
+                - id: kd36a
+                  sentence: "Le jugement de goût est un jugement ___ a priori : il ajoute à la représentation de l'objet un plaisir, et le prétend valable pour tous."
+                  answer: "synthétique"
+            - id: p37
+              label: "§37"
+              summary: "Ce qui est affirmé a priori, c'est la validité du plaisir pour tous"
+              reason: "le plaisir lui-même est empirique ; seule sa valeur de règle pour chacun peut être représentée a priori"
+              rel: declinaison
+              points:
+                - id: kd37a
+                  sentence: "« Ce n'est pas le plaisir, mais l'___ de ce plaisir, perçu comme lié dans l'esprit au simple jugement sur un objet, que nous nous représentons a priori dans un jugement de goût. »"
+                  answer: "universalité"
+            - id: p38
+              label: "§38"
+              summary: "La déduction : le plaisir tient aux conditions subjectives de toute connaissance"
+              reason: "ces conditions sont les mêmes chez tous les hommes, sans quoi ils ne pourraient se communiquer leurs connaissances"
+              rel: probleme-solution
+              points:
+                - id: kd38a
+                  sentence: "Les conditions subjectives de la faculté de juger sont les mêmes chez tous les hommes, sans quoi ils ne pourraient se ___ leurs représentations et leurs connaissances."
+                  answer: "communiquer"
+                - id: kd38b
+                  sentence: "Cette déduction est facile, parce qu'elle n'a à justifier la ___ objective d'aucun concept."
+                  answer: "réalité"
+        - id: d4
+          label: "§39-40"
+          question: "Qu'est-ce qui rend un sentiment communicable ?"
+          rel: consequence
+          parts:
+            - id: p39
+              label: "§39"
+              summary: "Toutes les sensations ne se communiquent pas de la même façon"
+              reason: "l'agréable ne se communique pas, le moral se communique par des concepts, le beau par le sentiment de l'accord des facultés"
+              points:
+                - id: kd39a
+                  sentence: "Le plaisir pris au beau n'est ni un plaisir de jouissance, ni celui d'une activité conforme à la loi morale, mais un plaisir de la simple ___."
+                  answer: "réflexion"
+            - id: p40
+              label: "§40"
+              summary: "Le goût est une sorte de sens commun"
+              reason: "il juge en tenant compte, par la pensée, du mode de représentation de tout autre"
+              rel: consequence
+              points:
+                - id: kd40a
+                  sentence: "Première maxime de l'entendement commun : penser par ___ ; c'est la manière de penser sans préjugés."
+                  answer: "soi-même"
+                - id: kd40b
+                  sentence: "La deuxième maxime, penser en se mettant à la place de tout autre, est celle d'une manière de penser ___."
+                  answer: "élargie"
+                - id: kd40c
+                  sentence: "La troisième maxime, toujours penser en accord avec soi-même, est celle d'une manière de penser ___."
+                  answer: "conséquente"
+                - id: kd40d
+                  sentence: "Le goût mérite le nom de sens commun plus que l'entendement sain : c'est un sensus communis ___."
+                  answer: "aestheticus"
+        - id: d5
+          label: "§41-42"
+          question: "Le beau, jugé sans intérêt, peut-il susciter un intérêt ?"
+          rel: changement-de-question
+          parts:
+            - id: p41
+              label: "§41"
+              summary: "L'intérêt empirique pour le beau n'existe qu'en société"
+              reason: "le penchant à la sociabilité fait du goût un moyen de communiquer son sentiment"
+              points:
+                - id: kd41a
+                  sentence: "Abandonné sur une île ___, un homme ne parerait ni sa hutte ni lui-même."
+                  answer: "déserte"
+                - id: kd41b
+                  sentence: "Cet intérêt empirique pour le beau tient au penchant naturel de l'homme à la ___."
+                  answer: "sociabilité"
+            - id: p42
+              label: "§42"
+              summary: "S'intéresser directement à la beauté des fleurs et des oiseaux marque une âme bonne"
+              reason: "que la nature produise des formes accordées à notre jugement désintéressé intéresse la raison, comme la moralité"
+              rel: limite
+              points:
+                - id: kd42a
+                  sentence: "Prendre un intérêt immédiat à la beauté de la ___ est toujours le signe d'une âme bonne."
+                  answer: "nature"
+                - id: kd42b
+                  sentence: "Si l'on découvre que des fleurs sont ___, l'intérêt immédiat qu'on y prenait disparaît aussitôt."
+                  answer: "artificielles"
+                - id: kd42c
+                  sentence: "Le chant du rossignol perd son charme quand on découvre que c'est un jeune garçon, payé par l'___, qui l'imite avec un roseau."
+                  answer: "aubergiste"
+        - id: d6
+          label: "§43-50"
+          question: "Qu'est-ce que l'art, et comment le beau peut-il être produit ?"
+          rel: changement-de-question
+          parts:
+            - id: p43
+              label: "§43"
+              summary: "Ce qui distingue la production humaine de la nature, du savoir et du métier"
+              reason: "l'art est une production par liberté, un savoir-faire, et un jeu plutôt qu'un travail"
+              points:
+                - id: kd43a
+                  sentence: "« Seul ce que l'on ne possède pas l'habileté de faire, même si on le connaît de la manière la plus parfaite, relève de l'___. »"
+                  answer: "art"
+                - id: kd43b
+                  sentence: "L'art libéral est un ___, activité agréable en elle-même ; le métier, un travail."
+                  answer: "jeu"
+            - id: p44
+              label: "§44"
+              summary: "Beaux-arts, arts d'agrément, art mécanique"
+              reason: "les beaux-arts visent le plaisir qui accompagne les représentations comme modes de connaissance"
+              rel: consequence
+              points:
+                - id: kd44a
+                  sentence: "Les beaux-arts ont pour fin le plaisir qui accompagne les représentations en tant que modes de ___."
+                  answer: "connaissance"
+                - id: kd44b
+                  sentence: "Il n'y a pas de science du beau, mais seulement une critique ; pas de belle ___, mais seulement des beaux-arts."
+                  answer: "science"
+            - id: p45
+              label: "§45"
+              summary: "Une œuvre belle doit paraître naturelle"
+              reason: "on doit avoir conscience que c'est de l'art, mais sa finalité doit sembler libre de toute règle arbitraire"
+              rel: consequence
+              points:
+                - id: kd45a
+                  sentence: "« La nature était belle lorsqu'en même temps elle avait l'apparence de l'___. »"
+                  answer: "art"
+            - id: p46
+              label: "§46"
+              summary: "Les beaux-arts sont les arts du génie"
+              reason: "aucune règle ne peut dicter le beau, et pourtant tout art suppose des règles : c'est la nature, dans le sujet, qui les donne"
+              rel: probleme-solution
+              points:
+                - id: kd46a
+                  sentence: "Le génie est la disposition innée de l'esprit (ingenium) par laquelle la ___ donne ses règles à l'art."
+                  answer: "nature"
+                - id: kd46b
+                  sentence: "L'originalité du génie doit être ___ : ses produits servent à d'autres de mesure ou de règle d'appréciation."
+                  answer: "exemplaire"
+            - id: p47
+              label: "§47"
+              summary: "Le génie n'est pas le grand savant"
+              reason: "le savant peut montrer chaque pas de sa démarche et l'enseigner ; le génie ne sait pas lui-même comment il produit"
+              rel: consequence
+              points:
+                - id: kd47a
+                  sentence: "___ pouvait montrer chacun des pas qui l'avaient conduit à ses découvertes : ce n'était pas un génie au sens de Kant."
+                  answer: "Newton"
+                - id: kd47b
+                  sentence: "Homère ou ___ ne sauraient montrer comment leurs Idées, riches d'imagination et de pensée, se sont formées dans leur tête."
+                  answer: "Wieland"
+            - id: p48
+              label: "§48"
+              summary: "Le goût juge, le génie produit"
+              reason: "une beauté naturelle est une belle chose ; une beauté artistique, une belle représentation d'une chose"
+              rel: consequence
+              points:
+                - id: kd48a
+                  sentence: "Une beauté de la nature est une belle chose ; une beauté artistique, une belle ___ d'une chose."
+                  answer: "représentation"
+                - id: kd48b
+                  sentence: "Une seule laideur ne peut être représentée conformément à la nature sans anéantir toute satisfaction esthétique : celle qui suscite le ___."
+                  answer: "dégoût"
+            - id: p49
+              label: "§49"
+              summary: "Le génie produit des images qui donnent à penser plus qu'aucun concept"
+              reason: "il trouve pour des Idées une expression sensible qui donne beaucoup à penser, et la rend universellement communicable"
+              rel: consequence
+              points:
+                - id: kd49a
+                  sentence: "Ce qui manque aux œuvres élégantes mais « sans âme », c'est le principe ___ de l'esprit."
+                  answer: "vivifiant"
+                - id: kd49b
+                  sentence: "L'aigle de Jupiter, avec la foudre dans ses serres, est un attribut ___ du puissant roi des cieux."
+                  answer: "esthétique"
+            - id: p50
+              label: "§50"
+              summary: "En cas de conflit, c'est au génie de céder"
+              reason: "pour les beaux-arts, la beauté importe plus que la richesse des Idées : le goût discipline le génie"
+              rel: limite
+              points:
+                - id: kd50a
+                  sentence: "Le goût est la ___ du génie : il lui rogne les ailes, et le rend civilisé et poli."
+                  answer: "discipline"
+        - id: d7
+          label: "§51-54"
+          question: "Comment les beaux-arts se divisent-ils et se comparent-ils ?"
+          rel: consequence
+          parts:
+            - id: p51
+              label: "§51"
+              summary: "Les beaux-arts se divisent selon l'analogie du langage"
+              reason: "le mot, le geste et le ton donnent les arts de la parole, les arts figuratifs et l'art du beau jeu des sensations"
+              points:
+                - id: kd51a
+                  sentence: "Les beaux-arts se divisent selon les trois moyens d'expression de l'homme : le mot, le geste et le ___."
+                  answer: "ton"
+            - id: p52
+              label: "§52"
+              summary: "Les beaux-arts peuvent s'unir en une même œuvre"
+              reason: "mais, quelle que soit l'union, ils ne satisfont durablement que liés à des Idées morales"
+              rel: consequence
+              points:
+                - id: kd52a
+                  sentence: "Quand les beaux-arts ne sont pas liés, de près ou de loin, à des Idées ___, ils ne servent qu'à la distraction."
+                  answer: "morales"
+            - id: p53
+              label: "§53"
+              summary: "Hiérarchie des beaux-arts : l'art du langage en tête, la musique en débat"
+              reason: "la poésie élargit l'esprit ; la musique émeut plus qu'elle ne cultive, et s'impose au voisinage"
+              rel: consequence
+              points:
+                - id: kd53a
+                  sentence: "Parmi tous les beaux-arts, c'est la ___ qui tient le premier rang."
+                  answer: "poésie"
+                - id: kd53b
+                  sentence: "Il manque à la musique une certaine ___ : elle étend son effet au-delà de ce qu'on voudrait, jusque dans le voisinage."
+                  answer: "urbanité"
+            - id: p54
+              label: "§54"
+              summary: "Le jeu et le rire font du bien au corps"
+              reason: "tout plaisir intensifie la vie ; le rire joue avec les pensées, la musique avec les sons"
+              rel: consequence
+              points:
+                - id: kd54a
+                  sentence: "Le rire naît de la soudaine réduction à ___ d'une attente tendue."
+                  answer: "néant"
+                  alt: ["rien"]
+                - id: kd54b
+                  sentence: "Voltaire disait que le ciel nous a donné, pour contrebalancer les peines de la vie, l'espérance et le ___."
+                  answer: "sommeil"
+    - id: dialectique
+      label: "§55-60"
+      title: "Dialectique de la faculté de juger esthétique"
+      parts:
+        - id: p55
+          label: "§55"
+          summary: "La dialectique du goût ne porte que sur ses principes"
+          reason: "un conflit de goûts n'est pas une dialectique : seule l'antinomie des principes a priori du jugement en est une"
+          points:
+            - id: kx55a
+              sentence: "Une dialectique du goût n'est pas le conflit des goûts entre eux, mais une ___ des principes de la critique du goût."
+              answer: "antinomie"
+            - id: kx55b
+              sentence: "Il n'y a de dialectique que pour une faculté de juger dont les jugements prétendent à l'universalité, et cela ___."
+              answer: "a priori"
+        - id: x1
+          label: "§56-57"
+          question: "Le jugement de goût repose-t-il, oui ou non, sur des concepts ?"
+          rel: consequence
+          parts:
+            - id: p56
+              label: "§56"
+              summary: "Deux lieux communs, et une troisième proposition, forment l'antinomie"
+              reason: "on dit qu'on ne dispute pas du goût, et pourtant qu'on peut en discuter : il faut donc qu'il repose, et ne repose pas, sur des concepts"
+              points:
+                - id: kx56a
+                  sentence: "Premier lieu commun : « Chacun a son ___. »"
+                  answer: "goût"
+                - id: kx56b
+                  sentence: "Second lieu commun : « On ne ___ pas du goût », c'est-à-dire qu'on n'en décide pas par des preuves."
+                  answer: "dispute"
+                - id: kx56c
+                  sentence: "Une proposition intermédiaire, que chacun admet : « On peut ___ du goût », c'est-à-dire chercher l'accord sans pouvoir le prouver."
+                  answer: "discuter"
+                - id: kx56d
+                  sentence: "Thèse : le jugement de goût ne se fonde pas sur des ___ ; sinon on pourrait en disputer, en décider par des preuves."
+                  answer: "concepts"
+                - id: kx56e
+                  sentence: "Antithèse : il se fonde sur des concepts ; sinon on ne pourrait même pas en discuter, ni prétendre à l'___ nécessaire d'autrui."
+                  answer: "assentiment"
+            - id: p57
+              label: "§57"
+              summary: "Le mot « concept » n'a pas le même sens dans la thèse et l'antithèse"
+              reason: "le jugement de goût ne repose sur aucun concept déterminé, mais sur le concept indéterminé du suprasensible"
+              rel: probleme-solution
+              points:
+                - id: kx57a
+                  sentence: "Dans la thèse, il faut entendre : le jugement de goût ne se fonde pas sur des concepts ___."
+                  answer: "déterminés"
+                - id: kx57b
+                  sentence: "Dans l'antithèse : il se fonde sur un concept indéterminé, celui du substrat ___ des phénomènes."
+                  answer: "suprasensible"
+                - id: kx57c
+                  sentence: "L'antinomie n'est qu'une ___ naturelle et inévitable, qui ne trompe plus une fois reconnue."
+                  answer: "apparence"
+                  alt: ["illusion"]
+                - id: kx57d
+                  sentence: "Ce concept ne fait rien connaître et ne peut rien ___ : d'où un jugement valable pour tous, dont on ne peut pourtant donner de preuve."
+                  answer: "prouver"
+            - id: p57r1
+              label: "§57, Rem. I"
+              summary: "Idées esthétiques et Idées de la raison se répondent"
+              reason: "l'une est une intuition qu'aucun concept n'épuise, l'autre un concept qu'aucune intuition ne remplit"
+              rel: consequence
+              points:
+                - id: kx57r1a
+                  sentence: "Une Idée esthétique est une représentation ___ de l'imagination : aucun concept ne peut l'exposer."
+                  answer: "inexponible"
+                - id: kx57r1b
+                  sentence: "Une Idée de la raison est un concept ___ de la raison : aucune intuition ne peut lui correspondre."
+                  answer: "indémontrable"
+            - id: p57r2
+              label: "§57, Rem. II"
+              summary: "Chaque faculté supérieure a son antinomie"
+              reason: "toutes contraignent la raison à chercher leur solution au-delà du sensible"
+              rel: consequence
+              points:
+                - id: kx57r2a
+                  sentence: "Il y a trois antinomies, pour la faculté de connaître, pour le sentiment de plaisir et de peine, et pour la faculté de ___."
+                  answer: "désirer"
+                - id: kx57r2b
+                  sentence: "Chacune contraint à ne pas tenir les objets des sens pour des choses en soi, et à chercher leur fondement dans le ___."
+                  answer: "suprasensible"
+        - id: p58
+          label: "§58"
+          summary: "La finalité du beau est idéale, non réelle"
+          reason: "la nature n'a pas produit ses formes pour nous plaire : c'est notre faculté de juger qui les accueille"
+          rel: changement-de-question
+          points:
+            - id: kx58a
+              sentence: "L'___ du goût réduit le beau à l'agréable ; le rationalisme le fonde sur des principes a priori."
+              answer: "empirisme"
+            - id: kx58b
+              sentence: "Le réalisme de la finalité esthétique soutient que la nature a produit la beauté avec l'___ de nous plaire."
+              answer: "intention"
+            - id: kx58c
+              sentence: "Les formations libres de la nature, comme les ___ nés de la solidification d'un fluide, montrent que de belles formes peuvent naître mécaniquement."
+              answer: "cristaux"
+            - id: kx58d
+              sentence: "« C'est nous qui accueillons la nature avec faveur, et non pas elle qui nous fait une faveur » : la finalité n'est pas une ___ réelle des objets."
+              answer: "propriété"
+        - id: x2
+          label: "§59-60"
+          question: "Que révèle, en définitive, le jugement de goût ?"
+          rel: changement-de-question
+          parts:
+            - id: p59
+              label: "§59"
+              summary: "Le beau présente indirectement le bien moral"
+              reason: "le jugement de goût procède avec le beau comme le jugement moral avec le bien : par une analogie de la réflexion"
+              points:
+                - id: kx59a
+                  sentence: "Rendre sensible un concept s'appelle une ___ (subjectio sub adspectum)."
+                  answer: "hypotypose"
+                - id: kx59b
+                  sentence: "L'hypotypose est ___ quand l'intuition correspondant à un concept de l'entendement est donnée a priori ; symbolique quand elle est indirecte."
+                  answer: "schématique"
+                - id: kx59c
+                  sentence: "Un État monarchique régi par des lois populaires est représenté par un corps animé ; gouverné par une volonté absolue, par une simple machine, comme un ___ à bras."
+                  answer: "moulin"
+                - id: kx59d
+                  sentence: "Des mots comme fondement, dépendre, découler, ___ (ce qui se tient dessous) sont des présentations symboliques."
+                  answer: "substance"
+                - id: kx59e
+                  sentence: "« Le beau est le ___ du bien moral. »"
+                  answer: "symbole"
+                - id: kx59f
+                  sentence: "Le beau plaît immédiatement et sans intérêt ; il accorde la liberté de l'imagination avec la légalité de l'entendement ; son principe vaut pour chacun : ce sont les ___ entre le beau et le bien."
+                  answer: "analogies"
+                - id: kx59g
+                  sentence: "Nous disons des édifices ou des arbres « majestueux », des campagnes « riantes », des couleurs « ___ » ou modestes : des noms venus de jugements moraux."
+                  answer: "innocentes"
+                - id: kx59h
+                  sentence: "Le goût rend possible le passage de l'attrait sensible à l'intérêt moral habituel, sans ___ trop violent."
+                  answer: "saut"
+            - id: p60
+              label: "§60"
+              summary: "Le goût s'éveille, il ne s'enseigne pas"
+              reason: "il n'y a pour les beaux-arts ni méthode ni règles, seulement une manière ; sa vraie préparation est la culture morale"
+              rel: consequence
+              points:
+                - id: kx60a
+                  sentence: "Il n'y a pas, pour les beaux-arts, de méthode (methodus), mais seulement une ___ (modus)."
+                  answer: "manière"
+                - id: kx60b
+                  sentence: "La propédeutique des beaux-arts semble consister dans les connaissances préalables qu'on nomme les ___ (humaniora)."
+                  answer: "humanités"
+                - id: kx60c
+                  sentence: "L'humanité signifie le sentiment universel de ___ et la faculté de pouvoir se communiquer intimement et universellement."
+                  answer: "sympathie"
+                - id: kx60d
+                  sentence: "La vraie propédeutique pour fonder le goût est le développement des Idées morales et la culture du sentiment ___."
+                  answer: "moral"
   links:
     - from: p5
       to: p27
@@ -628,4 +1103,32 @@ work:
       points:
         - id: kl-modalite
           sentence: "Ce que le sens commun est au beau (§22), la disposition au sentiment ___ l'est au sublime (§29) : le fondement de sa nécessité."
+          answer: "moral"
+    - from: p9
+      to: p38
+      rel: reprise
+      points:
+        - id: kl-cle
+          sentence: "La déduction du §38 fonde en droit ce que posait la « clé » du §9 : le plaisir repose sur des conditions subjectives ___ à tous les hommes."
+          answer: "communes"
+    - from: p22
+      to: p40
+      rel: reprise
+      points:
+        - id: kl-sens-commun
+          sentence: "Le §40 reprend le sens commun du §22 : le goût est un sensus communis aestheticus, l'entendement sain un sensus communis ___."
+          answer: "logicus"
+    - from: p49
+      to: p57r1
+      rel: reprise
+      points:
+        - id: kl-idees
+          sentence: "La Remarque I du §57 reprend l'Idée esthétique du §49, comme le pendant exact de l'Idée de la ___."
+          answer: "raison"
+    - from: p17
+      to: p59
+      rel: reprise
+      points:
+        - id: kl-moral
+          sentence: "L'idéal de la beauté exprimait déjà le ___ dans la figure humaine (§17), avant que le §59 fasse du beau le symbole du bien moral."
           answer: "moral"
