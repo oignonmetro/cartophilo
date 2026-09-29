@@ -1,17 +1,17 @@
-# Unité de texte (voir content/textes.md) : Platon, Criton, 48b et 49c-d, dans
-# la traduction du jeu de cartes Quizlet d'origine. Anciennement unité
+# Unité de texte (voir content/textes.md) : Platon, Criton, 47d-48a, 48b et
+# 49c-d, dans la traduction du jeu de cartes Quizlet d'origine. Anciennement unité
 # classique : chaque carte garde son identifiant, pour que la révision espacée
 # continue ; les leçons m7-l8 et m7-l9, qui commentaient 48b, sont fondues
 # dans la leçon de ce texte (m7-l2).
 
 id: m7
 title: "Le Criton : l'argument moral"
-subtitle: "Platon, Criton, 48b, 49c-d"
+subtitle: "Platon, Criton, 47d-48a, 48b, 49c-d"
 icon: page
 color: yellow
 group: "Socrate : la morale"
 intro: |-
-  Dans sa prison, Socrate répond à Criton, venu le presser de s'évader. Deux passages : la formule du bien-vivre (48b), et le refus de rendre l'injustice pour l'injustice (49c-d), d'où suit le refus de l'évasion.
+  Dans sa prison, Socrate répond à Criton, venu le presser de s'évader. Trois passages : la vie ne vaut pas d'être vécue avec une âme ruinée (47d-48a), la formule du bien-vivre (48b), et le refus de rendre l'injustice pour l'injustice (49c-d), d'où suit le refus de l'évasion.
 lessons:
 - id: m7-l1
   title: "Le critère unique : juste ou injuste"
@@ -95,6 +95,10 @@ lessons:
 - id: m7-l4
   title: "La partie de nous-mêmes que l'injustice abîme"
   notes: |-
+    **Si la vie ne vaut pas d'être vécue avec un corps ruiné, elle le vaut encore moins avec une âme ruinée, car cette partie de nous que concernent l'injustice et la justice est plus précieuse que le corps.** Socrate reprend l'exemple de l'entraînement du corps : ce qui s'améliore par un régime sain et se détériore par un régime malsain, c'est le corps, et on l'abîme en n'écoutant pas ceux qui s'y connaissent. Criton accorde qu'une vie avec un corps « en loques et en ruines » ne vaut pas d'être vécue.
+
+    Le raisonnement passe alors du corps à l'âme, sans la nommer : « cette partie de nous-mêmes, quelle qu'elle soit », « ce que l'injustice abîme et ce à quoi la justice profite ». L'argument est *a fortiori* : cette partie est « beaucoup plus » précieuse que le corps ; si la ruine du corps rend la vie invivable, celle de l'âme la rend plus invivable encore.
+
     **Micro-fiche : Criton 47e-48a (suite), le raisonnement du passage.**
 
     Socrate transpose au domaine éthique la question déjà posée à propos du
@@ -107,9 +111,57 @@ lessons:
     l'attention qu'on donne au soin du corps, il n'y a pas de raison de ne pas
     la donner à l'âme : l'analogie structurelle qui porte tout le
     raisonnement.
+
+    ! Socrate ne dit pas ce qu'est cette partie de nous-mêmes (« quelle qu'elle soit ») : il la définit par ce qui l'affecte, l'injustice et la justice.
   passage:
-    label: "Introduction"
+    label: "47d-48a"
+    text: "SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain, cette chose nous l'endommageons en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera corrompue ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. SOCRATE Eh bien, la vie vaut-elle d'être vécue avec un corps en loques et en ruines ? CRITON Non, assurément. SOCRATE Mais la vie vaut-elle d'être vécue quand, ce qui en nous est ruiné, c'est ce que l'injustice abîme et ce à quoi la justice profite ? Ou bien allons-nous attribuer au corps plus de valeur qu'à cette partie de nous-mêmes, quelle qu'elle soit, que concernent l'injustice et la justice ? CRITON Non certes. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément."
   points:
+  - id: m7-l4-p7
+    fragment: "1/3"
+    sentence: "« SOCRATE Poursuivons donc. Si ___, cette chose nous l'endommageons en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera corrompue ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. »"
+    answer: "ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain"
+    alt: []
+  - id: m7-l4-p8
+    fragment: "1/3"
+    sentence: "« SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain, cette chose nous l'endommageons ___, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera corrompue ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. »"
+    answer: "en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent"
+    alt: []
+  - id: m7-l4-p9
+    fragment: "1/3"
+    sentence: "« SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain, cette chose nous l'endommageons en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera corrompue ? Or, cette chose ___, n'est-ce pas ? CRITON Oui. »"
+    answer: "c'est le corps"
+    alt: []
+  - id: m7-l4-p10
+    fragment: "2/3"
+    sentence: "« SOCRATE Eh bien, la vie vaut-elle d'être vécue ___ ? CRITON Non, assurément. SOCRATE Mais la vie vaut-elle d'être vécue quand, ce qui en nous est ruiné, c'est ce que l'injustice abîme et ce à quoi la justice profite ? »"
+    answer: "avec un corps en loques et en ruines"
+    alt: []
+  - id: m7-l4-p11
+    fragment: "2/3"
+    sentence: "« SOCRATE Eh bien, la vie vaut-elle d'être vécue avec un corps en loques et en ruines ? CRITON Non, assurément. SOCRATE Mais la vie vaut-elle d'être vécue quand, ce qui en nous est ruiné, c'est ___ ? »"
+    answer: "ce que l'injustice abîme et ce à quoi la justice profite"
+    alt: []
+  - id: m7-l4-p12
+    fragment: "3/3"
+    sentence: "« Ou bien allons-nous ___ qu'à cette partie de nous-mêmes, quelle qu'elle soit, que concernent l'injustice et la justice ? CRITON Non certes. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément. »"
+    answer: "attribuer au corps plus de valeur"
+    alt: []
+  - id: m7-l4-p13
+    fragment: "3/3"
+    sentence: "« Ou bien allons-nous attribuer au corps plus de valeur qu'à ___, que concernent l'injustice et la justice ? CRITON Non certes. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément. »"
+    answer: "cette partie de nous-mêmes, quelle qu'elle soit"
+    alt: []
+  - id: m7-l4-p14
+    fragment: "3/3"
+    sentence: "« Ou bien allons-nous attribuer au corps plus de valeur qu'à cette partie de nous-mêmes, quelle qu'elle soit, ___ ? CRITON Non certes. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément. »"
+    answer: "que concernent l'injustice et la justice"
+    alt: []
+  - id: m7-l4-p15
+    fragment: "3/3"
+    sentence: "« Ou bien allons-nous attribuer au corps plus de valeur qu'à cette partie de nous-mêmes, quelle qu'elle soit, que concernent l'injustice et la justice ? CRITON Non certes. SOCRATE N'est-elle pas au contraire ___ ? CRITON Beaucoup plus assurément. »"
+    answer: "plus précieuse"
+    alt: []
   - id: m7-l4-p1
     sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Le raisonnement du passage. Socrate transpose alors au domaine éthique la question déjà posée à propos du corps : la vie vaut-elle d'être vécue avec un corps ruiné par un mauvais régime ? Criton avait répondu par la négative. Socrate applique la même question à « cette partie de nous-mêmes, quelle qu'elle soit » (ὅτι ποτ' ἐστίν), «que l'injustice ___ et que la justice fait profiter» (47e). Or, l'attention qu'on donne du soin du corps, il n'y a pas de raison de ne pas la donner à l'âme."
     answer: "abîme"

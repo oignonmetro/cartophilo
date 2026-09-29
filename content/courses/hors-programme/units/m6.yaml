@@ -1,12 +1,12 @@
 # Unité de texte (voir content/textes.md) : Platon, Apologie de Socrate, 21a,
-# 23a-b, 23b et 28b-c, dans la traduction du jeu de cartes Quizlet d'origine
+# 22e-23c et 28b-c, dans la traduction du jeu de cartes Quizlet d'origine
 # (21a : trad. Brisson). Anciennement unité classique : chaque carte garde son
-# identifiant, pour que la révision espacée continue. Le jeu d'origine
-# numérotait 23a-b « (2/2) » : son premier fragment n'a jamais été importé.
+# identifiant, pour que la révision espacée continue. 22e-23c : texte complet
+# fourni par l'utilisateur, sans les repères [23a] et [23b].
 
 id: m6
 title: "L'Apologie de Socrate"
-subtitle: "Platon, Apologie de Socrate, 21a, 23a-b, 28b-c"
+subtitle: "Platon, Apologie de Socrate, 21a, 22e-23c, 28b-c"
 icon: page
 color: yellow
 group: "Socrate : la morale"
@@ -102,48 +102,72 @@ lessons:
   notes: |-
     **Un dieu ne peut mentir : si l'oracle déclare que nul n'est plus savant que Socrate, il faut qu'il veuille dire autre chose, à savoir que le vrai savant, c'est le dieu, et que le savoir humain ne vaut presque rien.** Socrate tient sa mission d'**Apollon**, par l'intermédiaire de l'oracle de Delphes (23a-c).
 
-    Le raisonnement est interprétatif. Ceux qui assistent aux discussions croient Socrate savant dans les matières où il éprouve les autres ; mais le dieu, par l'oracle, dirait {sky}« le vrai savant, ce soit le dieu, et [...] le savoir que possède l'homme présente peu de valeur, et peut-être même aucune »{/sky}. Le nom de Socrate ne serait qu'un exemple : est « le plus savant » celui qui, comme lui, « a reconnu que réellement il ne vaut rien pour ce qui est du savoir ».
+    Le passage part du prix de l'enquête : des **inimitiés** nombreuses et graves, des **calomnies**, et une réputation, celle de « savant ». Car ceux qui assistent aux discussions croient Socrate savant dans les matières où il éprouve les autres. Le raisonnement devient alors interprétatif : le dieu, par l'oracle, dirait {sky}« le vrai savant, ce soit le dieu, et [...] le savoir que possède l'homme présente peu de valeur, et peut-être même aucune »{/sky}. Le nom de Socrate ne serait qu'un exemple : est « le plus savant » celui qui, comme lui, « a reconnu que réellement il ne vaut rien pour ce qui est du savoir ».
 
-    La sagesse véritable n'appartient donc qu'**au dieu** ; l'homme, au mieux, peut reconnaître son ignorance.
+    La sagesse véritable n'appartient donc qu'**au dieu** ; l'homme, au mieux, peut reconnaître son ignorance. Le nom de « savant » que lui valent ses examens est ainsi un malentendu : c'est lui qui nourrit l'accusation.
 
     ! Socrate ne se dit pas savant d'un savoir supérieur : sa seule supériorité est de savoir qu'il ne sait rien qui vaille.
   passage:
-    label: "23a-b"
-    text: "Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir. »"
+    label: "22e-23b"
+    text: "C'est précisément cette enquête, Athéniens, qui m'a valu des inimitiés si nombreuses, qui présentaient une virulence et une gravité d'une telle importance qu'elles ont suscité maintes calomnies et m'ont valu de me voir attribuer ce nom, celui de « savant ». Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir. »"
   points:
+  - id: m6-l5-p10
+    fragment: "1/2"
+    sentence: "« C'est précisément cette enquête, Athéniens, qui m'a valu ___, qui présentaient une virulence et une gravité d'une telle importance qu'elles ont suscité maintes calomnies et m'ont valu de me voir attribuer ce nom, celui de « savant ». »"
+    answer: "des inimitiés si nombreuses"
+    alt: []
+  - id: m6-l5-p11
+    fragment: "1/2"
+    sentence: "« C'est précisément cette enquête, Athéniens, qui m'a valu des inimitiés si nombreuses, qui présentaient une virulence et une gravité d'une telle importance qu'elles ont suscité ___ et m'ont valu de me voir attribuer ce nom, celui de « savant ». »"
+    answer: "maintes calomnies"
+    alt: []
+  - id: m6-l5-p12
+    fragment: "1/2"
+    sentence: "« C'est précisément cette enquête, Athéniens, qui m'a valu des inimitiés si nombreuses, qui présentaient une virulence et une gravité d'une telle importance qu'elles ont suscité maintes calomnies et m'ont valu de me voir attribuer ce nom, ___. »"
+    answer: "celui de « savant »"
+    alt: []
   - id: m6-l5-p2
+    fragment: "2/2"
     sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ___ et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir. » »"
     answer: "ce soit le dieu"
     alt: []
   - id: m6-l5-p4
+    fragment: "2/2"
     sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : ___ présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir. » »"
     answer: "le savoir que possède l'homme"
     alt: []
   - id: m6-l5-p3
+    fragment: "2/2"
     sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme ___. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir. » »"
     answer: "présente peu de valeur, et peut-être même aucune"
     alt: []
   - id: m6-l6-p1
+    fragment: "2/2"
     sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : ___. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir. » »"
     answer: "le savoir que possède l'homme présente peu de valeur, et peut-être même aucune"
     alt: []
   - id: m6-l5-p7
+    fragment: "2/2"
     sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « Parmi vous, humains, ___, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir. » »"
     answer: "celui-là est le plus savant qui"
     alt: []
   - id: m6-l5-p6
+    fragment: "2/2"
     sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « Parmi vous, humains, celui-là est le plus savant qui, ___, a reconnu que réellement il ne vaut rien pour ce qui est du savoir. » »"
     answer: "comme l'a fait Socrate"
     alt: []
   - id: m6-l5-p8
+    fragment: "2/2"
     sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « ___, a reconnu que réellement il ne vaut rien pour ce qui est du savoir. » »"
     answer: "Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate"
     alt: []
   - id: m6-l5-p5
+    fragment: "2/2"
     sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que ___. » »"
     answer: "réellement il ne vaut rien pour ce qui est du savoir"
     alt: []
   - id: m6-l5-p9
+    fragment: "2/2"
     sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, ___. » »"
     answer: "a reconnu que réellement il ne vaut rien pour ce qui est du savoir"
     alt: []
@@ -160,24 +184,49 @@ lessons:
   notes: |-
     **Socrate vérifie l'interprétation de l'oracle par une enquête : il examine ceux qui passent pour savants et, chaque fois qu'ils ne le sont pas, il « prête main-forte au dieu ».** Il va de-ci de-là, parmi les Athéniens et les étrangers, cherchant quelqu'un de réellement **savant**. Chaque échec confirme, cas après cas, la thèse de l'oracle.
 
+    Cette enquête a un coût : l'**absence de loisir** ne lui laisse le temps de s'occuper sérieusement ni des affaires de la cité, ni des siennes. Il vit dans une **extrême pauvreté**, parce qu'il est « au service du dieu ».
+
     De cette enquête naît la posture que la littérature secondaire appelle **l'ignorance socratique** : reconnaître son inadéquation en sagesse, tout en jugeant que nul n'est plus sage que celui qui en a conscience. C'est la seule forme de savoir que Socrate revendique.
 
     ! L'enquête n'est pas une provocation contre les savants : Socrate la présente comme un service rendu au dieu.
   passage:
-    label: "23b"
-    text: "Or, en allant de-ci de-là, je poursuis ma recherche et, pour comprendre ce qu'a voulu dire le dieu, je cherche à découvrir si, parmi les gens d'Athènes et parmi les étrangers, il ne s'en trouve pas un qui soit savant. Et, chaque fois qu'il me paraît que ce n'est pas le cas, je prête main-forte au dieu en montrant que cet homme n'est pas savant."
+    label: "23b-c"
+    text: "Or, en allant de-ci de-là, je poursuis ma recherche et, pour comprendre ce qu'a voulu dire le dieu, je cherche à découvrir si, parmi les gens d'Athènes et parmi les étrangers, il ne s'en trouve pas un qui soit savant. Et, chaque fois qu'il me paraît que ce n'est pas le cas, je prête main-forte au dieu en montrant que cet homme n'est pas savant. Et l'absence de loisir qui en résulte explique qu'il ne me reste pas de temps pour m'occuper sérieusement des affaires de la cité et des miennes ; aussi est-ce dans une extrême pauvreté que je vis, parce que je suis au service du dieu."
   points:
   - id: m6-l6-p2
+    fragment: "1/2"
     sentence: "« Or, en allant de-ci de-là, je poursuis ma recherche et, pour comprendre ce qu'a voulu dire le dieu, je cherche à découvrir si, parmi les gens d'Athènes et parmi les étrangers, il ne s'en trouve pas un qui soit ___. Et, chaque fois qu'il me paraît que ce n'est pas le cas, je prête main-forte au dieu en montrant que cet homme n'est pas savant. »"
     answer: "savant"
     alt: []
   - id: m6-l6-p3
+    fragment: "1/2"
     sentence: "« Or, en allant de-ci de-là, je poursuis ma recherche et, pour comprendre ce qu'a voulu dire le dieu, je cherche à découvrir si, parmi les gens d'Athènes et parmi les étrangers, il ne s'en trouve pas un qui soit savant. Et, chaque fois qu'il me paraît que ce n'est pas le cas, je prête main-forte au dieu ___. »"
     answer: "en montrant que cet homme n'est pas savant"
     alt: []
   - id: m6-l6-p4
+    fragment: "1/2"
     sentence: "« Or, en allant de-ci de-là, je poursuis ma recherche et, pour comprendre ce qu'a voulu dire le dieu, je cherche à découvrir si, parmi les gens d'Athènes et parmi les étrangers, il ne s'en trouve pas un qui soit savant. Et, chaque fois qu'il me paraît que ce n'est pas le cas, ___. »"
     answer: "je prête main-forte au dieu en montrant que cet homme n'est pas savant"
+    alt: []
+  - id: m6-l6-p5
+    fragment: "2/2"
+    sentence: "« Et ___ qui en résulte explique qu'il ne me reste pas de temps pour m'occuper sérieusement des affaires de la cité et des miennes ; aussi est-ce dans une extrême pauvreté que je vis, parce que je suis au service du dieu. »"
+    answer: "l'absence de loisir"
+    alt: []
+  - id: m6-l6-p6
+    fragment: "2/2"
+    sentence: "« Et l'absence de loisir qui en résulte explique qu'il ne me reste pas de temps pour ___ ; aussi est-ce dans une extrême pauvreté que je vis, parce que je suis au service du dieu. »"
+    answer: "m'occuper sérieusement des affaires de la cité et des miennes"
+    alt: []
+  - id: m6-l6-p7
+    fragment: "2/2"
+    sentence: "« Et l'absence de loisir qui en résulte explique qu'il ne me reste pas de temps pour m'occuper sérieusement des affaires de la cité et des miennes ; aussi est-ce ___ que je vis, parce que je suis au service du dieu. »"
+    answer: "dans une extrême pauvreté"
+    alt: []
+  - id: m6-l6-p8
+    fragment: "2/2"
+    sentence: "« Et l'absence de loisir qui en résulte explique qu'il ne me reste pas de temps pour m'occuper sérieusement des affaires de la cité et des miennes ; aussi est-ce dans une extrême pauvreté que je vis, ___. »"
+    answer: "parce que je suis au service du dieu"
     alt: []
   - id: m6-l7-p6
     sentence: "La littérature secondaire appelle ___ la posture de Socrate consistant à reconnaître son inadéquation en sagesse tout en jugeant que nul n'est plus sage que celui qui en a conscience"
