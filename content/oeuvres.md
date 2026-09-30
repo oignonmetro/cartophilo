@@ -176,7 +176,9 @@ précisions propres à l'unité-œuvre :
 rappel par moment, par bloc ou par groupe de chapitres qui vont ensemble
 (les quatre moments de l'Analytique du beau ; les chapitres 1-3, 4-6, 7-10
 et 11-12 du livre II du *Contrat social*). Il s'affiche à la découverte de la
-leçon, juste avant les thèses de sa première partie (`at`). Le groupe ne suit
+leçon, juste avant les thèses de sa première partie (`at`), et se relit à
+tout moment par « Lire le plan », sur la carte de l'unité dans la
+bibliothèque (tous les rappels, livre par livre). Le groupe ne suit
 pas forcément l'arbre : il peut réunir deux blocs voisins, d'où son propre
 repère (`label`).
 

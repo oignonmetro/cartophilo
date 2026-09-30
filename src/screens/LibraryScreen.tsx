@@ -15,6 +15,7 @@ import { ProgressRing } from '@/components/ProgressRing'
 import { CoursePicker } from '@/components/CoursePicker'
 import { TextSheet } from '@/components/TextSheet'
 import { WorkSheet } from '@/components/work/WorkSheet'
+import { PlanSheet } from '@/components/work/PlanSheet'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { BoltIcon, ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
 
@@ -260,17 +261,21 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   const [openText, setOpenText] = useState<Unit | null>(null)
   // Carte ouverte d'une unité-œuvre (voir `WorkSheet`).
   const [openWork, setOpenWork] = useState<Unit | null>(null)
+  // Rappels ouverts d'une unité-œuvre (voir `PlanSheet`).
+  const [openPlan, setOpenPlan] = useState<Unit | null>(null)
 
   /**
-   * Ce qu'une unité donne à lire hors exercice : son texte intégral, ou la
-   * carte de l'œuvre (rien, tant que les schémas sont archivés, voir
-   * `WORK_DIAGRAMS`).
+   * Ce qu'une unité donne à lire hors exercice : son texte intégral, ou pour
+   * une unité-œuvre la carte de l'œuvre (tant que les schémas sont archivés,
+   * voir `WORK_DIAGRAMS`, ses rappels à la place, s'il en a).
    */
   const readerOf = (unit: Unit) =>
     isWorkUnit(unit)
       ? WORK_DIAGRAMS
         ? { label: 'Voir la carte', icon: 'map', onRead: () => setOpenWork(unit) }
-        : undefined
+        : unit.work.recaps.length > 0
+          ? { label: 'Lire le plan', icon: 'page', onRead: () => setOpenPlan(unit) }
+          : undefined
       : isTextUnit(unit)
         ? { label: 'Lire le texte', icon: 'page', onRead: () => setOpenText(unit) }
         : undefined
@@ -443,6 +448,8 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
       <AnimatePresence>
         {openWork && <WorkSheet unit={openWork} cards={cards} onClose={() => setOpenWork(null)} />}
       </AnimatePresence>
+
+      <AnimatePresence>{openPlan && <PlanSheet unit={openPlan} onClose={() => setOpenPlan(null)} />}</AnimatePresence>
     </div>
   )
 }
