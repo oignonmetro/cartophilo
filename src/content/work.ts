@@ -75,6 +75,8 @@ function numbersOf(text: string): number[] {
 export function matchesLocation(label: string, value: string): boolean {
   const stephanus = stephanusStart(label)
   if (stephanus) return matchesStephanus(label, stephanus, value)
+  const reference = workReferenceOf(label)
+  if (reference) return matchesWorkReference(reference, value)
   const expected = numbersOf(label)
   const given = numbersOf(value)
   // Un paragraphe (« §16 », « §10-12 », œuvres découpées en paragraphes
@@ -122,6 +124,101 @@ function matchesStephanus(label: string, start: { page: number; letter: string }
     .split(/[^a-z]+/)
     .filter((word) => word.length > 1)
   return words.every((word) => known.some((each) => each.startsWith(word)))
+}
+
+/** Livres de la *Métaphysique*, désignés par une lettre grecque (Α, α, Β, Γ…). */
+const GREEK_BOOKS: Record<string, number> = {
+  Α: 1, α: 2, Β: 3, Γ: 4, Δ: 5, Ε: 6, Ζ: 7, Η: 8, Θ: 9, Ι: 10, Κ: 11, Λ: 12, Μ: 13, Ν: 14,
+}
+const GREEK_NAMES: Record<string, number> = {
+  alpha: 1, beta: 3, gamma: 4, delta: 5, epsilon: 6, zeta: 7, eta: 8, theta: 9, iota: 10, kappa: 11, lambda: 12, mu: 13, nu: 14,
+}
+/** Lettres latines qu'on tape pour la majuscule grecque qui leur ressemble. */
+const GREEK_LOOKALIKES: Record<string, number> = { a: 1, b: 3, e: 6, z: 7, h: 8, k: 11, n: 14 }
+const TITLE_STOPWORDS = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'l', 'a', 'et', 'd', 'sur'])
+
+interface WorkReference {
+  /** Mots du titre qui comptent (« ethique », « nicomaque »), sans accents. */
+  words: string[]
+  /** Sigles admis : « en » pour *Éthique à Nicomaque*, « gm » pour *Grande Morale*. */
+  initials: string[]
+  /** Livre et chapitre(s) : « Θ, 6 » → [9, 6] ; « I, 2-3 » → [1, 2, 3]. */
+  numbers: number[]
+  /** La référence finit par un intervalle (« 2-3 ») : son début seul suffit. */
+  range: boolean
+  /** Le livre est une lettre grecque : une lettre latine semblable est admise. */
+  greek: boolean
+}
+
+/**
+ * Une référence d'œuvre (« Métaphysique, Θ, 6 », « Poétique, 4 »,
+ * « Éthique à Nicomaque, I, 2-3 ») : un titre, puis livre et chapitre.
+ * `null` pour un emplacement d'une autre forme (« II, 4 », « §16 »).
+ */
+export function workReferenceOf(label: string): WorkReference | null {
+  const comma = label.indexOf(',')
+  if (comma <= 0 || label.trim().startsWith('§')) return null
+  const title = plainText(label.slice(0, comma))
+  const allWords = title.split(/[^a-z]+/).filter(Boolean)
+  if (!allWords.some((word) => word.length >= 3 && fromRoman(word) === null)) return null
+  const words = allWords.filter((word) => !TITLE_STOPWORDS.has(word))
+  const initials = [...new Set([words, allWords.filter((word) => word.length > 1)].map((list) => list.map((w) => w[0]).join('')))]
+  const numbers: number[] = []
+  let greek = false
+  for (const token of label.slice(comma + 1).split(/[\s,.;-]+/).filter(Boolean)) {
+    if (/^\d+$/.test(token)) numbers.push(Number(token))
+    else if (GREEK_BOOKS[token] !== undefined) {
+      numbers.push(GREEK_BOOKS[token]!)
+      greek = true
+    } else {
+      const roman = fromRoman(token.toLowerCase())
+      if (roman === null) return null
+      numbers.push(roman)
+    }
+  }
+  if (numbers.length === 0) return null
+  return { words, initials, numbers, range: /\d\s*-\s*\d+\s*$/.test(label), greek }
+}
+
+/**
+ * Une référence d'œuvre se saisit avec son titre, en entier, abrégé
+ * (« Métaph. », « Pol. ») ou en sigle (« EN », « GM »), puis livre et
+ * chapitre sous toutes leurs formes : chiffres romains ou arabes, lettre ou
+ * nom grec (« Θ », « theta », « 9 », « IX »). Le titre est exigé : sans lui,
+ * « I, 1 » désignerait aussi bien les *Topiques* que l'*Éthique*. Un
+ * intervalle de chapitres (« I, 2-3 ») se désigne aussi par son début.
+ */
+function matchesWorkReference(reference: WorkReference, value: string): boolean {
+  const tokens = value
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .split(/[\s,.;:()'’-]+/)
+    .filter(Boolean)
+  const numbers: number[][] = []
+  const titleWords: string[] = []
+  for (const token of tokens) {
+    const lower = token.toLowerCase()
+    const candidates = new Set<number>()
+    if (/^\d+$/.test(lower)) candidates.add(Number(lower))
+    const roman = fromRoman(lower)
+    if (roman !== null) candidates.add(roman)
+    if (GREEK_BOOKS[token] !== undefined) candidates.add(GREEK_BOOKS[token]!)
+    if (GREEK_BOOKS[token.toUpperCase()] !== undefined) candidates.add(GREEK_BOOKS[token.toUpperCase()]!)
+    if (GREEK_NAMES[lower] !== undefined) candidates.add(GREEK_NAMES[lower]!)
+    if (reference.greek && GREEK_LOOKALIKES[lower] !== undefined) candidates.add(GREEK_LOOKALIKES[lower]!)
+    if (candidates.size > 0 && (numbers.length > 0 || titleWords.length > 0)) numbers.push([...candidates])
+    else if (/^[a-z]+$/.test(lower) && !TITLE_STOPWORDS.has(lower)) titleWords.push(lower)
+    else if (!TITLE_STOPWORDS.has(lower)) return false
+  }
+  if (titleWords.length === 0) return false
+  const titled = titleWords.every(
+    (word) => reference.initials.includes(word) || reference.words.some((each) => each.startsWith(word)),
+  )
+  if (!titled) return false
+  const wanted = [reference.numbers, ...(reference.range ? [reference.numbers.slice(0, -1)] : [])]
+  return wanted.some(
+    (expected) => expected.length === numbers.length && expected.every((n, i) => numbers[i]!.includes(n)),
+  )
 }
 
 /** Toutes les parties d'un sous-arbre, la racine comprise, dans l'ordre du plan. */

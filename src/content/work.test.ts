@@ -13,6 +13,7 @@ import {
   thesisFills,
   threadOf,
   workContextOf,
+  workReferenceOf,
 } from './work'
 import { buildLessonSession, buildWorkSession, isNonLocating, itemIdsOf, workLocateFor, workMatchesFor, workMatchItems, workOrder, workOrderItems, type WorkLocateExercise, type WorkPlanExercise } from '@/engine/exercises'
 import { createRng } from '@/engine/rng'
@@ -272,6 +273,26 @@ describe('saisir l’emplacement au clavier', () => {
     for (const value of ['§17', '6', '1, 16', '']) expect(matchesLocation('§16', value), value).toBe(false)
     expect(matchesLocation('§10-12', '10-12')).toBe(true)
     expect(matchesLocation('§10-12', '12')).toBe(false)
+  })
+
+  it('reconnaît une référence d’œuvre à son titre, entier, abrégé ou en sigle, puis livre et chapitre', () => {
+    const accepted: [string, string[]][] = [
+      ['Métaphysique, Θ, 6', ['Métaphysique, Θ, 6', 'Métaphysique theta 6', 'Métaph. IX, 6', 'metaphysique 9 6']],
+      ['Métaphysique, Α, 1', ['Métaphysique A 1', 'Métaph. alpha 1', 'Metaphysique I, 1']],
+      ['Éthique à Nicomaque, I, 2-3', ['EN I 2-3', 'Éthique à Nicomaque, I, 2', 'Ethique I 2 3', 'EN 1, 2']],
+      ['Grande Morale, II, 15', ['GM II 15', 'Grande Morale 2, 15']],
+      ['De l’âme, II, 2', ['De l’âme II 2', 'DA II, 2', 'âme 2 2']],
+      ['Poétique, 4', ['Poétique 4', 'Poét. 4']],
+    ]
+    for (const [label, values] of accepted) for (const value of values) expect(matchesLocation(label, value), `${label} ← ${value}`).toBe(true)
+    const refused: [string, string[]][] = [
+      ['Métaphysique, Θ, 6', ['Θ, 6', '9, 6', 'Métaphysique, Λ, 6', 'Physique IX 6', 'Métaphysique 6']],
+      ['Éthique à Nicomaque, I, 2-3', ['I, 2', 'EN I 3', 'GM I 2', 'Politique I 2']],
+      ['Poétique, 4', ['Poétique 6', 'Politique 4']],
+    ]
+    for (const [label, values] of refused) for (const value of values) expect(matchesLocation(label, value), `${label} ← ${value}`).toBe(false)
+    expect(workReferenceOf('II, 4')).toBeNull()
+    expect(workReferenceOf('§57, Rem. I')).toBeNull()
   })
 
   it('reconnaît un texte à sa pagination Stephanus, l’œuvre en plus si l’on veut', () => {

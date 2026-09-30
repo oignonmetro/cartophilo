@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import type { WorkLocateExercise } from '@/engine/exercises'
-import { matchesLocation, stephanusStart } from '@/content/work'
+import { matchesLocation, stephanusStart, workReferenceOf } from '@/content/work'
 import { Button } from '@/components/Button'
 import { Rich } from '@/components/session/RuleNote'
 import { OptionList } from '@/components/session/OptionList'
@@ -97,8 +97,10 @@ export function WorkLocate({
             }}
             disabled={checked}
             // Un exemple de la forme attendue, qui ne soit la réponse d'aucune carte.
-            placeholder={stephanusStart(answer.label) ? 'ex. 17a' : 'II, 4'}
-            autoCapitalize="characters"
+            placeholder={
+              stephanusStart(answer.label) ? 'ex. 17a' : workReferenceOf(answer.label) ? 'ex. Rhétorique, I, 2' : 'II, 4'
+            }
+            autoCapitalize={workReferenceOf(answer.label) ? 'words' : 'characters'}
             autoCorrect="off"
             spellCheck={false}
             aria-label="Emplacement"
