@@ -4,8 +4,11 @@ Une unité-œuvre apprend à **se repérer dans une œuvre** : savoir où se tro
 chaque idée, associer une thèse à un endroit, et suivre le fil rouge (pourquoi
 tel chapitre suit tel autre, lesquels sont de même plan, lesquels se déduisent
 l'un de l'autre). Elle complète l'unité de texte (`content/textes.md`), qui
-fait savoir citer un passage, et vaut pour toute piste : une œuvre du
-Hors-programme, ou la piste Repérage de Marx et de Plotin.
+fait savoir citer un passage. Elle va dans une piste de repérage : Repérages
+dans le Hors-programme (à la fin, séparée des pistes par domaine, qui ne
+reçoivent pas d'unité-œuvre), ou Repérage chez Marx et Plotin. Même couleur
+que la piste (`color: sky`) ; `group` reste utile pour réunir plusieurs
+unités-œuvres d'un même auteur.
 
 Premier exemple : `hors-programme/units/rousseau-contrat-social.yaml`
 (*Du contrat social*, livre II).

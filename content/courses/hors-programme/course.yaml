@@ -17,7 +17,7 @@ tagline: "Sujet libre : tout peut tomber."
 status: available
 default: true
 layout: library
-version: 27
+version: 28
 
 tracks:
   - id: morale
@@ -58,7 +58,6 @@ tracks:
       - ea3
       - kant-beaux-arts
       - ea4
-      - kant-analytique
 
   - id: politique
     title: La politique
@@ -69,7 +68,6 @@ tracks:
       - p1
       - aristote-cite-homme-logos
       - rousseau-le-droit-du-plus-fort
-      - rousseau-contrat-social
 
   - id: sciences-humaines
     title: Les sciences humaines
@@ -84,3 +82,17 @@ tracks:
     color: blue
     icon: magnify
     units: [pascal-les-deux-infinis-2]
+
+  - id: reperages
+    title: Repérages
+    subtitle: Se situer dans les œuvres
+    kind: grammar
+    color: sky
+    icon: compass
+    # Les unités-repérage (voir content/oeuvres.md), toutes œuvres confondues,
+    # à part des pistes par domaine : on y apprend le plan d'une œuvre, pas une
+    # notion. Séparées comme la morale l'est du reste.
+    dividerBefore: true
+    units:
+      - kant-analytique
+      - rousseau-contrat-social
