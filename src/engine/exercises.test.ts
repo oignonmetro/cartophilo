@@ -7,6 +7,7 @@ import {
   choiceAnswer,
   fillGap,
   isAnswerCorrect,
+  isExplanationOnly,
   isPresentation,
   itemIdsOf,
   lessonProgress,
@@ -1173,6 +1174,13 @@ describe('leçon de texte', () => {
     expect(session[3]).toMatchObject({ notes: 'Second fragment.', passage: { label: '§1 · 2/2', text: 'Il était beau.' } })
     // Rejouée, la leçon ne relit ni le texte ni ses explications.
     expect(buildLessonSession(cut, 1, 1).some((exercise) => exercise.kind === 'rule')).toBe(false)
+    // En mode « citations seules », restent le paragraphe et les cartes-citation.
+    expect(session.filter((exercise) => !isExplanationOnly(exercise)).map((exercise) => exercise.id)).toEqual([
+      'rule:n-p1',
+      'passage:c-1',
+      'passage:c-3',
+      'passage:c-4',
+    ])
   })
 
   it('garde le même ordre quelle que soit la graine, et ne relit plus le texte une fois la leçon sue', () => {

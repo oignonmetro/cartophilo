@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { Exercise } from '@/engine/exercises'
-import { isPresentation, itemIdsOf } from '@/engine/exercises'
+import { isExplanationOnly, isPresentation, itemIdsOf } from '@/engine/exercises'
+import { isCitation } from '@/content/course'
 import { ratingFromAnswer, type Rating } from '@/engine/srs'
 import { useCourse } from '@/content/CourseProvider'
 import { useProgress } from '@/store/progressStore'
@@ -104,6 +105,35 @@ const BATCH_SIZE = 10
  * l'interface, sur le modèle de `ComboBadge` (même minuteur `setTimeout` +
  * sortie en fondu).
  */
+/**
+ * Interrupteur du mode « citations seules », dans l'en-tête d'une leçon de
+ * texte : là où l'on décide, en cours de route, de ne plus repasser que par
+ * le texte lui-même. Réglage global, retenu pour les leçons suivantes.
+ */
+function CitationsSwitch({ on, onToggle }: { on: boolean; onToggle: () => void }) {
+  return (
+    <button
+      type="button"
+      role="switch"
+      aria-checked={on}
+      onClick={onToggle}
+      title={
+        on
+          ? 'Citations seules : les cartes-explication et les rappels sont sautés'
+          : 'Ne jouer que les cartes-citation'
+      }
+      className={`flex shrink-0 items-center gap-1.5 rounded-full border-2 px-2 py-1 text-xs font-extrabold transition-colors ${
+        on ? 'border-violet bg-violet text-white' : 'border-line text-ink-faint hover:text-ink-soft'
+      }`}
+    >
+      <span aria-hidden className="font-black">
+        «»
+      </span>
+      Citations
+    </button>
+  )
+}
+
 function SessionKindBadge({ kind }: { kind: UnitNodeKind }) {
   const { label, Icon, tone, bubble } = SESSION_KIND[kind]
   const [hint, setHint] = useState(true)
@@ -183,8 +213,36 @@ function SessionRunner({
   const [batchStart, setBatchStart] = useState(0)
   const [paused, setPaused] = useState(false)
 
+  // Mode « citations seules » (voir `citationsOnly` dans le store) : proposé
+  // dans une leçon qui cite un texte, et là seulement ; les révisions ne
+  // changent pas. Il agit en direct : allumé, il saute ce qui reste de
+  // cartes-explication et de rappels de fragment (voir `isExplanationOnly`),
+  // et les rend si on l'éteint. La file reste entière, seul le parcours
+  // l'enjambe.
+  const citationsOnly = useProgress((state) => state.citationsOnly)
+  const setCitationsOnly = useProgress((state) => state.setCitationsOnly)
+  const hasCitations = useMemo(
+    () => kind === 'lesson' && exercises.some((exercise) => exercise.kind === 'passage' && isCitation(exercise.point)),
+    [exercises, kind],
+  )
+  const skipping = hasCitations && citationsOnly
+
   const current = queue[position]
-  const graded = useMemo(() => exercises.filter((exercise) => !isPresentation(exercise)).length, [exercises])
+  const skipped = current !== undefined && skipping && isExplanationOnly(current)
+  useEffect(() => {
+    if (skipped) setPosition((index) => index + 1)
+  }, [skipped, position])
+
+  // Les exercices sautés ne comptent pas, sauf ceux déjà faits avant
+  // d'allumer le mode.
+  const graded = useMemo(
+    () =>
+      exercises.filter(
+        (exercise) =>
+          !isPresentation(exercise) && (!skipping || !isExplanationOnly(exercise) || attempt.seen.has(exercise.id)),
+      ).length,
+    [exercises, skipping, attempt.seen],
+  )
   const progress = graded === 0 ? 1 : Math.min(1, attempt.seen.size / graded)
 
   // Coupe la session tous les `BATCH_SIZE` exercices faits, réussis ou non.
@@ -288,7 +346,7 @@ function SessionRunner({
     onFinish(outcome, peakTier())
   }, [attempt.correct, attempt.total, current, haptics, onFinish, peakTier])
 
-  if (!current) return null
+  if (!current || skipped) return null
 
   if (paused) {
     return (
@@ -353,6 +411,7 @@ function SessionRunner({
           {attempt.seen.size}/{graded}
         </span>
         <ComboBadge combo={combo} />
+        {hasCitations && <CitationsSwitch on={citationsOnly} onToggle={() => setCitationsOnly(!citationsOnly)} />}
       </header>
 
       {/* `min-h-0` : sans lui, un enfant flex-1 en colonne se voit imposer une
@@ -387,7 +446,9 @@ function SessionRunner({
             {current.kind === 'choice' && (
               <ChoiceQuestion exercise={current} onAnswer={(correct) => answer(current, correct)} />
             )}
-            {current.kind === 'rule' && <RuleNote exercise={current} onNext={() => advance(false)} />}
+            {current.kind === 'rule' && (
+              <RuleNote exercise={current} hideNotes={skipping} onNext={() => advance(false)} />
+            )}
             {current.kind === 'work-map' && <WorkMapNote exercise={current} onNext={() => advance(false)} />}
             {current.kind === 'work-locate' && (
               <WorkLocate exercise={current} onAnswer={(correct) => answer(current, correct)} />

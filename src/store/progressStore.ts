@@ -88,11 +88,12 @@ export interface ProgressSnapshot {
    */
   targetedCorrection: boolean
   /**
-   * Dans une leçon d'unité de texte, ne jouer que les cartes-citation (voir
-   * `citationsOnlyLesson`) : le paragraphe se lit encore à la découverte,
-   * mais sans son explication, et les cartes-explication sont sautées. Pour
-   * apprendre le texte par cœur sans repasser par son commentaire. Les
-   * révisions ne changent pas. Éteint par défaut.
+   * Dans une leçon d'unité de texte, ne jouer que les cartes-citation : le
+   * paragraphe se lit encore à la découverte, mais sans son explication, et
+   * les cartes-explication sont sautées (voir `isExplanationOnly`). Pour
+   * apprendre le texte par cœur sans repasser par son commentaire. Se bascule
+   * dans l'en-tête de la leçon (voir `SessionScreen`) et vaut ensuite pour
+   * les suivantes. Les révisions ne changent pas. Éteint par défaut.
    */
   citationsOnly: boolean
   /**

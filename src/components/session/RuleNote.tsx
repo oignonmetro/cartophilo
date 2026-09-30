@@ -177,7 +177,21 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
   )
 }
 
-export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext: () => void }) {
+export function RuleNote({
+  exercise,
+  hideNotes = false,
+  onNext,
+}: {
+  exercise: RuleExercise
+  /**
+   * Mode « citations seules » (voir `SessionScreen`) : le paragraphe cité
+   * s'affiche sans son explication. Sans effet sur un rappel sans texte cité
+   * (introduction, prolongement), qui n'a que son explication à montrer.
+   */
+  hideNotes?: boolean
+  onNext: () => void
+}) {
+  const notes = hideNotes && exercise.passage?.text ? '' : exercise.notes
   const tone = TONES[exercise.topic]
   const isDesktop = useIsDesktop()
 
@@ -245,10 +259,10 @@ export function RuleNote({ exercise, onNext }: { exercise: RuleExercise; onNext:
           {/* Sous le paragraphe cité, son explication : le titre les
               distingue, pour qu'on ne lise pas le commentaire comme la
               suite du texte. */}
-          {exercise.passage?.text && exercise.notes.trim() && (
+          {exercise.passage?.text && notes.trim() && (
             <p className={`text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}>Explication</p>
           )}
-          {exercise.notes.trim() && <NoteBlocks notes={exercise.notes} tone={tone} />}
+          {notes.trim() && <NoteBlocks notes={notes} tone={tone} />}
         </motion.div>
       </div>
 

@@ -275,19 +275,6 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
         ? { label: 'Lire le texte', icon: 'page', onRead: () => setOpenText(unit) }
         : undefined
 
-  /**
-   * Le mode « citations seulement » (voir `citationsOnly` dans le store),
-   * basculé depuis la carte d'une unité de texte : c'est là qu'on se décide,
-   * juste avant de lancer une leçon. Réglage global, le même que dans le
-   * profil.
-   */
-  const citationsOnly = useProgress((state) => state.citationsOnly)
-  const setCitationsOnly = useProgress((state) => state.setCitationsOnly)
-  const citationsOf = (unit: Unit) =>
-    isTextUnit(unit) && !isWorkUnit(unit)
-      ? { on: citationsOnly, onToggle: () => setCitationsOnly(!citationsOnly) }
-      : undefined
-
   // Ouvrir une unité mène droit à son étape courante — pas à un écran de
   // parcours à traverser pour la retrouver (voir `currentDestination`).
   const openUnit = (unit: Unit) => {
@@ -417,7 +404,6 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                       done={doneNodes(unit, lessons, steps)}
                       onOpen={() => openUnit(unit)}
                       reader={readerOf(unit)}
-                      citations={citationsOf(unit)}
                     />
                   ))}
                 </GroupSection>
@@ -430,7 +416,6 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                   done={doneNodes(entry.unit, lessons, steps)}
                   onOpen={() => openUnit(entry.unit)}
                   reader={readerOf(entry.unit)}
-                  citations={citationsOf(entry.unit)}
                 />
               ),
             )}
@@ -615,7 +600,6 @@ function UnitCard({
   done,
   onOpen,
   reader,
-  citations,
 }: {
   unit: Unit
   tone: (typeof TRACK_TONES)[string]
@@ -629,8 +613,6 @@ function UnitCard({
    * unité-œuvre (voir `WorkSheet`).
    */
   reader?: { label: string; icon: string; onRead: () => void }
-  /** Pour une unité de texte : l'interrupteur du mode « citations seulement ». */
-  citations?: { on: boolean; onToggle: () => void }
 }) {
   // Pour une unité d'alphabet, les lettres qu'elle enseigne disent mieux ce
   // qui attend l'apprenant qu'une phrase de description — elles remplacent
@@ -659,45 +641,15 @@ function UnitCard({
           <ChevronLeftIcon size={20} />
         </span>
       </button>
-      {(reader || citations) && (
-        <div className="flex border-t-2 border-line">
-          {reader && (
-            <button
-              type="button"
-              onClick={reader.onRead}
-              className={`flex flex-1 items-center justify-center gap-2 py-2.5 text-xs font-black tracking-wide uppercase ${tone.text} transition-colors hover:bg-ink/5`}
-            >
-              <UnitIcon name={reader.icon} size={16} />
-              {reader.label}
-            </button>
-          )}
-          {citations && (
-            <button
-              type="button"
-              role="switch"
-              aria-checked={citations.on}
-              onClick={citations.onToggle}
-              title="Dans les leçons de texte, ne jouer que les cartes-citation (réglage commun à toutes les unités de texte)"
-              className={`flex flex-1 items-center justify-center gap-2 border-l-2 border-line py-2.5 text-xs font-black tracking-wide uppercase transition-colors hover:bg-ink/5 ${
-                citations.on ? tone.text : 'text-ink-faint'
-              }`}
-            >
-              <span
-                aria-hidden
-                className={`relative h-4 w-7 shrink-0 rounded-full border-2 transition-colors ${
-                  citations.on ? 'border-current bg-current' : 'border-line bg-paper'
-                }`}
-              >
-                <span
-                  className={`absolute top-px h-2.5 w-2.5 rounded-full transition-all ${
-                    citations.on ? 'left-3 bg-paper' : 'left-px bg-ink-faint'
-                  }`}
-                />
-              </span>
-              Citations seules
-            </button>
-          )}
-        </div>
+      {reader && (
+        <button
+          type="button"
+          onClick={reader.onRead}
+          className={`flex w-full items-center justify-center gap-2 border-t-2 border-line py-2.5 text-xs font-black tracking-wide uppercase ${tone.text} transition-colors hover:bg-ink/5`}
+        >
+          <UnitIcon name={reader.icon} size={16} />
+          {reader.label}
+        </button>
       )}
     </section>
   )

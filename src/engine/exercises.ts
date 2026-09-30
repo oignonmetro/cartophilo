@@ -13,7 +13,7 @@ import type {
   WorkNode,
 } from '@/content/schema'
 import { GAP } from '@/content/schema'
-import { isPassageLesson, itemsOfLesson } from '@/content/course'
+import { isCitation, isPassageLesson, itemsOfLesson } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
 import { splitNoteSections } from '@/content/notes'
 import {
@@ -212,6 +212,11 @@ export interface RuleExercise {
   passage?: Passage
   /** Introduction de l'unité de texte, affichée avant son premier paragraphe seulement. */
   intro?: string
+  /**
+   * Section d'un rappel coupé par `===`, propre au fragment qu'elle précède
+   * (voir `buildPassageSession`) : pure explication, sans rien à citer.
+   */
+  fragment?: string
 }
 
 /**
@@ -1315,11 +1320,23 @@ function buildPassageSession(
         notes: sections[index - 1]!,
         topic: 'grammar',
         passage: { label: `${lesson.passage.label} · ${point.fragment}`, text: fragmentTextOf(point), source: lesson.passage.source },
+        fragment: point.fragment,
       })
     }
     exercises.push(passageExercise(point, context))
   }
   return exercises
+}
+
+/**
+ * Ce que le mode « citations seules » saute dans une leçon de texte (voir
+ * `citationsOnly` dans le store) : les cartes-explication, et les sections de
+ * rappel propres à un fragment. Le premier rappel reste, réduit au paragraphe
+ * (voir `RuleNote`), et les cartes-citation se jouent toutes.
+ */
+export function isExplanationOnly(exercise: Exercise): boolean {
+  if (exercise.kind === 'passage') return !isCitation(exercise.point)
+  return exercise.kind === 'rule' && exercise.fragment !== undefined
 }
 
 /** « 3/7 » → 3 ; `null` sans repère de fragment. */

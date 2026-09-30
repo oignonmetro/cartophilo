@@ -34,15 +34,15 @@ function LessonSession({ lessonId }: { lessonId: string }) {
 
   const entry = useMemo(() => findLesson(course, lessonId), [course, lessonId])
 
-  // En mode « citations seulement », une leçon de texte se joue réduite à ses
-  // cartes-citation (voir `citationsOnlyLesson`) : la difficulté se mesure
-  // alors sur elles seules, sans quoi des cartes-explication jamais jouées la
-  // laisseraient pour toujours à la découverte. Figé à l'ouverture, comme le
-  // niveau : basculer le réglage ne change pas la session en cours.
-  const [citationsOnly] = useState(() => useProgress.getState().citationsOnly)
-  const lesson = useMemo(
-    () => (entry ? ((citationsOnly && citationsOnlyLesson(entry.lesson)) || entry.lesson) : null),
-    [entry, citationsOnly],
+  // En mode « citations seules », la difficulté d'une leçon de texte se
+  // mesure sur ses seules cartes-citation (voir `citationsOnlyLesson`), sans
+  // quoi des cartes-explication jamais jouées la laisseraient pour toujours à
+  // la découverte. La session, elle, reste entière : c'est `SessionScreen`
+  // qui saute les explications, pour que l'interrupteur agisse en direct.
+  const levelLesson = useMemo(
+    () =>
+      entry ? ((useProgress.getState().citationsOnly && citationsOnlyLesson(entry.lesson)) || entry.lesson) : null,
+    [entry],
   )
 
   // La difficulté suit ce qui est réellement su : rejouer une leçon déjà
@@ -50,7 +50,7 @@ function LessonSession({ lessonId }: { lessonId: string }) {
   // présentation. Figée à l'ouverture pour que les réponses de la session en
   // cours ne la fassent pas varier en cours de route.
   const [level] = useState(() =>
-    lesson ? lessonDifficulty(lesson, useProgress.getState().cards[course.id] ?? {}) : 0,
+    levelLesson ? lessonDifficulty(levelLesson, useProgress.getState().cards[course.id] ?? {}) : 0,
   )
 
   // La graine change à chaque tentative pour que « Recommencer » rebatte les cartes.
@@ -58,14 +58,14 @@ function LessonSession({ lessonId }: { lessonId: string }) {
   const [finished, setFinished] = useState<Finished | null>(null)
 
   const exercises = useMemo(() => {
-    if (!entry || !lesson) return []
+    if (!entry) return []
     const cards = useProgress.getState().cards[course.id] ?? {}
     return buildLessonSession(
-      lesson,
+      entry.lesson,
       level,
       // L'avancement entre dans la graine : rouvrir une leçon un autre jour ne
       // doit pas redonner la même session, exercice pour exercice.
-      seedFrom(lesson.id, level, attempt, lessonProgress(lesson, cards)),
+      seedFrom(entry.lesson.id, level, attempt, lessonProgress(entry.lesson, cards)),
       undefined,
       sectionRank(entry.unit, entry.lesson.id),
       // L'introduction d'une unité de texte précède son premier paragraphe,
@@ -73,7 +73,7 @@ function LessonSession({ lessonId }: { lessonId: string }) {
       entry.unit.lessons[0]?.id === entry.lesson.id ? entry.unit.intro : undefined,
       entry.unit.work,
     )
-  }, [entry, lesson, attempt, level, course.id])
+  }, [entry, attempt, level, course.id])
 
   if (!entry) return <Navigate to="/" replace />
 
