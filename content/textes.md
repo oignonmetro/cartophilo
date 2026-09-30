@@ -103,6 +103,17 @@ lessons:
 - **Rappels** : jamais d'italique à l'intérieur d'un gras
   (`**L'*Éthique* dit…**`) ; l'analyseur ne sait pas les imbriquer et affiche
   les astérisques.
+- **Rappel fragment par fragment** : un long paragraphe peut expliquer ses
+  extraits un à un. Le rappel commence par une vue d'ensemble, affichée avec
+  le paragraphe entier ; puis une ligne `=== k Intitulé` ouvre la section de
+  l'extrait qui commence au fragment k, affichée juste avant ses cartes, sous
+  son intitulé, avec le texte qu'elle couvre (du fragment k jusqu'à la
+  section suivante). Chaque extrait range ses cartes-citation puis ses
+  cartes-explication. Exemple : *D'un enfant monstrueux* (La vie).
+- **Est carte-citation** toute carte qui porte un `fragment`, ou qui tient
+  tout entière entre « » ; une carte-explication qui s'ouvre sur une citation
+  continue après le ». C'est ce que le mode « Citations » garde (voir plus
+  bas).
 - **Pas de minimum de trois points** : une ouverture peut n'en avoir qu'un.
 - **Pas de limite de longueur pour `answer`** : une carte-citation peut faire
   retrouver une phrase entière.
@@ -162,9 +173,9 @@ plutôt qu'un faux `§n`.
 - **« Citations »**, interrupteur dans l'en-tête d'une leçon qui cite un
   texte : allumé, il saute en direct les cartes-explication et les rappels de
   fragment, et le paragraphe s'affiche sans son rappel ; le réglage vaut
-  ensuite pour les leçons suivantes. Est carte-citation toute carte qui porte
-  un `fragment` ou s'ouvre sur « ; une leçon qui n'en a aucune (introduction,
-  prolongement) ne montre pas l'interrupteur. Les révisions ne changent pas.
+  ensuite pour les leçons suivantes. Une leçon sans carte-citation
+  (introduction, prolongement) ne montre pas l'interrupteur. Les révisions ne
+  changent pas.
 
 ## Ponctuation
 

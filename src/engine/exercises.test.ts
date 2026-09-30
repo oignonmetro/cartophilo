@@ -1183,6 +1183,38 @@ describe('leçon de texte', () => {
     ])
   })
 
+  it('ouvre une section par un numéro de fragment, et lui montre tout le texte qu’elle couvre', () => {
+    const numbered: GrammarLesson = {
+      ...text,
+      notes: 'Le mouvement.\n\n=== 1\n\nLe premier extrait.\n\n=== 2 Le second\n\nLe second, en deux fragments.',
+      passage: { label: '§2', text: 'A un. B deux. C trois.' },
+      points: [
+        { id: 'd-1', fragment: '1/3', sentence: '« A ___. »', answer: 'un', alt: [], options: [] },
+        { id: 'd-2', fragment: '2/3', sentence: '« B ___. »', answer: 'deux', alt: [], options: [] },
+        { id: 'd-3', fragment: '3/3', sentence: '« C ___. »', answer: 'trois', alt: [], options: [] },
+        { id: 'd-4', sentence: 'Explication : ___.', answer: 'x', alt: [], options: [] },
+      ],
+    }
+    const session = buildLessonSession(numbered, 0, 1)
+    expect(session.map((exercise) => exercise.id)).toEqual([
+      'rule:n-p1',
+      'rule:n-p1:1',
+      'passage:d-1',
+      'rule:n-p1:2',
+      'passage:d-2',
+      'passage:d-3',
+      'passage:d-4',
+    ])
+    expect(session[0]).toMatchObject({ notes: 'Le mouvement.', passage: numbered.passage })
+    expect(session[1]).toMatchObject({ notes: 'Le premier extrait.', passage: { label: '§2 · 1/3', text: 'A un.' } })
+    expect(session[1]).toMatchObject({ title: text.title })
+    expect(session[3]).toMatchObject({
+      title: 'Le second',
+      passage: { label: '§2 · 2-3/3', text: 'B deux. C trois.' },
+      fragment: '2-3/3',
+    })
+  })
+
   it('garde le même ordre quelle que soit la graine, et ne relit plus le texte une fois la leçon sue', () => {
     const order = (seed: number) => buildLessonSession(text, 1, seed).flatMap(itemIdsOf)
     expect(order(1)).toEqual(order(99))

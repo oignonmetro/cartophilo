@@ -239,7 +239,7 @@ export function splitAside(text: string): { main: string; aside: string | null }
   return { main: match[1], aside: match[2] }
 }
 
-const SECTION_BREAK = /^={3,}$/
+const SECTION_BREAK = /^={3,}(?:\s*(\d+))?(?:\s+(\S.*))?$/
 
 /**
  * Sépare des `notes:` en plusieurs rappels distincts, sur une ligne ne
@@ -252,16 +252,44 @@ const SECTION_BREAK = /^={3,}$/
  * le contenu déjà écrit.
  */
 export function splitNoteSections(notes: string): string[] {
-  const sections: string[] = []
+  return fragmentNoteSections(notes)
+    .map((section) => section.notes)
+    .filter((section) => section.length > 0)
+}
+
+/**
+ * Les sections d'un rappel de leçon de texte, chacune avec le fragment
+ * qu'elle précède (voir `buildPassageSession`). La première, sans fragment,
+ * accompagne le paragraphe entier, et reste même vide. Une ligne `=== 5`
+ * ouvre la section du fragment 5 : un extrait expliqué d'un seul tenant peut
+ * ainsi couvrir plusieurs fragments (5 et 6, jusqu'à la section suivante).
+ * Sans numéro, `===` ouvre la section du fragment suivant dans l'ordre
+ * (2, 3…), la première valant aussi pour le fragment 1. Un intitulé peut
+ * suivre (`=== 5 L'embrassade`) : il titre la section à la place de la leçon.
+ * Les sections vides après la première sont écartées.
+ */
+export function fragmentNoteSections(
+  notes: string,
+): { fragment: number | null; title: string | null; notes: string }[] {
+  const sections: { fragment: number | null; title: string | null; notes: string }[] = []
   let current: string[] = []
+  let fragment: number | null = null
+  let title: string | null = null
+  const close = () => {
+    const text = current.join('\n').trim()
+    if (sections.length === 0 || text.length > 0) sections.push({ fragment, title, notes: text })
+  }
   for (const raw of notes.split('\n')) {
-    if (SECTION_BREAK.test(raw.trim())) {
-      sections.push(current.join('\n'))
+    const match = SECTION_BREAK.exec(raw.trim())
+    if (match) {
+      close()
+      fragment = match[1] ? Number(match[1]) : (sections.at(-1)?.fragment ?? 1) + 1
+      title = match[2]?.trim() || null
       current = []
       continue
     }
     current.push(raw)
   }
-  sections.push(current.join('\n'))
-  return sections.map((section) => section.trim()).filter((section) => section.length > 0)
+  close()
+  return sections
 }

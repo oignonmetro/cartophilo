@@ -204,6 +204,17 @@ commentaire du paragraphe, pas un résumé d'une ligne :
   exemples et ce dont ils ont besoin, deux vertus, trois lectures) ;
 - **un piège** (`! …`) en fin : le contresens à éviter.
 
+**Paragraphe long, découpé en extraits** (une fiche linéaire qui explique
+extrait par extrait) : une seule leçon pour le paragraphe, dont le rappel
+s'ouvre sur une vue d'ensemble du mouvement (affichée avec le paragraphe
+entier, un tableau des extraits s'y prête bien), puis une section par
+extrait, ouverte par `=== k Intitulé`, où k est le premier fragment de
+l'extrait : elle s'affiche juste avant ses cartes, avec le texte qu'elle
+couvre. Fragments numérotés à la suite dans le paragraphe (un extrait long en
+couvre plusieurs) ; les cartes de chaque extrait à la suite, citations puis
+explications. Plutôt qu'une leçon par extrait : « Lire le texte » montre
+alors de vrais paragraphes.
+
 Mise en forme : des paragraphes plutôt que des puces (les puces seulement
 pour une énumération courte et vraiment parallèle), du gras pour l'idée
 directrice, `*titre*`, `` `terme grec` ``. **Jamais d'italique à l'intérieur

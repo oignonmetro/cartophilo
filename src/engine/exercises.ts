@@ -15,7 +15,7 @@ import type {
 import { GAP } from '@/content/schema'
 import { isCitation, isPassageLesson, itemsOfLesson } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
-import { splitNoteSections } from '@/content/notes'
+import { fragmentNoteSections, splitNoteSections } from '@/content/notes'
 import {
   findNode,
   headlineOf,
@@ -1291,36 +1291,55 @@ function buildPassageSession(
   const cards = lesson.points.map((point) => passageExercise(point, context))
   if (level > 0) return cards
 
-  // Un rappel coupé par `===` (voir `splitNoteSections`) explique le
+  // Un rappel coupé par `===` (voir `fragmentNoteSections`) explique le
   // paragraphe fragment par fragment : la première section s'affiche avec le
   // paragraphe entier, chacune des suivantes juste avant les cartes du
-  // fragment qu'elle explique, avec ce seul fragment sous les yeux.
-  const sections = splitNoteSections(lesson.notes ?? '')
+  // fragment qu'elle ouvre, avec sous les yeux le texte qu'elle couvre (ce
+  // fragment, et les suivants jusqu'à la section d'après).
+  const [head, ...rest] = fragmentNoteSections(lesson.notes ?? '')
   const first: Exercise = {
     kind: 'rule',
     id: `rule:${lesson.id}`,
     title: lesson.title,
-    notes: sections.length > 1 ? sections[0]! : (lesson.notes ?? ''),
+    notes: head?.notes ?? '',
     topic: 'grammar',
     passage: lesson.passage,
     intro,
   }
-  if (sections.length <= 1) return [first, ...cards]
+  if (rest.length === 0) return [first, ...cards]
 
-  const exercises: Exercise[] = [first]
-  let shown = 1
+  // Le texte de chaque fragment, tel que le cite sa première carte-citation.
+  const texts = new Map<number, string>()
+  let total = 0
   for (const point of lesson.points) {
     const index = fragmentIndex(point.fragment)
-    if (index !== null && index > shown && sections[index - 1]) {
-      shown = index
+    if (index === null || !isCitation(point)) continue
+    if (!texts.has(index)) texts.set(index, fragmentTextOf(point))
+    total = Math.max(total, fragmentTotal(point.fragment) ?? index)
+  }
+
+  const pending = rest.map((section) => ({ start: section.fragment ?? 1, title: section.title, notes: section.notes }))
+  pending.sort((a, b) => a.start - b.start)
+  const exercises: Exercise[] = [first]
+  for (const point of lesson.points) {
+    const index = fragmentIndex(point.fragment)
+    while (index !== null && pending.length > 0 && index >= pending[0]!.start) {
+      const section = pending.shift()!
+      const end = Math.max(section.start, (pending[0]?.start ?? total + 1) - 1)
+      const covered = Array.from({ length: end - section.start + 1 }, (_, k) => texts.get(section.start + k))
+      const range = end > section.start ? `${section.start}-${end}` : `${section.start}`
       exercises.push({
         kind: 'rule',
-        id: `rule:${lesson.id}:${index}`,
-        title: lesson.title,
-        notes: sections[index - 1]!,
+        id: `rule:${lesson.id}:${section.start}`,
+        title: section.title ?? lesson.title,
+        notes: section.notes,
         topic: 'grammar',
-        passage: { label: `${lesson.passage.label} · ${point.fragment}`, text: fragmentTextOf(point), source: lesson.passage.source },
-        fragment: point.fragment,
+        passage: {
+          label: `${lesson.passage.label} · ${range}/${total}`,
+          text: covered.filter((text) => text !== undefined).join(' '),
+          source: lesson.passage.source,
+        },
+        fragment: `${range}/${total}`,
       })
     }
     exercises.push(passageExercise(point, context))
@@ -1337,6 +1356,12 @@ function buildPassageSession(
 export function isExplanationOnly(exercise: Exercise): boolean {
   if (exercise.kind === 'passage') return !isCitation(exercise.point)
   return exercise.kind === 'rule' && exercise.fragment !== undefined
+}
+
+/** « 3/7 » → 7 ; `null` sans total. */
+function fragmentTotal(fragment: string | undefined): number | null {
+  const match = fragment ? /\/\s*(\d+)\s*$/.exec(fragment) : null
+  return match ? Number(match[1]) : null
 }
 
 /** « 3/7 » → 3 ; `null` sans repère de fragment. */

@@ -80,9 +80,14 @@ export function isPassageLesson(lesson: Lesson): lesson is GrammarLesson & { pas
   return lesson.kind === 'grammar' && lesson.passage !== undefined
 }
 
-/** Une carte-citation cite le texte : elle porte un fragment, ou s'ouvre sur « . */
+/**
+ * Une carte-citation cite le texte : elle porte un fragment, ou tient tout
+ * entière entre « ». Une carte-explication peut s'ouvrir sur une citation
+ * (« « Normal » vient du latin ___ ») : elle continue alors après le ».
+ */
 export function isCitation(card: { sentence: string; fragment?: string }): boolean {
-  return Boolean(card.fragment) || card.sentence.trim().startsWith('«')
+  const sentence = card.sentence.trim()
+  return Boolean(card.fragment) || (sentence.startsWith('«') && sentence.endsWith('»'))
 }
 
 /**

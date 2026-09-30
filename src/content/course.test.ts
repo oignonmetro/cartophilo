@@ -186,7 +186,12 @@ describe('citationsOnlyLesson', () => {
 
   it('garde les seules cartes-citation, et le paragraphe sans son explication', () => {
     const reduced = citationsOnlyLesson(
-      text([point('a', '« Il était ___. »'), point('b', 'La thèse est ___.'), point('c', 'Il ___ beau.', '1/2')]),
+      text([
+        point('a', '« Il était ___. »'),
+        point('b', 'La thèse est ___.'),
+        point('c', 'Il ___ beau.', '1/2'),
+        point('d', '« Beau » veut dire ___ ici.'),
+      ]),
     )
     expect(reduced?.notes).toBeUndefined()
     expect(reduced && 'points' in reduced ? reduced.points.map((p) => p.id) : null).toEqual(['a', 'c'])
