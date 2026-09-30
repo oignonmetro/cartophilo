@@ -23,10 +23,7 @@ export function unquote(text: string): string {
   return text.trim().replace(/^«\s*/, '').replace(/\s*»$/, '')
 }
 
-/** Une carte-citation cite le texte : elle porte un fragment, ou s'ouvre sur « . */
-export function isCitation(card: { sentence: string; fragment?: string }): boolean {
-  return Boolean(card.fragment) || card.sentence.trim().startsWith('«')
-}
+export { isCitation } from '@/content/course'
 
 /**
  * Le texte d'un paragraphe, reconstitué à partir de ses cartes-citation :

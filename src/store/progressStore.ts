@@ -88,6 +88,14 @@ export interface ProgressSnapshot {
    */
   targetedCorrection: boolean
   /**
+   * Dans une leçon d'unité de texte, ne jouer que les cartes-citation (voir
+   * `citationsOnlyLesson`) : le paragraphe se lit encore à la découverte,
+   * mais sans son explication, et les cartes-explication sont sautées. Pour
+   * apprendre le texte par cœur sans repasser par son commentaire. Les
+   * révisions ne changent pas. Éteint par défaut.
+   */
+  citationsOnly: boolean
+  /**
    * `system` suit le réglage de l'appareil et seul lui : c'est le seul des
    * trois qui reste correct sans jamais être rouvert, y compris quand
    * l'appareil bascule de lui-même au coucher du soleil. `light`/`dark`
@@ -162,6 +170,7 @@ interface ProgressState extends ProgressSnapshot {
   setSounds: (on: boolean) => void
   setHaptics: (on: boolean) => void
   setTargetedCorrection: (on: boolean) => void
+  setCitationsOnly: (on: boolean) => void
   setTheme: (theme: 'light' | 'dark' | 'system') => void
   setPassageMode: (device: AnswerDevice, mode: AnswerMode) => void
   setGapMode: (device: AnswerDevice, mode: AnswerMode) => void
@@ -194,6 +203,7 @@ const initial: ProgressSnapshot = {
   sounds: true,
   haptics: false,
   targetedCorrection: false,
+  citationsOnly: false,
   theme: 'system',
   passageModes: { desktop: 'write', mobile: 'reveal' },
   gapModes: { desktop: 'write', mobile: 'reveal' },
@@ -495,6 +505,8 @@ export const useProgress = create<ProgressState>()(
 
       setTargetedCorrection: (on) => set({ targetedCorrection: on }),
 
+      setCitationsOnly: (on) => set({ citationsOnly: on }),
+
       setTheme: (theme) => set({ theme }),
 
       setPassageMode: (device, mode) =>
@@ -515,6 +527,7 @@ export const useProgress = create<ProgressState>()(
           sounds,
           haptics,
           targetedCorrection,
+          citationsOnly,
           theme,
           passageModes,
           gapModes,
@@ -533,6 +546,7 @@ export const useProgress = create<ProgressState>()(
             sounds,
             haptics,
             targetedCorrection,
+            citationsOnly,
             theme,
             passageModes,
             gapModes,
@@ -554,6 +568,7 @@ export const useProgress = create<ProgressState>()(
           sounds?: boolean
           haptics?: boolean
           targetedCorrection?: boolean
+          citationsOnly?: boolean
           theme?: 'light' | 'dark' | 'system'
           passageModes?: Partial<Record<AnswerDevice, AnswerMode>>
           gapModes?: Partial<Record<AnswerDevice, AnswerMode>>
@@ -604,6 +619,7 @@ export const useProgress = create<ProgressState>()(
           sounds: parsed.sounds ?? initial.sounds,
           haptics: parsed.haptics ?? initial.haptics,
           targetedCorrection: parsed.targetedCorrection ?? initial.targetedCorrection,
+          citationsOnly: parsed.citationsOnly ?? initial.citationsOnly,
           theme: parsed.theme ?? initial.theme,
           passageModes: { ...initial.passageModes, ...parsed.passageModes },
           gapModes: { ...initial.gapModes, ...parsed.gapModes },
@@ -667,6 +683,7 @@ export const useProgress = create<ProgressState>()(
         sounds,
         haptics,
         targetedCorrection,
+        citationsOnly,
         theme,
         passageModes,
         gapModes,
@@ -680,6 +697,7 @@ export const useProgress = create<ProgressState>()(
         sounds,
         haptics,
         targetedCorrection,
+        citationsOnly,
         theme,
         passageModes,
         gapModes,

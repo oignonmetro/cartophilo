@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { LibraryCourse, Unit, Vocab } from './schema'
-import { courseLabel, findUnit, groupCoursesByLanguage, lessonCountLabel, unitLetters } from './course'
+import { citationsOnlyLesson, courseLabel, findUnit, groupCoursesByLanguage, lessonCountLabel, unitLetters } from './course'
 import type { ManifestEntry } from './schema'
 
 function vocab(id: string): Vocab {
@@ -170,5 +170,31 @@ describe('unitLetters', () => {
 
   it('ne renvoie rien pour une unité qui n’enseigne aucune lettre', () => {
     expect(unitLetters(unit('v1', ['v1-l1']))).toBeNull()
+  })
+})
+
+describe('citationsOnlyLesson', () => {
+  const point = (id: string, sentence: string, fragment?: string) => ({ id, sentence, answer: 'x', alt: [], options: [], fragment })
+  const text = (points: ReturnType<typeof point>[], label = '§1') => ({
+    kind: 'grammar' as const,
+    id: 'p1',
+    title: 'Paragraphe',
+    notes: 'Explication.',
+    passage: { label, text: 'Il était beau.' },
+    points,
+  })
+
+  it('garde les seules cartes-citation, et le paragraphe sans son explication', () => {
+    const reduced = citationsOnlyLesson(
+      text([point('a', '« Il était ___. »'), point('b', 'La thèse est ___.'), point('c', 'Il ___ beau.', '1/2')]),
+    )
+    expect(reduced?.notes).toBeUndefined()
+    expect(reduced && 'points' in reduced ? reduced.points.map((p) => p.id) : null).toEqual(['a', 'c'])
+    expect(reduced && 'passage' in reduced ? reduced.passage?.text : null).toBe('Il était beau.')
+  })
+
+  it("laisse entière une leçon sans carte-citation, et ce qui n'est pas une leçon de texte", () => {
+    expect(citationsOnlyLesson(text([point('b', 'La thèse est ___.')], 'Introduction'))).toBeNull()
+    expect(citationsOnlyLesson(lesson('v1-l1'))).toBeNull()
   })
 })

@@ -250,6 +250,19 @@ export function ProfileScreen() {
         </section>
 
         <section className="card-3d flex flex-col gap-3 px-5 py-5">
+          <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Unités de texte</h2>
+          <Switch
+            label="Citations seulement"
+            on={state.citationsOnly}
+            onToggle={() => state.setCitationsOnly(!state.citationsOnly)}
+          />
+          <p className="text-xs text-ink-faint">
+            Dans les leçons d'une unité de texte, ne jouer que les cartes-citation : le paragraphe s'affiche sans son
+            explication, et les cartes-explication sont sautées. Les introductions et les révisions ne changent pas.
+          </p>
+        </section>
+
+        <section className="card-3d flex flex-col gap-3 px-5 py-5">
           <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Sauvegarde</h2>
           <p className="text-xs text-ink-soft">
             Toute la progression reste sur cet appareil. Exportez un fichier pour la transférer ou la conserver.

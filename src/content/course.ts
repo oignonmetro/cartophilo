@@ -80,6 +80,26 @@ export function isPassageLesson(lesson: Lesson): lesson is GrammarLesson & { pas
   return lesson.kind === 'grammar' && lesson.passage !== undefined
 }
 
+/** Une carte-citation cite le texte : elle porte un fragment, ou s'ouvre sur « . */
+export function isCitation(card: { sentence: string; fragment?: string }): boolean {
+  return Boolean(card.fragment) || card.sentence.trim().startsWith('«')
+}
+
+/**
+ * La leçon de texte réduite à ses cartes-citation, pour le mode « citations
+ * seulement » (voir `citationsOnly` dans le store) : sans son explication, le
+ * paragraphe s'affiche seul à la découverte, et les cartes-explication sont
+ * sautées. `null` quand la leçon n'a rien à réduire : ce n'est pas une leçon
+ * de texte, ou elle n'a aucune carte-citation (introduction, prolongement),
+ * auquel cas elle se joue en entier plutôt que de ne rien laisser à jouer.
+ */
+export function citationsOnlyLesson(lesson: Lesson): Lesson | null {
+  if (!isPassageLesson(lesson)) return null
+  const points = lesson.points.filter(isCitation)
+  if (points.length === 0) return null
+  return { ...lesson, notes: undefined, points }
+}
+
 /** Une unité consacrée à un texte : au moins une de ses leçons en cite un paragraphe. */
 export function isTextUnit(unit: Unit): boolean {
   return unit.lessons.some(isPassageLesson)

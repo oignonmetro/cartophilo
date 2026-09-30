@@ -159,6 +159,12 @@ plutôt qu'un faux `§n`.
 - **« Lire le texte »**, sur la carte de l'unité dans la bibliothèque, ouvre à
   tout moment l'introduction et tous les paragraphes à la suite.
 - En révision, une carte revient seule, avec l'en-tête de son paragraphe.
+- **« Citations seules »**, interrupteur sur la carte de l'unité (et dans le
+  profil, réglage commun à toutes les unités de texte) : une leçon-paragraphe
+  ne montre plus que le paragraphe, sans son rappel, puis ses seules
+  cartes-citation. Est carte-citation toute carte qui porte un `fragment` ou
+  s'ouvre sur « ; une leçon qui n'en a aucune (introduction, prolongement) se
+  joue en entier. Les révisions ne changent pas.
 
 ## Ponctuation
 
