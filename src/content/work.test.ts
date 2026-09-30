@@ -31,6 +31,7 @@ const WORK: Work = {
     { from: 'a3', to: 'pivot', rel: 'reprise', points: [point('lien-a3')] },
     { from: 'pivot', to: 'b1', rel: 'probleme-solution', points: [point('lien-pivot')] },
   ],
+  recaps: [],
 }
 
 describe('plan d’une unité-œuvre', () => {
@@ -96,6 +97,25 @@ describe('séance d’une leçon d’unité-œuvre', () => {
     expect(gaps).toEqual(['lien-a3', 'lien-pivot'])
     expect(session.some((exercise) => exercise.kind === 'work-match')).toBe(true)
     expect(session[session.length - 1]?.kind).toBe('work-order')
+  })
+
+  it('à la découverte seulement, le rappel d’un groupe de parties précède la première d’entre elles', () => {
+    const recaps = [
+      { at: 'a', label: 'A1-A3', title: 'Le bloc A', notes: 'Résumé de A.' },
+      { at: 'pivot', label: 'PIVOT-B', title: 'La charnière et B', notes: 'Résumé.' },
+    ]
+    const work: Work = { ...WORK, recaps }
+    const session = buildWorkSession(lesson, work, 0, 1, false)
+    const rules = session.filter((exercise) => exercise.kind === 'rule')
+    expect(rules).toMatchObject([
+      { id: 'recap:a', title: 'Le bloc A', notes: 'Résumé de A.', passage: { label: 'A1-A3' } },
+      { id: 'recap:pivot', title: 'La charnière et B' },
+    ])
+    const at = (id: string) => session.findIndex((exercise) => itemIdsOf(exercise).includes(id))
+    expect(session.indexOf(rules[0]!)).toBeLessThan(at('p-a1'))
+    expect(session.indexOf(rules[1]!)).toBeGreaterThan(at('p-a3'))
+    expect(session.indexOf(rules[1]!)).toBeLessThan(at('p-pivot'))
+    expect(buildWorkSession(lesson, work, 1, 1, false).some((exercise) => exercise.kind === 'rule')).toBe(false)
   })
 
   it('schémas réactivés, à la découverte : le plan à lire, puis bloc par bloc, les plans à trous arrivant après leurs chapitres', () => {
@@ -204,7 +224,7 @@ describe('associer chaque chapitre à ce qu’il affirme', () => {
 
   it('coupe un long bloc en manches égales plutôt que de laisser un reste de deux', () => {
     const many: WorkNode = { id: 'm', label: 'M', points: [], parts: Array.from({ length: 8 }, (_, i) => leaf(`m${i}`)) }
-    const rounds = workMatchesFor({ parts: [many], links: [] }, many)
+    const rounds = workMatchesFor({ parts: [many], links: [], recaps: [] }, many)
     expect(rounds.map((round) => round.pairs.length)).toEqual([4, 4])
   })
 

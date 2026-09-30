@@ -1446,7 +1446,21 @@ export function buildWorkSession(
   for (const block of blocks) {
     // Chaque partie du bloc, dans l'ordre du plan : ses thèses, puis les
     // cartes des liens qui y aboutissent, au moment même où le lien se fait.
+    // À la découverte, le rappel d'un groupe de parties (`recaps`) précède
+    // la première d'entre elles.
     for (const node of nodesOf(block)) {
+      if (level <= 0) {
+        for (const recap of work.recaps.filter((each) => each.at === node.id)) {
+          exercises.push({
+            kind: 'rule',
+            id: `recap:${recap.at}`,
+            title: recap.title,
+            notes: recap.notes,
+            topic: 'grammar',
+            passage: { label: recap.label },
+          })
+        }
+      }
       const cards = [...node.points, ...work.links.filter((link) => link.to === node.id).flatMap((link) => link.points)]
       for (const point of cards) {
         const context = workContextOf(work, point.id)

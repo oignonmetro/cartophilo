@@ -170,12 +170,46 @@ précisions propres à l'unité-œuvre :
 - Les citations suivent la règle de `philosophie.md` : exactes, entre
   guillemets français, coupes marquées `[...]`, jamais de mémoire.
 
+## Les rappels
+
+`recaps`, à la fin de `work`, résume les groupes de parties liées : un
+rappel par moment, par bloc ou par groupe de chapitres qui vont ensemble
+(les quatre moments de l'Analytique du beau ; les chapitres 1-3, 4-6, 7-10
+et 11-12 du livre II du *Contrat social*). Il s'affiche à la découverte de la
+leçon, juste avant les thèses de sa première partie (`at`). Le groupe ne suit
+pas forcément l'arbre : il peut réunir deux blocs voisins, d'où son propre
+repère (`label`).
+
+```yaml
+  recaps:
+    - at: l2-4-5                # la première partie du groupe
+      label: "chap. 4-6"
+      title: "Les bornes du souverain, et ce qu'est une loi"
+      notes: |-
+        **L'idée directrice du groupe, en gras.**
+
+        | Chapitre | Thèse | Argument |
+        | II, 4 | … | … |
+
+        Le texte : « … » (II, 4) ; « … » (II, 6).
+
+        ! Le contresens à éviter.
+```
+
+Un rappel sert à la fois de **résumé** (l'idée directrice), de **plan** (un
+tableau, une ligne par chapitre ou paragraphe : sa thèse, son argument) et
+de **texte** (les formules à retenir, citées exactement : seulement celles
+des cartes ou d'une source fournie, jamais de mémoire). Il reprend ce que
+disent les thèses, `summary` et `reason`, et se clôt sur un piège (`! …`).
+Mêmes marqueurs qu'un rappel de leçon ; jamais d'italique dans un gras.
+
 ## Ce que le moteur en fait
 
 Une leçon par livre, qui suit l'ordre du plan :
 
 1. **Le plan**, à lire (première fois seulement) : le schéma du livre.
-2. **Bloc par bloc**, chaque thèse à **localiser** dans l'œuvre, dès la
+2. **Bloc par bloc**, à la découverte, le rappel de chaque groupe avant sa
+   première partie (voir « Les rappels ») ; puis chaque thèse à **localiser** dans l'œuvre, dès la
    première fois qu'on la rencontre (voir plus bas), puis les cartes des
    liens qui aboutissent là ; ensuite une **association** entre les
    chapitres du bloc et ce qu'ils affirment, et les **plans à trous** dont

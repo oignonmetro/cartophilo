@@ -309,13 +309,31 @@ export const workLinkSchema = z.object({
 export type WorkLink = z.infer<typeof workLinkSchema>
 
 /**
+ * Un rappel de cours sur un groupe de parties liées (« chap. 4-6 », « §1-5,
+ * premier moment du beau ») : leur résumé, leur plan, les formules du texte à
+ * retenir. Affiché à la découverte d'une leçon, juste avant les thèses de la
+ * partie `at`, la première du groupe. Il ne suit pas forcément l'arbre : un
+ * groupe peut réunir des parties de deux blocs voisins, d'où son propre
+ * repère (`label`). Mêmes marqueurs qu'un rappel de leçon.
+ */
+export const workRecapSchema = z.object({
+  at: slug,
+  label: z.string().min(1),
+  title: z.string().min(1),
+  notes: z.string().min(1),
+})
+export type WorkRecap = z.infer<typeof workRecapSchema>
+
+/**
  * Plan d'une unité-œuvre : ses parties de premier niveau sont les livres (une
- * leçon chacun, dérivée par le compilateur), et `links` relie les parties
- * éloignées. Voir content/oeuvres.md.
+ * leçon chacun, dérivée par le compilateur), `links` relie les parties
+ * éloignées, et `recaps` résume les groupes de parties liées. Voir
+ * content/oeuvres.md.
  */
 export const workSchema = z.object({
   parts: z.array(workNodeSchema).min(1),
   links: z.array(workLinkSchema).default([]),
+  recaps: z.array(workRecapSchema).default([]),
 })
 export type Work = z.infer<typeof workSchema>
 
