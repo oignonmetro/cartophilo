@@ -14,7 +14,7 @@ import {
   threadOf,
   workContextOf,
 } from './work'
-import { buildLessonSession, buildWorkSession, itemIdsOf, workLocateFor, workMatchesFor, workMatchItems, workOrder, workOrderItems, type WorkLocateExercise, type WorkPlanExercise } from '@/engine/exercises'
+import { buildLessonSession, buildWorkSession, isNonLocating, itemIdsOf, workLocateFor, workMatchesFor, workMatchItems, workOrder, workOrderItems, type WorkLocateExercise, type WorkPlanExercise } from '@/engine/exercises'
 import { createRng } from '@/engine/rng'
 
 function point(id: string): GrammarPoint {
@@ -109,6 +109,15 @@ describe('séance d’une leçon d’unité-œuvre', () => {
     expect(gaps).toEqual(['lien-a3', 'lien-pivot'])
     expect(session.some((exercise) => exercise.kind === 'work-match')).toBe(true)
     expect(session[session.length - 1]?.kind).toBe('work-order')
+  })
+
+  it('en repérage seul, ne garde que la localisation et l’association', () => {
+    const session = buildWorkSession(lesson, WORK, 0, 1, true)
+    const kept = new Set(session.filter((exercise) => !isNonLocating(exercise)).map((exercise) => exercise.kind))
+    expect([...kept].sort()).toEqual(['work-locate', 'work-map', 'work-match'])
+    // Sautées : la remise en ordre, les plans à trous, les cartes de lien au clavier.
+    const skipped = new Set(session.filter(isNonLocating).map((exercise) => exercise.kind))
+    expect([...skipped].sort()).toEqual(['grammar-gap', 'work-order', 'work-plan'])
   })
 
   it('à la découverte seulement, le rappel d’un groupe de parties précède la première d’entre elles', () => {

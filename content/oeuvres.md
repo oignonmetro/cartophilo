@@ -227,6 +227,14 @@ localiser. La séance finale de l'unité se termine, pour chaque livre, par
 la remise en ordre puis tous ses plans à trous. En révision, chaque thèse
 revient seule, avec son emplacement, et continue de s'y localiser.
 
+**Repérage seul** : l'interrupteur « Repérage », dans l'en-tête de toute
+séance qui en contient (leçon, révision, séance finale), saute en direct ce
+qui ne fait pas associer une idée à une référence : la remise en ordre, le
+plan à trous, et la phrase à trou de repli (cartes de lien, thèse sans
+voisin). Restent la localisation et l'association. Réglage retenu pour les
+séances suivantes ; les cartes de lien, jamais jouées tant qu'il est
+allumé, restent dues en révision.
+
 **Plan à trous** : le schéma du livre, vidé de son texte : restent les
 bulles et leurs questions, et les cases des chapitres réduites à leur numéro
 (« chap. 3 », sans le titre, qui donnerait souvent la réponse). On y replace

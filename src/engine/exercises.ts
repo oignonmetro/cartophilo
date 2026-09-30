@@ -1358,6 +1358,18 @@ export function isExplanationOnly(exercise: Exercise): boolean {
   return exercise.kind === 'rule' && exercise.fragment !== undefined
 }
 
+/**
+ * Ce que le mode « repérage seul » saute (voir `locateOnly` dans le store) :
+ * dans une unité-œuvre, tout exercice qui ne fait pas associer une idée à une
+ * référence. La remise en ordre, le plan à trous, et la phrase à trou de
+ * repli (une carte de lien, une thèse sans voisin pour servir de leurre) ;
+ * restent la localisation et l'association.
+ */
+export function isNonLocating(exercise: Exercise): boolean {
+  if (exercise.kind === 'work-order' || exercise.kind === 'work-plan') return true
+  return exercise.kind === 'grammar-gap' && exercise.work !== undefined
+}
+
 /** « 3/7 » → 7 ; `null` sans total. */
 function fragmentTotal(fragment: string | undefined): number | null {
   const match = fragment ? /\/\s*(\d+)\s*$/.exec(fragment) : null

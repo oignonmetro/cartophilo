@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { Exercise } from '@/engine/exercises'
-import { isExplanationOnly, isPresentation, itemIdsOf } from '@/engine/exercises'
+import { isExplanationOnly, isNonLocating, isPresentation, itemIdsOf } from '@/engine/exercises'
 import { isCitation } from '@/content/course'
 import { ratingFromAnswer, type Rating } from '@/engine/srs'
 import { useCourse } from '@/content/CourseProvider'
@@ -106,30 +106,41 @@ const BATCH_SIZE = 10
  * sortie en fondu).
  */
 /**
- * Interrupteur du mode « citations seules », dans l'en-tête d'une leçon de
- * texte : là où l'on décide, en cours de route, de ne plus repasser que par
- * le texte lui-même. Réglage global, retenu pour les leçons suivantes.
+ * Interrupteur d'un mode de séance, dans l'en-tête : « citations seules »
+ * dans une leçon de texte, « repérage seul » dans une séance d'unité-œuvre.
+ * C'est là qu'on décide, en cours de route, de ne plus faire qu'un type
+ * d'exercice. Réglage global, retenu pour les séances suivantes.
  */
-function CitationsSwitch({ on, onToggle }: { on: boolean; onToggle: () => void }) {
+function ModeSwitch({
+  on,
+  onToggle,
+  glyph,
+  label,
+  titleOn,
+  titleOff,
+}: {
+  on: boolean
+  onToggle: () => void
+  glyph: string
+  label: string
+  titleOn: string
+  titleOff: string
+}) {
   return (
     <button
       type="button"
       role="switch"
       aria-checked={on}
       onClick={onToggle}
-      title={
-        on
-          ? 'Citations seules : les cartes-explication et les rappels sont sautés'
-          : 'Ne jouer que les cartes-citation'
-      }
+      title={on ? titleOn : titleOff}
       className={`flex shrink-0 items-center gap-1.5 rounded-full border-2 px-2 py-1 text-xs font-extrabold transition-colors ${
         on ? 'border-violet bg-violet text-white' : 'border-line text-ink-faint hover:text-ink-soft'
       }`}
     >
       <span aria-hidden className="font-black">
-        «»
+        {glyph}
       </span>
-      Citations
+      {label}
     </button>
   )
 }
@@ -227,8 +238,22 @@ function SessionRunner({
   )
   const skipping = hasCitations && citationsOnly
 
+  // Mode « repérage seul » (voir `locateOnly` dans le store) : proposé dès
+  // qu'une séance, leçon ou révision, a des exercices d'unité-œuvre qui ne
+  // font pas associer une idée à une référence (voir `isNonLocating`) ; même
+  // mécanique, en direct.
+  const locateOnly = useProgress((state) => state.locateOnly)
+  const setLocateOnly = useProgress((state) => state.setLocateOnly)
+  const hasNonLocating = useMemo(() => exercises.some(isNonLocating), [exercises])
+  const locating = hasNonLocating && locateOnly
+
+  const skips = useCallback(
+    (exercise: Exercise) => (skipping && isExplanationOnly(exercise)) || (locating && isNonLocating(exercise)),
+    [skipping, locating],
+  )
+
   const current = queue[position]
-  const skipped = current !== undefined && skipping && isExplanationOnly(current)
+  const skipped = current !== undefined && skips(current)
   useEffect(() => {
     if (skipped) setPosition((index) => index + 1)
   }, [skipped, position])
@@ -237,11 +262,9 @@ function SessionRunner({
   // d'allumer le mode.
   const graded = useMemo(
     () =>
-      exercises.filter(
-        (exercise) =>
-          !isPresentation(exercise) && (!skipping || !isExplanationOnly(exercise) || attempt.seen.has(exercise.id)),
-      ).length,
-    [exercises, skipping, attempt.seen],
+      exercises.filter((exercise) => !isPresentation(exercise) && (!skips(exercise) || attempt.seen.has(exercise.id)))
+        .length,
+    [exercises, skips, attempt.seen],
   )
   const progress = graded === 0 ? 1 : Math.min(1, attempt.seen.size / graded)
 
@@ -411,7 +434,26 @@ function SessionRunner({
           {attempt.seen.size}/{graded}
         </span>
         <ComboBadge combo={combo} />
-        {hasCitations && <CitationsSwitch on={citationsOnly} onToggle={() => setCitationsOnly(!citationsOnly)} />}
+        {hasCitations && (
+          <ModeSwitch
+            on={citationsOnly}
+            onToggle={() => setCitationsOnly(!citationsOnly)}
+            glyph="«»"
+            label="Citations"
+            titleOn="Citations seules : les cartes-explication et les rappels sont sautés"
+            titleOff="Ne jouer que les cartes-citation"
+          />
+        )}
+        {hasNonLocating && (
+          <ModeSwitch
+            on={locateOnly}
+            onToggle={() => setLocateOnly(!locateOnly)}
+            glyph="→"
+            label="Repérage"
+            titleOn="Repérage seul : remise en ordre et phrases à trou sautées"
+            titleOff="Ne faire que localiser et associer"
+          />
+        )}
       </header>
 
       {/* `min-h-0` : sans lui, un enfant flex-1 en colonne se voit imposer une
