@@ -1283,21 +1283,63 @@ function buildPassageSession(
   intro: string | undefined,
 ): Exercise[] {
   const context: PassageContext = { label: lesson.passage.label, heading: lesson.title, source: lesson.passage.source }
-  const rule: Exercise[] =
-    level <= 0
-      ? [
-          {
-            kind: 'rule',
-            id: `rule:${lesson.id}`,
-            title: lesson.title,
-            notes: lesson.notes ?? '',
-            topic: 'grammar',
-            passage: lesson.passage,
-            intro,
-          },
-        ]
-      : []
-  return [...rule, ...lesson.points.map((point) => passageExercise(point, context))]
+  const cards = lesson.points.map((point) => passageExercise(point, context))
+  if (level > 0) return cards
+
+  // Un rappel coupé par `===` (voir `splitNoteSections`) explique le
+  // paragraphe fragment par fragment : la première section s'affiche avec le
+  // paragraphe entier, chacune des suivantes juste avant les cartes du
+  // fragment qu'elle explique, avec ce seul fragment sous les yeux.
+  const sections = splitNoteSections(lesson.notes ?? '')
+  const first: Exercise = {
+    kind: 'rule',
+    id: `rule:${lesson.id}`,
+    title: lesson.title,
+    notes: sections.length > 1 ? sections[0]! : (lesson.notes ?? ''),
+    topic: 'grammar',
+    passage: lesson.passage,
+    intro,
+  }
+  if (sections.length <= 1) return [first, ...cards]
+
+  const exercises: Exercise[] = [first]
+  let shown = 1
+  for (const point of lesson.points) {
+    const index = fragmentIndex(point.fragment)
+    if (index !== null && index > shown && sections[index - 1]) {
+      shown = index
+      exercises.push({
+        kind: 'rule',
+        id: `rule:${lesson.id}:${index}`,
+        title: lesson.title,
+        notes: sections[index - 1]!,
+        topic: 'grammar',
+        passage: { label: `${lesson.passage.label} · ${point.fragment}`, text: fragmentTextOf(point), source: lesson.passage.source },
+      })
+    }
+    exercises.push(passageExercise(point, context))
+  }
+  return exercises
+}
+
+/** « 3/7 » → 3 ; `null` sans repère de fragment. */
+function fragmentIndex(fragment: string | undefined): number | null {
+  const match = fragment ? /^(\d+)\s*\//.exec(fragment) : null
+  return match ? Number(match[1]) : null
+}
+
+/**
+ * Le texte d'un fragment, tel que le cite sa carte-citation, trous remplis :
+ * « « Il était ___ » » et « d'une forme ordinaire » → « Il était d'une forme
+ * ordinaire ». Plusieurs trous se remplissent dans l'ordre des réponses
+ * séparées par « ; ».
+ */
+function fragmentTextOf(point: GrammarPoint): string {
+  const gaps = point.sentence.split(GAP).length - 1
+  const answers = gaps > 1 ? point.answer.split(/\s*;\s*/) : [point.answer]
+  let index = 0
+  const filled = point.sentence.replaceAll(GAP, () => answers[index++] ?? '')
+  return filled.trim().replace(/^«\s*/, '').replace(/\s*»$/, '')
 }
 
 function passageExercise(point: GrammarPoint, passage: PassageContext): PassageExercise {

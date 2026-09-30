@@ -1155,6 +1155,26 @@ describe('leçon de texte', () => {
     expect(session.slice(1).flatMap(itemIdsOf)).toEqual(['n-p1-1', 'n-p1-2', 'n-p1-3'])
   })
 
+  it('explique fragment par fragment un rappel coupé par ===, chaque section avant les cartes de son fragment', () => {
+    const cut: GrammarLesson = {
+      ...text,
+      notes: 'Premier fragment.\n\n===\n\nSecond fragment.',
+      passage: { label: '§1', text: 'Il était grand. Il était beau.' },
+      points: [
+        { id: 'c-1', fragment: '1/2', sentence: '« Il était ___. »', answer: 'grand', alt: [], options: [] },
+        { id: 'c-2', sentence: 'Explication du premier : ___.', answer: 'x', alt: [], options: [] },
+        { id: 'c-3', fragment: '2/2', sentence: '« Il était ___. »', answer: 'beau', alt: [], options: [] },
+        { id: 'c-4', fragment: '2/2', sentence: '« Il ___ beau. »', answer: 'était', alt: [], options: [] },
+      ],
+    }
+    const session = buildLessonSession(cut, 0, 1)
+    expect(session.map((exercise) => exercise.kind)).toEqual(['rule', 'passage', 'passage', 'rule', 'passage', 'passage'])
+    expect(session[0]).toMatchObject({ notes: 'Premier fragment.', passage: cut.passage })
+    expect(session[3]).toMatchObject({ notes: 'Second fragment.', passage: { label: '§1 · 2/2', text: 'Il était beau.' } })
+    // Rejouée, la leçon ne relit ni le texte ni ses explications.
+    expect(buildLessonSession(cut, 1, 1).some((exercise) => exercise.kind === 'rule')).toBe(false)
+  })
+
   it('garde le même ordre quelle que soit la graine, et ne relit plus le texte une fois la leçon sue', () => {
     const order = (seed: number) => buildLessonSession(text, 1, seed).flatMap(itemIdsOf)
     expect(order(1)).toEqual(order(99))
