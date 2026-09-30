@@ -1,7 +1,19 @@
 import { describe, expect, it } from 'vitest'
 import { unitSchema, type GrammarPoint, type Work, type WorkNode } from './schema'
 import { itemsOfUnit } from './course'
-import { isDrawn, lessonsFromWork, linksOf, matchesLocation, planRoundsOf, planTextOf, pointsOf, thesisFills, threadOf, workContextOf } from './work'
+import {
+  isDrawn,
+  lessonsFromWork,
+  linksOf,
+  matchesLocation,
+  planRoundsOf,
+  planTextOf,
+  pointsOf,
+  stephanusStart,
+  thesisFills,
+  threadOf,
+  workContextOf,
+} from './work'
 import { buildLessonSession, buildWorkSession, itemIdsOf, workLocateFor, workMatchesFor, workMatchItems, workOrder, workOrderItems, type WorkLocateExercise, type WorkPlanExercise } from '@/engine/exercises'
 import { createRng } from '@/engine/rng'
 
@@ -251,6 +263,16 @@ describe('saisir l’emplacement au clavier', () => {
     for (const value of ['§17', '6', '1, 16', '']) expect(matchesLocation('§16', value), value).toBe(false)
     expect(matchesLocation('§10-12', '10-12')).toBe(true)
     expect(matchesLocation('§10-12', '12')).toBe(false)
+  })
+
+  it('reconnaît un texte à sa pagination Stephanus, l’œuvre en plus si l’on veut', () => {
+    const label = 'République VII, 514a-517c'
+    for (const value of ['514a', '514', '514a-517c', 'République VII 514a', 'rep. vii, 514', 'republique 514a'])
+      expect(matchesLocation(label, value), value).toBe(true)
+    for (const value of ['514b', '517c', 'Banquet 514a', '', 'VII']) expect(matchesLocation(label, value), value).toBe(false)
+    expect(matchesLocation('Apologie de Socrate, 29c-30c', 'Apologie 29c')).toBe(true)
+    expect(stephanusStart('II, 4')).toBeNull()
+    expect(stephanusStart('§57, Rem. I')).toBeNull()
   })
 
   it('se saisit à partir de la troisième fois qu’on joue la leçon', () => {

@@ -73,6 +73,8 @@ function numbersOf(text: string): number[] {
  * la casse et aux accents près.
  */
 export function matchesLocation(label: string, value: string): boolean {
+  const stephanus = stephanusStart(label)
+  if (stephanus) return matchesStephanus(label, stephanus, value)
   const expected = numbersOf(label)
   const given = numbersOf(value)
   // Un paragraphe (« §16 », « §10-12 », œuvres découpées en paragraphes
@@ -89,6 +91,37 @@ export function matchesLocation(label: string, value: string): boolean {
   const plain = (text: string) =>
     text.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim()
   return plain(value).length > 0 && plain(value) === plain(label)
+}
+
+const plainText = (text: string) => text.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+const STEPHANUS = /(\d+)\s*([a-e])(?![a-z])/
+
+/**
+ * Le début d'une pagination Stephanus (ou Bekker) : « Banquet, 203c-204a »
+ * → 203, c. `null` pour un emplacement d'une autre forme (« II, 4 », « §16 »).
+ */
+export function stephanusStart(label: string): { page: number; letter: string } | null {
+  const match = STEPHANUS.exec(plainText(label))
+  return match ? { page: Number(match[1]), letter: match[2]! } : null
+}
+
+/**
+ * Un texte repéré par sa pagination (« Banquet, 203c-204a ») se désigne par
+ * sa page de départ, lettre facultative (« 203 », « 203c », « 203c-204a »),
+ * l'œuvre en plus si l'on veut (« Banquet 203c », « Rép. VII 514a ») : ses
+ * mots doivent alors être ceux du repère, ou leur début.
+ */
+function matchesStephanus(label: string, start: { page: number; letter: string }, value: string): boolean {
+  const typed = plainText(value)
+  const first = /(\d+)\s*([a-e])?(?![a-z])/.exec(typed)
+  if (!first || Number(first[1]) !== start.page) return false
+  if (first[2] && first[2] !== start.letter) return false
+  const known = plainText(label).split(/[^a-z]+/).filter(Boolean)
+  const words = typed
+    .replace(/\d+\s*[a-e]?(?![a-z])/g, ' ')
+    .split(/[^a-z]+/)
+    .filter((word) => word.length > 1)
+  return words.every((word) => known.some((each) => each.startsWith(word)))
 }
 
 /** Toutes les parties d'un sous-arbre, la racine comprise, dans l'ordre du plan. */

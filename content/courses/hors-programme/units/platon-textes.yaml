@@ -1,0 +1,415 @@
+# Unité-œuvre (voir content/oeuvres.md), pour réviser les 21 textes du
+# chapitre Platon d'un manuel de philosophie (Antiquité et Moyen Âge,
+# pp. 44-65) : associer chaque texte (œuvre, pagination Stephanus) à son idée.
+# Titres des textes : ceux du manuel. Paginations fournies par l'utilisatrice,
+# établies par lecture de marges ou sources secondaires, avec ces réserves :
+# textes 7, 16, 20 lus sur une traduction anglaise (Perseus), bornes à revoir ;
+# textes 1, 2, 6, 10, 11, 12, 17, 18 lus par NotebookLM, non revus ; texte 4,
+# fin à 440b ou 440c selon l'édition ; texte 15, 359c-360d chez SEP et IEP ;
+# texte 16, référence courante 443c-444a ; texte 17, second fragment à 598a
+# ou 598b. Aucune citation : les thèses reformulent les textes.
+
+id: platon-textes
+title: "Platon : les textes du manuel"
+subtitle: "21 textes, de l’Apologie à la République"
+icon: map
+color: sky
+group: "Platon"
+intro: |-
+  Les 21 textes de Platon du manuel, à associer à leur idée : où Platon dit-il que penser est un dialogue de l'âme avec elle-même, que la justice est l'ordre intérieur de l'âme, que l'art imite l'apparence ?
+
+  Chaque texte est repéré par son œuvre et sa pagination Stephanus ; au clavier, la page de départ suffit (« 514 », « 514a », « Rép. VII 514a »).
+work:
+  parts:
+    - id: connaitre
+      label: "Textes 1-8"
+      title: "Philosopher et connaître"
+      parts:
+        - id: b-1-4
+          label: "Textes 1-4"
+          question: "Qu'est-ce que philosopher, et que faut-il pour connaître ?"
+          parts:
+            - id: t1
+              label: "Apologie de Socrate, 29c-30c"
+              title: "Socrate et la philosophie"
+              summary: "Philosopher est une mission : prendre soin de son âme"
+              points:
+                - id: pt1-1
+                  sentence: "Même acquitté à condition de cesser de philosopher, Socrate refuserait : il obéira au ___ plutôt qu'aux Athéniens."
+                  answer: "dieu"
+                - id: pt1-2
+                  sentence: "Socrate exhorte chacun à se soucier de son ___ pour la rendre la meilleure possible, plutôt que de ses richesses ou de sa réputation."
+                  answer: "âme"
+            - id: t2
+              label: "Théétète, 189e-190a"
+              title: "Un dialogue intérieur"
+              summary: "Penser, c'est se parler à soi-même"
+              rel: declinaison
+              points:
+                - id: pt2-1
+                  sentence: "Penser, c'est pour l'âme tenir un ___ avec elle-même, en s'interrogeant et en se répondant."
+                  answer: "discours"
+                - id: pt2-2
+                  sentence: "Quand l'âme a tranché et affirme une même chose sans plus hésiter, cela s'appelle son ___."
+                  answer: "opinion"
+            - id: t3
+              label: "Phédon, 78c-79a"
+              title: "Les Essences"
+              summary: "Les réalités en soi sont immuables, les choses sensibles changent"
+              rel: declinaison
+              points:
+                - id: pt3-1
+                  sentence: "Ce qui n'est pas composé demeure toujours identique à soi : les réalités en soi, comme l'Égal ou le Beau, n'admettent jamais le moindre ___."
+                  answer: "changement"
+                - id: pt3-2
+                  sentence: "Les réalités toujours identiques ne se saisissent que par le raisonnement : elles sont ___, alors que les choses multiples se voient et se touchent."
+                  answer: "invisibles"
+            - id: t4
+              label: "Cratyle, 439e-440c"
+              title: "La connaissance requiert un objet stable"
+              summary: "Si tout s'écoule, rien ne peut être connu"
+              rel: declinaison
+              points:
+                - id: pt4-1
+                  sentence: "Si toutes choses s'écoulent, comme le soutiennent les disciples d'___, aucune connaissance n'est possible."
+                  answer: "Héraclite"
+                - id: pt4-2
+                  sentence: "Ce qui change sans cesse ne peut être connu de personne : au moment où l'on s'en approche pour le connaître, il est déjà devenu ___."
+                  answer: "autre"
+        - id: b-5-8
+          label: "Textes 5-8"
+          question: "Comment l'âme s'élève-t-elle du sensible vers les Idées ?"
+          rel: declinaison
+          parts:
+            - id: t5
+              label: "Timée, 48e-50d"
+              title: "La Nature et l'Idée"
+              summary: "Entre l'Idée et sa copie, un troisième genre : le réceptacle"
+              points:
+                - id: pt5-1
+                  sentence: "Au modèle intelligible et à sa copie qui devient, il faut ajouter un troisième genre : le ___ de tout devenir, pareil à une nourrice."
+                  answer: "réceptacle"
+                - id: pt5-2
+                  sentence: "Le réceptacle reçoit toutes les formes sans en posséder aucune, comme l'___ qu'on modèle sans cesse en figures diverses."
+                  answer: "or"
+            - id: t6
+              label: "Phèdre, 249b-d"
+              title: "L'idée et la réminiscence"
+              summary: "Comprendre, c'est se ressouvenir de ce que l'âme a contemplé"
+              rel: declinaison
+              points:
+                - id: pt6-1
+                  sentence: "Comprendre, pour l'homme, c'est aller de la multiplicité des sensations vers une ___ que rassemble le raisonnement."
+                  answer: "unité"
+                - id: pt6-2
+                  sentence: "Seule la pensée du philosophe a des ___, parce qu'elle s'attache par le souvenir aux réalités divines."
+                  answer: "ailes"
+            - id: t7
+              label: "République VII, 514a-517c"
+              title: "Le mythe de la caverne"
+              summary: "L'âme doit s'élever des ombres jusqu'au Bien"
+              rel: declinaison
+              points:
+                - id: pt7-1
+                  sentence: "Enchaînés depuis l'enfance, les prisonniers tiennent pour la réalité les ___ des objets projetées sur la paroi."
+                  answer: "ombres"
+                - id: pt7-2
+                  sentence: "Au terme de la montée, le prisonnier délivré contemple le ___, image de l'Idée du Bien."
+                  answer: "soleil"
+                - id: pt7-3
+                  sentence: "Redescendu parmi les siens, celui qui a vu la lumière serait moqué, et même mis à ___ s'il voulait les délivrer."
+                  answer: "mort"
+            - id: t8
+              label: "République VI, 509d-510b"
+              title: "La ligne de la connaissance"
+              summary: "Du visible à l'intelligible, quatre degrés de réalité et de savoir"
+              rel: declinaison
+              points:
+                - id: pt8-1
+                  sentence: "Une ligne est coupée en deux segments inégaux, le visible et l'___, chacun recoupé selon la même proportion."
+                  answer: "intelligible"
+                - id: pt8-2
+                  sentence: "Dans le premier segment du visible viennent les ___ : les ombres, et les reflets dans l'eau ou sur les surfaces polies."
+                  answer: "images"
+                - id: pt8-3
+                  sentence: "Dans la première section de l'intelligible, l'âme part d'___ pour aller vers une conclusion, non vers un principe."
+                  answer: "hypothèses"
+    - id: amour
+      label: "Textes 9-12"
+      title: "L'amour"
+      parts:
+        - id: b-9-12
+          label: "Textes 9-12"
+          question: "Qu'est-ce que l'Amour, et jusqu'où conduit-il ?"
+          parts:
+            - id: t9
+              label: "Banquet, 192b-192e"
+              title: "La finalité de l'Amour"
+              summary: "Aimer, c'est chercher sa moitié perdue"
+              points:
+                - id: pt9-1
+                  sentence: "Les amants qui se retrouvent ne savent dire ce qu'ils attendent l'un de l'autre : leur âme veut autre chose, qu'elle ne peut que ___."
+                  answer: "deviner"
+                - id: pt9-2
+                  sentence: "À Héphaïstos qui leur offrirait de les ___ en un seul être, les amants répondraient oui."
+                  answer: "souder"
+                  alt: ["fondre", "unir"]
+                - id: pt9-3
+                  sentence: "L'amour est le nom du désir et de la poursuite de la ___ perdue."
+                  answer: "totalité"
+                  alt: ["unité"]
+            - id: t10
+              label: "Banquet, 203c-204a"
+              title: "L'Amour est manque d'être"
+              summary: "L'Amour, fils de Pauvreté et d'Expédient, est philosophe"
+              rel: changement-de-question
+              points:
+                - id: pt10-1
+                  sentence: "Né de Poros, l'Expédient, et de Pénia, la ___, l'Amour tient de sa mère d'être toujours dans l'indigence."
+                  answer: "Pauvreté"
+                - id: pt10-2
+                  sentence: "Ni savant ni ignorant, l'Amour se tient entre les deux : il est ___."
+                  answer: "philosophe"
+            - id: t11
+              label: "Banquet, 209e-210d"
+              title: "Les degrés de l'Amour"
+              summary: "Du beau corps aux belles âmes, puis aux sciences"
+              rel: consequence
+              points:
+                - id: pt11-1
+                  sentence: "Il faut commencer par aimer un seul beau ___, puis reconnaître que la beauté de tous est une et la même."
+                  answer: "corps"
+                - id: pt11-2
+                  sentence: "On tient ensuite la beauté des ___ pour plus précieuse que celle des corps."
+                  answer: "âmes"
+                - id: pt11-3
+                  sentence: "Tourné enfin vers le vaste ___ du beau, on enfante de beaux discours dans un amour sans bornes de la sagesse."
+                  answer: "océan"
+            - id: t12
+              label: "Banquet, 210e-211d"
+              title: "La Beauté absolue"
+              summary: "Le Beau en soi, éternel, dont participent toutes les belles choses"
+              rel: consequence
+              points:
+                - id: pt12-1
+                  sentence: "Le Beau en soi ne naît ni ne ___, ne croît ni ne décroît."
+                  answer: "périt"
+                - id: pt12-2
+                  sentence: "Toutes les autres belles choses ___ du Beau en soi, sans que leur naissance ou leur mort l'altère en rien."
+                  answer: "participent"
+                - id: pt12-3
+                  sentence: "C'est en contemplant le Beau en soi que la vie vaut d'être ___ pour un homme."
+                  answer: "vécue"
+    - id: justice
+      label: "Textes 13-16"
+      title: "La justice"
+      parts:
+        - id: b-13-16
+          label: "Textes 13-16"
+          question: "Vaut-il mieux être juste ou injuste, maître de soi ou livré à ses désirs ?"
+          parts:
+            - id: t13
+              label: "Gorgias, 483b-484a"
+              title: "La force est la loi suprême"
+              summary: "Par nature, le plus fort doit avoir plus que le plus faible"
+              points:
+                - id: pt13-1
+                  sentence: "Selon Calliclès, les lois sont l'œuvre des ___ et du grand nombre, qui les font pour eux-mêmes et dans leur intérêt."
+                  answer: "faibles"
+                - id: pt13-2
+                  sentence: "En montrant que le meilleur doit avoir plus que le moins bon, c'est la ___ elle-même qui montre ce qui est juste."
+                  answer: "nature"
+                - id: pt13-3
+                  sentence: "Les meilleurs, on les dresse dès l'enfance comme de jeunes ___, par des charmes et des incantations."
+                  answer: "lions"
+            - id: t14
+              label: "Gorgias, 493d-494b"
+              title: "Mieux vaut une vie en ordre que le désordre des passions"
+              summary: "Le tempérant aux tonneaux pleins, l'intempérant aux tonneaux percés"
+              rel: declinaison
+              points:
+                - id: pt14-1
+                  sentence: "L'homme tempérant ressemble à qui possède des ___ sains et pleins : il n'a plus à s'en soucier."
+                  answer: "tonneaux"
+                - id: pt14-2
+                  sentence: "Calliclès répond que la vie de qui n'a plus rien à verser est celle d'une ___."
+                  answer: "pierre"
+            - id: t15
+              label: "République II, 359b-360d"
+              title: "L'anneau de Gygès"
+              summary: "Assuré de l'impunité, nul ne resterait juste"
+              rel: declinaison
+              points:
+                - id: pt15-1
+                  sentence: "Le berger qui trouve l'anneau découvre qu'en tournant le chaton vers l'intérieur, il devient ___."
+                  answer: "invisible"
+                - id: pt15-2
+                  sentence: "Avec cet anneau, il séduit la reine, tue le ___ et s'empare du pouvoir."
+                  answer: "roi"
+                - id: pt15-3
+                  sentence: "Nul n'est juste volontairement, mais par ___ : à qui ne craindrait rien, l'injustice rapporterait davantage."
+                  answer: "contrainte"
+            - id: t16
+              label: "République IV, 443d-444a"
+              title: "La justice, c'est l'ordre et l'harmonie de l'âme"
+              summary: "La justice : que chaque partie de l'âme fasse sa propre tâche"
+              rel: declinaison
+              points:
+                - id: pt16-1
+                  sentence: "La justice ne regarde pas les actions extérieures, mais l'ordre ___ : que chaque partie de l'âme fasse sa propre tâche."
+                  answer: "intérieur"
+                - id: pt16-2
+                  sentence: "Le juste accorde les trois parties de son âme comme les trois notes d'une ___ : la haute, la basse et la moyenne."
+                  answer: "gamme"
+                  alt: ["octave"]
+    - id: cite
+      label: "Textes 17-21"
+      title: "L'art et la cité"
+      parts:
+        - id: b-17-21
+          label: "Textes 17-21"
+          question: "Que valent l'art et le poète, et qui doit gouverner la cité ?"
+          parts:
+            - id: t17
+              label: "République X, 597b-598c"
+              title: "L'art n'est qu'imitation et illusion"
+              summary: "Le peintre imite l'apparence, au troisième rang de la vérité"
+              points:
+                - id: pt17-1
+                  sentence: "Il y a trois lits : celui de la nature, œuvre du dieu, celui du ___, et celui du peintre."
+                  answer: "menuisier"
+                - id: pt17-2
+                  sentence: "Le peintre est un imitateur, au ___ rang à partir de la vérité."
+                  answer: "troisième"
+                  alt: ["3e"]
+                - id: pt17-3
+                  sentence: "La peinture imite, non ce qui est, mais ce qui ___ : c'est une imitation de l'apparence."
+                  answer: "paraît"
+            - id: t18
+              label: "Ion, 534b-d"
+              title: "L'inspiration"
+              summary: "Le poète crée par un don divin, non par un art"
+              rel: declinaison
+              points:
+                - id: pt18-1
+                  sentence: "Le poète est chose légère, ailée et ___ : il ne peut créer avant d'être inspiré."
+                  answer: "sacrée"
+                - id: pt18-2
+                  sentence: "Les poètes ne composent pas en vertu d'un ___, mais d'une faveur divine."
+                  answer: "art"
+                - id: pt18-3
+                  sentence: "Chacun ne réussit que dans le genre où la ___ le pousse : dithyrambes, éloges, épopée ou iambes."
+                  answer: "Muse"
+            - id: t19
+              label: "Lettre VII, 325b-326b"
+              title: "Le philosophe-roi"
+              summary: "Les maux ne cesseront pas avant que les philosophes gouvernent"
+              rel: declinaison
+              points:
+                - id: pt19-1
+                  sentence: "La condamnation de ___ par la démocratie restaurée détourne Platon de l'action politique."
+                  answer: "Socrate"
+                - id: pt19-2
+                  sentence: "Toutes les cités actuelles, conclut-il, sont mal ___."
+                  answer: "gouvernées"
+                - id: pt19-3
+                  sentence: "Les maux ne cesseront pas avant que les philosophes n'arrivent au ___ ou que les gouvernants ne deviennent philosophes."
+                  answer: "pouvoir"
+            - id: t20
+              label: "République V, 457c-460c"
+              title: "La première conception d'un « État totalitaire »"
+              summary: "Chez les gardiens, femmes et enfants communs, et unions réglées"
+              rel: declinaison
+              points:
+                - id: pt20-1
+                  sentence: "Chez les gardiens, les femmes et les enfants seront ___ : nul parent ne connaîtra son enfant."
+                  answer: "communs"
+                - id: pt20-2
+                  sentence: "Il faut unir le plus souvent les meilleurs avec les ___, et le moins possible les moins bons entre eux."
+                  answer: "meilleures"
+                - id: pt20-3
+                  sentence: "Des tirages au sort ___ feront accuser le hasard, et non les gouvernants, par ceux qui seront écartés."
+                  answer: "truqués"
+                  alt: ["arrangés"]
+            - id: t21
+              label: "République III, 389b-d"
+              title: "Le mensonge, remède politique"
+              summary: "Seuls les gouvernants peuvent mentir, pour le bien de la cité"
+              rel: declinaison
+              points:
+                - id: pt21-1
+                  sentence: "Utile aux hommes à la manière d'un remède, le mensonge doit être réservé aux ___, non laissé aux profanes."
+                  answer: "médecins"
+                - id: pt21-2
+                  sentence: "Seuls les ___ de la cité peuvent mentir, pour son bien, face aux ennemis ou aux citoyens."
+                  answer: "gouvernants"
+                  alt: ["chefs", "magistrats"]
+  recaps:
+    - at: b-1-4
+      label: "Textes 1-4"
+      title: "Philosopher, penser, connaître l'être stable"
+      notes: |-
+        **Philosopher, c'est prendre soin de son âme (Apologie) ; penser, c'est dialoguer avec soi (Théétète) ; et il n'y a de connaissance que de ce qui demeure (Phédon, Cratyle).**
+
+        | Texte | Idée |
+        | 1. Apologie, 29c-30c | philosopher est une mission reçue du dieu : prendre soin de son âme plutôt que des richesses |
+        | 2. Théétète, 189e-190a | la pensée est un discours intérieur ; l'opinion, l'affirmation où l'âme s'arrête |
+        | 3. Phédon, 78c-79a | les réalités en soi, non composées, invisibles, restent identiques ; les choses sensibles changent |
+        | 4. Cratyle, 439e-440c | si tout s'écoule (Héraclite), rien ne peut être connu |
+
+        ! Le Phédon et le Cratyle disent la même chose de deux côtés : le premier montre l'objet stable, le second ce qu'on perd sans lui.
+    - at: b-5-8
+      label: "Textes 5-8"
+      title: "Des images aux Idées"
+      notes: |-
+        **Entre le monde sensible et les Idées, Platon pense un réceptacle (Timée), une remontée par la réminiscence (Phèdre), et une échelle de la connaissance (la caverne, la ligne).**
+
+        | Texte | Idée |
+        | 5. Timée, 48e-50d | un troisième genre, le réceptacle, reçoit toutes les formes sans en avoir aucune |
+        | 6. Phèdre, 249b-d | comprendre, c'est rassembler le multiple en une unité : se ressouvenir des Idées |
+        | 7. République VII, 514a-517c | des ombres de la caverne au soleil, image du Bien |
+        | 8. République VI, 509d-510b | la ligne : images, choses visibles, pensée hypothétique, intellection |
+
+        La ligne (livre VI) précède la caverne (livre VII) dans la *République* : l'une classe les degrés du savoir, l'autre met en scène l'ascension.
+
+        ! Dans la ligne, les mathématiques ne sont pas le sommet : elles partent d'hypothèses sans remonter au principe.
+    - at: b-9-12
+      label: "Textes 9-12"
+      title: "L'ascension de l'Amour dans le Banquet"
+      notes: |-
+        **Dans le Banquet, l'Amour passe d'une recherche de la moitié perdue (Aristophane) à un désir du Beau qui monte jusqu'au Beau en soi (Diotime).** Les quatre textes suivent l'ordre du dialogue.
+
+        | Texte | Idée |
+        | 9. Banquet, 192b-e | Aristophane : aimer, c'est chercher sa moitié, désirer la totalité perdue |
+        | 10. Banquet, 203c-204a | Diotime : fils de Pauvreté et d'Expédient, l'Amour est manque, donc philosophe |
+        | 11. Banquet, 209e-210d | les degrés : un beau corps, tous les corps, les âmes, puis les sciences |
+        | 12. Banquet, 210e-211d | au sommet, le Beau en soi, éternel, dont tout le reste participe |
+
+        ! Le manque n'est pas une faiblesse de l'Amour : c'est ce qui en fait un intermédiaire, et le pousse vers le Beau.
+    - at: b-13-16
+      label: "Textes 13-16"
+      title: "Force, désir et justice"
+      notes: |-
+        **Contre Calliclès, pour qui la nature donne raison au plus fort et au désir sans frein (Gorgias), et contre Glaucon, pour qui nul n'est juste volontairement (Gygès), Platon définit la justice comme l'ordre intérieur de l'âme.**
+
+        | Texte | Idée |
+        | 13. Gorgias, 483b-484a | Calliclès : les lois sont l'œuvre des faibles ; par nature, le plus fort doit avoir plus |
+        | 14. Gorgias, 493d-494b | les tonneaux : le tempérant est comblé, l'intempérant doit remplir sans fin des tonneaux percés |
+        | 15. République II, 359b-360d | l'anneau de Gygès : assuré de l'impunité, nul ne resterait juste |
+        | 16. République IV, 443d-444a | la justice : chaque partie de l'âme fait sa tâche, accordées comme une gamme |
+
+        ! Le mythe de Gygès n'est pas la thèse de Platon : Glaucon le raconte pour que Socrate le réfute.
+    - at: b-17-21
+      label: "Textes 17-21"
+      title: "L'art et le poète, le philosophe et la cité"
+      notes: |-
+        **L'art imite l'apparence (République X) et le poète crée par inspiration, sans savoir (Ion) ; la cité, elle, doit être gouvernée par ceux qui savent, quitte à régler les unions et à mentir pour son bien (Lettre VII, République V et III).**
+
+        | Texte | Idée |
+        | 17. République X, 597b-598c | trois lits : le peintre imite l'apparence, au troisième rang de la vérité |
+        | 18. Ion, 534b-d | le poète crée par un don divin, hors de sa raison, non par un art |
+        | 19. Lettre VII, 325b-326b | après la mort de Socrate, les maux ne cesseront qu'avec des philosophes au pouvoir |
+        | 20. République V, 457c-460c | chez les gardiens, femmes et enfants communs, unions réglées par des tirages truqués |
+        | 21. République III, 389b-d | le mensonge, remède réservé aux gouvernants |
+
+        ! Le « totalitarisme » du texte 20 est une lecture moderne (le titre du manuel) : chez Platon, il ne vise que la classe des gardiens.

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import type { WorkLocateExercise } from '@/engine/exercises'
-import { matchesLocation } from '@/content/work'
+import { matchesLocation, stephanusStart } from '@/content/work'
 import { Button } from '@/components/Button'
 import { Rich } from '@/components/session/RuleNote'
 import { OptionList } from '@/components/session/OptionList'
@@ -96,7 +96,8 @@ export function WorkLocate({
               if (event.key === 'Enter' && !checked && value.trim()) submit(value)
             }}
             disabled={checked}
-            placeholder="II, 4"
+            // Un exemple de la forme attendue, qui ne soit la réponse d'aucune carte.
+            placeholder={stephanusStart(answer.label) ? 'ex. 17a' : 'II, 4'}
             autoCapitalize="characters"
             autoCorrect="off"
             spellCheck={false}
