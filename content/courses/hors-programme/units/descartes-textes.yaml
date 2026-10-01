@@ -3,8 +3,8 @@
 # Titres et références fournis par l'utilisatrice ; les textes qui partagent
 # une même référence (Méditations I, Discours IV, Discours III, Méditations IV,
 # Règles IV) ne forment qu'une case, qui porte les thèses de chacun : 23
-# cases. Aucune citation : les thèses reformulent les textes, au plus près
-# des formules connues.
+# cases. Thèses alignées sur les extraits du manuel (J. Russ, C. Leguil,
+# Philosophie. Les chemins de la pensée, pp. 138-160).
 
 id: descartes-textes
 title: "Descartes : textes clés"
@@ -39,6 +39,12 @@ work:
                 - id: dt-dm1-3
                   sentence: "Ce n'est pas assez d'avoir l'esprit bon, mais le principal est de l'___ bien."
                   answer: "appliquer"
+                - id: dt-dm1-4
+                  sentence: "Ceux qui ne marchent que fort lentement peuvent avancer beaucoup davantage, s'ils suivent toujours le droit ___."
+                  answer: "chemin"
+                - id: dt-dm1-5
+                  sentence: "Les plus grandes âmes sont capables des plus grands ___ aussi bien que des plus grandes vertus."
+                  answer: "vices"
             - id: d-dm2
               label: "Discours de la méthode, II"
               title: "Les règles de la méthode"
@@ -54,6 +60,12 @@ work:
                 - id: dt-dm2-3
                   sentence: "Dernier précepte : faire partout des dénombrements si entiers et des ___ si générales que je fusse assuré de ne rien omettre."
                   answer: "revues"
+                - id: dt-dm2-4
+                  sentence: "Troisième précepte : conduire par ___ mes pensées, en commençant par les objets les plus simples et les plus aisés à connaître."
+                  answer: "ordre"
+                - id: dt-dm2-5
+                  sentence: "Ne comprendre rien de plus en mes jugements que ce qui se présenterait si clairement et si ___ à mon esprit que je n'eusse aucune occasion de le mettre en doute."
+                  answer: "distinctement"
             - id: d-dm3
               label: "Discours de la méthode, III"
               title: "Le doute méthodique ; La morale provisoire"
@@ -75,6 +87,15 @@ work:
                 - id: dt-dm3-5
                   sentence: "Troisième maxime : tâcher toujours plutôt à me vaincre que la fortune, et à changer mes ___ que l'ordre du monde."
                   answer: "désirs"
+                - id: dt-dm3-6
+                  sentence: "Comme en abattant un vieux ___, on en réserve les démolitions pour en bâtir un nouveau, je détruisais mes opinions mal fondées."
+                  answer: "logis"
+                - id: dt-dm3-7
+                  sentence: "Il n'y a rien qui soit entièrement en notre pouvoir que nos ___."
+                  answer: "pensées"
+                - id: dt-dm3-8
+                  sentence: "Pour conclusion de cette morale, je ne pouvais mieux faire que d'employer toute ma vie à cultiver ma ___."
+                  answer: "raison"
             - id: d-dm4
               label: "Discours de la méthode, IV"
               title: "Le cogito ; Preuve de Dieu par l'idée de parfait ; Dieu, garant de l'évidence"
@@ -91,8 +112,14 @@ work:
                   sentence: "L'idée d'un être plus parfait que le mien, il était manifestement impossible de la tenir du ___ : elle avait été mise en moi par une nature plus parfaite."
                   answer: "néant"
                 - id: dt-dm4-4
-                  sentence: "La règle que les choses que nous concevons fort clairement et fort distinctement sont toutes vraies n'est assurée qu'à cause que Dieu est ou ___."
+                  sentence: "La règle que les choses que nous concevons très clairement et très distinctement sont toutes vraies n'est assurée qu'à cause que Dieu est ou ___."
                   answer: "existe"
+                - id: dt-dm4-5
+                  sentence: "Ce moi, c'est-à-dire l'âme, est entièrement distinct du corps, et même plus aisé à ___ que lui."
+                  answer: "connaître"
+                - id: dt-dm4-6
+                  sentence: "Je suis une substance qui, pour être, n'a besoin d'aucun ___, ni ne dépend d'aucune chose matérielle."
+                  answer: "lieu"
             - id: d-dm5
               label: "Discours de la méthode, V"
               title: "Les animaux-machines"
@@ -100,11 +127,12 @@ work:
               rel: consequence
               points:
                 - id: dt-dm5-1
-                  sentence: "Les pies et les ___ peuvent proférer des paroles comme nous, mais non témoigner qu'ils pensent ce qu'ils disent."
-                  answer: "perroquets"
+                  sentence: "Ce que les animaux font mieux que nous ne prouve pas qu'ils ont de l'___ : à ce compte, ils en auraient plus qu'aucun de nous."
+                  answer: "esprit"
                 - id: dt-dm5-2
-                  sentence: "La raison est un instrument ___, qui peut servir en toutes sortes de rencontres, au lieu que les organes ont besoin d'une disposition particulière pour chaque action."
-                  answer: "universel"
+                  sentence: "Plusieurs animaux témoignent plus d'___ que nous en quelques-unes de leurs actions, mais n'en témoignent point du tout en beaucoup d'autres."
+                  answer: "industrie"
+                  alt: ["habileté"]
                 - id: dt-dm5-3
                   sentence: "C'est la nature qui agit dans les animaux selon la disposition de leurs organes, comme une ___ qui n'est composée que de roues et de ressorts."
                   answer: "horloge"
@@ -123,6 +151,12 @@ work:
                 - id: dt-dm6-3
                   sentence: "Ce serait surtout pour la conservation de la ___, qui est le premier bien et le fondement de tous les autres biens de cette vie."
                   answer: "santé"
+                - id: dt-dm6-4
+                  sentence: "L'esprit dépend si fort du tempérament et des organes du corps que c'est dans la ___ qu'on doit chercher le moyen de rendre les hommes plus sages."
+                  answer: "médecine"
+                - id: dt-dm6-5
+                  sentence: "Je ne pouvais tenir cachées ces notions sans pécher contre la loi qui nous oblige à procurer le bien ___ de tous les hommes."
+                  answer: "général"
     - id: meditations
       label: "Méditations métaphysiques"
       parts:
@@ -139,7 +173,7 @@ work:
                   sentence: "Il est de la prudence de ne se fier jamais entièrement à ceux qui nous ont une fois ___."
                   answer: "trompés"
                 - id: dt-m1-2
-                  sentence: "Il n'y a point d'indices certains par lesquels on puisse distinguer nettement la veille d'avec le ___."
+                  sentence: "Il n'y a point d'indices concluants ni de marques assez certaines par où l'on puisse distinguer nettement la veille d'avec le ___."
                   answer: "sommeil"
                 - id: dt-m1-3
                   sentence: "Peut-être Dieu a-t-il voulu que je me trompe toutes les fois que je fais l'addition de deux et de trois, ou que je nombre les côtés d'un ___."
@@ -147,6 +181,12 @@ work:
                 - id: dt-m1-4
                   sentence: "Je supposerai qu'un certain mauvais génie, non moins rusé et trompeur que ___, a employé toute son industrie à me tromper."
                   answer: "puissant"
+                - id: dt-m1-5
+                  sentence: "S'il n'est pas en mon pouvoir de parvenir à la connaissance d'aucune vérité, à tout le moins il est en ma puissance de ___ mon jugement."
+                  answer: "suspendre"
+                - id: dt-m1-6
+                  sentence: "Je me compare à ces insensés qui s'imaginent être des cruches ou avoir un corps de ___."
+                  answer: "verre"
             - id: d-m2
               label: "Méditations métaphysiques, II"
               title: "Le morceau de cire"
@@ -158,11 +198,14 @@ work:
                   answer: "demeure"
                   alt: ["reste"]
                 - id: dt-m2-2
-                  sentence: "La perception de la cire n'est ni une vision, ni un attouchement, ni une imagination, mais une ___ de l'esprit."
-                  answer: "inspection"
+                  sentence: "Je ne saurais concevoir par imagination ce qu'est cette cire : il n'y a que mon ___ seul qui la conçoive."
+                  answer: "entendement"
                 - id: dt-m2-3
-                  sentence: "De la fenêtre, je ne vois que des chapeaux et des manteaux, et je ___ que ce sont des hommes."
-                  answer: "juge"
+                  sentence: "Ôtant tout ce qui n'appartient pas à la cire, il ne demeure rien que quelque chose d'étendu, de flexible et de ___."
+                  answer: "muable"
+                - id: dt-m2-4
+                  sentence: "Je conçois la cire capable d'une ___ de changements, que je ne saurais parcourir par mon imagination."
+                  answer: "infinité"
             - id: d-m3
               label: "Méditations métaphysiques, III"
               title: "Nous naissons avec des idées innées, telle celle de Dieu"
@@ -170,14 +213,17 @@ work:
               rel: consequence
               points:
                 - id: dt-m3-1
-                  sentence: "Parmi mes idées, les unes semblent nées avec moi, d'autres venir du dehors, d'autres encore être faites et ___ par moi-même."
-                  answer: "inventées"
+                  sentence: "L'idée de Dieu, je ne l'ai pas reçue par les ___, et elle ne s'est jamais offerte à moi contre mon attente."
+                  answer: "sens"
                 - id: dt-m3-2
                   sentence: "L'idée de Dieu est née et produite avec moi dès que j'ai été créé, comme l'idée de ___."
                   answer: "moi-même"
                 - id: dt-m3-3
-                  sentence: "Dieu a mis en moi cette idée pour être comme la ___ de l'ouvrier empreinte sur son ouvrage."
+                  sentence: "Dieu, en me créant, a mis en moi cette idée comme la ___ de l'ouvrier empreinte sur son ouvrage."
                   answer: "marque"
+                - id: dt-m3-4
+                  sentence: "L'idée de Dieu n'est pas une pure production ou ___ de mon esprit : je n'y puis rien diminuer ni ajouter."
+                  answer: "fiction"
             - id: d-m4
               label: "Méditations métaphysiques, IV"
               title: "La liberté ; L'erreur"
@@ -185,18 +231,23 @@ work:
               rel: consequence
               points:
                 - id: dt-m4-1
-                  sentence: "C'est surtout la volonté que j'expérimente en moi si grande que je ne conçois point l'idée d'aucune autre plus ___."
+                  sentence: "C'est surtout la volonté que j'expérimente en moi si grande que je ne conçois point l'idée d'aucune autre plus ___ et plus étendue."
                   answer: "ample"
-                  alt: ["étendue"]
                 - id: dt-m4-2
-                  sentence: "L'indifférence que je sens lorsque je ne suis emporté vers aucun côté est le plus ___ degré de la liberté."
+                  sentence: "L'indifférence que je sens lorsque je ne suis emporté vers aucun côté par le poids d'aucune raison est le plus ___ degré de la liberté."
                   answer: "bas"
                 - id: dt-m4-3
-                  sentence: "Mes erreurs viennent de ce que, la volonté étant plus ample que l'___, je ne la contiens pas dans les mêmes limites."
+                  sentence: "Mes erreurs naissent de ce que, la volonté étant plus ample que l'___, je ne la contiens pas dans les mêmes limites."
                   answer: "entendement"
                 - id: dt-m4-4
-                  sentence: "Si je m'abstiens de juger d'une chose que je ne conçois pas assez clairement et distinctement, je ne me ___ point."
-                  answer: "trompe"
+                  sentence: "Étendue aux choses que je n'entends pas, la volonté s'égare fort aisément, et choisit le mal pour le bien, ou le ___ pour le vrai."
+                  answer: "faux"
+                - id: dt-m4-5
+                  sentence: "C'est la volonté qui me fait connaître que je porte l'image et la ___ de Dieu."
+                  answer: "ressemblance"
+                - id: dt-m4-6
+                  sentence: "La grâce divine et la connaissance naturelle, bien loin de diminuer ma liberté, l'___ plutôt et la fortifient."
+                  answer: "augmentent"
             - id: d-m5
               label: "Méditations métaphysiques, V"
               title: "L'argument ontologique"
@@ -204,11 +255,14 @@ work:
               rel: consequence
               points:
                 - id: dt-m5-1
-                  sentence: "L'existence ne peut non plus être séparée de l'essence de Dieu que de l'essence d'un triangle la grandeur de ses trois angles égaux à deux ___."
-                  answer: "droits"
+                  sentence: "Toutes les fois que je pense à un être premier et souverain et tire son idée du ___ de mon esprit, il est nécessaire que je lui attribue toutes sortes de perfections."
+                  answer: "trésor"
                 - id: dt-m5-2
-                  sentence: "Concevoir un Dieu sans existence, c'est comme concevoir une ___ sans vallée."
+                  sentence: "Il n'y a pas moins de répugnance à concevoir un Dieu auquel manque l'existence qu'à concevoir une ___ qui n'ait point de vallée."
                   answer: "montagne"
+                - id: dt-m5-3
+                  sentence: "Ayant reconnu que l'___ est une perfection, je conclus que cet être premier et souverain existe véritablement."
+                  answer: "existence"
             - id: d-m6
               label: "Méditations métaphysiques, VI"
               title: "La conscience et le corps"
@@ -222,8 +276,11 @@ work:
                   sentence: "Je lui suis très étroitement conjoint, et tellement confondu et mêlé que je compose comme un seul ___ avec lui."
                   answer: "tout"
                 - id: dt-m6-3
-                  sentence: "Les sentiments de faim, de soif, de ___ ne sont que des façons confuses de penser, qui viennent de l'union de l'esprit avec le corps."
+                  sentence: "Les sentiments de faim, de soif, de ___ ne sont que des façons confuses de penser, qui proviennent de l'union de l'esprit avec le corps."
                   answer: "douleur"
+                - id: dt-m6-4
+                  sentence: "Si je n'étais pas uni à mon corps, j'apercevrais sa blessure par le seul ___, comme un pilote aperçoit si quelque chose se rompt dans son vaisseau."
+                  answer: "entendement"
         - id: b-reponses
           label: "Réponses aux deuxièmes objections"
           question: "Que répond Descartes aux deuxièmes objections ?"
@@ -235,11 +292,14 @@ work:
               summary: "Est pensée tout ce dont nous sommes immédiatement conscients"
               points:
                 - id: dt-r1-1
-                  sentence: "Par le nom de pensée, je comprends tout ce qui est tellement en nous que nous en sommes ___ connaissants."
+                  sentence: "Par le nom de pensée, je comprends tout ce qui est tellement en nous que nous l'apercevons ___ par nous-mêmes."
                   answer: "immédiatement"
                 - id: dt-r1-2
                   sentence: "Toutes les opérations de la volonté, de l'entendement, de l'imagination et des ___ sont des pensées."
                   answer: "sens"
+                - id: dt-r1-3
+                  sentence: "Est pensée tout ce dont nous avons une connaissance ___ : ainsi les opérations de la volonté ou de l'imagination."
+                  answer: "intérieure"
             - id: d-r7
               label: "Réponses aux deuxièmes objections, objection VII"
               title: "L'immortalité de l'âme"
@@ -247,12 +307,17 @@ work:
               rel: declinaison
               points:
                 - id: dt-r7-1
-                  sentence: "Esprit et corps étant réellement distincts, de ce que le corps périt on ne peut conclure que l'esprit ___ avec lui."
-                  answer: "meure"
-                  alt: ["périsse"]
+                  sentence: "Rien ne nous persuade que la mort d'une substance telle que l'esprit doive suivre d'une cause si légère qu'un changement de ___, simple mode du corps."
+                  answer: "figure"
                 - id: dt-r7-2
-                  sentence: "Je ne puis démontrer que Dieu ne veuille pas ___ l'âme : cela dépend de sa seule volonté."
-                  answer: "anéantir"
+                  sentence: "Si Dieu a donné à l'âme une durée limitée, cela ne dépend que de sa pure ___ : le raisonnement humain ne peut le déterminer."
+                  answer: "volonté"
+                - id: dt-r7-3
+                  sentence: "Nous n'avons aucun argument ni exemple qui nous persuade qu'il y a des ___ sujettes à être anéanties."
+                  answer: "substances"
+                - id: dt-r7-4
+                  sentence: "Autant que cela peut être connu par la philosophie naturelle, l'esprit ou l'âme de l'homme est ___."
+                  answer: "immortelle"
     - id: regles-principes-lettres
       label: "Règles, Principes et Lettres"
       parts:
@@ -266,11 +331,17 @@ work:
               summary: "Ne s'occuper que de ce qu'on peut connaître avec certitude"
               points:
                 - id: dt-rg2-1
-                  sentence: "Il ne faut s'occuper que des objets dont notre esprit paraît capable d'acquérir une connaissance certaine et ___."
-                  answer: "indubitable"
+                  sentence: "Chacun se permet plus hardiment de ___ dans un sujet obscur que dans un sujet clair : d'où le goût de tant d'esprits pour d'autres études."
+                  answer: "deviner"
                 - id: dt-rg2-2
-                  sentence: "L'arithmétique et la géométrie seules traitent d'un objet si pur et si simple qu'elles n'admettent rien que l'___ ait rendu incertain."
+                  sentence: "L'objet de l'arithmétique et de la géométrie est si clair et si simple qu'elles n'ont besoin de rien supposer que l'___ puisse révoquer en doute."
                   answer: "expérience"
+                - id: dt-rg2-3
+                  sentence: "Qui cherche le droit chemin de la vérité ne doit s'occuper d'aucun objet dont il ne puisse avoir une ___ égale aux démonstrations de l'arithmétique et de la géométrie."
+                  answer: "certitude"
+                - id: dt-rg2-4
+                  sentence: "L'arithmétique et la géométrie ne consistent entièrement que dans des conséquences à déduire par la voie du ___."
+                  answer: "raisonnement"
             - id: d-rg3
               label: "Règles pour la direction de l'esprit, III"
               title: "Les voies de la connaissance"
@@ -278,14 +349,20 @@ work:
               rel: declinaison
               points:
                 - id: dt-rg3-1
-                  sentence: "Il n'y a que deux actes de l'entendement pour parvenir à la connaissance sans crainte d'erreur : l'intuition et la ___."
+                  sentence: "L'intuition et la ___ sont les deux voies qui conduisent à la science de la manière la plus sûre."
                   answer: "déduction"
                 - id: dt-rg3-2
-                  sentence: "L'intuition est la conception d'un esprit pur et ___, si facile et si distincte qu'il ne reste aucun doute sur ce que nous comprenons."
-                  answer: "attentif"
+                  sentence: "L'intuition est le concept que forme l'intelligence pure et ___, avec tant de facilité et de distinction qu'il ne reste aucun doute."
+                  answer: "attentive"
                 - id: dt-rg3-3
-                  sentence: "Chacun peut voir par intuition qu'il existe, qu'il pense, qu'un triangle est terminé par trois ___ seulement."
+                  sentence: "Chacun peut voir par intuition intellectuelle qu'il existe, qu'il pense, qu'un triangle est terminé par trois ___ seulement."
                   answer: "lignes"
+                - id: dt-rg3-4
+                  sentence: "Nous connaissons le lien du dernier anneau d'une longue ___ au premier, sans saisir d'un seul coup d'œil tous les anneaux intermédiaires."
+                  answer: "chaîne"
+                - id: dt-rg3-5
+                  sentence: "La déduction ne requiert pas une évidence actuelle : elle emprunte plutôt sa certitude à la ___."
+                  answer: "mémoire"
             - id: d-rg4
               label: "Règles pour la direction de l'esprit, IV"
               title: "La méthode est nécessaire pour la recherche de la vérité ; La mathématique, science de l'ordre et de la mesure"
@@ -293,17 +370,23 @@ work:
               rel: declinaison
               points:
                 - id: dt-rg4-1
-                  sentence: "Chercher la vérité sans méthode, c'est faire comme celui qui, brûlant de trouver un ___, parcourrait sans cesse les rues au hasard."
+                  sentence: "Chercher la vérité sans méthode, c'est faire comme un homme dévoré d'un désir si insensé de découvrir un ___ qu'il parcourrait sans cesse tous les chemins."
                   answer: "trésor"
                 - id: dt-rg4-2
-                  sentence: "Par méthode, j'entends des règles certaines et ___, qui empêchent de jamais prendre le faux pour le vrai."
+                  sentence: "Par méthode, j'entends des règles certaines et ___, qui empêchent qu'on ne suppose jamais pour vrai ce qui est faux."
                   answer: "faciles"
                 - id: dt-rg4-3
                   sentence: "Une science générale doit expliquer tout ce qu'on peut chercher touchant l'ordre et la mesure : la mathématique ___."
                   answer: "universelle"
                 - id: dt-rg4-4
-                  sentence: "Relève de la mathématique tout ce où l'on examine un ordre ou une mesure, que ce soit dans des nombres, des figures, des astres ou des ___."
+                  sentence: "Se rattache à la mathématique tout ce où l'on étudie l'ordre et la mesure, que ce soit dans des nombres, des figures, des astres ou des ___."
                   answer: "sons"
+                - id: dt-rg4-5
+                  sentence: "Des études sans ordre et des méditations obscures troublent les lumières naturelles et ___ l'esprit."
+                  answer: "aveuglent"
+                - id: dt-rg4-6
+                  sentence: "Ceux qui rencontrent quelque vérité au hasard n'en sont pas plus habiles : ils sont seulement plus ___."
+                  answer: "heureux"
         - id: b-principes
           label: "Principes"
           question: "Que posent les Principes de la philosophie ?"
@@ -324,8 +407,14 @@ work:
                   sentence: "Les branches se réduisent à trois principales : la médecine, la mécanique et la ___."
                   answer: "morale"
                 - id: dt-pp-4
-                  sentence: "C'est proprement avoir les yeux ___ sans tâcher jamais de les ouvrir que de vivre sans philosopher."
-                  answer: "fermés"
+                  sentence: "Par la sagesse, on n'entend pas seulement la ___ dans les affaires, mais une parfaite connaissance de tout ce que l'homme peut savoir."
+                  answer: "prudence"
+                - id: dt-pp-5
+                  sentence: "La plus haute et la plus parfaite morale, présupposant une entière connaissance des autres sciences, est le dernier ___ de la sagesse."
+                  answer: "degré"
+                - id: dt-pp-6
+                  sentence: "Pour acquérir la sagesse, il faut commencer par la recherche des premières ___, c'est-à-dire des principes."
+                  answer: "causes"
             - id: d-p11
               label: "Principes de la philosophie, I, art. 1"
               title: "Enfance et vérité"
@@ -333,11 +422,14 @@ work:
               rel: declinaison
               points:
                 - id: dt-p11-1
-                  sentence: "Comme nous avons jugé des choses avant d'avoir l'entier usage de notre raison, plusieurs ___ nous détournent de la connaissance de la vérité."
-                  answer: "préjugés"
+                  sentence: "Nous avons jugé des choses avant d'avoir l'usage entier de notre raison : plusieurs jugements ainsi ___ nous empêchent de parvenir à la connaissance de la vérité."
+                  answer: "précipités"
                 - id: dt-p11-2
                   sentence: "Pour examiner la vérité, il est besoin, une fois en sa ___, de mettre toutes choses en doute autant qu'il se peut."
                   answer: "vie"
+                - id: dt-p11-3
+                  sentence: "Il faut douter une fois de toutes les choses où nous trouverons le moindre ___ d'incertitude."
+                  answer: "soupçon"
             - id: d-p24
               label: "Principes de la philosophie, II, art. 4"
               title: "La matière se ramène à de l'étendue géométrique"
@@ -348,8 +440,12 @@ work:
                   sentence: "La nature de la matière ne consiste pas en ce qu'elle est dure, pesante ou colorée, mais seulement en ce qu'elle est une substance étendue en longueur, largeur et ___."
                   answer: "profondeur"
                 - id: dt-p24-2
-                  sentence: "Si les corps se retiraient à mesure que notre main s'en approche, nous ne sentirions jamais leur ___, et ils ne perdraient pourtant rien de leur nature."
+                  sentence: "Si les corps se retiraient aussi vite que nos mains en approchent, nous ne sentirions jamais leur ___, et ils ne perdraient pourtant rien de ce qui les fait corps."
                   answer: "dureté"
+                - id: dt-p24-3
+                  sentence: "Ce n'est pas la pesanteur, ni la dureté, ni la couleur qui constitue la nature du corps, mais l'___ seule."
+                  answer: "extension"
+                  alt: ["étendue"]
         - id: b-lettres
           label: "Lettres"
           question: "Que précisent les lettres ?"
@@ -361,27 +457,36 @@ work:
               summary: "Un corps reste le même tant qu'il est uni à la même âme"
               points:
                 - id: dt-lm-1
-                  sentence: "Le corps d'un homme demeure numériquement le même tant qu'il demeure uni à la même ___, bien que sa matière change."
+                  sentence: "Le corps d'un homme demeure numériquement le même tant qu'il demeure uni substantiellement à la même ___, bien que sa matière change."
                   answer: "âme"
                 - id: dt-lm-2
-                  sentence: "Nous croyons avoir le même corps que dans notre ___, bien que sa matière ait entièrement changé."
+                  sentence: "Nous croyons avoir le même corps que dans notre ___, bien qu'il n'y reste plus aucune partie de la matière qui y était alors."
                   answer: "enfance"
+                - id: dt-lm-3
+                  sentence: "Quand nous parlons d'un corps en général, nous entendons une partie déterminée de la ___."
+                  answer: "matière"
+                - id: dt-lm-4
+                  sentence: "Le mot de corps est fort ___ : autre est un corps en général, autre le corps d'un homme."
+                  answer: "équivoque"
             - id: d-ln
               label: "Lettre au marquis de Newcastle, 23 novembre 1646"
               title: "Parler est le propre de l'homme"
-              summary: "Seule la parole prouve la pensée"
+              summary: "Les bêtes ne parlent pas : elles n'ont pas de pensée"
               rel: declinaison
               points:
                 - id: dt-ln-1
-                  sentence: "La parole est le seul signe certain de la ___ cachée dans le corps."
+                  sentence: "Les bêtes ne parlent point comme nous, non que les organes leur manquent, mais parce qu'elles n'ont aucune ___."
                   answer: "pensée"
                 - id: dt-ln-2
-                  sentence: "Même les sourds-muets inventent des ___ particuliers pour exprimer leurs pensées."
-                  answer: "signes"
+                  sentence: "Il n'y a point d'homme si imparfait qu'il n'use de signes : même les ___ et muets en inventent pour exprimer leurs pensées."
+                  answer: "sourds"
                 - id: dt-ln-3
-                  sentence: "Si l'on apprend à une pie à dire bonjour à sa maîtresse, ce n'est que l'expression d'une de ses ___, l'espérance de manger."
+                  sentence: "Les chiens nous expriment leurs ___ ; ils nous exprimeraient aussi bien leurs pensées, s'ils en avaient."
                   answer: "passions"
                   alt: ["passion"]
+                - id: dt-ln-4
+                  sentence: "Montaigne et Charron ont dit qu'il y a plus de différence d'homme à homme que d'homme à ___."
+                  answer: "bête"
             - id: d-lc
               label: "Lettre à Chanut, 6 juin 1647"
               title: "La force des souvenirs cachés"
@@ -389,14 +494,20 @@ work:
               rel: declinaison
               points:
                 - id: dt-lc-1
-                  sentence: "Enfant, Descartes aimait une fille de son âge un peu ___, et longtemps après il se sentait porté à aimer celles qui avaient ce défaut."
+                  sentence: "Enfant, Descartes aimait une fille de son âge un peu ___, et longtemps après il se sentait plus enclin à aimer les personnes qui avaient ce défaut."
                   answer: "louche"
                 - id: dt-lc-2
-                  sentence: "Dès qu'il eut fait ___ que c'était un défaut, il n'en fut plus ému."
+                  sentence: "Dès qu'il y eut fait ___ et reconnu que c'était un défaut, il n'en fut plus ému."
                   answer: "réflexion"
                 - id: dt-lc-3
-                  sentence: "Ces inclinations viennent des impressions que les objets ont faites dans notre ___, sans que nous en gardions le souvenir."
+                  sentence: "La cause corporelle de nos inclinations est la disposition des parties de notre ___, où les objets des sens font comme certains plis."
                   answer: "cerveau"
+                - id: dt-lc-4
+                  sentence: "Un homme sage ne se doit pas laisser aller entièrement à cette passion avant d'avoir considéré le ___ de la personne."
+                  answer: "mérite"
+                - id: dt-lc-5
+                  sentence: "Le principal bien de la vie étant d'avoir de l'___ pour quelques-uns, nous avons raison de préférer ceux à qui nos inclinations secrètes nous joignent."
+                  answer: "amitié"
   recaps:
     - at: b-discours
       label: "Discours, I-VI"
@@ -485,4 +596,4 @@ work:
 
         Au clavier, une lettre se désigne par son destinataire, l'année en plus si l'on veut (« Chanut 1647 »).
 
-        ! La pie qui dit bonjour ne parle pas : elle exprime une passion, l'espérance de manger.
+        ! Les bêtes ne se taisent pas faute d'organes : elles expriment leurs passions, non des pensées, qu'elles n'ont pas.
