@@ -56,8 +56,14 @@
   --color-teal-deep: #0b8b7d;
   --color-violet: #7c6bf0;
   --color-violet-deep: #5a48cc;
-  --color-coral: #ff6b57;
-  --color-coral-deep: #d4432f;
+  /*
+   * Éclaircie après le retrait d'`orange` (voir plus bas) : `coral` porte
+   * maintenant les deux rôles, et le premier choix (`#ff6b57`) restait un
+   * rouge-orangé assez soutenu pour les usages qui, avant la fusion,
+   * appelaient franchement de l'orange.
+   */
+  --color-coral: #ff8675;
+  --color-coral-deep: #d85341;
   --color-amber: #ffc93c;
   --color-amber-deep: #d69c04;
   --color-sky: #38bdf8;
