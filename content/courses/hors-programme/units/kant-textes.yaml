@@ -2,8 +2,9 @@
 # d'un manuel de philosophie : associer chaque texte à sa référence. Titres et
 # références fournis par l'utilisatrice, abrégés au nécessaire dans les
 # repères ; les textes qui partagent une référence (Préface de 1787 ;
-# Fondements, I et II) ne forment qu'une case : 25 cases. Aucune citation :
-# les thèses reformulent les textes, au plus près des formules connues.
+# Fondements, I et II) ne forment qu'une case : 25 cases. Thèses alignées sur le manuel :
+# les thèses suivent les extraits du manuel (J. Russ, C. Leguil, Philosophie.
+# Les chemins de la pensée, pp. 232-260).
 
 id: kant-textes
 title: "Kant : textes clés"
@@ -12,7 +13,7 @@ icon: map
 color: sky
 group: "Kant"
 intro: |-
-  Les 33 textes de Kant du manuel, à associer à leur référence : où Kant compare-t-il la raison à un juge, l'homme à un bois courbe, la bonne volonté à un joyau ?
+  Les 33 textes de Kant du manuel, à associer à leur référence : où Kant compare-t-il la raison à un juge, la bonne volonté à une pierre précieuse, la preuve ontologique aux zéros d'un livre de caisse ?
 
   Les textes qui partagent une référence ne forment qu'un emplacement : les cinq textes de la deuxième section des *Fondements*, par exemple. Au clavier, le titre s'abrège ou se réduit à son sigle (« CRP Dialectique Idéal », « FMM II », « CFJ 46 », « Idée 4 ») ; les mots qui nomment la division (Esthétique, Dialectique, Introduction) se tapent aussi, abrégés si l'on veut.
 work:
@@ -30,15 +31,15 @@ work:
               summary: "La raison est accablée de questions qu'elle ne peut ni éviter ni résoudre"
               points:
                 - id: kt-pref81-1
-                  sentence: "La raison humaine a cette destinée singulière d'être accablée de questions qu'elle ne peut ___, car elles lui sont imposées par sa nature même."
+                  sentence: "La raison humaine est soumise à cette condition singulière qu'elle ne peut ___ certaines questions, et qu'elle en est accablée."
                   answer: "éviter"
                   alt: ["écarter"]
                 - id: kt-pref81-2
-                  sentence: "Ces questions, elle ne peut pas non plus y ___, car elles dépassent tout le pouvoir de la raison humaine."
-                  answer: "répondre"
+                  sentence: "Ces questions lui sont suggérées par sa nature même, mais elle ne saurait les ___, parce qu'elles dépassent sa portée."
+                  answer: "résoudre"
                 - id: kt-pref81-3
-                  sentence: "La métaphysique, qu'on appelait autrefois la ___ de toutes les sciences, est devenue le champ de bataille de disputes sans fin."
-                  answer: "reine"
+                  sentence: "Les principes dont la raison se sert sortent des limites de toute expérience, et n'ont plus de pierre de ___."
+                  answer: "touche"
             - id: k-pref87
               label: "Critique de la raison pure, Préface de 1787"
               title: "La raison doit prendre les devants ; La révolution copernicienne ; La croyance morale"
@@ -46,21 +47,27 @@ work:
               rel: declinaison
               points:
                 - id: kt-pref87-1
-                  sentence: "Galilée, Torricelli et Stahl ont compris que la raison n'aperçoit que ce qu'elle produit elle-même d'après ses propres ___."
+                  sentence: "Les physiciens comprirent que la raison n'aperçoit que ce qu'elle produit elle-même d'après ses propres ___."
                   answer: "plans"
                   alt: ["desseins"]
                 - id: kt-pref87-2
-                  sentence: "La raison doit aborder la nature non comme un écolier, mais comme un ___ qui force les témoins à répondre à ses questions."
+                  sentence: "La raison doit s'adresser à la nature non comme un écolier, mais comme un ___ qui a le droit de contraindre les témoins à répondre à ses questions."
                   answer: "juge"
                 - id: kt-pref87-3
-                  sentence: "Jusqu'ici, on admettait que toute notre connaissance devait se ___ sur les objets."
+                  sentence: "On avait admis jusqu'ici que toutes nos connaissances devaient se ___ sur les objets."
                   answer: "régler"
                 - id: kt-pref87-4
-                  sentence: "Comme Copernic, qui chercha si l'on ne réussirait pas mieux en faisant tourner le ___ et en laissant les astres en repos, il faut supposer que les objets se règlent sur notre connaissance."
+                  sentence: "Copernic chercha s'il ne serait pas mieux de supposer que c'est le ___ qui tourne, et que les astres demeurent immobiles."
                   answer: "spectateur"
                 - id: kt-pref87-5
-                  sentence: "J'ai dû abolir le ___ afin d'obtenir une place pour la croyance."
+                  sentence: "J'ai donc dû supprimer le ___ pour y substituer la croyance."
                   answer: "savoir"
+                - id: kt-pref87-6
+                  sentence: "Le premier qui démontra le triangle ___ fut frappé d'une grande lumière."
+                  answer: "isocèle"
+                - id: kt-pref87-7
+                  sentence: "Je ne saurais admettre Dieu, la liberté et l'___ selon le besoin qu'en a ma raison dans son usage pratique, sans repousser les prétentions de la raison spéculative."
+                  answer: "immortalité"
             - id: k-intro87
               label: "Critique de la raison pure, Introduction de 1787"
               title: "L'expérience"
@@ -68,15 +75,15 @@ work:
               rel: declinaison
               points:
                 - id: kt-intro87-1
-                  sentence: "Que toute notre connaissance commence avec l'expérience, cela ne soulève aucun ___."
-                  answer: "doute"
+                  sentence: "Il n'est pas ___ que toutes nos connaissances ne commencent avec l'expérience."
+                  answer: "douteux"
                 - id: kt-intro87-2
-                  sentence: "Si toute notre connaissance commence avec l'expérience, il n'en résulte pas qu'elle ___ toute de l'expérience."
-                  answer: "dérive"
-                  alt: ["provient", "découle"]
+                  sentence: "Si toutes nos connaissances commencent avec l'expérience, il n'en résulte pas qu'elles ___ toutes de l'expérience."
+                  answer: "dérivent"
+                  alt: ["proviennent", "découlent"]
                 - id: kt-intro87-3
-                  sentence: "On nomme ___ les connaissances indépendantes de l'expérience, et empiriques celles qui ont leur source dans l'expérience."
-                  answer: "a priori"
+                  sentence: "La connaissance expérimentale elle-même pourrait bien être un ___, composé de ce que nous recevons par des impressions et de ce que notre faculté de connaître tire d'elle-même."
+                  answer: "assemblage"
         - id: b-crp-doctrine
           label: "Esthétique, Logique, Dialectique"
           question: "Comment connaissons-nous, et où la raison s'égare-t-elle ?"
@@ -88,13 +95,13 @@ work:
               summary: "Le temps est une forme a priori de l'intuition, non un concept tiré de l'expérience"
               points:
                 - id: kt-esth-1
-                  sentence: "Le temps n'est pas un concept empirique tiré d'une expérience : sans lui, la ___ ou la succession ne seraient même pas perçues."
+                  sentence: "Le temps n'est pas un concept empirique : la ___ ou la succession ne tomberaient pas sous notre perception si la représentation du temps ne lui servait a priori de fondement."
                   answer: "simultanéité"
                 - id: kt-esth-2
-                  sentence: "On peut concevoir le temps vide de ___, mais on ne peut supprimer le temps lui-même."
+                  sentence: "On peut bien retrancher du temps les ___ par la pensée, mais on ne saurait supprimer le temps lui-même."
                   answer: "phénomènes"
                 - id: kt-esth-3
-                  sentence: "Des temps différents ne sont que des ___ d'un seul et même temps."
+                  sentence: "Les temps différents ne sont que des ___ d'un même temps."
                   answer: "parties"
             - id: k-logique
               label: "Critique de la raison pure, Logique, Introduction"
@@ -103,14 +110,14 @@ work:
               rel: declinaison
               points:
                 - id: kt-logique-1
-                  sentence: "Notre connaissance dérive de deux sources : la ___, qui reçoit les représentations, et l'entendement, qui pense un objet par elles."
+                  sentence: "Sans la ___, nul objet ne nous serait donné ; sans l'entendement, nul ne serait pensé."
                   answer: "sensibilité"
                 - id: kt-logique-2
-                  sentence: "Des pensées sans contenu sont ___, des intuitions sans concepts sont aveugles."
+                  sentence: "Des pensées sans matière sont ___ ; des intuitions sans concepts sont aveugles."
                   answer: "vides"
                 - id: kt-logique-3
-                  sentence: "L'entendement ne peut rien intuitionner, ni les sens rien ___ : la connaissance ne naît que de leur union."
-                  answer: "penser"
+                  sentence: "Ni les concepts sans une intuition qui leur corresponde, ni l'intuition sans les concepts ne peuvent fournir une ___."
+                  answer: "connaissance"
             - id: k-dial
               label: "Critique de la raison pure, Dialectique, Introduction"
               title: "Les illusions de la raison"
@@ -118,15 +125,15 @@ work:
               rel: declinaison
               points:
                 - id: kt-dial-1
-                  sentence: "L'apparence transcendantale ne cesse pas, même quand on l'a ___."
-                  answer: "découverte"
-                  alt: ["démasquée", "reconnue"]
+                  sentence: "La dialectique de la raison pure ne cesse pas de se jouer de la raison, alors même que nous en avons ___ l'illusion."
+                  answer: "découvert"
+                  alt: ["découverte"]
                 - id: kt-dial-2
-                  sentence: "L'astronome ne peut empêcher que la ___ ne lui paraisse plus grande à son lever : de même, la raison ne peut supprimer son illusion naturelle."
+                  sentence: "L'astronome lui-même ne peut empêcher que la ___ ne lui paraisse plus grande à son lever, bien qu'il ne soit pas trompé par cette apparence."
                   answer: "lune"
                 - id: kt-dial-3
-                  sentence: "La dialectique transcendantale se contente de découvrir l'apparence des jugements transcendants et d'empêcher qu'elle ne nous ___."
-                  answer: "trompe"
+                  sentence: "La raison fait passer la nécessité subjective d'une certaine liaison de nos concepts pour une nécessité ___, une détermination des choses en soi."
+                  answer: "objective"
             - id: k-ideal
               label: "Critique de la raison pure, Dialectique, Idéal"
               title: "L'existence n'est pas un prédicat"
@@ -134,14 +141,17 @@ work:
               rel: declinaison
               points:
                 - id: kt-ideal-1
-                  sentence: "Être n'est évidemment pas un prédicat ___, c'est-à-dire le concept de quelque chose qui puisse s'ajouter au concept d'une chose."
+                  sentence: "Être n'est évidemment pas un prédicat ___, c'est-à-dire un concept de quelque chose qui puisse s'ajouter au concept d'une chose."
                   answer: "réel"
                 - id: kt-ideal-2
                   sentence: "Cent thalers réels ne contiennent rien de plus que cent thalers ___."
                   answer: "possibles"
                 - id: kt-ideal-3
-                  sentence: "Quand je dis Dieu est, je n'ajoute aucun prédicat nouveau au concept de Dieu : je ___ seulement le sujet avec tous ses prédicats."
-                  answer: "pose"
+                  sentence: "Être n'est pas un prédicat : c'est simplement la ___ d'une chose."
+                  answer: "position"
+                - id: kt-ideal-4
+                  sentence: "On ne deviendra pas plus riche en connaissances avec de simples idées qu'un ___ ne le deviendrait en ajoutant quelques zéros à son livre de caisse."
+                  answer: "marchand"
         - id: b-methode
           label: "Méthodologie et Prolégomènes"
           question: "Que peut la raison, et comment doit-elle procéder ?"
@@ -153,14 +163,14 @@ work:
               summary: "Que puis-je savoir ? Que dois-je faire ? Que m'est-il permis d'espérer ?"
               points:
                 - id: kt-canon-1
-                  sentence: "Tout l'intérêt de ma raison se ramène à trois questions : que puis-je ___ ? que dois-je faire ? que m'est-il permis d'espérer ?"
-                  answer: "savoir"
+                  sentence: "Tout intérêt de ma raison se ramène aux trois questions suivantes : que puis-je ___ ? que dois-je faire ? qu'ai-je à espérer ?"
+                  answer: "connaître"
                 - id: kt-canon-2
-                  sentence: "La première question est simplement spéculative, la deuxième simplement ___."
-                  answer: "pratique"
+                  sentence: "Cet intérêt de la raison est tant ___ que pratique."
+                  answer: "spéculatif"
                 - id: kt-canon-3
-                  sentence: "La troisième, que m'est-il permis d'espérer, est à la fois pratique et ___."
-                  answer: "théorique"
+                  sentence: "À la question que dois-je faire, Kant répond : mon ___, par respect pour la loi morale."
+                  answer: "devoir"
             - id: k-disc
               label: "Critique de la raison pure, Méthodologie, Discipline"
               title: "La démonstration"
@@ -168,27 +178,26 @@ work:
               rel: declinaison
               points:
                 - id: kt-disc-1
-                  sentence: "La connaissance philosophique est la connaissance rationnelle par concepts ; la connaissance mathématique, par ___ de concepts."
+                  sentence: "Il n'y a que la mathématique qui contienne des démonstrations, parce qu'elle ne dérive pas sa connaissance de concepts, mais de la ___ des concepts."
                   answer: "construction"
                 - id: kt-disc-2
-                  sentence: "Construire un concept, c'est présenter a priori l'___ qui lui correspond."
+                  sentence: "Construire un concept, c'est le rapporter à l'___ qui peut être donnée a priori comme lui correspondant."
                   answer: "intuition"
                 - id: kt-disc-3
-                  sentence: "Le philosophe qui imite la méthode du mathématicien, avec définitions et axiomes, ne bâtit que des ___ de cartes."
-                  answer: "châteaux"
+                  sentence: "Seule une preuve ___, en tant qu'elle est intuitive, peut s'appeler démonstration."
+                  answer: "apodictique"
             - id: k-prol
               label: "Prolégomènes, § 45"
               title: "Les idées de la raison"
-              summary: "Les idées de la raison visent la totalité de l'expérience, source d'une apparence dialectique"
+              summary: "La raison réclame l'achèvement de la chaîne des conditions, jusqu'aux noumènes"
               rel: declinaison
               points:
                 - id: kt-prol-1
-                  sentence: "Les idées de la raison ne visent pas tel objet d'expérience, mais la ___ absolue de l'expérience possible."
-                  answer: "totalité"
-                  alt: ["intégralité", "complétude"]
+                  sentence: "La raison, qui ne peut être pleinement satisfaite d'aucun usage empirique des règles de l'entendement, réclame l'___ de la chaîne des conditions."
+                  answer: "achèvement"
                 - id: kt-prol-2
-                  sentence: "Ces idées sont la source d'une apparence ___, inévitable, que la critique seule empêche de tromper."
-                  answer: "dialectique"
+                  sentence: "Pour achever la série, l'entendement est poussé à chercher, tout à fait en dehors de l'expérience, des ___."
+                  answer: "noumènes"
     - id: pratique
       label: "La raison pratique"
       parts:
@@ -202,20 +211,26 @@ work:
               summary: "Seule une bonne volonté est bonne sans restriction ; la promesse trompeuse ne peut devenir loi universelle"
               points:
                 - id: kt-fmm1-1
-                  sentence: "De tout ce qu'il est possible de concevoir dans le monde, et même hors du monde, il n'est rien qui puisse sans ___ être tenu pour bon, si ce n'est seulement une bonne volonté."
+                  sentence: "De tout ce qu'il est possible de concevoir dans le monde, et même en dehors du monde, il n'y a qu'une seule chose qu'on puisse tenir pour bonne sans ___ : c'est une bonne volonté."
                   answer: "restriction"
                 - id: kt-fmm1-2
-                  sentence: "La bonne volonté n'est pas bonne par ce qu'elle effectue, mais seulement par le ___."
+                  sentence: "La bonne volonté ne tire pas sa bonté de ses effets ou de ses résultats, mais seulement du ___."
                   answer: "vouloir"
                 - id: kt-fmm1-3
-                  sentence: "Même privée de tout pouvoir d'agir, elle brillerait comme un ___, comme quelque chose qui a en soi sa valeur."
-                  answer: "joyau"
+                  sentence: "Même privée de tous les moyens d'exécuter ses desseins, elle brillerait encore de son propre éclat, comme une ___ précieuse."
+                  answer: "pierre"
                 - id: kt-fmm1-4
-                  sentence: "Pour savoir si une promesse trompeuse est conforme au devoir, je me demande si je pourrais vouloir que ma maxime devienne une loi ___."
+                  sentence: "Pour savoir si une promesse trompeuse est conforme au devoir, je me demande si j'accepterais que ma maxime dût valoir comme une loi ___."
                   answer: "universelle"
                 - id: kt-fmm1-5
-                  sentence: "Une loi universelle du mensonge rendrait toute ___ impossible."
+                  sentence: "Selon une loi universelle qui commanderait de mentir, il n'y aurait plus à proprement parler de ___."
                   answer: "promesse"
+                - id: kt-fmm1-6
+                  sentence: "Ma maxime, du moment qu'elle serait érigée en loi universelle, se ___ elle-même nécessairement."
+                  answer: "détruirait"
+                - id: kt-fmm1-7
+                  sentence: "Autre chose est d'être sincère par devoir, autre chose de l'être par ___ des conséquences désavantageuses."
+                  answer: "crainte"
             - id: k-fmm2
               label: "Fondements de la métaphysique des mœurs, II"
               title: "La raison pratique ; Impératif hypothétique et impératif catégorique ; Première formule du devoir : l'universalité de la loi ; Seconde formule du devoir : respecter la personne ; L'autonomie de la volonté"
@@ -223,29 +238,35 @@ work:
               rel: declinaison
               points:
                 - id: kt-fmm2-1
-                  sentence: "Seul un être raisonnable a la faculté d'agir d'après la ___ des lois, c'est-à-dire d'après des principes : il a une volonté."
+                  sentence: "Il n'y a qu'un être raisonnable qui ait la faculté d'agir d'après la ___ des lois, c'est-à-dire d'après des principes : il a une volonté."
                   answer: "représentation"
                 - id: kt-fmm2-2
-                  sentence: "Les impératifs hypothétiques sont des impératifs d'habileté ou de ___."
-                  answer: "prudence"
+                  sentence: "L'impératif catégorique ne concerne pas la matière de l'action, mais la ___ et le principe d'où elle résulte."
+                  answer: "forme"
                 - id: kt-fmm2-3
-                  sentence: "L'impératif catégorique représente une action comme nécessaire pour elle-même, sans rapport à aucune autre ___."
+                  sentence: "L'impératif catégorique ordonne une conduite sans avoir lui-même pour condition une autre ___, à laquelle cette conduite ne serait qu'un moyen."
                   answer: "fin"
                 - id: kt-fmm2-4
-                  sentence: "Agis uniquement d'après la ___ grâce à laquelle tu peux vouloir en même temps qu'elle devienne une loi universelle."
+                  sentence: "Agis uniquement d'après la ___ qui fait que tu peux vouloir en même temps qu'elle devienne une loi universelle."
                   answer: "maxime"
                 - id: kt-fmm2-5
-                  sentence: "Agis de telle sorte que tu traites l'humanité, dans ta personne comme dans celle de tout autre, toujours en même temps comme une fin, et jamais simplement comme un ___."
+                  sentence: "Agis de telle sorte que tu traites l'humanité, aussi bien dans ta personne que dans la personne de tout autre, toujours en même temps comme une fin, et jamais simplement comme un ___."
                   answer: "moyen"
                 - id: kt-fmm2-6
-                  sentence: "Dans le règne des fins, tout a un prix ou une ___."
-                  answer: "dignité"
+                  sentence: "Les êtres dépourvus de raison n'ont qu'une valeur relative, celle de moyens, et voilà pourquoi on les nomme des ___."
+                  answer: "choses"
                 - id: kt-fmm2-7
-                  sentence: "L'autonomie de la volonté est le principe suprême de la ___."
-                  answer: "moralité"
+                  sentence: "L'autonomie de la volonté est cette propriété qu'a la volonté d'être à elle-même sa loi, indépendamment de la nature des ___ du vouloir."
+                  answer: "objets"
                 - id: kt-fmm2-8
-                  sentence: "L'___ de la volonté est la source de tous les principes illégitimes de la moralité."
+                  sentence: "Lorsque la volonté cherche sa loi dans la nature de quelqu'un de ses objets, il y a toujours ___."
                   answer: "hétéronomie"
+                - id: kt-fmm2-9
+                  sentence: "Agis comme si la maxime de ton action devait être érigée par ta volonté en loi universelle de la ___."
+                  answer: "nature"
+                - id: kt-fmm2-10
+                  sentence: "La nature raisonnable existe comme ___ en soi."
+                  answer: "fin"
             - id: k-crpr-an
               label: "Critique de la raison pratique, Analytique"
               title: "Devoir ! Nom sublime et grand…"
@@ -253,26 +274,28 @@ work:
               rel: declinaison
               points:
                 - id: kt-crpr-an-1
-                  sentence: "Devoir ! Toi qui ne renfermes rien d'agréable, rien qui implique ___, mais qui réclames la soumission."
-                  answer: "insinuation"
-                  alt: ["flatterie", "complaisance"]
+                  sentence: "Devoir ! mot grand et sublime, toi qui n'as rien d'agréable ni de ___, et commandes la soumission."
+                  answer: "flatteur"
                 - id: kt-crpr-an-2
-                  sentence: "Le devoir ne peut avoir d'autre racine que la ___, qui élève l'homme au-dessus de lui-même comme partie du monde sensible."
+                  sentence: "La racine du devoir ne peut être que la ___, c'est-à-dire la liberté, l'indépendance par rapport à tout le mécanisme de la nature."
                   answer: "personnalité"
+                - id: kt-crpr-an-3
+                  sentence: "Devant la loi morale se taisent tous les ___, quoiqu'ils travaillent sourdement contre elle."
+                  answer: "penchants"
             - id: k-crpr-dial
               label: "Critique de la raison pratique, Dialectique"
               title: "L'espérance de participer au bonheur"
-              summary: "Le souverain bien exige de postuler Dieu ; la morale apprend à se rendre digne du bonheur"
+              summary: "La morale apprend à se rendre digne du bonheur, que la religion permet d'espérer"
               rel: declinaison
               points:
                 - id: kt-crpr-dial-1
-                  sentence: "Le souverain bien unit la vertu et un bonheur proportionné à la ___."
-                  answer: "moralité"
+                  sentence: "Ce n'est qu'en ayant recours à la ___ que nous pouvons espérer de participer au bonheur."
+                  answer: "religion"
                 - id: kt-crpr-dial-2
-                  sentence: "La possibilité du souverain bien exige de postuler l'existence de ___, cause de la nature conforme à l'intention morale."
-                  answer: "Dieu"
+                  sentence: "Nous espérons participer au bonheur en proportion des efforts que nous aurons faits pour n'en pas être ___."
+                  answer: "indignes"
                 - id: kt-crpr-dial-3
-                  sentence: "La morale n'est pas la doctrine qui nous apprend à nous rendre heureux, mais à nous rendre ___ du bonheur."
+                  sentence: "La morale n'est pas une doctrine qui nous apprenne à nous rendre heureux, mais seulement comment nous devons nous rendre ___ du bonheur."
                   answer: "dignes"
     - id: juger-histoire
       label: "Juger, l'histoire et l'homme"
@@ -287,11 +310,14 @@ work:
               summary: "Une satisfaction désintéressée se suppose en chacun"
               points:
                 - id: kt-cfj6-1
-                  sentence: "Celui qui juge une chose belle ne trouve au fondement de sa satisfaction aucune condition ___ : il la suppose donc en chacun."
-                  answer: "privée"
+                  sentence: "Celui qui trouve en quelque chose une satisfaction désintéressée ne peut en trouver la raison dans des conditions ___ : il la suppose en tout autre."
+                  answer: "particulières"
                 - id: kt-cfj6-2
-                  sentence: "Il parle alors du beau comme si la beauté était une ___ de l'objet."
-                  answer: "propriété"
+                  sentence: "Il parlera du beau comme si c'était une ___ de l'objet même."
+                  answer: "qualité"
+                - id: kt-cfj6-3
+                  sentence: "Le jugement de goût, sans fondement dans les objets, a droit à une universalité ___."
+                  answer: "subjective"
             - id: k-cfj46
               label: "Critique de la faculté de juger, § 46"
               title: "Le génie"
@@ -299,11 +325,17 @@ work:
               rel: declinaison
               points:
                 - id: kt-cfj46-1
-                  sentence: "Le génie est la disposition innée de l'esprit par laquelle la ___ donne ses règles à l'art."
-                  answer: "nature"
+                  sentence: "Le génie est le talent de produire ce dont on ne peut donner de ___ déterminée."
+                  answer: "règle"
                 - id: kt-cfj46-2
-                  sentence: "L'originalité du génie doit être ___ : ses produits servent de modèles."
-                  answer: "exemplaire"
+                  sentence: "Les productions du génie doivent être des modèles : elles doivent être ___."
+                  answer: "exemplaires"
+                - id: kt-cfj46-3
+                  sentence: "Le génie ne peut montrer scientifiquement comment il produit : il donne la règle par une inspiration de la ___."
+                  answer: "nature"
+                - id: kt-cfj46-4
+                  sentence: "Le mot génie vient du latin ___, l'esprit particulier donné à un homme à sa naissance."
+                  answer: "genius"
             - id: k-cfj56
               label: "Critique de la faculté de juger, § 56"
               title: "Le jugement de goût, entre subjectivité et objectivité"
@@ -322,18 +354,21 @@ work:
             - id: k-cfj65
               label: "Critique de la faculté de juger, § 65"
               title: "L'être vivant n'est pas une machine"
-              summary: "Dans l'être organisé, tout est fin et moyen ; il a une force formatrice"
+              summary: "Une machine n'a que la force motrice ; l'être organisé a une vertu formatrice"
               rel: declinaison
               points:
                 - id: kt-cfj65-1
-                  sentence: "Dans un produit organisé de la nature, tout est ___ et réciproquement moyen."
-                  answer: "fin"
+                  sentence: "Dans la montre, un rouage n'en ___ pas un autre."
+                  answer: "produit"
                 - id: kt-cfj65-2
-                  sentence: "Une montre ne ___ pas d'elle-même les parties qui lui ont été enlevées."
+                  sentence: "Une montre ne ___ pas d'elle-même les parties perdues."
                   answer: "remplace"
                 - id: kt-cfj65-3
-                  sentence: "Un être organisé possède en lui une force ___, qu'il communique aux matières."
+                  sentence: "Un être organisé possède en lui une vertu ___, qu'il communique aux matières qui ne l'ont pas."
                   answer: "formatrice"
+                - id: kt-cfj65-4
+                  sentence: "Une machine n'a que la force ___."
+                  answer: "motrice"
             - id: k-cfj83
               label: "Critique de la faculté de juger, § 83"
               title: "Bonheur et culture"
@@ -341,14 +376,14 @@ work:
               rel: declinaison
               points:
                 - id: kt-cfj83-1
-                  sentence: "L'homme n'est jamais ___ : sa nature ne s'arrête à aucune possession ni jouissance."
-                  answer: "satisfait"
+                  sentence: "La nature de l'homme n'est pas telle qu'elle puisse s'accomplir et se ___ dans la possession et la jouissance."
+                  answer: "satisfaire"
                 - id: kt-cfj83-2
-                  sentence: "La culture est la production de l'aptitude d'un être raisonnable à se proposer des ___ en général."
+                  sentence: "La production de l'aptitude d'un être raisonnable à des ___ quelconques en général est la culture."
                   answer: "fins"
                 - id: kt-cfj83-3
-                  sentence: "La culture de la discipline libère la volonté du ___ des désirs."
-                  answer: "despotisme"
+                  sentence: "Le bonheur n'est pas un concept que l'homme abstrait de ses instincts, mais une simple ___ d'un état."
+                  answer: "Idée"
         - id: b-histoire
           label: "Histoire, politique et pédagogie"
           question: "Comment l'humanité progresse-t-elle ?"
@@ -360,11 +395,14 @@ work:
               summary: "La nature développe nos dispositions par l'antagonisme des hommes en société"
               points:
                 - id: kt-idee4-1
-                  sentence: "Le moyen dont la nature se sert pour développer toutes les dispositions des hommes est leur ___ au sein de la société."
+                  sentence: "Le moyen dont la nature se sert pour mener à bien le développement de toutes ses dispositions est leur ___ au sein de la société."
                   answer: "antagonisme"
                 - id: kt-idee4-2
-                  sentence: "Sans l'insociabilité, les hommes vivraient comme des ___ d'Arcadie, dans une concorde parfaite, et leurs talents resteraient en germe."
-                  answer: "bergers"
+                  sentence: "C'est cette résistance qui éveille toutes les forces de l'homme, et le porte à surmonter son inclination à la ___."
+                  answer: "paresse"
+                - id: kt-idee4-3
+                  sentence: "L'homme a un penchant à s'associer, mais aussi une grande propension à s'___."
+                  answer: "isoler"
             - id: k-idee6
               label: "Idée d'une histoire universelle, 6e proposition"
               title: "L'homme est un animal qui a besoin d'un maître"
@@ -375,45 +413,50 @@ work:
                   sentence: "Vivant parmi ses semblables, l'homme a besoin d'un maître, car il abuse à coup sûr de sa ___ à leur égard."
                   answer: "liberté"
                 - id: kt-idee6-2
-                  sentence: "D'un bois aussi ___ que celui dont l'homme est fait, on ne peut rien tailler de tout à fait droit."
-                  answer: "courbe"
-                  alt: ["tordu"]
+                  sentence: "Ce maître, on ne le trouvera nulle part ailleurs que dans l'___ humaine."
+                  answer: "espèce"
             - id: k-idee7
               label: "Idée d'une histoire universelle, 7e proposition"
               title: "Le progrès du genre humain"
-              summary: "La constitution civile parfaite suppose une société des nations"
+              summary: "Cultivés et civilisés, nous ne sommes pas encore moralisés"
               rel: declinaison
               points:
                 - id: kt-idee7-1
-                  sentence: "Le problème d'une constitution civile parfaite dépend de celui d'une relation ___ légale entre les États."
-                  answer: "extérieure"
+                  sentence: "Tant que les États consacreront leurs forces à des vues d'expansion chimériques et violentes, ils entraveront le lent effort de formation intérieure de la ___ chez leurs concitoyens."
+                  answer: "pensée"
                 - id: kt-idee7-2
-                  sentence: "Nous sommes cultivés et civilisés à l'excès, mais il s'en faut de beaucoup que nous soyons ___."
+                  sentence: "Nous sommes cultivés et civilisés au point d'en être accablés, mais il s'en faut encore de beaucoup que nous soyons ___."
                   answer: "moralisés"
+                - id: kt-idee7-3
+                  sentence: "Tout bien qui n'est pas greffé sur une disposition moralement bonne n'est que pure chimère et faux ___."
+                  answer: "clinquant"
             - id: k-lumieres
               label: "Qu'est-ce que les Lumières ?"
               title: "Du libre usage de la raison"
-              summary: "L'usage public de la raison doit toujours être libre"
+              summary: "Les Lumières : sortir de la minorité dont on est soi-même responsable"
               rel: declinaison
               points:
                 - id: kt-lumieres-1
-                  sentence: "L'usage ___ de sa raison doit toujours être libre, et il est seul à pouvoir apporter les Lumières parmi les hommes."
-                  answer: "public"
+                  sentence: "Les Lumières sont la sortie de l'homme de sa ___, dont il est lui-même responsable."
+                  answer: "minorité"
                 - id: kt-lumieres-2
-                  sentence: "Un seul maître au monde dit : raisonnez autant que vous voulez et sur ce que vous voulez, mais ___ !"
-                  answer: "obéissez"
+                  sentence: "La paresse et la ___ sont les causes qui expliquent qu'un si grand nombre d'hommes restent volontiers mineurs."
+                  answer: "lâcheté"
+                - id: kt-lumieres-3
+                  sentence: "Sapere aude ! Aie le ___ de te servir de ton propre entendement !"
+                  answer: "courage"
             - id: k-paix
               label: "Projet de paix perpétuelle, 2e article"
               title: "Une fédération d'États libres"
-              summary: "Le droit des gens doit être fondé sur un fédéralisme d'États libres"
+              summary: "Une fédération de peuples, qui ne forment pas un seul État"
               rel: declinaison
               points:
                 - id: kt-paix-1
-                  sentence: "Le droit des gens doit être fondé sur un ___ d'États libres."
-                  answer: "fédéralisme"
+                  sentence: "Il en est des peuples, en tant qu'États, comme des individus : dans l'état de ___, leur seul voisinage est déjà une lésion réciproque."
+                  answer: "nature"
                 - id: kt-paix-2
-                  sentence: "À l'idée positive d'une république mondiale se substitue le succédané ___ d'une alliance qui détourne la guerre."
-                  answer: "négatif"
+                  sentence: "Plusieurs peuples réunis en un seul État ne formeraient plus qu'un seul ___ : il y aurait contradiction."
+                  answer: "peuple"
             - id: k-anthropo
               label: "Anthropologie, I, § 1"
               title: "Le Je et la conscience"
@@ -421,29 +464,32 @@ work:
               rel: declinaison
               points:
                 - id: kt-anthropo-1
-                  sentence: "Que l'homme puisse avoir le Je dans sa représentation l'élève infiniment au-dessus de tous les autres êtres ___ sur la terre."
-                  answer: "vivants"
+                  sentence: "Une chose élève infiniment l'homme au-dessus de toutes les autres ___ qui vivent sur la terre : être capable d'avoir la notion de lui-même, du Je."
+                  answer: "créatures"
                 - id: kt-anthropo-2
-                  sentence: "Par là, il est une ___, une et la même à travers tous les changements qui peuvent lui survenir."
+                  sentence: "Par là, il devient une ___, une seule et même à travers tous les changements auxquels il est sujet."
                   answer: "personne"
                 - id: kt-anthropo-3
-                  sentence: "Quand l'enfant commence à dire Je, il semble qu'une ___ s'allume en lui."
+                  sentence: "Lorsque l'enfant commence à dire Je, une ___ nouvelle semble en quelque sorte l'éclairer."
                   answer: "lumière"
+                - id: kt-anthropo-4
+                  sentence: "Auparavant, l'enfant se sentait simplement ; maintenant, il se ___."
+                  answer: "pense"
             - id: k-pedagogie
               label: "Traité de pédagogie"
               title: "L'homme doit travailler"
-              summary: "L'école est une culture par contrainte, où l'enfant s'habitue au travail"
+              summary: "L'homme est voué au travail : l'oisiveté le tourmenterait"
               rel: declinaison
               points:
                 - id: kt-pedagogie-1
-                  sentence: "Le penchant au travail doit être cultivé, et où mieux qu'à l'___ ?"
-                  answer: "école"
+                  sentence: "L'homme est le seul ___ qui soit voué au travail."
+                  answer: "animal"
                 - id: kt-pedagogie-2
-                  sentence: "L'école est une culture par ___."
-                  answer: "contrainte"
+                  sentence: "Si Adam et Ève étaient restés dans le paradis, l'___ eût fait leur tourment."
+                  answer: "oisiveté"
                 - id: kt-pedagogie-3
-                  sentence: "Il est très mauvais d'habituer l'enfant à tout regarder comme un ___."
-                  answer: "jeu"
+                  sentence: "Le meilleur ___ pour l'homme est celui qui suit le travail."
+                  answer: "repos"
   recaps:
     - at: b-crp-prefaces
       label: "Préfaces et Introduction"
@@ -522,7 +568,7 @@ work:
       label: "Histoire, politique et pédagogie"
       title: "Histoire, politique et pédagogie"
       notes: |-
-        **L'histoire avance par l'insociable sociabilité (4e proposition), vers une constitution civile que limite le bois courbe de l'homme (6e) et qui suppose une société des nations (7e) ; les Lumières passent par l'usage public de la raison, la paix par une fédération d'États libres ; l'homme est une personne (Anthropologie) qui doit apprendre à travailler (Pédagogie).**
+        **L'histoire avance par l'insociable sociabilité (4e proposition), mais l'homme a besoin d'un maître qui soit lui-même un homme (6e), et, cultivés et civilisés, nous ne sommes pas encore moralisés (7e) ; les Lumières sont la sortie de la minorité, la paix par une fédération d'États libres ; l'homme est une personne (Anthropologie), voué au travail (Pédagogie).**
 
         | Texte | Titre du manuel |
         | 26. Idée d'une histoire universelle, 4e proposition | L'insociable sociabilité |
