@@ -22,8 +22,11 @@ npm run content:build   # compile vers public/content/
 
 `course.yaml` déclare un `layout`, qui décide de l'écran d'accueil.
 
-- **`path`** : parcours guidé, les leçons se suivent, la première étoile
-  débloque la suivante.
+- **`path`** : parcours guidé, les leçons se suivent, terminer l'une
+  débloque la suivante. Une session ne s'achève que lorsque chaque exercice
+  a reçu une bonne réponse : les exercices manqués reviennent dans la file
+  (par séries de dix réponses, comme le mode « Apprendre » de Quizlet), et
+  leur premier échec reste noté pour la révision espacée.
 - **`library`** : accès libre, des **pistes** s'affichent en onglets, et
   l'apprenant choisit ses unités dans l'ordre qu'il veut. C'est le cours
   d'exemple (`demo`).

@@ -5,17 +5,24 @@ import { cardStrength, type CardState } from './srs'
 /**
  * Règles de progression.
  *
- * Une leçon est acquise dès qu'elle est réussie une fois ; `level` n'est
+ * Une leçon est acquise dès qu'elle est menée une fois à son terme : la
+ * session ne s'achève que lorsque chaque exercice a reçu une bonne réponse,
+ * les exercices manqués revenant dans la file (voir `answer` dans
+ * `SessionScreen`), sans seuil de réussite au premier essai. `level` n'est
  * qu'un plancher (0 ou 1) qui ne redescend jamais, même après un oubli
  * passager mesuré par ailleurs sur les cartes de révision. Ce n'est pas une
  * note : la maîtrise réelle, elle, se lit sur les anneaux de progression
  * (`masteryOf` et dérivés), qui restent l'indicateur fin de ce qui est
  * vraiment su.
  *
- * Dans l'agencement `path`, réussir une leçon débloque la suivante.
+ * Dans l'agencement `path`, terminer une leçon débloque la suivante.
  */
 
-/** Part de bonnes réponses exigée pour valider un passage. */
+/**
+ * Part de bonnes réponses au premier essai qui fait d'une session une
+ * réussite franche : elle module l'XP et la vibration de fin, mais ne
+ * conditionne plus la validation d'une leçon (voir `finishLesson`).
+ */
 export const PASS_ACCURACY = 0.7
 
 export interface LessonProgress {

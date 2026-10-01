@@ -183,7 +183,12 @@ function SessionKindBadge({ kind }: { kind: UnitNodeKind }) {
 }
 
 interface Attempt {
+  /** Exercices déjà tentés une fois : le premier essai seul compte pour la réussite. */
   seen: Set<string>
+  /** Exercices réussis au moins une fois : ce que la barre de progression mesure. */
+  passed: Set<string>
+  /** Réponses données, reprises comprises : ce qui rythme les pauses. */
+  answers: number
   correct: number
   total: number
 }
@@ -216,7 +221,7 @@ function SessionRunner({
   const gradeItem = useProgress((state) => state.gradeItem)
   const [queue, setQueue] = useState<Exercise[]>(exercises)
   const [position, setPosition] = useState(0)
-  const [attempt, setAttempt] = useState<Attempt>({ seen: new Set(), correct: 0, total: 0 })
+  const [attempt, setAttempt] = useState<Attempt>({ seen: new Set(), passed: new Set(), answers: 0, correct: 0, total: 0 })
   // Nombre d'exercices déjà faits au début du lot courant : la pause suivante
   // tombe dix exercices plus loin, pas au premier multiple de dix atteint
   // dans l'absolu (sans quoi reprendre juste après une pause en déclencherait
@@ -266,22 +271,25 @@ function SessionRunner({
         .length,
     [exercises, skips, attempt.seen],
   )
-  const progress = graded === 0 ? 1 : Math.min(1, attempt.seen.size / graded)
+  // La progression compte les exercices réussis, non les exercices vus : un
+  // exercice raté revient dans la file (voir `answer`) tant qu'il n'a pas
+  // reçu une bonne réponse, comme le mode « Apprendre » de Quizlet.
+  const progress = graded === 0 ? 1 : Math.min(1, attempt.passed.size / graded)
 
-  // Coupe la session tous les `BATCH_SIZE` exercices faits, réussis ou non.
-  // Pas de pause si la file est déjà vide : la session se termine alors
-  // normalement (voir l'effet de clôture plus bas), une pause n'y ajouterait
-  // qu'un écran de plus avant l'écran de fin.
+  // Coupe la session toutes les `BATCH_SIZE` réponses, reprises comprises,
+  // réussies ou non. Pas de pause si la file est déjà vide : la session se
+  // termine alors normalement (voir l'effet de clôture plus bas), une pause
+  // n'y ajouterait qu'un écran de plus avant l'écran de fin.
   useEffect(() => {
     if (paused || !current) return
-    if (attempt.seen.size - batchStart < BATCH_SIZE) return
+    if (attempt.answers - batchStart < BATCH_SIZE) return
     setPaused(true)
-  }, [attempt.seen.size, batchStart, current, paused])
+  }, [attempt.answers, batchStart, current, paused])
 
   const resume = useCallback(() => {
-    setBatchStart(attempt.seen.size)
+    setBatchStart(attempt.answers)
     setPaused(false)
-  }, [attempt.seen.size])
+  }, [attempt.answers])
 
   /** Avance dans la file, en réinsérant l'exercice raté un peu plus loin. */
   const advance = useCallback(
@@ -299,19 +307,24 @@ function SessionRunner({
     [position],
   )
 
-  const record = useCallback(
-    (exercise: Exercise, correct: boolean) => {
-      setAttempt((state) => {
-        if (state.seen.has(exercise.id)) return state
-        return {
-          seen: new Set(state.seen).add(exercise.id),
-          correct: state.correct + (correct ? 1 : 0),
-          total: state.total + 1,
-        }
-      })
-    },
-    [],
-  )
+  /**
+   * Note une réponse. La réussite affichée à la fin ne retient que le premier
+   * essai de chaque exercice (c'est lui qui dit ce qui était su) ; la
+   * progression, elle, avance dès qu'un exercice a été réussi, au premier
+   * essai ou à une reprise.
+   */
+  const record = useCallback((exercise: Exercise, correct: boolean, passed = correct) => {
+    setAttempt((state) => {
+      const first = !state.seen.has(exercise.id)
+      return {
+        seen: first ? new Set(state.seen).add(exercise.id) : state.seen,
+        passed: passed && !state.passed.has(exercise.id) ? new Set(state.passed).add(exercise.id) : state.passed,
+        answers: state.answers + 1,
+        correct: state.correct + (first && correct ? 1 : 0),
+        total: state.total + (first ? 1 : 0),
+      }
+    })
+  }, [])
 
   const answer = useCallback(
     (exercise: Exercise, correct: boolean, rating?: Rating) => {
@@ -323,13 +336,13 @@ function SessionRunner({
       // de la réponse (voir `useSessionSounds`). `answer` n'est appelé qu'à
       // l'appui sur « Continuer », une ou deux secondes plus tard.
       if (!isPresentation(exercise)) record(exercise, correct)
-      // Une auto-évaluation (`rating` fourni : découverte d'un mot,
-      // flashcard) ne se refait pas. Reposer la question quelques écrans
-      // plus loin demanderait de réévaluer un mot qu'on vient de déclarer
-      // nouveau — pas un rattrapage, juste du temps perdu. Ce qui est mal su
-      // revient par la révision espacée, une séance plus tard, quand
-      // l'oublier est redevenu possible.
-      advance(!correct && rating === undefined)
+      // Tant qu'un exercice n'a pas reçu une bonne réponse, il revient un peu
+      // plus loin dans la file, auto-évaluation comprise (« À revoir » sur
+      // une carte révélée) : la session ne s'achève que tout réussi. Seules
+      // les présentations (rappel, découverte d'un mot) ne reviennent pas :
+      // il n'y a rien à y réussir. La fragilité, elle, est déjà notée : le
+      // premier échec a marqué la carte pour la révision espacée.
+      advance(!correct && !isPresentation(exercise))
     },
     [advance, attempt.seen, course.id, gradeItem, record],
   )
@@ -351,7 +364,9 @@ function SessionRunner({
       // sensation. Vibrer à chaque paire aurait fait exactement le bruit
       // que la parcimonie cherche à éviter.
       haptics.answered(exercise, missed.size === 0)
-      record(exercise, missed.size === 0)
+      // Toutes les paires finissent trouvées : la manche est réussie, même
+      // si les paires manquées comptent comme un échec au premier essai.
+      record(exercise, missed.size === 0, true)
       // Les paires sont toutes trouvées à la fin : inutile de rejouer la manche.
       advance(false)
     },
@@ -378,9 +393,9 @@ function SessionRunner({
         style={{ height: 'var(--app-vh, 100dvh)' }}
       >
         <SessionPause
-          done={attempt.seen.size}
+          passed={attempt.passed.size}
+          attempted={attempt.seen.size}
           graded={graded}
-          correct={attempt.correct}
           onContinue={resume}
           onQuit={onQuit}
         />
@@ -431,7 +446,7 @@ function SessionRunner({
           />
         </div>
         <span className="w-12 text-right text-sm font-extrabold text-ink-faint">
-          {attempt.seen.size}/{graded}
+          {attempt.passed.size}/{graded}
         </span>
         <ComboBadge combo={combo} />
         {hasCitations && (

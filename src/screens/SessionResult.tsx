@@ -38,7 +38,7 @@ export function SessionResult({
       <p className="max-w-xs text-sm text-ink-soft">
         {passed
           ? 'Ces mots reviendront au bon moment dans vos révisions.'
-          : `Il faut 70 % de bonnes réponses pour valider. Vous êtes à ${accuracy} %.`}
+          : `${accuracy} % de bonnes réponses au premier essai.`}
       </p>
 
       <div className="grid w-full max-w-sm grid-cols-2 gap-3">

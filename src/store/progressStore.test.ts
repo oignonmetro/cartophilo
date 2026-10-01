@@ -226,10 +226,19 @@ describe('progression isolée par cours', () => {
   it('compte les passages séparément pour chaque cours', () => {
     useProgress.getState().reset()
     useProgress.getState().finishLesson('fr-en-b1', 'v1-l1', { correct: 4, total: 4 })
+    useProgress.getState().finishLesson('fr-en-b1', 'v1-l1', { correct: 3, total: 4 })
     useProgress.getState().finishLesson('fr-en-b2', 'v1-l1', { correct: 2, total: 4 })
+    expect(useProgress.getState().lessons['fr-en-b1']?.['v1-l1']?.completions).toBe(2)
+    expect(useProgress.getState().lessons['fr-en-b2']?.['v1-l1']?.completions).toBe(1)
+    expect(useProgress.getState().lessons['fr-en-b2']?.['v1-l1']?.bestAccuracy).toBe(0.5)
+  })
+
+  it('valide une leçon menée à son terme, quelle que soit la réussite au premier essai', () => {
+    useProgress.getState().reset()
+    // La session ne s'achève que tout réussi : la terminer suffit, sans seuil.
+    const { passed } = useProgress.getState().finishLesson('fr-en-b1', 'v1-l1', { correct: 1, total: 4 })
+    expect(passed).toBe(true)
     expect(useProgress.getState().lessons['fr-en-b1']?.['v1-l1']?.level).toBe(1)
-    // Échouée en B2 : niveau resté à 0, sans toucher au niveau acquis en B1.
-    expect(useProgress.getState().lessons['fr-en-b2']?.['v1-l1']?.level).toBe(0)
   })
 })
 

@@ -10,23 +10,25 @@ import { useIsDesktop } from '@/lib/useIsDesktop'
  * file et les réponses déjà données restent en mémoire, rien n'est rejoué.
  */
 export function SessionPause({
-  done,
+  passed,
+  attempted,
   graded,
-  correct,
   onContinue,
   onQuit,
 }: {
-  /** Exercices distincts déjà faits dans la leçon, tous lots confondus. */
-  done: number
+  /** Exercices déjà réussis, au premier essai ou à une reprise. */
+  passed: number
+  /** Exercices déjà tentés au moins une fois, réussis ou non. */
+  attempted: number
   /** Total d'exercices notés de la leçon (voir `graded` dans `SessionScreen`). */
   graded: number
-  correct: number
   onContinue: () => void
   onQuit: () => void
 }) {
   const isDesktop = useIsDesktop()
-  const remaining = graded - done
-  const toReview = done - correct
+  const remaining = graded - passed
+  // Tentés sans être encore réussis : ils reviendront dans la suite de la file.
+  const toRetry = attempted - passed
 
   // Même raccourci que `RuleNote` : Entrée enchaîne, réservé à l'ordinateur.
   useEffect(() => {
@@ -44,12 +46,13 @@ export function SessionPause({
     <div className="flex h-full flex-col items-center justify-center gap-6 overflow-y-auto px-6 py-10 text-center [&>*]:shrink-0">
       <h1 className="text-3xl font-black">Petite pause ?</h1>
       <p className="max-w-xs text-sm text-ink-soft">
-        {done} exercices faits, encore {remaining} dans cette leçon. Rien n'est perdu : reprenez quand vous voulez.
+        {passed} exercices réussis, encore {remaining} à réussir dans cette leçon. Rien n'est perdu : reprenez quand vous
+        voulez.
       </p>
 
       <div className="grid w-full max-w-sm grid-cols-2 gap-3">
-        <Stat label="Réussis" value={String(correct)} />
-        <Stat label="À revoir" value={String(toReview)} />
+        <Stat label="Réussis" value={String(passed)} />
+        <Stat label="À reprendre" value={String(toRetry)} />
       </div>
 
       <div className="mt-2 flex w-full max-w-sm flex-col gap-3">

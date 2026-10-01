@@ -439,7 +439,12 @@ export const useProgress = create<ProgressState>()(
 
       finishLesson: (courseId, lessonId, outcome, now = Date.now()) => {
         const state = get()
-        const passed = isPassed(outcome)
+        // Une leçon n'arrive à son terme que lorsque chacun de ses exercices a
+        // reçu une bonne réponse (voir `answer` dans `SessionScreen`) : la
+        // terminer suffit à la valider, sans seuil de réussite au premier
+        // essai. Ce premier essai reste mesuré (précision, XP), et les cartes
+        // manquées sont déjà marquées pour la révision.
+        const passed = true
         const bucket = state.lessons[courseId] ?? {}
         const previous = bucket[lessonId]
         // Le plancher ne descend jamais : une fois réussie, une leçon reste
