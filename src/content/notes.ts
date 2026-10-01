@@ -53,6 +53,16 @@ const INLINE = new RegExp(
 )
 
 /**
+ * Colle chaque guillemet français à son mot, d'un espace insécable, pour
+ * qu'il ne se retrouve jamais seul en fin ou en début de ligne — un « tout
+ * seul en bout de ligne, séparé du mot qu'il ouvre, se lit comme une
+ * ponctuation orpheline plutôt qu'une citation.
+ */
+function nbspQuotes(text: string): string {
+  return text.replace(/« /g, '« ').replace(/ »/g, ' »')
+}
+
+/**
  * `**gras**`, `*italique*`, `__souligné__`, `` `mot étranger` ``,
  * `{couleur}teinté{/couleur}`.
  *
@@ -68,13 +78,13 @@ export function parseInline(text: string): Inline[] {
 
   for (const match of text.matchAll(INLINE)) {
     const at = match.index
-    if (at > last) spans.push({ kind: 'text', text: text.slice(last, at) })
+    if (at > last) spans.push({ kind: 'text', text: nbspQuotes(text.slice(last, at)) })
 
     const [, strong, underline, em, form, color, colorText] = match
     if (strong !== undefined) spans.push({ kind: 'strong', children: parseInline(strong) })
     else if (underline !== undefined) spans.push({ kind: 'underline', children: parseInline(underline) })
     else if (em !== undefined) spans.push({ kind: 'em', children: parseInline(em) })
-    else if (form !== undefined) spans.push({ kind: 'form', text: form })
+    else if (form !== undefined) spans.push({ kind: 'form', text: nbspQuotes(form) })
     else if (color !== undefined) {
       spans.push({ kind: 'color', color: color as UnitColor, children: parseInline(colorText ?? '') })
     }
@@ -82,7 +92,7 @@ export function parseInline(text: string): Inline[] {
     last = at + match[0].length
   }
 
-  if (last < text.length) spans.push({ kind: 'text', text: text.slice(last) })
+  if (last < text.length) spans.push({ kind: 'text', text: nbspQuotes(text.slice(last)) })
   return spans
 }
 

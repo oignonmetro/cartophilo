@@ -152,7 +152,15 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
                   case plie sur huit lignes pendant que sa voisine tient sur
                   une. `tableCellSize` resserre la police cellule par
                   cellule, selon sa propre longueur, pour que les rangées
-                  restent harmonieuses. */}
+                  restent harmonieuses.
+
+                  Les colonnes de contenu centrent leur texte (`text-center`) :
+                  sur un grand écran, leur largeur égale laisse souvent une
+                  réponse courte (« penser ») très en retrait d'une case
+                  large, perdue à gauche plutôt qu'au centre de l'espace qui
+                  lui est alloué. Seule la colonne d'étiquette (`w-20`) garde
+                  un alignement à gauche : elle sert de repère, pas de
+                  contenu. */}
               <table className="w-full table-fixed border-collapse">
                 <thead>
                   <tr>
@@ -160,7 +168,7 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
                     {block.columns.map((column, i) => (
                       <th
                         key={i}
-                        className={`px-3 py-2 text-left font-black break-words ${tableCellSize(column)} ${tone.label}`}
+                        className={`px-3 py-2 text-center font-black break-words ${tableCellSize(column)} ${tone.label}`}
                       >
                         <Rich text={column} />
                       </th>
@@ -178,7 +186,7 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
                       {row.cells.map((cell, j) => (
                         <td
                           key={j}
-                          className={`px-3 py-2 align-top break-words text-ink-soft ${tableCellSize(cell)}`}
+                          className={`px-3 py-2 text-center align-top break-words text-ink-soft ${tableCellSize(cell)}`}
                         >
                           <Rich text={cell} />
                         </td>
