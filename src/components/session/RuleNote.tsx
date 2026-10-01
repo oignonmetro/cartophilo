@@ -81,10 +81,19 @@ export type Tone = (typeof TONES)[keyof typeof TONES]
  * Taille de texte d'une cellule de tableau, resserrée selon sa propre
  * longueur plutôt que celle, fixe, de la colonne : voir la remarque dans
  * `NoteBlocks` au-dessus du tableau.
+ *
+ * Le resserrement ne vaut que sur téléphone (`w-20` et une colonne qui tient
+ * dans le tiers de l'écran) : c'est là qu'une cellule longue, à la même
+ * taille que ses voisines courtes, pliait sur huit lignes. Sur ordinateur,
+ * la même colonne est bien plus large — le texte y tiendrait sans se
+ * resserrer — et une police minuscule, flottant au milieu d'une grande case
+ * à côté d'une étiquette en gras de taille normale, ne lisait plus comme
+ * une cellule de tableau mais comme une erreur de mise en page. `md:`
+ * revient donc systématiquement à la taille normale.
  */
 function tableCellSize(text: string): string {
-  if (text.length > 90) return 'text-[11px] leading-snug'
-  if (text.length > 40) return 'text-xs leading-snug'
+  if (text.length > 90) return 'text-[11px] leading-snug md:text-sm md:leading-snug'
+  if (text.length > 40) return 'text-xs leading-snug md:text-sm md:leading-snug'
   return 'text-sm leading-snug'
 }
 
