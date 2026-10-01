@@ -8,6 +8,10 @@ import { useIsDesktop } from '@/lib/useIsDesktop'
  * interrompue à un point régulier pour qu'une longue leçon ne décourage pas
  * d'un bloc. « Continuer » reprend exactement où elle s'est arrêtée — la
  * file et les réponses déjà données restent en mémoire, rien n'est rejoué.
+ *
+ * Présenté comme un point d'étape plutôt qu'une pause suggérée (pas de
+ * question, pas d'invitation à s'arrêter) : ce qu'on y lit, c'est où on en
+ * est, pas qu'il serait temps de souffler.
  */
 export function SessionPause({
   passed,
@@ -26,7 +30,6 @@ export function SessionPause({
   onQuit: () => void
 }) {
   const isDesktop = useIsDesktop()
-  const remaining = graded - passed
   // Tentés sans être encore réussis : ils reviendront dans la suite de la file.
   const toRetry = attempted - passed
 
@@ -44,10 +47,9 @@ export function SessionPause({
 
   return (
     <div className="flex h-full flex-col items-center justify-center gap-6 overflow-y-auto px-6 py-10 text-center [&>*]:shrink-0">
-      <h1 className="text-3xl font-black">Petite pause ?</h1>
+      <h1 className="text-3xl font-black">Récapitulatif</h1>
       <p className="max-w-xs text-sm text-ink-soft">
-        {passed} exercices réussis, encore {remaining} à réussir dans cette leçon. Rien n'est perdu : reprenez quand vous
-        voulez.
+        {passed} exercices réussis sur {graded} dans cette leçon. Rien n'est perdu : reprenez quand vous voulez.
       </p>
 
       <div className="grid w-full max-w-sm grid-cols-2 gap-3">

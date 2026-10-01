@@ -41,8 +41,8 @@ export function ReviewRoute() {
         passed
         xp={finished.xp}
         peakTier={finished.peakTier}
-        onContinue={() => navigate('/', { replace: true })}
-        onRetry={() => navigate('/', { replace: true })}
+        onContinue={() => navigate(-1)}
+        onRetry={() => navigate(-1)}
       />
     )
   }
@@ -54,7 +54,7 @@ export function ReviewRoute() {
         <p className="max-w-xs text-sm text-ink-soft">
           Tout est à jour. Travaillez de nouvelles leçons, les révisions reviendront d'elles-mêmes.
         </p>
-        <Button onClick={() => navigate('/', { replace: true })}>Retour</Button>
+        <Button onClick={() => navigate(-1)}>Retour</Button>
       </div>
     )
   }
@@ -63,7 +63,7 @@ export function ReviewRoute() {
     <SessionScreen
       kind="review"
       exercises={exercises}
-      onQuit={() => navigate('/', { replace: true })}
+      onQuit={() => navigate(-1)}
       onFinish={(outcome, peakTier) => setFinished({ outcome, peakTier, ...finishReview(outcome) })}
     />
   )

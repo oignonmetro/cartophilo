@@ -90,7 +90,9 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
 
   if (!unit || !node || node.kind === 'lesson') return <Navigate to="/" replace />
 
-  const backHome = () => navigate('/', { replace: true })
+  // Même remarque que `LessonRoute` : revenir en arrière plutôt que de
+  // forcer l'accueil, pour retomber sur la page d'où l'étape a été ouverte.
+  const backHome = () => navigate(-1)
 
   if (finished) {
     const { lessons, steps } = useProgress.getState()

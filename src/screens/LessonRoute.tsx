@@ -78,7 +78,10 @@ function LessonSession({ lessonId }: { lessonId: string }) {
   if (!entry) return <Navigate to="/" replace />
 
   const unit = entry.unit
-  const backHome = () => navigate('/', { replace: true })
+  // Pas `navigate('/')` : on quitte une leçon ouverte depuis la bibliothèque,
+  // une révision, un succès… — revenir en arrière, plutôt qu'à l'accueil,
+  // retombe sur cette page-là plutôt que de forcer celle du cours courant.
+  const backHome = () => navigate(-1)
 
   if (finished) {
     // L'enchaînement suit l'ordre du parcours, pas celui des seules leçons :
