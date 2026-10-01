@@ -78,6 +78,17 @@ export type Tone = (typeof TONES)[keyof typeof TONES]
  * le bouton. Extrait de `RuleNote` pour que l'éditeur de contenu affiche le
  * même rendu en aperçu, sans dupliquer ces règles de mise en page.
  */
+/**
+ * Taille de texte d'une cellule de tableau, resserrée selon sa propre
+ * longueur plutôt que celle, fixe, de la colonne : voir la remarque dans
+ * `NoteBlocks` au-dessus du tableau.
+ */
+function tableCellSize(text: string): string {
+  if (text.length > 90) return 'text-[11px] leading-snug'
+  if (text.length > 40) return 'text-xs leading-snug'
+  return 'text-sm leading-snug'
+}
+
 export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
   const blocks = parseNotes(notes)
 
@@ -131,13 +142,26 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
                   appliquée et aurait réduit « Matérielle » à une lettre par
                   ligne. Les colonnes de contenu se partagent le reste à
                   égalité et portent `break-words`, pour qu'un mot trop long
-                  plie plutôt que d'élargir sa colonne. */}
-              <table className="w-full table-fixed border-collapse text-sm">
+                  plie plutôt que d'élargir sa colonne.
+
+                  Pas de taille de texte unique sur `<table>` : une colonne
+                  étroite sur téléphone (voir `w-20` ci-dessus) force une
+                  thèse en deux mots et un argument d'une phrase entière à la
+                  même largeur, et donc à des hauteurs de ligne très
+                  différentes si le texte garde partout la même taille — une
+                  case plie sur huit lignes pendant que sa voisine tient sur
+                  une. `tableCellSize` resserre la police cellule par
+                  cellule, selon sa propre longueur, pour que les rangées
+                  restent harmonieuses. */}
+              <table className="w-full table-fixed border-collapse">
                 <thead>
                   <tr>
                     <th className="w-20" />
                     {block.columns.map((column, i) => (
-                      <th key={i} className={`px-3 py-2 text-left font-black break-words ${tone.label}`}>
+                      <th
+                        key={i}
+                        className={`px-3 py-2 text-left font-black break-words ${tableCellSize(column)} ${tone.label}`}
+                      >
                         <Rich text={column} />
                       </th>
                     ))}
@@ -146,11 +170,16 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
                 <tbody>
                   {block.rows.map((row, i) => (
                     <tr key={i} className="border-t border-ink/8">
-                      <th className={`w-20 px-3 py-2 text-left align-top font-black ${tone.label}`}>
+                      <th
+                        className={`w-20 px-3 py-2 text-left align-top font-black ${tableCellSize(row.label)} ${tone.label}`}
+                      >
                         <Rich text={row.label} />
                       </th>
                       {row.cells.map((cell, j) => (
-                        <td key={j} className="px-3 py-2 align-top leading-snug break-words text-ink-soft">
+                        <td
+                          key={j}
+                          className={`px-3 py-2 align-top break-words text-ink-soft ${tableCellSize(cell)}`}
+                        >
                           <Rich text={cell} />
                         </td>
                       ))}

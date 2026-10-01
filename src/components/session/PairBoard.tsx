@@ -53,14 +53,38 @@ const ROW_GAP = 12
 interface Density {
   minCard: number
   maxCard: number
-  className: string
+  padding: string
+  /** Taille de départ, avant l'ajustement par jeton de `textSizeFor`. */
+  baseText: (typeof TEXT_SCALE)[number]
 }
 
-const COMFORTABLE: Density = { minCard: 56, maxCard: 80, className: 'px-3 py-4 text-lg' }
-const COMPACT: Density = { minCard: 40, maxCard: 64, className: 'px-2 py-2 text-sm' }
+const COMFORTABLE: Density = { minCard: 56, maxCard: 80, padding: 'px-3 py-4', baseText: 'text-lg' }
+const COMPACT: Density = { minCard: 40, maxCard: 64, padding: 'px-2 py-2', baseText: 'text-sm' }
 
 function densityFor(rows: number): Density {
   return rows > 4 ? COMPACT : COMFORTABLE
+}
+
+/**
+ * Paliers de taille de texte, du plus grand au plus petit.
+ *
+ * Les deux colonnes d'une manche partagent la même hauteur de jeton (voir
+ * `cardHeight`), mais pas la même longueur de libellé — une référence tient
+ * en deux mots, l'affirmation qu'elle illustre en une phrase entière. Fixer
+ * une seule taille pour les deux, pensée pour le libellé le plus court,
+ * ferait déborder le plus long ; la penser pour le plus long écraserait les
+ * jetons courts dans une police trop petite pour leur peu de texte. Chaque
+ * jeton choisit donc sa propre taille, resserrée selon sa propre longueur.
+ */
+const TEXT_SCALE = ['text-lg', 'text-base', 'text-sm', 'text-xs'] as const
+
+/** Nombre de caractères qui fait franchir un palier de `TEXT_SCALE`. */
+const SHRINK_STEP_CHARS = 28
+
+function textSizeFor(label: string, density: Density): string {
+  const start = TEXT_SCALE.indexOf(density.baseText)
+  const steps = Math.min(TEXT_SCALE.length - 1 - start, Math.floor(label.length / SHRINK_STEP_CHARS))
+  return TEXT_SCALE[start + steps]
 }
 
 /**
@@ -167,7 +191,8 @@ export function PairBoard({
                   key={token.key}
                   token={token}
                   height={height}
-                  density={density.className}
+                  padding={density.padding}
+                  textSize={textSizeFor(token.label, density)}
                   solved={solvedKeys.has(token.key)}
                   selected={selected?.key === token.key}
                   shaking={wrong === token.key}
@@ -185,7 +210,8 @@ export function PairBoard({
 function TokenButton({
   token,
   height,
-  density,
+  padding,
+  textSize,
   solved,
   selected,
   shaking,
@@ -194,8 +220,10 @@ function TokenButton({
   token: Token
   /** Hauteur calculée par `cardHeight`, en `min-height` CSS. */
   height: string
-  /** Classes de remplissage et de texte de `densityFor`. */
-  density: string
+  /** Remplissage de `densityFor`. */
+  padding: string
+  /** Taille de texte propre au jeton, voir `textSizeFor`. */
+  textSize: string
   solved: boolean
   selected: boolean
   shaking: boolean
@@ -215,7 +243,7 @@ function TokenButton({
       animate={shaking ? { x: [0, -7, 7, -4, 0] } : { x: 0 }}
       transition={{ duration: 0.3 }}
       style={{ minHeight: height }}
-      className={`rounded-2xl border-2 text-center font-bold break-words transition-colors ${density} ${tone}`}
+      className={`rounded-2xl border-2 text-center font-bold break-words transition-colors ${padding} ${textSize} ${tone}`}
     >
       {token.label}
     </motion.button>
