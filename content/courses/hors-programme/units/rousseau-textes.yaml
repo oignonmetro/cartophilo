@@ -1,0 +1,323 @@
+# Unité-œuvre (voir content/oeuvres.md), pour réviser les 20 textes de
+# Rousseau d'un manuel de philosophie : associer chaque texte à sa référence.
+# Titres et références fournis par l'utilisatrice ; les textes qui partagent
+# une référence (Discours sur l'inégalité, I ; Émile, IV) ne forment qu'une
+# case : 16 cases. Aucune citation : les thèses reformulent les textes, au
+# plus près des formules connues.
+
+id: rousseau-textes
+title: "Rousseau : textes clés"
+subtitle: "20 textes, des Discours aux Rêveries"
+icon: map
+color: sky
+group: "Rousseau"
+intro: |-
+  Les 20 textes de Rousseau du manuel, à associer à leur référence : où Rousseau dit-il que la pitié tient lieu de lois, que l'homme est perfectible, qu'un peuple libre n'obéit qu'aux lois ?
+
+  Les textes qui partagent une référence ne forment qu'un emplacement : les quatre textes de la première partie du *Discours sur l'inégalité*, par exemple. Au clavier, le titre s'abrège (« Inégalité I », « CS I 6 », « Émile IV », « Rêveries 5 »).
+work:
+  parts:
+    - id: nature
+      label: "Nature, histoire et culture"
+      parts:
+        - id: b-nature
+          label: "Discours, Essai"
+          question: "Qu'est-ce que l'homme naturel, et qu'a fait de lui l'histoire ?"
+          parts:
+            - id: r-exorde
+              label: "Discours sur l'inégalité, Exorde"
+              title: "L'état de nature est une hypothèse"
+              summary: "L'état de nature n'est pas un fait historique, mais une hypothèse"
+              points:
+                - id: rt-exorde-1
+                  sentence: "Commençons donc par écarter tous les ___, car ils ne touchent point à la question."
+                  answer: "faits"
+                - id: rt-exorde-2
+                  sentence: "Ces recherches ne sont pas des vérités historiques, mais des raisonnements hypothétiques et ___, plus propres à éclaircir la nature des choses qu'à en montrer la véritable origine."
+                  answer: "conditionnels"
+            - id: r-preface
+              label: "Discours sur l'inégalité, Préface"
+              title: "L'état originaire de l'homme"
+              summary: "Connaître l'homme naturel sous ce que la société a fait de lui"
+              rel: declinaison
+              points:
+                - id: rt-preface-1
+                  sentence: "L'âme humaine, altérée au sein de la société, a changé d'apparence, comme la statue de ___ que le temps, la mer et les orages avaient défigurée."
+                  answer: "Glaucus"
+                - id: rt-preface-2
+                  sentence: "Il s'agit de bien connaître un état qui n'existe plus, qui n'a peut-être point existé, qui probablement n'existera ___."
+                  answer: "jamais"
+            - id: r-doi1
+              label: "Discours sur l'inégalité, I"
+              title: "L'homme à l'état de nature ; L'homme se distingue de l'animal par sa liberté ; La pitié ; La perfectibilité"
+              summary: "L'homme naturel : solitaire, libre, perfectible, et porté à la pitié"
+              rel: declinaison
+              points:
+                - id: rt-doi1-1
+                  sentence: "Errant dans les forêts, sans industrie, sans parole, sans domicile, sans guerre et sans ___, l'homme sauvage n'avait nul besoin de ses semblables."
+                  answer: "liaison"
+                - id: rt-doi1-2
+                  sentence: "La nature commande à tout animal, et la bête obéit ; l'homme éprouve la même impression, mais il se reconnaît libre d'___ ou de résister."
+                  answer: "acquiescer"
+                - id: rt-doi1-3
+                  sentence: "Un pigeon mourrait de faim près d'un bassin rempli des meilleures viandes, et un chat sur des tas de fruits ou de ___."
+                  answer: "grain"
+                - id: rt-doi1-4
+                  sentence: "La pitié est un sentiment naturel qui, modérant dans chaque individu l'activité de l'___ de soi-même, concourt à la conservation mutuelle de toute l'espèce."
+                  answer: "amour"
+                - id: rt-doi1-5
+                  sentence: "C'est la pitié qui, dans l'état de nature, tient lieu de lois, de mœurs et de ___."
+                  answer: "vertu"
+                - id: rt-doi1-6
+                  sentence: "Cette faculté distinctive et presque illimitée de se perfectionner est la source de tous les ___ de l'homme."
+                  answer: "malheurs"
+                - id: rt-doi1-7
+                  sentence: "Faisant éclore avec les siècles ses lumières et ses erreurs, ses vices et ses vertus, elle le rend à la longue le ___ de lui-même et de la nature."
+                  answer: "tyran"
+            - id: r-doi2
+              label: "Discours sur l'inégalité, II"
+              title: "La propriété, terme extrême de l'état de nature"
+              summary: "Le premier qui dit « ceci est à moi » fonda la société civile"
+              rel: declinaison
+              points:
+                - id: rt-doi2-1
+                  sentence: "Le premier qui, ayant enclos un terrain, s'avisa de dire : ceci est à moi, et trouva des gens assez simples pour le croire, fut le vrai fondateur de la société ___."
+                  answer: "civile"
+                - id: rt-doi2-2
+                  sentence: "Vous êtes perdus si vous oubliez que les fruits sont à tous, et que la ___ n'est à personne."
+                  answer: "terre"
+            - id: r-essai
+              label: "Essai sur l'origine des langues, IX"
+              title: "L'amour de la langue"
+              summary: "Les langues du Midi naissent autour des puits, du plaisir et non du besoin"
+              rel: declinaison
+              points:
+                - id: rt-essai-1
+                  sentence: "Dans les pays chauds, c'est autour des ___ que les jeunes gens se rencontrèrent, et que se firent les premières fêtes."
+                  answer: "puits"
+                  alt: ["fontaines"]
+                - id: rt-essai-2
+                  sentence: "Les premières langues du Midi furent filles du plaisir, et non du ___."
+                  answer: "besoin"
+            - id: r-dsa
+              label: "Discours sur les sciences et les arts, I"
+              title: "Les effets du progrès"
+              summary: "Les sciences et les arts ont corrompu les mœurs"
+              rel: declinaison
+              points:
+                - id: rt-dsa-1
+                  sentence: "Les sciences, les lettres et les arts étendent des guirlandes de ___ sur les chaînes de fer dont les hommes sont chargés."
+                  answer: "fleurs"
+                - id: rt-dsa-2
+                  sentence: "Ils étouffent en eux le sentiment de la liberté originelle, et en forment ce qu'on appelle des peuples ___."
+                  answer: "policés"
+                - id: rt-dsa-3
+                  sentence: "Nos âmes se sont ___ à mesure que nos sciences et nos arts se sont avancés à la perfection."
+                  answer: "corrompues"
+    - id: politique
+      label: "La politique"
+      parts:
+        - id: b-politique
+          label: "Contrat social, Lettres de la montagne"
+          question: "Qu'est-ce qui rend une autorité légitime ?"
+          parts:
+            - id: r-cs13
+              label: "Du contrat social, I, 3"
+              title: "Du droit du plus fort"
+              summary: "La force ne fait pas le droit"
+              points:
+                - id: rt-cs13-1
+                  sentence: "Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en ___."
+                  answer: "devoir"
+                - id: rt-cs13-2
+                  sentence: "Céder à la force est un acte de nécessité, non de volonté ; c'est tout au plus un acte de ___."
+                  answer: "prudence"
+            - id: r-cs14
+              label: "Du contrat social, I, 4"
+              title: "Renoncer à sa liberté, c'est renoncer à sa qualité d'homme"
+              summary: "Nul ne peut aliéner sa liberté"
+              rel: declinaison
+              points:
+                - id: rt-cs14-1
+                  sentence: "Ôter toute liberté à sa volonté, c'est ôter toute ___ à ses actions."
+                  answer: "moralité"
+                - id: rt-cs14-2
+                  sentence: "Il n'y a nul dédommagement possible pour quiconque renonce à ___."
+                  answer: "tout"
+                - id: rt-cs14-3
+                  sentence: "Une convention qui stipule d'un côté une autorité absolue et de l'autre une obéissance sans bornes est vaine et ___."
+                  answer: "contradictoire"
+            - id: r-cs16
+              label: "Du contrat social, I, 6"
+              title: "Du pacte social"
+              summary: "S'unir à tous en n'obéissant qu'à soi-même : l'aliénation totale à la communauté"
+              rel: declinaison
+              points:
+                - id: rt-cs16-1
+                  sentence: "Trouver une forme d'association par laquelle chacun, s'unissant à tous, n'obéisse pourtant qu'à ___ et reste aussi libre qu'auparavant."
+                  answer: "lui-même"
+                - id: rt-cs16-2
+                  sentence: "Les clauses du contrat se réduisent toutes à une seule : l'___ totale de chaque associé avec tous ses droits à toute la communauté."
+                  answer: "aliénation"
+                - id: rt-cs16-3
+                  sentence: "Chacun de nous met en commun sa personne et toute sa puissance sous la suprême direction de la volonté ___."
+                  answer: "générale"
+            - id: r-cs17
+              label: "Du contrat social, I, 7"
+              title: "On le forcera d'être libre"
+              summary: "Contraindre à obéir à la volonté générale, c'est forcer à être libre"
+              rel: declinaison
+              points:
+                - id: rt-cs17-1
+                  sentence: "Quiconque refusera d'obéir à la volonté générale y sera ___ par tout le corps."
+                  answer: "contraint"
+                - id: rt-cs17-2
+                  sentence: "Le souverain, n'étant formé que des particuliers qui le composent, n'a ni ne peut avoir d'___ contraire au leur."
+                  answer: "intérêt"
+            - id: r-cs18
+              label: "Du contrat social, I, 8"
+              title: "Les effets bénéfiques du pacte social"
+              summary: "L'état civil substitue la justice à l'instinct et donne la liberté morale"
+              rel: declinaison
+              points:
+                - id: rt-cs18-1
+                  sentence: "Le passage de l'état de nature à l'état civil substitue dans la conduite de l'homme la justice à l'___."
+                  answer: "instinct"
+                - id: rt-cs18-2
+                  sentence: "D'un animal stupide et borné, ce passage fit un être ___ et un homme."
+                  answer: "intelligent"
+                - id: rt-cs18-3
+                  sentence: "L'impulsion du seul appétit est esclavage, et l'obéissance à la loi qu'on s'est prescrite est ___."
+                  answer: "liberté"
+            - id: r-cs234
+              label: "Du contrat social, II, 3-4"
+              title: "La volonté générale"
+              summary: "La volonté générale est toujours droite, et doit être générale dans son objet comme dans son essence"
+              rel: declinaison
+              points:
+                - id: rt-cs234-1
+                  sentence: "La volonté générale est toujours droite et tend toujours à l'utilité ___."
+                  answer: "publique"
+                - id: rt-cs234-2
+                  sentence: "La volonté de tous regarde à l'intérêt privé ; la volonté générale ne regarde qu'à l'intérêt ___."
+                  answer: "commun"
+                - id: rt-cs234-3
+                  sentence: "La volonté générale, pour être vraiment telle, doit l'être dans son objet ainsi que dans son ___."
+                  answer: "essence"
+            - id: r-montagne
+              label: "Lettres écrites de la montagne, VIII"
+              title: "Liberté et loi sont inséparables"
+              summary: "Un peuple libre n'obéit qu'aux lois, et non aux hommes"
+              rel: declinaison
+              points:
+                - id: rt-montagne-1
+                  sentence: "La liberté consiste moins à faire sa volonté qu'à n'être pas soumis à celle d'___."
+                  answer: "autrui"
+                - id: rt-montagne-2
+                  sentence: "Un peuple libre obéit, mais il ne ___ pas ; il a des chefs et non pas des maîtres."
+                  answer: "sert"
+                - id: rt-montagne-3
+                  sentence: "Il obéit aux lois, mais il n'obéit qu'aux lois, et c'est par la force des lois qu'il n'obéit pas aux ___."
+                  answer: "hommes"
+    - id: homme
+      label: "L'homme : éducation, religion, existence"
+      parts:
+        - id: b-homme
+          label: "Émile, Rêveries"
+          question: "Comment former l'homme, que croire, et comment être heureux ?"
+          parts:
+            - id: r-emile1
+              label: "Émile, I"
+              title: "Une éducation naturelle"
+              summary: "Tout dégénère entre les mains de l'homme : suivre la nature"
+              points:
+                - id: rt-emile1-1
+                  sentence: "Tout est bien sortant des mains de l'Auteur des choses, tout ___ entre les mains de l'homme."
+                  answer: "dégénère"
+                - id: rt-emile1-2
+                  sentence: "Cette éducation nous vient de la nature, ou des ___, ou des choses."
+                  answer: "hommes"
+            - id: r-emile4
+              label: "Émile, IV"
+              title: "La conscience, juge infaillible du bien et du mal ; La religion naturelle"
+              summary: "La conscience, instinct divin ; une religion du cœur et de la raison"
+              rel: declinaison
+              points:
+                - id: rt-emile4-1
+                  sentence: "Conscience ! conscience ! instinct ___, immortelle et céleste voix."
+                  answer: "divin"
+                - id: rt-emile4-2
+                  sentence: "Juge infaillible du bien et du mal, la conscience rend l'homme semblable à ___."
+                  answer: "Dieu"
+                - id: rt-emile4-3
+                  sentence: "Les plus grandes idées de la Divinité nous viennent par la ___ seule."
+                  answer: "raison"
+                - id: rt-emile4-4
+                  sentence: "Le culte essentiel est celui du ___."
+                  answer: "cœur"
+                  alt: ["coeur"]
+            - id: r-reveries
+              label: "Rêveries, 5e promenade"
+              title: "Le sentiment de l'existence"
+              summary: "Le bonheur de la rêverie : se suffire à soi-même comme Dieu"
+              rel: declinaison
+              points:
+                - id: rt-reveries-1
+                  sentence: "À l'île de Saint-Pierre, sur le lac de ___, Rousseau connut le bonheur de la rêverie."
+                  answer: "Bienne"
+                - id: rt-reveries-2
+                  sentence: "Dans cet état, le temps n'est rien pour l'âme, et le ___ dure toujours."
+                  answer: "présent"
+                - id: rt-reveries-3
+                  sentence: "On ne jouit alors de rien d'extérieur à soi : on se suffit à soi-même comme ___."
+                  answer: "Dieu"
+  recaps:
+    - at: b-nature
+      label: "Discours, Essai"
+      title: "L'homme naturel et ce que l'histoire en a fait"
+      notes: |-
+        **Rousseau pose l'état de nature comme une hypothèse (Exorde), pour retrouver l'homme sous ce que la société a fait de lui (Préface) : solitaire, libre, perfectible, porté à la pitié (I). La propriété fonde la société civile (II), et le progrès des sciences et des arts corrompt les mœurs (Discours sur les sciences et les arts).**
+
+        | Texte | Titre du manuel |
+        | 1. Discours sur l'inégalité, Exorde | L'état de nature est une hypothèse |
+        | 2. Discours sur l'inégalité, Préface | L'état originaire de l'homme |
+        | 3. Discours sur l'inégalité, I | L'homme à l'état de nature |
+        | 4. Discours sur l'inégalité, I | L'homme se distingue de l'animal par sa liberté |
+        | 5. Discours sur l'inégalité, I | La pitié |
+        | 6. Discours sur l'inégalité, I | La perfectibilité |
+        | 9. Discours sur l'inégalité, II | La propriété, terme extrême de l'état de nature |
+        | 7. Essai sur l'origine des langues, IX | L'amour de la langue |
+        | 8. Discours sur les sciences et les arts, I | Les effets du progrès |
+
+        Quatre textes du manuel partagent la première partie du *Discours sur l'inégalité* : ils ne forment ici qu'un emplacement.
+
+        ! L'état de nature n'est pas un passé à retrouver : c'est une fiction méthodique pour juger l'état présent.
+    - at: b-politique
+      label: "Contrat social, Lettres de la montagne"
+      title: "Le Contrat social et la liberté"
+      notes: |-
+        **La force ne fait pas droit (I, 3), et nul ne peut renoncer à sa liberté (I, 4) : seul le pacte social fonde une autorité légitime (I, 6), qui peut forcer à être libre (I, 7), transforme l'homme (I, 8) et s'exprime par la volonté générale (II, 3-4). Un peuple libre n'obéit qu'aux lois (Lettres écrites de la montagne).**
+
+        | Texte | Titre du manuel |
+        | 10. Du contrat social, I, 3 | Du droit du plus fort |
+        | 11. Du contrat social, I, 4 | Renoncer à sa liberté, c'est renoncer à sa qualité d'homme |
+        | 12. Du contrat social, I, 6 | Du pacte social |
+        | 14. Du contrat social, I, 7 | On le forcera d'être libre |
+        | 16. Du contrat social, I, 8 | Les effets bénéfiques du pacte social |
+        | 13. Du contrat social, II, 3-4 | La volonté générale |
+        | 15. Lettres écrites de la montagne, VIII | Liberté et loi sont inséparables |
+
+        ! « On le forcera d'être libre » n'est pas un paradoxe tyrannique : obéir à la volonté générale, c'est obéir à la loi qu'on s'est donnée.
+    - at: b-homme
+      label: "Émile, Rêveries"
+      title: "Éducation, conscience et existence"
+      notes: |-
+        **L'Émile veut une éducation qui suive la nature (I) et fonde la morale sur la conscience et la religion sur le cœur et la raison (IV, Profession de foi du vicaire savoyard) ; les Rêveries trouvent le bonheur dans le pur sentiment de l'existence (5e promenade).**
+
+        | Texte | Titre du manuel |
+        | 17. Émile, I | Une éducation naturelle |
+        | 18. Émile, IV | La conscience, juge infaillible du bien et du mal |
+        | 19. Émile, IV | La religion naturelle |
+        | 20. Rêveries, 5e promenade | Le sentiment de l'existence |
+
+        ! La conscience n'est pas un jugement de la raison : c'est un sentiment, un instinct divin.

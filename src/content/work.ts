@@ -143,7 +143,7 @@ const TITLE_STOPWORDS = new Set([
 const DIVISION_WORDS = new Set([
   'art', 'article', 'articles', 'def', 'definition', 'definitions', 'partie', 'part',
   'objection', 'obj', 'rep', 'reponse', 'lettre', 'preface', 'chap', 'chapitre', 'ch', 'livre', 'liv', 'proposition',
-  'prop', 'section', 'sect',
+  'prop', 'section', 'sect', 'promenade',
 ])
 const MONTHS = new Set([
   'janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre',
