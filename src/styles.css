@@ -74,17 +74,36 @@
    * de 48° (jaune-or) : 19° d'écart avec `amber`, en restant encore loin du
    * vert (140°). `amber` n'a pas bougé — elle sert ailleurs (XP, récompense
    * de fin d'unité, voir `SessionScreen`), pas seulement dans ce sélecteur.
+   *
+   * Le jaune pur (clair, peu saturé en bleu) a beau se lire clairement sur
+   * fond sombre, son contraste sur fond clair est très mauvais — en dessous
+   * même de `amber` (environ 1,5:1 sur blanc, déjà faible mais c'est le
+   * niveau qu'affichent toutes les teintes vives de cette palette). Gardé à
+   * la même teinte 62°, mais assombri (valeur ~0,80 plutôt que ~1) pour
+   * revenir à ce niveau plutôt que tomber à ~1,2:1 — toujours lisible comme
+   * un jaune franc, pas comme un camaïeu pastel.
    */
-  --color-yellow: #e9ef39;
-  --color-yellow-deep: #afa800;
+  --color-yellow: #c5cc00;
+  --color-yellow-deep: #878c00;
   --color-green: #4caf6d;
   --color-green-deep: #2e8b57;
   --color-red: #e63946;
   --color-red-deep: #b4232e;
-  --color-orange: #ff9248;
-  --color-orange-deep: #d9720a;
-  --color-blue: #4b8fe3;
-  --color-blue-deep: #2e5fa3;
+
+  /*
+   * `coral` et `orange` d'un côté, `sky` et `blue` de l'autre, se lisaient
+   * comme deux paires de quasi-doublons plutôt que quatre teintes
+   * distinctes (17° et 15° d'écart de teinte respectivement — serré, et les
+   * deux de chaque paire partagent la même luminosité). Un seul survit par
+   * paire, le plus clair (`coral`, `sky`) : `orange` et `blue` sont retirés
+   * de la palette plutôt que relégués à un usage résiduel, pour qu'il n'y
+   * ait plus qu'une réponse à « quelle teinte prendre ? ». `pink` prend la
+   * place ainsi libérée : à 330°, c'est l'écart de teinte le plus large de
+   * toute la palette (108° entre `violet` et `red`) qui restait sans aucune
+   * couleur dedans.
+   */
+  --color-pink: #f472b6;
+  --color-pink-deep: #db2777;
 
   --color-success: #34c759;
   --color-success-deep: #1f9b41;

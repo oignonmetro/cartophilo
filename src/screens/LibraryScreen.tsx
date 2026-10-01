@@ -195,21 +195,13 @@ const TRACK_TONES: Record<string, { text: string; bg: string; soft: string; bord
     css: 'var(--color-red)',
     deep: 'var(--color-red-deep)',
   },
-  orange: {
-    text: 'text-orange',
-    bg: 'bg-orange',
-    soft: 'bg-orange/10',
-    border: 'border-orange',
-    css: 'var(--color-orange)',
-    deep: 'var(--color-orange-deep)',
-  },
-  blue: {
-    text: 'text-blue',
-    bg: 'bg-blue',
-    soft: 'bg-blue/10',
-    border: 'border-blue',
-    css: 'var(--color-blue)',
-    deep: 'var(--color-blue-deep)',
+  pink: {
+    text: 'text-pink',
+    bg: 'bg-pink',
+    soft: 'bg-pink/10',
+    border: 'border-pink',
+    css: 'var(--color-pink)',
+    deep: 'var(--color-pink-deep)',
   },
 }
 

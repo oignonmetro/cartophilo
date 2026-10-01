@@ -263,6 +263,5 @@ export const UNIT_TONES: Record<UnitColor, { bg: string; deep: string; text: str
   yellow: { bg: 'bg-yellow', deep: 'var(--color-yellow-deep)', text: 'text-yellow', ring: 'ring-yellow' },
   green: { bg: 'bg-green', deep: 'var(--color-green-deep)', text: 'text-green', ring: 'ring-green' },
   red: { bg: 'bg-red', deep: 'var(--color-red-deep)', text: 'text-red', ring: 'ring-red' },
-  orange: { bg: 'bg-orange', deep: 'var(--color-orange-deep)', text: 'text-orange', ring: 'ring-orange' },
-  blue: { bg: 'bg-blue', deep: 'var(--color-blue-deep)', text: 'text-blue', ring: 'ring-blue' },
+  pink: { bg: 'bg-pink', deep: 'var(--color-pink-deep)', text: 'text-pink', ring: 'ring-pink' },
 }

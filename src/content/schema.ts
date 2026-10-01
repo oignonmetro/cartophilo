@@ -346,8 +346,7 @@ export const unitColorSchema = z.enum([
   'yellow',
   'green',
   'red',
-  'orange',
-  'blue',
+  'pink',
 ])
 
 export const unitSchema = z.object({

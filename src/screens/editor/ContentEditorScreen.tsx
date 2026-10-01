@@ -59,7 +59,7 @@ function nextPointId(lessonId: string, points: PointDTO[]): string {
   return `${prefix}${max + 1}`
 }
 
-const COLORS = ['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'orange', 'blue'] as const
+const COLORS = ['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink'] as const
 
 const SWATCH: Record<UnitColor, string> = {
   teal: 'bg-teal',
@@ -70,8 +70,7 @@ const SWATCH: Record<UnitColor, string> = {
   yellow: 'bg-yellow',
   green: 'bg-green',
   red: 'bg-red',
-  orange: 'bg-orange',
-  blue: 'bg-blue',
+  pink: 'bg-pink',
 }
 
 /** Un unique repli par `group` : les unités consécutives qui le partagent. */

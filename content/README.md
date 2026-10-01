@@ -150,9 +150,9 @@ règles ou les pièges :
 | `*texte*` | italique | une nuance, une glose, un titre d'œuvre |
 | `{violet}texte{/violet}` | teinté (gras) | distinguer deux notions qui reviennent tout au long d'un rappel |
 
-`{couleur}…{/couleur}` accepte les dix teintes déjà en usage ailleurs dans
+`{couleur}…{/couleur}` accepte les neuf teintes déjà en usage ailleurs dans
 l'app : `teal`, `violet`, `coral`, `amber`, `sky`, `yellow`, `green`, `red`,
-`orange`, `blue`. Utile pour opposer deux notions sur toute la longueur d'un
+`pink`. Utile pour opposer deux notions sur toute la longueur d'un
 rappel (une thèse et l'objection qui lui répond, un auteur et son
 commentateur) plutôt qu'à l'intérieur d'une seule phrase, où le gras suffit
 déjà ; deux ou trois couleurs par rappel au plus, au-delà l'effet se perd.

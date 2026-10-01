@@ -67,8 +67,7 @@ const INLINE_COLORS: Record<UnitColor, string> = {
   yellow: 'text-yellow-deep',
   green: 'text-green-deep',
   red: 'text-red-deep',
-  orange: 'text-orange-deep',
-  blue: 'text-blue-deep',
+  pink: 'text-pink-deep',
 } as const
 
 export type Tone = (typeof TONES)[keyof typeof TONES]
