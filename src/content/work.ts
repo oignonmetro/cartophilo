@@ -95,7 +95,8 @@ export function matchesLocation(label: string, value: string): boolean {
   return plain(value).length > 0 && plain(value) === plain(label)
 }
 
-const plainText = (text: string) => text.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+const plainText = (text: string) =>
+  text.toLowerCase().replace(/œ/g, 'oe').replace(/æ/g, 'ae').normalize('NFD').replace(/[̀-ͯ]/g, '')
 const STEPHANUS = /(\d+)\s*([a-e])(?![a-z])/
 
 /**
@@ -135,11 +136,14 @@ const GREEK_NAMES: Record<string, number> = {
 }
 /** Lettres latines qu'on tape pour la majuscule grecque qui leur ressemble. */
 const GREEK_LOOKALIKES: Record<string, number> = { a: 1, b: 3, e: 6, z: 7, h: 8, k: 11, n: 14 }
-const TITLE_STOPWORDS = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'l', 'a', 'au', 'aux', 'et', 'd', 'sur', 'pour'])
+const TITLE_STOPWORDS = new Set([
+  'de', 'du', 'des', 'la', 'le', 'les', 'l', 'a', 'au', 'aux', 'et', 'd', 'sur', 'pour', 'qu', 'que', 'ce', 'est', 'une', 'un',
+])
 /** Mots qui annoncent une division (« art. 4 », « déf. I », « objection VII ») : ils ne comptent pas. */
 const DIVISION_WORDS = new Set([
   'art', 'article', 'articles', 'def', 'definition', 'definitions', 'partie', 'part',
-  'objection', 'obj', 'rep', 'reponse', 'lettre', 'preface', 'chap', 'chapitre', 'livre', 'liv',
+  'objection', 'obj', 'rep', 'reponse', 'lettre', 'preface', 'chap', 'chapitre', 'ch', 'livre', 'liv', 'proposition',
+  'prop', 'section', 'sect',
 ])
 const MONTHS = new Set([
   'janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre',
@@ -164,6 +168,12 @@ interface WorkReference {
   greek: boolean
   /** Une date (« 9 février 1645 ») : l'année seule, ou rien, suffit. */
   dated: boolean
+  /**
+   * Mots qui nomment la division (« Dialectique », « Introduction ») : ils
+   * distinguent deux endroits d'une même œuvre, et se tapent donc tous,
+   * abrégés si l'on veut.
+   */
+  keywords: string[]
 }
 
 /**
@@ -172,52 +182,55 @@ interface WorkReference {
  * `null` pour un emplacement d'une autre forme (« II, 4 », « §16 »).
  */
 export function workReferenceOf(label: string): WorkReference | null {
+  if (label.trim().startsWith('§')) return null
   const comma = label.indexOf(',')
-  if (comma <= 0 || label.trim().startsWith('§')) return null
-  const title = plainText(label.slice(0, comma))
-  const allWords = title.split(/[^a-z]+/).filter(Boolean)
+  const titlePart = comma > 0 ? label.slice(0, comma) : label
+  const allWords = plainText(titlePart).split(/[^a-z]+/).filter(Boolean)
   if (!allWords.some((word) => word.length >= 3 && fromRoman(word) === null)) return null
   const words = allWords.filter((word) => !TITLE_STOPWORDS.has(word))
+  // « Préface », « Remarque » seuls : un emplacement nommé, non une œuvre.
+  if (comma <= 0 && words.every((word) => DIVISION_WORDS.has(word))) return null
   const initials = [...new Set([words, allWords.filter((word) => word.length > 1)].map((list) => list.map((w) => w[0]).join('')))]
   const numbers: number[] = []
+  const keywords: string[] = []
   let greek = false
   let dated = false
-  let divided = false
-  for (const token of label.slice(comma + 1).split(/[\s,.;'’-]+/).filter(Boolean)) {
+  const rest = comma > 0 ? label.slice(comma + 1) : ''
+  for (const token of rest.split(/[\s,.;:'’§?!()-]+/).filter(Boolean)) {
     const plain = plainText(token)
     if (GREEK_BOOKS[token] !== undefined) {
       numbers.push(GREEK_BOOKS[token]!)
       greek = true
     } else if (MONTHS.has(plain)) dated = true
-    else if (DIVISION_WORDS.has(plain)) divided = true
+    else if (DIVISION_WORDS.has(plain) || TITLE_STOPWORDS.has(plain)) continue
     else {
       const number = divisionNumber(plain)
-      if (number === null) return null
-      numbers.push(number)
+      if (number !== null) numbers.push(number)
+      else if (/^[a-z]+$/.test(plain)) keywords.push(plain)
+      else return null
     }
   }
-  if (numbers.length === 0 && !divided) return null
-  return { words, initials, numbers, range: /\d\s*-\s*\d+\s*$/.test(label), greek, dated }
+  return { words, initials, numbers, range: /\d\s*-\s*\d+\s*$/.test(label), greek, dated, keywords }
 }
 
 /**
  * Une référence d'œuvre se saisit avec son titre, en entier, abrégé
- * (« Métaph. », « Pol. ») ou en sigle (« EN », « GM »), puis livre et
- * chapitre sous toutes leurs formes : chiffres romains ou arabes, lettre ou
- * nom grec (« Θ », « theta », « 9 », « IX »). Le titre est exigé : sans lui,
- * « I, 1 » désignerait aussi bien les *Topiques* que l'*Éthique*. Un
- * intervalle de chapitres (« I, 2-3 ») se désigne aussi par son début.
+ * (« Métaph. », « Pol. ») ou en sigle (« EN », « GM », « CRP »), puis livre,
+ * chapitre ou paragraphe sous toutes leurs formes : chiffres romains ou
+ * arabes, ordinaux (« 4e »), lettre ou nom grec (« Θ », « theta », « IX »).
+ * Le titre est exigé : sans lui, « I, 1 » désignerait aussi bien les
+ * *Topiques* que l'*Éthique*. Les mots qui nomment la division
+ * (« Dialectique », « Introduction ») sont exigés aussi, abrégés si l'on
+ * veut ; les mots qui l'annoncent seulement (« partie », « art. »,
+ * « préface ») sont facultatifs. Un intervalle de chapitres (« I, 2-3 ») se
+ * désigne aussi par son début ; une lettre, par son destinataire.
  */
 function matchesWorkReference(reference: WorkReference, value: string): boolean {
-  const tokens = value
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .split(/[\s,.;:()'’-]+/)
-    .filter(Boolean)
+  const tokens = value.split(/[\s,.;:()'’§?!-]+/).filter(Boolean)
   const numbers: number[][] = []
-  const titleWords: string[] = []
+  const words: string[] = []
   for (const token of tokens) {
-    const lower = token.toLowerCase()
+    const lower = plainText(token)
     if (MONTHS.has(lower) || DIVISION_WORDS.has(lower)) continue
     // Les petits mots du titre (« l' », « d' ») ne sont pas des chiffres romains,
     // sauf la lettre latine qu'on tape pour un livre grec (« Métaphysique A »).
@@ -229,15 +242,16 @@ function matchesWorkReference(reference: WorkReference, value: string): boolean 
     if (GREEK_BOOKS[token.toUpperCase()] !== undefined) candidates.add(GREEK_BOOKS[token.toUpperCase()]!)
     if (GREEK_NAMES[lower] !== undefined) candidates.add(GREEK_NAMES[lower]!)
     if (reference.greek && GREEK_LOOKALIKES[lower] !== undefined) candidates.add(GREEK_LOOKALIKES[lower]!)
-    if (candidates.size > 0 && (numbers.length > 0 || titleWords.length > 0)) numbers.push([...candidates])
-    else if (/^[a-z]+$/.test(lower) && !TITLE_STOPWORDS.has(lower)) titleWords.push(lower)
-    else if (!TITLE_STOPWORDS.has(lower)) return false
+    if (candidates.size > 0 && words.length > 0) numbers.push([...candidates])
+    else if (/^[a-z]+$/.test(lower)) words.push(lower)
+    else return false
   }
-  if (titleWords.length === 0) return false
-  const titled = titleWords.every(
-    (word) => reference.initials.includes(word) || reference.words.some((each) => each.startsWith(word)),
-  )
-  if (!titled) return false
+  const inTitle = (word: string) => reference.initials.includes(word) || reference.words.some((each) => each.startsWith(word))
+  const inKeywords = (word: string) => reference.keywords.some((each) => each.startsWith(word))
+  if (!words.some(inTitle)) return false
+  if (!words.every((word) => inTitle(word) || inKeywords(word))) return false
+  if (!reference.keywords.every((keyword) => words.some((word) => keyword.startsWith(word) && !inTitle(word)) || words.includes(keyword)))
+    return false
   const wanted = [
     reference.numbers,
     ...(reference.range ? [reference.numbers.slice(0, -1)] : []),

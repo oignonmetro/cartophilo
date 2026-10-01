@@ -316,6 +316,25 @@ describe('saisir l’emplacement au clavier', () => {
     for (const [label, values] of refused) for (const value of values) expect(matchesLocation(label, value), `${label} ← ${value}`).toBe(false)
   })
 
+  it('exige les mots qui nomment la division, et reconnaît les titres sans division', () => {
+    const accepted: [string, string[]][] = [
+      ['Critique de la raison pure, Dialectique, Introduction', ['CRP Dialectique Introduction', 'CRP dial. intro', 'Critique de la raison pure, dialectique, introduction']],
+      ['Critique de la raison pure, Préface de 1787', ['CRP préface 1787', 'CRP 1787']],
+      ['Fondements de la métaphysique des mœurs, II', ['FMM II', 'Fondements des moeurs 2']],
+      ['Critique de la faculté de juger, § 46', ['CFJ 46', 'CFJ § 46']],
+      ['Qu’est-ce que les Lumières ?', ['Lumières', 'Qu’est-ce que les Lumières']],
+      ['Idée d’une histoire universelle, 4e proposition', ['Idée 4', 'Histoire universelle, 4e proposition']],
+    ]
+    for (const [label, values] of accepted) for (const value of values) expect(matchesLocation(label, value), `${label} ← ${value}`).toBe(true)
+    const refused: [string, string[]][] = [
+      ['Critique de la raison pure, Dialectique, Introduction', ['CRP Dialectique', 'CRP Logique Introduction', 'CRP intro']],
+      ['Critique de la raison pure, Introduction de 1787', ['CRP 1787', 'CRP préface 1787']],
+      ['Critique de la raison pratique, Dialectique', ['Critique de la raison pure, Dialectique']],
+    ]
+    for (const [label, values] of refused) for (const value of values) expect(matchesLocation(label, value), `${label} ← ${value}`).toBe(false)
+    expect(matchesLocation('Préface', 'preface')).toBe(true)
+  })
+
   it('reconnaît un texte à sa pagination Stephanus, l’œuvre en plus si l’on veut', () => {
     const label = 'République VII, 514a-517c'
     for (const value of ['514a', '514', '514a-517c', 'République VII 514a', 'rep. vii, 514', 'republique 514a'])
