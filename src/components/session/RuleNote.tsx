@@ -373,9 +373,20 @@ export function RichGaps({ text, renderGap }: { text: string; renderGap: (index:
   // rendu n'a ainsi aucun compteur à faire avancer. Un compteur incrémenté
   // pendant le rendu se décalait au second passage que React fait en
   // développement (`StrictMode`), où le premier trou recevait le rang 1.
-  const numbered = text
-    .split(GAP)
-    .map((piece, index) => (index === 0 ? piece : `${GAP_MARK}${index - 1}${GAP_MARK}${piece}`))
+  const pieces = text.split(GAP)
+  const numbered = pieces
+    .map((piece, index) => {
+      if (index === pieces.length - 1) return piece
+      // Un trou qui suit directement une élision (« l'___ », « qu'___ »)
+      // forme un seul mot avec elle : rien ne doit jamais les séparer en
+      // retour à la ligne, l'apostrophe se retrouvant seule en bout de
+      // ligne comme une ponctuation orpheline. Un soudeur de mots (U+2060),
+      // invisible et sans largeur, interdit la coupure à cet endroit précis
+      // sans rien ajouter à l'affichage — un trou qui suit un mot entier
+      // (espace avant) garde, lui, le droit de passer à la ligne suivante.
+      const joiner = /['’]$/.test(piece) ? '⁠' : ''
+      return `${piece}${joiner}${GAP_MARK}${index}${GAP_MARK}`
+    })
     .join('')
   return <Spans spans={parseInline(numbered)} gaps={{ render: renderGap }} />
 }
