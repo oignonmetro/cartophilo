@@ -714,7 +714,13 @@ function GroupSection({
 
       {/* Un simple repli plutôt qu'une hauteur animée : aucun autre écran de
           l'app n'anime `height: auto`, et le fondu suffit à faire sentir
-          l'ouverture sans réinventer un mécanisme absent d'ailleurs. */}
+          l'ouverture sans réinventer un mécanisme absent d'ailleurs. Le filet
+          replié (`border-l-2`, indentation) lit bien comme une arborescence
+          sur téléphone, où les unités s'empilent sous leur groupe ; sur
+          ordinateur, où elles se rangent déjà en grille, il ne faisait plus
+          que barrer la grille d'un trait vertical sans rien relier. `md:`
+          l'efface et rend à la grille la largeur entière de la piste, sur
+          trois colonnes dès qu'il y a la place (`lg:`) plutôt que deux. */}
       <AnimatePresence initial={false}>
         {open && (
           <motion.div
@@ -722,7 +728,7 @@ function GroupSection({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
-            className="ml-3 flex flex-col gap-3 border-l-2 border-line pl-3 md:grid md:grid-cols-2 md:items-start md:gap-3"
+            className="ml-3 flex flex-col gap-3 border-l-2 border-line pl-3 md:ml-0 md:grid md:grid-cols-2 md:items-start md:gap-3 md:border-l-0 md:pl-0 lg:grid-cols-3"
           >
             {children}
           </motion.div>
@@ -785,8 +791,8 @@ function TreatiseIndexView({
               </span>
             </button>
 
-            {/* Même mécanique de repli que `GroupSection` : voir sa remarque
-                sur le choix d'un fondu plutôt qu'une hauteur animée. */}
+            {/* Même mécanique de repli que `GroupSection`, et même rail
+                effacé sur ordinateur : voir sa remarque. */}
             <AnimatePresence initial={false}>
               {open && (
                 <motion.div
@@ -794,7 +800,7 @@ function TreatiseIndexView({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.15 }}
-                  className="ml-3 flex flex-col gap-2 border-l-2 border-line pl-3 md:grid md:grid-cols-2 md:items-start md:gap-2"
+                  className="ml-3 flex flex-col gap-2 border-l-2 border-line pl-3 md:ml-0 md:grid md:grid-cols-2 md:items-start md:gap-2 md:border-l-0 md:pl-0 lg:grid-cols-3"
                 >
                   {group.map((entry) => (
                     <button
