@@ -212,7 +212,7 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
             {block.rules.map((rule, position) => (
               <li key={position} className="flex gap-3 border-b border-ink/8 py-3 last:border-b-0">
                 <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${tone.marker}`} />
-                <RuleBody rule={rule} labelClass={tone.label} />
+                <RuleBody rule={rule} />
               </li>
             ))}
           </ul>
@@ -320,7 +320,7 @@ export function RuleNote({
   )
 }
 
-function RuleBody({ rule, labelClass }: { rule: NoteRule; labelClass: string }) {
+function RuleBody({ rule }: { rule: NoteRule }) {
   const { main, aside } = splitAside(rule.body)
 
   return (
@@ -328,9 +328,13 @@ function RuleBody({ rule, labelClass }: { rule: NoteRule; labelClass: string }) 
       <p className="text-justify text-sm leading-snug text-ink">
         {/* Le deux-points d'origine sert de séparateur : il se lit aussi bien
             derrière une catégorie (« Une syllabe : ») que derrière une règle
-            entière (« must n'a pas de passé propre : »). */}
+            entière (« must n'a pas de passé propre : »). Ni teinté ni traité
+            autrement que le reste de la règle (seulement mis en gras) : la
+            présence d'un « : » dans la ligne ne dit rien sur l'importance de
+            ce qui précède, teindre l'étiquette donnait l'impression à tort
+            qu'une partie de la liste comptait plus que l'autre. */}
         {rule.label && (
-          <span className={`font-black ${labelClass}`}>
+          <span className="font-black">
             <Rich text={rule.label} /> :{' '}
           </span>
         )}
