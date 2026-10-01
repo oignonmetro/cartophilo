@@ -1,8 +1,10 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/Button'
 import { BoltIcon } from '@/components/icons'
 import { COMBO_TIER_LABELS } from '@/components/session/ComboBadge'
 import { accuracyOf, type SessionOutcome } from '@/engine/progress'
+import { useIsDesktop } from '@/lib/useIsDesktop'
 
 /** Écran de fin de session : score, XP gagnés, et meilleure série si elle a valu un palier. */
 export function SessionResult({
@@ -31,6 +33,22 @@ export function SessionResult({
 }) {
   const accuracy = Math.round(accuracyOf(outcome) * 100)
   const streakTier = Math.min(peakTier, COMBO_TIER_LABELS.length)
+  const isDesktop = useIsDesktop()
+
+  // Même raccourci que `RuleNote`/`SessionPause` : Entrée déclenche l'action
+  // principale (« Étape suivante » si elle existe, sinon « Continuer »),
+  // réservé à l'ordinateur.
+  const primary = passed && onNext ? onNext : onContinue
+  useEffect(() => {
+    if (!isDesktop) return
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== 'Enter') return
+      event.preventDefault()
+      primary()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [isDesktop, primary])
 
   return (
     <div className="flex h-full flex-col items-center justify-center gap-6 overflow-y-auto px-6 py-10 text-center [&>*]:shrink-0">
