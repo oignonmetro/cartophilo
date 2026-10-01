@@ -4,7 +4,9 @@
 # (pp. 17-29), dont le découpage en trois thèses ; s'y ajoutent les notes de
 # Pellegrin et les cartes de l'utilisatrice sur ce texte. Le texte se cite en
 # trois fragments, repérés par leurs lignes Bekker. Les citations dans la
-# traduction du commentaire ont disparu au profit de celle de Pellegrin.
+# traduction du commentaire ont disparu au profit de celle de Pellegrin. Les
+# cartes sur la stasis et la relativité des valeurs sont passées dans l'unité
+# « Les sources des séditions » (aristote-seditions, Politiques, V, 1).
 
 id: aristote-cite-homme-logos
 title: "Cité, homme, lógos"
@@ -758,17 +760,15 @@ lessons:
 - id: aristote-cite-homme-logos-o1
   title: "Ce que les hommes font de la cité"
   notes: |-
-    **Que l'homme soit politique par nature ne veut pas dire que cette nature s'accomplisse d'elle-même : le lógos qui rend la cité possible peut aussi la défaire, et c'est aux citoyens de faire advenir le juste.** Le mot « nature » revient six fois dans l'extrait. Mais « la nature ne fait rien en vain » n'implique pas un accomplissement automatique ou mécanique, quels que soient nos choix et nos efforts.
+    **Que l'homme soit politique par nature ne veut pas dire que cette nature s'accomplisse d'elle-même : c'est aux citoyens de faire advenir la cité et le juste, et ils peuvent y échouer.** Le mot « nature » revient six fois dans l'extrait. Mais « la nature ne fait rien en vain » n'implique pas un accomplissement automatique ou mécanique, quels que soient nos choix et nos efforts.
 
-    Le *lógos*, *medium* de la cité, est aussi ce par quoi la *pólis* peut être défaite, dissoute, ou du moins remise en question : les deux possibilités sont données ensemble. « Enraciner les valeurs dans une perception originaire, c'est reconnaître, d'un seul et même mouvement, le caractère universel (universellement humain) de notre aptitude à les saisir puis à les exprimer, en même temps que leur caractère éminemment relatif » (Rogan, 2021) : chaque citoyen les perçoit selon sa position géographique, sa condition sociale, sa disposition éthique. Pour Francis Wolff, le juste et l'injuste, objets d'une expérience individuelle, « n'accèdent à l'existence, dans la vie commune, que par la discussion qui suppose la contradiction et implique une remise en question permanente ».
+    À la fin du chapitre 2, Aristote le dit : « l'être humain naît pourvu d'armes pour la prudence et la vertu, dont il peut se servir à des fins absolument inverses » (1253a34-35). Le meilleur des animaux quand il est accompli, il est le pire de tous quand il a rompu avec loi et justice. L'homme est donc responsable de son bonheur et de celui de la cité.
 
-    À la fin du chapitre 2, Aristote le dit : « l'être humain naît pourvu d'armes pour la prudence et la vertu, dont il peut se servir à des fins absolument inverses » (1253a34-35). Le meilleur des animaux quand il est accompli, il est le pire de tous quand il a rompu avec loi et justice. L'homme est responsable de son bonheur et de celui de la cité. Un usage nul ou tronqué du *lógos* mène à la *stasis*, où les citoyens s'opposent, par une perception erronée du juste.
+    | L'être humain | Ce qu'il devient |
+    | accompli, dans la loi et la justice | le meilleur des animaux |
+    | ayant rompu avec loi et justice | le pire de tous |
 
-    | | Platon | Aristote |
-    | Les valeurs | des Idées, des essences, indépendantes des citoyens | perçues par les citoyens grâce au `lógos` |
-    | Ce qui les fait valoir dans la cité | leur connaissance | la discussion, l'effort réitéré pour s'accorder |
-
-    La politique n'est donc pas inféodée à la nature : c'est l'effort réitéré des citoyens pour s'entendre. Qu'on n'y parvienne pas toujours tient à l'absence de nécessité absolue de la région sublunaire, où se loge tout le défi de la politique humaine.
+    Le *lógos*, *medium* de la cité, est aussi ce par quoi elle peut être défaite : perçues par chacun selon sa condition, les valeurs divisent les citoyens jusqu'à la *stasis*. C'est l'objet du livre V des *Politiques* (voir l'unité *Les sources des séditions*). Qu'on ne parvienne pas toujours à s'accorder tient à l'absence de nécessité absolue de la région sublunaire, où se loge tout le défi de la politique humaine.
 
     ! « Par nature » ne veut pas dire « automatiquement » : la cité peut échouer par un mauvais usage du *lógos*.
   passage:
@@ -786,22 +786,6 @@ lessons:
     sentence: "Le lógos est le ___ ou l'opérateur indispensable par lequel une cité est rendue possible."
     answer: "medium"
     alt: []
-  - id: aristote-cite-homme-logos-o1-3
-    sentence: "Le lógos, medium de la cité, est aussi ce par quoi la pólis peut être ___ et dissoute, ou du moins remise en question."
-    answer: "défaite"
-    alt: []
-  - id: aristote-cite-homme-logos-o1-4
-    sentence: "Enraciner les valeurs dans une perception originaire, c'est reconnaître à la fois le caractère universel de notre aptitude à les saisir et leur caractère éminemment ___."
-    answer: "relatif"
-    alt: []
-  - id: aristote-cite-homme-logos-o1-5
-    sentence: "Les citoyens perçoivent les valeurs différemment selon leur position géographique, leur condition sociale ou leur disposition ___ (vice, vertu)."
-    answer: "éthique"
-    alt: []
-  - id: aristote-cite-homme-logos-o1-6
-    sentence: "Selon Francis Wolff, le juste et l'injuste n'accèdent à l'existence, dans la vie commune, que par la ___, qui suppose la contradiction."
-    answer: "discussion"
-    alt: []
   - id: aristote-cite-homme-logos-o1-7
     sentence: "« l'être humain naît pourvu d'___ pour la prudence et la vertu, dont il peut se servir à des fins absolument inverses » (1253a34-35)."
     answer: "armes"
@@ -813,22 +797,6 @@ lessons:
   - id: aristote-cite-homme-logos-o1-8
     sentence: "L'homme est ___ de son bonheur, et de celui de la cité."
     answer: "responsable"
-    alt: []
-  - id: aristote-cite-homme-logos-o1-9
-    sentence: "Un usage nul ou tronqué du lógos conduit les citoyens à s'opposer les uns aux autres dans la ___."
-    answer: "stasis"
-    alt: []
-  - id: aristote-cite-homme-logos-o1-10
-    sentence: "La stasis procède d'une perception ___ du juste."
-    answer: "erronée"
-    alt: []
-  - id: aristote-cite-homme-logos-o1-11
-    sentence: "Chez Aristote, les valeurs ne sont plus, comme chez Platon, des ___ ou des essences existant indépendamment des citoyens."
-    answer: "Idées"
-    alt: ["idées"]
-  - id: aristote-cite-homme-logos-o1-12
-    sentence: "La politique devient chez Aristote l'effort ___ de tous les citoyens pour s'entendre et se mettre d'accord sur les valeurs."
-    answer: "réitéré"
     alt: []
   - id: aristote-cite-homme-logos-o1-13
     sentence: "L'absence de nécessité absolue caractérise la région ___, où se loge tout le défi de la politique humaine."

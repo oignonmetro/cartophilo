@@ -1,0 +1,350 @@
+# Unité de texte (voir content/textes.md) : Aristote, Politiques, V, 1,
+# 1301a25-b4, traduction P. Pellegrin (GF), vérifiée sur l'édition, en trois
+# fragments repérés par leurs lignes Bekker. Rappels : commentaire « Cité,
+# homme, lógos » (section « Sur ce que les hommes font dans la cité »,
+# pp. 24-26), introduction et notes de Pellegrin. Les cartes sur la stasis et
+# la relativité des valeurs viennent de l'unité aristote-cite-homme-logos,
+# sous leur identifiant.
+
+id: aristote-seditions
+title: "Les sources des séditions"
+subtitle: "Aristote, Politiques, V, 1, 1301a25-b4"
+icon: page
+color: red
+group: "Aristote : la politique"
+intro: |-
+  Au début du livre V des *Politiques*, Aristote cherche la cause commune des séditions (*stasis*) : tous s'accordent à dire que le juste est l'égalité proportionnelle, mais se trompent sur ce qu'elle est. Démocrates et oligarques érigent une égalité ou une inégalité partielle en égalité ou inégalité absolue.
+
+  Le texte, cité dans la traduction de Pierre Pellegrin, prolonge *Politiques*, I, 2 : le *lógos* qui permet de percevoir le juste rend la cité possible, mais une perception erronée du juste peut aussi la défaire.
+lessons:
+- id: aristote-seditions-i1
+  title: "Ce qui divise la cité"
+  notes: |-
+    **Le lógos qui rend la cité possible peut aussi la défaire : perçues par chacun selon sa condition, les valeurs divisent les citoyens jusqu'à la sédition.** Le *lógos*, *medium* de la cité, est aussi ce par quoi la *pólis* peut être défaite, dissoute, ou du moins remise en question : les deux possibilités sont données ensemble (commentaire « Cité, homme, lógos »).
+
+    « Enraciner les valeurs dans une perception originaire, c'est reconnaître, d'un seul et même mouvement, le caractère universel (universellement humain) de notre aptitude à les saisir puis à les exprimer, en même temps que leur caractère éminemment relatif » (Rogan, 2021) : chaque citoyen les perçoit selon sa position géographique, sa condition sociale (riche, pauvre), sa disposition éthique (vice, vertu). Pour Francis Wolff, le juste et l'injuste, objets d'une expérience individuelle, « n'accèdent à l'existence, dans la vie commune, que par la discussion qui suppose la contradiction et implique une remise en question permanente ».
+
+    | | Platon | Aristote |
+    | Les valeurs | des Idées, des essences, indépendantes des citoyens | perçues par les citoyens grâce au `lógos` |
+    | Ce qui les fait valoir dans la cité | leur connaissance | la discussion, l'effort réitéré pour s'accorder |
+
+    La politique n'est donc pas inféodée à la nature : c'est l'effort réitéré des citoyens pour s'entendre sur le juste. Le livre V des *Politiques*, consacré aux changements et à la sauvegarde des constitutions, cherche d'abord ce qui fait échouer cet effort : la sédition (*stasis*), que le texte rapporte à une même source.
+
+    ! La sédition n'est pas un accident extérieur à la cité : elle naît de la façon même dont les citoyens perçoivent le juste.
+  passage:
+    label: "Introduction"
+  points:
+  - id: aristote-seditions-i1-1
+    sentence: "Le livre V des *Politiques* traite des changements et de la sauvegarde des ___."
+    answer: "constitutions"
+    alt: []
+  - id: aristote-seditions-i1-2
+    sentence: "Pellegrin traduit *stasis* par « ___ » : la discorde qui dresse les citoyens les uns contre les autres."
+    answer: "sédition"
+    alt: ["séditions", "discorde"]
+  - id: aristote-cite-homme-logos-o1-3
+    sentence: "Le lógos, medium de la cité, est aussi ce par quoi la pólis peut être ___ et dissoute, ou du moins remise en question."
+    answer: "défaite"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-4
+    sentence: "Enraciner les valeurs dans une perception originaire, c'est reconnaître à la fois le caractère universel de notre aptitude à les saisir et leur caractère éminemment ___."
+    answer: "relatif"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-5
+    sentence: "Les citoyens perçoivent les valeurs différemment selon leur position géographique, leur condition sociale ou leur disposition ___ (vice, vertu)."
+    answer: "éthique"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-6
+    sentence: "Selon Francis Wolff, le juste et l'injuste n'accèdent à l'existence, dans la vie commune, que par la ___, qui suppose la contradiction."
+    answer: "discussion"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-11
+    sentence: "Chez Aristote, les valeurs ne sont plus, comme chez Platon, des ___ ou des essences existant indépendamment des citoyens."
+    answer: "Idées"
+    alt: ["idées"]
+  - id: aristote-cite-homme-logos-o1-12
+    sentence: "La politique devient chez Aristote l'effort ___ de tous les citoyens pour s'entendre et se mettre d'accord sur les valeurs."
+    answer: "réitéré"
+    alt: []
+- id: aristote-seditions-p1
+  title: "L'égalité proportionnelle, et deux erreurs sur elle"
+  notes: |-
+    **Tous s'accordent sur le principe (le juste est l'égalité proportionnelle), mais se trompent sur son application : démocrates et oligarques font d'une égalité ou d'une inégalité partielle une égalité ou une inégalité absolue.** Le texte part d'un accord pour expliquer un désaccord : de nombreuses constitutions sont nées de cette erreur.
+
+    | Extrait | Ce qu'il établit |
+    | 1 | le principe : le juste est l'égalité proportionnelle, sur laquelle on se trompe |
+    | 2 | l'erreur démocratique : égaux en liberté, donc égaux absolument |
+    | 3 | l'erreur oligarchique : inégaux en richesse, donc inégaux absolument |
+
+    === 1 Le principe : l'égalité proportionnelle
+
+    **Le juste est l'égalité proportionnelle : tout le monde en convient, mais on se trompe sur ce qu'elle est.** L'égalité proportionnelle s'oppose à l'égalité numérique : celle-ci donne une part égale à chacun quel qu'il soit, celle-là répartit biens et pouvoir proportionnellement à la valeur de chacun (Pellegrin, renvoyant à *Politiques*, III, 9, 1280a7 sq., et à l'*Éthique à Nicomaque*, V, 6). C'est, selon Pellegrin, un principe universel, valable pour toutes les constitutions.
+
+    | Égalité | Comment elle répartit |
+    | numérique | une part égale à chacun, quel qu'il soit |
+    | proportionnelle | proportionnellement à la valeur de chacun |
+
+    ! Démocrates et oligarques ne rejettent pas l'égalité proportionnelle : ils se trompent sur le critère qui la mesure.
+
+    === 2 L'erreur démocratique
+
+    **Égaux en un domaine, la liberté, les démocrates s'estiment égaux absolument.** Même eux sont partisans de l'égalité proportionnelle : ils veulent attribuer le pouvoir en fonction de la liberté. L'erreur est de passer d'une égalité relative (« dans un domaine ») à une égalité absolue.
+
+    === 3 L'erreur oligarchique
+
+    **Inégaux en un domaine, la richesse, les oligarques s'estiment inégaux en tout.** « Inégaux » veut dire ici supérieurs, comme très souvent dans les *Politiques*. L'erreur est symétrique de la précédente : d'une supériorité dans un seul domaine déterminé, ils concluent à une supériorité absolue.
+
+    | Régime | Critère | L'erreur |
+    | régime populaire | la liberté | égaux en un domaine, donc égaux absolument |
+    | oligarchie | la richesse | inégaux en un domaine, donc inégaux en tout |
+
+    ! L'erreur n'est pas le critère lui-même, liberté ou richesse : c'est de le tenir pour absolu.
+  passage:
+    label: "1301a25-33"
+    text: "Mais nous devons d'abord prendre comme point de départ le fait que de nombreuses constitutions sont nées parce que, si tout le monde est d'accord que le juste c'est l'égalité proportionnelle, les gens se trompent sur ce qu'elle est, comme cela a été dit plus haut. Un régime populaire, en effet, est né du fait que des gens qui sont égaux dans un domaine estiment être égaux absolument : c'est parce qu'ils sont tous pareillement libres qu'ils estiment être égaux absolument. Une oligarchie, par contre, naît du fait que des gens inégaux dans un seul domaine déterminé posent en principe qu'ils sont inégaux en tout : c'est parce qu'ils sont inégaux par la richesse qu'ils posent en principe qu'ils sont inégaux absolument."
+  points:
+  - id: aristote-seditions-p1-1
+    fragment: "1/3"
+    sentence: "« Mais nous devons d'abord prendre comme point de départ le fait que ___ parce que, si tout le monde est d'accord que le juste c'est l'égalité proportionnelle, les gens se trompent sur ce qu'elle est, comme cela a été dit plus haut. »"
+    answer: "de nombreuses constitutions sont nées"
+    alt: []
+  - id: aristote-seditions-p1-2
+    fragment: "1/3"
+    sentence: "« Mais nous devons d'abord prendre comme point de départ le fait que de nombreuses constitutions sont nées parce que, si tout le monde est d'accord que ___, les gens se trompent sur ce qu'elle est, comme cela a été dit plus haut. »"
+    answer: "le juste c'est l'égalité proportionnelle"
+    alt: []
+  - id: aristote-seditions-p1-3
+    fragment: "1/3"
+    sentence: "« Mais nous devons d'abord prendre comme point de départ le fait que de nombreuses constitutions sont nées parce que, si tout le monde est d'accord que le juste c'est l'égalité proportionnelle, ___, comme cela a été dit plus haut. »"
+    answer: "les gens se trompent sur ce qu'elle est"
+    alt: []
+  - id: aristote-seditions-p1-4
+    sentence: "L'égalité proportionnelle s'oppose à l'égalité ___, qui donne une part égale à chacun quel qu'il soit."
+    answer: "numérique"
+    alt: ["arithmétique"]
+  - id: aristote-seditions-p1-5
+    sentence: "L'égalité proportionnelle répartit biens et pouvoir proportionnellement à la ___ de chacun."
+    answer: "valeur"
+    alt: ["excellence"]
+  - id: aristote-seditions-p1-6
+    sentence: "« Comme cela a été dit plus haut » renvoie au livre ___ des *Politiques*, chapitre 9 (1280a7 sq.)."
+    answer: "III"
+    alt: ["3"]
+  - id: aristote-seditions-p1-7
+    sentence: "Selon Pellegrin, l'égalité proportionnelle est un principe ___, valable pour toutes les constitutions."
+    answer: "universel"
+    alt: []
+  - id: aristote-seditions-p1-8
+    fragment: "2/3"
+    sentence: "« ___, en effet, est né du fait que des gens qui sont égaux dans un domaine estiment être égaux absolument : c'est parce qu'ils sont tous pareillement libres qu'ils estiment être égaux absolument. »"
+    answer: "Un régime populaire"
+    alt: []
+  - id: aristote-seditions-p1-9
+    fragment: "2/3"
+    sentence: "« Un régime populaire, en effet, est né du fait que ___ estiment être égaux absolument : c'est parce qu'ils sont tous pareillement libres qu'ils estiment être égaux absolument. »"
+    answer: "des gens qui sont égaux dans un domaine"
+    alt: []
+  - id: aristote-seditions-p1-10
+    fragment: "2/3"
+    sentence: "« Un régime populaire, en effet, est né du fait que des gens qui sont égaux dans un domaine estiment être égaux absolument : c'est ___ qu'ils estiment être égaux absolument. »"
+    answer: "parce qu'ils sont tous pareillement libres"
+    alt: []
+  - id: aristote-seditions-p1-11
+    sentence: "Même les démocrates sont partisans de l'égalité proportionnelle : ils veulent attribuer le pouvoir en fonction de la ___."
+    answer: "liberté"
+    alt: []
+  - id: aristote-seditions-p1-12
+    fragment: "3/3"
+    sentence: "« ___, par contre, naît du fait que des gens inégaux dans un seul domaine déterminé posent en principe qu'ils sont inégaux en tout : c'est parce qu'ils sont inégaux par la richesse qu'ils posent en principe qu'ils sont inégaux absolument. »"
+    answer: "Une oligarchie"
+    alt: []
+  - id: aristote-seditions-p1-13
+    fragment: "3/3"
+    sentence: "« Une oligarchie, par contre, naît du fait que des gens ___ posent en principe qu'ils sont inégaux en tout : c'est parce qu'ils sont inégaux par la richesse qu'ils posent en principe qu'ils sont inégaux absolument. »"
+    answer: "inégaux dans un seul domaine déterminé"
+    alt: []
+  - id: aristote-seditions-p1-14
+    fragment: "3/3"
+    sentence: "« Une oligarchie, par contre, naît du fait que des gens inégaux dans un seul domaine déterminé ___ : c'est parce qu'ils sont inégaux par la richesse qu'ils posent en principe qu'ils sont inégaux absolument. »"
+    answer: "posent en principe qu'ils sont inégaux en tout"
+    alt: []
+  - id: aristote-seditions-p1-15
+    fragment: "3/3"
+    sentence: "« Une oligarchie, par contre, naît du fait que des gens inégaux dans un seul domaine déterminé posent en principe qu'ils sont inégaux en tout : c'est ___ qu'ils posent en principe qu'ils sont inégaux absolument. »"
+    answer: "parce qu'ils sont inégaux par la richesse"
+    alt: []
+  - id: aristote-seditions-p1-16
+    sentence: "Dans tout ce passage, « inégaux » veut dire ___, comme très souvent dans les *Politiques*."
+    answer: "supérieurs"
+    alt: []
+  - id: aristote-seditions-p1-17
+    sentence: "Démocrates et oligarques font la même erreur : d'une égalité ou d'une inégalité dans un seul domaine, ils concluent à une égalité ou une inégalité ___."
+    answer: "absolue"
+    alt: []
+- id: aristote-seditions-p2
+  title: "Quelque chose de juste, mais en défaut : les séditions"
+  notes: |-
+    **Chaque régime a quelque chose de juste, mais se trouve en défaut absolument parlant ; c'est pourquoi chaque groupe, quand il n'a pas la part qu'il croit juste, provoque des séditions.** Des deux erreurs suivent deux prétentions : les démocrates, au nom de leur égalité, s'estiment en droit de participer également à tout ; les oligarques, au nom de leur inégalité, cherchent à avoir plus.
+
+    Les « deux groupes » sont le parti démocratique et le parti oligarchique. S'ils provoquent des séditions, note Pellegrin, c'est que leurs régimes sont fondés sur une conception erronée du juste : ce que le commentaire « Cité, homme, lógos » appelle une perception erronée du juste, née d'un usage tronqué ou partiel du *lógos*, et qui conduit les citoyens à s'opposer dans la *stasis*.
+
+    | Prétention | Ce qu'elle a de juste | Ce qui la met en défaut |
+    | la liberté | les libres sont bien égaux en liberté | elle se pose en critère absolu |
+    | la richesse | les riches sont bien supérieurs en richesse | elle se pose en critère absolu |
+
+    Aristote reconnaît ainsi à chaque prétention (richesse, naissance, liberté) une certaine légitimité, mais la disqualifie quand elle se pose en critère absolu (Pellegrin). Une fois au pouvoir, chaque groupe gouverne au profit de son groupe particulier et inscrit dans les lois sa vision partisane de la fin de la cité : les lois des constitutions déviées reflètent une conception unilatérale de ce qui est juste.
+
+    ! Les séditieux ne sont pas des ennemis du juste : chacun se bat au nom de l'idée du juste qui se trouve être la sienne.
+  passage:
+    label: "1301a33-39"
+    text: "Par suite, les premiers, au nom de leur égalité, s'estiment en droit de participer également à tout, alors que les seconds, au nom de leur inégalité, cherchent à avoir plus, car le plus est inégal. Tous ces régimes ont donc quelque chose de juste, mais absolument parlant ils se trouvent en défaut, et, pour cette raison, chacun des deux groupes, quand il ne participe pas à la vie politique selon l'idée qui se trouve être la sienne, provoque des séditions."
+  points:
+  - id: aristote-seditions-p2-1
+    fragment: "1/2"
+    sentence: "« Par suite, les premiers, au nom de leur égalité, ___, alors que les seconds, au nom de leur inégalité, cherchent à avoir plus, car le plus est inégal. »"
+    answer: "s'estiment en droit de participer également à tout"
+    alt: []
+  - id: aristote-seditions-p2-2
+    fragment: "1/2"
+    sentence: "« Par suite, les premiers, au nom de leur égalité, s'estiment en droit de participer également à tout, alors que les seconds, au nom de leur inégalité, ___, car le plus est inégal. »"
+    answer: "cherchent à avoir plus"
+    alt: []
+  - id: aristote-seditions-p2-3
+    fragment: "1/2"
+    sentence: "« Par suite, les premiers, au nom de leur égalité, s'estiment en droit de participer également à tout, alors que les seconds, au nom de leur inégalité, cherchent à avoir plus, ___. »"
+    answer: "car le plus est inégal"
+    alt: []
+  - id: aristote-seditions-p2-4
+    fragment: "2/2"
+    sentence: "« ___, mais absolument parlant ils se trouvent en défaut, et, pour cette raison, chacun des deux groupes, quand il ne participe pas à la vie politique selon l'idée qui se trouve être la sienne, provoque des séditions. »"
+    answer: "Tous ces régimes ont donc quelque chose de juste"
+    alt: []
+  - id: aristote-seditions-p2-5
+    fragment: "2/2"
+    sentence: "« Tous ces régimes ont donc quelque chose de juste, mais ___, et, pour cette raison, chacun des deux groupes, quand il ne participe pas à la vie politique selon l'idée qui se trouve être la sienne, provoque des séditions. »"
+    answer: "absolument parlant ils se trouvent en défaut"
+    alt: []
+  - id: aristote-seditions-p2-6
+    fragment: "2/2"
+    sentence: "« Tous ces régimes ont donc quelque chose de juste, mais absolument parlant ils se trouvent en défaut, et, pour cette raison, chacun des deux groupes, ___, provoque des séditions. »"
+    answer: "quand il ne participe pas à la vie politique selon l'idée qui se trouve être la sienne"
+    alt: []
+  - id: aristote-seditions-p2-7
+    fragment: "2/2"
+    sentence: "« Tous ces régimes ont donc quelque chose de juste, mais absolument parlant ils se trouvent en défaut, et, pour cette raison, chacun des deux groupes, quand il ne participe pas à la vie politique selon l'idée qui se trouve être la sienne, ___. »"
+    answer: "provoque des séditions"
+    alt: []
+  - id: aristote-seditions-p2-8
+    sentence: "Les « deux groupes » sont le parti démocratique et le parti ___."
+    answer: "oligarchique"
+    alt: []
+  - id: aristote-seditions-p2-9
+    sentence: "Selon Pellegrin, ces régimes provoquent des séditions parce qu'ils sont fondés sur une conception ___ du juste."
+    answer: "erronée"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-9
+    sentence: "Un usage nul ou tronqué du lógos conduit les citoyens à s'opposer les uns aux autres dans la ___."
+    answer: "stasis"
+    alt: []
+  - id: aristote-cite-homme-logos-o1-10
+    sentence: "La stasis procède d'une perception ___ du juste."
+    answer: "erronée"
+    alt: []
+  - id: aristote-seditions-p2-10
+    sentence: "Richesse, naissance, liberté : Aristote reconnaît à chaque prétention une certaine légitimité, mais la disqualifie quand elle se pose en critère ___."
+    answer: "absolu"
+    alt: []
+  - id: aristote-seditions-p2-11
+    sentence: "Une fois au pouvoir, chaque groupe gouverne au profit de son groupe ___ et inscrit dans les lois sa vision partisane de la fin de la cité."
+    answer: "particulier"
+    alt: []
+  - id: aristote-seditions-p2-12
+    sentence: "Les lois des constitutions déviées reflètent une conception ___ de ce qui est juste."
+    answer: "unilatérale"
+    alt: []
+- id: aristote-seditions-p3
+  title: "L'excellence et la naissance"
+  notes: |-
+    **Paradoxe : ceux qui auraient les plus justes motifs de sédition, les excellents, sont ceux qui en provoquent le moins ; d'autres, les bien nés, réclament des avantages au nom de leur naissance.** Seuls les excellents, ceux qui l'emportent en excellence, peuvent raisonnablement être tenus pour inégaux, c'est-à-dire supérieurs, absolument.
+
+    | Extrait | Ce qu'il établit |
+    | 1 | les excellents : les plus justes motifs, le moins de séditions |
+    | 2-3 | les bien nés, puis la conclusion : les principes et les sources des séditions |
+
+    === 1 L'excellence, seul titre légitime
+
+    **Seule l'excellence justifie une inégalité absolue ; ceux qui la possèdent sont pourtant ceux qui provoquent le moins de séditions.** Quand il s'agit de partager le pouvoir, l'excellence qui compte n'est ni celle de la naissance ni celle de la fortune, mais l'excellence politique : dans une constitution droite, le pouvoir est attribué à chacun dans la mesure où il y participe (*Politiques*, III, 9, 1281a4-8). Mais tous pensent avoir en partage cette excellence (IV, 4) : c'est, selon Pellegrin, la source principale des maux politiques.
+
+    ! L'égalité proportionnelle n'est pas injuste par elle-même : appliquée au bon critère, l'excellence politique, elle fonde une inégalité légitime.
+
+    === 2 La naissance, et la conclusion
+
+    **Les bien nés se croient dignes d'avantages inégaux, parce qu'on tient pour bien nés ceux qui ont reçu de leurs ancêtres excellence et richesse.** La naissance n'est ainsi qu'une excellence et une richesse héritées. Le texte se clôt sur sa thèse : ces prétentions rivales au juste sont « les principes et les sources des séditions ».
+
+    | Titre invoqué | Régime qu'il fonde (Pellegrin) |
+    | la liberté | le régime populaire |
+    | la richesse | l'oligarchie |
+    | la naissance | la royauté |
+    | la vertu | l'aristocratie |
+
+    ! La naissance n'est pas un titre à part : on la définit par l'excellence et la richesse héritées des ancêtres.
+  passage:
+    label: "1301a39-b4"
+    text: "Mais ceux qui auraient les plus justes motifs de provoquer des séditions, et qui pourtant le font le moins, ce sont ceux qui l'emportent en excellence, car c'est ceux-là seuls qu'il est raisonnable de tenir avant tout pour inégaux absolument. Il y en a aussi qui, l'emportant par la naissance, se croient dignes d'avantages inégaux du fait de cette inégalité, car on s'accorde à considérer comme bien nés ceux qui tiennent excellence et richesse de leurs ancêtres. Tels sont, en un mot, les principes et les sources des séditions."
+  points:
+  - id: aristote-seditions-p3-1
+    fragment: "1/3"
+    sentence: "« Mais ceux qui auraient ___, et qui pourtant le font le moins, ce sont ceux qui l'emportent en excellence, car c'est ceux-là seuls qu'il est raisonnable de tenir avant tout pour inégaux absolument. »"
+    answer: "les plus justes motifs de provoquer des séditions"
+    alt: []
+  - id: aristote-seditions-p3-2
+    fragment: "1/3"
+    sentence: "« Mais ceux qui auraient les plus justes motifs de provoquer des séditions, et ___, ce sont ceux qui l'emportent en excellence, car c'est ceux-là seuls qu'il est raisonnable de tenir avant tout pour inégaux absolument. »"
+    answer: "qui pourtant le font le moins"
+    alt: []
+  - id: aristote-seditions-p3-3
+    fragment: "1/3"
+    sentence: "« Mais ceux qui auraient les plus justes motifs de provoquer des séditions, et qui pourtant le font le moins, ce sont ___, car c'est ceux-là seuls qu'il est raisonnable de tenir avant tout pour inégaux absolument. »"
+    answer: "ceux qui l'emportent en excellence"
+    alt: []
+  - id: aristote-seditions-p3-4
+    fragment: "1/3"
+    sentence: "« Mais ceux qui auraient les plus justes motifs de provoquer des séditions, et qui pourtant le font le moins, ce sont ceux qui l'emportent en excellence, car ___. »"
+    answer: "c'est ceux-là seuls qu'il est raisonnable de tenir avant tout pour inégaux absolument"
+    alt: []
+  - id: aristote-seditions-p3-5
+    sentence: "Quand il s'agit de partager le pouvoir, l'excellence qui compte n'est ni celle de la naissance ni celle de la fortune, mais l'excellence ___."
+    answer: "politique"
+    alt: []
+  - id: aristote-seditions-p3-6
+    sentence: "Dans une constitution droite, le pouvoir est attribué à chacun dans la mesure où il participe de l'excellence politique (*Politiques*, III, 9, ___)."
+    answer: "1281a4-8"
+    alt: ["1281a"]
+  - id: aristote-seditions-p3-7
+    sentence: "Tous les hommes pensent avoir en partage l'excellence politique : c'est, selon Pellegrin, la source principale des ___ politiques."
+    answer: "maux"
+    alt: []
+  - id: aristote-seditions-p3-8
+    fragment: "2/3"
+    sentence: "« Il y en a aussi qui, ___, se croient dignes d'avantages inégaux du fait de cette inégalité, car on s'accorde à considérer comme bien nés ceux qui tiennent excellence et richesse de leurs ancêtres. »"
+    answer: "l'emportant par la naissance"
+    alt: []
+  - id: aristote-seditions-p3-9
+    fragment: "2/3"
+    sentence: "« Il y en a aussi qui, l'emportant par la naissance, ___ du fait de cette inégalité, car on s'accorde à considérer comme bien nés ceux qui tiennent excellence et richesse de leurs ancêtres. »"
+    answer: "se croient dignes d'avantages inégaux"
+    alt: []
+  - id: aristote-seditions-p3-10
+    fragment: "2/3"
+    sentence: "« Il y en a aussi qui, l'emportant par la naissance, se croient dignes d'avantages inégaux du fait de cette inégalité, car on s'accorde à considérer comme bien nés ___. »"
+    answer: "ceux qui tiennent excellence et richesse de leurs ancêtres"
+    alt: []
+  - id: aristote-seditions-p3-11
+    sentence: "La noblesse de naissance et la vertu fondent respectivement la royauté et l'___."
+    answer: "aristocratie"
+    alt: []
+  - id: aristote-seditions-p3-12
+    fragment: "3/3"
+    sentence: "« Tels sont, en un mot, ___. »"
+    answer: "les principes et les sources des séditions"
+    alt: []
