@@ -409,6 +409,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                       done={doneNodes(unit, lessons, steps)}
                       onOpen={() => openUnit(unit)}
                       reader={readerOf(unit)}
+                      compact
                     />
                   ))}
                 </GroupSection>
@@ -607,6 +608,7 @@ function UnitCard({
   done,
   onOpen,
   reader,
+  compact = false,
 }: {
   unit: Unit
   tone: (typeof TRACK_TONES)[string]
@@ -620,6 +622,14 @@ function UnitCard({
    * unité-œuvre (voir `WorkSheet`).
    */
   reader?: { label: string; icon: string; onRead: () => void }
+  /**
+   * Unité membre d'un groupe déplié (voir `GroupSection`) : une carte plus
+   * discrète (relief atténué, padding et texte resserrés, anneau plus
+   * petit) que celle d'une unité seule dans la liste, pour qu'on la
+   * reconnaisse d'un coup d'œil comme une sous-case de son groupe plutôt
+   * qu'une unité de même rang.
+   */
+  compact?: boolean
 }) {
   // Pour une unité d'alphabet, les lettres qu'elle enseigne disent mieux ce
   // qui attend l'apprenant qu'une phrase de description — elles remplacent
@@ -627,25 +637,36 @@ function UnitCard({
   const subtitle = unitLetters(unit) ?? unit.subtitle
 
   return (
-    <section className="card-3d overflow-hidden">
-      <button type="button" onClick={onOpen} className="flex w-full items-center gap-4 px-4 py-4 text-left">
+    <section
+      className={
+        compact
+          ? 'overflow-hidden rounded-2xl border-2 border-line/60 bg-ink/[0.03]'
+          : 'card-3d overflow-hidden'
+      }
+    >
+      <button
+        type="button"
+        onClick={onOpen}
+        className={`flex w-full items-center gap-4 text-left ${compact ? 'px-3 py-3' : 'px-4 py-4'}`}
+      >
         <ProgressRing
           ratio={mastery.ratio}
           seenRatio={mastery.total === 0 ? 0 : mastery.seen / mastery.total}
           color={tone.css}
+          size={compact ? 36 : 44}
         />
         <span className="flex-1">
           {/* `unit.level` (B2.1/B2.2) reste dans les données mais n'est plus
               affiché : c'était une convention maison, pas une échelle
               officielle, et son badge prêtait à confusion avec le CECRL. */}
-          <span className="text-base leading-tight font-extrabold">{unit.title}</span>
+          <span className={`leading-tight font-extrabold ${compact ? 'text-sm' : 'text-base'}`}>{unit.title}</span>
           {subtitle && <span className="mt-0.5 block text-xs text-ink-soft">{subtitle}</span>}
           <span className={`mt-0.5 block text-xs font-bold ${done.count > 0 ? tone.text : 'text-ink-faint'}`}>
             {done.count} / {done.total} étapes · {countLabel(unit.kind, mastery.total)}
           </span>
         </span>
         <span className="-rotate-180 text-ink-faint">
-          <ChevronLeftIcon size={20} />
+          <ChevronLeftIcon size={compact ? 16 : 20} />
         </span>
       </button>
       {reader && (
@@ -714,13 +735,15 @@ function GroupSection({
 
       {/* Un simple repli plutôt qu'une hauteur animée : aucun autre écran de
           l'app n'anime `height: auto`, et le fondu suffit à faire sentir
-          l'ouverture sans réinventer un mécanisme absent d'ailleurs. Le filet
-          replié (`border-l-2`, indentation) lit bien comme une arborescence
-          sur téléphone, où les unités s'empilent sous leur groupe ; sur
-          ordinateur, où elles se rangent déjà en grille, il ne faisait plus
-          que barrer la grille d'un trait vertical sans rien relier. `md:`
-          l'efface et rend à la grille la largeur entière de la piste, sur
-          trois colonnes dès qu'il y a la place (`lg:`) plutôt que deux. */}
+          l'ouverture sans réinventer un mécanisme absent d'ailleurs. Empilées
+          et en retrait (indentation, filet à gauche), les unités se lisent
+          comme des sous-cases de leur groupe plutôt que des unités de même
+          rang — une grille les en aurait trop rapprochées visuellement des
+          cartes de la liste, qui leur sont pourtant supérieures d'un
+          niveau ; `compact` sur `UnitCard` (voir plus bas) les distingue en
+          plus par un relief atténué. Même mise en page sur téléphone et sur
+          ordinateur : la hiérarchie compte plus ici que la largeur
+          disponible. */}
       <AnimatePresence initial={false}>
         {open && (
           <motion.div
@@ -728,7 +751,7 @@ function GroupSection({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
-            className="ml-3 flex flex-col gap-3 border-l-2 border-line pl-3 md:ml-0 md:grid md:grid-cols-2 md:items-start md:gap-3 md:border-l-0 md:pl-0 lg:grid-cols-3"
+            className="ml-4 flex flex-col gap-2 border-l-2 border-line pl-3"
           >
             {children}
           </motion.div>
@@ -791,8 +814,8 @@ function TreatiseIndexView({
               </span>
             </button>
 
-            {/* Même mécanique de repli que `GroupSection`, et même rail
-                effacé sur ordinateur : voir sa remarque. */}
+            {/* Même mécanique de repli que `GroupSection`, et même parti pris
+                de sous-cases empilées en retrait : voir sa remarque. */}
             <AnimatePresence initial={false}>
               {open && (
                 <motion.div
@@ -800,14 +823,14 @@ function TreatiseIndexView({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.15 }}
-                  className="ml-3 flex flex-col gap-2 border-l-2 border-line pl-3 md:ml-0 md:grid md:grid-cols-2 md:items-start md:gap-2 md:border-l-0 md:pl-0 lg:grid-cols-3"
+                  className="ml-4 flex flex-col gap-2 border-l-2 border-line pl-3"
                 >
                   {group.map((entry) => (
                     <button
                       key={entry.id}
                       type="button"
                       onClick={() => onOpenTreatise(entry)}
-                      className="card-3d flex w-full items-center gap-3 px-4 py-3 text-left"
+                      className="flex w-full items-center gap-3 rounded-2xl border-2 border-line/60 bg-ink/[0.03] px-3 py-2.5 text-left"
                     >
                       <span className={`shrink-0 text-xs font-black ${tone.text}`}>
                         {ENNEAD_NUMERALS[entry.ennead - 1]}, {entry.numberInEnnead}
