@@ -237,6 +237,19 @@ export function ProfileScreen() {
         )}
 
         <section className="card-3d flex flex-col gap-3 px-5 py-5">
+          <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Encouragements</h2>
+          <Switch
+            label="Marquer les séries en cours de session"
+            on={state.encouragements}
+            onToggle={() => state.setEncouragements(!state.encouragements)}
+          />
+          <p className="text-xs text-ink-faint">
+            Un bref écran salue une série qui franchit un palier. Rien ne se perd à le couper : la série continue de
+            compter, elle ne s'affiche juste plus.
+          </p>
+        </section>
+
+        <section className="card-3d flex flex-col gap-3 px-5 py-5">
           <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Correction</h2>
           <Switch
             label="Auto-correction ciblée"

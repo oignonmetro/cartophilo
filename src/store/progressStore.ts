@@ -79,6 +79,14 @@ export interface ProgressSnapshot {
    */
   haptics: boolean
   /**
+   * Le badge qui célèbre un palier de série franchi en cours de session
+   * (voir `ComboBadge`) — un bref écran plutôt qu'une bonne ou une mauvaise
+   * réponse, qu'il ne commente jamais. Allumé par défaut, contrairement aux
+   * vibrations : il ne prend pas la main comme elles, et se contente de dire
+   * à l'écran ce qui est déjà en train de se sentir dans la série.
+   */
+  encouragements: boolean
+  /**
    * Après une mauvaise réponse à taper, `CorrectionGap` propose par défaut
    * de réécrire le mot entier — peu importe où était l'erreur. Ce réglage
    * bascule sur l'ancien comportement, plus fin : seule la partie qui
@@ -179,6 +187,7 @@ interface ProgressState extends ProgressSnapshot {
   setDailyGoal: (goal: number) => void
   setSounds: (on: boolean) => void
   setHaptics: (on: boolean) => void
+  setEncouragements: (on: boolean) => void
   setTargetedCorrection: (on: boolean) => void
   setCitationsOnly: (on: boolean) => void
   setLocateOnly: (on: boolean) => void
@@ -213,6 +222,7 @@ const initial: ProgressSnapshot = {
   dailyGoal: 30,
   sounds: true,
   haptics: false,
+  encouragements: true,
   targetedCorrection: false,
   citationsOnly: false,
   locateOnly: false,
@@ -520,6 +530,8 @@ export const useProgress = create<ProgressState>()(
 
       setHaptics: (on) => set({ haptics: on }),
 
+      setEncouragements: (on) => set({ encouragements: on }),
+
       setTargetedCorrection: (on) => set({ targetedCorrection: on }),
 
       setCitationsOnly: (on) => set({ citationsOnly: on }),
@@ -545,6 +557,7 @@ export const useProgress = create<ProgressState>()(
           streak,
           sounds,
           haptics,
+          encouragements,
           targetedCorrection,
           citationsOnly,
           locateOnly,
@@ -565,6 +578,7 @@ export const useProgress = create<ProgressState>()(
             streak,
             sounds,
             haptics,
+            encouragements,
             targetedCorrection,
             citationsOnly,
             locateOnly,
@@ -588,6 +602,7 @@ export const useProgress = create<ProgressState>()(
           dailyGoal?: number
           sounds?: boolean
           haptics?: boolean
+          encouragements?: boolean
           targetedCorrection?: boolean
           citationsOnly?: boolean
           locateOnly?: boolean
@@ -640,6 +655,7 @@ export const useProgress = create<ProgressState>()(
           dailyGoal: parsed.dailyGoal ?? initial.dailyGoal,
           sounds: parsed.sounds ?? initial.sounds,
           haptics: parsed.haptics ?? initial.haptics,
+          encouragements: parsed.encouragements ?? initial.encouragements,
           targetedCorrection: parsed.targetedCorrection ?? initial.targetedCorrection,
           citationsOnly: parsed.citationsOnly ?? initial.citationsOnly,
           locateOnly: parsed.locateOnly ?? initial.locateOnly,
@@ -705,6 +721,7 @@ export const useProgress = create<ProgressState>()(
         streak,
         sounds,
         haptics,
+        encouragements,
         targetedCorrection,
         citationsOnly,
         locateOnly,
@@ -720,6 +737,7 @@ export const useProgress = create<ProgressState>()(
         dailyGoal,
         sounds,
         haptics,
+        encouragements,
         targetedCorrection,
         citationsOnly,
         locateOnly,

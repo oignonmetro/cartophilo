@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { BoltIcon } from '@/components/icons'
+import { useProgress } from '@/store/progressStore'
 import type { SessionCombo } from './useSessionHaptics'
 
 /**
@@ -29,28 +30,28 @@ const VISIBLE_MS = 1400
  * rareté que la vibration (voir `useSessionHaptics`), juste dans le canal
  * qu'on peut regarder plutôt que sentir. Ne réagit qu'aux montées — casser
  * une série n'a pas plus droit à l'écran qu'à la main, pour la même raison
- * (voir `combo.ts`).
+ * (voir `combo.ts`). Se coupe avec le réglage `encouragements` (voir
+ * `ProfileScreen`) : la série elle-même continue de compter, seul cet écran
+ * disparaît.
  *
- * Un premier essai le centrait dans l'en-tête de `SessionScreen`, par-dessus
- * le bouton fermer et la barre de progression : ça se lisait comme un pop-up
- * cachant un vrai élément de l'écran plutôt que comme une célébration. Un
- * second essai l'a ancré en bas, comme le bandeau de mise à jour
- * (`AppUpdateBanner`) — mais là, en bas de l'écran de session, c'est le
- * bouton « Continuer » qui traîne, jamais absent bien longtemps. Posé juste
- * sous l'en-tête à la place (`position: fixed`, pas relatif à l'en-tête) :
- * il ne recouvre jamais que la consigne de l'exercice (« Choisissez la
- * traduction »…), du texte déjà lu une fois et jamais cliquable — le seul
- * endroit de l'écran où passer dessus un instant ne coûte vraiment rien.
+ * Un premier essai le posait en badge, par-dessus l'exercice en cours (une
+ * pilule dans l'en-tête, puis sous l'en-tête) : ça se lisait comme une
+ * notification qui dérange ce qu'on est en train de lire, plutôt qu'une
+ * vraie célébration. Un bref écran plein, à la place — le même geste qu'un
+ * écran de résultat, mais trop court pour qu'on ait besoin d'un bouton pour
+ * le quitter : il se referme de lui-même, ou au premier appui si on est
+ * pressé.
  */
 export function ComboBadge({ combo }: { combo: SessionCombo }) {
+  const enabled = useProgress((state) => state.encouragements)
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    if (combo.bump === 0) return
+    if (!enabled || combo.bump === 0) return
     setVisible(true)
     const timeout = setTimeout(() => setVisible(false), VISIBLE_MS)
     return () => clearTimeout(timeout)
-  }, [combo.bump])
+  }, [enabled, combo.bump])
 
   const tier = Math.min(combo.tier, MESSAGES.length)
 
@@ -59,21 +60,20 @@ export function ComboBadge({ combo }: { combo: SessionCombo }) {
       {visible && tier > 0 && (
         <motion.div
           key={combo.bump}
-          initial={{ opacity: 0, y: -16, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: -8, scale: 0.9 }}
-          transition={{ type: 'spring', stiffness: 320, damping: 24 }}
-          // `top-[4.75rem]` : juste sous l'en-tête (voir la remarque plus
-          // haut) — mesuré sur l'écran réel, pas deviné, une valeur trop
-          // courte chevaucherait l'en-tête au lieu de le suivre.
-          className="pointer-events-none fixed inset-x-4 top-[4.75rem] z-20 mx-auto flex max-w-md items-center justify-center gap-1.5 rounded-full bg-coral px-4 py-2 text-sm font-extrabold whitespace-nowrap text-white shadow-lg"
-          style={{ boxShadow: '0 4px 0 0 var(--color-coral-deep)' }}
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.96 }}
+          transition={{ type: 'spring', stiffness: 320, damping: 26 }}
+          onClick={() => setVisible(false)}
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-3 bg-coral text-white"
         >
-          {Array.from({ length: tier }, (_, index) => (
-            <BoltIcon key={index} size={14} />
-          ))}
-          {MESSAGES[tier - 1]}
-          <span className="opacity-80">x{combo.momentum}</span>
+          <span className="flex gap-2">
+            {Array.from({ length: tier }, (_, index) => (
+              <BoltIcon key={index} size={36} />
+            ))}
+          </span>
+          <span className="text-3xl font-black">{MESSAGES[tier - 1]}</span>
+          <span className="text-lg font-extrabold opacity-80">x{combo.momentum}</span>
         </motion.div>
       )}
     </AnimatePresence>
