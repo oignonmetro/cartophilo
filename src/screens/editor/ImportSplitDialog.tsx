@@ -57,6 +57,10 @@ export function ImportSplitDialog({
   const [starts, setStarts] = useState<number[]>([0])
   const [meta, setMeta] = useState<Record<number, SegmentMeta>>({})
   const [citationsFirst, setCitationsFirst] = useState(isText)
+  // Numéro du premier paragraphe numéroté d'office (cartes sans préfixe « §n ») :
+  // un extrait commence souvent ailleurs qu'au premier paragraphe de son
+  // chapitre (« Les lois de la conscience », §27 de I, 23).
+  const [firstNumber, setFirstNumber] = useState(1)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -78,7 +82,7 @@ export function ImportSplitDialog({
         ? { ...old, text: old.textEdited ? old.text : rebuilt }
         : {
             title: paragraph?.heading ?? `Leçon ${index + 1}`,
-            label: paragraph ? `§${paragraph.number}` : isText ? `§${index + 1}` : '',
+            label: paragraph ? `§${paragraph.number}` : isText ? `§${firstNumber + index}` : '',
             text: rebuilt,
             textEdited: false,
           }
@@ -119,6 +123,19 @@ export function ImportSplitDialog({
     const next = starts.includes(index) ? starts.filter((s) => s !== index) : [...starts, index].sort((a, b) => a - b)
     setStarts(next)
     setMeta(rebuildMeta(next, cards, meta))
+  }
+
+  /** Renumérote les repères attribués d'office, sans toucher ceux qu'on a retouchés ni les « §n » des cartes. */
+  function renumber(next: number) {
+    setMeta((current) => {
+      const updated = { ...current }
+      starts.forEach((start, index) => {
+        const m = updated[start]
+        if (m && m.label === `§${firstNumber + index}`) updated[start] = { ...m, label: `§${next + index}` }
+      })
+      return updated
+    })
+    setFirstNumber(next)
   }
 
   function patchMeta(start: number, patch: Partial<SegmentMeta>) {
@@ -224,6 +241,24 @@ export function ImportSplitDialog({
             {review > 0 && <span className="font-bold text-amber-deep"> · {review} à relire</span>}
             {skipped.length > 0 && <span> · {skipped.length} ligne(s) ignorée(s)</span>}
           </span>
+          {isText && (
+            <label
+              className="flex items-center gap-1.5"
+              title="Numéro du premier paragraphe de l'extrait dans son chapitre (§27 si l'extrait commence au paragraphe 27)"
+            >
+              Premier §
+              <input
+                type="number"
+                min={0}
+                value={firstNumber}
+                onChange={(e) => {
+                  const next = Number.parseInt(e.target.value, 10)
+                  if (Number.isFinite(next) && next >= 0) renumber(next)
+                }}
+                className="w-16 rounded-lg border-2 border-line bg-paper px-2 py-0.5 text-center"
+              />
+            </label>
+          )}
           {isText && (
             <label className="flex items-center gap-1.5">
               <input type="checkbox" checked={citationsFirst} onChange={(e) => setCitationsFirst(e.target.checked)} />

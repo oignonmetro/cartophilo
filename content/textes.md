@@ -206,4 +206,9 @@ Pour une longue liste déjà écrite (au format Quizlet décrit plus haut),
 préfixes `§n, Intitulé :`. Le découpage se retouche avant création : « ✂ Couper
 ici » entre deux cartes, « Fusionner avec la précédente », repère et titre de
 chaque leçon, texte du paragraphe reconstitué depuis les cartes-citation (deux
-cartes qui ne redonnent pas le même texte sont signalées).
+cartes qui ne redonnent pas le même texte sont signalées). Sans préfixe `§n`,
+les leçons sont numérotées d'office à partir de « Premier § » (1 par défaut) :
+un extrait qui commence au paragraphe 27 de son chapitre se règle sur 27, et
+ses leçons deviennent §27, §28… ; un repère retouché à la main n'est pas
+renuméroté. Les repères suivent la numérotation du chapitre, pas celle de
+l'extrait (voir *Montaigne : la force de la tradition*, §27 à §37).
