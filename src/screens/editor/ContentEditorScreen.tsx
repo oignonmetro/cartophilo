@@ -654,6 +654,39 @@ export default function ContentEditorScreen() {
   )
 }
 
+/**
+ * Mêmes marqueurs que `handleFormattingShortcut` (le rappel), réutilisables
+ * sur n'importe quel champ contrôlé : une phrase d'exercice n'a pas de
+ * `textareaRef` dédié comme le rappel, seulement sa prop `onChange` — tout
+ * ce qu'il faut est déjà sur l'événement (`currentTarget`, la sélection en
+ * cours), pas besoin d'un ref par carte.
+ */
+function formattingShortcut(onChange: (value: string) => void) {
+  return (event: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    if (!(event.metaKey || event.ctrlKey)) return
+    const key = event.key.toLowerCase()
+    const marker = key === 'b' ? '**' : key === 'u' ? '__' : key === 'i' ? (event.shiftKey ? '`' : '*') : null
+    if (!marker) return
+    event.preventDefault()
+    const el = event.currentTarget
+    // `selectionStart`/`selectionEnd` ne sont nuls que pour les types d'`input`
+    // qui n'ont pas de sélection (`number`, `email`…) — jamais le cas ici,
+    // un champ de texte brut en a toujours une, repliée sur le curseur à
+    // défaut de texte sélectionné.
+    const { value } = el
+    const selectionStart = el.selectionStart ?? value.length
+    const selectionEnd = el.selectionEnd ?? value.length
+    const selected = value.slice(selectionStart, selectionEnd)
+    const next = value.slice(0, selectionStart) + marker + selected + marker + value.slice(selectionEnd)
+    onChange(next)
+    requestAnimationFrame(() => {
+      el.focus()
+      el.selectionStart = selectionStart + marker.length
+      el.selectionEnd = selectionStart + marker.length + selected.length
+    })
+  }
+}
+
 function ToolbarButton({
   title,
   onClick,
@@ -929,9 +962,11 @@ function PointsEditor({
                 <textarea
                   value={point.sentence}
                   onChange={(event) => update(index, { sentence: event.target.value })}
+                  onKeyDown={formattingShortcut((sentence) => update(index, { sentence }))}
                   spellCheck={false}
                   rows={3}
                   placeholder={isText ? '« Citation avec ___ » (plusieurs trous possibles)' : 'Phrase avec ___'}
+                  title="Ctrl+B gras, Ctrl+I italique, Ctrl+U souligné"
                   className="min-h-16 resize-y rounded-xl border-2 border-line bg-paper p-2.5 text-sm leading-snug text-ink outline-none focus:border-teal"
                 />
                 <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">{isText ? 'Phrase à trous' : 'Terme'}</span>
@@ -1002,7 +1037,9 @@ function PointsEditor({
               <input
                 value={point.explanation ?? ''}
                 onChange={(event) => update(index, { explanation: event.target.value })}
+                onKeyDown={formattingShortcut((explanation) => update(index, { explanation }))}
                 placeholder="référence, complément…"
+                title="Ctrl+B gras, Ctrl+I italique, Ctrl+U souligné"
                 className="min-w-32 flex-1 rounded-md border border-line bg-paper px-2 py-1 text-ink outline-none focus:border-teal"
               />
             </label>
