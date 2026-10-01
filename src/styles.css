@@ -66,8 +66,17 @@
   /* Palette étendue : six pistes distinctes (hors-programme) dépassaient les
      cinq teintes ci-dessus sans recouper ni le rouge sémantique (`error`)
      ni les teintes déjà prises. */
-  --color-yellow: #f5d033;
-  --color-yellow-deep: #c9a400;
+  /*
+   * `yellow` a été recalée : à 48° de teinte contre 43° pour `amber`, à peine
+   * 5° les séparaient, quasi rien sur une roue de 360° — les deux teintes
+   * d'or se confondaient sur la roue des dix couleurs (voir le sélecteur de
+   * `{couleur}` dans l'éditeur). Teinte 62° (jaune citron, plus vert) au lieu
+   * de 48° (jaune-or) : 19° d'écart avec `amber`, en restant encore loin du
+   * vert (140°). `amber` n'a pas bougé — elle sert ailleurs (XP, récompense
+   * de fin d'unité, voir `SessionScreen`), pas seulement dans ce sélecteur.
+   */
+  --color-yellow: #e9ef39;
+  --color-yellow-deep: #afa800;
   --color-green: #4caf6d;
   --color-green-deep: #2e8b57;
   --color-red: #e63946;
