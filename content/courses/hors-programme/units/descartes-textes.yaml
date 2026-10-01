@@ -1,0 +1,488 @@
+# Unité-œuvre (voir content/oeuvres.md), pour réviser les 30 textes de
+# Descartes d'un manuel de philosophie : associer chaque texte à sa référence.
+# Titres et références fournis par l'utilisatrice ; les textes qui partagent
+# une même référence (Méditations I, Discours IV, Discours III, Méditations IV,
+# Règles IV) ne forment qu'une case, qui porte les thèses de chacun : 23
+# cases. Aucune citation : les thèses reformulent les textes, au plus près
+# des formules connues.
+
+id: descartes-textes
+title: "Descartes : textes clés"
+subtitle: "30 textes, des Règles aux Lettres"
+icon: map
+color: sky
+group: "Descartes"
+intro: |-
+  Les 30 textes de Descartes du manuel, à associer à leur référence : où Descartes compare-t-il la philosophie à un arbre, l'âme à un pilote en son navire, la recherche sans méthode à la quête d'un trésor ?
+
+  Les textes qui partagent une référence ne forment qu'un emplacement : les trois textes de la première Méditation, par exemple. Au clavier, le titre s'abrège (« DM IV », « Méd. II », « Règle IV », « Principes II 4 ») ; une lettre se désigne par son destinataire.
+work:
+  parts:
+    - id: discours
+      label: "Discours de la méthode"
+      parts:
+        - id: b-discours
+          label: "Discours, I-VI"
+          question: "Que dit chacune des six parties du Discours ?"
+          parts:
+            - id: d-dm1
+              label: "Discours de la méthode, I"
+              title: "Le bon sens est la chose du monde la mieux partagée"
+              summary: "Le bon sens est égal en tous : tout tient à la manière de le conduire"
+              points:
+                - id: dt-dm1-1
+                  sentence: "Le bon sens, ou la ___, c'est-à-dire la puissance de bien juger et de distinguer le vrai d'avec le faux, est naturellement égale en tous les hommes."
+                  answer: "raison"
+                - id: dt-dm1-2
+                  sentence: "La diversité de nos opinions vient de ce que nous conduisons nos pensées par diverses ___, et ne considérons pas les mêmes choses."
+                  answer: "voies"
+                - id: dt-dm1-3
+                  sentence: "Ce n'est pas assez d'avoir l'esprit bon, mais le principal est de l'___ bien."
+                  answer: "appliquer"
+            - id: d-dm2
+              label: "Discours de la méthode, II"
+              title: "Les règles de la méthode"
+              summary: "Quatre préceptes : évidence, division, ordre, dénombrement"
+              rel: consequence
+              points:
+                - id: dt-dm2-1
+                  sentence: "Premier précepte : ne recevoir aucune chose pour vraie que je ne la connusse évidemment être telle, en évitant soigneusement la précipitation et la ___."
+                  answer: "prévention"
+                - id: dt-dm2-2
+                  sentence: "Deuxième précepte : diviser chacune des difficultés en autant de ___ qu'il se pourrait."
+                  answer: "parcelles"
+                - id: dt-dm2-3
+                  sentence: "Dernier précepte : faire partout des dénombrements si entiers et des ___ si générales que je fusse assuré de ne rien omettre."
+                  answer: "revues"
+            - id: d-dm3
+              label: "Discours de la méthode, III"
+              title: "Le doute méthodique ; La morale provisoire"
+              summary: "Douter pour trouver le roc, et vivre en attendant selon une morale par provision"
+              rel: consequence
+              points:
+                - id: dt-dm3-1
+                  sentence: "Je n'imitais pas pour autant les ___, qui ne doutent que pour douter et affectent d'être toujours irrésolus."
+                  answer: "sceptiques"
+                - id: dt-dm3-2
+                  sentence: "Tout mon dessein tendait à rejeter la terre mouvante et le sable, pour trouver le ___ ou l'argile."
+                  answer: "roc"
+                - id: dt-dm3-3
+                  sentence: "Première maxime : obéir aux lois et aux ___ de mon pays, en retenant la religion en laquelle Dieu m'a fait la grâce d'être instruit."
+                  answer: "coutumes"
+                - id: dt-dm3-4
+                  sentence: "Deuxième maxime : être le plus ferme et le plus résolu en mes actions, comme les voyageurs égarés dans une ___ marchent toujours le plus droit qu'ils peuvent vers un même côté."
+                  answer: "forêt"
+                - id: dt-dm3-5
+                  sentence: "Troisième maxime : tâcher toujours plutôt à me vaincre que la fortune, et à changer mes ___ que l'ordre du monde."
+                  answer: "désirs"
+            - id: d-dm4
+              label: "Discours de la méthode, IV"
+              title: "Le cogito ; Preuve de Dieu par l'idée de parfait ; Dieu, garant de l'évidence"
+              summary: "Je pense, donc je suis ; Dieu, prouvé par l'idée du parfait, garantit l'évidence"
+              rel: consequence
+              points:
+                - id: dt-dm4-1
+                  sentence: "Cette vérité, je pense, donc je suis, je jugeai que je pouvais la recevoir sans scrupule pour le premier ___ de la philosophie que je cherchais."
+                  answer: "principe"
+                - id: dt-dm4-2
+                  sentence: "Je connus que j'étais une substance dont toute l'essence ou la nature n'est que de ___."
+                  answer: "penser"
+                - id: dt-dm4-3
+                  sentence: "L'idée d'un être plus parfait que le mien, il était manifestement impossible de la tenir du ___ : elle avait été mise en moi par une nature plus parfaite."
+                  answer: "néant"
+                - id: dt-dm4-4
+                  sentence: "La règle que les choses que nous concevons fort clairement et fort distinctement sont toutes vraies n'est assurée qu'à cause que Dieu est ou ___."
+                  answer: "existe"
+            - id: d-dm5
+              label: "Discours de la méthode, V"
+              title: "Les animaux-machines"
+              summary: "Sans langage ni raison, les animaux sont des machines"
+              rel: consequence
+              points:
+                - id: dt-dm5-1
+                  sentence: "Les pies et les ___ peuvent proférer des paroles comme nous, mais non témoigner qu'ils pensent ce qu'ils disent."
+                  answer: "perroquets"
+                - id: dt-dm5-2
+                  sentence: "La raison est un instrument ___, qui peut servir en toutes sortes de rencontres, au lieu que les organes ont besoin d'une disposition particulière pour chaque action."
+                  answer: "universel"
+                - id: dt-dm5-3
+                  sentence: "C'est la nature qui agit dans les animaux selon la disposition de leurs organes, comme une ___ qui n'est composée que de roues et de ressorts."
+                  answer: "horloge"
+            - id: d-dm6
+              label: "Discours de la méthode, VI"
+              title: "Nous rendre comme maîtres et possesseurs de la nature"
+              summary: "Une philosophie pratique, pour l'usage de la nature et la santé"
+              rel: consequence
+              points:
+                - id: dt-dm6-1
+                  sentence: "Au lieu de cette philosophie spéculative qu'on enseigne dans les écoles, on peut en trouver une ___."
+                  answer: "pratique"
+                - id: dt-dm6-2
+                  sentence: "Connaissant la force et les actions du feu, de l'eau, de l'air et des astres aussi distinctement que les divers métiers de nos ___, nous pourrions les employer à tous les usages auxquels ils sont propres."
+                  answer: "artisans"
+                - id: dt-dm6-3
+                  sentence: "Ce serait surtout pour la conservation de la ___, qui est le premier bien et le fondement de tous les autres biens de cette vie."
+                  answer: "santé"
+    - id: meditations
+      label: "Méditations métaphysiques"
+      parts:
+        - id: b-meditations
+          label: "Méditations, I-VI"
+          question: "Que fait chacune des six Méditations ?"
+          parts:
+            - id: d-m1
+              label: "Méditations métaphysiques, I"
+              title: "Douter du sensible ; L'hypothèse d'un Dieu trompeur ; Le mauvais génie"
+              summary: "Douter des sens, puis de tout, jusqu'à supposer un malin génie"
+              points:
+                - id: dt-m1-1
+                  sentence: "Il est de la prudence de ne se fier jamais entièrement à ceux qui nous ont une fois ___."
+                  answer: "trompés"
+                - id: dt-m1-2
+                  sentence: "Il n'y a point d'indices certains par lesquels on puisse distinguer nettement la veille d'avec le ___."
+                  answer: "sommeil"
+                - id: dt-m1-3
+                  sentence: "Peut-être Dieu a-t-il voulu que je me trompe toutes les fois que je fais l'addition de deux et de trois, ou que je nombre les côtés d'un ___."
+                  answer: "carré"
+                - id: dt-m1-4
+                  sentence: "Je supposerai qu'un certain mauvais génie, non moins rusé et trompeur que ___, a employé toute son industrie à me tromper."
+                  answer: "puissant"
+            - id: d-m2
+              label: "Méditations métaphysiques, II"
+              title: "Le morceau de cire"
+              summary: "Le corps même se connaît par l'entendement seul"
+              rel: probleme-solution
+              points:
+                - id: dt-m2-1
+                  sentence: "Approchée du feu, la cire perd sa saveur, son odeur, sa couleur et sa figure ; et pourtant la même cire ___."
+                  answer: "demeure"
+                  alt: ["reste"]
+                - id: dt-m2-2
+                  sentence: "La perception de la cire n'est ni une vision, ni un attouchement, ni une imagination, mais une ___ de l'esprit."
+                  answer: "inspection"
+                - id: dt-m2-3
+                  sentence: "De la fenêtre, je ne vois que des chapeaux et des manteaux, et je ___ que ce sont des hommes."
+                  answer: "juge"
+            - id: d-m3
+              label: "Méditations métaphysiques, III"
+              title: "Nous naissons avec des idées innées, telle celle de Dieu"
+              summary: "L'idée de Dieu est en moi comme la marque de l'ouvrier sur son ouvrage"
+              rel: consequence
+              points:
+                - id: dt-m3-1
+                  sentence: "Parmi mes idées, les unes semblent nées avec moi, d'autres venir du dehors, d'autres encore être faites et ___ par moi-même."
+                  answer: "inventées"
+                - id: dt-m3-2
+                  sentence: "L'idée de Dieu est née et produite avec moi dès que j'ai été créé, comme l'idée de ___."
+                  answer: "moi-même"
+                - id: dt-m3-3
+                  sentence: "Dieu a mis en moi cette idée pour être comme la ___ de l'ouvrier empreinte sur son ouvrage."
+                  answer: "marque"
+            - id: d-m4
+              label: "Méditations métaphysiques, IV"
+              title: "La liberté ; L'erreur"
+              summary: "L'erreur vient d'une volonté plus ample que l'entendement"
+              rel: consequence
+              points:
+                - id: dt-m4-1
+                  sentence: "C'est surtout la volonté que j'expérimente en moi si grande que je ne conçois point l'idée d'aucune autre plus ___."
+                  answer: "ample"
+                  alt: ["étendue"]
+                - id: dt-m4-2
+                  sentence: "L'indifférence que je sens lorsque je ne suis emporté vers aucun côté est le plus ___ degré de la liberté."
+                  answer: "bas"
+                - id: dt-m4-3
+                  sentence: "Mes erreurs viennent de ce que, la volonté étant plus ample que l'___, je ne la contiens pas dans les mêmes limites."
+                  answer: "entendement"
+                - id: dt-m4-4
+                  sentence: "Si je m'abstiens de juger d'une chose que je ne conçois pas assez clairement et distinctement, je ne me ___ point."
+                  answer: "trompe"
+            - id: d-m5
+              label: "Méditations métaphysiques, V"
+              title: "L'argument ontologique"
+              summary: "L'existence appartient à l'essence de Dieu"
+              rel: consequence
+              points:
+                - id: dt-m5-1
+                  sentence: "L'existence ne peut non plus être séparée de l'essence de Dieu que de l'essence d'un triangle la grandeur de ses trois angles égaux à deux ___."
+                  answer: "droits"
+                - id: dt-m5-2
+                  sentence: "Concevoir un Dieu sans existence, c'est comme concevoir une ___ sans vallée."
+                  answer: "montagne"
+            - id: d-m6
+              label: "Méditations métaphysiques, VI"
+              title: "La conscience et le corps"
+              summary: "Je ne suis pas dans mon corps comme un pilote en son navire"
+              rel: consequence
+              points:
+                - id: dt-m6-1
+                  sentence: "Je ne suis pas seulement logé dans mon corps ainsi qu'un ___ en son navire."
+                  answer: "pilote"
+                - id: dt-m6-2
+                  sentence: "Je lui suis très étroitement conjoint, et tellement confondu et mêlé que je compose comme un seul ___ avec lui."
+                  answer: "tout"
+                - id: dt-m6-3
+                  sentence: "Les sentiments de faim, de soif, de ___ ne sont que des façons confuses de penser, qui viennent de l'union de l'esprit avec le corps."
+                  answer: "douleur"
+        - id: b-reponses
+          label: "Réponses aux deuxièmes objections"
+          question: "Que répond Descartes aux deuxièmes objections ?"
+          rel: objection-reponse
+          parts:
+            - id: d-r1
+              label: "Réponses aux deuxièmes objections, déf. I"
+              title: "La conscience est l'essence de la pensée"
+              summary: "Est pensée tout ce dont nous sommes immédiatement conscients"
+              points:
+                - id: dt-r1-1
+                  sentence: "Par le nom de pensée, je comprends tout ce qui est tellement en nous que nous en sommes ___ connaissants."
+                  answer: "immédiatement"
+                - id: dt-r1-2
+                  sentence: "Toutes les opérations de la volonté, de l'entendement, de l'imagination et des ___ sont des pensées."
+                  answer: "sens"
+            - id: d-r7
+              label: "Réponses aux deuxièmes objections, objection VII"
+              title: "L'immortalité de l'âme"
+              summary: "La mort du corps n'entraîne pas celle de l'esprit"
+              rel: declinaison
+              points:
+                - id: dt-r7-1
+                  sentence: "Esprit et corps étant réellement distincts, de ce que le corps périt on ne peut conclure que l'esprit ___ avec lui."
+                  answer: "meure"
+                  alt: ["périsse"]
+                - id: dt-r7-2
+                  sentence: "Je ne puis démontrer que Dieu ne veuille pas ___ l'âme : cela dépend de sa seule volonté."
+                  answer: "anéantir"
+    - id: regles-principes-lettres
+      label: "Règles, Principes et Lettres"
+      parts:
+        - id: b-regles
+          label: "Règles II-IV"
+          question: "Que faut-il pour diriger son esprit ?"
+          parts:
+            - id: d-rg2
+              label: "Règles pour la direction de l'esprit, II"
+              title: "Arithmétique et géométrie sont plus certaines que les autres sciences"
+              summary: "Ne s'occuper que de ce qu'on peut connaître avec certitude"
+              points:
+                - id: dt-rg2-1
+                  sentence: "Il ne faut s'occuper que des objets dont notre esprit paraît capable d'acquérir une connaissance certaine et ___."
+                  answer: "indubitable"
+                - id: dt-rg2-2
+                  sentence: "L'arithmétique et la géométrie seules traitent d'un objet si pur et si simple qu'elles n'admettent rien que l'___ ait rendu incertain."
+                  answer: "expérience"
+            - id: d-rg3
+              label: "Règles pour la direction de l'esprit, III"
+              title: "Les voies de la connaissance"
+              summary: "Deux voies sûres : l'intuition et la déduction"
+              rel: declinaison
+              points:
+                - id: dt-rg3-1
+                  sentence: "Il n'y a que deux actes de l'entendement pour parvenir à la connaissance sans crainte d'erreur : l'intuition et la ___."
+                  answer: "déduction"
+                - id: dt-rg3-2
+                  sentence: "L'intuition est la conception d'un esprit pur et ___, si facile et si distincte qu'il ne reste aucun doute sur ce que nous comprenons."
+                  answer: "attentif"
+                - id: dt-rg3-3
+                  sentence: "Chacun peut voir par intuition qu'il existe, qu'il pense, qu'un triangle est terminé par trois ___ seulement."
+                  answer: "lignes"
+            - id: d-rg4
+              label: "Règles pour la direction de l'esprit, IV"
+              title: "La méthode est nécessaire pour la recherche de la vérité ; La mathématique, science de l'ordre et de la mesure"
+              summary: "Une méthode est nécessaire ; une mathématique universelle traite de l'ordre et de la mesure"
+              rel: declinaison
+              points:
+                - id: dt-rg4-1
+                  sentence: "Chercher la vérité sans méthode, c'est faire comme celui qui, brûlant de trouver un ___, parcourrait sans cesse les rues au hasard."
+                  answer: "trésor"
+                - id: dt-rg4-2
+                  sentence: "Par méthode, j'entends des règles certaines et ___, qui empêchent de jamais prendre le faux pour le vrai."
+                  answer: "faciles"
+                - id: dt-rg4-3
+                  sentence: "Une science générale doit expliquer tout ce qu'on peut chercher touchant l'ordre et la mesure : la mathématique ___."
+                  answer: "universelle"
+                - id: dt-rg4-4
+                  sentence: "Relève de la mathématique tout ce où l'on examine un ordre ou une mesure, que ce soit dans des nombres, des figures, des astres ou des ___."
+                  answer: "sons"
+        - id: b-principes
+          label: "Principes"
+          question: "Que posent les Principes de la philosophie ?"
+          rel: declinaison
+          parts:
+            - id: d-pp
+              label: "Principes de la philosophie, Lettre-préface"
+              title: "Qu'est-ce que la philosophie ?"
+              summary: "La philosophie est un arbre : métaphysique, physique, puis les autres sciences"
+              points:
+                - id: dt-pp-1
+                  sentence: "Le mot philosophie signifie l'étude de la ___."
+                  answer: "sagesse"
+                - id: dt-pp-2
+                  sentence: "Toute la philosophie est comme un arbre, dont les racines sont la métaphysique et le tronc la ___."
+                  answer: "physique"
+                - id: dt-pp-3
+                  sentence: "Les branches se réduisent à trois principales : la médecine, la mécanique et la ___."
+                  answer: "morale"
+                - id: dt-pp-4
+                  sentence: "C'est proprement avoir les yeux ___ sans tâcher jamais de les ouvrir que de vivre sans philosopher."
+                  answer: "fermés"
+            - id: d-p11
+              label: "Principes de la philosophie, I, art. 1"
+              title: "Enfance et vérité"
+              summary: "Pour chercher la vérité, douter une fois en sa vie de ce qu'on croit"
+              rel: declinaison
+              points:
+                - id: dt-p11-1
+                  sentence: "Comme nous avons jugé des choses avant d'avoir l'entier usage de notre raison, plusieurs ___ nous détournent de la connaissance de la vérité."
+                  answer: "préjugés"
+                - id: dt-p11-2
+                  sentence: "Pour examiner la vérité, il est besoin, une fois en sa ___, de mettre toutes choses en doute autant qu'il se peut."
+                  answer: "vie"
+            - id: d-p24
+              label: "Principes de la philosophie, II, art. 4"
+              title: "La matière se ramène à de l'étendue géométrique"
+              summary: "La nature du corps consiste dans la seule étendue"
+              rel: declinaison
+              points:
+                - id: dt-p24-1
+                  sentence: "La nature de la matière ne consiste pas en ce qu'elle est dure, pesante ou colorée, mais seulement en ce qu'elle est une substance étendue en longueur, largeur et ___."
+                  answer: "profondeur"
+                - id: dt-p24-2
+                  sentence: "Si les corps se retiraient à mesure que notre main s'en approche, nous ne sentirions jamais leur ___, et ils ne perdraient pourtant rien de leur nature."
+                  answer: "dureté"
+        - id: b-lettres
+          label: "Lettres"
+          question: "Que précisent les lettres ?"
+          rel: declinaison
+          parts:
+            - id: d-lm
+              label: "Lettre au P. Mesland, 9 février 1645"
+              title: "La permanence variable du corps"
+              summary: "Un corps reste le même tant qu'il est uni à la même âme"
+              points:
+                - id: dt-lm-1
+                  sentence: "Le corps d'un homme demeure numériquement le même tant qu'il demeure uni à la même ___, bien que sa matière change."
+                  answer: "âme"
+                - id: dt-lm-2
+                  sentence: "Nous croyons avoir le même corps que dans notre ___, bien que sa matière ait entièrement changé."
+                  answer: "enfance"
+            - id: d-ln
+              label: "Lettre au marquis de Newcastle, 23 novembre 1646"
+              title: "Parler est le propre de l'homme"
+              summary: "Seule la parole prouve la pensée"
+              rel: declinaison
+              points:
+                - id: dt-ln-1
+                  sentence: "La parole est le seul signe certain de la ___ cachée dans le corps."
+                  answer: "pensée"
+                - id: dt-ln-2
+                  sentence: "Même les sourds-muets inventent des ___ particuliers pour exprimer leurs pensées."
+                  answer: "signes"
+                - id: dt-ln-3
+                  sentence: "Si l'on apprend à une pie à dire bonjour à sa maîtresse, ce n'est que l'expression d'une de ses ___, l'espérance de manger."
+                  answer: "passions"
+                  alt: ["passion"]
+            - id: d-lc
+              label: "Lettre à Chanut, 6 juin 1647"
+              title: "La force des souvenirs cachés"
+              summary: "Nos inclinations viennent d'impressions oubliées, que la réflexion corrige"
+              rel: declinaison
+              points:
+                - id: dt-lc-1
+                  sentence: "Enfant, Descartes aimait une fille de son âge un peu ___, et longtemps après il se sentait porté à aimer celles qui avaient ce défaut."
+                  answer: "louche"
+                - id: dt-lc-2
+                  sentence: "Dès qu'il eut fait ___ que c'était un défaut, il n'en fut plus ému."
+                  answer: "réflexion"
+                - id: dt-lc-3
+                  sentence: "Ces inclinations viennent des impressions que les objets ont faites dans notre ___, sans que nous en gardions le souvenir."
+                  answer: "cerveau"
+  recaps:
+    - at: b-discours
+      label: "Discours, I-VI"
+      title: "Le Discours de la méthode, partie par partie"
+      notes: |-
+        **Le Discours suit l'ordre d'une vie et d'une pensée : le bon sens partagé (I), la méthode (II), la morale par provision et le doute (III), le cogito et Dieu (IV), la physique et les animaux (V), les fins de la science (VI).**
+
+        | Texte | Titre du manuel |
+        | 1. Discours de la méthode, I | Le bon sens est la chose du monde la mieux partagée |
+        | 7. Discours de la méthode, II | Les règles de la méthode |
+        | 3. Discours de la méthode, III | Le doute méthodique |
+        | 28. Discours de la méthode, III | La morale provisoire |
+        | 12. Discours de la méthode, IV | Le cogito |
+        | 14. Discours de la méthode, IV | Preuve de Dieu par l'idée de parfait |
+        | 16. Discours de la méthode, IV | Dieu, garant de l'évidence |
+        | 26. Discours de la méthode, V | Les animaux-machines |
+        | 24. Discours de la méthode, VI | Nous rendre comme maîtres et possesseurs de la nature |
+
+        ! Le doute méthodique de la troisième partie n'est pas celui des sceptiques : on doute pour trouver le roc, non pour rester irrésolu.
+    - at: b-meditations
+      label: "Méditations, I-VI"
+      title: "Les Méditations, méditation par méditation"
+      notes: |-
+        **Des Méditations I à VI : douter de tout, trouver le moi qui pense (et le connaître mieux que les corps, la cire), prouver Dieu (III, V), expliquer l'erreur (IV), puis retrouver le corps et son union à l'âme (VI).**
+
+        | Texte | Titre du manuel |
+        | 9. Méditations métaphysiques, I | Douter du sensible |
+        | 10. Méditations métaphysiques, I | L'hypothèse d'un Dieu trompeur |
+        | 11. Méditations métaphysiques, I | Le mauvais génie |
+        | 18. Méditations métaphysiques, II | Le morceau de cire |
+        | 17. Méditations métaphysiques, III | Nous naissons avec des idées innées, telle celle de Dieu |
+        | 19. Méditations métaphysiques, IV | La liberté |
+        | 20. Méditations métaphysiques, IV | L'erreur |
+        | 15. Méditations métaphysiques, V | L'argument ontologique |
+        | 21. Méditations métaphysiques, VI | La conscience et le corps |
+
+        Le Discours (IV) et les Méditations (III, V) prouvent tous deux Dieu : par l'idée du parfait d'un côté, par l'idée innée et par l'essence de l'autre.
+
+        ! Le malin génie n'est pas une croyance de Descartes : c'est une supposition pour rendre le doute effectif.
+    - at: b-reponses
+      label: "Réponses aux deuxièmes objections"
+      title: "Les Réponses aux deuxièmes objections"
+      notes: |-
+        **Dans les Réponses aux deuxièmes objections, Descartes définit la pensée par la conscience (définition I) et répond sur l'immortalité de l'âme (objection VII).**
+
+        | Texte | Titre du manuel |
+        | 13. Réponses aux deuxièmes objections, déf. I | La conscience est l'essence de la pensée |
+        | 22. Réponses aux deuxièmes objections, objection VII | L'immortalité de l'âme |
+
+        ! Descartes ne prouve pas l'immortalité : il montre seulement que rien, dans la mort du corps, ne prouve celle de l'esprit.
+    - at: b-regles
+      label: "Règles II-IV"
+      title: "Les Règles pour la direction de l'esprit"
+      notes: |-
+        **Les Règles posent ce que le Discours résumera : ne viser que le certain (II), par l'intuition et la déduction (III), avec une méthode et une mathématique universelle (IV).**
+
+        | Texte | Titre du manuel |
+        | 4. Règles pour la direction de l'esprit, II | Arithmétique et géométrie sont plus certaines que les autres sciences |
+        | 6. Règles pour la direction de l'esprit, III | Les voies de la connaissance |
+        | 2. Règles pour la direction de l'esprit, IV | La méthode est nécessaire pour la recherche de la vérité |
+        | 5. Règles pour la direction de l'esprit, IV | La mathématique, science de l'ordre et de la mesure |
+
+        ! L'arithmétique et la géométrie ne sont pas la seule science : elles sont le modèle de la certitude que toute science doit atteindre.
+    - at: b-principes
+      label: "Principes"
+      title: "Les Principes de la philosophie"
+      notes: |-
+        **Les Principes ordonnent toute la philosophie : l'arbre de la Lettre-préface, le doute qui l'ouvre (I, 1), l'étendue qui fonde la physique (II, 4).**
+
+        | Texte | Titre du manuel |
+        | 30. Principes de la philosophie, Lettre-préface | Qu'est-ce que la philosophie ? |
+        | 8. Principes de la philosophie, I, art. 1 | Enfance et vérité |
+        | 25. Principes de la philosophie, II, art. 4 | La matière se ramène à de l'étendue géométrique |
+
+        ! L'étendue n'est pas une qualité parmi d'autres : c'est toute la nature du corps, dureté, poids et couleur n'étant que des sensations.
+    - at: b-lettres
+      label: "Lettres"
+      title: "Les lettres"
+      notes: |-
+        **Trois lettres prolongent la doctrine : l'identité du corps par l'âme (Mesland), la parole signe de la pensée (Newcastle), les inclinations nées de souvenirs oubliés (Chanut).**
+
+        | Texte | Titre du manuel |
+        | 23. Lettre au P. Mesland, 9 février 1645 | La permanence variable du corps |
+        | 27. Lettre au marquis de Newcastle, 23 novembre 1646 | Parler est le propre de l'homme |
+        | 29. Lettre à Chanut, 6 juin 1647 | La force des souvenirs cachés |
+
+        Au clavier, une lettre se désigne par son destinataire, l'année en plus si l'on veut (« Chanut 1647 »).
+
+        ! La pie qui dit bonjour ne parle pas : elle exprime une passion, l'espérance de manger.

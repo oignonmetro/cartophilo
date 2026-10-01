@@ -295,6 +295,27 @@ describe('saisir l’emplacement au clavier', () => {
     expect(workReferenceOf('§57, Rem. I')).toBeNull()
   })
 
+  it('reconnaît les divisions annoncées, les ordinaux et les lettres datées', () => {
+    const accepted: [string, string[]][] = [
+      ['Discours de la méthode, IV', ['DM IV', 'Discours 4', 'Discours de la méthode, 4e partie', 'Discours, IV']],
+      ['Méditations métaphysiques, I', ['Méditation I', 'Méd. 1', 'Méditations métaphysiques, 1']],
+      ['Règles pour la direction de l’esprit, IV', ['Règle IV', 'Règles 4']],
+      ['Principes de la philosophie, II, art. 4', ['Principes II 4', 'Principes, II, art. 4', 'Principes 2, article 4']],
+      ['Principes de la philosophie, Lettre-préface', ['Principes, lettre-préface', 'Principes préface']],
+      ['Réponses aux deuxièmes objections, déf. I', ['Réponses aux deuxièmes objections, définition 1', 'Réponses déf. I']],
+      ['Réponses aux deuxièmes objections, objection VII', ['Réponses, objection 7', 'Réponses 7e objection']],
+      ['Lettre à Chanut, 6 juin 1647', ['Chanut', 'Lettre à Chanut 1647', 'Chanut, 6 juin 1647']],
+    ]
+    for (const [label, values] of accepted) for (const value of values) expect(matchesLocation(label, value), `${label} ← ${value}`).toBe(true)
+    const refused: [string, string[]][] = [
+      ['Discours de la méthode, IV', ['DM III', 'Méditations IV', 'IV']],
+      ['Principes de la philosophie, Lettre-préface', ['Principes I 1']],
+      ['Réponses aux deuxièmes objections, déf. I', ['Réponses, objection VII']],
+      ['Lettre à Chanut, 6 juin 1647', ['Chanut 1646', 'Mesland 1647']],
+    ]
+    for (const [label, values] of refused) for (const value of values) expect(matchesLocation(label, value), `${label} ← ${value}`).toBe(false)
+  })
+
   it('reconnaît un texte à sa pagination Stephanus, l’œuvre en plus si l’on veut', () => {
     const label = 'République VII, 514a-517c'
     for (const value of ['514a', '514', '514a-517c', 'République VII 514a', 'rep. vii, 514', 'republique 514a'])

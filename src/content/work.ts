@@ -135,7 +135,21 @@ const GREEK_NAMES: Record<string, number> = {
 }
 /** Lettres latines qu'on tape pour la majuscule grecque qui leur ressemble. */
 const GREEK_LOOKALIKES: Record<string, number> = { a: 1, b: 3, e: 6, z: 7, h: 8, k: 11, n: 14 }
-const TITLE_STOPWORDS = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'l', 'a', 'et', 'd', 'sur'])
+const TITLE_STOPWORDS = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'l', 'a', 'au', 'aux', 'et', 'd', 'sur', 'pour'])
+/** Mots qui annoncent une division (« art. 4 », « déf. I », « objection VII ») : ils ne comptent pas. */
+const DIVISION_WORDS = new Set([
+  'art', 'article', 'articles', 'def', 'definition', 'definitions', 'partie', 'part',
+  'objection', 'obj', 'rep', 'reponse', 'lettre', 'preface', 'chap', 'chapitre', 'livre', 'liv',
+])
+const MONTHS = new Set([
+  'janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre',
+])
+/** « 7 », « VII », « 7e », « 7eme » → 7 ; `null` sinon. */
+function divisionNumber(token: string): number | null {
+  const ordinal = /^(\d+)(e|eme|er|ere)?$/.exec(token)
+  if (ordinal) return Number(ordinal[1])
+  return fromRoman(token)
+}
 
 interface WorkReference {
   /** Mots du titre qui comptent (« ethique », « nicomaque »), sans accents. */
@@ -148,6 +162,8 @@ interface WorkReference {
   range: boolean
   /** Le livre est une lettre grecque : une lettre latine semblable est admise. */
   greek: boolean
+  /** Une date (« 9 février 1645 ») : l'année seule, ou rien, suffit. */
+  dated: boolean
 }
 
 /**
@@ -165,19 +181,23 @@ export function workReferenceOf(label: string): WorkReference | null {
   const initials = [...new Set([words, allWords.filter((word) => word.length > 1)].map((list) => list.map((w) => w[0]).join('')))]
   const numbers: number[] = []
   let greek = false
-  for (const token of label.slice(comma + 1).split(/[\s,.;-]+/).filter(Boolean)) {
-    if (/^\d+$/.test(token)) numbers.push(Number(token))
-    else if (GREEK_BOOKS[token] !== undefined) {
+  let dated = false
+  let divided = false
+  for (const token of label.slice(comma + 1).split(/[\s,.;'’-]+/).filter(Boolean)) {
+    const plain = plainText(token)
+    if (GREEK_BOOKS[token] !== undefined) {
       numbers.push(GREEK_BOOKS[token]!)
       greek = true
-    } else {
-      const roman = fromRoman(token.toLowerCase())
-      if (roman === null) return null
-      numbers.push(roman)
+    } else if (MONTHS.has(plain)) dated = true
+    else if (DIVISION_WORDS.has(plain)) divided = true
+    else {
+      const number = divisionNumber(plain)
+      if (number === null) return null
+      numbers.push(number)
     }
   }
-  if (numbers.length === 0) return null
-  return { words, initials, numbers, range: /\d\s*-\s*\d+\s*$/.test(label), greek }
+  if (numbers.length === 0 && !divided) return null
+  return { words, initials, numbers, range: /\d\s*-\s*\d+\s*$/.test(label), greek, dated }
 }
 
 /**
@@ -198,10 +218,13 @@ function matchesWorkReference(reference: WorkReference, value: string): boolean 
   const titleWords: string[] = []
   for (const token of tokens) {
     const lower = token.toLowerCase()
+    if (MONTHS.has(lower) || DIVISION_WORDS.has(lower)) continue
+    // Les petits mots du titre (« l' », « d' ») ne sont pas des chiffres romains,
+    // sauf la lettre latine qu'on tape pour un livre grec (« Métaphysique A »).
+    if (TITLE_STOPWORDS.has(lower) && !(reference.greek && GREEK_LOOKALIKES[lower] !== undefined)) continue
     const candidates = new Set<number>()
-    if (/^\d+$/.test(lower)) candidates.add(Number(lower))
-    const roman = fromRoman(lower)
-    if (roman !== null) candidates.add(roman)
+    const division = divisionNumber(lower)
+    if (division !== null) candidates.add(division)
     if (GREEK_BOOKS[token] !== undefined) candidates.add(GREEK_BOOKS[token]!)
     if (GREEK_BOOKS[token.toUpperCase()] !== undefined) candidates.add(GREEK_BOOKS[token.toUpperCase()]!)
     if (GREEK_NAMES[lower] !== undefined) candidates.add(GREEK_NAMES[lower]!)
@@ -215,7 +238,12 @@ function matchesWorkReference(reference: WorkReference, value: string): boolean 
     (word) => reference.initials.includes(word) || reference.words.some((each) => each.startsWith(word)),
   )
   if (!titled) return false
-  const wanted = [reference.numbers, ...(reference.range ? [reference.numbers.slice(0, -1)] : [])]
+  const wanted = [
+    reference.numbers,
+    ...(reference.range ? [reference.numbers.slice(0, -1)] : []),
+    // Une lettre se désigne par son destinataire, l'année en plus si l'on veut.
+    ...(reference.dated ? [reference.numbers.slice(-1), []] : []),
+  ]
   return wanted.some(
     (expected) => expected.length === numbers.length && expected.every((n, i) => numbers[i]!.includes(n)),
   )
