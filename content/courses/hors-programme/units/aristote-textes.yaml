@@ -4,7 +4,8 @@
 # son idée. Titres des textes : ceux du manuel ; références fournies par
 # l'utilisatrice, les chapitres de l'Éthique à Nicomaque suivant la division de
 # l'édition GF (traduction Bodéüs). Livres de la Métaphysique en capitales
-# grecques (Α, Γ, Θ, Λ). Aucune citation : les thèses reformulent les textes.
+# grecques (Α, Γ, Θ, Λ). Thèses alignées sur les extraits du manuel (J. Russ,
+# C. Leguil, Philosophie. Les chemins de la pensée).
 
 id: aristote-textes
 title: "Aristote : textes clés"
@@ -13,7 +14,7 @@ icon: map
 color: sky
 group: "Aristote"
 intro: |-
-  Les 18 textes d'Aristote du manuel, à associer à leur idée : où Aristote dit-il que la nature est un principe de mouvement, que l'ami est un miroir, que la tragédie purge la pitié et la crainte ?
+  Les 18 textes d'Aristote du manuel, à associer à leur idée : où Aristote dit-il que la nature est un principe de mouvement, que l'ami est un miroir, que la tragédie épure la pitié et la frayeur ?
 
   Chaque texte est repéré par son œuvre, son livre et son chapitre. Au clavier, le titre peut s'abréger (« Métaph. », « Pol. ») ou se réduire à son sigle (« EN », « GM ») ; un livre de la *Métaphysique* se tape par sa lettre, son nom ou son numéro (« Θ », « theta », « IX »).
 work:
@@ -32,15 +33,21 @@ work:
               summary: "Des prémisses posées, une conclusion suit nécessairement"
               points:
                 - id: at1-1
-                  sentence: "Le syllogisme est un discours où, certaines choses étant posées, une chose autre que ces données en résulte ___ par elles."
+                  sentence: "Le syllogisme est un discours où, certaines choses étant posées, une autre chose différente d'elles en résulte ___, par les choses mêmes qui sont posées."
                   answer: "nécessairement"
                 - id: at1-2
-                  sentence: "Il y a démonstration quand le syllogisme part de prémisses ___ et premières."
+                  sentence: "C'est une démonstration quand le syllogisme part de prémisses ___ et premières."
                   answer: "vraies"
                 - id: at1-3
-                  sentence: "Le syllogisme dialectique part d'idées ___ : celles qui paraissent vraies à tous, à la plupart ou aux sages."
-                  answer: "admises"
-                  alt: ["reçues", "probables"]
+                  sentence: "Est dialectique le syllogisme qui conclut de prémisses ___ : les opinions reçues par tous, par la plupart ou par les sages."
+                  answer: "probables"
+                  alt: ["admises", "reçues"]
+                - id: at1-4
+                  sentence: "Est ___ le syllogisme qui part d'opinions qui paraissent probables sans l'être."
+                  answer: "éristique"
+                - id: at1-5
+                  sentence: "Les principes de la science sont certains par eux-mêmes : on ne doit pas en rechercher le ___."
+                  answer: "pourquoi"
             - id: a2
               label: "Physique, II, 1"
               title: "La nature est un principe de mouvement"
@@ -48,34 +55,33 @@ work:
               rel: declinaison
               points:
                 - id: at2-1
-                  sentence: "Les êtres naturels ont en eux-mêmes un principe de mouvement et de ___."
+                  sentence: "Tout être naturel a en soi-même un principe de mouvement et de ___."
                   answer: "repos"
                 - id: at2-2
-                  sentence: "Un lit ou un manteau, en tant que produits de l'___, n'ont en eux aucune tendance innée au changement."
+                  sentence: "Un lit, un manteau, en tant que produits de l'___, n'ont en eux-mêmes aucune tendance naturelle à changer."
                   answer: "art"
                   alt: ["technique"]
                 - id: at2-3
-                  sentence: "La nature se dit plutôt de la ___ que de la matière : une chose est ce qu'elle est quand elle est en acte."
-                  answer: "forme"
+                  sentence: "La nature est un principe et une ___ de mouvement et de repos pour l'être où elle réside par essence, et non par accident."
+                  answer: "cause"
             - id: a4
               label: "De l'âme, II, 2"
               title: "L'âme, forme du corps"
-              summary: "Vivre se dit en plusieurs sens ; l'âme est ce par quoi nous vivons"
+              summary: "L'âme est ce par quoi nous vivons : forme et entéléchie du corps"
               rel: declinaison
               points:
                 - id: at4-1
-                  sentence: "Il suffit, pour qu'on dise qu'une chose vit, qu'elle ait l'intellect, la sensation, le mouvement local ou la ___."
-                  answer: "nutrition"
-                  alt: ["croissance"]
-                - id: at4-2
-                  sentence: "Les plantes vivent par la seule faculté ___, qui peut exister séparée des autres."
-                  answer: "nutritive"
-                - id: at4-3
-                  sentence: "C'est d'abord la ___ qui fait l'animal, le toucher pouvant exister sans les autres sens."
-                  answer: "sensation"
-                - id: at4-4
-                  sentence: "L'âme est ce par quoi nous vivons, sentons et pensons premièrement : elle est forme, et le corps ___."
+                  sentence: "L'âme est, au sens primordial, ce par quoi nous vivons, percevons et pensons : elle est notion et forme, et non ___ et substrat."
                   answer: "matière"
+                - id: at4-2
+                  sentence: "La matière est puissance, et la forme ___."
+                  answer: "entéléchie"
+                - id: at4-3
+                  sentence: "L'âme ne peut être ni sans un corps, ni un corps : elle est dans un corps d'une nature ___."
+                  answer: "déterminée"
+                - id: at4-4
+                  sentence: "Le composé de la matière et de la forme, c'est l'être ___."
+                  answer: "animé"
             - id: a5
               label: "Physique, IV, 12"
               title: "Le temps et l'être éternel"
@@ -83,15 +89,18 @@ work:
               rel: declinaison
               points:
                 - id: at5-1
-                  sentence: "Être dans le temps, c'est pour une chose avoir son être ___ par le temps."
-                  answer: "mesuré"
+                  sentence: "Le temps est ___ du mouvement, et le mouvement défait ce qui est."
+                  answer: "nombre"
                 - id: at5-2
-                  sentence: "On dit que le temps ___ les choses, et que tout vieillit sous son action."
+                  sentence: "Nous avons l'habitude de dire que le temps ___, que tout vieillit sous l'action du temps."
                   answer: "consume"
                   alt: ["use", "détruit"]
                 - id: at5-3
-                  sentence: "Les êtres éternels ne sont pas dans le temps : le signe en est que le temps ne les ___ en rien."
-                  answer: "affecte"
+                  sentence: "Le temps n'a sur les êtres éternels aucun ___, parce qu'ils ne sont pas dans le temps."
+                  answer: "effet"
+                - id: at5-4
+                  sentence: "Le temps est en soi plutôt cause de ___ : on ne dit pas qu'on s'instruit ou qu'on devient jeune et beau sous son action."
+                  answer: "destruction"
         - id: b-metaphysique
           label: "Textes 3, 6, 7, 8"
           question: "Que cherche la science première, et jusqu'où remonte-t-elle ?"
@@ -103,14 +112,17 @@ work:
               summary: "Tous les hommes désirent naturellement connaître"
               points:
                 - id: at6-1
-                  sentence: "Le signe que tous les hommes désirent connaître est le ___ que leur causent les sensations, la vue surtout."
+                  sentence: "Ce qui montre que tous les hommes désirent naturellement savoir, c'est le ___ causé par les sensations, et plus que toutes, par les visuelles."
                   answer: "plaisir"
                 - id: at6-2
-                  sentence: "Nous préférons la vue à presque tout le reste, parce qu'elle nous fait connaître le plus et nous découvre beaucoup de ___."
+                  sentence: "La vue est le sens qui nous fait acquérir le plus de connaissances et nous découvre une foule de ___."
                   answer: "différences"
                 - id: at6-3
-                  sentence: "L'homme d'expérience sait que la chose est ; l'homme de l'art en sait le pourquoi, la ___."
-                  answer: "cause"
+                  sentence: "Les animaux vivent réduits aux images et aux souvenirs, tandis que le genre humain s'élève jusqu'à l'art et aux ___."
+                  answer: "raisonnements"
+                - id: at6-4
+                  sentence: "Même lorsque nous ne nous proposons aucune ___, nous préférons la vue à tout le reste."
+                  answer: "action"
             - id: a7
               label: "Métaphysique, Γ, 1"
               title: "La métaphysique, science de l'Être en tant qu'être"
@@ -118,46 +130,55 @@ work:
               rel: declinaison
               points:
                 - id: at7-1
-                  sentence: "Il y a une science qui étudie l'être en tant qu'être, et les attributs qui lui appartiennent ___."
+                  sentence: "Il y a une science qui étudie l'Être en tant qu'être, et les attributs qui lui appartiennent ___."
                   answer: "essentiellement"
                   alt: ["par soi"]
                 - id: at7-2
-                  sentence: "Les autres sciences découpent une ___ de l'être et en étudient les attributs, comme font les mathématiques."
+                  sentence: "Les autres sciences découpent une certaine ___ de l'Être et en étudient l'attribut, comme les sciences mathématiques."
                   answer: "partie"
                 - id: at7-3
-                  sentence: "Cette science cherche les principes premiers et les ___ les plus hautes."
+                  sentence: "Cette science recherche les principes premiers et les ___ les plus élevées."
                   answer: "causes"
+                - id: at7-4
+                  sentence: "Nous devons appréhender les causes premières de l'Être en tant qu'être, et non de l'Être par ___."
+                  answer: "accident"
             - id: a3
               label: "Métaphysique, Θ, 6"
               title: "Acte et puissance"
-              summary: "L'acte se saisit par analogie : il est la chose même, et non sa puissance"
+              summary: "L'acte, c'est exister en réalité ; la puissance, pouvoir le faire"
               rel: declinaison
               points:
                 - id: at3-1
-                  sentence: "On dit que l'Hermès est en puissance dans le ___, parce qu'il pourrait en être tiré."
+                  sentence: "Nous disons qu'Hermès est en puissance dans le ___, ou la demi-ligne dans la ligne entière, parce qu'elle en pourrait être tirée."
                   answer: "bois"
                 - id: at3-2
-                  sentence: "L'acte ne se définit pas, il se saisit par ___ : ce qui bâtit est à ce qui peut bâtir comme l'éveillé à l'endormi."
-                  answer: "analogie"
+                  sentence: "L'acte est à la puissance comme l'être qui bâtit est à l'être qui a la faculté de bâtir, ou l'être éveillé à l'être qui ___."
+                  answer: "dort"
                 - id: at3-3
-                  sentence: "Dans l'acte, la fin est présente : on voit et en même temps on a vu, alors que dans le ___, comme maigrir ou bâtir, la fin est hors de l'action."
-                  answer: "mouvement"
+                  sentence: "On appelle savant en puissance celui qui ne ___ pas, mais qui en a la faculté."
+                  answer: "spécule"
+                - id: at3-4
+                  sentence: "L'acte est le fait pour une chose d'exister en ___, et non de la façon dont nous disons qu'elle existe en puissance."
+                  answer: "réalité"
             - id: a8
               label: "Métaphysique, Λ, 7"
               title: "Dieu, premier moteur et acte pur"
-              summary: "Un premier moteur immobile meut toutes choses comme objet d'amour"
+              summary: "Un premier moteur immobile, acte pur, vivant éternel et parfait"
               rel: declinaison
               points:
                 - id: at8-1
-                  sentence: "Il existe un premier moteur qui meut sans être ___ : éternel, il est substance et acte."
-                  answer: "mû"
-                  alt: ["mu"]
+                  sentence: "On doit supposer un extrême qui soit moteur sans être ___ : être éternel, substance et acte pur."
+                  answer: "mobile"
+                  alt: ["mû", "mu"]
                 - id: at8-2
-                  sentence: "Le premier moteur meut comme l'objet du désir, en tant qu'il est ___."
-                  answer: "aimé"
+                  sentence: "À un tel Principe sont suspendus le ___ et la nature."
+                  answer: "Ciel"
                 - id: at8-3
-                  sentence: "Dieu est un vivant éternel et parfait : la ___ et la durée continue et éternelle lui appartiennent."
+                  sentence: "Dieu est un vivant éternel parfait : la ___ et la durée continue et éternelle lui appartiennent."
                   answer: "vie"
+                - id: at8-4
+                  sentence: "L'acte de ___ est la béatitude parfaite : cet état que nous ne possédons qu'à certains moments, Dieu l'a toujours."
+                  answer: "contemplation"
     - id: bonheur-amitie-art
       label: "Textes 9-13"
       title: "Le bonheur, l'amitié et l'art"
@@ -172,18 +193,20 @@ work:
               summary: "Tous nomment bonheur le souverain bien, mais le placent ailleurs"
               points:
                 - id: at12-1
-                  sentence: "Sur le nom du souverain bien, presque tous s'accordent : c'est le bonheur, que l'on confond avec bien vivre et bien ___."
+                  sentence: "Sur le nom du Bien suprême, presque tous s'accordent : c'est le bonheur, et tous assimilent le fait de bien vivre et de ___ au fait d'être heureux."
                   answer: "réussir"
                 - id: at12-2
-                  sentence: "La foule place le bonheur dans le ___, et choisit ainsi une vie digne des bêtes."
+                  sentence: "La foule identifie le bonheur au ___, et choisit ainsi une existence bestiale."
                   answer: "plaisir"
                 - id: at12-3
-                  sentence: "L'honneur est trop superficiel pour être le bien cherché : il dépend de ceux qui l'___ plus que de celui qui le reçoit."
-                  answer: "accordent"
-                  alt: ["rendent", "décernent"]
+                  sentence: "L'honneur est une chose trop superficielle : il dépend plutôt de ceux qui ___ que de celui qui est honoré."
+                  answer: "honorent"
                 - id: at12-4
-                  sentence: "La vie de l'homme d'affaires est une vie contrainte, et la richesse n'est qu'un bien ___."
+                  sentence: "La vie d'homme d'affaires est une vie de contrainte, et la richesse n'est qu'une chose ___, un moyen en vue d'une autre chose."
                   answer: "utile"
+                - id: at12-5
+                  sentence: "Nous savons d'instinct que le bien est quelque chose de ___ à chacun, et qu'on peut difficilement nous ravir."
+                  answer: "personnel"
             - id: a13
               label: "Éthique à Nicomaque, X, 7"
               title: "Le bonheur consiste dans la contemplation"
@@ -191,18 +214,24 @@ work:
               rel: declinaison
               points:
                 - id: at13-1
-                  sentence: "Le bonheur est l'activité conforme à la vertu la plus haute, celle de la meilleure partie de nous : l'___."
-                  answer: "intellect"
-                  alt: ["intelligence", "nous"]
+                  sentence: "Le bonheur est l'activité conforme à la vertu la plus parfaite, celle de la partie la plus haute de l'homme, qu'il s'agisse de l'___ ou de toute autre faculté."
+                  answer: "esprit"
+                  alt: ["intellect", "intelligence", "nous"]
                 - id: at13-2
-                  sentence: "De toutes nos activités, c'est la plus ___ : on peut la poursuivre plus longtemps que toute action."
+                  sentence: "L'activité contemplative est la plus ___ : on peut s'y livrer d'une façon plus suivie qu'à l'action pratique."
                   answer: "continue"
                 - id: at13-3
-                  sentence: "Le sage se suffit à lui-même plus que le juste, qui a besoin de gens envers qui exercer sa ___."
+                  sentence: "Le juste a besoin de gens envers qui manifester son sens de la ___ ; le sage, même seul, peut encore contempler."
                   answer: "justice"
                 - id: at13-4
-                  sentence: "Au lieu de ne penser qu'aux choses humaines parce qu'on est homme, il faut autant que possible s'___."
-                  answer: "immortaliser"
+                  sentence: "Au lieu de ne songer qu'aux choses humaines, nous devons, dans la mesure du possible, nous rendre ___."
+                  answer: "immortels"
+                - id: at13-5
+                  sentence: "Nous ne nous privons de loisirs qu'en vue d'en obtenir, et c'est pour vivre en ___ que nous faisons la guerre."
+                  answer: "paix"
+                - id: at13-6
+                  sentence: "La vie se révèle plus ___ pour ceux qui savent que pour ceux qui cherchent encore à savoir."
+                  answer: "agréable"
             - id: a9
               label: "Grande Morale, II, 15"
               title: "L'ami est un médiateur dans la connaissance de soi"
@@ -210,16 +239,19 @@ work:
               rel: declinaison
               points:
                 - id: at9-1
-                  sentence: "Nous ne pouvons nous contempler nous-mêmes par nous-mêmes : nous reprochons aux autres ce que nous faisons ___."
-                  answer: "nous-mêmes"
-                  alt: ["nous memes"]
+                  sentence: "Nous ne pouvons nous contempler à partir de nous-mêmes : nous reprochons aux autres des ___ que nous commettons nous-mêmes sans nous en rendre compte."
+                  answer: "erreurs"
+                  alt: ["fautes"]
                 - id: at9-2
-                  sentence: "Comme nous voyons notre visage dans un ___, nous nous connaissons en regardant notre ami."
+                  sentence: "Comme nous regardons dans un ___ pour voir notre visage, c'est en tournant nos regards vers notre ami que nous pourrions nous découvrir."
                   answer: "miroir"
                 - id: at9-3
-                  sentence: "L'ami est un autre ___ : même l'homme qui se suffit en a besoin pour se connaître."
+                  sentence: "Un ami est un autre ___ : même l'homme qui se suffit à soi-même a besoin d'amitié pour se connaître."
                   answer: "soi-même"
                   alt: ["moi-même", "moi"]
+                - id: at9-4
+                  sentence: "Aveuglés par l'___ et la passion, nous ne jugeons pas correctement de nous-mêmes."
+                  answer: "indulgence"
         - id: b-poetique
           label: "Textes 10, 11"
           question: "Pourquoi l'imitation plaît-elle, et qu'est-ce qu'une tragédie ?"
@@ -231,14 +263,17 @@ work:
               summary: "Imiter est naturel à l'homme, et l'on apprend en regardant les images"
               points:
                 - id: at10-1
-                  sentence: "Imiter est naturel aux hommes dès l'___ : l'homme est le plus imitateur des animaux."
+                  sentence: "Imiter est, dès l'___, une tendance naturelle aux hommes, qui sont des êtres fort enclins à imiter."
                   answer: "enfance"
                 - id: at10-2
-                  sentence: "Nous regardons avec plaisir les images des choses dont la vue nous est pénible, comme les formes des bêtes les plus viles et des ___."
+                  sentence: "Nous prenons plaisir à contempler les images exactes de choses pénibles à voir, comme les animaux les plus méprisés et les ___."
                   answer: "cadavres"
                 - id: at10-3
-                  sentence: "Ce plaisir vient de ce qu'on ___ en regardant : on reconnaît que c'est bien là tel ou tel."
-                  answer: "apprend"
+                  sentence: "On se plaît à regarder les images, car leur contemplation apporte un ___ : on se rend compte de ce qu'est chaque chose."
+                  answer: "enseignement"
+                - id: at10-4
+                  sentence: "Les hommes se différencient des autres animaux en ce qu'ils commencent à ___ à travers l'imitation."
+                  answer: "apprendre"
             - id: a11
               label: "Poétique, 6"
               title: "Le spectacle tragique"
@@ -246,17 +281,20 @@ work:
               rel: declinaison
               points:
                 - id: at11-1
-                  sentence: "La tragédie est l'imitation d'une action ___ et complète, d'une certaine étendue."
+                  sentence: "La tragédie est la représentation d'une action ___, menée jusqu'à son terme et ayant une certaine étendue."
                   answer: "noble"
                   alt: ["sérieuse", "grave"]
                 - id: at11-2
-                  sentence: "Suscitant pitié et ___, la tragédie opère la purgation de ce genre d'émotions."
-                  answer: "crainte"
-                  alt: ["frayeur", "terreur"]
+                  sentence: "En représentant la pitié et la ___, la tragédie réalise une épuration de ce genre d'émotions."
+                  answer: "frayeur"
+                  alt: ["crainte", "terreur"]
                 - id: at11-3
-                  sentence: "La plus importante des six parties de la tragédie est l'agencement des faits, l'___ : c'est l'âme de la tragédie."
-                  answer: "intrigue"
-                  alt: ["histoire", "fable", "mythos"]
+                  sentence: "En représentant pitié et frayeur, la tragédie réalise une ___ de ce genre d'émotions."
+                  answer: "épuration"
+                  alt: ["purgation", "purification", "catharsis"]
+                - id: at11-4
+                  sentence: "La représentation tragique est mise en œuvre par les personnages du drame et n'a pas recours à la ___."
+                  answer: "narration"
     - id: cite-justice
       label: "Textes 14-18"
       title: "La cité et la justice"
@@ -268,19 +306,24 @@ work:
             - id: a15
               label: "Éthique à Nicomaque, I, 1"
               title: "Le Souverain Bien relève de la science politique"
-              summary: "Toute action vise un bien ; le bien suprême relève de la politique"
+              summary: "Le Souverain Bien, fin voulue pour elle-même, relève de la politique"
               points:
                 - id: at15-1
-                  sentence: "Tout art et toute recherche, toute action et tout choix visent quelque bien : le bien est ce à quoi toutes choses ___."
-                  answer: "tendent"
-                  alt: ["aspirent"]
+                  sentence: "Semblables à des ___ qui ont une cible sous les yeux, nous atteindrons plus aisément le but si nous connaissons le Souverain Bien."
+                  answer: "archers"
                 - id: at15-2
-                  sentence: "S'il n'existait pas de fin voulue pour elle-même, le désir irait à l'___, et serait vide et vain."
+                  sentence: "Si nous choisissions toujours une chose en vue d'une autre, on irait à l'___, et le désir serait futile et vain."
                   answer: "infini"
                 - id: at15-3
-                  sentence: "La science du bien suprême est la plus ___ : la politique, qui règle quelles sciences la cité doit cultiver."
+                  sentence: "Le Souverain Bien relève de la science suprême et ___ par excellence : la Politique."
                   answer: "architectonique"
                   alt: ["maîtresse", "souveraine"]
+                - id: at15-4
+                  sentence: "Le bien est aimable même pour un individu isolé, mais il est plus beau et plus ___ appliqué à une nation ou à des cités."
+                  answer: "divin"
+                - id: at15-5
+                  sentence: "Même les potentialités les plus appréciées, la stratégie, l'économique, la ___, sont subordonnées à la Politique."
+                  answer: "rhétorique"
             - id: a14
               label: "Politique, I, 2"
               title: "L'homme est un animal politique"
@@ -288,18 +331,24 @@ work:
               rel: declinaison
               points:
                 - id: at14-1
-                  sentence: "La cité est l'aboutissement de la famille et du village, et elle existe par ___."
+                  sentence: "Née du besoin de vivre, la cité existe pour vivre heureuse : toute cité est dans la ___."
                   answer: "nature"
                 - id: at14-2
-                  sentence: "Celui qui est sans cité par nature est soit une ___, soit un dieu."
-                  answer: "bête"
+                  sentence: "Celui qui, par nature, ne fait partie d'aucune cité est une créature dégradée ou ___ à l'homme."
+                  answer: "supérieure"
                 - id: at14-3
-                  sentence: "Seul parmi les animaux, l'homme a le ___, qui manifeste l'utile et le nuisible, le juste et l'injuste ; la voix n'exprime que le plaisir et la peine."
-                  answer: "langage"
-                  alt: ["logos", "discours", "parole"]
+                  sentence: "Seul entre les animaux, l'homme a l'usage de la ___ ; la voix n'est que le signe de la douleur et du plaisir."
+                  answer: "parole"
+                  alt: ["langage", "logos", "discours"]
                 - id: at14-4
-                  sentence: "La cité est antérieure par nature à l'individu, comme le tout à la partie : séparée du corps, une main n'en est plus une que de ___."
-                  answer: "nom"
+                  sentence: "L'homme sans cité est avide de combats et, comme les oiseaux de proie, incapable de se soumettre à aucun ___."
+                  answer: "joug"
+                - id: at14-5
+                  sentence: "La nature ne fait rien en ___."
+                  answer: "vain"
+                - id: at14-6
+                  sentence: "Comme dit Homère, l'homme sans cité mérite le reproche d'être sans famille, sans ___, sans foyer."
+                  answer: "lois"
             - id: a16
               label: "Éthique à Nicomaque, VI, 7-8"
               title: "La sagesse politique"
@@ -307,16 +356,24 @@ work:
               rel: declinaison
               points:
                 - id: at16-1
-                  sentence: "On dit Anaxagore et Thalès sages, mais non ___, parce qu'ils ignorent ce qui leur est utile."
-                  answer: "prudents"
-                  alt: ["avisés"]
+                  sentence: "Le prudent a pour œuvre principale de bien ___ : on ne le fait jamais sur les choses qui ne peuvent être autrement."
+                  answer: "délibérer"
                 - id: at16-2
-                  sentence: "La prudence ne porte pas seulement sur l'universel : l'action concerne le ___."
-                  answer: "particulier"
-                  alt: ["singulier"]
+                  sentence: "La prudence n'a pas seulement pour objet les universels : elle est de l'ordre de l'action, et l'action a rapport aux choses ___."
+                  answer: "singulières"
+                  alt: ["particulières"]
                 - id: at16-3
-                  sentence: "Les jeunes gens peuvent devenir géomètres, mais non prudents, faute d'___."
+                  sentence: "Certains ignorants sont plus qualifiés pour l'action que d'autres qui savent : c'est le cas des gens d'___."
                   answer: "expérience"
+                - id: at16-4
+                  sentence: "Qui sait que la chair de ___ est légère sera plus capable de produire la santé que qui sait seulement que les viandes légères sont saines."
+                  answer: "volaille"
+                - id: at16-5
+                  sentence: "La sagesse politique et la prudence sont une seule et même ___, bien que leur essence ne soit pas la même."
+                  answer: "disposition"
+                - id: at16-6
+                  sentence: "De la prudence appliquée à la cité, l'espèce qui a toutes les autres sous sa dépendance est ___."
+                  answer: "législative"
             - id: a17
               label: "Politique, I, 9"
               title: "Monnaie et spéculation"
@@ -324,31 +381,46 @@ work:
               rel: declinaison
               points:
                 - id: at17-1
-                  sentence: "Toute chose a deux usages : la chaussure sert à chausser, et aussi à l'___."
-                  answer: "échange"
+                  sentence: "À l'origine, l'échange se fait dans la juste proportion du nécessaire : on donne et on reçoit du vin pour du ___."
+                  answer: "blé"
                 - id: at17-2
-                  sentence: "Le commerce ne connaît pas de ___ à la richesse qu'il recherche, à la différence de l'économie domestique."
-                  answer: "limite"
-                  alt: ["bornes", "borne"]
+                  sentence: "La richesse qui résulte de l'art d'acquérir n'a point de ___."
+                  answer: "limites"
+                  alt: ["limite", "bornes"]
                 - id: at17-3
-                  sentence: "Midas, qui changeait en ___ tout ce qu'il touchait, mourut de faim : la richesse monétaire n'est pas la vraie richesse."
-                  answer: "or"
+                  sentence: "La nécessité des échanges amena l'invention de la monnaie : une matière utile et facile à manier, comme le fer ou l'___."
+                  answer: "argent"
+                - id: at17-4
+                  sentence: "On marqua le métal d'une ___, pour s'éviter l'embarras de mesurages continuels, comme signe de la qualité."
+                  answer: "empreinte"
+                - id: at17-5
+                  sentence: "L'un des deux arts d'acquérir est naturel ; l'autre ne vient pas de la nature, il est le résultat d'une ___ et d'un certain art."
+                  answer: "industrie"
+                - id: at17-6
+                  sentence: "La richesse et l'acquisition naturelles constituent la science ___, différente du petit négoce."
+                  answer: "économique"
             - id: a18
               label: "Éthique à Nicomaque, V, 7"
               title: "Si la justice distributive est proportionnelle, la justice corrective est égalitaire"
-              summary: "Distribuer selon le mérite, corriger sans égard aux personnes"
+              summary: "Distribuer selon la part de chacun ; le juge rétablit l'égalité"
               rel: declinaison
               points:
                 - id: at18-1
-                  sentence: "Dans la distribution des biens communs, le juste suit une proportion ___, celle des mérites."
-                  answer: "géométrique"
+                  sentence: "Pour partager les richesses sociales, la répartition a lieu dans le même ___ qu'ont entre elles les parts apportées par chacun."
+                  answer: "rapport"
                 - id: at18-2
-                  sentence: "Dans les transactions, la justice corrective suit une proportion ___ : elle ne regarde pas qui a lésé qui."
-                  answer: "arithmétique"
+                  sentence: "Quand l'un a frappé et l'autre a été frappé, le juge, par la ___ qu'il impose, essaie d'égaliser les choses."
+                  answer: "peine"
                 - id: at18-3
-                  sentence: "Aller trouver le juge, c'est aller trouver la justice : le juge est comme une justice ___."
+                  sentence: "Le juge nous apparaît comme la justice ___ et personnifiée."
                   answer: "vivante"
                   alt: ["animée"]
+                - id: at18-4
+                  sentence: "On donne parfois aux juges le nom de ___ : parvenir à l'intermédiaire, c'est obtenir la justice."
+                  answer: "médiateurs"
+                - id: at18-5
+                  sentence: "Le juge tient la ___ égale entre les deux parties."
+                  answer: "balance"
   recaps:
     - at: b-logique-nature
       label: "Textes 1, 2, 4, 5"
@@ -357,12 +429,12 @@ work:
         **Aristote fonde le raisonnement (le syllogisme des Topiques) et pense l'être naturel par un principe interne : la nature est principe de mouvement (Physique II), l'âme est forme du vivant (De l'âme II), et le temps mesure ce qui change (Physique IV).**
 
         | Texte | Idée |
-        | 1. Topiques, I, 1 | des prémisses posées, une conclusion suit nécessairement : démonstration (prémisses vraies), dialectique (idées admises) |
+        | 1. Topiques, I, 1 | des prémisses posées, une conclusion suit nécessairement : démonstration (prémisses vraies), dialectique (prémisses probables) |
         | 2. Physique, II, 1 | l'être naturel a en lui le principe de son mouvement et de son repos, non l'objet de l'art |
-        | 4. De l'âme, II, 2 | vivre se dit en plusieurs sens (nutrition, sensation, pensée) ; l'âme est forme, le corps matière |
-        | 5. Physique, IV, 12 | être dans le temps, c'est être mesuré par lui ; ce qui est toujours n'est pas dans le temps |
+        | 4. De l'âme, II, 2 | l'âme, ce par quoi nous vivons, percevons et pensons, est forme et entéléchie du corps |
+        | 5. Physique, IV, 12 | le temps, nombre du mouvement, détruit ; ce qui est toujours n'est pas dans le temps |
 
-        ! Le syllogisme dialectique n'est pas faux : il part d'idées admises, non de prémisses premières.
+        ! Le syllogisme dialectique n'est pas faux : il part d'opinions probables, non de prémisses premières ; c'est l'éristique qui trompe.
     - at: b-metaphysique
       label: "Textes 3, 6, 7, 8"
       title: "La science première, de la sensation au premier moteur"
@@ -370,14 +442,14 @@ work:
         **De l'amour de connaître (Α) à Dieu, acte pur (Λ), la Métaphysique cherche les premières causes : la science de l'être en tant qu'être (Γ), qui pense l'acte et la puissance (Θ).**
 
         | Texte | Idée |
-        | 6. Métaphysique, Α, 1 | tous les hommes désirent connaître ; l'art sait la cause, l'expérience seulement le fait |
+        | 6. Métaphysique, Α, 1 | tous les hommes désirent savoir ; l'homme s'élève jusqu'à l'art et aux raisonnements |
         | 7. Métaphysique, Γ, 1 | une science étudie l'être en tant qu'être, là où les autres en découpent une partie |
-        | 3. Métaphysique, Θ, 6 | l'acte se saisit par analogie ; il a sa fin en lui, à la différence du mouvement |
-        | 8. Métaphysique, Λ, 7 | un premier moteur immobile, acte pur, meut comme ce qui est aimé |
+        | 3. Métaphysique, Θ, 6 | l'acte est à la puissance comme l'éveillé à celui qui dort, celui qui bâtit à celui qui peut bâtir |
+        | 8. Métaphysique, Λ, 7 | un premier moteur immobile, acte pur, vivant éternel et parfait |
 
         Les livres de la *Métaphysique* se désignent par des lettres grecques : Α (1), Γ (4), Θ (9), Λ (12). Au clavier, on peut taper la lettre, son nom (« theta ») ou le numéro (« IX »).
 
-        ! Le premier moteur ne pousse rien : il meut comme objet de désir, sans être mû.
+        ! Le premier moteur n'a rien de virtuel : acte pur, il meut sans être mû.
     - at: b-bonheur
       label: "Textes 9, 12, 13"
       title: "Le bonheur et l'ami"
@@ -396,11 +468,11 @@ work:
       label: "Textes 10, 11"
       title: "L'imitation et la tragédie"
       notes: |-
-        **L'imitation est naturelle à l'homme et source de plaisir, parce qu'on apprend en reconnaissant (Poétique, 4) ; la tragédie imite une action noble et purge la pitié et la crainte (Poétique, 6).**
+        **L'imitation est naturelle à l'homme et source de plaisir, parce qu'on apprend en reconnaissant (Poétique, 4) ; la tragédie représente une action noble et épure la pitié et la frayeur (Poétique, 6).**
 
         | Texte | Idée |
         | 10. Poétique, 4 | imiter est naturel dès l'enfance ; même l'image des cadavres plaît, parce qu'on apprend |
-        | 11. Poétique, 6 | la tragédie, imitation d'une action noble, purge pitié et crainte ; l'intrigue en est l'âme |
+        | 11. Poétique, 6 | la tragédie, représentation d'une action noble, épure la pitié et la frayeur |
 
         ! Le plaisir de l'imitation ne vient pas de l'objet imité, parfois repoussant, mais de ce qu'on apprend en le reconnaissant.
     - at: b-cite-justice
@@ -410,10 +482,10 @@ work:
         **Le bien suprême relève de la politique (EN I, 1), parce que l'homme est un animal politique (Politique I, 2) ; la cité demande la prudence (EN VI), une juste mesure de l'acquisition (Politique I, 9) et une justice qui distribue et qui corrige (EN V, 7).**
 
         | Texte | Idée |
-        | 15. Éthique à Nicomaque, I, 1 | toute action vise un bien ; la politique, science architectonique, vise le bien suprême |
+        | 15. Éthique à Nicomaque, I, 1 | une fin voulue pour elle-même, le Souverain Bien ; la politique, science architectonique, le vise |
         | 14. Politique, I, 2 | la cité existe par nature ; l'homme, doué de langage, est un animal politique |
-        | 16. Éthique à Nicomaque, VI, 7-8 | la prudence porte sur le particulier : Thalès est sage, non prudent |
-        | 17. Politique, I, 9 | deux usages de chaque chose ; le commerce de l'argent n'a pas de limite (Midas) |
-        | 18. Éthique à Nicomaque, V, 7 | distribuer selon le mérite (proportion géométrique), corriger sans égard aux personnes (arithmétique) |
+        | 16. Éthique à Nicomaque, VI, 7-8 | la prudence délibère et porte sur le singulier ; avec la sagesse politique, une même disposition |
+        | 17. Politique, I, 9 | du troc à la monnaie ; l'art d'acquérir n'a pas de limite, à la différence de l'économique |
+        | 18. Éthique à Nicomaque, V, 7 | distribuer selon la part de chacun ; le juge, justice vivante, rétablit l'égalité |
 
         ! « Animal politique » ne veut pas dire que l'homme vit en groupe comme les abeilles : il vit dans une cité, parce qu'il a le langage du juste et de l'injuste.
