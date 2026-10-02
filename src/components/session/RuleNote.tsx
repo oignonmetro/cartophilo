@@ -1,7 +1,7 @@
-import { Fragment, useEffect, type ReactNode } from 'react'
+import { Fragment, useEffect, useLayoutEffect, useRef, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import type { RuleExercise } from '@/engine/exercises'
-import { parseInline, parseNotes, splitAside, type Inline, type NoteRule } from '@/content/notes'
+import { parseInline, parseNotes, splitAside, type Inline, type NoteBlock, type NoteRule } from '@/content/notes'
 import { GAP, type NoteColor } from '@/content/schema'
 import { Button } from '@/components/Button'
 import { PassageText } from '@/components/PassageText'
@@ -82,9 +82,9 @@ export type Tone = (typeof TONES)[keyof typeof TONES]
  * longueur plutôt que celle, fixe, de la colonne : voir la remarque dans
  * `NoteBlocks` au-dessus du tableau.
  *
- * Le resserrement ne vaut que sur téléphone (`w-20` et une colonne qui tient
- * dans le tiers de l'écran) : c'est là qu'une cellule longue, à la même
- * taille que ses voisines courtes, pliait sur huit lignes. Sur ordinateur,
+ * Le resserrement ne vaut que sur téléphone, où les colonnes sont étroites :
+ * c'est là qu'une cellule longue, à la même taille que ses voisines courtes,
+ * pliait sur huit lignes. Sur ordinateur,
  * la même colonne est bien plus large — le texte y tiendrait sans se
  * resserrer — et une police minuscule, flottant au milieu d'une grande case
  * à côté d'une étiquette en gras de taille normale, ne lisait plus comme
@@ -95,6 +95,136 @@ function tableCellSize(text: string): string {
   if (text.length > 90) return 'text-[11px] leading-snug md:text-sm md:leading-snug'
   if (text.length > 40) return 'text-xs leading-snug md:text-sm md:leading-snug'
   return 'text-sm leading-snug'
+}
+
+/**
+ * Tableau d'un rappel, à largeur de colonnes « optimale », à la manière de
+ * LibreOffice : chaque colonne prend la place que réclame son contenu.
+ *
+ * La mise en page automatique du navigateur (`table-auto`) fait l'essentiel.
+ * Quand tout tient, chaque colonne prend sa largeur naturelle et l'espace
+ * restant se répartit en proportion ; quand la place manque, chacune garde
+ * au moins la largeur de son mot le plus long, et c'est la prose des colonnes
+ * longues qui plie. Une étiquette de deux lignes n'est plus écrasée dans une
+ * colonne étroite à côté d'une colonne trois fois trop large pour « Z-H ».
+ * Cette mise en page remplace `table-fixed` et sa colonne d'étiquettes fixée
+ * à `w-20`, qui donnaient la même largeur à toutes les colonnes de contenu,
+ * quoi qu'elles continssent.
+ *
+ * Reste le cas extrême, sur téléphone, d'un tableau de trois ou quatre
+ * colonnes dont les mots les plus longs, mis côte à côte, dépassent déjà
+ * l'écran : la mise en page automatique déborderait. `fitTable` le détecte,
+ * resserre d'abord la police et les marges de ce seul tableau, ce qui suffit
+ * le plus souvent, et sinon le repasse en largeurs fixes, chaque colonne au
+ * prorata de son mot le plus long ; seuls les mots trop longs se coupent
+ * alors (`overflow-wrap: anywhere`), au lieu de faire défiler le tableau ou
+ * d'en couper la fin. Le calcul se refait à chaque changement de largeur.
+ *
+ * `tableCellSize` resserre en outre, sur téléphone seulement, la police des
+ * cellules longues, cellule par cellule, pour que les rangées restent d'une
+ * hauteur harmonieuse ; la marge intérieure s'y réduit aussi (`px-2`), et la
+ * césure (`hyphens-auto`, la page étant déclarée en français) coupe un mot
+ * long là où le navigateur sait le faire.
+ *
+ * Les colonnes de contenu centrent leur texte, la colonne d'étiquettes reste
+ * alignée à gauche : elle sert de repère. Son en-tête, le coin, s'affiche
+ * quand il titre la colonne (« Sens de l'être »), comme les autres en-têtes.
+ */
+function NoteTable({ block, tone }: { block: Extract<NoteBlock, { kind: 'table' }>; tone: Tone }) {
+  const frame = useRef<HTMLDivElement>(null)
+  const table = useRef<HTMLTableElement>(null)
+  const columns = block.columns.length + 1
+
+  useLayoutEffect(() => {
+    const box = frame.current
+    const grid = table.current
+    if (!box || !grid) return
+    const fit = () => fitTable(box, grid)
+    fit()
+    if (typeof ResizeObserver === 'undefined') return
+    const observer = new ResizeObserver(fit)
+    observer.observe(box)
+    return () => observer.disconnect()
+  }, [block])
+
+  const cell = 'px-2 py-2 md:px-3 break-words hyphens-auto'
+  return (
+    <div ref={frame} className={`overflow-x-auto rounded-2xl ${tone.panel}`}>
+      <table ref={table} className="w-full table-auto border-collapse">
+        <colgroup>
+          {Array.from({ length: columns }, (_, i) => (
+            <col key={i} />
+          ))}
+        </colgroup>
+        <thead>
+          <tr>
+            <th className={`${cell} text-left align-bottom font-black ${tableCellSize(block.corner)} ${tone.label}`}>
+              <Rich text={block.corner} />
+            </th>
+            {block.columns.map((column, i) => (
+              <th key={i} className={`${cell} text-center align-bottom font-black ${tableCellSize(column)} ${tone.label}`}>
+                <Rich text={column} />
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {block.rows.map((row, i) => (
+            <tr key={i} className="border-t border-ink/8">
+              <th className={`${cell} text-left align-top font-black ${tableCellSize(row.label)} ${tone.label}`}>
+                <Rich text={row.label} />
+              </th>
+              {row.cells.map((value, j) => (
+                <td key={j} className={`${cell} text-center align-top text-ink-soft ${tableCellSize(value)}`}>
+                  <Rich text={value} />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+/**
+ * Repli de `NoteTable` quand la mise en page automatique déborde. Agit
+ * directement sur le DOM (styles en ligne et attribut que React ne gère pas),
+ * sans nouveau rendu : il faut mesurer le tableau tel qu'il est dessiné.
+ */
+function fitTable(box: HTMLElement, grid: HTMLTableElement) {
+  const cols = Array.from(grid.querySelectorAll('col'))
+  // Repart de la mise en page automatique : la largeur a pu grandir.
+  grid.style.tableLayout = ''
+  grid.removeAttribute('data-compact')
+  grid.removeAttribute('data-squeezed')
+  for (const col of cols) col.style.width = ''
+  // Rien à mesurer tant que le cadre n'est pas dessiné (rappel masqué ou en
+  // cours d'apparition) : `ResizeObserver` rappellera dès qu'il aura une
+  // largeur.
+  if (box.clientWidth === 0) return
+  const fits = () => grid.scrollWidth <= box.clientWidth + 1
+  if (fits()) return
+
+  // D'abord resserrer police et marges : quelques pixels de trop se
+  // rattrapent ainsi sans couper un seul mot.
+  grid.setAttribute('data-compact', '')
+  if (fits()) return
+
+  // Largeur minimale de chaque colonne, celle de son mot le plus long : c'est
+  // la largeur qu'elle prend quand le tableau est réduit à `min-content`.
+  grid.style.width = 'min-content'
+  const header = grid.rows[0]
+  const minimums = header ? Array.from(header.cells, (cell) => cell.getBoundingClientRect().width) : []
+  grid.style.width = ''
+  const total = minimums.reduce((sum, width) => sum + width, 0)
+  if (total <= 0 || minimums.length !== cols.length) return
+
+  grid.style.tableLayout = 'fixed'
+  grid.setAttribute('data-squeezed', '')
+  cols.forEach((col, i) => {
+    col.style.width = `${(minimums[i]! / total) * 100}%`
+  })
 }
 
 export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
@@ -137,75 +267,7 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
           )
         }
 
-        if (block.kind === 'table') {
-          return (
-            <div key={index} className={`overflow-hidden rounded-2xl ${tone.panel}`}>
-              {/* `table-fixed` : sans lui, la mise en page « auto » donne à
-                  chaque colonne la largeur que réclame son contenu, quitte à
-                  dépasser l'écran — sur téléphone, un tableau à deux colonnes
-                  de prose sortait du cadre et `overflow-hidden` en coupait la
-                  fin plutôt que d'y renvoyer. La colonne d'étiquette garde une
-                  largeur fixe modeste (`w-20`) plutôt que `w-0` : sous
-                  `table-fixed`, une largeur nulle se serait littéralement
-                  appliquée et aurait réduit « Matérielle » à une lettre par
-                  ligne. Les colonnes de contenu se partagent le reste à
-                  égalité et portent `break-words`, pour qu'un mot trop long
-                  plie plutôt que d'élargir sa colonne.
-
-                  Pas de taille de texte unique sur `<table>` : une colonne
-                  étroite sur téléphone (voir `w-20` ci-dessus) force une
-                  thèse en deux mots et un argument d'une phrase entière à la
-                  même largeur, et donc à des hauteurs de ligne très
-                  différentes si le texte garde partout la même taille — une
-                  case plie sur huit lignes pendant que sa voisine tient sur
-                  une. `tableCellSize` resserre la police cellule par
-                  cellule, selon sa propre longueur, pour que les rangées
-                  restent harmonieuses.
-
-                  Les colonnes de contenu centrent leur texte (`text-center`) :
-                  sur un grand écran, leur largeur égale laisse souvent une
-                  réponse courte (« penser ») très en retrait d'une case
-                  large, perdue à gauche plutôt qu'au centre de l'espace qui
-                  lui est alloué. Seule la colonne d'étiquette (`w-20`) garde
-                  un alignement à gauche : elle sert de repère, pas de
-                  contenu. */}
-              <table className="w-full table-fixed border-collapse">
-                <thead>
-                  <tr>
-                    <th className="w-20" />
-                    {block.columns.map((column, i) => (
-                      <th
-                        key={i}
-                        className={`px-3 py-2 text-center font-black break-words ${tableCellSize(column)} ${tone.label}`}
-                      >
-                        <Rich text={column} />
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {block.rows.map((row, i) => (
-                    <tr key={i} className="border-t border-ink/8">
-                      <th
-                        className={`w-20 px-3 py-2 text-left align-top font-black ${tableCellSize(row.label)} ${tone.label}`}
-                      >
-                        <Rich text={row.label} />
-                      </th>
-                      {row.cells.map((cell, j) => (
-                        <td
-                          key={j}
-                          className={`px-3 py-2 text-center align-top break-words text-ink-soft ${tableCellSize(cell)}`}
-                        >
-                          <Rich text={cell} />
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )
-        }
+        if (block.kind === 'table') return <NoteTable key={index} block={block} tone={tone} />
 
         return (
           <ul key={index} className={`flex flex-col rounded-2xl ${tone.panel} px-4 py-1`}>

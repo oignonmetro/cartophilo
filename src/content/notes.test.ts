@@ -106,6 +106,7 @@ describe('rappels de cours', () => {
     expect(blocks).toEqual([
       {
         kind: 'table',
+        corner: '',
         columns: ['Subjective', 'Objective'],
         rows: [
           { label: 'Formelle', cells: ['beau', 'figures'] },
@@ -120,10 +121,22 @@ describe('rappels de cours', () => {
     expect(blocks).toEqual([
       {
         kind: 'table',
+        corner: '',
         columns: ['A', 'B'],
         rows: [{ label: 'Ligne', cells: ['1', '2'] }],
       },
     ])
+  })
+
+  it('garde le coin quand il titre la colonne des étiquettes', () => {
+    const [table] = parseNotes("| Sens de l'être | Où il est étudié |\n| par accident | E2-3 |")
+    expect(table).toMatchObject({ kind: 'table', corner: "Sens de l'être", columns: ['Où il est étudié'] })
+  })
+
+  it('sépare deux tableaux qu’une ligne vide sépare', () => {
+    const blocks = parseNotes('| | A |\n| L | x |\n\n| | B | C |\n| M | y | z |')
+    expect(blocks.map((block) => block.kind)).toEqual(['table', 'table'])
+    expect(blocks[1]).toMatchObject({ columns: ['B', 'C'], rows: [{ label: 'M', cells: ['y', 'z'] }] })
   })
 
   it('referme un tableau sur une ligne vide, comme les autres blocs', () => {

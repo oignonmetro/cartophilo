@@ -260,3 +260,24 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/*
+ * Tableau de rappel un peu trop large pour l'écran (voir `fitTable` dans
+ * `RuleNote.tsx`) : police et marges resserrées, avant d'en venir à couper
+ * des mots.
+ */
+table[data-compact] :is(th, td) {
+  font-size: 0.75rem;
+  line-height: 1.3;
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+}
+
+/*
+ * Tableau de rappel trop large pour l'écran même réduit au mot le plus long
+ * de chaque colonne (voir `fitTable` dans `RuleNote.tsx`) : seuls les mots
+ * trop longs se coupent, n'importe où, plutôt que de faire déborder la case.
+ */
+table[data-squeezed] :is(th, td) {
+  overflow-wrap: anywhere;
+}

@@ -118,7 +118,7 @@ export type NoteBlock =
   | { kind: 'rules'; rules: NoteRule[] }
   | { kind: 'warning'; text: string }
   /** Croise deux classifications ; voir la ligne d'en-tête dans `parseNotes`. */
-  | { kind: 'table'; columns: string[]; rows: NoteTableRow[] }
+  | { kind: 'table'; corner: string; columns: string[]; rows: NoteTableRow[] }
 
 const RULE = /^-\s*/
 const WARNING = /^!\s*/
@@ -168,6 +168,10 @@ export function parseNotes(notes: string): NoteBlock[] {
   // accumulent jusqu'à ce qu'une ligne vide ou un marqueur vienne le clore,
   // ce qui recolle les phrases repliées quel que soit leur type.
   let pending: { kind: 'paragraph' | 'warning'; lines: string[] } | null = null
+  // Un tableau ne reste ouvert qu'entre deux lignes `|...|` consécutives :
+  // une ligne vide le referme, et le `|...|` suivant en commence un autre au
+  // lieu de s'ajouter au précédent comme une rangée de plus.
+  let tableOpen = false
 
   function flush() {
     if (!pending) return
@@ -186,6 +190,7 @@ export function parseNotes(notes: string): NoteBlock[] {
 
     if (line === '') {
       flush()
+      tableOpen = false
       continue
     }
 
@@ -209,12 +214,14 @@ export function parseNotes(notes: string): NoteBlock[] {
       flush()
       const cells = parseTableRow(line)
       const last = blocks[blocks.length - 1]
-      // La première ligne `|...|` rencontrée pose les colonnes (sa première
-      // cellule, le coin, ne sert qu'à aligner l'écriture et n'est pas
-      // affichée) ; chaque ligne suivante ajoute une rangée, tant qu'aucun
-      // autre bloc ne s'intercale.
-      if (last?.kind === 'table') last.rows.push({ label: cells[0], cells: cells.slice(1) })
-      else blocks.push({ kind: 'table', columns: cells.slice(1), rows: [] })
+      // La première ligne `|...|` rencontrée pose les colonnes, et sa
+      // première cellule le coin : vide le plus souvent, elle titre parfois la
+      // colonne des étiquettes (« Sens de l'être », « Lecture ») et s'affiche
+      // alors comme les autres en-têtes. Chaque ligne suivante ajoute une
+      // rangée, tant qu'aucun autre bloc ne s'intercale.
+      if (tableOpen && last?.kind === 'table') last.rows.push({ label: cells[0], cells: cells.slice(1) })
+      else blocks.push({ kind: 'table', corner: cells[0] ?? '', columns: cells.slice(1), rows: [] })
+      tableOpen = true
       continue
     }
 
