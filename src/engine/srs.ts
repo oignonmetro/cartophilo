@@ -25,6 +25,13 @@ export interface CardState {
   reps: number
   /** Nombre de rechutes depuis la phase de révision. */
   lapses: number
+  /**
+   * Date de la dernière rechute, en millisecondes epoch. Absente tant que la
+   * carte n'a jamais rechuté (et sur les cartes enregistrées avant que ce
+   * champ existe) : sert à départager, par récence, les cartes les plus
+   * fragiles (voir `finalEntries`).
+   */
+  lastLapse?: number
   /** Prochaine échéance, en millisecondes epoch. */
   due: number
   /** Index dans LEARNING_STEPS ; `null` quand la carte est passée en révision. */
@@ -120,6 +127,7 @@ export function review(card: CardState, rating: Rating, now: number): CardState 
      * revient, jamais moins d'un jour.
      */
     next.lapses = card.lapses + 1
+    next.lastLapse = now
     next.ease = clampEase(card.ease - 0.2)
     next.interval = clampInterval(Math.max(1, card.interval) * LAPSE_FACTOR)
     next.due = now + next.interval * DAY

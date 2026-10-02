@@ -7,6 +7,7 @@ import type { LessonProgressMap } from './progress'
 import {
   buildUnitPath,
   consolidationEntries,
+  finalEntries,
   currentDestination,
   nextNodeAfter,
   sectionRank,
@@ -248,5 +249,40 @@ describe('sélection des éléments à consolider', () => {
   it('respecte le plafond', () => {
     const cards = Object.fromEntries(unitItemIds.map((id) => [id, card(id, { due: now - DAY })]))
     expect(consolidationEntries(cards, itemsById, { scope: 'unit', unitItemIds, now, limit: 2 })).toHaveLength(2)
+  })
+})
+
+describe('séance finale', () => {
+  const itemsById: Map<string, ItemLocation> = indexItems(COURSE)
+  const unitItemIds = ['v1-w1', 'v1-w2', 'v1-w3']
+  const card = (itemId: string, over: Partial<CardState>): CardState => ({
+    ...createCard(itemId, 0),
+    lastReviewed: 1,
+    step: null,
+    interval: 10,
+    ...over,
+  })
+
+  it('écarte les cartes sans rechute ou à une seule', () => {
+    const cards = {
+      'v1-w1': card('v1-w1', { lapses: 0 }),
+      'v1-w2': card('v1-w2', { lapses: 1 }),
+      'v1-w3': card('v1-w3', { lapses: 2 }),
+    }
+    expect(finalEntries(cards, itemsById, unitItemIds).map((e) => e.card.itemId)).toEqual(['v1-w3'])
+  })
+
+  it('met en premier le plus de rechutes, puis la rechute la plus récente', () => {
+    const cards = {
+      'v1-w1': card('v1-w1', { lapses: 2, lastLapse: 100 }),
+      'v1-w2': card('v1-w2', { lapses: 3, lastLapse: 10 }),
+      'v1-w3': card('v1-w3', { lapses: 2, lastLapse: 500 }),
+    }
+    expect(finalEntries(cards, itemsById, unitItemIds).map((e) => e.card.itemId)).toEqual(['v1-w2', 'v1-w3', 'v1-w1'])
+  })
+
+  it('ignore les cartes hors de l’unité', () => {
+    const cards = { 'v1-w1': card('v1-w1', { lapses: 5 }) }
+    expect(finalEntries(cards, itemsById, ['v1-w2'])).toEqual([])
   })
 })

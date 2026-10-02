@@ -212,3 +212,28 @@ export function consolidationEntries(
     .slice(0, options.limit)
     .map((card) => ({ card, item: itemsById.get(card.itemId)!.item }))
 }
+
+/** Nombre de rechutes à partir duquel une carte entre dans la séance finale. */
+export const FINAL_MIN_LAPSES = 2
+
+/**
+ * Éléments de la séance finale : seulement les cartes de l'unité qui ont
+ * rechuté au moins `FINAL_MIN_LAPSES` fois (une seule mauvaise réponse, ou
+ * aucune, ne suffit pas : ce qui a été su ou presque n'a pas besoin du bilan).
+ *
+ * Les plus fragiles passent en premier : le plus de rechutes d'abord, puis, à
+ * nombre égal, la rechute la plus récente. Une carte sans date de dernière
+ * rechute (enregistrée avant que `lastLapse` existe) vient après les autres à
+ * nombre égal.
+ */
+export function finalEntries(
+  cards: Record<string, CardState>,
+  itemsById: Map<string, ItemLocation>,
+  unitItemIds: readonly string[],
+): ConsolidationEntry[] {
+  const inUnit = new Set(unitItemIds)
+  return Object.values(cards)
+    .filter((card) => inUnit.has(card.itemId) && itemsById.has(card.itemId) && card.lapses >= FINAL_MIN_LAPSES)
+    .sort((a, b) => b.lapses - a.lapses || (b.lastLapse ?? 0) - (a.lastLapse ?? 0))
+    .map((card) => ({ card, item: itemsById.get(card.itemId)!.item }))
+}

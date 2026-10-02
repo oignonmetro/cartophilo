@@ -9,6 +9,7 @@ import type { SessionOutcome } from '@/engine/progress'
 import {
   buildUnitPath,
   consolidationEntries,
+  finalEntries,
   nextNodeAfter,
   stepKey,
   type ConsolidationEntry,
@@ -56,15 +57,17 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
   // pas remanier la file en cours.
   const [entries] = useState<ConsolidationEntry[]>(() => {
     if (!unit || !node || node.kind === 'lesson') return []
+    const unitItemIds = itemsOfUnit(unit).map((item) => item.id)
+    // La séance finale ne reprend que les cartes qui ont rechuté plusieurs
+    // fois, les plus fragiles d'abord (voir `finalEntries`).
+    if (node.kind === 'final') return finalEntries(useProgress.getState().cards[course.id] ?? {}, itemsById, unitItemIds)
     return consolidationEntries(useProgress.getState().cards[course.id] ?? {}, itemsById, {
       // Seul l'entraînement sort de l'unité : c'est là qu'on va chercher ce
       // qui a été appris ailleurs et qui redemande du travail.
       scope: node.kind === 'workout' ? 'course' : 'unit',
-      unitItemIds: itemsOfUnit(unit).map((item) => item.id),
+      unitItemIds,
       now: Date.now(),
-      // La séance finale est un bilan complet : pas de plafond court comme
-      // pour les étapes intermédiaires.
-      limit: node.kind === 'final' ? itemsOfUnit(unit).length : STEP_LIMIT,
+      limit: STEP_LIMIT,
     })
   })
 
@@ -77,7 +80,7 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
     // Une unité-œuvre se clôt en reconstituant son plan, livre par livre :
     // le fil du raisonnement, puis chaque niveau du schéma (tant que les
     // schémas ne sont pas archivés, voir `WORK_DIAGRAMS`).
-    if (node.kind !== 'final' || !unit?.work || session.length === 0) return session
+    if (node.kind !== 'final' || !unit?.work) return session
     const work = unit.work
     const rng = createRng(seedFrom('final-plan', unit.id, entries.length))
     const closing = work.parts.flatMap((part): Exercise[] => {
@@ -125,8 +128,9 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
       <div className="flex h-full flex-col items-center justify-center gap-5 overflow-y-auto px-8 text-center [&>*]:shrink-0">
         <h1 className="text-2xl font-black">Rien à travailler</h1>
         <p className="max-w-xs text-sm text-ink-soft">
-          Cette étape reprend ce que vous avez déjà rencontré. Faites d'abord les leçons qui la précèdent, ou
-          passez cette étape si elles ont été sautées.
+          {node.kind === 'final'
+            ? "Aucune carte de cette unité n'a rechuté plusieurs fois : il n'y a rien à reprendre dans ce bilan. Vous pouvez le valider."
+            : "Cette étape reprend ce que vous avez déjà rencontré. Faites d'abord les leçons qui la précèdent, ou passez cette étape si elles ont été sautées."}
         </p>
         <div className="flex gap-3">
           <Button tone="neutral" onClick={backHome}>
@@ -138,7 +142,7 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
               backHome()
             }}
           >
-            Passer cette étape
+            {node.kind === 'final' ? 'Valider cette étape' : 'Passer cette étape'}
           </Button>
         </div>
       </div>
