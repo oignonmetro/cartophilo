@@ -199,11 +199,6 @@ lessons:
     label: "§1"
     text: "Ce récit sera très simple : je laisse aux médecins le soin de discourir sur la question. Je vis avant-hier un enfant que deux hommes et une nourrice, qui se disaient être le père, l'oncle et la tante, promenaient pour le montrer et en tirer quelques sous, à cause de son étrangeté. Il était d'une forme ordinaire, se tenait sur ses pieds, marchait et gazouillait à peu près comme les autres enfants de son âge. Il n'avait pas encore voulu se nourrir autrement qu'en tétant sa nourrice, et ce qu'on essaya devant moi de lui mettre dans la bouche, il le mâchait un peu, et le rendait sans l'avaler. Ses cris semblaient bien avoir quelque chose de particulier. Il était âgé de quatorze mois tout juste. Au-dessous des tétins, il était attaché et collé à un autre enfant sans tête, dont le canal médullaire de la colonne vertébrale était bouché, et le reste intact : si l'un de ses bras était plus court, c'est qu'il lui avait été brisé par accident à la naissance. Ils étaient accolés face à face, comme si un enfant plus petit voulait en embrasser un autre plus grand. La région par laquelle ils étaient attachés n'était que de quatre doigts environ, de sorte que si on retournait l'enfant incomplet, on pouvait voir en dessous le nombril de l'autre : la suture se situait entre les tétins et le nombril. On ne pouvait voir ce dernier sur l'enfant incomplet, mais on voyait bien tout le reste de son ventre. Ainsi ce qui n'était pas attaché, comme les bras, le fessier, les cuisses et les jambes de cet enfant incomplet, demeurait pendant et ballottant sur l'autre, et lui descendait jusqu'à mi-jambe. La nourrice nous a dit aussi qu'il urinait par les deux endroits, et les membres du deuxième étaient nourris et vivants, et dans le même état que ceux du premier, sauf qu'ils étaient plus courts et plus menus."
   points:
-  - id: montaigne-monstre-p1-1
-    fragment: "1/9"
-    sentence: "« Ce récit sera ___ : je laisse aux médecins le soin de discourir sur la question. »"
-    answer: "très simple"
-    alt: []
   - id: montaigne-monstre-p1-2
     fragment: "1/9"
     sentence: "« Ce récit sera très simple : ___. »"
@@ -241,15 +236,9 @@ lessons:
     sentence: "Ambroise ___ publie *Des monstres et prodiges* en 1573."
     answer: "Paré"
     alt: []
-  - id: montaigne-monstre-p2-1
-    fragment: "2/9"
-    sentence: "« ___ un enfant que deux hommes et une nourrice, qui se disaient être le père, l'oncle et la tante, promenaient pour le montrer et en tirer quelques sous, à cause de son étrangeté. »"
-    answer: "Je vis avant-hier"
-    alt: []
-  - id: montaigne-monstre-p2-2
-    fragment: "2/9"
-    sentence: "« Je vis avant-hier un enfant que deux hommes et une nourrice, ___ le père, l'oncle et la tante, promenaient pour le montrer et en tirer quelques sous, à cause de son étrangeté. »"
-    answer: "qui se disaient être"
+  - id: montaigne-monstre-par1-p1
+    sentence: "« Je ___ un enfant que deux hommes et une nourrice, qui se disaient être le père, l'oncle et la tante, promenaient pour le montrer et en tirer quelques sous, à cause de son étrangeté. »"
+    answer: "vis avant-hier"
     alt: []
   - id: montaigne-monstre-p2-3
     fragment: "2/9"
@@ -265,21 +254,17 @@ lessons:
     sentence: "« Je vis », « avant-hier » : Montaigne oppose l'autorité de l'___ au ouï-dire des recueils de prodiges."
     answer: "expérience"
     alt: []
-  - id: montaigne-monstre-p2-6
-    sentence: "Les accompagnateurs « se disaient » parents : même témoin direct, Montaigne reste ___."
-    answer: "prudent"
-    alt: []
   - id: montaigne-monstre-p2-7
     sentence: "La curiosité pour l'étrange crée un ___ : le corps anomal devient un spectacle payant."
     answer: "marché"
     alt: []
   - id: montaigne-monstre-p2-8
-    sentence: "La valeur marchande de l'enfant dépend entièrement de l'___ du public : si de tels enfants étaient fréquents, personne ne paierait pour les voir."
+    sentence: "La **valeur marchande** de l'enfant dépend entièrement de l'___ du public : si de tels enfants étaient fréquents, personne ne paierait pour les voir."
     answer: "habitude"
     alt: []
   - id: montaigne-monstre-p2-9
     sentence: "La scène initiale contient ainsi, sans le dire, la thèse ___."
-    answer: "diagnostique"
+    answer: "anthropologique"
     alt: []
   - id: montaigne-monstre-p2-10
     sentence: "Montaigne ne condamne pas l'exhibition : son éthique se loge dans la manière de ___, plutôt que dans des jugements explicites."
@@ -287,23 +272,18 @@ lessons:
     alt: []
   - id: montaigne-monstre-p3-1
     fragment: "3/9"
-    sentence: "« Il était ___, se tenait sur ses pieds, marchait et gazouillait à peu près comme les autres enfants de son âge. Il n'avait pas encore voulu se nourrir autrement qu'en tétant sa nourrice, et ce qu'on essaya devant moi de lui mettre dans la bouche, il le mâchait un peu, et le rendait sans l'avaler. Ses cris semblaient bien avoir quelque chose de particulier. Il était âgé de quatorze mois tout juste. »"
+    sentence: "« Il était ___, __se tenait sur ses pieds, marchait et gazouillait à peu près comme les autres enfants de son âge__. Il n'avait pas encore voulu se nourrir autrement qu'en tétant sa nourrice, et ce qu'on essaya devant moi de lui mettre dans la bouche, il le mâchait un peu, et le rendait sans l'avaler. Ses cris semblaient bien avoir quelque chose de particulier. Il était âgé de quatorze mois tout juste. »"
     answer: "d'une forme ordinaire"
     alt: []
   - id: montaigne-monstre-p3-2
     fragment: "3/9"
-    sentence: "« Il était d'une forme ordinaire, se tenait sur ses pieds, marchait et gazouillait à peu près ___. Il n'avait pas encore voulu se nourrir autrement qu'en tétant sa nourrice, et ce qu'on essaya devant moi de lui mettre dans la bouche, il le mâchait un peu, et le rendait sans l'avaler. Ses cris semblaient bien avoir quelque chose de particulier. Il était âgé de quatorze mois tout juste. »"
+    sentence: "« Il était __d'une forme ordinaire__, se tenait sur ses pieds, marchait et gazouillait à peu près ___. Il n'avait pas encore voulu se nourrir autrement qu'en tétant sa nourrice, et ce qu'on essaya devant moi de lui mettre dans la bouche, il le mâchait un peu, et le rendait sans l'avaler. Ses cris semblaient bien avoir quelque chose de particulier. Il était âgé de quatorze mois tout juste. »"
     answer: "comme les autres enfants de son âge"
     alt: []
   - id: montaigne-monstre-p3-3
     fragment: "4/9"
     sentence: "« Il était d'une forme ordinaire, se tenait sur ses pieds, marchait et gazouillait à peu près comme les autres enfants de son âge. Il n'avait pas encore voulu se nourrir autrement qu'en tétant sa nourrice, et ce qu'on essaya devant moi de lui mettre dans la bouche, il le mâchait un peu, et le rendait sans l'avaler. ___. Il était âgé de quatorze mois tout juste. »"
     answer: "Ses cris semblaient bien avoir quelque chose de particulier"
-    alt: []
-  - id: montaigne-monstre-p3-4
-    fragment: "4/9"
-    sentence: "« Il était d'une forme ordinaire, se tenait sur ses pieds, marchait et gazouillait à peu près comme les autres enfants de son âge. Il n'avait pas encore voulu se nourrir autrement qu'en tétant sa nourrice, et ce qu'on essaya devant moi de lui mettre dans la bouche, il le mâchait un peu, et le rendait sans l'avaler. Ses cris semblaient bien avoir quelque chose de particulier. Il était âgé de ___. »"
-    answer: "quatorze mois tout juste"
     alt: []
   - id: montaigne-monstre-p3-5
     sentence: "Montaigne décrit l'ordinaire avant l'anomalie, ce qui renverse l'ordre du ___, qui montre d'abord l'étrange."
@@ -321,25 +301,10 @@ lessons:
     sentence: "L'enfant se développe selon les étapes ordinaires de la ___ : la vie ne dépend pas de la conformité de la forme à un type."
     answer: "croissance"
     alt: []
-  - id: montaigne-monstre-p4-1
-    fragment: "5/9"
-    sentence: "« Au-dessous des tétins, il était attaché et collé à ___, dont le canal médullaire de la colonne vertébrale était bouché, et le reste intact : si l'un de ses bras était plus court, c'est qu'il lui avait été brisé par accident à la naissance. Ils étaient accolés face à face, comme si un enfant plus petit voulait en embrasser un autre plus grand. »"
-    answer: "un autre enfant sans tête"
-    alt: []
-  - id: montaigne-monstre-p4-2
-    fragment: "5/9"
-    sentence: "« Au-dessous des tétins, il était attaché et collé à un autre enfant sans tête, dont le canal médullaire de la colonne vertébrale était bouché, ___ : si l'un de ses bras était plus court, c'est qu'il lui avait été brisé par accident à la naissance. Ils étaient accolés face à face, comme si un enfant plus petit voulait en embrasser un autre plus grand. »"
-    answer: "et le reste intact"
-    alt: []
-  - id: montaigne-monstre-p4-3
-    fragment: "5/9"
-    sentence: "« Au-dessous des tétins, il était attaché et collé à un autre enfant sans tête, dont le canal médullaire de la colonne vertébrale était bouché, et le reste intact : si l'un de ses bras était plus court, c'est qu'il lui avait été ___. Ils étaient accolés face à face, comme si un enfant plus petit voulait en embrasser un autre plus grand. »"
-    answer: "brisé par accident à la naissance"
-    alt: []
   - id: montaigne-monstre-p4-4
     fragment: "6/9"
-    sentence: "« Au-dessous des tétins, il était attaché et collé à un autre enfant sans tête, dont le canal médullaire de la colonne vertébrale était bouché, et le reste intact : si l'un de ses bras était plus court, c'est qu'il lui avait été brisé par accident à la naissance. Ils étaient accolés face à face, ___. »"
-    answer: "comme si un enfant plus petit voulait en embrasser un autre plus grand"
+    sentence: "« Au-dessous des tétins, il était attaché et collé à un autre enfant sans tête, dont le canal médullaire de la colonne vertébrale était bouché, et le reste intact : si l'un de ses bras était plus court, c'est qu'il lui avait été brisé par accident à la naissance. Ils étaient accolés face à face, comme si un enfant plus petit voulait ___. »"
+    answer: "en embrasser un autre plus grand"
     alt: []
   - id: montaigne-monstre-p4-5
     sentence: "L'anomalie est décrite en termes ___, et l'accent porte encore sur ce qui est complet."
@@ -361,25 +326,10 @@ lessons:
     sentence: "L'image de l'embrassade est un premier geste de ___, ce que le paragraphe 4 décrira comme la condition pour cesser de s'étonner."
     answer: "familiarisation"
     alt: []
-  - id: montaigne-monstre-p5-1
-    fragment: "7/9"
-    sentence: "« La région par laquelle ils étaient attachés n'était que de ___, de sorte que si on retournait l'enfant incomplet, on pouvait voir en dessous le nombril de l'autre : la suture se situait entre les tétins et le nombril. On ne pouvait voir ce dernier sur l'enfant incomplet, mais on voyait bien tout le reste de son ventre. Ainsi ce qui n'était pas attaché, comme les bras, le fessier, les cuisses et les jambes de cet enfant incomplet, demeurait pendant et ballottant sur l'autre, et lui descendait jusqu'à mi-jambe. La nourrice nous a dit aussi qu'il urinait par les deux endroits, et les membres du deuxième étaient nourris et vivants, et dans le même état que ceux du premier, sauf qu'ils étaient plus courts et plus menus. »"
-    answer: "quatre doigts environ"
-    alt: []
   - id: montaigne-monstre-p5-2
     fragment: "7/9"
     sentence: "« La région par laquelle ils étaient attachés n'était que de quatre doigts environ, de sorte que ___, on pouvait voir en dessous le nombril de l'autre : la suture se situait entre les tétins et le nombril. On ne pouvait voir ce dernier sur l'enfant incomplet, mais on voyait bien tout le reste de son ventre. Ainsi ce qui n'était pas attaché, comme les bras, le fessier, les cuisses et les jambes de cet enfant incomplet, demeurait pendant et ballottant sur l'autre, et lui descendait jusqu'à mi-jambe. La nourrice nous a dit aussi qu'il urinait par les deux endroits, et les membres du deuxième étaient nourris et vivants, et dans le même état que ceux du premier, sauf qu'ils étaient plus courts et plus menus. »"
     answer: "si on retournait l'enfant incomplet"
-    alt: []
-  - id: montaigne-monstre-p5-3
-    fragment: "8/9"
-    sentence: "« La région par laquelle ils étaient attachés n'était que de quatre doigts environ, de sorte que si on retournait l'enfant incomplet, on pouvait voir en dessous le nombril de l'autre : la suture se situait entre les tétins et le nombril. On ne pouvait voir ce dernier sur l'enfant incomplet, mais on voyait bien tout le reste de son ventre. Ainsi ce qui n'était pas attaché, comme les bras, le fessier, les cuisses et les jambes de cet enfant incomplet, ___, et lui descendait jusqu'à mi-jambe. La nourrice nous a dit aussi qu'il urinait par les deux endroits, et les membres du deuxième étaient nourris et vivants, et dans le même état que ceux du premier, sauf qu'ils étaient plus courts et plus menus. »"
-    answer: "demeurait pendant et ballottant sur l'autre"
-    alt: []
-  - id: montaigne-monstre-p5-4
-    fragment: "9/9"
-    sentence: "« La région par laquelle ils étaient attachés n'était que de quatre doigts environ, de sorte que si on retournait l'enfant incomplet, on pouvait voir en dessous le nombril de l'autre : la suture se situait entre les tétins et le nombril. On ne pouvait voir ce dernier sur l'enfant incomplet, mais on voyait bien tout le reste de son ventre. Ainsi ce qui n'était pas attaché, comme les bras, le fessier, les cuisses et les jambes de cet enfant incomplet, demeurait pendant et ballottant sur l'autre, et lui descendait jusqu'à mi-jambe. ___ qu'il urinait par les deux endroits, et les membres du deuxième étaient nourris et vivants, et dans le même état que ceux du premier, sauf qu'ils étaient plus courts et plus menus. »"
-    answer: "La nourrice nous a dit aussi"
     alt: []
   - id: montaigne-monstre-p5-5
     fragment: "9/9"
@@ -390,11 +340,6 @@ lessons:
     fragment: "9/9"
     sentence: "« La région par laquelle ils étaient attachés n'était que de quatre doigts environ, de sorte que si on retournait l'enfant incomplet, on pouvait voir en dessous le nombril de l'autre : la suture se situait entre les tétins et le nombril. On ne pouvait voir ce dernier sur l'enfant incomplet, mais on voyait bien tout le reste de son ventre. Ainsi ce qui n'était pas attaché, comme les bras, le fessier, les cuisses et les jambes de cet enfant incomplet, demeurait pendant et ballottant sur l'autre, et lui descendait jusqu'à mi-jambe. La nourrice nous a dit aussi qu'il urinait par les deux endroits, et les membres du deuxième étaient ___, et dans le même état que ceux du premier, sauf qu'ils étaient plus courts et plus menus. »"
     answer: "nourris et vivants"
-    alt: []
-  - id: montaigne-monstre-p5-7
-    fragment: "9/9"
-    sentence: "« La région par laquelle ils étaient attachés n'était que de quatre doigts environ, de sorte que si on retournait l'enfant incomplet, on pouvait voir en dessous le nombril de l'autre : la suture se situait entre les tétins et le nombril. On ne pouvait voir ce dernier sur l'enfant incomplet, mais on voyait bien tout le reste de son ventre. Ainsi ce qui n'était pas attaché, comme les bras, le fessier, les cuisses et les jambes de cet enfant incomplet, demeurait pendant et ballottant sur l'autre, et lui descendait jusqu'à mi-jambe. La nourrice nous a dit aussi qu'il urinait par les deux endroits, et les membres du deuxième étaient nourris et vivants, et dans le même état que ceux du premier, sauf qu'ils étaient ___. »"
-    answer: "plus courts et plus menus"
     alt: []
   - id: montaigne-monstre-p5-8
     sentence: "Mesure, manipulation, distinction du visible et de l'invisible, témoignage attribué : la description devient presque un ___."
@@ -458,13 +403,13 @@ lessons:
   points:
   - id: montaigne-monstre-p6-1
     fragment: "1/3"
-    sentence: "« Ce double corps et ces membres différents, ___, pourraient bien constituer pour le roi un présage favorable montrant qu'il maintiendra sous sa loi l'union des diverses pièces et parties de notre état. »"
-    answer: "se raccordant à une seule tête"
+    sentence: "« Ce double corps et ces membres différents, se raccordant à ___, pourraient bien constituer pour le roi un présage favorable montrant qu'il maintiendra sous sa loi l'union des diverses pièces et parties de notre état. »"
+    answer: "une seule tête"
     alt: []
   - id: montaigne-monstre-p6-2
     fragment: "1/3"
-    sentence: "« Ce double corps et ces membres différents, se raccordant à une seule tête, ___ montrant qu'il maintiendra sous sa loi l'union des diverses pièces et parties de notre état. »"
-    answer: "pourraient bien constituer pour le roi un présage favorable"
+    sentence: "« Ce double corps et ces membres différents, se raccordant à une seule tête, pourraient bien constituer pour le roi ___ montrant qu'il maintiendra sous sa loi l'union des diverses pièces et parties de notre état. »"
+    answer: "un présage favorable"
     alt: []
   - id: montaigne-monstre-p6-3
     fragment: "1/3"
@@ -476,8 +421,8 @@ lessons:
     answer: "conditionnel"
     alt: []
   - id: montaigne-monstre-p6-5
-    sentence: "Pour Ambroise Paré, les monstres sont le plus souvent les signes d'un ___ à venir."
-    answer: "malheur"
+    sentence: "Pour ___ par exemple, les monstres sont le plus souvent les signes d'un malheur à venir."
+    answer: "Ambroise Paré"
     alt: []
   - id: montaigne-monstre-p6-6
     sentence: "Le mécanisme de la lecture du présage est une ___ : un corps à plusieurs membres et une seule tête ressemble à un royaume sous un seul roi."
@@ -501,8 +446,8 @@ lessons:
     alt: []
   - id: montaigne-monstre-p7-1
     fragment: "2/3"
-    sentence: "« Mais ___, mieux vaut le laisser faire d'abord, car il n'y a rien de mieux que de deviner les choses déjà faites : « quand les choses ont eu lieu, on leur trouve quelque interprétation qui vérifie ce qui était prévu » [Cicéron, De la divination, II, 31]. De la même façon, on disait d'Épiménide qu'il « devinait à reculons ». »"
-    answer: "de peur que les événements ne viennent le démentir"
+    sentence: "« Mais de peur que ___, mieux vaut le laisser faire d'abord, car il n'y a rien de mieux que de deviner les choses déjà faites : « quand les choses ont eu lieu, on leur trouve quelque interprétation qui vérifie ce qui était prévu » [Cicéron, De la divination, II, 31]. De la même façon, on disait d'Épiménide qu'il « devinait à reculons ». »"
+    answer: "les événements ne viennent le démentir"
     alt: []
   - id: montaigne-monstre-p7-2
     fragment: "2/3"
@@ -525,31 +470,31 @@ lessons:
     answer: "« devinait à reculons »"
     alt: []
   - id: montaigne-monstre-p7-6
-    sentence: "Montaigne ne réfute pas le présage par un argument sur la nature : il en attaque la valeur de ___."
+    sentence: "Montaigne ne réfute pas le **présage **par un argument sur la nature : il en attaque la valeur de ___."
     answer: "connaissance"
     alt: []
   - id: montaigne-monstre-p7-7
-    sentence: "Une prédiction ne vaut que si elle est formulée ___ l'événement et vérifiée par lui."
+    sentence: "Une **prédiction **ne vaut que si elle est formulée ___ l'événement et vérifiée par lui."
     answer: "avant"
     alt: []
   - id: montaigne-monstre-p7-8
-    sentence: "Une interprétation qui s'accorde avec tous les événements possibles ne dit rien d'aucun, et ne peut jamais être ___."
+    sentence: "Une **interprétation **qui s'accorde avec tous les événements possibles ne dit rien d'aucun, et ne peut jamais être ___."
     answer: "démentie"
     alt: []
   - id: montaigne-monstre-p7-9
-    sentence: "La citation vient du livre II du *De la divination*, où ___ critique la divination en son propre nom."
+    sentence: "La citation vient du livre II du *De la divination*, où ___ critique **la divination** en son propre nom."
     answer: "Cicéron"
     alt: []
   - id: montaigne-monstre-p7-10
-    sentence: "« quand les choses ont eu lieu, on leur trouve quelque interprétation qui vérifie ce qui était prévu » : Cicéron, *De la divination*, II, ___."
-    answer: "31"
+    sentence: "Cicéron, *De la divination*, ___ : « quand les choses ont eu lieu, on leur trouve quelque interprétation qui vérifie ce qui était prévu »"
+    answer: "II, 31"
     alt: []
   - id: montaigne-monstre-p7-11
-    sentence: "En moquant le présage, Montaigne refuse de traiter l'enfant comme un message : il le traite comme un ___."
-    answer: "être"
+    sentence: "En moquant le présage, Montaigne refuse de traiter l'enfant comme un **message **: il le traite comme une ___."
+    answer: "personne"
     alt: []
   - id: montaigne-monstre-p7-12
-    sentence: "Au terme du deuxième mouvement, le mot « ___ » est disqualifié avant d'être expliqué."
+    sentence: "Au terme du deuxième mouvement, le mot « ___ » est __disqualifié __avant d'être expliqué."
     answer: "prodige"
     alt: []
 - id: montaigne-monstre-par3
@@ -567,8 +512,8 @@ lessons:
     text: "Je viens de voir dans le Médoc un pâtre, de trente ans environ, qui ne présente pas de parties génitales : il a seulement trois trous par où s'écoule sans cesse de l'eau ; mais il a de la barbe, éprouve des désirs, et recherche le contact des femmes."
   points:
   - id: montaigne-monstre-p8-1
-    sentence: "« ___, de trente ans environ, qui ne présente pas de parties génitales : il a seulement trois trous par où s'écoule sans cesse de l'eau ; mais il a de la barbe, éprouve des désirs, et recherche le contact des femmes. »"
-    answer: "Je viens de voir dans le Médoc un pâtre"
+    sentence: "« Je viens de voir ___, de trente ans environ, qui ne présente pas de parties génitales : il a seulement trois trous par où s'écoule sans cesse de l'eau ; mais il a de la barbe, éprouve des désirs, et recherche le contact des femmes. »"
+    answer: "dans le Médoc un pâtre"
     alt: []
   - id: montaigne-monstre-p8-2
     sentence: "« Je viens de voir dans le Médoc un pâtre, de trente ans environ, ___ : il a seulement trois trous par où s'écoule sans cesse de l'eau ; mais il a de la barbe, éprouve des désirs, et recherche le contact des femmes. »"
@@ -583,23 +528,43 @@ lessons:
     answer: "généraliser"
     alt: []
   - id: montaigne-monstre-p8-5
-    sentence: "La succession rapprochée des deux rencontres rend déjà l'étrange moins ___, donc moins étonnant."
+    sentence: "La __succession __rapprochée des deux rencontres rend déjà l'étrange moins ___, donc moins étonnant."
     answer: "rare"
     alt: []
   - id: montaigne-monstre-p8-6
-    sentence: "« On s'apprivoise à toute étrangeté par l'___ et le temps » : « Des boiteux » (III, 11)."
-    answer: "usage"
+    sentence: "*Les Essais*, III, 11, « Des boiteux » : « Je n’ai vu dans le monde rien de plus extraordinaire et de prodigieux que moi-même : __on se fait à n’importe quelle étrangeté__ ___ ; mais plus je m’examine et me connais, plus mon anomalie me frappe et m'étonne, et moins je me comprends ! »"
+    answer: "au fil du temps et par la force de l’habitude"
+    alt: []
+  - id: montaigne-monstre-par3-p1
+    sentence: "*Les Essais*, III, 11, « Des boiteux » : « Je n’ai vu dans le monde rien de plus extraordinaire et de prodigieux que moi-même : ___ __au fil du temps et par la force de l’habitude__ ; mais plus je m’examine et me connais, plus mon anomalie me frappe et m'étonne, et moins je me comprends ! »"
+    answer: "on se fait à n’importe quelle étrangeté"
+    alt: []
+  - id: montaigne-monstre-par3-p2
+    sentence: "*Les Essais*, III, 11, « Des boiteux » : « Je n’ai vu dans le monde rien de plus extraordinaire et de prodigieux que moi-même : ___ ; mais plus je m’examine et me connais, plus mon anomalie me frappe et m'étonne, et moins je me comprends ! »"
+    answer: "on se fait à n’importe quelle étrangeté au fil du temps et par la force de l’habitude"
+    alt: []
+  - id: montaigne-monstre-par3-p3
+    sentence: "*Les Essais*, ___, « Des boiteux » : « Je n’ai vu dans le monde rien de plus extraordinaire et de prodigieux que moi-même : on se fait à n’importe quelle étrangeté au fil du temps et par la force de l’habitude ; mais plus je m’examine et me connais, plus mon anomalie me frappe et m'étonne, et moins je me comprends ! »"
+    answer: "III, 11"
     alt: []
   - id: montaigne-monstre-p8-7
-    sentence: "« Chaque homme porte la forme entière de l'humaine ___ » : « Du repentir » (III, 2)."
-    answer: "condition"
+    sentence: "*Les Essais*, III, 2, « Du repentir » : « chacun porte en lui-même ___ »."
+    answer: " la forme entière de la condition humaine"
+    alt: []
+  - id: montaigne-monstre-par3-p4
+    sentence: "*Les Essais*, III, 2, « Du repentir » : « ___ la forme entière de la condition humaine »."
+    answer: "chacun porte en lui-même"
+    alt: []
+  - id: montaigne-monstre-par3-p5
+    sentence: "*Les Essais*, ___, « Du repentir » : « chacun porte en lui-même la forme entière de la condition humaine »."
+    answer: "III, 2"
     alt: []
   - id: montaigne-monstre-p8-8
     sentence: "Le « mais » fait passer du manque à l'ordinaire : l'appartenance à l'___ n'est pas suspendue par l'écart corporel."
     answer: "humanité"
     alt: []
   - id: montaigne-monstre-p8-9
-    sentence: "Chez le pâtre, le ___ persiste sans l'organe qu'on croirait nécessaire : la vie ne se réduit pas à la conformité des organes."
+    sentence: "Chez le pâtre, le ___ persiste sans l'organe qu'on croirait nécessaire : **la vie** ne se réduit pas à la conformité des organes."
     answer: "désir"
     alt: []
 - id: montaigne-monstre-par4
@@ -718,11 +683,15 @@ lessons:
     alt: []
   - id: montaigne-monstre-p9-3
     fragment: "1/7"
-    sentence: "« Ce que nous appelons des « monstres » ne le sont pas pour Dieu, qui voit ___. »"
-    answer: "dans l'immensité de son œuvre l'infinité des formes qu'il y a comprises"
+    sentence: "« Ce que nous appelons des « monstres » ne le sont pas pour Dieu, qui voit dans l'immensité de son œuvre ___. »"
+    answer: "l'infinité des formes qu'il y a comprises"
+    alt: []
+  - id: montaigne-monstre-par4-p1
+    sentence: "« Ce que nous appelons des « monstres » ne le sont pas pour Dieu, qui voit ___ l'infinité des formes qu'il y a comprises. »"
+    answer: "dans l'immensité de son œuvre "
     alt: []
   - id: montaigne-monstre-p9-4
-    sentence: "Le dernier mouvement repose sur une ___ entre le point de vue de Dieu et le point de vue humain."
+    sentence: "Le dernier mouvement repose sur une ___ entre le __point de vue de Dieu__ et le __point de vue humain__."
     answer: "alternance"
     alt: []
   - id: montaigne-monstre-p9-5
@@ -730,15 +699,15 @@ lessons:
     answer: "connaît"
     alt: []
   - id: montaigne-monstre-p9-6
-    sentence: "Une chose ne paraît monstrueuse que si elle fait ___ à une série connue, comme un veau à deux têtes à la série des veaux qu'on a vus."
+    sentence: "Une chose ne paraît **monstrueuse **que si elle fait ___ à __une série connue__, comme un veau à deux têtes à la série des veaux qu'on a vus."
     answer: "exception"
     alt: []
   - id: montaigne-monstre-p9-7
     sentence: "La formule « ce que nous appelons » contient en germe la thèse ___ : le mot « monstre » est le nôtre."
-    answer: "diagnostique"
+    answer: "anthropologique"
     alt: []
   - id: montaigne-monstre-p9-8
-    sentence: "Ce sous-argument ne prouve pas qu'il n'existe aucun ___ réel : un Dieu qui voit tout pourrait voir des formes défectueuses comme telles."
+    sentence: "Ce premier sous-argument théologique (__Dieu connaît tout__) ne prouve pas qu'il n'existe aucun ___ réel : **un Dieu qui voit tout pourrait voir des formes défectueuses comme telles**."
     answer: "dérèglement"
     alt: []
   - id: montaigne-monstre-p9-9
@@ -747,12 +716,16 @@ lessons:
     alt: []
     explanation: "La Cité de Dieu, XVI, 8."
   - id: montaigne-monstre-p9-10
-    sentence: "L'argument de la beauté du tout, chez Augustin, se trouve dans *La Cité de Dieu*, livre ___, chapitre 8."
-    answer: "XVI"
-    alt: ["16"]
+    sentence: "L'argument de la beauté du tout, chez Augustin, se trouve dans *La Cité de Dieu*, livre ___, chapitre ___."
+    answer: "XVI ; 8"
+    alt: []
   - id: montaigne-monstre-p9-11
     sentence: "« De l'expérience » (III, 13) présente la ___ comme la qualité la plus universelle des choses."
     answer: "diversité"
+    alt: []
+  - id: montaigne-monstre-par4-p2
+    sentence: "« De l'expérience » (___) présente la diversité comme la qualité la plus universelle des choses."
+    answer: "III, 13"
     alt: []
   - id: montaigne-monstre-p10-1
     fragment: "2/7"
@@ -770,11 +743,11 @@ lessons:
     answer: "inconnue de l'homme"
     alt: []
   - id: montaigne-monstre-p10-4
-    sentence: "L'argument du genre inconnu répond à une difficulté : si tout est régulier, comment une forme régulière peut-elle paraître ___ ?"
+    sentence: "L'**argument du genre inconnu** répond à une difficulté : __si tout est régulier__, comment une forme régulière peut-elle paraître ___ ?"
     answer: "irrégulière"
     alt: []
   - id: montaigne-monstre-p10-5
-    sentence: "Une forme peut paraître irrégulière à qui ignore ses semblables, comme un fragment de ___ paraît informe à qui n'a jamais vu le vase entier."
+    sentence: "Une forme peut __paraître irrégulière à qui ignore ses semblables__, comme un fragment de ___ paraît informe à qui n'a jamais vu le vase entier."
     answer: "poterie"
     alt: []
   - id: montaigne-monstre-p10-6
@@ -782,8 +755,8 @@ lessons:
     answer: "conjecture"
     alt: []
   - id: montaigne-monstre-p10-7
-    sentence: "Le mot « étonne » apparaît ici pour la première fois : l'étonnement est le propre du regard ___."
-    answer: "humain"
+    sentence: "Le mot « étonne » apparaît ici pour la première fois : l'étonnement est le propre du ___."
+    answer: "regard humain"
     alt: []
   - id: montaigne-monstre-p11-1
     fragment: "3/7"
@@ -801,7 +774,7 @@ lessons:
     answer: "nous n'en voyons pas les rapports et les relations"
     alt: []
   - id: montaigne-monstre-p11-4
-    sentence: "Le second sous-argument théologique porte sur Dieu comme celui qui ___."
+    sentence: "Le __second sous-argument théologique__ porte sur Dieu comme celui qui ___."
     answer: "produit"
     alt: []
   - id: montaigne-monstre-p11-5
@@ -813,7 +786,7 @@ lessons:
     answer: "ontologique"
     alt: []
   - id: montaigne-monstre-p11-7
-    sentence: "« Normal » vient du latin ___, l'équerre : ce qui est conforme à la règle."
+    sentence: "« Normal » vient du latin *___*, l'__équerre __: **ce qui est conforme à la règle**."
     answer: "norma"
     alt: []
   - id: montaigne-monstre-p11-8
@@ -821,7 +794,7 @@ lessons:
     answer: "ordre"
     alt: []
   - id: montaigne-monstre-p11-9
-    sentence: "Le « Mais » articule le réel et l'___ : la régularité est réelle, c'est sa visibilité qui manque."
+    sentence: "Le « Mais » articule le réel et l'___ : __la régularité est réelle, c'est sa visibilité qui manque__."
     answer: "apparent"
     alt: []
   - id: montaigne-monstre-p11-10
@@ -830,22 +803,22 @@ lessons:
     alt: []
   - id: montaigne-monstre-p12-1
     fragment: "4/7"
-    sentence: "« « ___, même si la cause lui en est inconnue. Mais devant quelque chose qu'il n'a jamais vu, il pense à un prodige. » [Cicéron, De la divination, II, 27] »"
+    sentence: "« « ___, même si la cause lui en est inconnue. Mais devant quelque chose qu'il n'a jamais vu, il pense à un prodige. » [Cicéron, *De la divination*, II, 27] »"
     answer: "Ce que l'homme voit fréquemment ne l'étonne pas"
     alt: []
   - id: montaigne-monstre-p12-2
     fragment: "4/7"
-    sentence: "« « Ce que l'homme voit fréquemment ne l'étonne pas, ___. Mais devant quelque chose qu'il n'a jamais vu, il pense à un prodige. » [Cicéron, De la divination, II, 27] »"
+    sentence: "« « Ce que l'homme voit fréquemment ne l'étonne pas, ___. Mais devant quelque chose qu'il n'a jamais vu, il pense à un prodige. » [Cicéron, *De la divination*, II, 27] »"
     answer: "même si la cause lui en est inconnue"
     alt: []
   - id: montaigne-monstre-p12-3
     fragment: "4/7"
-    sentence: "« « Ce que l'homme voit fréquemment ne l'étonne pas, même si la cause lui en est inconnue. Mais ___. » [Cicéron, De la divination, II, 27] »"
+    sentence: "« « Ce que l'homme voit fréquemment ne l'étonne pas, même si la cause lui en est inconnue. Mais ___. » [Cicéron, *De la divination*, II, 27] »"
     answer: "devant quelque chose qu'il n'a jamais vu, il pense à un prodige"
     alt: []
   - id: montaigne-monstre-p12-4
-    sentence: "« Ce que l'homme voit fréquemment ne l'étonne pas [...] » : Cicéron, *De la divination*, II, ___."
-    answer: "27"
+    sentence: "« Ce que l'homme voit fréquemment ne l'étonne pas [...]. » (Cicéron, *De la divination*, ___)"
+    answer: " II, 27"
     alt: []
   - id: montaigne-monstre-p12-5
     sentence: "On ne s'étonne pas qu'une ___ devienne un arbre, sans savoir pour autant comment cela se fait."
@@ -867,10 +840,6 @@ lessons:
     sentence: "La citation reprend le mot « prodige », disqualifié au paragraphe 2, et en donne l'origine ___."
     answer: "psychologique"
     alt: []
-  - id: montaigne-monstre-p12-10
-    sentence: "« Je n'ai vu monstre et miracle au monde plus exprès que ___ » : « Des boiteux » (III, 11)."
-    answer: "moi-même"
-    alt: []
   - id: montaigne-monstre-p13-1
     fragment: "5/7"
     sentence: "« Nous appelons ___ ce qui va contre nos habitudes, »"
@@ -886,35 +855,103 @@ lessons:
     answer: "humanité"
     alt: []
   - id: montaigne-monstre-p13-4
-    sentence: "« L'accoutumance est une seconde ___, et non moins puissante » : « De ménager sa volonté » (III, 10)."
-    answer: "nature"
+    sentence: "« Sur la façon de ménager sa volonté » (III, 10) : « L'accoutumance est une ___, et non moins puissante que l'autre »."
+    answer: "seconde nature"
+    alt: []
+  - id: montaigne-monstre-par4-p3
+    sentence: "« Sur la façon de ménager sa volonté » (III, 10) : « L'___ est une seconde nature, et non moins puissante que l'autre »."
+    answer: "accoutumance"
+    alt: []
+  - id: montaigne-monstre-par4-p4
+    sentence: "« Sur la façon de ménager sa volonté » (III, 10) : « L'accoutumance est une seconde nature, et ___ »."
+    answer: "non moins puissante que l'autre"
+    alt: []
+  - id: montaigne-monstre-par4-p6
+    sentence: "« Sur la façon de ménager sa volonté » (___) : « L'accoutumance est une seconde nature, et non moins puissante que l'autre »."
+    answer: "III, 10"
+    alt: []
+  - id: montaigne-monstre-par4-p5
+    sentence: "« ___ » (III, 10) : « L'accoutumance est une seconde nature, et non moins puissante que l'autre »."
+    answer: "Sur la façon de ménager sa volonté"
     alt: []
   - id: montaigne-monstre-p13-5
-    sentence: "Dans « Des cannibales », « chacun appelle ___ ce qui n'est pas de son usage »."
-    answer: "barbarie"
+    sentence: "Dans « Sur les cannibales » (I, 30), « chacun appelle ___ »."
+    answer: "barbarie ce qui ne fait pas partie de ses usage"
     alt: []
   - id: montaigne-monstre-p13-6
-    sentence: "« Des cannibales » est le chapitre ___ du livre I dans l'édition Villey (la numérotation varie selon les éditions)."
-    answer: "31"
+    sentence: "« Des cannibales » est le chapitre ___ du livre I dans l'édition de Guy de Pernon (la numérotation varie selon les éditions, parfois c'est 31 par exemple)."
+    answer: "30"
     alt: []
   - id: montaigne-monstre-p13-7
-    sentence: "« Contre nature » est aux corps ce que « ___ » est aux mœurs : un nom donné à l'inhabituel en croyant désigner un défaut."
+    sentence: "« Contre nature » est aux **corps **ce que « ___ » est aux **mœurs **: un nom donné à __l'inhabituel__ en croyant désigner un défaut."
     answer: "barbarie"
     alt: []
   - id: montaigne-monstre-p13-8
-    sentence: "Pour Lévi-Strauss, « le barbare, c'est d'abord l'homme qui croit à la ___ » (*Race et histoire*, 1952)."
-    answer: "barbarie"
+    sentence: "Pour Lévi-Strauss, « le barbare, c'est d'abord ___ » (*Race et histoire*, 1952)."
+    answer: "l'homme qui croit à la barbarie"
     alt: []
-  - id: montaigne-monstre-p13-9
-    sentence: "Pour Canguilhem, le monstre est le vivant « de valeur ___ » : Montaigne répond que cette valeur est projetée par le regard."
-    answer: "négative"
+  - id: montaigne-monstre-par4-p7
+    sentence: "Pour Lévi-Strauss, « le barbare, c'est d'abord l'homme qui croit à la barbarie » (*___*, 1952)."
+    answer: "Race et histoire"
+    alt: []
+  - id: montaigne-monstre-par4-p18
+    sentence: "Si pour Montaigne, le monstre n'est monstre que relativement à notre habitude de voir, pour Canguilhem, au contraire, la valeur négative est intérieure à la vie elle-même, qui distingue d'elle-même ce qui la favorise de ce qui l'entrave, de sorte que le monstre est un ___ de la forme et non un simple écart de perspective."
+    answer: "échec réel"
+    alt: []
+  - id: montaigne-monstre-par4-p19
+    sentence: "Canguilhem, *La connaissance de la vie*, ___ (« La monstruosité et le monstrueux ») : on serait tenté de considérer que le monstre est simplement un écart statistique, un être rare, éloigné de la moyenne de l'espèce, mais ce critère est insuffisant, car une variation peut être rare sans être monstrueuse (un génie, un géant), et inversement. "
+    answer: "I, 5"
+    alt: []
+  - id: montaigne-monstre-par4-p8
+    sentence: "Canguilhem, *La connaissance de la vie*, I, 5 (« La monstruosité et le monstrueux ») : on serait tenté de considérer que le **monstre **est simplement un ___, un être rare, éloigné de la moyenne de l'espèce, mais ce critère est insuffisant, car **une variation peut être rare sans être monstrueuse (un génie, un géant), et inversement**. "
+    answer: "écart statistique"
+    alt: []
+  - id: montaigne-monstre-par4-p9
+    sentence: "Canguilhem, *La connaissance de la vie*, I, 5 (« La monstruosité et le monstrueux ») : on serait tenté aussi de dire que le monstre est un désordre, un chaos du vivant, mais la ___, notamment celle d'Isidore Geoffroy Saint-Hilaire, a établi que** le monstre obéit à des lois de développement** ; il y a un ordre de la malformation, et l'on peut la décrire, la classer, voire la produire expérimentalement. "
+    answer: "tératologie"
+    alt: []
+  - id: montaigne-monstre-par4-p10
+    sentence: "Canguilhem, *La connaissance de la vie*, I, 5 (« La monstruosité et le monstrueux ») : le monstre n'est donc pas l'___, et il serait faux d'y voir un simple fait que la science peut décrire sans jugement de valeur vitale (elle désigne la différence que fait le vivant lui-même entre __ce qui l'aide à se maintenir et à se développer, et ce qui l'en empêche__)."
+    answer: "absence d'ordre"
+    alt: []
+  - id: montaigne-monstre-par4-p11
+    sentence: "Pour Canguilhem, **un vivant n'est pas un objet neutre** : __il préfère certaines conditions à d'autres__, il se maintient, il répare, il s'adapte, autrement dit il institue lui-même des normes. La vie est ___, c'est-à-dire qu'elle distingue d'elle-même ce qui lui est favorable de ce qui lui est hostile. (« La monstruosité et le monstrueux »)"
+    answer: "polarité"
+    alt: []
+  - id: montaigne-monstre-par4-p12
+    sentence: "Pour Canguilhem, le **monstre **est **un vivant dont la forme manque la ___ inhérente à la vie** : il est vivant, mais il est affecté d'un échec dans la formation de sa propre forme, et ce défaut l'expose à une viabilité réduite ou nulle. D'où l'expression « de valeur négative ». Ce n'est pas que le monstre soit sans valeur, car il vit et il a, comme tout vivant, sa norme propre. C'est qu'il porte au sein même de la vie la marque de ce que la vie rejette ou ne parvient pas à tenir. (« La monstruosité et le monstrueux »)"
+    answer: "valeur positive"
+    alt: []
+  - id: montaigne-monstre-par4-p13
+    sentence: "Canguilhem souligne que **la valeur négative du monstrueux** se distingue de la mort. Car si la __mort __est la **___** qui pèse sur toute organisation vivante (puisque tout vivant meurt), le __monstre__, en revanche, représente une **menace accidentelle et conditionnelle** : celle que la forme ne s'achève pas, ou se déforme, en cours de formation. (« La monstruosité et le monstrueux »)"
+    answer: "menace permanente et inconditionnelle"
+    alt: []
+  - id: montaigne-monstre-par4-p14
+    sentence: "Selon Canguilhem, la valeur négative du monstrueux se distingue de la mort. Car si la __mort __est la **menace permanente et inconditionnelle** qui pèse sur toute organisation vivante (puisque tout vivant meurt), le __monstre__, en revanche, représente une **___** : celle que la forme ne s'achève pas, ou se déforme, en cours de formation. (« La monstruosité et le monstrueux »)"
+    answer: "menace accidentelle et conditionnelle"
+    alt: []
+  - id: montaigne-monstre-par4-p20
+    sentence: "La mort est donc la contre-valeur de la vie en général, au sens où elle la nie du ___. Le monstre, lui, est un vivant qui n'a pas pu satisfaire à la norme de sa propre espèce : il est la négation de la vie à l'intérieur de la vie. C'est pourquoi Canguilhem peut dire que le cadavre n'est pas un monstre, alors que le monstre est un vivant. (« La monstruosité et le monstrueux »)"
+    answer: "dehors"
+    alt: []
+  - id: montaigne-monstre-par4-p15
+    sentence: "La mort est donc la contre-valeur de la vie en général, au sens où elle la nie du dehors. Le monstre, lui, est un vivant qui n'a pas pu satisfaire à la norme de sa propre espèce : il est la négation de la vie à ___ de la vie. C'est pourquoi Canguilhem peut dire que le cadavre n'est pas un monstre, alors que le monstre est un vivant. (« La monstruosité et le monstrueux »)"
+    answer: "l'intérieur"
+    alt: []
+  - id: montaigne-monstre-par4-p16
+    sentence: "Canguilhem distingue également le *monstrueux *du *pathologique*. Le **malade**, ainsi, est un vivant qui __a perdu la capacité d'instituer de nouvelles normes dans de nouvelles conditions__ : sa norme est devenue plus étroite, mais elle reste une norme. Le **monstre **est plus radical, parce que __c'est ___ qui manque d'être__. La maladie réduit ce que la vie peut, la monstruosité compromet que la vie puisse prendre forme.  (« La monstruosité et le monstrueux »)"
+    answer: "la forme même de l'organisme"
+    alt: []
+  - id: montaigne-monstre-par4-p17
+    sentence: "Néanmoins si pour Canguilhem, le monstre a une « valeur négative », c'est au sens **épistémologique **où il éclaire, a contrario, ce qu'est ___. Si la biologie ne peut pas se passer de normes vitales, le monstre en est la preuve par l'échec : il montre (*monstrare*) que la vie est tentative et risque, non programme garanti, et que l'ordre du vivant est toujours susceptible de n'être pas tenu. (« La monstruosité et le monstrueux »)"
+    answer: "un vivant réussi"
     alt: []
   - id: montaigne-monstre-p13-10
     sentence: "Si « contre nature » ne signifie que « contre nos habitudes », l'expression perd sa force de ___ morale."
     answer: "condamnation"
     alt: []
   - id: montaigne-monstre-p13-11
-    sentence: "L'« Apologie » (II, 12) montre que la ___ humaine varie selon les peuples, chaque nation la représentant d'après ses propres traits."
+    sentence: "L'« Apologie de Raymond Sebond » (II, 12) montre que la ___ humaine varie selon les peuples, __chaque nation la représentant d'après ses propres traits__."
     answer: "beauté"
     alt: []
   - id: montaigne-monstre-p14-1
@@ -941,7 +978,7 @@ lessons:
     answer: "Paris"
     alt: []
   - id: montaigne-monstre-p14-6
-    sentence: "Après la voie théologique vers la thèse ontologique, le principe ouvre une voie ___, par la définition de la nature comme totalité."
+    sentence: "Après la voie théologique vers la thèse ontologique, le principe ouvre une voie ___, par la définition de **la nature comme totalité**."
     answer: "conceptuelle"
     alt: []
   - id: montaigne-monstre-p14-7
@@ -949,11 +986,11 @@ lessons:
     answer: "origine"
     alt: []
   - id: montaigne-monstre-p14-8
-    sentence: "Ce que Montaigne récuse, c'est la nature comme norme, comprise comme conformité à un ___."
+    sentence: "Ce que Montaigne **récuse**, c'est** la nature comme norme**, comprise comme conformité à un ___."
     answer: "type"
-    alt: []
+    alt: ["genre"]
   - id: montaigne-monstre-p14-9
-    sentence: "Pour ___, le monstre est contre nature, mais non contre la nature absolument : seulement contre la nature telle qu'elle est la plupart du temps."
+    sentence: "Pour ___, le monstre est contre nature, mais non contre la nature absolument : seulement **contre la nature telle qu'elle est la plupart du temps**."
     answer: "Aristote"
     alt: []
   - id: montaigne-monstre-p14-10
@@ -961,20 +998,20 @@ lessons:
     answer: "De la génération des animaux"
     alt: ["Génération des animaux"]
   - id: montaigne-monstre-p14-11
-    sentence: "Aristote rend le monstre relatif à une norme ___, qui reste une propriété du monde."
+    sentence: "Aristote rend le monstre **relatif **à une norme ___, qui reste une propriété du monde."
     answer: "statistique"
     alt: []
   - id: montaigne-monstre-p14-12
-    sentence: "Augustin : le prodige se produit « non contra naturam, sed contra quam est ___ natura »."
+    sentence: "Augustin : le prodige se produit « *non contra naturam, sed contra quam est ___ natura* [telle qu'elle nous est connue] »."
     answer: "nota"
     alt: []
   - id: montaigne-monstre-p14-13
-    sentence: "La formule d'Augustin sur le prodige se trouve dans *La Cité de Dieu*, livre ___, chapitre 8."
-    answer: "XXI"
-    alt: ["21"]
+    sentence: "La formule d'Augustin sur le prodige se trouve dans *La Cité de Dieu*, livre ___, chapitre ___."
+    answer: "XXI ; 8"
+    alt: []
   - id: montaigne-monstre-p14-14
-    sentence: "Dans *Le Rêve de d'Alembert*, ___ fait de l'homme un effet commun et du monstre un effet rare, tous deux également naturels."
-    answer: "Diderot"
+    sentence: "Dans *Le Rêve de d'Alembert*, Diderot fait de l'homme un effet *commun *et du monstre un effet *rare*, tous deux également ___."
+    answer: "naturels"
     alt: []
   - id: montaigne-monstre-p15-1
     fragment: "7/7"
@@ -992,11 +1029,11 @@ lessons:
     answer: "que la nouveauté nous apporte"
     alt: []
   - id: montaigne-monstre-p15-4
-    sentence: "L'« erreur » que nomme l'exhortation est ___ : prendre l'inhabituel pour le déréglé."
+    sentence: "L'« erreur » que nomme l'exhortation est ___ : __prendre l'inhabituel pour le déréglé__."
     answer: "épistémique"
     alt: []
   - id: montaigne-monstre-p15-5
-    sentence: "L'« étonnement » est ___ : la réaction devant la nouveauté."
+    sentence: "L'« étonnement » est ___ : c'est la réaction devant la nouveauté."
     answer: "affectif"
     alt: []
   - id: montaigne-monstre-p15-6
@@ -1004,67 +1041,18 @@ lessons:
     answer: "particulier"
     alt: []
   - id: montaigne-monstre-p15-7
-    sentence: "Se défaire de l'étonnement, c'est reconnaître que sa propre habitude n'est pas la mesure des choses : une forme d'___."
+    sentence: "Se défaire de l'étonnement, c'est reconnaître que __sa propre habitude n'est pas la mesure des choses__ : une forme d'___."
     answer: "humilité"
     alt: []
   - id: montaigne-monstre-p15-8
-    sentence: "Une norme qui n'exclut rien ne semble plus rien ___ : la difficulté que soulève « De l'expérience » (III, 13)."
+    sentence: "Une norme qui n'exclut rien ne semble plus rien ___ : telle est la difficulté que soulève « De l'expérience » (III, 13)."
     answer: "prescrire"
     alt: []
   - id: montaigne-monstre-p15-9
-    sentence: "La nature ne prescrit plus une forme, mais une ___ : accueillir la diversité au lieu de la juger."
+    sentence: "La __nature ne prescrit__ alors plus une __forme __pour Montaigne, mais une ___ : **accueillir la diversité au lieu de la juger**."
     answer: "attitude"
     alt: []
   - id: montaigne-monstre-p15-10
-    sentence: "La nature cesse d'être un étalon des corps pour devenir une correction du ___."
+    sentence: "La nature cesse d'être un __étalon des corps__ pour devenir **une correction** du ___."
     answer: "regard"
-    alt: []
-- id: montaigne-monstre-o1
-  title: "Conclusion : la norme déplacée vers le regard"
-  notes: |-
-    **Aucun argument ne suffirait seul : l'explication par l'habitude dirait pourquoi l'on juge une chose monstrueuse sans établir que ce jugement est faux ; l'argument théologique ou le principe conceptuel prouveraient que le monstre n'existe pas sans expliquer l'erreur. C'est leur conjonction qui permet de conclure.**
-
-    Les portées philosophiques ont une même source : le **déplacement de la norme du monde vers celui qui regarde**.
-
-    | Portée | Ce que le texte en tire |
-    | épistémologique | dénoncer l'habitude déguisée en critère de vérité, et l'interprétation rétrospective |
-    | anthropologique | l'homme, être d'habitude ; deux pratiques (le spectacle payant, le présage politique) ; l'humanité maintenue de ceux qui portent l'écart |
-    | éthique | discipliner le regard, ne plus réduire un être à un signe |
-    | esthétique | relativiser la laideur, reprendre l'idée d'une beauté du tout |
-
-    Par ricochet, le chapitre éclaire la forme des *Essais*, que Montaigne décrit dans « De l'amitié » (I, 28) comme des « grotesques et corps monstrueux, rapiécés de divers membres, sans certaine figure, n'ayant ordre, suite ni proportion que fortuite ». Si le monstre n'est pas contre nature, le livre sans ordre apparent ne l'est pas non plus : il aurait, lui aussi, des « rapports et relations » que le lecteur pressé ne voit pas.
-
-    La nature cesse d'être un modèle de forme pour devenir une totalité féconde, et le vivant cesse d'être défini par sa conformité à un type. **Limite des prolongements modernes** : Montaigne ne pense pas le vivant comme Canguilhem ; il le pense comme une partie de l'œuvre divine, et c'est l'ordre du tout, non une puissance propre à la vie, qui garantit la régularité de chaque forme.
-
-    ! Lire Montaigne avec Canguilhem éclaire, mais ne doit pas faire oublier que chez lui la régularité vient de l'ordre divin, non de la vie.
-  passage:
-    label: "Prolongement"
-  points:
-  - id: montaigne-monstre-o1-1
-    sentence: "Aucun argument ne suffit seul : c'est leur ___ qui permet de conclure."
-    answer: "conjonction"
-    alt: []
-  - id: montaigne-monstre-o1-2
-    sentence: "Les portées philosophiques ont une même source : le déplacement de la norme du monde vers celui qui ___."
-    answer: "regarde"
-    alt: []
-  - id: montaigne-monstre-o1-3
-    sentence: "Sur le plan épistémologique, le texte dénonce l'habitude déguisée en critère de vérité et l'interprétation ___."
-    answer: "rétrospective"
-    alt: []
-  - id: montaigne-monstre-o1-4
-    sentence: "Dans « De l'amitié » (I, 28), Montaigne décrit ses *Essais* comme des « ___ et corps monstrueux, rapiécés de divers membres »."
-    answer: "grotesques"
-    alt: []
-  - id: montaigne-monstre-o1-5
-    sentence: "Le livre sans ordre apparent aurait lui aussi des « rapports et ___ » que le lecteur pressé ne voit pas."
-    answer: "relations"
-    alt: []
-  - id: montaigne-monstre-o1-6
-    sentence: "La nature cesse d'être un modèle de forme pour devenir une totalité ___, qui excède ce qu'on en connaît."
-    answer: "féconde"
-    alt: []
-  - id: montaigne-monstre-o1-7
-    sentence: "Chez Montaigne, c'est l'ordre du ___, non une puissance propre à la vie, qui garantit la régularité de chaque forme."
-    answer: "tout"
     alt: []
