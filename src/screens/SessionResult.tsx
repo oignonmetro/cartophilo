@@ -5,6 +5,7 @@ import { BoltIcon } from '@/components/icons'
 import { COMBO_TIER_LABELS } from '@/components/session/ComboBadge'
 import { accuracyOf, type SessionOutcome } from '@/engine/progress'
 import { useIsDesktop } from '@/lib/useIsDesktop'
+import { useProgress } from '@/store/progressStore'
 
 /** Écran de fin de session : score, XP gagnés, et meilleure série si elle a valu un palier. */
 export function SessionResult({
@@ -32,7 +33,9 @@ export function SessionResult({
   onRetry: () => void
 }) {
   const accuracy = Math.round(accuracyOf(outcome) * 100)
-  const streakTier = Math.min(peakTier, COMBO_TIER_LABELS.length)
+  const encouragements = useProgress((state) => state.encouragements)
+  // Réglage « Marquer les séries » : désactivé, le rappel de série disparaît aussi ici.
+  const streakTier = encouragements ? Math.min(peakTier, COMBO_TIER_LABELS.length) : 0
   const isDesktop = useIsDesktop()
 
   // Même raccourci que `RuleNote`/`SessionPause` : Entrée déclenche l'action
