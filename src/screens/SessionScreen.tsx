@@ -453,7 +453,7 @@ function SessionRunner({
           <ModeSwitch
             on={citationsOnly}
             onToggle={() => setCitationsOnly(!citationsOnly)}
-            glyph="«»"
+            glyph="«__»"
             label="Citations"
             titleOn="Citations seules : les cartes-explication et les rappels sont sautés"
             titleOff="Ne jouer que les cartes-citation"
