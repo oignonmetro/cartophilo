@@ -1,0 +1,895 @@
+# Unité classique (voir content/philosophie.md) : Platon, l'épistémologie des dialogues de
+# la maturité, d'après A. Silverman, « Plato's Middle Period Metaphysics and
+# Epistemology », Stanford Encyclopedia of Philosophy, §9-16. Les citations de
+# Platon et d'Aristote sont traduites en français depuis l'anglais de l'article
+# (aucune traduction française fournie).
+
+id: platon-connaissance
+title: "Science, opinion, réminiscence"
+subtitle: "Platon, Ménon, Phédon, République : la connaissance"
+icon: bulb
+color: blue
+group: "Platon : l'épistémologie"
+lessons:
+  - id: platon-connaissance-i1
+    title: "Ce qu'est l'épistémologie pour Platon"
+    notes: |-
+      **Pour Platon, l'épistémologie est l'étude de ce qu'est la science (`epistêmê`), non de la question, familière depuis Descartes, de savoir s'il y en a une.** Platon ne considère jamais le défi sceptique global : il suppose que la science existe, ou du moins qu'elle est possible, et en cherche les **conditions** : du côté de l'âme, ses capacités rationnelles ; du côté des objets, les Idées, qui en sont certainement.
+
+      **Le monde matériel peut-il être su ?** Le *Phédon* et surtout les grandes analogies de la *République* (Soleil, Ligne, Caverne) semblent faire de Platon un {coral}sceptique{/coral} à l'égard du sensible : on n'en a que des opinions. D'autres (Fine) répondent que, si toute science se fonde sur les Idées, qui connaît les Idées peut aussi connaître le monde physique.
+
+      **La réminiscence répond au défaut d'intelligibilité du monde physique** : si les Idées sont les objets de la science et ne sont pas dans le monde, il faut les avoir vues avant tout commerce avec lui.
+
+      **La simplicité des Idées décide aussi de la nature de la science :**
+
+      | Si les Idées sont… | la science est… | Textes |
+      | simples | intuitive, une vision non propositionnelle de l'Idée | livres centraux de la *République* |
+      | liées entre elles (l'Homme à l'Animal, au Bipède, au Raisonnable) | propositionnelle, par définition ; peut-être une croyance vraie justifiée | *Gorgias* 465a, 501a ; *République* 534b |
+
+      Pour transformer une opinion en science, Platon évoque deux fois une **méthode hypothétique** (*Phédon*, *République*). D'où quatre notions à étudier : la science, l'opinion, la réminiscence et la méthode hypothétique.
+
+      ! Platon ne se demande pas __si__ l'on peut savoir, mais à quelles __conditions__ on sait.
+    points:
+      - id: platon-connaissance-i1-p1
+        sentence: "Pour Platon, l'épistémologie est l'étude de ce qu'est la ___, non de la question, familière depuis Descartes, de savoir s'il y en a une."
+        answer: "science"
+        alt: ["connaissance", "epistêmê"]
+      - id: platon-connaissance-i1-p2
+        sentence: "Platon ne considère jamais le défi ___ global : il suppose que la science existe, ou du moins qu'elle est possible, et en cherche les conditions."
+        answer: "sceptique"
+        alt: []
+      - id: platon-connaissance-i1-p3
+        sentence: "Les conditions de la science concernent d'un côté les capacités rationnelles des âmes, de l'autre ses ___, dont les Idées font certainement partie."
+        answer: "objets"
+        alt: []
+      - id: platon-connaissance-i1-p4
+        sentence: "Le *Phédon* et les analogies du Soleil, de la Ligne et de la Caverne semblent faire de Platon un sceptique à l'égard du monde sensible, dont on n'aurait que des ___."
+        answer: "opinions"
+        alt: ["croyances"]
+      - id: platon-connaissance-i1-p5
+        sentence: "Contre la lecture sceptique, ___ soutient que celui qui connaît les Idées peut aussi acquérir une science du monde physique."
+        answer: "Fine"
+        alt: ["Gail Fine"]
+      - id: platon-connaissance-i1-p6
+        sentence: "La doctrine de la réminiscence répond au défaut d'___ du monde physique : les Idées n'y étant pas, il faut les avoir vues avant tout commerce avec lui."
+        answer: "intelligibilité"
+        alt: []
+      - id: platon-connaissance-i1-p7
+        sentence: "Si les Idées sont simples, la science est ___ : une vision directe et non propositionnelle de l'Idée elle-même par elle-même."
+        answer: "intuitive"
+        alt: []
+      - id: platon-connaissance-i1-p8
+        sentence: "Si connaître une Idée exige d'en donner la définition, qui la lie à d'autres Idées, la science est ___, peut-être une forme de croyance vraie justifiée."
+        answer: "propositionnelle"
+        alt: []
+      - id: platon-connaissance-i1-p9
+        sentence: "Les quatre notions de l'épistémologie de la maturité sont la science, l'opinion, la réminiscence et la méthode ___."
+        answer: "hypothétique"
+        alt: ["d'hypothèse"]
+  - id: platon-connaissance-i2
+    title: "Le Ménon : le paradoxe de la recherche"
+    notes: |-
+      Le *Ménon*, **sans doute dialogue de transition, passe de questions éthiques (qu'est-ce que la vertu ? peut-elle s'enseigner ?) à l'épistémologie qu'appelle la thèse selon laquelle la vertu est science.** La réminiscence y apparaît pour la première fois, en réponse au **paradoxe de la recherche** avancé par Ménon (80d-e) :
+      - pour toute chose F, ou bien on connaît F, ou bien on ne le connaît pas ;
+      - si l'on connaît F, on ne peut chercher F ;
+      - si l'on ne connaît pas F, on ne peut chercher F ;
+      - donc on ne peut rien chercher.
+
+      **La réponse de Platon : « connaître » se dit en plusieurs sens, et avoir une opinion sur F suffit parfois pour commencer à le chercher.** L'interrogatoire de l'esclave sur la façon de trouver la diagonale d'un carré donné (81-86b) le montre : l'esclave a des opinions, les unes vraies, les autres fausses ; il suffit de questions pour faire sortir de lui la science qui y est latente. Socrate soutient qu'il l'amène ainsi à **se ressouvenir** de ce qu'il sait déjà.
+
+      ! L'esclave n'apprend rien de Socrate : les questions ne font que __réveiller__ un savoir latent.
+    points:
+      - id: platon-connaissance-i2-p1
+        sentence: "Le *Ménon*, sans doute dialogue de ___, relie les dialogues socratiques à ceux de la maturité."
+        answer: "transition"
+        alt: []
+      - id: platon-connaissance-i2-p2
+        sentence: "Les deux derniers tiers du *Ménon* traitent des questions épistémologiques qu'appelle la thèse selon laquelle la vertu est ___."
+        answer: "science"
+        alt: ["connaissance"]
+      - id: platon-connaissance-i2-p3
+        sentence: "Le paradoxe de la recherche, selon lequel on ne peut chercher ni ce qu'on connaît ni ce qu'on ne connaît pas, est avancé dans le dialogue du même nom par ___."
+        answer: "Ménon"
+        alt: []
+      - id: platon-connaissance-i2-p4
+        sentence: "Le paradoxe de la recherche, que la réminiscence doit résoudre, se trouve dans le *Ménon*, en ___."
+        answer: "80d-e"
+        alt: ["80d", "80de"]
+      - id: platon-connaissance-i2-p5
+        sentence: "Platon résout le paradoxe de la recherche en montrant que « connaître » se dit en plusieurs sens, et qu'avoir une ___ sur F suffit parfois pour commencer à chercher F."
+        answer: "opinion"
+        alt: ["croyance"]
+      - id: platon-connaissance-i2-p6
+        sentence: "Dans le *Ménon*, Socrate interroge un esclave sur la façon de trouver la ___ d'un carré donné."
+        answer: "diagonale"
+        alt: []
+      - id: platon-connaissance-i2-p7
+        sentence: "L'interrogatoire de l'esclave sur la diagonale du carré se trouve dans le *Ménon*, en ___."
+        answer: "81-86b"
+        alt: []
+      - id: platon-connaissance-i2-p8
+        sentence: "L'esclave du *Ménon* n'a besoin que de questions pour faire sortir de lui la science qui y est ___ : Socrate dit l'amener à se ressouvenir."
+        answer: "latente"
+        alt: []
+      - id: platon-connaissance-i2-p9
+        sentence: "Le *Ménon* est le premier dialogue à mentionner la ___, proposée comme solution au paradoxe de la recherche."
+        answer: "réminiscence"
+        alt: ["anamnèse"]
+  - id: platon-connaissance-i3
+    title: "Le Ménon : opinion vraie et science"
+    notes: |-
+      Plus loin dans le *Ménon* (97 s.), **Socrate distingue avoir une simple opinion sur une chose et la connaître.** Un exemple moderne le fait voir. Jones a regardé une carte et sait qu'il faut prendre l'autoroute 80 vers l'ouest pour aller de New York à Chicago, sans avoir jamais fait le trajet ; Smith l'a fait bien des fois. Tous deux ont la même opinion, et tous deux arriveront à Chicago en agissant d'après elle.
+
+      | | Jones | Smith |
+      | opinion | vraie | vraie |
+      | justification | aucune | l'expérience du trajet |
+      | état | opinion vraie | science |
+
+      **Seul Smith connaît la route.** La vérité de l'opinion n'est pas en cause : Smith a quelque chose de plus, une justification, ici fondée sur l'expérience.
+
+      **D'où peut-être la première définition de la science comme croyance vraie justifiée : la science est une opinion vraie attachée par un raisonnement qui en donne la cause** (`aitias logismos`, 98a). Le *Ménon* prépare ainsi, avec la réminiscence, l'épistémologie de la maturité.
+
+      ! Ce qui fait la science n'est pas une raison quelconque ajoutée à l'opinion vraie, mais le raisonnement qui en donne la __cause__.
+    points:
+      - id: platon-connaissance-i3-p1
+        sentence: "Jones, qui a lu la carte, et Smith, qui a fait la route, ont la même opinion et arriveront tous deux à Chicago : ce qui les distingue n'est pas la ___ de leur opinion, mais une justification."
+        answer: "vérité"
+        alt: []
+      - id: platon-connaissance-i3-p2
+        sentence: "Smith, qui a souvent fait la route de New York à Chicago, la connaît ; Jones, qui n'a fait que lire la carte, n'en a qu'une opinion ___."
+        answer: "vraie"
+        alt: []
+      - id: platon-connaissance-i3-p3
+        sentence: "Ce que Smith, qui a fait la route, a de plus que Jones, qui n'a qu'une opinion vraie, est une ___, ici fondée sur l'expérience."
+        answer: "justification"
+        alt: []
+      - id: platon-connaissance-i3-p4
+        sentence: "Le *Ménon* offre peut-être la première définition de la science comme croyance vraie ___."
+        answer: "justifiée"
+        alt: []
+      - id: platon-connaissance-i3-p5
+        sentence: "Selon le *Ménon* (98a), la science est une opinion vraie attachée par un raisonnement qui en donne la ___."
+        answer: "cause"
+        alt: []
+      - id: platon-connaissance-i3-p6
+        sentence: "L'expression grecque du *Ménon* (98a) pour le raisonnement causal qui attache l'opinion vraie et en fait une science est ___."
+        answer: "aitias logismos"
+        alt: ["aitias logismôi", "aitias logismō"]
+      - id: platon-connaissance-i3-p7
+        sentence: "La définition de la science comme opinion vraie attachée par un raisonnement causal se trouve dans le *Ménon*, en ___."
+        answer: "98a"
+        alt: []
+  - id: platon-connaissance-i4
+    title: "La réminiscence dans le Phédon : qui se ressouvient ?"
+    notes: |-
+      Le *Phédon* **introduit la réminiscence par une remarque de Cébès, à l'appui de la préexistence de l'âme** (72e-73a) : « Il en va aussi ainsi si elle est vraie, cette théorie que tu as coutume d'avancer souvent, selon laquelle pour nous apprendre n'est rien d'autre que se ressouvenir. D'après elle, il faut que nous ayons appris en un temps antérieur ce dont nous nous ressouvenons maintenant. Cela n'est possible que si notre âme existait quelque part avant de prendre cette forme humaine. »
+
+      **Deux mots comptent : « pour nous », et l'identification de l'apprendre (`mathêsis`) au ressouvenir.** Qui sont « nous » : les familiers philosophes de Socrate, ou le genre humain ?
+
+      | | Lecture {teal}large{/teal} (Bedu-Addo) | Lecture {coral}étroite{/coral} (Scott, Bobonich) |
+      | qui se ressouvient | tout homme | les seuls philosophes |
+      | de quoi | des concepts appliqués dans toute pensée | des seules Idées |
+      | statut | doctrine des idées innées, active dès les premières pensées | dernier stade de l'apprendre : des opinions sur le monde à la science des Idées |
+      | les concepts ordinaires | supposent une connaissance latente des Idées | sont tirés des choses, des conversations, des perceptions |
+
+      **Les deux lectures s'accordent sur le problème : expliquer la capacité proprement humaine de ranger les perceptions sous des universaux.** Elles divergent sur la solution : pour la lecture large, il y faut une connaissance antérieure des Idées ; pour l'étroite, cette connaissance n'explique que la compréhension philosophique des Idées. Reste à savoir comment se rapportent les concepts ordinaires et les concepts philosophiques innés.
+    points:
+      - id: platon-connaissance-i4-p1
+        sentence: "Dans le *Phédon*, c'est ___ qui introduit la réminiscence, à l'appui de la préexistence de l'âme."
+        answer: "Cébès"
+        alt: ["Cebes"]
+      - id: platon-connaissance-i4-p2
+        sentence: "« Il en va aussi ainsi si elle est vraie, cette théorie que tu as coutume d'avancer souvent, selon laquelle pour nous ___. D'après elle, il faut que nous ayons appris en un temps antérieur ce dont nous nous ressouvenons maintenant. Cela n'est possible que si notre âme existait quelque part avant de prendre cette forme humaine. » (*Phédon*, 72e-73a)"
+        answer: "apprendre n'est rien d'autre que se ressouvenir"
+        alt: []
+      - id: platon-connaissance-i4-p3
+        sentence: "« Il en va aussi ainsi si elle est vraie, cette théorie que tu as coutume d'avancer souvent, selon laquelle pour nous apprendre n'est rien d'autre que se ressouvenir. D'après elle, il faut que nous ayons appris en un temps antérieur ce dont nous nous ressouvenons maintenant. Cela n'est possible que si notre âme existait quelque part ___. » (*Phédon*, 72e-73a)"
+        answer: "avant de prendre cette forme humaine"
+        alt: []
+      - id: platon-connaissance-i4-p4
+        sentence: "Dans la formule de Cébès, c'est l'apprendre, ___ en grec, qui est identifié au ressouvenir."
+        answer: "mathêsis"
+        alt: ["mathesis", "mathèsis"]
+      - id: platon-connaissance-i4-p5
+        sentence: "Pour la lecture ___ de la réminiscence (Bedu-Addo), elle concerne l'application des concepts dans toute pensée : c'est une doctrine des idées innées."
+        answer: "large"
+        alt: []
+      - id: platon-connaissance-i4-p6
+        sentence: "Pour la lecture ___ de la réminiscence (Scott, Bobonich), seuls les philosophes se ressouviennent, et ce qu'ils se rappellent, ce sont les seules Idées."
+        answer: "étroite"
+        alt: []
+      - id: platon-connaissance-i4-p7
+        sentence: "Pour la lecture large de la réminiscence, elle est une doctrine des idées ___, dont les effets se font sentir presque aussitôt dans l'esprit conscient."
+        answer: "innées"
+        alt: []
+      - id: platon-connaissance-i4-p8
+        sentence: "La lecture large de la réminiscence est défendue par ___, la lecture étroite par Scott et Bobonich."
+        answer: "Bedu-Addo"
+        alt: []
+      - id: platon-connaissance-i4-p9
+        sentence: "Lectures large et étroite de la réminiscence s'accordent sur le problème : expliquer la capacité humaine de ranger les perceptions sous des ___."
+        answer: "universaux"
+        alt: []
+      - id: platon-connaissance-i4-p10
+        sentence: "Pour la lecture étroite de la réminiscence, les concepts ordinaires sont tirés des choses particulières, de nos conversations et de nos ___."
+        answer: "perceptions"
+        alt: ["sensations"]
+  - id: platon-connaissance-i5
+    title: "Concepts, référence et innéisme"
+    notes: |-
+      **Les concepts sont les éléments de la pensée.** Le *Théétète* (189e), postérieur au *Phédon* et à la *République*, fait de la pensée le **dialogue silencieux de l'âme avec elle-même** : au prédicat « égal » de « les bâtons sont égaux » répond le concept [égalité]. Le *Phédon* pose que nous connaissons l'Égalité, que nous percevons des choses égales, que nous les comparons à l'Idée, et qu'il faut pour cela l'avoir connue auparavant.
+
+      **Platon fait passer la référence avant le sens.** Là où nous distinguons les concepts par la synonymie, il se soucie de ce à quoi ils renvoient. À la fin du dernier argument du *Phédon*, « égal » s'applique d'abord à l'Idée, indirectement à ses exemplaires : c'est le nom de l'Égalité et l'**éponyme** des choses égales (102b s.). Ce qui individue un concept n'est pas ce qu'ont en tête les locuteurs, mais son rapport à l'Idée.
+
+      **Cela appuie la lecture large, innéiste** : on a le concept dès la naissance, sans le savoir, et on y associe peu à peu des croyances. La lecture étroite doit au contraire expliquer comment on acquiert un concept ; or le *Cratyle* (383-387c, 434e-435d), en rejetant la théorie protagoréenne et héraclitéenne des noms, suggère qu'aucune explication empiriste ou abstractionniste n'est viable.
+
+      **Objection à la lecture étroite : les concepts y deviennent des coquilles vides**, que chacun remplit : dans mon concept de beauté, la peau pâle ; dans le tien, l'éclat des couleurs. Si le concept s'identifie à son contenu, personne n'a le même concept : l'empirisme mène au mieux à des langages privés, et le concept change à chaque croyance ajoutée ou retirée.
+
+      ! Ces objections ne suffisent pas à rejeter la lecture étroite : la lecture large a ses propres difficultés.
+    points:
+      - id: platon-connaissance-i5-p1
+        sentence: "Dans le *Théétète* (189e), la pensée est le ___ silencieux de l'âme avec elle-même."
+        answer: "dialogue"
+        alt: []
+      - id: platon-connaissance-i5-p2
+        sentence: "La définition de la pensée comme dialogue silencieux de l'âme avec elle-même se trouve dans le *Théétète*, en ___."
+        answer: "189e"
+        alt: []
+      - id: platon-connaissance-i5-p3
+        sentence: "Là où nous distinguons les concepts par la synonymie, Platon fait passer la ___ avant le sens : ce qui individue un concept est son rapport à l'Idée."
+        answer: "référence"
+        alt: []
+      - id: platon-connaissance-i5-p4
+        sentence: "À la fin du dernier argument du *Phédon*, « égal » est le nom de l'Égalité et l'___ des choses égales."
+        answer: "éponyme"
+        alt: []
+      - id: platon-connaissance-i5-p5
+        sentence: "Pour Platon, ce qui individue un concept n'est pas ce qu'ont en tête les locuteurs, mais son rapport à l'___."
+        answer: "Idée"
+        alt: ["Forme"]
+      - id: platon-connaissance-i5-p6
+        sentence: "Le primat de la référence sur le sens appuie la lecture ___ de la réminiscence : on a le concept dès la naissance, sans savoir qu'on l'a."
+        answer: "large"
+        alt: ["innéiste"]
+      - id: platon-connaissance-i5-p7
+        sentence: "En rejetant la théorie protagoréenne et héraclitéenne des noms, le ___ suggère qu'aucune explication empiriste ou abstractionniste de l'acquisition des concepts n'est viable."
+        answer: "Cratyle"
+        alt: []
+      - id: platon-connaissance-i5-p8
+        sentence: "Objection à la lecture étroite de la réminiscence : les concepts y deviennent des coquilles ___ que chacun remplit à sa façon, la peau pâle pour l'un, l'éclat des couleurs pour l'autre."
+        answer: "vides"
+        alt: []
+      - id: platon-connaissance-i5-p9
+        sentence: "Si un concept s'identifie aux croyances que chacun y associe, l'empirisme mène au mieux à des langages ___."
+        answer: "privés"
+        alt: []
+  - id: platon-connaissance-i6
+    title: "Les conditions de la réminiscence"
+    notes: |-
+      **Socrate pose d'abord (73c-74a) les conditions de la réminiscence.** Si x fait se ressouvenir de y :
+      - 1. il faut avoir connu y auparavant ;
+      - 2. en percevant x, il faut reconnaître x et penser à y ;
+      - 3. y ne doit pas être l'objet de la même science que x ;
+      - 4. quand le ressouvenir vient du semblable, il faut se demander si x manque ou non de ressemblance à y.
+
+      **Les exemples** : le portrait de Simmias le rappelle par le **semblable** ; sa lyre le rappelle par le **dissemblable**.
+
+      **La condition 3** : si le portrait et Simmias relevaient de la même science, le portrait ne me rappellerait rien, car je ne peux me ressouvenir de ce à quoi je pense déjà. Il faut pouvoir saisir le portrait sans penser à Simmias. C'est plus clair avec la lyre, qu'on reconnaît comme instrument, comme bois tendu de cordes, sans penser à Simmias. **La condition 4** : on reconnaît qu'une image est toujours en défaut par rapport à ce dont elle est l'image, sans avoir besoin de penser à son modèle.
+
+      **La difficulté surgit avec les bâtons égaux.** Si, selon la condition 4, il faut comparer les bâtons à l'Égalité, il faut avoir l'Idée à l'esprit pour penser aux bâtons ; on ne peut donc être en train de former le concept d'égalité, ni de se ressouvenir de l'Idée.
+    points:
+      - id: platon-connaissance-i6-p1
+        sentence: "Les conditions que Socrate pose à la réminiscence, avant de l'appliquer à l'Égalité, se trouvent dans le *Phédon*, en ___."
+        answer: "73c-74a"
+        alt: []
+      - id: platon-connaissance-i6-p2
+        sentence: "Première condition de la réminiscence dans le *Phédon* : pour que x fasse se ressouvenir de y, il faut avoir ___ y auparavant."
+        answer: "connu"
+        alt: []
+      - id: platon-connaissance-i6-p3
+        sentence: "Troisième condition de la réminiscence dans le *Phédon* : ce dont on se ressouvient ne doit pas être l'objet de la même ___ que ce qui en fait se ressouvenir."
+        answer: "science"
+        alt: ["connaissance"]
+      - id: platon-connaissance-i6-p4
+        sentence: "Le portrait de Simmias fait se ressouvenir de Simmias par le semblable ; sa ___ le rappelle par le dissemblable."
+        answer: "lyre"
+        alt: []
+      - id: platon-connaissance-i6-p5
+        sentence: "Quand le ressouvenir vient du semblable, il faut encore se demander si la chose perçue ___ ou non de ressemblance à ce qu'elle rappelle : une image est toujours en défaut."
+        answer: "manque"
+        alt: []
+      - id: platon-connaissance-i6-p6
+        sentence: "Si le portrait et Simmias relevaient de la même science, le portrait ne rappellerait rien : on ne peut se ressouvenir de ce à quoi l'on ___ déjà."
+        answer: "pense"
+        alt: []
+      - id: platon-connaissance-i6-p7
+        sentence: "Appliquée aux bâtons ___, la quatrième condition de la réminiscence fait difficulté : pour les comparer à l'Idée, il faut déjà l'avoir à l'esprit."
+        answer: "égaux"
+        alt: []
+  - id: platon-connaissance-i7
+    title: "L'Égal en soi et les choses égales"
+    notes: |-
+      **Simmias accorde aussitôt qu'il y a un Égal, connu de nous, à côté des bâtons et des pierres égaux (74a-b). D'où tenons-nous cette connaissance ?** Pas des bâtons : ils paraissent tantôt égaux, tantôt inégaux, alors que l'Égal en soi ne paraît jamais inégal. Nous voyons qu'ils sont **en défaut** par rapport à l'Égalité ; Socrate ne dit pas en quoi, sinon qu'ils peuvent paraître inégaux.
+
+      **Pourquoi l'Idée ne peut-elle paraître inégale ?** Platon ne le dit guère (White). Trois réponses :
+
+      | Lecture | Pourquoi l'Égal ne paraît jamais inégal |
+      | {teal}simplicité{/teal} | l'Idée, incomposée, n'a pas d'autre propriété : en avoir conscience, c'est la reconnaître égale |
+      | {coral}coprésence{/coral} | l'Idée peut être complexe (aussi belle) ; seul le contraire strict, l'inégal, en est exclu |
+      | {violet}prédicationniste{/violet} | connaître l'Égalité, c'est connaître son essence, une en dépit de la complexité de sa définition |
+
+      **La réponse par la simplicité laisse deux problèmes** : distinguer avoir conscience de l'Idée et croire à tort l'avoir ; savoir si l'on peut avoir l'Idée à l'esprit sans en avoir conscience, ce que la lecture innéiste doit admettre. Et si les Idées ne sont pas simples, si l'Égalité est aussi belle, on pourrait, en s'attachant à sa beauté, la voir autre qu'égale.
+
+      ! Quelle que soit la lecture, Platon semble seulement avoir montré que l'Idée et les choses ne sont pas __identiques__, non qu'on ne peut tirer des sensibles la science de l'Idée.
+    points:
+      - id: platon-connaissance-i7-p1
+        sentence: "Le passage du *Phédon* où Simmias accorde qu'il y a un Égal en soi, connu de nous, à côté des bâtons et des pierres égaux, se trouve en ___."
+        answer: "74a-b"
+        alt: ["74ab", "74a"]
+      - id: platon-connaissance-i7-p2
+        sentence: "Les bâtons et les pierres égaux paraissent tantôt égaux, tantôt ___, alors que l'Égal en soi ne le paraît jamais."
+        answer: "inégaux"
+        alt: []
+      - id: platon-connaissance-i7-p3
+        sentence: "Nous ne tirons pas notre connaissance de l'Égalité des choses égales, parce que nous voyons qu'elles sont en ___ par rapport à elle."
+        answer: "défaut"
+        alt: ["manque"]
+      - id: platon-connaissance-i7-p4
+        sentence: "Si l'Idée d'Égalité est ___, elle n'a pas d'autre propriété : en avoir conscience, c'est la reconnaître égale."
+        answer: "simple"
+        alt: ["incomposée"]
+      - id: platon-connaissance-i7-p5
+        sentence: "La lecture innéiste de la réminiscence doit admettre qu'on puisse avoir une Idée à l'esprit sans en avoir ___, puisque les Idées y sont latentes."
+        answer: "conscience"
+        alt: []
+      - id: platon-connaissance-i7-p6
+        sentence: "Pour qui insiste sur la coprésence des contraires, l'Égalité peut être complexe : seul son contraire ___, l'inégal, est exclu de l'Idée."
+        answer: "strict"
+        alt: []
+      - id: platon-connaissance-i7-p7
+        sentence: "Pour la lecture prédicationniste, connaître l'Égalité, c'est connaître son ___, une en dépit de la complexité apparente de la définition qui la désigne."
+        answer: "essence"
+        alt: []
+      - id: platon-connaissance-i7-p8
+        sentence: "Quelle que soit la lecture, Platon semble seulement avoir montré que l'Idée et les choses ne sont pas ___, et non qu'on ne peut tirer des sensibles la science de l'Idée."
+        answer: "identiques"
+        alt: []
+  - id: platon-connaissance-i8
+    title: "République V : science et opinion"
+    notes: |-
+      La *République*, **la défense la plus développée de l'éthique de la maturité, cherche ce qu'est la justice pour montrer que la meilleure vie est celle de la vertu et du savoir.** Dans l'âme vertueuse, les trois parties sont en harmonie : la raison, qui connaît l'Idée du Bien et les autres Idées, gouverne avec l'appui et l'accord de l'appétit et du cœur. La cité idéale y répond avec ses trois classes : gouvernants, guerriers, travailleurs. La justice étant établie comme harmonie de l'âme à la fin du livre IV, il faut montrer ce que sait le philosophe-roi, qui l'autorise à gouverner.
+
+      **À la fin du livre V (474b s.), Socrate oppose le philosophe aux {coral}amateurs de spectacles{/coral}.** Le philosophe admet le Beau en soi et a la science ; l'amateur de spectacles ne reconnaît que les multiples belles pièces, belles peintures, et n'a que l'opinion.
+
+      | Capacité | Objet |
+      | science | ce qui est complètement |
+      | opinion | ce qui est et n'est pas : l'intermédiaire |
+      | ignorance | ce qui n'est complètement pas |
+
+      **Deux critères distinguent les capacités** : leurs objets (comme la vue et l'ouïe se distinguent par les couleurs et les sons) et ce qu'elles font : la science est toujours vraie, l'opinion vraie ou fausse.
+    points:
+      - id: platon-connaissance-i8-p1
+        sentence: "Dans la *République*, l'âme vertueuse a ses trois parties en ___ : la raison, qui connaît le Bien, gouverne avec l'appui de l'appétit et du cœur."
+        answer: "harmonie"
+        alt: []
+      - id: platon-connaissance-i8-p2
+        sentence: "La justice est établie comme harmonie de l'âme à la fin du livre ___ de la *République*, avant que Socrate ne montre ce que sait le philosophe-roi."
+        answer: "IV"
+        alt: ["4"]
+      - id: platon-connaissance-i8-p3
+        sentence: "À la fin du livre V de la *République*, Socrate défend le gouvernement du philosophe en l'opposant aux ___, qui ne reconnaissent que les multiples belles choses."
+        answer: "amateurs de spectacles"
+        alt: []
+      - id: platon-connaissance-i8-p4
+        sentence: "Le philosophe, qui admet le Beau en soi, a la science ; l'amateur de spectacles, qui nie le Beau en soi, n'a que l'___."
+        answer: "opinion"
+        alt: []
+      - id: platon-connaissance-i8-p5
+        sentence: "Au livre V de la *République*, la science porte sur ce qui est complètement, l'ignorance sur ce qui n'est complètement pas, l'opinion sur ce qui ___."
+        answer: "est et n'est pas"
+        alt: []
+      - id: platon-connaissance-i8-p6
+        sentence: "Selon la *République*, les capacités se distinguent par deux critères : leurs objets, et ce qu'elles ___ de ces objets."
+        answer: "font"
+        alt: []
+      - id: platon-connaissance-i8-p7
+        sentence: "La science est toujours vraie, alors que l'opinion peut être vraie ou ___ : c'est le second critère qui distingue les deux capacités."
+        answer: "fausse"
+        alt: []
+      - id: platon-connaissance-i8-p8
+        sentence: "L'opposition du philosophe et des amateurs de spectacles, qui ouvre la défense du gouvernement des philosophes, se trouve dans la *République*, en ___."
+        answer: "474b"
+        alt: ["474b s.", "V, 474b"]
+  - id: platon-connaissance-i9
+    title: "République V : trois lectures du « est »"
+    notes: |-
+      **Tout dépend du sens de « est » dans « ce qui est complètement » et « ce qui est et n'est pas », et de ce sur quoi portent la science et l'opinion : des objets ou des propositions.**
+
+      | Lecture | La science porte sur | L'opinion porte sur |
+      | {sky}existentielle{/sky} | ce qui existe | ce qui existe et n'existe pas |
+      | {coral}prédicative{/coral} | les Idées, ce qui est F | ce qui est F et non-F : les choses matérielles |
+      | {teal}véridique{/teal} (Fine) | ce qui est vrai : les propositions vraies | ce qui est vrai ou faux : toutes les propositions |
+
+      **La lecture existentielle** a peu de partisans : on voit mal ce que serait, pour un objet, exister et ne pas exister, et beaucoup pensent, avec Owen, que Platon n'emploie jamais de « est » d'existence.
+
+      **La lecture prédicative soutient la doctrine des deux mondes** : objets de science et objets d'opinion sont distincts ; des choses on n'a qu'opinion, des Idées que science. Deux conséquences : la science ne peut être une croyance vraie justifiée, même attachée par la cause (*Ménon*, 98a) ; et l'on ne pourrait avoir d'opinion fausse sur les Idées, ce qui gêne davantage, puisqu'au livre I les interlocuteurs ont bien des opinions fausses sur la justice (rendre ce qui est dû).
+
+      **La lecture véridique voit un mérite dans le recouvrement** des objets des deux capacités, les propositions vraies : la science peut être une croyance vraie justifiée, et l'on peut avoir opinion et science des Idées comme des choses sensibles.
+    points:
+      - id: platon-connaissance-i9-p1
+        sentence: "Selon la lecture ___ de *République* V, la science porte sur ce qui existe et l'opinion sur ce qui existe et n'existe pas ; elle a peu de partisans."
+        answer: "existentielle"
+        alt: []
+      - id: platon-connaissance-i9-p2
+        sentence: "Contre la lecture existentielle de *République* V, Owen soutient que Platon n'emploie jamais de « est » d'___."
+        answer: "existence"
+        alt: []
+      - id: platon-connaissance-i9-p3
+        sentence: "Selon la lecture ___ de *République* V, la science porte sur les Idées, ce qui est F, et l'opinion sur les choses matérielles, à la fois F et non-F."
+        answer: "prédicative"
+        alt: []
+      - id: platon-connaissance-i9-p4
+        sentence: "La lecture prédicative de *République* V soutient la doctrine des deux ___ : des choses on n'a qu'opinion, et des Idées que science."
+        answer: "mondes"
+        alt: []
+      - id: platon-connaissance-i9-p5
+        sentence: "Si objets de science et objets d'opinion sont distincts, la science ne peut être une croyance vraie ___, même attachée par la cause comme dans le *Ménon*."
+        answer: "justifiée"
+        alt: []
+      - id: platon-connaissance-i9-p6
+        sentence: "Conséquence gênante de la lecture prédicative de *République* V : on ne pourrait avoir d'opinion ___ sur les Idées, alors qu'au livre I les interlocuteurs se trompent sur la justice."
+        answer: "fausse"
+        alt: []
+      - id: platon-connaissance-i9-p7
+        sentence: "Au livre I de la *République*, une opinion fausse sur la justice la définit comme le fait de rendre ce qui est ___."
+        answer: "dû"
+        alt: []
+      - id: platon-connaissance-i9-p8
+        sentence: "Selon la lecture ___ de *République* V, la science porte sur les propositions vraies et l'opinion sur toutes les propositions, vraies ou fausses."
+        answer: "véridique"
+        alt: []
+      - id: platon-connaissance-i9-p9
+        sentence: "La lecture véridique de *République* V est défendue par ___, contre la lecture prédicative et la doctrine des deux mondes."
+        answer: "Fine"
+        alt: ["Gail Fine"]
+      - id: platon-connaissance-i9-p10
+        sentence: "Pour la lecture véridique, le ___ des objets de la science et de ceux de l'opinion (les propositions vraies) est un mérite : on peut avoir opinion et science des mêmes choses."
+        answer: "recouvrement"
+        alt: ["chevauchement"]
+  - id: platon-connaissance-i10
+    title: "Le Soleil et la Ligne"
+    notes: |-
+      **L'argument de la fin du livre V prépare les analogies du Soleil, de la Ligne et de la Caverne (livres VI et VII).**
+
+      **Le Soleil oppose le visible et l'intelligible.** Le soleil engendre, nourrit et gouverne le visible, et donne à l'œil la lumière dont il a besoin pour voir. Dans l'intelligible, le Bien lui répond (508e) : « Ce qui donne la vérité aux choses connues et le pouvoir de connaître à celui qui connaît, c'est l'Idée du Bien. Et bien qu'elle soit cause de la science et de la vérité, elle est aussi un objet de connaissance. » Le Bien est même responsable de l'être des objets connaissables, sans que Platon dise en quel sens (Santas).
+
+      **La Ligne divise de nouveau chacun des deux domaines en deux segments inégaux :**
+
+      | Segment | Objets | Capacité |
+      | intelligible, haut | les Idées, dont le Bien | `noûs` : l'intellection, la science |
+      | intelligible, bas | les objets des sciences | `dianoia` : la pensée discursive |
+      | visible, haut | les objets physiques | `pistis` : la conviction, l'opinion |
+      | visible, bas | les images, ombres et reflets | `eikasia` : l'imagination |
+
+      **Le segment supérieur est clair** : ses objets sont les Idées, et parmi elles le Bien, à tenir pour le premier entre égaux ; la capacité qui s'y rapporte est le `noûs`. **La `pistis`**, littéralement la foi ou la conviction, est en général tenue pour l'opinion.
+
+      ! Le Bien n'est pas seulement cause de la connaissance et de la vérité : il est lui-même __connaissable__.
+    points:
+      - id: platon-connaissance-i10-p1
+        sentence: "L'analogie du ___ oppose le visible et l'intelligible : ce qu'il est dans le visible, le Bien l'est dans l'intelligible."
+        answer: "Soleil"
+        alt: []
+      - id: platon-connaissance-i10-p2
+        sentence: "« Ce qui donne la vérité aux choses connues et ___ à celui qui connaît, c'est l'Idée du Bien. Et bien qu'elle soit cause de la science et de la vérité, elle est aussi un objet de connaissance. » (*République*, VI, 508e)"
+        answer: "le pouvoir de connaître"
+        alt: []
+      - id: platon-connaissance-i10-p3
+        sentence: "« Ce qui donne la vérité aux choses connues et le pouvoir de connaître à celui qui connaît, ___. Et bien qu'elle soit cause de la science et de la vérité, elle est aussi un objet de connaissance. » (*République*, VI, 508e)"
+        answer: "c'est l'Idée du Bien"
+        alt: []
+      - id: platon-connaissance-i10-p4
+        sentence: "« Ce qui donne la vérité aux choses connues et le pouvoir de connaître à celui qui connaît, c'est l'Idée du Bien. Et bien qu'elle soit cause de la science et de la vérité, ___. » (*République*, VI, 508e)"
+        answer: "elle est aussi un objet de connaissance"
+        alt: []
+      - id: platon-connaissance-i10-p5
+        sentence: "Le passage de l'analogie du Soleil qui fait de l'Idée du Bien la source de la vérité des choses connues et du pouvoir de connaître se trouve dans la *République*, en ___."
+        answer: "508e"
+        alt: ["VI, 508e"]
+      - id: platon-connaissance-i10-p6
+        sentence: "Le Bien est même responsable de l'___ des objets connaissables, sans que Platon dise en quel sens (Santas)."
+        answer: "être"
+        alt: []
+      - id: platon-connaissance-i10-p7
+        sentence: "Dans la Ligne, le segment inférieur du visible contient les images, ombres et reflets, sur lesquels porte l'___."
+        answer: "eikasia"
+        alt: ["imagination", "eikasie"]
+      - id: platon-connaissance-i10-p8
+        sentence: "Dans la Ligne, la capacité qui porte sur les objets physiques ordinaires est la `pistis`, littéralement la foi ou la ___, qu'on tient en général pour l'opinion."
+        answer: "conviction"
+        alt: []
+      - id: platon-connaissance-i10-p9
+        sentence: "Dans la Ligne, la capacité du segment supérieur, qui porte sur les Idées et le Bien, est le ___, l'intellection."
+        answer: "noûs"
+        alt: ["nous", "noêsis", "noesis", "intellect"]
+      - id: platon-connaissance-i10-p10
+        sentence: "Dans la Ligne, la capacité du segment inférieur de l'intelligible, celle des sciences, est la ___, la pensée discursive."
+        answer: "dianoia"
+        alt: ["dianoïa"]
+      - id: platon-connaissance-i10-p11
+        sentence: "Dans le segment supérieur de la Ligne, le Bien est à tenir, parmi les Idées, pour le premier entre ___."
+        answer: "égaux"
+        alt: ["ses égaux"]
+  - id: platon-connaissance-i11
+    title: "La pensée discursive et la Caverne"
+    notes: |-
+      **Le passage décisif de la Ligne (510b) oppose les deux segments de l'intelligible** : « Dans cette section-ci, l'âme, se servant comme d'images des choses qui étaient auparavant imitées, est contrainte de mener sa recherche à partir d'hypothèses, en se dirigeant non vers un principe, mais vers une conclusion. Dans l'autre section, en revanche, elle se fraie un chemin vers un principe qui n'est pas une hypothèse, en partant d'une hypothèse, mais sans les images utilisées dans la section précédente, en se servant des Idées elles-mêmes et en menant sa recherche par leur moyen. »
+
+      **La `dianoia` semble le raisonnement propre aux mathématiques et aux sciences.** Ses objets sont très discutés, selon le sens donné à « se servant comme d'images des choses qui étaient auparavant imitées » (Burnyeat) :
+      - ou bien ce sont des images « abstraites » des choses matérielles, d'une autre sorte que les ombres et les reflets ;
+      - ou bien ce sont les choses matérielles elles-mêmes, ou les Idées, mais traitées autrement que ne le fait le `noûs`.
+
+      **La Caverne, sans doute l'analogie la plus célèbre de l'histoire de la philosophie, renforce la Ligne.** Des prisonniers enchaînés, la tête immobile, regardent sur la paroi des ombres projetées par des figures sculptées, que des hommes portent derrière eux, sur un parapet, à la lumière d'un feu. Un prisonnier délivré voit les figures et le feu, puis sort : ébloui, il regarde d'abord les ombres et les reflets dans l'eau des arbres, des rochers et des animaux, puis ces choses mêmes, enfin le soleil.
+
+      | Caverne | Ligne |
+      | les statues sculptées | les objets physiques de l'opinion |
+      | les reflets dans l'eau | les images dont se sert la `dianoia` |
+      | les animaux | les Idées |
+
+      ! Si la Caverne est notre guide, les images dont se sert la `dianoia` viennent non des statues, mais des animaux, c'est-à-dire des __Idées__ elles-mêmes.
+    points:
+      - id: platon-connaissance-i11-p1
+        sentence: "« Dans cette section-ci, l'âme, se servant comme d'images des choses qui étaient auparavant imitées, est contrainte de mener sa recherche ___, en se dirigeant non vers un principe, mais vers une conclusion. Dans l'autre section, en revanche, elle se fraie un chemin vers un principe qui n'est pas une hypothèse, en partant d'une hypothèse, mais sans les images utilisées dans la section précédente, en se servant des Idées elles-mêmes et en menant sa recherche par leur moyen. » (*République*, VI, 510b)"
+        answer: "à partir d'hypothèses"
+        alt: []
+      - id: platon-connaissance-i11-p2
+        sentence: "« Dans cette section-ci, l'âme, se servant comme d'images des choses qui étaient auparavant imitées, est contrainte de mener sa recherche à partir d'hypothèses, en se dirigeant ___. Dans l'autre section, en revanche, elle se fraie un chemin vers un principe qui n'est pas une hypothèse, en partant d'une hypothèse, mais sans les images utilisées dans la section précédente, en se servant des Idées elles-mêmes et en menant sa recherche par leur moyen. » (*République*, VI, 510b)"
+        answer: "non vers un principe, mais vers une conclusion"
+        alt: []
+      - id: platon-connaissance-i11-p3
+        sentence: "« Dans cette section-ci, l'âme, se servant comme d'images des choses qui étaient auparavant imitées, est contrainte de mener sa recherche à partir d'hypothèses, en se dirigeant non vers un principe, mais vers une conclusion. Dans l'autre section, en revanche, elle se fraie un chemin ___, en partant d'une hypothèse, mais sans les images utilisées dans la section précédente, en se servant des Idées elles-mêmes et en menant sa recherche par leur moyen. » (*République*, VI, 510b)"
+        answer: "vers un principe qui n'est pas une hypothèse"
+        alt: []
+      - id: platon-connaissance-i11-p4
+        sentence: "« Dans cette section-ci, l'âme, se servant comme d'images des choses qui étaient auparavant imitées, est contrainte de mener sa recherche à partir d'hypothèses, en se dirigeant non vers un principe, mais vers une conclusion. Dans l'autre section, en revanche, elle se fraie un chemin vers un principe qui n'est pas une hypothèse, en partant d'une hypothèse, mais sans les images utilisées dans la section précédente, ___ et en menant sa recherche par leur moyen. » (*République*, VI, 510b)"
+        answer: "en se servant des Idées elles-mêmes"
+        alt: []
+      - id: platon-connaissance-i11-p5
+        sentence: "Le passage de la Ligne qui oppose la recherche à partir d'hypothèses, tournée vers une conclusion, et la remontée vers un principe qui n'est pas une hypothèse se trouve dans la *République*, en ___."
+        answer: "510b"
+        alt: ["VI, 510b"]
+      - id: platon-connaissance-i11-p6
+        sentence: "Dans la Ligne, la `dianoia` semble le raisonnement propre aux ___ et aux sciences."
+        answer: "mathématiques"
+        alt: []
+      - id: platon-connaissance-i11-p7
+        sentence: "Selon une lecture, les objets de la `dianoia` sont des images « ___ » des choses matérielles, d'une autre sorte que les ombres et les reflets."
+        answer: "abstraites"
+        alt: []
+      - id: platon-connaissance-i11-p8
+        sentence: "Selon une autre lecture, les objets de la `dianoia` sont les choses matérielles elles-mêmes, ou les ___, mais traitées autrement que par le `noûs`."
+        answer: "Idées"
+        alt: []
+      - id: platon-connaissance-i11-p9
+        sentence: "Dans la Caverne, les prisonniers regardent sur la paroi des ombres projetées par des figures ___, que des hommes portent derrière eux à la lumière d'un feu."
+        answer: "sculptées"
+        alt: []
+      - id: platon-connaissance-i11-p10
+        sentence: "Le prisonnier sorti de la Caverne, ébloui, regarde d'abord les ombres et les ___ dans l'eau des arbres et des animaux, avant les choses mêmes, puis le soleil."
+        answer: "reflets"
+        alt: []
+      - id: platon-connaissance-i11-p11
+        sentence: "Dans la Caverne, les statues sculptées répondent aux objets ___ sur lesquels porte l'opinion."
+        answer: "physiques"
+        alt: ["matériels"]
+      - id: platon-connaissance-i11-p12
+        sentence: "Si l'on suit la Caverne, les reflets dans l'eau, qui répondent aux images de la `dianoia`, viennent non des statues, mais des animaux, c'est-à-dire des ___ elles-mêmes."
+        answer: "Idées"
+        alt: []
+  - id: platon-connaissance-i12
+    title: "Ce qui appelle la pensée"
+    notes: |-
+      **Le livre VII décrit les études qui forment le philosophe-roi (521c s.).** Leur but est la science des Idées, atteinte en dernier lieu par la **dialectique**, que pratiquent tard dans la vie quelques-uns, doués de mémoire et de vivacité d'esprit, après des études essentiellement mathématiques. Cette sélection écarte la plupart des hommes.
+
+      **Premier pas vers la pensée abstraite (523a-525a) : certaines perceptions appellent la pensée.** Sur l'épais et le mince, le dur et le mou, le grand et le petit, et aussi le nombre, les sens rapportent la même chose comme son contraire, du moins dans certaines circonstances ; l'esprit est appelé à trancher ce qui est grand, ce qui est petit, ce qui est un.
+
+      **Une difficulté de psychologie des facultés.** Chaque partie de l'âme semble capable de juger, et les jugements des sens peuvent contredire ceux de la raison (602c-603a ; Burnyeat). Mais si chaque faculté a ses objets propres, aucun conflit n'est possible. La perception, elle, relève non de la partie rationnelle de l'âme, mais de sa partie désirante. Platon reproche aux hommes de croire, en se fiant à la perception, que le réel est le monde sensible, et, pire, qu'on peut savoir ce qui rend beau un temple ou égal un bâton en invoquant des propriétés sensibles.
+
+      **Le texte décisif pour la suite (479d3-5)** : « Nous avons donc découvert, semble-t-il, que les multiples règles de la plupart des gens sur le beau et sur les choses de ce genre roulent quelque part dans l'entre-deux, entre ce qui n'est pas quelque chose et ce qui est purement et simplement quelque chose. » Le mot rendu par « règles » est `nomima`.
+    points:
+      - id: platon-connaissance-i12-p1
+        sentence: "Au livre VII de la *République*, le but de la formation du philosophe-roi est la science des Idées, atteinte en dernier lieu par la ___."
+        answer: "dialectique"
+        alt: []
+      - id: platon-connaissance-i12-p2
+        sentence: "La dialectique ne se pratique que tard dans la vie, par quelques-uns doués de mémoire et de vivacité d'esprit, après des études essentiellement ___."
+        answer: "mathématiques"
+        alt: []
+      - id: platon-connaissance-i12-p3
+        sentence: "Premier pas vers la pensée abstraite au livre VII de la *République* : certaines perceptions ___ la pensée, parce que les sens y rapportent une chose comme son contraire."
+        answer: "appellent"
+        alt: ["sollicitent", "convoquent"]
+      - id: platon-connaissance-i12-p4
+        sentence: "Le passage de la *République* sur les perceptions qui appellent la pensée, parce qu'elles rapportent le grand comme petit ou l'un comme multiple, se trouve en ___."
+        answer: "523a-525a"
+        alt: ["523a", "VII, 523a-525a"]
+      - id: platon-connaissance-i12-p5
+        sentence: "Parmi les qualités qui appellent la pensée au livre VII de la *République*, outre le grand et le petit, l'épais et le mince, figure aussi le ___."
+        answer: "nombre"
+        alt: []
+      - id: platon-connaissance-i12-p6
+        sentence: "Si chaque faculté a ses objets propres, aucun ___ n'est possible entre les jugements des sens et ceux de la raison, ce que la *République* admet pourtant (602c-603a)."
+        answer: "conflit"
+        alt: []
+      - id: platon-connaissance-i12-p7
+        sentence: "Dans la *République*, la perception relève non de la partie rationnelle de l'âme, mais de sa partie ___."
+        answer: "désirante"
+        alt: ["appétitive"]
+      - id: platon-connaissance-i12-p8
+        sentence: "« Nous avons donc découvert, semble-t-il, que les multiples règles de la plupart des gens sur le beau et sur les choses de ce genre roulent quelque part ___, entre ce qui n'est pas quelque chose et ce qui est purement et simplement quelque chose. » (*République*, V, 479d3-5)"
+        answer: "dans l'entre-deux"
+        alt: []
+      - id: platon-connaissance-i12-p9
+        sentence: "« Nous avons donc découvert, semble-t-il, que ___ sur le beau et sur les choses de ce genre roulent quelque part dans l'entre-deux, entre ce qui n'est pas quelque chose et ce qui est purement et simplement quelque chose. » (*République*, V, 479d3-5)"
+        answer: "les multiples règles de la plupart des gens"
+        alt: []
+      - id: platon-connaissance-i12-p10
+        sentence: "Le mot grec que la *République* (479d) emploie pour les multiples règles de la foule sur le beau, et que la lecture véridique comprend comme des « croyances », est ___."
+        answer: "nomima"
+        alt: []
+  - id: platon-connaissance-i13
+    title: "Le sensible : propriétés ou objets ?"
+    notes: |-
+      **Pour les partisans des Idées des seules propriétés incomplètes (Fine, Irwin, Gosling), le défaut du sensible ne tient pas aux objets mêmes, mais aux explications** que donnent les amateurs de spectacles pour justifier leur prétention à savoir. Il n'est pas nécessaire qu'un temple donné soit et ne soit pas beau, comme le voudrait la lecture prédicative. **Ce qui est F et non-F, c'est le type de propriété sensible invoqué** : la couleur éclatante expliquerait la beauté du temple de Bassae, mais elle fait aussi la laideur d'autres choses.
+
+      **La lecture véridique** traduit `nomima` par « croyances » : la plupart des gens s'appuient sur des types de propriétés sensibles pour justifier leurs croyances, et sont condamnés à l'opinion, car leurs raisons sont fausses. Puisque Platon pense qu'il y a une science, il faut des explications en termes de propriétés non sensibles, qui ne rendent pas certaines choses belles et d'autres laides.
+
+      **Elle permet au philosophe de connaître le visible**, pour deux raisons : il y a des propositions sur des propriétés non sensibles, comme « Socrate est un homme » (Socrate est complètement homme, et il n'y a pas d'Idée de l'Homme) ; et le philosophe qui connaît les Idées des propriétés incomplètes, n'étant plus trompé par les contraires coprésents, peut connaître le monde matériel (520c).
+
+      **La lecture prédicative ne limite pas l'étendue des Idées** : le monde physique, atteint en tout point par son être et son non-être, n'est tout simplement pas objet possible de science, quelles que soient les justifications dont on dispose.
+
+      **Tous peuvent, peu y parviennent.** Tout homme est capable de devenir philosophe et de connaître le Bien (518c) ; mais la plupart s'en tiennent aux opinions nées de la perception et de la conversation, et peu deviennent assez dialecticiens pour « détruire les hypothèses ».
+    points:
+      - id: platon-connaissance-i13-p1
+        sentence: "Pour Fine, Irwin et Gosling, le défaut du sensible ne tient pas aux objets eux-mêmes, mais aux ___ que donnent les amateurs de spectacles pour justifier leur prétention à savoir."
+        answer: "explications"
+        alt: []
+      - id: platon-connaissance-i13-p2
+        sentence: "La couleur éclatante, invoquée pour expliquer la beauté du temple de ___, fait aussi la laideur d'autres choses : le type de propriété sensible est F et non-F."
+        answer: "Bassae"
+        alt: ["Bassæ"]
+      - id: platon-connaissance-i13-p3
+        sentence: "Pour la lecture véridique, c'est le ___ de propriété sensible, comme la couleur éclatante, qui est à la fois beau et non beau, non tel temple."
+        answer: "type"
+        alt: []
+      - id: platon-connaissance-i13-p4
+        sentence: "Tant qu'il s'appuie sur des propriétés sensibles dans ses explications, l'amateur de spectacles ne peut jamais être ___ dans ses croyances."
+        answer: "justifié"
+        alt: []
+      - id: platon-connaissance-i13-p5
+        sentence: "Pour la lecture véridique jointe aux Idées des seules propriétés incomplètes, on peut savoir que « Socrate est un homme », puisqu'il n'y a pas d'___ de l'Homme."
+        answer: "Idée"
+        alt: ["Forme"]
+      - id: platon-connaissance-i13-p6
+        sentence: "Le passage de la *République* qui montre qu'une fois les Idées connues, rien n'empêche le philosophe de connaître le monde matériel, appui de la lecture véridique, est en ___."
+        answer: "520c"
+        alt: []
+      - id: platon-connaissance-i13-p7
+        sentence: "Pour la lecture prédicative, les objets du monde physique ne sont pas des objets possibles de science, quelles que soient les ___ dont on dispose."
+        answer: "justifications"
+        alt: ["explications", "raisons"]
+      - id: platon-connaissance-i13-p8
+        sentence: "Selon la *République* (518c), tout homme est ___ de devenir philosophe et de connaître le Bien, même si peu y parviennent."
+        answer: "capable"
+        alt: []
+      - id: platon-connaissance-i13-p9
+        sentence: "Peu deviennent assez dialecticiens pour rendre raison de ce qu'ils savent d'une façon qui « détruise les ___ »."
+        answer: "hypothèses"
+        alt: []
+  - id: platon-connaissance-i14
+    title: "Pourquoi la perception ne suffit pas"
+    notes: |-
+      Selon la réminiscence du *Phédon*, **toute explication empiriste ou abstractionniste des concepts serait viciée** : la déficience du monde sensible en fait une source d'information peu fiable. Chaque diagnostic de cette déficience explique autrement l'échec de la perception :
+      - le sensible change (Aristote) ;
+      - les Idées, générales et abstraites, s'y manifestent toujours de façon concrète et déterminée ;
+      - les choses sont complexes (argument de l'affinité) : la perception doit se concentrer sur un aspect, sans pouvoir expliquer elle-même pourquoi elle le sélectionne ;
+      - pour les propriétés incomplètes, toute chose est F et non-F : aucune n'en est porteur sans réserve.
+
+      **Les facultés traitent mal l'information** : tantôt elles déforment les perceptions (*Phédon*, 65 s.), tantôt elles ne transmettent rien à la raison, sinon à l'opinion.
+
+      **Surtout, la perception ne sort jamais de sa perspective.** D'où qu'on la regarde, une pièce ronde paraît à l'œil quelque peu elliptique ; le bâton droit plongé dans l'eau paraît brisé, même si l'homme d'expérience le croit droit (*République*, X, 602c-603a).
+    points:
+      - id: platon-connaissance-i14-p1
+        sentence: "La réminiscence du *Phédon* suggère que toute explication ___ ou abstractionniste de l'acquisition des concepts est viciée par la déficience du monde sensible."
+        answer: "empiriste"
+        alt: []
+      - id: platon-connaissance-i14-p2
+        sentence: "Les Idées, générales et abstraites, se manifestent toujours dans les choses de façon concrète et ___, ce qui fausse le témoignage de la perception."
+        answer: "déterminée"
+        alt: []
+      - id: platon-connaissance-i14-p3
+        sentence: "Parce que les choses sont complexes, la perception doit se concentrer sur un ___ de la chose, sans pouvoir expliquer elle-même pourquoi elle le sélectionne."
+        answer: "aspect"
+        alt: []
+      - id: platon-connaissance-i14-p4
+        sentence: "Selon le *Phédon* (65 s.), les facultés de perception ___ les perceptions qu'elles traitent."
+        answer: "déforment"
+        alt: ["altèrent"]
+      - id: platon-connaissance-i14-p5
+        sentence: "La perception ne sort jamais de sa ___ : d'où qu'on la regarde, une pièce ronde paraît à l'œil quelque peu elliptique."
+        answer: "perspective"
+        alt: []
+      - id: platon-connaissance-i14-p6
+        sentence: "Exemple du livre X de la *République* : un bâton droit plongé dans l'eau paraît ___, même si l'homme d'expérience le croit droit."
+        answer: "brisé"
+        alt: ["courbé", "tordu", "cassé"]
+      - id: platon-connaissance-i14-p7
+        sentence: "L'exemple du bâton droit qui paraît brisé dans l'eau, preuve que les jugements des sens contredisent ceux de la raison, se trouve dans la *République*, en ___."
+        answer: "602c-603a"
+        alt: ["X, 602c-603a", "602c"]
+  - id: platon-connaissance-i15
+    title: "La méthode hypothétique dans le Phédon"
+    notes: |-
+      **Comment passer de la perception à l'opinion, puis à la science des Idées ?** Platon en dit peu. L'elenchos y contribue, surtout dans le passage de la perception à l'opinion : nous donnons des raisons de nos croyances, et il en révèle l'incohérence.
+
+      **Platon s'inscrit aussi dans la recherche d'une explication systématique de la nature.** Dans le *Phédon* (95a s.), Socrate reproche aux présocratiques leurs causes matérielles, qui manquent aux exigences minimales :
+      - la même cause explique des effets contraires : « d'une tête » explique qu'un tel soit plus grand et un autre plus petit ;
+      - le même effet a des causes contraires : on obtient deux par division et par addition.
+
+      Anaxagore, en invoquant l'Intellect, allait dans le bon sens, sans suivre ce chemin : **la meilleure explication est téléologique, par le Bien**. Le *Phédon* renonce pourtant à l'étudier et passe à une **méthode d'hypothèse** : la première hypothèse est celle des Idées comme causes, avec son corollaire, que les choses sont ce qu'elles sont en participant des Idées.
+
+      **Socrate se détourne des choses (`erga`) vers les raisons (`logoi`)** (99e-100a) : « J'ai commencé de cette manière : prenant chaque fois pour hypothèse la théorie qui me paraissait la plus solide, je tenais pour vrai, au sujet de la cause et de tout le reste, ce qui s'accordait avec elle, et pour non vrai ce qui ne s'accordait pas. » Ces `logoi` sont des opinions sur les Idées, provisoires ; celle de Socrate est la plus solide et la plus sûre. « S'accorder » ne veut pas dire être une conséquence logique : il s'agit de voir si des cas du domaine visé, ici la génération et la destruction, échappent à l'hypothèse (Bedu-Addo).
+    points:
+      - id: platon-connaissance-i15-p1
+        sentence: "Dans le *Phédon* (95a s.), Socrate reproche aux présocratiques d'avoir cherché des causes ___."
+        answer: "matérielles"
+        alt: []
+      - id: platon-connaissance-i15-p2
+        sentence: "Une cause présocratique échoue quand elle explique des effets contraires : « d'une ___ » explique qu'un tel soit plus grand et un autre plus petit."
+        answer: "tête"
+        alt: []
+      - id: platon-connaissance-i15-p3
+        sentence: "Une cause présocratique échoue aussi quand un même effet a des causes contraires : on obtient deux par division et par ___."
+        answer: "addition"
+        alt: []
+      - id: platon-connaissance-i15-p4
+        sentence: "Dans le *Phédon*, ___ allait dans le bon sens en invoquant l'Intellect, mais n'a pas suivi ce chemin."
+        answer: "Anaxagore"
+        alt: []
+      - id: platon-connaissance-i15-p5
+        sentence: "La meilleure explication, selon le *Phédon*, est ___, par le Bien, mais Platon renonce à l'étudier directement."
+        answer: "téléologique"
+        alt: []
+      - id: platon-connaissance-i15-p6
+        sentence: "La première hypothèse de la méthode du *Phédon* est celle des Idées comme ___, avec son corollaire : les choses sont ce qu'elles sont en participant des Idées."
+        answer: "causes"
+        alt: []
+      - id: platon-connaissance-i15-p7
+        sentence: "Dans le *Phédon*, Socrate se détourne des choses (`erga`) pour s'attacher aux ___ (`logoi`)."
+        answer: "raisons"
+        alt: ["discours", "logoi"]
+      - id: platon-connaissance-i15-p8
+        sentence: "« J'ai commencé de cette manière : prenant chaque fois pour hypothèse ___, je tenais pour vrai, au sujet de la cause et de tout le reste, ce qui s'accordait avec elle, et pour non vrai ce qui ne s'accordait pas. » (*Phédon*, 99e-100a)"
+        answer: "la théorie qui me paraissait la plus solide"
+        alt: []
+      - id: platon-connaissance-i15-p9
+        sentence: "« J'ai commencé de cette manière : prenant chaque fois pour hypothèse la théorie qui me paraissait la plus solide, je tenais pour vrai, au sujet de la cause et de tout le reste, ___, et pour non vrai ce qui ne s'accordait pas. » (*Phédon*, 99e-100a)"
+        answer: "ce qui s'accordait avec elle"
+        alt: []
+      - id: platon-connaissance-i15-p10
+        sentence: "Dans la méthode hypothétique du *Phédon*, « s'accorder avec l'hypothèse » ne veut pas dire en être une conséquence ___ : il s'agit de voir si des cas échappent à l'hypothèse (Bedu-Addo)."
+        answer: "logique"
+        alt: []
+  - id: platon-connaissance-i16
+    title: "Hypothèses plus hautes et principe anhypothétique"
+    notes: |-
+      **Il faut aussi examiner l'hypothèse elle-même** (101d) : « Et si quelqu'un s'attaquait à l'hypothèse elle-même, tu le laisserais de côté et ne lui répondrais pas avant d'avoir examiné si les conséquences qui en découlent s'accordent entre elles ou se contredisent. Et quand il te faudra rendre raison de l'hypothèse elle-même, tu procéderas de la même façon : tu poseras une autre hypothèse, celle qui te paraîtra la meilleure parmi les plus hautes, jusqu'à ce que tu arrives à quelque chose de satisfaisant. »
+
+      **Quelles hypothèses plus hautes que la théorie des Idées ?** On est tenté de répondre : l'explication téléologique par le Bien, que Platon refuse toujours de donner. Mais il y aurait des étapes intermédiaires (Rowe) : des conceptions rivales de la nature des Idées, des choses et de la participation. Aristote pourrait défendre un réalisme immanent, où certaines choses ont des propriétés essentielles ; ou l'on peut se demander si les Idées sont simples, ou si le Trois, par exemple, Est ce que c'est qu'être trois tout en se rapportant autrement à l'impair. La théorie des Idées du *Phédon* et de la *République* **est alors provisoire.**
+
+      **Dans la Ligne**, la `dianoia` se sert encore d'hypothèses : les mathématiciens posent leurs points de départ (axiomes, définitions), comme Socrate pose les Idées dans le *Phédon*. Le `noûs` a atteint un principe anhypothétique et, redescendant la Ligne, a **détruit les hypothèses**. Détruire les hypothèses, c'est trouver les `logoi` plus hauts : la théorie des Idées n'est plus hypothétique que lorsque le philosophe a établi laquelle des conceptions des Idées est la meilleure (immanentes ou transcendantes, simples ou complexes, rapport au Bien).
+
+      | | Sciences (`dianoia`) | Dialectique (`noûs`) |
+      | point de départ | des hypothèses posées | un principe anhypothétique |
+      | porte sur | les axiomes propres de chaque science | la nature de leurs propriétés et la structure des sciences |
+
+      ! Peu franchissent le pas de la conviction à la `dianoia`, bien moins que celui de l'imagination à la conviction.
+    points:
+      - id: platon-connaissance-i16-p1
+        sentence: "« Et si quelqu'un s'attaquait à l'hypothèse elle-même, tu le laisserais de côté et ne lui répondrais pas avant d'avoir examiné si les conséquences qui en découlent ___. Et quand il te faudra rendre raison de l'hypothèse elle-même, tu procéderas de la même façon : tu poseras une autre hypothèse, celle qui te paraîtra la meilleure parmi les plus hautes, jusqu'à ce que tu arrives à quelque chose de satisfaisant. » (*Phédon*, 101d)"
+        answer: "s'accordent entre elles ou se contredisent"
+        alt: []
+      - id: platon-connaissance-i16-p2
+        sentence: "« Et si quelqu'un s'attaquait à l'hypothèse elle-même, tu le laisserais de côté et ne lui répondrais pas avant d'avoir examiné si les conséquences qui en découlent s'accordent entre elles ou se contredisent. Et quand il te faudra ___, tu procéderas de la même façon : tu poseras une autre hypothèse, celle qui te paraîtra la meilleure parmi les plus hautes, jusqu'à ce que tu arrives à quelque chose de satisfaisant. » (*Phédon*, 101d)"
+        answer: "rendre raison de l'hypothèse elle-même"
+        alt: []
+      - id: platon-connaissance-i16-p3
+        sentence: "« Et si quelqu'un s'attaquait à l'hypothèse elle-même, tu le laisserais de côté et ne lui répondrais pas avant d'avoir examiné si les conséquences qui en découlent s'accordent entre elles ou se contredisent. Et quand il te faudra rendre raison de l'hypothèse elle-même, tu procéderas de la même façon : tu poseras une autre hypothèse, ___, jusqu'à ce que tu arrives à quelque chose de satisfaisant. » (*Phédon*, 101d)"
+        answer: "celle qui te paraîtra la meilleure parmi les plus hautes"
+        alt: []
+      - id: platon-connaissance-i16-p4
+        sentence: "Le passage du *Phédon* qui demande d'examiner les conséquences d'une hypothèse, puis d'en rendre raison par une hypothèse plus haute, se trouve en ___."
+        answer: "101d"
+        alt: []
+      - id: platon-connaissance-i16-p5
+        sentence: "On est tenté de voir dans l'explication téléologique par le ___ l'hypothèse la plus haute du *Phédon*, explication que Platon refuse toujours de donner."
+        answer: "Bien"
+        alt: []
+      - id: platon-connaissance-i16-p6
+        sentence: "Entre la théorie des Idées et la téléologie du Bien, il y aurait des hypothèses ___ (Rowe) : des conceptions rivales des Idées, des choses et de la participation."
+        answer: "intermédiaires"
+        alt: []
+      - id: platon-connaissance-i16-p7
+        sentence: "Parmi les conceptions rivales de la nature des Idées, Aristote pourrait défendre un réalisme ___, où certaines choses auraient des propriétés essentielles."
+        answer: "immanent"
+        alt: []
+      - id: platon-connaissance-i16-p8
+        sentence: "Si le Trois Est ce que c'est qu'être trois, mais se rapporte autrement à l'___, les Idées ne sont pas strictement simples."
+        answer: "impair"
+        alt: []
+      - id: platon-connaissance-i16-p9
+        sentence: "La théorie des Idées du *Phédon* et de la *République* est ___ : elle attend une défense qui examine la nature des Idées, le rôle du Bien et leurs relations."
+        answer: "provisoire"
+        alt: ["hypothétique"]
+      - id: platon-connaissance-i16-p10
+        sentence: "Dans la Ligne, les mathématiciens usent de la pensée discursive parce qu'ils posent comme hypothèses leurs points de départ, ___ ou définitions."
+        answer: "axiomes"
+        alt: []
+      - id: platon-connaissance-i16-p11
+        sentence: "Le `noûs`, ayant atteint un principe anhypothétique, redescend la Ligne en ___ les hypothèses."
+        answer: "détruisant"
+        alt: ["supprimant"]
+      - id: platon-connaissance-i16-p12
+        sentence: "La théorie des Idées ne cesse d'être hypothétique que lorsque le philosophe a établi laquelle des conceptions des Idées, ___ ou transcendantes, simples ou complexes, est la meilleure."
+        answer: "immanentes"
+        alt: []
+  - id: platon-connaissance-i17
+    title: "Holisme ou intuition"
+    notes: |-
+      **Les images des livres centraux ne tranchent pas : les capacités ont-elles des objets différents ?** Une analyse **par les contenus** fait des propositions les objets de l'opinion et de la science : la même proposition peut être crue ou sue, selon les raisons qu'on en a, ce qui ouvre un chemin de l'opinion à la science. Elle n'oblige pas à faire de toute science une croyance vraie justifiée : la science des Idées peut rester fondamentale.
+
+      **Intuition ou description ?** Le Soleil, la Ligne et la Caverne suggèrent une science des Idées intuitive, par accointance ; le refrain selon lequel qui sait peut rendre raison (`logos`) de ce qu'il sait suggère une connaissance par description.
+
+      | | {teal}Holisme{/teal} | {coral}Intuition{/coral} |
+      | connaître une Idée | suppose de connaître les éléments de sa définition, voire toutes les Idées | une saisie atomique, par accointance |
+      | justification | un cercle vertueux | directe |
+
+      **Le holisme** : pour savoir ce qu'est l'Homme, il faut connaître l'Animal, le Raisonnable, le Bipède, et leurs définitions, et ainsi de suite ; les genres et espèces d'une science sont les nœuds d'un réseau. L'exigence est formidable : poussé par le désir d'irréfutabilité, peut-être hérité de l'elenchos, Platon ferait qu'on ne se ressouvient vraiment d'une Idée que devenu métaphysicien. Le philosophe n'en sait pas plus en mathématiques que le mathématicien : il **assure** autrement son savoir.
+
+      **Mais Platon ne dit jamais qu'il faut savoir toutes les vérités d'une science pour connaître une Idée.** S'il y a plusieurs voies vers la science, son épistémologie peut être à la fois holiste et intuitive. Le dialogue étant fait pour appeler la pensée du lecteur, c'est à chacun de chercher par lui-même ce qu'est la science.
+    points:
+      - id: platon-connaissance-i17-p1
+        sentence: "Une analyse par les ___ fait des propositions les objets de l'opinion et de la science : la même proposition peut être crue ou sue selon les raisons qu'on en a."
+        answer: "contenus"
+        alt: []
+      - id: platon-connaissance-i17-p2
+        sentence: "Le Soleil, la Ligne et la Caverne suggèrent que la science des Idées est intuitive, une connaissance par ___."
+        answer: "accointance"
+        alt: []
+      - id: platon-connaissance-i17-p3
+        sentence: "Le refrain selon lequel celui qui sait peut rendre raison (`logos`) de ce qu'il sait suggère une connaissance par ___."
+        answer: "description"
+        alt: []
+      - id: platon-connaissance-i17-p4
+        sentence: "Pour le ___ épistémologique, connaître l'Homme suppose de connaître l'Animal, le Raisonnable et le Bipède, et ainsi de suite, voire toutes les Idées."
+        answer: "holisme"
+        alt: []
+      - id: platon-connaissance-i17-p5
+        sentence: "Pour le holisme, la justification forme un cercle ___ : les genres et espèces d'une science sont les nœuds d'un réseau."
+        answer: "vertueux"
+        alt: []
+      - id: platon-connaissance-i17-p6
+        sentence: "Selon une lecture holiste, on ne se ressouvient vraiment d'une Idée que devenu ___, c'est-à-dire en possession de la théorie générale des Idées."
+        answer: "métaphysicien"
+        alt: []
+      - id: platon-connaissance-i17-p7
+        sentence: "Le philosophe n'en sait pas plus en mathématiques que le mathématicien : il ___ autrement son savoir."
+        answer: "assure"
+        alt: ["fonde", "garantit"]
+      - id: platon-connaissance-i17-p8
+        sentence: "Le désir d'irréfutabilité, peut-être hérité de la réflexion sur l'___ socratique, pousse Platon à placer très haut les exigences de la science."
+        answer: "elenchos"
+        alt: ["elenchus", "réfutation"]
+      - id: platon-connaissance-i17-p9
+        sentence: "Platon ne dit jamais qu'il faut connaître toutes les vérités d'une science pour connaître une Idée : s'il y a plusieurs voies vers la science, son épistémologie peut être à la fois holiste et ___."
+        answer: "intuitive"
+        alt: []

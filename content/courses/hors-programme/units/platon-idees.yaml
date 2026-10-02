@@ -1,0 +1,834 @@
+# Unité classique (voir content/philosophie.md) : Platon, la métaphysique des dialogues de
+# la maturité, d'après A. Silverman, « Plato's Middle Period Metaphysics and
+# Epistemology », Stanford Encyclopedia of Philosophy, §1-8. Les citations de
+# Platon et d'Aristote sont traduites en français depuis l'anglais de l'article
+# (aucune traduction française fournie).
+
+id: platon-idees
+title: "Les Idées et les choses sensibles"
+subtitle: "Platon, Phédon, République : la métaphysique"
+icon: bulb
+color: green
+group: "Platon : la métaphysique"
+lessons:
+  - id: platon-idees-i1
+    title: "Les héritages : Parménide, Héraclite, Socrate"
+    notes: |-
+      **Trois prédécesseurs ont façonné la métaphysique et l'épistémologie de Platon : {teal}Parménide{/teal}, {coral}Héraclite{/coral} et Socrate.** Des deux premiers ne restent que des fragments, dont certains conservés par les dialogues ; Socrate n'a rien écrit, et le portrait qu'en fait Platon est notre principale source.
+
+      | Prédécesseur | Thèse | Ce que Platon en retient |
+      | Parménide | seul l'être est ; le changement est une apparence | les Idées |
+      | Héraclite | tout change ; le flux | les objets matériels |
+      | Socrate | la question « qu'est-ce que X ? » en éthique | l'universel |
+
+      **Parménide** : il n'y a et ne peut y avoir qu'une seule chose, l'être, et l'on ne peut ni penser ni dire ce qui n'est pas. Or changer, c'est devenir ce qu'on n'était pas (de non bronzé, devenir bronzé) : rien ne change, la réalité est immobile. Ses fragments ne permettent pas de trancher entre un monisme numérique strict (une seule chose) et l'idée qu'il n'y a qu'une sorte de choses, les étants.
+
+      **Héraclite**, « l'apôtre du changement » : la seule constante est le schème du changement lui-même ; croire à des entités immuables est une illusion.
+
+      **Socrate**, l'influence décisive selon la plupart des spécialistes, s'occupe presque exclusivement d'éthique, d'après Platon, Xénophon et Aristophane. Soucieux du soin de l'âme pour vivre heureux (*Apologie*, 29d-30b), il se sert de thèses métaphysiques sans chercher à en faire une théorie (Vlastos).
+
+      ! Socrate __utilise__ des notions métaphysiques au service de l'éthique ; mais savoir s'il théorise ou s'il se contente d'en user est difficile, puisque nous n'avons guère que les dialogues de Platon pour en juger.
+    points:
+      - id: platon-idees-i1-p1
+        sentence: "Pour Parménide, changer, c'est devenir ce qu'on n'était pas ; or on ne peut ni penser ni dire ce qui n'est pas : la réalité est donc immobile, et le changement n'est qu'une ___ trompeuse."
+        answer: "apparence"
+        alt: []
+      - id: platon-idees-i1-p2
+        sentence: "Les fragments de Parménide ne permettent pas de trancher : soutient-il un monisme ___ strict (une seule chose, l'être) ou seulement qu'il n'y a qu'une sorte de choses, les étants ?"
+        answer: "numérique"
+        alt: []
+      - id: platon-idees-i1-p3
+        sentence: "La conception parménidienne de l'être semble avoir contribué à la doctrine platonicienne des ___."
+        answer: "Idées"
+        alt: ["Formes"]
+      - id: platon-idees-i1-p4
+        sentence: "___, « l'apôtre du changement », tient pour une illusion l'existence d'entités immuables : la seule constante est le schème du changement lui-même."
+        answer: "Héraclite"
+        alt: []
+      - id: platon-idees-i1-p5
+        sentence: "La notion héraclitéenne de ___ semble avoir influencé la façon dont Platon pense les objets matériels ordinaires."
+        answer: "flux"
+        alt: []
+      - id: platon-idees-i1-p6
+        sentence: "Socrate, presque exclusivement occupé d'éthique, se sert de thèses métaphysiques en vue du soin de l'___, pour qu'on puisse vivre heureux (*Apologie*, 29d-30b)."
+        answer: "âme"
+        alt: []
+      - id: platon-idees-i1-p7
+        sentence: "Le passage de l'*Apologie* où Socrate fait du soin de l'âme la condition d'une vie heureuse, signe que ses thèses métaphysiques restent au service de l'éthique, se trouve en ___."
+        answer: "29d-30b"
+        alt: ["Apologie, 29d-30b"]
+      - id: platon-idees-i1-p8
+        sentence: "Selon Vlastos, Socrate ne cherche pas à formuler une ___ métaphysique ou épistémologique : il emploie des notions métaphysiques sans en faire l'objet de sa recherche."
+        answer: "théorie"
+        alt: []
+      - id: platon-idees-i1-p9
+        sentence: "Outre Platon, deux sources montrent Socrate presque exclusivement occupé d'éthique : l'historien Xénophon et le poète comique ___."
+        answer: "Aristophane"
+        alt: []
+  - id: platon-idees-i2
+    title: "La chronologie des dialogues et la question socratique"
+    notes: |-
+      **Platon fait presque toujours parler Socrate : lit-on alors les doctrines de Socrate, celles de Platon, ou ni les unes ni les autres ? C'est la « question socratique », liée à la chronologie des dialogues.** On répartit d'ordinaire ceux-ci en trois périodes :
+
+      | Période | Dialogues |
+      | de jeunesse, « socratique » | *Apologie*, *Criton*, *Euthyphron*, *Charmide*, *Ion*, *Lysis*, *Lachès*, *Hippias mineur*, *Ménexène*, *Euthydème*, *Protagoras* ; vers la fin, *Hippias majeur*, *Gorgias*, peut-être *Ménon* |
+      | intermédiaire, de la maturité | *Cratyle*, *Banquet*, *Phédon*, *République*, peut-être *Phèdre* |
+      | tardive, après la *République* | *Parménide*, *Théétète*, *Sophiste*, *Politique*, *Timée*, *Philèbe*, *Lois*, *Critias* |
+
+      **Les dialogues socratiques**, où Socrate est toujours l'interlocuteur principal, sont des enquêtes éthiques (qu'est-ce que le courage, la justice ?) censées exposer ses propres doctrines. **Ceux de la maturité exposeraient celles de Platon**, bien que Socrate y parle encore. On y trouve pour la première fois l'immortalité de l'âme (dans l'*Apologie*, Socrate ne se prononce pas), des entités appelées Idées, hors de l'espace et du temps, objets de la science et en quelque façon causes de ce qui arrive dans le monde physique, et la **réminiscence** : l'âme immortelle a vu les Idées avant d'être incarcérée dans un corps, et s'en ressouvient au prix d'un long effort.
+
+      **Platon a-t-il changé d'avis ?** Les {teal}unitaristes{/teal} (Shorey) tiennent qu'il garde ses thèses centrales d'une période à l'autre ; les {coral}évolutionnistes{/coral} (Owen), qu'il en change. La position la plus plausible, sans doute dominante aujourd'hui, est intermédiaire : sur certaines thèses Platon approfondit, découvre des difficultés, voire se dédit ; sur d'autres, il maintient ses intuitions fondamentales.
+
+      ! Les dialogues de la maturité ne donnent que les __premières__ pensées métaphysiques de Platon : les dialogues tardifs semblent en modifier des doctrines clefs.
+    points:
+      - id: platon-idees-i2-p1
+        sentence: "Platon faisant parler Socrate dans la plupart de ses dialogues, le lecteur doit se demander s'il lit les doctrines de Socrate, de Platon, ou d'aucun des deux : c'est la question ___, liée à la chronologie des dialogues."
+        answer: "socratique"
+        alt: []
+      - id: platon-idees-i2-p2
+        sentence: "Les dialogues de jeunesse sont dits ___ parce que Socrate y est toujours l'interlocuteur principal ; ce sont des enquêtes éthiques sur les vertus."
+        answer: "socratiques"
+        alt: []
+      - id: platon-idees-i2-p3
+        sentence: "Les dialogues de la maturité, où Platon expose pour la première fois l'immortalité de l'âme, les Idées et la réminiscence, sont le *Cratyle*, le *Banquet*, le *Phédon*, ___, et peut-être le *Phèdre*."
+        answer: "la République"
+        alt: ["République"]
+      - id: platon-idees-i2-p4
+        sentence: "Le *Ménon* et le ___ appartiennent à la fin de la période socratique et confinent déjà à la période de la maturité."
+        answer: "Gorgias"
+        alt: []
+      - id: platon-idees-i2-p5
+        sentence: "Dans l'*Apologie*, dialogue de jeunesse, Socrate ne se prononce pas sur l'___ de l'âme, que les dialogues de la maturité affirment pour la première fois."
+        answer: "immortalité"
+        alt: []
+      - id: platon-idees-i2-p6
+        sentence: "La doctrine de la ___ soutient que l'âme immortelle a vu les Idées avant d'être incarcérée dans un corps, et qu'elle s'en ressouvient au prix d'un long effort."
+        answer: "réminiscence"
+        alt: ["anamnèse"]
+      - id: platon-idees-i2-p7
+        sentence: "Ceux qui, comme Shorey, soutiennent que Platon garde ses thèses centrales d'une période à l'autre sont dits ___."
+        answer: "unitaristes"
+        alt: ["unitariens"]
+      - id: platon-idees-i2-p8
+        sentence: "Ceux qui, comme Owen, soutiennent que Platon change de thèses d'une période à l'autre sont dits ___."
+        answer: "évolutionnistes"
+        alt: ["développementalistes"]
+      - id: platon-idees-i2-p9
+        sentence: "Owen défend une lecture évolutionniste de Platon ; ___ représente au contraire la lecture unitariste."
+        answer: "Shorey"
+        alt: []
+      - id: platon-idees-i2-p10
+        sentence: "Le *Théétète*, le *Sophiste*, le *Timée* et les *Lois* appartiennent à la période ___ de Platon, qui semble modifier des doctrines clefs des dialogues de la maturité."
+        answer: "tardive"
+        alt: ["dernière"]
+  - id: platon-idees-i3
+    title: "De l'universel socratique à l'Idée séparée"
+    notes: |-
+      **Aristote rapporte que Platon a séparé l'universel que Socrate cherchait sans le séparer** (*Métaphysique*, M, 4, 1078b12-34) : « Socrate fut le premier à chercher l'universel dans les questions éthiques, mais il ne le sépara pas. Platon, unissant la philosophie de Socrate à celle d'Héraclite, sépara l'universel, au motif que l'ordre sensible, auquel Socrate s'était attaché, était en flux. » Platon appelle ces universaux séparés des Idées.
+
+      **Un universel est ce qui se prédique de plusieurs choses** : une boule de bowling, un ballon de basket et un cercle tracé au tableau sont tous ronds. Chaque propriété partagée est un « un sur plusieurs » : la blancheur sur les choses blanches, la rondeur sur les choses rondes.
+
+      **La méthode de Socrate est l'`elenchos`**, un interrogatoire réfutatif : il fait dire à ses interlocuteurs ce qu'ils croient de la justice ou de la piété, et montre que leurs croyances ne s'accordent pas. Au cœur, la question « qu'est-ce que X ? ». Les réponses échouent, trop {teal}étroites{/teal} (elles laissent des cas de côté) ou trop {coral}larges{/coral} (elles incluent aussi des cas de justice ou d'impiété).
+
+      **On en tire ce qu'est une propriété socratique, la Piété** : présente partout où il y a un cas de piété, elle « fait » que ce cas est tel, et elle le peut parce qu'elle est elle-même pieuse : la Piété **s'auto-prédique**. Il n'y a encore qu'un seul rapport de prédication : Socrate est pieux de la même façon que la Piété. On connaît la propriété quand on peut en rendre raison (`logos`), c'est-à-dire en donner la définition, qui en dit l'essence (`ousia`). Sans doute la Piété n'est-elle que pieuse, quand Socrate ou une prière ont bien d'autres propriétés.
+
+      **La propriété socratique est un universel immanent : elle est dans les sensibles**, si bien que la définition de la Piété se dit aussi de Socrate. « Séparer l'universel », c'est rejeter cette thèse ; et si Aristote a raison, ce qui gêne Platon dans les sensibles, c'est qu'ils changent.
+    points:
+      - id: platon-idees-i3-p1
+        sentence: "« Socrate fut le premier à chercher l'universel dans les questions éthiques, mais ___. Platon, unissant la philosophie de Socrate à celle d'Héraclite, sépara l'universel, au motif que l'ordre sensible, auquel Socrate s'était attaché, était en flux. » (Aristote, *Métaphysique*, M, 4, 1078b12-34)"
+        answer: "il ne le sépara pas"
+        alt: []
+      - id: platon-idees-i3-p2
+        sentence: "« Socrate fut le premier à chercher l'universel dans les questions éthiques, mais il ne le sépara pas. Platon, unissant la philosophie de Socrate à ___, sépara l'universel, au motif que l'ordre sensible, auquel Socrate s'était attaché, était en flux. » (Aristote, *Métaphysique*, M, 4, 1078b12-34)"
+        answer: "celle d'Héraclite"
+        alt: []
+      - id: platon-idees-i3-p3
+        sentence: "« Socrate fut le premier à chercher l'universel dans les questions éthiques, mais il ne le sépara pas. Platon, unissant la philosophie de Socrate à celle d'Héraclite, sépara l'universel, au motif que l'ordre sensible, auquel Socrate s'était attaché, ___. » (Aristote, *Métaphysique*, M, 4, 1078b12-34)"
+        answer: "était en flux"
+        alt: []
+      - id: platon-idees-i3-p4
+        sentence: "Aristote rapporte que Platon appelait ___ les universaux qu'il avait séparés des sensibles."
+        answer: "Idées"
+        alt: ["Formes"]
+      - id: platon-idees-i3-p5
+        sentence: "Un ___ est ce qui se prédique de plusieurs choses : ce qu'ont en commun une boule de bowling, un ballon et un cercle tracé au tableau, à savoir la rondeur."
+        answer: "universel"
+        alt: []
+      - id: platon-idees-i3-p6
+        sentence: "Chaque propriété partagée est un « un sur ___ » : la blancheur sur les choses blanches, la rondeur sur les choses rondes."
+        answer: "plusieurs"
+        alt: []
+      - id: platon-idees-i3-p7
+        sentence: "Dans les premiers dialogues, Socrate cherche les universaux éthiques par l'___, un interrogatoire qui fait apparaître l'incohérence des croyances de l'interlocuteur."
+        answer: "elenchos"
+        alt: ["elenchus", "élenchos", "réfutation"]
+      - id: platon-idees-i3-p8
+        sentence: "Au cœur de l'elenchos se trouve la question « ___ ? », où X nomme d'ordinaire une propriété éthique comme la piété ou le courage."
+        answer: "qu'est-ce que X"
+        alt: ["Qu'est-ce que X"]
+      - id: platon-idees-i3-p9
+        sentence: "Une réponse à la question « qu'est-ce que la piété ? » est trop ___ quand elle laisse de côté certains cas de piété."
+        answer: "étroite"
+        alt: []
+      - id: platon-idees-i3-p10
+        sentence: "Une réponse à la question « qu'est-ce que la piété ? » est trop ___ quand, tout en couvrant tous les cas de piété, elle inclut aussi des cas de justice ou d'impiété."
+        answer: "large"
+        alt: []
+      - id: platon-idees-i3-p11
+        sentence: "La Piété peut rendre Socrate pieux parce qu'elle est elle-même pieuse : la propriété socratique s'___."
+        answer: "auto-prédique"
+        alt: ["autoprédique"]
+      - id: platon-idees-i3-p12
+        sentence: "Dans les dialogues socratiques, Platon ne distingue pas la façon dont Socrate est pieux de celle dont la Piété est pieuse : il n'y a qu'un seul rapport de ___ ontologique."
+        answer: "prédication"
+        alt: []
+      - id: platon-idees-i3-p13
+        sentence: "On connaît une propriété socratique quand on peut en rendre raison (`logos`), c'est-à-dire en donner la définition, qui en dit l'___ (`ousia`)."
+        answer: "essence"
+        alt: []
+      - id: platon-idees-i3-p14
+        sentence: "La propriété socratique est un universel ___ : elle est dans les sensibles, si bien que la définition de la Piété se dit aussi de Socrate."
+        answer: "immanent"
+        alt: []
+      - id: platon-idees-i3-p15
+        sentence: "Si Aristote a raison, ce qui disqualifie les sensibles aux yeux de Platon, et le pousse à séparer l'universel, c'est qu'ils ___."
+        answer: "changent"
+        alt: []
+  - id: platon-idees-i4
+    title: "Le Phédon : les Idées, êtres par soi"
+    notes: |-
+      Le *Phédon*, éloge funèbre de Socrate, **veut convaincre qu'il faut prendre soin de son âme, et que la meilleure façon d'en prendre soin est de vivre en philosophe.** Il enchaîne pour cela des preuves de l'immortalité de l'âme, dont trois sont décisives pour la métaphysique et l'épistémologie :
+
+      | Argument | Lieu |
+      | la réminiscence, avec son prélude | 65a-67a et 72e-78b |
+      | l'affinité | 78b-84b |
+      | le dernier argument, avec son prélude | 95a-102a et 102a-107a |
+
+      **Platon n'y décrit jamais en détail la nature des Idées, ni celle des choses particulières, ni leur rapport : la « théorie des Idées » est une reconstruction rationnelle**, qui cherche les principes d'où suit ce qu'il en dit, au risque de lui prêter des notions qui ne sont pas les siennes. Ainsi du particulier, qu'on définirait comme ce dont des propriétés se prédiquent et qui ne se prédique de rien : définition stipulée, absente de Platon.
+
+      **Le point de départ : l'âme cherche à être séparée (`chôris`) du corps**, qui la gêne et la distrait, pour être elle-même par elle-même (64c5-8) : les sens n'apportent aucune vérité (65a-d). Puis vient le premier passage dont on s'accorde à dire qu'il introduit les Idées (65d4-66a3) : la justice en soi, le beau, le bon ne se voient pas par les yeux, ni par aucun sens corporel. « Je parle de toutes, par exemple de la grandeur, de la santé, de la force, en un mot de l'essence (`ousia`) de toutes, de ce que chacune se trouve être. » On les saisit au mieux ainsi : « […] celui qui, se servant de la pensée elle-même par elle-même, sans mélange, entreprendrait de traquer chacun des êtres, lui-même par lui-même, sans mélange. »
+
+      **Les Idées sont donc des êtres par soi (`auto kath' hauto`) : elles sont ce qu'elles sont en vertu d'elles-mêmes.**
+    points:
+      - id: platon-idees-i4-p1
+        sentence: "Le *Phédon* veut convaincre que la meilleure façon de prendre soin de son âme est de vivre en ___ ; il enchaîne pour cela des preuves de l'immortalité de l'âme."
+        answer: "philosophe"
+        alt: []
+      - id: platon-idees-i4-p2
+        sentence: "Dans le *Phédon*, l'argument de la réminiscence, qui fait des Idées des modèles parfaits auxquels les choses s'efforcent de ressembler, se trouve en ___."
+        answer: "72e-78b"
+        alt: []
+      - id: platon-idees-i4-p3
+        sentence: "Dans le *Phédon*, l'argument de l'affinité, qui oppose les Idées simples aux choses composées et multiformes, se trouve en ___."
+        answer: "78b-84b"
+        alt: []
+      - id: platon-idees-i4-p4
+        sentence: "Dans le *Phédon*, le dernier argument pour l'immortalité de l'âme, qui pose l'hypothèse des Idées pour expliquer la génération et la destruction, se trouve en ___, après son prélude (95a-102a)."
+        answer: "102a-107a"
+        alt: []
+      - id: platon-idees-i4-p5
+        sentence: "Platon ne décrivant nulle part en détail la nature des Idées ni celle des choses particulières, la « théorie des Idées » est une ___ rationnelle, au risque de lui prêter des notions qui ne sont pas les siennes."
+        answer: "reconstruction"
+        alt: []
+      - id: platon-idees-i4-p6
+        sentence: "Définir le particulier comme ce dont des propriétés se prédiquent et qui ne se prédique de rien est une définition ___ : elle ne se trouve pas chez Platon, même si elle rend peut-être sa pensée."
+        answer: "stipulée"
+        alt: []
+      - id: platon-idees-i4-p7
+        sentence: "Au début du *Phédon*, l'âme cherche à être ___ du corps (`chôris`), qui la gêne et la distrait, pour être elle-même par elle-même et saisir au mieux la vérité."
+        answer: "séparée"
+        alt: []
+      - id: platon-idees-i4-p8
+        sentence: "Dans le *Phédon*, les sens ne fournissent aucune ___ : l'âme raisonne au mieux quand elle est elle-même par elle-même, sans contact avec le corps (65a-d)."
+        answer: "vérité"
+        alt: []
+      - id: platon-idees-i4-p9
+        sentence: "Le passage du *Phédon* que l'on s'accorde à tenir pour la première introduction des Idées, où la justice en soi, le beau et le bon ne se saisissent par aucun sens corporel, se trouve en ___."
+        answer: "65d-66a"
+        alt: ["65d4-66a3", "65d"]
+      - id: platon-idees-i4-p10
+        sentence: "« Je parle de toutes, par exemple de la grandeur, de la santé, de la force, en un mot de ___ (`ousia`) de toutes, de ce que chacune se trouve être. » (*Phédon*, 65d4-66a3)"
+        answer: "l'essence"
+        alt: []
+      - id: platon-idees-i4-p11
+        sentence: "« […] celui qui, se servant de ___, sans mélange, entreprendrait de traquer chacun des êtres, lui-même par lui-même, sans mélange. » (*Phédon*, 65d4-66a3)"
+        answer: "la pensée elle-même par elle-même"
+        alt: []
+      - id: platon-idees-i4-p12
+        sentence: "« […] celui qui, se servant de la pensée elle-même par elle-même, sans mélange, entreprendrait ___, lui-même par lui-même, sans mélange. » (*Phédon*, 65d4-66a3)"
+        answer: "de traquer chacun des êtres"
+        alt: []
+      - id: platon-idees-i4-p13
+        sentence: "Première détermination des Idées dans le *Phédon* : ce sont des êtres ___ (`auto kath' hauto`), qui sont ce qu'ils sont en vertu d'eux-mêmes."
+        answer: "par soi"
+        alt: ["en soi", "en soi et par soi"]
+  - id: platon-idees-i5
+    title: "Le Phédon : l'hypothèse des Idées, être et participer"
+    notes: |-
+      Les arguments suivants du *Phédon* **précisent les traits des Idées.**
+      - La réminiscence : elles sont **parfaites**, et les choses particulières s'efforcent de leur ressembler sans y parvenir.
+      - L'affinité : elles sont **simples**, incomposées, d'une seule forme (`monoeides`), quand les choses sont composées, divisibles et multiformes.
+      - Le dernier argument : Platon pose enfin l'**hypothèse des Idées** pour expliquer la génération et la destruction, c'est-à-dire le changement en général.
+
+      Cébès accepte l'hypothèse ; Socrate en tire une conséquence nouvelle (100c3-7) : « Eh bien, examine ce qui s'ensuit si tu acceptes aussi mon hypothèse. Car il me semble que, si quelque chose d'autre est beau en dehors du Beau en soi, il n'est beau pour aucune autre raison que parce qu'il participe de ce Beau en soi. Et je dis la même chose de tout le reste. Acceptes-tu ce genre de cause ou d'explication ? »
+
+      **Deux rapports de prédication apparaissent ici.** Il semble y avoir deux sortes de sujets, les Idées et les choses matérielles, et une Idée pour chaque propriété en jeu dans les changements des choses : Hélène devient belle, il y a donc le Beau en soi.
+
+      | Rapport | Sujet | Exemple |
+      | {teal}Participation{/teal} | une chose matérielle | Hélène est belle parce qu'elle participe du Beau |
+      | {violet}Être{/violet} | une Idée | le Beau en soi, qui n'est pas « autre que le Beau », est beau |
+
+      **Les Idées héritent ainsi des propriétés socratiques leur auto-prédication** : le Beau est beau, la Justice juste, l'Égalité égale. Participer du Beau rend Hélène belle __parce que__ le Beau en soi est beau.
+
+      ! Comprendre l'Être, la façon dont le Beau est beau, c'est-à-dire ce que c'est pour une Idée de s'auto-prédiquer, est le cœur de la théorie des Idées et de la métaphysique de la maturité.
+    points:
+      - id: platon-idees-i5-p1
+        sentence: "Dans l'argument de la réminiscence du *Phédon*, les Idées sont dites ___ : les choses particulières s'efforcent de leur ressembler sans y parvenir."
+        answer: "parfaites"
+        alt: []
+      - id: platon-idees-i5-p2
+        sentence: "Dans l'argument de l'affinité, les Idées sont simples, ou incomposées, et d'une seule forme, ___ en grec, alors que les choses sont composées, divisibles et multiformes."
+        answer: "monoeides"
+        alt: ["monoeidês", "monoeidès"]
+      - id: platon-idees-i5-p3
+        sentence: "Le dernier argument du *Phédon* pose l'hypothèse des Idées pour expliquer la ___ et la destruction, c'est-à-dire le changement en général."
+        answer: "génération"
+        alt: []
+      - id: platon-idees-i5-p4
+        sentence: "« Eh bien, examine ce qui s'ensuit si tu acceptes aussi mon hypothèse. Car il me semble que, si quelque chose d'autre est beau ___, il n'est beau pour aucune autre raison que parce qu'il participe de ce Beau en soi. Et je dis la même chose de tout le reste. » (*Phédon*, 100c3-7)"
+        answer: "en dehors du Beau en soi"
+        alt: []
+      - id: platon-idees-i5-p5
+        sentence: "« Eh bien, examine ce qui s'ensuit si tu acceptes aussi mon hypothèse. Car il me semble que, si quelque chose d'autre est beau en dehors du Beau en soi, il n'est beau pour aucune autre raison que ___. Et je dis la même chose de tout le reste. » (*Phédon*, 100c3-7)"
+        answer: "parce qu'il participe de ce Beau en soi"
+        alt: []
+      - id: platon-idees-i5-p6
+        sentence: "Le passage du *Phédon* qui énonce que toute chose belle autre que le Beau en soi n'est belle que parce qu'elle participe du Beau en soi se trouve en ___."
+        answer: "100c"
+        alt: ["100c3-7"]
+      - id: platon-idees-i5-p7
+        sentence: "Hélène, chose matérielle, est belle par ___ du Beau en soi."
+        answer: "participation"
+        alt: []
+      - id: platon-idees-i5-p8
+        sentence: "Le Beau en soi, n'étant pas « autre que le Beau », ne ___ pas du Beau : il est beau, tout simplement."
+        answer: "participe"
+        alt: []
+      - id: platon-idees-i5-p9
+        sentence: "Le *Phédon* introduit deux rapports de prédication : la Participation, qui lie les choses particulières aux Idées, et l'___, qui lie chaque Idée à la propriété qu'elle est."
+        answer: "Être"
+        alt: ["être"]
+      - id: platon-idees-i5-p10
+        sentence: "Les Idées héritent des propriétés socratiques leur ___ : le Beau est beau, la Justice est juste, l'Égalité est égale."
+        answer: "auto-prédication"
+        alt: ["autoprédication"]
+  - id: platon-idees-i6
+    title: "L'auto-prédication : trois lectures"
+    notes: |-
+      **Que veut dire « le Juste est juste » ?** Le sujet, « le Juste », et le prédicat, « juste », semblent renvoyer à la même chose, l'Idée de Justice. Toute la question porte sur la **copule** : comment l'Idée se rapporte-t-elle à elle-même ?
+
+      | Lecture | Le « est » de « le Beau est beau » | Tenants |
+      | {teal}caractérisation{/teal} | le Beau est une chose belle, comme Hélène | Vlastos ; variante approximationniste : Malcolm |
+      | {violet}identité{/violet} | l'Idée est identique à son essence | Cherniss, Allen |
+      | {coral}prédicationniste{/coral} | un rapport primitif, l'Être, entre l'Idée et son essence | Nehamas, Code, Silverman |
+
+      **La caractérisation** (Vlastos) : la Justice est juste comme Socrate est juste, le Cercle en soi est rond comme un ballon ; le Beau figure dans l'inventaire des choses belles, aux côtés d'Hélène. **Variante approximationniste** (Malcolm) : l'Idée est l'exemplaire parfait de la propriété, la chose qui en participe un exemplaire imparfait, comme un cercle tracé n'est pas parfaitement circulaire. Mais alors la beauté d'Hélène n'est pas celle du Beau : ou bien les choses belles n'ont rien en commun, et il n'y a plus d'« un sur plusieurs » à poser ; ou bien il faut une Idée de la Beauté imparfaite. Aucune issue n'est heureuse. **Autre variante** : le Beau est beau et seulement beau, d'une seule forme (78b), quand Hélène est aussi femme, et infidèle.
+
+      **L'identité** (Cherniss, Allen) : le « est » est d'identité ; l'Idée est son essence, et le Beau ne figure pas parmi les choses belles.
+
+      **La lecture prédicationniste** refuse aussi la caractérisation et admet au bout du compte l'identité de l'Idée et de son essence, mais ne lit pas l'énoncé comme une identité : il affirme un **rapport ontologique primitif**, l'Être, qui n'est expliqué par aucun rapport plus fondamental. La Participation caractérise (Hélène, en participant du Beau, devient belle) ; l'Être ne caractérise jamais.
+
+      ! Le « est » de l'auto-prédication n'est pas forcément celui de « Hélène est belle » : c'est tout l'enjeu du débat.
+    points:
+      - id: platon-idees-i6-p1
+        sentence: "Dans « le Juste est juste », sujet et prédicat semblent renvoyer à la même Idée : le débat sur l'auto-prédication porte donc sur la ___, c'est-à-dire sur la façon dont l'Idée se rapporte à elle-même."
+        answer: "copule"
+        alt: []
+      - id: platon-idees-i6-p2
+        sentence: "Pour ___, la Justice est juste de la même façon que Socrate est juste : le Beau figure dans l'inventaire des choses belles, aux côtés d'Hélène."
+        answer: "Vlastos"
+        alt: []
+      - id: platon-idees-i6-p3
+        sentence: "La lecture de Vlastos, pour qui le Beau est beau comme Hélène est belle, comprend la copule de l'auto-prédication comme une ___."
+        answer: "caractérisation"
+        alt: []
+      - id: platon-idees-i6-p4
+        sentence: "Pour la lecture ___ (Malcolm), l'Idée est l'exemplaire parfait de la propriété, et la chose qui en participe un exemplaire imparfait, comme un cercle tracé n'est pas parfaitement circulaire."
+        answer: "approximationniste"
+        alt: []
+      - id: platon-idees-i6-p5
+        sentence: "Malcolm admet avec Vlastos la lecture caractérisante du « est », mais nie que la propriété de l'Idée et celle de la chose particulière soient exactement les ___."
+        answer: "mêmes"
+        alt: []
+      - id: platon-idees-i6-p6
+        sentence: "Objection à la lecture approximationniste : si les choses belles n'ont que des beautés imparfaites, ou bien elles n'ont rien en commun, ou bien il faut poser une Idée de la Beauté ___."
+        answer: "imparfaite"
+        alt: []
+      - id: platon-idees-i6-p7
+        sentence: "Une variante de la caractérisation s'appuie sur ce que le *Phédon* dit des Idées, d'une seule forme (78b) : le Beau est ___ beau, alors qu'Hélène est aussi femme et infidèle."
+        answer: "seulement"
+        alt: ["uniquement", "simplement"]
+      - id: platon-idees-i6-p8
+        sentence: "Pour la lecture de Cherniss et Allen, le « est » de « le Beau en soi est beau » est un « est » d'___ entre l'Idée et son essence."
+        answer: "identité"
+        alt: []
+      - id: platon-idees-i6-p9
+        sentence: "Pour Cherniss et ___, l'auto-prédication affirme l'identité de l'Idée et de son essence, et exclut le Beau de la liste des choses belles."
+        answer: "Allen"
+        alt: []
+      - id: platon-idees-i6-p10
+        sentence: "La lecture prédicationniste (Nehamas, Code, Silverman) voit dans l'auto-prédication un rapport ontologique ___, l'Être, entre l'Idée et son essence : il n'est expliqué par aucun rapport plus fondamental."
+        answer: "primitif"
+        alt: []
+      - id: platon-idees-i6-p11
+        sentence: "Selon la lecture prédicationniste, la Participation caractérise la chose particulière (Hélène, en participant du Beau, devient belle), tandis que l'___, rapport de l'Idée à son essence, ne caractérise jamais."
+        answer: "Être"
+        alt: ["être"]
+      - id: platon-idees-i6-p12
+        sentence: "Les trois lectures de l'auto-prédication sont la caractérisation (Vlastos), l'identité (Cherniss, Allen) et la lecture ___ (Nehamas, Code, Silverman)."
+        answer: "prédicationniste"
+        alt: ["prédicationnelle"]
+  - id: platon-idees-i7
+    title: "La simplicité des Idées"
+    notes: |-
+      **Les Idées sont dites unes (`hen`) ou d'une seule forme (`monoeides`), surtout dans l'argument de l'affinité : la seule chose qui se dise d'une Idée serait elle-même** (*Phédon*, 78b-84b). La Justice est juste, et n'est rien d'autre que juste. Des raisons épistémologiques appuient cette lecture (voir la réminiscence).
+
+      **Mais deux séries de textes empêchent une simplicité stricte.**
+      - Le Bien : la *République* rapporte toutes les Idées au Bien ; Platon semble tenu de dire que chaque Idée est bonne.
+      - La définition : chercher ce qu'est la Justice, c'est chercher une formule trouvée au terme d'une longue étude, comme le savant cherche ce qu'est l'or. Les énoncés d'auto-prédication sont des **billets à ordre** : dire « la Justice est juste », c'est s'engager à découvrir sa nature. Or la définition complète sera complexe.
+
+      | Définition | Où |
+      | la chaleur est l'énergie cinétique moléculaire moyenne | exemple moderne |
+      | la justice est le fait de faire ce qui est sien | *République*, 441d |
+      | le nom est un instrument qui instruit et sépare la nature | *Cratyle*, 388b |
+      | l'homme est un animal bipède raisonnable | jamais dit par Platon |
+
+      **Le progrès philosophique doit apprendre non que la Justice est juste, mais ce qu'est la Justice** : à un certain niveau, les Idées ne peuvent être strictement simples. Or, avec deux rapports de prédication seulement, on ne sait plus si les Idées __participent__ des propriétés qui leur sont liées ou si elles __sont__ ces propriétés.
+    points:
+      - id: platon-idees-i7-p1
+        sentence: "Dans l'argument de l'affinité, les Idées sont dites unes (`hen`) ou d'une seule forme, ce qui suggère que la seule chose qui se dise d'une Idée est ___ : la Justice n'est rien d'autre que juste."
+        answer: "elle-même"
+        alt: []
+      - id: platon-idees-i7-p2
+        sentence: "Première raison de douter de la simplicité stricte des Idées : la *République* rapporte toutes les Idées au ___, si bien que chacune semble être bonne."
+        answer: "Bien"
+        alt: []
+      - id: platon-idees-i7-p3
+        sentence: "Seconde raison de douter de la simplicité stricte des Idées : la ___ complète d'une Idée, une fois découverte, sera complexe."
+        answer: "définition"
+        alt: []
+      - id: platon-idees-i7-p4
+        sentence: "Les énoncés d'auto-prédication, comme « la Justice est juste », sont des ___ : ils engagent à découvrir plus tard la définition complète de l'Idée."
+        answer: "billets à ordre"
+        alt: ["promesses"]
+      - id: platon-idees-i7-p5
+        sentence: "Dans la *République*, la justice se définit comme le fait de faire ce qui est ___, définition complexe qui montre que l'Idée de Justice n'est pas strictement simple."
+        answer: "sien"
+        alt: ["à soi"]
+      - id: platon-idees-i7-p6
+        sentence: "La définition de la justice comme le fait de faire ce qui est sien, exemple de définition complexe d'une Idée, se trouve dans la *République*, en ___."
+        answer: "441d"
+        alt: []
+      - id: platon-idees-i7-p7
+        sentence: "Dans le *Cratyle* (388b), le nom est défini comme un ___ qui instruit et sépare la nature des choses."
+        answer: "instrument"
+        alt: ["outil"]
+      - id: platon-idees-i7-p8
+        sentence: "Le progrès philosophique doit apprendre non que la Justice est juste, mais ___ la Justice : à un certain niveau, les Idées ne peuvent donc être strictement simples."
+        answer: "ce qu'est"
+        alt: []
+      - id: platon-idees-i7-p9
+        sentence: "Faute d'un troisième rapport de prédication, on ne sait plus si une Idée ___ des propriétés qui lui sont liées, comme être bonne, ou si elle est ces propriétés."
+        answer: "participe"
+        alt: []
+      - id: platon-idees-i7-p10
+        sentence: "La formule « animal bipède raisonnable », que Platon ne donne jamais, illustrerait la complexité de la définition de l'Idée d'___."
+        answer: "Homme"
+        alt: ["homme"]
+  - id: platon-idees-i8
+    title: "La séparation des Idées"
+    notes: |-
+      **Le meilleur fil conducteur : chaque Idée est ce qu'elle est par elle-même, c'est un être par soi (`auto kath' hauto`).** Demander « qu'est-ce que F ? », c'est chercher ce qu'est F indépendamment de ses exemplaires matériels, et en un sens de toute autre chose, autre Idée ou âme. Ce qu'une Idée est par elle-même, elle l'est en vertu de son essence (`ousia`) : la *République* le dit par la formule de l'être qui est « complètement » ou « parfaitement » (477 s.), et les énoncés d'auto-prédication le disent aussi.
+
+      **Pour la lecture prédicationniste, le rapport entre une Idée et son essence est l'Être** (Code), qu'on écrit avec une majuscule : la Justice Est juste. Le prédicat donne la définition réelle de l'Idée, « ce que c'est qu'être F » (Nehamas). Deux principes règlent ce rapport :
+      - I. Chaque essence est l'essence d'une seule Idée.
+      - II. Chaque Idée a, ou est, une seule essence.
+      Le principe II donne son sens ontologique à `monoeides` : « d'une seule essence ».
+
+      **L'auto-prédication devient un principe constitutif de la théorie des Idées** : toute Idée doit Être son essence. Une Idée Est quelque chose, qu'une chose particulière en participe ou non, et même si aucune ne le peut : elle est séparée de tout exemplaire. Et comme son essence se dit d'elle indépendamment de notre connaissance et des autres Idées, elle ne dépend de rien.
+
+      | Séparation | Critère |
+      | {teal}définitionnelle{/teal} | l'essence se dit de l'Idée, et non de ce dont elle est séparée |
+      | {coral}existentielle{/coral} | l'Idée existe à part de tout le reste |
+
+      **Être une essence étant, aux yeux de Platon, la façon suprême d'être, les Idées sont sans doute séparées aux deux sens.**
+    points:
+      - id: platon-idees-i8-p1
+        sentence: "Le meilleur guide pour comprendre la séparation des Idées est que chacune est ce qu'elle est ___, ce qu'exprime la formule `auto kath' hauto`."
+        answer: "par elle-même"
+        alt: ["par soi", "en soi"]
+      - id: platon-idees-i8-p2
+        sentence: "Demander « qu'est-ce que F ? », c'est chercher ce qu'est F indépendamment de ses exemplaires ___, et en un sens de toute autre chose, autre Idée ou âme."
+        answer: "matériels"
+        alt: ["sensibles"]
+      - id: platon-idees-i8-p3
+        sentence: "La *République* exprime le lien entre une Idée et son essence par la formule de l'être qui est « ___ » ou « parfaitement » (477 s.)."
+        answer: "complètement"
+        alt: []
+      - id: platon-idees-i8-p4
+        sentence: "Pour la lecture prédicationniste, le rapport qui relie une essence à l'Idée dont elle est l'essence est l'___, qu'on écrit avec une majuscule : « la Justice Est juste »."
+        answer: "Être"
+        alt: ["être"]
+      - id: platon-idees-i8-p5
+        sentence: "Nehamas résume la définition réelle d'une Idée F par la formule « ce que c'est qu'___ F »."
+        answer: "être"
+        alt: []
+      - id: platon-idees-i8-p6
+        sentence: "Premier des deux principes qui règlent le rapport de l'Idée à son essence : chaque essence est l'essence d'une ___ Idée."
+        answer: "seule"
+        alt: ["unique"]
+      - id: platon-idees-i8-p7
+        sentence: "Second principe du rapport de l'Idée à son essence : chaque Idée a, ou est, une seule essence ; il donne son sens ontologique au terme grec ___, « d'une seule essence »."
+        answer: "monoeides"
+        alt: ["monoeidês", "monoeidès"]
+      - id: platon-idees-i8-p8
+        sentence: "Si toute Idée doit Être son essence, l'auto-prédication devient un principe ___ de la théorie des Idées."
+        answer: "constitutif"
+        alt: []
+      - id: platon-idees-i8-p9
+        sentence: "Une Idée Est son essence, qu'une chose particulière en participe ou non : elle est donc ___ de tout exemplaire."
+        answer: "séparée"
+        alt: ["indépendante"]
+      - id: platon-idees-i8-p10
+        sentence: "Séparation ___ : une Idée est séparée d'une chose quand l'essence se dit de l'Idée et ne se dit pas de cette chose."
+        answer: "définitionnelle"
+        alt: []
+      - id: platon-idees-i8-p11
+        sentence: "Être une essence étant, aux yeux de Platon, la façon suprême d'être, les Idées sont sans doute séparées au sens définitionnel et aussi au sens ___ : elles existent à part de tout le reste."
+        answer: "existentiel"
+        alt: []
+  - id: platon-idees-i9
+    title: "L'étendue des Idées : les propriétés incomplètes"
+    notes: |-
+      **Y a-t-il une Idée pour chaque propriété ?** Les dialogues de la maturité argumentent rarement l'existence d'une Idée, et n'en traitent qu'un petit nombre : les vertus étudiées par Socrate, la Beauté, l'Égalité, le Chaud et le Froid, la Grandeur. L'argument de la réminiscence, ceux de la *République* sur les objets de la science (V, 477 s.) et sur les perceptions qui appellent la pensée (VII, 523 s.), l'ascension vers le Beau du *Banquet* et le dernier argument du *Phédon* visent tous des **propriétés incomplètes** (Fine, Irwin).
+
+      **Une propriété incomplète donne, comme prédicat, un énoncé qu'on ne comprend pas seul** : il faut le compléter, d'ordinaire par un complément. « Shaquille O'Neal est grand » : grand pour un homme, non comparé à un arbre.
+
+      **Le problème qu'elles posent : la {coral}coprésence des contraires{/coral}.** Toute chose sensible qui est F est aussi, en un sens, non-F : la vache Elsie est grande comparée à son veau, non grande comparée au taureau Elmer. Platon cherche un porteur **sans réserve** de la grandeur ; aucune chose sensible n'en est un ; il pose donc la Grandeur en soi.
+
+      **Être brune ou être une vache ne souffrent pas la coprésence** : Elsie est une vache, et non pas non-vache. En termes modernes, être une vache est une propriété essentielle d'Elsie, être brune une propriété accidentelle : les Idées ne vaudraient que pour un sous-ensemble des propriétés accidentelles, celles qui n'ont aucun porteur sans réserve. Pour certains lecteurs, Platon croit donc à bien des propriétés, mais ne s'engage théoriquement que sur des Idées de propriétés incomplètes.
+
+      **La notion clef est d'être complètement** : Elsie est complètement une vache, la Grandeur complètement grande, porteur complet d'une propriété incomplète.
+
+      ! Cette lecture restreint l'étendue des Idées sans trancher la nature de l'auto-prédication.
+    points:
+      - id: platon-idees-i9-p1
+        sentence: "Les arguments des dialogues de la maturité (réminiscence, *République* V et VII, *Banquet*, dernier argument du *Phédon*) visent tous des propriétés dites ___ (Fine, Irwin)."
+        answer: "incomplètes"
+        alt: []
+      - id: platon-idees-i9-p2
+        sentence: "Une propriété incomplète donne, comme prédicat, un énoncé qu'on ne comprend pas seul : « Shaquille O'Neal est grand » doit être complété par « pour un ___ »."
+        answer: "homme"
+        alt: ["humain"]
+      - id: platon-idees-i9-p3
+        sentence: "Le phénomène par lequel toute chose sensible qui est F est aussi, en un sens, non-F s'appelle la ___ des contraires."
+        answer: "coprésence"
+        alt: ["co-présence"]
+      - id: platon-idees-i9-p4
+        sentence: "La vache Elsie est grande comparée à son ___, mais non grande comparée au taureau Elmer : exemple de coprésence des contraires."
+        answer: "veau"
+        alt: []
+      - id: platon-idees-i9-p5
+        sentence: "Platon cherche un porteur ___ de la grandeur ; aucune chose sensible n'en étant un, à cause de la coprésence des contraires, il pose la Grandeur en soi."
+        answer: "sans réserve"
+        alt: ["sans restriction"]
+      - id: platon-idees-i9-p6
+        sentence: "Être une vache ne souffre pas la coprésence des contraires : en termes modernes, c'est une propriété ___ d'Elsie, alors qu'être brune est accidentel."
+        answer: "essentielle"
+        alt: []
+      - id: platon-idees-i9-p7
+        sentence: "Pour qui limite les Idées aux propriétés incomplètes, elles ne valent que pour un sous-ensemble des propriétés ___ : celles qui n'ont aucun porteur sans réserve."
+        answer: "accidentelles"
+        alt: []
+      - id: platon-idees-i9-p8
+        sentence: "Pour les partisans des Idées des seules propriétés incomplètes, la notion clef est d'être ___ : la Grandeur est porteur complet d'une propriété incomplète."
+        answer: "complètement"
+        alt: []
+      - id: platon-idees-i9-p9
+        sentence: "L'ascension vers le Beau, l'un des textes de la maturité qui visent les propriétés incomplètes, se trouve dans le ___."
+        answer: "Banquet"
+        alt: []
+  - id: platon-idees-i10
+    title: "Image et copie : les traits des choses sensibles"
+    notes: |-
+      **Des métaphores gouvernent le rapport des choses aux Idées : image et original, copie et modèle, exemple et paradigme.** Le monde physique est une copie des Idées ; toute copie dépend de son original ; et puisque les Idées ne sont pas des universaux immanents, la dépendance est **à sens unique**. Le *Phédon* ajoute une autre métaphore : les choses **s'efforcent** d'être telles que les Idées, et leur restent pour cela imparfaites.
+
+      **L'argument de l'affinité (78b-84b) oppose les deux sortes d'êtres par des traits qui vont par paires :**
+
+      | Idées | Choses particulières |
+      | immatérielles, sans lieu, hors du temps | matérielles, étendues dans l'espace et le temps |
+      | immuables, peut-être même sans changement de Cambridge | changeantes, peut-être en flux héraclitéen total |
+      | simples, uniformes (`monoeides`, `hen`) | composées (`suntheton`), multiformes |
+      | objets de la science, saisies par l'intellect | objets des sens et de l'opinion |
+      | ne peuvent être conçues non-F | paraissent, et sont peut-être, F et non-F |
+
+      **Un changement de Cambridge est un changement purement relationnel** : être pensée par une âme à tel moment, puis non. Les Idées n'en subissent peut-être même pas. Les choses, elles, changent peut-être en tout point et à tout instant.
+
+      ! Les choses dépendent des Idées, non l'inverse : c'est ce qui les rend __déficientes__.
+    points:
+      - id: platon-idees-i10-p1
+        sentence: "Parmi les métaphores qui gouvernent le rapport des choses aux Idées : image et original, copie et ___, exemple et paradigme."
+        answer: "modèle"
+        alt: []
+      - id: platon-idees-i10-p2
+        sentence: "Le monde physique est une copie des Idées ; toute copie dépendant de son original, et les Idées ne dépendant pas des choses, la dépendance est à sens ___."
+        answer: "unique"
+        alt: []
+      - id: platon-idees-i10-p3
+        sentence: "Selon une métaphore du *Phédon*, les choses particulières ___ d'être telles que les Idées, et leur restent pour cela imparfaites."
+        answer: "s'efforcent"
+        alt: ["aspirent", "tendent"]
+      - id: platon-idees-i10-p4
+        sentence: "Les Idées ne subissent peut-être même pas de changement de ___, changement purement relationnel, comme le fait d'être pensées par une âme à divers moments."
+        answer: "Cambridge"
+        alt: []
+      - id: platon-idees-i10-p5
+        sentence: "Les choses particulières sont peut-être sujettes à un changement en tout point et à tout instant, un flux ___ total."
+        answer: "héraclitéen"
+        alt: []
+      - id: platon-idees-i10-p6
+        sentence: "Les choses particulières sont objets des sens et de l'___ ; les Idées sont objets de la science, saisies par l'intellect."
+        answer: "opinion"
+        alt: ["croyance"]
+      - id: platon-idees-i10-p7
+        sentence: "Une chose particulière paraît, et peut-être est, à la fois F et non-F : elle souffre de la ___ des contraires, dont l'Idée de F est exempte."
+        answer: "coprésence"
+        alt: ["co-présence"]
+      - id: platon-idees-i10-p8
+        sentence: "Par opposition aux Idées simples et uniformes, les choses particulières sont des ___ (`suntheton`), multiformes."
+        answer: "composés"
+        alt: ["composées"]
+  - id: platon-idees-i11
+    title: "D'où vient la déficience des choses ?"
+    notes: |-
+      **Aristote indique que le changement et l'essence sont au cœur de la déficience des choses** : « Socrate chercha l'universel en elles et se tourna vers les définitions. Platon, acceptant cela, pensa que cela [définir] porte sur d'autres choses, et non sur les sensibles. Car il est impossible que la définition commune porte sur l'un des sensibles, puisqu'ils changent toujours. » (*Métaphysique*, A, 6, 987b1-7). La recherche du savoir mène d'abord aux définitions ; Platon pensa qu'on ne pouvait les trouver dans les sensibles, toujours changeants.
+
+      **Trois explications de la déficience des choses :**
+
+      | Explication | Argument | Difficulté |
+      | le {coral}changement{/coral} (Aristote) | la science porte sur l'essence ; l'essence exclut le changement ; les choses n'ont pas d'essence | trop rapide : certaines choses ont peut-être des propriétés essentielles |
+      | la {teal}complexité{/teal} (*Phédon* 74 s., 78 s. ; *République* 476e-479, 523a s.) | une chose qui est F et G est F et non-F, puisque le G n'est pas F : l'esprit n'arrive pas à isoler F | une Idée qui aurait plusieurs propriétés serait inconnaissable elle aussi |
+      | la {violet}contingence{/violet} (Vlastos, Code) | les propriétés des choses leur sont contingentes, celles des Idées y tiennent par une « colle logique » | aucune essence pour les choses |
+
+      **Si l'on insiste sur la complexité, on peut accorder des essences à certaines choses**, et donc une science de « Socrate est un homme ». **Silverman doute, contre Fine, que la coprésence ou la seule complexité suffisent** : selon Aristote, le changement est décisif, parce qu'il interdit la définition et donc la science. Les choses sont alors déficientes épistémologiquement (pas de science d'elles, si la science porte sur l'essence) et métaphysiquement (avoir une essence vaut mieux que n'en pas avoir).
+    points:
+      - id: platon-idees-i11-p1
+        sentence: "« Socrate chercha l'universel en elles et se tourna vers les définitions. Platon, acceptant cela, pensa que cela [définir] porte sur d'autres choses, et non sur les sensibles. Car il est impossible que la définition commune porte sur l'un des sensibles, ___. » (Aristote, *Métaphysique*, A, 6, 987b1-7)"
+        answer: "puisqu'ils changent toujours"
+        alt: []
+      - id: platon-idees-i11-p2
+        sentence: "« Socrate chercha l'universel en elles et se tourna vers les définitions. Platon, acceptant cela, pensa que cela [définir] porte sur d'autres choses, et non sur les sensibles. Car il est impossible que ___ porte sur l'un des sensibles, puisqu'ils changent toujours. » (Aristote, *Métaphysique*, A, 6, 987b1-7)"
+        answer: "la définition commune"
+        alt: []
+      - id: platon-idees-i11-p3
+        sentence: "Selon Aristote, la recherche du savoir mène d'abord aux ___ ; Platon pensa qu'on ne pouvait les trouver dans les sensibles, toujours changeants."
+        answer: "définitions"
+        alt: []
+      - id: platon-idees-i11-p4
+        sentence: "Si la science porte sur ce qu'est chaque chose, on est tenté d'expliquer la déficience des choses par l'absence d'___ : elles changent parce que leurs propriétés sont contingentes."
+        answer: "essence"
+        alt: []
+      - id: platon-idees-i11-p5
+        sentence: "Une explication de la déficience des choses (*Phédon* 74 s., *République* 523a s.) invoque leur ___ : une chose qui est F et G est F et non-F, puisque le G n'est pas F."
+        answer: "complexité"
+        alt: []
+      - id: platon-idees-i11-p6
+        sentence: "Si la complexité était la cause de la déficience des choses, une Idée qui aurait plusieurs propriétés serait F et non-F, et donc ___ elle aussi."
+        answer: "inconnaissable"
+        alt: []
+      - id: platon-idees-i11-p7
+        sentence: "Une explication de la déficience des choses invoque le fait que leurs propriétés leur sont ___, alors que celles des Idées y tiennent par une « colle logique » (Vlastos, Code)."
+        answer: "contingentes"
+        alt: []
+      - id: platon-idees-i11-p8
+        sentence: "Selon Aristote, le facteur décisif de la déficience des choses est le ___, parce qu'il interdit la définition et donc la science."
+        answer: "changement"
+        alt: []
+      - id: platon-idees-i11-p9
+        sentence: "Si l'on insiste sur la complexité plutôt que sur la contingence, on peut reconnaître des essences à certaines choses, et donc une science de propositions comme « Socrate est un ___ »."
+        answer: "homme"
+        alt: []
+      - id: platon-idees-i11-p10
+        sentence: "Silverman doute, contre ___, que la coprésence des contraires ou la seule complexité des choses explique leur déficience."
+        answer: "Fine"
+        alt: ["Gail Fine"]
+  - id: platon-idees-i12
+    title: "La matière et le déterminé"
+    notes: |-
+      Dès le début du *Phédon*, **les choses sont marquées comme matérielles, et la matière semble à la racine de leurs autres traits.** Ce qui est étendu est corps ; le corps est composé ; le composé est multiforme (80b4), et sujet à la dissolution et à la composition, c'est-à-dire à la génération et à la destruction, qui incluent, au sens large (100 s.), l'échange des propriétés. La coprésence supposant la complexité, la matérialité est l'une des racines de ce que chaque chose sensible soit F et non-F.
+
+      **La perception aussi passe par la matière** : elle exige un commerce matériel entre le corps perçu et l'organe du sens, auquel peut s'ajouter un jugement. Les réserves qui font qu'une chose est F et non-F sont temporelles, comparatives, ou relatives à divers percevants : sans matière, aucune chose ne paraîtrait avoir des propriétés coprésentes.
+
+      **Surtout, la matière impose que la propriété se manifeste de façon déterminée** : un bâton a telle longueur, cinq pouces, tel poids, six onces. Le *Ménon* (74 s.) distingue le **déterminable** (le rouge, la couleur) et le **déterminé** (le cramoisi, l'écarlate). Le Triangle en soi est une figure à trois côtés dont les lignes n'ont pas de largeur et les angles pas de degré déterminé ; tout triangle particulier a des lignes larges et des angles de tant de degrés.
+
+      | | Idée | Propriété dans la chose |
+      | nature | générale, abstraite | singulière, concrète |
+      | mode | non déterminée | déterminée |
+      | possession | nécessaire | contingente |
+
+      **La matière est condition suffisante, non nécessaire, de la contingence** : les âmes aussi sont contingentement ce qu'elles sont, par exemple avides d'argent.
+    points:
+      - id: platon-idees-i12-p1
+        sentence: "Dès le début du *Phédon*, les choses particulières sont marquées comme ___, et ce trait semble à la racine de tous leurs autres défauts."
+        answer: "matérielles"
+        alt: []
+      - id: platon-idees-i12-p2
+        sentence: "Parce qu'une chose matérielle est composée, elle est aussi multiforme (*Phédon*, 80b4), et sujette à la dissolution et à la composition, c'est-à-dire à la génération et à la ___."
+        answer: "destruction"
+        alt: ["corruption"]
+      - id: platon-idees-i12-p3
+        sentence: "La coprésence des contraires supposant la complexité, la ___ des choses sensibles est l'une des racines de ce que chacune soit à la fois F et non-F."
+        answer: "matérialité"
+        alt: []
+      - id: platon-idees-i12-p4
+        sentence: "Dans les dialogues de la maturité, la perception exige un commerce ___ entre le corps perçu et l'organe du sens, auquel peut s'ajouter un jugement."
+        answer: "matériel"
+        alt: []
+      - id: platon-idees-i12-p5
+        sentence: "La matière impose qu'une propriété se manifeste dans la chose de façon ___ : un bâton a telle longueur, cinq pouces, et non la longueur en général."
+        answer: "déterminée"
+        alt: []
+      - id: platon-idees-i12-p6
+        sentence: "Le *Ménon* distingue le ___, comme le rouge ou la couleur, et le déterminé, comme le cramoisi ou l'écarlate."
+        answer: "déterminable"
+        alt: []
+      - id: platon-idees-i12-p7
+        sentence: "Le passage du *Ménon* qui distingue le déterminable et le déterminé, le rouge et l'écarlate, se trouve en ___."
+        answer: "74"
+        alt: ["74 s.", "74b"]
+      - id: platon-idees-i12-p8
+        sentence: "Le Triangle en soi est une figure à trois côtés dont les lignes n'ont pas de ___ et dont les angles n'ont pas de degré déterminé."
+        answer: "largeur"
+        alt: ["épaisseur"]
+      - id: platon-idees-i12-p9
+        sentence: "La propriété dans la chose est une instance ___ de la propriété non déterminée, parce que la chose est concrète."
+        answer: "particulière"
+        alt: ["singulière"]
+      - id: platon-idees-i12-p10
+        sentence: "La matière est condition suffisante mais non ___ de la contingence : les âmes aussi sont contingentement ce qu'elles sont, par exemple avides d'argent."
+        answer: "nécessaire"
+        alt: []
+  - id: platon-idees-i13
+    title: "Être et Participer ; les copies de forme"
+    notes: |-
+      **La séparation rigide des Idées et des choses, les « deux mondes », s'incarne dans deux façons d'être : l'{violet}Être{/violet} et la {teal}Participation{/teal}.** Les traits des choses (mutabilité, étendue) ne sont pas équivalents à la Participation, ni ne l'expliquent, ni ne sont expliqués par elle. Mais la déficience des choses tient à leur façon d'être : toute chose sensible acquiert toutes ses propriétés par participation. **Sans essence, elle ne peut qu'échouer à Être.**
+
+      **Ce n'est ni une lecture approximationniste, ni une lecture des Idées comme particuliers exemplaires** : la même propriété, la Beauté, se rapporte au Beau en soi par l'Être et à Hélène par la Participation. Ce n'est pas la beauté d'Hélène qui est déficiente, c'est **sa façon de l'avoir**. Et puisque la beauté ne caractérise pas le Beau, le Beau en soi ne saurait être un objet beau exemplaire.
+
+      **Une difficulté.** Du *Phédon* on tire :
+      - 1. Chaque Idée F Est son essence Y.
+      - 2. Pour toute chose P et toute propriété Y, si Y se dit de P, P a Y.
+      - 3. Si P a Y, P a quelque chose qui Est Y.
+      Si ce que P a, c'est l'Idée elle-même, et si l'Idée est identique à son essence (lecture de l'identité), l'essence se dit aussi de la chose : les choses auraient des essences, par participation.
+
+      **Les copies de forme offrent une issue** : la grandeur en Socrate, le chaud dans le feu (*Phédon*, 102b s.). Leur statut est discuté : beaucoup n'y voient que l'Idée en tant qu'immanente aux choses, ou en tant qu'elle fonctionne dans la participation. Mais si Platon veut éviter d'attribuer les Idées, donc les essences, aux choses, il a toute raison de les admettre : elles diffèrent de leur Idée en ce qu'elles sont des propriétés singulières, des **propriétés-unités**, quand l'Idée est générale et abstraite.
+    points:
+      - id: platon-idees-i13-p1
+        sentence: "La séparation rigide des Idées et des choses, la doctrine des « deux ___ », s'incarne dans deux façons d'être : l'Être et la Participation."
+        answer: "mondes"
+        alt: []
+      - id: platon-idees-i13-p2
+        sentence: "Toute chose sensible acquiert toutes ses propriétés par ___ : sa déficience est une déficience de sa façon d'être."
+        answer: "participation"
+        alt: []
+      - id: platon-idees-i13-p3
+        sentence: "N'ayant pas d'essence, une chose sensible ne peut qu'échouer à ___, au sens où une Idée Est son essence."
+        answer: "Être"
+        alt: ["être"]
+      - id: platon-idees-i13-p4
+        sentence: "La même propriété, la Beauté, se rapporte au Beau en soi par l'Être et à Hélène par la Participation : ce n'est pas la beauté d'Hélène qui est déficiente, mais sa ___ de l'avoir."
+        answer: "façon"
+        alt: ["manière"]
+      - id: platon-idees-i13-p5
+        sentence: "La beauté ne caractérisant pas le Beau en soi, celui-ci ne saurait être un objet beau ___, contrairement à ce que voudrait une lecture approximationniste."
+        answer: "exemplaire"
+        alt: ["paradigmatique"]
+      - id: platon-idees-i13-p6
+        sentence: "Si ce qu'une chose a, quand elle participe, est l'Idée elle-même, et si l'Idée est ___ à son essence, alors l'essence se dit aussi de la chose."
+        answer: "identique"
+        alt: []
+      - id: platon-idees-i13-p7
+        sentence: "La grandeur en Socrate, le chaud dans le feu, distincts de la Grandeur en soi et du Chaud en soi, sont ce qu'on appelle des ___ (*Phédon*, 102b s.)."
+        answer: "copies de forme"
+        alt: ["copies de formes", "copies de Forme", "copies d'Idée"]
+      - id: platon-idees-i13-p8
+        sentence: "Le passage du *Phédon* qui introduit la grandeur en Socrate, distincte de la Grandeur en soi, se trouve en ___."
+        answer: "102b"
+        alt: ["102b s."]
+      - id: platon-idees-i13-p9
+        sentence: "Beaucoup ne voient dans les copies de forme que l'Idée en tant qu'___ aux choses ; mais elles permettraient à Platon de ne pas attribuer les essences aux choses particulières."
+        answer: "immanente"
+        alt: []
+      - id: platon-idees-i13-p10
+        sentence: "Les copies de forme diffèrent de leur Idée en ce qu'elles sont des propriétés singulières, des propriétés-___, alors que l'Idée est générale et abstraite."
+        answer: "unités"
+        alt: ["unité"]
+  - id: platon-idees-i14
+    title: "Copies de forme : retrait, individuation, indiscernabilité"
+    notes: |-
+      **Les copies de forme dépendent-elles des choses ?** Pour préparer sa preuve finale de l'immortalité de l'âme, Platon soutient que si une chose possède une propriété essentielle, comme la neige le froid, à l'approche du contraire, la chaleur, le-froid-dans-la-neige doit **se retirer ou périr** ; l'âme, qui ne peut périr, se retire. Si les copies périssent, elles dépendent des choses, et l'on peut n'y voir qu'une métaphore de la participation temporaire. Si elles se retirent, elles en sont indépendantes, comme les âmes.
+
+      **Le cercle de l'individuation.** Même retirées, les copies semblent tenir leur individualité de leur hôte : « appartenir à Socrate » est relationnel. Or les choses ont toutes leurs propriétés par participation : elles s'identifient par leurs copies. Si celles-ci s'individuent par les choses, on tourne en rond. **Issue : leur individualité est primitive**, comme celle des âmes, qui préexistent aux corps et leur survivent. Une copie de forme Est ce qu'elle est, et ne peut donc cesser de l'être.
+
+      **L'indiscernabilité.** Sans matière ni copies, une chose ne serait qu'un **faisceau d'Idées**, et deux choses faites des mêmes Idées seraient identiques. Avec les copies, ce sont des faisceaux de copies, distinctes : la copie de Beauté d'Hélène ne diffère de celle d'Andromaque que **solo numero**, par le nombre seul. Il faut encore la matière pour distinguer Hélène d'Andromaque ; c'est pour en rendre compte que Platon écrira le *Timée*.
+
+      **Bilan.** Une chose est faite de matière et de copies de forme (parfois aussi d'une âme) ; sans essence, elle peut tout perdre et disparaître ; l'Idée, non. Hélène est belle parce qu'elle a quelque chose qui Est beau : la Participation, primitive comme l'Être, et la matière, qui rend sa beauté déterminée, la caractérisent ; la copie fait que ce caractère est celui de la Beauté. **Platon garde ainsi la thèse socratique des Idées comme causes logiques**, et les copies nous donnent accès aux choses, que nous n'identifions que par leurs propriétés.
+    points:
+      - id: platon-idees-i14-p1
+        sentence: "À l'approche de la chaleur, le-froid-dans-la-neige doit, selon la métaphore militaire du dernier argument du *Phédon*, se retirer ou ___."
+        answer: "périr"
+        alt: []
+      - id: platon-idees-i14-p2
+        sentence: "L'âme, ne pouvant périr, doit se ___ à l'approche de la mort : c'est la preuve finale de son immortalité dans le *Phédon*."
+        answer: "retirer"
+        alt: []
+      - id: platon-idees-i14-p3
+        sentence: "Si les copies de forme périssent à l'approche de leur contraire, elles ___ des choses auxquelles elles appartiennent, et l'on peut n'y voir qu'une métaphore de la participation."
+        answer: "dépendent"
+        alt: []
+      - id: platon-idees-i14-p4
+        sentence: "Si les copies de forme se retirent à l'approche de leur contraire, elles sont indépendantes des choses, comme les ___."
+        answer: "âmes"
+        alt: []
+      - id: platon-idees-i14-p5
+        sentence: "Si les choses s'identifient par leurs copies de forme, et ces copies par les choses auxquelles elles appartiennent, on tombe dans un ___ de l'individuation."
+        answer: "cercle"
+        alt: []
+      - id: platon-idees-i14-p6
+        sentence: "Pour échapper au cercle de l'individuation, il faut tenir pour ___ le statut d'individu des copies de forme, comme celui des âmes, qui préexistent aux corps."
+        answer: "primitif"
+        alt: []
+      - id: platon-idees-i14-p7
+        sentence: "Sans matière ni copies de forme, une chose ne serait qu'un ___ d'Idées, et deux choses faites des mêmes Idées seraient indiscernables."
+        answer: "faisceau"
+        alt: []
+      - id: platon-idees-i14-p8
+        sentence: "La copie de Beauté d'Hélène ne diffère de celle d'Andromaque que par le nombre, ___ en latin."
+        answer: "solo numero"
+        alt: []
+      - id: platon-idees-i14-p9
+        sentence: "C'est pour rendre compte de la matière, et donc de l'individuation des choses, que Platon devra écrire le ___."
+        answer: "Timée"
+        alt: []
+      - id: platon-idees-i14-p10
+        sentence: "Une chose particulière, n'ayant pas d'essence, peut perdre toutes ses copies de forme et ___ entièrement ; l'Idée, non."
+        answer: "disparaître"
+        alt: []
+      - id: platon-idees-i14-p11
+        sentence: "Hélène est belle parce qu'elle a une copie de la Beauté : Platon garde ainsi la thèse socratique selon laquelle les Idées sont des causes ___."
+        answer: "logiques"
+        alt: []
+      - id: platon-idees-i14-p12
+        sentence: "Comme nous n'identifions les choses que par leurs propriétés, les copies de forme et leurs Idées rendent possible notre ___ épistémique aux choses particulières."
+        answer: "accès"
+        alt: []
