@@ -820,7 +820,10 @@ function PointsEditor({
     document.querySelector<HTMLElement>(`[data-point-id="${id}"] textarea`)?.focus()
   }, [points])
 
-  /** Tab, depuis n'importe quel champ d'une carte : crée une carte juste après elle. */
+  /**
+   * Tab depuis le verso (réponse) d'une carte : crée une carte juste après elle.
+   * Depuis le recto, Tab garde son rôle habituel (passer au verso).
+   */
   function insertAfterOnTab(event: React.KeyboardEvent, index: number) {
     if (event.key !== 'Tab' || event.shiftKey || event.ctrlKey || event.metaKey || event.altKey) return
     event.preventDefault()
@@ -969,11 +972,7 @@ function PointsEditor({
       {points.map((point, index) => (
         <Fragment key={point.id}>
         <InsertGap onInsert={() => insertAt(index)} />
-        <div
-          data-point-id={point.id}
-          onKeyDown={(event) => insertAfterOnTab(event, index)}
-          className="card-3d flex flex-col gap-2 p-4"
-        >
+        <div data-point-id={point.id} className="card-3d flex flex-col gap-2 p-4">
           <div className="flex items-start gap-3">
             <div className="mt-2 flex w-6 shrink-0 flex-col items-end gap-1">
               <span className="text-sm font-black text-ink-faint">{index + 1}</span>
@@ -1010,6 +1009,7 @@ function PointsEditor({
                 <textarea
                   value={point.answer}
                   onChange={(event) => update(index, { answer: event.target.value })}
+                  onKeyDown={(event) => insertAfterOnTab(event, index)}
                   spellCheck={false}
                   rows={3}
                   placeholder={isText ? 'Réponse ; réponse du 2e trou…' : 'Réponse'}
