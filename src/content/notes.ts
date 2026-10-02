@@ -1,4 +1,4 @@
-import { unitColorSchema, type UnitColor } from './schema'
+import { noteColorSchema, type NoteColor } from './schema'
 
 /**
  * Mise en forme des rappels de cours.
@@ -26,8 +26,8 @@ import { unitColorSchema, type UnitColor } from './schema'
  * corrects.
  */
 
-/** Les dix teintes déjà utilisées ailleurs dans l'app (pistes, unités). */
-const COLOR_NAMES = unitColorSchema.options
+/** Les teintes du marqueur de couleur (palette des rappels, distincte de celle des pistes). */
+const COLOR_NAMES = noteColorSchema.options
 
 /**
  * Fragment de texte enrichi.
@@ -45,7 +45,7 @@ export type Inline =
   | { kind: 'underline'; children: Inline[] }
   /** Mot étranger cité : littéral, rien ne s'y imbrique. */
   | { kind: 'form'; text: string }
-  | { kind: 'color'; color: UnitColor; children: Inline[] }
+  | { kind: 'color'; color: NoteColor; children: Inline[] }
 
 const INLINE = new RegExp(
   `\\*\\*([^*]+)\\*\\*|__([^_]+)__|\\*([^*]+)\\*|\`([^\`]+)\`|\\{(${COLOR_NAMES.join('|')})\\}([\\s\\S]*?)\\{/\\5\\}`,
@@ -86,7 +86,7 @@ export function parseInline(text: string): Inline[] {
     else if (em !== undefined) spans.push({ kind: 'em', children: parseInline(em) })
     else if (form !== undefined) spans.push({ kind: 'form', text: nbspQuotes(form) })
     else if (color !== undefined) {
-      spans.push({ kind: 'color', color: color as UnitColor, children: parseInline(colorText ?? '') })
+      spans.push({ kind: 'color', color: color as NoteColor, children: parseInline(colorText ?? '') })
     }
 
     last = at + match[0].length

@@ -150,9 +150,11 @@ règles ou les pièges :
 | `*texte*` | italique | une nuance, une glose, un titre d'œuvre |
 | `{violet}texte{/violet}` | teinté (gras) | distinguer deux notions qui reviennent tout au long d'un rappel |
 
-`{couleur}…{/couleur}` accepte les neuf teintes déjà en usage ailleurs dans
-l'app : `teal`, `violet`, `coral`, `amber`, `sky`, `yellow`, `green`, `red`,
-`pink`. Utile pour opposer deux notions sur toute la longueur d'un
+`{couleur}…{/couleur}` accepte neuf teintes : `teal`, `violet`, `coral`,
+`amber`, `sky`, `yellow`, `green`, `red`, `pink`. C'est la palette des
+rappels, distincte de celle des pistes et des unités (`color:`, qui admet en
+plus `orange` et `blue`) : les deux ont leurs propres variables CSS, et
+retoucher l'une ne change pas l'autre. Utile pour opposer deux notions sur toute la longueur d'un
 rappel (une thèse et l'objection qui lui répond, un auteur et son
 commentateur) plutôt qu'à l'intérieur d'une seule phrase, où le gras suffit
 déjà ; deux ou trois couleurs par rappel au plus, au-delà l'effet se perd.
@@ -264,7 +266,7 @@ id: v5
 title: Le monde universitaire
 subtitle: Lire un article de recherche    # facultatif
 icon: book                                 # wave, people, cup, clock, compass, book
-color: teal                                # teal, violet, coral, amber, sky
+color: teal                                # teal, violet, coral, amber, sky, yellow, green, red, orange, blue, pink
 level: B2.2                                # facultatif : repère affiché, n'impose rien
 lessons: …
 ```

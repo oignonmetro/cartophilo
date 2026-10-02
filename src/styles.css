@@ -111,6 +111,39 @@
   --color-pink: #f472b6;
   --color-pink-deep: #db2777;
 
+  /*
+   * Teintes des pistes et des unités (`color` dans le contenu, voir
+   * `unitColorSchema`), séparées de la palette des rappels ci-dessus
+   * (`{couleur}…{/couleur}`, voir `noteColorSchema`). Les deux palettes
+   * partageaient d'abord les mêmes variables : retoucher les teintes du
+   * sélecteur de couleurs des rappels (jaune recalé, orange et bleu retirés,
+   * corail éclairci) avait changé du même coup la couleur des domaines du
+   * Hors-programme. Chacune évolue désormais sans toucher l'autre ; ces
+   * valeurs sont celles des pistes avant ces retouches.
+   */
+  --color-unit-teal: #14b8a6;
+  --color-unit-teal-deep: #0b8b7d;
+  --color-unit-violet: #7c6bf0;
+  --color-unit-violet-deep: #5a48cc;
+  --color-unit-coral: #ff6b57;
+  --color-unit-coral-deep: #d4432f;
+  --color-unit-amber: #ffc93c;
+  --color-unit-amber-deep: #d69c04;
+  --color-unit-sky: #38bdf8;
+  --color-unit-sky-deep: #0c92cf;
+  --color-unit-yellow: #f5d033;
+  --color-unit-yellow-deep: #c9a400;
+  --color-unit-green: #4caf6d;
+  --color-unit-green-deep: #2e8b57;
+  --color-unit-red: #e63946;
+  --color-unit-red-deep: #b4232e;
+  --color-unit-orange: #ff9248;
+  --color-unit-orange-deep: #d9720a;
+  --color-unit-blue: #4b8fe3;
+  --color-unit-blue-deep: #2e5fa3;
+  --color-unit-pink: #f472b6;
+  --color-unit-pink-deep: #db2777;
+
   --color-success: #34c759;
   --color-success-deep: #1f9b41;
   --color-error: #ff5a5a;

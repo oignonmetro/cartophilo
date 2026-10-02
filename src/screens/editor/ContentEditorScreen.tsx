@@ -1,7 +1,7 @@
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { PassageText } from '@/components/PassageText'
-import type { UnitColor } from '@/content/schema'
+import type { NoteColor } from '@/content/schema'
 import { ImportSplitDialog, type ImportTarget } from './ImportSplitDialog'
 import { PassageEditor } from './PassageEditor'
 import { isCitation } from './textUnit'
@@ -61,7 +61,7 @@ function nextPointId(lessonId: string, points: PointDTO[]): string {
 
 const COLORS = ['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink'] as const
 
-const SWATCH: Record<UnitColor, string> = {
+const SWATCH: Record<NoteColor, string> = {
   teal: 'bg-teal',
   violet: 'bg-violet',
   coral: 'bg-coral',

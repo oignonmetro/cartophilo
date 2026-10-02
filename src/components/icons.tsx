@@ -253,15 +253,17 @@ export function UnitIcon({ name, ...props }: IconProps & { name: string }) {
   return <Icon {...props} />
 }
 
-/** Classes Tailwind associées à chaque teinte d'unité. */
+/** Classes Tailwind associées à chaque teinte d'unité (palette `--color-unit-*`, voir `styles.css`). */
 export const UNIT_TONES: Record<UnitColor, { bg: string; deep: string; text: string; ring: string }> = {
-  teal: { bg: 'bg-teal', deep: 'var(--color-teal-deep)', text: 'text-teal', ring: 'ring-teal' },
-  violet: { bg: 'bg-violet', deep: 'var(--color-violet-deep)', text: 'text-violet', ring: 'ring-violet' },
-  coral: { bg: 'bg-coral', deep: 'var(--color-coral-deep)', text: 'text-coral', ring: 'ring-coral' },
-  amber: { bg: 'bg-amber', deep: 'var(--color-amber-deep)', text: 'text-amber', ring: 'ring-amber' },
-  sky: { bg: 'bg-sky', deep: 'var(--color-sky-deep)', text: 'text-sky', ring: 'ring-sky' },
-  yellow: { bg: 'bg-yellow', deep: 'var(--color-yellow-deep)', text: 'text-yellow', ring: 'ring-yellow' },
-  green: { bg: 'bg-green', deep: 'var(--color-green-deep)', text: 'text-green', ring: 'ring-green' },
-  red: { bg: 'bg-red', deep: 'var(--color-red-deep)', text: 'text-red', ring: 'ring-red' },
-  pink: { bg: 'bg-pink', deep: 'var(--color-pink-deep)', text: 'text-pink', ring: 'ring-pink' },
+  teal: { bg: 'bg-unit-teal', deep: 'var(--color-unit-teal-deep)', text: 'text-unit-teal', ring: 'ring-unit-teal' },
+  violet: { bg: 'bg-unit-violet', deep: 'var(--color-unit-violet-deep)', text: 'text-unit-violet', ring: 'ring-unit-violet' },
+  coral: { bg: 'bg-unit-coral', deep: 'var(--color-unit-coral-deep)', text: 'text-unit-coral', ring: 'ring-unit-coral' },
+  amber: { bg: 'bg-unit-amber', deep: 'var(--color-unit-amber-deep)', text: 'text-unit-amber', ring: 'ring-unit-amber' },
+  sky: { bg: 'bg-unit-sky', deep: 'var(--color-unit-sky-deep)', text: 'text-unit-sky', ring: 'ring-unit-sky' },
+  yellow: { bg: 'bg-unit-yellow', deep: 'var(--color-unit-yellow-deep)', text: 'text-unit-yellow', ring: 'ring-unit-yellow' },
+  green: { bg: 'bg-unit-green', deep: 'var(--color-unit-green-deep)', text: 'text-unit-green', ring: 'ring-unit-green' },
+  red: { bg: 'bg-unit-red', deep: 'var(--color-unit-red-deep)', text: 'text-unit-red', ring: 'ring-unit-red' },
+  orange: { bg: 'bg-unit-orange', deep: 'var(--color-unit-orange-deep)', text: 'text-unit-orange', ring: 'ring-unit-orange' },
+  blue: { bg: 'bg-unit-blue', deep: 'var(--color-unit-blue-deep)', text: 'text-unit-blue', ring: 'ring-unit-blue' },
+  pink: { bg: 'bg-unit-pink', deep: 'var(--color-unit-pink-deep)', text: 'text-unit-pink', ring: 'ring-unit-pink' },
 }

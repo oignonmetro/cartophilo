@@ -337,6 +337,12 @@ export const workSchema = z.object({
 })
 export type Work = z.infer<typeof workSchema>
 
+/**
+ * Teinte d'une piste ou d'une unité. Palette distincte de celle des rappels
+ * (`noteColorSchema`) : chacune a ses propres variables CSS (`--color-unit-*`
+ * contre `--color-*`), si bien qu'on peut retoucher l'une sans changer
+ * l'autre.
+ */
 export const unitColorSchema = z.enum([
   'teal',
   'violet',
@@ -346,8 +352,13 @@ export const unitColorSchema = z.enum([
   'yellow',
   'green',
   'red',
+  'orange',
+  'blue',
   'pink',
 ])
+
+/** Couleur du marqueur `{couleur}…{/couleur}` dans un rappel (voir `content/notes.ts`). */
+export const noteColorSchema = z.enum(['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink'])
 
 export const unitSchema = z.object({
   id: slug,
@@ -484,6 +495,7 @@ export type LibraryCourse = z.infer<typeof libraryCourseSchema>
 export type Course = z.infer<typeof courseSchema>
 
 export type UnitColor = z.infer<typeof unitColorSchema>
+export type NoteColor = z.infer<typeof noteColorSchema>
 
 /**
  * Un élément pratiquable, quelle que soit sa nature. C'est l'unité que la

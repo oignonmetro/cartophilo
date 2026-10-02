@@ -2,7 +2,7 @@ import { Fragment, useEffect, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import type { RuleExercise } from '@/engine/exercises'
 import { parseInline, parseNotes, splitAside, type Inline, type NoteRule } from '@/content/notes'
-import { GAP, type UnitColor } from '@/content/schema'
+import { GAP, type NoteColor } from '@/content/schema'
 import { Button } from '@/components/Button'
 import { PassageText } from '@/components/PassageText'
 import { useIsDesktop } from '@/lib/useIsDesktop'
@@ -58,7 +58,7 @@ export const TONES = {
  * dans le source, un nom composé à l'exécution (`` `text-${color}-deep` ``)
  * ne produirait rien (voir la même remarque dans `SessionScreen.tsx`).
  */
-const INLINE_COLORS: Record<UnitColor, string> = {
+const INLINE_COLORS: Record<NoteColor, string> = {
   teal: 'text-teal-deep',
   violet: 'text-violet-deep',
   coral: 'text-coral-deep',
