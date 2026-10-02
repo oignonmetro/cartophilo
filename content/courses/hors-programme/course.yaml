@@ -17,7 +17,7 @@ tagline: "Sujet libre : tout peut tomber."
 status: available
 default: true
 layout: library
-version: 48
+version: 49
 
 tracks:
   - id: morale
@@ -47,6 +47,8 @@ tracks:
     dividerBefore: true
     units:
       - theta1
+      - theta2
+      - theta3
 
   - id: esthetique
     title: L'esthétique
