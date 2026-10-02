@@ -885,6 +885,12 @@ function serveLeastFirst<T>(
   budget: number,
   next: (item: T) => Exercise | null,
   rng: Rng,
+  /**
+   * À égalité de service, garde l'ordre du bassin au lieu de tirer au hasard :
+   * les éléments encore jamais servis font donc leur première apparition dans
+   * l'ordre où ils y sont rangés.
+   */
+  inOrder = false,
 ): Exercise[] {
   const result: Exercise[] = []
   const exhausted = new Set<string>()
@@ -893,7 +899,7 @@ function serveLeastFirst<T>(
     const candidates = pool.filter((item) => !exhausted.has(idOf(item)))
     if (candidates.length === 0) break
 
-    const item = shuffle(candidates, rng).reduce((best, candidate) =>
+    const item = (inOrder ? candidates : shuffle(candidates, rng)).reduce((best, candidate) =>
       servedCount(served, idOf(candidate)) < servedCount(served, idOf(best)) ? candidate : best,
     )
     const exercise = next(item)
@@ -1236,7 +1242,10 @@ function buildGrammarSession(
 ): Exercise[] {
   const rng = createRng(seed)
   const ladder = grammarLadder(level)
-  const blocks = blocksOf(shuffle(points, rng), GRAMMAR_BLOCK_SIZE)
+  // Les points se découvrent dans l'ordre où l'auteur les a écrits (blocs, puis
+  // premier passage au sein de chaque bloc) : une leçon se construit pas à
+  // pas, et le mélange est laissé à la révision espacée.
+  const blocks = blocksOf(points, GRAMMAR_BLOCK_SIZE)
 
   // Le rappel de cours n'apparaît qu'à la découverte : au-delà, il donnerait
   // la réponse avant même la question.
@@ -1257,6 +1266,7 @@ function buildGrammarSession(
       (point) =>
         climb(point.id, ladder, served, rng, (variant) => grammarExercise(point, variant, canSpeak, rng)),
       rng,
+      true,
     )
 
     // Rattrapage : un point dont aucun échelon n'a pu être construit — formes

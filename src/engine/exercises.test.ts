@@ -744,6 +744,16 @@ describe('session de grammaire', () => {
     expect(kinds(buildLessonSession(GRAMMAR, 1))).not.toContain('rule')
   })
 
+  it('présente les points dans l’ordre de la leçon, quelle que soit la graine', () => {
+    for (const seed of [1, 2, 3, 4, 5, 6, 7, 8]) {
+      const firsts: string[] = []
+      for (const id of buildLessonSession(GRAMMAR, 0, seed).flatMap(itemIdsOf)) {
+        if (!firsts.includes(id)) firsts.push(id)
+      }
+      expect(firsts).toEqual(['p1', 'p2', 'p3'])
+    }
+  })
+
   it('teste chaque point de la leçon', () => {
     const points = buildLessonSession(GRAMMAR, 1).flatMap(itemIdsOf)
     expect(new Set(points)).toEqual(new Set(['p1', 'p2', 'p3']))
