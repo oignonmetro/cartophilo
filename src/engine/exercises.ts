@@ -1357,6 +1357,40 @@ function buildPassageSession(
   return exercises
 }
 
+/** Écart minimal entre un exercice raté et sa reprise : assez pour ne pas répondre de mémoire. */
+export const RETRY_GAP = 4
+
+/**
+ * Cartes-citation d'un même fragment (ou d'un même paragraphe cité d'un seul
+ * tenant) : elles répètent le même texte, le trou se déplaçant de l'une à
+ * l'autre. `null` pour tout autre exercice.
+ */
+function citedTextOf(exercise: Exercise): string | null {
+  if (exercise.kind !== 'passage' || !isCitation(exercise.point)) return null
+  const { source, heading, label } = exercise.passage
+  return [source ?? '', heading, label, exercise.point.fragment ?? ''].join('\u0000')
+}
+
+/**
+ * Où réinsérer dans la file l'exercice raté à `position`.
+ *
+ * `RETRY_GAP` places plus loin, et, pour une carte-citation, après toutes les
+ * cartes à venir qui citent le même fragment : chacune d'elles affiche en
+ * clair ce que la carte ratée trouait, si bien qu'une reprise glissée au
+ * milieu de la cascade se réussissait en recopiant la carte d'à côté. Une
+ * reprise réussie est censée dire si la réponse revient de mémoire.
+ */
+export function retryIndex(queue: readonly Exercise[], position: number): number {
+  let at = Math.min(queue.length, position + RETRY_GAP)
+  const failed = queue[position]
+  const cited = failed ? citedTextOf(failed) : null
+  if (cited === null) return at
+  for (let index = position + 1; index < queue.length; index++) {
+    if (citedTextOf(queue[index]!) === cited) at = Math.max(at, index + 1)
+  }
+  return at
+}
+
 /**
  * Ce que le mode « citations seules » saute dans une leçon de texte (voir
  * `citationsOnly` dans le store) : les cartes-explication, et les sections de

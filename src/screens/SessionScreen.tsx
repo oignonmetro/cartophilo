@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { Exercise } from '@/engine/exercises'
-import { isExplanationOnly, isNonLocating, isPresentation, itemIdsOf } from '@/engine/exercises'
+import { isExplanationOnly, isNonLocating, isPresentation, itemIdsOf, retryIndex } from '@/engine/exercises'
 import { isCitation } from '@/content/course'
 import { ratingFromAnswer, type Rating } from '@/engine/srs'
 import { useCourse } from '@/content/CourseProvider'
@@ -298,8 +298,9 @@ function SessionRunner({
         if (!requeue) return current_
         const exercise = current_[position]
         const next = current_.slice()
-        // Trois exercices plus loin : assez pour ne pas répondre de mémoire.
-        next.splice(Math.min(next.length, position + 4), 0, exercise)
+        // Assez loin pour ne pas répondre de mémoire, ni en recopiant une
+        // carte voisine qui cite le même texte (voir `retryIndex`).
+        next.splice(retryIndex(current_, position), 0, exercise)
         return next
       })
       setPosition((index) => index + 1)

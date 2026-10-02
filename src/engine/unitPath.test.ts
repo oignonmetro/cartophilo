@@ -8,6 +8,7 @@ import {
   buildUnitPath,
   consolidationEntries,
   finalEntries,
+  FINAL_LIMIT,
   currentDestination,
   nextNodeAfter,
   sectionRank,
@@ -198,6 +199,8 @@ describe('sélection des éléments à consolider', () => {
 
   it('classe la carte la plus fragile en premier', () => {
     // Même intervalle affiché, mais l'une a rechuté trois fois.
+    // Une maîtrise confirmée efface le poids des rechutes passées.
+    expect(solidity(card('c', { interval: 10, lapses: 3, steady: 3 }))).toBe(solidity(card('d', { interval: 10, lapses: 0 })))
     expect(solidity(card('a', { interval: 10, lapses: 0 }))).toBeGreaterThan(
       solidity(card('b', { interval: 10, lapses: 3 })),
     )
@@ -284,5 +287,23 @@ describe('séance finale', () => {
   it('ignore les cartes hors de l’unité', () => {
     const cards = { 'v1-w1': card('v1-w1', { lapses: 5 }) }
     expect(finalEntries(cards, itemsById, ['v1-w2'])).toEqual([])
+  })
+
+  it('écarte les cartes dont la maîtrise est confirmée', () => {
+    const cards = {
+      'v1-w1': card('v1-w1', { lapses: 3, steady: 3 }),
+      'v1-w2': card('v1-w2', { lapses: 2, steady: 1 }),
+    }
+    expect(finalEntries(cards, itemsById, unitItemIds).map((e) => e.card.itemId)).toEqual(['v1-w2'])
+  })
+
+  it('plafonne la séance, les plus fragiles d’abord', () => {
+    const big = unit('b', FINAL_LIMIT + 5)
+    const ids = big.lessons.map((_, index) => `b-w${index + 1}`)
+    const index = indexItems({ ...COURSE, tracks: [{ ...COURSE.tracks[0]!, units: [big] }] })
+    const cards = Object.fromEntries(ids.map((id, rank) => [id, card(id, { lapses: 2 + rank })]))
+    const entries = finalEntries(cards, index, ids)
+    expect(entries).toHaveLength(FINAL_LIMIT)
+    expect(entries[0]!.card.itemId).toBe(ids[ids.length - 1])
   })
 })

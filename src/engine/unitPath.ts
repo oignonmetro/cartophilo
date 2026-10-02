@@ -1,7 +1,7 @@
 import type { ItemLocation } from '@/content/course'
 import { lessonCountLabel } from '@/content/course'
 import type { Lesson, PracticeItem, Unit } from '@/content/schema'
-import { dueCards, type CardState } from './srs'
+import { dueCards, isFragile, type CardState } from './srs'
 import { levelOf, type LessonProgressMap } from './progress'
 
 /**
@@ -171,11 +171,13 @@ export interface ConsolidationEntry {
  * Une carte encore en apprentissage vaut zéro — rien n'est acquis tant qu'elle
  * n'a pas gradué. Au-delà, c'est l'intervalle qui mesure la solidité, divisé
  * par les rechutes : un mot repris trois fois n'est pas au même niveau qu'un
- * mot su du premier coup, même intervalle affiché.
+ * mot su du premier coup, même intervalle affiché. Tant qu'elle est fragile
+ * seulement (voir `isFragile`) : une fois sa maîtrise confirmée par les
+ * révisions tardives, ses anciennes rechutes ne la retiennent plus.
  */
 export function solidity(card: CardState): number {
   const base = card.step === null ? Math.max(card.interval, 1) : 0
-  return base / (1 + card.lapses)
+  return base / (1 + (isFragile(card) ? card.lapses : 0))
 }
 
 /**
@@ -215,11 +217,19 @@ export function consolidationEntries(
 
 /** Nombre de rechutes à partir duquel une carte entre dans la séance finale. */
 export const FINAL_MIN_LAPSES = 2
+/**
+ * Plafond de la séance finale. Les rechutes comptant désormais dès
+ * l'apprentissage, une grande unité peut en accumuler beaucoup : au-delà, les
+ * moins fragiles attendent, et la révision espacée les reprendra de toute façon.
+ */
+export const FINAL_LIMIT = 20
 
 /**
  * Éléments de la séance finale : seulement les cartes de l'unité qui ont
  * rechuté au moins `FINAL_MIN_LAPSES` fois (une seule mauvaise réponse, ou
- * aucune, ne suffit pas : ce qui a été su ou presque n'a pas besoin du bilan).
+ * aucune, ne suffit pas : ce qui a été su ou presque n'a pas besoin du bilan)
+ * et restent fragiles (une maîtrise confirmée n'a pas besoin du bilan non
+ * plus), `FINAL_LIMIT` au plus.
  *
  * Les plus fragiles passent en premier : le plus de rechutes d'abord, puis, à
  * nombre égal, la rechute la plus récente. Une carte sans date de dernière
@@ -233,7 +243,11 @@ export function finalEntries(
 ): ConsolidationEntry[] {
   const inUnit = new Set(unitItemIds)
   return Object.values(cards)
-    .filter((card) => inUnit.has(card.itemId) && itemsById.has(card.itemId) && card.lapses >= FINAL_MIN_LAPSES)
+    .filter(
+      (card) =>
+        inUnit.has(card.itemId) && itemsById.has(card.itemId) && card.lapses >= FINAL_MIN_LAPSES && isFragile(card),
+    )
     .sort((a, b) => b.lapses - a.lapses || (b.lastLapse ?? 0) - (a.lastLapse ?? 0))
+    .slice(0, FINAL_LIMIT)
     .map((card) => ({ card, item: itemsById.get(card.itemId)!.item }))
 }

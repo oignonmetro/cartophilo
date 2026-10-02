@@ -13,6 +13,8 @@ import {
   lessonProgress,
   matchesAnswer,
   normalizeAnswer,
+  retryIndex,
+  RETRY_GAP,
   splitGap,
   splitGaps,
   type Exercise,
@@ -1191,6 +1193,31 @@ describe('leçon de texte', () => {
       'passage:c-3',
       'passage:c-4',
     ])
+  })
+
+  it('reprend une carte-citation ratée après les cartes qui citent le même fragment', () => {
+    const cascade: GrammarLesson = {
+      ...text,
+      points: [
+        { id: 'r-1', fragment: '1/2', sentence: '« Il était ___. »', answer: 'grand', alt: [], options: [] },
+        ...['a', 'b', 'c', 'd', 'e'].map((k) => ({
+          id: `r-1${k}`,
+          fragment: '1/2',
+          sentence: `« Il ___ grand ${k}. »`,
+          answer: 'était',
+          alt: [],
+          options: [],
+        })),
+        { id: 'r-2', fragment: '2/2', sentence: '« Il était ___. »', answer: 'beau', alt: [], options: [] },
+        { id: 'r-3', sentence: 'Explication : ___.', answer: 'x', alt: [], options: [] },
+      ],
+    }
+    const queue = buildLessonSession(cascade, 1, 1)
+    expect(queue.map((exercise) => exercise.id)[0]).toBe('passage:r-1')
+    // Les cinq cartes suivantes affichent « grand » : la reprise passe après elles.
+    expect(retryIndex(queue, 0)).toBe(6)
+    // Une carte-explication ratée revient simplement quelques places plus loin.
+    expect(retryIndex([...queue, ...queue], 7)).toBe(7 + RETRY_GAP)
   })
 
   it('ouvre une section par un numéro de fragment, et lui montre tout le texte qu’elle couvre', () => {
