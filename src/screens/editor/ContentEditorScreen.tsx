@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { Fragment, useCallback, useEffect, useRef, useState } from 'react'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { PassageText } from '@/components/PassageText'
 import type { UnitColor } from '@/content/schema'
@@ -804,8 +804,10 @@ function PointsEditor({
   const citationsFirst = points.slice().sort((a, b) => Number(isCitation(b)) - Number(isCitation(a)))
   const sorted = citationsFirst.every((point, i) => point === points[i])
 
-  function add() {
-    onChange([...points, { id: nextPointId(lessonId, points), sentence: '', answer: '', alt: [] }])
+  /** Glisse une carte vide à `index` (0 = avant la première, `points.length` = après la dernière). */
+  function insertAt(index: number) {
+    const fresh: PointDTO = { id: nextPointId(lessonId, points), sentence: '', answer: '', alt: [] }
+    onChange([...points.slice(0, index), fresh, ...points.slice(index)])
   }
 
   /**
@@ -937,8 +939,20 @@ function PointsEditor({
       {points.length === 0 && (
         <p className="py-8 text-center text-sm text-ink-faint">Aucune carte pour l'instant.</p>
       )}
+      {points.length === 0 && (
+        <button
+          type="button"
+          onClick={() => insertAt(0)}
+          className="self-start rounded-lg border-2 border-dashed border-line px-3 py-1.5 text-sm font-bold text-ink-soft hover:border-teal hover:text-teal-deep"
+        >
+          + Ajouter une carte
+        </button>
+      )}
+      <div className="flex flex-col">
       {points.map((point, index) => (
-        <div key={point.id} className="card-3d flex flex-col gap-2 p-4">
+        <Fragment key={point.id}>
+        <InsertGap onInsert={() => insertAt(index)} />
+        <div className="card-3d flex flex-col gap-2 p-4">
           <div className="flex items-start gap-3">
             <div className="mt-2 flex w-6 shrink-0 flex-col items-end gap-1">
               <span className="text-sm font-black text-ink-faint">{index + 1}</span>
@@ -1045,13 +1059,31 @@ function PointsEditor({
             </label>
           </div>
         </div>
+        </Fragment>
       ))}
+      {points.length > 0 && <InsertGap onInsert={() => insertAt(points.length)} />}
+      </div>
+    </div>
+  )
+}
+
+/**
+ * Interstice entre deux cartes : invisible, il révèle un « + » dès que la
+ * souris passe pile dans l'espace libre (la hauteur d'une gouttière), pour
+ * glisser une carte à cet endroit précis. Remplace l'ancien bouton unique
+ * « Ajouter une carte », qui ne savait qu'ajouter en fin de liste.
+ */
+function InsertGap({ onInsert }: { onInsert: () => void }) {
+  return (
+    <div className="group relative h-3 shrink-0">
       <button
         type="button"
-        onClick={add}
-        className="self-start rounded-lg border-2 border-dashed border-line px-3 py-1.5 text-sm font-bold text-ink-soft hover:border-teal hover:text-teal-deep"
+        title="Insérer une carte ici"
+        aria-label="Insérer une carte ici"
+        onClick={onInsert}
+        className="absolute left-1/2 top-1/2 z-10 flex h-7 w-7 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-violet text-lg font-black leading-none text-white pointer-events-none opacity-0 shadow transition-opacity focus-visible:pointer-events-auto focus-visible:opacity-100 group-hover:pointer-events-auto group-hover:opacity-100"
       >
-        + Ajouter une carte
+        +
       </button>
     </div>
   )
