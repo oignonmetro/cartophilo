@@ -82,8 +82,8 @@ pas seulement Glossaire et Repérage.
   Exception assumée à « pas de QCM ni d'association » : le plan à trous est
   une banque, parce que ce qu'on y replace (un argument dans la case de son chapitre) est
   un ensemble fermé, pas une réponse paraphrasable.
-- Le moteur de vocabulaire (`kind: vocab`, cours `demo` uniquement
-  désormais) n'a plus d'écran de présentation à part (l'ancienne
+- Le moteur de vocabulaire (`kind: vocab`, plus aucun cours ne l'emploie
+  depuis le retrait du cours `demo`) n'a plus d'écran de présentation à part (l'ancienne
   auto-évaluation « nouveau / incertain / je savais ») : un mot rencontre
   directement un vrai exercice.
 - Remplissez systématiquement `example` sur chaque mot de vocabulaire : c'est

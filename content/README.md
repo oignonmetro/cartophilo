@@ -28,8 +28,8 @@ npm run content:build   # compile vers public/content/
   (par séries de dix réponses, comme le mode « Apprendre » de Quizlet), et
   leur premier échec reste noté pour la révision espacée.
 - **`library`** : accès libre, des **pistes** s'affichent en onglets, et
-  l'apprenant choisit ses unités dans l'ordre qu'il veut. C'est le cours
-  d'exemple (`demo`).
+  l'apprenant choisit ses unités dans l'ordre qu'il veut. C'est le cas de
+  tous les cours actuels.
 
 Un contenu qui exige un ordre n'appelle pas pour autant `path` : le parcours
 *interne* d'une unité est déjà ordonné (leçon, révision, consolidation, séance
@@ -318,7 +318,7 @@ celui que l'app ouvre tant que l'apprenant n'a rien choisi lui-même via le
 sélecteur de niveau (le badge drapeau + niveau, en haut de l'écran). Sans ce
 marqueur explicite, le premier cours par ordre alphabétique de dossier ferait
 office de défaut (ce qui a réellement affiché un niveau vide en premier avant
-que ce champ n'existe). Aujourd'hui c'est `demo` qui le porte.
+que ce champ n'existe). Aujourd'hui c'est `hors-programme` qui le porte.
 
 ## Archiver un cours
 
