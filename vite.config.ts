@@ -55,6 +55,11 @@ export default defineConfig({
       workbox: {
         // Everything the app needs offline, courses included.
         globPatterns: ['**/*.{js,css,html,svg,png,woff2,json}'],
+        // A whole course compiles to one JSON file, which outgrew Workbox's
+        // 2 MiB default (hors-programme.json reached 2.17 MB): past the limit
+        // the file is left out of the precache and the build fails. 10 MiB
+        // leaves room for the courses to keep growing.
+        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
         navigateFallback: 'index.html',
       },
     }),
