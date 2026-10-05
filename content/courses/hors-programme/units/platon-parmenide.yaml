@@ -1,0 +1,906 @@
+# Unité classique (voir content/philosophie.md) : Platon, Parménide, d'après
+# S. Rickless, « Plato's Parmenides », Stanford Encyclopedia of Philosophy
+# (révision de 2026). Les quelques citations de Platon (130d, 135a-c) sont
+# traduites en français depuis l'anglais de l'article, faute de traduction
+# française fournie.
+
+id: platon-parmenide
+title: "Le Parménide : les Idées à l'épreuve"
+subtitle: "Platon, Parménide, 126a-166c"
+icon: bulb
+color: green
+group: "Platon : la métaphysique"
+lessons:
+  - id: platon-parmenide-i1
+    title: "Le dialogue : cadre, personnages, plan"
+    notes: |-
+      Le *Parménide* est sans doute **le plus énigmatique des dialogues de Platon. Il met à l'épreuve la théorie des Idées** (on dit aussi « des formes ») que Socrate défend dans les dialogues de la maturité (*Phédon*, *République*, *Banquet*) : selon cette théorie, à chaque propriété correspond une Idée unique, éternelle, immuable, indivisible et non sensible, et c'est en participant d'elle que les choses ont cette propriété (une chose belle est belle parce qu'elle participe du Beau).
+
+      **Le cadre est une fiction racontée de troisième main.** Céphale, venu de Clazomènes, rencontre à Athènes Adimante et Glaucon, les frères de Platon ; leur demi-frère Antiphon connaît par cœur une conversation que Pythodore, chez qui elle s'est tenue, lui a rapportée. Ce triple relais signale, selon la plupart des spécialistes, que la conversation est presque certainement inventée.
+
+      **La scène** : Parménide d'Élée, le grand défenseur de l'unité de l'être (environ 65 ans), et son disciple Zénon (environ 40 ans) sont venus à Athènes pour les Grandes Panathénées. Socrate, encore très jeune, vient écouter Zénon lire son livre. Dans la seconde partie, Parménide prend pour interlocuteur un jeune homme nommé Aristote.
+
+      | Moment | Lieu | Contenu |
+      | introduction | 126a-128e | l'argument de Zénon |
+      | discours de Socrate | 128e-130a | la théorie des Idées |
+      | critiques de Parménide | 130a-134e | six objections à la théorie |
+      | programme | 134e-137c | comment sauver les Idées : un exercice |
+      | déductions | 137c-166c | huit raisonnements sur l'un, plus un appendice |
+
+      **Ce qui fait l'accord des commentateurs** : Socrate y défend la théorie de la maturité, Parménide lui oppose des objections redoutables, puis il propose une « gymnastique » de huit déductions censée aider à protéger les Idées. **Tout le reste est discuté** : la reconstruction des objections, la structure des déductions, leur sujet, leur rapport aux objections, et la leçon finale du dialogue. Les néoplatoniciens (Plotin, puis Proclus) ont vu dans les déductions la clef de la structure hiérarchique de l'univers.
+
+      ! L'Aristote du dialogue n'est __pas__ le philosophe : c'est un homme qui deviendra l'un des Trente Tyrans après la défaite d'Athènes face à Sparte.
+    points:
+      - id: platon-parmenide-i1-p1
+        sentence: "Le *Parménide* soumet à un examen critique la théorie des ___ que Socrate défend dans les dialogues de la maturité (*Phédon*, *République*, *Banquet*)."
+        answer: "Idées"
+        alt: ["formes", "Formes"]
+      - id: platon-parmenide-i1-p2
+        sentence: "Le *Parménide* est raconté de troisième main : ___, venu de Clazomènes, se fait réciter par Antiphon une conversation que Pythodore avait rapportée."
+        answer: "Céphale"
+        alt: []
+      - id: platon-parmenide-i1-p3
+        sentence: "Dans le *Parménide*, la conversation entre Parménide, Zénon et le jeune Socrate est récitée par ___, demi-frère de Platon, qui l'a apprise de Pythodore."
+        answer: "Antiphon"
+        alt: []
+      - id: platon-parmenide-i1-p4
+        sentence: "Parménide et Zénon sont venus à Athènes pour la fête des Grandes ___, quand le jeune Socrate vient écouter Zénon lire son livre."
+        answer: "Panathénées"
+        alt: []
+      - id: platon-parmenide-i1-p5
+        sentence: "Dans la seconde partie du *Parménide*, l'interlocuteur de Parménide est un jeune homme nommé ___, qui n'est pas le philosophe mais un futur membre des Trente Tyrans."
+        answer: "Aristote"
+        alt: []
+      - id: platon-parmenide-i1-p6
+        sentence: "Dans le *Parménide*, les six objections de Parménide à la théorie des Idées occupent les pages ___."
+        answer: "130a-134e"
+        alt: []
+      - id: platon-parmenide-i1-p7
+        sentence: "Dans le *Parménide*, les huit déductions sur l'un, que Parménide présente comme un exercice pour sauver les Idées, occupent les pages ___."
+        answer: "137c-166c"
+        alt: []
+      - id: platon-parmenide-i1-p8
+        sentence: "Parménide présente la seconde partie du dialogue comme une « ___ » intellectuelle : huit séries de raisonnements censées aider à protéger la théorie des Idées."
+        answer: "gymnastique"
+        alt: []
+      - id: platon-parmenide-i1-p9
+        sentence: "Les néoplatoniciens, ___ puis Proclus, ont vu dans les déductions du *Parménide* la clef de la structure hiérarchique de l'univers."
+        answer: "Plotin"
+        alt: []
+  - id: platon-parmenide-i2
+    title: "Zénon et la réponse de Socrate"
+    notes: |-
+      **Zénon défend le monisme de son maître Parménide (il n'existe qu'un seul être) en montrant que la thèse adverse, le pluralisme, mène à des absurdités pires encore.** Socrate résume l'un de ses arguments :
+      - 1. Si les êtres sont plusieurs, ils sont à la fois semblables et dissemblables.
+      - 2. Rien ne peut être à la fois semblable et dissemblable.
+      - 3. Donc les êtres ne sont pas plusieurs.
+
+      **Socrate attaque la prémisse 2, en s'appuyant sur la théorie des Idées.** Les choses semblables le sont parce qu'elles participent d'une Idée séparée de la Ressemblance, les dissemblables d'une Idée de la Dissemblance. Or une même chose sensible peut participer des deux.
+
+      **Il faut ici distinguer contraires et contradictoires.** Deux propriétés sont *contradictoires* quand l'une est la simple négation de l'autre (semblable et non semblable) : rien ne peut avoir les deux à la fois. Elles sont *contraires* quand elles s'opposent tout en pouvant coexister sous des rapports différents (semblable et dissemblable, grand et petit). Socrate est semblable à Platon (tous deux sont philosophes) et dissemblable de Mélétos (l'un est poète, l'autre non) : il est donc à la fois semblable et dissemblable. De même, Socrate est un (un des sept présents) et plusieurs (il a une droite et une gauche, un devant et un derrière) (129c) ; dans le *Phédon* (102b), Simmias est grand comparé à Socrate et petit comparé à Phédon. D'où le principe d'**impureté des sensibles** : les choses sensibles peuvent avoir, et ont souvent, des propriétés contraires.
+
+      **Mais Socrate concède à Zénon une chose : il serait stupéfiant que les Idées elles-mêmes aient des propriétés contraires.** C'est le principe de **pureté des Idées** : que l'Un soit plusieurs, ou que le Semblable soit dissemblable, voilà ce qui l'étonnerait. Impureté des sensibles et pureté des Idées entraînent ensemble qu'aucune Idée n'est identique à une chose sensible.
+
+      **Zénon et Parménide échangent un regard et sourient** pendant que Socrate parle : signe, selon certains commentateurs, qu'ils apprécient l'objection.
+
+      ! Socrate ne réfute pas la conclusion de Zénon : il conteste l'une de ses __prémisses__ (rien ne peut être à la fois semblable et dissemblable).
+    points:
+      - id: platon-parmenide-i2-p1
+        sentence: "Zénon défend le ___ de Parménide, la thèse qu'il n'existe qu'un seul être, en montrant que la thèse adverse mène à des absurdités pires encore."
+        answer: "monisme"
+        alt: []
+      - id: platon-parmenide-i2-p2
+        sentence: "L'argument de Zénon : si les êtres sont plusieurs, ils sont à la fois semblables et ___ ; or rien ne peut l'être ; donc les êtres ne sont pas plusieurs."
+        answer: "dissemblables"
+        alt: []
+      - id: platon-parmenide-i2-p3
+        sentence: "Dans le *Parménide*, Socrate s'oppose à l'argument de Zénon en attaquant non sa conclusion, mais l'une de ses ___ : rien ne pourrait être à la fois semblable et dissemblable."
+        answer: "prémisses"
+        alt: ["prémisse"]
+      - id: platon-parmenide-i2-p4
+        sentence: "Semblable et dissemblable sont des propriétés ___ : elles s'opposent, mais une chose peut avoir les deux sous des rapports différents."
+        answer: "contraires"
+        alt: []
+      - id: platon-parmenide-i2-p5
+        sentence: "Semblable et non semblable sont des propriétés ___ : l'une est la simple négation de l'autre, et rien ne peut avoir les deux à la fois."
+        answer: "contradictoires"
+        alt: []
+      - id: platon-parmenide-i2-p6
+        sentence: "Socrate est semblable à Platon, puisque tous deux sont philosophes, et dissemblable de ___, qui est poète : il est donc à la fois semblable et dissemblable."
+        answer: "Mélétos"
+        alt: ["Meletos", "Mélètos"]
+      - id: platon-parmenide-i2-p7
+        sentence: "Selon le principe d'___ des sensibles, les choses sensibles peuvent avoir, et ont souvent, des propriétés contraires."
+        answer: "impureté"
+        alt: []
+      - id: platon-parmenide-i2-p8
+        sentence: "Selon le principe de ___ des Idées, que le jeune Socrate oppose à Zénon, une Idée ne peut avoir de propriétés contraires."
+        answer: "pureté"
+        alt: []
+      - id: platon-parmenide-i2-p9
+        sentence: "Dans le *Parménide* (129c), Socrate se dit un, parce qu'il est l'un des sept présents, et ___, parce qu'il a une droite et une gauche, un devant et un derrière."
+        answer: "plusieurs"
+        alt: ["multiple"]
+      - id: platon-parmenide-i2-p10
+        sentence: "Le discours de Socrate sur la théorie des Idées, en réponse à Zénon, se trouve dans le *Parménide*, en ___."
+        answer: "128e-130a"
+        alt: []
+  - id: platon-parmenide-i3
+    title: "La boîte à outils : les principes de la théorie"
+    notes: |-
+      **Pour suivre les objections de Parménide, il faut avoir en tête les principes de la théorie des Idées, tirés des dialogues de la maturité.** Les commentateurs leur donnent des noms commodes ; chaque objection montre que certains d'entre eux, mis ensemble, se contredisent. « F » désigne n'importe quelle propriété (grand, beau, juste) et « le F » l'Idée correspondante (le Grand, le Beau).
+
+      | Principe | Énoncé | Source |
+      | {teal}Causalité{/teal} | les choses F (autres que le F) sont F parce qu'elles participent du F | *Phédon*, 100c-101c |
+      | {teal}Séparation{/teal} | le F est en lui-même et par lui-même : il est séparé de ce qui en participe, et donc non identique à ces choses | *Phédon*, 100b ; *République*, 476b |
+      | {coral}Impureté des sensibles{/coral} | les choses sensibles peuvent avoir des propriétés contraires | *Parménide*, 129c |
+      | {coral}Pureté des Idées{/coral} | une Idée ne peut avoir de propriétés contraires | *Parménide*, 129b-c |
+      | {violet}Un-sur-plusieurs{/violet} | pour toute pluralité de choses F, il y a une Idée du F dont elles participent toutes | *République*, 596a |
+      | {violet}Unicité{/violet} | pour chaque propriété F, il y a exactement une Idée du F | *République*, 597c (argument du « troisième lit ») |
+      | {amber}Auto-prédication{/amber} | le F est lui-même F : le Beau est beau, le Grand est grand | *Hippias majeur*, *Phédon* |
+      | {amber}Unité{/amber} | chaque Idée est une | *République*, 476a, 524b |
+      | Non-identité | aucune Idée n'est identique à ce qui en participe | conséquence de la Séparation |
+
+      **Ne pas confondre Unité et Unicité.** L'Unicité dit qu'il n'y a qu'une seule Idée du Grand. L'Unité dit que chaque Idée est *une*, au sens où elle se compte comme une chose : de même que Socrate est un parmi les sept présents, le Beau est un parce que le Beau et le Laid font deux (*République*, 475e-476a).
+
+      **Deux principes de plus servent dans les objections** : rien de F ne peut causer chez une chose la propriété contraire de F (on ne devient pas grand par du petit, *Phédon*, 101b) : c'est le principe **pas de causalité par les contraires** ; et une chose qui a plusieurs parties est par là même plusieurs.
+
+      ! Auto-prédication et pureté des Idées se combinent : si le Grand est grand, et qu'il ne peut avoir de propriété contraire, alors le Grand ne peut __en aucun sens__ être petit.
+    points:
+      - id: platon-parmenide-i3-p1
+        sentence: "Principe de ___ : les choses F (autres que le F) sont F parce qu'elles participent du F."
+        answer: "Causalité"
+        alt: ["causalité"]
+      - id: platon-parmenide-i3-p2
+        sentence: "Principe de ___ : le F est en lui-même et par lui-même, distinct et non identique aux choses qui en participent."
+        answer: "Séparation"
+        alt: ["séparation"]
+      - id: platon-parmenide-i3-p3
+        sentence: "Principe dit de l'« un-sur-___ » : pour toute pluralité de choses F, il y a une Idée du F dont chacune participe."
+        answer: "plusieurs"
+        alt: []
+      - id: platon-parmenide-i3-p4
+        sentence: "Principe d'___ : pour chaque propriété F, il y a exactement une Idée du F, comme le montre l'argument du « troisième lit » de la *République*."
+        answer: "Unicité"
+        alt: ["unicité"]
+      - id: platon-parmenide-i3-p5
+        sentence: "Principe d'___ : le F est lui-même F ; le Beau est beau, le Grand est grand."
+        answer: "auto-prédication"
+        alt: ["Auto-prédication", "autoprédication"]
+      - id: platon-parmenide-i3-p6
+        sentence: "Principe d'___ : chaque Idée est une, au sens où elle se compte comme une chose, de même que Socrate est un parmi les sept présents."
+        answer: "Unité"
+        alt: ["unité"]
+      - id: platon-parmenide-i3-p7
+        sentence: "Ne pas confondre l'Unité de chaque Idée avec l'___, selon laquelle il n'y a qu'une seule Idée pour chaque propriété."
+        answer: "Unicité"
+        alt: ["unicité"]
+      - id: platon-parmenide-i3-p8
+        sentence: "Selon le principe de ___, aucune Idée n'est identique à une chose qui en participe ; il découle de la Séparation."
+        answer: "non-identité"
+        alt: ["Non-identité", "non identité"]
+      - id: platon-parmenide-i3-p9
+        sentence: "Dans le *Phédon* (101b), Socrate juge monstrueux qu'une chose devienne plus grande par quelque chose de petit : c'est le principe selon lequel il n'y a pas de causalité par les ___."
+        answer: "contraires"
+        alt: []
+      - id: platon-parmenide-i3-p10
+        sentence: "Dans la *République*, Platon déduit l'Unicité des Idées de l'un-sur-plusieurs par l'argument dit du « troisième ___ » (597c)."
+        answer: "lit"
+        alt: []
+  - id: platon-parmenide-i4
+    title: "L'étendue des Idées (130a-e)"
+    notes: |-
+      **Première question de Parménide : y a-t-il une Idée séparée pour chaque propriété ?** Socrate répond en trois temps :
+
+      | Idées de… | Réponse de Socrate |
+      | justice, beauté, bien | certainement |
+      | homme, feu, eau | il hésite |
+      | cheveu, boue, crasse | il en doute franchement |
+
+      Pour ces dernières, dit-il, « ces choses-là sont justement ce que nous voyons », et « il serait par trop étrange de penser qu'il y en a une forme » (130d).
+
+      **Pourquoi ces doutes ? Trois explications sont proposées par les commentateurs.**
+      - **Une erreur de jeunesse** (Allen, Sayre) : Socrate admet à tort ce qu'il ne devrait pas. Ailleurs, Platon parle bien d'une Idée de l'abeille (*Ménon*, 72b-c), de la navette (*Cratyle*, 389d), du lit et de la table (*République*, 596b). Mais on comprend mal que Platon fasse dire à son porte-parole une chose qu'il n'a aucune raison de dire.
+      - **Seules certaines propriétés appellent la pensée** (Gill) : dans la *République* (523d), la vue ne nous montre jamais un doigt qui serait aussi le contraire d'un doigt, mais elle montre un doigt grand et petit à la fois, ce qui pousse l'âme à se demander ce qu'est le grand. Or l'eau ou la boue n'ont pas de contraire. Objection : ce passage explique ce qui __fait penser__ aux Idées, non pourquoi elles __existent__.
+      - **Une tension entre auto-prédication et séparation** (Rickless, Miller) : que la Justice soit juste ou le Beau beau ne fait pas de ces Idées des choses sensibles. Mais si l'Homme est un homme et la Boue boueuse, comment seraient-ils autre chose que des choses sensibles, comme celles que nous voyons ? Cette lecture s'accorde avec la remarque de Socrate : la boue est « justement ce que nous voyons ».
+
+      ! Socrate ne doute pas que la boue existe : il doute qu'il y ait une __Idée séparée__ de la boue, distincte des choses boueuses.
+    points:
+      - id: platon-parmenide-i4-p1
+        sentence: "Dans le *Parménide*, Socrate est sûr qu'il existe des Idées de la justice, de la beauté et du bien, mais il hésite pour l'homme, le feu et l'___."
+        answer: "eau"
+        alt: []
+      - id: platon-parmenide-i4-p2
+        sentence: "Dans le *Parménide*, Socrate doute franchement qu'il existe une Idée séparée du cheveu, de la ___ et de la crasse."
+        answer: "boue"
+        alt: []
+      - id: platon-parmenide-i4-p3
+        sentence: "Sur le cheveu, la boue et la crasse, Socrate déclare : « ces choses-là sont ___ » (*Parménide*, 130d)"
+        answer: "justement ce que nous voyons"
+        alt: []
+      - id: platon-parmenide-i4-p4
+        sentence: "Sur le cheveu, la boue et la crasse, Socrate déclare : « il serait ___ de penser qu'il y en a une forme » (*Parménide*, 130d)"
+        answer: "par trop étrange"
+        alt: []
+      - id: platon-parmenide-i4-p5
+        sentence: "L'examen de l'étendue des Idées, où Socrate hésite à poser une Idée de l'homme et refuse celle de la boue, se trouve dans le *Parménide*, en ___."
+        answer: "130a-e"
+        alt: ["130a-130e"]
+      - id: platon-parmenide-i4-p6
+        sentence: "Contre l'idée d'une erreur de jeunesse de Socrate sur l'étendue des Idées, on rappelle que Platon parle ailleurs d'une Idée de l'___ (*Ménon*, 72b-c)."
+        answer: "abeille"
+        alt: []
+      - id: platon-parmenide-i4-p7
+        sentence: "Selon la commentatrice Gill, seules certaines propriétés appellent la pensée vers les Idées : la vue ne montre jamais un ___ qui serait aussi son contraire (*République*, 523d)."
+        answer: "doigt"
+        alt: []
+      - id: platon-parmenide-i4-p8
+        sentence: "Objection à la lecture de Gill sur l'étendue des Idées : le passage de la *République* sur le doigt explique ce qui fait penser aux Idées, non pourquoi elles ___."
+        answer: "existent"
+        alt: []
+      - id: platon-parmenide-i4-p9
+        sentence: "Selon Rickless et Miller, les doutes de Socrate trahissent une tension entre l'auto-prédication et la ___ : une Idée de la Boue devrait être boueuse, donc sensible."
+        answer: "séparation"
+        alt: ["Séparation"]
+  - id: platon-parmenide-i5
+    title: "Le dilemme du tout et de la partie (1) : l'Idée entière"
+    notes: |-
+      **Parménide examine maintenant ce que veut dire « participer ». Il propose ce qu'on peut appeler le modèle du gâteau** : participer d'une Idée, ce serait en recevoir une part, comme ceux qui partagent un gâteau en reçoivent chacun une part. Deux versions :
+      - **le gâteau entier** : chaque chose qui participe reçoit l'Idée tout entière ;
+      - **la part de gâteau** : chaque chose reçoit seulement une partie de l'Idée.
+      Parménide montre que, dans les deux cas, la théorie se contredit : c'est un dilemme.
+
+      **Première branche, l'Idée entière.** Soient trois choses grandes, A, B, C, en trois lieux différents au même moment. Par la Causalité, chacune participe du Grand ; avec le modèle du gâteau entier, le Grand tout entier est en A, tout entier en B, tout entier en C. Une même Idée est donc tout entière en trois lieux séparés : elle serait « séparée d'elle-même » (131b).
+
+      **Pourquoi est-ce absurde ?** Pour certains commentateurs, être séparé de soi-même est absurde en soi. Pour d'autres, l'absurdité vient de ce qu'une chose séparée d'elle-même n'est plus une : la même Idée serait trois choses, ce qui contredit l'Unité.
+
+      **La parade de Socrate : le jour.** Un même jour est à la fois en bien des lieux sans être séparé de lui-même ; une Idée pourrait l'être de même. **Parménide la retourne : le jour est comme une voile** tendue au-dessus de plusieurs personnes ; chacune n'est couverte que par une partie de la voile. Comparer l'Idée au jour revient donc au modèle de la part de gâteau, la seconde branche du dilemme.
+
+      **Plusieurs commentateurs jugent cette réduction abusive** : un jour, comme intervalle de temps ou comme lumière, pourrait bien être tout entier en plusieurs lieux. Mais on répond qu'un intervalle de temps n'est pas dans des lieux (Allen, Rickless), et que ce ne sont pas les mêmes rayons qui éclairent des lieux différents.
+
+      ! La parade du jour ne sauve pas l'Idée : selon Parménide, elle __ramène__ à l'autre branche du dilemme.
+    points:
+      - id: platon-parmenide-i5-p1
+        sentence: "Selon le modèle dit du ___, participer d'une Idée, c'est en recevoir une part, comme ceux qui partagent une pâtisserie en reçoivent chacun une part."
+        answer: "gâteau"
+        alt: []
+      - id: platon-parmenide-i5-p2
+        sentence: "Si chaque chose qui participe du Grand reçoit le Grand tout entier, une même Idée est tout entière en plusieurs lieux à la fois : elle serait « séparée d'___ » (131b)."
+        answer: "elle-même"
+        alt: []
+      - id: platon-parmenide-i5-p3
+        sentence: "Pour certains commentateurs, ce qui rend absurde une Idée « séparée d'elle-même » est qu'elle ne serait plus une, ce qui contredit le principe d'___."
+        answer: "Unité"
+        alt: ["unité"]
+      - id: platon-parmenide-i5-p4
+        sentence: "Pour défendre le modèle de l'Idée entière, Socrate compare l'Idée au ___, qui est à la fois en bien des lieux sans être séparé de lui-même."
+        answer: "jour"
+        alt: []
+      - id: platon-parmenide-i5-p5
+        sentence: "Parménide répond que le jour est comme une ___ tendue sur plusieurs personnes, dont chacune n'est couverte que par une partie."
+        answer: "voile"
+        alt: []
+      - id: platon-parmenide-i5-p6
+        sentence: "En comparant le jour à une voile, Parménide ramène la parade de Socrate au modèle de la ___ de gâteau, la seconde branche du dilemme."
+        answer: "part"
+        alt: []
+      - id: platon-parmenide-i5-p7
+        sentence: "Le dilemme du tout et de la partie, contre le modèle du gâteau, se trouve dans le *Parménide*, en ___."
+        answer: "130e-131e"
+        alt: []
+      - id: platon-parmenide-i5-p8
+        sentence: "Contre ceux qui jugent abusive la réduction du jour à la voile, Allen et Rickless répondent qu'un intervalle de ___ n'est pas dans des lieux."
+        answer: "temps"
+        alt: []
+  - id: platon-parmenide-i6
+    title: "Le dilemme du tout et de la partie (2) : les parts de l'Idée"
+    notes: |-
+      **Seconde branche : chaque chose reçoit une partie de l'Idée.** Pour éviter que la même partie soit tout entière en plusieurs lieux (on retomberait sur la première absurdité), il faut que la partie du Grand qui est en A soit distincte de celle qui est en B et de celle qui est en C. Le Grand a donc plusieurs parties distinctes : il est divisé, donc plusieurs, et il ne peut être un.
+
+      **Pourquoi « plusieurs » interdit-il d'être « un » ?** On croit souvent que tout ce qui a des parties perd son unité. Mais Socrate vient de dire qu'il est lui-même un et plusieurs, alors qu'il a des parties ! L'explication tient à la **pureté des Idées** : avoir plusieurs parties, c'est être plusieurs ; un et plusieurs sont contraires ; or une Idée ne peut avoir de propriétés contraires ; donc le Grand, s'il est plusieurs, ne peut être un.
+
+      **Parménide ajoute quatre absurdités tirées du même modèle.**
+
+      | Argument | Raisonnement | Principe heurté |
+      | 1. le Grand | une chose grande l'est en recevant une partie du Grand, plus petite que le Grand ; elle serait grande par du petit | pas de causalité par les contraires |
+      | 2. l'Égal | une chose égale le serait par une partie de l'Égal, plus petite que lui, donc inégale à lui | pas de causalité par les contraires |
+      | 3. le Petit | si le Petit a des parties, il est plus grand qu'elles, donc grand ; or il est petit | pureté des Idées (avec l'auto-prédication) |
+      | 4. ajouter | recevoir une partie du Petit, c'est se la voir ajouter ; or on ne rend pas une chose petite en lui ajoutant quelque chose | absurdité directe |
+
+      **Bilan du dilemme** : avec l'Idée entière, l'Idée est séparée d'elle-même ; avec les parts, l'Idée n'est plus une, et l'on heurte plusieurs autres principes.
+
+      ! L'objection ne repose pas sur l'idée que le divisé ne peut être un (Socrate est un et plusieurs) : elle repose sur la __pureté__ des Idées.
+    points:
+      - id: platon-parmenide-i6-p1
+        sentence: "Si chaque chose reçoit une partie distincte du Grand, le Grand a plusieurs parties : il est ___, et ne peut donc être un."
+        answer: "divisé"
+        alt: ["divisible"]
+      - id: platon-parmenide-i6-p2
+        sentence: "Ce qui empêche une Idée divisée d'être une n'est pas que tout ce qui a des parties perd son unité, mais le principe de ___ des Idées : un et plusieurs sont contraires."
+        answer: "pureté"
+        alt: []
+      - id: platon-parmenide-i6-p3
+        sentence: "Contre l'idée que tout ce qui a des parties perd son unité, on rappelle que ___ s'est dit lui-même un et plusieurs, alors qu'il a des parties."
+        answer: "Socrate"
+        alt: []
+      - id: platon-parmenide-i6-p4
+        sentence: "Avec le modèle de la part de gâteau, une chose serait grande en recevant une partie du Grand, plus ___ que lui : elle serait grande par du petit."
+        answer: "petite"
+        alt: []
+      - id: platon-parmenide-i6-p5
+        sentence: "Avec le modèle de la part de gâteau, une chose serait égale en recevant une partie de l'Égal, plus petite que lui, donc ___ à lui."
+        answer: "inégale"
+        alt: []
+      - id: platon-parmenide-i6-p6
+        sentence: "Avec le modèle de la part de gâteau, le Petit, ayant des parties, serait plus ___ qu'elles, alors que, par l'auto-prédication, il est petit."
+        answer: "grand"
+        alt: []
+      - id: platon-parmenide-i6-p7
+        sentence: "Avec le modèle de la part de gâteau, une chose deviendrait petite en se voyant ___ une partie du Petit, ce qui est absurde."
+        answer: "ajouter"
+        alt: []
+      - id: platon-parmenide-i6-p8
+        sentence: "Deux des quatre absurdités tirées du modèle de la part de gâteau, celles du Grand et de l'Égal, heurtent le principe : pas de causalité par les ___."
+        answer: "contraires"
+        alt: []
+  - id: platon-parmenide-i7
+    title: "Le troisième homme (1) : la régression"
+    notes: |-
+      **Le nom vient d'Aristote**, qui discute un argument de ce genre (*Métaphysique*, 990b17) ; Platon ne l'appelle jamais ainsi. Le commentateur Vlastos en a lancé l'analyse moderne en 1954 ; la littérature est immense.
+
+      **Point de départ : l'Unité d'une Idée découle de l'un-sur-plusieurs.** S'il y a plusieurs choses grandes, il y a une Idée du Grand « au-dessus » d'elles, dont toutes participent ; et ce qui est « un sur plusieurs » est un.
+
+      **La régression, pas à pas** (« régression à l'infini » : une suite d'étapes qui ne s'arrête jamais) :
+      - A, B, C sont grands. Par l'un-sur-plusieurs, il y a une Idée du Grand, G1, dont ils participent.
+      - Par l'auto-prédication, G1 est grand. On a donc une nouvelle pluralité de choses grandes : A, B, C et G1.
+      - Par l'un-sur-plusieurs, il y a une Idée, G2, dont A, B, C et G1 participent.
+      - Par la non-identité, G2 n'est pas G1, puisque G1 en participe.
+      - Par l'auto-prédication, G2 est grand ; d'où une nouvelle pluralité A, B, C, G1, G2, donc une Idée G3, et ainsi de suite, sans fin.
+
+      | Principe | Rôle dans l'argument |
+      | un-sur-plusieurs | il y a une Idée au-dessus de toute pluralité de choses grandes |
+      | auto-prédication | chaque Idée du Grand est elle-même grande, donc rejoint la pluralité |
+      | non-identité | l'Idée au-dessus est distincte de celles qui en participent |
+
+      **Le même raisonnement vaut pour n'importe quelle propriété** : il n'y aurait pas une Idée du Beau, mais une infinité.
+
+      ! Le troisième homme ne repose pas sur une seule hypothèse fautive : c'est la __combinaison__ de trois principes de la théorie qui produit la régression.
+    points:
+      - id: platon-parmenide-i7-p1
+        sentence: "Le nom d'« argument du troisième homme » ne vient pas de Platon mais d'___, qui discute un argument de ce genre."
+        answer: "Aristote"
+        alt: []
+      - id: platon-parmenide-i7-p2
+        sentence: "L'argument du troisième homme se trouve dans le *Parménide*, en ___."
+        answer: "132a-b"
+        alt: ["132a-132b", "132ab"]
+      - id: platon-parmenide-i7-p3
+        sentence: "Le commentateur ___ a lancé en 1954 l'analyse moderne de l'argument du troisième homme."
+        answer: "Vlastos"
+        alt: []
+      - id: platon-parmenide-i7-p4
+        sentence: "Dans le troisième homme, c'est l'___ qui fait de l'Idée du Grand une chose grande de plus, qui rejoint la pluralité des choses grandes."
+        answer: "auto-prédication"
+        alt: ["autoprédication"]
+      - id: platon-parmenide-i7-p5
+        sentence: "Dans le troisième homme, c'est la ___ qui oblige l'Idée G2, dont G1 participe, à être distincte de G1."
+        answer: "non-identité"
+        alt: ["non identité"]
+      - id: platon-parmenide-i7-p6
+        sentence: "Dans le troisième homme, c'est l'___ qui pose une nouvelle Idée du Grand au-dessus de chaque nouvelle pluralité de choses grandes."
+        answer: "un-sur-plusieurs"
+        alt: ["un sur plusieurs"]
+      - id: platon-parmenide-i7-p7
+        sentence: "Les trois principes dont la combinaison produit la régression du troisième homme sont l'un-sur-plusieurs, l'auto-prédication et la ___."
+        answer: "non-identité"
+        alt: ["non identité"]
+      - id: platon-parmenide-i7-p8
+        sentence: "Selon le troisième homme, il n'y aurait pas une Idée du Grand, mais une ___ d'Idées du Grand."
+        answer: "infinité"
+        alt: []
+  - id: platon-parmenide-i8
+    title: "Le troisième homme (2) : où est le problème ?"
+    notes: |-
+      **Une régression à l'infini n'est pas absurde en elle-même** (la suite des nombres est infinie sans contradiction). Il faut donc dire en quoi celle du troisième homme gêne la théorie. Trois réponses sont défendues par les commentateurs.
+
+      | Lecture | Ce qui ne va pas | Commentateurs |
+      | {teal}épistémique{/teal} | une Idée doit expliquer et faire connaître les choses F ; une chaîne d'explications sans fin n'explique rien | Vlastos, Fine |
+      | {coral}contre l'Unicité{/coral} | il y aurait plusieurs Idées du Grand, voire une infinité, alors qu'il ne doit y en avoir qu'une | nombreux commentateurs |
+      | {violet}contre l'Unité{/violet} | chaque Idée deviendrait elle-même infiniment plusieurs | Rickless |
+
+      **La lecture épistémique** rend compte du vocabulaire de la connaissance qui parsème le passage, mais pas de son point de départ : Parménide part de l'Unité de l'Idée, non de son rôle d'explication.
+
+      **La dernière phrase du passage est décisive** : chaque Idée, dit Parménide, ne sera plus une, mais infiniment plusieurs. Elle ne dit pas seulement qu'il y aura une infinité d'Idées (contre l'Unicité), mais que **chaque** Idée sera plusieurs. Selon Rickless, G1 participe d'une infinité d'Idées (G2, G3…) ; or, avec le modèle du gâteau, participer d'une Idée, c'est en avoir une part ; G1 a donc une infinité de parties, il est infiniment plusieurs, et par la pureté des Idées il ne peut être un.
+
+      **Quelle leçon ?** Pour beaucoup, Platon doit abandonner l'un des trois principes (un-sur-plusieurs, auto-prédication, non-identité). Pour Rickless, il lui suffit d'abandonner la **pureté des Idées** (et peut-être l'Unicité).
+
+      ! Ne pas réduire la conclusion du troisième homme à « il y a trop d'Idées » : Parménide dit que __chaque__ Idée cesse d'être une.
+    points:
+      - id: platon-parmenide-i8-p1
+        sentence: "Selon la lecture ___ du troisième homme (Vlastos, Fine), une chaîne d'explications sans fin ne peut expliquer ni faire connaître les choses F."
+        answer: "épistémique"
+        alt: []
+      - id: platon-parmenide-i8-p2
+        sentence: "Une régression du troisième homme qui produit plusieurs Idées du Grand contredit au moins le principe d'___ : une seule Idée par propriété."
+        answer: "Unicité"
+        alt: ["unicité"]
+      - id: platon-parmenide-i8-p3
+        sentence: "À la fin du troisième homme, Parménide dit que chaque Idée ne sera plus une, mais ___ plusieurs."
+        answer: "infiniment"
+        alt: []
+      - id: platon-parmenide-i8-p4
+        sentence: "Selon Rickless, la régression du troisième homme contredit l'___ de chaque Idée : l'Idée du Grand, ayant une infinité de parts, devient elle-même plusieurs."
+        answer: "Unité"
+        alt: ["unité"]
+      - id: platon-parmenide-i8-p5
+        sentence: "Objection à la lecture épistémique du troisième homme : Parménide part de l'___ de l'Idée, non de son rôle d'explication."
+        answer: "Unité"
+        alt: ["unité"]
+      - id: platon-parmenide-i8-p6
+        sentence: "Pour Rickless, Platon peut échapper au troisième homme en abandonnant seulement le principe de ___ des Idées, et peut-être l'Unicité."
+        answer: "pureté"
+        alt: []
+      - id: platon-parmenide-i8-p7
+        sentence: "Pour beaucoup de commentateurs, échapper au troisième homme exige d'abandonner l'un de ses trois principes : l'un-sur-plusieurs, la non-identité ou l'___."
+        answer: "auto-prédication"
+        alt: ["autoprédication"]
+  - id: platon-parmenide-i9
+    title: "Les Idées comme pensées (132b-c)"
+    notes: |-
+      **Après le troisième homme, Socrate tente une issue : et si les Idées n'étaient que des pensées, qui n'existent que dans les âmes ?** C'est la thèse dite **noématique** (du grec `noêma`, la pensée). Elle aura une longue postérité : elle est à la racine de la tradition qui identifie le réel à quelque chose de mental, et des théologiens qui voient les Idées comme des pensées dans l'esprit de Dieu. Certains commentateurs (Brancacci) pensent qu'elle viendrait d'Antisthène.
+
+      **Premier argument de Parménide : on retombe dans une régression.**
+      - Toute pensée est pensée __de__ quelque chose (elle a un objet).
+      - Ce que pense une pensée, c'est quelque chose d'un, qui vaut pour tous les cas : c'est-à-dire une Idée.
+      - Donc, si les Idées sont des pensées, chaque Idée est la pensée d'une Idée ; celle-ci, étant aussi une pensée, est la pensée d'une autre Idée, et ainsi de suite. La régression menace de nouveau l'Unicité, et, avec la pureté des Idées, l'Unité.
+
+      **Second argument : avec le modèle du gâteau, tout penserait.** Une pensée n'ayant pas de parties, participer d'une pensée, ce serait la recevoir tout entière. Si les Idées sont des pensées, toutes les choses seraient faites de pensées, et donc **toutes les choses penseraient** : c'est le **panpsychisme**, que Parménide juge absurde. Dira-t-on qu'une chose peut avoir une pensée en elle sans penser ? Alors il faudrait des pensées qui ne pensent pas, ce qui est absurde aussi.
+
+      ! La thèse noématique ne nie pas que les Idées soient objets de pensée : elle soutient qu'elles __ne sont que__ des pensées, sans existence hors des âmes.
+    points:
+      - id: platon-parmenide-i9-p1
+        sentence: "Après le troisième homme, Socrate propose que les Idées ne soient que des ___, qui n'existent que dans les âmes."
+        answer: "pensées"
+        alt: []
+      - id: platon-parmenide-i9-p2
+        sentence: "La thèse selon laquelle les Idées ne seraient que des pensées dans les âmes est dite ___, du grec `noêma`."
+        answer: "noématique"
+        alt: []
+      - id: platon-parmenide-i9-p3
+        sentence: "La proposition de Socrate de faire des Idées des pensées se trouve dans le *Parménide*, en ___."
+        answer: "132b-c"
+        alt: ["132b-132c", "132bc"]
+      - id: platon-parmenide-i9-p4
+        sentence: "Premier argument de Parménide contre les Idées-pensées : toute pensée a un ___, et ce qu'elle pense est une Idée ; chaque Idée serait donc la pensée d'une Idée."
+        answer: "objet"
+        alt: []
+      - id: platon-parmenide-i9-p5
+        sentence: "Second argument contre les Idées-pensées : avec le modèle du gâteau, toutes les choses seraient faites de pensées et donc penseraient, thèse appelée ___."
+        answer: "panpsychisme"
+        alt: []
+      - id: platon-parmenide-i9-p6
+        sentence: "Pour éviter que tout pense, il faudrait admettre des pensées qui ne ___ pas, ce que Parménide juge tout aussi absurde."
+        answer: "pensent"
+        alt: []
+      - id: platon-parmenide-i9-p7
+        sentence: "Certains commentateurs font remonter la thèse noématique, qui fait des Idées des pensées, au philosophe ___."
+        answer: "Antisthène"
+        alt: []
+  - id: platon-parmenide-i10
+    title: "La régression de la ressemblance (132c-133a)"
+    notes: |-
+      **Socrate change complètement de modèle : les Idées seraient des modèles (`paradeigmata`) fixés dans la nature, et participer d'une Idée serait lui ressembler.** On appelle cette conception le **paradigmatisme**. Elle n'est pas nouvelle : la *République* et le *Timée* présentent déjà les Idées comme des modèles dont les choses sont les copies.
+
+      **Parménide pose d'abord que la ressemblance est symétrique (132d)** : si X ressemble à Y, Y ressemble à X. Si le portrait ressemble à Simmias, Simmias ressemble au portrait.
+
+      **Deux lectures de l'objection s'opposent chez les commentateurs.**
+
+      | Lecture | L'argument | Commentateurs |
+      | {teal}un double du troisième homme{/teal} | les mêmes trois principes produisent une infinité d'Idées du F | Owen, Vlastos, Cherniss, Fine |
+      | {coral}une régression propre{/coral} | la ressemblance elle-même produit une infinité d'Idées de la Ressemblance | Schofield, Allen, Rickless |
+
+      **La seconde lecture, pas à pas.** A et B sont tous deux F : ils se ressemblent. Ils sont donc semblables, et, par l'un-sur-plusieurs, ils participent d'une Idée de la Ressemblance, R1. Or, par le paradigmatisme, participer de R1, c'est lui ressembler : A ressemble à R1, donc, par symétrie, R1 ressemble à A. R1 est donc semblable, et participe à son tour d'une Idée de la Ressemblance, R2, distincte d'elle (non-identité) ; par le paradigmatisme et la symétrie, R2 ressemble à R1, donc est semblable, et ainsi de suite.
+
+      **Ici, ce n'est pas l'auto-prédication qui relance la régression**, mais la combinaison du paradigmatisme et de la symétrie. Parménide en conclut que rien ne peut ressembler à l'Idée ; mais A et B lui ressemblent, puisqu'ils en participent : contradiction. **Pourquoi la régression gêne-t-elle ?** On retrouve les trois réponses données pour le troisième homme : elle empêche d'expliquer, elle contredit l'Unicité, ou elle rend chaque Idée plusieurs.
+
+      ! La symétrie est le ressort de l'argument : un modèle ne peut rester « au-dessus » de sa copie, puisqu'il lui ressemble __autant__ qu'elle lui ressemble.
+    points:
+      - id: platon-parmenide-i10-p1
+        sentence: "Selon le ___, les Idées sont des modèles fixés dans la nature, et participer d'une Idée, c'est lui ressembler."
+        answer: "paradigmatisme"
+        alt: []
+      - id: platon-parmenide-i10-p2
+        sentence: "Le mot grec pour les modèles que seraient les Idées, selon la seconde proposition de Socrate, est ___."
+        answer: "paradeigmata"
+        alt: ["paradeigma", "paradigmes"]
+      - id: platon-parmenide-i10-p3
+        sentence: "La régression de la ressemblance se trouve dans le *Parménide*, en ___."
+        answer: "132c-133a"
+        alt: []
+      - id: platon-parmenide-i10-p4
+        sentence: "Parménide pose que la ressemblance est ___ : si X ressemble à Y, Y ressemble à X."
+        answer: "symétrique"
+        alt: []
+      - id: platon-parmenide-i10-p5
+        sentence: "Pour Owen, Vlastos, Cherniss et Fine, la régression de la ressemblance n'est qu'un double du ___."
+        answer: "troisième homme"
+        alt: []
+      - id: platon-parmenide-i10-p6
+        sentence: "Pour Schofield, Allen et Rickless, l'objection au paradigmatisme produit une infinité d'Idées de la ___."
+        answer: "Ressemblance"
+        alt: ["ressemblance"]
+      - id: platon-parmenide-i10-p7
+        sentence: "Dans la régression de la ressemblance lue par Schofield, ce n'est pas l'auto-prédication qui relance la régression, mais le paradigmatisme joint à la ___ de la ressemblance."
+        answer: "symétrie"
+        alt: []
+      - id: platon-parmenide-i10-p8
+        sentence: "Si l'Idée ressemble à ce qui lui ressemble, un modèle ne peut rester « au-dessus » de sa ___ : c'est le ressort de la régression de la ressemblance."
+        answer: "copie"
+        alt: []
+  - id: platon-parmenide-i11
+    title: "La plus grande difficulté (1) : nous ne connaîtrions pas les Idées"
+    notes: |-
+      **Parménide garde pour la fin ce qu'il appelle la plus grande difficulté (133a-134e)**, en deux arguments : si les Idées sont telles que Socrate le dit, (1) les hommes ne peuvent pas les connaître, et (2) les dieux ne peuvent pas connaître les affaires humaines. Les deux conclusions ruineraient la théorie : dans les dialogues de la maturité, connaître les Idées est le but même de la dialectique, et Socrate juge « choquant » que les dieux ignorent nos affaires.
+
+      **Une notion clef : l'être relatif.** Une chose a un être relatif quand on ne peut dire ce qu'elle est sans mentionner autre chose : un maître n'est maître que d'un esclave, une science n'est science que de quelque chose. Les prémisses :
+      - P1. Rien de ce qui est en soi et par soi n'est en nous (parmi les hommes).
+      - P2. Si une Idée est ce qu'elle est relativement à quelque chose, ce quelque chose est une Idée.
+      - P3. Si une chose qui est en nous est ce qu'elle est relativement à quelque chose, ce quelque chose est en nous.
+      - P4. La science est ce qu'elle est relativement à ce dont elle est la science.
+
+      **Les exemples de Parménide** : la Maîtrise en soi est ce qu'elle est relativement à l'Esclavage en soi, non à un esclave humain ; un maître humain est maître d'un esclave humain, non de l'Esclavage en soi.
+
+      **Le raisonnement.** Notre science est en nous ; par P4 et P3, son objet est donc en nous. Or, par la séparation et P1, aucune Idée n'est en nous. Donc notre science n'a jamais une Idée pour objet : **les hommes ne connaissent aucune Idée.**
+
+      **Contresens fréquent sur P2 et P3** : beaucoup de commentateurs (Ryle, Cherniss, Allen, Gill) les lisent comme si les Idées n'avaient de rapport qu'aux Idées, et les choses qu'aux choses. Mais alors aucune chose ne pourrait participer d'une Idée ! D'autres (Peterson, Rickless, Fine) montrent qu'elles portent seulement sur la __définition__ de ce qui a un être relatif : ce qu'est la Maîtrise se définit par l'Esclavage, non par un esclave.
+
+      ! P2 et P3 n'interdisent pas tout rapport entre les Idées et les choses ; elles disent par quoi se __définit__ ce qui est relatif.
+    points:
+      - id: platon-parmenide-i11-p1
+        sentence: "La « plus grande difficulté » que Parménide oppose à la théorie des Idées se trouve dans le *Parménide*, en ___."
+        answer: "133a-134e"
+        alt: []
+      - id: platon-parmenide-i11-p2
+        sentence: "Premier argument de la plus grande difficulté : si les Idées sont telles que Socrate le dit, les ___ ne peuvent pas les connaître."
+        answer: "hommes"
+        alt: ["humains"]
+      - id: platon-parmenide-i11-p3
+        sentence: "Une chose a un être ___ quand on ne peut dire ce qu'elle est sans mentionner autre chose, comme un maître, qui n'est maître que d'un esclave."
+        answer: "relatif"
+        alt: []
+      - id: platon-parmenide-i11-p4
+        sentence: "Première prémisse de la plus grande difficulté : rien de ce qui est en soi et par soi n'est en ___, parmi les hommes."
+        answer: "nous"
+        alt: []
+      - id: platon-parmenide-i11-p5
+        sentence: "Pour illustrer l'être relatif, Parménide dit que la Maîtrise en soi est ce qu'elle est relativement à l'___ en soi, non à un esclave humain."
+        answer: "Esclavage"
+        alt: ["esclavage"]
+      - id: platon-parmenide-i11-p6
+        sentence: "Dans la plus grande difficulté, la ___ est ce qu'elle est relativement à son objet ; la nôtre, étant en nous, a donc son objet en nous."
+        answer: "science"
+        alt: ["connaissance"]
+      - id: platon-parmenide-i11-p7
+        sentence: "Lire les prémisses de la plus grande difficulté comme si les Idées n'avaient aucun rapport aux choses est un contresens : aucune chose ne pourrait alors ___ d'une Idée."
+        answer: "participer"
+        alt: []
+      - id: platon-parmenide-i11-p8
+        sentence: "Selon Peterson, Rickless et Fine, les prémisses de la plus grande difficulté portent seulement sur la ___ de ce qui a un être relatif."
+        answer: "définition"
+        alt: []
+  - id: platon-parmenide-i12
+    title: "La plus grande difficulté (2) : les dieux ne connaîtraient pas nos affaires"
+    notes: |-
+      **Second argument : les dieux ne connaîtraient pas les affaires humaines.**
+      - (i) La science qui est une Idée (la Science en soi) est plus précise que toute science humaine.
+      - (ii) Les dieux possèdent toute science plus précise que la science humaine.
+      - Donc, **P5** : toute science qui est une Idée est possédée par les dieux.
+      - Par P2 et P4, une science qui est une Idée a pour objet une Idée ; par P1 et la séparation, aucune Idée n'est en nous. Donc, **P7** : une science qui est une Idée n'a jamais pour objet quelque chose qui est en nous.
+      - Conclusion : la science des dieux ne porte pas sur ce qui est en nous ; les dieux ne connaissent pas les affaires humaines.
+
+      **L'argument n'est pas valide.** Un argument est *valide* quand sa conclusion suit nécessairement de ses prémisses. Ici, pour conclure, il faudrait non pas P5 (toute science-Idée est possédée par les dieux), mais sa **réciproque**, **P5 bis** : toute science que possèdent les dieux est une science-Idée. Rien n'empêche, avec P5 seule, que les dieux possèdent aussi une autre science, qui porterait sur nos affaires. C'est l'erreur qui consiste à confondre une proposition et sa réciproque (« tous les chats sont des animaux » n'entraîne pas « tous les animaux sont des chats »).
+
+      **Trois hypothèses** : Platon n'a pas vu l'erreur ; il voulait que le lecteur la voie ; ou il a formulé P5 par mégarde au lieu de P5 bis.
+
+      | | Premier argument | Second argument |
+      | conclusion | les hommes ne connaissent pas les Idées | les dieux ne connaissent pas les affaires humaines |
+      | prémisse sur l'être relatif | P3 (ce qui est en nous) | P2 (ce qui est Idée) |
+      | validité | valide selon Rickless | non valide tel qu'il est écrit |
+
+      ! Le second argument ne prouve donc pas sa conclusion tel qu'il est formulé ; mais le premier, lui, reste une difficulté entière pour la théorie.
+    points:
+      - id: platon-parmenide-i12-p1
+        sentence: "Second argument de la plus grande difficulté : si les Idées sont telles que Socrate le dit, les ___ ne peuvent pas connaître les affaires humaines."
+        answer: "dieux"
+        alt: []
+      - id: platon-parmenide-i12-p2
+        sentence: "Dans le second argument de la plus grande difficulté, la science qui est une Idée est jugée plus ___ que toute science humaine, et donc possédée par les dieux."
+        answer: "précise"
+        alt: []
+      - id: platon-parmenide-i12-p3
+        sentence: "Un argument est ___ quand sa conclusion suit nécessairement de ses prémisses, que celles-ci soient vraies ou non."
+        answer: "valide"
+        alt: []
+      - id: platon-parmenide-i12-p4
+        sentence: "Le second argument de la plus grande difficulté n'est pas valide : il faudrait, au lieu de « toute science-Idée est possédée par les dieux », sa ___, « toute science des dieux est une science-Idée »."
+        answer: "réciproque"
+        alt: []
+      - id: platon-parmenide-i12-p5
+        sentence: "Selon Rickless, le second argument de la plus grande difficulté confond une proposition et sa réciproque : avec la prémisse donnée, les dieux pourraient aussi posséder une ___ science, portant sur nos affaires."
+        answer: "autre"
+        alt: []
+      - id: platon-parmenide-i12-p6
+        sentence: "Socrate juge « ___ » que les dieux ne puissent connaître les affaires humaines, conclusion du second argument de la plus grande difficulté."
+        answer: "choquant"
+        alt: []
+  - id: platon-parmenide-i13
+    title: "Sauver les Idées : le programme de l'exercice (134e-137c)"
+    notes: |-
+      **On s'attendrait à ce que Parménide conclue qu'il faut abandonner les Idées. Il fait exactement l'inverse** : il faut les sauver, car « celui qui n'admet pas qu'il y a, pour chaque chose, un caractère qui est toujours le même détruira entièrement la puissance de la dialectique » (135b-c). « Dialectique » peut s'entendre au sens technique (la méthode par laquelle le philosophe connaît les Idées, *République*, 534b-c) ou au sens courant (la capacité de discuter, de communiquer) : dans les deux cas, sans Idées, plus de pensée commune.
+
+      **Il prévient pourtant que ce sera difficile** : « seul un homme très doué pourra parvenir à savoir qu'il existe, pour chaque chose, un genre, une réalité en elle-même et par elle-même » (135a-b).
+
+      **Le remède est un entraînement** qui part du fait que les Idées « errent », c'est-à-dire semblent recevoir des propriétés contraires (135e). Sa forme :
+      - poser qu'une Idée **est**, et tirer les conséquences ; puis poser qu'elle **n'est pas**, et tirer les conséquences ;
+      - examiner les conséquences pour l'Idée elle-même, et pour les **autres** (tout ce qui n'est pas elle) ;
+      - examiner chaque fois les choses relativement à elles-mêmes et relativement aux autres.
+
+      **Parménide fait lui-même l'exercice sur l'Idée de l'un**, avec le jeune Aristote pour interlocuteur, mais il dit qu'il faudrait le refaire pour la ressemblance, le mouvement, le repos, la génération, la destruction, l'être et le non-être (136b). Les propriétés examinées sont nombreuses : être plusieurs, être un tout, avoir une figure, être en soi ou en autre chose, être en mouvement ou en repos, même ou autre, semblable ou dissemblable, égal ou inégal, plus vieux ou plus jeune, être dans le temps, être nommé, connu, perçu.
+
+      **On compte d'ordinaire huit déductions, plus un appendice aux deux premières** (155e-157b) ; les néoplatoniciens en comptaient neuf. En français, on les appelle souvent aussi les « hypothèses ».
+
+      ! Le but déclaré de l'exercice n'est pas de détruire les Idées, mais de les __sauver__ : Parménide maintient qu'il y a, pour chaque chose, une Idée.
+    points:
+      - id: platon-parmenide-i13-p1
+        sentence: "Parménide refuse d'abandonner les Idées : « celui qui n'admet pas qu'il y a, pour chaque chose, un caractère qui est toujours le même ___ » (*Parménide*, 135b-c)"
+        answer: "détruira entièrement la puissance de la dialectique"
+        alt: []
+      - id: platon-parmenide-i13-p2
+        sentence: "Parménide prévient que la défense des Idées sera difficile : « ___ pourra parvenir à savoir qu'il existe, pour chaque chose, un genre, une réalité en elle-même et par elle-même » (*Parménide*, 135a-b)"
+        answer: "seul un homme très doué"
+        alt: []
+      - id: platon-parmenide-i13-p3
+        sentence: "Après ses objections, Parménide recommande non d'abandonner les Idées, mais de les ___ par un entraînement."
+        answer: "sauver"
+        alt: []
+      - id: platon-parmenide-i13-p4
+        sentence: "Parménide dit que les Idées « ___ », au sens où elles semblent recevoir des propriétés contraires (135e)."
+        answer: "errent"
+        alt: []
+      - id: platon-parmenide-i13-p5
+        sentence: "L'exercice de Parménide consiste à poser qu'une Idée est, puis qu'elle n'est ___, et à tirer chaque fois les conséquences."
+        answer: "pas"
+        alt: []
+      - id: platon-parmenide-i13-p6
+        sentence: "L'exercice de Parménide examine les conséquences pour l'Idée posée elle-même, et pour les ___, c'est-à-dire tout ce qui n'est pas elle."
+        answer: "autres"
+        alt: []
+      - id: platon-parmenide-i13-p7
+        sentence: "Parménide fait lui-même l'exercice en prenant pour exemple l'Idée de l'___."
+        answer: "un"
+        alt: ["Un"]
+      - id: platon-parmenide-i13-p8
+        sentence: "Le programme de l'exercice destiné à sauver les Idées se trouve dans le *Parménide*, en ___."
+        answer: "134e-137c"
+        alt: []
+      - id: platon-parmenide-i13-p9
+        sentence: "Les néoplatoniciens comptaient ___ déductions dans la seconde partie du *Parménide*, là où l'on en compte d'ordinaire huit plus un appendice."
+        answer: "neuf"
+        alt: ["9"]
+  - id: platon-parmenide-i14
+    title: "Comment lire les huit déductions ?"
+    notes: |-
+      **Notation** : « G » est l'Idée posée (ici l'un), « F » une propriété, « contraire de F » sa propriété contraire. Deux tableaux du plan sont proposés.
+
+      **La lecture standard** (Miller, Gill, Allen, Rickless) : le troisième principe de division oppose conclusions positives et négatives.
+
+      | Déduction | Hypothèse | Sujet | Conclusion |
+      | D1 | l'un est | l'un | ni F ni contraire de F |
+      | D2 | l'un est | l'un | F et contraire de F |
+      | D3 | l'un est | les autres | F et contraire de F |
+      | D4 | l'un est | les autres | ni F ni contraire de F |
+      | D5 | l'un n'est pas | l'un | F et contraire de F |
+      | D6 | l'un n'est pas | l'un | ni F ni contraire de F |
+      | D7 | l'un n'est pas | les autres | (semblent) F et contraire de F |
+      | D8 | l'un n'est pas | les autres | ni F ni contraire de F |
+
+      **Le problème de cette lecture** : D1 et D2 ensemble disent que, si l'un est, il est F et n'est pas F, ce qui est contradictoire ; donc l'un n'est pas. Mais D5 et D6 disent de même que, si l'un n'est pas, il est F et n'est pas F ; donc il n'est pas vrai que l'un ne soit pas. L'ensemble aboutirait à une contradiction pure et simple.
+
+      **Les issues proposées par les commentateurs :**
+      - **la lecture non standard** (Meinwald, Peterson, Sayre) : le troisième principe oppose « relativement à soi » et « relativement aux autres » (D1 : l'un n'est ni F ni son contraire relativement à soi ; D2 : il est l'un et l'autre relativement aux autres). Plus de contradiction ; mais D2 démontre aussi des choses de l'un relativement à lui-même (il est même et autre que lui-même, 147b) ;
+      - **plusieurs sujets** : chaque déduction porterait sur un « un » différent (néoplatoniciens, Cornford, Miller) ; mais Parménide dit clairement que le sujet est le même ;
+      - **une lecture aporétique** (Owen, Schofield, Gill, Allen) : les déductions sont faites pour embarrasser le lecteur et le pousser à chercher l'erreur ;
+      - **l'antilogie de Gorgias** (Brémond) : tirer des contradictions d'une hypothèse et de sa négation ; mais ce serait une méthode sophistique, et Parménide veut établir qu'il y a des Idées ;
+      - **une réfutation de principes** (Rickless) : les déductions prouvent que l'un est, et que la pureté des Idées et l'Unicité sont fausses.
+
+      ! Une contradiction obtenue à partir d'une hypothèse n'est pas forcément un échec : dans un raisonnement par l'absurde, elle sert à __réfuter__ l'une des prémisses.
+    points:
+      - id: platon-parmenide-i14-p1
+        sentence: "Dans la lecture standard du *Parménide*, la première déduction conclut que, si l'un est, il n'est ni F ni ___ de F."
+        answer: "contraire"
+        alt: []
+      - id: platon-parmenide-i14-p2
+        sentence: "Dans la lecture standard, D1 et D2 ensemble disent que, si l'un est, il est F et n'est pas F : prises ensemble, les huit déductions aboutiraient à une ___ pure et simple."
+        answer: "contradiction"
+        alt: []
+      - id: platon-parmenide-i14-p3
+        sentence: "Pour la lecture non standard des déductions (Meinwald, Peterson, Sayre), le troisième principe de division oppose « relativement à soi » et « relativement aux ___ »."
+        answer: "autres"
+        alt: []
+      - id: platon-parmenide-i14-p4
+        sentence: "Objection à la lecture non standard des déductions : D2 démontre aussi que l'un est même et autre que ___ (147b)."
+        answer: "lui-même"
+        alt: ["soi-même", "soi"]
+      - id: platon-parmenide-i14-p5
+        sentence: "Selon une lecture défendue par les néoplatoniciens, Cornford et Miller, chaque déduction du *Parménide* porterait sur un « un » ___."
+        answer: "différent"
+        alt: []
+      - id: platon-parmenide-i14-p6
+        sentence: "Selon la lecture ___ des déductions (Owen, Schofield, Gill, Allen), elles sont faites pour embarrasser le lecteur et le pousser à chercher l'erreur."
+        answer: "aporétique"
+        alt: []
+      - id: platon-parmenide-i14-p7
+        sentence: "Selon Brémond, les déductions reprennent l'antilogie du sophiste ___ : tirer des contradictions d'une hypothèse et de sa négation."
+        answer: "Gorgias"
+        alt: []
+      - id: platon-parmenide-i14-p8
+        sentence: "Une contradiction tirée d'une hypothèse peut servir, dans un raisonnement par l'___, à réfuter l'une des prémisses."
+        answer: "absurde"
+        alt: []
+  - id: platon-parmenide-i15
+    title: "Les deux premières déductions et l'appendice"
+    notes: |-
+      **D1 (137c-142a) : si l'un est, il n'est ni F ni le contraire de F.** Les conclusions sont vertigineuses : l'un n'est pas plusieurs, n'a pas de parties, n'est pas un tout, n'a ni commencement, ni milieu, ni fin, n'a pas de figure, n'est nulle part, n'est ni en mouvement ni en repos, ni même ni autre, ni semblable ni dissemblable, n'est pas dans le temps ; il ne participe pas de l'être, **il n'est pas, il n'est pas un**, et l'on ne peut ni le nommer ni le connaître.
+
+      **Tout part du premier argument (D1A1)** : par l'Unité ou l'auto-prédication, l'un est un ; un et plusieurs sont contraires ; par la pureté des Idées, l'un n'est donc pas plusieurs. Or la plupart des conclusions suivantes s'enchaînent à partir de celle-là. **Selon Rickless, toute D1 repose donc sur la pureté des Idées.** On peut y voir un argument contre l'Unité, ou bien la preuve que, si l'un est, la pureté des Idées est fausse.
+
+      **D2 (142b-155e) : si l'un est, il est F et le contraire de F.** S'il est, il participe de l'être, sans être identique à l'être ; l'un-qui-est est donc un tout dont l'un et l'être sont des parties, et chacune de ces parties est à son tour une et étant : l'un est **infiniment plusieurs**. Suivent toutes les paires : l'un a des parties et est un tout, il est limité et illimité, en mouvement et en repos, même et autre, semblable et dissemblable, plus vieux et plus jeune, dans le temps ; on peut le nommer et le connaître.
+
+      **Ce que D1 et D2 donnent ensemble** : si la pureté des Idées est vraie et que l'un est, l'un serait à la fois F et non F, ce qui est impossible ; donc, **si l'un est, la pureté des Idées est fausse**. D2 heurte aussi le principe « pas de causalité par les contraires » : l'un, qui est un, est aussi plusieurs.
+
+      **L'appendice (155e-157b)** : si l'un passe d'être F à être contraire de F, il faut un moment où il change. Platon le place dans **l'instant** (`exaiphnês`), « hors du temps », où l'un n'est ni en mouvement ni en repos, ni un ni plusieurs.
+
+      ! D1 ne prouve pas simplement que l'un n'existe pas : elle montre ce qui suit de l'hypothèse __si l'on garde__ la pureté des Idées.
+    points:
+      - id: platon-parmenide-i15-p1
+        sentence: "La première déduction (D1) conclut que, si l'un est, il n'est ni F ni contraire de F : il ne participe pas de l'être, il n'est pas, et il n'est même pas ___."
+        answer: "un"
+        alt: []
+      - id: platon-parmenide-i15-p2
+        sentence: "Selon D1, si l'un est, on ne peut ni le ___ ni le connaître."
+        answer: "nommer"
+        alt: []
+      - id: platon-parmenide-i15-p3
+        sentence: "Selon Rickless, toute la première déduction repose sur le principe de ___ des Idées, à partir duquel D1A1 montre que l'un n'est pas plusieurs."
+        answer: "pureté"
+        alt: []
+      - id: platon-parmenide-i15-p4
+        sentence: "Selon D2, si l'un est, il participe de l'être ; l'un-qui-est est un tout dont l'un et l'être sont des parties, et il est donc ___ plusieurs."
+        answer: "infiniment"
+        alt: []
+      - id: platon-parmenide-i15-p5
+        sentence: "D1 et D2 ensemble montrent que, si l'un est, le principe de ___ des Idées est faux."
+        answer: "pureté"
+        alt: []
+      - id: platon-parmenide-i15-p6
+        sentence: "La deuxième déduction se trouve dans le *Parménide*, en ___."
+        answer: "142b-155e"
+        alt: []
+      - id: platon-parmenide-i15-p7
+        sentence: "L'appendice aux deux premières déductions place le changement de l'un dans l'___, « hors du temps », où il n'est ni en mouvement ni en repos."
+        answer: "instant"
+        alt: []
+      - id: platon-parmenide-i15-p8
+        sentence: "La première déduction se trouve dans le *Parménide*, en ___."
+        answer: "137c-142a"
+        alt: []
+  - id: platon-parmenide-i16
+    title: "Les déductions 3 à 8"
+    notes: |-
+      **D3 (157b-159b) : si l'un est, les autres sont F et contraire de F** : ils ont des parties et forment un tout, ils sont un et plusieurs, limités et illimités, semblables et dissemblables. Selon Rickless, D3 ne s'appuie pas sur la pureté des Idées.
+
+      **D4 (159b-160b) : si l'un est, les autres ne sont ni F ni contraire de F** (ni un ni plusieurs, ni semblables ni dissemblables). Mais D4 dépend de D1, donc de la pureté des Idées. D3 et D4 ensemble donnent, de nouveau : **si l'un est, la pureté des Idées est fausse.**
+
+      **D5 (160b-163b) : si l'un n'est pas, il est F et contraire de F.** Même s'il n'est pas, on peut en parler et le connaître ; il diffère des autres, il est semblable à lui-même et dissemblable des autres, il participe de l'être et du non-être, il est en mouvement et en repos. D5 ne repose pas sur la pureté des Idées : **si l'un n'est pas, la pureté des Idées est fausse.** Que l'un soit ou non, elle est donc fausse.
+
+      **D6 (163b-164b) : si l'un n'est pas, il n'est ni F ni contraire de F** : il n'est en aucune façon, on ne peut ni le nommer ni le connaître. **D5 et D6 ensemble** : si l'un n'est pas, il est F et n'est pas F, ce qui est impossible ; donc l'un est (raisonnement par l'absurde).
+
+      **Pourquoi c'est important** : rien dans ces raisonnements ne dépend du choix de l'un ; ils vaudraient pour n'importe quelle Idée. Parménide prouve ainsi qu'il y a des Idées, et se révèle lui-même cet « homme très doué » dont il parlait.
+
+      **D7 (164b-165e) : si l'un n'est pas, les autres __semblent__ F et contraire de F** : chacun semble un sans l'être, ils semblent pairs ou impairs sans l'être. Ce « semblent » s'écarte du plan annoncé, et reste un mystère. Avec D3, D7 montre que les autres sont, que l'un soit ou non.
+
+      **D8 (165e-166c) : si l'un n'est pas, les autres ne sont ni uns ni plusieurs**, et ne peuvent même pas être conçus comme tels. Comme D7 les montre plusieurs, D7 et D8 ensemble prouvent à nouveau que l'un est.
+
+      | Déductions combinées | Résultat selon Rickless |
+      | D1 + D2, ou D3 + D4 | si l'un est, la pureté des Idées est fausse |
+      | D5 | si l'un n'est pas, la pureté des Idées est fausse |
+      | D5 + D6, ou D7 + D8 | l'un est |
+
+      ! La contradiction n'est pas le dernier mot : combinées deux à deux, les déductions __prouvent__ des thèses (l'un est ; la pureté des Idées est fausse).
+    points:
+      - id: platon-parmenide-i16-p1
+        sentence: "Selon la troisième déduction, si l'un est, les ___ sont F et contraire de F : ils sont un et plusieurs, limités et illimités."
+        answer: "autres"
+        alt: []
+      - id: platon-parmenide-i16-p2
+        sentence: "La quatrième déduction dépend de D1, donc du principe de ___ des Idées ; avec D3, elle montre que, si l'un est, ce principe est faux."
+        answer: "pureté"
+        alt: []
+      - id: platon-parmenide-i16-p3
+        sentence: "Selon la cinquième déduction, même si l'un n'est pas, on peut en parler et le ___."
+        answer: "connaître"
+        alt: []
+      - id: platon-parmenide-i16-p4
+        sentence: "D5 et D6 ensemble montrent que, si l'un n'est pas, il est F et n'est pas F : par un raisonnement par l'absurde, on en conclut que l'un ___."
+        answer: "est"
+        alt: []
+      - id: platon-parmenide-i16-p5
+        sentence: "Rien dans les déductions ne dépendant du choix de l'un, elles prouveraient qu'il y a des Idées : Parménide se révèle ainsi l'« homme très ___ » dont il parlait."
+        answer: "doué"
+        alt: []
+      - id: platon-parmenide-i16-p6
+        sentence: "Selon la septième déduction, si l'un n'est pas, les autres ___ F et contraire de F, écart au plan annoncé qui reste un mystère."
+        answer: "semblent"
+        alt: ["paraissent"]
+      - id: platon-parmenide-i16-p7
+        sentence: "Selon la huitième déduction, si l'un n'est pas, les autres ne sont ni uns ni ___, et ne peuvent même pas être conçus comme tels."
+        answer: "plusieurs"
+        alt: []
+      - id: platon-parmenide-i16-p8
+        sentence: "La cinquième déduction se trouve dans le *Parménide*, en ___."
+        answer: "160b-163b"
+        alt: []
+  - id: platon-parmenide-i17
+    title: "Que conclure du Parménide ?"
+    notes: |-
+      **Les commentateurs sont profondément divisés sur trois questions** : que valent les critiques de Parménide ? à quoi sert l'exercice de la seconde partie ? et comment la seconde partie répond-elle à la première ?
+
+      | Lecture | Thèse | Difficulté |
+      | satire (Tabak) | le dialogue entier serait une parodie | les liens logiques entre ses parties la rendent peu probable |
+      | perplexité honnête (Vlastos, Gill, Allen) | Platon expose des difficultés qu'il ne sait pas encore résoudre | Parménide dit qu'un homme très doué peut défendre les Idées, et le fait |
+      | sophismes à diagnostiquer (Meinwald, Peterson) | les critiques sont fautives, et l'exercice apprend à voir pourquoi | toutes les versions du troisième homme ne deviennent pas fautives (Frances) |
+      | lecture ésotérique (Miller) | les critiques ne valent que si l'on pense les Idées comme des choses sensibles | sous la surface du texte, tout devient permis |
+      | abandon de principes (Rickless) | critiques et déductions sont sérieuses et valides | la plus grande difficulté reste sans réponse |
+
+      **La distinction de Meinwald.** « X est F » peut se dire **relativement à soi** (`pros heauto`) : être F fait partie de la définition de X ; ou **relativement aux autres** (`pros ta alla`) : X présente le trait F. Ainsi, « le Grand est grand » relativement à soi veut dire qu'être grand fait partie de ce qu'est le Grand, non que le Grand serait une grande chose parmi d'autres. Dès lors, l'Idée du Grand ne rejoint pas la pluralité des choses grandes, et la régression du troisième homme serait bloquée.
+
+      **La lecture de Rickless.** Les critiques montrent que la théorie de la maturité est incohérente, avec le modèle du gâteau comme avec le paradigmatisme. Trois principes suffisent à lever toutes ces incohérences, sauf la plus grande difficulté : **la pureté des Idées, l'Unicité, et « pas de causalité par les contraires »**. Les déductions prouvent qu'il y a des Idées, et que ces trois principes sont faux. Platon garde l'essentiel : **l'un-sur-plusieurs et la séparation**. La plus grande difficulté reste un chantier ouvert.
+
+      ! Le *Parménide* n'est pas forcément un aveu d'échec de la théorie des Idées : pour plusieurs lectures, il la __corrige__ sans l'abandonner.
+    points:
+      - id: platon-parmenide-i17-p1
+        sentence: "Pour Vlastos, Gill et Allen, les critiques de Parménide sont le témoignage d'une ___ honnête : Platon n'aurait pas encore su les résoudre."
+        answer: "perplexité"
+        alt: []
+      - id: platon-parmenide-i17-p2
+        sentence: "Selon Meinwald, « X est F » peut se dire relativement à soi, en grec ___, quand être F fait partie de la définition de X."
+        answer: "pros heauto"
+        alt: []
+      - id: platon-parmenide-i17-p3
+        sentence: "Selon Meinwald, « X est F » peut se dire relativement aux autres, en grec ___, quand X présente le trait F."
+        answer: "pros ta alla"
+        alt: []
+      - id: platon-parmenide-i17-p4
+        sentence: "Si « le Grand est grand » se dit relativement à soi, l'Idée du Grand ne rejoint pas la pluralité des choses grandes, et la régression du ___ serait bloquée."
+        answer: "troisième homme"
+        alt: []
+      - id: platon-parmenide-i17-p5
+        sentence: "Contre Meinwald, ___ a montré que toutes les versions du troisième homme ne deviennent pas fautives avec la distinction « relativement à soi / relativement aux autres »."
+        answer: "Frances"
+        alt: []
+      - id: platon-parmenide-i17-p6
+        sentence: "Selon Rickless, il faut abandonner la pureté des Idées, l'Unicité et le principe « pas de causalité par les ___ », mais garder l'un-sur-plusieurs et la séparation."
+        answer: "contraires"
+        alt: []
+      - id: platon-parmenide-i17-p7
+        sentence: "Selon Rickless, Platon garde deux principes essentiels de la théorie de la maturité : l'un-sur-plusieurs et la ___."
+        answer: "séparation"
+        alt: ["Séparation"]
+      - id: platon-parmenide-i17-p8
+        sentence: "Selon Rickless, une seule objection de Parménide reste sans réponse à la fin du dialogue : la plus grande ___."
+        answer: "difficulté"
+        alt: []
+      - id: platon-parmenide-i17-p9
+        sentence: "Pour le commentateur Miller, les critiques de Parménide ne valent que si l'on pense les Idées comme des choses ___."
+        answer: "sensibles"
+        alt: ["matérielles"]
