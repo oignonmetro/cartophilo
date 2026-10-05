@@ -28,6 +28,34 @@ import { BoltIcon, ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/comp
  * onglet par défaut laisserait l'écran s'ouvrir sur une liste à un seul
  * élément que le clic lui-même ne montre jamais.
  */
+const ACTIVE_TRACK_KEY = 'cartophilo.active-tracks.v1'
+
+/**
+ * Piste ouverte, retenue par cours : l'écran se remonte à chaque retour d'une
+ * leçon ou d'une étape (quitter y ramène par l'historique), et sans cette
+ * mémoire il retombait toujours sur la première piste du cours.
+ */
+function rememberedTrack(courseId: string, tracks: readonly Track[]): string | null {
+  try {
+    const saved = JSON.parse(localStorage.getItem(ACTIVE_TRACK_KEY) ?? '{}')[courseId]
+    return typeof saved === 'string' && tracks.some((track) => track.id === saved && !opensUnitDirectly(track)) ? saved : null
+  } catch {
+    return null
+  }
+}
+
+function rememberTrack(courseId: string, trackId: string): void {
+  try {
+    const all = JSON.parse(localStorage.getItem(ACTIVE_TRACK_KEY) ?? '{}')
+    localStorage.setItem(ACTIVE_TRACK_KEY, JSON.stringify({ ...all, [courseId]: trackId }))
+  } catch {
+    // Mémoire facultative : sans elle, on retombe sur la piste par défaut.
+  }
+}
+
+/** Groupes dépliés, par piste, le temps de la session (même raison que `rememberedTrack`). */
+const openGroupsMemory = new Map<string, Set<string>>()
+
 function defaultTrackId(tracks: readonly Track[]): string {
   return (tracks.find((track) => !opensUnitDirectly(track)) ?? tracks[0]!).id
 }
@@ -230,7 +258,9 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   const xp = useProgress((state) => state.xp)
   const streak = useProgress((state) => state.streak)
 
-  const [activeTrackId, setActiveTrackId] = useState(defaultTrackId(course.tracks))
+  const [activeTrackId, setActiveTrackId] = useState(
+    () => rememberedTrack(course.id, course.tracks) ?? defaultTrackId(course.tracks),
+  )
   const [pickerOpen, setPickerOpen] = useState(false)
   const pickableCourses = useMemo(() => availableCourses(manifest), [manifest])
 
@@ -238,21 +268,23 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   // se réinitialise plutôt que de garder celui (potentiellement inexistant)
   // du cours précédent.
   useEffect(() => {
-    setActiveTrackId(defaultTrackId(course.tracks))
+    setActiveTrackId(rememberedTrack(course.id, course.tracks) ?? defaultTrackId(course.tracks))
   }, [course.id])
 
   // Les replis de groupe (voir `groupUnits`) partent fermés, et se
   // réinitialisent au changement de piste plutôt que de garder ouvert un
   // groupe qu'on ne reverra qu'en y revenant plus tard.
-  const [openGroups, setOpenGroups] = useState<Set<string>>(new Set())
+  const groupsKey = `${course.id}/${activeTrackId}`
+  const [openGroups, setOpenGroups] = useState<Set<string>>(() => new Set(openGroupsMemory.get(groupsKey)))
   useEffect(() => {
-    setOpenGroups(new Set())
-  }, [activeTrackId])
+    setOpenGroups(new Set(openGroupsMemory.get(groupsKey)))
+  }, [groupsKey])
   const toggleGroup = (group: string) => {
     setOpenGroups((current) => {
       const next = new Set(current)
       if (next.has(group)) next.delete(group)
       else next.add(group)
+      openGroupsMemory.set(groupsKey, next)
       return next
     })
   }
@@ -307,6 +339,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
       return
     }
     setActiveTrackId(id)
+    rememberTrack(course.id, id)
   }
 
   const track = course.tracks.find((candidate) => candidate.id === activeTrackId) ?? course.tracks[0]!
