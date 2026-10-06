@@ -459,7 +459,7 @@ export function RichGaps({ text, renderGap }: { text: string; renderGap: (index:
       // invisible et sans largeur, interdit la coupure à cet endroit précis
       // sans rien ajouter à l'affichage — un trou qui suit un mot entier
       // (espace avant) garde, lui, le droit de passer à la ligne suivante.
-      const joiner = /['’]$/.test(piece) ? '⁠' : ''
+      const joiner = /\S$/.test(piece) ? '\u2060' : ''
       return `${piece}${joiner}${GAP_MARK}${index}${GAP_MARK}`
     })
     .join('')
