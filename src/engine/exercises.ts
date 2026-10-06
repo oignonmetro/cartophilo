@@ -2339,8 +2339,40 @@ function collapse(value: string): string {
  * enseigne « to postpone » — soit exactement la distinction qu'on évalue.
  */
 export function normalizeForm(value: string): string {
-  return collapse(normalizeCore(value))
+  return collapse(foldGreek(normalizeCore(value)))
 }
+
+/**
+ * Lettres grecques d'une réponse (le `Θ` de « Θ10 »), ramenées à une forme
+ * qui se tape sur n'importe quel clavier : on peut répondre « Θ10 », « theta
+ * 10 » ou « thêta10 ». Les lettres qui ressemblent à une lettre latine (Ε, Ζ,
+ * Α…) deviennent cette lettre, parce que le contenu écrit « E4 » avec un E
+ * latin, et que le E grec tapé ou collé doit être reconnu aussi.
+ *
+ * Appliqué des deux côtés de la comparaison : seule l'équivalence compte, la
+ * forme repliée n'est jamais affichée.
+ */
+const GREEK_FOLD: Record<string, string> = {
+  α: 'a', β: 'b', γ: 'gamma', δ: 'delta', ε: 'e', ζ: 'z', η: 'h', θ: 'theta', ι: 'i', κ: 'k',
+  λ: 'lambda', μ: 'm', ν: 'n', ξ: 'xi', ο: 'o', π: 'pi', ρ: 'p', σ: 'sigma', ς: 'sigma', τ: 't',
+  υ: 'y', φ: 'phi', χ: 'x', ψ: 'psi', ω: 'omega',
+}
+/** Noms de lettres ressemblant à une lettre latine, repliés sur elle (« epsilon 4 » = « E4 »). */
+const LOOKALIKE_NAMES: Record<string, string> = {
+  alpha: 'a', beta: 'b', epsilon: 'e', zeta: 'z', eta: 'h', iota: 'i', kappa: 'k', mu: 'm', nu: 'n',
+  omicron: 'o', rho: 'p', tau: 't', upsilon: 'y', chi: 'x',
+}
+
+function foldGreek(value: string): string {
+  const letters = value.replace(/[Ͱ-Ͽ]/g, (letter) => GREEK_FOLD[letter] ?? letter)
+  // Seulement une réponse qui touche au grec ou à un chiffre : un mot français
+  // ne doit pas se replier parce qu'il s'écrit comme un nom de lettre.
+  if (letters === value && !/\d/.test(value)) return value
+  return letters
+    .replace(/\b(alpha|beta|epsilon|zeta|eta|iota|kappa|mu|nu|omicron|rho|tau|upsilon|chi)\s*(?=\d)/g, (_, name: string) => LOOKALIKE_NAMES[name]!)
+    .replace(/\b(gamma|delta|theta|lambda|xi|pi|sigma|phi|psi|omega)\s+(?=\d)/g, '$1')
+}
+
 
 /**
  * Réponse de vocabulaire saisie au clavier.

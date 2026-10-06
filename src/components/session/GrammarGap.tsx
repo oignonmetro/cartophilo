@@ -4,6 +4,7 @@ import type { GrammarGapExercise } from '@/engine/exercises'
 import { matchesAnswer } from '@/engine/exercises'
 import type { Rating } from '@/engine/srs'
 import { Button } from '@/components/Button'
+import { greekKeysFor } from '@/lib/greekKeys'
 import { learningLanguage } from '@/lib/speech'
 import { sentenceTextSize, sentenceTextSizeMd } from '@/lib/textDensity'
 import { useIsDesktop } from '@/lib/useIsDesktop'
@@ -100,6 +101,21 @@ export function GrammarGap({
     const id = window.setTimeout(() => input.current?.focus(), 250)
     return () => window.clearTimeout(id)
   }, [exercise.id, bank, revealable, mode])
+
+  const greekKeys = greekKeysFor(point.answer)
+
+  // Insère une lettre à l'endroit du curseur, sans lâcher le focus du champ.
+  function typeLetter(letter: string) {
+    const el = input.current
+    if (!el) return
+    const start = el.selectionStart ?? value.length
+    const end = el.selectionEnd ?? value.length
+    setValue(value.slice(0, start) + letter + value.slice(end))
+    requestAnimationFrame(() => {
+      el.focus()
+      el.setSelectionRange(start + letter.length, start + letter.length)
+    })
+  }
 
   const filled = value.trim().length > 0
   const answered = checked !== null || revealed
@@ -276,6 +292,26 @@ export function GrammarGap({
             ))}
           </div>
         ) : revealable && mode === 'reveal' ? null : (
+          <>
+          {/* Lettres grecques d'une réponse comme « Θ10 », introuvables sur
+              un clavier français (voir `greekKeysFor`). « theta10 » est
+              accepté aussi, au clavier. */}
+          {greekKeys && checked === null && (
+            <div className="flex justify-center gap-2" role="group" aria-label="Lettres grecques">
+              {greekKeys.map((letter) => (
+                <button
+                  key={letter}
+                  type="button"
+                  // Garde le focus (et le clavier ouvert sur mobile) dans le champ.
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => typeLetter(letter)}
+                  className="h-11 w-11 rounded-xl border-2 border-line bg-paper text-lg font-black text-ink-soft transition-colors hover:border-violet hover:text-violet-deep"
+                >
+                  {letter}
+                </button>
+              ))}
+            </div>
+          )}
           <input
             ref={input}
             value={value}
@@ -295,6 +331,7 @@ export function GrammarGap({
               keyboardOpen ? 'py-2.5' : 'py-4'
             } ${checked === null ? 'border-line focus:border-violet' : checked ? 'border-success' : 'border-error'}`}
           />
+          </>
         )}
 
         {checked !== null && (

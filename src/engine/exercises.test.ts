@@ -1280,3 +1280,19 @@ describe('leçon de texte', () => {
     expect(matchesAnswer('l’accommodement ; moralement', [], 'l’accommodement moralement')).toBe(true)
   })
 })
+
+describe('réponses en lettres grecques', () => {
+  it('accepte la lettre, son nom ou sa forme accentuée, avec ou sans espace', () => {
+    for (const typed of ['Θ10', 'θ10', 'theta10', 'Theta 10', 'thêta 10']) {
+      expect(matchesAnswer('Θ10', [], typed)).toBe(true)
+    }
+    expect(matchesAnswer('Λ4-5', [], 'lambda 4-5')).toBe(true)
+  })
+
+  it('confond la lettre grecque et sa jumelle latine', () => {
+    expect(matchesAnswer('E4', [], 'Ε4')).toBe(true)
+    expect(matchesAnswer('E4', [], 'epsilon 4')).toBe(true)
+    expect(matchesAnswer('Θ10', [], 'E10')).toBe(false)
+    expect(matchesAnswer('Θ10', [], 'Θ9')).toBe(false)
+  })
+})
