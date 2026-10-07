@@ -1,8 +1,11 @@
 # Unité de texte (voir content/textes.md) : Platon, Criton, 47d-48a, 48b et
 # 49c-d, dans la traduction du jeu de cartes Quizlet d'origine. Anciennement unité
 # classique : chaque carte garde son identifiant, pour que la révision espacée
-# continue ; les leçons m7-l8 et m7-l9, qui commentaient 48b, sont fondues
-# dans la leçon de ce texte (m7-l2).
+# continue (d'où les identifiants de leçon m7-l1… et les cartes m7-l8-…,
+# m7-l9-…, réparties entre les leçons). Les cartes ajoutées lors de la reprise
+# sur le modèle des unités de texte portent des identifiants en -nK. Retirées
+# parce qu'elles redoublaient une carte-citation ou une autre carte :
+# m7-l4-p5, m7-l4-p6, m7-l9-p3, m7-l9-p5, m7-l10-p5.
 
 id: m7
 title: "Le Criton : l'argument moral"
@@ -11,108 +14,131 @@ icon: page
 color: yellow
 group: "Socrate : la morale"
 intro: |-
-  Dans sa prison, Socrate répond à Criton, venu le presser de s'évader. Trois passages : la vie ne vaut pas d'être vécue avec une âme ruinée (47d-48a), la formule du bien-vivre (48b), et le refus de rendre l'injustice pour l'injustice (49c-d), d'où suit le refus de l'évasion.
+  Dans sa prison, Socrate refuse l'évasion que Criton lui propose. Trois passages des principes sur lesquels il fonde ce refus : la vie ne vaut pas d'être vécue avec une âme ruinée (47d-48a) ; ce qui importe n'est pas de vivre, mais de bien vivre (48b) ; il ne faut jamais rendre l'injustice pour l'injustice (49c-d).
 lessons:
 - id: m7-l1
-  title: "Le critère unique : juste ou injuste"
+  title: "Socrate en prison : la situation du dialogue"
   notes: |-
-    Le **Criton** met en scène la visite que Criton, ami fortuné de Socrate,
-    rend à ce dernier en prison, pour le presser de s'évader avant l'exécution
-    de sa peine de mort. Le dialogue est la réponse de Socrate.
+    **Condamné à mort, Socrate attend en prison l'exécution de la sentence ; son ami Criton vient le presser de s'évader, et Socrate refuse, au terme d'un examen qui ne retient qu'une question : s'évader serait-il juste ?**
 
-    Le même principe qui gouvernait l'Apologie y reparaît à l'identique :
-    la décision de s'évader ou non ne doit être gouvernée que par une seule
-    considération, savoir si cet acte serait **juste ou injuste** (48d) : pas
-    les conséquences pour la vie de Socrate. Cette continuité entre les deux
-    dialogues n'est pas un hasard : l'élenchos lui-même, la méthode de
-    questionnement de Socrate, avait une **double finalité** : aiguillonner
-    moralement ses concitoyens, et tester la signification de l'oracle rendu à
-    Delphes, en examinant tous ceux qui prétendaient à la sagesse.
+    L'exécution est différée tant que n'est pas revenu le navire envoyé à Délos : pendant ce voyage sacré, la cité ne met personne à mort. Criton, du même âge et du même dème que Socrate, homme fortuné, a tout préparé : le gardien lui est acquis, des amis sont prêts à payer, des hôtes attendent Socrate en Thessalie. Ses raisons sont celles de l'amitié et de la réputation : il perdrait un ami irremplaçable, et le grand nombre croira que les amis de Socrate n'ont pas voulu payer pour le sauver ; en restant, Socrate abandonnerait ses enfants et ferait le jeu de ses ennemis.
 
-    Avant même d'énoncer ce critère, Socrate a déjà établi que la vie ne vaut
-    pas d'être vécue si l'âme, gâtée par l'injustice, est ruinée : c'est cette
-    affirmation, juste avant l'introduction du principe cardinal sur
-    l'injustice, qui ouvre la voie au raisonnement qui suit (47e-48a).
+    Socrate ne répond pas par un sentiment, mais par un examen : il n'a jamais obéi qu'au raisonnement qui, à l'examen, lui paraît le meilleur (46b), et la menace de la mort ne le lui fera pas abandonner. Le dialogue avance ainsi :
 
-    Sans **Criton**, ami athénien fortuné qui a soudoyé les gardiens et
-    préparé les moyens d'une évasion, le dilemme même du dialogue
-    n'existerait pas : c'est sa visite qui force Socrate à trancher.
+    | Moment | Repère | Ce qui s'y joue |
+    | Prologue | 43a-44b | le navire de Délos, le songe de Socrate |
+    | Plaidoyer de Criton | 44b-46a | l'opinion du grand nombre, l'amitié, les enfants |
+    | Les principes | 46b-49e | l'opinion de l'expert, le bien-vivre, ne jamais commettre l'injustice |
+    | L'application | 49e-50a | s'en aller sans avoir persuadé la cité, est-ce lui faire du tort ? |
+    | La prosopopée des Lois | 50a-54d | les Lois d'Athènes prennent la parole |
+    | Conclusion | 54d-e | Socrate reste |
+
+    Les trois textes de l'unité appartiennent aux principes : la vie ne vaut pas d'être vécue avec une âme ruinée (47d-48a) ; ce qui importe n'est pas de vivre, mais de bien vivre (48b) ; il ne faut jamais rendre l'injustice pour l'injustice (49c-d). La prosopopée des Lois fait l'objet d'une autre unité, dans la piste « La politique ».
+
+    Le *Criton* prolonge l'*Apologie* : le même principe y gouverne la conduite de Socrate, qui ne considère qu'une chose, savoir si son acte serait juste ou injuste (48c-d). Dans l'*Apologie*, l'examen par questions, l'élenchos, avait une double finalité : aiguillonner moralement les Athéniens, et tester la signification de l'oracle rendu à Delphes.
+
+    ! Socrate ne prétend pas que sa condamnation soit juste : il soutient qu'une injustice subie n'autorise pas à en commettre une.
   passage:
     label: "Introduction"
   points:
-  - id: m7-l1-p1
-    sentence: "L'élenchos aurait eu chez Socrate une double finalité : aiguillonner moralement ses concitoyens, et ___ de l'oracle rendu à Delphes, en examinant tous ceux qui prétendaient à la sagesse"
-    answer: "tester la signification"
+  - id: m7-l1-n1
+    sentence: "L'exécution de Socrate est différée jusqu'au retour du navire envoyé à ___ : pendant son voyage sacré, la cité ne met personne à mort."
+    answer: "Délos"
     alt: []
-  - id: m7-l1-p2
-    sentence: "Dans le Criton (48d), Socrate soutient que sa décision de s'évader ou non ne doit être gouvernée que par une seule considération : savoir si cet acte serait ___"
-    answer: "juste ou injuste"
-    alt: []
-  - id: m7-l1-p3
-    sentence: "Que la vie ne vaille pas d'être vécue si l'âme, gâtée par l'injustice, est ruinée : Socrate l'affirme dans le *Criton*, en ___, juste avant d'introduire le principe cardinal sur l'injustice."
-    answer: "47e-48a"
-    alt: ["47e", "Criton 47e-48a"]
   - id: m7-l8-p1
-    sentence: "Sans ___, ami athénien fortuné qui a soudoyé les gardiens et préparé les moyens d'une évasion, le dilemme du dialogue n'existerait pas"
+    sentence: "Du même âge et du même dème que Socrate, l'Athénien fortuné ___ a tout préparé pour son évasion : c'est son plaidoyer qui force Socrate à trancher."
     answer: "Criton"
     alt: []
+  - id: m7-l1-n2
+    sentence: "Criton presse Socrate de fuir en invoquant ___ : on croira que ses amis n'ont pas voulu payer pour le sauver."
+    answer: "l'opinion du grand nombre"
+    alt: ["l'opinion de la foule", "l'opinion", "la réputation"]
+  - id: m7-l1-n3
+    sentence: "Socrate dit n'obéir qu'au seul ___ qui, à l'examen, lui paraît le meilleur (46b) : la menace de la mort ne le lui fera pas abandonner."
+    answer: "raisonnement"
+    alt: ["logos", "argument"]
+  - id: m7-l1-p2
+    sentence: "Dans le *Criton* (48c-d), Socrate soutient que la décision de s'évader ne doit dépendre que d'une seule considération : savoir si l'acte serait ___."
+    answer: "juste ou injuste"
+    alt: []
+  - id: m7-l1-n4
+    sentence: "Après les principes (46b-49e) et leur application à l'évasion (49e-50a), Socrate fait parler les Lois d'Athènes : c'est la ___ des Lois (50a-54d)."
+    answer: "prosopopée"
+    alt: []
+  - id: m7-l1-p1
+    sentence: "Le *Criton* prolonge l'*Apologie*, où l'élenchos avait une double finalité : aiguillonner moralement les Athéniens, et ___ de l'oracle rendu à Delphes."
+    answer: "tester la signification"
+    alt: ["tester le sens", "mettre à l'épreuve la signification", "mettre à l'épreuve le sens"]
 - id: m7-l3
-  title: "L'expert du corps, et l'expert du juste et de l'injuste"
+  title: "L'opinion de l'expert, non celle du grand nombre"
   notes: |-
-    **Micro-fiche : Criton 47e-48a, la vie vaut-elle d'être vécue avec une
-    âme ruinée ?**
+    **Il ne faut pas faire cas de toutes les opinions, mais seulement de celle de l'homme qui sait : en matière de juste et d'injuste comme en matière de santé, c'est l'expert qu'on doit suivre, non le grand nombre.**
 
-    {teal}**Contexte.**{/teal} Ce passage s'inscrit dans la réponse que
-    Socrate oppose à Criton, venu le presser de s'évader. Socrate a d'abord
-    établi, à propos de l'**entraînement du corps** (47b-c), qu'on ne doit
-    suivre que l'opinion de **l'expert**, jamais celle du grand nombre : une
-    opinion incompétente en la matière abîme le corps, cette réalité qu'un
-    régime mauvais détériore et qu'un régime bon fait prospérer.
+    Criton plaidait au nom de l'opinion du grand nombre. Socrate commence donc par examiner la valeur des opinions (46c-47a) : certaines méritent qu'on en tienne compte, d'autres non, celles des hommes sensés, non celles des insensés. Le grand nombre, du reste, ne peut faire ni le plus grand mal ni le plus grand bien : il ne rend un homme ni sensé ni insensé, et agit au hasard (44d).
 
-    Il obtient ensuite de Criton que le même principe vaut pour le juste et
-    l'injuste, le beau et le laid, le bien et le mal (**47c-d**) : il existe
-    là aussi un expert dont le seul jugement doit être suivi, préparant
-    directement l'analogie corps/âme que la suite du raisonnement va exploiter.
+    L'exemple de l'entraînement du corps (47b-c) fait voir la règle : celui qui s'exerce ne fait cas que de l'éloge et du blâme d'un seul homme, le médecin ou le maître de gymnastique ; s'il le méprise pour suivre le grand nombre, il en subira du mal, et dans son corps. Socrate obtient de Criton qu'il en va de même (47c-d) pour le juste et l'injuste, le laid et le beau, le bien et le mal : s'il y a là un homme qui s'y connaît, c'est lui qu'il faut craindre et respecter, plutôt que tous les autres ensemble, sous peine de gâter ce qui s'améliore par la justice et se perd par l'injustice.
+
+    | | Le corps | L'âme |
+    | Le domaine | la santé, l'entraînement | le juste et l'injuste, le beau et le laid, le bien et le mal |
+    | L'expert | le médecin, le maître de gymnastique | l'homme qui s'y connaît, et la vérité elle-même (48a) |
+    | Ce qui l'améliore | un régime sain | la justice |
+    | Ce qui l'abîme | un régime malsain | l'injustice |
+
+    Criton objecte que le grand nombre peut nous faire mourir (48a). C'est vrai, répond Socrate, mais cela ne touche pas l'argument : ce n'est pas vivre, c'est bien vivre qui importe (48b).
+
+    ! Socrate ne méprise pas le peuple par principe : il distingue les opinions selon la compétence, et le grand nombre n'est pas compétent en matière de juste et d'injuste.
   passage:
     label: "Introduction"
   points:
+  - id: m7-l3-n1
+    sentence: "Le grand nombre ne peut rendre un homme ni ___ ni insensé : il agit au hasard (44d)."
+    answer: "sensé"
+    alt: ["sage", "raisonnable"]
   - id: m7-l3-p1
-    sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Contexte. Le passage s'inscrit dans la réponse que Socrate oppose à Criton, venu le presser de s'évader avant l'exécution de la sentence. Socrate a d'abord établi, à propos de l'___ (47b-c), qu'on ne doit suivre que l'opinion de l'expert, jamais celle du grand nombre, car une opinion incompétente en la matière abîme le corps, cette réalité qu'un régime mauvais détériore et qu'un régime bon fait prospérer. Il obtient ensuite de Criton que le même principe vaut pour le juste et l'injuste, le beau et le laid, le bien et le mal (47c-d) : il existe là aussi un expert dont le seul jugement doit être suivi."
+    sentence: "Pour montrer qu'il ne faut suivre que l'opinion de l'expert, Socrate part de l'exemple de l'___ : celui qui s'exerce n'écoute qu'un seul homme, celui qui s'y connaît."
     answer: "entraînement du corps"
-    alt: []
+    alt: ["exercice du corps", "entraînement", "gymnastique"]
   - id: m7-l3-p2
-    sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Contexte. Le passage s'inscrit dans la réponse que Socrate oppose à Criton, venu le presser de s'évader avant l'exécution de la sentence. Socrate a d'abord établi, à propos de l'entraînement du corps (47b-c), qu'on ne doit suivre que l'opinion de ___, jamais celle du grand nombre, car une opinion incompétente en la matière abîme le corps, cette réalité qu'un régime mauvais détériore et qu'un régime bon fait prospérer. Il obtient ensuite de Criton que le même principe vaut pour le juste et l'injuste, le beau et le laid, le bien et le mal (47c-d) : il existe là aussi un expert dont le seul jugement doit être suivi."
+    sentence: "Celui qui s'entraîne ne fait cas que de l'éloge et du blâme d'un seul homme, ___, médecin ou maître de gymnastique, et non du grand nombre."
     answer: "l'expert"
-    alt: []
+    alt: ["celui qui s'y connaît", "le connaisseur"]
   - id: m7-l3-p3
-    sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Contexte. Le passage s'inscrit dans la réponse que Socrate oppose à Criton, venu le presser de s'évader avant l'exécution de la sentence. Socrate a d'abord établi, à propos de l'entraînement du corps (___), qu'on ne doit suivre que l'opinion de l'expert, jamais celle du grand nombre, car une opinion incompétente en la matière abîme le corps, cette réalité qu'un régime mauvais détériore et qu'un régime bon fait prospérer. Il obtient ensuite de Criton que le même principe vaut pour le juste et l'injuste, le beau et le laid, le bien et le mal (47c-d) : il existe là aussi un expert dont le seul jugement doit être suivi."
+    sentence: "L'exemple de l'entraînement du corps, qui établit qu'il faut suivre l'expert et non le grand nombre, se trouve dans le *Criton* en ___."
     answer: "47b-c"
-    alt: []
+    alt: ["47a-c"]
   - id: m7-l3-p4
-    sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Contexte. Le passage s'inscrit dans la réponse que Socrate oppose à Criton, venu le presser de s'évader avant l'exécution de la sentence. Socrate a d'abord établi, à propos de l'entraînement du corps (47b-c), qu'on ne doit suivre que l'opinion de l'expert, jamais celle du grand nombre, car une opinion incompétente en la matière abîme le corps, cette réalité qu'un régime mauvais détériore et qu'un régime bon fait prospérer. Il obtient ensuite de Criton que le même principe vaut pour le juste et l'injuste, le beau et le laid, le bien et le mal (___) : il existe là aussi un expert dont le seul jugement doit être suivi."
+    sentence: "Socrate étend la règle de l'expert au juste et à l'injuste, au beau et au laid, au bien et au mal, dans le *Criton* en ___."
     answer: "47c-d"
     alt: []
+  - id: m7-l8-p3
+    sentence: "En matière de juste et d'injuste, l'homme qui s'y connaît est pour l'âme ce qu'est le ___ pour le corps."
+    answer: "médecin"
+    alt: ["maître de gymnastique", "pédotribe"]
+  - id: m7-l10-p6
+    sentence: "Quand Criton invoque l'opinion du grand nombre, Socrate répond qu'en matière de juste et d'injuste seule compte celle de l'___, et de la vérité elle-même (48a)."
+    answer: "expert"
+    alt: ["homme qui s'y connaît"]
+  - id: m7-l3-n2
+    sentence: "Criton objecte que le grand nombre peut nous ___ (48a) : Socrate répond que ce n'est pas vivre, mais bien vivre, qui importe."
+    answer: "faire mourir"
+    alt: ["tuer", "mettre à mort"]
 - id: m7-l4
-  title: "La partie de nous-mêmes que l'injustice abîme"
+  title: "Le corps et l'âme : une vie qui ne vaut pas d'être vécue"
   notes: |-
-    **Si la vie ne vaut pas d'être vécue avec un corps ruiné, elle le vaut encore moins avec une âme ruinée, car cette partie de nous que concernent l'injustice et la justice est plus précieuse que le corps.** Socrate reprend l'exemple de l'entraînement du corps : ce qui s'améliore par un régime sain et se détériore par un régime malsain, c'est le corps, et on l'abîme en n'écoutant pas ceux qui s'y connaissent. Criton accorde qu'une vie avec un corps « en loques et en ruines » ne vaut pas d'être vécue.
+    **Si la vie ne vaut pas d'être vécue avec un corps ruiné, elle le vaut moins encore avec une âme ruinée, car cette partie de nous-mêmes que concernent la justice et l'injustice est plus précieuse que le corps.**
 
-    Le raisonnement passe alors du corps à l'âme, sans la nommer : « cette partie de nous-mêmes, quelle qu'elle soit », « ce que l'injustice abîme et ce à quoi la justice profite ». L'argument est *a fortiori* : cette partie est « beaucoup plus » précieuse que le corps ; si la ruine du corps rend la vie invivable, celle de l'âme la rend plus invivable encore.
+    Le passage tire la conséquence de l'exemple de l'entraînement. Il avance en trois temps, un par fragment :
 
-    **Micro-fiche : Criton 47e-48a (suite), le raisonnement du passage.**
+    | Fragment | Ce que Socrate fait admettre |
+    | 1/3 | ce qu'un régime malsain détériore, et qu'on abîme en n'écoutant pas ceux qui s'y connaissent, c'est le corps |
+    | 2/3 | la vie ne vaut pas d'être vécue avec un corps ruiné ; la vaut-elle quand est ruiné ce que l'injustice abîme ? |
+    | 3/3 | cette partie de nous-mêmes n'a pas moins, mais beaucoup plus de valeur que le corps |
 
-    Socrate transpose au domaine éthique la question déjà posée à propos du
-    corps : la vie vaut-elle d'être vécue avec un corps ruiné par un
-    **mauvais régime** ? Criton avait répondu par la négative.
+    L'argument est *a fortiori* : la ruine du corps suffit à rendre la vie invivable ; celle d'une partie plus précieuse la rend plus invivable encore. Il repose sur une analogie : de part et d'autre, une réalité qui peut s'améliorer ou se détériorer, ce qui l'améliore (un régime sain, la justice), ce qui la détériore (un régime malsain, l'injustice), et un expert qu'il faut écouter pour ne pas l'abîmer.
 
-    Socrate applique la même question à « cette partie de nous-mêmes, quelle
-    qu'elle soit » (grec `ὅτι ποτ' ἐστίν`) : {coral}« ce que l'injustice
-    **abîme** et ce à quoi la justice **profite** »{/coral} (**47e**). Or,
-    l'attention qu'on donne au soin du corps, il n'y a pas de raison de ne pas
-    la donner à l'âme : l'analogie structurelle qui porte tout le
-    raisonnement.
+    L'âme n'est pas nommée. Socrate la désigne par ce qui l'affecte, « ce que l'injustice abîme et ce à quoi la justice profite », puis « cette partie de nous-mêmes, quelle qu'elle soit » (en grec `ὅτι ποτ' ἐστίν`) : il ne dit pas ce qu'elle est, seulement qu'elle a plus de valeur que le corps. C'est sur cette conclusion que s'appuie, juste après, la formule du bien-vivre (48b).
 
-    ! Socrate ne dit pas ce qu'est cette partie de nous-mêmes (« quelle qu'elle soit ») : il la définit par ce qui l'affecte, l'injustice et la justice.
+    ! Le passage ne dit pas en quoi consiste le dommage que l'injustice inflige à l'âme : il le pose par analogie avec la maladie du corps, sans le décrire (voir le prolongement sur la *République* et le *Gorgias*).
   passage:
     label: "47d-48a"
     text: "SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain, cette chose nous l'endommageons en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera corrompue ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. SOCRATE Eh bien, la vie vaut-elle d'être vécue avec un corps en loques et en ruines ? CRITON Non, assurément. SOCRATE Mais la vie vaut-elle d'être vécue quand, ce qui en nous est ruiné, c'est ce que l'injustice abîme et ce à quoi la justice profite ? Ou bien allons-nous attribuer au corps plus de valeur qu'à cette partie de nous-mêmes, quelle qu'elle soit, que concernent l'injustice et la justice ? CRITON Non certes. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément."
@@ -126,6 +152,11 @@ lessons:
     fragment: "1/3"
     sentence: "« SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain, cette chose nous l'endommageons ___, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera corrompue ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. »"
     answer: "en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent"
+    alt: []
+  - id: m7-l4-n1
+    fragment: "1/3"
+    sentence: "« SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain, cette chose nous l'endommageons en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, est-ce que ___, une fois que cette chose sera corrompue ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. »"
+    answer: "la vie vaudra d'être vécue"
     alt: []
   - id: m7-l4-p9
     fragment: "1/3"
@@ -162,93 +193,46 @@ lessons:
     sentence: "« Ou bien allons-nous attribuer au corps plus de valeur qu'à cette partie de nous-mêmes, quelle qu'elle soit, que concernent l'injustice et la justice ? CRITON Non certes. SOCRATE N'est-elle pas au contraire ___ ? CRITON Beaucoup plus assurément. »"
     answer: "plus précieuse"
     alt: []
-  - id: m7-l4-p1
-    sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Le raisonnement du passage. Socrate transpose alors au domaine éthique la question déjà posée à propos du corps : la vie vaut-elle d'être vécue avec un corps ruiné par un mauvais régime ? Criton avait répondu par la négative. Socrate applique la même question à « cette partie de nous-mêmes, quelle qu'elle soit » (ὅτι ποτ' ἐστίν), « ce que l'injustice ___ et ce à quoi la justice profite » (47e). Or, l'attention qu'on donne du soin du corps, il n'y a pas de raison de ne pas la donner à l'âme."
-    answer: "abîme"
+  - id: m7-l8-p2
+    sentence: "Si la vie ne vaut pas d'être vécue avec un corps ruiné, elle le vaut moins encore quand est ruinée ___, plus précieuse que le corps : l'argument est *a fortiori*."
+    answer: "l'âme"
     alt: []
   - id: m7-l4-p2
-    sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Le raisonnement du passage. Socrate transpose alors au domaine éthique la question déjà posée à propos du corps : la vie vaut-elle d'être vécue avec un corps ruiné par un ___ ? Criton avait répondu par la négative. Socrate applique la même question à « cette partie de nous-mêmes, quelle qu'elle soit » (ὅτι ποτ' ἐστίν), « ce que l'injustice abîme et ce à quoi la justice profite » (47e). Or, l'attention qu'on donne du soin du corps, il n'y a pas de raison de ne pas la donner à l'âme."
-    answer: "mauvais régime"
+    sentence: "Le corps s'améliore par un régime sain et se détériore par un ___ ; l'âme, de même, par la justice et par l'injustice."
+    answer: "régime malsain"
+    alt: ["mauvais régime"]
+  - id: m7-l4-p4
+    sentence: "La justice est à l'âme ce qu'un régime sain est au corps : ce qui lui ___."
+    answer: "profite"
+    alt: ["est profitable", "fait du bien"]
+  - id: m7-l4-p1
+    sentence: "Socrate ne nomme pas l'âme : il la désigne par ce qui l'affecte, ce que l'injustice ___ et ce à quoi la justice profite."
+    answer: "abîme"
     alt: []
   - id: m7-l4-p3
-    sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Le raisonnement du passage. Socrate transpose alors au domaine éthique la question déjà posée à propos du corps : la vie vaut-elle d'être vécue avec un corps ruiné par un mauvais régime ? Criton avait répondu par la négative. Socrate applique la même question à « cette partie de nous-mêmes, quelle qu'elle soit » (ὅτι ποτ' ἐστίν), « ce que l'injustice abîme et ce à quoi la justice profite » (___). Or, l'attention qu'on donne du soin du corps, il n'y a pas de raison de ne pas la donner à l'âme."
+    sentence: "La périphrase qui désigne l'âme sans la nommer, « ce que l'injustice abîme et ce à quoi la justice profite », se trouve dans le *Criton* en ___."
     answer: "47e"
     alt: []
-  - id: m7-l4-p4
-    sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Le raisonnement du passage. Socrate transpose alors au domaine éthique la question déjà posée à propos du corps : la vie vaut-elle d'être vécue avec un corps ruiné par un mauvais régime ? Criton avait répondu par la négative. Socrate applique la même question à « cette partie de nous-mêmes, quelle qu'elle soit » (ὅτι ποτ' ἐστίν), « ce que l'injustice abîme et ce à quoi la justice ___ » (47e). Or, l'attention qu'on donne du soin du corps, il n'y a pas de raison de ne pas la donner à l'âme."
-    answer: "profite"
-    alt: []
-  - id: m7-l4-p5
-    sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Le raisonnement du passage. Socrate transpose alors au domaine éthique la question déjà posée à propos du corps : la vie vaut-elle d'être vécue avec un corps ruiné par un mauvais régime ? Criton avait répondu par la négative. Socrate applique la même question à « cette partie de nous-mêmes, quelle qu'elle soit » (ὅτι ποτ' ἐστίν), « ce que l'injustice abîme et ce à quoi ___ » (47e). Or, l'attention qu'on donne du soin du corps, il n'y a pas de raison de ne pas la donner à l'âme."
-    answer: "la justice profite"
-    alt: []
-  - id: m7-l4-p6
-    sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Le raisonnement du passage. Socrate transpose alors au domaine éthique la question déjà posée à propos du corps : la vie vaut-elle d'être vécue avec un corps ruiné par un mauvais régime ? Criton avait répondu par la négative. Socrate applique la même question à « cette partie de nous-mêmes, quelle qu'elle soit » (ὅτι ποτ' ἐστίν), « ___ » (47e). Or, l'attention qu'on donne du soin du corps, il n'y a pas de raison de ne pas la donner à l'âme."
-    answer: "ce que l'injustice abîme et ce à quoi la justice profite"
-    alt: []
+  - id: m7-l1-p3
+    sentence: "Que la vie ne vaille pas d'être vécue avec une âme ruinée par l'injustice, Socrate l'établit dans le *Criton* en ___, juste avant la formule du bien-vivre."
+    answer: "47e-48a"
+    alt: ["47e", "47d-48a"]
 - id: m7-l2
-  title: "Bien vivre, c'est vivre justement"
+  title: "Non pas vivre, mais bien vivre"
   notes: |-
-    Socrate pose ici la formule centrale du dialogue (48b) : « l'important
-    n'est pas de vivre, mais de vivre dans le bien », ou, dans une
-    formulation plus précise, **bien vivre**.
+    **Ce qui importe n'est pas de vivre, mais de bien vivre ; et bien vivre, vivre honorablement et vivre justement sont une seule et même chose.**
 
-    Il ajoute aussitôt trois déterminations posées comme équivalentes : vivre
-    bien, c'est vivre noblement (*kalôs*) et vivre **justement**. Le terme
-    grec rendu par « justement » est `dikaiôs`, un terme qui reviendra dans
-    tout le raisonnement qui suit.
+    Criton vient d'objecter que le grand nombre peut nous faire mourir (48a). Socrate maintient l'argument : ce dont il faut faire le plus de cas, ce n'est pas de vivre, mais de bien vivre. Le grec sépare nettement les deux :
 
-    Socrate construit un argument *a fortiori* : personne ne jugerait la vie
-    digne d'être vécue avec un corps gravement déformé ; à plus forte raison
-    faut-il refuser une vie où serait déformée **l'âme**, qui compte davantage
-    que le corps et que l'injustice déforme. Dans le Criton, l'expert qu'il
-    faudrait consulter en matière de bien et de mal serait l'analogue, pour
-    l'âme, du **médecin** pour le corps.
+    | Grec | Translittération | Sens |
+    | `ζῆν` | zên | vivre, au sens de subsister, rester en vie |
+    | `εὖ ζῆν` | eu zên | bien vivre |
 
-    La formule « ne pas vivre, mais bien vivre » (48b) distingue deux verbes
-    que le grec permet de séparer nettement : `ζῆν` (`zên`, vivre au sens de
-    subsister, de demeurer en vie) et `εὖ ζῆν` (`eu zên`, bien vivre). Socrate
-    affirme qu'il ne faut se soucier ni de vivre le plus longtemps possible ni
-    de préserver son **existence biologique** comme fin en soi, mais seulement
-    de bien vivre.
+    Criton accorde aussitôt que bien vivre, vivre honorablement (`καλῶς`) et vivre justement (`δικαίως`), c'est la même chose (`ταὐτόν`). La formule tire la conséquence de 47d-48a : si ce qui rend une vie digne d'être vécue est le bon état de la partie de nous-mêmes que concernent la justice et l'injustice, bien vivre, c'est vivre avec cette partie en bon état, c'est-à-dire vivre justement. Ce qui fait la valeur d'une vie n'est donc ni sa durée ni la préservation de l'existence biologique, mais sa qualité.
 
-    Ce bien-vivre reçoit aussitôt deux déterminations supplémentaires, posées
-    comme équivalentes : vivre **honorablement** (`καλῶς`) et vivre justement
-    (`δικαίως`). Ces trois termes, qu'on serait tenté de considérer comme
-    trois exigences distinctes à satisfaire, ne désignent en réalité qu'une
-    seule et même chose (`ταὐτόν ἐστιν`) : bien vivre, c'est vivre
-    honorablement, c'est vivre justement.
+    La conséquence pour l'évasion est immédiate (48b-d). Les raisons de Criton, l'argent, la réputation, l'éducation des enfants, sont celles du grand nombre, qui fait mourir à la légère et rendrait la vie de même s'il le pouvait. La seule question est de savoir s'il est juste de s'évader sans l'accord de la cité : tout argument fondé sur la préservation de la vie, qui ne se soucierait pas d'abord de la justice, est disqualifié par avance.
 
-    Cette identification a une conséquence directe sur la question de
-    l'évasion : si bien vivre se confond avec vivre justement, la seule
-    question pertinente n'est plus celle des conséquences pour la survie
-    physique de Socrate, mais celle de savoir si l'action envisagée est juste
-    ou injuste. Elle disqualifie par avance tout argument fondé sur la
-    **préservation de la vie** (au sens de `ζῆν`) qui ne se soucierait pas
-    d'abord de sa **justice**, et prépare directement la question suivante du
-    dialogue (48b-c), à savoir si s'évader sans l'accord de la cité serait un
-    acte juste envers elle.
-
-    Le déplacement décisif de la leçon précédente suppose l'accord de la
-    **cité** : s'évader sans cet accord serait-il un acte juste envers elle ?
-
-    Socrate a fait admettre que ce qui rend une vie digne d'être vécue, ce
-    n'est pas la préservation du corps, mais le **bon état** de cette partie
-    de nous-mêmes qu'affectent la justice et l'injustice. Si c'est cette
-    partie-là qui détermine si la vie vaut d'être vécue, alors « bien vivre »
-    ne peut désigner rien d'autre que vivre avec cette partie en bon état,
-    c'est-à-dire vivre justement, puisque c'est précisément la justice qui lui
-    profite.
-
-    Une analogie corps/âme renforce le point : de même qu'on préfère sans
-    hésiter une vie courte mais **saine** à une vie longue mais malade, la
-    **qualité** du corps comptant plus que sa seule durée, de même l'état de
-    l'âme, que corrompt l'injustice et que préserve la justice, importe
-    davantage encore, puisque c'est par elle qu'on délibère et qu'on agit.
-    Bien vivre ne peut donc consister qu'à la **maintenir** dans cet état,
-    c'est-à-dire à vivre justement.
-
-    ! « Bien vivre » ne s'ajoute pas à « vivre justement » comme une seconde exigence : c'est une seule et même chose.
+    ! « Bien vivre », « honorablement » et « justement » ne sont pas trois exigences à cumuler : c'est une seule et même chose.
   passage:
     label: "48b"
     text: "l'important n'est pas de vivre, mais de vivre dans le bien"
@@ -257,78 +241,95 @@ lessons:
     sentence: "« l'important n'est pas ___ »"
     answer: "de vivre, mais de vivre dans le bien"
     alt: []
+  - id: m7-l2-n1
+    sentence: "« l'important n'est pas de vivre, mais ___ »"
+    answer: "de vivre dans le bien"
+    alt: []
+  - id: m7-l8-p4
+    sentence: "La formule de 48b sépare deux expressions grecques : `ζῆν` (___), vivre au sens de subsister, et `εὖ ζῆν`, bien vivre."
+    answer: "zên"
+    alt: ["zen", "zēn"]
+  - id: m7-l8-p5
+    sentence: "La formule de 48b sépare `ζῆν`, vivre au sens de subsister, et `εὖ ζῆν` (___), bien vivre."
+    answer: "eu zên"
+    alt: ["eu zen", "eu zēn"]
+  - id: m7-l8-p7
+    sentence: "En 48b, bien vivre, vivre ___ (`καλῶς`) et vivre justement (`δικαίως`) sont une seule et même chose."
+    answer: "honorablement"
+    alt: ["noblement", "avec honneur"]
   - id: m7-l2-p2
-    sentence: "Dans le Criton (48b), Socrate affirme que vivre bien, vivre noblement (kalôs) et vivre ___ sont une seule et même chose"
+    sentence: "En 48b, Criton accorde que bien vivre, vivre honorablement et vivre ___ sont une seule et même chose (`ταὐτόν`)."
     answer: "justement"
     alt: []
   - id: m7-l2-p3
-    sentence: "Dans le Criton (48b), Socrate affirme que bien vivre et vivre justement sont une même chose ; le terme grec rendu par « justement » est ___"
+    sentence: "« Justement », dans la formule de 48b, traduit l'adverbe grec ___."
     answer: "dikaiôs"
-    alt: []
-  - id: m7-l8-p2
-    sentence: "Personne ne jugerait la vie digne d'être vécue avec un corps gravement déformé ; Socrate en tire un argument a fortiori pour ___, qui compte davantage que le corps et que l'injustice déforme"
-    answer: "l'âme"
-    alt: []
-  - id: m7-l8-p3
-    sentence: "Dans le Criton, l'expert qu'il faudrait consulter en matière de bien et de mal serait l'analogue, pour l'âme, du ___ pour le corps"
-    answer: "médecin"
-    alt: []
-  - id: m7-l8-p4
-    sentence: "Criton 48b : ne pas vivre, mais bien vivre La formule distingue deux verbes que le grec permet de séparer nettement : ζῆν (___, vivre au sens de subsister, de demeurer en vie) et εὖ ζῆν (eu zên, bien vivre). Socrate affirme qu'il ne faut se soucier ni de vivre le plus longtemps possible ni de préserver son existence biologique comme fin en soi, mais seulement de bien vivre. Or ce bien-vivre reçoit aussitôt deux déterminations supplémentaires, posées comme équivalentes : vivre honorablement (καλῶς) et vivre justement (δικαίως). Ces trois termes, qu'on serait tenté de considérer comme trois exigences distinctes à satisfaire, ne désignent en réalité qu'une seule et même chose (ταὐτόν ἐστιν) : bien vivre, c'est vivre honorablement, c'est vivre justement."
-    answer: "zên"
-    alt: []
-  - id: m7-l8-p5
-    sentence: "Criton 48b : ne pas vivre, mais bien vivre La formule distingue deux verbes que le grec permet de séparer nettement : ζῆν (zên, vivre au sens de subsister, de demeurer en vie) et εὖ ζῆν (___, bien vivre). Socrate affirme qu'il ne faut se soucier ni de vivre le plus longtemps possible ni de préserver son existence biologique comme fin en soi, mais seulement de bien vivre. Or ce bien-vivre reçoit aussitôt deux déterminations supplémentaires, posées comme équivalentes : vivre honorablement (καλῶς) et vivre justement (δικαίως). Ces trois termes, qu'on serait tenté de considérer comme trois exigences distinctes à satisfaire, ne désignent en réalité qu'une seule et même chose (ταὐτόν ἐστιν) : bien vivre, c'est vivre honorablement, c'est vivre justement."
-    answer: "eu zên"
-    alt: []
-  - id: m7-l8-p6
-    sentence: "Criton 48b : ne pas vivre, mais bien vivre La formule distingue deux verbes que le grec permet de séparer nettement : ζῆν (zên, vivre au sens de subsister, de demeurer en vie) et εὖ ζῆν (eu zên, bien vivre). Socrate affirme qu'il ne faut se soucier ni de vivre le plus longtemps possible ni de préserver son ___ comme fin en soi, mais seulement de bien vivre. Or ce bien-vivre reçoit aussitôt deux déterminations supplémentaires, posées comme équivalentes : vivre honorablement (καλῶς) et vivre justement (δικαίως). Ces trois termes, qu'on serait tenté de considérer comme trois exigences distinctes à satisfaire, ne désignent en réalité qu'une seule et même chose (ταὐτόν ἐστιν) : bien vivre, c'est vivre honorablement, c'est vivre justement."
-    answer: "existence biologique"
-    alt: []
-  - id: m7-l8-p7
-    sentence: "Criton 48b : ne pas vivre, mais bien vivre La formule distingue deux verbes que le grec permet de séparer nettement : ζῆν (zên, vivre au sens de subsister, de demeurer en vie) et εὖ ζῆν (eu zên, bien vivre). Socrate affirme qu'il ne faut se soucier ni de vivre le plus longtemps possible ni de préserver son existence biologique comme fin en soi, mais seulement de bien vivre. Or ce bien-vivre reçoit aussitôt deux déterminations supplémentaires, posées comme équivalentes : vivre ___ (καλῶς) et vivre justement (δικαίως). Ces trois termes, qu'on serait tenté de considérer comme trois exigences distinctes à satisfaire, ne désignent en réalité qu'une seule et même chose (ταὐτόν ἐστιν) : bien vivre, c'est vivre honorablement, c'est vivre justement."
-    answer: "honorablement"
-    alt: []
-  - id: m7-l8-p8
-    sentence: "Criton 48b : ne pas vivre, mais bien vivre Cette identification a une conséquence directe sur la question de l'évasion. Si bien vivre se confond avec vivre justement, alors la seule question pertinente pour décider de fuir ou de rester n'est plus celle des conséquences pour la survie physique de Socrate, mais celle de savoir si l'action envisagée est juste ou injuste. La thèse opère ainsi un déplacement décisif : elle disqualifie par avance tout argument fondé sur la ___ (au sens de ζῆν) qui ne se soucierait pas d'abord de sa justice, et elle prépare directement la question suivante du dialogue (48b-c), à savoir si s'évader sans l'accord de la cité serait un acte juste envers elle."
-    answer: "préservation de la vie"
-    alt: []
-  - id: m7-l8-p9
-    sentence: "Criton 48b : ne pas vivre, mais bien vivre Cette identification a une conséquence directe sur la question de l'évasion. Si bien vivre se confond avec vivre justement, alors la seule question pertinente pour décider de fuir ou de rester n'est plus celle des conséquences pour la survie physique de Socrate, mais celle de savoir si l'action envisagée est juste ou injuste. La thèse opère ainsi un déplacement décisif : elle disqualifie par avance tout argument fondé sur la préservation de la vie (au sens de ζῆν) qui ne se soucierait pas d'abord de sa ___, et elle prépare directement la question suivante du dialogue (48b-c), à savoir si s'évader sans l'accord de la cité serait un acte juste envers elle."
-    answer: "justice"
-    alt: []
-  - id: m7-l9-p1
-    sentence: "Criton 48b : ne pas vivre, mais bien vivre Cette identification a une conséquence directe sur la question de l'évasion. Si bien vivre se confond avec vivre justement, alors la seule question pertinente pour décider de fuir ou de rester n'est plus celle des conséquences pour la survie physique de Socrate, mais celle de savoir si l'action envisagée est juste ou injuste. La thèse opère ainsi un déplacement décisif : elle disqualifie par avance tout argument fondé sur la préservation de la vie (au sens de ζῆν) qui ne se soucierait pas d'abord de sa justice, et elle prépare directement la question suivante du dialogue (48b-c), à savoir si s'évader sans l'accord de la ___ serait un acte juste envers elle."
-    answer: "cité"
-    alt: []
+    alt: ["δικαίως", "dikaios", "dikaiōs"]
   - id: m7-l9-p2
-    sentence: "Criton 48b : ne pas vivre, mais bien vivre Socrate a fait admettre que ce qui rend une vie digne d'être vécue, ce n'est pas la préservation du corps, mais le bon état de cette partie de nous-mêmes qu'affectent la justice et l'injustice. Si donc c'est cette partie-là qui détermine si la vie vaut d'être vécue, alors « bien vivre » ne peut désigner rien d'autre que vivre avec cette partie en ___, c'est-à-dire vivre justement, puisque c'est précisément la justice qui lui profite."
+    sentence: "Si la valeur d'une vie tient à la partie de nous-mêmes que concernent la justice et l'injustice, bien vivre, c'est vivre avec cette partie en ___."
     answer: "bon état"
     alt: []
-  - id: m7-l9-p3
-    sentence: "Criton 48b : ne pas vivre, mais bien vivre Vivre bien, c'est vivre justement et honorablement, car de même qu'on préfère sans hésiter une vie courte mais ___ à une vie longue mais malade et que donc la qualité du corps compte plus que sa seule durée, de même il faut admettre que l'état de l'âme, que corrompt l'injustice et que préserve la justice, importe davantage encore, puisque c'est par elle qu'on délibère et qu'on agit. Bien vivre ne peut donc consister qu'à la maintenir dans cet état, c'est-à-dire à vivre justement."
-    answer: "saine"
-    alt: []
   - id: m7-l9-p4
-    sentence: "Criton 48b : ne pas vivre, mais bien vivre Vivre bien, c'est vivre justement et honorablement, car de même qu'on préfère sans hésiter une vie courte mais saine à une vie longue mais malade et que donc la ___ du corps compte plus que sa seule durée, de même il faut admettre que l'état de l'âme, que corrompt l'injustice et que préserve la justice, importe davantage encore, puisque c'est par elle qu'on délibère et qu'on agit. Bien vivre ne peut donc consister qu'à la maintenir dans cet état, c'est-à-dire à vivre justement."
+    sentence: "Pour Socrate, ce qui fait la valeur d'une vie n'est pas sa durée, mais sa ___ : la manière dont elle est vécue."
     answer: "qualité"
     alt: []
-  - id: m7-l9-p5
-    sentence: "Criton 48b : ne pas vivre, mais bien vivre Vivre bien, c'est vivre justement et honorablement, car de même qu'on préfère sans hésiter une vie courte mais saine à une vie longue mais malade et que donc la qualité du corps compte plus que sa seule durée, de même il faut admettre que l'état de l'âme, que corrompt l'injustice et que préserve la justice, importe davantage encore, puisque c'est par elle qu'on délibère et qu'on agit. Bien vivre ne peut donc consister qu'à la ___ dans cet état, c'est-à-dire à vivre justement."
-    answer: "maintenir"
+  - id: m7-l8-p6
+    sentence: "Il ne faut se soucier ni de vivre le plus longtemps possible ni de préserver son ___ comme une fin en soi, mais seulement de bien vivre."
+    answer: "existence biologique"
+    alt: ["existence", "vie biologique"]
+  - id: m7-l2-n2
+    sentence: "L'argent, la réputation, l'éducation des enfants : ce sont, pour Socrate, les raisons du ___, qui fait mourir à la légère et rendrait la vie de même s'il le pouvait (48c)."
+    answer: "grand nombre"
+    alt: ["la foule", "foule"]
+  - id: m7-l9-p1
+    sentence: "La formule du bien-vivre prépare la question de 48b-c : s'évader sans l'accord de la ___, serait-ce juste ?"
+    answer: "cité"
+    alt: ["des Athéniens", "Athènes"]
+  - id: m7-l8-p8
+    sentence: "Identifier bien vivre et vivre justement disqualifie tout argument fondé sur la ___, au sens de `ζῆν`, qui ne se soucierait pas d'abord de la justice."
+    answer: "préservation de la vie"
+    alt: ["survie"]
+  - id: m7-l8-p9
+    sentence: "Puisque bien vivre, c'est vivre justement, la seule question que pose l'évasion est celle de sa ___, non de ses conséquences pour la survie de Socrate."
+    answer: "justice"
     alt: []
 - id: m7-l6
-  title: "Ne pas répondre à l'injustice par l'injustice"
+  title: "Ne jamais rendre l'injustice pour l'injustice"
   notes: |-
-    **Puisque faire du tort, c'est commettre une injustice, il ne faut jamais rendre le mal pour le mal, quel que soit le mal subi.** Le raisonnement tient en trois répliques de Socrate, auxquelles Criton acquiesce : rendre le mal pour le mal, comme le recommande le grand nombre, n'est d'aucune manière juste ; or faire du tort à quelqu'un revient à commettre un acte injuste ; donc il ne faut pas **répondre à l'injustice par l'injustice** et **faire de tort à qui que soit**, quel que soit **le mal subi**.
+    **Puisque faire du tort, c'est commettre une injustice, il ne faut jamais rendre le mal pour le mal ni faire de tort à personne, quel que soit le mal subi.**
 
-    Ce principe tire la conséquence pratique de tout ce qui précède : si bien vivre, c'est vivre justement (48b), aucune injustice subie n'autorise à en commettre une. Il interdit à Socrate de traiter l'évasion comme une simple question de survie : même injustement condamné, il ne peut se permettre de commettre à son tour une injustice envers la cité.
+    Juste avant, Socrate a rappelé un principe sur lequel Criton et lui s'étaient souvent accordés (49a-b) : on ne doit en aucune manière commettre l'injustice volontairement, car la commettre est toujours mauvais et laid pour celui qui la commet. On ne doit donc pas non plus la commettre en retour, quand on la subit, contrairement à ce que pense le grand nombre. Le passage en tire le raisonnement en trois répliques :
 
-    ! Le principe va contre la morale commune du « grand nombre », qui recommande de rendre coup pour coup.
+    | Réplique | Ce que Socrate fait admettre |
+    | 1 | rendre le mal pour le mal, comme le recommande le grand nombre, n'est d'aucune manière juste |
+    | 2 | faire du tort à quelqu'un revient à commettre un acte injuste |
+    | 3 | il ne faut donc ni répondre à l'injustice par l'injustice, ni faire de tort à personne, quel que soit le mal subi |
+
+    Le grec a un verbe pour la riposte : `ἀνταδικεῖν` (antadikein), commettre l'injustice en retour. Socrate sait que peu de gens admettent ce principe, et qu'entre ceux qui l'admettent et les autres il n'y a pas de délibération commune possible (49d) : chacun ne peut que mépriser les résolutions de l'autre.
+
+    Le principe décide de l'évasion. Si bien vivre, c'est vivre justement (48b), aucune injustice subie n'autorise à en commettre une. Socrate fait encore admettre qu'on doit faire ce dont on est convenu avec quelqu'un, pourvu que ce soit juste (49e) ; reste à savoir si partir sans avoir persuadé la cité, ce serait lui faire du tort (49e-50a). C'est à cette question que répondent les Lois d'Athènes, dans la prosopopée.
+
+    ! Le principe heurte la morale commune du grand nombre, qui recommande de rendre coup pour coup : Socrate le sait, et le dit.
   passage:
     label: "49c-d"
     text: "SOCRATE Mais quoi ! Rendre le mal pour le mal, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, il ne faut pas répondre à l'injustice par l'injustice et faire de tort à qui que soit, quel que soit le mal subi."
   points:
+  - id: m7-l6-n1
+    sentence: "« SOCRATE Mais quoi ! ___, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, il ne faut pas répondre à l'injustice par l'injustice et faire de tort à qui que soit, quel que soit le mal subi. »"
+    answer: "Rendre le mal pour le mal"
+    alt: []
+  - id: m7-l6-n2
+    sentence: "« SOCRATE Mais quoi ! Rendre le mal pour le mal, comme ___, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, il ne faut pas répondre à l'injustice par l'injustice et faire de tort à qui que soit, quel que soit le mal subi. »"
+    answer: "le recommande le grand nombre"
+    alt: []
+  - id: m7-l6-n3
+    sentence: "« SOCRATE Mais quoi ! Rendre le mal pour le mal, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car ___, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, il ne faut pas répondre à l'injustice par l'injustice et faire de tort à qui que soit, quel que soit le mal subi. »"
+    answer: "faire du tort à quelqu'un"
+    alt: []
+  - id: m7-l6-n4
+    sentence: "« SOCRATE Mais quoi ! Rendre le mal pour le mal, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à ___, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, il ne faut pas répondre à l'injustice par l'injustice et faire de tort à qui que soit, quel que soit le mal subi. »"
+    answer: "commettre un acte injuste"
+    alt: []
   - id: m7-l6-p2
     sentence: "« SOCRATE Mais quoi ! Rendre le mal pour le mal, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, il ne faut pas ___ et faire de tort à qui que soit, quel que soit le mal subi. »"
     answer: "répondre à l'injustice par l'injustice"
@@ -349,98 +350,103 @@ lessons:
     sentence: "« SOCRATE Mais quoi ! Rendre le mal pour le mal, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, ___. »"
     answer: "il ne faut pas répondre à l'injustice par l'injustice et faire de tort à qui que soit, quel que soit le mal subi"
     alt: []
+  - id: m7-l6-n5
+    sentence: "Le refus de rendre l'injustice pour l'injustice suit d'un principe posé en 49a : on ne doit en aucune manière commettre l'injustice ___."
+    answer: "volontairement"
+    alt: ["de son plein gré", "de plein gré"]
+  - id: m7-l6-n6
+    sentence: "Commettre l'injustice en retour, quand on la subit, se dit en grec ___ (49b-d)."
+    answer: "antadikein"
+    alt: ["ἀνταδικεῖν"]
+  - id: m7-l6-n7
+    sentence: "Entre ceux qui refusent de rendre l'injustice pour l'injustice et les autres, il n'y a pas de ___ possible (49d)."
+    answer: "délibération commune"
+    alt: ["décision commune", "commune délibération"]
+  - id: m7-l6-n8
+    sentence: "Socrate fait admettre qu'on doit faire ce dont on est convenu avec quelqu'un, pourvu que ce soit ___ (49e)."
+    answer: "juste"
+    alt: ["des choses justes"]
+  - id: m7-l6-n9
+    sentence: "Appliqué à l'évasion, le principe demande si partir sans avoir ___ la cité, ce ne serait pas lui faire du tort (49e-50a)."
+    answer: "persuadé"
+    alt: ["convaincu"]
 - id: m7-l5
-  title: "Le complément chez Platon : République et Gorgias"
+  title: "Le dommage de l'injustice : République et Gorgias"
   notes: |-
-    **Micro-fiche : Criton 47e-48a (suite).**
+    **Que l'injustice ruine l'âme, l'argument de 47d-48a le pose par analogie avec la maladie du corps, sans dire en quoi consiste ce dommage : d'autres dialogues le décrivent.**
 
-    {amber}**Un trou dans l'argumentation.**{/amber} Le passage ne dit à
-    aucun moment en quoi consiste le dommage que **l'injustice** inflige à
-    l'âme. L'argument procède par pure analogie structurelle avec le cas du
-    corps (un objet susceptible d'être détérioré, un agent de détérioration,
-    un agent de préservation), transposée sans qu'aucun contenu positif ne
-    soit donné à ce que l'injustice fait subir à l'âme.
+    Le *Criton* ne donne que la structure de l'analogie : une réalité qui peut se détériorer, ce qui la détériore, ce qui la préserve. Il ne dit pas ce que l'injustice fait à l'âme. Deux dialogues en donnent un contenu positif :
 
-    {teal}**Le complément chez Platon.**{/teal} Ce que le Criton laisse en
-    suspens trouve un traitement positif ailleurs dans le corpus platonicien :
-    1. Le livre I de *La République* établit que l'injustice, en tant que
-    vice de l'âme, l'empêche structurellement d'accomplir sa **fonction
-    propre** (délibérer, commander, vivre), de sorte qu'une âme injuste vit
-    nécessairement mal, quelles qu'en soient les conséquences extérieures.
-    2. Celui du **Gorgias** procède par comparaison réglée selon trois
-    critères (laideur, tort, douleur) et conclut que l'**injustice** est le
-    plus grand des maux : le tort causé (*blabé*) désigne, non une souffrance
-    ressentie, mais une atteinte à la structure même de l'âme, comparable à ce
-    que la maladie fait subir au corps ; ce dommage peut rester imperceptible
-    à celui qui le porte, ce qui le rend d'autant plus grave, puisque rien ne
-    l'incite alors à s'en **défaire**. Ainsi, ce n'est pas le tort fait à
-    autrui qui rend l'injustice redoutable, mais le dommage qu'elle inflige en
-    retour à l'âme de son auteur.
+    | Dialogue | Ce qu'il établit |
+    | *République*, livre I (353d-354a) | l'âme a une fonction propre : délibérer, commander, vivre ; l'injustice, vice de l'âme, l'empêche de l'accomplir, de sorte que l'âme injuste vit mal, quelles que soient les conséquences extérieures |
+    | *Gorgias* | commettre l'injustice est le plus grand des maux, pire que la subir ; le tort qu'elle cause (`βλάβη`, blabè) est une atteinte à l'âme, comme la maladie au corps |
+
+    Le *Gorgias* ajoute que ce dommage peut rester imperceptible à celui qui le porte : l'injuste qui échappe au châtiment ressemble au malade qui fuit le médecin, et rien ne l'incite à s'en défaire, ce qui rend son mal d'autant plus grave. Ce qui rend l'injustice redoutable n'est donc pas d'abord le tort fait à autrui, mais le dommage qu'elle inflige à l'âme de son auteur. C'est ce qui donne son poids au principe du *Criton* (49b) : commettre l'injustice est mauvais pour celui qui la commet.
+
+    ! Le dommage de l'injustice n'est pas une souffrance ressentie : il peut passer inaperçu de celui qui le porte.
   passage:
     label: "Prolongement"
   points:
   - id: m7-l5-p1
-    sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Un trou dans l'argumentation. Le passage ne dit à aucun moment en quoi consiste le dommage que ___ inflige à l'âme. L'argument procède par pure analogie structurelle avec le cas du corps (un objet susceptible d'être détérioré, un agent de détérioration, un agent de préservation), transposée sans qu'aucun contenu positif ne soit donné à ce que l'injustice fait subir à l'âme."
+    sentence: "Le *Criton* ne dit pas en quoi consiste le dommage que ___ inflige à l'âme : il le pose par analogie avec la maladie du corps."
     answer: "l'injustice"
     alt: []
   - id: m7-l5-p2
-    sentence: "Micro-fiche : Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Le complément chez Platon. Ce que le Criton laisse en suspens trouve un traitement positif ailleurs dans le corpus. 1. Le livre I de La République établit ainsi que l'injustice, en tant que vice de l'âme, l'empêche structurellement d'accomplir sa ___ (délibérer, commander, vivre), de sorte qu'une âme injuste vit nécessairement mal, quelles qu'en soient les conséquences extérieures."
+    sentence: "Au livre I de la *République*, l'injustice, vice de l'âme, l'empêche d'accomplir sa ___ : délibérer, commander, vivre."
     answer: "fonction propre"
-    alt: []
+    alt: ["fonction", "ergon"]
   - id: m7-l5-p3
-    sentence: "Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Le complément chez Platon. 1. Le livre I de La République établit ainsi que l'injustice, en tant que vice de l'âme, l'empêche structurellement d'accomplir sa fonction propre (délibérer, commander, vivre), de sorte qu'une âme injuste vit nécessairement mal, quelles qu'en soient les conséquences extérieures. 2. Celui du ___ procède par comparaison réglée selon trois critères (laideur, tort, douleur) et conclut que l'injustice est le plus grand des maux : le tort causé (blabé) désigne ici, non une souffrance ressentie, mais une atteinte à la structure même de l'âme, comparable à ce que la maladie fait subir au corps ; or ce dommage peut rester imperceptible à celui qui le porte, ce qui le rend d'autant plus grave, puisque rien ne l'incite alors à s'en défaire."
+    sentence: "C'est dans le ___ que Platon établit que commettre l'injustice est le plus grand des maux, pire que la subir."
     answer: "Gorgias"
     alt: []
-  - id: m7-l5-p4
-    sentence: "Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Le complément chez Platon. 1. Le livre I de La République établit que l'injustice l'empêche structurellement d'accomplir sa fonction propre, de sorte qu'une âme injuste vit nécessairement mal, quelles qu'en soient les conséquences extérieures. 2. Celui du Gorgias procède par comparaison réglée selon trois critères (laideur, tort, douleur) et conclut que l'injustice est le plus grand des maux : le tort causé (blabé) désigne ici, non une souffrance ressentie, mais une atteinte à la structure même de l'âme, comparable à ce que la maladie fait subir au corps ; or ce dommage peut rester imperceptible à celui qui le porte, ce qui le rend d'autant plus grave, puisque rien ne l'incite alors à s'en ___. Ainsi, ce n'est pas le tort fait à autrui qui rend l'injustice redoutable, mais le dommage qu'elle inflige en retour à l'âme de son auteur."
-    answer: "défaire"
-    alt: []
   - id: m7-l5-p5
-    sentence: "Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Le complément chez Platon. 2. Celui du Gorgias procède par comparaison réglée selon trois critères (laideur, tort, douleur) et conclut que l'___ est le plus grand des maux : le tort causé (blabé) désigne ici, non une souffrance ressentie, mais une atteinte à la structure même de l'âme, comparable à ce que la maladie fait subir au corps ; or ce dommage peut rester imperceptible à celui qui le porte, ce qui le rend d'autant plus grave, puisque rien ne l'incite alors à s'en défaire. Ainsi, ce n'est pas le tort fait à autrui qui rend l'injustice redoutable, mais le dommage qu'elle inflige en retour à l'âme de son auteur."
+    sentence: "Le tort (`βλάβη`) que cause l'___ n'est pas une souffrance ressentie, mais une atteinte à l'âme, comme la maladie au corps."
     answer: "injustice"
     alt: []
+  - id: m7-l5-p4
+    sentence: "Le dommage de l'injustice peut rester imperceptible à celui qui le porte, et rien ne l'incite alors à s'en ___ : c'est ce qui le rend si grave."
+    answer: "défaire"
+    alt: ["délivrer", "débarrasser"]
   - id: m7-l6-p1
-    sentence: "Criton 47e-48a : la vie vaut-elle d'être vécue avec une âme ruinée ? Le complément chez Platon. 2. Celui du Gorgias procède par comparaison réglée selon trois critères (laideur, tort, douleur) et conclut que l'injustice est le plus grand des maux : le tort causé (blabé) désigne ici, non une souffrance ressentie, mais une atteinte à la structure même de l'âme, comparable à ce que la maladie fait subir au corps ; or ce dommage peut rester imperceptible à celui qui le porte, ce qui le rend d'autant plus grave, puisque rien ne l'incite alors à s'en défaire. Ainsi, ce n'est pas le tort fait à autrui qui rend l'injustice redoutable, mais le dommage qu'elle inflige en retour à ___ de son auteur."
+    sentence: "Ce qui rend l'injustice redoutable n'est pas d'abord le tort fait à autrui, mais le dommage qu'elle inflige à ___ de son auteur."
     answer: "l'âme"
     alt: []
 - id: m7-l10
-  title: "Dikè et adikia : le vocabulaire grec du juste"
+  title: "Le vocabulaire grec du juste"
   notes: |-
-    Socrate emploie deux termes grecs, `dikè` et `adikia`, pour couvrir
-    respectivement le juste et l'injuste en matière de devoirs envers autrui :
-    on les rend en français par **le juste** et **l'injuste**.
+    **L'argument tient, en grec, à une seule famille de mots, dont la traduction française varie d'une ligne à l'autre.**
 
-    Avant même d'examiner si l'évasion respecterait ses accords envers la
-    cité, Socrate établit que rien d'autre ne compte que de savoir si leurs
-    actions seraient **justes ou injustes**. Et quand Criton invoque l'opinion
-    du plus grand nombre, Socrate répond que la seule autorité qu'il
-    accepterait serait celle d'un **expert** en la matière, comparable au
-    médecin pour le corps, bouclant ainsi la boucle ouverte dès l'entrée en
-    matière du dialogue (47b-c).
+    | Grec | Translittération | Traduction et repère |
+    | `τὸ ἄδικον`, `τὸ δίκαιον` | to adikon, to dikaion | littéralement l'injuste et le juste, rendus par « ce que l'injustice abîme et ce à quoi la justice profite » (47e) |
+    | `ἀδικία`, `δικαιοσύνη` | adikia, dikaiosunè | « l'injustice et la justice » (47e-48a) |
+    | `δικαίως` | dikaiôs | « justement » (48b) |
+    | `ἀδικεῖν` | adikein | commettre l'injustice (49a-c) |
+    | `ἀνταδικεῖν` | antadikein | répondre à l'injustice par l'injustice (49b-d) |
+    | `δίκη` | dikè | le jugement rendu (50b) |
+
+    En 47e, la traduction rend par des noms abstraits, l'injustice et la justice, deux adjectifs neutres, l'injuste et le juste. Les noms grecs viennent juste après, quand Socrate parle de la partie de nous-mêmes « que concernent l'injustice et la justice » : `ἀδικία` et `δικαιοσύνη`, la justice comme qualité de l'âme. `δίκη`, enfin, ne désigne pas cette vertu : dans la prosopopée, les Lois reprochent à l'évadé de priver de force les jugements rendus.
+
+    ! « La justice » de 47e-48a et « justement » de 48b ne traduisent pas le même mot : un nom, `δικαιοσύνη`, et un adverbe, `δικαίως`.
   passage:
     label: "Prolongement"
   points:
-  - id: m7-l10-p1
-    sentence: "Dans le Criton, Socrate emploie les termes grecs ___ et adikia pour couvrir respectivement le juste et l'injuste en matière de devoirs envers autrui"
-    answer: "dikè"
-    alt: []
-  - id: m7-l10-p2
-    sentence: "Dans le Criton, Socrate emploie les termes grecs dikè et ___ pour couvrir respectivement le juste et l'injuste en matière de devoirs envers autrui"
-    answer: "adikia"
-    alt: []
   - id: m7-l10-p3
-    sentence: "Dans le Criton, les termes grecs dikè et adikia couvrent tout le champ des devoirs envers autrui ; on les rend en français par ___ et l'injuste"
+    sentence: "« Ce que l'injustice abîme et ce à quoi la justice profite » (47e) traduit deux adjectifs neutres, `τὸ ἄδικον` et `τὸ δίκαιον` : littéralement l'injuste et ___."
     answer: "le juste"
     alt: []
   - id: m7-l10-p4
-    sentence: "Dans le Criton, les termes grecs dikè et adikia couvrent tout le champ des devoirs envers autrui ; on les rend en français par le juste et ___"
+    sentence: "« Ce que l'injustice abîme et ce à quoi la justice profite » (47e) traduit deux adjectifs neutres, `τὸ ἄδικον` et `τὸ δίκαιον` : littéralement ___ et le juste."
     answer: "l'injuste"
     alt: []
-  - id: m7-l10-p5
-    sentence: "Avant même d'examiner si l'évasion respecterait ses accords, Socrate établit dans le Criton que rien d'autre ne compte que de savoir si leurs actions seraient ___"
-    answer: "justes ou injustes"
-    alt: []
-  - id: m7-l10-p6
-    sentence: "Quand Criton invoque l'opinion du plus grand nombre, Socrate répond que la seule autorité qu'il accepterait serait celle d'un ___ en la matière, comparable au médecin pour le corps"
-    answer: "expert"
-    alt: []
+  - id: m7-l10-p2
+    sentence: "« L'injustice et la justice », en 47e-48a, traduisent ___ et `δικαιοσύνη`."
+    answer: "adikia"
+    alt: ["ἀδικία"]
+  - id: m7-l10-n1
+    sentence: "« Justement » (48b) et « la justice » (47e-48a) ne traduisent pas le même mot grec : `δικαίως` pour l'un, ___ pour l'autre."
+    answer: "dikaiosunè"
+    alt: ["δικαιοσύνη", "dikaiosune", "dikaiosunê"]
+  - id: m7-l10-p1
+    sentence: "Dans le *Criton*, `δίκη` (dikè) ne désigne pas la justice comme vertu, mais le ___ rendu : les Lois reprochent à l'évadé de priver de force les jugements (50b)."
+    answer: "jugement"
+    alt: ["procès"]
