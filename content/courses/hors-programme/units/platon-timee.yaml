@@ -1,0 +1,1145 @@
+# Unité classique (voir content/philosophie.md) : Platon, Timée, d'après
+# D. Zeyl et B. Sattler, « Plato's Timaeus », Stanford Encyclopedia of
+# Philosophy (révision de 2022). Les citations de Platon viennent de la
+# traduction de Luc Brisson (avec Michel Patillon), Timée. Critias,
+# GF-Flammarion, 5e éd. 2001, relues sur un scan OCR : coquilles de l'OCR
+# corrigées, appels de note retirés.
+
+id: platon-timee
+title: "Le Timée : la fabrication du monde"
+subtitle: "Platon, Timée (17a-92c)"
+icon: bulb
+color: green
+group: "Platon : la métaphysique"
+lessons:
+- id: platon-timee-i1
+  title: "Le dialogue : cadre, personnages, plan"
+  notes: |-
+    Le *Timée* raconte **la fabrication du monde : l'univers est l'œuvre d'un dieu artisan, le démiurge, qui, les yeux fixés sur un modèle éternel, impose un ordre mathématique à un chaos préexistant.** Le principe d'explication est la finalité : l'univers et chacune de ses parties sont disposés en vue du meilleur. Cet arrangement n'est pas un hasard, il est voulu par l'Intellect (`nous`), que la figure du démiurge représente sous les traits d'un homme de métier.
+
+    **Le cadre.** Pendant les Panathénées, Socrate retrouve Timée (de Locres, en Italie), Critias et Hermocrate. La veille, il leur a exposé une cité idéale très proche de celle de la *République* (résumée en 17c-19b). Ses hôtes lui rendent la politesse en deux temps : Timée racontera la naissance de l'univers jusqu'à celle de l'homme ; Critias montrera ensuite la cité idéale en action, l'Athènes d'autrefois en guerre contre l'Atlantide (récit commencé dans le *Critias*, resté inachevé).
+
+    | Moment | Repère | Contenu |
+    | conversation d'ouverture | 17a-27d | personnages, programme, récit de l'Atlantide |
+    | prélude de Timée | 27d-29d | principes, démiurge et modèle, statut du discours |
+    | les œuvres de l'Intellect | 29d-47e | le monde vivant, son âme, le temps, l'homme, la vue |
+    | les effets de la nécessité | 47e-69a | le réceptacle, les éléments, les sensations |
+    | l'Intellect et la nécessité ensemble | 69a-92c | le corps et l'âme de l'homme, les maladies, les animaux |
+
+    Après le prélude, le discours de Timée n'est plus interrompu jusqu'à la fin : c'est un monologue, qui ressemble plus à un exposé faisant autorité qu'à une enquête par questions.
+
+    **Sa fortune.** Traduit en latin par Calcidius au IVe siècle, le *Timée* fut le seul texte de Platon accessible dans l'Occident latin jusqu'au XIIe siècle ; Kepler s'y réfère encore. Longtemps jugé philosophiquement mineur au XXe siècle, il connaît depuis quelques décennies un fort regain d'intérêt.
+
+    ! Le *Timée* n'est pas un dialogue de recherche où Socrate interroge : Socrate y écoute, et Timée parle presque seul.
+  points:
+  - id: platon-timee-i1-p1
+    sentence: "Dans le *Timée*, l'univers est l'œuvre d'un dieu artisan, le ___, qui impose un ordre mathématique à un chaos préexistant."
+    answer: "démiurge"
+    alt: ["Démiurge", "dêmiourgos"]
+  - id: platon-timee-i1-p2
+    sentence: "Le démiurge du *Timée* représente, sous les traits d'un artisan, l'___, en grec `nous`."
+    answer: "Intellect"
+    alt: ["intellect", "intelligence"]
+  - id: platon-timee-i1-p3
+    sentence: "Le principe d'explication du *Timée* est la ___ : l'univers et chacune de ses parties sont disposés en vue du meilleur."
+    answer: "finalité"
+    alt: ["téléologie"]
+  - id: platon-timee-i1-p4
+    sentence: "Le *Timée* se donne comme la suite d'un discours de Socrate, tenu la veille, sur une cité idéale très proche de celle de la ___."
+    answer: "République"
+    alt: ["*République*"]
+  - id: platon-timee-i1-p5
+    sentence: "Après le *Timée*, ___ doit montrer la cité idéale en action, l'Athènes d'autrefois en guerre contre l'Atlantide."
+    answer: "Critias"
+    alt: []
+  - id: platon-timee-i1-p6
+    sentence: "Le récit de Critias doit raconter la guerre de l'Athènes d'autrefois contre l'___."
+    answer: "Atlantide"
+    alt: []
+  - id: platon-timee-i1-p7
+    sentence: "Le discours de Timée commence par un prélude (27d-29d) qui pose les principes, présente le démiurge et son modèle, et précise le ___ du discours."
+    answer: "statut"
+    alt: []
+  - id: platon-timee-i1-p8
+    sentence: "Dans le *Timée*, la première grande partie du discours expose les œuvres de l'Intellect, la deuxième les effets de la ___."
+    answer: "nécessité"
+    alt: ["Nécessité"]
+  - id: platon-timee-i1-p9
+    sentence: "Dans le *Timée*, la troisième partie du discours (69a-92c) montre l'Intellect et la nécessité travaillant ensemble à la constitution de l'___."
+    answer: "homme"
+    alt: ["être humain"]
+  - id: platon-timee-i1-p10
+    sentence: "Traduit en latin par ___ au IVe siècle, le *Timée* fut le seul texte de Platon accessible dans l'Occident latin jusqu'au XIIe siècle."
+    answer: "Calcidius"
+    alt: ["Chalcidius"]
+  - id: platon-timee-i1-p11
+    sentence: "Timée vient de la cité de ___, en Italie."
+    answer: "Locres"
+    alt: []
+- id: platon-timee-i2
+  title: "Le statut du discours : un mythe vraisemblable"
+  notes: |-
+    **Timée prévient que son discours ne sera que « vraisemblable » (`eikôs logos`, `eikôs muthos`) : parce qu'il porte sur une image, il ne peut avoir la stabilité d'un discours sur le modèle.** Le jeu de mots est voulu : l'objet du discours est lui-même une image (`eikôn`) du modèle éternel, et un discours a le caractère de ce dont il parle (29b). Brisson traduit : « Ce que l'être est au devenir, la vérité l'est à la croyance ».
+
+    | Objet | Discours qui lui convient | Faculté |
+    | le modèle, ce qui demeure | stable, inébranlable, irréfutable | l'intellect (`nous`) |
+    | l'image, ce qui devient | vraisemblable, révisable | la croyance (`pistis`) |
+
+    Le mot a deux faces, qu'il faut garder ensemble. Il abaisse les attentes : sur le devenir, pas d'explications « totalement cohérentes avec elles-mêmes et parfaitement exactes », car « moi qui parle et vous qui êtes mes juges sommes d'humaine nature ». Mais il fixe aussi une exigence : Timée promet des explications qui « ne sont pas des images plus infidèles qu'une autre » ; et si « on nous propose un mythe vraisemblable », « il ne sied pas de chercher plus loin ».
+
+    Le discours reste ouvert à la révision : sur le choix des triangles, Timée promet que si quelqu'un trouve mieux, « c'est à lui que reviendra en toute amitié le prix » ; et les principes premiers, seul les connaît le dieu, avec « ceux que ce dieu a en amitié ».
+
+    Pour Zeyl et Sattler (auteurs de l'entrée consacrée au Timée dans l'encyclopédie de philosophie de Stanford), l'opposition est entre la certitude démonstrative, possible sur l'intelligible, et la plausibilité, seule possible sur l'empirique. En tant que le monde devient et se perçoit, le discours ne sera pas plus que vraisemblable ; en tant qu'il est beau, ordonné, copié sur un modèle parfait par le meilleur des artisans, il ne sera pas moins que vraisemblable.
+
+    ! « Vraisemblable » ne veut pas dire « métaphorique » : la vraisemblance oppose un discours révisable à un discours démonstratif, pas un récit imagé à un récit littéral. On ne peut donc pas en tirer que la création n'est qu'une image.
+  points:
+  - id: platon-timee-i2-p1
+    sentence: "Timée qualifie son discours de « ___ » (`eikôs muthos`) : sur ce qui devient, on ne peut tenir qu'un discours plausible."
+    answer: "mythe vraisemblable"
+    alt: ["mythe vraisemblable", "vraisemblable"]
+  - id: platon-timee-i2-p2
+    sentence: "Le jeu de mots de `eikôs logos` est voulu : l'objet du discours est lui-même une ___ (`eikôn`) du modèle éternel."
+    answer: "image"
+    alt: []
+  - id: platon-timee-i2-p3
+    sentence: "« Ce que l'être est au devenir, la vérité l'est à ___ » (*Timée*, 29c, trad. Brisson)."
+    answer: "la croyance"
+    alt: ["croyance"]
+  - id: platon-timee-i2-p4
+    sentence: "Pour Timée, un discours a le caractère de ce dont il parle : sur ce qui demeure, il doit être stable et ___."
+    answer: "inébranlable"
+    alt: ["irréfutable"]
+  - id: platon-timee-i2-p5
+    sentence: "Le discours sur le devenir ne relève pas de l'intellect mais de la ___ (`pistis`)."
+    answer: "croyance"
+    alt: ["foi"]
+  - id: platon-timee-i2-p6
+    sentence: "Timée promet des explications qui « ne sont pas des images plus ___ qu'une autre » (29c) : la vraisemblance est aussi une exigence."
+    answer: "infidèles"
+    alt: []
+  - id: platon-timee-i2-p7
+    sentence: "Si quelqu'un trouve un meilleur triangle que celui de Timée, « c'est à lui que reviendra en toute ___ le prix » (54b) : le discours reste révisable."
+    answer: "amitié"
+    alt: []
+  - id: platon-timee-i2-p8
+    sentence: "Selon Zeyl et Sattler, la vraisemblance du *Timée* oppose la certitude démonstrative, possible sur l'intelligible, à la ___, seule possible sur l'empirique."
+    answer: "plausibilité"
+    alt: ["vraisemblance"]
+  - id: platon-timee-i2-p9
+    sentence: "Le monde étant beau, ordonné et copié sur un modèle parfait, le discours sur lui ne sera pas ___ que vraisemblable."
+    answer: "moins"
+    alt: []
+  - id: platon-timee-i2-p10
+    sentence: "Confondre « vraisemblable » et « ___ » est un contresens : la vraisemblance n'établit pas que la création du monde n'est qu'une image."
+    answer: "métaphorique"
+    alt: ["metaphorique"]
+- id: platon-timee-i3
+  title: "Être et devenir : le point de départ"
+  notes: |-
+    Le prélude part de la distinction de la *République* : **d'un côté ce qui est toujours sans jamais devenir, de l'autre ce qui devient toujours sans être jamais, et à chacun son mode de connaissance.** Brisson traduit la question initiale : « qu'est-ce qui est toujours, sans jamais devenir, et qu'est-ce qui devient toujours, sans être jamais ? »
+
+    | | Ce qui est toujours | Ce qui devient toujours |
+    | se saisit par | l'intellect (`noêsis`) | l'opinion (`doxa`) |
+    | avec | une explication rationnelle (`logos`) | une perception sensible (`aisthêsis`) « rebelle à toute explication rationnelle » |
+    | statut | « ce qui toujours reste identique » | « ce qui naît et se corrompt, ce qui n'est réellement jamais » |
+
+    Timée ne nomme pas encore les Idées (les « formes intelligibles » de Brisson) : il faut attendre 51b-e pour qu'elles soient mentionnées, et leur existence y est alors démontrée. Mais le lecteur de la *République* reconnaît la distinction des Idées et des choses sensibles (*République* 518c, 534a).
+
+    **Deux lectures de la question.** « Qu'est-ce qui est toujours ? » peut se lire en extension : quelles choses sont ainsi ? Réponse : les Idées. Ou en compréhension : qu'est-ce qu'être toujours ? Réponse : c'est être intelligible et immuable. Zeyl et Sattler préfèrent la seconde, parce que le texte y répond aussitôt.
+
+    ! « Devenir » n'est pas une étape vers l'être : ce qui devient « devient toujours » et n'est « jamais » ; la frontière entre les deux est infranchissable.
+  points:
+  - id: platon-timee-i3-p1
+    sentence: "« Qu'est-ce qui est toujours, sans jamais devenir, et qu'est-ce qui devient toujours, sans ___ » (*Timée*, 27d-28a)."
+    answer: "être jamais"
+    alt: []
+  - id: platon-timee-i3-p2
+    sentence: "Dans le prélude du *Timée*, ce qui est toujours se saisit par l'intellect, avec une ___ rationnelle (`logos`)."
+    answer: "explication"
+    alt: []
+  - id: platon-timee-i3-p3
+    sentence: "Dans le prélude du *Timée*, ce qui devient se saisit par l'___ (`doxa`), au terme d'une perception sensible."
+    answer: "opinion"
+    alt: []
+  - id: platon-timee-i3-p4
+    sentence: "Selon Timée, la perception sensible qui accompagne l'opinion est « rebelle à toute explication ___ » (28a)."
+    answer: "rationnelle"
+    alt: []
+  - id: platon-timee-i3-p5
+    sentence: "La distinction entre ce qui est et ce qui devient, posée en 27d-28a, est celle de la ___ entre Idées et choses sensibles."
+    answer: "République"
+    alt: ["*République*"]
+  - id: platon-timee-i3-p6
+    sentence: "Les Idées ne sont mentionnées dans le *Timée* qu'en ___, où leur existence est démontrée."
+    answer: "51b-e"
+    alt: ["51b", "51b-52a"]
+  - id: platon-timee-i3-p7
+    sentence: "Lue en extension, la question « qu'est-ce qui est toujours ? » demande quelles choses sont ainsi ; lue en ___, elle demande ce qu'être toujours veut dire."
+    answer: "compréhension"
+    alt: ["intension"]
+  - id: platon-timee-i3-p8
+    sentence: "Lue en compréhension, la question initiale reçoit sa réponse : être toujours, c'est être intelligible et ___."
+    answer: "immuable"
+    alt: ["inchangé"]
+  - id: platon-timee-i3-p9
+    sentence: "Pour Timée, ce qui devient « devient toujours » et n'est ___ : il n'y a pas de passage du devenir à l'être."
+    answer: "jamais"
+    alt: []
+- id: platon-timee-i4
+  title: "Du monde sensible à son artisan : l'argument"
+  notes: |-
+    **De la distinction être/devenir, Timée tire en quelques lignes la thèse qui encadre tout le dialogue : le monde est l'œuvre d'un artisan parfaitement bon, qui l'a fabriqué sur un modèle éternel.** L'argument se reconstruit ainsi :
+
+    | Étape | Ce qui est posé | Repère |
+    | 1 | tout ce qui naît naît par une cause | 28a |
+    | 2 | le monde est né : on le voit, on le touche, il a un corps, il est sensible | 28b-c |
+    | 3 | il a donc une cause, un fabricant qui a travaillé sur un modèle | 28c |
+    | 4 | ce modèle est éternel ou engendré | 28c-29a |
+    | 5 | le monde est le plus beau, son fabricant le meilleur : le modèle est éternel | 29a |
+
+    Brisson traduit : « sans l'intervention d'une cause, rien ne peut être engendré » ; le monde est engendré, « car on peut le voir et le toucher et par suite il a un corps ». Mais « trouver le fabricant et le père de l'univers exige un effort ». Enfin, le démiurge a fixé les yeux sur l'éternel, car « ce monde en effet est la plus belle des choses qui ont été engendrées, et son fabricant, la meilleure des causes ».
+
+    **Le point faible**, selon Zeyl et Sattler : qu'il y ait une cause ne prouve pas encore que ce soit un artisan. Ce qui comble l'écart est la beauté du monde (étape 5) : Timée cherche à expliquer non pas un monde quelconque, mais un monde suprêmement beau, et la possibilité qu'une cause non intelligente produise une telle beauté n'est même pas envisagée.
+
+    **La méthode qui en découle.** La question n'est pas « qu'est-ce qui explique au mieux ce que j'observe ? », mais « si le monde est le meilleur possible, quels traits doit-il avoir ? ». D'où des réponses *a priori* (pourquoi il existe, pourquoi il est vivant, unique, sphérique), recoupées par l'observation (le mouvement des astres, le corps humain). Elles concordent le plus souvent ; pas toujours (la terre exclue des transformations, voir la leçon sur la physique).
+
+    ! L'argument ne dit pas que le monde a été copié sur un modèle *parce qu'*il est sensible : c'est sa beauté, jointe à la bonté de l'artisan, qui impose un modèle éternel.
+  points:
+  - id: platon-timee-i4-p1
+    sentence: "« Sans l'intervention d'une ___, rien ne peut être engendré » (*Timée*, 28a)."
+    answer: "cause"
+    alt: []
+  - id: platon-timee-i4-p2
+    sentence: "Le monde est engendré, « car on peut le voir et le ___ et par suite il a un corps » (*Timée*, 28b)."
+    answer: "toucher"
+    alt: []
+  - id: platon-timee-i4-p3
+    sentence: "« Trouver le fabricant et le ___ de l'univers exige un effort » (*Timée*, 28c)."
+    answer: "père"
+    alt: []
+  - id: platon-timee-i4-p4
+    sentence: "Le modèle du monde est éternel, car « ce monde en effet est la plus belle des choses qui ont été engendrées, et son fabricant, la meilleure des ___ » (29a)."
+    answer: "causes"
+    alt: []
+  - id: platon-timee-i4-p5
+    sentence: "Dans l'argument du prélude, c'est la ___ du monde, jointe à la bonté du démiurge, qui impose un modèle éternel."
+    answer: "beauté"
+    alt: []
+  - id: platon-timee-i4-p6
+    sentence: "Selon Zeyl et Sattler, qu'il y ait une cause du monde ne prouve pas encore que cette cause soit un ___ : c'est la beauté du monde qui comble l'écart."
+    answer: "artisan"
+    alt: ["fabricant", "démiurge"]
+  - id: platon-timee-i4-p7
+    sentence: "Le mot grec `dêmiourgos` (28a) désigne d'abord l'___, l'homme de métier qui travaille pour le public."
+    answer: "artisan"
+    alt: []
+  - id: platon-timee-i4-p8
+    sentence: "La méthode du *Timée* demande : si le monde est le meilleur possible, quels traits doit-il avoir ? D'où des réponses ___."
+    answer: "a priori"
+    alt: ["*a priori*"]
+  - id: platon-timee-i4-p9
+    sentence: "La possibilité qu'une cause dépourvue d'___ produise un monde aussi beau n'est même pas envisagée par Timée."
+    answer: "intelligence"
+    alt: ["intellect"]
+- id: platon-timee-i5
+  title: "Le modèle : le Vivant intelligible"
+  notes: |-
+    **Le modèle du démiurge est le Vivant intelligible : une Idée, ou une constellation d'Idées, qui contient en elle tous les vivants intelligibles comme ses parties.** C'est l'univers idéal (ou mieux : l'univers réel), l'objet de ce que la *République* appelait la « vraie » astronomie, opposée à l'astronomie d'observation (527d-531d).
+
+    Le monde lui ressemble au plus près parce que ce modèle est **complet** : rien de ce qui ressemble à un être incomplet ne saurait être beau (30c). Et il est **unique**, parce que son modèle l'est : s'il y avait deux Vivants enveloppant chacun tous les vivants, il en faudrait un troisième qui les enveloppe tous deux, et c'est à lui que le monde ressemblerait (31a-b). Brisson traduit : le dieu « a façonné un vivant unique, visible, ayant à l'intérieur de lui tous les vivants qui lui sont apparentés par nature ».
+
+    **Comment copier un modèle invisible ?** Le démiurge ne peut pas reproduire le Vivant à l'identique : sa copie doit être visible, tangible, donc à trois dimensions (`stereoeidês`, 32b), ce que le modèle n'est pas. Il ne travaille pas comme un maquettiste qui agrandit une maquette, mais comme un constructeur qui suit un plan ou un cahier des charges. Zeyl et Sattler distinguent :
+
+    | | Paradigmatisme grossier | Paradigmatisme raffiné |
+    | le modèle | possède en plus pur les propriétés sensibles de la copie | prescrit les traits de l'objet à construire, sans les posséder |
+    | image | une maquette | un plan, des instructions |
+    | sort | réfuté par l'argument du « troisième homme » (*Parménide*, 132a) | compatible avec des Idées invisibles et inétendues |
+
+    ! Le Vivant intelligible n'est pas un animal géant fait d'une matière plus pure : invisible et sans étendue, il ne possède aucune des propriétés qui supposent la vue, le toucher ou l'espace.
+  points:
+  - id: platon-timee-i5-p1
+    sentence: "Le modèle que contemple le démiurge est le ___ intelligible, qui contient en lui tous les vivants intelligibles."
+    answer: "Vivant"
+    alt: ["vivant", "Vivant-en-soi"]
+  - id: platon-timee-i5-p2
+    sentence: "Le Vivant intelligible est l'objet de ce que la *République* appelait la « vraie » ___, opposée à celle de l'observation."
+    answer: "astronomie"
+    alt: []
+  - id: platon-timee-i5-p3
+    sentence: "Le monde est unique parce que son ___ l'est : deux Vivants complets en exigeraient un troisième qui les envelopperait."
+    answer: "modèle"
+    alt: []
+  - id: platon-timee-i5-p4
+    sentence: "Le dieu « a façonné un vivant ___, visible, ayant à l'intérieur de lui tous les vivants qui lui sont apparentés par nature » (30d-31a)."
+    answer: "unique"
+    alt: []
+  - id: platon-timee-i5-p5
+    sentence: "Le modèle du monde doit être ___, car rien de ce qui ressemble à un être incomplet ne saurait être beau (30c)."
+    answer: "complet"
+    alt: []
+  - id: platon-timee-i5-p6
+    sentence: "La copie doit être visible et tangible, donc à trois dimensions : le *Timée* dit `___` (32b)."
+    answer: "stereoeidês"
+    alt: ["stereoeides", "solide"]
+  - id: platon-timee-i5-p7
+    sentence: "Le démiurge ne copie pas comme un maquettiste, mais comme un constructeur qui suit un ___."
+    answer: "plan"
+    alt: ["cahier des charges", "ensemble d'instructions"]
+  - id: platon-timee-i5-p8
+    sentence: "Le paradigmatisme « ___ », qui prête aux Idées une version plus pure des propriétés sensibles, serait réfuté par le troisième homme du *Parménide*."
+    answer: "grossier"
+    alt: []
+  - id: platon-timee-i5-p9
+    sentence: "Le paradigmatisme ___ fait du modèle un ensemble d'instructions qui prescrit les traits de la copie sans les posséder."
+    answer: "raffiné"
+    alt: []
+- id: platon-timee-i6
+  title: "La bonté du démiurge et l'ordre du monde"
+  notes: |-
+    **Pourquoi le monde existe-t-il ? Parce que son artisan était bon, et que ce qui est bon ne jalouse rien : il a voulu que tout lui ressemble autant que possible.** Brisson traduit : « Il était bon, or, en ce qui est bon, on ne trouve aucune jalousie à l'égard de qui que ce soit ». Contre la tradition grecque d'un divin jaloux, le dieu de Platon est généreux.
+
+    Le démiurge ne crée pas à partir de rien : il prend « tout ce qu'il y avait de visible », qui « se mouvait sans concert et sans ordre », et « il l'amena du désordre à l'ordre » (30a). Puis chaque grand trait du monde se déduit du meilleur :
+
+    | Trait du monde | Raison donnée | Repère |
+    | vivant, doué d'âme | un tout pourvu d'intellect est plus beau ; or l'intellect ne va pas sans âme | 30b |
+    | unique | son modèle est unique et complet | 31a-b |
+    | feu et terre | visible (feu), tangible (terre) | 31b |
+    | air et eau | moyens proportionnels qui lient feu et terre en un tout | 32a-c |
+    | sphérique | la figure la plus parfaite, qui contient toutes les autres | 33b |
+
+    D'où la formule de 30b : le dieu « mit l'intellect dans l'âme et l'âme dans le corps », si bien que le monde est « un vivant doué d'une âme pourvue d'un intellect ».
+
+    ! Le démiurge n'est pas un créateur au sens biblique : il ne tire pas le monde du néant, il ordonne un désordre qui lui préexiste ; et il fait le monde le meilleur *possible*, non parfait.
+  points:
+  - id: platon-timee-i6-p1
+    sentence: "« Il était bon, or, en ce qui est bon, on ne trouve aucune ___ à l'égard de qui que ce soit » (*Timée*, 29e)."
+    answer: "jalousie"
+    alt: []
+  - id: platon-timee-i6-p2
+    sentence: "Parce qu'il est bon, le démiurge souhaite que toutes choses deviennent le plus possible ___ à lui."
+    answer: "semblables"
+    alt: []
+  - id: platon-timee-i6-p3
+    sentence: "Le démiurge prend tout ce qui était visible et qui se mouvait sans ordre, et « il l'amena du ___ à l'ordre » (30a)."
+    answer: "désordre"
+    alt: []
+  - id: platon-timee-i6-p4
+    sentence: "Le dieu « mit l'___ dans l'âme et l'âme dans le corps » (*Timée*, 30b)."
+    answer: "intellect"
+    alt: []
+  - id: platon-timee-i6-p5
+    sentence: "Le monde est « un ___ doué d'une âme pourvue d'un intellect » (*Timée*, 30b)."
+    answer: "vivant"
+    alt: []
+  - id: platon-timee-i6-p6
+    sentence: "Le corps du monde est fait de feu pour être visible, et de ___ pour être tangible."
+    answer: "terre"
+    alt: []
+  - id: platon-timee-i6-p7
+    sentence: "L'air et l'eau servent de moyens ___ qui lient le feu et la terre en un tout."
+    answer: "proportionnels"
+    alt: ["termes proportionnels"]
+  - id: platon-timee-i6-p8
+    sentence: "Le corps du monde est une ___, la figure la plus parfaite."
+    answer: "sphère"
+    alt: []
+  - id: platon-timee-i6-p9
+    sentence: "À la différence du dieu de la Genèse, le démiurge ne tire pas le monde du ___ : il ordonne un désordre préexistant."
+    answer: "néant"
+    alt: ["rien"]
+- id: platon-timee-i7
+  title: "L'âme du monde et le temps"
+  notes: |-
+    **L'âme du monde est un mélange de Même, d'Autre et d'Être, découpé selon des proportions musicales et disposé en deux cercles qui se croisent : de là sa capacité de connaître, et l'ordre des mouvements célestes.** Brisson : l'âme a été constituée « à partir d'un mélange de trois ingrédients, qui proviennent du Même, de l'Autre et de l'Être » (37a), chacun dans une version divisible et une version indivisible.
+
+    | Cercle | Ce qu'il saisit | Ce qui en résulte |
+    | le cercle de l'Autre | le sensible, ce qui devient | « des opinions et des croyances, fermes et vraies » (37b) |
+    | le cercle du Même | ce qui se rapporte à la raison | « l'intellection et la science » (37c) |
+
+    **Le temps.** Le modèle est un vivant éternel, et l'éternité ne peut être donnée telle quelle à ce qui naît. Le démiurge fabrique donc « une image mobile de l'éternité », « progressant suivant le nombre » : le temps. Il naît avec le ciel : les jours, les nuits, les mois, les années n'existaient pas avant lui. Les astres sont des dieux, et ils servent à marquer le temps :
+
+    | Astre | Il marque |
+    | les étoiles fixes | le jour et la nuit |
+    | la lune | le mois |
+    | le soleil | l'année |
+
+    Dire de l'être éternel « il était » ou « il sera » est donc impropre (37e) : seul « il est » lui convient.
+
+    ! Le temps n'est pas le cadre où le monde serait né : il naît *avec* le ciel. C'est ce qui rend difficile de dire ce qu'il y avait « avant » le monde (voir la leçon sur la lecture littérale ou métaphorique).
+  points:
+  - id: platon-timee-i7-p1
+    sentence: "L'âme du monde est faite d'un mélange de Même, d'___ et d'Être."
+    answer: "Autre"
+    alt: ["autre"]
+  - id: platon-timee-i7-p2
+    sentence: "L'âme du monde est disposée en deux cercles qui se croisent, le cercle du Même et le cercle de l'___."
+    answer: "Autre"
+    alt: ["autre"]
+  - id: platon-timee-i7-p3
+    sentence: "Quand le cercle de l'Autre porte sur le sensible, se forment « des opinions et des ___, fermes et vraies » (37b)."
+    answer: "croyances"
+    alt: []
+  - id: platon-timee-i7-p4
+    sentence: "Quand le cercle du Même porte sur ce qui relève de la raison, il en résulte « l'intellection et la ___ » (37c)."
+    answer: "science"
+    alt: []
+  - id: platon-timee-i7-p5
+    sentence: "Le temps est « une image ___ de l'éternité » (*Timée*, 37d)."
+    answer: "mobile"
+    alt: []
+  - id: platon-timee-i7-p6
+    sentence: "Le temps est une image de l'éternité qui progresse suivant le ___."
+    answer: "nombre"
+    alt: []
+  - id: platon-timee-i7-p7
+    sentence: "Le temps naît avec le ___ : jours, nuits, mois et années n'existaient pas avant lui."
+    answer: "ciel"
+    alt: []
+  - id: platon-timee-i7-p8
+    sentence: "Dans le *Timée*, la ___ marque le mois, le soleil l'année, les étoiles fixes le jour et la nuit."
+    answer: "lune"
+    alt: []
+  - id: platon-timee-i7-p9
+    sentence: "Dire de l'être éternel « il était » ou « il ___ » est impropre (37e) : seul « il est » lui convient."
+    answer: "sera"
+    alt: []
+- id: platon-timee-i8
+  title: "Les âmes, le corps et la vue"
+  notes: |-
+    **Les âmes humaines sont faites du reste du mélange qui a servi à l'âme du monde, dans une qualité inférieure ; leur incarnation jette la confusion dans leurs mouvements, que l'éducation doit rétablir.** Une fois dans le corps, l'âme subit les secousses de la nutrition et le choc des corps extérieurs, surtout dans la sensation : ses cercles, réguliers à l'origine, sont dérangés, et elle connaît mal (43a-44b). Seules une nourriture et une éducation appropriées lui rendent ses mouvements d'origine.
+
+    Le corps est conçu pour servir ce rétablissement, et l'exemple que Timée développe est celui des yeux. Il distingue deux explications de la vue :
+
+    | Explication | Ce qu'elle dit | Statut |
+    | par le mécanisme | le feu doux de l'œil rencontre la lumière du jour, la vision se forme, les miroirs inversent les images | « causes accessoires » (46c) |
+    | par la fin | la vue sert à la philosophie | la vraie raison du don des yeux (47a-c) |
+
+    Brisson traduit : la vue du jour, de la nuit, des mois et des années « a amené l'invention du nombre » ; de là « la pratique de la philosophie, le bienfait le plus important qui ait jamais été offert et qui sera jamais accordé à la race mortelle ». Le dieu nous a donné la vue « afin que, ayant observé dans le ciel les révolutions de l'intellect, nous les utilisions » pour régler les nôtres, qui sont troublées : en imitant les mouvements du dieu, « qui n'errent absolument pas », nous pourrons stabiliser « les mouvements qui en nous ne cessent de vagabonder ».
+
+    ! Expliquer comment l'œil voit n'est pas expliquer pourquoi nous avons des yeux : pour Timée, le mécanisme n'est qu'une cause accessoire, la fin est la cause véritable.
+  points:
+  - id: platon-timee-i8-p1
+    sentence: "Les âmes humaines sont faites du ___ du mélange qui a servi à l'âme du monde, dans une qualité inférieure."
+    answer: "reste"
+    alt: ["résidu"]
+  - id: platon-timee-i8-p2
+    sentence: "L'incarnation jette la confusion dans les mouvements de l'âme ; seules la nourriture et l'___ appropriées les rétablissent."
+    answer: "éducation"
+    alt: []
+  - id: platon-timee-i8-p3
+    sentence: "Timée prend les ___ comme exemple d'organe conçu pour servir le rétablissement des mouvements de l'âme."
+    answer: "yeux"
+    alt: []
+  - id: platon-timee-i8-p4
+    sentence: "La vue du jour, de la nuit, des mois et des années « a amené l'invention du ___ » (47a)."
+    answer: "nombre"
+    alt: []
+  - id: platon-timee-i8-p5
+    sentence: "La vue nous a donné « la pratique de la ___, le bienfait le plus important qui ait jamais été offert [...] à la race mortelle » (47a-b)."
+    answer: "philosophie"
+    alt: []
+  - id: platon-timee-i8-p6
+    sentence: "Le dieu nous a donné la vue pour que, ayant observé dans le ciel les ___ de l'intellect, nous en réglions les nôtres (47b-c)."
+    answer: "révolutions"
+    alt: []
+  - id: platon-timee-i8-p7
+    sentence: "En imitant les mouvements du dieu, nous stabilisons « les mouvements qui en nous ne cessent de ___ » (47c)."
+    answer: "vagabonder"
+    alt: []
+  - id: platon-timee-i8-p8
+    sentence: "Le mécanisme de la vision (le feu de l'œil, la lumière, les miroirs) ne relève que des causes ___ (46c)."
+    answer: "accessoires"
+    alt: []
+- id: platon-timee-i9
+  title: "Intellect et nécessité : deux sortes de causes"
+  notes: |-
+    **Timée distingue la cause véritable, qui agit avec intelligence en vue du meilleur, et les causes accessoires (`sunaitiai`), les processus physiques sans lesquels la fin ne serait pas atteinte.** Brisson traduit `sunaitiai` par « causes accessoires » (46c) ou « causes concomitantes » (46e).
+
+    | | La cause véritable | Les causes accessoires |
+    | ce qu'elle est | l'intellect, qui réside dans une âme | les corps : feu, eau, terre, air |
+    | comment elle agit | en vue du beau et du bien | elle transmet un mouvement reçu, par nécessité |
+    | son effet laissée seule | l'ordre | des effets produits « au hasard et sans ordre » (46e) |
+
+    L'erreur du grand nombre est de prendre les secondes pour les premières : « le grand nombre croit qu'il s'agit là non de causes accessoires, mais des causes de toutes choses », parce qu'elles réchauffent et refroidissent. Mais elles ne peuvent faire preuve « d'aucune intention intelligente » (46d).
+
+    **La deuxième partie du discours** s'ouvre sur ce principe (47e-48a) : « la venue à l'être de notre monde résulta d'un mélange qui réunissait la nécessité et l'intellect ». L'intellect domine la nécessité « en la persuadant » de réaliser au mieux la plupart des choses. Pour dire comment le monde est né, il faut donc faire intervenir aussi « l'espèce de la cause errante » : la nécessité, en tant qu'elle ne vise rien.
+
+    Les propriétés des structures physiques sont fixées par leur constitution, et le démiurge ne peut pas les changer : il ne commande pas à la nécessité, il la **persuade**, c'est-à-dire qu'il tire parti de ces propriétés. Là où la persuasion échoue, l'excellence du monde trouve sa limite.
+
+    ! La nécessité du *Timée* n'est pas la nécessité logique ni un ordre rigoureux : c'est la causalité aveugle des corps, que Brisson rapproche du « matériau » livré à lui-même, et c'est pourquoi elle peut être dite « errante ».
+  points:
+  - id: platon-timee-i9-p1
+    sentence: "Le *Timée* appelle les processus physiques au service de la fin des causes ___ (`sunaitiai`)."
+    answer: "accessoires"
+    alt: ["concomitantes", "auxiliaires"]
+  - id: platon-timee-i9-p2
+    sentence: "La cause véritable est l'intellect, qui ne peut résider que dans une ___ (46d)."
+    answer: "âme"
+    alt: []
+  - id: platon-timee-i9-p3
+    sentence: "Livrées à elles-mêmes, les causes accessoires produisent leurs effets « au hasard et sans ___ » (46e)."
+    answer: "ordre"
+    alt: []
+  - id: platon-timee-i9-p4
+    sentence: "« Le grand nombre croit qu'il s'agit là non de causes accessoires, mais des causes de toutes ___ » (46c-d)."
+    answer: "choses"
+    alt: []
+  - id: platon-timee-i9-p5
+    sentence: "« La venue à l'être de notre monde résulta d'un mélange qui réunissait la nécessité et l'___ » (47e-48a)."
+    answer: "intellect"
+    alt: []
+  - id: platon-timee-i9-p6
+    sentence: "L'intellect domine la nécessité non en la contraignant, mais en la ___ (48a)."
+    answer: "persuadant"
+    alt: []
+  - id: platon-timee-i9-p7
+    sentence: "Pour dire comment le monde est né, il faut aussi faire intervenir « l'espèce de la cause ___ » (48a)."
+    answer: "errante"
+    alt: []
+  - id: platon-timee-i9-p8
+    sentence: "Le démiurge ne peut pas changer les propriétés des corps : là où la ___ échoue, l'excellence du monde trouve sa limite."
+    answer: "persuasion"
+    alt: []
+  - id: platon-timee-i9-p9
+    sentence: "La nécessité du *Timée* n'est pas une nécessité logique, mais la causalité ___ des corps."
+    answer: "aveugle"
+    alt: ["mécanique"]
+- id: platon-timee-i10
+  title: "Le troisième genre : le réceptacle"
+  notes: |-
+    **Pour expliquer le devenir, deux genres ne suffisent plus : il faut, à côté du modèle intelligible et de sa copie visible, un « troisième genre », le réceptacle de tout ce qui naît.** Brisson traduit : « il nous faut maintenant en découvrir un autre, un troisième » ; il est, « de tout ce qui est soumis à la génération elle est le réceptacle, et, pour employer une image, la nourrice ».
+
+    **Le problème qu'il résout (49b-50a).** On voit l'eau se condenser en pierre et en terre, s'évaporer en air, l'air s'enflammer en feu, et inversement : « ils se donnent naissance les uns aux autres, en cercle ». Ce qui apparaît maintenant comme du feu ne l'est donc pas en propre : il ne le reste pas. On ne peut pas dire « ceci est du feu », mais seulement « ce qui chaque fois est tel ou tel, c'est du feu ».
+
+    | Ce dont on parle | Comment en parler | Pourquoi |
+    | le feu, l'eau, la terre, l'air | « ce qui est tel » | ils changent sans cesse les uns dans les autres |
+    | ce en quoi ils apparaissent et disparaissent | « ceci », « cela » | lui seul demeure |
+
+    La solution : ce qui demeure sous ces apparences, c'est le réceptacle lui-même, sans caractère propre, que ses parties prennent tour à tour. Le feu observé n'est que « la portion du réceptacle qui est enflammée ».
+
+    ! Le réceptacle n'est ni l'un des quatre éléments ni leur mélange : il est ce en quoi ils apparaissent, et n'a lui-même aucune de leurs propriétés.
+  points:
+  - id: platon-timee-i10-p1
+    sentence: "À côté du modèle intelligible et de sa copie visible, le *Timée* pose un « troisième ___ »."
+    answer: "genre"
+    alt: ["genre d'être"]
+  - id: platon-timee-i10-p2
+    sentence: "« De tout ce qui est soumis à la génération elle est le ___, et, pour employer une image, la nourrice » (49a)."
+    answer: "réceptacle"
+    alt: []
+  - id: platon-timee-i10-p3
+    sentence: "« De tout ce qui est soumis à la génération elle est le réceptacle, et, pour employer une image, la ___ » (49a)."
+    answer: "nourrice"
+    alt: []
+  - id: platon-timee-i10-p4
+    sentence: "Le mot grec que Brisson traduit par « réceptacle » est `___` (49a)."
+    answer: "hupodochê"
+    alt: ["hupodoche", "hypodochè", "hypodokhè"]
+  - id: platon-timee-i10-p5
+    sentence: "Les éléments se changent les uns dans les autres : « ils se donnent naissance les uns aux autres, en ___ » (49c)."
+    answer: "cercle"
+    alt: []
+  - id: platon-timee-i10-p6
+    sentence: "Ne pas dire « ceci est du feu », mais « ce qui chaque fois est ___, c'est du feu » (49d)."
+    answer: "tel ou tel"
+    alt: []
+  - id: platon-timee-i10-p7
+    sentence: "Seul ce en quoi les éléments apparaissent et disparaissent peut être désigné par « ___ » et « cela »."
+    answer: "ceci"
+    alt: []
+  - id: platon-timee-i10-p8
+    sentence: "Le feu observé n'est que « la portion du réceptacle qui est ___ » (51b)."
+    answer: "enflammée"
+    alt: []
+  - id: platon-timee-i10-p9
+    sentence: "Le réceptacle n'a aucune propriété des éléments : il est ce ___ quoi ils apparaissent."
+    answer: "en"
+    alt: []
+- id: platon-timee-i11
+  title: "Les images du réceptacle : l'or, l'empreinte, la mère"
+  notes: |-
+    **Le réceptacle est difficile à concevoir ; Timée l'approche par une série d'images, qui disent toutes la même chose : il reçoit tout parce qu'il n'a en propre aucun caractère.**
+
+    | Image | Repère | Ce qu'elle fait voir |
+    | l'or qu'on remodèle sans cesse | 50a-b | à la question « qu'est-ce ? », le plus sûr est de répondre « c'est de l'or », non « c'est un triangle » |
+    | le porte-empreinte | 50c | une matière qu'on modèle, qui prend la figure de ce qui y entre |
+    | la mère | 50d | le réceptacle est la mère, le modèle le père, le sensible l'enfant |
+    | l'excipient des parfums | 50e | on rend d'abord inodores les liquides qui recevront les parfums |
+    | la cire aplanie | 50e | on efface toute figure avant de modeler |
+
+    Brisson : le réceptacle se présente « comme le porte-empreinte de toutes choses » ; et « il convient de comparer le réceptacle à une mère, le modèle à un père, et la nature qui tient le milieu entre les deux à un enfant ». D'où le schéma complet, résumé en 50c-d : il y a « ce qui devient, ce en quoi cela devient, et ce à la ressemblance de quoi naît ce qui devient ».
+
+    | Terme | Rôle | Image |
+    | les Idées, le modèle | ce à la ressemblance de quoi | le père |
+    | le réceptacle | ce en quoi | la mère |
+    | le sensible, les copies | ce qui devient | l'enfant |
+
+    Zeyl et Sattler insistent : ce ne sont pas trois ingrédients qu'on pourrait séparer, mais les trois termes d'une **analyse** de ce qu'est une chose sensible. Le réceptacle « participe de l'intelligible d'une façon particulièrement déconcertante ».
+
+    ! La mère ne transmet rien de son propre caractère à l'enfant : l'image dit la réception, pas l'hérédité. Si le réceptacle ressemblait à l'une des choses qui y entrent, il les reproduirait mal (50e).
+  points:
+  - id: platon-timee-i11-p1
+    sentence: "À qui demande ce qu'est une figure de métal précieux sans cesse remodelée, le plus sûr est de répondre « c'est de l'___ » (50b)."
+    answer: "or"
+    alt: []
+  - id: platon-timee-i11-p2
+    sentence: "Le réceptacle se présente comme « le ___ de toutes choses » (50c)."
+    answer: "porte-empreinte"
+    alt: ["porte empreinte"]
+  - id: platon-timee-i11-p3
+    sentence: "« Il convient de comparer le réceptacle à une ___, le modèle à un père, et la nature qui tient le milieu entre les deux à un enfant » (50d)."
+    answer: "mère"
+    alt: []
+  - id: platon-timee-i11-p4
+    sentence: "Dans l'image de 50d, le modèle est le père, et le sensible, qui tient le milieu, est l'___."
+    answer: "enfant"
+    alt: []
+  - id: platon-timee-i11-p5
+    sentence: "Pour fabriquer des onguents parfumés, on rend d'abord ___ les liquides qui recevront les parfums (50e)."
+    answer: "inodores"
+    alt: []
+  - id: platon-timee-i11-p6
+    sentence: "Il y a « ce qui devient, ce en quoi cela devient, et ce à la ___ de quoi naît ce qui devient » (50c-d)."
+    answer: "ressemblance"
+    alt: []
+  - id: platon-timee-i11-p7
+    sentence: "Pour Zeyl et Sattler, modèle, réceptacle et copies ne sont pas trois ingrédients séparables, mais les trois termes d'une ___."
+    answer: "analyse"
+    alt: []
+  - id: platon-timee-i11-p8
+    sentence: "Le réceptacle « participe de l'intelligible d'une façon particulièrement ___ » (51a-b)."
+    answer: "déconcertante"
+    alt: []
+  - id: platon-timee-i11-p9
+    sentence: "Si le réceptacle ressemblait à l'une des choses qui y entrent, il les reproduirait ___ (50e) : il doit être dépourvu de toute forme."
+    answer: "mal"
+    alt: []
+- id: platon-timee-i12
+  title: "La khôra : matériau ou espace ?"
+  notes: |-
+    **Avant de nommer le troisième genre, Timée prouve que les Idées existent ; puis il le présente comme ce qui fournit une place à tout ce qui naît, et l'appelle `chôra`.**
+
+    **La preuve des Idées (51b-e).** Si l'intellect et l'opinion vraie sont deux choses distinctes, les Idées existent en soi ; sinon, le sensible serait ce qu'il y a de plus certain. Or elles diffèrent :
+
+    | | L'intellect | L'opinion vraie |
+    | origine | l'instruction | la persuasion |
+    | explication | toujours accompagné d'une explication vraie | sans explication |
+    | fragilité | inébranlable | la persuasion peut la changer |
+    | qui y a part | les dieux et très peu d'hommes | tout homme |
+
+    **Les trois genres (52a-b).** La forme intelligible, inengendrée et indestructible, objet de l'intellection ; sa copie sensible, engendrée, objet de l'opinion jointe à la sensation ; et un troisième, qui « fournit un emplacement à tout ce qui naît » (`hedra`, 52b), qu'on ne saisit « qu'au terme d'un raisonnement bâtard qui ne s'appuie pas sur la sensation » : « c'est à peine si on peut y croire ». En y pensant, « nous rêvons les yeux ouverts ». Le résumé de 52d : « l'être, le milieu spatial et le devenir ».
+
+    **Matière ou espace ?** Les images de l'or ou de la cire suggèrent une matière qu'on façonne. Mais Platon n'emploie aucun mot qui se traduise bien par « matière » (`hulê` est le mot d'Aristote) ; il dit `chôra`, l'espace, la place, et parle de « siège » (`hedra`). Les interprètes en font un substrat matériel, un espace, ou les deux à la fois. Brisson, lui, rend `chôra` tantôt par « matériau » (52a), tantôt par « milieu spatial » (52d).
+
+    **Une innovation.** Les dialogues de la maturité ne disaient guère ce qu'il faut à une chose sensible pour pouvoir participer des Idées. Le *Timée* répond : être étendue, être située, et faite d'une étoffe indéterminée mais déterminable. On rapproche ce troisième genre de l'illimité (`apeiron`) du *Philèbe*.
+
+    ! Le raisonnement « bâtard » n'est ni une perception (le réceptacle est invisible) ni une intellection (il n'est pas une Idée) : c'est une inférence, et c'est pourquoi on n'y croit « qu'à peine ».
+  points:
+  - id: platon-timee-i12-p1
+    sentence: "Si l'intellect et l'opinion vraie sont deux choses distinctes, alors les ___ existent en soi (51d)."
+    answer: "Idées"
+    alt: ["idées", "formes", "formes intelligibles"]
+  - id: platon-timee-i12-p2
+    sentence: "L'intellect naît de l'instruction, l'opinion vraie de la ___ (51e)."
+    answer: "persuasion"
+    alt: []
+  - id: platon-timee-i12-p3
+    sentence: "À l'opinion vraie tout homme a part ; à l'intellection, seulement les dieux et très ___ d'hommes (51e)."
+    answer: "peu"
+    alt: []
+  - id: platon-timee-i12-p4
+    sentence: "Le troisième genre ne se saisit « qu'au terme d'un raisonnement ___ qui ne s'appuie pas sur la sensation » (52b)."
+    answer: "bâtard"
+    alt: []
+  - id: platon-timee-i12-p5
+    sentence: "En dirigeant notre attention vers le troisième genre, « nous rêvons les yeux ___ » (52b)."
+    answer: "ouverts"
+    alt: []
+  - id: platon-timee-i12-p6
+    sentence: "Le résumé de 52d pose trois choses : « l'être, le milieu ___ et le devenir »."
+    answer: "spatial"
+    alt: []
+  - id: platon-timee-i12-p7
+    sentence: "Le mot grec qui désigne le troisième genre en 52a-d, et qu'on traduit par « espace » ou « place », est `___`."
+    answer: "chôra"
+    alt: ["khôra", "chora", "khora"]
+  - id: platon-timee-i12-p8
+    sentence: "Platon n'emploie aucun mot qui se traduise par « matière » : `___` est le mot d'Aristote."
+    answer: "hulê"
+    alt: ["hule", "hylè", "hulè"]
+  - id: platon-timee-i12-p9
+    sentence: "Luc Brisson traduit `chôra` en 52a par « ___ », au lieu d'« espace »."
+    answer: "matériau"
+    alt: []
+  - id: platon-timee-i12-p10
+    sentence: "On rapproche le troisième genre du *Timée* de l'___ (`apeiron`) du *Philèbe*."
+    answer: "illimité"
+    alt: ["indéterminé", "indéfini"]
+- id: platon-timee-i13
+  title: "Avant l'ordre : traces et crible"
+  notes: |-
+    **Avant l'intervention du démiurge, le réceptacle est agité de mouvements désordonnés ; les éléments n'y sont que des « traces », que la secousse trie déjà comme un crible trie le grain.** Brisson décrit la nourrice du devenir « mouillée », « embrasée », recevant les formes de la terre et de l'air, « soumise de partout à un balancement irrégulier » (52e) : secouée par les éléments, elle les secoue à son tour.
+
+    Ce mouvement sépare le lourd du léger, « de la même façon que, secouées et vannées sous l'action de cribles » et d'autres instruments qui nettoient le blé, les parties denses vont d'un côté et les légères d'un autre. Les éléments occupent ainsi déjà des régions distinctes, avant même que le monde soit ordonné : cette stratification annonce celle du monde achevé, qui ne sera jamais complète (58a-c).
+
+    | | Avant le démiurge | Après le démiurge |
+    | les éléments | des « traces » (`ichnê`, 53b) | des corps construits de triangles |
+    | leur mouvement | des forces déséquilibrées (`dunameis`, 52e), au hasard | réglé par la proportion |
+    | leur état | « sans proportion ni mesure » | figurés « à l'aide des formes et des nombres » |
+
+    Brisson : les éléments se trouvaient alors « dans l'état dans lequel on peut s'attendre à trouver absolument toute chose quand dieu en est absent » ; puis ils commencèrent à recevoir leur configuration « à l'aide des formes et des nombres ».
+
+    ! Les « traces » ne sont pas encore du feu ou de l'eau : elles n'en ont que quelques propriétés, sans la structure que le démiurge leur donnera. Et parler d'un état « avant » l'ordre fait difficulté, puisque le temps naît avec le ciel.
+  points:
+  - id: platon-timee-i13-p1
+    sentence: "Avant le démiurge, les éléments ne sont dans le réceptacle que des « ___ » (`ichnê`, 53b)."
+    answer: "traces"
+    alt: []
+  - id: platon-timee-i13-p2
+    sentence: "Le réceptacle secoué trie les éléments comme un ___ trie le grain (52e-53a)."
+    answer: "crible"
+    alt: ["van"]
+  - id: platon-timee-i13-p3
+    sentence: "Avant l'ordre, la nourrice du devenir est « soumise de partout à un balancement ___ » (52e)."
+    answer: "irrégulier"
+    alt: []
+  - id: platon-timee-i13-p4
+    sentence: "Le mouvement du réceptacle sépare le lourd du ___, et les éléments occupent déjà des régions distinctes."
+    answer: "léger"
+    alt: []
+  - id: platon-timee-i13-p5
+    sentence: "Avant l'ordre, les éléments étaient dans l'état où l'on peut s'attendre à trouver toute chose « quand ___ en est absent » (53b)."
+    answer: "dieu"
+    alt: []
+  - id: platon-timee-i13-p6
+    sentence: "Le dieu commence à configurer les éléments « à l'aide des formes et des ___ » (53b)."
+    answer: "nombres"
+    alt: []
+  - id: platon-timee-i13-p7
+    sentence: "Avant l'ordre, les éléments sont « sans proportion ni ___ »."
+    answer: "mesure"
+    alt: []
+  - id: platon-timee-i13-p8
+    sentence: "La stratification des éléments dans le monde achevé ne sera jamais ___ (58a-c)."
+    answer: "complète"
+    alt: ["achevée"]
+- id: platon-timee-i14
+  title: "La physique des triangles"
+  notes: |-
+    **Les quatre éléments sont faits de corpuscules en forme de polyèdres réguliers, dont les faces se composent de deux sortes de triangles rectangles : ces triangles sont les « simples » de toute la physique.** Tout corps a de la profondeur, la profondeur est bornée par des surfaces, toute surface plane se décompose en triangles (53c). Brisson : « une explication qui combine vraisemblance et nécessité » ; les principes encore antérieurs, « dieu les connaît et parmi les hommes ceux que ce dieu a en amitié ».
+
+    **Les deux triangles.** L'isocèle rectangle, et, parmi les scalènes, « le plus beau » : le demi-triangle équilatéral, dont l'hypoténuse est double du petit côté (côtés dans le rapport 1, √3, 2).
+
+    | Élément | Polyèdre | Faces | Triangle de base |
+    | feu | tétraèdre | 4 triangles équilatéraux | demi-équilatéral |
+    | air | octaèdre | 8 triangles équilatéraux | demi-équilatéral |
+    | eau | icosaèdre | 20 triangles équilatéraux | demi-équilatéral |
+    | terre | cube | 6 carrés | isocèle |
+
+    Le cinquième polyèdre régulier, le dodécaèdre, « le dieu s'en est servi pour l'univers, lorsqu'il y peignit des figures animales » : c'est le plus proche de la sphère.
+
+    **Les transformations.** Feu, air et eau ont des faces de même triangle : leurs corpuscules, en se brisant, se recomposent les uns dans les autres (deux tétraèdres de feu font un octaèdre d'air, 4 + 4 = 8 faces). La terre, faite d'isocèles, ne se change en rien d'autre. Timée corrige ainsi ce qu'il disait en 49c : que les quatre naissent tous les uns des autres, « c'était là une apparence trompeuse ».
+
+    **Pourquoi le cube à la terre ?** Parce qu'elle est le plus difficile des corps à mouvoir, et que le carré offre la base la plus stable (55d-e). Le feu reçoit le plus mobile et le plus petit, le tétraèdre.
+
+    **Physique et métaphysique.** L'Idée du Feu n'a ni éclat, ni légèreté, ni chaleur. Mais, sachant ce qu'est le feu, le démiurge sait que ses copies doivent apparaître brillantes, légères et chaudes, et choisit pour elles le corps qui convient le mieux à ces propriétés. Chaque arrangement de triangles produit en celui qui perçoit une affection (`pathos`) : c'est ainsi qu'il sent le chaud ou le froid.
+
+    ! L'exclusion de la terre est un cas où la méthode *a priori* contredit l'observation : on croit voir l'eau devenir pierre, mais la géométrie l'interdit.
+  points:
+  - id: platon-timee-i14-p1
+    sentence: "Les « simples » de la physique du *Timée* ne sont pas les quatre éléments, mais deux sortes de ___ rectangles."
+    answer: "triangles"
+    alt: []
+  - id: platon-timee-i14-p2
+    sentence: "Le plus beau des triangles scalènes est le demi-triangle ___, dont l'hypoténuse est double du petit côté."
+    answer: "équilatéral"
+    alt: []
+  - id: platon-timee-i14-p3
+    sentence: "Dans le *Timée*, le feu est fait de ___, le corps le plus petit et le plus mobile."
+    answer: "tétraèdres"
+    alt: ["tétraèdre"]
+  - id: platon-timee-i14-p4
+    sentence: "Dans le *Timée*, l'air est fait d'octaèdres, l'eau d'___."
+    answer: "icosaèdres"
+    alt: ["icosaèdre"]
+  - id: platon-timee-i14-p5
+    sentence: "La terre, la plus difficile à mouvoir, reçoit le ___, dont la base carrée est la plus stable."
+    answer: "cube"
+    alt: []
+  - id: platon-timee-i14-p6
+    sentence: "Le dodécaèdre, « le dieu s'en est servi pour l'___, lorsqu'il y peignit des figures animales » (55c)."
+    answer: "univers"
+    alt: []
+  - id: platon-timee-i14-p7
+    sentence: "Feu, air et eau se changent les uns dans les autres ; seule la ___ ne se change en rien d'autre, ses faces étant faites d'isocèles."
+    answer: "terre"
+    alt: []
+  - id: platon-timee-i14-p8
+    sentence: "Que les quatre éléments naissent tous les uns des autres, « c'était là une apparence ___ » (54b)."
+    answer: "trompeuse"
+    alt: []
+  - id: platon-timee-i14-p9
+    sentence: "Deux tétraèdres de feu peuvent se recomposer en un ___ d'air."
+    answer: "octaèdre"
+    alt: []
+  - id: platon-timee-i14-p10
+    sentence: "Chaque arrangement de triangles produit en celui qui perçoit une affection, en grec `___`."
+    answer: "pathos"
+    alt: []
+  - id: platon-timee-i14-p11
+    sentence: "La physique des triangles est « une explication qui combine vraisemblance et ___ » (53d)."
+    answer: "nécessité"
+    alt: []
+- id: platon-timee-i15
+  title: "L'homme : l'intellect et la nécessité ensemble"
+  notes: |-
+    **La troisième partie du discours montre l'intellect et la nécessité coopérant à la fabrication de l'homme : l'intellect fixe la fin de chaque organe, la nécessité fournit des matériaux dont les propriétés s'y prêtent, ou parfois y résistent.**
+
+    **Qui fabrique quoi.** Le démiurge a fait les âmes immortelles ; il confie les corps aux dieux inférieurs qu'il a engendrés. Brisson : « il a confié le soin d'engendrer les vivants mortels à ceux qui étaient nés de lui ». L'âme immortelle, logée dans un corps mortel, reçoit alors des parties mortelles, celles que connaissent déjà la *République* et le *Phèdre* :
+
+    | Partie de l'âme | Siège | Organes qui la servent |
+    | raisonnable, immortelle | la tête | |
+    | ardente (`thumos`) | la poitrine, près de la tête | le cœur, les poumons |
+    | désirante | le ventre | le foie |
+
+    **Quand la nécessité résiste.** Le plus souvent, les matériaux servent bien les fins de l'intellect. Pas toujours : l'enveloppe du cerveau devrait être épaisse pour le protéger, mais une enveloppe épaisse émousserait la sensation. Brisson : « ce dont l'être et le développement dépendent de la nécessité ne peut allier un os compact et une chair épaisse avec une grande acuité sensorielle ». Il faut choisir entre les deux exigences, et la tête reçoit une couverture légère. Ces résistances de la nécessité à la « persuasion » de l'intellect bornent l'excellence que le monde peut atteindre.
+
+    Viennent ensuite la respiration, la digestion, les maladies du corps et de l'âme, et une exhortation à exercer l'un et l'autre ; le discours s'achève sur la naissance des femmes et des animaux (90e-92c).
+
+    ! Le mal et l'imperfection ne viennent pas d'une négligence du démiurge, mais de la nécessité : il fait le meilleur *possible* avec des matériaux qui ont leurs propres propriétés.
+  points:
+  - id: platon-timee-i15-p1
+    sentence: "Le démiurge fabrique les âmes immortelles, mais confie les corps aux dieux ___ qu'il a engendrés."
+    answer: "inférieurs"
+    alt: ["subalternes", "secondaires"]
+  - id: platon-timee-i15-p2
+    sentence: "Le démiurge « a confié le soin d'engendrer les vivants ___ à ceux qui étaient nés de lui » (69c)."
+    answer: "mortels"
+    alt: []
+  - id: platon-timee-i15-p3
+    sentence: "Dans le *Timée*, l'âme raisonnable et immortelle a son siège dans la ___."
+    answer: "tête"
+    alt: []
+  - id: platon-timee-i15-p4
+    sentence: "Dans le *Timée*, la partie ardente de l'âme (`thumos`) a son siège dans la ___."
+    answer: "poitrine"
+    alt: ["thorax"]
+  - id: platon-timee-i15-p5
+    sentence: "Dans le *Timée*, la partie désirante de l'âme a son siège dans le ___, servie par le foie."
+    answer: "ventre"
+    alt: []
+  - id: platon-timee-i15-p6
+    sentence: "L'enveloppe du cerveau devrait être épaisse pour le protéger, mais elle émousserait alors la ___ : il faut choisir."
+    answer: "sensation"
+    alt: []
+  - id: platon-timee-i15-p7
+    sentence: "Les résistances de la ___ à la persuasion de l'intellect bornent l'excellence du monde."
+    answer: "nécessité"
+    alt: []
+  - id: platon-timee-i15-p8
+    sentence: "Le discours de Timée s'achève sur la naissance des ___ et des animaux (90e-92c)."
+    answer: "femmes"
+    alt: []
+- id: platon-timee-i16
+  title: "L'éthique : redresser les révolutions de l'âme"
+  notes: |-
+    **Le discours sur le monde culmine dans une éthique : l'homme doit régler les mouvements de son âme, dérangés à la naissance, sur les révolutions de l'univers, et atteindre ainsi la vie la meilleure.** C'est le sommet du discours (90a-d), et le but annoncé dès l'ouverture : la nature de l'homme, sur le fond de la nature de l'univers, doit fonder le récit de Critias sur la vertu en acte.
+
+    Le dieu a donné à chacun, « comme démon », l'espèce d'âme qui domine en nous, et qui habite le haut du corps : elle nous élève vers ce qui, dans le ciel, lui est apparenté, « car nous sommes une plante non point terrestre, mais céleste ».
+
+    | Celui qui | Il a | Repère |
+    | s'abandonne aux appétits et aux ambitions | des pensées devenues mortelles | 90b |
+    | cherche la connaissance et les pensées vraies | des pensées immortelles et divines, et il est « supérieurement heureux » | 90b-c |
+
+    Il n'y a qu'une façon de tout soigner : donner à chaque partie les aliments et les mouvements qui lui conviennent (90c). Pour la partie divine, ce sont les pensées et les révolutions de l'univers. Chacun doit, « en redressant les révolutions qui dans notre tête ont été dérangées lors de notre naissance » (`exorthounta`), rendre celui qui contemple semblable à ce qu'il contemple, et atteindre « le but de la vie la meilleure proposée aux hommes par les dieux pour le présent et pour l'avenir ».
+
+    Le bien de l'âme est d'être bien ordonnée (`eu kekosmêmenon`, 90c) : son ordre est celui du monde (`kosmos`). C'est la vieille conviction socratique que la connaissance du bien sauve, étendue au-delà de la morale, jusqu'à l'astronomie.
+
+    ! Ce n'est pas l'observation des astres pour elle-même qui rend heureux : c'est l'étude de leurs révolutions en tant qu'elle remet en ordre celles de notre âme.
+  points:
+  - id: platon-timee-i16-p1
+    sentence: "« Nous sommes une ___ non point terrestre, mais céleste » (*Timée*, 90a)."
+    answer: "plante"
+    alt: []
+  - id: platon-timee-i16-p2
+    sentence: "Le dieu a donné à chacun, « comme ___ », l'espèce d'âme qui domine en nous et habite le haut du corps (90a)."
+    answer: "démon"
+    alt: ["daimôn", "daimon"]
+  - id: platon-timee-i16-p3
+    sentence: "Celui qui s'abandonne aux appétits et aux ambitions n'a plus que des pensées ___ (90b)."
+    answer: "mortelles"
+    alt: []
+  - id: platon-timee-i16-p4
+    sentence: "Il faut avancer « en ___ les révolutions qui dans notre tête ont été dérangées lors de notre naissance » (90d)."
+    answer: "redressant"
+    alt: []
+  - id: platon-timee-i16-p5
+    sentence: "Les révolutions de notre âme ont été dérangées lors de notre ___ (90d ; voir 43a-44b)."
+    answer: "naissance"
+    alt: []
+  - id: platon-timee-i16-p6
+    sentence: "Le but est d'atteindre « le but de la vie la ___ proposée aux hommes par les dieux pour le présent et pour l'avenir » (90d)."
+    answer: "meilleure"
+    alt: []
+  - id: platon-timee-i16-p7
+    sentence: "Le bien de l'âme est d'être bien ___ (`eu kekosmêmenon`, 90c), comme le monde est un `kosmos`."
+    answer: "ordonnée"
+    alt: []
+  - id: platon-timee-i16-p8
+    sentence: "Il n'y a qu'une façon de soigner chaque partie de soi : lui donner les aliments et les ___ qui lui conviennent (90c)."
+    answer: "mouvements"
+    alt: []
+  - id: platon-timee-i16-p9
+    sentence: "Le discours de Timée sur la nature de l'homme doit servir de fond au récit de ___ sur la vertu en acte."
+    answer: "Critias"
+    alt: []
+- id: platon-timee-i17
+  title: "La téléologie : du Phédon au démiurge"
+  notes: |-
+    Le *Timée* donne enfin ce que Socrate cherchait en vain dans le *Phédon* : **une explication du monde par le meilleur, où l'intellect est vraiment cause.** Dans le *Phédon* (97b-99d), Socrate raconte sa déception devant Anaxagore : celui-ci disait que l'Intellect ordonne tout, mais n'expliquait ensuite les choses que par des causes physiques. Faute de trouver l'explication par le meilleur, Socrate se rabattait sur une « seconde navigation » : expliquer par la participation aux Idées (99c).
+
+    **Ce qui a permis la découverte**, selon Zeyl et Sattler : sans doute l'Idée du Bien de la *République*, qu'on peut rapprocher de l'ordre rationnel et mathématique. Les Idées sont bonnes parce qu'elles possèdent cet ordre parfaitement ; le sensible l'est dans la mesure où il y participe. Reste à expliquer comment cet ordre passe dans le monde visible : le *Timée* répond qu'il n'y est pas inhérent, mais **imposé** par l'Intellect.
+
+    **Où placer l'Intellect ?** Le démiurge est une figure de l'Intellect. Mais l'Intellect lui-même est-il du côté de l'être ou du devenir ?
+
+    | Hypothèse | Pourquoi Zeyl et Sattler la rejettent |
+    | l'âme du monde (puisque l'intellect ne va pas sans âme, 30b) | l'âme du monde est une œuvre du démiurge, donc du devenir |
+    | une Idée (le monde des Idées, l'Idée du Bien, l'Idée de l'Intelligence) | une Idée est un objet connu, non un sujet qui connaît et qui agit |
+    | une personnification du savoir-faire | même objection |
+
+    Leur conclusion : l'Intellect est une réalité d'un genre propre, au-delà de l'opposition de l'être et du devenir, qui n'est donc pas exhaustive ; peut-être pas sans rapport avec le Dieu des religions abrahamiques.
+
+    ! Dire que le démiurge « représente » l'Intellect ne règle pas la question de son statut : c'est justement ce statut que les interprètes discutent.
+  points:
+  - id: platon-timee-i17-p1
+    sentence: "Dans le *Phédon* (97b-99d), Socrate est déçu par ___, qui disait que l'Intellect ordonne tout sans s'en servir pour expliquer."
+    answer: "Anaxagore"
+    alt: []
+  - id: platon-timee-i17-p2
+    sentence: "Faute d'explication par le meilleur, le Socrate du *Phédon* se rabat sur une « seconde ___ » : la participation aux Idées."
+    answer: "navigation"
+    alt: []
+  - id: platon-timee-i17-p3
+    sentence: "Pour Zeyl et Sattler, la découverte de la téléologie du *Timée* doit sans doute beaucoup à l'Idée du ___ de la *République*."
+    answer: "Bien"
+    alt: ["bien"]
+  - id: platon-timee-i17-p4
+    sentence: "Dans le *Timée*, l'ordre n'est pas inhérent au monde visible : il y est ___ par l'Intellect."
+    answer: "imposé"
+    alt: []
+  - id: platon-timee-i17-p5
+    sentence: "L'Intellect ne peut être l'âme du monde, car celle-ci est une ___ du démiurge."
+    answer: "œuvre"
+    alt: ["oeuvre", "production"]
+  - id: platon-timee-i17-p6
+    sentence: "L'Intellect ne peut être une Idée, car une Idée est un objet connu, non un ___ qui connaît et agit."
+    answer: "sujet"
+    alt: []
+  - id: platon-timee-i17-p7
+    sentence: "Pour Zeyl et Sattler, l'Intellect transcende l'opposition de l'être et du devenir, qui n'est donc pas ___."
+    answer: "exhaustive"
+    alt: []
+  - id: platon-timee-i17-p8
+    sentence: "Zeyl et Sattler rapprochent l'Intellect du *Timée* du Dieu des religions ___."
+    answer: "abrahamiques"
+    alt: ["monothéistes"]
+- id: platon-timee-i18
+  title: "Deux téléologies : Platon et Aristote"
+  notes: |-
+    **Platon et Aristote expliquent tous deux la nature par la fin ; mais chez Aristote la fin est immanente à la nature et locale, chez Platon elle est imposée de l'extérieur par un artisan et vaut pour le monde entier.**
+
+    | | Platon (*Timée*) | Aristote |
+    | qui vise la fin | un artisan divin, extérieur à la nature | la nature elle-même |
+    | où est la fin | dans le plan de l'Intellect | dans la forme de l'être naturel |
+    | échelle | globale : le monde entier est fait pour le meilleur | locale : tel organe, telle structure, presque jamais le monde comme tout |
+    | point de départ | un chaos sans forme propre | un individu qui hérite la forme de son géniteur |
+
+    Pour Aristote, le développement d'un individu est réglé par la forme reçue de son parent mâle : sa fin est d'actualiser pleinement cette forme. Pour Platon, l'étoffe primitive du monde n'a aucune forme qui la dirige vers une fin : la cause de son ordre doit donc lui être extérieure. Une téléologie immanente n'est pas une option pour lui.
+
+    ! Aristote n'abandonne pas la finalité : il la place dans la nature au lieu d'un artisan. Opposer « Platon finaliste » à « Aristote mécaniste » serait un contresens.
+  points:
+  - id: platon-timee-i18-p1
+    sentence: "Chez Aristote, la fin est ___ à la nature : c'est la nature elle-même qui agit en vue d'une fin."
+    answer: "immanente"
+    alt: ["intérieure"]
+  - id: platon-timee-i18-p2
+    sentence: "Chez Platon, la fin est imposée par un artisan divin, ___ à la nature."
+    answer: "extérieur"
+    alt: ["transcendant", "extérieure"]
+  - id: platon-timee-i18-p3
+    sentence: "La téléologie d'Aristote est ___ : elle explique tel organe ou telle structure, presque jamais le monde comme tout."
+    answer: "locale"
+    alt: []
+  - id: platon-timee-i18-p4
+    sentence: "La téléologie du *Timée* est ___ : le monde entier est fait en vue du meilleur."
+    answer: "globale"
+    alt: []
+  - id: platon-timee-i18-p5
+    sentence: "Pour Aristote, un individu se développe vers la pleine actualisation de la ___ reçue de son géniteur."
+    answer: "forme"
+    alt: []
+  - id: platon-timee-i18-p6
+    sentence: "Pour Platon, l'étoffe primitive du monde n'a aucune forme propre : la cause de son ordre doit lui être ___."
+    answer: "extérieure"
+    alt: []
+  - id: platon-timee-i18-p7
+    sentence: "Opposer un Platon finaliste à un Aristote ___ est un contresens : Aristote garde la finalité."
+    answer: "mécaniste"
+    alt: []
+- id: platon-timee-i19
+  title: "Une création au sens propre ? Lecture littérale et métaphorique"
+  notes: |-
+    **Faut-il prendre à la lettre le récit d'un monde fabriqué à un moment donné, ou y lire l'exposé des principes qui font tenir le monde de tout temps ? La question divise les interprètes depuis Aristote.**
+
+    Aristote rejetait la cosmologie du *Timée* : elle supposait un commencement non seulement de l'univers dans le temps, mais du temps lui-même (*Physique* VIII, 251b14-26). Pour neutraliser cette critique, les défenseurs du dialogue ont soutenu que le récit de la création n'est pas à prendre à la lettre, mais comme une métaphore. Cette lecture a dominé chez les platoniciens, de l'Ancienne Académie (les successeurs immédiats de Platon) jusqu'à Plotin.
+
+    | | Lecture littérale | Lecture métaphorique |
+    | le récit | un artisan a assemblé le monde à un moment du passé | il expose les principes qui valent à tout moment |
+    | la difficulté | un « avant » le monde, alors que le temps naît avec le ciel | expliquer pourquoi Platon raconte une genèse |
+    | ses tenants | Aristote (pour la critiquer), plusieurs modernes | les platoniciens anciens, jusqu'à Plotin |
+
+    Trois questions en dépendent : l'Intellect est-il un agent distinct du modèle et de la copie, ou se réduit-il à autre chose (l'âme du monde, une Idée) ? Comment comprendre l'état « d'avant » l'ordre, s'il n'y a pas de temps hors des mouvements célestes ? Une lecture littérale s'accorde-t-elle avec ce que Platon dit ailleurs ?
+
+    ! Le caractère « vraisemblable » du discours ne tranche pas la question en faveur de la métaphore (voir la leçon sur le statut du discours) : il oppose le révisable au démontré, non l'imagé au littéral.
+  points:
+  - id: platon-timee-i19-p1
+    sentence: "Aristote rejetait le *Timée* parce qu'il supposait un commencement non seulement de l'univers, mais du ___ lui-même."
+    answer: "temps"
+    alt: []
+  - id: platon-timee-i19-p2
+    sentence: "La critique aristotélicienne du *Timée* se trouve au livre VIII de la ___ (251b14-26)."
+    answer: "Physique"
+    alt: ["*Physique*"]
+  - id: platon-timee-i19-p3
+    sentence: "Pour parer la critique d'Aristote, les défenseurs du *Timée* ont lu le récit de la création comme une ___."
+    answer: "métaphore"
+    alt: []
+  - id: platon-timee-i19-p4
+    sentence: "La lecture métaphorique a dominé chez les platoniciens, de l'Ancienne ___ jusqu'à Plotin."
+    answer: "Académie"
+    alt: []
+  - id: platon-timee-i19-p5
+    sentence: "La lecture métaphorique a dominé chez les platoniciens jusqu'à ___, au IIIe siècle."
+    answer: "Plotin"
+    alt: []
+  - id: platon-timee-i19-p6
+    sentence: "Lue littéralement, la création suppose un « ___ » le monde, alors que le temps naît avec le ciel."
+    answer: "avant"
+    alt: []
+  - id: platon-timee-i19-p7
+    sentence: "Lu métaphoriquement, le récit expose les ___ qui font tenir le monde à tout moment."
+    answer: "principes"
+    alt: []
+- id: platon-timee-i20
+  title: "La place du Timée dans l'œuvre"
+  notes: |-
+    On tient traditionnellement le *Timée* pour **un dialogue tardif ; G. E. L. Owen a soutenu en 1953 qu'il appartenait à la période de la maturité, et le débat qui a suivi a renouvelé l'étude de Platon.**
+
+    | | G. E. L. Owen (1953) | H. F. Cherniss (réponse) |
+    | date du *Timée* | dialogue de la maturité, avant le *Théétète* et le *Parménide* | dialogue tardif, après eux |
+    | argument | il réaffirme des thèses de la *République* que ces deux dialogues réfutent | les arguments du *Théétète* et du *Parménide* sont mal lus |
+    | la stylométrie | ses présupposés et ses résultats sont contestables | elle confirme la tradition |
+
+    Avec le temps, la position traditionnelle a tenu : une lecture plus fine des textes et des études stylométriques assistées par ordinateur l'ont confirmée.
+
+    **Les liens avec les autres dialogues** sont explicites :
+
+    | Dialogue | Lien |
+    | *République* | la cité exposée la veille, résumée en 17c-19b |
+    | *Critias* | la suite annoncée, restée inachevée |
+    | *Phédon* | la demande d'une explication par le meilleur (97b-99d), que le *Timée* satisfait, en y ajoutant les causes matérielles |
+    | *Philèbe* | l'illimité (`apeiron`), proche du réceptacle |
+
+    ! La date du *Timée* n'est pas une question d'érudition : si le dialogue est tardif, Platon y maintient les Idées après les objections du *Parménide*.
+  points:
+  - id: platon-timee-i20-p1
+    sentence: "En 1953, G. E. L. ___ a soutenu que le *Timée* était un dialogue de la maturité, antérieur au *Théétète* et au *Parménide*."
+    answer: "Owen"
+    alt: []
+  - id: platon-timee-i20-p2
+    sentence: "H. F. ___ a défendu contre Owen la datation traditionnelle du *Timée*, comme dialogue tardif."
+    answer: "Cherniss"
+    alt: []
+  - id: platon-timee-i20-p3
+    sentence: "La datation traditionnelle du *Timée* s'appuyait sur les études de ___, l'analyse statistique du style."
+    answer: "stylométrie"
+    alt: []
+  - id: platon-timee-i20-p4
+    sentence: "Pour Owen, le *Timée* réaffirme des thèses de la *République* que le *Théétète* et le ___ réfutent."
+    answer: "Parménide"
+    alt: ["*Parménide*"]
+  - id: platon-timee-i20-p5
+    sentence: "Avec le temps, la datation ___ du *Timée* a tenu, confirmée par la stylométrie assistée par ordinateur."
+    answer: "traditionnelle"
+    alt: ["tardive"]
+  - id: platon-timee-i20-p6
+    sentence: "Le *Timée* satisfait la demande du ___ (97b-99d) d'une explication par le meilleur."
+    answer: "Phédon"
+    alt: ["*Phédon*"]
+  - id: platon-timee-i20-p7
+    sentence: "Si le *Timée* est tardif, Platon y maintient les Idées après les objections du ___."
+    answer: "Parménide"
+    alt: ["*Parménide*"]
+- id: platon-timee-i21
+  title: "Repérer les moments du Timée"
+  notes: |-
+    Se repérer dans le *Timée*, c'est **savoir situer ses grands moments et ses formules les plus citées.**
+
+    | Moment, formule | Repère |
+    | prélude : être et devenir | 27d-28a |
+    | le monde est engendré, il a une cause | 28a-c |
+    | le démiurge regarde un modèle éternel | 29a |
+    | « mythe vraisemblable » | 29d |
+    | le démiurge bon et sans jalousie | 29e-30a |
+    | l'âme du monde | 35a-37c |
+    | le temps, « image mobile de l'éternité » | 37d |
+    | la vue et la philosophie | 47a-c |
+    | l'intellect persuade la nécessité | 47e-48a |
+    | le troisième genre, réceptacle et nourrice | 48e-49a |
+    | la mère, le père, l'enfant | 50d |
+    | la preuve des Idées | 51b-e |
+    | le raisonnement bâtard, la `chôra` | 52a-b |
+    | le crible, les traces | 52d-53b |
+    | les triangles et les polyèdres | 53c-56c |
+    | la plante céleste, redresser les révolutions | 90a-d |
+  points:
+  - id: platon-timee-i21-p1
+    sentence: "Le prélude du *Timée*, qui distingue ce qui est toujours et ce qui devient toujours, commence en ___."
+    answer: "27d"
+    alt: ["27d-28a"]
+  - id: platon-timee-i21-p2
+    sentence: "Le « mythe vraisemblable » se trouve dans le *Timée* en ___."
+    answer: "29d"
+    alt: []
+  - id: platon-timee-i21-p3
+    sentence: "Le démiurge bon et sans jalousie, qui amène le visible du désordre à l'ordre, se trouve en ___."
+    answer: "29e-30a"
+    alt: ["29e", "30a"]
+  - id: platon-timee-i21-p4
+    sentence: "Le temps comme « image mobile de l'éternité » se trouve dans le *Timée* en ___."
+    answer: "37d"
+    alt: []
+  - id: platon-timee-i21-p5
+    sentence: "L'éloge de la vue, d'où nous viennent le nombre et la philosophie, se trouve en ___."
+    answer: "47a-c"
+    alt: ["47a", "47b"]
+  - id: platon-timee-i21-p6
+    sentence: "L'intellect qui persuade la nécessité, et la cause errante, se trouvent au début de la deuxième partie, en ___."
+    answer: "47e-48a"
+    alt: ["48a"]
+  - id: platon-timee-i21-p7
+    sentence: "Le troisième genre, « réceptacle » et « nourrice » de tout devenir, apparaît en ___."
+    answer: "48e-49a"
+    alt: ["49a", "48e"]
+  - id: platon-timee-i21-p8
+    sentence: "La comparaison du réceptacle à une mère, du modèle à un père et du sensible à un enfant se trouve en ___."
+    answer: "50d"
+    alt: []
+  - id: platon-timee-i21-p9
+    sentence: "Le « raisonnement bâtard » par lequel on saisit la `chôra` se trouve en ___."
+    answer: "52b"
+    alt: ["52a-b"]
+  - id: platon-timee-i21-p10
+    sentence: "La plante non point terrestre mais céleste, et le redressement des révolutions de l'âme, se trouvent en ___."
+    answer: "90a-d"
+    alt: ["90a", "90d"]
