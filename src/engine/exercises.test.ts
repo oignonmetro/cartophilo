@@ -22,6 +22,7 @@ import {
   type Exercise,
 } from './exercises'
 import { createRng, seedFrom } from './rng'
+import { itemsOfLesson, lessonTables } from '@/content/course'
 import { createCard, review, type CardState } from './srs'
 
 /** Emballe une liste de mots dans une leçon de vocabulaire. */
@@ -1322,10 +1323,19 @@ describe('tableau à trous', () => {
       { id: 'q3', sentence: 'La ___ des Idées.', answer: 'théorie', alt: [], options: [] },
     ],
   }
+  const TABLE_ID = 'parm-i1:tableau:moment-lieu-contenu'
+
+  it('fait de chaque tableau un élément, identifié par sa leçon et son en-tête', () => {
+    expect(lessonTables(lesson).map((table) => table.id)).toEqual([TABLE_ID])
+    expect(itemsOfLesson(lesson).map((item) => item.id)).toEqual(['q1', 'q2', 'q3', TABLE_ID])
+    // Ajouter une rangée ne change pas l’identifiant ; un second tableau de même en-tête prend un suffixe.
+    const grown = { ...lesson, notes: `${PLAN}\n\n| Moment | Lieu | Contenu |\n| a | b | c |\n| d | e | f |` }
+    expect(lessonTables(grown).map((table) => table.id)).toEqual([TABLE_ID, `${TABLE_ID}-2`])
+  })
 
   it('vide une colonne en banque, puis demande une case d’une autre colonne', () => {
     for (const seed of [1, 2, 3, 4, 5, 6]) {
-      const [bank, cell] = tableExercises('l', 'T', PLAN, createRng(seed))
+      const [bank, cell] = tableExercises('T', lessonTables(lesson), createRng(seed))
       if (bank?.kind !== 'table-bank' || cell?.kind !== 'table-cell') throw new Error('deux exercices attendus')
       const column = bank.holes[0]!.column
       expect(bank.holes).toEqual([0, 1, 2].map((row) => ({ row, column })))
@@ -1336,16 +1346,16 @@ describe('tableau à trous', () => {
 
   it('ne vide pas une colonne d’une seule case, et ne demande pas seule une case trop longue', () => {
     const notes = '| | A |\n| x | ' + 'mot '.repeat(20).trim() + ' |'
-    expect(tableExercises('l', 'T', notes, createRng(1))).toEqual([
+    expect(tableExercises('T', lessonTables({ ...lesson, notes }), createRng(1))).toEqual([
       expect.objectContaining({ kind: 'table-cell', hole: { row: 0, column: 0 } }),
     ])
   })
 
-  it('suit les cartes de la leçon, à la découverte comme ensuite, sans rien noter pour la révision', () => {
+  it('suit les cartes de la leçon, à la découverte comme ensuite, et note le tableau', () => {
     for (const level of [0, 1, 2]) {
       const session = buildLessonSession(lesson, level)
       expect(session.slice(-2).map((exercise) => exercise.kind)).toEqual(['table-bank', 'table-cell'])
-      expect(session.slice(-2).flatMap(itemIdsOf)).toEqual([])
+      expect(session.slice(-2).flatMap(itemIdsOf)).toEqual([TABLE_ID, TABLE_ID])
       expect(isPresentation(session.at(-1)!)).toBe(false)
     }
   })
@@ -1356,8 +1366,21 @@ describe('tableau à trous', () => {
     expect(withTable.map((e) => e.id)).toEqual(buildLessonSession(bare, 1, 7).map((e) => e.id))
   })
 
+  it('revient en révision : en banque ou case seule tant qu’il est jeune, case seule une fois mûr', () => {
+    const item = itemsOfLesson(lesson).find((entry) => entry.id === TABLE_ID)!
+    const young = createCard(TABLE_ID, T0)
+    const kindsYoung = [1, 2, 3, 4, 5, 6].map(
+      (reps) => buildReviewSession([{ card: { ...young, reps }, item }], 1)[0]!.kind,
+    )
+    expect(new Set(kindsYoung)).toEqual(new Set(['table-bank', 'table-cell']))
+    const mature = { ...young, reps: 6, interval: 60 }
+    for (const seed of [1, 2, 3]) {
+      expect(buildReviewSession([{ card: mature, item }], seed)[0]).toMatchObject({ kind: 'table-cell', itemId: TABLE_ID })
+    }
+  })
+
   it('se saute en mode « citations seules »', () => {
-    const [bank] = tableExercises('l', 'T', PLAN, createRng(1))
+    const [bank] = tableExercises('T', lessonTables(lesson), createRng(1))
     expect(isExplanationOnly(bank!)).toBe(true)
   })
 })

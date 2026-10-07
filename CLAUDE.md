@@ -86,8 +86,10 @@ pas seulement Glossaire et Repérage.
   fin de session, deux exercices (`tableExercises` dans
   `src/engine/exercises.ts`) : une colonne vidée à remplir depuis une banque
   (même exception assumée que le plan à trous : un ensemble fermé), puis une
-  seule case, à écrire ou à révéler. Hors révision espacée : ils se rejouent
-  avec la leçon.
+  seule case, à écrire ou à révéler. Chaque tableau est un élément de la
+  révision espacée, d'identifiant tiré de sa leçon et de sa ligne d'en-tête
+  (`lessonTables` dans `src/content/course.ts`) : changer l'en-tête d'un
+  tableau en fait un nouvel élément, repris de zéro.
 - Le moteur de vocabulaire (`kind: vocab`, plus aucun cours ne l'emploie
   depuis le retrait du cours `demo`) n'a plus d'écran de présentation à part (l'ancienne
   auto-évaluation « nouveau / incertain / je savais ») : un mot rencontre

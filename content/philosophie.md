@@ -263,6 +263,12 @@ qui se distinguent les unes des autres : deux cases identiques dans une même
 colonne restent interchangeables, mais une colonne de phrases presque
 pareilles se replace au hasard.
 
+Le tableau revient ensuite en révision espacée, comme une carte : son
+identifiant se tire de la leçon et de sa ligne d'en-tête
+(`m7-l1:tableau:moment-repere-ce-qui-s-y-joue`), sans rien à écrire dans le
+YAML. Corriger ou ajouter des rangées garde son historique ; changer son
+en-tête en fait un nouveau tableau, à réapprendre.
+
 **N'hésitez pas sur la mise en forme.** Un rappel purement en prose se lit
 mal à l'écran ; mettez en gras l'idée directrice de chaque paragraphe, et
 réservez une couleur à une opposition qui traverse tout le rappel (une thèse

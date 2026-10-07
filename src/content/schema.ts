@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import type { NoteTableBlock } from './notes'
 
 /**
  * Format d'écriture des cours (fichiers YAML de `content/`).
@@ -513,6 +514,8 @@ export type PracticeItem =
       workTree?: Work
     }
   | { kind: 'conjugation'; id: string; form: ConjugationForm; verb: ConjugationVerb }
+  /** Un tableau du rappel d'une leçon (voir `lessonTables`), qui revient en tableau à trous. */
+  | { kind: 'table'; id: string; table: NoteTableBlock; heading: string }
 
 /**
  * D'où vient un point de leçon de texte : ce qu'en affiche l'en-tête de sa

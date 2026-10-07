@@ -58,7 +58,6 @@ export function TableBank({
 }) {
   const { table, holes } = exercise
   const sounds = useSessionSounds()
-  const haptics = useSessionHaptics()
   // Une case remplie retient le jeton de banque qui l'a remplie.
   const [placed, setPlaced] = useState<Map<number, number>>(new Map())
   const [active, setActive] = useState<number | null>(holes.length > 0 ? 0 : null)
@@ -81,7 +80,6 @@ export function TableBank({
       const rotated = [...order.slice(active + 1), ...order.slice(0, active + 1)]
       const following = rotated.find((index) => !next.has(index)) ?? null
       setActive(following)
-      if (following === null) haptics.answered(exercise, mistakes === 0)
       return
     }
     setMistakes((count) => count + 1)

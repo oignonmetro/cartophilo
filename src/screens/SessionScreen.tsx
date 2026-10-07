@@ -375,20 +375,6 @@ function SessionRunner({
     [advance, attempt.seen, course.id, gradeItem, haptics, record],
   )
 
-  /**
-   * Fin d'un tableau à trous en banque : comme une manche d'association, tout
-   * finit replacé, la manche est donc réussie ; une erreur en chemin compte
-   * seulement comme un échec au premier essai. Rien à noter pour la révision
-   * espacée (voir `itemIdsOf`).
-   */
-  const answerBoard = useCallback(
-    (exercise: Exercise, clean: boolean) => {
-      record(exercise, clean, true)
-      advance(false)
-    },
-    [advance, record],
-  )
-
   // La file est vide : la session est terminée. Le drapeau évite que le rendu
   // suivant ne déclenche une seconde clôture.
   const finished = useRef(false)
@@ -545,7 +531,12 @@ function SessionRunner({
               <PassageCard exercise={current} onAnswer={(correct, rating) => answer(current, correct, rating)} />
             )}
             {current.kind === 'table-bank' && (
-              <TableBank exercise={current} onDone={(clean) => answerBoard(current, clean)} />
+              // Comme une manche d'association : tout finit replacé, une erreur en
+              // chemin compte pour le tableau au premier essai (voir `answerMatch`).
+              <TableBank
+                exercise={current}
+                onDone={(clean) => answerMatch(current, clean ? [] : [current.itemId])}
+              />
             )}
             {current.kind === 'table-cell' && (
               <TableCell exercise={current} onAnswer={(correct, rating) => answer(current, correct, rating)} />

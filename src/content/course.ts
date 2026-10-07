@@ -9,6 +9,7 @@ import type {
   Track,
   Unit,
 } from './schema'
+import { noteTables, plainInline, type NoteTableBlock } from './notes'
 import { workContextOf } from './work'
 
 /**
@@ -59,7 +60,7 @@ export function itemsOfLesson(lesson: Lesson, unit?: Unit): PracticeItem[] {
     case 'grammar': {
       const passage = lesson.passage ? { label: lesson.passage.label, heading: lesson.title } : undefined
       const work = lesson.work ? unit?.work : undefined
-      return lesson.points.map((point) => ({
+      const points: PracticeItem[] = lesson.points.map((point) => ({
         kind: 'grammar' as const,
         id: point.id,
         point,
@@ -67,12 +68,66 @@ export function itemsOfLesson(lesson: Lesson, unit?: Unit): PracticeItem[] {
         work: work ? workContextOf(work, point.id) : undefined,
         workTree: work,
       }))
+      const tables: PracticeItem[] = lessonTables(lesson).map(({ id, table }) => ({
+        kind: 'table' as const,
+        id,
+        table,
+        heading: lesson.title,
+      }))
+      return [...points, ...tables]
     }
     case 'conjugation':
       return lesson.verbs.flatMap((verb) =>
         verb.forms.map((form) => ({ kind: 'conjugation' as const, id: form.id, form, verb })),
       )
   }
+}
+
+/** Un tableau du rappel d'une leçon, et l'identifiant qui le suit en révision espacée. */
+export interface LessonTable {
+  id: string
+  table: NoteTableBlock
+}
+
+/**
+ * Les tableaux du rappel d'une leçon de grammaire (leçons de texte
+ * comprises, unités-œuvres exclues), chacun un élément de la révision
+ * espacée, joué en tableau à trous (voir `tableExercises`).
+ *
+ * Aucun identifiant à écrire dans le YAML : il se tire de la leçon et de la
+ * ligne d'en-tête du tableau (« m7-l1:tableau:moment-repere-ce-qui-s-y-joue »).
+ * Corriger ou ajouter des rangées garde donc l'historique de révision, et
+ * insérer un autre tableau avant lui ne le fait pas passer à un autre
+ * contenu, comme le ferait un numéro d'ordre. Changer l'en-tête en fait un
+ * nouvel élément, repris de zéro. Deux tableaux de même en-tête dans une
+ * même leçon prennent un suffixe (« -2 »). Un tableau sans aucune case
+ * remplie n'a rien à demander et n'en est pas un.
+ */
+export function lessonTables(lesson: Lesson): LessonTable[] {
+  if (lesson.kind !== 'grammar' || lesson.work) return []
+  const seen = new Map<string, number>()
+  return noteTables(lesson.notes ?? '')
+    .filter((table) => table.rows.some((row) => [row.label, ...row.cells].some((cell) => plainInline(cell))))
+    .map((table) => {
+      const base = `${lesson.id}:tableau:${tableSlug(table)}`
+      const count = (seen.get(base) ?? 0) + 1
+      seen.set(base, count)
+      return { id: count === 1 ? base : `${base}-${count}`, table }
+    })
+}
+
+/** L'en-tête d'un tableau en identifiant : « Ce qui s'y joue » → « ce-qui-s-y-joue ». */
+function tableSlug(table: NoteTableBlock): string {
+  const slug = [table.corner, ...table.columns]
+    .map(plainInline)
+    .join(' ')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .slice(0, 60)
+    .replace(/^-+|-+$/g, '')
+  return slug || 'sans-en-tete'
 }
 
 /** Une leçon de texte : un paragraphe cité, puis ses cartes, dans l'ordre (voir `passageSchema`). */
