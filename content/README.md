@@ -46,7 +46,7 @@ unités puis aux leçons. Les fichiers d'unités n'ont donc pas à le répéter.
 | `kind` | Données | Exercices générés |
 |---|---|---|
 | `vocab` | `vocab:` (mots et traductions) | association, QCM, phrase à trou, saisie |
-| `grammar` | `points:` (phrases trouées) | rappel de cours, phrase à trou (banque puis clavier) |
+| `grammar` | `points:` (phrases trouées) | rappel de cours, phrase à trou (banque puis clavier), tableau à trous (les tableaux du rappel) |
 | `conjugation` | `verbs:` (verbes et leurs formes) | rappel, association personnes/formes, production |
 
 ## Ajouter un mot (`kind: vocab`)

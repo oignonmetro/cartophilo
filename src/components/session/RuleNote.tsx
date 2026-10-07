@@ -130,7 +130,21 @@ function tableCellSize(text: string): string {
  * alignée à gauche : elle sert de repère. Son en-tête, le coin, s'affiche
  * quand il titre la colonne (« Sens de l'être »), comme les autres en-têtes.
  */
-function NoteTable({ block, tone }: { block: Extract<NoteBlock, { kind: 'table' }>; tone: Tone }) {
+export function NoteTable({
+  block,
+  tone,
+  renderCell,
+}: {
+  block: Extract<NoteBlock, { kind: 'table' }>
+  tone: Tone
+  /**
+   * Remplace le contenu d'une case (colonne 0 : les étiquettes) : c'est par
+   * là que le tableau à trous (voir `TableBank`) troue le tableau du rappel
+   * sans en redessiner un autre. `undefined` garde la case telle quelle.
+   */
+  renderCell?: (row: number, column: number) => ReactNode | undefined
+}) {
+  const cellContent = (row: number, column: number, text: string) => renderCell?.(row, column) ?? <Rich text={text} />
   const frame = useRef<HTMLDivElement>(null)
   const table = useRef<HTMLTableElement>(null)
   const columns = block.columns.length + 1
@@ -145,7 +159,7 @@ function NoteTable({ block, tone }: { block: Extract<NoteBlock, { kind: 'table' 
     const observer = new ResizeObserver(fit)
     observer.observe(box)
     return () => observer.disconnect()
-  }, [block])
+  }, [block, renderCell])
 
   const cell = 'px-2 py-2 md:px-3 break-words hyphens-auto'
   return (
@@ -172,11 +186,11 @@ function NoteTable({ block, tone }: { block: Extract<NoteBlock, { kind: 'table' 
           {block.rows.map((row, i) => (
             <tr key={i} className="border-t border-ink/8">
               <th className={`${cell} text-left align-top font-black ${tableCellSize(row.label)} ${tone.label}`}>
-                <Rich text={row.label} />
+                {cellContent(i, 0, row.label)}
               </th>
               {row.cells.map((value, j) => (
                 <td key={j} className={`${cell} text-center align-top text-ink-soft ${tableCellSize(value)}`}>
-                  <Rich text={value} />
+                  {cellContent(i, j + 1, value)}
                 </td>
               ))}
             </tr>

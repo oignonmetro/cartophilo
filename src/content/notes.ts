@@ -120,6 +120,8 @@ export type NoteBlock =
   /** Croise deux classifications ; voir la ligne d'en-tête dans `parseNotes`. */
   | { kind: 'table'; corner: string; columns: string[]; rows: NoteTableRow[] }
 
+export type NoteTableBlock = Extract<NoteBlock, { kind: 'table' }>
+
 const RULE = /^-\s*/
 const WARNING = /^!\s*/
 const TABLE_ROW = /^\|/
@@ -244,6 +246,28 @@ export function parseNotes(notes: string): NoteBlock[] {
 
   flush()
   return blocks
+}
+
+/**
+ * Les tableaux d'un rappel, dans l'ordre où ils s'y trouvent, sections `===`
+ * comprises : ce sont eux que reprend le tableau à trous (voir
+ * `tableExercises`). Les lignes `===` ne sont ni de la prose ni des rangées,
+ * elles referment seulement le tableau en cours.
+ */
+export function noteTables(notes: string): NoteTableBlock[] {
+  const text = notes
+    .split('\n')
+    .map((line) => (SECTION_BREAK.test(line.trim()) ? '' : line))
+    .join('\n')
+  return parseNotes(text).filter((block): block is NoteTableBlock => block.kind === 'table')
+}
+
+/** Le texte d'un fragment enrichi, sans ses marqueurs : « **Le** *Phédon* » → « Le Phédon ». */
+export function plainInline(text: string): string {
+  const flatten = (spans: Inline[]): string =>
+    spans.map((span) => ('children' in span ? flatten(span.children) : span.text)).join('')
+  // `parseInline` colle les guillemets d'une espace insécable (voir `nbspQuotes`).
+  return flatten(parseInline(text)).replace(/[\u00a0\u202f]/g, ' ').trim()
 }
 
 /**

@@ -15,7 +15,13 @@ import type {
 import { GAP } from '@/content/schema'
 import { isCitation, isPassageLesson, itemsOfLesson } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
-import { fragmentNoteSections, splitNoteSections } from '@/content/notes'
+import {
+  fragmentNoteSections,
+  noteTables,
+  plainInline,
+  splitNoteSections,
+  type NoteTableBlock,
+} from '@/content/notes'
 import {
   findNode,
   headlineOf,
@@ -61,6 +67,11 @@ import type { CardState } from './srs'
  *   - `conjugation-choice` : reconnaître une forme parmi celles du paradigme ;
  *   - `conjugation`  : produire une forme à partir du verbe, du temps, de la personne ;
  *   - `conjugation-match` : relier les personnes aux formes, d'un verbe ou de plusieurs mélangés.
+ *
+ * Une leçon de grammaire, de texte comprise, reprend en fin de session les
+ * tableaux de son rappel (voir `tableExercises`) :
+ *   - `table-bank` : une colonne vidée, ses cases à replacer depuis une banque ;
+ *   - `table-cell` : une seule case, à écrire ou à révéler.
  *
  * Une unité-œuvre (voir `workSchema`) ajoute deux exercices qui portent sur
  * son plan plutôt que sur une thèse isolée :
@@ -424,6 +435,43 @@ export interface ConjugationMatchExercise {
   verbs: ConjugationVerb[]
 }
 
+/** Une case d'un tableau de rappel : sa rangée, et sa colonne, 0 étant celle des étiquettes. */
+export interface TableGap {
+  row: number
+  column: number
+}
+
+/**
+ * Tableau à trous, en banque : un tableau du rappel (voir `noteTables`), dont
+ * une colonne entière est vidée, à remplir en replaçant ses cases proposées
+ * dans le désordre. Comme le plan à trous de l'unité-œuvre, ce qu'on y replace
+ * est un ensemble fermé, pas une réponse paraphrasable : la banque n'y donne
+ * rien qu'on ne doive savoir situer.
+ */
+export interface TableBankExercise {
+  kind: 'table-bank'
+  id: string
+  /** La leçon dont le rappel porte le tableau. */
+  title: string
+  table: NoteTableBlock
+  /** Cases à remplir, dans l'ordre du tableau. */
+  holes: TableGap[]
+  /** Leur texte, dans l'ordre où la banque le propose. */
+  bank: string[]
+}
+
+/**
+ * Tableau à trous, une seule case : à écrire, ou à révéler puis à
+ * s'auto-évaluer, comme une carte de texte (voir `PassageCard`).
+ */
+export interface TableCellExercise {
+  kind: 'table-cell'
+  id: string
+  title: string
+  table: NoteTableBlock
+  hole: TableGap
+}
+
 export type Exercise =
   | IntroExercise
   | FlashcardExercise
@@ -443,6 +491,8 @@ export type Exercise =
   | WorkLocateExercise
   | WorkOrderExercise
   | WorkMatchExercise
+  | TableBankExercise
+  | TableCellExercise
 
 /** Nombre de paires minimal pour tenter une manche d'association. */
 export const MATCH_SIZE = 4
@@ -498,6 +548,10 @@ export function itemIdsOf(exercise: Exercise): string[] {
   switch (exercise.kind) {
     case 'rule':
     case 'work-map':
+    // Un tableau n'est pas un élément de la révision espacée : il se rejoue
+    // avec sa leçon, sans carte à faire mûrir.
+    case 'table-bank':
+    case 'table-cell':
       return []
     case 'work-plan':
       return workNodeItems(exercise.work, exercise.holes)
@@ -781,14 +835,21 @@ export function buildLessonSession(
   /** Plan de l'unité, pour une leçon d'unité-œuvre (voir `buildWorkSession`). */
   work?: Work,
 ): Exercise[] {
-  if (isPassageLesson(lesson)) return buildPassageSession(lesson, level, intro)
   const resolved = seed ?? seedFrom(lesson.id, level)
+  // Un générateur à part pour les tableaux : les ajouter ne change rien au
+  // tirage des cartes qui les précèdent.
+  const tables = (notes: string | undefined) =>
+    tableExercises(lesson.id, lesson.title, notes ?? '', createRng(seedFrom(resolved, 'tables')))
+  if (isPassageLesson(lesson)) return [...buildPassageSession(lesson, level, intro), ...tables(lesson.notes)]
   if (lesson.kind === 'grammar' && lesson.work && work) return buildWorkSession(lesson, work, level, resolved)
   switch (lesson.kind) {
     case 'vocab':
       return buildVocabSession(lesson.id, lesson.vocab, lesson.notes, lesson.title, resolved, canSpeak, rank)
     case 'grammar':
-      return buildGrammarSession(lesson.id, lesson.points, lesson.notes, lesson.title, level, resolved, canSpeak)
+      return [
+        ...buildGrammarSession(lesson.id, lesson.points, lesson.notes, lesson.title, level, resolved, canSpeak),
+        ...tables(lesson.notes),
+      ]
     case 'conjugation':
       return buildConjugationSession(lesson.id, lesson.verbs, lesson.notes, lesson.title, level, resolved, canSpeak)
   }
@@ -1357,6 +1418,96 @@ function buildPassageSession(
   return exercises
 }
 
+/** Cases d'une colonne vidée, au plus : au-delà, la banque ne tient plus sous le tableau. */
+const TABLE_BANK_MAX = 6
+/**
+ * Longueur au-delà de laquelle une case ne se demande pas seule : elle ne
+ * s'écrirait plus, et se révèlerait sans rien qui la désigne vraiment.
+ */
+const TABLE_CELL_MAX = 60
+
+/** Le texte d'une case, marqueurs compris : la colonne 0 est celle des étiquettes. */
+export function tableCellText(table: NoteTableBlock, gap: TableGap): string {
+  const row = table.rows[gap.row]
+  if (!row) return ''
+  return (gap.column === 0 ? row.label : row.cells[gap.column - 1]) ?? ''
+}
+
+/** L'en-tête de la colonne d'une case : le coin pour les étiquettes. */
+export function tableColumnTitle(table: NoteTableBlock, column: number): string {
+  return (column === 0 ? table.corner : table.columns[column - 1]) ?? ''
+}
+
+/**
+ * Deux cases s'équivalent-elles ? Une case de banque qui porte le même texte
+ * qu'une autre (deux « oui ») peut aller dans l'une ou l'autre.
+ */
+export function sameTableText(a: string, b: string): boolean {
+  return normalizeForm(plainInline(a)) === normalizeForm(plainInline(b))
+}
+
+/**
+ * Les tableaux à trous d'une leçon, à jouer après ses cartes : pour chaque
+ * tableau de son rappel, une colonne entière à remplir depuis une banque, puis
+ * une case seule, prise si possible dans une autre colonne, à écrire ou à
+ * révéler. Après les cartes plutôt qu'à la suite du rappel : relu à
+ * l'instant, le tableau se recopierait au lieu de se retrouver.
+ *
+ * Seules les colonnes d'au moins deux cases remplies se vident (une banque
+ * d'une seule case ne demande rien), et seules les cases courtes se demandent
+ * seules (voir `TABLE_CELL_MAX`). La colonne et la case changent d'un passage
+ * à l'autre sur la leçon, la graine suivant son niveau.
+ */
+export function tableExercises(lessonId: string, title: string, notes: string, rng: Rng): Exercise[] {
+  const exercises: Exercise[] = []
+  noteTables(notes).forEach((table, index) => {
+    const width = table.columns.length + 1
+    const filled = (gap: TableGap) => plainInline(tableCellText(table, gap)).length > 0
+    const columnGaps = (column: number) =>
+      table.rows.map((_, row) => ({ row, column })).filter(filled)
+
+    const columns = Array.from({ length: width }, (_, column) => column).filter(
+      (column) => columnGaps(column).length >= 2,
+    )
+    let bankColumn: number | null = null
+    if (columns.length > 0) {
+      bankColumn = columns[Math.floor(rng() * columns.length)]!
+      const gaps = columnGaps(bankColumn)
+      const holes = (gaps.length > TABLE_BANK_MAX ? sample(gaps, TABLE_BANK_MAX, rng) : gaps).sort(
+        (a, b) => a.row - b.row,
+      )
+      exercises.push({
+        kind: 'table-bank',
+        id: `table-bank:${lessonId}:${index}:${bankColumn}`,
+        title,
+        table,
+        holes,
+        bank: shuffle(
+          holes.map((gap) => tableCellText(table, gap)),
+          rng,
+        ),
+      })
+    }
+
+    const short = table.rows
+      .flatMap((_, row) => Array.from({ length: width }, (_, column) => ({ row, column })))
+      .filter((gap) => filled(gap) && plainInline(tableCellText(table, gap)).length <= TABLE_CELL_MAX)
+    const elsewhere = short.filter((gap) => gap.column !== bankColumn)
+    const pool = elsewhere.length > 0 ? elsewhere : short
+    if (pool.length > 0) {
+      const hole = pool[Math.floor(rng() * pool.length)]!
+      exercises.push({
+        kind: 'table-cell',
+        id: `table-cell:${lessonId}:${index}:${hole.row}:${hole.column}`,
+        title,
+        table,
+        hole,
+      })
+    }
+  })
+  return exercises
+}
+
 /** Écart minimal entre un exercice raté et sa reprise : assez pour ne pas répondre de mémoire. */
 export const RETRY_GAP = 4
 
@@ -1399,6 +1550,7 @@ export function retryIndex(queue: readonly Exercise[], position: number): number
  */
 export function isExplanationOnly(exercise: Exercise): boolean {
   if (exercise.kind === 'passage') return !isCitation(exercise.point)
+  if (exercise.kind === 'table-bank' || exercise.kind === 'table-cell') return true
   return exercise.kind === 'rule' && exercise.fragment !== undefined
 }
 

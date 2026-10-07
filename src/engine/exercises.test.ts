@@ -17,9 +17,11 @@ import {
   RETRY_GAP,
   splitGap,
   splitGaps,
+  tableCellText,
+  tableExercises,
   type Exercise,
 } from './exercises'
-import { seedFrom } from './rng'
+import { createRng, seedFrom } from './rng'
 import { createCard, review, type CardState } from './srs'
 
 /** Emballe une liste de mots dans une leçon de vocabulaire. */
@@ -1294,5 +1296,68 @@ describe('réponses en lettres grecques', () => {
     expect(matchesAnswer('E4', [], 'epsilon 4')).toBe(true)
     expect(matchesAnswer('Θ10', [], 'E10')).toBe(false)
     expect(matchesAnswer('Θ10', [], 'Θ9')).toBe(false)
+  })
+})
+
+describe('tableau à trous', () => {
+  const PLAN = [
+    'Le plan du dialogue.',
+    '',
+    '| Moment | Lieu | Contenu |',
+    '| introduction | 126a-128e | l’argument de **Zénon** |',
+    '| discours de Socrate | 128e-130a | la théorie des Idées |',
+    '| critiques de Parménide | 130a-134e | six objections à la théorie |',
+    '',
+    '! Un piège.',
+  ].join('\n')
+
+  const lesson: GrammarLesson = {
+    kind: 'grammar',
+    id: 'parm-i1',
+    title: 'Le dialogue',
+    notes: PLAN,
+    points: [
+      { id: 'q1', sentence: 'Le ___ du dialogue.', answer: 'plan', alt: [], options: [] },
+      { id: 'q2', sentence: 'Une ___ objection.', answer: 'première', alt: [], options: [] },
+      { id: 'q3', sentence: 'La ___ des Idées.', answer: 'théorie', alt: [], options: [] },
+    ],
+  }
+
+  it('vide une colonne en banque, puis demande une case d’une autre colonne', () => {
+    for (const seed of [1, 2, 3, 4, 5, 6]) {
+      const [bank, cell] = tableExercises('l', 'T', PLAN, createRng(seed))
+      if (bank?.kind !== 'table-bank' || cell?.kind !== 'table-cell') throw new Error('deux exercices attendus')
+      const column = bank.holes[0]!.column
+      expect(bank.holes).toEqual([0, 1, 2].map((row) => ({ row, column })))
+      expect([...bank.bank].sort()).toEqual(bank.holes.map((gap) => tableCellText(bank.table, gap)).sort())
+      expect(cell.hole.column).not.toBe(column)
+    }
+  })
+
+  it('ne vide pas une colonne d’une seule case, et ne demande pas seule une case trop longue', () => {
+    const notes = '| | A |\n| x | ' + 'mot '.repeat(20).trim() + ' |'
+    expect(tableExercises('l', 'T', notes, createRng(1))).toEqual([
+      expect.objectContaining({ kind: 'table-cell', hole: { row: 0, column: 0 } }),
+    ])
+  })
+
+  it('suit les cartes de la leçon, à la découverte comme ensuite, sans rien noter pour la révision', () => {
+    for (const level of [0, 1, 2]) {
+      const session = buildLessonSession(lesson, level)
+      expect(session.slice(-2).map((exercise) => exercise.kind)).toEqual(['table-bank', 'table-cell'])
+      expect(session.slice(-2).flatMap(itemIdsOf)).toEqual([])
+      expect(isPresentation(session.at(-1)!)).toBe(false)
+    }
+  })
+
+  it('laisse inchangées les cartes d’une leçon qu’il suit', () => {
+    const bare = { ...lesson, notes: 'Le plan du dialogue.' }
+    const withTable = buildLessonSession(lesson, 1, 7).filter((e) => !e.kind.startsWith('table'))
+    expect(withTable.map((e) => e.id)).toEqual(buildLessonSession(bare, 1, 7).map((e) => e.id))
+  })
+
+  it('se saute en mode « citations seules »', () => {
+    const [bank] = tableExercises('l', 'T', PLAN, createRng(1))
+    expect(isExplanationOnly(bank!)).toBe(true)
   })
 })

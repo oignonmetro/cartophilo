@@ -255,6 +255,14 @@ tableaux `| … | … |` pour une notion qui se divise selon deux axes, et les
 cinq marqueurs `` `terme` ``, `**gras**`, `__souligné__`, `*italique*`,
 `{couleur}texte{/couleur}`).
 
+**Un tableau devient un exercice.** Chaque tableau d'un rappel se rejoue en
+fin de leçon comme tableau à trous : une colonne entière à remplir depuis une
+banque, puis une case seule, à écrire ou à révéler (une case de plus de 60
+caractères ne se demande jamais seule). Écrivez donc des cases courtes et
+qui se distinguent les unes des autres : deux cases identiques dans une même
+colonne restent interchangeables, mais une colonne de phrases presque
+pareilles se replace au hasard.
+
 **N'hésitez pas sur la mise en forme.** Un rappel purement en prose se lit
 mal à l'écran ; mettez en gras l'idée directrice de chaque paragraphe, et
 réservez une couleur à une opposition qui traverse tout le rappel (une thèse

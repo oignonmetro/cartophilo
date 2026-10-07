@@ -18,6 +18,7 @@ import { GrammarSentenceChoice } from '@/components/session/GrammarSentenceChoic
 import { PassageCard } from '@/components/session/PassageCard'
 import { SessionPause } from '@/components/session/SessionPause'
 import { ConjugationAnswer } from '@/components/session/ConjugationAnswer'
+import { TableBank, TableCell } from '@/components/session/TableExercise'
 import { ConjugationChoice } from '@/components/session/ConjugationChoice'
 import { ConjugationMatch } from '@/components/session/ConjugationMatch'
 import { WorkMapNote } from '@/components/work/WorkMapNote'
@@ -374,6 +375,20 @@ function SessionRunner({
     [advance, attempt.seen, course.id, gradeItem, haptics, record],
   )
 
+  /**
+   * Fin d'un tableau à trous en banque : comme une manche d'association, tout
+   * finit replacé, la manche est donc réussie ; une erreur en chemin compte
+   * seulement comme un échec au premier essai. Rien à noter pour la révision
+   * espacée (voir `itemIdsOf`).
+   */
+  const answerBoard = useCallback(
+    (exercise: Exercise, clean: boolean) => {
+      record(exercise, clean, true)
+      advance(false)
+    },
+    [advance, record],
+  )
+
   // La file est vide : la session est terminée. Le drapeau évite que le rendu
   // suivant ne déclenche une seconde clôture.
   const finished = useRef(false)
@@ -528,6 +543,12 @@ function SessionRunner({
             )}
             {current.kind === 'passage' && (
               <PassageCard exercise={current} onAnswer={(correct, rating) => answer(current, correct, rating)} />
+            )}
+            {current.kind === 'table-bank' && (
+              <TableBank exercise={current} onDone={(clean) => answerBoard(current, clean)} />
+            )}
+            {current.kind === 'table-cell' && (
+              <TableCell exercise={current} onAnswer={(correct, rating) => answer(current, correct, rating)} />
             )}
             {current.kind === 'conjugation' && (
               <ConjugationAnswer exercise={current} onAnswer={(correct) => answer(current, correct)} />

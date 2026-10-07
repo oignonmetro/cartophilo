@@ -100,6 +100,8 @@ export function effortOf(exercise: Exercise): number {
       return Math.ceil(exercise.steps.length / 2)
     case 'work-match':
       return Math.ceil(exercise.pairs.length / 2)
+    case 'table-bank':
+      return Math.ceil(exercise.holes.length / 2)
 
     // Restituer, mais avec les mots sous les yeux.
     case 'cloze':
@@ -109,6 +111,7 @@ export function effortOf(exercise: Exercise): number {
     // Une carte de texte ne passe par ici qu'écrite (voir `PassageCard`) :
     // révélée, elle s'auto-évalue et reste transparente, comme la flashcard.
     case 'passage':
+    case 'table-cell':
       return 3
 
     // Produire sans filet, au clavier.
