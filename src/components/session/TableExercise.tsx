@@ -31,6 +31,26 @@ import { useSessionSounds } from './useSessionSounds'
 
 const TONE = TONES.grammar
 
+/**
+ * Entrée fait continuer une fois le tableau entièrement replacé, comme un clic
+ * sur « Continuer » (ordinateur seulement, voir `useIsDesktop`) : les autres
+ * écrans de séance la connaissent déjà, la banque et la remise en ordre,
+ * qui se jouent à la souris, l'avaient oubliée.
+ */
+function useEnterToContinue(enabled: boolean, onContinue: () => void) {
+  const isDesktop = useIsDesktop()
+  useEffect(() => {
+    if (!isDesktop || !enabled) return
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== 'Enter' || event.defaultPrevented) return
+      event.preventDefault()
+      onContinue()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [isDesktop, enabled, onContinue])
+}
+
 function TableHeader({ title, prompt, aside }: { title: string; prompt: string; aside?: ReactNode }) {
   return (
     <div className="flex shrink-0 items-center justify-between gap-3">
@@ -72,6 +92,7 @@ export function TableBank({
   const [wrong, setWrong] = useState<number | null>(null)
 
   const done = placed.size === holes.length
+  useEnterToContinue(done, () => onDone(mistakes === 0))
   const used = new Set(placed.values())
   const column = holes[0]?.column ?? 0
   const heading = plainInline(tableColumnTitle(table, column))
@@ -406,6 +427,7 @@ export function TableOrder({
   const [wrong, setWrong] = useState<number | null>(null)
   const end = useRef<HTMLDivElement>(null)
   const done = placed === rows.length
+  useEnterToContinue(done, () => onDone(mistakes === 0))
 
   // Le dernier moment placé reste en vue, au-dessus de la banque.
   useEffect(() => {
