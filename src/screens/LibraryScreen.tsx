@@ -15,7 +15,7 @@ import { CoursePicker } from '@/components/CoursePicker'
 import { TextSheet } from '@/components/TextSheet'
 import { PlanSheet } from '@/components/work/PlanSheet'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
-import { BoltIcon, ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
+import { ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
 
 /**
  * Onglet ouvert par défaut : la première piste qui a effectivement une liste
@@ -375,9 +375,6 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
           <div className="flex items-center gap-4 text-sm font-extrabold">
             <span className="flex items-center gap-1 text-coral">
               <FlameIcon size={20} /> {currentStreak}
-            </span>
-            <span className="flex items-center gap-1 text-amber">
-              <BoltIcon size={20} /> {xp}
             </span>
             <button
               type="button"
