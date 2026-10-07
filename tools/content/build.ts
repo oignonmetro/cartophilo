@@ -350,7 +350,7 @@ function checkCoherence(course: Course, dir: string) {
 
   if (course.layout === 'library') {
     for (const track of course.tracks) {
-      if (track.entries) checkIndexTrack(track.id, track.entries, problems)
+      if (track.entries) checkIndexTrack(track.id, track.entries, track.units.map((unit) => unit.id), problems)
     }
   }
 
@@ -408,10 +408,20 @@ function checkWork(unitId: string, work: Work, problems: string[]) {
  * leçons, donc aux contrôles ci-dessus : identifiants et repères doivent
  * rester cohérents à l'intérieur de la piste elle-même.
  */
-function checkIndexTrack(trackId: string, entries: readonly TreatiseEntry[], problems: string[]) {
+function checkIndexTrack(trackId: string, entries: readonly TreatiseEntry[], units: readonly string[], problems: string[]) {
   const ids = new Set<string>()
   const positions = new Map<string, string>()
+  const linked = new Map<string, string>()
   for (const entry of entries) {
+    // Le cours d'un traité est une unité de la piste, ouverte depuis sa fiche.
+    if (entry.unit) {
+      if (!units.includes(entry.unit)) {
+        problems.push(`piste "${trackId}" : l'entrée "${entry.id}" renvoie à l'unité "${entry.unit}", absente des units de la piste`)
+      }
+      const other = linked.get(entry.unit)
+      if (other) problems.push(`piste "${trackId}" : l'unité "${entry.unit}" est le cours de "${other}" et de "${entry.id}"`)
+      linked.set(entry.unit, entry.id)
+    }
     if (ids.has(entry.id)) problems.push(`piste "${trackId}" : entrée "${entry.id}" définie deux fois`)
     ids.add(entry.id)
 

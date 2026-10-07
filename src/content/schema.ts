@@ -254,6 +254,11 @@ export const treatiseEntrySchema = z.object({
   highlight: z.boolean().optional(),
   /** Résumé affiché au clic ; absent tant qu'il n'a pas encore été rédigé. */
   summary: z.string().optional(),
+  /**
+   * Le cours du traité : une unité de la même piste (rangée dans ses
+   * `units`), que sa fiche permet d'ouvrir. Absent tant qu'il n'est pas écrit.
+   */
+  unit: slug.optional(),
 })
 export type TreatiseEntry = z.infer<typeof treatiseEntrySchema>
 

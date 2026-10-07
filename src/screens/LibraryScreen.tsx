@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import type { LibraryCourse, Track, TreatiseEntry, Unit } from '@/content/schema'
 import { countLabel, courseLabel, isTextUnit, isWorkUnit, itemsOfUnit, unitLetters } from '@/content/course'
 import type { LessonProgressMap } from '@/engine/progress'
-import { dayKey, displayedStreak, levelFromXp, masteryOf, unitMastery } from '@/engine/progress'
+import { dayKey, displayedStreak, levelFromXp, masteryOf, unitMastery, type Mastery } from '@/engine/progress'
 import { buildUnitPath, currentDestination } from '@/engine/unitPath'
 import { dueCards, type CardState } from '@/engine/srs'
 import { EMPTY_CARDS, EMPTY_LESSON_PROGRESS, EMPTY_STEPS, useProgress } from '@/store/progressStore'
@@ -64,7 +64,8 @@ function defaultTrackId(tracks: readonly Track[]): string {
  * le raccourci rendrait inaccessible.
  */
 function opensUnitDirectly(track: Track): boolean {
-  return track.units.length === 1 && !isTextUnit(track.units[0]!)
+  // Une piste-index montre son index, même quand un seul traité a son cours.
+  return track.units.length === 1 && !isTextUnit(track.units[0]!) && !track.entries
 }
 
 /** Avancement d'une unité sur son parcours, pour la carte de la bibliothèque. */
@@ -519,7 +520,21 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
       </AnimatePresence>
 
       <AnimatePresence>
-        {openTreatise && <TreatiseSheet entry={openTreatise} onClose={() => setOpenTreatise(null)} />}
+        {openTreatise && (
+          <TreatiseSheet
+            entry={openTreatise}
+            unit={track.units.find((unit) => unit.id === openTreatise.unit)}
+            mastery={(() => {
+              const unit = track.units.find((each) => each.id === openTreatise.unit)
+              return unit ? unitMastery(unit, cards) : undefined
+            })()}
+            onOpenUnit={(unit) => {
+              setOpenTreatise(null)
+              openUnit(unit)
+            }}
+            onClose={() => setOpenTreatise(null)}
+          />
+        )}
       </AnimatePresence>
 
       <AnimatePresence>{openText && <TextSheet unit={openText} onClose={() => setOpenText(null)} />}</AnimatePresence>
@@ -864,9 +879,8 @@ function GroupSection({
  * d'entrées cliquables, groupées par Ennéade en replis, même gabarit que
  * `GroupSection` mais sans anneau de maîtrise ni révision espacée, ces
  * entrées n'étant pas des cartes pratiquées (voir `treatiseEntrySchema`).
- * Cliquer une entrée ouvre sa fiche (voir `TreatiseSheet`) ; les exercices,
- * quand ils existeront, viendront d'un bouton commun à toute la piste
- * plutôt que d'ici.
+ * Cliquer une entrée ouvre sa fiche (voir `TreatiseSheet`), d'où se lance
+ * le cours du traité quand il en a un (`unit`) : l'entrée le signale.
  */
 function TreatiseIndexView({
   entries,
@@ -979,6 +993,14 @@ function TreatiseIndexView({
                       <span className={`flex-1 text-sm leading-snug text-ink ${entry.highlight ? 'font-black' : 'font-normal'}`}>
                         {entry.title}
                       </span>
+                      {entry.unit && (
+                        <span
+                          className={`shrink-0 rounded-full ${tone.soft} px-2 py-0.5 text-[0.6rem] font-black tracking-wide uppercase ${tone.text}`}
+                          title="Ce traité a son cours, à lancer depuis sa fiche"
+                        >
+                          cours
+                        </span>
+                      )}
                       <span
                         className="shrink-0 text-[0.65rem] font-bold text-ink-faint"
                         title={order === 'chrono' ? "Place chez Porphyre (Ennéade, rang)" : 'Rang chronologique de rédaction'}
@@ -1003,9 +1025,22 @@ function TreatiseIndexView({
  * Fiche d'un traité, en feuille depuis le bas (même mécanique que
  * `CoursePicker`) : sa position chez Porphyre et son rang chronologique de
  * rédaction, puis son résumé, pas encore rédigé pour la plupart des
- * traités, d'où le message d'attente plutôt qu'un bloc vide.
+ * traités, d'où le message d'attente plutôt qu'un bloc vide. Un traité qui
+ * a son cours (`unit`) se lance d'ici.
  */
-function TreatiseSheet({ entry, onClose }: { entry: TreatiseEntry; onClose: () => void }) {
+function TreatiseSheet({
+  entry,
+  unit,
+  mastery,
+  onOpenUnit,
+  onClose,
+}: {
+  entry: TreatiseEntry
+  unit?: Unit
+  mastery?: Mastery
+  onOpenUnit: (unit: Unit) => void
+  onClose: () => void
+}) {
   const tone = TONES.grammar
   return (
     <motion.div
@@ -1036,6 +1071,16 @@ function TreatiseSheet({ entry, onClose }: { entry: TreatiseEntry; onClose: () =
             <p className="text-sm text-ink-faint">Résumé à venir.</p>
           )}
         </div>
+
+        {unit && (
+          <button
+            type="button"
+            onClick={() => onOpenUnit(unit)}
+            className="shrink-0 rounded-2xl border-2 border-violet-deep bg-violet py-3 text-center font-extrabold text-white"
+          >
+            {mastery && mastery.seen > 0 ? `Reprendre le cours (${Math.round(mastery.ratio * 100)} %)` : 'Faire le cours'}
+          </button>
+        )}
 
         <button
           type="button"

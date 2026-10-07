@@ -35,7 +35,10 @@ l'épreuve :
     arguments déployés pour les défendre.
   - **Repérage** : se repérer dans les différentes œuvres, savoir où se
     situe tel texte clef, etc. Une œuvre s'y traite en unité-œuvre (voir
-    plus bas).
+    plus bas). Chez Plotin, la piste est l'index des 54 traités : chaque
+    entrée porte son résumé (`summary`) et, quand il est écrit, son cours,
+    une unité classique de la piste (`unit`, lancée depuis la fiche du
+    traité ; `traite1` à `traite6`, d'après les notices de l'édition GF).
   - **Textes** : une unité par texte étudié, qui fait savoir le citer
     (paragraphe par paragraphe, cartes-citation puis cartes-explication).
     Format et consignes dans `content/textes.md` ; pour en créer une,
