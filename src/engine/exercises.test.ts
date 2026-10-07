@@ -1354,16 +1354,19 @@ describe('tableau à trous', () => {
     ])
   })
 
-  it('suit les cartes de la leçon, à la découverte comme ensuite, et note le tableau', () => {
+  it('vient après le rappel et avant les cartes, à la découverte comme ensuite, et note le tableau', () => {
     for (const level of [0, 1, 2]) {
       const session = buildLessonSession(lesson, level)
-      expect(session.slice(-2).map((exercise) => exercise.kind)).toEqual(['table-bank', 'table-cell'])
-      expect(session.slice(-2).flatMap(itemIdsOf)).toEqual([TABLE_ID, TABLE_ID])
-      expect(isPresentation(session.at(-1)!)).toBe(false)
+      const lead = level === 0 ? 1 : 0
+      if (level === 0) expect(session[0]!.kind).toBe('rule')
+      const tables = session.slice(lead, lead + 2)
+      expect(tables.map((exercise) => exercise.kind)).toEqual(['table-bank', 'table-cell'])
+      expect(tables.flatMap(itemIdsOf)).toEqual([TABLE_ID, TABLE_ID])
+      expect(session.slice(lead + 2).every((exercise) => !exercise.kind.startsWith('table'))).toBe(true)
     }
   })
 
-  it('laisse inchangées les cartes d’une leçon qu’il suit', () => {
+  it('laisse inchangées les cartes d’une leçon qu’il précède', () => {
     const bare = { ...lesson, notes: 'Le plan du dialogue.' }
     const withTable = buildLessonSession(lesson, 1, 7).filter((e) => !e.kind.startsWith('table'))
     expect(withTable.map((e) => e.id)).toEqual(buildLessonSession(bare, 1, 7).map((e) => e.id))

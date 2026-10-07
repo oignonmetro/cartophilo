@@ -877,7 +877,7 @@ function ChoicesPanel({
       {mode === 'chosen' && (
         <>
           <p className="text-xs text-ink-faint">
-            Joués dans cet ordre après les cartes de la leçon ; en révision, un à la fois, à tour de rôle (la banque
+            Joués dans cet ordre avant les cartes de la leçon ; en révision, un à la fois, à tour de rôle (la banque
             s’efface une fois le tableau bien su).
           </p>
           {chosen!.map((choice, at) => (

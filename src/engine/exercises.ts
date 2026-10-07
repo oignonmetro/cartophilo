@@ -60,8 +60,8 @@ import type { CardState } from './srs'
  *   - `conjugation`  : produire une forme à partir du verbe, du temps, de la personne ;
  *   - `conjugation-match` : relier les personnes aux formes, d'un verbe ou de plusieurs mélangés.
  *
- * Une leçon de grammaire, de texte comprise, reprend en fin de session les
- * tableaux de son rappel (voir `tableExercises`) :
+ * Une leçon de grammaire, de texte comprise, reprend les tableaux de son
+ * rappel juste après lui, avant ses cartes (voir `tableExercises`) :
  *   - `table-bank` : une colonne vidée, ses cases à replacer depuis une banque ;
  *   - `table-cell` : une seule case, à écrire ou à révéler ;
  *   - `table-order` : pour un tableau de structure (voir `tableStructure`),
@@ -826,19 +826,30 @@ export function buildLessonSession(
   // tirage des cartes qui les précèdent.
   const tables = () =>
     tableExercises(lesson.title, lessonTables(lesson), createRng(seedFrom(resolved, 'tables')))
-  if (isPassageLesson(lesson)) return [...buildPassageSession(lesson, level, intro), ...tables()]
+  if (isPassageLesson(lesson)) return beforeCards(buildPassageSession(lesson, level, intro), tables())
   if (lesson.kind === 'grammar' && lesson.work && work) return buildWorkSession(lesson, work, level, resolved)
   switch (lesson.kind) {
     case 'vocab':
       return buildVocabSession(lesson.id, lesson.vocab, lesson.notes, lesson.title, resolved, canSpeak, rank)
     case 'grammar':
-      return [
-        ...buildGrammarSession(lesson.id, lesson.points, lesson.notes, lesson.title, level, resolved, canSpeak),
-        ...tables(),
-      ]
+      return beforeCards(
+        buildGrammarSession(lesson.id, lesson.points, lesson.notes, lesson.title, level, resolved, canSpeak),
+        tables(),
+      )
     case 'conjugation':
       return buildConjugationSession(lesson.id, lesson.verbs, lesson.notes, lesson.title, level, resolved, canSpeak)
   }
+}
+
+/**
+ * Les exercices-tableaux d'une leçon, glissés avant ses cartes : juste après
+ * le rappel (et l'introduction) qui ouvre la session, ou en tête quand la
+ * leçon, déjà vue, se passe de rappel.
+ */
+function beforeCards(session: Exercise[], tables: Exercise[]): Exercise[] {
+  const first = session.findIndex((exercise) => !isPresentation(exercise))
+  const at = first === -1 ? session.length : first
+  return [...session.slice(0, at), ...tables, ...session.slice(at)]
 }
 
 /** Manches d'association et de QCM par bloc — un peu de variété d'une leçon à l'autre. */
@@ -1675,9 +1686,9 @@ function chosenTableExercise(
  *     puis une case seule, prise si possible dans une autre colonne, à
  *     écrire ou à révéler.
  *
- * Après les cartes plutôt qu'à la suite du rappel : relu à l'instant, le
- * tableau se recopierait au lieu de se retrouver. La colonne et la case
- * changent d'un passage à l'autre sur la leçon, la graine suivant son niveau.
+ * Joués juste après le rappel, avant les cartes (voir `beforeCards`). La
+ * colonne et la case changent d'un passage à l'autre sur la leçon, la graine
+ * suivant son niveau.
  */
 export function tableExercises(title: string, tables: readonly LessonTable[], rng: Rng): Exercise[] {
   return tables.flatMap(({ id, table, exercises }): Exercise[] => {

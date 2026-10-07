@@ -80,8 +80,8 @@ pas seulement Glossaire et Repérage.
   le plan (`work`), jamais `lessons`. Les schémas qu'elle a eus un temps
   (plan dessiné, « Voir la carte », plan à trous) sont supprimés
   définitivement, code compris (2026-10-07) : ne pas les recréer.
-- Tableau à trous : tout tableau `| … |` d'un rappel de leçon devient, en
-  fin de session, deux exercices (`tableExercises` dans
+- Tableau à trous : tout tableau `| … |` d'un rappel de leçon devient,
+  juste après le rappel et avant les cartes, deux exercices (`tableExercises` dans
   `src/engine/exercises.ts`) : une colonne vidée à remplir depuis une banque
   (exception assumée à « pas de QCM ni d'association », parce que ce qu'on
   y replace est un ensemble fermé, pas une réponse paraphrasable), puis une
