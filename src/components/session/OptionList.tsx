@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { useNumberKeys } from '@/lib/useNumberKeys'
 
 /**
  * La liste d'options d'un QCM, quel que soit ce qu'on y choisit : un mot, une
@@ -41,6 +42,8 @@ export function OptionList({
   renderOption?: (option: string) => ReactNode
 }) {
   const checked = picked !== null
+  // Les numéros affichés sont aussi les touches du clavier, sur ordinateur.
+  useNumberKeys(!checked, options.length, (index) => onPick(options[index]!))
 
   return (
     <div className="flex flex-col gap-3">

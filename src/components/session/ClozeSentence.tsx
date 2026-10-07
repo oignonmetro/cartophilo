@@ -6,6 +6,7 @@ import { Button } from '@/components/Button'
 import { sentenceTextSize, sentenceTextSizeMd } from '@/lib/textDensity'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
+import { useNumberKeys } from '@/lib/useNumberKeys'
 import { CorrectionGap } from './CorrectionGap'
 import { ExpectedAnswer } from './ExpectedAnswer'
 import { useSessionHaptics } from './useSessionHaptics'
@@ -62,6 +63,9 @@ export function ClozeSentence({
     haptics.answered(exercise, correct)
   }
 
+  // Banque de mots : le numéro de chaque case est sa touche, comme au QCM.
+  useNumberKeys(Boolean(bank) && checked === null, bank?.length ?? 0, (index) => check(bank![index]!))
+
   // Raccourci clavier, réservé à l'ordinateur : voir la même remarque dans `GrammarGap`.
   useEffect(() => {
     if (!isDesktop) return
@@ -111,7 +115,7 @@ export function ClozeSentence({
       <div className={`flex shrink-0 flex-col ${keyboardOpen ? 'gap-2' : 'gap-3'}`}>
         {bank ? (
           <div className="grid grid-cols-2 gap-3">
-            {bank.map((word) => (
+            {bank.map((word, index) => (
               <button
                 key={word}
                 type="button"
@@ -125,6 +129,12 @@ export function ClozeSentence({
                     : 'border-line bg-paper'
                 } disabled:opacity-60`}
               >
+                <span
+                  aria-hidden
+                  className="mr-2 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-current align-middle text-xs"
+                >
+                  {index + 1}
+                </span>
                 {word}
               </button>
             ))}

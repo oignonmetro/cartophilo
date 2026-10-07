@@ -8,6 +8,7 @@ import type { Rating } from '@/engine/srs'
 import { Button } from '@/components/Button'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
+import { useNumberKeys } from '@/lib/useNumberKeys'
 import { useProgress, type AnswerMode } from '@/store/progressStore'
 import { NoteTable, Rich, TONES } from './RuleNote'
 import { AnswerModeSwitch } from './AnswerModeSwitch'
@@ -74,6 +75,10 @@ export function TableBank({
   const used = new Set(placed.values())
   const column = holes[0]?.column ?? 0
   const heading = plainInline(tableColumnTitle(table, column))
+
+  // Jetons encore dans la banque, dans l'ordre affiché : le numéro de chacun est sa touche.
+  const remaining = exercise.bank.map((_, token) => token).filter((token) => !used.has(token))
+  useNumberKeys(!done, remaining.length, (index) => place(remaining[index]!))
 
   function place(token: number) {
     if (active === null || done) return
@@ -150,8 +155,9 @@ export function TableBank({
         </div>
       ) : (
         <div className="flex max-h-[38%] shrink-0 flex-wrap justify-center gap-2 overflow-y-auto md:max-h-[34%]">
-          {exercise.bank.map((text, token) =>
-            used.has(token) ? null : (
+          {remaining.map((token, rank) => {
+            const text = exercise.bank[token] ?? ''
+            return (
               <motion.button
                 key={token}
                 type="button"
@@ -162,10 +168,16 @@ export function TableBank({
                   wrong === token ? 'border-error bg-error/10' : 'border-line bg-paper hover:border-violet/60'
                 }`}
               >
+                <span
+                  aria-hidden
+                  className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full border border-current align-middle text-[0.65rem] text-ink-faint"
+                >
+                  {rank + 1}
+                </span>
                 <Rich text={text} />
               </motion.button>
-            ),
-          )}
+            )
+          })}
         </div>
       )}
     </div>

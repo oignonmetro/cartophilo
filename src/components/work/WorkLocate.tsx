@@ -54,7 +54,7 @@ export function WorkLocate({
     haptics.answered(exercise, right)
   }
 
-  // Au clavier : les chiffres choisissent (QCM), Entrée vérifie puis continue.
+  // Au clavier : Entrée continue une fois répondu (les chiffres sont gérés par `OptionList`).
   useEffect(() => {
     if (!isDesktop) return
     function onKeyDown(event: KeyboardEvent) {
@@ -64,9 +64,6 @@ export function WorkLocate({
         onAnswer(correct)
         return
       }
-      if (typed) return // Entrée est gérée par le champ lui-même.
-      const option = options[Number(event.key) - 1]
-      if (option) submit(option)
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)

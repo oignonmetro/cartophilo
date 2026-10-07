@@ -9,6 +9,7 @@ import { learningLanguage } from '@/lib/speech'
 import { sentenceTextSize, sentenceTextSizeMd } from '@/lib/textDensity'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
+import { useNumberKeys } from '@/lib/useNumberKeys'
 import { useProgress } from '@/store/progressStore'
 import { CorrectionGap } from './CorrectionGap'
 import { Rich, RichGaps } from './RuleNote'
@@ -116,6 +117,9 @@ export function GrammarGap({
       el.setSelectionRange(start + letter.length, start + letter.length)
     })
   }
+
+  // Banque de formes : le numéro de chaque case est sa touche, comme au QCM.
+  useNumberKeys(Boolean(bank) && checked === null, bank?.length ?? 0, (index) => check(bank![index]!))
 
   const filled = value.trim().length > 0
   const answered = checked !== null || revealed
@@ -273,7 +277,7 @@ export function GrammarGap({
       <div className={`flex shrink-0 flex-col ${keyboardOpen ? 'gap-2' : 'gap-3'}`}>
         {bank ? (
           <div className="grid grid-cols-2 gap-3">
-            {bank.map((option) => (
+            {bank.map((option, index) => (
               <button
                 key={option}
                 type="button"
@@ -287,6 +291,12 @@ export function GrammarGap({
                     : 'border-line bg-paper'
                 } disabled:opacity-60`}
               >
+                <span
+                  aria-hidden
+                  className="mr-2 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-current align-middle text-xs"
+                >
+                  {index + 1}
+                </span>
                 {option}
               </button>
             ))}
