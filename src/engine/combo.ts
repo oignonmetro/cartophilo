@@ -98,6 +98,8 @@ export function effortOf(exercise: Exercise): number {
       return Math.ceil(exercise.pairs.length / 2)
     case 'table-bank':
       return Math.ceil(exercise.holes.length / 2)
+    case 'table-order':
+      return Math.ceil(exercise.rows.length / 2)
 
     // Restituer, mais avec les mots sous les yeux.
     case 'cloze':

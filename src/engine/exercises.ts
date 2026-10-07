@@ -63,7 +63,9 @@ import type { CardState } from './srs'
  * Une leçon de grammaire, de texte comprise, reprend en fin de session les
  * tableaux de son rappel (voir `tableExercises`) :
  *   - `table-bank` : une colonne vidée, ses cases à replacer depuis une banque ;
- *   - `table-cell` : une seule case, à écrire ou à révéler.
+ *   - `table-cell` : une seule case, à écrire ou à révéler ;
+ *   - `table-order` : pour un tableau de structure (voir `tableStructure`),
+ *     ses lignes à remettre dans l'ordre du texte.
  *
  * Une unité-œuvre (voir `workSchema`) ajoute ses propres exercices, qui
  * portent sur son plan plutôt que sur une thèse isolée :
@@ -419,6 +421,8 @@ export interface TableBankExercise {
   holes: TableGap[]
   /** Leur texte, dans l'ordre où la banque le propose. */
   bank: string[]
+  /** La colonne vidée est celle des repères d'un tableau de structure : on situe dans le texte. */
+  locate?: boolean
 }
 
 /**
@@ -432,6 +436,28 @@ export interface TableCellExercise {
   title: string
   table: NoteTableBlock
   hole: TableGap
+  /** La case est un repère (« 126a-128e ») : la réponse écrite se juge comme un emplacement. */
+  locate?: boolean
+}
+
+/**
+ * Remise en ordre d'un tableau de structure (voir `tableStructure`) : ses
+ * lignes, les moments d'une œuvre ou d'un passage, mélangées dans une
+ * banque, à toucher dans l'ordre du texte. Le repère de chacune ne se
+ * révèle qu'une fois placée, sans quoi il suffirait de ranger des numéros.
+ */
+export interface TableOrderExercise {
+  kind: 'table-order'
+  id: string
+  itemId: string
+  title: string
+  table: NoteTableBlock
+  /** La colonne des repères. */
+  column: number
+  /** Les lignes à ranger, dans l'ordre du texte. */
+  rows: number[]
+  /** Rangs dans `rows`, dans l'ordre où la banque les propose. */
+  bank: number[]
 }
 
 export type Exercise =
@@ -453,6 +479,7 @@ export type Exercise =
   | WorkMatchExercise
   | TableBankExercise
   | TableCellExercise
+  | TableOrderExercise
 
 /** Nombre de paires minimal pour tenter une manche d'association. */
 export const MATCH_SIZE = 4
@@ -510,6 +537,7 @@ export function itemIdsOf(exercise: Exercise): string[] {
       return []
     case 'table-bank':
     case 'table-cell':
+    case 'table-order':
       return [exercise.itemId]
     case 'work-order':
       return workOrderItems(exercise, exercise.steps.map((_, index) => index))
@@ -1409,22 +1437,115 @@ function filledInColumn(table: NoteTableBlock, column: number): TableGap[] {
     .filter((gap) => plainInline(tableCellText(table, gap)).length > 0)
 }
 
+/** Lignes d'une remise en ordre, au plus : au-delà, on en tire autant, dans leur ordre. */
+const TABLE_ORDER_MAX = 7
+
 /**
- * Une colonne entière à remplir depuis une banque, tirée parmi celles d'au
+ * Un repère dans un texte : pagination Stephanus ou Bekker (« 126a-128e »,
+ * « 54d-e », « 1094a1-b11 »), ou division (« II, 3 », « chap. 1-5 »,
+ * « §1-5 », « l. 3-11 »).
+ */
+const PAGINATION_SPAN = /^(\d{1,4})\s*([a-e])\s*(\d*)(?:\s*-\s*\d{0,4}\s*[a-e]?\s*\d*)?$/i
+const DIVISION_SPAN =
+  /^(?:(?:livre|liv\.|chap\.?|chapitre|ch\.|§|l\.|lignes?|p\.)\s*)?([ivxlcdm]+|\d+)(?:\s*,\s*(\d+))?(?:\s*-\s*(?:[ivxlcdm]+|\d+)(?:\s*,\s*\d+)?)?$/i
+const ROMAN_DIGITS: Record<string, number> = { i: 1, v: 5, x: 10, l: 50, c: 100, d: 500, m: 1000 }
+
+function romanOrNumber(text: string): number {
+  if (/^\d+$/.test(text)) return Number(text)
+  const letters = text.toLowerCase()
+  let total = 0
+  for (let i = 0; i < letters.length; i++) {
+    const value = ROMAN_DIGITS[letters[i]!] ?? 0
+    const next = ROMAN_DIGITS[letters[i + 1] ?? ''] ?? 0
+    total += value < next ? -value : value
+  }
+  return total
+}
+
+/**
+ * Où commence un repère, en clef de tri (« 126a-128e » → [126, 0, 0],
+ * « II, 3 » → [2, 3]) ; `null` si la case n'est pas un repère. Un simple
+ * numéro (« 1 », « II ») n'en est pas un : c'est une énumération.
+ */
+export function locationKey(text: string): number[] | null {
+  const plain = plainInline(text).trim()
+  if (/^(\d+|[ivxlcdm]+)$/i.test(plain)) return null
+  const pagination = PAGINATION_SPAN.exec(plain)
+  if (pagination) {
+    return [Number(pagination[1]), pagination[2]!.toLowerCase().charCodeAt(0) - 97, Number(pagination[3] || 0)]
+  }
+  const division = DIVISION_SPAN.exec(plain)
+  if (division) return [romanOrNumber(division[1]!), Number(division[2] || 0)]
+  return null
+}
+
+function compareKeys(a: readonly number[], b: readonly number[]): number {
+  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+    const diff = (a[i] ?? 0) - (b[i] ?? 0)
+    if (diff !== 0) return diff
+  }
+  return 0
+}
+
+/**
+ * Un tableau de structure : il donne le plan d'une œuvre ou d'un passage,
+ * une ligne par moment, avec une colonne de repères (« Lieu », « Repère »)
+ * remplie sur toutes ses lignes et rangée dans l'ordre du texte. Il sert
+ * alors au repérage : remettre les moments dans l'ordre, et les situer
+ * (voir `tableExercises`). Trois lignes au moins ; la colonne renvoyée est
+ * celle des repères. `null` pour tout autre tableau.
+ */
+export function tableStructure(table: NoteTableBlock): { column: number } | null {
+  if (table.rows.length < 3) return null
+  const width = table.columns.length + 1
+  // Au moins une autre colonne que celle des repères : sinon rien à situer.
+  if (width < 2) return null
+  for (let column = 0; column < width; column++) {
+    const keys = table.rows.map((_, row) => locationKey(tableCellText(table, { row, column })))
+    if (keys.some((key) => key === null)) continue
+    if (keys.every((key, index) => index === 0 || compareKeys(keys[index - 1]!, key!) <= 0)) return { column }
+  }
+  return null
+}
+
+/**
+ * Ce qu'une ligne donne à lire, hors son repère : son étiquette et ses autres
+ * cases. Un simple numéro d'étape (« 1 », « II ») est laissé de côté : il
+ * donnerait l'ordre qu'on demande de retrouver.
+ */
+export function tableRowText(table: NoteTableBlock, row: number, except: number): string[] {
+  return Array.from({ length: table.columns.length + 1 }, (_, column) => column)
+    .filter((column) => column !== except)
+    .map((column) => tableCellText(table, { row, column }))
+    .filter((text) => {
+      const plain = plainInline(text).trim()
+      return plain.length > 0 && !/^(\d+|[ivxlcdm]+)\.?$/i.test(plain)
+    })
+}
+
+/**
+ * Une colonne entière à remplir depuis une banque : `column` si on l'impose
+ * (les repères d'un tableau de structure), sinon tirée parmi celles d'au
  * moins deux cases remplies (une banque d'une seule case ne demande rien).
  */
-function tableBankFor(itemId: string, title: string, table: NoteTableBlock, rng: Rng): TableBankExercise | null {
+function tableBankFor(
+  itemId: string,
+  title: string,
+  table: NoteTableBlock,
+  rng: Rng,
+  column: number | null = null,
+): TableBankExercise | null {
   const width = table.columns.length + 1
-  const columns = Array.from({ length: width }, (_, column) => column).filter(
-    (column) => filledInColumn(table, column).length >= 2,
+  const columns = Array.from({ length: width }, (_, each) => each).filter(
+    (each) => filledInColumn(table, each).length >= 2 && (column === null || each === column),
   )
   if (columns.length === 0) return null
-  const column = columns[Math.floor(rng() * columns.length)]!
-  const gaps = filledInColumn(table, column)
+  const chosen = columns[Math.floor(rng() * columns.length)]!
+  const gaps = filledInColumn(table, chosen)
   const holes = (gaps.length > TABLE_BANK_MAX ? sample(gaps, TABLE_BANK_MAX, rng) : gaps).sort((a, b) => a.row - b.row)
   return {
     kind: 'table-bank',
-    id: `table-bank:${itemId}:${column}`,
+    id: `table-bank:${itemId}:${chosen}`,
     itemId,
     title,
     table,
@@ -1433,13 +1554,15 @@ function tableBankFor(itemId: string, title: string, table: NoteTableBlock, rng:
       holes.map((gap) => tableCellText(table, gap)),
       rng,
     ),
+    ...(column !== null ? { locate: true } : {}),
   }
 }
 
 /**
  * Une case seule, prise si possible hors de la colonne `avoid` (celle que la
- * banque vient de remplir) et courte (voir `TABLE_CELL_MAX`). `anyLength`
- * lève cette dernière condition, pour un tableau qui n'a que des cases
+ * banque vient de remplir) et courte (voir `TABLE_CELL_MAX`), ou dans la
+ * seule colonne `only` (les repères d'un tableau de structure). `anyLength`
+ * lève la condition de longueur, pour un tableau qui n'a que des cases
  * longues et doit pourtant revenir en révision : révélée, une case longue
  * se juge encore.
  */
@@ -1450,33 +1573,103 @@ function tableCellFor(
   rng: Rng,
   avoid: number | null = null,
   anyLength = false,
+  only: number | null = null,
 ): TableCellExercise | null {
   const width = table.columns.length + 1
   const cells = Array.from({ length: width }, (_, column) => filledInColumn(table, column))
     .flat()
+    .filter((gap) => only === null || gap.column === only)
     .filter((gap) => anyLength || plainInline(tableCellText(table, gap)).length <= TABLE_CELL_MAX)
   const elsewhere = cells.filter((gap) => gap.column !== avoid)
   const pool = elsewhere.length > 0 ? elsewhere : cells
   if (pool.length === 0) return null
   const hole = pool[Math.floor(rng() * pool.length)]!
-  return { kind: 'table-cell', id: `table-cell:${itemId}:${hole.row}:${hole.column}`, itemId, title, table, hole }
+  return {
+    kind: 'table-cell',
+    id: `table-cell:${itemId}:${hole.row}:${hole.column}`,
+    itemId,
+    title,
+    table,
+    hole,
+    ...(only !== null ? { locate: true } : {}),
+  }
+}
+
+/** La remise en ordre d'un tableau de structure : toutes ses lignes, ou un tirage gardé dans leur ordre. */
+function tableOrderFor(itemId: string, title: string, table: NoteTableBlock, column: number, rng: Rng): TableOrderExercise {
+  const all = table.rows.map((_, row) => row)
+  const rows = all.length > TABLE_ORDER_MAX ? sample(all, TABLE_ORDER_MAX, rng).sort((a, b) => a - b) : all
+  const order = rows.map((_, index) => index)
+  let bank = shuffle(order, rng)
+  // Un mélange qui rendrait l'ordre juste ne demanderait rien : on le décale d'un cran.
+  if (bank.every((value, index) => value === index)) bank = [...bank.slice(1), bank[0]!]
+  return { kind: 'table-order', id: `table-order:${itemId}:${rows.join('+')}`, itemId, title, table, column, rows, bank }
 }
 
 /**
- * Les tableaux à trous d'une leçon, à jouer après ses cartes : pour chaque
- * tableau de son rappel (voir `lessonTables`), une colonne entière à remplir
- * depuis une banque, puis une case seule, prise si possible dans une autre
- * colonne, à écrire ou à révéler. Après les cartes plutôt qu'à la suite du
- * rappel : relu à l'instant, le tableau se recopierait au lieu de se
- * retrouver. La colonne et la case changent d'un passage à l'autre sur la
- * leçon, la graine suivant son niveau.
+ * Les tableaux à trous d'une leçon, à jouer après ses cartes. Pour chaque
+ * tableau de son rappel (voir `lessonTables`) :
+ *
+ *   - un tableau de structure (voir `tableStructure`) devient un exercice de
+ *     repérage : ses moments à remettre dans l'ordre du texte, puis sa
+ *     colonne de repères à remplir depuis une banque, puis un repère seul ;
+ *   - tout autre tableau : une colonne entière à remplir depuis une banque,
+ *     puis une case seule, prise si possible dans une autre colonne, à
+ *     écrire ou à révéler.
+ *
+ * Après les cartes plutôt qu'à la suite du rappel : relu à l'instant, le
+ * tableau se recopierait au lieu de se retrouver. La colonne et la case
+ * changent d'un passage à l'autre sur la leçon, la graine suivant son niveau.
  */
 export function tableExercises(title: string, tables: readonly LessonTable[], rng: Rng): Exercise[] {
-  return tables.flatMap(({ id, table }) => {
+  return tables.flatMap(({ id, table }): Exercise[] => {
+    const structure = tableStructure(table)
+    if (structure) {
+      const order = tableOrderFor(id, title, table, structure.column, rng)
+      const bank = tableBankFor(id, title, table, rng, structure.column)
+      const cell = tableCellFor(id, title, table, rng, null, false, structure.column)
+      return [order, bank, cell].filter((exercise) => exercise !== null) as Exercise[]
+    }
     const bank = tableBankFor(id, title, table, rng)
     const cell = tableCellFor(id, title, table, rng, bank?.holes[0]?.column ?? null)
-    return [bank, cell].filter((exercise): exercise is TableBankExercise | TableCellExercise => exercise !== null)
+    return [bank, cell].filter((exercise) => exercise !== null) as Exercise[]
   })
+}
+
+/**
+ * Un tableau en révision espacée. Un tableau de structure fait tourner ses
+ * trois exercices de repérage tant qu'il est jeune ; mûr, un repère seul et
+ * la remise en ordre. Tout autre tableau : sa colonne en banque une révision
+ * sur deux, une case seule l'autre ; mûr, la case seule, sans la banque qui
+ * la désignerait.
+ */
+function tableReviewFor(
+  itemId: string,
+  title: string,
+  table: NoteTableBlock,
+  rng: Rng,
+  unaided: boolean,
+  turn: number,
+): Exercise {
+  const structure = tableStructure(table)
+  if (structure) {
+    const order = () => tableOrderFor(itemId, title, table, structure.column, rng)
+    const bank = () => tableBankFor(itemId, title, table, rng, structure.column)
+    const cell = () => tableCellFor(itemId, title, table, rng, null, false, structure.column)
+    const forms: (() => Exercise | null)[] = unaided ? [cell, order] : [order, bank, cell]
+    for (const form of rotate(forms, turn)) {
+      const exercise = form()
+      if (exercise) return exercise
+    }
+    return order()
+  }
+  const bank = !unaided && turn % 2 === 0 ? tableBankFor(itemId, title, table, rng) : null
+  return (
+    bank ??
+    tableCellFor(itemId, title, table, rng) ??
+    tableBankFor(itemId, title, table, rng) ??
+    tableCellFor(itemId, title, table, rng, null, true)!
+  )
 }
 
 /** Écart minimal entre un exercice raté et sa reprise : assez pour ne pas répondre de mémoire. */
@@ -1521,7 +1714,7 @@ export function retryIndex(queue: readonly Exercise[], position: number): number
  */
 export function isExplanationOnly(exercise: Exercise): boolean {
   if (exercise.kind === 'passage') return !isCitation(exercise.point)
-  if (exercise.kind === 'table-bank' || exercise.kind === 'table-cell') return true
+  if (exercise.kind === 'table-bank' || exercise.kind === 'table-cell' || exercise.kind === 'table-order') return true
   return exercise.kind === 'rule' && exercise.fragment !== undefined
 }
 
@@ -2141,18 +2334,7 @@ function buildMixedSession(
       return locate ?? workGapExercise(item.point, item.work)
     }
 
-    // Un tableau tant qu'il est jeune : sa colonne en banque, une révision sur
-    // deux, une case seule l'autre ; mûr, la case seule, sans la banque qui
-    // la désignerait.
-    if (item.kind === 'table') {
-      const bank = !unaided && turn % 2 === 0 ? tableBankFor(item.id, item.heading, item.table, rng) : null
-      return (
-        bank ??
-        tableCellFor(item.id, item.heading, item.table, rng) ??
-        tableBankFor(item.id, item.heading, item.table, rng) ??
-        tableCellFor(item.id, item.heading, item.table, rng, null, true)!
-      )
-    }
+    if (item.kind === 'table') return tableReviewFor(item.id, item.heading, item.table, rng, unaided, turn)
 
     if (item.kind === 'grammar') {
       // Reconnaître avant de produire : tant que la carte est jeune, la

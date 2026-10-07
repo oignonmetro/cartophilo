@@ -18,7 +18,7 @@ import { GrammarSentenceChoice } from '@/components/session/GrammarSentenceChoic
 import { PassageCard } from '@/components/session/PassageCard'
 import { SessionPause } from '@/components/session/SessionPause'
 import { ConjugationAnswer } from '@/components/session/ConjugationAnswer'
-import { TableBank, TableCell } from '@/components/session/TableExercise'
+import { TableBank, TableCell, TableOrder } from '@/components/session/TableExercise'
 import { ConjugationChoice } from '@/components/session/ConjugationChoice'
 import { ConjugationMatch } from '@/components/session/ConjugationMatch'
 import { WorkLocate } from '@/components/work/WorkLocate'
@@ -528,6 +528,12 @@ function SessionRunner({
               // Comme une manche d'association : tout finit replacé, une erreur en
               // chemin compte pour le tableau au premier essai (voir `answerMatch`).
               <TableBank
+                exercise={current}
+                onDone={(clean) => answerMatch(current, clean ? [] : [current.itemId])}
+              />
+            )}
+            {current.kind === 'table-order' && (
+              <TableOrder
                 exercise={current}
                 onDone={(clean) => answerMatch(current, clean ? [] : [current.itemId])}
               />

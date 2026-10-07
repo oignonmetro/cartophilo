@@ -17,8 +17,11 @@ import {
   RETRY_GAP,
   splitGap,
   splitGaps,
+  locationKey,
   tableCellText,
   tableExercises,
+  tableRowText,
+  tableStructure,
   type Exercise,
 } from './exercises'
 import { createRng, seedFrom } from './rng'
@@ -1304,10 +1307,10 @@ describe('tableau à trous', () => {
   const PLAN = [
     'Le plan du dialogue.',
     '',
-    '| Moment | Lieu | Contenu |',
-    '| introduction | 126a-128e | l’argument de **Zénon** |',
-    '| discours de Socrate | 128e-130a | la théorie des Idées |',
-    '| critiques de Parménide | 130a-134e | six objections à la théorie |',
+    '| Moment | Orateur | Contenu |',
+    '| introduction | Zénon | l’argument de **Zénon** |',
+    '| discours de Socrate | Socrate | la théorie des Idées |',
+    '| critiques de Parménide | Parménide | six objections à la théorie |',
     '',
     '! Un piège.',
   ].join('\n')
@@ -1323,13 +1326,13 @@ describe('tableau à trous', () => {
       { id: 'q3', sentence: 'La ___ des Idées.', answer: 'théorie', alt: [], options: [] },
     ],
   }
-  const TABLE_ID = 'parm-i1:tableau:moment-lieu-contenu'
+  const TABLE_ID = 'parm-i1:tableau:moment-orateur-contenu'
 
   it('fait de chaque tableau un élément, identifié par sa leçon et son en-tête', () => {
     expect(lessonTables(lesson).map((table) => table.id)).toEqual([TABLE_ID])
     expect(itemsOfLesson(lesson).map((item) => item.id)).toEqual(['q1', 'q2', 'q3', TABLE_ID])
     // Ajouter une rangée ne change pas l’identifiant ; un second tableau de même en-tête prend un suffixe.
-    const grown = { ...lesson, notes: `${PLAN}\n\n| Moment | Lieu | Contenu |\n| a | b | c |\n| d | e | f |` }
+    const grown = { ...lesson, notes: `${PLAN}\n\n| Moment | Orateur | Contenu |\n| a | b | c |\n| d | e | f |` }
     expect(lessonTables(grown).map((table) => table.id)).toEqual([TABLE_ID, `${TABLE_ID}-2`])
   })
 
@@ -1382,5 +1385,73 @@ describe('tableau à trous', () => {
   it('se saute en mode « citations seules »', () => {
     const [bank] = tableExercises('T', lessonTables(lesson), createRng(1))
     expect(isExplanationOnly(bank!)).toBe(true)
+  })
+})
+
+describe('tableau de structure', () => {
+  const STRUCTURE = [
+    '| Moment | Lieu | Contenu |',
+    '| introduction | 126a-128e | l’argument de Zénon |',
+    '| discours de Socrate | 128e-130a | la théorie des Idées |',
+    '| critiques de Parménide | 130a-134e | six objections |',
+    '| programme | 134e-137c | un exercice |',
+  ].join('\n')
+  const lesson: GrammarLesson = {
+    kind: 'grammar',
+    id: 'parm-i1',
+    title: 'Le dialogue',
+    notes: STRUCTURE,
+    points: [
+      { id: 'q1', sentence: 'Le ___ du dialogue.', answer: 'plan', alt: [], options: [] },
+      { id: 'q2', sentence: 'Une ___ objection.', answer: 'première', alt: [], options: [] },
+      { id: 'q3', sentence: 'La ___ des Idées.', answer: 'théorie', alt: [], options: [] },
+    ],
+  }
+  const [table] = lessonTables(lesson).map((entry) => entry.table)
+
+  it('reconnaît une colonne de repères rangée dans l’ordre du texte', () => {
+    expect(tableStructure(table!)).toEqual({ column: 1 })
+    expect(locationKey('54d-e')).toEqual([54, 3, 0])
+    expect(locationKey('II, 3')).toEqual([2, 3])
+    expect(locationKey('chap. 1-5')).toEqual([1, 0])
+    expect(locationKey('1094a1-b11')).toEqual([1094, 0, 1])
+    // Une énumération n’est pas un repère, ni un texte quelconque.
+    expect(locationKey('3')).toBeNull()
+    expect(locationKey('II')).toBeNull()
+    expect(locationKey('la théorie des Idées')).toBeNull()
+    const shuffled = STRUCTURE.replace('| 128e-130a |', '| 140a |')
+    expect(tableStructure(lessonTables({ ...lesson, notes: shuffled })[0]!.table)).toBeNull()
+  })
+
+  it('devient un repérage : les moments dans l’ordre, puis leurs repères, puis un repère seul', () => {
+    for (const seed of [1, 2, 3]) {
+      const [order, bank, cell] = tableExercises('T', lessonTables(lesson), createRng(seed))
+      if (order?.kind !== 'table-order' || bank?.kind !== 'table-bank' || cell?.kind !== 'table-cell') {
+        throw new Error('trois exercices attendus')
+      }
+      expect(order.rows).toEqual([0, 1, 2, 3])
+      expect([...order.bank].sort()).toEqual([0, 1, 2, 3])
+      expect(order.bank).not.toEqual([0, 1, 2, 3])
+      expect(bank).toMatchObject({ locate: true })
+      expect(bank.holes.every((gap) => gap.column === 1)).toBe(true)
+      expect(cell).toMatchObject({ locate: true, hole: { column: 1 } })
+      expect(tableRowText(table!, 0, 1)).toEqual(['introduction', 'l’argument de Zénon'])
+    }
+  })
+
+  it('tire au plus sept moments d’un long plan, gardés dans leur ordre', () => {
+    const rows = Array.from({ length: 12 }, (_, i) => `| m${i} | ${20 + i}a | c${i} |`).join('\n')
+    const [order] = tableExercises('T', lessonTables({ ...lesson, notes: `| Moment | Lieu | Contenu |\n${rows}` }), createRng(4))
+    if (order?.kind !== 'table-order') throw new Error('remise en ordre attendue')
+    expect(order.rows).toHaveLength(7)
+    expect([...order.rows].sort((a, b) => a - b)).toEqual(order.rows)
+  })
+
+  it('revient en révision sous ses trois formes, et note le tableau', () => {
+    const item = itemsOfLesson(lesson).find((entry) => entry.kind === 'table')!
+    const young = createCard(item.id, T0)
+    const kinds = [1, 2, 3, 4, 5, 6].map((reps) => buildReviewSession([{ card: { ...young, reps }, item }], 1)[0]!)
+    expect(new Set(kinds.map((exercise) => exercise.kind))).toEqual(new Set(['table-order', 'table-bank', 'table-cell']))
+    expect(kinds.flatMap(itemIdsOf).every((id) => id === item.id)).toBe(true)
   })
 })

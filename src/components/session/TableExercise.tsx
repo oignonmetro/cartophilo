@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
-import type { TableBankExercise, TableCellExercise, TableGap } from '@/engine/exercises'
-import { matchesAnswer, sameTableText, tableCellText, tableColumnTitle } from '@/engine/exercises'
+import type { TableBankExercise, TableCellExercise, TableGap, TableOrderExercise } from '@/engine/exercises'
+import { matchesAnswer, sameTableText, tableCellText, tableColumnTitle, tableRowText } from '@/engine/exercises'
 import { plainInline } from '@/content/notes'
+import { matchesLocation } from '@/content/work'
 import type { Rating } from '@/engine/srs'
 import { Button } from '@/components/Button'
 import { useIsDesktop } from '@/lib/useIsDesktop'
@@ -16,10 +17,15 @@ import { useSessionSounds } from './useSessionSounds'
 
 /**
  * Tableau à trous : un tableau du rappel de la leçon, troué (voir
- * `tableExercises`). Deux exercices le partagent :
+ * `tableExercises`). Trois exercices le partagent :
  *
  *   - `TableBank` : une colonne vidée, ses cases proposées dans une banque ;
- *   - `TableCell` : une seule case, à écrire ou à révéler.
+ *   - `TableCell` : une seule case, à écrire ou à révéler ;
+ *   - `TableOrder` : les lignes d'un tableau de structure, à remettre dans
+ *     l'ordre du texte.
+ *
+ * Sur un tableau de structure (voir `tableStructure`), la banque et la case
+ * seule portent sur les repères : on y situe chaque moment dans le texte.
  */
 
 const TONE = TONES.grammar
@@ -121,7 +127,15 @@ export function TableBank({
     <div className="flex min-h-0 flex-1 flex-col gap-3">
       <TableHeader
         title={exercise.title}
-        prompt={done ? 'Le tableau complété' : heading ? `Remplissez la colonne « ${heading} »` : 'Remplissez la colonne'}
+        prompt={
+          done
+            ? 'Le tableau complété'
+            : exercise.locate
+              ? 'Situez chaque moment dans le texte'
+              : heading
+                ? `Remplissez la colonne « ${heading} »`
+                : 'Remplissez la colonne'
+        }
       />
 
       <div className="min-h-0 flex-1 overflow-y-auto md:flex md:flex-col md:justify-[safe_center]">
@@ -202,7 +216,9 @@ export function TableCell({
   }, [mode, answered, exercise.id])
 
   function check(candidate: string) {
-    const correct = matchesAnswer(plainInline(expected), [], candidate)
+    const plain = plainInline(expected)
+    // Un repère se juge comme un emplacement : « 126a », « 126 » valent « 126a-128e ».
+    const correct = matchesAnswer(plain, [], candidate) || (exercise.locate === true && matchesLocation(plain, candidate))
     setValue(candidate)
     setChecked(correct)
     setRevealed(true)
@@ -262,7 +278,7 @@ export function TableCell({
     <div className="flex min-h-0 flex-1 flex-col gap-3">
       <TableHeader
         title={exercise.title}
-        prompt="Complétez la case"
+        prompt={exercise.locate ? 'Situez ce moment dans le texte' : 'Complétez la case'}
         aside={<AnswerModeSwitch mode={mode} disabled={answered} onChange={setMode} />}
       />
 
@@ -286,7 +302,7 @@ export function TableCell({
               autoCorrect="off"
               spellCheck={false}
               aria-label="Réponse"
-              placeholder="Votre réponse"
+              placeholder={exercise.locate ? 'Le repère' : 'Votre réponse'}
               className="w-full rounded-2xl border-2 border-line bg-paper px-4 py-3 text-base font-bold outline-none focus:border-violet md:text-lg"
             />
             <Button block tone="violet" disabled={value.trim().length === 0} onClick={() => check(value)}>
@@ -351,6 +367,123 @@ export function TableCell({
           <RevealButtons isDesktop={isDesktop} onRate={(rating) => onAnswer(rating !== 'again', rating)} />
         ) : null}
       </div>
+    </div>
+  )
+}
+
+/**
+ * Remise en ordre d'un tableau de structure : ses moments, mélangés dans la
+ * banque du bas, à toucher dans l'ordre du texte. Chacun ne montre que ce
+ * qu'il est (son étiquette, son contenu) ; son repère (« 128e-130a ») ne se
+ * révèle qu'une fois placé, sans quoi il suffirait de ranger des numéros.
+ * Même mécanique que la banque : une erreur se signale aussitôt, la carte
+ * refusée tremblant ; une fois tout placé, le fil complet reste affiché.
+ */
+export function TableOrder({
+  exercise,
+  onDone,
+}: {
+  exercise: TableOrderExercise
+  /** `clean` : tout rangé sans une erreur. */
+  onDone: (clean: boolean) => void
+}) {
+  const { table, rows, column } = exercise
+  const sounds = useSessionSounds()
+  const [placed, setPlaced] = useState(0)
+  const [mistakes, setMistakes] = useState(0)
+  const [wrong, setWrong] = useState<number | null>(null)
+  const end = useRef<HTMLDivElement>(null)
+  const done = placed === rows.length
+
+  // Le dernier moment placé reste en vue, au-dessus de la banque.
+  useEffect(() => {
+    end.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+  }, [placed])
+
+  function pick(index: number) {
+    if (done) return
+    if (index === placed) {
+      setPlaced(placed + 1)
+      sounds.note(Math.min(placed, 7))
+      return
+    }
+    setMistakes((count) => count + 1)
+    setWrong(index)
+    window.setTimeout(() => setWrong(null), 350)
+  }
+
+  const rowText = (index: number) => {
+    const [first, ...rest] = tableRowText(table, rows[index]!, column)
+    return (
+      <>
+        {first && (
+          <p className="text-sm leading-snug font-bold text-ink">
+            <Rich text={first} />
+          </p>
+        )}
+        {rest.map((text, k) => (
+          <p key={k} className="text-xs leading-snug text-ink-soft">
+            <Rich text={text} />
+          </p>
+        ))}
+      </>
+    )
+  }
+
+  const remaining = exercise.bank.filter((index) => index >= placed)
+
+  return (
+    <div className="flex min-h-0 flex-1 flex-col gap-3">
+      <TableHeader title={exercise.title} prompt={done ? 'Les moments, dans l’ordre du texte' : 'Remettez les moments dans l’ordre du texte'} />
+
+      <div className="min-h-0 flex-1 overflow-y-auto rounded-blob border-2 border-line bg-paper px-3 py-3 md:px-5">
+        {placed === 0 && (
+          <p className="py-6 text-center text-sm text-ink-faint">Touchez le moment qui vient en premier dans le texte.</p>
+        )}
+        <ol className="flex flex-col items-center">
+          {rows.slice(0, placed).map((row, index) => (
+            <li key={row} className="flex w-full max-w-md flex-col items-center">
+              {index > 0 && (
+                <span className="py-1 text-lg leading-none font-black text-violet" aria-hidden>
+                  ↓
+                </span>
+              )}
+              <div className="w-full rounded-xl border-2 border-success/50 px-3 py-2 text-center">
+                <p className="text-xs font-black text-violet-deep">
+                  <Rich text={tableCellText(table, { row, column })} />
+                </p>
+                {rowText(index)}
+              </div>
+            </li>
+          ))}
+        </ol>
+        <div ref={end} />
+      </div>
+
+      {done ? (
+        <div className="shrink-0">
+          <Button block tone={mistakes === 0 ? 'success' : 'violet'} onClick={() => onDone(mistakes === 0)}>
+            Continuer
+          </Button>
+        </div>
+      ) : (
+        <div className="flex max-h-[42%] shrink-0 flex-col gap-2 overflow-y-auto md:max-h-[38%]">
+          {remaining.map((index) => (
+            <motion.button
+              key={index}
+              type="button"
+              onClick={() => pick(index)}
+              animate={wrong === index ? { x: [0, -7, 7, -4, 0] } : { x: 0 }}
+              transition={{ duration: 0.3 }}
+              className={`rounded-2xl border-2 px-3 py-2 text-center transition-colors ${
+                wrong === index ? 'border-error bg-error/10' : 'border-line bg-paper hover:border-violet/60'
+              }`}
+            >
+              {rowText(index)}
+            </motion.button>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

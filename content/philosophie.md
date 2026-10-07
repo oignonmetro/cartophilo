@@ -263,6 +263,19 @@ qui se distinguent les unes des autres : deux cases identiques dans une même
 colonne restent interchangeables, mais une colonne de phrases presque
 pareilles se replace au hasard.
 
+**Un plan devient un exercice de repérage.** Un tableau dont une colonne
+donne, sur toutes ses lignes, un repère dans le texte (« 126a-128e »,
+« 54d-e », « 1094a1-b11 », « II, 3 », « chap. 1-5 », « §1-5 »), rangé dans
+l'ordre du texte, est un tableau de structure : il se joue en remettant ses
+moments dans l'ordre (le repère ne se révèle qu'une fois le moment placé),
+puis en replaçant les repères, puis en écrivant un repère seul (« 126a »
+vaut « 126a-128e »). Pour qu'un plan serve ainsi, mettre les repères dans
+une colonne à part, un repère par case, sans autre texte ; trois lignes au
+moins ; un numéro d'étape (« 1 », « II ») n'est pas un repère. C'est la façon
+la plus simple de donner à une unité classique ses exercices de repérage :
+le plan d'ensemble dans le premier rappel, puis, dans des leçons de
+repérage, le plan de chaque partie.
+
 Le tableau revient ensuite en révision espacée, comme une carte : son
 identifiant se tire de la leçon et de sa ligne d'en-tête
 (`m7-l1:tableau:moment-repere-ce-qui-s-y-joue`), sans rien à écrire dans le
