@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 13
+version: 14
 
 tracks:
   - id: glossaire
@@ -58,35 +58,35 @@ tracks:
     # piste plutôt que propres à chaque traité (voir `treatiseEntrySchema`).
     entries:
       - id: t-1-1
-        title: "Qu'est-ce que l'animal et qu'est-ce que l'homme ?"
+        title: "Qu'est-ce que le vivant ?"
         ennead: 1
         numberInEnnead: 1
         chrono: 53
         highlight: true
       - id: t-1-2
-        title: "Des vertus"
+        title: "Sur les vertus"
         ennead: 1
         numberInEnnead: 2
         chrono: 19
         highlight: true
       - id: t-1-3
-        title: "De la dialectique"
+        title: "Sur la dialectique"
         ennead: 1
         numberInEnnead: 3
         chrono: 20
         highlight: true
       - id: t-1-4
-        title: "Du bonheur"
+        title: "Sur le bonheur"
         ennead: 1
         numberInEnnead: 4
         chrono: 46
       - id: t-1-5
-        title: "Le bonheur s'accroît-il dans le temps ?"
+        title: "Si le bonheur s'accroît avec le temps"
         ennead: 1
         numberInEnnead: 5
         chrono: 36
       - id: t-1-6
-        title: "Du Beau"
+        title: "Sur le beau"
         ennead: 1
         numberInEnnead: 6
         chrono: 1
@@ -102,46 +102,30 @@ tracks:
           - Narcisse, qui se perd dans son reflet, et Ulysse, qui fuit Circé, opposent deux rapports aux images ; notre patrie est l'intelligible, et le bien est au-delà du beau.
 
           Le traité décrit un « itinéraire » de l'âme vers le divin : seul le philosophe connaît, dès cette vie, la joie de contempler le beau en soi.
-
-          - Contre la définition stoïcienne du beau par la **proportion** (symétrie des parties), Plotin fait de la beauté la manifestation d'une **unité**, celle de la **Forme** (`eîdos`) : la lumière, l'or, l'éclair sont beaux sans avoir de parties.
-          - Reconnaître le beau, c'est pour l'âme un **ajustement** et une **réminiscence** : elle y retrouve sa parenté avec l'intelligible. La contemplation de la Forme est aussi une intuition de soi.
-          - La vertu est une **purification** : l'âme se détourne du corps et redevient « Forme et raison ». L'esthétique est dépassée par l'éthique.
-          - La beauté vient de l'**intérieur** (le projet de l'architecte, la Nature comme Forme) ; il faut voir avec « l'œil de l'âme ».
-          - Narcisse, qui se perd dans son reflet, et Ulysse, qui fuit Circé, opposent deux rapports aux images ; notre patrie est l'intelligible, et le bien est au-delà du beau.
-
-          Le traité décrit un « itinéraire » de l'âme vers le divin : seul le philosophe connaît, dès cette vie, la joie de contempler le beau en soi.
-
-          - Contre la définition stoïcienne du beau par la **proportion** (symétrie des parties), Plotin fait de la beauté la manifestation d'une **unité**, celle de la **Forme** (`eîdos`) : la lumière, l'or, l'éclair sont beaux sans avoir de parties.
-          - Reconnaître le beau, c'est pour l'âme un **ajustement** et une **réminiscence** : elle y retrouve sa parenté avec l'intelligible. La contemplation de la Forme est aussi une intuition de soi.
-          - La vertu est une **purification** : l'âme se détourne du corps et redevient « Forme et raison ». L'esthétique est dépassée par l'éthique.
-          - La beauté vient de l'**intérieur** (le projet de l'architecte, la Nature comme Forme) ; il faut voir avec « l'œil de l'âme ».
-          - Narcisse, qui se perd dans son reflet, et Ulysse, qui fuit Circé, opposent deux rapports aux images ; notre patrie est l'intelligible, et le bien est au-delà du beau.
-
-          Le traité décrit un « itinéraire » de l'âme vers le divin : seul le philosophe connaît, dès cette vie, la joie de contempler le beau en soi.
       - id: t-1-7
-        title: "Du souverain bien et des autres biens"
+        title: "Sur le souverain bien et les autres biens"
         ennead: 1
         numberInEnnead: 7
         chrono: 54
         highlight: true
       - id: t-1-8
-        title: "Que sont les maux et d'où viennent-ils ?"
+        title: "Quels sont les maux ?"
         ennead: 1
         numberInEnnead: 8
         chrono: 51
         highlight: true
       - id: t-1-9
-        title: "Du suicide raisonnable"
+        title: "Sur le suicide raisonnable"
         ennead: 1
         numberInEnnead: 9
         chrono: 16
       - id: t-2-1
-        title: "Du ciel"
+        title: "Sur le monde"
         ennead: 2
         numberInEnnead: 1
         chrono: 40
       - id: t-2-2
-        title: "Du mouvement du ciel"
+        title: "Sur le mouvement circulaire"
         ennead: 2
         numberInEnnead: 2
         chrono: 14
@@ -151,39 +135,39 @@ tracks:
         numberInEnnead: 3
         chrono: 52
       - id: t-2-4
-        title: "Des deux matières"
+        title: "Sur les deux matières"
         ennead: 2
         numberInEnnead: 4
         chrono: 12
         highlight: true
       - id: t-2-5
-        title: "Que veut dire en puissance et en acte ?"
+        title: "Sur le sens de « en puissance » et « en acte »"
         ennead: 2
         numberInEnnead: 5
         chrono: 25
       - id: t-2-6
-        title: "De la qualité et de la forme"
+        title: "Sur la qualité"
         ennead: 2
         numberInEnnead: 6
         chrono: 17
       - id: t-2-7
-        title: "Du mélange total"
+        title: "Sur le mélange total"
         ennead: 2
         numberInEnnead: 7
         chrono: 37
       - id: t-2-8
-        title: "Pourquoi les objets lointains paraissent petits"
+        title: "Comment se fait-il que les objets vus de loin paraissent petits ?"
         ennead: 2
         numberInEnnead: 8
         chrono: 35
       - id: t-2-9
-        title: "Contre les Gnostiques"
+        title: "Contre les gnostiques"
         ennead: 2
         numberInEnnead: 9
         chrono: 33
         highlight: true
       - id: t-3-1
-        title: "Du destin"
+        title: "Sur le destin"
         ennead: 3
         numberInEnnead: 1
         chrono: 3
@@ -196,68 +180,56 @@ tracks:
           - Contre les **épicuriens**, Plotin tient qu'une providence gouverne le monde ; contre les **stoïciens**, il refuse le nécessitarisme et place la providence dans un intelligible autonome, ce qui permet de concilier la réalité des maux et la perfection divine.
           - La cause lointaine est l'**âme**, celle de l'univers et celle de l'individu (chap. 8-10) : séparée du corps, l'âme est libre ; dans un corps, sa liberté varie avec sa bonté. Il y a deux espèces de causes, l'âme et les causes extérieures.
           - Le voleur et l'assassin sont responsables : la providence fixe le cadre du devenir sans agir dans chaque acte. Les astres donnent seulement des « signes » de l'avenir.
-
-          - Plotin s'inscrit dans une tradition : les traités *Du destin* de Cicéron, du pseudo-Plutarque et d'Alexandre d'Aphrodise.
-          - Tout ce qui devient a une cause ; il faut distinguer **causes prochaines** et **causes lointaines** (chap. 1-2). Cinq opinions sur les causes lointaines (atomes des épicuriens, éléments des « physiologues », destin, astres des astrologues, enchaînement des causes des stoïciens) sont réfutées (chap. 3-7) : toutes abolissent notre autonomie.
-          - Contre les **épicuriens**, Plotin tient qu'une providence gouverne le monde ; contre les **stoïciens**, il refuse le nécessitarisme et place la providence dans un intelligible autonome, ce qui permet de concilier la réalité des maux et la perfection divine.
-          - La cause lointaine est l'**âme**, celle de l'univers et celle de l'individu (chap. 8-10) : séparée du corps, l'âme est libre ; dans un corps, sa liberté varie avec sa bonté. Il y a deux espèces de causes, l'âme et les causes extérieures.
-          - Le voleur et l'assassin sont responsables : la providence fixe le cadre du devenir sans agir dans chaque acte. Les astres donnent seulement des « signes » de l'avenir.
-
-          - Plotin s'inscrit dans une tradition : les traités *Du destin* de Cicéron, du pseudo-Plutarque et d'Alexandre d'Aphrodise.
-          - Tout ce qui devient a une cause ; il faut distinguer **causes prochaines** et **causes lointaines** (chap. 1-2). Cinq opinions sur les causes lointaines (atomes des épicuriens, éléments des « physiologues », destin, astres des astrologues, enchaînement des causes des stoïciens) sont réfutées (chap. 3-7) : toutes abolissent notre autonomie.
-          - Contre les **épicuriens**, Plotin tient qu'une providence gouverne le monde ; contre les **stoïciens**, il refuse le nécessitarisme et place la providence dans un intelligible autonome, ce qui permet de concilier la réalité des maux et la perfection divine.
-          - La cause lointaine est l'**âme**, celle de l'univers et celle de l'individu (chap. 8-10) : séparée du corps, l'âme est libre ; dans un corps, sa liberté varie avec sa bonté. Il y a deux espèces de causes, l'âme et les causes extérieures.
-          - Le voleur et l'assassin sont responsables : la providence fixe le cadre du devenir sans agir dans chaque acte. Les astres donnent seulement des « signes » de l'avenir.
       - id: t-3-2
-        title: "De la Providence I"
+        title: "Sur la providence I"
         ennead: 3
         numberInEnnead: 2
         chrono: 47
       - id: t-3-3
-        title: "De la Providence II"
+        title: "Sur la providence II"
         ennead: 3
         numberInEnnead: 3
         chrono: 48
       - id: t-3-4
-        title: "Du démon qui nous a reçus en partage"
+        title: "Sur le démon qui nous a reçus en partage"
         ennead: 3
         numberInEnnead: 4
         chrono: 15
       - id: t-3-5
-        title: "De l'amour"
+        title: "Sur l'amour"
         ennead: 3
         numberInEnnead: 5
         chrono: 50
         highlight: true
       - id: t-3-6
-        title: "De l'impassibilité des incorporels"
+        title: "Sur l'impassibilité des incorporels"
         ennead: 3
         numberInEnnead: 6
         chrono: 26
       - id: t-3-7
-        title: "De l'éternité et du temps"
+        title: "Sur l'éternité et le temps"
         ennead: 3
         numberInEnnead: 7
         chrono: 45
         highlight: true
       - id: t-3-8
-        title: "De la nature, de la contemplation et de l'Un"
+        title: "Sur la contemplation"
         ennead: 3
         numberInEnnead: 8
         chrono: 30
         highlight: true
       - id: t-3-9
-        title: "Questions diverses"
+        title: "Considérations diverses"
         ennead: 3
         numberInEnnead: 9
         chrono: 13
       - id: t-4-1
-        title: "De l'essence de l'âme II"
+        title: "Comment l'on dit que l'âme est intermédiaire entre la réalité indivisible et la réalité divisible (Sur la réalité de l'âme II)"
         ennead: 4
         numberInEnnead: 1
         chrono: 21
       - id: t-4-2
-        title: "De l'essence de l'âme"
+        title: "Sur la réalité de l'âme I"
         ennead: 4
         numberInEnnead: 2
         chrono: 4
@@ -271,42 +243,28 @@ tracks:
           - Plotin introduit un **double critère**, divisibilité et multiplicité, qui hiérarchise les réalités : au sommet, le principe un d'où vient l'âme ; puis l'âme, une et multiple ; puis ses produits, multiples. Les degrés d'unité distinguent tous les niveaux de réalité.
 
           Le traité 21 (IV, 1), un unique chapitre isolé par Porphyre, en donne sans doute le dernier mot.
-
-          - Plotin s'appuie sur le *Timée* (35a) : l'âme du monde est engendrée d'un mélange entre la réalité indivisible, toujours la même, et la réalité divisible qui devient dans les corps.
-          - L'âme est **indivisible** en tant qu'elle n'est pas une quantité étendue, **divisible** en tant qu'elle exerce son activité dans des corps distincts (chap. 1).
-          - Avec le *Parménide* (155e), elle est **une et multiple** : ni absolument divisible, ni absolument indivisible (chap. 2, analyse dichotomique).
-          - Plotin introduit un **double critère**, divisibilité et multiplicité, qui hiérarchise les réalités : au sommet, le principe un d'où vient l'âme ; puis l'âme, une et multiple ; puis ses produits, multiples. Les degrés d'unité distinguent tous les niveaux de réalité.
-
-          Le traité 21 (IV, 1), un unique chapitre isolé par Porphyre, en donne sans doute le dernier mot.
-
-          - Plotin s'appuie sur le *Timée* (35a) : l'âme du monde est engendrée d'un mélange entre la réalité indivisible, toujours la même, et la réalité divisible qui devient dans les corps.
-          - L'âme est **indivisible** en tant qu'elle n'est pas une quantité étendue, **divisible** en tant qu'elle exerce son activité dans des corps distincts (chap. 1).
-          - Avec le *Parménide* (155e), elle est **une et multiple** : ni absolument divisible, ni absolument indivisible (chap. 2, analyse dichotomique).
-          - Plotin introduit un **double critère**, divisibilité et multiplicité, qui hiérarchise les réalités : au sommet, le principe un d'où vient l'âme ; puis l'âme, une et multiple ; puis ses produits, multiples. Les degrés d'unité distinguent tous les niveaux de réalité.
-
-          Le traité 21 (IV, 1), un unique chapitre isolé par Porphyre, en donne sans doute le dernier mot.
       - id: t-4-3
-        title: "Des difficultés relatives à l'âme I"
+        title: "Sur les difficultés relatives à l'âme I"
         ennead: 4
         numberInEnnead: 3
         chrono: 27
       - id: t-4-4
-        title: "Des difficultés relatives à l'âme II"
+        title: "Sur les difficultés relatives à l'âme II"
         ennead: 4
         numberInEnnead: 4
         chrono: 28
       - id: t-4-5
-        title: "Des difficultés relatives à l'âme III"
+        title: "Sur les difficultés relatives à l'âme III"
         ennead: 4
         numberInEnnead: 5
         chrono: 29
       - id: t-4-6
-        title: "De la sensation et de la mémoire"
+        title: "Sur la sensation et la mémoire"
         ennead: 4
         numberInEnnead: 6
         chrono: 41
       - id: t-4-7
-        title: "De l'immortalité de l'âme"
+        title: "Sur l'immortalité de l'âme"
         ennead: 4
         numberInEnnead: 7
         chrono: 2
@@ -315,30 +273,14 @@ tracks:
           **Le traité 2 établit que l'âme, qui est ce que nous sommes, est incorporelle, immortelle et intelligible.** Il prend un tour « doxographique » : Plotin réfute les définitions de l'âme de ses prédécesseurs avant de défendre la sienne, qu'il tient pour platonicienne.
 
           - **Nous sommes notre âme** (chap. 1-2) : le corps, composé, se dissout ; l'âme, qui est le soi, est la cause de l'existence des corps.
-          - **Contre l'âme corporelle** : les épicuriens (atomes, chap. 3) et surtout les stoïciens, pour qui l'âme est un souffle (`pneûma`) corporel (chap. 3 à 83). Si l'âme était un corps, il n'y aurait ni mémoire, ni sensation unifiée, ni pensée.
-          - **Contre l'âme « harmonie »** des pythagoriciens (chap. 84) et l'âme **« entéléchie »** d'Aristote (chap. 85) : l'âme n'est forme d'aucun corps.
-          - **La nature de l'âme** (chap. 9-12) : elle a l'être et la vie par elle-même ; elle est divine, immortelle, indivisible.
-          - **La venue dans le corps** (chap. 13-15) : l'âme produit et gouverne les corps par des « formules rationnelles » (`lógoi`) sans quitter l'intelligible ; sa descente n'est que partielle.
-
-          Le traité 4 (IV, 2) et le traité 21 (IV, 1) en sont la suite.
-
-          - **Nous sommes notre âme** (chap. 1-2) : le corps, composé, se dissout ; l'âme, qui est le soi, est la cause de l'existence des corps.
-          - **Contre l'âme corporelle** : les épicuriens (atomes, chap. 3) et surtout les stoïciens, pour qui l'âme est un souffle (`pneûma`) corporel (chap. 3 à 83). Si l'âme était un corps, il n'y aurait ni mémoire, ni sensation unifiée, ni pensée.
-          - **Contre l'âme « harmonie »** des pythagoriciens (chap. 84) et l'âme **« entéléchie »** d'Aristote (chap. 85) : l'âme n'est forme d'aucun corps.
-          - **La nature de l'âme** (chap. 9-12) : elle a l'être et la vie par elle-même ; elle est divine, immortelle, indivisible.
-          - **La venue dans le corps** (chap. 13-15) : l'âme produit et gouverne les corps par des « formules rationnelles » (`lógoi`) sans quitter l'intelligible ; sa descente n'est que partielle.
-
-          Le traité 4 (IV, 2) et le traité 21 (IV, 1) en sont la suite.
-
-          - **Nous sommes notre âme** (chap. 1-2) : le corps, composé, se dissout ; l'âme, qui est le soi, est la cause de l'existence des corps.
-          - **Contre l'âme corporelle** : les épicuriens (atomes, chap. 3) et surtout les stoïciens, pour qui l'âme est un souffle (`pneûma`) corporel (chap. 3 à 83). Si l'âme était un corps, il n'y aurait ni mémoire, ni sensation unifiée, ni pensée.
-          - **Contre l'âme « harmonie »** des pythagoriciens (chap. 84) et l'âme **« entéléchie »** d'Aristote (chap. 85) : l'âme n'est forme d'aucun corps.
+          - **Contre l'âme corporelle** : les épicuriens (atomes, chap. 3) et surtout les stoïciens, pour qui l'âme est un souffle (`pneûma`) corporel (chap. 3 à 8³). Si l'âme était un corps, il n'y aurait ni mémoire, ni sensation unifiée, ni pensée.
+          - **Contre l'âme « harmonie »** des pythagoriciens (chap. 8⁴) et l'âme **« entéléchie »** d'Aristote (chap. 8⁵) : l'âme n'est forme d'aucun corps.
           - **La nature de l'âme** (chap. 9-12) : elle a l'être et la vie par elle-même ; elle est divine, immortelle, indivisible.
           - **La venue dans le corps** (chap. 13-15) : l'âme produit et gouverne les corps par des « formules rationnelles » (`lógoi`) sans quitter l'intelligible ; sa descente n'est que partielle.
 
           Le traité 4 (IV, 2) et le traité 21 (IV, 1) en sont la suite.
       - id: t-4-8
-        title: "De la descente de l'âme dans les corps"
+        title: "Sur la descente de l'âme dans les corps"
         ennead: 4
         numberInEnnead: 8
         chrono: 6
@@ -352,68 +294,56 @@ tracks:
           - Toute âme a une partie tournée vers le corps et une partie tournée vers l'Intellect ; mais l'âme de l'univers gouverne son corps sans en pâtir, quand l'âme individuelle en est « contaminée », à cause de la **matière**.
           - La descente est à la fois **volontaire** et **nécessaire** (chap. 5) : le volontaire est compris dans la nécessité.
           - Le corps n'est pas méprisable : il manifeste l'âme, qui sans lui aurait ignoré ce qu'elle possède. Intelligible et sensible sont solidaires.
-
-          - Le traité s'ouvre sur l'un des passages les plus célèbres de Plotin : « Souvent, lorsque je m'éveille à moi-même en sortant de mon corps… ». Il aborde la question par le haut, depuis l'identité intelligible de l'âme.
-          - Plotin convoque Héraclite, Empédocle et Pythagore, qui parlent « par énigmes », puis Platon, chez qui il trouve deux axes : la descente comme **chute** (*Phédon*, *République*, *Phèdre*) ou comme **achèvement de l'univers** (*Timée*).
-          - Toute âme a une partie tournée vers le corps et une partie tournée vers l'Intellect ; mais l'âme de l'univers gouverne son corps sans en pâtir, quand l'âme individuelle en est « contaminée », à cause de la **matière**.
-          - La descente est à la fois **volontaire** et **nécessaire** (chap. 5) : le volontaire est compris dans la nécessité.
-          - Le corps n'est pas méprisable : il manifeste l'âme, qui sans lui aurait ignoré ce qu'elle possède. Intelligible et sensible sont solidaires.
-
-          - Le traité s'ouvre sur l'un des passages les plus célèbres de Plotin : « Souvent, lorsque je m'éveille à moi-même en sortant de mon corps… ». Il aborde la question par le haut, depuis l'identité intelligible de l'âme.
-          - Plotin convoque Héraclite, Empédocle et Pythagore, qui parlent « par énigmes », puis Platon, chez qui il trouve deux axes : la descente comme **chute** (*Phédon*, *République*, *Phèdre*) ou comme **achèvement de l'univers** (*Timée*).
-          - Toute âme a une partie tournée vers le corps et une partie tournée vers l'Intellect ; mais l'âme de l'univers gouverne son corps sans en pâtir, quand l'âme individuelle en est « contaminée », à cause de la **matière**.
-          - La descente est à la fois **volontaire** et **nécessaire** (chap. 5) : le volontaire est compris dans la nécessité.
-          - Le corps n'est pas méprisable : il manifeste l'âme, qui sans lui aurait ignoré ce qu'elle possède. Intelligible et sensible sont solidaires.
       - id: t-4-9
-        title: "Toutes les âmes sont-elles une ?"
+        title: "Si toutes les âmes n'en sont qu'une"
         ennead: 4
         numberInEnnead: 9
         chrono: 8
       - id: t-5-1
-        title: "Des trois hypostases qui ont rang de principes"
+        title: "Sur les trois hypostases qui ont rang de Principes"
         ennead: 5
         numberInEnnead: 1
         chrono: 10
         highlight: true
       - id: t-5-2
-        title: "De l'origine et de l'ordre de ce qui vient après le Premier"
+        title: "Sur la génération et le rang des choses qui sont après le Premier"
         ennead: 5
         numberInEnnead: 2
         chrono: 11
       - id: t-5-3
-        title: "Des hypostases qui connaissent"
+        title: "Sur les hypostases qui ont la faculté de connaître et ce qui est au-delà"
         ennead: 5
         numberInEnnead: 3
         chrono: 49
         highlight: true
       - id: t-5-4
-        title: "Comment vient ce qui est après le Premier et de l'Un"
+        title: "Comment vient du Premier ce qui est après le Premier, et sur l'Un"
         ennead: 5
         numberInEnnead: 4
         chrono: 7
       - id: t-5-5
-        title: "Que les intelligibles ne sont pas hors de l'Intelligence / Du Bien"
+        title: "Sur l'intellect et que les intelligibles ne sont pas hors de l'intellect, et sur le Bien"
         ennead: 5
         numberInEnnead: 5
         chrono: 32
       - id: t-5-6
-        title: "Que les intelligibles ne sont pas hors de l'Intelligence"
+        title: "Sur le fait que l'au-delà de l'Être ne pense pas ; qui est le pensant de premier rang et qui celui de second rang"
         ennead: 5
         numberInEnnead: 6
         chrono: 24
       - id: t-5-7
-        title: "Y a-t-il des idées des individus ?"
+        title: "S'il y a des idées même des êtres individuels"
         ennead: 5
         numberInEnnead: 7
         chrono: 18
       - id: t-5-8
-        title: "De la beauté intelligible"
+        title: "Sur la beauté intelligible"
         ennead: 5
         numberInEnnead: 8
         chrono: 31
         highlight: true
       - id: t-5-9
-        title: "De l'Intellect, des Formes et de l'être"
+        title: "Sur l'Intellect, les idées et ce qui est"
         ennead: 5
         numberInEnnead: 9
         chrono: 5
@@ -426,62 +356,50 @@ tracks:
           - **Chap. 7-14 : les Formes.** Elles ne sont pas produites par l'Intellect qui les pense : elles lui sont « antérieures », c'est-à-dire contemporaines. Puis : de quoi y a-t-il des Formes ? Pas des choses contraires à la nature, pas des techniques (sauf en l'homme), une Forme de l'homme mais peut-être pas de Socrate, aucune de la boue ni des composés accidentels.
 
           Les sources sont Platon (théorie des Formes), Aristote (forme dans la matière, intellect qui se pense) et le médioplatonisme (les Formes, pensées de l'Intellect). Le traité laisse pour plus tard la question de l'Un : le traité 7 (V, 4) y répondra.
-
-          - **Chap. 1-2 : la vraie philosophie.** Trois genres d'hommes : ceux qui en restent à la sensation et au plaisir (épicuriens), ceux qui s'élèvent un peu par la vie pratique (stoïciens), ceux qui contemplent l'intelligible (platoniciens). Il faut monter d'« ici-bas » jusque « là-bas ».
-          - **Chap. 3-6 : l'Intellect.** Il donne à l'âme sa forme et ses « raisons » (`lógoi`) ; toujours en acte, il est supérieur à l'âme ; il se pense lui-même, et se penser soi-même, c'est penser les Formes, qui sont en lui. Il est « toutes les choses ensemble ».
-          - **Chap. 7-14 : les Formes.** Elles ne sont pas produites par l'Intellect qui les pense : elles lui sont « antérieures », c'est-à-dire contemporaines. Puis : de quoi y a-t-il des Formes ? Pas des choses contraires à la nature, pas des techniques (sauf en l'homme), une Forme de l'homme mais peut-être pas de Socrate, aucune de la boue ni des composés accidentels.
-
-          Les sources sont Platon (théorie des Formes), Aristote (forme dans la matière, intellect qui se pense) et le médioplatonisme (les Formes, pensées de l'Intellect). Le traité laisse pour plus tard la question de l'Un : le traité 7 (V, 4) y répondra.
-
-          - **Chap. 1-2 : la vraie philosophie.** Trois genres d'hommes : ceux qui en restent à la sensation et au plaisir (épicuriens), ceux qui s'élèvent un peu par la vie pratique (stoïciens), ceux qui contemplent l'intelligible (platoniciens). Il faut monter d'« ici-bas » jusque « là-bas ».
-          - **Chap. 3-6 : l'Intellect.** Il donne à l'âme sa forme et ses « raisons » (`lógoi`) ; toujours en acte, il est supérieur à l'âme ; il se pense lui-même, et se penser soi-même, c'est penser les Formes, qui sont en lui. Il est « toutes les choses ensemble ».
-          - **Chap. 7-14 : les Formes.** Elles ne sont pas produites par l'Intellect qui les pense : elles lui sont « antérieures », c'est-à-dire contemporaines. Puis : de quoi y a-t-il des Formes ? Pas des choses contraires à la nature, pas des techniques (sauf en l'homme), une Forme de l'homme mais peut-être pas de Socrate, aucune de la boue ni des composés accidentels.
-
-          Les sources sont Platon (théorie des Formes), Aristote (forme dans la matière, intellect qui se pense) et le médioplatonisme (les Formes, pensées de l'Intellect). Le traité laisse pour plus tard la question de l'Un : le traité 7 (V, 4) y répondra.
       - id: t-6-1
-        title: "Des genres de l'être I"
+        title: "Sur les genres de l'être I"
         ennead: 6
         numberInEnnead: 1
         chrono: 42
       - id: t-6-2
-        title: "Des genres de l'être II"
+        title: "Sur les genres de l'être II"
         ennead: 6
         numberInEnnead: 2
         chrono: 43
       - id: t-6-3
-        title: "Des genres de l'être III"
+        title: "Sur les genres de l'être III"
         ennead: 6
         numberInEnnead: 3
         chrono: 44
       - id: t-6-4
-        title: "Que l'être un et le même est partout tout entier I"
+        title: "Sur la raison pour laquelle l'Être, un et identique, est partout tout entier I"
         ennead: 6
         numberInEnnead: 4
         chrono: 22
       - id: t-6-5
-        title: "Que l'être un et le même est partout tout entier II"
+        title: "Sur la raison pour laquelle l'Être, un et identique, est partout tout entier II"
         ennead: 6
         numberInEnnead: 5
         chrono: 23
       - id: t-6-6
-        title: "Des nombres"
+        title: "Sur les nombres"
         ennead: 6
         numberInEnnead: 6
         chrono: 34
       - id: t-6-7
-        title: "Comment est née la multiplicité des idées ; du Bien"
+        title: "Comment la multiplicité des idées s'est établie et sur le bien ?"
         ennead: 6
         numberInEnnead: 7
         chrono: 38
         highlight: true
       - id: t-6-8
-        title: "Du volontaire et de la volonté de l'Un"
+        title: "Sur le volontaire"
         ennead: 6
         numberInEnnead: 8
         chrono: 39
         highlight: true
       - id: t-6-9
-        title: "Du Bien ou de l'Un"
+        title: "Sur le Bien ou l'Un"
         ennead: 6
         numberInEnnead: 9
         chrono: 9

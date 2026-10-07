@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import type { TableBankExercise, TableCellExercise, TableGap, TableOrderExercise } from '@/engine/exercises'
-import { matchesAnswer, sameTableText, tableCellText, tableColumnTitle, tableRowText } from '@/engine/exercises'
+import { matchesAnswer, sameLocationStart, sameTableText, tableCellText, tableColumnTitle, tableRowText } from '@/engine/exercises'
 import { plainInline } from '@/content/notes'
 import { matchesLocation } from '@/content/work'
 import type { Rating } from '@/engine/srs'
@@ -250,8 +250,11 @@ export function TableCell({
 
   function check(candidate: string) {
     const plain = plainInline(expected)
-    // Un repère se juge comme un emplacement : « 126a », « 126 » valent « 126a-128e ».
-    const correct = matchesAnswer(plain, [], candidate) || (exercise.locate === true && matchesLocation(plain, candidate))
+    // Un repère se juge comme un emplacement : « 126a », « 126 » valent
+    // « 126a-128e », « 3 » vaut « chap. 3 », « 1, 29 » vaut « 1, 29-41 ».
+    const correct =
+      matchesAnswer(plain, [], candidate) ||
+      (exercise.locate === true && (matchesLocation(plain, candidate) || sameLocationStart(plain, candidate)))
     setValue(candidate)
     setChecked(correct)
     setRevealed(true)

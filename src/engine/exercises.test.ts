@@ -17,7 +17,9 @@ import {
   RETRY_GAP,
   splitGap,
   splitGaps,
+  compareKeys,
   locationKey,
+  sameLocationStart,
   tableCellText,
   tableExercises,
   tableRowText,
@@ -1424,6 +1426,24 @@ describe('tableau de structure', () => {
     expect(locationKey('la théorie des Idées')).toBeNull()
     const shuffled = STRUCTURE.replace('| 128e-130a |', '| 140a |')
     expect(tableStructure(lessonTables({ ...lesson, notes: shuffled })[0]!.table)).toBeNull()
+  })
+
+  it('range un chapitre à exposant entre son chapitre et le suivant (8, 8¹ à 8⁵, 9)', () => {
+    expect(locationKey('chap. 8⁴')).toEqual(locationKey('8^4'))
+    const keys = ['chap. 8', 'chap. 8¹-8³', 'chap. 8⁴', 'chap. 8⁵', 'chap. 9-12'].map((text) => locationKey(text)!)
+    expect(keys.every((key, i) => i === 0 || compareKeys(keys[i - 1]!, key) < 0)).toBe(true)
+  })
+
+  it('accepte le début d’un repère tapé, pas un repère plus vague', () => {
+    expect(sameLocationStart('chap. 3', '3')).toBe(true)
+    expect(sameLocationStart('chap. 3', 'chapitre 3')).toBe(true)
+    expect(sameLocationStart('chap. 5-6', '5')).toBe(true)
+    expect(sameLocationStart('1, 29-41', '1, 29')).toBe(true)
+    expect(sameLocationStart('chap. 8⁴', '8^4')).toBe(true)
+    expect(sameLocationStart('chap. 8⁴', '8⁴')).toBe(true)
+    expect(sameLocationStart('1, 29-41', '1')).toBe(false)
+    expect(sameLocationStart('chap. 8⁴', '8')).toBe(false)
+    expect(sameLocationStart('chap. 3', '4')).toBe(false)
   })
 
   it('devient un repérage : les moments dans l’ordre, puis leurs repères, puis un repère seul', () => {

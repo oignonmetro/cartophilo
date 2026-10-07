@@ -1456,15 +1456,26 @@ const TABLE_ORDER_MAX = 7
 /**
  * Un repère dans un texte : pagination Stephanus ou Bekker (« 126a-128e »,
  * « 54d-e », « 1094a1-b11 »), ou division (« II, 3 », « chap. 1-5 »,
- * « §1-5 », « l. 3-11 »).
+ * « §1-5 », « l. 3-11 »). Un chapitre peut porter un exposant (« 8⁴ », ou
+ * « 8^4 » au clavier) : chez Plotin, les chapitres 8¹ à 8⁵ du traité 2
+ * (IV, 7), absents des manuscrits de Ficin, se lisent entre le 8 et le 9.
  */
 const PAGINATION_SPAN = /^(\d{1,4})\s*([a-e])\s*(\d*)(?:\s*-\s*\d{0,4}\s*[a-e]?\s*\d*)?$/i
 const DIVISION_SPAN =
-  /^(?:(?:livre|liv\.|chap\.?|chapitre|ch\.|§|l\.|lignes?|p\.)\s*)?([ivxlcdm]+|\d+)(?:\s*,\s*(\d+))?(?:\s*-\s*(?:[ivxlcdm]+|\d+)(?:\s*,\s*\d+)?)?$/i
+  /^(?:(?:livre|liv\.|chap\.?|chapitres?|ch\.|§|l\.|lignes?|p\.)\s*)?([ivxlcdm]+|\d+(?:\^\d+)?)(?:\s*,\s*(\d+))?(?:\s*-\s*(?:[ivxlcdm]+|\d+(?:\^\d+)?)(?:\s*,\s*\d+)?)?$/i
+const SUPERSCRIPTS = '⁰¹²³⁴⁵⁶⁷⁸⁹'
+
+/** Les exposants d'un repère en notation clavier : « 8⁴ » → « 8^4 ». */
+function plainSuperscripts(text: string): string {
+  return text.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, (digits) => `^${[...digits].map((digit) => SUPERSCRIPTS.indexOf(digit)).join('')}`)
+}
 const ROMAN_DIGITS: Record<string, number> = { i: 1, v: 5, x: 10, l: 50, c: 100, d: 500, m: 1000 }
 
 function romanOrNumber(text: string): number {
   if (/^\d+$/.test(text)) return Number(text)
+  // « 8^4 » : après le 8, avant le 9.
+  const raised = /^(\d+)\^(\d+)$/.exec(text)
+  if (raised) return Number(raised[1]) + Number(raised[2]) / 10 ** raised[2]!.length
   const letters = text.toLowerCase()
   let total = 0
   for (let i = 0; i < letters.length; i++) {
@@ -1481,7 +1492,7 @@ function romanOrNumber(text: string): number {
  * numéro (« 1 », « II ») n'en est pas un : c'est une énumération.
  */
 export function locationKey(text: string): number[] | null {
-  const plain = plainInline(text).trim()
+  const plain = plainSuperscripts(plainInline(text).trim())
   if (/^(\d+|[ivxlcdm]+)$/i.test(plain)) return null
   const pagination = PAGINATION_SPAN.exec(plain)
   if (pagination) {
@@ -1490,6 +1501,21 @@ export function locationKey(text: string): number[] | null {
   const division = DIVISION_SPAN.exec(plain)
   if (division) return [romanOrNumber(division[1]!), Number(division[2] || 0)]
   return null
+}
+
+/**
+ * Un repère tapé désigne-t-il le début de `label` ? « 3 » ou « chapitre 3 »
+ * pour « chap. 3 », « 5 » pour « chap. 5-6 », « 1, 29 » pour « 1, 29-41 »,
+ * « 8^4 » pour « chap. 8⁴ » ; mais « 1 » ne suffit pas pour « 1, 29-41 ».
+ */
+export function sameLocationStart(label: string, value: string): boolean {
+  const expected = locationKey(label)
+  if (!expected) return false
+  const typed = plainSuperscripts(value.trim()).replace(/^(?:chapitres?|chap\.?|ch\.)\s*/i, '')
+  const given = locationKey(typed) ?? (/^(\d+|[ivxlcdm]+)$/i.test(typed) ? [romanOrNumber(typed.toLowerCase())] : null)
+  if (!given) return false
+  const width = Math.max(expected.length, given.length)
+  return Array.from({ length: width }, (_, i) => (expected[i] ?? 0) === (given[i] ?? 0)).every(Boolean)
 }
 
 export function compareKeys(a: readonly number[], b: readonly number[]): number {
