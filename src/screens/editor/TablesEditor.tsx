@@ -592,6 +592,19 @@ function TablePreview({
         ))}
       </div>
 
+      {/* Au-dessus de l'exercice, pas en dessous : sous la carte haute de 36 rem,
+          il fallait faire défiler le panneau pour atteindre le sélecteur. */}
+      {entry && exercise?.kind === 'table-cell' && (
+        <CellPicker
+          table={table}
+          hole={exercise.hole}
+          number={entry.number}
+          fixed={chosen?.[entry.number - 1]?.row !== undefined}
+          automatic={!chosen}
+          onPick={(cell) => onPickCell(entry.number, cell)}
+        />
+      )}
+
       <div className="card-3d flex h-[36rem] flex-col p-4">
         {!exercise && numbered.length === 0 && (
           <div className="flex flex-1 items-center justify-center text-sm text-ink-faint">Aucun exercice à jouer.</div>
@@ -631,17 +644,6 @@ function TablePreview({
             Nouveau tirage
           </button>
         </div>
-      )}
-
-      {entry && exercise?.kind === 'table-cell' && (
-        <CellPicker
-          table={table}
-          hole={exercise.hole}
-          number={entry.number}
-          fixed={chosen?.[entry.number - 1]?.row !== undefined}
-          automatic={!chosen}
-          onPick={(cell) => onPickCell(entry.number, cell)}
-        />
       )}
     </div>
   )
