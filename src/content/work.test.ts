@@ -2,12 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { unitSchema, type GrammarPoint, type Work, type WorkNode } from './schema'
 import { itemsOfUnit } from './course'
 import {
-  isDrawn,
   lessonsFromWork,
-  linksOf,
   matchesLocation,
-  planRoundsOf,
-  planTextOf,
   pointsOf,
   stephanusStart,
   thesisFills,
@@ -15,7 +11,7 @@ import {
   workContextOf,
   workReferenceOf,
 } from './work'
-import { buildLessonSession, buildWorkSession, isNonLocating, itemIdsOf, workLocateFor, workMatchesFor, workMatchItems, workOrder, workOrderItems, type WorkLocateExercise, type WorkPlanExercise } from '@/engine/exercises'
+import { buildLessonSession, buildWorkSession, isNonLocating, itemIdsOf, workLocateFor, workMatchesFor, workMatchItems, workOrder, workOrderItems, type WorkLocateExercise } from '@/engine/exercises'
 import { createRng } from '@/engine/rng'
 
 function point(id: string): GrammarPoint {
@@ -26,7 +22,7 @@ function leaf(id: string, rel?: WorkNode['rel']): WorkNode {
   return { id, label: id.toUpperCase(), rel, points: [point(`p-${id}`)], parts: [] }
 }
 
-/** Un livre à deux blocs, une charnière entre eux, un lien éloigné et un lien déjà dessiné. */
+/** Un livre à deux blocs, une charnière entre eux, et deux liens. */
 const WORK: Work = {
   parts: [
     {
@@ -70,14 +66,6 @@ describe('plan d’une unité-œuvre', () => {
     expect(workContextOf(WORK, 'lien-a3')).toEqual({ label: 'A3 → PIVOT', title: 'reprise' })
   })
 
-  it('ne signale pas à part un lien que le plan dessine déjà', () => {
-    // pivot → b1 : la flèche « problème → solution » de pivot vers le bloc B le montre.
-    expect(isDrawn(WORK, WORK.links[1]!)).toBe(true)
-    expect(isDrawn(WORK, WORK.links[0]!)).toBe(false)
-    expect(linksOf(WORK, 'b1')).toEqual([])
-    expect(linksOf(WORK, 'pivot').map(({ link }) => link.rel)).toEqual(['reprise'])
-  })
-
   it('répartit les réponses entre les trous comme le moteur', () => {
     expect(thesisFills({ ...point('x'), sentence: '___ et ___', answer: 'un ; deux' })).toEqual(['un', 'deux'])
     expect(thesisFills({ ...point('x'), sentence: '___ et ___', answer: 'seul' })).toEqual(['seul', ''])
@@ -102,9 +90,8 @@ describe('séance d’une leçon d’unité-œuvre', () => {
   const [raw] = lessonsFromWork('u', WORK)
   const lesson = { ...raw!, notes: undefined, points: raw!.points }
 
-  it('schémas archivés : ni plan à lire ni plan à trous, le reste de la leçon inchangé', () => {
+  it('localise, associe, puis remet le livre en ordre', () => {
     const session = buildLessonSession(lesson, 0, 1, false, 0, undefined, WORK)
-    expect(session.some((exercise) => exercise.kind === 'work-map' || exercise.kind === 'work-plan')).toBe(false)
     // Seules les cartes de lien, sans emplacement propre à localiser, passent en carte à trou.
     const gaps = session.filter((exercise) => exercise.kind === 'grammar-gap').flatMap(itemIdsOf)
     expect(gaps).toEqual(['lien-a3', 'lien-pivot'])
@@ -113,12 +100,12 @@ describe('séance d’une leçon d’unité-œuvre', () => {
   })
 
   it('en repérage seul, ne garde que la localisation et l’association', () => {
-    const session = buildWorkSession(lesson, WORK, 0, 1, true)
+    const session = buildWorkSession(lesson, WORK, 0, 1)
     const kept = new Set(session.filter((exercise) => !isNonLocating(exercise)).map((exercise) => exercise.kind))
-    expect([...kept].sort()).toEqual(['work-locate', 'work-map', 'work-match'])
-    // Sautées : la remise en ordre, les plans à trous, les cartes de lien au clavier.
+    expect([...kept].sort()).toEqual(['work-locate', 'work-match'])
+    // Sautées : la remise en ordre, les cartes de lien au clavier.
     const skipped = new Set(session.filter(isNonLocating).map((exercise) => exercise.kind))
-    expect([...skipped].sort()).toEqual(['grammar-gap', 'work-order', 'work-plan'])
+    expect([...skipped].sort()).toEqual(['grammar-gap', 'work-order'])
   })
 
   it('à la découverte seulement, le rappel d’un groupe de parties précède la première d’entre elles', () => {
@@ -127,7 +114,7 @@ describe('séance d’une leçon d’unité-œuvre', () => {
       { at: 'pivot', label: 'PIVOT-B', title: 'La charnière et B', notes: 'Résumé.' },
     ]
     const work: Work = { ...WORK, recaps }
-    const session = buildWorkSession(lesson, work, 0, 1, false)
+    const session = buildWorkSession(lesson, work, 0, 1)
     const rules = session.filter((exercise) => exercise.kind === 'rule')
     expect(rules).toMatchObject([
       { id: 'recap:a', title: 'Le bloc A', notes: 'Résumé de A.', passage: { label: 'A1-A3' } },
@@ -137,32 +124,7 @@ describe('séance d’une leçon d’unité-œuvre', () => {
     expect(session.indexOf(rules[0]!)).toBeLessThan(at('p-a1'))
     expect(session.indexOf(rules[1]!)).toBeGreaterThan(at('p-a3'))
     expect(session.indexOf(rules[1]!)).toBeLessThan(at('p-pivot'))
-    expect(buildWorkSession(lesson, work, 1, 1, false).some((exercise) => exercise.kind === 'rule')).toBe(false)
-  })
-
-  it('schémas réactivés, à la découverte : le plan à lire, puis bloc par bloc, les plans à trous arrivant après leurs chapitres', () => {
-    const session = buildWorkSession(lesson, WORK, 0, 1, true)
-    expect(session[0]?.kind).toBe('work-map')
-
-    // Seules les cartes de lien passent en carte à trou, faute d'emplacement propre à localiser.
-    const gaps = session.filter((exercise) => exercise.kind === 'grammar-gap').flatMap(itemIdsOf)
-    expect(gaps).toEqual(['lien-a3', 'lien-pivot'])
-
-    // Un plan à trous par niveau du schéma, chacun après le bloc de son dernier chapitre.
-    const plans = session.filter((exercise): exercise is WorkPlanExercise => exercise.kind === 'work-plan')
-    expect(plans.map((plan) => plan.holes)).toEqual([
-      ['a1', 'a2', 'a3'],
-      ['pivot', 'b1', 'b2', 'b3'],
-    ])
-    expect(session.indexOf(plans[0]!)).toBeLessThan(session.findIndex((exercise) => itemIdsOf(exercise).includes('p-pivot')))
-    expect([...plans[1]!.bank].sort()).toEqual(['b1', 'b2', 'b3', 'pivot'])
-    // Un chapitre manqué compte pour ses thèses.
-    expect(itemIdsOf(plans[0]!)).toEqual(['p-a1', 'p-a2', 'p-a3'])
-  })
-
-  it('schémas réactivés, rejouée : pas de plan à lire', () => {
-    const session = buildWorkSession(lesson, WORK, 1, 1, true)
-    expect(session.some((exercise) => exercise.kind === 'work-map')).toBe(false)
+    expect(buildWorkSession(lesson, work, 1, 1).some((exercise) => exercise.kind === 'rule')).toBe(false)
   })
 
   it('dès la découverte, localise toute thèse qui a un emplacement propre, jamais une carte de lien', () => {
@@ -355,68 +317,5 @@ describe('saisir l’emplacement au clavier', () => {
     expect(locates(1).every((exercise) => !exercise.typed)).toBe(true)
     expect(locates(2).length).toBeGreaterThan(0)
     expect(locates(2).every((exercise) => exercise.typed && exercise.options.length === 0)).toBe(true)
-  })
-})
-
-describe('les manches du plan à trous', () => {
-  const chapter = (id: string, rel?: WorkNode['rel']) => leaf(id, rel)
-
-  it('suivent les niveaux du schéma, comme au livre II du Contrat social', () => {
-    // chap. 1-3 de même plan ; 4 → 5 ; 6 ; 7 ; 8-10 de même plan ; 11 ; 12.
-    const livre: WorkNode = {
-      id: 'l2',
-      label: 'Livre II',
-      points: [],
-      parts: [
-        {
-          id: 'l2-1-5',
-          label: 'chap. 1-5',
-          question: '?',
-          points: [],
-          parts: [
-            { id: 'l2-1-3', label: 'chap. 1-3', points: [], parts: [chapter('c1'), chapter('c2', 'declinaison'), chapter('c3', 'declinaison')] },
-            { id: 'l2-4-5', label: 'chap. 4-5', rel: 'limite', points: [], parts: [chapter('c4'), chapter('c5', 'application')] },
-          ],
-        },
-        chapter('c6', 'consequence'),
-        {
-          id: 'l2-7-12',
-          label: 'chap. 7-12',
-          question: '?',
-          rel: 'probleme-solution',
-          points: [],
-          parts: [
-            chapter('c7'),
-            { id: 'l2-8-10', label: 'chap. 8-10', rel: 'application', points: [], parts: [chapter('c8'), chapter('c9', 'declinaison'), chapter('c10', 'declinaison')] },
-            chapter('c11', 'consequence'),
-            chapter('c12', 'consequence'),
-          ],
-        },
-      ],
-    }
-    expect(planRoundsOf(livre).map((round) => round.map((node) => node.id))).toEqual([
-      ['c1', 'c2', 'c3'],
-      ['c4', 'c5', 'c6', 'c7'],
-      ['c8', 'c9', 'c10'],
-      ['c11', 'c12'],
-    ])
-  })
-
-  it('ne laissent jamais un chapitre seul', () => {
-    const livre: WorkNode = {
-      id: 'l',
-      label: 'L',
-      points: [],
-      parts: [
-        { id: 'g', label: 'G', points: [], parts: [chapter('x1'), chapter('x2', 'declinaison')] },
-        chapter('x3', 'consequence'),
-      ],
-    }
-    expect(planRoundsOf(livre).map((round) => round.map((node) => node.id))).toEqual([['x1', 'x2', 'x3']])
-  })
-
-  it('font replacer l’argument, à défaut l’affirmation', () => {
-    expect(planTextOf({ ...chapter('r'), reason: 'qui veut la fin veut les moyens' })).toBe('car qui veut la fin veut les moyens')
-    expect(planTextOf({ ...chapter('s'), summary: 'Le souverain est absolu' })).toBe('Le souverain est absolu')
   })
 })

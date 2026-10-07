@@ -21,10 +21,8 @@ import {
   headlineOf,
   nodesOf,
   placesAround,
-  planRoundsOf,
   shortLabel,
   threadOf,
-  WORK_DIAGRAMS,
   workContextOf,
 } from '@/content/work'
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
@@ -67,10 +65,8 @@ import type { CardState } from './srs'
  *   - `table-bank` : une colonne vidée, ses cases à replacer depuis une banque ;
  *   - `table-cell` : une seule case, à écrire ou à révéler.
  *
- * Une unité-œuvre (voir `workSchema`) ajoute deux exercices qui portent sur
- * son plan plutôt que sur une thèse isolée :
- *   - `work-map`  : le plan d'une partie de l'œuvre, à lire, avant pratique ;
- *   - `work-plan` : le même schéma vidé de son texte, où replacer ce que disent les chapitres ;
+ * Une unité-œuvre (voir `workSchema`) ajoute ses propres exercices, qui
+ * portent sur son plan plutôt que sur une thèse isolée :
  *   - `work-locate` : une thèse, à situer parmi quelques emplacements voisins ;
  *   - `work-order` : les étapes du raisonnement d'un livre, à remettre dans l'ordre ;
  *   - `work-match` : des chapitres voisins à relier à ce qu'ils affirment.
@@ -265,36 +261,6 @@ export interface GrammarGapExercise {
 }
 
 /**
- * Plan d'une partie d'une œuvre (un livre), à lire avant de s'y exercer :
- * pendant, pour une unité-œuvre, du rappel de cours (`rule`).
- */
-export interface WorkMapExercise {
-  kind: 'work-map'
-  id: string
-  work: Work
-  /** La partie dont on montre le plan. */
-  rootId: string
-}
-
-/**
- * Plan à trous : le schéma d'une partie de l'œuvre vidé de son texte (restent
- * les bulles et leurs questions, les numéros des chapitres), où replacer ce
- * que disent quelques chapitres d'un même niveau (voir `planRoundsOf`) : leur
- * argument, plus court que les thèses et plus essentiel (voir `planTextOf`).
- * Chaque chapitre manqué compte pour ses thèses (voir `itemIdsOf`).
- */
-export interface WorkPlanExercise {
-  kind: 'work-plan'
-  id: string
-  work: Work
-  rootId: string
-  /** Chapitres à remplir, par identifiant de partie, dans l'ordre du plan. */
-  holes: string[]
-  /** Les mêmes, dans l'ordre où la banque les propose. */
-  bank: string[]
-}
-
-/**
  * Remise en ordre : les étapes du raisonnement d'un livre (voir `threadOf`),
  * mélangées, à toucher dans l'ordre. Seuls les enchaînements réels se
  * remettent en ordre : des chapitres de même plan forment une seule étape.
@@ -438,9 +404,8 @@ export interface TableGap {
 /**
  * Tableau à trous, en banque : un tableau du rappel (voir `noteTables`), dont
  * une colonne entière est vidée, à remplir en replaçant ses cases proposées
- * dans le désordre. Comme le plan à trous de l'unité-œuvre, ce qu'on y replace
- * est un ensemble fermé, pas une réponse paraphrasable : la banque n'y donne
- * rien qu'on ne doive savoir situer.
+ * dans le désordre. Ce qu'on y replace est un ensemble fermé, pas une réponse
+ * paraphrasable : la banque n'y donne rien qu'on ne doive savoir situer.
  */
 export interface TableBankExercise {
   kind: 'table-bank'
@@ -483,8 +448,6 @@ export type Exercise =
   | ConjugationExercise
   | ConjugationChoiceExercise
   | ConjugationMatchExercise
-  | WorkMapExercise
-  | WorkPlanExercise
   | WorkLocateExercise
   | WorkOrderExercise
   | WorkMatchExercise
@@ -518,7 +481,7 @@ const CHOICE_SIZE = 3
  * servent à amorcer la révision espacée, pas à noter.
  */
 export function isPresentation(exercise: Exercise): boolean {
-  return exercise.kind === 'rule' || exercise.kind === 'intro' || exercise.kind === 'work-map'
+  return exercise.kind === 'rule' || exercise.kind === 'intro'
 }
 
 /**
@@ -544,13 +507,10 @@ export function isListeningExercise(exercise: Exercise): boolean {
 export function itemIdsOf(exercise: Exercise): string[] {
   switch (exercise.kind) {
     case 'rule':
-    case 'work-map':
       return []
     case 'table-bank':
     case 'table-cell':
       return [exercise.itemId]
-    case 'work-plan':
-      return workNodeItems(exercise.work, exercise.holes)
     case 'work-order':
       return workOrderItems(exercise, exercise.steps.map((_, index) => index))
     case 'work-match':
@@ -1568,12 +1528,11 @@ export function isExplanationOnly(exercise: Exercise): boolean {
 /**
  * Ce que le mode « repérage seul » saute (voir `locateOnly` dans le store) :
  * dans une unité-œuvre, tout exercice qui ne fait pas associer une idée à une
- * référence. La remise en ordre, le plan à trous, et la phrase à trou de
- * repli (une carte de lien, une thèse sans voisin pour servir de leurre) ;
+ * référence. La remise en ordre, et la phrase à trou de repli (une carte de lien, une thèse sans voisin pour servir de leurre) ;
  * restent la localisation et l'association.
  */
 export function isNonLocating(exercise: Exercise): boolean {
-  if (exercise.kind === 'work-order' || exercise.kind === 'work-plan') return true
+  if (exercise.kind === 'work-order') return true
   return exercise.kind === 'grammar-gap' && exercise.work !== undefined
 }
 
@@ -1620,14 +1579,11 @@ const WORK_LOCATE_NEIGHBOURS = 5
 /**
  * Leçon d'unité-œuvre, pour une partie de premier niveau (un livre).
  *
- *   1. à la découverte, le plan de la partie, à lire (`work-map`) ;
- *   2. puis, bloc par bloc, chaque thèse dans l'ordre du plan, à localiser
- *      dans l'œuvre plutôt que restituée au mot près (voir `workLocateFor`),
- *      suivie des cartes des liens qui aboutissent dans le bloc, d'une
- *      association entre ses chapitres et ce qu'ils affirment, et des plans
- *      à trous du schéma dont les chapitres viennent d'être vus (un par
- *      niveau du schéma, voir `planRoundsOf`) ;
- *   3. enfin, les étapes du raisonnement à remettre dans l'ordre.
+ *   1. bloc par bloc, chaque thèse dans l'ordre du plan, à localiser dans
+ *      l'œuvre plutôt que restituée au mot près (voir `workLocateFor`),
+ *      suivie des cartes des liens qui aboutissent dans le bloc, puis d'une
+ *      association entre ses chapitres et ce qu'ils affirment ;
+ *   2. enfin, les étapes du raisonnement à remettre dans l'ordre.
  * Une unité-œuvre fait savoir *où* se trouve une idée, pas la citer au mot
  * près (c'est le travail de l'unité de texte, `content/textes.md`) : la
  * phrase à trou au clavier (`grammar-gap`) n'y sert donc que de repli, pour
@@ -1639,28 +1595,20 @@ const WORK_LOCATE_NEIGHBOURS = 5
  * Les thèses se jouent dans l'ordre du plan, jamais mélangées : c'est la
  * progression de l'œuvre qu'on apprend, et la révision espacée les
  * reprendra ensuite dans le désordre.
- *
- * Tant que les schémas sont archivés (`diagrams`, voir `WORK_DIAGRAMS`), ni
- * plan à lire ni plan à trous : le reste de la leçon est inchangé.
  */
 export function buildWorkSession(
   lesson: GrammarLesson,
   work: Work,
   level: number,
   seed: number,
-  diagrams = WORK_DIAGRAMS,
 ): Exercise[] {
   const root = lesson.work ? findNode(work, lesson.work) : null
   if (!root) return lesson.points.map((point) => workGapExercise(point, workContextOf(work, point.id)))
   const rng = createRng(seed)
   const exercises: Exercise[] = []
 
-  if (diagrams && level <= 0) exercises.push({ kind: 'work-map', id: `work-map:${root.id}`, work, rootId: root.id })
-
   // Un livre sans blocs se traite comme un seul bloc.
   const blocks = root.parts.length > 0 ? root.parts : [root]
-  // Chaque manche du schéma arrive après le bloc où se trouve son dernier chapitre.
-  const pending = diagrams ? workPlansFor(work, root, rng) : []
 
   for (const block of blocks) {
     // Chaque partie du bloc, dans l'ordre du plan : ses thèses, puis les
@@ -1689,35 +1637,11 @@ export function buildWorkSession(
     }
 
     exercises.push(...workMatchesFor(work, block))
-    const inBlock = new Set(nodesOf(block).map((node) => node.id))
-    while (pending[0] && inBlock.has(pending[0].holes[pending[0].holes.length - 1]!)) exercises.push(pending.shift()!)
   }
-  exercises.push(...pending)
 
   const order = workOrder(work, root.id, rng)
   if (order) exercises.push(order)
   return exercises
-}
-
-/**
- * Les plans à trous d'une partie, un par manche (voir `planRoundsOf`), dans
- * l'ordre du plan.
- */
-export function workPlansFor(work: Work, root: WorkNode, rng: Rng): WorkPlanExercise[] {
-  return planRoundsOf(root).map((round) =>
-    workPlan(
-      work,
-      root.id,
-      round.map((node) => node.id),
-      round.map((node) => node.id).join('+'),
-      rng,
-    ),
-  )
-}
-
-/** Les thèses des chapitres `nodeIds` : ce que la révision espacée note pour un exercice qui porte sur des chapitres. */
-export function workNodeItems(work: Work, nodeIds: readonly string[]): string[] {
-  return nodeIds.flatMap((id) => findNode(work, id)?.points.map((point) => point.id) ?? [])
 }
 
 /** Chapitres par manche d'association : au moins trois, pas plus que la grille n'en montre. */
@@ -1773,24 +1697,6 @@ export function workOrderItems(exercise: WorkOrderExercise, indexes: readonly nu
   return indexes.flatMap((index) =>
     (exercise.steps[index] ?? []).flatMap((id) => findNode(exercise.work, id)?.points.map((point) => point.id) ?? []),
   )
-}
-
-/** Un plan à trous : les chapitres `holes` remis dans l'ordre du plan, la banque mélangée. */
-export function workPlan(work: Work, rootId: string, holes: readonly string[], tag: string, rng: Rng): WorkPlanExercise {
-  const root = findNode(work, rootId)
-  const wanted = new Set(holes)
-  const inPlan = root ? nodesOf(root).map((node) => node.id).filter((id) => wanted.has(id)) : [...holes]
-  let bank = shuffle(inPlan, rng)
-  // Une banque déjà dans l'ordre des cases ne demanderait rien : on la décale d'un cran.
-  if (bank.length > 1 && bank.every((id, index) => id === inPlan[index])) bank = [...bank.slice(1), bank[0]!]
-  return {
-    kind: 'work-plan',
-    id: `work-plan:${rootId}:${tag}`,
-    work,
-    rootId,
-    holes: inPlan,
-    bank,
-  }
 }
 
 /**

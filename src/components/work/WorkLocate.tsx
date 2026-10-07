@@ -9,7 +9,7 @@ import { useSessionHaptics } from '@/components/session/useSessionHaptics'
 import { useSessionSounds } from '@/components/session/useSessionSounds'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
-import { ThesisText } from './WorkTree'
+import { ThesisText } from './ThesisText'
 
 /**
  * Localiser une thèse : elle est donnée en entier, on dit où elle se trouve

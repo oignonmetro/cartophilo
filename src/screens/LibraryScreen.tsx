@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { LibraryCourse, Track, TreatiseEntry, Unit } from '@/content/schema'
 import { countLabel, courseLabel, isTextUnit, isWorkUnit, itemsOfUnit, unitLetters } from '@/content/course'
-import { WORK_DIAGRAMS } from '@/content/work'
 import type { LessonProgressMap } from '@/engine/progress'
 import { dayKey, displayedStreak, levelFromXp, masteryOf, unitMastery } from '@/engine/progress'
 import { buildUnitPath, currentDestination } from '@/engine/unitPath'
@@ -14,7 +13,6 @@ import { availableCourses } from '@/content/loader'
 import { ProgressRing } from '@/components/ProgressRing'
 import { CoursePicker } from '@/components/CoursePicker'
 import { TextSheet } from '@/components/TextSheet'
-import { WorkSheet } from '@/components/work/WorkSheet'
 import { PlanSheet } from '@/components/work/PlanSheet'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { BoltIcon, ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
@@ -299,23 +297,18 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
 
   // Texte intégral ouvert d'une unité de texte (voir `TextSheet`).
   const [openText, setOpenText] = useState<Unit | null>(null)
-  // Carte ouverte d'une unité-œuvre (voir `WorkSheet`).
-  const [openWork, setOpenWork] = useState<Unit | null>(null)
   // Rappels ouverts d'une unité-œuvre (voir `PlanSheet`).
   const [openPlan, setOpenPlan] = useState<Unit | null>(null)
 
   /**
    * Ce qu'une unité donne à lire hors exercice : son texte intégral, ou pour
-   * une unité-œuvre la carte de l'œuvre (tant que les schémas sont archivés,
-   * voir `WORK_DIAGRAMS`, ses rappels à la place, s'il en a).
+   * une unité-œuvre ses rappels, s'il en a.
    */
   const readerOf = (unit: Unit) =>
     isWorkUnit(unit)
-      ? WORK_DIAGRAMS
-        ? { label: 'Voir la carte', icon: 'map', onRead: () => setOpenWork(unit) }
-        : unit.work.recaps.length > 0
-          ? { label: 'Lire le plan', icon: 'page', onRead: () => setOpenPlan(unit) }
-          : undefined
+      ? unit.work.recaps.length > 0
+        ? { label: 'Lire le plan', icon: 'page', onRead: () => setOpenPlan(unit) }
+        : undefined
       : isTextUnit(unit)
         ? { label: 'Lire le texte', icon: 'page', onRead: () => setOpenText(unit) }
         : undefined
@@ -487,10 +480,6 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
 
       <AnimatePresence>{openText && <TextSheet unit={openText} onClose={() => setOpenText(null)} />}</AnimatePresence>
 
-      <AnimatePresence>
-        {openWork && <WorkSheet unit={openWork} cards={cards} onClose={() => setOpenWork(null)} />}
-      </AnimatePresence>
-
       <AnimatePresence>{openPlan && <PlanSheet unit={openPlan} onClose={() => setOpenPlan(null)} />}</AnimatePresence>
     </div>
   )
@@ -659,8 +648,8 @@ function UnitCard({
   onOpen: () => void
   /**
    * Ce que l'unité donne à lire hors exercice, s'il y a lieu : le texte
-   * intégral d'une unité de texte (voir `TextSheet`), la carte d'une
-   * unité-œuvre (voir `WorkSheet`).
+   * intégral d'une unité de texte (voir `TextSheet`), les rappels d'une
+   * unité-œuvre (voir `PlanSheet`).
    */
   reader?: { label: string; icon: string; onRead: () => void }
   /**

@@ -75,17 +75,16 @@ pas seulement Glossaire et Repérage.
   `content/philosophie.md` à la lettre ; pour une unité de texte (piste
   Textes), `content/textes.md` en précise les écarts.
 - Unité-œuvre (se repérer dans une œuvre entière : où se trouve chaque idée,
-  fil rouge, relations entre chapitres) : **en service, mais sans ses
-  schémas** (plan dessiné, « Voir la carte », plan à trous), archivés
-  derrière `WORK_DIAGRAMS` dans `src/content/work.ts`, réactivables en le
-  repassant à `true` ; format et consignes dans `content/oeuvres.md`. On n'y écrit que le plan (`work`), jamais `lessons`.
-  Exception assumée à « pas de QCM ni d'association » : le plan à trous est
-  une banque, parce que ce qu'on y replace (un argument dans la case de son chapitre) est
-  un ensemble fermé, pas une réponse paraphrasable.
+  fil rouge, relations entre chapitres) : localiser, associer, remettre dans
+  l'ordre ; format et consignes dans `content/oeuvres.md`. On n'y écrit que
+  le plan (`work`), jamais `lessons`. Les schémas qu'elle a eus un temps
+  (plan dessiné, « Voir la carte », plan à trous) sont supprimés
+  définitivement, code compris (2026-10-07) : ne pas les recréer.
 - Tableau à trous : tout tableau `| … |` d'un rappel de leçon devient, en
   fin de session, deux exercices (`tableExercises` dans
   `src/engine/exercises.ts`) : une colonne vidée à remplir depuis une banque
-  (même exception assumée que le plan à trous : un ensemble fermé), puis une
+  (exception assumée à « pas de QCM ni d'association », parce que ce qu'on
+  y replace est un ensemble fermé, pas une réponse paraphrasable), puis une
   seule case, à écrire ou à révéler. Chaque tableau est un élément de la
   révision espacée, d'identifiant tiré de sa leçon et de sa ligne d'en-tête
   (`lessonTables` dans `src/content/course.ts`) : changer l'en-tête d'un

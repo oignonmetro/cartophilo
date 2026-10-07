@@ -27,8 +27,6 @@ work:
       parts:
         - id: m1
           label: "§1-5"
-          question: "Selon la qualité : quelle satisfaction le beau procure-t-il ?"
-          outcome: "Une satisfaction sans intérêt ne tient à rien de privé : on la suppose en tout autre"
           parts:
             - id: b1-4
               label: "§1-4"
@@ -36,7 +34,6 @@ work:
                 - id: p1
                   label: "§1"
                   summary: "Le jugement de goût est esthétique, non logique"
-                  reason: "son principe déterminant n'est pas un concept de l'objet, mais le rapport de la représentation au sentiment du sujet"
                   points:
                     - id: ka1a
                       sentence: "Dans le jugement de goût, la représentation n'est pas rapportée à l'objet, pour le connaître, mais au sujet et à son sentiment de ___ ou de peine."
@@ -48,7 +45,6 @@ work:
                 - id: p2
                   label: "§2"
                   summary: "La satisfaction qui détermine le jugement de goût est désintéressée"
-                  reason: "pour juger une chose belle, il faut être indifférent à son existence : seule compte sa représentation"
                   rel: declinaison
                   points:
                     - id: ka2a
@@ -65,7 +61,6 @@ work:
                 - id: p3
                   label: "§3"
                   summary: "L'agréable est lié à un intérêt"
-                  reason: "il plaît aux sens dans la sensation, et fait désirer l'existence d'objets semblables"
                   rel: declinaison
                   points:
                     - id: ka3a
@@ -78,7 +73,6 @@ work:
                 - id: p4
                   label: "§4"
                   summary: "Le bon est lié à un intérêt de la raison"
-                  reason: "utile ou bon en soi, il suppose toujours le concept d'une fin, donc un rapport au vouloir"
                   rel: declinaison
                   points:
                     - id: ka4a
@@ -91,7 +85,6 @@ work:
             - id: p5
               label: "§5"
               summary: "Des trois satisfactions, seule celle du beau n'est contrainte par rien"
-              reason: "l'agréable fait plaisir, le bon est estimé, le beau seul plaît sans qu'aucun intérêt force l'assentiment"
               rel: consequence
               points:
                 - id: ka5a
@@ -111,8 +104,6 @@ work:
                   explanation: "Définition du beau tirée du premier moment : « On appelle beau l'objet d'une telle satisfaction. »"
         - id: m2
           label: "§6-9"
-          question: "Selon la quantité : pour qui le beau vaut-il ?"
-          outcome: "Mais que vise ce plaisir universel, s'il n'a ni intérêt ni concept ?"
           rel: consequence
           parts:
             - id: b6-8
@@ -121,7 +112,6 @@ work:
                 - id: p6
                   label: "§6"
                   summary: "Le beau est représenté sans concept comme objet d'une satisfaction universelle"
-                  reason: "une satisfaction désintéressée ne repose sur rien de propre à celui qui juge : il la suppose donc en chacun"
                   points:
                     - id: ka6a
                       sentence: "Celui qui juge une chose belle ne trouve au fondement de sa satisfaction aucune condition ___ : il doit donc croire qu'elle vaut pour chacun."
@@ -133,7 +123,6 @@ work:
                 - id: p7
                   label: "§7"
                   summary: "L'agréable vaut pour chacun, le beau pour tous"
-                  reason: "pour l'agréable, chacun a son goût ; qui dit une chose belle exige l'adhésion des autres"
                   rel: declinaison
                   points:
                     - id: ka7a
@@ -150,7 +139,6 @@ work:
                 - id: p8
                   label: "§8"
                   summary: "« Cette rose est belle » : un jugement sur un seul objet, qui vaut pour tous"
-                  reason: "il porte toujours sur une représentation singulière, mais prétend valoir pour tous les sujets, sans concept"
                   rel: declinaison
                   points:
                     - id: ka8a
@@ -169,7 +157,6 @@ work:
             - id: p9
               label: "§9"
               summary: "Le jugement précède le plaisir, et en est le fondement"
-              reason: "un plaisir antérieur au jugement ne serait qu'agrément privé ; c'est l'état d'esprit universellement communicable, le libre jeu des facultés, qui le fonde"
               rel: probleme-solution
               points:
                 - id: ka9a
@@ -188,8 +175,6 @@ work:
                   explanation: "Définition du beau tirée du second moment."
         - id: m3
           label: "§10-17"
-          question: "Selon la relation : quelle finalité perçoit-on dans le beau ?"
-          outcome: "Reste à dire de quel droit ce plaisir s'impose à tous : sa nécessité"
           rel: changement-de-question
           parts:
             - id: b10-12
@@ -198,7 +183,6 @@ work:
                 - id: p10
                   label: "§10"
                   summary: "Ce qu'est la finalité, et une finalité sans fin"
-                  reason: "une chose est finale quand on ne peut comprendre sa possibilité qu'en la dérivant d'une volonté"
                   points:
                     - id: ka10a
                       sentence: "« La ___ d'un concept par rapport à son objet est la finalité (forma finalis). »"
@@ -210,7 +194,6 @@ work:
                 - id: p11
                   label: "§11"
                   summary: "Le jugement de goût n'a pour fondement que la forme de la finalité"
-                  reason: "une fin subjective le rendrait intéressé, une fin objective le soumettrait à un concept"
                   rel: declinaison
                   points:
                     - id: ka11a
@@ -219,7 +202,6 @@ work:
                 - id: p12
                   label: "§12"
                   summary: "La contemplation du beau se prolonge d'elle-même"
-                  reason: "la conscience de la finalité formelle dans le jeu des facultés est le plaisir même, qui tend à se conserver"
                   rel: declinaison
                   points:
                     - id: ka12a
@@ -236,7 +218,6 @@ work:
                 - id: p13
                   label: "§13"
                   summary: "Attrait et émotion n'ont pas de part au jugement de goût"
-                  reason: "un jugement mêlé d'attrait (Reiz) ou d'émotion (Rührung) mesure un intérêt des sens, non la beauté"
                   points:
                     - id: ka13a
                       sentence: "Un jugement de goût sur lequel l'attrait et l'émotion n'ont aucune influence s'appelle un jugement de goût ___."
@@ -247,7 +228,6 @@ work:
                 - id: p14
                   label: "§14"
                   summary: "Seule la forme est l'objet propre du goût"
-                  reason: "dans les arts plastiques, l'essentiel est le dessin ; en musique, la composition ; les couleurs et les sons agréables relèvent de l'attrait"
                   rel: declinaison
                   points:
                     - id: ka14a
@@ -260,7 +240,6 @@ work:
                 - id: p15
                   label: "§15"
                   summary: "Juger du beau n'est pas juger de ce que la chose doit être"
-                  reason: "la perfection suppose le concept de ce que la chose doit être, une fin objective : la juger, c'est connaître"
                   rel: declinaison
                   points:
                     - id: ka15a
@@ -273,7 +252,6 @@ work:
             - id: p16
               label: "§16"
               summary: "Seule la beauté qui ne suppose aucun concept donne un jugement sans mélange"
-              reason: "seule la beauté qui ne suppose aucun concept de ce que l'objet doit être donne lieu à un jugement de goût pur"
               rel: consequence
               points:
                 - id: ka16a
@@ -303,7 +281,6 @@ work:
             - id: p17
               label: "§17"
               summary: "Un modèle achevé de la beauté n'est possible que pour la figure humaine"
-              reason: "l'idéal suppose une beauté fixée par une fin objective ; seul l'homme se donne ses fins par la raison"
               rel: changement-de-question
               points:
                 - id: ka17a
@@ -338,7 +315,6 @@ work:
                   explanation: "Définition du beau tirée du troisième moment."
         - id: m4
           label: "§18-22"
-          question: "Selon la modalité : de quelle nécessité le beau s'accompagne-t-il ?"
           rel: changement-de-question
           parts:
             - id: b18-19
@@ -347,7 +323,6 @@ work:
                 - id: p18
                   label: "§18"
                   summary: "La nécessité du beau est exemplaire"
-                  reason: "elle n'est ni théorique ni pratique : l'adhésion de tous vaut comme exemple d'une règle qu'on ne peut énoncer"
                   points:
                     - id: ka18a
                       sentence: "La nécessité liée au beau n'est ni théorique et objective, ni ___ comme celle de la loi morale."
@@ -359,7 +334,6 @@ work:
                 - id: p19
                   label: "§19"
                   summary: "Chacun doit donner son assentiment, si j'ai bien jugé"
-                  reason: "on exige l'assentiment de chacun, à condition d'être assuré d'avoir bien subsumé sous le principe commun"
                   rel: declinaison
                   points:
                     - id: ka19a
@@ -373,7 +347,6 @@ work:
                 - id: p20
                   label: "§20"
                   summary: "La condition de cette nécessité est l'Idée d'un sens commun"
-                  reason: "il faut un principe subjectif qui détermine par le sentiment seul, et pourtant universellement, ce qui plaît"
                   points:
                     - id: ka20a
                       sentence: "Le sens commun esthétique n'est pas l'entendement commun, qui juge par des ___, fussent-ils obscurs."
@@ -384,7 +357,6 @@ work:
                 - id: p21
                   label: "§21"
                   summary: "On a de bonnes raisons de présupposer un sens commun"
-                  reason: "la communicabilité universelle des connaissances suppose celle de l'accord des facultés qui les rend possibles"
                   rel: declinaison
                   points:
                     - id: ka21a
@@ -396,7 +368,6 @@ work:
                 - id: p22
                   label: "§22"
                   summary: "Le sens commun dit ce qui doit être, non ce qui est"
-                  reason: "il ne dit pas que chacun s'accordera avec mon jugement, mais qu'il doit s'accorder"
                   rel: declinaison
                   points:
                     - id: ka22a
@@ -412,7 +383,6 @@ work:
         - id: rg1
           label: "Remarque générale"
           summary: "Le goût juge un libre accord de l'imagination avec l'entendement"
-          reason: "l'imagination, libre, s'accorde d'elle-même avec la légalité de l'entendement : une légalité sans loi"
           rel: consequence
           points:
             - id: ka-rg1a
@@ -436,12 +406,10 @@ work:
       parts:
         - id: s1
           label: "§23-24"
-          question: "En quoi le sublime diffère-t-il du beau ?"
           parts:
             - id: p23
               label: "§23"
               summary: "Le sublime diffère du beau"
-              reason: "le beau tient à la forme limitée de l'objet ; le sublime se trouve dans l'informe et l'illimité, et n'est que dans l'esprit"
               points:
                 - id: ks23a
                   sentence: "Le beau et le sublime plaisent par eux-mêmes et présupposent tous deux un jugement de ___, non un jugement déterminant."
@@ -471,7 +439,6 @@ work:
             - id: p24
               label: "§24"
               summary: "Le sublime est mathématique ou dynamique"
-              reason: "le mouvement de l'esprit qu'il suscite est rapporté soit à la faculté de connaître, soit à la faculté de désirer"
               rel: consequence
               points:
                 - id: ks24a
@@ -485,14 +452,11 @@ work:
                   answer: "quantité"
         - id: s2
           label: "§25-27"
-          question: "Qu'est-ce qui est absolument grand, et que nous fait-il éprouver ?"
-          outcome: "Après la grandeur de la nature, sa puissance"
           rel: consequence
           parts:
             - id: p25
               label: "§25"
               summary: "Le sublime est ce qui est grand au-delà de toute comparaison"
-              reason: "rien dans la nature n'est absolument grand : c'est la disposition de l'esprit qui pense l'infini qui est sublime"
               points:
                 - id: ks25a
                   sentence: "Nous nommons sublime ce qui est ___ grand (absolute magnum)."
@@ -509,7 +473,6 @@ work:
             - id: p26
               label: "§26"
               summary: "L'imagination rencontre une limite quand elle veut tout saisir d'un coup"
-              reason: "l'appréhension peut aller à l'infini, mais la compréhension, qui saisit d'un coup, rencontre vite sa limite"
               rel: consequence
               points:
                 - id: ks26a
@@ -534,7 +497,6 @@ work:
             - id: p27
               label: "§27"
               summary: "Le sublime : un déplaisir qui éveille la conscience de notre destination"
-              reason: "l'imagination échoue à saisir le tout que la raison exige ; cet échec révèle la supériorité de notre destination rationnelle"
               rel: consequence
               points:
                 - id: ks27a
@@ -555,13 +517,11 @@ work:
                   answer: "violence"
         - id: s3
           label: "§28-29"
-          question: "Quand la puissance de la nature est-elle sublime ?"
           rel: declinaison
           parts:
             - id: p28
               label: "§28"
               summary: "La nature redoutable, sans pouvoir sur notre personne, est dynamiquement sublime"
-              reason: "sa force nous fait connaître notre faiblesse physique, mais révèle en nous une résistance d'un autre ordre"
               points:
                 - id: ks28a
                   sentence: "La nature est dynamiquement sublime quand elle est considérée comme une puissance (Macht) qui n'a sur nous aucune ___ (Gewalt)."
@@ -581,7 +541,6 @@ work:
             - id: p29
               label: "§29"
               summary: "Juger du sublime demande une préparation, mais repose sur une disposition naturelle"
-              reason: "sans le développement des Idées morales, la nature terrible n'inspire que l'effroi ; mais tout homme a la disposition au sentiment moral"
               rel: changement-de-question
               points:
                 - id: ks29a
@@ -599,7 +558,6 @@ work:
         - id: rg2
           label: "Remarque générale"
           summary: "Beau et sublime préparent au sentiment moral"
-          reason: "tous deux ont une finalité à l'égard du sentiment moral"
           rel: consequence
           points:
             - id: ks-rg2a
@@ -618,12 +576,10 @@ work:
       parts:
         - id: d1
           label: "§30-31"
-          question: "Quels jugements esthétiques ont besoin d'une déduction, et pourquoi ?"
           parts:
             - id: p30
               label: "§30"
               summary: "Le sublime n'a pas à être légitimé à part ; le beau naturel, si"
-              reason: "le sublime n'est que dans l'usage de nos facultés : l'exposer, c'est déjà le légitimer ; le beau, lui, tient à la forme de l'objet"
               points:
                 - id: kd30a
                   sentence: "L'exposition des jugements sur le sublime de la nature en est en même temps la ___."
@@ -634,7 +590,6 @@ work:
             - id: p31
               label: "§31"
               summary: "Un jugement qui prétend à la nécessité doit montrer de quel droit"
-              reason: "la déduction garantit la légitimité d'une sorte de jugements ; le jugement de goût, singulier, prétend valoir a priori pour tous"
               rel: consequence
               points:
                 - id: kd31a
@@ -645,13 +600,11 @@ work:
                   answer: "singulier"
         - id: d2
           label: "§32-34"
-          question: "Qu'est-ce qui rend le jugement de goût si difficile à légitimer ?"
           rel: consequence
           parts:
             - id: p32
               label: "§32"
               summary: "Il revendique l'adhésion de chacun, comme s'il était objectif"
-              reason: "il détermine son objet par la satisfaction, et ne se laisse dicter son verdict ni par les autres ni par l'exemple"
               points:
                 - id: kd32a
                   sentence: "Le jugement de goût doit être énoncé a priori, non par ___, parce qu'une chose plairait effectivement à tous."
@@ -665,7 +618,6 @@ work:
             - id: p33
               label: "§33"
               summary: "Aucune preuve ne le détermine, comme s'il était seulement subjectif"
-              reason: "ni l'avis du grand nombre ni les règles des critiques ne peuvent forcer l'assentiment : il faut que l'objet plaise"
               rel: declinaison
               points:
                 - id: kd33a
@@ -677,7 +629,6 @@ work:
             - id: p34
               label: "§34"
               summary: "Il n'y a pas de principe objectif du goût"
-              reason: "aucune règle ne peut démontrer une beauté ; la critique du goût n'est science que comme critique transcendantale"
               rel: consequence
               points:
                 - id: kd34a
@@ -688,13 +639,11 @@ work:
                   answer: "transcendantale"
         - id: d3
           label: "§35-38"
-          question: "Comment un jugement de goût est-il possible, et de quel droit vaut-il pour tous ?"
           rel: consequence
           parts:
             - id: p35
               label: "§35"
               summary: "Le principe du goût est celui de la faculté de juger en général"
-              reason: "le goût subsume, non une intuition sous un concept, mais l'imagination elle-même, dans sa liberté, sous l'entendement, dans sa légalité"
               points:
                 - id: kd35a
                   sentence: "La liberté de l'imagination, dans le jugement de goût, consiste en ce qu'elle ___ sans concept."
@@ -705,7 +654,6 @@ work:
             - id: p36
               label: "§36"
               summary: "Le problème : comment des jugements de goût sont-ils possibles ?"
-              reason: "ils lient a priori un plaisir à une représentation, pour tous, sans concept"
               rel: consequence
               points:
                 - id: kd36a
@@ -714,7 +662,6 @@ work:
             - id: p37
               label: "§37"
               summary: "Ce qui est affirmé a priori, c'est la validité du plaisir pour tous"
-              reason: "le plaisir lui-même est empirique ; seule sa valeur de règle pour chacun peut être représentée a priori"
               rel: declinaison
               points:
                 - id: kd37a
@@ -723,7 +670,6 @@ work:
             - id: p38
               label: "§38"
               summary: "La déduction : le plaisir tient aux conditions subjectives de toute connaissance"
-              reason: "ces conditions sont les mêmes chez tous les hommes, sans quoi ils ne pourraient se communiquer leurs connaissances"
               rel: probleme-solution
               points:
                 - id: kd38a
@@ -734,13 +680,11 @@ work:
                   answer: "réalité"
         - id: d4
           label: "§39-40"
-          question: "Qu'est-ce qui rend un sentiment communicable ?"
           rel: consequence
           parts:
             - id: p39
               label: "§39"
               summary: "Toutes les sensations ne se communiquent pas de la même façon"
-              reason: "l'agréable ne se communique pas, le moral se communique par des concepts, le beau par le sentiment de l'accord des facultés"
               points:
                 - id: kd39a
                   sentence: "Le plaisir pris au beau n'est ni un plaisir de jouissance, ni celui d'une activité conforme à la loi morale, mais un plaisir de la simple ___."
@@ -748,7 +692,6 @@ work:
             - id: p40
               label: "§40"
               summary: "Le goût est une sorte de sens commun"
-              reason: "il juge en tenant compte, par la pensée, du mode de représentation de tout autre"
               rel: consequence
               points:
                 - id: kd40a
@@ -765,13 +708,11 @@ work:
                   answer: "aestheticus"
         - id: d5
           label: "§41-42"
-          question: "Le beau, jugé sans intérêt, peut-il susciter un intérêt ?"
           rel: changement-de-question
           parts:
             - id: p41
               label: "§41"
               summary: "L'intérêt empirique pour le beau n'existe qu'en société"
-              reason: "le penchant à la sociabilité fait du goût un moyen de communiquer son sentiment"
               points:
                 - id: kd41a
                   sentence: "Abandonné sur une île ___, un homme ne parerait ni sa hutte ni lui-même."
@@ -782,7 +723,6 @@ work:
             - id: p42
               label: "§42"
               summary: "S'intéresser directement à la beauté des fleurs et des oiseaux marque une âme bonne"
-              reason: "que la nature produise des formes accordées à notre jugement désintéressé intéresse la raison, comme la moralité"
               rel: limite
               points:
                 - id: kd42a
@@ -796,13 +736,11 @@ work:
                   answer: "aubergiste"
         - id: d6
           label: "§43-50"
-          question: "Qu'est-ce que l'art, et comment le beau peut-il être produit ?"
           rel: changement-de-question
           parts:
             - id: p43
               label: "§43"
               summary: "Ce qui distingue la production humaine de la nature, du savoir et du métier"
-              reason: "l'art est une production par liberté, un savoir-faire, et un jeu plutôt qu'un travail"
               points:
                 - id: kd43a
                   sentence: "« Seul ce que l'on ne possède pas l'habileté de faire, même si on le connaît de la manière la plus parfaite, relève de l'___. »"
@@ -813,7 +751,6 @@ work:
             - id: p44
               label: "§44"
               summary: "Beaux-arts, arts d'agrément, art mécanique"
-              reason: "les beaux-arts visent le plaisir qui accompagne les représentations comme modes de connaissance"
               rel: consequence
               points:
                 - id: kd44a
@@ -825,7 +762,6 @@ work:
             - id: p45
               label: "§45"
               summary: "Une œuvre belle doit paraître naturelle"
-              reason: "on doit avoir conscience que c'est de l'art, mais sa finalité doit sembler libre de toute règle arbitraire"
               rel: consequence
               points:
                 - id: kd45a
@@ -834,7 +770,6 @@ work:
             - id: p46
               label: "§46"
               summary: "Les beaux-arts sont les arts du génie"
-              reason: "aucune règle ne peut dicter le beau, et pourtant tout art suppose des règles : c'est la nature, dans le sujet, qui les donne"
               rel: probleme-solution
               points:
                 - id: kd46a
@@ -846,7 +781,6 @@ work:
             - id: p47
               label: "§47"
               summary: "Le génie n'est pas le grand savant"
-              reason: "le savant peut montrer chaque pas de sa démarche et l'enseigner ; le génie ne sait pas lui-même comment il produit"
               rel: consequence
               points:
                 - id: kd47a
@@ -858,7 +792,6 @@ work:
             - id: p48
               label: "§48"
               summary: "Le goût juge, le génie produit"
-              reason: "une beauté naturelle est une belle chose ; une beauté artistique, une belle représentation d'une chose"
               rel: consequence
               points:
                 - id: kd48a
@@ -870,7 +803,6 @@ work:
             - id: p49
               label: "§49"
               summary: "Le génie produit des images qui donnent à penser plus qu'aucun concept"
-              reason: "il trouve pour des Idées une expression sensible qui donne beaucoup à penser, et la rend universellement communicable"
               rel: consequence
               points:
                 - id: kd49a
@@ -882,7 +814,6 @@ work:
             - id: p50
               label: "§50"
               summary: "En cas de conflit, c'est au génie de céder"
-              reason: "pour les beaux-arts, la beauté importe plus que la richesse des Idées : le goût discipline le génie"
               rel: limite
               points:
                 - id: kd50a
@@ -890,13 +821,11 @@ work:
                   answer: "discipline"
         - id: d7
           label: "§51-54"
-          question: "Comment les beaux-arts se divisent-ils et se comparent-ils ?"
           rel: consequence
           parts:
             - id: p51
               label: "§51"
               summary: "Les beaux-arts se divisent selon l'analogie du langage"
-              reason: "le mot, le geste et le ton donnent les arts de la parole, les arts figuratifs et l'art du beau jeu des sensations"
               points:
                 - id: kd51a
                   sentence: "Les beaux-arts se divisent selon les trois moyens d'expression de l'homme : le mot, le geste et le ___."
@@ -904,7 +833,6 @@ work:
             - id: p52
               label: "§52"
               summary: "Les beaux-arts peuvent s'unir en une même œuvre"
-              reason: "mais, quelle que soit l'union, ils ne satisfont durablement que liés à des Idées morales"
               rel: consequence
               points:
                 - id: kd52a
@@ -913,7 +841,6 @@ work:
             - id: p53
               label: "§53"
               summary: "Hiérarchie des beaux-arts : l'art du langage en tête, la musique en débat"
-              reason: "la poésie élargit l'esprit ; la musique émeut plus qu'elle ne cultive, et s'impose au voisinage"
               rel: consequence
               points:
                 - id: kd53a
@@ -925,7 +852,6 @@ work:
             - id: p54
               label: "§54"
               summary: "Le jeu et le rire font du bien au corps"
-              reason: "tout plaisir intensifie la vie ; le rire joue avec les pensées, la musique avec les sons"
               rel: consequence
               points:
                 - id: kd54a
@@ -942,7 +868,6 @@ work:
         - id: p55
           label: "§55"
           summary: "La dialectique du goût ne porte que sur ses principes"
-          reason: "un conflit de goûts n'est pas une dialectique : seule l'antinomie des principes a priori du jugement en est une"
           points:
             - id: kx55a
               sentence: "Une dialectique du goût n'est pas le conflit des goûts entre eux, mais une ___ des principes de la critique du goût."
@@ -952,13 +877,11 @@ work:
               answer: "a priori"
         - id: x1
           label: "§56-57"
-          question: "Le jugement de goût repose-t-il, oui ou non, sur des concepts ?"
           rel: consequence
           parts:
             - id: p56
               label: "§56"
               summary: "Deux lieux communs, et une troisième proposition, forment l'antinomie"
-              reason: "on dit qu'on ne dispute pas du goût, et pourtant qu'on peut en discuter : il faut donc qu'il repose, et ne repose pas, sur des concepts"
               points:
                 - id: kx56a
                   sentence: "Premier lieu commun : « Chacun a son ___. »"
@@ -978,7 +901,6 @@ work:
             - id: p57
               label: "§57"
               summary: "Le mot « concept » n'a pas le même sens dans la thèse et l'antithèse"
-              reason: "le jugement de goût ne repose sur aucun concept déterminé, mais sur le concept indéterminé du suprasensible"
               rel: probleme-solution
               points:
                 - id: kx57a
@@ -997,7 +919,6 @@ work:
             - id: p57r1
               label: "§57, Rem. I"
               summary: "Idées esthétiques et Idées de la raison se répondent"
-              reason: "l'une est une intuition qu'aucun concept n'épuise, l'autre un concept qu'aucune intuition ne remplit"
               rel: consequence
               points:
                 - id: kx57r1a
@@ -1009,7 +930,6 @@ work:
             - id: p57r2
               label: "§57, Rem. II"
               summary: "Chaque faculté supérieure a son antinomie"
-              reason: "toutes contraignent la raison à chercher leur solution au-delà du sensible"
               rel: consequence
               points:
                 - id: kx57r2a
@@ -1021,7 +941,6 @@ work:
         - id: p58
           label: "§58"
           summary: "La finalité du beau est idéale, non réelle"
-          reason: "la nature n'a pas produit ses formes pour nous plaire : c'est notre faculté de juger qui les accueille"
           rel: changement-de-question
           points:
             - id: kx58a
@@ -1038,13 +957,11 @@ work:
               answer: "propriété"
         - id: x2
           label: "§59-60"
-          question: "Que révèle, en définitive, le jugement de goût ?"
           rel: changement-de-question
           parts:
             - id: p59
               label: "§59"
               summary: "Le beau présente indirectement le bien moral"
-              reason: "le jugement de goût procède avec le beau comme le jugement moral avec le bien : par une analogie de la réflexion"
               points:
                 - id: kx59a
                   sentence: "Rendre sensible un concept s'appelle une ___ (subjectio sub adspectum)."
@@ -1073,7 +990,6 @@ work:
             - id: p60
               label: "§60"
               summary: "Le goût s'éveille, il ne s'enseigne pas"
-              reason: "il n'y a pour les beaux-arts ni méthode ni règles, seulement une manière ; sa vraie préparation est la culture morale"
               rel: consequence
               points:
                 - id: kx60a

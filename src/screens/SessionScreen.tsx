@@ -21,8 +21,6 @@ import { ConjugationAnswer } from '@/components/session/ConjugationAnswer'
 import { TableBank, TableCell } from '@/components/session/TableExercise'
 import { ConjugationChoice } from '@/components/session/ConjugationChoice'
 import { ConjugationMatch } from '@/components/session/ConjugationMatch'
-import { WorkMapNote } from '@/components/work/WorkMapNote'
-import { WorkPlan } from '@/components/work/WorkPlan'
 import { WorkLocate } from '@/components/work/WorkLocate'
 import { WorkOrder } from '@/components/work/WorkOrder'
 import { WorkMatch } from '@/components/work/WorkMatch'
@@ -508,7 +506,6 @@ function SessionRunner({
             {current.kind === 'rule' && (
               <RuleNote exercise={current} hideNotes={skipping} onNext={() => advance(false)} />
             )}
-            {current.kind === 'work-map' && <WorkMapNote exercise={current} onNext={() => advance(false)} />}
             {current.kind === 'work-locate' && (
               <WorkLocate exercise={current} onAnswer={(correct) => answer(current, correct)} />
             )}
@@ -517,9 +514,6 @@ function SessionRunner({
             )}
             {current.kind === 'work-order' && (
               <WorkOrder exercise={current} onDone={({ missedIds }) => answerMatch(current, missedIds)} />
-            )}
-            {current.kind === 'work-plan' && (
-              <WorkPlan exercise={current} onDone={({ missedIds }) => answerMatch(current, missedIds)} />
             )}
             {current.kind === 'grammar-gap' && (
               <GrammarGap exercise={current} onAnswer={(correct, rating) => answer(current, correct, rating)} />

@@ -108,7 +108,7 @@ export interface ProgressSnapshot {
    * Dans une séance qui porte sur une unité-repérage (voir content/oeuvres.md),
    * ne faire que les exercices qui associent une idée à une référence :
    * localiser une thèse, associer chaque partie à ce qu'elle affirme. La
-   * remise en ordre, le plan à trous et la phrase à trou de repli sont
+   * remise en ordre et la phrase à trou de repli sont
    * sautés (voir `isNonLocating`). Se bascule dans l'en-tête de la séance
    * (voir `SessionScreen`), leçon comme révision. Éteint par défaut.
    */

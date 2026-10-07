@@ -42,9 +42,9 @@ const sameGap = (a: TableGap, b: TableGap) => a.row === b.row && a.column === b.
 
 /**
  * Banque : on touche une case vide, puis le texte qui lui revient ; jamais de
- * glisser-déposer, peu fiable au doigt. Comme dans le plan à trous (voir
- * `WorkPlan`), une case est toujours active, la première vide puis la
- * suivante : le plus souvent, on n'a qu'à toucher des textes. Un texte refusé
+ * glisser-déposer, peu fiable au doigt. Une case est toujours active, la
+ * première vide puis la suivante : le plus souvent, on n'a qu'à toucher des
+ * textes. Un texte refusé
  * tremble, et l'erreur compte pour le premier essai ; une fois tout replacé,
  * le tableau reste affiché, à relire d'un trait.
  */

@@ -13,18 +13,6 @@ unités-œuvres d'un même auteur.
 Premier exemple : `hors-programme/units/rousseau-contrat-social.yaml`
 (*Du contrat social*, livre II).
 
-> **Réactivée (2026-09-29), sans ses schémas.** L'unité-œuvre est de
-> nouveau en service (le *Contrat social* n'est plus archivé), mais tout ce
-> qui dessine le plan reste mis de côté : le plan à lire en tête de leçon,
-> « Voir la carte » dans la bibliothèque, et le plan à trous, dans la leçon
-> comme dans la séance finale. Le reste fonctionne : restituer, localiser,
-> associer, remettre dans l'ordre. Le code des schémas est intact ;
-> repasser `WORK_DIAGRAMS` à `true` (`src/content/work.ts`) les réactive
-> partout. Les passages ci-dessous qui les décrivent (le plan à lire, le
-> plan à trous, « Voir la carte ») valent pour ce jour-là ; `question`, `summary`,
-> `reason` et `outcome` restent à écrire, l'association et la remise en ordre
-> s'en servent.
-
 ## Principe : on écrit le plan, pas les leçons
 
 L'unité ne porte qu'un champ `work` : l'arbre de l'œuvre (livres, blocs de
@@ -46,7 +34,6 @@ work:
       parts:
         - id: l2-1-5                # un bloc de chapitres
           label: chap. 1-5
-          question: Quelles sont les propriétés du pouvoir souverain ?
           parts:
             - id: l2-1              # un chapitre
               label: II, 1
@@ -78,76 +65,46 @@ Chaque partie (`parts`) porte :
 | `id` | identifiant, unique dans l'unité |
 | `label` | emplacement : « Livre II », « chap. 1-5 », « II, 3 » |
 | `title` | titre donné par l'auteur, tel quel (facultatif) |
-| `question` | question à laquelle répond un **grand** bloc, dans sa bulle : **affichée, jamais interrogée** |
-| `summary` | ce que la case d'un chapitre affirme, en réponse à la question de son bloc (« La volonté générale ne peut errer »), quand le titre de l'auteur ne le dit pas déjà |
-| `reason` | l'argument de l'auteur, sous l'affirmation, en gris, que la carte introduit par « car » (« car le pouvoir peut se transmettre, mais non la volonté ») ; écrit sans ce « car » |
-| `outcome` | ce qui découle d'une partie et mène à la suite, affiché dans un encadré pointillé sur la flèche qui en part (« Mais le peuple ne voit pas toujours son bien : il lui faut un guide ») |
+| `summary` | ce qu'un chapitre affirme (« La volonté générale ne peut errer »), quand le titre de l'auteur ne le dit pas déjà : ce que montrent l'association et la remise en ordre, **jamais interrogé** |
 | `rel` | relation avec la partie qui la précède au même niveau (jamais sur la première) |
 | `points` | thèses de la partie, phrases trouées (même format qu'un point de grammaire) |
 | `parts` | sous-parties |
 
 Une partie sans sous-partie doit porter au moins une thèse : elle n'aurait
-sinon rien à replacer dans le plan à trous.
+sinon rien à localiser.
 
-**La carte se lit comme un schéma de manuel**, et c'est ce que `question`,
-`summary` et `reason` doivent servir (ils ne sont jamais interrogés) :
-
-- **Une question par grand bloc seulement** (« chap. 1-5 : Quelles sont les
-  propriétés du pouvoir souverain ? », « chap. 7-12 : Comment le peuple
-  peut-il se donner de bonnes lois ? »). Un simple regroupement de chapitres
-  (1 à 3 de même plan, 4 et 5, 8 à 10) n'a pas de question, donc pas de
-  bulle : des questions emboîtées qui ne se répondent pas brouillent la
-  progression au lieu de la montrer.
-- **Chaque case répond à la question de son bloc.** Elle a pour titre, en
-  gras, l'emplacement et le titre de l'auteur (« chap. 3 · Si la volonté
-  générale peut errer ») ; quand ce titre n'est qu'un intitulé ou une
-  question, `summary` dit en mots simples ce que le chapitre affirme (« La
-  volonté générale ne peut errer »). Quand le titre l'affirme déjà (« Que la
-  souveraineté est inaliénable »), pas de `summary` : la case se répéterait.
-  Relire les cases d'un bloc à la suite de sa question doit donner le
-  raisonnement de l'auteur.
-- **Ce qui fait passer d'une partie à la suivante** (le problème que pose un
-  chapitre et que résout le bloc suivant) va dans `outcome`, sur la flèche,
-  pas dans la précision de la case : il n'appartient à aucun des deux.
-- **Deux styles seulement** : en gras, ce qui s'affirme (titre, affirmation) ;
-  en gris, ce qui le justifie. **L'argument (`reason`) est celui de
-  l'auteur**, pas une reformulation de l'affirmation : ce qui fait qu'elle
-  est vraie selon lui (« car qui veut la fin veut les moyens »). Il tient en
-  une ou deux lignes, en reprenant ses mots quand ils sont clairs, sans
-  guillemets (la carte n'est pas un relevé de citations).
-
-`content:check` signale un chapitre qui n'a ni `summary` ni `reason`.
+**`summary` dit en mots simples ce que le chapitre affirme**, quand le titre
+de l'auteur n'est qu'un intitulé ou une question (« Si la volonté générale
+peut errer » : « La volonté générale ne peut errer »). Quand le titre
+l'affirme déjà (« Que la souveraineté est inaliénable »), pas de `summary`.
+Relire les affirmations d'un livre à la suite doit donner le raisonnement de
+l'auteur.
 
 **Emplacements** : « II, 3 » pour un chapitre, « chap. 1-6 » pour un bloc.
-La carte, qui ne montre qu'un livre, écrit d'elle-même « chap. 3 » ; les
+L'association, qui ne montre qu'un livre, écrit d'elle-même « chap. 3 » ; les
 cartes de révision, qui reviennent seules, gardent « II, 3 ».
 
 ## Les relations
 
-Liste fermée. Elle décide de la forme du plan et du choix des exercices ;
-elle ne s'écrit jamais sur la carte, et ne fait l'objet d'aucun QCM « quel
-est ce lien ? ». Une flèche suffit : le lecteur voit l'enchaînement, le mot
-« conséquence » ou « limite » écrit dessus n'ajoutait que du texte.
+Liste fermée. Elle décide du choix des exercices (des chapitres de même plan
+forment une seule étape de la remise en ordre), et ne fait l'objet d'aucun
+QCM « quel est ce lien ? ».
 
-| `rel` | Sens | Dessin |
-|---|---|---|
-| `declinaison` | même plan : une autre face du même objet | éventail depuis la bulle du bloc : côte à côte sur ordinateur, suspendues à un rail sur téléphone |
-| `limite` | borne ce que la précédente vient de poser | flèche |
-| `application` | cas particulier, mise en œuvre | flèche |
-| `consequence` | se déduit de la précédente | flèche |
-| `probleme-solution` | résout la difficulté que la précédente fait surgir | flèche |
-| `changement-de-question` | ouvre une autre question | flèche |
-| `reprise` | reprend une idée déjà formulée, pour un autre usage | flèche |
-| `objection-reponse` | répond à une objection faite à la précédente | flèche |
+| `rel` | Sens |
+|---|---|
+| `declinaison` | même plan : une autre face du même objet |
+| `limite` | borne ce que la précédente vient de poser |
+| `application` | cas particulier, mise en œuvre |
+| `consequence` | se déduit de la précédente |
+| `probleme-solution` | résout la difficulté que la précédente fait surgir |
+| `changement-de-question` | ouvre une autre question |
+| `reprise` | reprend une idée déjà formulée, pour un autre usage |
+| `objection-reponse` | répond à une objection faite à la précédente |
 
 `rel` ne relie que deux voisines. Pour deux parties éloignées (le chapitre 6
-qui reprend une formule du chapitre 3), écrire un lien dans `links` : il se
-dessine en **flèche pointillée** qui les joint par la droite. N'en écrire que
-pour un lien qui se voit mal autrement : une longue courbe de plus entre deux
-blocs déjà reliés par des flèches n'apporte rien. Un lien que l'arbre dessine
-déjà (le chapitre 6 vers le chapitre 7, quand la flèche du chapitre 6 vers le
-bloc 7-12 le montre) n'est pas retracé : il ne sert alors qu'à porter sa
-carte.
+qui reprend une formule du chapitre 3), écrire un lien dans `links`, qui
+porte les cartes justifiant le lien ; sa carte revient en phrase à trou,
+située entre ses deux extrémités (« II, 3 → II, 6 »).
 
 ## Les thèses
 
@@ -155,10 +112,9 @@ Toutes les règles de `content/philosophie.md` s'appliquent : un seul `___`,
 une réponse unique et non paraphrasable, une phrase qui tient seule. Quelques
 précisions propres à l'unité-œuvre :
 
-- **La thèse doit se lire dans le plan.** Elle y est affichée complète,
-  réponse soulignée, à côté de ses voisines : la plus courte qui dise
-  vraiment ce que soutient le chapitre. Le détail (citation longue, exemple)
-  va dans `explanation`.
+- **La thèse se lit en entier quand on la localise**, réponse soulignée :
+  la plus courte qui dise vraiment ce que soutient le chapitre. Le détail
+  (citation longue, exemple) va dans `explanation`.
 - **Le mot troué ne répète pas le titre du chapitre**, sinon la réponse est
   donnée d'avance : sous « Que la souveraineté est inaliénable », trouer
   *volonté*, pas *inaliénable*.
@@ -202,50 +158,36 @@ Un rappel sert à la fois de **résumé** (l'idée directrice), de **plan** (un
 tableau, une ligne par chapitre ou paragraphe : sa thèse, son argument) et
 de **texte** (les formules à retenir, citées exactement : seulement celles
 des cartes ou d'une source fournie, jamais de mémoire). Il reprend ce que
-disent les thèses, `summary` et `reason`, et se clôt sur un piège (`! …`).
+disent les thèses et `summary`, et se clôt sur un piège (`! …`).
 Mêmes marqueurs qu'un rappel de leçon ; jamais d'italique dans un gras.
 
 ## Ce que le moteur en fait
 
 Une leçon par livre, qui suit l'ordre du plan :
 
-1. **Le plan**, à lire (première fois seulement) : le schéma du livre.
-2. **Bloc par bloc**, à la découverte, le rappel de chaque groupe avant sa
-   première partie (voir « Les rappels ») ; puis chaque thèse à **localiser** dans l'œuvre, dès la
-   première fois qu'on la rencontre (voir plus bas), puis les cartes des
-   liens qui aboutissent là ; ensuite une **association** entre les
-   chapitres du bloc et ce qu'ils affirment, et les **plans à trous** dont
-   les chapitres viennent d'être vus.
-3. **La remise en ordre** du raisonnement pour finir.
+1. **Bloc par bloc**, à la découverte, le rappel de chaque groupe avant sa
+   première partie (voir « Les rappels ») ; puis chaque thèse à
+   **localiser** dans l'œuvre, dès la première fois qu'on la rencontre
+   (voir plus bas), puis les cartes des liens qui aboutissent là ; ensuite
+   une **association** entre les chapitres du bloc et ce qu'ils affirment.
+2. **La remise en ordre** du raisonnement pour finir.
 
 Une unité-œuvre fait savoir *où* se trouve une idée, pas la citer au mot
 près (c'est le travail de l'unité de texte, `content/textes.md`) : la
 phrase à trou au clavier ne sert donc que de repli, pour une thèse sans
 emplacement propre (la carte d'un lien) ou sans voisin pour servir de
-leurre. Rejouée, la leçon saute la lecture ; chaque thèse continue de s'y
+leurre. Rejouée, la leçon saute les rappels ; chaque thèse continue de s'y
 localiser. La séance finale de l'unité se termine, pour chaque livre, par
-la remise en ordre puis tous ses plans à trous. En révision, chaque thèse
+sa remise en ordre. En révision, chaque thèse
 revient seule, avec son emplacement, et continue de s'y localiser.
 
 **Repérage seul** : l'interrupteur « Repérage », dans l'en-tête de toute
 séance qui en contient (leçon, révision, séance finale), saute en direct ce
-qui ne fait pas associer une idée à une référence : la remise en ordre, le
-plan à trous, et la phrase à trou de repli (cartes de lien, thèse sans
+qui ne fait pas associer une idée à une référence : la remise en ordre, et
+la phrase à trou de repli (cartes de lien, thèse sans
 voisin). Restent la localisation et l'association. Réglage retenu pour les
 séances suivantes ; les cartes de lien, jamais jouées tant qu'il est
 allumé, restent dues en révision.
-
-**Plan à trous** : le schéma du livre, vidé de son texte : restent les
-bulles et leurs questions, et les cases des chapitres réduites à leur numéro
-(« chap. 3 », sans le titre, qui donnerait souvent la réponse). On y replace
-ce que dit chaque chapitre d'un même niveau du schéma : son argument (« car
-… »), à défaut son affirmation, plus courts que les thèses et plus
-essentiels. Une manche par niveau : des chapitres de même plan en forment
-une (chapitres 1 à 3, 8 à 10 du livre II) ; les chapitres qui s'enchaînent
-entre deux tels groupes en forment une autre (4 à 7, puis 11 et 12), coupée
-en manches égales au-delà de quatre ; un chapitre qui resterait seul rejoint
-la manche voisine. Chaque manche arrive dans la leçon après le bloc de son
-dernier chapitre. Un chapitre manqué compte pour ses thèses.
 
 **Localiser** : la thèse est donnée en entier, et on choisit son emplacement
 parmi quatre (« II, 3 », « II, 4 »…), sans les titres des chapitres, qui
@@ -260,8 +202,8 @@ la leçon, à partir de la troisième fois qu'on la joue. Sont acceptés « II,
 4 », « II 4 », « 2, 4 », « livre II chap. 4 », et le chapitre seul (« 4 »,
 « chap. 4 », « chapitre 4 ») : le livre va de soi, mais s'il est donné, il
 doit être le bon.
-Localiser, restituer et replacer dans le plan sont trois façons d'interroger
-la même thèse : une seule carte de révision espacée pour les trois.
+Localiser et restituer sont deux façons d'interroger la même thèse : une
+seule carte de révision espacée pour les deux.
 
 **Associer** : les chapitres d'un bloc (« chap. 3 ») à relier à ce qu'ils
 affirment (« La volonté générale ne peut errer », à défaut le titre de
@@ -279,9 +221,3 @@ l'auteur) ; son emplacement ne se révèle qu'une fois placée, sans quoi il
 suffirait de ranger des numéros. Une erreur se signale aussitôt, et compte
 manquée pour les thèses des chapitres de l'étape attendue. Un livre de moins
 de trois étapes n'a pas de remise en ordre.
-
-Depuis la bibliothèque, **« Voir la carte »** ouvre le plan de toute l'œuvre
-dessiné comme un schéma (bulles des blocs, cases des chapitres, flèches),
-chaque case colorée selon ce qui en est su et dépliable sur ses thèses. Le
-plan lu avant une leçon est le même dessin ; le plan à trous aussi, vidé de
-son texte.

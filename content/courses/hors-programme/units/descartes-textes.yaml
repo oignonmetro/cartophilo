@@ -23,7 +23,6 @@ work:
       parts:
         - id: b-discours
           label: "Discours, I-VI"
-          question: "Que dit chacune des six parties du Discours ?"
           parts:
             - id: d-dm1
               label: "Discours de la méthode, I"
@@ -162,7 +161,6 @@ work:
       parts:
         - id: b-meditations
           label: "Méditations, I-VI"
-          question: "Que fait chacune des six Méditations ?"
           parts:
             - id: d-m1
               label: "Méditations métaphysiques, I"
@@ -283,7 +281,6 @@ work:
                   answer: "entendement"
         - id: b-reponses
           label: "Réponses aux deuxièmes objections"
-          question: "Que répond Descartes aux deuxièmes objections ?"
           rel: objection-reponse
           parts:
             - id: d-r1
@@ -323,7 +320,6 @@ work:
       parts:
         - id: b-regles
           label: "Règles II-IV"
-          question: "Que faut-il pour diriger son esprit ?"
           parts:
             - id: d-rg2
               label: "Règles pour la direction de l'esprit, II"
@@ -389,7 +385,6 @@ work:
                   answer: "heureux"
         - id: b-principes
           label: "Principes"
-          question: "Que posent les Principes de la philosophie ?"
           rel: declinaison
           parts:
             - id: d-pp
@@ -448,7 +443,6 @@ work:
                   alt: ["étendue"]
         - id: b-lettres
           label: "Lettres"
-          question: "Que précisent les lettres ?"
           rel: declinaison
           parts:
             - id: d-lm

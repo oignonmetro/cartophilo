@@ -257,27 +257,14 @@ export interface WorkNode {
   label: string
   /** Titre donné par l'auteur (« Si la volonté générale peut errer »). */
   title?: string
-  /** Question à laquelle répond un bloc : affichée en tête, jamais interrogée. */
-  question?: string
   /**
-   * Ce que la case d'un chapitre affirme dans la carte, en réponse à la
-   * question de son bloc (« La souveraineté est inaliénable ») : une phrase
-   * claire, pas le titre de l'auteur, qui n'est souvent qu'un intitulé
-   * (« Si la volonté générale peut errer »). Jamais interrogée.
+   * Ce qu'un chapitre affirme (« La souveraineté est inaliénable ») : une
+   * phrase claire, pas le titre de l'auteur, qui n'est souvent qu'un intitulé
+   * (« Si la volonté générale peut errer »). C'est ce que l'association et la
+   * remise en ordre montrent du chapitre (voir `headlineOf`) ; jamais
+   * interrogée.
    */
   summary?: string
-  /**
-   * L'argument de l'auteur, sous l'affirmation, introduit par « car » à
-   * l'affichage : « car le pouvoir peut se transmettre, mais non la volonté ».
-   * Écrit sans ce « car ». Jamais interrogé.
-   */
-  reason?: string
-  /**
-   * Ce qui découle de la partie et mène à la suite, affiché sur la flèche qui
-   * en part (après le chapitre 6 : « mais le peuple ne voit pas toujours son
-   * bien : il lui faut un guide »). Jamais interrogé.
-   */
-  outcome?: string
   rel?: WorkRelation
   points: GrammarPoint[]
   parts: WorkNode[]
@@ -287,10 +274,7 @@ export const workNodeSchema: z.ZodType<WorkNode, unknown> = z.object({
   id: slug,
   label: z.string().min(1),
   title: z.string().min(1).optional(),
-  question: z.string().min(1).optional(),
   summary: z.string().min(1).optional(),
-  reason: z.string().min(1).optional(),
-  outcome: z.string().min(1).optional(),
   rel: workRelationSchema.optional(),
   points: z.array(grammarPointSchema).default([]),
   parts: z.array(z.lazy(() => workNodeSchema)).default([]),

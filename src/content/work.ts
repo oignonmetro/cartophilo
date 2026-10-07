@@ -2,18 +2,8 @@ import type { GrammarPoint, Work, WorkContext, WorkLink, WorkNode, WorkRelation 
 
 /**
  * Parcours du plan d'une unité-œuvre (voir `workSchema`) : de quoi dériver ses
- * leçons, retrouver où se trouve une thèse, et dessiner les relations.
+ * leçons, et retrouver où se trouve une thèse.
  */
-
-/**
- * Les schémas de l'unité-œuvre, archivés le 2026-09-29 : le plan dessiné (lu
- * en tête de leçon, `work-map`, et ouvert par « Voir la carte »), et le plan
- * à trous qui s'y joue (`work-plan`). Tout leur code reste en place
- * (`WorkTree`, `WorkMapNote`, `WorkPlan`, `WorkSheet`, `workPlansFor`) :
- * repasser ce drapeau à `true` les réactive partout. Sans eux, l'unité-œuvre
- * fait restituer, localiser, associer et remettre dans l'ordre.
- */
-export const WORK_DIAGRAMS = false
 
 /** Libellé affiché de chaque relation, sans ponctuation expressive. */
 export const RELATION_LABELS: Record<WorkRelation, string> = {
@@ -295,61 +285,7 @@ export function threadOf(node: WorkNode): WorkNode[][] {
   return node.parts.flatMap(threadOf)
 }
 
-/** Chapitres par manche de plan à trous : au-delà, une suite de chapitres se coupe en manches égales. */
-const PLAN_ROUND_MAX = 4
-
-/**
- * Les manches du plan à trous d'une partie : chacune porte sur un même niveau
- * du schéma, là où les chapitres se ressemblent assez pour qu'on les
- * confonde. Des chapitres de même plan forment une manche (chapitres 1 à 3,
- * 8 à 10 du livre II) ; les chapitres qui s'enchaînent entre deux tels
- * groupes en forment une autre (4 à 7, puis 11 et 12), coupée en manches
- * égales au-delà de quatre. Un chapitre qui resterait seul rejoint la manche
- * voisine : seul, il n'aurait rien à différencier.
- */
-export function planRoundsOf(root: WorkNode): WorkNode[][] {
-  const rounds: WorkNode[][] = []
-  let run: WorkNode[] = []
-  const flush = () => {
-    const count = Math.ceil(run.length / PLAN_ROUND_MAX)
-    const size = Math.ceil(run.length / Math.max(count, 1))
-    for (let start = 0; start < run.length; start += size) rounds.push(run.slice(start, start + size))
-    run = []
-  }
-  const visit = (node: WorkNode) => {
-    if (isLeaf(node)) {
-      if (node.points.length > 0) run.push(node)
-      return
-    }
-    const parallel = node.parts.length > 1 && node.parts.slice(1).every((part) => part.rel === 'declinaison')
-    if (parallel && node.parts.every(isLeaf)) {
-      flush()
-      rounds.push(node.parts.filter((part) => part.points.length > 0))
-      return
-    }
-    node.parts.forEach(visit)
-  }
-  visit(root)
-  flush()
-
-  // Une manche d'un seul chapitre rejoint la précédente (la suivante, en tête).
-  const merged: WorkNode[][] = []
-  for (const round of rounds) {
-    if (round.length === 0) continue
-    const last = merged[merged.length - 1]
-    if (round.length === 1 && last) last.push(...round)
-    else merged.push([...round])
-  }
-  if (merged.length > 1 && merged[0]!.length === 1) merged[1]!.unshift(...merged.shift()!)
-  return merged
-}
-
-/** Ce que le plan à trous fait replacer dans la case d'un chapitre : son argument, à défaut son affirmation. */
-export function planTextOf(node: WorkNode): string {
-  return node.reason ? `car ${node.reason}` : headlineOf(node)
-}
-
-/** Ce que la carte affirme d'un chapitre : son affirmation, à défaut le titre de l'auteur. */
+/** Ce qu'un chapitre affirme : son affirmation, à défaut le titre de l'auteur. */
 export function headlineOf(node: WorkNode): string {
   return node.summary ?? node.title ?? node.label
 }
@@ -415,43 +351,6 @@ export function workContextOf(work: Work, pointId: string): WorkContext | undefi
     return { label: `${from?.label ?? link.from} → ${to?.label ?? link.to}`, title: RELATION_LABELS[link.rel] }
   }
   return undefined
-}
-
-/** Les parties qui mènent de la racine jusqu'à `id`, elle comprise. */
-function pathTo(nodes: readonly WorkNode[], id: string): WorkNode[] | null {
-  for (const node of nodes) {
-    if (node.id === id) return [node]
-    const rest = pathTo(node.parts, id)
-    if (rest) return [node, ...rest]
-  }
-  return null
-}
-
-/**
- * Un lien que le plan dessine déjà : la partie d'arrivée, ou l'un des blocs
- * qui la contiennent, suit immédiatement une partie qui contient celle de
- * départ, avec la même relation. Le lien 6 → 7 du *Contrat social* n'a pas
- * besoin d'être signalé à part quand la flèche du chapitre 6 vers le bloc
- * des chapitres 7 à 12 le montre déjà : il n'existe que pour porter sa carte.
- */
-export function isDrawn(work: Work, link: WorkLink): boolean {
-  const path = pathTo(work.parts, link.to)
-  if (!path) return false
-  return path.some((node, depth) => {
-    const siblings = depth === 0 ? work.parts : path[depth - 1]!.parts
-    const previous = siblings[siblings.indexOf(node) - 1]
-    return node.rel === link.rel && previous !== undefined && nodesOf(previous).some((each) => each.id === link.from)
-  })
-}
-
-/** Les liens éloignés qui partent de ou arrivent à une partie, sauf ceux que le plan dessine déjà. */
-export function linksOf(work: Work, nodeId: string): { link: WorkLink; other: WorkNode | null; outgoing: boolean }[] {
-  return work.links
-    .filter((link) => (link.from === nodeId || link.to === nodeId) && !isDrawn(work, link))
-    .map((link) => {
-      const outgoing = link.from === nodeId
-      return { link, outgoing, other: findNode(work, outgoing ? link.to : link.from) }
-    })
 }
 
 /**

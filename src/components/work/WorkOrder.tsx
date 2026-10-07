@@ -13,7 +13,7 @@ import { useSessionSounds } from '@/components/session/useSessionSounds'
  * qu'elle affirme ; son emplacement (« chap. 4 ») ne se révèle qu'une fois
  * placée, sans quoi il suffirait de ranger des numéros.
  *
- * Même mécanique que le plan à trous (voir `WorkPlan`) : pas de
+ * Même mécanique que le tableau à trous (voir `TableBank`) : pas de
  * glisser-déposer, et une erreur se signale aussitôt, la carte refusée
  * tremblant ; l'étape attendue compte alors manquée. Une fois tout placé, le
  * fil complet reste affiché, à relire d'un trait.
