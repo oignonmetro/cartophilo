@@ -250,6 +250,8 @@ export const treatiseEntrySchema = z.object({
   numberInEnnead: z.number().int().min(1).max(9),
   /** Rang chronologique de rédaction, 1 à 54 (voir la Vie de Plotin). */
   chrono: z.number().int().min(1).max(54),
+  /** Traité mis en gras dans l'index (les plus importants, d'après la table de référence). */
+  highlight: z.boolean().optional(),
   /** Résumé affiché au clic ; absent tant qu'il n'a pas encore été rédigé. */
   summary: z.string().optional(),
 })

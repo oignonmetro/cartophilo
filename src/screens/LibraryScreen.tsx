@@ -976,7 +976,9 @@ function TreatiseIndexView({
                       <span className={`shrink-0 text-xs font-black ${tone.text}`}>
                         {order === 'chrono' ? entry.chrono : `${ENNEAD_NUMERALS[entry.ennead - 1]}, ${entry.numberInEnnead}`}
                       </span>
-                      <span className="flex-1 text-sm leading-snug font-bold text-ink">{entry.title}</span>
+                      <span className={`flex-1 text-sm leading-snug text-ink ${entry.highlight ? 'font-black' : 'font-normal'}`}>
+                        {entry.title}
+                      </span>
                       <span
                         className="shrink-0 text-[0.65rem] font-bold text-ink-faint"
                         title={order === 'chrono' ? "Place chez Porphyre (Ennéade, rang)" : 'Rang chronologique de rédaction'}
