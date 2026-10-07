@@ -51,6 +51,10 @@ lessons:
     sentence: "Dans le *Parménide*, la conversation entre Parménide, Zénon et le jeune Socrate est récitée par ___, demi-frère de Platon, qui l'a apprise de Pythodore."
     answer: "Antiphon"
     alt: []
+  - id: platon-parmenide-i1-p12
+    sentence: "Dans le *Parménide*, Antiphon raconte la conversation entre Parménide, Zénon et le jeune Socrate que ___ lui a rapporté."
+    answer: "Pythodore"
+    alt: []
   - id: platon-parmenide-i1-p4
     sentence: "Parménide et Zénon sont venus à Athènes pour la fête des Grandes ___, quand le jeune Socrate vient écouter Zénon lire son livre."
     answer: "Panathénées"
@@ -153,8 +157,8 @@ lessons:
     | {teal}Séparation{/teal} | le F est en lui-même et par lui-même : il est séparé de ce qui en participe, et donc non identique à ces choses | *Phédon*, 100b ; *République*, 476b |
     | {coral}Impureté des sensibles{/coral} | les choses sensibles peuvent avoir des propriétés contraires | *Parménide*, 129c |
     | {coral}Pureté des Idées{/coral} | une Idée ne peut avoir de propriétés contraires | *Parménide*, 129b-c |
-    | {violet}Un-sur-plusieurs{/violet} | pour toute pluralité de choses F, il y a une Idée du F dont elles participent toutes | *République*, 596a |
-    | {violet}Unicité{/violet} | pour chaque propriété F, il y a exactement une Idée du F | *République*, 597c (argument du « troisième lit ») |
+    | {violet}Un-au-dessus-de-plusieurs{/violet} | pour toute pluralité de choses F, il y a une Idée du F dont elles participent toutes | *République*, 596a |
+    | {violet}Unicité{/violet} | pour chaque propriété F, il y a exactement une et une seule Idée du F | *République*, 597c (argument du « troisième lit ») |
     | {amber}Auto-prédication{/amber} | le F est lui-même F : le Beau est beau, le Grand est grand | *Hippias majeur*, *Phédon* |
     | {amber}Unité{/amber} | chaque Idée est une | *République*, 476a, 524b |
     | Non-identité | aucune Idée n'est identique à ce qui en participe | conséquence de la Séparation |
@@ -164,29 +168,58 @@ lessons:
     **Deux principes de plus servent dans les objections** : rien de F ne peut causer chez une chose la propriété contraire de F (on ne devient pas grand par du petit, *Phédon*, 101b) : c'est le principe **pas de causalité par les contraires** ; et une chose qui a plusieurs parties est par là même plusieurs.
 
     ! Auto-prédication et pureté des Idées se combinent : si le Grand est grand, et qu'il ne peut avoir de propriété contraire, alors le Grand ne peut __en aucun sens__ être petit.
+  tables:
+  - table: principe-enonce-source
+    exercises:
+    - {kind: bank, column: Énoncé}
+    - {kind: bank, column: Principe}
+    - {kind: bank, column: Énoncé}
+    - {kind: bank, column: Principe}
+    - {kind: cell, column: Principe}
+    - {kind: cell, column: Source, row: Auto-prédication}
+    - {kind: cell, column: Source, row: Impureté des sensibles}
+    - {kind: cell, column: Source, row: Pureté des Idées}
+    - {kind: cell, column: Source, row: Un-au-dessus-de-plusieurs}
+    - {kind: cell, column: Source, row: Unicité}
   points:
   - id: platon-parmenide-i3-p1
-    sentence: "Principe de ___ : les choses F (autres que le F) sont F parce qu'elles participent du F."
+    sentence: "Principe de ___ : les choses F (autres que la Forme F) sont F parce qu'elles participent de la Forme F."
     answer: "Causalité"
     alt: ["causalité"]
   - id: platon-parmenide-i3-p2
-    sentence: "Principe de ___ : le F est en lui-même et par lui-même, distinct et non identique aux choses qui en participent."
+    sentence: "Principe de ___ : une Forme est *en elle-même* et *par elle-même*, __distinct et non identique aux choses qui en participent__."
     answer: "Séparation"
     alt: ["séparation"]
   - id: platon-parmenide-i3-p3
-    sentence: "Principe dit de l'« un-sur-___ » : pour toute pluralité de choses F, il y a une Idée du F dont chacune participe."
+    sentence: "Principe dit de l'« un-au-dessus-de-___ » : pour toute pluralité de choses F, il y a une Idée du F dont chacune participe."
     answer: "plusieurs"
     alt: []
   - id: platon-parmenide-i3-p4
-    sentence: "Principe d'___ : pour chaque propriété F, il y a exactement une Idée du F, comme le montre l'argument du « troisième lit » de la *République*."
+    sentence: "Principe d'___ : pour chaque propriété F, il y a exactement une forme qui lui correspond, comme le montre l'argument du « troisième lit » de *La République* (livre X, 597c)."
     answer: "Unicité"
     alt: ["unicité"]
+  - id: platon-parmenide-i3-p11
+    sentence: "Selon le **principe d'Unicité**, il appartient au concept de Forme d'être ___
+
+      pour tout ce qu'elle subsume, et s'il devait en surgir plus d'une, alors
+
+      nécessairement, une troisième surgirait aussi pour les unifier."
+    answer: "unique"
+    alt: []
+  - id: platon-parmenide-i3-p12
+    sentence: "Dans le livre ___ de *La République* (en 597c), Socrate démontre le **principe d'Unicité** par **l'argument du troisième lit** : il ne peut y avoir qu'une seule Forme du lit, car s'il y en avait ne serait-ce que deux, il faudrait qu'il y en ait une troisième pour qu'elles soient toutes les deux des Formes du lit. Sans ce troisième terme, elles ne seraient pas les Formes d'une même chose."
+    answer: "X"
+    alt: []
+  - id: platon-parmenide-i3-p13
+    sentence: "Dans le livre X de *La République* (en ___), Socrate démontre le **principe d'Unicité** par **l'argument du troisième lit** : il ne peut y avoir qu'une seule Forme du lit, car s'il y en avait ne serait-ce que deux, il faudrait qu'il y en ait une troisième pour qu'elles soient toutes les deux des Formes du lit. Sans ce troisième terme, elles ne seraient pas les Formes d'une même chose."
+    answer: "597c"
+    alt: []
   - id: platon-parmenide-i3-p5
-    sentence: "Principe d'___ : le F est lui-même F ; le Beau est beau, le Grand est grand."
+    sentence: "Principe d'___ : une Forme a la propriété qu'elle est (ex : le Beau est beau, le Grand est grand ...)"
     answer: "auto-prédication"
     alt: ["Auto-prédication", "autoprédication"]
   - id: platon-parmenide-i3-p6
-    sentence: "Principe d'___ : chaque Idée est une, au sens où elle se compte comme une chose, de même que Socrate est un parmi les sept présents."
+    sentence: "Principe d'___ : chaque Forme est une, au sens où elle se compte comme *une *chose, de même que Socrate est un parmi les sept présents."
     answer: "Unité"
     alt: ["unité"]
   - id: platon-parmenide-i3-p7
@@ -198,12 +231,12 @@ lessons:
     answer: "non-identité"
     alt: ["Non-identité", "non identité"]
   - id: platon-parmenide-i3-p9
-    sentence: "Dans le *Phédon* (101b), Socrate juge monstrueux qu'une chose devienne plus grande par quelque chose de petit : c'est le principe selon lequel il n'y a pas de causalité par les ___."
+    sentence: "Dans le *Phédon* (101b), Socrate juge monstrueux qu'une chose devienne plus grande par quelque chose de petit : c'est le principe selon lequel il n'y a pas de __causalité __par les ___."
     answer: "contraires"
     alt: []
   - id: platon-parmenide-i3-p10
-    sentence: "Dans la *République*, Platon déduit l'Unicité des Idées de l'un-sur-plusieurs par l'argument dit du « troisième ___ » (597c)."
-    answer: "lit"
+    sentence: "Dans *La République*, Platon déduit l'Unicité des Idées de l'un-au-dessus-de-plusieurs par l'argument dit du « ___ » (597c)."
+    answer: "troisième lit"
     alt: []
 - id: platon-parmenide-i4
   title: "L'étendue des Idées (130a-e)"
