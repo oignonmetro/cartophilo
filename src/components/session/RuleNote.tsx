@@ -172,7 +172,7 @@ export function NoteTable({
         </colgroup>
         <thead>
           <tr>
-            <th className={`${cell} text-left align-bottom font-black ${tableCellSize(block.corner)} ${tone.label}`}>
+            <th className={`${cell} text-center align-bottom font-black ${tableCellSize(block.corner)} ${tone.label}`}>
               <Rich text={block.corner} />
             </th>
             {block.columns.map((column, i) => (
@@ -185,7 +185,7 @@ export function NoteTable({
         <tbody>
           {block.rows.map((row, i) => (
             <tr key={i} className="border-t border-ink/8">
-              <th className={`${cell} text-left align-top font-black ${tableCellSize(row.label)} ${tone.label}`}>
+              <th className={`${cell} text-center align-top font-black ${tableCellSize(row.label)} ${tone.label}`}>
                 {cellContent(i, 0, row.label)}
               </th>
               {row.cells.map((value, j) => (
