@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { CourseProvider } from '@/content/CourseProvider'
 import { HomeScreen } from '@/screens/HomeScreen'
+import { NotesReaderScreen } from '@/screens/NotesReaderScreen'
 import { LessonRoute } from '@/screens/LessonRoute'
 import { ReviewRoute } from '@/screens/ReviewRoute'
 import { StepRoute } from '@/screens/StepRoute'
@@ -31,6 +32,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/lecon/:lessonId" element={<LessonRoute />} />
+          <Route path="/fiches/:unitId" element={<NotesReaderScreen />} />
           <Route path="/revision" element={<ReviewRoute />} />
           <Route path="/etape/:unitId/:stepId" element={<StepRoute />} />
           <Route path="/profil" element={<ProfileScreen />} />

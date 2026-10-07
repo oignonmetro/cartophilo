@@ -302,6 +302,7 @@ export function RuleNote({
   exercise,
   hideNotes = false,
   onNext,
+  footer,
 }: {
   exercise: RuleExercise
   /**
@@ -311,6 +312,11 @@ export function RuleNote({
    */
   hideNotes?: boolean
   onNext: () => void
+  /**
+   * Remplace le bouton « C'est parti » (et son raccourci Entrée) : le lecteur
+   * de fiches y met sa propre navigation, sans séance derrière.
+   */
+  footer?: ReactNode
 }) {
   const notes = hideNotes && exercise.passage?.text ? '' : exercise.notes
   const tone = TONES[exercise.topic]
@@ -319,7 +325,7 @@ export function RuleNote({
   // Raccourci clavier, réservé à l'ordinateur (voir `useIsDesktop`) : Entrée
   // enchaîne sur les exercices, comme un clic sur « C'est parti ».
   useEffect(() => {
-    if (!isDesktop) return
+    if (!isDesktop || footer) return
     function onKeyDown(event: KeyboardEvent) {
       if (event.key !== 'Enter') return
       event.preventDefault()
@@ -327,7 +333,7 @@ export function RuleNote({
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [isDesktop, onNext])
+  }, [isDesktop, footer, onNext])
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">
@@ -388,9 +394,11 @@ export function RuleNote({
       </div>
 
       <div className="w-full max-w-lg shrink-0 self-center pt-1 md:max-w-3xl">
-        <Button block tone={tone.button} onClick={onNext}>
-          C'est parti
-        </Button>
+        {footer ?? (
+          <Button block tone={tone.button} onClick={onNext}>
+            C'est parti
+          </Button>
+        )}
       </div>
     </div>
   )

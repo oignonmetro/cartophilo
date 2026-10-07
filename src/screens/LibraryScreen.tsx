@@ -440,6 +440,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                       done={doneNodes(unit, lessons, steps)}
                       onOpen={() => openUnit(unit)}
                       reader={readerOf(unit)}
+                      onReadNotes={hasNotes(unit) ? () => navigate(`/fiches/${unit.id}`) : undefined}
                       compact
                     />
                   ))}
@@ -453,6 +454,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                   done={doneNodes(entry.unit, lessons, steps)}
                   onOpen={() => openUnit(entry.unit)}
                   reader={readerOf(entry.unit)}
+                  onReadNotes={hasNotes(entry.unit) ? () => navigate(`/fiches/${entry.unit.id}`) : undefined}
                 />
               ),
             )}
@@ -628,6 +630,11 @@ function TrackSummary({ track, known, seen }: { track: Track; known: number; see
   return <p className="px-1 text-sm leading-snug font-extrabold text-ink">{track.subtitle}</p>
 }
 
+/** L'unité a-t-elle au moins un rappel à relire ? */
+function hasNotes(unit: Unit): boolean {
+  return unit.lessons.some((lesson) => 'notes' in lesson && Boolean(lesson.notes?.trim()))
+}
+
 function UnitCard({
   unit,
   tone,
@@ -635,6 +642,7 @@ function UnitCard({
   done,
   onOpen,
   reader,
+  onReadNotes,
   compact = false,
 }: {
   unit: Unit
@@ -649,6 +657,8 @@ function UnitCard({
    * unité-œuvre (voir `PlanSheet`).
    */
   reader?: { label: string; icon: string; onRead: () => void }
+  /** Ouvre le lecteur de fiches (voir `NotesReaderScreen`), quand l'unité a des rappels. */
+  onReadNotes?: () => void
   /**
    * Unité membre d'un groupe déplié (voir `GroupSection`) : une carte plus
    * discrète (relief atténué, padding et texte resserrés, anneau plus
@@ -696,15 +706,31 @@ function UnitCard({
           <ChevronLeftIcon size={compact ? 16 : 20} />
         </span>
       </button>
-      {reader && (
-        <button
-          type="button"
-          onClick={reader.onRead}
-          className={`flex w-full items-center justify-center gap-2 border-t-2 border-line py-2.5 text-xs font-black tracking-wide uppercase ${tone.text} transition-colors hover:bg-ink/5`}
-        >
-          <UnitIcon name={reader.icon} size={16} />
-          {reader.label}
-        </button>
+      {(reader || onReadNotes) && (
+        <div className="flex border-t-2 border-line">
+          {reader && (
+            <button
+              type="button"
+              onClick={reader.onRead}
+              className={`flex flex-1 items-center justify-center gap-2 py-2.5 text-xs font-black tracking-wide uppercase ${tone.text} transition-colors hover:bg-ink/5`}
+            >
+              <UnitIcon name={reader.icon} size={16} />
+              {reader.label}
+            </button>
+          )}
+          {onReadNotes && (
+            <button
+              type="button"
+              onClick={onReadNotes}
+              className={`flex flex-1 items-center justify-center gap-2 py-2.5 text-xs font-black tracking-wide uppercase ${tone.text} transition-colors hover:bg-ink/5 ${
+                reader ? 'border-l-2 border-line' : ''
+              }`}
+            >
+              <UnitIcon name="book" size={16} />
+              Lire les fiches
+            </button>
+          )}
+        </div>
       )}
     </section>
   )
