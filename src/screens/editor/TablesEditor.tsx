@@ -55,13 +55,6 @@ const CHOICE_LABEL: Record<TableExerciseChoice['kind'], string> = {
   cell: 'Case seule',
 }
 
-/** Ce que demande chaque exercice, et la colonne qu'il vise. */
-const CHOICE_HELP: Record<TableExerciseChoice['kind'], string> = {
-  order: 'les lignes à remettre dans l’ordre ; la case de cette colonne se révèle une fois la ligne placée',
-  bank: 'cette colonne vidée, ses cases à replacer depuis une banque',
-  cell: 'une case de cette colonne, à écrire ou à révéler',
-}
-
 /** Une case du tableau, la ligne comptée sous l'en-tête. */
 type CellRef = { row: number; column: number }
 
@@ -918,9 +911,7 @@ function ChoicesPanel({
                   </select>
                 </>
               )}
-              <span className="min-w-40 flex-1 text-ink-faint">
-                {choice.kind === 'cell' ? `${CHOICE_HELP.cell} Se règle sur le tableau de l’aperçu (Exo ${at + 1}).` : CHOICE_HELP[choice.kind]}
-              </span>
+              <span className="flex-1" />
               {!playable(choice) && (
                 <span className="font-bold text-amber-deep">
                   {choice.kind === 'cell' && choice.row !== undefined ? 'Cette case est vide.' : CHOICE_EMPTY[choice.kind]}
