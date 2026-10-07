@@ -4,7 +4,10 @@ import { PassageText } from '@/components/PassageText'
 import type { NoteColor } from '@/content/schema'
 import { ImportSplitDialog, type ImportTarget } from './ImportSplitDialog'
 import { PassageEditor } from './PassageEditor'
-import { tableSpans } from './tableGrid'
+import { lessonTables } from '@/content/course'
+import { tableExercises } from '@/engine/exercises'
+import { createRng } from '@/engine/rng'
+import type { Lesson } from '@/content/schema'
 import { TablesEditor } from './TablesEditor'
 import { formattingShortcut } from './formatting'
 import { isCitation } from './textUnit'
@@ -85,6 +88,20 @@ function groupUnits(units: TreeUnit[]): { label: string | null; units: TreeUnit[
     else out.push({ label: unit.group, units: [unit] })
   }
   return out
+}
+
+/**
+ * Nombre d'exercices que les tableaux du rappel donneront en séance (voir
+ * `tableExercises`) : plus parlant que le nombre de tableaux, presque toujours
+ * un seul par leçon. Un tableau sans case à remplir n'en donne aucun.
+ */
+function tableExerciseCount(lessonId: string, title: string, notes: string, settings: LessonTableDTO[]): number {
+  try {
+    const lesson = { kind: 'grammar', id: lessonId, title, notes, points: [], tables: settings } as unknown as Lesson
+    return tableExercises(title, lessonTables(lesson), createRng(1)).length
+  } catch {
+    return 0
+  }
 }
 
 export default function ContentEditorScreen() {
@@ -348,7 +365,7 @@ export default function ContentEditorScreen() {
               Exercices{points ? ` (${points.length})` : ''}
             </ViewTabButton>
             <ViewTabButton active={view === 'tables'} onClick={() => setView('tables')}>
-              Tableaux ({tableSpans(notes).length})
+              Tableaux ({tableExerciseCount(selection.lesson, title, notes, tables)})
             </ViewTabButton>
           </div>
         )}
