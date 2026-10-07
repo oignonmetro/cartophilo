@@ -92,7 +92,9 @@ pas seulement Glossaire et Repérage.
   structure (une colonne de repères, « 126a-128e », « II, 3 », rangée dans
   l'ordre du texte, voir `tableStructure`) devient un exercice de
   repérage : ses moments à remettre dans l'ordre, puis ses repères à
-  replacer, puis un repère seul.
+  replacer, puis un repère seul. Dans l'éditeur visuel (`/#/editeur`),
+  l'onglet Tableaux les édite en grille, dit ce que chacun deviendra (et
+  pourquoi un plan n'est pas reconnu) et en joue un aperçu.
 - Le moteur de vocabulaire (`kind: vocab`, plus aucun cours ne l'emploie
   depuis le retrait du cours `demo`) n'a plus d'écran de présentation à part (l'ancienne
   auto-évaluation « nouveau / incertain / je savais ») : un mot rencontre

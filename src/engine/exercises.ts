@@ -1479,7 +1479,7 @@ export function locationKey(text: string): number[] | null {
   return null
 }
 
-function compareKeys(a: readonly number[], b: readonly number[]): number {
+export function compareKeys(a: readonly number[], b: readonly number[]): number {
   for (let i = 0; i < Math.max(a.length, b.length); i++) {
     const diff = (a[i] ?? 0) - (b[i] ?? 0)
     if (diff !== 0) return diff

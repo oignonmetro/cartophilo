@@ -4,6 +4,9 @@ import { PassageText } from '@/components/PassageText'
 import type { NoteColor } from '@/content/schema'
 import { ImportSplitDialog, type ImportTarget } from './ImportSplitDialog'
 import { PassageEditor } from './PassageEditor'
+import { tableSpans } from './tableGrid'
+import { TablesEditor } from './TablesEditor'
+import { formattingShortcut } from './formatting'
 import { isCitation } from './textUnit'
 import type { PassageDTO, PointDTO, SkippedRowDTO, TrackKind, TreeCourse, TreeLesson, TreeTrack, TreeUnit } from './types'
 import { NewLessonDialog, NewUnitDialog, UnitSettingsDialog } from './UnitDialogs'
@@ -90,7 +93,7 @@ export default function ContentEditorScreen() {
 
   const [selection, setSelection] = useState<Selection | null>(null)
   const [trackKind, setTrackKind] = useState<TrackKind>('grammar')
-  const [view, setView] = useState<'notes' | 'text' | 'points'>('notes')
+  const [view, setView] = useState<'notes' | 'text' | 'points' | 'tables'>('notes')
   const [dialog, setDialog] = useState<Dialog | null>(null)
   // Paragraphe cité d'une leçon de texte ; `null` pour une leçon classique.
   const [passage, setPassage] = useState<PassageDTO | null>(null)
@@ -337,6 +340,9 @@ export default function ContentEditorScreen() {
             <ViewTabButton active={view === 'points'} onClick={() => setView('points')}>
               Exercices{points ? ` (${points.length})` : ''}
             </ViewTabButton>
+            <ViewTabButton active={view === 'tables'} onClick={() => setView('tables')}>
+              Tableaux ({tableSpans(notes).length})
+            </ViewTabButton>
           </div>
         )}
 
@@ -521,6 +527,17 @@ export default function ContentEditorScreen() {
           />
         )}
 
+        {selection && view === 'tables' && (
+          <TablesEditor
+            key={selection.lesson}
+            lessonId={selection.lesson}
+            title={title}
+            notes={notes}
+            originalNotes={original}
+            onChange={setNotes}
+          />
+        )}
+
         {selection && view === 'notes' && (
           <div className="flex min-h-0 flex-1">
             <div className="flex min-h-0 flex-1 flex-col gap-2 border-r-2 border-line px-4 py-3">
@@ -652,39 +669,6 @@ export default function ContentEditorScreen() {
       )}
     </div>
   )
-}
-
-/**
- * Mêmes marqueurs que `handleFormattingShortcut` (le rappel), réutilisables
- * sur n'importe quel champ contrôlé : une phrase d'exercice n'a pas de
- * `textareaRef` dédié comme le rappel, seulement sa prop `onChange` — tout
- * ce qu'il faut est déjà sur l'événement (`currentTarget`, la sélection en
- * cours), pas besoin d'un ref par carte.
- */
-function formattingShortcut(onChange: (value: string) => void) {
-  return (event: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-    if (!(event.metaKey || event.ctrlKey)) return
-    const key = event.key.toLowerCase()
-    const marker = key === 'b' ? '**' : key === 'u' ? '__' : key === 'i' ? (event.shiftKey ? '`' : '*') : null
-    if (!marker) return
-    event.preventDefault()
-    const el = event.currentTarget
-    // `selectionStart`/`selectionEnd` ne sont nuls que pour les types d'`input`
-    // qui n'ont pas de sélection (`number`, `email`…) — jamais le cas ici,
-    // un champ de texte brut en a toujours une, repliée sur le curseur à
-    // défaut de texte sélectionné.
-    const { value } = el
-    const selectionStart = el.selectionStart ?? value.length
-    const selectionEnd = el.selectionEnd ?? value.length
-    const selected = value.slice(selectionStart, selectionEnd)
-    const next = value.slice(0, selectionStart) + marker + selected + marker + value.slice(selectionEnd)
-    onChange(next)
-    requestAnimationFrame(() => {
-      el.focus()
-      el.selectionStart = selectionStart + marker.length
-      el.selectionEnd = selectionStart + marker.length + selected.length
-    })
-  }
 }
 
 function ToolbarButton({

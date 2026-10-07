@@ -105,15 +105,26 @@ export interface LessonTable {
  */
 export function lessonTables(lesson: Lesson): LessonTable[] {
   if (lesson.kind !== 'grammar' || lesson.work) return []
+  const tables = noteTables(lesson.notes ?? '')
+  const ids = tableIds(lesson.id, tables)
+  return tables.flatMap((table, index) => (ids[index] ? [{ id: ids[index], table }] : []))
+}
+
+/**
+ * L'identifiant de révision de chacun des tableaux d'un rappel, dans leur
+ * ordre (voir `lessonTables`) ; `null` pour un tableau sans case remplie, qui
+ * ne se joue pas. Partagé avec l'éditeur, qui montre ce qu'une retouche fait
+ * de l'historique d'un tableau.
+ */
+export function tableIds(lessonId: string, tables: readonly NoteTableBlock[]): (string | null)[] {
   const seen = new Map<string, number>()
-  return noteTables(lesson.notes ?? '')
-    .filter((table) => table.rows.some((row) => [row.label, ...row.cells].some((cell) => plainInline(cell))))
-    .map((table) => {
-      const base = `${lesson.id}:tableau:${tableSlug(table)}`
-      const count = (seen.get(base) ?? 0) + 1
-      seen.set(base, count)
-      return { id: count === 1 ? base : `${base}-${count}`, table }
-    })
+  return tables.map((table) => {
+    if (!table.rows.some((row) => [row.label, ...row.cells].some((cell) => plainInline(cell)))) return null
+    const base = `${lessonId}:tableau:${tableSlug(table)}`
+    const count = (seen.get(base) ?? 0) + 1
+    seen.set(base, count)
+    return count === 1 ? base : `${base}-${count}`
+  })
 }
 
 /** L'en-tête d'un tableau en identifiant : « Ce qui s'y joue » → « ce-qui-s-y-joue ». */
