@@ -147,6 +147,51 @@ function groupEntries(entries: readonly TreatiseEntry[]): { ennead: number; entr
 }
 
 /**
+ * Regroupement par ordre chronologique de rédaction, d'après la publication
+ * GF : les traités 1 à 6, 7 à 21, etc. (le rang `chrono` de chaque entrée).
+ */
+const CHRONO_GROUPS = [
+  [1, 6],
+  [7, 21],
+  [22, 26],
+  [27, 29],
+  [30, 37],
+  [38, 41],
+  [42, 44],
+  [45, 50],
+  [51, 54],
+] as const
+
+type TreatiseOrder = 'porphyry' | 'chrono'
+
+interface TreatiseGroup {
+  key: string
+  /** Pastille de l'en-tête : le chiffre romain de l'Ennéade, ou la fourchette de rangs. */
+  badge: string
+  title: string
+  entries: TreatiseEntry[]
+}
+
+function groupEntriesChrono(entries: readonly TreatiseEntry[]): TreatiseGroup[] {
+  return CHRONO_GROUPS.map(([from, to]) => ({
+    key: `chrono-${from}-${to}`,
+    badge: `${from}-${to}`,
+    title: `Traités ${from}-${to}`,
+    entries: entries.filter((entry) => entry.chrono >= from && entry.chrono <= to).sort((a, b) => a.chrono - b.chrono),
+  })).filter((group) => group.entries.length > 0)
+}
+
+const TREATISE_ORDER_KEY = 'cartophilo.treatise-order'
+
+function savedTreatiseOrder(): TreatiseOrder {
+  try {
+    return localStorage.getItem(TREATISE_ORDER_KEY) === 'chrono' ? 'chrono' : 'porphyry'
+  } catch {
+    return 'porphyry'
+  }
+}
+
+/**
  * Écran d'accueil des cours en accès libre.
  *
  * Trois onglets — vocabulaire, grammaire, conjugaison — chacun avec sa
@@ -836,12 +881,53 @@ function TreatiseIndexView({
   onToggleGroup: (group: string) => void
   onOpenTreatise: (entry: TreatiseEntry) => void
 }) {
-  const groups = useMemo(() => groupEntries(entries), [entries])
+  const [order, setOrder] = useState<TreatiseOrder>(savedTreatiseOrder)
+  const chooseOrder = (next: TreatiseOrder) => {
+    setOrder(next)
+    try {
+      localStorage.setItem(TREATISE_ORDER_KEY, next)
+    } catch {
+      // Réglage facultatif : sans stockage, on retombe sur l'ordre de Porphyre.
+    }
+  }
+  const groups = useMemo<TreatiseGroup[]>(
+    () =>
+      order === 'chrono'
+        ? groupEntriesChrono(entries)
+        : groupEntries(entries).map(({ ennead, entries: group }) => ({
+            key: `ennead-${ennead}`,
+            badge: ENNEAD_NUMERALS[ennead - 1]!,
+            title: ENNEAD_TITLES[ennead - 1]!,
+            entries: group,
+          })),
+    [entries, order],
+  )
 
   return (
     <div className="flex flex-col gap-3">
-      {groups.map(({ ennead, entries: group }) => {
-        const key = `ennead-${ennead}`
+      {/* Deux lectures du même index : l'ordre de Porphyre (les Ennéades) ou
+          l'ordre de rédaction, regroupé comme dans l'édition GF. */}
+      <div className="flex gap-0.5 self-center rounded-xl border-2 border-line p-1" role="group" aria-label="Ordre des traités">
+        {(
+          [
+            ['porphyry', 'Ennéades'],
+            ['chrono', 'Ordre chronologique'],
+          ] as const
+        ).map(([value, label]) => (
+          <button
+            key={value}
+            type="button"
+            aria-pressed={order === value}
+            onClick={() => chooseOrder(value)}
+            className={`rounded-lg px-3 py-1 text-xs font-extrabold transition-colors ${
+              order === value ? `${tone.bg} text-white` : 'text-ink-faint hover:text-ink-soft'
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+      {groups.map(({ key, badge, title, entries: group }) => {
         const open = openGroups.has(key)
         return (
           <div key={key} className="flex flex-col gap-3">
@@ -852,12 +938,14 @@ function TreatiseIndexView({
               className="card-3d flex w-full items-center gap-4 px-4 py-4 text-left"
             >
               <span
-                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} text-sm font-black ${tone.text}`}
+                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} font-black ${tone.text} ${
+                  badge.length > 3 ? 'text-[0.65rem]' : 'text-sm'
+                }`}
               >
-                {ENNEAD_NUMERALS[ennead - 1]}
+                {badge}
               </span>
               <span className="flex-1">
-                <span className="text-base leading-tight font-extrabold">{ENNEAD_TITLES[ennead - 1]}</span>
+                <span className="text-base leading-tight font-extrabold">{title}</span>
                 <span className="mt-0.5 block text-xs font-bold text-ink-faint">
                   {group.length} traité{group.length > 1 ? 's' : ''}
                 </span>
@@ -886,14 +974,16 @@ function TreatiseIndexView({
                       className="flex w-full items-center gap-3 rounded-2xl border-2 border-line/60 bg-ink/[0.03] px-3 py-2.5 text-left"
                     >
                       <span className={`shrink-0 text-xs font-black ${tone.text}`}>
-                        {ENNEAD_NUMERALS[entry.ennead - 1]}, {entry.numberInEnnead}
+                        {order === 'chrono' ? entry.chrono : `${ENNEAD_NUMERALS[entry.ennead - 1]}, ${entry.numberInEnnead}`}
                       </span>
                       <span className="flex-1 text-sm leading-snug font-bold text-ink">{entry.title}</span>
                       <span
                         className="shrink-0 text-[0.65rem] font-bold text-ink-faint"
-                        title="Rang chronologique de rédaction"
+                        title={order === 'chrono' ? "Place chez Porphyre (Ennéade, rang)" : 'Rang chronologique de rédaction'}
                       >
-                        [{entry.chrono}]
+                        {order === 'chrono'
+                          ? `[${ENNEAD_NUMERALS[entry.ennead - 1]}, ${entry.numberInEnnead}]`
+                          : `[${entry.chrono}]`}
                       </span>
                     </button>
                   ))}
