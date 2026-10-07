@@ -94,7 +94,9 @@ pas seulement Glossaire et Repérage.
   repérage : ses moments à remettre dans l'ordre, puis ses repères à
   replacer, puis un repère seul. Dans l'éditeur visuel (`/#/editeur`),
   l'onglet Tableaux les édite en grille, dit ce que chacun deviendra (et
-  pourquoi un plan n'est pas reconnu) et en joue un aperçu.
+  pourquoi un plan n'est pas reconnu) et en joue un aperçu ; il y fixe aussi,
+  au besoin, les exercices de chaque tableau et leurs colonnes (`tables:`
+  dans la leçon, voir `lessonTableSchema` et `content/philosophie.md`).
 - Le moteur de vocabulaire (`kind: vocab`, plus aucun cours ne l'emploie
   depuis le retrait du cours `demo`) n'a plus d'écran de présentation à part (l'ancienne
   auto-évaluation « nouveau / incertain / je savais ») : un mot rencontre

@@ -99,3 +99,9 @@ export async function api<T>(url: string, init?: { method?: string; body?: unkno
   if (!res.ok) throw new Error(data.error ?? res.statusText)
   return data as T
 }
+
+/** Les exercices choisis pour un tableau du rappel, tels qu'écrits dans `tables:` (voir `lessonTableSchema`). */
+export interface LessonTableDTO {
+  table: string
+  exercises: { kind: 'order' | 'bank' | 'cell'; column: string | number }[]
+}

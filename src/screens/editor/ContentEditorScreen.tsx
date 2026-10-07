@@ -8,7 +8,7 @@ import { tableSpans } from './tableGrid'
 import { TablesEditor } from './TablesEditor'
 import { formattingShortcut } from './formatting'
 import { isCitation } from './textUnit'
-import type { PassageDTO, PointDTO, SkippedRowDTO, TrackKind, TreeCourse, TreeLesson, TreeTrack, TreeUnit } from './types'
+import type { LessonTableDTO, PassageDTO, PointDTO, SkippedRowDTO, TrackKind, TreeCourse, TreeLesson, TreeTrack, TreeUnit } from './types'
 import { NewLessonDialog, NewUnitDialog, UnitSettingsDialog } from './UnitDialogs'
 
 /**
@@ -103,6 +103,9 @@ export default function ContentEditorScreen() {
   const [notes, setNotes] = useState('')
   const [original, setOriginal] = useState('')
   const [points, setPoints] = useState<PointDTO[] | null>(null)
+  // Les exercices choisis pour les tableaux du rappel (`tables:`), voir `TablesEditor`.
+  const [tables, setTables] = useState<LessonTableDTO[]>([])
+  const [originalTables, setOriginalTables] = useState<LessonTableDTO[]>([])
   const [originalPoints, setOriginalPoints] = useState<PointDTO[] | null>(null)
   const [status, setStatus] = useState<'idle' | 'loading' | 'saving' | 'saved' | 'error'>('idle')
   const [error, setError] = useState<string | null>(null)
@@ -117,7 +120,8 @@ export default function ContentEditorScreen() {
     title !== originalTitle ||
     notes !== original ||
     JSON.stringify(points) !== JSON.stringify(originalPoints) ||
-    JSON.stringify(passage) !== JSON.stringify(originalPassage)
+    JSON.stringify(passage) !== JSON.stringify(originalPassage) ||
+    JSON.stringify(tables) !== JSON.stringify(originalTables)
 
   const loadTree = useCallback(async () => {
     try {
@@ -150,6 +154,8 @@ export default function ContentEditorScreen() {
       setOriginal(data.notes)
       setPoints(data.points)
       setOriginalPoints(data.points)
+      setTables(data.tables ?? [])
+      setOriginalTables(data.tables ?? [])
       setPassage(data.passage)
       setOriginalPassage(data.passage)
       // L'onglet Texte n'existe que pour une leçon de texte.
@@ -232,7 +238,7 @@ export default function ContentEditorScreen() {
       const res = await fetch(`/api/lesson?course=${selection.course}&unit=${selection.unit}&lesson=${selection.lesson}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title, notes, points: points ?? undefined, passage: passage ?? undefined }),
+        body: JSON.stringify({ title, notes, points: points ?? undefined, passage: passage ?? undefined, tables }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? res.statusText)
@@ -240,6 +246,7 @@ export default function ContentEditorScreen() {
       setOriginal(notes)
       setOriginalPoints(points)
       setOriginalPassage(passage)
+      setOriginalTables(tables)
       setStatus('saved')
       // Le titre affiché dans l'arborescence vient de sa propre copie
       // (`tree`), indépendante de l'état d'édition : sans ce rechargement,
@@ -251,7 +258,7 @@ export default function ContentEditorScreen() {
       setStatus('error')
       setError(String((err as Error).message))
     }
-  }, [selection, title, originalTitle, notes, points, passage, originalPassage, loadTree])
+  }, [selection, title, originalTitle, notes, points, passage, originalPassage, tables, loadTree])
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -356,6 +363,7 @@ export default function ContentEditorScreen() {
                 setNotes(original)
                 setPoints(originalPoints)
                 setPassage(originalPassage)
+                setTables(originalTables)
                 setResetToken((n) => n + 1)
               }}
               disabled={!dirty}
@@ -534,7 +542,11 @@ export default function ContentEditorScreen() {
             title={title}
             notes={notes}
             originalNotes={original}
-            onChange={setNotes}
+            settings={tables}
+            onChange={(nextNotes, nextTables) => {
+              setNotes(nextNotes)
+              setTables(nextTables)
+            }}
           />
         )}
 

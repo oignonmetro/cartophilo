@@ -1,4 +1,6 @@
+import { resolveTableExercises, tableIds, tableKey } from '@/content/course'
 import { noteTables, plainInline, type NoteTableBlock } from '@/content/notes'
+import type { LessonTableSettings, TableExerciseChoice } from '@/content/schema'
 import { compareKeys, locationKey, tableStructure } from '@/engine/exercises'
 
 /**
@@ -136,4 +138,79 @@ export function structureHint(table: NoteTableBlock): string | null {
     return `Ligne ${back + 1} : « ${plainInline(cell(back, best.column)).trim()} » vient avant « ${plainInline(cell(back - 1, best.column)).trim()} » dans le texte ; les repères de ${named} doivent suivre l'ordre du texte.`
   }
   return null
+}
+
+/**
+ * Comment `tables:` désigne une colonne : par son en-tête, plus lisible et
+ * insensible à un déplacement de colonne, sauf s'il est vide ou partagé ;
+ * par son rang (1 : la première) sinon.
+ */
+export function columnRef(table: NoteTableBlock, column: number): string | number {
+  const headers = [table.corner, ...table.columns].map((header) => plainInline(header).trim())
+  const header = headers[column] ?? ''
+  const shared = headers.filter((other) => other.toLowerCase() === header.toLowerCase()).length > 1
+  return header && !shared ? header : column + 1
+}
+
+/**
+ * Les exercices que l'application tire seule d'un tableau (voir
+ * `tableExercises`), en exercices choisis : le point de départ quand on
+ * passe un tableau en « Choisis ». Hors plan, la banque porte sur la
+ * première colonne qui la permet, la case seule sur une autre.
+ */
+export function autoChoices(table: NoteTableBlock): TableExerciseChoice[] {
+  const structure = tableStructure(table)
+  if (structure) {
+    return (['order', 'bank', 'cell'] as const).map((kind) => ({ kind, column: structure.column }))
+  }
+  const width = table.columns.length + 1
+  const filled = (column: number) =>
+    table.rows.filter((row) => plainInline((column === 0 ? row.label : row.cells[column - 1]) ?? '').trim()).length
+  const columns = Array.from({ length: width }, (_, column) => column)
+  const bank = columns.find((column) => column > 0 && filled(column) >= 2) ?? columns.find((column) => filled(column) >= 2)
+  const cell = columns.find((column) => column !== bank && filled(column) >= 1) ?? bank
+  return [
+    ...(bank !== undefined ? [{ kind: 'bank' as const, column: bank }] : []),
+    ...(cell !== undefined ? [{ kind: 'cell' as const, column: cell }] : []),
+  ]
+}
+
+/** Les exercices de chaque tableau d'un rappel : `null` s'ils se tirent seuls, `[]` s'il n'en a aucun. */
+export type TableChoices = (TableExerciseChoice[] | null)[]
+
+/** Ce que `tables:` règle pour chacun des tableaux du rappel, et les réglages qui ne désignent plus aucun tableau. */
+export function readSettings(
+  lessonId: string,
+  notes: string,
+  settings: readonly LessonTableSettings[],
+): { choices: TableChoices; orphans: LessonTableSettings[] } {
+  const tables = tableSpans(notes).map((span) => gridTable(span.grid))
+  const keys = tableIds(lessonId, tables).map((id) => (id ? tableKey(lessonId, id) : null))
+  const choices = tables.map((table, index) => {
+    const entry = keys[index] ? settings.find((each) => each.table === keys[index]) : undefined
+    return entry ? resolveTableExercises(table, entry) : null
+  })
+  return { choices, orphans: settings.filter((entry) => !keys.includes(entry.table)) }
+}
+
+/** L'inverse : `tables:` à écrire pour ces exercices, réglages orphelins gardés à la suite. */
+export function writeSettings(
+  lessonId: string,
+  notes: string,
+  choices: TableChoices,
+  orphans: readonly LessonTableSettings[],
+): LessonTableSettings[] {
+  const tables = tableSpans(notes).map((span) => gridTable(span.grid))
+  const ids = tableIds(lessonId, tables)
+  const out: LessonTableSettings[] = []
+  tables.forEach((table, index) => {
+    const id = ids[index]
+    const chosen = choices[index]
+    if (!id || !chosen) return
+    out.push({
+      table: tableKey(lessonId, id),
+      exercises: chosen.map(({ kind, column }) => ({ kind, column: columnRef(table, column) })),
+    })
+  })
+  return [...out, ...orphans.filter((orphan) => !out.some((entry) => entry.table === orphan.table))]
 }

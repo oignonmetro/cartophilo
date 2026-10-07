@@ -1455,3 +1455,73 @@ describe('tableau de structure', () => {
     expect(kinds.flatMap(itemIdsOf).every((id) => id === item.id)).toBe(true)
   })
 })
+
+describe('exercices choisis pour un tableau', () => {
+  const NOTES = [
+    '| Moment | Lieu | Contenu |',
+    '| introduction | 126a-128e | l’argument de Zénon |',
+    '| discours de Socrate | 128e-130a | la théorie des Idées |',
+    '| critiques de Parménide | 130a-134e | six objections |',
+  ].join('\n')
+  const base: GrammarLesson = {
+    kind: 'grammar',
+    id: 'parm-i1',
+    title: 'Le dialogue',
+    notes: NOTES,
+    points: [
+      { id: 'q1', sentence: 'Le ___ du dialogue.', answer: 'plan', alt: [], options: [] },
+      { id: 'q2', sentence: 'Une ___ objection.', answer: 'première', alt: [], options: [] },
+      { id: 'q3', sentence: 'La ___ des Idées.', answer: 'théorie', alt: [], options: [] },
+    ],
+  }
+  const chosen: GrammarLesson = {
+    ...base,
+    tables: [
+      {
+        table: 'moment-lieu-contenu',
+        exercises: [
+          { kind: 'bank', column: 'Contenu' },
+          { kind: 'cell', column: 1 },
+          { kind: 'order', column: 'lieu' },
+          { kind: 'bank', column: 'Nulle part' },
+        ],
+      },
+    ],
+  }
+
+  it('remplace ceux que l’application tire seule, dans l’ordre écrit, colonnes résolues', () => {
+    const [entry] = lessonTables(chosen)
+    expect(entry!.exercises).toEqual([
+      { kind: 'bank', column: 2 },
+      { kind: 'cell', column: 0 },
+      { kind: 'order', column: 1 },
+    ])
+    const [bank, cell, order] = tableExercises('T', [entry!], createRng(1))
+    expect(bank).toMatchObject({ kind: 'table-bank' })
+    expect(bank).not.toHaveProperty('locate')
+    expect(bank?.kind === 'table-bank' && bank.holes.every((gap) => gap.column === 2)).toBe(true)
+    expect(cell).toMatchObject({ kind: 'table-cell', hole: { column: 0 } })
+    expect(order).toMatchObject({ kind: 'table-order', column: 1, locate: true })
+  })
+
+  it('une liste vide laisse le tableau hors des exercices et de la révision', () => {
+    const none = { ...base, tables: [{ table: 'moment-lieu-contenu', exercises: [] }] }
+    expect(lessonTables(none)).toEqual([])
+    expect(itemsOfLesson(none).some((item) => item.kind === 'table')).toBe(false)
+  })
+
+  it('un réglage qui ne désigne aucun tableau est sans effet', () => {
+    const stale = { ...base, tables: [{ table: 'ancien-en-tete', exercises: [{ kind: 'cell' as const, column: 1 }] }] }
+    expect(lessonTables(stale)[0]).not.toHaveProperty('exercises')
+  })
+
+  it('revient en révision à tour de rôle, sans banque une fois mûr', () => {
+    const item = itemsOfLesson(chosen).find((entry) => entry.kind === 'table')!
+    const young = createCard(item.id, T0)
+    const kinds = [1, 2, 3, 4, 5, 6].map((reps) => buildReviewSession([{ card: { ...young, reps }, item }], 1)[0]!.kind)
+    expect(new Set(kinds)).toEqual(new Set(['table-bank', 'table-cell', 'table-order']))
+    const mature = { ...young, reps: 8, interval: 60 }
+    const late = [8, 9, 10, 11].map((reps) => buildReviewSession([{ card: { ...mature, reps }, item }], 1)[0]!.kind)
+    expect(late).not.toContain('table-bank')
+  })
+})

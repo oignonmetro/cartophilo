@@ -299,6 +299,34 @@ function setPassage(doc: Document, lessonIdx: number, passage: PassageDTO): void
   else lesson.items.splice(pointsIdx, 0, pair)
 }
 
+/** Les exercices choisis pour un tableau du rappel (voir `lessonTableSchema`). */
+interface LessonTableDTO {
+  table: string
+  exercises: { kind: 'order' | 'bank' | 'cell'; column: string | number }[]
+}
+
+/**
+ * Écrit `tables:` juste après `notes`, dont il règle les tableaux ; un
+ * exercice par ligne (`{ kind: bank, column: Lieu }`), pour que la liste se
+ * relise d'un coup d'œil. Une liste vide retire la clef : les tableaux
+ * reprennent leurs exercices tirés seuls.
+ */
+function setTables(doc: Document, lessonIdx: number, tables: LessonTableDTO[]): void {
+  const lesson = doc.getIn(['lessons', lessonIdx], true)
+  if (!isMap(lesson)) return
+  lesson.delete('tables')
+  if (tables.length === 0) return
+  const node = doc.createNode(tables) as YAMLSeq
+  for (const entry of node.items) {
+    const exercises = isMap(entry) ? entry.get('exercises', true) : null
+    if (exercises instanceof YAMLSeq) for (const item of exercises.items) if (isMap(item)) item.flow = true
+  }
+  const notesIdx = lesson.items.findIndex((pair) => String((pair.key as Scalar | string)?.toString()) === 'notes')
+  const pair = doc.createPair('tables', node)
+  if (notesIdx === -1) lesson.items.push(pair)
+  else lesson.items.splice(notesIdx + 1, 0, pair)
+}
+
 const slugPattern = /^[a-z0-9][a-z0-9-]*$/
 
 /**
@@ -605,6 +633,7 @@ export function contentEditorApi(): Plugin {
             sendJson(res, 200, {
               title: String(lessonData.title ?? lesson),
               notes: String(lessonData.notes ?? ''),
+              tables: (lessonData.tables as LessonTableDTO[] | undefined) ?? [],
               passage: passage
                 ? {
                     label: String(passage.label ?? ''),
@@ -634,6 +663,7 @@ export function contentEditorApi(): Plugin {
               notes: string
               points?: PointDTO[]
               passage?: PassageDTO | null
+              tables?: LessonTableDTO[]
             }
             const doc = readYamlDoc(unitFile)
             const idx = findLessonIndex(doc, lesson)
@@ -651,6 +681,7 @@ export function contentEditorApi(): Plugin {
               if (isMap(lessonNode)) setScalar(lessonNode, 'title', title)
             }
             setNotes(doc, idx, body.notes)
+            if (body.tables) setTables(doc, idx, body.tables)
             if (body.passage) setPassage(doc, idx, body.passage)
             if (body.points) {
               const pointsSeq = doc.getIn(['lessons', idx, 'points'])

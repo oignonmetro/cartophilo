@@ -4,8 +4,10 @@ import type {
   Lesson,
   Passage,
   LessonKind,
+  LessonTableSettings,
   ManifestEntry,
   PracticeItem,
+  TableExerciseChoice,
   Track,
   Unit,
 } from './schema'
@@ -68,11 +70,12 @@ export function itemsOfLesson(lesson: Lesson, unit?: Unit): PracticeItem[] {
         work: work ? workContextOf(work, point.id) : undefined,
         workTree: work,
       }))
-      const tables: PracticeItem[] = lessonTables(lesson).map(({ id, table }) => ({
+      const tables: PracticeItem[] = lessonTables(lesson).map(({ id, table, exercises }) => ({
         kind: 'table' as const,
         id,
         table,
         heading: lesson.title,
+        ...(exercises ? { exercises } : {}),
       }))
       return [...points, ...tables]
     }
@@ -87,6 +90,8 @@ export function itemsOfLesson(lesson: Lesson, unit?: Unit): PracticeItem[] {
 export interface LessonTable {
   id: string
   table: NoteTableBlock
+  /** Les exercices choisis dans `tables:` (voir `lessonTableSchema`) ; absents, ils se tirent seuls. */
+  exercises?: TableExerciseChoice[]
 }
 
 /**
@@ -107,7 +112,40 @@ export function lessonTables(lesson: Lesson): LessonTable[] {
   if (lesson.kind !== 'grammar' || lesson.work) return []
   const tables = noteTables(lesson.notes ?? '')
   const ids = tableIds(lesson.id, tables)
-  return tables.flatMap((table, index) => (ids[index] ? [{ id: ids[index], table }] : []))
+  return tables.flatMap((table, index) => {
+    const id = ids[index]
+    if (!id) return []
+    const settings = lesson.tables?.find((entry) => entry.table === tableKey(lesson.id, id))
+    if (settings?.exercises.length === 0) return []
+    const exercises = settings ? resolveTableExercises(table, settings) : []
+    return [exercises.length > 0 ? { id, table, exercises } : { id, table }]
+  })
+}
+
+/** La part d'un identifiant de tableau que nomme `tables:` (« moment-lieu-contenu »). */
+export function tableKey(lessonId: string, id: string): string {
+  return id.slice(`${lessonId}:tableau:`.length)
+}
+
+/**
+ * La colonne que désigne une référence de `tables:` : son en-tête (sans
+ * marqueurs, casse indifférente), ou son rang à partir de 1 ; `null` si
+ * aucune ne répond.
+ */
+export function resolveTableColumn(table: NoteTableBlock, ref: string | number): number | null {
+  const headers = [table.corner, ...table.columns]
+  if (typeof ref === 'number') return ref >= 1 && ref <= headers.length ? ref - 1 : null
+  const wanted = plainInline(ref).trim().toLowerCase()
+  const index = headers.findIndex((header) => plainInline(header).trim().toLowerCase() === wanted)
+  return index === -1 ? null : index
+}
+
+/** Les exercices choisis pour un tableau, ceux dont la colonne existe. */
+export function resolveTableExercises(table: NoteTableBlock, settings: LessonTableSettings): TableExerciseChoice[] {
+  return settings.exercises.flatMap(({ kind, column }) => {
+    const resolved = resolveTableColumn(table, column)
+    return resolved === null ? [] : [{ kind, column: resolved }]
+  })
 }
 
 /**

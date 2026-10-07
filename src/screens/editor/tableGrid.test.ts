@@ -1,6 +1,18 @@
 import { describe, expect, it } from 'vitest'
 import { noteTables } from '@/content/notes'
-import { appendTable, formatTable, gridTable, removeTable, replaceTable, structureHint, tableSpans } from './tableGrid'
+import {
+  appendTable,
+  autoChoices,
+  columnRef,
+  formatTable,
+  gridTable,
+  readSettings,
+  removeTable,
+  replaceTable,
+  structureHint,
+  tableSpans,
+  writeSettings,
+} from './tableGrid'
 
 const NOTES = [
   '**Le plan.** Trois moments.',
@@ -57,5 +69,38 @@ describe('tableaux du rappel en grille', () => {
     expect(structureHint(plan(['27c', '40d', '29d']))).toMatch(/Ligne 3 : « 29d » vient avant « 40d »/)
     expect(structureHint(plan(['27c', '29d']))).toMatch(/trois lignes/)
     expect(structureHint(gridTable([['', 'A'], ['x', 'y'], ['z', 'w'], ['u', 'v']]))).toBeNull()
+  })
+})
+
+describe('exercices choisis, dans l’éditeur', () => {
+  const PLAN = ['| Moment | Lieu | Contenu |', '| a | 27c | x |', '| b | 29d | y |', '| c | 40d | z |'].join('\n')
+
+  it('suivent leur tableau quand son en-tête change, et nomment la colonne par son en-tête', () => {
+    const settings = [{ table: 'moment-lieu-contenu', exercises: [{ kind: 'bank' as const, column: 'Contenu' }] }]
+    const { choices, orphans } = readSettings('l1', PLAN, settings)
+    expect(choices).toEqual([[{ kind: 'bank', column: 2 }]])
+    expect(orphans).toEqual([])
+    const renamed = replaceTable(PLAN, 0, [['Moment', 'Lieu', 'Thèse'], ...tableSpans(PLAN)[0]!.grid.slice(1)])
+    expect(writeSettings('l1', renamed, choices, orphans)).toEqual([
+      { table: 'moment-lieu-these', exercises: [{ kind: 'bank', column: 'Thèse' }] },
+    ])
+  })
+
+  it('gardent à part un réglage qui ne désigne plus aucun tableau', () => {
+    const stale = { table: 'ancien', exercises: [{ kind: 'cell' as const, column: 2 }] }
+    const { choices, orphans } = readSettings('l1', PLAN, [stale])
+    expect(choices).toEqual([null])
+    expect(writeSettings('l1', PLAN, choices, orphans)).toEqual([stale])
+  })
+
+  it('désignent par son rang une colonne sans en-tête, et partent des exercices automatiques', () => {
+    const crossed = gridTable([['', 'A', 'A'], ['x', '1', '2'], ['y', '3', '4']])
+    expect(columnRef(crossed, 0)).toBe(1)
+    expect(columnRef(crossed, 1)).toBe(2)
+    expect(autoChoices(crossed)).toEqual([
+      { kind: 'bank', column: 1 },
+      { kind: 'cell', column: 0 },
+    ])
+    expect(autoChoices(gridTable(tableSpans(PLAN)[0]!.grid)).map((choice) => choice.column)).toEqual([1, 1, 1])
   })
 })

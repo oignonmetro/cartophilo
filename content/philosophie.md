@@ -276,6 +276,26 @@ la plus simple de donner à une unité classique ses exercices de repérage :
 le plan d'ensemble dans le premier rappel, puis, dans des leçons de
 repérage, le plan de chaque partie.
 
+**Choisir les exercices d'un tableau.** Par défaut, ils se tirent seuls (ci-
+dessus). Pour les fixer, la leçon porte une liste `tables:`, que l'onglet
+Tableaux de l'éditeur écrit lui-même : pour chaque tableau réglé, son
+en-tête en identifiant, et ses exercices dans l'ordre où la leçon les joue,
+chacun sur une colonne (son en-tête, ou son rang à partir de 1) :
+
+```yaml
+  tables:
+  - table: moment-lieu-contenu
+    exercises:
+    - {kind: order, column: Lieu}     # lignes à remettre dans l'ordre, le lieu révélé
+    - {kind: bank, column: Contenu}   # colonne vidée, à remplir depuis une banque
+    - {kind: cell, column: Lieu}      # une case, à écrire ou à révéler
+```
+
+En révision, ces exercices tournent, un par passage, sans la banque une fois
+le tableau bien su. `exercises: []` laisse le tableau dans le rappel sans en
+faire un exercice. Un réglage dont l'en-tête ne désigne plus aucun tableau
+est ignoré (remarque de `content:check`).
+
 Le tableau revient ensuite en révision espacée, comme une carte : son
 identifiant se tire de la leçon et de sa ligne d'en-tête
 (`m7-l1:tableau:moment-repere-ce-qui-s-y-joue`), sans rien à écrire dans le

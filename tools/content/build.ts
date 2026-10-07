@@ -41,8 +41,16 @@ import {
 } from '../../src/content/schema.ts'
 import { allNodes, lessonsFromWork } from '../../src/content/work.ts'
 import { findVocabGap } from '../../src/content/text.ts'
-import { parseNotes } from '../../src/content/notes.ts'
-import { itemsOfCourse, itemsOfLesson, lessonsOf, unitsOf as unitsOfCourse } from '../../src/content/course.ts'
+import { noteTables, parseNotes } from '../../src/content/notes.ts'
+import {
+  itemsOfCourse,
+  itemsOfLesson,
+  lessonsOf,
+  resolveTableColumn,
+  tableIds,
+  tableKey,
+  unitsOf as unitsOfCourse,
+} from '../../src/content/course.ts'
 import {
   alphabetGatingRemarks,
   conjugationVerbRemarks,
@@ -658,6 +666,41 @@ function checkGrammarLesson(lesson: GrammarLesson, problems: string[]) {
     // Un distracteur doit être faux pour la raison qu'enseigne le point ;
     // sinon l'exercice se résout sans la règle (voir difficulty.ts).
     for (const remark of grammarPointRemarks(point)) warn(`leçon "${lesson.id}"`, remark)
+  }
+  checkTableSettings(lesson)
+}
+
+/**
+ * Les exercices choisis pour les tableaux (`tables:`) : un réglage qui ne
+ * désigne plus aucun tableau (en-tête changé dans le rappel), ou une colonne
+ * qui n'existe pas, est ignoré, et le tableau reprend ses exercices tirés
+ * seuls. Une remarque plutôt qu'une erreur : l'éditeur peut laisser un
+ * réglage en suspens le temps d'une retouche.
+ */
+function checkTableSettings(lesson: GrammarLesson) {
+  if (!lesson.tables) return
+  const tables = noteTables(lesson.notes ?? '')
+  const ids = tableIds(lesson.id, tables)
+  const keys = ids.map((id) => (id ? tableKey(lesson.id, id) : null))
+  const seen = new Set<string>()
+  for (const settings of lesson.tables) {
+    if (seen.has(settings.table)) warn(`leçon "${lesson.id}"`, `tables : « ${settings.table} » réglé deux fois, seul le premier compte`)
+    seen.add(settings.table)
+    const index = keys.indexOf(settings.table)
+    if (index === -1) {
+      warn(
+        `leçon "${lesson.id}"`,
+        `tables : aucun tableau du rappel n'a pour en-tête « ${settings.table} » (en-têtes : ${
+          keys.filter(Boolean).join(', ') || 'aucun'
+        }) ; réglage ignoré`,
+      )
+      continue
+    }
+    for (const exercise of settings.exercises) {
+      if (resolveTableColumn(tables[index]!, exercise.column) === null) {
+        warn(`leçon "${lesson.id}"`, `tables « ${settings.table} » : pas de colonne « ${exercise.column} » ; exercice ignoré`)
+      }
+    }
   }
 }
 

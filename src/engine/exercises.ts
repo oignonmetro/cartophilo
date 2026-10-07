@@ -12,7 +12,7 @@ import type {
   WorkContext,
   WorkNode,
 } from '@/content/schema'
-import { GAP } from '@/content/schema'
+import { GAP, type TableExerciseChoice } from '@/content/schema'
 import { isCitation, isPassageLesson, itemsOfLesson, lessonTables, type LessonTable } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
 import { fragmentNoteSections, plainInline, splitNoteSections, type NoteTableBlock } from '@/content/notes'
@@ -452,8 +452,10 @@ export interface TableOrderExercise {
   itemId: string
   title: string
   table: NoteTableBlock
-  /** La colonne des repères. */
+  /** La colonne révélée une fois la ligne placée : les repères, pour un plan. */
   column: number
+  /** Cette colonne est celle des repères d'un tableau de structure : on range dans l'ordre du texte. */
+  locate?: boolean
   /** Les lignes à ranger, dans l'ordre du texte. */
   rows: number[]
   /** Rangs dans `rows`, dans l'ordre où la banque les propose. */
@@ -1534,6 +1536,7 @@ function tableBankFor(
   table: NoteTableBlock,
   rng: Rng,
   column: number | null = null,
+  locate = column !== null,
 ): TableBankExercise | null {
   const width = table.columns.length + 1
   const columns = Array.from({ length: width }, (_, each) => each).filter(
@@ -1554,7 +1557,7 @@ function tableBankFor(
       holes.map((gap) => tableCellText(table, gap)),
       rng,
     ),
-    ...(column !== null ? { locate: true } : {}),
+    ...(locate ? { locate: true } : {}),
   }
 }
 
@@ -1574,6 +1577,7 @@ function tableCellFor(
   avoid: number | null = null,
   anyLength = false,
   only: number | null = null,
+  locate = only !== null,
 ): TableCellExercise | null {
   const width = table.columns.length + 1
   const cells = Array.from({ length: width }, (_, column) => filledInColumn(table, column))
@@ -1591,19 +1595,61 @@ function tableCellFor(
     title,
     table,
     hole,
-    ...(only !== null ? { locate: true } : {}),
+    ...(locate ? { locate: true } : {}),
   }
 }
 
 /** La remise en ordre d'un tableau de structure : toutes ses lignes, ou un tirage gardé dans leur ordre. */
-function tableOrderFor(itemId: string, title: string, table: NoteTableBlock, column: number, rng: Rng): TableOrderExercise {
+function tableOrderFor(
+  itemId: string,
+  title: string,
+  table: NoteTableBlock,
+  column: number,
+  rng: Rng,
+  locate = true,
+): TableOrderExercise | null {
+  if (table.rows.length < 2) return null
   const all = table.rows.map((_, row) => row)
   const rows = all.length > TABLE_ORDER_MAX ? sample(all, TABLE_ORDER_MAX, rng).sort((a, b) => a - b) : all
   const order = rows.map((_, index) => index)
   let bank = shuffle(order, rng)
   // Un mélange qui rendrait l'ordre juste ne demanderait rien : on le décale d'un cran.
   if (bank.every((value, index) => value === index)) bank = [...bank.slice(1), bank[0]!]
-  return { kind: 'table-order', id: `table-order:${itemId}:${rows.join('+')}`, itemId, title, table, column, rows, bank }
+  return {
+    kind: 'table-order',
+    id: `table-order:${itemId}:${rows.join('+')}`,
+    itemId,
+    title,
+    table,
+    column,
+    ...(locate ? { locate: true } : {}),
+    rows,
+    bank,
+  }
+}
+
+/**
+ * Un exercice choisi pour un tableau (voir `lessonTableSchema`) ; `null` si
+ * sa colonne n'a pas de quoi le porter (une banque d'une seule case, une
+ * colonne vide). On situe dans le texte quand la colonne est celle des
+ * repères d'un plan.
+ */
+function chosenTableExercise(
+  itemId: string,
+  title: string,
+  table: NoteTableBlock,
+  choice: TableExerciseChoice,
+  rng: Rng,
+): Exercise | null {
+  const locate = tableStructure(table)?.column === choice.column
+  switch (choice.kind) {
+    case 'order':
+      return tableOrderFor(itemId, title, table, choice.column, rng, locate)
+    case 'bank':
+      return tableBankFor(itemId, title, table, rng, choice.column, locate)
+    case 'cell':
+      return tableCellFor(itemId, title, table, rng, null, true, choice.column, locate)
+  }
 }
 
 /**
@@ -1622,7 +1668,12 @@ function tableOrderFor(itemId: string, title: string, table: NoteTableBlock, col
  * changent d'un passage à l'autre sur la leçon, la graine suivant son niveau.
  */
 export function tableExercises(title: string, tables: readonly LessonTable[], rng: Rng): Exercise[] {
-  return tables.flatMap(({ id, table }): Exercise[] => {
+  return tables.flatMap(({ id, table, exercises }): Exercise[] => {
+    if (exercises) {
+      return exercises
+        .map((choice) => chosenTableExercise(id, title, table, choice, rng))
+        .filter((exercise) => exercise !== null) as Exercise[]
+    }
     const structure = tableStructure(table)
     if (structure) {
       const order = tableOrderFor(id, title, table, structure.column, rng)
@@ -1650,7 +1701,17 @@ function tableReviewFor(
   rng: Rng,
   unaided: boolean,
   turn: number,
+  choices?: readonly TableExerciseChoice[],
 ): Exercise {
+  if (choices) {
+    // Mûr, le tableau se passe de banque s'il a autre chose à demander.
+    const helped = choices.filter((choice) => choice.kind !== 'bank')
+    const forms = unaided && helped.length > 0 ? helped : choices
+    for (const choice of rotate(forms, turn)) {
+      const exercise = chosenTableExercise(itemId, title, table, choice, rng)
+      if (exercise) return exercise
+    }
+  }
   const structure = tableStructure(table)
   if (structure) {
     const order = () => tableOrderFor(itemId, title, table, structure.column, rng)
@@ -1661,7 +1722,7 @@ function tableReviewFor(
       const exercise = form()
       if (exercise) return exercise
     }
-    return order()
+    return order() ?? cell()!
   }
   const bank = !unaided && turn % 2 === 0 ? tableBankFor(itemId, title, table, rng) : null
   return (
@@ -2334,7 +2395,7 @@ function buildMixedSession(
       return locate ?? workGapExercise(item.point, item.work)
     }
 
-    if (item.kind === 'table') return tableReviewFor(item.id, item.heading, item.table, rng, unaided, turn)
+    if (item.kind === 'table') return tableReviewFor(item.id, item.heading, item.table, rng, unaided, turn, item.exercises)
 
     if (item.kind === 'grammar') {
       // Reconnaître avant de produire : tant que la carte est jeune, la

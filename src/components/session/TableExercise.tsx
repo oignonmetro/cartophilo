@@ -434,11 +434,26 @@ export function TableOrder({
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">
-      <TableHeader title={exercise.title} prompt={done ? 'Les moments, dans l’ordre du texte' : 'Remettez les moments dans l’ordre du texte'} />
+      <TableHeader
+        title={exercise.title}
+        prompt={
+          exercise.locate
+            ? done
+              ? 'Les moments, dans l’ordre du texte'
+              : 'Remettez les moments dans l’ordre du texte'
+            : done
+              ? 'Les lignes, dans l’ordre du tableau'
+              : 'Remettez les lignes dans l’ordre du tableau'
+        }
+      />
 
       <div className="min-h-0 flex-1 overflow-y-auto rounded-blob border-2 border-line bg-paper px-3 py-3 md:px-5">
         {placed === 0 && (
-          <p className="py-6 text-center text-sm text-ink-faint">Touchez le moment qui vient en premier dans le texte.</p>
+          <p className="py-6 text-center text-sm text-ink-faint">
+            {exercise.locate
+              ? 'Touchez le moment qui vient en premier dans le texte.'
+              : 'Touchez la ligne qui vient en premier dans le tableau.'}
+          </p>
         )}
         <ol className="flex flex-col items-center">
           {rows.slice(0, placed).map((row, index) => (
@@ -475,7 +490,7 @@ export function TableOrder({
               onClick={() => pick(index)}
               animate={wrong === index ? { x: [0, -7, 7, -4, 0] } : { x: 0 }}
               transition={{ duration: 0.3 }}
-              className={`rounded-2xl border-2 px-3 py-2 text-center transition-colors ${
+              className={`shrink-0 rounded-2xl border-2 px-3 py-2 text-center transition-colors ${
                 wrong === index ? 'border-error bg-error/10' : 'border-line bg-paper hover:border-violet/60'
               }`}
             >

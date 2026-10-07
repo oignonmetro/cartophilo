@@ -168,11 +168,47 @@ export const vocabLessonSchema = z.object({
   vocab: z.array(vocabSchema).min(1),
 })
 
+/**
+ * Les exercices choisis pour un tableau du rappel, à la place de ceux que
+ * l'application tire d'elle-même (voir `tableExercises`). `table` est l'en-tête
+ * du tableau en identifiant, comme dans son identifiant de révision
+ * (« moment-lieu-contenu », voir `lessonTables`) ; `column`, l'en-tête de la
+ * colonne visée, ou son rang (1 : la première, celle des étiquettes).
+ *
+ *   - `order` : les lignes à remettre dans l'ordre, la case de `column`
+ *     révélée une fois la ligne placée ;
+ *   - `bank` : la colonne vidée, ses cases à replacer depuis une banque ;
+ *   - `cell` : une case de la colonne, à écrire ou à révéler.
+ *
+ * Une liste vide laisse le tableau dans le rappel sans en faire un exercice
+ * ni un élément de révision.
+ */
+export const tableExerciseKinds = ['order', 'bank', 'cell'] as const
+export const lessonTableSchema = z.object({
+  table: z.string().min(1),
+  exercises: z
+    .array(
+      z.object({
+        kind: z.enum(tableExerciseKinds),
+        column: z.union([z.string().min(1), z.number().int().min(1)]),
+      }),
+    ),
+})
+export type LessonTableSettings = z.infer<typeof lessonTableSchema>
+
+/** Un exercice choisi pour un tableau, sa colonne résolue (0 : les étiquettes). */
+export interface TableExerciseChoice {
+  kind: (typeof tableExerciseKinds)[number]
+  column: number
+}
+
 export const grammarLessonSchema = z.object({
   ...lessonBase,
   kind: z.literal('grammar'),
   points: z.array(grammarPointSchema).min(1),
   passage: passageSchema.optional(),
+  /** Les exercices choisis pour certains tableaux du rappel (voir `lessonTableSchema`). */
+  tables: z.array(lessonTableSchema).optional(),
   /**
    * Leçon d'une unité-œuvre (voir `workSchema`) : l'identifiant de la partie
    * de l'œuvre qu'elle couvre, un livre en général. Jamais écrit à la main :
@@ -499,7 +535,7 @@ export type PracticeItem =
     }
   | { kind: 'conjugation'; id: string; form: ConjugationForm; verb: ConjugationVerb }
   /** Un tableau du rappel d'une leçon (voir `lessonTables`), qui revient en tableau à trous. */
-  | { kind: 'table'; id: string; table: NoteTableBlock; heading: string }
+  | { kind: 'table'; id: string; table: NoteTableBlock; heading: string; exercises?: TableExerciseChoice[] }
 
 /**
  * D'où vient un point de leçon de texte : ce qu'en affiche l'en-tête de sa
