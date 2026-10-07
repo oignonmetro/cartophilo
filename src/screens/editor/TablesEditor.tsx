@@ -481,11 +481,20 @@ function TablePreview({
   const [seed, setSeed] = useState(1)
   const [step, setStep] = useState(0)
   const signature = JSON.stringify([table, chosen])
-  const exercises = useMemo(
-    () => tableExercises(title, [{ id, table, ...(chosen ? { exercises: chosen } : {}) }], createRng(seed)),
+  // Chaque exercice garde le numéro de sa ligne dans la liste des choisis
+  // (« Exo 3 » reste l'exo 3 même si l'exo 2 ne peut pas se jouer).
+  const numbered = useMemo(
+    () => {
+      const rng = createRng(seed)
+      if (!chosen) return tableExercises(title, [{ id, table }], rng).map((exercise, index) => ({ exercise, number: index + 1 }))
+      return chosen.flatMap((choice, index) =>
+        tableExercises(title, [{ id, table, exercises: [choice] }], rng).map((exercise) => ({ exercise, number: index + 1 })),
+      )
+    },
     // `signature` suit le contenu du tableau et ses exercices, recréés à chaque rendu.
     [id, title, signature, seed],
   )
+  const exercises = numbered.map((entry) => entry.exercise)
   useEffect(() => setStep(0), [signature, seed])
   const exercise: Exercise | undefined = exercises[step]
   const next = () => setStep((n) => n + 1)
@@ -495,16 +504,17 @@ function TablePreview({
     <div className="flex flex-col gap-3">
       <div className="flex flex-wrap items-center gap-1.5">
         <span className="mr-1 text-xs font-black text-ink-faint">{label}</span>
-        {exercises.map((entry, index) => (
+        {numbered.map(({ exercise: entry, number }, index) => (
           <button
             key={index}
             type="button"
             onClick={() => setStep(index)}
+            title={KIND_LABEL[entry.kind] ?? entry.kind}
             className={`rounded-lg px-2 py-0.5 text-xs font-bold ${
               index === step ? 'bg-violet text-white' : 'border border-line text-ink-soft hover:text-violet'
             }`}
           >
-            {KIND_LABEL[entry.kind] ?? entry.kind}
+            Exo {number}
           </button>
         ))}
         <span className="flex-1" />
@@ -679,7 +689,7 @@ function ChoicesPanel({
           </p>
           {chosen!.map((choice, at) => (
             <div key={at} className="flex flex-wrap items-center gap-2 text-xs">
-              <span className="w-4 text-right font-black text-ink-faint">{at + 1}</span>
+              <span className="font-black whitespace-nowrap text-ink-faint">Exo {at + 1}</span>
               <select
                 value={choice.kind}
                 onChange={(event) => update(at, { kind: event.target.value as TableExerciseChoice['kind'] })}
