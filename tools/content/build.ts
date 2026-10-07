@@ -47,6 +47,7 @@ import {
   itemsOfLesson,
   lessonsOf,
   resolveTableColumn,
+  resolveTableRow,
   tableIds,
   tableKey,
   unitsOf as unitsOfCourse,
@@ -699,6 +700,9 @@ function checkTableSettings(lesson: GrammarLesson) {
     for (const exercise of settings.exercises) {
       if (resolveTableColumn(tables[index]!, exercise.column) === null) {
         warn(`leçon "${lesson.id}"`, `tables « ${settings.table} » : pas de colonne « ${exercise.column} » ; exercice ignoré`)
+      }
+      if (exercise.row !== undefined && resolveTableRow(tables[index]!, exercise.row) === null) {
+        warn(`leçon "${lesson.id}"`, `tables « ${settings.table} » : pas de ligne « ${exercise.row} » ; la case se tire au hasard`)
       }
     }
   }

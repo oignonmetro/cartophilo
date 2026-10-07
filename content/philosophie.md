@@ -289,7 +289,12 @@ chacun sur une colonne (son en-tête, ou son rang à partir de 1) :
     - {kind: order, column: Lieu}     # lignes à remettre dans l'ordre, le lieu révélé
     - {kind: bank, column: Contenu}   # colonne vidée, à remplir depuis une banque
     - {kind: cell, column: Lieu}      # une case, à écrire ou à révéler
+    - {kind: cell, column: Lieu, row: programme}  # la case de cette ligne-là
 ```
+
+Une case seule se tire au hasard dans sa colonne, sauf si `row` fixe sa
+ligne (l'étiquette de la ligne, ou son rang à partir de 1) ; dans l'éditeur,
+on la choisit en touchant la case sous l'aperçu.
 
 En révision, ces exercices tournent, un par passage, sans la banque une fois
 le tableau bien su. `exercises: []` laisse le tableau dans le rappel sans en

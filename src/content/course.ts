@@ -140,11 +140,28 @@ export function resolveTableColumn(table: NoteTableBlock, ref: string | number):
   return index === -1 ? null : index
 }
 
-/** Les exercices choisis pour un tableau, ceux dont la colonne existe. */
+/**
+ * La ligne que désigne une référence de `tables:` : l'étiquette de sa
+ * première case (sans marqueurs, casse indifférente), ou son rang à partir
+ * de 1 sous l'en-tête ; `null` si aucune ne répond.
+ */
+export function resolveTableRow(table: NoteTableBlock, ref: string | number): number | null {
+  if (typeof ref === 'number') return ref >= 1 && ref <= table.rows.length ? ref - 1 : null
+  const wanted = plainInline(ref).trim().toLowerCase()
+  const index = table.rows.findIndex((row) => plainInline(row.label).trim().toLowerCase() === wanted)
+  return index === -1 ? null : index
+}
+
+/**
+ * Les exercices choisis pour un tableau, ceux dont la colonne existe ; une
+ * case seule dont la ligne ne se retrouve plus se tire au hasard.
+ */
 export function resolveTableExercises(table: NoteTableBlock, settings: LessonTableSettings): TableExerciseChoice[] {
-  return settings.exercises.flatMap(({ kind, column }) => {
+  return settings.exercises.flatMap(({ kind, column, row }) => {
     const resolved = resolveTableColumn(table, column)
-    return resolved === null ? [] : [{ kind, column: resolved }]
+    if (resolved === null) return []
+    const line = kind === 'cell' && row !== undefined ? resolveTableRow(table, row) : null
+    return [line === null ? { kind, column: resolved } : { kind, column: resolved, row: line }]
   })
 }
 

@@ -86,6 +86,15 @@ describe('exercices choisis, dans l’éditeur', () => {
     ])
   })
 
+  it('nomment la ligne d’une case fixée par son étiquette, ou son rang si elle est vide', () => {
+    const settings = [{ table: 'moment-lieu-contenu', exercises: [{ kind: 'cell' as const, column: 'Lieu', row: 'b' }] }]
+    const { choices, orphans } = readSettings('l1', PLAN, settings)
+    expect(choices).toEqual([[{ kind: 'cell', column: 1, row: 1 }]])
+    expect(writeSettings('l1', PLAN, choices, orphans)).toEqual(settings)
+    const unlabeled = replaceTable(PLAN, 0, tableSpans(PLAN)[0]!.grid.map((row, i) => (i === 2 ? ['', ...row.slice(1)] : row)))
+    expect(writeSettings('l1', unlabeled, choices, orphans)[0]!.exercises).toEqual([{ kind: 'cell', column: 'Lieu', row: 2 }])
+  })
+
   it('gardent à part un réglage qui ne désigne plus aucun tableau', () => {
     const stale = { table: 'ancien', exercises: [{ kind: 'cell' as const, column: 2 }] }
     const { choices, orphans } = readSettings('l1', PLAN, [stale])

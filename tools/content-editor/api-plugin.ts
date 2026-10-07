@@ -302,7 +302,7 @@ function setPassage(doc: Document, lessonIdx: number, passage: PassageDTO): void
 /** Les exercices choisis pour un tableau du rappel (voir `lessonTableSchema`). */
 interface LessonTableDTO {
   table: string
-  exercises: { kind: 'order' | 'bank' | 'cell'; column: string | number }[]
+  exercises: { kind: 'order' | 'bank' | 'cell'; column: string | number; row?: string | number }[]
 }
 
 /**

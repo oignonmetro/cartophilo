@@ -178,7 +178,9 @@ export const vocabLessonSchema = z.object({
  *   - `order` : les lignes à remettre dans l'ordre, la case de `column`
  *     révélée une fois la ligne placée ;
  *   - `bank` : la colonne vidée, ses cases à replacer depuis une banque ;
- *   - `cell` : une case de la colonne, à écrire ou à révéler.
+ *   - `cell` : une case de la colonne, à écrire ou à révéler ; `row`
+ *     (l'étiquette de la ligne, ou son rang à partir de 1) la fixe, sans
+ *     quoi elle se tire au hasard.
  *
  * Une liste vide laisse le tableau dans le rappel sans en faire un exercice
  * ni un élément de révision.
@@ -191,6 +193,7 @@ export const lessonTableSchema = z.object({
       z.object({
         kind: z.enum(tableExerciseKinds),
         column: z.union([z.string().min(1), z.number().int().min(1)]),
+        row: z.union([z.string().min(1), z.number().int().min(1)]).optional(),
       }),
     ),
 })
@@ -200,6 +203,8 @@ export type LessonTableSettings = z.infer<typeof lessonTableSchema>
 export interface TableExerciseChoice {
   kind: (typeof tableExerciseKinds)[number]
   column: number
+  /** La ligne de la case seule, quand elle est fixée (0 : la première sous l'en-tête). */
+  row?: number
 }
 
 export const grammarLessonSchema = z.object({

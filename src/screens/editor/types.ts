@@ -103,5 +103,5 @@ export async function api<T>(url: string, init?: { method?: string; body?: unkno
 /** Les exercices choisis pour un tableau du rappel, tels qu'écrits dans `tables:` (voir `lessonTableSchema`). */
 export interface LessonTableDTO {
   table: string
-  exercises: { kind: 'order' | 'bank' | 'cell'; column: string | number }[]
+  exercises: { kind: 'order' | 'bank' | 'cell'; column: string | number; row?: string | number }[]
 }

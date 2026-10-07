@@ -1647,8 +1647,20 @@ function chosenTableExercise(
       return tableOrderFor(itemId, title, table, choice.column, rng, locate)
     case 'bank':
       return tableBankFor(itemId, title, table, rng, choice.column, locate)
-    case 'cell':
-      return tableCellFor(itemId, title, table, rng, null, true, choice.column, locate)
+    case 'cell': {
+      if (choice.row === undefined) return tableCellFor(itemId, title, table, rng, null, true, choice.column, locate)
+      const hole = { row: choice.row, column: choice.column }
+      if (!plainInline(tableCellText(table, hole))) return null
+      return {
+        kind: 'table-cell',
+        id: `table-cell:${itemId}:${hole.row}:${hole.column}`,
+        itemId,
+        title,
+        table,
+        hole,
+        ...(locate ? { locate: true } : {}),
+      }
+    }
   }
 }
 

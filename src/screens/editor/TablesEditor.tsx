@@ -62,6 +62,9 @@ const CHOICE_HELP: Record<TableExerciseChoice['kind'], string> = {
   cell: 'une case de cette colonne, à écrire ou à révéler',
 }
 
+/** Une case du tableau, la ligne comptée sous l'en-tête. */
+type CellRef = { row: number; column: number }
+
 /** Pourquoi un exercice choisi ne se joue pas. */
 const CHOICE_EMPTY: Record<TableExerciseChoice['kind'], string> = {
   order: 'Il faut au moins deux lignes.',
@@ -91,6 +94,15 @@ export function TablesEditor({
   const originalIds = new Set(tableIds(lessonId, noteTables(originalNotes)))
   const [selected, setSelected] = useState(0)
   const current = Math.min(selected, spans.length - 1)
+  // Tableaux dépliés pour être édités : repliés par défaut, ils se
+  // retouchent d'ordinaire dans le rappel ; seul un tableau tout juste ajouté s'ouvre.
+  const [open, setOpen] = useState<ReadonlySet<number>>(new Set())
+  const toggle = (index: number) =>
+    setOpen((previous) => {
+      const next = new Set(previous)
+      if (!next.delete(index)) next.add(index)
+      return next
+    })
 
   // Entrée dans une case : le curseur descend d'une ligne, une fois la grille rendue.
   const pendingFocus = useRef<string | null>(null)
@@ -107,21 +119,47 @@ export function TablesEditor({
   }
 
   /**
-   * Retouche la grille d'un tableau ; `column`, quand une colonne bouge ou
-   * disparaît, dit où va chacune (`null` : supprimée), pour que ses
-   * exercices choisis la suivent.
+   * Retouche la grille d'un tableau ; `column` et `row`, quand une colonne
+   * ou une ligne bouge ou disparaît, disent où va chacune (`null` :
+   * supprimée), pour que ses exercices choisis la suivent. Une case seule
+   * dont la ligne disparaît se tire de nouveau au hasard.
    */
-  function edit(index: number, change: (grid: string[][]) => string[][], column?: (from: number) => number | null) {
-    const grid = spans[index]!.grid.map((row) => row.slice())
+  function edit(
+    index: number,
+    change: (grid: string[][]) => string[][],
+    column?: (from: number) => number | null,
+    row?: (from: number) => number | null,
+  ) {
+    const grid = spans[index]!.grid.map((each) => each.slice())
     const next = choices.slice()
     const own = next[index]
-    if (column && own) {
+    if (own && (column || row)) {
       next[index] = own.flatMap((choice) => {
-        const to = column(choice.column)
-        return to === null ? [] : [{ ...choice, column: to }]
+        const to = column ? column(choice.column) : choice.column
+        if (to === null) return []
+        const line = row && choice.row !== undefined ? row(choice.row) : choice.row
+        return [withRow({ ...choice, column: to }, line ?? undefined)]
       })
     }
     commit(replaceTable(notes, index, change(grid)), next)
+  }
+
+  /**
+   * Fixe la case d'une case seule (`cell`), ou la rend au hasard (`null`).
+   * `number` est le numéro de l'exo ; sur un tableau aux exercices
+   * automatiques, choisir une case les fait passer en « Choisis ».
+   */
+  function pickCell(index: number, number: number, cell: CellRef | null) {
+    const own = choices[index]
+    const base = own ?? autoChoices(tables[index]!)
+    const at = own ? number - 1 : base.findIndex((choice) => choice.kind === 'cell')
+    if (at < 0 || !base[at]) return
+    setChoices(
+      index,
+      base.map((choice, i) =>
+        i === at ? withRow({ kind: 'cell', column: cell?.column ?? choice.column }, cell?.row) : choice,
+      ),
+    )
   }
 
   function setChoices(index: number, chosen: TableExerciseChoice[] | null) {
@@ -133,6 +171,7 @@ export function TablesEditor({
   function add(grid: string[][]) {
     commit(appendTable(notes, grid), [...choices, null])
     setSelected(spans.length)
+    setOpen((previous) => new Set(previous).add(spans.length))
   }
 
   return (
@@ -250,6 +289,14 @@ export function TablesEditor({
                 <span className="flex-1" />
                 <button
                   type="button"
+                  onClick={() => toggle(index)}
+                  title="Le tableau se retouche d'ordinaire dans le rappel ; le déplier permet de l'éditer en grille"
+                  className="rounded-lg border-2 border-line px-2.5 py-1 text-xs font-bold text-ink-soft hover:text-teal-deep"
+                >
+                  {open.has(index) ? '▾ Replier le tableau' : '▸ Modifier le tableau'}
+                </button>
+                <button
+                  type="button"
                   onClick={() => setSelected(index)}
                   className={`rounded-lg px-2.5 py-1 text-xs font-bold ${
                     isSelected ? 'bg-teal text-white' : 'border-2 border-line text-ink-soft hover:text-teal-deep'
@@ -273,6 +320,8 @@ export function TablesEditor({
 
               {hint && <p className="rounded-lg bg-amber/15 px-3 py-2 text-xs text-amber-deep">{hint}</p>}
 
+              {open.has(index) && (
+              <>
               <div className="overflow-x-auto">
                 <div
                   className="grid gap-1.5"
@@ -383,21 +432,33 @@ export function TablesEditor({
                             <SmallButton
                               title="Monter la ligne"
                               disabled={rowIndex === 1}
-                              onClick={() => edit(index, (grid) => swap(grid, rowIndex, rowIndex - 1))}
+                              onClick={() =>
+                                edit(index, (grid) => swap(grid, rowIndex, rowIndex - 1), undefined, (from) =>
+                                  from === rowIndex - 1 ? rowIndex - 2 : from === rowIndex - 2 ? rowIndex - 1 : from,
+                                )
+                              }
                             >
                               ↑
                             </SmallButton>
                             <SmallButton
                               title="Descendre la ligne"
                               disabled={rowIndex === span.grid.length - 1}
-                              onClick={() => edit(index, (grid) => swap(grid, rowIndex, rowIndex + 1))}
+                              onClick={() =>
+                                edit(index, (grid) => swap(grid, rowIndex, rowIndex + 1), undefined, (from) =>
+                                  from === rowIndex - 1 ? rowIndex : from === rowIndex ? rowIndex - 1 : from,
+                                )
+                              }
                             >
                               ↓
                             </SmallButton>
                             <SmallButton
                               title="Supprimer la ligne"
                               danger
-                              onClick={() => edit(index, (grid) => grid.filter((_, r) => r !== rowIndex))}
+                              onClick={() =>
+                                edit(index, (grid) => grid.filter((_, r) => r !== rowIndex), undefined, (from) =>
+                                  from === rowIndex - 1 ? null : from > rowIndex - 1 ? from - 1 : from,
+                                )
+                              }
                             >
                               ✕
                             </SmallButton>
@@ -425,6 +486,8 @@ export function TablesEditor({
                   + Colonne
                 </button>
               </div>
+              </>
+              )}
 
               {id !== null && (
                 <ChoicesPanel
@@ -450,6 +513,7 @@ export function TablesEditor({
             table={tables[current]!}
             exercises={choices[current] ?? undefined}
             label={`Tableau ${current + 1}`}
+            onPickCell={(number, cell) => pickCell(current, number, cell)}
           />
         ) : (
           <p className="text-center text-sm text-ink-faint">
@@ -463,7 +527,9 @@ export function TablesEditor({
 
 /**
  * Les exercices d'un tableau tels qu'une leçon les tire, joués pour de vrai
- * mais sans rien noter : chaque retouche du tableau les retire.
+ * mais sans rien noter. Chaque exo a son propre tirage : « Nouveau tirage »
+ * ne retire que celui qu'on regarde. Une case seule ne se tire pas : on y
+ * choisit la case demandée, ou on la laisse au hasard.
  */
 function TablePreview({
   id,
@@ -471,45 +537,59 @@ function TablePreview({
   table,
   exercises: chosen,
   label,
+  onPickCell,
 }: {
   id: string
   title: string
   table: NoteTableBlock
   exercises?: TableExerciseChoice[]
   label: string
+  /** Fixe (ou rend au hasard, `null`) la case de l'exo `number`. */
+  onPickCell: (number: number, cell: CellRef | null) => void
 }) {
-  const [seed, setSeed] = useState(1)
+  // Tirages déjà refaits, par numéro d'exo ; `round` repart de zéro pour tous.
+  const [draws, setDraws] = useState<Record<number, number>>({})
+  const [round, setRound] = useState(0)
   const [step, setStep] = useState(0)
   const signature = JSON.stringify([table, chosen])
+  const seedOf = (number: number) => 1 + (draws[number] ?? 0) + round * 1000
   // Chaque exercice garde le numéro de sa ligne dans la liste des choisis
   // (« Exo 3 » reste l'exo 3 même si l'exo 2 ne peut pas se jouer).
   const numbered = useMemo(
     () => {
-      const rng = createRng(seed)
-      if (!chosen) return tableExercises(title, [{ id, table }], rng).map((exercise, index) => ({ exercise, number: index + 1 }))
+      if (!chosen) {
+        // Le nombre d'exos automatiques ne dépend que du tableau, pas du tirage.
+        const count = tableExercises(title, [{ id, table }], createRng(1)).length
+        return Array.from({ length: count }, (_, index) => {
+          const exercise = tableExercises(title, [{ id, table }], createRng(seedOf(index + 1)))[index]
+          return exercise ? [{ exercise, number: index + 1 }] : []
+        }).flat()
+      }
       return chosen.flatMap((choice, index) =>
-        tableExercises(title, [{ id, table, exercises: [choice] }], rng).map((exercise) => ({ exercise, number: index + 1 })),
+        tableExercises(title, [{ id, table, exercises: [choice] }], createRng(seedOf(index + 1))).map((exercise) => ({
+          exercise,
+          number: index + 1,
+        })),
       )
     },
     // `signature` suit le contenu du tableau et ses exercices, recréés à chaque rendu.
-    [id, title, signature, seed],
+    [id, title, signature, draws, round],
   )
-  const exercises = numbered.map((entry) => entry.exercise)
-  useEffect(() => setStep(0), [signature, seed])
-  const exercise: Exercise | undefined = exercises[step]
+  const entry = numbered[step]
+  const exercise: Exercise | undefined = entry?.exercise
   const next = () => setStep((n) => n + 1)
-  const key = `${signature}:${seed}:${step}`
+  const key = `${signature}:${entry ? seedOf(entry.number) : 0}:${step}`
 
   return (
     <div className="flex flex-col gap-3">
       <div className="flex flex-wrap items-center gap-1.5">
         <span className="mr-1 text-xs font-black text-ink-faint">{label}</span>
-        {numbered.map(({ exercise: entry, number }, index) => (
+        {numbered.map(({ exercise: each, number }, index) => (
           <button
             key={index}
             type="button"
             onClick={() => setStep(index)}
-            title={KIND_LABEL[entry.kind] ?? entry.kind}
+            title={KIND_LABEL[each.kind] ?? each.kind}
             className={`rounded-lg px-2 py-0.5 text-xs font-bold ${
               index === step ? 'bg-violet text-white' : 'border border-line text-ink-soft hover:text-violet'
             }`}
@@ -517,27 +597,21 @@ function TablePreview({
             Exo {number}
           </button>
         ))}
-        <span className="flex-1" />
-        <button
-          type="button"
-          onClick={() => setSeed((n) => n + 1)}
-          title="Tirer d'autres trous, un autre ordre"
-          className="rounded-lg border-2 border-line px-2 py-0.5 text-xs font-bold text-ink-soft hover:text-teal-deep"
-        >
-          Nouveau tirage
-        </button>
       </div>
 
       <div className="card-3d flex h-[36rem] flex-col p-4">
-        {!exercise && exercises.length === 0 && (
+        {!exercise && numbered.length === 0 && (
           <div className="flex flex-1 items-center justify-center text-sm text-ink-faint">Aucun exercice à jouer.</div>
         )}
-        {!exercise && exercises.length > 0 && (
+        {!exercise && numbered.length > 0 && (
           <div className="flex flex-1 flex-col items-center justify-center gap-3 text-sm text-ink-faint">
             <p>Fin de l’aperçu.</p>
             <button
               type="button"
-              onClick={() => setSeed((n) => n + 1)}
+              onClick={() => {
+                setRound((n) => n + 1)
+                setStep(0)
+              }}
               className="rounded-lg border-2 border-line px-3 py-1 font-bold text-ink-soft hover:text-teal-deep"
             >
               Rejouer
@@ -548,8 +622,126 @@ function TablePreview({
         {exercise?.kind === 'table-bank' && <TableBank key={key} exercise={exercise} onDone={next} />}
         {exercise?.kind === 'table-cell' && <TableCell key={key} exercise={exercise} onAnswer={next} />}
       </div>
+
+      {entry && exercise && exercise.kind !== 'table-cell' && (
+        <div className="flex items-center justify-between gap-2 rounded-xl border-2 border-dashed border-line px-3 py-2">
+          <span className="text-xs text-ink-faint">
+            Exo {entry.number} :{' '}
+            {exercise.kind === 'table-order' ? 'lignes et ordre tirés au hasard' : 'cases tirées au hasard'}
+          </span>
+          <button
+            type="button"
+            onClick={() => setDraws((previous) => ({ ...previous, [entry.number]: (previous[entry.number] ?? 0) + 1 }))}
+            title={`Tirer d'autres trous, un autre ordre, pour l'exo ${entry.number} seulement`}
+            className="rounded-lg border-2 border-line px-2 py-0.5 text-xs font-bold text-ink-soft hover:text-teal-deep"
+          >
+            Nouveau tirage
+          </button>
+        </div>
+      )}
+
+      {entry && exercise?.kind === 'table-cell' && (
+        <CellPicker
+          table={table}
+          hole={exercise.hole}
+          number={entry.number}
+          fixed={chosen?.[entry.number - 1]?.row !== undefined}
+          automatic={!chosen}
+          onPick={(cell) => onPickCell(entry.number, cell)}
+        />
+      )}
     </div>
   )
+}
+
+/**
+ * La case que demande une case seule, choisie en touchant le tableau en
+ * réduction : la case fixée en plein, celle du tirage en pointillé.
+ */
+function CellPicker({
+  table,
+  hole,
+  number,
+  fixed,
+  automatic,
+  onPick,
+}: {
+  table: NoteTableBlock
+  hole: CellRef
+  number: number
+  fixed: boolean
+  automatic: boolean
+  onPick: (cell: CellRef | null) => void
+}) {
+  const headers = [table.corner, ...table.columns]
+  return (
+    <div className="flex flex-col gap-2 rounded-xl border-2 border-dashed border-line px-3 py-2">
+      <div className="flex items-center justify-between gap-2">
+        <span className="text-xs text-ink-faint">
+          Exo {number} :{' '}
+          {fixed ? 'la case demandée, en violet ; touchez-en une autre pour la changer' : 'case tirée au hasard ; touchez une case pour la fixer'}
+        </span>
+        <button
+          type="button"
+          onClick={() => onPick(null)}
+          disabled={!fixed}
+          title="La case se tire au hasard, une autre à chaque fois"
+          className="shrink-0 rounded-lg border-2 border-line px-2 py-0.5 text-xs font-bold text-ink-soft hover:text-teal-deep disabled:opacity-40"
+        >
+          Au hasard
+        </button>
+      </div>
+      <table className="w-full table-fixed border-separate border-spacing-0.5 text-[0.7rem]">
+        <thead>
+          <tr>
+            {headers.map((header, column) => (
+              <th key={column} className="truncate px-1 text-left font-black text-ink-faint">
+                {plainInline(header)}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {table.rows.map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              {[row.label, ...row.cells].map((cell, column) => {
+                const text = plainInline(cell).trim()
+                const isHole = hole.row === rowIndex && hole.column === column
+                return (
+                  <td key={column}>
+                    <button
+                      type="button"
+                      disabled={!text}
+                      onClick={() => onPick({ row: rowIndex, column })}
+                      title={text}
+                      className={`block w-full truncate rounded px-1 py-0.5 text-left disabled:opacity-30 ${
+                        isHole
+                          ? fixed
+                            ? 'bg-violet font-bold text-white'
+                            : 'border border-dashed border-violet text-violet'
+                          : 'bg-ink/5 text-ink-soft hover:bg-violet/15'
+                      }`}
+                    >
+                      {text || '·'}
+                    </button>
+                  </td>
+                )
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {automatic && (
+        <p className="text-xs text-ink-faint">Fixer une case fait passer les exercices de ce tableau en « Choisis ».</p>
+      )}
+    </div>
+  )
+}
+
+/** Un exercice choisi, sa ligne fixée ou non : jamais de `row: undefined` laissé dans l'objet. */
+function withRow(choice: TableExerciseChoice, row: number | undefined): TableExerciseChoice {
+  const { row: _drop, ...rest } = choice
+  return row === undefined ? rest : { ...rest, row }
 }
 
 function columnTitle(grid: string[][], column: number): string {
@@ -643,8 +835,9 @@ function ChoicesPanel({
   ] as const
 
   function update(at: number, patch: Partial<TableExerciseChoice>) {
-    onChange(chosen!.map((choice, i) => (i === at ? { ...choice, ...patch } : choice)))
+    onChange(chosen!.map((choice, i) => (i === at ? withRow({ ...choice, ...patch }, 'row' in patch ? patch.row : choice.row) : choice)))
   }
+  const rowName = (row: number) => plainInline(grid[row + 1]?.[0] ?? '').trim() || `ligne ${row + 1}`
 
   return (
     <div className="flex flex-col gap-2 border-t-2 border-line pt-3">
@@ -713,8 +906,31 @@ function ChoicesPanel({
                   </option>
                 ))}
               </select>
+              {choice.kind === 'cell' && (
+                <>
+                  <span className="text-ink-faint">ligne :</span>
+                  <select
+                    value={choice.row ?? ''}
+                    onChange={(event) =>
+                      update(at, { row: event.target.value === '' ? undefined : Number(event.target.value) })
+                    }
+                    className="rounded-md border border-line bg-paper px-1.5 py-1 text-ink"
+                  >
+                    <option value="">au hasard</option>
+                    {grid.slice(1).map((_, row) => (
+                      <option key={row} value={row}>
+                        {rowName(row)}
+                      </option>
+                    ))}
+                  </select>
+                </>
+              )}
               <span className="min-w-40 flex-1 text-ink-faint">{CHOICE_HELP[choice.kind]}</span>
-              {!playable(choice) && <span className="font-bold text-amber-deep">{CHOICE_EMPTY[choice.kind]}</span>}
+              {!playable(choice) && (
+                <span className="font-bold text-amber-deep">
+                  {choice.kind === 'cell' && choice.row !== undefined ? 'Cette case est vide.' : CHOICE_EMPTY[choice.kind]}
+                </span>
+              )}
               <SmallButton title="Monter" disabled={at === 0} onClick={() => onChange(swap(chosen!, at, at - 1))}>
                 ↑
               </SmallButton>

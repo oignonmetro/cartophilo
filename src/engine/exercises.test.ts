@@ -1504,6 +1504,21 @@ describe('exercices choisis pour un tableau', () => {
     expect(order).toMatchObject({ kind: 'table-order', column: 1, locate: true })
   })
 
+  it('une case seule peut être fixée par l’étiquette ou le rang de sa ligne', () => {
+    const fixed = (row: string | number) =>
+      lessonTables({ ...base, tables: [{ table: 'moment-lieu-contenu', exercises: [{ kind: 'cell', column: 'Lieu', row }] }] })
+    for (const seed of [1, 2, 3]) {
+      expect(tableExercises('T', fixed('discours de Socrate'), createRng(seed))[0]).toMatchObject({
+        kind: 'table-cell',
+        hole: { row: 1, column: 1 },
+        locate: true,
+      })
+    }
+    expect(fixed(3)[0]!.exercises).toEqual([{ kind: 'cell', column: 1, row: 2 }])
+    // Une ligne introuvable : la case se tire de nouveau au hasard.
+    expect(fixed('ailleurs')[0]!.exercises).toEqual([{ kind: 'cell', column: 1 }])
+  })
+
   it('une liste vide laisse le tableau hors des exercices et de la révision', () => {
     const none = { ...base, tables: [{ table: 'moment-lieu-contenu', exercises: [] }] }
     expect(lessonTables(none)).toEqual([])

@@ -152,6 +152,14 @@ export function columnRef(table: NoteTableBlock, column: number): string | numbe
   return header && !shared ? header : column + 1
 }
 
+/** Comment `tables:` désigne une ligne : par son étiquette, sauf si elle est vide ou partagée ; par son rang sinon. */
+export function rowRef(table: NoteTableBlock, row: number): string | number {
+  const labels = table.rows.map((each) => plainInline(each.label).trim())
+  const label = labels[row] ?? ''
+  const shared = labels.filter((other) => other.toLowerCase() === label.toLowerCase()).length > 1
+  return label && !shared ? label : row + 1
+}
+
 /**
  * Les exercices que l'application tire seule d'un tableau (voir
  * `tableExercises`), en exercices choisis : le point de départ quand on
@@ -209,7 +217,11 @@ export function writeSettings(
     if (!id || !chosen) return
     out.push({
       table: tableKey(lessonId, id),
-      exercises: chosen.map(({ kind, column }) => ({ kind, column: columnRef(table, column) })),
+      exercises: chosen.map(({ kind, column, row }) => ({
+        kind,
+        column: columnRef(table, column),
+        ...(kind === 'cell' && row !== undefined ? { row: rowRef(table, row) } : {}),
+      })),
     })
   })
   return [...out, ...orphans.filter((orphan) => !out.some((entry) => entry.table === orphan.table))]
