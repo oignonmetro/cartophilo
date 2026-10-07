@@ -894,38 +894,33 @@ function ChoicesPanel({
                   </option>
                 ))}
               </select>
-              <span className="text-ink-faint">{choice.kind === 'order' ? 'révèle :' : 'colonne :'}</span>
-              <select
-                value={choice.column}
-                onChange={(event) => update(at, { column: Number(event.target.value) })}
-                className="rounded-md border border-line bg-paper px-1.5 py-1 text-ink"
-              >
-                {headers.map((_, column) => (
-                  <option key={column} value={column}>
-                    {columnName(column)}
-                  </option>
-                ))}
-              </select>
-              {choice.kind === 'cell' && (
+              {choice.kind === 'cell' ? (
+                // La case se choisit sur le tableau en réduction de l'aperçu (voir
+                // `CellPicker`), plus par une colonne puis une ligne à la suite.
+                <span className="rounded-md bg-ink/5 px-1.5 py-1 font-bold text-ink-soft">
+                  {choice.row === undefined
+                    ? `colonne « ${columnName(choice.column)} », ligne au hasard`
+                    : `« ${rowName(choice.row)} » × « ${columnName(choice.column)} »`}
+                </span>
+              ) : (
                 <>
-                  <span className="text-ink-faint">ligne :</span>
+                  <span className="text-ink-faint">{choice.kind === 'order' ? 'révèle :' : 'colonne :'}</span>
                   <select
-                    value={choice.row ?? ''}
-                    onChange={(event) =>
-                      update(at, { row: event.target.value === '' ? undefined : Number(event.target.value) })
-                    }
+                    value={choice.column}
+                    onChange={(event) => update(at, { column: Number(event.target.value) })}
                     className="rounded-md border border-line bg-paper px-1.5 py-1 text-ink"
                   >
-                    <option value="">au hasard</option>
-                    {grid.slice(1).map((_, row) => (
-                      <option key={row} value={row}>
-                        {rowName(row)}
+                    {headers.map((_, column) => (
+                      <option key={column} value={column}>
+                        {columnName(column)}
                       </option>
                     ))}
                   </select>
                 </>
               )}
-              <span className="min-w-40 flex-1 text-ink-faint">{CHOICE_HELP[choice.kind]}</span>
+              <span className="min-w-40 flex-1 text-ink-faint">
+                {choice.kind === 'cell' ? `${CHOICE_HELP.cell} Se règle sur le tableau de l’aperçu (Exo ${at + 1}).` : CHOICE_HELP[choice.kind]}
+              </span>
               {!playable(choice) && (
                 <span className="font-bold text-amber-deep">
                   {choice.kind === 'cell' && choice.row !== undefined ? 'Cette case est vide.' : CHOICE_EMPTY[choice.kind]}
