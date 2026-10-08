@@ -2676,7 +2676,18 @@ export function splitGap(sentence: string): { before: string; after: string } {
  */
 export function matchesAnswer(expected: string, alt: readonly string[], value: string): boolean {
   const given = normalizeForm(value)
-  return given.length > 0 && [expected, ...alt].some((candidate) => normalizeForm(candidate) === given)
+  return given.length > 0 && [expected, ...alt].some((candidate) => acceptedForms(candidate).includes(given))
+}
+
+/**
+ * Ce qui est entre parenthèses dans une réponse attendue est facultatif :
+ * « Lois d'Athènes (οἱ Νόμοι) » s'accepte avec ou sans la précision. Les deux
+ * formes sont donc admises, comparées une fois normalisées.
+ */
+function acceptedForms(candidate: string): string[] {
+  const full = normalizeForm(candidate)
+  const bare = normalizeForm(candidate.replace(/\s*\([^)]*\)/g, ''))
+  return bare && bare !== full ? [full, bare] : [full]
 }
 
 /** Nombre d'éléments distincts qu'une leçon fera travailler. */

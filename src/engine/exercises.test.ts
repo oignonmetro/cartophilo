@@ -1565,3 +1565,19 @@ describe('exercices choisis pour un tableau', () => {
     expect(late).not.toContain('table-bank')
   })
 })
+
+describe('précisions entre parenthèses', () => {
+  it('s’accepte avec ou sans ce qui est entre parenthèses', () => {
+    const expected = 'Lois d’Athènes (οἱ Νόμοι)'
+    expect(matchesAnswer(expected, [], 'lois d’athènes')).toBe(true)
+    expect(matchesAnswer(expected, [], 'Lois d’Athènes (οἱ Νόμοι)')).toBe(true)
+    expect(matchesAnswer(expected, [], 'lois d’athenes ( οἱ νόμοι )')).toBe(true)
+    expect(matchesAnswer(expected, [], 'Lois de Sparte')).toBe(false)
+  })
+
+  it('vaut aussi pour les réponses alternatives, et une réponse tout entre parenthèses reste exigée', () => {
+    expect(matchesAnswer('Un', ['Le premier (principe)'], 'le premier')).toBe(true)
+    expect(matchesAnswer('(Θ10)', [], 'Θ10')).toBe(true)
+    expect(matchesAnswer('(Θ10)', [], '')).toBe(false)
+  })
+})
