@@ -183,10 +183,15 @@ export function PairBoard({
           en haut : avec quatre paires, elle ne remplissait qu'un quart de
           l'écran et laissait le reste vide, comme une carte oubliée là. */}
       <div className="flex flex-1 flex-col justify-center">
-        <div className="grid grid-cols-2 gap-3">
-          {columns.map((column, columnIndex) => (
-            <div key={columnIndex} className="flex flex-col gap-3">
-              {column.map((token) => (
+        {/* Une seule grille, rangée par rangée (un jeton de chaque colonne), et
+            `auto-rows-fr` : toutes les rangées prennent la hauteur de la plus
+            haute. Deux colonnes indépendantes laissaient la colonne des libellés
+            longs, étroite sur téléphone, grandir plus que l'autre — des jetons
+            de tailles inégales, d'un côté à l'autre comme d'une rangée à l'autre. */}
+        <div className="grid auto-rows-fr grid-cols-2 gap-3">
+          {columns[0].flatMap((leftToken, index) =>
+            [leftToken, columns[1][index]].map((token) =>
+              token ? (
                 <TokenButton
                   key={token.key}
                   token={token}
@@ -198,9 +203,9 @@ export function PairBoard({
                   shaking={wrong === token.key}
                   onPick={pick}
                 />
-              ))}
-            </div>
-          ))}
+              ) : null,
+            ),
+          )}
         </div>
       </div>
     </div>
