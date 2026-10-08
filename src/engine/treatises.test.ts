@@ -5,11 +5,13 @@ import {
   ACTIVE_COUNT,
   LINKS,
   activeTreatises,
+  isAcquired,
   isValidated,
   learningOrder,
   linksOf,
   materializeTreatise,
   numberingOf,
+  reviewTreatises,
   rightsOn,
   treatiseGhosts,
   type TreatiseProgress,
@@ -32,6 +34,7 @@ const ENTRIES: TreatiseEntry[] = Array.from({ length: 54 }, (_, index) => {
 
 const done = (entry: TreatiseEntry): TreatiseProgress[string] => ({
   links: Object.fromEntries(linksOf(entry).map((link) => [link, { right: 1, wrong: 0 }])),
+  theses: Object.fromEntries((entry.theses ?? []).map((_, index) => [index, { right: 1, wrong: 0 }])),
 })
 const masterAll = (...ids: string[]): TreatiseProgress =>
   Object.fromEntries(ids.map((id) => [id, done(ENTRIES.find((entry) => entry.id === id)!)]))
@@ -86,6 +89,15 @@ describe('maîtrise lien par lien', () => {
   it('n’est maîtrisé que quand chacun de ses liens a eu une bonne association', () => {
     expect(isValidated(withTheses, { links: { 'title-number': { right: 1, wrong: 0 } } })).toBe(false)
     expect(isValidated(withTheses, { links: { 'title-thesis': { right: 3, wrong: 1 } } })).toBe(false)
+    // Toutes les thèses comptent, pas l'une des trois.
+    const numberDone = { 'title-number': { right: 1, wrong: 0 } }
+    expect(isValidated(withTheses, { links: numberDone, theses: { 0: { right: 2, wrong: 0 } } })).toBe(false)
+    expect(
+      isValidated(withTheses, {
+        links: numberDone,
+        theses: { 0: { right: 1, wrong: 0 }, 1: { right: 1, wrong: 0 }, 2: { right: 1, wrong: 0 } },
+      }),
+    ).toBe(true)
     expect(isValidated(withTheses, done(withTheses))).toBe(true)
     expect(isValidated(plain, { links: { 'title-number': { right: 1, wrong: 0 } } })).toBe(true)
   })
@@ -101,6 +113,40 @@ describe('maîtrise lien par lien', () => {
     const progress: TreatiseProgress = { [first!.id]: done(first!) }
     expect(isValidated(first!, progress[first!.id])).toBe(true)
     expect(isValidated(second!, progress[second!.id])).toBe(false)
+  })
+})
+
+describe('consolidation', () => {
+  const entry = ENTRIES[3]!
+
+  it('un traité maîtrisé n’est acquis qu’après une réussite dans une autre séance', () => {
+    expect(isAcquired(entry, done(entry))).toBe(false)
+    expect(isAcquired(entry, { ...done(entry), session: 'a', sessions: 1 })).toBe(false)
+    expect(isAcquired(entry, { ...done(entry), session: 'b', sessions: 2 })).toBe(true)
+    expect(isAcquired(entry, { session: 'b', sessions: 2 })).toBe(false)
+  })
+
+  it('un traité maîtrisé revient dans les séances suivantes, pas dans la sienne', () => {
+    const progress: TreatiseProgress = { [entry.id]: { ...done(entry), session: 'a', sessions: 1 } }
+    expect(reviewTreatises(ENTRIES, progress, 'a')).toHaveLength(0)
+    expect(reviewTreatises(ENTRIES, progress, 'b').map((item) => item.id)).toEqual([entry.id])
+    expect(reviewTreatises(ENTRIES, { [entry.id]: { ...done(entry), sessions: 2 } }, 'b')).toHaveLength(0)
+  })
+
+  it('une thèse déjà réussie cède la place aux thèses pas encore vues', () => {
+    const progress: TreatiseProgress = {
+      [entry.id]: { links: { 'title-number': { right: 1, wrong: 0 } }, theses: { 0: { right: 1, wrong: 0 } } },
+    }
+    let seen = 0
+    let total = 0
+    for (let seed = 0; seed < 200; seed++) {
+      const exercise = materializeTreatise(treatiseGhosts(2)[1]!, ENTRIES, progress, seed)
+      if (exercise.kind !== 'treatise-choice' || exercise.entryId !== entry.id || exercise.thesis === undefined) continue
+      total++
+      if (exercise.thesis !== 0) seen++
+    }
+    expect(total).toBeGreaterThan(0)
+    expect(seen / total).toBeGreaterThan(0.8)
   })
 })
 
@@ -185,7 +231,8 @@ describe('exercices formés à l’instant', () => {
     let total = 0
     for (let seed = 0; seed < 80; seed++) {
       const exercise = materializeTreatise(treatiseGhosts(2)[1]!, ENTRIES, progress, seed)
-      if (exercise.kind !== 'treatise-choice') continue
+      // Les traités sans thèses, déjà maîtrisés, ne reviennent qu'en consolidation.
+      if (exercise.kind !== 'treatise-choice' || !ENTRIES.find((e) => e.id === exercise.entryId)!.theses) continue
       total++
       if (exercise.link === 'title-thesis') hits++
     }
@@ -195,14 +242,17 @@ describe('exercices formés à l’instant', () => {
 
   it('introduit aussitôt un nouveau traité quand un autre est maîtrisé', () => {
     const before = activeTreatises(ENTRIES, {})
-    const progress = masterAll(before[0]!.id)
+    // Maîtrisé et déjà consolidé : il ne revient plus, sa place est prise.
+    const progress: TreatiseProgress = { [before[0]!.id]: { ...done(before[0]!), sessions: 2 } }
     for (let seed = 0; seed < 20; seed++) {
       expect(idsOf(materializeTreatise(treatiseGhosts(1)[0]!, ENTRIES, progress, seed))).not.toContain(before[0]!.id)
     }
   })
 
   it('reprend des traités au hasard, sans rien noter, quand tout est maîtrisé', () => {
-    const progress = masterAll(...ENTRIES.map((entry) => entry.id))
+    const progress: TreatiseProgress = Object.fromEntries(
+      ENTRIES.map((entry) => [entry.id, { ...done(entry), sessions: 2 }]),
+    )
     for (const ghost of treatiseGhosts(3)) {
       const exercise = materializeTreatise(ghost, ENTRIES, progress, 3)
       expect('practice' in exercise && exercise.practice).toBe(true)

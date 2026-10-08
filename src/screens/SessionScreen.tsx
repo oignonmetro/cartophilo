@@ -358,7 +358,9 @@ function SessionRunner({
       // Un lien d'un traité n'est réussi que par une bonne réponse du premier
       // coup ; une reprise réussie ne le valide pas, une erreur le note toujours.
       if (exercise.kind === 'treatise-choice' && !exercise.practice && (!correct || firstTry)) {
-        gradeTreatises(course.id, [{ id: exercise.entryId, link: exercise.link, correct }])
+        gradeTreatises(course.id, [
+          { id: exercise.entryId, link: exercise.link, correct, thesis: exercise.thesis, session: exercise.session },
+        ])
       }
       // Pas de son ici : il a déjà sonné dans l'exercice, à la validation
       // de la réponse (voir `useSessionSounds`). `answer` n'est appelé qu'à
@@ -387,7 +389,13 @@ function SessionRunner({
           course.id,
           exercise.pairs
             .filter((pair) => missed.has(pair.id) || firstTry)
-            .map((pair) => ({ id: pair.id, link: exercise.link, correct: !missed.has(pair.id) })),
+            .map((pair) => ({
+              id: pair.id,
+              link: exercise.link,
+              correct: !missed.has(pair.id),
+              thesis: pair.thesis,
+              session: exercise.session,
+            })),
         )
       }
       // Pas de son ici : chaque paire a déjà sonné en se résolvant (voir

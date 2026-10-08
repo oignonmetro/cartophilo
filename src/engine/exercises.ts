@@ -485,8 +485,10 @@ export interface TreatiseMatchExercise {
   link: TreatiseLink
   /** Les deux colonnes : `left` vient de la première, `right` de la seconde (dans le sens où elles sont posées). */
   columns: [TreatiseColumn, TreatiseColumn]
-  /** Une paire par traité : `id` est celui du traité. */
-  pairs: { id: string; left: string; right: string }[]
+  /** Une paire par traité : `id` est celui du traité, `thesis` le rang de la thèse quand une colonne en est une. */
+  pairs: { id: string; left: string; right: string; thesis?: number }[]
+  /** La séance qui a formé la manche : un traité n'est « acquis » qu'à travers deux séances différentes. */
+  session?: string
   /** Séance de remise à niveau : rien n'y est noté (tous les traités sont déjà validés). */
   practice?: boolean
 }
@@ -504,6 +506,9 @@ export interface TreatiseChoiceExercise {
   answer: string
   /** Réponses proposées, la bonne comprise, dans l'ordre d'affichage. */
   options: string[]
+  /** Rang de la thèse interrogée (du traité `entryId`), quand une colonne est celle des thèses. */
+  thesis?: number
+  session?: string
   practice?: boolean
 }
 

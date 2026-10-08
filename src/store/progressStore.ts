@@ -168,7 +168,7 @@ interface ProgressState extends ProgressSnapshot {
    */
   gradeTreatises: (
     courseId: string,
-    results: readonly { id: string; link: TreatiseLink; correct: boolean }[],
+    results: readonly { id: string; link: TreatiseLink; correct: boolean; thesis?: number; session?: string }[],
   ) => void
   /** Clôt une session de leçon : plancher d'acquisition, XP, série. */
   finishLesson: (
@@ -456,11 +456,26 @@ export const useProgress = create<ProgressState>()(
       gradeTreatises: (courseId, results) =>
         set((state) => {
           const bucket = { ...(state.treatises[courseId] ?? {}) }
-          for (const { id, link, correct } of results) {
+          const bump = (current: { right: number; wrong: number } | undefined, correct: boolean) => {
+            const base = current ?? { right: 0, wrong: 0 }
+            return correct ? { ...base, right: base.right + 1 } : { ...base, wrong: base.wrong + 1 }
+          }
+          for (const { id, link, correct, thesis, session } of results) {
             const record = bucket[id] ?? {}
-            const current = record.links?.[link] ?? { right: 0, wrong: 0 }
-            const next = correct ? { ...current, right: current.right + 1 } : { ...current, wrong: current.wrong + 1 }
-            bucket[id] = { ...record, links: { ...record.links, [link]: next } }
+            const next: typeof record = {
+              ...record,
+              links: { ...record.links, [link]: bump(record.links?.[link], correct) },
+            }
+            // Chaque thèse a son propre compte : en connaître une ne vaut pas connaître les autres.
+            if (thesis !== undefined) {
+              next.theses = { ...record.theses, [thesis]: bump(record.theses?.[thesis], correct) }
+            }
+            // Séances différentes où ce traité a été réussi : la base de sa consolidation.
+            if (correct && session !== undefined && record.session !== session) {
+              next.session = session
+              next.sessions = (record.sessions ?? 0) + 1
+            }
+            bucket[id] = next
           }
           return { treatises: { ...state.treatises, [courseId]: bucket } }
         }),
