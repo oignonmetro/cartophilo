@@ -82,6 +82,7 @@ export function effortOf(exercise: Exercise): number {
     case 'grammar-choice':
     case 'conjugation-choice':
     case 'treatise-choice':
+    case 'treatise-ghost':
       return 1
 
     // Une manche d'association est de la reconnaissance, mais en gros : elle

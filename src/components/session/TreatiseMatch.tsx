@@ -1,5 +1,11 @@
-import type { TreatiseMatchExercise } from '@/engine/exercises'
+import type { TreatiseLink, TreatiseMatchExercise } from '@/engine/exercises'
 import { PairBoard } from './PairBoard'
+
+const MATCH_PROMPT: Record<TreatiseLink, string> = {
+  'title-number': 'Associez chaque traité à sa numérotation',
+  'title-thesis': 'Associez chaque thèse au traité qui la défend',
+  'number-thesis': 'Associez chaque numérotation à la thèse du traité',
+}
 
 /**
  * Association de repérage dans les traités : relier chaque titre à sa double
@@ -18,11 +24,7 @@ export function TreatiseMatch({
     <PairBoard
       seed={exercise.id}
       pairs={exercise.pairs}
-      prompt={
-        exercise.topic === 'thesis'
-          ? 'Associez chaque thèse au traité qui la défend'
-          : 'Associez chaque traité à sa numérotation'
-      }
+      prompt={MATCH_PROMPT[exercise.link]}
       onDone={onDone}
     />
   )

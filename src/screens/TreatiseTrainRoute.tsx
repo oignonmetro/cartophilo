@@ -1,7 +1,8 @@
-import { useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { useCourse } from '@/content/CourseProvider'
-import { buildTreatiseSession } from '@/engine/treatises'
+import type { TreatiseGhostExercise } from '@/engine/exercises'
+import { materializeTreatise, treatiseGhosts } from '@/engine/treatises'
 import type { SessionOutcome } from '@/engine/progress'
 import { useProgress } from '@/store/progressStore'
 import { SessionScreen } from './SessionScreen'
@@ -29,13 +30,16 @@ export function TreatiseTrainRoute() {
     [course],
   )
 
-  // Figée à l'ouverture de chaque séance : les réponses données en cours de
-  // route font avancer l'apprentissage, pas la séance en train de se jouer.
-  const exercises = useMemo(
-    () => buildTreatiseSession(entries, useProgress.getState().treatises[course.id] ?? {}, Date.now() + attempt),
-    // `attempt` relance une séance sur ce que la précédente a validé.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [entries, course.id, attempt],
+  // Des places réservées, pas des exercices : chacun se forme au moment de
+  // l'ouvrir, d'après ce que les réponses précédentes ont appris (un traité
+  // maîtrisé laisse aussitôt sa place à un nouveau). `attempt` relance une
+  // séance sur ce que la précédente a validé.
+  const ghosts = useMemo(() => treatiseGhosts(), [attempt])
+  const seed = useMemo(() => Date.now() + attempt, [attempt])
+  const materialize = useCallback(
+    (ghost: TreatiseGhostExercise) =>
+      materializeTreatise(ghost, entries, useProgress.getState().treatises[course.id] ?? {}, seed),
+    [entries, course.id, seed],
   )
 
   if (entries.length === 0) return <Navigate to="/" replace />
@@ -63,7 +67,8 @@ export function TreatiseTrainRoute() {
     <SessionScreen
       key={attempt}
       kind="workout"
-      exercises={exercises}
+      exercises={ghosts}
+      materialize={materialize}
       onQuit={back}
       onFinish={(outcome, peakTier) =>
         setFinished({ outcome, peakTier, ...finishStep(course.id, 'traites:reperage', outcome) })

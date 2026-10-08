@@ -1,11 +1,18 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import type { TreatiseChoiceExercise } from '@/engine/exercises'
+import type { TreatiseChoiceExercise, TreatiseColumn } from '@/engine/exercises'
 import { Button } from '@/components/Button'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 import { OptionList } from './OptionList'
 import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
+
+/** La consigne d'un QCM, d'après ce qu'on donne (`from`) et ce qu'on cherche (`to`). */
+function questionOf(from: TreatiseColumn, to: TreatiseColumn): string {
+  if (to === 'number') return from === 'thesis' ? 'Quelle numérotation porte le traité de cette thèse ?' : 'Quelle numérotation ?'
+  if (to === 'thesis') return 'Quelle thèse défend ce traité ?'
+  return from === 'thesis' ? 'Quel traité défend cette thèse ?' : 'Quel traité ?'
+}
 
 /**
  * QCM de repérage dans les traités : un titre dont on cherche la double
@@ -19,7 +26,7 @@ export function TreatiseChoice({
   exercise: TreatiseChoiceExercise
   onAnswer: (correct: boolean) => void
 }) {
-  const { prompt, answer, options, direction } = exercise
+  const { prompt, answer, options, from, to } = exercise
   const [picked, setPicked] = useState<string | null>(null)
   const sounds = useSessionSounds()
   const haptics = useSessionHaptics()
@@ -47,16 +54,12 @@ export function TreatiseChoice({
   return (
     <div className="flex flex-1 flex-col gap-6">
       <p className="text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
-        {direction === 'title-to-number'
-          ? 'Quelle numérotation ?'
-          : direction === 'thesis-to-title'
-            ? 'Quel traité défend cette thèse ?'
-            : 'Quel traité ?'}
+        {questionOf(from, to)}
       </p>
 
       <div className="card-3d px-4 py-4 text-center">
         <span
-          className={`font-black break-words ${direction === 'thesis-to-title' ? 'text-lg leading-snug' : 'text-xl'}`}
+          className={`font-black break-words ${from === 'thesis' ? 'text-lg leading-snug' : 'text-xl'}`}
         >
           {prompt}
         </span>
@@ -66,6 +69,7 @@ export function TreatiseChoice({
         options={options}
         picked={picked}
         isCorrect={(option) => option === answer}
+        size={to === 'thesis' ? 'long' : 'normal'}
         onPick={(option) => {
           setPicked(option)
           const right = option === answer

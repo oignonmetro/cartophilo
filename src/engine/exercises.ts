@@ -463,18 +463,25 @@ export interface TableOrderExercise {
 }
 
 /**
- * Repérage dans les traités d'un auteur (voir `treatises.ts`) : relier des
- * titres à leur double numérotation (« 53 [I, 1] » : rang chronologique, puis
- * place chez Porphyre). Ces exercices ne notent pas des éléments de la
- * révision espacée (`itemIdsOf` ne rend rien) : ce sont des traités, suivis
- * par `treatises` dans le store.
+ * Repérage dans les traités d'un auteur (voir `treatises.ts`) : un traité se
+ * dit de trois façons (son titre, sa numérotation « 53 [I, 1] », l'une de ses
+ * thèses), et chaque exercice fait associer deux de ces façons. Ces exercices
+ * ne notent pas des éléments de la révision espacée (`itemIdsOf` ne rend
+ * rien) : ce sont des liens entre deux « colonnes » d'un traité, suivis par
+ * `treatises` dans le store.
  */
+export type TreatiseColumn = 'title' | 'number' | 'thesis'
+/** Une association entre deux colonnes, dans un sens ou dans l'autre. */
+export type TreatiseLink = 'title-number' | 'title-thesis' | 'number-thesis'
+
 export interface TreatiseMatchExercise {
   kind: 'treatise-match'
   id: string
-  /** Ce que la manche fait savoir : la numérotation d'un traité, ou l'une de ses thèses. */
-  topic: 'numbering' | 'thesis'
-  /** Une paire par traité : son titre à gauche et sa numérotation à droite, ou sa thèse à gauche et son titre à droite. */
+  /** Le lien que la manche fait établir, pour chacun de ses traités. */
+  link: TreatiseLink
+  /** Les deux colonnes : `left` vient de la première, `right` de la seconde (dans le sens où elles sont posées). */
+  columns: [TreatiseColumn, TreatiseColumn]
+  /** Une paire par traité : `id` est celui du traité. */
   pairs: { id: string; left: string; right: string }[]
   /** Séance de remise à niveau : rien n'y est noté (tous les traités sont déjà validés). */
   practice?: boolean
@@ -483,17 +490,29 @@ export interface TreatiseMatchExercise {
 export interface TreatiseChoiceExercise {
   kind: 'treatise-choice'
   id: string
-  /** Ce que la question fait savoir : la numérotation d'un traité, ou l'une de ses thèses. */
-  topic: 'numbering' | 'thesis'
+  link: TreatiseLink
+  /** Ce qui est montré, et ce qu'on cherche. */
+  from: TreatiseColumn
+  to: TreatiseColumn
   /** Le traité interrogé. */
   entryId: string
-  /** Ce qui est montré, et ce qu'on cherche : le titre pour la numérotation, l'inverse, ou le traité d'une thèse. */
   prompt: string
   answer: string
   /** Réponses proposées, la bonne comprise, dans l'ordre d'affichage. */
   options: string[]
-  direction: 'title-to-number' | 'number-to-title' | 'thesis-to-title'
   practice?: boolean
+}
+
+/**
+ * Exercice qui n'existe pas encore : la séance en réserve une place, et il
+ * se forme au moment de l'ouvrir, d'après ce que l'apprenant sait alors des
+ * traités (voir `materializeTreatise`).
+ */
+export interface TreatiseGhostExercise {
+  kind: 'treatise-ghost'
+  id: string
+  /** Manche d'association, ou QCM : décidé à l'avance, pour le rythme de la séance. */
+  shape: 'match' | 'choice'
 }
 
 export type Exercise =
@@ -515,6 +534,7 @@ export type Exercise =
   | WorkMatchExercise
   | TreatiseMatchExercise
   | TreatiseChoiceExercise
+  | TreatiseGhostExercise
   | TableBankExercise
   | TableCellExercise
   | TableOrderExercise
@@ -575,6 +595,7 @@ export function itemIdsOf(exercise: Exercise): string[] {
     // Des traités, pas des éléments de révision : voir `TreatiseMatchExercise`.
     case 'treatise-match':
     case 'treatise-choice':
+    case 'treatise-ghost':
       return []
     case 'table-bank':
     case 'table-cell':

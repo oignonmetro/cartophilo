@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import type { Exercise } from '@/engine/exercises'
+import type { Exercise, TreatiseGhostExercise } from '@/engine/exercises'
 import { isExplanationOnly, isNonLocating, isPresentation, itemIdsOf, retryIndex } from '@/engine/exercises'
 import { isCitation } from '@/content/course'
 import { ratingFromAnswer, type Rating } from '@/engine/srs'
@@ -56,6 +56,12 @@ interface SessionScreenProps {
    */
   kind: UnitNodeKind
   exercises: Exercise[]
+  /**
+   * Forme, au moment de l'ouvrir, un exercice réservé d'avance (voir
+   * `TreatiseGhostExercise`) : il reçoit l'identifiant du fantôme, pour que la
+   * séance le suive comme n'importe quel autre.
+   */
+  materialize?: (ghost: TreatiseGhostExercise) => Exercise
   onQuit: () => void
   /** `peakTier` : le plus haut palier de série atteint, voir `useSessionHaptics`. */
   onFinish: (outcome: SessionOutcome, peakTier: number) => void
@@ -212,6 +218,7 @@ export function SessionScreen(props: SessionScreenProps) {
 function SessionRunner({
   kind,
   exercises,
+  materialize,
   onQuit,
   onFinish,
   haptics,
@@ -259,7 +266,20 @@ function SessionRunner({
     [skipping, locating],
   )
 
-  const current = queue[position]
+  // Un fantôme se forme à son tour, d'après ce qui s'est passé avant lui ; le
+  // résultat est retenu pour que l'exercice reste le même tant qu'il est à
+  // l'écran (et quand il revient après une erreur).
+  const formed = useRef(new Map<string, Exercise>())
+  const queued = queue[position]
+  let current: Exercise | undefined = queued
+  if (queued?.kind === 'treatise-ghost') {
+    let made = formed.current.get(queued.id)
+    if (!made && materialize) {
+      made = { ...materialize(queued), id: queued.id } as Exercise
+      formed.current.set(queued.id, made)
+    }
+    current = made
+  }
   const skipped = current !== undefined && skips(current)
   useEffect(() => {
     if (skipped) setPosition((index) => index + 1)
@@ -335,10 +355,10 @@ function SessionRunner({
       for (const itemId of itemIdsOf(exercise)) {
         gradeItem(course.id, itemId, rating ?? ratingFromAnswer(correct, firstTry))
       }
-      // Un traité n'est validé que par une bonne réponse du premier coup ; une
-      // reprise réussie ne le valide pas, une erreur le note toujours.
+      // Un lien d'un traité n'est réussi que par une bonne réponse du premier
+      // coup ; une reprise réussie ne le valide pas, une erreur le note toujours.
       if (exercise.kind === 'treatise-choice' && !exercise.practice && (!correct || firstTry)) {
-        gradeTreatises(course.id, [{ id: exercise.entryId, correct, topic: exercise.topic }])
+        gradeTreatises(course.id, [{ id: exercise.entryId, link: exercise.link, correct }])
       }
       // Pas de son ici : il a déjà sonné dans l'exercice, à la validation
       // de la réponse (voir `useSessionSounds`). `answer` n'est appelé qu'à
@@ -367,7 +387,7 @@ function SessionRunner({
           course.id,
           exercise.pairs
             .filter((pair) => missed.has(pair.id) || firstTry)
-            .map((pair) => ({ id: pair.id, correct: !missed.has(pair.id), topic: exercise.topic })),
+            .map((pair) => ({ id: pair.id, link: exercise.link, correct: !missed.has(pair.id) })),
         )
       }
       // Pas de son ici : chaque paire a déjà sonné en se résolvant (voir

@@ -1,43 +1,64 @@
 import type { TreatiseEntry } from '@/content/schema'
-import type { Exercise, TreatiseChoiceExercise, TreatiseMatchExercise } from './exercises'
-import { createRng, sample, shuffle, type Rng } from './rng'
+import type {
+  Exercise,
+  TreatiseChoiceExercise,
+  TreatiseColumn,
+  TreatiseGhostExercise,
+  TreatiseLink,
+  TreatiseMatchExercise,
+} from './exercises'
+import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
 
 /**
- * Repérage général dans les traités d'un auteur (Plotin : 54 traités, deux
- * numérotations). On y apprend à lier un titre à son double repère, et, pour
- * les traités qui en ont, à leurs thèses principales, petit à petit : jamais
- * plus de `ACTIVE_COUNT` traités en cours d'apprentissage, et un nouveau
- * entre en jeu chaque fois qu'un autre est validé.
+ * Repérage général dans les traités d'un auteur (Plotin : 54 traités).
  *
- * Trois choses sont séparées exprès, pour que de nouveaux types d'exercices
- * puissent venir sans toucher à l'ordre d'apprentissage :
+ * Un traité se dit de trois façons, comme les colonnes d'un tableau : son
+ * titre, sa numérotation (« 53 [I, 1] ») et, pour ceux qui en ont, ses thèses
+ * principales. Un exercice ne teste jamais « un traité » en bloc : il fait
+ * établir un **lien** entre deux colonnes (titre ↔ numérotation, titre ↔
+ * thèse, numérotation ↔ thèse), et chaque bonne ou mauvaise association est
+ * retenue pour *ce* traité et *ce* lien.
  *
+ * Les exercices n'existent pas d'avance : une séance réserve des places
+ * (`treatiseGhosts`), et chaque exercice se forme au moment de l'ouvrir
+ * (`materializeTreatise`), par un hasard réglé sur ce que l'apprenant sait
+ * alors : les liens pas encore réussis passent d'abord, et un traité qui vient
+ * d'être maîtrisé laisse aussitôt sa place à un nouveau.
+ *
+ * Trois choses restent séparées, pour que d'autres types d'exercices puissent
+ * venir sans toucher à l'ordre d'apprentissage :
  *   1. l'ordre d'arrivée des traités (`learningOrder`) ;
- *   2. ce qui valide un traité (`isValidated`, qui ne lit que la fiche du
- *      traité) ;
- *   3. les exercices proposés pour ceux qui sont en cours (`buildTreatiseSession`).
- *
- * Un traité n'est plus validé par une bonne réponse ponctuelle, mais quand
- * chacun des sujets qui le concernent a été réussi une fois du premier coup
- * (`requiredTopics`) : la numérotation pour tous, et la thèse pour ceux qui en
- * ont. Un nouveau type d'exercice n'aura qu'à ajouter un sujet.
+ *   2. ce qui valide un traité (`isValidated`) ;
+ *   3. la façon de former les exercices.
  */
 
 /** Nombre de traités en cours d'apprentissage : ni plus, ni moins (tant qu'il en reste à apprendre). */
-export const ACTIVE_COUNT = 8
+export const ACTIVE_COUNT = 6
 
-/** Ce qu'un exercice fait savoir d'un traité. */
-export type TreatiseTopic = 'numbering' | 'thesis'
+export const LINKS: readonly TreatiseLink[] = ['title-number', 'title-thesis', 'number-thesis']
 
-/**
- * Ce qu'on retient de chaque traité : ses réponses justes du premier coup,
- * par sujet, et ses réponses fausses. `right` est le compte d'avant les
- * sujets : il ne portait que sur la numérotation.
- */
-export interface TreatiseRecord {
+const LINK_COLUMNS: Record<TreatiseLink, [TreatiseColumn, TreatiseColumn]> = {
+  'title-number': ['title', 'number'],
+  'title-thesis': ['title', 'thesis'],
+  'number-thesis': ['number', 'thesis'],
+}
+
+/** Ce qu'on retient d'un lien : ses associations justes (du premier coup) et fausses. */
+export interface LinkRecord {
   right: number
   wrong: number
+}
+
+/**
+ * Ce qu'on retient de chaque traité, lien par lien. `right` et `thesis` sont
+ * les comptes d'avant les liens : réussites sur la numérotation, puis sur les
+ * thèses (titre ↔ thèse).
+ */
+export interface TreatiseRecord {
+  right?: number
+  wrong?: number
   thesis?: number
+  links?: Partial<Record<TreatiseLink, LinkRecord>>
 }
 
 export type TreatiseProgress = Record<string, TreatiseRecord>
@@ -47,6 +68,22 @@ export const ENNEAD_NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI'] as const
 /** « 53 [I, 1] » : rang chronologique, puis place chez Porphyre. */
 export function numberingOf(entry: TreatiseEntry): string {
   return `${entry.chrono} [${ENNEAD_NUMERALS[entry.ennead - 1]}, ${entry.numberInEnnead}]`
+}
+
+function hasColumn(entry: TreatiseEntry, column: TreatiseColumn): boolean {
+  return column !== 'thesis' || Boolean(entry.theses && entry.theses.length > 0)
+}
+
+/** Ce que dit un traité dans une colonne ; une thèse est tirée parmi les siennes (« ou » : jamais deux dans un même exercice). */
+function valueIn(entry: TreatiseEntry, column: TreatiseColumn, rng: Rng): string {
+  if (column === 'title') return entry.title
+  if (column === 'number') return numberingOf(entry)
+  return entry.theses![Math.floor(rng() * entry.theses!.length)]!
+}
+
+/** Les liens que ce traité permet d'établir : tous, s'il a des thèses ; sa numérotation seule sinon. */
+export function linksOf(entry: TreatiseEntry): TreatiseLink[] {
+  return LINKS.filter((link) => LINK_COLUMNS[link].every((column) => hasColumn(entry, column)))
 }
 
 /**
@@ -63,25 +100,26 @@ export function learningOrder(entries: readonly TreatiseEntry[]): TreatiseEntry[
   return [...ranked, ...rest.filter((entry) => entry.highlight), ...rest.filter((entry) => !entry.highlight)]
 }
 
-/** Les sujets à réussir pour valider ce traité : sa numérotation, et ses thèses s'il en a. */
-export function requiredTopics(entry: TreatiseEntry): TreatiseTopic[] {
-  return entry.theses && entry.theses.length > 0 ? ['numbering', 'thesis'] : ['numbering']
+/** Associations justes d'un traité sur un lien (les comptes d'avant les liens y sont repris). */
+export function rightsOn(record: TreatiseRecord | undefined, link: TreatiseLink): number {
+  const legacy = link === 'title-number' ? (record?.right ?? 0) : link === 'title-thesis' ? (record?.thesis ?? 0) : 0
+  return Math.max(record?.links?.[link]?.right ?? 0, legacy)
 }
 
-function rightsOn(record: TreatiseRecord | undefined, topic: TreatiseTopic): number {
-  return topic === 'numbering' ? (record?.right ?? 0) : (record?.thesis ?? 0)
+function wrongsOn(record: TreatiseRecord | undefined, link: TreatiseLink): number {
+  return record?.links?.[link]?.wrong ?? 0
 }
 
 /**
- * Un traité est validé quand chaque sujet qui le concerne a été réussi une
- * fois du premier coup. La seule définition de la « connaissance » d'un
- * traité : voir l'en-tête du fichier.
+ * Un traité est « ponctuellement maîtrisé » quand chacun des liens qui le
+ * concernent a eu une bonne association du premier coup. La seule définition de
+ * la connaissance d'un traité : voir l'en-tête du fichier.
  */
 export function isValidated(entry: TreatiseEntry, record: TreatiseRecord | undefined): boolean {
-  return requiredTopics(entry).every((topic) => rightsOn(record, topic) >= 1)
+  return linksOf(entry).every((link) => rightsOn(record, link) >= 1)
 }
 
-/** Les traités en cours d'apprentissage : les `ACTIVE_COUNT` premiers non validés, dans l'ordre d'arrivée. */
+/** Les traités en cours d'apprentissage : les `ACTIVE_COUNT` premiers non maîtrisés, dans l'ordre d'arrivée. */
 export function activeTreatises(entries: readonly TreatiseEntry[], progress: TreatiseProgress): TreatiseEntry[] {
   return learningOrder(entries)
     .filter((entry) => !isValidated(entry, progress[entry.id]))
@@ -92,170 +130,149 @@ export function validatedCount(entries: readonly TreatiseEntry[], progress: Trea
   return entries.filter((entry) => isValidated(entry, progress[entry.id])).length
 }
 
+// --- hasard réglé -------------------------------------------------------------
+
+/** Ce qui reste à réussir sur un lien, et les erreurs passées : le poids de cette association dans le tirage. */
+function need(link: TreatiseLink, record: TreatiseRecord | undefined): number {
+  return (rightsOn(record, link) === 0 ? 3 : 0) + Math.min(wrongsOn(record, link), 3)
+}
+
+function weightedPick<T>(items: readonly T[], weight: (item: T) => number, rng: Rng): T {
+  const weights = items.map((item) => Math.max(0.1, weight(item)))
+  let roll = rng() * weights.reduce((sum, w) => sum + w, 0)
+  for (let i = 0; i < items.length; i++) {
+    roll -= weights[i]!
+    if (roll <= 0) return items[i]!
+  }
+  return items[items.length - 1]!
+}
+
 /** Distance entre deux traités : les confusions se font entre voisins (même Ennéade, rangs proches). */
 function distance(a: TreatiseEntry, b: TreatiseEntry): number {
   return Math.abs(a.chrono - b.chrono) + (a.ennead === b.ennead ? 0 : 6) + Math.abs(a.numberInEnnead - b.numberInEnnead)
 }
 
-/** Leurres d'un traité : quelques-uns tirés parmi ses plus proches voisins. */
-function distractors(target: TreatiseEntry, entries: readonly TreatiseEntry[], count: number, rng: Rng): TreatiseEntry[] {
-  const near = entries
-    .filter((entry) => entry.id !== target.id)
-    .sort((a, b) => distance(target, a) - distance(target, b))
-    .slice(0, 8)
-  return sample(near, count, rng)
-}
-
-/**
- * Leurres d'une question de thèse : d'abord les autres traités qui ont des
- * thèses (c'est entre eux qu'on confond, et chacune de leurs thèses est
- * précise), à défaut les voisins.
- */
-function thesisDistractors(
-  target: TreatiseEntry,
-  entries: readonly TreatiseEntry[],
-  count: number,
-  rng: Rng,
-): TreatiseEntry[] {
-  const withTheses = entries.filter((entry) => entry.id !== target.id && entry.theses && entry.theses.length > 0)
-  const picked = sample(withTheses, Math.min(count, withTheses.length), rng)
-  if (picked.length === count) return picked
-  const others = distractors(target, entries, count + picked.length, rng).filter(
-    (entry) => !picked.some((chosen) => chosen.id === entry.id),
-  )
-  return [...picked, ...others].slice(0, count)
-}
-
 const OPTIONS = 4
+const BOARD_SIZE = 4
+const MIN_BOARD = 3
 
-function numberingChoice(
-  target: TreatiseEntry,
-  entries: readonly TreatiseEntry[],
-  direction: 'title-to-number' | 'number-to-title',
-  rng: Rng,
-  practice: boolean,
-): TreatiseChoiceExercise {
-  const toNumber = direction === 'title-to-number'
-  const label = (entry: TreatiseEntry) => (toNumber ? numberingOf(entry) : entry.title)
-  const options = shuffle([target, ...distractors(target, entries, OPTIONS - 1, rng)], rng).map(label)
-  return {
-    kind: 'treatise-choice',
-    id: `treatise-choice:${target.id}:${direction}`,
-    topic: 'numbering',
-    entryId: target.id,
-    prompt: toNumber ? target.title : numberingOf(target),
-    answer: label(target),
-    options,
-    direction,
-    ...(practice ? { practice } : {}),
-  }
+/** Les traités qu'une séance fait travailler maintenant, et si c'est de la remise à niveau (tous maîtrisés). */
+function targetsOf(entries: readonly TreatiseEntry[], progress: TreatiseProgress, rng: Rng) {
+  const active = activeTreatises(entries, progress)
+  if (active.length > 0) return { targets: active, practice: false }
+  return { targets: sample(entries, Math.min(ACTIVE_COUNT, entries.length), rng), practice: true }
 }
 
-function thesisChoice(
-  target: TreatiseEntry,
+function formMatch(
   entries: readonly TreatiseEntry[],
+  progress: TreatiseProgress,
+  id: string,
   rng: Rng,
-  practice: boolean,
-): TreatiseChoiceExercise {
-  const theses = target.theses!
-  const index = Math.floor(rng() * theses.length)
-  const options = shuffle([target, ...thesisDistractors(target, entries, OPTIONS - 1, rng)], rng).map(
-    (entry) => entry.title,
+): TreatiseMatchExercise | null {
+  const { targets, practice } = targetsOf(entries, progress, rng)
+  const candidates = LINKS.map((link) => ({ link, pool: targets.filter((entry) => linksOf(entry).includes(link)) })).filter(
+    ({ pool }) => pool.length >= MIN_BOARD,
   )
-  return {
-    kind: 'treatise-choice',
-    id: `treatise-choice:${target.id}:thesis-to-title:${index}`,
-    topic: 'thesis',
-    entryId: target.id,
-    prompt: theses[index]!,
-    answer: target.title,
-    options,
-    direction: 'thesis-to-title',
-    ...(practice ? { practice } : {}),
-  }
-}
+  if (candidates.length === 0) return null
 
-function numberingMatch(chunk: readonly TreatiseEntry[], practice: boolean): TreatiseMatchExercise {
+  // Le lien qui reste le plus à réussir sur ces traités passe le plus souvent.
+  const { link, pool } = weightedPick(
+    candidates,
+    (candidate) => candidate.pool.reduce((sum, entry) => sum + need(candidate.link, progress[entry.id]), 0),
+    rng,
+  )
+  // Les traités qui ont le plus à y gagner d'abord, au hasard à besoin égal.
+  const group = shuffle(pool, rng)
+    .sort((a, b) => need(link, progress[b.id]) - need(link, progress[a.id]))
+    .slice(0, BOARD_SIZE)
+
+  const flipped = rng() < 0.5
+  const columns = (flipped ? [...LINK_COLUMNS[link]].reverse() : LINK_COLUMNS[link]) as [TreatiseColumn, TreatiseColumn]
   return {
     kind: 'treatise-match',
-    id: `treatise-match:${chunk.map((entry) => entry.id).join('+')}`,
-    topic: 'numbering',
-    pairs: chunk.map((entry) => ({ id: entry.id, left: entry.title, right: numberingOf(entry) })),
-    ...(practice ? { practice } : {}),
-  }
-}
-
-/** Une manche de thèses : à gauche une thèse (tirée au hasard parmi celles du traité), à droite son traité. */
-function thesisMatch(chunk: readonly TreatiseEntry[], rng: Rng, practice: boolean): TreatiseMatchExercise {
-  return {
-    kind: 'treatise-match',
-    id: `treatise-match:thesis:${chunk.map((entry) => entry.id).join('+')}`,
-    topic: 'thesis',
-    pairs: chunk.map((entry) => ({
+    id,
+    link,
+    columns,
+    pairs: group.map((entry) => ({
       id: entry.id,
-      left: entry.theses![Math.floor(rng() * entry.theses!.length)]!,
-      right: entry.title,
+      left: valueIn(entry, columns[0], rng),
+      right: valueIn(entry, columns[1], rng),
     })),
     ...(practice ? { practice } : {}),
   }
 }
 
-/** Manches d'association : de trois à quatre paires, deux manches dès six traités. */
-function chunksOf(targets: readonly TreatiseEntry[]): TreatiseEntry[][] {
-  if (targets.length < 3) return []
-  if (targets.length < 6) return [targets.slice()]
-  const half = Math.ceil(targets.length / 2)
-  return [targets.slice(0, half), targets.slice(half)]
+function formChoice(
+  entries: readonly TreatiseEntry[],
+  progress: TreatiseProgress,
+  id: string,
+  rng: Rng,
+): TreatiseChoiceExercise {
+  const { targets, practice } = targetsOf(entries, progress, rng)
+  const target = weightedPick(
+    targets,
+    (entry) => linksOf(entry).reduce((sum, link) => sum + need(link, progress[entry.id]), 0),
+    rng,
+  )
+  const links = linksOf(target)
+  const unfinished = links.filter((link) => rightsOn(progress[target.id], link) === 0)
+  const link = sample(unfinished.length > 0 ? unfinished : links, 1, rng)[0]!
+  const [a, b] = LINK_COLUMNS[link]
+  const [from, to] = rng() < 0.5 ? [a, b] : [b, a]
+
+  // Leurres : des traités qui ont la même colonne, plutôt voisins (les thèses, plutôt que des voisins, parmi celles qui existent).
+  const pool = entries.filter((entry) => entry.id !== target.id && hasColumn(entry, to))
+  const near =
+    to === 'thesis' ? shuffle(pool, rng) : pool.sort((x, y) => distance(target, x) - distance(target, y)).slice(0, 8)
+  const others = sample(near, Math.min(OPTIONS - 1, near.length), rng)
+  const answer = valueIn(target, to, rng)
+  const options = shuffle([answer, ...others.map((entry) => valueIn(entry, to, rng))], rng)
+  return {
+    kind: 'treatise-choice',
+    id,
+    link,
+    from,
+    to,
+    entryId: target.id,
+    prompt: valueIn(target, from, rng),
+    answer,
+    options,
+    ...(practice ? { practice } : {}),
+  }
 }
 
-/** Combien de QCM de thèse au plus dans une séance : les manches de thèses font déjà passer chaque traité. */
-const THESIS_CHOICES_MAX = 3
+/** Rythme d'une séance : une manche d'association, puis deux QCM. */
+const SHAPES = ['match', 'choice', 'choice'] as const
+
+/** Nombre d'exercices d'une séance. */
+export const SESSION_LENGTH = 12
+
+/** Les places d'une séance : rien n'est formé encore, voir `materializeTreatise`. */
+export function treatiseGhosts(count = SESSION_LENGTH): TreatiseGhostExercise[] {
+  return Array.from({ length: count }, (_, index) => ({
+    kind: 'treatise-ghost',
+    id: `treatise-ghost:${index}`,
+    shape: SHAPES[index % SHAPES.length]!,
+  }))
+}
 
 /**
- * Une séance sur les traités en cours : une manche d'association, des QCM sur
- * l'autre moitié, puis l'inverse — surtout des associations et des QCM, pour
- * rester ludique. Un traité y paraît dans une manche et dans un QCM ; le sens
- * du QCM (titre → numérotation, ou l'inverse) est tiré au sort.
- *
- * Pour les traités qui ont des thèses (`theses`), la séance se termine par
- * une manche qui associe chaque thèse à son traité, puis quelques QCM qui
- * demandent de quel traité relève une thèse.
- *
- * Sans traité à apprendre (tous validés), la séance reprend huit traités au
- * hasard, sans rien noter (`practice`).
+ * Forme l'exercice d'une place réservée, d'après ce que l'apprenant sait des
+ * traités à cet instant : un tirage pondéré par ce qui reste à réussir, jamais
+ * deux thèses d'un même traité dans un exercice, et un traité maîtrisé
+ * remplacé aussitôt par le suivant. Une manche qui manquerait de traités se
+ * rabat sur un QCM.
  */
-export function buildTreatiseSession(
+export function materializeTreatise(
+  ghost: TreatiseGhostExercise,
   entries: readonly TreatiseEntry[],
   progress: TreatiseProgress,
   seed: number,
-): Exercise[] {
-  const rng = createRng(seed)
-  const active = activeTreatises(entries, progress)
-  const practice = active.length === 0
-  const targets = shuffle(practice ? sample(entries, Math.min(ACTIVE_COUNT, entries.length), rng) : active, rng)
-  const chunks = chunksOf(targets)
-  const choices = (group: readonly TreatiseEntry[]) =>
-    group.map((entry) =>
-      numberingChoice(entry, entries, rng() < 0.5 ? 'title-to-number' : 'number-to-title', rng, practice),
-    )
-
-  let session: Exercise[]
-  if (chunks.length === 0) {
-    session = choices(targets)
-  } else {
-    // Les QCM d'une moitié suivent la manche de l'autre : on retrouve ce qu'on vient de relier.
-    const [first, second] = chunks
-    session = [
-      numberingMatch(first!, practice),
-      ...choices(second ?? first!),
-      ...(second ? [numberingMatch(second, practice)] : []),
-      ...choices(first!),
-    ]
+): Exercise {
+  const rng = createRng(seedFrom(seed, ghost.id, Object.keys(progress).length))
+  if (ghost.shape === 'match') {
+    const match = formMatch(entries, progress, ghost.id, rng)
+    if (match) return match
   }
-
-  const withTheses = targets.filter((entry) => entry.theses && entry.theses.length > 0)
-  if (withTheses.length >= 3) session.push(thesisMatch(withTheses.slice(0, 6), rng, practice))
-  const asked = withTheses.length >= 3 ? sample(withTheses, Math.min(THESIS_CHOICES_MAX, withTheses.length), rng) : withTheses
-  for (const entry of asked) session.push(thesisChoice(entry, entries, rng, practice))
-  return session
+  return formChoice(entries, progress, ghost.id, rng)
 }
