@@ -13,7 +13,7 @@ import { availableCourses } from '@/content/loader'
 import { ProgressRing } from '@/components/ProgressRing'
 import { CoursePicker } from '@/components/CoursePicker'
 import { TextSheet } from '@/components/TextSheet'
-import { ACTIVE_COUNT, ENNEAD_NUMERALS, activeTreatises, validatedCount } from '@/engine/treatises'
+import { ENNEAD_NUMERALS, validatedCount } from '@/engine/treatises'
 import { PlanSheet } from '@/components/work/PlanSheet'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
@@ -298,6 +298,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   const { manifest, switchCourse } = useCourse()
   const lessons = useProgress((state) => state.lessons[course.id] ?? EMPTY_LESSON_PROGRESS)
   const steps = useProgress((state) => state.steps[course.id] ?? EMPTY_STEPS)
+  const treatiseProgress = useProgress((state) => state.treatises[course.id])
   const cards = useProgress((state) => state.cards[course.id] ?? EMPTY_CARDS)
   const xp = useProgress((state) => state.xp)
   const streak = useProgress((state) => state.streak)
@@ -436,21 +437,21 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
       </header>
 
       <main className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto px-4 pt-4 pb-16 [&>*]:shrink-0 md:px-2">
-        <TrackTitle track={track} tone={tone} />
-
-        {/* Avant le résumé de piste, et non dedans : c'est l'action du jour,
-            celle qui fait revenir ce qui a été appris. Elle vaut pour les
-            trois pistes à la fois — mélanger les natures d'exercices vaut
-            mieux que réviser le vocabulaire d'un bloc. */}
-        {due > 0 && <ReviewCallout due={due} onReview={() => navigate('/revision')} />}
+        {/* Le rappel de révision à droite du titre, petit : c'est l'action du
+            jour, celle qui fait revenir ce qui a été appris, mais elle ne doit
+            pas prendre la forme d'une carte d'unité. Elle vaut pour toutes
+            les pistes à la fois — mélanger les natures d'exercices vaut mieux
+            que réviser le vocabulaire d'un bloc. */}
+        <div className="flex items-center justify-between gap-3">
+          <TrackTitle track={track} tone={tone} />
+          {due > 0 && <ReviewCallout due={due} onReview={() => navigate('/revision')} />}
+        </div>
 
         <TrackSummary track={track} known={trackMastery.known} seen={trackMastery.seen} />
 
         {track.entries ? (
           <TreatiseIndexView
-            courseId={course.id}
             entries={track.entries}
-            onTrain={() => navigate('/reperage')}
             tone={tone}
             openGroups={openGroups}
             onToggleGroup={toggleGroup}
@@ -506,6 +507,23 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                 />
               ),
             )}
+          </div>
+        )}
+
+        {/* Le repérage général (voir `TreatiseTrainRoute`) : un bouton rond qui
+            flotte en bas de la piste, au lieu d'une carte de plus parmi les
+            cartes de la liste. `sticky` le garde en bas de la zone qui défile. */}
+        {track.entries && (
+          <div className="pointer-events-none sticky bottom-3 z-10 -mt-2 flex justify-end">
+            <button
+              type="button"
+              onClick={() => navigate('/reperage')}
+              aria-label="S'entraîner au repérage"
+              title={`S'entraîner au repérage : ${validatedCount(track.entries, treatiseProgress ?? {})} / ${track.entries.length} traités validés`}
+              className={`pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full ${tone.bg} text-white shadow-lg ring-4 ring-cream`}
+            >
+              <UnitIcon name="compass" size={26} />
+            </button>
           </div>
         )}
       </main>
@@ -658,20 +676,12 @@ function ReviewCallout({ due, onReview }: { due: number; onReview: () => void })
     <button
       type="button"
       onClick={onReview}
-      className="card-3d flex items-center gap-4 border-amber bg-amber/10 px-5 py-4 text-left"
+      title={`${due} élément${due > 1 ? 's' : ''} à réviser : les revoir maintenant, c'est ce qui les fera tenir`}
+      className="flex shrink-0 items-center gap-1.5 rounded-full border-2 border-amber bg-amber/10 py-1 pr-3 pl-1.5 text-xs font-black tracking-wide text-amber uppercase"
     >
-      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-amber text-white">
-        <StarIcon filled size={24} />
-      </span>
-      <span className="flex-1">
-        <span className="block text-base font-extrabold text-ink">
-          {due} élément{due > 1 ? 's' : ''} à réviser
-        </span>
-        <span className="mt-0.5 block text-xs text-ink-soft">
-          Les revoir maintenant, c'est ce qui les fera tenir.
-        </span>
-      </span>
-      <span className="text-xs font-black uppercase text-amber">Réviser</span>
+      <StarIcon filled size={16} />
+      Réviser
+      <span className="rounded-full bg-amber px-1.5 py-px text-[0.65rem] text-white">{due}</span>
     </button>
   )
 }
@@ -885,26 +895,18 @@ function GroupSection({
  * le cours du traité quand il en a un (`unit`) : l'entrée le signale.
  */
 function TreatiseIndexView({
-  courseId,
   entries,
-  onTrain,
   tone,
   openGroups,
   onToggleGroup,
   onOpenTreatise,
 }: {
-  courseId: string
   entries: readonly TreatiseEntry[]
-  /** Lance le repérage général (voir `TreatiseTrainRoute`). */
-  onTrain: () => void
   tone: (typeof TRACK_TONES)[string]
   openGroups: Set<string>
   onToggleGroup: (group: string) => void
   onOpenTreatise: (entry: TreatiseEntry) => void
 }) {
-  const progress = useProgress((state) => state.treatises[courseId])
-  const validated = validatedCount(entries, progress ?? {})
-  const learning = activeTreatises(entries, progress ?? {}).length
   const [order, setOrder] = useState<TreatiseOrder>(savedTreatiseOrder)
   const chooseOrder = (next: TreatiseOrder) => {
     setOrder(next)
@@ -929,23 +931,6 @@ function TreatiseIndexView({
 
   return (
     <div className="flex flex-col gap-3">
-      {/* Le repérage général : relier titres et numérotations, huit traités à la fois. */}
-      <button type="button" onClick={onTrain} className="card-3d flex w-full items-center gap-4 px-4 py-4 text-left">
-        <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} ${tone.text}`}>
-          <UnitIcon name="compass" size={22} />
-        </span>
-        <span className="flex-1">
-          <span className="text-base leading-tight font-extrabold">S'entraîner au repérage</span>
-          <span className="mt-0.5 block text-xs font-bold text-ink-faint">
-            {validated} / {entries.length} traités validés
-            {learning > 0 ? ` · ${Math.min(learning, ACTIVE_COUNT)} en cours` : ''}
-          </span>
-        </span>
-        <span className="-rotate-180 text-ink-faint">
-          <ChevronLeftIcon size={20} />
-        </span>
-      </button>
-
       {/* Deux lectures du même index : l'ordre de Porphyre (les Ennéades) ou
           l'ordre de rédaction, regroupé comme dans l'édition GF. */}
       <div className="flex gap-0.5 self-center rounded-xl border-2 border-line p-1" role="group" aria-label="Ordre des traités">
