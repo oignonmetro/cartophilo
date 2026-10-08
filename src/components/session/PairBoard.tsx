@@ -79,7 +79,7 @@ function densityFor(rows: number): Density {
 const TEXT_SCALE = ['text-lg', 'text-base', 'text-sm', 'text-xs'] as const
 
 /** Nombre de caractères qui fait franchir un palier de `TEXT_SCALE`. */
-const SHRINK_STEP_CHARS = 28
+const SHRINK_STEP_CHARS = 55
 
 function textSizeFor(label: string, density: Density): string {
   const start = TEXT_SCALE.indexOf(density.baseText)
@@ -108,12 +108,15 @@ export function PairBoard({
   seed,
   pairs,
   prompt,
+  italicSides,
   onDone,
 }: {
   /** Graine du mélange : la même manche se présente toujours pareil. */
   seed: string
   pairs: readonly Pair[]
   prompt: string
+  /** Colonnes (gauche, droite) dont les libellés se composent en italique (des titres d'œuvres). */
+  italicSides?: readonly [boolean, boolean]
   onDone: (result: { missedIds: string[] }) => void
 }) {
   const sounds = useSessionSounds()
@@ -198,6 +201,7 @@ export function PairBoard({
                   height={height}
                   padding={density.padding}
                   textSize={textSizeFor(token.label, density)}
+                  italic={italicSides?.[token.side === 'left' ? 0 : 1] ?? false}
                   solved={solvedKeys.has(token.key)}
                   selected={selected?.key === token.key}
                   shaking={wrong === token.key}
@@ -217,6 +221,7 @@ function TokenButton({
   height,
   padding,
   textSize,
+  italic,
   solved,
   selected,
   shaking,
@@ -229,6 +234,7 @@ function TokenButton({
   padding: string
   /** Taille de texte propre au jeton, voir `textSizeFor`. */
   textSize: string
+  italic: boolean
   solved: boolean
   selected: boolean
   shaking: boolean
@@ -248,7 +254,7 @@ function TokenButton({
       animate={shaking ? { x: [0, -7, 7, -4, 0] } : { x: 0 }}
       transition={{ duration: 0.3 }}
       style={{ minHeight: height }}
-      className={`rounded-2xl border-2 text-center font-bold break-words transition-colors ${padding} ${textSize} ${tone}`}
+      className={`rounded-2xl border-2 text-center font-bold break-words transition-colors ${padding} ${textSize} ${tone} ${italic ? 'italic' : ''}`}
     >
       {token.label}
     </motion.button>

@@ -24,6 +24,7 @@ export function TreatiseMatch({
       seed={exercise.id}
       pairs={exercise.pairs}
       prompt={MATCH_PROMPT[exercise.link]}
+      italicSides={[exercise.columns[0] === 'title', exercise.columns[1] === 'title']}
       onDone={onDone}
     />
   )

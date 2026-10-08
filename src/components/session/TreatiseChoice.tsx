@@ -59,7 +59,7 @@ export function TreatiseChoice({
 
       <div className="card-3d px-4 py-4 text-center">
         <span
-          className={`font-black break-words ${from === 'thesis' ? 'text-lg leading-snug' : 'text-xl'}`}
+          className={`font-black break-words ${from === 'thesis' ? 'text-lg leading-snug' : 'text-xl'} ${from === 'title' ? 'italic' : ''}`}
         >
           {prompt}
         </span>
@@ -70,6 +70,7 @@ export function TreatiseChoice({
         picked={picked}
         isCorrect={(option) => option === answer}
         size={to === 'thesis' ? 'long' : 'normal'}
+        renderOption={to === 'title' ? (option) => <em>{option}</em> : undefined}
         onPick={(option) => {
           setPicked(option)
           const right = option === answer

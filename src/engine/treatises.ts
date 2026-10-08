@@ -257,7 +257,8 @@ function formMatch(
     .sort((a, b) => weightOf(b, link, progress) - weightOf(a, link, progress))
     .slice(0, BOARD_SIZE)
 
-  const flipped = rng() < 0.5
+  // La thèse se lit toujours à gauche du titre du traité qui la défend ; la numérotation, d'un côté ou de l'autre.
+  const flipped = link === 'title-thesis' ? true : rng() < 0.5
   const columns = (flipped ? [...LINK_COLUMNS[link]].reverse() : LINK_COLUMNS[link]) as [TreatiseColumn, TreatiseColumn]
   return {
     kind: 'treatise-match',
