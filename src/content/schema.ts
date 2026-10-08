@@ -252,6 +252,12 @@ export const treatiseEntrySchema = z.object({
   chrono: z.number().int().min(1).max(54),
   /** Traité mis en gras dans l'index (les plus importants, d'après la table de référence). */
   highlight: z.boolean().optional(),
+  /**
+   * Rang d'apprentissage dans l'entraînement au repérage (voir `learningOrder`) :
+   * les traités qui en ont un arrivent d'abord, dans l'ordre de ce rang (1, 2, 3…),
+   * avant ceux qui sont seulement en gras.
+   */
+  priority: z.number().int().min(1).optional(),
   /** Résumé affiché au clic ; absent tant qu'il n'a pas encore été rédigé. */
   summary: z.string().optional(),
   /**

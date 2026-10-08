@@ -41,14 +41,17 @@ export function numberingOf(entry: TreatiseEntry): string {
 }
 
 /**
- * Ordre d'arrivée des traités : d'abord ceux qui sont en gras (`highlight`),
- * puis les autres, chaque groupe dans l'ordre de Porphyre.
+ * Ordre d'arrivée des traités : d'abord ceux qui ont un rang (`priority`, dans
+ * l'ordre de ce rang), puis les autres traités en gras (`highlight`), puis le
+ * reste ; chaque groupe, hors rang, dans l'ordre de Porphyre.
  */
 export function learningOrder(entries: readonly TreatiseEntry[]): TreatiseEntry[] {
   const byPorphyry = (a: TreatiseEntry, b: TreatiseEntry) =>
     a.ennead - b.ennead || a.numberInEnnead - b.numberInEnnead
   const sorted = entries.slice().sort(byPorphyry)
-  return [...sorted.filter((entry) => entry.highlight), ...sorted.filter((entry) => !entry.highlight)]
+  const ranked = sorted.filter((entry) => entry.priority !== undefined).sort((a, b) => a.priority! - b.priority!)
+  const rest = sorted.filter((entry) => entry.priority === undefined)
+  return [...ranked, ...rest.filter((entry) => entry.highlight), ...rest.filter((entry) => !entry.highlight)]
 }
 
 /**

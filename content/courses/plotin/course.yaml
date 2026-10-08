@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 15
+version: 16
 
 tracks:
   - id: glossaire
@@ -109,6 +109,7 @@ tracks:
         ennead: 1
         numberInEnnead: 6
         chrono: 1
+        priority: 1
         highlight: true
         unit: traite1
         summary: |-
@@ -370,6 +371,7 @@ tracks:
         ennead: 4
         numberInEnnead: 8
         chrono: 6
+        priority: 2
         highlight: true
         unit: traite6
         summary: |-
@@ -400,6 +402,7 @@ tracks:
         ennead: 5
         numberInEnnead: 1
         chrono: 10
+        priority: 5
         highlight: true
         unit: traite10
         summary: |-
@@ -437,6 +440,7 @@ tracks:
         ennead: 5
         numberInEnnead: 4
         chrono: 7
+        priority: 3
         unit: traite7
         summary: |-
           **Le bref traité 7 (deux chapitres) affronte une difficulté première : si toutes choses viennent de l'Un, comment en viennent-elles, alors que l'Un « reste en lui-même » ?**
@@ -537,6 +541,7 @@ tracks:
         ennead: 6
         numberInEnnead: 9
         chrono: 9
+        priority: 4
         highlight: true
         unit: traite9
         summary: |-

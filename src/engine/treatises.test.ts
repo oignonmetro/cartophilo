@@ -32,6 +32,17 @@ describe('ordre d’apprentissage des traités', () => {
     expect(order.slice(4, 6).map((entry) => entry.id)).toEqual(['t-1-1', 't-1-2'])
   })
 
+  it('fait passer d’abord les traités qui ont un rang, dans l’ordre de ce rang', () => {
+    const ranked = ENTRIES.map((entry, index) =>
+      index === 40 ? { ...entry, priority: 1 } : index === 20 ? { ...entry, priority: 2 } : entry,
+    )
+    const order = learningOrder(ranked)
+    expect(order.slice(0, 2).map((entry) => entry.id)).toEqual([ENTRIES[40]!.id, ENTRIES[20]!.id])
+    // Un traité à rang qui est aussi en gras (index 3 ou 41) ne passe pas deux fois.
+    expect(new Set(order.map((entry) => entry.id)).size).toBe(ENTRIES.length)
+    expect(order[2]!.highlight).toBe(true)
+  })
+
   it('met toujours huit traités en cours, ceux en gras d’abord', () => {
     const active = activeTreatises(ENTRIES, {})
     expect(active).toHaveLength(ACTIVE_COUNT)
