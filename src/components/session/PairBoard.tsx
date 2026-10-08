@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { createRng, seedFrom, shuffle } from '@/engine/rng'
 import { useSessionSounds } from './useSessionSounds'
@@ -78,13 +78,52 @@ function densityFor(rows: number): Density {
  */
 const TEXT_SCALE = ['text-lg', 'text-base', 'text-sm', 'text-xs'] as const
 
-/** Nombre de caractères qui fait franchir un palier de `TEXT_SCALE`. */
-const SHRINK_STEP_CHARS = 55
+/** Corps et interligne, en pixels, de chaque palier de `TEXT_SCALE` (Tailwind). */
+const TEXT_METRICS: Record<(typeof TEXT_SCALE)[number], [number, number]> = {
+  'text-lg': [18, 28],
+  'text-base': [16, 24],
+  'text-sm': [14, 20],
+  'text-xs': [12, 16],
+}
 
-function textSizeFor(label: string, density: Density): string {
+/** Largeur moyenne d'un caractère gras, en fraction du corps (césures comprises). */
+const CHAR_WIDTH = 0.55
+/**
+ * Ce que le texte suppose pris hors de la grille : plus juste que `CHROME_BUDGET`
+ * (qui garantit que la grille ne déborde pas) puisqu'une rangée plus haute que
+ * prévu agrandit la grille sans la faire déborder, tant qu'il reste de la place.
+ */
+const TEXT_CHROME = 200
+/** Largeur maximale de la grille, en pixels : au-delà, la mise en page ne s'élargit plus. */
+const MAX_BOARD_WIDTH = 480
+
+/** Le plus petit des paliers donnés. */
+function smallest(sizes: readonly string[]): string {
+  return sizes.reduce((a, b) => (TEXT_SCALE.indexOf(b as never) > TEXT_SCALE.indexOf(a as never) ? b : a))
+}
+
+/**
+ * Le plus grand palier dont le libellé tient dans la hauteur d'une rangée.
+ *
+ * Un seuil de longueur fixe rétrécissait le texte même quand la case avait la
+ * place : sur un grand téléphone, une thèse de cent caractères restait en petit
+ * dans une case à moitié vide. On estime donc le nombre de lignes d'après la
+ * largeur d'une case, et l'on garde la plus grande taille qui tient dans le
+ * budget d'une rangée (la hauteur visible, partagée entre les rangées).
+ */
+function textSizeFor(label: string, density: Density, rows: number, view: { width: number; height: number }): string {
   const start = TEXT_SCALE.indexOf(density.baseText)
-  const steps = Math.min(TEXT_SCALE.length - 1 - start, Math.floor(label.length / SHRINK_STEP_CHARS))
-  return TEXT_SCALE[start + steps]
+  const boardWidth = Math.min(view.width, MAX_BOARD_WIDTH) - 32
+  const textWidth = (boardWidth - ROW_GAP) / 2 - 24
+  const rowBudget = (view.height - TEXT_CHROME - ROW_GAP * (rows - 1)) / rows
+  const padding = density === COMPACT ? 16 : 32
+  for (let index = start; index < TEXT_SCALE.length; index++) {
+    const size = TEXT_SCALE[index]!
+    const [px, lineHeight] = TEXT_METRICS[size]
+    const lines = Math.ceil((label.length * px * CHAR_WIDTH) / textWidth)
+    if (lines * lineHeight + padding <= rowBudget) return size
+  }
+  return TEXT_SCALE[TEXT_SCALE.length - 1]!
 }
 
 /**
@@ -102,6 +141,18 @@ function textSizeFor(label: string, density: Density): string {
 function cardHeight(rows: number, density: Density): string {
   const available = `(100dvh - ${CHROME_BUDGET}px - ${ROW_GAP * (rows - 1)}px) / ${rows}`
   return `clamp(${density.minCard}px, calc(${available}), ${density.maxCard}px)`
+}
+
+/** Dimensions visibles de la fenêtre, tenues à jour (rotation, barre d'adresse). */
+function useViewport() {
+  const read = () => ({ width: window.innerWidth, height: window.innerHeight })
+  const [view, setView] = useState(read)
+  useEffect(() => {
+    const onResize = () => setView(read())
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+  return view
 }
 
 export function PairBoard({
@@ -123,6 +174,13 @@ export function PairBoard({
   const columns = useMemo(() => buildColumns(seed, pairs), [seed, pairs])
   const expected = useMemo(() => new Map(pairs.map((pair) => [pair.id, pair.right])), [pairs])
   const density = densityFor(pairs.length)
+  const view = useViewport()
+  // Une taille par colonne, celle du libellé le plus long : des textes de tailles
+  // différentes dans une même colonne feraient une grille bancale.
+  const columnText = {
+    left: smallest(pairs.map((pair) => textSizeFor(pair.left, density, pairs.length, view))),
+    right: smallest(pairs.map((pair) => textSizeFor(pair.right, density, pairs.length, view))),
+  }
   const height = cardHeight(pairs.length, density)
 
   const [selected, setSelected] = useState<Token | null>(null)
@@ -200,7 +258,7 @@ export function PairBoard({
                   token={token}
                   height={height}
                   padding={density.padding}
-                  textSize={textSizeFor(token.label, density)}
+                  textSize={columnText[token.side]}
                   italic={italicSides?.[token.side === 'left' ? 0 : 1] ?? false}
                   solved={solvedKeys.has(token.key)}
                   selected={selected?.key === token.key}
