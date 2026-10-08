@@ -244,7 +244,10 @@ export function TableCell({
 
   useEffect(() => {
     if (mode !== 'write' || answered) return
-    const id = window.setTimeout(() => input.current?.focus(), 250)
+    // `preventScroll` : sinon le navigateur fait défiler tout ce qui entoure le
+    // champ (dans l'éditeur, le panneau d'aperçu) pour le centrer, et cache ce
+    // qui est au-dessus — le sélecteur de case, par exemple.
+    const id = window.setTimeout(() => input.current?.focus({ preventScroll: true }), 250)
     return () => window.clearTimeout(id)
   }, [mode, answered, exercise.id])
 
@@ -438,13 +441,16 @@ export function TableOrder({
   const [placed, setPlaced] = useState(0)
   const [mistakes, setMistakes] = useState(0)
   const [wrong, setWrong] = useState<number | null>(null)
-  const end = useRef<HTMLDivElement>(null)
+  const scroller = useRef<HTMLDivElement>(null)
   const done = placed === rows.length
   useEnterToContinue(done, () => onDone(mistakes === 0))
 
   // Le dernier moment placé reste en vue, au-dessus de la banque.
   useEffect(() => {
-    end.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+    // On fait défiler la liste elle-même, pas ses ancêtres (`scrollIntoView`
+    // remonterait jusqu'au panneau d'aperçu de l'éditeur).
+    const list = scroller.current
+    if (list) list.scrollTo({ top: list.scrollHeight, behavior: 'smooth' })
   }, [placed])
 
   function pick(index: number) {
@@ -494,7 +500,10 @@ export function TableOrder({
         }
       />
 
-      <div className="min-h-0 flex-1 overflow-y-auto rounded-blob border-2 border-line bg-paper px-3 py-3 md:px-5">
+      <div
+        ref={scroller}
+        className="min-h-0 flex-1 overflow-y-auto rounded-blob border-2 border-line bg-paper px-3 py-3 md:px-5"
+      >
         {placed === 0 && (
           <p className="py-6 text-center text-sm text-ink-faint">
             {exercise.locate
@@ -519,7 +528,6 @@ export function TableOrder({
             </li>
           ))}
         </ol>
-        <div ref={end} />
       </div>
 
       {done ? (
