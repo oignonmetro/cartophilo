@@ -400,7 +400,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   const due = useMemo(() => dueCards(Object.values(cards), Date.now()).length, [cards])
 
   return (
-    <div className="mx-auto flex h-full w-full max-w-md flex-col overflow-hidden md:max-w-3xl">
+    <div className="relative mx-auto flex h-full w-full max-w-md flex-col overflow-hidden md:max-w-3xl">
       <header className="sticky top-0 z-20 shrink-0 border-b-2 border-line bg-cream/95 backdrop-blur">
         <div className="flex items-center justify-between gap-3 px-4 py-3 md:px-2">
           <button
@@ -510,26 +510,27 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
           </div>
         )}
 
-        {/* Le repérage général (voir `TreatiseTrainRoute`) : un bouton rond qui
-            flotte en bas de la piste, au lieu d'une carte de plus parmi les
-            cartes de la liste. `sticky` le garde en bas de la zone qui défile. */}
-        {track.entries && (
-          <div className="pointer-events-none sticky -bottom-16 z-10 -mx-4 -mt-2 flex items-center justify-end gap-2 p-3 md:-mx-2">
-            <span className="rounded-full bg-paper px-3 py-1 text-xs font-black text-ink-soft shadow ring-2 ring-line">
-              {validatedCount(track.entries, treatiseProgress ?? {})} / {track.entries.length} validés
-            </span>
-            <button
-              type="button"
-              onClick={() => navigate('/reperage')}
-              aria-label="S'entraîner au repérage"
-              title={`S'entraîner au repérage : ${validatedCount(track.entries, treatiseProgress ?? {})} / ${track.entries.length} traités validés`}
-              className={`pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full ${tone.bg} text-white shadow-lg ring-4 ring-cream`}
-            >
-              <UnitIcon name="compass" size={26} />
-            </button>
-          </div>
-        )}
       </main>
+
+      {/* Le repérage général (voir `TreatiseTrainRoute`) : un bouton rond posé
+          dans l'angle bas droit de l'écran, hors de la zone qui défile — il ne
+          bouge pas avec la liste, et ne se range pas parmi ses cartes. */}
+      {track.entries && (
+        <div className="pointer-events-none absolute right-3 bottom-3 z-10 flex items-center gap-2">
+          <span className="rounded-full bg-paper px-3 py-1 text-xs font-black text-ink-soft shadow ring-2 ring-line">
+            {validatedCount(track.entries, treatiseProgress ?? {})} / {track.entries.length} validés
+          </span>
+          <button
+            type="button"
+            onClick={() => navigate('/reperage')}
+            aria-label="S'entraîner au repérage"
+            title={`S'entraîner au repérage : ${validatedCount(track.entries, treatiseProgress ?? {})} / ${track.entries.length} traités validés`}
+            className={`pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full ${tone.bg} text-white shadow-lg ring-4 ring-cream`}
+          >
+            <UnitIcon name="compass" size={26} />
+          </button>
+        </div>
+      )}
 
       <AnimatePresence>
         {pickerOpen && (
