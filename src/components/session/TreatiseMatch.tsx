@@ -18,7 +18,11 @@ export function TreatiseMatch({
     <PairBoard
       seed={exercise.id}
       pairs={exercise.pairs}
-      prompt="Associez chaque traité à sa numérotation"
+      prompt={
+        exercise.topic === 'thesis'
+          ? 'Associez chaque thèse au traité qui la défend'
+          : 'Associez chaque traité à sa numérotation'
+      }
       onDone={onDone}
     />
   )

@@ -61,7 +61,7 @@ describe('ordre d’apprentissage des traités', () => {
     const before = activeTreatises(ENTRIES, {})
     const progress: TreatiseProgress = { [before[0]!.id]: { right: 0, wrong: 3 } }
     expect(activeTreatises(ENTRIES, progress).map((entry) => entry.id)).toEqual(before.map((entry) => entry.id))
-    expect(isValidated(progress[before[0]!.id])).toBe(false)
+    expect(isValidated(before[0]!, progress[before[0]!.id])).toBe(false)
   })
 
   it('n’en propose plus que ce qui reste à la fin', () => {
@@ -109,5 +109,56 @@ describe('séance de repérage dans les traités', () => {
     const session = buildTreatiseSession(ENTRIES, progress, 3)
     expect(session.length).toBeGreaterThan(0)
     expect(session.every((exercise) => 'practice' in exercise && exercise.practice === true)).toBe(true)
+  })
+})
+
+describe('thèses des traités', () => {
+  // Les quatre traités en gras (index 3, 12, 30, 41) ont deux ou trois thèses.
+  const withTheses: TreatiseEntry[] = ENTRIES.map((entry) =>
+    entry.highlight
+      ? { ...entry, theses: [`Thèse A de ${entry.id}`, `Thèse B de ${entry.id}`] }
+      : entry,
+  )
+
+  it('exige la numérotation et la thèse pour valider un traité qui en a, la numérotation seule sinon', () => {
+    const [first] = learningOrder(withTheses)
+    expect(first!.theses).toBeDefined()
+    expect(isValidated(first!, { right: 1, wrong: 0 })).toBe(false)
+    expect(isValidated(first!, { right: 0, wrong: 0, thesis: 1 })).toBe(false)
+    expect(isValidated(first!, { right: 1, wrong: 0, thesis: 1 })).toBe(true)
+    const plain = withTheses.find((entry) => !entry.theses)!
+    expect(isValidated(plain, { right: 1, wrong: 0 })).toBe(true)
+  })
+
+  it('garde en cours un traité dont seule la numérotation est réussie', () => {
+    const before = activeTreatises(withTheses, {})
+    const progress: TreatiseProgress = { [before[0]!.id]: { right: 2, wrong: 0 } }
+    expect(activeTreatises(withTheses, progress).map((entry) => entry.id)).toContain(before[0]!.id)
+  })
+
+  it('ajoute à la séance une manche de thèses, puis des QCM qui demandent le traité d’une thèse', () => {
+    const session = buildTreatiseSession(withTheses, {}, 5)
+    const match = session.find((exercise) => exercise.kind === 'treatise-match' && exercise.topic === 'thesis')
+    expect(match && match.kind === 'treatise-match' ? match.pairs : []).toHaveLength(4)
+    if (match?.kind === 'treatise-match') {
+      for (const pair of match.pairs) {
+        const entry = withTheses.find((candidate) => candidate.id === pair.id)!
+        expect(entry.theses).toContain(pair.left)
+        expect(pair.right).toBe(entry.title)
+      }
+    }
+    const thesisChoices = session.filter((exercise) => exercise.kind === 'treatise-choice' && exercise.topic === 'thesis')
+    expect(thesisChoices.length).toBeGreaterThan(0)
+    for (const exercise of thesisChoices) {
+      if (exercise.kind !== 'treatise-choice') continue
+      expect(exercise.direction).toBe('thesis-to-title')
+      expect(new Set(exercise.options).size).toBe(4)
+      expect(exercise.options).toContain(exercise.answer)
+    }
+  })
+
+  it('n’ajoute rien sur les thèses quand aucun traité en cours n’en a', () => {
+    const session = buildTreatiseSession(ENTRIES.map((entry) => ({ ...entry, highlight: undefined })), {}, 5)
+    expect(session.some((exercise) => 'topic' in exercise && exercise.topic === 'thesis')).toBe(false)
   })
 })

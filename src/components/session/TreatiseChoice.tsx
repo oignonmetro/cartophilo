@@ -47,11 +47,19 @@ export function TreatiseChoice({
   return (
     <div className="flex flex-1 flex-col gap-6">
       <p className="text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
-        {direction === 'title-to-number' ? 'Quelle numérotation ?' : 'Quel traité ?'}
+        {direction === 'title-to-number'
+          ? 'Quelle numérotation ?'
+          : direction === 'thesis-to-title'
+            ? 'Quel traité défend cette thèse ?'
+            : 'Quel traité ?'}
       </p>
 
       <div className="card-3d px-4 py-4 text-center">
-        <span className="text-xl font-black break-words">{prompt}</span>
+        <span
+          className={`font-black break-words ${direction === 'thesis-to-title' ? 'text-lg leading-snug' : 'text-xl'}`}
+        >
+          {prompt}
+        </span>
       </div>
 
       <OptionList

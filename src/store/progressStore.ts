@@ -12,7 +12,7 @@ import {
   type Streak,
 } from '@/engine/progress'
 import { createCard, DAY, review, type CardState, type Rating } from '@/engine/srs'
-import type { TreatiseProgress } from '@/engine/treatises'
+import type { TreatiseProgress, TreatiseTopic } from '@/engine/treatises'
 
 /**
  * État de l'apprenant.
@@ -165,7 +165,10 @@ interface ProgressState extends ProgressSnapshot {
    * Note les réponses d'une séance de repérage dans les traités : `correct`
    * ajoute une réponse juste (du premier coup), sinon une réponse fausse.
    */
-  gradeTreatises: (courseId: string, results: readonly { id: string; correct: boolean }[]) => void
+  gradeTreatises: (
+    courseId: string,
+    results: readonly { id: string; correct: boolean; topic: TreatiseTopic }[],
+  ) => void
   /** Clôt une session de leçon : plancher d'acquisition, XP, série. */
   finishLesson: (
     courseId: string,
@@ -452,9 +455,11 @@ export const useProgress = create<ProgressState>()(
       gradeTreatises: (courseId, results) =>
         set((state) => {
           const bucket = { ...(state.treatises[courseId] ?? {}) }
-          for (const { id, correct } of results) {
+          for (const { id, correct, topic } of results) {
             const record = bucket[id] ?? { right: 0, wrong: 0 }
-            bucket[id] = correct ? { ...record, right: record.right + 1 } : { ...record, wrong: record.wrong + 1 }
+            if (!correct) bucket[id] = { ...record, wrong: record.wrong + 1 }
+            else if (topic === 'thesis') bucket[id] = { ...record, thesis: (record.thesis ?? 0) + 1 }
+            else bucket[id] = { ...record, right: record.right + 1 }
           }
           return { treatises: { ...state.treatises, [courseId]: bucket } }
         }),

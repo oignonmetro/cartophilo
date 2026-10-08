@@ -258,6 +258,11 @@ export const treatiseEntrySchema = z.object({
    * avant ceux qui sont seulement en gras.
    */
   priority: z.number().int().min(1).optional(),
+  /**
+   * Thèses principales défendues dans le traité (au plus trois, vérifiées dans la notice de
+   * l'édition) : elles servent aux exercices qui font associer une thèse à son traité.
+   */
+  theses: z.array(z.string().min(1)).max(3).optional(),
   /** Résumé affiché au clic ; absent tant qu'il n'a pas encore été rédigé. */
   summary: z.string().optional(),
   /**

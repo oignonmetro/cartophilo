@@ -472,7 +472,9 @@ export interface TableOrderExercise {
 export interface TreatiseMatchExercise {
   kind: 'treatise-match'
   id: string
-  /** Une paire par traité : son titre à gauche, sa numérotation à droite. */
+  /** Ce que la manche fait savoir : la numérotation d'un traité, ou l'une de ses thèses. */
+  topic: 'numbering' | 'thesis'
+  /** Une paire par traité : son titre à gauche et sa numérotation à droite, ou sa thèse à gauche et son titre à droite. */
   pairs: { id: string; left: string; right: string }[]
   /** Séance de remise à niveau : rien n'y est noté (tous les traités sont déjà validés). */
   practice?: boolean
@@ -481,14 +483,16 @@ export interface TreatiseMatchExercise {
 export interface TreatiseChoiceExercise {
   kind: 'treatise-choice'
   id: string
+  /** Ce que la question fait savoir : la numérotation d'un traité, ou l'une de ses thèses. */
+  topic: 'numbering' | 'thesis'
   /** Le traité interrogé. */
   entryId: string
-  /** Ce qui est montré, et ce qu'on cherche : le titre pour la numérotation, ou l'inverse. */
+  /** Ce qui est montré, et ce qu'on cherche : le titre pour la numérotation, l'inverse, ou le traité d'une thèse. */
   prompt: string
   answer: string
   /** Réponses proposées, la bonne comprise, dans l'ordre d'affichage. */
   options: string[]
-  direction: 'title-to-number' | 'number-to-title'
+  direction: 'title-to-number' | 'number-to-title' | 'thesis-to-title'
   practice?: boolean
 }
 
