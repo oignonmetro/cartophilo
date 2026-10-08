@@ -471,8 +471,12 @@ export interface TableOrderExercise {
  * `treatises` dans le store.
  */
 export type TreatiseColumn = 'title' | 'number' | 'thesis'
-/** Une association entre deux colonnes, dans un sens ou dans l'autre. */
-export type TreatiseLink = 'title-number' | 'title-thesis' | 'number-thesis'
+/**
+ * Une association entre deux colonnes, dans un sens ou dans l'autre. Le titre sert
+ * de pivot : on lie un traité à sa numérotation, ou à ses thèses, mais jamais la
+ * numérotation à une thèse sans passer par le titre.
+ */
+export type TreatiseLink = 'title-number' | 'title-thesis'
 
 export interface TreatiseMatchExercise {
   kind: 'treatise-match'

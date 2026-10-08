@@ -78,18 +78,14 @@ describe('maîtrise lien par lien', () => {
   const withTheses = ENTRIES[3]!
   const plain = ENTRIES[0]!
 
-  it('un traité à thèses a trois liens à réussir, les autres un seul', () => {
+  it('un traité à thèses a deux liens à réussir (numérotation, thèse), les autres un seul', () => {
     expect(linksOf(withTheses)).toEqual([...LINKS])
     expect(linksOf(plain)).toEqual(['title-number'])
   })
 
   it('n’est maîtrisé que quand chacun de ses liens a eu une bonne association', () => {
     expect(isValidated(withTheses, { links: { 'title-number': { right: 1, wrong: 0 } } })).toBe(false)
-    expect(
-      isValidated(withTheses, {
-        links: { 'title-number': { right: 1, wrong: 0 }, 'title-thesis': { right: 3, wrong: 1 } },
-      }),
-    ).toBe(false)
+    expect(isValidated(withTheses, { links: { 'title-thesis': { right: 3, wrong: 1 } } })).toBe(false)
     expect(isValidated(withTheses, done(withTheses))).toBe(true)
     expect(isValidated(plain, { links: { 'title-number': { right: 1, wrong: 0 } } })).toBe(true)
   })
@@ -97,7 +93,6 @@ describe('maîtrise lien par lien', () => {
   it('reprend les comptes d’avant les liens', () => {
     expect(rightsOn({ right: 2 }, 'title-number')).toBe(2)
     expect(rightsOn({ thesis: 1 }, 'title-thesis')).toBe(1)
-    expect(rightsOn({ right: 2 }, 'number-thesis')).toBe(0)
     expect(isValidated(plain, { right: 1 })).toBe(true)
   })
 
@@ -173,14 +168,14 @@ describe('exercices formés à l’instant', () => {
   })
 
   it('fait passer d’abord le lien pas encore réussi', () => {
-    // Tout est réussi pour tous les traités en cours, sauf « numérotation ↔ thèse ».
+    // Tout est réussi pour tous les traités, sauf « titre ↔ thèse ».
     const progress: TreatiseProgress = Object.fromEntries(
       ENTRIES.map((entry) => [
         entry.id,
         {
           links: Object.fromEntries(
             linksOf(entry)
-              .filter((link) => link !== 'number-thesis')
+              .filter((link) => link !== 'title-thesis')
               .map((link) => [link, { right: 1, wrong: 0 }]),
           ),
         },
@@ -192,7 +187,7 @@ describe('exercices formés à l’instant', () => {
       const exercise = materializeTreatise(treatiseGhosts(2)[1]!, ENTRIES, progress, seed)
       if (exercise.kind !== 'treatise-choice') continue
       total++
-      if (exercise.link === 'number-thesis') hits++
+      if (exercise.link === 'title-thesis') hits++
     }
     expect(total).toBeGreaterThan(0)
     expect(hits / total).toBeGreaterThan(0.9)

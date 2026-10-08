@@ -15,8 +15,8 @@ import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
  * Un traité se dit de trois façons, comme les colonnes d'un tableau : son
  * titre, sa numérotation (« 53 [I, 1] ») et, pour ceux qui en ont, ses thèses
  * principales. Un exercice ne teste jamais « un traité » en bloc : il fait
- * établir un **lien** entre deux colonnes (titre ↔ numérotation, titre ↔
- * thèse, numérotation ↔ thèse), et chaque bonne ou mauvaise association est
+ * établir un **lien** entre deux colonnes, le titre servant de pivot (titre ↔
+ * numérotation, titre ↔ thèse), et chaque bonne ou mauvaise association est
  * retenue pour *ce* traité et *ce* lien.
  *
  * Les exercices n'existent pas d'avance : une séance réserve des places
@@ -35,12 +35,11 @@ import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
 /** Nombre de traités en cours d'apprentissage : ni plus, ni moins (tant qu'il en reste à apprendre). */
 export const ACTIVE_COUNT = 6
 
-export const LINKS: readonly TreatiseLink[] = ['title-number', 'title-thesis', 'number-thesis']
+export const LINKS: readonly TreatiseLink[] = ['title-number', 'title-thesis']
 
 const LINK_COLUMNS: Record<TreatiseLink, [TreatiseColumn, TreatiseColumn]> = {
   'title-number': ['title', 'number'],
   'title-thesis': ['title', 'thesis'],
-  'number-thesis': ['number', 'thesis'],
 }
 
 /** Ce qu'on retient d'un lien : ses associations justes (du premier coup) et fausses. */
@@ -52,7 +51,8 @@ export interface LinkRecord {
 /**
  * Ce qu'on retient de chaque traité, lien par lien. `right` et `thesis` sont
  * les comptes d'avant les liens : réussites sur la numérotation, puis sur les
- * thèses (titre ↔ thèse).
+ * thèses (titre ↔ thèse). Des liens `number-thesis`, abandonnés, peuvent traîner
+ * dans une sauvegarde : ils sont ignorés.
  */
 export interface TreatiseRecord {
   right?: number
@@ -81,7 +81,7 @@ function valueIn(entry: TreatiseEntry, column: TreatiseColumn, rng: Rng): string
   return entry.theses![Math.floor(rng() * entry.theses!.length)]!
 }
 
-/** Les liens que ce traité permet d'établir : tous, s'il a des thèses ; sa numérotation seule sinon. */
+/** Les liens que ce traité permet d'établir : sa numérotation, et ses thèses s'il en a. */
 export function linksOf(entry: TreatiseEntry): TreatiseLink[] {
   return LINKS.filter((link) => LINK_COLUMNS[link].every((column) => hasColumn(entry, column)))
 }
@@ -102,7 +102,7 @@ export function learningOrder(entries: readonly TreatiseEntry[]): TreatiseEntry[
 
 /** Associations justes d'un traité sur un lien (les comptes d'avant les liens y sont repris). */
 export function rightsOn(record: TreatiseRecord | undefined, link: TreatiseLink): number {
-  const legacy = link === 'title-number' ? (record?.right ?? 0) : link === 'title-thesis' ? (record?.thesis ?? 0) : 0
+  const legacy = link === 'title-number' ? (record?.right ?? 0) : (record?.thesis ?? 0)
   return Math.max(record?.links?.[link]?.right ?? 0, legacy)
 }
 
