@@ -892,10 +892,19 @@ function ChoicesPanel({
               {choice.kind === 'cell' ? (
                 // La case se choisit sur le tableau en réduction de l'aperçu (voir
                 // `CellPicker`), plus par une colonne puis une ligne à la suite.
-                <span className="rounded-md bg-ink/5 px-1.5 py-1 font-bold text-ink-soft">
+                // On montre la réponse attendue (le contenu de la case), plus parlante
+                // qu'un repère « colonne × ligne » ; le repère reste en info-bulle.
+                <span
+                  className="max-w-md truncate rounded-md bg-ink/5 px-1.5 py-1 font-bold text-ink-soft"
+                  title={
+                    choice.row === undefined
+                      ? `Colonne « ${columnName(choice.column)} », ligne tirée au hasard`
+                      : `« ${rowName(choice.row)} » × « ${columnName(choice.column)} »`
+                  }
+                >
                   {choice.row === undefined
-                    ? `colonne « ${columnName(choice.column)} », ligne au hasard`
-                    : `« ${rowName(choice.row)} » × « ${columnName(choice.column)} »`}
+                    ? `colonne « ${columnName(choice.column)} », case au hasard`
+                    : plainInline(grid[choice.row + 1]?.[choice.column] ?? '').trim() || '(case vide)'}
                 </span>
               ) : (
                 <>
