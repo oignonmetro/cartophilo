@@ -154,13 +154,13 @@ lessons:
 
     | Principe | Énoncé | Source |
     | {teal}Causalité{/teal} | les choses F (autres que le F) sont F parce qu'elles participent du F | *Phédon*, 100c-101c |
-    | {teal}Séparation{/teal} | le F est en lui-même et par lui-même : il est séparé de ce qui en participe, et donc non identique à ces choses | *Phédon*, 100b ; *République*, 476b |
+    | {teal}Séparation{/teal} | le F est en lui-même et par lui-même : il est radicalement différent de ce qui en participe, et donc non identique à ces choses | *Phédon*, 100b ; *République*, V, 476b |
     | {coral}Impureté des sensibles{/coral} | les choses sensibles peuvent avoir des propriétés contraires | *Parménide*, 129c |
     | {coral}Pureté des Idées{/coral} | une Idée ne peut avoir de propriétés contraires | *Parménide*, 129b-c |
-    | {violet}Un-au-dessus-de-plusieurs{/violet} | pour toute pluralité de choses F, il y a une Idée du F dont elles participent toutes | *République*, 596a |
-    | {violet}Unicité{/violet} | pour chaque propriété F, il y a exactement une et une seule Idée du F | *République*, 597c (argument du « troisième lit ») |
+    | {violet}Un-au-dessus-de-plusieurs{/violet} | pour toute pluralité de choses F, il y a une Idée du F dont elles participent toutes | *République*, X, 596a |
+    | {violet}Unicité{/violet} | pour chaque propriété F, il y a exactement une et une seule Idée du F | *République*, X, 597c (argument du « troisième lit ») |
     | {amber}Auto-prédication{/amber} | le F est lui-même F : le Beau est beau, le Grand est grand | *Hippias majeur*, *Phédon* |
-    | {amber}Unité{/amber} | chaque Idée est une | *République*, 476a, 524b |
+    | {amber}Unité{/amber} | chaque Idée est une | *République*, V, 476a ; VII, 524b |
     | Non-identité | aucune Idée n'est identique à ce qui en participe | conséquence de la Séparation |
 
     **Ne pas confondre Unité et Unicité.** L'Unicité dit qu'il n'y a qu'une seule Idée du Grand. L'Unité dit que chaque Idée est *une*, au sens où elle se compte comme une chose : de même que Socrate est un parmi les sept présents, le Beau est un parce que le Beau et le Laid font deux (*République*, 475e-476a).
@@ -173,7 +173,7 @@ lessons:
     exercises:
     - {kind: bank, column: Énoncé}
     - {kind: bank, column: Principe}
-    - {kind: cell, column: Principe}
+    - {kind: cell, column: Source, row: Unicité}
     - {kind: cell, column: Principe, row: Auto-prédication}
     - {kind: cell, column: Source, row: Impureté des sensibles}
     - {kind: cell, column: Source, row: Pureté des Idées}
@@ -185,15 +185,15 @@ lessons:
     answer: "Causalité"
     alt: ["causalité"]
   - id: platon-parmenide-i3-p2
-    sentence: "Principe de ___ : une Forme est *en elle-même* et *par elle-même*, __distinct et non identique aux choses qui en participent__."
+    sentence: "Principe de ___ : une Forme est *en elle-même* et *par elle-même* __distincte et non identique aux choses qui en participent__."
     answer: "Séparation"
     alt: ["séparation"]
   - id: platon-parmenide-i3-p3
-    sentence: "Principe dit de l'« un-au-dessus-de-___ » : pour toute pluralité de choses F, il y a une Idée du F dont chacune participe."
+    sentence: "Principe dit de l'« Un-au-dessus-de-___ » : pour toute pluralité de choses F, il y a une Idée du F dont chacune participe."
     answer: "plusieurs"
     alt: []
   - id: platon-parmenide-i3-p4
-    sentence: "Principe d'___ : pour chaque propriété F, il y a exactement une forme qui lui correspond, comme le montre l'argument du « troisième lit » de *La République* (livre X, 597c)."
+    sentence: "Principe d'___ : pour chaque propriété F, il n'y a pas plus d'une forme qui lui correspond, comme le montre l'argument du « troisième lit » de *La République* (livre X, 597c)."
     answer: "Unicité"
     alt: ["unicité"]
   - id: platon-parmenide-i3-p11
