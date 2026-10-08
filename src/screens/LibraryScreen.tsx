@@ -514,7 +514,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
             flotte en bas de la piste, au lieu d'une carte de plus parmi les
             cartes de la liste. `sticky` le garde en bas de la zone qui défile. */}
         {track.entries && (
-          <div className="pointer-events-none sticky bottom-3 z-10 -mt-2 flex items-center justify-end gap-2">
+          <div className="pointer-events-none sticky -bottom-16 z-10 -mx-4 -mt-2 flex items-center justify-end gap-2 p-3 md:-mx-2">
             <span className="rounded-full bg-paper px-3 py-1 text-xs font-black text-ink-soft shadow ring-2 ring-line">
               {validatedCount(track.entries, treatiseProgress ?? {})} / {track.entries.length} validés
             </span>
