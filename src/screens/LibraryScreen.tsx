@@ -13,7 +13,7 @@ import { availableCourses } from '@/content/loader'
 import { ProgressRing } from '@/components/ProgressRing'
 import { CoursePicker } from '@/components/CoursePicker'
 import { TextSheet } from '@/components/TextSheet'
-import { ENNEAD_NUMERALS, validatedCount } from '@/engine/treatises'
+import { ENNEAD_NUMERALS, acquiredCount } from '@/engine/treatises'
 import { PlanSheet } from '@/components/work/PlanSheet'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
@@ -518,13 +518,13 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
       {track.entries && (
         <div className="pointer-events-none absolute right-3 bottom-3 z-10 flex items-center gap-2">
           <span className="rounded-full bg-paper px-3 py-1 text-xs font-black text-ink-soft shadow ring-2 ring-line">
-            {validatedCount(track.entries, treatiseProgress ?? {})} / {track.entries.length} validés
+            {acquiredCount(track.entries, treatiseProgress ?? {})} / {track.entries.length} maîtrisés
           </span>
           <button
             type="button"
             onClick={() => navigate('/reperage')}
             aria-label="S'entraîner au repérage"
-            title={`S'entraîner au repérage : ${validatedCount(track.entries, treatiseProgress ?? {})} / ${track.entries.length} traités validés`}
+            title={`S'entraîner au repérage : ${acquiredCount(track.entries, treatiseProgress ?? {})} / ${track.entries.length} traités maîtrisés`}
             className={`pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full ${tone.bg} text-white shadow-lg ring-4 ring-cream`}
           >
             <UnitIcon name="compass" size={26} />
