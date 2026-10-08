@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 14
+version: 15
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -69,12 +69,31 @@ tracks:
         numberInEnnead: 2
         chrono: 19
         highlight: true
+        unit: traite19
+        summary: |-
+          Le traité 19 part du mot du *Théétète* (176b) : la vertu consiste à se rendre « semblable au dieu ». **L'éthique de Plotin a ceci de déconcertant que sa seule activité est la poursuite de l'union de l'âme avec le divin.**
+
+          - **Un paradoxe** : nos vertus nous rendent semblables à un divin qui n'a pas de vertus. Il se résout par la **double assimilation** (chap. 2) : celle de deux images d'un même modèle, et celle de l'image à son modèle. Entre les niveaux de l'être, pas de rupture : chaque niveau garde une **trace** du précédent.
+          - **Les vertus civiques** (réflexion, courage, maîtrise de soi, justice) imposent mesure et limite aux passions : c'est la **métriopathie** d'Aristote, un premier pas.
+          - **Les vertus plus hautes sont des purifications** (`kátharsis`) : détachement du corps et **retour** (`epistrophḗ`) vers l'Intellect, qui illumine les traces de l'intelligible en l'âme. Elles suppriment les passions : l'**impassibilité** (`apátheia`) des stoïciens.
+          - L'homme purifié est **« uniquement un dieu »** ; il faut choisir non la vie de l'homme de bien, mais **la vie des dieux** (chap. 7).
+
+          Porphyre, puis Macrobe et les néoplatoniciens, en tireront une échelle de « degrés de vertus », étrangère à la lettre de Plotin.
       - id: t-1-3
         title: "Sur la dialectique"
         ennead: 1
         numberInEnnead: 3
         chrono: 20
         highlight: true
+        unit: traite20
+        summary: |-
+          **Le traité 20, suite du traité 19 (I, 2), fait de la dialectique la méthode de l'ascension de l'âme vers le Bien : une méthode de purification éthique, et non seulement de recherche et de définition, comme chez Platon.**
+
+          - **Trois figures** du *Phèdre* (248d) : l'âme qui a le plus vu naît dans un philosophe, un musicien ou un amant. Plotin en fait trois degrés de la remontée (chap. 1-3) : le **musicien**, ému par le beau des sons, doit aller à l'harmonie intelligible ; l'**amant**, épris d'un corps, doit aller à la beauté de tous les corps, puis des occupations, des sciences et des vertus ; le **philosophe**, qui a « des ailes », n'a besoin que des mathématiques puis de la dialectique.
+          - **La dialectique véritable** (chap. 4-5) dit de chaque chose ce qu'elle est, divise et rassemble les genres jusqu'au principe, puis contemple. Elle laisse à une autre technique la **logique** des propositions et des syllogismes (celle d'Aristote et des stoïciens).
+          - Elle n'est pas un instrument de la philosophie, mais **sa partie la plus précieuse** (chap. 6), qui embrasse la physique et l'éthique.
+
+          Comme les vertus civiques avant la purification, la logique n'est qu'un préalable, à dépasser.
       - id: t-1-4
         title: "Sur le bonheur"
         ennead: 1
@@ -119,6 +138,15 @@ tracks:
         ennead: 1
         numberInEnnead: 9
         chrono: 16
+        unit: traite16
+        summary: |-
+          **Le minuscule traité 16 (un chapitre) se demande si le suicide peut être « raisonnable » (`eúlogos`), et répond non, sauf nécessité.** C'est une exhortation, dans le ton de la prédication morale de l'époque, pour prévenir le suicide.
+
+          - Plotin suit le *Phédon* (61c-62c), qui tient la mort volontaire pour toujours « déraisonnable » (`álogon`), contre les **stoïciens**, qui l'admettaient dans des cas extrêmes, comme la folie.
+          - **Quatre arguments** : l'âme doit attendre que l'**harmonie** qui la lie au corps s'épuise, sinon elle part en emportant quelque chose ; le suicide est un acte de **passion** (angoisse, douleur, colère) ; le temps de chacun est **fixé par le destin** ; le rang de l'âme après la mort dépend de son état au moment de sortir du corps : il faut **progresser** tant qu'on le peut.
+          - Une réserve : sauf s'il est **« vraiment nécessaire »**, cas jamais précisé, même dans le traité 46 (I, 4) : peut-être une marge de doute plutôt qu'une exception.
+
+          La première phrase, « Tu n'expulseras pas ton âme du corps », serait le seul emprunt identifiable de Plotin aux *Oracles chaldaïques*.
       - id: t-2-1
         title: "Sur le monde"
         ennead: 2
@@ -129,6 +157,16 @@ tracks:
         ennead: 2
         numberInEnnead: 2
         chrono: 14
+        unit: traite14
+        summary: |-
+          **Le traité 14 explique pourquoi le ciel se meut en cercle autour du centre de l'univers. Sa thèse est simple : c'est l'âme qui fait tourner le monde et le ciel, parce que le ciel « imite l'Intellect ».**
+
+          - Plotin reprend Platon (*Lois*, X ; *Timée*, l'âme du monde faite des cercles du Même et de l'Autre), mais répond aux objections d'Aristote (*De l'âme*, I, 3) : d'où vient le mouvement circulaire de l'âme, et comment meut-elle un corps ?
+          - **La métaphore des cercles** : l'Un est le centre ; l'Intellect et l'Âme sont des cercles qui désirent s'unir à lui sans jamais le rejoindre, et tournent donc autour de lui. L'âme a un centre **intelligible**, le corps un centre **local** : le corps du monde suit l'âme.
+          - Le mouvement de l'âme n'est pas local, mais elle meut le corps dans le lieu, comme notre âme meut notre corps quand elle se réjouit : **microcosme et macrocosme**.
+          - **Le feu**, qui va par nature en ligne droite, tourne en cercle parce que l'âme, partout, l'entraîne vers elle sans fatigue.
+
+          « L'univers se meut donc lui aussi en cercle et reste en même temps immobile », comme l'Intellect.
       - id: t-2-3
         title: "Si les astres agissent"
         ennead: 2
@@ -140,16 +178,36 @@ tracks:
         numberInEnnead: 4
         chrono: 12
         highlight: true
+        unit: traite12
+        summary: |-
+          **Le traité 12 développe une théorie de la matière très originale, nourrie d'Aristote, de Platon et des stoïciens : il y a deux matières, toutes deux incorporelles, l'une intelligible, l'autre sensible.**
+
+          - Contre les stoïciens (une matière corporelle) et les aristotéliciens (une seule matière), Plotin adopte ce qu'il tient pour la position de Platon, en suivant le témoignage d'Aristote sur la **Dyade indéfinie**, matière des Idées.
+          - **La matière intelligible** (chap. 2-5) explique la multiplicité des Formes : un substrat commun, coupé en autant de figures. Recevant sa forme, elle devient une vie intelligente ; elle est engendrée sans naître dans le temps : c'est le produit informe de chaque réalité, avant sa **conversion** vers son géniteur.
+          - **La matière sensible** (chap. 6-16) explique la transformation des éléments. Privée de tout, elle n'a pas même de **grandeur** (contre les stoïciens) ni de masse ; on ne la saisit que par un **raisonnement bâtard**.
+          - Plotin l'identifie, contre Aristote, à la **privation** ; il en fait un **non-être relatif** (le *Sophiste*), l'**illimité** (`ápeiron`), dont l'illimité sensible est le modèle, et enfin le **mal**.
+
+          La matière d'ici, ornée de formes, n'est qu'**« un cadavre ornementé »**.
       - id: t-2-5
         title: "Sur le sens de « en puissance » et « en acte »"
         ennead: 2
         numberInEnnead: 5
         chrono: 25
       - id: t-2-6
-        title: "Sur la qualité"
+        title: "Sur la réalité ou sur la qualité"
         ennead: 2
         numberInEnnead: 6
         chrono: 17
+        unit: traite17
+        summary: |-
+          **Le traité 17 porte sur la consistance et la composition des réalités sensibles : qu'est-ce qui distingue, dans une chose, ce qui fait sa réalité de ce qui n'est qu'une qualité ?**
+
+          - Plotin conteste la division aristotélicienne des qualités (*Métaphysique*, Δ, 14), qui range la **différence** de la réalité parmi les qualités : elle confond l'ordre de la réalité (`ousía`) et celui de l'accident.
+          - Il retourne contre Aristote ses propres concepts (réalité, acte, différence, qualité), dans un sens platonicien : la forme est la **raison** (`lógos`), séparée ; la réalité sensible, « réalité qualifiée », n'est qu'une image de la réalité de là-bas, seule « réellement réalité ».
+          - Le traité est un **dialogue** avec un interlocuteur péripatéticien, qui avance par objections : d'où son obscurité réputée.
+          - La notion clé est le **« complément de la réalité »**, comme la blancheur de la neige ou la chaleur du feu : sensible, mais lié au `lógos`, il est un niveau médiateur entre la qualité accidentelle (la blancheur peinte) et l'acte intelligible.
+
+          L'équivocité de « forme », « acte » et « réalité » n'est pas une négligence : elle vient de l'intégration d'Aristote dans le cadre de l'émanation.
       - id: t-2-7
         title: "Sur le mélange total"
         ennead: 2
@@ -195,6 +253,14 @@ tracks:
         ennead: 3
         numberInEnnead: 4
         chrono: 15
+        unit: traite15
+        summary: |-
+          **Le traité 15, suite du traité 11 (V, 2), est d'abord un traité de psychologie : il étudie l'âme et ses puissances, puis l'âme humaine et ses réincarnations, et ne vient au démon qu'à travers elles.**
+
+          - **Une démonologie « déflationniste »** : le démon n'est pas une divinité intermédiaire entre les hommes et les dieux, comme chez Hésiode. C'est **ce qui se tient au-dessus de la partie de l'âme qui est active en nous** (3, 4-8) : l'âme est à elle-même son propre démon, et Proclus le lui reprochera.
+          - **L'âme est responsable de son destin** : quand elle quitte le corps, elle devient la partie d'elle-même qu'elle a le plus développée ; choisir sa vie, c'est choisir son démon (le mythe d'Er). L'âme du monde, elle, gouverne son corps sans y descendre.
+          - **Le démon du sage est un dieu**, car en lui c'est l'intellect qui agit : son démon est donc ce qui est au-dessus de l'intellect, l'Un. D'où le doute sur le récit de Porphyre (la séance de l'**Iseion**).
+          - **Le chapitre 1** dit que la nature engendre une **« indétermination totale »** : un texte décisif pour la question de la génération de la matière.
       - id: t-3-5
         title: "Sur l'amour"
         ennead: 3
@@ -223,11 +289,31 @@ tracks:
         ennead: 3
         numberInEnnead: 9
         chrono: 13
+        unit: traite13
+        summary: |-
+          **Le traité 13 est un collage : neuf paragraphes, morceaux choisis ou fragments d'autres développements, que Porphyre a réunis à la fin de la troisième Ennéade.**
+
+          - Leur unité n'a rien de manifeste : il y est question du monde et de l'âme, mais aussi de l'Intellect (chap. 1-2), de l'Un (chap. 4 et 9), de l'acte et de la puissance (chap. 8). Ils sont proches des douze premiers traités, dont ils reprennent les difficultés pour les préciser ou les résumer, comme des réponses à des lecteurs.
+          - **Chap. 1** : un commentaire du *Timée* (39e) : le vivant intelligible n'est pas séparé de l'Intellect ; c'est l'Intellect en repos. La division, œuvre de la pensée discursive, revient à l'âme.
+          - **Chap. 3 et 5** : l'**indétermination** (`aóristos`) de l'âme : indéterminée avant de voir l'Intellect, elle est comme la vue, et comme une matière pour lui.
+          - **Chap. 4** : l'Un est **partout et nulle part** : partout, il produit tout ; nulle part, il n'est rien de ce qu'il produit.
+          - **Chap. 9** : le Premier, au-delà de ce qui est, **ne pense pas**, n'a pas conscience de lui-même et ne vit pas : ce sont les traits de l'Intellect.
+
+          Le seul fil commun est peut-être l'acte intellectif ; peut-être Porphyre n'a-t-il voulu que compléter sa neuvaine.
       - id: t-4-1
         title: "Comment l'on dit que l'âme est intermédiaire entre la réalité indivisible et la réalité divisible (Sur la réalité de l'âme II)"
         ennead: 4
         numberInEnnead: 1
         chrono: 21
+        unit: traite21
+        summary: |-
+          **L'unique chapitre du traité 21 démontre l'indivisibilité de l'âme, et y ajoute une ultime précision : la partie divisible de l'âme n'est elle-même « divisible que de façon indivisible ».**
+
+          - Après les traités 2, 4, 6 et 8, Plotin reprend la phrase du *Timée* (35a) : l'âme est faite d'un mélange d'indivisible et de **« divisible dans les corps »**. Elle ne se divise que relativement : ce sont les corps qui la contraignent à exercer ses puissances en différents lieux.
+          - Là-bas, l'Intellect est « tout entier ensemble », et les âmes sans corps sont dans l'indivision ; ici, elles sont venues dans des corps et s'y sont divisées. Mais l'âme ne s'est pas éloignée tout entière : quelque chose d'elle reste attaché là-haut, **comme un rayon dérive du centre**.
+          - Même ici-bas, elle se donne **tout entière au corps tout entier** : seule la réception de ses soins par les corps se divise.
+
+          Bribe d'un texte plus long, ce chapitre a changé de place selon les éditions : Porphyre en fit le deuxième traité de la quatrième Ennéade, Ficin le premier.
       - id: t-4-2
         title: "Sur la réalité de l'âme I"
         ennead: 4
@@ -299,17 +385,47 @@ tracks:
         ennead: 4
         numberInEnnead: 9
         chrono: 8
+        unit: traite8
+        summary: |-
+          **Le traité 8 reprend la question classique de l'unité de l'âme, et défend une thèse que Plotin sait audacieuse : toutes les âmes n'en sont qu'une.**
+
+          - Contre les stoïciens (l'âme serait un corps) et Aristote (l'âme « entéléchie »), il rappelle, après le traité 2, que l'âme est incorporelle et indivisible.
+          - Au-delà de l'**homogénéité** des âmes, lieu commun platonicien, il soutient leur **unité** : la multiplicité des âmes n'est qu'apparente ; c'est une seule âme qui se manifeste de différentes manières. Il retient la **sympathie universelle** des stoïciens, mais la rapporte à une âme unique.
+          - Deux objections : la diversité des vivants, qui vient des **corps** ; la diversité des **facultés**, qui ne contrarie pas l'unité : « ce n'est pas parce que l'âme a plusieurs puissances qu'elle n'est pas une » (3, 16-17).
+          - Justification : l'unité de **provenance** (les empreintes d'un même **sceau**) et la comparaison de la **science**, présente tout entière en chacun de ses théorèmes.
+
+          Reste une ambiguïté, que les traités 27-29 (IV, 3-5) devront affronter : comment les âmes individuelles procèdent-elles de l'âme du monde sans en être distinctes ?
       - id: t-5-1
-        title: "Sur les trois hypostases qui ont rang de Principes"
+        title: "Sur les trois hypostases qui ont rang de principes"
         ennead: 5
         numberInEnnead: 1
         chrono: 10
         highlight: true
+        unit: traite10
+        summary: |-
+          **Le traité 10 est le seul exposé à la fois systématique et synthétique de la doctrine plotinienne des trois réalités véritables, l'Un, l'Intellect et l'Âme, que le titre de Porphyre nomme « hypostases ».** Il part d'une question : pourquoi l'âme s'est-elle éloignée de sa source ?
+
+          - **L'Âme** (chap. 1-3) : par **audace** (`tólma`), les âmes ont voulu s'appartenir et oublié le dieu leur père. Il faut leur rappeler leur dignité : l'âme du monde donne vie et ordre à tout l'univers. L'Âme est l'image de l'Intellect, comme le discours prononcé l'est du discours intérieur ; sa pensée est discursive (`diánoia`), celle de l'Intellect intuitive (`nóēsis`).
+          - **L'Intellect** (chap. 4-7) est « pensée » et « être » ; il contient les genres premiers du *Sophiste*. Multiple, il vient de l'Un, qui l'engendre sans vouloir ni se mouvoir, par **surabondance**, comme le soleil sa lumière. L'engendré se **retourne** (`epistrophḗ`) vers son principe et s'en trouve déterminé. Kronos qui avale ses enfants figure l'Intellect.
+          - **Les prédécesseurs** (chap. 8-9) : seuls Platon et les pythagoriciens ont saisi la hiérarchie des trois principes ; Plotin se présente en **interprète** de Platon.
+          - **L'homme intérieur** (chap. 10-12) : les trois réalités sont aussi en nous ; il faut négliger les **« bruits sensibles »** pour entendre les sons de là-bas.
+
+          Augustin et Eusèbe l'ont lu à la lumière de la Trinité chrétienne, au prix d'un contresens sur la causalité nécessaire de l'Un.
       - id: t-5-2
-        title: "Sur la génération et le rang des choses qui sont après le Premier"
+        title: "Sur la génération et le rang des choses qui sont après le premier"
         ennead: 5
         numberInEnnead: 2
         chrono: 11
+        unit: traite11
+        summary: |-
+          **Le petit traité 11 (deux chapitres) établit la continuité entre les niveaux de la réalité : la tripartition du réel en Un, Intellect et Âme n'implique aucune rupture.**
+
+          - **« L'Un est toutes choses et il n'est aucune d'elles »** : parfait, sans besoin, il **surabonde** ; l'engendré, indéterminé, se tourne vers lui, le voit, et devient à la fois **Intellect** (par la vision) et **être** (par son repos orienté vers lui).
+          - L'Intellect produit de même l'**Âme**. Mais l'Âme, elle, produit en se mouvant, par désir de ce qui est inférieur : elle engendre une **image** d'elle-même, ses facultés sensible et végétative.
+          - L'Âme est dans une plante, un animal ou un homme selon la faculté qui domine ; mais elle n'est **en aucun lieu**, donc partout : couper une plante ne la déplace pas.
+          - Contre l'objection d'une multiplication des principes, un même processus (surabondance, puis **retour**) gouverne chaque niveau : chaque réalité est l'image de la précédente et le modèle de la suivante.
+
+          Le traité finit sur une image : le réel est **« comme une longue vie qui s'étend dans sa longueur »**.
       - id: t-5-3
         title: "Sur les hypostases qui ont la faculté de connaître et ce qui est au-delà"
         ennead: 5
@@ -317,10 +433,20 @@ tracks:
         chrono: 49
         highlight: true
       - id: t-5-4
-        title: "Comment vient du Premier ce qui est après le Premier, et sur l'Un"
+        title: "Comment vient du premier ce qui est après le premier, et sur l'Un"
         ennead: 5
         numberInEnnead: 4
         chrono: 7
+        unit: traite7
+        summary: |-
+          **Le bref traité 7 (deux chapitres) affronte une difficulté première : si toutes choses viennent de l'Un, comment en viennent-elles, alors que l'Un « reste en lui-même » ?**
+
+          - La procession est posée sous sa forme la plus simple : ce qui vient de l'Un en vient soit par des **intermédiaires**, soit **immédiatement**. Plotin défend la seconde voie : l'**Intellect** provient immédiatement de l'Un.
+          - L'Un est simple, unique, parfait, « au-delà de la réalité » ; il **demeure** (`ménei`) en lui-même, comme le démiurge du *Timée* (42e5-6). On ne le connaît que relativement : il n'est « intelligible » que pour l'Intellect qui le pense.
+          - L'Intellect est une **intellection** de l'Un, donc une dualité : distinct de l'Un, il n'en est pas séparé.
+          - La thèse des **deux actes** explique la procession : toute réalité a un acte qui la constitue et un acte second qui en provient sans l'affecter, comme la chaleur du feu. L'Un est une puissance qui surabonde.
+
+          Le traité établit déjà fermement les principales thèses des traités ultérieurs.
       - id: t-5-5
         title: "Sur l'intellect et que les intelligibles ne sont pas hors de l'intellect, et sur le Bien"
         ennead: 5
@@ -336,6 +462,14 @@ tracks:
         ennead: 5
         numberInEnnead: 7
         chrono: 18
+        unit: traite18
+        summary: |-
+          **Le bref traité 18 (trois pages) est l'un des plus originaux de Plotin : il y a une Idée de chaque individu, un « Socrate en soi ».** Platon ne l'avait pas soutenu explicitement.
+
+          - La participation ne relie pas seulement le sensible à une forme universelle (l'homme en soi), mais aussi l'individu à un **individu en soi** : les différences entre les hommes sont des **« différences formelles »**, non de simples accidents de la matière.
+          - **L'illimité n'est pas à craindre** dans l'intelligible : le nombre des individus en soi est pourtant déterminé, car le monde revient à l'identique à chaque **période**, la Grande Année.
+          - Deux conséquences : la rationalité s'étend au monde des individus ; et l'âme garde, après la mort, sa personnalité et son unicité. **Plotin refuse d'identifier individualité et irrationalité.**
+          - Les chapitres 2-3 confrontent la thèse à la naissance des enfants et au cas des **jumeaux** : « il y a autant de raisons que d'individus différents » ; la matière n'explique que la laideur.
       - id: t-5-8
         title: "Sur la beauté intelligible"
         ennead: 5
@@ -404,3 +538,13 @@ tracks:
         numberInEnnead: 9
         chrono: 9
         highlight: true
+        unit: traite9
+        summary: |-
+          **Le traité 9 présente pour la première fois de manière systématique la théorie plotinienne du premier principe : au-delà de l'Intellect et du monde intelligible, une réalité absolument simple, l'Un.** C'est l'innovation fondamentale de Plotin dans la tradition platonicienne, qui plaçait au principe un Intellect « démiurgique ».
+
+          - **Tout être est un** : une armée, une maison, un corps, une âme n'existent qu'en vertu de leur unité. Mais ni l'Âme, une « en vertu d'un autre », ni l'Intellect et l'être, multiples, ne sont l'Un (chap. 1-2).
+          - **L'Un est au-delà de tout** : sans forme, il n'est pas, ne se connaît ni ne se dit. Plotin lit ainsi la première hypothèse du *Parménide* et fait de la **théologie négative** une méthode. Tout discours sur l'Un est un discours sur nous, une exhortation qui indique le chemin (chap. 3-4).
+          - **La causalité de l'Un** est non réversible : nous sommes causés par lui, il ne nous cause pas à proprement parler. Il est le Bien pour les autres, non pour lui-même (chap. 5-6).
+          - **L'union** : l'âme doit se faire une et sans forme, comme un cercle qui fait coïncider son centre avec le centre de tout ; elle vit alors la vie véritable, dans une « extase » qui n'est plus connaissance (chap. 7-11).
+
+          Placé par Porphyre à la fin des *Ennéades*, le traité s'achève sur la vie « des dieux et des hommes divins » : « fuir seul vers lui seul ».

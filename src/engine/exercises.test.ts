@@ -1430,6 +1430,7 @@ describe('tableau de structure', () => {
 
   it('range un chapitre à exposant entre son chapitre et le suivant (8, 8¹ à 8⁵, 9)', () => {
     expect(locationKey('chap. 8⁴')).toEqual(locationKey('8^4'))
+    expect(locationKey('3, 10-fin')).toEqual([3, 10])
     const keys = ['chap. 8', 'chap. 8¹-8³', 'chap. 8⁴', 'chap. 8⁵', 'chap. 9-12'].map((text) => locationKey(text)!)
     expect(keys.every((key, i) => i === 0 || compareKeys(keys[i - 1]!, key) < 0)).toBe(true)
   })
@@ -1439,6 +1440,7 @@ describe('tableau de structure', () => {
     expect(sameLocationStart('chap. 3', 'chapitre 3')).toBe(true)
     expect(sameLocationStart('chap. 5-6', '5')).toBe(true)
     expect(sameLocationStart('1, 29-41', '1, 29')).toBe(true)
+    expect(sameLocationStart('1, 13-fin', '1, 13')).toBe(true)
     expect(sameLocationStart('chap. 8⁴', '8^4')).toBe(true)
     expect(sameLocationStart('chap. 8⁴', '8⁴')).toBe(true)
     expect(sameLocationStart('1, 29-41', '1')).toBe(false)

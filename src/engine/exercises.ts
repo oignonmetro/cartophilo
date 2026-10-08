@@ -1456,13 +1456,14 @@ const TABLE_ORDER_MAX = 7
 /**
  * Un repère dans un texte : pagination Stephanus ou Bekker (« 126a-128e »,
  * « 54d-e », « 1094a1-b11 »), ou division (« II, 3 », « chap. 1-5 »,
- * « §1-5 », « l. 3-11 »). Un chapitre peut porter un exposant (« 8⁴ », ou
- * « 8^4 » au clavier) : chez Plotin, les chapitres 8¹ à 8⁵ du traité 2
- * (IV, 7), absents des manuscrits de Ficin, se lisent entre le 8 et le 9.
+ * « §1-5 », « l. 3-11 », « 1, 13-fin » jusqu'à la fin du chapitre). Un
+ * chapitre peut porter un exposant (« 8⁴ », ou « 8^4 » au clavier) : chez
+ * Plotin, les chapitres 8¹ à 8⁵ du traité 2 (IV, 7), absents des manuscrits
+ * de Ficin, se lisent entre le 8 et le 9.
  */
 const PAGINATION_SPAN = /^(\d{1,4})\s*([a-e])\s*(\d*)(?:\s*-\s*\d{0,4}\s*[a-e]?\s*\d*)?$/i
 const DIVISION_SPAN =
-  /^(?:(?:livre|liv\.|chap\.?|chapitres?|ch\.|§|l\.|lignes?|p\.)\s*)?([ivxlcdm]+|\d+(?:\^\d+)?)(?:\s*,\s*(\d+))?(?:\s*-\s*(?:[ivxlcdm]+|\d+(?:\^\d+)?)(?:\s*,\s*\d+)?)?$/i
+  /^(?:(?:livre|liv\.|chap\.?|chapitres?|ch\.|§|l\.|lignes?|p\.)\s*)?([ivxlcdm]+|\d+(?:\^\d+)?)(?:\s*,\s*(\d+))?(?:\s*-\s*(?:fin|[ivxlcdm]+|\d+(?:\^\d+)?)(?:\s*,\s*\d+)?)?$/i
 const SUPERSCRIPTS = '⁰¹²³⁴⁵⁶⁷⁸⁹'
 
 /** Les exposants d'un repère en notation clavier : « 8⁴ » → « 8^4 ». */
