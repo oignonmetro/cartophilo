@@ -12,6 +12,7 @@ import {
   type Streak,
 } from '@/engine/progress'
 import { createCard, DAY, review, type CardState, type Rating } from '@/engine/srs'
+import type { TreatiseProgress } from '@/engine/treatises'
 
 /**
  * État de l'apprenant.
@@ -56,6 +57,8 @@ export interface CourseBucket<T> {
 
 export interface ProgressSnapshot {
   lessons: CourseBucket<LessonProgressMap>
+  /** Repérage dans les traités d'un cours (voir `engine/treatises.ts`) : réponses justes et fausses de chacun. */
+  treatises: CourseBucket<TreatiseProgress>
   cards: CourseBucket<Record<string, CardState>>
   /** Étapes de parcours franchies : clé `unité:nœud` → nombre de passages. */
   steps: CourseBucket<Record<string, number>>
@@ -158,6 +161,11 @@ export type AnswerDevice = 'desktop' | 'mobile'
 interface ProgressState extends ProgressSnapshot {
   /** Enregistre la réponse à un élément et met à jour sa carte de révision. */
   gradeItem: (courseId: string, itemId: string, rating: Rating, now?: number) => void
+  /**
+   * Note les réponses d'une séance de repérage dans les traités : `correct`
+   * ajoute une réponse juste (du premier coup), sinon une réponse fausse.
+   */
+  gradeTreatises: (courseId: string, results: readonly { id: string; correct: boolean }[]) => void
   /** Clôt une session de leçon : plancher d'acquisition, XP, série. */
   finishLesson: (
     courseId: string,
@@ -215,6 +223,7 @@ export const EMPTY_STEPS: Record<string, number> = {}
 
 const initial: ProgressSnapshot = {
   lessons: {},
+  treatises: {},
   cards: {},
   steps: {},
   xp: 0,
@@ -440,6 +449,16 @@ export const useProgress = create<ProgressState>()(
     (set, get) => ({
       ...initial,
 
+      gradeTreatises: (courseId, results) =>
+        set((state) => {
+          const bucket = { ...(state.treatises[courseId] ?? {}) }
+          for (const { id, correct } of results) {
+            const record = bucket[id] ?? { right: 0, wrong: 0 }
+            bucket[id] = correct ? { ...record, right: record.right + 1 } : { ...record, wrong: record.wrong + 1 }
+          }
+          return { treatises: { ...state.treatises, [courseId]: bucket } }
+        }),
+
       gradeItem: (courseId, itemId, rating, now = Date.now()) =>
         set((state) => {
           const bucket = state.cards[courseId] ?? {}
@@ -549,6 +568,7 @@ export const useProgress = create<ProgressState>()(
       exportSave: () => {
         const {
           lessons,
+          treatises,
           cards,
           steps,
           xp,
@@ -570,6 +590,7 @@ export const useProgress = create<ProgressState>()(
             format: SAVE_FORMAT,
             savedAt: Date.now(),
             lessons,
+            treatises,
             cards,
             steps,
             xp,
@@ -595,6 +616,7 @@ export const useProgress = create<ProgressState>()(
         const parsed = JSON.parse(payload) as {
           format?: number
           lessons?: unknown
+          treatises?: ProgressSnapshot['treatises']
           cards?: unknown
           steps?: unknown
           xp?: number
@@ -648,6 +670,7 @@ export const useProgress = create<ProgressState>()(
 
         set({
           lessons,
+          treatises: parsed.treatises ?? {},
           cards,
           steps: migrateAlphabetSteps(steps),
           xp: parsed.xp ?? 0,
@@ -713,6 +736,7 @@ export const useProgress = create<ProgressState>()(
       },
       partialize: ({
         lessons,
+        treatises,
         cards,
         steps,
         xp,
@@ -730,6 +754,7 @@ export const useProgress = create<ProgressState>()(
         gapModes,
       }) => ({
         lessons,
+        treatises,
         cards,
         steps,
         xp,

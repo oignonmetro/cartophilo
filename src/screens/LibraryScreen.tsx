@@ -13,6 +13,7 @@ import { availableCourses } from '@/content/loader'
 import { ProgressRing } from '@/components/ProgressRing'
 import { CoursePicker } from '@/components/CoursePicker'
 import { TextSheet } from '@/components/TextSheet'
+import { ACTIVE_COUNT, ENNEAD_NUMERALS, activeTreatises, validatedCount } from '@/engine/treatises'
 import { PlanSheet } from '@/components/work/PlanSheet'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
@@ -111,7 +112,6 @@ function groupUnits(units: readonly Unit[]): UnitOrGroup[] {
   return result.map((entry) => (entry.kind === 'group' && entry.units.length === 1 ? { kind: 'unit', unit: entry.units[0]! } : entry))
 }
 
-const ENNEAD_NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI'] as const
 
 /**
  * Titre thématique de chaque Ennéade, dans la progression voulue par
@@ -448,7 +448,9 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
 
         {track.entries ? (
           <TreatiseIndexView
+            courseId={course.id}
             entries={track.entries}
+            onTrain={() => navigate('/reperage')}
             tone={tone}
             openGroups={openGroups}
             onToggleGroup={toggleGroup}
@@ -883,18 +885,26 @@ function GroupSection({
  * le cours du traité quand il en a un (`unit`) : l'entrée le signale.
  */
 function TreatiseIndexView({
+  courseId,
   entries,
+  onTrain,
   tone,
   openGroups,
   onToggleGroup,
   onOpenTreatise,
 }: {
+  courseId: string
   entries: readonly TreatiseEntry[]
+  /** Lance le repérage général (voir `TreatiseTrainRoute`). */
+  onTrain: () => void
   tone: (typeof TRACK_TONES)[string]
   openGroups: Set<string>
   onToggleGroup: (group: string) => void
   onOpenTreatise: (entry: TreatiseEntry) => void
 }) {
+  const progress = useProgress((state) => state.treatises[courseId])
+  const validated = validatedCount(entries, progress ?? {})
+  const learning = activeTreatises(entries, progress ?? {}).length
   const [order, setOrder] = useState<TreatiseOrder>(savedTreatiseOrder)
   const chooseOrder = (next: TreatiseOrder) => {
     setOrder(next)
@@ -919,6 +929,23 @@ function TreatiseIndexView({
 
   return (
     <div className="flex flex-col gap-3">
+      {/* Le repérage général : relier titres et numérotations, huit traités à la fois. */}
+      <button type="button" onClick={onTrain} className="card-3d flex w-full items-center gap-4 px-4 py-4 text-left">
+        <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} ${tone.text}`}>
+          <UnitIcon name="compass" size={22} />
+        </span>
+        <span className="flex-1">
+          <span className="text-base leading-tight font-extrabold">S'entraîner au repérage</span>
+          <span className="mt-0.5 block text-xs font-bold text-ink-faint">
+            {validated} / {entries.length} traités validés
+            {learning > 0 ? ` · ${Math.min(learning, ACTIVE_COUNT)} en cours` : ''}
+          </span>
+        </span>
+        <span className="-rotate-180 text-ink-faint">
+          <ChevronLeftIcon size={20} />
+        </span>
+      </button>
+
       {/* Deux lectures du même index : l'ordre de Porphyre (les Ennéades) ou
           l'ordre de rédaction, regroupé comme dans l'édition GF. */}
       <div className="flex gap-0.5 self-center rounded-xl border-2 border-line p-1" role="group" aria-label="Ordre des traités">

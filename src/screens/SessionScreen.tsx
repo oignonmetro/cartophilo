@@ -9,6 +9,8 @@ import { useProgress } from '@/store/progressStore'
 import { Flashcard } from '@/components/session/Flashcard'
 import { ChoiceQuestion } from '@/components/session/ChoiceQuestion'
 import { MatchPairs } from '@/components/session/MatchPairs'
+import { TreatiseChoice } from '@/components/session/TreatiseChoice'
+import { TreatiseMatch } from '@/components/session/TreatiseMatch'
 import { ClozeSentence } from '@/components/session/ClozeSentence'
 import { TypeAnswer } from '@/components/session/TypeAnswer'
 import { VocabIntro } from '@/components/session/VocabIntro'
@@ -218,6 +220,7 @@ function SessionRunner({
 }: SessionScreenProps & { haptics: SessionHaptics; combo: SessionCombo; peakTier: () => number }) {
   const { course } = useCourse()
   const gradeItem = useProgress((state) => state.gradeItem)
+  const gradeTreatises = useProgress((state) => state.gradeTreatises)
   const [queue, setQueue] = useState<Exercise[]>(exercises)
   const [position, setPosition] = useState(0)
   const [attempt, setAttempt] = useState<Attempt>({ seen: new Set(), passed: new Set(), answers: 0, correct: 0, total: 0 })
@@ -332,6 +335,11 @@ function SessionRunner({
       for (const itemId of itemIdsOf(exercise)) {
         gradeItem(course.id, itemId, rating ?? ratingFromAnswer(correct, firstTry))
       }
+      // Un traité n'est validé que par une bonne réponse du premier coup ; une
+      // reprise réussie ne le valide pas, une erreur le note toujours.
+      if (exercise.kind === 'treatise-choice' && !exercise.practice && (!correct || firstTry)) {
+        gradeTreatises(course.id, [{ id: exercise.entryId, correct }])
+      }
       // Pas de son ici : il a déjà sonné dans l'exercice, à la validation
       // de la réponse (voir `useSessionSounds`). `answer` n'est appelé qu'à
       // l'appui sur « Continuer », une ou deux secondes plus tard.
@@ -344,7 +352,7 @@ function SessionRunner({
       // premier échec a marqué la carte pour la révision espacée.
       advance(!correct && !isPresentation(exercise))
     },
-    [advance, attempt.seen, course.id, gradeItem, record],
+    [advance, attempt.seen, course.id, gradeItem, gradeTreatises, record],
   )
 
   const answerMatch = useCallback(
@@ -353,6 +361,14 @@ function SessionRunner({
       const firstTry = !attempt.seen.has(exercise.id)
       for (const itemId of itemIdsOf(exercise)) {
         gradeItem(course.id, itemId, missed.has(itemId) ? 'again' : ratingFromAnswer(true, firstTry))
+      }
+      if (exercise.kind === 'treatise-match' && !exercise.practice) {
+        gradeTreatises(
+          course.id,
+          exercise.pairs
+            .filter((pair) => missed.has(pair.id) || firstTry)
+            .map((pair) => ({ id: pair.id, correct: !missed.has(pair.id) })),
+        )
       }
       // Pas de son ici : chaque paire a déjà sonné en se résolvant (voir
       // `PairBoard`), et la dernière est la fin de la manche. En rejouer un
@@ -370,7 +386,7 @@ function SessionRunner({
       // Les paires sont toutes trouvées à la fin : inutile de rejouer la manche.
       advance(false)
     },
-    [advance, attempt.seen, course.id, gradeItem, haptics, record],
+    [advance, attempt.seen, course.id, gradeItem, gradeTreatises, haptics, record],
   )
 
   // La file est vide : la session est terminée. Le drapeau évite que le rendu
@@ -505,6 +521,12 @@ function SessionRunner({
             )}
             {current.kind === 'rule' && (
               <RuleNote exercise={current} hideNotes={skipping} onNext={() => advance(false)} />
+            )}
+            {current.kind === 'treatise-match' && (
+              <TreatiseMatch exercise={current} onDone={({ missedIds }) => answerMatch(current, missedIds)} />
+            )}
+            {current.kind === 'treatise-choice' && (
+              <TreatiseChoice exercise={current} onAnswer={(correct) => answer(current, correct)} />
             )}
             {current.kind === 'work-locate' && (
               <WorkLocate exercise={current} onAnswer={(correct) => answer(current, correct)} />

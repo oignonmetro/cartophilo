@@ -462,6 +462,36 @@ export interface TableOrderExercise {
   bank: number[]
 }
 
+/**
+ * Repérage dans les traités d'un auteur (voir `treatises.ts`) : relier des
+ * titres à leur double numérotation (« 53 [I, 1] » : rang chronologique, puis
+ * place chez Porphyre). Ces exercices ne notent pas des éléments de la
+ * révision espacée (`itemIdsOf` ne rend rien) : ce sont des traités, suivis
+ * par `treatises` dans le store.
+ */
+export interface TreatiseMatchExercise {
+  kind: 'treatise-match'
+  id: string
+  /** Une paire par traité : son titre à gauche, sa numérotation à droite. */
+  pairs: { id: string; left: string; right: string }[]
+  /** Séance de remise à niveau : rien n'y est noté (tous les traités sont déjà validés). */
+  practice?: boolean
+}
+
+export interface TreatiseChoiceExercise {
+  kind: 'treatise-choice'
+  id: string
+  /** Le traité interrogé. */
+  entryId: string
+  /** Ce qui est montré, et ce qu'on cherche : le titre pour la numérotation, ou l'inverse. */
+  prompt: string
+  answer: string
+  /** Réponses proposées, la bonne comprise, dans l'ordre d'affichage. */
+  options: string[]
+  direction: 'title-to-number' | 'number-to-title'
+  practice?: boolean
+}
+
 export type Exercise =
   | IntroExercise
   | FlashcardExercise
@@ -479,6 +509,8 @@ export type Exercise =
   | WorkLocateExercise
   | WorkOrderExercise
   | WorkMatchExercise
+  | TreatiseMatchExercise
+  | TreatiseChoiceExercise
   | TableBankExercise
   | TableCellExercise
   | TableOrderExercise
@@ -536,6 +568,9 @@ export function isListeningExercise(exercise: Exercise): boolean {
 export function itemIdsOf(exercise: Exercise): string[] {
   switch (exercise.kind) {
     case 'rule':
+    // Des traités, pas des éléments de révision : voir `TreatiseMatchExercise`.
+    case 'treatise-match':
+    case 'treatise-choice':
       return []
     case 'table-bank':
     case 'table-cell':

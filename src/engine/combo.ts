@@ -81,6 +81,7 @@ export function effortOf(exercise: Exercise): number {
     case 'choice':
     case 'grammar-choice':
     case 'conjugation-choice':
+    case 'treatise-choice':
       return 1
 
     // Une manche d'association est de la reconnaissance, mais en gros : elle
@@ -95,6 +96,7 @@ export function effortOf(exercise: Exercise): number {
     case 'work-order':
       return Math.ceil(exercise.steps.length / 2)
     case 'work-match':
+    case 'treatise-match':
       return Math.ceil(exercise.pairs.length / 2)
     case 'table-bank':
       return Math.ceil(exercise.holes.length / 2)
