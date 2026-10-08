@@ -283,13 +283,22 @@ export function TableCell({
         }
         return
       }
-      if (event.key !== 'Enter' || checked === null) return
+      if (event.key !== 'Enter') return
+      if (checked === null) {
+        // Réponse écrite sans le focus dans le champ (le champ gère lui-même
+        // sa propre touche Entrée) : vérifier, ou « Je ne sais pas » si vide.
+        if (mode === 'write' && document.activeElement !== input.current) {
+          event.preventDefault()
+          check(value.trim() ? value : '')
+        }
+        return
+      }
       event.preventDefault()
       onAnswer(checked)
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [isDesktop, mode, revealed, checked, onAnswer])
+  }, [isDesktop, mode, revealed, checked, value, onAnswer])
 
   const renderCell = useCallback(
     (row: number, column: number) => {
@@ -332,7 +341,8 @@ export function TableCell({
               onKeyDown={(event) => {
                 if (event.key !== 'Enter') return
                 event.preventDefault()
-                if (value.trim()) check(value)
+                // Champ vide : Entrée vaut « Je ne sais pas », comme sur une phrase à trou.
+                check(value.trim() ? value : '')
               }}
               autoCapitalize="off"
               autoCorrect="off"
