@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 20
+version: 21
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -219,6 +219,20 @@ tracks:
         ennead: 2
         numberInEnnead: 5
         chrono: 25
+        unit: traite25
+        theses:
+          - "Ce qui est en puissance ne devient pas lui-même en acte : l'airain reste airain, c'est la statue qui est en acte."
+          - "Dans l'intelligible, rien n'est en puissance : tout y est forme, à la fois en acte et acte."
+          - "La matière est tous les êtres en puissance et n'est rien en acte : un « mensonge véritable », un non-être."
+        summary: |-
+          **Le traité 25 examine les notions d'acte et de puissance, héritées d'Aristote, pour en fixer l'usage dans le sensible, dans l'intelligible et pour la matière.** Plotin ne fait pas œuvre de doxographe : il plie la doctrine du Stagirite à sa propre métaphysique.
+
+          - **Quatre notions** (chap. 1-2) : l'être en puissance est un substrat passif (l'airain), qui a besoin d'autre chose pour passer à l'acte ; l'être en acte est le composé (la statue) ; l'acte est la forme du composé ; la puissance est une puissance active (le courage).
+          - **Ce qui est en puissance ne devient pas lui-même en acte** : l'airain reste airain, c'est la statue qui vient à l'être.
+          - **Dans l'intelligible, tout est en acte et tout est acte** (chap. 3) : même la matière y est une forme ; les formes, éternelles, sont les plus beaux actes.
+          - **La matière première est tous les êtres en puissance et n'est rien en acte** (chap. 4-5) : un non-être, un « mensonge véritable », qui ne passera jamais à l'acte, et pour cela indestructible.
+
+          Contre Aristote, pour qui la matière tend vers la forme, Plotin maintient un écart infranchissable entre elles. Le traité 26 (III, 6), chap. 7, y reviendra.
       - id: t-2-6
         title: "Sur la réalité ou sur la qualité"
         ennead: 2
@@ -310,6 +324,10 @@ tracks:
         ennead: 3
         numberInEnnead: 6
         chrono: 26
+        theses:
+          - "Les sensations et les passions ne sont pas des affections de l'âme, mais des activités : l'âme reste inaltérable."
+          - "Purifier l'âme, ce n'est pas la laver d'une souillure, mais la détourner des images, comme on réveille un rêveur."
+          - "La matière, non-être véritable, est impassible : les formes s'y reflètent comme dans un miroir, sans l'affecter."
       - id: t-3-7
         title: "Sur l'éternité et le temps"
         ennead: 3
@@ -331,7 +349,7 @@ tracks:
         theses:
           - "Le vivant intelligible du Timée est l'Intellect en repos : c'est l'âme qui divise, par la pensée discursive."
           - "L'âme est indéterminée avant de voir l'Intellect : relativement à lui, elle est comme une matière."
-          - "Le Premier, au-delà de ce qui est, ne pense pas : la pensée, la conscience de soi et la vie sont propres à l'Intellect."
+          - "L'Un est partout et nulle part : partout, il produit tout ; nulle part, il n'est rien de ce qu'il produit."
         summary: |-
           **Le traité 13 est un collage : neuf paragraphes, morceaux choisis ou fragments d'autres développements, que Porphyre a réunis à la fin de la troisième Ennéade.**
 
@@ -531,10 +549,25 @@ tracks:
         numberInEnnead: 5
         chrono: 32
       - id: t-5-6
-        title: "Sur le fait que l'au-delà de l'Être ne pense pas ; qui est le pensant de premier rang et qui celui de second rang"
+        title: "Sur le fait que ce qui est au-delà de l'être n'intellige pas, et sur ce que sont les principes premier et second d'intellection"
         ennead: 5
         numberInEnnead: 6
         chrono: 24
+        unit: traite24
+        theses:
+          - "Contre Aristote, ce qui pense, même soi-même, n'est pas premier : le principe, absolument un, n'intellige pas."
+          - "Ce qui s'intellige soi-même est à la fois un et deux : il faut qu'il soit « simple et non simple »."
+          - "Intelliger, c'est un mouvement qui se porte vers le Bien en le désirant : le désir a engendré l'intellection."
+        summary: |-
+          **Le traité 24 dissocie l'excellence du principe de l'activité de pensée : ce qui pense, même soi-même, ne peut plus prétendre au premier rang.** Il vise la théologie d'Aristote, pour qui l'Intellect qui se pense est « la plus divine des choses » : Plotin lui substitue l'Un, parfait parce que purifié de toute intellection.
+
+          - **Penser, c'est être deux** (chap. 1) : ce qui s'intellige est à la fois un et deux, « simple et non simple ». L'âme pense autre chose qu'elle ; l'Intellect se pense lui-même, et pense ainsi au sens propre.
+          - **Le Premier n'intellige pas** (chap. 2-3) : il y a un principe qui n'intellige pas, un principe qui intellige en un sens premier (l'Intellect) et un autre en un sens second (l'âme). Le multiple suppose une unité simple avant lui.
+          - **Les images** (chap. 4) : l'Intellect « prend la forme du Bien » ; le Bien est la lumière, l'Intellect le soleil, l'âme la lune.
+          - **Le désir précède la pensée** (chap. 5) : « intelliger : un mouvement qui se porte vers le Bien en le désirant ». L'Intellect ne s'intellige que par accident, en regardant vers le Bien.
+          - **Au-delà de la réalité, au-delà de l'intellection** (chap. 6) : le Bien ne se connaît pas ; il donne aux autres choses de l'atteindre.
+
+          C'est l'un des gestes inauguraux du néoplatonisme.
       - id: t-5-7
         title: "S'il y a des idées même des êtres individuels"
         ennead: 5
@@ -592,15 +625,43 @@ tracks:
         numberInEnnead: 3
         chrono: 44
       - id: t-6-4
-        title: "Sur la raison pour laquelle l'Être, un et identique, est partout tout entier I"
+        title: "Sur la raison pour laquelle l'être, un et identique, est partout tout entier I"
         ennead: 6
         numberInEnnead: 4
         chrono: 22
+        unit: traite22
+        theses:
+          - "Ce n'est pas l'intelligible qui est dans le sensible : c'est le sensible qui est dans l'intelligible, dans l'être."
+          - "L'âme ne vient pas dans les corps : c'est le corps qui s'avance vers elle et en reçoit ce qu'il peut."
+          - "Comme une parole est entendue tout entière par chaque oreille, l'âme une est tout entière présente à chaque corps."
+        summary: |-
+          **Les traités 22 et 23, qui n'en formaient sans doute qu'un seul, exposent la théorie plotinienne de la participation : comment l'intelligible, un et identique, est-il partout tout entier dans le sensible ?** C'en est l'exposé le plus abouti chez Plotin.
+
+          - **Le renversement** (chap. 2) : ce n'est pas l'intelligible qui est dans le sensible, c'est le sensible qui est dans l'intelligible ; « partout » signifie « dans l'être ».
+          - **L'indivisible reste en lui-même** : le divisible est une affection du corps, l'indivisible une affection de l'incorporel (chap. 8). L'âme une contient les âmes multiples, comme une âme ses sciences (chap. 4).
+          - **Ce n'est pas l'âme qui vient dans le corps, c'est le corps qui s'avance vers elle** et en reçoit ce qu'il peut : « ce qui est présent est présent selon l'aptitude de ce qui le reçoit » (chap. 6, 11-12).
+          - **Les images** : la main qui soulève un bois plus grand qu'elle, la sphère lumineuse, le son entendu tout entier par chaque oreille, l'assemblée troublée par le peuple (chap. 7, 12, 15).
+          - **Nous étions là-bas** des hommes intelligibles ; un second homme s'est ajouté à nous (chap. 14). « Descendre », c'est seulement se trouver dans un corps (chap. 16).
+
+          Le traité 23 (VI, 5) reprend la même démonstration et l'achève sur une exhortation.
       - id: t-6-5
-        title: "Sur la raison pour laquelle l'Être, un et identique, est partout tout entier II"
+        title: "Sur la raison pour laquelle l'être, un et identique, est partout tout entier II"
         ennead: 6
         numberInEnnead: 5
         chrono: 23
+        unit: traite23
+        theses:
+          - "Tous les hommes croient le dieu présent partout, un et identique : c'est le principe le plus solide de tous."
+          - "Quand nous connaissons vraiment, nous ne recevons pas les intelligibles : nous sommes en eux, nous les devenons."
+          - "On devient tout en rejetant le non-être : ce n'est pas le tout qui vient à nous, c'est nous qui nous en détournons."
+        summary: |-
+          **Le traité 23, suite du traité 22 (VI, 4), achève la démonstration : l'être véritable reste en lui-même, et ce sont les autres choses qui en participent, autant qu'elles le peuvent.** Il passe de la participation à une exhortation : se retourner vers l'intelligible, notre véritable demeure.
+
+          - **Une notion commune** (chap. 1) : tous les hommes disent le dieu présent en chacun, un et identique ; c'est « le principe le plus solide de tous ». Mais la raison, qui prend ses principes dans les corps, divise : il faut raisonner sur l'intelligible à partir de ses propres principes (chap. 2).
+          - **L'unité véritable ne se trouve en aucune chose** (chap. 3) ; croire en dieu, c'est croire que la même chose est partout entière (chap. 4). Mise en garde contre l'image du cercle et de ses rayons (chap. 5).
+          - **Nous sommes les intelligibles** (chap. 7) : connaître vraiment, ce n'est pas recevoir des empreintes, c'est être en eux. Il faut se retourner, comme Achille tiré par les cheveux par Athéna.
+          - **La matière n'est pas loin des formes** (chap. 8) : elle se tient auprès d'elles ; l'Éros « qui veille à la porte » possède la beauté en restant auprès d'elle (chap. 10).
+          - **On devient tout en rejetant le non-être** (chap. 12) : ce n'est pas le tout qui vient à nous, c'est nous qui nous en détournons.
       - id: t-6-6
         title: "Sur les nombres"
         ennead: 6
