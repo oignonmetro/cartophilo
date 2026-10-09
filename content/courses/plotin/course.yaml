@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 38
+version: 39
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -420,6 +420,19 @@ tracks:
         numberInEnnead: 7
         chrono: 45
         highlight: true
+        unit: traite45
+        theses:
+          - "L'éternité est la vie de l'être, tout entière ensemble et sans extension : l'être complet n'a ni passé ni avenir."
+          - "Le temps n'est ni le mouvement, ni son intervalle, ni sa mesure : ces définitions ne disent qu'un accident du temps."
+          - "Le temps est la vie de l'âme descendue, qui passe d'un état à un autre : il naît quand l'âme quitte l'éternité."
+        summary: |-
+          **Le traité 45 définit l'éternité comme la vie de l'être, tout entière ensemble et sans extension, puis le temps comme la vie de l'âme descendue, qui passe d'un état à un autre.** Il commente ainsi le temps « image de l'éternité » du *Timée*.
+
+          - **L'éternité** (chap. 1-6) : ni le monde intelligible lui-même, ni le repos, elle est la puissance une de l'intelligible, « une vie qui demeure dans l'identité » ; l'être véritable, complet, n'a ni passé ni avenir. Elle est « une vie d'emblée illimitée », tournée vers l'Un.
+          - **Les définitions manquées** (chap. 7-10) : le temps n'est ni le mouvement, ni le ciel qui se meut, ni l'intervalle du mouvement des stoïciens, ni la mesure du mouvement d'Aristote, ni l'accompagnement d'Épicure : toutes prennent un accident pour l'essence.
+          - **Le temps, vie de l'âme** (chap. 11-13) : une puissance de l'âme, affairée, voulant plus que le présent, s'est temporalisée en produisant le monde. La révolution du ciel ne fait que manifester et mesurer le temps ; si l'âme revenait à l'unité, le temps cesserait.
+
+          Plotin y rompt avec ses prédécesseurs en rapportant le temps à l'âme, et non au mouvement des corps.
       - id: t-3-8
         title: "Sur la contemplation"
         ennead: 3
