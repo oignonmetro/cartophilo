@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 35
+version: 36
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -882,6 +882,19 @@ tracks:
         numberInEnnead: 8
         chrono: 39
         highlight: true
+        unit: traite39
+        theses:
+          - "Ce qui dépend de nous n'est pas dans l'action, mais dans l'intellect : la volonté libre est celle qui veut le Bien."
+          - "Le Bien n'existe ni par hasard ni par nécessité : sa surabondance de puissance le met au-dessus de toute nécessité."
+          - "Le Bien est tout entier volonté : il est ce qu'il veut, et se produit lui-même, « pour ainsi dire »."
+        summary: |-
+          **Le traité 39 transpose aux premiers principes le vocabulaire de la liberté : ce qui dépend de nous réside dans l'intellect tourné vers le Bien, et le Bien, qui n'existe ni par hasard ni par nécessité, est tout entier volonté.** Plotin y discute Alexandre d'Aphrodise, pour qui rien de ce qui tient à leur nature ne dépend des dieux.
+
+          - **La liberté en nous** (chap. 1-6) : ce qui dépend de nous n'est ni dans le désir, ni dans l'action soumise aux circonstances, mais dans l'intellect ; la volonté est libre quand elle veut le Bien, et l'Intellect, tourné vers lui, est libre de son propre fait.
+          - **Le discours téméraire** (chap. 7-11) : refuser la liberté au Bien parce qu'il n'est pas maître de sa nature, c'est vider de sens « ce qui dépend de nous ». Le Bien n'est pas advenu par accident : il est seul, au-dessus de la nécessité, et l'on doit même lui retirer le « est ».
+          - **Le discours positif** (chap. 12-21) : pour persuader, Plotin dit, « pour ainsi dire », que le Bien se veut, s'aime et se produit lui-même, cause de soi ; il est le centre du cercle, la source de la lumière, et il est « tout entier volonté ».
+
+          Pour l'atteindre, il faut « retrancher toutes choses ».
       - id: t-6-9
         title: "Sur le Bien ou l'Un"
         ennead: 6
