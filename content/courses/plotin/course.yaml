@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 21
+version: 22
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -324,10 +324,21 @@ tracks:
         ennead: 3
         numberInEnnead: 6
         chrono: 26
+        unit: traite26
         theses:
           - "Les sensations et les passions ne sont pas des affections de l'âme, mais des activités : l'âme reste inaltérable."
           - "Purifier l'âme, ce n'est pas la laver d'une souillure, mais la détourner des images, comme on réveille un rêveur."
           - "La matière, non-être véritable, est impassible : les formes s'y reflètent comme dans un miroir, sans l'affecter."
+        summary: |-
+          **Le traité 26 pourrait porter un titre paradoxal : comment ce qui paraît pâtir ne pâtit pas.** Il rectifie deux erreurs nées de nos « habitudes de langage » : parler de « passions de l'âme », et supposer avec les péripatéticiens que la matière est « affectée » par les formes. Ni l'âme ni la matière ne pâtissent.
+
+          - **Un diptyque** : l'âme (chap. 1-5), puis la matière (chap. 7-19), avec pour charnière l'être impassible (chap. 6). Deux impassibilités s'opposent : celle de l'âme, qui vient de sa perfection de forme ; celle de la matière, qui vient de son impuissance.
+          - **Les sensations et les passions ne sont pas des affections, mais des activités** : le vice est un manque d'harmonie, la peur naît dans l'âme mais la pâleur dans le corps ; l'âme est comme l'harmonie d'une lyre, dont seules les cordes sont mues. La purification consiste à détourner l'âme des images, comme on réveille un rêveur.
+          - **L'être n'est pas un corps** (chap. 6) : la résistance des corps est signe de faiblesse ; être dans le corps, pour l'âme, c'est dormir.
+          - **La matière est le non-être véritable** (chap. 7) : elle ment dans tout ce qu'elle annonce ; les formes s'y montrent comme dans un miroir, sans l'affecter. Elle participe sans participer (Pénia, l'écho) ; elle reçoit la grandeur comme un vêtement.
+          - **Plus réceptacle que mère** (chap. 19) : la matière est stérile, seule la forme engendre.
+
+          C'est le plus long exposé de Plotin sur la nature paradoxale de la matière, après les traités 12 (II, 4) et 25 (II, 5).
       - id: t-3-7
         title: "Sur l'éternité et le temps"
         ennead: 3
