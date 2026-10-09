@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 26
+version: 27
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -358,6 +358,20 @@ tracks:
         numberInEnnead: 8
         chrono: 30
         highlight: true
+        unit: traite30
+        theses:
+          - "Tout contemple, jusqu'à la nature des plantes : la contemplation est l'activité commune et la fin de toutes choses."
+          - "Produire et agir sont des contemplations affaiblies : on agit pour voir ce que l'intellect ne peut voir."
+          - "La nature produit en silence parce qu'elle contemple : ce qui naît est le résultat de ce qu'elle voit."
+        summary: |-
+          **Le traité 30 démontre une thèse simple et provocante : tout contemple, des plantes jusqu'à l'Intellect, et toute production, toute action, est une contemplation affaiblie.** C'est une sorte d'introduction à la philosophie de Plotin : la contemplation explique à la fois la procession des réalités et leur retour vers leur principe.
+
+          - **La thèse, en jouant** (chap. 1, 1-18) : toutes choses aspirent à la contemplation, même la nature qui est dans les plantes.
+          - **La nature contemple** (chap. 1, 18 à 4) : elle produit sans mains ni leviers, parce qu'elle est une raison immobile ; dans une prosopopée, elle dit qu'elle produit en silence, comme les géomètres tracent des figures en contemplant.
+          - **L'âme contemple** (chap. 5-7) : agir, c'est atteindre la contemplation par un détour ; les hommes trop faibles pour contempler agissent pour voir.
+          - **L'Intellect contemple l'Un** (chap. 8-11) : en lui, « être et penser, c'est la même chose » ; l'Un est la puissance de toutes choses, comme une source qui se donne à tous les fleuves sans s'épuiser.
+
+          Émile Bréhier y voyait l'œuvre la plus achevée de Plotin. Avec les traités 31 à 33, il forme un ensemble écrit à la maturité de sa philosophie.
       - id: t-3-9
         title: "Considérations diverses"
         ennead: 3
