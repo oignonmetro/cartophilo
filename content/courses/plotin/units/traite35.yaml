@@ -16,6 +16,8 @@ lessons:
   notes: |-
     **Une question d'optique** : Porphyre range l'optique parmi les sciences que Plotin connaissait bien, sans vouloir s'y attarder (*Vie de Plotin*, 14). Hormis les cinq premiers chapitres du traité 29, *Sur la vue*, ce traité de trois pages est le seul qui en traite.
 
+    **Pourquoi c'est un problème pour Plotin** : aujourd'hui, on explique le phénomène par la géométrie de la lumière (depuis Képler et Descartes) : l'image formée sur la rétine est d'autant plus petite que l'angle visuel est faible. Pour Plotin, voir n'est pas recevoir une petite image gravée dans l'œil comme un sceau dans la cire : c'est un **acte de l'âme**, qui se porte vers l'objet réel. Or la grandeur est pour lui une **Forme intelligible**, par nature indivisible et immuable. Comment une Forme paraîtrait-elle rapetissée par la seule distance ? Si la distance altérait la grandeur perçue, la sensation tromperait sur la Forme elle-même.
+
     **Un phénomène étudié par toutes les écoles** :
 
     | École | Ce qu'elle en fait |
@@ -33,7 +35,7 @@ lessons:
     | il faut examiner de près chaque partie de l'objet | épicurienne |
     | la grandeur est vue par accident | le *De l'âme* d'Aristote |
 
-    Plotin présente les trois premières sans les discuter, **défend la quatrième** et réfute longuement une cinquième (chap. 2). Pour Aristote, la **couleur** est l'objet premier de la vue ; la grandeur n'en est perçue que de manière secondaire, par accident. De près, on sait la dimension de la surface colorée ; de loin, on sait seulement qu'elle est colorée.
+    Plotin présente les trois premières sans les discuter, **défend la quatrième** et réfute longuement une cinquième (chap. 2). Pour Aristote, la **couleur** est l'objet premier de la vue ; la grandeur n'en est perçue que de manière secondaire, par accident. De près, on sait la dimension de la surface colorée ; de loin, on sait seulement qu'elle est colorée. Autrement dit, la vue ne mesure pas directement la taille : elle perçoit d'abord des couleurs et des détails de formes, et ne saisit la taille qu'à travers eux. Quand la distance augmente, la couleur et les détails s'estompent, et la taille paraît diminuer avec eux.
 
     ! « Par accident » ne veut pas dire par hasard : la grandeur est perçue avec la couleur, à sa suite, et non pour elle-même.
   points:
@@ -85,14 +87,22 @@ lessons:
     sentence: "Pour le traité 35 (1, 12-13), la grandeur est vue par accident, car l'objet premier de la vision est la ___."
     answer: "couleur"
     alt: []
+  - id: traite35-l1-p13
+    sentence: "Pour Plotin, voir n'est pas recevoir une image gravée dans l'œil comme un sceau dans la ___, mais un acte de l'âme."
+    answer: "cire"
+    alt: []
+  - id: traite35-l1-p14
+    sentence: "Pour Plotin, la grandeur n'est pas une simple donnée matérielle, mais une ___ intelligible, indivisible et immuable."
+    answer: "Forme"
+    alt: ["forme"]
 - id: traite35-l2
   title: "La grandeur suit la couleur"
   notes: |-
-    **La comparaison avec le son** (1, 17-29) : comme la couleur, le son lointain arrive indistinct, et l'ouïe aussi recherche une forme. Objection : quel autre sens aurait pour objet premier la grandeur du son ? Réponse : l'ouïe perçoit cette grandeur **non comme une quantité, mais comme une intensité**, et alors ce n'est pas par accident, pas plus que pour le **goût**, qui perçoit l'intensité du doux. Au sens strict, la grandeur du son est sa **portée** : celle-là n'est perçue que par accident.
+    **La comparaison avec le son** (1, 17-29) : l'ouïe perçoit d'abord un son, non une distance. En s'éloignant, un son ne devient pas plus petit, mais plus faible et plus confus ; de même, la vue d'un objet lointain perd d'abord la netteté de sa couleur, et la taille avec elle. Comme la couleur, le son lointain arrive indistinct, et l'ouïe aussi recherche une forme. Objection : quel autre sens aurait pour objet premier la grandeur du son ? Réponse : l'ouïe perçoit cette grandeur **non comme une quantité, mais comme une intensité**, et alors ce n'est pas par accident, pas plus que pour le **goût**, qui perçoit l'intensité du doux. Au sens strict, la grandeur du son est sa **portée** : celle-là n'est perçue que par accident.
 
     **Couleur et grandeur s'amoindrissent ensemble** (1, 29-34) : objection, les couleurs ne deviennent pas plus petites, mais moins distinctes. Réponse : les deux deviennent moindres qu'elles ne sont ; une couleur amoindrie devient indistincte, une grandeur amoindrie devient petite ; et puisque la grandeur **accompagne la couleur**, elle diminue à proportion.
 
-    **Mesurer forme après forme** (1, 34-48) : sur une montagne couverte de maisons et d'arbres, on mesure de près l'ensemble à partir de chaque chose vue ; de loin, les formes ne nous parviennent pas l'une après l'autre, et la vue perd le moyen de mesurer. Même de près, des objets variés vus comme un ensemble unique paraissent plus petits ; une grandeur **uniforme**, de couleur semblable, trompe aussi : la vue **glisse** sur ses parties, faute d'une différence propre à chacune.
+    **Mesurer partie par partie** (1, 34-48) : pour connaître la taille d'un ensemble, la vue additionne ses parties ; de loin, les détails se fondent en une masse, et la vue, sans points d'appui, juge l'ensemble plus petit. Sur une montagne couverte de maisons et d'arbres, on mesure de près l'ensemble à partir de chaque chose vue ; de loin, les formes ne nous parviennent pas l'une après l'autre, et la vue perd le moyen de mesurer. Même de près, des objets variés vus comme un ensemble unique paraissent plus petits ; une grandeur **uniforme**, de couleur semblable, trompe aussi : la vue **glisse** sur ses parties, faute d'une différence propre à chacune.
 
     **La distance** (1, 48-51) : l'intervalle se contracte pour la même raison ; la vue ne perçoit pas de quelle forme est sa partie éloignée.
 
@@ -134,10 +144,18 @@ lessons:
     sentence: "Un objet éloigné semble proche, car la vue ne perçoit pas la forme de la partie éloignée de la ___ (traité 35, 1, 48-51)."
     answer: "distance"
     alt: ["intervalle"]
+  - id: traite35-l2-p10
+    sentence: "En s'éloignant, un son ne devient pas plus petit, mais plus ___ et plus confus (traité 35, 1, 17-29)."
+    answer: "faible"
+    alt: []
+  - id: traite35-l2-p11
+    sentence: "Pour connaître la taille d'un ensemble, la vue additionne ses ___ ; de loin, les détails se fondent en une masse (traité 35, 1, 34-48)."
+    answer: "parties"
+    alt: ["partie"]
 - id: traite35-l3
   title: "Contre l'angle visuel"
   notes: |-
-    **Une cinquième explication, réfutée** (chap. 2) : l'objet lointain paraîtrait petit parce que l'**angle visuel** sous lequel on le voit est plus petit. Plotin a déjà dit ailleurs que c'est impossible ; il ajoute un argument. Qui soutient cette thèse concède que le reste du champ visuel voit autre chose, un autre objet ou l'**air**. Mais quand la montagne est si grande que la vue ne laisse rien de côté, quand l'objet égale ou déborde le champ visuel, il paraît encore bien plus petit qu'il n'est.
+    **Une cinquième explication, réfutée** (chap. 2) : l'objet lointain paraîtrait petit parce que l'**angle visuel** sous lequel on le voit est plus petit. C'est l'explication des opticiens, et celle que retiendront les modernes. Plotin a déjà dit ailleurs que c'est impossible ; il ajoute un argument. Qui soutient cette thèse concède que le reste du champ visuel voit autre chose, un autre objet ou l'**air**. Mais quand la montagne est si grande que la vue ne laisse rien de côté, quand l'objet égale ou déborde le champ visuel, il paraît encore bien plus petit qu'il n'est.
 
     **L'exemple du ciel** : on ne peut voir d'un seul coup d'œil un **hémisphère** entier ; mais accordons-le. Si la vue entière embrasse l'hémisphère entier, et que ce qui y apparaît est plusieurs fois plus grand qu'il ne nous paraît, la petitesse de l'angle visuel ne peut être la cause.
 
@@ -159,6 +177,10 @@ lessons:
     sentence: "On ne peut voir d'un seul coup d'œil un ___ tout entier ; mais accordons-le (traité 35, 2, 12-15)."
     answer: "hémisphère"
     alt: ["hemisphere"]
+  - id: traite35-l3-p5
+    sentence: "Quand l'objet remplit tout le champ visuel, l'angle visuel est ___ ; il paraît pourtant plus petit qu'il n'est (traité 35, 2, 5-18)."
+    answer: "maximal"
+    alt: ["le plus grand", "à son maximum"]
 - id: traite35-l4
   title: "Repérage : le plan du traité 35"
   notes: |-
