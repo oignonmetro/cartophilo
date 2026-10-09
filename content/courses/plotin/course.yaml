@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 23
+version: 24
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -420,6 +420,21 @@ tracks:
         ennead: 4
         numberInEnnead: 3
         chrono: 27
+        unit: traite27
+        theses:
+          - "Nos âmes ne sont pas des parties de l'âme du monde, mais ses sœurs : toutes viennent d'une même Âme."
+          - "L'âme n'est pas dans le corps comme en un lieu, mais comme la lumière dans l'air : c'est le corps qui est en elle."
+          - "La mémoire n'appartient ni à l'Intellect ni au composé : elle relève de la représentation, et l'âme bonne est oublieuse."
+        summary: |-
+          **Le traité 27 ouvre le plus long essai ancien consacré à l'âme (traités 27 à 29) : nos âmes ne sont pas des parties de l'âme du monde, l'âme n'est pas dans le corps comme en un lieu, et la mémoire relève de la représentation.**
+
+          - **Introduction** (chap. 1, 1-16) : trois raisons d'étudier l'âme : connaître les principes, obéir au « Connais-toi toi-même », connaître le sujet de toute connaissance.
+          - **Contre la thèse stoïcienne** (chap. 1, 16 à 8) : nos âmes ne sont pas des parties de l'âme du monde, mais ses sœurs ; toutes viennent d'une même Âme, comme les théorèmes d'une science qui reste entière.
+          - **L'entrée de l'âme dans le corps** (chap. 9 à 19) : l'âme du monde produit son corps sans descendre ; les âmes humaines descendent, mais leur tête reste fixée en haut.
+          - **Où est l'âme ?** (chap. 20 à 24) : ni dans un lieu, ni dans un vase, ni comme un pilote dans son navire, mais comme la lumière dans l'air ; c'est le corps qui est dans l'âme.
+          - **La mémoire** (chap. 25 à 32) : elle n'appartient ni à l'Intellect ni au composé, mais à la faculté de représentation ; l'âme bonne est oublieuse.
+
+          Rédigés entre 263 et 268, pendant le séjour de Porphyre à Rome, les traités 27 à 29 n'en formaient qu'un : Porphyre l'a coupé en trois. La réflexion sur la mémoire se poursuit au traité 28 (IV, 4).
       - id: t-4-4
         title: "Sur les difficultés relatives à l'âme II"
         ennead: 4
