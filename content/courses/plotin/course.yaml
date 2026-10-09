@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 29
+version: 30
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -270,6 +270,20 @@ tracks:
         numberInEnnead: 9
         chrono: 33
         highlight: true
+        unit: traite33
+        theses:
+          - "Il n'y a que trois réalités, l'Un, l'Intellect et l'Âme : les gnostiques multiplient à tort les intelligibles."
+          - "Le monde n'est pas né d'une chute ou d'une faute de l'âme, comme le prétend le mythe gnostique de Sagesse."
+          - "Mépriser le monde et ses astres ne rend pas meilleur : sans la vertu, dire « regarde vers dieu » n'est qu'un mot."
+        summary: |-
+          **Le traité 33 est un plaidoyer pour la culture grecque et pour le vrai platonisme contre les gnostiques, qui fréquentaient l'école de Plotin : il n'y a que trois réalités ; le monde n'est pas né d'une chute de l'âme ; et mépriser le monde, les astres et la vertu ne rend pas meilleur.**
+
+          - **Trois réalités, pas davantage** (chap. 1-3) : le Bien, l'Intellect, l'Âme ; inutile de multiplier les intellects. L'âme du monde gouverne sans réflexion, en restant là-haut, et toutes choses en sont toujours engendrées.
+          - **Contre la production du monde par une chute** (chap. 4-9) : ce n'est pas l'inclinaison de l'âme qui produit, mais son absence d'inclinaison. Le monde est la plus belle image possible de l'intelligible ; les astres sont des dieux ; les gnostiques, arrogants, se croient supérieurs à tout.
+          - **Le mythe de Sagesse** (chap. 10-14) : la descente de Sagesse et la naissance d'un démiurge, image d'une image, sont absurdes ; leurs incantations rabaissent les réalités divines, et les maladies ne viennent pas de démons.
+          - **La vertu et la beauté** (chap. 15-18) : ils n'ont rien écrit sur la vertu, et sans elle « dieu » n'est qu'un mot ; qui aime le père aime aussi les enfants ; il faut habiter son corps comme une belle maison, en attendant de la quitter.
+
+          Jamais Plotin n'est aussi virulent. Porphyre fit de ce traité le dernier de la deuxième Ennéade ; il clôt les traités 30 à 33, écrits ensemble.
       - id: t-3-1
         title: "Sur le destin"
         ennead: 3
