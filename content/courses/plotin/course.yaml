@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 27
+version: 28
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -675,6 +675,21 @@ tracks:
         numberInEnnead: 8
         chrono: 31
         highlight: true
+        unit: traite31
+        theses:
+          - "L'art n'imite pas le visible, mais les raisons de la nature : Phidias a sculpté Zeus tel qu'il serait s'il se montrait."
+          - "Là-bas, le savoir n'est pas fait de propositions : chaque Forme est une image vivante, comme les hiéroglyphes d'Égypte."
+          - "Le monde n'a pas été produit par un démiurge qui délibère : il est l'image belle et éternelle de l'intelligible."
+        summary: |-
+          **Le traité 31 est un hymne à la beauté du monde intelligible : là-bas, tout est forme, donc tout est beau ; les intelligibles ne sont pas hors de l'Intellect, ils sont l'Intellect lui-même ; et le monde sensible en est l'image, produite sans délibération.**
+
+          - **La beauté vient de la forme** (chap. 1-2) : de deux blocs de pierre, seul est beau celui où l'art a fait entrer une forme ; l'art imite les raisons de la nature, et Phidias a sculpté Zeus tel qu'il serait s'il se montrait.
+          - **La vie bienheureuse de l'Intellect** (chap. 3-4) : là-bas, tout est transparent, chaque chose est tout, et la contemplation ne connaît ni fatigue ni satiété.
+          - **Le savoir véritable** (chap. 5-6) n'est pas fait de propositions : les Formes sont des images vivantes, comme les hiéroglyphes des sages d'Égypte.
+          - **Le monde, image du beau** (chap. 7-9) : il n'a pas été planifié par un démiurge qui délibère ; tout ce qui se trouve ici vient de là-bas, et la beauté précède tout raisonnement.
+          - **Voir le beau, devenir le beau** (chap. 10-13) : l'âme possédée par le dieu ne voit plus le beau au-dehors, elle le devient ; le mythe de Kronos dit l'Intellect qui garde ses enfants.
+
+          Avec le traité 32 (V, 5), c'est une même méditation sur l'Intellect et sur son père, l'Un, que Porphyre a séparée en deux.
       - id: t-5-9
         title: "Sur l'Intellect, les idées et ce qui est"
         ennead: 5
