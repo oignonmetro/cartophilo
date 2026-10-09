@@ -67,6 +67,7 @@ export function TreatiseTrainRoute() {
     <SessionScreen
       key={attempt}
       kind="workout"
+      showKind={false}
       exercises={ghosts}
       materialize={materialize}
       onQuit={back}

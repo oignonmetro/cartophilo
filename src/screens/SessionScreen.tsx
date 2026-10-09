@@ -55,6 +55,8 @@ interface SessionScreenProps {
    * disait — sans ce repère, rien à l'écran ne distingue plus les deux.
    */
   kind: UnitNodeKind
+  /** Faux pour une séance qui n'a pas besoin du repère de nature (le repérage général). */
+  showKind?: boolean
   exercises: Exercise[]
   /**
    * Forme, au moment de l'ouvrir, un exercice réservé d'avance (voir
@@ -217,6 +219,7 @@ export function SessionScreen(props: SessionScreenProps) {
 
 function SessionRunner({
   kind,
+  showKind = true,
   exercises,
   materialize,
   onQuit,
@@ -481,7 +484,7 @@ function SessionRunner({
         >
           <CloseIcon size={22} />
         </button>
-        <SessionKindBadge kind={kind} />
+        {showKind && <SessionKindBadge kind={kind} />}
         <div className="h-4 flex-1 overflow-hidden rounded-full bg-line md:h-5">
           <motion.div
             className="h-full rounded-full bg-teal"
