@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 42
+version: 43
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46, traite47, traite48, traite49]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46, traite47, traite48, traite49, traite50]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -434,6 +434,19 @@ tracks:
         numberInEnnead: 5
         chrono: 50
         highlight: true
+        unit: traite50
+        theses:
+          - "L'amour naît de la parenté de l'âme avec la beauté : pur, mixte et tempérant, ou dévoyé contre la nature."
+          - "Aphrodite est double : l'âme divine engendre Éros dieu, regard vers l'Intellect ; l'âme du monde, Éros démon."
+          - "Fils de Poros et de Pénia, Éros est une raison mêlée d'indétermination : toujours indigent, il n'est jamais comblé."
+        summary: |-
+          **Le traité 50 demande si l'amour est un dieu, un démon ou une passion de l'âme, et répond en interprétant les mythes de Platon : passion née de la parenté de l'âme avec le beau, l'amour est aussi un dieu, regard de l'âme divine vers l'Intellect, et un démon, fils de Poros et de Pénia.**
+
+          - **La passion** (chap. 1) : l'amour naît de la parenté de l'âme avec la beauté ; certains n'aiment que la beauté, d'autres veulent engendrer dans le beau ; seul est réprouvé l'amour qui va contre la nature.
+          - **Le dieu** (chap. 2-4) : Aphrodite est double. La céleste, l'âme divine née de Kronos, l'Intellect, engendre un Éros dieu, qui est vision (`hórasis`) et comme l'œil de l'amant ; l'âme du monde engendre un Éros intérieur au monde, et chaque âme a le sien, son démon.
+          - **Le démon** (chap. 5-9) : l'Éros du *Banquet* n'est pas le monde sensible. Fils de Poros, la raison, et de Pénia, l'indétermination, il est une raison mêlée et ne peut jamais être comblé. Zeus est l'Intellect, son jardin la splendeur des raisons ; les mythes morcellent dans le temps ce qui est ensemble.
+
+          Écrit en 269, dans la solitude de la Campanie, il précède les traités 51 et 52, sur les maux et sur les astres.
       - id: t-3-6
         title: "Sur l'impassibilité des incorporels"
         ennead: 3
