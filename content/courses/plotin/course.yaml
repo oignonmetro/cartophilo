@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 24
+version: 25
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -440,6 +440,21 @@ tracks:
         ennead: 4
         numberInEnnead: 4
         chrono: 28
+        unit: traite28
+        theses:
+          - "Seules les âmes qui changent ont de la mémoire : ni l'âme là-bas, ni les astres, ni l'âme du monde n'en ont."
+          - "Plaisir, douleur, désir et colère naissent dans le corps vivant ; l'âme n'en a qu'une connaissance qui ne l'affecte pas."
+          - "Les astres et la magie agissent par la sympathie d'un univers vivant unique ; seule la contemplation échappe à la magie."
+        summary: |-
+          **Le traité 28 poursuit l'enquête sur l'âme : seules les âmes qui changent ont de la mémoire ; les passions naissent dans le corps vivant ; et l'influence des astres, comme la magie, s'explique par la sympathie d'un univers qui est un vivant unique.**
+
+          - **La mémoire dans l'intelligible** (chap. 1-5) : là-bas, l'âme contemple et ne se souvient de rien ; la mémoire commence quand elle s'éloigne, et l'âme « est et devient ce dont elle se souvient ».
+          - **Ni les astres, ni Zeus, ni l'âme du monde** (chap. 6-17) n'ont de mémoire : ils ne cessent de voir le dieu et produisent sans calculer, comme la nature, « image de la réflexion ». Nos âmes, divisées entre plusieurs principes, délibèrent.
+          - **Les passions** (chap. 18-29) : la douleur est la connaissance d'un corps privé de l'image de l'âme ; le désir et la colère naissent dans le corps vivant. La terre elle-même a une âme et des sensations.
+          - **L'influence des astres** (chap. 30-39) : ni causes corporelles, ni choix des dieux, mais la sympathie d'un vivant unique, dont les astres sont comme les membres d'un danseur.
+          - **La magie et les prières** (chap. 40-45) agissent par la même sympathie ; le sage n'y est soumis que par son corps, et seule la contemplation y échappe.
+
+          C'est la partie centrale de l'ensemble des traités 27 à 29 ; le traité 29 (IV, 5) examinera l'intermédiaire de la vision.
       - id: t-4-5
         title: "Sur les difficultés relatives à l'âme III"
         ennead: 4
