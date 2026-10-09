@@ -526,20 +526,12 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
           dans l'angle bas droit de l'écran, hors de la zone qui défile — il ne
           bouge pas avec la liste, et ne se range pas parmi ses cartes. */}
       {track.entries && (
-        <div className="pointer-events-none absolute right-3 bottom-3 z-10 flex items-center gap-2">
-          <span className="rounded-full bg-paper px-3 py-1 text-xs font-black text-ink-soft shadow ring-2 ring-line">
-            {acquiredCount(track.entries, treatiseProgress ?? {})}/{track.entries.length}
-          </span>
-          <button
-            type="button"
-            onClick={() => navigate('/reperage')}
-            aria-label="S'entraîner au repérage"
-            title={`S'entraîner au repérage : ${acquiredCount(track.entries, treatiseProgress ?? {})} / ${track.entries.length} traités maîtrisés`}
-            className={`pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full ${tone.bg} text-white shadow-lg ring-4 ring-cream`}
-          >
-            <UnitIcon name="compass" size={26} />
-          </button>
-        </div>
+        <TreatiseTrainButton
+          acquired={acquiredCount(track.entries, treatiseProgress ?? {})}
+          total={track.entries.length}
+          tone={tone}
+          onClick={() => navigate('/reperage')}
+        />
       )}
 
       <AnimatePresence>
@@ -1121,5 +1113,57 @@ function TreatiseSheet({
         </button>
       </motion.div>
     </motion.div>
+  )
+}
+
+/**
+ * Le bouton rond du repérage général, cerclé d'un arc de progression : la part
+ * des traités maîtrisés (acquis, voir `isAcquired`) sur l'ensemble de l'index.
+ */
+function TreatiseTrainButton({
+  acquired,
+  total,
+  tone,
+  onClick,
+}: {
+  acquired: number
+  total: number
+  tone: { bg: string; css: string }
+  onClick: () => void
+}) {
+  const size = 76
+  const stroke = 5
+  const radius = (size - stroke) / 2
+  const circumference = 2 * Math.PI * radius
+  const ratio = total === 0 ? 0 : Math.min(1, acquired / total)
+  return (
+    <div className="pointer-events-none absolute right-1 bottom-1 z-10 flex h-[76px] w-[76px] items-center justify-center">
+      <svg width={size} height={size} className="absolute inset-0 -rotate-90" aria-hidden>
+        <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="var(--color-line)" strokeWidth={stroke} />
+        {ratio > 0 && (
+          <circle
+            cx={size / 2}
+            cy={size / 2}
+            r={radius}
+            fill="none"
+            stroke={tone.css}
+            strokeWidth={stroke}
+            strokeLinecap="round"
+            strokeDasharray={circumference}
+            strokeDashoffset={circumference * (1 - ratio)}
+            style={{ transition: 'stroke-dashoffset 400ms ease' }}
+          />
+        )}
+      </svg>
+      <button
+        type="button"
+        onClick={onClick}
+        aria-label="S'entraîner au repérage"
+        title={`S'entraîner au repérage : ${acquired} / ${total} traités maîtrisés`}
+        className={`pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full ${tone.bg} text-white shadow-lg ring-4 ring-cream`}
+      >
+        <UnitIcon name="compass" size={26} />
+      </button>
+    </div>
   )
 }
