@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 28
+version: 29
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -630,6 +630,21 @@ tracks:
         ennead: 5
         numberInEnnead: 5
         chrono: 32
+        unit: traite32
+        theses:
+          - "Hors de l'Intellect, les intelligibles ne lui livreraient que des images : la vérité exige qu'ils soient en lui."
+          - "Le Bien est antérieur au Beau : son désir, présent même à ceux qui dorment, est plus originel que l'amour du beau."
+          - "L'Un n'est en rien, mais tout est en lui : le monde dans l'Âme, l'Âme dans l'Intellect, l'Intellect dans l'Un."
+        summary: |-
+          **Le traité 32 établit que les intelligibles ne sont pas hors de l'Intellect, sans quoi il n'en saisirait que des images et manquerait la vérité ; puis il décrit l'Un-Bien, au-delà du nombre, de l'être et même du Beau.**
+
+          - **Les intelligibles dans l'Intellect** (chap. 1-2) : un Intellect qui verrait des Formes extérieures les connaîtrait comme la sensation, par des images, et ne posséderait que le faux. Sa vérité s'accorde avec elle-même.
+          - **Le second dieu et le premier** (chap. 3) : l'Intellect est un second dieu, devant lequel s'avance la procession qui précède le Grand Roi.
+          - **L'Un au-delà du nombre et de l'être** (chap. 4-6) : il est une mesure, non un mesuré ; l'être est une trace de l'Un ; l'Un est « au-delà de l'être », et son nom même est une négation du multiple.
+          - **Voir l'Un** (chap. 7-11) : comme l'œil voit sa propre lumière paupières closes, l'Intellect voit une lumière soudaine ; l'Un n'est nulle part, mais tout est en lui, comme dans le premier des cercles.
+          - **Le Bien avant le Beau** (chap. 12-13) : le désir du Bien est présent même à ceux qui dorment ; l'amour du Beau, qui mêle plaisir et douleur, est second. Le Bien, « seul et isolé », ne possède rien.
+
+          Le traité 32 ne faisait qu'un avec le traité 31 (V, 8), que Porphyre a placé avant lui.
       - id: t-5-6
         title: "Sur le fait que ce qui est au-delà de l'être n'intellige pas, et sur ce que sont les principes premier et second d'intellection"
         ennead: 5
