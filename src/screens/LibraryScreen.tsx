@@ -17,8 +17,6 @@ import { ENNEAD_NUMERALS, acquiredCount } from '@/engine/treatises'
 import { PlanSheet } from '@/components/work/PlanSheet'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
-import coverOne from '../assets/covers/chrono-1-6.webp'
-import coverTwo from '../assets/covers/chrono-7-21.webp'
 
 /**
  * Onglet ouvert par défaut : la première piste qui a effectivement une liste
@@ -165,11 +163,12 @@ const CHRONO_GROUPS = [
   [51, 54],
 ] as const
 
-/** Couvertures GF, recadrées sur l'onde : une vignette par groupe chronologique (les autres gardent leur fourchette). */
-const CHRONO_COVERS: Record<string, string> = {
-  '1-6': coverOne,
-  '7-21': coverTwo,
-}
+/** Couvertures GF, recadrées sur le cercle d'ondes (même taille, centré) : une vignette par groupe chronologique. */
+const CHRONO_COVERS = Object.fromEntries(
+  Object.entries(import.meta.glob<string>('../assets/covers/chrono-*.webp', { eager: true, import: 'default' })).map(
+    ([path, url]) => [/chrono-(.+)\.webp$/.exec(path)![1]!, url],
+  ),
+)
 
 type TreatiseOrder = 'porphyry' | 'chrono'
 
