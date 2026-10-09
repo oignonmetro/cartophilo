@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 34
+version: 35
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -862,6 +862,20 @@ tracks:
         numberInEnnead: 7
         chrono: 38
         highlight: true
+        unit: traite38
+        theses:
+          - "Les sens ne viennent pas d'un dieu qui raisonne : là-bas, chaque forme est à la fois son « quoi » et son « pourquoi »."
+          - "L'Intellect est un « Bien devenu varié » : ce qui donne n'a pas à posséder ce qu'il donne."
+          - "Le Bien est une beauté sans forme : l'âme qui l'aime se dépouille de toute forme pour s'unir à lui."
+        summary: |-
+          **Le traité 38 va de l'intelligible au Bien : l'Intellect contient sans raisonner toutes les formes, jusqu'aux sensations et aux bêtes ; il n'est qu'un « Bien devenu varié », et le Bien, sans forme, ne pense pas.** C'est l'un des plus longs et des plus difficiles des traités, en trois parties presque égales.
+
+          - **L'intelligible sans raisonnement** (chap. 1-7) : les sens n'ont pas été donnés par un dieu qui prévoit ; là-bas, chaque forme est son « quoi » et son « pourquoi ». La sensation y existe déjà : l'homme intelligible éclaire l'homme d'ici-bas, dont les sensations sont des pensées obscures.
+          - **Le vivant total** (chap. 8-14) : l'Intellect contient les formes de tous les vivants, même irrationnels, des plantes et de la terre ; sa vie variée vagabonde dans la « plaine de la vérité ».
+          - **Le Bien, source et objet de désir** (chap. 15-30) : l'Intellect reçoit du Bien ce que le Bien n'a pas ; l'âme ne désire l'Intellect que lorsque la lumière du Bien le colore. Le Bien n'est pas bien parce qu'on le désire, et le plaisir n'est qu'une suite de sa possession.
+          - **Le Bien en lui-même** (chap. 31-42) : beauté sans forme, il suscite un amour sans mesure ; l'âme s'unit à lui en se dépouillant de toute forme. Il ne pense pas, contre Aristote, et toutes choses sont « autour du roi ».
+
+          Plotin y réunit sa lecture du *Timée*, du *Banquet*, du *Phèdre*, du *Philèbe* et du *Parménide*.
       - id: t-6-8
         title: "Sur le volontaire"
         ennead: 6
