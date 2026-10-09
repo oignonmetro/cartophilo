@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 40
+version: 41
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46, traite47, traite48]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -376,11 +376,38 @@ tracks:
         ennead: 3
         numberInEnnead: 2
         chrono: 47
+        unit: traite47
+        theses:
+          - "Pour l'univers, la providence consiste à exister conformément à l'Intellect : il en naît sans calcul, comme son image."
+          - "Il ne faut pas blâmer l'univers pour ses parties : inégalités et maux concourent à la beauté de l'ensemble."
+          - "Les âmes sont des acteurs : la raison distribue les rôles, mais chacune répond de son jeu, bon ou mauvais."
+        summary: |-
+          **Les traités 47 et 48, qui n'en faisaient qu'un, défendent la providence contre les épicuriens, qui la nient, et contre les péripatéticiens et les gnostiques, qui la limitent : pour l'univers, la providence consiste à exister conformément à l'Intellect, dont il naît sans calcul.** Le traité 47 en est la première partie.
+
+          - **Le monde, image de l'Intellect** (chap. 1-3) : du monde véritable, un et sans parties, s'écoule une raison qui produit un univers divisé, où la guerre s'ajoute à l'amitié, mais qu'une seule harmonie gouverne. Le monde lui-même le dit : il est beau et se suffit à lui-même.
+          - **Les maux et la justice** (chap. 4-10) : les maux ont une fonction, et le mal est un défaut de bien ; les âmes sont responsables de leurs fautes ; l'homme est à un rang intermédiaire, et le dieu ne combat pas à la place de ceux qui refusent le combat.
+          - **La raison et ses contraires** (chap. 11-16) : la raison n'a pas mis de belles couleurs partout, comme un peintre ; la justice règne à travers le cycle des vies ; la guerre des vivants n'est qu'un jeu de théâtre ; la raison, moins une que l'Intellect, produit des contraires, comme une harmonie de sons opposés.
+          - **Le drame de l'univers** (chap. 17-18) : les âmes sont des acteurs, qui reçoivent leur rôle de l'auteur mais jouent bien ou mal d'elles-mêmes.
+
+          Plotin y unit le livre X des *Lois* et les arguments des stoïciens.
       - id: t-3-3
         title: "Sur la providence II"
         ennead: 3
         numberInEnnead: 3
         chrono: 48
+        unit: traite48
+        theses:
+          - "La providence est une : pure providence là-haut, elle est destin ici-bas, et elle redresse nos fautes."
+          - "L'homme a un principe de liberté : ses mauvaises actions sont les siennes, non celles de la providence."
+          - "Le devin lit les lettres de la nature par analogie, sans savoir pourquoi : seul un dieu discerne la providence."
+        summary: |-
+          **Le traité 48, seconde partie de l'unique traité sur la providence, montre que tout appartient à un seul ordre universel, où l'homme garde un principe de liberté : la providence, pure là-haut, est destin ici-bas, et les maux viennent de nous.**
+
+          - **Un seul ordre** (chap. 1-3) : la raison totale accompagne les bonnes et les mauvaises actions ; l'univers est un animal un et multiple, gouverné comme une armée par un général qui commanderait aussi l'ennemi. Les choses naissent inégales parce qu'elles s'éloignent du principe.
+          - **L'homme et la providence** (chap. 4-5) : l'homme a un principe libre, qui n'agit pas en tous ; ses vies antérieures expliquent ce qu'il est. Il n'y a qu'une providence, destin en bas ; nos fautes sont les nôtres, et la providence les redresse comme on suture une plaie.
+          - **Devins et racine** (chap. 6-7) : le devin lit les lettres de la nature par analogie, sans savoir pourquoi ; seul un dieu discerne la providence. Abolir le pire, ce serait abolir la providence : tout sort d'une même racine.
+
+          Le traité s'achève sur l'image de l'arbre, dont toutes les parties vivent de la même racine.
       - id: t-3-4
         title: "Sur le démon qui nous a reçus en partage"
         ennead: 3
