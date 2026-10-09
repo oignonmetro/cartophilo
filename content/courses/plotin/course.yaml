@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 30
+version: 31
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -800,6 +800,21 @@ tracks:
         ennead: 6
         numberInEnnead: 6
         chrono: 34
+        unit: traite34
+        theses:
+          - "Le nombre n'est pas produit par celui qui compte : il existe d'abord dans l'intelligible, où il est limité."
+          - "Le nombre est dans l'être, avant l'Intellect et le Vivant : il est la règle selon laquelle l'être se déploie en êtres."
+          - "L'un n'est ni une affection de l'âme ni une relation : une chose est une par la présence de l'un."
+        summary: |-
+          **Le traité 34 arrache le nombre au sensible pour le placer dans l'intelligible : il n'est pas produit par celui qui compte, mais existe d'abord dans l'être, comme la règle selon laquelle l'être se déploie en êtres.** Sa visée n'est pas mathématique, mais ontologique et cosmologique.
+
+          - **La question de départ** (chap. 1-3) : le « nombre illimité » du *Parménide* (144a). Tout ensemble réel est limité ; la multiplicité n'est pas un mal, car l'un l'enveloppe ; l'illimitation pure, la matière, fuit la limite.
+          - **Où est le nombre ?** (chap. 4-10) : ni simple notion de l'âme, ni accident des Formes, il existe en soi. Dans la triade être, intellect, vivant, il est dans l'être : l'être est le nombre unifié, les êtres le nombre déroulé.
+          - **Objections et réponses** (chap. 11-14) : contre Aristote, les stoïciens et ceux qui en font une relation, une chose est une par la présence de l'un, comme elle est belle par la présence du beau.
+          - **Nombres nombrants, nombres nombrés** (chap. 15-16) : le nombre essentiel constitue les êtres ; le nombre du compte n'en est que l'image.
+          - **Le nombre illimité** (chap. 17-18) : l'illimité n'est que dans notre représentation ; mais du point de vue de la puissance, l'être et le nombre sont illimités, et Platon avait raison.
+
+          Plotin s'y montre fidèle au *Timée* : c'est par la limite venue de l'intelligible que le monde est connaissable. Les gnostiques ont donc tort de le mépriser.
       - id: t-6-7
         title: "Comment la multiplicité des idées s'est établie et sur le bien ?"
         ennead: 6
