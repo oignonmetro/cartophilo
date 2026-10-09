@@ -102,7 +102,9 @@ lessons:
 
     **Couleur et grandeur s'amoindrissent ensemble** (1, 29-34) : objection, les couleurs ne deviennent pas plus petites, mais moins distinctes. Réponse : les deux deviennent moindres qu'elles ne sont ; une couleur amoindrie devient indistincte, une grandeur amoindrie devient petite ; et puisque la grandeur **accompagne la couleur**, elle diminue à proportion.
 
-    **Mesurer partie par partie** (1, 34-48) : pour connaître la taille d'un ensemble, la vue additionne ses parties ; de loin, les détails se fondent en une masse, et la vue, sans points d'appui, juge l'ensemble plus petit. Sur une montagne couverte de maisons et d'arbres, on mesure de près l'ensemble à partir de chaque chose vue ; de loin, les formes ne nous parviennent pas l'une après l'autre, et la vue perd le moyen de mesurer. Même de près, des objets variés vus comme un ensemble unique paraissent plus petits ; une grandeur **uniforme**, de couleur semblable, trompe aussi : la vue **glisse** sur ses parties, faute d'une différence propre à chacune.
+    **Le flou et la contraction** : le flou touche la qualité (la couleur), la réduction touche la quantité (la grandeur). Comme la grandeur n'est évaluée qu'à partir de la couleur et de ses détails, le flou de l'une entraîne mécaniquement la contraction de l'autre. Et jamais l'agrandissement : comme le son, qui perd en intensité sans jamais devenir plus fort, ce que la vue reçoit ne peut que s'affaiblir.
+
+    **Mesurer partie par partie** (1, 34-48) : pour connaître la taille d'un ensemble, la vue additionne ses parties. De près, elle s'arrête successivement sur chaque maison et chaque arbre de la montagne : ce parcours lui donne des unités de compte et « déplie » la grandeur. De loin, la distance efface ces formes ; sans relief où marquer un arrêt, la vue traverse l'ensemble d'un seul glissement continu et lui attribue une taille réduite. Sur une montagne couverte de maisons et d'arbres, on mesure de près l'ensemble à partir de chaque chose vue ; de loin, les formes ne nous parviennent pas l'une après l'autre, et la vue perd le moyen de mesurer. Même de près, des objets variés vus comme un ensemble unique paraissent plus petits ; une grandeur **uniforme**, de couleur semblable, trompe aussi : la vue **glisse** sur ses parties, faute d'une différence propre à chacune.
 
     **La distance** (1, 48-51) : l'intervalle se contracte pour la même raison ; la vue ne perçoit pas de quelle forme est sa partie éloignée.
 
@@ -152,6 +154,14 @@ lessons:
     sentence: "Pour connaître la taille d'un ensemble, la vue additionne ses ___ ; de loin, les détails se fondent en une masse (traité 35, 1, 34-48)."
     answer: "parties"
     alt: ["partie"]
+  - id: traite35-l2-p12
+    sentence: "Le flou touche la qualité (la couleur) ; la réduction touche la ___ (la grandeur)."
+    answer: "quantité"
+    alt: ["quantite"]
+  - id: traite35-l2-p13
+    sentence: "De près, les maisons et les arbres de la montagne donnent à la vue des unités de ___ pour en mesurer la grandeur (traité 35, 1, 34-48)."
+    answer: "compte"
+    alt: ["mesure"]
 - id: traite35-l3
   title: "Contre l'angle visuel"
   notes: |-
@@ -181,6 +191,27 @@ lessons:
     sentence: "Quand l'objet remplit tout le champ visuel, l'angle visuel est ___ ; il paraît pourtant plus petit qu'il n'est (traité 35, 2, 5-18)."
     answer: "maximal"
     alt: ["le plus grand", "à son maximum"]
+- id: traite35-l5
+  title: "Pourquoi la distance affaiblit-elle la vue ?"
+  notes: |-
+    **Ce que dit le traité** : à travers un intervalle, les couleurs deviennent indistinctes et les sons faiblissent, en proportion de la distance (1, 15-32). Le traité constate l'affaiblissement ; il ne l'explique pas à fond.
+
+    **Ce qu'on peut en dire, d'après d'autres traités** (II, 6 ; II, 1) : toute réalité a **deux activités**, l'une interne qui la constitue, l'autre qui rayonne au-dehors et n'en est qu'une **trace**. Dans l'intelligible, il n'y a ni lieu ni intervalle pour diviser ou affaiblir l'être ; dans le monde sensible, la puissance s'investit dans la masse et l'étendue, et l'**intervalle spatial** impose une dispersion. Ce rayonnement s'épuise donc en traversant la matière : la chaleur s'affaiblit loin du feu, la flamme s'adoucit dans l'air.
+
+    ! Cette explication est un éclairage venu d'ailleurs chez Plotin, non un argument du traité 35 : pour le traité, l'essentiel est que la grandeur suit la couleur.
+  points:
+  - id: traite35-l5-p1
+    sentence: "Pour Plotin, toute réalité a deux activités : l'une interne qui la constitue, l'autre qui rayonne au-dehors comme une ___ de la première."
+    answer: "trace"
+    alt: ["image", "ombre"]
+  - id: traite35-l5-p2
+    sentence: "Dans l'intelligible, il n'y a ni lieu ni ___ spatial pour diviser ou affaiblir l'être."
+    answer: "intervalle"
+    alt: []
+  - id: traite35-l5-p3
+    sentence: "Dans le monde sensible, le rayonnement s'épuise en traversant la ___ : la chaleur s'affaiblit loin du feu."
+    answer: "matière"
+    alt: ["matiere"]
 - id: traite35-l4
   title: "Repérage : le plan du traité 35"
   notes: |-
