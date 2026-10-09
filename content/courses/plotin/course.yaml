@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 32
+version: 33
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -112,6 +112,20 @@ tracks:
         ennead: 1
         numberInEnnead: 5
         chrono: 36
+        unit: traite36
+        theses:
+          - "Le bonheur ne s'accroît pas avec le temps : il est une disposition présente, et le bonheur passé n'existe plus."
+          - "Le bonheur est la vie de ce qui est : il se mesure à l'éternité, non au temps, et doit exister tout entier."
+          - "Le bonheur ne vient pas du nombre des actions : ce sont les dispositions de l'âme qui rendent les actions belles."
+        summary: |-
+          **Le traité 36 soutient que le bonheur ne s'accroît pas avec le temps : il est une disposition présente de l'âme, la vie de ce qui est, qui se mesure à l'éternité et non à la durée.** Plotin rejoint la conclusion des stoïciens et des épicuriens contre Aristote, mais par ses propres raisons.
+
+          - **La thèse** (chap. 1-2) : le bonheur consiste à être en une certaine disposition, et une disposition n'existe qu'au présent. Le désir de vivre ne vise pas l'avenir, mais que l'état actuel se prolonge.
+          - **Durée, plaisir, malheur** (chap. 3-6) : voir ou jouir plus longtemps n'ajoute rien ; le plaisir passé n'existe plus. Le malheur croît quand le mal s'aggrave, non parce qu'il dure ; le bonheur, lui, a une borne et ne croît qu'avec la vertu.
+          - **Le temps et l'éternité** (chap. 7) : on peut compter les temps passés, non ajouter un bonheur qui n'est plus. Le temps, image de l'éternité, disperse l'unité ; le bonheur, vie de ce qui est, doit exister tout entier.
+          - **Le souvenir et les actions** (chap. 8-10) : se souvenir d'un plaisir ou d'une belle chose n'accroît pas le bonheur ; le bonheur réside dans la disposition de l'âme, qui rend belles les actions, non dans le nombre des actions.
+
+          Il complète ainsi les traités 19, 20 et 46, qui le précèdent dans la première Ennéade.
       - id: t-1-6
         title: "Sur le beau"
         ennead: 1
