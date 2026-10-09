@@ -17,6 +17,8 @@ import { ENNEAD_NUMERALS, acquiredCount } from '@/engine/treatises'
 import { PlanSheet } from '@/components/work/PlanSheet'
 import { NoteBlocks, TONES } from '@/components/session/RuleNote'
 import { ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
+import coverOne from '../assets/covers/chrono-1-6.webp'
+import coverTwo from '../assets/covers/chrono-7-21.webp'
 
 /**
  * Onglet ouvert par défaut : la première piste qui a effectivement une liste
@@ -163,12 +165,20 @@ const CHRONO_GROUPS = [
   [51, 54],
 ] as const
 
+/** Couvertures GF, recadrées sur l'onde : une vignette par groupe chronologique (les autres gardent leur fourchette). */
+const CHRONO_COVERS: Record<string, string> = {
+  '1-6': coverOne,
+  '7-21': coverTwo,
+}
+
 type TreatiseOrder = 'porphyry' | 'chrono'
 
 interface TreatiseGroup {
   key: string
   /** Pastille de l'en-tête : le chiffre romain de l'Ennéade, ou la fourchette de rangs. */
   badge: string
+  /** Vignette à la place de la pastille, quand il y en a une. */
+  cover?: string
   title: string
   entries: TreatiseEntry[]
 }
@@ -177,6 +187,7 @@ function groupEntriesChrono(entries: readonly TreatiseEntry[]): TreatiseGroup[] 
   return CHRONO_GROUPS.map(([from, to]) => ({
     key: `chrono-${from}-${to}`,
     badge: `${from}-${to}`,
+    cover: CHRONO_COVERS[`${from}-${to}`],
     title: `Traités ${from}-${to}`,
     entries: entries.filter((entry) => entry.chrono >= from && entry.chrono <= to).sort((a, b) => a.chrono - b.chrono),
   })).filter((group) => group.entries.length > 0)
@@ -518,7 +529,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
       {track.entries && (
         <div className="pointer-events-none absolute right-3 bottom-3 z-10 flex items-center gap-2">
           <span className="rounded-full bg-paper px-3 py-1 text-xs font-black text-ink-soft shadow ring-2 ring-line">
-            {acquiredCount(track.entries, treatiseProgress ?? {})} / {track.entries.length} maîtrisés
+            {acquiredCount(track.entries, treatiseProgress ?? {})}/{track.entries.length}
           </span>
           <button
             type="button"
@@ -957,7 +968,7 @@ function TreatiseIndexView({
           </button>
         ))}
       </div>
-      {groups.map(({ key, badge, title, entries: group }) => {
+      {groups.map(({ key, badge, cover, title, entries: group }) => {
         const open = openGroups.has(key)
         return (
           <div key={key} className="flex flex-col gap-3">
@@ -967,13 +978,17 @@ function TreatiseIndexView({
               aria-expanded={open}
               className="card-3d flex w-full items-center gap-4 px-4 py-4 text-left"
             >
-              <span
-                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} font-black ${tone.text} ${
-                  badge.length > 3 ? 'text-[0.65rem]' : 'text-sm'
-                }`}
-              >
-                {badge}
-              </span>
+              {cover ? (
+                <img src={cover} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-line" />
+              ) : (
+                <span
+                  className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} font-black ${tone.text} ${
+                    badge.length > 3 ? 'text-[0.65rem]' : 'text-sm'
+                  }`}
+                >
+                  {badge}
+                </span>
+              )}
               <span className="flex-1">
                 <span className="text-base leading-tight font-extrabold">{title}</span>
                 <span className="mt-0.5 block text-xs font-bold text-ink-faint">
