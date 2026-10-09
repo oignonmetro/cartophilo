@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 41
+version: 42
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46, traite47, traite48]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46, traite47, traite48, traite49]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -738,6 +738,19 @@ tracks:
         numberInEnnead: 3
         chrono: 49
         highlight: true
+        unit: traite49
+        theses:
+          - "Seul l'Intellect se connaît pleinement : en lui, ce qui pense, la pensée et ce qui est pensé ne font qu'un."
+          - "L'âme ne se connaît qu'en devenant Intellect : nous sommes la pensée discursive, et l'Intellect est pour nous un roi."
+          - "L'Un, au-delà de l'Intellect, ne se pense pas : il donne ce qu'il n'a pas, et l'on ne dit de lui que ce qu'il n'est pas."
+        summary: |-
+          **Le traité 49 reprend les trois principes du point de vue de la connaissance de soi : l'âme ne se connaît qu'en devenant Intellect, l'Intellect se connaît pleinement parce qu'en lui ce qui pense et ce qui est pensé ne font qu'un, et l'Un, au-delà de la connaissance, ne se pense pas.** C'est le dernier traité à exposer en entier la doctrine des trois hypostases.
+
+          - **L'âme** (chap. 1-4) : se connaître n'est pas connaître une partie par une autre. La pensée discursive, ce que « nous » sommes, raisonne sur les empreintes venues des sens et de l'Intellect ; l'âme ne se connaît qu'en devenant Intellect.
+          - **L'Intellect** (chap. 5-10) : en lui, l'Intellect, l'intellection et l'intelligible sont une seule et même chose ; il est une lumière qui se voit elle-même. Mais se penser suppose une multiplicité : ce qui est absolument un ne se pense pas.
+          - **L'Un** (chap. 11-17) : l'Intellect naît en voulant voir l'Un et en le voyant multiple. L'Un est ineffable : on dit ce qu'il n'est pas ; puissance de toutes choses, il donne ce qu'il n'a pas, et l'âme l'atteint dans un contact, soudain, comme une lumière.
+
+          Le traité se clôt sur une exhortation : « Retranche toutes choses ».
       - id: t-5-4
         title: "Comment vient du premier ce qui est après le premier, et sur l'Un"
         ennead: 5
