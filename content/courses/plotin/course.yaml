@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 25
+version: 26
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -456,10 +456,25 @@ tracks:
 
           C'est la partie centrale de l'ensemble des traités 27 à 29 ; le traité 29 (IV, 5) examinera l'intermédiaire de la vision.
       - id: t-4-5
-        title: "Sur les difficultés relatives à l'âme III"
+        title: "Sur les difficultés relatives à l'âme III, ou Sur la vue"
         ennead: 4
         numberInEnnead: 5
         chrono: 29
+        unit: traite29
+        theses:
+          - "Voir ne suppose pas qu'un intermédiaire soit affecté : la vision se fait par la sympathie d'un univers vivant unique."
+          - "La lumière n'est ni une qualité ni une affection de l'air : c'est l'activité incorporelle d'un corps lumineux."
+          - "Un œil ne verrait pas un corps hors de notre monde : sans sympathie, il n'y a pas de sensation."
+        summary: |-
+          **Le traité 29 achève l'enquête sur l'âme par la question de la vue : voir ne suppose pas qu'un intermédiaire soit affecté, car la vision se fait par la sympathie d'un univers vivant unique ; et la lumière est l'activité incorporelle d'un corps lumineux.**
+
+          - **La vue sans intermédiaire affecté** (chap. 1-3) : contre les stoïciens, l'air n'a pas besoin de transmettre une empreinte de proche en proche. Un intermédiaire ne fait qu'affaiblir la sympathie ; la preuve : on voit la nuit le feu des phares, et tout l'objet est vu de partout.
+          - **Les autres explications** (chap. 2-4) : les rayons visuels des platoniciens, la tension des stoïciens, les simulacres des épicuriens ; la lumière n'est pas un bâton qui toucherait l'objet.
+          - **L'ouïe** (chap. 5) : le son naît du choc des corps, et parvient à la sensation par une communauté semblable.
+          - **La lumière** (chap. 6-7) : ni qualité ni affection de l'air, elle est une activité, comme la vie est l'activité de l'âme ; elle ne périt pas, mais accompagne sa source.
+          - **Un corps hors du ciel** (chap. 8) ne serait pas vu : sans sympathie, ni sujet sentant, ni objet sensible.
+
+          Ce bref traité clôt les traités 27 à 29, *Sur les difficultés relatives à l'âme*, dont il forme la cinquième section.
       - id: t-4-6
         title: "Sur la sensation et la mémoire"
         ennead: 4
