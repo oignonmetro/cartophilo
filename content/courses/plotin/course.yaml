@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 39
+version: 40
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -107,6 +107,20 @@ tracks:
         ennead: 1
         numberInEnnead: 4
         chrono: 46
+        unit: traite46
+        theses:
+          - "Le bonheur est dans la vie, mais « vivre » se dit en plusieurs sens : seule la vie parfaite de l'Intellect est heureuse."
+          - "L'homme est heureux quand il est en acte cette vie parfaite : il porte le reste comme des vêtements."
+          - "Les maux n'entament pas le bonheur du sage : comme une lanterne dans la tempête, son éclat continue de briller."
+        summary: |-
+          **Le traité 46 place le bonheur dans la vie, mais dans la vie parfaite de l'Intellect, dont toutes les autres vies ne sont que des images : l'homme est heureux quand il devient en acte cette vie, et les maux ne peuvent alors rien contre son bonheur.**
+
+          - **Les critères écartés** (chap. 1-2) : si le bonheur est le bien-être, la fonction propre ou la fin, les animaux et même les plantes seraient heureux ; ni la sensation ni la raison ne sont le critère cherché.
+          - **La vie parfaite** (chap. 3-4) : « vivre » se dit en plusieurs sens, de la vie claire à la vie obscure ; le bonheur n'appartient qu'à celui qui vit dans la plénitude. L'homme heureux est cette vie de l'intellect, et porte le reste comme des vêtements.
+          - **Le sage et les maux** (chap. 5-10) : la santé et l'absence de douleur sont nécessaires, non bonnes ; ni la ruine d'une cité, ni la captivité, ni la souffrance n'entament son bonheur, pas même la perte de conscience, car l'intellect reste en acte.
+          - **La vie du sage** (chap. 11-16) : sa volonté est tournée vers l'intérieur, son plaisir est la sérénité ; il voit le bien même dans le taureau de Phalaris, et use de son corps comme le musicien de sa lyre.
+
+          Le traité prolonge le traité 36 : le bonheur est la vie de ce qui est.
       - id: t-1-5
         title: "Si le bonheur s'accroît avec le temps"
         ennead: 1
