@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 33
+version: 34
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -273,6 +273,19 @@ tracks:
         ennead: 2
         numberInEnnead: 7
         chrono: 37
+        unit: traite37
+        theses:
+          - "Le mélange total existe dans certains cas, contre les péripatéticiens : l'eau traverse tout entier le papyrus."
+          - "Matière et qualités ne refusent pas le mélange : seules certaines qualités, comme la densité, l'empêchent."
+          - "La corporéité n'est pas un composé : c'est une forme, une raison qui, venue dans la matière, produit le corps."
+        summary: |-
+          **Le traité 37 prend position entre stoïciens et péripatéticiens : le mélange total existe dans certains cas, car la matière et les qualités, incorporelles, ne refusent pas de se mélanger ; seules certaines qualités, comme la densité, l'empêchent.** Il s'achève sur une définition de la corporéité.
+
+          - **Le débat** (chap. 1) : les stoïciens admettent qu'un corps pénètre tout entier un autre, même plus grand ; les péripatéticiens leur opposent trois objections : les corps se diviseraient et périraient, le mélange occupe souvent plus d'espace, un petit corps ne peut pénétrer tout un grand.
+          - **La solution** (chap. 2) : l'eau traverse tout entier le papyrus, et la matière de l'une et l'autre masse subsiste. Matière et qualités étant incorporelles, ce qui empêche le mélange tient à certaines qualités, comme la densité.
+          - **La corporéité** (chap. 3) : non un composé, mais une forme, une raison qui, venue dans la matière, produit le corps ; la raison séparée de la matière est dans l'Intellect.
+
+          Plotin y prolonge ses objections du traité 2 contre les stoïciens, et sa doctrine de la matière du traité 12.
       - id: t-2-8
         title: "Comment se fait-il que les objets vus de loin paraissent petits ?"
         ennead: 2
