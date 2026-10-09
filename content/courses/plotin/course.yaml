@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 36
+version: 37
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -185,6 +185,19 @@ tracks:
         ennead: 2
         numberInEnnead: 1
         chrono: 40
+        unit: traite40
+        theses:
+          - "Le monde et le ciel ne durent pas par la seule volonté du dieu : ils sont immortels par leur âme et par leur corps."
+          - "Le corps du monde s'écoule en lui-même, non au-dehors : le monde ne vieillit pas, et les astres restent eux-mêmes."
+          - "Le ciel n'est fait que d'un feu pur, une lumière : rien ne s'en écoule, et il n'a pas besoin de nourriture."
+        summary: |-
+          **Le traité 40 explique pourquoi le monde et le ciel sont immortels, non seulement par l'espèce, mais en restant eux-mêmes : leur corps ne s'écoule pas au-dehors, et l'âme du monde, toute proche de l'intelligible, les retient sans peine.** Ni l'éther d'Aristote ni la « volonté du dieu » du *Timée* ne suffisent.
+
+          - **La difficulté** (chap. 1-2) : la volonté du dieu n'explique rien ; que le monde contienne tout ne garantit pas la permanence de ses parties, les astres ; Platon et Héraclite font s'écouler tout corps.
+          - **L'âme et le corps** (chap. 3-5) : le corps du monde s'écoule en lui-même et ne vieillit pas ; le feu, arrivé là-haut, est retenu par l'âme. L'âme du monde, plus forte que tout lien, gouverne sans fatigue ; les vivants d'ici sont faits par une image affaiblie d'elle, qui ne sait pas les retenir.
+          - **Le corps du ciel** (chap. 6-8) : contre le *Timée*, les astres ne sont pas faits des quatre éléments, mais d'un feu pur qui est lumière ; Plotin réinterprète ensuite Platon en ce sens. Rien ne s'en écoule, et le ciel n'a pas besoin de nourriture.
+
+          Paradoxe : le feu céleste de Plotin est si distinct des éléments d'ici qu'il ressemble au cinquième élément qu'il refuse.
       - id: t-2-2
         title: "Sur le mouvement circulaire"
         ennead: 2
