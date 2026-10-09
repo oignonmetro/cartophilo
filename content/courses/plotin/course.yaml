@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 31
+version: 32
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -264,6 +264,20 @@ tracks:
         ennead: 2
         numberInEnnead: 8
         chrono: 35
+        unit: traite35
+        theses:
+          - "De loin, les objets paraissent petits : la grandeur n'est vue que par accident, et suit la couleur qui s'estompe."
+          - "La vue connaît une grandeur en la mesurant forme après forme : une distance indistincte paraît plus courte."
+          - "L'angle visuel n'explique rien : le ciel occupe toute la vue et paraît pourtant bien plus petit qu'il n'est."
+        summary: |-
+          **Le traité 35 explique pourquoi les objets vus de loin paraissent petits, et les distances plus courtes : la grandeur n'est vue que par accident, à la suite de la couleur ; quand la couleur s'estompe, la grandeur s'amoindrit avec elle.** C'est, avec le début du traité 29, le seul texte de Plotin sur l'optique.
+
+          - **Quatre explications** (1, 1-17) : la lumière se contracte à la mesure de la pupille ; seule la forme de l'objet arrive à l'œil ; il faudrait examiner l'objet de près, partie par partie ; la grandeur n'est vue que par accident, la couleur étant l'objet premier de la vue. Plotin retient la dernière, tirée du *De l'âme* d'Aristote.
+          - **La comparaison avec le son** (1, 17-29) : l'ouïe perçoit la grandeur du son comme une intensité ; sa portée, elle, n'est perçue que par accident.
+          - **La grandeur suit la couleur** (1, 29-51) : couleur et grandeur s'amoindrissent ensemble, l'une devient indistincte, l'autre petite. La vue mesure une grandeur forme après forme ; une montagne vue de loin, ou une surface uniforme, la prive de cette mesure. La distance paraît courte pour la même raison.
+          - **Contre l'angle visuel** (chap. 2) : le ciel occupe toute la vue et paraît pourtant bien plus petit qu'il n'est.
+
+          Plotin y reste fidèle à Aristote : c'est par la couleur que la vue atteint d'abord son objet.
       - id: t-2-9
         title: "Contre les gnostiques"
         ennead: 2
