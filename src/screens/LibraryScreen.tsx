@@ -762,7 +762,8 @@ function UnitCard({
       <button
         type="button"
         onClick={onOpen}
-        className={`flex w-full items-center gap-4 text-left ${compact ? 'px-3 py-3' : 'px-4 py-4'}`}
+        disabled={unit.lessons.length === 0}
+        className={`flex w-full items-center gap-4 text-left disabled:cursor-default ${compact ? 'px-3 py-3' : 'px-4 py-4'}`}
       >
         <ProgressRing
           ratio={mastery.ratio}
@@ -777,12 +778,16 @@ function UnitCard({
           <span className={`leading-tight font-extrabold ${compact ? 'text-sm' : 'text-base'}`}>{unit.title}</span>
           {subtitle && <span className="mt-0.5 block text-xs text-ink-soft">{subtitle}</span>}
           <span className={`mt-0.5 block text-xs font-bold ${done.count > 0 ? tone.text : 'text-ink-faint'}`}>
-            {done.count} / {done.total} étapes · {countLabel(unit.kind, mastery.total)}
+            {unit.lessons.length === 0
+              ? 'À rédiger'
+              : `${done.count} / ${done.total} étapes · ${countLabel(unit.kind, mastery.total)}`}
           </span>
         </span>
-        <span className="-rotate-180 text-ink-faint">
-          <ChevronLeftIcon size={compact ? 16 : 20} />
-        </span>
+        {unit.lessons.length > 0 && (
+          <span className="-rotate-180 text-ink-faint">
+            <ChevronLeftIcon size={compact ? 16 : 20} />
+          </span>
+        )}
       </button>
       {(reader || onReadNotes) && (
         <div className="flex border-t-2 border-line">

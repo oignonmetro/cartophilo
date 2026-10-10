@@ -441,7 +441,11 @@ export const unitSchema = z.object({
   status: z.enum(['available', 'archived']).optional(),
   /** Nature du contenu ; héritée de la piste par le compilateur. */
   kind: lessonKindSchema,
-  lessons: z.array(lessonSchema).min(1),
+  /**
+   * Vide pour une entrée « à rédiger » (une notion du glossaire dont le cours
+   * n'est pas encore écrit) : la carte s'affiche, sans rien à ouvrir.
+   */
+  lessons: z.array(lessonSchema).default([]),
 })
 
 /**
