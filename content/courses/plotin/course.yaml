@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 58
+version: 59
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46, traite47, traite48, traite49, traite50, traite51, traite52, traite53]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46, traite47, traite48, traite49, traite50, traite51, traite52, traite53, traite54]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -181,6 +181,19 @@ tracks:
         numberInEnnead: 7
         chrono: 54
         highlight: true
+        unit: traite54
+        theses:
+          - "Le bien d'une chose est son activité propre : pour l'âme, c'est d'exercer son activité la meilleure, tournée vers le Bien absolu."
+          - "Toute chose possède le Bien en image, de deux façons : en lui ressemblant, ou en tournant son activité vers lui ; l'âme y accède par l'Intellect."
+          - "La vie n'est un bien que grâce à la vertu : vivre dans un corps est en soi un mal, et l'âme accède au Bien en se séparant du composé."
+        summary: |-
+          **Le traité 54 explique comment l'âme possède le Bien : toute chose y participe en image, et l'âme y accède par l'Intellect, à mesure qu'elle se sépare du composé que forment l'âme et le corps.** Il montre que la vie n'est un bien que grâce à la vertu, et que la mort n'est pas un mal pour l'âme qui est restée pure.
+
+          - **Le bien de chaque chose** (chap. 1) : c'est son activité propre, conforme à sa nature ; pour l'âme, son activité la meilleure, tournée vers ce qu'il y a de meilleur, qui est le Bien absolu. Les autres choses possèdent le Bien de deux façons : en s'assimilant à lui, ou en dirigeant leur activité vers lui. Le Bien, tranquille, reste la source de toutes les activités, comme le soleil est le centre de sa lumière.
+          - **Toute chose possède le Bien** (chap. 2) : chacune participe au Bien comme à une image, car elle participe à l'Un, à l'être, à une forme. Les choses sans âme sont tournées vers l'âme, et l'âme vers le Bien par l'Intellect.
+          - **La vie et la mort** (chap. 3) : dans le mal, la vie est boiteuse. La mort n'est un mal pour personne : l'âme pure, comme les dieux, ne connaît aucun mal. Si la vie est un bien, ce n'est pas comme union de l'âme et du corps, mais grâce à la vertu. Vivre dans un corps est en soi un mal : l'âme accède au Bien parce qu'elle s'est séparée de la vie du composé.
+
+          Porphyre en a probablement détaché la fin du traité 53 : le traité 54 donnerait sa conclusion à la question « que sommes-nous ? ». La séparation d'avec le corps y est présentée comme la philosophie même.
       - id: t-1-8
         title: "Quels sont les maux ?"
         ennead: 1
