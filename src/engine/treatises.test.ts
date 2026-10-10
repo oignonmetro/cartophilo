@@ -4,17 +4,20 @@ import type { Exercise } from './exercises'
 import {
   ACTIVE_COUNT,
   LINKS,
+  STAGES,
   activeTreatises,
   isAcquired,
+  isStageDone,
   isValidated,
   learningOrder,
   linksOf,
   materializeTreatise,
   numberingOf,
   reviewTreatises,
-  rightsOn,
+  stageOf,
   treatiseGhosts,
   type TreatiseProgress,
+  type TreatiseStage,
 } from './treatises'
 
 // 54 traités : 6 Ennéades de 9, rang chronologique en boucle (pas celui de Plotin, peu importe ici).
@@ -32,17 +35,25 @@ const ENTRIES: TreatiseEntry[] = Array.from({ length: 54 }, (_, index) => {
   return entry
 })
 
-const done = (entry: TreatiseEntry): TreatiseProgress[string] => ({
-  links: Object.fromEntries(linksOf(entry).map((link) => [link, { right: 1, wrong: 0 }])),
-  theses: Object.fromEntries((entry.theses ?? []).map((_, index) => [index, { right: 1, wrong: 0 }])),
+const right = { right: 1, wrong: 0 }
+/** Tout ce qu'une étape demande : la numérotation et chacune des thèses. */
+const stageDone = (entry: TreatiseEntry) => ({
+  number: right,
+  theses: Object.fromEntries((entry.theses ?? []).map((_, index) => [index, right])),
 })
+/** Un traité dont les étapes données sont faites. */
+const doneAt = (entry: TreatiseEntry, ...stages: TreatiseStage[]): TreatiseProgress[string] => ({
+  stages: Object.fromEntries(stages.map((stage) => [stage, stageDone(entry)])),
+})
+/** Un traité maîtrisé : les trois étapes. */
+const done = (entry: TreatiseEntry) => doneAt(entry, ...STAGES)
 const masterAll = (...ids: string[]): TreatiseProgress =>
   Object.fromEntries(ids.map((id) => [id, done(ENTRIES.find((entry) => entry.id === id)!)]))
 
 const idsOf = (exercise: Exercise): string[] =>
   exercise.kind === 'treatise-match'
     ? exercise.pairs.map((pair) => pair.id)
-    : exercise.kind === 'treatise-choice'
+    : exercise.kind === 'treatise-choice' || exercise.kind === 'treatise-type'
       ? [exercise.entryId]
       : []
 
@@ -77,7 +88,7 @@ describe('ordre et lots d’apprentissage', () => {
   })
 })
 
-describe('maîtrise lien par lien', () => {
+describe('maîtrise étape par étape', () => {
   const withTheses = ENTRIES[3]!
   const plain = ENTRIES[0]!
 
@@ -86,29 +97,46 @@ describe('maîtrise lien par lien', () => {
     expect(linksOf(plain)).toEqual(['title-number'])
   })
 
-  it('n’est maîtrisé que quand chacun de ses liens a eu une bonne association', () => {
-    expect(isValidated(withTheses, { links: { 'title-number': { right: 1, wrong: 0 } } })).toBe(false)
-    expect(isValidated(withTheses, { links: { 'title-thesis': { right: 3, wrong: 1 } } })).toBe(false)
-    // Toutes les thèses comptent, pas l'une des trois.
-    const numberDone = { 'title-number': { right: 1, wrong: 0 } }
-    expect(isValidated(withTheses, { links: numberDone, theses: { 0: { right: 2, wrong: 0 } } })).toBe(false)
+  it('a trois étapes, de l’association à l’écrit, et chacune ouvre la suivante', () => {
+    expect(STAGES).toEqual(['match', 'choice', 'type'])
+    expect(stageOf(plain, undefined)).toBe('match')
+    expect(stageOf(plain, doneAt(plain, 'match'))).toBe('choice')
+    expect(stageOf(plain, doneAt(plain, 'match', 'choice'))).toBe('type')
+    expect(stageOf(plain, done(plain))).toBeNull()
+  })
+
+  it('n’est maîtrisé que quand les trois étapes sont faites', () => {
+    expect(isValidated(plain, doneAt(plain, 'match'))).toBe(false)
+    expect(isValidated(plain, doneAt(plain, 'match', 'choice'))).toBe(false)
+    expect(isValidated(plain, done(plain))).toBe(true)
+    // Une étape ne remplace pas les autres : l'écrit seul ne vaut pas l'association.
+    expect(isValidated(plain, doneAt(plain, 'type'))).toBe(false)
+    expect(isStageDone(plain, doneAt(plain, 'type'), 'match')).toBe(false)
+  })
+
+  it('à chaque étape, toutes les thèses comptent, pas l’une des trois', () => {
+    const numberOnly = { stages: { match: { number: right } } }
+    expect(isStageDone(withTheses, numberOnly, 'match')).toBe(false)
     expect(
-      isValidated(withTheses, {
-        links: numberDone,
-        theses: { 0: { right: 1, wrong: 0 }, 1: { right: 1, wrong: 0 }, 2: { right: 1, wrong: 0 } },
-      }),
-    ).toBe(true)
+      isStageDone(
+        withTheses,
+        { stages: { match: { number: right, theses: { 0: { right: 2, wrong: 0 } } } } },
+        'match',
+      ),
+    ).toBe(false)
+    expect(isStageDone(withTheses, doneAt(withTheses, 'match'), 'match')).toBe(true)
     expect(isValidated(withTheses, done(withTheses))).toBe(true)
-    expect(isValidated(plain, { links: { 'title-number': { right: 1, wrong: 0 } } })).toBe(true)
   })
 
-  it('reprend les comptes d’avant les liens', () => {
-    expect(rightsOn({ right: 2 }, 'title-number')).toBe(2)
-    expect(rightsOn({ thesis: 1 }, 'title-thesis')).toBe(1)
-    expect(isValidated(plain, { right: 1 })).toBe(true)
+  it('reprend les comptes d’avant les étapes comme ceux de l’association', () => {
+    expect(isStageDone(plain, { right: 1 }, 'match')).toBe(true)
+    expect(isStageDone(plain, { links: { 'title-number': right } }, 'match')).toBe(true)
+    expect(isStageDone(plain, { right: 1 }, 'choice')).toBe(false)
+    const legacy = { links: { 'title-number': right }, theses: { 0: right, 1: right, 2: right } }
+    expect(stageOf(withTheses, legacy)).toBe('choice')
   })
 
-  it('distingue les traités : réussir un lien d’un traité ne valide pas les autres', () => {
+  it('distingue les traités : réussir un traité n’en valide pas un autre', () => {
     const [first, second] = activeTreatises(ENTRIES, {})
     const progress: TreatiseProgress = { [first!.id]: done(first!) }
     expect(isValidated(first!, progress[first!.id])).toBe(true)
@@ -134,8 +162,11 @@ describe('consolidation', () => {
   })
 
   it('une thèse déjà réussie cède la place aux thèses pas encore vues', () => {
+    // L'association est faite ; au QCM, la numérotation et la thèse 0 le sont.
     const progress: TreatiseProgress = {
-      [entry.id]: { links: { 'title-number': { right: 1, wrong: 0 } }, theses: { 0: { right: 1, wrong: 0 } } },
+      [entry.id]: {
+        stages: { ...doneAt(entry, 'match').stages, choice: { number: right, theses: { 0: right } } },
+      },
     }
     let seen = 0
     let total = 0
@@ -151,11 +182,13 @@ describe('consolidation', () => {
 })
 
 describe('exercices formés à l’instant', () => {
-  it('réserve des places, rien de plus : une manche pour deux QCM', () => {
+  it('réserve des places, rien de plus : une manche, un QCM, un écrit', () => {
     const ghosts = treatiseGhosts(12)
     expect(ghosts).toHaveLength(12)
     expect(new Set(ghosts.map((ghost) => ghost.id)).size).toBe(12)
     expect(ghosts.filter((ghost) => ghost.shape === 'match')).toHaveLength(4)
+    expect(ghosts.filter((ghost) => ghost.shape === 'choice')).toHaveLength(4)
+    expect(ghosts.filter((ghost) => ghost.shape === 'type')).toHaveLength(4)
     expect(ghosts.every((ghost) => ghost.kind === 'treatise-ghost')).toBe(true)
   })
 
@@ -203,8 +236,11 @@ describe('exercices formés à l’instant', () => {
   })
 
   it('propose de vrais choix : la bonne réponse une fois, parmi des leurres distincts', () => {
+    const matched: TreatiseProgress = Object.fromEntries(
+      activeTreatises(ENTRIES, {}).map((entry) => [entry.id, doneAt(entry, 'match')]),
+    )
     for (let seed = 0; seed < 40; seed++) {
-      const exercise = materializeTreatise(treatiseGhosts(2)[1]!, ENTRIES, {}, seed)
+      const exercise = materializeTreatise(treatiseGhosts(2)[1]!, ENTRIES, matched, seed)
       expect(exercise.kind).toBe('treatise-choice')
       if (exercise.kind !== 'treatise-choice') continue
       expect(new Set(exercise.options).size).toBe(exercise.options.length)
@@ -214,24 +250,17 @@ describe('exercices formés à l’instant', () => {
   })
 
   it('fait passer d’abord le lien pas encore réussi', () => {
-    // Tout est réussi pour tous les traités, sauf « titre ↔ thèse ».
+    // L'association est faite pour tous ; au QCM, tout l'est sauf « titre ↔ thèse ».
     const progress: TreatiseProgress = Object.fromEntries(
       ENTRIES.map((entry) => [
         entry.id,
-        {
-          links: Object.fromEntries(
-            linksOf(entry)
-              .filter((link) => link !== 'title-thesis')
-              .map((link) => [link, { right: 1, wrong: 0 }]),
-          ),
-        },
+        { stages: { ...doneAt(entry, 'match').stages, choice: { number: right } } },
       ]),
     )
     let hits = 0
     let total = 0
     for (let seed = 0; seed < 80; seed++) {
       const exercise = materializeTreatise(treatiseGhosts(2)[1]!, ENTRIES, progress, seed)
-      // Les traités sans thèses, déjà maîtrisés, ne reviennent qu'en consolidation.
       if (exercise.kind !== 'treatise-choice' || !ENTRIES.find((e) => e.id === exercise.entryId)!.theses) continue
       total++
       if (exercise.link === 'title-thesis') hits++
@@ -243,9 +272,13 @@ describe('exercices formés à l’instant', () => {
   it('introduit aussitôt un nouveau traité quand un autre est maîtrisé', () => {
     const before = activeTreatises(ENTRIES, {})
     // Maîtrisé et déjà consolidé : il ne revient plus, sa place est prise.
-    const progress: TreatiseProgress = { [before[0]!.id]: { ...done(before[0]!), sessions: 2 } }
+    const progress: TreatiseProgress = {
+      ...Object.fromEntries(before.map((entry) => [entry.id, doneAt(entry, 'match')])),
+      [before[0]!.id]: { ...done(before[0]!), sessions: 2 },
+    }
     for (let seed = 0; seed < 20; seed++) {
-      expect(idsOf(materializeTreatise(treatiseGhosts(1)[0]!, ENTRIES, progress, seed))).not.toContain(before[0]!.id)
+      // Un QCM ne reprend pas ce traité ; seule une manche en manque de paires peut le prendre pour la compléter.
+      expect(idsOf(materializeTreatise(treatiseGhosts(2)[1]!, ENTRIES, progress, seed))).not.toContain(before[0]!.id)
     }
   })
 
@@ -257,5 +290,84 @@ describe('exercices formés à l’instant', () => {
       const exercise = materializeTreatise(ghost, ENTRIES, progress, 3)
       expect('practice' in exercise && exercise.practice).toBe(true)
     }
+  })
+})
+
+describe('un exercice pour chaque étape', () => {
+  const [matchGhost, choiceGhost, typeGhost] = treatiseGhosts(3) as [
+    ReturnType<typeof treatiseGhosts>[number],
+    ReturnType<typeof treatiseGhosts>[number],
+    ReturnType<typeof treatiseGhosts>[number],
+  ]
+  const active = activeTreatises(ENTRIES, {})
+  const atStages = (...stages: TreatiseStage[]): TreatiseProgress =>
+    Object.fromEntries(active.map((entry) => [entry.id, doneAt(entry, ...stages)]))
+
+  it('commence par l’association, quelle que soit la place réservée', () => {
+    for (const ghost of [matchGhost, choiceGhost, typeGhost]) {
+      for (let seed = 0; seed < 10; seed++) {
+        expect(materializeTreatise(ghost, ENTRIES, {}, seed).kind).toBe('treatise-match')
+      }
+    }
+  })
+
+  it('passe au QCM quand l’association est faite, puis à l’écrit', () => {
+    for (let seed = 0; seed < 10; seed++) {
+      for (const ghost of [matchGhost, choiceGhost, typeGhost]) {
+        expect(materializeTreatise(ghost, ENTRIES, atStages('match'), seed).kind).toBe('treatise-choice')
+        expect(materializeTreatise(ghost, ENTRIES, atStages('match', 'choice'), seed).kind).toBe('treatise-type')
+      }
+    }
+  })
+
+  it('mêle les étapes quand les traités n’en sont pas tous au même point', () => {
+    const progress: TreatiseProgress = {
+      [active[0]!.id]: doneAt(active[0]!, 'match'),
+      [active[1]!.id]: doneAt(active[1]!, 'match', 'choice'),
+    }
+    const kinds = new Set(
+      [matchGhost, choiceGhost, typeGhost].map((ghost) => materializeTreatise(ghost, ENTRIES, progress, 5).kind),
+    )
+    expect(kinds).toEqual(new Set(['treatise-match', 'treatise-choice', 'treatise-type']))
+  })
+
+  it('n’interroge à l’écrit que les traités qui en sont là', () => {
+    const progress: TreatiseProgress = {
+      [active[0]!.id]: doneAt(active[0]!, 'match', 'choice'),
+    }
+    for (let seed = 0; seed < 20; seed++) {
+      const exercise = materializeTreatise(typeGhost, ENTRIES, progress, seed)
+      expect(exercise.kind).toBe('treatise-type')
+      expect(idsOf(exercise)).toEqual([active[0]!.id])
+    }
+  })
+
+  it('l’écrit demande la numérotation d’après le titre, ou le titre d’après une thèse et la numérotation', () => {
+    const progress = atStages('match', 'choice')
+    const seen = new Set<string>()
+    for (let seed = 0; seed < 60; seed++) {
+      const exercise = materializeTreatise(typeGhost, ENTRIES, progress, seed)
+      if (exercise.kind !== 'treatise-type') continue
+      const entry = ENTRIES.find((candidate) => candidate.id === exercise.entryId)!
+      seen.add(exercise.link)
+      if (exercise.link === 'title-number') {
+        expect(exercise.prompt).toBe(entry.title)
+        expect(exercise.answer).toBe(numberingOf(entry))
+        expect(exercise.given).toBeUndefined()
+      } else {
+        expect(entry.theses).toContain(exercise.prompt)
+        expect(exercise.given).toBe(numberingOf(entry))
+        expect(exercise.answer).toBe(entry.title)
+        expect(exercise.thesis).toBe(entry.theses!.indexOf(exercise.prompt))
+      }
+    }
+    expect(seen).toEqual(new Set(LINKS))
+  })
+
+  it('un traité ne prend sa place au suivant qu’une fois l’écrit réussi', () => {
+    const progress = atStages('match', 'choice')
+    expect(activeTreatises(ENTRIES, progress).map((entry) => entry.id)).toEqual(active.map((entry) => entry.id))
+    const finished: TreatiseProgress = { ...progress, [active[0]!.id]: done(active[0]!) }
+    expect(activeTreatises(ENTRIES, finished).map((entry) => entry.id)).not.toContain(active[0]!.id)
   })
 })

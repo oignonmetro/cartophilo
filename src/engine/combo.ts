@@ -84,6 +84,9 @@ export function effortOf(exercise: Exercise): number {
     case 'treatise-choice':
     case 'treatise-ghost':
       return 1
+    // Taper la réponse, sans option : la forme la plus exigeante.
+    case 'treatise-type':
+      return 3
 
     // Une manche d'association est de la reconnaissance, mais en gros : elle
     // liquide quatre à six éléments d'un coup. La compter pour un seul

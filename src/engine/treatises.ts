@@ -6,6 +6,7 @@ import type {
   TreatiseGhostExercise,
   TreatiseLink,
   TreatiseMatchExercise,
+  TreatiseTypeExercise,
 } from './exercises'
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
 
@@ -16,14 +17,23 @@ import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
  * titre, sa numérotation (« 53 [I, 1] ») et, pour ceux qui en ont, ses thèses
  * principales. Un exercice ne teste jamais « un traité » en bloc : il fait
  * établir un **lien** entre deux colonnes, le titre servant de pivot (titre ↔
- * numérotation, titre ↔ thèse), et chaque bonne ou mauvaise association est
- * retenue pour *ce* traité et *ce* lien.
+ * numérotation, titre ↔ thèse), et chaque bonne ou mauvaise réponse est
+ * retenue pour *ce* traité, *ce* lien et *cette* étape.
+ *
+ * Un traité s'apprend en trois **étapes**, de la plus aidée à la plus exigeante :
+ *   1. l'association (une manche de paires à relier) ;
+ *   2. le QCM (une réponse à choisir) ;
+ *   3. l'écrit (une réponse à taper : la numérotation d'après le titre, le
+ *      titre d'après une thèse et la numérotation).
+ * Il n'est « ponctuellement maîtrisé » que lorsque les trois étapes sont
+ * faites, chacune sur tous ses liens, toutes ses thèses comprises ; c'est alors
+ * seulement qu'un nouveau traité prend sa place.
  *
  * Les exercices n'existent pas d'avance : une séance réserve des places
  * (`treatiseGhosts`), et chaque exercice se forme au moment de l'ouvrir
  * (`materializeTreatise`), par un hasard réglé sur ce que l'apprenant sait
- * alors : les liens pas encore réussis passent d'abord, et un traité qui vient
- * d'être maîtrisé laisse aussitôt sa place à un nouveau.
+ * alors : à chaque traité l'exercice de son étape, les liens pas encore
+ * réussis passant d'abord.
  *
  * Trois choses restent séparées, pour que d'autres types d'exercices puissent
  * venir sans toucher à l'ordre d'apprentissage :
@@ -37,29 +47,40 @@ export const ACTIVE_COUNT = 6
 
 export const LINKS: readonly TreatiseLink[] = ['title-number', 'title-thesis']
 
+/** Les étapes d'un traité, dans l'ordre : association, QCM, écrit. */
+export type TreatiseStage = 'match' | 'choice' | 'type'
+export const STAGES: readonly TreatiseStage[] = ['match', 'choice', 'type']
+
 const LINK_COLUMNS: Record<TreatiseLink, [TreatiseColumn, TreatiseColumn]> = {
   'title-number': ['title', 'number'],
   'title-thesis': ['title', 'thesis'],
 }
 
-/** Ce qu'on retient d'un lien : ses associations justes (du premier coup) et fausses. */
+/** Ce qu'on retient d'un lien : ses réponses justes (du premier coup) et fausses. */
 export interface LinkRecord {
   right: number
   wrong: number
 }
 
+/** Ce qu'on retient d'une étape : la numérotation, puis chaque thèse (par rang), à part. */
+export interface StageRecord {
+  number?: LinkRecord
+  theses?: Record<number, LinkRecord>
+}
+
 /**
- * Ce qu'on retient de chaque traité, lien par lien. `right` et `thesis` sont
- * les comptes d'avant les liens : réussites sur la numérotation, puis sur les
- * thèses (titre ↔ thèse). Des liens `number-thesis`, abandonnés, peuvent traîner
- * dans une sauvegarde : ils sont ignorés.
+ * Ce qu'on retient de chaque traité, étape par étape. Les champs `right`,
+ * `thesis`, `links` et `theses` sont ceux d'avant les étapes : une sauvegarde
+ * ancienne les porte, et ils comptent pour l'étape d'association, la seule qui
+ * existait alors. Des liens `number-thesis`, abandonnés, peuvent traîner : ils
+ * sont ignorés.
  */
 export interface TreatiseRecord {
+  stages?: Partial<Record<TreatiseStage, StageRecord>>
   right?: number
   wrong?: number
   thesis?: number
   links?: Partial<Record<TreatiseLink, LinkRecord>>
-  /** Chaque thèse a son propre compte, par rang (0, 1, 2) : en connaître une ne vaut pas connaître les autres. */
   theses?: Record<number, LinkRecord>
   /** Dernière séance où ce traité a été réussi, et nombre de séances différentes où il l'a été. */
   session?: string
@@ -86,25 +107,69 @@ function valueIn(entry: TreatiseEntry, column: TreatiseColumn, thesis = 0): stri
   return entry.theses![thesis]!
 }
 
-function thesisRecord(record: TreatiseRecord | undefined, index: number): LinkRecord | undefined {
-  return record?.theses?.[index]
-}
-
-/** Ce qui reste à réussir pour une thèse : jamais réussie d'abord, puis celles où l'on s'est trompé. */
-function thesisNeed(record: TreatiseRecord | undefined, index: number): number {
-  const known = thesisRecord(record, index)
-  return ((known?.right ?? 0) === 0 ? 3 : 0) + Math.min(known?.wrong ?? 0, 3)
-}
-
-/** La thèse à faire travailler : une seule par traité, tirée selon ce qui reste à réussir. */
-function pickThesis(entry: TreatiseEntry, record: TreatiseRecord | undefined, rng: Rng): number {
-  const ranks = (entry.theses ?? []).map((_, index) => index)
-  return weightedPick(ranks, (index) => thesisNeed(record, index), rng)
-}
-
 /** Les liens que ce traité permet d'établir : sa numérotation, et ses thèses s'il en a. */
 export function linksOf(entry: TreatiseEntry): TreatiseLink[] {
   return LINKS.filter((link) => LINK_COLUMNS[link].every((column) => hasColumn(entry, column)))
+}
+
+// --- ce que l'on sait, par étape ------------------------------------------------
+
+/** Le compte de la numérotation à une étape ; pour l'association, les comptes d'avant les étapes y sont repris. */
+function numberRecord(record: TreatiseRecord | undefined, stage: TreatiseStage): LinkRecord {
+  const own = record?.stages?.[stage]?.number
+  if (stage !== 'match') return own ?? { right: 0, wrong: 0 }
+  const legacy = record?.links?.['title-number']
+  return {
+    right: Math.max(own?.right ?? 0, legacy?.right ?? 0, record?.right ?? 0),
+    wrong: Math.max(own?.wrong ?? 0, legacy?.wrong ?? 0),
+  }
+}
+
+/** Le compte d'une thèse (par rang) à une étape. */
+function thesisRecord(record: TreatiseRecord | undefined, stage: TreatiseStage, index: number): LinkRecord {
+  const own = record?.stages?.[stage]?.theses?.[index]
+  if (stage !== 'match') return own ?? { right: 0, wrong: 0 }
+  const legacy = record?.theses?.[index]
+  return {
+    right: Math.max(own?.right ?? 0, legacy?.right ?? 0),
+    wrong: Math.max(own?.wrong ?? 0, legacy?.wrong ?? 0),
+  }
+}
+
+/** Ce qui reste à réussir pour une thèse à une étape : jamais réussie d'abord, puis celles où l'on s'est trompé. */
+function thesisNeed(record: TreatiseRecord | undefined, stage: TreatiseStage, index: number): number {
+  const known = thesisRecord(record, stage, index)
+  return (known.right === 0 ? 3 : 0) + Math.min(known.wrong, 3)
+}
+
+/** La thèse à faire travailler : une seule par traité, tirée selon ce qui reste à réussir à cette étape. */
+function pickThesis(entry: TreatiseEntry, record: TreatiseRecord | undefined, stage: TreatiseStage, rng: Rng): number {
+  const ranks = (entry.theses ?? []).map((_, index) => index)
+  return weightedPick(ranks, (index) => thesisNeed(record, stage, index), rng)
+}
+
+/**
+ * Un lien est fait, à une étape, quand il a eu une bonne réponse du premier
+ * coup ; pour les thèses, chacune des siennes.
+ */
+export function isLinkDone(
+  entry: TreatiseEntry,
+  record: TreatiseRecord | undefined,
+  stage: TreatiseStage,
+  link: TreatiseLink,
+): boolean {
+  if (link === 'title-number') return numberRecord(record, stage).right >= 1
+  return (entry.theses ?? []).every((_, index) => thesisRecord(record, stage, index).right >= 1)
+}
+
+/** Une étape est faite quand chacun des liens du traité y est fait. */
+export function isStageDone(entry: TreatiseEntry, record: TreatiseRecord | undefined, stage: TreatiseStage): boolean {
+  return linksOf(entry).every((link) => isLinkDone(entry, record, stage, link))
+}
+
+/** L'étape à faire maintenant : la première pas encore faite, ou `null` quand le traité est maîtrisé. */
+export function stageOf(entry: TreatiseEntry, record: TreatiseRecord | undefined): TreatiseStage | null {
+  return STAGES.find((stage) => !isStageDone(entry, record, stage)) ?? null
 }
 
 /**
@@ -121,29 +186,13 @@ export function learningOrder(entries: readonly TreatiseEntry[]): TreatiseEntry[
   return [...ranked, ...rest.filter((entry) => entry.highlight), ...rest.filter((entry) => !entry.highlight)]
 }
 
-/** Associations justes d'un traité sur un lien (les comptes d'avant les liens y sont repris). Pour les thèses, voir `isLinkDone`. */
-export function rightsOn(record: TreatiseRecord | undefined, link: TreatiseLink): number {
-  const legacy = link === 'title-number' ? (record?.right ?? 0) : (record?.thesis ?? 0)
-  return Math.max(record?.links?.[link]?.right ?? 0, legacy)
-}
-
-function wrongsOn(record: TreatiseRecord | undefined, link: TreatiseLink): number {
-  return record?.links?.[link]?.wrong ?? 0
-}
-
-/** Un lien est fait quand il a eu une bonne association du premier coup ; pour les thèses, chacune des siennes. */
-export function isLinkDone(entry: TreatiseEntry, record: TreatiseRecord | undefined, link: TreatiseLink): boolean {
-  if (link === 'title-number') return rightsOn(record, link) >= 1
-  return (entry.theses ?? []).every((_, index) => (thesisRecord(record, index)?.right ?? 0) >= 1)
-}
-
 /**
- * Un traité est « ponctuellement maîtrisé » quand chacun des liens qui le
- * concernent est fait, toutes ses thèses comprises. C'est la porte d'entrée
- * d'un nouveau traité ; il lui reste à être consolidé (`isAcquired`).
+ * Un traité est « ponctuellement maîtrisé » quand les trois étapes sont
+ * faites : association, QCM, écrit. C'est la porte d'entrée d'un nouveau
+ * traité ; il lui reste à être consolidé (`isAcquired`).
  */
 export function isValidated(entry: TreatiseEntry, record: TreatiseRecord | undefined): boolean {
-  return linksOf(entry).every((link) => isLinkDone(entry, record, link))
+  return stageOf(entry, record) === null
 }
 
 /** Séances différentes où un traité doit avoir été réussi pour être « acquis ». */
@@ -185,12 +234,13 @@ export function acquiredCount(entries: readonly TreatiseEntry[], progress: Treat
 
 // --- hasard réglé -------------------------------------------------------------
 
-/** Ce qui reste à réussir sur un lien, et les erreurs passées : le poids de cette association dans le tirage. */
-function need(entry: TreatiseEntry, link: TreatiseLink, record: TreatiseRecord | undefined): number {
+/** Ce qui reste à réussir sur un lien à une étape, et les erreurs passées : le poids de cette association dans le tirage. */
+function need(entry: TreatiseEntry, stage: TreatiseStage, link: TreatiseLink, record: TreatiseRecord | undefined): number {
   if (link === 'title-thesis') {
-    return (entry.theses ?? []).reduce((sum, _, index) => sum + thesisNeed(record, index), 0)
+    return (entry.theses ?? []).reduce((sum, _, index) => sum + thesisNeed(record, stage, index), 0)
   }
-  return (rightsOn(record, link) === 0 ? 3 : 0) + Math.min(wrongsOn(record, link), 3)
+  const known = numberRecord(record, stage)
+  return (known.right === 0 ? 3 : 0) + Math.min(known.wrong, 3)
 }
 
 /** Un traité maîtrisé revient pour être consolidé : un poids léger, mais jamais nul. */
@@ -227,34 +277,70 @@ function targetsOf(entries: readonly TreatiseEntry[], progress: TreatiseProgress
   return { targets: sample(entries, Math.min(ACTIVE_COUNT, entries.length), rng), practice: true }
 }
 
-/** Poids d'un traité dans le tirage : ce qui lui reste à réussir, ou le poids léger de la consolidation. */
-function weightOf(entry: TreatiseEntry, link: TreatiseLink, progress: TreatiseProgress): number {
+/** Poids d'un traité dans le tirage d'une étape : ce qui lui reste à y réussir, ou le poids léger de la consolidation. */
+function weightOf(entry: TreatiseEntry, stage: TreatiseStage, link: TreatiseLink, progress: TreatiseProgress): number {
   const record = progress[entry.id]
-  return isValidated(entry, record) ? REVIEW_WEIGHT : need(entry, link, record)
+  return isValidated(entry, record) ? REVIEW_WEIGHT : need(entry, stage, link, record)
+}
+
+/** Les traités de cette étape, parmi ceux qu'on travaille. */
+function atStage(targets: readonly TreatiseEntry[], progress: TreatiseProgress, stage: TreatiseStage): TreatiseEntry[] {
+  return targets.filter((entry) => stageOf(entry, progress[entry.id]) === stage)
+}
+
+/**
+ * L'étape de l'exercice : celle que la place réservée demande, si des traités
+ * y sont ; sinon la plus basse où il y en a. Quand rien n'est à apprendre
+ * (consolidation, remise à niveau), la place réservée décide.
+ */
+function stageFor(
+  wanted: TreatiseStage,
+  targets: readonly TreatiseEntry[],
+  progress: TreatiseProgress,
+): TreatiseStage {
+  const populated = STAGES.filter((stage) => atStage(targets, progress, stage).length > 0)
+  if (populated.length === 0 || populated.includes(wanted)) return wanted
+  return populated[0]!
 }
 
 function formMatch(
   entries: readonly TreatiseEntry[],
+  targets: readonly TreatiseEntry[],
+  practice: boolean,
   progress: TreatiseProgress,
   id: string,
   session: string,
   rng: Rng,
 ): TreatiseMatchExercise | null {
-  const { targets, practice } = targetsOf(entries, progress, session, rng)
-  const candidates = LINKS.map((link) => ({ link, pool: targets.filter((entry) => linksOf(entry).includes(link)) })).filter(
-    ({ pool }) => pool.length >= MIN_BOARD,
-  )
+  const stage: TreatiseStage = 'match'
+  // Une manche demande au moins `MIN_BOARD` paires : si les traités à travailler
+  // sont trop peu (la fin du parcours), des traités déjà maîtrisés la complètent :
+  // jamais un traité pas encore introduit, que cette manche ferait avancer en douce.
+  const withLink = (link: TreatiseLink, among: readonly TreatiseEntry[]) =>
+    among.filter((entry) => linksOf(entry).includes(link))
+  const candidates = LINKS.map((link) => {
+    const own = withLink(link, targets)
+    const fill =
+      own.length < MIN_BOARD
+        ? shuffle(
+            withLink(link, entries).filter((entry) => !own.includes(entry) && isValidated(entry, progress[entry.id])),
+            rng,
+          )
+        : []
+    return { link, pool: [...own, ...fill.slice(0, MIN_BOARD - own.length)] }
+  }).filter(({ pool }) => pool.length >= MIN_BOARD && pool.some((entry) => targets.includes(entry)))
   if (candidates.length === 0) return null
 
   // Le lien qui reste le plus à réussir sur ces traités passe le plus souvent.
   const { link, pool } = weightedPick(
     candidates,
-    (candidate) => candidate.pool.reduce((sum, entry) => sum + weightOf(entry, candidate.link, progress), 0),
+    (candidate) => candidate.pool.reduce((sum, entry) => sum + weightOf(entry, stage, candidate.link, progress), 0),
     rng,
   )
-  // Les traités qui ont le plus à y gagner d'abord, au hasard à besoin égal.
+  // Les traités qui ont le plus à y gagner d'abord, au hasard à besoin égal ;
+  // s'il en manque à cette étape, des traités plus avancés complètent la manche.
   const group = shuffle(pool, rng)
-    .sort((a, b) => weightOf(b, link, progress) - weightOf(a, link, progress))
+    .sort((a, b) => weightOf(b, stage, link, progress) - weightOf(a, stage, link, progress))
     .slice(0, BOARD_SIZE)
 
   // La thèse se lit toujours à gauche du titre du traité qui la défend ; la numérotation, d'un côté ou de l'autre.
@@ -267,7 +353,7 @@ function formMatch(
     columns,
     session,
     pairs: group.map((entry) => {
-      const thesis = link === 'title-thesis' ? pickThesis(entry, progress[entry.id], rng) : undefined
+      const thesis = link === 'title-thesis' ? pickThesis(entry, progress[entry.id], stage, rng) : undefined
       return {
         id: entry.id,
         left: valueIn(entry, columns[0], thesis),
@@ -279,25 +365,40 @@ function formMatch(
   }
 }
 
+/** Le traité interrogé, et le lien : parmi ceux de l'étape s'il y en a, au poids de ce qui leur reste à y réussir. */
+function pickTarget(
+  targets: readonly TreatiseEntry[],
+  progress: TreatiseProgress,
+  stage: TreatiseStage,
+  rng: Rng,
+): { target: TreatiseEntry; link: TreatiseLink } {
+  const here = atStage(targets, progress, stage)
+  const pool = here.length > 0 ? here : targets
+  const target = weightedPick(
+    pool,
+    (entry) => linksOf(entry).reduce((sum, link) => sum + weightOf(entry, stage, link, progress), 0),
+    rng,
+  )
+  const links = linksOf(target)
+  const unfinished = links.filter((link) => !isLinkDone(target, progress[target.id], stage, link))
+  const link = sample(unfinished.length > 0 ? unfinished : links, 1, rng)[0]!
+  return { target, link }
+}
+
 function formChoice(
   entries: readonly TreatiseEntry[],
+  targets: readonly TreatiseEntry[],
+  practice: boolean,
   progress: TreatiseProgress,
   id: string,
   session: string,
   rng: Rng,
 ): TreatiseChoiceExercise {
-  const { targets, practice } = targetsOf(entries, progress, session, rng)
-  const target = weightedPick(
-    targets,
-    (entry) => linksOf(entry).reduce((sum, link) => sum + weightOf(entry, link, progress), 0),
-    rng,
-  )
-  const links = linksOf(target)
-  const unfinished = links.filter((link) => !isLinkDone(target, progress[target.id], link))
-  const link = sample(unfinished.length > 0 ? unfinished : links, 1, rng)[0]!
+  const stage: TreatiseStage = 'choice'
+  const { target, link } = pickTarget(targets, progress, stage, rng)
   const [a, b] = LINK_COLUMNS[link]
   const [from, to] = rng() < 0.5 ? [a, b] : [b, a]
-  const thesis = link === 'title-thesis' ? pickThesis(target, progress[target.id], rng) : undefined
+  const thesis = link === 'title-thesis' ? pickThesis(target, progress[target.id], stage, rng) : undefined
 
   // Leurres : des traités qui ont la même colonne, plutôt voisins (les thèses, plutôt que des voisins, parmi celles qui existent).
   const pool = entries.filter((entry) => entry.id !== target.id && hasColumn(entry, to))
@@ -323,8 +424,53 @@ function formChoice(
   }
 }
 
-/** Rythme d'une séance : une manche d'association, puis deux QCM. */
-const SHAPES = ['match', 'choice', 'choice'] as const
+/**
+ * L'écrit : la numérotation d'après le titre, ou le titre d'après une thèse
+ * (la numérotation du traité est alors donnée avec elle).
+ */
+function formType(
+  targets: readonly TreatiseEntry[],
+  practice: boolean,
+  progress: TreatiseProgress,
+  id: string,
+  session: string,
+  rng: Rng,
+): TreatiseTypeExercise {
+  const stage: TreatiseStage = 'type'
+  const { target, link } = pickTarget(targets, progress, stage, rng)
+  if (link === 'title-number') {
+    return {
+      kind: 'treatise-type',
+      id,
+      link,
+      from: 'title',
+      to: 'number',
+      entryId: target.id,
+      prompt: target.title,
+      answer: numberingOf(target),
+      session,
+      ...(practice ? { practice } : {}),
+    }
+  }
+  const thesis = pickThesis(target, progress[target.id], stage, rng)
+  return {
+    kind: 'treatise-type',
+    id,
+    link,
+    from: 'thesis',
+    to: 'title',
+    entryId: target.id,
+    prompt: valueIn(target, 'thesis', thesis),
+    given: numberingOf(target),
+    answer: target.title,
+    thesis,
+    session,
+    ...(practice ? { practice } : {}),
+  }
+}
+
+/** Rythme d'une séance : une manche d'association, un QCM, un écrit. */
+const SHAPES: readonly TreatiseStage[] = ['match', 'choice', 'type']
 
 /** Nombre d'exercices d'une séance. */
 export const SESSION_LENGTH = 12
@@ -340,11 +486,13 @@ export function treatiseGhosts(count = SESSION_LENGTH): TreatiseGhostExercise[] 
 
 /**
  * Forme l'exercice d'une place réservée, d'après ce que l'apprenant sait des
- * traités à cet instant : un tirage pondéré par ce qui reste à réussir, jamais
- * deux thèses d'un même traité dans un exercice, chaque thèse suivie à part, et
- * un traité maîtrisé remplacé aussitôt par le suivant (il reste, plus rarement,
- * jusqu'à être réussi dans une autre séance). Une manche qui manquerait de traités se
- * rabat sur un QCM.
+ * traités à cet instant : à chaque traité l'exercice de son étape (association,
+ * QCM, écrit), un tirage pondéré par ce qui reste à réussir, jamais deux thèses
+ * d'un même traité dans un exercice, chaque thèse suivie à part, et un traité
+ * maîtrisé remplacé aussitôt par le suivant (il reste, plus rarement, jusqu'à
+ * être réussi dans une autre séance). Une place qui n'a aucun traité à son
+ * étape prend l'étape la plus basse où il y en a ; une manche qui manquerait de
+ * traités se rabat sur un QCM.
  */
 export function materializeTreatise(
   ghost: TreatiseGhostExercise,
@@ -354,9 +502,12 @@ export function materializeTreatise(
 ): Exercise {
   const session = String(seed)
   const rng = createRng(seedFrom(seed, ghost.id, Object.keys(progress).length))
-  if (ghost.shape === 'match') {
-    const match = formMatch(entries, progress, ghost.id, session, rng)
+  const { targets, practice } = targetsOf(entries, progress, session, rng)
+  const stage = stageFor(ghost.shape, targets, progress)
+  if (stage === 'match') {
+    const match = formMatch(entries, targets, practice, progress, ghost.id, session, rng)
     if (match) return match
   }
-  return formChoice(entries, progress, ghost.id, session, rng)
+  if (stage === 'type') return formType(targets, practice, progress, ghost.id, session, rng)
+  return formChoice(entries, targets, practice, progress, ghost.id, session, rng)
 }

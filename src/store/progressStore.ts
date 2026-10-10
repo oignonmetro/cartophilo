@@ -13,7 +13,7 @@ import {
 } from '@/engine/progress'
 import { createCard, DAY, review, type CardState, type Rating } from '@/engine/srs'
 import type { TreatiseLink } from '@/engine/exercises'
-import type { TreatiseProgress } from '@/engine/treatises'
+import type { TreatiseProgress, TreatiseStage } from '@/engine/treatises'
 
 /**
  * État de l'apprenant.
@@ -168,7 +168,14 @@ interface ProgressState extends ProgressSnapshot {
    */
   gradeTreatises: (
     courseId: string,
-    results: readonly { id: string; link: TreatiseLink; correct: boolean; thesis?: number; session?: string }[],
+    results: readonly {
+      id: string
+      stage: TreatiseStage
+      link: TreatiseLink
+      correct: boolean
+      thesis?: number
+      session?: string
+    }[],
   ) => void
   /** Clôt une session de leçon : plancher d'acquisition, XP, série. */
   finishLesson: (
@@ -460,16 +467,18 @@ export const useProgress = create<ProgressState>()(
             const base = current ?? { right: 0, wrong: 0 }
             return correct ? { ...base, right: base.right + 1 } : { ...base, wrong: base.wrong + 1 }
           }
-          for (const { id, link, correct, thesis, session } of results) {
+          for (const { id, stage, link, correct, thesis, session } of results) {
             const record = bucket[id] ?? {}
-            const next: typeof record = {
-              ...record,
-              links: { ...record.links, [link]: bump(record.links?.[link], correct) },
-            }
-            // Chaque thèse a son propre compte : en connaître une ne vaut pas connaître les autres.
-            if (thesis !== undefined) {
-              next.theses = { ...record.theses, [thesis]: bump(record.theses?.[thesis], correct) }
-            }
+            // Les comptes se tiennent par étape (association, QCM, écrit) : réussir une étape ne vaut pas les autres.
+            const here = record.stages?.[stage] ?? {}
+            const nextStage: typeof here =
+              link === 'title-number'
+                ? { ...here, number: bump(here.number, correct) }
+                : // Chaque thèse a son propre compte : en connaître une ne vaut pas connaître les autres.
+                  thesis !== undefined
+                  ? { ...here, theses: { ...here.theses, [thesis]: bump(here.theses?.[thesis], correct) } }
+                  : here
+            const next: typeof record = { ...record, stages: { ...record.stages, [stage]: nextStage } }
             // Séances différentes où ce traité a été réussi : la base de sa consolidation.
             if (correct && session !== undefined && record.session !== session) {
               next.session = session

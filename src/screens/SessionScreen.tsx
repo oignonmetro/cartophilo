@@ -10,6 +10,7 @@ import { Flashcard } from '@/components/session/Flashcard'
 import { ChoiceQuestion } from '@/components/session/ChoiceQuestion'
 import { MatchPairs } from '@/components/session/MatchPairs'
 import { TreatiseChoice } from '@/components/session/TreatiseChoice'
+import { TreatiseType } from '@/components/session/TreatiseType'
 import { TreatiseMatch } from '@/components/session/TreatiseMatch'
 import { ClozeSentence } from '@/components/session/ClozeSentence'
 import { TypeAnswer } from '@/components/session/TypeAnswer'
@@ -360,9 +361,20 @@ function SessionRunner({
       }
       // Un lien d'un traité n'est réussi que par une bonne réponse du premier
       // coup ; une reprise réussie ne le valide pas, une erreur le note toujours.
-      if (exercise.kind === 'treatise-choice' && !exercise.practice && (!correct || firstTry)) {
+      if (
+        (exercise.kind === 'treatise-choice' || exercise.kind === 'treatise-type') &&
+        !exercise.practice &&
+        (!correct || firstTry)
+      ) {
         gradeTreatises(course.id, [
-          { id: exercise.entryId, link: exercise.link, correct, thesis: exercise.thesis, session: exercise.session },
+          {
+            id: exercise.entryId,
+            stage: exercise.kind === 'treatise-choice' ? 'choice' : 'type',
+            link: exercise.link,
+            correct,
+            thesis: exercise.thesis,
+            session: exercise.session,
+          },
         ])
       }
       // Pas de son ici : il a déjà sonné dans l'exercice, à la validation
@@ -394,6 +406,7 @@ function SessionRunner({
             .filter((pair) => missed.has(pair.id) || firstTry)
             .map((pair) => ({
               id: pair.id,
+              stage: 'match' as const,
               link: exercise.link,
               correct: !missed.has(pair.id),
               thesis: pair.thesis,
@@ -558,6 +571,9 @@ function SessionRunner({
             )}
             {current.kind === 'treatise-choice' && (
               <TreatiseChoice exercise={current} onAnswer={(correct) => answer(current, correct)} />
+            )}
+            {current.kind === 'treatise-type' && (
+              <TreatiseType exercise={current} onAnswer={(correct) => answer(current, correct)} />
             )}
             {current.kind === 'work-locate' && (
               <WorkLocate exercise={current} onAnswer={(correct) => answer(current, correct)} />

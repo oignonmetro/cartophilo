@@ -513,6 +513,28 @@ export interface TreatiseChoiceExercise {
 }
 
 /**
+ * Écrit de repérage : la numérotation d'un traité d'après son titre, ou son
+ * titre d'après l'une de ses thèses (la numérotation est alors donnée avec
+ * elle). La réponse se tape ; voir `treatiseAnswers.ts` pour la comparer.
+ */
+export interface TreatiseTypeExercise {
+  kind: 'treatise-type'
+  id: string
+  link: TreatiseLink
+  /** Ce qui est montré, et ce qu'on cherche. */
+  from: TreatiseColumn
+  to: TreatiseColumn
+  entryId: string
+  prompt: string
+  /** La numérotation du traité, donnée avec une thèse pour retrouver son titre. */
+  given?: string
+  answer: string
+  thesis?: number
+  session?: string
+  practice?: boolean
+}
+
+/**
  * Exercice qui n'existe pas encore : la séance en réserve une place, et il
  * se forme au moment de l'ouvrir, d'après ce que l'apprenant sait alors des
  * traités (voir `materializeTreatise`).
@@ -520,8 +542,8 @@ export interface TreatiseChoiceExercise {
 export interface TreatiseGhostExercise {
   kind: 'treatise-ghost'
   id: string
-  /** Manche d'association, ou QCM : décidé à l'avance, pour le rythme de la séance. */
-  shape: 'match' | 'choice'
+  /** Manche d'association, QCM ou écrit : décidé à l'avance, pour le rythme de la séance. */
+  shape: 'match' | 'choice' | 'type'
 }
 
 export type Exercise =
@@ -543,6 +565,7 @@ export type Exercise =
   | WorkMatchExercise
   | TreatiseMatchExercise
   | TreatiseChoiceExercise
+  | TreatiseTypeExercise
   | TreatiseGhostExercise
   | TableBankExercise
   | TableCellExercise
@@ -604,6 +627,7 @@ export function itemIdsOf(exercise: Exercise): string[] {
     // Des traités, pas des éléments de révision : voir `TreatiseMatchExercise`.
     case 'treatise-match':
     case 'treatise-choice':
+    case 'treatise-type':
     case 'treatise-ghost':
       return []
     case 'table-bank':

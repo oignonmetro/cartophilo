@@ -19,6 +19,25 @@ Fichiers de référence :
 | QCM | `src/components/session/TreatiseChoice.tsx`, `OptionList.tsx` |
 | Poids d'une manche dans le combo | `src/engine/combo.ts` (`effortOf`) |
 
+> **Mise à jour : trois étapes par traité (2026-10).** La maîtrise ne se gagne
+> plus par n'importe quel exercice : chaque traité passe par trois **étapes**, de
+> la plus aidée à la plus exigeante, et ne laisse sa place à un nouveau traité
+> qu'après les trois. (1) **L'association** (manche de paires titre-numérotation
+> et titre-thèse). (2) **Le QCM** (mêmes liens, dans les deux sens). (3) **L'écrit**
+> (`TreatiseTypeExercise`) : la numérotation d'après le titre, et le titre d'après
+> une thèse donnée avec la numérotation du traité. Chaque étape veut sa bonne
+> réponse du premier coup sur la numérotation et sur chacune des thèses, et les
+> comptes se tiennent par étape (`TreatiseRecord.stages[stage]`, avec `number`
+> et `theses[rang]`). Les comptes d'avant (`links`, `theses`, `right`) valent
+> pour l'association. Dans `treatises.ts` : `STAGES`, `stageOf` (l'étape à faire),
+> `isStageDone`, `isValidated` (les trois étapes faites) ; une place réservée
+> (`shape`) demande une étape, mais prend la plus basse où des traités en sont
+> s'il n'y en a pas à celle-là (`stageFor`). L'écrit se compare dans
+> `src/engine/treatiseAnswers.ts` (numéros romains exacts, faute de frappe
+> tolérée sur le titre, parenthèses et second titre facultatifs). Le reste de ce
+> document décrit le mécanisme d'ensemble ; lire « QCM ou association » avec
+> cette hiérarchie en tête.
+
 ---
 
 ## 1. L'idée en une page
