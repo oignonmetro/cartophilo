@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 55
+version: 56
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46, traite47, traite48, traite49, traite50]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46, traite47, traite48, traite49, traite50, traite51]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -174,6 +174,21 @@ tracks:
         numberInEnnead: 8
         chrono: 51
         highlight: true
+        unit: traite51
+        theses:
+          - "Le mal en soi, d'où viennent tous les maux, est la matière : privée de toute forme et de toute mesure, elle n'est qu'un manque total de bien."
+          - "Le mal est nécessaire : le Bien produit tout, donc il faut un terme dernier où sa puissance s'éteint, et c'est la matière."
+          - "Maladies et vices ne sont que des maux seconds : l'âme ne devient mauvaise que mêlée à la matière, et l'âme pure en reste préservée."
+        summary: |-
+          **Le traité 51 identifie le mal en soi à la matière : privée de toute forme et de toute mesure, elle est le dernier terme de ce qui découle du Bien, et c'est d'elle que viennent tous les maux particuliers.** Plotin radicalise Platon en donnant au mal une existence propre, séparée, mais dérivée : la matière est engendrée par l'âme, et le Bien reste le seul vrai principe.
+
+          - **La question** (chap. 1-2) : demander d'où viennent les maux, c'est d'abord demander ce qu'est le mal. On connaît par ressemblance, donc comment connaître l'informe ? On le saisit par son contraire, en décrivant d'abord le Bien, l'Intellect, l'âme.
+          - **Le mal, non-être et matière** (chap. 3-5) : le mal est un non-être particulier, privation de toute mesure, que Plotin identifie à la matière. Maladies du corps et vices de l'âme ne sont que des maux seconds : l'âme devient mauvaise en se mêlant à la matière.
+          - **Exégèse du *Théétète*** (chap. 6-7) : Socrate dit que le mal ne peut disparaître, car il y a toujours un contraire du bien. Plotin en tire deux principes contraires, l'un des biens, l'autre des maux, mais la matière est nécessaire parce qu'elle est le dernier terme de l'émanation.
+          - **Objections** (chap. 8-15) : le vice vient-il de la forme du corps, d'une privation, d'un obstacle, d'une faiblesse de l'âme ? Plotin répond que ce sont des maux dérivés. Penser la matière demande « un autre intellect » ; elle est engendrée par l'âme à la suite d'une affection antérieure.
+          - **Dualisme ?** Les formules du chapitre 6 semblent poser deux principes, mais la matière dérive de l'âme : elle n'est principe que par homonymie avec le Bien. Le mal reste dominé par le Bien (les « chaînes en or »).
+
+          Proclus (*De malorum subsistentia*) refusera à la fois le dualisme et l'identification du mal à la matière : pour lui, le mal est un parasite de l'être.
       - id: t-1-9
         title: "Sur le suicide raisonnable"
         ennead: 1
