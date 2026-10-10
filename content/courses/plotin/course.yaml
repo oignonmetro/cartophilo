@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 57
+version: 58
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46, traite47, traite48, traite49, traite50, traite51, traite52]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46, traite47, traite48, traite49, traite50, traite51, traite52, traite53]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -63,6 +63,19 @@ tracks:
         numberInEnnead: 1
         chrono: 53
         highlight: true
+        unit: traite53
+        theses:
+          - "Seul le corps éprouve les affections (peur, plaisir, douleur) : l'âme seule reste impassible, et c'est le vivant, ensemble de l'âme et du corps, qui les ressent."
+          - "Nous ne sommes pas simplement notre âme : le « nous » se déplace entre les facultés de l'âme, selon la vie que nous menons, du vivant jusqu'à l'Intellect."
+          - "C'est le vivant, non l'âme, qui commet des fautes et en répond : nous sommes ce dont nous faisons usage, de la bête sauvage jusqu'à l'Intellect."
+        summary: |-
+          **Le traité 53 demande à qui appartiennent les affections, plaisir, douleur, peur : à l'âme, au corps, ou au vivant qui les réunit. Plotin répond que l'âme reste impassible, que c'est le composé qui éprouve, et que « nous » sommes ce dont nous faisons usage.** La question est un biais d'entrée dans l'éthique : si l'âme est impassible, qui commet les fautes et en répond ?
+
+          - **Le sujet de la sensation** (chap. 1-7, 6) : l'âme seule n'éprouve rien, étant une forme simple et non mélangée. Trois réponses sont réfutées : l'âme elle-même, l'âme qui se sert du corps comme d'un instrument, l'âme mêlée au corps ou forme dans la matière. Le sujet de la sensation est le vivant, composé d'un corps et d'une puissance issue de l'âme.
+          - **Ce que nous sommes** (chap. 7, 6-8) : suivant l'*Alcibiade*, Plotin cherche ce qu'est le « soi », et refuse de l'identifier à l'âme. Le « nous » se tient dans un intervalle entre le composé et l'Intellect, qui est au-dessus de nous ; il est d'autant plus proche de l'Intellect qu'il se sépare du composé. Nous possédons pourtant l'Intellect et les formes intelligibles.
+          - **Notre responsabilité** (chap. 9-13) : le « nous » possède tout, le composé, la bête sauvage, les vertus, l'Intellect, et sera ce dont il fait usage. C'est le composé qui commet des fautes et qui est châtié, non l'âme : la responsabilité et la réforme de soi deviennent possibles.
+
+          Le traité 54 en est sans doute la suite : la remontée du « nous » s'y poursuit jusqu'au Bien.
       - id: t-1-2
         title: "Sur les vertus"
         ennead: 1
