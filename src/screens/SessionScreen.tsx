@@ -573,7 +573,7 @@ function SessionRunner({
               <TreatiseChoice exercise={current} onAnswer={(correct) => answer(current, correct)} />
             )}
             {current.kind === 'treatise-type' && (
-              <TreatiseType exercise={current} onAnswer={(correct) => answer(current, correct)} />
+              <TreatiseType exercise={current} onAnswer={(correct, rating) => answer(current, correct, rating)} />
             )}
             {current.kind === 'work-locate' && (
               <WorkLocate exercise={current} onAnswer={(correct) => answer(current, correct)} />
