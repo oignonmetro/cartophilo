@@ -243,8 +243,8 @@ lessons:
 
     | Rang | Problème | Passage | En une phrase |
     | 1 | l'étendue des Formes | 130a-e | y a-t-il une Forme pour toute propriété, même pour le cheveu, la boue, la crasse ? |
-    | 2 | le dilemme du tout et de la partie | 130e-131e | participer à une Forme, est-ce l'avoir tout entière, ou en avoir une part ? Les deux semblent absurdes |
-    | 3 | le troisième homme | 132a-b | si l'Homme est un homme, il faut une autre Forme au-dessus d'eux, et ainsi de suite |
+    | 2 | le dilemme du tout et de la partie | 130e-131e | participer à une Forme, est-ce l'avoir tout entière, ou en avoir une part ? les deux semblent absurdes |
+    | 3 | le troisième homme | 132a-b | si la Forme de l'Homme est elle-même un homme (principe d'auto-prédication), alors il faut une autre Forme pour l'unifier avec ses instanciations (principe de l'Un-au-dessus-de-plusieurs), et ainsi de suite |
     | 4 | les Formes comme pensées | 132b-c | si les Formes sont des pensées, les choses qui en participent pensent aussi |
     | 5 | la régression de la ressemblance | 132c-133a | si les choses ressemblent à leur modèle, le modèle leur ressemble aussi, et il faut un modèle plus haut |
     | 6 | la plus grande difficulté | 133a-134e | séparées de nous, les Formes seraient inconnaissables, et les dieux ignoreraient nos affaires |
@@ -252,6 +252,12 @@ lessons:
     **Comment les lire.** Les deux premiers problèmes sont posés par Parménide à Socrate ; les trois suivants répondent aux issues que Socrate propose (les Idées comme pensées, comme modèles) ; le sixième tire la conséquence de la séparation. Trois d'entre eux (3, 4 et 5) produisent une régression à l'infini.
 
     ! Ces six problèmes seront repris un à un dans les leçons suivantes, puis rassemblés dans « Repérer les six objections ».
+  tables:
+  - table: rang-probleme-passage-en-une-phrase
+    exercises:
+    - {kind: order, column: Passage}
+    - {kind: bank, column: Problème}
+    - {kind: cell, column: Problème}
   points:
   - id: platon-parmenide-i20-p1
     sentence: "Parménide oppose à la théorie des Idées ___ problèmes, de 130a à 134e."

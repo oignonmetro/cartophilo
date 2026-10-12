@@ -7,6 +7,7 @@ import { buildPath, dayKey, displayedStreak, levelFromXp, type LessonNode } from
 import { dueCards } from '@/engine/srs'
 import { EMPTY_CARDS, EMPTY_LESSON_PROGRESS, useProgress } from '@/store/progressStore'
 import { BoltIcon, CheckIcon, ChestIcon, FlameIcon, LockIcon, StarIcon, UnitIcon, UNIT_TONES } from '@/components/icons'
+import { Rich } from '@/components/session/RuleNote'
 
 /**
  * Le chemin : la carte du cours.
@@ -128,8 +129,14 @@ function UnitBanner({ unit, index, nodes }: { unit: Unit; index: number; nodes: 
         <p className="text-xs font-bold uppercase tracking-widest opacity-80">
           Unité {index + 1} · {done}/{nodes.length}
         </p>
-        <h2 className="text-lg leading-tight font-extrabold">{unit.title}</h2>
-        {unit.subtitle && <p className="text-xs opacity-90">{unit.subtitle}</p>}
+        <h2 className="text-lg leading-tight font-extrabold">
+          <Rich text={unit.title} />
+        </h2>
+        {unit.subtitle && (
+          <p className="text-xs opacity-90">
+            <Rich text={unit.subtitle} />
+          </p>
+        )}
       </div>
       <UnitIcon name={unit.icon} size={32} />
     </div>

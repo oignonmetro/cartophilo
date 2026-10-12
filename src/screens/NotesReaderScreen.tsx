@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Button } from '@/components/Button'
 import { CloseIcon } from '@/components/icons'
-import { RuleNote } from '@/components/session/RuleNote'
+import { Rich, RuleNote } from '@/components/session/RuleNote'
 import { useCourse } from '@/content/CourseProvider'
 import { findUnit } from '@/content/course'
 import { unitFiches } from '@/engine/fiches'
@@ -59,7 +59,9 @@ export function NotesReaderScreen() {
           <CloseIcon size={22} />
         </button>
         <div className="min-w-0 flex-1">
-          <p className="truncate text-sm leading-tight font-extrabold">{unit.title}</p>
+          <p className="truncate text-sm leading-tight font-extrabold">
+            <Rich text={unit.title} />
+          </p>
           {fiches.length > 0 && (
             <select
               value={index}

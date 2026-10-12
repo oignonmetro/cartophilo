@@ -15,7 +15,7 @@ import { CoursePicker } from '@/components/CoursePicker'
 import { TextSheet } from '@/components/TextSheet'
 import { ENNEAD_NUMERALS, acquiredCount } from '@/engine/treatises'
 import { PlanSheet } from '@/components/work/PlanSheet'
-import { NoteBlocks, TONES } from '@/components/session/RuleNote'
+import { NoteBlocks, TONES, Rich } from '@/components/session/RuleNote'
 import { ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
 
 /**
@@ -775,8 +775,12 @@ function UnitCard({
           {/* `unit.level` (B2.1/B2.2) reste dans les données mais n'est plus
               affiché : c'était une convention maison, pas une échelle
               officielle, et son badge prêtait à confusion avec le CECRL. */}
-          <span className={`leading-tight font-extrabold ${compact ? 'text-sm' : 'text-base'}`}>{unit.title}</span>
-          {subtitle && <span className="mt-0.5 block text-xs text-ink-soft">{subtitle}</span>}
+          <span className={`leading-tight font-extrabold ${compact ? 'text-sm' : 'text-base'}`}><Rich text={unit.title} /></span>
+          {subtitle && (
+            <span className="mt-0.5 block text-xs text-ink-soft">
+              <Rich text={subtitle} />
+            </span>
+          )}
           <span className={`mt-0.5 block text-xs font-bold ${done.count > 0 ? tone.text : 'text-ink-faint'}`}>
             {unit.lessons.length === 0
               ? 'À rédiger'

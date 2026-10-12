@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { isWorkUnit } from '@/content/course'
 import type { Unit } from '@/content/schema'
 import { nodesOf } from '@/content/work'
-import { NoteBlocks, TONES } from '@/components/session/RuleNote'
+import { NoteBlocks, TONES, Rich } from '@/components/session/RuleNote'
 
 /**
  * Les rappels d'une unité-œuvre (`recaps`, voir content/oeuvres.md), en
@@ -44,8 +44,8 @@ export function PlanSheet({ unit, onClose }: { unit: Unit; onClose: () => void }
         className="flex max-h-[90dvh] w-full max-w-md flex-col gap-4 rounded-blob bg-paper p-5 md:max-w-2xl"
       >
         <header className="shrink-0">
-          <h2 className="text-lg leading-tight font-extrabold text-ink">{unit.title}</h2>
-          {unit.subtitle && <p className="mt-0.5 text-xs text-ink-soft">{unit.subtitle}</p>}
+          <h2 className="text-lg leading-tight font-extrabold text-ink"><Rich text={unit.title} /></h2>
+          {unit.subtitle && <p className="mt-0.5 text-xs text-ink-soft"><Rich text={unit.subtitle} /></p>}
         </header>
 
         <div className="flex min-h-0 flex-1 flex-col gap-6 overflow-y-auto pr-1">
