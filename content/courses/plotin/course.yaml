@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 75
+version: 76
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite42, traite43, traite45, traite46, traite47, traite48, traite49, traite50, traite51, traite52, traite53, traite54]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite42, traite43, traite44, traite45, traite46, traite47, traite48, traite49, traite50, traite51, traite52, traite53, traite54]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -988,6 +988,21 @@ tracks:
         ennead: 6
         numberInEnnead: 3
         chrono: 44
+        unit: traite44
+        theses:
+          - "Les genres du sensible ne sont ceux de là-bas que par analogie : réalité, quantité, qualité, mouvement et relatif."
+          - "La réalité sensible n'est qu'un conglomérat de qualités et de matière : une ombre, image de la réalité véritable."
+          - "Le mouvement est un genre du sensible, une forme éveillée qu'on ne peut définir ; ici-bas, le repos n'est qu'immobilité."
+        summary: |-
+          **Le traité 44 cherche les genres de l'être dans le monde sensible : ils ne sont les mêmes que là-bas que par analogie et homonymie, et Plotin en retient cinq, la réalité, la quantité, la qualité, le mouvement et le relatif, rapportés à l'intelligible par les raisons.**
+
+          - **Le problème et la méthode** (chap. 1-3) : le sensible n'est qu'une image ; on écarte les correspondances terme à terme avec les cinq genres du *Sophiste*, et une classification donne cinq genres.
+          - **La réalité** (chap. 4-10) : elle est ce qui est à soi-même son être ; mais la réalité sensible n'est qu'un conglomérat de qualités et de matière, une ombre de la réalité véritable, qu'on divise selon les corps.
+          - **La quantité** (chap. 11-15) : seuls le nombre et la grandeur ; le temps et le lieu sont des relatifs, le grand et le petit des quantités, le discours un mouvement ; l'égal et l'inégal en sont le propre.
+          - **La qualité** (chap. 15-20) : une raison à l'œuvre dans les corps ; elle ne se divise pas par elle-même, et ses contraires sont ce qui n'a rien d'identique.
+          - **Le mouvement** (chap. 21-27) : un genre propre au sensible, irréductible, forme éveillée qu'on ne peut définir ; ici-bas, le repos n'est qu'immobilité.
+
+          Le chapitre 28, sur le relatif, est sans doute de Porphyre, Plotin ayant interrompu son exposé.
       - id: t-6-4
         title: "Sur la raison pour laquelle l'être, un et identique, est partout tout entier I"
         ennead: 6
