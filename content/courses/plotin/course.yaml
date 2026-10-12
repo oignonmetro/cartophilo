@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 73
+version: 74
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite45, traite46, traite47, traite48, traite49, traite50, traite51, traite52, traite53, traite54]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite42, traite45, traite46, traite47, traite48, traite49, traite50, traite51, traite52, traite53, traite54]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -950,6 +950,19 @@ tracks:
         ennead: 6
         numberInEnnead: 1
         chrono: 42
+        unit: traite42
+        theses:
+          - "Les catégories d'Aristote ne sont pas des genres : elles mêlent intelligible et sensible, antérieur et postérieur."
+          - "Agir et pâtir ne sont pas deux genres : c'est un même mouvement, action en ce qui le donne, passion en ce qui le reçoit."
+          - "En mettant la matière au premier rang, les stoïciens donnent la première place au dernier : la sensation les guide."
+        summary: |-
+          **Le traité 42, premier des trois traités sur les genres de l'être, fait l'inventaire critique des catégories d'Aristote, puis des quatre genres stoïciens : aucune n'est un véritable genre de l'être, car elles mêlent l'intelligible et le sensible, l'antérieur et le postérieur.**
+
+          - **Le problème** (chap. 1) : les dix genres d'Aristote valent-ils de la même manière pour l'intelligible et pour le sensible ? Il n'y a pas de genre commun là où il y a de l'antérieur et du postérieur.
+          - **Les catégories d'Aristote** (chap. 2-24) : la réalité n'a d'unité que comme la famille des Héraclides ; seul le nombre est quantité ; la relation existe, par des raisons, sans former un genre ; la qualité n'a pas de caractère commun ; le quand et le où se ramènent au temps et au lieu ; l'agir et le pâtir sont un même mouvement ; l'avoir et la position ne valent que pour peu de cas.
+          - **Les genres stoïciens** (chap. 25-30) : le « quelque chose » qui les enveloppe est absurde ; mettre la matière au premier rang, c'est donner la première place au dernier, parce qu'on prend la sensation pour guide.
+
+          Le traité 43 dira quels sont, pour Plotin, les vrais genres de l'être : les cinq grands genres du *Sophiste*.
       - id: t-6-2
         title: "Sur les genres de l'être II"
         ennead: 6
