@@ -1713,10 +1713,11 @@ function tableBankFor(
   rng: Rng,
   column: number | null = null,
   locate = column !== null,
+  except: number | null = null,
 ): TableBankExercise | null {
   const width = table.columns.length + 1
   const columns = Array.from({ length: width }, (_, each) => each).filter(
-    (each) => filledInColumn(table, each).length >= 2 && (column === null || each === column),
+    (each) => filledInColumn(table, each).length >= 2 && (column === null || each === column) && each !== except,
   )
   if (columns.length === 0) return null
   const chosen = columns[Math.floor(rng() * columns.length)]!
@@ -1780,6 +1781,25 @@ function tableCellFor(
     ...(locate ? { locate: true } : {}),
     ...(locate ? { masked: maskedAround(table, [hole]) } : {}),
   }
+}
+
+/**
+ * La banque d'un tableau de structure : on y replace les moments (leurs
+ * étiquettes), non les repères. Les repères restent affichés, rangés dans
+ * l'ordre du texte : ce qu'on demande est ce qui se trouve à tel endroit, et
+ * cela ne se devine pas en lisant des numéros, comme se devinerait une
+ * banque de repères (le trou entre « 130a-e » et « 132a-b »). À défaut d'une
+ * autre colonne à remplir, on retombe sur les repères, trous écartés et
+ * voisins cachés.
+ */
+function structureBankFor(
+  itemId: string,
+  title: string,
+  table: NoteTableBlock,
+  rng: Rng,
+  column: number,
+): TableBankExercise | null {
+  return tableBankFor(itemId, title, table, rng, null, false, column) ?? tableBankFor(itemId, title, table, rng, column)
 }
 
 /** La remise en ordre d'un tableau de structure : toutes ses lignes, ou un tirage gardé dans leur ordre. */
@@ -1853,8 +1873,9 @@ function chosenTableExercise(
  * tableau de son rappel (voir `lessonTables`) :
  *
  *   - un tableau de structure (voir `tableStructure`) devient un exercice de
- *     repérage : ses moments à remettre dans l'ordre du texte, puis sa
- *     colonne de repères à remplir depuis une banque, puis un repère seul ;
+ *     repérage : ses moments à remettre dans l'ordre du texte, puis ses
+ *     moments à replacer en face de leurs repères (affichés), puis un repère
+ *     seul, ses voisins cachés ;
  *   - tout autre tableau : une colonne entière à remplir depuis une banque,
  *     puis une case seule, prise si possible dans une autre colonne, à
  *     écrire ou à révéler.
@@ -1873,7 +1894,7 @@ export function tableExercises(title: string, tables: readonly LessonTable[], rn
     const structure = tableStructure(table)
     if (structure) {
       const order = tableOrderFor(id, title, table, structure.column, rng)
-      const bank = tableBankFor(id, title, table, rng, structure.column)
+      const bank = structureBankFor(id, title, table, rng, structure.column)
       const cell = tableCellFor(id, title, table, rng, null, false, structure.column)
       return [order, bank, cell].filter((exercise) => exercise !== null) as Exercise[]
     }
@@ -1911,7 +1932,7 @@ function tableReviewFor(
   const structure = tableStructure(table)
   if (structure) {
     const order = () => tableOrderFor(itemId, title, table, structure.column, rng)
-    const bank = () => tableBankFor(itemId, title, table, rng, structure.column)
+    const bank = () => structureBankFor(itemId, title, table, rng, structure.column)
     const cell = () => tableCellFor(itemId, title, table, rng, null, false, structure.column)
     const forms: (() => Exercise | null)[] = unaided ? [cell, order] : [order, bank, cell]
     for (const form of rotate(forms, turn)) {

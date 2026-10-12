@@ -1457,8 +1457,10 @@ describe('tableau de structure', () => {
       expect(order.rows).toEqual([0, 1, 2, 3])
       expect([...order.bank].sort()).toEqual([0, 1, 2, 3])
       expect(order.bank).not.toEqual([0, 1, 2, 3])
-      expect(bank).toMatchObject({ locate: true })
-      expect(bank.holes.every((gap) => gap.column === 1)).toBe(true)
+      // La banque replace des moments, les repères restant affichés : des numéros se rangent sans rien savoir.
+      expect(bank).not.toHaveProperty('locate')
+      expect(bank).not.toHaveProperty('masked')
+      expect(bank.holes.every((gap) => gap.column !== 1)).toBe(true)
       expect(cell).toMatchObject({ locate: true, hole: { column: 1 } })
       expect(tableRowText(table!, 0, 1)).toEqual(['introduction', 'l’argument de Zénon'])
     }
@@ -1466,9 +1468,11 @@ describe('tableau de structure', () => {
 
   it('ne laisse jamais voisins d’un trou les repères qui le borneraient', () => {
     const rows = Array.from({ length: 9 }, (_, i) => `| m${i} | ${20 + i}a | c${i} |`).join('\n')
-    const long = lessonTables({ ...lesson, notes: `| Moment | Lieu | Contenu |\n${rows}` })
+    const [entry] = lessonTables({ ...lesson, notes: `| Moment | Lieu | Contenu |\n${rows}` })
+    // Une banque de repères, demandée telle quelle par l'auteur du tableau.
+    const long = [{ ...entry!, exercises: [{ kind: 'bank' as const, column: 1 }, { kind: 'cell' as const, column: 1 }] }]
     for (const seed of [1, 2, 3, 4, 5, 6]) {
-      const [, bank, cell] = tableExercises('T', long, createRng(seed))
+      const [bank, cell] = tableExercises('T', long, createRng(seed))
       if (bank?.kind !== 'table-bank' || cell?.kind !== 'table-cell') throw new Error('banque et case attendues')
       // Des trous écartés d'au moins deux lignes, leurs voisins cachés.
       expect(bank.holes.length).toBeGreaterThanOrEqual(2)
