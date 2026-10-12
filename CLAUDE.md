@@ -95,7 +95,10 @@ pas seulement Glossaire et Repérage.
   structure (une colonne de repères, « 126a-128e », « II, 3 », rangée dans
   l'ordre du texte, voir `tableStructure`) devient un exercice de
   repérage : ses moments à remettre dans l'ordre, puis ses repères à
-  replacer, puis un repère seul. Dans l'éditeur visuel (`/#/editeur`),
+  replacer, puis un repère seul. Sur les repères, les trous sont écartés
+  d'au moins une ligne et leurs voisins du dessus et du dessous sont cachés
+  (sinon un trou entre « 130a-e » et « 132a-b » se devine) ; la remise en
+  ordre ne montre aucune case qui porte elle-même un repère. Dans l'éditeur visuel (`/#/editeur`),
   l'onglet Tableaux les édite en grille, dit ce que chacun deviendra (et
   pourquoi un plan n'est pas reconnu) et en joue un aperçu ; il y fixe aussi,
   au besoin, les exercices de chaque tableau et leurs colonnes (`tables:`
