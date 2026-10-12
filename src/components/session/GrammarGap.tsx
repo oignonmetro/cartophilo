@@ -151,7 +151,7 @@ export function GrammarGap({
         const match = RATINGS.find((candidate) => candidate.key === event.key)
         if (match) {
           event.preventDefault()
-          onAnswer(match.rating !== 'again', match.rating)
+          onAnswer(match.rating === 'good', match.rating)
         }
         return
       }
@@ -386,7 +386,7 @@ export function GrammarGap({
             </Button>
           ) : revealable && mode === 'reveal' ? (
             revealed ? (
-              <RevealButtons isDesktop={isDesktop} onRate={(rating) => onAnswer(rating !== 'again', rating)} />
+              <RevealButtons isDesktop={isDesktop} onRate={(rating) => onAnswer(rating === 'good', rating)} />
             ) : (
               <Button
                 block
