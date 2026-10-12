@@ -14,7 +14,7 @@ tagline: Explication de texte.
 status: available
 default: false
 layout: library
-version: 74
+version: 75
 
 tracks:
   - id: glossaire
@@ -49,7 +49,7 @@ tracks:
     kind: grammar
     color: sky
     icon: compass
-    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite42, traite45, traite46, traite47, traite48, traite49, traite50, traite51, traite52, traite53, traite54]
+    units: [traite1, traite2, traite3, traite4, traite5, traite6, traite7, traite8, traite9, traite10, traite11, traite12, traite13, traite14, traite15, traite16, traite17, traite18, traite19, traite20, traite21, traite22, traite23, traite24, traite25, traite26, traite27, traite28, traite29, traite30, traite31, traite32, traite33, traite34, traite35, traite36, traite37, traite38, traite39, traite40, traite41, traite42, traite43, traite45, traite46, traite47, traite48, traite49, traite50, traite51, traite52, traite53, traite54]
     # Les 54 traités des Ennéades ne sont pas des leçons : un pur index de
     # référence, un moyen mnémotechnique pour se repérer dans l'ordre de
     # Porphyre (ci-dessous) et le rang chronologique de rédaction (`chrono`,
@@ -968,6 +968,21 @@ tracks:
         ennead: 6
         numberInEnnead: 2
         chrono: 43
+        unit: traite43
+        theses:
+          - "Les vrais genres de l'être sont les cinq du Sophiste : l'être, le mouvement, le repos, le même et l'autre."
+          - "Le mouvement n'est pas une qualité ajoutée à l'être : il est son acte et sa vie, et le repos lui est simultané."
+          - "L'Un n'est pas un genre : sans différences, il ne produit pas d'espèces, et l'un qui est se refuse à être divisé."
+        summary: |-
+          **Le traité 43 donne la réponse de Plotin : dans l'intelligible, les genres de l'être sont les cinq grands genres du Sophiste, l'être, le mouvement, le repos, le même et l'autre, qui décrivent l'Intellect ; aucun autre n'est premier.**
+
+          - **Questions préliminaires** (chap. 1-3) : l'être véritable, distinct du devenir, est un-multiple ; il a plusieurs genres, qui sont aussi des principes ; ils viennent de l'Un, qui n'est pas un genre.
+          - **La méthode** (chap. 4-6) : du corps, un et multiple, on remonte à l'âme, une et multiple, somme des raisons.
+          - **Les cinq genres** (chap. 7-8) : le mouvement est l'acte et la vie de l'être, le repos sa permanence ; les voir distincts, c'est voir l'autre, les voir un, c'est voir le même.
+          - **Pas d'autres genres premiers** (chap. 9-18) : ni l'un, ni la quantité, ni la qualité, ni les autres catégories, ni le bien, le beau ou les vertus.
+          - **Genres et espèces** (chap. 19-22) : l'Intellect total contient en puissance les intellects particuliers et produit tout, jusqu'à l'âme, son image.
+
+          Le traité 44 reviendra au monde sensible, pour y chercher ses propres genres.
       - id: t-6-3
         title: "Sur les genres de l'être III"
         ennead: 6
