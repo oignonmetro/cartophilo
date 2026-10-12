@@ -67,6 +67,15 @@ function TableHeader({ title, prompt, aside }: { title: string; prompt: string; 
 
 const sameGap = (a: TableGap, b: TableGap) => a.row === b.row && a.column === b.column
 
+/** Un repère voisin d'un trou, caché pour ne pas le borner (voir `TableBankExercise.masked`). */
+function MaskedCell() {
+  return (
+    <span aria-label="Case masquée" className="block text-center font-black tracking-widest text-ink-faint">
+      ···
+    </span>
+  )
+}
+
 /**
  * Banque : on touche une case vide, puis le texte qui lui revient ; jamais de
  * glisser-déposer, peu fiable au doigt. Une case est toujours active, la
@@ -122,7 +131,7 @@ export function TableBank({
   const renderCell = useCallback(
     (row: number, column: number) => {
       const index = holes.findIndex((gap) => sameGap(gap, { row, column }))
-      if (index === -1) return undefined
+      if (index === -1) return !done && exercise.masked?.some((gap) => sameGap(gap, { row, column })) ? <MaskedCell /> : undefined
       const token = placed.get(index)
       if (token !== undefined) {
         return (
@@ -146,7 +155,7 @@ export function TableBank({
         </button>
       )
     },
-    [active, exercise.bank, holes, placed],
+    [active, done, exercise.bank, exercise.masked, holes, placed],
   )
 
   return (
@@ -305,7 +314,9 @@ export function TableCell({
 
   const renderCell = useCallback(
     (row: number, column: number) => {
-      if (!sameGap(hole, { row, column })) return undefined
+      if (!sameGap(hole, { row, column })) {
+        return !answered && exercise.masked?.some((gap) => sameGap(gap, { row, column })) ? <MaskedCell /> : undefined
+      }
       const tone = !answered
         ? 'border-violet bg-violet/12'
         : checked === false
@@ -319,7 +330,7 @@ export function TableCell({
         </span>
       )
     },
-    [answered, checked, expected, hole],
+    [answered, checked, exercise.masked, expected, hole],
   )
 
   return (

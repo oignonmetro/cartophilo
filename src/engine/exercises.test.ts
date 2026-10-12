@@ -1464,6 +1464,37 @@ describe('tableau de structure', () => {
     }
   })
 
+  it('ne laisse jamais voisins d’un trou les repères qui le borneraient', () => {
+    const rows = Array.from({ length: 9 }, (_, i) => `| m${i} | ${20 + i}a | c${i} |`).join('\n')
+    const long = lessonTables({ ...lesson, notes: `| Moment | Lieu | Contenu |\n${rows}` })
+    for (const seed of [1, 2, 3, 4, 5, 6]) {
+      const [, bank, cell] = tableExercises('T', long, createRng(seed))
+      if (bank?.kind !== 'table-bank' || cell?.kind !== 'table-cell') throw new Error('banque et case attendues')
+      // Des trous écartés d'au moins deux lignes, leurs voisins cachés.
+      expect(bank.holes.length).toBeGreaterThanOrEqual(2)
+      expect(bank.holes.every((gap, i) => i === 0 || gap.row - bank.holes[i - 1]!.row > 1)).toBe(true)
+      for (const gap of bank.holes) {
+        for (const near of [gap.row - 1, gap.row + 1]) {
+          if (near < 0 || near > 8) continue
+          expect(bank.masked?.some((hidden) => hidden.row === near)).toBe(true)
+        }
+      }
+      expect(bank.masked?.some((hidden) => bank.holes.some((gap) => gap.row === hidden.row))).toBe(false)
+      for (const near of [cell.hole.row - 1, cell.hole.row + 1]) {
+        if (near >= 0 && near <= 8) expect(cell.masked?.some((hidden) => hidden.row === near)).toBe(true)
+      }
+    }
+  })
+
+  it('ne montre pas, dans la remise en ordre, une case qui porte un repère', () => {
+    const rows = ['| m0 | 20a | voir 130a-e |', '| m1 | 21a | II, 3 |', '| m2 | 22a | six objections |'].join('\n')
+    const [order] = tableExercises('T', lessonTables({ ...lesson, notes: `| Moment | Lieu | Contenu |\n${rows}` }), createRng(1))
+    if (order?.kind !== 'table-order') throw new Error('remise en ordre attendue')
+    expect(tableRowText(order.table, 0, 1)).toEqual(['m0'])
+    expect(tableRowText(order.table, 1, 1)).toEqual(['m1'])
+    expect(tableRowText(order.table, 2, 1)).toEqual(['m2', 'six objections'])
+  })
+
   it('tire au plus sept moments d’un long plan, gardés dans leur ordre', () => {
     const rows = Array.from({ length: 12 }, (_, i) => `| m${i} | ${20 + i}a | c${i} |`).join('\n')
     const [order] = tableExercises('T', lessonTables({ ...lesson, notes: `| Moment | Lieu | Contenu |\n${rows}` }), createRng(4))

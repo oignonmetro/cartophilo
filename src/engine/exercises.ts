@@ -423,6 +423,12 @@ export interface TableBankExercise {
   bank: string[]
   /** La colonne vidée est celle des repères d'un tableau de structure : on situe dans le texte. */
   locate?: boolean
+  /**
+   * Cases cachées sans être à remplir : les repères voisins, au-dessus et en
+   * dessous de chaque trou d'un plan. Visibles, ils borneraient la réponse
+   * (entre « 130a-e » et « 132a-b », ce ne peut être que « 130e-131e »).
+   */
+  masked?: TableGap[]
 }
 
 /**
@@ -438,6 +444,8 @@ export interface TableCellExercise {
   hole: TableGap
   /** La case est un repère (« 126a-128e ») : la réponse écrite se juge comme un emplacement. */
   locate?: boolean
+  /** Les repères voisins, cachés pour ne pas borner la réponse (voir `TableBankExercise`). */
+  masked?: TableGap[]
 }
 
 /**
@@ -1652,8 +1660,45 @@ export function tableRowText(table: NoteTableBlock, row: number, except: number)
     .map((column) => tableCellText(table, { row, column }))
     .filter((text) => {
       const plain = plainInline(text).trim()
-      return plain.length > 0 && !/^(\d+|[ivxlcdm]+)\.?$/i.test(plain)
+      return plain.length > 0 && !/^(\d+|[ivxlcdm]+)\.?$/i.test(plain) && !carriesLocation(plain)
     })
+}
+
+/**
+ * Une case qui porte un repère (« 130a-e », « II, 3 », « (131a) ») : montrée
+ * dans une remise en ordre, elle donnerait l'ordre qu'on demande de retrouver.
+ */
+function carriesLocation(plain: string): boolean {
+  return /\b\d+[a-e](?:\s*[-–]\s*\d*[a-e]?)?\b|\b(?:\d+|[ivxlcdm]+),\s*\d+/i.test(plain)
+}
+
+/**
+ * Les repères voisins des trous d'un plan, cachés : sans eux, un trou entre
+ * deux repères visibles se devine (voir `TableBankExercise.masked`).
+ */
+function maskedAround(table: NoteTableBlock, holes: readonly TableGap[]): TableGap[] {
+  const taken = new Set(holes.map((gap) => gap.row))
+  const column = holes[0]?.column ?? 0
+  const rows = new Set<number>()
+  for (const { row } of holes) {
+    for (const near of [row - 1, row + 1]) {
+      if (near >= 0 && near < table.rows.length && !taken.has(near)) rows.add(near)
+    }
+  }
+  return [...rows].sort((a, b) => a - b).map((row) => ({ row, column }))
+}
+
+/** Des trous qui ne se touchent pas (au plus `max`) : deux repères voisins se borneraient l'un l'autre. */
+function sparseHoles(gaps: readonly TableGap[], max: number, rng: Rng): TableGap[] {
+  let best: TableGap[] = []
+  for (let attempt = 0; attempt < 12 && best.length < max; attempt++) {
+    const picked: TableGap[] = []
+    for (const gap of shuffle([...gaps], rng)) {
+      if (picked.length < max && picked.every((other) => Math.abs(other.row - gap.row) > 1)) picked.push(gap)
+    }
+    if (picked.length > best.length) best = picked
+  }
+  return best.sort((a, b) => a.row - b.row)
 }
 
 /**
@@ -1676,7 +1721,12 @@ function tableBankFor(
   if (columns.length === 0) return null
   const chosen = columns[Math.floor(rng() * columns.length)]!
   const gaps = filledInColumn(table, chosen)
-  const holes = (gaps.length > TABLE_BANK_MAX ? sample(gaps, TABLE_BANK_MAX, rng) : gaps).sort((a, b) => a.row - b.row)
+  // Un plan se situe sans voisins visibles : des trous écartés, leurs voisins cachés.
+  const holes = locate
+    ? sparseHoles(gaps, TABLE_BANK_MAX, rng)
+    : (gaps.length > TABLE_BANK_MAX ? sample(gaps, TABLE_BANK_MAX, rng) : gaps).sort((a, b) => a.row - b.row)
+  if (holes.length < 2) return null
+  const masked = locate ? maskedAround(table, holes) : []
   return {
     kind: 'table-bank',
     id: `table-bank:${itemId}:${chosen}`,
@@ -1689,6 +1739,7 @@ function tableBankFor(
       rng,
     ),
     ...(locate ? { locate: true } : {}),
+    ...(masked.length > 0 ? { masked } : {}),
   }
 }
 
@@ -1727,6 +1778,7 @@ function tableCellFor(
     table,
     hole,
     ...(locate ? { locate: true } : {}),
+    ...(locate ? { masked: maskedAround(table, [hole]) } : {}),
   }
 }
 
@@ -1790,6 +1842,7 @@ function chosenTableExercise(
         table,
         hole,
         ...(locate ? { locate: true } : {}),
+        ...(locate ? { masked: maskedAround(table, [hole]) } : {}),
       }
     }
   }
