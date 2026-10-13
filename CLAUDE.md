@@ -39,6 +39,8 @@ l'épreuve :
     entrée porte son résumé (`summary`) et, quand il est écrit, son cours,
     une unité classique de la piste (`unit`, lancée depuis la fiche du
     traité ; `traite1` à `traite54`, d'après les notices de l'édition GF).
+    Pour écrire ou refondre le cours d'un traité, utiliser la skill
+    `cours-traite` (`.claude/skills/cours-traite/`), modèle : `traite7`.
   - **Textes** : une unité par texte étudié, qui fait savoir le citer
     (paragraphe par paragraphe, cartes-citation puis cartes-explication).
     Format et consignes dans `content/textes.md` ; pour en créer une,
