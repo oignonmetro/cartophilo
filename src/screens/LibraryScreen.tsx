@@ -499,7 +499,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                       done={doneNodes(unit, lessons, steps)}
                       onOpen={() => openUnit(unit)}
                       reader={readerOf(unit)}
-                      onReadNotes={hasNotes(unit) ? () => navigate(`/fiches/${unit.id}`) : undefined}
+                      onReadNotes={hasSeveralNotes(unit) ? () => navigate(`/fiches/${unit.id}`) : undefined}
                       compact
                     />
                   ))}
@@ -513,7 +513,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                   done={doneNodes(entry.unit, lessons, steps)}
                   onOpen={() => openUnit(entry.unit)}
                   reader={readerOf(entry.unit)}
-                  onReadNotes={hasNotes(entry.unit) ? () => navigate(`/fiches/${entry.unit.id}`) : undefined}
+                  onReadNotes={hasSeveralNotes(entry.unit) ? () => navigate(`/fiches/${entry.unit.id}`) : undefined}
                 />
               ),
             )}
@@ -709,8 +709,12 @@ function TrackSummary({ track, known, seen }: { track: Track; known: number; see
 }
 
 /** L'unité a-t-elle au moins un rappel à relire ? */
-function hasNotes(unit: Unit): boolean {
-  return unit.lessons.some((lesson) => 'notes' in lesson && Boolean(lesson.notes?.trim()))
+/**
+ * Le lecteur de fiches n'a d'intérêt que pour plusieurs fiches : avec une
+ * seule, on l'ouvre en touchant directement l'unité.
+ */
+function hasSeveralNotes(unit: Unit): boolean {
+  return unit.lessons.filter((lesson) => 'notes' in lesson && Boolean(lesson.notes?.trim())).length > 1
 }
 
 function UnitCard({
