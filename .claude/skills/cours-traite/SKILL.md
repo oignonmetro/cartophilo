@@ -181,19 +181,13 @@ et chaque marque a une fonction.
   (prémisses, membres d'une alternative, ce qu'établit chaque chapitre).
   Gras et souligné se combinent pour l'intitulé d'une étape
   (`__**Il est {coral}simple{/coral}.**__`).
-- **Couleurs, selon un code fixe** (il remplace, pour les cours de traités,
-  la règle générale des « deux ou trois couleurs au plus ») :
-  - `green` : la thèse que Plotin retient ;
-  - `red` : ce qu'il rejette, ou ce qui fait problème (les intermédiaires,
-    « reculer le problème », l'Un qui ne demeurerait pas en lui-même) ;
-  - `violet` : les termes techniques et notions clés (« deux actes »,
-    « conversion », « dyade », « le Premier ») ;
-  - `teal` : une citation de la GF ;
-  - `sky` : la structure du traité (« chapitre 1 », « chapitre 2 ») ;
-  - `coral` : les propriétés établies et les conclusions (« simple »,
-    « unique », « échappe au discours ») ;
-  - `pink`, `amber`, `yellow` : libres, pour une opposition ou une nuance
-    locale (une prémisse, une image, ce qu'on attribue et ce qu'on en dit).
+- **Couleurs** : le code fixe de `content/philosophie.md` (vert la thèse
+  retenue, rouge le rejeté ou ce qui fait problème, violet les termes
+  techniques, turquoise les citations, bleu ciel la structure, corail les
+  propriétés établies et conclusions ; rose, ambre, jaune libres). Au traité
+  7 : en rouge les intermédiaires et « reculer le problème », en violet
+  « deux actes », « conversion », « dyade », en corail « simple »,
+  « unique », « échappe au discours ».
 - **Grec** translittéré entre backticks dans le rappel (`noêsis`).
 - **Un tableau** quand une notion se compare sur deux axes. Ses exercices se
   choisissent au cas par cas (`tables:` dans la leçon, voir
@@ -220,10 +214,10 @@ apportent de savant.
   indéfinie », « provient de la réalité ».
 - **Le pivot de chaque étape**, la raison et pas seulement la conclusion
   (« composé, il dépendrait de ses ___ »).
-- **Plusieurs trous** quand les termes vont ensemble (« la ___ qui
-  refroidit et les ___ qui agissent », réponse « neige ; remèdes ») : le
-  moteur les gère (`splitGaps`), malgré la règle ancienne d'un seul `___`
-  dans `content/philosophie.md`.
+- **Plusieurs trous**, à titre exceptionnel et seulement par nécessité
+  syntaxique, quand deux termes coordonnés ne se trouent pas l'un sans
+  l'autre (« la ___ qui refroidit et les ___ qui agissent », réponse
+  « neige ; remèdes ») ; voir `content/philosophie.md`.
 - **Les renvois** à un autre traité avec les deux numérotations en réponse
   (« 10 (V, 1) », `alt: ["10", "V, 1"]`).
 
@@ -238,8 +232,8 @@ les mêmes d'une carte à l'autre.
 
 ### Les cartes tirées des notes de la GF
 
-Elles peuvent apprendre ce que le rappel ne dit pas : la carte suffit, à
-condition de tenir seule. Y puiser :
+Elles peuvent apprendre ce que le rappel ne dit pas, à condition de tenir
+seules et sans en abuser : l'essentiel passe par le rappel. Y puiser :
 - les **sources platoniciennes** que la note signale (le *Philèbe* et le Bien
   seul *hikanós*, 20b-c, 67a) ;
 - les **termes grecs** que la traduction rend (« parfait » rend *téléon*,

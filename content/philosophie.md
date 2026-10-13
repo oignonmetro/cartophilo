@@ -151,16 +151,20 @@ l'affichage.
    importantes aient été testées une à une. La répétition intégrale y est
    volontaire, elle ne compte pas comme redondance à élaguer.
 
-   > **Un seul `___` par `sentence`, toujours.** Le moteur (`splitGap`, voir
-   > `src/engine/exercises.ts`) ne trouve que le premier `___` d'une phrase :
-   > un second trou dans la même `sentence` s'affiche comme du texte figé,
-   > sans champ de saisie. Cette règle déborde donc la famille Citation : dès
-   > qu'une phrase source teste plusieurs informations à la fois (une
-   > énumération à plusieurs trous, deux termes grecs introduits ensemble,
-   > deux arguments cités côte à côte), la décliner en autant de points que
-   > de trous, chacun ne portant qu'un `___`, les autres blancs de la phrase
-   > d'origine étant remplis par leur vraie valeur. C'est la même méthode
-   > que pour une citation cascade, appliquée plus largement.
+   > **Un seul `___` par `sentence`, sauf nécessité syntaxique.** Une
+   > carte à plusieurs trous existe (le moteur les gère, voir `splitGaps`
+   > dans `src/engine/exercises.ts` : `answer` donne les réponses dans
+   > l'ordre, séparées par ` ; `), mais elle reste exceptionnelle : on n'y
+   > recourt que lorsque la phrase ne se laisse pas trouer en un seul point
+   > sans devenir fausse ou boiteuse (deux termes coordonnés qui ne se
+   > comprennent qu'ensemble : « la ___ qui refroidit et les ___ qui
+   > agissent », réponse « neige ; remèdes »). Sinon, dès qu'une phrase
+   > source teste plusieurs informations à la fois (une énumération, deux
+   > termes grecs introduits ensemble, deux arguments cités côte à côte), la
+   > décliner en autant de points que de trous, chacun ne portant qu'un
+   > `___`, les autres blancs de la phrase d'origine étant remplis par leur
+   > vraie valeur. C'est la même méthode que pour une citation cascade,
+   > appliquée plus largement.
 
 6. **Distinction** : `sentence` isole un pôle conceptuel par une question ou
    une phrase à trou (« Par opposition à la beauté libre, la beauté ___
@@ -246,7 +250,7 @@ un point superficiel ou complété de mémoire.
 Une lesson de grammaire n'affiche son rappel qu'une fois, avant tous ses
 points (contrairement au vocabulaire, la marque `===` de
 `content/README.md` n'y a pas d'effet de découpage). Ce rappel doit donc
-suffire à lui seul à situer tous les points de la lesson : c'est lui qui
+suffire à situer presque tous les points de la lesson : c'est lui qui
 porte la synthèse de la section du texte source, ses moments ou étapes, ses
 règles, et les pièges d'interprétation courants, en s'appuyant sur les
 mêmes conventions d'écriture que `content/README.md` documente
@@ -254,6 +258,14 @@ mêmes conventions d'écriture que `content/README.md` documente
 tableaux `| … | … |` pour une notion qui se divise selon deux axes, et les
 cinq marqueurs `` `terme` ``, `**gras**`, `__souligné__`, `*italique*`,
 `{couleur}texte{/couleur}`).
+
+**Une carte peut dépasser le rappel, avec modération.** Quelques points
+peuvent apprendre ce que le rappel ne dit pas : un détail savant tiré des
+notes de l'édition (une source platonicienne, le terme grec qu'une
+traduction rend, un renvoi à une autre œuvre, un débat de commentateurs).
+La carte doit alors tenir entièrement seule. Ce reste l'exception : l'essentiel
+de ce que la lesson fait apprendre passe par le rappel, et un lot de cartes
+qui s'en écarte presque toujours signale un rappel à compléter.
 
 **Un tableau devient un exercice.** Chaque tableau d'un rappel se rejoue
 juste après le rappel, avant les cartes, comme tableau à trous : une colonne entière à remplir depuis une
@@ -308,12 +320,26 @@ YAML. Corriger ou ajouter des rangées garde son historique ; changer son
 en-tête en fait un nouveau tableau, à réapprendre.
 
 **N'hésitez pas sur la mise en forme.** Un rappel purement en prose se lit
-mal à l'écran ; mettez en gras l'idée directrice de chaque paragraphe, et
-réservez une couleur à une opposition qui traverse tout le rappel (une thèse
-et l'objection qu'on lui oppose, un auteur et son commentateur) plutôt que de
-tout laisser au ton neutre. Vaut pour toute lesson écrite désormais, et pour
-les lessons déjà écrites : une relecture qui ajoute du gras et de la couleur
-à un rappel resté trop uniforme est toujours bienvenue.
+mal à l'écran : la mise en relief y est abondante, et chaque marque a une
+fonction. Le gras porte le contenu décisif (pas la formule qui l'introduit)
+et les conclusions ; le souligné, les propositions qui portent l'argument
+(prémisses, membres d'une alternative) ; les deux se combinent pour
+l'intitulé d'une étape. Les couleurs suivent un code fixe, le même dans tous
+les cours :
+
+- `green` : la thèse retenue par l'auteur ;
+- `red` : ce qu'il rejette, ou ce qui fait problème ;
+- `violet` : les termes techniques et notions clés ;
+- `teal` : une citation du texte étudié ;
+- `sky` : la structure de l'œuvre (parties, chapitres) ;
+- `coral` : les propriétés établies et les conclusions ;
+- `pink`, `amber`, `yellow` : libres, pour une opposition ou une nuance
+  locale (une prémisse, une image, un auteur et son commentateur).
+
+Ce code remplace la règle générale des « deux ou trois couleurs au plus » de
+`content/README.md`. Vaut pour toute lesson écrite désormais, et pour les
+lessons déjà écrites : une relecture qui ajoute du gras, du souligné et de
+la couleur à un rappel resté trop uniforme est toujours bienvenue.
 
 **« De nombreux rappels »** ne veut donc pas dire un rappel exceptionnellement
 long, mais **de nombreuses lessons**, chacune bornée à une section ou

@@ -158,6 +158,8 @@ retoucher l'une ne change pas l'autre. Utile pour opposer deux notions sur toute
 rappel (une thèse et l'objection qui lui répond, un auteur et son
 commentateur) plutôt qu'à l'intérieur d'une seule phrase, où le gras suffit
 déjà ; deux ou trois couleurs par rappel au plus, au-delà l'effet se perd.
+Les cours de philosophie suivent à la place le code de couleurs fixe de
+`content/philosophie.md`.
 Peut contenir du gras (`{amber}une **thèse** centrale{/amber}`), mais pas
 l'inverse : une couleur ne s'ouvre pas à l'intérieur d'un gras.
 
