@@ -1,0 +1,897 @@
+# Unité de texte (voir content/textes.md) : Plotin, traité 38 (VI, 7),
+# chapitre 32, traduction F. Fronterotta (GF, éd. L. Brisson et
+# J.-F. Pradeau), d'après la synthèse de l'argumentation fournie par
+# l'utilisateur et les notes 218 à 225 de la GF. Le chapitre n'est pas
+# découpé en paragraphes : trois moments repérés par leurs lignes, arguments
+# 1 à 12 de la synthèse en sections `=== k`. La mise en place, la question
+# et la thèse vont en introduction ; l'analyse de la structure et la
+# conclusion, qui suivent l'explication dans la synthèse, en prolongement.
+
+id: t38c32
+title: "Le principe sans forme (38 [VI, 7], 32)"
+subtitle: "Traité 38, Comment la multiplicité des idées s'est établie et sur le Bien, chapitre 32"
+icon: page
+color: coral
+intro: |-
+  Le chapitre 32 du traité 38 (VI, 7), dans la traduction de F. Fronterotta (GF). Parvenue dans la beauté des formes intelligibles, l'âme cherche d'où elle vient : le principe des formes est lui-même sans forme, sans grandeur, sans mesure et sans figure, il n'est aucun être et il est tous les êtres, et sa beauté est **une beauté au-delà de la beauté**, celle qui engendre la beauté.
+lessons:
+- id: t38c32-i1
+  title: "Le chapitre dans le traité"
+  notes: |-
+    **Le chapitre 32 ouvre la partie du traité 38 consacrée au Bien en lui-même : juste après la remontée de l'âme jusqu'au monde intelligible (chapitre 31), il cherche d'où viennent les formes et leur beauté.**
+
+    Le traité 38, trente-huitième dans l'ordre chronologique établi par Porphyre, est classé dans les *Ennéades* comme VI, 7, sous le titre *Comment la multiplicité des idées s'est établie et sur le Bien*. On le lit dans la traduction de F. Fronterotta (GF, édition dirigée par L. Brisson et J.-F. Pradeau). La notice le divise en trois parties de longueur voisine :
+
+    | Chapitres | Objet |
+    | 1-14 | le rapport du sensible et de l'intelligible, la nature de l'Intellect |
+    | 15-30 | le Bien à partir de ses « produits », comme source et objet de leur désir |
+    | 31-42 | le Bien en lui-même, cerné sur le mode de la négation |
+
+    La notice regroupe les chapitres 32 et 33 sous un intitulé : l'âme se dirige vers ce qui est **dépourvu de forme**, car c'est là la source de toute beauté et de tout désir.
+
+    Trois éléments de doctrine suffisent pour lire le texte. La réalité se distribue en **trois niveaux** qui procèdent les uns des autres : l'**Un**, aussi appelé le **Bien**, principe premier ; l'**Intellect**, qui contient la totalité des formes intelligibles (les modèles éternels de toutes choses) ; l'**âme**, qui anime le monde sensible. L'âme peut **remonter** de la beauté sensible à la beauté intelligible, puis au-delà : au début du chapitre, elle est déjà « dans cette beauté », dans le monde des formes. Enfin, Plotin pose l'**hétérogénéité de la cause et de l'effet** : ce qui donne n'a pas à posséder ce qu'il donne, et lui est supérieur (chapitre 17, 3-5). Le chapitre 32 applique ce principe à la forme, à la grandeur, à la mesure, à la figure et à la beauté.
+
+    ! Le chapitre ne nomme jamais l'Un ni le Bien : il ne dit que « le principe » ou « celui qui a produit ».
+  passage:
+    label: "Introduction"
+  points:
+  - id: t38c32-i1-1
+    sentence: "Le traité 38 est classé dans les *Ennéades* comme ___, 7."
+    answer: "VI"
+    alt: ["6"]
+  - id: t38c32-i1-2
+    sentence: "Titre du traité 38 : *Comment la multiplicité des ___ s'est établie et sur le Bien*."
+    answer: "idées"
+    alt: ["Idées"]
+  - id: t38c32-i1-3
+    sentence: "Le traité 38 se lit dans la GF dans la traduction de Francesco ___."
+    answer: "Fronterotta"
+    alt: []
+  - id: t38c32-i1-4
+    sentence: "Le traité 38 se divise en trois parties : chapitres 1-14 sur l'Intellect, 15-30 sur le Bien à partir de ses produits, 31-42 sur le Bien en lui-même, cerné sur le mode de la ___."
+    answer: "négation"
+    alt: []
+  - id: t38c32-i1-5
+    sentence: "Le chapitre 32 du traité 38 vient juste après la description de la ___ de l'âme (chapitre 31)."
+    answer: "remontée"
+    alt: []
+  - id: t38c32-i1-6
+    sentence: "Les chapitres 32 et 33 du traité 38 : l'âme se dirige vers ce qui est dépourvu de ___, source de toute beauté et de tout désir."
+    answer: "forme"
+    alt: []
+  - id: t38c32-i1-7
+    sentence: "Les trois niveaux de la réalité chez Plotin : l'Un ou le Bien, l'___, qui contient la totalité des formes intelligibles, et l'âme."
+    answer: "Intellect"
+    alt: []
+  - id: t38c32-i1-8
+    sentence: "Au début du chapitre 32 du traité 38, l'âme est déjà « dans cette beauté », c'est-à-dire dans le monde des ___."
+    answer: "formes"
+    alt: []
+  - id: t38c32-i1-9
+    sentence: "L'___ de la cause et de l'effet : ce qui donne n'a pas à posséder ce qu'il donne, et lui est supérieur (traité 38, chapitre 17)."
+    answer: "hétérogénéité"
+    alt: []
+- id: t38c32-i2
+  title: "La question, la thèse, la difficulté"
+  notes: |-
+    **La question : quelle doit être la nature du principe d'où viennent les formes intelligibles et leur beauté, pour qu'il puisse en être le principe ?**
+
+    Elle naît de la situation de l'âme qui, parvenue dans le monde intelligible, y contemple une beauté « répandue » sur des formes très variées. Elle s'inscrit dans un débat avec deux héritages. Le premier est **platonicien** : dans le *Banquet* et le *Phèdre*, la beauté éveille l'amour et conduit l'âme vers le haut ; dans *La République* (VI), le Bien est placé au-dessus de ce qu'il fait connaître ; dans la **première hypothèse** du *Parménide* (137c-142a), l'un est dit sans grandeur, sans limite et sans figure. Le second est la **doctrine platonicienne de la causalité** : une cause donnerait ce qu'elle possède elle-même, comme une forme donne aux choses sensibles la qualité qu'elle a. Appliquée au principe premier, elle en ferait une forme parmi les formes : c'est contre elle que le chapitre construit sa réponse.
+
+    **Thèse.** Le principe des formes et de leur beauté est lui-même sans forme, sans grandeur, sans mesure, sans figure et sans beauté formée, non parce qu'il lui manquerait quelque chose, mais parce qu'il produit tout cela et précède tout ce qu'il produit : il n'est aucun être et il est tous les êtres, et sa beauté, « au-delà de la beauté », est celle qui engendre la beauté. Ce qui donne la forme ne peut pas en avoir une, sous peine de n'être qu'une forme de plus ; et c'est cette absence même qui fait de lui l'objet du désir le plus haut.
+
+    **Problématique.** Comment ce qui n'a ni forme ni beauté peut-il être à la fois la source de toute forme et l'objet du désir le plus intense, sans que son absence de forme se confonde avec celle de la matière, qui est un manque, ni avec celle que la fin du chapitre attribue à la forme elle-même ? Trois points l'aggravent :
+
+    | Point | Difficulté |
+    | deux « sans forme » | l'absence de forme ne suffit pas à désigner le premier |
+    | l'objet sans figure, désirable au plus haut point | renverse sans la démontrer l'intuition qu'on aime ce qu'on se représente |
+    | la forme « en elle-même dépourvue de forme » | le critère qui séparait le principe des formes s'étend aux formes |
+
+    ! L'absence de forme du principe n'est pas un manque : c'est la condition pour qu'il donne la forme.
+  passage:
+    label: "Introduction"
+  points:
+  - id: t38c32-i2-1
+    sentence: "Question du chapitre 32 du traité 38 : quelle doit être la nature du ___ d'où viennent les formes intelligibles et leur beauté ?"
+    answer: "principe"
+    alt: []
+  - id: t38c32-i2-2
+    sentence: "Dans la ___ hypothèse du *Parménide* (137c-142a), l'un est dit sans grandeur, sans limite et sans figure."
+    answer: "première"
+    alt: ["1re"]
+  - id: t38c32-i2-3
+    sentence: "Dans le *Banquet* et le *___*, la beauté éveille l'amour et conduit l'âme vers le haut."
+    answer: "Phèdre"
+    alt: []
+  - id: t38c32-i2-4
+    sentence: "Selon la doctrine platonicienne de la ___, une cause donnerait ce qu'elle possède elle-même ; appliquée au premier principe, elle en ferait une forme parmi les formes."
+    answer: "causalité"
+    alt: []
+  - id: t38c32-i2-5
+    sentence: "Thèse du chapitre 32 du traité 38 : ce qui donne la forme ne peut pas en avoir une, sous peine de n'être qu'une forme de ___."
+    answer: "plus"
+    alt: []
+  - id: t38c32-i2-6
+    sentence: "L'absence de forme du principe n'est pas un manque comme celle de la ___."
+    answer: "matière"
+    alt: []
+  - id: t38c32-i2-7
+    sentence: "Le chapitre 32 du traité 38 renverse sans la démontrer l'intuition commune selon laquelle on aime ce qu'on peut se ___."
+    answer: "représenter"
+    alt: []
+  - id: t38c32-i2-8
+    sentence: "Dernière difficulté du chapitre 32 : si la forme est « en elle-même dépourvue de forme », l'absence de forme cesse d'être le ___ du principe."
+    answer: "propre"
+    alt: []
+- id: t38c32-m1
+  title: "Le principe des formes est sans forme"
+  notes: |-
+    **Le principe des formes est sans forme : ni une forme, ni une puissance déterminée, ni leur ensemble ne peut l'être ; il est le « sans forme » dont provient toute forme, il n'est aucun être et il est tous les êtres.**
+
+    | Extrait | Argument | Ce qu'il fait |
+    | 1 | 1 | transformer le plaisir de l'âme devant les formes en question causale |
+    | 2 | 2 | exclure une forme, une puissance déterminée, leur ensemble |
+    | 3 | 3, 4 | distinguer deux « sans forme » ; ce qui n'a pas été produit n'est pas déterminé |
+    | 4 | 5 | il n'est aucun être et il est tous les êtres |
+
+    Le moment va d'une question à une position, puis d'une position à une formule. L'ordre d'exposition ne suit pas l'ordre de fondation : la distinction (3) est énoncée avant sa raison (4), qui porte la charge de la preuve. Sa faiblesse tient à deux prémisses non dites : qu'une partie ne peut être principe du tout, et que toute détermination vient d'une production. Il installe pour la suite la règle qui servira deux fois encore : **ce qui produit une propriété ne la possède pas**.
+
+    ! L'absence de forme du principe est celle de ce qui donne, non celle de ce qui reçoit.
+
+    === 1 Argument 1 : la beauté des formes renvoie à une origine qu'il faut chercher
+
+    **L'âme qui se trouve dans la beauté des formes doit se demander d'où viennent ces formes et d'où vient leur beauté.** La question d'ouverture suppose déjà sa réponse partielle : la beauté et la vie intelligibles ont été « produites » par quelqu'un. Ce quelqu'un est le **principe** (*arkhè*), ce dont une chose vient et dont elle dépend, comme un ruisseau de sa source : l'Un ou le Bien, que le chapitre ne nomme jamais autrement que « le principe » ou « celui qui a produit ». Ce choix n'est pas indifférent, car nommer, c'est déjà déterminer.
+
+    La production des formes n'est pas démontrée ici, elle est posée comme point de départ, dans la continuité du chapitre 31. La concession (« Il est beau, certes, de rester dans cette beauté ») fixe la fonction du passage : il ne condamne pas la contemplation des formes, il interdit de **s'y arrêter**. Un visiteur ébloui par une galerie de tableaux peut rester devant eux ; s'il veut comprendre d'où ils viennent, il doit chercher le peintre, qui n'est accroché à aucun mur.
+
+    ! L'argument est une exigence de méthode, pas une preuve.
+
+    === 2 Argument 2 : ni une forme, ni une puissance, ni leur ensemble
+
+    **Le principe des formes ne peut être ni l'une d'entre elles, ni une puissance déterminée, ni la totalité des formes et des puissances : il est au-delà.** Trois exclusions. Une forme particulière serait « une partie de l'ensemble » : la prémisse implicite est qu'une partie ne peut être principe du tout dont elle fait partie, puisqu'elle aurait alors besoin d'être expliquée comme les autres. Une **puissance** (*dunamis*) est une capacité de produire ; elle est **déterminée** lorsqu'elle est bornée à un type d'effet, comme la chaleur du feu, qui réchauffe sans pouvoir rafraîchir : une chose bornée parmi d'autres. L'**ensemble** des formes et des puissances, enfin, est exclu à son tour : c'est l'exclusion la plus décisive, car on croirait que le tout pourrait être principe si aucun élément ne l'est. Elle se comprend par la même prémisse, puisque l'ensemble « vient à l'être » avec ses parties et se trouve « là-haut », au même niveau qu'elles. Ce « là-haut » est l'**Intellect** (*noûs*), qui contient la totalité des formes : chercher le principe au-delà de l'ensemble des formes, c'est le chercher au-delà de l'Intellect.
+
+    La conclusion est modale (« il faut que ce principe soit au-delà ») : elle établit une position sans dire ce que le principe est. Le mot traduit par « forme » est *morphè*, qui signifie d'ordinaire « figure », le contour visible, et non *eidos* ; la note 218 précise que le sens paraît identique et que c'est la **forme intelligible** qui est visée. Ce flottement prépare la suite, où Plotin refusera aussi au principe la « figure » au sens propre.
+
+    ! Le principe n'est pas la somme des formes : le tout est encore au niveau de ses parties.
+
+    === 3 Arguments 3 et 4 : deux « sans forme » ; ce qui n'a pas été produit n'est pas déterminé
+
+    **Le principe est « sans forme », non au sens de ce qui a besoin d'une forme, mais au sens de ce dont provient toute forme intelligible.** La distinction n'est pas démontrée, elle lève l'ambiguïté créée par l'argument 2 : au-delà de toute forme, le principe pourrait sembler informe comme la matière. Le **« sans forme »** (*amorphon*) se dit en deux sens. Le premier est **privatif** : la matière attend une forme, comme un bloc de marbre brut n'est pas encore une statue. Le second est d'**antériorité** : le sculpteur n'a pas la forme de la statue qu'il produit, et ce n'est pas un défaut, puisque c'est lui qui la donne. La note 219 le dit : être dépourvu de beauté et de forme n'est pas pour le principe un manque, mais la condition pour qu'il donne la beauté et la forme.
+
+    **Argument 4.** Son « car » justifie après coup la distinction. « **Venir à l'être** » signifie provenir d'un principe (l'Intellect de l'Un, l'âme de l'Intellect) : une dépendance, non un commencement dans le temps. Une « **chose déterminée** » (*ti*, « quelque chose ») est ce qu'on peut désigner et définir. Être produit, c'est devenir déterminé ; or le principe n'a été produit par personne (ce qui découle de sa position de premier) ; il n'a donc pas été produit comme une chose déterminée. L'argument montre que le principe n'a pas reçu de détermination par production, non que rien d'autre ne pourrait le déterminer : la prémisse implicite est que **toute détermination vient d'une production**.
+
+    Le texte grec est incertain (note 219). Fronterotta traduit une **conjecture** (une correction moderne d'un texte transmis jugé fautif), celle de Henry et Schwyzer, *[ti] tis an poièseien* ; Theiler corrige plutôt le *tis* des manuscrits en *ti* (« comment pourrait-il avoir été produit comme une chose déterminée ? » ; voir Hadot, p. 166, note 280). L'enjeu est le mot *ti*, et le sens reste le même.
+
+    ! L'ordre d'exposition n'est pas l'ordre de fondation : la distinction des deux « sans forme » est énoncée avant sa raison.
+
+    === 4 Argument 5 : il n'est aucun être et il est tous les êtres
+
+    **Le principe n'est aucun être, parce que les êtres viennent après lui, et il est tous les êtres, parce qu'ils viennent tous de lui.** La formule n'est pas une contradiction : ses deux membres ne portent pas sur le même rapport, et chacun a sa raison. L'**être**, chez Plotin, désigne ce qui est pleinement, les réalités intelligibles déterminées, non le simple fait d'exister : n'être aucun être, ce n'est pas ne pas exister, c'est ne compter pas parmi ces réalités. Le premier membre dit l'**antériorité** (ce qui vient après n'est pas ce qui précède), le second la **provenance** : il contient tous les êtres comme une source contient tous les ruisseaux qui en sortent, sans être aucun d'eux. Il est tout comme origine et rien comme résultat.
+
+    La note 219 rattache la formule au chapitre 17 (3-6) et à l'**hétérogénéité de la cause et de l'effet** : une cause identique à son effet ne s'en distinguerait pas, et ne pourrait pas en être la cause. « Il est tous les êtres » n'est pas démontré au-delà de la provenance ; c'est une façon de parler que la théologie négative de la troisième partie du traité tiendra pour approximative.
+
+    ! « Il n'est aucun être » ne veut pas dire qu'il n'existe pas.
+  passage:
+    label: "l. 1-14"
+    text: "Où se trouve donc celui qui a produit une si grande beauté et une vie si puissante, lui qui a engendré l'être ? Tu vois la beauté répandue sur toutes ces formes qui sont si variées. Il est beau, certes, de rester dans cette beauté, mais lorsque l'on est dans cette beauté, il faut regarder d'où viennent ces formes et d'où vient leur beauté. Aucune d'entre elles ne peut être leur principe, car ce serait une forme particulière et une partie de l'ensemble qu'elles constituent. Il ne peut être ni une forme comme celles dont on vient de parler, ni une puissance déterminée, ni l'ensemble des formes et des puissances qui sont venues à l'être et qui se trouvent là-haut, mais il faut que ce principe soit au-delà de toutes les puissances et de toutes les formes. Le principe est donc le « sans forme », non le « sans forme » qui a besoin d'une forme, mais celui dont provient toute forme intelligible. Car celui qui est venu à l'être, s'il est bien venu à l'être, est devenu quelque chose de déterminé et qui possède une forme propre ; ce qui n'a pas été produit par personne, comment aurait-il été produit comme une chose déterminée ? Il n'est donc aucun être et il est tous les êtres : il n'est aucun être parce que les êtres viennent après lui, mais il est tous les êtres parce que tous viennent de lui."
+  points:
+  - id: t38c32-m1-1
+    fragment: "1/4"
+    sentence: "« Où se trouve donc celui qui a produit ___, lui qui a engendré l'être ? Tu vois la beauté répandue sur toutes ces formes qui sont si variées. Il est beau, certes, de rester dans cette beauté, mais lorsque l'on est dans cette beauté, il faut regarder d'où viennent ces formes et d'où vient leur beauté. »"
+    answer: "une si grande beauté et une vie si puissante"
+    alt: []
+  - id: t38c32-m1-2
+    fragment: "1/4"
+    sentence: "« Où se trouve donc celui qui a produit une si grande beauté et une vie si puissante, ___ ? Tu vois la beauté répandue sur toutes ces formes qui sont si variées. Il est beau, certes, de rester dans cette beauté, mais lorsque l'on est dans cette beauté, il faut regarder d'où viennent ces formes et d'où vient leur beauté. »"
+    answer: "lui qui a engendré l'être"
+    alt: []
+  - id: t38c32-m1-3
+    fragment: "1/4"
+    sentence: "« Où se trouve donc celui qui a produit une si grande beauté et une vie si puissante, lui qui a engendré l'être ? Tu vois ___ sur toutes ces formes qui sont si variées. Il est beau, certes, de rester dans cette beauté, mais lorsque l'on est dans cette beauté, il faut regarder d'où viennent ces formes et d'où vient leur beauté. »"
+    answer: "la beauté répandue"
+    alt: []
+  - id: t38c32-m1-4
+    fragment: "1/4"
+    sentence: "« Où se trouve donc celui qui a produit une si grande beauté et une vie si puissante, lui qui a engendré l'être ? Tu vois la beauté répandue sur toutes ces formes qui sont si variées. ___, mais lorsque l'on est dans cette beauté, il faut regarder d'où viennent ces formes et d'où vient leur beauté. »"
+    answer: "Il est beau, certes, de rester dans cette beauté"
+    alt: []
+  - id: t38c32-m1-5
+    fragment: "1/4"
+    sentence: "« Où se trouve donc celui qui a produit une si grande beauté et une vie si puissante, lui qui a engendré l'être ? Tu vois la beauté répandue sur toutes ces formes qui sont si variées. Il est beau, certes, de rester dans cette beauté, mais lorsque l'on est dans cette beauté, il faut regarder ___ et ___. »"
+    answer: "d'où viennent ces formes ; d'où vient leur beauté"
+    alt: []
+  - id: t38c32-m1-6
+    sentence: "Le principe (*___*) est ce dont une chose vient et dont elle dépend, comme un ruisseau de sa source."
+    answer: "arkhè"
+    alt: ["arkhê", "archè"]
+  - id: t38c32-m1-7
+    sentence: "Au chapitre 32 du traité 38, l'Un n'est jamais ___ : Plotin ne dit que « le principe » ou « celui qui a produit »."
+    answer: "nommé"
+    alt: []
+  - id: t38c32-m1-8
+    sentence: "Ne pas nommer le principe n'est pas indifférent : nommer, c'est déjà ___."
+    answer: "déterminer"
+    alt: []
+  - id: t38c32-m1-9
+    sentence: "« Il est beau, certes, de rester dans cette beauté » : Plotin ne condamne pas la contemplation des formes, il interdit de s'y ___."
+    answer: "arrêter"
+    alt: []
+  - id: t38c32-m1-10
+    sentence: "Le visiteur ébloui par une galerie de tableaux doit chercher le ___, qui n'est accroché à aucun mur."
+    answer: "peintre"
+    alt: []
+  - id: t38c32-m1-11
+    sentence: "L'argument d'ouverture du chapitre 32 est une exigence de ___, pas une preuve : il transforme le plaisir esthétique en question causale."
+    answer: "méthode"
+    alt: []
+  - id: t38c32-m1-12
+    fragment: "2/4"
+    sentence: "« Aucune d'entre elles ne peut être leur principe, car ce serait ___. Il ne peut être ni une forme comme celles dont on vient de parler, ni une puissance déterminée, ni l'ensemble des formes et des puissances qui sont venues à l'être et qui se trouvent là-haut, mais il faut que ce principe soit au-delà de toutes les puissances et de toutes les formes. »"
+    answer: "une forme particulière et une partie de l'ensemble qu'elles constituent"
+    alt: []
+  - id: t38c32-m1-13
+    fragment: "2/4"
+    sentence: "« Aucune d'entre elles ne peut être leur principe, car ce serait une forme particulière et une partie de l'ensemble qu'elles constituent. Il ne peut être ___ comme celles dont on vient de parler, ___, ___ qui sont venues à l'être et qui se trouvent là-haut, mais il faut que ce principe soit au-delà de toutes les puissances et de toutes les formes. »"
+    answer: "ni une forme ; ni une puissance déterminée ; ni l'ensemble des formes et des puissances"
+    alt: []
+  - id: t38c32-m1-14
+    fragment: "2/4"
+    sentence: "« Aucune d'entre elles ne peut être leur principe, car ce serait une forme particulière et une partie de l'ensemble qu'elles constituent. Il ne peut être ni une forme comme celles dont on vient de parler, ni une puissance déterminée, ni l'ensemble des formes et des puissances qui sont venues à l'être et qui se trouvent ___, mais il faut que ce principe soit au-delà de toutes les puissances et de toutes les formes. »"
+    answer: "là-haut"
+    alt: []
+  - id: t38c32-m1-15
+    fragment: "2/4"
+    sentence: "« Aucune d'entre elles ne peut être leur principe, car ce serait une forme particulière et une partie de l'ensemble qu'elles constituent. Il ne peut être ni une forme comme celles dont on vient de parler, ni une puissance déterminée, ni l'ensemble des formes et des puissances qui sont venues à l'être et qui se trouvent là-haut, mais il faut que ce principe soit ___. »"
+    answer: "au-delà de toutes les puissances et de toutes les formes"
+    alt: []
+  - id: t38c32-m1-16
+    sentence: "Prémisse implicite de l'exclusion d'une forme particulière : une ___ ne peut être principe du tout dont elle fait partie."
+    answer: "partie"
+    alt: []
+  - id: t38c32-m1-17
+    sentence: "Une puissance (*___*) est, chez Plotin, une capacité de produire."
+    answer: "dunamis"
+    alt: ["dúnamis"]
+  - id: t38c32-m1-18
+    sentence: "Une puissance est ___ lorsqu'elle est bornée à un type d'effet, comme la chaleur du feu, qui réchauffe sans pouvoir rafraîchir."
+    answer: "déterminée"
+    alt: []
+  - id: t38c32-m1-19
+    sentence: "L'exclusion la plus décisive est celle de l'___ des formes et des puissances : le tout vient à l'être avec ses parties."
+    answer: "ensemble"
+    alt: []
+  - id: t38c32-m1-20
+    sentence: "Le « là-haut » où se trouvent les formes est l'___ : chercher le principe au-delà des formes, c'est le chercher au-delà de lui."
+    answer: "Intellect"
+    alt: []
+  - id: t38c32-m1-21
+    sentence: "La conclusion « il faut que ce principe soit au-delà » est ___ : elle établit une position sans dire ce que le principe est."
+    answer: "modale"
+    alt: []
+  - id: t38c32-m1-22
+    sentence: "Le mot traduit par « forme » au chapitre 32 est *___*, qui signifie d'ordinaire « figure », et non *eidos*."
+    answer: "morphè"
+    alt: ["morphê", "morphḗ"]
+  - id: t38c32-m1-23
+    sentence: "D'après la note 218, *morphè* désigne ici la forme ___."
+    answer: "intelligible"
+    alt: []
+  - id: t38c32-m1-24
+    fragment: "3/4"
+    sentence: "« Le principe est donc le « sans forme », non le « sans forme » ___, mais celui dont provient toute forme intelligible. Car celui qui est venu à l'être, s'il est bien venu à l'être, est devenu quelque chose de déterminé et qui possède une forme propre ; ce qui n'a pas été produit par personne, comment aurait-il été produit comme une chose déterminée ? »"
+    answer: "qui a besoin d'une forme"
+    alt: []
+  - id: t38c32-m1-25
+    fragment: "3/4"
+    sentence: "« Le principe est donc le « sans forme », non le « sans forme » qui a besoin d'une forme, mais ___. Car celui qui est venu à l'être, s'il est bien venu à l'être, est devenu quelque chose de déterminé et qui possède une forme propre ; ce qui n'a pas été produit par personne, comment aurait-il été produit comme une chose déterminée ? »"
+    answer: "celui dont provient toute forme intelligible"
+    alt: []
+  - id: t38c32-m1-26
+    fragment: "3/4"
+    sentence: "« Le principe est donc le « sans forme », non le « sans forme » qui a besoin d'une forme, mais celui dont provient toute forme intelligible. Car celui qui est venu à l'être, s'il est bien venu à l'être, est devenu ___ ; ce qui n'a pas été produit par personne, comment aurait-il été produit comme une chose déterminée ? »"
+    answer: "quelque chose de déterminé et qui possède une forme propre"
+    alt: []
+  - id: t38c32-m1-27
+    fragment: "3/4"
+    sentence: "« Le principe est donc le « sans forme », non le « sans forme » qui a besoin d'une forme, mais celui dont provient toute forme intelligible. Car celui qui est venu à l'être, s'il est bien venu à l'être, est devenu quelque chose de déterminé et qui possède une forme propre ; ___, comment aurait-il été produit comme une chose déterminée ? »"
+    answer: "ce qui n'a pas été produit par personne"
+    alt: []
+  - id: t38c32-m1-28
+    fragment: "3/4"
+    sentence: "« Le principe est donc le « sans forme », non le « sans forme » qui a besoin d'une forme, mais celui dont provient toute forme intelligible. Car celui qui est venu à l'être, s'il est bien venu à l'être, est devenu quelque chose de déterminé et qui possède une forme propre ; ce qui n'a pas été produit par personne, comment aurait-il été produit ___ ? »"
+    answer: "comme une chose déterminée"
+    alt: []
+  - id: t38c32-m1-29
+    sentence: "Le « sans forme » se dit en grec *___*."
+    answer: "amorphon"
+    alt: []
+  - id: t38c32-m1-30
+    sentence: "Le « sans forme » de la matière est ___ : elle attend une forme, comme le marbre brut n'est pas encore une statue."
+    answer: "privatif"
+    alt: []
+  - id: t38c32-m1-31
+    sentence: "Le « sans forme » du principe est un « sans forme » d'___ : le sculpteur n'a pas la forme de la statue qu'il donne."
+    answer: "antériorité"
+    alt: []
+  - id: t38c32-m1-32
+    sentence: "Être dépourvu de beauté et de forme n'est pas pour le principe un manque, mais la ___ pour qu'il donne la beauté et la forme (note 219)."
+    answer: "condition"
+    alt: []
+  - id: t38c32-m1-33
+    sentence: "« Venir à l'être » signifie provenir d'un principe : une ___, non un commencement dans le temps."
+    answer: "dépendance"
+    alt: []
+  - id: t38c32-m1-34
+    sentence: "Une « chose déterminée » se dit en grec *___*, « quelque chose » : ce qu'on peut désigner et définir."
+    answer: "ti"
+    alt: []
+  - id: t38c32-m1-35
+    sentence: "Prémisse implicite de « comment aurait-il été produit comme une chose déterminée ? » : toute détermination vient d'une ___."
+    answer: "production"
+    alt: []
+  - id: t38c32-m1-36
+    sentence: "En traité 38, 32, 13, Fronterotta traduit une ___, correction moderne de Henry et Schwyzer : *[ti] tis an poièseien*."
+    answer: "conjecture"
+    alt: []
+  - id: t38c32-m1-37
+    sentence: "En traité 38, 32, 13, ___ corrige plutôt le *tis* des manuscrits en *ti* ; l'enjeu est le mot *ti*, le sens reste le même."
+    answer: "Theiler"
+    alt: []
+  - id: t38c32-m1-38
+    fragment: "4/4"
+    sentence: "« ___ : il n'est aucun être parce que les êtres viennent après lui, mais il est tous les êtres parce que tous viennent de lui. »"
+    answer: "Il n'est donc aucun être et il est tous les êtres"
+    alt: []
+  - id: t38c32-m1-39
+    fragment: "4/4"
+    sentence: "« Il n'est donc aucun être et il est tous les êtres : il n'est aucun être ___, mais il est tous les êtres ___. »"
+    answer: "parce que les êtres viennent après lui ; parce que tous viennent de lui"
+    alt: []
+  - id: t38c32-m1-40
+    sentence: "« Il n'est aucun être et il est tous les êtres » n'est pas une contradiction : ses deux membres ne portent pas sur le même ___."
+    answer: "rapport"
+    alt: []
+  - id: t38c32-m1-41
+    sentence: "Chez Plotin, l'« être » désigne les réalités intelligibles ___, non le simple fait d'exister."
+    answer: "déterminées"
+    alt: []
+  - id: t38c32-m1-42
+    sentence: "« Il n'est aucun être » dit l'antériorité ; « il est tous les êtres », la ___."
+    answer: "provenance"
+    alt: []
+  - id: t38c32-m1-43
+    sentence: "Le principe est tous les êtres comme une ___ contient tous les ruisseaux qui en sortent, sans être aucun d'eux."
+    answer: "source"
+    alt: []
+  - id: t38c32-m1-44
+    sentence: "Le principe est tout comme origine et rien comme ___."
+    answer: "résultat"
+    alt: []
+  - id: t38c32-m1-45
+    sentence: "« Il n'est aucun être et il est tous les êtres » renvoie à la conception de la causalité exposée au chapitre ___ du traité 38."
+    answer: "17"
+    alt: ["dix-sept"]
+  - id: t38c32-m1-46
+    sentence: "« Il est tous les êtres » est une façon de parler que la théologie ___ de la troisième partie du traité 38 tiendra pour approximative."
+    answer: "négative"
+    alt: []
+- id: t38c32-m2
+  title: "Ni grandeur, ni mesure, ni figure"
+  notes: |-
+    **Le principe se tient hors de tout l'ordre quantitatif, et non à l'une de ses extrémités : illimité, il n'a aucune grandeur ; sa « grandeur » est puissance ; il n'a ni mesure ni absence de mesure, donc pas de figure.**
+
+    | Extrait | Argument | Ce qu'il fait |
+    | 1 | 6 | illimité, il n'a aucune grandeur, puisqu'il la produit |
+    | 2 | 7 | sa « grandeur » est puissance, non quantité ; rien ne lui est égal |
+    | 3 | 8 | ni mesure ni absence de mesure, donc pas de figure |
+
+    La note 225 rattache ce moment à une terminologie venue du livre VI de *La République* et du *Parménide* : le principe est dépourvu de **grandeur** (*megethos*), de **limite** (*peras*), de **mesure** (*metron*) et de **forme** (*morphè*). La raison commune : puisqu'il produit toutes choses et leur donne toutes leurs propriétés, il ne possède aucune d'entre elles, sous peine d'être l'une d'entre elles. La logique est **cumulative** plutôt que déductive (pas de figure parce que pas de mesure, pas de mesure parce que pas de grandeur), et toutes les négations reposent sur la prémisse d'hétérogénéité, qui n'est pas redémontrée. L'apport propre du moment est un **déplacement de sens** : le mot « grandeur » n'est pas abandonné, il est converti en puissance ; il installe une manière de parler, garder les mots et en changer le sens, plutôt que de se taire.
+
+    ! Se représenter le principe comme une immensité, un ciel sans bord, une lumière infiniment étendue, c'est encore lui prêter une grandeur.
+
+    === 1 Argument 6 : illimité, il n'a aucune grandeur, car il produit la grandeur
+
+    **Le principe doit être dit illimité, et ce qui est illimité n'a pas de grandeur, puisque la grandeur n'appartient qu'aux choses qui viennent après lui et qu'il la produit.** Le passage s'ouvre sur la question d'un interlocuteur : la puissance de tout produire semble appeler la plus grande des grandeurs. La réponse procède par **auto-correction**. La **grandeur** (*megethos*) est l'étendue d'une chose, ce par quoi elle occupe un espace et se compare à d'autres ; la note 220 en fait une dimension propre aux réalités sensibles, qui existent dans l'extension et l'espace. L'**illimité** (*apeiros*, ligne 15), mot du *Parménide* (137d7), désigne ce qui n'a pas de limite. Plotin accepte le mot mais en corrige l'usage attendu : l'illimité n'est pas une grandeur démesurée, il n'a « aucune grandeur ».
+
+    Deux raisons : la grandeur « ne réside que dans les choses qui viennent après lui » (localisation) ; et « s'il doit produire la grandeur, c'est qu'il ne peut avoir de grandeur » (hétérogénéité de la cause et de l'effet, posée au chapitre 17 et non répétée ici). Un point n'est pas une très petite ligne, et l'origine d'un repère n'est pas une longueur ; c'est pourtant à partir d'elle qu'on mesure toutes les longueurs.
+
+    ! L'illimité n'est pas le plus grand des grands : il n'appartient pas à l'ordre des grandeurs.
+
+    === 2 Argument 7 : sa « grandeur » est puissance, non quantité
+
+    **La grandeur qu'on peut encore lui reconnaître ne consiste pas en une quantité, mais en ce que rien n'est plus puissant que lui ni à sa hauteur.** Première étape, entre parenthèses : même « la grandeur de l'être n'est pas une quantité ». « L'être » peut désigner le principe lui-même ou l'être intelligible, l'Intellect ; la note 220 favorise la seconde lecture lorsqu'elle rappelle que les réalités intelligibles qui proviennent en premier lieu du principe ont une grandeur non quantitative. On aurait alors un argument **a fortiori** : si déjà l'Intellect n'est pas grand au sens de la quantité, le principe l'est encore moins. Le texte ne tranche pas.
+
+    Seconde étape : « Sa grandeur consiste dans le fait qu'il n'y a rien qui soit plus puissant que lui. » Le mot « grandeur » est conservé, mais son sens est déplacé de la quantité vers la **puissance** : sa « grandeur illimitée » ne peut consister, en un sens figuré, qu'en la **puissance infinie** qui le situe au-delà de la mesure (note 220). La justification est une **question rhétorique** : à quoi pourrait être égal ce qui n'a « aucun trait identique » avec les choses ? On ne compare deux choses que sous un rapport commun (deux arbres par leur hauteur, deux sons par leur intensité) ; le principe n'a rien de commun avec ce qui vient de lui, il échappe donc à toute comparaison, et par là à toute égalité.
+
+    ! La lecture de « la grandeur de l'être » comme grandeur de l'Intellect est un choix de lecture, que le texte ne tranche pas.
+
+    === 3 Argument 8 : ni mesure ni absence de mesure, donc pas de figure
+
+    **Le fait d'être toujours et d'être toutes choses ne lui confère ni mesure ni absence de mesure ; il n'a donc pas non plus de figure.** « Ni mesure ni absence de mesure » (*ou metron autôi*, ligne 22) écarte les deux branches d'une alternative qu'on croirait exhaustive. La **mesure** (*metron*) est l'étalon par lequel on évalue une grandeur, comme le mètre pour une longueur. Être mesuré, c'est se laisser évaluer par un étalon ; être démesuré, c'est encore dépasser un étalon qu'on applique : dans les deux cas on reste dans l'**ordre de la mesure**, et c'est cet ordre entier que le principe ne rejoint pas.
+
+    « Comment dès lors pourrait-il mesurer les autres choses ? » Le chapitre ne dit pas comment il les mesure ; la note 220 propose d'en faire, précisément parce qu'il est au-delà de la mesure, l'**unité de mesure** de toutes choses. C'est l'interprétation du traducteur.
+
+    Le « donc » qui conclut à l'absence de **figure** (*skhèma* ; *Parménide* 137d8, note 221 ; *mète skhèma mète morphèn*, lignes 24-25) suppose une prémisse implicite : la figure est le contour d'une chose (le triangle d'une voile, le cercle d'une roue), donc une grandeur délimitée et mesurable. Plotin reprend à la lettre la série négative de la première hypothèse du *Parménide*, qu'il lit comme une description du premier principe (la notice renvoie aux traités 9 et 10).
+
+    ! « Comment dès lors pourrait-il mesurer les autres choses ? » reste sans réponse explicite : c'est le point faible du moment.
+  passage:
+    label: "l. 14-24"
+    text: "– Puisqu'il peut produire toutes choses, quelle grandeur devrait-il avoir ? – Il faudrait dire qu'il est « illimité », mais, s'il était illimité, il n'aurait aucune grandeur. Car la grandeur ne réside que dans les choses qui viennent après lui ; et s'il doit produire la grandeur, c'est qu'il ne peut avoir de grandeur. En outre, la grandeur de l'être n'est pas une quantité (sinon il y aurait quelque chose qui, venant après lui, pourrait aussi avoir la grandeur). Sa grandeur consiste dans le fait qu'il n'y a rien qui soit plus puissant que lui, rien qui soit à sa hauteur : car à quoi parmi ce qui lui appartient pourrait être égal ce qui n'a aucun trait identique avec lui ? Aussi le fait qu'il est toujours et qu'il est toutes choses ne lui confèrent ni mesure ni absence de mesure. Comment dès lors pourrait-il mesurer les autres choses ? Il n'a donc pas non plus de « figure »."
+  points:
+  - id: t38c32-m2-1
+    fragment: "1/3"
+    sentence: "« – Puisqu'il peut produire toutes choses, ___ ? – Il faudrait dire qu'il est « illimité », mais, s'il était illimité, il n'aurait aucune grandeur. Car la grandeur ne réside que dans les choses qui viennent après lui ; et s'il doit produire la grandeur, c'est qu'il ne peut avoir de grandeur. »"
+    answer: "quelle grandeur devrait-il avoir"
+    alt: []
+  - id: t38c32-m2-2
+    fragment: "1/3"
+    sentence: "« – Puisqu'il peut produire toutes choses, quelle grandeur devrait-il avoir ? – Il faudrait dire qu'il est ___, mais, s'il était illimité, il n'aurait aucune grandeur. Car la grandeur ne réside que dans les choses qui viennent après lui ; et s'il doit produire la grandeur, c'est qu'il ne peut avoir de grandeur. »"
+    answer: "« illimité »"
+    alt: []
+  - id: t38c32-m2-3
+    fragment: "1/3"
+    sentence: "« – Puisqu'il peut produire toutes choses, quelle grandeur devrait-il avoir ? – Il faudrait dire qu'il est « illimité », mais, s'il était illimité, ___. Car la grandeur ne réside que dans les choses qui viennent après lui ; et s'il doit produire la grandeur, c'est qu'il ne peut avoir de grandeur. »"
+    answer: "il n'aurait aucune grandeur"
+    alt: []
+  - id: t38c32-m2-4
+    fragment: "1/3"
+    sentence: "« – Puisqu'il peut produire toutes choses, quelle grandeur devrait-il avoir ? – Il faudrait dire qu'il est « illimité », mais, s'il était illimité, il n'aurait aucune grandeur. Car la grandeur ne réside que ___ ; et s'il doit produire la grandeur, c'est qu'il ne peut avoir de grandeur. »"
+    answer: "dans les choses qui viennent après lui"
+    alt: []
+  - id: t38c32-m2-5
+    fragment: "1/3"
+    sentence: "« – Puisqu'il peut produire toutes choses, quelle grandeur devrait-il avoir ? – Il faudrait dire qu'il est « illimité », mais, s'il était illimité, il n'aurait aucune grandeur. Car la grandeur ne réside que dans les choses qui viennent après lui ; et ___. »"
+    answer: "s'il doit produire la grandeur, c'est qu'il ne peut avoir de grandeur"
+    alt: []
+  - id: t38c32-m2-6
+    sentence: "Le principe est dépourvu de grandeur (*megethos*), de limite (*peras*), de mesure (*metron*) et de forme : une terminologie venue de *La République* VI et du *___* (note 225)."
+    answer: "Parménide"
+    alt: []
+  - id: t38c32-m2-7
+    sentence: "La logique de l'argumentation sur la grandeur, la mesure et la figure est ___ plutôt que déductive."
+    answer: "cumulative"
+    alt: []
+  - id: t38c32-m2-8
+    sentence: "La question « quelle grandeur devrait-il avoir ? » est posée par un ___."
+    answer: "interlocuteur"
+    alt: []
+  - id: t38c32-m2-9
+    sentence: "La réponse à « quelle grandeur devrait-il avoir ? » procède par ___ : Plotin accepte le mot « illimité » mais en corrige l'usage attendu."
+    answer: "auto-correction"
+    alt: []
+  - id: t38c32-m2-10
+    sentence: "Pour la note 220, la grandeur est une dimension propre aux réalités ___, qui existent dans l'extension et l'espace."
+    answer: "sensibles"
+    alt: []
+  - id: t38c32-m2-11
+    sentence: "L'« illimité » traduit le grec *___* (ligne 15), mot repris du *Parménide* (137d7)."
+    answer: "apeiros"
+    alt: ["ápeiros"]
+  - id: t38c32-m2-12
+    sentence: "Un point n'est pas une très petite ___ : l'illimité n'est pas le plus grand des grands, il n'appartient pas à l'ordre des grandeurs."
+    answer: "ligne"
+    alt: []
+  - id: t38c32-m2-13
+    fragment: "2/3"
+    sentence: "« En outre, ___ (sinon il y aurait quelque chose qui, venant après lui, pourrait aussi avoir la grandeur). Sa grandeur consiste dans le fait qu'il n'y a rien qui soit plus puissant que lui, rien qui soit à sa hauteur : car à quoi parmi ce qui lui appartient pourrait être égal ce qui n'a aucun trait identique avec lui ? »"
+    answer: "la grandeur de l'être n'est pas une quantité"
+    alt: []
+  - id: t38c32-m2-14
+    fragment: "2/3"
+    sentence: "« En outre, la grandeur de l'être n'est pas une quantité (sinon il y aurait quelque chose qui, venant après lui, pourrait aussi avoir la grandeur). Sa grandeur consiste dans le fait qu'il n'y a ___ : car à quoi parmi ce qui lui appartient pourrait être égal ce qui n'a aucun trait identique avec lui ? »"
+    answer: "rien qui soit plus puissant que lui, rien qui soit à sa hauteur"
+    alt: []
+  - id: t38c32-m2-15
+    fragment: "2/3"
+    sentence: "« En outre, la grandeur de l'être n'est pas une quantité (sinon il y aurait quelque chose qui, venant après lui, pourrait aussi avoir la grandeur). Sa grandeur consiste dans le fait qu'il n'y a rien qui soit plus puissant que lui, rien qui soit à sa hauteur : car à quoi parmi ce qui lui appartient pourrait être égal ___ ? »"
+    answer: "ce qui n'a aucun trait identique avec lui"
+    alt: []
+  - id: t38c32-m2-16
+    sentence: "« La grandeur de l'être n'est pas une quantité » : si « l'être » désigne l'Intellect, l'argument est a ___."
+    answer: "fortiori"
+    alt: []
+  - id: t38c32-m2-17
+    sentence: "Le mot « grandeur » est conservé, mais son sens est déplacé de la quantité vers la ___."
+    answer: "puissance"
+    alt: []
+  - id: t38c32-m2-18
+    sentence: "Pour la note 220, la « grandeur illimitée » du principe ne peut consister qu'en sa puissance ___."
+    answer: "infinie"
+    alt: []
+  - id: t38c32-m2-19
+    sentence: "« À quoi pourrait être égal ce qui n'a aucun trait identique avec lui ? » : on ne compare deux choses que sous un rapport ___."
+    answer: "commun"
+    alt: []
+  - id: t38c32-m2-20
+    fragment: "3/3"
+    sentence: "« Aussi le fait qu'il est toujours et qu'il est toutes choses ne lui confèrent ___. Comment dès lors pourrait-il mesurer les autres choses ? Il n'a donc pas non plus de « figure ». »"
+    answer: "ni mesure ni absence de mesure"
+    alt: []
+  - id: t38c32-m2-21
+    fragment: "3/3"
+    sentence: "« Aussi le fait qu'il est toujours et qu'il est toutes choses ne lui confèrent ni mesure ni absence de mesure. Comment dès lors pourrait-il ___ ? Il n'a donc pas non plus de « figure ». »"
+    answer: "mesurer les autres choses"
+    alt: []
+  - id: t38c32-m2-22
+    fragment: "3/3"
+    sentence: "« Aussi le fait qu'il est toujours et qu'il est toutes choses ne lui confèrent ni mesure ni absence de mesure. Comment dès lors pourrait-il mesurer les autres choses ? Il n'a donc pas non plus de ___. »"
+    answer: "« figure »"
+    alt: []
+  - id: t38c32-m2-23
+    sentence: "La ___ (*metron*) est l'étalon par lequel on évalue une grandeur, comme le mètre pour une longueur."
+    answer: "mesure"
+    alt: []
+  - id: t38c32-m2-24
+    sentence: "Mesuré ou démesuré, on reste dans l'___ de la mesure, que le principe ne rejoint pas."
+    answer: "ordre"
+    alt: []
+  - id: t38c32-m2-25
+    sentence: "Pour la note 220, le principe, parce qu'il est au-delà de la mesure, est l'___ de mesure de toutes choses."
+    answer: "unité"
+    alt: []
+  - id: t38c32-m2-26
+    sentence: "La « figure » traduit le grec *___* (*Parménide* 137d8)."
+    answer: "skhèma"
+    alt: ["skhêma", "schèma"]
+  - id: t38c32-m2-27
+    sentence: "Prémisse implicite de « il n'a donc pas non plus de figure » : la figure est un ___, donc une grandeur délimitée et mesurable."
+    answer: "contour"
+    alt: []
+  - id: t38c32-m2-28
+    sentence: "Plotin reprend à la lettre la série négative de la première hypothèse du *Parménide*, qu'il lit comme une description du premier ___."
+    answer: "principe"
+    alt: []
+- id: t38c32-m3
+  title: "La beauté au-delà de la beauté"
+  notes: |-
+    **L'absence de figure du principe, loin d'en faire un objet indifférent, en fait l'objet d'un amour sans limite ; sa beauté n'est pas une beauté qu'il a, mais une beauté qu'il fait naître.**
+
+    | Extrait | Argument | Ce qu'il fait |
+    | 1 | 9 | l'objet sans figure saisissable est le plus désirable, l'amour sans limite |
+    | 2 | 10 | sa beauté est une beauté au-delà de la beauté |
+    | 3 | 11 | il est ce qui engendre la beauté, son principe et sa limite |
+    | 4 | 12 | la beauté produite est sans forme en elle-même ; seul ce qui participe a une forme |
+
+    Le moment change de registre, de la quantité au **désir**, et rejoint la question initiale sur la beauté. La progression est solide, mais elle repose sur une hypothèse que le chapitre n'établit pas (que le principe est objet de désir), et aboutit, avec l'argument 12, à une extension du « sans forme » qui menace la distinction de l'argument 3. Il fait de la remontée de l'âme un **dépouillement** : ce qu'elle aime le plus n'a pas de forme, elle devra laisser derrière elle toute forme (chapitres 34 et 35).
+
+    ! L'âme qui aime la beauté des formes aime déjà, sans le savoir, ce qui la produit.
+
+    === 1 Argument 9 : l'objet dont on ne saisit pas la figure est désirable au plus haut point
+
+    **Si l'on ne peut saisir la forme ou la figure d'un objet désirable, il devient désirable au plus haut point, et l'amour qu'il suscite est sans limite, puisque son objet est sans limite.** L'argument est un conditionnel adressé au lecteur (« si tu ne pouvais saisir ») : une **expérience de pensée**, pas une déduction. « Désirable » et « aimable » relèvent de l'*erôs*, l'amour au sens platonicien, élan de l'âme vers ce qui lui manque et qu'elle reconnaît comme supérieur à elle ; le vocabulaire de l'aimable renvoie au *Phèdre* (250e1) et à *La République* (III, 402d6) (note 222), où le beau éveille l'amour. Seconde étape : l'amour se règle sur son objet, un objet sans limite appelle un amour sans limite ; ce principe de **proportion** est énoncé sans être justifié.
+
+    L'argument ne prouve pas que le principe est désiré : cela sera supposé à la ligne 30 (« s'il est objet de désir ») et repose sur les chapitres 19 à 30, où le Bien est la fin vers laquelle tout tend. Il prouve seulement que, si le principe est désiré, son absence de figure ne diminue pas ce désir mais l'augmente. C'est le point le plus contre-intuitif du chapitre, puisqu'on aime d'ordinaire ce qu'on peut se représenter : un visage connu dans ses moindres traits finit par se laisser épuiser, ce dont on ne fait jamais le tour continue d'attirer. Un contour donne au désir un terme ; l'absence de contour le laisse ouvert.
+
+    ! L'argument est une expérience de pensée : il suppose, sans l'établir, que le principe est désiré.
+
+    === 2 Argument 10 : une beauté au-delà de la beauté
+
+    **Il s'ensuit que la beauté du principe est beauté en un autre sens, une beauté au-delà de la beauté.** Le « il s'ensuit » suppose une prémisse implicite : ce qui est aimé est beau, conformément à la tradition platonicienne où l'amour a pour objet le beau. La **beauté** (*kallos*) est, chez Plotin, ce qui dans une chose attire l'âme parce qu'elle y reconnaît une parenté avec son origine, et elle est toujours celle d'une forme ; si l'objet le plus aimé n'a pas de figure, sa beauté est donc d'une autre sorte. D'où le poids de la préposition **au-delà** (*huper*) : est « au-delà » ce qui dépasse un ordre sans en faire partie, comme le soleil est au-delà de ce qu'il éclaire.
+
+    « Au-delà de la beauté » (*huper kallos*, ligne 29) ne veut pas dire laid : le principe se situe au-delà de la beauté, et parler de sa « beauté » oblige à poser une beauté d'une autre nature (*allon tropon*, ligne 29) qui surabonde de lui (note 223). La note renvoie à *La République* VI, 509a7, où Platon prête au Bien une beauté extraordinaire, et aux études de S. Stern-Gillet (« Le principe du Beau chez Plotin : réflexions sur *Enneas* VI, 7, 32 et 33 ») et de L. Sweeney. Le mot « beauté » est maintenu, comme « grandeur » à l'argument 7, mais change de sens : ce n'est pas la beauté qu'on voit dans une chose, c'est celle d'où vient la beauté des choses.
+
+    ! « Au-delà de la beauté » ne veut pas dire « laid ».
+
+    === 3 Argument 11 : ce qui engendre la beauté, son principe et sa limite
+
+    **S'il n'est rien, il ne peut avoir de beauté ; mais s'il est objet de désir, il est ce qui engendre la beauté, de sorte qu'il est le principe et la limite de la beauté.** Une **aporie** suivie de sa résolution. Être beau semble supposer d'être quelque chose, or le principe n'est aucun être (argument 5). La résolution change la direction du rapport : on ne demande plus quelle beauté il a, on montre quelle beauté il fait naître ; il est « la beauté qui produit la beauté », par la **surabondance** de beauté qui émane de lui. Il ne fabrique pas, il déborde, comme une source qui s'écoule sans rien perdre : l'Un produit sans désir, sans action volontaire et sans diminution de lui-même (traités 10 et 11). Le lien entre « objet de désir » et « ce qui engendre la beauté » suppose que le désir de l'âme pour la beauté est, au fond, désir de son origine.
+
+    L'image de la **fleur** (ligne 31) déplace une référence (note 224) : le premier fragment des *Oracles chaldaïques* parle de « la fleur de l'intellect », qui en désigne le sommet. Plotin l'applique à ce qui est au-delà de l'Intellect : la fleur n'est plus le meilleur de l'intelligible, elle est ce qui le fait fleurir.
+
+    « Le principe et la **limite** de la beauté » semble contredire l'argument 6. La limite (*peras*) borne une chose et l'achève, comme la ligne d'arrivée borne une course et en marque l'accomplissement. On peut lever la difficulté en distinguant deux rapports, ce que le texte ne fait pas explicitement : en lui-même, le principe n'a pas de limite ; par rapport aux choses belles, il est ce qui les achève. La limite appartient alors à ce qui vient de lui.
+
+    ! « La limite de la beauté » ne contredit pas l'« illimité » : la limite est du côté de ce qu'il achève, non en lui.
+
+    === 4 Argument 12 : la beauté produite est sans forme en elle-même
+
+    **Le principe rend beau sans donner la forme ; la beauté en soi qu'il fait venir à l'être est sans forme en elle-même et ne devient forme qu'en autre chose : c'est ce qui participe de la beauté qui a une forme, et non la beauté.** Trois étapes. Le principe rend beau « mais pas dans sa forme » : une beauté pure et sans forme (*ouk en morphèi*, ligne 35, note 223) ; il ne rend pas beau en imprimant une forme, comme un sceau sa figure dans la cire. Il fait venir à l'être la beauté en soi sans lui donner la forme : le verbe grec, *amorphein*, est un **hapax** (note 224), un mot dont on ne connaît qu'une seule occurrence dans toute la littérature conservée ; Plotin semble forger un mot pour dire ce qui échappe au vocabulaire disponible. Enfin, une forme ne mérite son nom que « quand elle est en autre chose » (*morphè en allôi*, ligne 37) ; en elle-même, elle est dépourvue de forme. D'où : c'est « ce qui participe de la beauté » (*to metekhon kallous*, ligne 38) qui est doté de forme. **Participer** (*metekhein*), c'est « avoir part » à une réalité supérieure, comme une belle statue a part à la beauté sans être la beauté.
+
+    Le passage est le plus original du chapitre, car « forme » y change de sens : jusqu'ici la forme intelligible, opposée au principe sans forme ; à présent la configuration qu'une chose reçoit. Une couleur n'a de contour que dans l'objet qu'elle colore. D'où la difficulté de la problématique : si la beauté en soi est elle aussi « sans forme », l'absence de forme ne distingue plus le principe de ce qu'il produit. Le texte ne la lève pas ; la réponse la plus probable : la beauté en soi est sans forme comme ce qui donne forme à un autre, le principe comme ce qui ne donne ni ne reçoit aucune forme, puisqu'il « rend beau » sans même procéder par forme.
+
+    ! La forme n'apparaît que du côté de ce qui reçoit : la beauté en soi n'a pas de contour, ce qui participe d'elle en a un.
+  passage:
+    label: "l. 24-39"
+    text: "Et certes, si tu ne pouvais saisir la forme ou la figure d'un objet désirable, cet objet deviendrait au plus haut point désirable et « aimable », et l'amour qu'il susciterait serait incommensurable. Car alors l'amour n'est pas limité, puisque l'objet d'amour ne l'est pas ; aussi l'amour pour un tel objet d'amour sera-t-il illimité. Il s'ensuit que sa beauté est beauté dans un autre sens, c'est une beauté au-delà de la beauté. Car s'il n'est rien, quelle pourra être sa beauté ? Mais s'il est objet de désir, il sera aussi ce qui engendre la beauté. Il est la fleur qui peut rendre belle toute chose, la beauté qui produit la beauté. Car il fait naître la beauté, et il rend encore plus beau par la surabondance de beauté qui émane de lui, de sorte qu'il est le principe et la limite de la beauté. Comme il est le principe de la beauté, il rend beau ce dont il est le principe, mais pas dans sa forme, car il fait venir à l'être la beauté en soi sans lui donner la forme, quand bien même, d'une autre façon, elle consiste en une forme. Car ce qu'on appelle « forme » ne peut recevoir ce nom que quand elle est en autre chose, mais en elle-même elle est dépourvue de forme. C'est donc ce qui participe de la beauté qui est doté de forme, et non pas la beauté."
+  points:
+  - id: t38c32-m3-1
+    fragment: "1/4"
+    sentence: "« Et certes, ___, cet objet deviendrait au plus haut point désirable et « aimable », et l'amour qu'il susciterait serait incommensurable. Car alors l'amour n'est pas limité, puisque l'objet d'amour ne l'est pas ; aussi l'amour pour un tel objet d'amour sera-t-il illimité. »"
+    answer: "si tu ne pouvais saisir la forme ou la figure d'un objet désirable"
+    alt: []
+  - id: t38c32-m3-2
+    fragment: "1/4"
+    sentence: "« Et certes, si tu ne pouvais saisir la forme ou la figure d'un objet désirable, cet objet deviendrait ___, et l'amour qu'il susciterait serait incommensurable. Car alors l'amour n'est pas limité, puisque l'objet d'amour ne l'est pas ; aussi l'amour pour un tel objet d'amour sera-t-il illimité. »"
+    answer: "au plus haut point désirable et « aimable »"
+    alt: []
+  - id: t38c32-m3-3
+    fragment: "1/4"
+    sentence: "« Et certes, si tu ne pouvais saisir la forme ou la figure d'un objet désirable, cet objet deviendrait au plus haut point désirable et « aimable », et l'amour qu'il susciterait serait ___. Car alors l'amour n'est pas limité, puisque l'objet d'amour ne l'est pas ; aussi l'amour pour un tel objet d'amour sera-t-il illimité. »"
+    answer: "incommensurable"
+    alt: []
+  - id: t38c32-m3-4
+    fragment: "1/4"
+    sentence: "« Et certes, si tu ne pouvais saisir la forme ou la figure d'un objet désirable, cet objet deviendrait au plus haut point désirable et « aimable », et l'amour qu'il susciterait serait incommensurable. Car alors l'amour n'est pas limité, ___ ; aussi l'amour pour un tel objet d'amour sera-t-il illimité. »"
+    answer: "puisque l'objet d'amour ne l'est pas"
+    alt: []
+  - id: t38c32-m3-5
+    sentence: "« Si tu ne pouvais saisir la forme ou la figure » : l'argument est une expérience de ___, pas une déduction."
+    answer: "pensée"
+    alt: []
+  - id: t38c32-m3-6
+    sentence: "« Désirable » et « aimable » relèvent de l'*___*, l'amour au sens platonicien, élan de l'âme vers ce qui lui manque."
+    answer: "erôs"
+    alt: ["érôs", "eros", "érōs"]
+  - id: t38c32-m3-7
+    sentence: "Le vocabulaire de l'« aimable » renvoie au *___* (250e1) et à *La République* (III, 402d6) (note 222)."
+    answer: "Phèdre"
+    alt: []
+  - id: t38c32-m3-8
+    sentence: "Un objet sans limite appelle un amour sans limite : un principe de ___ entre l'amour et son objet, énoncé sans être justifié."
+    answer: "proportion"
+    alt: []
+  - id: t38c32-m3-9
+    sentence: "Que le principe soit objet de désir est supposé à la ligne 30 et repose sur les chapitres 19 à ___ du traité 38."
+    answer: "30"
+    alt: ["trente"]
+  - id: t38c32-m3-10
+    sentence: "Un visage connu dans ses moindres traits finit par se laisser ___ ; ce dont on ne fait jamais le tour continue d'attirer."
+    answer: "épuiser"
+    alt: []
+  - id: t38c32-m3-11
+    sentence: "Un contour donne au désir un ___ ; l'absence de contour le laisse ouvert."
+    answer: "terme"
+    alt: []
+  - id: t38c32-m3-12
+    fragment: "2/4"
+    sentence: "« Il s'ensuit que sa beauté est ___, c'est une beauté au-delà de la beauté. »"
+    answer: "beauté dans un autre sens"
+    alt: []
+  - id: t38c32-m3-13
+    fragment: "2/4"
+    sentence: "« Il s'ensuit que sa beauté est beauté dans un autre sens, c'est ___. »"
+    answer: "une beauté au-delà de la beauté"
+    alt: []
+  - id: t38c32-m3-14
+    sentence: "Prémisse implicite de « il s'ensuit que sa beauté est beauté dans un autre sens » : ce qui est ___ est beau."
+    answer: "aimé"
+    alt: []
+  - id: t38c32-m3-15
+    sentence: "La beauté (*___*) est, chez Plotin, ce qui dans une chose attire l'âme parce qu'elle y reconnaît une parenté avec son origine."
+    answer: "kallos"
+    alt: ["kállos"]
+  - id: t38c32-m3-16
+    sentence: "Est « au-delà » (*___*) ce qui dépasse un ordre sans en faire partie, comme le soleil est au-delà de ce qu'il éclaire."
+    answer: "huper"
+    alt: ["hupér", "hyper"]
+  - id: t38c32-m3-17
+    sentence: "« Au-delà de la beauté » (*huper kallos*) ne veut pas dire ___."
+    answer: "laid"
+    alt: []
+  - id: t38c32-m3-18
+    sentence: "Parler de la « beauté » du principe oblige à poser une beauté d'une autre ___ (*allon tropon*) qui surabonde de lui (note 223)."
+    answer: "nature"
+    alt: []
+  - id: t38c32-m3-19
+    sentence: "« Une beauté au-delà de la beauté » renvoie à *La République* VI, ___, où Platon prête au Bien une beauté extraordinaire."
+    answer: "509a"
+    alt: ["509a7"]
+  - id: t38c32-m3-20
+    sentence: "S. ___ a étudié « Le principe du Beau chez Plotin : réflexions sur *Enneas* VI, 7, 32 et 33 »."
+    answer: "Stern-Gillet"
+    alt: []
+  - id: t38c32-m3-21
+    fragment: "3/4"
+    sentence: "« Car ___, quelle pourra être sa beauté ? Mais s'il est objet de désir, il sera aussi ce qui engendre la beauté. Il est la fleur qui peut rendre belle toute chose, la beauté qui produit la beauté. Car il fait naître la beauté, et il rend encore plus beau par la surabondance de beauté qui émane de lui, de sorte qu'il est le principe et la limite de la beauté. »"
+    answer: "s'il n'est rien"
+    alt: []
+  - id: t38c32-m3-22
+    fragment: "3/4"
+    sentence: "« Car s'il n'est rien, quelle pourra être sa beauté ? Mais s'il est objet de désir, il sera aussi ___. Il est la fleur qui peut rendre belle toute chose, la beauté qui produit la beauté. Car il fait naître la beauté, et il rend encore plus beau par la surabondance de beauté qui émane de lui, de sorte qu'il est le principe et la limite de la beauté. »"
+    answer: "ce qui engendre la beauté"
+    alt: []
+  - id: t38c32-m3-23
+    fragment: "3/4"
+    sentence: "« Car s'il n'est rien, quelle pourra être sa beauté ? Mais s'il est objet de désir, il sera aussi ce qui engendre la beauté. Il est ___, la beauté qui produit la beauté. Car il fait naître la beauté, et il rend encore plus beau par la surabondance de beauté qui émane de lui, de sorte qu'il est le principe et la limite de la beauté. »"
+    answer: "la fleur qui peut rendre belle toute chose"
+    alt: []
+  - id: t38c32-m3-24
+    fragment: "3/4"
+    sentence: "« Car s'il n'est rien, quelle pourra être sa beauté ? Mais s'il est objet de désir, il sera aussi ce qui engendre la beauté. Il est la fleur qui peut rendre belle toute chose, ___. Car il fait naître la beauté, et il rend encore plus beau par la surabondance de beauté qui émane de lui, de sorte qu'il est le principe et la limite de la beauté. »"
+    answer: "la beauté qui produit la beauté"
+    alt: []
+  - id: t38c32-m3-25
+    fragment: "3/4"
+    sentence: "« Car s'il n'est rien, quelle pourra être sa beauté ? Mais s'il est objet de désir, il sera aussi ce qui engendre la beauté. Il est la fleur qui peut rendre belle toute chose, la beauté qui produit la beauté. Car il fait naître la beauté, et il rend encore plus beau par ___, de sorte qu'il est le principe et la limite de la beauté. »"
+    answer: "la surabondance de beauté qui émane de lui"
+    alt: []
+  - id: t38c32-m3-26
+    fragment: "3/4"
+    sentence: "« Car s'il n'est rien, quelle pourra être sa beauté ? Mais s'il est objet de désir, il sera aussi ce qui engendre la beauté. Il est la fleur qui peut rendre belle toute chose, la beauté qui produit la beauté. Car il fait naître la beauté, et il rend encore plus beau par la surabondance de beauté qui émane de lui, de sorte qu'il est ___ de la beauté. »"
+    answer: "le principe et la limite"
+    alt: []
+  - id: t38c32-m3-27
+    sentence: "« S'il n'est rien, quelle pourra être sa beauté ? » : une ___ suivie de sa résolution."
+    answer: "aporie"
+    alt: []
+  - id: t38c32-m3-28
+    sentence: "La résolution change la direction du rapport : on ne demande plus quelle beauté il a, on montre quelle beauté il fait ___."
+    answer: "naître"
+    alt: []
+  - id: t38c32-m3-29
+    sentence: "Le principe ne fabrique pas, il ___, comme une source qui s'écoule sans rien perdre."
+    answer: "déborde"
+    alt: []
+  - id: t38c32-m3-30
+    sentence: "L'Un produit sans désir, sans action volontaire et sans ___ de lui-même (traités 10 et 11)."
+    answer: "diminution"
+    alt: []
+  - id: t38c32-m3-31
+    sentence: "Le premier fragment des *Oracles ___* parle de « la fleur de l'intellect », qui en désigne le sommet (note 224)."
+    answer: "chaldaïques"
+    alt: []
+  - id: t38c32-m3-32
+    sentence: "Plotin applique la « fleur » non plus au sommet de l'Intellect, mais à ce qui est ___ de l'Intellect."
+    answer: "au-delà"
+    alt: []
+  - id: t38c32-m3-33
+    sentence: "La ___ (*peras*) borne une chose et l'achève, comme la ligne d'arrivée borne une course."
+    answer: "limite"
+    alt: []
+  - id: t38c32-m3-34
+    sentence: "« Limite de la beauté » et « illimité » : en lui-même, le principe n'a pas de limite ; par rapport aux choses belles, il est ce qui les ___."
+    answer: "achève"
+    alt: []
+  - id: t38c32-m3-35
+    fragment: "4/4"
+    sentence: "« Comme il est le principe de la beauté, il rend beau ce dont il est le principe, ___, car il fait venir à l'être la beauté en soi sans lui donner la forme, quand bien même, d'une autre façon, elle consiste en une forme. Car ce qu'on appelle « forme » ne peut recevoir ce nom que quand elle est en autre chose, mais en elle-même elle est dépourvue de forme. C'est donc ce qui participe de la beauté qui est doté de forme, et non pas la beauté. »"
+    answer: "mais pas dans sa forme"
+    alt: []
+  - id: t38c32-m3-36
+    fragment: "4/4"
+    sentence: "« Comme il est le principe de la beauté, il rend beau ce dont il est le principe, mais pas dans sa forme, car il fait venir à l'être ___, quand bien même, d'une autre façon, elle consiste en une forme. Car ce qu'on appelle « forme » ne peut recevoir ce nom que quand elle est en autre chose, mais en elle-même elle est dépourvue de forme. C'est donc ce qui participe de la beauté qui est doté de forme, et non pas la beauté. »"
+    answer: "la beauté en soi sans lui donner la forme"
+    alt: []
+  - id: t38c32-m3-37
+    fragment: "4/4"
+    sentence: "« Comme il est le principe de la beauté, il rend beau ce dont il est le principe, mais pas dans sa forme, car il fait venir à l'être la beauté en soi sans lui donner la forme, quand bien même, ___. Car ce qu'on appelle « forme » ne peut recevoir ce nom que quand elle est en autre chose, mais en elle-même elle est dépourvue de forme. C'est donc ce qui participe de la beauté qui est doté de forme, et non pas la beauté. »"
+    answer: "d'une autre façon, elle consiste en une forme"
+    alt: []
+  - id: t38c32-m3-38
+    fragment: "4/4"
+    sentence: "« Comme il est le principe de la beauté, il rend beau ce dont il est le principe, mais pas dans sa forme, car il fait venir à l'être la beauté en soi sans lui donner la forme, quand bien même, d'une autre façon, elle consiste en une forme. Car ce qu'on appelle « forme » ne peut recevoir ce nom que ___, mais en elle-même elle est dépourvue de forme. C'est donc ce qui participe de la beauté qui est doté de forme, et non pas la beauté. »"
+    answer: "quand elle est en autre chose"
+    alt: []
+  - id: t38c32-m3-39
+    fragment: "4/4"
+    sentence: "« Comme il est le principe de la beauté, il rend beau ce dont il est le principe, mais pas dans sa forme, car il fait venir à l'être la beauté en soi sans lui donner la forme, quand bien même, d'une autre façon, elle consiste en une forme. Car ce qu'on appelle « forme » ne peut recevoir ce nom que quand elle est en autre chose, mais ___. C'est donc ce qui participe de la beauté qui est doté de forme, et non pas la beauté. »"
+    answer: "en elle-même elle est dépourvue de forme"
+    alt: []
+  - id: t38c32-m3-40
+    fragment: "4/4"
+    sentence: "« Comme il est le principe de la beauté, il rend beau ce dont il est le principe, mais pas dans sa forme, car il fait venir à l'être la beauté en soi sans lui donner la forme, quand bien même, d'une autre façon, elle consiste en une forme. Car ce qu'on appelle « forme » ne peut recevoir ce nom que quand elle est en autre chose, mais en elle-même elle est dépourvue de forme. C'est donc ___ qui est doté de forme, et non pas la beauté. »"
+    answer: "ce qui participe de la beauté"
+    alt: []
+  - id: t38c32-m3-41
+    sentence: "Le principe ne rend pas beau en imprimant une forme, comme un ___ imprime sa figure dans la cire."
+    answer: "sceau"
+    alt: []
+  - id: t38c32-m3-42
+    sentence: "Le verbe *amorphein* (« faire venir à l'être sans donner la forme ») est un ___ : on n'en connaît qu'une seule occurrence (note 224)."
+    answer: "hapax"
+    alt: []
+  - id: t38c32-m3-43
+    sentence: "Une forme ne mérite son nom que « quand elle est en autre chose » (*morphè en ___*, ligne 37)."
+    answer: "allôi"
+    alt: ["allōi", "állōi"]
+  - id: t38c32-m3-44
+    sentence: "« Ce qui participe de la beauté » traduit *to ___ kallous* (ligne 38)."
+    answer: "metekhon"
+    alt: ["metékhon"]
+  - id: t38c32-m3-45
+    sentence: "Une belle statue a ___ à la beauté sans être la beauté."
+    answer: "part"
+    alt: []
+  - id: t38c32-m3-46
+    sentence: "Une couleur n'a de ___ que dans l'objet qu'elle colore : considérée à part, elle n'en a aucun."
+    answer: "contour"
+    alt: []
+  - id: t38c32-m3-47
+    sentence: "Le principe est sans forme comme ce qui ne donne ni ne ___ aucune forme ; la beauté en soi, comme ce qui donne forme à un autre."
+    answer: "reçoit"
+    alt: []
+- id: t38c32-o1
+  title: "La structure de l'argumentation"
+  notes: |-
+    **Le chapitre suit une même règle à travers trois domaines, la forme (I), la quantité (II), la beauté (III) : il refuse au principe une propriété qu'il produit, puis, pour la grandeur et la beauté, conserve le mot en déplaçant son sens.**
+
+    | Moment | Lignes | Arguments | Ce qu'il installe |
+    | I. Le principe des formes est sans forme | 1-14 | 1 à 5 | ce qui produit une propriété ne la possède pas |
+    | II. Ni grandeur, ni mesure, ni figure | 14-24 | 6 à 8 | garder les mots en changeant leur sens |
+    | III. La beauté au-delà de la beauté | 24-39 | 9 à 12 | l'âme doit se dépouiller de toute forme |
+
+    Dans le **premier moment**, l'argument 1 oriente, l'argument 2 établit par exclusion, l'argument 3 précise par une distinction, l'argument 4 la justifie après coup et porte la charge de la preuve, l'argument 5 condense le tout dans une formule paradoxale. Le **deuxième** est cumulatif et repose tout entier sur la prémisse d'hétérogénéité. Le **troisième** change de registre, de la quantité au désir : 9 renverse l'intuition commune, 10 en tire une conséquence sur la beauté, 11 résout l'aporie ainsi créée, 12 précise comment le principe fait naître la beauté.
+
+    La problématique se loge dans le passage du deuxième au troisième moment : tant qu'on parle de grandeur, l'absence de propriété ne pose pas de problème ; dès qu'on parle de beauté et de désir, il faut expliquer pourquoi ce qui n'a pas de beauté attire plus que tout ce qui en a. La réponse : le désir vise l'**origine** de la beauté plus que la beauté elle-même. La difficulté restante est celle de la dernière phrase, où la forme elle-même se révèle sans forme.
+
+    ! Les arguments les plus fragiles ne sont pas ceux qu'on croit : la grandeur ne pose pas de problème, c'est le passage à la beauté et au désir qui en pose.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: t38c32-o1-1
+    sentence: "Le chapitre 32 du traité 38 suit une même règle à travers trois domaines : la forme, la ___, la beauté."
+    answer: "quantité"
+    alt: []
+  - id: t38c32-o1-2
+    sentence: "Dans chaque domaine, Plotin refuse au principe une propriété qu'il ___."
+    answer: "produit"
+    alt: []
+  - id: t38c32-o1-3
+    sentence: "Pour la grandeur et la beauté, Plotin conserve le mot en déplaçant son ___."
+    answer: "sens"
+    alt: []
+  - id: t38c32-o1-4
+    sentence: "Dans le premier moment du chapitre 32 du traité 38, c'est l'argument de la chose ___ (ce qui n'a pas été produit) qui porte la charge de la preuve."
+    answer: "déterminée"
+    alt: []
+  - id: t38c32-o1-5
+    sentence: "Le deuxième moment repose tout entier sur la prémisse d'___ de la cause et de l'effet."
+    answer: "hétérogénéité"
+    alt: []
+  - id: t38c32-o1-6
+    sentence: "Le troisième moment change de registre : de la quantité au ___."
+    answer: "désir"
+    alt: []
+  - id: t38c32-o1-7
+    sentence: "Réponse du chapitre 32 : le désir vise l'___ de la beauté plus que la beauté elle-même."
+    answer: "origine"
+    alt: []
+- id: t38c32-o2
+  title: "Conclusion : un principe dépourvu de tout ce qu'il donne"
+  notes: |-
+    **Le principe des formes et de leur beauté doit être dépourvu de tout ce qu'il donne : forme, grandeur, mesure, figure et beauté formée. Il n'est aucun être, parce qu'il les précède, et il est tous les êtres, parce qu'ils viennent de lui.**
+
+    La problématique reçoit une **réponse partielle**. Le chapitre explique pourquoi ce qui n'a ni forme ni beauté peut être l'objet du désir le plus haut : un objet sans contour laisse l'amour sans limite, et ce que l'âme aime dans la beauté des formes, c'est son origine. Il distingue l'absence de forme du principe de celle de la matière : l'une est antériorité, l'autre manque. Mais la tension des dernières lignes demeure : si la forme est sans forme hors de ce qui y participe, l'absence de forme cesse d'être le propre du principe. On peut la reconstruire (la beauté en soi est sans forme comme ce qui informe un autre, le principe comme ce qui ne procède même pas par forme), mais c'est une reconstruction.
+
+    Plusieurs points restent **sans démonstration** dans le chapitre :
+
+    | Point | Où il est établi |
+    | le principe est objet de désir | chapitres 19 à 30 |
+    | ce qui produit ne possède pas ce qu'il produit | chapitre 17 |
+    | une partie ne peut être principe du tout | non dit |
+    | ce qui est aimé est beau | tradition platonicienne |
+    | l'amour se proportionne à son objet | non dit |
+
+    L'**originalité** du passage tient à deux gestes. Plotin ne se contente pas de nier : il garde les mots « grandeur » et « beauté » en déplaçant leur sens vers la puissance et la production, ce qui fait de la **négation une manière de désigner**. Et il **renverse l'intuition commune** selon laquelle on aime ce qu'on peut se représenter : l'objet le plus aimable est celui dont on ne saisit pas la figure. C'est ce renversement qui justifie la suite du traité, où l'âme ne rejoint le principe qu'en se défaisant à son tour de toute forme.
+
+    ! La réponse à la problématique est partielle : ce qui distingue l'absence de forme du principe de celle de la beauté en soi reste une reconstruction.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: t38c32-o2-1
+    sentence: "Réponse du chapitre 32 du traité 38 : le principe des formes doit être dépourvu de tout ce qu'il ___."
+    answer: "donne"
+    alt: []
+  - id: t38c32-o2-2
+    sentence: "L'absence de forme du principe est antériorité ; celle de la matière est ___."
+    answer: "manque"
+    alt: []
+  - id: t38c32-o2-3
+    sentence: "Ce qui distingue l'absence de forme du principe de celle de la beauté en soi n'est qu'une ___ : le texte ne le dit pas."
+    answer: "reconstruction"
+    alt: []
+  - id: t38c32-o2-4
+    sentence: "Que le principe soit objet de désir est établi aux chapitres ___ à 30 du traité 38."
+    answer: "19"
+    alt: ["dix-neuf"]
+  - id: t38c32-o2-5
+    sentence: "En gardant les mots « grandeur » et « beauté », Plotin fait de la négation une manière de ___."
+    answer: "désigner"
+    alt: []
+  - id: t38c32-o2-6
+    sentence: "Le chapitre 32 du traité 38 renverse l'intuition commune : l'objet le plus aimable est celui dont on ne saisit pas la ___."
+    answer: "figure"
+    alt: []
+  - id: t38c32-o2-7
+    sentence: "Dans la suite du traité 38, l'âme ne rejoint le principe qu'en se défaisant à son tour de toute ___."
+    answer: "forme"
+    alt: []

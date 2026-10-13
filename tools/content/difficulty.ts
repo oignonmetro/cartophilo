@@ -547,7 +547,11 @@ export function philosophyContentRemarks(learning: string, lessons: readonly Phi
       flagEnglish(where, 'sentence', point.sentence)
       flagEnglish(where, 'explanation', point.explanation)
 
+      // Une carte-citation reprend le texte de l'auteur, qui peut lui-même
+      // demander « Où se trouve… ? » (Plotin, 38 [VI, 7], 32) : rien à reformuler.
+      const isQuotation = Boolean(lesson.passage) && point.sentence.trim().startsWith('«')
       for (const [field, text] of [['sentence', point.sentence], ['explanation', point.explanation]] as const) {
+        if (field === 'sentence' && isQuotation) continue
         if (text && LOCALISATION_QUESTION_PATTERNS.some((pattern) => pattern.test(text.trim()))) {
           remarks.push(`${where} : ${field} tourné en question de localisation (« où… ? ») ; reformulez en phrase fluide intégrée`)
         }
