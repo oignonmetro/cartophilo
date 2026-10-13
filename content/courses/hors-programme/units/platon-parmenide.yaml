@@ -173,11 +173,11 @@ lessons:
     answer: "monisme"
     alt: []
   - id: platon-parmenide-i2-p2
-    sentence: "L'argument de Zénon : si les êtres sont plusieurs, ils sont à la fois ___ ; or rien ne peut l'être ; donc les êtres ne sont pas plusieurs."
+    sentence: "L'argument de Zénon : si les êtres sont plusieurs, alors ils sont à la fois ___ ; or rien ne peut l'être ; donc les êtres ne sont pas plusieurs."
     answer: "semblables et dissemblables"
     alt: []
   - id: platon-parmenide-i2-p3
-    sentence: "Dans le *Parménide*, Socrate s'oppose à l'argument de Zénon en attaquant non sa conclusion, mais l'une de ses ___ : rien ne pourrait être à la fois semblable et dissemblable."
+    sentence: "Dans le *Parménide*, Socrate s'oppose à l'argument de Zénon en attaquant non sa conclusion, mais l'une de ses ___, à savoir que rien ne pourrait être à la fois semblable et dissemblable."
     answer: "prémisses"
     alt: ["prémisse"]
   - id: platon-parmenide-i2-p4
@@ -209,7 +209,7 @@ lessons:
     answer: "à la fois semblables et dissemblables"
     alt: []
   - id: platon-parmenide-i2-p12
-    sentence: "Socrate admet que les choses sensibles soient unes et multiples, mais : « si ce qu'est l'Un on montre que cela ___, et si par ailleurs on montre que le Plusieurs est en fait un, voilà où je commencerai à m'étonner » (*Parménide*, 129b-c)"
+    sentence: "Socrate admet que les choses sensibles soient unes et multiples, car ce n'est pas contradictoire. En revanche, « si ce qu'est l'Un on montre que cela ___, et si par ailleurs on montre que le Plusieurs est en fait un, voilà où je commencerai à m'étonner » (*Parménide*, 129b-c)."
     answer: "est en soi plusieurs"
     alt: []
 - id: platon-parmenide-i3
@@ -240,10 +240,14 @@ lessons:
     - {kind: bank, column: Principe}
     - {kind: cell, column: Source, row: Unicité}
     - {kind: cell, column: Principe, row: Auto-prédication}
+    - {kind: bank, column: Source}
     - {kind: cell, column: Source, row: Impureté des sensibles}
     - {kind: cell, column: Source, row: Pureté des Idées}
     - {kind: cell, column: Source, row: Un-au-dessus-de-plusieurs}
     - {kind: cell, column: Source, row: Unicité}
+    - {kind: cell, column: Source, row: Causalité}
+    - {kind: cell, column: Source, row: Séparation}
+    - {kind: cell, column: Source}
   points:
   - id: platon-parmenide-i3-p1
     sentence: "Principe de ___ : les choses F (autres que la Forme F) sont F parce qu'elles participent de la Forme F."
