@@ -187,9 +187,15 @@ l'utilisateur : la progression sur ce traité repart de zéro.
    leçon et que rien ne déborde.
 3. **Un traité à la fois** : d'autres sessions travaillent peut-être sur
    d'autres traités. Ne toucher qu'au fichier de ce traité, et à son entrée
-   de l'index (`summary`, `theses`) seulement si elle contredit le nouveau
+   de l'index (`summary`, `theses`), à aligner sur le nouveau
    cours ; ne jamais régénérer l'index ni d'autres cours.
-4. Commit (message en français, « Plotin, traité N : … ») et push, sans
+4. Aligner l'entrée de l'index sur le nouveau cours : `summary` (attaque en
+   gras, une puce par mouvement avec ses repères, une phrase de situation) et
+   `theses` (trois au plus, courtes, propres à ce traité, puisque les
+   exercices de repérage les associent à son titre et à son numéro).
+5. Incrémenter `version:` dans `content/courses/plotin/course.yaml`, sans
+   quoi les appareils ne reçoivent pas le changement.
+6. Commit (message en français, « Plotin, traité N : … ») et push, sans
    demander.
 
 ## 7. Rendre compte
