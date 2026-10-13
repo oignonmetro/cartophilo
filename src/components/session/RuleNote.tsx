@@ -249,15 +249,16 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
       {blocks.map((block, index) => {
         if (block.kind === 'paragraph') {
           // La première prose est l'attaque du rappel : plus grande et plus
-          // sombre, elle porte l'idée que tout le reste vient détailler.
+          // sombre, elle porte l'idée que tout le reste vient détailler. La
+          // césure évite qu'une colonne étroite justifiée n'étire les espaces.
           const lead = index === 0
           return (
             <p
               key={index}
               className={
                 lead
-                  ? 'text-justify text-[0.975rem] leading-relaxed font-semibold text-ink'
-                  : 'text-justify text-sm leading-relaxed text-ink-soft'
+                  ? 'text-justify hyphens-auto text-[0.975rem] leading-relaxed font-semibold text-ink'
+                  : 'text-justify hyphens-auto text-sm leading-relaxed text-ink-soft'
               }
             >
               <Rich text={block.text} />
@@ -274,7 +275,7 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
               <span aria-hidden className="text-base leading-tight">
                 ⚠
               </span>
-              <span className="text-justify">
+              <span className="text-justify hyphens-auto">
                 <Rich text={block.text} />
               </span>
             </p>

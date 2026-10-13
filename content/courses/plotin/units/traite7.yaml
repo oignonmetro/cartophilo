@@ -4,6 +4,11 @@
 # Les citations viennent de la notice, du plan ou de la traduction ; les
 # repères (chapitre, lignes) sont ceux de cette édition. Lié à l'entrée
 # t-5-4 de l'index.
+#
+# Refonte du 2026-10-13 : une leçon par mouvement du raisonnement, chaque
+# rappel explicitant ce que Plotin démontre, ce qu'il pose et ce qu'il
+# illustre. Les points ont reçu de nouveaux identifiants (-q au lieu de -p),
+# pour ne pas hériter de l'historique de cartes devenues autres.
 
 id: traite7
 title: "Traité 7 (V, 4) : Comment vient du premier ce qui est après le premier"
@@ -12,260 +17,346 @@ icon: compass
 color: sky
 lessons:
 - id: traite7-l1
-  title: "La question de la procession : comment vient-on de l'Un ?"
+  title: "La question du traité : comment ce qui vient après l'Un en vient-il ?"
   notes: |-
-    **La question.** Si toutes choses sont issues du premier principe, l'« Un » ou « Premier », **comment** viennent-elles de lui ? Le traité 7, bref (deux chapitres), ne demande pas *s'il* existe autre chose que l'Un : cela va de soi, il le suppose. Il demande *comment* ce qui existe en provient.
+    Le traité 7 se demande comment ce qui vient après l'Un, et d'abord l'Intellect, peut venir de lui, alors que l'Un doit à la fois produire et demeurer inchangé.
 
-    **Pourquoi la poser maintenant.** La difficulté avait déjà été rencontrée deux fois, en 5 (V, 9), 14 et en 6 (IV, 8), 6, mais en remontant des produits de l'Un vers leur principe. La fin du traité 5 (chap. 14, 4-5) réclamait donc un examen qui prendrait **« un autre point de départ »** : partir de ce qui est premier et descendre. C'est ce que fait le traité 7.
+    **Il part d'une donnée qu'il ne discute pas : il existe autre chose que l'Un.** Sa question est seulement de savoir *comment* ce qui vient après le premier principe en provient, à commencer par le premier de ses produits, l'Intellect. Le traité, qui ne compte que deux chapitres, ne traite que ce point.
 
-    **Deux réponses possibles** (1, 1-5) :
+    **Cette question avait été laissée en suspens.** Les traités 5 (V, 9), 14 et 6 (IV, 8), 6 l'avaient rencontrée, mais en partant des réalités produites pour remonter vers leur principe. La fin du traité 5 (chap. 14, 4-5) réclamait donc un examen qui prendrait **« un autre point de départ »** : partir du premier lui-même, et descendre. C'est ce que fait le traité 7, qui dit d'abord ce qu'est le premier, puis ce qui vient de lui.
+
+    **Deux réponses sont possibles** (1, 1-5) :
 
     | Ce qui vient de l'Un en vient | Il faut alors |
     | par des intermédiaires | les définir comme autant de réalités ayant une « hypostase » |
     | immédiatement | expliquer comment |
 
-    **Le choix de Plotin : la seconde voie.** {green}L'Intellect provient de l'Un immédiatement{/green}, sans intermédiaire. Il reste donc à expliquer *comment*, et c'est tout l'objet du traité. Plotin reviendra souvent sur cette première procession, dès le traité 10 (V, 1), sans jamais corriger la manière dont la question est posée ici.
+    Des intermédiaires ne feraient que reculer le problème, puisqu'il faudrait encore dire comment chacun vient du précédent. Plotin retient donc la seconde voie : {green}l'Intellect vient de l'Un immédiatement{/green}. Il lui reste à dire comment, et il ne changera plus cette manière de poser la question, même quand il reviendra sur cette première procession, dès le traité 10 (V, 1).
 
-    **Pourquoi c'est difficile.** Plotin veut tenir en même temps une seconde thèse : {red}l'Un « reste en lui-même »{/red}, il ne sort pas de soi pour produire. Or, contre ses prédécesseurs **médioplatoniciens**, il place le premier principe *au-delà* de l'Intellect : il ne peut donc pas se contenter de dire que l'Intellect est le premier principe. Il doit faire naître l'Intellect d'un principe qui ne change ni ne se meut.
+    **Ce « comment » est difficile parce que deux exigences semblent se contredire.** D'un côté, l'Un est parfait, et ce qui est parfait produit : il ne peut rester stérile. De l'autre, {red}l'Un « reste en lui-même »{/red} : il ne change pas, ne se meut pas, ne perd rien. Comment produire sans sortir de soi ? La difficulté est d'autant plus aiguë que Plotin, contre ses prédécesseurs **médioplatoniciens**, qui faisaient du premier principe un intellect, place le premier *au-delà* de l'Intellect : la pensée elle-même doit donc naître d'un principe qui n'est pas pensée.
 
-    **La suite du traité** lève cette tension en deux temps : montrer ce qu'est l'Un qui demeure (leçon suivante), puis comment l'Intellect en naît sans que l'Un se quitte (la doctrine des deux actes).
+    **Le traité répond en deux temps.** Le chapitre 1 établit ce qu'est le Premier et pourquoi il produit nécessairement ; le chapitre 2 décrit comment l'Intellect en naît, et montre, par la doctrine des deux actes, que cette naissance ne change rien à l'Un.
 
     ! Le traité ne prouve pas qu'il existe quelque chose après l'Un : il le suppose, et cherche seulement comment cela vient de lui.
-  tables:
-  - table: ce-qui-vient-de-l-un-en-vient-il-faut-alors
-    exercises:
-    - {kind: bank, column: Il faut alors}
-    - {kind: cell, column: Ce qui vient de l'Un en vient, row: immédiatement}
   points:
-  - id: traite7-l1-p1
-    sentence: "Le traité 7 de Plotin (V, 4) ne compte que ___ chapitres."
+  - id: traite7-l1-q1
+    sentence: "Le traité 7 de Plotin (V, 4), qui ne traite que de la manière dont l'Intellect vient de l'Un, ne compte que ___ chapitres."
     answer: "deux"
     alt: ["2"]
-  - id: traite7-l1-p2
-    sentence: "La question du traité 7 de Plotin n'est pas de savoir s'il existe d'autres choses que l'Un, mais ___ toutes choses proviennent de l'Un."
+  - id: traite7-l1-q2
+    sentence: "Le traité 7 de Plotin tient pour acquis qu'il existe autre chose que l'Un : sa question est seulement de savoir ___ toutes choses en proviennent."
     answer: "comment"
     alt: []
-  - id: traite7-l1-p3
-    sentence: "La fin du traité ___ (chap. 14, 4-5) appelait un examen qui prendrait « un autre point de départ » : partir de ce qui est premier, et non de ses produits."
-    answer: "5"
+  - id: traite7-l1-q3
+    sentence: "Les traités 5 et 6 de Plotin remontaient des réalités produites vers leur principe ; la fin du traité 5 (chap. 14, 4-5) réclamait un examen qui prendrait « un autre point de ___ », en partant du premier lui-même."
+    answer: "départ"
     alt: ["depart"]
-  - id: traite7-l1-p4
-    sentence: "Pour le traité 7, si ce qui vient de l'Un en venait par des ___, il faudrait les reconnaître comme autant de réalités ayant une « hypostase »."
+  - id: traite7-l1-q4
+    sentence: "Pour le traité 7 de Plotin (1, 1-5), si ce qui vient de l'Un en venait par des ___, il faudrait les reconnaître comme autant de réalités ayant une « hypostase », et dire encore comment chacune vient de la précédente."
     answer: "intermédiaires"
     alt: ["intermediaires"]
-  - id: traite7-l1-p5
-    sentence: "Le traité 7 de Plotin défend que l'Intellect provient de l'Un ___, sans intermédiaire."
+  - id: traite7-l1-q5
+    sentence: "Plutôt que d'admettre des intermédiaires entre l'Un et l'Intellect, le traité 7 de Plotin soutient que l'Intellect provient de l'Un ___."
     answer: "immédiatement"
     alt: ["immediatement"]
-  - id: traite7-l1-p6
-    sentence: "Plotin reviendra sur la première procession, celle de l'Intellect à partir de l'Un, dès le traité ___."
-    answer: "10 (V, 1)"
-    alt: ["10", "V, 1"]
-  - id: traite7-l1-p7
-    sentence: "En soutenant qu'il y a **quelque chose au-delà de l'Intellect**, le traité 7 remet en cause la représentation des principes de ses prédécesseurs ___."
+  - id: traite7-l1-q6
+    sentence: "Plotin reviendra sur la première procession, celle de l'Intellect à partir de l'Un, dès le traité ___ (V, 1), sans changer la manière dont le traité 7 en pose la question."
+    answer: "10"
+    alt: []
+  - id: traite7-l1-q7
+    sentence: "La procession de l'Un est un problème parce que l'Un doit produire, étant parfait, et pourtant « rester en ___ », sans changer ni se mouvoir."
+    answer: "lui-même"
+    alt: ["lui meme", "lui-meme"]
+  - id: traite7-l1-q8
+    sentence: "En plaçant le premier principe au-delà de l'Intellect, Plotin s'oppose à ses prédécesseurs ___, qui faisaient du premier principe un intellect, et s'oblige à faire naître la pensée de ce qui n'est pas pensée."
     answer: "médioplatoniciens"
     alt: ["medioplatoniciens"]
-  - id: traite7-l1-p8
-    sentence: "La thèse qui rend difficile la procession, dans le traité 7 de Plotin, est que l'Un reste toujours « ___ »."
-    answer: "en lui-même"
-    alt: ["lui meme", "lui-meme"]
 - id: traite7-l2
-  title: "L'Un demeure : simple, parfait, au-delà de la réalité"
+  title: "Pourquoi le Premier est simple, unique et au-delà de la réalité (1, 1-23)"
   notes: |-
-    **Le point de départ : ce que doit être le premier, s'il y a quelque chose après lui** (1, 1-23). Au lieu de remonter des produits de l'Un, Plotin part du principe lui-même. Il doit être **simple**, sans quoi il ne serait pas principe : à la différence de l'Intellect, qui en procède et qui est composé. Simple et premier, il est **« ce qui se suffit le plus à soi-même »**.
+    **Avant de dire ce qui vient du Premier, Plotin dit ce qu'il doit être pour être premier.** Tout repose sur une idée : ce qui est premier ne dépend de rien. Plotin en tire, l'une après l'autre, les propriétés de l'Un.
 
-    **De la simplicité suivent l'unicité et l'absence de genèse.** S'il y en avait un autre du même genre, les deux ne feraient qu'un. Aucun corps n'est simple, et « le principe est inengendré ».
+    **Il est simple.** Un composé dépend des éléments qui le composent : ils sont avant lui, et il a besoin d'eux pour être. Si le premier était composé, ses éléments seraient donc plus premiers que lui, et ce ne serait plus lui le principe. Et parce qu'il ne dépend de rien, il ne manque de rien : il est **« ce qui se suffit le plus à soi-même »**. L'Intellect, qui vient de lui, est au contraire composé.
 
-    **Si simple qu'il échappe au discours.** Il n'est même pas vraiment « un » : il n'y a de lui **« ni discours ni science »**, il est **« au-delà de la réalité »** (1, 9-10). Plotin cite le *Parménide* (142a), puis la *République* (VI, 509b), formules devenues classiques pour dire que le premier principe échappe à la connaissance rationnelle. C'est aussi la première fois que l'Un est désigné comme **« le Premier »** (`tò prôton`).
+    **Il est unique.** Supposons deux premiers du même genre : rien ne les distinguerait, car toute différence ajouterait à chacun quelque chose de propre et le rendrait composé. Indiscernables, les deux ne feraient qu'un. Pour la même raison, **il n'est pas un corps** : aucun corps n'est simple, tout corps est engendré, et « le principe est inengendré ».
 
-    **Par contraste, ce qui vient après lui ne peut être simple** : c'est un **« un-multiple »** (1, 21-22). Le traité a ainsi fixé les deux termes de la procession, le simple et ce qui en vient.
+    **Il échappe même au discours.** Dire ce qu'une chose est, c'est lui attribuer quelque chose, donc distinguer en elle un sujet et ce qu'on en dit. Du simple, il n'y a donc **« ni discours ni science »** : il est **« au-delà de la réalité »** (1, 9-10). Plotin cite là le *Parménide* (142a), puis la *République* (VI, 509b). Le nom même d'« Un » ne lui convient qu'imparfaitement : Plotin l'appelle ici, pour la première fois, **« le Premier »** (`tò prôton`), et le désigne volontiers par des pronoms (« il », « celui-là ») qui le montrent sans le nommer.
 
-    **Une seule propriété résiste à toute réserve : {sky}il se maintient (`ménei`) toujours en lui-même{/sky}.** C'est la thèse qui rendait la procession difficile (leçon précédente) : aucun propos sur l'Un, si métaphorique soit-il, ne peut la mettre en cause. « Demeurer », c'est à la fois ne pas changer et ne pas se mouvoir. Plotin applique à l'Un la phrase du *Timée* sur le démiurge qui, son ouvrage accompli, **« demeure dans son propre caractère »** (ou « dans son propre séjour », 42e5-6) : on peut produire sans se quitter.
+    **Ce qui vient après lui, en revanche, ne peut être simple**, sans quoi ce serait encore le premier : c'est un **« un-multiple »** (1, 21-22).
 
-    **Conséquence pour le langage : on ne parle de l'Un que depuis ce qui vient de lui.** Plotin évite de le nommer et préfère des pronoms (« il », « celui-là ») qui désignent sans nommer. **Le Premier n'est « intelligible » (`noêton`) que comme objet de l'intellection (`noêsis`) de l'Intellect** ; ce qu'il est par lui-même reste ineffable. De l'Un on n'a qu'une **connaissance relative** : il est l'« intelligible » pour l'Intellect, l'« Un » pour le multiple, le « bien » pour ce qui peut être bon. Le traité 9 (VI, 9) poursuivra cette réflexion.
-
-    ! « Intelligible » n'est pas un nom de l'Un en lui-même : il le reçoit de l'Intellect qui le pense.
+    ! Plotin démontre peu ici : il tire les conséquences de la notion de principe. Que le Premier soit simple découle de ce qu'il est premier ; qu'il y ait quelque chose après lui reste supposé.
   points:
-  - id: traite7-l2-p1
-    sentence: "À la différence de l'Intellect, qui est composé, l'Un est pour le traité 7 de Plotin ___ : il est unique, parfait, principe de toutes choses."
+  - id: traite7-l2-q1
+    sentence: "Pour le traité 7 de Plotin, le premier principe doit être ___ : composé, il dépendrait de ses éléments, qui seraient plus premiers que lui."
     answer: "simple"
     alt: []
-  - id: traite7-l2-p2
-    sentence: "Parce qu'il est simple et premier, l'Un est pour le traité 7 de Plotin « ce qui se ___ le plus à soi-même »."
+  - id: traite7-l2-q2
+    sentence: "Parce qu'il ne dépend d'aucun élément qui le composerait, le Premier est pour le traité 7 de Plotin « ce qui se ___ le plus à soi-même »."
     answer: "suffit"
     alt: []
-  - id: traite7-l2-p3
-    sentence: "Dans le traité 7 (1, 9), il n'y a de l'Un « ni ___ ni science »."
+  - id: traite7-l2-q3
+    sentence: "Le traité 7 de Plotin montre que le Premier est unique : deux premiers du même genre seraient indiscernables, toute différence les rendant composés, et ne feraient donc qu'___."
+    answer: "un"
+    alt: []
+  - id: traite7-l2-q4
+    sentence: "Le premier principe ne peut être un corps, pour le traité 7 de Plotin : aucun corps n'est simple, tout corps est engendré, et « le principe est ___ »."
+    answer: "inengendré"
+    alt: ["inengendre"]
+  - id: traite7-l2-q5
+    sentence: "Parce que dire ce qu'une chose est revient à y distinguer un sujet et ce qu'on en dit, il n'y a du Premier, pour le traité 7 (1, 9), « ni ___ ni science »."
     answer: "discours"
     alt: []
-  - id: traite7-l2-p4
-    sentence: "Dans le traité 7 (1, 10), on dit de l'Un qu'il est « au-delà de la ___ », formule de la *République* (VI, 509b)."
+  - id: traite7-l2-q6
+    sentence: "Simple au point d'échapper au discours, le Premier est dit par le traité 7 (1, 10) « au-delà de la ___ », formule de la *République* (VI, 509b)."
     answer: "réalité"
     alt: ["realite"]
-  - id: traite7-l2-p5
-    sentence: "Dans le traité 7 (1, 9), « ni discours ni science » cite le ___ de Platon (142a), et « au-delà de la réalité » la *République* (VI, 509b)."
+  - id: traite7-l2-q7
+    sentence: "Pour dire que le premier principe échappe à la connaissance rationnelle, le traité 7 (1, 9) cite d'abord le ___ de Platon (142a) : « ni discours ni science »."
     answer: "Parménide"
     alt: ["Parmenide"]
-  - id: traite7-l2-p6
-    sentence: "C'est dans le traité 7 que l'Un est pour la première fois désigné comme « le ___ » (`tò prôton`)."
+  - id: traite7-l2-q8
+    sentence: "Le nom d'« Un » ne lui convenant qu'imparfaitement, le premier principe est désigné pour la première fois, dans le traité 7, comme « le ___ » (`tò prôton`)."
     answer: "Premier"
     alt: []
-  - id: traite7-l2-p7
-    sentence: "Ce qui vient après le Premier ne peut être simple : le traité 7 (1, 21-22) en fait quelque chose d'« ___ »."
-    answer: "un-multiple"
-    alt: ["un multiple"]
-  - id: traite7-l2-p8
-    sentence: "Le verbe grec qui dit que l'Un se maintient toujours en lui-même, dans le traité 7 de Plotin, est ___."
-    answer: "ménei"
-    alt: ["menei"]
-  - id: traite7-l2-p9
-    sentence: "Pour dire que l'Un engendre sans se quitter, le traité 7 de Plotin lui applique la phrase du *Timée* (42e5-6) sur le ___, qui « demeure dans son propre caractère »."
-    answer: "démiurge"
-    alt: ["demiurge"]
-  - id: traite7-l2-p10
-    sentence: "Plotin préfère désigner l'Un par des formes ___ (« il », « celui-là ») plutôt que de le nommer."
+  - id: traite7-l2-q9
+    sentence: "Plotin, qui juge l'Un innommable, le désigne volontiers par des formes ___ (« il », « celui-là ») qui le montrent sans le nommer."
     answer: "pronominales"
     alt: []
-  - id: traite7-l2-p11
-    sentence: "Pour le traité 7 de Plotin, le Premier n'est « intelligible » (`noêton`) que comme objet de l'intellection, en grec ___, de l'Intellect."
-    answer: "noêsis"
-    alt: ["noesis"]
-  - id: traite7-l2-p12
-    sentence: "Ce que l'Un est par lui-même, indépendamment de ce qui l'intellige, reste ___ : on n'en a qu'une connaissance relative."
-    answer: "ineffable"
-    alt: []
-  - id: traite7-l2-p13
-    sentence: "La réflexion sur la connaissance relative de l'Un, seulement notée dans le traité 7, sera poursuivie notamment dans le traité ___, *Sur le Bien ou l'Un*."
-    answer: "9"
-    alt: []
+  - id: traite7-l2-q10
+    sentence: "Ce qui vient après le Premier ne peut être simple, sans quoi ce serait encore le premier : le traité 7 (1, 21-22) en fait un « ___ »."
+    answer: "un-multiple"
+    alt: ["un multiple"]
 - id: traite7-l3
-  title: "L'Intellect, intellection de l'Un"
+  title: "Pourquoi le Premier produit (1, 23-41)"
   notes: |-
-    **Pourquoi l'Un engendre-t-il ? Parce qu'il est parfait** (1, 23-41). Dès qu'une chose atteint sa perfection, elle engendre, elle **« ne supporte plus de demeurer en elle-même »**. Cela vaut pour ce qui choisit, pour ce qui croît, et même pour les choses sans âme : le feu réchauffe, la neige refroidit, les remèdes agissent. Comment le plus parfait demeurerait-il en lui-même **« comme s'il était avare de lui-même »** (1, 35) ?
+    **Que le Premier produise, Plotin l'établit en deux temps : une loi tirée de la nature, puis un raisonnement par l'absurde.**
 
-    **Ce qu'il engendre en second doit être la chose la plus vénérable de toutes : l'Intellect.** Plotin le définit comme une pensée intellective de l'Un, une **`noêsis`** : cette activité est la réalité même de l'Intellect, qui existe comme pensée de l'Un.
+    **La loi : ce qui est parfait engendre.** Dès qu'une chose atteint sa perfection, elle **« ne supporte plus de demeurer en elle-même »** et produit autre chose. Cela vaut pour les êtres qui choisissent, pour ceux qui croissent, et même pour les choses sans âme, qui produisent sans le vouloir : le feu réchauffe, la neige refroidit, les remèdes agissent (1, 30-32). Plotin ne démontre pas cette loi ; il la constate, et il l'interprète : en produisant, chaque chose **imite** le principe, autant qu'elle le peut.
 
-    **Pourquoi cet Intellect est-il multiple, un « un-multiple » ?** Parce qu'il est un regard tourné vers l'Un.
+    **Le raisonnement par l'absurde.** Si même les choses les plus humbles débordent ainsi sur autre chose, le Premier ne peut faire moins. Comment ce qui est le plus parfait demeurerait-il en lui-même **« comme s'il était avare de lui-même »** (1, 35), ou dépourvu de puissance, lui qui est la **« puissance de toutes choses »** ? Un Premier stérile serait un Premier impuissant, ce que sa perfection exclut.
 
-    - L'intellection, vision de l'intelligible qui se retourne vers lui, est **indéfinie** comme la vue, même si l'intelligible la définit. D'où la formule : les formes intelligibles, c'est-à-dire les nombres, viennent **« de la dyade indéfinie et de l'un »** (2, 7-8).
-    - Intelligible et intelligeant, l'Intellect est donc d'emblée **deux** : une composition, intelligible toutefois.
+    **Ce qu'il produit est l'Intellect.** Le produit ne peut être égal au Premier, sinon il serait le Premier lui-même. Mais il vient immédiatement après lui : c'est donc la chose la plus vénérable après lui, l'Intellect.
 
-    **Comment naît-il sans que l'Un change ?** Il naît alors que l'intelligible demeure **« dans son état habituel »** (2, 21) : il n'en est pas une partie détachée, mais **« une imitation et une image »**.
+    **La formule de 1, 35 est pourtant risquée.** Prise à la lettre, elle dirait que l'Un ne demeure pas en lui-même. Or c'est l'autre exigence du traité : il se maintient (`ménei`) toujours en lui-même, et de tout ce qu'on dit de l'Un, c'est la seule chose qu'aucune réserve ne vient corriger. « Demeurer », c'est à la fois ne pas changer et ne pas se mouvoir. Le chapitre 2 doit donc expliquer comment l'Intellect naît d'un principe qui demeure.
 
-    **D'où le statut de l'Intellect : distinguer n'est pas séparer.** L'Intellect et l'Un ne sont pas identiques, mais l'Intellect n'existe pas en dehors de l'Un : il est quelque chose de ce dont il procède, le regard que l'Un porte sur lui-même, avec cette précision que **l'Un n'est pas le sujet de ce regard** : le sujet en est l'Intellect.
-
-    **Ce qui est ainsi engendré est l'être même** (2, 43-48, fin du traité) : l'être n'est pas « un cadavre », l'Intellect et l'être sont une seule et même chose, et l'Intellect est identique à ses objets.
-
-    Reste à comprendre *par quel mécanisme* l'Un produit hors de lui en demeurant en lui : c'est la thèse des deux actes (leçon suivante).
-
-    ! L'Intellect n'est pas une réalité extérieure qui regarderait l'Un du dehors : il est ce regard même, issu de l'Un.
+    ! La production du Premier n'est ni un choix ni un mouvement : elle suit de sa perfection, comme la chaleur suit du feu.
   points:
-  - id: traite7-l3-p1
+  - id: traite7-l3-q1
     sentence: "Pour le traité 7 de Plotin, une chose qui atteint sa ___ engendre : elle ne supporte plus de demeurer en elle-même."
     answer: "perfection"
     alt: []
-  - id: traite7-l3-p2
-    sentence: "Le traité 7 (1, 30-32) donne pour exemples d'êtres sans âme qui produisent : le feu qui réchauffe, la ___ qui refroidit, les remèdes qui agissent."
+  - id: traite7-l3-q2
+    sentence: "Pour montrer que même ce qui ne choisit pas produit dès qu'il est accompli, le traité 7 (1, 30-32) invoque le feu qui réchauffe, la ___ qui refroidit et les remèdes qui agissent."
     answer: "neige"
     alt: []
-  - id: traite7-l3-p3
-    sentence: "Le Premier ne saurait demeurer en lui-même « comme s'il était ___ de lui-même » (traité 7, 1, 35)."
+  - id: traite7-l3-q3
+    sentence: "Pour le traité 7 de Plotin, une chose qui produit parce qu'elle est parfaite ___ le principe, autant qu'elle le peut."
+    answer: "imite"
+    alt: []
+  - id: traite7-l3-q4
+    sentence: "Que le Premier produise, le traité 7 de Plotin l'établit par un raisonnement par l'___ : un Premier stérile serait impuissant, ce que sa perfection exclut."
+    answer: "absurde"
+    alt: []
+  - id: traite7-l3-q5
+    sentence: "Le Premier, plus parfait que tout, ne saurait demeurer en lui-même « comme s'il était ___ de lui-même » (traité 7, 1, 35)."
     answer: "avare"
     alt: []
-  - id: traite7-l3-p4
-    sentence: "Le traité 7 définit l'Intellect comme une pensée intellective de l'Un, une ___ : il existe comme pensée de l'Un."
+  - id: traite7-l3-q6
+    sentence: "Un Premier stérile serait dépourvu de puissance, ce qui est absurde pour celui qui est, selon le traité 7 de Plotin, la « ___ de toutes choses »."
+    answer: "puissance"
+    alt: []
+  - id: traite7-l3-q7
+    sentence: "Pour le traité 7 de Plotin, ce que le Premier produit ne peut lui être égal, sinon ce serait le Premier lui-même ; venant immédiatement après lui, c'est l'___."
+    answer: "Intellect"
+    alt: []
+  - id: traite7-l3-q8
+    sentence: "Le verbe grec qui dit que l'Un se maintient toujours en lui-même, seule propriété qu'aucune réserve ne corrige dans le traité 7 de Plotin, est ___."
+    answer: "ménei"
+    alt: ["menei"]
+- id: traite7-l4
+  title: "L'intellection, une vue qui se tourne vers l'Un (2, 1-12)"
+  notes: |-
+    L'Intellect naît comme une vue : une intellection d'abord indéfinie jaillit de l'Un, puis se tourne vers lui et reçoit de lui sa forme. C'est pourquoi l'Intellect est d'emblée deux, et ne peut être premier.
+
+    **Pour décrire cette naissance, le chapitre 2 distingue trois termes.**
+
+    - l'**intelligible** (`noêton`) : ici le Premier lui-même, en tant que l'Intellect le pense ;
+    - l'**intellection** (`noêsis`) : l'activité qui naît de lui, et qui le cherche ;
+    - l'**Intellect** : cette intellection une fois achevée. Il n'existe pas à part de son activité : il est une `noêsis`, une pensée de l'Un.
+
+    **L'intellection naissante est comme une vue qui ne voit encore rien.** Par elle-même elle est **indéfinie**, sans objet ni limite ; c'est en se tournant vers l'intelligible pour le voir qu'elle reçoit de lui sa détermination. L'Intellect naît donc d'un double mouvement : un jaillissement d'abord indéterminé, puis un retour vers l'Un, la **conversion** (`epistrophê`), qui lui donne sa forme. Plotin ne le démontre pas : il le rend concevable par l'analogie de la vue.
+
+    **C'est le sens qu'il donne à une formule héritée de Platon** : les formes intelligibles, c'est-à-dire les nombres, viennent **« de la dyade indéfinie et de l'un »** (2, 7-8). La dyade est l'intellection encore indéfinie, l'un ce qui la limite.
+
+    **L'Intellect ainsi formé est d'emblée deux.** Il est intelligible, mais il intellige aussi : il est à la fois ce qui pense et ce qui est pensé. C'est pourquoi il n'est pas simple, et ne peut être le premier principe.
+
+    ! L'Intellect ne regarde pas l'Un après coup : c'est en le regardant qu'il devient Intellect.
+  points:
+  - id: traite7-l4-q1
+    sentence: "Le traité 7 définit l'Intellect par son activité : il est une pensée de l'Un, une ___, et n'existe pas à part de cette activité."
     answer: "noêsis"
-    alt: ["noesis", "intellection"]
-  - id: traite7-l3-p5
-    sentence: "Comme la vue, l'intellection est par elle-même ___, même si l'intelligible la définit."
+    alt: ["noesis"]
+  - id: traite7-l4-q2
+    sentence: "Pour le traité 7 de Plotin, l'intellection naissante, comme une vue qui ne voit encore rien, est par elle-même ___ : c'est l'intelligible qui la définit."
     answer: "indéfinie"
     alt: ["indefinie"]
-  - id: traite7-l3-p6
-    sentence: "Les formes intelligibles, c'est-à-dire les nombres, viennent « de la ___ indéfinie et de l'un » (traité 7, 2, 7-8)."
+  - id: traite7-l4-q3
+    sentence: "Pour rendre concevable la naissance de l'Intellect, le traité 7 (2, 4-6) compare l'intellection naissante à la ___, encore indéterminée tant qu'elle ne fixe aucun objet."
+    answer: "vue"
+    alt: ["vision"]
+  - id: traite7-l4-q4
+    sentence: "L'intellection indéfinie qui jaillit de l'Un ne devient Intellect qu'en se retournant vers lui ; ce retour, qui lui donne sa forme, est la conversion, en grec ___."
+    answer: "epistrophê"
+    alt: ["epistrophe", "épistrophê", "epistrophè"]
+  - id: traite7-l4-q5
+    sentence: "Les formes intelligibles, c'est-à-dire les nombres, viennent « de la ___ indéfinie et de l'un » (traité 7, 2, 7-8) : l'intellection encore indéfinie, et ce qui la limite."
     answer: "dyade"
     alt: []
-  - id: traite7-l3-p7
-    sentence: "Parce qu'il est à la fois intelligible et intelligeant, l'Intellect est d'emblée ___."
+  - id: traite7-l4-q6
+    sentence: "« Il est certes lui-même aussi un intelligible, mais il intellige aussi : c'est pourquoi, d'emblée, il est ___ » (traité 7, 2, 10-11), raison pour laquelle l'Intellect ne peut être le premier principe."
     answer: "deux"
-    alt: ["une dualité", "dualité"]
-  - id: traite7-l3-p8
-    sentence: "L'Intellect naît de l'intelligible alors que celui-ci demeure « dans son état ___ » (traité 7, 2, 21)."
+    alt: ["2"]
+- id: traite7-l5
+  title: "L'Un demeure, l'Intellect est son image (2, 12-27)"
+  notes: |-
+    L'Intellect naît sans que l'Un change : il en est l'image, distincte de lui sans en être séparée, et c'est seulement à travers lui que l'Un peut être dit.
+
+    **Tandis que l'intellection se cherche, l'intelligible premier ne bouge pas.** Il n'a besoin de rien, alors que l'intellection a besoin de lui. L'Intellect naît donc tandis que l'Un demeure **« dans son état habituel »** (2, 21) : Plotin reprend la formule du *Timée* (42e) sur le démiurge qui, son ouvrage accompli, « demeure dans son propre caractère ». Ce qui naît n'est pas un morceau détaché de l'Un, mais **« une imitation et une image »** de lui.
+
+    **Distinguer n'est pas séparer.** L'Intellect n'est pas l'Un, mais il n'existe pas hors de lui : il est le regard que l'Un porte sur lui-même, avec cette précision que **le sujet de ce regard est l'Intellect, non l'Un.**
+
+    **Il s'ensuit qu'on ne connaît l'Un que relativement à ce qui vient de lui.** Le Premier n'est « intelligible » (`noêton`) que pour l'Intellect qui le pense ; il est de même l'« Un » pour le multiple, le « bien » pour ce qui peut être bon. Ce qu'il est en lui-même reste **ineffable**. Le traité 9 (VI, 9) poursuivra cette réflexion.
+
+    ! « Intelligible » n'est pas un nom de l'Un en lui-même : il le reçoit de l'Intellect qui le pense.
+  points:
+  - id: traite7-l5-q1
+    sentence: "Pour le traité 7 de Plotin, l'intellection a besoin de l'intelligible premier, mais l'intelligible premier, lui, n'a ___ de rien."
+    answer: "besoin"
+    alt: []
+  - id: traite7-l5-q2
+    sentence: "L'Intellect naît de l'intelligible premier alors que celui-ci demeure « dans son état ___ » (traité 7, 2, 21)."
     answer: "habituel"
     alt: []
-  - id: traite7-l3-p9
-    sentence: "Pour le traité 7 de Plotin, il faut distinguer l'Intellect de l'Un, mais il serait fallacieux de les ___."
+  - id: traite7-l5-q3
+    sentence: "Pour dire que l'Un engendre sans se quitter, le traité 7 (2, 21) reprend la formule du ___ (42e) sur le démiurge qui, son ouvrage accompli, « demeure dans son propre caractère »."
+    answer: "Timée"
+    alt: ["Timee"]
+  - id: traite7-l5-q4
+    sentence: "L'Intellect n'est pas un morceau détaché de l'Un : le traité 7 en fait « une imitation et une ___ » du Premier."
+    answer: "image"
+    alt: []
+  - id: traite7-l5-q5
+    sentence: "Pour le traité 7 de Plotin, il faut distinguer l'Intellect de l'Un, mais il serait fallacieux de les ___ : l'Intellect n'existe pas hors de l'Un."
     answer: "séparer"
     alt: ["separer"]
-  - id: traite7-l3-p10
+  - id: traite7-l5-q6
     sentence: "Dans le traité 7, l'Intellect est le regard que l'Un porte sur lui-même ; mais le ___ de ce regard est l'Intellect, non l'Un."
     answer: "sujet"
     alt: []
-  - id: traite7-l3-p11
-    sentence: "« Car ce qui est n'est point un ___ » : pour le traité 7 (2, 43), l'Intellect et l'être sont une seule et même chose."
-    answer: "cadavre"
+  - id: traite7-l5-q7
+    sentence: "Le Premier n'est « intelligible » que pour l'Intellect qui le pense ; « intelligible » se dit en grec ___."
+    answer: "noêton"
+    alt: ["noeton"]
+  - id: traite7-l5-q8
+    sentence: "On ne connaît l'Un que relativement à ce qui vient de lui : ce qu'il est par lui-même reste, pour le traité 7 de Plotin, ___."
+    answer: "ineffable"
     alt: []
-- id: traite7-l4
-  title: "Les deux actes : la chaleur du feu"
+  - id: traite7-l5-q9
+    sentence: "La réflexion sur la connaissance seulement relative de l'Un, esquissée dans le traité 7, sera poursuivie dans le traité ___ (VI, 9), *Sur le Bien ou l'Un*."
+    answer: "9"
+    alt: []
+- id: traite7-l6
+  title: "Les deux actes : comment l'Un produit sans changer (2, 27-36)"
   notes: |-
-    **L'obstacle qui reste : comment l'Un peut-il agir au-dehors de lui, en autre chose que lui-même ?** Il produit (leçon précédente) et pourtant il demeure (leçon 2). La difficulté contraint Plotin à affirmer, au risque d'une contradiction, que d'une certaine manière l'Un ne se tient pas en lui-même (chap. 1, 35).
+    **Il reste à lever la contradiction du chapitre 1 : l'Un produit, et pourtant il demeure.** Plotin pose la question en propres termes (2, 27) : **« Mais comment naît-il alors que celui-ci demeure inchangé ? »** Sa réponse n'est pas démontrée : c'est un principe général, qu'il pose puis rend concevable par un exemple.
 
-    **La réponse : la thèse des deux actes** (2, 27-36). « En chaque chose, il y a un acte qui appartient à la réalité et un acte qui provient de la réalité. »
+    **Le principe : toute chose a deux actes.** « En chaque chose, il y a un acte qui appartient à la réalité et un acte qui provient de la réalité » (2, 27-28). Le premier est la chose même ; le second en est la conséquence nécessaire, mais il est autre qu'elle.
 
     | Acte | Ce qu'il est | Le feu |
     | de la réalité | la chose elle-même, son activité propre, « essentielle » | la chaleur qui le constitue |
     | issu de la réalité | sa conséquence nécessaire, différente d'elle, qui fait exister autre chose | la chaleur qu'il procure aux autres choses |
 
-    **Appliquée à l'Un, elle lève la contradiction.** {sky}L'Un a un acte propre, qui le maintient semblable à lui-même{/sky} ; {coral}l'Intellect est encore un acte de l'Un, mais en quelque sorte en dehors de lui{/coral}. Le feu ne perd rien à chauffer ce qui l'entoure : de même, l'Un ne perd rien à produire. Le traité 3 (III, 1), 1, 13 faisait déjà la remarque.
+    **L'exemple du feu montre qu'il n'y a là rien de contradictoire** : le feu chauffe ce qui l'entoure sans cesser d'être du feu ni rien perdre de sa chaleur propre. Il en va de même de l'Un : {sky}par son acte propre, il demeure ce qu'il est{/sky} ; {coral}l'Intellect est un acte qui vient de lui, comme en dehors de lui{/coral}. Produire, pour l'Un, n'est donc pas sortir de soi, mais laisser se répandre l'acte second qui accompagne nécessairement le premier. Le traité 3 (III, 1), 1, 13 faisait déjà cette remarque.
 
-    **D'où vient l'outil : Plotin emprunte à Aristote l'identité de la réalité et de l'acte (`enérgeia`)**, mais modifie sa distinction de l'acte et de la puissance. Si l'on parle de « puissance » au niveau du Premier, c'est au sens d'une puissance qui s'exerce sans réserve et dont l'activité **surabonde** sans cesse : l'Un est « puissance de toutes choses ».
+    **L'outil vient d'Aristote, mais Plotin le transforme.** Il lui emprunte l'identité de la réalité et de l'acte (`enérgeia`). Mais chez Aristote, la puissance est une capacité qui attend d'être actualisée ; quand Plotin dit l'Un « puissance de toutes choses », il entend une puissance qui s'exerce sans réserve et **surabonde** sans cesse.
 
-    **La thèse vaut au-delà de l'Un : elle a un sens causal.** L'acte d'une chose, après le premier, se définit toujours par rapport à l'acte premier de ce qui l'a engendrée. L'acte de l'Intellect est la conséquence ressemblante de l'acte de l'Un ; de même, l'acte de l'âme, la **`dianoia`**, sera l'acte second de l'Intellect. Le schéma de la première procession devient celui de toute la hiérarchie.
+    **Le schéma vaut pour toute la suite du réel.** L'acte second dépend entièrement de l'acte premier, qui n'a nul besoin de lui ; il lui ressemble, et lui est inférieur. L'acte de l'Intellect est ainsi l'acte second de l'Un ; de même, l'acte de l'âme, la **`dianoia`**, sera l'acte second de l'Intellect.
 
     ! La puissance de l'Un n'est pas la puissance aristotélicienne, capacité en attente d'être actualisée : c'est une puissance pleinement active, qui surabonde.
   points:
-  - id: traite7-l4-p1
-    sentence: "Pour expliquer comment l'Un agit hors de lui sans en être affecté, le traité 7 (2, 27-36) introduit la thèse des ___."
+  - id: traite7-l6-q1
+    sentence: "La difficulté que la doctrine des deux actes doit lever est formulée par le traité 7 (2, 27) : « Mais comment naît-il alors que celui-ci demeure ___ ? »"
+    answer: "inchangé"
+    alt: ["inchange"]
+  - id: traite7-l6-q2
+    sentence: "Pour expliquer comment l'Un produit l'Intellect sans changer, le traité 7 (2, 27-36) pose la doctrine des ___."
     answer: "deux actes"
     alt: []
-  - id: traite7-l4-p2
+  - id: traite7-l6-q3
     sentence: "« En chaque chose, il y a un acte qui appartient à la réalité et un acte qui ___ de la réalité » (traité 7, 2, 27-28)."
     answer: "provient"
     alt: []
-  - id: traite7-l4-p3
-    sentence: "L'exemple qu'emploie le traité 7 pour illustrer les deux actes est le ___, dont la chaleur le constitue et réchauffe les autres choses."
+  - id: traite7-l6-q4
+    sentence: "Pour montrer qu'une chose peut produire hors d'elle sans changer, le traité 7 illustre la doctrine des deux actes par le ___, qui chauffe ce qui l'entoure sans rien perdre de sa chaleur propre."
     answer: "feu"
     alt: []
-  - id: traite7-l4-p4
+  - id: traite7-l6-q5
     sentence: "La distinction des deux actes, au chapitre 2 du traité 7, retrouve une remarque déjà faite dans le traité ___ (III, 1), 1, 13."
     answer: "3"
     alt: []
-  - id: traite7-l4-p5
-    sentence: "Le traité 7 emprunte à ___ l'identité de la réalité et de l'acte (`enérgeia`)."
+  - id: traite7-l6-q6
+    sentence: "Le traité 7 emprunte à ___ l'identité de la réalité et de l'acte, mais transforme sa notion de puissance."
     answer: "Aristote"
     alt: []
-  - id: traite7-l4-p6
-    sentence: "L'acte ou l'activité, dans la terminologie aristotélicienne reprise par le traité 7 de Plotin, se dit en grec ___."
+  - id: traite7-l6-q7
+    sentence: "L'acte ou l'activité, dans la terminologie aristotélicienne reprise par le traité 7 de Plotin pour sa doctrine des deux actes, se dit en grec ___."
     answer: "enérgeia"
     alt: ["energeia"]
-  - id: traite7-l4-p7
-    sentence: "Si l'Un est une puissance, c'est au sens d'une puissance qui s'exerce sans réserve et dont l'activité ___ sans cesse et sans limites."
+  - id: traite7-l6-q8
+    sentence: "La puissance de l'Un n'est pas, comme chez Aristote, une capacité en attente d'être actualisée : elle s'exerce sans réserve, et son activité ___ sans cesse."
     answer: "surabonde"
     alt: []
-  - id: traite7-l4-p8
-    sentence: "Pour le traité 7 (2, 37-38), le Premier est « ___ de toutes choses », et il est d'emblée toutes les choses."
-    answer: "puissance"
-    alt: []
-  - id: traite7-l4-p9
-    sentence: "De même que l'Intellect est l'acte second de l'Un, l'acte de l'âme, la ___, sera défini comme l'acte second de l'Intellect."
+  - id: traite7-l6-q9
+    sentence: "Le schéma des deux actes vaut pour toute la suite du réel : de même que l'Intellect est l'acte second de l'Un, l'acte de l'âme, la ___, sera l'acte second de l'Intellect."
     answer: "dianoia"
-    alt: ["dianoia"]
-- id: traite7-l5
+    alt: []
+- id: traite7-l7
+  title: "L'Un au-delà de la réalité, l'Intellect identique à l'être (2, 36-48)"
+  notes: |-
+    Le traité conclut en situant les deux termes de la procession : l'Un au-delà de la réalité qu'il produit, l'Intellect identique à la réalité qu'il pense.
+
+    **L'Un est au-delà de la réalité, et donc de l'Intellect** (2, 36-43). Ce que l'Un produit, l'Intellect, est la réalité même (`ousía`), où l'être et la pensée sont réunis. L'Un, qui produit la réalité, ne peut en faire partie ; et l'Intellect, qui est deux, ne peut être le plus simple. Le Premier est ainsi au-delà de l'un comme de l'autre, tout en étant « puissance de toutes choses » : il n'est aucune d'elles, parce qu'il les produit toutes. Ce que le chapitre 1 posait d'emblée se retrouve ici établi à partir de ce qui vient de l'Un.
+
+    **L'Intellect, lui, est identique à ses objets** (2, 43-48). **« Car ce qui est n'est point un cadavre »** : l'être n'est pas une chose inerte que l'Intellect regarderait du dehors, il vit et il pense. L'Intellect et l'être sont une seule et même chose. À la différence de la sensation, qui reçoit des objets extérieurs, l'Intellect ne reçoit pas ses objets : il les est.
+
+    **Le traité 7 affirme cette identité sans la démontrer.** Plotin l'établit ailleurs, dans le traité 5 (V, 9), puis dans le traité 32 (V, 5), *Que les intelligibles ne sont pas hors de l'intellect*.
+
+    ! L'Un n'est pas au-delà de la réalité parce qu'il lui manquerait quelque chose : c'est parce qu'il la produit tout entière qu'il n'en fait pas partie.
+  points:
+  - id: traite7-l7-q1
+    sentence: "L'Un produit l'Intellect, qui est la réalité même ; ne pouvant faire partie de ce qu'il produit, l'Un est, pour le traité 7 (2, 36-43), au-delà de la ___."
+    answer: "réalité"
+    alt: ["realite"]
+  - id: traite7-l7-q2
+    sentence: "« Car ce qui est n'est point un ___ » : pour le traité 7 (2, 43), l'être n'est pas inerte, et l'Intellect et l'être sont une seule et même chose."
+    answer: "cadavre"
+    alt: []
+  - id: traite7-l7-q3
+    sentence: "Le traité 7 de Plotin s'achève (2, 43-48) sur l'identité de l'Intellect et de ses ___ : il ne les reçoit pas du dehors, il les est."
+    answer: "objets"
+    alt: []
+  - id: traite7-l7-q4
+    sentence: "Pour le traité 7 de Plotin, l'Intellect ne reçoit pas ses objets du dehors, à la différence de la ___, qui porte sur des objets extérieurs."
+    answer: "sensation"
+    alt: []
+  - id: traite7-l7-q5
+    sentence: "Le traité 7 affirme sans la démontrer l'identité de l'Intellect et de ses objets ; Plotin l'établit ailleurs, notamment dans le traité ___ (V, 5), *Que les intelligibles ne sont pas hors de l'intellect*."
+    answer: "32"
+    alt: []
+- id: traite7-l8
   title: "Repérage : le plan du traité 7"
   notes: |-
-    **Le traité 7 tient en deux chapitres, qui suivent l'ordre des questions posées.**
-
-    - **Chapitre 1 : l'Un et pourquoi il produit.** Ce qu'il doit être (un, simple, parfait), puis pourquoi, parfait, il produit nécessairement.
-    - **Chapitre 2 : ce qu'il produit et comment.** Ce qu'est l'Intellect (une dualité), comment il naît (image d'un intelligible qui demeure), par quel mécanisme (les deux actes), et ce qui en résulte (l'Un au-delà de l'Intellect, l'Intellect identique à l'être).
+    **Le traité 7 tient en deux chapitres, qui suivent l'ordre des questions posées.** Le chapitre 1 dit ce qu'est l'Un et pourquoi il produit : ce qu'il doit être pour être premier (un, simple, parfait), puis pourquoi, parfait, il produit nécessairement. Le chapitre 2 dit ce qu'il produit et comment : ce qu'est l'Intellect (une dualité), comment il naît (image d'un intelligible qui demeure), par quel mécanisme (les deux actes), et ce qui en résulte (l'Un au-delà de l'Intellect, l'Intellect identique à l'être).
 
     | Moment | Lieu | Ce qui s'y joue |
     | le Premier est un, simple et parfait | 1, 1-23 | s'il y a quelque chose après lui |
@@ -277,31 +368,29 @@ lessons:
     | l'Un au-delà de la réalité | 2, 36-43 | donc au-delà de l'Intellect |
     | l'Intellect identique à ses objets | 2, 43-48 | l'être n'est pas un cadavre |
 
-    Les repères suivent le plan détaillé qui accompagne la traduction. Le tableau se joue en repérage : remettre les moments dans l'ordre du traité, puis replacer leurs repères, puis en écrire un.
-
     ! Les deux actes (2, 27-36) viennent après la naissance de l'Intellect : ils expliquent comment elle se fait sans que l'Un change.
   points:
-  - id: traite7-l5-p1
-    sentence: "Dans le traité 7 de Plotin, la thèse selon laquelle le Premier, s'il y a quelque chose après lui, doit être un, simple et parfait occupe ___."
+  - id: traite7-l8-q1
+    sentence: "Dans le traité 7 de Plotin, l'établissement de ce que doit être le Premier, s'il y a quelque chose après lui (un, simple et parfait), occupe ___."
     answer: "1, 1-23"
     alt: ["chap. 1, 1-23"]
-  - id: traite7-l5-p2
+  - id: traite7-l8-q2
     sentence: "Dans le traité 7 de Plotin, l'argument selon lequel l'Un, parfait, doit nécessairement produire quelque chose se trouve en ___."
     answer: "1, 23-41"
     alt: ["chap. 1, 23-41"]
-  - id: traite7-l5-p3
+  - id: traite7-l8-q3
     sentence: "Le chapitre 2 du traité 7 de Plotin s'ouvre (lignes 1-12) sur la ___ de l'Intellect : intellection et Formes intelligibles."
     answer: "dualité"
     alt: ["dualite"]
-  - id: traite7-l5-p4
-    sentence: "Dans le traité 7 de Plotin, la thèse des deux actes et l'exemple du feu se trouvent en ___."
+  - id: traite7-l8-q4
+    sentence: "Dans le traité 7 de Plotin, la doctrine des deux actes et l'exemple du feu, qui expliquent comment l'Un produit sans changer, se trouvent en ___."
     answer: "2, 27-36"
     alt: ["chap. 2, 27-36"]
-  - id: traite7-l5-p5
-    sentence: "Le traité 7 de Plotin s'achève (2, 43-48) sur l'identité de l'Intellect et de ses ___."
-    answer: "objets"
-    alt: []
-  - id: traite7-l5-p6
+  - id: traite7-l8-q5
     sentence: "Dans le traité 7 de Plotin, la thèse selon laquelle l'Un est au-delà de la réalité, et donc de l'Intellect, se trouve en ___."
     answer: "2, 36-43"
     alt: ["chap. 2, 36-43"]
+  - id: traite7-l8-q6
+    sentence: "Le traité 7 de Plotin s'achève, en ___, sur l'identité de l'Intellect et de ses objets : l'être n'est pas un cadavre."
+    answer: "2, 43-48"
+    alt: ["chap. 2, 43-48"]
