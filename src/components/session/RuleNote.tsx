@@ -474,6 +474,12 @@ export function RichGaps({ text, renderGap }: { text: string; renderGap: (index:
   const pieces = text.split(GAP)
   const numbered = pieces
     .map((piece, index) => {
+      // Le trou est un bloc en ligne : l'espace insécable d'un guillemet qui
+      // le touche (« ___ », « ___ ») n'y suffit pas, le navigateur coupe
+      // quand même entre le trou et le guillemet. Le soudeur (U+2060) y
+      // remédie des deux côtés ; après le trou, il se place avant l'espace
+      // pour que `nbspQuotes` la reconnaisse encore.
+      if (index > 0 && /^\s»/.test(piece)) piece = `⁠${piece}`
       if (index === pieces.length - 1) return piece
       // Un trou qui suit directement une élision (« l'___ », « qu'___ »)
       // forme un seul mot avec elle : rien ne doit jamais les séparer en
@@ -482,7 +488,7 @@ export function RichGaps({ text, renderGap }: { text: string; renderGap: (index:
       // invisible et sans largeur, interdit la coupure à cet endroit précis
       // sans rien ajouter à l'affichage — un trou qui suit un mot entier
       // (espace avant) garde, lui, le droit de passer à la ligne suivante.
-      const joiner = /\S$/.test(piece) ? '\u2060' : ''
+      const joiner = /\S$|\u00ab\s$/.test(piece) ? '\u2060' : ''
       return `${piece}${joiner}${GAP_MARK}${index}${GAP_MARK}`
     })
     .join('')
