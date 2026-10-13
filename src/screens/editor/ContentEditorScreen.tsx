@@ -10,6 +10,7 @@ import { createRng } from '@/engine/rng'
 import type { Lesson } from '@/content/schema'
 import { TablesEditor } from './TablesEditor'
 import { formattingShortcut } from './formatting'
+import { useFrenchQuotes } from './frenchQuotes'
 import { isCitation } from './textUnit'
 import type { LessonTableDTO, PassageDTO, PointDTO, SkippedRowDTO, TrackKind, TreeCourse, TreeLesson, TreeTrack, TreeUnit } from './types'
 import { NewLessonDialog, NewUnitDialog, UnitSettingsDialog } from './UnitDialogs'
@@ -105,6 +106,7 @@ function tableExerciseCount(lessonId: string, title: string, notes: string, sett
 }
 
 export default function ContentEditorScreen() {
+  useFrenchQuotes()
   const [tree, setTree] = useState<TreeCourse[] | null>(null)
   const [treeError, setTreeError] = useState<string | null>(null)
 
