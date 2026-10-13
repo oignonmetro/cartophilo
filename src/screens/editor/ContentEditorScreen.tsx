@@ -10,6 +10,7 @@ import { createRng } from '@/engine/rng'
 import type { Lesson } from '@/content/schema'
 import { TablesEditor } from './TablesEditor'
 import { formattingShortcut } from './formatting'
+import { replaceRange } from './editText'
 import { useFrenchQuotes } from './frenchQuotes'
 import { isCitation } from './textUnit'
 import type { LessonTableDTO, PassageDTO, PointDTO, SkippedRowDTO, TrackKind, TreeCourse, TreeLesson, TreeTrack, TreeUnit } from './types'
@@ -295,8 +296,7 @@ export default function ContentEditorScreen() {
     if (!el) return
     const { selectionStart, selectionEnd, value } = el
     const selected = value.slice(selectionStart, selectionEnd)
-    const next = value.slice(0, selectionStart) + before + selected + after + value.slice(selectionEnd)
-    setNotes(next)
+    replaceRange(el, selectionStart, selectionEnd, before + selected + after)
     requestAnimationFrame(() => {
       el.focus()
       el.selectionStart = selectionStart + before.length
@@ -316,8 +316,7 @@ export default function ContentEditorScreen() {
       .split('\n')
       .map((line) => (line.startsWith(prefix) ? line : prefix + line))
       .join('\n')
-    const next = value.slice(0, lineStart) + prefixed + value.slice(lineEnd)
-    setNotes(next)
+    replaceRange(el, lineStart, lineEnd, prefixed)
     requestAnimationFrame(() => {
       el.focus()
       el.selectionStart = lineStart
@@ -1011,7 +1010,7 @@ function PointsEditor({
                 <textarea
                   value={point.sentence}
                   onChange={(event) => update(index, { sentence: event.target.value })}
-                  onKeyDown={formattingShortcut((sentence) => update(index, { sentence }))}
+                  onKeyDown={formattingShortcut()}
                   spellCheck={false}
                   rows={3}
                   placeholder={isText ? '« Citation avec ___ » (plusieurs trous possibles)' : 'Phrase avec ___'}
@@ -1087,7 +1086,7 @@ function PointsEditor({
               <input
                 value={point.explanation ?? ''}
                 onChange={(event) => update(index, { explanation: event.target.value })}
-                onKeyDown={formattingShortcut((explanation) => update(index, { explanation }))}
+                onKeyDown={formattingShortcut()}
                 placeholder="référence, complément…"
                 title="Ctrl+B gras, Ctrl+I italique, Ctrl+U souligné"
                 className="min-w-32 flex-1 rounded-md border border-line bg-paper px-2 py-1 text-ink outline-none focus:border-teal"

@@ -399,12 +399,7 @@ export function TablesEditor({
                                 }
                                 return
                               }
-                              formattingShortcut((value) =>
-                                edit(index, (grid) => {
-                                  grid[rowIndex]![column] = cleanCell(value)
-                                  return grid
-                                }),
-                              )(event)
+                              formattingShortcut()(event)
                             }}
                             title="Ctrl+B gras, Ctrl+I italique, Ctrl+U souligné ; Entrée : case du dessous"
                             className={`min-h-9 resize-y rounded-lg border-2 px-2 py-1 text-sm leading-snug text-ink outline-none focus:border-teal ${

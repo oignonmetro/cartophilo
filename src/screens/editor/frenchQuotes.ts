@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { replaceRange } from './editText'
 
 const NBSP = ' '
 
@@ -40,8 +41,7 @@ export function useFrenchQuotes() {
         if (/[  ]$/.test(before)) from = start - 1
         text = `${NBSP}»`
       }
-      el.setRangeText(text, from, end, 'end')
-      el.dispatchEvent(new Event('input', { bubbles: true }))
+      replaceRange(el, from, end, text)
     }
     document.addEventListener('keydown', onKeyDown)
     return () => document.removeEventListener('keydown', onKeyDown)

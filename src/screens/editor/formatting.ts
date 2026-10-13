@@ -1,3 +1,5 @@
+import { replaceRange } from './editText'
+
 /**
  * Mêmes marqueurs que `handleFormattingShortcut` (le rappel), réutilisables
  * sur n'importe quel champ contrôlé : une phrase d'exercice n'a pas de
@@ -5,7 +7,7 @@
  * ce qu'il faut est déjà sur l'événement (`currentTarget`, la sélection en
  * cours), pas besoin d'un ref par carte.
  */
-export function formattingShortcut(onChange: (value: string) => void) {
+export function formattingShortcut() {
   return (event: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     if (!(event.metaKey || event.ctrlKey)) return
     const key = event.key.toLowerCase()
@@ -21,8 +23,7 @@ export function formattingShortcut(onChange: (value: string) => void) {
     const selectionStart = el.selectionStart ?? value.length
     const selectionEnd = el.selectionEnd ?? value.length
     const selected = value.slice(selectionStart, selectionEnd)
-    const next = value.slice(0, selectionStart) + marker + selected + marker + value.slice(selectionEnd)
-    onChange(next)
+    replaceRange(el, selectionStart, selectionEnd, marker + selected + marker)
     requestAnimationFrame(() => {
       el.focus()
       el.selectionStart = selectionStart + marker.length
