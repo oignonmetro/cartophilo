@@ -174,6 +174,7 @@ interface ProgressState extends ProgressSnapshot {
       link: TreatiseLink
       correct: boolean
       thesis?: number
+      example?: number
       session?: string
     }[],
   ) => void
@@ -467,7 +468,7 @@ export const useProgress = create<ProgressState>()(
             const base = current ?? { right: 0, wrong: 0 }
             return correct ? { ...base, right: base.right + 1 } : { ...base, wrong: base.wrong + 1 }
           }
-          for (const { id, stage, link, correct, thesis, session } of results) {
+          for (const { id, stage, link, correct, thesis, example, session } of results) {
             const record = bucket[id] ?? {}
             // Les comptes se tiennent par étape (association, QCM, écrit) : réussir une étape ne vaut pas les autres.
             const here = record.stages?.[stage] ?? {}
@@ -475,9 +476,13 @@ export const useProgress = create<ProgressState>()(
               link === 'title-number'
                 ? { ...here, number: bump(here.number, correct) }
                 : // Chaque thèse a son propre compte : en connaître une ne vaut pas connaître les autres.
-                  thesis !== undefined
-                  ? { ...here, theses: { ...here.theses, [thesis]: bump(here.theses?.[thesis], correct) } }
-                  : here
+                  link === 'title-example'
+                  ? example !== undefined
+                    ? { ...here, examples: { ...here.examples, [example]: bump(here.examples?.[example], correct) } }
+                    : here
+                  : thesis !== undefined
+                    ? { ...here, theses: { ...here.theses, [thesis]: bump(here.theses?.[thesis], correct) } }
+                    : here
             const next: typeof record = { ...record, stages: { ...record.stages, [stage]: nextStage } }
             // Séances différentes où ce traité a été réussi : la base de sa consolidation.
             if (correct && session !== undefined && record.session !== session) {

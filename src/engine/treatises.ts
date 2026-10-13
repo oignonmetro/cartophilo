@@ -13,11 +13,11 @@ import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
 /**
  * Repérage général dans les traités d'un auteur (Plotin : 54 traités).
  *
- * Un traité se dit de trois façons, comme les colonnes d'un tableau : son
+ * Un traité se dit de plusieurs façons, comme les colonnes d'un tableau : son
  * titre, sa numérotation (« 53 [I, 1] ») et, pour ceux qui en ont, ses thèses
- * principales. Un exercice ne teste jamais « un traité » en bloc : il fait
+ * principales et ses exemples (chacun avec sa fonction argumentative). Un exercice ne teste jamais « un traité » en bloc : il fait
  * établir un **lien** entre deux colonnes, le titre servant de pivot (titre ↔
- * numérotation, titre ↔ thèse), et chaque bonne ou mauvaise réponse est
+ * numérotation, titre ↔ thèse, titre ↔ exemple), et chaque bonne ou mauvaise réponse est
  * retenue pour *ce* traité, *ce* lien et *cette* étape.
  *
  * Un traité s'apprend en trois **étapes**, de la plus aidée à la plus exigeante :
@@ -45,7 +45,7 @@ import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
 /** Nombre de traités en cours d'apprentissage : ni plus, ni moins (tant qu'il en reste à apprendre). */
 export const ACTIVE_COUNT = 6
 
-export const LINKS: readonly TreatiseLink[] = ['title-number', 'title-thesis']
+export const LINKS: readonly TreatiseLink[] = ['title-number', 'title-thesis', 'title-example']
 
 /** Les étapes d'un traité, dans l'ordre : association, QCM, écrit. */
 export type TreatiseStage = 'match' | 'choice' | 'type'
@@ -54,6 +54,7 @@ export const STAGES: readonly TreatiseStage[] = ['match', 'choice', 'type']
 const LINK_COLUMNS: Record<TreatiseLink, [TreatiseColumn, TreatiseColumn]> = {
   'title-number': ['title', 'number'],
   'title-thesis': ['title', 'thesis'],
+  'title-example': ['title', 'example'],
 }
 
 /** Ce qu'on retient d'un lien : ses réponses justes (du premier coup) et fausses. */
@@ -62,10 +63,11 @@ export interface LinkRecord {
   wrong: number
 }
 
-/** Ce qu'on retient d'une étape : la numérotation, puis chaque thèse (par rang), à part. */
+/** Ce qu'on retient d'une étape : la numérotation, puis chaque thèse et chaque exemple (par rang), à part. */
 export interface StageRecord {
   number?: LinkRecord
   theses?: Record<number, LinkRecord>
+  examples?: Record<number, LinkRecord>
 }
 
 /**
@@ -97,14 +99,24 @@ export function numberingOf(entry: TreatiseEntry): string {
 }
 
 function hasColumn(entry: TreatiseEntry, column: TreatiseColumn): boolean {
-  return column !== 'thesis' || Boolean(entry.theses && entry.theses.length > 0)
+  if (column === 'thesis') return Boolean(entry.theses && entry.theses.length > 0)
+  if (column === 'example') return Boolean(entry.examples && entry.examples.length > 0)
+  return true
 }
 
-/** Ce que dit un traité dans une colonne ; `thesis` est le rang de la thèse (« ou » : jamais deux dans un même exercice). */
-function valueIn(entry: TreatiseEntry, column: TreatiseColumn, thesis = 0): string {
+/** Ce que dit un traité dans une colonne ; `rank` est le rang de la thèse ou de l'exemple (jamais deux dans un même exercice). */
+function valueIn(entry: TreatiseEntry, column: TreatiseColumn, rank = 0): string {
   if (column === 'title') return entry.title
   if (column === 'number') return numberingOf(entry)
-  return entry.theses![thesis]!
+  if (column === 'example') return entry.examples![rank]!
+  return entry.theses![rank]!
+}
+
+/** Les thèses ou les exemples qu'un lien fait travailler, un à un ; rien pour la numérotation. */
+function rankedOf(entry: TreatiseEntry, link: TreatiseLink): readonly string[] {
+  if (link === 'title-thesis') return entry.theses ?? []
+  if (link === 'title-example') return entry.examples ?? []
+  return []
 }
 
 /** Les liens que ce traité permet d'établir : sa numérotation, et ses thèses s'il en a. */
@@ -125,8 +137,9 @@ function numberRecord(record: TreatiseRecord | undefined, stage: TreatiseStage):
   }
 }
 
-/** Le compte d'une thèse (par rang) à une étape. */
-function thesisRecord(record: TreatiseRecord | undefined, stage: TreatiseStage, index: number): LinkRecord {
+/** Le compte d'une thèse ou d'un exemple (par rang) à une étape. */
+function rankRecord(record: TreatiseRecord | undefined, stage: TreatiseStage, link: TreatiseLink, index: number): LinkRecord {
+  if (link === 'title-example') return record?.stages?.[stage]?.examples?.[index] ?? { right: 0, wrong: 0 }
   const own = record?.stages?.[stage]?.theses?.[index]
   if (stage !== 'match') return own ?? { right: 0, wrong: 0 }
   const legacy = record?.theses?.[index]
@@ -136,16 +149,28 @@ function thesisRecord(record: TreatiseRecord | undefined, stage: TreatiseStage, 
   }
 }
 
-/** Ce qui reste à réussir pour une thèse à une étape : jamais réussie d'abord, puis celles où l'on s'est trompé. */
-function thesisNeed(record: TreatiseRecord | undefined, stage: TreatiseStage, index: number): number {
-  const known = thesisRecord(record, stage, index)
+/** Ce qui reste à réussir pour une thèse ou un exemple à une étape : jamais réussi d'abord, puis ceux où l'on s'est trompé. */
+function rankNeed(record: TreatiseRecord | undefined, stage: TreatiseStage, link: TreatiseLink, index: number): number {
+  const known = rankRecord(record, stage, link, index)
   return (known.right === 0 ? 3 : 0) + Math.min(known.wrong, 3)
 }
 
-/** La thèse à faire travailler : une seule par traité, tirée selon ce qui reste à réussir à cette étape. */
-function pickThesis(entry: TreatiseEntry, record: TreatiseRecord | undefined, stage: TreatiseStage, rng: Rng): number {
-  const ranks = (entry.theses ?? []).map((_, index) => index)
-  return weightedPick(ranks, (index) => thesisNeed(record, stage, index), rng)
+/** La thèse ou l'exemple à faire travailler : un seul par traité, tiré selon ce qui reste à réussir à cette étape. */
+function pickRank(
+  entry: TreatiseEntry,
+  record: TreatiseRecord | undefined,
+  stage: TreatiseStage,
+  link: TreatiseLink,
+  rng: Rng,
+): number {
+  const ranks = rankedOf(entry, link).map((_, index) => index)
+  return weightedPick(ranks, (index) => rankNeed(record, stage, link, index), rng)
+}
+
+/** Le champ qui porte ce rang dans un exercice : `thesis` ou `example`. */
+function rankField(link: TreatiseLink, rank: number | undefined): { thesis?: number; example?: number } {
+  if (rank === undefined || link === 'title-number') return {}
+  return link === 'title-thesis' ? { thesis: rank } : { example: rank }
 }
 
 /**
@@ -159,7 +184,7 @@ export function isLinkDone(
   link: TreatiseLink,
 ): boolean {
   if (link === 'title-number') return numberRecord(record, stage).right >= 1
-  return (entry.theses ?? []).every((_, index) => thesisRecord(record, stage, index).right >= 1)
+  return rankedOf(entry, link).every((_, index) => rankRecord(record, stage, link, index).right >= 1)
 }
 
 /** Une étape est faite quand chacun des liens du traité y est fait. */
@@ -236,8 +261,8 @@ export function acquiredCount(entries: readonly TreatiseEntry[], progress: Treat
 
 /** Ce qui reste à réussir sur un lien à une étape, et les erreurs passées : le poids de cette association dans le tirage. */
 function need(entry: TreatiseEntry, stage: TreatiseStage, link: TreatiseLink, record: TreatiseRecord | undefined): number {
-  if (link === 'title-thesis') {
-    return (entry.theses ?? []).reduce((sum, _, index) => sum + thesisNeed(record, stage, index), 0)
+  if (link !== 'title-number') {
+    return rankedOf(entry, link).reduce((sum, _, index) => sum + rankNeed(record, stage, link, index), 0)
   }
   const known = numberRecord(record, stage)
   return (known.right === 0 ? 3 : 0) + Math.min(known.wrong, 3)
@@ -343,8 +368,8 @@ function formMatch(
     .sort((a, b) => weightOf(b, stage, link, progress) - weightOf(a, stage, link, progress))
     .slice(0, BOARD_SIZE)
 
-  // La thèse se lit toujours à gauche du titre du traité qui la défend ; la numérotation, d'un côté ou de l'autre.
-  const flipped = link === 'title-thesis' ? true : rng() < 0.5
+  // La thèse ou l'exemple se lit toujours à gauche du titre du traité qui la porte ; la numérotation, d'un côté ou de l'autre.
+  const flipped = link !== 'title-number' ? true : rng() < 0.5
   const columns = (flipped ? [...LINK_COLUMNS[link]].reverse() : LINK_COLUMNS[link]) as [TreatiseColumn, TreatiseColumn]
   return {
     kind: 'treatise-match',
@@ -353,12 +378,12 @@ function formMatch(
     columns,
     session,
     pairs: group.map((entry) => {
-      const thesis = link === 'title-thesis' ? pickThesis(entry, progress[entry.id], stage, rng) : undefined
+      const rank = link !== 'title-number' ? pickRank(entry, progress[entry.id], stage, link, rng) : undefined
       return {
         id: entry.id,
-        left: valueIn(entry, columns[0], thesis),
-        right: valueIn(entry, columns[1], thesis),
-        ...(thesis !== undefined ? { thesis } : {}),
+        left: valueIn(entry, columns[0], rank),
+        right: valueIn(entry, columns[1], rank),
+        ...rankField(link, rank),
       }
     }),
     ...(practice ? { practice } : {}),
@@ -398,16 +423,19 @@ function formChoice(
   const { target, link } = pickTarget(targets, progress, stage, rng)
   const [a, b] = LINK_COLUMNS[link]
   const [from, to] = rng() < 0.5 ? [a, b] : [b, a]
-  const thesis = link === 'title-thesis' ? pickThesis(target, progress[target.id], stage, rng) : undefined
+  const rank = link !== 'title-number' ? pickRank(target, progress[target.id], stage, link, rng) : undefined
 
-  // Leurres : des traités qui ont la même colonne, plutôt voisins (les thèses, plutôt que des voisins, parmi celles qui existent).
+  // Leurres : des traités qui ont la même colonne, plutôt voisins (les thèses et les exemples, plutôt que des voisins, parmi ceux qui existent).
   const pool = entries.filter((entry) => entry.id !== target.id && hasColumn(entry, to))
   const near =
-    to === 'thesis' ? shuffle(pool, rng) : pool.sort((x, y) => distance(target, x) - distance(target, y)).slice(0, 8)
+    to === 'thesis' || to === 'example'
+      ? shuffle(pool, rng)
+      : pool.sort((x, y) => distance(target, x) - distance(target, y)).slice(0, 8)
   const others = sample(near, Math.min(OPTIONS - 1, near.length), rng)
-  const answer = valueIn(target, to, thesis)
-  const anyThesis = (entry: TreatiseEntry) => Math.floor(rng() * (entry.theses?.length ?? 1))
-  const options = shuffle([answer, ...others.map((entry) => valueIn(entry, to, anyThesis(entry)))], rng)
+  const answer = valueIn(target, to, rank)
+  const anyRank = (entry: TreatiseEntry) =>
+    Math.floor(rng() * ((to === 'example' ? entry.examples?.length : entry.theses?.length) ?? 1))
+  const options = shuffle([answer, ...others.map((entry) => valueIn(entry, to, anyRank(entry)))], rng)
   return {
     kind: 'treatise-choice',
     id,
@@ -415,11 +443,11 @@ function formChoice(
     from,
     to,
     entryId: target.id,
-    prompt: valueIn(target, from, thesis),
+    prompt: valueIn(target, from, rank),
     answer,
     options,
     session,
-    ...(thesis !== undefined ? { thesis } : {}),
+    ...rankField(link, rank),
     ...(practice ? { practice } : {}),
   }
 }
@@ -452,18 +480,19 @@ function formType(
       ...(practice ? { practice } : {}),
     }
   }
-  const thesis = pickThesis(target, progress[target.id], stage, rng)
+  const rank = pickRank(target, progress[target.id], stage, link, rng)
+  const from = link === 'title-example' ? 'example' : 'thesis'
   return {
     kind: 'treatise-type',
     id,
     link,
-    from: 'thesis',
+    from,
     to: 'title',
     entryId: target.id,
-    prompt: valueIn(target, 'thesis', thesis),
+    prompt: valueIn(target, from, rank),
     given: numberingOf(target),
     answer: target.title,
-    thesis,
+    ...rankField(link, rank),
     session,
     ...(practice ? { practice } : {}),
   }

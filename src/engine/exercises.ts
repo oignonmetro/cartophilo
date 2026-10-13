@@ -478,13 +478,13 @@ export interface TableOrderExercise {
  * rien) : ce sont des liens entre deux « colonnes » d'un traité, suivis par
  * `treatises` dans le store.
  */
-export type TreatiseColumn = 'title' | 'number' | 'thesis'
+export type TreatiseColumn = 'title' | 'number' | 'thesis' | 'example'
 /**
  * Une association entre deux colonnes, dans un sens ou dans l'autre. Le titre sert
- * de pivot : on lie un traité à sa numérotation, ou à ses thèses, mais jamais la
- * numérotation à une thèse sans passer par le titre.
+ * de pivot : on lie un traité à sa numérotation, à ses thèses ou à ses exemples, mais
+ * jamais la numérotation à une thèse sans passer par le titre.
  */
-export type TreatiseLink = 'title-number' | 'title-thesis'
+export type TreatiseLink = 'title-number' | 'title-thesis' | 'title-example'
 
 export interface TreatiseMatchExercise {
   kind: 'treatise-match'
@@ -494,7 +494,7 @@ export interface TreatiseMatchExercise {
   /** Les deux colonnes : `left` vient de la première, `right` de la seconde (dans le sens où elles sont posées). */
   columns: [TreatiseColumn, TreatiseColumn]
   /** Une paire par traité : `id` est celui du traité, `thesis` le rang de la thèse quand une colonne en est une. */
-  pairs: { id: string; left: string; right: string; thesis?: number }[]
+  pairs: { id: string; left: string; right: string; thesis?: number; example?: number }[]
   /** La séance qui a formé la manche : un traité n'est « acquis » qu'à travers deux séances différentes. */
   session?: string
   /** Séance de remise à niveau : rien n'y est noté (tous les traités sont déjà validés). */
@@ -516,14 +516,16 @@ export interface TreatiseChoiceExercise {
   options: string[]
   /** Rang de la thèse interrogée (du traité `entryId`), quand une colonne est celle des thèses. */
   thesis?: number
+  /** Rang de l'exemple interrogé, quand une colonne est celle des exemples. */
+  example?: number
   session?: string
   practice?: boolean
 }
 
 /**
  * Écrit de repérage : la numérotation d'un traité d'après son titre, ou son
- * titre d'après l'une de ses thèses (la numérotation est alors donnée avec
- * elle). La réponse se tape ; voir `treatiseAnswers.ts` pour la comparer.
+ * titre d'après l'une de ses thèses ou l'un de ses exemples (la numérotation
+ * est alors donnée avec elle). La réponse se tape ; voir `treatiseAnswers.ts` pour la comparer.
  */
 export interface TreatiseTypeExercise {
   kind: 'treatise-type'
@@ -538,6 +540,7 @@ export interface TreatiseTypeExercise {
   given?: string
   answer: string
   thesis?: number
+  example?: number
   session?: string
   practice?: boolean
 }

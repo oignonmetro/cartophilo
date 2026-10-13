@@ -21,7 +21,7 @@ import {
 } from './treatises'
 
 // 54 traités : 6 Ennéades de 9, rang chronologique en boucle (pas celui de Plotin, peu importe ici).
-// Les index 3, 12, 30 et 41 sont en gras, les index 3, 12 et 30 ont des thèses (trois chacun).
+// Les index 3, 12, 30 et 41 sont en gras, les index 3, 12 et 30 ont des thèses (trois chacun), les index 3, 12 et 20 des exemples (deux chacun).
 const ENTRIES: TreatiseEntry[] = Array.from({ length: 54 }, (_, index) => {
   const entry: TreatiseEntry = {
     id: `t-${Math.floor(index / 9) + 1}-${(index % 9) + 1}`,
@@ -32,14 +32,16 @@ const ENTRIES: TreatiseEntry[] = Array.from({ length: 54 }, (_, index) => {
   }
   if ([3, 12, 30, 41].includes(index)) entry.highlight = true
   if ([3, 12, 30].includes(index)) entry.theses = [`Thèse A du ${index}`, `Thèse B du ${index}`, `Thèse C du ${index}`]
+  if ([3, 12, 20].includes(index)) entry.examples = [`Exemple A du ${index}`, `Exemple B du ${index}`]
   return entry
 })
 
 const right = { right: 1, wrong: 0 }
-/** Tout ce qu'une étape demande : la numérotation et chacune des thèses. */
+/** Tout ce qu'une étape demande : la numérotation, chacune des thèses et chacun des exemples. */
 const stageDone = (entry: TreatiseEntry) => ({
   number: right,
   theses: Object.fromEntries((entry.theses ?? []).map((_, index) => [index, right])),
+  examples: Object.fromEntries((entry.examples ?? []).map((_, index) => [index, right])),
 })
 /** Un traité dont les étapes données sont faites. */
 const doneAt = (entry: TreatiseEntry, ...stages: TreatiseStage[]): TreatiseProgress[string] => ({
@@ -92,9 +94,18 @@ describe('maîtrise étape par étape', () => {
   const withTheses = ENTRIES[3]!
   const plain = ENTRIES[0]!
 
-  it('un traité à thèses a deux liens à réussir (numérotation, thèse), les autres un seul', () => {
+  it('un traité à thèses et à exemples a trois liens à réussir, les autres moins', () => {
     expect(linksOf(withTheses)).toEqual([...LINKS])
     expect(linksOf(plain)).toEqual(['title-number'])
+    expect(linksOf(ENTRIES[30]!)).toEqual(['title-number', 'title-thesis'])
+    expect(linksOf(ENTRIES[20]!)).toEqual(['title-number', 'title-example'])
+  })
+
+  it('un exemple non réussi à une étape la laisse ouverte', () => {
+    const entry = ENTRIES[20]!
+    const partial = { stages: { match: { number: right, examples: { 0: right } } } }
+    expect(isStageDone(entry, partial, 'match')).toBe(false)
+    expect(isStageDone(entry, doneAt(entry, 'match'), 'match')).toBe(true)
   })
 
   it('a trois étapes, de l’association à l’écrit, et chacune ouvre la suivante', () => {
@@ -133,7 +144,9 @@ describe('maîtrise étape par étape', () => {
     expect(isStageDone(plain, { links: { 'title-number': right } }, 'match')).toBe(true)
     expect(isStageDone(plain, { right: 1 }, 'choice')).toBe(false)
     const legacy = { links: { 'title-number': right }, theses: { 0: right, 1: right, 2: right } }
-    expect(stageOf(withTheses, legacy)).toBe('choice')
+    // Les exemples sont venus après : un traité qui en a n'a, dans une sauvegarde ancienne, aucun exemple réussi.
+    expect(stageOf(ENTRIES[30]!, legacy)).toBe('choice')
+    expect(stageOf(withTheses, legacy)).toBe('match')
   })
 
   it('distingue les traités : réussir un traité n’en valide pas un autre', () => {
@@ -261,7 +274,7 @@ describe('exercices formés à l’instant', () => {
     let total = 0
     for (let seed = 0; seed < 80; seed++) {
       const exercise = materializeTreatise(treatiseGhosts(2)[1]!, ENTRIES, progress, seed)
-      if (exercise.kind !== 'treatise-choice' || !ENTRIES.find((e) => e.id === exercise.entryId)!.theses) continue
+      if (exercise.kind !== 'treatise-choice' || !ENTRIES.find((e) => e.id === exercise.entryId)!.theses || ENTRIES.find((e) => e.id === exercise.entryId)!.examples) continue
       total++
       if (exercise.link === 'title-thesis') hits++
     }
@@ -354,11 +367,16 @@ describe('un exercice pour chaque étape', () => {
         expect(exercise.prompt).toBe(entry.title)
         expect(exercise.answer).toBe(numberingOf(entry))
         expect(exercise.given).toBeUndefined()
-      } else {
+      } else if (exercise.link === 'title-thesis') {
         expect(entry.theses).toContain(exercise.prompt)
         expect(exercise.given).toBe(numberingOf(entry))
         expect(exercise.answer).toBe(entry.title)
         expect(exercise.thesis).toBe(entry.theses!.indexOf(exercise.prompt))
+      } else {
+        expect(entry.examples).toContain(exercise.prompt)
+        expect(exercise.given).toBe(numberingOf(entry))
+        expect(exercise.answer).toBe(entry.title)
+        expect(exercise.example).toBe(entry.examples!.indexOf(exercise.prompt))
       }
     }
     expect(seen).toEqual(new Set(LINKS))

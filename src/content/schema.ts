@@ -263,6 +263,15 @@ export const treatiseEntrySchema = z.object({
    * l'édition) : elles servent aux exercices qui font associer une thèse à son traité.
    */
   theses: z.array(z.string().min(1)).max(3).optional(),
+  /**
+   * Exemples dont le traité fait usage, chacun avec sa fonction argumentative
+   * (ce qu'il démontre, illustre ou permet d'expliquer) : le même exemple sert
+   * en effet à des choses différentes d'un traité à l'autre (le feu et sa
+   * chaleur, en V, 4, 2, en V, 1, 3 ou en I, 2, 1), si bien qu'on ne le donne
+   * jamais nu. Ils servent aux exercices qui font associer un exemple à son
+   * traité.
+   */
+  examples: z.array(z.string().min(1)).max(6).optional(),
   /** Résumé affiché au clic ; absent tant qu'il n'a pas encore été rédigé. */
   summary: z.string().optional(),
   /**

@@ -373,6 +373,7 @@ function SessionRunner({
             link: exercise.link,
             correct,
             thesis: exercise.thesis,
+            example: exercise.example,
             session: exercise.session,
           },
         ])
@@ -410,6 +411,7 @@ function SessionRunner({
               link: exercise.link,
               correct: !missed.has(pair.id),
               thesis: pair.thesis,
+              example: pair.example,
               session: exercise.session,
             })),
         )

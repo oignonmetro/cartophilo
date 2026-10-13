@@ -103,7 +103,7 @@ export function TreatiseType({
 
       <div className="card-3d flex flex-col items-center gap-3 px-4 py-6 text-center">
         <span
-          className={`font-black break-words ${from === 'thesis' ? 'text-lg leading-snug' : 'text-xl'} ${from === 'title' ? 'italic' : ''}`}
+          className={`font-black break-words ${from === 'thesis' || from === 'example' ? 'text-lg leading-snug' : 'text-xl'} ${from === 'title' ? 'italic' : ''}`}
         >
           {prompt}
         </span>

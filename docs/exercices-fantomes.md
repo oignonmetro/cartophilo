@@ -19,6 +19,16 @@ Fichiers de référence :
 | QCM | `src/components/session/TreatiseChoice.tsx`, `OptionList.tsx` |
 | Poids d'une manche dans le combo | `src/engine/combo.ts` (`effortOf`) |
 
+> **Mise à jour : les exemples (2026-10).** Un traité peut porter des `examples` :
+> chacun est écrit **avec sa fonction argumentative** (ce qu'il démontre, illustre
+> ou permet d'expliquer), parce que le même exemple (le feu et sa chaleur, en
+> V, 4, en V, 1, en II, 6, en I, 2) sert à des choses différentes d'un traité à
+> l'autre et ne s'associe donc jamais nu à un titre. Le lien `title-example`
+> suit le même chemin que `title-thesis` (association, QCM, écrit : le titre
+> d'après un exemple et la numérotation), chaque exemple ayant son compte
+> (`StageRecord.examples[rang]`) ; un traité qui en a ne se maîtrise qu'une fois
+> chacun réussi à chaque étape.
+>
 > **Mise à jour : trois étapes par traité (2026-10).** La maîtrise ne se gagne
 > plus par n'importe quel exercice : chaque traité passe par trois **étapes**, de
 > la plus aidée à la plus exigeante, et ne laisse sa place à un nouveau traité
@@ -90,14 +100,15 @@ id, title, ennead, numberInEnnead, chrono,     // titre et numérotation
 highlight?  (en gras)                          // groupe d'arrivée n° 2
 priority?   (rang 1..N)                        // groupe d'arrivée n° 1
 theses?: string[]   (0 à 3)                    // colonnes « thèse »
+examples?: string[] (0 à 6)                    // colonnes « exemple » : un exemple et sa fonction argumentative
 ```
 
 Transposition Cartolang : un mot = une entrée ; colonnes possibles = mot (L2),
 traduction (L1), forme(s) conjuguée(s), exemple… Le principe : **une entrée
 expose des colonnes ; un « lien » est une paire de colonnes**.
 
-Colonnes (`TreatiseColumn`) : `'title' | 'number' | 'thesis'`.
-Liens (`TreatiseLink`) : `'title-number' | 'title-thesis'`.
+Colonnes (`TreatiseColumn`) : `'title' | 'number' | 'thesis' | 'example'`.
+Liens (`TreatiseLink`) : `'title-number' | 'title-thesis' | 'title-example'`.
 
 **Le titre sert de pivot.** On ne lie jamais directement numérotation et thèse
 (le lien `number-thesis` a été essayé puis abandonné) : tout passe par le titre.

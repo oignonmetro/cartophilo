@@ -4,6 +4,7 @@ import { PairBoard } from './PairBoard'
 const MATCH_PROMPT: Record<TreatiseLink, string> = {
   'title-number': 'Associez chaque traité à sa numérotation',
   'title-thesis': 'Associez chaque thèse au traité qui la défend',
+  'title-example': 'Associez chaque exemple au traité qui en fait cet usage',
 }
 
 /**

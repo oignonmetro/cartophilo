@@ -11,6 +11,8 @@ import { useSessionSounds } from './useSessionSounds'
 function questionOf(from: TreatiseColumn, to: TreatiseColumn): string {
   if (to === 'number') return from === 'thesis' ? 'Quelle numérotation porte le traité de cette thèse ?' : 'Quelle numérotation ?'
   if (to === 'thesis') return 'Quelle thèse défend ce traité ?'
+  if (to === 'example') return 'Quel exemple, avec quelle fonction, ce traité emploie-t-il ?'
+  if (from === 'example') return 'Quel traité fait de cet exemple cet usage ?'
   return from === 'thesis' ? 'Quel traité défend cette thèse ?' : 'Quel traité ?'
 }
 
@@ -59,7 +61,7 @@ export function TreatiseChoice({
 
       <div className="card-3d px-4 py-4 text-center">
         <span
-          className={`font-black break-words ${from === 'thesis' ? 'text-lg leading-snug' : 'text-xl'} ${from === 'title' ? 'italic' : ''}`}
+          className={`font-black break-words ${from === 'thesis' || from === 'example' ? 'text-lg leading-snug' : 'text-xl'} ${from === 'title' ? 'italic' : ''}`}
         >
           {prompt}
         </span>
@@ -69,7 +71,7 @@ export function TreatiseChoice({
         options={options}
         picked={picked}
         isCorrect={(option) => option === answer}
-        size={to === 'thesis' ? 'long' : 'normal'}
+        size={to === 'thesis' || to === 'example' ? 'long' : 'normal'}
         renderOption={to === 'title' ? (option) => <em>{option}</em> : undefined}
         onPick={(option) => {
           setPicked(option)
