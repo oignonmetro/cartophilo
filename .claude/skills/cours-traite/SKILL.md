@@ -129,54 +129,176 @@ l'en-tête en ferait un nouvel élément de révision, repris de zéro.
 
 ## 4. Écrire les rappels
 
+Les règles qui suivent viennent pour une bonne part des retouches que
+l'utilisateur a faites à la main sur le traité 7 (commit 06b9901) : en cas
+de doute, relire ce fichier, c'est l'exemple de référence.
+
+### Le fil
+
 - **Le premier paragraphe est l'attaque** : l'app l'affiche plus grand. Il
   donne l'idée d'ensemble de la leçon en une ou deux phrases, pas le premier
   point de détail.
 - **Un paragraphe par étape**, ouvert par une courte phrase en gras qui dit
   ce que l'étape établit (« Il est unique. », « L'obstacle qui reste : … »).
-  Pas de numérotation : elle n'apporte rien.
+  Pas de numérotation : elle n'apporte rien. Un argument et sa conséquence
+  font deux paragraphes (« Il est simple », puis « Et parce qu'il ne dépend
+  de rien, il ne manque de rien »).
 - **Le pourquoi, toujours** : chaque thèse vient avec sa raison. « Il est
   simple » ne suffit pas ; « un composé dépend de ses éléments, qui seraient
   plus premiers que lui » explique. Des connecteurs entre les phrases et
   entre les paragraphes (donc, or, car, pour la même raison, en revanche,
   il reste à).
+- **La raison qualifiée exactement** : dire de quelle nature elle est
+  (« pour une raison éthique et logique »), plutôt qu'une étiquette d'école
+  plaquée (« raisonnement par l'absurde ») qui en dit moins.
 - **Le statut, dit en clair** : « Plotin ne démontre pas cette loi ; il la
   constate dans la nature », « c'est un principe posé, puis rendu concevable
   par un exemple », « affirmée ici, démontrée dans le traité 32 ».
+- **Ne pas faire dire au texte plus qu'il ne dit.** Ne pas nommer ce qu'il
+  n'a pas encore introduit : au chapitre 1 du traité 7, ce que le Premier
+  produit est « le Second », « la chose la plus vénérable et la meilleure »
+  après lui ; il ne devient l'Intellect qu'au chapitre 2. Ne pas grossir ce
+  qui est établi : Plotin montre que l'Intellect vient *après* le Premier,
+  pas qu'il vient *juste* après. Ces nuances font de bons pièges `!`.
 - **Les présupposés nommés** : ce que le traité suppose sans le discuter.
 - **Un pont vers la leçon suivante** quand une difficulté reste ouverte
   (« Reste à comprendre par quel mécanisme… »).
-- **Les citations** viennent de la traduction GF, mot pour mot, entre `« »`,
-  avec leurs lignes ; une citation reprise doit être le texte exact.
-- **Forme** : grec translittéré entre backticks (`noêsis`) ; deux ou trois
-  couleurs au plus, réservées à l'opposition qui structure la leçon (au
-  traité 7 : l'Un qui demeure, l'Intellect qui naît) ; un tableau quand une
-  notion se compare sur deux axes ; des puces seulement pour une énumération
-  courte et parallèle ; un piège `! …` en fin.
-- **Interdits** : point d'exclamation, tiret cadratin, italique dans un gras,
-  référence à la matérialité de la source (« la notice dit que »).
+- **La citation qui porte l'argument** : après l'avoir reformulé, donner la
+  phrase de la GF qui le dit, mot pour mot, entre `« »`, avec ses lignes.
+- **Des termes exacts** : « le principe générateur » plutôt que « le
+  principe » quand il s'agit de ce qui produit ; « pose ainsi la question »
+  plutôt qu'une formule d'emphase (« en propres termes »).
+
+### La mise en relief
+
+Le rappel doit se lire d'un coup d'œil : la mise en relief y est abondante,
+et chaque marque a une fonction.
+
+- **Gras** (`**…**`) sur le contenu décisif, pas sur la formule qui
+  l'introduit : « Il part d'une donnée qu'il ne discute pas : **il existe
+  autre chose que l'Un.** » ; et sur les conclusions.
+- **Souligné** (`__…__`) sur les propositions qui portent l'argument
+  (prémisses, membres d'une alternative, ce qu'établit chaque chapitre).
+  Gras et souligné se combinent pour l'intitulé d'une étape
+  (`__**Il est {coral}simple{/coral}.**__`).
+- **Couleurs, selon un code fixe** (il remplace, pour les cours de traités,
+  la règle générale des « deux ou trois couleurs au plus ») :
+  - `green` : la thèse que Plotin retient ;
+  - `red` : ce qu'il rejette, ou ce qui fait problème (les intermédiaires,
+    « reculer le problème », l'Un qui ne demeurerait pas en lui-même) ;
+  - `violet` : les termes techniques et notions clés (« deux actes »,
+    « conversion », « dyade », « le Premier ») ;
+  - `teal` : une citation de la GF ;
+  - `sky` : la structure du traité (« chapitre 1 », « chapitre 2 ») ;
+  - `coral` : les propriétés établies et les conclusions (« simple »,
+    « unique », « échappe au discours ») ;
+  - `pink`, `amber`, `yellow` : libres, pour une opposition ou une nuance
+    locale (une prémisse, une image, ce qu'on attribue et ce qu'on en dit).
+- **Grec** translittéré entre backticks dans le rappel (`noêsis`).
+- **Un tableau** quand une notion se compare sur deux axes. Ses exercices se
+  choisissent au cas par cas (`tables:` dans la leçon, voir
+  `content/philosophie.md`) plutôt que d'être laissés au tirage : au traité
+  7, une banque sur la seule colonne qui compte pour le tableau de deux
+  lignes, une banque par colonne pour celui des deux actes.
+- **Puces** seulement pour une énumération courte et parallèle, sans
+  point-virgule en fin d'item.
+- **Pièges** `! …` en fin, autant que nécessaire : contresens à éviter,
+  thèse affirmée sans être démontrée, nuance de ce qui est établi.
+- **Interdits** : point d'exclamation, tiret cadratin, référence à la
+  matérialité de la source (« la notice dit que »).
 
 ## 5. Écrire les cartes
 
 Après chaque rappel, ses cartes (trois au moins), dans l'ordre du rappel.
-Elles font retenir **le raisonnement**, pas seulement le vocabulaire :
+Elles font retenir **le raisonnement**, et aussi ce que les notes de la GF
+apportent de savant.
 
-- un trou sur le mot pivot de chaque étape (la raison, pas seulement la
-  conclusion : « composé, il dépendrait de ses ___ ») ;
-- les citations décisives, trouées sur ce qui compte, avec leurs lignes ;
-- les termes grecs (un point pour le terme) ;
-- les renvois à d'autres traités (le numéro chronologique en réponse) ;
-- les repères des moments principaux (leçon du plan surtout).
+### Ce qu'on troue
 
-Chaque `sentence` dit pourquoi le point compte et tient seule, sans le
-rappel ni les cartes voisines (« pour le traité N de Plotin, … »).
+- **La locution entière, pas un mot isolé** : « un autre point de départ »
+  plutôt que « départ », « en lui-même », « avare de lui-même », « dyade
+  indéfinie », « provient de la réalité ».
+- **Le pivot de chaque étape**, la raison et pas seulement la conclusion
+  (« composé, il dépendrait de ses ___ »).
+- **Plusieurs trous** quand les termes vont ensemble (« la ___ qui
+  refroidit et les ___ qui agissent », réponse « neige ; remèdes ») : le
+  moteur les gère (`splitGaps`), malgré la règle ancienne d'un seul `___`
+  dans `content/philosophie.md`.
+- **Les renvois** à un autre traité avec les deux numérotations en réponse
+  (« 10 (V, 1) », `alt: ["10", "V, 1"]`).
 
-**Identifiants** : `traiteN-lK-qM` pour un cours écrit selon cette skill.
+### Les cartes-citation en cascade
+
+Pour chaque phrase de la GF qui porte un argument, une série de cartes qui
+répètent la citation entière, le trou se déplaçant d'un segment à l'autre,
+plus une carte qui troue la proposition entière (« En chaque chose, il y a
+___ »). Dans la citation, le gras et le souligné marquent ce qui la
+structure (les termes répétés, les deux membres d'une opposition) et restent
+les mêmes d'une carte à l'autre.
+
+### Les cartes tirées des notes de la GF
+
+Elles peuvent apprendre ce que le rappel ne dit pas : la carte suffit, à
+condition de tenir seule. Y puiser :
+- les **sources platoniciennes** que la note signale (le *Philèbe* et le Bien
+  seul *hikanós*, 20b-c, 67a) ;
+- les **termes grecs** que la traduction rend (« parfait » rend *téléon*,
+  « d'emblée » rend *ḗdē*), en italique translittéré accentué dans les
+  cartes ;
+- l'**histoire d'une notion** (la dyade chez les successeurs de Platon, les
+  monades) ;
+- les **renvois à d'autres traités**, avec le titre de Porphyre et le numéro
+  (traité 24 (V, 6), *Sur le fait que l'au-delà de l'Être ne pense pas…*) ;
+- les **débats de commentateurs** et les **précautions** de Plotin (une
+  activité noétique de l'Un ? « une sorte de », *hoion*) ;
+- les **prolongements** dans des traités ultérieurs (l'*hupernóēsis* du
+  traité 39).
+
+Rattacher autant que possible le détail à la question du traité (« d'emblée »
+répond aussi à la question initiale : l'Intellect perçoit immédiatement l'Un
+sur le mode de la multiplicité).
+
+**Vérifier chaque affirmation savante contre le texte.** Une note ou une
+explication tierce peut contredire la traduction : au traité 7, des cartes
+faisaient de la *katanóēsis* une compréhension « propre à l'Intellect »,
+alors que 2, 15-19 la dit de l'Un, par analogie (« une sorte de »
+perception de soi). Le texte l'emporte ; en cas de doute, demander.
+
+### La phrase de la carte
+
+- Elle dit pourquoi le point compte et tient seule, sans le rappel ni les
+  cartes voisines ; une proposition causale (« car », « étant donné que »)
+  donne la raison.
+- Nommer le traité (et le chapitre) seulement quand c'est ce qu'il faut
+  savoir ou que la thèse lui est propre ; sinon « Plotin » suffit, voire
+  rien. Pas de formule fixe en tête de chaque carte.
+- Repères : « (1, 10) » ou « le chapitre 1 du traité 7 (l. 10) », selon ce
+  qui se lit le mieux.
+- Une carte qui anticipe ce que le texte n'a pas encore établi (l'Intellect
+  nommé au chapitre 1) se supprime ou se réécrit.
+
+### Identifiants
+
+`traiteN-lK-qM` pour un cours écrit selon cette skill ; les cartes ajoutées
+à la main peuvent porter d'autres suffixes (`-pM`), seule compte l'unicité.
 En refonte, une carte dont le contenu change reçoit un nouvel identifiant
 (changer la lettre : `-p` devient `-q`, `-q` devient `-r`) : un ancien
 identifiant ne doit jamais porter une carte devenue autre, sinon elle
 hériterait d'un historique de révision qui n'est pas le sien. Le dire à
-l'utilisateur : la progression sur ce traité repart de zéro.
+l'utilisateur : la progression sur ces cartes repart de zéro.
+
+### Contrôles avant validation
+
+Défauts relevés sur le traité 7, que `content:check` n'attrape pas tous :
+- une carte sans `___` ou à réponse vide (bloquant) ;
+- une espace en fin de réponse ;
+- une marque fermée après une espace (`**hapax **chez`, `*est *revient`) :
+  l'espace se met hors de la marque (`**hapax** chez`) ;
+- un souligné collé à un trou (`__… ___ __`) : fermer le souligné avant le
+  trou (`__…__ ___`) ;
+- des guillemets français imbriqués : la citation intérieure prend les
+  guillemets droits ;
+- une phrase coupée par un saut de ligne.
 
 ## 6. Valider, vérifier, publier
 
