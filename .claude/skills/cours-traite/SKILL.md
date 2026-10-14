@@ -270,6 +270,12 @@ perception de soi). Le texte l'emporte ; en cas de doute, demander.
   rien. Pas de formule fixe en tête de chaque carte.
 - Repères : « (1, 10) » ou « le chapitre 1 du traité 7 (l. 10) », selon ce
   qui se lit le mieux.
+- **Des repères toujours exacts** : la traduction ne numérote que toutes les
+  cinq lignes ([5], [10]…). Un repère de ligne ne se donne que s'il est écrit
+  dans la notice, le plan ou une note, ou si une marque le fixe sans
+  ambiguïté ; sinon, donner la sous-partie du plan détaillé qui contient le
+  passage (« (5, 22-54) »), jamais une ligne déduite (choix de l'utilisateur
+  au traité 1). Vaut pour les rappels, les cartes et l'index.
 - Une carte qui anticipe ce que le texte n'a pas encore établi (l'Intellect
   nommé au chapitre 1) se supprime ou se réécrit.
 
