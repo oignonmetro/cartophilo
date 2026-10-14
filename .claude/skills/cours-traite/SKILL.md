@@ -13,7 +13,7 @@ est `content/courses/plotin/units/traite7.yaml`, refondu ainsi le
 2026-10-13 : le relire avant de commencer.
 
 Règles de fond des cartes : `content/philosophie.md` (réponse unique,
-autonomie de la carte, un seul `___`, pas d'`options` ni de `translation`).
+autonomie de la carte, un `___` sauf nécessité syntaxique, pas d'`options` ni de `translation`).
 Ne le rouvrir qu'en cas de doute précis.
 
 ## 0. Sources, par ordre de fiabilité
@@ -28,7 +28,7 @@ Ne le rouvrir qu'en cas de doute précis.
 4. **Ma propre connaissance de Plotin** : pour expliquer un raisonnement que
    le texte laisse implicite, jamais pour une citation ni un numéro de ligne.
 
-Demander le PDF s'il n'est pas fourni. Sans lui, prévenir que les citations
+Les PDF de la GF sont rangés dans `C:SERSARTHURTRAITéS PLOTIN` (UN VOLUME PAR GROUPE DE TRAITéS). DEMANDER LE PDF S'IL N'Y EST PAS. Sans lui, prévenir que les citations
 et repères se limiteront à ceux déjà présents dans le dépôt.
 
 ### Lire le PDF

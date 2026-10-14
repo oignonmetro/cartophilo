@@ -1,8 +1,13 @@
 # Cours d'un traité de Plotin (piste Repérage, voir content/philosophie.md),
-# d'après la notice et le plan détaillé de Jérôme Laurent, dans Plotin, Traités 1-6,
-# trad. sous la dir. de L. Brisson et J.-F. Pradeau, GF-Flammarion, 2002.
-# Les citations viennent de la notice ou du plan ; les repères (chapitre,
-# lignes) sont ceux de cette édition. Lié à l'entrée t-1-6 de l'index.
+# d'après la notice, le plan détaillé, la traduction et les notes de Jérôme
+# Laurent, dans Plotin, Traités 1-6, trad. sous la dir. de L. Brisson et
+# J.-F. Pradeau, GF-Flammarion, 2002. Les citations viennent de cette
+# traduction ; les repères (chapitre, lignes) sont ceux de cette édition,
+# d'après son plan détaillé. Lié à l'entrée t-1-6 de l'index.
+#
+# Refonte du 2026-10-14 selon la skill cours-traite : une leçon par mouvement
+# du raisonnement. Les points ont de nouveaux identifiants (-q), pour ne pas
+# hériter de l'historique de cartes devenues autres.
 
 id: traite1
 title: "Traité 1 (I, 6) : Sur le beau"
@@ -11,267 +16,612 @@ icon: compass
 color: sky
 lessons:
 - id: traite1-l1
-  title: "Pas un traité d'esthétique : la beauté n'est pas la proportion"
+  title: "La question : qu'est-ce qui rend belles les choses belles ? (1, 1-20)"
   notes: |-
-    **Le traité 1, malgré son titre, est une introduction générale à la philosophie platonicienne et à l'attitude de l'âme qu'elle exige, pas un traité d'esthétique au sens moderne.** Il commence pourtant par une définition : qu'est-ce qui rend une chose belle ?
+    Le traité 1 demande ce qui rend belles les choses belles, et s'il y a un seul beau pour toutes, ou une beauté antérieure à toutes les beautés particulières.
 
-    **La cible du premier chapitre est la définition du beau par la proportion des parties**, celle des stoïciens, dominante dans l'élite romaine du temps de Plotin. Chrysippe compare la beauté à la santé (SVF III, 471a) ; la nature, « amie du beau », se plaît à la variété ; l'emblème de cette esthétique est la roue du paon décrite par Élien. L'accent y est mis sur la **multiplicité**.
+    **Ce n'est pas un traité d'esthétique au sens moderne**, mais une introduction à la philosophie platonicienne et à l'attitude de l'âme qu'elle exige. Il part pourtant d'une définition : qu'est-ce qui fait qu'une chose est belle ?
 
-    **Pour Plotin, cette définition prend l'effet pour la cause** : si l'équilibre nous plaît, c'est par l'**unité** qu'il manifeste. La symétrie ne suffit pas à rendre compte du jugement « ceci est beau ».
+    **Il commence par dresser la liste de ce qu'on dit beau**, en montant : ce qui se voit, puis ce qui s'entend, puis tout ce qui relève des Muses ; et, pour ceux qui abandonnent la sensation, __les occupations, les actions, les dispositions acquises, les sciences, les vertus__. C'est l'ascension du discours de Diotime dans le *Banquet*, reprise dans son esprit plus que dans sa lettre. **« S'il y a ou non une beauté antérieure à tout cela, notre exposé le montrera »** (1, 6-7).
 
-    - Contre-exemples : des beautés **non composées**, sans parties, comme la lumière du soleil, l'or, l'éclair, les astres ; et des réalités bien proportionnées qui sont laides (chap. 1, 31-49).
-    - Dans la nature, la symétrie rigoureuse n'est pas la règle : la dissymétrie des arbres et des montagnes atteste la vie. L'**éclair** dans la nuit d'orage est le symbole le plus net de la beauté plotinienne : lumière, force, soudaineté.
+    **De cette liste naît la question du traité** (1, 7-12) : qu'est-ce qui rend beaux les corps et les sons, et comment ce qui dépend de l'âme peut-il être beau ? Surtout, __est-ce par un seul et même beau que toutes ces choses sont belles__, ou y a-t-il une beauté dans les corps et une autre ailleurs ?
 
-    ! Plotin ne dit pas que les réalités symétriques sont laides : il appréciait sans doute la beauté des Pyramides, mais l'expliquait par l'unité de leur apparaître, non par leur proportion.
+    **Une première distinction oriente la réponse.** {teal}« Il y a, en effet, d'une part des choses belles qui ne le sont pas du fait de leur substrat, mais par participation, par exemple les corps et, d'autre part, des beautés qui sont belles par elles-mêmes, comme la nature de la vertu »{/teal} (1, 12-14). La preuve que les corps ne sont pas beaux par eux-mêmes : {coral}les mêmes corps paraissent tantôt beaux, tantôt non{/coral}, parce qu'être un corps est autre chose qu'être beau.
+
+    **D'où la méthode.** Il faut d'abord trouver ce qui, présent dans les corps, les rend beaux ; puis s'en servir comme d'un **{violet}« échelon »{/violet}** (1, 20) pour comprendre le reste. La beauté sensible est un point d'appui pour monter, non un leurre à fuir.
+
+    ! Plotin suppose sans la discuter la doctrine platonicienne de la participation : le chapitre 1 ne la démontre pas, il en fait l'outil de la recherche.
   points:
-  - id: traite1-l1-p1
-    sentence: "Malgré son titre, le traité 1 de Plotin, *Sur le beau*, n'est pas un traité d'esthétique au sens contemporain : c'est une introduction générale à la philosophie ___ et à l'attitude de l'âme qu'elle implique."
-    answer: "platonicienne"
+  - id: traite1-l1-q1
+    sentence: "Malgré son titre, le traité 1 de Plotin, *Sur le beau*, n'est pas un traité d'esthétique au sens moderne : c'est une introduction générale à la ___ et à l'attitude de l'âme qu'elle implique."
+    answer: "philosophie platonicienne"
     alt: []
-  - id: traite1-l1-p2
-    sentence: "Le premier chapitre du traité 1, *Sur le beau*, s'oppose à l'explication traditionnelle de la beauté par la ___ des parties d'un tout entre elles."
-    answer: "proportion"
-    alt: ["symétrie"]
-  - id: traite1-l1-p3
-    sentence: "La définition du beau par la symétrie que critique Plotin dans le traité 1 est celle des ___, dominante dans l'intelligentsia romaine de son temps."
-    answer: "stoïciens"
-    alt: ["Stoïciens"]
-  - id: traite1-l1-p4
-    sentence: "Le stoïcien ___ établit une analogie entre la beauté et la santé (SVF III, 471a), illustrant la conception du beau comme proportion que combat le traité 1 de Plotin."
-    answer: "Chrysippe"
-    alt: []
-  - id: traite1-l1-p5
-    sentence: "L'emblème de l'esthétique stoïcienne de la variété, que critique le traité 1 de Plotin, est la roue déployée du ___, décrite par Élien."
-    answer: "paon"
-    alt: []
-  - id: traite1-l1-p6
-    sentence: "Selon Plotin (traité 1), la définition du beau par la proportion prend l'effet pour la cause : si l'équilibre nous plaît, c'est à cause de l'___ qu'il manifeste."
-    answer: "unité"
-    alt: []
-  - id: traite1-l1-p7
-    sentence: "Contre la définition du beau par la symétrie, le traité 1 de Plotin invoque des beautés non ___, sans parties : la lumière du soleil, l'or, l'éclair, les astres."
-    answer: "composées"
-    alt: ["composees"]
-  - id: traite1-l1-p8
-    sentence: "Le symbole le plus net de la conception plotinienne de la beauté (lumière, force, soudaineté de la manifestation) est l'___ qui déchire la nuit d'orage."
-    answer: "éclair"
-    alt: []
-  - id: traite1-l1-p9
-    sentence: "Dans *Sur le beau* de Plotin, les contre-exemples à la définition du beau par la proportion (beautés sans parties, réalités proportionnées mais laides) se trouvent au ___."
-    answer: "chap. 1"
-    alt: ["1", "chapitre 1"]
-- id: traite1-l2
-  title: "La Forme : l'homme en soi, la beauté de Socrate"
-  notes: |-
-    **La véritable origine de la beauté, Plotin la nomme, avec Platon, la Forme (`eîdos`).** Les choses sensibles ne se maintiennent dans le devenir que « par participation » à une Forme intelligible, qui est leur essence effective.
-
-    - **« L'homme en soi »** : la Forme de l'homme n'est « en » aucune autre chose, ni dans un corps, ni dans une matière. Le « en » de « en soi » n'est pas local mais **relationnel**, comme dans « en définitive » : l'homme du point de vue de l'humanité, par essence et non par accident.
-    - Un homme beau n'est donc pas un corps athlétique, mais une personne qui manifeste au mieux, par sa vertu et son intelligence, l'essence de l'homme : **Socrate** est beau en ce sens.
-    - L'art du IIIe siècle va dans le même sens : les portraits du **Fayoum** agrandissent la pupille, l'art romain se géométrise ; l'expressivité d'une idée prime sur la reproduction des apparences.
-
-    **Un corps, une musique, un visage sont-ils beaux dans le même sens ?** C'est le problème de l'**homonymie**, que Plotin ne traite pas ici pour lui-même (il y reviendra dans les traités 42 à 44, VI, 1-3). Il pose une communauté entre ces sens : chaque fois, la beauté s'explique par le dynamisme expressif d'une réalité non sensible. **La beauté véritable est celle de l'intelligible.**
-
-    ! « En soi » ne veut pas dire « à l'intérieur de soi » au sens spatial : la préposition marque une relation (l'essence), pas un lieu.
-  points:
-  - id: traite1-l2-p1
-    sentence: "Plotin, reprenant la doctrine centrale de Platon, nomme ___ (`eîdos`) la véritable origine de la beauté, si elle n'est pas dans une combinaison harmonieuse."
-    answer: "Forme"
-    alt: ["la Forme", "Idée"]
-  - id: traite1-l2-p2
-    sentence: "Pour Plotin comme pour Platon, les choses sensibles ne se maintiennent dans le devenir que « par ___ » à une Forme intelligible."
-    answer: "participation"
-    alt: []
-  - id: traite1-l2-p3
-    sentence: "Le terme grec que rend « Forme », origine de la beauté selon le traité 1 de Plotin, est ___."
-    answer: "eîdos"
-    alt: ["eidos"]
-  - id: traite1-l2-p4
-    sentence: "Dans « l'homme en soi », la préposition « en » n'a pas un sens local mais ___ : l'homme par essence et non par accident."
-    answer: "relationnel"
-    alt: []
-  - id: traite1-l2-p5
-    sentence: "Pour Plotin (traité 1), un homme beau n'est pas un corps athlétique mais une personne qui manifeste, par sa vertu et son intelligence, l'essence de l'homme : ___ est beau en ce sens."
-    answer: "Socrate"
-    alt: []
-  - id: traite1-l2-p6
-    sentence: "Les portraits du ___, au IIIe siècle, agrandissent la pupille sans souci de réalisme : l'expressivité d'une idée y prime sur la reproduction des apparences, comme dans la conception plotinienne du beau."
-    answer: "Fayoum"
-    alt: []
-  - id: traite1-l2-p7
-    sentence: "Le problème de savoir si un corps, une musique et un visage sont beaux dans le même sens est celui de l'___, d'origine platonico-aristotélicienne."
-    answer: "homonymie"
-    alt: []
-  - id: traite1-l2-p8
-    sentence: "Plotin ne traite pas l'homonymie du beau pour elle-même dans le traité 1 ; il y reviendra dans les traités 42 à 44, consacrés aux ___ (VI, 1-3)."
-    answer: "genres de l'être"
-    alt: ["genres de l'etre"]
-- id: traite1-l3
-  title: "Ajustement, réminiscence, purification : de l'esthétique à l'éthique"
-  notes: |-
-    **Le traité 1 lie aussitôt la beauté et l'âme.** Comme le plaisir de l'eau fraîche répond à un besoin réel du buveur, la joie esthétique répond à ce qu'est notre vie intérieure : Plotin parle d'un **« ajustement »** (chap. 2, ligne 4) entre l'âme et la beauté.
-
-    **Ce qui se joue est décrit dans le vocabulaire platonicien de la réminiscence** (*Ménon*, *Phédon*, *Phèdre*) : l'âme, en disant « ceci est beau », se souvient de l'intelligible qu'elle contemplait avant de naître. Cette contemplation, selon Plotin, se poursuit pendant notre vie, mais nos affaires, le raisonnement et le langage, qui nous dispersent dans la multiplicité et le temps, nous empêchent d'y prêter attention.
-
-    **L'intuition de la Forme est en même temps une intuition de soi** (chap. 2, 5, 6 et 8) : c'est pourquoi le thème de la beauté s'entrelace à celui de la purification. **L'esthétique proprement dite est dépassée par l'éthique.** Autrement dit, la beauté sensible n'est qu'un tremplin : elle rappelle à l'âme sa patrie, mais l'âme qui s'arrête à la forme matérielle s'égare (c'est le danger de Narcisse) ; la beauté ne dit sa vérité que lorsque l'âme se détourne du sensible pour se purifier.
-
-    - Voir les beautés non sensibles demande une activité déliée de la sensation : la beauté des sciences n'est accessible qu'au savant.
-    - La **purification** se comprend comme pour une eau pure, à laquelle rien n'est mélangé.
-    - La vertu, que détaillera le traité 19 (I, 2) *Sur les vertus*, est une **conversion** vers l'Intellect (`hê pròs noûn strophḗ`). Plotin ne prône pas l'inaction (la *Vie de Plotin*, chap. 9, le montre tuteur et intendant) : il enracine l'action droite dans la contemplation de la justice en soi.
-    - L'éthique est une tension de l'âme vers une condition autre que celle d'être unie à un corps : Plotin la nomme un **« combat »** (chap. 7, 31).
-
-    ! La réminiscence n'est pas une mémoire sensible (retrouver où l'on a vu un objet) : c'est une remémoration qui conduit à l'intelligible lui-même.
-  points:
-  - id: traite1-l3-p1
-    sentence: "Plotin parle, au chapitre 2 (ligne 4) du traité 1, d'un « ___ » entre la vie psychique et la nature de la beauté, comme le plaisir de l'eau fraîche répond à la soif."
-    answer: "ajustement"
-    alt: []
-  - id: traite1-l3-p2
-    sentence: "La rencontre du beau est décrite, dans le traité 1 de Plotin, dans le vocabulaire platonicien de la ___ : l'âme se souvient de l'intelligible contemplé avant sa naissance."
-    answer: "réminiscence"
-    alt: ["reminiscence"]
-  - id: traite1-l3-p3
-    sentence: "Selon le traité 1 de Plotin, l'intuition de l'unité de la Forme est en même temps une intuition de ___ (chap. 2, 5, 6 et 8)."
-    answer: "soi"
-    alt: []
-  - id: traite1-l3-p4
-    sentence: "Parce que la contemplation de la Forme est une intuition de soi, l'esthétique est, dans le traité 1 de Plotin, dépassée par l'___."
-    answer: "éthique"
-    alt: ["ethique"]
-  - id: traite1-l3-p5
-    sentence: "L'activité de l'intelligence qui se détourne du corps produit, dans le traité 1 de Plotin, une ___, au sens où l'on parle d'une eau pure à laquelle rien n'est mélangé."
-    answer: "purification"
-    alt: []
-  - id: traite1-l3-p6
-    sentence: "Le traité ___ (I, 2), *Sur les vertus*, présentera en détail la vertu comme une manière pour l'âme de se détourner du sensible."
-    answer: "19"
-    alt: []
-  - id: traite1-l3-p7
-    sentence: "Dans le traité 19 (I, 2), la réflexion est définie comme une conversion intérieure vers l'Intellect, en grec `hê pròs noûn ___`."
-    answer: "strophḗ"
-    alt: ["strophe"]
-  - id: traite1-l3-p8
-    sentence: "Plotin nomme « ___ » (chap. 7, 31 du traité 1) la tension par laquelle l'âme cherche à retrouver une condition autre que celle où elle est associée à un corps."
-    answer: "combat"
-    alt: []
-  - id: traite1-l3-p9
-    sentence: "Plotin ne prône pas l'inaction : la *Vie de Plotin* (chap. 9) le montre ___ et même intendant du patrimoine de ses proches."
-    answer: "tuteur"
-    alt: []
-  - id: traite1-l3-p10
-    sentence: "La beauté sensible n'est qu'un ___ : elle rappelle à l'âme sa patrie, mais l'âme qui s'arrête à la forme matérielle s'égare."
-    answer: "tremplin"
-    alt: ["éperon", "eperon"]
-- id: traite1-l4
-  title: "La beauté vient de l'intérieur : l'architecte, la Nature, l'œil de l'âme"
-  notes: |-
-    **La principale leçon du traité 1 est un éloge de l'intériorité.** La puissance de la Forme qui unifie le multiple n'est pas une force violente des corps, mais le pouvoir d'organisation d'un contenu rationnel.
-
-    **L'architecte** a une idée de ce qu'il construit : ce projet est **« l'intérieur indivisible »** dont parle le chapitre 3 (ligne 14). Dans une maison, ce ne sont pas les briques qui sont belles, mais la structure qui les ordonne ; Platon le disait déjà dans le *Gorgias* (503d-504a). L'extériorité correspond à la **cause matérielle** d'Aristote, le substrat indéterminé (`hupokeimenon`) qui offre son étendue à l'intelligible.
-
-    **Ce qui vaut pour l'architecte vaut pour la Nature.** Le traité 30 (III, 8) dira : « Il faut […] que la Nature soit une Forme (`eîdos`) et non un composé de matière et de forme ». Le principe d'un ordre a plus de réalité que cet ordre : la maison détruite, le savoir de l'architecte permet d'en bâtir une autre ; la rose fanée, la Nature fera refleurir le rosier.
-
-    **La joie esthétique se fonde donc sur la forme intelligible, que nous voyons par « l'œil de l'âme »** (Platon, *République*, VII, 533d). Le traité 31 (V, 8) le dira : nous ne voyons pas la beauté tant qu'elle est extérieure.
-
-    | L'intérieur | Ce que c'est |
-    | dans l'objet beau | le principe formel, intérieur causal et non spatial |
-    | dans l'homme | l'intériorité de celui qui est ému par la beauté |
-
-    ! Cela ne rend pas les beaux corps méprisables (le traité 33 critiquera « ceux qui disent que le monde est mauvais ») : le philosophe ne doit seulement pas être dupe des apparences, l'extérieur s'explique par l'intérieur.
-  points:
-  - id: traite1-l4-p1
-    sentence: "Le projet de l'architecte, principe qui guide la construction de la maison, est « l'intérieur ___ » dont parle le chapitre 3 (ligne 14) du traité 1 de Plotin."
-    answer: "indivisible"
-    alt: []
-  - id: traite1-l4-p2
-    sentence: "Dans une maison, selon le traité 1 de Plotin, ce ne sont pas les briques qui sont belles : la beauté vient de la ___ qui dispose les matériaux selon un certain ordre."
-    answer: "structure"
-    alt: []
-  - id: traite1-l4-p3
-    sentence: "La puissance embellissante de la Forme, que le traité 1 illustre par l'architecte, Platon la mettait déjà en avant dans le ___ (503d-504a) avec les peintres et les constructeurs de navires."
-    answer: "Gorgias"
-    alt: []
-  - id: traite1-l4-p4
-    sentence: "L'extériorité, dans le traité 1 de Plotin, correspond à la cause ___ d'Aristote, le substrat indéterminé qui offre son étendue à l'intelligible."
-    answer: "matérielle"
-    alt: ["materielle"]
-  - id: traite1-l4-p5
-    sentence: "Le substrat indéterminé, support de la forme, se dit en grec ___."
-    answer: "hupokeimenon"
-    alt: ["hupokeimenon"]
-  - id: traite1-l4-p6
-    sentence: "« Il faut […] que la Nature soit une Forme (`eîdos`) et non un composé de matière et de forme » : la thèse vient du traité ___ (III, 8), *Sur la contemplation*."
-    answer: "30"
-    alt: []
-  - id: traite1-l4-p7
-    sentence: "La joie esthétique se fonde sur la forme intelligible, que nous voyons, selon l'expression de Platon (*République*, VII, 533d), par « l'___ de l'âme »."
-    answer: "œil"
-    alt: ["oeil"]
-  - id: traite1-l4-p8
-    sentence: "Le traité ___ (V, 8), *Sur la beauté intelligible*, affirmera que nous ne voyons pas la beauté tant qu'elle est extérieure."
-    answer: "31"
-    alt: []
-  - id: traite1-l4-p9
-    sentence: "Le traité 33 critiquera vivement « ceux qui disent que le monde est ___ » : l'éloge plotinien de l'intériorité ne rend pas les beaux corps méprisables."
-    answer: "mauvais"
-    alt: []
-- id: traite1-l5
-  title: "Narcisse et Ulysse : la fuite vers l'Un"
-  notes: |-
-    **Les derniers chapitres font de la recherche du beau une fuite vers « là-bas ».** Il faut fuir des images corporelles vers leurs modèles intelligibles (chap. 8).
-
-    | Figure | Rapport aux images |
-    | Narcisse | se perd dans son propre reflet sensible : l'âme aussi peut se perdre |
-    | Ulysse | refuse les charmes de Circé et de Calypso pour rentrer dans sa patrie |
-
-    **Notre patrie, c'est le monde intelligible** (chap. 8, 21) : la fuite consiste à transformer la vision extérieure en vision intérieure.
-
-    **Le philosophe se détourne ultimement des beautés corporelles, puis de celle des âmes et des conduites, pour remonter au fondement de la beauté intelligible : l'Un**, premier principe qui rend raison de tout le réel. Le cœur de notre intériorité n'est donc pas une subjectivité, fût-elle transcendantale, mais l'unité ineffable de l'Un, qui n'est jamais absent de rien.
-
-    - Chapitre 7 : la vision bienheureuse, rencontre « seule à seule » de l'âme et de la cause universelle, rencontre du « beau lui-même » (*Banquet*, 211e).
-    - Chapitre 9 : l'âme devient de part en part lumière ; elle se sculpte comme une statue (le sculpteur retranche le marbre superflu, l'âme ce qui est matériel) ; identité du voyant et du vu. Conclusion : les Idées sont les réalités véritablement belles, et **le bien est au-delà du beau**.
-
-    ! Le traité ne s'arrête pas à la beauté intelligible : il la dépasse vers le bien, l'Un, qui est au-delà du beau.
-  points:
-  - id: traite1-l5-p1
-    sentence: "Dans le traité 1 de Plotin, ___, qui se perd dans son propre reflet sensible, figure l'âme qui ne cherche pas l'origine des images."
-    answer: "Narcisse"
-    alt: []
-  - id: traite1-l5-p2
-    sentence: "Dans le traité 1 de Plotin, ___, qui refuse les charmes de Circé et de Calypso, figure l'âme qui fuit les images vers leur origine."
-    answer: "Ulysse"
-    alt: []
-  - id: traite1-l5-p3
-    sentence: "Ulysse, dans le traité 1 de Plotin, refuse les charmes de la magicienne ___ (et de Calypso) : il figure la fuite vers l'intelligible."
-    answer: "Circé"
-    alt: ["Circe"]
-  - id: traite1-l5-p4
-    sentence: "Selon le traité 1 de Plotin (chap. 8, 21), notre ___, c'est le monde intelligible."
-    answer: "patrie"
-    alt: []
-  - id: traite1-l5-p5
-    sentence: "Au fondement de la beauté intelligible, le philosophe du traité 1 recherche l'___, premier principe qui rend raison de l'ensemble du réel."
-    answer: "Un"
-    alt: ["l'Un"]
-  - id: traite1-l5-p6
-    sentence: "Le cœur de notre intériorité, selon le traité 1 de Plotin, n'est pas une ___, fût-elle transcendantale, mais l'unité ineffable de l'Un."
-    answer: "subjectivité"
-    alt: ["subjectivite"]
-  - id: traite1-l5-p7
-    sentence: "La rencontre « seule à seule » de l'âme et de la cause universelle, au chapitre 7 du traité 1, est rencontre du « beau lui-même », expression reprise du ___ (211e)."
+  - id: traite1-l1-q2
+    sentence: "La liste des beautés qui ouvre le traité 1 (occupations, actions, dispositions, sciences, vertus) reprend l'ascension du discours de Diotime dans le ___ de Platon, dans son esprit plus que dans sa lettre."
     answer: "Banquet"
     alt: []
-  - id: traite1-l5-p8
-    sentence: "La conclusion du traité 1 de Plotin (chap. 9) affirme que les Idées sont les réalités véritablement belles et que le ___ est au-delà du beau."
+  - id: traite1-l1-q3
+    sentence: "Le traité 1 s'ouvre sur une question qu'il laisse en suspens : « S'il y a ou non une ___ à tout cela, notre exposé le montrera » (1, 6-7)."
+    answer: "beauté antérieure"
+    alt: []
+  - id: traite1-l1-q4
+    sentence: "La question du traité 1 est de savoir si c'est par ___ que toutes les choses belles sont belles, ou s'il y a une beauté dans les corps et une autre ailleurs."
+    answer: "un seul et même beau"
+    alt: []
+  - id: traite1-l1-q5
+    sentence: "« Il y a, en effet, d'une part des choses belles qui ne le sont pas du fait de leur ___, mais par participation, par exemple les corps et, d'autre part, des beautés qui sont belles par elles-mêmes, comme la nature de la vertu » (1, 12-14)."
+    answer: "substrat"
+    alt: []
+  - id: traite1-l1-q6
+    sentence: "« Il y a, en effet, d'une part des choses belles qui ne le sont pas du fait de leur substrat, mais ___, par exemple les corps et, d'autre part, des beautés qui sont belles par elles-mêmes, comme la nature de la vertu » (1, 12-14)."
+    answer: "par participation"
+    alt: []
+  - id: traite1-l1-q7
+    sentence: "« Il y a, en effet, d'une part des choses belles qui ne le sont pas du fait de leur substrat, mais par participation, par exemple les corps et, d'autre part, des beautés qui sont belles ___, comme la nature de la vertu » (1, 12-14)."
+    answer: "par elles-mêmes"
+    alt: []
+  - id: traite1-l1-q8
+    sentence: "Les corps ne sont pas beaux par eux-mêmes, car les mêmes corps paraissent tantôt beaux, tantôt non : ___ est autre chose qu'être beau (1, 14-15)."
+    answer: "être un corps"
+    alt: []
+  - id: traite1-l1-q9
+    sentence: "Plotin propose de trouver d'abord ce qui rend beaux les corps, pour s'en servir comme d'un « ___ » (1, 20) et comprendre le reste, image reprise du *Banquet* (211c)."
+    answer: "échelon"
+    alt: []
+  - id: traite1-l1-q10
+    sentence: "Le « substrat », ce qui reçoit la forme, rend le terme aristotélicien *___* ; chez Plotin, ce rôle revient au corps, la matière étant pensée comme un non-être."
+    answer: "hupokeímenon"
+    alt: ["hupokeimenon", "hypokeimenon"]
+  - id: traite1-l1-q11
+    sentence: "La « participation » du sensible à l'intelligible, que le traité 1 suppose sans la discuter, rend le terme platonicien *___*."
+    answer: "méthexis"
+    alt: ["methexis"]
+- id: traite1-l2
+  title: "Contre la proportion (1, 20-54)"
+  notes: |-
+    Le chapitre 1 réfute la définition du beau par la proportion des parties : elle conduit à des absurdités, et des contre-exemples la démentent.
+
+    **La thèse visée est celle de presque tout le monde** : {red}« la proportion des parties les unes par rapport aux autres et par rapport à l'ensemble, ajoutée à l'agrément des couleurs, produit ce qui est beau pour la vue »{/red} (1, 20-25). Ce sont d'abord les **stoïciens**, dominants dans l'élite romaine du temps de Plotin (Chrysippe compare la beauté à la santé) ; mais c'est en fait la quasi-totalité de la pensée antique, dont l'emblème est le *Canon* de Polyclète.
+
+    **Premier argument : la thèse a des conséquences absurdes** (1, 25-30). Si être beau, c'est être bien proportionné, __rien de simple ne sera beau__, seulement le composé. Le tout sera beau sans qu'aucune partie le soit. Or __une totalité belle n'est pas faite de parties laides__ : si le tout est beau, les parties le sont aussi.
+
+    **Deuxième argument : des contre-exemples** (1, 31-49).
+
+    - **Des beautés simples**, sans parties : les belles couleurs, la lumière du soleil, l'or, l'éclair et les astres la nuit, un son isolé.
+    - **Une même proportion tantôt belle, tantôt non** : le même visage paraît beau, puis ne l'est plus, ses proportions restant les mêmes. {coral}La beauté est donc autre chose que la proportion{/coral}, et une belle proportion est belle grâce à autre chose.
+    - **Des accords qui sont laids** : appliquée aux occupations et aux sciences, la proportion devient simple cohérence, et les méchants aussi sont cohérents. « La tempérance est une puérilité » et « la justice est une noble naïveté » s'accordent parfaitement (1, 46-48).
+
+    **Troisième argument : la beauté la plus vraie échappe à la proportion.** {teal}« La beauté de l'âme est la vertu dans son ensemble ; elle est une beauté plus vraie »{/teal} (1, 49-50), et elle n'a de proportion ni en grandeur ni en nombre. Quant à l'Intellect, **« qui demeure isolé »**, quelle proportion aurait-il ?
+
+    ! Plotin ne dit pas que les réalités proportionnées sont laides : il en appréciait sans doute la beauté (les Pyramides), mais l'expliquait par l'unité qu'elles manifestent, non par leur proportion. La proportion est un effet, pas la cause.
+  points:
+  - id: traite1-l2-q1
+    sentence: "Le chapitre 1 du traité 1 réfute la définition du beau par la ___ des parties les unes par rapport aux autres et à l'ensemble."
+    answer: "proportion"
+    alt: ["symétrie", "summetría"]
+  - id: traite1-l2-q2
+    sentence: "La définition du beau par la proportion que combat le traité 1 est d'abord celle des ___, dominante dans l'élite romaine du temps de Plotin."
+    answer: "stoïciens"
+    alt: ["Stoïciens"]
+  - id: traite1-l2-q3
+    sentence: "Le stoïcien ___ compare la beauté à la santé (SVF III, 471a), illustrant la conception du beau comme proportion que combat le traité 1."
+    answer: "Chrysippe"
+    alt: []
+  - id: traite1-l2-q4
+    sentence: "Le « tout le monde » qui définit le beau par la proportion désigne presque toute la pensée antique, dont l'emblème est le Doryphore de ___, appelé le *Canon*."
+    answer: "Polyclète"
+    alt: ["Polyclete"]
+  - id: traite1-l2-q5
+    sentence: "Si être beau, c'est être bien proportionné, alors « rien de ___ ne sera beau, mais seulement, nécessairement, ce qui est composé » (1, 25-26)."
+    answer: "simple"
+    alt: []
+  - id: traite1-l2-q6
+    sentence: "Contre la définition du beau par la proportion, Plotin invoque des beautés simples : les belles couleurs, la lumière du soleil, l'___, l'éclair et les astres."
+    answer: "or"
+    alt: []
+  - id: traite1-l2-q7
+    sentence: "Le même visage paraît beau, puis ne l'est plus, alors que ses ___ sont restées les mêmes : la beauté est donc autre chose que la proportion (1, 36-39)."
+    answer: "proportions"
+    alt: []
+  - id: traite1-l2-q8
+    sentence: "Appliquée aux occupations, la proportion n'est plus que cohérence, et les méchants aussi sont cohérents : « la tempérance est une puérilité » et « la justice est une ___ » s'accordent (1, 46-48)."
+    answer: "noble naïveté"
+    alt: ["noble naivete"]
+  - id: traite1-l2-q9
+    sentence: "Les deux propositions cohérentes des méchants citées en 1, 46-48 reprennent approximativement la ___ de Platon, où des méchants qui ne sont pas bêtes, comme Thrasymaque, savent être cohérents."
+    answer: "République"
+    alt: ["Republique"]
+  - id: traite1-l2-q10
+    sentence: "« La beauté de l'âme est ___ ; elle est une beauté plus vraie que les beautés dont on vient de parler » (1, 49-50), et elle n'a de proportion ni en grandeur ni en nombre."
+    answer: "la vertu dans son ensemble"
+    alt: []
+  - id: traite1-l2-q11
+    sentence: "Plotin dit de l'Intellect qu'il « demeure ___ » (1, 53-54) : il est sans mélange, formule d'Anaxagore qu'il cite souvent."
+    answer: "isolé"
+    alt: ["isole"]
+- id: traite1-l3
+  title: "La Forme et l'ajustement de l'âme (2)"
+  notes: |-
+    Ce qui rend beaux les corps, c'est la Forme : elle unifie leurs parties multiples, et l'âme la reconnaît parce qu'elle lui est apparentée.
+
+    **Le chapitre 2 part de l'expérience de l'âme.** Devant le beau, elle le reconnaît, l'accueille et **« s'y ajuste »** (2, 4) ; devant le laid, elle le « rejette », le repousse comme une chose qui lui est étrangère (2, 5-6). Pourquoi ? Parce que l'âme, tournée vers la meilleure des réalités, voit dans le beau quelque chose qui est **{violet}apparenté{/violet}** à sa propre nature, ou une trace de cela : alors __elle se réjouit, revient à elle-même et se ressouvient d'elle-même__ (2, 7-10). C'est le vocabulaire platonicien de la **réminiscence**.
+
+    **Une objection surgit** (2, 11-13) : si les choses d'ici sont belles par ressemblance avec celles de là-bas, comment peut-on dire beaux à la fois les unes et les autres ? C'est le problème de l'**homonymie**, que Plotin ne traite pas pour lui-même ici.
+
+    **La réponse est posée, non démontrée** : {green}« C'est, disons-nous, en participant à une Forme que ceux d'ici-bas sont beaux »{/green} (2, 13). Elle se précise par son contraire, la laideur, qui est de deux sortes (2, 13-18) :
+
+    | Laideur | Ce qui manque |
+    | absolue | ce qui est sans figure, privé de raison et de forme |
+    | relative | ce que la forme n'a pas dominé, la matière résistant à la configuration |
+
+    **La Forme, elle, unifie** (2, 18-22) : elle s'approche, réunit des parties multiples et __les amène à une unité parfaite__. Une fois l'unité faite, le beau se donne aux parties comme au tout : toute une maison est belle en chacune de ses parties grâce à la technique, une pierre grâce à une certaine nature. {coral}Un corps beau est beau « par une communauté avec une raison venue des dieux »{/coral} (2, 27-28).
+
+    ! La réminiscence n'est pas une mémoire sensible (retrouver où l'on a vu un objet) : c'est une remémoration qui ramène l'âme à l'intelligible lui-même, et à elle-même.
+  points:
+  - id: traite1-l3-q1
+    sentence: "Devant le beau, l'âme le reconnaît, l'accueille et, en quelque sorte, « s'y ___ » (2, 4)."
+    answer: "ajuste"
+    alt: []
+  - id: traite1-l3-q2
+    sentence: "Devant la laideur, l'âme la « ___ », la repousse et s'en éloigne comme d'une chose qui lui est étrangère (2, 5-6), en des termes corporels repris du *Banquet* (206d)."
+    answer: "rejette"
+    alt: []
+  - id: traite1-l3-q3
+    sentence: "Si l'âme se réjouit du beau, c'est qu'elle voit quelque chose d'___ à sa propre nature, ou une trace de cela (2, 7-9)."
+    answer: "apparenté"
+    alt: ["apparente"]
+  - id: traite1-l3-q4
+    sentence: "L'affinité de l'âme avec les réalités incorporelles, thème platonicien que le traité 1 suppose, se dit en grec *___* ; être apparenté n'est pas être identique."
+    answer: "suggéneia"
+    alt: ["suggeneia", "syggeneia"]
+  - id: traite1-l3-q5
+    sentence: "Devant le beau, l'âme « revient à elle-même, se ressouvient d'elle-même » (2, 10) : la rencontre du beau est décrite dans le vocabulaire platonicien de la ___."
+    answer: "réminiscence"
+    alt: ["reminiscence"]
+  - id: traite1-l3-q6
+    sentence: "« C'est, disons-nous, en ___ que ceux d'ici-bas sont beaux » (2, 13)."
+    answer: "participant à une Forme"
+    alt: ["participant a une Forme"]
+  - id: traite1-l3-q7
+    sentence: "Les « êtres de là-bas », en grec *___*, désignent chez Plotin les êtres intelligibles, les Formes ; « ici » désigne le monde sensible."
+    answer: "tà ekeî"
+    alt: ["ta ekei"]
+  - id: traite1-l3-q8
+    sentence: "Ce qui est sans figure, privé de raison et de forme, est pour Plotin l'___ (2, 14-16)."
+    answer: "absolue laideur"
+    alt: []
+  - id: traite1-l3-q9
+    sentence: "Est laid aussi ce que la figure et la raison n'ont pas ___, la matière n'ayant pas accepté de se laisser complètement configurer par la Forme (2, 16-18)."
+    answer: "dominé"
+    alt: ["domine"]
+  - id: traite1-l3-q10
+    sentence: "La Forme s'approche, réunit des parties multiples pour qu'elles ne soient plus qu'un tout, et les amène à une ___ grâce à cet accord (2, 18-21)."
+    answer: "unité parfaite"
+    alt: ["unite parfaite"]
+  - id: traite1-l3-q11
+    sentence: "« Un corps beau est beau par une ___ avec une raison venue des dieux » (2, 27-28)."
+    answer: "communauté"
+    alt: ["communaute"]
+  - id: traite1-l3-q12
+    sentence: "La « raison » qui rend beaux les corps traduit *___*, ce contenu objectivement rationnel qui, selon la procession, « vient des dieux », c'est-à-dire des Formes."
+    answer: "lógos"
+    alt: ["logos"]
+- id: traite1-l4
+  title: "Comment l'âme reconnaît les beautés sensibles (3)"
+  notes: |-
+    La beauté sensible est une forme intérieure divisée dans la matière : l'âme la reconnaît en la rapportant à son propre intérieur, qui est sans partie.
+
+    **L'âme juge du beau comme une règle juge du droit** (3, 1-5) : la puissance de l'âme disposée à accueillir la beauté la reconnaît, et le reste de l'âme s'y associe en s'ajustant à la chose belle et à la forme qui l'accompagne.
+
+    **Reste à comprendre comment le corporel s'accorde à ce qui est supérieur au corps.** Plotin pose la question sur un exemple : comment l'architecte fait-il correspondre la maison extérieure et la forme de la maison qui est en lui (3, 5-7) ? Réponse : {teal}« la maison qui se trouve à l'extérieur, abstraction faite des pierres, est en fait la forme intérieure, divisée selon la masse extérieure de la matière, et manifestant un être sans partie dans une pluralité de parties »{/teal} (3, 7-9).
+
+    **Il y a donc deux intérieurs.** __La forme intérieure__, celle que l'architecte a en lui, se divise dans la matière. Quand la sensation voit dans un corps cette forme qui domine la matière sans figure, __elle rassemble la multiplicité dispersée et la rapporte « à l'intérieur de notre âme qui est toujours sans partie »__ (3, 13-14). L'accord du beau est l'accord de ces deux intérieurs. De même, un homme de bien voit une trace de vertu chez un jeune homme dont la physionomie s'accorde à sa vie intérieure.
+
+    **Les beautés simples s'expliquent de même** (3, 17-31). La beauté d'une couleur vient de la domination d'une figure sur la matière et de la présence d'une **lumière incorporelle** qui est raison et forme. Le **feu** est le plus beau des corps parce qu'il {coral}joue le rôle d'une forme par rapport aux autres éléments{/coral} : en haut, le plus léger, proche de l'incorporel, il les réchauffe sans se refroidir et leur donne leur couleur. Dans les sons, ce sont les harmonies imperceptibles qui produisent les harmonies perceptibles.
+
+    **Conclusion : les beautés sensibles « ne sont que des images et des ombres »** (3, 34). Elles mettent la matière en ordre, et nous troublent par leur apparition.
+
+    ! « Intérieur » n'a pas ici de sens spatial : la forme intérieure de la maison est sa cause, et l'intérieur de l'âme est sans partie, non un lieu.
+  points:
+  - id: traite1-l4-q1
+    sentence: "L'âme juge du beau en s'ajustant à la chose belle et à sa forme, qu'elle utilise « comme une ___ sert à découvrir ce qui est droit » (3, 4-5)."
+    answer: "règle"
+    alt: ["regle", "kanṓn"]
+  - id: traite1-l4-q2
+    sentence: "Pour expliquer comment la beauté corporelle s'accorde à ce qui est supérieur au corps, le chapitre 3 du traité 1 prend l'exemple de l'___ et de la maison."
+    answer: "architecte"
+    alt: []
+  - id: traite1-l4-q3
+    sentence: "« La maison qui se trouve à l'extérieur, abstraction faite des ___, est en fait la forme intérieure, divisée selon la masse extérieure de la matière, et manifestant un être sans partie dans une pluralité de parties » (3, 7-9)."
+    answer: "pierres"
+    alt: []
+  - id: traite1-l4-q4
+    sentence: "« La maison qui se trouve à l'extérieur, abstraction faite des pierres, est en fait ___, divisée selon la masse extérieure de la matière, et manifestant un être sans partie dans une pluralité de parties » (3, 7-9)."
+    answer: "la forme intérieure"
+    alt: ["la forme interieure"]
+  - id: traite1-l4-q5
+    sentence: "« La maison qui se trouve à l'extérieur, abstraction faite des pierres, est en fait la forme intérieure, divisée selon la masse extérieure de la matière, et manifestant ___ dans une pluralité de parties » (3, 7-9)."
+    answer: "un être sans partie"
+    alt: ["un etre sans partie"]
+  - id: traite1-l4-q6
+    sentence: "Quand la sensation voit dans un corps la forme qui domine la matière, elle rassemble la multiplicité dispersée et la rapporte « à l'intérieur de notre âme qui est toujours ___ » (3, 13-14)."
+    answer: "sans partie"
+    alt: []
+  - id: traite1-l4-q7
+    sentence: "La matière que la forme doit dominer est dite *___*, sans figure : elle n'arrive pas à accueillir la forme, et seul le corps est une réalité informée."
+    answer: "ámorphos"
+    alt: ["amorphos"]
+  - id: traite1-l4-q8
+    sentence: "La beauté simple d'une couleur s'explique par la domination d'une figure sur la matière et par la présence d'une lumière ___ qui est raison et forme (3, 17-19)."
+    answer: "incorporelle"
+    alt: []
+  - id: traite1-l4-q9
+    sentence: "Le feu est le plus beau des corps parce qu'il joue le rôle d'une ___ par rapport aux autres éléments : en haut, le plus léger, proche de l'incorporel (3, 19-22)."
+    answer: "forme"
+    alt: []
+  - id: traite1-l4-q10
+    sentence: "Dans les sons, ce sont les harmonies ___ qui produisent les harmonies perceptibles (3, 28-30)."
+    answer: "qui ne sont pas perceptibles"
+    alt: ["imperceptibles", "invisibles"]
+  - id: traite1-l4-q11
+    sentence: "Le chapitre 3 du traité 1 conclut que les beautés sensibles « ne sont que des ___ » (3, 34)."
+    answer: "images et des ombres"
+    alt: []
+- id: traite1-l5
+  title: "Les beautés que l'âme voit sans organe (4 ; 5, 1-22)"
+  notes: |-
+    Les beautés plus hautes, celles des occupations, des sciences et des vertus, ne se voient qu'avec l'âme seule, et on ne peut en parler qu'à qui les a vues.
+
+    **Il faut quitter la sensation** (4, 1-4) : ces beautés, l'âme les voit « sans organe » corporel, en abandonnant la sensation qui reste au niveau de l'ici-bas.
+
+    **L'argument est une analogie avec l'aveugle-né** (4, 4-12). On ne peut parler des couleurs ni à ceux qui ne les ont pas vues, ni à ceux qui ne les ont jamais perçues comme belles. __De même, on ne peut parler de la beauté des occupations et des sciences qu'à ceux qui l'ont comprise__, ni du rayonnement de la vertu qu'à ceux qui se sont représenté la beauté du visage de la justice : **« ni l'étoile du soir, ni l'étoile du matin ne sont aussi belles »**. La beauté des sciences n'est accessible qu'au savant.
+
+    **Ces beautés touchent plus fort** (4, 12-22) : qui les voit est frappé de stupeur et troublé bien davantage, parce qu'il est mis en contact avec des {violet}réalités véritables{/violet}. Le beau véritable suscite toujours les mêmes affects : __« l'effroi, le saisissement plaisant, le désir, l'amour et la stupeur accompagnée de plaisir »__ (4, 16-17). Tous les éprouvent, mais surtout les plus amoureux, comme pour les corps, dont tous ne reçoivent pas également l'**aiguillon**.
+
+    **Il faut donc interroger les amoureux des réalités non sensibles** (5, 1-22) : que ressentez-vous devant la beauté de l'âme, de quels **« transports bachiques »** êtes-vous saisis ? Ce qui les émeut, __ce n'est ni les contours, ni la couleur, ni une grandeur__, mais l'âme, qui est **« sans couleur »**, et sa tempérance « rayonnante » des vertus. Pourquoi la dire belle ? Parce que cela existe vraiment : ce sont des réalités véritables. Mais ce qui rend l'âme digne d'être aimée reste à trouver.
+
+    ! L'argument ne prouve pas que ces beautés existent pour qui ne les a pas vues : il en appelle à l'expérience, comme on ne prouve pas les couleurs à un aveugle-né.
+  points:
+  - id: traite1-l5-q1
+    sentence: "Les beautés plus élevées, l'âme les voit « sans ___ » corporel, en abandonnant la sensation qui se maintient au niveau de l'ici-bas (4, 1-4)."
+    answer: "organe"
+    alt: []
+  - id: traite1-l5-q2
+    sentence: "On ne peut parler des beautés sensibles à ceux qui ne les ont jamais vues, comme les ___ ; de même pour la beauté des sciences et des vertus (4, 4-12)."
+    answer: "aveugles de naissance"
+    alt: ["aveugles-nés", "aveugles nés"]
+  - id: traite1-l5-q3
+    sentence: "De la beauté du visage de la justice, Plotin dit : « ni l'étoile du soir, ni l'étoile du matin ne sont aussi belles » (4, 11-12), fragment de la *Mélanippe* d'___, cité par Aristote dans l'*Éthique à Nicomaque*."
+    answer: "Euripide"
+    alt: []
+  - id: traite1-l5-q4
+    sentence: "Devant les beautés non sensibles, on est troublé bien davantage, parce qu'il s'agit d'être mis en contact avec des ___ (4, 13-15)."
+    answer: "réalités véritables"
+    alt: ["realites veritables"]
+  - id: traite1-l5-q5
+    sentence: "Le beau véritable suscite « l'___, le saisissement plaisant, le désir, l'amour et la stupeur accompagnée de plaisir » (4, 16-17)."
+    answer: "effroi"
+    alt: []
+  - id: traite1-l5-q6
+    sentence: "Tous voient les beaux corps, mais tous n'en reçoivent pas également l'___ ; ceux qui le reçoivent le plus sont les amants (4, 20-22)."
+    answer: "aiguillon"
+    alt: []
+  - id: traite1-l5-q7
+    sentence: "Aux amoureux des réalités non sensibles, Plotin demande de quels « transports ___ » ils sont saisis (5, 6), terme qui désigne la transe dionysiaque."
+    answer: "bachiques"
+    alt: []
+  - id: traite1-l5-q8
+    sentence: "Ce qui émeut les amants authentiques, ce ne sont ni les contours, ni la couleur, ni une grandeur, mais l'âme, qui est « sans ___ » (5, 9-10), expression du *Phèdre*."
+    answer: "couleur"
+    alt: []
+- id: traite1-l6
+  title: "La laideur de l'âme : un mélange (5, 22-58)"
+  notes: |-
+    Pour savoir ce qui rend l'âme belle, Plotin passe par son contraire : la laideur de l'âme est un mélange, un élément étranger ajouté ; sa beauté est donc d'être seule, purifiée.
+
+    **La méthode : chercher par le contraire.** Ne pouvant dire directement ce qui rend l'âme aimable, Plotin propose d'examiner {red}les laideurs qui s'installent en elle{/red} et la raison de leur apparition (5, 22-26).
+
+    **Le portrait de l'âme laide** (5, 26-31), d'après le *Gorgias* : intempérante et injuste, pleine de désirs et de trouble, de peur par lâcheté et de jalousie par petitesse, ne pensant qu'à des choses mortelles et basses, vivant de la vie du corps.
+
+    **Le diagnostic : la laideur s'ajoute.** Elle s'ajoute à l'âme __« au même titre qu'une beauté d'emprunt »__, la corrompt, la rend impure et la « pétrit » de maux (5, 31-38). Tiraillée vers ce qui frappe les sens, mêlée de corporel, l'âme {red}admet une forme autre que la sienne{/red} : ce mélange l'a changée.
+
+    **Deux images rendent la thèse concevable.**
+
+    - **L'homme tombé dans la boue** (5, 43-48) : on ne voit plus sa beauté, mais la boue ; sa laideur vient d'un élément étranger, et son travail sera de se nettoyer pour retrouver son état antérieur.
+    - **L'or mêlé de terre** (5, 50-54) : enlevez la terre, il reste l'or, beau, « ramené à sa seule identité ».
+
+    {coral}La laideur d'une âme s'explique par son mélange et son inclination vers le corps et vers la matière{/coral} (5, 48-50). **La conclusion suit** (5, 54-58) : l'âme isolée des désirs du corps et purifiée rejette toute la laideur qui lui vient de l'autre nature. Sa beauté est ce qui reste quand on retire l'étranger.
+
+    ! La laideur n'est pas une nature de l'âme : c'est un ajout. L'âme n'a donc pas à devenir autre, mais à redevenir elle-même.
+  points:
+  - id: traite1-l6-q1
+    sentence: "Pour savoir ce qui rend l'âme belle, Plotin examine son ___, la laideur, et la raison de son apparition (5, 22-26) : c'est un argument a contrario."
+    answer: "contraire"
+    alt: []
+  - id: traite1-l6-q2
+    sentence: "Le portrait de l'âme laide (5, 26-31) suit le ___ de Platon, où le juge infernal Rhadamante voit une âme pleine de désordre et de laideur."
+    answer: "Gorgias"
+    alt: []
+  - id: traite1-l6-q3
+    sentence: "La laideur « s'ajoute à l'âme au même titre qu'une ___ » (5, 32-33) : elle la corrompt et la rend impure."
+    answer: "beauté d'emprunt"
+    alt: ["beaute d'emprunt"]
+  - id: traite1-l6-q4
+    sentence: "Tiraillée vers ce qui frappe les sens et mêlée de corporel, l'âme laide « admet une ___ autre que la sienne » (5, 41-42)."
+    answer: "forme"
+    alt: []
+  - id: traite1-l6-q5
+    sentence: "L'âme laide est comme un homme tombé dans la ___ et la fange, qui ne peut plus laisser voir sa propre beauté (5, 43-44)."
+    answer: "boue"
+    alt: []
+  - id: traite1-l6-q6
+    sentence: "La laideur de l'homme tombé dans la boue lui est venue de l'ajout d'un élément ___ : son travail sera de se nettoyer et de se purifier (5, 45-48)."
+    answer: "étranger"
+    alt: ["etranger"]
+  - id: traite1-l6-q7
+    sentence: "La laideur d'une âme s'explique « par son ___ et son inclination vers le corps et vers la matière » (5, 48-50)."
+    answer: "mélange"
+    alt: ["melange"]
+  - id: traite1-l6-q8
+    sentence: "L'âme laide est « à l'image de l'or mélangé à du ___ » : si on enlève la terre, il reste l'or, beau, ramené à sa seule identité (5, 50-53)."
+    answer: "terreux"
+    alt: []
+- id: traite1-l7
+  title: "La vertu est une purification ; l'être, le beau et le bien (6)"
+  notes: |-
+    Si la laideur est un mélange, la vertu est une purification : l'âme purifiée redevient forme et raison, et c'est par l'Intellect qu'elle est belle.
+
+    **Plotin s'appuie sur une autorité** : un **« antique discours »**, celui du *Phédon* (69c) qui se réclame des mystères orphiques, dit que {teal}« la tempérance, le courage, la vertu dans son ensemble et la réflexion même sont une purification »{/teal} (6, 1-3). Celui qui n'est pas purifié séjournera dans un « bourbier », car l'impur aime les bourbiers, comme les porcs.
+
+    **Chaque vertu se définit alors comme un détachement** (6, 7-13) :
+
+    | Vertu | Ce qu'elle est |
+    | tempérance | fuir les plaisirs du corps, qui ne sont pas purs |
+    | courage | ne pas craindre la mort, séparation de l'âme et du corps |
+    | grandeur d'âme | mépriser les choses d'ici-bas |
+    | réflexion | détourner la pensée d'en bas, la mener vers le haut |
+
+    **La purification rend l'âme à elle-même.** {coral}« Une fois purifiée, l'âme devient donc une forme et une raison, elle est tout incorporelle, intellective »{/coral} (6, 13-14) et appartient au divin. Ramenée vers l'Intellect, elle reçoit une beauté __propre et non pas étrangère__, puisque c'est alors seulement __qu'elle est purement et simplement âme__ (6, 16-18). D'où la formule platonicienne : devenir bonne et belle rend l'âme **semblable au dieu** (6, 18-20).
+
+    **Plotin en tire une thèse plus générale.** {green}« L'être c'est la beauté, et ce qui diffère de l'être, c'est la laideur, et c'est cela même qui est le premier mal »{/green} (6, 21-22). Pour le dieu, être bon et être beau sont une même chose. Il faut donc __poser en premier la beauté qui est la même chose que le bien__ ; il en découle que **l'Intellect est le beau**, et que c'est par lui que l'âme est belle (6, 24-27). L'âme, à son tour, rend belles les actions et les corps qu'elle domine (6, 27-32).
+
+    **Une question reste ouverte** (6, 23-27) : quels sont exactement les rapports du beau, du bien et de l'Intellect ? Les chapitres 7 et 9 y reviennent.
+
+    ! Le chapitre 6 identifie encore le bien et le beau « pour le dieu » ; c'est seulement à la fin du traité (9, 34-43) que le bien est placé au-delà du beau.
+  points:
+  - id: traite1-l7-q1
+    sentence: "La thèse de la vertu-purification est présentée par Plotin comme un « ___ » (6, 1), celui du *Phédon* (69c), qui se réclame lui-même des mystères orphiques."
+    answer: "antique discours"
+    alt: []
+  - id: traite1-l7-q2
+    sentence: "« La tempérance, le courage, la vertu dans son ensemble et la réflexion même sont une ___ » (6, 2-3)."
+    answer: "purification"
+    alt: []
+  - id: traite1-l7-q3
+    sentence: "Celui qui n'est pas purifié ira dans l'Hadès séjourner dans un « ___ », parce que l'impur aime les bourbiers, comme les porcs (6, 3-6)."
+    answer: "bourbier"
+    alt: []
+  - id: traite1-l7-q4
+    sentence: "Le courage est absence de peur devant la mort, « cette mort qui est la ___ de l'âme et du corps » (6, 9-10), définition reprise du *Phédon*."
+    answer: "séparation"
+    alt: ["separation"]
+  - id: traite1-l7-q5
+    sentence: "La grandeur d'âme, vertu dont le nom grec *megalopsukhía* vient d'Aristote et des stoïciens, est pour Plotin ___ des choses d'ici-bas (6, 11)."
+    answer: "mépris"
+    alt: ["mepris"]
+  - id: traite1-l7-q6
+    sentence: "La « réflexion », dans la liste des vertus du chapitre 6, rend le terme grec *___*, qu'on traduit aussi par « sagesse » ou « prudence »."
+    answer: "phrónēsis"
+    alt: ["phronesis", "phronêsis"]
+  - id: traite1-l7-q7
+    sentence: "« Une fois purifiée, l'âme devient donc ___, elle est tout incorporelle, intellective et elle appartient entièrement au divin » (6, 13-15)."
+    answer: "une forme et une raison"
+    alt: []
+  - id: traite1-l7-q8
+    sentence: "Ramenée vers l'Intellect, l'âme reçoit une beauté propre et non étrangère, puisque c'est alors seulement qu'elle est « ___ » (6, 17-18)."
+    answer: "purement et simplement âme"
+    alt: ["purement et simplement ame"]
+  - id: traite1-l7-q9
+    sentence: "Devenir bonne et belle rend l'âme « semblable au ___ » (6, 19-20), formule du *Théétète* (176b) et des *Lois*."
+    answer: "dieu"
+    alt: []
+  - id: traite1-l7-q10
+    sentence: "« L'être c'est la beauté, et ce qui diffère de l'être, c'est ___, et c'est cela même qui est le premier mal » (6, 21-22)."
+    answer: "la laideur"
+    alt: []
+  - id: traite1-l7-q11
+    sentence: "« L'être c'est la beauté, et ce qui diffère de l'être, c'est la laideur, et c'est cela même qui est ___ » (6, 21-22)."
+    answer: "le premier mal"
+    alt: []
+  - id: traite1-l7-q12
+    sentence: "Il faut poser en premier la beauté qui est la même chose que le bien ; il en découle que ___ est le beau, et que c'est par lui que l'âme est belle (6, 24-27)."
+    answer: "l'Intellect"
+    alt: ["Intellect"]
+- id: traite1-l8
+  title: "La vision du bien (7)"
+  notes: |-
+    Au-delà de l'âme belle, il faut remonter vers le bien que toute âme désire : celui qui le voit « seul à seul » méprise toutes les autres beautés.
+
+    **L'âme doit se retourner vers le bien** (7, 1-9), « lui que toute âme désire » ; le chapitre ne le démontre pas, il le décrit à partir de l'expérience : __« si donc quelqu'un l'a vu, il sait »__ ce que Plotin veut dire : il a vu, donc il sait (`eîden`, `oîden`). Le savoir est d'abord un voir.
+
+    **La remontée est décrite comme une initiation.** Comme ceux qui entrent dans le lieu le plus saint des temples se purifient et ôtent leurs vêtements, l'âme __se dépouille de ce qu'elle a revêtu en descendant__, le corps. Pure de tout ce qui est étranger au dieu, elle le voit **{violet}« seul à seul »{/violet}**, « intact, simple et pur », lui « dont toutes choses dépendent » (formule d'Aristote sur le Premier Moteur), {coral}cause de la vie, de l'intellect et de l'être{/coral} (7, 9-12).
+
+    **La rencontre transforme le désir** (7, 14-21) : celui qui ne l'a pas vu désire ce qu'il tient pour le bien ; celui qui l'a vu se réjouit au sein du beau, aime d'un amour véritable et méprise les beautés qu'il aimait auparavant.
+
+    **Ce bien est la beauté première** (7, 21-30) : « le beau lui-même, pur par lui-même » (*Banquet*, 211e), ni sur terre ni au ciel. Il est le **{violet}« chorège »{/violet}** de toutes les beautés : __il donne en restant auprès de lui-même sans rien recevoir__ (7, 26-27). C'est pour lui que l'âme livre **« l'ultime combat »** (7, 30-31, d'après le *Phèdre*), qui mène à la « vision bienheureuse ».
+
+    **D'où un renversement des valeurs** (7, 33-39) : est malheureux non celui qui manque de beaux corps ou de pouvoir, mais celui-là seul qui ne rencontre pas ce beau. Pour l'atteindre, il faut congédier la royauté et tout pouvoir sur la terre, la mer et le ciel.
+
+    ! Le vocabulaire religieux (temples, initiation, « seul à seul ») ne met pas la philosophie au service d'un culte : il sert à dire une expérience qui est le cœur même de la philosophie.
+  points:
+  - id: traite1-l8-q1
+    sentence: "Le chapitre 7 du traité 1 invite l'âme à se retourner vers le ___, « lui que toute âme désire » (7, 1)."
+    answer: "bien"
+    alt: []
+  - id: traite1-l8-q2
+    sentence: "« Si donc quelqu'un l'a vu, il ___ ce que je veux dire » (7, 2) : en grec, Plotin joue sur *eîden* et *oîden*, avoir vu et savoir."
+    answer: "sait"
+    alt: []
+  - id: traite1-l8-q3
+    sentence: "L'âme qui remonte vers le bien se dépouille de ce qu'elle a revêtu lors de la descente, comme ceux qui entrent dans le lieu le plus saint des ___ ôtent leurs vêtements (7, 4-8)."
+    answer: "temples"
+    alt: []
+  - id: traite1-l8-q4
+    sentence: "Pure de tout ce qui est étranger au dieu, l'âme peut le voir « ___ » (7, 9)."
+    answer: "seul à seul"
+    alt: ["seul a seul"]
+  - id: traite1-l8-q5
+    sentence: "Le bien est celui « dont toutes choses dépendent » (7, 10), formule d'___ à propos du Premier Moteur (*Métaphysique*, Λ, 7)."
+    answer: "Aristote"
+    alt: []
+  - id: traite1-l8-q6
+    sentence: "Le bien est la cause de la vie, de l'___ et de l'être (7, 11-12)."
+    answer: "intellect"
+    alt: ["Intellect"]
+  - id: traite1-l8-q7
+    sentence: "Le bien est le « ___ » de toutes les beautés : il donne en restant auprès de lui-même sans rien recevoir (7, 25-27), comme le chef de chœur règle l'accord du chœur."
+    answer: "chorège"
+    alt: ["chorege"]
+  - id: traite1-l8-q8
+    sentence: "C'est pour le bien que les âmes connaissent « l'___ » (7, 30-31), formule du *Phèdre* (247b) et seule évocation d'un *agṓn* chez Plotin."
+    answer: "ultime combat"
+    alt: []
+  - id: traite1-l8-q9
+    sentence: "Est malheureux non celui qui ne rencontre pas la beauté des corps ou le pouvoir, mais celui qui ne rencontre pas ce beau : passage que cite saint ___ dans la *Cité de Dieu* (X, 16)."
+    answer: "Augustin"
+    alt: []
+- id: traite1-l9
+  title: "La fuite : Narcisse, Ulysse et la vision intérieure (8)"
+  notes: |-
+    Pour voir cette beauté, il faut fuir les images vers ce dont elles sont images : non par un voyage, mais en changeant de manière de voir.
+
+    **La question est posée** (8, 1-3) : comment voir cette **« beauté immense »** qui reste à l'intérieur des temples, sans se montrer aux profanes ?
+
+    **Le principe : fuir les images** (8, 3-8). Il faut abandonner la vue extérieure et ne pas courir vers les beaux corps, mais, {teal}« sachant qu'elles ne sont que des images, des traces et des ombres, il faut fuir vers ce dont elles sont images »{/teal}.
+
+    **Deux figures opposent deux rapports aux images.**
+
+    | Figure | Rapport aux images |
+    | l'homme qui saisit son reflet | prend l'image pour l'être et disparaît au fond de l'eau |
+    | Ulysse | quitte Circé et Calypso malgré les beautés sensibles, pour rentrer dans sa patrie |
+
+    {red}Celui qui saisit son beau reflet sur l'eau{/red} (8, 8-16) est Narcisse, que Plotin ne nomme pas. Ainsi, celui qui ne se détourne pas des beaux corps tombe, non par le corps mais par l'âme, dans l'obscurité, et séjourne aveugle dans l'Hadès parmi les ombres. {green}Ulysse{/green}, au contraire, prend le large (8, 17-20). D'où le conseil d'Homère : **« Fuyons vers notre chère patrie »**. Et cette patrie, **« c'est le lieu d'où nous sommes venus, et notre père est là-bas »** (8, 20-21) : le monde intelligible.
+
+    **Mais la fuite n'est pas un voyage** (8, 22-27) : ni à pied, ni en navire. Il faut __fermer les yeux, échanger cette manière de voir pour une autre et réveiller cette vision que tout le monde possède, mais dont peu font usage__.
+
+    ! « Fuir » n'est pas un lâche abandon : c'est, selon le *Théétète* (176b), une course vers l'essentiel, qui se fait sur place, en changeant de regard.
+  points:
+  - id: traite1-l9-q1
+    sentence: "Comment voir cette « beauté ___ » qui demeure à l'intérieur des temples sans se montrer aux profanes (8, 2) ? L'expression vient de la *République* (VI, 509a)."
+    answer: "immense"
+    alt: []
+  - id: traite1-l9-q2
+    sentence: "« Sachant qu'elles ne sont que des images, des traces et des ombres, il faut ___ vers ce dont elles sont images » (8, 6-8)."
+    answer: "fuir"
+    alt: []
+  - id: traite1-l9-q3
+    sentence: "L'homme qui, voulant saisir son beau reflet sur l'eau, disparut au fond de l'eau (8, 9-13) est ___, que Plotin ne nomme pas."
+    answer: "Narcisse"
+    alt: []
+  - id: traite1-l9-q4
+    sentence: "Le mythe du reflet est raconté « par ___ » (8, 12) : le sens véritable n'en est saisi que par les initiés, à la différence d'une simple métaphore."
+    answer: "énigmes"
+    alt: ["enigmes"]
+  - id: traite1-l9-q5
+    sentence: "Celui qui ne se détourne pas des beaux corps tombe dans l'obscurité, non par son corps, mais par son ___ (8, 13-15)."
+    answer: "âme"
+    alt: ["ame"]
+  - id: traite1-l9-q6
+    sentence: "Le conseil le plus juste est : « Fuyons vers notre chère ___ » (8, 16), vers d'Homère (*Iliade*, II, 140)."
+    answer: "patrie"
+    alt: []
+  - id: traite1-l9-q7
+    sentence: "___ prend le large en quittant la magicienne Circé et Calypso, malgré les agréments de la beauté sensible (8, 17-20)."
+    answer: "Ulysse"
+    alt: []
+  - id: traite1-l9-q8
+    sentence: "« Notre patrie, c'est le lieu d'où nous sommes venus, et notre ___ est là-bas » (8, 20-21)."
+    answer: "père"
+    alt: ["pere"]
+  - id: traite1-l9-q9
+    sentence: "La fuite ne se fait ni à pied, ni en navire : il faut fermer les yeux, échanger cette manière de voir pour une autre et ___ cette vision que tout le monde possède, mais dont peu font usage (8, 24-27)."
+    answer: "réveiller"
+    alt: ["reveiller"]
+- id: traite1-l10
+  title: "Devenir beau pour voir le beau ; le bien au-delà du beau (9)"
+  notes: |-
+    On ne voit le beau qu'en devenant beau : l'âme se sculpte, devient lumière, puis voit les Idées, qui sont le beau ; le bien est au-delà, source du beau.
+
+    **La vision intérieure doit s'éduquer** (9, 1-7), comme l'œil sorti de la caverne : d'abord voir les belles occupations, puis les beaux travaux des hommes de bien, puis l'âme de ceux qui les accomplissent.
+
+    **Pour voir la beauté d'une âme bonne : « Retourne en toi-même et vois »** (9, 7). Et si tu ne te vois pas encore beau, fais comme le sculpteur : enlève, efface, polis, nettoie. {teal}« Ne cesse de sculpter ta propre statue »{/teal} (9, 13), jusqu'à voir briller la splendeur de la vertu. Le travail est le même que pour l'or : retrancher l'étranger.
+
+    **L'âme purifiée devient une** (9, 15-25) : il n'y a plus d'obstacle à **devenir un**, plus rien d'étranger mêlé à soi ; tu deviens __une unique et authentique lumière__, sans mesure. **« Étant devenu une vision »**, tu n'as plus besoin qu'on te montre le chemin.
+
+    **Le principe qui commande toute l'ascension est enfin posé** (9, 25-34) : __celui qui voit doit s'être rendu apparenté et semblable à ce qui est vu__. {green}« Jamais l'œil ne verrait le soleil sans être devenu de la même nature que le soleil, et l'âme ne pourrait voir le beau, sans être devenue belle »{/green} (9, 30-32). C'est ce qui justifie la purification : elle n'est pas une morale ajoutée à l'esthétique, mais la condition de la vision.
+
+    **La conclusion distingue enfin le beau et le bien** (9, 34-43). En s'élevant, l'âme arrive à l'Intellect, où les Formes sont belles : {coral}le beau, ce sont les Idées{/coral}, « rejetons de l'Intellect », par qui toutes choses sont belles. **« Ce qui est au-delà du beau, nous disons que c'est le bien qui place au-devant de lui le beau »** (9, 37-38). Plotin donne deux formulations :
+
+    | Formulation | Le bien et le beau |
+    | générale | le bien est la première beauté |
+    | distinguant les intelligibles | le beau est le lieu des Idées ; le bien est au-delà, « la source et le principe » du beau |
+
+    ! La conclusion hésite : Plotin dit le bien « première beauté », puis au-delà du beau, avant de conclure que du moins « le beau est là-bas ». Ce n'est qu'à la toute fin du traité qu'il distingue nettement le bien de l'être et du beau.
+  points:
+  - id: traite1-l10-q1
+    sentence: "Une fois réveillée, la vision intérieure doit être éduquée : d'abord voir les « ___ », puis les beaux travaux des hommes de bien, puis leur âme (9, 1-7)."
+    answer: "belles occupations"
+    alt: []
+  - id: traite1-l10-q2
+    sentence: "Pour voir la beauté de l'âme bonne, Plotin enjoint : « Retourne ___ et vois » (9, 7)."
+    answer: "en toi-même"
+    alt: ["en toi meme"]
+  - id: traite1-l10-q3
+    sentence: "« Ne cesse de ___ ta propre statue » (9, 13), comme le sculpteur qui enlève, efface, polit et nettoie jusqu'à ce qu'une belle apparence se dégage."
+    answer: "sculpter"
+    alt: []
+  - id: traite1-l10-q4
+    sentence: "La maxime « Ne cesse de sculpter ta propre statue » reprend approximativement le ___ de Platon (252d), dans un tout autre contexte : il est vain d'y voir une expérience « autoérotique »."
+    answer: "Phèdre"
+    alt: ["Phedre"]
+  - id: traite1-l10-q5
+    sentence: "Purifiée, l'âme n'a plus aucun obstacle à devenir ___ : rien d'autre ne se mélange à elle, elle devient une unique et authentique lumière (9, 15-18)."
+    answer: "un"
+    alt: []
+  - id: traite1-l10-q6
+    sentence: "« Étant devenu une ___ », tu n'as plus besoin qu'on te montre le chemin (9, 22-23) : la vue de la première phrase du traité annonce cette contemplation finale."
+    answer: "vision"
+    alt: []
+  - id: traite1-l10-q7
+    sentence: "« Celui qui voit, en effet, doit s'être rendu ___ à ce qui est vu, pour parvenir à la contemplation » (9, 29-30)."
+    answer: "apparenté et semblable"
+    alt: ["apparente et semblable"]
+  - id: traite1-l10-q8
+    sentence: "« Jamais l'œil ne verrait le soleil sans être devenu de la même nature que le soleil, et l'âme ne pourrait voir le beau, ___ » (9, 30-32)."
+    answer: "sans être devenue belle"
+    alt: ["sans etre devenue belle"]
+  - id: traite1-l10-q9
+    sentence: "En s'élevant, l'âme arrive à l'Intellect, où toutes les Formes sont belles : le beau, ce sont les ___, « rejetons de l'Intellect » (9, 34-37)."
+    answer: "Idées"
+    alt: ["Idees"]
+  - id: traite1-l10-q10
+    sentence: "« Ce qui est au-delà du beau, nous disons que c'est le ___ qui place au-devant de lui le beau » (9, 37-38)."
     answer: "bien"
     alt: ["Bien"]
-  - id: traite1-l5-p9
-    sentence: "Le traité *Sur le beau* décrit un « ___ » de l'âme vers le divin, qui invite à pratiquer la philosophie pour accéder à la plénitude de la beauté."
-    answer: "itinéraire"
-    alt: ["itineraire"]
-- id: traite1-l6
+  - id: traite1-l10-q11
+    sentence: "Si l'on distingue les intelligibles, le beau est le lieu des Idées, et le bien est au-delà, « la ___ » du beau (9, 40-42), formule du *Phèdre*."
+    answer: "source et le principe"
+    alt: []
+  - id: traite1-l10-q12
+    sentence: "Les dernières phrases du traité 1, présentées comme un résumé, sont attribuées par R. Harder à un ajout de ___ ; J. Laurent y voit plutôt Plotin précisant sa position."
+    answer: "Porphyre"
+    alt: []
+- id: traite1-l11
   title: "Repérage : le plan du traité 1"
   notes: |-
-    **Le traité 1 monte des beautés sensibles (chap. 1-3) à l'émotion qu'elles suscitent (chap. 4-5), puis à la purification (chap. 6) et à la vision du beau et du bien (chap. 7-9).**
+    Le traité 1 monte des beautés sensibles (chap. 1-3) à l'émotion qu'elles suscitent (chap. 4-5), puis à la purification (chap. 6) et à la vision du beau et du bien (chap. 7-9).
+
+    **Les chapitres 1 à 3 cherchent ce qui rend beaux les corps** : pas la proportion, mais la Forme, que l'âme reconnaît. **Les chapitres 4 à 6 passent aux beautés de l'âme** : il faut les avoir vues, la laideur de l'âme est un mélange, la vertu une purification. **Les chapitres 7 à 9 décrivent la remontée** : la vision du bien, la fuite hors des images, l'âme devenue lumière, et le bien au-delà du beau.
 
     | Moment | Lieu | Ce qui s'y joue |
     | quelles choses sont belles | chap. 1 | critique de la définition stoïcienne par la proportion |
@@ -284,35 +634,41 @@ lessons:
     | la fuite vers là-bas | chap. 8 | Ulysse et Narcisse ; notre patrie est l'intelligible |
     | l'âme devient lumière | chap. 9 | le sculpteur ; le bien est au-delà du beau |
 
-    Les repères suivent le plan détaillé qui accompagne la traduction. Le tableau se joue en repérage : remettre les moments dans l'ordre du traité, puis replacer leurs repères, puis en écrire un.
-
     ! La purification (chap. 6) précède la vision (chap. 7) : l'âme doit se défaire du corps avant de voir le beau lui-même.
   points:
-  - id: traite1-l6-p1
+  - id: traite1-l11-q1
     sentence: "La critique de la définition stoïcienne du beau par la proportion ouvre le traité 1 de Plotin, au ___."
     answer: "chap. 1"
     alt: ["1", "chapitre 1"]
-  - id: traite1-l6-p2
-    sentence: "Dans le traité 1 de Plotin, l'examen des beautés sensibles (couleur, lumière, beauté du feu, harmonies invisibles) occupe le ___."
+  - id: traite1-l11-q2
+    sentence: "Dans le traité 1, l'âme qui accueille la beauté de la Forme et refuse la laideur de l'informe est l'objet du ___."
+    answer: "chap. 2"
+    alt: ["2", "chapitre 2"]
+  - id: traite1-l11-q3
+    sentence: "Dans le traité 1, l'examen des beautés sensibles (l'architecte, la couleur, la lumière, le feu, les harmonies invisibles) occupe le ___."
     answer: "chap. 3"
     alt: ["3", "chapitre 3"]
-  - id: traite1-l6-p3
-    sentence: "Dans le traité 1 de Plotin, la stupeur, le trouble et l'« effroi du beau » que suscitent les beautés incorporelles sont décrits au ___."
+  - id: traite1-l11-q4
+    sentence: "Dans le traité 1, la stupeur, le trouble et l'effroi que suscitent les beautés incorporelles sont décrits au ___."
     answer: "chap. 4"
     alt: ["4", "chapitre 4"]
-  - id: traite1-l6-p4
-    sentence: "Dans le traité 1 de Plotin, la vertu comme purification, d'après un « antique discours » du *Phédon* (69c), se trouve au ___."
+  - id: traite1-l11-q5
+    sentence: "Dans le traité 1, l'argument a contrario par la laideur de l'âme, mélange au corps, se trouve au ___."
+    answer: "chap. 5"
+    alt: ["5", "chapitre 5"]
+  - id: traite1-l11-q6
+    sentence: "Dans le traité 1, la vertu comme purification, d'après un « antique discours » du *Phédon*, se trouve au ___."
     answer: "chap. 6"
     alt: ["6", "chapitre 6"]
-  - id: traite1-l6-p5
-    sentence: "Dans le traité 1 de Plotin, la fuite vers « là-bas », avec Ulysse et Narcisse, se trouve au ___."
-    answer: "chap. 8"
-    alt: ["8", "chapitre 8"]
-  - id: traite1-l6-p6
-    sentence: "Le traité 1 de Plotin s'achève (chap. 9) sur la comparaison de la conversion avec le travail du ___ qui taille sa statue."
-    answer: "sculpteur"
-    alt: []
-  - id: traite1-l6-p7
-    sentence: "La purification de l'âme (chap. 6 du traité 1) précède la vision bienheureuse, union de l'âme au beau et au bien, au ___."
+  - id: traite1-l11-q7
+    sentence: "Dans le traité 1, la vision « seul à seul » du bien et l'« ultime combat » se trouvent au ___."
     answer: "chap. 7"
     alt: ["7", "chapitre 7"]
+  - id: traite1-l11-q8
+    sentence: "Dans le traité 1, la fuite vers « là-bas », avec Narcisse et Ulysse, se trouve au ___."
+    answer: "chap. 8"
+    alt: ["8", "chapitre 8"]
+  - id: traite1-l11-q9
+    sentence: "Le traité 1 s'achève, au ___, sur la statue qu'il faut sculpter et sur le bien au-delà du beau."
+    answer: "chap. 9"
+    alt: ["9", "chapitre 9"]
