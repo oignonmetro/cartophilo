@@ -28,8 +28,10 @@ Ne le rouvrir qu'en cas de doute précis.
 4. **Ma propre connaissance de Plotin** : pour expliquer un raisonnement que
    le texte laisse implicite, jamais pour une citation ni un numéro de ligne.
 
-Les PDF de la GF sont rangés dans `C:SERSARTHURTRAITéS PLOTIN` (UN VOLUME PAR GROUPE DE TRAITéS). DEMANDER LE PDF S'IL N'Y EST PAS. Sans lui, prévenir que les citations
-et repères se limiteront à ceux déjà présents dans le dépôt.
+Les PDF de la GF sont rangés dans `C:\Users\Arthur\Traités Plotin`, un
+volume par groupe de traités (texte sélectionnable : `pdftotext` suffit).
+Demander le PDF s'il n'y est pas. Sans lui, prévenir que les citations et
+repères se limiteront à ceux déjà présents dans le dépôt.
 
 ### Lire le PDF
 
