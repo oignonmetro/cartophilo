@@ -58,7 +58,7 @@ export const TONES = {
  * dans le source, un nom composé à l'exécution (`` `text-${color}-deep` ``)
  * ne produirait rien (voir la même remarque dans `SessionScreen.tsx`).
  */
-const INLINE_COLORS: Record<NoteColor, string> = {
+export const INLINE_COLORS: Record<NoteColor, string> = {
   teal: 'text-teal-deep',
   violet: 'text-violet-deep',
   coral: 'text-coral-deep',

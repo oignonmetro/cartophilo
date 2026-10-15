@@ -1,7 +1,6 @@
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react'
-import { NoteBlocks, TONES } from '@/components/session/RuleNote'
+import { TONES } from '@/components/session/RuleNote'
 import { PassageText } from '@/components/PassageText'
-import type { NoteColor } from '@/content/schema'
 import { ImportSplitDialog, type ImportTarget } from './ImportSplitDialog'
 import { PassageEditor } from './PassageEditor'
 import { lessonTables } from '@/content/course'
@@ -10,7 +9,7 @@ import { createRng } from '@/engine/rng'
 import type { Lesson } from '@/content/schema'
 import { TablesEditor } from './TablesEditor'
 import { formattingShortcut } from './formatting'
-import { replaceRange } from './editText'
+import { RichNotesEditor, TitleField } from './RichNotesEditor'
 import { useFrenchQuotes } from './frenchQuotes'
 import { isCitation } from './textUnit'
 import type { LessonTableDTO, PassageDTO, PointDTO, SkippedRowDTO, TrackKind, TreeCourse, TreeLesson, TreeTrack, TreeUnit } from './types'
@@ -21,12 +20,10 @@ import { NewLessonDialog, NewUnitDialog, UnitSettingsDialog } from './UnitDialog
  * dev`) : jamais construit ni expédié en production, voir la route `/editeur`
  * dans `App.tsx` et l'API `tools/content-editor/api-plugin.ts` qui la sert.
  *
- * Parcourt l'arborescence des cours, édite le texte brut d'un `notes:` à la
- * main (les marqueurs `**gras**`, `__souligné__`, `` `forme` `` et
- * `{couleur}...{/couleur}` s'insèrent via la barre d'outils autour de la
- * sélection), avec un aperçu qui rend exactement le même composant que
- * l'écran de rappel en session : ce qu'on voit ici est ce que voit
- * l'apprenant.
+ * Parcourt l'arborescence des cours et édite le rappel d'une leçon tel que
+ * l'apprenant le verra, directement dans son rendu (voir `RichNotesEditor`) :
+ * plus de marqueurs `**gras**`, `__souligné__`… à placer à la main, la barre
+ * d'outils montre et bascule la mise en forme de la sélection.
  */
 
 interface Selection {
@@ -65,20 +62,6 @@ function nextPointId(lessonId: string, points: PointDTO[]): string {
     if (Number.isFinite(n)) max = Math.max(max, n)
   }
   return `${prefix}${max + 1}`
-}
-
-const COLORS = ['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink'] as const
-
-const SWATCH: Record<NoteColor, string> = {
-  teal: 'bg-teal',
-  violet: 'bg-violet',
-  coral: 'bg-coral',
-  amber: 'bg-amber',
-  sky: 'bg-sky',
-  yellow: 'bg-yellow',
-  green: 'bg-green',
-  red: 'bg-red',
-  pink: 'bg-pink',
 }
 
 /** Un unique repli par `group` : les unités consécutives qui le partagent. */
@@ -135,7 +118,6 @@ export default function ContentEditorScreen() {
   // d'origine plutôt que de rester affiché tel quel malgré l'annulation.
   const [resetToken, setResetToken] = useState(0)
 
-  const textareaRef = useRef<HTMLTextAreaElement | null>(null)
   const dirty =
     title !== originalTitle ||
     notes !== original ||
@@ -311,60 +293,6 @@ export default function ContentEditorScreen() {
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
   }, [save])
-
-  function wrapSelection(before: string, after: string) {
-    const el = textareaRef.current
-    if (!el) return
-    const { selectionStart, selectionEnd, value } = el
-    const selected = value.slice(selectionStart, selectionEnd)
-    replaceRange(el, selectionStart, selectionEnd, before + selected + after)
-    requestAnimationFrame(() => {
-      el.focus()
-      el.selectionStart = selectionStart + before.length
-      el.selectionEnd = selectionStart + before.length + selected.length
-    })
-  }
-
-  function prefixLines(prefix: string) {
-    const el = textareaRef.current
-    if (!el) return
-    const { selectionStart, selectionEnd, value } = el
-    const lineStart = value.lastIndexOf('\n', selectionStart - 1) + 1
-    const nextBreak = value.indexOf('\n', selectionEnd)
-    const lineEnd = nextBreak === -1 ? value.length : nextBreak
-    const block = value.slice(lineStart, lineEnd)
-    const prefixed = block
-      .split('\n')
-      .map((line) => (line.startsWith(prefix) ? line : prefix + line))
-      .join('\n')
-    replaceRange(el, lineStart, lineEnd, prefixed)
-    requestAnimationFrame(() => {
-      el.focus()
-      el.selectionStart = lineStart
-      el.selectionEnd = lineStart + prefixed.length
-    })
-  }
-
-  /** Raccourcis clavier dans le textarea : mêmes marqueurs que la barre d'outils. */
-  function handleFormattingShortcut(event: React.KeyboardEvent<HTMLTextAreaElement>) {
-    if (!(event.metaKey || event.ctrlKey)) return
-    const key = event.key.toLowerCase()
-
-    if (key === 'b') {
-      event.preventDefault()
-      wrapSelection('**', '**')
-    } else if (key === 'i' && event.shiftKey) {
-      // Mot étranger cité : distinct de l'italique générique, voir le bouton dédié.
-      event.preventDefault()
-      wrapSelection('`', '`')
-    } else if (key === 'i') {
-      event.preventDefault()
-      wrapSelection('*', '*')
-    } else if (key === 'u') {
-      event.preventDefault()
-      wrapSelection('__', '__')
-    }
-  }
 
   const tone = TONES[trackKind]
 
@@ -623,77 +551,18 @@ export default function ContentEditorScreen() {
         )}
 
         {selection && view === 'notes' && (
-          <div className="flex min-h-0 flex-1">
-            <div className="flex min-h-0 flex-1 flex-col gap-2 border-r-2 border-line px-4 py-3">
-              <input
-                value={title}
-                onChange={(event) => setTitle(event.target.value)}
-                placeholder="Titre de la leçon"
-                aria-label="Titre de la leçon"
-                className="rounded-lg border-2 border-transparent bg-transparent px-1 py-0.5 text-sm font-black text-ink outline-none focus:border-teal focus:bg-paper"
-              />
-              <div className="flex flex-wrap items-center gap-1.5">
-                <ToolbarButton title="Gras (Ctrl+B)" onClick={() => wrapSelection('**', '**')}>
-                  <strong>G</strong>
-                </ToolbarButton>
-                <ToolbarButton title="Italique : nuance, titre d'œuvre (Ctrl+I)" onClick={() => wrapSelection('*', '*')}>
-                  <em>I</em>
-                </ToolbarButton>
-                <ToolbarButton title="Souligné (Ctrl+U)" onClick={() => wrapSelection('__', '__')}>
-                  <span className="underline">S</span>
-                </ToolbarButton>
-                <ToolbarButton title="Mot étranger cité (Ctrl+Maj+I)" onClick={() => wrapSelection('`', '`')}>
-                  `m`
-                </ToolbarButton>
-                <ToolbarButton title="Règle (- )" onClick={() => prefixLines('- ')}>
-                  - Règle
-                </ToolbarButton>
-                <ToolbarButton title="Piège (! )" onClick={() => prefixLines('! ')}>
-                  ⚠ Piège
-                </ToolbarButton>
-                <ToolbarButton
-                  title="Tableau : deux classifications croisées"
-                  onClick={() =>
-                    wrapSelection(
-                      '\n|              | Colonne A | Colonne B |\n| **Ligne 1**  | …         | …         |\n| **Ligne 2**  | …         | …         |\n',
-                      '',
-                    )
-                  }
-                >
-                  ⊞ Tableau
-                </ToolbarButton>
-                {trackKind === 'vocab' && (
-                  <ToolbarButton title="Nouvelle section (===)" onClick={() => wrapSelection('\n===\n', '')}>
-                    === Section
-                  </ToolbarButton>
-                )}
-                <span className="mx-1 h-5 w-px bg-line" />
-                {COLORS.map((color) => (
-                  <button
-                    key={color}
-                    type="button"
-                    title={color}
-                    onClick={() => wrapSelection(`{${color}}`, `{/${color}}`)}
-                    className={`h-6 w-6 shrink-0 rounded-full border-2 border-paper shadow ${SWATCH[color]}`}
-                  />
-                ))}
-              </div>
-              <textarea
-                ref={textareaRef}
-                value={notes}
-                onChange={(event) => setNotes(event.target.value)}
-                onKeyDown={handleFormattingShortcut}
-                spellCheck={false}
-                className="min-h-0 flex-1 resize-none rounded-2xl border-2 border-line bg-paper p-4 font-mono text-sm leading-relaxed text-ink outline-none focus:border-teal"
-              />
-            </div>
-
-            <div className="flex min-h-0 flex-1 flex-col overflow-y-auto bg-ink/3 px-6 py-6">
-              <p className="mb-3 text-center text-xs font-black tracking-widest text-ink-faint uppercase">Aperçu</p>
-              <div className="card-3d mx-auto flex w-full max-w-lg flex-col gap-4 self-center px-6 py-6">
+          <RichNotesEditor
+            key={selection.lesson}
+            notes={notes}
+            onChange={setNotes}
+            tone={tone}
+            trackKind={trackKind}
+            onOpenTables={() => setView('tables')}
+            header={
+              <>
                 <header className="flex flex-col gap-3">
                   <span className={`h-1.5 w-10 rounded-full ${tone.accent}`} />
-                  <h2 className="text-2xl leading-tight font-black text-balance">{title}</h2>
+                  <TitleField value={title} onChange={setTitle} />
                 </header>
                 {passage?.text.trim() && (
                   <>
@@ -701,10 +570,9 @@ export default function ContentEditorScreen() {
                     <p className={`text-xs font-black tracking-widest uppercase ${tone.eyebrow}`}>Explication</p>
                   </>
                 )}
-                <NoteBlocks notes={notes} tone={tone} />
-              </div>
-            </div>
-          </div>
+              </>
+            }
+          />
         )}
       </div>
 
@@ -752,27 +620,6 @@ export default function ContentEditorScreen() {
         />
       )}
     </div>
-  )
-}
-
-function ToolbarButton({
-  title,
-  onClick,
-  children,
-}: {
-  title: string
-  onClick: () => void
-  children: React.ReactNode
-}) {
-  return (
-    <button
-      type="button"
-      title={title}
-      onClick={onClick}
-      className="rounded-lg border-2 border-line bg-paper px-2.5 py-1.5 text-xs font-bold text-ink-soft transition hover:border-ink/20 hover:text-ink"
-    >
-      {children}
-    </button>
   )
 }
 

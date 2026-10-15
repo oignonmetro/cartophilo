@@ -71,28 +71,33 @@ function nbspQuotes(text: string): string {
  * gras. Le quatrième (la forme citée) est littéral, comme du code. Un texte
  * sans aucun marqueur ressort en un seul fragment, ce qui rend la fonction
  * sûre à appliquer partout.
+ *
+ * `quotes: false` laisse les espaces des guillemets telles qu'écrites :
+ * l'éditeur visuel (voir `richNotes.ts`) doit retrouver le texte source à
+ * l'identique, pas sa version mise en page.
  */
-export function parseInline(text: string): Inline[] {
+export function parseInline(text: string, quotes = true): Inline[] {
+  const fix = quotes ? nbspQuotes : (piece: string) => piece
   const spans: Inline[] = []
   let last = 0
 
   for (const match of text.matchAll(INLINE)) {
     const at = match.index
-    if (at > last) spans.push({ kind: 'text', text: nbspQuotes(text.slice(last, at)) })
+    if (at > last) spans.push({ kind: 'text', text: fix(text.slice(last, at)) })
 
     const [, strong, underline, em, form, color, colorText] = match
-    if (strong !== undefined) spans.push({ kind: 'strong', children: parseInline(strong) })
-    else if (underline !== undefined) spans.push({ kind: 'underline', children: parseInline(underline) })
-    else if (em !== undefined) spans.push({ kind: 'em', children: parseInline(em) })
-    else if (form !== undefined) spans.push({ kind: 'form', text: nbspQuotes(form) })
+    if (strong !== undefined) spans.push({ kind: 'strong', children: parseInline(strong, quotes) })
+    else if (underline !== undefined) spans.push({ kind: 'underline', children: parseInline(underline, quotes) })
+    else if (em !== undefined) spans.push({ kind: 'em', children: parseInline(em, quotes) })
+    else if (form !== undefined) spans.push({ kind: 'form', text: fix(form) })
     else if (color !== undefined) {
-      spans.push({ kind: 'color', color: color as NoteColor, children: parseInline(colorText ?? '') })
+      spans.push({ kind: 'color', color: color as NoteColor, children: parseInline(colorText ?? '', quotes) })
     }
 
     last = at + match[0].length
   }
 
-  if (last < text.length) spans.push({ kind: 'text', text: nbspQuotes(text.slice(last)) })
+  if (last < text.length) spans.push({ kind: 'text', text: fix(text.slice(last)) })
   return spans
 }
 
@@ -160,7 +165,7 @@ function splitLabel(text: string): { label: string | null; body: string } {
  * (« …`Children learn fast.` ») est bien achevée, l'accent grave ne la laisse
  * pas en suspens.
  */
-function isFinished(body: string): boolean {
+export function isFinished(body: string): boolean {
   return /[.!?:;…]$/.test(body.replace(/[`*_\s]+$/, ''))
 }
 
@@ -280,7 +285,7 @@ export function splitAside(text: string): { main: string; aside: string | null }
   return { main: match[1], aside: match[2] }
 }
 
-const SECTION_BREAK = /^={3,}(?:\s*(\d+))?(?:\s+(\S.*))?$/
+export const SECTION_BREAK = /^={3,}(?:\s*(\d+))?(?:\s+(\S.*))?$/
 
 /**
  * Sépare des `notes:` en plusieurs rappels distincts, sur une ligne ne
