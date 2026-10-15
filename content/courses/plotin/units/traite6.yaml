@@ -1,8 +1,13 @@
 # Cours d'un traité de Plotin (piste Repérage, voir content/philosophie.md),
-# d'après la notice et le plan détaillé de Laurent Lavaud, dans Plotin, Traités 1-6,
-# trad. sous la dir. de L. Brisson et J.-F. Pradeau, GF-Flammarion, 2002.
-# Les citations viennent de la notice ou du plan ; les repères (chapitre,
-# lignes) sont ceux de cette édition. Lié à l'entrée t-4-8 de l'index.
+# d'après la notice, le plan détaillé, la traduction et les notes de Laurent
+# Lavaud, dans Plotin, Traités 1-6, trad. sous la dir. de L. Brisson et
+# J.-F. Pradeau, GF-Flammarion, 2002. Les citations viennent de cette
+# traduction ; les repères sont ceux de son plan et de sa notice. Lié à
+# l'entrée t-4-8 de l'index.
+#
+# Refonte du 2026-10-16 selon la skill cours-traite, avec NotebookLM (ses
+# réponses vérifiées contre la GF). Les points ont de nouveaux identifiants
+# (-q) : la progression repart de zéro.
 
 id: traite6
 title: "Traité 6 (IV, 8) : Sur la descente de l'âme dans les corps"
@@ -11,293 +16,759 @@ icon: compass
 color: sky
 lessons:
 - id: traite6-l1
-  title: "« Souvent, lorsque je m'éveille à moi-même »"
-  notes: |-
-    **Le traité 6 pose la question du rapport de l'âme et du corps** : comment deux éléments de natures hétérogènes, l'un sensible, l'autre intelligible, forment-ils une **« communauté »** (2, 3) ? Il faut d'abord dégager une forme pure de l'identité de l'âme, indépendante du corps : vue de là, l'association au corps paraît étrange, si l'on considère ce qu'est l'âme « en elle-même » (1, 10). Le rapport au corps se définit comme une **« descente »** (`katabàs`, 1, 8).
-
-    **L'ouverture du traité est l'un des passages les plus célèbres de Plotin :**
-
-    « Souvent, lorsque je m'éveille à moi-même en sortant de mon corps et qu'à l'écart des autres choses je rentre à l'intérieur de moi, je vois une beauté d'une force admirable, et j'ai alors la pleine assurance que c'est là un sort supérieur à tout autre. »
-
-    - Ces lignes ont une force **exhortative** : en dévoilant son expérience du divin, Plotin veut inciter son lecteur à l'éprouver à son tour.
-    - Surtout, elles permettent d'aborder le rapport de l'âme au corps **par le haut**, et non depuis la condition courante de l'âme plongée dans le sensible.
-
-    **Le problème essentiel du traité** : la descente de l'âme est-elle une **nécessité cosmologique**, qui achève la production de l'univers, ou le fruit d'une **initiative individuelle**, d'un mouvement volontaire et spontané ?
-
-    ! Le récit de l'expérience n'est pas une confidence décorative : il sert de méthode, en partant de l'identité intelligible de l'âme pour mesurer l'étrangeté de sa descente.
-  points:
-  - id: traite6-l1-p1
-    sentence: "Le traité 6 de Plotin demande comment l'âme et le corps, de natures hétérogènes, en viennent à former une « ___ » (2, 3)."
-    answer: "communauté"
-    alt: ["communaute"]
-  - id: traite6-l1-p2
-    sentence: "Pour le traité 6 de Plotin, le rapport de l'âme au corps se définit comme une « descente », en grec ___ (1, 8)."
-    answer: "katabainô"
-    alt: ["katabaino", "kathodos", "katabàs", "katabas"]
-  - id: traite6-l1-p3
-    sentence: "« Souvent, lorsque je m'éveille à moi-même en sortant de mon corps et qu'à l'écart des autres choses je rentre à l'intérieur de moi, je vois une ___ d'une force admirable » : ouverture du traité 6 de Plotin."
-    answer: "beauté"
-    alt: ["beaute"]
-  - id: traite6-l1-p4
-    sentence: "« Souvent, lorsque je m'éveille à moi-même en sortant de mon corps et qu'à l'écart des autres choses je rentre à l'___ de moi » : ouverture du traité 6 de Plotin."
-    answer: "intérieur"
-    alt: ["interieur"]
-  - id: traite6-l1-p5
-    sentence: "L'ouverture du traité 6, récit de l'expérience du divin, a d'abord une force ___ : elle incite le lecteur à éprouver à son tour la présence intérieure de l'intelligible."
-    answer: "exhortative"
-    alt: []
-  - id: traite6-l1-p6
-    sentence: "En partant de l'expérience de l'intelligible, Plotin aborde dans le traité 6 la question du rapport de l'âme au corps par le ___, et non depuis l'âme plongée dans le sensible."
-    answer: "haut"
-    alt: []
-  - id: traite6-l1-p7
-    sentence: "Le problème essentiel du traité 6 : la descente de l'âme est-elle une nécessité ___, qui achève la production de l'univers, ou une initiative individuelle ?"
-    answer: "cosmologique"
-    alt: []
-- id: traite6-l2
-  title: "La stratégie exégétique : des énigmes à Platon"
-  notes: |-
-    **Plotin aborde le problème en s'appuyant sur la tradition** : dès le premier chapitre, il cite **Héraclite**, **Empédocle**, **Pythagore** et **Platon**. Mais il garde une liberté irréductible dans l'usage qu'il en fait.
-
-    - **La tradition est hiérarchisée.** Les présocratiques parlent « par énigmes » (1, 21) et « sur le mode de la poésie » (1, 22-23) ; Platon doit fournir « quelque chose de clair » (1, 26). Tout le premier chapitre ménage l'entrée en scène de Platon.
-    - **Les citations sont arrachées à leur contexte** : Plotin intègre les expressions d'Héraclite et d'Empédocle à sa propre pensée. C'est la logique de son raisonnement qui façonne la lecture des auteurs, non l'inverse.
-
-    **Chez Platon même, Plotin distingue deux axes :**
-
-    | Conception | La descente est | Dialogues |
-    | pessimiste | une chute, un emprisonnement | *Phédon*, *République*, *Phèdre* |
-    | cosmologique | ce qui parachève la production de l'univers | *Timée* |
-
-    **La tension est entre la responsabilité de l'âme**, qui subit les conséquences d'une faute, **et une nécessité cosmologique** qui l'en dégage. Deux voies pour la résoudre : distinguer les âmes individuelles des autres âmes, et redéfinir le rapport du **volontaire** (`hekousion`) et du **nécessaire** (`anagkaîon`).
-
-    ! Platon n'est pas une autorité univoque : Plotin met lui-même au jour la tension entre le *Phédon* et le *Timée*.
-  points:
-  - id: traite6-l2-p1
-    sentence: "Dans le traité 6 de Plotin, Héraclite, Empédocle et Pythagore parlent « par ___ » (1, 21) et sur le mode de la poésie."
-    answer: "énigmes"
-    alt: ["enigmes"]
-  - id: traite6-l2-p2
-    sentence: "À la différence des présocratiques, ___ doit fournir, selon le traité 6 de Plotin, matière à penser « quelque chose de clair » (1, 26)."
-    answer: "Platon"
-    alt: []
-  - id: traite6-l2-p3
-    sentence: "La conception pessimiste de la descente de l'âme, comme chute ou emprisonnement, Plotin la rattache au *Phédon*, à la *République* et au ___."
-    answer: "Phèdre"
-    alt: ["Phedre"]
-  - id: traite6-l2-p4
-    sentence: "La conception de la descente de l'âme comme ce qui parachève la production de l'univers, Plotin la trouve dans le ___."
-    answer: "Timée"
-    alt: ["Timee"]
-  - id: traite6-l2-p5
-    sentence: "Le terme grec pour le volontaire, que le traité 6 redéfinit pour l'appliquer à la descente de l'âme, est ___."
-    answer: "hekousion"
-    alt: []
-  - id: traite6-l2-p6
-    sentence: "Le terme grec pour le nécessaire, que le traité 6 articule au volontaire, est ___."
-    answer: "anagkaîon"
-    alt: ["anagkaion"]
-  - id: traite6-l2-p7
-    sentence: "Dans le traité 6, ce n'est pas la tradition qui détermine le sens de la réflexion plotinienne, mais la logique ___ de son raisonnement qui façonne la lecture des auteurs."
-    answer: "interne"
-    alt: []
-- id: traite6-l3
-  title: "La hiérarchie des âmes"
-  notes: |-
-    **Tout au long du traité 6, l'identité de l'âme est définie par son caractère duel** : résider « ici », dans le sensible, tout en demeurant « là-bas », dans l'intelligible. « Car toute âme possède une partie inférieure orientée vers le corps et une partie supérieure orientée vers l'Intellect » (8, 11-13).
-
-    **On peut distinguer trois niveaux d'âmes :**
-
-    | Niveau | Nom | Rapport au corps |
-    | l'Âme totale ou universelle | `holê` ou `pâsa psuchḗ`, l'« Âme-hypostase » | aucun : seule âme sans structure duelle |
-    | l'âme de l'univers | `psuchḗ toû pantòs`, âme du tout | gouverne le corps du monde, impassible |
-    | les âmes des vivants individuels | âmes particulières | pâtissent du corps, en sont « contaminées » |
-
-    - L'Âme universelle est l'unité originelle des âmes, encore non dissociée de l'Intellect. Plotin ne maintient pas toujours sa distinction d'avec l'âme de l'univers (chap. 8, 13).
-    - **La cheville ouvrière du traité** : l'âme de l'univers (et celle des astres) gouverne son corps sans en pâtir, l'âme individuelle est **« contaminée »** par le sien (2, 26-30). Là est la racine du mal qu'elle subit.
-
-    **Conséquence : ce n'est pas l'orientation vers le corps qui fait le mal**, puisque l'âme de l'univers, double elle aussi, n'en a aucune trace. Plotin réfute ainsi, dès le traité 6, le mépris des **gnostiques** pour le sensible : le monde n'est pas mauvais en soi, il a une bonté et une beauté propres, comme le montraient déjà les traités 1 et 3.
-
-    ! Toutes les âmes ont la même structure duelle, sauf l'Âme universelle : ce qui les distingue, c'est leur situation à l'égard du corps.
-  points:
-  - id: traite6-l3-p1
-    sentence: "« Car toute âme possède une partie inférieure orientée vers le corps et une partie ___ orientée vers l'Intellect » (traité 6, 8, 11-13)."
-    answer: "supérieure"
-    alt: ["superieure"]
-  - id: traite6-l3-p2
-    sentence: "Pour le traité 6, l'identité de l'âme est définie par son caractère ___ : résider ici, dans le sensible, tout en demeurant là-bas, dans l'intelligible."
-    answer: "duel"
-    alt: []
-  - id: traite6-l3-p3
-    sentence: "Parmi les trois niveaux d'âmes du traité 6, la seule à ne pas avoir de structure duelle est l'Âme totale ou ___."
-    answer: "universelle"
-    alt: ["Âme universelle"]
-  - id: traite6-l3-p4
-    sentence: "Certains commentateurs appellent l'Âme totale ou universelle (`holê` ou `pâsa psuchḗ`) l'« Âme-___ »."
-    answer: "hypostase"
-    alt: []
-  - id: traite6-l3-p5
-    sentence: "L'âme qui gouverne la totalité du corps du monde, au deuxième niveau de la hiérarchie du traité 6, est l'âme de l'___ (`psuchḗ toû pantòs`)."
-    answer: "univers"
-    alt: []
-  - id: traite6-l3-p6
-    sentence: "Pour le traité 6 (2, 26-30), l'âme individuelle, à la différence de l'âme de l'univers, est « ___ » par le corps auquel elle est attachée."
-    answer: "contaminée"
-    alt: ["contaminee"]
-  - id: traite6-l3-p7
-    sentence: "En montrant que l'orientation vers le corps n'est pas le principe du mal, Plotin réfute dès le traité 6 le mépris des ___ à l'égard du sensible."
-    answer: "gnostiques"
-    alt: []
-  - id: traite6-l3-p8
-    sentence: "Le traité 6 s'inscrit dans la continuité d'un ___ cosmologique déjà présent dans les traités 1 et 3 : le sensible n'est pas mauvais en soi."
-    answer: "optimisme"
-    alt: []
-- id: traite6-l4
-  title: "Le rôle de la matière : le châtiment, non la faute"
-  notes: |-
-    **Pourquoi l'âme individuelle est-elle seule « contaminée » par son corps ?** Invoquer le corps défectueux ne suffit pas : la qualité d'un corps n'est que le reflet de l'âme qui l'a produit, elle ne peut en être la cause.
-
-    **C'est la matière qu'il faut mettre en avant**, principe d'**indétermination** à cause duquel le sensible n'est pas entièrement soumis à l'intelligible : elle explique que l'âme reçoive « en retour » quelque chose du corps (chap. 7, 9-10). Les âmes individuelles, isolées et éparpillées dans le sensible, la subissent au premier chef ; l'âme de l'univers, unifiée et proche de l'intelligible, en est préservée.
-
-    **La fonction négative de la matière est pourtant moins marquée ici que dans les traités ultérieurs** (le traité 51, *Sur l'origine des maux*). Au chapitre 6, Plotin précise que rien n'empêche « n'importe quelle chose de prendre part à la nature du bien à la mesure de ce qu'elle est capable de recevoir » (6, 15-16) : la privation du bien vient d'une **limitation interne** des choses.
-
-    **Surtout, la matière ne suffit pas à expliquer le mouvement premier de la descente.** Dans le langage du mythe :
-
-    | Ce que la matière explique | Ce qu'elle n'explique pas |
-    | le châtiment de l'âme (`dikê`, 5, 10) | sa faute (`hamartia`, 5, 16) |
-
-    ! La matière rend compte des effets de la descente (la contamination), pas de sa cause.
-  points:
-  - id: traite6-l4-p1
-    sentence: "Pour le traité 6, la qualité d'un corps n'est que le reflet de celle de l'___ qui l'a produit : elle ne peut expliquer la contamination."
-    answer: "âme"
-    alt: ["ame"]
-  - id: traite6-l4-p2
-    sentence: "Ce qui rend compte de la contamination de l'âme individuelle, selon le traité 6, c'est la matière, principe d'___ à cause duquel le sensible n'est pas totalement soumis à l'intelligible."
-    answer: "indétermination"
-    alt: ["indetermination"]
-  - id: traite6-l4-p3
-    sentence: "L'âme de l'univers est préservée de l'influence de la matière parce qu'elle est totalement ___ et toute proche de l'intelligible."
-    answer: "unifiée"
-    alt: ["unifiee"]
-  - id: traite6-l4-p4
-    sentence: "« n'importe quelle chose de prendre part à la nature du bien à la ___ de ce qu'elle est capable de recevoir » : rien ne l'empêche, selon le traité 6 (6, 15-16)."
-    answer: "mesure"
-    alt: []
-  - id: traite6-l4-p5
-    sentence: "La fonction négative de la matière sera plus nettement marquée dans le traité ___, *Sur l'origine des maux*, que dans le traité 6."
-    answer: "51"
-    alt: []
-  - id: traite6-l4-p6
-    sentence: "Dans le langage du mythe, la matière explique selon le traité 6 le châtiment de l'âme (`dikê`), mais non sa ___ (`hamartia`)."
-    answer: "faute"
-    alt: []
-  - id: traite6-l4-p7
-    sentence: "Le terme grec pour le châtiment de l'âme, que la matière suffit à expliquer selon le traité 6 (5, 10), est ___."
-    answer: "dikê"
-    alt: ["dike"]
-- id: traite6-l5
-  title: "Volontaire et nécessaire : le corps, manifestation de l'intelligible"
-  notes: |-
-    **La difficulté initiale revient : la descente est-elle imputable à l'âme seule, ou à une nécessité cosmologique ?** L'alternative ne coïncide pas avec la distinction des catégories d'âmes : elle se pose au cœur de l'âme individuelle. Le chapitre 5 semble osciller :
-
-    - **responsabilité** : l'âme se porte vers le corps « de son propre mouvement » (5, 8-9), « par une libre inclinaison » (5, 26) ;
-    - **nécessité** : les corps sont produits « en vertu d'une loi éternelle de la nature » (5, 11).
-
-    **La clé est au début du chapitre** : « Il n'y a pas de contradiction entre […] la nécessité et le volontaire, puisque justement le volontaire est compris dans la nécessité » (5, 1-4).
-
-    | Terme | Ce qu'il ne veut pas dire | Ce qu'il veut dire |
-    | la nécessité | une contrainte extérieure | l'expression de la nature de l'âme, héritée du principe supérieur |
-    | le volontaire | une capacité de choix | l'adhésion de l'âme à son identité : une âme qui ne descendrait pas se nierait |
-
-    **Le corps, manifestation de l'intelligible.** Loin du mépris du sensible qu'on prête à Plotin, le corps a deux fonctions :
-
-    - **une expansion positive** : il prolonge la puissance généreuse qui vient de l'Un, « une puissance indicible » qui ne doit pas s'immobiliser « comme bornée par la jalousie » (6, 11-16) ;
-    - **une révélation** : sans le corps, ce que l'âme possède existerait « en vain » (5, 31), et « l'âme elle-même aurait ignoré les choses qu'elle possède » (5, 32-33).
-
-    Conclusion du chapitre 6 : « tout est solidaire pour toujours, les réalités intelligibles et les réalités sensibles ».
-
-    ! Ni libre arbitre, ni fatalité : l'âme descend volontairement parce qu'elle suit sa nature, et nécessairement parce qu'elle s'intègre au mouvement d'ensemble de l'univers.
-  points:
-  - id: traite6-l5-p1
-    sentence: "Pour la responsabilité, le chapitre 5 du traité 6 dit que l'âme se porte vers le corps « de son propre mouvement » (5, 8-9) ou « par une libre ___ » (5, 26)."
-    answer: "inclinaison"
-    alt: []
-  - id: traite6-l5-p2
-    sentence: "Pour la nécessité, le traité 6 dit que les corps sont produits « en vertu d'une loi ___ de la nature » (5, 11)."
-    answer: "éternelle"
-    alt: ["eternelle"]
-  - id: traite6-l5-p3
-    sentence: "La clé du traité 6 (5, 1-4) : il n'y a pas de contradiction entre la nécessité et le volontaire, puisque le volontaire est ___ dans la nécessité."
-    answer: "compris"
-    alt: []
-  - id: traite6-l5-p4
-    sentence: "Pour le traité 6, la nécessité de la descente n'est pas une contrainte extérieure, mais l'expression même de la ___ de l'âme."
-    answer: "nature"
-    alt: []
-  - id: traite6-l5-p5
-    sentence: "Pour le traité 6, le caractère volontaire de la descente n'est pas une capacité de choix mais une ___ à ce qui constitue l'identité de l'âme."
-    answer: "adhésion"
-    alt: ["adhesion"]
-  - id: traite6-l5-p6
-    sentence: "La production du corps prolonge selon le traité 6 « une puissance indicible » venue de l'Un, qui ne doit pas s'immobiliser « comme bornée par la ___ » (6, 11-16)."
-    answer: "jalousie"
-    alt: []
-  - id: traite6-l5-p7
-    sentence: "Sans sa manifestation dans le corps, ce que l'âme possède existerait, selon le traité 6, « en ___ » (5, 31)."
-    answer: "vain"
-    alt: []
-  - id: traite6-l5-p8
-    sentence: "« et l'âme elle-même aurait ___ les choses qu'elle possède, puisqu'elles ne seraient même pas sorties pour se manifester » (traité 6, 5, 32-33)."
-    answer: "ignoré"
-    alt: ["ignore"]
-  - id: traite6-l5-p9
-    sentence: "La conclusion du chapitre 6 du traité 6 affirme que « tout est ___ pour toujours, les réalités intelligibles et les réalités sensibles »."
-    answer: "solidaire"
-    alt: []
-- id: traite6-l6
   title: "Repérage : le plan du traité 6"
   notes: |-
-    **Le traité 6 pose la question (chap. 1), compare le gouvernement des corps par les différentes âmes (chap. 2-4), résout la tension du volontaire et du nécessaire (chap. 5-6), puis situe l'âme entre sensible et intelligible (chap. 7-8).**
+    Le traité 6 part d'une expérience, l'âme qui se découvre dans l'intelligible, et d'un embarras : comment a-t-elle pu se retrouver dans un corps ? Il y répond en distinguant les manières d'être lié à un corps, puis en montrant que la descente est à la fois voulue et nécessaire.
+
+    **Le chapitre 1 pose la question** et confronte les autorités : les énigmes d'Héraclite et d'Empédocle, puis Platon, qui semble dire deux choses opposées. **Les chapitres 2 à 4 distinguent les âmes** : l'âme de l'univers et celles des astres gouvernent sans pâtir, l'âme individuelle s'isole et « chute ». **Les chapitres 5 et 6 résolvent la contradiction** : la descente est volontaire et nécessaire, et elle prolonge la puissance qui vient de l'Un. **Les chapitres 7 et 8 tirent la leçon** : l'âme occupe un rang moyen, et quelque chose d'elle reste toujours là-bas.
 
     | Moment | Lieu | Ce qui s'y joue |
-    | l'expérience et la question | chap. 1 | Empédocle, Héraclite, Platon : destinée individuelle ou nécessité ? |
-    | le gouvernement bienheureux | chap. 2 | l'âme de l'univers et celles des astres gouvernent sans pâtir |
-    | l'âme et l'Intellect | chap. 3 | la cité douée d'une âme ; l'âme ajoute à la pensée le gouvernement des corps |
-    | la chute des âmes individuelles | chap. 4 | isolement ; le caractère « amphibie » des âmes |
-    | volontaire et nécessaire | chap. 5 | la faute et le châtiment ; l'âme manifeste ce qu'elle est |
-    | la puissance de l'Un | chap. 6 | elle s'étend à tout ; le sensible manifeste l'intelligible |
-    | le statut intermédiaire | chap. 7 | l'âme téméraire ; l'expérience du mal fait connaître le bien |
-    | gouverner sans perdre l'Intellect | chap. 8 | la partie supérieure de l'âme ; l'âme de l'univers gouverne grâce à l'Intellect |
+    | l'expérience et l'embarras | chap. 1, l. 1-11 | comment l'âme a-t-elle pu venir dans le corps ? |
+    | les énigmes et Platon | chap. 1, l. 11-50 | prison et caverne, ou achèvement de l'univers ? |
+    | gouverner sans pâtir | chap. 2 | deux façons de prendre soin ; l'âme du monde et les astres |
+    | l'âme et l'Intellect | chap. 3 | une âme et des âmes ; l'âme ajoute à la pensée le gouvernement |
+    | la chute des âmes | chap. 4 | l'isolement ; les âmes amphibies |
+    | volontaire et nécessaire | chap. 5, l. 1-24 | le volontaire est compris dans la nécessité ; les deux fautes |
+    | manifester sa puissance | chap. 5, l. 25-37 | sans la descente, ses puissances existeraient en vain |
+    | la puissance de l'Un | chap. 6 | elle ne s'arrête pas, comme bornée par la jalousie |
+    | le rang moyen | chap. 7 | l'expérience du mal fait mieux connaître le bien |
+    | l'âme non descendue | chap. 8 | quelque chose de l'âme reste toujours dans l'intelligible |
 
-    Les repères suivent le plan détaillé qui accompagne la traduction. Le tableau se joue en repérage : remettre les moments dans l'ordre du traité, puis replacer leurs repères, puis en écrire un.
-
-    ! La réponse à la question du chapitre 1 ne vient qu'au chapitre 5 : les chapitres 2 à 4 préparent la distinction entre les âmes.
+    ! Le traité ne condamne pas le corps : sa conclusion est que le sensible manifeste l'intelligible, et que l'âme n'est jamais tout entière descendue.
   points:
-  - id: traite6-l6-p1
-    sentence: "Dans le traité 6 de Plotin, le récit de l'expérience de l'intelligible et le recours à Empédocle, Héraclite et Platon se trouvent au ___."
-    answer: "chap. 1"
-    alt: ["1", "chapitre 1"]
-  - id: traite6-l6-p2
-    sentence: "Dans le traité 6 de Plotin, le gouvernement du corps par l'âme de l'univers et par les âmes des astres, sans perte de leur félicité, est décrit au ___."
+  - id: traite6-l1-q1
+    sentence: "Dans le traité 6 de Plotin, *Sur la descente de l'âme dans les corps*, le récit de l'éveil à soi qui ouvre le traité occupe le ___."
+    answer: "chap. 1, l. 1-11"
+    alt: ["1, 1-11", "chap. 1"]
+  - id: traite6-l1-q2
+    sentence: "Dans le traité 6 de Plotin, la distinction entre deux façons de prendre soin des corps, propre à l'âme du monde ou aux âmes individuelles, se trouve au ___."
     answer: "chap. 2"
     alt: ["2", "chapitre 2"]
-  - id: traite6-l6-p3
-    sentence: "Dans le traité 6, le caractère « ___ » des âmes, qui vivent ici tout en restant là-bas, est décrit au chapitre 4."
-    answer: "amphibie"
-    alt: []
-  - id: traite6-l6-p4
-    sentence: "Dans le traité 6 de Plotin, la thèse que la descente de l'âme est à la fois volontaire et nécessaire se trouve au ___."
+  - id: traite6-l1-q3
+    sentence: "Dans le traité 6 de Plotin, l'isolement des âmes et leur caractère « amphibie » sont décrits au ___."
+    answer: "chap. 4"
+    alt: ["4", "chapitre 4"]
+  - id: traite6-l1-q4
+    sentence: "Dans le traité 6 de Plotin, la formule « le volontaire est compris dans la nécessité » se trouve au ___."
     answer: "chap. 5"
-    alt: ["5", "chapitre 5"]
-  - id: traite6-l6-p5
-    sentence: "Dans le traité 6 de Plotin, la puissance héritée de l'Un, qui s'étend à la totalité du réel, est l'objet du ___."
+    alt: ["5", "chapitre 5", "chap. 5, l. 1-4"]
+  - id: traite6-l1-q5
+    sentence: "Dans le traité 6 de Plotin, l'argument de la puissance venue de l'Un, qui ne doit pas s'arrêter « comme bornée par la jalousie », se trouve au ___."
     answer: "chap. 6"
     alt: ["6", "chapitre 6"]
-  - id: traite6-l6-p6
-    sentence: "Dans le traité 6 de Plotin, l'âme « téméraire » qui se précipite dans le corps, et l'expérience du mal qui fait mieux connaître le bien, se trouvent au ___."
+  - id: traite6-l1-q6
+    sentence: "Dans le traité 6 de Plotin, l'idée que l'expérience du mal fait mieux connaître le bien se trouve au ___."
     answer: "chap. 7"
     alt: ["7", "chapitre 7"]
-  - id: traite6-l6-p7
-    sentence: "Dans le traité 6 de Plotin, l'image de la ___ douée d'une âme illustre, au chapitre 3, le rapport des âmes individuelles à l'âme de l'univers."
+  - id: traite6-l1-q7
+    sentence: "Le traité 6 de Plotin s'achève, au ___, sur la thèse que notre âme n'a pas plongé tout entière ici-bas."
+    answer: "chap. 8"
+    alt: ["8", "chapitre 8"]
+- id: traite6-l2
+  title: "L'expérience et l'embarras : la question du traité (chap. 1, l. 1-11)"
+  notes: |-
+    Le chapitre 1 s'ouvre sur l'un des passages les plus célèbres de Plotin : le récit, à la première personne, d'un éveil de l'âme à elle-même. Ce récit n'est pas un ornement : il fournit le point de départ du problème, en montrant d'abord ce qu'est l'âme quand elle n'est pas dans un corps.
+
+    **L'expérience.** {teal}« Souvent, lorsque je m'éveille à moi-même en sortant de mon corps, et qu'à l'écart des autres choses je rentre à l'intérieur de moi, je vois une beauté d'une force admirable »{/teal}. Plotin y mène « la meilleure des vies », **« devenu identique au divin »**, au-dessus de tout le reste de l'intelligible. Il ne s'agit pas ici de l'union à l'Un que rapporte Porphyre dans la *Vie de Plotin*, mais d'une participation à la vie de l'**Intellect** : l'âme dépasse son propre niveau pour vivre la vie de la réalité qui la précède.
+
+    **Pourquoi commencer par là ?** Parce qu'on aborde ainsi la question **par le haut**. D'ordinaire, on part de l'âme telle qu'on la connaît, mêlée au corps, troublée, et l'on se demande comment elle pourrait s'en délivrer. Plotin fait l'inverse : il part de l'âme telle qu'elle est **« en elle-même »** (l. 10), et c'est alors sa présence dans un corps qui devient étrange. Le problème n'est plus « comment sortir du corps ? », mais {red}« comment a-t-elle jamais pu y entrer ? »{/red}
+
+    **L'embarras.** Redescendu de l'Intellect vers le **raisonnement**, Plotin avoue ne pas savoir {teal}« comment cette descente a lieu »{/teal}, ni comment son âme a pu se trouver dans son corps, si elle est vraiment telle qu'elle s'est montrée. La descente (*katabainô*) devient ainsi la question du traité : **comment deux natures hétérogènes, l'une intelligible, l'autre sensible, forment-elles une « communauté » ?**
+
+    ! L'éveil n'est pas une sortie hors du corps au sens physique : c'est un retour à soi, un changement d'attention ; le corps reste là, l'âme cesse d'être tournée vers lui.
+  points:
+  - id: traite6-l2-q1
+    sentence: "« Souvent, lorsque je **___** en sortant de mon corps, et qu'à l'écart des autres choses __je rentre à l'intérieur de moi__, je vois **une beauté d'une force admirable**, et j'ai alors la pleine assurance que c'est là un sort supérieur à tout autre : je mène la meilleure des vies, **devenu identique au divin**, installé en lui, parvenu à cette activité supérieure en m'étant établi __au-dessus de tout le reste de l'intelligible__. » (chap. 1, l. 1-11)"
+    answer: "m'éveille à moi-même"
+    alt: []
+  - id: traite6-l2-q2
+    sentence: "« Souvent, lorsque je **m'éveille à moi-même** en sortant de mon corps, et qu'à l'écart des autres choses ___, je vois **une beauté d'une force admirable**, et j'ai alors la pleine assurance que c'est là un sort supérieur à tout autre : je mène la meilleure des vies, **devenu identique au divin**, installé en lui, parvenu à cette activité supérieure en m'étant établi __au-dessus de tout le reste de l'intelligible__. » (chap. 1, l. 1-11)"
+    answer: "je rentre à l'intérieur de moi"
+    alt: []
+  - id: traite6-l2-q3
+    sentence: "« Souvent, lorsque je **m'éveille à moi-même** en sortant de mon corps, et qu'à l'écart des autres choses __je rentre à l'intérieur de moi__, je vois **___**, et j'ai alors la pleine assurance que c'est là un sort supérieur à tout autre : je mène la meilleure des vies, **devenu identique au divin**, installé en lui, parvenu à cette activité supérieure en m'étant établi __au-dessus de tout le reste de l'intelligible__. » (chap. 1, l. 1-11)"
+    answer: "une beauté d'une force admirable"
+    alt: []
+  - id: traite6-l2-q4
+    sentence: "« Souvent, lorsque je **m'éveille à moi-même** en sortant de mon corps, et qu'à l'écart des autres choses __je rentre à l'intérieur de moi__, je vois **une beauté d'une force admirable**, et j'ai alors la pleine assurance que c'est là un sort supérieur à tout autre : je mène la meilleure des vies, **___**, installé en lui, parvenu à cette activité supérieure en m'étant établi __au-dessus de tout le reste de l'intelligible__. » (chap. 1, l. 1-11)"
+    answer: "devenu identique au divin"
+    alt: []
+  - id: traite6-l2-q5
+    sentence: "« Souvent, lorsque je **m'éveille à moi-même** en sortant de mon corps, et qu'à l'écart des autres choses __je rentre à l'intérieur de moi__, je vois **une beauté d'une force admirable**, et j'ai alors la pleine assurance que c'est là un sort supérieur à tout autre : je mène la meilleure des vies, **devenu identique au divin**, installé en lui, parvenu à cette activité supérieure en m'étant établi ___. » (chap. 1, l. 1-11)"
+    answer: "au-dessus de tout le reste de l'intelligible"
+    alt: []
+  - id: traite6-l2-q6
+    sentence: "« Après ce repos dans le divin, quand je suis **___**, je suis embarrassé pour savoir __comment cette descente a lieu__, aussi bien à ce moment-là qu'à présent, et comment mon âme a jamais pu se trouver à l'intérieur de mon corps, si elle est bien **en elle-même** telle qu'elle a pu se manifester, quoiqu'elle soit dans un corps. » (chap. 1, l. 1-11)"
+    answer: "redescendu de l'Intellect vers le raisonnement"
+    alt: []
+  - id: traite6-l2-q7
+    sentence: "« Après ce repos dans le divin, quand je suis **redescendu de l'Intellect vers le raisonnement**, je suis embarrassé pour savoir ___, aussi bien à ce moment-là qu'à présent, et comment mon âme a jamais pu se trouver à l'intérieur de mon corps, si elle est bien **en elle-même** telle qu'elle a pu se manifester, quoiqu'elle soit dans un corps. » (chap. 1, l. 1-11)"
+    answer: "comment cette descente a lieu"
+    alt: []
+  - id: traite6-l2-q8
+    sentence: "« Après ce repos dans le divin, quand je suis **redescendu de l'Intellect vers le raisonnement**, je suis embarrassé pour savoir __comment cette descente a lieu__, aussi bien à ce moment-là qu'à présent, et comment mon âme a jamais pu se trouver à l'intérieur de mon corps, si elle est bien **___** telle qu'elle a pu se manifester, quoiqu'elle soit dans un corps. » (chap. 1, l. 1-11)"
+    answer: "en elle-même"
+    alt: []
+  - id: traite6-l2-q9
+    sentence: "Dans l'expérience qui ouvre le traité 6, le « divin » auquel l'âme devient identique est le plan de l'___, et non celui de l'Un comme dans la *Vie de Plotin*."
+    answer: "Intellect"
+    alt: []
+  - id: traite6-l2-q10
+    sentence: "En commençant par l'âme qui s'éveille à elle-même, Plotin aborde la question de la descente « par le ___ » : c'est la présence de l'âme dans un corps qui devient étrange."
+    answer: "haut"
+    alt: []
+  - id: traite6-l2-q11
+    sentence: "La « descente » de l'âme dans le corps, qui donne son titre au traité 6, rend le verbe grec *___*."
+    answer: "katabainô"
+    alt: ["katabaino", "katabàs", "katabas"]
+  - id: traite6-l2-q12
+    sentence: "La question du traité 6 est de savoir comment deux natures hétérogènes, l'une intelligible et l'autre sensible, peuvent former une « ___ » (chap. 2, l. 3)."
+    answer: "communauté"
+    alt: ["communaute"]
+  - id: traite6-l2-q13
+    sentence: "Porphyre rapporte dans la *Vie de Plotin* que son maître n'a connu l'union au dieu qui est au-dessus de tout qu'à ___ reprises durant les cinq années qu'il passa auprès de lui."
+    answer: "quatre"
+    alt: ["4"]
+- id: traite6-l3
+  title: "Des énigmes à Platon : deux conceptions de la descente (chap. 1, l. 11-50)"
+  notes: |-
+    La seconde partie du chapitre 1 cherche une réponse chez les autorités, et n'en trouve d'abord que des énigmes, puis une contradiction apparente chez Platon lui-même : c'est elle que le traité devra résoudre.
+
+    **Les énigmes** (l. 11-23). {sky}Héraclite{/sky} parle d'« échanges réciproques » entre les contraires, du « chemin vers le haut et vers le bas », de « ce qui change » qui « reste en repos » ; {sky}Empédocle{/sky} dit que l'âme fautive est « exilée loin du dieu » pour avoir « obéi à la Discorde en furie » ; les pythagoriciens parlent **« par énigmes »**. Ces formules disent quelque chose, mais sans l'expliquer : Héraclite veut sans doute nous obliger à chercher par nous-mêmes, Empédocle a le droit de n'être pas clair puisqu'il parle **en poète**. Plotin les arrache d'ailleurs à leur contexte pour les plier à sa question : chez lui, le « chemin vers le haut et vers le bas » devient le double mouvement de l'âme.
+
+    **Reste Platon**, dont on espère « tirer quelque chose de clair ». Mais {red}« il ne dit pas partout la même chose »{/red}. Il y a chez lui deux séries de textes.
+
+    | Conception | Textes | Ce qu'est la descente |
+    | pessimiste | *Phédon*, *République*, *Phèdre* | une faute : l'âme enchaînée, en prison, dans la caverne, qui a perdu ses ailes |
+    | cosmologique | *Timée* | un achèvement : l'âme envoyée par la bonté du démiurge pour rendre l'univers intelligent |
+
+    **La tension est réelle.** Selon la première série, l'âme est responsable de sa chute et la subit comme une peine ; selon la seconde, elle est envoyée par le dieu, et l'univers, « dieu bienheureux », serait imparfait sans elle : il fallait qu'il y ait ici-bas autant de genres de vivants que là-bas. Si la descente est une faute, comment le dieu peut-il l'avoir voulue ? Si elle est voulue par le dieu, comment peut-elle être une faute ? Le traité va montrer qu'il n'y a pas contradiction, mais deux points de vue sur une même réalité.
+
+    ! Plotin ne reproche pas à Platon d'être incohérent : il lit ses textes comme deux faces d'une même doctrine, qu'il s'agit de rendre explicite.
+  tables:
+  - table: conception-textes-ce-qu-est-la-descente
+    exercises:
+    - {kind: bank, column: Ce qu'est la descente}
+    - {kind: cell, column: Conception, row: pessimiste}
+    - {kind: cell, column: Conception, row: cosmologique}
+  points:
+  - id: traite6-l3-q1
+    sentence: "Héraclite parle du « chemin vers le ___ et vers le bas » : Plotin y lit le double mouvement de l'âme, qui peut s'élever vers l'intelligible ou se tourner vers le sensible (chap. 1, l. 11-23)."
+    answer: "haut"
+    alt: []
+  - id: traite6-l3-q2
+    sentence: "Plotin rapporte deux formules d'Héraclite dont il est la seule source : « ce qui change reste en ___ » et « la fatigue consiste à s'adonner aux mêmes tâches » (chap. 1, l. 11-23)."
+    answer: "repos"
+    alt: []
+  - id: traite6-l3-q3
+    sentence: "Empédocle dit être venu ici-bas « exilé loin du dieu » pour avoir « obéi à la ___ en furie » (chap. 1, l. 11-23)."
+    answer: "Discorde"
+    alt: ["discorde"]
+  - id: traite6-l3-q4
+    sentence: "Les pythagoriciens ont parlé de la descente de l'âme « par ___ », langage réservé aux initiés (chap. 1, l. 11-23)."
+    answer: "énigmes"
+    alt: ["enigmes"]
+  - id: traite6-l3-q5
+    sentence: "Il était permis à Empédocle de ne pas être clair, puisqu'il s'exprimait sur le mode de la ___ (chap. 1, l. 11-23)."
+    answer: "poésie"
+    alt: ["poesie"]
+  - id: traite6-l3-q6
+    sentence: "« À l'évidence, il ne dit pas partout la même chose, ce qui aurait permis de voir facilement l'intention de cet homme, mais dans toute son œuvre il **___** dans son ensemble, __reproche à l'âme la communauté qu'elle forme avec le corps__, et dit que l'âme est \"**enchaînée**\" et ensevelie en lui » (chap. 1, l. 23-50)"
+    answer: "méprise le sensible"
+    alt: []
+  - id: traite6-l3-q7
+    sentence: "« À l'évidence, il ne dit pas partout la même chose, ce qui aurait permis de voir facilement l'intention de cet homme, mais dans toute son œuvre il **méprise le sensible** dans son ensemble, ___, et dit que l'âme est \"**enchaînée**\" et ensevelie en lui » (chap. 1, l. 23-50)"
+    answer: "reproche à l'âme la communauté qu'elle forme avec le corps"
+    alt: []
+  - id: traite6-l3-q8
+    sentence: "« À l'évidence, il ne dit pas partout la même chose, ce qui aurait permis de voir facilement l'intention de cet homme, mais dans toute son œuvre il **méprise le sensible** dans son ensemble, __reproche à l'âme la communauté qu'elle forme avec le corps__, et dit que l'âme est \"**___**\" et ensevelie en lui » (chap. 1, l. 23-50)"
+    answer: "enchaînée"
+    alt: []
+  - id: traite6-l3-q9
+    sentence: "Dans le *Phèdre*, la cause de la venue de l'âme ici-bas est la « perte des ___ » (chap. 1, l. 23-50)."
+    answer: "ailes"
+    alt: []
+  - id: traite6-l3-q10
+    sentence: "Plotin rapproche la « caverne » de Platon de la « ___ » d'Empédocle : toutes deux désignent cet univers-ci (chap. 1, l. 23-50)."
+    answer: "grotte"
+    alt: []
+  - id: traite6-l3-q11
+    sentence: "« dans le *Timée*, quand il parle de cet univers, il **___**, dit que c'est un \"**dieu bienheureux**\" et que l'âme a été donnée par \"**la bonté du démiurge**\" afin que __cet univers soit intelligent__ » (chap. 1, l. 23-50)"
+    answer: "loue son ordre"
+    alt: []
+  - id: traite6-l3-q12
+    sentence: "« dans le *Timée*, quand il parle de cet univers, il **loue son ordre**, dit que c'est un \"**___**\" et que l'âme a été donnée par \"**la bonté du démiurge**\" afin que __cet univers soit intelligent__ » (chap. 1, l. 23-50)"
+    answer: "dieu bienheureux"
+    alt: []
+  - id: traite6-l3-q13
+    sentence: "« dans le *Timée*, quand il parle de cet univers, il **loue son ordre**, dit que c'est un \"**dieu bienheureux**\" et que l'âme a été donnée par \"**___**\" afin que __cet univers soit intelligent__ » (chap. 1, l. 23-50)"
+    answer: "la bonté du démiurge"
+    alt: []
+  - id: traite6-l3-q14
+    sentence: "« dans le *Timée*, quand il parle de cet univers, il **loue son ordre**, dit que c'est un \"**dieu bienheureux**\" et que l'âme a été donnée par \"**la bonté du démiurge**\" afin que ___ » (chap. 1, l. 23-50)"
+    answer: "cet univers soit intelligent"
+    alt: []
+  - id: traite6-l3-q15
+    sentence: "Selon le *Timée*, les âmes ont été envoyées afin qu'il existe dans le monde sensible « les mêmes genres d'êtres vivants que dans le monde intelligible, et en nombre ___ » (chap. 1, l. 23-50)."
+    answer: "égal"
+    alt: ["egal"]
+  - id: traite6-l3-q16
+    sentence: "Les passages du *Phédon*, de la *République* et du *Phèdre* donnent de la descente une image ___ : l'âme en prison, responsable de sa chute."
+    answer: "pessimiste"
+    alt: []
+  - id: traite6-l3-q17
+    sentence: "Le dialogue de Platon qui donne de la descente de l'âme une image positive, comme achèvement de l'univers, est le ___."
+    answer: "Timée"
+    alt: ["Timee"]
+- id: traite6-l4
+  title: "Gouverner sans pâtir : l'âme du monde et les astres (chap. 2)"
+  notes: |-
+    Le chapitre 2 pose la distinction qui commande tout le traité : ce n'est pas d'avoir un corps qui fait souffrir l'âme, c'est une certaine manière de s'en occuper. L'âme du monde et les âmes des astres en ont un, et ne pâtissent pas.
+
+    **Trois enquêtes en une** (l. 1-10). Comprendre ce que dit Platon de notre âme oblige à se demander ce qu'est l'âme en général, ce qu'est le monde où elle habite, « soit volontairement, soit poussée par la nécessité, soit d'une autre manière », et si le producteur de l'univers a bien œuvré.
+
+    **Si nos âmes n'avaient pas plongé dans les corps** (l. 10-19). Les éléments de chaque corps se disperseraient, chacun vers son lieu, et ces corps, sans cesse heurtés par l'extérieur, auraient besoin d'une providence « multiple et tumultueuse ». Le corps de l'univers, lui, est « parfait, autosuffisant et autarcique » : rien n'en sort ni n'y entre, il n'a besoin que d'**un commandement bref**.
+
+    **Prendre soin n'est pas un mal.** {green}« Ce n'est en aucune façon un mal pour l'âme de fournir au corps la puissance d'être bien organisé et d'exister »{/green}. La providence exercée sur l'inférieur n'empêche pas celui qui l'exerce de **demeurer dans le meilleur**. Ce qui change tout, c'est la manière.
+
+    | Façon de prendre soin | Comment | Effet sur l'âme |
+    | générale | elle met en ordre en commandant avec une autorité royale, sans intervenir | elle reste préservée |
+    | particulière | elle produit elle-même, par contact avec ce sur quoi elle agit | elle est contaminée |
+
+    **L'âme du monde gouverne de la première façon** (l. 26-38) : sa partie supérieure reste au-dessus du ciel, sa puissance inférieure y est envoyée. Le dieu n'est donc pas responsable d'avoir placé une âme dans un lieu inférieur : rien ne la prive de ce qui lui est conforme. **Il en va de même pour les âmes des astres** (l. 38-53) : elles ne connaissent aucune des deux choses qui rendent le corps pénible (l'obstacle à la pensée, et les plaisirs, désirs et chagrins dont il remplit l'âme), car {coral}elles ne sont pas possédées par le corps : elles le possèdent{/coral}.
+
+    ! Ce n'est pas la perfection du corps de l'univers qui rend son âme heureuse : c'est la sérénité de l'âme qui donne au corps qu'elle produit sa perfection. Le corps reflète l'âme, il ne la détermine pas.
+  tables:
+  - table: facon-de-prendre-soin-comment-effet-sur-l-ame
+    exercises:
+    - {kind: bank, column: Comment}
+    - {kind: cell, column: Façon de prendre soin, row: générale}
+    - {kind: cell, column: Façon de prendre soin, row: particulière}
+  points:
+  - id: traite6-l4-q1
+    sentence: "Comprendre ce que Platon dit de notre âme oblige à trois recherches : sur l'âme en général, sur le ___, et sur le producteur de l'univers (chap. 2, l. 1-10)."
+    answer: "monde"
+    alt: []
+  - id: traite6-l4-q2
+    sentence: "Si les âmes n'avaient pas plongé dans les corps, chaque élément des corps serait dispersé et porté vers son ___ (chap. 2, l. 10-19)."
+    answer: "lieu propre"
+    alt: []
+  - id: traite6-l4-q3
+    sentence: "Le corps de l'univers, « parfait, autosuffisant et autarcique », n'a besoin que d'une sorte de commandement ___ (chap. 2, l. 10-19)."
+    answer: "bref"
+    alt: []
+  - id: traite6-l4-q4
+    sentence: "« Car ce n'est en aucune façon **___** de fournir au corps la puissance d'être bien organisé et d'exister, puisque toute providence qui s'applique à une réalité inférieure __n'empêche pas le principe de cette providence de demeurer dans le meilleur__. » (chap. 2, l. 19-26)"
+    answer: "un mal pour l'âme"
+    alt: []
+  - id: traite6-l4-q5
+    sentence: "« Car ce n'est en aucune façon **un mal pour l'âme** de fournir au corps la puissance d'être bien organisé et d'exister, puisque toute providence qui s'applique à une réalité inférieure ___. » (chap. 2, l. 19-26)"
+    answer: "n'empêche pas le principe de cette providence de demeurer dans le meilleur"
+    alt: []
+  - id: traite6-l4-q6
+    sentence: "« Il y a en effet **___** de toute chose : la première, **générale**, qui consiste à mettre en ordre __en commandant avec une autorité royale sans intervenir__, et la seconde, **particulière**, qui consiste à __produire immédiatement soi-même__ et qui provoque, par le contact de l'agent avec ce sur quoi il agit, **la contamination** du premier par le second. » (chap. 2, l. 26-38)"
+    answer: "deux façons de prendre soin"
+    alt: []
+  - id: traite6-l4-q7
+    sentence: "« Il y a en effet **deux façons de prendre soin** de toute chose : la première, **___**, qui consiste à mettre en ordre __en commandant avec une autorité royale sans intervenir__, et la seconde, **particulière**, qui consiste à __produire immédiatement soi-même__ et qui provoque, par le contact de l'agent avec ce sur quoi il agit, **la contamination** du premier par le second. » (chap. 2, l. 26-38)"
+    answer: "générale"
+    alt: []
+  - id: traite6-l4-q8
+    sentence: "« Il y a en effet **deux façons de prendre soin** de toute chose : la première, **générale**, qui consiste à mettre en ordre ___, et la seconde, **particulière**, qui consiste à __produire immédiatement soi-même__ et qui provoque, par le contact de l'agent avec ce sur quoi il agit, **la contamination** du premier par le second. » (chap. 2, l. 26-38)"
+    answer: "en commandant avec une autorité royale sans intervenir"
+    alt: []
+  - id: traite6-l4-q9
+    sentence: "« Il y a en effet **deux façons de prendre soin** de toute chose : la première, **générale**, qui consiste à mettre en ordre __en commandant avec une autorité royale sans intervenir__, et la seconde, **___**, qui consiste à __produire immédiatement soi-même__ et qui provoque, par le contact de l'agent avec ce sur quoi il agit, **la contamination** du premier par le second. » (chap. 2, l. 26-38)"
+    answer: "particulière"
+    alt: []
+  - id: traite6-l4-q10
+    sentence: "« Il y a en effet **deux façons de prendre soin** de toute chose : la première, **générale**, qui consiste à mettre en ordre __en commandant avec une autorité royale sans intervenir__, et la seconde, **particulière**, qui consiste à ___ et qui provoque, par le contact de l'agent avec ce sur quoi il agit, **la contamination** du premier par le second. » (chap. 2, l. 26-38)"
+    answer: "produire immédiatement soi-même"
+    alt: []
+  - id: traite6-l4-q11
+    sentence: "« Il y a en effet **deux façons de prendre soin** de toute chose : la première, **générale**, qui consiste à mettre en ordre __en commandant avec une autorité royale sans intervenir__, et la seconde, **particulière**, qui consiste à __produire immédiatement soi-même__ et qui provoque, par le contact de l'agent avec ce sur quoi il agit, **___** du premier par le second. » (chap. 2, l. 26-38)"
+    answer: "la contamination"
+    alt: []
+  - id: traite6-l4-q12
+    sentence: "Le gouvernement de l'âme du monde se fait « sans intervenir », en grec *___*, par opposition à l'âme humaine « affairée »."
+    answer: "apragmôn"
+    alt: ["apragmon"]
+  - id: traite6-l4-q13
+    sentence: "L'âme individuelle qui gouverne son corps par contact est « contaminée » par lui ; ce terme a fait débat : pour E. R. Dodds, Plotin admettrait ici que l'âme descendue n'est plus ___, ce que contredisent ses traités ultérieurs."
+    answer: "impassible"
+    alt: []
+  - id: traite6-l4-q14
+    sentence: "Les âmes des astres sont disposées à l'égard de leurs corps comme l'âme de l'___ à l'égard du sien : elles gouvernent en préservant leur félicité (chap. 2, l. 38-53)."
+    answer: "univers"
+    alt: []
+  - id: traite6-l4-q15
+    sentence: "La communauté avec le corps est pénible pour deux raisons : elle fait ___ à l'intellection, et elle remplit l'âme de plaisirs, de désirs et de chagrins (chap. 2, l. 38-53)."
+    answer: "obstacle"
+    alt: []
+  - id: traite6-l4-q16
+    sentence: "L'âme du monde n'appartient à personne et n'est pas possédée par le corps, mais elle le ___ elle-même (chap. 2, l. 38-53)."
+    answer: "possède"
+    alt: []
+  - id: traite6-l4-q17
+    sentence: "Pour l'âme de l'univers, ce n'est pas la perfection du corps qui fait le bonheur de l'âme, mais le bonheur de l'âme qui donne au corps sa ___ : le corps n'est qu'un produit de l'âme."
+    answer: "perfection"
+    alt: []
+- id: traite6-l5
+  title: "Une âme et des âmes ; l'âme ajoute à la pensée le gouvernement (chap. 3)"
+  notes: |-
+    Le chapitre 3 passe de l'âme du monde à l'âme humaine, et explique d'abord comment il peut y avoir à la fois une âme et des âmes : il pense ce rapport sur le modèle de l'Intellect, un et multiple.
+
+    **L'âme humaine pâtit** (l. 1-6). Platon dit qu'elle « endure toutes les peines » : folie, désirs, peurs ; le corps est pour elle une chaîne et un tombeau, le monde une caverne. Mais ce n'est pas en contradiction avec l'âme du monde, car **les causes de sa descente ne sont pas les mêmes** : on verra au chapitre 4 lesquelles.
+
+    **Une âme et des âmes, comme un Intellect et des intellects** (l. 7-16). L'Intellect est « un et plusieurs » : il contient les intellects particuliers, chacun étant en acte ce que le tout contient en puissance. De même, il faut une âme unique, et la multiplicité des âmes qui en est issue, **comme les espèces du genre** : non par génération, mais par **inclusion**.
+
+    **Deux images** (l. 16-21).
+
+    - {yellow}Une cité qui aurait une âme{/yellow} et contiendrait d'autres êtres animés : son âme est plus parfaite et plus puissante, mais rien n'empêche les autres d'exister. L'image montre qu'une âme englobante ne supprime pas les âmes qu'elle contient.
+    - {yellow}Le feu universel{/yellow}, dont sont issus le grand et le petit feu : la réalité du feu est une, ses manifestations multiples. L'image, reprise du *Philèbe*, montre que les âmes particulières ont la même nature que l'Âme dont elles viennent.
+
+    **Ce qui distingue l'âme de l'Intellect** (l. 21-30). Penser ne lui suffit pas, sans quoi rien ne la distinguerait de l'Intellect : {teal}« elle a ajouté au fait d'être intelligente quelque chose d'autre »{/teal}. Tournée vers ce qui la précède, **elle pense** ; tournée vers elle-même, **elle gouverne** ce qui vient après elle. Et cette fonction n'est pas un accident : il ne peut se faire que tout reste dans l'intelligible, alors qu'une réalité inférieure, mais nécessaire, peut exister à sa suite.
+
+    ! L'âme gouverne le corps non en se tournant vers lui, mais en se tournant vers elle-même : gouverner, pour elle, c'est se concentrer, non se disperser.
+  points:
+  - id: traite6-l5-q1
+    sentence: "Platon dit de l'âme humaine que dans le corps elle « endure toutes les ___ » ; ce n'est pas en contradiction avec l'âme du monde, car les causes de sa descente ne sont pas les mêmes (chap. 3, l. 1-6)."
+    answer: "peines"
+    alt: []
+  - id: traite6-l5-q2
+    sentence: "L'Intellect n'est pas seulement un, mais « un et ___ », expression héritée du *Parménide* (chap. 3, l. 7-16)."
+    answer: "plusieurs"
+    alt: []
+  - id: traite6-l5-q3
+    sentence: "De l'âme unique est issue la multiplicité des âmes, comme du ___ unique sont issues les espèces (chap. 3, l. 7-16)."
+    answer: "genre"
+    alt: []
+  - id: traite6-l5-q4
+    sentence: "Pour illustrer le rapport de l'âme unique aux âmes, Plotin imagine une ___ qui aurait une âme et contiendrait d'autres êtres animés (chap. 3, l. 16-21)."
     answer: "cité"
     alt: ["cite"]
+  - id: traite6-l5-q5
+    sentence: "Second exemple du chapitre 3 : le feu ___, dont sont issus aussi bien le grand que le petit feu."
+    answer: "universel"
+    alt: []
+  - id: traite6-l5-q6
+    sentence: "L'image du feu universel et des feux particuliers, au chapitre 3 du traité 6, est empruntée au ___ de Platon (29b-c)."
+    answer: "Philèbe"
+    alt: ["Philebe"]
+  - id: traite6-l5-q7
+    sentence: "« Car elle a ajouté au fait d'être intelligente **___**, de sorte qu'elle __n'est pas restée Intellect__. » (chap. 3, l. 21-30)"
+    answer: "quelque chose d'autre"
+    alt: []
+  - id: traite6-l5-q8
+    sentence: "« Car elle a ajouté au fait d'être intelligente **quelque chose d'autre**, de sorte qu'elle ___. » (chap. 3, l. 21-30)"
+    answer: "n'est pas restée Intellect"
+    alt: []
+  - id: traite6-l5-q9
+    sentence: "« Lorsque donc elle regarde vers **___**, __elle pense__, mais si c'est vers **elle-même** qu'elle se tourne, __elle ordonne et gouverne ce qui lui est postérieur__ et règne sur lui » (chap. 3, l. 21-30)"
+    answer: "la réalité qui la précède"
+    alt: []
+  - id: traite6-l5-q10
+    sentence: "« Lorsque donc elle regarde vers **la réalité qui la précède**, ___, mais si c'est vers **elle-même** qu'elle se tourne, __elle ordonne et gouverne ce qui lui est postérieur__ et règne sur lui » (chap. 3, l. 21-30)"
+    answer: "elle pense"
+    alt: []
+  - id: traite6-l5-q11
+    sentence: "« Lorsque donc elle regarde vers **la réalité qui la précède**, __elle pense__, mais si c'est vers **___** qu'elle se tourne, __elle ordonne et gouverne ce qui lui est postérieur__ et règne sur lui » (chap. 3, l. 21-30)"
+    answer: "elle-même"
+    alt: []
+  - id: traite6-l5-q12
+    sentence: "« Lorsque donc elle regarde vers **la réalité qui la précède**, __elle pense__, mais si c'est vers **elle-même** qu'elle se tourne, ___ et règne sur lui » (chap. 3, l. 21-30)"
+    answer: "elle ordonne et gouverne ce qui lui est postérieur"
+    alt: []
+  - id: traite6-l5-q13
+    sentence: "Il n'est pas possible que toutes choses demeurent dans l'intelligible, alors qu'une autre réalité peut exister à sa suite, certes inférieure, mais ___ (chap. 3, l. 21-30)."
+    answer: "nécessaire"
+    alt: ["necessaire"]
+- id: traite6-l6
+  title: "L'isolement, la chute, et les âmes amphibies (chap. 4)"
+  notes: |-
+    Le chapitre 4 donne enfin la cause propre de la descente des âmes individuelles : non pas le corps, mais un mouvement de l'âme elle-même, qui se sépare du tout pour s'occuper d'une partie.
+
+    **D'abord, les âmes gouvernent sans descendre** (l. 1-10). Elles ont un désir intellectuel tourné vers leur origine, et une puissance tournée vers ici-bas, {yellow}comme la lumière qui, suspendue au soleil, ne refuse pas jalousement d'éclairer ce qui vient après elle{/yellow}. Tant qu'elles restent avec l'Âme totale dans l'intelligible, elles gouvernent avec elle, {yellow}comme ceux qui aident le roi à gouverner sans descendre des demeures royales{/yellow}.
+
+    **Puis vient l'isolement** (l. 10-25). {teal}« Les âmes s'éloignent de ce tout que forme l'Âme pour devenir une partie et être leurs propres maîtres »{/teal}, comme fatiguées d'être avec une autre. Le reste suit pas à pas : l'âme cesse de regarder l'intelligible, s'isole, s'affaiblit, **s'affaire**, se juche sur un seul objet (son corps), sans cesse heurté par tout le reste, et le gouverne **« avec embarras »**, en pénétrant profondément en lui pour le protéger. C'est cela, la « perte des ailes » et les « chaînes du corps » dont parle Platon : {red}l'âme a perdu l'immunité qu'elle avait en gouvernant avec l'Âme totale{/red}.
+
+    **La chute n'est pas un mépris du corps, mais un rétrécissement de l'attention.** L'âme n'est pas punie pour avoir un corps : elle souffre parce qu'elle s'est enfermée dans le souci d'une partie, au lieu de gouverner avec le tout. Comme un fonctionnaire qui quitterait le conseil du roi pour administrer seul un village toujours menacé.
+
+    **Mais elle garde toujours quelque chose de supérieur** (l. 25-35). En se tournant vers l'intellection, par la réminiscence, elle se défait de ses chaînes et remonte. {coral}Les âmes sont « amphibies »{/coral}, comme les animaux qui vivent dans deux éléments : une partie de leur vie ici, une partie là-bas, plus ou moins selon leur nature.
+
+    **La lecture du *Timée*** (l. 35-42). Quand Platon fait « semer » les âmes par le dieu, ou le fait discourir, il parle comme on parle au peuple : le **discours hypothétique** déroule dans un récit ce qui existe toujours de la même manière.
+
+    ! La faute n'est pas d'avoir un corps, mais de s'isoler du tout : c'est le repli sur une partie qui fait souffrir l'âme.
+  points:
+  - id: traite6-l6-q1
+    sentence: "Les âmes particulières possèdent une puissance orientée vers ici-bas, comme la ___ qui, suspendue au soleil, ne refuse pas jalousement d'éclairer ce qui est après elle (chap. 4, l. 1-10)."
+    answer: "lumière"
+    alt: ["lumiere"]
+  - id: traite6-l6-q2
+    sentence: "Tant qu'elles restent avec l'Âme totale, les âmes gouvernent comme ceux qui aident le ___ à gouverner sans descendre eux-mêmes des demeures royales (chap. 4, l. 1-10)."
+    answer: "roi"
+    alt: []
+  - id: traite6-l6-q3
+    sentence: "« Mais les âmes s'éloignent de ce tout que forme l'Âme pour **___** et __être leurs propres maîtres__, et, comme **fatiguées d'être avec une autre**, elles se retirent chacune en elle-même. » (chap. 4, l. 10-25)"
+    answer: "devenir une partie"
+    alt: []
+  - id: traite6-l6-q4
+    sentence: "« Mais les âmes s'éloignent de ce tout que forme l'Âme pour **devenir une partie** et ___, et, comme **fatiguées d'être avec une autre**, elles se retirent chacune en elle-même. » (chap. 4, l. 10-25)"
+    answer: "être leurs propres maîtres"
+    alt: []
+  - id: traite6-l6-q5
+    sentence: "« Mais les âmes s'éloignent de ce tout que forme l'Âme pour **devenir une partie** et __être leurs propres maîtres__, et, comme **___**, elles se retirent chacune en elle-même. » (chap. 4, l. 10-25)"
+    answer: "fatiguées d'être avec une autre"
+    alt: []
+  - id: traite6-l6-q6
+    sentence: "Séparée de la totalité, l'âme s'isole, s'affaiblit, s'___, porte ses regards vers la partie (chap. 4, l. 10-25)."
+    answer: "affaire"
+    alt: []
+  - id: traite6-l6-q7
+    sentence: "Tournée vers un seul objet heurté de toutes parts, l'âme gouverne son objet particulier avec ___ (chap. 4, l. 10-25)."
+    answer: "embarras"
+    alt: []
+  - id: traite6-l6-q8
+    sentence: "La « perte des ailes » et la captivité dans les chaînes du corps viennent de ce que l'âme a perdu l'___ propre au gouvernement qu'elle exerçait auprès de l'Âme totale (chap. 4, l. 10-25)."
+    answer: "immunité"
+    alt: ["immunite"]
+  - id: traite6-l6-q9
+    sentence: "C'est le mouvement d'isolement et de retrait en soi, plus que le corps, qui définit la ___ de l'âme individuelle (chap. 4)."
+    answer: "genèse"
+    alt: ["genese", "chute"]
+  - id: traite6-l6-q10
+    sentence: "« Les âmes sont donc pour ainsi dire **___**, puisqu'il faut qu'elles mènent __une partie de leur vie ici et l'autre partie là-bas__ » (chap. 4, l. 25-35)"
+    answer: "amphibies"
+    alt: []
+  - id: traite6-l6-q11
+    sentence: "« Les âmes sont donc pour ainsi dire **amphibies**, puisqu'il faut qu'elles mènent ___ » (chap. 4, l. 25-35)"
+    answer: "une partie de leur vie ici et l'autre partie là-bas"
+    alt: []
+  - id: traite6-l6-q12
+    sentence: "L'âme se défait de ses chaînes et remonte lorsqu'elle commence, grâce à la ___, à « contempler les choses qui existent réellement » (chap. 4, l. 25-35)."
+    answer: "réminiscence"
+    alt: ["reminiscence"]
+  - id: traite6-l6-q13
+    sentence: "Quand Platon dit que le dieu « sème » les âmes, il parle comme s'il s'adressait au peuple : le discours ___ déroule dans un récit ce qui existe toujours de la même manière (chap. 4, l. 35-42)."
+    answer: "hypothétique"
+    alt: ["hypothetique"]
+- id: traite6-l7
+  title: "Volontaire et nécessaire ; les deux fautes (chap. 5, l. 1-24)"
+  notes: |-
+    Le chapitre 5 est le cœur du traité : il montre que les formules contradictoires du chapitre 1 ne s'excluent pas, parce que, pour l'âme, le volontaire et le nécessaire coïncident.
+
+    **La thèse.** Il n'y a pas de contradiction entre l'ensemencement dans le devenir et la descente pour achever l'univers, entre le jugement et la caverne, {green}« entre la nécessité et le volontaire, puisque le volontaire est justement compris dans la nécessité »{/green} (l. 1-4).
+
+    **Ce que veut dire « volontaire ».** Il ne s'agit pas d'un choix entre plusieurs possibles : l'âme n'a pas la liberté de ne pas descendre. Le volontaire (*hekousion*) désigne ici **un mouvement propre**, qu'aucune force extérieure ne contraint : l'âme descend {teal}« de son propre mouvement »{/teal} (l. 8-9). Ce qui est **involontaire**, c'est le pire auquel elle aboutit, l'influence de ce qui lui est inférieur : de là qu'on parle de « condamnation ».
+
+    **Ce que veut dire « nécessaire ».** Ce n'est pas une contrainte extérieure, mais **« une loi éternelle de la nature »** (l. 11) : la nature même de l'âme, qu'elle tient de son principe. Dire qu'un dieu l'a envoyée n'est donc pas faux, car tout doit être rapporté au principe dont il est issu.
+
+    **Comment les deux coïncident.** Une âme qui ne descendrait pas cesserait d'être âme, puisque c'est la descente qui la distingue de l'Intellect. En descendant, elle **suit sa nature** (volontaire) et **s'inscrit dans l'ordre de l'univers** (nécessaire). Comme le musicien de talent qui joue « parce qu'il le veut » et pourtant ne pourrait pas ne pas jouer sans cesser d'être ce qu'il est.
+
+    **Les deux fautes** (l. 16-24).
+
+    | Faute | En quoi elle consiste | Son châtiment |
+    | la première | la cause même de la descente | ce qu'elle subit en descendant |
+    | la seconde | le mal qu'elle commet ici-bas | plonger dans d'autres corps, selon le jugement porté sur sa valeur |
+
+    La première faute est l'alourdissement de l'âme avant sa chute, la seconde la vie plus ou moins juste qu'elle mène dans le corps : Plotin retrouve les deux moments du mythe du *{sky}Phèdre{/sky}*. Un mal sans mesure appelle un châtiment plus grand, sous la surveillance de démons.
+
+    ! « Volontaire » ne veut pas dire « choisi » : l'âme adhère à sa nature, elle ne délibère pas. Et « nécessaire » ne veut pas dire « forcé » : la nécessité, c'est sa nature même.
+  tables:
+  - table: faute-en-quoi-elle-consiste-son-chatiment
+    exercises:
+    - {kind: bank, column: Son châtiment}
+  points:
+  - id: traite6-l7-q1
+    sentence: "« Il n'y a donc pas de contradiction […] entre la nécessité et le volontaire, puisque le volontaire est justement compris dans la ___ » (chap. 5, l. 1-4)."
+    answer: "nécessité"
+    alt: ["necessite"]
+  - id: traite6-l7-q2
+    sentence: "Le « volontaire » de la descente rend le grec *___*, qui n'implique pas l'idée de choix : l'âme donne son assentiment sans pouvoir se soustraire à la descente."
+    answer: "hekousion"
+    alt: ["hekoúsion"]
+  - id: traite6-l7-q3
+    sentence: "« Car certes toute chose va vers le pire **___**, mais puisqu'elle y va cependant __de son propre mouvement__, on dit qu'en subissant l'influence de ce qui lui est inférieur, elle reçoit **une condamnation** conforme à ce qu'elle a fait. » (chap. 5, l. 1-10)"
+    answer: "involontairement"
+    alt: []
+  - id: traite6-l7-q4
+    sentence: "« Car certes toute chose va vers le pire **involontairement**, mais puisqu'elle y va cependant ___, on dit qu'en subissant l'influence de ce qui lui est inférieur, elle reçoit **une condamnation** conforme à ce qu'elle a fait. » (chap. 5, l. 1-10)"
+    answer: "de son propre mouvement"
+    alt: []
+  - id: traite6-l7-q5
+    sentence: "« Car certes toute chose va vers le pire **involontairement**, mais puisqu'elle y va cependant __de son propre mouvement__, on dit qu'en subissant l'influence de ce qui lui est inférieur, elle reçoit **___** conforme à ce qu'elle a fait. » (chap. 5, l. 1-10)"
+    answer: "une condamnation"
+    alt: []
+  - id: traite6-l7-q6
+    sentence: "La descente est nécessaire « en vertu d'une loi éternelle de la ___ » (chap. 5, l. 11)."
+    answer: "nature"
+    alt: []
+  - id: traite6-l7-q7
+    sentence: "Si l'on dit que c'est un dieu qui a envoyé l'âme, on n'est pas en contradiction avec la vérité, car chaque chose doit être rapportée au ___ dont elle est issue (chap. 5, l. 10-16)."
+    answer: "principe"
+    alt: []
+  - id: traite6-l7-q8
+    sentence: "Pour D. O'Brien, la nécessité de la descente s'identifie à la ___ même de l'âme, et le volontaire consiste à adhérer à ce que l'on est par essence."
+    answer: "nature"
+    alt: []
+  - id: traite6-l7-q9
+    sentence: "« Cependant, étant donné que **___**, l'une concernant __la cause de la descente__, l'autre __le mal qu'elle commet quand elle est arrivée ici-bas__, le châtiment de la première faute est **cela même qu'elle subit en descendant**, celui de la seconde est de plonger **moins profondément** dans d'autres corps, et plus brièvement, en raison du jugement porté sur sa valeur » (chap. 5, l. 16-24)"
+    answer: "la faute de l'âme est double"
+    alt: []
+  - id: traite6-l7-q10
+    sentence: "« Cependant, étant donné que **la faute de l'âme est double**, l'une concernant ___, l'autre __le mal qu'elle commet quand elle est arrivée ici-bas__, le châtiment de la première faute est **cela même qu'elle subit en descendant**, celui de la seconde est de plonger **moins profondément** dans d'autres corps, et plus brièvement, en raison du jugement porté sur sa valeur » (chap. 5, l. 16-24)"
+    answer: "la cause de la descente"
+    alt: []
+  - id: traite6-l7-q11
+    sentence: "« Cependant, étant donné que **la faute de l'âme est double**, l'une concernant __la cause de la descente__, l'autre ___, le châtiment de la première faute est **cela même qu'elle subit en descendant**, celui de la seconde est de plonger **moins profondément** dans d'autres corps, et plus brièvement, en raison du jugement porté sur sa valeur » (chap. 5, l. 16-24)"
+    answer: "le mal qu'elle commet quand elle est arrivée ici-bas"
+    alt: []
+  - id: traite6-l7-q12
+    sentence: "« Cependant, étant donné que **la faute de l'âme est double**, l'une concernant __la cause de la descente__, l'autre __le mal qu'elle commet quand elle est arrivée ici-bas__, le châtiment de la première faute est **___**, celui de la seconde est de plonger **moins profondément** dans d'autres corps, et plus brièvement, en raison du jugement porté sur sa valeur » (chap. 5, l. 16-24)"
+    answer: "cela même qu'elle subit en descendant"
+    alt: []
+  - id: traite6-l7-q13
+    sentence: "« Cependant, étant donné que **la faute de l'âme est double**, l'une concernant __la cause de la descente__, l'autre __le mal qu'elle commet quand elle est arrivée ici-bas__, le châtiment de la première faute est **cela même qu'elle subit en descendant**, celui de la seconde est de plonger **___** dans d'autres corps, et plus brièvement, en raison du jugement porté sur sa valeur » (chap. 5, l. 16-24)"
+    answer: "moins profondément"
+    alt: []
+  - id: traite6-l7-q14
+    sentence: "La « faute » de l'âme rend le grec *___*, et le « châtiment » le grec *dikê*."
+    answer: "hamartia"
+    alt: []
+  - id: traite6-l7-q15
+    sentence: "Les deux fautes de l'âme correspondent aux deux moments du mythe du ___ : l'alourdissement avant la chute, puis la vie plus ou moins juste menée dans le corps."
+    answer: "Phèdre"
+    alt: ["Phedre"]
+  - id: traite6-l7-q16
+    sentence: "Une forme immodérée de mal entraîne un châtiment plus grand sous la surveillance de ___ chargés de punir les fautes (chap. 5, l. 16-24)."
+    answer: "démons"
+    alt: ["demons"]
+- id: traite6-l8
+  title: "Descendre pour manifester sa puissance (chap. 5, l. 25-37)"
+  notes: |-
+    La fin du chapitre 5 renverse la perspective : la descente n'est pas seulement une peine qu'on explique, c'est une œuvre qu'on comprend. L'âme descend pour exercer sa puissance, et sans cela cette puissance n'existerait pour ainsi dire pas.
+
+    **L'âme est « le dieu de dernier rang ».** Divine, venue de là-bas, elle se retrouve dans le corps, et cependant elle y vient {green}« par une libre inclinaison, et pour exercer sa puissance et mettre en ordre ce qui vient après elle »{/green} (l. 26).
+
+    **Elle n'y perd rien si elle s'enfuit vite.** Elle aura même gagné **la connaissance du mal et de la nature du vice** : cette connaissance n'est pas une menace, elle a une valeur positive, comme l'exercice de sa puissance productrice.
+
+    **L'argument de la puissance.** Ses puissances, ses œuvres, ses activités, {red}si elles étaient restées en repos dans l'incorporel, « auraient existé en vain »{/red} (l. 31), puisqu'elles ne seraient jamais passées à l'acte. Une capacité de produire qui ne produit jamais n'est qu'une capacité vide : un pianiste qui n'aurait jamais touché un clavier ne saurait même pas qu'il l'est. D'où la formule : {teal}« l'acte révèle partout la puissance qui sans lui demeurerait totalement cachée »{/teal}.
+
+    **L'âme se connaît par ce qu'elle produit.** Plus encore : {coral}« l'âme elle-même aurait ignoré les choses qu'elle possède, puisqu'elles ne seraient même pas sorties pour se manifester »{/coral} (l. 32-33). Le corps n'est pas seulement l'effet de l'âme : il est ce par quoi l'âme devient visible à elle-même. Et nous aussi, nous pouvons **admirer l'intériorité des choses** grâce à la variété de leurs aspects extérieurs, et la connaître par les œuvres délicates qu'elle a réalisées.
+
+    ! Le corps n'est pas ici un obstacle à la connaissance de l'âme, mais une voie d'accès à elle : il en est la manifestation la plus immédiate.
+  points:
+  - id: traite6-l8-q1
+    sentence: "Bien qu'elle soit divine, l'âme vient ici-bas « par une libre ___ », pour exercer sa puissance et mettre en ordre ce qui vient après elle (chap. 5, l. 26)."
+    answer: "inclinaison"
+    alt: []
+  - id: traite6-l8-q2
+    sentence: "Dans le traité 6, l'âme est appelée « le dieu de ___ rang » (chap. 5, l. 25-37)."
+    answer: "dernier"
+    alt: []
+  - id: traite6-l8-q3
+    sentence: "Si l'âme s'enfuit vite d'ici, elle ne subit aucun dommage, et elle a même acquis la connaissance du ___ et celle de la nature du vice (chap. 5, l. 25-37)."
+    answer: "mal"
+    alt: []
+  - id: traite6-l8-q4
+    sentence: "Sans la descente, les puissances de l'âme, restées en repos dans l'incorporel, « auraient existé en ___ » (chap. 5, l. 31)."
+    answer: "vain"
+    alt: []
+  - id: traite6-l8-q5
+    sentence: "« Car **___** qui sans lui demeurerait __totalement cachée__, comme inapparente, et __inexistante__ puisqu'elle n'aurait jamais d'existence réelle. » (chap. 5, l. 25-37)"
+    answer: "l'acte révèle partout la puissance"
+    alt: []
+  - id: traite6-l8-q6
+    sentence: "« Car **l'acte révèle partout la puissance** qui sans lui demeurerait ___, comme inapparente, et __inexistante__ puisqu'elle n'aurait jamais d'existence réelle. » (chap. 5, l. 25-37)"
+    answer: "totalement cachée"
+    alt: []
+  - id: traite6-l8-q7
+    sentence: "« Car **l'acte révèle partout la puissance** qui sans lui demeurerait __totalement cachée__, comme inapparente, et ___ puisqu'elle n'aurait jamais d'existence réelle. » (chap. 5, l. 25-37)"
+    answer: "inexistante"
+    alt: []
+  - id: traite6-l8-q8
+    sentence: "« Et l'âme elle-même aurait ___ les choses qu'elle possède, puisqu'elles ne seraient même pas sorties pour se manifester » (chap. 5, l. 32-33)."
+    answer: "ignoré"
+    alt: ["ignore"]
+  - id: traite6-l8-q9
+    sentence: "Grâce à la variété des aspects extérieurs, chaque homme peut admirer l'___ des choses (chap. 5, l. 25-37)."
+    answer: "intériorité"
+    alt: ["interiorite"]
+- id: traite6-l9
+  title: "La puissance venue de l'Un ne s'arrête pas (chap. 6)"
+  notes: |-
+    Le chapitre 6 fonde la descente de l'âme sur ce qui fonde tout le système : la puissance qui vient de l'Un et qui doit aller jusqu'au bout. Produire des corps n'est pas pour l'âme une déchéance, mais la continuation d'un don.
+
+    **Le parallèle** (l. 1-10). S'il ne devait y avoir que l'Un, tout resterait caché, rien n'existerait, l'Un « resterait en lui-même » (non qu'il en sorte : il ne reste pas seul). **De la même manière**, il ne faut pas qu'existent seulement des âmes, sans que leurs produits deviennent visibles. Chaque âme a par nature la capacité de produire ce qui vient après elle et de se développer, {yellow}comme une semence{/yellow}, d'un principe indivisible jusqu'à l'objet sensible.
+
+    **La puissance sans jalousie** (l. 10-16). Ce qui est premier demeure toujours à sa place ; ce qui vient après est engendré par {teal}« une puissance indicible »{/teal} qui {green}« ne doit pas s'immobiliser, comme bornée par la jalousie »{/green}, mais avancer jusqu'à l'ultime limite possible. Plotin reprend le *{sky}Timée{/sky}* : le dieu était bon, et « en ce qui est bon on ne trouve aucune jalousie ». **S'arrêter avant le corps serait refuser de donner** : ce serait, pour la puissance, une avarice. Rien n'empêche donc chaque chose de prendre part au bien **dans la mesure de ce qu'elle peut recevoir**.
+
+    **L'alternative sur la matière** (l. 16-23). Ou bien la matière est éternelle, et elle ne peut pas ne pas participer à ce qui pourvoit au bien ; ou bien elle est engendrée par des causes antérieures, et il n'est pas nécessaire qu'elle en soit séparée, comme si la puissance qui lui donne l'existence s'arrêtait avant elle. **Dans les deux cas, la matière n'échappe pas au bien.** Plotin n'a pas besoin de trancher : les deux branches mènent à la même conclusion (les commentateurs, eux, en discutent beaucoup).
+
+    **La conclusion** (l. 23-28). {coral}« Tout est solidaire pour toujours »{/coral} : le sensible existe par participation et imite l'intelligible autant qu'il le peut, et ce qu'il a de plus beau est la manifestation de la puissance et de la bonté de là-bas.
+
+    ! La matière n'est pas ici le principe du mal : elle participe au bien selon sa capacité. Le traité 51 (I, 8) dira au contraire qu'elle en est « absolument privée » ; le traité 6 n'en est pas encore là.
+  points:
+  - id: traite6-l9-q1
+    sentence: "S'il n'y avait que l'Un, toutes choses resteraient ___ puisqu'elles n'ont pas de forme en l'Un, et aucun être n'existerait (chap. 6, l. 1-10)."
+    answer: "cachées"
+    alt: ["cachees"]
+  - id: traite6-l9-q2
+    sentence: "Chaque âme a la capacité de se développer, comme une ___, d'un principe indivisible vers un état final, qui est l'objet sensible (chap. 6, l. 1-10)."
+    answer: "semence"
+    alt: []
+  - id: traite6-l9-q3
+    sentence: "« D'un côté, ce qui vient en premier **___**, de l'autre, ce qui vient après lui est d'une certaine façon engendré par **une puissance indicible** qui est dans le principe supérieur et qui __ne doit pas s'immobiliser, comme bornée par la jalousie__, mais qui doit avancer toujours, jusqu'à ce que toutes choses atteignent **l'ultime limite possible** » (chap. 6, l. 10-16)"
+    answer: "demeure toujours à la place qui lui est propre"
+    alt: []
+  - id: traite6-l9-q4
+    sentence: "« D'un côté, ce qui vient en premier **demeure toujours à la place qui lui est propre**, de l'autre, ce qui vient après lui est d'une certaine façon engendré par **___** qui est dans le principe supérieur et qui __ne doit pas s'immobiliser, comme bornée par la jalousie__, mais qui doit avancer toujours, jusqu'à ce que toutes choses atteignent **l'ultime limite possible** » (chap. 6, l. 10-16)"
+    answer: "une puissance indicible"
+    alt: []
+  - id: traite6-l9-q5
+    sentence: "« D'un côté, ce qui vient en premier **demeure toujours à la place qui lui est propre**, de l'autre, ce qui vient après lui est d'une certaine façon engendré par **une puissance indicible** qui est dans le principe supérieur et qui ___, mais qui doit avancer toujours, jusqu'à ce que toutes choses atteignent **l'ultime limite possible** » (chap. 6, l. 10-16)"
+    answer: "ne doit pas s'immobiliser, comme bornée par la jalousie"
+    alt: []
+  - id: traite6-l9-q6
+    sentence: "« D'un côté, ce qui vient en premier **demeure toujours à la place qui lui est propre**, de l'autre, ce qui vient après lui est d'une certaine façon engendré par **une puissance indicible** qui est dans le principe supérieur et qui __ne doit pas s'immobiliser, comme bornée par la jalousie__, mais qui doit avancer toujours, jusqu'à ce que toutes choses atteignent **___** » (chap. 6, l. 10-16)"
+    answer: "l'ultime limite possible"
+    alt: []
+  - id: traite6-l9-q7
+    sentence: "L'idée d'une puissance qui ne s'arrête pas « comme bornée par la jalousie » reprend le ___ de Platon : « en ce qui est bon on ne trouve aucune jalousie » (29e)."
+    answer: "Timée"
+    alt: ["Timee"]
+  - id: traite6-l9-q8
+    sentence: "« Il n'y a en vérité rien qui empêche n'importe quelle chose de prendre part à la nature du ___ à la mesure de ce qu'elle est capable de recevoir » (chap. 6, l. 15-16)."
+    answer: "bien"
+    alt: []
+  - id: traite6-l9-q9
+    sentence: "Si la matière est éternelle, il n'est pas possible qu'elle ne participe pas à ce qui pourvoit au bien de toutes choses ; si elle est ___, elle n'est pas pour autant séparée de lui (chap. 6, l. 16-23)."
+    answer: "engendrée"
+    alt: ["engendree"]
+  - id: traite6-l9-q10
+    sentence: "« Ce qui est le plus beau dans le sensible est donc **___**, de leur puissance et de leur bonté, et __tout est solidaire pour toujours__, les réalités intelligibles et les réalités sensibles » (chap. 6, l. 23-28)"
+    answer: "la manifestation des meilleures choses dans l'intelligible"
+    alt: []
+  - id: traite6-l9-q11
+    sentence: "« Ce qui est le plus beau dans le sensible est donc **la manifestation des meilleures choses dans l'intelligible**, de leur puissance et de leur bonté, et ___, les réalités intelligibles et les réalités sensibles » (chap. 6, l. 23-28)"
+    answer: "tout est solidaire pour toujours"
+    alt: []
+  - id: traite6-l9-q12
+    sentence: "Contrairement au traité 6, où la matière participe au bien selon sa capacité, le traité ___ (I, 8), *Sur l'origine des maux*, dira qu'elle est absolument privée de toute participation au bien."
+    answer: "51"
+    alt: ["51 (I, 8)"]
+- id: traite6-l10
+  title: "Le rang moyen et l'expérience du mal (chap. 7)"
+  notes: |-
+    Le chapitre 7 situe l'âme dans la hiérarchie du réel, et tire de cette position une leçon presque consolante : même la chute peut servir.
+
+    **Un rang moyen** (l. 1-7). La nature de l'âme est **double**, intelligible et sensible. Il vaut mieux pour elle être dans l'intelligible, mais il est nécessaire qu'elle participe aussi au sensible, puisque c'est sa nature : {green}elle ne doit pas « s'irriter contre elle-même » si tout n'est pas le meilleur{/green}, puisqu'elle occupe **un rang moyen** parmi les êtres. Elle est le **dernier des intelligibles**, à la frontière du sensible.
+
+    **Donner et recevoir** (l. 7-11). À cette frontière, elle donne au monde quelque chose d'elle-même (la raison qui organise les corps) ; mais elle reçoit aussi de lui {red}quand elle le met en ordre sans préserver sa sécurité, et se précipite en lui avec une trop grande ardeur{/red}, au lieu de rester avec l'âme entière. C'est la « contamination » du chapitre 2.
+
+    **L'expérience du mal** (l. 11-17). L'âme peut **remonter** après avoir éprouvé ce qu'elle a vu ici, et appris, par comparaison de ces conditions contraires, laquelle est la meilleure. {teal}« L'expérience du mal offre une connaissance plus manifeste du bien »{/teal} à ceux qui sont trop faibles pour connaître le mal par une science préalable. Comme on ne mesure la santé qu'après avoir été malade : non que la maladie soit bonne, mais le contraste instruit.
+
+    **L'âme comme l'Intellect** (l. 17-31). De même que la sortie de l'Intellect va nécessairement jusqu'à l'âme (sans pouvoir remonter jusqu'à l'Un), l'activité de l'âme a, d'un côté, ce qui vient après elle, et de l'autre, le spectacle de ce qui la précède. Mais l'expérience diffère selon les âmes : pour les âmes individuelles, la conversion se fait **peu à peu, dans le temps**, au sein du pire ; **l'âme de l'univers**, elle, contemple ce qui est sous elle sans aucun mal, toujours suspendue à ce qui la précède.
+
+    ! L'expérience du mal n'est pas recommandée : elle est le recours de ceux qui ne peuvent connaître le mal autrement. La connaissance par la science vaut mieux.
+  points:
+  - id: traite6-l10-q1
+    sentence: "La nature de l'âme est ___, intelligible et sensible : c'est ce qui définit sa place propre parmi les réalités (chap. 7, l. 1-7)."
+    answer: "double"
+    alt: []
+  - id: traite6-l10-q2
+    sentence: "L'âme ne doit pas s'irriter contre elle-même si tout n'est pas le meilleur, étant donné qu'elle occupe un rang ___ au sein des êtres (chap. 7, l. 1-7)."
+    answer: "moyen"
+    alt: []
+  - id: traite6-l10-q3
+    sentence: "L'âme occupe le ___ rang des intelligibles, à la frontière de la nature sensible (chap. 7, l. 1-7)."
+    answer: "dernier"
+    alt: []
+  - id: traite6-l10-q4
+    sentence: "L'âme reçoit quelque chose du monde en retour quand elle le met en ordre sans préserver sa propre sécurité et se précipite en lui avec une trop grande ___ (chap. 7, l. 7-11)."
+    answer: "ardeur"
+    alt: []
+  - id: traite6-l10-q5
+    sentence: "« Car **___** offre une connaissance plus manifeste du bien à ceux dont __la puissance est trop faible__ pour connaître le mal par une science qui précède l'expérience. » (chap. 7, l. 11-17)"
+    answer: "l'expérience du mal"
+    alt: []
+  - id: traite6-l10-q6
+    sentence: "« Car **l'expérience du mal** offre une connaissance plus manifeste du bien à ceux dont ___ pour connaître le mal par une science qui précède l'expérience. » (chap. 7, l. 11-17)"
+    answer: "la puissance est trop faible"
+    alt: []
+  - id: traite6-l10-q7
+    sentence: "Le mouvement de sortie de l'Intellect ne peut remonter jusqu'à ce qui est au-delà, l'Un ; il doit, par une loi nécessaire de la nature, parvenir jusqu'à l'___ (chap. 7, l. 17-23)."
+    answer: "âme"
+    alt: ["ame"]
+  - id: traite6-l10-q8
+    sentence: "Pour les âmes individuelles, la conversion vers le meilleur se fait petit à petit et dans le ___, au sein de ce qui est pire (chap. 7, l. 23-31)."
+    answer: "temps"
+    alt: []
+  - id: traite6-l10-q9
+    sentence: "L'âme de l'univers observe par la ___ les choses qui sont sous elle, sans être affectée par aucun mal (chap. 7, l. 23-31)."
+    answer: "contemplation"
+    alt: []
+- id: traite6-l11
+  title: "Quelque chose de l'âme reste là-bas (chap. 8)"
+  notes: |-
+    Le chapitre 8 conclut le traité sur sa thèse la plus audacieuse, que Plotin sait contraire à l'opinion des autres platoniciens : notre âme n'est jamais tout entière descendue.
+
+    **La thèse.** {green}« S'il faut oser dire contre l'opinion des autres plus clairement ce que l'on pense, notre âme n'a pas plongé tout entière ici-bas, mais quelque chose d'elle reste toujours dans l'intelligible »{/green} (l. 1-3). C'est la doctrine de **l'âme non descendue**, que ses successeurs néoplatoniciens rejetteront.
+
+    **L'objection : pourquoi ne le sentons-nous pas ?** Parce que, si la partie de l'âme qui est dans le sensible est dominée et troublée, elle ne nous laisse pas percevoir ce que contemple la partie supérieure. Ce qui est pensé là-haut **ne parvient jusqu'à nous que lorsqu'il arrive jusqu'à notre perception** : nous ne connaissons ce qui se passe dans une partie de l'âme que lorsque cela atteint l'âme tout entière. Il en va de même pour le désir : il est dans la partie désirante, mais nous ne le connaissons que quand nous le saisissons par la perception intérieure ou par la raison. **Penser n'est pas encore savoir qu'on pense.**
+
+    **Toute âme a deux parties** (l. 11-13). {teal}« Toute âme possède une partie inférieure orientée vers le corps et une partie supérieure orientée vers l'Intellect »{/teal}.
+
+    **Deux manières de gouverner** (l. 13-23).
+
+    - **L'âme du tout** met en ordre l'univers par sa partie tournée vers le corps, en demeurant au-dessus de lui sans peine, car elle ne procède pas en raisonnant, mais par l'Intellect, {yellow}comme « la technique qui ne délibère pas »{/yellow} (formule d'Aristote) : l'artisan accompli ne délibère pas, il fait.
+    - **Les âmes partielles** possèdent aussi le principe supérieur, mais sont **sans répit occupées par la sensation** et par beaucoup de choses contraires à leur nature, qui les troublent. Leur plaisir est trompeur.
+
+    **Pourtant**, il existe en elles **« une partie de l'âme qui ne partage pas ces plaisirs éphémères, et dont l'existence est semblable à celle de là-bas »**. Le traité finit sur cette assurance : l'âme peut toujours se ressaisir, car elle n'a jamais tout à fait quitté sa patrie.
+
+    ! L'âme non descendue n'est pas une âme qui ne fait rien : elle pense toujours ; c'est nous qui ne le savons pas toujours.
+  points:
+  - id: traite6-l11-q1
+    sentence: "« notre âme **___** ici-bas, mais __quelque chose d'elle reste toujours dans l'intelligible__. » (chap. 8, l. 1-3)"
+    answer: "n'a pas plongé tout entière"
+    alt: []
+  - id: traite6-l11-q2
+    sentence: "« notre âme **n'a pas plongé tout entière** ici-bas, mais ___. » (chap. 8, l. 1-3)"
+    answer: "quelque chose d'elle reste toujours dans l'intelligible"
+    alt: []
+  - id: traite6-l11-q3
+    sentence: "Plotin présente la thèse de l'âme non descendue comme une thèse ___ : « s'il faut oser dire contre l'opinion des autres plus clairement ce que l'on pense » (chap. 8, l. 1-3)."
+    answer: "audacieuse"
+    alt: ["osée", "osee"]
+  - id: traite6-l11-q4
+    sentence: "Ce qui est pensé par la partie supérieure de l'âme ne parvient jusqu'à nous que lorsqu'il arrive jusqu'à notre ___ (chap. 8, l. 1-13)."
+    answer: "perception"
+    alt: []
+  - id: traite6-l11-q5
+    sentence: "Le désir qui réside dans la partie désirante de l'âme n'est connu de nous que lorsque nous le saisissons par la perception intérieure ou par la raison ___ (chap. 8, l. 1-13)."
+    answer: "discursive"
+    alt: []
+  - id: traite6-l11-q6
+    sentence: "« Car toute âme possède **___** et __une partie supérieure orientée vers l'Intellect__. » (chap. 8, l. 11-13)"
+    answer: "une partie inférieure orientée vers le corps"
+    alt: []
+  - id: traite6-l11-q7
+    sentence: "« Car toute âme possède **une partie inférieure orientée vers le corps** et ___. » (chap. 8, l. 11-13)"
+    answer: "une partie supérieure orientée vers l'Intellect"
+    alt: []
+  - id: traite6-l11-q8
+    sentence: "L'âme du tout ordonne l'univers sans raisonner, en usant de l'Intellect, comme « la technique qui ne ___ pas », formule d'Aristote (*Physique*, II, 8) (chap. 8, l. 13-23)."
+    answer: "délibère"
+    alt: ["delibere"]
+  - id: traite6-l11-q9
+    sentence: "Les âmes partielles sont sans répit occupées par la faculté de ___ et par la perception de choses contraires à leur nature (chap. 8, l. 13-23)."
+    answer: "sentir"
+    alt: []
+  - id: traite6-l11-q10
+    sentence: "Il existe en l'âme une partie qui ne partage pas les plaisirs éphémères, et dont l'existence est semblable à celle de ___ (chap. 8, l. 13-23)."
+    answer: "là-bas"
+    alt: ["la-bas"]
+  - id: traite6-l11-q11
+    sentence: "Pour expliquer que les pensées de la partie supérieure ne nous apparaissent pas toujours, une note de la GF renvoie au traité 46 (I, 4), où la partie inférieure de l'âme est comparée à un ___ qui ne reflète la pensée que s'il est en repos."
+    answer: "miroir"
+    alt: []

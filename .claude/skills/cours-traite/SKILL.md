@@ -297,6 +297,18 @@ traités (titre de Porphyre et numéro), les débats de commentateurs et les
 précautions de Plotin, les prolongements dans des traités ultérieurs ; et
 rattacher le détail à la question du traité quand c'est possible.
 
+**Avec NotebookLM.** Quand l'utilisateur le demande, lui poser les questions
+du § 1 dans le notebook « Plotin » (navigateur intégré, l'utilisateur s'étant
+connecté lui-même ; jamais Claude in Chrome, trop coûteux), en quatre ou cinq
+envois groupés, et ne relire que la dernière réponse par un script. Ses
+explications conceptuelles sont utiles, mais au traité 6 il a commis cinq
+erreurs d'attribution que la GF corrigeait : une notion d'un autre traité
+(l'« audace », *tolma*, du traité 10), deux images de chapitres voisins
+confondues (la cité et le roi), une image tirée d'une note donnée pour le
+texte (le miroir, du traité 46), un détail inversé (« moins profondément »),
+un rapport de causalité renversé (corps et âme du monde). Tout ce qu'il dit
+se recoupe donc avec la traduction et les notes avant d'entrer dans le cours.
+
 **Vérifier chaque affirmation savante contre le texte.** Une note ou une
 explication tierce peut contredire la traduction (au traité 7, la
 *katanóēsis* donnée pour « propre à l'Intellect » alors que 2, 15-19 la dit
