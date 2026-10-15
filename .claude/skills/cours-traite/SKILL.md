@@ -1,6 +1,6 @@
 ---
 name: cours-traite
-description: Écrit ou refond le cours d'un traité de Plotin (piste Repérage, unités traite1 à traite54) à partir du PDF de l'édition GF (traduction, notice, plan détaillé et notes explicatives de fin de traité) : analyse du raisonnement (question, thèse, paradoxe, rôle des chapitres, ce qui est démontré, posé ou illustré), questions à l'utilisateur sur ce que le PDF ne tranche pas, une leçon par mouvement du raisonnement, rappels qui explicitent le pourquoi de chaque thèse, cartes réécrites en conséquence, validation, commit et push. À utiliser dès qu'on demande d'« écrire le cours du traité N », de « refondre » ou « clarifier » un cours de traité, de « faire comme le traité 7 », ou quand un rappel de traité est jugé obscur.
+description: Écrit ou refond le cours d'un traité de Plotin (piste Repérage, unités traite1 à traite54) à partir du PDF de l'édition GF (traduction, notice, plan détaillé et notes explicatives de fin de traité) : analyse du raisonnement (question, thèse, paradoxe, rôle des chapitres, ce qui est démontré, posé ou illustré), questions à l'utilisateur sur ce que le PDF ne tranche pas, une leçon par mouvement du raisonnement, rappels qui explicitent le pourquoi de chaque thèse, cartes (cascades de citations, cartes d'argument), puis passe de clarification qui développe ce qui reste abstrait, désamorce les contresens et déplie les arguments jusqu'à convaincre, validation, commit et push. À utiliser dès qu'on demande d'« écrire le cours du traité N », de « refondre » ou « clarifier » un cours de traité, de « faire comme le traité 7 », ou quand un rappel de traité est jugé obscur.
 ---
 
 # Écrire ou refondre le cours d'un traité de Plotin
@@ -138,7 +138,9 @@ de doute, relire ces deux fichiers, ce sont les exemples de référence.
 
 ### L'exigence d'ensemble : argumenter, convaincre, expliquer
 
-Le défaut le plus grave des premières versions était le ton de l'allusion,
+Ce qui suit dit comment écrire ; la passe de clarification (§ 6) vérifie
+ensuite, leçon par leçon, que c'est fait. Le défaut le plus grave des
+premières versions était le ton de l'allusion,
 au mieux de la description : on énonçait ce que dit Plotin sans montrer
 pourquoi il a raison de le dire. Il faut présenter Plotin en « homme de
 fer » : une pensée rendue **convaincante**, nuancée, mais d'abord **très
@@ -219,7 +221,7 @@ et chaque marque a une fonction.
   Gras et souligné se combinent pour l'intitulé d'une étape.
 - **Couleurs** : le code fixe de `content/philosophie.md`. Vert la thèse
   retenue ; en face, rouge ce qui est rejeté ou fait problème, ou rose
-  (variante plus douce du rouge) pour l'autre pôle d'une opposition ;
+  (libre, souvent en variante du rouge) pour l'autre pôle d'une opposition ;
   violet les termes techniques ; turquoise les citations ; bleu ciel la
   structure et les sources (« l'ascension du discours de Diotime », le
   *Phédon*) ; corail les propriétés établies et conclusions ; jaune les
@@ -336,7 +338,49 @@ signale :
 - des guillemets français imbriqués : la citation intérieure prend les
   guillemets droits.
 
-## 6. Valider, vérifier, publier
+## 6. La passe de clarification (l'étape décisive)
+
+Le premier jet, tiré de la notice, du plan et des notes, est exact mais
+reste allusif : il dit ce que pense Plotin sans le faire comprendre. Au
+traité 1, le gros des retouches manuelles de l'utilisateur ne portait ni sur
+la forme ni sur l'exactitude, mais sur ce manque de clarté et d'effort pour
+développer la pensée de Plotin et la rendre convaincante. C'est ce que cette
+passe doit faire, avant toute validation.
+
+**Reprendre chaque leçon, rappel et cartes, le texte de la traduction sous
+les yeux**, et se poser pour chaque paragraphe et chaque carte trois
+questions :
+
+1. **Est-ce abstrait ?** Une formule comme « la Forme unifie le multiple »
+   ou « l'âme reconnaît le beau par affinité » ne dit rien à qui ne la
+   comprend pas déjà. La développer : ce qu'elle veut dire concrètement, sur
+   l'exemple même du texte (la maison, la pierre, l'or), et pourquoi Plotin
+   peut le soutenir.
+2. **Peut-on s'y tromper ?** Chercher le contresens que la formule permet, et
+   le désamorcer en disant ce que la thèse n'est pas : l'âme ne « projette »
+   pas la forme sur la matière, elle la reconnaît ; ce n'est pas l'âme
+   individuelle qui met en forme le monde, mais la Nature ; la vertu
+   n'est pas un ensemble de règles de conduite.
+3. **Y a-t-il un argument ?** Alors le déplier jusqu'à convaincre : ses
+   prémisses, le principe dont il dépend, l'enchaînement, la conclusion, et
+   l'objection qu'un lecteur raisonnable ferait, avec sa réponse. Se demander
+   honnêtement : « si je ne croyais pas Plotin, est-ce que ce paragraphe me
+   ferait changer d'avis ? » Sinon, il manque une étape.
+
+Exemple au traité 1 (chap. 2) : le premier jet disait que la Forme réunit les
+parties et les amène à l'unité. La version retouchée reconstruit l'argument
+en trois temps : la laideur croît à mesure que la Forme est moins présente,
+donc la beauté croît avec sa présence ; or la Forme est une, et ce qu'elle
+configure doit, pour lui ressembler, être unifié ; donc la laideur est le
+défaut d'unité et la beauté l'unité obtenue. Chaque temps a sa carte.
+
+Ce qui sort de cette passe va **dans le rappel** (un paragraphe qui
+développe, un piège qui désamorce) **et dans les cartes** (des cartes qui
+reconstruisent l'argument, voir § 5). La passe allonge le cours : c'est
+voulu. Elle ne doit pas, en revanche, ajouter des remarques sur la structure
+de l'argumentation (« posé », « démontré ») qui n'éclairent rien.
+
+## 7. Valider, vérifier, publier
 
 1. `npm run content:tidy -- <fichier>`, puis `npm run content:check`, et
    corriger jusqu'à « Contenu valide ».
@@ -357,7 +401,7 @@ signale :
 6. Commit (message en français, « Plotin, traité N : … ») et push, sans
    demander.
 
-## 7. Rendre compte
+## 8. Rendre compte
 
 Un message court : le nouveau découpage (une ligne par leçon, avec ce
 qu'elle établit), ce qui a changé dans les cartes (et la remise à zéro de la

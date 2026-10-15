@@ -329,8 +329,8 @@ les cours :
 
 - `green` : la thèse retenue par l'auteur ;
 - `red` : ce qu'il rejette, ou ce qui fait problème ;
-- `pink` : variante plus douce du rouge, pour l'autre pôle d'une opposition
-  dont le vert marque le premier ;
+- `pink` : libre ; sert volontiers de variante au rouge, pour l'autre pôle
+  d'une opposition dont le vert marque le premier ;
 - `violet` : les termes techniques et notions clés ;
 - `teal` : une citation du texte étudié ;
 - `sky` : la structure de l'œuvre (parties, chapitres) et les sources qu'elle
