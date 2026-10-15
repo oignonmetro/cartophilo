@@ -1,8 +1,12 @@
 # Cours d'un traité de Plotin (piste Repérage, voir content/philosophie.md),
-# d'après la notice et le plan détaillé de Luc Brisson et Jean-François Pradeau, dans Plotin, Traités 1-6,
-# trad. sous la dir. de L. Brisson et J.-F. Pradeau, GF-Flammarion, 2002.
-# Les citations viennent de la notice ou du plan ; les repères (chapitre,
-# lignes) sont ceux de cette édition. Lié à l'entrée t-4-7 de l'index.
+# d'après la notice, le plan détaillé, la traduction et les notes de Luc Brisson
+# et Jean-François Pradeau, dans Plotin, Traités 1-6, GF-Flammarion, 2002. Les
+# citations viennent de cette traduction ; les repères sont ceux de son plan
+# (le chapitre 8 y est suivi de cinq chapitres numérotés 8¹ à 8⁵). Lié à
+# l'entrée t-4-7 de l'index.
+#
+# Refonte du 2026-10-16 selon la skill cours-traite (sans NotebookLM). Les
+# points ont de nouveaux identifiants (-q) : la progression repart de zéro.
 
 id: traite2
 title: "Traité 2 (IV, 7) : Sur l'immortalité de l'âme"
@@ -11,273 +15,998 @@ icon: compass
 color: sky
 lessons:
 - id: traite2-l1
-  title: "L'âme, point nodal de la réalité"
-  notes: |-
-    **Toute la tradition ancienne faisait de la définition de l'âme la condition d'une définition de l'homme**, mais aussi de l'étude des vivants (tous sont des corps animés) et de l'explication du monde (qui, pour beaucoup, a une âme). Plotin inscrit à son tour l'enquête sur l'âme à la croisée de l'**éthique**, de la **biologie** et de la **cosmologie**.
-
-    **Pour Plotin, l'âme est en outre le point nodal de la réalité :** elle est le **terme de la procession** qui, issue de l'Un et passant par l'Intellect, s'achève avec elle. En deçà de l'âme, rien n'a de réalité au sens strict : les corps n'existent que pour autant qu'une âme les informe et les anime. L'âme est à la fois **cause de l'univers sensible** et, en nous, **sujet de la connaissance** de l'intelligible.
-
-    - Le traité 2, avec les traités 4 (IV, 2) et 21 (IV, 1) qui en sont la suite, ne traite ces questions que partiellement ; les trois traités *Sur les difficultés relatives à l'âme*, 27 à 29 (IV, 3-5), poursuivront l'enquête.
-    - Les traités 2 et 4 prennent un tour **« doxographique »** : Plotin examine les opinions (`doxai`) des prédécesseurs pour les réfuter, avant de défendre sa propre définition, platonicienne et donc vraie à ses yeux.
-
-    ! Être le dernier degré de la procession ne rend pas l'âme secondaire : c'est elle qui cause le sensible et qui connaît l'intelligible.
-  points:
-  - id: traite2-l1-p1
-    sentence: "Plotin inscrit l'enquête sur l'âme à la croisée de questions éthiques, ___ et cosmologiques, comme ses prédécesseurs platoniciens."
-    answer: "biologiques"
-    alt: []
-  - id: traite2-l1-p2
-    sentence: "Dans la doctrine de Plotin, l'âme est le ___ de la procession qui, issue de l'Un et passant par l'Intellect, s'achève avec elle."
-    answer: "terme"
-    alt: ["dernier degré"]
-  - id: traite2-l1-p3
-    sentence: "Pour Plotin, l'âme est la cause de l'univers sensible et, en nous, le sujet de la connaissance véritable, dont l'objet est l'___."
-    answer: "intelligible"
-    alt: []
-  - id: traite2-l1-p4
-    sentence: "Les traités 4 (IV, 2) et ___ (IV, 1) sont la suite du traité 2, *Sur l'immortalité de l'âme*."
-    answer: "21"
-    alt: []
-  - id: traite2-l1-p5
-    sentence: "Les trois traités 27 à 29 (IV, 3-5), qui poursuivront l'enquête sur l'âme ouverte par le traité 2, s'intitulent *Sur les ___ relatives à l'âme*."
-    answer: "difficultés"
-    alt: ["difficultes"]
-  - id: traite2-l1-p6
-    sentence: "Les traités 2 et 4 de Plotin prennent un tour « ___ » : Plotin y examine les opinions des prédécesseurs pour les réfuter avant de défendre sa propre définition de l'âme."
-    answer: "doxographique"
-    alt: []
-  - id: traite2-l1-p7
-    sentence: "Le terme grec pour les opinions des prédécesseurs que Plotin examine dans le traité 2 est ___."
-    answer: "doxai"
-    alt: []
-- id: traite2-l2
-  title: "Nous sommes notre âme : une réalité autarcique"
-  notes: |-
-    **Plotin justifie l'hypothèse platonicienne selon laquelle c'est l'âme qui définit l'homme, et le corps est l'instrument de l'âme immortelle qui le gouverne** (comme le disait l'*Alcibiade*). Les deux premiers chapitres établissent que l'âme, ce que nous sommes en propre, est immortelle, et donc distincte du corps.
-
-    - **L'erreur commune des atomistes et des stoïciens** est d'avoir défini l'âme comme un corps : ils ne peuvent plus rendre compte de la vie ni des fonctions du vivant (locomotion, sensation, pensée).
-    - Plotin retrouve la leçon du *Phédon* (102a-105e) et de la *République* (X, 608c-612a) : l'âme est essentiellement vivante et ne peut mourir. Il va plus loin : elle est vivante **« par elle-même »**, et même elle « est par elle-même ».
-    - L'âme est donc une **réalité autarcique** : comme l'Un et l'Intellect, elle vérifie l'axiome selon lequel une réalité (`ousia`) véritable est **cause de sa propre existence**. Le corps, lui, est produit et doit être animé.
-
-    **L'âme ne travaille pas la matière comme un artisan :** refusant le paradigme du démiurge, Plotin place entre l'âme et la matière les **« formules rationnelles » (`logoi`)** qui, issues de l'âme, s'avancent dans la matière pour l'informer. L'âme instruit la matière comme un **pédagogue** forme son élève.
-
-    | Niveau | Ce qu'il est |
-    | la matière | parfaitement indéterminée |
-    | les corps | formés par les raisons de l'âme |
-    | l'âme | la cause du sensible dans sa totalité |
-
-    ! La raison qui ordonne le monde n'est pas corporelle et immanente à la nature, comme chez les stoïciens : elle est la détermination que l'âme du monde impose à la matière.
-  points:
-  - id: traite2-l2-p1
-    sentence: "Plotin reprend l'hypothèse platonicienne de l'*Alcibiade* : le corps est l'___ de l'âme immortelle qui le gouverne."
-    answer: "instrument"
-    alt: []
-  - id: traite2-l2-p2
-    sentence: "Au chapitre 1 du traité 2 de Plotin, que l'âme ait à l'égard du corps le statut de la forme ou celui de l'usager, dans les deux cas l'âme est le ___."
-    answer: "soi"
-    alt: []
-  - id: traite2-l2-p3
-    sentence: "Plotin donne plus de poids que Platon à l'immortalité de l'âme : elle n'est pas seulement vivante, elle est vivante « par ___ »."
-    answer: "elle-même"
-    alt: []
-  - id: traite2-l2-p4
-    sentence: "Parce qu'elle n'a besoin de rien d'autre qu'elle-même pour vivre, l'âme est pour Plotin une réalité ___."
-    answer: "autarcique"
-    alt: []
-  - id: traite2-l2-p5
-    sentence: "Comme l'Un et l'Intellect, l'âme vérifie selon Plotin l'axiome selon lequel une réalité (`ousia`) véritable est cause de sa propre ___."
-    answer: "existence"
-    alt: []
-  - id: traite2-l2-p6
-    sentence: "Refusant le paradigme du démiurge qui travaille son matériau, Plotin place entre l'âme et la matière les « formules rationnelles », en grec ___."
-    answer: "logoi"
-    alt: []
-  - id: traite2-l2-p7
-    sentence: "Pour Plotin, l'âme du monde n'informe pas la matière en la travaillant comme un artisan, mais en l'instruisant comme un ___ forme son élève."
-    answer: "pédagogue"
-    alt: ["pedagogue"]
-  - id: traite2-l2-p8
-    sentence: "La cosmologie plotinienne repose sur la triple distinction de la ___, parfaitement indéterminée, des corps formés par les raisons, et de l'âme, cause du sensible."
-    answer: "matière"
-    alt: ["matiere"]
-- id: traite2-l3
-  title: "L'âme corporelle des stoïciens"
-  notes: |-
-    **La réfutation des chapitres 3 à 8³ s'en prend à la doctrine stoïcienne selon laquelle l'âme est un « souffle (`pneûma`) corporel »**, divisé en parties répandues dans tout le vivant. Les objections de Plotin sont pour la plupart d'**origine aristotélicienne** : il s'appuie sur le livre I du traité *De l'âme* d'Aristote et sur le traité homonyme d'**Alexandre d'Aphrodise**. Le traité 2 est ainsi devenu un document doxographique de première importance sur le stoïcisme.
-
-    **Dire, comme les stoïciens, que l'âme est un souffle « d'une certaine manière »** ne sauve rien : on ne peut plus rendre compte ni du mouvement ni de l'organisation des corps. L'existence même d'un corps suppose un principe incorporel, une âme indivisible qui agit sur lui sans subir ses changements.
-
-    Les raisons sont surtout **« psychologiques »** :
-
-    - **la mémoire** : sans âme séparée, rien de ce que perçoit le corps ne serait conservé (les sens n'ont pas de mémoire propre) ;
-    - **la sensation** : les perceptions ne seraient pas associées en la sensation d'un même objet ;
-    - **la pensée** : il est impossible de l'imputer à un corps ;
-    - **la qualité** psychique se distingue de la **quantité** corporelle (chap. 8¹).
-
-    ! La plupart des armes de Plotin contre les stoïciens sont empruntées à Aristote, qu'il réfutera pourtant au chapitre 8⁵.
-  points:
-  - id: traite2-l3-p1
-    sentence: "Pour les stoïciens, que réfute le traité 2 de Plotin, l'âme est un « souffle corporel », en grec ___."
-    answer: "pneûma"
-    alt: ["pneuma"]
-  - id: traite2-l3-p2
-    sentence: "Les objections que le traité 2 adresse aux stoïciens sont pour la plupart d'origine ___ (le livre I du *De l'âme*)."
-    answer: "aristotélicienne"
-    alt: ["aristotelicienne"]
-  - id: traite2-l3-p3
-    sentence: "Pour réfuter l'âme corporelle des stoïciens, Plotin suit le traité *De l'âme* du commentateur aristotélicien ___ (fin IIe-début IIIe siècle)."
-    answer: "Alexandre d'Aphrodise"
-    alt: []
-  - id: traite2-l3-p4
-    sentence: "Les stoïciens nuancent leur thèse en disant que l'âme est un souffle « d'une certaine ___ » : Plotin juge que cela ne permet toujours pas d'expliquer le mouvement et l'organisation des corps."
-    answer: "manière"
-    alt: ["maniere"]
-  - id: traite2-l3-p5
-    sentence: "Si l'âme n'était pas séparée du corps, objecte Plotin dans le traité 2, rien de ce que perçoit le corps ne serait conservé : les sens n'ont pas de ___ propre."
-    answer: "mémoire"
-    alt: ["memoire"]
-  - id: traite2-l3-p6
-    sentence: "Contre les stoïciens, Plotin distingue la qualité psychique de la ___ corporelle (traité 2, chap. 8¹)."
-    answer: "quantité"
-    alt: ["quantite"]
-  - id: traite2-l3-p7
-    sentence: "La réfutation de la définition stoïcienne de l'âme occupe, dans le traité 2, les chapitres 3 à ___."
-    answer: "8³"
-    alt: ["8^3", "83"]
-- id: traite2-l4
-  title: "Harmonie et entéléchie : les chapitres 8⁴ et 8⁵"
-  notes: |-
-    **La même exigence de séparer l'âme et le corps commande la réfutation des définitions pythagoricienne et aristotélicienne de l'âme.** Selon les stoïciens, âme et corps sont intimement mélangés dans le vivant : c'est risquer de ne plus distinguer leurs puissances, ni même de rendre compte des corps (chap. 8¹).
-
-    - **Chapitre 8⁴** : l'âme n'est pas une **« harmonie »**, comme le voulaient les pythagoriciens ; la réfutation est rapide.
-    - **Chapitre 8⁵** : l'âme n'est pas l'**« entéléchie »** (la réalisation) du corps, comme le voulait Aristote. La réfutation est plus difficile et ambiguë, car Plotin doit beaucoup à Aristote : il reprend les fonctions de l'âme décrites dans le *De l'âme*.
-
-    **Les aristotéliciens ont au moins le mérite d'accorder qu'une partie de l'âme existe séparément du corps et est immortelle.** Mais il faudrait admettre que l'âme n'est en aucune de ses parties la « forme d'un corps » : elle est la réalité incorporelle qui produit tous les corps en informant la matière.
-
-    **Pourquoi des chapitres 8¹ à 8⁵ ?** Ils manquaient dans les manuscrits sur lesquels travaillait **Marsile Ficin**, auteur de la première numérotation des chapitres. On les connaît par certains manuscrits et par la *Préparation évangélique* d'**Eusèbe** (XV, 22 pour les quatre premiers, XV, 10 pour le dernier).
-
-    ! L'ordre du texte est 8, 8¹, 8², 8³, 8⁴, 8⁵, puis 9 : la numérotation trahit une lacune des manuscrits, pas un ordre de lecture.
-  points:
-  - id: traite2-l4-p1
-    sentence: "La définition pythagoricienne de l'âme que réfute le chapitre 8⁴ du traité 2 en fait une ___."
-    answer: "harmonie"
-    alt: []
-  - id: traite2-l4-p2
-    sentence: "La définition aristotélicienne de l'âme que réfute le chapitre 8⁵ du traité 2 en fait l'___ du corps, c'est-à-dire sa réalisation."
-    answer: "entéléchie"
-    alt: ["enteleche", "entelechie"]
-  - id: traite2-l4-p3
-    sentence: "La réfutation de l'âme comme entéléchie est, dans le traité 2, difficile et ambiguë, parce que Plotin est grandement tributaire d'___ et de ses commentateurs."
-    answer: "Aristote"
-    alt: []
-  - id: traite2-l4-p4
-    sentence: "À la différence des stoïciens, les aristotéliciens accordent qu'une ___ de l'âme existe séparément du corps et est immortelle."
-    answer: "partie"
-    alt: []
-  - id: traite2-l4-p5
-    sentence: "Pour Plotin, l'âme n'est en aucune de ses parties la « ___ d'un corps » : elle est la réalité incorporelle qui produit tous les corps."
-    answer: "forme"
-    alt: []
-  - id: traite2-l4-p6
-    sentence: "Les chapitres 8¹ à 8⁵ du traité 2 manquaient dans les manuscrits de ___, auteur de la première numérotation des chapitres de Plotin."
-    answer: "Marsile Ficin"
-    alt: ["Ficin"]
-  - id: traite2-l4-p7
-    sentence: "Les chapitres 8¹ à 8⁵ du traité 2 sont connus notamment par la citation qu'en donne la *Préparation évangélique* d'___."
-    answer: "Eusèbe"
-    alt: ["Eusebe"]
-- id: traite2-l5
-  title: "Divine, immortelle, intelligible : une descente partielle"
-  notes: |-
-    **La réfutation s'achève sur le constat d'une altérité tranchée : l'âme est d'une « autre nature » que corporelle.** Les chapitres 9 à 12 répètent qu'elle est une réalité **divine**, **incorporelle** et **intelligible**. Seule l'âme a une existence (une `hupostasis`) ; le corps en est dépourvu.
-
-    - L'incorporation n'est pas un « mélange » de deux natures homogènes : c'est une **production du corps par l'âme**, et la vie est l'effet de l'existence, du mouvement et du soin que le producteur donne à son produit.
-    - Plotin lit la fin du livre X de la *République* (608c sq.) : l'incorporation est pour l'âme une **mutilation**, sans que sa véritable nature soit modifiée.
-    - Le paradoxe n'est qu'apparent : l'âme, troublée par son activité auprès des corps, ne quitte pas sa nature et son lieu propre, l'intelligible. Elle appartient à l'intelligible (chap. 10) et ne quitte pas son principe (chap. 13) : sa **« descente dans les corps »** n'est que **partielle**.
-
-    **Pourquoi l'âme descend-elle ?** Le chapitre 13 l'impute rapidement à un **désir** de l'âme : produire un ordre conforme à ce qu'elle voit dans l'intelligible. Plotin avoue que cela ne résout pas tout, mais la solution restera : l'âme produit les corps sans quitter l'Intellect, son géniteur, et cette production est pour elle une **nécessité**.
-
-    ! Ce qui « descend » n'est pas l'âme entière, mais la part d'elle-même qui « s'avance » dans les corps ; l'âme subsiste essentiellement hors d'eux.
-  points:
-  - id: traite2-l5-p1
-    sentence: "Au terme des réfutations du traité 2, l'âme est d'une « ___ nature » que corporelle."
-    answer: "autre"
-    alt: []
-  - id: traite2-l5-p2
-    sentence: "Pour Plotin, seule l'âme a une existence véritable, en grec une ___, quand le corps en est dépourvu."
-    answer: "hupostasis"
-    alt: []
-  - id: traite2-l5-p3
-    sentence: "Pour Plotin, l'incorporation de l'âme n'est pas un mélange de deux natures homogènes, mais une ___ du corps par l'âme."
-    answer: "production"
-    alt: []
-  - id: traite2-l5-p4
-    sentence: "Lisant la fin du livre X de la *République* (608c sq.), Plotin retient que l'incorporation est pour l'âme une forme de ___, sans que sa véritable nature en soit modifiée."
-    answer: "mutilation"
-    alt: []
-  - id: traite2-l5-p5
-    sentence: "Pour le traité 2 de Plotin, la « descente dans les corps » de l'âme n'est que partielle ou ___ : l'âme ne quitte pas l'intelligible."
-    answer: "relative"
-    alt: []
-  - id: traite2-l5-p6
-    sentence: "Le chapitre 13 du traité 2 impute l'incorporation à un ___ de l'âme : produire un ordre conforme à ce qu'elle voit dans l'intelligible."
-    answer: "désir"
-    alt: ["desir"]
-  - id: traite2-l5-p7
-    sentence: "Selon la solution du traité 2, que les traités ultérieurs garderont, l'âme produit les corps sans quitter l'___, son principe et son géniteur."
-    answer: "Intellect"
-    alt: []
-  - id: traite2-l5-p8
-    sentence: "Pour Plotin, la production des corps n'est pas pour l'âme un choix arbitraire mais une ___."
-    answer: "nécessité"
-    alt: ["necessite"]
-- id: traite2-l6
   title: "Repérage : le plan du traité 2"
   notes: |-
-    **Le traité 2 pose la question (chap. 1-2), réfute les définitions rivales de l'âme (chap. 3 à 8⁵), puis dit sa nature (chap. 9-12) et sa venue dans le corps (chap. 13-15).**
+    Le traité 2 va de la question (sommes-nous immortels ?) à la réponse (nous sommes notre âme, et elle est immortelle) par un long détour : la réfutation de ceux qui font de l'âme un corps ou quelque chose du corps.
+
+    **Le chapitre 1 pose la question** et la ramène à une autre : qu'est-ce que l'âme ? **Les chapitres 2 à 8³ réfutent l'âme-corps** : les atomes des épicuriens, puis surtout le souffle des stoïciens, attaqué argument par argument (la vie, l'ordre, la croissance, la sensation, la douleur, la pensée, la vertu, le mélange). **Les chapitres 8⁴ et 8⁵ écartent l'âme comme forme du corps** : l'harmonie des pythagoriciens, l'entéléchie d'Aristote. **Les chapitres 9 à 12 disent ce qu'est l'âme** : une réalité qui a la vie par elle-même, divine, indestructible. **Les chapitres 13 à 15 répondent à la difficulté qui en naît** : comment une telle réalité vient-elle dans un corps ?
 
     | Moment | Lieu | Ce qui s'y joue |
-    | sommes-nous immortels | chap. 1 | le corps est mortel, notre âme ne l'est pas |
-    | l'âme n'est pas un corps | chap. 2 | l'âme est la cause de l'existence des corps |
-    | contre les épicuriens | chap. 3 | l'âme n'est pas faite d'atomes |
-    | ni souffle ni manière d'être | chap. 4-5 | contre l'âme corporelle des stoïciens |
-    | ni sensation ni pensée | chap. 6-8 | si l'âme était un corps, ni sensation ni pensée |
-    | ni quantité ni mélange | chap. 8¹-8³ | l'âme et l'intellect antérieurs au corps |
-    | contre l'harmonie | chap. 8⁴ | la définition pythagoricienne |
-    | contre l'entéléchie | chap. 8⁵ | la définition aristotélicienne |
-    | la nature de l'âme | chap. 9-12 | principe de vie, divine, immortelle |
-    | la venue dans le corps | chap. 13 | l'âme du monde produit et dirige sans être dans le corps |
-    | la survie des âmes | chap. 14-15 | les âmes subsistent séparément des corps |
+    | sommes-nous immortels ? | chap. 1 | nous sommes notre âme ; le corps se dissout |
+    | la vie et les éléments | chap. 2 | aucune composition de corps ne produit la vie |
+    | atomes et souffle | chap. 3 | une juxtaposition ne fait pas une âme ; la matière ne s'anime pas seule |
+    | la « manière d'être » | chap. 4 | le souffle « disposé » est une raison ; l'âme produit des effets contraires |
+    | croissance et quantité | chap. 5 | la partie de l'âme est identique au tout |
+    | la sensation | chap. 6 | ce qui sent doit être un, comme un centre |
+    | la douleur | chap. 7 | la douleur du doigt ne se transmet pas de proche en proche |
+    | la pensée et la vertu | chap. 8 | penser, c'est saisir sans le corps |
+    | qualité et quantité | chap. 8¹ | la douceur du miel est entière en chaque partie |
+    | le mélange total | chap. 8² | un corps ne peut en pénétrer un autre en totalité |
+    | la nature avant l'âme ? | chap. 8³ | la puissance ne passe à l'acte que par un acte antérieur |
+    | l'harmonie | chap. 8⁴ | il faut un musicien avant l'harmonie |
+    | l'entéléchie | chap. 8⁵ | l'âme est avant d'appartenir au corps |
+    | la vie par soi | chap. 9 | l'âme est principe du mouvement et a la vie par elle-même |
+    | l'âme purifiée | chap. 10 | les maux sont des ajouts ; l'âme est divine |
+    | l'indestructible | chap. 11-12 | ni dissoute, ni divisée, ni altérée |
+    | la venue dans le corps | chap. 13 | l'âme produit un ordre sans quitter l'intelligible |
+    | les autres âmes | chap. 14 | rien de ce qui vient de ce qui est ne périt |
+    | la preuve par l'opinion | chap. 15 | oracles et culte des morts |
 
-    Les repères suivent le plan détaillé qui accompagne la traduction. Le tableau se joue en repérage : remettre les moments dans l'ordre du traité, puis replacer leurs repères, puis en écrire un.
-
-    ! Les chapitres 8¹ à 8⁵ viennent entre le chapitre 8 et le chapitre 9 : absents des manuscrits de Ficin, qui a numéroté les chapitres, ils portent un exposant.
+    ! La réfutation occupe l'essentiel du traité : Plotin ne dit ce qu'est l'âme (chap. 9-12) qu'après avoir montré ce qu'elle ne peut pas être.
   points:
-  - id: traite2-l6-p1
-    sentence: "Dans le traité 2 de Plotin, la réfutation de la définition épicurienne de l'âme (des atomes) se trouve au ___."
+  - id: traite2-l1-q1
+    sentence: "Dans le traité 2 de Plotin, *Sur l'immortalité de l'âme*, la question de savoir si nous sommes entièrement, partiellement ou pas du tout immortels est posée au ___."
+    answer: "chap. 1"
+    alt: ["1", "chapitre 1"]
+  - id: traite2-l1-q2
+    sentence: "Dans le traité 2 de Plotin, l'argument selon lequel aucune composition des quatre éléments, inanimés par eux-mêmes, ne peut produire la vie se trouve au ___."
+    answer: "chap. 2"
+    alt: ["2", "chapitre 2"]
+  - id: traite2-l1-q3
+    sentence: "Dans le traité 2 de Plotin, la réfutation de l'âme faite d'atomes, puis de l'âme comme « affection de la matière », se trouve au ___."
     answer: "chap. 3"
     alt: ["3", "chapitre 3"]
-  - id: traite2-l6-p2
-    sentence: "Dans le traité 2 de Plotin, l'argument « si l'âme était un corps, il n'y aurait pas de pensée » se trouve au ___."
-    answer: "chap. 8"
-    alt: ["8", "chapitre 8"]
-  - id: traite2-l6-p3
-    sentence: "Dans le traité 2 de Plotin, la réfutation de l'âme comme harmonie, définition pythagoricienne, se trouve au ___."
+  - id: traite2-l1-q4
+    sentence: "Dans le traité 2 de Plotin, le dilemme sur le souffle « disposé d'une certaine manière » se trouve au ___."
+    answer: "chap. 4"
+    alt: ["4", "chapitre 4"]
+  - id: traite2-l1-q5
+    sentence: "Dans le traité 2 de Plotin, l'exemple des jumeaux nés d'une seule semence, qui montre que la partie de l'âme est identique au tout, se trouve au ___."
+    answer: "chap. 5"
+    alt: ["5", "chapitre 5"]
+  - id: traite2-l1-q6
+    sentence: "Dans le traité 2 de Plotin, l'argument de la douleur au doigt, contre la transmission stoïcienne des sensations, se trouve au ___."
+    answer: "chap. 7"
+    alt: ["7", "chapitre 7"]
+  - id: traite2-l1-q7
+    sentence: "Dans le traité 2 de Plotin, la réfutation de l'âme-harmonie des pythagoriciens occupe le ___."
     answer: "chap. 8⁴"
-    alt: ["8⁴", "8^4", "chap. 8^4", "chapitre 8⁴", "84"]
-  - id: traite2-l6-p4
-    sentence: "Dans le traité 2 de Plotin, la réfutation de l'âme comme entéléchie, définition aristotélicienne, se trouve au ___."
+    alt: ["8^4", "84", "chapitre 8⁴"]
+  - id: traite2-l1-q8
+    sentence: "Dans le traité 2 de Plotin, la réfutation de l'âme-entéléchie d'Aristote occupe le ___."
     answer: "chap. 8⁵"
-    alt: ["8⁵", "8^5", "chap. 8^5", "chapitre 8⁵", "85"]
-  - id: traite2-l6-p5
-    sentence: "Dans le traité 2 de Plotin, la nature de l'âme (principe de vie, divine, immortelle, indivisible) est exposée aux ___."
-    answer: "chap. 9-12"
-    alt: ["9-12", "chapitres 9 à 12"]
-  - id: traite2-l6-p6
-    sentence: "Dans le traité 2 de Plotin, la question de la venue de l'âme dans le corps, imputée à un désir de l'âme, est traitée au ___."
+    alt: ["8^5", "85", "chapitre 8⁵"]
+  - id: traite2-l1-q9
+    sentence: "Dans le traité 2 de Plotin, l'âme purifiée qui se découvre divine, comme une statue dont on ôte le vert-de-gris, est l'objet du ___."
+    answer: "chap. 10"
+    alt: ["10", "chapitre 10"]
+  - id: traite2-l1-q10
+    sentence: "Dans le traité 2 de Plotin, la question de savoir comment l'âme vient dans le corps est traitée au ___."
     answer: "chap. 13"
     alt: ["13", "chapitre 13"]
-  - id: traite2-l6-p7
-    sentence: "Dans le traité 2 de Plotin, les chapitres 8¹ à 8⁵ se lisent entre le chapitre 8 et le chapitre ___."
-    answer: "9"
+  - id: traite2-l1-q11
+    sentence: "Dans l'édition GF, le chapitre 8 du traité 2 est suivi de cinq chapitres numérotés 8¹ à 8⁵, absents des manuscrits qu'utilisait ___, auteur de la première numérotation des chapitres."
+    answer: "Marsile Ficin"
+    alt: ["Ficin"]
+- id: traite2-l2
+  title: "La question : sommes-nous immortels ? (chap. 1)"
+  notes: |-
+    Le chapitre 1 ouvre le traité en déplaçant la question : savoir si nous sommes immortels, c'est d'abord savoir **ce que nous sommes**. Si nous sommes notre corps, nous périssons ; si nous sommes notre âme, tout dépend de ce qu'est l'âme.
+
+    **Trois réponses sont possibles** : chacun de nous est immortel, ou entièrement détruit, ou en partie seulement, {red}certaines parties se dispersant{/red} tandis que {green}celles qui sont « ce que nous sommes nous-mêmes » subsistent{/green}. Plotin veut trancher **« conformément à la nature »**, c'est-à-dire par l'examen de ce que sont les choses, et non par la foi ou la tradition (qui ne viendront qu'en annexe, chap. 15).
+
+    **Premier constat : le corps ne peut pas durer.** Il est composé, et ce qui est composé peut se défaire ; la sensation elle-même montre qu'il se divise, se disperse, que ses éléments retournent chacun à leur lieu, surtout quand l'âme, qui les tenait rassemblés, n'est plus là : c'est le cadavre qui se décompose. Même un corps simple n'est pas vraiment un, puisqu'il se divise encore en **forme et matière**, et qu'ayant une grandeur il est divisible à l'infini. Donc, {red}si le corps est une partie de nous, nous ne sommes pas entièrement immortels{/red}.
+
+    **Second constat : le corps n'est pas ce que nous sommes.** Qu'on pense le rapport de l'âme et du corps à la manière d'Aristote (comme la {violet}forme{/violet} et la {violet}matière{/violet}) ou à la manière de l'*{sky}Alcibiade{/sky}* de Platon (comme l'{violet}usager{/violet} et l'{violet}instrument{/violet}), le résultat est le même : ce qui commande, ce qui donne au tout son identité, c'est l'âme. {teal}« Dans les deux cas de figure, l'âme est le soi »{/teal}. On n'a donc pas à choisir entre les deux modèles : il suffit qu'ils s'accordent sur ce point.
+
+    **Il reste à savoir ce qu'est l'âme**, et c'est tout l'objet du traité. Si elle est un corps, elle se défait comme lui ; si elle est « d'une autre nature », il faudra montrer laquelle. D'où le plan : réfuter d'abord ceux qui font de l'âme un corps (chap. 2-8³), puis dire ce qu'elle est (chap. 9-12).
+
+    ! Plotin ne méprise pas le corps : il en fait l'instrument de l'âme, qu'elle produit et dont elle prend soin. Ce qu'il refuse, c'est d'y voir ce que nous sommes.
+  points:
+  - id: traite2-l2-q1
+    sentence: "Le traité 2 pose la question de notre immortalité, et entend la trancher en examinant la chose « ___ », c'est-à-dire par l'examen de ce que sont les choses."
+    answer: "conformément à la nature"
+    alt: []
+  - id: traite2-l2-q2
+    sentence: "Le corps ne peut durer, car étant lui-même ___, il ne saurait avoir la puissance de perdurer (chap. 1)."
+    answer: "composé"
+    alt: []
+  - id: traite2-l2-q3
+    sentence: "Même un corps simple n'est pas vraiment un, car il peut encore se diviser en une ___ et en une matière (chap. 1)."
+    answer: "forme"
+    alt: []
+  - id: traite2-l2-q4
+    sentence: "Si le corps est une partie de nous-mêmes, nous ne sommes pas ___ immortels (chap. 1)."
+    answer: "entièrement"
+    alt: []
+  - id: traite2-l2-q5
+    sentence: "« Mais la partie la plus importante de nous, c'est **___**, s'il est vrai que cette partie doit avoir à l'égard du corps le statut qui est celui de __la forme par rapport à la matière__, ou bien encore celui de __l'usager par rapport à l'instrument__ ; dans les deux cas de figure, **l'âme est le soi**. » (chap. 1)"
+    answer: "l'homme lui-même"
+    alt: []
+  - id: traite2-l2-q6
+    sentence: "« Mais la partie la plus importante de nous, c'est **l'homme lui-même**, s'il est vrai que cette partie doit avoir à l'égard du corps le statut qui est celui de ___, ou bien encore celui de __l'usager par rapport à l'instrument__ ; dans les deux cas de figure, **l'âme est le soi**. » (chap. 1)"
+    answer: "la forme par rapport à la matière"
+    alt: []
+  - id: traite2-l2-q7
+    sentence: "« Mais la partie la plus importante de nous, c'est **l'homme lui-même**, s'il est vrai que cette partie doit avoir à l'égard du corps le statut qui est celui de __la forme par rapport à la matière__, ou bien encore celui de ___ ; dans les deux cas de figure, **l'âme est le soi**. » (chap. 1)"
+    answer: "l'usager par rapport à l'instrument"
+    alt: []
+  - id: traite2-l2-q8
+    sentence: "« Mais la partie la plus importante de nous, c'est **l'homme lui-même**, s'il est vrai que cette partie doit avoir à l'égard du corps le statut qui est celui de __la forme par rapport à la matière__, ou bien encore celui de __l'usager par rapport à l'instrument__ ; dans les deux cas de figure, **___**. » (chap. 1)"
+    answer: "l'âme est le soi"
+    alt: []
+  - id: traite2-l2-q9
+    sentence: "La définition du corps comme instrument de l'âme, que reprend le traité 2, vient de l'*___* de Platon : « l'âme est l'homme »."
+    answer: "Alcibiade"
+    alt: []
+  - id: traite2-l2-q10
+    sentence: "Le « soi », dans « l'âme est le soi » (chap. 1), rend le grec *___*, employé de façon substantivée comme dans l'*Alcibiade* à propos du « connais-toi toi-même »."
+    answer: "hautos"
+    alt: ["autos"]
+  - id: traite2-l2-q11
+    sentence: "Plotin n'a pas à choisir entre le modèle d'Aristote (la forme et la matière) et celui de l'*Alcibiade* (l'usager et l'instrument), car tous deux conduisent à la même conclusion : l'âme est le ___."
+    answer: "soi"
+    alt: []
+  - id: traite2-l2-q12
+    sentence: "Le traité 2 prend un tour « ___ » : Plotin y examine les opinions (*doxai*) de ses prédécesseurs et contemporains avant de défendre sa propre définition de l'âme, qu'il tient pour platonicienne."
+    answer: "doxographique"
+    alt: []
+- id: traite2-l3
+  title: "La vie ne naît pas d'une composition de corps (chap. 2)"
+  notes: |-
+    Le chapitre 2 ouvre la réfutation de l'âme-corps par l'argument le plus général : aucun assemblage de corps, si habile soit-il, ne peut donner la vie, parce que la vie n'est dans aucun des corps qu'on assemble.
+
+    **Supposons l'âme un corps.** Comme tout corps est composé, elle sera faite de deux corps ou plus. Or la vie est nécessairement en l'âme. Il faut donc se demander où est la vie dans ce composé : dans chacun de ses composants, dans l'un d'eux seulement, ou dans aucun.
+
+    **Les éléments sont inanimés par eux-mêmes.** Le feu, l'air, l'eau, la terre n'ont pas la vie : quand l'âme est présente en l'un d'eux, il ne la reçoit que **« par procuration »**, comme une chose importée du dehors (*epaktos*). Et ceux qui imaginent d'autres éléments, les atomes, en font encore des corps, non des âmes.
+
+    **D'où un dilemme sans issue.** {teal}« Si aucun d'entre eux ne possède la vie, il est absurde de supposer que leur composition l'a produite ; et si chacun la possédait, un seul y suffirait »{/teal}. Un tas de pierres mortes ne devient pas vivant parce qu'on le dispose bien ; et si l'une des pierres vivait, c'est elle qui serait l'âme, et les autres seraient de trop. Plus encore : {red}il est impossible que des choses dépourvues d'intellect engendrent l'Intellect{/red}.
+
+    **Il faut une cause du mélange.** Même les stoïciens ne disent pas que les corps se mélangent n'importe comment : il faut donc **un élément ordonnateur**, une cause qui règle le mélange, et cette cause « aura rang d'âme ». Plotin reprend ici le *{sky}Philèbe{/sky}* de Platon, où un intellect divin est la cause du mélange et de l'ordre du monde.
+
+    **L'argument va plus loin que la vie : il touche l'existence même des corps.** Même un corps simple n'existerait pas sans âme, car {green}« ce qui produit un corps, c'est la venue d'une raison dans la matière, et une raison ne peut venir d'ailleurs que d'une âme »{/green}. La raison (*logos*) est la forme que l'âme imprime dans la matière : sans elle, la matière, informe et sans qualité, ne serait jamais un corps. L'âme n'est donc pas un corps parmi d'autres : elle est **la cause de ce qui fait des corps des corps**.
+
+    ! L'argument ne nie pas que le vivant soit composé : il nie que la composition explique la vie. Elle en est la condition, pas la cause.
+  points:
+  - id: traite2-l3-q1
+    sentence: "Les quatre éléments (feu, air, eau, terre) sont par eux-mêmes ___ : lorsqu'une âme est présente en l'un d'eux, il ne reçoit la vie que par procuration (chap. 2)."
+    answer: "inanimés"
+    alt: []
+  - id: traite2-l3-q2
+    sentence: "Ce qui reçoit la vie de l'extérieur la reçoit « par procuration », en grec *___*, c'est-à-dire importée du dehors : ce qui la reçoit ainsi ne peut être dit immortel."
+    answer: "epaktos"
+    alt: ["epaktô", "epaktôi"]
+  - id: traite2-l3-q3
+    sentence: "« Or, si **___** d'entre eux ne possède la vie, il est absurde de supposer que __leur composition l'a produite__ ; et si **chacun** la possédait, __un seul y suffirait__. Mieux encore, il est impossible que la composition de corps produise **la vie** et que des choses dépourvues d'intellect engendrent **l'Intellect**. » (chap. 2)"
+    answer: "aucun"
+    alt: []
+  - id: traite2-l3-q4
+    sentence: "« Or, si **aucun** d'entre eux ne possède la vie, il est absurde de supposer que ___ ; et si **chacun** la possédait, __un seul y suffirait__. Mieux encore, il est impossible que la composition de corps produise **la vie** et que des choses dépourvues d'intellect engendrent **l'Intellect**. » (chap. 2)"
+    answer: "leur composition l'a produite"
+    alt: []
+  - id: traite2-l3-q5
+    sentence: "« Or, si **aucun** d'entre eux ne possède la vie, il est absurde de supposer que __leur composition l'a produite__ ; et si **___** la possédait, __un seul y suffirait__. Mieux encore, il est impossible que la composition de corps produise **la vie** et que des choses dépourvues d'intellect engendrent **l'Intellect**. » (chap. 2)"
+    answer: "chacun"
+    alt: []
+  - id: traite2-l3-q6
+    sentence: "« Or, si **aucun** d'entre eux ne possède la vie, il est absurde de supposer que __leur composition l'a produite__ ; et si **chacun** la possédait, ___. Mieux encore, il est impossible que la composition de corps produise **la vie** et que des choses dépourvues d'intellect engendrent **l'Intellect**. » (chap. 2)"
+    answer: "un seul y suffirait"
+    alt: []
+  - id: traite2-l3-q7
+    sentence: "« Or, si **aucun** d'entre eux ne possède la vie, il est absurde de supposer que __leur composition l'a produite__ ; et si **chacun** la possédait, __un seul y suffirait__. Mieux encore, il est impossible que la composition de corps produise **___** et que des choses dépourvues d'intellect engendrent **l'Intellect**. » (chap. 2)"
+    answer: "la vie"
+    alt: []
+  - id: traite2-l3-q8
+    sentence: "« Or, si **aucun** d'entre eux ne possède la vie, il est absurde de supposer que __leur composition l'a produite__ ; et si **chacun** la possédait, __un seul y suffirait__. Mieux encore, il est impossible que la composition de corps produise **la vie** et que des choses dépourvues d'intellect engendrent **___**. » (chap. 2)"
+    answer: "l'Intellect"
+    alt: []
+  - id: traite2-l3-q9
+    sentence: "Les corps ne se mélangent pas n'importe comment : il est nécessaire de poser un élément ___ et une cause du mélange, qui aura rang d'âme (chap. 2)."
+    answer: "ordonnateur"
+    alt: []
+  - id: traite2-l3-q10
+    sentence: "L'idée qu'un intellect divin est la cause du mélange et de l'ordre du monde, que Plotin reprend au chapitre 2 du traité 2, vient du ___ de Platon (30c-31a)."
+    answer: "Philèbe"
+    alt: []
+  - id: traite2-l3-q11
+    sentence: "Même un corps simple suppose l'âme : « ce qui produit un corps, c'est la venue d'une ___ dans la matière, et une raison ne peut venir d'ailleurs que d'une âme » (chap. 2)."
+    answer: "raison"
+    alt: []
+  - id: traite2-l3-q12
+    sentence: "La « raison » qui fait d'une matière un corps, et qui vient de l'âme, rend le terme grec *___*."
+    answer: "logos"
+    alt: []
+  - id: traite2-l3-q13
+    sentence: "Le premier argument du traité 2 contre l'âme-corps tient en une question : où est la vie dans le composé ? Si elle n'est dans aucun composant, la composition ne peut la produire ; si elle est dans un seul, c'est ___ qui est l'âme."
+    answer: "lui"
+    alt: []
+- id: traite2-l4
+  title: "Ni atomes ni souffle : la vie vient d'ailleurs que des corps (chap. 3)"
+  notes: |-
+    Le chapitre 3 répond aux deux matérialismes de l'époque : celui des épicuriens, réglé en quelques lignes, puis celui des stoïciens, plus subtil, que Plotin poursuivra jusqu'au chapitre 8³.
+
+    **Contre les atomes** (l. 1-6). Pour Épicure, l'âme est un corps de fines parties, des atomes répandus dans le corps et en « sympathie » avec lui. Mais des atomes rassemblés ne forment qu'une **juxtaposition**, non un tout : rien de ce qui est un et partage ses affections ne peut naître de corps qui n'éprouvent rien et ne s'unifient pas. Or {green}l'âme « partage ses affections avec elle-même »{/green} : quand j'ai mal au pied, c'est moi tout entier qui souffre. Un tas d'atomes, lui, ne souffre pas ensemble.
+
+    **Contre les stoïciens, un dilemme** (l. 6-fin). Admettons qu'ils disent : ce n'est pas la matière du corps qui vit, puisqu'elle est sans qualité, mais ce qui en lui « a rang de forme ».
+
+    - Si cette forme est **la réalité** du vivant, alors cette réalité, c'est l'âme, et elle n'est pas un corps : si elle en était un, il faudrait la diviser à nouveau en matière et forme, à l'infini.
+    - Si elle n'est qu'**une affection de la matière**, d'où vient-elle ? {red}« La matière ne se configure pas elle-même, pas plus qu'elle ne se donne une âme à elle-même. »{/red}
+
+    **Il faut donc un donateur de vie hors des corps.** Plotin le dit d'une image : ce qui dispense la vie est comme le **chorège** qui, à Athènes, finançait et fournissait un chœur. Et sans cette **« puissance psychique »**, il n'y aurait même pas de corps.
+
+    **Le souffle est le pire candidat.** Tout corps **« s'écoule »** (Héraclite) et périrait aussitôt si tout était corps. Le souffle (*pneuma*), mélange d'air et de feu dont les stoïciens font l'âme, est {red}« le corps le plus divisible qui soit »{/red} et n'a par lui-même aucune unité : lui confier la cohésion de l'univers, c'est livrer le monde au hasard. Quel ordre, quelle raison, quel intellect dans un souffle qui a lui-même besoin d'être ordonné ? Si l'âme existe, au contraire, les corps deviennent ses **auxiliaires** dans l'ordonnancement du monde.
+
+    ! « Chorège » ne veut pas dire que l'âme possède la vie comme une richesse qu'elle distribuerait et perdrait : elle la donne sans s'appauvrir, parce qu'elle l'a par elle-même (chap. 9).
+  points:
+  - id: traite2-l4-q1
+    sentence: "Pour Plotin, des atomes rassemblés ne forment qu'une ___, mais pas un tout : rien de ce qui est un et partage ses affections ne peut naître de corps impassibles (chap. 3)."
+    answer: "juxtaposition"
+    alt: []
+  - id: traite2-l4-q2
+    sentence: "Contre les atomistes, Plotin rappelle que l'âme « ___ avec elle-même » : quand une partie souffre, c'est l'être tout entier qui souffre (chap. 3)."
+    answer: "partage ses affections"
+    alt: []
+  - id: traite2-l4-q3
+    sentence: "Pour ___, l'âme est un corps composé de fines parties, si fines qu'elles sont en sympathie avec le reste de l'agrégat."
+    answer: "Épicure"
+    alt: ["Epicure"]
+  - id: traite2-l4-q4
+    sentence: "Si la vie vient de ce qui, dans le corps, « a rang de ___ », et si c'est là sa réalité, alors cette réalité est l'âme, et elle n'est pas un corps (chap. 3)."
+    answer: "forme"
+    alt: []
+  - id: traite2-l4-q5
+    sentence: "Si l'âme n'est qu'une « affection de la matière », il faut dire d'où elle vient, car la matière ne se ___ pas elle-même, pas plus qu'elle ne se donne une âme (chap. 3)."
+    answer: "configure"
+    alt: []
+  - id: traite2-l4-q6
+    sentence: "« Il faut donc qu'il y ait quelque chose qui **___**, que ce soit à la matière qu'il la dispense ou à un corps quelconque, et cette chose doit exister __en dehors et au-delà de toute nature corporelle__. Car il n'y aurait pas même de corps s'il n'existait pas une **puissance psychique**. » (chap. 3)"
+    answer: "dispense la vie"
+    alt: []
+  - id: traite2-l4-q7
+    sentence: "« Il faut donc qu'il y ait quelque chose qui **dispense la vie**, que ce soit à la matière qu'il la dispense ou à un corps quelconque, et cette chose doit exister ___. Car il n'y aurait pas même de corps s'il n'existait pas une **puissance psychique**. » (chap. 3)"
+    answer: "en dehors et au-delà de toute nature corporelle"
+    alt: []
+  - id: traite2-l4-q8
+    sentence: "« Il faut donc qu'il y ait quelque chose qui **dispense la vie**, que ce soit à la matière qu'il la dispense ou à un corps quelconque, et cette chose doit exister __en dehors et au-delà de toute nature corporelle__. Car il n'y aurait pas même de corps s'il n'existait pas une **___**. » (chap. 3)"
+    answer: "puissance psychique"
+    alt: []
+  - id: traite2-l4-q9
+    sentence: "Ce qui « dispense » la vie aux corps est pensé sur le modèle du ___, ce citoyen riche qui, dans la Grèce classique, finançait et fournissait un chœur."
+    answer: "chorège"
+    alt: ["chorege", "khorêgos"]
+  - id: traite2-l4-q10
+    sentence: "« Le corps s'___ et sa nature réside dans le mouvement » (chap. 3) : Plotin reprend la formule héraclitéenne de l'écoulement des choses sensibles."
+    answer: "écoule"
+    alt: ["ecoule"]
+  - id: traite2-l4-q11
+    sentence: "Le souffle dont les stoïciens font l'âme, mélange d'air et de feu, se dit en grec *___*."
+    answer: "pneuma"
+    alt: ["pneûma"]
+  - id: traite2-l4-q12
+    sentence: "Le souffle est « le corps le plus ___ qui soit et qui n'a par lui-même aucune unité » : lui confier l'univers, c'est livrer le monde au hasard (chap. 3)."
+    answer: "divisible"
+    alt: []
+  - id: traite2-l4-q13
+    sentence: "Si l'âme existe, les corps deviennent ses ___ dans l'ordonnancement du monde comme de chaque vivant (chap. 3)."
+    answer: "auxiliaires"
+    alt: []
+- id: traite2-l5
+  title: "Le souffle « disposé » et les effets contraires (chap. 4)"
+  notes: |-
+    Le chapitre 4 retourne contre les stoïciens leurs propres concessions : en parlant d'un souffle « intelligent » et « disposé d'une certaine manière », ils reconnaissent déjà, sans le dire, qu'il y a dans l'âme autre chose qu'un corps.
+
+    **Un aveu.** Les stoïciens disent que le souffle de l'âme est un « feu intelligent » : ils sont **« conduits par la vérité »** à admettre qu'une forme d'âme est antérieure et supérieure aux corps. Mais au lieu d'installer les corps dans les puissances de l'âme, ils cherchent un corps où installer l'intelligence, comme si elle ne pouvait être sans un feu ou un souffle pour la porter.
+
+    **Le dilemme de la « manière d'être ».** Tout souffle n'est pas une âme : le vent en est un, et il ne vit pas. Les stoïciens disent donc que l'âme est un souffle **« disposé d'une certaine manière »** (*pôs ekhon*), comme le poing n'est rien d'autre que la main, mais disposée d'une certaine façon. Or cette manière d'être est quelque chose, ou elle n'est rien.
+
+    - {red}Si elle n'est rien{/red}, l'âme n'est que du souffle, et « manière d'être » n'est qu'un mot : il faudrait dire alors que l'âme et le dieu ne sont que matière, et que tout le reste n'est que mots.
+    - {green}Si elle est quelque chose{/green}, présent dans la matière sans être fait de matière, alors c'est **une raison**, non un corps : « une autre nature ». Le matérialisme s'arrête là où commence la disposition.
+
+    **Second argument : les effets.** Un corps agit selon ses qualités, et toujours dans le même sens : le chaud chauffe, le froid refroidit, le noir noircit ; {teal}« ce n'est pas le propre du feu que de refroidir »{/teal}. L'âme, elle, produit des effets différents selon les vivants, et même **contraires** dans un même vivant : elle durcit les os et amollit la chair, rend telle partie dense et telle autre rare, telle autre noire ou blanche. Une même cause corporelle ne ferait jamais cela. L'âme agit donc non comme une qualité, mais comme une **raison** qui sait ce qu'il faut faire à chaque endroit.
+
+    ! Le « poing » n'est pas un exemple de Plotin, mais l'exemple stoïcien du *pôs ekhon* : une main disposée d'une certaine manière. L'objection est que la disposition qui fait d'un souffle une âme ne peut pas être, elle, un corps.
+  points:
+  - id: traite2-l5-q1
+    sentence: "Les stoïciens, qui font de l'âme un « feu ___ », sont conduits par la vérité à admettre qu'une forme d'âme est antérieure et supérieure aux corps (chap. 4)."
+    answer: "intelligent"
+    alt: []
+  - id: traite2-l5-q2
+    sentence: "Tout souffle n'est pas une âme ; aussi les stoïciens disent-ils que l'âme est un souffle « disposé d'une certaine manière », en grec *___*."
+    answer: "pôs ekhon"
+    alt: ["pos ekhon", "pôs echon"]
+  - id: traite2-l5-q3
+    sentence: "L'exemple stoïcien de l'être « disposé d'une certaine manière » est le ___, qui n'est ni autre chose que la main, ni la main simplement, mais la main disposée d'une certaine façon."
+    answer: "poing"
+    alt: []
+  - id: traite2-l5-q4
+    sentence: "« Si donc tout souffle n'est pas une âme, car il existe d'innombrables souffles qui ne sont pas des âmes, alors ils diront que l'âme est un souffle qui a « **___** », et ils ajouteront soit que cette « manière d'être », c'est-à-dire cette disposition, est __quelque chose__, soit qu'elle __n'est rien__. » (chap. 4)"
+    answer: "une certaine manière d'être"
+    alt: []
+  - id: traite2-l5-q5
+    sentence: "« Si donc tout souffle n'est pas une âme, car il existe d'innombrables souffles qui ne sont pas des âmes, alors ils diront que l'âme est un souffle qui a « **une certaine manière d'être** », et ils ajouteront soit que cette « manière d'être », c'est-à-dire cette disposition, est ___, soit qu'elle __n'est rien__. » (chap. 4)"
+    answer: "quelque chose"
+    alt: []
+  - id: traite2-l5-q6
+    sentence: "« Si donc tout souffle n'est pas une âme, car il existe d'innombrables souffles qui ne sont pas des âmes, alors ils diront que l'âme est un souffle qui a « **une certaine manière d'être** », et ils ajouteront soit que cette « manière d'être », c'est-à-dire cette disposition, est __quelque chose__, soit qu'elle ___. » (chap. 4)"
+    answer: "n'est rien"
+    alt: []
+  - id: traite2-l5-q7
+    sentence: "Si la « manière d'être » n'est rien, l'âme et le dieu ne sont rien d'autre que la ___, et toutes choses ne sont que des mots (chap. 4)."
+    answer: "matière"
+    alt: []
+  - id: traite2-l5-q8
+    sentence: "Si la disposition est quelque chose qui se trouve dans la matière sans être matériel, alors elle sera une « ___ » et non un corps, et ce sera une autre nature (chap. 4)."
+    answer: "raison"
+    alt: []
+  - id: traite2-l5-q9
+    sentence: "Un corps produit toujours le même effet selon sa qualité : « ce n'est pas le propre du feu que de ___ » (chap. 4)."
+    answer: "refroidir"
+    alt: []
+  - id: traite2-l5-q10
+    sentence: "« Mais l'âme produit pour sa part des **___** selon les êtres vivants ; et parfois même des **effets contraires** dans le même être vivant. » (chap. 4)"
+    answer: "effets différents"
+    alt: []
+  - id: traite2-l5-q11
+    sentence: "« Mais l'âme produit pour sa part des **effets différents** selon les êtres vivants ; et parfois même des **___** dans le même être vivant. » (chap. 4)"
+    answer: "effets contraires"
+    alt: []
+  - id: traite2-l5-q12
+    sentence: "L'âme durcit certaines parties d'un vivant et en amollit d'autres : si elle était un corps, elle ne devrait produire qu'un seul ___, selon sa qualité (chap. 4)."
+    answer: "effet"
+    alt: []
+- id: traite2-l6
+  title: "La croissance et le tout dans la partie (chap. 5)"
+  notes: |-
+    Le chapitre 5 montre qu'une âme-corps ne pourrait ni mouvoir de façons diverses, ni faire croître, ni rester la même, et que l'âme a une propriété qu'aucun corps n'a : sa partie est identique au tout.
+
+    **Les mouvements** (l. 1-15). Un corps n'a qu'un mouvement, selon sa nature (la pierre tombe, le feu monte). Le vivant en a mille. On répond qu'ils viennent tantôt de **choix**, tantôt de **raisons** : très bien, mais ni le choix ni les raisons n'appartiennent au corps. Le corps n'a de raison que celle qu'on lui a donnée.
+
+    **La croissance.** Si l'âme qui fait croître le corps était elle-même un corps, elle devrait croître avec lui pour rester à sa mesure (le stoïcien Antipater le soutenait : l'âme augmente et diminue avec le corps). Il faudrait donc lui ajouter de la matière. Or ce qu'on ajoute est **soit une âme, soit un corps inanimé** : si c'est une âme, d'où vient-elle et comment partagera-t-elle les souvenirs et les opinions de la première ? Si c'est un corps inanimé, comment s'animera-t-il ? Et si l'âme perd et gagne sans cesse des parties comme le corps, **rien ne restera le même** : comment aurions-nous des souvenirs, comment reconnaîtrions-nous ce qui nous est familier ?
+
+    **Le tout dans la partie** (l. 15-fin). Une quantité ne reste pas ce qu'elle est quand on lui retire quelque chose : deux mètres moins un ne font plus deux mètres. L'âme, elle, est **tout entière** en chaque vivant qu'elle produit. Plotin en donne un fait : {yellow}d'une seule semence naissent parfois des jumeaux, ou chez d'autres vivants une portée entière{/yellow}, et **chacun est un tout**, une âme complète, non un morceau d'âme. La semence s'est répandue en plusieurs lieux sans que l'âme se soit divisée en fractions.
+
+    **D'où la conclusion.** {teal}« Lorsque dans une chose la partie est identique au tout, la réalité de cette chose excède la quantité et doit nécessairement être elle-même dépourvue de quantité »{/teal}. {coral}« L'âme et les raisons sont donc dépourvues de quantité. »{/coral} L'âme est une qualité, non une quantité : comme une qualité, elle reste la même quand le corps diminue.
+
+    ! « Tout entière en chaque partie » ne veut pas dire que l'âme se multiplie en copies : elle reste une, présente partout sans être répartie.
+  points:
+  - id: traite2-l6-q1
+    sentence: "Si les mouvements du vivant ont pour causes des choix et des « ___ », on répond correctement ; mais ni le choix ni ces raisons n'appartiennent au corps (chap. 5)."
+    answer: "raisons"
+    alt: []
+  - id: traite2-l6-q2
+    sentence: "Le stoïcien ___, disciple de Chrysippe, soutenait que l'âme augmente et diminue avec le corps : conséquence de l'âme-corps coextensive au corps qu'elle anime."
+    answer: "Antipater de Tarse"
+    alt: ["Antipater"]
+  - id: traite2-l6-q3
+    sentence: "Si l'âme-corps devait croître, ce qui lui serait ajouté serait soit une âme, soit un corps ___ : dans les deux cas, l'unité et la mémoire du vivant deviennent incompréhensibles (chap. 5)."
+    answer: "inanimé"
+    alt: ["inanime"]
+  - id: traite2-l6-q4
+    sentence: "Si l'âme perdait et gagnait sans cesse des parties comme le corps, rien ne resterait le même : comment pourrions-nous avoir des ___ et reconnaître ce qui nous est familier (chap. 5) ?"
+    answer: "souvenirs"
+    alt: []
+  - id: traite2-l6-q5
+    sentence: "Une chose qui garde son identité malgré la diminution de sa masse la garde grâce à sa ___, qui est distincte de sa quantité (chap. 5)."
+    answer: "qualité"
+    alt: ["qualite"]
+  - id: traite2-l6-q6
+    sentence: "Quand une seule semence donne naissance à des ___, chacun est bien un tout : la partie de l'âme est identique au tout (chap. 5)."
+    answer: "jumeaux"
+    alt: []
+  - id: traite2-l6-q7
+    sentence: "« Comment se fait-il que cela n'enseigne pas à ceux qui souhaitent apprendre que, lorsque dans une chose ___, la réalité de cette chose **excède la quantité** et doit nécessairement être elle-même **dépourvue de quantité** ? » (chap. 5)"
+    answer: "la partie est identique au tout"
+    alt: []
+  - id: traite2-l6-q8
+    sentence: "« Comment se fait-il que cela n'enseigne pas à ceux qui souhaitent apprendre que, lorsque dans une chose __la partie est identique au tout__, la réalité de cette chose **___** et doit nécessairement être elle-même **dépourvue de quantité** ? » (chap. 5)"
+    answer: "excède la quantité"
+    alt: []
+  - id: traite2-l6-q9
+    sentence: "« Comment se fait-il que cela n'enseigne pas à ceux qui souhaitent apprendre que, lorsque dans une chose __la partie est identique au tout__, la réalité de cette chose **excède la quantité** et doit nécessairement être elle-même **___** ? » (chap. 5)"
+    answer: "dépourvue de quantité"
+    alt: []
+  - id: traite2-l6-q10
+    sentence: "Conclusion du chapitre 5 du traité 2 : « L'âme et les ___ sont donc dépourvues de quantité. »"
+    answer: "raisons"
+    alt: []
+  - id: traite2-l6-q11
+    sentence: "Le même corps ne peut être tout entier en plusieurs lieux, pas plus que la partie ne peut être identique au tout ; c'est pourtant ce que fait l'âme, ce qui prouve qu'elle n'est pas une ___ (chap. 5)."
+    answer: "quantité"
+    alt: ["quantite", "grandeur"]
+- id: traite2-l7
+  title: "Ce qui sent doit être un : sensation et douleur (chap. 6-7)"
+  notes: |-
+    Les chapitres 6 et 7 tirent l'argument le plus fort de l'expérience la plus commune : sentir et souffrir supposent un sujet qui rassemble, et un corps, toujours étendu en parties, ne rassemble rien.
+
+    **Sentir, c'est unifier** (chap. 6). Je vois une pomme, je la touche, je la sens : ce ne sont pas trois sensations de trois sujets, mais une seule sensation d'un seul objet. Il y a donc un point où tout converge, {yellow}comme un centre vers lequel arrivent des lignes venues de la circonférence{/yellow}. Si ce centre était étendu, chaque extrémité aurait sa propre sensation, {red}« exactement comme si je sentais une chose, et toi une autre »{/red} : personne ne saurait que la couleur et l'odeur sont celles d'une même pomme. Même un visage, qui est étendu, se rassemble dans la pupille ; à plus forte raison dans le principe directeur.
+
+    **Une âme étendue se diviserait avec ses objets.** Si l'âme était une grandeur, chacune de ses parties percevrait une partie de l'objet, et personne ne percevrait le tout ; et comme une grandeur se divise à l'infini, on aurait du même objet une infinité de sensations.
+
+    **La mémoire serait impossible.** Si sentir, c'est recevoir une empreinte, comme le cachet d'une bague dans la cire, et que cette empreinte se fait dans le sang ou le souffle, qui sont fluides, elle s'efface comme sur l'eau : pas de mémoire. Si elle dure, elle occupe la place : pas de nouvelles sensations. Or nous nous souvenons et nous sentons encore. Donc l'âme n'est pas un corps.
+
+    **La douleur au doigt** (chap. 7). Les stoïciens placent la sensation dans le principe directeur (*hêgemonikon*), d'où partent des souffles vers les organes **comme les tentacules d'une pieuvre**. Comment le principe directeur sent-il la douleur du doigt ? Par **transmission**, disent-ils, de proche en proche. Mais alors chaque relais sentirait sa propre douleur : le doigt, puis la paume, puis le bras, une infinité de sensations ; et le principe directeur ne sentirait que la douleur du dernier relais, {red}« sans savoir que c'est le doigt qui souffre »{/red}. Or c'est bien le doigt que je sens. Il faut donc que ce qui sent soit **le même partout à la fois**, ce dont aucun corps n'est capable.
+
+    ! L'argument n'est pas que la douleur n'est pas dans le doigt : elle y est. C'est que celui qui la sent n'est pas réparti entre le doigt et le cerveau.
+  points:
+  - id: traite2-l7-q1
+    sentence: "La sensation d'un même objet perçu par plusieurs sens doit parvenir à un point unique, comme un ___ vers lequel convergent les lignes venues de la circonférence (chap. 6)."
+    answer: "centre"
+    alt: []
+  - id: traite2-l7-q2
+    sentence: "« Car il n'y a pas **___**, mais __une seule et même sensation de tout__ ; et si une sensation parvient à travers les yeux et une autre à travers l'ouïe, il doit exister **une chose unique** vers laquelle toutes deux se dirigent. » (chap. 6)"
+    answer: "une sensation du nez, puis une autre des yeux"
+    alt: []
+  - id: traite2-l7-q3
+    sentence: "« Car il n'y a pas **une sensation du nez, puis une autre des yeux**, mais ___ ; et si une sensation parvient à travers les yeux et une autre à travers l'ouïe, il doit exister **une chose unique** vers laquelle toutes deux se dirigent. » (chap. 6)"
+    answer: "une seule et même sensation de tout"
+    alt: []
+  - id: traite2-l7-q4
+    sentence: "« Car il n'y a pas **une sensation du nez, puis une autre des yeux**, mais __une seule et même sensation de tout__ ; et si une sensation parvient à travers les yeux et une autre à travers l'ouïe, il doit exister **___** vers laquelle toutes deux se dirigent. » (chap. 6)"
+    answer: "une chose unique"
+    alt: []
+  - id: traite2-l7-q5
+    sentence: "Si ce qui sent était étendu, chaque extrémité aurait sa propre sensation, « exactement comme si je sentais une chose, et ___ une autre » (chap. 6)."
+    answer: "toi"
+    alt: []
+  - id: traite2-l7-q6
+    sentence: "La sensation qui rassemble les données des différents sens, à laquelle se rapportent tous les sens, est le sens ___ (*koinê aisthêsis*)."
+    answer: "commun"
+    alt: []
+  - id: traite2-l7-q7
+    sentence: "Si sentir était recevoir une empreinte, comme celle d'un ___ dans la cire, l'empreinte faite dans un corps fluide s'effacerait comme sur l'eau, et il n'y aurait pas de mémoire (chap. 6)."
+    answer: "cachet"
+    alt: ["sceau"]
+  - id: traite2-l7-q8
+    sentence: "Si les empreintes des sensations persistaient dans un corps, il n'y aurait plus de place pour de nouvelles sensations ; si elles s'effaçaient, plus de ___ (chap. 6)."
+    answer: "mémoire"
+    alt: ["memoire"]
+  - id: traite2-l7-q9
+    sentence: "Pour les stoïciens, la sensation survient dans le principe ___ (*hêgemonikon*), d'où partent les souffles vers les organes des sens."
+    answer: "directeur"
+    alt: []
+  - id: traite2-l7-q10
+    sentence: "Les stoïciens comparent les parties de l'âme qui s'étendent du principe directeur vers les organes aux tentacules d'une ___."
+    answer: "pieuvre"
+    alt: []
+  - id: traite2-l7-q11
+    sentence: "Pour expliquer que le principe directeur sente la douleur du doigt, les stoïciens invoquent une ___ de l'affection de proche en proche (chap. 7)."
+    answer: "transmission"
+    alt: []
+  - id: traite2-l7-q12
+    sentence: "Si la douleur se transmettait de proche en proche, le principe directeur sentirait la douleur de la partie qui le précède immédiatement, « sans savoir que c'est le ___ qui souffre » (chap. 7)."
+    answer: "doigt"
+    alt: []
+  - id: traite2-l7-q13
+    sentence: "« il faut supposer que ce qui perçoit est tel qu'il soit **___**. Mais faire cela ne convient qu'à l'un des êtres qui sont __différents du corps__. » (chap. 7)"
+    answer: "identique à lui-même en toutes ses parties"
+    alt: []
+  - id: traite2-l7-q14
+    sentence: "« il faut supposer que ce qui perçoit est tel qu'il soit **identique à lui-même en toutes ses parties**. Mais faire cela ne convient qu'à l'un des êtres qui sont ___. » (chap. 7)"
+    answer: "différents du corps"
+    alt: []
+  - id: traite2-l7-q15
+    sentence: "Les objections du traité 2 contre l'âme stoïcienne sont pour la plupart d'origine aristotélicienne : Plotin suit souvent le traité *De l'âme* du commentateur ___, qui avait déjà adressé aux stoïciens des objections semblables."
+    answer: "Alexandre d'Aphrodise"
+    alt: ["Alexandre"]
+- id: traite2-l8
+  title: "Penser et être vertueux (chap. 8)"
+  notes: |-
+    Le chapitre 8 passe de la sensation à la pensée et à la vertu : si un corps ne peut même pas sentir, à plus forte raison ne peut-il ni penser ce qui n'a pas de grandeur, ni être juste.
+
+    **Penser, c'est saisir sans le corps.** Sentir, c'est se servir du corps pour percevoir le sensible ; si penser se faisait aussi par le corps, ce serait sentir. Penser, c'est donc percevoir sans le corps, et {teal}« il faut à plus forte raison encore que l'être qui pense ne soit pas un corps »{/teal}.
+
+    **Le divisible ne pense pas l'indivisible.** Nous pensons des choses sans grandeur : le point, la ligne, l'égal, le juste. Comment ce qui a une grandeur et se divise saisirait-il ce qui est sans parties ? Par une partie de lui sans parties ? Mais alors ce qui pense n'est plus un corps.
+
+    **Même les formes engagées dans la matière doivent en être séparées pour être pensées.** Le géomètre pense le cercle à partir de cercles tracés dans le sable, mais ce qu'il pense, c'est le cercle séparé de toute matière, et {teal}« ce n'est pas avec l'aide de la chair »{/teal} qu'il opère cette séparation. Pour penser, l'âme doit donc elle-même se séparer du corps.
+
+    **La vertu est l'argument le plus parlant.** Le beau et le juste n'ont pas de grandeur. Si l'âme était un souffle, la tempérance serait un souffle bien tempéré et le courage un souffle impassible : {red}la vertu ne serait qu'une bonne constitution physique{/red}. Mais qu'importe à un souffle d'être tempéré ? Un souffle chercherait plutôt la chaleur, la douceur, le contact agréable (Plotin cite ici l'*Odyssée*). La répartition selon le mérite, qui est la justice, n'a aucun sens pour un souffle.
+
+    **Enfin, la vertu est éternelle.** Si l'âme la contemple comme les objets de la géométrie, elle est une réalité qui subsiste ; et ce en quoi elle se trouve doit être du même type : non un corps, qui **« s'écoule tout entier »**.
+
+    ! L'argument ne dit pas que le corps est inutile à la pensée humaine : il dit que ce qui pense n'est pas le corps.
+  points:
+  - id: traite2-l8-q1
+    sentence: "« Si donc **___**, c'est percevoir __sans se servir du corps__, il faut à plus forte raison encore que l'être qui pense __ne soit pas un corps__. » (chap. 8)"
+    answer: "penser"
+    alt: []
+  - id: traite2-l8-q2
+    sentence: "« Si donc **penser**, c'est percevoir ___, il faut à plus forte raison encore que l'être qui pense __ne soit pas un corps__. » (chap. 8)"
+    answer: "sans se servir du corps"
+    alt: []
+  - id: traite2-l8-q3
+    sentence: "« Si donc **penser**, c'est percevoir __sans se servir du corps__, il faut à plus forte raison encore que l'être qui pense ___. » (chap. 8)"
+    answer: "ne soit pas un corps"
+    alt: []
+  - id: traite2-l8-q4
+    sentence: "Ce qui a une grandeur ne peut penser ce qui est sans grandeur, ni ce qui est divisible penser l'___ (chap. 8)."
+    answer: "indivisible"
+    alt: []
+  - id: traite2-l8-q5
+    sentence: "« Le fait est certain, ce n'est pas avec l'aide de **___**, ou en général de la matière, qu'intervient la séparation du **cercle**, du triangle, de la ligne et du point. » (chap. 8)"
+    answer: "la chair"
+    alt: []
+  - id: traite2-l8-q6
+    sentence: "« Le fait est certain, ce n'est pas avec l'aide de **la chair**, ou en général de la matière, qu'intervient la séparation du **___**, du triangle, de la ligne et du point. » (chap. 8)"
+    answer: "cercle"
+    alt: []
+  - id: traite2-l8-q7
+    sentence: "Ce qui pense ne peut être un corps : pour toucher un objet de pensée, il n'a pas besoin de la totalité de lui-même ; un seul ___ suffit (chap. 8)."
+    answer: "point"
+    alt: []
+  - id: traite2-l8-q8
+    sentence: "Le composé *autoekaston*, « chaque être en soi », qui désigne la forme intelligible, n'apparaît que deux fois dans l'ensemble des traités de Plotin, toutes deux dans le traité ___, aux chapitres 8 et 12."
+    answer: "2 (IV, 7)"
+    alt: ["2", "IV, 7"]
+  - id: traite2-l8-q9
+    sentence: "Si l'âme était un souffle, le courage serait l'impassibilité du souffle et la tempérance son heureux ___ (chap. 8)."
+    answer: "mélange"
+    alt: ["melange"]
+  - id: traite2-l8-q10
+    sentence: "Qu'importe au souffle la répartition suivant le ___ ? La justice n'a pas de sens pour un corps (chap. 8)."
+    answer: "mérite"
+    alt: ["merite"]
+  - id: traite2-l8-q11
+    sentence: "Si la vertu est une réalité éternelle, ce en quoi elle se trouve ne peut être un corps, car le corps ne subsiste pas, mais « s'écoule ___ » (chap. 8)."
+    answer: "tout entier"
+    alt: []
+  - id: traite2-l8-q12
+    sentence: "Pour les stoïciens, les vertus elles-mêmes sont, d'une façon ou d'une autre, des ___, comme l'âme à laquelle elles se rattachent."
+    answer: "corps"
+    alt: []
+- id: traite2-l9
+  title: "Qualités, mélange total, ordre des principes (chap. 8¹-8³)"
+  notes: |-
+    Les chapitres 8¹ à 8³ achèvent la réfutation des stoïciens en s'attaquant à leur physique : même les qualités des corps, même le mélange, même la genèse du monde supposent l'incorporel.
+
+    **Les corps n'agissent que par des puissances incorporelles** (chap. 8¹). Les stoïciens rangent l'âme parmi les corps actifs, avec ce qui chauffe ou pousse. Mais d'abord, l'âme a d'autres puissances (penser, sentir, raisonner, désirer, prévoir) ; ensuite, même la chaleur d'un corps est une puissance incorporelle en lui. La preuve : {teal}« la douceur du miel n'est pas moins douceur en chaque partie que dans le tout »{/teal}. Coupez une goutte de miel en deux : vous avez deux moitiés de la quantité, mais pas deux moitiés de douceur. Une qualité n'est donc pas une quantité, ni un corps. De même, {red}si les puissances étaient des corps, les plus grandes masses auraient les plus grandes puissances{/red} ; or c'est souvent l'inverse (un peu de poison tue un homme). Et la même matière produit des choses toutes différentes selon les **raisons incorporelles** qu'elle reçoit.
+
+    **Condition n'est pas cause.** On meurt quand le souffle et le sang nous quittent, disent les stoïciens. Sans doute ne vit-on pas sans eux, ni sans bien d'autres choses ; mais rien de cela n'est l'âme.
+
+    **Le mélange total est impossible** (chap. 8²). Une âme-corps présente dans tout le corps y serait mélangée. Ou bien le mélange abolit les ingrédients, comme le doux et l'amer : l'âme ne serait plus en acte, nous n'aurions plus d'âme. Ou bien c'est le **« mélange total »** de Chrysippe (une goutte de vin se répand dans toute la mer) : deux corps occupant exactement le même lieu, chacun pénétrant l'autre jusque dans ses plus petites parties. Mais pénétrer un corps partout, c'est le diviser en points, donc en une infinité de parties **en acte** : c'est impossible. Or l'âme pénètre tout le corps : elle est donc incorporelle.
+
+    **Les stoïciens mettent le monde à l'envers** (chap. 8³). Pour eux, un même souffle est d'abord « nature » (dans la plante), puis devient « âme » en se refroidissant à la naissance, et l'intellect vient en dernier. Ils font donc venir **le meilleur du pire**. Or, Aristote l'a montré : {green}ce qui est en puissance ne passe à l'acte que par quelque chose qui est déjà en acte{/green}. Si l'intellect venait en dernier, rien n'aurait jamais pu actualiser le reste. Il faut donc renverser l'ordre : l'intellect d'abord, puis l'âme, puis la nature, puis les corps.
+
+    ! « Puissance » a ici le sens d'Aristote : capacité en attente d'être actualisée. C'est pourquoi elle exige un acte antérieur.
+  points:
+  - id: traite2-l9-q1
+    sentence: "Même la chaleur ou la poussée d'un corps tient aux puissances ___ qui se trouvent en lui (chap. 8¹)."
+    answer: "incorporelles"
+    alt: []
+  - id: traite2-l9-q2
+    sentence: "« Par exemple, **___** n'est pas moins douceur __en chaque partie__ que __dans le tout__. La douceur n'est pas un corps, et il en va de même également pour les autres **qualités**. » (chap. 8¹)"
+    answer: "la douceur du miel"
+    alt: []
+  - id: traite2-l9-q3
+    sentence: "« Par exemple, **la douceur du miel** n'est pas moins douceur ___ que __dans le tout__. La douceur n'est pas un corps, et il en va de même également pour les autres **qualités**. » (chap. 8¹)"
+    answer: "en chaque partie"
+    alt: []
+  - id: traite2-l9-q4
+    sentence: "« Par exemple, **la douceur du miel** n'est pas moins douceur __en chaque partie__ que ___. La douceur n'est pas un corps, et il en va de même également pour les autres **qualités**. » (chap. 8¹)"
+    answer: "dans le tout"
+    alt: []
+  - id: traite2-l9-q5
+    sentence: "« Par exemple, **la douceur du miel** n'est pas moins douceur __en chaque partie__ que __dans le tout__. La douceur n'est pas un corps, et il en va de même également pour les autres **___**. » (chap. 8¹)"
+    answer: "qualités"
+    alt: []
+  - id: traite2-l9-q6
+    sentence: "Si les puissances étaient des corps, les plus fortes auraient la plus grande ___ ; or de petites masses ont souvent les plus grandes puissances (chap. 8¹)."
+    answer: "masse"
+    alt: []
+  - id: traite2-l9-q7
+    sentence: "Contre les stoïciens qui disent que l'on meurt quand le souffle et le sang nous quittent, Plotin répond qu'on ne vit pas sans eux, mais que rien de tout cela n'est l'___ (chap. 8¹)."
+    answer: "âme"
+    alt: ["ame"]
+  - id: traite2-l9-q8
+    sentence: "Selon ___, les mélanges se font totalement : une goutte de vin jetée dans la mer finit par se mélanger complètement avec elle."
+    answer: "Chrysippe"
+    alt: []
+  - id: traite2-l9-q9
+    sentence: "Si l'âme-corps se mélangeait au corps comme le doux et l'amer, elle ne serait plus en acte mais seulement en ___, et nous n'aurions plus d'âme (chap. 8²)."
+    answer: "puissance"
+    alt: []
+  - id: traite2-l9-q10
+    sentence: "Un corps qui en pénétrerait un autre en totalité devrait le diviser suivant des ___, en une infinité de parties en acte, ce qui est impossible (chap. 8²)."
+    answer: "points"
+    alt: []
+  - id: traite2-l9-q11
+    sentence: "Pour les stoïciens, le souffle qui était « nature » devient « âme » en se ___ à la naissance, ce que Plotin juge absurde, puisque bien des vivants naissent dans la chaleur (chap. 8³)."
+    answer: "refroidissant"
+    alt: ["refroidissant au contact de l'air"]
+  - id: traite2-l9-q12
+    sentence: "Les stoïciens font venir l'intellect en dernier, après l'âme et la nature : ils font venir le ___ du pire (chap. 8³)."
+    answer: "meilleur"
+    alt: []
+  - id: traite2-l9-q13
+    sentence: "« Si ce qui est **___** venait à l'existence avant que ce qui est **en acte**, c'est-à-dire l'intellect, n'existe, alors __ce qui est en puissance ne pourrait pas passer à l'acte__. » (chap. 8³)"
+    answer: "en puissance"
+    alt: []
+  - id: traite2-l9-q14
+    sentence: "« Si ce qui est **en puissance** venait à l'existence avant que ce qui est **___**, c'est-à-dire l'intellect, n'existe, alors __ce qui est en puissance ne pourrait pas passer à l'acte__. » (chap. 8³)"
+    answer: "en acte"
+    alt: []
+  - id: traite2-l9-q15
+    sentence: "« Si ce qui est **en puissance** venait à l'existence avant que ce qui est **en acte**, c'est-à-dire l'intellect, n'existe, alors ___. » (chap. 8³)"
+    answer: "ce qui est en puissance ne pourrait pas passer à l'acte"
+    alt: []
+  - id: traite2-l9-q16
+    sentence: "Le principe selon lequel une puissance ne passe à l'acte que par un acte antérieur, que Plotin oppose aux stoïciens, vient d'___ (*Métaphysique*, Θ, 8)."
+    answer: "Aristote"
+    alt: []
+  - id: traite2-l9-q17
+    sentence: "Contre l'ordre stoïcien, Plotin rétablit la hiérarchie : l'intellect, puis l'âme, puis la ___, puis les corps (chap. 8³)."
+    answer: "nature"
+    alt: []
+  - id: traite2-l9-q18
+    sentence: "La tension du souffle prend chez les stoïciens le nom de « tenue » (*hexis*) dans les inanimés, de « ___ » (*phusis*) dans les végétaux, et d'« âme » (*psukhê*) dans les vivants."
+    answer: "croissance"
+    alt: ["nature"]
+- id: traite2-l10
+  title: "Ni harmonie ni entéléchie : l'âme n'est forme d'aucun corps (chap. 8⁴-8⁵)"
+  notes: |-
+    Les chapitres 8⁴ et 8⁵ écartent une solution plus fine que le matérialisme : l'âme ne serait pas un corps, mais quelque chose du corps, sa bonne proportion ou sa forme. Plotin montre que c'est encore la faire dépendre de ce qu'elle produit.
+
+    **L'âme-harmonie** (chap. 8⁴). Comme les cordes tendues d'une lyre produisent une harmonie, le corps, mélange bien proportionné, produirait la vie et l'âme. Plotin reprend contre cette thèse les arguments du *{sky}Phédon{/sky}* et d'Aristote.
+
+    - L'âme est **antérieure** ; l'harmonie est **postérieure** aux cordes qu'elle accorde.
+    - L'âme **gouverne** le corps et le **combat** souvent (le désir contre la raison) ; une harmonie ne combat pas les cordes dont elle résulte.
+    - L'âme est une réalité (*ousia*) ; l'harmonie n'est qu'un rapport.
+    - Un mélange bien proportionné, c'est **la santé**, non l'âme ; et chaque partie du corps, d'un mélange différent, aurait son âme.
+    - Surtout, {teal}une harmonie suppose un musicien{/teal}, qui a en lui le rapport et règle les cordes. Il faudrait donc une autre âme avant l'âme-harmonie. On fait sortir {red}l'animé de l'inanimé et l'ordre du désordre{/red}.
+
+    **L'âme-entéléchie** (chap. 8⁵). Pour Aristote, l'âme est **l'entéléchie** (la réalisation, la forme) « d'un corps naturel organisé ayant la vie en puissance », comme la figure de la statue est la forme du bronze. Plotin en tire les conséquences.
+
+    - Couper le corps, ce serait couper l'âme.
+    - L'âme ne pourrait se retirer dans le **sommeil**, et il n'y aurait même plus de sommeil.
+    - Il n'y aurait pas de **conflit entre la raison et les désirs** : une forme ne lutte pas contre sa matière.
+    - Il n'y aurait que des sensations, pas d'intellection : c'est pourquoi Aristote lui-même pose un **intellect séparé et immortel**. Il reconnaît donc qu'une partie de l'âme n'est forme d'aucun corps.
+    - Même l'âme végétative n'est pas inséparable : quand la plante se flétrit, elle **se retire dans la racine**, et toute la plante était d'abord dans une graine.
+
+    **La conclusion vaut pour toute l'âme.** {green}L'âme est une réalité qui est avant même d'appartenir à un corps.{/green} Elle n'est ni corps ni affection du corps, mais action et production. Le corporel, au contraire, **devient** : il naît, périt, et n'existe que par participation à l'être.
+
+    ! Plotin ne rejette pas Aristote en bloc : il lui emprunte la plupart de ses arguments contre les stoïciens, et ne lui reproche que de n'être pas allé jusqu'au bout de la séparation de l'âme.
+  points:
+  - id: traite2-l10-q1
+    sentence: "Les ___ voient dans l'âme une harmonie, comme celle que produisent les cordes tendues d'un instrument de musique (chap. 8⁴)."
+    answer: "pythagoriciens"
+    alt: []
+  - id: traite2-l10-q2
+    sentence: "Contre l'âme-harmonie, Plotin reprend l'argument du ___ de Platon : l'âme est antérieure, l'harmonie postérieure."
+    answer: "Phédon"
+    alt: ["Phedon"]
+  - id: traite2-l10-q3
+    sentence: "L'âme gouverne le corps, lui donne des ordres et le ___ de multiples façons, ce dont une harmonie serait incapable (chap. 8⁴)."
+    answer: "combat"
+    alt: []
+  - id: traite2-l10-q4
+    sentence: "C'est au chapitre 8⁴ que Plotin dit pour la première fois de l'âme qu'elle est une ___ (*ousia*), alors que l'harmonie n'en est pas une."
+    answer: "réalité"
+    alt: ["realite"]
+  - id: traite2-l10-q5
+    sentence: "Le mélange bien proportionné des corps qui nous constituent ne serait pas l'âme, mais la ___ (chap. 8⁴)."
+    answer: "santé"
+    alt: ["sante"]
+  - id: traite2-l10-q6
+    sentence: "« Enfin, la difficulté la plus importante est qu'il doit nécessairement y avoir, avant cette âme-là, **___** qui soit celle qui produit cette harmonie-là, comme c'est le cas pour les instruments de musique, où c'est **le musicien** qui produit l'harmonie à l'aide des cordes et qui possède en lui __le rapport d'après lequel il produira l'harmonie__. » (chap. 8⁴)"
+    answer: "une autre âme"
+    alt: []
+  - id: traite2-l10-q7
+    sentence: "« Enfin, la difficulté la plus importante est qu'il doit nécessairement y avoir, avant cette âme-là, **une autre âme** qui soit celle qui produit cette harmonie-là, comme c'est le cas pour les instruments de musique, où c'est **___** qui produit l'harmonie à l'aide des cordes et qui possède en lui __le rapport d'après lequel il produira l'harmonie__. » (chap. 8⁴)"
+    answer: "le musicien"
+    alt: []
+  - id: traite2-l10-q8
+    sentence: "« Enfin, la difficulté la plus importante est qu'il doit nécessairement y avoir, avant cette âme-là, **une autre âme** qui soit celle qui produit cette harmonie-là, comme c'est le cas pour les instruments de musique, où c'est **le musicien** qui produit l'harmonie à l'aide des cordes et qui possède en lui ___. » (chap. 8⁴)"
+    answer: "le rapport d'après lequel il produira l'harmonie"
+    alt: []
+  - id: traite2-l10-q9
+    sentence: "Pour Aristote, l'âme est l'« ___ » d'un corps naturel organisé ayant la vie en puissance, c'est-à-dire sa réalisation, sa forme (chap. 8⁵)."
+    answer: "entéléchie"
+    alt: ["entelechie", "entelekheia"]
+  - id: traite2-l10-q10
+    sentence: "Si l'âme était au corps ce que la figure de la statue est au ___, couper le corps reviendrait à couper l'âme (chap. 8⁵)."
+    answer: "bronze"
+    alt: []
+  - id: traite2-l10-q11
+    sentence: "Si l'âme était entéléchie du corps, il ne pourrait y avoir d'opposition entre la ___ et les désirs (chap. 8⁵)."
+    answer: "raison"
+    alt: []
+  - id: traite2-l10-q12
+    sentence: "Parce que l'âme-entéléchie ne pourrait pas penser, les aristotéliciens introduisent une autre âme, l'___, qu'ils tiennent pour immortelle (chap. 8⁵)."
+    answer: "intellect"
+    alt: []
+  - id: traite2-l10-q13
+    sentence: "Même l'âme végétative n'est pas inséparable : quand la plante se flétrit, elle se concentre dans la ___ (chap. 8⁵)."
+    answer: "racine"
+    alt: []
+  - id: traite2-l10-q14
+    sentence: "« Par conséquent l'être de l'âme ne consiste donc pas à être **___** ; elle est une réalité qui ne reçoit pas son être du fait de __s'établir dans un corps__, mais qui est __avant même d'appartenir à ce corps__ » (chap. 8⁵)"
+    answer: "la forme de quelque chose"
+    alt: []
+  - id: traite2-l10-q15
+    sentence: "« Par conséquent l'être de l'âme ne consiste donc pas à être **la forme de quelque chose** ; elle est une réalité qui ne reçoit pas son être du fait de ___, mais qui est __avant même d'appartenir à ce corps__ » (chap. 8⁵)"
+    answer: "s'établir dans un corps"
+    alt: []
+  - id: traite2-l10-q16
+    sentence: "« Par conséquent l'être de l'âme ne consiste donc pas à être **la forme de quelque chose** ; elle est une réalité qui ne reçoit pas son être du fait de __s'établir dans un corps__, mais qui est ___ » (chap. 8⁵)"
+    answer: "avant même d'appartenir à ce corps"
+    alt: []
+  - id: traite2-l10-q17
+    sentence: "Tout ce qui relève du corps doit être dit ___, et non pas réalité, car cela naît et périt (chap. 8⁵)."
+    answer: "devenir"
+    alt: []
+  - id: traite2-l10-q18
+    sentence: "Le chapitre 8⁵ du traité 2 ne figure dans aucun manuscrit des *Ennéades* : il n'est connu que par la citation qu'en donne ___ dans sa *Préparation évangélique*."
+    answer: "Eusèbe"
+    alt: ["Eusebe", "Eusèbe de Césarée"]
+- id: traite2-l11
+  title: "La vie par soi (chap. 9)"
+  notes: |-
+    Le chapitre 9 marque le tournant du traité : après avoir dit ce que l'âme n'est pas, Plotin dit ce qu'elle est, une réalité qui a l'être et la vie par elle-même, et qui ne peut donc les perdre.
+
+    **Ce qui n'est pas corps est ce qui est réellement.** Le corps devient, naît et périt ; « l'autre nature » est celle qui a l'être par elle-même. Sans elle, tout périrait et ne reviendrait jamais à l'être, à commencer par l'univers que l'âme met en ordre.
+
+    **L'âme est principe du mouvement** (*Phèdre*, 245c). Elle se meut d'elle-même et meut le reste : {teal}« c'est elle qui dirige le chœur des autres mouvements »{/teal}. Or ce qui se meut de soi a la vie de soi, et **ce qu'on a par soi, on ne peut le perdre** : on ne perd que ce qu'on a reçu. Une maison peut perdre sa chaleur, qui lui vient du feu ; le feu ne perd pas la chaleur qui est sa nature.
+
+    **L'argument de la régression.** {red}Il est impossible que toutes choses aient reçu la vie du dehors, sans quoi on remonterait à l'infini{/red} : chaque vivant devrait sa vie à un autre, qui la devrait à un autre, et rien ne vivrait jamais. Il faut donc une nature **« primitivement vivante »**, qui soit **« impérissable et immortelle »** (*Phédon*), puisqu'elle est le principe de la vie de tout le reste.
+
+    **Ce qui est par soi est toujours.** Le blanc, couleur, ne peut être tantôt blanc, tantôt non blanc : il est blanc par nature. De même, ce qui tient l'être de lui-même ne peut tantôt être, tantôt ne pas être. Et ce qui est ainsi premier ne peut être une chose morte comme la pierre : il est **vivant**, d'une vie pure.
+
+    **D'où vient alors que l'âme paraisse diminuée ?** De son mélange : ce qui est mêlé à l'inférieur rencontre des obstacles pour aller vers le meilleur, sans pourtant perdre sa nature. C'est ce que le chapitre 10 va montrer.
+
+    ! « Avoir la vie par soi » ne veut pas dire que l'âme ne vient de rien : elle est produite par l'Intellect, mais elle ne devient elle-même qu'en se retournant vers lui, et c'est en ce sens qu'elle est cause de soi.
+  points:
+  - id: traite2-l11-q1
+    sentence: "Le chapitre 9 du traité 2 reprend la définition de l'âme du ___ de Platon (245c) : l'âme est « principe du mouvement »."
+    answer: "Phèdre"
+    alt: ["Phedre"]
+  - id: traite2-l11-q2
+    sentence: "« Car l'âme est \"**___**\", et c'est elle qui dirige le chœur des autres mouvements, qui __se meut d'elle-même__ et donne la vie au corps animé, mais qui __a la vie par elle-même__ et ne peut jamais la perdre parce qu'elle l'a par elle-même. » (chap. 9)"
+    answer: "principe du mouvement"
+    alt: []
+  - id: traite2-l11-q3
+    sentence: "« Car l'âme est \"**principe du mouvement**\", et c'est elle qui dirige le chœur des autres mouvements, qui ___ et donne la vie au corps animé, mais qui __a la vie par elle-même__ et ne peut jamais la perdre parce qu'elle l'a par elle-même. » (chap. 9)"
+    answer: "se meut d'elle-même"
+    alt: []
+  - id: traite2-l11-q4
+    sentence: "« Car l'âme est \"**principe du mouvement**\", et c'est elle qui dirige le chœur des autres mouvements, qui __se meut d'elle-même__ et donne la vie au corps animé, mais qui ___ et ne peut jamais la perdre parce qu'elle l'a par elle-même. » (chap. 9)"
+    answer: "a la vie par elle-même"
+    alt: []
+  - id: traite2-l11-q5
+    sentence: "Ce qu'on a par soi, on ne peut le ___ : l'âme, qui a la vie par elle-même, ne peut donc mourir (chap. 9)."
+    answer: "perdre"
+    alt: []
+  - id: traite2-l11-q6
+    sentence: "« Il est impossible en effet que toutes choses aient reçu la vie du ___, sans quoi on poursuivrait à l'infini » (chap. 9)."
+    answer: "dehors"
+    alt: []
+  - id: traite2-l11-q7
+    sentence: "Il doit y avoir une nature qui soit primitivement vivante, et qui soit de toute nécessité « ___ et immortelle », formule du *Phédon* (chap. 9)."
+    answer: "impérissable"
+    alt: ["imperissable"]
+  - id: traite2-l11-q8
+    sentence: "Ce qui tient l'être de soi est toujours, comme le ___, qui est une couleur, ne peut être tantôt blanc tantôt non blanc (chap. 9)."
+    answer: "blanc"
+    alt: []
+  - id: traite2-l11-q9
+    sentence: "Ce qui est l'être primitivement et toujours ne peut être une chose morte, comme la pierre ou le ___ (chap. 9)."
+    answer: "bois"
+    alt: []
+  - id: traite2-l11-q10
+    sentence: "Pour Plotin, chaque réalité produite par son principe ne se détermine qu'en se ___ vers lui : c'est en ce sens que l'âme, produite par l'Intellect, possède par elle-même l'existence."
+    answer: "retournant"
+    alt: ["tournant"]
+- id: traite2-l12
+  title: "L'âme purifiée se découvre divine (chap. 10)"
+  notes: |-
+    Le chapitre 10 répond à l'objection la plus naturelle contre l'immortalité de l'âme, celle qu'on tire du spectacle des âmes réelles, vicieuses et troublées. Plotin la renverse : ce qu'on voit, ce n'est pas l'âme, mais ce qui s'est ajouté à elle.
+
+    **L'objection.** Si l'âme était divine et immortelle, la verrait-on si souvent lâche, injuste, emportée ? Plotin le dit lui-même : {red}« parce qu'ils voient chez la plupart des gens que l'âme a subi de multiples dommages, ils ne la conçoivent pas comme une réalité divine ou immortelle »{/red}.
+
+    **La réponse est une règle de méthode.** {teal}« Il faut examiner la nature d'une chose en particulier en la considérant à l'état pur »{/teal}, car ce qui s'y ajoute empêche de la connaître. On ne juge pas l'or à la boue qui le couvre, ni une statue au vert-de-gris. Il faut donc considérer l'âme non pas telle qu'elle est dans un corps, chargée de désirs et de colères, mais **purifiée**, autant que possible détachée du corps.
+
+    **Ce que montre l'âme purifiée.** Que les maux sont des **« concrétions »** venues de l'extérieur, comme les coquillages et les algues qui recouvrent la statue du dieu marin Glaucos (*{sky}République{/sky}*, X) ; et que, sitôt purifiée, la réflexion et les vertus lui sont présentes. Or ces vertus sont divines, et elles ne peuvent habiter qu'une chose apparentée : {green}l'âme qui les reçoit est donc divine elle-même, par parenté avec elles.{/green}
+
+    **L'expérience de soi.** Que celui qui s'est ainsi dépouillé se regarde : il se verra **intellect**, installé dans l'intelligible, voyant l'éternel par ce qu'il a d'éternel. Il trouvera du bon dans le vers d'Empédocle : **« Salut à vous, je suis un dieu immortel »**. Il ne cherchera pas la justice et la tempérance hors de lui : il les verra **en lui-même**, comme des statues divines qu'il débarrasse de leur vert-de-gris.
+
+    **L'image de l'or animé.** {yellow}Si l'or avait une âme et se débarrassait de sa boue, il découvrirait enfin sa valeur{/yellow}, qu'il ignorait, et comprendrait qu'il n'a besoin d'aucune beauté d'emprunt. L'image dit trois choses : la laideur était un ajout, la valeur était là depuis toujours, et la purification est une découverte de soi.
+
+    ! La purification ne rend pas l'âme divine : elle découvre qu'elle l'était. Rien ne lui est ajouté, on lui retire ce qui la cachait.
+  points:
+  - id: traite2-l12-q1
+    sentence: "Parce qu'ils voient chez la plupart des gens une âme qui a subi de multiples ___, les hommes ne la conçoivent pas comme une réalité divine ou immortelle (chap. 10)."
+    answer: "dommages"
+    alt: []
+  - id: traite2-l12-q2
+    sentence: "« Mais il faut examiner la nature d'une chose en particulier en la considérant **___**, dans la mesure où __ce qui y est ajouté constitue toujours un obstacle__ à la connaissance de ce à quoi cela a été ajouté. » (chap. 10)"
+    answer: "à l'état pur"
+    alt: []
+  - id: traite2-l12-q3
+    sentence: "« Mais il faut examiner la nature d'une chose en particulier en la considérant **à l'état pur**, dans la mesure où ___ à la connaissance de ce à quoi cela a été ajouté. » (chap. 10)"
+    answer: "ce qui y est ajouté constitue toujours un obstacle"
+    alt: []
+  - id: traite2-l12-q4
+    sentence: "L'âme purifiée fait apparaître que les maux sont pour elle des ___ venues de l'extérieur (chap. 10)."
+    answer: "concrétions"
+    alt: ["concretions"]
+  - id: traite2-l12-q5
+    sentence: "Les maux recouvrent l'âme comme les coquillages et les algues recouvrent, dans la *République* (X), la statue du dieu marin ___."
+    answer: "Glaucos"
+    alt: ["Glaucus"]
+  - id: traite2-l12-q6
+    sentence: "La réflexion et la vertu sont des choses divines : ce en quoi elles se trouvent doit donc être divin, en raison de sa ___ et de sa communauté de réalité avec elles (chap. 10)."
+    answer: "parenté"
+    alt: ["parente"]
+  - id: traite2-l12-q7
+    sentence: "Celui qui s'est purifié trouve du bon dans le vers d'___ : « Salut à vous, je suis un dieu immortel » (chap. 10)."
+    answer: "Empédocle"
+    alt: ["Empedocle"]
+  - id: traite2-l12-q8
+    sentence: "L'âme ne voit pas la tempérance et la justice hors d'elle-même : elle les voit en elle-même, comme des statues divines recouvertes de ___ par le temps (chap. 10)."
+    answer: "vert-de-gris"
+    alt: []
+  - id: traite2-l12-q9
+    sentence: "« C'est comme si **___** et se mettait à se débarrasser de toute la boue qui le recouvre. Parce que, auparavant, __il s'ignorait lui-même__, il ne voyait pas l'or ; mais maintenant qu'il se voit isolé, il parvient à s'étonner de la valeur qui est la sienne et à comprendre que, désormais, il n'a plus aucun besoin d'**une beauté empruntée** » (chap. 10)"
+    answer: "l'or avait une âme"
+    alt: []
+  - id: traite2-l12-q10
+    sentence: "« C'est comme si **l'or avait une âme** et se mettait à se débarrasser de toute la boue qui le recouvre. Parce que, auparavant, ___, il ne voyait pas l'or ; mais maintenant qu'il se voit isolé, il parvient à s'étonner de la valeur qui est la sienne et à comprendre que, désormais, il n'a plus aucun besoin d'**une beauté empruntée** » (chap. 10)"
+    answer: "il s'ignorait lui-même"
+    alt: []
+  - id: traite2-l12-q11
+    sentence: "« C'est comme si **l'or avait une âme** et se mettait à se débarrasser de toute la boue qui le recouvre. Parce que, auparavant, __il s'ignorait lui-même__, il ne voyait pas l'or ; mais maintenant qu'il se voit isolé, il parvient à s'étonner de la valeur qui est la sienne et à comprendre que, désormais, il n'a plus aucun besoin d'**___** » (chap. 10)"
+    answer: "une beauté empruntée"
+    alt: []
+  - id: traite2-l12-q12
+    sentence: "L'image de l'or qui se débarrasse de sa boue montre que la purification n'ajoute rien à l'âme : elle lui fait découvrir une valeur qu'elle avait ___ (chap. 10)."
+    answer: "depuis toujours"
+    alt: ["toujours"]
+- id: traite2-l13
+  title: "Indestructible : ni dissoute, ni divisée, ni altérée (chap. 11-12)"
+  notes: |-
+    Les chapitres 11 et 12 tirent la conséquence : une réalité qui a la vie par elle-même échappe à toutes les manières dont une chose peut périr.
+
+    **La vie de l'âme n'est pas comme la chaleur du feu** (chap. 11). Le feu peut s'éteindre, non que la chaleur lui vienne du dehors, mais parce qu'il dépend du bois qui le nourrit : quand le combustible manque, le feu disparaît. {teal}« L'âme ne possède pas la vie de cette façon, comme si elle était une matière sous-jacente »{/teal} : il n'y a pas en elle un support qui pourrait cesser de recevoir la vie. **La vie est ce qui fait qu'elle est âme.** Ou bien donc la vie est une réalité vivante par elle-même, et c'est l'âme, immortelle ; ou bien on la traite comme un composé, et en la décomposant on finira par arriver à quelque chose qui se meut de soi, donc immortel ; ou bien c'est une affection venue du dehors, et ce qui l'apporte est immortel, car il ne peut recevoir le contraire de ce qu'il apporte (le *Phédon* : le feu ne reçoit pas le froid).
+
+    **Pourquoi l'âme du monde et pas la nôtre ?** (chap. 12). Si toute âme pouvait périr, tout aurait péri depuis longtemps. Et si l'on accorde l'immortalité à l'âme de l'univers seulement, il faut dire pourquoi : {red}les deux sont principe de mouvement, tiennent la vie d'elles-mêmes, et contemplent les mêmes réalités{/red}. Notre âme, par la **réminiscence**, tire d'elle-même la conception de chaque être en soi ; elle possède donc des sciences éternelles, et elle est antérieure au corps.
+
+    **Les trois manières de périr lui sont étrangères.**
+
+    - **La dissolution** : ce qui a été composé se défait comme il a été composé ; l'âme est une et simple.
+    - **La division** : l'âme n'est ni une masse ni une quantité (chap. 5).
+    - **L'altération** : elle détruit la forme en laissant la matière ; c'est une affection du composé.
+
+    {coral}L'âme est donc nécessairement indestructible.{/coral}
+
+    ! L'argument par la réminiscence (chap. 12) reprend le *Phédon* : apprendre, c'est se ressouvenir de ce qu'on savait avant de naître.
+  points:
+  - id: traite2-l13-q1
+    sentence: "Le feu peut disparaître, non que sa chaleur vienne du dehors, mais parce qu'il dépend du ___, son matériau combustible (chap. 11)."
+    answer: "bois"
+    alt: []
+  - id: traite2-l13-q2
+    sentence: "« Mais l'âme ne possède pas la vie de cette façon, comme si elle était **___** ; c'est __la vie qui est installée en elle__ qui fait qu'elle est l'âme. » (chap. 11)"
+    answer: "une matière sous-jacente"
+    alt: []
+  - id: traite2-l13-q3
+    sentence: "« Mais l'âme ne possède pas la vie de cette façon, comme si elle était **une matière sous-jacente** ; c'est ___ qui fait qu'elle est l'âme. » (chap. 11)"
+    answer: "la vie qui est installée en elle"
+    alt: []
+  - id: traite2-l13-q4
+    sentence: "Si la vie est une affection venue du dehors, ce qui l'apporte est immortel, car il ne peut recevoir le ___ de ce qu'il apporte (chap. 11), argument du *Phédon*."
+    answer: "contraire"
+    alt: []
+  - id: traite2-l13-q5
+    sentence: "Si toute âme pouvait périr, toutes choses auraient dû avoir péri depuis ___ (chap. 12)."
+    answer: "longtemps"
+    alt: []
+  - id: traite2-l13-q6
+    sentence: "À ceux qui accordent l'immortalité à l'âme de l'univers mais pas à la nôtre, Plotin répond que l'une et l'autre sont principe de ___ et tiennent la vie d'elles-mêmes (chap. 12)."
+    answer: "mouvement"
+    alt: []
+  - id: traite2-l13-q7
+    sentence: "La conception de chaque être en soi, que l'âme tire d'elle-même par la ___, prouve qu'elle est antérieure au corps et éternelle (chap. 12)."
+    answer: "réminiscence"
+    alt: ["reminiscence"]
+  - id: traite2-l13-q8
+    sentence: "Ce qui a été composé est susceptible d'être dissous ; mais l'âme est une nature une et ___, qui est en acte dans le fait de vivre (chap. 12)."
+    answer: "simple"
+    alt: []
+  - id: traite2-l13-q9
+    sentence: "L'âme ne peut périr par l'___, car celle-ci détruit la forme mais laisse la matière : c'est une affection propre au composé (chap. 12)."
+    answer: "altération"
+    alt: ["alteration"]
+- id: traite2-l14
+  title: "La venue dans le corps : produire sans quitter l'intelligible (chap. 13)"
+  notes: |-
+    Le chapitre 13 affronte la difficulté que tout le traité a rendue aiguë : si l'âme est intelligible, séparée, divine, pourquoi et comment vient-elle dans un corps ? Plotin répond en peu de lignes, mais sa réponse commande tous les traités suivants.
+
+    **Il faut distinguer deux niveaux.** {green}« Ce qui est intellect pur »{/green} vit d'une vie seulement intellective, impassible, et reste toujours là-bas, car **il n'a ni tendance ni désir** : rien ne lui manque. Ce qui vient juste après lui, l'âme, a **en plus un désir**, et c'est ce désir qui la porte vers le sensible.
+
+    **Le désir de l'âme n'est pas un manque, mais une fécondité.** Elle veut **produire un ordre conforme à ce qu'elle a vu** dans l'Intellect. Plotin le dit par une image du *{sky}Banquet{/sky}* : {yellow}elle est comme « grosse des intelligibles » et ressent les douleurs de l'enfantement{/yellow}. Elle ne descend pas parce qu'elle est attirée par le corps, mais parce qu'elle est pleine de ce qu'elle a contemplé et veut le faire exister ailleurs. Plotin donne ainsi à l'âme le rôle que le *Timée* donnait au démiurge.
+
+    **Comment elle gouverne.** Avec l'âme de l'univers, elle domine **de l'extérieur** ce qu'elle gouverne et prend soin de tout le monde. Quand elle veut gouverner une partie, elle se trouve isolée dans cette partie, {coral}« sans pourtant appartenir tout entière au corps, mais en gardant quelque chose d'extérieur à lui »{/coral}. **Son intellect n'est pas affecté** par le corps.
+
+    **La descente est donc partielle.** L'âme est tantôt dans un corps, tantôt hors d'un corps, mais toujours par une partie seulement : sa partie la plus haute reste dans l'intelligible. Et c'est par elle que l'Intellect, qui reste en place, **« remplit toutes choses de beauté et les met en ordre »**.
+
+    ! Plotin reconnaît que la mention de ce désir ne résout pas toutes les difficultés de la descente : les traités 6 (IV, 8) et 27-29 (IV, 3-5) y reviendront longuement.
+  points:
+  - id: traite2-l14-q1
+    sentence: "Ce qui est intellect pur reste toujours dans l'intelligible, car il n'a ni ___ ni désir (chap. 13)."
+    answer: "tendance"
+    alt: []
+  - id: traite2-l14-q2
+    sentence: "« Mais ce qui vient tout de suite après cet intellect et qui comporte en plus **___** va déjà pour ainsi dire plus loin par l'ajout du désir, et dans son désir de __produire un ordre conforme à ce qu'il a vu dans l'intellect__, il s'efforce de produire, comme s'il était **gros des intelligibles** et qu'il ressentait les douleurs de l'enfantement, et il fabrique. » (chap. 13)"
+    answer: "un désir"
+    alt: []
+  - id: traite2-l14-q3
+    sentence: "« Mais ce qui vient tout de suite après cet intellect et qui comporte en plus **un désir** va déjà pour ainsi dire plus loin par l'ajout du désir, et dans son désir de ___, il s'efforce de produire, comme s'il était **gros des intelligibles** et qu'il ressentait les douleurs de l'enfantement, et il fabrique. » (chap. 13)"
+    answer: "produire un ordre conforme à ce qu'il a vu dans l'intellect"
+    alt: []
+  - id: traite2-l14-q4
+    sentence: "« Mais ce qui vient tout de suite après cet intellect et qui comporte en plus **un désir** va déjà pour ainsi dire plus loin par l'ajout du désir, et dans son désir de __produire un ordre conforme à ce qu'il a vu dans l'intellect__, il s'efforce de produire, comme s'il était **___** et qu'il ressentait les douleurs de l'enfantement, et il fabrique. » (chap. 13)"
+    answer: "gros des intelligibles"
+    alt: []
+  - id: traite2-l14-q5
+    sentence: "L'image de l'âme « grosse des intelligibles », qui ressent les douleurs de l'___, vient du *Banquet* de Platon (206c-e)."
+    answer: "enfantement"
+    alt: []
+  - id: traite2-l14-q6
+    sentence: "Au chapitre 13 du traité 2, Plotin attribue à l'âme le rôle que le ___ de Platon réservait au démiurge."
+    answer: "Timée"
+    alt: ["Timee"]
+  - id: traite2-l14-q7
+    sentence: "L'âme qui gouverne une partie s'y trouve « sans pourtant appartenir tout entière au corps, mais en gardant quelque chose d'___ à lui » (chap. 13)."
+    answer: "extérieur"
+    alt: ["exterieur"]
+  - id: traite2-l14-q8
+    sentence: "L'intellect de l'âme qui vient dans un corps n'est pas ___ par le corps (chap. 13)."
+    answer: "affecté"
+    alt: ["affecte"]
+  - id: traite2-l14-q9
+    sentence: "Par le moyen de l'âme, l'intellect, qui reste à la même place, « remplit toutes choses de ___ et les met en ordre » (chap. 13)."
+    answer: "beauté"
+    alt: ["beaute"]
+  - id: traite2-l14-q10
+    sentence: "La descente de l'âme dans le corps n'est que ___ : sa partie la plus haute reste dans l'intelligible."
+    answer: "partielle"
+    alt: []
+- id: traite2-l15
+  title: "Les autres âmes, et la preuve par l'opinion (chap. 14-15)"
+  notes: |-
+    Les chapitres 14 et 15 étendent la conclusion à toutes les âmes, puis ajoutent, pour ceux qui ne se contentent pas d'une démonstration, une preuve tirée des croyances communes.
+
+    **Toutes les âmes sont immortelles** (chap. 14). Celles des animaux d'abord : ce sont des âmes humaines qui ont commis des fautes et sont venues jusque dans des corps de bêtes (Plotin admet la **transmigration**, comme le *Timée*). Celles des plantes aussi : elles viennent du même principe, ont leur vie propre, sont incorporelles et indivisibles.
+
+    **Mais l'âme humaine n'est-elle pas composée de trois parties**, comme le dit la *République*, et donc dissoluble ? Plotin répond : {green}les âmes pures, une fois affranchies, abandonnent ce qui leur fut « accolé » à la naissance{/green} ; les autres le gardent longtemps. Et même cet élément inférieur ne périt pas, tant que dure ce dont il vient. Car {teal}« rien de ce qui vient de ce qui est ne périt »{/teal}.
+
+    **La preuve par l'opinion** (chap. 15). Plotin a dit ce qu'il fallait « à ceux qui avaient besoin d'une démonstration ». Pour les autres, il rappelle des faits : les oracles ordonnent d'apaiser la colère des âmes qu'on a lésées ; tous les hommes rendent des honneurs aux morts comme à des êtres qui sentent ; bien des âmes continuent, après la mort, de rendre service aux vivants. Ce chapitre est une annexe : **il ne prouve rien par lui-même**, il montre que la croyance commune s'accorde avec la démonstration.
+
+    ! « Accolé » ne qualifie pas le corps, mais les parties inférieures de l'âme : c'est elles que l'âme pure laisse derrière elle.
+  points:
+  - id: traite2-l15-q1
+    sentence: "Plotin admet que des âmes humaines qui ont commis des fautes viennent dans des corps d'animaux : c'est la ___, qu'il reprend à la fin du *Timée*."
+    answer: "transmigration"
+    alt: ["métempsycose", "metempsycose", "réincarnation"]
+  - id: traite2-l15-q2
+    sentence: "L'âme des ___ vient du même principe que les autres âmes : elle a une vie propre, elle est incorporelle et indivisible (chap. 14)."
+    answer: "plantes"
+    alt: []
+  - id: traite2-l15-q3
+    sentence: "Les âmes pures, lorsqu'elles sont affranchies, abandonnent ce qui leur fut « ___ » à leur naissance, c'est-à-dire les parties inférieures de l'âme (chap. 14)."
+    answer: "accolé"
+    alt: ["accole"]
+  - id: traite2-l15-q4
+    sentence: "« En effet rien de ce qui vient de ___ ne périt » (chap. 14)."
+    answer: "ce qui est"
+    alt: []
+  - id: traite2-l15-q5
+    sentence: "Le chapitre 15 du traité 2 s'adresse à ceux qui ont besoin d'une preuve fondée sur l'autorité de la ___, et non d'une démonstration."
+    answer: "sensation"
+    alt: []
+  - id: traite2-l15-q6
+    sentence: "Parmi les preuves populaires de l'immortalité, Plotin cite les ___ qui ordonnent d'apaiser la colère des âmes à qui l'on a porté tort (chap. 15)."
+    answer: "oracles"
+    alt: []
+  - id: traite2-l15-q7
+    sentence: "Le chapitre 15 est une ___ : il ne prouve rien par lui-même, il montre que la croyance commune s'accorde avec la démonstration."
+    answer: "annexe"
     alt: []
