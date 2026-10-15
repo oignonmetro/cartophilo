@@ -1419,6 +1419,9 @@ describe('tableau de structure', () => {
     expect(locationKey('54d-e')).toEqual([54, 3, 0])
     expect(locationKey('II, 3')).toEqual([2, 3])
     expect(locationKey('chap. 1-5')).toEqual([1, 0])
+    // La forme des repères des cours de traités : « chap. 5, l. 1-24 ».
+    expect(locationKey('chap. 5, l. 1-24')).toEqual([5, 1])
+    expect(locationKey('chap. 5, l. 25-37')).toEqual([5, 25])
     expect(locationKey('1094a1-b11')).toEqual([1094, 0, 1])
     // Une énumération n’est pas un repère, ni un texte quelconque.
     expect(locationKey('3')).toBeNull()

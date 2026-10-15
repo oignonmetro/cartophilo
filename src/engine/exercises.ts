@@ -1567,7 +1567,7 @@ const TABLE_ORDER_MAX = 7
  */
 const PAGINATION_SPAN = /^(\d{1,4})\s*([a-e])\s*(\d*)(?:\s*-\s*\d{0,4}\s*[a-e]?\s*\d*)?$/i
 const DIVISION_SPAN =
-  /^(?:(?:livre|liv\.|chap\.?|chapitres?|ch\.|§|l\.|lignes?|p\.)\s*)?([ivxlcdm]+|\d+(?:\^\d+)?)(?:\s*,\s*(\d+))?(?:\s*-\s*(?:fin|[ivxlcdm]+|\d+(?:\^\d+)?)(?:\s*,\s*\d+)?)?$/i
+  /^(?:(?:livre|liv\.|chap\.?|chapitres?|ch\.|§|l\.|lignes?|p\.)\s*)?([ivxlcdm]+|\d+(?:\^\d+)?)(?:\s*,\s*(?:l\.\s*)?(\d+))?(?:\s*-\s*(?:fin|[ivxlcdm]+|\d+(?:\^\d+)?)(?:\s*,\s*\d+)?)?$/i
 const SUPERSCRIPTS = '⁰¹²³⁴⁵⁶⁷⁸⁹'
 
 /** Les exposants d'un repère en notation clavier : « 8⁴ » → « 8^4 ». */
