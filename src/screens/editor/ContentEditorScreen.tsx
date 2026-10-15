@@ -250,6 +250,27 @@ export default function ContentEditorScreen() {
     [loadTree, selection],
   )
 
+  /** Glisser-déposer d'une leçon à une autre position de sa unité. */
+  const [drag, setDrag] = useState<{ course: string; unit: string; lesson: string } | null>(null)
+  const [dropIndex, setDropIndex] = useState<number | null>(null)
+  const moveLesson = useCallback(
+    async (course: string, unit: string, lesson: string, to: number) => {
+      try {
+        const res = await fetch(`/api/lesson?course=${course}&unit=${unit}&lesson=${lesson}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ to }),
+        })
+        const data = await res.json()
+        if (!res.ok) throw new Error(data.error ?? res.statusText)
+        await loadTree()
+      } catch (err) {
+        window.alert(`Impossible de déplacer la leçon : ${(err as Error).message}`)
+      }
+    },
+    [loadTree],
+  )
+
   const save = useCallback(async () => {
     if (!selection) return
     setStatus('saving')
@@ -464,13 +485,46 @@ export default function ContentEditorScreen() {
                                 </button>
                               </summary>
                               <div className="ml-2 flex flex-col border-l-2 border-line pl-2">
-                                {unit.lessons.map((lesson) => {
+                                {unit.lessons.map((lesson, lessonIndex) => {
                                   const active =
                                     selection?.course === course.id &&
                                     selection?.unit === unit.id &&
                                     selection?.lesson === lesson.id
+                                  const sameUnit = drag?.course === course.id && drag.unit === unit.id
+                                  const isTarget = sameUnit && dropIndex === lessonIndex && drag.lesson !== lesson.id
                                   return (
-                                    <div key={lesson.id} className="group flex items-center gap-1">
+                                    <div
+                                      key={lesson.id}
+                                      draggable
+                                      onDragStart={(event) => {
+                                        event.dataTransfer.effectAllowed = 'move'
+                                        setDrag({ course: course.id, unit: unit.id, lesson: lesson.id })
+                                      }}
+                                      onDragOver={(event) => {
+                                        if (!sameUnit) return
+                                        event.preventDefault()
+                                        setDropIndex(lessonIndex)
+                                      }}
+                                      onDrop={(event) => {
+                                        event.preventDefault()
+                                        if (sameUnit) void moveLesson(drag.course, drag.unit, drag.lesson, lessonIndex)
+                                        setDrag(null)
+                                        setDropIndex(null)
+                                      }}
+                                      onDragEnd={() => {
+                                        setDrag(null)
+                                        setDropIndex(null)
+                                      }}
+                                      className={`group flex cursor-grab items-center gap-1 border-y-2 border-transparent ${
+                                        drag?.lesson === lesson.id ? 'opacity-40' : ''
+                                      } ${
+                                        isTarget
+                                          ? unit.lessons.findIndex((l) => l.id === drag.lesson) < lessonIndex
+                                            ? 'border-b-teal'
+                                            : 'border-t-teal'
+                                          : ''
+                                      }`}
+                                    >
                                       <button
                                         type="button"
                                         onClick={() => openLesson(course.id, track, unit.id, lesson.id)}

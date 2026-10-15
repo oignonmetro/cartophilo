@@ -696,6 +696,33 @@ export function contentEditorApi(): Plugin {
           return
         }
 
+        // Déplacement d'une leçon dans son unité : `to` est sa nouvelle position.
+        if (req.method === 'PATCH') {
+          try {
+            const body = JSON.parse(await readBody(req)) as { to?: number }
+            const doc = readYamlDoc(unitFile)
+            const idx = findLessonIndex(doc, lesson)
+            if (idx === -1) {
+              sendJson(res, 404, { error: `leçon "${lesson}" introuvable dans ${unit}` })
+              return
+            }
+            const lessonsSeq = doc.getIn(['lessons'])
+            if (!(lessonsSeq instanceof YAMLSeq)) throw new Error(`"${unit}" n'a pas de tableau lessons`)
+            const to = Number(body.to)
+            if (!Number.isInteger(to) || to < 0 || to >= lessonsSeq.items.length) {
+              sendJson(res, 400, { error: 'position invalide' })
+              return
+            }
+            const [moved] = lessonsSeq.items.splice(idx, 1)
+            lessonsSeq.items.splice(to, 0, moved)
+            writeYamlDoc(unitFile, doc)
+            sendJson(res, 200, { ok: true })
+          } catch (error) {
+            sendJson(res, 500, { error: String((error as Error).message) })
+          }
+          return
+        }
+
         if (req.method === 'DELETE') {
           try {
             const doc = readYamlDoc(unitFile)
