@@ -112,6 +112,9 @@ export default function ContentEditorScreen() {
   const [originalPoints, setOriginalPoints] = useState<PointDTO[] | null>(null)
   const [status, setStatus] = useState<'idle' | 'loading' | 'saving' | 'saved' | 'error'>('idle')
   const [error, setError] = useState<string | null>(null)
+  // Cartes que la mise en forme automatique n'a pas pu corriger seule (une
+  // carte sans trou, une réponse vide), signalées au dernier enregistrement.
+  const [problems, setProblems] = useState<string[]>([])
   // Incrémenté à chaque Annuler : force `PointsEditor` (voir plus bas) à se
   // remonter entièrement, pour que le texte brut tapé dans « Autres réponses »
   // (état local à `AltField`, voir pourquoi) revienne lui aussi à sa valeur
@@ -146,6 +149,7 @@ export default function ContentEditorScreen() {
     if (track.kind !== 'grammar') setView('notes')
     setStatus('loading')
     setError(null)
+    setProblems([])
     try {
       const res = await fetch(`/api/lesson?course=${course}&unit=${unit}&lesson=${lesson}`)
       const data = await res.json()
@@ -265,11 +269,26 @@ export default function ContentEditorScreen() {
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? res.statusText)
-      setOriginalTitle(title)
-      setOriginal(notes)
-      setOriginalPoints(points)
-      setOriginalPassage(passage)
+      // Le serveur met en forme ce qu'il enregistre (voir `tools/content/tidy.ts`) :
+      // l'éditeur affiche désormais la version enregistrée, pour ne pas se
+      // croire modifié au prochain coup d'œil.
+      const savedTitle: string = data.title ?? title
+      const savedNotes: string = data.notes ?? notes
+      const savedPoints: PointDTO[] | null = data.points ?? points
+      const savedPassage: PassageDTO | null = data.passage ?? passage
+      setTitle(savedTitle)
+      setNotes(savedNotes)
+      setPoints(savedPoints)
+      setPassage(savedPassage)
+      // « Autres réponses » garde son texte brut en état local (voir
+      // `AltField`) : il ne reprend la version enregistrée qu'en se remontant.
+      if (JSON.stringify(savedPoints) !== JSON.stringify(points)) setResetToken((token) => token + 1)
+      setOriginalTitle(savedTitle)
+      setOriginal(savedNotes)
+      setOriginalPoints(savedPoints)
+      setOriginalPassage(savedPassage)
       setOriginalTables(tables)
+      setProblems(Array.isArray(data.problems) ? data.problems : [])
       setStatus('saved')
       // Le titre affiché dans l'arborescence vient de sa propre copie
       // (`tree`), indépendante de l'état d'édition : sans ce rechargement,
@@ -322,7 +341,7 @@ export default function ContentEditorScreen() {
 
         {selection && (
           <div className="flex items-center gap-3 text-sm">
-            <SaveStatus status={status} dirty={dirty} error={error} />
+            <SaveStatus status={status} dirty={dirty} error={error} problems={problems} />
             <button
               type="button"
               onClick={() => {
@@ -627,15 +646,25 @@ function SaveStatus({
   status,
   dirty,
   error,
+  problems,
 }: {
   status: 'idle' | 'loading' | 'saving' | 'saved' | 'error'
   dirty: boolean
   error: string | null
+  problems: string[]
 }) {
   if (status === 'error') return <span className="font-bold text-error">Erreur : {error}</span>
   if (status === 'loading') return <span className="text-ink-faint">Chargement…</span>
   if (status === 'saving') return <span className="text-ink-faint">Enregistrement…</span>
   if (dirty) return <span className="font-bold text-amber-deep">Modifications non enregistrées</span>
+  if (status === 'saved' && problems.length > 0) {
+    // La liste entière au survol : la barre n'a de place que pour le compte.
+    return (
+      <span className="font-bold text-amber-deep" title={problems.join('\n')}>
+        Enregistré, {problems.length === 1 ? '1 carte à reprendre' : `${problems.length} cartes à reprendre`} : {problems[0]}
+      </span>
+    )
+  }
   if (status === 'saved') return <span className="text-teal-deep">Enregistré</span>
   return null
 }

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "content:build": "tsx tools/content/build.ts",
-    "content:check": "tsx tools/content/build.ts --check",
+    "content:check": "tsx tools/content/build.ts --check && tsx tools/content/tidy-cli.ts --check --warn",
+    "content:tidy": "tsx tools/content/tidy-cli.ts",
     "content:from-quizlet": "tsx tools/content/from-quizlet.ts",
     "icons": "tsx tools/icons/build.ts",
     "dev": "npm run content:build && vite",

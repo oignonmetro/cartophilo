@@ -5,6 +5,7 @@ import type { ServerResponse } from 'node:http'
 import type { Plugin, Connect } from 'vite'
 import { parseDocument, Document, Scalar, YAMLSeq, YAMLMap, isMap } from 'yaml'
 import { importQuizletRows, importTextUnitRows } from '../content/quizletImport.ts'
+import { pointProblems, tidyLine, tidyPoint, tidyText } from '../content/tidy.ts'
 
 /**
  * API de développement pour l'éditeur de contenu : lit et réécrit les
@@ -671,6 +672,17 @@ export function contentEditorApi(): Plugin {
               sendJson(res, 404, { error: `leçon "${lesson}" introuvable dans ${unit}` })
               return
             }
+            // Mise en forme automatique (voir `tools/content/tidy.ts`) : ce
+            // qui se corrige sans jugement l'est avant écriture, et renvoyé à
+            // l'éditeur pour qu'il affiche la version enregistrée ; ce qui
+            // demande un choix (une carte sans trou) est seulement signalé.
+            if (body.title !== undefined) body.title = tidyLine(body.title)
+            body.notes = tidyText(body.notes)
+            if (body.passage) body.passage = { ...body.passage, text: tidyText(body.passage.text) }
+            if (body.points) body.points = body.points.map((point) => tidyPoint(point))
+            const problems = (body.points ?? []).flatMap((point, i) =>
+              pointProblems(point).map((problem) => `carte ${i + 1} : ${problem}`),
+            )
             if (body.title !== undefined) {
               const title = body.title.trim()
               if (!title) {
@@ -689,7 +701,14 @@ export function contentEditorApi(): Plugin {
               else doc.setIn(['lessons', idx, 'points'], body.points.map(buildPointNode))
             }
             writeYamlDoc(unitFile, doc)
-            sendJson(res, 200, { ok: true })
+            sendJson(res, 200, {
+              ok: true,
+              title: body.title,
+              notes: body.notes,
+              points: body.points,
+              passage: body.passage,
+              problems,
+            })
           } catch (error) {
             sendJson(res, 500, { error: String((error as Error).message) })
           }

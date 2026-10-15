@@ -346,6 +346,15 @@ Incrémenter `version:` dans `course.yaml`, puis pousser sur `main`. Le
 déploiement GitHub Pages régénère les fichiers, et les installations existantes
 proposent la mise à jour au prochain démarrage avec du réseau.
 
+## Mettre en forme
+
+`npm run content:tidy` (ou `npm run content:tidy -- fichier.yaml…`) corrige
+dans les fichiers d'unité ce qui se corrige sans jugement : une marque fermée
+après une espace (`**hapax **chez`), un souligné collé à un trou, des espaces
+en trop, les apostrophes typographiques, les variantes en double. L'éditeur
+visuel fait la même chose à chaque enregistrement, et `content:check` signale
+ce qui reste à mettre en forme, sans échouer. Voir `tools/content/tidy.ts`.
+
 ## Ce que la validation vérifie
 
 - identifiants uniques (éléments et leçons) sur tout le cours ;
