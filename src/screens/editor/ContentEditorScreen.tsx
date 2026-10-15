@@ -859,11 +859,15 @@ function PointsEditor({
     onChange(points.filter((_, i) => i !== index))
   }
 
-  function move(index: number, direction: -1 | 1) {
-    const target = index + direction
-    if (target < 0 || target >= points.length) return
+  // Glisser-déposer : on saisit la carte par son numéro.
+  const [dragFrom, setDragFrom] = useState<number | null>(null)
+  const [dragOver, setDragOver] = useState<number | null>(null)
+
+  function moveTo(from: number, to: number) {
+    if (from === to) return
     const next = points.slice()
-    ;[next[index], next[target]] = [next[target]!, next[index]!]
+    const [moved] = next.splice(from, 1)
+    next.splice(to, 0, moved!)
     onChange(next)
   }
 
@@ -1040,10 +1044,48 @@ function PointsEditor({
       {points.map((point, index) => (
         <Fragment key={point.id}>
         <InsertGap onInsert={() => insertAt(index)} />
-        <div data-point-id={point.id} className="card-3d flex flex-col gap-2 p-4">
+        <div
+          data-point-id={point.id}
+          onDragOver={(event) => {
+            if (dragFrom === null) return
+            event.preventDefault()
+            setDragOver(index)
+          }}
+          onDrop={(event) => {
+            event.preventDefault()
+            if (dragFrom !== null) moveTo(dragFrom, index)
+            setDragFrom(null)
+            setDragOver(null)
+          }}
+          className={`card-3d flex flex-col gap-2 border-y-2 border-transparent p-4 ${
+            dragFrom === index ? 'opacity-40' : ''
+          } ${
+            dragFrom !== null && dragOver === index && dragFrom !== index
+              ? dragFrom < index
+                ? 'border-b-teal'
+                : 'border-t-teal'
+              : ''
+          }`}
+        >
           <div className="flex items-start gap-3">
             <div className="mt-2 flex w-6 shrink-0 flex-col items-end gap-1">
-              <span className="text-sm font-black text-ink-faint">{index + 1}</span>
+              <span
+                draggable
+                title="Saisir pour déplacer la carte"
+                onDragStart={(event) => {
+                  event.dataTransfer.effectAllowed = 'move'
+                  const card = event.currentTarget.closest('[data-point-id]')
+                  if (card) event.dataTransfer.setDragImage(card, 20, 20)
+                  setDragFrom(index)
+                }}
+                onDragEnd={() => {
+                  setDragFrom(null)
+                  setDragOver(null)
+                }}
+                className="cursor-grab select-none text-sm font-black text-ink-faint hover:text-ink"
+              >
+                ⠿ {index + 1}
+              </span>
               {isText && (
                 <span
                   title={
@@ -1087,24 +1129,6 @@ function PointsEditor({
               </div>
             </div>
             <div className="flex shrink-0 flex-col items-center gap-1">
-              <button
-                type="button"
-                title="Monter"
-                onClick={() => move(index, -1)}
-                disabled={index === 0}
-                className="rounded-md px-1.5 py-0.5 text-ink-faint hover:text-ink disabled:opacity-30"
-              >
-                ↑
-              </button>
-              <button
-                type="button"
-                title="Descendre"
-                onClick={() => move(index, 1)}
-                disabled={index === points.length - 1}
-                className="rounded-md px-1.5 py-0.5 text-ink-faint hover:text-ink disabled:opacity-30"
-              >
-                ↓
-              </button>
               <button
                 type="button"
                 title="Supprimer la carte"
