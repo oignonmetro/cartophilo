@@ -117,59 +117,95 @@ fin, la reposer sous forme de question, jamais sous forme de remarque.
 Une leçon par **mouvement du raisonnement**, dans l'ordre du texte, chacune
 d'un écran au plus (au-delà, couper) :
 
-- **Première leçon : la question.** Ce que le traité demande, ce qu'il tient
-  pour acquis, d'où vient la question, les réponses possibles et celle que
-  retient Plotin, la difficulté qu'elle crée, l'annonce du chemin suivi.
-- **Puis une leçon par mouvement**, titrée par ce qu'elle établit et ses
-  repères : « Pourquoi le Premier produit (1, 23-41) ».
-- **Dernière leçon : le plan**, en tableau de structure (`Moment | Lieu |
+- **Première leçon : le plan**, en tableau de structure (`Moment | Lieu |
   Ce qui s'y joue`, un repère par case dans la colonne Lieu, trois lignes au
-  moins), précédé de deux ou trois phrases qui disent la progression.
+  moins), précédé de deux ou trois phrases qui disent la progression. On voit
+  l'ensemble avant le détail (choix de l'utilisateur au traité 1).
+- **Puis la question.** Ce que le traité demande, ce qu'il tient pour acquis,
+  d'où vient la question, les réponses possibles et celle que retient
+  Plotin, la difficulté qu'elle crée, l'annonce du chemin suivi.
+- **Puis une leçon par mouvement**, titrée par ce qu'elle établit et ses
+  repères : « Pourquoi le Premier produit (chap. 1, l. 23-41) ».
 
 En refonte, garder l'en-tête des tableaux qu'on conserve : changer
 l'en-tête en ferait un nouvel élément de révision, repris de zéro.
 
 ## 4. Écrire les rappels
 
-Les règles qui suivent viennent pour une bonne part des retouches que
-l'utilisateur a faites à la main sur le traité 7 (commit 06b9901) : en cas
-de doute, relire ce fichier, c'est l'exemple de référence.
+Les règles qui suivent viennent des retouches que l'utilisateur a faites à
+la main sur les traités 7 (commit 06b9901) et 1 (commit 76c3327) : en cas
+de doute, relire ces deux fichiers, ce sont les exemples de référence.
+
+### L'exigence d'ensemble : argumenter, convaincre, expliquer
+
+Le défaut le plus grave des premières versions était le ton de l'allusion,
+au mieux de la description : on énonçait ce que dit Plotin sans montrer
+pourquoi il a raison de le dire. Il faut présenter Plotin en « homme de
+fer » : une pensée rendue **convaincante**, nuancée, mais d'abord **très
+claire**, donc intéressante. Chaque thèse est défendue comme on défendrait
+la sienne : par ses raisons, son principe, et ce qu'elle permet d'éviter.
+
+- **Le principe sous l'argument.** Nommer le principe plotinien dont
+  l'argument dépend, et prévenir le contresens qu'il évite, quitte à sortir
+  du traité. Au traité 1 : ce n'est pas l'âme individuelle qui met en forme
+  le sensible, mais la Nature et ses raisons séminales (traité 30) ; l'âme ne
+  projette pas la forme, elle reconnaît une forme déjà maîtresse de la
+  matière ; l'analogie de l'aveugle-né repose sur le principe de parenté
+  (on ne connaît que ce à quoi on s'est rendu semblable).
+- **La notion contre sa version naïve.** Quand la thèse reste abstraite, dire
+  ce qu'elle n'est pas, en l'ancrant dans un débat concret : « la vertu
+  véritable n'est pas un ensemble de règles comportementales ou
+  d'ajustements sociaux, mais une purification de l'âme ».
+- **Chaque image expliquée.** Qu'illustre-t-elle, et pourquoi cette image
+  plutôt qu'une autre ? Développer l'image (le sanctuaire, les vêtements
+  ôtés, la nudité devant le dieu) au lieu de la résumer d'un mot.
+- **Citer plutôt que paraphraser.** Quand le texte dit la chose, le citer,
+  mot pour mot, entre `« »`, puis expliquer. Une formule reprise (« devenir
+  bonne et belle rend l'âme semblable au dieu ») prend ses guillemets. La
+  paraphrase sans guillemets est à proscrire.
+- **Pas d'analyse de l'argumentation pour elle-même.** Dire qu'une thèse est
+  posée, démontrée ou illustrée n'a d'intérêt que si cela change sa portée
+  (une thèse affirmée ici et démontrée ailleurs, une conclusion qui hésite).
+  Ailleurs, ces remarques alourdissent, sont faussement analytiques et
+  s'effacent (« le chapitre ne le démontre pas, il le décrit à partir de
+  l'expérience » a été retiré au traité 1).
 
 ### Le fil
 
-- **Le premier paragraphe est l'attaque** : l'app l'affiche plus grand. Il
-  donne l'idée d'ensemble de la leçon en une ou deux phrases, pas le premier
-  point de détail.
+- **L'attaque situe le chapitre dans le traité.** Le premier paragraphe,
+  affiché plus grand, dit la fonction du mouvement dans la progression
+  d'ensemble (ouverture, basculement, sommet, conclusion), puis ce qu'il
+  établit : « Le chapitre 6 opère le basculement fondamental du traité : il
+  fait passer la recherche sur la beauté d'une simple interrogation
+  esthétique à une exigence éthique et métaphysique de purification. »
 - **Un paragraphe par étape**, ouvert par une courte phrase en gras qui dit
-  ce que l'étape établit (« Il est unique. », « L'obstacle qui reste : … »).
-  Pas de numérotation : elle n'apporte rien. Un argument et sa conséquence
-  font deux paragraphes (« Il est simple », puis « Et parce qu'il ne dépend
-  de rien, il ne manque de rien »).
-- **Le pourquoi, toujours** : chaque thèse vient avec sa raison. « Il est
-  simple » ne suffit pas ; « un composé dépend de ses éléments, qui seraient
-  plus premiers que lui » explique. Des connecteurs entre les phrases et
-  entre les paragraphes (donc, or, car, pour la même raison, en revanche,
-  il reste à).
-- **La raison qualifiée exactement** : dire de quelle nature elle est
-  (« pour une raison éthique et logique »), plutôt qu'une étiquette d'école
-  plaquée (« raisonnement par l'absurde ») qui en dit moins.
-- **Le statut, dit en clair** : « Plotin ne démontre pas cette loi ; il la
-  constate dans la nature », « c'est un principe posé, puis rendu concevable
-  par un exemple », « affirmée ici, démontrée dans le traité 32 ».
+  ce que l'étape établit. Pas de numérotation. Un argument et sa conséquence
+  font deux paragraphes.
+- **Le pourquoi, toujours**, avec des connecteurs entre les phrases et entre
+  les paragraphes (donc, or, car, pour la même raison, en revanche, il
+  reste à).
+- **La raison qualifiée exactement** (« pour une raison éthique et
+  logique »), plutôt qu'une étiquette d'école plaquée.
 - **Ne pas faire dire au texte plus qu'il ne dit.** Ne pas nommer ce qu'il
-  n'a pas encore introduit : au chapitre 1 du traité 7, ce que le Premier
-  produit est « le Second », « la chose la plus vénérable et la meilleure »
-  après lui ; il ne devient l'Intellect qu'au chapitre 2. Ne pas grossir ce
-  qui est établi : Plotin montre que l'Intellect vient *après* le Premier,
-  pas qu'il vient *juste* après. Ces nuances font de bons pièges `!`.
-- **Les présupposés nommés** : ce que le traité suppose sans le discuter.
-- **Un pont vers la leçon suivante** quand une difficulté reste ouverte
-  (« Reste à comprendre par quel mécanisme… »).
-- **La citation qui porte l'argument** : après l'avoir reformulé, donner la
-  phrase de la GF qui le dit, mot pour mot, entre `« »`, avec ses lignes.
-- **Des termes exacts** : « le principe générateur » plutôt que « le
-  principe » quand il s'agit de ce qui produit ; « pose ainsi la question »
-  plutôt qu'une formule d'emphase (« en propres termes »).
+  n'a pas encore introduit (au chapitre 1 du traité 7, « le Second », pas
+  encore l'Intellect) ; ne pas grossir ce qui est établi (l'Intellect vient
+  *après* le Premier, pas *juste* après). Ces nuances font de bons pièges.
+- **Les présupposés nommés**, quand le traité suppose sans discuter.
+- **Un pont vers la leçon suivante** quand une difficulté reste ouverte.
+- **Des termes exacts et des noms complets** : « le principe générateur »,
+  « le *Doryphore* (dit le *Canon*) de Polyclète », « comme une règle permet
+  de juger de ce qui est droit ».
+
+### Les repères
+
+- Une ligne ne se donne que si l'on en est **certain** : écrite dans la
+  notice, le plan détaillé ou une note, ou fixée sans ambiguïté par une
+  marque de la traduction (qui ne numérote que toutes les cinq lignes). Sinon,
+  la sous-partie du plan qui contient le passage. Jamais une ligne déduite.
+- Forme : **« (l. 25-29) »** dans le rappel d'une leçon qui ne porte que sur
+  un chapitre ; **« (chap. 4, l. 25-29) »** dès qu'il y a ambiguïté : leçon
+  sur plusieurs chapitres, titre de leçon, et **toujours dans les cartes**,
+  qui reviennent seules en révision.
 
 ### La mise en relief
 
@@ -177,88 +213,93 @@ Le rappel doit se lire d'un coup d'œil : la mise en relief y est abondante,
 et chaque marque a une fonction.
 
 - **Gras** (`**…**`) sur le contenu décisif, pas sur la formule qui
-  l'introduit : « Il part d'une donnée qu'il ne discute pas : **il existe
-  autre chose que l'Un.** » ; et sur les conclusions.
+  l'introduit, et sur les conclusions.
 - **Souligné** (`__…__`) sur les propositions qui portent l'argument
   (prémisses, membres d'une alternative, ce qu'établit chaque chapitre).
-  Gras et souligné se combinent pour l'intitulé d'une étape
-  (`__**Il est {coral}simple{/coral}.**__`).
-- **Couleurs** : le code fixe de `content/philosophie.md` (vert la thèse
-  retenue, rouge le rejeté ou ce qui fait problème, violet les termes
-  techniques, turquoise les citations, bleu ciel la structure, corail les
-  propriétés établies et conclusions ; rose, ambre, jaune libres). Au traité
-  7 : en rouge les intermédiaires et « reculer le problème », en violet
-  « deux actes », « conversion », « dyade », en corail « simple »,
-  « unique », « échappe au discours ».
-- **Grec** translittéré entre backticks dans le rappel (`noêsis`).
+  Gras et souligné se combinent pour l'intitulé d'une étape.
+- **Couleurs** : le code fixe de `content/philosophie.md`. Vert la thèse
+  retenue ; en face, rouge ce qui est rejeté ou fait problème, ou rose
+  (variante plus douce du rouge) pour l'autre pôle d'une opposition ;
+  violet les termes techniques ; turquoise les citations ; bleu ciel la
+  structure et les sources (« l'ascension du discours de Diotime », le
+  *Phédon*) ; corail les propriétés établies et conclusions ; jaune les
+  images et analogies (l'aveugle-né, l'œil sorti de la caverne) ; ambre
+  libre. Les paires vert/rouge (ou vert/rose) opposent les deux pôles d'une
+  même phrase : laideur et mélange / vertu et purification.
+- **Grec** translittéré en *italique*, dans le rappel comme dans les cartes
+  (*noêsis*, *ekplēxis*, *monos pros monon*) ; plus de backticks.
 - **Un tableau** quand une notion se compare sur deux axes. Ses exercices se
-  choisissent au cas par cas (`tables:` dans la leçon, voir
-  `content/philosophie.md`) plutôt que d'être laissés au tirage : au traité
-  7, une banque sur la seule colonne qui compte pour le tableau de deux
-  lignes, une banque par colonne pour celui des deux actes.
+  règlent (`tables:` dans la leçon) : une banque sur la colonne qui compte,
+  et une case seule sur chaque ligne d'étiquette **quand l'étiquette tient
+  en un mot qu'on ne peut pas formuler autrement** (c'est cette vertu et pas
+  une autre, c'est « Ulysse »), jamais sur une formulation arbitraire.
 - **Puces** seulement pour une énumération courte et parallèle, sans
   point-virgule en fin d'item.
-- **Pièges** `! …` en fin, autant que nécessaire : contresens à éviter,
-  thèse affirmée sans être démontrée, nuance de ce qui est établi.
-- **Interdits** : point d'exclamation, tiret cadratin, référence à la
-  matérialité de la source (« la notice dit que »).
+- **Pièges** `! …` en fin : contresens à éviter, nuance de ce qui est
+  établi ; pas de remarque d'analyse de l'argumentation pour elle-même.
+- **Interdits** : point d'exclamation hors citation, tiret cadratin,
+  référence à la matérialité de la source (« la notice dit que »).
 
 ## 5. Écrire les cartes
 
 Après chaque rappel, ses cartes (trois au moins), dans l'ordre du rappel.
-Elles font retenir **le raisonnement**, et aussi ce que les notes de la GF
-apportent de savant.
+Elles font retenir **le raisonnement**, le **texte** et ce que les notes de
+la GF apportent de savant. Le traité 1, après retouches, en compte près de
+200 : c'est l'ordre de grandeur attendu.
+
+### Les cartes-citation en cascade (le gros des cartes)
+
+Pour **chaque passage clé** de la traduction (souvent un paragraphe entier,
+pas une phrase), une série de cartes qui répètent le passage entier, le trou
+se déplaçant d'un segment à l'autre, jusqu'à ce que chaque segment qui
+compte ait été troué : souvent 4 à 15 cartes par passage. Y ajouter une ou
+deux cartes qui trouent une proposition entière (« En chaque chose, il y a
+___ »). Dans le passage, le gras marque les termes clés et le souligné les
+membres qui structurent la phrase ; ces marques restent les mêmes d'une
+carte à l'autre. Au traité 1 : 1, 44-48 ; 2, 18-23 ; 6, 13-15 ; 6, 21-27 ;
+7, 1-12 ; 8, 6-13 ; 8, 22-27 ; 9, 7-15 ; 9, 15-22 ; 9, 22-24 ; 9, 33-36.
+
+### Les cartes qui reconstruisent l'argument
+
+Plusieurs phrases qui refont le raisonnement pas à pas, avec le trou sur son
+pivot : « Le premier ressort de l'argument est ce que produit le défaut de
+Forme : la laideur croît à mesure que la Forme est moins présente. Par
+conséquent, la beauté croît avec sa présence. Autrement dit, la beauté varie
+en fonction de la maîtrise de la ___ par la Forme. » Elles complètent les
+cartes-citation : celles-ci font savoir le texte, celles-là le comprendre.
 
 ### Ce qu'on troue
 
-- **La locution entière, pas un mot isolé** : « un autre point de départ »
-  plutôt que « départ », « en lui-même », « avare de lui-même », « dyade
-  indéfinie », « provient de la réalité ».
-- **Le pivot de chaque étape**, la raison et pas seulement la conclusion
-  (« composé, il dépendrait de ses ___ »).
+- **L'élément qui rend la réponse la plus précise possible**, souvent le
+  moins évident : « Diotime » plutôt que « *Banquet* », « maison » plutôt que
+  « pierres », « *Doryphore* de Polyclète » en entier.
+- **La locution entière, pas un mot isolé** : « un autre point de départ »,
+  « en lui-même », « avare de lui-même », « provient de la réalité ».
+- **Le pivot de chaque étape**, la raison et pas seulement la conclusion.
+- **Le vocabulaire grec** des notions et des affects (*ekplēxis*, *thambos*,
+  *aphaíresis*, *ópsis ḗdē génomenos*, *agōn eschatos*).
 - **Plusieurs trous**, à titre exceptionnel et seulement par nécessité
-  syntaxique, quand deux termes coordonnés ne se trouent pas l'un sans
-  l'autre (« la ___ qui refroidit et les ___ qui agissent », réponse
-  « neige ; remèdes ») ; voir `content/philosophie.md`.
+  syntaxique (voir `content/philosophie.md`).
 - **Les renvois** à un autre traité avec les deux numérotations en réponse
   (« 10 (V, 1) », `alt: ["10", "V, 1"]`).
-
-### Les cartes-citation en cascade
-
-Pour chaque phrase de la GF qui porte un argument, une série de cartes qui
-répètent la citation entière, le trou se déplaçant d'un segment à l'autre,
-plus une carte qui troue la proposition entière (« En chaque chose, il y a
-___ »). Dans la citation, le gras et le souligné marquent ce qui la
-structure (les termes répétés, les deux membres d'une opposition) et restent
-les mêmes d'une carte à l'autre.
+- **Des variantes** (`alt`) pour ce qui se dit de deux façons sans
+  différence de sens (« une seule et même beauté », « saint Augustin ») ;
+  inutile pour les accents et les apostrophes, que la correction ignore.
 
 ### Les cartes tirées des notes de la GF
 
 Elles peuvent apprendre ce que le rappel ne dit pas, à condition de tenir
-seules et sans en abuser : l'essentiel passe par le rappel. Y puiser :
-- les **sources platoniciennes** que la note signale (le *Philèbe* et le Bien
-  seul *hikanós*, 20b-c, 67a) ;
-- les **termes grecs** que la traduction rend (« parfait » rend *téléon*,
-  « d'emblée » rend *ḗdē*), en italique translittéré accentué dans les
-  cartes ;
-- l'**histoire d'une notion** (la dyade chez les successeurs de Platon, les
-  monades) ;
-- les **renvois à d'autres traités**, avec le titre de Porphyre et le numéro
-  (traité 24 (V, 6), *Sur le fait que l'au-delà de l'Être ne pense pas…*) ;
-- les **débats de commentateurs** et les **précautions** de Plotin (une
-  activité noétique de l'Un ? « une sorte de », *hoion*) ;
-- les **prolongements** dans des traités ultérieurs (l'*hupernóēsis* du
-  traité 39).
-
-Rattacher autant que possible le détail à la question du traité (« d'emblée »
-répond aussi à la question initiale : l'Intellect perçoit immédiatement l'Un
-sur le mode de la multiplicité).
+seules et sans en abuser. Y puiser les sources platoniciennes, les termes
+grecs que la traduction rend, l'histoire d'une notion, les renvois à d'autres
+traités (titre de Porphyre et numéro), les débats de commentateurs et les
+précautions de Plotin, les prolongements dans des traités ultérieurs ; et
+rattacher le détail à la question du traité quand c'est possible.
 
 **Vérifier chaque affirmation savante contre le texte.** Une note ou une
-explication tierce peut contredire la traduction : au traité 7, des cartes
-faisaient de la *katanóēsis* une compréhension « propre à l'Intellect »,
-alors que 2, 15-19 la dit de l'Un, par analogie (« une sorte de »
-perception de soi). Le texte l'emporte ; en cas de doute, demander.
+explication tierce peut contredire la traduction (au traité 7, la
+*katanóēsis* donnée pour « propre à l'Intellect » alors que 2, 15-19 la dit
+de l'Un, par analogie). Le texte l'emporte ; en cas de doute, demander. Les
+citations que l'utilisateur colle depuis NotebookLM sont, elles, fiables.
 
 ### La phrase de la carte
 
@@ -268,16 +309,9 @@ perception de soi). Le texte l'emporte ; en cas de doute, demander.
 - Nommer le traité (et le chapitre) seulement quand c'est ce qu'il faut
   savoir ou que la thèse lui est propre ; sinon « Plotin » suffit, voire
   rien. Pas de formule fixe en tête de chaque carte.
-- Repères : « (1, 10) » ou « le chapitre 1 du traité 7 (l. 10) », selon ce
-  qui se lit le mieux.
-- **Des repères toujours exacts** : la traduction ne numérote que toutes les
-  cinq lignes ([5], [10]…). Un repère de ligne ne se donne que s'il est écrit
-  dans la notice, le plan ou une note, ou si une marque le fixe sans
-  ambiguïté ; sinon, donner la sous-partie du plan détaillé qui contient le
-  passage (« (5, 22-54) »), jamais une ligne déduite (choix de l'utilisateur
-  au traité 1). Vaut pour les rappels, les cartes et l'index.
-- Une carte qui anticipe ce que le texte n'a pas encore établi (l'Intellect
-  nommé au chapitre 1) se supprime ou se réécrit.
+- Repères : toujours **« (chap. z, l. x-y) »** (voir « Les repères »).
+- Une carte qui anticipe ce que le texte n'a pas encore établi se supprime
+  ou se réécrit.
 
 ### Identifiants
 
@@ -291,20 +325,21 @@ l'utilisateur : la progression sur ces cartes repart de zéro.
 
 ### Contrôles avant validation
 
-Défauts relevés sur le traité 7, que `content:check` n'attrape pas tous :
+`npm run content:tidy -- content/courses/plotin/units/traiteN.yaml` corrige
+seul ce qui se corrige sans jugement (marques fermées après une espace,
+souligné collé à un trou, espaces en trop, apostrophes typographiques,
+variantes en double) ; l'éditeur visuel fait de même à chaque
+enregistrement. Restent à vérifier à la main, et `content:check` les
+signale :
 - une carte sans `___` ou à réponse vide (bloquant) ;
-- une espace en fin de réponse ;
-- une marque fermée après une espace (`**hapax **chez`, `*est *revient`) :
-  l'espace se met hors de la marque (`**hapax** chez`) ;
-- un souligné collé à un trou (`__… ___ __`) : fermer le souligné avant le
-  trou (`__…__ ___`) ;
+- un nombre de réponses différent du nombre de trous ;
 - des guillemets français imbriqués : la citation intérieure prend les
-  guillemets droits ;
-- une phrase coupée par un saut de ligne.
+  guillemets droits.
 
 ## 6. Valider, vérifier, publier
 
-1. `npm run content:check`, corriger jusqu'à « Contenu valide ».
+1. `npm run content:tidy -- <fichier>`, puis `npm run content:check`, et
+   corriger jusqu'à « Contenu valide ».
 2. `npm run content:build`, puis regarder le rendu : `#/fiches/traiteN` dans
    le navigateur intégré (serveur de dev sur le port 5173, déjà lancé ou via
    `preview_start`). Vérifier que les attaques se lisent comme l'idée de la

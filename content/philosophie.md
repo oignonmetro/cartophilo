@@ -329,12 +329,18 @@ les cours :
 
 - `green` : la thèse retenue par l'auteur ;
 - `red` : ce qu'il rejette, ou ce qui fait problème ;
+- `pink` : variante plus douce du rouge, pour l'autre pôle d'une opposition
+  dont le vert marque le premier ;
 - `violet` : les termes techniques et notions clés ;
 - `teal` : une citation du texte étudié ;
-- `sky` : la structure de l'œuvre (parties, chapitres) ;
+- `sky` : la structure de l'œuvre (parties, chapitres) et les sources qu'elle
+  reprend (un dialogue de Platon, un discours qu'elle cite) ;
 - `coral` : les propriétés établies et les conclusions ;
-- `pink`, `amber`, `yellow` : libres, pour une opposition ou une nuance
-  locale (une prémisse, une image, un auteur et son commentateur).
+- `yellow` : les images et les analogies (l'aveugle-né, la caverne) ;
+- `amber` : libre, pour une nuance locale.
+
+Les paires vert/rouge, ou vert/rose, opposent les deux pôles d'une même
+phrase (la laideur est un mélange / la vertu est une purification).
 
 Ce code remplace la règle générale des « deux ou trois couleurs au plus » de
 `content/README.md`. Vaut pour toute lesson écrite désormais, et pour les
