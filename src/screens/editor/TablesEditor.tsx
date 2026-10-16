@@ -167,7 +167,7 @@ export function TablesEditor({
 
   return (
     <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
-      <div className="mx-auto flex w-full max-w-3xl flex-col gap-4">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-4">
         <div className="flex flex-wrap items-center gap-2">
           <button
             type="button"
@@ -777,7 +777,12 @@ function ExercisesPanel({
   const rowName = (row: number) => plainInline(grid[row + 1]?.[0] ?? '').trim() || `ligne ${row + 1}`
 
   return (
-    <div className="flex flex-col gap-2 border-t-2 border-line pt-3">
+    // Assez large, la liste et l'exo joué se tiennent côte à côte : l'exo reste
+    // en vue pendant qu'on règle la liste, sans grand vide au milieu des lignes.
+    // En demi-fenêtre, ils reviennent l'un sous l'autre.
+    <div className="@container border-t-2 border-line pt-3">
+      <div className="grid items-start gap-4 @4xl:grid-cols-[minmax(22rem,30rem)_minmax(0,1fr)]">
+      <div className="flex min-w-0 flex-col gap-2">
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-xs font-black tracking-wide text-ink-faint uppercase">Exercices</span>
         <div className="flex gap-0.5 rounded-lg border-2 border-line p-0.5">
@@ -831,7 +836,9 @@ function ExercisesPanel({
             s’efface une fois le tableau bien su).
           </p>
           {chosen!.map((choice, at) => (
-            <div key={at} onClick={() => setActive(at + 1)} className={rowClass(at + 1)}>
+            <div key={at} onClick={() => setActive(at + 1)} className={`${rowClass(at + 1)} !flex-nowrap !items-start`}>
+              {/* Les réglages passent à la ligne au besoin ; les boutons restent groupés à droite. */}
+              <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">
               <span className="font-black whitespace-nowrap text-ink-faint">Exo {at + 1}</span>
               <select
                 value={choice.kind}
@@ -850,7 +857,7 @@ function ExercisesPanel({
                 // On montre la réponse attendue (le contenu de la case), plus parlante
                 // qu'un repère « colonne × ligne » ; le repère reste en info-bulle.
                 <span
-                  className="max-w-md truncate rounded-md bg-ink/5 px-1.5 py-1 font-bold text-ink-soft"
+                  className="max-w-full truncate rounded-md bg-ink/5 px-1.5 py-1 font-bold text-ink-soft"
                   title={
                     choice.row === undefined
                       ? `Colonne « ${columnName(choice.column)} », ligne tirée au hasard`
@@ -877,12 +884,13 @@ function ExercisesPanel({
                   </select>
                 </>
               )}
-              <span className="flex-1" />
               {!playable(choice) && (
                 <span className="font-bold text-amber-deep">
                   {choice.kind === 'cell' && choice.row !== undefined ? 'Cette case est vide.' : CHOICE_EMPTY[choice.kind]}
                 </span>
               )}
+              </div>
+              <div className="flex shrink-0 items-center py-0.5">
               <SmallButton
                 title="Monter"
                 disabled={at === 0}
@@ -911,6 +919,7 @@ function ExercisesPanel({
               >
                 ✕
               </SmallButton>
+              </div>
             </div>
           ))}
           <button
@@ -926,8 +935,10 @@ function ExercisesPanel({
         </>
       )}
 
+      </div>
+
       {mode !== 'none' && (
-        <div className="mt-1">
+        <div className="min-w-0 @4xl:sticky @4xl:top-0">
           {entry ? (
             <PlayArea
               table={table}
@@ -962,6 +973,7 @@ function ExercisesPanel({
           )}
         </div>
       )}
+      </div>
     </div>
   )
 }
