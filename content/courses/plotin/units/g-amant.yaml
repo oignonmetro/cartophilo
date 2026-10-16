@@ -1,3 +1,9 @@
+# Fiche du glossaire de Plotin (voir content/philosophie.md), refondue le
+# 2026-10-16 selon la skill cours-traite : rappels qui disent pourquoi,
+# citations de la traduction GF vérifiées sur le texte (I, 3, 1 ; I, 6, 4 et
+# 9 ; VI, 7, 22 et 35 ; VI, 9, 9). Les cartes dont le contenu a changé
+# portent un identifiant en -q.
+
 id: g-amant
 title: Amant (`erôtikos`)
 subtitle: L'âme que la beauté frappe, et qu'il faut conduire des corps jusqu'au Bien
@@ -7,22 +13,28 @@ lessons:
 - id: g-amant-l1
   title: Un des trois naturels qui remontent
   notes: |-
-    **L'amant n'est pas d'abord un homme amoureux : c'est un naturel, une disposition de l'âme à être frappée par la beauté.** Plotin reprend le *Phèdre* (248d) : l'âme qui a vu le plus de réalités naît « dans la semence d'un homme qui deviendra un philosophe, un musicien ou un amant » (I, 3 [20], 1, 6-8). Chez Platon, c'est un seul et même homme ; Plotin en fait trois degrés d'une même remontée, du plus sensible au plus intellectuel.
+    **L'amant n'est pas d'abord un homme amoureux : c'est un naturel, une disposition de l'âme à être frappée par la beauté.** Plotin en fait l'un des trois chemins par lesquels une âme peut remonter vers l'intelligible.
+
+    __**Trois naturels, d'après le *Phèdre*.**__ Le traité 20 (I, 3), *Sur la dialectique*, demande quel homme peut s'élever, et répond par {sky}Platon (*Phèdre*, 248d){/sky} : c'est {teal}« celui qui, ayant vu antérieurement toutes les réalités ou la plupart d'entre elles, entre, à sa première naissance, dans la semence d'un homme qui deviendra un philosophe, un musicien ou un amant »{/teal} (chap. 1, l. 6-9). Chez Platon, c'est un seul et même homme ; {green}Plotin en fait trois degrés d'une même remontée{/green}, du plus sensible au plus intellectuel.
 
     | Figure | Ce qui le frappe | Ce qu'il doit apprendre |
     | le musicien | les sons et les rythmes | aller à l'harmonie intelligible |
     | l'amant | les beaux corps | aller de tous les corps aux incorporels |
     | le philosophe | il a « des ailes » par nature | les mathématiques, puis la dialectique |
 
-    **Pourquoi l'amant est frappé.** Il se **souvient** de la Beauté intelligible, mais confusément : il la cherche dans ce que voient ses yeux. Tous voient les beaux corps, mais tous n'en reçoivent pas également l'**aiguillon** ; ceux qui le reçoivent le plus, ce sont les amants (I, 6 [1], 4).
+    __**Pourquoi l'amant est frappé.**__ Il se **souvient** de la Beauté intelligible, mais confusément : il la cherche dans ce que voient ses yeux. Plotin le dit des corps {teal}« que tous peuvent voir, mais sans que tous en reçoivent également l'aiguillon ; ceux qui sont le plus disposés ainsi, ce sont ceux que l'on appelle des amants »{/teal} (traité 1 [I, 6], chap. 4, l. 20-22). **Tous voient les mêmes corps : ce qui fait l'amant, c'est d'en être piqué.**
 
-    **Pourquoi il faut le conduire.** Le philosophe monte par nature ; le musicien et l'amant doivent être **conduits** vers le haut (I, 3, 1, 9-10), car leur élan s'arrête à l'objet qui l'a éveillé. Le musicien peut d'ailleurs devenir amant (2, 1).
+    __**Pourquoi il faut le conduire.**__ {teal}« Pour le philosophe bien sûr, c'est par nature, alors que le musicien et l'amant doivent être conduits vers le haut »{/teal} (traité 20 [I, 3], chap. 1, l. 9-10). La raison : {red}leur élan s'arrête à l'objet qui l'a éveillé{/red}, le son ou le corps, tandis que le philosophe, détaché par nature, va de lui-même à l'intelligible. Le musicien peut d'ailleurs devenir amant (chap. 2).
 
     ! Ne pas confondre l'amant et l'amour : Éros est « l'œil de ce qui désire », ce par quoi l'amant voit ; l'amant est celui qui voit (voir la fiche « Amour »). Et le désir du Bien est en toute âme, même celle qui n'est pas un naturel d'amant.
   points:
   - id: g-amant-l1-1
     sentence: "Plotin reprend au *Phèdre* (248d) les trois naturels qui remontent vers l'intelligible : le philosophe, le musicien et l'___ (I, 3, 1)."
     answer: amant
+    alt: []
+  - id: g-amant-l1-q1
+    sentence: "Celui qui peut s'élever entre, à sa première naissance, « dans la semence d'un homme qui deviendra un ___, un musicien ou un amant » (traité 20 [I, 3], chap. 1, l. 6-9)."
+    answer: philosophe
     alt: []
   - id: g-amant-l1-2
     sentence: "Chez Platon, philosophe, musicien et amant sont un seul homme ; Plotin en fait trois ___ d'une même remontée."
@@ -36,14 +48,22 @@ lessons:
     sentence: "L'amant est frappé par les beaux corps parce qu'il se ___ confusément de la Beauté intelligible."
     answer: souvient
     alt: []
-  - id: g-amant-l1-5
-    sentence: "Tous voient les beaux corps, mais ce sont les amants qui en reçoivent le plus l'___ (I, 6, 4)."
+  - id: g-amant-l1-q2
+    sentence: "Les corps, « tous peuvent [les] voir, mais sans que tous en reçoivent également l'___ ; ceux qui sont le plus disposés ainsi, ce sont ceux que l'on appelle des amants » (traité 1 [I, 6], chap. 4, l. 20-22)."
     answer: aiguillon
     alt: []
-  - id: g-amant-l1-6
-    sentence: "Le philosophe monte par nature ; le musicien et l'amant doivent être ___ vers le haut (I, 3, 1)."
+  - id: g-amant-l1-q3
+    sentence: "Tous voient les mêmes beaux corps : ce qui fait l'amant, ce n'est pas de les voir, c'est d'en recevoir le plus l'aiguillon, de sorte que ceux qui sont le plus disposés ainsi sont ceux que l'on appelle des ___ (traité 1 [I, 6], chap. 4, l. 20-22)."
+    answer: amants
+    alt: []
+  - id: g-amant-l1-q4
+    sentence: "« Pour le philosophe bien sûr, c'est par nature, alors que le musicien et l'amant doivent être ___ vers le haut » (traité 20 [I, 3], chap. 1, l. 9-10)."
     answer: conduits
     alt: []
+  - id: g-amant-l1-q5
+    sentence: "Le musicien et l'amant doivent être conduits parce que leur élan s'___ à l'objet qui l'a éveillé, le son ou le corps."
+    answer: arrête
+    alt: ["arrete"]
   - id: g-amant-l1-7
     sentence: "Dans le traité 20 (I, 3, 2, 1), le ___ peut se transformer en amant."
     answer: musicien
@@ -51,13 +71,13 @@ lessons:
 - id: g-amant-l2
   title: Des corps aux vertus
   notes: |-
-    **L'amant risque de s'arrêter au corps qui l'a frappé ; l'éduquer, c'est lui apprendre que ce qu'il aime n'est pas ce corps.** Plotin suit l'échelle du *Banquet* (I, 3 [20], 2) : ne pas aimer un seul corps, mais tous ; puis les belles occupations et les belles lois ; puis les techniques, les sciences, les vertus ; enfin l'Intellect et l'Être.
+    **L'amant risque de s'arrêter au corps qui l'a frappé ; l'éduquer, c'est lui apprendre que ce qu'il aime n'est pas ce corps.** Plotin suit l'échelle du {sky}*Banquet*{/sky} (traité 20 [I, 3], chap. 2) : ne pas aimer un seul corps, mais tous ; puis les belles occupations et les belles lois ; puis les techniques, les sciences, les vertus ; enfin l'Intellect et l'Être.
 
-    **Pourquoi l'échelle monte : à chaque étape, la beauté aimée se révèle autre que son support.** Si plusieurs corps sont beaux, la beauté n'est la propriété d'aucun ; elle est donc incorporelle, et l'âme peut l'aimer là où il n'y a plus de corps du tout.
+    __**Pourquoi l'échelle monte.**__ À chaque étape, la beauté aimée se révèle autre que son support. {pink}Si plusieurs corps sont beaux{/pink}, la beauté n'est la propriété d'aucun ; {green}elle est donc incorporelle{/green}, et l'âme peut l'aimer là où il n'y a plus de corps du tout. **L'amant ne renonce pas à ce qu'il aimait : il découvre ce qu'il aimait déjà.**
 
-    **Les amants authentiques** (I, 6 [1], 5). À ceux qu'émeuvent les réalités non sensibles, Plotin demande de quels « transports bachiques » ils sont saisis. Ce qui les émeut, ce n'est ni les contours, ni la couleur, ni la grandeur, mais l'âme, « sans couleur », sa justice et sa tempérance.
+    __**Les amants authentiques.**__ À ceux qu'émeuvent les réalités non sensibles, Plotin demande de quels {teal}« transports bachiques »{/teal} ils sont saisis. Ce qui les émeut, {teal}« ni les contours, ni la couleur, ni une certaine grandeur, mais l'âme qui est "sans couleur" »{/teal}, sa justice et sa tempérance (traité 1 [I, 6], chap. 5, l. 8-11).
 
-    **Ce que l'amant doit devenir.** « Assurément, jamais l'œil ne verrait le soleil sans être devenu de la même nature que le soleil, et l'âme ne pourrait voir le beau, sans être devenue belle » (I, 6, 9, 30-32). C'est pourquoi Plotin demande à chacun de tailler et polir sa propre **statue intérieure** jusqu'à ce que brille l'éclat de la vertu. Éduquer l'amant, c'est donc le purifier, non lui offrir des objets plus beaux.
+    __**Ce que l'amant doit devenir.**__ {teal}« Celui qui voit, en effet, doit s'être rendu apparenté et semblable à ce qui est vu, pour parvenir à la contemplation. Assurément, jamais l'œil ne verrait le soleil sans être devenu de la même nature que le soleil, et l'âme ne pourrait voir le beau, sans être devenue belle »{/teal} (traité 1 [I, 6], chap. 9, l. 29-32). C'est le {violet}principe de parenté{/violet} : on ne connaît que ce à quoi on s'est rendu semblable. D'où l'exigence de tailler et polir sa propre {yellow}**statue intérieure**{/yellow} jusqu'à ce que brille l'éclat de la vertu. {coral}Éduquer l'amant, c'est donc le purifier, non lui offrir des objets plus beaux.{/coral}
 
     ! L'amant n'abandonne pas la beauté des corps parce qu'elle serait fausse, mais parce qu'elle était déjà l'image d'une beauté qui ne tient à aucun corps.
   points:
@@ -81,9 +101,13 @@ lessons:
     sentence: "Aux amants des réalités non sensibles, Plotin demande de quels « transports ___ » ils sont saisis (I, 6, 5)."
     answer: bachiques
     alt: []
-  - id: g-amant-l2-6
-    sentence: "Ce qui émeut les amants authentiques n'est ni les contours ni la couleur, mais l'âme, qui est « sans ___ » (I, 6, 5)."
+  - id: g-amant-l2-q1
+    sentence: "Ce qui émeut les amants authentiques, ce n'est « ni les contours, ni la couleur, ni une certaine grandeur, mais l'âme qui est \"sans ___\" » (traité 1 [I, 6], chap. 5, l. 8-11)."
     answer: couleur
+    alt: []
+  - id: g-amant-l2-q2
+    sentence: "« Celui qui voit, en effet, doit s'être rendu apparenté et ___ à ce qui est vu, pour parvenir à la contemplation » (traité 1 [I, 6], chap. 9, l. 29-30)."
+    answer: semblable
     alt: []
   - id: g-amant-l2-7
     sentence: "« Jamais l'œil ne verrait le soleil sans être devenu de la même nature que le soleil, et l'âme ne pourrait voir le beau, sans être devenue ___ » (I, 6, 9)."
@@ -93,6 +117,14 @@ lessons:
     sentence: "« Jamais l'œil ne verrait le ___ sans être devenu de la même nature que lui, et l'âme ne pourrait voir le beau, sans être devenue belle » (I, 6, 9)."
     answer: soleil
     alt: []
+  - id: g-amant-l2-q3
+    sentence: "« Assurément, jamais l'œil ne verrait le soleil sans être devenu ___ que le soleil » (traité 1 [I, 6], chap. 9, l. 30-31)."
+    answer: de la même nature
+    alt: ["de la meme nature"]
+  - id: g-amant-l2-q4
+    sentence: "Le principe dont dépend l'éducation de l'amant est celui de la ___ : on ne connaît que ce à quoi on s'est rendu semblable."
+    answer: parenté
+    alt: ["parente"]
   - id: g-amant-l2-9
     sentence: "Puisque l'âme ne voit le beau qu'en devenant belle, Plotin demande à chacun de tailler et polir sa propre ___ intérieure (I, 6, 9)."
     answer: statue
@@ -100,16 +132,16 @@ lessons:
 - id: g-amant-l3
   title: Amours droites et amour dévié
   notes: |-
-    **Plotin ne condamne pas l'amour des corps : il le classe selon ce qu'il cherche** (III, 5 [50], 1). Un amour vaut ce que vaut sa reconnaissance de la beauté véritable dans l'image.
+    **Plotin ne condamne pas l'amour des corps : il le classe selon ce qu'il cherche** (traité 50 [III, 5], chap. 1). Un amour vaut ce que vaut sa reconnaissance de la beauté véritable dans l'image.
 
     | Amour | Ce qu'il cherche | Jugement de Plotin |
     | pur | la beauté seule, sans union des corps | le meilleur |
     | mixte, selon la nature | engendrer dans le beau | tempérant, sans faute |
     | mixte, contre la nature | une union qui dévie de la nature | une chute, par ignorance du beau |
 
-    **Pourquoi l'amour qui veut engendrer n'est pas une faute, mais reste inférieur.** Vouloir « enfanter dans le beau », c'est vouloir l'immortalité dans la condition mortelle : un désir droit. Mais il vient d'une **indigence**, car on ne veut produire du beau que parce qu'on ne s'en suffit pas. L'amour pur l'emporte parce qu'il se suffit de la beauté : qui a la réminiscence de la beauté intelligible n'aime plus celle d'ici qu'en tant qu'**image**, comme un **jeu** de la beauté d'en haut.
+    __**Pourquoi l'amour qui veut engendrer n'est pas une faute, mais reste inférieur.**__ Vouloir « enfanter dans le beau », c'est vouloir l'**immortalité** dans la condition mortelle : {green}un désir droit{/green}. Mais il vient d'une **indigence**, car on ne veut produire du beau que parce qu'on ne s'en suffit pas. L'amour pur l'emporte parce qu'il se suffit de la beauté : qui a la réminiscence de la beauté intelligible n'aime plus celle d'ici qu'en tant qu'**image**, comme un jeu de la beauté d'en haut.
 
-    **Pourquoi l'amour contre nature est une chute.** Il ne vient pas d'un principe mauvais : c'est le désir du bien lui-même qui peut conduire à chuter vers le mal, quand on prend l'image pour la chose, par ignorance du beau.
+    __**Pourquoi l'amour contre nature est une chute.**__ Il ne vient pas d'un principe mauvais : {red}c'est le désir du bien lui-même qui peut conduire à chuter vers le mal{/red}, quand on prend l'image pour la chose, par ignorance du beau.
 
     ! Ce que cherche l'amant n'est pas le plaisir : même l'amour des corps vise, sans le savoir, la beauté dont le corps n'est que l'image.
   points:
@@ -140,36 +172,46 @@ lessons:
 - id: g-amant-l4
   title: La lumière sur la forme
   notes: |-
-    **Ce qui éveille l'amant n'est pas la forme seule, mais la lumière que le Bien répand sur elle.** Pourquoi un visage vivant, même laid, est-il plus beau qu'une belle statue ? Si la beauté était la proportion, la statue l'emporterait. Plotin en conclut que la beauté est plutôt **ce qui resplendit sur la proportion** que la proportion elle-même (VI, 7 [38], 22).
+    **Ce qui éveille l'amant n'est pas la forme seule, mais la lumière que le Bien répand sur elle.** Plotin le montre par une expérience que chacun peut faire.
 
-    **L'âme ne s'éprend que de la couleur du Bien.** L'Intellect et la vie ont la forme du Bien ; mais tant que le Bien ne leur donne pas sa **couleur**, l'âme « reste étendue, indifférente ». Quand elle en reçoit l'effluve, elle est prise d'une **fureur bachique** et devient amour (22, 8-9).
+    __**Le visage vivant et la statue.**__ Pourquoi un visage vivant, même laid, attire-t-il plus qu'une belle statue ? {red}Si la beauté était la proportion, la statue l'emporterait{/red}. Plotin en conclut qu'{teal}« il faut dire que la beauté est plutôt ce qui resplendit sur la proportion que la proportion elle-même, et que c'est cela qui est aimable »{/teal} (traité 38 [VI, 7], chap. 22, l. 24-26). **Ce qui manque à la statue, c'est la vie : la grâce qui court sur la beauté.**
 
-    **Ce que l'amant aime au fond est sans forme.** Le principe n'est ni une forme ni l'ensemble des formes : il est le **« sans forme »**, et c'est pourquoi il suscite un **amour illimité**, car une forme a une mesure, et un amour qui s'y arrêterait serait mesuré (VI, 7, 32-33). L'amant n'aime vraiment que lorsqu'il forme en lui une impression non sensible.
+    __**L'âme ne s'éprend que de la couleur du Bien.**__ L'Intellect et la vie ont la forme du Bien ; mais tant que le Bien ne leur donne pas sa **couleur**, l'âme reste indifférente. Quand elle la reçoit, {teal}« l'âme donc en recevant en elle un effluve venu d'en haut est émue, elle est saisie d'un transport bachique, elle est remplie des fureurs du désir, et c'est ainsi que naît l'amour »{/teal} (chap. 22, l. 7-10).
 
-    **L'amant reste à la porte.** Plotin reprend l'Éros du *Banquet* « qui veille à la porte » : l'amoureux d'ici-bas possède la beauté non en la recevant, mais en restant auprès d'elle (VI, 5 [23], 10).
+    __**Ce que l'amant aime au fond est sans forme.**__ Le principe n'est ni une forme ni l'ensemble des formes : il est le {violet}**« sans forme »**{/violet}, et c'est pourquoi il suscite un **amour illimité** : une forme a une mesure, et un amour qui s'y arrêterait serait mesuré (traité 38 [VI, 7], chap. 32-33).
+
+    __**L'amant reste à la porte.**__ Plotin reprend l'Éros du *Banquet* « qui veille à la porte » : l'amoureux d'ici-bas possède la beauté non en la recevant, mais en restant auprès d'elle (traité 23 [VI, 5], chap. 10).
 
     ! Le Beau n'est pas le terme : la forme belle n'est qu'une trace du sans-forme, et c'est le Bien, par-delà le Beau, que l'amant cherche sans le savoir.
   points:
-  - id: g-amant-l4-1
-    sentence: "Un visage vivant, même laid, est plus beau qu'une belle ___ : la beauté n'est donc pas la proportion (VI, 7, 22)."
+  - id: g-amant-l4-q1
+    sentence: "Un visage vivant attire plus qu'une belle ___ : la beauté n'est donc pas la proportion (traité 38 [VI, 7], chap. 22)."
     answer: statue
     alt: []
-  - id: g-amant-l4-2
-    sentence: "Pour Plotin, la beauté est plutôt ce qui ___ sur la proportion que la proportion elle-même (VI, 7, 22)."
+  - id: g-amant-l4-q2
+    sentence: "« Il faut dire que la beauté est plutôt ce qui ___ sur la proportion que la proportion elle-même, et que c'est cela qui est aimable » (traité 38 [VI, 7], chap. 22, l. 24-26)."
     answer: resplendit
-    alt: ["brille"]
-  - id: g-amant-l4-3
-    sentence: "Recevant l'effluve du Bien, l'âme se meut comme prise d'une fureur ___ et devient amour (VI, 7, 22)."
+    alt: []
+  - id: g-amant-l4-q3
+    sentence: "« Il faut dire que la beauté est plutôt ce qui resplendit sur la proportion que la proportion elle-même, et que c'est cela qui est ___ » (traité 38 [VI, 7], chap. 22, l. 24-26)."
+    answer: aimable
+    alt: []
+  - id: g-amant-l4-q4
+    sentence: "« L'âme donc en recevant en elle un effluve venu d'en haut est émue, elle est saisie d'un transport ___, elle est remplie des fureurs du désir, et c'est ainsi que naît l'amour » (traité 38 [VI, 7], chap. 22, l. 7-10)."
     answer: bachique
+    alt: []
+  - id: g-amant-l4-q5
+    sentence: "« L'âme donc en recevant en elle un ___ venu d'en haut est émue, elle est saisie d'un transport bachique » (traité 38 [VI, 7], chap. 22, l. 7-10)."
+    answer: effluve
     alt: []
   - id: g-amant-l4-4
     sentence: "Le principe n'est ni une forme ni l'ensemble des formes : il est le « ___ », et c'est pourquoi il suscite un amour illimité (VI, 7, 32-33)."
     answer: sans forme
     alt: ["sans-forme"]
-  - id: g-amant-l4-5
-    sentence: "L'amant n'aime vraiment que lorsqu'il forme en lui une impression non ___ (VI, 7, 33)."
-    answer: sensible
-    alt: []
+  - id: g-amant-l4-q6
+    sentence: "Une forme a une mesure, et un amour qui s'y arrêterait serait mesuré : c'est pourquoi le sans-forme suscite un amour ___ (traité 38 [VI, 7], chap. 32-33)."
+    answer: illimité
+    alt: ["illimite"]
   - id: g-amant-l4-6
     sentence: "Plotin reprend l'Éros du *Banquet*, l'amour « qui veille à la ___ » (VI, 5, 10)."
     answer: porte
@@ -181,13 +223,15 @@ lessons:
 - id: g-amant-l5
   title: L'union, et l'Intellect amoureux
   notes: |-
-    **Au terme de la remontée, l'amant ne contemple plus un objet : il s'unit à lui.** L'âme se **dépouille de toute forme** pour recevoir le Bien, seule, lui seul ; il apparaît « soudain », et ils ne sont plus deux (VI, 7 [38], 34). Pourquoi se dépouiller ? Parce que le Bien est sans forme : une âme encore occupée d'une forme ne serait pas libre pour lui.
+    **Au terme de la remontée, l'amant ne contemple plus un objet : il s'unit à lui.** Et Plotin va jusqu'à dire que l'Intellect lui-même, au sommet, devient amant.
 
-    **Le maître de maison.** Celui qui entre dans une maison richement ornée admire d'abord les ornements ; dès qu'il voit le maître de maison, il les oublie, et confond sa vision avec ce qu'il voit (VI, 7, 35).
+    __**Se dépouiller de toute forme.**__ L'âme se défait de toute forme pour recevoir le Bien, seule ; il apparaît « soudain », et ils ne sont plus deux (traité 38 [VI, 7], chap. 34). **Pourquoi se dépouiller ? Parce que le Bien est sans forme** : une âme encore occupée d'une forme ne serait pas libre pour lui.
 
-    **L'Intellect lui-même devient amant.** L'Intellect a deux puissances (VI, 7, 35, 20-26) : par l'une, **l'Intellect qui pense**, il contemple ce qui est en lui et « reste décent en étant sobre » ; par l'autre, **l'Intellect amant** (`noun erônta`), il aime ce qui le dépasse et devient insensé, **« ivre de nectar »**. Cette ivresse vaut mieux que la sobriété. Pourquoi ? La pensée garde la dualité de ce qui pense et de ce qui est pensé, et ne peut donc atteindre le Bien, qui est un ; l'amour, lui, s'unit.
+    __**Le maître de maison.**__ {yellow}Celui qui entre dans une maison richement ornée admire d'abord les ornements ; dès qu'il voit le maître de maison, il les oublie{/yellow}, et confond sa vision avec ce qu'il voit (chap. 35, l. 7-16).
 
-    **La vierge qui aime son père.** L'âme aime le Bien d'un amour inné : « toute âme est Aphrodite ». Égarée ici-bas en de fausses amours, comme une jeune fille trompée par des promesses de mariage, elle doit revenir à l'amour pur, celui d'une vierge pour son père (VI, 9 [9], 9).
+    __**L'Intellect a deux puissances.**__ {teal}« La première puissance est la contemplation de l'Intellect qui pense, tandis que la seconde c'est l'Intellect qui aime, quand l'Intellect devient insensé, et qu'il est "ivre de nectar" ; c'est alors que l'Intellect devient amant »{/teal} (chap. 35, l. 23-26). Et {teal}« pour lui, être ivre d'une telle ivresse c'est mieux que de rester décent en étant sobre »{/teal} (l. 26-27). **Pourquoi l'ivresse vaut-elle mieux ?** {pink}La pensée garde la dualité de ce qui pense et de ce qui est pensé{/pink}, et ne peut donc atteindre le Bien, qui est un ; {green}l'amour, lui, s'unit{/green}.
+
+    __**La vierge qui aime son père.**__ L'âme aime le Bien d'un amour inné : {teal}« Toute âme est Aphrodite »{/teal} (traité 9 [VI, 9], chap. 9, l. 31). Égarée ici-bas en de fausses amours, comme une jeune fille trompée par des promesses de mariage, elle doit revenir à l'amour pur, celui d'une {yellow}vierge pour son père{/yellow}.
 
     ! Le sommet de l'amant n'est pas la pensée la plus haute : l'Intellect amoureux dépasse l'Intellect qui pense.
   points:
@@ -203,26 +247,30 @@ lessons:
     sentence: "Le visiteur d'une maison très ornée oublie les ornements dès qu'il voit le ___ de maison (VI, 7, 35)."
     answer: maître
     alt: ["maitre"]
-  - id: g-amant-l5-4
-    sentence: "L'Intellect a deux puissances : par l'une il pense, par l'autre il ___ ce qui le dépasse (VI, 7, 35)."
+  - id: g-amant-l5-q1
+    sentence: "« La première puissance est la contemplation de l'Intellect qui pense, tandis que la seconde c'est l'Intellect qui ___, quand l'Intellect devient insensé, et qu'il est \"ivre de nectar\" » (traité 38 [VI, 7], chap. 35, l. 23-26)."
     answer: aime
     alt: []
-  - id: g-amant-l5-9
-    sentence: "Des deux puissances de l'Intellect (VI, 7, 35), la première est l'Intellect qui pense ; la seconde, qui aime ce qui le dépasse, est l'Intellect ___ (`noun erônta`)."
-    answer: amant
-    alt: ["amoureux"]
-  - id: g-amant-l5-10
-    sentence: "Tant qu'il contemple les Formes qui sont en lui, l'Intellect « reste décent en étant ___ » ; quand il aime, il devient ivre de nectar (VI, 7, 35)."
-    answer: sobre
-    alt: []
+  - id: g-amant-l5-q2
+    sentence: "« La seconde c'est l'Intellect qui aime, quand l'Intellect devient ___, et qu'il est \"ivre de nectar\" ; c'est alors que l'Intellect devient amant » (traité 38 [VI, 7], chap. 35, l. 23-26)."
+    answer: insensé
+    alt: ["insense"]
   - id: g-amant-l5-5
     sentence: "Quand il aime, l'Intellect devient insensé et « ivre de ___ » (VI, 7, 35)."
     answer: nectar
     alt: []
-  - id: g-amant-l5-6
-    sentence: "Pour Plotin, l'ivresse de l'Intellect amoureux vaut mieux que la ___ (VI, 7, 35)."
-    answer: sobriété
-    alt: ["sobriete"]
+  - id: g-amant-l5-9
+    sentence: "Des deux puissances de l'Intellect (VI, 7, 35), la première est l'Intellect qui pense ; la seconde, qui aime ce qui le dépasse, est l'Intellect ___ (*noun erônta*)."
+    answer: amant
+    alt: ["amoureux"]
+  - id: g-amant-l5-q3
+    sentence: "« Pour lui, être ivre d'une telle ivresse c'est mieux que de rester décent en étant ___ » (traité 38 [VI, 7], chap. 35, l. 26-27)."
+    answer: sobre
+    alt: []
+  - id: g-amant-l5-q4
+    sentence: "L'ivresse de l'Intellect amant vaut mieux que la sobriété parce que la pensée garde la ___ de ce qui pense et de ce qui est pensé, alors que l'amour s'unit au Bien, qui est un."
+    answer: dualité
+    alt: ["dualite"]
   - id: g-amant-l5-7
     sentence: "L'âme qui aime l'Un d'un amour pur est comparée à une ___ qui aime son père d'un bel amour (VI, 9, 9)."
     answer: vierge
@@ -234,10 +282,10 @@ lessons:
 - id: g-amant-l6
   title: L'amant revenu parmi les autres
   notes: |-
-    **L'amant purifié ne se retire pas dans une jouissance solitaire : ce qu'il a vu le rend meilleur pour les autres.** On pourrait croire que la remontée, qui fait mépriser les beautés d'ici, détache le sage de tout lien. Plotin dit l'inverse, et pour une raison précise : ce que le sage aime ne lui manque plus, donc son lien aux autres ne naît plus du besoin.
+    **L'amant purifié ne se retire pas dans une jouissance solitaire : ce qu'il a vu le rend meilleur pour les autres.** On pourrait croire que la remontée, qui fait mépriser les beautés d'ici, détache le sage de tout lien. Plotin dit l'inverse, et pour une raison précise : {coral}ce que le sage aime ne lui manque plus, donc son lien aux autres ne naît plus du besoin.{/coral}
 
-    - **Le sage est ami de lui-même et des autres** (I, 4 [46], 15). Vivant selon l'Intellect, il n'attend pas de ses amis qu'ils comblent une indigence : son amitié vient de ce qu'il possède, non de ce qui lui manque.
-    - **L'âme qui s'est unie à l'Un l'annonce aux autres** (VI, 9 [9], 7). Comme **Minos**, « familier de Zeus », qui rapportait de ses entretiens avec le dieu les lois qu'il donnait aux hommes, l'âme qui a été unie au principe redescend pour en indiquer la voie.
+    - **Le sage est ami de lui-même et des autres** (traité 46 [I, 4], chap. 15). Vivant selon l'Intellect, il n'attend pas de ses amis qu'ils comblent une indigence : son amitié vient de ce qu'il possède, non de ce qui lui manque
+    - **L'âme qui s'est unie à l'Un l'annonce aux autres** (traité 9 [VI, 9], chap. 7). Comme {yellow}**Minos**, « familier de Zeus »{/yellow}, qui rapportait de ses entretiens avec le dieu les lois qu'il donnait aux hommes, l'âme qui a été unie au principe redescend pour en indiquer la voie
 
     ! L'amant n'aime pas les autres à la place du Bien : c'est parce qu'il aime le Bien qu'il peut aimer les autres sans en avoir besoin.
   points:
@@ -249,6 +297,10 @@ lessons:
     sentence: "Le traité où Plotin dit du sage qu'il est ami de lui-même et des autres, dans son étude du bonheur, est le traité ___ (I, 4)."
     answer: "46"
     alt: ["quarante-six"]
+  - id: g-amant-l6-q1
+    sentence: "Le lien du sage aux autres ne naît plus du besoin, parce que ce qu'il aime ne lui ___ plus."
+    answer: manque
+    alt: []
   - id: g-amant-l6-3
     sentence: "Comme ___, « familier de Zeus », l'âme qui s'est unie à l'Un redescend pour l'annoncer aux autres (VI, 9, 7)."
     answer: Minos

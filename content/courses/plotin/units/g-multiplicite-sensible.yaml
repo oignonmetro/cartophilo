@@ -1,3 +1,9 @@
+# Fiche du glossaire de Plotin (voir content/philosophie.md), refondue le
+# 2026-10-16 selon la skill cours-traite : rappels qui disent pourquoi,
+# citations de la traduction GF vérifiées sur le texte (IV, 2, 2 ; VI, 4,
+# 11-12 ; III, 6, 7, où la GF dit « fantôme sur ce qui n'est qu'un fantôme
+# radical »). Les cartes dont le contenu a changé portent un identifiant en -q.
+
 id: g-multiplicite-sensible
 title: Multiplicité sensible
 subtitle: Les corps sont seulement multiples, et la Forme y apparaît dispersée sans se diviser
@@ -8,32 +14,34 @@ lessons:
 - id: g-multiplicite-sensible-l1
   title: Une multiplicité par degrés
   notes: |-
-    **Chez Plotin, la multiplicité n'est pas une catégorie homogène : elle change de nature selon le degré de réalité.** Le critère est double, la divisibilité et la multiplicité, et il hiérarchise tout le réel. Plotin en donne deux échelles.
+    **Chez Plotin, la multiplicité n'est pas une catégorie homogène : elle change de nature selon le degré de réalité, et c'est en bas de l'échelle, dans les corps, qu'elle devient pure dispersion.** Pour comprendre ce qu'est la multiplicité sensible, il faut donc la situer.
 
-    **L'échelle du traité 4 (IV, 2, 2, 52-55)**, qui descend jusqu'aux corps : « C'est en ce sens que l'âme est une et multiple. » Et plus bas : « Les corps sont seulement multiples. Mais ce qui est le plus élevé est seulement un. »
+    __**Deux critères, une hiérarchie.**__ Plotin associe deux questions : une réalité est-elle {violet}divisible{/violet} ? est-elle {violet}multiple{/violet} ? En les croisant, il range tout le réel. Le traité 4 (IV, 2) cite le {sky}*Timée*{/sky} puis conclut : {teal}« C'est en ce sens que l'âme est une et multiple. Les corps sont seulement multiples. Mais ce qui est le plus élevé est seulement un »{/teal} (chap. 2, l. 52-55).
 
     | Degré | Formule | Traduction |
-    | ce qui est le plus élevé | `hen monon` | seulement un |
-    | l'Âme | `hen kai polla` | une et multiple |
-    | les formes dans les corps | `polla kai hen` | multiples et unes |
-    | les corps | `polla monon` | seulement multiples |
+    | ce qui est le plus élevé | *hen monon* | seulement un |
+    | l'Âme | *hen kai polla* | une et multiple |
+    | les formes dans les corps | *polla kai hen* | multiples et unes |
+    | les corps | *polla monon* | seulement multiples |
 
-    **L'échelle du traité 10 (V, 1, 8)**, celle des trois hypostases, que Plotin tire des trois premières hypothèses du *Parménide* de Platon : l'Un (`hen`), puis l'Intellect, un-multiple (`hen polla`), puis l'Âme, une et multiple (`hen kai polla`).
+    **Le traité 10 (V, 1, 8) donne une autre échelle**, celle des trois hypostases, qu'il tire des trois premières hypothèses du {sky}*Parménide*{/sky} : l'Un (*hen*), puis l'Intellect, un-multiple (*hen polla*), puis l'Âme, une et multiple (*hen kai polla*).
+
+    __**Ce qui fait la multiplicité des corps : avoir des parties hors des autres.**__ {sky}Dans le sensible{/sky}, diviser, c'est **séparer** : chaque partie occupe un lieu à part, hors des autres (**extériorité réciproque**), et elle est plus petite que le tout. {yellow}Coupez un bâton en deux : aucun des morceaux n'est le bâton.{/yellow} La raison en est que le corps est une {violet}masse{/violet} (*ogkos*) étendue selon trois dimensions : la quantité est sa marque propre. {violet}Dans l'intelligible{/violet}, au contraire, « toutes choses sont ensemble » (*homou panta*) : chaque partie contient le tout, sans division ni diminution.
 
     ! Au sommet de l'échelle du traité 4, « ce qui est le plus élevé » n'est pas l'Un : c'est la réalité indivisible et toujours la même du *Timée* (35a), c'est-à-dire l'intelligible. Ce traité précoce s'en tient à cette tripartition (indivisible, Âme, divisible) ; l'Un, au-delà même de l'intelligible, est celui de V, 1, 8.
 
-    ! Ne pas confondre `hen polla` (un-multiple, l'Intellect : la pluralité est prise dans l'unité) et `hen kai polla` (un **et** multiple, l'Âme : une par essence, multiple en se distribuant dans les corps).
+    ! Ne pas confondre *hen polla* (un-multiple, l'Intellect : la pluralité est prise dans l'unité) et *hen kai polla* (un **et** multiple, l'Âme : une par essence, multiple en se distribuant dans les corps).
 
-    **Deux multiplicités, deux manières d'avoir des parties.** {sky}Dans le sensible{/sky}, diviser, c'est **séparer** : chaque partie occupe un lieu à part, hors des autres (extériorité réciproque), et elle est plus petite que le tout. Coupez un bâton en deux : aucun des morceaux n'est le bâton. {violet}Dans l'intelligible{/violet}, au contraire, « toutes choses sont ensemble » (`homou panta`, formule d'Anaxagore) : chaque partie contient le tout, sans division ni diminution (voir la fiche « Multiplicité intelligible »).
-
-    **Ce qui fait la multiplicité sensible : la masse et l'étendue.** Le corps est une masse (`ogkos`) étendue selon trois dimensions : la quantité est sa marque propre. La Forme, elle, n'a ni grandeur, ni masse, ni lieu.
-
-    ! L'Âme aussi est multiple, mais pas à la manière d'un corps. Elle est « divisible dans les corps » parce qu'elle agit en des corps distincts, mais elle reste entière en chacune de leurs parties (traités 4 et 22).
+    ! L'Âme aussi est multiple, mais pas à la manière d'un corps : elle est « divisible dans les corps » parce qu'elle agit en des corps distincts, mais elle reste entière en chacune de leurs parties (traités 4 et 22).
   points:
   - id: g-multiplicite-sensible-l1-1
     sentence: "Chez Plotin, la multiplicité n'est pas une catégorie homogène : elle change de nature selon le ___ de réalité, de l'Un jusqu'aux corps (IV, 2, 2)."
     answer: degré
     alt: ["degre", "degrés", "niveau"]
+  - id: g-multiplicite-sensible-l1-q1
+    sentence: "Pour hiérarchiser le réel, Plotin croise deux critères : une réalité est-elle ___, et est-elle multiple ?"
+    answer: divisible
+    alt: []
   - id: g-multiplicite-sensible-l1-2
     sentence: "Dans l'échelle des trois hypostases (V, 1, 8), l'Intellect, ni simple comme l'Un ni dispersé comme les corps, est un « un-multiple », en grec translittéré ___."
     answer: hen polla
@@ -70,8 +78,12 @@ lessons:
     sentence: "Dans le sensible, diviser, c'est séparer : chaque partie occupe un lieu à part, et les parties sont entre elles dans un rapport d'___ réciproque."
     answer: extériorité
     alt: ["exteriorite"]
+  - id: g-multiplicite-sensible-l1-q2
+    sentence: "Coupez un bâton en deux : aucun des morceaux n'est le bâton. C'est que, dans le sensible, chaque partie est plus ___ que le tout."
+    answer: petite
+    alt: []
   - id: g-multiplicite-sensible-l1-7
-    sentence: "À la multiplicité sensible, où les parties sont séparées, Plotin oppose celle de l'intelligible, où, selon la formule d'Anaxagore, « toutes choses sont ___ » (`homou panta`)."
+    sentence: "À la multiplicité sensible, où les parties sont séparées, Plotin oppose celle de l'intelligible, où, selon la formule d'Anaxagore, « toutes choses sont ___ » (*homou panta*)."
     answer: ensemble
     alt: []
   - id: g-multiplicite-sensible-l1-8
@@ -85,16 +97,18 @@ lessons:
 - id: g-multiplicite-sensible-l2
   title: Pourquoi plusieurs hommes, plusieurs chevaux
   notes: |-
-    **La question.** La Forme de l'homme est une, et pourtant il y a Socrate, Platon et une foule d'autres hommes ; il n'y a qu'un cheval intelligible, et des chevaux par milliers. Pourquoi les choses sensibles ne gardent-elles pas l'unicité de la Forme dont elles procèdent ? **Trois raisons se complètent.**
+    **La Forme de l'homme est une, et pourtant il y a Socrate, Platon et une foule d'autres hommes : pourquoi les choses sensibles ne gardent-elles pas l'unicité de la Forme dont elles procèdent ?** Plotin donne trois raisons, qui se complètent.
 
-    - **Le milieu étendu.** Ce qui reçoit la Forme est une masse étendue : ce qui est un et sans grandeur ne peut y apparaître qu'éparpillé en des lieux distincts. La **forme intérieure** de la maison (`to endon eidos`), une et sans parties dans l'esprit de l'architecte, est divisée par la masse extérieure de la matière quand elle passe dans les pierres (I, 6 [1], 3). De même, la grandeur et la masse d'un cheval n'appartiennent qu'au composé : le cheval sensible périt, sa masse s'en va, la Forme du cheval demeure (III, 6 [26], 16).
-    - **L'aptitude de ce qui reçoit.** « Ce qui est présent est présent selon l'aptitude de ce qui le reçoit » (VI, 4 [22], 11). Plotin prend l'exemple de la **voix** : une seule voix, répandue dans l'air, est entendue tout entière par une multitude d'oreilles en des lieux différents (VI, 4, 12). Les corps sont comme ces oreilles : chacun capte le même principe, à sa place et selon sa capacité. Ainsi l'homme intelligible, descendu dans tel homme, devient cet homme tout en restant l'homme intelligible : la multiplicité « se presse autour » de lui (VI, 5 [23], 6).
-    - **Les raisons des individus.** Les individus ne diffèrent pas seulement par la matière. Le traité 18 (V, 7, *S'il y a des idées des êtres individuels*) admet autant de **raisons** (`logoi`) distinctes que d'individus présentant des différences formelles : ce qui distingue Socrate de Platon a sa raison dans l'intelligible. La raison séminale (`logos spermatikos`) contient ensemble ce qui, dans le vivant, se déploiera dans l'espace et le temps : dans la **semence**, dit Plotin, « toutes choses sont ensemble », « chaque chose est toutes choses », et « la main et la tête ne sont pas séparées ; mais ici et maintenant, dans le corps, elles sont séparées l'une de l'autre. Car ce sont des images, et non des êtres véritables » (II, 6 [17], 1, 10-12 ; voir aussi V, 9 [5], 6 et III, 2 [47], 2).
+    __**Le milieu est étendu.**__ Ce qui reçoit la Forme est une masse étendue : ce qui est un et sans grandeur ne peut y apparaître qu'éparpillé en des lieux distincts. {yellow}La forme intérieure de la maison{/yellow} (*to endon eidos*), une et sans parties dans l'esprit de l'architecte, {red}est divisée par la masse extérieure de la matière{/red} quand elle passe dans les pierres (traité 1 [I, 6], chap. 3). De même, la grandeur d'un cheval n'appartient qu'au composé : le cheval sensible périt, sa masse s'en va, {green}la Forme du cheval demeure{/green} (traité 26 [III, 6], chap. 16).
 
-    ! Les choses sensibles ne sont pas des morceaux de la Forme, mais ses **images** (`eidôla`) : c'est pourquoi elles peuvent être plusieurs sans que la Forme cesse d'être une.
+    __**Chaque chose reçoit selon sa capacité.**__ Le principe est posé en une phrase : {teal}« ce qui est présent est présent selon l'aptitude de ce qui le reçoit »{/teal} (traité 22 [VI, 4], chap. 11, l. 3-5). Plotin le rend concret par {yellow}la voix{/yellow} : {teal}« Le son se trouve partout dans l'air, non pas comme un son unique est divisé, mais comme un seul son partout tout entier »{/teal} (chap. 12, l. 9-11). **Chaque oreille entend le son tout entier, et pourtant il n'y a qu'un son** : les corps sont comme ces oreilles, chacun capte le même principe, à sa place. Ainsi l'homme intelligible, descendu dans tel homme, devient cet homme tout en restant l'homme intelligible : la multiplicité « se presse autour » de lui (traité 23 [VI, 5], chap. 6).
+
+    __**Les individus ont leurs raisons propres.**__ Les individus ne diffèrent pas seulement par la matière : le traité 18 (V, 7) admet autant de {violet}raisons{/violet} (*logoi*) que d'individus présentant des différences formelles ; ce qui distingue Socrate de Platon a sa raison dans l'intelligible. Et la raison séminale contient ensemble ce qui se déploiera dans l'espace : dans la {yellow}semence{/yellow}, {teal}« toutes choses sont ensemble »{/teal}, {teal}« chaque chose est toutes choses »{/teal}, et {teal}« la main et la tête ne sont pas séparées ; mais ici et maintenant, dans le corps, elles sont séparées l'une de l'autre. Car ce sont des images, et non des êtres véritables »{/teal} (traité 17 [II, 6], chap. 1, l. 10-12).
+
+    ! Les choses sensibles ne sont pas des morceaux de la Forme, mais ses **images** (*eidôla*) : c'est pourquoi elles peuvent être plusieurs sans que la Forme cesse d'être une.
   points:
   - id: g-multiplicite-sensible-l2-1
-    sentence: "La forme intérieure de la maison (`to endon eidos`) est une et sans parties dans l'esprit de l'architecte ; quand elle passe dans les pierres, elle est divisée par la ___ extérieure de la matière (I, 6, 3)."
+    sentence: "La forme intérieure de la maison (*to endon eidos*) est une et sans parties dans l'esprit de l'architecte ; quand elle passe dans les pierres, elle est divisée par la ___ extérieure de la matière (I, 6, 3)."
     answer: masse
     alt: ["ogkos"]
   - id: g-multiplicite-sensible-l2-2
@@ -105,18 +119,30 @@ lessons:
     sentence: "La grandeur et la masse d'un cheval n'appartiennent qu'au ___ : quand le cheval sensible périt, sa grandeur s'en va avec lui, et la Forme du cheval demeure intacte (III, 6, 16)."
     answer: composé
     alt: ["compose"]
-  - id: g-multiplicite-sensible-l2-4
-    sentence: "Pour expliquer que les choses ne reçoivent pas toutes l'intelligible de la même manière, Plotin pose que « ce qui est présent est présent selon l'___ de ce qui le reçoit » (VI, 4, 11)."
+  - id: g-multiplicite-sensible-l2-q1
+    sentence: "« Ce qui est présent est présent selon l'___ de ce qui le reçoit » (traité 22 [VI, 4], chap. 11, l. 3-5)."
     answer: aptitude
     alt: []
-  - id: g-multiplicite-sensible-l2-5
-    sentence: "Pour montrer qu'un principe unique se donne à une multitude sans se diviser, Plotin prend l'exemple d'une ___ entendue tout entière par de nombreuses oreilles (VI, 4, 12)."
-    answer: voix
-    alt: ["son"]
+  - id: g-multiplicite-sensible-l2-q2
+    sentence: "« Ce qui est présent est présent selon l'aptitude de ___ » (traité 22 [VI, 4], chap. 11, l. 3-5)."
+    answer: ce qui le reçoit
+    alt: ["ce qui le recoit"]
+  - id: g-multiplicite-sensible-l2-q3
+    sentence: "« Le son se trouve partout dans l'air, non pas comme un son unique est ___, mais comme un seul son partout tout entier » (traité 22 [VI, 4], chap. 12, l. 9-11)."
+    answer: divisé
+    alt: ["divise"]
+  - id: g-multiplicite-sensible-l2-q4
+    sentence: "« Le son se trouve partout dans l'air, non pas comme un son unique est divisé, mais comme un seul son ___ » (traité 22 [VI, 4], chap. 12, l. 9-11)."
+    answer: partout tout entier
+    alt: []
   - id: g-multiplicite-sensible-l2-6
     sentence: "Dans l'exemple plotinien de la voix une, entendue tout entière en des lieux différents, les corps qui reçoivent un même principe intelligible jouent le rôle des ___."
     answer: oreilles
     alt: []
+  - id: g-multiplicite-sensible-l2-q5
+    sentence: "Les exemples du son entendu tout entier par chaque oreille et du principe selon lequel ce qui est présent l'est selon l'aptitude de ce qui le reçoit se lisent aux chapitres 11-12 du traité ___."
+    answer: 22 (VI, 4)
+    alt: ["22", "VI, 4"]
   - id: g-multiplicite-sensible-l2-7
     sentence: "L'homme intelligible descendu dans tel homme devient cet homme tout en restant l'homme intelligible : la multiplicité, dit Plotin, se ___ autour de lui (VI, 5, 6)."
     answer: presse
@@ -150,24 +176,26 @@ lessons:
     answer: "17"
     alt: ["dix-sept"]
   - id: g-multiplicite-sensible-l2-11
-    sentence: "Les choses sensibles peuvent être plusieurs sans que la Forme cesse d'être une, parce qu'elles n'en sont pas des morceaux, mais des ___ (`eidôla`)."
+    sentence: "Les choses sensibles peuvent être plusieurs sans que la Forme cesse d'être une, parce qu'elles n'en sont pas des morceaux, mais des ___ (*eidôla*)."
     answer: images
     alt: ["image", "reflets"]
 - id: g-multiplicite-sensible-l3
   title: La matière ne découpe pas la Forme
   notes: |-
-    **Le piège : se représenter la matière comme ce qui trancherait la Forme en morceaux**, comme on partage un gâteau. Plotin écarte cette idée : **la Forme demeure une, sans parties et impassible « là-bas »** ; ce qui est multiple, c'est son **image** « ici-bas ».
+    **Reste un piège, que les deux leçons précédentes pourraient tendre : se représenter la matière comme ce qui trancherait la Forme en morceaux, comme on partage un gâteau.** Plotin l'écarte : **la Forme demeure une, sans parties et impassible « là-bas » ; ce qui est multiple, c'est son image « ici-bas ».**
 
-    - **La Forme ne donne rien d'elle-même.** Elle ne se disperse pas dans la matière et ne forme pas une partie du corps par une partie d'elle-même : elle reste tout entière présente à ce qu'elle informe. Ce qui se divise avec le corps, c'est la masse, la matière, non la raison qui l'informe : dans la raison séminale, la main, la tête, la racine, les branches sont toutes ensemble, et ne se dispersent que dans le corps (III, 6, 18).
-    - **Le miroir.** Plotin compare la matière à un **miroir** impassible (III, 6 [26], 7-9 et 13) : ce qui y apparaît n'est qu'un « fantôme sur un fantôme », situé ailleurs que là où il se manifeste. Un miroir ne découpe pas ce qui s'y reflète ; s'il y a plusieurs reflets, c'est que la surface offre des lieux distincts. La matière est même « plus impassible encore que les miroirs » (9, 18-19).
-    - **Le voile.** Dans le *Parménide* (131b-c), la Forme viendrait sur les choses comme un **voile** étendu sur plusieurs hommes, chacun n'en recevant qu'une partie. Plotin répond que le voile est un corps, et l'intelligible incorporel ; il retient plutôt l'image de la **lumière du jour**, que proposait Socrate, une et entière partout où elle éclaire. Le traité 22 (VI, 4) pose d'abord que l'intelligible est présent tout entier partout, sans s'étaler sur les corps (chap. 2), puis écarte le voile (à partir du chap. 7).
+    __**La Forme ne donne rien d'elle-même.**__ Elle ne forme pas une partie du corps par une partie d'elle-même : elle reste tout entière présente à ce qu'elle informe. {red}Ce qui se divise avec le corps, c'est la masse, la matière{/red}, {green}non la raison qui l'informe{/green} : dans la raison séminale, la main, la tête, la racine, les branches sont toutes ensemble, et ne se dispersent que dans le corps (traité 26 [III, 6], chap. 18).
+
+    __**Le miroir.**__ Plotin compare la matière à {yellow}un miroir{/yellow} (traité 26 [III, 6], chap. 7-9 et 13) : ce qui semble apparaître en elle n'est {teal}« qu'un jouet, fantôme sur ce qui n'est qu'un fantôme radical, comme ce qui apparaît dans un miroir est situé ailleurs que là où cela se manifeste »{/teal} (chap. 7, l. 23-26). **Un miroir ne découpe pas ce qui s'y reflète** ; s'il y a plusieurs reflets, c'est que la surface offre des lieux distincts. La matière est même « plus impassible encore que les miroirs » (chap. 9).
+
+    __**Le voile et la lumière.**__ Dans le {sky}*Parménide*{/sky} (131b-c), la Forme viendrait sur les choses comme {yellow}un voile{/yellow} étendu sur plusieurs hommes, chacun n'en recevant qu'une partie. Plotin répond que {red}le voile est un corps{/red}, et l'intelligible incorporel ; il retient plutôt {yellow}la lumière du jour{/yellow}, que proposait Socrate, une et entière partout où elle éclaire. Le traité 22 (VI, 4) pose d'abord que l'intelligible est présent tout entier partout, sans s'étaler sur les corps (chap. 2), puis écarte le voile (à partir du chap. 7).
 
     | Image | Ce qu'elle montre |
     | le miroir | l'original reste un, ses reflets sont multiples |
     | le voile | une Forme corporelle, objection écartée |
     | la lumière du jour | une et entière partout où elle éclaire |
 
-    **En somme, la matière disperse l'image, non la Forme** : substrat étendu, elle contraint le reflet de la Forme à s'égrener en qualités séparées à travers l'espace.
+    {coral}**En somme, la matière disperse l'image, non la Forme**{/coral} : substrat étendu, elle contraint le reflet de la Forme à s'égrener à travers l'espace.
 
     ! Plotin ne dit pas que la matière fragmente la Forme : la fragmentation est celle du reflet, et la Forme reste « là-bas » ce qu'elle est.
   points:
@@ -183,10 +211,18 @@ lessons:
     sentence: "Pour dire que la Forme apparaît dans le sensible sans y être découpée ni altérée, Plotin compare la matière à un ___ impassible (III, 6, 7)."
     answer: miroir
     alt: []
-  - id: g-multiplicite-sensible-l3-4
-    sentence: "Ce qui apparaît dans la matière n'est, pour Plotin, qu'un « fantôme sur un ___ », situé ailleurs que là où il se manifeste (III, 6, 7)."
+  - id: g-multiplicite-sensible-l3-q1
+    sentence: "Ce qui semble apparaître dans la matière n'est « qu'un jouet, fantôme sur ce qui n'est qu'un ___ radical, comme ce qui apparaît dans un miroir est situé ailleurs que là où cela se manifeste » (traité 26 [III, 6], chap. 7, l. 23-26)."
     answer: fantôme
     alt: ["fantome"]
+  - id: g-multiplicite-sensible-l3-q2
+    sentence: "Ce qui semble apparaître dans la matière n'est « qu'un jouet, fantôme sur ce qui n'est qu'un fantôme radical, comme ce qui apparaît dans un miroir est situé ___ que là où cela se manifeste » (traité 26 [III, 6], chap. 7, l. 23-26)."
+    answer: ailleurs
+    alt: []
+  - id: g-multiplicite-sensible-l3-q3
+    sentence: "Un miroir ne découpe pas ce qui s'y reflète : s'il y a plusieurs reflets, c'est que sa surface offre des ___ distincts."
+    answer: lieux
+    alt: []
   - id: g-multiplicite-sensible-l3-5
     sentence: "Plotin pousse l'image du miroir jusqu'à dire que « la matière est plus impassible encore que les ___ » (III, 6, 9)."
     answer: miroirs
@@ -203,3 +239,7 @@ lessons:
     sentence: "Plutôt que l'image du voile, Plotin retient celle de la ___ du jour, une et entière partout où elle éclaire."
     answer: lumière
     alt: ["lumiere"]
+  - id: g-multiplicite-sensible-l3-q4
+    sentence: "En somme, la matière disperse l'___, non la Forme : substrat étendu, elle contraint le reflet de la Forme à s'égrener à travers l'espace."
+    answer: image
+    alt: []

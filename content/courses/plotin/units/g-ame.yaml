@@ -1,43 +1,197 @@
+# Fiche du glossaire de Plotin (voir content/philosophie.md), refondue le
+# 2026-10-16 selon la skill cours-traite : une leçon par mouvement, citations
+# de la traduction GF vérifiées sur le texte. L'image du visage penché sur
+# l'eau et l'analogie du théorème et des axiomes, qui n'étaient pas de
+# Plotin, ont été retirées. Les cartes dont le contenu a changé portent un
+# identifiant en -q.
+
 id: g-ame
 title: Âme (`psuchê`)
-subtitle: La troisième hypostase, d'où naît le temps
+subtitle: La troisième hypostase, une et multiple, d'où naît le temps
 icon: wave
 color: sky
 lessons:
 - id: g-ame-l1
-  title: L'Âme
-  notes: |
-    L'**Âme** (`psuchê`) est la troisième hypostase du système de Plotin : elle procède de l'Intellect selon le même schéma de procession puis de conversion par lequel l'Intellect procède de l'Un. Mais à la différence de l'Intellect, dont toutes les parties sont éternellement et simultanément présentes les unes aux autres, l'Âme est contrainte de parcourir les vérités intelligibles une à une, successivement : c'est de cette succession même que naît le __temps__.
+  title: Pourquoi l'Âme est une et multiple
+  notes: |-
+    **L'Âme** (*psuchê*) **est la troisième hypostase : elle vient de l'Intellect comme l'Intellect vient de l'Un, et c'est elle qui anime et ordonne le monde sensible.** Toute la difficulté est qu'elle doit être présente à une multitude de corps sans s'y morceler.
 
-    ! Il ne faut pas se représenter l'Âme du système plotinien comme une collection d'âmes individuelles juxtaposées, chacune isolée dans son corps, sur le modèle de billes rangées côte à côte. Plotin la décrit au contraire comme « une et multiple » : une hypostase unique dont __les âmes particulières demeurent, malgré leur multiplicité apparente, unies par une parenté profonde__.
+    __**Une réalité intermédiaire.**__ Plotin reprend le {sky}*Timée*{/sky} (35a) : {teal}« Entre la réalité indivisible et qui reste toujours la même et la réalité divisible qui devient dans les corps, il forma par un mélange des deux premières une troisième sorte de réalité »{/teal}. Et il en tire l'échelle : {teal}« C'est en ce sens que l'âme est une et multiple. Les corps sont seulement multiples. Mais ce qui est le plus élevé est seulement un »{/teal} (traité 4 [IV, 2], chap. 2, l. 49-55).
 
-    ! Un autre contresens consiste à croire que l'âme individuelle **descend** véritablement dans le corps qu'elle anime, s'y enfermant comme dans une prison dont elle devrait ensuite s'évader. Plotin soutient au contraire que l'âme ne descend jamais réellement, elle demeure **« non descendue »**, gouvernant le corps depuis une position supérieure. Ce qu'on prend pour sa présence dans le corps n'est que le reflet qu'elle y projette, un peu comme un visage penché sur l'eau y projette son image sans jamais quitter la rive.
+    | Degré | Ce qu'il est |
+    | ce qui est le plus élevé | seulement un |
+    | l'âme | une et multiple |
+    | les corps | seulement multiples |
+
+    __**Pourquoi « une et multiple ».**__ {pink}Multiple{/pink}, parce qu'elle agit en une foule de corps, et dans chaque partie de chacun. {green}Une{/green}, parce qu'elle ne se divise pas pour autant : **ce n'est pas une partie de l'âme qui fait vivre une partie du corps**, {teal}« mais c'est grâce à l'âme tout entière que toutes choses vivent, et l'âme est entièrement présente en toutes choses »{/teal} (traité 10 [V, 1], chap. 2, l. 36-38). Un corps qu'on coupe en deux donne deux moitiés ; l'âme présente au doigt et à l'œil n'est pas une moitié d'âme ici et une moitié là.
+
+    __**D'où l'unité de toutes les âmes.**__ Si l'âme ne se découpe pas en se donnant aux corps, la multiplicité des âmes ne vient pas d'un morceau de l'Âme attribué à chacun : {coral}les âmes particulières restent, en ce qu'elles ont de plus haut, une seule Âme{/coral}, ce que démontre le traité 8 (IV, 9), *Si toutes les âmes sont une*.
+
+    ! Ne pas se représenter l'Âme comme une collection d'âmes individuelles juxtaposées, chacune isolée dans son corps : Plotin la dit « une et multiple », une seule réalité qui se donne à plusieurs sans se partager.
+
+    ! Ne pas confondre *hen kai polla* (un **et** multiple, l'Âme) et *hen polla* (un-multiple, l'Intellect) : l'Âme est une par nature et multiple en se distribuant dans les corps ; l'Intellect est une pluralité prise tout entière dans l'unité.
+  tables:
+  - table: degre-ce-qu-il-est
+    exercises:
+    - {kind: bank, column: Ce qu'il est}
   points:
+  - id: g-ame-l1-7
+    sentence: L'Âme, ___ hypostase du système de Plotin, procède de l'Intellect selon le même schéma de procession puis de conversion qui vaut pour l'Intellect à l'égard de l'Un.
+    answer: troisième
+    alt: []
+  - id: g-ame-l1-q1
+    sentence: "Plotin reprend au ___ (35a) la définition de l'âme comme réalité intermédiaire, mélange de la réalité indivisible et de la réalité divisible qui devient dans les corps (traité 4 [IV, 2], chap. 2, l. 49-52)."
+    answer: Timée
+    alt: ["Timee"]
+  - id: g-ame-l1-q2
+    sentence: "« C'est en ce sens que l'âme est ___. Les corps sont seulement multiples. Mais ce qui est le plus élevé est seulement un » (traité 4 [IV, 2], chap. 2, l. 53-55)."
+    answer: une et multiple
+    alt: []
+  - id: g-ame-l1-q3
+    sentence: "« C'est en ce sens que l'âme est une et multiple. Les corps sont ___. Mais ce qui est le plus élevé est seulement un » (traité 4 [IV, 2], chap. 2, l. 53-55)."
+    answer: seulement multiples
+    alt: []
+  - id: g-ame-l1-q4
+    sentence: "« C'est en ce sens que l'âme est une et multiple. Les corps sont seulement multiples. Mais ce qui est le plus élevé est ___ » (traité 4 [IV, 2], chap. 2, l. 53-55)."
+    answer: seulement un
+    alt: []
+  - id: g-ame-l1-q5
+    sentence: "L'échelle selon laquelle l'âme est « une et multiple », entre les corps seulement multiples et ce qui est seulement un, se lit au chapitre 2 du traité ___."
+    answer: 4 (IV, 2)
+    alt: ["4", "IV, 2"]
+  - id: g-ame-l1-q6
+    sentence: "Ce n'est pas une partie de l'âme qui fait vivre une partie du corps, « mais c'est grâce à l'âme ___ que toutes choses vivent, et l'âme est entièrement présente en toutes choses » (traité 10 [V, 1], chap. 2, l. 36-38)."
+    answer: tout entière
+    alt: ["toute entiere", "tout entiere"]
+  - id: g-ame-l1-q7
+    sentence: "L'âme est dite multiple parce qu'elle agit en une foule de corps, et une parce qu'elle ne se ___ pas pour autant."
+    answer: divise
+    alt: ["morcelle"]
+  - id: g-ame-l1-q8
+    sentence: "Si l'âme ne se découpe pas en se donnant aux corps, les âmes particulières restent, en ce qu'elles ont de plus haut, une seule Âme : c'est la thèse du traité ___, *Si toutes les âmes sont une*."
+    answer: 8 (IV, 9)
+    alt: ["8", "IV, 9"]
+  - id: g-ame-l1-q9
+    sentence: "L'Âme est un **et** multiple, en grec translittéré *hen kai polla* ; l'Intellect, lui, est un-multiple, en grec translittéré ___."
+    answer: hen polla
+    alt: []
+- id: g-ame-l2
+  title: L'âme non descendue
+  notes: |-
+    **Plotin applique à notre âme la même logique : elle aussi est présente au corps sans s'y enfermer.** Il le dit lui-même en sachant qu'il heurte ses contemporains.
+
+    __**La thèse.**__ {teal}« Et s'il faut oser dire contre l'opinion des autres plus clairement ce que l'on pense, notre âme n'a pas plongé tout entière ici-bas, mais quelque chose d'elle reste toujours dans l'intelligible »{/teal} (traité 6 [IV, 8], chap. 8, l. 1-3). C'est ce que les commentateurs appellent {violet}**l'âme non descendue**{/violet} : la partie de nous qui ne cesse jamais de contempler.
+
+    __**Pourquoi Plotin en a besoin.**__ Si l'âme était descendue tout entière, rien en nous ne serait plus en contact avec l'intelligible, et {red}la remontée deviendrait impossible{/red} : on ne peut retrouver que ce qu'on n'a jamais tout à fait perdu. {green}Notre partie la plus haute reste donc là-haut{/green}, et c'est pourquoi la philosophie est un retour possible et non une évasion désespérée.
+
+    __**Pourquoi nous ne le sentons pas.**__ L'objection vient d'elle-même : si une part de nous contemple sans cesse, pourquoi n'en savons-nous rien ? Plotin répond que nous ne connaissons ce qui se passe dans une partie de l'âme que lorsque cela parvient jusqu'à notre perception. Or {pink}si la partie qui est dans le sensible est dominée et troublée{/pink}, {teal}« elle ne nous permet pas de percevoir les choses que contemple la partie supérieure de notre âme »{/teal} (chap. 8, l. 4-6). **Ce n'est pas la contemplation qui s'interrompt, c'est notre attention qui est ailleurs.**
+
+    __**L'Âme du monde, elle, gouverne sans peine.**__ Elle met en ordre le tout {teal}« en demeurant au-dessus de lui sans aucune peine, parce qu'elle ne procède pas en raisonnant, comme nous, mais en usant de l'Intellect »{/teal} (chap. 8, l. 13-16). Nous, au contraire, avons à raisonner parce que notre corps est restreint et exposé à tout.
+
+    ! Ne pas se représenter le corps comme une prison où l'âme serait tombée tout entière : chez Plotin, l'âme ne descend jamais complètement, et son sommet reste dans l'intelligible.
+
+    ! Plotin présente cette thèse comme personnelle (« contre l'opinion des autres ») : ses successeurs néoplatoniciens, à commencer par Jamblique et Proclus, la rejetteront.
+  points:
+  - id: g-ame-l2-q1
+    sentence: "« Et s'il faut oser dire contre l'opinion des autres plus clairement ce que l'on pense, notre âme n'a pas ___ ici-bas, mais quelque chose d'elle reste toujours dans l'intelligible » (traité 6 [IV, 8], chap. 8, l. 1-3)."
+    answer: plongé tout entière
+    alt: ["plonge tout entiere", "plongé toute entière"]
+  - id: g-ame-l2-q2
+    sentence: "« Et s'il faut oser dire contre l'opinion des autres plus clairement ce que l'on pense, notre âme n'a pas plongé tout entière ici-bas, mais quelque chose d'elle ___ » (traité 6 [IV, 8], chap. 8, l. 1-3)."
+    answer: reste toujours dans l'intelligible
+    alt: []
+  - id: g-ame-l2-q3
+    sentence: "« Et s'il faut oser dire contre ___ plus clairement ce que l'on pense, notre âme n'a pas plongé tout entière ici-bas » (traité 6 [IV, 8], chap. 8, l. 1-3)."
+    answer: l'opinion des autres
+    alt: []
+  - id: g-ame-l2-q4
+    sentence: "La thèse selon laquelle notre âme n'a pas plongé tout entière ici-bas, mais garde une partie dans l'intelligible, se lit au chapitre 8 du traité ___, *Sur la descente de l'âme dans les corps*."
+    answer: 6 (IV, 8)
+    alt: ["6", "IV, 8"]
+  - id: g-ame-l1-q10
+    sentence: "Contre l'idée que l'âme individuelle descendrait tout entière dans le corps comme dans une prison, Plotin soutient que sa partie la plus haute demeure dans l'intelligible ; on la dit ___."
+    answer: non descendue
+    alt: ["non-descendue"]
+  - id: g-ame-l2-q5
+    sentence: "Si l'âme était descendue tout entière, rien en nous ne serait plus en contact avec l'intelligible et la remontée deviendrait impossible, car on ne peut retrouver que ce qu'on n'a jamais tout à fait ___."
+    answer: perdu
+    alt: []
+  - id: g-ame-l2-q6
+    sentence: "Si la partie de l'âme qui est dans le sensible est dominée et troublée, « elle ne nous permet pas de ___ les choses que contemple la partie supérieure de notre âme » (traité 6 [IV, 8], chap. 8, l. 4-6)."
+    answer: percevoir
+    alt: []
+  - id: g-ame-l2-q7
+    sentence: "Si nous ignorons la contemplation de notre partie supérieure, ce n'est pas qu'elle s'interrompe : c'est que notre ___ est ailleurs."
+    answer: attention
+    alt: []
+  - id: g-ame-l2-q8
+    sentence: "L'âme du tout met en ordre le monde « sans aucune peine, parce qu'elle ne procède pas en ___, comme nous, mais en usant de l'Intellect » (traité 6 [IV, 8], chap. 8, l. 13-16)."
+    answer: raisonnant
+    alt: []
+- id: g-ame-l3
+  title: L'Âme et la naissance du temps
+  notes: |-
+    **Ce qui distingue le plus nettement l'Âme de l'Intellect, c'est le temps : l'Intellect vit dans l'éternité, où tout est présent ensemble ; l'Âme, elle, fait naître le temps.** Le traité 45 (III, 7), *Sur l'éternité et le temps*, en fait le récit.
+
+    __**Une puissance de l'âme qui ne voulait pas tout à la fois.**__ Dans l'Intellect, la vie est {green}« tout entière ensemble »{/green}. Mais {teal}« une nature affairée, parce qu'elle avait choisi de se gouverner elle-même et de s'appartenir à elle-même, en prenant le parti de rechercher plus que le présent, se mit elle-même en mouvement »{/teal} (traité 45 [III, 7], chap. 11, l. 15-17). C'était {teal}« l'une des puissances de l'âme qui n'était pas tranquille, qui voulait sans cesse échanger contre autre chose ce qu'elle voyait là-bas, et qui n'acceptait pas que ce tout lui fût présent tout d'un bloc »{/teal} (l. 20-23).
+
+    __**D'où le temps.**__ Une pensée qui ne peut tout tenir à la fois doit passer d'une chose à l'autre : {pink}une activité, puis une autre, puis une autre encore{/pink}. Cette succession, c'est le temps. Ainsi {teal}« l'âme, d'abord, s'est temporalisée elle-même, en produisant le temps au lieu de l'éternité »{/teal} (l. 30-31). Plotin propose donc de dire que {coral}**le temps est « la vie de l'âme que son mouvement fait passer d'un état à un autre »**{/coral} (l. 43-45).
+
+    __**Et le monde est dans ce temps parce qu'il est dans l'âme.**__ {teal}« Notre univers, en effet, n'a pas d'autre lieu que l'âme »{/teal} (l. 33-34) : c'est donc dans le temps de l'âme qu'il se meut. Le temps n'est pas d'abord {red}la mesure du mouvement des astres{/red}, comme le voulait Aristote ; il est la vie même de l'âme qui produit et anime le monde.
+
+    | | Intellect | Âme |
+    | **Vie** | tout entière ensemble | une activité après l'autre |
+    | **Durée** | l'éternité | le temps |
+
+    ! Le « récit » de la naissance du temps n'est pas une histoire : il n'y a pas eu d'abord l'éternité, puis un jour le temps. Plotin raconte comme une suite ce qui est une dépendance, et il avertit lui-même que nous devons « engendrer le temps par la pensée ».
+
+    ! Que l'âme passe d'une chose à l'autre n'est pas d'abord un défaut moral : c'est sa manière d'être, la pensée discursive, qui fait d'elle le principe vivant d'un monde qui change.
+  tables:
+  - table: intellect-ame
+    exercises:
+    - {kind: bank, column: Âme}
+  points:
+  - id: g-ame-l3-q1
+    sentence: "Le traité de Plotin qui fait naître le temps de l'âme, *Sur l'éternité et le temps*, est le traité ___."
+    answer: 45 (III, 7)
+    alt: ["45", "III, 7"]
+  - id: g-ame-l3-q2
+    sentence: "« Une nature ___, parce qu'elle avait choisi de se gouverner elle-même et de s'appartenir à elle-même, en prenant le parti de rechercher plus que le présent, se mit elle-même en mouvement » (traité 45 [III, 7], chap. 11, l. 15-17)."
+    answer: affairée
+    alt: ["affairee"]
+  - id: g-ame-l3-q3
+    sentence: "« Une nature affairée, parce qu'elle avait choisi de se gouverner elle-même et de s'appartenir à elle-même, en prenant le parti de rechercher ___, se mit elle-même en mouvement » (traité 45 [III, 7], chap. 11, l. 15-17)."
+    answer: plus que le présent
+    alt: ["plus que le present"]
+  - id: g-ame-l3-q4
+    sentence: "Cette puissance de l'âme « voulait sans cesse échanger contre autre chose ce qu'elle voyait là-bas, et n'acceptait pas que ce tout lui fût présent ___ » (traité 45 [III, 7], chap. 11, l. 20-23)."
+    answer: tout d'un bloc
+    alt: []
+  - id: g-ame-l3-q5
+    sentence: "« L'âme, d'abord, s'est ___ elle-même, en produisant le temps au lieu de l'éternité » (traité 45 [III, 7], chap. 11, l. 30-31)."
+    answer: temporalisée
+    alt: ["temporalisee"]
+  - id: g-ame-l3-q6
+    sentence: "« L'âme, d'abord, s'est temporalisée elle-même, en produisant le temps au lieu de l'___ » (traité 45 [III, 7], chap. 11, l. 30-31)."
+    answer: éternité
+    alt: ["eternite"]
   - id: g-ame-l1-1
     sentence: L'Âme, à la différence de l'Intellect dont toutes les parties sont éternellement et simultanément présentes les unes aux autres, est contrainte de parcourir les vérités intelligibles une à une, et c'est de cette succession que naît le ___.
     answer: temps
     alt: []
-  - id: g-ame-l1-2
-    sentence: Plotin décrit l'Âme, contre l'image d'une collection d'âmes individuelles juxtaposées comme des billes côte à côte, comme « ___ », une hypostase unique dont les âmes particulières restent, malgré leur multiplicité apparente, unies par une parenté profonde.
-    answer: une et multiple
+  - id: g-ame-l3-q7
+    sentence: "Plotin propose de dire que le temps est « la ___ de l'âme que son mouvement fait passer d'un état à un autre » (traité 45 [III, 7], chap. 11, l. 43-45)."
+    answer: vie
     alt: []
-  - id: g-ame-l1-3
-    sentence: Contre l'idée que l'âme individuelle descendrait véritablement dans le corps qu'elle anime comme dans une prison, Plotin soutient qu'elle demeure « ___ », gouvernant le corps depuis une position supérieure.
-    answer: non descendue
+  - id: g-ame-l3-q8
+    sentence: "Le monde se meut dans le temps de l'âme parce que « notre univers, en effet, n'a pas d'autre ___ que l'âme » (traité 45 [III, 7], chap. 11, l. 33-34)."
+    answer: lieu
     alt: []
-  - id: g-ame-l1-4
-    sentence: Ce qu'on prend pour la présence de l'âme dans le corps n'est, selon Plotin, que le ___ qu'elle y projette, un peu comme un visage penché sur l'eau y projette son image sans jamais quitter la rive.
-    answer: reflet
-    alt: []
-  - id: g-ame-l1-5
-    sentence: La dépendance de l'Âme à l'égard de l'Intellect n'est pas un événement survenu à un moment donné, mais une dépendance strictement logique et ontologique, aussi intemporelle que celle d'un ___ à l'égard des axiomes dont il découle.
-    answer: théorème
-    alt: []
+  - id: g-ame-l3-q9
+    sentence: "Contre Aristote, pour qui le temps est la mesure du mouvement, Plotin fait du temps la vie même de l'âme, et non d'abord une propriété du mouvement des ___."
+    answer: astres
+    alt: ["corps"]
   - id: g-ame-l1-6
     sentence: Comprendre la succession des trois hypostases comme un récit cosmogonique déroulé à un moment donné serait un contresens, la hiérarchie plotinienne ne décrit pas un empilement de niveaux séparés dans le temps, mais un unique mouvement de dépendance et de ___.
     answer: retour
-    alt: []
-  - id: g-ame-l1-7
-    sentence: L'Âme, ___ hypostase du système de Plotin, procède de l'Intellect selon le même schéma de procession puis de conversion qui vaut pour l'Intellect à l'égard de l'Un.
-    answer: troisième
     alt: []
