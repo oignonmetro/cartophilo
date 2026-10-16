@@ -2873,6 +2873,9 @@ function normalizeCore(value: string): string {
   return value
     .trim()
     .toLowerCase()
+    // « 8³ », « 8^3 » et « 83 » sont la même réponse : l'exposant se tape rarement.
+    .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, (digits) => [...digits].map((digit) => SUPERSCRIPTS.indexOf(digit)).join(''))
+    .replace(/(\d)\^(\d)/g, '$1$2')
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[.,!?;:"“”()]/g, '')
