@@ -466,6 +466,10 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
             openGroups={openGroups}
             onToggleGroup={toggleGroup}
             onOpenTreatise={setOpenTreatise}
+            unitMasteryOf={(unitId) => {
+              const unit = track.units.find((each) => each.id === unitId)
+              return unit ? unitMastery(unit, cards) : undefined
+            }}
           />
         ) : track.units.length === 0 ? (
           <EmptyTrack tone={tone} />
@@ -919,12 +923,15 @@ function TreatiseIndexView({
   openGroups,
   onToggleGroup,
   onOpenTreatise,
+  unitMasteryOf,
 }: {
   entries: readonly TreatiseEntry[]
   tone: (typeof TRACK_TONES)[string]
   openGroups: Set<string>
   onToggleGroup: (group: string) => void
   onOpenTreatise: (entry: TreatiseEntry) => void
+  /** Maîtrise du cours d'un traité, d'après l'id de son unité (`undefined` si l'unité est introuvable). */
+  unitMasteryOf: (unitId: string) => Mastery | undefined
 }) {
   const [order, setOrder] = useState<TreatiseOrder>(savedTreatiseOrder)
   const chooseOrder = (next: TreatiseOrder) => {
@@ -1029,12 +1036,7 @@ function TreatiseIndexView({
                         {entry.title}
                       </span>
                       {entry.unit && (
-                        <span
-                          className={`shrink-0 rounded-full ${tone.soft} px-2 py-0.5 text-[0.6rem] font-black tracking-wide uppercase ${tone.text}`}
-                          title="Ce traité a son cours, à lancer depuis sa fiche"
-                        >
-                          cours
-                        </span>
+                        <ProgressMini mastery={unitMasteryOf(entry.unit)} tone={tone} />
                       )}
                       <span
                         className="shrink-0 text-[0.65rem] font-bold text-ink-faint"
@@ -1053,6 +1055,20 @@ function TreatiseIndexView({
         )
       })}
     </div>
+  )
+}
+
+/** Anneau de progression d'un traité : arc pâle = rencontré, arc plein = acquis. */
+function ProgressMini({ mastery, tone }: { mastery?: Mastery; tone: (typeof TRACK_TONES)[string] }) {
+  const seen = mastery && mastery.total > 0 ? mastery.seen / mastery.total : 0
+  const known = mastery?.ratio ?? 0
+  return (
+    <span
+      className="shrink-0"
+      title={`Cours : ${Math.round(Math.max(seen, known) * 100)} % rencontré, ${Math.round(known * 100)} % acquis`}
+    >
+      <ProgressRing ratio={known} seenRatio={seen} color={tone.css} size={26} stroke={4} label="" />
+    </span>
   )
 }
 
