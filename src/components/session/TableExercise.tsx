@@ -438,6 +438,11 @@ export function TableCell({
  * révèle qu'une fois placé, sans quoi il suffirait de ranger des numéros.
  * Même mécanique que la banque : une erreur se signale aussitôt, la carte
  * refusée tremblant ; une fois tout placé, le fil complet reste affiché.
+ *
+ * La banque se range en grille de cartes étroites, à la mesure de leur
+ * texte, plutôt qu'en pile de cartes pleine largeur : tous les moments
+ * restent visibles à la fois (sept au plus, voir `TABLE_ORDER_MAX`), sans
+ * défiler, et c'est bien parmi tous qu'on cherche lequel vient ensuite.
  */
 export function TableOrder({
   exercise,
@@ -513,7 +518,7 @@ export function TableOrder({
 
       <div
         ref={scroller}
-        className="min-h-0 flex-1 overflow-y-auto rounded-blob border-2 border-line bg-paper px-3 py-3 md:px-5"
+        className="min-h-24 flex-1 overflow-y-auto rounded-blob border-2 border-line bg-paper px-3 py-3 md:px-5"
       >
         {placed === 0 && (
           <p className="py-6 text-center text-sm text-ink-faint">
@@ -524,7 +529,7 @@ export function TableOrder({
         )}
         <ol className="flex flex-col items-center">
           {rows.slice(0, placed).map((row, index) => (
-            <li key={row} className="flex w-full max-w-md flex-col items-center">
+            <li key={row} className="flex w-full max-w-sm flex-col items-center">
               {index > 0 && (
                 <span className="py-1 text-lg leading-none font-black text-violet" aria-hidden>
                   ↓
@@ -548,7 +553,7 @@ export function TableOrder({
           </Button>
         </div>
       ) : (
-        <div className="flex max-h-[42%] shrink-0 flex-col gap-2 overflow-y-auto md:max-h-[38%]">
+        <div className="flex max-h-[65%] shrink-0 flex-wrap justify-center gap-2 overflow-y-auto">
           {remaining.map((index) => (
             <motion.button
               key={index}
@@ -556,7 +561,7 @@ export function TableOrder({
               onClick={() => pick(index)}
               animate={wrong === index ? { x: [0, -7, 7, -4, 0] } : { x: 0 }}
               transition={{ duration: 0.3 }}
-              className={`shrink-0 rounded-2xl border-2 px-3 py-2 text-center transition-colors ${
+              className={`flex max-w-[15rem] grow basis-[10rem] flex-col md:basis-[13rem] justify-center rounded-2xl border-2 px-3 py-2 text-center transition-colors ${
                 wrong === index ? 'border-error bg-error/10' : 'border-line bg-paper hover:border-violet/60'
               }`}
             >
