@@ -439,10 +439,13 @@ export function TableCell({
  * Même mécanique que la banque : une erreur se signale aussitôt, la carte
  * refusée tremblant ; une fois tout placé, le fil complet reste affiché.
  *
- * La banque se range en grille de cartes étroites, à la mesure de leur
- * texte, plutôt qu'en pile de cartes pleine largeur : tous les moments
- * restent visibles à la fois (sept au plus, voir `TABLE_ORDER_MAX`), sans
- * défiler, et c'est bien parmi tous qu'on cherche lequel vient ensuite.
+ * La banque se range en cartes étroites, à la mesure de leur texte, plutôt
+ * qu'en pile de cartes pleine largeur : tous les moments restent visibles à
+ * la fois (sept au plus, voir `TABLE_ORDER_MAX`), sans défiler, et c'est bien
+ * parmi tous qu'on cherche lequel vient ensuite. Sur un écran large, elle se
+ * tient en colonne à droite du fil, qui garde toute la hauteur pour grandir ;
+ * sur téléphone, trop étroit pour deux colonnes, elle reste en rangées sous
+ * le fil.
  */
 export function TableOrder({
   exercise,
@@ -516,6 +519,7 @@ export function TableOrder({
         }
       />
 
+      <div className="flex min-h-0 flex-1 flex-col gap-3 md:flex-row">
       <div
         ref={scroller}
         className="min-h-24 flex-1 overflow-y-auto rounded-blob border-2 border-line bg-paper px-3 py-3 md:px-5"
@@ -546,14 +550,8 @@ export function TableOrder({
         </ol>
       </div>
 
-      {done ? (
-        <div className="shrink-0">
-          <Button block tone={mistakes === 0 ? 'success' : 'violet'} onClick={() => onDone(mistakes === 0)}>
-            Continuer
-          </Button>
-        </div>
-      ) : (
-        <div className="flex max-h-[65%] shrink-0 flex-wrap justify-center gap-2 overflow-y-auto">
+      {!done && (
+        <div className="flex max-h-[65%] shrink-0 flex-wrap justify-center gap-2 overflow-y-auto md:max-h-none md:w-64 md:flex-col md:flex-nowrap md:justify-start">
           {remaining.map((index) => (
             <motion.button
               key={index}
@@ -561,13 +559,22 @@ export function TableOrder({
               onClick={() => pick(index)}
               animate={wrong === index ? { x: [0, -7, 7, -4, 0] } : { x: 0 }}
               transition={{ duration: 0.3 }}
-              className={`flex max-w-[15rem] grow basis-[10rem] flex-col md:basis-[13rem] justify-center rounded-2xl border-2 px-3 py-2 text-center transition-colors ${
+              className={`flex max-w-[15rem] shrink-0 grow basis-[10rem] flex-col justify-center rounded-2xl border-2 px-3 py-2 text-center transition-colors md:max-w-none md:grow-0 md:basis-auto ${
                 wrong === index ? 'border-error bg-error/10' : 'border-line bg-paper hover:border-violet/60'
               }`}
             >
               {rowText(index)}
             </motion.button>
           ))}
+        </div>
+      )}
+      </div>
+
+      {done && (
+        <div className="shrink-0">
+          <Button block tone={mistakes === 0 ? 'success' : 'violet'} onClick={() => onDone(mistakes === 0)}>
+            Continuer
+          </Button>
         </div>
       )}
     </div>
