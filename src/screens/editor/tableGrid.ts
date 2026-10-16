@@ -27,7 +27,8 @@ function rowCells(line: string): string[] {
     .replace(/^\|/, '')
     .replace(/\|$/, '')
     .split('|')
-    .map((cell) => cell.trim())
+    // Seule la marge d'écriture saute : un espace final tapé dans l'éditeur doit survivre à la relecture.
+    .map((cell) => cell.trimStart().replace(/ $/, ''))
 }
 
 /** Toutes les rangées à la même largeur, la plus grande. */
@@ -67,8 +68,8 @@ export function formatTable(grid: string[][], indent = ''): string[] {
   return squared(grid).map(
     (row) =>
       `${indent}|${row
-        .map((cell) => cleanCell(cell).trim())
-        .map((cell) => (cell ? ` ${cell} ` : ' '))
+        .map((cell) => cleanCell(cell).trimStart())
+        .map((cell) => (cell.trim() ? ` ${cell} ` : ' '))
         .join('|')}|`,
   )
 }
