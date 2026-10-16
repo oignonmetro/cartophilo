@@ -106,9 +106,12 @@ export function TableBank({
   const column = holes[0]?.column ?? 0
   const heading = plainInline(tableColumnTitle(table, column))
 
-  // Jetons encore dans la banque, dans l'ordre affiché : le numéro de chacun est sa touche.
+  // Jetons encore dans la banque. Le numéro de chacun est sa touche, et il ne
+  // bouge pas quand un autre s'en va : le « 1 » placé, aucun ne devient « 1 ».
   const remaining = exercise.bank.map((_, token) => token).filter((token) => !used.has(token))
-  useNumberKeys(!done, remaining.length, (index) => place(remaining[index]!))
+  useNumberKeys(!done, exercise.bank.length, (token) => {
+    if (!used.has(token)) place(token)
+  })
 
   function place(token: number) {
     if (active === null || done) return
@@ -185,7 +188,7 @@ export function TableBank({
         </div>
       ) : (
         <div className="flex max-h-[38%] shrink-0 flex-wrap justify-center gap-2 overflow-y-auto md:max-h-[34%]">
-          {remaining.map((token, rank) => {
+          {remaining.map((token) => {
             const text = exercise.bank[token] ?? ''
             return (
               <motion.button
@@ -202,7 +205,7 @@ export function TableBank({
                   aria-hidden
                   className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full border border-current align-middle text-[0.65rem] text-ink-faint"
                 >
-                  {rank + 1}
+                  {token + 1}
                 </span>
                 <Rich text={text} />
               </motion.button>
@@ -503,6 +506,11 @@ export function TableOrder({
   }
 
   const remaining = exercise.bank.filter((index) => index >= placed)
+  // Comme dans la banque : chaque moment garde son numéro, qui est sa touche.
+  useNumberKeys(!done, exercise.bank.length, (slot) => {
+    const index = exercise.bank[slot]!
+    if (index >= placed) pick(index)
+  })
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">
@@ -559,10 +567,16 @@ export function TableOrder({
               onClick={() => pick(index)}
               animate={wrong === index ? { x: [0, -7, 7, -4, 0] } : { x: 0 }}
               transition={{ duration: 0.3 }}
-              className={`flex max-w-[15rem] shrink-0 grow basis-[10rem] flex-col justify-center rounded-2xl border-2 px-3 py-2 text-center transition-colors md:max-w-none md:grow-0 md:basis-auto ${
+              className={`relative flex max-w-[15rem] shrink-0 grow basis-[10rem] flex-col justify-center rounded-2xl border-2 px-7 py-2 text-center transition-colors md:max-w-none md:grow-0 md:basis-auto ${
                 wrong === index ? 'border-error bg-error/10' : 'border-line bg-paper hover:border-violet/60'
               }`}
             >
+              <span
+                aria-hidden
+                className="absolute top-2 left-2 inline-flex h-5 w-5 items-center justify-center rounded-full border border-current text-[0.65rem] text-ink-faint"
+              >
+                {exercise.bank.indexOf(index) + 1}
+              </span>
               {rowText(index)}
             </motion.button>
           ))}
