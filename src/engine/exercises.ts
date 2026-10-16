@@ -1954,7 +1954,7 @@ function tableReviewFor(
 }
 
 /** Écart minimal entre un exercice raté et sa reprise : assez pour ne pas répondre de mémoire. */
-export const RETRY_GAP = 4
+export const RETRY_GAP = 6
 
 /**
  * Cartes-citation d'un même fragment (ou d'un même paragraphe cité d'un seul
