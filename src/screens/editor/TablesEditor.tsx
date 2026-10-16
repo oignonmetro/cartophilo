@@ -24,7 +24,8 @@ import {
  * Onglet Tableaux de l'éditeur : chaque tableau du rappel (voir
  * `lessonTables`), édité en grille plutôt qu'en lignes `| … |`, avec ce que
  * l'application en fera — tableau à trous, ou repérage pour un plan (voir
- * `tableStructure`) — et un aperçu jouable de ses exercices. Les cases
+ * `tableStructure`) — et ses exercices, chacun jouable sur place : l'exo
+ * qu'on règle est celui qu'on voit joué juste en dessous. Les cases
  * s'écrivent dans le texte du rappel, que l'onglet Rappel montre tel quel ;
  * les exercices choisis, dans `tables:` (voir `lessonTableSchema`), que
  * l'onglet tient à jour quand un en-tête change ou qu'une colonne bouge.
@@ -85,8 +86,6 @@ export function TablesEditor({
   const ids = tableIds(lessonId, tables)
   const { choices, orphans } = readSettings(lessonId, notes, settings)
   const originalIds = new Set(tableIds(lessonId, noteTables(originalNotes)))
-  const [selected, setSelected] = useState(0)
-  const current = Math.min(selected, spans.length - 1)
   // Tableaux dépliés pour être édités : repliés par défaut, ils se
   // retouchent d'ordinaire dans le rappel ; seul un tableau tout juste ajouté s'ouvre.
   const [open, setOpen] = useState<ReadonlySet<number>>(new Set())
@@ -163,13 +162,12 @@ export function TablesEditor({
 
   function add(grid: string[][]) {
     commit(appendTable(notes, grid), [...choices, null])
-    setSelected(spans.length)
     setOpen((previous) => new Set(previous).add(spans.length))
   }
 
   return (
-    <div className="flex min-h-0 flex-1">
-      <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto px-4 py-4">
+    <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
+      <div className="mx-auto flex w-full max-w-3xl flex-col gap-4">
         <div className="flex flex-wrap items-center gap-2">
           <button
             type="button"
@@ -241,13 +239,8 @@ export function TablesEditor({
           const structure = tableStructure(table)
           const hint = structureHint(table)
           const width = span.grid[0]?.length ?? 1
-          const isSelected = index === current
           return (
-            <section
-              key={index}
-              onFocusCapture={() => setSelected(index)}
-              className={`card-3d flex flex-col gap-3 p-4 ${isSelected ? 'ring-2 ring-teal/50' : ''}`}
-            >
+            <section key={index} className="card-3d flex flex-col gap-3 p-4">
               <header className="flex flex-wrap items-center gap-2">
                 <span className="text-sm font-black text-ink-faint">Tableau {index + 1}</span>
                 {id === null ? (
@@ -287,15 +280,6 @@ export function TablesEditor({
                   className="rounded-lg border-2 border-line px-2.5 py-1 text-xs font-bold text-ink-soft hover:text-teal-deep"
                 >
                   {open.has(index) ? '▾ Replier le tableau' : '▸ Modifier le tableau'}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setSelected(index)}
-                  className={`rounded-lg px-2.5 py-1 text-xs font-bold ${
-                    isSelected ? 'bg-teal text-white' : 'border-2 border-line text-ink-soft hover:text-teal-deep'
-                  }`}
-                >
-                  Aperçu
                 </button>
                 <button
                   type="button"
@@ -477,169 +461,86 @@ export function TablesEditor({
               </>
               )}
 
-              {id !== null && (
-                <ChoicesPanel
+              {id === null ? (
+                <p className="text-xs text-ink-faint">Ce tableau n’a aucune case remplie : il ne se joue pas.</p>
+              ) : (
+                <ExercisesPanel
                   table={table}
                   grid={span.grid}
                   title={title}
                   id={id}
                   chosen={choices[index] ?? null}
                   onChange={(chosen) => setChoices(index, chosen)}
+                  onPickCell={(number, cell) => pickCell(index, number, cell)}
                 />
               )}
             </section>
           )
         })}
       </div>
-
-      <aside className="flex w-[30rem] shrink-0 flex-col overflow-y-auto border-l-2 border-line bg-ink/3 px-5 py-5">
-        <p className="mb-3 text-center text-xs font-black tracking-widest text-ink-faint uppercase">Aperçu</p>
-        {current >= 0 && ids[current] ? (
-          <TablePreview
-            id={ids[current]!}
-            title={title}
-            table={tables[current]!}
-            exercises={choices[current] ?? undefined}
-            label={`Tableau ${current + 1}`}
-            onPickCell={(number, cell) => pickCell(current, number, cell)}
-          />
-        ) : (
-          <p className="text-center text-sm text-ink-faint">
-            {spans.length === 0 ? 'Rien à jouer.' : 'Ce tableau n’a aucune case remplie : il ne se joue pas.'}
-          </p>
-        )}
-      </aside>
     </div>
   )
 }
 
 /**
- * Les exercices d'un tableau tels qu'une leçon les tire, joués pour de vrai
- * mais sans rien noter. Chaque exo a son propre tirage : « Nouveau tirage »
- * ne retire que celui qu'on regarde. Une case seule ne se tire pas : on y
- * choisit la case demandée, ou on la laisse au hasard.
+ * L'exo qu'on regarde, joué pour de vrai mais sans rien noter, tel qu'une
+ * leçon le tire. « Nouveau tirage » ne retire que lui ; une case seule ne se
+ * tire pas : on y choisit la case demandée, ou on la laisse au hasard.
  */
-function TablePreview({
-  id,
-  title,
+function PlayArea({
   table,
-  exercises: chosen,
-  label,
+  exercise,
+  number,
+  chosen,
+  playKey,
   onPickCell,
+  onReroll,
+  onDone,
 }: {
-  id: string
-  title: string
   table: NoteTableBlock
-  exercises?: TableExerciseChoice[]
-  label: string
+  exercise: Exercise
+  number: number
+  chosen: TableExerciseChoice[] | null
+  /** Change à chaque tirage et à chaque modification : l'exo repart de zéro. */
+  playKey: string
   /** Fixe (ou rend au hasard, `null`) la case de l'exo `number`. */
   onPickCell: (number: number, cell: CellRef | null) => void
+  onReroll: () => void
+  onDone: () => void
 }) {
-  // Tirages déjà refaits, par numéro d'exo ; `round` repart de zéro pour tous.
-  const [draws, setDraws] = useState<Record<number, number>>({})
-  const [round, setRound] = useState(0)
-  const [step, setStep] = useState(0)
-  const signature = JSON.stringify([table, chosen])
-  const seedOf = (number: number) => 1 + (draws[number] ?? 0) + round * 1000
-  // Chaque exercice garde le numéro de sa ligne dans la liste des choisis
-  // (« Exo 3 » reste l'exo 3 même si l'exo 2 ne peut pas se jouer).
-  const numbered = useMemo(
-    () => {
-      if (!chosen) {
-        // Le nombre d'exos automatiques ne dépend que du tableau, pas du tirage.
-        const count = tableExercises(title, [{ id, table }], createRng(1)).length
-        return Array.from({ length: count }, (_, index) => {
-          const exercise = tableExercises(title, [{ id, table }], createRng(seedOf(index + 1)))[index]
-          return exercise ? [{ exercise, number: index + 1 }] : []
-        }).flat()
-      }
-      return chosen.flatMap((choice, index) =>
-        tableExercises(title, [{ id, table, exercises: [choice] }], createRng(seedOf(index + 1))).map((exercise) => ({
-          exercise,
-          number: index + 1,
-        })),
-      )
-    },
-    // `signature` suit le contenu du tableau et ses exercices, recréés à chaque rendu.
-    [id, title, signature, draws, round],
-  )
-  const entry = numbered[step]
-  const exercise: Exercise | undefined = entry?.exercise
-  const next = () => setStep((n) => n + 1)
-  const key = `${signature}:${entry ? seedOf(entry.number) : 0}:${step}`
-
   return (
-    <div className="flex flex-col gap-3">
-      <div className="flex flex-wrap items-center gap-1.5">
-        <span className="mr-1 text-xs font-black text-ink-faint">{label}</span>
-        {numbered.map(({ exercise: each, number }, index) => (
-          <button
-            key={index}
-            type="button"
-            onClick={() => setStep(index)}
-            title={KIND_LABEL[each.kind] ?? each.kind}
-            className={`rounded-lg px-2 py-0.5 text-xs font-bold ${
-              index === step ? 'bg-violet text-white' : 'border border-line text-ink-soft hover:text-violet'
-            }`}
-          >
-            Exo {number}
-          </button>
-        ))}
-      </div>
-
+    <div className="flex flex-col gap-2">
       {/* Au-dessus de l'exercice, pas en dessous : sous la carte haute de 36 rem,
-          il fallait faire défiler le panneau pour atteindre le sélecteur. */}
-      {entry && exercise?.kind === 'table-cell' && (
+          il fallait faire défiler pour atteindre le sélecteur. */}
+      {exercise.kind === 'table-cell' ? (
         <CellPicker
           table={table}
           hole={exercise.hole}
-          number={entry.number}
-          fixed={chosen?.[entry.number - 1]?.row !== undefined}
+          number={number}
+          fixed={chosen?.[number - 1]?.row !== undefined}
           automatic={!chosen}
-          onPick={(cell) => onPickCell(entry.number, cell)}
+          onPick={(cell) => onPickCell(number, cell)}
         />
-      )}
-
-      <div className="card-3d flex h-[36rem] flex-col p-4">
-        {!exercise && numbered.length === 0 && (
-          <div className="flex flex-1 items-center justify-center text-sm text-ink-faint">Aucun exercice à jouer.</div>
-        )}
-        {!exercise && numbered.length > 0 && (
-          <div className="flex flex-1 flex-col items-center justify-center gap-3 text-sm text-ink-faint">
-            <p>Fin de l’aperçu.</p>
-            <button
-              type="button"
-              onClick={() => {
-                setRound((n) => n + 1)
-                setStep(0)
-              }}
-              className="rounded-lg border-2 border-line px-3 py-1 font-bold text-ink-soft hover:text-teal-deep"
-            >
-              Rejouer
-            </button>
-          </div>
-        )}
-        {exercise?.kind === 'table-order' && <TableOrder key={key} exercise={exercise} onDone={next} />}
-        {exercise?.kind === 'table-bank' && <TableBank key={key} exercise={exercise} onDone={next} />}
-        {exercise?.kind === 'table-cell' && <TableCell key={key} exercise={exercise} onAnswer={next} />}
-      </div>
-
-      {entry && exercise && exercise.kind !== 'table-cell' && (
+      ) : (
         <div className="flex items-center justify-between gap-2 rounded-xl border-2 border-dashed border-line px-3 py-2">
           <span className="text-xs text-ink-faint">
-            Exo {entry.number} :{' '}
-            {exercise.kind === 'table-order' ? 'lignes et ordre tirés au hasard' : 'cases tirées au hasard'}
+            Exo {number} : {exercise.kind === 'table-order' ? 'lignes et ordre tirés au hasard' : 'cases tirées au hasard'}
           </span>
           <button
             type="button"
-            onClick={() => setDraws((previous) => ({ ...previous, [entry.number]: (previous[entry.number] ?? 0) + 1 }))}
-            title={`Tirer d'autres trous, un autre ordre, pour l'exo ${entry.number} seulement`}
+            onClick={onReroll}
+            title={`Tirer d'autres trous, un autre ordre, pour l'exo ${number} seulement`}
             className="rounded-lg border-2 border-line px-2 py-0.5 text-xs font-bold text-ink-soft hover:text-teal-deep"
           >
             Nouveau tirage
           </button>
         </div>
       )}
+      <div className="flex h-[36rem] flex-col rounded-2xl border-2 border-line bg-ink/3 p-4">
+        {exercise.kind === 'table-order' && <TableOrder key={playKey} exercise={exercise} onDone={onDone} />}
+        {exercise.kind === 'table-bank' && <TableBank key={playKey} exercise={exercise} onDone={onDone} />}
+        {exercise.kind === 'table-cell' && <TableCell key={playKey} exercise={exercise} onAnswer={onDone} />}
+      </div>
     </div>
   )
 }
@@ -766,7 +667,11 @@ function SmallButton({
     <button
       type="button"
       title={title}
-      onClick={onClick}
+      onClick={(event) => {
+        // Dans une ligne d'exo, le bouton agit seul : la ligne ne se resélectionne pas par-dessus.
+        event.stopPropagation()
+        onClick()
+      }}
       disabled={disabled}
       className={`rounded-md px-1.5 py-0.5 disabled:opacity-25 ${
         danger ? 'text-error hover:bg-error/10' : 'text-ink-faint hover:text-ink'
@@ -795,15 +700,18 @@ function Badge({ tone, title, children }: { tone: keyof typeof BADGE_TONES; titl
 /**
  * Les exercices d'un tableau : ceux que l'application tire seule, ceux qu'on
  * choisit (genre et colonne, dans l'ordre où la leçon les joue ; la
- * révision les fait tourner), ou aucun.
+ * révision les fait tourner), ou aucun. Toucher un exo de la liste le joue
+ * juste en dessous : réglage et aperçu ne font qu'un. Chaque exo a son propre
+ * tirage ; à la fin du dernier, « Rejouer » les retire tous.
  */
-function ChoicesPanel({
+function ExercisesPanel({
   table,
   grid,
   title,
   id,
   chosen,
   onChange,
+  onPickCell,
 }: {
   table: NoteTableBlock
   grid: string[][]
@@ -811,7 +719,46 @@ function ChoicesPanel({
   id: string
   chosen: TableExerciseChoice[] | null
   onChange: (chosen: TableExerciseChoice[] | null) => void
+  onPickCell: (number: number, cell: CellRef | null) => void
 }) {
+  // Tirages déjà refaits, par numéro d'exo ; `round` repart de zéro pour tous.
+  const [draws, setDraws] = useState<Record<number, number>>({})
+  const [round, setRound] = useState(0)
+  // L'exo joué, par son numéro ; `null` : fin de l'aperçu.
+  const [active, setActive] = useState<number | null>(1)
+  const signature = JSON.stringify([table, chosen])
+  const seedOf = (number: number) => 1 + (draws[number] ?? 0) + round * 1000
+  // Chaque exercice garde le numéro de sa ligne dans la liste des choisis
+  // (« Exo 3 » reste l'exo 3 même si l'exo 2 ne peut pas se jouer).
+  const numbered = useMemo(
+    () => {
+      if (!chosen) {
+        // Le nombre d'exos automatiques ne dépend que du tableau, pas du tirage.
+        const count = tableExercises(title, [{ id, table }], createRng(1)).length
+        return Array.from({ length: count }, (_, index) => {
+          const exercise = tableExercises(title, [{ id, table }], createRng(seedOf(index + 1)))[index]
+          return exercise ? [{ exercise, number: index + 1 }] : []
+        }).flat()
+      }
+      return chosen.flatMap((choice, index) =>
+        tableExercises(title, [{ id, table, exercises: [choice] }], createRng(seedOf(index + 1))).map((exercise) => ({
+          exercise,
+          number: index + 1,
+        })),
+      )
+    },
+    // `signature` suit le contenu du tableau et ses exercices, recréés à chaque rendu.
+    [id, title, signature, draws, round],
+  )
+  const entry = active === null ? undefined : numbered.find((each) => each.number === active)
+  const playKey = `${signature}:${active === null ? 0 : seedOf(active)}:${round}`
+  /** Après un exo, le suivant qui se joue ; après le dernier, la fin de l'aperçu. */
+  const next = () => setActive(numbered.find((each) => each.number > (active ?? Infinity))?.number ?? null)
+  const rowClass = (number: number) =>
+    `flex cursor-pointer flex-wrap items-center gap-2 rounded-lg border-2 px-2 py-1 text-xs ${
+      active === number ? 'border-violet bg-violet/8' : 'border-transparent hover:bg-ink/5'
+    }`
+
   const mode = chosen === null ? 'auto' : chosen.length === 0 ? 'none' : 'chosen'
   const headers = grid[0] ?? []
   const columnName = (column: number) => plainInline(headers[column] ?? '').trim() || `colonne ${column + 1}`
@@ -838,7 +785,11 @@ function ChoicesPanel({
             <button
               key={value}
               type="button"
-              onClick={() => mode !== value && select()}
+              onClick={() => {
+                if (mode === value) return
+                select()
+                setActive(1)
+              }}
               className={`rounded-md px-2 py-0.5 text-xs font-bold ${
                 mode === value ? 'bg-teal text-white' : 'text-ink-faint hover:text-ink-soft'
               }`}
@@ -850,12 +801,21 @@ function ChoicesPanel({
       </div>
 
       {mode === 'auto' && (
-        <p className="text-xs text-ink-soft">
-          {tableStructure(table)
-            ? `Un plan : remise en ordre, banque, puis case seule, sur la colonne « ${columnName(auto[0]!.column)} ».`
-            : 'Une colonne tirée au hasard à remplir depuis une banque, puis une case seule prise ailleurs ; elles changent d’une fois à l’autre.'}{' '}
-          « Choisis » fixe les exercices et leurs colonnes.
-        </p>
+        <>
+          <p className="text-xs text-ink-soft">
+            {tableStructure(table)
+              ? `Un plan : remise en ordre, banque, puis case seule, sur la colonne « ${columnName(auto[0]!.column)} ».`
+              : 'Une colonne tirée au hasard à remplir depuis une banque, puis une case seule prise ailleurs ; elles changent d’une fois à l’autre.'}{' '}
+            « Choisis » fixe les exercices et leurs colonnes.
+          </p>
+          {numbered.map(({ exercise, number }) => (
+            <div key={number} onClick={() => setActive(number)} className={rowClass(number)}>
+              <span className="font-black whitespace-nowrap text-ink-faint">Exo {number}</span>
+              <span className="font-bold text-ink-soft">{KIND_LABEL[exercise.kind] ?? exercise.kind}</span>
+              <span className="text-ink-faint">{autoDetail(exercise, columnName)}</span>
+            </div>
+          ))}
+        </>
       )}
 
       {mode === 'none' && (
@@ -871,7 +831,7 @@ function ChoicesPanel({
             s’efface une fois le tableau bien su).
           </p>
           {chosen!.map((choice, at) => (
-            <div key={at} className="flex flex-wrap items-center gap-2 text-xs">
+            <div key={at} onClick={() => setActive(at + 1)} className={rowClass(at + 1)}>
               <span className="font-black whitespace-nowrap text-ink-faint">Exo {at + 1}</span>
               <select
                 value={choice.kind}
@@ -885,8 +845,8 @@ function ChoicesPanel({
                 ))}
               </select>
               {choice.kind === 'cell' ? (
-                // La case se choisit sur le tableau en réduction de l'aperçu (voir
-                // `CellPicker`), plus par une colonne puis une ligne à la suite.
+                // La case se choisit sur le tableau en réduction, au-dessus de l'exo
+                // joué (voir `CellPicker`), plus par une colonne puis une ligne.
                 // On montre la réponse attendue (le contenu de la case), plus parlante
                 // qu'un repère « colonne × ligne » ; le repère reste en info-bulle.
                 <span
@@ -923,13 +883,23 @@ function ChoicesPanel({
                   {choice.kind === 'cell' && choice.row !== undefined ? 'Cette case est vide.' : CHOICE_EMPTY[choice.kind]}
                 </span>
               )}
-              <SmallButton title="Monter" disabled={at === 0} onClick={() => onChange(swap(chosen!, at, at - 1))}>
+              <SmallButton
+                title="Monter"
+                disabled={at === 0}
+                onClick={() => {
+                  onChange(swap(chosen!, at, at - 1))
+                  setActive(at)
+                }}
+              >
                 ↑
               </SmallButton>
               <SmallButton
                 title="Descendre"
                 disabled={at === chosen!.length - 1}
-                onClick={() => onChange(swap(chosen!, at, at + 1))}
+                onClick={() => {
+                  onChange(swap(chosen!, at, at + 1))
+                  setActive(at + 2)
+                }}
               >
                 ↓
               </SmallButton>
@@ -945,13 +915,64 @@ function ChoicesPanel({
           ))}
           <button
             type="button"
-            onClick={() => onChange([...chosen!, { kind: 'cell', column: chosen!.at(-1)?.column ?? 1 }])}
+            onClick={() => {
+              onChange([...chosen!, { kind: 'cell', column: chosen!.at(-1)?.column ?? 1 }])
+              setActive(chosen!.length + 1)
+            }}
             className="self-start rounded-lg border-2 border-dashed border-line px-2.5 py-1 text-xs font-bold text-ink-soft hover:border-teal hover:text-teal-deep"
           >
             + Exercice
           </button>
         </>
       )}
+
+      {mode !== 'none' && (
+        <div className="mt-1">
+          {entry ? (
+            <PlayArea
+              table={table}
+              exercise={entry.exercise}
+              number={entry.number}
+              chosen={chosen}
+              playKey={playKey}
+              onPickCell={onPickCell}
+              onReroll={() => setDraws((previous) => ({ ...previous, [entry.number]: (previous[entry.number] ?? 0) + 1 }))}
+              onDone={next}
+            />
+          ) : (
+            <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-line py-8 text-sm text-ink-faint">
+              {active === null ? (
+                <>
+                  <p>Fin de l’aperçu.</p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setRound((n) => n + 1)
+                      setActive(numbered[0]?.number ?? 1)
+                    }}
+                    className="rounded-lg border-2 border-line px-3 py-1 font-bold text-ink-soft hover:text-teal-deep"
+                  >
+                    Rejouer
+                  </button>
+                </>
+              ) : (
+                <p>{numbered.length === 0 ? 'Aucun exercice à jouer.' : `L’exo ${active} ne se joue pas.`}</p>
+              )}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   )
+}
+
+/** Ce que tire un exo automatique, dit en clair dans sa ligne. */
+function autoDetail(exercise: Exercise, columnName: (column: number) => string): string {
+  if (exercise.kind === 'table-bank') {
+    const column = exercise.holes[0]?.column
+    return column === undefined ? '' : `colonne « ${columnName(column)} », tirée au hasard`
+  }
+  if (exercise.kind === 'table-cell') return 'case tirée au hasard'
+  if (exercise.kind === 'table-order') return 'lignes à remettre dans l’ordre'
+  return ''
 }
