@@ -156,7 +156,13 @@ erreurs d'attribution que la GF corrigeait : une notion d'un autre traité
 (l'« audace », *tolma*, du traité 10), deux images de chapitres voisins
 confondues (la cité et le roi), une image tirée d'une note donnée pour le
 texte (le miroir, du traité 46), un détail inversé (« moins profondément »),
-un rapport de causalité renversé (corps et âme du monde). Donc :
+un rapport de causalité renversé (corps et âme du monde). Au traité 2
+(chap. 8¹-15), deux fautes plus graves : il a donné pour le chapitre 8¹ les
+arguments du chapitre 5, auquel 8¹ ne fait que renvoyer (corrigé après
+relance), et, sur les chapitres 13-15, il a **inventé ses citations** de la
+GF (aucune ne s'y retrouvait) et prêté au chapitre 15 des « poètes » qui n'y
+sont pas. Ses explications des chapitres 8¹ à 12, en revanche, étaient
+bonnes. Donc :
 
 - chaque citation qu'il donne se retrouve avec `gf.py cherche`, puis se
   recopie **depuis la GF**, mot pour mot ;
@@ -537,7 +543,15 @@ de l'argumentation (« posé », « démontré ») qui n'éclairent rien.
 ## 7. Valider, vérifier, publier
 
 1. `npm run content:tidy -- <fichier>`, puis `npm run content:check`, et
-   corriger jusqu'à « Contenu valide ».
+   corriger jusqu'à « Contenu valide ». Puis, sur les leçons écrites ou
+   refondues :
+   ```bash
+   python -I .claude/skills/cours-traite/gf.py verifie <fichier.yaml> <id de la première leçon>
+   python -I .claude/skills/cours-traite/gf.py reprises <fichier.yaml> <id de la première leçon>
+   ```
+   `verifie` doit ne laisser aucune citation introuvable (hors formules
+   du cours) ; `reprises` signale ce qui suit la GF, ou ses notes, sans
+   guillemets : citer mot pour mot ou reformuler.
 2. `npm run content:build`, puis regarder le rendu : `#/fiches/traiteN` dans
    le navigateur intégré (serveur de dev sur le port 5173, déjà lancé ou via
    `preview_start`). Vérifier que les attaques se lisent comme l'idée de la

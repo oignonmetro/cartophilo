@@ -6,6 +6,10 @@ extrait une fois (pdftotext) dans un cache du dossier temporaire.
   python -I .claude/skills/cours-traite/gf.py cherche "fantôme sur" ["autre phrase" ...]
   python -I .claude/skills/cours-traite/gf.py chapitre 30 8        (traité 30, chap. 8)
   python -I .claude/skills/cours-traite/gf.py plan 6               (plan détaillé du traité 6)
+  python -I .claude/skills/cours-traite/gf.py verifie <fichier.yaml> [id-de-leçon]
+      (chaque citation « » du fichier, à partir de cette leçon, se retrouve-t-elle dans la GF ?)
+  python -I .claude/skills/cours-traite/gf.py reprises <fichier.yaml> [id-de-leçon]
+      (passages repris de la GF sans guillemets, à citer ou reformuler)
 
 La recherche ignore accents, casse et forme des apostrophes. Les lignes de
 la traduction ne sont marquées que toutes les cinq ([5], [10]...) : un repère
@@ -106,6 +110,61 @@ def plan(t):
             return
 
 
+def _flat(s):
+    s = s.replace("’", "'").replace(" ", " ")
+    s = "".join(c for c in unicodedata.normalize("NFD", s) if unicodedata.category(c) != "Mn").lower()
+    s = re.sub(r"\d+", " ", s)
+    s = re.sub(r"[^a-z' ]+", " ", s)
+    s = s.replace("eux memes", "euxmemes").replace("ici bas", "icibas")
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def _corpus():
+    return " ".join(_flat(open(txt, encoding="utf-8").read()) for _, _, txt in volumes())
+
+
+def _source(path, depuis):
+    L = open(path, encoding="utf-8").read().split(chr(10))
+    if depuis:
+        L = L[L.index("- id: " + depuis):]
+    s = chr(10).join(L)
+    s = re.sub(r"\{/?[a-z]+\}", "", s).replace("___", "[T]").replace("**", "").replace("__", "")
+    return s.replace('\\"', '"')
+
+
+def verifie(path, depuis=None):
+    """Chaque citation entre « » doit se retrouver dans la GF."""
+    T = _corpus(); n = 0
+    for q in re.findall(r"«([^«»]+)»", _source(path, depuis)):
+        for frag in re.split(r"\[[^\]]*\]|\.\.\.|\"", q):
+            f = _flat(frag)
+            if len(f) >= 18 and f not in T:
+                n += 1; print("INTROUVABLE :", frag.strip()[:140])
+    print(n, "fragment(s) introuvable(s)")
+
+
+def reprises(path, depuis=None, mots=8):
+    """Suites de mots reprises de la GF hors guillemets (paraphrase à citer)."""
+    T = _corpus(); vus = set()
+    s = re.sub(r"«[^«»]*»", " | ", _source(path, depuis))
+    for ligne in s.split(chr(10)):
+        if re.match(r"\s*answer:", ligne):
+            continue
+        for seg in ligne.split("|"):
+            w = _flat(seg).split(); i = 0
+            while i <= len(w) - mots:
+                if " ".join(w[i:i + mots]) in T:
+                    j = i + mots
+                    while j < len(w) and " ".join(w[i:j + 1]) in T:
+                        j += 1
+                    g = " ".join(w[i:j])
+                    if g not in vus:
+                        vus.add(g); print("SANS GUILLEMETS :", g)
+                    i = j
+                else:
+                    i += 1
+
+
 if __name__ == "__main__":
     cmd, *args = sys.argv[1:] or ["aide"]
     if cmd == "cherche":
@@ -114,5 +173,9 @@ if __name__ == "__main__":
         chapitre(int(args[0]), int(args[1]))
     elif cmd == "plan":
         plan(int(args[0]))
+    elif cmd == "verifie":
+        verifie(args[0], args[1] if len(args) > 1 else None)
+    elif cmd == "reprises":
+        reprises(args[0], args[1] if len(args) > 1 else None)
     else:
         print(__doc__)
