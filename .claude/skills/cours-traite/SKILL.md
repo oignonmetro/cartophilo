@@ -117,10 +117,30 @@ fin, la reposer sous forme de question, jamais sous forme de remarque.
 Une leçon par **mouvement du raisonnement**, dans l'ordre du texte, chacune
 d'un écran au plus (au-delà, couper) :
 
-- **Première leçon : le plan**, en tableau de structure (`Moment | Lieu |
+- **Première leçon : le plan**, en tableau de structure (`Mouvement | Lieu |
   Ce qui s'y joue`, un repère par case dans la colonne Lieu, trois lignes au
-  moins), précédé de deux ou trois phrases qui disent la progression. On voit
-  l'ensemble avant le détail (choix de l'utilisateur au traité 1).
+  moins), précédé de deux ou trois phrases qui disent la progression ; la
+  première cite la question telle que Plotin la pose (« sommes-nous
+  immortels ? »). On voit l'ensemble avant le détail (choix de l'utilisateur
+  au traité 1). Modèle : `traite2.yaml` (retouches de l'utilisateur, commit
+  e5dbe3f).
+  - Une ligne par **mouvement argumentatif**, pas par chapitre : un plan de
+    dix moments est trop long (traité 6, ramené à cinq mouvements).
+  - « Mouvement » nomme ce que fait Plotin (« réfuter le matérialisme
+    (épicuriens et stoïciens) », « écarter les fausses définitions
+    incorporelles »).
+  - « Ce qui s'y joue » énonce **la thèse établie avec sa raison** (« une
+    réalité corporelle, étant divisible, passive et quantitative, est par
+    nature incapable de générer la vie, la sensation ou la pensée »), non
+    un simple thème.
+  - Un traité de beaucoup de chapitres reçoit, en plus du plan global, une
+    **leçon de sous-repérage avant chaque mouvement** qui en compte plusieurs
+    (traité 2 : chap. 2-8³, 8⁴-8⁵, 9-12, 13-15), même forme de tableau. Un
+    traité court (traité 6, huit chapitres) s'en tient au plan global.
+  - Exercices (`tables:`) selon la longueur des cases : remise en ordre sur
+    la colonne Lieu, puis, si les cases de « Ce qui s'y joue » sont courtes
+    (60 caractères au plus) et bien distinctes, une banque sur cette
+    colonne ; sinon, quelques cases seules sur la colonne Lieu.
 - **Puis la question.** Ce que le traité demande, ce qu'il tient pour acquis,
   d'où vient la question, les réponses possibles et celle que retient
   Plotin, la difficulté qu'elle crée, l'annonce du chemin suivi.
@@ -164,7 +184,27 @@ la sienne : par ses raisons, son principe, et ce qu'elle permet d'éviter.
 - **Citer plutôt que paraphraser.** Quand le texte dit la chose, le citer,
   mot pour mot, entre `« »`, puis expliquer. Une formule reprise (« devenir
   bonne et belle rend l'âme semblable au dieu ») prend ses guillemets. La
-  paraphrase sans guillemets est à proscrire.
+  paraphrase sans guillemets est à proscrire, et plus encore une phrase de
+  la traduction reprise presque telle quelle sans guillemets (au traité 2,
+  plusieurs ont échappé au premier jet) : c'est le défaut le plus
+  dommageable, parce qu'on apprend alors comme analyse ce qui est le texte.
+  Avant de valider, relire chaque rappel contre la traduction et mettre
+  entre guillemets, corrigé mot pour mot, tout passage qui la suit de près.
+- **Tous les arguments du chapitre.** Le premier jet n'en saute aucun, même
+  secondaire : au traité 2, il manquait la difficulté des atomes sans
+  parties, le dilemme du fluide et du solide pour la mémoire, la régression
+  à l'infini des moteurs, le souffle incapable de garder sa propre unité.
+- **Les dilemmes déployés.** Toute alternative s'écrit en liste, branche par
+  branche : « Hypothèse 1 : … », puis « Réfutation de l'hypothèse 1 : … »,
+  chaque branche dans sa couleur (vert, corail, rouge), puis la conclusion,
+  dite explicitement. Les réponses possibles à une question se numérotent de
+  même (a, b, c).
+- **Des exemples concrets.** Partir de l'exemple de Plotin, en le signalant
+  comme tel (« Plotin prend l'exemple de… », « selon l'exemple donné par
+  Plotin… ») ; on peut y ajouter un exemple familier, même moderne, quand il
+  rend l'argument tangible (au traité 2 : le golem et le tas de cailloux, la
+  rose rouge et odorante, la chaîne dont aucun maillon ne « sait » ce que
+  subit le premier), sans jamais le présenter comme venant de Plotin.
 - **Pas d'analyse de l'argumentation pour elle-même.** Dire qu'une thèse est
   posée, démontrée ou illustrée n'a d'intérêt que si cela change sa portée
   (une thèse affirmée ici et démontrée ailleurs, une conclusion qui hésite).
@@ -206,8 +246,11 @@ la sienne : par ses raisons, son principe, et ce qu'elle permet d'éviter.
   la sous-partie du plan qui contient le passage. Jamais une ligne déduite.
 - Forme : **« (l. 25-29) »** dans le rappel d'une leçon qui ne porte que sur
   un chapitre ; **« (chap. 4, l. 25-29) »** dès qu'il y a ambiguïté : leçon
-  sur plusieurs chapitres, titre de leçon, et **toujours dans les cartes**,
-  qui reviennent seules en révision.
+  sur plusieurs chapitres, titre de leçon.
+- Dans les cartes : une leçon qui ne porte que sur un chapitre a déjà son
+  chapitre dans son titre, ses cartes ne portent donc pas « (chap. N) »,
+  seulement « (l. x-y) » quand la ligne compte. Les cartes d'une leçon sur
+  plusieurs chapitres portent « (chap. z, l. x-y) ».
 
 ### La mise en relief
 
@@ -237,6 +280,9 @@ et chaque marque a une fonction.
   une autre, c'est « Ulysse »), jamais sur une formulation arbitraire.
 - **Puces** seulement pour une énumération courte et parallèle, sans
   point-virgule en fin d'item.
+- **Gras et souligné dans les cartes** aussi, et pas seulement dans les
+  cartes-citation : gras sur les termes clés et les conclusions, souligné
+  sur les prémisses.
 - **Pièges** `! …` en fin : contresens à éviter, nuance de ce qui est
   établi ; pas de remarque d'analyse de l'argumentation pour elle-même.
 - **Interdits** : point d'exclamation hors citation, tiret cadratin,
@@ -269,6 +315,10 @@ Forme : la laideur croît à mesure que la Forme est moins présente. Par
 conséquent, la beauté croît avec sa présence. Autrement dit, la beauté varie
 en fonction de la maîtrise de la ___ par la Forme. » Elles complètent les
 cartes-citation : celles-ci font savoir le texte, celles-là le comprendre.
+Elles sont sans guillemets puisqu'elles ne citent pas, peuvent tenir en
+plusieurs phrases, et prennent la même mise en relief que le rappel (au
+traité 2 : « Si l'âme était un corps, elle aurait besoin d'un autre ___ pour
+la mettre en mouvement, et celui-ci d'un autre encore… »).
 
 ### Ce qu'on troue
 
@@ -291,7 +341,10 @@ cartes-citation : celles-ci font savoir le texte, celles-là le comprendre.
 ### Les cartes tirées des notes de la GF
 
 Elles peuvent apprendre ce que le rappel ne dit pas, à condition de tenir
-seules et sans en abuser. Y puiser les sources platoniciennes, les termes
+seules et sans en abuser. Un rappel peut donc être allégé d'un détail
+savant (un terme grec, une source platonicienne) pour rester lisible, tandis
+que la carte qui l'apprend demeure (traité 2, chap. 2 : *epaktos*, le
+*Philèbe*, le *logos*). Y puiser les sources platoniciennes, les termes
 grecs que la traduction rend, l'histoire d'une notion, les renvois à d'autres
 traités (titre de Porphyre et numéro), les débats de commentateurs et les
 précautions de Plotin, les prolongements dans des traités ultérieurs ; et
@@ -323,14 +376,16 @@ citations que l'utilisateur colle depuis NotebookLM sont, elles, fiables.
 - Nommer le traité (et le chapitre) seulement quand c'est ce qu'il faut
   savoir ou que la thèse lui est propre ; sinon « Plotin » suffit, voire
   rien. Pas de formule fixe en tête de chaque carte.
-- Repères : toujours **« (chap. z, l. x-y) »** (voir « Les repères »).
+- Repères : voir « Les repères » (pas de « (chap. N) » dans une leçon d'un
+  seul chapitre).
 - Une carte qui anticipe ce que le texte n'a pas encore établi se supprime
   ou se réécrit.
 
 ### Identifiants
 
 `traiteN-lK-qM` pour un cours écrit selon cette skill ; les cartes ajoutées
-à la main peuvent porter d'autres suffixes (`-pM`), seule compte l'unicité.
+à la main, et les cartes d'argument ajoutées après coup, portent `-pM`,
+seule compte l'unicité.
 En refonte, une carte dont le contenu change reçoit un nouvel identifiant
 (changer la lettre : `-p` devient `-q`, `-q` devient `-r`) : un ancien
 identifiant ne doit jamais porter une carte devenue autre, sinon elle
@@ -366,8 +421,9 @@ questions :
 1. **Est-ce abstrait ?** Une formule comme « la Forme unifie le multiple »
    ou « l'âme reconnaît le beau par affinité » ne dit rien à qui ne la
    comprend pas déjà. La développer : ce qu'elle veut dire concrètement, sur
-   l'exemple même du texte (la maison, la pierre, l'or), et pourquoi Plotin
-   peut le soutenir.
+   l'exemple même du texte (la maison, la pierre, l'or), en le signalant
+   comme exemple de Plotin, puis au besoin sur un exemple familier (voir
+   § 4), et pourquoi Plotin peut le soutenir.
 2. **Peut-on s'y tromper ?** Chercher le contresens que la formule permet, et
    le désamorcer en disant ce que la thèse n'est pas : l'âme ne « projette »
    pas la forme sur la matière, elle la reconnaît ; ce n'est pas l'âme
