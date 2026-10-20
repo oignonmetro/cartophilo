@@ -1,6 +1,6 @@
 ---
 name: cours-traite
-description: Écrit ou refond le cours d'un traité de Plotin (piste Repérage, unités traite1 à traite54) à partir du PDF de l'édition GF (traduction, notice, plan détaillé et notes explicatives de fin de traité) : analyse du raisonnement (question, thèse, paradoxe, rôle des chapitres, ce qui est démontré, posé ou illustré), questions à l'utilisateur sur ce que le PDF ne tranche pas, une leçon par mouvement du raisonnement, rappels qui explicitent le pourquoi de chaque thèse, cartes (cascades de citations, cartes d'argument), puis passe de clarification qui développe ce qui reste abstrait, désamorce les contresens et déplie les arguments jusqu'à convaincre, validation, commit et push. À utiliser dès qu'on demande d'« écrire le cours du traité N », de « refondre » ou « clarifier » un cours de traité, de « faire comme le traité 7 », ou quand un rappel de traité est jugé obscur.
+description: Écrit ou refond le cours d'un traité de Plotin (piste Repérage, unités traite1 à traite54) à partir du PDF de l'édition GF (traduction, notice, plan détaillé et notes explicatives de fin de traité) et du notebook NotebookLM « Plotin » (découpage en mouvements et explication des arguments, tout recoupé sur la GF) : analyse du raisonnement (question, thèse, paradoxe, rôle des chapitres, ce qui est démontré, posé ou illustré), questions à l'utilisateur sur ce que le PDF ne tranche pas, une leçon par mouvement du raisonnement, rappels qui explicitent le pourquoi de chaque thèse, cartes (cascades de citations, cartes d'argument), puis passe de clarification qui développe ce qui reste abstrait, désamorce les contresens et déplie les arguments jusqu'à convaincre, validation, commit et push. À utiliser dès qu'on demande d'« écrire le cours du traité N », de « refondre » ou « clarifier » un cours de traité, de « faire comme le traité 7 », ou quand un rappel de traité est jugé obscur.
 ---
 
 # Écrire ou refondre le cours d'un traité de Plotin
@@ -25,8 +25,20 @@ Ne le rouvrir qu'en cas de doute précis.
 3. **Les notes que l'utilisateur fournit** : précieuses pour les questions
    qu'elles posent, mais elles peuvent se tromper (au traité 7, un renvoi au
    traité 5 présenté comme « ultérieur ») ; les recouper avec 1 et 2.
-4. **Ma propre connaissance de Plotin** : pour expliquer un raisonnement que
+4. **NotebookLM** (notebook « Plotin », relié aux traités GF et à des
+   commentaires) : source principale du **découpage en mouvements** et de
+   **l'explication des arguments** (voir § 1 bis), jamais des citations ni
+   des repères, qui se vérifient tous sur 1.
+5. **Ma propre connaissance de Plotin** : pour expliquer un raisonnement que
    le texte laisse implicite, jamais pour une citation ni un numéro de ligne.
+
+**Le partage des rôles** (décidé avec l'utilisateur le 2026-10-20, après le
+traité 2) : NotebookLM explique mieux que moi un argument précis, parce
+qu'il dispose des commentaires et répond aux questions de détail ; les
+clarifications qui manquaient le plus aux premiers jets ont été obtenues
+ainsi. Moi, je vérifie tout sur la GF, je cite mot pour mot, et j'écris les
+cartes, en y intégrant ce que la notice et les notes apportent de plus utile
+(ce que l'utilisateur n'a presque pas eu à retoucher).
 
 Les PDF de la GF sont rangés dans `C:\Users\Arthur\Traités Plotin`, un
 volume par groupe de traités (texte sélectionnable : `pdftotext` suffit).
@@ -41,7 +53,19 @@ depuis la racine du dépôt,
 PYTHONUTF8=1 python .claude/skills/unite-texte/pdf_pages.py fichier.pdf "$TEMP/pages"
 node .claude/skills/unite-texte/render_pages.cjs "$TEMP/pages"
 ```
-puis lire les pages une à une. Repérer quatre parties : la **notice** (avant
+puis lire les pages une à une.
+
+Pour vérifier vite une citation, un repère ou une attribution, depuis la
+racine du dépôt :
+```bash
+python -I .claude/skills/cours-traite/gf.py cherche "phrase à retrouver" "autre phrase"
+python -I .claude/skills/cours-traite/gf.py chapitre 30 8
+python -I .claude/skills/cours-traite/gf.py plan 6
+```
+(texte extrait une fois dans un cache ; recherche insensible aux accents et
+aux apostrophes). Une citation introuvable se corrige ou se retire.
+
+Repérer quatre parties : la **notice** (avant
 le texte), le **plan détaillé**, la **traduction** (lignes dans la marge,
 chapitres numérotés), les **notes** (à la fin du traité, appelées depuis la
 traduction). Lire chaque note au moment où l'on lit le passage qui l'appelle.
@@ -93,6 +117,62 @@ traité 7. Chaque réponse porte sa source (« trad. 2, 27 », « note 14 »,
   réellement déployés pour chacune. C'est la colonne vertébrale du cours : le
   découpage en leçons en sort directement.
 - Quels contresens guettent le lecteur ?
+
+## 1 bis. Interroger NotebookLM : découpage et arguments
+
+Étape normale de tout cours, après la lecture de la GF et avant d'écrire.
+
+**Accès.** Notebook « Plotin » :
+https://notebooklm.google.com/notebook/ce5d279d-8496-4f19-9749-ecff85a07afc,
+dans le navigateur intégré, l'utilisateur s'étant connecté lui-même (jamais
+Claude in Chrome, trop coûteux). Si la page demande une connexion, le dire et
+attendre. Envoyer une question à la fois, attendre la fin de la réponse, ne
+relire que la dernière réponse (`get_page_text` ou un script sur le dernier
+message), et la recopier dans le fichier d'analyse du dossier temporaire.
+
+**Les questions**, dans cet ordre, adaptées au traité :
+
+1. *Découpage.* « Dans le traité N (Ennéade X, Y), *Titre*, dans la
+   traduction GF : propose un découpage en mouvements argumentatifs. Pour
+   chacun : les chapitres (et lignes si possible), son rôle dans l'ensemble,
+   la thèse défendue et la raison principale qui la soutient. »
+2. *Arguments, mouvement par mouvement.* « Pour le mouvement M (chap. a-b) :
+   distingue un à un tous les arguments, même secondaires. Pour chacun :
+   la thèse visée, les prémisses, le principe plotinien dont il dépend,
+   l'enchaînement jusqu'à la conclusion ; s'il y a un dilemme, chaque
+   branche et sa réfutation ; l'adversaire visé ; l'objection qu'un lecteur
+   ferait et la réponse ; les contresens à éviter. Cite les passages de la
+   traduction sur lesquels tu t'appuies, avec chapitre et lignes. »
+3. *Relances.* Pour tout argument que je ne saurais pas rendre convaincant
+   à quelqu'un qui ne croit pas Plotin : « Je ne comprends pas pourquoi …
+   explique pas à pas, avec un exemple concret. » Relancer jusqu'à pouvoir
+   l'expliquer moi-même sans trou.
+
+**Recouper avant tout usage.** Au traité 6, NotebookLM a commis cinq
+erreurs d'attribution que la GF corrigeait : une notion d'un autre traité
+(l'« audace », *tolma*, du traité 10), deux images de chapitres voisins
+confondues (la cité et le roi), une image tirée d'une note donnée pour le
+texte (le miroir, du traité 46), un détail inversé (« moins profondément »),
+un rapport de causalité renversé (corps et âme du monde). Donc :
+
+- chaque citation qu'il donne se retrouve avec `gf.py cherche`, puis se
+  recopie **depuis la GF**, mot pour mot ;
+- chaque repère (chapitre, lignes) se vérifie sur la traduction et le plan
+  détaillé ;
+- chaque attribution (ce passage, cette image, ce traité) se vérifie sur le
+  texte ; ce qui vient des commentaires se dit comme interprétation, pas
+  comme texte de Plotin ;
+- son découpage se confronte au plan détaillé de la GF ; un écart se pose
+  en question à l'utilisateur (§ 2).
+
+**Ce qu'on en garde.** Le découpage (une fois recoupé) donne le plan et les
+leçons ; les explications donnent le fond des rappels (prémisses, dilemmes
+déployés, exemples, contresens), reformulées dans la langue et la mise en
+relief de ce cours, jamais collées telles quelles ; les citations viennent
+toujours de la GF.
+
+Les citations que l'utilisateur colle lui-même depuis NotebookLM sont, elles,
+fiables, et ne se revérifient pas.
 
 ## 2. Poser ses questions à l'utilisateur
 
@@ -350,17 +430,9 @@ traités (titre de Porphyre et numéro), les débats de commentateurs et les
 précautions de Plotin, les prolongements dans des traités ultérieurs ; et
 rattacher le détail à la question du traité quand c'est possible.
 
-**Avec NotebookLM.** Quand l'utilisateur le demande, lui poser les questions
-du § 1 dans le notebook « Plotin » (navigateur intégré, l'utilisateur s'étant
-connecté lui-même ; jamais Claude in Chrome, trop coûteux), en quatre ou cinq
-envois groupés, et ne relire que la dernière réponse par un script. Ses
-explications conceptuelles sont utiles, mais au traité 6 il a commis cinq
-erreurs d'attribution que la GF corrigeait : une notion d'un autre traité
-(l'« audace », *tolma*, du traité 10), deux images de chapitres voisins
-confondues (la cité et le roi), une image tirée d'une note donnée pour le
-texte (le miroir, du traité 46), un détail inversé (« moins profondément »),
-un rapport de causalité renversé (corps et âme du monde). Tout ce qu'il dit
-se recoupe donc avec la traduction et les notes avant d'entrer dans le cours.
+Les cartes restent mon travail : NotebookLM (§ 1 bis) sert au fond des
+rappels, pas aux cartes, sinon pour une carte d'argument tirée d'une
+explication déjà recoupée.
 
 **Vérifier chaque affirmation savante contre le texte.** Une note ou une
 explication tierce peut contredire la traduction (au traité 7, la
@@ -434,6 +506,10 @@ questions :
    l'objection qu'un lecteur raisonnable ferait, avec sa réponse. Se demander
    honnêtement : « si je ne croyais pas Plotin, est-ce que ce paragraphe me
    ferait changer d'avis ? » Sinon, il manque une étape.
+
+**Quand un argument reste opaque, relancer NotebookLM** (§ 1 bis, relances)
+plutôt que de combler soi-même : c'est là qu'il a le plus apporté au
+traité 2. Puis recouper sa réponse sur la GF comme le reste.
 
 Exemple au traité 1 (chap. 2) : le premier jet disait que la Forme réunit les
 parties et les amène à l'unité. La version retouchée reconstruit l'argument
