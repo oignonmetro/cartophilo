@@ -133,13 +133,31 @@ du notebook, pour que les réponses ne mêlent pas un traité au précédent. En
 relire que la dernière réponse (`get_page_text` ou un script sur le dernier
 message), et la recopier dans le fichier d'analyse du dossier temporaire.
 
+**Diviser les demandes, sans hésiter** (consigne de l'utilisateur après le
+traité 2) : NotebookLM se trompe surtout quand on lui en demande trop d'un
+coup. Au traité 2, la question sur trois chapitres (8¹-8³) lui a fait
+prendre le chapitre 5 pour le 8¹, et celle sur les chapitres 13-15 a produit
+des citations inventées. Donc :
+
+- **un chapitre par question** (un passage d'un chapitre, s'il est long),
+  jamais un mouvement de plusieurs chapitres d'un coup ;
+- **à chaque question, rappeler le traité** (numéro chronologique, Ennéade,
+  titre, traduction GF) et le chapitre, comme si la discussion commençait :
+  ne jamais compter sur le contexte des questions précédentes ;
+- **dire précisément ce qu'on attend** (les arguments un à un, leur
+  structure, les citations avec lignes) et rien de plus : une demande
+  courte et nette plutôt qu'une liste de dix exigences ;
+- au besoin, **donner l'incipit du chapitre** (ses premiers mots dans la
+  GF), pour qu'il ne se trompe pas de passage.
+
 **Les questions**, dans cet ordre, adaptées au traité :
 
 1. *Découpage.* « Dans le traité N (Ennéade X, Y), *Titre*, dans la
    traduction GF : propose un découpage en mouvements argumentatifs. Pour
    chacun : les chapitres (et lignes si possible), son rôle dans l'ensemble,
    la thèse défendue et la raison principale qui la soutient. »
-2. *Arguments, mouvement par mouvement.* « Pour le mouvement M (chap. a-b) :
+2. *Arguments, chapitre par chapitre.* « Dans le traité N (Ennéade X, Y),
+   *Titre*, traduction GF, chapitre C (qui commence par « … ») :
    distingue un à un tous les arguments, même secondaires. Pour chacun :
    la thèse visée, les prémisses, le principe plotinien dont il dépend,
    l'enchaînement jusqu'à la conclusion ; s'il y a un dilemme, chaque
