@@ -122,11 +122,14 @@ traité 7. Chaque réponse porte sa source (« trad. 2, 27 », « note 14 »,
 
 Étape normale de tout cours, après la lecture de la GF et avant d'écrire.
 
-**Accès.** Notebook « Plotin » :
-https://notebooklm.google.com/notebook/ce5d279d-8496-4f19-9749-ecff85a07afc,
-dans le navigateur intégré, l'utilisateur s'étant connecté lui-même (jamais
-Claude in Chrome, trop coûteux). Si la page demande une connexion, le dire et
-attendre. Envoyer une question à la fois, attendre la fin de la réponse, ne
+**Accès.** Notebook « Plotin », public :
+https://notebook.google.com/notebook/923d6858-cbeb-4edf-9a61-0761e0ee4728,
+dans le navigateur intégré (jamais Claude in Chrome, trop coûteux). Si la
+page demande une connexion, le dire et attendre que l'utilisateur se
+connecte lui-même.
+
+**À chaque nouveau traité, supprimer d'abord l'historique de la discussion**
+du notebook, pour que les réponses ne mêlent pas un traité au précédent. Envoyer une question à la fois, attendre la fin de la réponse, ne
 relire que la dernière réponse (`get_page_text` ou un script sur le dernier
 message), et la recopier dans le fichier d'analyse du dossier temporaire.
 
@@ -170,6 +173,13 @@ leçons ; les explications donnent le fond des rappels (prémisses, dilemmes
 déployés, exemples, contresens), reformulées dans la langue et la mise en
 relief de ce cours, jamais collées telles quelles ; les citations viennent
 toujours de la GF.
+
+**Ne pas reprendre sa forme.** NotebookLM use beaucoup plus que nous des
+listes à puces, et de titres isolés et numérotés (« 1. Premier mouvement »,
+« A. L'argument de… »). Le cours, lui, écrit en paragraphes ouverts par une
+phrase en gras, sans numérotation ni titre isolé ; les puces ne servent
+qu'aux énumérations courtes et parallèles et aux branches d'un dilemme
+(§ 4). Retraduire chaque réponse dans cette forme.
 
 Les citations que l'utilisateur colle lui-même depuis NotebookLM sont, elles,
 fiables, et ne se revérifient pas.
