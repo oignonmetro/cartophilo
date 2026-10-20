@@ -335,7 +335,10 @@ la sienne : par ses raisons, son principe, et ce qu'elle permet d'éviter.
   fait passer la recherche sur la beauté d'une simple interrogation
   esthétique à une exigence éthique et métaphysique de purification. »
 - **Un paragraphe par étape**, ouvert par une courte phrase en gras qui dit
-  ce que l'étape établit. Pas de numérotation. Un argument et sa conséquence
+  ce que l'étape établit. Pas de numérotation : jamais « Premier argument : »,
+  « Deuxième argument : », mais l'argument lui-même (« La qualité n'est pas un
+  corps. », « La puissance ne suit pas la masse. »), demande de
+  l'utilisateur au traité 2, chap. 8¹. Un argument et sa conséquence
   font deux paragraphes.
 - **Le pourquoi, toujours**, avec des connecteurs entre les phrases et entre
   les paragraphes (donc, or, car, pour la même raison, en revanche, il
