@@ -1,5 +1,71 @@
+# Entrée du glossaire de Plotin (skill glossaire), écrite le 2026-10-21 (elle
+# était vide). Citations vérifiées sur la GF (II, 4, 14 et 16).
+
 id: g-steresis
 title: Privation (`sterêsis`)
+subtitle: L'absence de forme, que Plotin, contre Aristote, identifie à la matière même, et qui ne disparaît pas quand la forme survient
 icon: book
-color: teal
-lessons: []
+color: coral
+lessons:
+- id: g-steresis-l1
+  title: Privation
+  notes: |-
+    Chez Plotin, la {violet}**privation**{/violet} (*sterêsis*) est l'absence de forme et de raison ; contre {sky}Aristote{/sky}, Plotin l'{green}identifie à la matière même{/green}, si bien qu'elle {pink}ne disparaît pas quand la forme survient{/pink}.
+
+    __**Une notion d'Aristote, retournée.**__ Pour {sky}Aristote{/sky}, la matière, la forme et la privation expliquent le changement : le marbre (matière) passe de l'absence de statue (privation) à la statue (forme), et la privation disparaît quand la forme advient ; la matière, elle, demeure, neutre. Plotin pose la question frontalement : « __la matière est-elle la privation__ ou la privation s'applique-t-elle à la matière ? » ([[traite12|traité 12]], chap. 14).
+
+    __**Une négation, qui n'ajoute rien.**__ La privation n'indique pas que quelque chose est présent, « mais bien que quelque chose n'est pas présent, étant donné que la privation est pour ainsi dire une sorte de négation » ; or « __la négation n'ajoute rien__, mais elle affirme que ce n'est pas. Et c'est ainsi que la privation est comme un non-être » (chap. 14). La difficulté est alors de définir la matière sans la privation : si l'on retire de la [[g-hule|matière]] l'absence de toute forme, il ne reste rien. **La matière n'est pas le support d'une privation : elle est la privation même.**
+
+    __**Elle ne disparaît pas quand la forme survient.**__ D'où la conclusion : la matière, « même si elle est non-être, elle est ainsi un être et __s'identifie à la privation__ » (chap. 16). Faut-il alors que la privation soit détruite quand vient la forme ? « Pas du tout, car le réceptacle d'une disposition n'est pas une disposition, mais une privation » : la limite qui survient ne détruit pas l'illimité, elle le fait être davantage ce qu'il est, {yellow}comme le champ ensemencé ne cesse pas d'être champ{/yellow}. Les formes ne font que paraître sur la matière, qui reste dénuement.
+
+    __**La privation est le mal.**__ C'est pourquoi la matière est un mal : elle « est un mal parce qu'elle a besoin du bien, car __elle ne le possède pas__ » (chap. 16). Le mal n'est pas une force rivale du Bien, c'est un manque radical ; et c'est par leur penchant vers ce manque que les âmes deviennent mauvaises (voir [[g-hule|matière]]).
+
+    | | Chez Aristote | Chez Plotin |
+    | Matière et privation | distinctes par la définition | une seule et même chose |
+    | Quand la forme vient | la privation disparaît | la privation demeure |
+    | Statut | moment du changement | le non-être, le mal |
+
+    ! La privation n'est pas un simple concept logique : chez Plotin, elle nomme la condition même de la matière, et c'est pourquoi le monde sensible porte toujours en lui un manque, si belles que soient ses formes.
+
+    **Voir aussi** : [[g-hule|Matière]] · [[g-eidos|Forme]] · [[g-beaute|Beauté]] · [[traite12|Traité 12]]
+  tables:
+  - table: chez-aristote-chez-plotin
+    exercises:
+    - {kind: bank, column: Chez Plotin}
+  points:
+  - id: g-steresis-l1-q1
+    sentence: "L'absence de forme et de raison, que Plotin identifie à la matière même, se dit en grec translittéré ___."
+    answer: sterêsis
+    alt: ["steresis", "stérêsis"]
+  - id: g-steresis-l1-q2
+    sentence: "Plotin pose la question frontalement : « la matière est-elle la ___ ou la privation s'applique-t-elle à la matière ? » (traité 12, chap. 14)."
+    answer: privation
+    alt: []
+  - id: g-steresis-l1-q3
+    sentence: "La privation est une sorte de négation, et « la négation n'___ rien, mais elle affirme que ce n'est pas » (traité 12, chap. 14)."
+    answer: ajoute
+    alt: []
+  - id: g-steresis-l1-q4
+    sentence: "« Et c'est ainsi que la privation est comme un ___ » (traité 12, chap. 14)."
+    answer: non-être
+    alt: ["non être", "non-etre"]
+  - id: g-steresis-l1-q5
+    sentence: "La matière, « même si elle est non-être, elle est ainsi un être et s'identifie à la ___ » (traité 12, chap. 16)."
+    answer: privation
+    alt: []
+  - id: g-steresis-l1-q6
+    sentence: "Contre Aristote, la privation ne disparaît pas quand vient la forme, « car le réceptacle d'une ___ n'est pas une disposition, mais une privation » (traité 12, chap. 16)."
+    answer: disposition
+    alt: []
+  - id: g-steresis-l1-q7
+    sentence: "La limite qui survient ne détruit pas l'illimité : elle le fait être davantage ce qu'il est, comme le ___ ensemencé ne cesse pas d'être ce qu'il est (traité 12, chap. 16)."
+    answer: champ
+    alt: []
+  - id: g-steresis-l1-q8
+    sentence: "La matière « est un mal parce qu'elle a besoin du bien, car elle ne le ___ pas » (traité 12, chap. 16)."
+    answer: possède
+    alt: ["possede"]
+  - id: g-steresis-l1-q9
+    sentence: "Chez Aristote, matière et privation sont distinctes par la définition ; chez Plotin, elles sont une seule et ___ chose."
+    answer: même
+    alt: ["meme"]

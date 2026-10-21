@@ -1,5 +1,91 @@
+# Entrée du glossaire de Plotin (skill glossaire), écrite le 2026-10-21 (elle
+# était vide). Citations vérifiées sur la GF (II, 4, 8 et 16 ; III, 6, 7) ;
+# « mal premier » d'après les notes de la GF (I, 8, 3-5).
+
 id: g-hule
 title: Matière (`hulê`)
+subtitle: Le substrat sans qualité ni grandeur, impassible, non-être véritable où la procession s'épuise, et mal premier par sa pauvreté
 icon: book
-color: teal
-lessons: []
+color: coral
+lessons:
+- id: g-hule-l1
+  title: Matière
+  notes: |-
+    Chez Plotin, la {violet}**matière**{/violet} (*hulê*) sensible n'est {pink}ni un corps ni une étoffe que la forme modèlerait{/pink} : c'est le {green}substrat sans qualité ni grandeur{/green}, impassible, où la procession s'épuise ; un non-être véritable, et le mal premier.
+
+    __**Elle n'a aucune qualité, pas même la grandeur.**__ « Quelle est donc cette matière que l'on dit une, continue et __sans qualité__ ? Qu'elle ne soit pas un corps, si elle est sans qualité, c'est évident » ([[traite12|traité 12]], chap. 8). Elle n'a ni couleur, ni chaleur, ni pesanteur, ni même figure ni grandeur : « c'est une chose que d'être une grandeur et c'en est une autre d'être rendu grand ». {red}L'argile du potier est une matière pour lui{/red}, déjà qualifiée ; {green}la matière première est matière pour toutes choses{/green}, et donc vide de toutes. La difficulté est de comprendre comment ce qui n'est rien peut porter les corps : **elle ne les porte pas comme un socle, elle les reçoit comme une surface où ils apparaissent**.
+
+    __**Un non-être véritable, qui ment.**__ N'étant « ni âme, ni intellect, ni vie, ni forme, ni raison, ni limite », il faut la dire non-être, « __au sens du non-être véritable__ » ([[traite26|traité 26]], chap. 7). Elle est « image et apparence de la masse, désir d'existence » ; « invisible par elle-même, elle fuit celui qui veut la voir » ; « c'est pourquoi __elle ment dans tout ce qu'elle annonce__ ». Et elle reste **impassible** : les formes paraissent sur elle sans l'altérer, {yellow}comme les reflets dans un miroir{/yellow} (voir [[g-multiplicite-sensible|multiplicité sensible]]).
+
+    __**Elle est le mal premier.**__ C'est la difficulté la plus aiguë : si tout vient du Bien, comment y aurait-il un mal premier ? Plotin répond que la matière n'est pas un principe rival, mais le point où la procession s'épuise, **une pauvreté totale** : « ce qui ne possède rien [...] en tant qu'il est pauvreté, ce doit nécessairement être un mal. La matière en effet est pauvreté non en ce qui concerne la richesse ou la force, mais __pauvreté en ce qui concerne la raison__, pauvreté en ce qui concerne la vertu, la beauté, la force, la figure, la forme, la qualité » ([[traite12|traité 12]], chap. 16). Le [[traite51|traité 51]] en tire la doctrine : la matière est le premier des maux, et le corps n'en est qu'un second, dérivé (chap. 3-5). Elle est la [[g-steresis|privation]] même.
+
+    | Ce qu'on croit | Ce qu'est la matière |
+    | un corps étendu | sans qualité ni grandeur |
+    | modifiée par la forme | impassible, comme un miroir |
+    | un néant | un non-être, désir d'existence |
+    | un principe mauvais rival du Bien | une pauvreté, où la procession s'épuise |
+
+    ! La matière n'est pas un second principe face à l'Un, comme chez les gnostiques : elle n'agit pas, n'a aucune force, et le mal qu'elle est n'est qu'un manque.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | traité 12, chap. 8 | une, continue et sans qualité |
+    | traité 12, chap. 16 | pauvreté, donc mal |
+    | traité 26, chap. 7 | non-être véritable, qui ment |
+    | traité 51, chap. 3-5 | la matière, mal premier |
+
+    **Voir aussi** : [[g-steresis|Privation]] · [[g-matiere-intelligible|Matière intelligible]] · [[g-multiplicite-sensible|Multiplicité sensible]] · [[g-eidos|Forme]] · [[traite12|Traité 12]]
+  tables:
+  - table: ce-qu-on-croit-ce-qu-est-la-matiere
+    exercises:
+    - {kind: bank, column: Ce qu'est la matière}
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-hule-l1-q1
+    sentence: "Le substrat sans qualité ni grandeur où la procession s'épuise, la matière, se dit en grec translittéré ___."
+    answer: hulê
+    alt: ["hule", "hylè", "hyle"]
+  - id: g-hule-l1-q2
+    sentence: "« Quelle est donc cette matière que l'on dit une, continue et sans ___ ? » (traité 12, chap. 8)."
+    answer: qualité
+    alt: ["qualite"]
+  - id: g-hule-l1-q3
+    sentence: "La matière n'a pas même de grandeur : « c'est une chose que d'être une grandeur et c'en est une autre d'être rendu ___ » (traité 12, chap. 8)."
+    answer: grand
+    alt: []
+  - id: g-hule-l1-q4
+    sentence: "L'argile n'est matière que pour le potier, déjà qualifiée ; la matière première, elle, est matière pour ___ choses, et donc vide de toutes (traité 12, chap. 8)."
+    answer: toutes
+    alt: []
+  - id: g-hule-l1-q5
+    sentence: "« N'étant ni âme, ni intellect, ni vie, ni forme, ni raison, ni limite », la matière est non-être « au sens du non-être ___ » (traité 26, chap. 7)."
+    answer: véritable
+    alt: ["veritable"]
+  - id: g-hule-l1-q6
+    sentence: "La matière est « image et apparence de la masse, ___ d'existence » (traité 26, chap. 7)."
+    answer: désir
+    alt: ["desir"]
+  - id: g-hule-l1-q7
+    sentence: "« C'est pourquoi elle ___ dans tout ce qu'elle annonce » : la matière paraît grande ou petite sans l'être (traité 26, chap. 7)."
+    answer: ment
+    alt: []
+  - id: g-hule-l1-q8
+    sentence: "« La matière en effet est pauvreté non en ce qui concerne la richesse ou la force, mais pauvreté en ce qui concerne la ___ » (traité 12, chap. 16)."
+    answer: raison
+    alt: []
+  - id: g-hule-l1-q9
+    sentence: "« Ce qui ne possède rien [...] en tant qu'il est pauvreté, ce doit nécessairement être un ___ » : la matière (traité 12, chap. 16)."
+    answer: mal
+    alt: []
+  - id: g-hule-l1-q10
+    sentence: "Selon le traité 51, la matière est le premier des maux ; le ___ n'en est qu'un second, dérivé."
+    answer: corps
+    alt: []
+  - id: g-hule-l1-q11
+    sentence: "Les formes paraissent sur la matière sans l'altérer, comme les reflets dans un miroir : la matière est ___."
+    answer: impassible
+    alt: []
