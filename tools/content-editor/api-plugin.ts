@@ -6,6 +6,7 @@ import type { Plugin, Connect } from 'vite'
 import { parseDocument, Document, Scalar, YAMLSeq, YAMLMap, isMap } from 'yaml'
 import { importQuizletRows, importTextUnitRows } from '../content/quizletImport.ts'
 import { pointProblems, tidyLine, tidyPoint, tidyText } from '../content/tidy.ts'
+import { ALPHABETICAL_TRACKS, sortByTitle } from '../../src/content/course.ts'
 
 /**
  * API de développement pour l'éditeur de contenu : lit et réécrit les
@@ -159,7 +160,14 @@ function buildTree(): TreeCourse[] {
           lessons,
         })
       }
-      tracks.push({ id: String(t.id), title: String(t.title ?? t.id), kind: String(t.kind ?? 'grammar'), units })
+      const id = String(t.id)
+      // Même ordre que dans l'app : le glossaire se range par titre (voir `ALPHABETICAL_TRACKS`).
+      tracks.push({
+        id,
+        title: String(t.title ?? t.id),
+        kind: String(t.kind ?? 'grammar'),
+        units: ALPHABETICAL_TRACKS.has(id) ? sortByTitle(units) : units,
+      })
     }
     courses.push({ id: courseId, name, tracks })
   }

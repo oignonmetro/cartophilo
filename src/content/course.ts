@@ -358,3 +358,16 @@ export function groupCoursesByLanguage(courses: readonly ManifestEntry[]): Langu
   }
   return groups
 }
+
+/**
+ * Pistes dont les unités se rangent d'elles-mêmes par ordre alphabétique de
+ * leur titre, quel que soit l'ordre de `units:` dans `course.yaml` : le
+ * glossaire, où l'on cherche une notion par son nom. La compilation
+ * (`tools/content/build.ts`) et l'éditeur visuel appliquent le même tri.
+ */
+export const ALPHABETICAL_TRACKS: ReadonlySet<string> = new Set(['glossaire'])
+
+/** Tri alphabétique insensible à la casse et aux accents (Â se classe avec A). */
+export function sortByTitle<T extends { title: string }>(items: readonly T[]): T[] {
+  return [...items].sort((a, b) => a.title.localeCompare(b.title, 'fr', { sensitivity: 'base' }))
+}

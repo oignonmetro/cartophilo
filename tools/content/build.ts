@@ -43,11 +43,13 @@ import { allNodes, lessonsFromWork } from '../../src/content/work.ts'
 import { findVocabGap } from '../../src/content/text.ts'
 import { noteLinkTargets, noteTables, parseNotes } from '../../src/content/notes.ts'
 import {
+  ALPHABETICAL_TRACKS,
   itemsOfCourse,
   itemsOfLesson,
   lessonsOf,
   resolveTableColumn,
   resolveTableRow,
+  sortByTitle,
   tableIds,
   tableKey,
   unitsOf as unitsOfCourse,
@@ -217,10 +219,6 @@ function loadUnits(dir: string, kindOf: (unitId: string) => LessonKind): Map<str
   return units
 }
 
-/** Tri alphabétique insensible à la casse et aux accents (Â se classe avec A). */
-function sortByTitle<T extends { title: string }>(items: T[]): T[] {
-  return [...items].sort((a, b) => a.title.localeCompare(b.title, 'fr', { sensitivity: 'base' }))
-}
 
 function buildCourse(courseId: string): Course {
   const dir = join(contentDir, courseId)
@@ -262,7 +260,7 @@ function buildCourse(courseId: string): Course {
             // triées alphabétiquement plutôt que dans l'ordre où elles ont
             // été ajoutées ; les autres pistes gardent l'ordre déclaré
             // (Idées suit le texte source, Repérage l'ordre des Ennéades).
-            return { ...track, units: track.id === 'glossaire' ? sortByTitle(resolved) : resolved }
+            return { ...track, units: ALPHABETICAL_TRACKS.has(track.id) ? sortByTitle(resolved) : resolved }
           }),
         }
       : {
