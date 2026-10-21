@@ -1,34 +1,40 @@
-# Fiche du glossaire de Plotin (voir content/philosophie.md), refondue le
-# 2026-10-16 selon la skill cours-traite : rappels qui disent pourquoi,
-# citation de VI, 9, 1 vérifiée sur la traduction GF. Les cartes dont le
-# contenu a changé portent un identifiant en -q.
+# Entrée du glossaire de Plotin (skill glossaire), refondue le 2026-10-21 :
+# une leçon. Ses cartes sur la beauté sont passées à g-beaute, celles sur le
+# désir à g-desir, avec leurs identifiants. Citations vérifiées sur la GF
+# (VI, 9, 1 et 6).
 
 id: g-unite
 title: Unité (`hen`)
-subtitle: Être, c'est être un, et ce qui unifie est toujours au-dessus de ce qu'il unifie
-icon: infinity
-color: violet
+subtitle: Être, c'est être un ; l'unité de chaque chose lui vient d'ailleurs, d'étage en étage, jusqu'à l'Un
+icon: book
+color: coral
 lessons:
 - id: g-unite-l1
-  title: Être, c'est être un
+  title: Unité
   notes: |-
-    **L'unité est la notion d'où part toute la métaphysique de Plotin : avant de remonter à l'Un, il faut voir que chaque chose, pour être ce qu'elle est, doit être une.** Le problème de départ est d'une simplicité désarmante.
+    Chez Plotin, l'{violet}**unité**{/violet} est ce qui fait qu'une chose est cette chose : {green}être, c'est être un{/green}, et l'unité de chaque chose {pink}ne vient pas de ses parties{/pink} mais d'un principe qui la rend une.
 
-    __**Qu'est-ce qui fait qu'une chose est une seule chose ?**__ Le [[traite9|traité 9]] répond d'abord par un axiome, puis par des exemples : « C'est en vertu de l'unité que tous les êtres sont des êtres, aussi bien ceux qui sont des êtres au sens premier du terme que ceux qui sont dits être de quelque manière parmi les êtres. Et en effet, qu'est-ce qui pourrait être, sans être un ? » (chap. 1, l. 1-3). {yellow}Il n'y a pas d'armée si elle n'est pas une, pas de chœur ni de troupeau{/yellow} ; et « si elles perdaient l'unité, la maison ne serait plus une maison ni le navire un navire » (l. 5-7). Dispersez les briques : il n'y a plus de maison, il y a un tas.
+    __**Être, c'est être un.**__ Le [[traite9|traité 9]] s'ouvre sur un axiome : « C'est en vertu de l'unité que tous les êtres sont des êtres, aussi bien ceux qui sont des êtres au sens premier du terme que ceux qui sont dits être de quelque manière parmi les êtres. Et en effet, __qu'est-ce qui pourrait être, sans être un__ ? » (chap. 1). « il n'y a pas d'armée, si elle n'est pas une, pas de chœur ou de troupeau, s'ils ne sont pas uns », et « s'ils perdaient l'unité, __la maison ne serait plus une maison__ ni le navire un navire ». **La preuve est dans la ruine** : la chose disparaît au moment précis où son unité se défait. Et cela vaut jusqu'au dedans : « la santé se produit quand le corps est coordonné dans l'unité », la beauté quand l'unité en tient les parties, la vertu quand l'âme est unifiée.
 
-    __**La preuve est dans la ruine.**__ Ce que montre chaque exemple, c'est que {red}la chose disparaît au moment précis où son unité se défait{/red}. Un vivant qui se fragmente « perd la réalité qui était la sienne » et devient d'autres choses (l. 10-13). {coral}**Être quelque chose, c'est donc d'abord être un.**{/coral} Et cela vaut jusqu'au dedans : « la santé se produit quand le corps est coordonné dans l'unité », la beauté quand l'unité en tient les parties, et la vertu de l'âme quand elle se trouve unifiée (l. 13-16).
+    __**Cette unité vient toujours d'ailleurs.**__ Les briques ne s'assemblent pas toutes seules : il faut une forme qui les tienne ensemble. **Tout ce qui est multiple dépend de ce qui le rend un.** D'où une remontée d'étage en étage : l'âme unifie le corps, l'Intellect unifie l'âme, l'Un unifie l'Intellect ; chaque étage unifie celui du dessous, mais reste multiple d'une autre manière, jusqu'à un [[g-un|Un]] qui ne reçoit plus son unité de rien.
 
-    __**Cette unité ne vient jamais des parties elles-mêmes.**__ Les briques ne s'assemblent pas toutes seules : il faut une {violet}**forme**{/violet} qui les tienne ensemble. {green}Tout ce qui est multiple dépend donc de ce qui le rend un.{/green} C'est ce principe qui conduira Plotin, d'unité reçue en unité reçue, jusqu'à un Un qui ne reçoit plus la sienne de rien.
+    | Étage | Ce qu'il unifie | Ce qui reste multiple en lui |
+    | Âme | le corps | perceptions, souvenirs, désirs, raisonnements |
+    | Intellect | l'âme | les Formes (le cercle, le nombre, le juste) |
+    | Un | l'Intellect | rien : il est absolument simple |
 
-    __**Plusieurs sortes d'unité, ordonnées entre elles.**__ Elles ne sont pas de simples homonymes, ni une seule et même unité partout : elles dépendent toutes d'un premier terme, selon un ordre de priorité (chap. 1-3).
+    __**L'Un n'est pas le un du nombre.**__ La difficulté est de ne pas imaginer l'Un comme la plus petite des unités. « Il faut entendre "Un" en des sens plus nombreux que ceux qui font dire que __l'unité et le point sont "uns"__ » (chap. 6) : le point et l'unité du nombre ne sont indivisibles que parce qu'on a retranché toute grandeur, et ils restent dans autre chose. L'Un, lui, « est la chose la plus grande de toutes, non pas quant à sa grandeur, mais __quant à sa puissance__ ». Son unité n'est pas un minimum, mais une plénitude.
 
-    | Unité | Exemple | D'où elle vient |
-    | Agrégat | une armée, une maison | un assemblage extérieur |
-    | Unité reçue (*henomenon*) | un vivant, une âme | un principe supérieur |
-    | Unité organique | l'Intellect, où toutes les Formes sont ensemble sans division | sa propre nature, mais encore multiple |
-    | Un en soi (*auto to hen*) | l'Un | rien : il est simple et ne participe à rien |
+    __**Devenir un.**__ Si être, c'est être un, se disperser, c'est être moins. Pour rejoindre son principe, l'âme doit se défaire de la dispersion des représentations extérieures et se tenir seule avec elle-même ([[traite9|traité 9]], chap. 3-4). **Comprendre rassemble** : dans l'esprit du savant, tous les théorèmes sont ensemble, et saisir l'un, c'est saisir la science entière. C'est aussi pourquoi la [[g-beaute|beauté]] est une forme qui unifie, et pourquoi aucun objet particulier, jamais tout à fait un, ne comble le [[g-desir|désir]].
 
-    ! L'unité dont il est question ici n'est pas l'Un lui-même : c'est ce que possède toute chose dans la mesure où elle est quelque chose. Il ne faut jamais confondre ce qui a été **rendu** un (*henomenon*) et l'Un en soi, sous peine d'abolir la transcendance du principe.
+    ! Il ne faut jamais confondre ce qui a été **rendu** un (*henomenon*) et l'Un en soi : l'unité dont parle cette entrée est celle que possède toute chose dans la mesure où elle est quelque chose ; l'Un est ce qui la donne. Et l'on garde le mot *henôsis* pour l'union finale de l'âme avec l'Un, non pour ces étages.
+
+    **Voir aussi** : [[g-un|Un]] · [[g-multiplicite-sensible|Multiplicité sensible]] · [[g-multiplicite-intelligible|Multiplicité intelligible]] · [[g-henosis|Hénose]] · [[g-beaute|Beauté]]
+  tables:
+  - table: etage-ce-qu-il-unifie-ce-qui-reste-multiple-en-lui
+    exercises:
+    - {kind: bank, column: Ce qu'il unifie}
+    - {kind: cell, column: Étage}
   points:
   - id: g-unite-l1-q1
     sentence: "« C'est en vertu de l'unité que tous les êtres sont des êtres [...]. Et en effet, qu'est-ce qui pourrait ___, sans être un ? » (traité 9, chap. 1, l. 1-3)."
@@ -39,7 +45,7 @@ lessons:
     answer: au sens premier du terme
     alt: []
   - id: g-unite-l1-q3
-    sentence: "« Si elles perdaient l'unité, la ___ ne serait plus une maison ni le navire un navire » (traité 9, chap. 1, l. 5-7)."
+    sentence: "« S'ils perdaient l'unité, la ___ ne serait plus une maison ni le navire un navire » (traité 9, chap. 1, l. 5-7)."
     answer: maison
     alt: []
   - id: g-unite-l1-2
@@ -51,7 +57,7 @@ lessons:
     answer: unité
     alt: ["unite"]
   - id: g-unite-l1-q5
-    sentence: "Les corps des plantes et des animaux qui se fragmentent dans une multiplicité « perdent la ___ qui était la leur » et deviennent d'autres choses (traité 9, chap. 1, l. 10-13)."
+    sentence: "Un vivant qui se fragmente change d'être : plantes et animaux « perdent la ___ qui était la leur » et deviennent d'autres choses (traité 9, chap. 1, l. 10-13)."
     answer: réalité
     alt: ["realite"]
   - id: g-unite-l1-q6
@@ -78,28 +84,6 @@ lessons:
     sentence: "Ne jamais confondre ce qui a été rendu un, en grec translittéré ___, et l'Un en soi, sous peine d'abolir la transcendance du principe."
     answer: henomenon
     alt: []
-- id: g-unite-l2
-  title: Les étages d'unification
-  notes: |-
-    **Si tout ce qui est multiple tient son unité d'un principe, on peut remonter de principe en principe : chaque étage unifie celui du dessous, mais reste multiple d'une autre manière.** C'est ainsi que les trois hypostases sortent d'une même question.
-
-    __**Le corps est unifié par l'âme.**__ Le corps d'un vivant est une multiplicité de parties : ce qui le tient comme corps, c'est l'{violet}**âme**{/violet}. Sans elle, il ne serait qu'une masse (*ogkos*) sans cohésion, un cadavre.
-
-    __**L'âme est unifiée par l'Intellect.**__ Mais l'âme est elle-même multiple : perceptions, souvenirs, désirs, raisonnements, qui se contredisent parfois. Ce qui les unifie, c'est l'{violet}**Intellect**{/violet}, la capacité de saisir d'un seul regard ce que l'âme n'atteint qu'en passant d'une idée à l'autre. L'âme tient son unité de l'Intellect en se **tournant** vers lui (*epistrophê*).
-
-    __**L'Intellect est unifié par l'Un.**__ Or l'Intellect lui-même est encore multiple, puisqu'il pense plusieurs choses (le cercle, le nombre, le juste) : c'est un « un-multiple » (*hen polla*). {red}Il faut donc un principe qui rende un ce qui pense.{/red} Et ce principe ne peut pas être composé, sinon il lui faudrait un unificateur de plus et la régression ne s'arrêterait jamais : {green}c'est l'**Un**{/green}. On trouve ce mouvement en VI, 9 ([[traite9|traité 9]]), 2, en V, 3 ([[traite49|traité 49]]), 11-12 et en V, 4 ([[traite7|traité 7]]), 1 : il faut quelque chose de simple avant toutes choses.
-
-    | Étage | Ce qu'il unifie | Ce qui reste multiple en lui |
-    | Âme | le corps | perceptions, souvenirs, désirs, raisonnements |
-    | Intellect | l'âme | les Formes (le cercle, le nombre, le juste) |
-    | Un | l'Intellect | rien : il est absolument simple |
-
-    __**L'âme n'assemble pas le corps comme un maçon.**__ Elle est incorporelle et indivisible, présente tout entière dans chaque partie du corps sans s'y morceler (traités 2, 6 et 22-23), et elle l'informe de l'intérieur par les {violet}raisons{/violet} (*logoi*). Plotin va jusqu'à inverser l'image : {coral}ce n'est pas l'âme qui est dans le corps, c'est le corps qui subsiste dans l'âme.{/coral}
-
-    ! Les trois hypostases ([[traite10|traité 10]], V, 1) ne sont pas trois choses empilées : ce sont trois manières d'être un, de la moins simple à la plus simple. Plotin décrit le mouvement descendant par la procession (*proodos*) et la remontée par la conversion (*epistrophê*) ; « étages d'unification » résume cette structure, ce n'est pas son vocabulaire.
-
-    ! Le mot *henôsis* (« union ») désigne chez Plotin l'union finale de l'âme avec l'Un : on dira « unité » ou « unification » pour les étages.
-  points:
   - id: g-unite-l2-1
     sentence: "Dans un vivant, ce qui tient ensemble les parties du corps et les fait former un corps est l'___."
     answer: âme
@@ -128,41 +112,10 @@ lessons:
     sentence: "Chez Plotin, les trois hypostases (V, 1 [10]) ne sont rien d'autre que les trois étages d'___ : l'âme unifie le corps, l'Intellect unifie l'âme, l'Un unifie l'Intellect."
     answer: unification
     alt: ["unité"]
-  - id: g-unite-l2-8
-    sentence: "Plotin décrit le mouvement qui descend de l'Un vers l'Âme par la ___ (*proodos*)."
-    answer: procession
-    alt: []
-  - id: g-unite-l2-9
-    sentence: "L'âme n'assemble pas le corps comme un maçon ajuste des pierres : elle l'___ de l'intérieur par les raisons (*logoi*), étant présente tout entière dans chacune de ses parties."
-    answer: informe
-    alt: ["anime"]
-  - id: g-unite-l2-10
-    sentence: "Plotin inverse l'image courante : ce n'est pas l'âme qui est dans le corps, c'est le ___ qui subsiste dans l'âme."
-    answer: corps
-    alt: []
-  - id: g-unite-l2-11
-    sentence: "L'âme tient son unité de l'Intellect en se tournant vers lui, mouvement que Plotin nomme la ___ (*epistrophê*)."
-    answer: conversion
-    alt: ["remontée"]
   - id: g-unite-l2-q2
     sentence: "Le mot grec *henôsis*, que Plotin emploie pour l'union finale de l'âme avec l'Un, et qu'il ne faut pas employer pour les étages d'unité, se traduit par « ___ »."
     answer: union
     alt: ["unification"]
-- id: g-unite-l3
-  title: Ce que cela fait pour nous
-  notes: |-
-    **Si être, c'est être un, la doctrine de l'unité n'est pas seulement une ontologie : elle dit ce que nous gagnons à nous rassembler, et ce que nous perdons à nous disperser.** Plotin en tire des conséquences pour la pensée, la beauté et le désir.
-
-    __**La dispersion est une perte d'être.**__ Se disperser, c'est être **moins**, et on peut le reconnaître de l'intérieur. Plotin décrit l'âme qui s'éveille « à elle-même » en sortant de son corps et en rentrant à l'intérieur d'elle ([[traite6|traité 6]], chap. 1) : c'est alors qu'elle retrouve sa pleine présence. Pour rejoindre son principe, l'âme doit {green}**devenir une**{/green} : se défaire de la dispersion des représentations extérieures et se tenir seule avec elle-même ([[traite9|traité 9]], chap. 3-4).
-
-    __**Comprendre rassemble.**__ Plotin compare l'âme qui comprend à une {yellow}science et à ses théorèmes{/yellow} : dans l'esprit du savant, tous existent ensemble, et saisir l'un d'eux, c'est saisir la science entière ([[traite30|traité 30]], chap. 6). Les {yellow}géomètres qui tracent des figures sur le sable{/yellow} le font parce que la contemplation intérieure peine à se maintenir : le dessin n'est qu'un appui pour saisir d'un seul coup ce que l'esprit contemple (chap. 4). **Le plaisir de comprendre n'est donc pas un supplément psychologique : c'est le signe d'un retour vers un niveau plus unifié de soi**, et l'âme y est saisie d'une « stupeur accompagnée de plaisir » ([[traite1|traité 1]], chap. 4, l. 16-17).
-
-    __**La beauté est une forme qui domine la matière.**__ Pourquoi un visage ou un accord nous saisit-il ? Plotin récuse d'abord la thèse stoïcienne selon laquelle {red}la beauté serait la symétrie des parties{/red} ([[traite1|traité 1]], chap. 1) : elle laisserait inexplicable la beauté des choses simples (l'or, l'éclair dans la nuit, la lumière du soleil, un son simple), qui n'ont pas de parties à proportionner, et celle des réalités sans corps (les lois, les vertus). {green}La beauté sensible naît de la domination d'une **forme** sur la matière{/green} (chap. 2-3), comme la maison construite est belle parce qu'elle fait passer dans le sensible l'idée de l'architecte. Notre âme reconnaît dans cette forme une trace de sa propre nature intelligible : d'où le sentiment de familiarité devant le beau. **Le laid**, à l'inverse, est ce que la forme et la raison n'ont pas réussi à maîtriser (chap. 2 et 5) : une privation, non une réalité positive.
-
-    __**Le désir s'arrête trop tôt.**__ Tous les êtres désirent le Bien, même si la plupart l'ignorent ([[traite54|traité 54]], chap. 1). Ce que l'on poursuit, on le poursuit parce qu'on y voit une unité et une plénitude, bref {coral}un **reflet du Bien**{/coral}. Or aucun objet particulier n'est pleinement un : aucun ne comble, et le manque se déplace. {coral}Le désir n'est pas mal dirigé en son principe : il s'arrête trop tôt sur un reflet.{/coral}
-
-    ! Plotin ne parle pas en ces termes de « se sentir rassemblé » : ce rapprochement relie sa doctrine de l'unité à ce qu'il dit de la dispersion, de la science et de la beauté, mais l'expression n'est pas de lui.
-  points:
   - id: g-unite-l3-1
     sentence: "Si être, c'est être unifié, alors la dispersion est une perte d'___, que l'on peut reconnaître de l'intérieur."
     answer: être
@@ -175,43 +128,11 @@ lessons:
     sentence: "Plotin compare l'âme qui comprend à une science et à ses théorèmes, tous présents ensemble ; comprendre, c'est se laisser unifier par l'___ : le plaisir de comprendre en est le signe."
     answer: Intellect
     alt: ["intellect"]
-  - id: g-unite-l3-12
-    sentence: "Les géomètres qui tracent des figures sur le sable le font parce que la contemplation intérieure peine à se maintenir : le dessin n'est qu'un ___ pour saisir d'un seul coup ce que l'esprit contemple (traité 30, chap. 4)."
-    answer: appui
-    alt: ["support"]
-  - id: g-unite-l3-3
-    sentence: "Pour Plotin, le plaisir de comprendre n'est pas un bonus psychologique : c'est le signe d'un retour vers un niveau plus ___ de soi."
-    answer: unifié
-    alt: ["unifie"]
-  - id: g-unite-l3-4
-    sentence: "Plotin récuse la thèse stoïcienne selon laquelle la beauté serait la ___ des parties, car elle ne rendrait pas compte de la beauté des choses simples (traité 1, chap. 1)."
-    answer: symétrie
-    alt: ["symetrie", "symmetria"]
-  - id: g-unite-l3-q1
-    sentence: "Si la beauté était la symétrie des parties, les choses ___ (l'or, l'éclair dans la nuit, la lumière du soleil, un son simple) ne pourraient être belles, puisqu'elles n'ont pas de parties à proportionner (traité 1, chap. 1)."
-    answer: simples
+  - id: g-unite-l1-r1
+    sentence: "« Il faut entendre \"Un\" en des sens plus nombreux que ceux qui font dire que l'unité et le ___ sont \"uns\" » (traité 9, chap. 6)."
+    answer: point
     alt: []
-  - id: g-unite-l3-5
-    sentence: "La beauté sensible naît de la domination d'une ___ sur la matière (traité 1, chap. 2-3), comme la maison est belle parce qu'elle fait passer dans le sensible l'idée de l'architecte."
-    answer: forme
-    alt: ["Forme", "eidos"]
-  - id: g-unite-l3-6
-    sentence: "Un visage ou un accord nous saisit parce que notre âme y reconnaît une trace de sa propre ___ intelligible."
-    answer: nature
-    alt: []
-  - id: g-unite-l3-7
-    sentence: "Le laid est ce que la forme et la raison n'ont pas réussi à ___ (I, 6, 2 et 5) : un défaut de configuration, non une réalité positive."
-    answer: maîtriser
-    alt: ["maitriser", "dominer"]
-  - id: g-unite-l3-8
-    sentence: "Tout ce que l'on poursuit, on le poursuit parce qu'on y voit une unité et une plénitude, c'est-à-dire un ___ du Bien."
-    answer: reflet
-    alt: []
-  - id: g-unite-l3-9
-    sentence: "Aucun objet particulier n'est pleinement un, donc aucun ne comble le désir : on obtient ce qu'on voulait, et le ___ se déplace."
-    answer: manque
-    alt: []
-  - id: g-unite-l3-10
-    sentence: "Le désir n'est pas mal dirigé en son principe : il s'arrête trop tôt sur un ___ du Bien."
-    answer: reflet
+  - id: g-unite-l1-r2
+    sentence: "L'Un n'est pas la plus petite des unités : il « est la chose la plus grande de toutes, non pas quant à sa grandeur, mais quant à sa ___ » (traité 9, chap. 6)."
+    answer: puissance
     alt: []
