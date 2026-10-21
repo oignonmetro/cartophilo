@@ -43,7 +43,7 @@ notebook NotebookLM, puis consigner la réponse ici.
   définit par sa fonction, donne ses lieux principaux et renvoie aux entrées
   qui la prolongent.
 - **Sous-entrée** : un sens ou un emploi de la notion qui demande son propre
-  rappel (Vie véritable, Multiplicité intelligible). Elle se comprend seule,
+  rappel (Vie parfaite, Multiplicité intelligible). Elle se comprend seule,
   mais son rappel renvoie à l'entrée générale dès la première phrase.
 - **Distinction** : une entrée qui présente une division comme telle (Vie
   métaphysique / psychique / somatique ; intelligible, intellection,
@@ -140,13 +140,45 @@ et la remplacer par un renvoi.
 - Mise en relief, couleurs, grec en italique, tableaux, interdits : comme
   `cours-traite` § 4.
 
+**Une entrée générale (notion) donne une vue d'ensemble, pas le détail de
+ses sous-entrées** (leçon de l'entrée Vie, 2026-10-21) :
+
+- **L'échelle d'abord, du haut vers le bas**, quand la notion se dit à
+  plusieurs rangs de réalité (l'Un, l'Intellect, l'Âme, les corps) : une
+  étape par rang, puis un tableau « Rang | … » qui la résume.
+- **Ce qu'une sous-entrée ou une distinction développe ne se répète pas
+  dans l'entrée générale** : une phrase et un renvoi suffisent. Sinon les
+  mêmes citations y reviennent, et les mêmes cartes, que la révision fait
+  alors réviser deux fois.
+- **Ce qui relève d'une autre notion en sort** : au premier jet, « Vie
+  véritable » portait deux étapes sur le bonheur, devenues l'entrée Bonheur.
+- **Citer la proposition décisive, pas le paragraphe** : le rappel qui
+  aligne deux ou trois longues citations par étape se lit comme un pavé
+  turquoise. La citation complète va aux cartes en cascade.
+- **Le titre et son terme grec disent la même chose** : « Vie parfaite
+  (`teleia zôê`) », pas « Vie véritable (`teleia zôê`) ». Un terme grec que
+  la GF ne donne pas ne s'écrit pas.
+
+**Deux micro-sections closent le rappel** :
+
+- **Passages clefs**, pour une notion, après les étapes : un tableau
+  « Passage | Ce qu'il établit », une ligne par lieu décisif
+  (« traité 30, chap. 10 | la vie a pour cause ce qui la dépasse »), cases
+  courtes et distinctes. Le régler dans `tables:` (banque sur « Ce qu'il
+  établit », case seule sur « Passage ») : sans réglage, une colonne de
+  repères rangée par numéro serait prise pour un plan à remettre dans
+  l'ordre.
+- **Voir aussi**, en toute dernière ligne de chaque entrée :
+  `**Voir aussi** : [[g-degres-de-vie|Degrés de vie]] · [[g-ame|Âme]] · …`,
+  les entrées voisines par ordre d'importance, séparées par « · ».
+
 ## 4. Les renvois
 
 Un renvoi fait d'un terme du rappel un lien vers une autre entrée du
 glossaire :
 
 ```
-la [[g-vie-veritable|vie véritable]] est celle de l'Intellect
+la [[g-vie-parfaite|vie parfaite]] est celle de l'Intellect
 ```
 
 `[[identifiant|texte affiché]]`, dans `notes` seulement (jamais dans
@@ -155,7 +187,7 @@ demande ; il peut porter une couleur ou un gras à l'extérieur des crochets
 (`{violet}[[g-ame|l'Âme]]{/violet}`).
 
 - **Renvoyer au premier emploi** d'une notion dans le rappel, pas à chaque
-  occurrence.
+  occurrence ; la ligne « Voir aussi » les reprend toutes, c'est voulu.
 - **Une entrée générale renvoie à ses sous-entrées et à ses distinctions** ;
   une sous-entrée renvoie à son entrée générale dès l'attaque ; une
   distinction renvoie à chacun de ses pôles qui a son entrée.
@@ -205,23 +237,23 @@ quelques mots ce dont elle a besoin d'une notion voisine.
 # Entrée du glossaire de <auteur> (skill glossaire) : <sorte d'entrée>,
 # citations vérifiées sur la GF (<lieux>).
 
-id: g-vie-veritable
-title: Vie véritable (`alêthinê zôê`)
+id: g-vie-parfaite
+title: Vie parfaite (`teleia zôê`)
 subtitle: <une ligne, ce que la notion fait>
 icon: book
 color: coral
 lessons:
-- id: g-vie-veritable-l1
+- id: g-vie-parfaite-l1
   title: <le titre de l'entrée, ou ce que la leçon établit>
   notes: |-
     …
   points:
-  - id: g-vie-veritable-l1-q1
+  - id: g-vie-parfaite-l1-q1
     …
 ```
 
 - Identifiant `g-` suivi du nom français sans accents, en tirets
-  (`g-vie-veritable`, `g-multiplicite-sensible`). Cartes `…-l1-qN`.
+  (`g-vie-parfaite`, `g-multiplicite-sensible`). Cartes `…-l1-qN`.
 - Titre « Notion (`terme grec`) » ; une distinction s'intitule par ses pôles
   ou par son nom usuel (« Trois vies »).
 - `group:` réunit sous un même repli des entrées consécutives d'une même

@@ -1,0 +1,76 @@
+# Entrée du glossaire de Plotin (skill glossaire) : notion, voisine de
+# g-vie-parfaite, citations vérifiées sur la GF (I, 4, 3-4 ; I, 5, 1 et 7).
+# Les cartes en g-vie-veritable-l1-* viennent de l'ancienne entrée « Vie
+# véritable » et gardent leur identifiant, donc leur progression.
+
+id: g-bonheur
+title: Bonheur (`eudaimonia`)
+subtitle: La vie parfaite elle-même, que l'homme peut être, et que la durée n'accroît pas
+icon: book
+color: coral
+lessons:
+- id: g-bonheur-l1
+  title: Bonheur
+  notes: |-
+    Chez Plotin, le {violet}**bonheur**{/violet} n'est pas un {pink}état agréable qui s'ajouterait à la vie{/pink} : c'est la {green}vie parfaite elle-même{/green}, celle de l'{violet}[[g-intellect|Intellect]]{/violet}, que l'homme peut posséder, et même être.
+
+    __**Si le bonheur est dans la vie, il est dans la vie parfaite.**__ {teal}« Posons que le bonheur se trouve dans la vie »{/teal}, dit Plotin. Mais pas dans la vie commune à tous les vivants : {teal}« si nous supposions que "vivre" s'applique de la même façon à tous les êtres vivants, alors nous admettrions que tous les vivants connaissent le bonheur »{/teal} (traité 46, chap. 3). Or la [[g-vie|vie]] se dit en plusieurs sens, ordonnés ; la vie bonne aussi, donc : {teal}« si la vie bonne appartient à celui qui possède la vie dans sa plénitude – j'entends par là l'être auquel rien de la vie ne manque –, alors le bonheur ne saurait appartenir qu'à celui qui vit dans la plénitude »{/teal}. Cette plénitude, c'est la [[g-vie-parfaite|vie parfaite]].
+
+    __**Le bien ne lui vient pas du dehors.**__ {teal}« Ainsi en effet le bien ne lui vient pas de l'extérieur »{/teal} : {teal}« qu'est-ce qui en effet pourrait s'ajouter à la vie parfaite pour qu'elle soit excellente ? »{/teal} (traité 46, chap. 3). {coral}**Le bonheur n'est pas un bien qu'on acquiert en plus de la vie** : il est cette vie quand rien ne lui manque.{/coral}
+
+    __**L'homme heureux est cette vie.**__ {teal}« Si donc l'homme est capable de posséder la vie parfaite, alors celui qui la possède est heureux »{/teal} (traité 46, chap. 4). Il la possède quand il a, outre la sensation, le raisonnement et l'intellect véritable ; mais l'homme heureux ne l'a pas comme une partie de lui : {teal}« étant donné qu'il est déjà en acte cette espèce de vie et qu'il en est venu à coïncider avec elle, est cette vie »{/teal}. {yellow}Le reste, il le porte « comme des vêtements ».{/yellow}
+
+    __**La durée ne l'accroît pas.**__ Le bonheur ne se mesure pas au temps, car {teal}« le bonheur se doit d'exister tout entier, alors que le temps qui va au-delà du présent ne peut plus exister »{/teal} (traité 36, chap. 7). Puisqu'il est la vie de ce qui est, {teal}« il ne faut donc pas mesurer cette vie à l'aune du temps, mais à celle de l'éternité »{/teal}.
+
+    ! Le bonheur n'est pas un sentiment : il réside {teal}« non dans le fait de dire que l'on est heureux, mais dans le fait d'être en une certaine disposition »{/teal} (traité 36, chap. 1).
+
+    **Voir aussi** : [[g-vie-parfaite|Vie parfaite]] · [[g-vie|Vie]] · [[g-intellect|Intellect]]
+  points:
+  - id: g-bonheur-l1-q1
+    sentence: "Le bonheur, que Plotin identifie à la vie parfaite elle-même, se dit en grec translittéré ___."
+    answer: eudaimonia
+    alt: ["eudaimonía", "eudaimonie"]
+  - id: g-bonheur-l1-q2
+    sentence: "Contre ceux qui placent le bonheur dans la vie commune à tous : « si nous supposions que \"vivre\" s'applique de la même façon à tous les êtres vivants, alors nous admettrions que tous les vivants connaissent le ___ » (traité 46, chap. 3)."
+    answer: bonheur
+    alt: []
+  - id: g-vie-veritable-l1-q5
+    sentence: "« Si la vie bonne appartient à celui qui possède la vie dans sa ___ – j'entends par là l'être auquel rien de la vie ne manque –, alors le bonheur ne saurait appartenir qu'à celui qui vit dans la plénitude » (traité 46, chap. 3)."
+    answer: plénitude
+    alt: ["plenitude"]
+  - id: g-vie-veritable-l1-q6
+    sentence: "« Si la vie bonne appartient à celui qui possède la vie dans sa plénitude – j'entends par là l'être auquel rien de la vie ne ___ –, alors le bonheur ne saurait appartenir qu'à celui qui vit dans la plénitude » (traité 46, chap. 3)."
+    answer: manque
+    alt: []
+  - id: g-bonheur-l1-q3
+    sentence: "Le bonheur ne vient pas s'ajouter à la vie parfaite : « qu'est-ce qui en effet pourrait s'ajouter à la vie parfaite pour qu'elle soit ___ ? » (traité 46, chap. 3)."
+    answer: excellente
+    alt: []
+  - id: g-vie-veritable-l1-q8
+    sentence: "Puisque le bonheur est la vie parfaite elle-même, rien ne peut s'y ajouter du ___ pour la rendre heureuse (traité 46, chap. 3)."
+    answer: dehors
+    alt: ["extérieur", "exterieur"]
+  - id: g-bonheur-l1-q4
+    sentence: "Le bonheur n'est pas réservé aux dieux : « si donc l'homme est capable de posséder la vie parfaite, alors celui qui la possède est ___ » (traité 46, chap. 4)."
+    answer: heureux
+    alt: []
+  - id: g-vie-veritable-l1-q9
+    sentence: "L'homme heureux n'a pas la vie parfaite comme une partie de lui : « étant donné qu'il est déjà en acte cette espèce de vie et qu'il en est venu à ___ avec elle, est cette vie » (traité 46, chap. 4)."
+    answer: coïncider
+    alt: ["coincider"]
+  - id: g-vie-veritable-l1-q10
+    sentence: "L'homme heureux, qui est la vie parfaite, porte tout le reste, dit Plotin, comme des ___ (traité 46, chap. 4)."
+    answer: vêtements
+    alt: ["vetements"]
+  - id: g-bonheur-l1-q5
+    sentence: "Le bonheur ne s'accroît pas avec la durée, car « le bonheur se doit d'exister tout ___, alors que le temps qui va au-delà du présent ne peut plus exister » (traité 36, chap. 7)."
+    answer: entier
+    alt: []
+  - id: g-bonheur-l1-q6
+    sentence: "Puisque le bonheur est la vie de ce qui est, « il ne faut donc pas mesurer cette vie à l'aune du temps, mais à celle de l'___ » (traité 36, chap. 7)."
+    answer: éternité
+    alt: ["eternite"]
+  - id: g-bonheur-l1-q7
+    sentence: "Le bonheur n'est pas un sentiment : il réside « non dans le fait de dire que l'on est heureux, mais dans le fait d'être en une certaine ___ » (traité 36, chap. 1)."
+    answer: disposition
+    alt: []
