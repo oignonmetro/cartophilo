@@ -103,6 +103,11 @@ et la remplacer par un renvoi.
 - **L'attaque dit ce que la notion fait**, pas sa définition de dictionnaire :
   « Chez Plotin, la conversion est le mouvement par lequel ce qui procède se
   retourne vers sa source, et c'est ce retournement qui le constitue. »
+- **Sa première phrase est la définition de l'entrée**, et elle doit tenir
+  seule : c'est elle qu'affiche la bulle d'un renvoi vers l'entrée, au
+  survol de la souris (`leadSentence`). Donc une phrase complète, sans renvoi
+  à la suite (« ce qui suit », « cette notion »), de 200 caractères environ
+  au plus, qui commence de préférence par « Chez Plotin, la notion… ».
 - **L'attaque n'est pas en gras d'un bout à l'autre** : on y colore les seuls
   mots qui portent l'idée. Le nom de la notion en violet et gras
   (`{violet}**vie**{/violet}`), la conception naïve écartée en rose, la
@@ -113,11 +118,26 @@ et la remplacer par un renvoi.
   exacte** : « Il faut un principe incorporel qui ait la vie par
   lui-même », plutôt que « un principe » tout court.
 - **Le problème qu'elle résout**, puis **ses lieux décisifs**, chacun cité
-  (GF, mot pour mot, entre `« »`) et expliqué, avec un repère de la forme
-  **« (traité 30, chap. 10) »**, partout et à chaque fois : le numéro
-  chronologique et le chapitre, sans la numérotation des Ennéades, même à
-  la deuxième occurrence d'un traité ; « (traité 45, chap. 3, l. 36-38) »
-  quand les lignes sont sûres.
+  (GF, mot pour mot, entre `« »`) et expliqué.
+- **Les traités sont toujours des renvois** : `[[traite30|traité 30]]` (N,
+  le rang chronologique). Le moteur leur donne d'office la teinte prune,
+  réservée aux traités ; au survol, la bulle donne le titre du traité ; au
+  clic, la feuille montre son résumé de la piste Repérage, d'où l'on ouvre
+  son cours. Ne jamais les colorer à la main. Repère : « ([[traite30|traité
+  30]], chap. 10) », sans la numérotation des Ennéades ; « (…, chap. 3,
+  l. 36-38) » quand les lignes sont sûres.
+- **Pas de redite du traité** : dans un paragraphe où le traité vient
+  d'être nommé, le repère suivant donne le chapitre seul. « Le
+  [[traite53|traité 53]] s'ouvre sur elle : « À qui… ? » (chap. 1) », et non
+  « (traité 53, chap. 1) ». Les tableaux (passages clefs) gardent, eux,
+  « traité 45, chap. 8 » en clair, sans renvoi : ce sont des cases à
+  replacer.
+- **Les citations ne prennent pas de couleur** (ni turquoise ni autre) : un
+  rappel de glossaire se lit mieux sans. **On y souligne en revanche la
+  partie décisive** de chaque citation, celle qui porte l'idée : « une vie
+  qui __demeure dans l'identité__ parce que __le tout lui est toujours
+  présent__ ». Le souligné se met à l'intérieur des guillemets, sur une
+  proposition ou un groupe de mots, jamais sur toute la citation.
 - **Les termes techniques grecs en violet**, en plus de l'italique :
   `{violet}*pollakhôs legomenon*{/violet}`.
 - **Ce qu'elle n'est pas** : le contresens principal, désamorcé dans le fil
@@ -127,10 +147,9 @@ et la remplacer par un renvoi.
   pièges sont réservés aux contresens que le fil ne désamorce pas lui-même.
 - **Les renvois** (§ 4) là où le rappel touche une notion qui a, ou aura,
   son entrée.
-- **Repères** : la GF ne marque ses lignes que toutes les cinq. Donner le
-  chapitre seul (« (traité 46, chap. 3) »), sauf si une note ou une notice
-  fixe les lignes (« (traité 45, chap. 3, l. 36-38) »). Jamais une ligne
-  déduite.
+- **Lignes** : la GF ne les marque que toutes les cinq. Donner le
+  chapitre seul, sauf si une note ou une notice fixe les lignes. Jamais une
+  ligne déduite.
 - **Citer des phrases qui se tiennent.** Une citation tronquée qui ne se lit
   plus seule (« … et qu'elle a une signification… ») se coupe en deux
   citations entières plutôt que de garder un « […] ».
@@ -138,7 +157,8 @@ et la remplacer par un renvoi.
   psychique » écrit comme une étiquette) : `gf.py verifie` le prend pour une
   citation introuvable. Les guillemets sont réservés au texte de la GF.
 - Mise en relief, couleurs, grec en italique, tableaux, interdits : comme
-  `cours-traite` § 4.
+  `cours-traite` § 4, sauf pour les citations (pas de turquoise, voir plus
+  haut) et les traités (renvois prunes).
 
 **Une entrée générale (notion) donne une vue d'ensemble, pas le détail de
 ses sous-entrées** (leçon de l'entrée Vie, 2026-10-21) :
@@ -157,8 +177,8 @@ ses sous-entrées** (leçon de l'entrée Vie, 2026-10-21) :
   une future Éternité, qui méritent chacune un traitement spécifique
   (consigne de l'utilisateur, 2026-10-21).
 - **Citer la proposition décisive, pas le paragraphe** : le rappel qui
-  aligne deux ou trois longues citations par étape se lit comme un pavé
-  turquoise. La citation complète va aux cartes en cascade.
+  aligne deux ou trois longues citations par étape se lit comme un pavé.
+  La citation complète va aux cartes en cascade.
 - **Le titre et son terme grec disent la même chose** : « Vie parfaite
   (`teleia zôê`) », pas « Vie véritable (`teleia zôê`) ». Un terme grec que
   la GF ne donne pas ne s'écrit pas.
@@ -208,11 +228,13 @@ demande ; il peut porter une couleur ou un gras à l'extérieur des crochets
   ou `{violet}l'[[g-ame|âme]]{/violet}`, jamais l'article à la fois dehors et
   dedans (« l'l'âme »).
 
-Dans l'application, le renvoi est souligné en pointillé et ouvre l'entrée
-visée dans une feuille, par-dessus l'écran en cours, sans quitter la leçon
-(`NoteRefSheet`) ; l'éditeur visuel le garde tel quel. `content:check`
-refuse un renvoi dont la cible n'est pas une unité du cours, et signale un
-renvoi glissé dans une carte.
+Dans l'application, le renvoi est souligné en pointillé et ouvre sa cible
+dans une feuille, par-dessus l'écran en cours, sans quitter la leçon
+(`NoteRefSheet`) : l'entrée visée, ou, pour `[[traiteN|…]]`, le résumé du
+traité. Au survol de la souris, une bulle donne la première phrase de
+l'entrée (sa définition) ou le titre du traité. L'éditeur visuel garde le
+renvoi tel quel. `content:check` refuse un renvoi dont la cible n'est pas
+une unité du cours, et signale un renvoi glissé dans une carte.
 
 ## 5. Écrire les cartes
 
