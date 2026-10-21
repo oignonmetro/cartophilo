@@ -1,5 +1,92 @@
+# Entrée du glossaire de Plotin (skill glossaire), écrite le 2026-10-21 (elle
+# était vide). Citations vérifiées sur la GF (II, 5, 2, 3 et 5 ; V, 4, 2 ;
+# VI, 8, 20).
+
 id: g-energeia
-title: Acte, activité (`energeia`)
+title: Acte (`energeia`)
+subtitle: Non l'achèvement d'une puissance qui se réalise, mais l'activité d'une réalité parfaite, tout entière en acte dans l'intelligible, et double en chaque chose
 icon: book
 color: teal
-lessons: []
+lessons:
+- id: g-energeia-l1
+  title: Acte
+  notes: |-
+    Chez Plotin, l'{violet}**acte**{/violet} (*energeia*) n'est pas d'abord {pink}l'achèvement d'une puissance qui se réalise{/pink} : c'est l'{green}activité d'une réalité déjà parfaite{/green}, tout entière en acte dans l'intelligible, et double en chaque chose, acte qu'elle est et acte qui en sort.
+
+    __**Deux sens de l'acte.**__ Pour la statue, l'acte est la figure qui vient sur l'airain : « cet acte n'est pas un acte pur et simple, mais il est __l'acte de cette chose__ ». Au sens propre, l'acte répond à une puissance qui agit par elle-même : « ce qui est "en puissance" obtient l'être en acte d'une autre chose, alors que pour la puissance, l'"acte", c'est __ce qu'elle peut accomplir par elle-même__ », comme le courage et le fait d'être courageux ([[traite25|traité 25]], chap. 2). Voir [[g-dunamis|puissance]].
+
+    __**L'intelligible est acte, sans passage.**__ La difficulté est de concevoir un acte qui ne vienne d'aucune puissance. Plotin y insiste : l'Intellect « ne passe pas de la "puissance" qui le rend capable de penser à l'"acte" de penser », sinon il faudrait un principe antérieur ; « __toutes les réalités premières sont donc acte__, car elles possèdent ce qu'elles doivent posséder » (chap. 3). Et comme cette nature est « sans sommeil », les intelligibles « sont "en acte" et sont des actes, et __toutes sont des vies__ ». **Être en acte, là-bas, c'est vivre** (voir [[g-degres-de-vie|degrés de vie]]).
+
+    __**Deux actes en chaque chose.**__ C'est ce qui explique la [[g-procession|procession]] : « en chaque chose, il y a un acte qui appartient à la réalité et un acte qui provient de la réalité » ([[traite7|traité 7]], chap. 2). Le feu a la chaleur qui fait qu'il est feu, et une autre chaleur qui en rayonne, « tout en restant du feu ». Le second acte suit nécessairement le premier sans le diminuer : ainsi l'Intellect naît de l'Un sans que l'Un change.
+
+    __**L'Un, acte premier.**__ Faut-il refuser l'acte à l'Un, comme on lui refuse la pensée ? Non : « il ne faut pas craindre en effet de poser que __l'acte premier est sans réalité__ », car « si l'on posait son existence sans acte, le principe serait défectueux » ([[traite39|traité 39]], chap. 20). L'Un n'a pas un acte, il est son acte.
+
+    __**La matière, jamais en acte.**__ À l'opposé, la [[g-hule|matière]] ne passe jamais à l'acte, car elle cesserait d'être matière. Elle n'est qu'« __une image en acte__. Elle est donc un mensonge "en acte" » ([[traite25|traité 25]], chap. 5) : la seule chose qu'elle soit en acte, c'est de n'être rien.
+
+    | Réalité | Comment elle est en acte |
+    | l'Un | acte premier, sans réalité |
+    | l'Intellect | acte et vie, sans passage de la puissance |
+    | la statue | acte de cette chose, reçu sur l'airain |
+    | la matière | image et mensonge en acte |
+
+    ! L'acte, chez Plotin, ne vient pas après la puissance : dans l'intelligible, il n'y a rien à réaliser, et ce qui est premier est l'acte, non la puissance qui y tendrait.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | traité 25, chap. 2 | l'acte de la statue et l'acte propre |
+    | traité 25, chap. 3 | les réalités premières sont acte et vies |
+    | traité 7, chap. 2 | deux actes en chaque chose |
+    | traité 39, chap. 20 | l'acte premier est sans réalité |
+
+    **Voir aussi** : [[g-dunamis|Puissance]] · [[g-procession|Procession]] · [[g-intellect|Intellect]] · [[g-hule|Matière]] · [[traite25|Traité 25]]
+  tables:
+  - table: realite-comment-elle-est-en-acte
+    exercises:
+    - {kind: bank, column: Comment elle est en acte}
+    - {kind: cell, column: Réalité}
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-energeia-l1-q1
+    sentence: "L'activité d'une réalité déjà parfaite, et non l'achèvement d'une puissance, se dit en grec translittéré ___."
+    answer: energeia
+    alt: ["enérgeia", "énergeia"]
+  - id: g-energeia-l1-q2
+    sentence: "La figure de la statue est un acte, mais « cet acte n'est pas un acte pur et simple, mais il est l'acte de cette ___ » (traité 25, chap. 2)."
+    answer: chose
+    alt: []
+  - id: g-energeia-l1-q3
+    sentence: "« Pour la puissance, l'\"acte\", c'est ce qu'elle peut accomplir par ___ » (traité 25, chap. 2)."
+    answer: elle-même
+    alt: ["elle même"]
+  - id: g-energeia-l1-q4
+    sentence: "Pour illustrer l'acte d'une disposition, Plotin donne l'exemple du ___ et du fait d'être courageux (traité 25, chap. 2)."
+    answer: courage
+    alt: []
+  - id: g-energeia-l1-q5
+    sentence: "L'Intellect « ne passe pas de la \"puissance\" qui le rend capable de penser à l'\"acte\" de ___ » (traité 25, chap. 3)."
+    answer: penser
+    alt: []
+  - id: g-energeia-l1-q6
+    sentence: "« Toutes les réalités premières sont donc ___, car elles possèdent ce qu'elles doivent posséder » (traité 25, chap. 3)."
+    answer: acte
+    alt: []
+  - id: g-energeia-l1-q7
+    sentence: "Les intelligibles « sont \"en acte\" et sont des actes, et toutes sont des ___ » (traité 25, chap. 3)."
+    answer: vies
+    alt: []
+  - id: g-energeia-l1-q8
+    sentence: "Le feu a deux chaleurs, « puisque le feu exerce l'acte qui est naturellement inhérent à sa réalité tout en restant du ___ » (traité 7, chap. 2)."
+    answer: feu
+    alt: []
+  - id: g-energeia-l1-q9
+    sentence: "« Il ne faut pas craindre en effet de poser que l'acte premier est sans ___ » (traité 39, chap. 20)."
+    answer: réalité
+    alt: ["realite"]
+  - id: g-energeia-l1-q10
+    sentence: "La matière ne passe jamais à l'acte : elle est « une image en acte. Elle est donc un ___ \"en acte\" » (traité 25, chap. 5)."
+    answer: mensonge
+    alt: []
