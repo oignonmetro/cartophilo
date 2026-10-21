@@ -30,7 +30,9 @@ Chaque cours a ses propres sous-onglets (pistes), adaptés à la nature de
 l'épreuve :
 
 - **Plotin** et **Marx** (explication de texte) : trois sous-onglets communs :
-  - **Glossaire** : notions centrales chez l'auteur.
+  - **Glossaire** : notions centrales chez l'auteur, une leçon par entrée,
+    reliées par des renvois ; pour en écrire une, utiliser la skill
+    `glossaire` (`.claude/skills/glossaire/`).
   - **Idées** : thèses centrales chez l'auteur, en se concentrant sur les
     arguments déployés pour les défendre.
   - **Repérage** : se repérer dans les différentes œuvres, savoir où se
