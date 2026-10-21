@@ -1,0 +1,59 @@
+# Entrée du glossaire de Plotin (skill glossaire), nouvelle entrée, 2026-10-21.
+# Tirée des anciennes fiches Amour et Amant (une leçon par entrée) ; les
+# cartes reprises gardent leur identifiant. Citations vérifiées sur la GF.
+
+id: g-desir
+title: Désir (`ephesis`)
+subtitle: Le désir du Bien, plus ancien que la pensée et présent en toute chose, que l'amour du beau suppose et ne remplace pas
+icon: book
+color: coral
+lessons:
+- id: g-desir-l1
+  title: Désir
+  notes: |-
+    Chez Plotin, le {violet}**désir**{/violet} (*ephesis*) du Bien n'est pas {pink}une passion de l'âme{/pink} : c'est l'{green}élan de toute chose vers le Bien{/green}, plus ancien que la pensée elle-même, et qui la fait naître.
+
+    __**L'Intellect pense parce qu'il désire.**__ Pourquoi y a-t-il de la pensée ? « Voici ce qu'est intelliger : __un mouvement qui se porte vers le Bien__ en le désirant. Car __le désir a engendré l'intellection__ et l'a fait exister avec lui » ([[traite24|traité 24]], chap. 5). La difficulté est d'admettre qu'un désir précède la pensée la plus haute : l'{violet}[[g-intellect|Intellect]]{/violet} n'est pas d'abord un regard neutre posé sur des objets, mais un élan vers le Bien qui, en se portant vers lui, devient pensée. **Le désir est donc plus originaire que la pensée.**
+
+    __**Le désir du Bien et l'amour du beau.**__ Le désir du Bien est connaturel, présent même à ceux qui dorment ; l'amour du beau suppose d'avoir vu le beau, et il provoque la stupeur, le choc, les **douleurs de l'enfantement** ([[traite32|traité 32]], chap. 12). La raison : {coral}le Beau, que Plotin rattache à l'Intellect, vient en second ; le Bien est plus ancien{/coral}. On peut ignorer la [[g-beaute|beauté]] ; on ne peut pas ne pas désirer le Bien.
+
+    | Le désir du Bien | L'amour du beau |
+    | connaturel, présent même à ceux qui dorment | suppose d'avoir vu le beau |
+    | doux, sans stupeur | stupeur, choc, plaisir mêlé de douleur |
+
+    ! Le désir n'est pas ici un manque à combler par un objet extérieur : désirer le Bien, c'est se tourner vers ce dont on vient, et c'est ce retour qui fait être ce qui désire.
+
+    **Voir aussi** : [[g-amour|Amour]] · [[g-beaute|Beauté]] · [[g-intellect|Intellect]] · [[g-un|Un]]
+  tables:
+  - table: le-desir-du-bien-l-amour-du-beau
+    exercises:
+    - {kind: bank, column: L'amour du beau}
+  points:
+  - id: g-amour-l4-1
+    sentence: "« Voici ce qu'est intelliger : un mouvement qui se porte vers le Bien en le désirant. Car le désir a engendré l'___ » (traité 24, chap. 5)."
+    answer: intellection
+    alt: []
+  - id: g-amour-l4-q1
+    sentence: "« Voici ce qu'est intelliger : un ___ qui se porte vers le Bien en le désirant. Car le désir a engendré l'intellection et l'a fait exister avec lui » (traité 24, chap. 5, l. 8-10)."
+    answer: mouvement
+    alt: []
+  - id: g-amour-l4-q2
+    sentence: "« Voici ce qu'est intelliger : un mouvement qui se porte vers le Bien en le ___. Car le désir a engendré l'intellection et l'a fait exister avec lui » (traité 24, chap. 5, l. 8-10)."
+    answer: désirant
+    alt: ["desirant"]
+  - id: g-amour-l4-2
+    sentence: "Le traité où Plotin affirme que le désir a engendré l'intellection, de sorte que le désir est plus originaire que la pensée, est le traité ___ (V, 6)."
+    answer: "24"
+    alt: ["vingt-quatre"]
+  - id: g-amour-l4-3
+    sentence: "Le désir du Bien, plus originaire que la pensée, se dit en grec translittéré ___."
+    answer: ephesis
+    alt: ["éphesis"]
+  - id: g-amour-l4-4
+    sentence: "Le désir du Bien est connaturel, présent même à ceux qui ___ ; l'amour du beau suppose d'avoir vu le beau (traité 32, chap. 12)."
+    answer: dorment
+    alt: []
+  - id: g-amour-l4-5
+    sentence: "À la différence du désir du Bien, doux et connaturel, l'amour du beau provoque la stupeur, le choc et les douleurs de l'___ (traité 32, chap. 12)."
+    answer: enfantement
+    alt: []
