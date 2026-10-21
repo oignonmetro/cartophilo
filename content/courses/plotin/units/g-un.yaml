@@ -1,44 +1,50 @@
-# Fiche du glossaire de Plotin (voir content/philosophie.md), refondue le
-# 2026-10-16 selon la skill cours-traite : une leçon par mouvement de
-# l'argument, rappels qui disent pourquoi, citations de la traduction GF
-# (dir. L. Brisson et J.-F. Pradeau) vérifiées sur le texte. Les cartes dont
-# le contenu a changé portent un identifiant en -q.
+# Entrée du glossaire de Plotin (skill glossaire), refondue le 2026-10-21 :
+# une leçon ; « Au-delà de la réalité » est devenue une sous-entrée, et
+# « Comment l'Un produit » est passée dans g-procession. Les cartes sur
+# l'axiome du traité 9 (g-un-l1-q1, q3) sont laissées à g-unite, qui les
+# double. Citations vérifiées sur la GF (V, 4, 1 ; VI, 9, 1 ; II, 9, 1 ;
+# VI, 7, 41 ; VI, 8, 14).
 
 id: g-un
 title: Un (`hen`)
-subtitle: Le principe absolument simple, au-delà de la réalité
-icon: infinity
-color: violet
+subtitle: Le premier principe, absolument simple, qui fait que chaque chose est une et dont tout vient, sans être aucune d'elles
+icon: book
+color: coral
 lessons:
 - id: g-un-l1
-  title: Pourquoi il faut un premier principe absolument simple
+  title: Un
   notes: |-
-    **L'Un est le sommet du système de Plotin, et tout le reste en dépend : avant de dire ce qu'il est, il faut comprendre pourquoi Plotin ne peut pas s'en passer.** Son existence n'est pas un article de foi : elle est la conclusion d'un argument qui part de l'expérience la plus ordinaire.
+    Chez Plotin, l'{violet}**Un**{/violet} est le {green}premier principe, absolument simple{/green} : ce qui fait que chaque chose est une, et d'où toutes viennent, {pink}sans qu'il soit lui-même aucune d'elles{/pink}.
 
-    __**Être, c'est être un.**__ Le [[traite9|traité 9]] s'ouvre sur un axiome : « C'est en vertu de l'unité que tous les êtres sont des êtres » (chap. 1, l. 1). Plotin le rend évident par des exemples : {yellow}il n'y a pas d'armée, si elle n'est pas une, pas de chœur ni de troupeau, pas de maison ni de navire{/yellow} ; dispersez les soldats ou démontez les planches, et la chose n'est plus. **Ce qui fait qu'une chose est cette chose, c'est l'unité qui en tient les parties.**
+    __**Il faut un principe absolument simple.**__ Être, c'est être un : une armée, une maison, un navire ne sont qu'en tant qu'ils sont unis (voir [[g-unite|unité]]). Or ce qui est multiple ne se donne pas son unité : les planches ne s'assemblent pas seules en navire. Tout composé dépend donc d'un principe qui l'unifie ; et si ce principe était composé, il en faudrait un autre, et ainsi sans fin. Il faut un terme qui ne soit plus composé du tout, car « ce qui n'est pas premier a besoin de ce qui est avant lui, et __ce qui n'est pas simple a besoin des éléments simples__ qui sont en lui pour exister à partir d'eux » ([[traite7|traité 7]], chap. 1). **L'existence de l'Un n'est pas un article de foi : c'est la conclusion d'un argument.**
 
-    __**Or ce qui est multiple ne se donne pas son unité.**__ Les planches ne s'assemblent pas seules en navire : leur unité leur vient d'autre chose qu'elles. Donc __tout ce qui est composé dépend d'un principe qui l'unifie__, et ce principe, s'il était lui-même composé, demanderait à son tour un unificateur. Pour que la série ne soit pas sans fin, il faut un terme qui ne soit plus composé du tout : {green}**un principe absolument simple**{/green}. Le [[traite7|traité 7]] en donne la raison en une phrase : « ce qui n'est pas premier a besoin de ce qui est avant lui, et ce qui n'est pas simple a besoin des éléments simples qui sont en lui pour exister à partir d'eux » (chap. 1, l. 10-15).
+    __**Ce premier ne peut pas être l'Intellect.**__ Toute pensée est au moins double, le pensant et le pensé : l'{violet}[[g-intellect|Intellect]]{/violet} est un « un-multiple », et dépend de ce qui le rend un. Le premier est donc avant la pensée, non au-dessous d'elle : il est [[g-au-dela-de-l-etre|au-delà de la réalité]], et donne ce qu'il n'a pas.
 
-    __**Ce premier ne peut pas être l'Intellect.**__ C'est le point où Plotin se sépare d'{sky}Aristote{/sky}, et des platoniciens de son temps, qui plaçaient au sommet une pensée qui se pense elle-même. {red}Toute pensée est au moins double{/red} : il y a ce qui pense et ce qui est pensé, même quand l'un et l'autre coïncident. L'Intellect est donc un {violet}**« un-multiple »**{/violet} ([[traite7|traité 7]], chap. 1, l. 21-22) ; il contient en outre la multitude des Formes. {coral}Puisqu'il est multiple, il dépend de ce qui le rend un : le premier est donc *avant* la pensée.{/coral}
+    __**L'Un et le Bien sont une seule nature.**__ Plotin l'appelle aussi le {violet}[[g-agathon|Bien]]{/violet}. Les deux noms ne lui attribuent rien : « chaque fois que nous parlons de "l'Un" et que nous parlons du "Bien", il faut penser à cette nature et il faut la déclarer "une". Ce faisant, __nous ne lui attribuons rien__, mais nous la rendons manifeste à nous-mêmes » ([[traite33|traité 33]], chap. 1). Il est l'Un parce qu'il fait être un ; il est le Bien parce que tout se tourne vers lui. Mais il ne l'est pas pour lui-même : « Ce n'est donc pas pour lui-même qu'il est le Bien, mais __pour les autres choses__ ; car celles-ci ont besoin du Bien, alors que lui, il n'a pas besoin de lui-même » ([[traite38|traité 38]], chap. 41).
 
-    **Ce premier, Plotin l'appelle l'Un** (*hen*), et aussi **le Bien** (*agathon*) : l'Un, parce qu'il est ce qui fait être un ; le Bien, parce que tout ce qui est se tourne vers lui comme vers ce dont il dépend. Avec l'{violet}Intellect{/violet} et l'{violet}Âme{/violet}, il forme les trois {violet}**hypostases**{/violet}, les trois niveaux de réalité qui ont rang de principes ([[traite10|traité 10]], V, 1).
+    __**Il produit sans changer, et il est cause de lui-même.**__ Parfait, il ne manque de rien ; c'est pourquoi tout vient de lui par surabondance, sans qu'il change ni s'appauvrisse : c'est la [[g-procession|procession]]. Et il ne dépend de rien : il est « __cause de lui-même__, qui est lui-même de lui-même et par lui-même » ([[traite39|traité 39]], chap. 14). Cela ne veut pas dire qu'il se précède ou se fabrique : seulement qu'**aucune cause extérieure ne le fait être ce qu'il est**, ni le hasard, ni la nécessité.
 
     ! L'argument ne dit pas que l'Un est la plus grande des choses : il dit que, sans un principe qui ne soit pas composé, aucune chose composée ne tiendrait ensemble.
 
-    ! Ne pas confondre le refus de faire de l'Intellect le premier avec un mépris de la pensée : l'Intellect reste, après l'Un, ce qu'il y a de plus haut ; il n'est simplement pas simple.
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | traité 7, chap. 1 | ce qui n'est pas simple dépend du simple |
+    | traité 33, chap. 1 | l'Un et le Bien, une seule nature |
+    | traité 38, chap. 41 | le Bien pour les autres, non pour lui |
+    | traité 39, chap. 14 | il est cause de lui-même |
+
+    **Voir aussi** : [[g-au-dela-de-l-etre|Au-delà de la réalité]] · [[g-procession|Procession]] · [[g-unite|Unité]] · [[g-intellect|Intellect]] · [[g-agathon|Bien]] · [[g-henosis|Hénose]]
+  tables:
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
   points:
-  - id: g-un-l1-q1
-    sentence: "« C'est en vertu de l'___ que tous les êtres sont des êtres » : c'est sur cet axiome que s'ouvre le traité 9 (VI, 9), consacré au Bien ou à l'Un (chap. 1, l. 1)."
-    answer: unité
-    alt: ["unite"]
   - id: g-un-l1-q2
     sentence: "L'axiome « C'est en vertu de l'unité que tous les êtres sont des êtres » ouvre le traité ___, *Sur le Bien ou l'Un*."
     answer: 9 (VI, 9)
     alt: ["9", "VI, 9"]
-  - id: g-un-l1-q3
-    sentence: "Pour montrer qu'être, c'est être un, Plotin rappelle qu'il n'y a pas d'___ si elle n'est pas une, pas de chœur ni de troupeau, pas de maison ni de navire (traité 9, chap. 1, l. 3-7)."
-    answer: armée
-    alt: ["armee"]
   - id: g-un-l1-q4
     sentence: "Le premier ressort de l'argument est que ce qui est multiple ne se donne pas son unité : les planches ne s'assemblent pas seules en navire. Par conséquent, tout ce qui est composé dépend d'un principe qui l'___."
     answer: unifie
@@ -56,11 +62,11 @@ lessons:
     answer: ce qui est avant lui
     alt: []
   - id: g-un-l1-q8
-    sentence: "Contre Aristote, qui plaçait au sommet une pensée se pensant elle-même, Plotin objecte que toute pensée est au moins ___ : il y a ce qui pense et ce qui est pensé."
+    sentence: "Contre Aristote, qui plaçait au sommet une pensée se pensant elle-même, Plotin objecte que toute pensée est au moins ___ : il y a le pensant et le pensé."
     answer: double
     alt: ["deux"]
   - id: g-un-l1-q9
-    sentence: "Parce qu'en lui ce qui pense et ce qui est pensé font deux, et qu'il contient la multitude des Formes, l'Intellect est pour Plotin un « ___ », qui ne peut être le premier principe (traité 7, chap. 1, l. 21-22)."
+    sentence: "Parce qu'en lui le pensant et le pensé font deux, et qu'il contient la multitude des Formes, l'Intellect est pour Plotin un « ___ », qui ne peut être le premier principe (traité 7, chap. 1, l. 21-22)."
     answer: un-multiple
     alt: ["un multiple"]
   - id: g-un-l1-q10
@@ -75,54 +81,15 @@ lessons:
     sentence: "On appelle ___, chez Plotin, chacun des trois niveaux de réalité qui ont rang de principes : l'Un, l'Intellect et l'Âme (traité 10)."
     answer: hypostase
     alt: ["hypostases"]
-- id: g-un-l2
-  title: Au-delà de la réalité, pourquoi on ne peut rien dire de l'Un
-  notes: |-
-    **Une fois établi qu'il faut un principe simple, Plotin en tire une conséquence vertigineuse : de ce principe, on ne peut rien dire.** Ce n'est pas une confession d'ignorance, c'est la suite logique de sa simplicité.
-
-    __**Dire ce qu'une chose est, c'est déjà la diviser.**__ Toute phrase de la forme « X est P » distingue {violet}un sujet{/violet} et {violet}ce qu'on en dit{/violet}. Si l'Un était l'être, la pensée, la beauté, il serait {red}un sujet doté de propriétés{/red}, donc composé, donc plus premier. C'est pourquoi le [[traite7|traité 7]] dit qu'il n'y a de lui « ni discours ni science », formule du {sky}*Parménide* (142a){/sky}, et qu'il est « au-delà de la réalité » (chap. 1, l. 9-10), formule de la {sky}*République* (VI, 509b){/sky}, en grec *epekeina tês ousias*.
-
-    __**Pour la même raison, il ne possède rien de ce qu'il produit.**__ On croirait qu'une cause doit contenir ce qu'elle donne. Plotin répond : « il n'est pas nécessaire que ce qui donne possède ce qu'il donne : il faut plutôt considérer dans de tels cas ce qui donne comme supérieur, et ce qui est donné comme inférieur à ce qui donne » ([[traite38|traité 38]], chap. 17, l. 3-5). **L'Un donne la vie, la forme et la pensée sans être vie, forme ni pensée** : s'il était l'une d'elles, il ne pourrait les donner toutes.
-
-    __**Même le nom d'« Un » est approximatif.**__ Il ne dit pas une propriété de l'Un, il nie en lui toute multiplicité. Plotin l'appelle aussi {violet}« le Premier »{/violet}, et le désigne volontiers par des {yellow}pronoms{/yellow} (« lui », « celui-là ») qui le montrent sans le définir.
-
-    ! « Au-delà de la réalité » ne veut pas dire « néant » : l'Un n'est pas moins que l'être, il est ce sans quoi rien ne serait. Il n'est pas le premier des étants, mais la condition pour qu'il y ait des étants.
-
-    ! L'Un ne se pense pas lui-même : se penser supposerait une dualité entre le penseur et le pensé. Il n'est pas pour autant dans l'inconscience d'une chose inerte : il est au-dessus de la pensée, non au-dessous.
-  points:
-  - id: g-un-l2-q1
-    sentence: "Dire ce qu'une chose est, c'est y distinguer un sujet et ce qu'on en dit ; c'est pourquoi il n'y a de l'Un, selon une formule du *Parménide* (142a) reprise par le traité 7, « ni ___ ni science »."
-    answer: discours
+  - id: g-un-l1-r1
+    sentence: "Les noms d'Un et de Bien ne qualifient pas le principe : « Ce faisant, nous ne lui attribuons rien, mais nous la rendons ___ à nous-mêmes » (traité 33, chap. 1)."
+    answer: manifeste
     alt: []
-  - id: g-un-l1-9
-    sentence: L'expression grecque, translittérée, qu'emploie Plotin pour dire que l'Un est « au-delà de l'être » est ___.
-    answer: epekeina tês ousias
+  - id: g-un-l1-r2
+    sentence: "« Ce n'est donc pas pour lui-même qu'il est le Bien, mais pour les ___ ; car celles-ci ont besoin du Bien, alors que lui, il n'a pas besoin de lui-même » (traité 38, chap. 41)."
+    answer: autres choses
     alt: []
-  - id: g-un-l2-q2
-    sentence: "Parce qu'être quelque chose supposerait déjà la composition d'un sujet et de ses propriétés, l'Un est dit par le traité 7 « au-delà de la ___ » (chap. 1, l. 9-10), formule de la *République* (VI, 509b)."
-    answer: réalité
-    alt: ["realite"]
-  - id: g-un-l2-q3
-    sentence: "La formule « au-delà de la réalité » (*epekeina tês ousias*), que Plotin applique à l'Un, vient de la ___ de Platon (VI, 509b)."
-    answer: République
-    alt: ["Republique"]
-  - id: g-un-l2-q4
-    sentence: "« Il n'est pas nécessaire que ce qui donne ___ : il faut plutôt considérer dans de tels cas ce qui donne comme supérieur, et ce qui est donné comme inférieur à ce qui donne » (traité 38, chap. 17, l. 3-5)."
-    answer: possède ce qu'il donne
-    alt: ["possede ce qu'il donne"]
-  - id: g-un-l2-q5
-    sentence: "« Il n'est pas nécessaire que ce qui donne possède ce qu'il donne : il faut plutôt considérer dans de tels cas ce qui donne comme ___, et ce qui est donné comme inférieur à ce qui donne » (traité 38, chap. 17, l. 3-5)."
-    answer: supérieur
-    alt: ["superieur"]
-  - id: g-un-l2-q6
-    sentence: "L'Un donne la vie, la forme et la pensée sans être lui-même vie, forme ni pensée, car s'il était l'une d'elles, il ne pourrait les donner ___."
-    answer: toutes
-    alt: []
-  - id: g-un-l2-q7
-    sentence: "Le nom d'« Un » ne dit pas une propriété du principe : il nie en lui toute ___."
-    answer: multiplicité
-    alt: ["multiplicite"]
-  - id: g-un-l2-q8
-    sentence: "Dire l'Un « au-delà de la réalité », ce n'est pas en faire un néant : il n'est pas le premier des étants, mais la ___ pour qu'il y ait des étants."
-    answer: condition
-    alt: []
+  - id: g-un-l1-r3
+    sentence: "Aucune cause extérieure ne fait l'Un : il est « cause de ___, qui est lui-même de lui-même et par lui-même » (traité 39, chap. 14)."
+    answer: lui-même
+    alt: ["lui meme"]
