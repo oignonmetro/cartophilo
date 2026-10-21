@@ -152,6 +152,10 @@ ses sous-entrées** (leçon de l'entrée Vie, 2026-10-21) :
   alors réviser deux fois.
 - **Ce qui relève d'une autre notion en sort** : au premier jet, « Vie
   véritable » portait deux étapes sur le bonheur, devenues l'entrée Bonheur.
+  Ne pas hésiter à créer l'entrée voisine plutôt que de la loger dans une
+  autre : le temps a sa propre entrée, il ne se traite ni dans Vie ni dans
+  une future Éternité, qui méritent chacune un traitement spécifique
+  (consigne de l'utilisateur, 2026-10-21).
 - **Citer la proposition décisive, pas le paragraphe** : le rappel qui
   aligne deux ou trois longues citations par étape se lit comme un pavé
   turquoise. La citation complète va aux cartes en cascade.

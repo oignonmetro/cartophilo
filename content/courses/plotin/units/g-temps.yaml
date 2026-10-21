@@ -1,0 +1,111 @@
+# Entrée du glossaire de Plotin (skill glossaire) : notion, citations
+# vérifiées sur la GF (III, 7, 8-12 ; I, 5, 7). La carte g-vie-l1-q25 vient
+# de l'entrée Vie et garde son identifiant, donc sa progression.
+
+id: g-temps
+title: Temps (`khronos`)
+subtitle: Ni le mouvement ni sa mesure, mais la vie de l'âme détournée de l'éternité, que le ciel rend visible
+icon: book
+color: coral
+lessons:
+- id: g-temps-l1
+  title: Temps
+  notes: |-
+    Chez Plotin, le {violet}**temps**{/violet} n'est {pink}ni le mouvement des astres ni la mesure de ce mouvement{/pink} : c'est la {green}vie de l'âme{/green} qui, détournée de l'éternité, passe d'un acte à un autre. Le ciel ne le produit pas, il le rend visible.
+
+    __**Le temps n'est ni le mouvement ni quelque chose du mouvement.**__ Plotin écarte d'abord les définitions anciennes (traité 45, chap. 7-10). Le temps n'est pas le mouvement, car les mouvements sont eux-mêmes dans le temps, et {teal}« le mouvement peut cesser ou être interrompu, sans que le temps ne cesse »{/teal} (chap. 8). Il n'est pas l'intervalle du mouvement, comme le veulent les stoïciens, car {teal}« cet intervalle n'est pas identique pour tous les mouvements »{/teal} : il varie avec la vitesse. Il n'est pas non plus le nombre ou la mesure du mouvement, comme le veut {sky}Aristote{/sky} : **être mesuré est une propriété du temps, non ce qu'il est** (chap. 9).
+
+    __**Le temps naît quand l'âme se détourne de l'éternité.**__ Avant, le temps reposait dans l'éternité. Puis {teal}« une nature affairée, parce qu'elle avait choisi de se gouverner elle-même et de s'appartenir à elle-même, en prenant le parti de rechercher plus que le présent, se mit elle-même en mouvement, et le temps, lui aussi, se mit en mouvement »{/teal} (chap. 11, l. 15-17). **Le temps vient donc d'un désir** : celui d'une âme qui ne se contente plus de tout avoir à la fois. Ainsi {teal}« l'âme, d'abord, s'est temporalisée elle-même »{/teal} (l. 30 ; le verbe *khronoun*, seul emploi dans les traités), puis a inscrit dans le temps le monde qu'elle produit. {yellow}Comme une raison qui sort d'une semence au repos, elle se déploie vers la multiplicité et s'affaiblit en s'étendant.{/yellow}
+
+    __**Le temps est la vie de l'âme, image de l'éternité.**__ L'âme passe d'un acte à un autre, et cette succession est le temps : {teal}« le temps est la vie de l'âme que son mouvement fait passer d'un état à un autre »{/teal} (l. 43-45). C'est encore une [[g-vie|vie]], mais pas celle de l'Intellect : {teal}« il faut dire que le temps est une autre vie, comme homonyme de celle-là »{/teal}. Il imite l'éternité en cherchant, par parties et sans fin, la totalité qu'elle possède d'un coup.
+
+    | Trait | L'éternité | Le temps |
+    | sujet | l'Intellect | une puissance de l'âme |
+    | changement | toujours la même | des actes toujours autres |
+    | étendue | sans extension | continue, étendue |
+    | totalité | tout entière à la fois | par parties, jamais achevée |
+
+    __**Le ciel manifeste le temps, il ne le produit pas.**__ Le monde est dans l'âme, car {teal}« notre univers, en effet, n'a pas d'autre lieu que l'âme »{/teal} (chap. 11) : il se meut donc dans le temps de l'âme. Si l'âme cessait d'agir et revenait à l'éternité, il n'y aurait plus de temps (chap. 12). La révolution du ciel sert seulement à le mesurer : {teal}« Une mesure, dis-je, du temps, car le temps lui-même n'est pas mesure »{/teal}, et le temps {teal}« n'est point engendré par cette révolution, mais manifesté par elle »{/teal} (chap. 12). **Plotin renverse Aristote** : {red}ce n'est pas le temps qui mesure le mouvement{/red}, {green}c'est le mouvement du ciel qui mesure le temps{/green}, en le rendant visible.
+
+    ! Le temps n'est pas une forme de la conscience humaine : c'est la vie de l'âme du monde, dans laquelle l'univers se meut, et il est aussi dans les âmes individuelles (chap. 13).
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | traité 45, chap. 8 | le temps n'est pas le mouvement |
+    | traité 45, chap. 9 | contre le nombre du mouvement d'Aristote |
+    | traité 45, chap. 11 | la naissance du temps, vie de l'âme |
+    | traité 45, chap. 12 | le ciel mesure le temps sans le produire |
+    | traité 36, chap. 7 | le bonheur ne se mesure pas au temps |
+
+    **Voir aussi** : [[g-vie|Vie]] · [[g-ame|Âme]] · [[g-bonheur|Bonheur]] · [[traite45|Traité 45]]
+  tables:
+  - table: trait-l-eternite-le-temps
+    exercises:
+    - {kind: bank, column: Le temps}
+    - {kind: cell, column: L'éternité}
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-temps-l1-q1
+    sentence: "Le temps, que Plotin définit comme la vie de l'âme et non comme le mouvement des astres, se dit en grec translittéré ___."
+    answer: khronos
+    alt: ["chronos", "khrónos"]
+  - id: g-temps-l1-q2
+    sentence: "Contre ceux qui identifient le temps au mouvement : « le mouvement peut cesser ou être interrompu, sans que le temps ne ___ » (traité 45, chap. 8)."
+    answer: cesse
+    alt: []
+  - id: g-temps-l1-q3
+    sentence: "Contre la définition stoïcienne du temps comme ___ du mouvement, Plotin objecte qu'il n'est pas le même pour tous les mouvements, puisqu'il varie avec la vitesse (traité 45, chap. 8)."
+    answer: intervalle
+    alt: []
+  - id: g-temps-l1-q4
+    sentence: "Contre la définition d'Aristote, qui fait du temps le ___ ou la mesure du mouvement, Plotin objecte qu'être mesuré est une propriété du temps, non ce qu'il est (traité 45, chap. 9)."
+    answer: nombre
+    alt: []
+  - id: g-temps-l1-q5
+    sentence: "« Une nature ___, parce qu'elle avait choisi de se gouverner elle-même et de s'appartenir à elle-même, en prenant le parti de rechercher plus que le présent, se mit elle-même en mouvement » (traité 45, chap. 11, l. 15-17)."
+    answer: affairée
+    alt: ["affairee"]
+  - id: g-temps-l1-q6
+    sentence: "« Une nature affairée, parce qu'elle avait choisi de se gouverner elle-même et de s'___ à elle-même, en prenant le parti de rechercher plus que le présent, se mit elle-même en mouvement » (traité 45, chap. 11, l. 15-17)."
+    answer: appartenir
+    alt: []
+  - id: g-temps-l1-q7
+    sentence: "« Une nature affairée, parce qu'elle avait choisi de se gouverner elle-même et de s'appartenir à elle-même, en prenant le parti de rechercher plus que le ___, se mit elle-même en mouvement » (traité 45, chap. 11, l. 15-17)."
+    answer: présent
+    alt: ["present"]
+  - id: g-temps-l1-q8
+    sentence: "En produisant le monde sensible, « l'âme, d'abord, s'est ___ elle-même » (traité 45, chap. 11, l. 30) : le temps naît en elle avant d'être dans le monde."
+    answer: temporalisée
+    alt: ["temporalisee"]
+  - id: g-temps-l1-q9
+    sentence: "Pour dire que l'âme « s'est temporalisée », Plotin emploie le verbe grec ___, qu'on ne trouve qu'une fois dans les traités (traité 45, chap. 11)."
+    answer: khronoun
+    alt: ["khronoûn", "chronoun"]
+  - id: g-vie-l1-q25
+    sentence: "En face de l'éternité, vie de l'Intellect « tout entière ensemble » : « le temps est la vie de l'___ que son mouvement fait passer d'un état à un autre » (traité 45, chap. 11, l. 43-45)."
+    answer: âme
+    alt: ["ame"]
+  - id: g-temps-l1-q10
+    sentence: "Le temps est encore une vie, mais pas celle de l'Intellect : « il faut dire que le temps est une autre vie, comme ___ de celle-là » (traité 45, chap. 11)."
+    answer: homonyme
+    alt: []
+  - id: g-temps-l1-q11
+    sentence: "Le monde se meut dans le temps de l'âme, car « notre univers, en effet, n'a pas d'autre ___ que l'âme » (traité 45, chap. 11)."
+    answer: lieu
+    alt: []
+  - id: g-temps-l1-q12
+    sentence: "La révolution du ciel est « une mesure, dis-je, du temps, car le temps lui-même n'est pas ___ » (traité 45, chap. 12)."
+    answer: mesure
+    alt: []
+  - id: g-temps-l1-q13
+    sentence: "Le temps « n'est point engendré par cette révolution, mais ___ par elle » (traité 45, chap. 12) : le ciel rend le temps visible."
+    answer: manifesté
+    alt: ["manifeste"]
+  - id: g-temps-l1-q14
+    sentence: "Plotin renverse Aristote : ce n'est pas le temps qui mesure le mouvement, c'est le mouvement du ___ qui mesure le temps, en le rendant visible (traité 45, chap. 12)."
+    answer: ciel
+    alt: []
