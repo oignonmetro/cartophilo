@@ -93,6 +93,8 @@ export function runsFromMarkup(text: string): Run[] {
     for (const span of spans) {
       if (span.kind === 'text') out.push({ text: span.text, marks })
       else if (span.kind === 'form') out.push({ text: span.text, marks: { ...marks, form: true } })
+      // Le renvoi reste écrit tel quel dans l'éditeur : il se réenregistre à l'identique.
+      else if (span.kind === 'link') out.push({ text: `[[${span.target}|${span.text}]]`, marks })
       else if (span.kind === 'color') walk(span.children, { ...marks, color: span.color })
       else walk(span.children, { ...marks, [span.kind]: true })
     }

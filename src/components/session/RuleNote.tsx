@@ -6,6 +6,7 @@ import { GAP, type NoteColor } from '@/content/schema'
 import { Button } from '@/components/Button'
 import { PassageText } from '@/components/PassageText'
 import { useIsDesktop } from '@/lib/useIsDesktop'
+import { useNoteRef } from '@/components/noteRef'
 
 /**
  * Rappel de cours affiché avant la pratique, à la découverte d'une leçon.
@@ -507,6 +508,37 @@ export function RichGaps({ text, renderGap }: { text: string; renderGap: (index:
   return <Spans spans={parseInline(numbered)} gaps={{ render: renderGap }} />
 }
 
+/**
+ * Un renvoi vers une autre entrée du cours : souligné en pointillé, il ouvre
+ * l'entrée en feuille (voir `NoteRefSheet`). Une cible absente du cours
+ * ouvert, ou un rendu sans fournisseur, le laisse en texte simple.
+ */
+function NoteLink({ target, text, colorClass }: { target: string; text: string; colorClass?: string }) {
+  const ref = useNoteRef()
+  if (!ref || !ref.exists(target)) return <span>{text}</span>
+  const open = () => ref.open(target)
+  return (
+    <span
+      role="link"
+      tabIndex={0}
+      onClick={(event) => {
+        event.stopPropagation()
+        open()
+      }}
+      onKeyDown={(event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return
+        // Entrée enchaîne aussi sur le rappel : le renvoi la garde pour lui.
+        event.preventDefault()
+        event.stopPropagation()
+        open()
+      }}
+      className={`cursor-pointer font-bold underline decoration-dotted decoration-2 underline-offset-[3px] ${colorClass ?? 'text-ink'}`}
+    >
+      {text}
+    </span>
+  )
+}
+
 interface GapSlots {
   render: (index: number) => ReactNode
 }
@@ -565,6 +597,8 @@ function Spans({ spans, colorClass, gaps }: { spans: Inline[]; colorClass?: stri
               </span>
             )
           }
+          case 'link':
+            return <NoteLink key={index} target={span.target} text={span.text} colorClass={colorClass} />
           default:
             return <span key={index}>{withGaps(span.text, gaps)}</span>
         }

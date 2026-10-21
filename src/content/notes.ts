@@ -47,11 +47,19 @@ export type Inline =
   /** Mot étranger cité : littéral, rien ne s'y imbrique. */
   | { kind: 'form'; text: string }
   | { kind: 'color'; color: NoteColor; children: Inline[] }
+  /** Renvoi vers une autre unité du cours (`[[g-vie|la vie]]`) : texte littéral, comme une forme citée. */
+  | { kind: 'link'; target: string; text: string }
 
+// Le renvoi vient en dernier : placé avant, il décalerait le `\5` de la couleur.
 const INLINE = new RegExp(
-  `\\*\\*([^*]+)\\*\\*|__([^_]+)__|\\*([^*]+)\\*|\`([^\`]+)\`|\\{(${COLOR_NAMES.join('|')})\\}([\\s\\S]*?)\\{/\\5\\}`,
+  `\\*\\*([^*]+)\\*\\*|__([^_]+)__|\\*([^*]+)\\*|\`([^\`]+)\`|\\{(${COLOR_NAMES.join('|')})\\}([\\s\\S]*?)\\{/\\5\\}|\\[\\[([^\\]|]+)\\|([^\\]]+)\\]\\]`,
   'g',
 )
+
+/** Les unités visées par les renvois `[[id|texte]]` d'un texte, dans l'ordre. */
+export function noteLinkTargets(text: string): string[] {
+  return [...text.matchAll(/\[\[([^\]|]+)\|[^\]]+\]\]/g)].map((match) => match[1]!.trim())
+}
 
 /**
  * Colle chaque guillemet français à son mot, d'un espace insécable, pour
@@ -65,7 +73,7 @@ function nbspQuotes(text: string): string {
 
 /**
  * `**gras**`, `*italique*`, `__souligné__`, `` `mot étranger` ``,
- * `{couleur}teinté{/couleur}`.
+ * `{couleur}teinté{/couleur}`, `[[unité|renvoi]]`.
  *
  * Les quatre premiers s'imbriquent — « **pas de `to`** » met bien la forme en
  * valeur à l'intérieur du gras, et une couleur peut elle aussi contenir du
@@ -86,8 +94,9 @@ export function parseInline(text: string, quotes = true): Inline[] {
     const at = match.index
     if (at > last) spans.push({ kind: 'text', text: fix(text.slice(last, at)) })
 
-    const [, strong, underline, em, form, color, colorText] = match
-    if (strong !== undefined) spans.push({ kind: 'strong', children: parseInline(strong, quotes) })
+    const [, strong, underline, em, form, color, colorText, linkTarget, linkText] = match
+    if (linkTarget !== undefined) spans.push({ kind: 'link', target: linkTarget.trim(), text: fix(linkText ?? '') })
+    else if (strong !== undefined) spans.push({ kind: 'strong', children: parseInline(strong, quotes) })
     else if (underline !== undefined) spans.push({ kind: 'underline', children: parseInline(underline, quotes) })
     else if (em !== undefined) spans.push({ kind: 'em', children: parseInline(em, quotes) })
     else if (form !== undefined) spans.push({ kind: 'form', text: fix(form) })

@@ -41,7 +41,7 @@ import {
 } from '../../src/content/schema.ts'
 import { allNodes, lessonsFromWork } from '../../src/content/work.ts'
 import { findVocabGap } from '../../src/content/text.ts'
-import { noteTables, parseNotes } from '../../src/content/notes.ts'
+import { noteLinkTargets, noteTables, parseNotes } from '../../src/content/notes.ts'
 import {
   itemsOfCourse,
   itemsOfLesson,
@@ -309,8 +309,10 @@ function checkCoherence(course: Course, dir: string) {
   const lessonIds = new Set<string>()
   const problems: string[] = []
 
+  const unitIds = new Set(unitsOfCourse(course).map(({ unit }) => unit.id))
   for (const { unit } of unitsOfCourse(course)) {
     if (unit.work) checkWork(unit.id, unit.work, problems)
+    checkNoteLinks(`unité "${unit.id}"`, unit.intro, unitIds, problems)
   }
 
   for (const { lesson, unit } of lessonsOf(course)) {
@@ -322,6 +324,14 @@ function checkCoherence(course: Course, dir: string) {
     }
 
     checkNotesMarkup(lesson.id, 'notes' in lesson ? lesson.notes : undefined)
+    checkNoteLinks(`leçon "${lesson.id}"`, 'notes' in lesson ? lesson.notes : undefined, unitIds, problems)
+    if (lesson.kind === 'grammar') {
+      for (const point of lesson.points) {
+        if (noteLinkTargets(`${point.sentence} ${point.explanation ?? ''}`).length) {
+          warn(`leçon "${lesson.id}"`, `renvoi [[…]] dans la carte "${point.id}" : les renvois ne vont que dans les rappels, une carte tient seule`)
+        }
+      }
+    }
     if (lesson.kind === 'vocab') checkVocabLesson(lesson, problems, course.learning)
     if (lesson.kind === 'grammar') checkGrammarLesson(lesson, problems)
     if (lesson.kind === 'conjugation') checkConjugationLesson(lesson, problems, course.level ?? '')
@@ -652,6 +662,14 @@ function checkNotesMarkup(lessonId: string, notes: string | undefined) {
         }
       }
     }
+  }
+}
+
+/** Un renvoi `[[id|texte]]` doit viser une unité du même cours (voir `NoteRefSheet`). */
+function checkNoteLinks(where: string, text: string | undefined, unitIds: ReadonlySet<string>, problems: string[]) {
+  if (!text) return
+  for (const target of noteLinkTargets(text)) {
+    if (!unitIds.has(target)) problems.push(`${where} : le renvoi [[${target}|…]] vise une unité absente du cours`)
   }
 }
 

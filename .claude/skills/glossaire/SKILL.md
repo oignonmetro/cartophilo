@@ -27,7 +27,11 @@ notes et notices pour l'analyse, NotebookLM (notebook « Plotin », navigateur
 intégré) pour recenser où la notion apparaît et comment Plotin l'emploie.
 Tout ce que NotebookLM avance se recoupe sur la GF, selon les règles de
 `cours-traite` § 1 bis ; les citations que l'utilisateur colle depuis
-NotebookLM sont fiables.
+NotebookLM sont fiables. Pour l'entrée Vie (2026-10-21), il a cité III, 8
+et I, 4 dans une autre traduction que la GF, et inventé une phrase de
+III, 7, 11 ; mais il a apporté un lieu décisif oublié (IV, 7, 9) et les
+contresens à désamorcer. Commencer par `gf.py cherche` sur les formules
+attendues, puis l'interroger.
 
 **Marx.** Pas encore fixées : avant la première entrée de Marx, demander à
 l'utilisateur l'édition de référence (citations, repères) et s'il existe un
@@ -107,6 +111,15 @@ et la remplacer par un renvoi.
   du rappel ou par un piège `! …` en fin.
 - **Les renvois** (§ 4) là où le rappel touche une notion qui a, ou aura,
   son entrée.
+- **Repères** : la GF ne marque ses lignes que toutes les cinq. Donner le
+  chapitre seul (« (I, 4, 3) »), sauf si une note ou une notice fixe les
+  lignes (« (III, 7, 3, 36-38) »). Jamais une ligne déduite.
+- **Citer des phrases qui se tiennent.** Une citation tronquée qui ne se lit
+  plus seule (« … et qu'elle a une signification… ») se coupe en deux
+  citations entières plutôt que de garder un « […] ».
+- **Pas de guillemets autour d'un intitulé** (« vie végétative, sensitive,
+  psychique » écrit comme une étiquette) : `gf.py verifie` le prend pour une
+  citation introuvable. Les guillemets sont réservés au texte de la GF.
 - Mise en relief, couleurs, grec en italique, tableaux, interdits : comme
   `cours-traite` § 4.
 
@@ -136,9 +149,14 @@ demande ; il peut porter une couleur ou un gras à l'extérieur des crochets
 - **Ajouter le renvoi inverse** quand il manque : écrire une sous-entrée,
   c'est aussi ajouter, dans le rappel de l'entrée générale, le renvoi vers
   elle (modification minimale de l'autre fichier, sans le refondre).
+- **Le texte affiché est littéral** : pas de gras ni d'italique entre les
+  crochets, la mise en relief se met autour.
 
-> Le moteur ne rend pas encore ces renvois (syntaxe décidée le
-> 2026-10-21, rendu à venir). Retirer cette remarque quand il les rendra.
+Dans l'application, le renvoi est souligné en pointillé et ouvre l'entrée
+visée dans une feuille, par-dessus l'écran en cours, sans quitter la leçon
+(`NoteRefSheet`) ; l'éditeur visuel le garde tel quel. `content:check`
+refuse un renvoi dont la cible n'est pas une unité du cours, et signale un
+renvoi glissé dans une carte.
 
 ## 5. Écrire les cartes
 

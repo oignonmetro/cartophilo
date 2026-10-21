@@ -140,7 +140,7 @@ notes: |
 | `! …` | un piège, encadré en ambre |
 | `\| … \| … \| …` | une rangée de tableau ; la ligne suivante qui commence aussi par `\|` en ajoute une autre |
 
-Cinq marqueurs enrichissent le texte, dans les paragraphes comme dans les
+Six marqueurs enrichissent le texte, dans les paragraphes comme dans les
 règles ou les pièges :
 
 | Écriture | Rendu | À réserver à |
@@ -150,6 +150,7 @@ règles ou les pièges :
 | `__texte__` | souligné | le mot qui décide, dans une règle |
 | `*texte*` | italique | une nuance, une glose, un titre d'œuvre |
 | `{violet}texte{/violet}` | teinté (gras) | distinguer deux notions qui reviennent tout au long d'un rappel |
+| `[[g-vie\|la vie]]` | renvoi souligné en pointillé, qui ouvre l'unité `g-vie` en feuille | relier une entrée du glossaire à ses voisines (voir la skill `glossaire`) ; rappels seulement, texte littéral, cible vérifiée par `content:check` |
 
 `{couleur}…{/couleur}` accepte neuf teintes : `teal`, `violet`, `coral`,
 `amber`, `sky`, `yellow`, `green`, `red`, `pink`. C'est la palette des

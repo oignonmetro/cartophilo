@@ -57,6 +57,11 @@ describe('richNotes', () => {
     expect(runsFromMarkup(markup)).toEqual(runs)
   })
 
+  it('réenregistre un renvoi à l’identique', () => {
+    const markup = 'la **[[g-vie|vie]]** et {violet}[[g-ame|l’âme]]{/violet}'
+    expect(markupFromRuns(runsFromMarkup(markup))).toBe(markup)
+  })
+
   it('bascule une mise en forme sur une partie du texte', () => {
     const runs = runsFromMarkup('un **mot** clef')
     expect(hasMark(runs, 3, 6, 'strong')).toBe(true)

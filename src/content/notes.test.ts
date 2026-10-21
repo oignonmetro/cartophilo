@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { parseInline, parseNotes, splitAside, type NoteRule } from './notes'
+import { noteLinkTargets, parseInline, parseNotes, plainInline, splitAside, type NoteRule } from './notes'
 
 describe('rappels de cours', () => {
   it('recolle une phrase repliée sur plusieurs lignes', () => {
@@ -170,6 +170,17 @@ describe('mise en forme dans le texte', () => {
       { kind: 'text', text: ' ' },
       { kind: 'color', color: 'violet', children: [{ kind: 'text', text: 'c' }] },
     ])
+  })
+
+  it('reconnaît un renvoi, y compris dans une couleur', () => {
+    expect(parseInline('la [[g-vie-veritable|vie véritable]] et {violet}[[g-ame|l’âme]]{/violet}')).toEqual([
+      { kind: 'text', text: 'la ' },
+      { kind: 'link', target: 'g-vie-veritable', text: 'vie véritable' },
+      { kind: 'text', text: ' et ' },
+      { kind: 'color', color: 'violet', children: [{ kind: 'link', target: 'g-ame', text: 'l’âme' }] },
+    ])
+    expect(noteLinkTargets('la [[g-vie-veritable|vie véritable]] et [[g-ame|l’âme]]')).toEqual(['g-vie-veritable', 'g-ame'])
+    expect(plainInline('la [[g-vie|vie]]')).toBe('la vie')
   })
 
   it('imbrique du gras à l’intérieur d’une couleur', () => {

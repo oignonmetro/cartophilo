@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { CourseProvider } from '@/content/CourseProvider'
+import { NoteRefProvider } from '@/components/NoteRefSheet'
 import { HomeScreen } from '@/screens/HomeScreen'
 import { NotesReaderScreen } from '@/screens/NotesReaderScreen'
 import { TreatiseTrainRoute } from '@/screens/TreatiseTrainRoute'
@@ -30,29 +31,31 @@ export default function App() {
       <ThemeEffect />
       <ViewportHeightEffect />
       <CourseProvider>
-        <Routes>
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="/lecon/:lessonId" element={<LessonRoute />} />
-          <Route path="/fiches/:unitId" element={<NotesReaderScreen />} />
-          <Route path="/reperage" element={<TreatiseTrainRoute />} />
-          <Route path="/revision" element={<ReviewRoute />} />
-          <Route path="/etape/:unitId/:stepId" element={<StepRoute />} />
-          <Route path="/profil" element={<ProfileScreen />} />
-          <Route path="/succes" element={<AchievementsScreen />} />
-          {/* Prototype de conception, données en dur — pas encore relié au moteur. */}
-          <Route path="/difficiles" element={<HardWordsScreen />} />
-          {import.meta.env.DEV && (
-            <Route
-              path="/editeur"
-              element={
-                <Suspense fallback={null}>
-                  <ContentEditorScreen />
-                </Suspense>
-              }
-            />
-          )}
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <NoteRefProvider>
+          <Routes>
+            <Route path="/" element={<HomeScreen />} />
+            <Route path="/lecon/:lessonId" element={<LessonRoute />} />
+            <Route path="/fiches/:unitId" element={<NotesReaderScreen />} />
+            <Route path="/reperage" element={<TreatiseTrainRoute />} />
+            <Route path="/revision" element={<ReviewRoute />} />
+            <Route path="/etape/:unitId/:stepId" element={<StepRoute />} />
+            <Route path="/profil" element={<ProfileScreen />} />
+            <Route path="/succes" element={<AchievementsScreen />} />
+            {/* Prototype de conception, données en dur — pas encore relié au moteur. */}
+            <Route path="/difficiles" element={<HardWordsScreen />} />
+            {import.meta.env.DEV && (
+              <Route
+                path="/editeur"
+                element={
+                  <Suspense fallback={null}>
+                    <ContentEditorScreen />
+                  </Suspense>
+                }
+              />
+            )}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </NoteRefProvider>
         <UpdatePrompt />
         <AppUpdateBanner />
       </CourseProvider>
