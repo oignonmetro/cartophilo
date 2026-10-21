@@ -16,6 +16,7 @@ import { noteColorSchema, type NoteColor } from './schema'
  *   - une ligne vide sépare deux paragraphes ;
  *   - une ligne ouverte par « - » est une règle, mise en valeur ;
  *   - une ligne indentée sous une règle en est l'exemple ;
+ *   - une ligne indentée ouverte par « - » sous une règle en est une sous-puce ;
  *   - une ligne ouverte par « ! » est un piège, signalé comme tel ;
  *   - une ligne ouverte par « | » est une rangée de tableau, ligne suivante
  *     comprise ; contrairement au reste, elle ne se replie pas : chaque
@@ -109,6 +110,8 @@ export interface NoteRule {
   body: string
   /** Exemple donné sur la ligne indentée qui suit. */
   example: string | null
+  /** Sous-puces : les lignes `  - …` (indentées) qui suivent la règle. Un seul niveau. */
+  children: NoteRule[]
 }
 
 /** Une ligne d'un tableau : son étiquette de rangée, et une cellule par colonne. */
@@ -204,9 +207,10 @@ export function parseNotes(notes: string): NoteBlock[] {
     if (RULE.test(line)) {
       flush()
       const { label, body } = splitLabel(line.replace(RULE, ''))
-      const rule: NoteRule = { label, body, example: null }
+      const rule: NoteRule = { label, body, example: null, children: [] }
       const current = openRules()
-      if (current) current.push(rule)
+      if (current && /^\s+/.test(raw)) current[current.length - 1].children.push(rule)
+      else if (current) current.push(rule)
       else blocks.push({ kind: 'rules', rules: [rule] })
       continue
     }
@@ -236,7 +240,8 @@ export function parseNotes(notes: string): NoteBlock[] {
     // l'indentation de la ligne brute, la seule trace qu'il en reste.
     const rules = openRules()
     if (/^\s+/.test(raw) && !pending && rules) {
-      const last = rules[rules.length - 1]
+      const parent = rules[rules.length - 1]
+      const last = parent.children[parent.children.length - 1] ?? parent
       // Une règle dont la dernière ligne reste en suspens se poursuit : le
       // repli à 80 colonnes du YAML ne doit pas transformer la fin d'une règle
       // en exemple, ce qui l'afficherait en italique et amputerait la règle.

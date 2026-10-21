@@ -43,6 +43,8 @@ export interface Block {
   orig?: string
   /** Ce qui séparait le bloc du précédent (retours à la ligne, lignes vides). */
   gap?: string
+  /** Une règle en sous-puce (`  - …`) : n'a d'effet que sous une autre règle (voir `isSubRule`). */
+  level?: 2
 }
 
 export interface NotesDoc {
@@ -126,6 +128,11 @@ export function markupFromRuns(runs: Run[]): string {
   return level(mergeRuns(runs), 0)
 }
 
+/** La règle est-elle une sous-puce ? Il lui faut une règle (ou un exemple) au-dessus. */
+export function isSubRule(block: Block, prev: Block | undefined): boolean {
+  return block.kind === 'rule' && block.level === 2 && Boolean(prev && RULE_FAMILY.has(prev.kind))
+}
+
 /** La ligne (ou les lignes) que le bloc écrit dans le fichier. */
 export function serializeBlock(block: Block): string {
   if (block.kind === 'table') return block.src ?? ''
@@ -134,7 +141,7 @@ export function serializeBlock(block: Block): string {
     case 'warning':
       return `! ${text}`
     case 'rule':
-      return `- ${text}`
+      return `${block.level === 2 ? '  ' : ''}- ${text}`
     case 'example':
       return `  ${text}`
     default:
@@ -166,7 +173,7 @@ export function serializeDoc(doc: NotesDoc): string {
   let out = doc.head
   blocks.forEach((block, i) => {
     if (i > 0) out += gapBetween(blocks[i - 1]!, block)
-    const text = serializeBlock(block)
+    const text = serializeBlock(isSubRule(block, blocks[i - 1]) ? block : { ...block, level: undefined })
     out += block.src !== undefined && text === block.orig ? block.src : text
   })
   return out + doc.tail
@@ -178,6 +185,7 @@ export function parseDoc(notes: string): NotesDoc {
   interface Pending {
     kind: BlockKind
     text: string
+    level?: 2
     start: number
     end: number
   }
@@ -207,7 +215,9 @@ export function parseDoc(notes: string): NotesDoc {
     }
     if (RULE.test(line)) {
       flush()
-      found.push({ kind: 'rule', text: line.replace(RULE, ''), start: index, end: index })
+      const above = found[found.length - 1]
+      const level = /^\s+/.test(raw) && above && RULE_FAMILY.has(above.kind) ? 2 : undefined
+      found.push({ kind: 'rule', text: line.replace(RULE, ''), level, start: index, end: index })
       return
     }
     if (WARNING.test(line)) {
@@ -246,7 +256,7 @@ export function parseDoc(notes: string): NotesDoc {
     const prevEnd = i === 0 ? -1 : found[i - 1]!.end
     const gap = i === 0 ? undefined : `\n${lines.slice(prevEnd + 1, item.start).map((line) => `${line}\n`).join('')}`
     const runs = item.kind === 'table' ? [] : item.kind === 'section' ? plainRuns(item.text) : runsFromMarkup(item.text)
-    const block: Block = { kind: item.kind, runs, src, gap }
+    const block: Block = { kind: item.kind, runs, src, gap, level: item.level }
     block.orig = serializeBlock(block)
     return block
   })
@@ -374,7 +384,7 @@ export function normalizeBlock(block: Block, prev: Block | undefined): { block: 
 
 /** Le texte copié : la même forme que dans le fichier, pour se recoller ici ou dans une carte. */
 export function markupOf(blocks: Block[]): string {
-  return serializeDoc({ head: '', tail: '', blocks: blocks.map(({ kind, runs, src }) => ({ kind, runs, src: kind === 'table' ? src : undefined })) })
+  return serializeDoc({ head: '', tail: '', blocks: blocks.map(({ kind, runs, src, level }) => ({ kind, runs, level, src: kind === 'table' ? src : undefined })) })
 }
 
 /* ——— Repères dans le rappel : étiquette et commentaire d'une règle ——— */

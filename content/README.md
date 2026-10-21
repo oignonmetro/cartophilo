@@ -136,6 +136,7 @@ notes: |
 | `- …` | une règle, dans un panneau teinté ; les règles voisines forment une liste |
 | `- étiquette : …` | l'étiquette passe en gras coloré (jusqu'à ~48 caractères) |
 | ligne indentée sous une règle | l'exemple de cette règle, en italique |
+| ligne indentée ouverte par « - » sous une règle | une sous-puce de cette règle (un seul niveau ; Tab dans l'éditeur visuel) |
 | `! …` | un piège, encadré en ambre |
 | `\| … \| … \| …` | une rangée de tableau ; la ligne suivante qui commence aussi par `\|` en ajoute une autre |
 

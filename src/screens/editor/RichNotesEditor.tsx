@@ -8,6 +8,7 @@ import {
   hasMark,
   insertRuns,
   isEmptyBlock,
+  isSubRule,
   MARK_ORDER,
   markupOf,
   marksAt,
@@ -75,6 +76,7 @@ interface Meta {
   src?: string
   orig?: string
   gap?: string
+  level?: 2
   /** Ce qui, hors du texte, décide du dessin du bloc (voir `layout`). */
   layout: string
 }
@@ -85,6 +87,8 @@ interface Layout {
   groupFirst: boolean
   groupLast: boolean
   border: boolean
+  /** Sous-puce : rentrée d'un cran sous la règle qui la précède. */
+  sub: boolean
   nextExample: boolean
   placeholder: boolean
   splits: { labelEnd: number; asideStart: number | null } | null
@@ -105,6 +109,8 @@ const WARNING =
   "relative rounded-2xl border-2 border-amber/40 bg-amber/10 py-3 pr-4 pl-10 text-justify hyphens-auto text-sm leading-relaxed text-ink before:absolute before:left-4 before:top-3 before:text-base before:leading-tight before:content-['⚠']"
 const RULE =
   'relative pr-4 pl-[2.125rem] text-justify hyphens-auto text-sm leading-snug text-ink before:absolute before:left-4 before:h-1.5 before:w-1.5 before:rounded-full'
+const SUB_RULE =
+  'relative pr-4 pl-[3.625rem] text-justify hyphens-auto text-sm leading-snug text-ink before:absolute before:left-10 before:h-1 before:w-1 before:rounded-full'
 const EXAMPLE = 'relative pr-4 pl-[2.125rem] text-sm leading-snug font-bold text-ink-soft italic'
 const BORDER = 'after:absolute after:inset-x-4 after:bottom-0 after:h-px after:bg-ink/8'
 const SECTION = 'border-t-2 border-dashed border-line pt-2 font-mono text-xs text-ink-faint'
@@ -126,7 +132,8 @@ function layoutOf(blocks: Block[], i: number): Layout {
     lead: block.kind === 'paragraph' && i === blocks.findIndex((other) => !isEmptyBlock(other)),
     groupFirst: inGroup && !family(prev),
     groupLast: inGroup && !family(next),
-    border: inGroup && next?.kind === 'rule',
+    border: inGroup && next?.kind === 'rule' && !isSubRule(next, block),
+    sub: isSubRule(block, prev),
     nextExample: block.kind === 'rule' && next?.kind === 'example',
     placeholder: blocks.length === 1 && block.kind === 'paragraph' && isEmptyBlock(block),
     splits: block.kind === 'rule' ? ruleSplits(blockText(block)) : null,
@@ -145,9 +152,9 @@ function classesOf(kind: BlockKind, layout: Layout, tone: Tone): string {
       return [
         top,
         tone.panel,
-        RULE,
+        layout.sub ? SUB_RULE : RULE,
         MARKER[tone.marker] ?? '',
-        layout.groupFirst ? 'rounded-t-2xl pt-4 before:top-6' : 'pt-3 before:top-5',
+        layout.groupFirst ? 'rounded-t-2xl pt-4 before:top-6' : layout.sub ? 'pt-1.5 before:top-[0.875rem]' : 'pt-3 before:top-5',
         layout.nextExample ? 'pb-1' : end,
         layout.border ? BORDER : '',
       ].join(' ')
@@ -350,7 +357,14 @@ class Controller {
     const meta = this.meta.get(el)
     const kind = meta?.kind ?? 'paragraph'
     const runs = kind === 'table' ? [] : readRuns(el)
-    return { kind, runs: kind === 'section' ? runs.map((run) => ({ text: run.text, marks: {} })) : runs, src: meta?.src, orig: meta?.orig, gap: meta?.gap }
+    return {
+      kind,
+      runs: kind === 'section' ? runs.map((run) => ({ text: run.text, marks: {} })) : runs,
+      src: meta?.src,
+      orig: meta?.orig,
+      gap: meta?.gap,
+      level: meta?.level,
+    }
   }
 
   private read(): Block[] {
@@ -392,7 +406,7 @@ class Controller {
       const layout = layoutOf(blocks, i)
       const key = this.keyOf(block, layout)
       const reused = key ? pool.get(key)?.shift() : undefined
-      const meta: Meta = { kind: block.kind, src: block.src, orig: block.orig, gap: block.gap, layout: key }
+      const meta: Meta = { kind: block.kind, src: block.src, orig: block.orig, gap: block.gap, level: block.level, layout: key }
       if (reused) {
         this.meta.set(reused, meta)
         return reused
@@ -575,7 +589,9 @@ class Controller {
           }
         }
       }
-      const { block: next, removed } = normalizeBlock(block, fixed[i - 1])
+      const { block: normalized, removed } = normalizeBlock(block, fixed[i - 1])
+      // Une sous-puce n'a de sens que sous une règle ; ailleurs, le niveau se perd.
+      const next = normalized.level && !isSubRule(normalized, fixed[i - 1]) ? { ...normalized, level: undefined } : normalized
       fixed.push(next)
       if (removed && sel) {
         for (const pos of [sel.start, sel.end]) if (pos.block === i) pos.offset = Math.max(0, pos.offset - removed)
@@ -676,6 +692,10 @@ class Controller {
         this.undo(key === 'y' || event.shiftKey ? 1 : -1)
         return
       }
+    }
+    if (event.key === 'Tab' && !mod && !event.altKey) {
+      if (this.indent(event.shiftKey ? -1 : 1)) event.preventDefault()
+      return
     }
     if (event.key === 'Enter') {
       event.preventDefault()
@@ -868,9 +888,9 @@ class Controller {
       this.commit(blocks, this.collapsedAt({ block: pos.block + 1, offset: 0 }), 'op')
       return
     }
-    // Entrée sur une règle ou un piège vide en sort, comme d'une liste.
+    // Entrée sur une règle ou un piège vide en sort, comme d'une liste (une sous-puce remonte d'abord d'un niveau).
     if (block.kind !== 'paragraph' && isEmptyBlock(block) && !shift) {
-      blocks[pos.block] = { ...block, kind: 'paragraph' }
+      blocks[pos.block] = block.level ? { ...block, level: undefined } : { ...block, kind: 'paragraph' }
       this.commit(blocks, this.collapsedAt(pos), 'op')
       return
     }
@@ -880,7 +900,7 @@ class Controller {
       pos.block,
       1,
       { ...block, runs: sliceRuns(block.runs, 0, pos.offset) },
-      { kind, runs: sliceRuns(block.runs, pos.offset) },
+      { kind, runs: sliceRuns(block.runs, pos.offset), level: kind === 'rule' ? block.level : undefined },
     )
     this.commit(blocks, this.collapsedAt({ block: pos.block + 1, offset: 0 }), 'op')
   }
@@ -889,7 +909,7 @@ class Controller {
     const blocks = this.read()
     const block = blocks[index]!
     if (block.kind === 'rule' || block.kind === 'warning' || block.kind === 'example') {
-      blocks[index] = { ...block, kind: 'paragraph' }
+      blocks[index] = block.level ? { ...block, level: undefined } : { ...block, kind: 'paragraph' }
       this.commit(blocks, this.collapsedAt({ block: index, offset: 0 }), 'op')
       return
     }
@@ -972,6 +992,27 @@ class Controller {
       if (to > from) out.push({ index, from, to })
     }
     return out
+  }
+
+  /**
+   * Tab fait d'une puce une sous-puce (sous la puce qui la précède), Maj+Tab la
+   * ramène au premier niveau. Rend faux, sans rien faire, si la sélection ne
+   * touche aucune puce : Tab garde alors son rôle de navigation.
+   */
+  private indent(step: 1 | -1): boolean {
+    const sel = this.current()
+    if (!sel) return false
+    const blocks = this.read()
+    let touched = false
+    for (let i = sel.start.block; i <= sel.end.block; i++) {
+      const block = blocks[i]
+      if (block?.kind !== 'rule') continue
+      touched = true
+      if (step === 1 && !block.level && RULE_FAMILY.has(blocks[i - 1]?.kind ?? 'paragraph')) blocks[i] = { ...block, level: 2 }
+      else if (step === -1 && block.level) blocks[i] = { ...block, level: undefined }
+    }
+    if (touched) this.commit(blocks, sel, 'op')
+    return touched
   }
 
   /** Fait des blocs sélectionnés des règles (ou des pièges) ; s'ils le sont tous déjà, des paragraphes. */

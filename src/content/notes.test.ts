@@ -35,7 +35,7 @@ describe('rappels de cours', () => {
     const blocks = parseNotes('- Une syllabe : -er + than.')
     expect(blocks[0]).toEqual({
       kind: 'rules',
-      rules: [{ label: 'Une syllabe', body: '-er + than.', example: null }],
+      rules: [{ label: 'Une syllabe', body: '-er + than.', example: null, children: [] }],
     })
   })
 
@@ -44,6 +44,13 @@ describe('rappels de cours', () => {
     const long = '- Quand la condition est plausible et que rien ne s’y oppose : on garde le présent.'
     const blocks = parseNotes(long)
     expect(blocks[0].kind === 'rules' && blocks[0].rules[0].label).toBeNull()
+  })
+
+  it('range sous la règle précédente les lignes « - » indentées', () => {
+    const blocks = parseNotes(['- Le classement :', '  - Un.', '  - Deux, qui se', '    poursuit.', '- Autre.'].join('\n'))
+    const rules = blocks[0].kind === 'rules' ? blocks[0].rules : []
+    expect(rules.map((rule) => rule.body)).toEqual(['Le classement :', 'Autre.'])
+    expect(rules[0].children.map((rule) => rule.body)).toEqual(['Un.', 'Deux, qui se poursuit.'])
   })
 
   it('rattache une ligne indentée à la règle qu’elle illustre', () => {
@@ -55,6 +62,7 @@ describe('rappels de cours', () => {
           label: null,
           body: 'If + présent simple, … will + base verbale.',
           example: 'If it rains, we will stay at home.',
+          children: [],
         },
       ],
     })

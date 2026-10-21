@@ -289,7 +289,19 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
             {block.rules.map((rule, position) => (
               <li key={position} className="flex gap-3 border-b border-ink/8 py-3 last:border-b-0">
                 <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${tone.marker}`} />
-                <RuleBody rule={rule} />
+                <div className="flex min-w-0 flex-1 flex-col gap-2">
+                  <RuleBody rule={rule} />
+                  {rule.children.length > 0 && (
+                    <ul className="flex flex-col gap-2">
+                      {rule.children.map((child, i) => (
+                        <li key={i} className="flex gap-3">
+                          <span className={`mt-2 h-1 w-1 shrink-0 rounded-full ${tone.marker}`} />
+                          <RuleBody rule={child} />
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </li>
             ))}
           </ul>
