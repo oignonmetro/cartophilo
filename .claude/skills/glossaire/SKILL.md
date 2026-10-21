@@ -103,17 +103,34 @@ et la remplacer par un renvoi.
 - **L'attaque dit ce que la notion fait**, pas sa définition de dictionnaire :
   « Chez Plotin, la conversion est le mouvement par lequel ce qui procède se
   retourne vers sa source, et c'est ce retournement qui le constitue. »
+- **L'attaque n'est pas en gras d'un bout à l'autre** : on y colore les seuls
+  mots qui portent l'idée. Le nom de la notion en violet et gras
+  (`{violet}**vie**{/violet}`), la conception naïve écartée en rose, la
+  thèse retenue en vert, sur les mots décisifs seulement (`{green}activité{/green}`,
+  `{green}réalités incorporelles{/green}`), pas sur toute la proposition
+  (retouche de l'utilisateur sur l'entrée Vie, 2026-10-21).
+- **L'intitulé d'une étape énonce la thèse avec la précision qui la rend
+  exacte** : « Il faut un principe incorporel qui ait la vie par
+  lui-même », plutôt que « un principe » tout court.
 - **Le problème qu'elle résout**, puis **ses lieux décisifs**, chacun cité
-  (GF, mot pour mot, entre `« »`) et expliqué, avec ses repères au format
-  « (traité 50 [III, 5], chap. 2, l. 35-36) » à la première occurrence d'un
-  traité, puis « (III, 5, 4) ».
+  (GF, mot pour mot, entre `« »`) et expliqué, avec un repère de la forme
+  **« (traité 30, chap. 10) »**, partout et à chaque fois : le numéro
+  chronologique et le chapitre, sans la numérotation des Ennéades, même à
+  la deuxième occurrence d'un traité ; « (traité 45, chap. 3, l. 36-38) »
+  quand les lignes sont sûres.
+- **Les termes techniques grecs en violet**, en plus de l'italique :
+  `{violet}*pollakhôs legomenon*{/violet}`.
 - **Ce qu'elle n'est pas** : le contresens principal, désamorcé dans le fil
-  du rappel ou par un piège `! …` en fin.
+  du rappel ou par un piège `! …` en fin. **Un piège ne répète pas un
+  paragraphe** : si une étape du rappel dit déjà que l'Un est au-dessus de
+  la vie, le piège « l'Un n'est pas la vie première » est en trop. Les
+  pièges sont réservés aux contresens que le fil ne désamorce pas lui-même.
 - **Les renvois** (§ 4) là où le rappel touche une notion qui a, ou aura,
   son entrée.
 - **Repères** : la GF ne marque ses lignes que toutes les cinq. Donner le
-  chapitre seul (« (I, 4, 3) »), sauf si une note ou une notice fixe les
-  lignes (« (III, 7, 3, 36-38) »). Jamais une ligne déduite.
+  chapitre seul (« (traité 46, chap. 3) »), sauf si une note ou une notice
+  fixe les lignes (« (traité 45, chap. 3, l. 36-38) »). Jamais une ligne
+  déduite.
 - **Citer des phrases qui se tiennent.** Une citation tronquée qui ne se lit
   plus seule (« … et qu'elle a une signification… ») se coupe en deux
   citations entières plutôt que de garder un « […] ».
@@ -151,6 +168,9 @@ demande ; il peut porter une couleur ou un gras à l'extérieur des crochets
   elle (modification minimale de l'autre fichier, sans le refondre).
 - **Le texte affiché est littéral** : pas de gras ni d'italique entre les
   crochets, la mise en relief se met autour.
+- **Le lien porte le nom, pas l'article** : `l'{violet}[[g-ame|âme]]{/violet}`
+  ou `{violet}l'[[g-ame|âme]]{/violet}`, jamais l'article à la fois dehors et
+  dedans (« l'l'âme »).
 
 Dans l'application, le renvoi est souligné en pointillé et ouvre l'entrée
 visée dans une feuille, par-dessus l'écran en cours, sans quitter la leçon
