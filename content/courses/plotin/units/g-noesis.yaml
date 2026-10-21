@@ -1,5 +1,76 @@
+# Entrée du glossaire de Plotin (skill glossaire), entrée écrite (elle était vide), 2026-10-21.
+# Tirée de l'ancienne fiche Intellect (trois leçons) ; les cartes reprises
+# gardent leur identifiant. Citations vérifiées sur la GF.
+
 id: g-noesis
 title: Pensée (`noêsis`)
+subtitle: La pensée de l'Intellect, qui saisit tout d'un seul coup ce que la réflexion de l'âme déroule pas à pas
 icon: book
-color: teal
-lessons: []
+color: coral
+lessons:
+- id: g-noesis-l1
+  title: Pensée
+  notes: |-
+    Chez Plotin, la {violet}**pensée**{/violet} (*noêsis*) au sens propre est celle de l'[[g-intellect|Intellect]] : {green}une saisie de tout d'un seul coup{/green}, qui n'a rien à chercher parce qu'elle est ce qu'elle pense, à la différence de {pink}la réflexion de l'âme{/pink}, qui va d'une idée à l'autre.
+
+    __**Deux manières de penser.**__ Notre pensée ordinaire est {violet}discursive{/violet} (*dianoia*) : elle va d'une prémisse à une conclusion, d'une idée à la suivante, dans le [[g-temps|temps]]. La pensée de l'Intellect saisit d'un coup ce que la *dianoia* déroule. **Elle n'a pas à chercher, parce qu'elle a déjà tout, et qu'elle est ce qu'elle pense** : les [[g-intelligibles-dans-l-intellect|intelligibles sont en elle]].
+
+    | Pensée | Comment elle procède | À qui elle appartient |
+    | discursive | d'une idée à l'autre, dans le temps | l'Âme |
+    | intuitive | tout d'un seul coup | l'Intellect |
+
+    __**L'image des hiéroglyphes.**__ Les {sky}sages d'Égypte{/sky}, dit Plotin, n'écrivaient pas avec des lettres, qui « développent des propositions et des prémisses », mais « en dessinant des images et __en inscrivant sur les murs de leurs temples une seule image pour chaque chose__ », ils « manifestent ainsi __le caractère non discursif__ de l'intelligible » ([[traite31|traité 31]], chap. 6). Chaque image y est « une science, un savoir, une réalité particulière __donnée tout d'un coup__ ».
+
+    __**Distincte sans être séparée.**__ Une science ne contient pas ses théorèmes comme un sac des billes : « chaque théorème est une partie de la totalité de la science, non pas parce qu'il en est localement séparé, mais parce qu'il a, dans le tout, __une puissance particulière__ » ([[traite5|traité 5]], chap. 8). Ainsi chaque Forme pensée est distincte des autres sans être séparée du tout.
+
+    __**Une pensée qui reste double.**__ Même pensant tout d'un coup, la pensée garde la dualité de ce qui pense et de ce qui est pensé ; c'est pourquoi le premier principe, absolument simple, ne pense pas ([[traite24|traité 24]], chap. 1-2), et pourquoi la pensée la plus haute se dépasse dans l'amour de l'[[g-intellect-amoureux|Intellect amoureux]].
+
+    ! Plotin ne connaissait sans doute pas le fonctionnement réel des hiéroglyphes, qui notent aussi des sons : son image vaut pour ce qu'elle fait comprendre.
+
+    **Voir aussi** : [[g-intellect|Intellect]] · [[g-dianoia|Réflexion]] · [[g-intelligibles-dans-l-intellect|Intelligibles dans l'Intellect]] · [[g-noothenai|Devenir intellect]]
+  tables:
+  - table: pensee-comment-elle-procede-a-qui-elle-appartient
+    exercises:
+    - {kind: bank, column: Comment elle procède}
+    - {kind: cell, column: Pensée}
+  points:
+  - id: g-intellect-l1-14
+    sentence: La pensée qui raisonne pas à pas, en enchaînant des propositions les unes après les autres, propre à l'Âme et non à l'Intellect, se nomme, en grec, la ___.
+    answer: dianoia
+    alt: []
+  - id: g-intellect-l3-q1
+    sentence: "La *dianoia*, pensée discursive qui procède d'une idée à l'autre dans le temps, est le propre de l'___, jamais de l'Intellect, qui saisit tout d'un seul coup."
+    answer: Âme
+    alt: ["âme", "ame"]
+  - id: g-intellect-l3-q2
+    sentence: "La pensée de l'Intellect n'a pas à chercher, parce qu'elle a déjà tout et qu'elle ___ ce qu'elle pense."
+    answer: est
+    alt: []
+  - id: g-intellect-l3-q3
+    sentence: "Les sages d'Égypte n'utilisent pas les lettres, qui « développent des propositions et des ___ », mais écrivent « en inscrivant sur les murs de leurs temples une seule image pour chaque chose » (traité 31, chap. 6, l. 3-6)."
+    answer: prémisses
+    alt: ["premisses"]
+  - id: g-intellect-l3-q4
+    sentence: "En inscrivant sur les murs de leurs temples une seule image pour chaque chose, les sages d'Égypte « manifestent ainsi le caractère non ___ de l'intelligible » (traité 31, chap. 6, l. 5-7)."
+    answer: discursif
+    alt: []
+  - id: g-intellect-l3-q5
+    sentence: "Dans l'écriture des sages d'Égypte, selon Plotin, chaque image est « une science, un savoir, une réalité particulière donnée ___ » (traité 31, chap. 6, l. 7-9)."
+    answer: tout d'un coup
+    alt: ["d'un seul coup"]
+  - id: g-intellect-l3-q6
+    sentence: "Pour montrer que la pensée de l'Intellect est intuitive et non discursive, Plotin la compare à l'écriture des sages d'Égypte, au chapitre 6 du traité ___."
+    answer: 31 (V, 8)
+    alt: ["31", "V, 8"]
+  - id: g-intellect-l3-q7
+    sentence: "Chaque théorème est une partie de la science, « non pas parce qu'il en est ___ séparé, mais parce qu'il a, dans le tout, une puissance particulière » (traité 5, chap. 8, l. 5-7)."
+    answer: localement
+    alt: []
+  - id: g-intellect-l3-q8
+    sentence: "Chaque théorème est une partie de la science, « non pas parce qu'il en est localement séparé, mais parce qu'il a, dans le tout, une ___ » (traité 5, chap. 8, l. 5-7)."
+    answer: puissance particulière
+    alt: []
+  - id: g-intellect-l3-q9
+    sentence: "Comme les théorèmes d'une science, chaque Forme est distincte des autres sans être ___ du tout."
+    answer: séparée
+    alt: ["separee"]
