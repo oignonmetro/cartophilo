@@ -1,5 +1,98 @@
+# Entrée du glossaire de Plotin (skill glossaire), écrite le 2026-10-21 (elle
+# était vide). Citations vérifiées sur la GF (I, 7, 1-2 ; VI, 9, 6 ; V, 5,
+# 12 ; VI, 7, 22 ; VI, 8, 13). Le « bien pour les autres » (VI, 7, 41) a sa
+# carte dans l'entrée Un ; la douceur du Bien et la stupeur du beau, dans
+# l'entrée Désir.
+
 id: g-agathon
 title: Bien (`agathon`)
+subtitle: Le nom de l'Un en tant que toutes choses sont suspendues à lui et le désirent, bien pour les autres et non pour lui-même, antérieur au beau
 icon: book
 color: teal
-lessons: []
+lessons:
+- id: g-agathon-l1
+  title: Bien
+  notes: |-
+    Chez Plotin, le {violet}**Bien**{/violet} (*agathon*) n'est {pink}pas une qualité que l'Un posséderait{/pink} : c'est le {green}nom de l'Un en tant que toutes choses sont suspendues à lui et le désirent{/green}, lui qui n'a besoin de rien.
+
+    __**Un nom de relation, non une propriété.**__ L'[[g-un|Un]] et le Bien sont une seule nature ; le premier nom dit qu'il est sans parties, le second ce qu'il est pour les autres. Car « il n'y a pour l'Un aucun bien, ni, par conséquent, aucune volonté de quoi que ce soit ; mais il est __au-dessus du bien__ et il est le bien non pour lui-même, mais pour les autres choses » ([[traite9|traité 9]], chap. 6). La difficulté est d'admettre qu'un bien ne soit pas bon pour lui-même : c'est qu'**avoir un bien, c'est en manquer d'abord**, et l'Un ne manque de rien.
+
+    __**Ce à quoi tout est suspendu.**__ Chaque chose trouve son bien dans l'activité conforme à sa nature ; mais si une activité se dirige vers le meilleur, elle vise le Bien pris absolument. Celui-ci ne se tourne vers rien : « il faut poser le Bien comme __ce à quoi toutes choses sont suspendues, alors que lui n'est suspendu à rien__ » ([[traite54|traité 54]], chap. 1). {yellow}Il est comme le centre vers lequel convergent tous les rayons, ou le soleil d'où la lumière ne se coupe jamais{/yellow}. **Ce n'est pas lui qui agit sur les choses : ce sont elles qui dirigent leur activité vers lui.**
+
+    __**Tout le possède, même sans le savoir.**__ Les choses sans âme se tournent vers l'âme, l'âme vers le Bien par l'Intellect ; et chacune possède quelque chose du Bien, car elle est une, est, et a une forme, mais ce n'est qu'« une image du Bien, certes, car ce à quoi elle participe, ce sont __des images de l'être et de l'Un__ » (chap. 2). Le désir du Bien est même antérieur à toute conscience : il est présent à ceux qui dorment (voir [[g-desir|désir]]).
+
+    __**Antérieur au beau.**__ Ce désir, « plus originel et qui passe inaperçu, révèle que __le Bien est plus originel que le Beau__ et qu'il lui est antérieur » ; et « le Bien n'a pas besoin du Beau, alors que le Beau a besoin du Bien » ([[traite32|traité 32]], chap. 12). La [[g-beaute|beauté]] de l'Intellect laisse l'âme indifférente tant que le Bien ne l'a pas éclairée : chaque Forme « ne devient objet de désir que quand __le Bien lui donne sa couleur__ » ([[traite38|traité 38]], chap. 22).
+
+    __**Libre, parce qu'il est ce qu'il veut.**__ Le [[traite39|traité 39]] parle même d'une volonté du Bien : « sa volonté et lui-même __ne font qu'un__ » (chap. 13). Il ne choisit pas entre des possibles, il coïncide avec soi ; et Plotin prévient que ces noms ne sont avancés que « dans le but de persuader », par un relâchement de la pensée.
+
+    | Ce qu'on attend | Ce qu'est le Bien |
+    | une qualité de l'Un | un nom de sa relation aux autres |
+    | bon pour lui-même | au-dessus du bien, bien pour les autres |
+    | une cause qui agit sur les choses | ce vers quoi elles dirigent leur activité |
+    | le beau suprême | antérieur au beau, qui lui donne sa couleur |
+
+    ! La volonté et la liberté du Bien ne font pas de l'Un une personne qui délibère : Plotin les dit pour écarter le hasard et la nécessité subie, en avertissant que ces mots ne conviennent pas au sens propre.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | traité 9, chap. 6 | au-dessus du bien, bien pour les autres |
+    | traité 54, chap. 1 | tout est suspendu au Bien, lui à rien |
+    | traité 32, chap. 12 | le Bien antérieur au Beau |
+    | traité 38, chap. 22 | le Bien donne aux Formes leur couleur |
+    | traité 39, chap. 13 | sa volonté et lui ne font qu'un |
+
+    **Voir aussi** : [[g-un|Un]] · [[g-desir|Désir]] · [[g-beaute|Beauté]] · [[g-au-dela-de-l-etre|Au-delà de l'être]] · [[traite54|Traité 54]]
+  tables:
+  - table: ce-qu-on-attend-ce-qu-est-le-bien
+    exercises:
+    - {kind: bank, column: Ce qu'est le Bien}
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-agathon-l1-q1
+    sentence: "Le nom de l'Un en tant que toutes choses sont suspendues à lui et le désirent se dit en grec translittéré ___."
+    answer: agathon
+    alt: ["agathón", "to agathon"]
+  - id: g-agathon-l1-q2
+    sentence: "« Il n'y a pour l'Un aucun bien, ni, par conséquent, aucune volonté de quoi que ce soit ; mais il est ___ du bien » (traité 9, chap. 6)."
+    answer: au-dessus
+    alt: ["au dessus"]
+  - id: g-agathon-l1-q3
+    sentence: "« Il faut poser le Bien comme ce à quoi toutes choses sont ___, alors que lui n'est suspendu à rien » (traité 54, chap. 1)."
+    answer: suspendues
+    alt: []
+  - id: g-agathon-l1-q4
+    sentence: "Le Bien reste immobile, et toutes choses se retournent vers lui, « comme dans un cercle où tous les ___ sont tournés vers le centre » (traité 54, chap. 1)."
+    answer: rayons
+    alt: []
+  - id: g-agathon-l1-q5
+    sentence: "Le Bien n'agit pas en dirigeant son activité vers les choses : « ce sont elles qui dirigent vers lui leur ___ » (traité 54, chap. 1)."
+    answer: activité
+    alt: ["activite"]
+  - id: g-agathon-l1-q6
+    sentence: "Chaque chose participe au Bien, mais à « une image du Bien, certes, car ce à quoi elle participe, ce sont des images de l'être et de l'___ » (traité 54, chap. 2)."
+    answer: Un
+    alt: ["un"]
+  - id: g-agathon-l1-q7
+    sentence: "« Le Bien n'a pas besoin du ___, alors que le Beau a besoin du Bien » (traité 32, chap. 12)."
+    answer: Beau
+    alt: ["beau"]
+  - id: g-agathon-l1-q8
+    sentence: "Chaque Forme « ne devient objet de désir que quand le Bien lui donne sa ___ » (traité 38, chap. 22)."
+    answer: couleur
+    alt: []
+  - id: g-agathon-l1-q9
+    sentence: "Sans la lumière du Bien, la beauté de l'Intellect laisse l'âme « étendue, ___ » (traité 38, chap. 22)."
+    answer: indifférente
+    alt: ["indifferente"]
+  - id: g-agathon-l1-q10
+    sentence: "« Sa volonté et lui-même ne font qu'___ » : le Bien ne choisit pas entre des possibles, il coïncide avec soi (traité 39, chap. 13)."
+    answer: un
+    alt: []
+  - id: g-agathon-l1-q11
+    sentence: "Plotin prévient que les noms de volonté et de liberté du Bien ne sont avancés que « dans le but de ___ » (traité 39, chap. 13)."
+    answer: persuader
+    alt: []
