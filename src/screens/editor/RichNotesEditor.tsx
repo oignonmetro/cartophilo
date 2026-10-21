@@ -294,6 +294,20 @@ class Controller {
     on('paste', (event) => this.onPaste(event))
     on('copy', (event) => this.onCopy(event, false))
     on('cut', (event) => this.onCopy(event, true))
+    // Windows : le double-clic sélectionne le mot et l'espace qui le suit ; on retire cet espace.
+    on('dblclick', () => {
+      const selection = window.getSelection()
+      if (!selection || selection.rangeCount === 0) return
+      const range = selection.getRangeAt(0)
+      const end = range.endContainer
+      if (range.collapsed || end.nodeType !== Node.TEXT_NODE) return
+      const text = (end.textContent ?? '').slice(0, range.endOffset)
+      const trimmed = text.replace(/\s+$/, '').length
+      if (trimmed === text.length || (range.startContainer === end && trimmed <= range.startOffset)) return
+      range.setEnd(end, trimmed)
+      selection.removeAllRanges()
+      selection.addRange(range)
+    })
     on('dragstart', (event) => event.preventDefault())
     on('drop', (event) => event.preventDefault())
     const onSelection = () => this.onSelectionChange()
