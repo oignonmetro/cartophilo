@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { noteLinkTargets, parseInline, parseNotes, plainInline, splitAside, type NoteRule } from './notes'
+import { leadSentence, noteLinkTargets, parseInline, parseNotes, plainInline, splitAside, type NoteRule } from './notes'
 
 describe('rappels de cours', () => {
   it('recolle une phrase repliée sur plusieurs lignes', () => {
@@ -181,6 +181,12 @@ describe('mise en forme dans le texte', () => {
     ])
     expect(noteLinkTargets('la [[g-vie-veritable|vie véritable]] et [[g-ame|l’âme]]')).toEqual(['g-vie-veritable', 'g-ame'])
     expect(plainInline('la [[g-vie|vie]]')).toBe('la vie')
+  })
+
+  it('tire d’un rappel sa première phrase, sans marqueurs ni point cité', () => {
+    const notes = 'Chez Plotin, la {violet}**vie**{/violet} n’est pas « une chose. » mais une [[g-ame|activité]]. Suite.\n\nAutre.'
+    expect(leadSentence(notes)).toBe('Chez Plotin, la vie n’est pas « une chose. » mais une activité.')
+    expect(leadSentence('- une règle')).toBe('')
   })
 
   it('imbrique du gras à l’intérieur d’une couleur', () => {

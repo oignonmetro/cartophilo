@@ -411,7 +411,7 @@ export const unitColorSchema = z.enum([
 ])
 
 /** Couleur du marqueur `{couleur}…{/couleur}` dans un rappel (voir `content/notes.ts`). */
-export const noteColorSchema = z.enum(['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink'])
+export const noteColorSchema = z.enum(['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink', 'plum'])
 
 export const unitSchema = z.object({
   id: slug,

@@ -337,7 +337,9 @@ les cours :
   reprend (un dialogue de Platon, un discours qu'elle cite) ;
 - `coral` : les propriétés établies et les conclusions ;
 - `yellow` : les images et les analogies (l'aveugle-né, la caverne) ;
-- `amber` : libre, pour une nuance locale.
+- `amber` : libre, pour une nuance locale ;
+- `plum` : les traités, réservée aux renvois `[[traiteN|traité N]]` qui la
+  prennent d'office (ne pas l'écrire à la main).
 
 Les paires vert/rouge, ou vert/rose, opposent les deux pôles d'une même
 phrase (la laideur est un mélange / la vertu est une purification).

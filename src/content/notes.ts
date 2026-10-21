@@ -290,6 +290,27 @@ export function plainInline(text: string): string {
 }
 
 /**
+ * La première phrase d'un rappel, sans marqueurs : la définition qu'affiche
+ * un renvoi au survol (voir `NoteLink`). Une phrase s'arrête au premier point
+ * hors guillemets ; un rappel qui ne commence pas par de la prose n'en a pas.
+ */
+export function leadSentence(notes: string): string {
+  const first = parseNotes(notes)[0]
+  if (first?.kind !== 'paragraph') return ''
+  const text = plainInline(first.text)
+  let depth = 0
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i]
+    if (char === '«') depth++
+    else if (char === '»') depth = Math.max(0, depth - 1)
+    else if (depth === 0 && (char === '.' || char === '?') && (i === text.length - 1 || text[i + 1] === ' ')) {
+      return text.slice(0, i + 1)
+    }
+  }
+  return text
+}
+
+/**
  * Découpe le commentaire final entre parenthèses, pour l'afficher en retrait.
  * « I will call you as soon as I arrive. (jamais « as soon as I will arrive ») »
  */

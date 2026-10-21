@@ -1,4 +1,5 @@
-import { Fragment, useEffect, useLayoutEffect, useRef, type ReactNode } from 'react'
+import { Fragment, useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react'
+import { createPortal } from 'react-dom'
 import { motion } from 'framer-motion'
 import type { RuleExercise } from '@/engine/exercises'
 import { parseInline, parseNotes, splitAside, type Inline, type NoteBlock, type NoteRule } from '@/content/notes'
@@ -69,6 +70,7 @@ export const INLINE_COLORS: Record<NoteColor, string> = {
   green: 'text-green-deep',
   red: 'text-red-deep',
   pink: 'text-pink-deep',
+  plum: 'text-plum-deep',
 } as const
 
 export type Tone = (typeof TONES)[keyof typeof TONES]
@@ -509,14 +511,23 @@ export function RichGaps({ text, renderGap }: { text: string; renderGap: (index:
 }
 
 /**
- * Un renvoi vers une autre entrée du cours : souligné en pointillé, il ouvre
- * l'entrée en feuille (voir `NoteRefSheet`). Une cible absente du cours
- * ouvert, ou un rendu sans fournisseur, le laisse en texte simple.
+ * Un renvoi vers une autre entrée du cours, ou vers un traité : souligné en
+ * pointillé, il ouvre sa cible en feuille (voir `NoteRefSheet`). Un traité
+ * prend toujours la teinte prune, réservée aux traités. Au survol de la
+ * souris, une bulle donne la définition de l'entrée (la première phrase de son
+ * rappel) ou le titre du traité. Une cible absente du cours ouvert, ou un
+ * rendu sans fournisseur, le laisse en texte simple.
  */
 function NoteLink({ target, text, colorClass }: { target: string; text: string; colorClass?: string }) {
   const ref = useNoteRef()
-  if (!ref || !ref.exists(target)) return <span>{text}</span>
-  const open = () => ref.open(target)
+  const [hover, setHover] = useState<DOMRect | null>(null)
+  const resolved = ref?.resolve(target) ?? null
+  if (!ref || !resolved) return <span>{text}</span>
+  const open = () => {
+    setHover(null)
+    ref.open(target)
+  }
+  const tint = resolved.kind === 'treatise' ? INLINE_COLORS.plum : (colorClass ?? 'text-ink')
   return (
     <span
       role="link"
@@ -532,7 +543,35 @@ function NoteLink({ target, text, colorClass }: { target: string; text: string; 
         event.stopPropagation()
         open()
       }}
-      className={`cursor-pointer font-bold underline decoration-dotted decoration-2 underline-offset-[3px] ${colorClass ?? 'text-ink'}`}
+      onMouseEnter={(event) => {
+        // Pas de bulle au toucher : le premier appui ouvre directement la cible.
+        if (resolved.hint && window.matchMedia('(hover: hover)').matches) {
+          setHover(event.currentTarget.getBoundingClientRect())
+        }
+      }}
+      onMouseLeave={() => setHover(null)}
+      className={`cursor-pointer font-bold underline decoration-dotted decoration-2 underline-offset-[3px] ${tint}`}
+    >
+      {text}
+      {hover && createPortal(<LinkHint rect={hover} text={resolved.hint} />, document.body)}
+    </span>
+  )
+}
+
+/**
+ * La bulle d'un renvoi, posée sous le lien (au-dessus s'il est trop bas) et
+ * dans `document.body` : dans une feuille, un ancêtre animé ou défilant la
+ * couperait.
+ */
+function LinkHint({ rect, text }: { rect: DOMRect; text: string }) {
+  const width = Math.min(320, window.innerWidth - 16)
+  const left = Math.max(8, Math.min(rect.left, window.innerWidth - width - 8))
+  const below = rect.bottom + 120 < window.innerHeight
+  return (
+    <span
+      role="tooltip"
+      style={{ left, width, ...(below ? { top: rect.bottom + 6 } : { bottom: window.innerHeight - rect.top + 6 }) }}
+      className="pointer-events-none fixed z-50 rounded-xl bg-ink px-3 py-2 text-left text-xs leading-snug font-semibold text-paper shadow-lg"
     >
       {text}
     </span>

@@ -1135,7 +1135,7 @@ function TableBlock({
   )
 }
 
-const COLORS = ['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink'] as const
+const COLORS = ['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink', 'plum'] as const
 
 const SWATCH: Record<NoteColor, string> = {
   teal: 'bg-teal',
@@ -1147,6 +1147,7 @@ const SWATCH: Record<NoteColor, string> = {
   green: 'bg-green',
   red: 'bg-red',
   pink: 'bg-pink',
+  plum: 'bg-plum',
 }
 
 export function RichNotesEditor({

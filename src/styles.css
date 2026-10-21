@@ -116,6 +116,15 @@
   --color-pink-deep: #db2777;
 
   /*
+   * `plum`, réservée aux traités cités dans un rappel (les renvois
+   * `[[traiteN|…]]` la prennent d'office, voir `NoteLink`) : à 285°, elle
+   * occupe le seul grand écart qui restait libre, entre `violet` (247°) et
+   * `pink` (330°).
+   */
+  --color-plum: #c77dec;
+  --color-plum-deep: #a347d1;
+
+  /*
    * Teintes des pistes et des unités (`color` dans le contenu, voir
    * `unitColorSchema`), séparées de la palette des rappels ci-dessus
    * (`{couleur}…{/couleur}`, voir `noteColorSchema`). Les deux palettes
