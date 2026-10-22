@@ -52,8 +52,9 @@ notebook NotebookLM, puis consigner la réponse ici.
   une entrée à part entière, avec ses cartes, qui portent sur le critère et
   sur ce qui sépare les pôles.
 
-Avant d'écrire, lire les titres et sous-titres des entrées existantes
-(`grep -h "^title:\|^subtitle:" content/courses/<cours>/units/g-*.yaml`) :
+Avant d'écrire, lire les titres des entrées existantes et leurs définitions
+(`grep -h "^title:" content/courses/<cours>/units/g-*.yaml`, et
+`content/courses/<cours>/definitions.yaml`) :
 la notion a peut-être déjà une entrée, ou une entrée voisine qui doit
 recevoir un renvoi vers la nouvelle.
 
@@ -100,14 +101,24 @@ Une leçon, un rappel, qui tient sur un écran ou un peu plus. S'il déborde,
 c'est qu'il traite deux notions : en sortir une, qui deviendra une entrée,
 et la remplacer par un renvoi.
 
-- **L'attaque dit ce que la notion fait**, pas sa définition de dictionnaire :
-  « Chez Plotin, la conversion est le mouvement par lequel ce qui procède se
-  retourne vers sa source, et c'est ce retournement qui le constitue. »
-- **Sa première phrase est la définition de l'entrée**, et elle doit tenir
-  seule : c'est elle qu'affiche la bulle d'un renvoi vers l'entrée, au
-  survol de la souris (`leadSentence`). Donc une phrase complète, sans renvoi
-  à la suite (« ce qui suit », « cette notion »), de 200 caractères environ
-  au plus, qui commence de préférence par « Chez Plotin, la notion… ».
+- **La définition s'écrit à part**, dans `content/courses/<cours>/definitions.yaml`,
+  sous l'identifiant de l'entrée : `g-temps: 'la {green}vie de l'âme{/green} qui, …'`.
+  C'est un **attribut** qui complète « la notion est … » : sans majuscule ni
+  point final, qui tient seul (aucun « ce qui suit »), de 200 caractères
+  environ au plus. Elle dit ce que la notion fait, pas une définition de
+  dictionnaire. Elle sert quatre fois : la bulle d'un renvoi vers l'entrée,
+  au survol (« Temps : la vie de l'âme… ») ; l'en-tête du rappel ; le
+  sous-titre de l'entrée dans la liste (l'entrée n'a plus de `subtitle:`) ;
+  le grand exercice de révision du glossaire, qui la fait associer à sa
+  notion et à son terme grec (QCM, association, écrit). Elle peut porter
+  couleurs et renvois ; ils sont retirés dans la bulle et l'exercice.
+- **L'en-tête du rappel cite la définition par `[def]`**, sans la recopier :
+  « Chez Plotin, le {violet}**temps**{/violet} (*khronos*) est [def]. »
+  (`[def:g-autre]` cite celle d'une autre entrée). La conception écartée,
+  en rose, vient juste après, dans une phrase à elle : « Il n'est
+  {pink}ni le mouvement des astres ni la mesure de ce mouvement{/pink}. »
+  Une définition partagée par deux formules de l'en-tête ne s'y écrit
+  qu'une fois : la corriger dans `definitions.yaml` la corrige partout.
 - **L'attaque n'est pas en gras d'un bout à l'autre** : on y colore les seuls
   mots qui portent l'idée. Le nom de la notion en violet et gras
   (`{violet}**vie**{/violet}`), la conception naïve écartée en rose, la
@@ -231,8 +242,9 @@ demande ; il peut porter une couleur ou un gras à l'extérieur des crochets
 Dans l'application, le renvoi est souligné en pointillé et ouvre sa cible
 dans une feuille, par-dessus l'écran en cours, sans quitter la leçon
 (`NoteRefSheet`) : l'entrée visée, ou, pour `[[traiteN|…]]`, le résumé du
-traité. Au survol de la souris, une bulle donne la première phrase de
-l'entrée (sa définition) ou le titre du traité. L'éditeur visuel garde le
+traité. Au survol de la souris, une bulle donne la définition de l'entrée
+(`definitions.yaml`, à défaut la première phrase du rappel) ou le titre du
+traité. L'éditeur visuel garde le
 renvoi tel quel. `content:check` refuse un renvoi dont la cible n'est pas
 une unité du cours, et signale un renvoi glissé dans une carte.
 
@@ -265,7 +277,6 @@ quelques mots ce dont elle a besoin d'une notion voisine.
 
 id: g-vie-parfaite
 title: Vie parfaite (`teleia zôê`)
-subtitle: <une ligne, ce que la notion fait>
 icon: book
 color: coral
 lessons:
@@ -281,13 +292,23 @@ lessons:
 - Identifiant `g-` suivi du nom français sans accents, en tirets
   (`g-vie-parfaite`, `g-multiplicite-sensible`). Cartes `…-l1-qN`.
 - Titre « Notion (`terme grec`) » ; une distinction s'intitule par ses pôles
-  ou par son nom usuel (« Trois vies »).
+  ou par son nom usuel (« Trois vies »). Le grand exercice lit la notion et
+  le terme grec dans ce titre : un terme grec porté par deux entrées
+  (« Un » et « Unité », *hen*) ne leur est pas demandé ; pour lui donner un
+  autre terme, ou à une entrée qui n'en a pas dans son titre, écrire la
+  définition sous la forme `g-x: { def: '…', grec: '…' }`.
+- Pas de `subtitle:` : la définition en tient lieu (si une entrée en porte
+  un, il l'emporte sur la définition dans la liste).
+- Ajouter la définition à `definitions.yaml` en même temps que l'entrée ;
+  `content:check` signale une entrée écrite qui n'en a pas.
 - `group:` réunit sous un même repli des entrées consécutives d'une même
   famille (voir Multiplicité) ; ne l'employer qu'après accord de
   l'utilisateur.
 - **Branchement** : ajouter l'identifiant à `units:` de la piste
-  `glossaire` dans `content/courses/<cours>/course.yaml`, à côté de l'entrée
-  générale pour une sous-entrée, sinon en fin de liste. D'autres sessions
+  `glossaire` dans `content/courses/<cours>/course.yaml`, n'importe où :
+  la piste se range d'elle-même par ordre alphabétique des titres, dans
+  l'application comme dans l'éditeur visuel (`ALPHABETICAL_TRACKS`,
+  `sortByTitle`). D'autres sessions
   travaillent peut-être sur le même cours : ne toucher qu'à cette ligne,
   aux fichiers de l'entrée et aux renvois inverses, jamais régénérer la
   liste.
@@ -317,7 +338,11 @@ cette skill) se scinde **sur demande, une fiche à la fois** :
    « Contenu valide », puis pour Plotin
    `python -I .claude/skills/cours-traite/gf.py verifie <fichier> <id de la leçon>`
    et `… reprises …` : aucune citation introuvable, aucune reprise sans
-   guillemets.
+   guillemets. La GF extraite colle certains mots coupés en fin de ligne
+   (« luimême », « ellemême ») : une citation qui les contient sort
+   « introuvable » à tort ; vérifier le passage avec `gf.py chapitre`, puis
+   passer. Un `[def]` n'est pas une citation : il n'entre pas dans ce
+   contrôle.
 3. `npm run content:build`, regarder le rendu de l'entrée dans le navigateur
    intégré.
 4. Incrémenter `version:` du `course.yaml`.

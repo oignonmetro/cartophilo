@@ -486,9 +486,17 @@ export type TreatiseColumn = 'title' | 'number' | 'thesis' | 'example'
  */
 export type TreatiseLink = 'title-number' | 'title-thesis' | 'title-example'
 
+/**
+ * Ce que l'exercice fait travailler : des traités (par défaut), ou les notions
+ * du glossaire (`terms`), où la notion tient lieu de titre, le terme grec de
+ * numérotation et la définition de thèse. Seules les consignes changent.
+ */
+export type DrillDomain = 'treatises' | 'terms'
+
 export interface TreatiseMatchExercise {
   kind: 'treatise-match'
   id: string
+  domain?: DrillDomain
   /** Le lien que la manche fait établir, pour chacun de ses traités. */
   link: TreatiseLink
   /** Les deux colonnes : `left` vient de la première, `right` de la seconde (dans le sens où elles sont posées). */
@@ -504,6 +512,7 @@ export interface TreatiseMatchExercise {
 export interface TreatiseChoiceExercise {
   kind: 'treatise-choice'
   id: string
+  domain?: DrillDomain
   link: TreatiseLink
   /** Ce qui est montré, et ce qu'on cherche. */
   from: TreatiseColumn
@@ -530,6 +539,7 @@ export interface TreatiseChoiceExercise {
 export interface TreatiseTypeExercise {
   kind: 'treatise-type'
   id: string
+  domain?: DrillDomain
   link: TreatiseLink
   /** Ce qui est montré, et ce qu'on cherche. */
   from: TreatiseColumn

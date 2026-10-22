@@ -37,6 +37,7 @@ export default function App() {
             <Route path="/lecon/:lessonId" element={<LessonRoute />} />
             <Route path="/fiches/:unitId" element={<NotesReaderScreen />} />
             <Route path="/reperage" element={<TreatiseTrainRoute />} />
+            <Route path="/glossaire-revision" element={<TreatiseTrainRoute domain="terms" />} />
             <Route path="/revision" element={<ReviewRoute />} />
             <Route path="/etape/:unitId/:stepId" element={<StepRoute />} />
             <Route path="/profil" element={<ProfileScreen />} />

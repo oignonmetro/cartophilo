@@ -537,6 +537,18 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
           onClick={() => navigate('/reperage')}
         />
       )}
+      {/* Le grand exercice de révision du glossaire : le même bouton, sur les
+          notions qui ont leur définition (voir `termEntrySchema`). */}
+      {track.terms && track.terms.length > 0 && (
+        <TreatiseTrainButton
+          acquired={acquiredCount(track.terms, treatiseProgress ?? {})}
+          total={track.terms.length}
+          tone={tone}
+          label="Réviser le glossaire"
+          unit="notions maîtrisées"
+          onClick={() => navigate('/glossaire-revision')}
+        />
+      )}
 
       <AnimatePresence>
         {pickerOpen && (
@@ -1153,11 +1165,15 @@ function TreatiseTrainButton({
   acquired,
   total,
   tone,
+  label = "S'entraîner au repérage",
+  unit = 'traités maîtrisés',
   onClick,
 }: {
   acquired: number
   total: number
   tone: { bg: string; css: string }
+  label?: string
+  unit?: string
   onClick: () => void
 }) {
   const size = 76
@@ -1187,8 +1203,8 @@ function TreatiseTrainButton({
       <button
         type="button"
         onClick={onClick}
-        aria-label="S'entraîner au repérage"
-        title={`S'entraîner au repérage : ${acquired} / ${total} traités maîtrisés`}
+        aria-label={label}
+        title={`${label} : ${acquired} / ${total} ${unit}`}
         className={`pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full ${tone.bg} text-white shadow-lg ring-4 ring-cream`}
       >
         <UnitIcon name="compass" size={26} />

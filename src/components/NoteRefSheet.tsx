@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useCourse } from '@/content/CourseProvider'
 import { findUnit } from '@/content/course'
 import { leadSentence, plainInline } from '@/content/notes'
-import type { TreatiseEntry, Unit } from '@/content/schema'
+import type { TermEntry, TreatiseEntry, Unit } from '@/content/schema'
 import { ENNEAD_NUMERALS } from '@/engine/treatises'
 import { NoteBlocks, TONES, Rich } from '@/components/session/RuleNote'
 import { NoteRefContext, treatiseChrono, type NoteRef, type NoteTarget } from './noteRef'
@@ -29,6 +29,14 @@ export function NoteRefProvider({ children }: { children: ReactNode }) {
     return byChrono
   }, [course])
 
+  const terms = useMemo(() => {
+    const byId = new Map<string, TermEntry>()
+    if (course.layout === 'library') {
+      for (const track of course.tracks) for (const term of track.terms ?? []) byId.set(term.id, term)
+    }
+    return byId
+  }, [course])
+
   const resolve = useCallback(
     (target: string): NoteTarget | null => {
       const chrono = treatiseChrono(target)
@@ -36,12 +44,15 @@ export function NoteRefProvider({ children }: { children: ReactNode }) {
       if (entry) return { kind: 'treatise', hint: treatiseLabel(entry) }
       const unit = findUnit(course, target)
       if (!unit) return null
+      // Une entrée du glossaire montre sa définition (voir `definitions.yaml`) : « Vie : l'activité… ».
+      const term = terms.get(target)
+      if (term) return { kind: 'unit', hint: `${term.title} : ${plainInline(term.definition)}` }
       const notes = unit.lessons.find((lesson) => 'notes' in lesson && lesson.notes)
-      // La définition est la première phrase du rappel ; à défaut, le sous-titre.
+      // Sinon, la première phrase du rappel ; à défaut, le sous-titre.
       const lead = notes && 'notes' in notes && notes.notes ? leadSentence(notes.notes) : ''
       return { kind: 'unit', hint: lead || plainInline(unit.subtitle ?? '') }
     },
-    [course, treatises],
+    [course, treatises, terms],
   )
   const open = useCallback((target: string) => setStack((current) => [...current, target]), [])
   const ref = useMemo<NoteRef>(() => ({ resolve, open }), [resolve, open])

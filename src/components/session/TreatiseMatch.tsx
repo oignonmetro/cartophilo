@@ -1,6 +1,11 @@
 import type { TreatiseLink, TreatiseMatchExercise } from '@/engine/exercises'
 import { PairBoard } from './PairBoard'
 
+const TERM_PROMPT: Partial<Record<TreatiseLink, string>> = {
+  'title-number': 'Associez chaque notion à son terme grec',
+  'title-thesis': 'Associez chaque définition à sa notion',
+}
+
 const MATCH_PROMPT: Record<TreatiseLink, string> = {
   'title-number': 'Associez chaque traité à sa numérotation',
   'title-thesis': 'Associez chaque thèse au traité qui la défend',
@@ -20,12 +25,14 @@ export function TreatiseMatch({
   exercise: TreatiseMatchExercise
   onDone: (result: { missedIds: string[] }) => void
 }) {
+  // En italique : le titre d'un traité, le terme grec d'une notion.
+  const italic = exercise.domain === 'terms' ? 'number' : 'title'
   return (
     <PairBoard
       seed={exercise.id}
       pairs={exercise.pairs}
-      prompt={MATCH_PROMPT[exercise.link]}
-      italicSides={[exercise.columns[0] === 'title', exercise.columns[1] === 'title']}
+      prompt={(exercise.domain === 'terms' && TERM_PROMPT[exercise.link]) || MATCH_PROMPT[exercise.link]}
+      italicSides={[exercise.columns[0] === italic, exercise.columns[1] === italic]}
       onDone={onDone}
     />
   )

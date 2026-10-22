@@ -283,6 +283,29 @@ export const treatiseEntrySchema = z.object({
 export type TreatiseEntry = z.infer<typeof treatiseEntrySchema>
 
 /**
+ * Une notion du glossaire, réduite à ce qui s'apprend par cœur : la notion
+ * elle-même, son terme grec et sa définition. Les définitions s'écrivent à
+ * part, dans `content/courses/<id>/definitions.yaml` (une ligne par entrée) ;
+ * la notion et le terme grec sont lus dans le titre de l'entrée
+ * (« Vie (`zôê`) »). Elles nourrissent trois choses : la bulle qui s'ouvre
+ * au survol d'un renvoi, la citation `[def]` dans un rappel, et le grand
+ * exercice de révision du glossaire (voir `engine/treatises.ts`).
+ */
+export const termEntrySchema = z.object({
+  /** L'identifiant de l'unité du glossaire (`g-vie`). */
+  id: slug,
+  /** La notion, sans le terme grec : « Vie ». */
+  title: z.string().min(1),
+  greek: z.string().min(1).optional(),
+  /** Un attribut, sans majuscule ni point final, qui complète « la vie est … » ; balisage de rappel permis. */
+  definition: z.string().min(1),
+  /** Rang dans l'ordre alphabétique du glossaire. */
+  order: z.number().int().min(0),
+})
+
+export type TermEntry = z.infer<typeof termEntrySchema>
+
+/**
  * Ce qui relie une partie d'une œuvre à la précédente (voir `workNodeSchema`,
  * champ `rel`), ou deux parties éloignées (voir `workLinkSchema`). Liste
  * fermée : c'est ce qui permet de dessiner le plan d'une œuvre toujours avec
@@ -481,6 +504,8 @@ export const trackSchema = z.object({
    * une telle piste ; `undefined` pour toute piste ordinaire.
    */
   entries: z.array(treatiseEntrySchema).optional(),
+  /** Les notions d'un glossaire qui ont leur définition (voir `termEntrySchema`) ; compilé, jamais écrit à la main. */
+  terms: z.array(termEntrySchema).optional(),
 })
 
 export const sectionSchema = z.object({

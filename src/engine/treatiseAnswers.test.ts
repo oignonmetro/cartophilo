@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { isNumberingCorrect, isTitleCorrect, parseNumbering } from './treatiseAnswers'
+import { isNumberingCorrect, isTermCorrect, isTitleCorrect, parseNumbering } from './treatiseAnswers'
 
 describe('numérotation tapée', () => {
   it('lit le rang, l’Ennéade et la place', () => {
@@ -58,5 +58,16 @@ describe('titre tapé', () => {
   it('refuse une réponse vide', () => {
     expect(isTitleCorrect('Sur le beau', '')).toBe(false)
     expect(isTitleCorrect('Sur le beau', '   ')).toBe(false)
+  })
+})
+
+describe('isTermCorrect', () => {
+  it('accepte une notion ou un terme grec sans accents, majuscules ni article', () => {
+    expect(isTermCorrect('zôê', 'zoe')).toBe(true)
+    expect(isTermCorrect('Âme', "l'âme")).toBe(true)
+    expect(isTermCorrect('Raison séminale', 'raison seminal')).toBe(true)
+    expect(isTermCorrect('Un', 'une')).toBe(false)
+    expect(isTermCorrect('hulê', 'hylè')).toBe(true)
+    expect(isTermCorrect('hulê', 'hulo')).toBe(false)
   })
 })

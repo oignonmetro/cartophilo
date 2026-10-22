@@ -8,7 +8,12 @@ import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
 
 /** La consigne d'un QCM, d'après ce qu'on donne (`from`) et ce qu'on cherche (`to`). */
-function questionOf(from: TreatiseColumn, to: TreatiseColumn): string {
+function questionOf(from: TreatiseColumn, to: TreatiseColumn, terms: boolean): string {
+  if (terms) {
+    if (to === 'number') return 'Quel est le terme grec de cette notion ?'
+    if (to === 'thesis') return 'Quelle est la définition de cette notion ?'
+    return from === 'thesis' ? 'Quelle notion est ainsi définie ?' : 'Quelle notion désigne ce terme grec ?'
+  }
   if (to === 'number') return from === 'thesis' ? 'Quelle numérotation porte le traité de cette thèse ?' : 'Quelle numérotation ?'
   if (to === 'thesis') return 'Quelle thèse défend ce traité ?'
   if (to === 'example') return 'Quel exemple, avec quelle fonction, ce traité emploie-t-il ?'
@@ -29,6 +34,9 @@ export function TreatiseChoice({
   onAnswer: (correct: boolean) => void
 }) {
   const { prompt, answer, options, from, to } = exercise
+  const terms = exercise.domain === 'terms'
+  // En italique : le titre d'un traité, le terme grec d'une notion.
+  const italic: TreatiseColumn = terms ? 'number' : 'title'
   const [picked, setPicked] = useState<string | null>(null)
   const sounds = useSessionSounds()
   const haptics = useSessionHaptics()
@@ -56,12 +64,12 @@ export function TreatiseChoice({
   return (
     <div className="flex flex-1 flex-col gap-6">
       <p className="text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
-        {questionOf(from, to)}
+        {questionOf(from, to, terms)}
       </p>
 
       <div className="card-3d px-4 py-4 text-center">
         <span
-          className={`font-black break-words ${from === 'thesis' || from === 'example' ? 'text-lg leading-snug' : 'text-xl'} ${from === 'title' ? 'italic' : ''}`}
+          className={`font-black break-words ${from === 'thesis' || from === 'example' ? 'text-lg leading-snug' : 'text-xl'} ${from === italic ? 'italic' : ''}`}
         >
           {prompt}
         </span>
@@ -72,7 +80,7 @@ export function TreatiseChoice({
         picked={picked}
         isCorrect={(option) => option === answer}
         size={to === 'thesis' || to === 'example' ? 'long' : 'normal'}
-        renderOption={to === 'title' ? (option) => <em>{option}</em> : undefined}
+        renderOption={to === italic ? (option) => <em>{option}</em> : undefined}
         onPick={(option) => {
           setPicked(option)
           const right = option === answer

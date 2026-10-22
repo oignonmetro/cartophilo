@@ -13,7 +13,11 @@ pistes des quatre cours philosophiques utilisent `kind: grammar`, jamais
 un rappel de cours (`notes`), puis une phrase à trou. C'est exactement le
 format voulu, et à la condition suivante près, il exclut mécaniquement
 l'association et le QCM, ce que `CLAUDE.md` demandait déjà pour Glossaire et
-Repérage et qui vaut maintenant pour toutes les pistes philosophiques :
+Repérage et qui vaut maintenant pour toutes les pistes philosophiques (hors
+deux exercices qui portent sur un ensemble fermé : les tableaux à trous, et le
+grand exercice de révision du glossaire, qui fait associer chaque notion à sa
+définition et à son terme grec, voir `definitions.yaml` et la skill
+`glossaire`) :
 
 > **Ne jamais renseigner `options` sur un point de grammaire philosophique.**
 > Avec `options`, l'exercice se joue en partie en banque de formes (un choix

@@ -1,4 +1,4 @@
-import type { TreatiseEntry } from '@/content/schema'
+import type { TermEntry, TreatiseEntry } from '@/content/schema'
 import type {
   Exercise,
   TreatiseChoiceExercise,
@@ -40,7 +40,19 @@ import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
  *   1. l'ordre d'arrivée des traités (`learningOrder`) ;
  *   2. ce qui valide un traité (`isValidated`) ;
  *   3. la façon de former les exercices.
+ *
+ * Le même moteur sert au grand exercice de révision du glossaire : une notion
+ * s'y dit, comme un traité, de trois façons (sa notion, qui tient lieu de
+ * titre et de pivot ; son terme grec, à la place de la numérotation ; sa
+ * définition, à la place d'une thèse). Voir `TermEntry` et `isTerm`.
  */
+
+/** Ce que le moteur fait travailler : des traités, ou des notions du glossaire. */
+export type DrillEntry = TreatiseEntry | TermEntry
+
+export function isTerm(entry: DrillEntry): entry is TermEntry {
+  return 'definition' in entry
+}
 
 /** Nombre de traités en cours d'apprentissage : ni plus, ni moins (tant qu'il en reste à apprendre). */
 export const ACTIVE_COUNT = 6
@@ -98,29 +110,40 @@ export function numberingOf(entry: TreatiseEntry): string {
   return `${entry.chrono} [${ENNEAD_NUMERALS[entry.ennead - 1]}, ${entry.numberInEnnead}]`
 }
 
-function hasColumn(entry: TreatiseEntry, column: TreatiseColumn): boolean {
+/** Ce qui tient lieu de numérotation : « 53 [I, 1] » pour un traité, le terme grec pour une notion. */
+function numberOf(entry: DrillEntry): string {
+  return isTerm(entry) ? entry.greek! : numberingOf(entry)
+}
+
+/** Les thèses d'une entrée : celles d'un traité, ou la définition d'une notion. */
+function thesesOf(entry: DrillEntry): readonly string[] | undefined {
+  return isTerm(entry) ? [entry.definition] : entry.theses
+}
+
+function hasColumn(entry: DrillEntry, column: TreatiseColumn): boolean {
+  if (isTerm(entry)) return column === 'number' ? Boolean(entry.greek) : column !== 'example'
   if (column === 'thesis') return Boolean(entry.theses && entry.theses.length > 0)
   if (column === 'example') return Boolean(entry.examples && entry.examples.length > 0)
   return true
 }
 
 /** Ce que dit un traité dans une colonne ; `rank` est le rang de la thèse ou de l'exemple (jamais deux dans un même exercice). */
-function valueIn(entry: TreatiseEntry, column: TreatiseColumn, rank = 0): string {
+function valueIn(entry: DrillEntry, column: TreatiseColumn, rank = 0): string {
   if (column === 'title') return entry.title
-  if (column === 'number') return numberingOf(entry)
-  if (column === 'example') return entry.examples![rank]!
-  return entry.theses![rank]!
+  if (column === 'number') return numberOf(entry)
+  if (column === 'example') return (entry as TreatiseEntry).examples![rank]!
+  return thesesOf(entry)![rank]!
 }
 
 /** Les thèses ou les exemples qu'un lien fait travailler, un à un ; rien pour la numérotation. */
-function rankedOf(entry: TreatiseEntry, link: TreatiseLink): readonly string[] {
-  if (link === 'title-thesis') return entry.theses ?? []
-  if (link === 'title-example') return entry.examples ?? []
+function rankedOf(entry: DrillEntry, link: TreatiseLink): readonly string[] {
+  if (link === 'title-thesis') return thesesOf(entry) ?? []
+  if (link === 'title-example') return isTerm(entry) ? [] : (entry.examples ?? [])
   return []
 }
 
 /** Les liens que ce traité permet d'établir : sa numérotation, et ses thèses s'il en a. */
-export function linksOf(entry: TreatiseEntry): TreatiseLink[] {
+export function linksOf(entry: DrillEntry): TreatiseLink[] {
   return LINKS.filter((link) => LINK_COLUMNS[link].every((column) => hasColumn(entry, column)))
 }
 
@@ -157,7 +180,7 @@ function rankNeed(record: TreatiseRecord | undefined, stage: TreatiseStage, link
 
 /** La thèse ou l'exemple à faire travailler : un seul par traité, tiré selon ce qui reste à réussir à cette étape. */
 function pickRank(
-  entry: TreatiseEntry,
+  entry: DrillEntry,
   record: TreatiseRecord | undefined,
   stage: TreatiseStage,
   link: TreatiseLink,
@@ -178,7 +201,7 @@ function rankField(link: TreatiseLink, rank: number | undefined): { thesis?: num
  * coup ; pour les thèses, chacune des siennes.
  */
 export function isLinkDone(
-  entry: TreatiseEntry,
+  entry: DrillEntry,
   record: TreatiseRecord | undefined,
   stage: TreatiseStage,
   link: TreatiseLink,
@@ -188,12 +211,12 @@ export function isLinkDone(
 }
 
 /** Une étape est faite quand chacun des liens du traité y est fait. */
-export function isStageDone(entry: TreatiseEntry, record: TreatiseRecord | undefined, stage: TreatiseStage): boolean {
+export function isStageDone(entry: DrillEntry, record: TreatiseRecord | undefined, stage: TreatiseStage): boolean {
   return linksOf(entry).every((link) => isLinkDone(entry, record, stage, link))
 }
 
 /** L'étape à faire maintenant : la première pas encore faite, ou `null` quand le traité est maîtrisé. */
-export function stageOf(entry: TreatiseEntry, record: TreatiseRecord | undefined): TreatiseStage | null {
+export function stageOf(entry: DrillEntry, record: TreatiseRecord | undefined): TreatiseStage | null {
   return STAGES.find((stage) => !isStageDone(entry, record, stage)) ?? null
 }
 
@@ -202,7 +225,13 @@ export function stageOf(entry: TreatiseEntry, record: TreatiseRecord | undefined
  * l'ordre de ce rang), puis les autres traités en gras (`highlight`), puis le
  * reste ; chaque groupe, hors rang, dans l'ordre de Porphyre.
  */
-export function learningOrder(entries: readonly TreatiseEntry[]): TreatiseEntry[] {
+export function learningOrder<T extends DrillEntry>(entries: readonly T[]): T[] {
+  // Les notions arrivent dans l'ordre du glossaire.
+  if (entries.some(isTerm)) return entries.slice().sort((a, b) => (a as TermEntry).order - (b as TermEntry).order)
+  return treatiseOrder(entries as readonly TreatiseEntry[]) as T[]
+}
+
+function treatiseOrder(entries: readonly TreatiseEntry[]): TreatiseEntry[] {
   const byPorphyry = (a: TreatiseEntry, b: TreatiseEntry) =>
     a.ennead - b.ennead || a.numberInEnnead - b.numberInEnnead
   const sorted = entries.slice().sort(byPorphyry)
@@ -216,7 +245,7 @@ export function learningOrder(entries: readonly TreatiseEntry[]): TreatiseEntry[
  * faites : association, QCM, écrit. C'est la porte d'entrée d'un nouveau
  * traité ; il lui reste à être consolidé (`isAcquired`).
  */
-export function isValidated(entry: TreatiseEntry, record: TreatiseRecord | undefined): boolean {
+export function isValidated(entry: DrillEntry, record: TreatiseRecord | undefined): boolean {
   return stageOf(entry, record) === null
 }
 
@@ -224,16 +253,16 @@ export function isValidated(entry: TreatiseEntry, record: TreatiseRecord | undef
 export const ACQUIRED_SESSIONS = 2
 
 /** Un traité est acquis quand, maîtrisé, il a encore été réussi dans une autre séance. */
-export function isAcquired(entry: TreatiseEntry, record: TreatiseRecord | undefined): boolean {
+export function isAcquired(entry: DrillEntry, record: TreatiseRecord | undefined): boolean {
   return isValidated(entry, record) && (record?.sessions ?? 0) >= ACQUIRED_SESSIONS
 }
 
 /** Les traités maîtrisés qui attendent leur consolidation, hors ceux réussis dans la séance en cours. */
-export function reviewTreatises(
-  entries: readonly TreatiseEntry[],
+export function reviewTreatises<T extends DrillEntry>(
+  entries: readonly T[],
   progress: TreatiseProgress,
   session?: string,
-): TreatiseEntry[] {
+): T[] {
   return entries.filter(
     (entry) =>
       isValidated(entry, progress[entry.id]) &&
@@ -243,24 +272,24 @@ export function reviewTreatises(
 }
 
 /** Les traités en cours d'apprentissage : les `ACTIVE_COUNT` premiers non maîtrisés, dans l'ordre d'arrivée. */
-export function activeTreatises(entries: readonly TreatiseEntry[], progress: TreatiseProgress): TreatiseEntry[] {
+export function activeTreatises<T extends DrillEntry>(entries: readonly T[], progress: TreatiseProgress): T[] {
   return learningOrder(entries)
     .filter((entry) => !isValidated(entry, progress[entry.id]))
     .slice(0, ACTIVE_COUNT)
 }
 
-export function validatedCount(entries: readonly TreatiseEntry[], progress: TreatiseProgress): number {
+export function validatedCount(entries: readonly DrillEntry[], progress: TreatiseProgress): number {
   return entries.filter((entry) => isValidated(entry, progress[entry.id])).length
 }
 
-export function acquiredCount(entries: readonly TreatiseEntry[], progress: TreatiseProgress): number {
+export function acquiredCount(entries: readonly DrillEntry[], progress: TreatiseProgress): number {
   return entries.filter((entry) => isAcquired(entry, progress[entry.id])).length
 }
 
 // --- hasard réglé -------------------------------------------------------------
 
 /** Ce qui reste à réussir sur un lien à une étape, et les erreurs passées : le poids de cette association dans le tirage. */
-function need(entry: TreatiseEntry, stage: TreatiseStage, link: TreatiseLink, record: TreatiseRecord | undefined): number {
+function need(entry: DrillEntry, stage: TreatiseStage, link: TreatiseLink, record: TreatiseRecord | undefined): number {
   if (link !== 'title-number') {
     return rankedOf(entry, link).reduce((sum, _, index) => sum + rankNeed(record, stage, link, index), 0)
   }
@@ -282,7 +311,9 @@ function weightedPick<T>(items: readonly T[], weight: (item: T) => number, rng: 
 }
 
 /** Distance entre deux traités : les confusions se font entre voisins (même Ennéade, rangs proches). */
-function distance(a: TreatiseEntry, b: TreatiseEntry): number {
+function distance(a: DrillEntry, b: DrillEntry): number {
+  // Deux notions n'ont pas de voisinage qu'on puisse calculer : leurres au hasard.
+  if (isTerm(a) || isTerm(b)) return 0
   return Math.abs(a.chrono - b.chrono) + (a.ennead === b.ennead ? 0 : 6) + Math.abs(a.numberInEnnead - b.numberInEnnead)
 }
 
@@ -295,7 +326,7 @@ const MIN_BOARD = 3
  * ceux maîtrisés lors d'une séance précédente qui attendent d'être consolidés.
  * Remise à niveau (rien n'est noté) quand tous sont acquis.
  */
-function targetsOf(entries: readonly TreatiseEntry[], progress: TreatiseProgress, session: string, rng: Rng) {
+function targetsOf(entries: readonly DrillEntry[], progress: TreatiseProgress, session: string, rng: Rng) {
   const active = activeTreatises(entries, progress)
   const review = reviewTreatises(entries, progress, session)
   if (active.length + review.length > 0) return { targets: [...active, ...review], practice: false }
@@ -303,13 +334,13 @@ function targetsOf(entries: readonly TreatiseEntry[], progress: TreatiseProgress
 }
 
 /** Poids d'un traité dans le tirage d'une étape : ce qui lui reste à y réussir, ou le poids léger de la consolidation. */
-function weightOf(entry: TreatiseEntry, stage: TreatiseStage, link: TreatiseLink, progress: TreatiseProgress): number {
+function weightOf(entry: DrillEntry, stage: TreatiseStage, link: TreatiseLink, progress: TreatiseProgress): number {
   const record = progress[entry.id]
   return isValidated(entry, record) ? REVIEW_WEIGHT : need(entry, stage, link, record)
 }
 
 /** Les traités de cette étape, parmi ceux qu'on travaille. */
-function atStage(targets: readonly TreatiseEntry[], progress: TreatiseProgress, stage: TreatiseStage): TreatiseEntry[] {
+function atStage(targets: readonly DrillEntry[], progress: TreatiseProgress, stage: TreatiseStage): DrillEntry[] {
   return targets.filter((entry) => stageOf(entry, progress[entry.id]) === stage)
 }
 
@@ -320,7 +351,7 @@ function atStage(targets: readonly TreatiseEntry[], progress: TreatiseProgress, 
  */
 function stageFor(
   wanted: TreatiseStage,
-  targets: readonly TreatiseEntry[],
+  targets: readonly DrillEntry[],
   progress: TreatiseProgress,
 ): TreatiseStage {
   const populated = STAGES.filter((stage) => atStage(targets, progress, stage).length > 0)
@@ -329,8 +360,8 @@ function stageFor(
 }
 
 function formMatch(
-  entries: readonly TreatiseEntry[],
-  targets: readonly TreatiseEntry[],
+  entries: readonly DrillEntry[],
+  targets: readonly DrillEntry[],
   practice: boolean,
   progress: TreatiseProgress,
   id: string,
@@ -341,7 +372,7 @@ function formMatch(
   // Une manche demande au moins `MIN_BOARD` paires : si les traités à travailler
   // sont trop peu (la fin du parcours), des traités déjà maîtrisés la complètent :
   // jamais un traité pas encore introduit, que cette manche ferait avancer en douce.
-  const withLink = (link: TreatiseLink, among: readonly TreatiseEntry[]) =>
+  const withLink = (link: TreatiseLink, among: readonly DrillEntry[]) =>
     among.filter((entry) => linksOf(entry).includes(link))
   const candidates = LINKS.map((link) => {
     const own = withLink(link, targets)
@@ -392,11 +423,11 @@ function formMatch(
 
 /** Le traité interrogé, et le lien : parmi ceux de l'étape s'il y en a, au poids de ce qui leur reste à y réussir. */
 function pickTarget(
-  targets: readonly TreatiseEntry[],
+  targets: readonly DrillEntry[],
   progress: TreatiseProgress,
   stage: TreatiseStage,
   rng: Rng,
-): { target: TreatiseEntry; link: TreatiseLink } {
+): { target: DrillEntry; link: TreatiseLink } {
   const here = atStage(targets, progress, stage)
   const pool = here.length > 0 ? here : targets
   const target = weightedPick(
@@ -411,8 +442,8 @@ function pickTarget(
 }
 
 function formChoice(
-  entries: readonly TreatiseEntry[],
-  targets: readonly TreatiseEntry[],
+  entries: readonly DrillEntry[],
+  targets: readonly DrillEntry[],
   practice: boolean,
   progress: TreatiseProgress,
   id: string,
@@ -428,13 +459,13 @@ function formChoice(
   // Leurres : des traités qui ont la même colonne, plutôt voisins (les thèses et les exemples, plutôt que des voisins, parmi ceux qui existent).
   const pool = entries.filter((entry) => entry.id !== target.id && hasColumn(entry, to))
   const near =
-    to === 'thesis' || to === 'example'
+    to === 'thesis' || to === 'example' || isTerm(target)
       ? shuffle(pool, rng)
       : pool.sort((x, y) => distance(target, x) - distance(target, y)).slice(0, 8)
   const others = sample(near, Math.min(OPTIONS - 1, near.length), rng)
   const answer = valueIn(target, to, rank)
-  const anyRank = (entry: TreatiseEntry) =>
-    Math.floor(rng() * ((to === 'example' ? entry.examples?.length : entry.theses?.length) ?? 1))
+  const anyRank = (entry: DrillEntry) =>
+    Math.floor(rng() * ((to === 'example' ? (entry as TreatiseEntry).examples?.length : thesesOf(entry)?.length) ?? 1))
   const options = shuffle([answer, ...others.map((entry) => valueIn(entry, to, anyRank(entry)))], rng)
   return {
     kind: 'treatise-choice',
@@ -457,7 +488,7 @@ function formChoice(
  * (la numérotation du traité est alors donnée avec elle).
  */
 function formType(
-  targets: readonly TreatiseEntry[],
+  targets: readonly DrillEntry[],
   practice: boolean,
   progress: TreatiseProgress,
   id: string,
@@ -475,7 +506,7 @@ function formType(
       to: 'number',
       entryId: target.id,
       prompt: target.title,
-      answer: numberingOf(target),
+      answer: numberOf(target),
       session,
       ...(practice ? { practice } : {}),
     }
@@ -490,7 +521,8 @@ function formType(
     to: 'title',
     entryId: target.id,
     prompt: valueIn(target, from, rank),
-    given: numberingOf(target),
+    // Le terme grec donnerait la notion : on ne le montre pas avec une définition.
+    ...(isTerm(target) ? {} : { given: numberingOf(target) }),
     answer: target.title,
     ...rankField(link, rank),
     session,
@@ -525,10 +557,20 @@ export function treatiseGhosts(count = SESSION_LENGTH): TreatiseGhostExercise[] 
  */
 export function materializeTreatise(
   ghost: TreatiseGhostExercise,
-  entries: readonly TreatiseEntry[],
+  entries: readonly DrillEntry[],
   progress: TreatiseProgress,
   seed: number,
 ): Exercise {
+  const formed = formTreatise(ghost, entries, progress, seed)
+  return entries.some(isTerm) && 'link' in formed ? { ...formed, domain: 'terms' } : formed
+}
+
+function formTreatise(
+  ghost: TreatiseGhostExercise,
+  entries: readonly DrillEntry[],
+  progress: TreatiseProgress,
+  seed: number,
+): TreatiseMatchExercise | TreatiseChoiceExercise | TreatiseTypeExercise {
   const session = String(seed)
   const rng = createRng(seedFrom(seed, ghost.id, Object.keys(progress).length))
   const { targets, practice } = targetsOf(entries, progress, session, rng)

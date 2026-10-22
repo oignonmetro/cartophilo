@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import type { TreatiseEntry } from '@/content/schema'
+import type { TermEntry, TreatiseEntry } from '@/content/schema'
 import type { Exercise } from './exercises'
 import {
   ACTIVE_COUNT,
@@ -387,5 +387,47 @@ describe('un exercice pour chaque étape', () => {
     expect(activeTreatises(ENTRIES, progress).map((entry) => entry.id)).toEqual(active.map((entry) => entry.id))
     const finished: TreatiseProgress = { ...progress, [active[0]!.id]: done(active[0]!) }
     expect(activeTreatises(ENTRIES, finished).map((entry) => entry.id)).not.toContain(active[0]!.id)
+  })
+})
+
+describe('le grand exercice de révision du glossaire', () => {
+  const TERMS: TermEntry[] = Array.from({ length: 10 }, (_, index) => ({
+    id: `g-notion-${index}`,
+    title: `Notion ${index}`,
+    ...(index === 9 ? {} : { greek: `grec${index}` }),
+    definition: `définition de la notion ${index}`,
+    order: index,
+  }))
+
+  it('fait travailler la notion avec son terme grec et sa définition, jamais avec un exemple', () => {
+    expect(linksOf(TERMS[0]!)).toEqual(['title-number', 'title-thesis'])
+    // Une notion sans terme grec ne travaille que sa définition.
+    expect(linksOf(TERMS[9]!)).toEqual(['title-thesis'])
+  })
+
+  it('fait arriver les notions dans l’ordre du glossaire', () => {
+    expect(learningOrder([...TERMS].reverse()).map((term) => term.id)).toEqual(TERMS.map((term) => term.id))
+  })
+
+  it('forme des exercices du glossaire, notés comme ceux des traités', () => {
+    const formed: Exercise[] = treatiseGhosts().map((ghost) => materializeTreatise(ghost, TERMS, {}, 7))
+    for (const exercise of formed) {
+      expect('domain' in exercise && exercise.domain).toBe('terms')
+      if (exercise.kind === 'treatise-match') {
+        for (const pair of exercise.pairs) expect(TERMS.some((term) => term.id === pair.id)).toBe(true)
+      }
+      if (exercise.kind === 'treatise-choice') {
+        const term = TERMS.find((each) => each.id === exercise.entryId)!
+        const wanted = { title: term.title, number: term.greek, thesis: term.definition }[exercise.to as 'title' | 'number' | 'thesis']
+        expect(exercise.answer).toBe(wanted)
+        expect(exercise.options).toContain(exercise.answer)
+      }
+      if (exercise.kind === 'treatise-type') {
+        // Le terme grec trahirait la notion : il n'est jamais donné avec une définition.
+        expect(exercise.given).toBeUndefined()
+        expect(['number', 'title']).toContain(exercise.to)
+      }
+    }
+    expect(formed.map((exercise) => exercise.kind)).toContain('treatise-match')
   })
 })

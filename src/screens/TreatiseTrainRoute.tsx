@@ -1,8 +1,8 @@
 import { useCallback, useMemo, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { useCourse } from '@/content/CourseProvider'
-import type { TreatiseGhostExercise } from '@/engine/exercises'
-import { materializeTreatise, treatiseGhosts } from '@/engine/treatises'
+import type { DrillDomain, TreatiseGhostExercise } from '@/engine/exercises'
+import { materializeTreatise, treatiseGhosts, type DrillEntry } from '@/engine/treatises'
 import type { SessionOutcome } from '@/engine/progress'
 import { useProgress } from '@/store/progressStore'
 import { SessionScreen } from './SessionScreen'
@@ -14,21 +14,22 @@ import { SessionResult } from './SessionResult'
  * La séance se construit à l'ouverture, d'après les traités en cours
  * d'apprentissage à cet instant ; chaque nouvelle séance repart de ce que la
  * précédente a validé.
+ *
+ * Avec `domain="terms"`, c'est le grand exercice de révision du glossaire :
+ * le même moteur, sur les notions qui ont leur définition (`track.terms`).
  */
-export function TreatiseTrainRoute() {
+export function TreatiseTrainRoute({ domain = 'treatises' }: { domain?: DrillDomain }) {
   const navigate = useNavigate()
   const { course } = useCourse()
   const finishStep = useProgress((state) => state.finishStep)
   const [attempt, setAttempt] = useState(0)
   const [finished, setFinished] = useState<{ outcome: SessionOutcome; xp: number; peakTier: number } | null>(null)
 
-  const entries = useMemo(
-    () =>
-      course.layout === 'library'
-        ? (course.tracks.find((track) => track.entries && track.entries.length > 0)?.entries ?? [])
-        : [],
-    [course],
-  )
+  const entries: readonly DrillEntry[] = useMemo(() => {
+    if (course.layout !== 'library') return []
+    if (domain === 'terms') return course.tracks.find((track) => track.terms && track.terms.length > 0)?.terms ?? []
+    return course.tracks.find((track) => track.entries && track.entries.length > 0)?.entries ?? []
+  }, [course, domain])
 
   // Des places réservées, pas des exercices : chacun se forme au moment de
   // l'ouvrir, d'après ce que les réponses précédentes ont appris (un traité
@@ -72,7 +73,7 @@ export function TreatiseTrainRoute() {
       materialize={materialize}
       onQuit={back}
       onFinish={(outcome, peakTier) =>
-        setFinished({ outcome, peakTier, ...finishStep(course.id, 'traites:reperage', outcome) })
+        setFinished({ outcome, peakTier, ...finishStep(course.id, domain === 'terms' ? 'glossaire:revision' : 'traites:reperage', outcome) })
       }
     />
   )

@@ -150,6 +150,7 @@ règles ou les pièges :
 | `__texte__` | souligné | le mot qui décide, dans une règle |
 | `*texte*` | italique | une nuance, une glose, un titre d'œuvre |
 | `{violet}texte{/violet}` | teinté (gras) | distinguer deux notions qui reviennent tout au long d'un rappel |
+| `[def]`, `[def:g-vie]` | la définition de l'entrée (ou de `g-vie`), tirée de `definitions.yaml` | l'en-tête d'une entrée du glossaire : « Chez Plotin, la **vie** (*zôê*) est [def]. » ; remplacée à la compilation, cible vérifiée par `content:check` |
 | `[[g-vie\|la vie]]` | renvoi souligné en pointillé, qui ouvre l'unité `g-vie` en feuille | relier une entrée du glossaire à ses voisines (voir la skill `glossaire`) ; rappels seulement, texte littéral, cible vérifiée par `content:check`. `[[traite53\|traité 53]]` vise le traité de rang chronologique 53 : teinte prune, son titre au survol, son résumé au clic |
 
 `{couleur}…{/couleur}` accepte dix teintes : `teal`, `violet`, `coral`,

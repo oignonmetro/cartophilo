@@ -86,7 +86,30 @@ export function isTitleCorrect(expected: string, typed: string): boolean {
   })
 }
 
-/** Réponse tapée d'un exercice écrit de repérage : la numérotation ou le titre, selon ce qu'on cherche. */
-export function isTreatiseAnswerCorrect(to: 'number' | 'title' | string, expected: string, typed: string): boolean {
+/**
+ * Une notion du glossaire ou son terme grec : sans accents, majuscules ni
+ * article (« l'Âme » vaut « ame », « zôê » vaut « zoe », « hylè » vaut « hulê ») ; une faute de frappe
+ * tolérée au-delà de cinq lettres, aucune en deçà, où une lettre change le mot.
+ */
+export function isTermCorrect(expected: string, typed: string): boolean {
+  // « y » et « u » rendent le même upsilon : « physis » vaut « phusis ».
+  const bare = (text: string) =>
+    normalize(text)
+      .replace(/^(le|la|les|l|un|une) (?=.)/, '')
+      .replace(/y/g, 'u')
+  const given = bare(typed)
+  const target = bare(expected)
+  if (given.length === 0) return false
+  return editDistance(target, given) <= (target.length > 5 ? 1 : 0)
+}
+
+/** Réponse tapée d'un exercice écrit de repérage : la numérotation ou le titre, selon ce qu'on cherche ; pour le glossaire, la notion ou son terme grec. */
+export function isTreatiseAnswerCorrect(
+  to: 'number' | 'title' | string,
+  expected: string,
+  typed: string,
+  domain: 'treatises' | 'terms' = 'treatises',
+): boolean {
+  if (domain === 'terms') return isTermCorrect(expected, typed)
   return to === 'number' ? isNumberingCorrect(expected, typed) : isTitleCorrect(expected, typed)
 }

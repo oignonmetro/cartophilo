@@ -12,8 +12,10 @@ import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
 
 /** La consigne d'un écrit, d'après ce qu'on cherche (`to`) et le mode de réponse. */
-function questionOf(to: TreatiseTypeExercise['to'], reveal: boolean, revealed: boolean): string {
+function questionOf(exercise: TreatiseTypeExercise, reveal: boolean, revealed: boolean): string {
+  const { to } = exercise
   if (reveal) return revealed ? 'Notez-vous' : 'Révélez la réponse'
+  if (exercise.domain === 'terms') return to === 'number' ? 'Quel est le terme grec de cette notion ?' : 'Quelle notion est ainsi définie ?'
   return to === 'number' ? 'Quelle est la numérotation de ce traité ?' : 'Quel est le titre de ce traité ?'
 }
 
@@ -33,6 +35,9 @@ export function TreatiseType({
   onAnswer: (correct: boolean, rating?: Rating) => void
 }) {
   const { prompt, given, answer, from, to } = exercise
+  const terms = exercise.domain === 'terms'
+  // En italique : le titre d'un traité, le terme grec d'une notion.
+  const italic = terms ? 'number' : 'title'
   const isDesktop = useIsDesktop()
   const device = isDesktop ? 'desktop' : 'mobile'
   const mode = useProgress((state) => state.gapModes[device])
@@ -94,7 +99,7 @@ export function TreatiseType({
       <div className="sticky top-0 z-10 grid grid-cols-[1fr_auto_1fr] items-center gap-2 bg-cream py-1">
         <span aria-hidden />
         <p className="text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
-          {questionOf(to, reveal, revealed)}
+          {questionOf(exercise, reveal, revealed)}
         </p>
         <div className="flex justify-end">
           <AnswerModeSwitch mode={mode} disabled={answered} onChange={(next) => setGapMode(device, next)} />
@@ -103,7 +108,7 @@ export function TreatiseType({
 
       <div className="card-3d flex flex-col items-center gap-3 px-4 py-6 text-center">
         <span
-          className={`font-black break-words ${from === 'thesis' || from === 'example' ? 'text-lg leading-snug' : 'text-xl'} ${from === 'title' ? 'italic' : ''}`}
+          className={`font-black break-words ${from === 'thesis' || from === 'example' ? 'text-lg leading-snug' : 'text-xl'} ${from === italic ? 'italic' : ''}`}
         >
           {prompt}
         </span>
@@ -117,7 +122,7 @@ export function TreatiseType({
             animate={{ opacity: 1, y: 0 }}
             className="card-3d px-4 py-5 text-center"
           >
-            <p className={`text-lg font-black break-words ${to === 'title' ? 'italic' : ''}`}>{answer}</p>
+            <p className={`text-lg font-black break-words ${to === italic ? 'italic' : ''}`}>{answer}</p>
           </motion.div>
         )
       ) : (
@@ -127,7 +132,7 @@ export function TreatiseType({
           onChange={(event) => setValue(event.target.value)}
           onKeyDown={(event) => {
             if (event.key !== 'Enter') return
-            if (checked === null && filled) settle(isTreatiseAnswerCorrect(to, answer, value))
+            if (checked === null && filled) settle(isTreatiseAnswerCorrect(to, answer, value, exercise.domain))
             else if (checked !== null) onAnswer(checked)
           }}
           disabled={checked !== null}
@@ -135,7 +140,9 @@ export function TreatiseType({
           autoCorrect="off"
           spellCheck={false}
           lang="fr"
-          placeholder={to === 'number' ? 'Rang [Ennéade, place]' : 'Le titre du traité…'}
+          placeholder={
+            terms ? (to === 'number' ? 'Le terme grec, translittéré…' : 'La notion…') : to === 'number' ? 'Rang [Ennéade, place]' : 'Le titre du traité…'
+          }
           aria-label="Votre réponse"
           className={`w-full rounded-2xl border-2 bg-paper px-4 py-4 text-lg font-bold outline-none disabled:opacity-70 ${
             checked === null ? 'border-line focus:border-teal' : checked ? 'border-success' : 'border-error'
@@ -154,7 +161,7 @@ export function TreatiseType({
           ) : (
             <>
               <p className="text-sm font-bold">La bonne réponse :</p>
-              <p className={`text-lg font-black break-words ${to === 'title' ? 'italic' : ''}`}>{answer}</p>
+              <p className={`text-lg font-black break-words ${to === italic ? 'italic' : ''}`}>{answer}</p>
             </>
           )}
         </motion.div>
@@ -171,7 +178,7 @@ export function TreatiseType({
           )
         ) : checked === null ? (
           <>
-            <Button block disabled={!filled} onClick={() => settle(isTreatiseAnswerCorrect(to, answer, value))}>
+            <Button block disabled={!filled} onClick={() => settle(isTreatiseAnswerCorrect(to, answer, value, exercise.domain))}>
               Vérifier
             </Button>
             <button

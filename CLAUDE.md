@@ -32,7 +32,16 @@ l'épreuve :
 - **Plotin** et **Marx** (explication de texte) : trois sous-onglets communs :
   - **Glossaire** : notions centrales chez l'auteur, une leçon par entrée,
     reliées par des renvois ; pour en écrire une, utiliser la skill
-    `glossaire` (`.claude/skills/glossaire/`).
+    `glossaire` (`.claude/skills/glossaire/`). Les définitions s'écrivent à
+    part, dans `content/courses/<cours>/definitions.yaml` (une par entrée) :
+    elles s'affichent au survol d'un renvoi, se citent dans un rappel par
+    `[def]`, tiennent lieu de sous-titre, et nourrissent le **grand exercice
+    de révision du glossaire** (bouton rond de l'onglet, `/glossaire-revision`),
+    construit sur le modèle du repérage général des traités
+    (`engine/treatises.ts`) : la notion à associer à sa définition et à son
+    terme grec, par association, QCM puis écrit. Exception assumée à « pas
+    de QCM ni d'association », comme pour les tableaux à trous : les
+    définitions d'un glossaire forment un ensemble fermé.
   - **Idées** : thèses centrales chez l'auteur, en se concentrant sur les
     arguments déployés pour les défendre.
   - **Repérage** : se repérer dans les différentes œuvres, savoir où se

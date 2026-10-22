@@ -41,7 +41,15 @@ import {
 } from '../../src/content/schema.ts'
 import { allNodes, lessonsFromWork } from '../../src/content/work.ts'
 import { findVocabGap } from '../../src/content/text.ts'
-import { noteLinkTargets, noteTables, parseNotes } from '../../src/content/notes.ts'
+import { noteLinkTargets, noteTables, parseNotes, plainInline } from '../../src/content/notes.ts'
+import {
+  definitionRefs,
+  definitionText,
+  expandDefinitions,
+  sharedGreek,
+  termsOf,
+  type DefinitionSource,
+} from '../../src/content/definitions.ts'
 import {
   ALPHABETICAL_TRACKS,
   itemsOfCourse,
@@ -280,8 +288,94 @@ function buildCourse(courseId: string): Course {
 
   // Les unités archivées sont contrôlées comme les autres, puis retirées du
   // cours publié : l'application ne les voit pas, le dépôt les garde prêtes.
-  checkCoherence(parsed.data, dir)
-  return withoutArchivedUnits(parsed.data)
+  const course = withDefinitions(parsed.data, dir)
+  checkCoherence(course, dir)
+  return withoutArchivedUnits(course)
+}
+
+const definitionsFileSchema = z.record(
+  z.string(),
+  z.union([
+    z.string().min(1),
+    z.object({ def: z.string().min(1), grec: z.string().min(1).optional(), notion: z.string().min(1).optional() }).strict(),
+  ]),
+)
+
+/**
+ * Les définitions du glossaire (`definitions.yaml`, voir `termEntrySchema`) :
+ * chacune cite une entrée d'une piste de glossaire ; elles sont citées dans
+ * les rappels par `[def]` ou `[def:id]`, remplacées ici par leur texte ; elles
+ * tiennent lieu de sous-titre à l'entrée qui n'en a pas ; et elles forment,
+ * avec la notion et le terme grec du titre, les `terms` de la piste, qui
+ * nourrissent le grand exercice de révision.
+ */
+function withDefinitions(course: Course, dir: string): Course {
+  const file = join(dir, 'definitions.yaml')
+  const raw = existsSync(file) ? (readYaml(file) ?? {}) : {}
+  const read = definitionsFileSchema.safeParse(raw)
+  if (!read.success) fail(file, formatIssues(read.error))
+  const sources = new Map<string, DefinitionSource>(Object.entries(read.data))
+  const definitions = new Map([...sources].map(([id, source]) => [id, definitionText(source).trim()]))
+
+  const glossaries = course.layout === 'library' ? course.tracks.filter((track) => ALPHABETICAL_TRACKS.has(track.id)) : []
+  const glossaryUnits = new Set(glossaries.flatMap((track) => track.units.map((unit) => unit.id)))
+  const problems: string[] = []
+  for (const id of sources.keys()) {
+    if (!glossaryUnits.has(id)) problems.push(`la définition "${id}" ne correspond à aucune entrée de glossaire`)
+  }
+  for (const [id, text] of definitions) {
+    if (/^\p{Lu}/u.test(plainInline(text)) && !/^\p{Lu}\p{Lu}/u.test(plainInline(text))) {
+      warn(`définition "${id}"`, 'commence par une majuscule : elle complète « la notion est … »')
+    }
+    if (/[.;:]\s*$/.test(text)) problems.push(`la définition "${id}" finit par un point : elle complète « la notion est … »`)
+    if (definitionRefs(text).length) problems.push(`la définition "${id}" cite une définition : elle doit tenir seule`)
+  }
+
+  const expandUnit = (unit: Unit): Unit => {
+    const lessons = unit.lessons.map((lesson) => {
+      if (!('notes' in lesson) || !lesson.notes) return lesson
+      for (const ref of definitionRefs(lesson.notes)) {
+        const target = ref ?? unit.id
+        if (!definitions.has(target)) {
+          problems.push(`leçon "${lesson.id}" : [def${ref ? `:${ref}` : ''}] cite une définition absente de definitions.yaml ("${target}")`)
+        }
+      }
+      return { ...lesson, notes: expandDefinitions(lesson.notes, unit.id, definitions) }
+    })
+    const definition = definitions.get(unit.id)
+    const subtitle = unit.subtitle ?? (definition ? capitalize(plainInline(definition)) : undefined)
+    return { ...unit, lessons, ...(subtitle ? { subtitle } : {}) } as Unit
+  }
+
+  let result: Course
+  if (course.layout === 'library') {
+    result = {
+      ...course,
+      tracks: course.tracks.map((track) => {
+        const units = track.units.map(expandUnit)
+        if (!ALPHABETICAL_TRACKS.has(track.id)) return { ...track, units }
+        for (const unit of units) {
+          if (unit.lessons.length > 0 && unit.status !== 'archived' && !definitions.has(unit.id)) {
+            warn(`entrée "${unit.id}"`, 'pas de définition dans definitions.yaml : absente du survol et du grand exercice')
+          }
+        }
+        for (const greek of sharedGreek(units, sources)) {
+          warn(`piste "${track.id}"`, `le terme grec « ${greek} » est porté par plusieurs notions : le grand exercice ne le leur demande pas`)
+        }
+        const live = units.filter((unit) => unit.status !== 'archived')
+        const terms = termsOf(live, sources)
+        return { ...track, units, ...(terms.length ? { terms } : {}) }
+      }),
+    }
+  } else {
+    result = { ...course, sections: course.sections.map((section) => ({ ...section, units: section.units.map(expandUnit) })) }
+  }
+  if (problems.length) fail(file, problems.join('\n  '))
+  return result
+}
+
+function capitalize(text: string): string {
+  return text.charAt(0).toUpperCase() + text.slice(1)
 }
 
 /**
