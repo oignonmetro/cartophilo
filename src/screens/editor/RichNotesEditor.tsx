@@ -203,6 +203,11 @@ function markElement(key: MarkKey, marks: Marks, tint: string | undefined): HTML
       el.dataset.l = marks.link
       el.title = `Renvoi vers ${marks.link}`
       break
+    case 'def':
+      el = document.createElement('span')
+      el.className = 'rounded-md bg-teal/15 px-1 font-mono text-[0.85em] font-bold text-teal-deep'
+      el.title = 'Définition du glossaire, affichée ici à la lecture'
+      break
   }
   el.dataset.m = key
   return el
@@ -993,7 +998,20 @@ class Controller {
     this.commit(blocks, sel, 'op')
   }
 
-  /** Le texte sélectionné, d'un seul bloc ; vide s'il n'y en a pas ou s'il en couvre plusieurs. */
+  /** Insère `[def]` (ou `[def:cible]`) au curseur, en pastille ; à la place de la sélection s'il y en a une. */
+  insertDef(target?: string) {
+    const sel = this.current()
+    if (!sel || sel.start.block !== sel.end.block) return
+    const blocks = this.read()
+    const block = blocks[sel.start.block]
+    if (!block || block.kind === 'table' || block.kind === 'section') return
+    const text = target ? `[def:${target}]` : '[def]'
+    const runs = mergeRuns([...sliceRuns(block.runs, 0, sel.start.offset), { text, marks: { def: true } }, ...sliceRuns(block.runs, sel.end.offset)])
+    blocks[sel.start.block] = { ...block, runs }
+    this.commit(blocks, this.collapsedAt({ block: sel.start.block, offset: sel.start.offset + text.length }), 'op')
+  }
+
+  /** Le texte sélectionné, d'un seul bloc ;vide s'il n'y en a pas ou s'il en couvre plusieurs. */
   selectedText(): string {
     const sel = this.current()
     if (!sel || sel.collapsed || sel.start.block !== sel.end.block) return ''
@@ -1344,6 +1362,13 @@ export function RichNotesEditor({
           onClick={openPicker}
         >
           {marks.link ? '🔗 Retirer le renvoi' : '🔗 Renvoi'}
+        </ToolbarButton>
+        <ToolbarButton
+          title="Citer la définition de l'entrée ([def]) : elle s'affiche à sa place à la lecture"
+          active={Boolean(marks.def)}
+          onClick={run((c) => c.insertDef())}
+        >
+          [def]
         </ToolbarButton>
         {autoLink && (
           <ToolbarButton

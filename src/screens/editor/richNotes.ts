@@ -24,6 +24,8 @@ export interface Marks {
   color?: NoteColor
   /** Renvoi vers une autre unité (`[[cible|texte]]`) : l'identifiant de la cible. */
   link?: string
+  /** Citation de définition (`[def]`) : le texte reste le marqueur, seule la pastille change. */
+  def?: true
 }
 
 export type MarkKey = keyof Marks
@@ -57,7 +59,10 @@ export interface NotesDoc {
 }
 
 /** Du plus extérieur au plus intérieur : le seul ordre que `parseInline` relise sans perte. */
-export const MARK_ORDER = ['color', 'underline', 'strong', 'em', 'form', 'link'] as const
+export const MARK_ORDER = ['color', 'underline', 'strong', 'em', 'form', 'link', 'def'] as const
+
+/** Citation d'une définition du glossaire : `[def]` (celle de l'entrée) ou `[def:g-un]`. */
+const DEF_TOKEN = /\[def(?::[a-z0-9-]+)?\]/g
 
 const RULE = /^-\s*/
 const WARNING = /^!\s*/
@@ -93,7 +98,16 @@ export function runsFromMarkup(text: string): Run[] {
   const out: Run[] = []
   const walk = (spans: Inline[], marks: Marks) => {
     for (const span of spans) {
-      if (span.kind === 'text') out.push({ text: span.text, marks })
+      if (span.kind === 'text') {
+        // `[def]` et `[def:entrée]` s'écrivent tels quels, mais se montrent en pastille.
+        let last = 0
+        for (const match of span.text.matchAll(DEF_TOKEN)) {
+          if (match.index > last) out.push({ text: span.text.slice(last, match.index), marks })
+          out.push({ text: match[0], marks: { ...marks, def: true } })
+          last = match.index + match[0].length
+        }
+        if (last < span.text.length) out.push({ text: span.text.slice(last), marks })
+      }
       else if (span.kind === 'form') out.push({ text: span.text, marks: { ...marks, form: true } })
       else if (span.kind === 'link') out.push({ text: span.text, marks: { ...marks, link: span.target } })
       else if (span.kind === 'color') walk(span.children, { ...marks, color: span.color })
@@ -111,6 +125,7 @@ const WRAP: Record<(typeof MARK_ORDER)[number], (inner: string, marks: Marks) =>
   em: (inner) => `*${inner}*`,
   form: (inner) => `\`${inner}\``,
   link: (inner, marks) => `[[${marks.link}|${inner}]]`,
+  def: (inner) => inner,
 }
 
 /** L'inverse de `runsFromMarkup`. Gras et italique ne se cumulent pas (le format ne sait pas l'écrire). */
