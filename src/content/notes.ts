@@ -148,11 +148,27 @@ const TABLE_ROW = /^\|/
  * bord sont facultatives à l'écriture, ignorées si présentes.
  */
 function parseTableRow(line: string): string[] {
-  return line
-    .replace(/^\|/, '')
-    .replace(/\|$/, '')
-    .split('|')
-    .map((cell) => cell.trim())
+  return splitCells(line.replace(/^\|/, '').replace(/\|$/, '')).map((cell) => cell.trim())
+}
+
+/**
+ * Coupe une rangée sur ses barres verticales, hors renvoi : la barre de
+ * `[[g-vivant|Vivant]]` sépare la cible du texte, pas deux cellules.
+ */
+export function splitCells(row: string): string[] {
+  const cells: string[] = []
+  let start = 0
+  let inLink = false
+  for (let i = 0; i < row.length; i++) {
+    if (row.startsWith('[[', i)) inLink = true
+    else if (row.startsWith(']]', i)) inLink = false
+    else if (row[i] === '|' && !inLink) {
+      cells.push(row.slice(start, i))
+      start = i + 1
+    }
+  }
+  cells.push(row.slice(start))
+  return cells
 }
 
 /**

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { leadSentence, noteLinkTargets, parseInline, parseNotes, plainInline, splitAside, type NoteRule } from './notes'
+import { leadSentence, noteLinkTargets, parseInline, parseNotes, plainInline, splitAside, splitCells, type NoteRule } from './notes'
 
 describe('rappels de cours', () => {
   it('recolle une phrase repliée sur plusieurs lignes', () => {
@@ -297,5 +297,15 @@ describe('règle repliée sur plusieurs lignes', () => {
     expect(rule.label).toBe("Suivis d'une proposition")
     expect(rule.body).toBe('although, even though, whereas.')
     expect(rule.example).toBeNull()
+  })
+})
+
+describe('tableau et renvois', () => {
+  it('la barre d’un renvoi ne coupe pas la cellule', () => {
+    const blocks = parseNotes('| Mot | Sens |\n| *zôion* | un être (voir [[g-vivant|Vivant]]) | traité 53 |')
+    const table = blocks.find((block) => block.kind === 'table')!
+    expect(JSON.stringify(table)).toContain('g-vivant|Vivant')
+    expect(JSON.stringify(table)).toContain('traité 53')
+    expect(splitCells('a | [[x|y]] | c')).toEqual(['a ', ' [[x|y]] ', ' c'])
   })
 })

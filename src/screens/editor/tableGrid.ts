@@ -1,5 +1,5 @@
 import { resolveTableExercises, tableIds, tableKey } from '@/content/course'
-import { noteTables, plainInline, type NoteTableBlock } from '@/content/notes'
+import { noteTables, plainInline, splitCells, type NoteTableBlock } from '@/content/notes'
 import type { LessonTableSettings, TableExerciseChoice } from '@/content/schema'
 import { compareKeys, locationKey, tableStructure } from '@/engine/exercises'
 
@@ -22,11 +22,7 @@ export interface TableSpan {
 }
 
 function rowCells(line: string): string[] {
-  return line
-    .trim()
-    .replace(/^\|/, '')
-    .replace(/\|$/, '')
-    .split('|')
+  return splitCells(line.trim().replace(/^\|/, '').replace(/\|$/, ''))
     // Seule la marge d'écriture saute : un espace final tapé dans l'éditeur doit survivre à la relecture.
     .map((cell) => cell.trimStart().replace(/ $/, ''))
 }
