@@ -106,6 +106,10 @@ export default function ContentEditorScreen() {
   const [originalTitle, setOriginalTitle] = useState('')
   const [notes, setNotes] = useState('')
   const [original, setOriginal] = useState('')
+  // Les définitions du glossaire du cours ouvert : les `[def]` du rappel les
+  // affichent et les retouchent sur place (voir `RichNotesEditor`).
+  const [defs, setDefs] = useState<Record<string, string>>({})
+  const [originalDefs, setOriginalDefs] = useState<Record<string, string>>({})
   const [points, setPoints] = useState<PointDTO[] | null>(null)
   // Les exercices choisis pour les tableaux du rappel (`tables:`), voir `TablesEditor`.
   const [tables, setTables] = useState<LessonTableDTO[]>([])
@@ -125,6 +129,7 @@ export default function ContentEditorScreen() {
   const dirty =
     title !== originalTitle ||
     notes !== original ||
+    JSON.stringify(defs) !== JSON.stringify(originalDefs) ||
     JSON.stringify(points) !== JSON.stringify(originalPoints) ||
     JSON.stringify(passage) !== JSON.stringify(originalPassage) ||
     JSON.stringify(tables) !== JSON.stringify(originalTables)
@@ -153,9 +158,15 @@ export default function ContentEditorScreen() {
     setError(null)
     setProblems([])
     try {
-      const res = await fetch(`/api/lesson?course=${course}&unit=${unit}&lesson=${lesson}`)
+      const [res, defsRes] = await Promise.all([
+        fetch(`/api/lesson?course=${course}&unit=${unit}&lesson=${lesson}`),
+        fetch(`/api/definitions?course=${course}`),
+      ])
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? res.statusText)
+      const loadedDefs: Record<string, string> = defsRes.ok ? await defsRes.json() : {}
+      setDefs(loadedDefs)
+      setOriginalDefs(loadedDefs)
       setTitle(data.title)
       setOriginalTitle(data.title)
       setNotes(data.notes)
@@ -271,6 +282,17 @@ export default function ContentEditorScreen() {
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? res.statusText)
+      // Les définitions retouchées dans le rappel s'écrivent dans `definitions.yaml`.
+      const changedDefs = Object.fromEntries(Object.entries(defs).filter(([id, text]) => originalDefs[id] !== text))
+      if (Object.keys(changedDefs).length > 0) {
+        const defsRes = await fetch('/api/definitions?course=' + selection.course, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ defs: changedDefs }),
+        })
+        if (!defsRes.ok) throw new Error((await defsRes.json()).error ?? defsRes.statusText)
+        setOriginalDefs(defs)
+      }
       // Le serveur met en forme ce qu'il enregistre (voir `tools/content/tidy.ts`) :
       // l'éditeur affiche désormais la version enregistrée, pour ne pas se
       // croire modifié au prochain coup d'œil.
@@ -302,7 +324,7 @@ export default function ContentEditorScreen() {
       setStatus('error')
       setError(String((err as Error).message))
     }
-  }, [selection, title, originalTitle, notes, points, passage, originalPassage, tables, loadTree])
+  }, [selection, title, originalTitle, notes, defs, originalDefs, points, passage, originalPassage, tables, loadTree])
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -357,6 +379,7 @@ export default function ContentEditorScreen() {
               onClick={() => {
                 setTitle(originalTitle)
                 setNotes(original)
+                setDefs(originalDefs)
                 setPoints(originalPoints)
                 setPassage(originalPassage)
                 setTables(originalTables)
@@ -588,6 +611,8 @@ export default function ContentEditorScreen() {
             trackKind={trackKind}
             onOpenTables={() => setView('tables')}
             glossary={glossary}
+            defs={defs}
+            onDefs={setDefs}
             selfId={selection.unit}
             autoLink={trackId === 'glossaire'}
             header={

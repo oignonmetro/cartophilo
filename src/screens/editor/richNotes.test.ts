@@ -4,6 +4,10 @@ import { describe, expect, it } from 'vitest'
 import { parse } from 'yaml'
 import {
   applyLinks,
+  blockText,
+  canonicalDef,
+  expandDefs,
+  syncDefs,
   findGlossaryLinks,
   hasMark,
   markupFromRuns,
@@ -120,5 +124,42 @@ describe('renvois du glossaire', () => {
   it('ne relie pas ce qui l’est déjà', () => {
     const blocks = doc('La [[g-vie|vie]] et l’Un.')
     expect(findGlossaryLinks(blocks, entries, '').map((hit) => hit.target)).toEqual(['g-un'])
+  })
+})
+
+describe('définitions citées', () => {
+  const defs = { 'g-vie': 'une {green}activité{/green} de [[g-un|l’Un]]', 'g-un': 'le principe' }
+  const text = 'La vie est [def]. Et [def:g-un].'
+
+  it('le marqueur se déplie en sa définition et se réécrit en marqueur', () => {
+    const blocks = expandDefs(parseDoc(text).blocks, defs, 'g-vie')
+    expect(blockText(blocks[0]!)).toBe('La vie est une activité de l’Un. Et le principe.')
+    expect(serializeDoc({ head: '', tail: '', blocks })).toBe(text)
+  })
+
+  it('retoucher une définition la met à jour dans toutes ses citations', () => {
+    const doc = parseDoc('A [def]. B [def].\n\nC [def:g-un].')
+    const blocks = expandDefs(doc.blocks, defs, 'g-vie')
+    const first = blocks[0]!
+    first.runs = first.runs.map((run) => (run.text.includes('activité') ? { ...run, text: 'énergie' } : run))
+    const synced = syncDefs(blocks, defs, 'g-vie')
+    expect(synced.changed).toBe(true)
+    expect(synced.defs['g-vie']).toBe('une {green}énergie{/green} de [[g-un|l’Un]]')
+    expect(blockText(synced.blocks[0]!)).toBe('A une énergie de l’Un. B une énergie de l’Un.')
+    expect(synced.defs['g-un']).toBe('le principe')
+    expect(serializeDoc({ head: '', tail: '', blocks: synced.blocks })).toBe('A [def]. B [def].\n\nC [def:g-un].')
+  })
+
+  it('rien n’est modifié sans retouche', () => {
+    const blocks = expandDefs(parseDoc(text).blocks, defs, 'g-vie')
+    expect(syncDefs(blocks, defs, 'g-vie').changed).toBe(false)
+  })
+
+  it('toute définition du dépôt se relit à l’identique', () => {
+    const file = readFileSync('content/courses/plotin/definitions.yaml', 'utf8')
+    for (const [id, source] of Object.entries(parse(file) as Record<string, string | { def: string }>)) {
+      const def = typeof source === 'string' ? source : source.def
+      expect(canonicalDef(def), id).toBe(def)
+    }
   })
 })

@@ -7,6 +7,8 @@ import type { NoteColor } from '@/content/schema'
 import {
   applyLinks,
   blockText,
+  defRuns,
+  expandDefs,
   findGlossaryLinks,
   hasMark,
   insertRuns,
@@ -26,6 +28,7 @@ import {
   runsLength,
   serializeDoc,
   sliceRuns,
+  syncDefs,
   withMark,
   type Block,
   type BlockKind,
@@ -205,8 +208,9 @@ function markElement(key: MarkKey, marks: Marks, tint: string | undefined): HTML
       break
     case 'def':
       el = document.createElement('span')
-      el.className = 'rounded-md bg-teal/15 px-1 font-mono text-[0.85em] font-bold text-teal-deep'
-      el.title = 'Définition du glossaire, affichée ici à la lecture'
+      el.className = 'rounded-md bg-teal/15 px-0.5 box-decoration-clone underline decoration-teal/60 decoration-1 underline-offset-[5px]'
+      el.dataset.d = marks.def
+      el.title = `Définition citée (${marks.def}) : modifiable ici, elle s'enregistre dans definitions.yaml`
       break
   }
   el.dataset.m = key
@@ -246,7 +250,7 @@ function readRuns(el: HTMLElement): Run[] {
         out.push({ text: (child as Text).data.replace(/\n/g, ' '), marks })
       } else if (child instanceof HTMLElement && child.tagName !== 'BR') {
         const key = child.dataset.m as MarkKey | undefined
-        const next = key ? withMark(marks, key, true, child.dataset.c ?? child.dataset.l) : marks
+        const next = key ? withMark(marks, key, true, child.dataset.c ?? child.dataset.l ?? child.dataset.d) : marks
         visit(child, next)
       }
     }
@@ -277,8 +281,13 @@ const samePos = (a: Pos, b: Pos) => a.block === b.block && a.offset === b.offset
 /** Un guillemet s'ouvre en début de bloc, après une espace ou une ouvrante ; sinon il se ferme (voir `useFrenchQuotes`). */
 const opensQuote = (before: string) => before === '' || /[\s([{«‹⁠]$/.test(before)
 
+type Defs = Record<string, string>
+const NO_DEFS: Defs = {}
+
 interface Callbacks {
   onChange: (notes: string) => void
+  /** Les définitions citées dans le rappel, retouchées ici : l'ensemble à jour. */
+  onDefs: (defs: Defs) => void
   onState: (state: ToolbarState) => void
   onOpenTables: () => void
 }
@@ -288,7 +297,11 @@ class Controller {
   private tables = new Map<HTMLElement, Root>()
   private head = ''
   private tail = ''
-  private history: { notes: string; sel: Sel | null }[] = []
+  private history: { notes: string; defs: Defs; sel: Sel | null }[] = []
+  private defs: Defs = NO_DEFS
+  /** Les définitions telles que la dernière lecture ou la dernière modification les a laissées. */
+  lastDefs: Defs = NO_DEFS
+  private defsKey = '{}'
   private at = 0
   private lastType: 'typing' | 'op' = 'op'
   private lastAt = 0
@@ -302,6 +315,7 @@ class Controller {
     private root: HTMLElement,
     private tone: Tone,
     private cb: Callbacks,
+    private selfId: string,
   ) {
     const on = <K extends keyof HTMLElementEventMap>(type: K, fn: (event: HTMLElementEventMap[K]) => void) => {
       root.addEventListener(type, fn)
@@ -347,19 +361,22 @@ class Controller {
   }
 
   /** Nouveau texte venu d'ailleurs (autre leçon, Annuler) : tout se redessine, l'historique repart. */
-  load(notes: string) {
-    this.history = [{ notes, sel: null }]
+  load(notes: string, defs: Defs) {
+    this.history = [{ notes, defs, sel: null }]
     this.at = 0
-    this.apply(notes, null)
+    this.apply(notes, null, defs)
   }
 
-  private apply(notes: string, sel: Sel | null) {
+  private apply(notes: string, sel: Sel | null, defs: Defs) {
     const doc = parseDoc(notes)
     this.head = doc.head
     this.tail = doc.tail
     this.lastEmitted = notes
+    this.defs = defs
+    this.lastDefs = defs
+    this.defsKey = JSON.stringify(defs)
     this.pending = null
-    this.render(this.withTrailing(doc.blocks))
+    this.render(this.withTrailing(expandDefs(doc.blocks, defs, this.selfId)))
     if (sel) this.select(sel)
     this.updateState()
   }
@@ -614,7 +631,9 @@ class Controller {
         for (const pos of [sel.start, sel.end]) if (pos.block === i) pos.offset = Math.max(0, pos.offset - removed)
       }
     })
-    const all = this.withTrailing(fixed)
+    const synced = syncDefs(this.withTrailing(fixed), this.defs, this.selfId)
+    this.defs = synced.defs
+    const all = synced.blocks
     const changed = this.render(all)
     if (sel && (restore || changed)) this.select(sel)
     this.emit(all, sel, type)
@@ -623,19 +642,27 @@ class Controller {
 
   private emit(blocks: Block[], sel: Sel | null, type: 'typing' | 'op') {
     const notes = serializeDoc({ head: this.head, tail: this.tail, blocks })
-    if (notes === this.lastEmitted) return
+    const defsKey = JSON.stringify(this.defs)
+    if (notes === this.lastEmitted && defsKey === this.defsKey) return
     this.lastEmitted = notes
+    const defsChanged = defsKey !== this.defsKey
+    if (defsChanged) {
+      this.defsKey = defsKey
+      this.lastDefs = this.defs
+    }
+    const defs = this.defs
     const now = Date.now()
     const coalesce = type === 'typing' && this.lastType === 'typing' && now - this.lastAt < 1000 && this.at > 0
-    if (coalesce) this.history[this.at] = { notes, sel }
+    if (coalesce) this.history[this.at] = { notes, defs, sel }
     else {
       this.history = this.history.slice(0, this.at + 1)
-      this.history.push({ notes, sel })
+      this.history.push({ notes, defs, sel })
       this.at = this.history.length - 1
     }
     this.lastType = type
     this.lastAt = now
     this.cb.onChange(notes)
+    if (defsChanged) this.cb.onDefs(defs)
   }
 
   private undo(step: -1 | 1) {
@@ -647,9 +674,11 @@ class Controller {
     // Le curseur d'une étape annulée est celui d'après la modification
     // suivante : on le reprend, borné au texte rétabli.
     const sel = step === -1 ? (this.history[target + 1]?.sel ?? entry.sel) : entry.sel
-    this.apply(entry.notes, null)
+    const defsChanged = entry.defs !== this.lastDefs
+    this.apply(entry.notes, null, entry.defs)
     if (sel) this.select(this.clamp(sel))
     this.cb.onChange(entry.notes)
+    if (defsChanged) this.cb.onDefs(entry.defs)
   }
 
   private clamp(sel: Sel): Sel {
@@ -1005,10 +1034,11 @@ class Controller {
     const blocks = this.read()
     const block = blocks[sel.start.block]
     if (!block || block.kind === 'table' || block.kind === 'section') return
-    const text = target ? `[def:${target}]` : '[def]'
-    const runs = mergeRuns([...sliceRuns(block.runs, 0, sel.start.offset), { text, marks: { def: true } }, ...sliceRuns(block.runs, sel.end.offset)])
+    const token = target ? `[def:${target}]` : '[def]'
+    const inserted = defRuns(token, this.defs[target ?? this.selfId] ?? '')
+    const runs = mergeRuns([...sliceRuns(block.runs, 0, sel.start.offset), ...inserted, ...sliceRuns(block.runs, sel.end.offset)])
     blocks[sel.start.block] = { ...block, runs }
-    this.commit(blocks, this.collapsedAt({ block: sel.start.block, offset: sel.start.offset + text.length }), 'op')
+    this.commit(blocks, this.collapsedAt({ block: sel.start.block, offset: sel.start.offset + runsLength(inserted) }), 'op')
   }
 
   /** Le texte sélectionné, d'un seul bloc ;vide s'il n'y en a pas ou s'il en couvre plusieurs. */
@@ -1163,7 +1193,7 @@ class Controller {
       const ranges = this.ranges(blocks, sel)
       if (ranges.length > 0) {
         for (const key of MARK_ORDER) {
-          if (key === 'color' || key === 'link') continue
+          if (key === 'color' || key === 'link' || key === 'def') continue
           if (ranges.every(({ index, from, to }) => hasMark(blocks[index]!.runs, from, to, key))) marks[key] = true as never
         }
         const link = sliceRuns(blocks[ranges[0]!.index]!.runs, ranges[0]!.from, ranges[0]!.to)[0]?.marks.link
@@ -1247,6 +1277,8 @@ export function RichNotesEditor({
   glossary = [],
   selfId = '',
   autoLink = false,
+  defs = NO_DEFS,
+  onDefs,
 }: {
   notes: string
   onChange: (notes: string) => void
@@ -1261,6 +1293,9 @@ export function RichNotesEditor({
   selfId?: string
   /** Rappel d'une entrée du glossaire : propose de lier d'un coup la première occurrence de chaque notion. */
   autoLink?: boolean
+  /** Les définitions du glossaire du cours : celles que les `[def]` du rappel affichent, et qu'on y retouche. */
+  defs?: Defs
+  onDefs?: (defs: Defs) => void
 }) {
   const [panel, setPanel] = useState<'pick' | 'auto' | null>(null)
   const [query, setQuery] = useState('')
@@ -1269,19 +1304,27 @@ export function RichNotesEditor({
   const rootRef = useRef<HTMLDivElement | null>(null)
   const controller = useRef<Controller | null>(null)
   const [state, setState] = useState<ToolbarState>(EMPTY_STATE)
-  const latest = useRef({ onChange, onOpenTables })
-  latest.current = { onChange, onOpenTables }
+  const latest = useRef({ onChange, onOpenTables, onDefs })
+  latest.current = { onChange, onOpenTables, onDefs }
+  const initialDefs = useRef(defs)
+  initialDefs.current = defs
   const initial = useRef(notes)
   initial.current = notes
 
   useLayoutEffect(() => {
-    const ctl = new Controller(rootRef.current!, tone, {
-      onChange: (next) => latest.current.onChange(next),
-      onState: setState,
-      onOpenTables: () => latest.current.onOpenTables(),
-    })
+    const ctl = new Controller(
+      rootRef.current!,
+      tone,
+      {
+        onChange: (next) => latest.current.onChange(next),
+        onDefs: (next) => latest.current.onDefs?.(next),
+        onState: setState,
+        onOpenTables: () => latest.current.onOpenTables(),
+      },
+      selfId,
+    )
     controller.current = ctl
-    ctl.load(initial.current)
+    ctl.load(initial.current, initialDefs.current)
     return () => {
       ctl.destroy()
       controller.current = null
@@ -1290,8 +1333,8 @@ export function RichNotesEditor({
 
   useLayoutEffect(() => {
     const ctl = controller.current
-    if (ctl && notes !== ctl.lastEmitted) ctl.load(notes)
-  }, [notes])
+    if (ctl && (notes !== ctl.lastEmitted || defs !== ctl.lastDefs)) ctl.load(notes, defs)
+  }, [notes, defs])
 
   const { marks } = state
   const closePanel = () => setPanel(null)
@@ -1364,7 +1407,7 @@ export function RichNotesEditor({
           {marks.link ? '🔗 Retirer le renvoi' : '🔗 Renvoi'}
         </ToolbarButton>
         <ToolbarButton
-          title="Citer la définition de l'entrée ([def]) : elle s'affiche à sa place à la lecture"
+          title="Citer la définition de l'entrée ([def]) : son texte s'affiche ici et se modifie ici, dans definitions.yaml"
           active={Boolean(marks.def)}
           onClick={run((c) => c.insertDef())}
         >

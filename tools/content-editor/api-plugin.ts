@@ -781,6 +781,57 @@ export function contentEditorApi(): Plugin {
         sendJson(res, 405, { error: 'méthode non supportée' })
       })
 
+      // Les définitions du glossaire d'un cours (`definitions.yaml`, voir
+      // `src/content/definitions.ts`) : lues pour afficher les `[def]` d'un
+      // rappel à leur place, réécrites quand on les retouche là.
+      server.middlewares.use('/api/definitions', async (req, res) => {
+        const url = new URL(req.url ?? '', 'http://localhost')
+        const course = url.searchParams.get('course') ?? ''
+        if (!/^[a-z0-9-]+$/.test(course)) {
+          sendJson(res, 400, { error: 'course invalide' })
+          return
+        }
+        const file = join(contentDir, course, 'definitions.yaml')
+        try {
+          if (req.method === 'GET') {
+            if (!existsSync(file)) {
+              sendJson(res, 200, {})
+              return
+            }
+            const raw = (readYamlDoc(file).toJS() ?? {}) as Record<string, unknown>
+            const defs: Record<string, string> = {}
+            for (const [id, source] of Object.entries(raw)) {
+              const text = typeof source === 'string' ? source : (source as { def?: unknown } | null)?.def
+              if (typeof text === 'string') defs[id] = text
+            }
+            sendJson(res, 200, defs)
+            return
+          }
+          if (req.method === 'PUT') {
+            const body = JSON.parse(await readBody(req)) as { defs?: Record<string, string> }
+            if (!existsSync(file) || !body.defs) {
+              sendJson(res, 400, { error: 'définitions introuvables' })
+              return
+            }
+            const doc = readYamlDoc(file)
+            for (const [id, raw] of Object.entries(body.defs)) {
+              const text = tidyLine(String(raw)).trim()
+              if (!text) continue
+              const node = doc.get(id, true)
+              if (isMap(node)) setScalar(node, 'def', text)
+              else if (node && typeof node === 'object' && 'value' in node) (node as { value: unknown }).value = text
+              else doc.set(id, new Scalar(text))
+            }
+            writeYamlDoc(file, doc)
+            sendJson(res, 200, { ok: true })
+            return
+          }
+          sendJson(res, 405, { error: 'méthode non supportée' })
+        } catch (error) {
+          sendJson(res, 500, { error: String((error as Error).message) })
+        }
+      })
+
       // Une unité toute neuve, dans une piste existante. `unitSchema.lessons`
       // exige au moins une leçon (voir `src/content/schema.ts`) : la
       // création groupe donc toujours l'unité et sa première leçon, jamais

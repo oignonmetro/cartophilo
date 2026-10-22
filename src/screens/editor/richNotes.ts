@@ -24,8 +24,12 @@ export interface Marks {
   color?: NoteColor
   /** Renvoi vers une autre unité (`[[cible|texte]]`) : l'identifiant de la cible. */
   link?: string
-  /** Citation de définition (`[def]`) : le texte reste le marqueur, seule la pastille change. */
-  def?: true
+  /**
+   * Citation de définition : le marqueur (`[def]` ou `[def:g-un]`). Le texte du
+   * segment est la définition même, qui s'écrit dans `definitions.yaml` ; seul
+   * le marqueur va dans le rappel (voir `expandDefs`, `syncDefs`).
+   */
+  def?: string
 }
 
 export type MarkKey = keyof Marks
@@ -59,7 +63,7 @@ export interface NotesDoc {
 }
 
 /** Du plus extérieur au plus intérieur : le seul ordre que `parseInline` relise sans perte. */
-export const MARK_ORDER = ['color', 'underline', 'strong', 'em', 'form', 'link', 'def'] as const
+export const MARK_ORDER = ['def', 'color', 'underline', 'strong', 'em', 'form', 'link'] as const
 
 /** Citation d'une définition du glossaire : `[def]` (celle de l'entrée) ou `[def:g-un]`. */
 const DEF_TOKEN = /\[def(?::[a-z0-9-]+)?\]/g
@@ -103,7 +107,7 @@ export function runsFromMarkup(text: string): Run[] {
         let last = 0
         for (const match of span.text.matchAll(DEF_TOKEN)) {
           if (match.index > last) out.push({ text: span.text.slice(last, match.index), marks })
-          out.push({ text: match[0], marks: { ...marks, def: true } })
+          out.push({ text: match[0], marks: { ...marks, def: match[0] } })
           last = match.index + match[0].length
         }
         if (last < span.text.length) out.push({ text: span.text.slice(last), marks })
@@ -125,7 +129,8 @@ const WRAP: Record<(typeof MARK_ORDER)[number], (inner: string, marks: Marks) =>
   em: (inner) => `*${inner}*`,
   form: (inner) => `\`${inner}\``,
   link: (inner, marks) => `[[${marks.link}|${inner}]]`,
-  def: (inner) => inner,
+  // Le contenu de la définition n'est pas écrit ici : seul le marqueur l'est.
+  def: (_inner, marks) => marks.def!,
 }
 
 /** L'inverse de `runsFromMarkup`. Gras et italique ne se cumulent pas (le format ne sait pas l'écrire). */
@@ -298,6 +303,22 @@ const plainRuns = (text: string): Run[] => (text ? [{ text, marks: {} }] : [])
  */
 export function reparseRuns(runs: Run[]): Run[] | null {
   const merged = mergeRuns(runs)
+  if (merged.some((run) => run.marks.def)) {
+    // Une définition citée se garde telle quelle : seul ce qui l'entoure est relu.
+    const out: Run[] = []
+    let changed = false
+    for (let i = 0; i < merged.length; ) {
+      const def = merged[i]!.marks.def
+      let j = i
+      while (j < merged.length && merged[j]!.marks.def === def) j++
+      const part = merged.slice(i, j)
+      const reread = def ? null : reparseRuns(part)
+      if (reread) changed = true
+      out.push(...(reread ?? part))
+      i = j
+    }
+    return changed ? out : null
+  }
   const reread = runsFromMarkup(markupFromRuns(merged))
   const same =
     reread.length === merged.length &&
@@ -363,6 +384,7 @@ export function withMark(marks: Marks, key: MarkKey, on: boolean, arg?: string):
   }
   if (key === 'color') next.color = arg as NoteColor
   else if (key === 'link') next.link = arg
+  else if (key === 'def') next.def = arg
   else next[key] = true as never
   // Un renvoi et une forme citée sont tous deux littéraux : aucun ne s'écrit dans l'autre.
   if (key === 'link') delete next.form
@@ -539,4 +561,98 @@ export function applyLinks(blocks: Block[], hits: readonly LinkHit[]): Block[] {
     block.runs = restyle(block.runs, hit.from, hit.to, (marks) => withMark(marks, 'link', true, hit.target))
   }
   return next
+}
+
+/* ——— Définitions citées : `[def]` s'écrit dans le rappel, sa définition dans `definitions.yaml` ——— */
+
+/** L'entrée que cite un marqueur : `[def]` est celle du rappel même (`selfId`), `[def:g-un]` une autre. */
+export const defTarget = (token: string, selfId: string): string => (token === '[def]' ? selfId : token.slice(5, -1))
+
+/** Les segments d'une définition, marqués de leur marqueur ; le marqueur seul si elle est vide. */
+export function defRuns(token: string, text: string): Run[] {
+  const inner = runsFromMarkup(text)
+  if (inner.length === 0) return [{ text: token, marks: { def: token } }]
+  return inner.map((run) => ({ text: run.text, marks: { ...run.marks, def: token } }))
+}
+
+/** Un segment qui n'est encore que son marqueur (définition inconnue, ou pas encore dépliée). */
+const isDefToken = (run: Run) => Boolean(run.marks.def) && run.text === run.marks.def
+
+/** Remplace chaque marqueur par sa définition, quand on la connaît. */
+export function expandDefs(blocks: Block[], defs: Readonly<Record<string, string>>, selfId: string): Block[] {
+  return blocks.map((block) => {
+    if (!block.runs.some(isDefToken)) return block
+    const runs = block.runs.flatMap((run) => {
+      const text = isDefToken(run) ? defs[defTarget(run.marks.def!, selfId)] : undefined
+      return text ? defRuns(run.marks.def!, text) : [run]
+    })
+    return { ...block, runs: mergeRuns(runs) }
+  })
+}
+
+/** Une définition telle que l'éditeur la réécrirait : la forme de comparaison, pour ne rien croire modifié sans raison. */
+export const canonicalDef = (text: string): string => markupFromRuns(runsFromMarkup(text))
+
+interface DefGroup {
+  token: string
+  target: string
+  block: number
+  from: number
+  to: number
+  markup: string
+}
+
+/** Les définitions dépliées du texte, dans l'ordre, avec ce qu'elles contiennent à présent. */
+function defGroups(blocks: Block[], selfId: string): DefGroup[] {
+  const out: DefGroup[] = []
+  blocks.forEach((block, index) => {
+    if (block.kind === 'table' || block.kind === 'section') return
+    let at = 0
+    for (let i = 0; i < block.runs.length; ) {
+      const token = block.runs[i]!.marks.def
+      let j = i
+      let to = at
+      while (j < block.runs.length && block.runs[j]!.marks.def === token) to += block.runs[j++]!.text.length
+      const part = block.runs.slice(i, j)
+      if (token && !(part.length === 1 && isDefToken(part[0]!))) {
+        const bare = part.map(({ text, marks: { def: _def, ...marks } }) => ({ text, marks }))
+        out.push({ token, target: defTarget(token, selfId), block: index, from: at, to, markup: markupFromRuns(bare) })
+      }
+      at = to
+      i = j
+    }
+  })
+  return out
+}
+
+/**
+ * Après une modification : la définition qu'on a retouchée devient la
+ * définition de son entrée, et toutes ses citations dans le rappel s'y
+ * alignent. Rend `changed` quand une définition n'est plus celle d'avant.
+ */
+export function syncDefs(
+  blocks: Block[],
+  defs: Readonly<Record<string, string>>,
+  selfId: string,
+): { blocks: Block[]; defs: Record<string, string>; changed: boolean } {
+  const groups = defGroups(blocks, selfId)
+  if (groups.length === 0) return { blocks, defs: defs as Record<string, string>, changed: false }
+  const next = { ...defs }
+  let changed = false
+  for (const target of new Set(groups.map((group) => group.target))) {
+    const known = canonicalDef(defs[target] ?? '')
+    const edited = groups.find((group) => group.target === target && group.markup !== known)
+    if (edited) {
+      next[target] = edited.markup
+      changed = true
+    }
+  }
+  const out = blocks.map((block) => ({ ...block }))
+  for (const group of [...groups].sort((a, b) => b.block - a.block || b.from - a.from)) {
+    const text = next[group.target]
+    if (text === undefined || group.markup === canonicalDef(text)) continue
+    const block = out[group.block]!
+    block.runs = mergeRuns([...sliceRuns(block.runs, 0, group.from), ...defRuns(group.token, text), ...sliceRuns(block.runs, group.to)])
+  }
+  return { blocks: out, defs: changed ? next : (defs as Record<string, string>), changed }
 }
