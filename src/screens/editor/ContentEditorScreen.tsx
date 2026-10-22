@@ -89,6 +89,34 @@ function tableExerciseCount(lessonId: string, title: string, notes: string, sett
   }
 }
 
+const POSITION_KEY = 'cartophilo.editor.position'
+
+interface Position {
+  course: string
+  track: string
+  unit: string
+  lesson: string
+  view: 'notes' | 'text' | 'points' | 'tables'
+}
+
+function rememberPosition(patch: Partial<Position>) {
+  try {
+    const current = JSON.parse(localStorage.getItem(POSITION_KEY) ?? '{}') as Partial<Position>
+    localStorage.setItem(POSITION_KEY, JSON.stringify({ ...current, ...patch }))
+  } catch {
+    // Stockage indisponible : l'éditeur s'ouvre simplement sur l'accueil.
+  }
+}
+
+function recallPosition(): Partial<Position> | null {
+  try {
+    const saved = JSON.parse(localStorage.getItem(POSITION_KEY) ?? 'null') as Partial<Position> | null
+    return saved?.course && saved.track && saved.unit && saved.lesson ? saved : null
+  } catch {
+    return null
+  }
+}
+
 export default function ContentEditorScreen() {
   useFrenchQuotes()
   const [tree, setTree] = useState<TreeCourse[] | null>(null)
@@ -148,6 +176,7 @@ export default function ContentEditorScreen() {
   }, [loadTree])
 
   const openLesson = useCallback(async (course: string, track: TreeTrack, unit: string, lesson: string) => {
+    rememberPosition({ course, track: track.id, unit, lesson })
     setSelection({ course, unit, lesson })
     setTrackKind(track.kind)
     setTrackId(track.id)
@@ -185,6 +214,26 @@ export default function ContentEditorScreen() {
       setError(String((err as Error).message))
     }
   }, [])
+
+  // Au rechargement (mise à jour du code, ou à la main), on reprend la leçon et l'onglet où l'on était.
+  const restored = useRef(false)
+  useEffect(() => {
+    if (!tree || restored.current) return
+    restored.current = true
+    const saved = recallPosition()
+    if (!saved) return
+    const course = tree.find((c) => c.id === saved.course)
+    const track = course?.tracks.find((t) => t.id === saved.track)
+    const unit = track?.units.find((u) => u.id === saved.unit)
+    if (!track || !unit?.lessons.some((l) => l.id === saved.lesson)) return
+    void openLesson(saved.course!, track, saved.unit!, saved.lesson!).then(() => {
+      if (saved.view && (saved.view === 'notes' || track.kind === 'grammar')) setView(saved.view)
+    })
+  }, [tree, openLesson])
+
+  useEffect(() => {
+    if (restored.current) rememberPosition({ view })
+  }, [view])
 
   /** Après création dans une fenêtre : l'arborescence se recharge et la nouvelle leçon s'ouvre. */
   const afterCreate = useCallback(
