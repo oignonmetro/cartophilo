@@ -2,9 +2,12 @@ import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 're
 import { createRoot, type Root } from 'react-dom/client'
 import { INLINE_COLORS, NoteTable, type Tone } from '@/components/session/RuleNote'
 import { parseNotes } from '@/content/notes'
+import { splitTermTitle } from '@/content/definitions'
 import type { NoteColor } from '@/content/schema'
 import {
+  applyLinks,
   blockText,
+  findGlossaryLinks,
   hasMark,
   insertRuns,
   isEmptyBlock,
@@ -26,6 +29,8 @@ import {
   withMark,
   type Block,
   type BlockKind,
+  type GlossaryEntry,
+  type LinkHit,
   type MarkKey,
   type Marks,
   type Run,
@@ -191,6 +196,13 @@ function markElement(key: MarkKey, marks: Marks, tint: string | undefined): HTML
       el = document.createElement('em')
       el.className = 'text-ink italic'
       break
+    case 'link':
+      el = document.createElement('span')
+      el.className =
+        'rounded-md bg-violet/10 px-0.5 font-bold text-violet-deep underline decoration-violet/50 decoration-dotted decoration-2 underline-offset-[3px]'
+      el.dataset.l = marks.link
+      el.title = `Renvoi vers ${marks.link}`
+      break
   }
   el.dataset.m = key
   return el
@@ -229,7 +241,7 @@ function readRuns(el: HTMLElement): Run[] {
         out.push({ text: (child as Text).data.replace(/\n/g, ' '), marks })
       } else if (child instanceof HTMLElement && child.tagName !== 'BR') {
         const key = child.dataset.m as MarkKey | undefined
-        const next = key ? withMark(marks, key, true, child.dataset.c as NoteColor | undefined) : marks
+        const next = key ? withMark(marks, key, true, child.dataset.c ?? child.dataset.l) : marks
         visit(child, next)
       }
     }
@@ -957,7 +969,7 @@ class Controller {
   }
 
   /** Pose ou retire une mise en forme ; sans sélection, elle vaut pour la prochaine lettre tapée. */
-  toggleMark(key: MarkKey, color?: NoteColor) {
+  toggleMark(key: MarkKey, color?: string) {
     const sel = this.current()
     if (!sel) return
     const blocks = this.read()
@@ -979,6 +991,61 @@ class Controller {
       blocks[index] = { ...block, runs: restyle(block.runs, from, to, (marks) => withMark(marks, key, !active, color)) }
     }
     this.commit(blocks, sel, 'op')
+  }
+
+  /** Le texte sélectionné, d'un seul bloc ; vide s'il n'y en a pas ou s'il en couvre plusieurs. */
+  selectedText(): string {
+    const sel = this.current()
+    if (!sel || sel.collapsed || sel.start.block !== sel.end.block) return ''
+    const block = this.read()[sel.start.block]
+    return block && block.kind !== 'table' ? blockText(block).slice(sel.start.offset, sel.end.offset) : ''
+  }
+
+  /**
+   * Pose un renvoi sur la sélection ; sans sélection, insère `text` en renvoi
+   * au curseur. `null` retire le renvoi sous la sélection ou sous le curseur.
+   */
+  setLink(target: string | null, text: string) {
+    const sel = this.current()
+    if (!sel) return
+    const blocks = this.read()
+    if (sel.collapsed) {
+      const index = sel.start.block
+      const block = blocks[index]
+      if (!block || block.kind === 'table' || block.kind === 'section') return
+      if (target === null) {
+        let at = 0
+        for (const run of block.runs) {
+          const end = at + run.text.length
+          if (run.marks.link && sel.start.offset >= at && sel.start.offset <= end) {
+            blocks[index] = { ...block, runs: restyle(block.runs, at, end, (marks) => withMark(marks, 'link', false)) }
+            this.commit(blocks, sel, 'op')
+            return
+          }
+          at = end
+        }
+        return
+      }
+      const offset = sel.start.offset
+      blocks[index] = { ...block, runs: insertRuns(block.runs, offset, [{ text, marks: { link: target } }]) }
+      this.commit(blocks, this.collapsedAt({ block: index, offset: offset + text.length }), 'op')
+      return
+    }
+    for (const { index, from, to } of this.ranges(blocks, sel)) {
+      const block = blocks[index]!
+      blocks[index] = { ...block, runs: restyle(block.runs, from, to, (marks) => withMark(marks, 'link', target !== null, target ?? undefined)) }
+    }
+    this.commit(blocks, sel, 'op')
+  }
+
+  /** Les renvois que le glossaire permet d'ajouter (première occurrence de chaque notion), sans rien changer. */
+  suggestLinks(entries: readonly GlossaryEntry[], selfId: string): LinkHit[] {
+    return findGlossaryLinks(this.read(), entries, selfId)
+  }
+
+  applyLinkHits(hits: readonly LinkHit[]) {
+    if (hits.length === 0) return
+    this.commit(applyLinks(this.read(), hits), this.current(), 'op')
   }
 
   /** Les morceaux de texte sélectionnés, bloc par bloc (tableaux et sections exclus). */
@@ -1078,9 +1145,11 @@ class Controller {
       const ranges = this.ranges(blocks, sel)
       if (ranges.length > 0) {
         for (const key of MARK_ORDER) {
-          if (key === 'color') continue
+          if (key === 'color' || key === 'link') continue
           if (ranges.every(({ index, from, to }) => hasMark(blocks[index]!.runs, from, to, key))) marks[key] = true as never
         }
+        const link = sliceRuns(blocks[ranges[0]!.index]!.runs, ranges[0]!.from, ranges[0]!.to)[0]?.marks.link
+        if (link && ranges.every(({ index, from, to }) => hasMark(blocks[index]!.runs, from, to, 'link', link))) marks.link = link
         const first = sliceRuns(blocks[ranges[0]!.index]!.runs, ranges[0]!.from, ranges[0]!.to)[0]?.marks.color
         if (first && ranges.every(({ index, from, to }) => hasMark(blocks[index]!.runs, from, to, 'color', first))) marks.color = first
       }
@@ -1157,6 +1226,9 @@ export function RichNotesEditor({
   trackKind,
   header,
   onOpenTables,
+  glossary = [],
+  selfId = '',
+  autoLink = false,
 }: {
   notes: string
   onChange: (notes: string) => void
@@ -1165,7 +1237,17 @@ export function RichNotesEditor({
   /** Titre et texte cité, au-dessus du rappel dans la même carte. */
   header: ReactNode
   onOpenTables: () => void
+  /** Les entrées du glossaire du cours, cibles possibles d'un renvoi. */
+  glossary?: GlossaryEntry[]
+  /** L'unité du rappel, que ses propres renvois ne visent pas. */
+  selfId?: string
+  /** Rappel d'une entrée du glossaire : propose de lier d'un coup la première occurrence de chaque notion. */
+  autoLink?: boolean
 }) {
+  const [panel, setPanel] = useState<'pick' | 'auto' | null>(null)
+  const [query, setQuery] = useState('')
+  const [hits, setHits] = useState<LinkHit[]>([])
+  const [skipped, setSkipped] = useState<Set<number>>(new Set())
   const rootRef = useRef<HTMLDivElement | null>(null)
   const controller = useRef<Controller | null>(null)
   const [state, setState] = useState<ToolbarState>(EMPTY_STATE)
@@ -1194,6 +1276,29 @@ export function RichNotesEditor({
   }, [notes])
 
   const { marks } = state
+  const closePanel = () => setPanel(null)
+  const openPicker = () => {
+    if (marks.link) {
+      controller.current?.setLink(null, '')
+      return
+    }
+    setQuery(controller.current?.selectedText() ?? '')
+    setPanel(panel === 'pick' ? null : 'pick')
+  }
+  const openAuto = () => {
+    if (panel === 'auto') return closePanel()
+    setHits(controller.current?.suggestLinks(glossary, selfId) ?? [])
+    setSkipped(new Set())
+    setPanel('auto')
+  }
+  const pick = (entry: GlossaryEntry) => {
+    controller.current?.setLink(entry.id, splitTermTitle(entry.title).title)
+    closePanel()
+  }
+  const applyAuto = () => {
+    controller.current?.applyLinkHits(hits.filter((_, index) => !skipped.has(index)))
+    closePanel()
+  }
   const run = (fn: (ctl: Controller) => void) => () => {
     if (controller.current) fn(controller.current)
   }
@@ -1233,6 +1338,23 @@ export function RichNotesEditor({
           </ToolbarButton>
         )}
         <span className="mx-1 h-5 w-px bg-line" />
+        <ToolbarButton
+          title={marks.link ? `Retirer le renvoi vers ${marks.link}` : 'Renvoi vers une entrée du glossaire : sélectionne un mot, puis choisis l’entrée'}
+          active={Boolean(marks.link) || panel === 'pick'}
+          onClick={openPicker}
+        >
+          {marks.link ? '🔗 Retirer le renvoi' : '🔗 Renvoi'}
+        </ToolbarButton>
+        {autoLink && (
+          <ToolbarButton
+            title="Lier la première occurrence de chaque notion du glossaire (tu relis avant d’appliquer)"
+            active={panel === 'auto'}
+            onClick={openAuto}
+          >
+            ✨ Lier le glossaire
+          </ToolbarButton>
+        )}
+        <span className="mx-1 h-5 w-px bg-line" />
         {COLORS.map((color) => (
           <button
             key={color}
@@ -1247,6 +1369,26 @@ export function RichNotesEditor({
         ))}
       </div>
 
+      {panel === 'pick' && (
+        <LinkPicker glossary={glossary} query={query} onQuery={setQuery} onPick={pick} onClose={closePanel} />
+      )}
+      {panel === 'auto' && (
+        <AutoLinkPanel
+          hits={hits}
+          glossary={glossary}
+          skipped={skipped}
+          onToggle={(index) =>
+            setSkipped((current) => {
+              const next = new Set(current)
+              if (!next.delete(index)) next.add(index)
+              return next
+            })
+          }
+          onApply={applyAuto}
+          onClose={closePanel}
+        />
+      )}
+
       <div className="min-h-0 flex-1 overflow-y-auto bg-ink/3 px-4 py-6 md:px-6">
         <div className="card-3d mx-auto flex w-full max-w-lg flex-col gap-4 px-6 py-6 md:max-w-3xl md:px-10 md:py-10">
           {header}
@@ -1259,6 +1401,140 @@ export function RichNotesEditor({
             aria-label="Rappel de la leçon"
             className="min-h-24 whitespace-pre-wrap outline-none"
           />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const strip = (text: string) =>
+  text
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+
+/** Choisit l'entrée du glossaire qu'un renvoi vise : recherche sur la notion, le terme grec ou l'identifiant. */
+function LinkPicker({
+  glossary,
+  query,
+  onQuery,
+  onPick,
+  onClose,
+}: {
+  glossary: GlossaryEntry[]
+  query: string
+  onQuery: (query: string) => void
+  onPick: (entry: GlossaryEntry) => void
+  onClose: () => void
+}) {
+  const needle = strip(query.trim())
+  const shown = glossary.filter((entry) => !needle || strip(`${entry.title} ${entry.id}`).includes(needle))
+  return (
+    <div className="border-b-2 border-line bg-ink/3 px-4 py-3">
+      <div className="mx-auto flex max-w-3xl flex-col gap-2">
+        <div className="flex items-center gap-2">
+          <input
+            autoFocus
+            value={query}
+            onChange={(event) => onQuery(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === 'Escape') onClose()
+              if (event.key === 'Enter' && shown[0]) onPick(shown[0])
+            }}
+            placeholder="Renvoyer vers quelle entrée ?"
+            className="flex-1 rounded-lg border-2 border-line bg-paper px-3 py-1.5 text-sm outline-none focus:border-violet"
+          />
+          <button type="button" onClick={onClose} className="rounded px-2 text-ink-faint hover:text-ink" title="Fermer">
+            ✕
+          </button>
+        </div>
+        <div className="flex max-h-44 flex-wrap gap-1.5 overflow-y-auto">
+          {shown.length === 0 && <span className="text-xs text-ink-faint">Aucune entrée ne correspond.</span>}
+          {shown.map((entry) => {
+            const { title, greek } = splitTermTitle(entry.title)
+            return (
+              <button
+                key={entry.id}
+                type="button"
+                onClick={() => onPick(entry)}
+                title={entry.id}
+                className="rounded-lg border-2 border-line bg-paper px-2.5 py-1 text-xs font-bold text-ink-soft hover:border-violet hover:text-violet-deep"
+              >
+                {title}
+                {greek && <em className="ml-1 font-normal text-ink-faint">{greek}</em>}
+              </button>
+            )
+          })}
+        </div>
+        <p className="text-xs text-ink-faint">
+          Sans texte sélectionné, le nom de l’entrée est inséré au curseur sous forme de renvoi.
+        </p>
+      </div>
+    </div>
+  )
+}
+
+/** Relecture des renvois que « Lier le glossaire » propose : chacun se décoche avant d'appliquer. */
+function AutoLinkPanel({
+  hits,
+  glossary,
+  skipped,
+  onToggle,
+  onApply,
+  onClose,
+}: {
+  hits: LinkHit[]
+  glossary: GlossaryEntry[]
+  skipped: Set<number>
+  onToggle: (index: number) => void
+  onApply: () => void
+  onClose: () => void
+}) {
+  const chosen = hits.length - skipped.size
+  const titleOf = (id: string) => splitTermTitle(glossary.find((entry) => entry.id === id)?.title ?? id).title
+  return (
+    <div className="border-b-2 border-line bg-ink/3 px-4 py-3">
+      <div className="mx-auto flex max-w-3xl flex-col gap-2">
+        {hits.length === 0 ? (
+          <p className="text-sm text-ink-soft">
+            Aucune notion du glossaire à lier : chacune est déjà liée, citée entre guillemets, ou absente du rappel.
+          </p>
+        ) : (
+          <>
+            <p className="text-xs font-bold text-ink-soft">
+              Première occurrence de chaque notion, hors citations. Décoche ce qui ne convient pas.
+            </p>
+            <ul className="flex max-h-56 flex-col gap-1 overflow-y-auto">
+              {hits.map((hit, index) => (
+                <li key={hit.target}>
+                  <label className="flex cursor-pointer items-baseline gap-2 rounded-lg px-2 py-1 text-sm hover:bg-ink/5">
+                    <input type="checkbox" checked={!skipped.has(index)} onChange={() => onToggle(index)} />
+                    <span className="min-w-0 flex-1 truncate">
+                      <span className="text-ink-faint">…{hit.before}</span>
+                      <strong className="rounded bg-violet/15 px-0.5 text-violet-deep">{hit.text}</strong>
+                      <span className="text-ink-faint">{hit.after}…</span>
+                    </span>
+                    <span className="shrink-0 text-xs text-ink-faint">→ {titleOf(hit.target)}</span>
+                  </label>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+        <div className="flex justify-end gap-2">
+          <button type="button" onClick={onClose} className="rounded-lg px-3 py-1.5 text-xs font-bold text-ink-soft hover:bg-ink/5">
+            {hits.length === 0 ? 'Fermer' : 'Annuler'}
+          </button>
+          {hits.length > 0 && (
+            <button
+              type="button"
+              disabled={chosen === 0}
+              onClick={onApply}
+              className="rounded-lg border-2 border-violet bg-violet/15 px-3 py-1.5 text-xs font-bold text-violet-deep disabled:opacity-40"
+            >
+              Lier {chosen} renvoi{chosen > 1 ? 's' : ''}
+            </button>
+          )}
         </div>
       </div>
     </div>

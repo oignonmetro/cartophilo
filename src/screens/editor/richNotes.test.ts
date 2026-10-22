@@ -3,6 +3,8 @@ import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { parse } from 'yaml'
 import {
+  applyLinks,
+  findGlossaryLinks,
   hasMark,
   markupFromRuns,
   normalizeBlock,
@@ -82,5 +84,41 @@ describe('richNotes', () => {
     expect(block.kind).toBe('rule')
     expect(removed).toBe(2)
     expect(markupFromRuns(block.runs)).toBe('**cas** : règle')
+  })
+})
+
+describe('renvois du glossaire', () => {
+  const entries = [
+    { id: 'g-un', title: 'Un (`hen`)' },
+    { id: 'g-vie', title: 'Vie (`zôê`)' },
+    { id: 'g-vie-parfaite', title: 'Vie parfaite' },
+    { id: 'g-ame', title: 'Âme (`psuchê`)' },
+  ]
+  const doc = (text: string) => parseDoc(text).blocks
+
+  it('un renvoi est une mise en forme, réécrite à l’identique', () => {
+    const text = '**La {teal}vie{/teal}** vient de [[g-un|l’Un]] et *[[g-vie|vie]]*.'
+    expect(serializeDoc(parseDoc(text))).toBe(text)
+    const runs = runsFromMarkup('de [[g-un|l’Un]]')
+    expect(runs.map((run) => [run.text, run.marks.link])).toEqual([['de ', undefined], ['l’Un', 'g-un']])
+  })
+
+  it('lie la première occurrence, hors citations, renvois et entrée elle-même', () => {
+    const blocks = doc('Un principe : la vie découle de l’Un, et la vie parfaite aussi.\n\n« L’Un » cite l’âme. Puis l’âme.')
+    const hits = findGlossaryLinks(blocks, entries, 'g-ame')
+    expect(hits.map((hit) => [hit.target, hit.text])).toEqual([
+      ['g-vie', 'vie'],
+      ['g-un', 'Un'],
+      ['g-vie-parfaite', 'vie parfaite'],
+    ])
+    const linked = applyLinks(blocks, hits)
+    expect(serializeDoc({ head: '', tail: '', blocks: linked })).toBe(
+      'Un principe : la [[g-vie|vie]] découle de l’[[g-un|Un]], et la [[g-vie-parfaite|vie parfaite]] aussi.\n\n« L’Un » cite l’âme. Puis l’âme.',
+    )
+  })
+
+  it('ne relie pas ce qui l’est déjà', () => {
+    const blocks = doc('La [[g-vie|vie]] et l’Un.')
+    expect(findGlossaryLinks(blocks, entries, '').map((hit) => hit.target)).toEqual(['g-un'])
   })
 })

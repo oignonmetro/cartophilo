@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useEffect, useRef, useState } from 'react'
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { TONES } from '@/components/session/RuleNote'
 import { PassageText } from '@/components/PassageText'
 import { ImportSplitDialog, type ImportTarget } from './ImportSplitDialog'
@@ -96,6 +96,7 @@ export default function ContentEditorScreen() {
 
   const [selection, setSelection] = useState<Selection | null>(null)
   const [trackKind, setTrackKind] = useState<TrackKind>('grammar')
+  const [trackId, setTrackId] = useState('')
   const [view, setView] = useState<'notes' | 'text' | 'points' | 'tables'>('notes')
   const [dialog, setDialog] = useState<Dialog | null>(null)
   // Paragraphe cité d'une leçon de texte ; `null` pour une leçon classique.
@@ -144,6 +145,7 @@ export default function ContentEditorScreen() {
   const openLesson = useCallback(async (course: string, track: TreeTrack, unit: string, lesson: string) => {
     setSelection({ course, unit, lesson })
     setTrackKind(track.kind)
+    setTrackId(track.id)
     // Une leçon de vocabulaire ou de conjugaison n'a pas d'onglet Exercices
     // (voir plus bas) : y rester dessus laisserait le panneau vide.
     if (track.kind !== 'grammar') setView('notes')
@@ -314,6 +316,14 @@ export default function ContentEditorScreen() {
   }, [save])
 
   const tone = TONES[trackKind]
+  // Les entrées du glossaire du cours ouvert : les cibles des renvois d'un rappel.
+  const glossary = useMemo(
+    () =>
+      (tree?.find((course) => course.id === selection?.course)?.tracks.find((track) => track.id === 'glossaire')?.units ?? []).map(
+        ({ id, title }) => ({ id, title }),
+      ),
+    [tree, selection?.course],
+  )
 
   return (
     <div className="flex h-screen flex-col bg-paper text-ink">
@@ -577,6 +587,9 @@ export default function ContentEditorScreen() {
             tone={tone}
             trackKind={trackKind}
             onOpenTables={() => setView('tables')}
+            glossary={glossary}
+            selfId={selection.unit}
+            autoLink={trackId === 'glossaire'}
             header={
               <>
                 <header className="flex flex-col gap-3">

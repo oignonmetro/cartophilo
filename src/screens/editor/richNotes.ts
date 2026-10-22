@@ -22,6 +22,8 @@ export interface Marks {
   /** Mot étranger cité (`` `forme` ``). */
   form?: true
   color?: NoteColor
+  /** Renvoi vers une autre unité (`[[cible|texte]]`) : l'identifiant de la cible. */
+  link?: string
 }
 
 export type MarkKey = keyof Marks
@@ -55,7 +57,7 @@ export interface NotesDoc {
 }
 
 /** Du plus extérieur au plus intérieur : le seul ordre que `parseInline` relise sans perte. */
-export const MARK_ORDER = ['color', 'underline', 'strong', 'em', 'form'] as const
+export const MARK_ORDER = ['color', 'underline', 'strong', 'em', 'form', 'link'] as const
 
 const RULE = /^-\s*/
 const WARNING = /^!\s*/
@@ -93,8 +95,7 @@ export function runsFromMarkup(text: string): Run[] {
     for (const span of spans) {
       if (span.kind === 'text') out.push({ text: span.text, marks })
       else if (span.kind === 'form') out.push({ text: span.text, marks: { ...marks, form: true } })
-      // Le renvoi reste écrit tel quel dans l'éditeur : il se réenregistre à l'identique.
-      else if (span.kind === 'link') out.push({ text: `[[${span.target}|${span.text}]]`, marks })
+      else if (span.kind === 'link') out.push({ text: span.text, marks: { ...marks, link: span.target } })
       else if (span.kind === 'color') walk(span.children, { ...marks, color: span.color })
       else walk(span.children, { ...marks, [span.kind]: true })
     }
@@ -109,6 +110,7 @@ const WRAP: Record<(typeof MARK_ORDER)[number], (inner: string, marks: Marks) =>
   strong: (inner) => `**${inner}**`,
   em: (inner) => `*${inner}*`,
   form: (inner) => `\`${inner}\``,
+  link: (inner, marks) => `[[${marks.link}|${inner}]]`,
 }
 
 /** L'inverse de `runsFromMarkup`. Gras et italique ne se cumulent pas (le format ne sait pas l'écrire). */
@@ -332,20 +334,24 @@ export function restyle(runs: Run[], from: number, to: number, change: (marks: M
 }
 
 /** Chaque caractère de `[from, to)` porte-t-il cette mise en forme ? Faux sur une plage vide. */
-export function hasMark(runs: Run[], from: number, to: number, key: MarkKey, color?: NoteColor): boolean {
+export function hasMark(runs: Run[], from: number, to: number, key: MarkKey, arg?: string): boolean {
   const slice = sliceRuns(runs, from, to)
-  return slice.length > 0 && slice.every((run) => (key === 'color' ? run.marks.color === color : run.marks[key]))
+  return slice.length > 0 && slice.every((run) => (key === 'color' || (key === 'link' && arg) ? run.marks[key] === arg : run.marks[key]))
 }
 
 /** Pose ou retire une mise en forme ; gras et italique s'excluent, une couleur en remplace une autre. */
-export function withMark(marks: Marks, key: MarkKey, on: boolean, color?: NoteColor): Marks {
+export function withMark(marks: Marks, key: MarkKey, on: boolean, arg?: string): Marks {
   const next = { ...marks }
   if (!on) {
     delete next[key]
     return next
   }
-  if (key === 'color') next.color = color
+  if (key === 'color') next.color = arg as NoteColor
+  else if (key === 'link') next.link = arg
   else next[key] = true as never
+  // Un renvoi et une forme citée sont tous deux littéraux : aucun ne s'écrit dans l'autre.
+  if (key === 'link') delete next.form
+  if (key === 'form') delete next.link
   if (key === 'strong') delete next.em
   if (key === 'em') delete next.strong
   return next
@@ -398,4 +404,124 @@ export function ruleSplits(text: string): { labelEnd: number; asideStart: number
   const body = text.slice(labelEnd)
   const match = /^(.*\S)(\s*\([^()]*\)\s*)$/.exec(body)
   return { labelEnd, asideStart: match ? labelEnd + match[1]!.length : null }
+}
+
+/* ——— Renvois : première occurrence de chaque notion du glossaire ——— */
+
+/** Une entrée du glossaire à laquelle un rappel peut renvoyer : son unité et son titre (« Vie (`zôê`) »). */
+export interface GlossaryEntry {
+  id: string
+  title: string
+}
+
+/** Un renvoi proposé : `[from, to)` du bloc `block`, avec le contexte pour le reconnaître d'un coup d'œil. */
+export interface LinkHit {
+  target: string
+  notion: string
+  block: number
+  from: number
+  to: number
+  before: string
+  text: string
+  after: string
+}
+
+const escapeRegExp = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+/**
+ * La notion d'un titre, sans son terme grec (« Vie (`zôê`) » → « Vie »), et le
+ * motif qui la reconnaît dans un texte : mot entier, au pluriel aussi, sans
+ * tenir compte de la casse — sauf pour un mot de deux lettres (« Un »), que
+ * l'article « un » confondrait sinon avec la notion.
+ */
+function notionPattern(title: string): { notion: string; pattern: RegExp } | null {
+  const notion = title.replace(/\s*\(`[^`]+`\)\s*$/, '').trim()
+  if (notion.length < 2) return null
+  const body = notion
+    .split(/\s+/)
+    .map((word) => escapeRegExp(word).replace(/['’]/g, "['’]"))
+    .join('[\\s\\u00a0\\u202f]+')
+  const flags = notion.length <= 2 ? 'gu' : 'giu'
+  return { notion, pattern: new RegExp(`(?<![\\p{L}\\p{N}-])${body}(?:s|x)?(?![\\p{L}\\p{N}-])`, flags) }
+}
+
+/** Les passages entre guillemets français : une citation n'est pas l'endroit d'un renvoi. */
+function quotedRanges(text: string): [number, number][] {
+  const out: [number, number][] = []
+  for (const match of text.matchAll(/«[^»]*»?/g)) out.push([match.index, match.index + match[0].length])
+  return out
+}
+
+const overlaps = (ranges: [number, number][], from: number, to: number) => ranges.some(([a, b]) => from < b && to > a)
+
+/**
+ * Pour chaque entrée du glossaire dont le rappel ne renvoie pas encore, sa
+ * première occurrence libre : hors citation, hors renvoi ou forme citée
+ * existants, hors tableau. L'entrée du rappel lui-même (`selfId`) est ignorée.
+ * Les notions les plus longues passent d'abord (« Vie parfaite » avant « Vie »).
+ */
+export function findGlossaryLinks(blocks: Block[], entries: readonly GlossaryEntry[], selfId: string): LinkHit[] {
+  const linked = new Set(blocks.flatMap((block) => block.runs.flatMap((run) => (run.marks.link ? [run.marks.link] : []))))
+  const taken: [number, number][][] = blocks.map((block) =>
+    block.kind === 'table' || block.kind === 'section'
+      ? [[0, Infinity]]
+      : [
+          ...quotedRanges(blockText(block)),
+          ...runsOffsets(block.runs).filter(({ run }) => run.marks.link || run.marks.form).map(({ from, to }): [number, number] => [from, to]),
+        ],
+  )
+  const wanted = entries
+    .filter((entry) => entry.id !== selfId && !linked.has(entry.id))
+    .flatMap((entry) => {
+      const found = notionPattern(entry.title)
+      return found ? [{ entry, ...found }] : []
+    })
+    .sort((a, b) => b.notion.length - a.notion.length)
+
+  const hits: LinkHit[] = []
+  for (const { entry, notion, pattern } of wanted) {
+    search: for (let index = 0; index < blocks.length; index++) {
+      const text = blockText(blocks[index]!)
+      pattern.lastIndex = 0
+      for (const match of text.matchAll(pattern)) {
+        const from = match.index
+        const to = from + match[0].length
+        if (overlaps(taken[index]!, from, to)) continue
+        // En tête de phrase, « Un » est l'article, pas la notion.
+        if (notion.length <= 2 && /(^|[.!?:;]\s*)$/.test(text.slice(0, from))) continue
+        taken[index]!.push([from, to])
+        hits.push({
+          target: entry.id,
+          notion,
+          block: index,
+          from,
+          to,
+          before: text.slice(Math.max(0, from - 24), from),
+          text: match[0],
+          after: text.slice(to, to + 24),
+        })
+        break search
+      }
+    }
+  }
+  return hits.sort((a, b) => a.block - b.block || a.from - b.from)
+}
+
+function runsOffsets(runs: Run[]): { run: Run; from: number; to: number }[] {
+  let at = 0
+  return runs.map((run) => {
+    const from = at
+    at += run.text.length
+    return { run, from, to: at }
+  })
+}
+
+/** Pose chaque renvoi proposé sur son passage, sans toucher au texte. */
+export function applyLinks(blocks: Block[], hits: readonly LinkHit[]): Block[] {
+  const next = blocks.map((block) => ({ ...block }))
+  for (const hit of [...hits].sort((a, b) => b.from - a.from)) {
+    const block = next[hit.block]!
+    block.runs = restyle(block.runs, hit.from, hit.to, (marks) => withMark(marks, 'link', true, hit.target))
+  }
+  return next
 }
