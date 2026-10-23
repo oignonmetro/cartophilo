@@ -1,5 +1,102 @@
+# Entrée du glossaire de Plotin (skill glossaire), distinction, écrite le
+# 2026-10-23 à la demande de l'utilisateur : l'entrée Vie ne disait pas
+# comment Plotin départage l'animé de l'inerte. Citations vérifiées sur la GF
+# (IV, 7, 2 ; II, 3, 13 ; VI, 7, 11 et 19 ; IV, 4, 27 et 29 ; II, 4, 5).
+# « Le ciel n'était qu'un cadavre » (V, 1, 2) a sa carte dans
+# Co-gouvernement ; la raison morte (III, 8, 2), dans Raison.
+
 id: g-anime-inerte
 title: Animé / Inerte
 icon: book
 color: teal
-lessons: []
+lessons:
+- id: g-anime-inerte-l1
+  title: Animé / Inerte
+  notes: |-
+    Chez Plotin, la distinction de l'{violet}**animé**{/violet} et de l'{violet}**inerte**{/violet} est [def]. Le critère n'est donc {pink}ni le mouvement qu'on voit ni la sensation{/pink}, mais l'origine du mouvement et de la forme : du dedans ou du dehors.
+
+    __**Pourquoi la question se pose.**__ Si la [[g-vie|vie]] est l'activité des réalités incorporelles, qu'est-ce qui, dans un corps, distingue le vivant du mort ? Pas le corps lui-même : « par eux-mêmes, le feu, l'air, l'eau et la terre __sont en effet inanimés__. Et lorsque l'âme est présente en n'importe lequel d'entre eux, il ne reçoit alors la vie __que par procuration__ » ([[traite2|traité 2]], chap. 2). {coral}La ligne ne passe donc pas entre deux sortes de corps, mais entre le corps pris en lui-même et le corps où une [[g-ame|âme]] est présente.{/coral} Reste à dire à quoi l'on reconnaît cette présence.
+
+    __**Le critère : du**__ {violet}__**dedans**__{/violet} __**ou du**__ {violet}__**dehors**__{/violet}__**.**__ Plotin le donne à trois niveaux.
+    - Le mouvement : « Dans l'univers, les êtres inanimés ne sont que des instruments et __n'agissent que sous l'effet d'une poussée extérieure__ » ; parmi les animés, l'animal rationnel « a en lui-même __un cocher__ » ([[traite52|traité 52]], chap. 13).
+    - Le bien : « Pour les choses inanimées, __le don du bien leur est fait par un autre__, alors que, pour ce qui possède une âme, __c'est le désir qui suscite la recherche du bien__ » ([[traite38|traité 38]], chap. 19). {yellow}Les morts, ce sont les vivants qui prennent soin d'eux et de leurs funérailles, « alors que les vivants s'occupent d'eux-mêmes »{/yellow}.
+    - La forme : Ce qui est animé est façonné « par l'action d'une __raison animée qui de l'intérieur les façonne__ et leur donne une forme » (chap. 11).
+
+    Pourquoi ce critère ? Parce que l'âme est ce qui a la vie par soi : là où elle est présente, le corps a en lui le principe de ce qu'il fait ; là où elle manque, tout lui vient d'ailleurs.
+
+    __**Presque rien n'est inerte.**__ La difficulté est là : la pierre, type même de l'inerte, est animée pour Plotin. {yellow}« Les pierres __croissent tant qu'elles restent attachées à la terre__, tandis que, une fois qu'elles en sont séparées, elles conservent la taille qu'avait tel ou tel morceau quand on l'a extrait »{/yellow} ([[traite28|traité 28]], chap. 27), et les montagnes « surgissent par une force interne » ([[traite38|traité 38]], chap. 11). Pourquoi ? Parce que l'univers est un seul vivant, dont l'âme est présente partout : une partie est animée tant qu'elle tient à ce tout. De même, la puissance de la terre fait le végétal, « ce par quoi il est différent d'une branche coupée et qui n'est plus un végétal, mais __seulement un morceau de bois__ » ([[traite28|traité 28]], chap. 27). **L'inerte n'est donc pas une sorte de choses, mais l'état d'une partie détachée du tout.**
+
+    __**L'inerte absolu : le corps sans âme.**__ À la limite, il y a le corps considéré sans âme : la [[g-hule|matière]], même quand elle a reçu une forme, « certes __ne vit pas ni ne pense__, mais [...] n'est qu'un cadavre ornementé » ([[traite12|traité 12]], chap. 5). Sa figure est encore une raison, mais la dernière, celle qui est « morte » (voir [[g-logos|raison]]). Et le cadavre n'est pas inerte d'un coup : une trace de l'âme végétative y demeure un temps, {yellow}comme la chaleur dans ce qu'on a éloigné du feu{/yellow} ; en voici les preuves : « __les cheveux qui continuent de pousser__ sur les cadavres, les ongles qui continuent de s'allonger » ([[traite28|traité 28]], chap. 29).
+
+    | | Animé | Inerte |
+    | Mouvement | il a en lui son principe | une poussée extérieure |
+    | Bien | il le cherche par désir | il le reçoit d'un autre |
+    | Forme | façonnée du dedans par une raison animée | une figure, raison morte |
+    | Exemple | la pierre attachée à la terre | la pierre détachée, la branche coupée |
+
+    ! « Inerte » ne veut pas dire sans forme ni sans raison : le corps inerte a encore une figure, donc une raison ; mais c'est la dernière, qui ne produit plus rien d'elle-même.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | traité 2, chap. 2 | aucun corps ne vit par lui-même |
+    | traité 52, chap. 13 | l'inanimé n'agit que poussé du dehors |
+    | traité 38, chap. 19 | l'animé cherche son bien par désir |
+    | traité 28, chap. 27 | les pierres croissent tant qu'elles tiennent à la terre |
+    | traité 12, chap. 5 | la matière formée, un cadavre ornementé |
+
+    **Voir aussi** : [[g-vie|Vie]] · [[g-ame|Âme]] · [[g-vivant|Vivant]] · [[g-mort|Mort]] · [[g-phusis|Nature]]
+  tables:
+  - table: anime-inerte
+    exercises:
+    - {kind: bank, column: Inerte}
+    - {kind: cell, column: Animé}
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-anime-inerte-l1-q1
+    sentence: "« Par eux-mêmes, le feu, l'air, l'eau et la terre sont en effet inanimés. Et lorsque l'âme est présente en n'importe lequel d'entre eux, il ne reçoit alors la vie que par ___ » (traité 2, chap. 2)."
+    answer: procuration
+    alt: []
+  - id: g-anime-inerte-l1-q2
+    sentence: "« Dans l'univers, les êtres inanimés ne sont que des ___ et n'agissent que sous l'effet d'une poussée extérieure » (traité 52, chap. 13)."
+    answer: instruments
+    alt: []
+  - id: g-anime-inerte-l1-q3
+    sentence: "Les êtres inanimés « n'agissent que sous l'effet d'une poussée ___ » (traité 52, chap. 13)."
+    answer: extérieure
+    alt: ["exterieure"]
+  - id: g-anime-inerte-l1-q4
+    sentence: "Parmi les êtres animés, « l'animal rationnel, lui, a en lui-même un ___ » (traité 52, chap. 13)."
+    answer: cocher
+    alt: []
+  - id: g-anime-inerte-l1-q5
+    sentence: "« Pour les choses inanimées, le don du bien leur est fait par un autre, alors que, pour ce qui possède une âme, c'est le ___ qui suscite la recherche du bien » (traité 38, chap. 19)."
+    answer: désir
+    alt: ["desir"]
+  - id: g-anime-inerte-l1-q6
+    sentence: "La croissance des pierres et la formation des montagnes se produisent « par l'action d'une raison ___ qui de l'intérieur les façonne et leur donne une forme » (traité 38, chap. 11)."
+    answer: animée
+    alt: ["animee"]
+  - id: g-anime-inerte-l1-q7
+    sentence: "« Les pierres croissent tant qu'elles restent ___ à la terre, tandis que, une fois qu'elles en sont séparées, elles conservent la taille qu'avait tel ou tel morceau » (traité 28, chap. 27)."
+    answer: attachées
+    alt: ["attachees"]
+  - id: g-anime-inerte-l1-q8
+    sentence: "La puissance de la terre donne au végétal « ce par quoi il est différent d'une branche coupée et qui n'est plus un végétal, mais seulement un morceau de ___ » (traité 28, chap. 27)."
+    answer: bois
+    alt: []
+  - id: g-anime-inerte-l1-q9
+    sentence: "Chez Plotin, l'inerte n'est pas une sorte de choses, mais l'état d'une partie ___ du tout animé."
+    answer: détachée
+    alt: ["detachee", "séparée", "separee"]
+  - id: g-anime-inerte-l1-q10
+    sentence: "La matière sensible, même définie, « certes ne vit pas ni ne pense, mais [...] n'est qu'un cadavre ___ » (traité 12, chap. 5)."
+    answer: ornementé
+    alt: ["ornemente"]
+  - id: g-anime-inerte-l1-q11
+    sentence: "Une trace de l'âme végétative demeure un temps dans le cadavre ; en voici les preuves : « les cheveux qui continuent de ___ sur les cadavres, les ongles qui continuent de s'allonger » (traité 28, chap. 29)."
+    answer: pousser
+    alt: []
