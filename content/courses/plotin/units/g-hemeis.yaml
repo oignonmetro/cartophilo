@@ -1,5 +1,101 @@
+# Entrée du glossaire de Plotin (skill glossaire), écrite le 2026-10-23 (elle
+# était vide, sous le titre « Soi, soi-même »). Citations vérifiées sur la GF
+# (I, 1, 7-8 et 10-13). Que le vivant soit à nous sans être nous (I, 1, 7 et
+# 10) a ses cartes dans l'entrée Vivant.
+
 id: g-hemeis
-title: Soi, soi-même (`hêmeis`)
+title: Nous (`hêmeis`)
 icon: book
 color: teal
-lessons: []
+lessons:
+- id: g-hemeis-l1
+  title: Nous
+  notes: |-
+    Chez Plotin, ce que nous désignons quand nous disons {violet}**« nous »**{/violet} (*hêmeis*) est [def]. Ce n'est {pink}ni le corps ni le vivant que l'âme produit{/pink}, et ce n'est pas non plus l'Intellect, que nous possédons sans toujours le vivre.
+
+    __**Pourquoi demander qui est « nous ».**__ L'homme est fait de plusieurs éléments : un corps, le [[g-vivant|vivant]] que l'âme forme avec lui, une âme qui raisonne, et l'Intellect. Or c'est le vivant qui sent et qui pâtit. D'où l'objection : « comment se fait-il que ce soit "nous" qui sentons ? » Plotin répond : {coral}« c'est parce que nous ne sommes pas encore libérés de ce vivant qualifié »{/coral} ([[traite53|traité 53]], chap. 7). Nous disons « je souffre » parce que le vivant est joint à nous, non parce qu'il est nous.
+
+    __**« Nous » se tient dans l'âme qui raisonne.**__ L'âme ne perçoit pas les choses mêmes, mais « les impressions que la sensation a laissées dans le vivant », qui sont déjà des formes ; et de ces formes « proviennent aussi bien les pensées que les opinions et les intellections. __Et c'est là avant tout que se tient notre "nous"__ » (chap. 7). Pourquoi là ? Parce que c'est par ces formes que l'âme « tire sa souveraineté sur le vivant » : ce qui juge et commande, c'est nous ; ce qui est jugé et commandé est à nous. Ainsi, « dans la mesure où l'homme véritable coïncide avec l'âme rationnelle, tant que nous raisonnons __c'est "nous" qui raisonnons__ ».
+
+    __**« Nous » se dit en deux sens.**__ « "Nous" __se dit en deux sens__, selon que l'on prend en compte la bête sauvage ou bien ce qui est déjà au-dessus d'elle » (chap. 10). Tant que nous ne sommes pas séparés du corps, le composé nous appartient : « voilà pourquoi nous disons que nous pâtissons de ce dont notre corps pâtit ». Mais l'homme véritable est « pur de ces affections », et les vices, l'envie ou la compassion appartiennent au composé.
+
+    __**L'Intellect est à nous, mais au-dessus de nous.**__ Nous possédons l'[[g-intellect|Intellect]] « comme quelque chose qui est __au-dessus de nous__ », « à la fois commun à tous et propre à chacun » : commun, parce qu'il est un et indivisible ; propre, « parce que chacun le possède tout entier dans son âme première » (chap. 8). Pourquoi ne le vivons-nous pas toujours ? Parce que posséder n'est pas exercer : « nous ne faisons pas toujours usage de __tout ce que nous possédons__ », et ce qui est au-dessus de nous ne devient nôtre que si nous en avons la perception (chap. 11). **« Nous » n'est donc pas un point fixe** : il se tient au milieu, et il est là où se porte son activité, vers le vivant ou vers l'Intellect (voir [[g-noothenai|devenir intellect]]).
+
+    | Élément | Est-ce « nous » ? |
+    | le corps | non : il est à nous |
+    | le vivant | à nous, tant que nous n'en sommes pas séparés |
+    | l'âme qui raisonne | oui, avant tout |
+    | l'Intellect | au-dessus de nous : nous le possédons, nous le vivons quand il est actif |
+
+    __**Voir l'âme sous ses coquillages.**__ Platon disait que « nous avons vu l'âme comme ceux qui ont vu le Glaucos marin » (chap. 12) : {yellow}un dieu de la mer couvert d'algues et de coquillages, méconnaissable{/yellow}. Pour voir sa nature, il faut l'avoir « débarrassée » de tout ce qui s'y est accroché ; et la séparation ne se fait pas seulement par rapport au corps, « mais aussi par rapport à tout ce qui a été ajouté ». C'est le travail de la [[g-katharsis|purification]]. Et la dernière question du traité, qui a mené toute cette enquête, reçoit sa réponse : « C'est nous, mais __au moyen de l'âme__ » (chap. 13).
+
+    ! Que « nous » ne soit pas le vivant ne veut pas dire que le vivant nous soit indifférent : il est à nous, nous en répondons, et c'est lui qui pâtit quand nous disons souffrir.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | traité 53, chap. 7 | « nous » se tient dans l'âme qui raisonne |
+    | traité 53, chap. 8 | l'Intellect, commun à tous et propre à chacun |
+    | traité 53, chap. 10 | « nous » se dit en deux sens |
+    | traité 53, chap. 11 | nous ne faisons pas usage de tout ce que nous possédons |
+    | traité 53, chap. 12 | l'âme vue comme le Glaucos marin |
+
+    **Voir aussi** : [[g-vivant|Vivant]] · [[g-ame|Âme]] · [[g-ame-non-descendue|Âme non descendue]] · [[g-noothenai|Devenir intellect]] · [[traite53|Traité 53]]
+  tables:
+  - table: element-est-ce-nous
+    exercises:
+    - {kind: bank, column: Est-ce « nous » ?}
+    - {kind: cell, column: Élément}
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-hemeis-l1-q1
+    sentence: "Le « nous », ce que nous sommes vraiment, l'âme qui raisonne et non le vivant, se dit en grec translittéré ___."
+    answer: hêmeis
+    alt: ["hemeis", "hêmeîs"]
+  - id: g-hemeis-l1-q2
+    sentence: "« Comment se fait-il que ce soit \"nous\" qui sentons ? – C'est parce que nous ne sommes pas encore ___ de ce vivant qualifié » (traité 53, chap. 7)."
+    answer: libérés
+    alt: ["liberes"]
+  - id: g-hemeis-l1-q3
+    sentence: "Des formes proviennent « aussi bien les pensées que les opinions et les intellections. Et c'est là avant tout que se tient notre \"___\" » (traité 53, chap. 7)."
+    answer: nous
+    alt: []
+  - id: g-hemeis-l1-q4
+    sentence: "« Dans la mesure où l'homme véritable coïncide avec l'âme ___, tant que nous raisonnons c'est \"nous\" qui raisonnons » (traité 53, chap. 7)."
+    answer: rationnelle
+    alt: []
+  - id: g-hemeis-l1-q5
+    sentence: "« \"Nous\" se dit en deux ___, selon que l'on prend en compte la bête sauvage ou bien ce qui est déjà au-dessus d'elle » (traité 53, chap. 10)."
+    answer: sens
+    alt: []
+  - id: g-hemeis-l1-q6
+    sentence: "Tant que nous ne sommes pas séparés du corps, le composé nous appartient : « voilà pourquoi nous disons que nous ___ de ce dont notre corps pâtit » (traité 53, chap. 10)."
+    answer: pâtissons
+    alt: ["patissons"]
+  - id: g-hemeis-l1-q7
+    sentence: "Nous possédons l'Intellect « comme quelque chose qui est ___ de nous » (traité 53, chap. 8)."
+    answer: au-dessus
+    alt: ["au dessus"]
+  - id: g-hemeis-l1-q8
+    sentence: "L'Intellect est « à la fois commun à tous et propre à chacun », « parce que chacun le possède tout entier dans son âme ___ » (traité 53, chap. 8)."
+    answer: première
+    alt: ["premiere"]
+  - id: g-hemeis-l1-q9
+    sentence: "Posséder n'est pas exercer : « nous ne faisons pas toujours ___ de tout ce que nous possédons » (traité 53, chap. 11)."
+    answer: usage
+    alt: []
+  - id: g-hemeis-l1-q10
+    sentence: "« Nous avons vu l'âme comme ceux qui ont vu le ___ marin » : couverte de ce qui s'est accroché à elle (traité 53, chap. 12)."
+    answer: Glaucos
+    alt: ["Glaucus"]
+  - id: g-hemeis-l1-q11
+    sentence: "« Et toutes ces questions, qui les a examinées ? Est-ce nous ou bien l'âme ? – C'est nous, mais au moyen de l'___ » (traité 53, chap. 13)."
+    answer: âme
+    alt: ["ame"]
+  - id: g-hemeis-l1-q12
+    sentence: "Le traité de Plotin intitulé *Qu'est-ce que le vivant et qu'est-ce que l'homme ?*, qui répond à la question « qui est \"nous\" ? », est le traité ___."
+    answer: 53 (I, 1)
+    alt: ["53", "I, 1"]
