@@ -1,5 +1,97 @@
+# Entrée du glossaire de Plotin (skill glossaire), écrite le 2026-10-23 à la
+# demande de l'utilisateur. Citations vérifiées sur la GF (VI, 9, 1 ; I, 8,
+# 5 ; II, 9, 14 ; V, 8, 11 ; I, 4, 6 et 14 ; III, 2, 5 ; III, 3, 5 ; V, 9,
+# 11). Que le sage endormi reste en bonne santé sans le sentir (I, 4, 9) a sa
+# carte dans Bonheur. Pas de terme grec : la GF n'en donne pas.
+
 id: g-sante
 title: Santé
 icon: book
 color: teal
-lessons: []
+lessons:
+- id: g-sante-l1
+  title: Santé
+  notes: |-
+    Chez Plotin, la {violet}**santé**{/violet} est [def]. Elle est un bien pour le corps, mais {pink}elle ne rend pas plus heureux celui qui l'a{/pink}.
+
+    __**La santé est une**__ {violet}__**unité**__{/violet}__**.**__ Plotin la range parmi les effets de l'un : « la santé se produit quand le corps est __coordonné dans l'unité__ ; la beauté quand l'unité en tient unies les parties ; et la vertu pour l'âme, quand, s'orientant vers l'unité et un accord unique, elle se trouve unifiée » ([[traite9|traité 9]], chap. 1). Pourquoi ce rapprochement ? Parce que toute chose n'est ce qu'elle est que par son [[g-unite|unité]] : {coral}la santé est au corps ce que la vertu est à l'âme{/coral}. La maladie, à l'inverse, vient de la [[g-hule|matière]] : elle est « le défaut et l'excès de corps faits de matière __qui sont incapables de préserver l'ordre et la mesure__ » ([[traite51|traité 51]], chap. 5). Aussi ses causes sont-elles corporelles, non des démons, comme le croient les gnostiques : ce sont « les fatigues, les réplétions, les insuffisances, les putréfactions » ([[traite33|traité 33]], chap. 14).
+
+    __**Pourquoi la santé passe inaperçue.**__ On sent la maladie, à peine la santé. Plotin l'explique : « la maladie en effet inspire plutôt de la terreur, alors que la santé est __une douce compagne__ [...]. Elle s'installe auprès de nous, comme quelque chose qui nous est propre et __qui fait un avec nous__. En revanche, la maladie est quelque chose de différent de nous » ([[traite31|traité 31]], chap. 11). {coral}Ce que nous sentons vivement, c'est ce qui nous heurte parce qu'il nous est étranger ; ce qui est à nous ne se fait pas remarquer.{/coral} C'est la même raison qui fait que l'activité de l'intellect, la plus nôtre, nous échappe souvent (voir [[g-bonheur|bonheur]]).
+
+    __**Elle n'ajoute rien au bonheur.**__ La santé et l'absence de douleur sont des choses nécessaires, que l'on recherche quand elles manquent : « certes, __on ne se soucie pas de la santé quand on la possède__ » ; une fois là, elles « n'ont rien d'attrayant et n'ajoutent rien au bonheur » ([[traite46|traité 46]], chap. 6). Pourquoi ? Parce que ce que nous voulons n'est pas éviter les maux, « mais bien plutôt __ne pas avoir à les éviter__ » : la santé lève un obstacle, elle ne donne rien. D'où le sage : « tout en veillant à la santé de son corps, __il ne cherchera pas à éviter à tout prix les maladies__ », et « son bonheur ne s'accroîtra pas par les plaisirs, la santé et l'absence de peine » (chap. 14). Le bonheur est la vie de l'intellect ; la santé est celle du composé (voir [[g-vivant|vivant]]).
+
+    __**Maladie et providence.**__ La maladie n'est donc pas un mal pour l'âme : « la pauvreté et les maladies __ne sont rien pour les gens de bien__, tandis qu'elles sont profitables aux méchants. Et pour qui a un corps, c'est une nécessité que d'être malade » ([[traite47|traité 47]], chap. 5). Cela ne dispense pas d'en prendre soin : il en va de la providence comme de « ce que l'on fait en vue de rester en santé __en suivant les prescriptions du médecin__ », et {yellow}dans un corps blessé, « la raison qui administre ce corps suture les bords de la plaie »{/yellow} ([[traite48|traité 48]], chap. 5).
+
+    | | Santé | Maladie |
+    | Ce qu'elle est | le corps coordonné dans l'unité | un corps qui perd l'ordre et la mesure |
+    | D'où elle vient | de la raison qui domine la matière | de la matière qui échappe à l'ordre |
+    | Comment on la sent | à peine, elle fait un avec nous | vivement, elle nous est étrangère |
+    | Pour le bonheur | n'y ajoute rien | n'y retranche rien |
+
+    ! Il y a aussi une santé de là-bas : dans l'intelligible, « une autre puissance et une autre santé, en vertu desquelles tous les vivants sont __tranquilles et sans besoin__ » ([[traite5|traité 5]], chap. 11). Celle du corps n'en est qu'une image.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | traité 9, chap. 1 | la santé, le corps coordonné dans l'unité |
+    | traité 51, chap. 5 | la maladie vient de la matière |
+    | traité 31, chap. 11 | la santé fait un avec nous, la maladie nous est étrangère |
+    | traité 46, chap. 6 | la santé n'ajoute rien au bonheur |
+    | traité 46, chap. 14 | le sage veille à sa santé sans craindre la maladie |
+    | traité 47, chap. 5 | la maladie, rien pour l'homme de bien |
+
+    **Voir aussi** : [[g-unite|Unité]] · [[g-bonheur|Bonheur]] · [[g-vivant|Vivant]] · [[g-mort|Mort]] · [[g-souffrance|Souffrance]]
+  tables:
+  - table: sante-maladie
+    exercises:
+    - {kind: bank, column: Maladie}
+    - {kind: cell, column: Santé}
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-sante-l1-q1
+    sentence: "« La santé se produit quand le corps est coordonné dans l'___ » (traité 9, chap. 1)."
+    answer: unité
+    alt: ["unite"]
+  - id: g-sante-l1-q2
+    sentence: "La santé est au corps ce que la vertu est à l'âme : la vertu se produit pour l'âme « quand, s'orientant vers l'unité et un accord unique, elle se trouve ___ » (traité 9, chap. 1)."
+    answer: unifiée
+    alt: ["unifiee"]
+  - id: g-sante-l1-q3
+    sentence: "La maladie « est le défaut et l'excès de corps faits de matière qui sont incapables de préserver l'ordre et la ___ » (traité 51, chap. 5)."
+    answer: mesure
+    alt: []
+  - id: g-sante-l1-q4
+    sentence: "Contre les gnostiques, les causes des maladies sont « les fatigues, les réplétions, les insuffisances, les ___ » (traité 33, chap. 14)."
+    answer: putréfactions
+    alt: ["putrefactions"]
+  - id: g-sante-l1-q5
+    sentence: "« La maladie en effet inspire plutôt de la terreur, alors que la santé est une douce ___ » (traité 31, chap. 11)."
+    answer: compagne
+    alt: []
+  - id: g-sante-l1-q6
+    sentence: "La santé « s'installe auprès de nous, comme quelque chose qui nous est propre et qui fait ___ avec nous » (traité 31, chap. 11)."
+    answer: un
+    alt: []
+  - id: g-sante-l1-q7
+    sentence: "« Certes, on ne se soucie pas de la santé quand on la ___ » (traité 46, chap. 6)."
+    answer: possède
+    alt: ["possede"]
+  - id: g-sante-l1-q8
+    sentence: "Ce que nous voulons n'est pas éviter les maux, « mais bien plutôt ne pas avoir à les ___ » (traité 46, chap. 6)."
+    answer: éviter
+    alt: ["eviter"]
+  - id: g-sante-l1-q9
+    sentence: "Le sage, « tout en veillant à la santé de son corps, il ne cherchera pas à éviter à tout prix les ___ » (traité 46, chap. 14)."
+    answer: maladies
+    alt: []
+  - id: g-sante-l1-q10
+    sentence: "« Et pour qui a un corps, c'est une ___ que d'être malade » (traité 47, chap. 5)."
+    answer: nécessité
+    alt: ["necessite"]
+  - id: g-sante-l1-q11
+    sentence: "Là-bas, il y a « une autre puissance et une autre santé, en vertu desquelles tous les vivants sont tranquilles et sans ___ » (traité 5, chap. 11)."
+    answer: besoin
+    alt: []
