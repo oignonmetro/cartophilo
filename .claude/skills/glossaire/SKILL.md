@@ -239,6 +239,32 @@ passer.
 - l'**autre nom** usuel de la notion dans l'en-tête, entre guillemets : le
   vivant ou « animal » (*zôion*).
 
+**Ajouts de la relecture du 2026-10-23 (Bonheur, Temps, Vie parfaite, Vie)** :
+
+- **L'intitulé d'une étape énonce la thèse entière**, sujet compris :
+  « Le bonheur est une disposition, non un sentiment », « Le bonheur ne
+  réside pas dans la durée », « L'avantage de la définition du temps comme
+  vie », plutôt que « Une disposition, non un sentiment ». La thèse
+  écartée peut y prendre sa couleur : `__**Le bonheur n'est pas**__ {red}__**un bien ajouté à la vie**__{/red}`.
+- **Le gras sur le maillon décisif du raisonnement**, dans le fil :
+  « Parce que **l'intellect n'est pas un bien qu'on pourrait avoir ou ne
+  pas avoir en restant le même** ».
+- **Une définition se juge à ce qu'elle démarque.** L'utilisateur a relevé
+  que l'entrée Vie ne permettait pas de séparer l'animé de l'inerte, ce
+  qu'on attend d'une définition de la vie. Quand une notion appelle un
+  critère de démarcation que son rappel ne donne pas, en faire une entrée
+  de distinction (« Animé / Inerte ») et y renvoyer.
+- **Le sens propre de Plotin face aux questions d'aujourd'hui.** Quand un
+  mot (bonheur) n'a pas chez Plotin le sens qu'on lui donne couramment,
+  le dire dans un piège, et renvoyer aux entrées qui traiteront les
+  questions courantes (bien-être, sens de la vie, souffrance, joie et
+  tristesse). Ces entrées peuvent rester vides un temps (`lessons: []`),
+  sur demande de l'utilisateur : un renvoi vers une entrée vide est
+  accepté par `content:check`, la bulle n'affiche alors rien.
+- **Une liste dans un rappel** : `- étiquette : …` donne une étiquette en
+  gras coloré ; l'employer pour énumérer les niveaux d'un critère (« Le
+  mouvement : … », « Le bien : … », « La forme : … »).
+
 **Une entrée générale (notion) donne une vue d'ensemble, pas le détail de
 ses sous-entrées** (leçon de l'entrée Vie, 2026-10-21) :
 
