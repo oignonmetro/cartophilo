@@ -1,5 +1,92 @@
+# Entrée du glossaire de Plotin (skill glossaire), écrite le 2026-10-23 à la
+# demande de l'utilisateur. Citations vérifiées sur la GF (I, 9 ; I, 4, 7 ;
+# II, 9, 18). Le titre grec, Perì exagôgês, est celui des manuscrits (note 1
+# de la GF au traité 16).
+
 id: g-suicide
 title: Suicide (`exagôgê`)
 icon: book
 color: teal
-lessons: []
+lessons:
+- id: g-suicide-l1
+  title: Suicide
+  notes: |-
+    Chez Plotin, le {violet}**suicide**{/violet} (*exagôgê*, la « sortie » de la vie) est [def]. Ce n'est pas {pink}la conséquence logique d'une mort qui serait un bien{/pink}.
+
+    __**Si la mort est un bien, pourquoi ne pas partir ?**__ La difficulté est réelle. Plotin dit que la [[g-mort|mort]] est « plutôt un bien », et les stoïciens admettaient que le sage se donne la mort « en un geste de raison » : c'est le « suicide raisonnable » qui donne son titre au [[traite16|traité 16]]. Plotin ne répond pas en revenant sur la valeur de la mort, mais {coral}en regardant la manière dont l'âme sort{/coral}.
+
+    __**Sortir par la**__ {violet}__**violence**__{/violet}__**, c'est emporter la passion.**__ « Tu n'expulseras pas ton âme du corps, pour éviter qu'elle ne sorte du corps ; car ainsi, elle partira __en amenant quelque chose__ » ([[traite16|traité 16]], chap. 1). Dans la mort naturelle, « l'âme attend que __le corps se sépare__ entièrement d'elle » : il la lâche quand « l'harmonie au moyen de laquelle il tenait l'âme n'existe plus ». Celui qui se tue, au contraire, « a eu recours à la violence » et « il ne le fait pas sans passion, mais il agit __sous l'effet de l'angoisse, douleur ou colère__ ». Pourquoi est-ce grave ? Parce que l'âme sort marquée par cette passion. {red}Le suicide sépare l'âme du corps au moyen d'une passion du corps{/red}, alors que la [[g-katharsis|purification]] l'en sépare en la délivrant des passions : c'est le contraire de ce qu'il prétend faire.
+
+    __**Le temps fixé, et le progrès encore possible.**__ Deux raisons s'ajoutent. « Si le temps accordé à chacun __est fixé par le destin__, le prévenir n'est pas une bonne chose. » Surtout, « si enfin le rang qui est celui de chaque homme là-bas dépend de l'état dans lequel on est quand on sort de son corps, il ne faut pas se suicider __tant que la possibilité de progresser existe__ » (chap. 1). Ce qui compte n'est pas de sortir, mais dans quel état on sort ; et tant qu'on vit, on peut s'améliorer (voir [[g-daimon|démon]]). {yellow}« Il faut, tant que nous avons un corps, rester dans les maisons que nous a préparées une âme qui est bonne »{/yellow} ([[traite33|traité 33]], chap. 18).
+
+    __**Les exceptions.**__ Si le sage s'aperçoit qu'il devient fou, « il rangerait le suicide parmi les choses nécessaires qu'il convient d'accepter dans certaines circonstances, __même s'il ne faut pas l'accepter en général__ » ([[traite16|traité 16]], chap. 1). Et s'il est emmené captif, « "devant toi" s'ouvre "la voie" pour partir, __s'il n'est plus possible d'être heureux__ » ([[traite46|traité 46]], chap. 7). Pourquoi ces deux cas ? {green}Ils ont en commun que l'âme ne peut plus vivre sa vie propre{/green} : la folie ôte la possibilité de progresser, la captivité celle d'être [[g-bonheur|heureux]]. Ce qui justifie la sortie est encore l'état de l'âme.
+
+    | Cas | Ce qu'en dit Plotin |
+    | fuir une douleur, une angoisse, une colère | non : l'âme partirait chargée de passion |
+    | tant qu'on peut encore progresser | non : il faut rester dans la maison |
+    | le sage qui devient fou | oui, comme une chose nécessaire |
+    | le captif qui ne peut plus être heureux | la voie est ouverte |
+
+    ! Plotin ne refuse pas le suicide au nom de la vie du corps, qui compte peu pour lui : il le refuse au nom de l'âme et de l'état dans lequel elle sortirait.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | traité 16, chap. 1 | l'âme chassée part en emportant quelque chose |
+    | traité 46, chap. 7 | la voie est ouverte au captif qui ne peut plus être heureux |
+    | traité 33, chap. 18 | rester dans la maison tant qu'on a un corps |
+
+    **Voir aussi** : [[g-mort|Mort]] · [[g-katharsis|Purification]] · [[g-bonheur|Bonheur]] · [[g-daimon|Démon]] · [[traite16|Traité 16]]
+  tables:
+  - table: cas-ce-qu-en-dit-plotin
+    exercises:
+    - {kind: bank, column: Ce qu'en dit Plotin}
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-suicide-l1-q1
+    sentence: "Le suicide, la « sortie » de la vie qui donne son titre au traité 16, se dit en grec translittéré ___."
+    answer: exagôgê
+    alt: ["exagoge", "exagôgè"]
+  - id: g-suicide-l1-q2
+    sentence: "« Tu n'expulseras pas ton âme du corps, pour éviter qu'elle ne sorte du corps ; car ainsi, elle partira en amenant quelque ___ » (traité 16, chap. 1)."
+    answer: chose
+    alt: []
+  - id: g-suicide-l1-q3
+    sentence: "Dans la mort naturelle, « l'âme attend que le corps se ___ entièrement d'elle » (traité 16, chap. 1)."
+    answer: sépare
+    alt: ["separe"]
+  - id: g-suicide-l1-q4
+    sentence: "Le corps se sépare de l'âme quand il ne peut plus la lier, « car l'___ au moyen de laquelle il tenait l'âme n'existe plus » (traité 16, chap. 1)."
+    answer: harmonie
+    alt: []
+  - id: g-suicide-l1-q5
+    sentence: "Celui qui se tue « ne le fait pas sans passion, mais il agit sous l'effet de l'angoisse, douleur ou ___ » (traité 16, chap. 1)."
+    answer: colère
+    alt: ["colere"]
+  - id: g-suicide-l1-q6
+    sentence: "« Si le temps accordé à chacun est fixé par le ___, le prévenir n'est pas une bonne chose » (traité 16, chap. 1)."
+    answer: destin
+    alt: []
+  - id: g-suicide-l1-q7
+    sentence: "« Il ne faut pas se suicider tant que la possibilité de ___ existe » (traité 16, chap. 1)."
+    answer: progresser
+    alt: []
+  - id: g-suicide-l1-q8
+    sentence: "« Il faut, tant que nous avons un corps, rester dans les ___ que nous a préparées une âme qui est bonne » (traité 33, chap. 18)."
+    answer: maisons
+    alt: []
+  - id: g-suicide-l1-q9
+    sentence: "Le sage qui devient fou « rangerait le suicide parmi les choses ___ qu'il convient d'accepter dans certaines circonstances » (traité 16, chap. 1)."
+    answer: nécessaires
+    alt: ["necessaires"]
+  - id: g-suicide-l1-q10
+    sentence: "Au captif, « \"devant toi\" s'ouvre \"la voie\" pour partir, s'il n'est plus possible d'être ___ » (traité 46, chap. 7)."
+    answer: heureux
+    alt: []
+  - id: g-suicide-l1-q11
+    sentence: "Le traité de Plotin que Porphyre intitule *Sur le suicide raisonnable* est le traité ___."
+    answer: 16 (I, 9)
+    alt: ["16", "I, 9"]
