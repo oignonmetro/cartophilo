@@ -1,5 +1,98 @@
+# Entrée du glossaire de Plotin (skill glossaire), écrite le 2026-10-23 à la
+# demande de l'utilisateur. Citations vérifiées sur la GF (I, 6, 6 ; I, 7, 3 ;
+# I, 4, 7 ; III, 2, 15 ; I, 8, 13). « La vie mélangée de mort » (VI, 7, 29) a
+# sa carte dans Vie parfaite.
+
 id: g-mort
 title: Mort
 icon: book
 color: teal
-lessons: []
+lessons:
+- id: g-mort-l1
+  title: Mort
+  notes: |-
+    Chez Plotin, la {violet}**mort**{/violet} est [def]. Elle n'est pas {pink}l'anéantissement de ce que nous sommes{/pink}, et la mort à craindre n'est pas celle du corps.
+
+    __**Ce qui meurt : l'**__{violet}__**union**__{/violet} __**de l'âme et du corps.**__ Plotin reprend la définition du {sky}*Phédon*{/sky} : le courage est « absence de peur devant la mort, cette mort qui est __la séparation de l'âme et du corps__ » ([[traite1|traité 1]], chap. 6). Pourquoi cette définition change tout ? Parce que ce qui meurt, alors, c'est le [[g-vivant|vivant]], le composé ; l'[[g-ame|âme]], qui a la vie par elle-même, ne peut pas la perdre (voir [[g-vie|vie]]). **La mort défait une union, elle ne détruit pas ce que l'union réunissait.** Le corps, lui, redevient [[g-anime-inerte|inerte]].
+
+    __**La mort n'est pas un mal.**__ L'objection est forte : « si la vie est un bien, comment la mort pourrait-elle ne pas être un mal ? » ([[traite54|traité 54]], chap. 3). Plotin répond en deux temps. D'abord, {coral}« un mal pour qui ? »{/coral} : si rien ne subsiste, « il ne peut y avoir là plus de mal qu'il n'y en a __pour une pierre__ » ; si l'âme subsiste, « il y aura d'emblée un bien, qui sera d'autant meilleur que l'âme __accomplira ses actes sans le corps__ ». Ensuite, la vie n'était pas bonne parce qu'elle unissait l'âme au corps : elle l'est « __parce que, grâce à la vertu, elle écarte le mal__. Quant à la mort, elle est plutôt un bien ». Pourquoi ? Parce que le bien de l'âme est sa propre activité, que le corps entrave (voir [[g-katharsis|purification]]). D'où le sage, qui « doit estimer que __la mort est supérieure à la vie avec le corps__ » ([[traite46|traité 46]], chap. 7).
+
+    __**Au théâtre du monde, personne ne meurt pour de vrai.**__ Mais les guerres, les massacres, les bêtes qui se dévorent ? Plotin les regarde depuis le tout, où une seule [[g-logos|raison]] joue tous les rôles : {yellow}« c'est comme si l'acteur qui a été assassiné sur scène revenait, __après avoir changé de costume__, en reparaissant dans le rôle d'un autre personnage »{/yellow} ([[traite47|traité 47]], chap. 15). Ainsi « la mort __n'a rien de terrible__ : mourir dans des guerres ou des combats, c'est devancer de peu le terme de la vieillesse ». Ce qui se lamente n'est pas nous : « ce n'est pas l'âme qui est en nous mais __son ombre, l'homme extérieur__, qui gémit ».
+
+    __**La vraie mort : plonger dans la matière.**__ Il y a pourtant une mort à craindre, et elle a lieu pendant la vie. L'âme qui chute dans le vice total change de nature : « alors l'âme meurt, pour autant qu'elle puisse mourir, et sa mort, alors qu'elle est encore immergée dans le corps, __consiste à plonger dans la matière__ et à s'en emplir » ([[traite51|traité 51]], chap. 13 ; voir [[g-hule|matière]]). D'où le retournement : pour l'âme impure, « ce ne sera pas la mort qui sera un mal pour elle, __mais la vie__ » ([[traite54|traité 54]], chap. 3).
+
+    | | La mort du corps | La mort de l'âme |
+    | Ce qui arrive | l'âme se sépare du composé | l'âme plonge dans la matière |
+    | Quand | au terme de la vie | pendant la vie, dans le vice |
+    | Un mal ? | non, plutôt un bien | oui, le vrai mal |
+
+    ! Que la mort ne soit pas un mal n'autorise pas à se la donner : pour Plotin, il ne faut pas faire sortir l'âme de force (voir [[g-suicide|suicide]]).
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | traité 1, chap. 6 | la mort, séparation de l'âme et du corps |
+    | traité 54, chap. 3 | la mort n'est pas un mal, plutôt un bien |
+    | traité 46, chap. 7 | le sage préfère la mort à la vie avec le corps |
+    | traité 47, chap. 15 | l'acteur qui change de costume |
+    | traité 51, chap. 13 | la mort de l'âme qui plonge dans la matière |
+
+    **Voir aussi** : [[g-suicide|Suicide]] · [[g-vivant|Vivant]] · [[g-anime-inerte|Animé / Inerte]] · [[g-katharsis|Purification]] · [[g-bonheur|Bonheur]]
+  tables:
+  - table: la-mort-du-corps-la-mort-de-l-ame
+    exercises:
+    - {kind: bank, column: La mort de l'âme}
+    - {kind: cell, column: La mort du corps}
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-mort-l1-q1
+    sentence: "Le courage est « absence de peur devant la mort, cette mort qui est la ___ de l'âme et du corps » (traité 1, chap. 6)."
+    answer: séparation
+    alt: ["separation"]
+  - id: g-mort-l1-q2
+    sentence: "Le dialogue de Platon d'où Plotin tire la définition de la mort comme séparation de l'âme et du corps est le ___."
+    answer: Phédon
+    alt: ["Phedon"]
+  - id: g-mort-l1-q3
+    sentence: "Si rien ne subsiste après la mort, « il ne peut y avoir là plus de mal qu'il n'y en a pour une ___ » (traité 54, chap. 3)."
+    answer: pierre
+    alt: []
+  - id: g-mort-l1-q4
+    sentence: "Si l'âme subsiste, « il y aura d'emblée un bien, qui sera d'autant meilleur que l'âme accomplira ses actes sans le ___ » (traité 54, chap. 3)."
+    answer: corps
+    alt: []
+  - id: g-mort-l1-q5
+    sentence: "La vie est un bien « non pas pour autant qu'elle est une union, mais parce que, grâce à la ___, elle écarte le mal » (traité 54, chap. 3)."
+    answer: vertu
+    alt: []
+  - id: g-mort-l1-q6
+    sentence: "« Quant à la mort, elle est plutôt un ___ » (traité 54, chap. 3)."
+    answer: bien
+    alt: []
+  - id: g-mort-l1-q7
+    sentence: "Le sage « doit estimer que la mort est ___ à la vie avec le corps » (traité 46, chap. 7)."
+    answer: supérieure
+    alt: ["superieure"]
+  - id: g-mort-l1-q8
+    sentence: "« C'est comme si l'___ qui a été assassiné sur scène revenait, après avoir changé de costume, en reparaissant dans le rôle d'un autre personnage » (traité 47, chap. 15)."
+    answer: acteur
+    alt: []
+  - id: g-mort-l1-q9
+    sentence: "« Mourir dans des guerres ou des combats, c'est devancer de peu le terme de la ___ » (traité 47, chap. 15)."
+    answer: vieillesse
+    alt: []
+  - id: g-mort-l1-q10
+    sentence: "« Ce n'est pas l'âme qui est en nous mais son ___, l'homme extérieur, qui gémit » (traité 47, chap. 15)."
+    answer: ombre
+    alt: []
+  - id: g-mort-l1-q11
+    sentence: "La mort de l'âme, « alors qu'elle est encore immergée dans le corps, consiste à plonger dans la ___ et à s'en emplir » (traité 51, chap. 13)."
+    answer: matière
+    alt: ["matiere"]
+  - id: g-mort-l1-q12
+    sentence: "Pour l'âme impure, « ce ne sera pas la mort qui sera un mal pour elle, mais la ___ » (traité 54, chap. 3)."
+    answer: vie
+    alt: []
