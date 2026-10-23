@@ -1,5 +1,89 @@
+# Entrée du glossaire de Plotin (skill glossaire), écrite le 2026-10-23 (elle
+# était vide, sous le titre « Imagination »). La GF traduit phantasia par
+# « représentation ». Citations vérifiées sur la GF (IV, 3, 29-31). Que la
+# nature soit « dépourvue de la faculté de représentation » (IV, 4, 13) a sa
+# carte dans l'entrée Nature.
+
 id: g-phantasia
-title: Imagination (`phantasia`)
+title: Représentation (`phantasia`)
 icon: book
 color: teal
-lessons: []
+lessons:
+- id: g-phantasia-l1
+  title: Représentation
+  notes: |-
+    Chez Plotin, la {violet}**représentation**{/violet} ou imagination (*phantasia*) est [def]. Elle n'est {pink}ni la sensation ni la pensée{/pink}, mais le miroir où l'une et l'autre deviennent perceptibles pour nous.
+
+    __**La**__ {violet}__**mémoire**__{/violet} __**n'appartient pas à la sensation.**__ On pourrait croire qu'on se souvient par ce qui sent, ou par ce qui raisonne. Plotin le réfute par l'expérience : « ceux qui raisonnent le mieux ne sont pas ceux qui ont __la mémoire la meilleure__, et, à sensations égales, il n'y a pas de souvenirs égaux » ([[traite27|traité 27]], chap. 29). Il faut donc une autre faculté, celle à laquelle parvient la sensation, et où « ce qui a été vu y est présent __alors même qu'il n'y a plus sensation__ ». D'où : « la mémoire appartient à la faculté qui produit des représentations, et __que se souvenir s'apparente au fait de produire une représentation__ ». Avoir de la mémoire, c'est avoir une représentation forte, qui ne laisse pas s'échapper ce qu'elle tient.
+
+    __**Le miroir de la pensée.**__ Pourquoi ne savons-nous pas toujours ce que nous pensons ? Parce que le concept, qui « ne comporte pas de parties », nous échappe tant qu'il reste à l'intérieur. « Le discours, en revanche, en le déployant [...], __fait apparaître le concept comme dans un miroir__ » : c'est dans la représentation qu'il devient perceptible et qu'on peut s'en souvenir (chap. 30). D'où cette distinction : « __autre chose est l'intellection, autre chose la perception de l'intellection__ ». {coral}Nous pensons toujours, mais nous ne le percevons que lorsque la pensée se reflète dans la représentation.{/coral} C'est pourquoi le sage endormi reste heureux : le miroir peut être brouillé sans que la pensée cesse (voir [[g-bonheur|bonheur]]).
+
+    __**Deux représentations, une seule quand elles s'accordent.**__ Chacune de nos deux âmes, la supérieure et celle qui est jointe au corps, a sa mémoire, donc sa représentation (chap. 31). Pourquoi n'en percevons-nous qu'une ? Parce que, quand elles s'accordent, celle de l'âme supérieure domine l'autre : {yellow}« à la façon d'une ombre, l'une accompagne l'autre ; c'est comme une faible lumière qui en prolonge une plus forte »{/yellow}. Mais « lorsqu'il y a conflit et désaccord, la représentation __devient manifeste par elle-même__ » : c'est le conflit intérieur, où l'âme inférieure fait entendre sa voix.
+
+    __**Ce qui n'en a pas : la nature.**__ La [[g-phusis|nature]], qui fait croître les plantes, est dépourvue de représentation ([[traite28|traité 28]], chap. 13). C'est pourquoi elle produit sans rien percevoir de ce qu'elle produit : sans miroir, pas de conscience.
+
+    | Ce qui arrive | Ce qu'en garde la représentation |
+    | une sensation | une image, présente quand l'objet n'est plus là |
+    | une intellection | son reflet, par le discours qui la déploie |
+    | un désaccord des deux âmes | la représentation de l'âme inférieure, devenue manifeste |
+
+    ! La représentation n'est pas la faculté d'inventer des fictions : chez Plotin, elle retient et présente ce qui lui vient de la sensation ou de la pensée. « Imagination » ne doit pas faire penser à la fantaisie.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | traité 27, chap. 29 | la mémoire, dans la faculté de représentation |
+    | traité 27, chap. 30 | la pensée ne devient perceptible que dans la représentation |
+    | traité 27, chap. 31 | deux représentations, qui s'accordent ou s'opposent |
+    | traité 28, chap. 13 | la nature est sans représentation |
+
+    **Voir aussi** : [[g-aisthesis|Sensation]] · [[g-dianoia|Réflexion]] · [[g-hemeis|Nous]] · [[g-bonheur|Bonheur]] · [[traite27|Traité 27]]
+  tables:
+  - table: ce-qui-arrive-ce-qu-en-garde-la-representation
+    exercises:
+    - {kind: bank, column: Ce qu'en garde la représentation}
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-phantasia-l1-q1
+    sentence: "La faculté qui retient ce que la sensation et la pensée lui apportent, que la GF traduit par « représentation », se dit en grec translittéré ___."
+    answer: phantasia
+    alt: ["phantasía"]
+  - id: g-phantasia-l1-q2
+    sentence: "Contre une mémoire logée dans la sensation ou le raisonnement : « ceux qui raisonnent le mieux ne sont pas ceux qui ont la ___ la meilleure » (traité 27, chap. 29)."
+    answer: mémoire
+    alt: ["memoire"]
+  - id: g-phantasia-l1-q3
+    sentence: "Dans la faculté de représentation, « ce qui a été vu y est présent alors même qu'il n'y a plus ___ » (traité 27, chap. 29)."
+    answer: sensation
+    alt: []
+  - id: g-phantasia-l1-q4
+    sentence: "« La mémoire appartient à la faculté qui produit des représentations, et que se souvenir s'apparente au fait de produire une ___ » (traité 27, chap. 29)."
+    answer: représentation
+    alt: ["representation"]
+  - id: g-phantasia-l1-q5
+    sentence: "Tant qu'il reste à l'intérieur, le concept nous échappe, « car le concept ne comporte pas de ___ » (traité 27, chap. 30)."
+    answer: parties
+    alt: []
+  - id: g-phantasia-l1-q6
+    sentence: "Le discours, en déployant le concept, « fait apparaître le concept comme dans un ___ » : la représentation (traité 27, chap. 30)."
+    answer: miroir
+    alt: []
+  - id: g-phantasia-l1-q7
+    sentence: "« Autre chose est l'intellection, autre chose la ___ de l'intellection » (traité 27, chap. 30)."
+    answer: perception
+    alt: []
+  - id: g-phantasia-l1-q8
+    sentence: "Quand les deux âmes s'accordent, leurs représentations n'en font qu'une : « à la façon d'une ___, l'une accompagne l'autre » (traité 27, chap. 31)."
+    answer: ombre
+    alt: []
+  - id: g-phantasia-l1-q9
+    sentence: "La représentation de l'âme inférieure suit celle de l'âme supérieure, « comme une faible ___ qui en prolonge une plus forte » (traité 27, chap. 31)."
+    answer: lumière
+    alt: ["lumiere"]
+  - id: g-phantasia-l1-q10
+    sentence: "« Lorsqu'il y a conflit et désaccord, la représentation devient ___ par elle-même » (traité 27, chap. 31)."
+    answer: manifeste
+    alt: []
