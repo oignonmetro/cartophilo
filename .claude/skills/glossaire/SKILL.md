@@ -143,8 +143,12 @@ et la remplacer par un renvoi.
   « (traité 53, chap. 1) ». Les tableaux (passages clefs) gardent, eux,
   « traité 45, chap. 8 » en clair, sans renvoi : ce sont des cases à
   replacer.
-- **Les citations ne prennent pas de couleur** (ni turquoise ni autre) : un
-  rappel de glossaire se lit mieux sans. **On y souligne en revanche la
+- **Les citations ne prennent pas de couleur décorative** (ni turquoise ni
+  autre) : un rappel de glossaire se lit mieux sans. Seule exception, la
+  couleur qui dit le **rôle logique** d'une partie de la citation (voir
+  plus bas) : l'hypothèse que Plotin réfute en rouge, ce qu'il retient en
+  vert, jusque dans les guillemets (retouche de l'entrée Bonheur,
+  2026-10-23). **On y souligne en revanche la
   partie décisive** de chaque citation, celle qui porte l'idée : « une vie
   qui __demeure dans l'identité__ parce que __le tout lui est toujours
   présent__ ». Le souligné se met à l'intérieur des guillemets, sur une
@@ -170,6 +174,70 @@ et la remplacer par un renvoi.
 - Mise en relief, couleurs, grec en italique, tableaux, interdits : comme
   `cours-traite` § 4, sauf pour les citations (pas de turquoise, voir plus
   haut) et les traités (renvois prunes).
+
+**Chaque thèse vient avec son pourquoi** (relecture de l'utilisateur sur
+Vie, Degrés de vie, Vie parfaite, Bonheur et Temps, 2026-10-23). C'est la
+faute la plus fréquente des premiers jets : énoncer la thèse, la citer, et
+passer.
+
+- **Une thèse surprenante s'accompagne de l'argument de Plotin**, en
+  quelques mots, cité : « toute vie est une intellection » demande pourquoi
+  (parce que toute vie est une raison à l'œuvre, et qu'une raison est un
+  contenu pensé), « le temps est une vie » aussi (parce qu'il est l'image
+  de l'éternité, qui est une vie), « l'homme heureux est cette vie » aussi
+  (parce que sans intellect il ne serait pas un homme). Si l'argument est
+  long, une phrase et un renvoi vers l'entrée qui le déploie.
+- **Devancer les questions que l'étudiant se posera**, pour que les cartes
+  ne les laissent pas ouvertes : *pourquoi X plutôt que Y ?* (pourquoi
+  parler de clarté plutôt que de présence ou d'absence de pensée : parce
+  que Plotin refuse ce partage, traité 30, chap. 8) ; *pourquoi pas
+  l'inverse ?* (pourquoi le temps est la vie de l'âme et non un cadre où
+  l'âme vivrait) ; *en quoi cette solution vaut-elle mieux que celles
+  qu'elle écarte ?* ; *cela vaut-il pour nous, ici-bas ?* (la vie parfaite).
+  Une étape dont l'intitulé pose la question (« Pourquoi la clarté, et non
+  la présence ou l'absence de pensée ») est souvent la bonne forme.
+- **Une explication ne se paie pas de mots** : « chaque vie est une raison,
+  une forme active, et toute forme est pensée » enchaîne trois thèses sans
+  en justifier aucune. Défaire chaque maillon, ou n'en garder qu'un, expliqué.
+- **Un piège `! …` se comprend seul et dit ce qui en suit** : « "état"
+  traduit *bios* » ne sert à rien sans la conséquence (l'âme garde une
+  seule vie, *zôê*, dont le contenu, *bios*, change, et ce changement est
+  le temps).
+- **Toute entrée qui repose sur plusieurs lieux a ses Passages clefs**
+  (micro-section ci-dessous), sous-entrées comprises : leur absence a été
+  relevée sur Vie parfaite et Bonheur.
+
+**Couleurs et mise en relief, d'après les retouches de l'utilisateur**
+(2026-10-23) :
+
+- les couleurs disent le **rôle logique**, chacune toujours le même :
+  {pink}la conception naïve écartée{/pink}, {red}la thèse adverse ou
+  l'hypothèse réfutée{/red} (« pour les {red}stoïciens{/red}, l'âme est un
+  {red}souffle physique{/red} »), {green}la thèse retenue{/green},
+  {coral}la raison qui justifie{/coral} (« le temps n'est pas le
+  mouvement, car {coral}les mouvements sont eux-mêmes dans le temps{/coral} »),
+  {yellow}l'image ou la thèse empruntée à un autre auteur{/yellow} ;
+- dans l'intitulé d'une étape, la notion en jeu en violet :
+  `__**Le temps n'est ni le**__ {violet}__**mouvement**__{/violet} __**ni quelque chose du mouvement.**__` ;
+- l'italique d'insistance, dans un intitulé ou une phrase, sur le mot qui
+  porte la thèse : « L'homme heureux *est* cette vie » ;
+- le gras sur les termes que la suite emploie comme des notions
+  (**pensée**, **révolution du ciel**, **vie parfaite**).
+
+**Écriture, d'après les mêmes retouches** :
+
+- les **connecteurs** qui montrent le raisonnement : « Elle n'est *donc*
+  pas d'abord… », « *De surcroît*, si la cause de la vie était vivante… »,
+  « *En reprenant* le *Sophiste*, Plotin soutient que… » ;
+- la **précision qui rend la phrase exacte** : « les sens du *mot* « vie » »
+  et non « les sens de la vie », « d'un *autre vivant* » et non « d'un
+  autre », « le degré le plus haut *de vie* » ;
+- un **tableau** ne garde que des colonnes qui valent un exercice : la
+  colonne « Mots qui le signalent » de Vie a été retirée ;
+- **l'exemple avant le tableau** qu'il éclaire (le dormeur des Degrés de
+  vie avant l'échelle) ;
+- l'**autre nom** usuel de la notion dans l'en-tête, entre guillemets : le
+  vivant ou « animal » (*zôion*).
 
 **Une entrée générale (notion) donne une vue d'ensemble, pas le détail de
 ses sous-entrées** (leçon de l'entrée Vie, 2026-10-21) :
