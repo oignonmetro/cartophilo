@@ -427,8 +427,40 @@ cette skill) se scinde **sur demande, une fiche à la fois** :
 ## 7. Clarifier, valider, publier, rendre compte
 
 1. **Passe de clarification** de `cours-traite` § 6 sur le rappel et les
-   cartes : abstrait ? contresens possible ? argument à déplier ?
-2. `npm run content:tidy -- <fichiers>`, `npm run content:check` jusqu'à
+   cartes : abstrait ? contresens possible ? argument à déplier ? Puis la
+   **passe des obscurités** (relecture de l'utilisateur, 2026-10-24), phrase
+   par phrase, avec ces quatre questions :
+   - **Une image, une comparaison ?** Traduire en une phrase littérale ce
+     qu'elle affirme, puis dire pourquoi Plotin la choisit. « Le corps
+     vivant est comme l'air échauffé » restait obscur : le corps a-t-il la
+     vie, ou la reçoit-il ? La réponse tient dans le contraste que l'image
+     construit (l'air éclairé ne garde rien, l'air échauffé devient chaud),
+     et dans la phrase de la GF qui le tranche (la vie « appartenait en
+     propre au corps »). Pour une image à plusieurs termes, dire ce que
+     représente chacun : l'acteur est l'âme, le costume est le corps.
+   - **Un mot pris dans un sens fort ou figuré ?** (le vice est une
+     « mort », le corps un « sommeil ») Dire pourquoi ce mot, à partir de la
+     définition de la notion : vivre, c'est exercer son activité propre,
+     donc l'âme qui la perd est morte en tant qu'âme.
+   - **Une thèse affirmée sans ses raisons ?** (« une seule raison joue tous
+     les rôles », « la santé vient du dedans ») Donner les raisons du texte,
+     ou dire ce que désigne le terme vague : quel « dedans » (la raison de
+     la nature qui forme et répare le corps), quel « dehors » (le médecin,
+     qui ôte les obstacles).
+   - **Une phrase de liaison ?** (« c'est la même raison qui fait que… »)
+     La déplier ou la supprimer. Un « voir X » ne se pose que si l'entrée X
+     explique vraiment le point : relire X avant de renvoyer.
+   NotebookLM aide à trouver ce qui manque : lui donner la liste de ce que
+   l'entrée couvre déjà (lieux et thèses) et lui demander les passages,
+   arguments et difficultés qui manquent ; recouper chaque apport sur la
+   GF.
+2. `python -I .claude/skills/glossaire/passages_chrono.py "content/courses/<cours>/units/g-*.yaml"` :
+   les lignes des passages clefs se rangent dans l'ordre chronologique des
+   traités (consigne de l'utilisateur, 2026-10-24), la *Vie de Plotin* en
+   dernier ; l'en-tête du tableau ne change pas, sa progression reste.
+   `npm run content:tidy -- <fichiers>` met aussi une espace insécable à
+   l'intérieur des guillemets (`nbspQuotes`) : inutile de la taper.
+   `npm run content:check` jusqu'à
    « Contenu valide », puis pour Plotin
    `python -I .claude/skills/cours-traite/gf.py verifie <fichier> <id de la leçon>`
    et `… reprises …` : aucune citation introuvable, aucune reprise sans
