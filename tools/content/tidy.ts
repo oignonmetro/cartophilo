@@ -82,7 +82,21 @@ function tidySpaces(line: string): string {
     // du français (avant `;`, `:`, `?`, `»`) restent.
     out = out.replace(/(\S) +([,.])(?=\s|$)/g, '$1$2')
   }
-  return out.replace(/ +$/, '')
+  return nbspQuotes(out.replace(/ +$/, ''))
+}
+
+/**
+ * Les guillemets français prennent une espace insécable à l'intérieur
+ * (« ainsi »), qu'on ait tapé une espace ordinaire, plusieurs, ou aucune :
+ * le guillemet ne se retrouve jamais seul en bout de ligne, dans
+ * l'application comme dans l'éditeur, et le texte source dit ce qui
+ * s'affiche. L'espace fine insécable déjà là est gardée.
+ */
+export function nbspQuotes(line: string): string {
+  return line
+    .replace(/« */g, (match, at: number) => (/[  ]/.test(line[at + match.length] ?? '') ? '«' : '« '))
+    .replace(/(^|[^\s  ]) *»/g, (_, before: string) => `${before} »`)
+    .replace(/« (?=$)/g, '«')
 }
 
 /** Met en forme un paragraphe (des lignes consécutives non vides). */

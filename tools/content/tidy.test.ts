@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { pointProblems, tidyAlt, tidyAnswer, tidyLine, tidyPoint, tidySentence, tidyText } from './tidy'
+import { nbspQuotes, pointProblems, tidyAlt, tidyAnswer, tidyLine, tidyPoint, tidySentence, tidyText } from './tidy'
 
 describe('tidyLine', () => {
   test('sort les espaces des marques fermées trop tard', () => {
@@ -29,7 +29,7 @@ describe('tidyLine', () => {
   })
 
   test('laisse le gras, les couleurs et la ponctuation française bien formés', () => {
-    const line = "__**Il est {coral}simple{/coral}.**__ Pourquoi ? « Le beau » ; voir *Phèdre*, 247b."
+    const line = "__**Il est {coral}simple{/coral}.**__ Pourquoi ? « Le beau » ; voir *Phèdre*, 247b."
     expect(tidyLine(line)).toBe(line)
   })
 
@@ -42,7 +42,7 @@ describe('tidyLine', () => {
   })
 
   test('apparie les marques sur tout un paragraphe, pas ligne à ligne', () => {
-    const text = "    dans la *Profession de foi du vicaire\n    savoyard* et le « **mythe de\n    l'intériorité** »"
+    const text = "    dans la *Profession de foi du vicaire\n    savoyard* et le « **mythe de\n    l'intériorité** »"
     expect(tidyText(text)).toBe(text)
     expect(tidyText('    une **thèse\n    centrale **ici')).toBe('    une **thèse\n    centrale** ici')
   })
@@ -85,5 +85,22 @@ describe('cartes', () => {
     ])
     expect(pointProblems({ sentence: 'La ___ et les ___', answer: 'neige ; remèdes' })).toEqual([])
     expect(pointProblems({ sentence: 'La ___ et les ___', answer: 'neige' })).toHaveLength(1)
+  })
+})
+
+describe('nbspQuotes', () => {
+  test('met une espace insécable à l’intérieur des guillemets', () => {
+    expect(nbspQuotes('il dit « la vie » ici')).toBe('il dit « la vie » ici')
+    expect(nbspQuotes('il dit «la vie» ici')).toBe('il dit « la vie » ici')
+    expect(nbspQuotes('il dit «  la vie  » ici')).toBe('il dit « la vie » ici')
+  })
+
+  test('garde les espaces insécables déjà là, fines comprises', () => {
+    expect(nbspQuotes('« la vie »')).toBe('« la vie »')
+    expect(nbspQuotes('« la vie »')).toBe('« la vie »')
+  })
+
+  test('passe aussi par tidyLine, marques comprises', () => {
+    expect(tidyLine('« __le temps__ » (chap. 8)')).toBe('« __le temps__ » (chap. 8)')
   })
 })
