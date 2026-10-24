@@ -447,6 +447,22 @@ cette skill) se scinde **sur demande, une fiche à la fois** :
      ou dire ce que désigne le terme vague : quel « dedans » (la raison de
      la nature qui forme et répare le corps), quel « dehors » (le médecin,
      qui ôte les obstacles).
+   - **Une analogie ?** Dire terme à terme ce qui correspond à quoi, dans
+     une phrase à part : « Ici, le plan est la forme, les murs sont la
+     matière. » Une analogie posée en incise (« comme le plan d'une maison
+     n'est pas plus grand quand la maison l'est ») laisse le lecteur faire
+     la correspondance, et il la fait mal (relecture de Croissance,
+     2026-10-24).
+   - **Deux thèses dans une étape ?** Quand la seconde se déduit de la
+     première (« la forme n'a pas de taille », donc « l'âme est présente
+     tout entière »), lui donner son étape et dire le passage : « Il en
+     résulte que… ». Une étape trop dense se relit comme une suite
+     d'affirmations.
+   - **Une citation qui commence au milieu de la phrase de la GF ?** Elle
+     doit s'insérer dans la phrase française : « elle reste ce qu'elle
+     est : « quand elle fait pousser les plantes ne pousse pas elle-même » »
+     n'a pas de sujet. Reprendre la citation depuis son sujet, ou la
+     couper autrement.
    - **Une phrase de liaison ?** (« c'est la même raison qui fait que… »)
      La déplier ou la supprimer. Un « voir X » ne se pose que si l'entrée X
      explique vraiment le point : relire X avant de renvoyer.
@@ -459,7 +475,12 @@ cette skill) se scinde **sur demande, une fiche à la fois** :
    traités (consigne de l'utilisateur, 2026-10-24), la *Vie de Plotin* en
    dernier ; l'en-tête du tableau ne change pas, sa progression reste.
    `npm run content:tidy -- <fichiers>` met aussi une espace insécable à
-   l'intérieur des guillemets (`nbspQuotes`) : inutile de la taper.
+   l'intérieur des guillemets (`nbspQuotes`) : inutile de la taper. Dans un
+   rappel (bloc `notes: |-`), les guillemets droits s'écrivent tels quels,
+   `"ainsi"`, jamais `\"ainsi\"` : l'échappement ne vaut que dans une chaîne
+   entre guillemets (une carte), et dans un bloc la barre s'afficherait.
+   `content:tidy` la retire de toute façon, mais l'écrire juste évite d'en
+   dépendre.
    `npm run content:check` jusqu'à
    « Contenu valide », puis pour Plotin
    `python -I .claude/skills/cours-traite/gf.py verifie <fichier> <id de la leçon>`
