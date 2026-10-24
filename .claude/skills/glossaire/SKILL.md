@@ -485,11 +485,20 @@ cette skill) se scinde **sur demande, une fiche à la fois** :
    « Contenu valide », puis pour Plotin
    `python -I .claude/skills/cours-traite/gf.py verifie <fichier> <id de la leçon>`
    et `… reprises …` : aucune citation introuvable, aucune reprise sans
-   guillemets. La GF extraite colle certains mots coupés en fin de ligne
-   (« luimême », « ellemême ») : une citation qui les contient sort
-   « introuvable » à tort ; vérifier le passage avec `gf.py chapitre`, puis
-   passer. Un `[def]` n'est pas une citation : il n'entre pas dans ce
-   contrôle.
+   guillemets (les mots coupés en fin de ligne, « luimême », sont
+   recollés : ils ne sortent plus « introuvable » à tort). Un `[def]` n'est
+   pas une citation : il n'entre pas dans ce contrôle.
+   Puis `… chapitres <fichier> <id de la leçon>` : chaque citation doit se
+   trouver dans le chapitre que son repère annonce. `verifie` ne cherche que
+   dans toute la GF, et c'est ainsi que des entrées publiées citaient 28, 28
+   pour 27, 23, ou 38, 19 pour 38, 26 (audit du 2026-10-24). Le repère suit
+   les citations qu'il couvre, jamais il ne les précède : une citation sans
+   repère après elle est rapportée au repère suivant du paragraphe (« repère
+   avant » signale celle qui se trouve en fait dans le chapitre du repère
+   précédent ; lui en ajouter un, « (chap. 4) », juste après). Une citation
+   suit la traduction GF elle-même, jamais la présentation d'un volume ni
+   une autre traduction : une phrase de présentation passe `verifie` mais
+   sort « ailleurs » à `chapitres`.
 3. `npm run content:build`, regarder le rendu de l'entrée dans le navigateur
    intégré.
 4. Incrémenter `version:` du `course.yaml`.
