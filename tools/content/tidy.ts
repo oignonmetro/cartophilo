@@ -103,6 +103,9 @@ export function nbspQuotes(line: string): string {
 function tidyParagraph(paragraph: string): string {
   let out = paragraph.split(GAP).join(GAP_TOKEN)
   out = out.replace(/’/g, "'")
+  // Un \" est un échappement de chaîne YAML entre guillemets : dans un
+  // rappel (bloc littéral) ou une valeur déjà lue, la barre s'afficherait.
+  out = out.replace(/\\"/g, '"')
   out = tidyPairs(out, '**')
   out = tidyPairs(out, '__')
   out = tidyItalic(out)

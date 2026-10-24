@@ -104,3 +104,9 @@ describe('nbspQuotes', () => {
     expect(tidyLine('« __le temps__ » (chap. 8)')).toBe('« __le temps__ » (chap. 8)')
   })
 })
+
+describe('échappements de guillemets', () => {
+  test('retire la barre d’un \\" laissé dans un texte', () => {
+    expect(tidyLine('« une \\"douleur\\" »')).toBe('« une "douleur" »')
+  })
+})
