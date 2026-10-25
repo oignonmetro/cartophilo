@@ -9,7 +9,8 @@ ROW = re.compile(r"^\s*\|")
 
 def key(row):
     cell = row.split('|')[1].strip()
-    m = re.match(r'traités? (\d+)(?:-\d+)?(?:, chap\. (\d+))?', cell)
+    # « traité 46, chap. 2 » comme « Traité 36 (I, 5), ch. 10 »
+    m = re.match(r'traités? (\d+)(?:-\d+)?(?: \([^)]*\))?(?:, ch(?:ap)?\. (\d+))?', cell, re.I)
     if m:
         return (int(m.group(1)), int(m.group(2) or 0))
     m = re.search(r'Vie de Plotin\*?, (\d+)', cell)
