@@ -172,6 +172,22 @@ distinction pour telle division ?
 
 ## 3. Écrire le rappel
 
+**Les retouches de l'utilisateur ne se perdent pas** (2026-10-25 : en
+réécrivant Végétatif et Bien-être d'un seul `Write`, j'avais effacé ses
+mises en relief ; d'autres, sur Animé / Inerte et Santé, avaient sauté à des
+corrections antérieures). Réécrire une entrée, c'est partir du fichier tel
+qu'il est, retouches comprises : relire d'abord ses dernières retouches
+(`git log --grep=retouche -- <fichier>`, puis `git show`), et les reporter
+sur le nouveau texte (une phrase reformulée garde son souligné, son gras,
+sa couleur, sur les mots qui portent la même idée). Corriger par
+remplacements ciblés plutôt que par réécriture du fichier entier.
+`retouches.py <fichiers>` signale toute mise en relief ajoutée par
+l'utilisateur qui a disparu ; `publier.sh` refuse de publier tant qu'il en
+signale. Une retouche impossible à reporter (sa phrase a disparu, à la
+demande de l'utilisateur) s'inscrit dans `retouches_abandonnees.json` avec
+sa raison, et se dit à l'utilisateur dans le compte rendu.
+
+
 Une leçon, un rappel, qui tient sur un écran ou un peu plus. S'il déborde,
 c'est qu'il traite deux notions : en sortir une, qui deviendra une entrée,
 et la remplacer par un renvoi.
