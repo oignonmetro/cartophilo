@@ -28,6 +28,12 @@ def version(rev, f):
     return git("show", f"{rev}:{f}").replace(" ", " ")
 
 
+def plat(s):
+    """Sans les espaces que content:tidy ajoute ou retire autour des guillemets."""
+    s = s.replace(" ", " ").replace(" ", " ").lower()
+    return re.sub(r"\s*»", "»", re.sub(r"«\s*", "«", s))
+
+
 def spans(t):
     return {m.group(0) for m in SPAN.finditer(t)}
 
@@ -42,7 +48,7 @@ def abandonnees():
 
 
 def manquantes(f):
-    actuel = open(f, encoding="utf-8").read().replace(" ", " ").lower()
+    actuel = plat(open(f, encoding="utf-8").read())
     commits = git("log", "--reverse", "-i", "--grep=retouche", "--format=%H", "--", f).split()
     out = []
     nom = os.path.basename(f)
@@ -51,7 +57,7 @@ def manquantes(f):
         ajoutes = spans(version(c, f)) - spans(version(c + "^", f))
         suivants = [version(x, f) for x in commits[k + 1:]]
         for s in sorted(ajoutes):
-            if s.lower() in actuel or any(s not in v for v in suivants) or (nom, s) in vues:
+            if plat(s) in actuel or any(s not in v for v in suivants) or (nom, s) in vues:
                 continue
             out.append((c[:7], s))
     return out
