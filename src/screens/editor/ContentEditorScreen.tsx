@@ -479,7 +479,7 @@ export default function ContentEditorScreen() {
                           {entry.units.map((unit) => (
                             <details key={unit.id} className="mb-0.5">
                               <summary className="group flex cursor-pointer items-center gap-1 rounded-lg px-2 py-1 text-xs font-bold">
-                                <span className="flex-1">{unit.title}</span>
+                                <span className="flex-1">{unit.title.replace(/`/g, '')}</span>
                                 {unit.isText && (
                                   <span
                                     title="Unité de texte"
