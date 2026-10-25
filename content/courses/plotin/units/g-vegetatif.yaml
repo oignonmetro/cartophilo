@@ -1,10 +1,12 @@
 # Entrée du glossaire de Plotin (skill glossaire), écrite le 2026-10-24 à la
-# demande de l'utilisateur. Citations vérifiées sur la GF (IV, 9, 3 ; V, 2,
-# 2 ; III, 4, 1-2 ; IV, 3, 23 ; IV, 4, 18 et 28). Le terme grec, phutikon,
-# est celui des notes de la GF (traités 8, 22-26 et 27-29). La croissance a
-# son entrée (Croissance), le corps vivant comme air échauffé la sienne
-# (Animé / Inerte) ; « nous sommes non pas notre faculté végétative »
-# (I, 4, 9) a sa carte dans Bonheur.
+# demande de l'utilisateur, réécrite le 2026-10-25 après sa relecture (ce
+# qu'est le végétatif, d'où il vient, pourquoi il fait le vivant, pourquoi
+# il règne seul dans la plante, pourquoi elle est audacieuse, comment naît
+# le désir), avec NotebookLM. Citations vérifiées sur la GF (IV, 9, 3 ; V,
+# 2, 2 ; III, 4, 1-2 ; IV, 3, 27 ; IV, 4, 18-21, 27-28). Le terme grec,
+# phutikon, est celui des notes de la GF. La croissance a son entrée
+# (Croissance), l'air échauffé et le cadavre la leur (Animé / Inerte),
+# l'irascible la sienne (Tripartition de l'âme).
 
 id: g-vegetatif
 title: Végétatif (`phutikon`)
@@ -14,35 +16,45 @@ lessons:
 - id: g-vegetatif-l1
   title: Végétatif
   notes: |-
-    Chez Plotin, le {violet}**végétatif**{/violet} (*phutikon*) est [def]. Ce n'est pas {pink}une âme à part, propre aux plantes{/pink} : c'est une puissance de l'âme, présente en tout vivant, que nous tenons de l'univers.
+    Chez Plotin, le {violet}**végétatif**{/violet} (*phutikon*) est [def]. Ce n'est pas {pink}une âme à part, propre aux plantes{/pink} : c'est la dernière puissance de l'âme, présente en tout vivant, que Plotin appelle aussi la *nature*.
 
-    __**Une même puissance, qui domine ou qui sert.**__ La puissance végétative nourrit, fait croître et engendre (voir [[g-croissance|croissance]] et [[g-reproduction|reproduction]]). Elle est en nous comme dans les plantes, mais à une autre place : « même dans l'âme qui est en nous on trouve la nature, mais __notre âme la domine__, car cette nature est une partie. Mais quand c'est dans des plantes que la nature advient, __c'est elle qui domine__, dans la mesure où elle seule y est advenue » ([[traite15|traité 15]], chap. 1). {coral}Ce qui fait la plante, ce n'est donc pas une âme d'une autre sorte, c'est que le végétatif y règne seul.{/coral}
+    __**Le végétatif est la dernière puissance de l'âme : celle qui fabrique le corps.**__ L'âme est une, mais elle a plusieurs puissances, comme une semence (voir [[g-tripartition-de-l-ame|tripartition de l'âme]]). Plotin les distingue par leur rapport au corps : la raison n'y est pas divisée ; la sensation l'est, puisqu'elle est en chaque organe ; et « ce qui en elle est en mesure de __façonner et de fabriquer des corps__ est encore une puissance » ([[traite8|traité 8]], chap. 3). C'est le végétatif : il nourrit le corps, le fait croître et en engendre d'autres (voir [[g-croissance|croissance]] et [[g-reproduction|reproduction]]). Il agit sans sentir : « la puissance végétative se trouve aussi dans des parties __qui n'ont pas la sensation__ » (*ibid*.). Pourquoi la dernière ? Parce qu'après elle l'âme ne produit plus rien de vivant : la nature « engendre quelque chose de complètement différent d'elle. Car __après elle, il n'y a plus de vie__ et ce qu'elle produit est dépourvu de vie » ([[traite15|traité 15]], chap. 1). Ce qu'elle produit, c'est le corps, qui ne vit pas par lui-même. {coral}**Le végétatif est donc la frontière de l'âme : la puissance par laquelle elle touche ce qui ne vit pas.**{/coral}
 
-    __**Nous la tenons de l'univers, non de notre âme.**__ D'où vient le végétatif qui est en nous ? Plotin pose la question : « pourquoi donc la puissance nutritive ne procède-t-elle pas de notre âme ? » Et il répond : « parce que la partie de l'univers qui est nourrie est aussi celle qui subit la sensation, tandis que la sensation qui porte des jugements en s'aidant de l'intellect __appartient à chacun__, et pour elle il n'était pas besoin de façonner ce qui est façonné par l'univers » ([[traite8|traité 8]], chap. 3). Autrement dit : __notre corps est un morceau du corps du monde__, et c'est l'âme du monde, par sa [[g-phusis|nature]], qui le nourrit et le façonne ; ce qui nous est propre commence avec le jugement. **Le végétatif est en nous, mais il n'est pas nous** (voir [[g-hemeis|nous]]).
+    __**Le végétatif qui est en nous vient de l'âme du monde, parce que notre corps est une partie du monde.**__ Plotin pose la question : « pourquoi donc la puissance nutritive ne procède-t-elle pas de notre âme ? » ([[traite8|traité 8]], chap. 3). Sa réponse tient en trois prémisses.
+    - Ce qui est nourri : « la partie de l'univers qui est nourrie est aussi celle qui subit la sensation » (*ibid*.). Le corps que nous sentons est un morceau du corps du monde, fait de ses éléments.
+    - Ce qui le nourrit : l'âme du monde façonne tout le corps du monde, et donc aussi ce morceau ; la puissance qui le nourrit est la sienne, à l'œuvre en lui comme en toute partie du monde.
+    - Ce qui nous est propre : « la sensation qui porte des jugements en s'aidant de l'intellect __appartient à chacun__ » (*ibid*.).
+    Donc notre âme n'a pas à refaire ce qui est déjà fait : « pour elle __il n'était pas besoin de façonner ce qui est façonné par l'univers__ » (*ibid*.). {coral}*Venir de l'univers* ne veut pas dire qu'un morceau de l'âme du monde s'est détaché pour entrer en nous{/coral} : c'est la même puissance, qui façonne tout le corps du monde, en tant qu'elle façonne cette partie-là ; notre âme, en arrivant, la trouve à l'œuvre. Plotin distingue ainsi en nous l'âme « par laquelle nous sommes ce que nous sommes » et l'autre, « __celle qui nous vient de l'univers__ » ([[traite27|traité 27]], chap. 27). **Le végétatif est en nous, mais il n'est pas nous** (voir [[g-hemeis|nous]]).
 
-    __**Une âme sans perception, présente partout.**__ Le végétatif agit là où rien ne sent : « la puissance végétative se trouve __aussi dans des parties qui n'ont pas la sensation__ » (chap. 3). Il « n'est **absente d'aucune partie du corps**, puisqu'elle __le nourrit par le moyen du sang__ qui se trouve dans les veines », dont le point de départ est le foie ([[traite27|traité 27]], chap. 23). C'est bien encore une âme, mais au plus bas : le corps qu'elle anime possède « comme une ombre de l'âme » ([[traite28|traité 28]], chap. 18 ; voir [[g-anime-inerte|animé et inerte]]).
+    __**Le corps qu'il anime garde une trace de l'âme : c'est ce qui le fait vivant.**__ Comment une puissance incorporelle est-elle présente à un corps ? Par une règle générale : quand une réalité s'allie à une réalité d'un autre genre, et que « la réalité inférieure reçoit quelque chose de la réalité supérieure sans être en mesure de la posséder, la réalité inférieure __doit se contenter d'une trace__ de la réalité supérieure » ([[traite28|traité 28]], chap. 18). Le corps ne peut pas posséder l'âme, qui n'est dans aucun lieu ; il en reçoit donc une trace, et c'est le végétatif qui la lui donne : il est l'âme « qui se trouve dans le voisinage du corps, celle que nous appelons "nature" et __qui donne au corps une trace d'elle-même__ » (chap. 20). Plotin appelle aussi cette trace « comme __une ombre de l'âme__ » (chap. 18). Une ombre reproduit la figure de ce qui la projette sans en être une partie : de même, le corps vivant a quelque chose de la vie de l'âme, qui est désormais à lui, sans avoir l'âme elle-même. C'est cette trace qui sépare le vivant de l'inerte : la puissance qui vient de la terre donne au végétal « ce par quoi il est __différent d'une branche coupée__ et qui n'est plus un végétal, mais seulement un morceau de bois » (chap. 27 ; voir [[g-anime-inerte|animé et inerte]], où l'image de l'air échauffé dit la même chose).
 
-    __**La racine du désir.**__ Le végétatif est aussi ce qui, en nous, __désire__ : « il faut considérer que l'origine du désir se situe dans la région du foie, parce que c'est là surtout qu'est actif le végétatif, qui __communique sa trace psychique au foie et au corps__ » ([[traite28|traité 28]], chap. 28). Pourquoi ? Parce que **ce qui nourrit doit vouloir nourrir** : la faim, la soif, le désir d'engendrer sont l'œuvre du végétatif perçue par le vivant. La colère en dépend aussi, par le sang et la bile, mais suppose la sensation ; c'est pourquoi les plantes, qui ont le végétatif, n'ont pas d'irascible : « __ils ne sont dotés ni de sang ni de bile__ » (même chapitre ; voir [[g-tripartition-de-l-ame|tripartition de l'âme]]).
-
-    __**La plante, la part la plus audacieuse de l'âme.**__ Dans une plante, c'est « comme si l'une de ses parties s'y trouvait, __la partie la plus audacieuse et la plus imprudente__ qui s'est avancée jusqu'à un tel point » ([[traite11|traité 11]], chap. 2). Audacieuse, parce qu'elle s'est avancée le plus loin de sa source (voir [[g-tolma|audace]]). Et pourtant elle ne s'en est pas détachée : quand on coupe une branche, l'âme qui s'y trouvait va « __là d'où elle est venue__, car elle ne s'en est pas localement éloignée ». **Couper la plante ne coupe pas l'âme**, qui n'était pas dans un lieu.
+    __**Le végétatif règne seul dans la plante, parce que c'est lui qui y a conduit l'âme.**__ Si toutes ces puissances sont celles d'une même âme, pourquoi la plante n'a-t-elle que la dernière ? Parce que l'âme va dans le corps qui répond à la puissance qui domine en elle. Plotin le dit des bêtes : quand l'âme « se trouve dans un être irrationnel, c'est __la faculté sensible qui, en dominant, l'y a conduite__ » ([[traite11|traité 11]], chap. 2). Il en va de même de la plante, où c'est le végétatif qui l'a conduite : « quand c'est dans des plantes que la nature advient, __c'est elle qui domine__, dans la mesure où elle seule y est advenue » ([[traite15|traité 15]], chap. 1). En nous, la même puissance est présente, mais à une autre place : « même dans l'âme qui est en nous on trouve la nature, mais __notre âme la domine__, car cette nature est une partie » (*ibid*.). D'où le sort de ceux qui ont vécu par elle seule : ils « s'appliquaient en fait __à se transformer en arbres__ » (chap. 2 ; voir [[g-daimon|démon]]).
 
     | Vivant | Ce qui domine en lui | Le végétatif y est |
     | la plante | le végétatif | seul, et il règne |
     | l'animal | la sensation | une partie qui nourrit le corps sentant |
     | l'homme | la raison, s'il la développe | une partie que notre âme domine |
 
-    ! Le végétatif n'est pas la nature : la [[g-phusis|nature]] est l'âme du monde à son dernier degré, qui produit tous les corps ; le végétatif est cette puissance en tant qu'elle est présente dans un vivant, sa plante ou son corps. Et vivre par lui seul, c'est devenir plante : ceux chez qui il dominait « __s'appliquaient en fait à se transformer en arbres__ » ([[traite15|traité 15]], chap. 2 ; voir [[g-daimon|démon]]).
+    __**La plante est la partie la plus audacieuse de l'âme, parce qu'elle s'est avancée le plus loin.**__ Tout ce qui est engendré « occupe une position différente et inférieure » à ce dont il vient ([[traite11|traité 11]], chap. 2) : l'âme procède de l'Intellect, et ses puissances d'elle, chacune un degré plus bas. Le végétatif est le dernier degré, celui après lequel il n'y a plus de vie. Dans la plante, où il est seul, c'est donc comme si l'âme avait envoyé « __la partie la plus audacieuse et la plus imprudente__ qui s'est avancée jusqu'à un tel point » (*ibid*.). {coral}Audacieuse, parce que l'audace est, chez Plotin, le mouvement par lequel une réalité s'écarte de son principe pour être à part{/coral} (voir [[g-tolma|audace]]) : aucune partie de l'âme ne s'en est écartée davantage. {coral}Imprudente, parce qu'elle s'est avancée jusqu'à toucher ce qui ne vit pas.{/coral} Mais cet éloignement est de rang, non de lieu, et la branche coupée le montre : l'âme qui s'y trouvait va « __là d'où elle est venue__, car elle ne s'en est pas localement éloignée : elle est donc dans son principe » (*ibid*.). Couper sépare des morceaux de bois, qui sont dans des lieux ; cela ne peut rien séparer de l'âme, qui n'est dans aucun lieu. **Ce que perd la branche, c'est la trace ; la puissance, elle, n'a jamais quitté son principe.**
+
+    __**Le désir naît du corps vivant, et le végétatif le prend en charge.**__ Pourquoi la faim, la soif, la recherche du chaud ou du froid relèveraient-elles du végétatif ? Plotin procède par élimination.
+    - Pas l'âme seule : elle ne manque de rien, et il ne faut pas « chercher à rapporter la recherche des saveurs amères ou douces à l'âme elle-même » ([[traite28|traité 28]], chap. 20).
+    - Pas le corps seul : un corps sans âme ne sent pas son état ; « il n'aurait souci de rien de cela, __s'il était seul__ » (*ibid*.).
+    - Le corps vivant : il a la trace de l'âme, il change sans cesse d'état, et chaque manque y est senti comme une douleur, car la douleur est « la connaissance du retrait qu'opère le corps en train d'être privé de __l'image d'une âme__ » (chap. 19). C'est là que naît le désir, qui « est d'abord le fait du corps » (chap. 20).
+    Le végétatif intervient alors, parce que c'est lui qui a fait ce corps et qui le maintient : « la nature est __comme une mère__ ; c'est comme si devinant les souhaits de celui qui souffre, elle s'employait à le remettre sur pied » (*ibid*.). Il y a donc deux désirs, celui du corps vivant et celui de la nature qui s'y associe ; puis la sensation en fait une représentation, et l'âme supérieure décide de le satisfaire ou de lui résister. La preuve que le désir part du corps vivant : il change avec lui ; « autres en effet sont les désirs corporels chez les enfants, chez les adolescents et chez les adultes, tout comme ils sont autres chez ceux qui sont en bonne santé et chez les malades » (chap. 21). C'est aussi pourquoi « l'origine du désir se situe __dans la région du foie__, parce que c'est là surtout qu'est actif le végétatif » (chap. 28) : c'est du foie que partent les veines, et le sang par lequel le végétatif nourrit tout le corps ([[traite27|traité 27]], chap. 23 ; voir [[g-desir|désir]] et [[g-tripartition-de-l-ame|tripartition de l'âme]]).
 
     __**Passages clefs.**__
 
     | Passage | Ce qu'il établit |
     | traité 8, chap. 3 | la puissance nutritive vient de l'univers |
-    | traité 11, chap. 2 | la plante, part la plus audacieuse de l'âme |
-    | traité 15, chap. 1 | le végétatif domine dans la plante, sert en nous |
-    | traité 27, chap. 23 | il nourrit tout le corps par le sang |
-    | traité 28, chap. 28 | il est l'origine du désir |
+    | traité 11, chap. 2 | la plante, partie la plus audacieuse de l'âme |
+    | traité 15, chap. 1 | après la nature, plus de vie ; elle règne dans la plante |
+    | traité 27, chap. 27 | l'âme qui nous vient de l'univers |
+    | traité 28, chap. 18 | le corps vivant, une trace ou ombre de l'âme |
+    | traité 28, chap. 20 | le désir naît du corps, la nature s'y associe |
+    | traité 28, chap. 21 | les désirs changent avec l'âge et la santé |
 
-    **Voir aussi** : [[g-phusis|Nature]] · [[g-croissance|Croissance]] · [[g-reproduction|Reproduction]] · [[g-tripartition-de-l-ame|Tripartition de l'âme]] · [[g-anime-inerte|Animé / Inerte]]
+    **Voir aussi** : [[g-phusis|Nature]] · [[g-croissance|Croissance]] · [[g-reproduction|Reproduction]] · [[g-tripartition-de-l-ame|Tripartition de l'âme]] · [[g-anime-inerte|Animé / Inerte]] · [[g-desir|Désir]]
   tables:
   - table: vivant-ce-qui-domine-en-lui-le-vegetatif-y-est
     exercises:
@@ -57,9 +69,17 @@ lessons:
     sentence: "La puissance de l'âme qui nourrit, fait croître et engendre, sans rien percevoir, se dit en grec translittéré ___."
     answer: phutikon
     alt: ["phutikón", "phytikon"]
-  - id: g-vegetatif-l1-q2
-    sentence: "« Même dans l'âme qui est en nous on trouve la nature, mais notre âme la ___, car cette nature est une partie » (traité 15, chap. 1)."
-    answer: domine
+  - id: g-vegetatif-l1-q12
+    sentence: "« Ce qui en elle est en mesure de façonner et de fabriquer des ___ est encore une puissance » (traité 8, chap. 3)."
+    answer: corps
+    alt: []
+  - id: g-vegetatif-l1-q5
+    sentence: "« La puissance végétative se trouve aussi dans des parties qui n'ont pas la ___ » (traité 8, chap. 3)."
+    answer: sensation
+    alt: []
+  - id: g-vegetatif-l1-q13
+    sentence: "La nature « engendre quelque chose de complètement différent d'elle. Car après elle, il n'y a plus de ___ » (traité 15, chap. 1)."
+    answer: vie
     alt: []
   - id: g-vegetatif-l1-q3
     sentence: "« Pourquoi donc la puissance nutritive ne procède-t-elle pas de notre âme ? – Parce que la partie de l'___ qui est nourrie est aussi celle qui subit la sensation » (traité 8, chap. 3)."
@@ -69,21 +89,29 @@ lessons:
     sentence: "La sensation « qui porte des jugements en s'aidant de l'intellect appartient à ___ » : elle seule nous est propre (traité 8, chap. 3)."
     answer: chacun
     alt: []
-  - id: g-vegetatif-l1-q5
-    sentence: "« La puissance végétative se trouve aussi dans des parties qui n'ont pas la ___ » (traité 8, chap. 3)."
-    answer: sensation
+  - id: g-vegetatif-l1-q14
+    sentence: "Un corps qui s'allie à l'âme sans pouvoir la posséder « doit se contenter d'une ___ de la réalité supérieure » (traité 28, chap. 18)."
+    answer: trace
     alt: []
-  - id: g-vegetatif-l1-q6
-    sentence: "La partie végétative de l'âme n'est absente d'aucune partie du corps, « puisqu'elle le nourrit par le moyen du ___ qui se trouve dans les veines » (traité 27, chap. 23)."
-    answer: sang
+  - id: g-vegetatif-l1-q15
+    sentence: "« Le corps d'un animal et celui d'une plante possède comme une ___ de l'âme » (traité 28, chap. 18)."
+    answer: ombre
     alt: []
-  - id: g-vegetatif-l1-q7
-    sentence: "« L'origine du désir se situe dans la région du ___, parce que c'est là surtout qu'est actif le végétatif » (traité 28, chap. 28)."
-    answer: foie
+  - id: g-vegetatif-l1-q16
+    sentence: "La puissance de la terre donne au végétal « ce par quoi il est différent d'une branche coupée et qui n'est plus un végétal, mais seulement un morceau de ___ » (traité 28, chap. 27)."
+    answer: bois
     alt: []
-  - id: g-vegetatif-l1-q8
-    sentence: "Les plantes ont le végétatif mais pas l'irascible, car « ils ne sont dotés ni de sang ni de ___ » (traité 28, chap. 28)."
-    answer: bile
+  - id: g-vegetatif-l1-q17
+    sentence: "Quand l'âme « se trouve dans un être irrationnel, c'est la faculté ___ qui, en dominant, l'y a conduite » (traité 11, chap. 2)."
+    answer: sensible
+    alt: []
+  - id: g-vegetatif-l1-q2
+    sentence: "« Même dans l'âme qui est en nous on trouve la nature, mais notre âme la ___, car cette nature est une partie » (traité 15, chap. 1)."
+    answer: domine
+    alt: []
+  - id: g-vegetatif-l1-q11
+    sentence: "Ceux chez qui le végétatif dominait « s'appliquaient en fait à se transformer en ___ » (traité 15, chap. 2)."
+    answer: arbres
     alt: []
   - id: g-vegetatif-l1-q9
     sentence: "Dans une plante, c'est comme si une partie de l'Âme s'y trouvait, « la partie la plus ___ et la plus imprudente qui s'est avancée jusqu'à un tel point » (traité 11, chap. 2)."
@@ -93,7 +121,19 @@ lessons:
     sentence: "Quand on coupe une branche, l'âme qui s'y trouvait va « là d'où elle est venue, car elle ne s'en est pas ___ éloignée » (traité 11, chap. 2)."
     answer: localement
     alt: []
-  - id: g-vegetatif-l1-q11
-    sentence: "Ceux chez qui le végétatif dominait « s'appliquaient en fait à se transformer en ___ » (traité 15, chap. 2)."
-    answer: arbres
+  - id: g-vegetatif-l1-q18
+    sentence: "Le corps « n'aurait souci de rien de cela, s'il était ___ » : un corps sans âme ne désire pas (traité 28, chap. 20)."
+    answer: seul
+    alt: []
+  - id: g-vegetatif-l1-q19
+    sentence: "« La nature est comme une ___ ; c'est comme si devinant les souhaits de celui qui souffre, elle s'employait à le remettre sur pied » (traité 28, chap. 20)."
+    answer: mère
+    alt: []
+  - id: g-vegetatif-l1-q20
+    sentence: "« Autres en effet sont les désirs corporels chez les enfants, chez les adolescents et chez les adultes, tout comme ils sont autres chez ceux qui sont en bonne santé et chez les ___ » (traité 28, chap. 21)."
+    answer: malades
+    alt: []
+  - id: g-vegetatif-l1-q7
+    sentence: "« L'origine du désir se situe dans la région du ___, parce que c'est là surtout qu'est actif le végétatif » (traité 28, chap. 28)."
+    answer: foie
     alt: []

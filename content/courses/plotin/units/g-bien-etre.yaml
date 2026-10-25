@@ -1,9 +1,12 @@
 # Entrée du glossaire de Plotin (skill glossaire), écrite le 2026-10-24 à la
 # demande de l'utilisateur (elle était une entrée à écrire, à laquelle
-# Bonheur renvoie). Citations vérifiées sur la GF (I, 4, 1-2, 4 et 6 ; III,
-# 4, 4). Le terme grec, eupatheia, est celui de la GF (traité 46, note 4,
-# qui le dit difficile à traduire, parce qu'il vaut pour les plantes comme
-# pour les hommes). Que la santé passe inaperçue a ses cartes dans Santé.
+# Bonheur renvoie), refondue le 2026-10-25 après sa relecture : chaque étape
+# démontre la thèse de son intitulé (arguments demandés à NotebookLM,
+# recoupés). Citations vérifiées sur la GF (I, 4, 1-4, 6 et 14 ; III, 4, 4 ;
+# IV, 4, 18-19 ; V, 8, 11). Le terme grec, eupatheia, est celui de la GF
+# (traité 46, note 4, qui le dit difficile à traduire, parce qu'il vaut
+# pour les plantes comme pour les hommes). Que la santé passe inaperçue a
+# ses cartes dans Santé.
 
 id: g-bien-etre
 title: Bien-être (`eupatheia`)
@@ -15,31 +18,45 @@ lessons:
   notes: |-
     Chez Plotin, le {violet}**bien-être**{/violet} (*eupatheia*) est [def]. Ce n'est {pink}ni le bonheur ni le plaisir{/pink}, et c'est pourquoi la question *comment se sentir bien ?* n'est pas, pour lui, celle du bonheur.
 
-    __**Le bien-être est à la portée de tous les vivants.**__ Plotin part d'une objection : si la vie bonne consiste « soit dans le bien-être, soit dans l'accomplissement de la fonction propre », alors « dans les deux cas, __elle appartiendra également aux autres vivants__ ». Les {yellow}oiseaux chanteurs{/yellow} « éprouvent du bien-être [...] particulièrement quand ils exercent leur fonction naturelle __en chantant__ », et même {yellow}les plantes{/yellow} : « il est possible même pour les plantes d'éprouver du bien-être ou non, comme de donner des fruits ou de ne pas en donner » ([[traite46|traité 46]], chap. 1). {coral}Le bien-être est donc l'__état de tout vivant qui fonctionne bien__{/coral} ; et si le bonheur n'était que cela, les plantes seraient heureuses. Or « on admet difficilement que le bonheur puisse être abaissé __au niveau des autres vivants__ ».
+    __**Le bien-être appartient à tous les vivants, plantes comprises.**__ Tout vivant a une fonction que lui fixe sa nature : se nourrir, croître, porter des fruits, chanter. Le bien-être est l'état de celui qui l'exerce sans obstacle ; donc tout vivant peut l'avoir. Les {yellow}oiseaux chanteurs{/yellow} « éprouvent du bien-être dans d'autres circonstances, mais particulièrement quand ils exercent leur fonction naturelle __en chantant__ », et même {yellow}les plantes{/yellow} : « il est possible même pour les plantes d'éprouver du bien-être ou non, comme de donner des fruits ou de ne pas en donner » ([[traite46|traité 46]], chap. 1).
 
-    __**Sentir qu'on est bien ne suffit pas.**__ On pourrait réserver le bonheur à ceux qui sentent leur bien-être. Plotin montre que ce critère s'effondre. Car si l'affection est bonne, elle l'est avant qu'on la sente ; ajouter la sensation, c'est donc placer le bien « non plus à l'affection présente, mais __à la connaissance__ » de cette affection. Et **pour savoir que ce qu'on sent est un bien, il faut plus que sentir** : « si on reconnaît que c'est le bien, __ce n'est pas là dès lors l'œuvre de la sensation__, mais d'une autre faculté plus haute ». D'où la conclusion : « la cause de la {coral}vie bonne{/coral} ne sera donc pas le plaisir, mais __la capacité à__ {coral}__juger que le plaisir est un bien__{/coral} » ([[traite46|traité 46]], chap. 2). {green}Le bien relève de la raison qui juge, non de ce qu'on éprouve{/green} : c'est pourquoi le [[g-bonheur|bonheur]] est la vie de l'intellect.
+    __**Le bonheur n'est pas le bien-être, parce qu'il n'appartient qu'à la vie parfaite.**__ Si le bonheur était le bien-être, il faudrait l'accorder aux plantes : « on l'attribuerait également aux plantes qui sont elles aussi des vivants et qui ont une vie déployée vers une fin » (*ibid*.). Plotin ne s'en tient pas à l'indignation ; il en donne la raison.
+    - Le bonheur est dans la vie : « Posons que le bonheur se trouve dans la vie » (chap. 3).
+    - Mais vivre ne se dit pas de la même façon de tous : « la vie se dit en plusieurs sens », et entre la plante et la bête, « la différence entre eux __tenant à la clarté et à l'obscurité__ » (*ibid*.) ; les vies d'en bas sont des images de la vie première (voir [[g-degres-de-vie|degrés de vie]]).
+    - Donc la vie bonne a les mêmes degrés : « si une chose est l'image d'une autre, il est évident que __la vie bonne de la première est à son tour l'image__ de celle de la seconde » (*ibid*.).
+    - Et le bonheur, au sens propre, est la vie bonne de la vie qui ne manque de rien : « le bonheur ne saurait appartenir qu'à celui qui __vit dans la plénitude__ » (*ibid*. ; voir [[g-vie-parfaite|vie parfaite]]).
+    {coral}Le bien-être de la plante est bien le bien de sa vie, mais cette vie n'est qu'une image obscure de la vie : son bien-être n'est qu'une image du bonheur.{/coral} **Ce qui sépare le bonheur du bien-être n'est pas un degré de plaisir, mais un degré de vie.**
 
-    __**Le meilleur état ne se sent pas : le calme.**__ Plus le bien-être est complet, moins il se remarque. De l'âme du monde, qui n'a ni manque ni trouble, Plotin dit : « il lui arrive la même chose qu'à ceux qui sont dans un état conforme à la nature : __le calme, pas même le plaisir__ » ([[traite15|traité 15]], chap. 4). Pourquoi pas le plaisir ? Parce que le plaisir est une affection : on le sent quand quelque chose change, quand un manque se comble ; l'état qui ne manque de rien ne produit rien à sentir. De même, « on ne se soucie pas de la santé quand on la possède » ([[traite46|traité 46]], chap. 6 ; voir [[g-sante|santé]]).
+    __**Sentir son bien-être ne suffit pas, parce que savoir que c'est un bien est l'œuvre de la raison.**__ Ceux qui refusent le bonheur aux plantes disent : elles ne sentent pas. Ils font donc de la sensation la condition du bonheur, et Plotin montre que ce critère s'effondre, quel que soit le rôle qu'on lui donne.
+    - Si le bien est dans l'affection : elle est bonne avant qu'on la sente, il « faut que cette dernière elle-même soit bonne, avant que l'on y soit attentif » ([[traite46|traité 46]], chap. 2) ; la plante qui l'a sans la sentir a donc déjà la vie bonne, et la sensation n'ajoute rien.
+    - Si le bien est dans la sensation : sentir n'est ni bon ni mauvais, et « comment, alors que __la sensation et son objet sont indifférents__, peuvent-ils dire que ce qui vient des deux est bon ? » (*ibid*.).
+    - Si le bien est de reconnaître qu'un bien est présent : sentir dit que c'est agréable, non que c'est un bien ; « si on reconnaît que c'est le bien, __ce n'est pas là dès lors l'œuvre de la sensation__, mais d'une autre faculté plus haute que celle de la sensation » (*ibid*.).
+    D'où la conclusion : « la cause de la {coral}vie bonne{/coral} ne sera donc pas le plaisir, mais __la capacité à__ {coral}__juger que le plaisir est un bien__{/coral} » (*ibid*.). Or « la faculté qui juge est plus élevée que celle qui est relative à l'affection, car __c'est une raison ou un intellect__ » (*ibid*.), et une raison ne peut sans se contredire mettre au-dessus d'elle ce qui n'en est pas une. {green}Le bien relève de la raison qui juge, non de ce qu'on éprouve{/green} : on retrouve, par un autre chemin, la conclusion de l'étape précédente (voir [[g-agathon|bien]] et [[g-bonheur|bonheur]]).
 
-    __**Le bien-être est l'affaire du vivant, non de nous.**__ Le sage n'est pas insensible : la perte de ses proches peut causer du chagrin, mais « ce n'est pas à lui qu'elle en cause, mais __à ce qui, en lui, est dépourvu d'intellect__ » ([[traite46|traité 46]], chap. 4). Le bien-être et le mal-être appartiennent au [[g-vivant|vivant]], le composé ; nous, nous sommes ailleurs (voir [[g-hemeis|nous]]). **Se sentir bien est un bien pour le corps, non le bien de l'homme.**
+    __**Le meilleur état ne se sent pas, parce qu'on ne sent que ce qui diffère de nous.**__ Le bien-être, même senti, ne peut donc pas être le bonheur ; mais il y a plus : à son meilleur, il n'est même pas senti. Pourquoi ? Parce que la sensation saisit ce qui nous arrive du dehors. La maladie « est quelque chose de différent de nous et qui ne nous est pas propre, mais qui, __de ce fait, est particulièrement sensible__ » ; la santé, au contraire, « s'installe auprès de nous, comme quelque chose qui nous est propre et qui fait un avec nous » ; or « aussi bien ce qui est à nous que nous-mêmes __échappons à la sensation__ » ([[traite31|traité 31]], chap. 11). Le plaisir lui-même suppose un manque : il est « la connaissance que prend un être vivant du fait que l'image d'une âme __revient une fois de plus__ s'adapter à un corps » ([[traite28|traité 28]], chap. 19) ; là où rien ne s'est retiré, rien ne revient. C'est pourquoi l'âme du monde, qui ne manque de rien, connaît ce que connaissent « ceux qui sont dans un état conforme à la nature : __le calme, pas même le plaisir__ » ([[traite15|traité 15]], chap. 4).
+
+    __**Le bien-être est l'affaire du vivant, parce que nous ne sommes pas le vivant.**__ Le bien-être est une affection, et les affections ne sont pas de l'âme : « les affections de ce genre __n'appartiennent absolument pas à l'âme__, mais à un organisme, c'est-à-dire à quelque chose qui constitue un ensemble, un composé » ([[traite28|traité 28]], chap. 18). Or « l'homme, et surtout le sage, __n'est pas un composé__ » ; il est l'âme qui pense (voir [[g-hemeis|nous]]). Le bonheur, lui, « est l'activité de l'âme, mais pas de l'âme tout entière – elle n'est certes pas en effet l'activité de l'âme végétative » ([[traite46|traité 46]], chap. 14). Bien-être et bonheur n'ont donc pas le même sujet : l'un est au [[g-vivant|vivant]], l'autre à nous. C'est pourquoi la perte de ses proches cause au sage du chagrin, mais « __ce n'est pas à lui qu'elle en cause__, mais à ce qui, en lui, est dépourvu d'intellect » (chap. 4).
+
+    __**Le bien-être n'ajoute rien au bonheur, parce que la santé est nécessaire, non bonne.**__ Un bien est ce qui attire quand on l'a. Or la santé et l'absence de douleur, « quand on les possède, __n'ont rien d'attrayant et n'ajoutent rien au bonheur__, mais [...] l'on recherche lorsqu'elles sont absentes », de sorte qu'« il est raisonnable de dire qu'elles sont nécessaires, mais non pas qu'elles sont bonnes » ([[traite46|traité 46]], chap. 6). On ne les veut que pour ne plus souffrir : « ce n'est sans doute pas les éviter que l'on veut, mais bien plutôt __ne pas avoir à les éviter__ » (*ibid*.). Et ce qui n'ajoute rien ne peut rien ôter : « si une chose n'ajoute rien à ce qui reste identique, comment son contraire pourrait-il le détruire ? » (chap. 14). Le sage veut pourtant la santé, mais pour son corps et non pour lui : il recherche ces choses « parce qu'elles sont nécessaires, non pas à lui-même mais __à ce qui lui appartient__ » (chap. 4), et, vieux, ne veut être troublé de rien, « pour éviter de devoir prêter attention à son corps » (chap. 14).
 
     | Notion | Ce qu'elle est | Qui peut l'avoir |
-    | le plaisir | une affection, sentie quand un manque se comble | tout ce qui sent |
+    | le plaisir | une affection, sentie quand ce qui manquait revient | tout ce qui sent |
     | le bien-être | l'exercice sans obstacle de sa fonction | tout vivant, plantes comprises |
     | le bonheur | la vie parfaite, celle de l'intellect | l'homme qui la vit en acte |
-
-    ! Le bien-être n'est pas méprisé : il est l'état naturel du vivant, et le sage veille à son corps. Mais il n'ajoute rien au bonheur, et son absence ne l'ôte pas.
 
     __**Passages clefs.**__
 
     | Passage | Ce qu'il établit |
     | traité 15, chap. 4 | l'état conforme à la nature, le calme sans plaisir |
+    | traité 28, chap. 18 | les affections sont du composé, non de l'âme |
+    | traité 31, chap. 11 | ce qui est à nous échappe à la sensation |
     | traité 46, chap. 1 | le bien-être appartient à tous les vivants |
     | traité 46, chap. 2 | juger que c'est un bien relève de la raison |
-    | traité 46, chap. 4 | le chagrin touche ce qui en nous est sans intellect |
-    | traité 46, chap. 6 | la santé possédée ne retient pas l'attention |
+    | traité 46, chap. 3 | le bonheur, vie bonne de la vie parfaite |
+    | traité 46, chap. 6 | la santé est nécessaire, non bonne |
+    | traité 46, chap. 14 | le sage n'est pas un composé |
 
-    **Voir aussi** : [[g-bonheur|Bonheur]] · [[g-sante|Santé]] · [[g-vivant|Vivant]] · [[g-souffrance|Souffrance]] · [[g-joie-tristesse|Joie / Tristesse]]
+    **Voir aussi** : [[g-bonheur|Bonheur]] · [[g-agathon|Bien]] · [[g-sante|Santé]] · [[g-vivant|Vivant]] · [[g-souffrance|Souffrance]] · [[g-joie-tristesse|Joie / Tristesse]]
   tables:
   - table: notion-ce-qu-elle-est-qui-peut-l-avoir
     exercises:
@@ -62,13 +79,21 @@ lessons:
     sentence: "« Il est possible même pour les plantes d'éprouver du bien-être ou non, comme de donner des ___ ou de ne pas en donner » (traité 46, chap. 1)."
     answer: fruits
     alt: []
-  - id: g-bien-etre-l1-q4
-    sentence: "« On admet difficilement que le bonheur puisse être abaissé au niveau des autres ___ » (traité 46, chap. 1)."
-    answer: vivants
+  - id: g-bien-etre-l1-q11
+    sentence: "Entre la vie d'une plante et celle d'une bête, « la différence entre eux [tient] à la clarté et à l'___ » (traité 46, chap. 3)."
+    answer: obscurité
     alt: []
-  - id: g-bien-etre-l1-q5
-    sentence: "Ajouter la sensation, c'est attribuer le bien « non plus à l'affection présente, mais à la ___ » de cette affection (traité 46, chap. 2)."
-    answer: connaissance
+  - id: g-bien-etre-l1-q12
+    sentence: "« Si une chose est l'image d'une autre, il est évident que la vie bonne de la première est à son tour l'___ de celle de la seconde » (traité 46, chap. 3)."
+    answer: image
+    alt: []
+  - id: g-bien-etre-l1-q13
+    sentence: "« Le bonheur ne saurait appartenir qu'à celui qui vit dans la ___ » (traité 46, chap. 3)."
+    answer: plénitude
+    alt: []
+  - id: g-bien-etre-l1-q14
+    sentence: "« Comment, alors que la sensation et son objet sont ___, peuvent-ils dire que ce qui vient des deux est bon ? » (traité 46, chap. 2)."
+    answer: indifférents
     alt: []
   - id: g-bien-etre-l1-q6
     sentence: "« Si on reconnaît que c'est le bien, ce n'est pas là dès lors l'œuvre de la ___, mais d'une autre faculté plus haute » (traité 46, chap. 2)."
@@ -79,14 +104,34 @@ lessons:
     answer: juger
     alt: []
   - id: g-bien-etre-l1-q8
-    sentence: "« La faculté qui juge est plus élevée que celle qui est relative à l'affection [...] ; le plaisir, pour sa part, est une ___ » (traité 46, chap. 2)."
-    answer: affection
+    sentence: "« La faculté qui juge est plus élevée que celle qui est relative à l'affection, car c'est une raison ou un ___ » (traité 46, chap. 2)."
+    answer: intellect
+    alt: []
+  - id: g-bien-etre-l1-q15
+    sentence: "La maladie « est quelque chose de différent de nous et qui ne nous est pas propre, mais qui, de ce fait, est particulièrement ___ » (traité 31, chap. 11)."
+    answer: sensible
     alt: []
   - id: g-bien-etre-l1-q9
     sentence: "À l'âme du monde « il lui arrive la même chose qu'à ceux qui sont dans un état conforme à la nature : le ___, pas même le plaisir » (traité 15, chap. 4)."
     answer: calme
     alt: []
+  - id: g-bien-etre-l1-q16
+    sentence: "« L'homme, et surtout le sage, n'est pas un ___ » (traité 46, chap. 14)."
+    answer: composé
+    alt: []
   - id: g-bien-etre-l1-q10
     sentence: "Le chagrin du sage, « ce n'est pas à lui qu'elle en cause, mais à ce qui, en lui, est dépourvu d'___ » (traité 46, chap. 4)."
     answer: intellect
+    alt: []
+  - id: g-bien-etre-l1-q17
+    sentence: "La santé et l'absence de douleur, « il est raisonnable de dire qu'elles sont ___, mais non pas qu'elles sont bonnes » (traité 46, chap. 6)."
+    answer: nécessaires
+    alt: []
+  - id: g-bien-etre-l1-q18
+    sentence: "« Si une chose n'ajoute rien à ce qui reste ___, comment son contraire pourrait-il le détruire ? » (traité 46, chap. 14)."
+    answer: identique
+    alt: []
+  - id: g-bien-etre-l1-q19
+    sentence: "Le sage recherche ces choses « parce qu'elles sont nécessaires, non pas à lui-même mais à ce qui lui ___ » (traité 46, chap. 4)."
+    answer: appartient
     alt: []
