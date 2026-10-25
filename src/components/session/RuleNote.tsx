@@ -165,6 +165,8 @@ export function NoteTable({
   }, [block, renderCell])
 
   const cell = 'px-2 py-2 md:px-3 break-words hyphens-auto'
+  // Tableau 2 × 2 : sa seule case de gauche est un contenu, pas une étiquette de ligne.
+  const plain = block.columns.length === 1 && block.rows.length === 1
   return (
     <div ref={frame} className={`overflow-x-auto rounded-2xl ${tone.panel}`}>
       <table ref={table} className="w-full table-auto border-collapse">
@@ -188,7 +190,7 @@ export function NoteTable({
         <tbody>
           {block.rows.map((row, i) => (
             <tr key={i} className="border-t border-ink/8">
-              <th className={`${cell} text-center align-top font-black ${tableCellSize(row.label)} ${tone.label}`}>
+              <th className={`${cell} text-center align-top ${tableCellSize(row.label)} ${plain ? 'font-normal text-ink-soft' : `font-black ${tone.label}`}`}>
                 {cellContent(i, 0, row.label)}
               </th>
               {row.cells.map((value, j) => (
