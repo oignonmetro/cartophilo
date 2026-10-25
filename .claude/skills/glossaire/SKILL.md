@@ -77,33 +77,93 @@ analyse ») :
   autre entrée (sous-entrée, distinction, notion voisine), vers laquelle on
   renverra.
 
-NotebookLM, une question à la fois, en rappelant chaque fois l'auteur et la
-notion (règles de `cours-traite` § 1 bis) :
+### La procédure NotebookLM est pilotée par `notebook.py`
 
-1. « Chez Plotin, dans la traduction GF : où la notion de X (*terme grec*)
-   est-elle établie ou définie ? Donne les deux à quatre passages décisifs,
-   avec traité, chapitre et lignes, et ce que chacun établit. »
-2. « Chez Plotin : quels sens ou emplois distincts la notion de X a-t-elle,
-   et quelles distinctions commande-t-elle ? Pour chacun, un passage de la
-   traduction GF avec ses repères. »
-3. Relances, pour chaque emploi que je ne saurais pas expliquer à quelqu'un
-   qui ne croit pas Plotin : « Je ne comprends pas pourquoi … explique pas
-   à pas, avec l'exemple que donne Plotin. »
-4. **Une question par thèse d'étape**, une fois le plan des étapes arrêté
-   (relecture de Végétatif et Bien-être, 2026-10-25) : « Chez Plotin, quel
-   argument établit que <thèse de l'intitulé> ? Donne ses prémisses une à
-   une, et le passage GF où chacune est posée. » Une étape dont NotebookLM
-   ne trouve pas l'argument change d'intitulé ou disparaît : on n'écrit pas
-   une thèse qu'on ne sait pas démontrer.
-5. **Les questions élémentaires sur la notion**, posées avant d'écrire, et
-   auxquelles le rappel doit répondre : qu'est-ce exactement (une âme, une
-   puissance, une partie, un état) ? où est-elle, et comment s'y
-   distingue-t-elle de ce qui l'entoure ? chez quels êtres, et pourquoi pas
-   chez les autres ? quel rôle joue-t-elle dans leur vie ? comment
-   produit-elle ce qu'on lui attribue ? pourquoi telle épithète que Plotin
-   lui donne (« audacieuse ») ? L'entrée Végétatif, au premier jet, ne
-   disait ni ce qu'est le végétatif, ni pourquoi les inertes n'en ont pas,
-   ni comment il produit le désir.
+Pour Végétatif et Bien-être (2026-10-25), j'ai résumé la procédure au lieu
+de la suivre : une seule question énorme par entrée, aucune relance, le plan
+arrêté avant les questions. Les réponses étaient survolées, et les entrées
+ont gardé des thèses non démontrées. Depuis, **la procédure ne se suit plus
+de mémoire : `notebook.py` donne les questions une à une, garde le journal
+des réponses, et refuse la publication tant qu'il manque une étape** (le
+crochet de commit de `.claude/settings.json` l'appelle sur toute entrée
+ajoutée ou dotée d'un journal). Une refonte d'entrée existante commence
+elle aussi par `debut` : le crochet ne peut pas savoir qu'une entrée sans
+journal a été réécrite, c'est à moi de l'ouvrir. Publier par
+`sh .claude/skills/glossaire/publier.sh "message" fichiers…` (version,
+`content:check`, commit, push) ; une définition s'ajoute par
+`python -I .claude/skills/glossaire/adddef.py g-x "définition"`.
+
+```
+N=".claude/skills/glossaire/notebook.py"
+python -I $N debut g-x "terme sans article" --grec terme --voisines "a, b" --effets "c, d"
+python -I $N question g-x          # la prochaine question, à coller telle quelle
+python -I $N reponse g-x <qid> <fichier>   # la réponse, copiée dans un fichier
+python -I $N image g-x "épithète ou image de Plotin"
+python -I $N relance g-x "ce que je ne comprends pas"
+python -I $N plan g-x "thèse 1" "thèse 2" …   # après les phases A à C
+python -I $N juge g-x <qid> clair | obscur "ce qui reste obscur"
+python -I $N manque g-x <fichier yaml>      # après rédaction
+python -I $N verifie g-x <fichier yaml>     # avant publication
+python -I $N etat g-x                        # où en est l'entrée
+python -I $N lecons                          # les relectures passées
+```
+
+**Règles d'envoi.** Le notebook est celui de Plotin : inutile de nommer
+l'auteur dans la question (« comment Plotin… ? », « pourquoi Plotin… ? »
+restent naturels). Une question par message, jamais regroupées ; attendre
+la fin de la réponse ; ne relire que la dernière ; la copier dans un
+fichier, puis `reponse`. Effacer l'historique de la discussion en
+commençant une entrée.
+
+**Les phases, dans l'ordre imposé par le programme.**
+
+- *A. Repérage* : les lieux décisifs ; les emplois distincts.
+- *B. Questions élémentaires*, une par message, chacune précise :
+  - **nature** : qu'est-ce, ontologiquement (une réalité à part, une
+    puissance, une partie, un état, une activité, une relation) ? à quoi
+    le voit-on chez Plotin ?
+  - **rang** : à quel niveau de la réalité (l'Un, l'Intellect, l'Âme, les
+    corps) se situe-t-elle, et pourquoi à celui-là ?
+  - **origine** : de quoi dépend-elle, de quoi procède-t-elle, et en quel
+    sens précis en vient-elle (don, trace, image, illumination) ?
+  - **démarcation** : en quoi se distingue-t-elle des notions voisines
+    (`--voisines`), et pourquoi Plotin ne les confond-il pas ?
+  - **extension** : quels êtres l'ont, lesquels ne l'ont pas, et pourquoi
+    dans chaque cas ?
+  - **fonction** : quel rôle joue-t-elle dans le système, et qu'est-ce qui
+    ne tiendrait plus sans elle ?
+  - **mécanisme** : comment produit-elle ce qu'on lui attribue
+    (`--effets`), étape par étape ?
+  - **images** : pour chaque épithète ou image de Plotin (`image`), ce
+    qu'elle dit littéralement, terme à terme, et pourquoi Plotin la choisit.
+- *C. Difficultés* : les thèses contre-intuitives ou paradoxales, et la
+  raison qu'en donne Plotin ; les points qui supposent d'autres thèses du
+  système (procession, incorporéité de l'âme, contemplation…), avec la
+  thèse présupposée ; les objections que Plotin se fait et ses réponses ;
+  les contresens courants. Chaque point difficile relevé devient une
+  `relance`.
+- *D. Plan* : seulement après A à C, les thèses d'étape tirées des
+  réponses. Chacune devient une question : comment Plotin l'établit-il,
+  prémisse par prémisse, avec le passage de chacune et ce qu'il faut savoir
+  du système pour suivre ?
+- *E. Relances et jugement* : chaque réponse de la phase D et chaque
+  relance se juge (`juge`). « Obscur » si je ne saurais pas la rendre
+  convaincante, sans trou, à quelqu'un qui ne croit pas Plotin : le
+  programme en tire une relance (« je ne comprends pas pourquoi … :
+  explique pas à pas le raisonnement, sans sauter d'étape »), jusqu'à
+  « clair ». L'exemple de Plotin aide, mais c'est le raisonnement qu'on
+  demande.
+- *F. Ce qui manque* : après rédaction, `manque` fabrique la question à
+  partir des étapes et des passages de l'entrée.
+
+`verifie` refuse la publication si une question est sans réponse, une
+thèse ou une relance n'est pas jugée claire, une étape du rappel n'est pas
+une thèse du plan, ou si le rappel contient une paraphrase qui affirme sans
+démontrer (« Autrement dit »), une étape sans connecteur de raison.
+
+**Les relectures de l'utilisateur** s'enregistrent (`notebook.py
+relecture g-x "critique"`) et `lecons` les rassemble : les relire avant
+chaque entrée, avec ce qui suit.
 
 Puis poser à l'utilisateur, en une fois (`AskUserQuestion`), ce que les
 sources ne tranchent pas, en particulier **le partage** quand il est
