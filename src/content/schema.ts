@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import type { NoteTableBlock } from './notes'
+import type { NoteTableBlock } from './notes.ts'
 
 /**
  * Format d'écriture des cours (fichiers YAML de `content/`).

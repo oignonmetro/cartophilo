@@ -1,4 +1,4 @@
-import type { GrammarPoint, Work, WorkContext, WorkLink, WorkNode, WorkRelation } from './schema'
+import type { GrammarPoint, Work, WorkContext, WorkLink, WorkNode, WorkRelation } from './schema.ts'
 
 /**
  * Parcours du plan d'une unité-œuvre (voir `workSchema`) : de quoi dériver ses

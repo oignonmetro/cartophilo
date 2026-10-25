@@ -1,4 +1,4 @@
-import { noteColorSchema, type NoteColor } from './schema'
+import { noteColorSchema, type NoteColor } from './schema.ts'
 
 /**
  * Mise en forme des rappels de cours.

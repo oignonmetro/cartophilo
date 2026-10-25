@@ -10,9 +10,9 @@ import type {
   TableExerciseChoice,
   Track,
   Unit,
-} from './schema'
-import { noteTables, plainInline, type NoteTableBlock } from './notes'
-import { workContextOf } from './work'
+} from './schema.ts'
+import { noteTables, plainInline, type NoteTableBlock } from './notes.ts'
+import { workContextOf } from './work.ts'
 
 /**
  * Accès au contenu d'un cours, indépendamment de son agencement.
