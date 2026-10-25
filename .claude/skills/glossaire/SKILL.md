@@ -89,6 +89,21 @@ notion (règles de `cours-traite` § 1 bis) :
 3. Relances, pour chaque emploi que je ne saurais pas expliquer à quelqu'un
    qui ne croit pas Plotin : « Je ne comprends pas pourquoi … explique pas
    à pas, avec l'exemple que donne Plotin. »
+4. **Une question par thèse d'étape**, une fois le plan des étapes arrêté
+   (relecture de Végétatif et Bien-être, 2026-10-25) : « Chez Plotin, quel
+   argument établit que <thèse de l'intitulé> ? Donne ses prémisses une à
+   une, et le passage GF où chacune est posée. » Une étape dont NotebookLM
+   ne trouve pas l'argument change d'intitulé ou disparaît : on n'écrit pas
+   une thèse qu'on ne sait pas démontrer.
+5. **Les questions élémentaires sur la notion**, posées avant d'écrire, et
+   auxquelles le rappel doit répondre : qu'est-ce exactement (une âme, une
+   puissance, une partie, un état) ? où est-elle, et comment s'y
+   distingue-t-elle de ce qui l'entoure ? chez quels êtres, et pourquoi pas
+   chez les autres ? quel rôle joue-t-elle dans leur vie ? comment
+   produit-elle ce qu'on lui attribue ? pourquoi telle épithète que Plotin
+   lui donne (« audacieuse ») ? L'entrée Végétatif, au premier jet, ne
+   disait ni ce qu'est le végétatif, ni pourquoi les inertes n'en ont pas,
+   ni comment il produit le désir.
 
 Puis poser à l'utilisateur, en une fois (`AskUserQuestion`), ce que les
 sources ne tranchent pas, en particulier **le partage** quand il est
@@ -180,6 +195,21 @@ Vie, Degrés de vie, Vie parfaite, Bonheur et Temps, 2026-10-23). C'est la
 faute la plus fréquente des premiers jets : énoncer la thèse, la citer, et
 passer.
 
+- **Une étape démontre la thèse de son intitulé, droit à l'argument**
+  (relecture du 2026-10-25). Elle ne commence pas par une objection ou un
+  contexte qui retardent la preuve, et elle ne s'achève pas sur une
+  paraphrase (« Autrement dit : … ») qui affirme ce qu'il fallait montrer.
+  Le test : relire l'intitulé, puis se demander « pourquoi ? » ; l'étape
+  doit y répondre par des prémisses, chacune posée ou citée, et un
+  « donc ». Une citation qui énonce la conclusion (« le bien-être est
+  l'affaire du vivant ») n'en est pas la preuve ; une phrase comme « ce
+  qui nourrit doit vouloir nourrir » non plus, si rien ne dit pourquoi.
+  Quand une étape s'appuie sur une thèse posée plus haut (« le bien relève
+  du jugement »), elle la rattache explicitement, ou l'ordre des étapes
+  change pour que la prémisse vienne d'abord.
+- **Un repère par citation**, et « (*ibid*.) » pour une citation tirée du
+  même passage que la précédente (retouche de Tripartition, 2026-10-25),
+  plutôt que « (même chapitre) » ou rien.
 - **Une thèse surprenante s'accompagne de l'argument de Plotin**, en
   quelques mots, cité : « toute vie est une intellection » demande pourquoi
   (parce que toute vie est une raison à l'œuvre, et qu'une raison est un

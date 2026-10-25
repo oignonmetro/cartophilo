@@ -225,7 +225,7 @@ def reprises(path, depuis=None, mots=8):
 REF = re.compile(
     r"\((?:\[\[traite(\d+)\|[^\]]*\]\]|traité (\d+))(?: \([^)]*\))?, chap\. ([\d-]+)"
     r"|\(chap\. ([\d-]+)"
-    r"|\(même chapitre"
+    r"|\(même chapitre|\(\*?ibid\*?\."
     r"|\(Porphyre, \*?Vie de Plotin\*?, (\d+)"
 )
 TRAITE = re.compile(r"\[\[traite(\d+)\||traité (\d+)")
@@ -239,10 +239,13 @@ def _chapitres_de(spec):
 def chapitres(path, depuis=None):
     """Chaque citation suivie d'un repère (traité N, chap. M) se trouve-t-elle dans CE chapitre ?
     Le repère qui suit une citation, dans le même paragraphe, est le sien ; « (chap. M) » seul
-    vaut pour le dernier traité nommé avant lui."""
+    vaut pour le dernier traité nommé avant lui, « (même chapitre » et « (*ibid*.) » pour le
+    dernier repère."""
     s = _source(path, depuis)
     cache, n, nv, na = {}, 0, 0, 0
-    for para in s.split(chr(10)):
+    # un paragraphe va jusqu'à la ligne vide (ses listes « - … » gardent son traité) ou
+    # jusqu'à une clef YAML (chaque carte est à part)
+    for para in re.split(r"\n\s*\n|\n(?=\s*(?:- )?[A-Za-z_]+:)", s):
         traite, chap, precedent = None, None, None
         pos = 0
         en_attente = []
