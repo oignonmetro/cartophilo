@@ -87,8 +87,11 @@ de mémoire : `notebook.py` donne les questions une à une, garde le journal
 des réponses, et refuse la publication tant qu'il manque une étape** (le
 crochet de commit de `.claude/settings.json` l'appelle sur toute entrée
 ajoutée ou dotée d'un journal). Une refonte d'entrée existante commence
-elle aussi par `debut` : le crochet ne peut pas savoir qu'une entrée sans
-journal a été réécrite, c'est à moi de l'ouvrir. Publier par
+elle aussi par `debut` : le crochet refuse de réécrire d'un `Write` une
+entrée sans journal, et de committer une entrée sans journal dont les
+intitulés d'étape changent (sauf commit des retouches de l'utilisateur,
+dont le message dit « retouche ») ; une correction ponctuelle passe par
+`Edit`. Publier par
 `sh .claude/skills/glossaire/publier.sh "message" fichiers…` (version,
 `content:check`, commit, push) ; une définition s'ajoute par
 `python -I .claude/skills/glossaire/adddef.py g-x "définition"`.
@@ -100,8 +103,9 @@ python -I $N question g-x          # la prochaine question, à coller telle quel
 python -I $N reponse g-x <qid> <fichier>   # la réponse, copiée dans un fichier
 python -I $N image g-x "épithète ou image de Plotin"
 python -I $N relance g-x "ce que je ne comprends pas"
-python -I $N plan g-x "thèse 1" "thèse 2" …   # après les phases A à C
 python -I $N juge g-x <qid> clair | obscur "ce qui reste obscur"
+python -I $N plan g-x "thèse 1" "thèse 2" …   # proposé, après A à C
+python -I $N valide g-x "mots de l'utilisateur" [thèses corrigées…]
 python -I $N manque g-x <fichier yaml>      # après rédaction
 python -I $N verifie g-x <fichier yaml>     # avant publication
 python -I $N etat g-x                        # où en est l'entrée
@@ -142,10 +146,15 @@ commençant une entrée.
   thèse présupposée ; les objections que Plotin se fait et ses réponses ;
   les contresens courants. Chaque point difficile relevé devient une
   `relance`.
-- *D. Plan* : seulement après A à C, les thèses d'étape tirées des
-  réponses. Chacune devient une question : comment Plotin l'établit-il,
-  prémisse par prémisse, avec le passage de chacune et ce qu'il faut savoir
-  du système pour suivre ?
+- *Point d'étape avec l'utilisateur* (choix de l'utilisateur, 2026-10-26) :
+  après A à C et leurs relances, `plan` ne fait que **proposer** les thèses
+  d'étape tirées des réponses ; le programme les affiche avec les points
+  difficiles relevés. Les montrer à l'utilisateur, en quelques lignes, et
+  **attendre sa réponse** avant d'écrire quoi que ce soit ; puis `valide`
+  avec ses mots, cités, et ses corrections du plan s'il en fait.
+- *D. Plan* : seulement après sa validation. Chaque thèse devient une
+  question : comment Plotin l'établit-il, prémisse par prémisse, avec le
+  passage de chacune et ce qu'il faut savoir du système pour suivre ?
 - *E. Relances et jugement* : chaque réponse de la phase D et chaque
   relance se juge (`juge`). « Obscur » si je ne saurais pas la rendre
   convaincante, sans trou, à quelqu'un qui ne croit pas Plotin : le
@@ -155,11 +164,22 @@ commençant une entrée.
   demande.
 - *F. Ce qui manque* : après rédaction, `manque` fabrique la question à
   partir des étapes et des passages de l'entrée.
+- *G. Relecture indépendante* : l'agent `relecteur-glossaire`
+  (`.claude/agents/`), appelé par l'outil Agent avec l'identifiant et le
+  fichier de l'entrée, relit comme l'utilisateur : chaque étape démontre-t-elle
+  son intitulé, les prémisses du journal y sont-elles, un lecteur qui ne
+  connaît pas Plotin suit-il, les relectures passées sont-elles respectées.
+  C'est lui qui enregistre le verdict (`notebook.py verdict`), jamais moi ;
+  le verdict vaut pour une empreinte du texte relu, et toute retouche
+  ultérieure de l'entrée oblige à la refaire relire. « À reprendre » :
+  poser à NotebookLM les questions qu'il indique, corriger, refaire relire.
 
 `verifie` refuse la publication si une question est sans réponse, une
-thèse ou une relance n'est pas jugée claire, une étape du rappel n'est pas
-une thèse du plan, ou si le rappel contient une paraphrase qui affirme sans
-démontrer (« Autrement dit »), une étape sans connecteur de raison.
+thèse ou une relance n'est pas jugée claire, le plan n'a pas l'accord de
+l'utilisateur, une étape du rappel n'est pas une thèse du plan, le rappel
+contient une paraphrase qui affirme sans démontrer (« Autrement dit ») ou
+une étape sans connecteur de raison, ou si le relecteur n'a pas validé le
+texte tel qu'il est.
 
 **Les relectures de l'utilisateur** s'enregistrent (`notebook.py
 relecture g-x "critique"`) et `lecons` les rassemble : les relire avant

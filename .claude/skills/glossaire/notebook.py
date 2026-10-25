@@ -7,6 +7,7 @@ Relectures de l'utilisateur : .claude/skills/glossaire/relectures.json (versionn
 
 Usage : voir SKILL.md, § 2.
 """
+import hashlib
 import json
 import os
 import re
@@ -107,12 +108,16 @@ def cmd_question(entree):
     j = charge(entree)
     q, quoi = suivante(j)
     if q is None:
-        if not j["plan"]:
+        if not j["plan"] and j.get("plan_propose"):
+            print("Plan proposé, en attente de l'utilisateur : le lui montrer, puis `valide` avec ses mots.")
+        elif not j["plan"]:
             print("Phases A à C faites. Tirer des réponses le plan : `plan` avec les thèses d'étape.")
         elif not any(x["id"] == "F-manque" for x in j["questions"]):
             print("Plan démontré. Rédiger l'entrée, puis `manque` avec le fichier yaml.")
+        elif not os.path.exists(chemin(entree, "relecture.json")):
+            print("Faire relire l'entrée par l'agent relecteur-glossaire (jamais par moi-même), puis `verifie`.")
         else:
-            print("Procédure faite. `verifie` avec le fichier yaml.")
+            print("`verifie` avec le fichier yaml.")
         return
     if quoi == "juger":
         print(f"À juger d'abord : {q['id']}. Saurais-je rendre cet argument convaincant, sans trou, à quelqu'un qui ne croit pas Plotin ?")
@@ -172,17 +177,44 @@ def cmd_relance(entree, point, apres=None):
 
 
 def cmd_plan(entree, theses):
+    """Propose le plan : il ne vaut qu'une fois validé par l'utilisateur (`valide`)."""
     j = charge(entree)
     for lettre in "ABC":
         if not phase_finie(j, lettre):
             sys.exit(f"Phase {lettre} inachevée : le plan se tire des réponses, il ne les précède pas.")
+    if not all(q["verdict"] == "clair" for q in j["questions"] if q["phase"] == "E" and q["reponse"]):
+        sys.exit("Des relances ne sont pas encore jugées claires : les finir avant de proposer le plan.")
     if len(theses) < 2:
         sys.exit("Un plan a au moins deux thèses d'étape.")
+    if j["plan"]:
+        sys.exit("Le plan est déjà validé ; pour le changer, `valide` à nouveau avec l'accord de l'utilisateur.")
+    j["plan_propose"] = theses
+    garde(entree, j)
+    print("Plan proposé. À MONTRER À L'UTILISATEUR, puis attendre sa réponse avant toute rédaction :\n")
+    for k, t in enumerate(theses, 1):
+        print(f"  {k}. {t}")
+    relances = [q for q in j["questions"] if q["phase"] == "E"]
+    if relances:
+        print("\nPoints difficiles relevés auprès de NotebookLM :")
+        for q in relances:
+            print("  -", re.sub(r"^Je ne comprends pas pourquoi |\. Explique.*$", "", q["texte"]))
+    print(f"\nPuis : valide {entree} \"ses mots, cités\" [thèses corrigées…]")
+
+
+def cmd_valide(entree, accord, theses=None):
+    """Enregistre l'accord de l'utilisateur sur le plan (ses mots, cités) et ouvre la phase D."""
+    j = charge(entree)
+    if not j.get("plan_propose"):
+        sys.exit("Aucun plan proposé : `plan` d'abord.")
+    if len(accord.strip()) < 2:
+        sys.exit("Citer la réponse de l'utilisateur.")
+    theses = theses or j["plan_propose"]
     j["plan"] = theses
+    j["accord"] = accord
     for k, t in enumerate(theses, 1):
         ajoute(j, f"D-these{k}", "D", THESE.format(these=t[0].lower() + t[1:].rstrip(" .")), these=t)
     garde(entree, j)
-    print(f"{len(theses)} thèses : une question chacune.")
+    print(f"Plan validé par l'utilisateur ({len(theses)} thèses) : une question chacune.")
     cmd_question(entree)
 
 
@@ -214,7 +246,8 @@ def rappel(yaml):
 
 def etapes(notes):
     out = []
-    for para in re.split(r"\n\s*\n", notes):
+    # une étape commence à sa ligne d'intitulé, même collée à un tableau qui la précède
+    for para in re.split(r"\n\s*\n|\n(?=\s*(?:\{[a-z]+\})?__\*\*)", notes):
         p = para.strip()
         m = re.match(r"(?:\{[a-z]+\})?(__\*\*.*?\*\*__(?:\{/[a-z]+\})?(?:\s*(?:\{[a-z]+\})?__\*\*.*?\*\*__(?:\{/[a-z]+\})?)*)", p)
         if not m:
@@ -236,6 +269,28 @@ def cmd_manque(entree, yaml):
     ajoute(j, "F-manque", "F", MANQUE.format(notion=j["notion"], etapes=et, passages=pas))
     garde(entree, j)
     cmd_question(entree)
+
+
+def empreinte(yaml):
+    """Empreinte du rappel et des cartes : un verdict ne vaut que pour le texte qu'il a relu."""
+    t = open(yaml, encoding="utf-8").read().replace(" ", " ")
+    corps = t[t.find("lessons:"):]
+    return hashlib.md5(re.sub(r"\s+", " ", corps).encode("utf-8")).hexdigest()[:12]
+
+
+def cmd_verdict(entree, yaml, verdict, rapport):
+    """Réservé à l'agent relecteur-glossaire : enregistre son verdict sur l'entrée telle qu'il l'a lue."""
+    j = charge(entree)
+    if verdict not in ("valide", "a-reprendre"):
+        sys.exit("valide ou a-reprendre")
+    texte = open(rapport, encoding="utf-8").read().strip()
+    if len(texte) < 200:
+        sys.exit("Le rapport doit dire, étape par étape, ce qui a été vérifié.")
+    v = dict(verdict=verdict, empreinte=empreinte(yaml), rapport=texte)
+    json.dump(v, open(chemin(entree, "relecture.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    j.setdefault("relectures", []).append(dict(verdict=verdict, empreinte=v["empreinte"]))
+    garde(entree, j)
+    print(f"Verdict « {verdict} » enregistré pour l'empreinte {v['empreinte']}.")
 
 
 RAISON = re.compile(r"\b(parce que|parce qu|car|donc|puisque|en effet|d'où|c'est pourquoi|ainsi|or)\b", re.I)
@@ -266,6 +321,17 @@ def controle(entree, yaml):
             fautes.append(f"thèse du plan absente du rappel : « {t} »")
     if re.search(r"autrement dit", notes, re.I):
         fautes.append("« Autrement dit » : une paraphrase qui affirme au lieu de démontrer")
+    if j["plan"] and not j.get("accord"):
+        fautes.append("plan non validé par l'utilisateur (`valide`)")
+    r = chemin(entree, "relecture.json")
+    if not os.path.exists(r):
+        fautes.append("pas de relecture par l'agent relecteur-glossaire")
+    else:
+        v = json.load(open(r, encoding="utf-8"))
+        if v["empreinte"] != empreinte(yaml):
+            fautes.append("l'entrée a changé depuis la relecture : la refaire relire")
+        elif v["verdict"] != "valide":
+            fautes.append("le relecteur demande des reprises (voir relecture.json)")
     return fautes
 
 
@@ -300,34 +366,61 @@ def cmd_lecons():
         print(f"- [{x['entree']}] {x['critique']}")
 
 
+ETAPE = re.compile(r"^\+\s{4}(?:\{[a-z]+\})?__\*\*", re.M)
+
+
 def cmd_crochet():
-    """Crochet PreToolUse : bloque le commit ou la publication d'une entrée dont la procédure n'est pas faite."""
+    """Crochet PreToolUse.
+
+    - Write (réécriture entière) d'une entrée existante sans journal : refusé ; une
+      refonte commence par `debut`, une correction ponctuelle passe par Edit.
+    - Commit ou publication : refusé pour une entrée nouvelle sans journal, pour une
+      entrée dont le journal ne passe pas `controle`, et pour une entrée sans journal
+      dont le diff ajoute ou change un intitulé d'étape (une refonte déguisée), sauf
+      commit des retouches de l'utilisateur (message contenant « retouche »).
+    """
     try:
-        cmd = json.load(sys.stdin).get("tool_input", {}).get("command", "")
+        ev = json.load(sys.stdin)
     except Exception:
         return
+    outil, entree_outil = ev.get("tool_name", ""), ev.get("tool_input", {})
+    racine = os.path.dirname(os.path.dirname(os.path.dirname(ICI)))
+
+    def refuse(msg):
+        print(msg, file=sys.stderr)
+        sys.exit(2)
+
+    if outil == "Write":
+        f = entree_outil.get("file_path", "").replace("\\", "/")
+        m = re.search(r"courses/plotin/units/(g-[\w-]+)\.yaml$", f)
+        if m and os.path.exists(f) and not os.path.exists(chemin(m.group(1), "journal.json")):
+            refuse(f"{m.group(1)} : réécrire une entrée existante demande d'ouvrir son journal (`notebook.py debut`) ; "
+                   "pour une correction ponctuelle, utiliser Edit, qui garde les retouches de l'utilisateur.")
+        return
+    cmd = entree_outil.get("command", "")
     if not re.search(r"git commit|publier\.sh", cmd):
         return
-    racine = os.path.dirname(os.path.dirname(os.path.dirname(ICI)))
-    git = lambda *a: subprocess.run(["git", "-C", racine, *a], capture_output=True, text=True).stdout.split()
-    ajoutes = set(git("diff", "--cached", "--name-only", "--diff-filter=A"))
-    fichiers = set(git("diff", "--cached", "--name-only")) | set(re.findall(r"\S*units/g-[\w-]+\.yaml", cmd))
-    nouveaux = set(git("ls-files", "--others", "--exclude-standard"))
+    git = lambda *a: subprocess.run(["git", "-C", racine, *a], capture_output=True, text=True, encoding="utf-8").stdout
+    ajoutes = set(git("diff", "--cached", "--name-only", "--diff-filter=A").split())
+    fichiers = set(git("diff", "--cached", "--name-only").split()) | set(re.findall(r"\S*units/g-[\w-]+\.yaml", cmd))
+    nouveaux = set(git("ls-files", "--others", "--exclude-standard").split())
+    retouche = re.search(r"retouche", cmd, re.I)
     fautes = []
     for f in sorted(fichiers):
         m = re.search(r"units/(g-[\w-]+)\.yaml$", f)
         if not m or "plotin" not in f:
             continue
         entree = m.group(1)
-        yaml = os.path.join(racine, re.sub(r"^.*?(content/)", r"\1", f))
-        if not os.path.exists(chemin(entree, "journal.json")):
-            if f in ajoutes or re.sub(r"^.*?(content/)", r"\1", f) in nouveaux:
-                fautes.append(f"{entree} : entrée nouvelle sans journal NotebookLM")
-            continue
-        fautes += [f"{entree} : {x}" for x in controle(entree, yaml)]
+        rel = re.sub(r"^.*?(content/)", r"\1", f)
+        yaml = os.path.join(racine, rel)
+        if os.path.exists(chemin(entree, "journal.json")):
+            fautes += [f"{entree} : {x}" for x in controle(entree, yaml)]
+        elif f in ajoutes or rel in nouveaux:
+            fautes.append(f"{entree} : entrée nouvelle sans journal NotebookLM")
+        elif not retouche and ETAPE.search(git("diff", "-U0", "HEAD", "--", rel)):
+            fautes.append(f"{entree} : des intitulés d'étape changent sans journal (une refonte commence par `notebook.py debut`)")
     if fautes:
-        print("Procédure NotebookLM inachevée (notebook.py) :\n" + "\n".join(fautes), file=sys.stderr)
-        sys.exit(2)
+        refuse("Procédure NotebookLM inachevée (notebook.py) :\n" + "\n".join(fautes))
 
 
 def main(a):
@@ -353,6 +446,12 @@ def main(a):
         cmd_relance(a[0], a[1])
     elif c == "plan":
         cmd_plan(a[0], a[1:])
+    elif c == "valide":
+        cmd_valide(a[0], a[1], a[2:] or None)
+    elif c == "verdict":
+        cmd_verdict(a[0], a[1], a[2], a[3])
+    elif c == "empreinte":
+        print(empreinte(a[0]))
     elif c == "juge":
         cmd_juge(a[0], a[1], a[2], a[3] if len(a) > 3 else None)
     elif c == "manque":
