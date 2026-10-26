@@ -11,7 +11,7 @@ tagline: Dissertation sur programme, thème imposé.
 status: available
 default: false
 layout: library
-version: 15
+version: 16
 
 tracks:
   - id: glossaire
@@ -20,7 +20,9 @@ tracks:
     kind: grammar
     color: teal
     icon: glossary
-    units: []
+    # Entrées vides, une par concept des sujets passés sur la vie, à écrire
+    # avec la skill glossaire.
+    units: [g-vie, g-vivant, g-matiere, g-mecanisme, g-vitalisme, g-elan-vital, g-organisme, g-organisation, g-auto-organisation, g-organe, g-fonction, g-milieu, g-individu, g-machine, g-automate, g-artificiel, g-finalite, g-finalisme, g-causalite, g-autonomie-du-vivant, g-sciences-de-la-vie, g-temporalite-du-vivant, g-animal, g-animalite, g-monde-propre, g-psychologie-animale, g-ethologie, g-sujet-moral, g-animal-domestique, g-vie-sauvage, g-beaute-du-vivant, g-espece, g-diversite-des-vivants, g-evolution, g-devenir, g-selection-naturelle, g-adaptation, g-nature, g-technique, g-progres-technique, g-intelligence-artificielle, g-experimentation-sur-le-vivant, g-greffe, g-monstruosite, g-mort, g-mortalite, g-finitude, g-crainte-de-la-mort, g-apprendre-a-mourir, g-mort-de-l-homme, g-interdit-du-meurtre, g-droit-de-vie-et-de-mort, g-survie, g-desir-de-durer, g-fin-de-vie, g-brievete-de-la-vie, g-immortalite, g-eternite, g-au-dela, g-sante, g-sante-de-l-ame, g-maladie, g-guerison, g-soin, g-medecine, g-normal, g-pathologique, g-anormal, g-norme, g-douleur, g-souffrance, g-vulnerabilite, g-existence, g-sentiment-d-existence, g-naissance, g-ages-de-la-vie, g-vieillissement, g-vie-humaine, g-vie-quotidienne, g-vie-interieure, g-vie-active, g-vie-de-l-esprit, g-vie-psychique, g-monde-de-la-vie, g-songe, g-destin, g-vivre-au-present, g-recit-de-vie, g-etre-soi-meme, g-corps, g-corps-propre, g-chair, g-propriete-de-son-corps, g-respect-du-corps, g-volonte, g-valeur-de-la-vie, g-souverain-bien, g-sens-de-la-vie, g-raisons-de-vivre, g-amour-de-la-vie, g-vivre-selon-la-nature, g-bonheur, g-bien-vivre, g-ideal, g-vertu, g-art-de-vivre, g-regle-de-vie, g-vie-selon-la-raison, g-intensite, g-vivre-pour-les-autres, g-esthetique-de-l-existence, g-respect-de-la-vie, g-droit-a-la-vie, g-biopolitique]
 
   - id: idees
     title: Idées
