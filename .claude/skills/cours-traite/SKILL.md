@@ -164,10 +164,25 @@ des citations inventées. Donc :
    branche et sa réfutation ; l'adversaire visé ; l'objection qu'un lecteur
    ferait et la réponse ; les contresens à éviter. Cite les passages de la
    traduction sur lesquels tu t'appuies, avec chapitre et lignes. »
-3. *Relances.* Pour tout argument que je ne saurais pas rendre convaincant
-   à quelqu'un qui ne croit pas Plotin : « Je ne comprends pas pourquoi …
-   explique pas à pas, avec un exemple concret. » Relancer jusqu'à pouvoir
-   l'expliquer moi-même sans trou.
+3. *Explication, argument par argument : systématique.* Pour **chaque**
+   argument relevé à la question 2, y compris chaque item d'une
+   énumération (les cinq objections à l'âme-harmonie, les six conséquences
+   de l'âme-entéléchie au traité 2), une question à part : « Dans le
+   traité N (…), chapitre C, lignes x-y, Plotin écrit : « [citation GF] ».
+   Explique cet argument : pourquoi est-il concluant ? Quelle prémisse
+   implicite le rend contraignant, et pourquoi l'adversaire ne peut-il pas
+   la refuser ? » Plusieurs arguments courts d'un même chapitre peuvent
+   partir dans une question, chacun numéroté, s'ils ne dépassent pas
+   cinq. Ne jamais sauter cette question au motif que l'argument me paraît
+   clair : au traité 2, les arguments que j'avais jugés clairs (« l'harmonie
+   n'est pas une réalité », « serait la santé », « il y aurait plusieurs
+   âmes », la plante qui se retire dans la racine, l'âme qui pense, la
+   nature qui ne périt pas) étaient justement ceux que l'utilisateur a dû
+   reprendre, et il lui a suffi de poser cette question pour obtenir, mot
+   pour mot, l'explication qui manquait.
+4. *Relances.* Si la réponse reste allusive : « Je ne comprends pas
+   pourquoi … explique pas à pas, avec un exemple concret. » Relancer
+   jusqu'à pouvoir l'expliquer moi-même sans trou.
 
 **Recouper avant tout usage.** Au traité 6, NotebookLM a commis cinq
 erreurs d'attribution que la GF corrigeait : une notion d'un autre traité
@@ -193,10 +208,28 @@ bonnes. Donc :
   en question à l'utilisateur (§ 2).
 
 **Ce qu'on en garde.** Le découpage (une fois recoupé) donne le plan et les
-leçons ; les explications donnent le fond des rappels (prémisses, dilemmes
-déployés, exemples, contresens), reformulées dans la langue et la mise en
-relief de ce cours, jamais collées telles quelles ; les citations viennent
-toujours de la GF.
+leçons. Les explications (question 3) donnent le fond des rappels, et
+**s'y reprennent presque telles quelles** : la phrase qui énonce la prémisse
+implicite et la raison pour laquelle l'adversaire ne peut pas y échapper
+(« en étant le simple produit de l'assemblage corporel, l'harmonie dépend
+entièrement de l'état de la matière qui la produit ; un résultat passif ne
+peut que subir les variations de sa cause, il ne peut pas se retourner
+contre elle pour la maîtriser ») est exactement ce qui manquait ; la
+résumer en une glose (« une harmonie ne retend pas les cordes ») ou la
+remplacer par une image de mon cru la ferait perdre. Je n'y change que la
+forme (paragraphes, mise en relief de ce cours, § 4) et ce que la GF
+corrige. Les citations, elles, viennent toujours de la GF.
+
+**Ce qu'on vérifie dans ses explications**, en plus des citations et des
+repères :
+- **un exemple ou une glose ajoutés** (« comme la vertu ou la vérité »)
+  ne se présentent pas comme du texte ; s'ils précisent mal le texte, les
+  remplacer par ce que disent la GF et ses notes (au traité 2, la note 109,
+  « l'exclusivité de l'acte », donnait le vrai principe) ;
+- **une analogie qu'il propose** ne doit pas être celle que Plotin récuse
+  ailleurs : au traité 2, « la vie appartient à l'âme comme la chaleur au
+  feu » est précisément la comparaison que le chapitre 11 (l. 3-9) écarte,
+  puisque le feu périt par son bois.
 
 **Ne pas reprendre sa forme.** NotebookLM use beaucoup plus que nous des
 listes à puces, et de titres isolés et numérotés (« 1. Premier mouvement »,
@@ -304,6 +337,18 @@ la sienne : par ses raisons, son principe, et ce qu'elle permet d'éviter.
   dommageable, parce qu'on apprend alors comme analyse ce qui est le texte.
   Avant de valider, relire chaque rappel contre la traduction et mettre
   entre guillemets, corrigé mot pour mot, tout passage qui la suit de près.
+- **Une citation ne prouve rien seule.** Citer une prémisse (« l'âme doit
+  être une réalité, tandis que l'harmonie n'est pas une réalité ») n'est
+  pas l'expliquer : il faut dire ensuite pourquoi elle est vraie et
+  pourquoi l'adversaire doit l'accorder (l'harmonie n'est qu'une propriété
+  des éléments ajustés, sans existence propre hors d'eux). Chaque item
+  d'une énumération d'objections reçoit cette explication, pas seulement
+  l'argument « décisif ». Le principe s'énonce en termes généraux (la vie
+  est l'essence de l'âme et non un attribut reçu ; ce qui est mort n'a
+  aucune activité propre, ce qui trahit un manque d'être) ; une image de
+  mon cru (le soleil et les volets, l'estomac qui ne désire pas la justice)
+  ne le remplace pas, au mieux elle l'illustre une fois qu'il est dit.
+  C'est ce que donne la question 3 posée à NotebookLM (§ 1 bis).
 - **Tous les arguments du chapitre.** Le premier jet n'en saute aucun, même
   secondaire : au traité 2, il manquait la difficulté des atomes sans
   parties, le dilemme du fluide et du solide pour la mémoire, la régression
@@ -544,9 +589,14 @@ questions :
    honnêtement : « si je ne croyais pas Plotin, est-ce que ce paragraphe me
    ferait changer d'avis ? » Sinon, il manque une étape.
 
-**Quand un argument reste opaque, relancer NotebookLM** (§ 1 bis, relances)
-plutôt que de combler soi-même : c'est là qu'il a le plus apporté au
-traité 2. Puis recouper sa réponse sur la GF comme le reste.
+**Vérifier que chaque argument a reçu son explication NotebookLM** (§ 1 bis,
+question 3) et qu'elle est passée dans le rappel : un paragraphe ou une puce
+qui ne contient qu'une citation et une glose d'une ligne est le signe
+qu'elle manque. Ne pas juger soi-même qu'un argument est assez clair pour
+s'en passer : c'est sur ces arguments-là que l'utilisateur a dû retoucher
+le traité 2 (chap. 8⁴, 8⁵, 9). Chaque explication donne aussi une carte de
+pivot (§ 5) sur la prémisse qu'elle a mise au jour, avec une réponse que le
+texte ou l'explication rendent unique.
 
 Exemple au traité 1 (chap. 2) : le premier jet disait que la Forme réunit les
 parties et les amène à l'unité. La version retouchée reconstruit l'argument
