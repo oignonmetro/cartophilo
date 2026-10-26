@@ -349,10 +349,28 @@ def cmd_verdict(entree, yaml, verdict, rapport):
 RAISON = re.compile(r"\b(parce que|parce qu|car|donc|puisque|en effet|d'où|c'est pourquoi|ainsi|or)\b", re.I)
 
 
+def version_utilisateur(yaml):
+    """Le rappel tel que l'utilisateur l'a laissé à sa dernière retouche commitée (vide s'il n'y en a pas)."""
+    racine = os.path.dirname(os.path.dirname(os.path.dirname(ICI)))
+    rel = os.path.relpath(os.path.abspath(yaml), racine).replace("\\", "/")
+    git = lambda *a: subprocess.run(["git", "-C", racine, *a], capture_output=True, text=True, encoding="utf-8").stdout
+    c = git("log", "-1", "-i", "--grep=retouche", "--format=%H", "--", rel).strip()
+    if not c:
+        return ""
+    t = git("show", f"{c}:{rel}")
+    m = re.search(r"notes: \|-\n(.*?)\n  [a-z]+:", t, re.S)
+    return m.group(1) if m else ""
+
+
 def controle(entree, yaml):
-    """Liste des manquements ; vide si l'entrée peut être publiée."""
+    """Liste des manquements ; vide si l'entrée peut être publiée.
+
+    Ce que l'utilisateur a écrit lui-même (dernière retouche commitée) fait foi : ses intitulés
+    d'étape, les étapes qu'il a retirées et ses formulations ne sont pas des manquements."""
     fautes = []
     j = charge(entree)
+    sien = version_utilisateur(yaml)
+    ses_titres = {norm(t) for t, _ in etapes(sien)} if sien else set()
     for q in j["questions"]:
         if not q["reponse"]:
             fautes.append(f"sans réponse : {q['id']}")
@@ -365,14 +383,15 @@ def controle(entree, yaml):
     notes = rappel(yaml)
     plan = [norm(t) for t in j["plan"]]
     for titre, corps in etapes(notes):
-        if norm(titre) not in plan:
+        if norm(titre) not in plan and norm(titre) not in ses_titres:
             fautes.append(f"étape hors du plan démontré : « {titre} » (l'ajouter au plan, la démontrer, ou la retirer)")
-        if not RAISON.search(corps):
+        if not RAISON.search(corps) and norm(titre) not in ses_titres:
             fautes.append(f"étape sans connecteur de raison : « {titre} »")
     for t in j["plan"]:
-        if norm(t) not in [norm(x) for x, _ in etapes(notes)]:
+        retiree = sien and norm(t) not in ses_titres
+        if norm(t) not in [norm(x) for x, _ in etapes(notes)] and not retiree:
             fautes.append(f"thèse du plan absente du rappel : « {t} »")
-    if re.search(r"autrement dit", notes, re.I):
+    if len(re.findall(r"autrement dit", notes, re.I)) > len(re.findall(r"autrement dit", sien, re.I)):
         fautes.append("« Autrement dit » : une paraphrase qui affirme au lieu de démontrer")
     if j["plan"] and not j.get("accord"):
         fautes.append("plan non validé par l'utilisateur (`valide`)")
@@ -381,7 +400,7 @@ def controle(entree, yaml):
         fautes.append("relecture étape par étape non faite (`relire`)")
     else:
         for titre, _ in etapes(notes):
-            if norm(titre) not in relues:
+            if norm(titre) not in relues and norm(titre) not in ses_titres:
                 fautes.append(f"étape non relue par NotebookLM : « {titre} »")
     # L'agent relecteur-glossaire reste facultatif ; s'il a rendu un verdict, il doit valoir pour ce texte.
     r = chemin(entree, "relecture.json")
@@ -471,7 +490,9 @@ def cmd_crochet():
         rel = re.sub(r"^.*?(content/)", r"\1", f)
         yaml = os.path.join(racine, rel)
         if os.path.exists(chemin(entree, "journal.json")):
-            fautes += [f"{entree} : {x}" for x in controle(entree, yaml)]
+            # un commit de retouches n'enregistre que le texte de l'utilisateur, qui fait foi
+            if not retouche:
+                fautes += [f"{entree} : {x}" for x in controle(entree, yaml)]
         elif f in ajoutes or rel in nouveaux:
             fautes.append(f"{entree} : entrée nouvelle sans journal NotebookLM")
         elif not retouche and ETAPE.search(git("diff", "-U0", "HEAD", "--", rel)):

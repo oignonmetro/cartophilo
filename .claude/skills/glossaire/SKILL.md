@@ -439,28 +439,13 @@ ses sous-entrées** (leçon de l'entrée Vie, 2026-10-21) :
   « Passage | Ce qu'il établit », une ligne par lieu décisif. Le régler
   dans `tables:` (banque sur « Ce qu'il établit », case seule sur
   « Passage ») : sans réglage, une colonne de repères rangée par numéro
-  serait prise pour un plan à remettre dans l'ordre. **Sa forme, d'après la
-  retouche de Bien-être par l'utilisateur (2026-10-26)** :
-  - **peu de lignes, celles qui comptent** : cinq ou six au plus ; les
-    chapitres d'un même traité qui établissent la même chose se
-    regroupent en une ligne (« traité 46, chap. 4 et 6 ») ; un passage qui
-    ne fait qu'illustrer une étape n'y entre pas ;
-  - **la case « Ce qu'il établit » est une phrase entière**, qui dit la
-    thèse du passage *et* sa raison ou sa conséquence, non une étiquette :
-    « La santé et l'absence de douleur n'ajoutant rien au bonheur du sage,
-    la maladie et la souffrance ne peuvent lui enlever quoi que ce soit »,
-    plutôt que « le sage n'est pas un composé » ; « La sensation est une
-    simple affection passive ; la cause de la vie bonne réside dans le
-    jugement de l'Intellect », plutôt que « juger que c'est un bien relève
-    de la raison » ;
-  - **le tableau peut citer un lieu que le rappel ne développe pas**, s'il
-    est décisif pour la notion (Bien-être : traité 36, chap. 10 ; traité 38,
-    chap. 26 et 30) ; c'est un récapitulatif des textes à connaître, pas
-    seulement de ceux qu'on a cités ;
-  - **repère** sans la numérotation des Ennéades : « Traité 36, ch. 10 »
-    ou « traité 46, chap. 2 » (`passages_chrono.py` range l'un et
-    l'autre) ; « et » entre deux chapitres (« Traité 38, ch. 26 et 30 »),
-    jamais « & », que l'éditeur visuel enregistre en « &amp; ».
+  serait prise pour un plan à remettre dans l'ordre. **Sa forme** : une
+  ligne par lieu décisif, une case courte et distincte (« traité 30, chap. 10
+  | la vie a pour cause ce qui la dépasse »), au plus huit lignes. La forme à
+  phrases entières et chapitres regroupés, essayée sur Bien-être et
+  Végétatif, a été abandonnée par l'utilisateur (2026-10-26) : il est revenu
+  à la case courte. Écrire « et », jamais « & », que l'éditeur visuel
+  enregistre en « &amp; ».
 - **Voir aussi**, en toute dernière ligne de chaque entrée :
   `**Voir aussi** : [[g-degres-de-vie|Degrés de vie]] · [[g-ame|Âme]] · …`,
   les entrées voisines par ordre d'importance, séparées par « · ».
