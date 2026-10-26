@@ -59,30 +59,18 @@ lessons:
     answer: "87"
     alt: ["§ 87"]
 - id: kant-cfj-methodologie-l2
-  title: "Repérage : la Méthodologie paragraphe par paragraphe (§ 79-91)"
+  title: "Repérage : la téléologie dans l'étude du vivant (§ 79-81)"
   notes: |-
-    La Méthodologie suit une progression continue : après avoir situé la téléologie parmi les sciences (§ 79), elle en règle l'usage dans l'étude du vivant (§ 80-81), passe des relations entre les êtres organisés à la fin dernière de la nature (§ 82-83), puis à la fin finale de la création (§ 84), qu'aucune théologie physique ne peut atteindre (§ 85) et que seule la théologie morale pense (§ 86-87) ; elle termine en fixant la valeur de la preuve morale (§ 88-91).
+    Kant situe d'abord la téléologie parmi les sciences (§ 79), puis en règle l'usage dans l'étude du vivant : jusqu'où va le mécanisme (§ 80), et comment il s'associe aux fins dans la génération (§ 81).
 
     | Paragraphe | Lieu | Ce qui s'y joue |
     | la place de la téléologie | § 79 | ni doctrine de la nature ni théologie : elle relève de la critique |
     | la subordination du mécanisme | § 80 | droit illimité d'expliquer mécaniquement, pouvoir limité ; la mère primitive commune |
     | mécanisme et téléologie associés | § 81 | ni occasionnalisme ni préformation individuelle : l'épigenèse de Blumenbach |
-    | le système des relations extérieures | § 82 | l'homme, fin dernière sur terre, seul à se forger un concept des fins |
-    | la fin dernière de la nature | § 83 | la culture, non le bonheur ; la valeur de la vie |
-    | la fin finale de la création | § 84 | l'homme comme noumène, sujet de la moralité |
-    | la théologie physique | § 85 | elle n'atteint pas la fin finale : une téléologie mal comprise |
-    | la théologie morale | § 86 | sans les hommes, la création serait un désert ; la volonté bonne donne sa valeur à l'existence |
-    | la preuve morale | § 87 | l'honnête homme sans Dieu ni vie future |
-    | la limitation de la preuve | § 88 | une réalité subjectivement pratique |
-    | l'utilité de l'argument moral | § 89 | contre la théosophie et la démonologie ; l'âme connue dans cette vie |
-    | la modalité de l'adhésion | § 90 | une preuve pour nous, hommes, non sur l'objet en soi |
-    | la croyance pratique | § 91 | opinion, savoir, croyance |
   tables:
   - table: paragraphe-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: cell, column: Lieu}
-    - {kind: cell, column: Lieu}
     - {kind: cell, column: Lieu}
   points:
   - id: kant-cfj-methodologie-l2-q1
@@ -90,17 +78,13 @@ lessons:
     answer: "79"
     alt: ["§ 79"]
   - id: kant-cfj-methodologie-l2-q2
-    sentence: "Dans la *Critique de la faculté de juger*, l'exemple de Linné, pour qui les herbivores modèrent la croissance des végétaux, se trouve au § ___."
-    answer: "82"
-    alt: ["§ 82"]
+    sentence: "Dans la *Critique de la faculté de juger*, la note sur l'« aventure audacieuse de la raison » se trouve au § ___."
+    answer: "80"
+    alt: ["§ 80"]
   - id: kant-cfj-methodologie-l2-q3
-    sentence: "Dans la *Critique de la faculté de juger*, la formule « sans les hommes, la création entière serait un simple désert » se trouve au § ___."
-    answer: "86"
-    alt: ["§ 86"]
-  - id: kant-cfj-methodologie-l2-q4
-    sentence: "Dans la *Critique de la faculté de juger*, la distinction entre opinion, savoir et croyance se trouve au § ___."
-    answer: "91"
-    alt: ["§ 91"]
+    sentence: "Dans la *Critique de la faculté de juger*, la préférence pour l'épigenèse et l'hommage à Blumenbach se trouvent au § ___."
+    answer: "81"
+    alt: ["§ 81"]
 - id: kant-cfj-methodologie-l3
   title: "La place de la téléologie : ni physique ni théologie (§ 79)"
   notes: |-
@@ -372,6 +356,37 @@ lessons:
     answer: "production"
     alt: ["production de chaque individu"]
 - id: kant-cfj-methodologie-l6
+  title: "Repérage : la fin dernière de la nature (§ 82-83)"
+  notes: |-
+    Des relations entre les êtres organisés (§ 82), Kant remonte à la fin dernière de la nature, l'homme, puis cherche ce qui, en lui, peut l'être : non le bonheur, mais la culture (§ 83).
+
+    | Moment | Lieu | Ce qui s'y joue |
+    | la finalité externe suppose des êtres organisés | § 82 | une chose n'est moyen que pour une fin ; les deux sexes, un tout organisateur |
+    | l'homme, fin dernière sur terre | § 82 | le seul être qui puisse se forger un concept des fins |
+    | les révolutions de la terre | § 82 | l'expérience semble démentir tout système des fins |
+    | le bonheur écarté | § 83 | un concept fluctuant, une nature humaine qui ne s'en contente pas, une nature qui ne ménage pas l'homme |
+    | la culture | § 83 | l'aptitude à se proposer des fins : habileté et discipline |
+    | la valeur de la vie | § 83 | estimée d'après la jouissance, elle tombe au-dessous de zéro |
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: kant-cfj-methodologie-l6-q1
+    sentence: "Dans la *Critique de la faculté de juger*, l'exemple de Linné, pour qui les herbivores modèrent la croissance des végétaux, se trouve au § ___."
+    answer: "82"
+    alt: ["§ 82"]
+  - id: kant-cfj-methodologie-l6-q2
+    sentence: "Dans la *Critique de la faculté de juger*, la distinction entre culture de l'habileté et culture de la discipline se trouve au § ___."
+    answer: "83"
+    alt: ["§ 83"]
+  - id: kant-cfj-methodologie-l6-q3
+    sentence: "Dans la *Critique de la faculté de juger*, la note selon laquelle la valeur de la vie estimée d'après la jouissance « tombe au-dessous de zéro » se trouve au § ___."
+    answer: "83"
+    alt: ["§ 83"]
+- id: kant-cfj-methodologie-l7
   title: "L'homme, fin dernière de la nature sur terre (§ 82)"
   notes: |-
     Le § 82 passe de l'organisme aux **relations extérieures** entre les êtres organisés : la nature forme-t-elle un système de fins, et quelle en est la fin dernière ? Sa réponse : {green}__l'homme, parce qu'il est le seul être sur terre à pouvoir se forger un concept des fins__{/green}, bien que l'expérience semble démentir toute fin dans la nature.
@@ -391,59 +406,59 @@ lessons:
     ! L'homme fin dernière n'est pas un utilitarisme : sous un autre rapport, la nature le traite comme une espèce parmi d'autres, et Linné en fait un moyen.
     ! Le désordre géologique ne réfute pas la téléologie, puisqu'elle n'a jamais prétendu dire comment les choses sont produites.
   points:
-  - id: kant-cfj-methodologie-l6-q1
+  - id: kant-cfj-methodologie-l7-q1
     sentence: "« Celui-ci constitue d'emblée un **___**, bien qu'il ne soit pas __un tout organisé dans un seul corps__. »"
     answer: "tout organisateur"
     alt: []
-  - id: kant-cfj-methodologie-l6-q2
+  - id: kant-cfj-methodologie-l7-q2
     sentence: "« Celui-ci constitue d'emblée un **tout organisateur**, bien qu'il ne soit pas ___. »"
     answer: "un tout organisé dans un seul corps"
     alt: []
-  - id: kant-cfj-methodologie-l6-q3
+  - id: kant-cfj-methodologie-l7-q3
     sentence: "« il est ici la **___** de la création sur terre, parce qu'il est le seul être sur cette terre qui peut se forger __un concept des fins__ et peut par sa raison, à partir d'un agrégat de choses formées de manière finalisée, construire __un système des fins__. »"
     answer: "fin dernière"
     alt: []
-  - id: kant-cfj-methodologie-l6-q4
+  - id: kant-cfj-methodologie-l7-q4
     sentence: "« il est ici la **fin dernière** de la création sur terre, parce qu'il est le seul être sur cette terre qui peut se forger ___ et peut par sa raison, à partir d'un agrégat de choses formées de manière finalisée, construire __un système des fins__. »"
     answer: "un concept des fins"
     alt: []
-  - id: kant-cfj-methodologie-l6-q5
+  - id: kant-cfj-methodologie-l7-q5
     sentence: "« il est ici la **fin dernière** de la création sur terre, parce qu'il est le seul être sur cette terre qui peut se forger __un concept des fins__ et peut par sa raison, à partir d'un agrégat de choses formées de manière finalisée, construire ___. »"
     answer: "un système des fins"
     alt: []
-  - id: kant-cfj-methodologie-l6-q6
+  - id: kant-cfj-methodologie-l7-q6
     sentence: "La terre, l'air, l'eau ne peuvent être finalisés extérieurement que par rapport à des êtres ___, car une chose n'est moyen que pour une fin."
     answer: "organisés"
     alt: []
-  - id: kant-cfj-methodologie-l6-q7
+  - id: kant-cfj-methodologie-l7-q7
     sentence: "La seule finalité externe liée à la finalité interne de l'organisation est celle des deux ___ en vue de la reproduction de l'espèce."
     answer: "sexes"
     alt: []
-  - id: kant-cfj-methodologie-l6-q8
+  - id: kant-cfj-methodologie-l7-q8
     sentence: "On peut demander d'un être organisé : « Pourquoi ___ ? », ce qui n'est guère possible pour ce que produit le seul mécanisme de la nature."
     answer: "existe-t-il"
     alt: []
-  - id: kant-cfj-methodologie-l6-q9
+  - id: kant-cfj-methodologie-l7-q9
     sentence: "Avec le chevalier ___, on peut dire que les herbivores existent pour contenir la prolifération des plantes, et l'homme pour équilibrer les forces productrices et destructrices de la nature."
     answer: "Linné"
     alt: []
-  - id: kant-cfj-methodologie-l6-q10
+  - id: kant-cfj-methodologie-l7-q10
     sentence: "La structure de la terre et de la mer présente l'apparence du produit de « forces sauvages et omnipotentes d'une nature œuvrant dans un état ___ »."
     answer: "chaotique"
     alt: []
-  - id: kant-cfj-methodologie-l6-q11
+  - id: kant-cfj-methodologie-l7-q11
     sentence: "Selon les jugements de ___, l'homme n'aurait pas été compris dans les révolutions de la terre, mais il dépend trop des autres créatures pour échapper à leur mécanisme."
     answer: "Camper"
     alt: []
-  - id: kant-cfj-methodologie-l6-q12
+  - id: kant-cfj-methodologie-l7-q12
     sentence: "Une note du § 82 propose d'appeler « ___ de la nature » la représentation de l'ancien état de la terre que montre l'histoire de la nature, à partir des pétrifications."
     answer: "archéologie"
     alt: []
-  - id: kant-cfj-methodologie-l6-q13
+  - id: kant-cfj-methodologie-l7-q13
     sentence: "Aucun être de la nature, comme être de la nature, ne peut prétendre au privilège d'être ___ de la création."
     answer: "fin finale"
     alt: []
-- id: kant-cfj-methodologie-l7
+- id: kant-cfj-methodologie-l8
   title: "La culture, non le bonheur : la valeur de la vie (§ 83)"
   notes: |-
     Le § 83 cherche ce qui, en l'homme, peut être la **fin dernière de la nature**, c'est-à-dire ce que la nature peut faire pour lui. Deux candidats : son **bonheur**, ou son **aptitude** à se proposer des fins. Réponse : {red}__pas le bonheur__{/red}, que la nature ne peut ni ne veut lui donner, mais {green}__la culture__{/green}. Une note en tire une conclusion sur la valeur de la vie.
@@ -469,115 +484,143 @@ lessons:
     ! Kant ne fait pas l'éloge de la guerre ni de l'inégalité : il les juge comme des moyens par lesquels la nature développe nos dispositions malgré nous, à titre de jugement réfléchissant.
     ! La note ne dit pas que la vie ne vaut rien : elle dit que la jouissance ne lui donne aucune valeur, et que seule l'action libre lui en donne une.
   points:
-  - id: kant-cfj-methodologie-l7-q1
+  - id: kant-cfj-methodologie-l8-q1
     sentence: "« La première fin de la nature serait le **___**, la seconde __la culture__ de l'homme. »"
     answer: "bonheur"
     alt: []
-  - id: kant-cfj-methodologie-l7-q2
+  - id: kant-cfj-methodologie-l8-q2
     sentence: "« La première fin de la nature serait le **bonheur**, la seconde ___ de l'homme. »"
     answer: "la culture"
     alt: []
-  - id: kant-cfj-methodologie-l7-q3
+  - id: kant-cfj-methodologie-l8-q3
     sentence: "« car sa nature n'est pas telle qu'elle puisse **___** et trouver sa satisfaction dans __la possession et la jouissance__. »"
     answer: "s'arrêter"
     alt: []
-  - id: kant-cfj-methodologie-l7-q4
+  - id: kant-cfj-methodologie-l8-q4
     sentence: "« car sa nature n'est pas telle qu'elle puisse **s'arrêter** et trouver sa satisfaction dans ___. »"
     answer: "la possession et la jouissance"
     alt: []
-  - id: kant-cfj-methodologie-l7-q5
+  - id: kant-cfj-methodologie-l8-q5
     sentence: "« La production de l'**___** d'un être raisonnable à de quelconques fins en général (résidant par conséquent dans sa __liberté__) est **la culture**. »"
     answer: "aptitude"
     alt: []
-  - id: kant-cfj-methodologie-l7-q6
+  - id: kant-cfj-methodologie-l8-q6
     sentence: "« La production de l'**aptitude** d'un être raisonnable à de quelconques fins en général (résidant par conséquent dans sa ___) est **la culture**. »"
     answer: "liberté"
     alt: []
-  - id: kant-cfj-methodologie-l7-q7
+  - id: kant-cfj-methodologie-l8-q7
     sentence: "« La production de l'**aptitude** d'un être raisonnable à de quelconques fins en général (résidant par conséquent dans sa __liberté__) est ___. »"
     answer: "la culture"
     alt: []
-  - id: kant-cfj-methodologie-l7-q8
+  - id: kant-cfj-methodologie-l8-q8
     sentence: "« La condition dernière de l'aptitude, que l'on pourrait nommer la **___**, est négative et consiste dans la libération de la volonté à l'égard du __despotisme des désirs__ »"
     answer: "culture de la discipline"
     alt: []
-  - id: kant-cfj-methodologie-l7-q9
+  - id: kant-cfj-methodologie-l8-q9
     sentence: "« La condition dernière de l'aptitude, que l'on pourrait nommer la **culture de la discipline**, est négative et consiste dans la libération de la volonté à l'égard du ___ »"
     answer: "despotisme des désirs"
     alt: []
-  - id: kant-cfj-methodologie-l7-q10
+  - id: kant-cfj-methodologie-l8-q10
     sentence: "« La valeur que possède pour nous la vie quand elle est estimée uniquement d'après ce dont on **___** [...] est facile à déterminer. Elle tombe __au-dessous de zéro__ ; car qui voudrait vraiment __recommencer sa vie__ sous les mêmes conditions »"
     answer: "jouit"
     alt: []
-  - id: kant-cfj-methodologie-l7-q11
+  - id: kant-cfj-methodologie-l8-q11
     sentence: "« La valeur que possède pour nous la vie quand elle est estimée uniquement d'après ce dont on **jouit** [...] est facile à déterminer. Elle tombe ___ ; car qui voudrait vraiment __recommencer sa vie__ sous les mêmes conditions »"
     answer: "au-dessous de zéro"
     alt: []
-  - id: kant-cfj-methodologie-l7-q12
+  - id: kant-cfj-methodologie-l8-q12
     sentence: "« La valeur que possède pour nous la vie quand elle est estimée uniquement d'après ce dont on **jouit** [...] est facile à déterminer. Elle tombe __au-dessous de zéro__ ; car qui voudrait vraiment ___ sous les mêmes conditions »"
     answer: "recommencer sa vie"
     alt: []
-  - id: kant-cfj-methodologie-l7-q13
+  - id: kant-cfj-methodologie-l8-q13
     sentence: "« Il ne reste donc rien que la valeur que nous **___** à notre vie, non pas simplement par ce que nous faisons, mais aussi par ce que nous faisons qui soit __conforme à une fin__, d'une manière si __indépendante de la nature__ que même l'existence de la nature ne puisse être fin qu'à cette condition. »"
     answer: "donnons nous-mêmes"
     alt: []
-  - id: kant-cfj-methodologie-l7-q14
+  - id: kant-cfj-methodologie-l8-q14
     sentence: "« Il ne reste donc rien que la valeur que nous **donnons nous-mêmes** à notre vie, non pas simplement par ce que nous faisons, mais aussi par ce que nous faisons qui soit ___, d'une manière si __indépendante de la nature__ que même l'existence de la nature ne puisse être fin qu'à cette condition. »"
     answer: "conforme à une fin"
     alt: []
-  - id: kant-cfj-methodologie-l7-q15
+  - id: kant-cfj-methodologie-l8-q15
     sentence: "« Il ne reste donc rien que la valeur que nous **donnons nous-mêmes** à notre vie, non pas simplement par ce que nous faisons, mais aussi par ce que nous faisons qui soit __conforme à une fin__, d'une manière si ___ que même l'existence de la nature ne puisse être fin qu'à cette condition. »"
     answer: "indépendante de la nature"
     alt: []
-  - id: kant-cfj-methodologie-l7-q16
+  - id: kant-cfj-methodologie-l8-q16
     sentence: "Le bonheur n'est pas un concept que l'homme tire de ses instincts, mais une simple ___ d'un état, qu'il forme lui-même et modifie sans cesse."
     answer: "Idée"
     alt: []
-  - id: kant-cfj-methodologie-l7-q17
+  - id: kant-cfj-methodologie-l8-q17
     sentence: "C'est se tromper que de croire que la nature a élu l'homme pour son ___ particulier : la peste, la faim, le froid l'atteignent comme les autres espèces."
     answer: "favori"
     alt: []
-  - id: kant-cfj-methodologie-l7-q18
+  - id: kant-cfj-methodologie-l8-q18
     sentence: "En tant que seul être sur terre qui possède un entendement, l'homme est le « ___ de la nature », mais il n'en est la fin dernière que de façon conditionnelle."
     answer: "seigneur"
     alt: []
-  - id: kant-cfj-methodologie-l7-q19
+  - id: kant-cfj-methodologie-l8-q19
     sentence: "La culture de l'___ est « la principale condition subjective de l'aptitude à réaliser des fins en général », mais elle ne suffit pas à diriger la volonté dans le choix de ses fins."
     answer: "habileté"
     alt: []
-  - id: kant-cfj-methodologie-l7-q20
+  - id: kant-cfj-methodologie-l8-q20
     sentence: "La discipline nous délivre des pulsions que la nature nous avait données comme « ___ » et dont nous avons fait des chaînes."
     answer: "fils conducteurs"
     alt: []
-  - id: kant-cfj-methodologie-l7-q21
+  - id: kant-cfj-methodologie-l8-q21
     sentence: "« L'habileté ne peut être bien développée dans l'espèce humaine que par la médiation de l'___ entre les hommes »"
     answer: "inégalité"
     alt: []
-  - id: kant-cfj-methodologie-l7-q22
+  - id: kant-cfj-methodologie-l8-q22
     sentence: "La condition formelle du plus grand développement des dispositions naturelles est une puissance légale opposée aux libertés en conflit, que Kant nomme ___."
     answer: "société civile"
     alt: []
-  - id: kant-cfj-methodologie-l7-q23
+  - id: kant-cfj-methodologie-l8-q23
     sentence: "Faute d'un tout cosmopolite, la ___ est inévitable : épreuve effroyable, elle est pourtant un mobile pour développer tous les talents qui servent à la culture."
     answer: "guerre"
     alt: []
-  - id: kant-cfj-methodologie-l7-q24
+  - id: kant-cfj-methodologie-l8-q24
     sentence: "Les beaux-arts et les sciences rendent l'homme, « sinon moralement meilleur, du moins plus ___ »."
     answer: "civilisé"
     alt: []
-  - id: kant-cfj-methodologie-l7-q25
+  - id: kant-cfj-methodologie-l8-q25
     sentence: "Selon la note d'Alain Renaut, Kant entend encore par « société civile », comme la tradition du droit naturel, ce que nous appelons l'___."
     answer: "État"
     alt: []
-  - id: kant-cfj-methodologie-l7-q26
+  - id: kant-cfj-methodologie-l8-q26
     sentence: "Dans la note du § 83, estimée d'après les fins que la nature nous assigne, la vie ne nous laisse jamais que des ___ en vue de fins finales indéterminées."
     answer: "moyens"
     alt: []
-  - id: kant-cfj-methodologie-l7-q27
+  - id: kant-cfj-methodologie-l8-q27
     sentence: "La nature ne peut donner à l'homme ni le bonheur, qu'il ne saurait atteindre, ni la moralité, qui est l'œuvre de sa liberté. Ce qu'elle peut produire en lui, c'est seulement l'___ à se proposer des fins : la culture."
     answer: "aptitude"
     alt: []
-- id: kant-cfj-methodologie-l8
+- id: kant-cfj-methodologie-l9
+  title: "Repérage : de la fin finale à la preuve morale (§ 84-87)"
+  notes: |-
+    Kant cherche la fin finale de la création, l'homme comme être moral (§ 84), montre que la théologie physique ne peut l'atteindre (§ 85), puis fonde sur elle la théologie morale (§ 86) et la preuve morale de l'existence de Dieu (§ 87).
+
+    | Paragraphe | Lieu | Ce qui s'y joue |
+    | la fin finale de la création | § 84 | l'homme comme noumène, sujet de la moralité |
+    | la théologie physique | § 85 | elle n'atteint pas la fin finale : une téléologie mal comprise |
+    | la théologie morale | § 86 | sans les hommes, la création serait un désert ; la volonté bonne donne sa valeur à l'existence |
+    | la preuve morale | § 87 | l'honnête homme sans Dieu ni vie future |
+  tables:
+  - table: paragraphe-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: kant-cfj-methodologie-l9-q1
+    sentence: "Dans la *Critique de la faculté de juger*, la formule « sans les hommes, la création entière serait un simple désert » se trouve au § ___."
+    answer: "86"
+    alt: ["§ 86"]
+  - id: kant-cfj-methodologie-l9-q2
+    sentence: "Dans la *Critique de la faculté de juger*, la formule « la théologie physique est donc une téléologie physique mal comprise » conclut le § ___."
+    answer: "85"
+    alt: ["§ 85"]
+  - id: kant-cfj-methodologie-l9-q3
+    sentence: "Dans la *Critique de la faculté de juger*, l'exemple de l'honnête homme, Spinoza, persuadé qu'il n'y a ni Dieu ni vie future, se trouve au § ___."
+    answer: "87"
+    alt: ["§ 87"]
+- id: kant-cfj-methodologie-l10
   title: "La fin finale : l'homme comme être moral (§ 84)"
   notes: |-
     Le § 84 franchit le pas que le § 83 préparait : de la **fin dernière de la nature** à la {violet}**fin finale**{/violet} de la création elle-même. {teal}« Fin finale est la fin qui n'a besoin d'aucune autre comme condition de sa possibilité. »{/teal} Sa réponse : {green}__l'homme, mais seulement comme noumène, sujet de la moralité__{/green}.
@@ -595,71 +638,71 @@ lessons:
     ! Fin dernière et fin finale ne s'opposent pas comme deux termes techniques figés (Alain Renaut juge qu'une opposition rigide relève d'« un kantisme scolaire, voire scholastique ») : c'est la différence entre l'homme comme terme de la nature et l'homme comme être libre qui compte.
     ! L'homme n'est pas fin finale par ce qu'il est naturellement, ni par son bonheur, mais comme sujet de la loi morale.
   points:
-  - id: kant-cfj-methodologie-l8-q1
+  - id: kant-cfj-methodologie-l10-q1
     sentence: "« Fin finale est la fin qui n'a besoin d'**___** comme __condition de sa possibilité__. »"
     answer: "aucune autre"
     alt: []
-  - id: kant-cfj-methodologie-l8-q2
+  - id: kant-cfj-methodologie-l10-q2
     sentence: "« Fin finale est la fin qui n'a besoin d'**aucune autre** comme ___. »"
     answer: "condition de sa possibilité"
     alt: []
-  - id: kant-cfj-methodologie-l8-q3
+  - id: kant-cfj-methodologie-l10-q3
     sentence: "« L'être de cette espèce est l'**___**, mais considéré comme __noumène__ ; il est le seul être de la nature dans lequel nous pouvons cependant, en vertu de sa constitution spécifique, reconnaître un pouvoir suprasensible (__la liberté__) »"
     answer: "homme"
     alt: []
-  - id: kant-cfj-methodologie-l8-q4
+  - id: kant-cfj-methodologie-l10-q4
     sentence: "« L'être de cette espèce est l'**homme**, mais considéré comme ___ ; il est le seul être de la nature dans lequel nous pouvons cependant, en vertu de sa constitution spécifique, reconnaître un pouvoir suprasensible (__la liberté__) »"
     answer: "noumène"
     alt: []
-  - id: kant-cfj-methodologie-l8-q5
+  - id: kant-cfj-methodologie-l10-q5
     sentence: "« L'être de cette espèce est l'**homme**, mais considéré comme __noumène__ ; il est le seul être de la nature dans lequel nous pouvons cependant, en vertu de sa constitution spécifique, reconnaître un pouvoir suprasensible (___) »"
     answer: "la liberté"
     alt: []
-  - id: kant-cfj-methodologie-l8-q6
+  - id: kant-cfj-methodologie-l10-q6
     sentence: "« on ne peut poser à nouveau la question de savoir pourquoi (*quem in finem*) il existe. Son existence contient en soi ___ »"
     answer: "la fin suprême"
     alt: []
-  - id: kant-cfj-methodologie-l8-q7
+  - id: kant-cfj-methodologie-l10-q7
     sentence: "« c'est uniquement en l'homme, mais même en lui seulement comme **___**, que se peut rencontrer la __législation inconditionnée__ à l'égard des fins »"
     answer: "sujet de la moralité"
     alt: []
-  - id: kant-cfj-methodologie-l8-q8
+  - id: kant-cfj-methodologie-l10-q8
     sentence: "« c'est uniquement en l'homme, mais même en lui seulement comme **sujet de la moralité**, que se peut rencontrer la ___ à l'égard des fins »"
     answer: "législation inconditionnée"
     alt: []
-  - id: kant-cfj-methodologie-l8-q9
+  - id: kant-cfj-methodologie-l10-q9
     sentence: "Si le simple mécanisme est admis comme fondement d'explication de la finalité, on ne peut pas demander ___ les choses du monde existent : la question est vide."
     answer: "pourquoi"
     alt: []
-  - id: kant-cfj-methodologie-l8-q10
+  - id: kant-cfj-methodologie-l10-q10
     sentence: "La fin finale ne peut être produite par la nature, parce qu'elle est ___, alors que tout fondement de détermination présent dans la nature est à son tour conditionné."
     answer: "inconditionnée"
     alt: []
-  - id: kant-cfj-methodologie-l8-q11
+  - id: kant-cfj-methodologie-l10-q11
     sentence: "Ce qui vaut de la nature matérielle vaut aussi de la nature ___ en nous : rien de ce que je suis comme être naturel ne peut être fin finale."
     answer: "pensante"
     alt: []
-  - id: kant-cfj-methodologie-l8-q12
+  - id: kant-cfj-methodologie-l10-q12
     sentence: "L'homme comme être moral peut se proposer comme fin suprême le ___ dans le monde."
     answer: "souverain bien"
     alt: []
-  - id: kant-cfj-methodologie-l8-q13
+  - id: kant-cfj-methodologie-l10-q13
     sentence: "Sans l'homme comme être moral, « la chaîne des fins subordonnées les unes aux autres ne serait pas complètement ___ »."
     answer: "fondée"
     alt: []
-  - id: kant-cfj-methodologie-l8-q14
+  - id: kant-cfj-methodologie-l10-q14
     sentence: "Selon la note du § 84, « l'homme ne pourrait être fin finale de la création que comme être ___ », le bonheur ne lui étant associé que comme une conséquence."
     answer: "moral"
     alt: []
-  - id: kant-cfj-methodologie-l8-q15
+  - id: kant-cfj-methodologie-l10-q15
     sentence: "Selon Alain Renaut, une opposition trop rigide entre fin dernière (*letzter Zweck*) et fin finale (*Endzweck*) relève d'« un kantisme ___, voire scholastique » : Kant lui-même emploie l'une pour l'autre."
     answer: "scolaire"
     alt: []
-  - id: kant-cfj-methodologie-l8-q16
+  - id: kant-cfj-methodologie-l10-q16
     sentence: "Le raisonnement du § 84 tient en trois temps : une fin finale doit être inconditionnée ; or tout ce qui est nature est conditionné ; seul l'homme, par la loi morale qu'il se donne, a une causalité inconditionnée. Il n'est donc fin finale que comme ___."
     answer: "noumène"
     alt: ["sujet de la moralité", "être moral"]
-- id: kant-cfj-methodologie-l9
+- id: kant-cfj-methodologie-l11
   title: "La théologie physique, une téléologie mal comprise (§ 85)"
   notes: |-
     Le § 85 examine si l'on peut conclure des fins de la nature à leur cause suprême, comme le veut la {violet}**théologie physique**{/violet}. Sa réponse : {red}__elle ne peut rien nous apprendre d'une fin finale__{/red} ; elle n'est qu'une **propédeutique** à la théologie, qui ne s'achève que par la morale.
@@ -674,51 +717,51 @@ lessons:
 
     ! Kant ne méprise pas la théologie physique : elle tourne utilement le regard vers une cause intelligente, mais elle ne peut à elle seule en déterminer le concept.
   points:
-  - id: kant-cfj-methodologie-l9-q1
+  - id: kant-cfj-methodologie-l11-q1
     sentence: "« Je disposerais certes d'un **___** pour des __fins dispersées__, mais nullement d'une **sagesse** pour une __fin finale__ »"
     answer: "entendement artiste"
     alt: []
-  - id: kant-cfj-methodologie-l9-q2
+  - id: kant-cfj-methodologie-l11-q2
     sentence: "« Je disposerais certes d'un **entendement artiste** pour des ___, mais nullement d'une **sagesse** pour une __fin finale__ »"
     answer: "fins dispersées"
     alt: []
-  - id: kant-cfj-methodologie-l9-q3
+  - id: kant-cfj-methodologie-l11-q3
     sentence: "« Je disposerais certes d'un **entendement artiste** pour des __fins dispersées__, mais nullement d'une **___** pour une __fin finale__ »"
     answer: "sagesse"
     alt: []
-  - id: kant-cfj-methodologie-l9-q4
+  - id: kant-cfj-methodologie-l11-q4
     sentence: "« Je disposerais certes d'un **entendement artiste** pour des __fins dispersées__, mais nullement d'une **sagesse** pour une ___ »"
     answer: "fin finale"
     alt: []
-  - id: kant-cfj-methodologie-l9-q5
+  - id: kant-cfj-methodologie-l11-q5
     sentence: "« En ce sens, la théologie physique est donc une ___, qui ne peut servir que de **préparation** (propédeutique) à la théologie »"
     answer: "téléologie physique mal comprise"
     alt: []
-  - id: kant-cfj-methodologie-l9-q6
+  - id: kant-cfj-methodologie-l11-q6
     sentence: "« En ce sens, la théologie physique est donc une __téléologie physique mal comprise__, qui ne peut servir que de **___** (propédeutique) à la théologie »"
     answer: "préparation"
     alt: []
-  - id: kant-cfj-methodologie-l9-q7
+  - id: kant-cfj-methodologie-l11-q7
     sentence: "La théologie physique conclut à la cause suprême à partir des fins de la nature ; la théologie ___ part de ce que la loi morale prescrit aux êtres raisonnables."
     answer: "morale"
     alt: ["éthique"]
-  - id: kant-cfj-methodologie-l9-q8
+  - id: kant-cfj-methodologie-l11-q8
     sentence: "La théologie physique ne peut rien révéler d'une fin finale, car elle considère des relations toujours ___ dans la nature."
     answer: "conditionnées"
     alt: []
-  - id: kant-cfj-methodologie-l9-q9
+  - id: kant-cfj-methodologie-l11-q9
     sentence: "Pour conclure de la nature à une intelligence infinie, il faudrait supposer en soi l'___, pour voir toutes les fins de la nature liées entre elles et comparer ce plan à tous les plans possibles."
     answer: "omniscience"
     alt: []
-  - id: kant-cfj-methodologie-l9-q10
+  - id: kant-cfj-methodologie-l11-q10
     sentence: "Les ___, trouvant mêlés dans le monde le bien et le mal, pensaient leurs dieux puissants mais limités, et étaient en cela conséquents."
     answer: "Anciens"
     alt: []
-  - id: kant-cfj-methodologie-l9-q11
+  - id: kant-cfj-methodologie-l11-q11
     sentence: "Si elle renonçait à ses emprunts inaperçus à la téléologie morale, la téléologie physique ne pourrait fonder par elle-même qu'une ___."
     answer: "démonologie"
     alt: []
-- id: kant-cfj-methodologie-l10
+- id: kant-cfj-methodologie-l12
   title: "Ce qui donne sa valeur à l'existence : la volonté bonne (§ 86)"
   notes: |-
     Le § 86 fonde la **théologie morale** sur un jugement que fait même l'entendement le plus commun : {green}__sans les hommes, le monde n'aurait pas de fin, et ce qui donne sa valeur à l'existence de l'homme n'est ni sa connaissance ni son bonheur, mais sa volonté bonne__{/green}.
@@ -735,59 +778,59 @@ lessons:
 
     ! Ce n'est pas l'homme comme espèce naturelle qui donne au monde sa valeur, mais l'homme comme volonté libre et bonne.
   points:
-  - id: kant-cfj-methodologie-l10-q1
+  - id: kant-cfj-methodologie-l12-q1
     sentence: "« sans les **___**, la création entière serait __un simple désert__, inutile et dépourvu de **fin finale**. »"
     answer: "hommes"
     alt: []
-  - id: kant-cfj-methodologie-l10-q2
+  - id: kant-cfj-methodologie-l12-q2
     sentence: "« sans les **hommes**, la création entière serait ___, inutile et dépourvu de **fin finale**. »"
     answer: "un simple désert"
     alt: []
-  - id: kant-cfj-methodologie-l10-q3
+  - id: kant-cfj-methodologie-l12-q3
     sentence: "« sans les **hommes**, la création entière serait __un simple désert__, inutile et dépourvu de **___**. »"
     answer: "fin finale"
     alt: []
-  - id: kant-cfj-methodologie-l10-q4
+  - id: kant-cfj-methodologie-l12-q4
     sentence: "« la valeur que **___**, et qui consiste dans __ce qu'il fait__, dans la manière et dans les principes d'après lesquels il agit, non comme membre de la nature, mais dans la __liberté__ de son pouvoir de désirer, c'est-à-dire __une volonté bonne__ »"
     answer: "seul il peut se donner lui-même"
     alt: []
-  - id: kant-cfj-methodologie-l10-q5
+  - id: kant-cfj-methodologie-l12-q5
     sentence: "« la valeur que **seul il peut se donner lui-même**, et qui consiste dans ___, dans la manière et dans les principes d'après lesquels il agit, non comme membre de la nature, mais dans la __liberté__ de son pouvoir de désirer, c'est-à-dire __une volonté bonne__ »"
     answer: "ce qu'il fait"
     alt: []
-  - id: kant-cfj-methodologie-l10-q6
+  - id: kant-cfj-methodologie-l12-q6
     sentence: "« la valeur que **seul il peut se donner lui-même**, et qui consiste dans __ce qu'il fait__, dans la manière et dans les principes d'après lesquels il agit, non comme membre de la nature, mais dans la ___ de son pouvoir de désirer, c'est-à-dire __une volonté bonne__ »"
     answer: "liberté"
     alt: []
-  - id: kant-cfj-methodologie-l10-q7
+  - id: kant-cfj-methodologie-l12-q7
     sentence: "« la valeur que **seul il peut se donner lui-même**, et qui consiste dans __ce qu'il fait__, dans la manière et dans les principes d'après lesquels il agit, non comme membre de la nature, mais dans la __liberté__ de son pouvoir de désirer, c'est-à-dire ___ »"
     answer: "une volonté bonne"
     alt: []
-  - id: kant-cfj-methodologie-l10-q8
+  - id: kant-cfj-methodologie-l12-q8
     sentence: "Si la contemplation du monde ne nous représentait que des choses sans fin finale, le fait que le monde soit ___ ne saurait donner à son existence une valeur."
     answer: "connu"
     alt: []
-  - id: kant-cfj-methodologie-l10-q9
+  - id: kant-cfj-methodologie-l12-q9
     sentence: "Ce n'est pas le bien-être, la jouissance, bref le ___, qui constitue ce d'après quoi nous apprécions la valeur absolue de l'existence."
     answer: "bonheur"
     alt: []
-  - id: kant-cfj-methodologie-l10-q10
+  - id: kant-cfj-methodologie-l12-q10
     sentence: "Un homme plein de talent et utile à la communauté, mais sans volonté bonne, est, si on le considère dans son intériorité, « un objet de ___ »."
     answer: "mépris"
     alt: []
-  - id: kant-cfj-methodologie-l10-q11
+  - id: kant-cfj-methodologie-l12-q11
     sentence: "La téléologie morale pense la cause du monde comme ___, pour que même ce qu'il y a de plus intérieur dans l'intention ne lui soit pas caché."
     answer: "omnisciente"
     alt: ["omniscient"]
-  - id: kant-cfj-methodologie-l10-q12
+  - id: kant-cfj-methodologie-l12-q12
     sentence: "« la téléologie morale comble les lacunes de la téléologie ___ et constitue la première fondation d'une théologie »"
     answer: "physique"
     alt: []
-  - id: kant-cfj-methodologie-l10-q13
+  - id: kant-cfj-methodologie-l12-q13
     sentence: "Le § 86 écarte deux réponses à la question de la valeur de l'existence : la connaissance du monde, qui suppose déjà une fin finale, et le bonheur, qui ne dit pas pourquoi l'homme existe. Reste ce que l'homme fait par sa ___."
     answer: "volonté bonne"
     alt: ["liberté"]
-- id: kant-cfj-methodologie-l11
+- id: kant-cfj-methodologie-l13
   title: "La preuve morale et l'honnête homme sans Dieu (§ 87)"
   notes: |-
     Le § 87 formule la **preuve morale** de l'existence de Dieu. Elle ne part pas de la nature, mais de la loi morale en nous : {green}__la loi nous commande de viser une fin finale, le souverain bien, que nous ne pouvons penser possible sans admettre un auteur moral du monde__{/green}.
@@ -805,71 +848,99 @@ lessons:
     ! La preuve morale ne fonde pas le devoir sur Dieu : elle va du devoir à Dieu, et le devoir resterait obligatoire sans lui.
     ! Kant ne fait pas le procès de Spinoza : il en fait au contraire l'exemple d'un homme moralement irréprochable.
   points:
-  - id: kant-cfj-methodologie-l11-q1
+  - id: kant-cfj-methodologie-l13-q1
     sentence: "« Nous pouvons donc poser l'hypothèse d'un **___** (par exemple, __Spinoza__) qui est fermement persuadé qu'il n'y a pas de Dieu et (puisque, du point de vue de l'objet de la moralité, cela a la même conséquence) qu'il n'y a pas non plus de __vie future__ »"
     answer: "honnête homme"
     alt: []
-  - id: kant-cfj-methodologie-l11-q2
+  - id: kant-cfj-methodologie-l13-q2
     sentence: "« Nous pouvons donc poser l'hypothèse d'un **honnête homme** (par exemple, ___) qui est fermement persuadé qu'il n'y a pas de Dieu et (puisque, du point de vue de l'objet de la moralité, cela a la même conséquence) qu'il n'y a pas non plus de __vie future__ »"
     answer: "Spinoza"
     alt: []
-  - id: kant-cfj-methodologie-l11-q3
+  - id: kant-cfj-methodologie-l13-q3
     sentence: "« Nous pouvons donc poser l'hypothèse d'un **honnête homme** (par exemple, __Spinoza__) qui est fermement persuadé qu'il n'y a pas de Dieu et (puisque, du point de vue de l'objet de la moralité, cela a la même conséquence) qu'il n'y a pas non plus de ___ »"
     answer: "vie future"
     alt: []
-  - id: kant-cfj-methodologie-l11-q4
+  - id: kant-cfj-methodologie-l13-q4
     sentence: "« soumis par la nature, qui ne prête pas attention à cette **___**, à tous les maux de la misère, des maladies et de __la mort prématurée__, comme c'est le cas des __autres animaux de la terre__ »"
     answer: "dignité"
     alt: []
-  - id: kant-cfj-methodologie-l11-q5
+  - id: kant-cfj-methodologie-l13-q5
     sentence: "« soumis par la nature, qui ne prête pas attention à cette **dignité**, à tous les maux de la misère, des maladies et de ___, comme c'est le cas des __autres animaux de la terre__ »"
     answer: "la mort prématurée"
     alt: []
-  - id: kant-cfj-methodologie-l11-q6
+  - id: kant-cfj-methodologie-l13-q6
     sentence: "« soumis par la nature, qui ne prête pas attention à cette **dignité**, à tous les maux de la misère, des maladies et de __la mort prématurée__, comme c'est le cas des ___ »"
     answer: "autres animaux de la terre"
     alt: []
-  - id: kant-cfj-methodologie-l11-q7
+  - id: kant-cfj-methodologie-l13-q7
     sentence: "« jusqu'à ce qu'une **___** les engloutisse tous ensemble (honnêtes ou malhonnêtes, cela est ici sans importance) et les renvoie, eux qui pouvaient croire être fin finale de la création, dans __le gouffre du chaos__ dépourvu de toute fin qui est celui de __la matière__ d'où ils étaient tirés »"
     answer: "vaste tombe"
     alt: []
-  - id: kant-cfj-methodologie-l11-q8
+  - id: kant-cfj-methodologie-l13-q8
     sentence: "« jusqu'à ce qu'une **vaste tombe** les engloutisse tous ensemble (honnêtes ou malhonnêtes, cela est ici sans importance) et les renvoie, eux qui pouvaient croire être fin finale de la création, dans ___ dépourvu de toute fin qui est celui de __la matière__ d'où ils étaient tirés »"
     answer: "le gouffre du chaos"
     alt: []
-  - id: kant-cfj-methodologie-l11-q9
+  - id: kant-cfj-methodologie-l13-q9
     sentence: "« jusqu'à ce qu'une **vaste tombe** les engloutisse tous ensemble (honnêtes ou malhonnêtes, cela est ici sans importance) et les renvoie, eux qui pouvaient croire être fin finale de la création, dans __le gouffre du chaos__ dépourvu de toute fin qui est celui de ___ d'où ils étaient tirés »"
     answer: "la matière"
     alt: []
-  - id: kant-cfj-methodologie-l11-q10
+  - id: kant-cfj-methodologie-l13-q10
     sentence: "La téléologie morale, déterminée a priori en nous, n'a besoin d'aucune cause intelligente extérieure pour sa légalité intérieure, pas plus que les propriétés des figures ___."
     answer: "géométriques"
     alt: []
-  - id: kant-cfj-methodologie-l11-q11
+  - id: kant-cfj-methodologie-l13-q11
     sentence: "Le souverain bien est le bonheur des êtres raisonnables sous la condition de leur accord avec la loi morale, qui les rend ___ d'être heureux."
     answer: "dignes"
     alt: []
-  - id: kant-cfj-methodologie-l11-q12
+  - id: kant-cfj-methodologie-l13-q12
     sentence: "L'argument moral ne démontre pas Dieu au sceptique, mais lui montre que, « s'il veut penser de façon moralement ___ », il doit admettre cette proposition parmi les maximes de sa raison pratique."
     answer: "conséquente"
     alt: []
-  - id: kant-cfj-methodologie-l11-q13
+  - id: kant-cfj-methodologie-l13-q13
     sentence: "Celui qui, persuadé que Dieu n'existe pas, tiendrait les lois du devoir pour imaginaires serait à ses propres yeux un ___."
     answer: "vaurien"
     alt: []
-  - id: kant-cfj-methodologie-l11-q14
+  - id: kant-cfj-methodologie-l13-q14
     sentence: "L'honnête homme sans Dieu peut admettre l'existence d'un auteur moral du monde, du point de vue ___, puisqu'il n'y a là rien de contradictoire."
     answer: "pratique"
     alt: []
-  - id: kant-cfj-methodologie-l11-q15
+  - id: kant-cfj-methodologie-l13-q15
     sentence: "Sans Dieu, ce qu'on devrait abandonner n'est pas l'obéissance à la loi morale, qui commande inconditionnellement, mais l'intention de réaliser dans le monde la ___."
     answer: "fin finale"
     alt: []
-  - id: kant-cfj-methodologie-l11-q16
+  - id: kant-cfj-methodologie-l13-q16
     sentence: "L'argument du § 87 part du devoir : la loi morale nous fait viser le souverain bien ; or la nature, indifférente au mérite, ne le garantit pas. Pour le penser possible, il faut admettre un auteur ___ du monde."
     answer: "moral"
     alt: []
-- id: kant-cfj-methodologie-l12
+- id: kant-cfj-methodologie-l14
+  title: "Repérage : la portée de la preuve morale (§ 88-91)"
+  notes: |-
+    Kant fixe la portée de la preuve morale : sa validité est limitée (§ 88), et cette limite a son utilité (§ 89) ; elle ne vaut que pour nous (§ 90), comme croyance, non comme savoir (§ 91).
+
+    | Paragraphe | Lieu | Ce qui s'y joue |
+    | la limitation de la preuve | § 88 | une réalité subjectivement pratique |
+    | l'utilité de l'argument moral | § 89 | contre la théosophie et la démonologie ; l'âme connue dans cette vie |
+    | la modalité de l'adhésion | § 90 | une preuve pour nous, hommes, non sur l'objet en soi |
+    | la croyance pratique | § 91 | opinion, savoir, croyance |
+  tables:
+  - table: paragraphe-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: kant-cfj-methodologie-l14-q1
+    sentence: "Dans la *Critique de la faculté de juger*, la distinction entre opinion, savoir et croyance se trouve au § ___."
+    answer: "91"
+    alt: ["§ 91"]
+  - id: kant-cfj-methodologie-l14-q2
+    sentence: "Dans la *Critique de la faculté de juger*, la psychologie est dite « une simple anthropologie du sens interne » au § ___."
+    answer: "89"
+    alt: ["§ 89"]
+  - id: kant-cfj-methodologie-l14-q3
+    sentence: "Dans la *Critique de la faculté de juger*, la distinction entre une preuve *kat' alêtheian* et une preuve *kat' anthrôpon* se trouve au § ___."
+    answer: "90"
+    alt: ["§ 90"]
+- id: kant-cfj-methodologie-l15
   title: "La portée de la preuve morale : croire, non savoir (§ 88-91)"
   notes: |-
     Les § 88 à 91 fixent la **portée** de la preuve morale. Elle ne donne {red}aucun savoir{/red} de Dieu ni de l'âme : {green}__elle a une réalité pratique, pour nous, et fonde une croyance, non une connaissance__{/green}. Cette limitation, loin d'être une perte, protège la religion de ses dérives.
@@ -884,47 +955,47 @@ lessons:
 
     ! La limitation de la preuve n'est pas un scepticisme : elle donne une certitude pratique pleine à ce dont il n'y a pas de savoir théorique.
   points:
-  - id: kant-cfj-methodologie-l12-q1
+  - id: kant-cfj-methodologie-l15-q1
     sentence: "« L'Idée d'une **___** dans l'usage de la liberté d'après des lois morales a ainsi une réalité __subjectivement pratique__. »"
     answer: "fin finale"
     alt: []
-  - id: kant-cfj-methodologie-l12-q2
+  - id: kant-cfj-methodologie-l15-q2
     sentence: "« L'Idée d'une **fin finale** dans l'usage de la liberté d'après des lois morales a ainsi une réalité ___. »"
     answer: "subjectivement pratique"
     alt: []
-  - id: kant-cfj-methodologie-l12-q3
+  - id: kant-cfj-methodologie-l15-q3
     sentence: "« la psychologie rationnelle ne peut jamais devenir **___** comme science augmentant la connaissance [...] bien au contraire est-elle une simple __anthropologie du sens interne__, c'est-à-dire connaissance de notre moi pensant __dans la vie__ »"
     answer: "pneumatologie"
     alt: []
-  - id: kant-cfj-methodologie-l12-q4
+  - id: kant-cfj-methodologie-l15-q4
     sentence: "« la psychologie rationnelle ne peut jamais devenir **pneumatologie** comme science augmentant la connaissance [...] bien au contraire est-elle une simple ___, c'est-à-dire connaissance de notre moi pensant __dans la vie__ »"
     answer: "anthropologie du sens interne"
     alt: []
-  - id: kant-cfj-methodologie-l12-q5
+  - id: kant-cfj-methodologie-l15-q5
     sentence: "« la psychologie rationnelle ne peut jamais devenir **pneumatologie** comme science augmentant la connaissance [...] bien au contraire est-elle une simple __anthropologie du sens interne__, c'est-à-dire connaissance de notre moi pensant ___ »"
     answer: "dans la vie"
     alt: []
-  - id: kant-cfj-methodologie-l12-q6
+  - id: kant-cfj-methodologie-l15-q6
     sentence: "Limiter les Idées du suprasensible à l'usage pratique évite que la théologie ne se perde dans une ___ ou ne sombre dans la démonologie."
     answer: "théosophie"
     alt: []
-  - id: kant-cfj-methodologie-l12-q7
+  - id: kant-cfj-methodologie-l15-q7
     sentence: "Cette limitation évite aussi que la religion n'aboutisse à la ___, délire qui croit sentir d'autres êtres suprasensibles et agir sur eux, ou à l'idolâtrie."
     answer: "théurgie"
     alt: []
-  - id: kant-cfj-methodologie-l12-q8
+  - id: kant-cfj-methodologie-l15-q8
     sentence: "Une preuve qui établit ce que l'objet est pour nous, hommes en général, est dite *kat' ___*, par opposition à celle qui établit ce qu'il est en soi."
     answer: "anthrôpon"
     alt: ["anthropon"]
-  - id: kant-cfj-methodologie-l12-q9
+  - id: kant-cfj-methodologie-l15-q9
     sentence: "Les choses connaissables sont de trois sortes : celles qui donnent matière à opinion, les faits, et les objets de ___."
     answer: "croyance"
     alt: []
-  - id: kant-cfj-methodologie-l12-q10
+  - id: kant-cfj-methodologie-l15-q10
     sentence: "On ne peut avoir d'___ sur les objets des simples Idées de la raison, car aucune expérience possible ne peut les présenter."
     answer: "opinion"
     alt: []
-  - id: kant-cfj-methodologie-l12-q11
+  - id: kant-cfj-methodologie-l15-q11
     sentence: "Le Bien du monde que nous devons promouvoir unit deux éléments : la moralité, qui dépend de nous, et le ___, qui dépend de la constitution de la nature."
     answer: "bonheur"
     alt: []

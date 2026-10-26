@@ -148,6 +148,17 @@ les corriger.
 
 § 3 à § 6 de `cours-traite`, sans changement de fond. Ce qui change :
 
+- **Une unité par grande section de l'œuvre**, celles que l'auteur
+  distingue lui-même (pour la *Critique de la faculté de juger
+  téléologique* : Analytique, Dialectique, Méthodologie, trois unités
+  `kant-cfj-analytique`, `kant-cfj-dialectique`, `kant-cfj-methodologie`).
+  Dans chacune, comme au traité 2 de Plotin : **un repérage général** de
+  4 à 6 grands mouvements, puis, **juste avant chaque mouvement** de
+  plusieurs chapitres ou paragraphes, **un sous-repérage** qui ne porte que
+  sur lui. Jamais un repérage unique d'une ligne par paragraphe pour toute
+  une section (13 lignes pour la Méthodologie : trop long, à la demande de
+  l'utilisateur, 2026-10-27). Un mouvement de deux paragraphes reçoit un
+  sous-repérage d'une ligne par argument (trois lignes au moins).
 - **Les repères de la colonne Lieu** du plan doivent être reconnus par le
   moteur comme tableau de structure (`locationKey` dans
   `src/engine/exercises.ts`), dans un seul format par tableau, rangés dans
@@ -172,7 +183,7 @@ les corriger.
    « Contenu valide », puis `texte.py verifie` (aucune citation introuvable)
    et `texte.py reprises` (rien de repris sans guillemets) si l'on a le PDF.
 2. **Le fichier** : `content/courses/<cours>/units/<auteur>-<oeuvre>[-<partie>].yaml`
-   (`aristote-de-l-ame-2`, `kant-cfj-teleologie`), en tête un commentaire
+   (`aristote-de-l-ame-2`, `kant-cfj-analytique`), en tête un commentaire
    qui dit la source (édition, traduction, notebook) ; `id` identique au nom
    du fichier ; `title` « Aristote, *De l'âme*, livre II » ; `subtitle` ce
    que la partie établit ; `icon: compass`, `color` celle de la piste ;

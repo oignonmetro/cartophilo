@@ -1,0 +1,869 @@
+# Cours d'une œuvre (skill cours-oeuvre, piste Œuvres de La vie, voir
+# content/philosophie.md) : Kant, Critique de la faculté de juger, seconde partie,
+# Critique de la faculté de juger téléologique, Dialectique, § 69-78.
+# Citations : traduction d'Alain Renaut, GF-Flammarion ; repères : les
+# paragraphes de Kant. Analyse recoupée avec le notebook NotebookLM « Kant : la vie »
+# (https://notebook.google.com/notebook/1fb869d6-c4f2-431f-899f-1ced4594c671),
+# dont chaque citation a été vérifiée sur la traduction.
+
+id: kant-cfj-dialectique
+title: "Kant : Critique de la faculté de juger téléologique, la Dialectique (§ 69-78)"
+subtitle: "Mécanisme ou finalité : une antinomie de notre jugement"
+icon: compass
+color: sky
+group: "Kant : Critique de la faculté de juger"
+lessons:
+- id: kant-cfj-dialectique-l1
+  title: "Repérage : le plan de la Dialectique (§ 69-78)"
+  notes: |-
+    La **Dialectique de la faculté de juger téléologique** affronte le conflit que l'Analytique a fait naître : la nature doit être jugée d'après le mécanisme, et pourtant certains de ses produits ne peuvent l'être que d'après des fins. Sa réponse : {green}__mécanisme et finalité ne se contredisent que si l'on prend des maximes de notre jugement pour des lois des choses__{/green} ; leur dualité tient à notre entendement, et leur accord est renvoyé au {violet}suprasensible{/violet}.
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | poser l'antinomie et en préparer la solution | § 69-71 | mécanisme et finalité ne se contredisent que si l'on prend des maximes de la réflexion pour des lois des choses |
+    | réfuter les systèmes dogmatiques | § 72-74 | ni le hasard, ni la fatalité, ni la matière vivante, ni le Dieu créateur ne peuvent expliquer la finalité, car son concept ne se démontre pas |
+    | fonder la solution sur notre entendement | § 75-77 | nous ne pouvons penser les êtres organisés que par une cause intelligente parce que notre entendement va des parties au tout |
+    | subordonner le mécanisme à la téléologie | § 78 | il faut expliquer le vivant mécaniquement aussi loin que possible, en subordonnant ce mécanisme à la finalité |
+
+    ! La Dialectique ne prouve ni l'existence de Dieu ni l'insuffisance réelle du mécanisme : elle établit ce que notre faculté de juger doit penser, et pourquoi.
+  tables:
+  - table: mouvement-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: kant-cfj-dialectique-l1-q1
+    sentence: "Dans la *Critique de la faculté de juger téléologique*, la Dialectique occupe les § ___ à 78, avant l'Appendice consacré à la Méthodologie."
+    answer: "69"
+    alt: ["§ 69"]
+  - id: kant-cfj-dialectique-l1-q2
+    sentence: "Dans la Dialectique de la faculté de juger téléologique, les § 72 à 74 réfutent les ___ qui prétendent trancher la question de la finalité de la nature (hasard, fatalité, hylozoïsme, théisme)."
+    answer: "systèmes dogmatiques"
+    alt: ["systèmes"]
+  - id: kant-cfj-dialectique-l1-q3
+    sentence: "Dans la Dialectique de la faculté de juger téléologique, la réunion des deux principes, qui __subordonne le mécanisme__ à la téléologie, est l'objet du § ___, qui la clôt."
+    answer: "78"
+    alt: ["§ 78"]
+- id: kant-cfj-dialectique-l2
+  title: "Repérage : l'antinomie et sa préparation (§ 69-71)"
+  notes: |-
+    Kant explique d'abord pourquoi une antinomie est possible dans la faculté de juger (§ 69), la présente (§ 70), puis en désigne la source et prépare sa résolution (§ 71).
+
+    | Paragraphe | Lieu | Ce qui s'y joue |
+    | ce qu'est une antinomie de la faculté de juger | § 69 | seule la faculté de juger réfléchissante, qui se donne ses maximes, peut entrer en conflit avec elle-même |
+    | la présentation de l'antinomie | § 70 | mécanisme et causes finales : des maximes compatibles, des principes constitutifs contradictoires |
+    | la préparation de la solution | § 71 | l'apparence d'antinomie vient de la confusion du réfléchissant et du déterminant |
+  tables:
+  - table: paragraphe-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: kant-cfj-dialectique-l2-q1
+    sentence: "Dans la *Critique de la faculté de juger*, la thèse et l'antithèse de l'antinomie de la faculté de juger téléologique sont énoncées au § ___."
+    answer: "70"
+    alt: ["§ 70"]
+  - id: kant-cfj-dialectique-l2-q2
+    sentence: "Dans la *Critique de la faculté de juger*, le paragraphe intitulé « Préparation à la résolution de l'antinomie présentée ci-dessus » est le § ___."
+    answer: "71"
+    alt: ["§ 71"]
+  - id: kant-cfj-dialectique-l2-q3
+    sentence: "Dans la *Critique de la faculté de juger*, l'explication de ce qu'est une antinomie de la faculté de juger, et pourquoi la faculté de juger déterminante n'en a pas, se trouve au § ___."
+    answer: "69"
+    alt: ["§ 69"]
+- id: kant-cfj-dialectique-l3
+  title: "L'antinomie du mécanisme et des causes finales (§ 69-70)"
+  notes: |-
+    Les § 69 et 70 ouvrent la Dialectique. Le § 69 explique **pourquoi une antinomie est possible** dans la faculté de juger, le § 70 la **présente** : {green}__tant qu'elles restent des maximes de la réflexion, la maxime du mécanisme et celle des causes finales ne se contredisent pas__{/green} ; {red}elles ne se contredisent que si on les prend pour des principes de la possibilité des choses{/red}.
+
+    **La faculté de juger déterminante ne peut avoir d'antinomie.** Elle {teal}« n'a pas par elle-même de principes qui fondent des concepts d'objets »{/teal} : elle se contente de **subsumer** le particulier sous les lois que lui fournit l'entendement. Or une antinomie est un conflit entre des principes : une faculté qui ne fait qu'appliquer des règles reçues d'ailleurs ne peut entrer en conflit avec elle-même. Si contradiction il y avait, elle serait dans la législation qu'elle applique, non en elle.
+
+    **La faculté de juger réfléchissante, elle, se donne ses principes.** Elle doit subsumer {teal}« sous une loi qui n'est pas encore donnée »{/teal} : face à un particulier pour lequel aucun concept ne suffit, elle doit {coral}se servir à elle-même de principe{/coral}. Ce principe n'est pas objectif, c'est une **maxime**, subjective mais nécessaire pour connaître la nature dans ses lois empiriques. Une faculté qui se prescrit ses propres maximes (Renaut parle d'{violet}héautonomie{/violet}) peut s'en donner deux qui semblent s'opposer : d'où une {coral}« dialectique naturelle et une apparence inévitable qu'il faut dévoiler et dissoudre »{/coral}.
+
+    **Les deux maximes ont deux sources.** Pour les lois universelles de la matière, l'entendement fournit des principes objectifs. Mais les lois particulières sont si diverses que la réflexion a besoin d'un fil conducteur. L'une de ses maximes lui est {teal}« fournie a priori par le simple entendement »{/teal} : le mécanisme ; l'autre est {teal}« suscitée par des expériences particulières qui mettent en jeu la raison »{/teal} : les causes finales, que provoque la rencontre des êtres organisés.
+
+    | Forme | Thèse | Antithèse |
+    | maxime | « Toute production de choses matérielles et de leurs formes doit être jugée comme possible d'après des lois simplement mécaniques. » | « Quelques produits de la nature matérielle ne peuvent pas être jugés comme possibles d'après des lois simplement mécaniques » |
+    | principe constitutif | « Toute production de choses matérielles est possible d'après des lois simplement mécaniques. » | « Quelques productions de ces choses ne sont pas possibles d'après des lois simplement mécaniques. » |
+
+    **Sous forme constitutive, elles se contredisent.** Si l'on en fait des principes de la possibilité des objets, {red}« l'une des deux serait nécessairement fausse »{/red} : ce serait une contradiction dans la législation de la raison, non plus une antinomie de la faculté de juger. Mais la raison {coral}ne peut démontrer ni l'une ni l'autre{/coral} : pour savoir ce qui est possible ou non selon des lois que seule l'expérience nous fait connaître, il faudrait un principe a priori que nous n'avons pas.
+
+    **Sous forme de maximes, elles ne se contredisent pas.** Dire {teal}« je dois juger tous les événements survenant dans la nature matérielle [...] selon des lois simplement mécaniques »{/teal}, ce n'est pas dire {red}qu'ils ne sont possibles que par lui{/red} ; c'est seulement dire qu'il faut {teal}« explorer ce principe aussi loin que je le puis »{/teal}, car sans lui {teal}« il ne peut y avoir aucune véritable connaissance de la nature »{/teal}. Cela n'empêche pas, devant certaines formes, de réfléchir d'après un autre principe, celui des causes finales. Une règle qui prescrit de chercher partout le mécanisme ne contredit pas une règle qui prescrit de juger certains produits par des fins **là où le mécanisme ne suffit pas à notre esprit**. Ce qui reste établi, c'est seulement que la raison humaine, en suivant le mécanisme, {coral}« ne pourra jamais découvrir le moindre fondement de ce qui constitue ce qu'il y a de spécifique dans une fin naturelle »{/coral}.
+
+    **Leur unité n'est pas exclue, seulement inaccessible.** Kant laisse un point {coral}« dans l'indécision »{/coral} : peut-être mécanisme et finalité se rejoignent-ils en un seul principe dans le fond de la nature, qui nous est inconnu ; nous sommes seulement incapables d'opérer nous-mêmes cette réunion.
+
+    ! L'antithèse n'autorise pas à abandonner la recherche mécanique : il faut la poursuivre aussi loin qu'on le peut.
+    ! À la différence des antinomies de la raison pure, thèse et antithèse portent ici sur les mêmes objets, les phénomènes : la solution ne peut consister à assigner l'une aux phénomènes et l'autre aux choses en soi.
+  tables:
+  - table: forme-these-antithese
+    exercises:
+    - {kind: cell, column: Forme}
+    - {kind: cell, column: Forme}
+  points:
+  - id: kant-cfj-dialectique-l3-q1
+    sentence: "« La faculté de juger déterminante n'a pas par elle-même de **___** qui fondent des concepts d'objets. Elle n'est pas __autonomie__ ; car elle se borne à **subsumer** sous des lois données ou des concepts en tant que principes. »"
+    answer: "principes"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q2
+    sentence: "« La faculté de juger déterminante n'a pas par elle-même de **principes** qui fondent des concepts d'objets. Elle n'est pas ___ ; car elle se borne à **subsumer** sous des lois données ou des concepts en tant que principes. »"
+    answer: "autonomie"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q3
+    sentence: "« La faculté de juger déterminante n'a pas par elle-même de **principes** qui fondent des concepts d'objets. Elle n'est pas __autonomie__ ; car elle se borne à **___** sous des lois données ou des concepts en tant que principes. »"
+    answer: "subsumer"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q4
+    sentence: "« La première de ces maximes est la thèse : Toute production de choses matérielles et de leurs formes ___ comme possible d'après des lois simplement **mécaniques**. »"
+    answer: "doit être jugée"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q5
+    sentence: "« La première de ces maximes est la thèse : Toute production de choses matérielles et de leurs formes __doit être jugée__ comme possible d'après des lois simplement **___**. »"
+    answer: "mécaniques"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q6
+    sentence: "« La deuxième maxime est l'antithèse : Quelques produits de la nature matérielle ___ comme possibles d'après des lois simplement mécaniques (le jugement qui les apprécie requiert une tout autre loi de la causalité, à savoir celle des **causes finales**). »"
+    answer: "ne peuvent pas être jugés"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q7
+    sentence: "« La deuxième maxime est l'antithèse : Quelques produits de la nature matérielle __ne peuvent pas être jugés__ comme possibles d'après des lois simplement mécaniques (le jugement qui les apprécie requiert une tout autre loi de la causalité, à savoir celle des **___**). »"
+    answer: "causes finales"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q8
+    sentence: "« je ne dis pas par là qu'ils ne sont possibles ___ (à l'exclusion de toute autre espèce de causalité) - mais cela veut seulement indiquer que je dois, dans chaque cas, **réfléchir** sur ces événements et ces formes d'après le principe du simple mécanisme de la nature »"
+    answer: "que d'après ces lois"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q9
+    sentence: "« je ne dis pas par là qu'ils ne sont possibles __que d'après ces lois__ (à l'exclusion de toute autre espèce de causalité) - mais cela veut seulement indiquer que je dois, dans chaque cas, **___** sur ces événements et ces formes d'après le principe du simple mécanisme de la nature »"
+    answer: "réfléchir"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q10
+    sentence: "La faculté de juger réfléchissante doit subsumer sous une loi qui n'est pas encore ___ : elle doit donc se servir à elle-même de principe."
+    answer: "donnée"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q11
+    sentence: "Le conflit des maximes de la faculté de juger réfléchissante est une dialectique naturelle et une apparence ___ qu'il faut dévoiler et dissoudre dans la Critique."
+    answer: "inévitable"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q12
+    sentence: "La faculté de juger part de deux maximes, « dont l'une lui est fournie a priori par le simple ___, alors que l'autre est suscitée par des expériences particulières qui mettent en jeu la raison »."
+    answer: "entendement"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q13
+    sentence: "Transformées en principes constitutifs de la possibilité des objets, la thèse et l'antithèse se contrediraient, et l'une des deux serait nécessairement ___."
+    answer: "fausse"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q14
+    sentence: "La raison ne peut démontrer ni la thèse ni l'antithèse constitutives, « parce que nous ne pouvons avoir aucun principe déterminant a priori de la possibilité des choses d'après des lois simplement ___ de la nature »."
+    answer: "empiriques"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q15
+    sentence: "Le principe du mécanisme doit être exploré aussi loin que possible, « parce que, à défaut de le mettre au fondement de la recherche, il ne peut y avoir aucune véritable ___ »."
+    answer: "connaissance de la nature"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q16
+    sentence: "Selon la note d'Alain Renaut, la faculté de juger réfléchissante n'est pas autonome mais ___ : « elle ne constitue pas une classe d'objets (elle ne légifère pas), mais elle se prescrit à elle-même les principes de sa réflexion »."
+    answer: "héautonome"
+    alt: []
+  - id: kant-cfj-dialectique-l3-q17
+    sentence: "La faculté de juger déterminante ne peut avoir d'antinomie, parce qu'elle ne fait qu'appliquer des lois que lui donne l'entendement : une faculté sans principes propres ne peut entrer en ___ avec elle-même."
+    answer: "conflit"
+    alt: ["contradiction"]
+- id: kant-cfj-dialectique-l4
+  title: "Préparer la solution : ne pas confondre réfléchir et déterminer (§ 71)"
+  notes: |-
+    Le § 71 prépare la résolution de l'antinomie. Il établit deux certitudes de sens contraire, puis en tire le diagnostic : {green}__toute apparence d'antinomie vient de ce que l'on confond un principe de la faculté de juger réfléchissante avec un principe de la faculté de juger déterminante__{/green}.
+
+    **On ne peut pas prouver que le mécanisme est réellement insuffisant.** {teal}« Nous ne pouvons nullement prouver l'impossibilité de la production des produits organisés de la nature par le simple mécanisme naturel »{/teal}. Car les lois particulières de la nature ne nous sont connues qu'empiriquement, et le principe interne qui rendrait compte de toute leur diversité réside dans le {violet}**suprasensible**{/violet}, hors de notre portée. Pour affirmer que la matière est incapable de produire un organisme, il faudrait connaître toutes ses forces et jusqu'à leur fondement : ce serait s'attribuer un savoir que l'homme n'a pas. Nous ne savons donc pas si la nature, par ses seules forces, suffirait à produire ce que nous jugeons organisé, ni s'il faut au fondement des fins naturelles un {red}« entendement architectonique »{/red}.
+
+    **Mais il est certain que le mécanisme est insuffisant pour nous.** {coral}« Que, par rapport à notre pouvoir de connaître, le simple mécanisme de la nature ne puisse pas non plus fournir de fondement d'explication pour la production d'êtres organisés, c'est tout aussi indubitablement certain. »{/coral} Ce qui est incertain dans les choses est certain pour notre façon de connaître : nous ne savons pas expliquer l'organisation sans l'Idée d'un tout qui règle les parties.
+
+    **D'où le principe juste pour la réflexion.** Pour la faculté de juger réfléchissante, il est {teal}« tout à fait juste »{/teal} de penser, pour la connexion si manifeste des choses d'après des fins, une causalité autre que le mécanisme : {coral}« une cause du monde (intelligente) agissant selon des fins »{/coral}. Comme **maxime**, ce principe n'est qu'une Idée qu'on ne cherche pas à rendre réelle, un **fil conducteur** qui reste disponible pour toutes les explications mécanistes et {green}ne se perd pas hors du monde sensible{/green}. Comme principe **objectif**, il obligerait la faculté de juger déterminante à le suivre {red}dans le transcendant, au risque de l'erreur{/red}.
+
+    **Le diagnostic.** L'apparence d'antinomie repose sur la confusion entre {violet}l'**autonomie**{/violet} de la faculté de juger réfléchissante, valable seulement pour nous et pour l'usage que nous faisons de notre raison, et {violet}l'**hétéronomie**{/violet} de la faculté de juger déterminante, qui doit suivre les lois que lui fournit l'entendement. Prendre une règle que le sujet se prescrit pour une loi que les choses imposent, c'est créer un conflit qui n'existe pas.
+
+    ! Le § 71 n'est qu'une « préparation » : il désigne la source de l'illusion, mais il faudra les § 75-77 pour comprendre pourquoi notre entendement ne peut juger autrement.
+    ! Kant ne concède pas que le vivant soit réellement produit par le mécanisme : il dit qu'on ne peut prouver ni que oui, ni que non.
+  points:
+  - id: kant-cfj-dialectique-l4-q1
+    sentence: "« Nous ne pouvons nullement **___** de la production des produits organisés de la nature par le simple mécanisme naturel, parce que nous ne parvenons pas à voir selon son premier fondement interne l'infinie diversité des __lois particulières__ de la nature »"
+    answer: "prouver l'impossibilité"
+    alt: []
+  - id: kant-cfj-dialectique-l4-q2
+    sentence: "« Nous ne pouvons nullement **prouver l'impossibilité** de la production des produits organisés de la nature par le simple mécanisme naturel, parce que nous ne parvenons pas à voir selon son premier fondement interne l'infinie diversité des ___ de la nature »"
+    answer: "lois particulières"
+    alt: []
+  - id: kant-cfj-dialectique-l4-q3
+    sentence: "« Mais que, par rapport à ___, le simple mécanisme de la nature ne puisse pas non plus fournir de fondement d'explication pour la production d'êtres organisés, c'est tout aussi **indubitablement certain**. »"
+    answer: "notre pouvoir de connaître"
+    alt: []
+  - id: kant-cfj-dialectique-l4-q4
+    sentence: "« Mais que, par rapport à __notre pouvoir de connaître__, le simple mécanisme de la nature ne puisse pas non plus fournir de fondement d'explication pour la production d'êtres organisés, c'est tout aussi **___**. »"
+    answer: "indubitablement certain"
+    alt: []
+  - id: kant-cfj-dialectique-l4-q5
+    sentence: "« Toute apparence d'antinomie entre les maximes du mode d'explication proprement physique (mécanique) et du mode d'explication téléologique (technique) repose donc sur ceci que l'on confond un principe fondamental de la faculté de juger **___** avec celui de la faculté de juger **déterminante** »"
+    answer: "réfléchissante"
+    alt: []
+  - id: kant-cfj-dialectique-l4-q6
+    sentence: "« Toute apparence d'antinomie entre les maximes du mode d'explication proprement physique (mécanique) et du mode d'explication téléologique (technique) repose donc sur ceci que l'on confond un principe fondamental de la faculté de juger **réfléchissante** avec celui de la faculté de juger **___** »"
+    answer: "déterminante"
+    alt: []
+  - id: kant-cfj-dialectique-l4-q7
+    sentence: "Le principe interne et pleinement suffisant de la possibilité d'une nature réside dans le ___ : c'est pourquoi nous ne pouvons pas prouver l'insuffisance réelle du mécanisme."
+    answer: "suprasensible"
+    alt: []
+  - id: kant-cfj-dialectique-l4-q8
+    sentence: "Nous ne pouvons savoir s'il y a au fondement des fins naturelles une causalité originaire d'une tout autre espèce, à savoir un entendement ___."
+    answer: "architectonique"
+    alt: []
+  - id: kant-cfj-dialectique-l4-q9
+    sentence: "Comme simple maxime, le concept d'une cause intelligente du monde est une Idée utilisée comme ___ de la réflexion, qui reste disponible pour toutes les explications mécanistes."
+    answer: "fil conducteur"
+    alt: []
+  - id: kant-cfj-dialectique-l4-q10
+    sentence: "L'apparence d'antinomie vient de ce qu'on confond l'autonomie de la faculté de juger réfléchissante avec l'___ de la faculté de juger déterminante, qui doit suivre les lois fournies par l'entendement."
+    answer: "hétéronomie"
+    alt: []
+  - id: kant-cfj-dialectique-l4-q11
+    sentence: "Le § 71 tient ensemble deux certitudes : on ne peut prouver que le mécanisme est réellement insuffisant pour produire un organisme, mais il est certain qu'il est insuffisant pour ___."
+    answer: "notre pouvoir de connaître"
+    alt: ["nous"]
+- id: kant-cfj-dialectique-l5
+  title: "Repérage : les systèmes dogmatiques (§ 72-74)"
+  notes: |-
+    Kant classe les systèmes qui prétendent trancher la question de la finalité (§ 72), montre qu'aucun n'y parvient (§ 73), puis en donne la raison : le concept de fin naturelle ne se démontre pas (§ 74).
+
+    | Paragraphe | Lieu | Ce qui s'y joue |
+    | les systèmes sur la finalité | § 72 | idéalisme (casualité, fatalité) et réalisme (hylozoïsme, théisme) |
+    | l'échec des systèmes | § 73 | aucun n'accomplit ce qu'il prétend |
+    | le concept inexplicable de fin naturelle | § 74 | sa réalité objective ne se démontre pas : il ne se traite pas dogmatiquement |
+  tables:
+  - table: paragraphe-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: kant-cfj-dialectique-l5-q1
+    sentence: "Dans la *Critique de la faculté de juger*, la réfutation de Spinoza, dont l'unité ontologique n'est pas une unité finale, se trouve au § ___."
+    answer: "73"
+    alt: ["§ 73"]
+  - id: kant-cfj-dialectique-l5-q2
+    sentence: "Dans la *Critique de la faculté de juger*, la distinction entre *conceptus ratiocinans* et *conceptus ratiocinatus* se trouve au § ___."
+    answer: "74"
+    alt: ["§ 74"]
+  - id: kant-cfj-dialectique-l5-q3
+    sentence: "Dans la *Critique de la faculté de juger*, la classification des systèmes sur la finalité en idéalisme (casualité, fatalité) et réalisme (hylozoïsme, théisme) se trouve au § ___."
+    answer: "72"
+    alt: ["§ 72"]
+- id: kant-cfj-dialectique-l6
+  title: "Les systèmes sur la finalité, et leur échec (§ 72-73)"
+  notes: |-
+    Les § 72 et 73 passent en revue les systèmes qui ont prétendu trancher **dogmatiquement** la question de la finalité naturelle. Ils les classent (§ 72), puis montrent qu'{red}__aucun n'accomplit ce qu'il prétend__{/red} (§ 73). Le but n'est pas l'histoire de la philosophie : c'est de montrer que la question, posée sur les choses mêmes, ne peut pas être tranchée, ce qui ouvre la voie à la solution critique.
+
+    **La question que personne ne conteste, et celle que tous disputent.** Que les êtres organisés doivent être jugés d'après des causes finales, au moins comme fil conducteur, {coral}personne ne l'a mis en doute{/coral}. Le débat porte sur autre chose : ce principe n'est-il qu'une **maxime** de notre jugement, ou un principe **objectif** de la nature, qui posséderait une autre causalité que le mécanisme ? Kant appelle {violet}technique{/violet} la causalité de la nature à cause de l'apparence finale de ses produits, et distingue une technique {violet}intentionnelle{/violet} et une technique {violet}inintentionnelle{/violet}. Les systèmes s'opposent sur ce point ; ils ne s'opposeraient pas s'ils s'en tenaient à la maxime.
+
+    | Finalité | physique | hyperphysique |
+    | idéalisme | casualité | fatalité |
+    | réalisme | hylozoïsme | théisme |
+
+    **L'idéalisme de la finalité la tient pour inintentionnelle.** Ou bien par **casualité** : la forme finale vient des seules lois du mouvement, au hasard ({sky}Épicure, Démocrite{/sky}). Ou bien par **fatalité** : elle découle de la nécessité de nature d'un être originaire, non de son entendement ({sky}Spinoza{/sky}).
+
+    **Le réalisme la tient pour intentionnelle.** Ou bien de façon physique, l'**hylozoïsme** : la finalité vient de la vie de la matière, immanente ou insufflée par une âme du monde. Ou bien de façon hyperphysique, le **théisme** : elle vient d'un être originaire intelligent qui produit avec intention.
+
+    **La casualité n'explique rien.** Elle efface toute différence entre ce que la nature produit avec art et ce qu'elle produit mécaniquement, et prend le hasard aveugle pour principe : {red}« rien ne se trouvant ainsi expliqué, pas même l'apparence »{/red} de finalité dans notre jugement. Kant la juge {teal}« si manifestement absurde qu'il ne saurait nous retenir »{/teal}.
+
+    **La fatalité confond l'unité de la substance et l'unité des fins.** {sky}Spinoza{/sky} fait des formes naturelles des accidents inhérents à un être originaire : il assure bien l'**unité de fondement** requise par toute finalité, mais il supprime la **contingence** sans laquelle aucune unité finale ne peut être pensée. Or {coral}« cette unité ontologique n'est pas encore pour autant unité finale »{/coral} : que des choses appartiennent à un même sujet ne dit pas qu'elles soient ordonnées en vue de quelque chose ; une fin suppose un rapport à une cause qui a de l'**intelligence**. Si tout est nécessaire, {red}« être une chose et être une fin se confondent »{/red} : le mot ne désigne plus rien. Il en va de même pour qui appelle finalité la « perfection transcendantale » des choses : {red}« un jeu puéril où les mots remplacent les concepts »{/red}.
+
+    **L'hylozoïsme se contredit, puis tourne en cercle.** Une **matière vivante** est impensable, car {teal}« l'absence de vie, *inertia*, constitue le caractère essentiel de la matière »{/teal}. Reste une matière **animée**, la nature entière comme un animal ; mais une telle hypothèse ne se comprend pas a priori, on ne la tire que de l'expérience de l'organisation en petit. D'où le cercle : on veut expliquer la finalité des êtres organisés par la vie de la matière, alors qu'{coral}on ne connaît cette vie nulle part ailleurs que dans les êtres organisés{/coral}.
+
+    **Le théisme est le meilleur, mais il ne fonde rien dogmatiquement.** Grâce à l'entendement qu'il prête à l'être originaire, il est {green}le mieux à même{/green} de soustraire la finalité à l'idéalisme et de la penser comme intentionnelle. Mais pour poser dogmatiquement le fondement de la finalité au-delà de la nature, il faudrait avoir **prouvé** à la faculté de juger déterminante que l'unité finale est impossible par le simple mécanisme de la matière. Or nous savons seulement que nous ne pouvons en juger autrement : {coral}un fondement pour la faculté de juger réfléchissante, non pour la faculté de juger déterminante{/coral}.
+
+    ! Kant ne rejette pas le théisme : il rejette sa prétention à valoir comme connaissance de la nature.
+    ! L'hylozoïsme n'est pas l'auto-organisation du § 65 : Kant dit que l'être organisé s'organise lui-même, jamais que la matière comme telle est vivante.
+  tables:
+  - table: finalite-physique-hyperphysique
+    exercises:
+    - {kind: cell, column: physique}
+    - {kind: cell, column: hyperphysique}
+    - {kind: cell, column: Finalité}
+  points:
+  - id: kant-cfj-dialectique-l6-q1
+    sentence: "« Nous allons diviser le procédé (la causalité) de la nature, en lui donnant le nom de **___** à cause de l'apparence finale que nous trouvons dans ses produits, en technique __intentionnelle__ (*technica intentionalis*) et technique __inintentionnelle__ (*technica inintentionalis*). »"
+    answer: "technique"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q2
+    sentence: "« Nous allons diviser le procédé (la causalité) de la nature, en lui donnant le nom de **technique** à cause de l'apparence finale que nous trouvons dans ses produits, en technique ___ (*technica intentionalis*) et technique __inintentionnelle__ (*technica inintentionalis*). »"
+    answer: "intentionnelle"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q3
+    sentence: "« Nous allons diviser le procédé (la causalité) de la nature, en lui donnant le nom de **technique** à cause de l'apparence finale que nous trouvons dans ses produits, en technique __intentionnelle__ (*technica intentionalis*) et technique ___ (*technica inintentionalis*). »"
+    answer: "inintentionnelle"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q4
+    sentence: "« L'**___** réside dans l'affirmation que toute finalité de la nature est __inintentionnelle__ ; le second, dans celle qu'une certaine dimension de finalité (dans les êtres organisés) est __intentionnelle__ »"
+    answer: "idéalisme"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q5
+    sentence: "« L'**idéalisme** réside dans l'affirmation que toute finalité de la nature est ___ ; le second, dans celle qu'une certaine dimension de finalité (dans les êtres organisés) est __intentionnelle__ »"
+    answer: "inintentionnelle"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q6
+    sentence: "« L'**idéalisme** réside dans l'affirmation que toute finalité de la nature est __inintentionnelle__ ; le second, dans celle qu'une certaine dimension de finalité (dans les êtres organisés) est ___ »"
+    answer: "intentionnelle"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q7
+    sentence: "« Mais le spinozisme n'accomplit pas ce qu'il veut. [...] reste que cette **___** n'est pas encore pour autant __unité finale__ et ne rend aucunement celle-ci compréhensible. »"
+    answer: "unité ontologique"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q8
+    sentence: "« Mais le spinozisme n'accomplit pas ce qu'il veut. [...] reste que cette **unité ontologique** n'est pas encore pour autant ___ et ne rend aucunement celle-ci compréhensible. »"
+    answer: "unité finale"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q9
+    sentence: "« Or, la possibilité d'une **___** (dont le concept contient une contradiction, parce que l'absence de vie, *inertia*, constitue __le caractère essentiel de la matière__) n'est pas même pensable »"
+    answer: "matière vivante"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q10
+    sentence: "« Or, la possibilité d'une **matière vivante** (dont le concept contient une contradiction, parce que l'absence de vie, *inertia*, constitue ___) n'est pas même pensable »"
+    answer: "le caractère essentiel de la matière"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q11
+    sentence: "« Il faut donc introduire un **___** dans l'explication pour vouloir dériver la finalité de la nature dans les êtres organisés à partir de __la vie de la matière__, tandis que l'on ne connaît à son tour cette vie nulle part ailleurs que dans __des êtres organisés__ »"
+    answer: "cercle"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q12
+    sentence: "« Il faut donc introduire un **cercle** dans l'explication pour vouloir dériver la finalité de la nature dans les êtres organisés à partir de ___, tandis que l'on ne connaît à son tour cette vie nulle part ailleurs que dans __des êtres organisés__ »"
+    answer: "la vie de la matière"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q13
+    sentence: "« Il faut donc introduire un **cercle** dans l'explication pour vouloir dériver la finalité de la nature dans les êtres organisés à partir de __la vie de la matière__, tandis que l'on ne connaît à son tour cette vie nulle part ailleurs que dans ___ »"
+    answer: "des êtres organisés"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q14
+    sentence: "Le système de la casualité, qui attribue la finalité au hasard des lois du mouvement, est rapporté à Épicure ou à ___."
+    answer: "Démocrite"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q15
+    sentence: "Le système de la fatalité, qui dérive la finalité de la nécessité de nature d'un être originaire, a pour auteur supposé ___."
+    answer: "Spinoza"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q16
+    sentence: "Le réalisme physique de la finalité, qui la fonde sur la vie de la matière, s'appelle l'___ ; le réalisme hyperphysique, qui la dérive d'un être originaire intelligent, est le théisme."
+    answer: "hylozoïsme"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q17
+    sentence: "Le casualisme d'Épicure n'explique rien, pas même l'___ de finalité dans notre jugement téléologique."
+    answer: "apparence"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q18
+    sentence: "Spinoza assure l'unité de fondement requise par toute finalité, mais supprime la ___, sans laquelle on ne peut penser aucune unité finale."
+    answer: "contingence"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q19
+    sentence: "« si toutes les choses doivent être pensées comme des fins, alors être une chose et être une ___ se confondent, et il n'y a au fond rien qui mériterait particulièrement d'être représenté comme fin »"
+    answer: "fin"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q20
+    sentence: "Appeler finalité de la nature la perfection transcendantale des choses, c'est, selon Kant, un jeu puéril où les ___ remplacent les concepts."
+    answer: "mots"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q21
+    sentence: "Pour fonder dogmatiquement la finalité au-delà de la nature, « il faudrait ici que soit prouvée d'une façon suffisante pour la faculté de juger déterminante l'___ de l'unité finale dans la matière par le simple mécanisme de celle-ci »."
+    answer: "impossibilité"
+    alt: []
+  - id: kant-cfj-dialectique-l6-q22
+    sentence: "Selon la note d'Alain Renaut, l'examen des systèmes (§ 72-73) est la deuxième étape par laquelle Kant établit le statut purement ___ de la finalité objective."
+    answer: "méthodique"
+    alt: ["méthodologique"]
+  - id: kant-cfj-dialectique-l6-q23
+    sentence: "Les systèmes dogmatiques se combattent sur les principes objectifs de la possibilité des choses, mais ne s'opposent pas sur la ___ subjective qui prescrit de juger les êtres organisés d'après des fins."
+    answer: "maxime"
+    alt: []
+- id: kant-cfj-dialectique-l7
+  title: "Pourquoi la fin naturelle ne se traite pas dogmatiquement (§ 74)"
+  notes: |-
+    Le § 74 donne la raison de l'échec de tous les systèmes : {green}__le concept de fin naturelle est inexplicable, parce que sa réalité objective ne peut être démontrée__{/green}. On ne peut donc le traiter que de façon critique.
+
+    **Procéder dogmatiquement ou de façon critique.** On procède **dogmatiquement** avec un concept quand on le subsume sous un concept de la raison et qu'on détermine l'objet d'après lui : c'est l'affaire de la faculté de juger déterminante. On procède de façon **critique** quand on le considère seulement par rapport à notre pouvoir de connaître, {teal}« sans entreprendre de décider quoi que ce soit sur son objet »{/teal} : c'est l'affaire de la faculté de juger réfléchissante.
+
+    **Pour en user dogmatiquement, il faudrait être sûr de sa réalité objective.** Le concept de fin naturelle subsume la nature sous une causalité que seule la raison peut penser. Pour subsumer sous lui une chose de la nature, il faudrait d'abord être assuré qu'il a un objet. Or il est **empiriquement conditionné**, puisqu'il n'est possible qu'à l'occasion de certaines expériences, mais il ne l'est que d'après un **principe de la raison** : on ne peut ni le tirer de l'expérience, ni le démontrer a priori. Nous ne savons donc pas s'il est un {red}concept ratiocinant et objectivement vide{/red} (*conceptus ratiocinans*) ou un {green}concept de la raison fondant une connaissance{/green} (*conceptus ratiocinatus*). La question de savoir si les fins naturelles exigent une causalité intentionnelle ne peut donc **même pas être posée** pour la faculté de juger déterminante.
+
+    **Il réunit dans une même chose nécessité naturelle et contingence.** Une fin naturelle est un produit de la nature, donc **nécessaire** selon ses lois, et pourtant sa forme est **contingente** au regard des simples lois de la nature. Pour que ce ne soit pas une contradiction, le concept doit contenir un fondement qui rapporte la nature elle-même à quelque chose de **suprasensible**, et qui pour nous ne peut aucunement se connaître. Un principe qui renvoie à l'inconnaissable ne peut servir à déterminer un objet.
+
+    **Tous les systèmes sont donc indécidables, qu'ils affirment ou qu'ils nient.** Quand on subsume des choses sous un concept simplement **problématique**, tout ce qu'on en affirme ou en nie (que la fin soit intentionnelle ou non) reste problématique, {coral}« étant donné que l'on ne sait pas si l'on juge sur quelque chose ou sur rien »{/coral}. Le théisme et l'hylozoïsme, qui affirment, ne sont pas mieux fondés qu'Épicure et Spinoza, qui nient.
+
+    **Le théisme dogmatique se détruit lui-même.** Le concept d'une causalité par fins, l'**art**, a de la réalité objective, comme celui du mécanisme. Mais celui d'un être fondement originaire de la nature ne peut être garanti par rien. Et, le serait-il, {red}« comment puis-je mettre encore au nombre des produits de la nature des choses qui sont précisément données pour des produits d'un art divin »{/red}, alors que c'est l'impuissance de la nature à les produire qui obligeait à recourir à une cause distincte d'elle ? Expliquer l'organisme par un art divin, c'est cesser d'en faire une **fin naturelle**.
+
+    ! « Indémontrable » ne veut pas dire « chimérique » : le concept de fin naturelle n'est pas déclaré vide, il est déclaré indécidable pour la faculté de juger déterminante.
+  points:
+  - id: kant-cfj-dialectique-l7-q1
+    sentence: "« Procéder **___** avec un concept, c'est en ce sens la démarche qui convient pour la faculté de juger __déterminante__ ; procéder de façon **critique**, celle qui convient simplement pour la faculté de juger __réfléchissante__. »"
+    answer: "dogmatiquement"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q2
+    sentence: "« Procéder **dogmatiquement** avec un concept, c'est en ce sens la démarche qui convient pour la faculté de juger ___ ; procéder de façon **critique**, celle qui convient simplement pour la faculté de juger __réfléchissante__. »"
+    answer: "déterminante"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q3
+    sentence: "« Procéder **dogmatiquement** avec un concept, c'est en ce sens la démarche qui convient pour la faculté de juger __déterminante__ ; procéder de façon **___**, celle qui convient simplement pour la faculté de juger __réfléchissante__. »"
+    answer: "critique"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q4
+    sentence: "« Procéder **dogmatiquement** avec un concept, c'est en ce sens la démarche qui convient pour la faculté de juger __déterminante__ ; procéder de façon **critique**, celle qui convient simplement pour la faculté de juger ___. »"
+    answer: "réfléchissante"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q5
+    sentence: "« nous ne savons pas s'il s'agit là d'un concept ratiocinant et ___ (*conceptus ratiocinans*), ou d'un concept de la raison, fondant une connaissance et __confirmé par la raison__ (*conceptus ratiocinatus*). »"
+    answer: "objectivement vide"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q6
+    sentence: "« nous ne savons pas s'il s'agit là d'un concept ratiocinant et __objectivement vide__ (*conceptus ratiocinans*), ou d'un concept de la raison, fondant une connaissance et ___ (*conceptus ratiocinatus*). »"
+    answer: "confirmé par la raison"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q7
+    sentence: "« comment puis-je mettre encore au nombre des **___** des choses qui sont précisément données pour des produits d'un __art divin__, alors que c'est l'incapacité de la nature à produire de tels objets selon ses lois qui rendait justement nécessaire la référence à une cause différente d'elle ? »"
+    answer: "produits de la nature"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q8
+    sentence: "« comment puis-je mettre encore au nombre des **produits de la nature** des choses qui sont précisément données pour des produits d'un ___, alors que c'est l'incapacité de la nature à produire de tels objets selon ses lois qui rendait justement nécessaire la référence à une cause différente d'elle ? »"
+    answer: "art divin"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q9
+    sentence: "Le concept d'une chose comme fin naturelle « est certes un concept empiriquement ___, c'est-à-dire un concept qui n'est possible que sous certaines conditions données dans l'expérience », mais il ne l'est que d'après un principe de la raison."
+    answer: "conditionné"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q10
+    sentence: "Le concept de fin naturelle « comprend en soi, pour une seule et même chose envisagée en tant que fin, une ___ naturelle et pourtant, indissolublement, une contingence de la forme de l'objet »"
+    answer: "nécessité"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q11
+    sentence: "Quand des choses sont subsumées sous un concept simplement ___, tout ce qu'on en affirme ou en nie reste de même qualité, car « l'on ne sait pas si l'on juge sur quelque chose ou sur rien »."
+    answer: "problématique"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q12
+    sentence: "Le concept d'une causalité par fins, l'art, possède de la réalité objective, tout autant que celui du ___ ; celui d'un être fondement originaire de la nature, non."
+    answer: "mécanisme"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q13
+    sentence: "Pour éviter la contradiction entre nécessité naturelle et contingence de la forme, le concept de fin naturelle doit rapporter la nature à quelque chose de ___, que nous ne pouvons aucunement connaître."
+    answer: "suprasensible"
+    alt: []
+  - id: kant-cfj-dialectique-l7-q14
+    sentence: "Recourir à un art divin pour expliquer un organisme le retire de la nature : on ne peut plus le compter parmi les produits de la nature, et il cesse d'être une ___."
+    answer: "fin naturelle"
+    alt: []
+- id: kant-cfj-dialectique-l8
+  title: "Repérage : la solution fondée sur notre entendement (§ 75-77)"
+  notes: |-
+    Kant formule la solution critique (§ 75), l'éclaire par d'autres distinctions qui tiennent à notre entendement (§ 76), puis en donne la raison dernière : notre entendement est discursif (§ 77).
+
+    | Paragraphe | Lieu | Ce qui s'y joue |
+    | la finalité, principe critique | § 75 | « il y a un Dieu » devient : nous ne pouvons penser ces fins que par une cause intelligente |
+    | la Remarque | § 76 | possible et effectif, devoir et être : des distinctions qui tiennent à notre entendement |
+    | l'entendement intuitif | § 77 | notre entendement va des parties au tout, d'où le besoin de penser des fins |
+  tables:
+  - table: paragraphe-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: kant-cfj-dialectique-l8-q1
+    sentence: "Dans la *Critique de la faculté de juger*, la formule selon laquelle il est absurde d'espérer un Newton qui rende compréhensible un brin d'herbe se trouve au § ___."
+    answer: "75"
+    alt: ["§ 75"]
+  - id: kant-cfj-dialectique-l8-q2
+    sentence: "Dans la *Critique de la faculté de juger*, la « Remarque » qui compare la finalité à la distinction du possible et de l'effectif forme le § ___."
+    answer: "76"
+    alt: ["§ 76"]
+  - id: kant-cfj-dialectique-l8-q3
+    sentence: "Dans la *Critique de la faculté de juger*, la distinction de l'*intellectus ectypus* et de l'*intellectus archetypus* est l'objet du § ___."
+    answer: "77"
+    alt: ["§ 77"]
+- id: kant-cfj-dialectique-l9
+  title: "La finalité, principe critique : « il y a un Dieu » devient une maxime (§ 75)"
+  notes: |-
+    Le § 75 formule positivement la solution, que dit son titre : {green}__« le concept d'une finalité objective de la nature est un principe critique de la raison pour la faculté de juger réfléchissante »__{/green}. Il ne dit pas comment les êtres organisés sont produits, il dit comment nous devons les penser, et pourquoi c'est inévitable pour nous.
+
+    **Deux énoncés que tout sépare.** Dire que la production de certaines choses {red}n'est possible que par une cause agissant intentionnellement{/red}, c'est décider de l'objet, et devoir prouver la réalité objective de ce concept. Dire que {green}je ne peux, d'après la constitution de mes pouvoirs de connaître, juger autrement de leur possibilité{/green} qu'en pensant une cause intentionnelle, c'est seulement régler l'usage de mes facultés selon leurs limites. Le premier est un principe objectif pour la faculté de juger déterminante ; le second, {coral}une maxime que la raison impose à la faculté de juger réfléchissante{/coral}.
+
+    **Indispensable pour les organismes, simplement utile pour la nature entière.** Pour explorer les êtres organisés par une observation suivie, le concept d'une intention est {coral}« une maxime absolument nécessaire »{/coral} : on ne peut même pas les penser comme organisés sans penser une production intentionnelle. Pour la nature entière, la même maxime est **utile, mais non indispensable**, parce que {teal}« la nature ne nous est pas donnée en totalité comme organisée »{/teal}.
+
+    **Les fins naturelles prouvent la contingence du monde, non l'existence de Dieu.** Penser une chose comme fin, c'est penser sa forme comme contingente au regard des lois de la nature ; les êtres organisés sont donc {teal}« la preuve la plus importante de la contingence de l'univers »{/teal}, et l'argument qui, pour le sens commun comme pour le philosophe, fait conclure à un auteur intelligent hors du monde. Mais ce que prouve la téléologie la plus aboutie, c'est seulement que {coral}« nous ne pouvons nous forger absolument aucun concept de la possibilité d'un tel monde si nous ne nous représentons pas une cause suprême de ce monde qui agirait intentionnellement »{/coral}. Car nous n'**observons** pas les fins comme intentionnelles : c'est nous qui ajoutons ce concept dans la réflexion, comme un fil conducteur. Il ne nous est pas donné par l'objet.
+
+    **La formulation permise.** Dogmatiquement, la proposition s'énoncerait : {red}*Il y a un Dieu*{/red}. Pour nous, êtres humains, seule est permise la formulation limitée : {green}« *Nous ne pouvons aucunement nous représenter et nous rendre compréhensible la finalité* [...] *qu'en nous les représentant, ainsi que le monde en général, comme produits d'une cause intelligente (d'un Dieu)* »{/green}. Et cette proposition suffit à tout usage, spéculatif ou pratique, de notre raison.
+
+    **Pas de Newton du brin d'herbe, mais pas de négation non plus.** Il est si certain que nous ne pouvons connaître les êtres organisés d'après des principes simplement mécaniques qu'il est {coral}« absurde »{/coral} d'espérer {yellow}« un Newton qui rende compréhensible ne serait-ce qu'un brin d'herbe »{/yellow} par des lois que nulle intention n'a ordonnées. Mais affirmer qu'aucun principe mécanique suffisant ne peut se cacher dans la nature serait {red}« une attitude trop démesurée »{/red} : {teal}« d'où prétendons-nous le savoir ? »{/teal} Nous ne pouvons donc ni affirmer ni nier objectivement qu'un être intelligent soit l'auteur des fins naturelles ; il est seulement assuré que nous ne pouvons rien placer d'autre à leur fondement. C'est {coral}« un fondement subjectif, mais indissolublement inhérent à l'espèce humaine »{/coral}.
+
+    ! « Subjectif » ne veut pas dire « arbitraire » : la maxime vaut nécessairement pour tout être humain, parce qu'elle tient à la constitution de notre entendement.
+    ! L'impossibilité d'un Newton du brin d'herbe ne condamne pas la biologie : elle interdit seulement d'espérer réduire l'organisme au seul mécanisme.
+  points:
+  - id: kant-cfj-dialectique-l9-q1
+    sentence: "« Le premier principe est donc un principe fondamental de portée **___** pour la faculté de juger __déterminante__, le second un principe fondamental de portée **subjective** pour la seule faculté de juger __réfléchissante__, par conséquent __une maxime__ de celle-ci que la raison lui impose. »"
+    answer: "objective"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q2
+    sentence: "« Le premier principe est donc un principe fondamental de portée **objective** pour la faculté de juger ___, le second un principe fondamental de portée **subjective** pour la seule faculté de juger __réfléchissante__, par conséquent __une maxime__ de celle-ci que la raison lui impose. »"
+    answer: "déterminante"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q3
+    sentence: "« Le premier principe est donc un principe fondamental de portée **objective** pour la faculté de juger __déterminante__, le second un principe fondamental de portée **___** pour la seule faculté de juger __réfléchissante__, par conséquent __une maxime__ de celle-ci que la raison lui impose. »"
+    answer: "subjective"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q4
+    sentence: "« Le premier principe est donc un principe fondamental de portée **objective** pour la faculté de juger __déterminante__, le second un principe fondamental de portée **subjective** pour la seule faculté de juger ___, par conséquent __une maxime__ de celle-ci que la raison lui impose. »"
+    answer: "réfléchissante"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q5
+    sentence: "« Le premier principe est donc un principe fondamental de portée **objective** pour la faculté de juger __déterminante__, le second un principe fondamental de portée **subjective** pour la seule faculté de juger __réfléchissante__, par conséquent ___ de celle-ci que la raison lui impose. »"
+    answer: "une maxime"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q6
+    sentence: "« De là vient que les choses naturelles que nous ne trouvons possibles que comme **___** constituent aussi la preuve la plus importante de __la contingence de l'univers__ »"
+    answer: "fins"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q7
+    sentence: "« De là vient que les choses naturelles que nous ne trouvons possibles que comme **fins** constituent aussi la preuve la plus importante de ___ »"
+    answer: "la contingence de l'univers"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q8
+    sentence: "« il est ___ pour des êtres humains même simplement de concevoir un tel projet, ou d'espérer que puisse un jour surgir encore un **Newton** qui rende compréhensible ne serait-ce qu'un __brin d'herbe__ d'après des lois naturelles que __nulle intention__ n'a ordonnées »"
+    answer: "absurde"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q9
+    sentence: "« il est absurde pour des êtres humains même simplement de concevoir un tel projet, ou d'espérer que puisse un jour surgir encore un **___** qui rende compréhensible ne serait-ce qu'un __brin d'herbe__ d'après des lois naturelles que __nulle intention__ n'a ordonnées »"
+    answer: "Newton"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q10
+    sentence: "« il est absurde pour des êtres humains même simplement de concevoir un tel projet, ou d'espérer que puisse un jour surgir encore un **Newton** qui rende compréhensible ne serait-ce qu'un ___ d'après des lois naturelles que __nulle intention__ n'a ordonnées »"
+    answer: "brin d'herbe"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q11
+    sentence: "« il est absurde pour des êtres humains même simplement de concevoir un tel projet, ou d'espérer que puisse un jour surgir encore un **Newton** qui rende compréhensible ne serait-ce qu'un __brin d'herbe__ d'après des lois naturelles que ___ n'a ordonnées »"
+    answer: "nulle intention"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q12
+    sentence: "« ce qui correspond à la maxime de notre faculté de juger réfléchissante, par conséquent à un fondement **___**, mais __indissolublement inhérent à l'espèce humaine__. »"
+    answer: "subjectif"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q13
+    sentence: "« ce qui correspond à la maxime de notre faculté de juger réfléchissante, par conséquent à un fondement **subjectif**, mais ___. »"
+    answer: "indissolublement inhérent à l'espèce humaine"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q14
+    sentence: "Pour la nature entière, la maxime téléologique est « certes utile, mais non point indispensable, parce que la nature ne nous est pas donnée en totalité comme ___ »."
+    answer: "organisée"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q15
+    sentence: "Les fins dans la nature ne nous sont pas données par l'objet, parce que nous ne les ___ pas comme intentionnelles : c'est nous qui ajoutons ce concept dans la réflexion."
+    answer: "observons"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q16
+    sentence: "Exprimée comme une proposition dogmatique, la conclusion de la téléologie s'énoncerait : « Il y a un ___ »."
+    answer: "Dieu"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q17
+    sentence: "Juger qu'aucun principe mécanique suffisant de la possibilité des êtres organisés ne peut se cacher dans la nature serait une attitude trop ___ : d'où prétendons-nous le savoir ?"
+    answer: "démesurée"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q18
+    sentence: "La téléologie la plus aboutie prouve seulement que, d'après la constitution de nos pouvoirs de connaître, nous ne pouvons nous forger aucun concept de la possibilité d'un tel monde sans nous représenter une cause suprême agissant ___."
+    answer: "intentionnellement"
+    alt: []
+  - id: kant-cfj-dialectique-l9-q19
+    sentence: "Le § 75 refuse deux excès : affirmer qu'un Dieu est l'auteur des fins naturelles et affirmer que le mécanisme y suffit. Nous ne pouvons ni ___ ni nier objectivement qu'un être intelligent soit au fondement de ces fins."
+    answer: "affirmer"
+    alt: []
+- id: kant-cfj-dialectique-l10
+  title: "Remarque : ce qui tient à notre entendement (§ 76)"
+  notes: |-
+    Le § 76 est une **Remarque**, qui éclaire sans prouver. Il montre par trois exemples que {green}__certaines distinctions que nous croyons trouver dans les choses tiennent à la constitution de notre pouvoir de connaître__{/green}, et qu'elles valent pourtant nécessairement pour nous. La distinction du mécanisme et de la finalité est la troisième.
+
+    **Le principe : la raison va plus loin que l'entendement ne peut la suivre.** La raison vise l'inconditionné ; l'entendement ne travaille que sous des conditions données. Là où l'entendement ne peut suivre, la raison produit des **Idées** qui ne sont pas des concepts d'objets, mais des principes **régulateurs**. L'entendement limite alors leur validité au sujet, mais {coral}« d'une manière universelle pour tous les sujets de cette espèce »{/coral} : on ne peut ni ne doit penser autrement, sans affirmer que le fondement de ce jugement est dans l'objet.
+
+    **Premier exemple : le possible et l'effectif.** Il est nécessaire pour l'entendement humain de distinguer la possibilité et l'effectivité des choses. Mais {teal}« la raison s'en trouve dans le sujet »{/teal} : nous avons besoin de deux éléments hétérogènes, l'**entendement** pour les concepts, qui ne donnent que la possibilité, et l'**intuition sensible** pour les objets, qui seule donne l'existence. Parce qu'un concept ne contient pas l'existence de son objet, nous pouvons penser ce qui n'existe pas. {coral}« Si notre entendement était intuitif, il n'aurait pas d'autres objets que l'effectif »{/coral} : penser et donner l'objet seraient un seul acte, et la distinction disparaîtrait, avec elle la contingence. Elle vaut donc pour nous sans prouver qu'elle est dans les choses. Pourtant la raison exige un être dont l'existence soit inconditionnellement nécessaire, où possibilité et effectivité ne se distinguent plus : une Idée indispensable, mais que notre entendement ne peut se représenter.
+
+    **Deuxième exemple : le devoir et l'être.** Dans l'usage pratique, la raison présuppose sa causalité inconditionnée, la **liberté**. Mais parce que nous sommes aussi sensibles, ce qui devrait se faire bien souvent n'a pas lieu : la nécessité morale s'exprime donc {teal}« non par un être (avoir lieu), mais par un devoir-être »{/teal}. Pour une raison sans sensibilité, dans un monde intelligible, il n'y aurait {coral}nulle différence entre devoir et faire{/coral}. Le devoir tient à notre constitution, et pourtant il commande à chacun comme s'il en allait réellement ainsi.
+
+    **Troisième exemple : le mécanisme et la technique de la nature.** De même, {green}nous ne trouverions aucune différence entre le mécanisme de la nature et sa technique{/green} si notre entendement ne devait pas {coral}« aller du général au particulier »{/coral}. Le particulier contient toujours quelque chose de contingent au regard du général ; la raison exige pourtant de l'unité dans la liaison des lois particulières, et {violet}**cette légalité du contingent se nomme finalité**{/violet}. Comme les lois particulières ne se déduisent pas a priori des lois générales, le concept de finalité est nécessaire à notre faculté de juger, sans déterminer les objets : un principe régulateur qui {coral}« vaut avec autant de nécessité pour notre faculté humaine de juger que s'il était un principe objectif »{/coral}.
+
+    ! Kant présente ces exemples comme une explicitation, « et non comme preuve » de ce qui précède.
+    ! Que la finalité tienne à notre entendement ne la rend pas facultative : nous ne pouvons pas plus penser un organisme sans elle que penser le monde sans distinguer le possible du réel.
+  points:
+  - id: kant-cfj-dialectique-l10-q1
+    sentence: "« Car, si, pour l'emploi de ces deux termes, deux éléments tout à fait hétérogènes n'étaient pas requis, l'**___** pour les concepts et l'__intuition sensible__ pour les objets qui leur correspondent, il n'y aurait nulle distinction de ce type »"
+    answer: "entendement"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q2
+    sentence: "« Car, si, pour l'emploi de ces deux termes, deux éléments tout à fait hétérogènes n'étaient pas requis, l'**entendement** pour les concepts et l'___ pour les objets qui leur correspondent, il n'y aurait nulle distinction de ce type »"
+    answer: "intuition sensible"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q3
+    sentence: "« De fait, si notre entendement était **___**, il n'aurait pas d'autres objets que __l'effectif__. »"
+    answer: "intuitif"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q4
+    sentence: "« De fait, si notre entendement était **intuitif**, il n'aurait pas d'autres objets que ___. »"
+    answer: "l'effectif"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q5
+    sentence: "« si la raison exprime cette nécessité, non par ___ (avoir lieu), mais par __un devoir-être__, cela procède uniquement de la constitution **subjective** de notre pouvoir pratique. »"
+    answer: "un être"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q6
+    sentence: "« si la raison exprime cette nécessité, non par __un être__ (avoir lieu), mais par ___, cela procède uniquement de la constitution **subjective** de notre pouvoir pratique. »"
+    answer: "un devoir-être"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q7
+    sentence: "« si la raison exprime cette nécessité, non par __un être__ (avoir lieu), mais par __un devoir-être__, cela procède uniquement de la constitution **___** de notre pouvoir pratique. »"
+    answer: "subjective"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q8
+    sentence: "« entre le mécanisme de la nature et la technique de la nature, c'est-à-dire la connexion finale intervenant en elle, nous ne trouverions **___** si notre entendement n'était pas tel qu'il dût aller __du général au particulier__ »"
+    answer: "aucune différence"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q9
+    sentence: "« entre le mécanisme de la nature et la technique de la nature, c'est-à-dire la connexion finale intervenant en elle, nous ne trouverions **aucune différence** si notre entendement n'était pas tel qu'il dût aller ___ »"
+    answer: "du général au particulier"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q10
+    sentence: "« la raison exige cependant aussi de l'unité dans la liaison des lois particulières de la nature, c'est-à-dire de la légalité (laquelle **___** se nomme __finalité__) »"
+    answer: "légalité du contingent"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q11
+    sentence: "« la raison exige cependant aussi de l'unité dans la liaison des lois particulières de la nature, c'est-à-dire de la légalité (laquelle **légalité du contingent** se nomme ___) »"
+    answer: "finalité"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q12
+    sentence: "Kant présente la Remarque du § 76 comme une ___ de ce qui vient d'être exposé, et non comme une preuve."
+    answer: "explicitation"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q13
+    sentence: "Les Idées de la raison ne valent que pour le sujet, mais d'une manière ___ pour tous les sujets de cette espèce."
+    answer: "universelle"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q14
+    sentence: "La raison exige d'admettre un fondement originaire existant de manière inconditionnellement ___, où possibilité et effectivité ne se distinguent plus."
+    answer: "nécessaire"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q15
+    sentence: "Dans l'usage pratique, la raison présuppose sa causalité inconditionnée propre, c'est-à-dire la ___."
+    answer: "liberté"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q16
+    sentence: "Dans un monde intelligible, pour une raison sans sensibilité, il n'y aurait nulle différence entre ___ et faire."
+    answer: "devoir"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q17
+    sentence: "Le concept de finalité est un principe régulateur qui vaut avec autant de nécessité pour notre faculté de juger que s'il était un principe ___."
+    answer: "objectif"
+    alt: []
+  - id: kant-cfj-dialectique-l10-q18
+    sentence: "Le premier exemple du § 76 éclaire la finalité : de même que la distinction du possible et de l'effectif vient de ce que nous avons besoin de concepts et d'intuitions séparés, la distinction du mécanisme et de la finalité vient de ce que notre entendement doit aller du ___ au particulier."
+    answer: "général"
+    alt: []
+- id: kant-cfj-dialectique-l11
+  title: "Notre entendement va des parties au tout : l'entendement intuitif (§ 77)"
+  notes: |-
+    Le § 77 donne la raison dernière de tout ce qui précède : {green}__si nous ne pouvons penser les êtres organisés que comme des fins, c'est à cause d'une propriété de notre entendement, qui est discursif__{/green}. Kant la fait apparaître par contraste avec l'Idée d'un **entendement intuitif**, pour lequel la distinction du mécanisme et de la finalité n'aurait pas lieu.
+
+    **L'Idée de fin naturelle a ceci de particulier qu'elle semble constitutive.** Comme les autres Idées, elle tient à notre pouvoir de connaître ; mais son effet, l'organisme, est **donné** dans la nature, si bien qu'elle paraît désigner une causalité réelle. Pour ne pas prendre une propriété de notre entendement pour un prédicat des choses, il faut penser **un autre entendement possible** : de même que, dans la *Critique de la raison pure*, on devait penser une autre intuition possible pour comprendre que la nôtre ne donne que des phénomènes. Seul ce contraste permet de dire que certains produits doivent être jugés par nous comme intentionnels, sans prétendre qu'une cause intentionnelle existe réellement, et sans exclure qu'un entendement supérieur trouve leur fondement dans le mécanisme.
+
+    **Notre entendement est discursif : le particulier est contingent pour lui.** {teal}« Notre entendement est un pouvoir des concepts, c'est-à-dire un entendement discursif »{/teal} : il va du **général analytique**, le concept, au particulier donné dans l'intuition empirique. Or un concept général ne détermine pas le particulier : de combien de façons des choses qui partagent un caractère commun peuvent se présenter à nous, c'est **contingent**. Le particulier doit pourtant s'accorder avec nos concepts pour être connu ; cet accord, qui n'a pas de principe, nous ne pouvons le penser que comme rendu possible par une fin.
+
+    **Il pense donc tout réel comme produit de ses parties.** Pour expliquer un produit, notre entendement part des parties, pensées comme fondements généraux, vers les formes possibles qui en résultent : {coral}« un tout réel de la nature est à considérer uniquement comme effet des forces motrices concurrentes des parties »{/coral}. C'est le mode mécanique. Il ne livre jamais l'Idée d'un tout dont dépendraient la constitution et l'action des parties, alors que c'est ainsi que nous devons nous représenter un corps organisé.
+
+    **D'où vient le concept de fin.** Vouloir que le tout lui-même rende possibles ses parties serait, pour un entendement discursif, {red}une contradiction{/red} : le tout réel ne peut être cause de ce qui le compose. Il ne reste qu'une voie : que la **représentation** du tout contienne le fondement de la forme du tout et de la liaison des parties. Or {coral}un produit dont la représentation de l'effet est la cause s'appelle **fin**{/coral}. C'est donc {green}« uniquement une conséquence de la constitution particulière de notre entendement »{/green} si nous nous représentons ces produits d'après la causalité des fins ; ce principe concerne la possibilité de **les juger**, non celle des choses mêmes.
+
+    **L'entendement intuitif, archétype pensable.** Nous pouvons penser, négativement, un entendement non discursif, {coral}intuitif{/coral}, qui irait du **général synthétique** (l'intuition d'un tout comme tel) au particulier, c'est-à-dire {coral}du tout aux parties{/coral} : pour lui, la liaison des parties n'aurait rien de contingent. Kant l'appelle {violet}*intellectus archetypus*{/violet}, face à notre {violet}*intellectus ectypus*{/violet}, {teal}« qui a besoin d'images »{/teal}. Il n'est pas nécessaire de prouver qu'il est possible : il suffit que la comparaison avec notre entendement nous y conduise et que cette Idée {coral}« ne contient [...] pas de contradiction »{/coral}. Un point de comparaison pensable suffit pour montrer que la limite est la nôtre, non celle des choses.
+
+    **L'espace ressemble au fondement cherché, mais n'en est que la condition formelle.** Dans l'espace aussi, aucune partie ne se détermine qu'en relation au tout. Si les êtres matériels étaient des choses en soi, l'unité qui fonde leurs formes ne serait que celle de l'espace ; or l'espace n'est pas un fondement **réel** des productions. Mais on peut tenir le monde matériel pour un simple phénomène et lui supposer comme substrat une chose en soi, objet d'une intuition intellectuelle qui n'est pas la nôtre. Il y aurait alors un {violet}fondement réel suprasensible{/violet}, inconnaissable, de la nature : nous y jugerions selon des lois mécaniques ce qui est nécessaire comme objet des sens, et par des fins ce qui fait l'unité des lois particulières et de leurs formes, {green}sans que l'un des deux modes d'explication exclue l'autre{/green}.
+
+    **Ni le mécanisme ne rend la finalité superflue, ni l'inverse.** On peut essayer, sur un être organisé, toutes les lois mécaniques connues et à découvrir, et espérer légitimement de bons résultats, sans être jamais dispensé de recourir à la causalité finale : {coral}aucune raison humaine, ni aucune raison finie de même qualité mais de degré très supérieur, ne peut espérer comprendre mécaniquement{/coral} {teal}« la production ne serait-ce même que d'un brin d'herbe »{/teal}.
+
+    ! Kant ne prouve pas l'existence d'un entendement intuitif : il lui suffit qu'il soit pensable sans contradiction, comme point de comparaison.
+    ! Il ne dit pas non plus que la production mécanique des êtres organisés est impossible : il le faudrait seulement si les êtres matériels étaient des choses en soi.
+  points:
+  - id: kant-cfj-dialectique-l11-q1
+    sentence: "« Notre entendement est un **___**, c'est-à-dire un entendement __discursif__ »"
+    answer: "pouvoir des concepts"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q2
+    sentence: "« Notre entendement est un **pouvoir des concepts**, c'est-à-dire un entendement ___ »"
+    answer: "discursif"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q3
+    sentence: "« Par opposition, en vertu de la constitution de notre entendement, un tout réel de la nature est à considérer uniquement comme ___. »"
+    answer: "effet des forces motrices concurrentes des parties"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q4
+    sentence: "« Or, nous pouvons aussi nous forger la pensée d'un entendement qui, parce qu'il n'est pas, comme le nôtre, discursif, mais **___**, va du __général synthétique__ (de l'intuition d'un tout comme tel) au particulier, c'est-à-dire __du tout aux parties__ »"
+    answer: "intuitif"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q5
+    sentence: "« Or, nous pouvons aussi nous forger la pensée d'un entendement qui, parce qu'il n'est pas, comme le nôtre, discursif, mais **intuitif**, va du ___ (de l'intuition d'un tout comme tel) au particulier, c'est-à-dire __du tout aux parties__ »"
+    answer: "général synthétique"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q6
+    sentence: "« Or, nous pouvons aussi nous forger la pensée d'un entendement qui, parce qu'il n'est pas, comme le nôtre, discursif, mais **intuitif**, va du __général synthétique__ (de l'intuition d'un tout comme tel) au particulier, c'est-à-dire ___ »"
+    answer: "du tout aux parties"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q7
+    sentence: "« il en résulte que c'est uniquement une conséquence de la **___** qui fait que nous nous représentons des produits de la nature comme possibles d'après un autre type de causalité que celui des lois naturelles de la matière, à savoir uniquement d'après __la causalité des fins et des causes finales__ »"
+    answer: "constitution particulière de notre entendement"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q8
+    sentence: "« il en résulte que c'est uniquement une conséquence de la **constitution particulière de notre entendement** qui fait que nous nous représentons des produits de la nature comme possibles d'après un autre type de causalité que celui des lois naturelles de la matière, à savoir uniquement d'après ___ »"
+    answer: "la causalité des fins et des causes finales"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q9
+    sentence: "« il n'est pas nécessaire, en l'occurrence, de démontrer qu'un tel *intellectus archetypus* est **___**, mais simplement que nous sommes conduits, en confrontant notre entendement discursif, qui a besoin d'__images__ (*intellectus ectypus*), et la contingence d'une telle constitution, à cette Idée (d'un *intellectus archetypus*), et que celle-ci ne contient en outre pas de __contradiction__. »"
+    answer: "possible"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q10
+    sentence: "« il n'est pas nécessaire, en l'occurrence, de démontrer qu'un tel *intellectus archetypus* est **possible**, mais simplement que nous sommes conduits, en confrontant notre entendement discursif, qui a besoin d'___ (*intellectus ectypus*), et la contingence d'une telle constitution, à cette Idée (d'un *intellectus archetypus*), et que celle-ci ne contient en outre pas de __contradiction__. »"
+    answer: "images"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q11
+    sentence: "« il n'est pas nécessaire, en l'occurrence, de démontrer qu'un tel *intellectus archetypus* est **possible**, mais simplement que nous sommes conduits, en confrontant notre entendement discursif, qui a besoin d'__images__ (*intellectus ectypus*), et la contingence d'une telle constitution, à cette Idée (d'un *intellectus archetypus*), et que celle-ci ne contient en outre pas de ___. »"
+    answer: "contradiction"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q12
+    sentence: "Notre entendement va du général ___ (des concepts) au particulier, l'intuition empirique donnée ; l'entendement intuitif irait du général synthétique au particulier."
+    answer: "analytique"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q13
+    sentence: "Que le tout lui-même rende possible la liaison de ses parties serait, pour notre entendement, une ___ ; il faut donc que ce soit la représentation du tout qui la rende possible."
+    answer: "contradiction"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q14
+    sentence: "« le produit d'une cause dont le fondement de détermination est simplement la représentation de son effet s'appelle ___ »"
+    answer: "fin"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q15
+    sentence: "Kant nomme l'entendement intuitif *intellectus archetypus*, et notre entendement discursif, qui a besoin d'images, *intellectus ___*."
+    answer: "ectypus"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q16
+    sentence: "L'___ ressemble au fondement réel que l'on cherche, puisqu'aucune partie ne s'y détermine qu'en relation au tout, mais il n'est que la condition formelle des productions, non leur fondement réel."
+    answer: "espace"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q17
+    sentence: "Si l'on considère le monde matériel comme simple phénomène, on peut penser comme son substrat un fondement réel ___, inconnaissable, où mécanisme et finalité ne s'excluraient pas."
+    answer: "suprasensible"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q18
+    sentence: "Aucune raison humaine, ni aucune raison finie de même qualité mais très supérieure en degré, ne peut espérer comprendre mécaniquement la production ne serait-ce que d'un ___."
+    answer: "brin d'herbe"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q19
+    sentence: "Pour faire voir qu'une propriété est celle de notre entendement et non des choses, Kant procède comme dans la *Critique de la raison pure*, où l'on devait penser une autre ___ possible pour tenir la nôtre pour une espèce particulière."
+    answer: "intuition"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q20
+    sentence: "Selon la note d'Alain Renaut, Kant est près, dans ce passage, de la distinction entre « expliquer » et « ___ » sur laquelle Dilthey fondera l'autonomie des sciences de l'esprit."
+    answer: "comprendre"
+    alt: []
+  - id: kant-cfj-dialectique-l11-q21
+    sentence: "Le raisonnement du § 77 tient en trois temps : notre entendement va des parties au tout ; il ne peut donc penser un tout qui détermine ses parties qu'en faisant de la représentation de ce tout la cause ; or un effet dont la représentation est la cause est une fin. La finalité vient donc de la constitution de notre ___."
+    answer: "entendement"
+    alt: []
+- id: kant-cfj-dialectique-l12
+  title: "Réunir les deux principes : subordonner le mécanisme à la téléologie (§ 78)"
+  notes: |-
+    Le § 78 conclut la Dialectique et prépare le passage à la Méthodologie. Il dit comment les deux principes s'accordent dans la pratique : {green}__on ne peut les unir pour expliquer une même chose, mais on peut subordonner le mécanisme à la téléologie__{/green}, en renvoyant leur accord au suprasensible.
+
+    **Ne pas négliger le mécanisme.** {coral}« Sans celui-ci, on ne peut obtenir aucune intelligence de la nature des choses »{/coral}. Admettre qu'un architecte suprême a créé directement les formes de la nature n'apprend rien, car nous ne connaissons ni sa manière d'agir ni ses Idées : on ne peut expliquer la nature à partir de lui, **de haut en bas**. Et, **de bas en haut**, invoquer une cause intentionnelle dès qu'on croit voir de la finalité, c'est produire {red}« une explication totalement tautologique »{/red} : dire que l'œil voit parce qu'il est fait pour voir, c'est nommer la fonction sans indiquer comment elle se produit, {red}abuser la raison avec des mots{/red}, et la jeter dans une {red}« exaltation poétique »{/red} qu'elle a pour destination d'empêcher.
+
+    **Ne pas négliger les fins.** C'est {coral}« une maxime tout aussi nécessaire »{/coral} : même s'il ne rend pas plus compréhensible la genèse des êtres organisés, le principe des fins est un {violet}**principe heuristique**{/violet} pour explorer les lois particulières de la nature. Vouloir suivre partout le seul mécanisme, là où la finalité se manifeste de façon indéniable, ferait divaguer la raison parmi des pouvoirs de la nature {red}aussi chimériques{/red} que ceux d'une téléologie qui ignore le mécanisme. La raison doit seulement être prudente : ne pas tenir pour téléologique toute régularité, comme celle des cristaux, qui reste explicable mécaniquement.
+
+    **On ne peut les unir pour expliquer une même chose : l'exemple du ver.** Si j'admets qu'un {yellow}**ver**{/yellow} est produit par le simple mécanisme de la matière, quand ses éléments sont libérés par la putréfaction, je ne peux plus le déduire de cette même matière comme d'une causalité selon des fins ; et si je le tiens pour une fin naturelle, je ne peux plus compter sur sa production mécanique comme principe constitutif. {red}« Un mode d'explication exclut l'autre »{/red}, même si, objectivement, les deux reposaient sur un fondement unique.
+
+    **Leur accord repose sur le suprasensible, comme exposition et non comme explication.** Le principe qui les rend compatibles ne peut être que **hors d'eux**, dans le {violet}**suprasensible**{/violet}, dont nous n'avons qu'un concept indéterminé. Or {teal}« expliquer signifie déduire d'un principe qu'il faut donc pouvoir connaître et indiquer clairement »{/teal}. Leur réunion ne fonde donc pas une {red}explication{/red} (*explicatio*) pour la faculté de juger déterminante, mais seulement une {green}**exposition**{/green} (*expositio*) de leur possibilité pour la faculté de juger réfléchissante : elle garantit qu'ils **peuvent** s'unir, sans dire comment.
+
+    **Subordonner le mécanisme à la téléologie.** On ne peut remplacer l'un par l'autre, ni en tout ni en partie : là où l'on ne pense une chose que par une intention, aucun mécanisme ne peut prendre sa place, et là où le mécanisme rend une chose nécessaire, aucune fin n'est requise. Mais on peut {coral}« subordonner une de ces maximes (le mécanisme) à l'autre (le technicisme intentionnel) »{/coral}. Car là où des fins sont conçues, il faut aussi des **moyens**, dont la loi d'action ne présuppose aucune fin et peut être mécanique, tout en servant d'{coral}une cause subordonnée d'effets intentionnels{/coral}. La matière d'un être organisé obéit à ses lois mécaniques et sert pourtant de **moyen** à la forme que l'on juge intentionnelle.
+
+    **D'où le droit et la vocation de la science.** Nous ne savons pas jusqu'où va l'explication mécanique ; nous savons seulement qu'elle restera toujours insuffisante pour ce que nous reconnaissons comme fins naturelles. D'où {green}le droit, et même la vocation, d'expliquer mécaniquement tous les produits de la nature, même les plus finalisés, aussi loin que nous le pouvons{/green}, sans jamais perdre de vue que ceux que nous ne pouvons examiner que sous le concept de fin doivent être finalement subordonnés à la causalité selon des fins.
+
+    ! Subordonner le mécanisme ne veut pas dire le négliger : il faut au contraire le pousser aussi loin que possible.
+    ! Le § 78 ne fournit pas une explication unifiée du vivant : l'accord des deux principes est garanti, non compris.
+  points:
+  - id: kant-cfj-dialectique-l12-q1
+    sentence: "« Il importe infiniment à la raison de ne pas laisser de côté le **___** de la nature dans ses productions et de ne pas le négliger dans leur explication : car, sans celui-ci, on ne peut obtenir __aucune intelligence de la nature des choses__. »"
+    answer: "mécanisme"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q2
+    sentence: "« Il importe infiniment à la raison de ne pas laisser de côté le **mécanisme** de la nature dans ses productions et de ne pas le négliger dans leur explication : car, sans celui-ci, on ne peut obtenir ___. »"
+    answer: "aucune intelligence de la nature des choses"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q3
+    sentence: "« nous produirions une explication totalement **___** et nous abuserions la raison avec __des mots__ »"
+    answer: "tautologique"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q4
+    sentence: "« nous produirions une explication totalement **tautologique** et nous abuserions la raison avec ___ »"
+    answer: "des mots"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q5
+    sentence: "« étant donné que, même s'il ne nous rend pas vraiment plus compréhensible la modalité de leur genèse, il constitue cependant un **___** pour explorer __les lois particulières de la nature__ »"
+    answer: "principe heuristique"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q6
+    sentence: "« étant donné que, même s'il ne nous rend pas vraiment plus compréhensible la modalité de leur genèse, il constitue cependant un **principe heuristique** pour explorer ___ »"
+    answer: "les lois particulières de la nature"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q7
+    sentence: "« la réunion des deux principes ne saurait reposer sur un fondement de l'**___** (*explicatio*) d'un produit selon des lois données pour la faculté de juger déterminante, mais seulement sur un fondement de l'__exposition__ (*expositio*) de cette possibilité pour la faculté de juger réfléchissante. »"
+    answer: "explication"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q8
+    sentence: "« la réunion des deux principes ne saurait reposer sur un fondement de l'**explication** (*explicatio*) d'un produit selon des lois données pour la faculté de juger déterminante, mais seulement sur un fondement de l'___ (*expositio*) de cette possibilité pour la faculté de juger réfléchissante. »"
+    answer: "exposition"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q9
+    sentence: "« au contraire est-il permis simplement de **___** une de ces maximes (le mécanisme) à l'autre (__le technicisme intentionnel__) »"
+    answer: "subordonner"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q10
+    sentence: "« au contraire est-il permis simplement de **subordonner** une de ces maximes (le mécanisme) à l'autre (___) »"
+    answer: "le technicisme intentionnel"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q11
+    sentence: "Expliquer les formes de la nature par un architecte suprême qui les aurait créées directement n'augmente en rien notre connaissance, car nous ne connaissons ni son mode d'action ni ses ___."
+    answer: "Idées"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q12
+    sentence: "Recourir à une cause intentionnelle pour tout ce qui semble finalisé entraînerait la raison dans une ___ poétique, qu'elle a précisément pour destination d'empêcher."
+    answer: "exaltation"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q13
+    sentence: "« Si, par exemple à propos d'un ___, j'admets qu'il est à considérer comme produit du simple mécanisme de la matière (de la formation nouvelle qu'elle opère par elle-même, quand ses éléments sont libérés par putréfaction), je ne peux dès lors déduire le même produit à partir de cette même matière comme à partir d'une causalité [...] capable d'agir selon des fins. »"
+    answer: "ver"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q14
+    sentence: "Les deux principes ne peuvent s'unir comme principes dogmatiques et constitutifs pour expliquer une même chose de la nature, car, dit Kant, « un mode d'explication ___ l'autre »."
+    answer: "exclut"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q15
+    sentence: "« le principe commun de la déduction mécanique d'un côté et de la déduction téléologique de l'autre est le ___ »"
+    answer: "suprasensible"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q16
+    sentence: "Expliquer, selon Kant, c'est ___ d'un principe qu'il faut pouvoir connaître et indiquer clairement."
+    answer: "déduire"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q17
+    sentence: "Là où des fins sont conçues, il faut admettre des moyens dont la loi d'action peut être mécanique, mais qui constituent en même temps une cause ___ d'effets intentionnels."
+    answer: "subordonnée"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q18
+    sentence: "La raison ne doit pas « chercher à expliquer comme téléologique toute technique de la nature, c'est-à-dire son pouvoir producteur, tel que s'y manifeste une finalité de la forme pour notre simple appréhension (comme dans les corps ___) »."
+    answer: "réguliers"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q19
+    sentence: "Selon la note d'Alain Renaut, le § 78 amorce le passage à la ___ : il faut montrer que mécanisme et finalité, compatibles en droit, ne se contredisent pas non plus dans la pratique."
+    answer: "Méthodologie"
+    alt: []
+  - id: kant-cfj-dialectique-l12-q20
+    sentence: "Le § 78 tient ensemble deux devoirs : expliquer mécaniquement tous les produits de la nature aussi loin que nous le pouvons, et subordonner finalement à la causalité selon des fins ceux que nous ne pouvons examiner que sous le concept de ___."
+    answer: "fin"
+    alt: []
