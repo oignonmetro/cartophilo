@@ -50,8 +50,9 @@ def norm(s):
 
 def _flat(s):
     s = norm(s)
-    # mots coupés en fin de ligne (« organi-\nsation ») : recollés
-    s = re.sub(r"-\s*\n\s*", "", s)
+    # mots coupés en fin de ligne (« organi-\nsation ») : recollés ; les traits
+    # d'union retirés partout, pour que « lui-même » coupé en fin de ligne se retrouve
+    s = re.sub(r"-\s*\n\s*", "", s).replace("-", "")
     s = re.sub(r"\d+", " ", s)
     s = re.sub(r"[^a-z' ]+", " ", s)
     return re.sub(r"\s+", " ", s).strip()
@@ -64,7 +65,7 @@ def cherche(source, phrases, width=350, maxi=4):
         n = 0
         # les mots de la phrase, séparés dans le texte par n'importe quoi d'autre
         # qu'une lettre (ponctuation, appels de note, repères de ligne, sauts de ligne)
-        mots = _flat(p).split()
+        mots = re.findall(r"[a-z']+", re.sub(r"\d+", " ", norm(p)))
         motif = re.compile(r"[^a-z']+".join(map(re.escape, mots)))
         for t in corps:
             nt = norm(t)  # même longueur que t : les positions se correspondent
@@ -93,7 +94,7 @@ def _source_yaml(path, depuis):
     if depuis:
         L = L[L.index("- id: " + depuis):]
     s = "\n".join(L)
-    s = re.sub(r"\{/?[a-z]+\}", "", s).replace("___", "[T]").replace("**", "").replace("__", "")
+    s = re.sub(r"\{/?[a-z]+\}", "", s).replace("___", "[T]").replace("**", "").replace("__", "").replace("*", "")
     return s.replace('\\"', '"')
 
 

@@ -124,6 +124,23 @@ NotebookLM y sont recensées : les chercher ici aussi (passage voisin pris
 pour le bon, notion venue d'une autre œuvre de l'auteur, causalité
 renversée, citation inventée, analogie que l'auteur récuse ailleurs).
 
+Sur la *Critique de la faculté de juger* (§ 61-78, 2026-10-26), alors même
+que la traduction Renaut était une source du notebook : des citations
+« mot pour mot de la traduction Renaut » qui n'en étaient pas (l'arbre du
+§ 64, la maxime des anatomistes du § 66, « un être animé » pour « un être
+organisé » au § 65), des termes des commentateurs donnés pour ceux de Kant
+(« intussusception », « *Schwärmerei* » au § 61), le § 78 placé dans la
+Méthodologie qu'il ne fait qu'annoncer, et un découpage qui rattachait le
+§ 66 au système des fins. Ses explications des arguments, en revanche,
+étaient bonnes. Quand le chat de NotebookLM atteint sa limite d'usage, il
+se bloque une demi-heure : rédiger pendant ce temps les leçons déjà
+documentées.
+
+`texte.py verifie` signale à tort les citations coupées par un en-tête de
+page ou altérées par l'OCR du PDF (« Ton » pour « l'on », « II » pour
+« Il ») : les vérifier avec `texte.py cherche` sur quelques mots avant de
+les corriger.
+
 ## 3. Découper, écrire, clarifier
 
 § 3 à § 6 de `cours-traite`, sans changement de fond. Ce qui change :
