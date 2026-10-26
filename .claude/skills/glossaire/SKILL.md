@@ -107,7 +107,8 @@ python -I $N juge g-x <qid> clair | obscur "ce qui reste obscur"
 python -I $N plan g-x "thèse 1" "thèse 2" …   # proposé, après A à C
 python -I $N valide g-x "mots de l'utilisateur" [thèses corrigées…]
 python -I $N manque g-x <fichier yaml>      # après rédaction
-python -I $N relire g-x <fichier yaml>      # puis une relecture par étape
+python -I $N relire g-x <fichier yaml>      # relecture par étape (facultative)
+python -I $N signale g-x "point obscur"     # un point signalé par l'utilisateur
 python -I $N verifie g-x <fichier yaml>     # avant publication
 python -I $N etat g-x                        # où en est l'entrée
 python -I $N lecons                          # les relectures passées
@@ -181,24 +182,24 @@ toutes les quatre mêmes passages, lues puis recopiées en entier)** :
   demande.
 - *F. Ce qui manque* : après rédaction, `manque` fabrique la question à
   partir des étapes et des passages de l'entrée.
-- *G. Relecture étape par étape, par NotebookLM* (choix de l'utilisateur,
-  2026-10-26, à la place de l'agent qui relisait tout, trop coûteux) :
-  `relire g-x <yaml>` fait une question par étape du rappel : le paragraphe,
-  sans mise en forme, et l'obligation de nommer **un** point, le moins clair
-  pour un étudiant qui ne connaît pas Plotin (image non dépliée, thèse sans
-  raison, phrase de liaison, terme technique, thèse du système supposée,
-  citation mal rapportée), avec le passage qui le comblerait. Je corrige
-  l'étape, puis `juge … clair`. Ce n'est pas moi qui décide de ce qui est
-  obscur : c'est NotebookLM qui le nomme. L'agent `relecteur-glossaire`
-  reste facultatif, pour vérifier de temps en temps que cette relecture ne
-  laisse pas passer ce que l'utilisateur relèverait.
+- *G. Les points obscurs, par la relecture de l'utilisateur* (choix de
+  l'utilisateur, 2026-10-26, pour économiser) : je publie, il relit, et
+  chaque point qu'il signale comme obscur ou mal justifié passe par
+  `signale g-x "le point"`. Le programme en fait une relance auprès de
+  NotebookLM (« je ne comprends pas pourquoi… »), garde la critique dans
+  `relectures.json`, et refuse la publication suivante tant que la relance
+  n'a pas sa réponse jugée claire. Je ne corrige jamais un point signalé de
+  mémoire : la correction vient de l'argument de Plotin rapporté par
+  NotebookLM et recoupé sur la GF. La relecture étape par étape par
+  NotebookLM (`relire`) reste disponible, facultative ; l'agent
+  `relecteur-glossaire` aussi.
 
 `verifie` refuse la publication si une question est sans réponse, une
 thèse ou une relance n'est pas jugée claire, le plan n'a pas l'accord de
 l'utilisateur, une étape du rappel n'est pas une thèse du plan, le rappel
 contient une paraphrase qui affirme sans démontrer (« Autrement dit ») ou
-une étape sans connecteur de raison, ou si une étape n'a pas été relue par
-NotebookLM.
+une étape sans connecteur de raison, ou si un point signalé par
+l'utilisateur n'a pas été relancé et éclairci.
 
 **Les relectures de l'utilisateur** s'enregistrent (`notebook.py
 relecture g-x "critique"`) et `lecons` les rassemble : les relire avant

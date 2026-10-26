@@ -123,8 +123,8 @@ def cmd_question(entree):
             print("Phases A à C faites. Tirer des réponses le plan : `plan` avec les thèses d'étape.")
         elif not any(x["id"] == "F-manque" for x in j["questions"]):
             print("Plan démontré. Rédiger l'entrée, puis `manque` avec le fichier yaml.")
-        elif not any(x["phase"] == "G" for x in j["questions"]):
-            print("Ouvrir la relecture étape par étape : `relire` avec le fichier yaml.")
+        elif not j.get("signalements"):
+            print("`verifie`, publier, puis attendre la relecture de l'utilisateur : chaque point qu'il signale passe par `signale`.")
         else:
             print("`verifie` avec le fichier yaml.")
         return
@@ -395,13 +395,8 @@ def controle(entree, yaml):
         fautes.append("« Autrement dit » : une paraphrase qui affirme au lieu de démontrer")
     if j["plan"] and not j.get("accord"):
         fautes.append("plan non validé par l'utilisateur (`valide`)")
-    relues = {norm(q["titre"]) for q in j["questions"] if q["phase"] == "G"}
-    if not relues:
-        fautes.append("relecture étape par étape non faite (`relire`)")
-    else:
-        for titre, _ in etapes(notes):
-            if norm(titre) not in relues and norm(titre) not in ses_titres:
-                fautes.append(f"étape non relue par NotebookLM : « {titre} »")
+    # La relecture étape par étape par NotebookLM est facultative depuis le 2026-10-26 : les points
+    # obscurs viennent de la relecture de l'utilisateur (`signale`), relancés auprès de NotebookLM.
     # L'agent relecteur-glossaire reste facultatif ; s'il a rendu un verdict, il doit valoir pour ce texte.
     r = chemin(entree, "relecture.json")
     if os.path.exists(r):
@@ -426,6 +421,16 @@ def cmd_etat(entree):
         v = f", {q['verdict']}" if q.get("verdict") else ""
         print(f"{q['id']:<14} {r}{v}")
     print("plan :", *(f"\n  - {t}" for t in j["plan"]) or " —")
+    cmd_question(entree)
+
+
+def cmd_signale(entree, point):
+    """Un point obscur signalé par l'utilisateur : relance auprès de NotebookLM, et critique gardée."""
+    j = charge(entree)
+    j.setdefault("signalements", []).append(point)
+    garde(entree, j)
+    cmd_relecture(entree, point)
+    cmd_relance(entree, point)
     cmd_question(entree)
 
 
@@ -522,6 +527,8 @@ def main(a):
         cmd_image(a[0], a[1])
     elif c == "relance":
         cmd_relance(a[0], a[1])
+    elif c == "signale":
+        cmd_signale(a[0], a[1])
     elif c == "plan":
         cmd_plan(a[0], a[1:])
     elif c == "valide":
