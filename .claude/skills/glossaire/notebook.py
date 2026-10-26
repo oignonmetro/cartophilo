@@ -298,7 +298,7 @@ def cmd_manque(entree, yaml):
         sys.exit("Le plan doit être démontré et jugé clair avant la question de ce qui manque.")
     notes = rappel(yaml)
     et = "; ".join(norm(t) and re.sub(r"\{/?[a-z]+\}", "", t) for t, _ in etapes(notes))
-    pas = "; ".join(sorted(set(re.findall(r"traité \d+, chap\. \d+", notes.replace(" ", " ")))))
+    pas = "; ".join(sorted(set(re.findall(r"traité \d+, chap\. \d+", a_plat(notes))), key=lambda s: [int(x) for x in re.findall(r"\d+", s)]))
     ajoute(j, "F-manque", "F", MANQUE.format(notion=j["notion"], etapes=et, passages=pas))
     garde(entree, j)
     cmd_question(entree)
