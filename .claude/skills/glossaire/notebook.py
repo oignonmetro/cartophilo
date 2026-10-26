@@ -39,6 +39,13 @@ DIFFICULTES = [
 THESE = "Comment Plotin établit-il que {these} ? Donne l'argument prémisse par prémisse, le passage (traité, chapitre) et la citation où chaque prémisse est posée, et ce qu'il faut savoir du reste de sa pensée pour suivre l'argument."
 IMAGE = "Pourquoi Plotin dit-il, à propos de {notion} : « {image} » ? Que dit littéralement cette image ou cette épithète, terme à terme (qu'est-ce qui correspond à quoi), et qu'est-ce qu'elle fait comprendre que la formule abstraite ne dirait pas ? Passage et citation."
 RELANCE = "Je ne comprends pas pourquoi {point}. Explique pas à pas le raisonnement de Plotin, sans sauter d'étape, en disant d'où vient chaque prémisse (passage, citation)."
+# Relecture étape par étape par NotebookLM, plutôt que par un agent qui relit tout (choix de
+# l'utilisateur, 2026-10-26) : la question oblige à nommer un point, pour déjouer la complaisance.
+RELIRE = ("Voici un paragraphe d'une fiche de révision sur {notion} chez Plotin, pour un étudiant qui ne connaît pas Plotin. "
+          "Quel est le point le moins clair de ce paragraphe ? Nomme-en un seul, même s'il est mineur, parmi : une image non dépliée "
+          "terme à terme, une thèse affirmée sans sa raison, une phrase de liaison qui renvoie à une idée sans la dire, un terme "
+          "technique non expliqué, une thèse de Plotin supposée sans être dite, une citation mal rapportée. Dis ce qui manque et "
+          "le passage (traité, chapitre) qui le comblerait. 150 mots au plus. Le paragraphe : « {etape} »")
 MANQUE = "Une entrée à propos de {notion} chez Plotin couvre déjà ceci. Étapes : {etapes}. Passages : {passages}. Quels passages, arguments, distinctions ou difficultés importants manquent, et pourquoi chacun importe-t-il ?"
 
 
@@ -76,7 +83,7 @@ def phase_finie(j, lettre):
 
 
 def a_juger(q):
-    return q["phase"] in ("D", "E")
+    return q["phase"] in ("D", "E", "G")
 
 
 def suivante(j):
@@ -116,8 +123,8 @@ def cmd_question(entree):
             print("Phases A à C faites. Tirer des réponses le plan : `plan` avec les thèses d'étape.")
         elif not any(x["id"] == "F-manque" for x in j["questions"]):
             print("Plan démontré. Rédiger l'entrée, puis `manque` avec le fichier yaml.")
-        elif not os.path.exists(chemin(entree, "relecture.json")):
-            print("Faire relire l'entrée par l'agent relecteur-glossaire (jamais par moi-même), puis `verifie`.")
+        elif not any(x["phase"] == "G" for x in j["questions"]):
+            print("Ouvrir la relecture étape par étape : `relire` avec le fichier yaml.")
         else:
             print("`verifie` avec le fichier yaml.")
         return
@@ -145,8 +152,11 @@ def deja_cites(entree, j):
 
 def texte_envoye(entree, j, q):
     """La question telle qu'elle part : bornée en longueur, et sans redite des passages connus."""
-    vus = deja_cites(entree, j)
-    suite = [BREF] + ([DEJA.format(passages="traités " + " ; ".join(vus))] if vus and q["phase"] != "F" else [])
+    # un passage que la question cite elle-même reste permis
+    propres = {f"{a}, {b}" for a, b in re.findall(r"traité (\d+), chap\. (\d+)", q["texte"])}
+    vus = [p for p in deja_cites(entree, j) if p not in propres]
+    # une thèse se démontre avec tous ses passages, même déjà donnés
+    suite = [BREF] + ([DEJA.format(passages="traités " + " ; ".join(vus))] if vus and q["phase"] not in ("D", "F", "G") else [])
     return q["texte"] + " " + " ".join(suite)
 
 
@@ -294,6 +304,26 @@ def cmd_manque(entree, yaml):
     cmd_question(entree)
 
 
+def a_plat(s):
+    """Le texte d'une étape sans la mise en forme du rappel, tel qu'on le donne à lire."""
+    s = re.sub(r"\[\[[^|\]]*\|([^\]]*)\]\]", r"\1", s)
+    s = re.sub(r"\{/?[a-z]+\}|\*\*|__|`", "", s)
+    return re.sub(r"\s+", " ", s.replace(" ", " ")).strip()
+
+
+def cmd_relire(entree, yaml):
+    """Phase G : une question de relecture par étape du rappel."""
+    j = charge(entree)
+    if not any(q["id"] == "F-manque" and q["reponse"] for q in j["questions"]):
+        sys.exit("Poser d'abord la question de ce qui manque (`manque`), et en tenir compte.")
+    if any(q["phase"] == "G" for q in j["questions"]):
+        sys.exit("La relecture est déjà ouverte : `question` pour la suite.")
+    for k, (titre, corps) in enumerate(etapes(rappel(yaml)), 1):
+        ajoute(j, f"G-etape{k}", "G", RELIRE.format(notion=j["notion"], etape=a_plat(titre + " " + corps)), titre=titre)
+    garde(entree, j)
+    cmd_question(entree)
+
+
 def empreinte(yaml):
     """Empreinte du rappel et des cartes : un verdict ne vaut que pour le texte qu'il a relu."""
     t = open(yaml, encoding="utf-8").read().replace(" ", " ")
@@ -346,15 +376,19 @@ def controle(entree, yaml):
         fautes.append("« Autrement dit » : une paraphrase qui affirme au lieu de démontrer")
     if j["plan"] and not j.get("accord"):
         fautes.append("plan non validé par l'utilisateur (`valide`)")
-    r = chemin(entree, "relecture.json")
-    if not os.path.exists(r):
-        fautes.append("pas de relecture par l'agent relecteur-glossaire")
+    relues = {norm(q["titre"]) for q in j["questions"] if q["phase"] == "G"}
+    if not relues:
+        fautes.append("relecture étape par étape non faite (`relire`)")
     else:
+        for titre, _ in etapes(notes):
+            if norm(titre) not in relues:
+                fautes.append(f"étape non relue par NotebookLM : « {titre} »")
+    # L'agent relecteur-glossaire reste facultatif ; s'il a rendu un verdict, il doit valoir pour ce texte.
+    r = chemin(entree, "relecture.json")
+    if os.path.exists(r):
         v = json.load(open(r, encoding="utf-8"))
-        if v["empreinte"] != empreinte(yaml):
-            fautes.append("l'entrée a changé depuis la relecture : la refaire relire")
-        elif v["verdict"] != "valide":
-            fautes.append("le relecteur demande des reprises (voir relecture.json)")
+        if v["verdict"] != "valide" and v["empreinte"] == empreinte(yaml):
+            fautes.append("l'agent relecteur demande des reprises (voir relecture.json)")
     return fautes
 
 
@@ -477,6 +511,8 @@ def main(a):
         print(empreinte(a[0]))
     elif c == "juge":
         cmd_juge(a[0], a[1], a[2], a[3] if len(a) > 3 else None)
+    elif c == "relire":
+        cmd_relire(a[0], a[1])
     elif c == "manque":
         cmd_manque(a[0], a[1])
     elif c == "verifie":
