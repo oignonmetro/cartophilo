@@ -1,0 +1,67 @@
+# Entrée du glossaire de Plotin (skill glossaire), créée le 2026-10-26 à la
+# demande de l'utilisateur à partir de l'étape qu'il a sortie de Végétatif
+# (le corps vivant n'a de l'âme qu'une trace). Journal dérivé de celui de
+# Végétatif, où cette étape a été démontrée (notebook.py derive). Citations
+# vérifiées sur la GF (IV, 4, 18, 20, 27 et 29 ; VI, 4, 15). Les cartes
+# venues de Végétatif gardent leur identifiant, donc leur progression.
+
+id: g-corps
+title: Corps (`sôma`)
+icon: book
+color: teal
+lessons:
+- id: g-corps-l1
+  title: Corps
+  notes: |-
+    Chez Plotin, le {violet}**corps**{/violet} (*sôma*) est [def]. Il ne {pink}possède pas l'âme{/pink} comme un vase contient un liquide : il n'en reçoit qu'une trace (voir [[g-vegetatif|végétatif]]).
+
+    __**Le corps vivant n'a pas l'âme mais sa trace, et c'est ce qui le sépare de l'inerte.**__ Comment une puissance incorporelle est-elle présente à un corps ? Par une règle générale : quand une réalité s'allie à une réalité d'un autre genre, et que « la réalité inférieure reçoit quelque chose de la réalité supérieure sans être en mesure de la posséder, la réalité inférieure __doit se contenter d'une trace__ de la réalité supérieure » ([[traite28|traité 28]], chap. 18). Le corps ne peut pas posséder l'âme, qui n'est dans aucun lieu ; il en reçoit donc une trace, et c'est le végétatif qui la lui donne : il est l'âme « qui se trouve dans le voisinage du corps, celle que nous appelons "nature" et __qui donne au corps une trace d'elle-même__ » (chap. 20). Plotin appelle aussi cette trace « comme __une ombre de l'âme__ » (chap. 18). Une ombre reproduit la figure de ce qui la projette sans en être une partie : de même, le corps vivant a quelque chose de la vie de l'âme, qui est désormais à lui, sans avoir l'âme elle-même. Plotin dit ailleurs comment elle s'imprime : « c'est __par une sorte de voisinage__ que le corps recueille une trace de l'âme, qui n'est pas venue comme une partie de l'âme vient au corps, mais est comme une chaleur ou une illumination » ([[traite22|traité 22]], chap. 15). C'est donc cette trace qui sépare le vivant de l'inerte, et l'inerte est ce qui ne l'a pas ou ne l'a plus. La puissance qui vient de la terre donne au végétal « ce par quoi il est __différent d'une branche coupée__ et qui n'est plus un végétal, mais seulement un morceau de bois », et les pierres « croissent tant qu'elles restent attachées à la terre », puis gardent la taille qu'elles avaient quand on les a extraites ([[traite28|traité 28]], chap. 27). Et cette trace est une chaleur plutôt qu'une lumière : le corps vivant « ressemble à l'air, non pas lorsqu'il est illuminé, mais __lorsqu'il est échauffé__ » (chap. 18). La lumière quitte l'air dès que sa source s'éloigne ; la chaleur, elle, s'imprime dans l'air et y reste un temps. C'est pourquoi le cadavre garde un temps la trace qui s'en va : « les cheveux qui continuent de pousser sur les cadavres » en sont la preuve (chap. 29 ; voir [[g-anime-inerte|animé et inerte]], où l'image de l'air échauffé dit la même chose).
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | traité 22, chap. 15 | le corps recueille une trace de l'âme, comme une chaleur |
+    | traité 28, chap. 18 | l'inférieur n'a qu'une trace du supérieur ; l'ombre de l'âme |
+    | traité 28, chap. 20 | la nature donne au corps une trace d'elle-même |
+    | traité 28, chap. 27 | la pierre croît tant qu'elle tient à la terre |
+    | traité 28, chap. 29 | le cadavre garde un temps la trace : cheveux et ongles |
+
+    **Voir aussi** : [[g-vegetatif|Végétatif]] · [[g-anime-inerte|Animé / Inerte]] · [[g-vivant|Vivant]] · [[g-ame|Âme]] · [[g-phusis|Nature]]
+  tables:
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-corps-l1-q1
+    sentence: "Le corps, qui ne vit pas par lui-même et ne reçoit de l'âme qu'une trace, se dit en grec translittéré ___."
+    answer: sôma
+    alt: ["soma", "sōma"]
+  - id: g-vegetatif-l1-q14
+    sentence: "Un corps qui s'allie à l'âme sans pouvoir la posséder « doit se contenter d'une ___ de la réalité supérieure » (traité 28, chap. 18)."
+    answer: trace
+    alt: []
+  - id: g-corps-l1-q2
+    sentence: "La nature est l'âme « qui se trouve dans le voisinage du corps, celle que nous appelons \"nature\" et qui donne au corps une ___ d'elle-même » (traité 28, chap. 20)."
+    answer: trace
+    alt: []
+  - id: g-vegetatif-l1-q15
+    sentence: "« Le corps d'un animal et celui d'une plante possède comme une ___ de l'âme » (traité 28, chap. 18)."
+    answer: ombre
+    alt: []
+  - id: g-vegetatif-l1-q26
+    sentence: "« C'est par une sorte de ___ que le corps recueille une trace de l'âme, qui n'est pas venue comme une partie de l'âme vient au corps » (traité 22, chap. 15)."
+    answer: voisinage
+    alt: []
+  - id: g-vegetatif-l1-q16
+    sentence: "La puissance de la terre donne au végétal « ce par quoi il est différent d'une branche coupée et qui n'est plus un végétal, mais seulement un morceau de ___ » (traité 28, chap. 27)."
+    answer: bois
+    alt: []
+  - id: g-corps-l1-q3
+    sentence: "Le corps vivant « ressemble à l'air, non pas lorsqu'il est illuminé, mais lorsqu'il est ___ » (traité 28, chap. 18)."
+    answer: échauffé
+    alt: []
+  - id: g-corps-l1-q4
+    sentence: "La preuve que le cadavre garde un temps la trace de l'âme : « les ___ qui continuent de pousser sur les cadavres » (traité 28, chap. 29)."
+    answer: cheveux
+    alt: []
