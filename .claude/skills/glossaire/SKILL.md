@@ -98,7 +98,7 @@ dont le message dit « retouche ») ; une correction ponctuelle passe par
 
 ```
 N=".claude/skills/glossaire/notebook.py"
-python -I $N debut g-x "terme sans article" --grec terme --voisines "a, b" --effets "c, d"
+python -I $N debut g-x "terme sans article" --grec terme --voisines "a, b" --effets "c, d" [--couvert "ce que d'autres entrées traitent"]
 python -I $N question g-x          # la prochaine question, à coller telle quelle
 python -I $N reponse g-x <qid> <fichier>   # la réponse, copiée dans un fichier
 python -I $N image g-x "épithète ou image de Plotin"
@@ -114,15 +114,31 @@ python -I $N lecons                          # les relectures passées
 
 **Règles d'envoi.** Le notebook est celui de Plotin : inutile de nommer
 l'auteur dans la question (« comment Plotin… ? », « pourquoi Plotin… ? »
-restent naturels). Une question par message, jamais regroupées ; attendre
-la fin de la réponse ; ne relire que la dernière ; la copier dans un
-fichier, puis `reponse`. Effacer l'historique de la discussion en
-commençant une entrée.
+restent naturels). Une question par message ; attendre la fin de la
+réponse (d'après la durée moyenne mesurée, non en interrogeant la page
+toutes les deux secondes) ; ne relire que la dernière. L'historique de la
+discussion s'efface en commençant une entrée, par l'utilisateur (c'est une
+suppression définitive, que je ne fais pas moi-même).
+
+**Économie (choix de l'utilisateur, 2026-10-26, après Végétatif : 19
+questions avant le plan, des réponses de 8 000 caractères qui recitaient
+toutes les quatre mêmes passages, lues puis recopiées en entier)** :
+- `question` ajoute d'office à chaque question « 250 mots au plus » et la
+  liste des passages déjà donnés, à ne pas reprendre ;
+- le journal garde des **notes**, pas des transcriptions : pour chaque
+  réponse, ses thèses, ses prémisses, ses passages, et mes recoupements
+  sur la GF (citation exacte ou non, chapitre juste ou non, contresens) ;
+- les questions élémentaires vont en deux messages à réponse en tableau
+  court (`B-statut`, `B-portee`) ; `debut … --couvert "…"` signale ce que
+  traitent déjà des entrées voisines (Croissance, Reproduction…), que
+  NotebookLM ne doit pas redévelopper. Les difficultés, les thèses, les
+  images et les relances restent une par message : c'est là que la
+  division importe.
 
 **Les phases, dans l'ordre imposé par le programme.**
 
 - *A. Repérage* : les lieux décisifs ; les emplois distincts.
-- *B. Questions élémentaires*, une par message, chacune précise :
+- *B. Questions élémentaires*, en deux messages (statut, puis portée), chacune précise :
   - **nature** : qu'est-ce, ontologiquement (une réalité à part, une
     puissance, une partie, un état, une activité, une relation) ? à quoi
     le voit-on chez Plotin ?

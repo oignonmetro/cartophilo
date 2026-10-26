@@ -18,16 +18,17 @@ import unicodedata
 ICI = os.path.dirname(os.path.abspath(__file__))
 JOURNAUX = os.path.join(ICI, "journaux")
 RELECTURES = os.path.join(ICI, "relectures.json")
-MIN_REPONSE = 300  # caractères : en dessous, ce n'est pas une réponse recopiée
+MIN_REPONSE = 300  # caractères : en dessous, ce ne sont plus des notes utilisables
+# Réponses courtes et sans redite (choix de l'utilisateur, 2026-10-26) : NotebookLM recitait
+# à chaque réponse les mêmes passages, et chaque réponse se lisait puis se recopiait en entier.
+BREF = "Réponds en 250 mots au plus, sans introduction ni récapitulatif."
+DEJA = "Ne reprends pas les passages déjà donnés ({passages}) : apporte du neuf, ou dis qu'il n'y en a pas."
 
+# Les questions élémentaires vont par deux groupes, réponse en tableau court (même choix) ;
+# les difficultés, les thèses et les relances restent une par message.
 ELEMENTAIRES = [
-    ("B-nature", "Qu'est-ce exactement que ce que désigne {notion}, ontologiquement : une réalité à part entière, une puissance, une partie, un état, une activité, une relation ? À quoi le voit-on dans le texte ? Passages (traité, chapitre) et citations."),
-    ("B-rang", "À quel niveau de la réalité (l'Un, l'Intellect, l'Âme, les corps) se situe ce que désigne {notion}, ou à quels niveaux ? Pourquoi Plotin le place-t-il à ce niveau et pas à un autre ? Passages et citations."),
-    ("B-origine", "D'où vient ce que désigne {notion} : de quoi cela dépend-il, de quoi cela procède-t-il ? En quel sens précis cela en vient-il (don, trace, image, illumination, partie détachée ou non) ? Explique le raisonnement de Plotin, avec passages et citations."),
-    ("B-demarcation", "En quoi ce que désigne {notion} se distingue-t-il de {voisines} ? Pour chacune, pourquoi Plotin ne les confond-il pas ? Passages et citations."),
-    ("B-extension", "Quels êtres ont ce que désigne {notion}, et lesquels ne l'ont pas ? Dans chaque cas, pourquoi, selon Plotin ? Passages et citations."),
-    ("B-fonction", "Quel rôle ce que désigne {notion} joue-t-il dans l'ensemble de la pensée de Plotin : qu'est-ce qui ne tiendrait plus sans lui ? Passages et citations."),
-    ("B-mecanisme", "Comment ce que désigne {notion} produit-il ce que Plotin lui attribue ({effets}) ? Pour chacun, décris le processus étape par étape, sans sauter d'étape, avec passages et citations."),
+    ("B-statut", "Sur {notion}, réponds en un tableau court à trois lignes. Nature : qu'est-ce, ontologiquement (une réalité à part, une puissance, une partie, un état, une activité, une relation), et à quoi le voit-on dans le texte ? Rang : à quel niveau de la réalité (l'Un, l'Intellect, l'Âme, les corps), et pourquoi celui-là ? Origine : de quoi cela procède-t-il, et en quel sens précis en vient-il (don, trace, image, illumination, partie détachée ou non) ? Pour chaque ligne, la raison de Plotin et un passage (traité, chapitre)."),
+    ("B-portee", "Sur {notion}, réponds en un tableau court à quatre lignes. Démarcation : en quoi se distingue-t-elle de {voisines}, et pourquoi Plotin ne les confond-il pas ? Extension : quels êtres l'ont, lesquels ne l'ont pas, et pourquoi ? Fonction : qu'est-ce qui ne tiendrait plus sans elle dans la pensée de Plotin ? Mécanisme : comment produit-elle {effets}, étape par étape ? Pour chaque ligne, la raison de Plotin et un passage (traité, chapitre).{deja_entrees}"),
 ]
 DIFFICULTES = [
     ("C-paradoxes", "Dans ce que Plotin dit à propos de {notion}, quelles thèses paraissent contre-intuitives ou paradoxales à un lecteur d'aujourd'hui ? Pour chacune, la raison exacte qu'en donne Plotin, avec passages et citations."),
@@ -87,17 +88,18 @@ def suivante(j):
     return None, None
 
 
-def cmd_debut(entree, notion, grec=None, voisines=None, effets=None):
+def cmd_debut(entree, notion, grec=None, voisines=None, effets=None, couvert=None):
     if not voisines or not effets:
         sys.exit("--voisines et --effets sont obligatoires : les notions dont il faut la distinguer, ce qu'elle produit ou fait.")
     if os.path.exists(chemin(entree, "journal.json")):
         sys.exit(f"Un journal existe déjà pour {entree} (`etat` pour le voir).")
     nom = f"la notion de « {notion} »" + (f" ({grec})" if grec else "")
+    deja_entrees = f" Ne développe pas ce que traitent déjà d'autres entrées : {couvert}." if couvert else ""
     j = dict(entree=entree, notion=nom, voisines=voisines, effets=effets, plan=[], questions=[])
     ajoute(j, "A-lieux", "A", f"Où Plotin établit-il ou définit-il {nom} ? Donne les deux à quatre passages décisifs (traité, chapitre), une citation de chacun, et ce que chacun établit.")
     ajoute(j, "A-emplois", "A", f"Quels sens ou emplois distincts {nom} a-t-elle chez Plotin, et quelles distinctions commande-t-elle ? Pour chacun, un passage (traité, chapitre) et une citation.")
     for qid, t in ELEMENTAIRES:
-        ajoute(j, qid, "B", t.format(notion=nom, voisines=voisines, effets=effets))
+        ajoute(j, qid, "B", t.format(notion=nom, voisines=voisines, effets=effets, deja_entrees=deja_entrees))
     for qid, t in DIFFICULTES:
         ajoute(j, qid, "C", t.format(notion=nom))
     garde(entree, j)
@@ -124,7 +126,28 @@ def cmd_question(entree):
         print(f"  `juge {entree} {q['id']} clair` ou `juge {entree} {q['id']} obscur \"ce qui reste obscur\"`")
         return
     print(f"[{q['id']}] À coller seule dans NotebookLM, puis attendre la fin de la réponse :\n")
-    print(q["texte"])
+    print(texte_envoye(entree, j, q))
+
+
+def deja_cites(entree, j):
+    """Passages (traité, chapitre) déjà donnés dans les réponses enregistrées."""
+    vus = []
+    for q in j["questions"]:
+        if not q["reponse"]:
+            continue
+        t = open(chemin(entree, q["reponse"]), encoding="utf-8").read()
+        for m in re.finditer(r"[Tt]raité (\d+)(?: \([^)]*\))?, chap(?:itre|\.)? ?(\d+)", t):
+            p = f"{m.group(1)}, {m.group(2)}"
+            if p not in vus:
+                vus.append(p)
+    return vus
+
+
+def texte_envoye(entree, j, q):
+    """La question telle qu'elle part : bornée en longueur, et sans redite des passages connus."""
+    vus = deja_cites(entree, j)
+    suite = [BREF] + ([DEJA.format(passages="traités " + " ; ".join(vus))] if vus and q["phase"] != "F" else [])
+    return q["texte"] + " " + " ".join(suite)
 
 
 def cmd_reponse(entree, qid, fichier):
@@ -137,7 +160,7 @@ def cmd_reponse(entree, qid, fichier):
         sys.exit(f"La question à poser est {attendue['id']} : les questions se posent dans l'ordre, une à une.")
     texte = open(fichier, encoding="utf-8").read().strip()
     if len(texte) < MIN_REPONSE:
-        sys.exit(f"Réponse de {len(texte)} caractères : recopier la réponse entière de NotebookLM.")
+        sys.exit(f"Notes de {len(texte)} caractères : relever au moins les thèses, prémisses et passages de la réponse.")
     f = chemin(entree, qid + ".md")
     open(f, "w", encoding="utf-8").write(f"# {qid}\n\n{q['texte']}\n\n---\n\n{texte}\n")
     q["reponse"] = os.path.basename(f)
@@ -434,8 +457,8 @@ def main(a):
         sys.exit(__doc__)
     c = a.pop(0)
     if c == "debut":
-        g, v, e = opt("--grec"), opt("--voisines"), opt("--effets")
-        cmd_debut(a[0], a[1], g, v, e)
+        g, v, e, c = opt("--grec"), opt("--voisines"), opt("--effets"), opt("--couvert")
+        cmd_debut(a[0], a[1], g, v, e, c)
     elif c == "question":
         cmd_question(a[0])
     elif c == "reponse":
