@@ -109,6 +109,7 @@ python -I $N valide g-x "mots de l'utilisateur" [thèses corrigées…]
 python -I $N manque g-x <fichier yaml>      # après rédaction
 python -I $N relire g-x <fichier yaml>      # relecture par étape (facultative)
 python -I $N signale g-x "point obscur"     # un point signalé par l'utilisateur
+python -I $N derive g-y g-x "demande" "thèse"  # entrée faite d'étapes sorties de g-x
 python -I $N verifie g-x <fichier yaml>     # avant publication
 python -I $N etat g-x                        # où en est l'entrée
 python -I $N lecons                          # les relectures passées

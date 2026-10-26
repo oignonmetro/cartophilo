@@ -424,6 +424,27 @@ def cmd_etat(entree):
     cmd_question(entree)
 
 
+def cmd_derive(entree, source, demande, theses):
+    """Une entrée faite d'étapes sorties d'une autre (choix de l'utilisateur) hérite de son journal :
+    ces étapes y ont déjà été démontrées. Seules les thèses du plan source sont admises."""
+    import shutil
+    js = charge(source)
+    if os.path.exists(chemin(entree, "journal.json")):
+        sys.exit(f"Un journal existe déjà pour {entree}.")
+    inconnues = [t for t in theses if norm(t) not in [norm(x) for x in js["plan"]]]
+    if inconnues or not theses:
+        sys.exit(f"Thèses absentes du plan de {source} : {inconnues or 'aucune donnée'}")
+    j = json.loads(json.dumps(js))
+    j.update(entree=entree, plan=theses, derive_de=source,
+             accord=f"{js.get('accord', '')} — puis, pour cette entrée dérivée : « {demande} »")
+    os.makedirs(chemin(entree), exist_ok=True)
+    for q in j["questions"]:
+        if q["reponse"]:
+            shutil.copy(chemin(source, q["reponse"]), chemin(entree, q["reponse"]))
+    garde(entree, j)
+    print(f"Journal de {entree} dérivé de {source} ({len(theses)} thèse(s)).")
+
+
 def cmd_signale(entree, point):
     """Un point obscur signalé par l'utilisateur : relance auprès de NotebookLM, et critique gardée."""
     j = charge(entree)
@@ -527,6 +548,8 @@ def main(a):
         cmd_image(a[0], a[1])
     elif c == "relance":
         cmd_relance(a[0], a[1])
+    elif c == "derive":
+        cmd_derive(a[0], a[1], a[2], a[3:])
     elif c == "signale":
         cmd_signale(a[0], a[1])
     elif c == "plan":
