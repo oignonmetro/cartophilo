@@ -63,11 +63,9 @@ l'épreuve :
   - La politique
   - Les sciences humaines
   - L'épistémologie
-- **La vie** : sous-onglets pas encore précisés.
-
-## Non encore décidé
-
-- Le détail des sous-onglets de « La vie ».
+- **La vie** : les mêmes quatre sous-onglets que Plotin et Marx (Glossaire,
+  Idées, Textes), le Repérage s'y appelant **Œuvres** (unités-œuvres sur
+  les œuvres classiques du thème).
 
 ## Décidé : la correspondance technique avec le moteur de contenu
 

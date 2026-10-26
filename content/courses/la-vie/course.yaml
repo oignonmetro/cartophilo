@@ -1,6 +1,6 @@
-# Squelette à vide. Les sous-onglets de ce cours ne sont pas encore décidés
-# (voir CLAUDE.md « Non encore décidé ») ; une seule piste provisoire tient
-# la place en attendant.
+# Les quatre pistes de Plotin et de Marx (voir content/courses/marx/course.yaml),
+# le Repérage s'appelant ici « Œuvres » : pas d'auteur unique, on s'y repère
+# dans les œuvres classiques sur la vie (unités-œuvres, content/oeuvres.md).
 
 id: la-vie
 name: La vie
@@ -11,13 +11,38 @@ tagline: Dissertation sur programme, thème imposé.
 status: available
 default: false
 layout: library
-version: 14
+version: 15
 
 tracks:
-  - id: a-preciser
-    title: Sous-thèmes à définir
-    subtitle: Programme pas encore détaillé
+  - id: glossaire
+    title: Glossaire
+    subtitle: Notions centrales
     kind: grammar
     color: teal
-    icon: wave
-    units: [pascal-nous-esperons-de-vivre, ea5, aristote-desir-mouvement, sens1, sens2, sens3, sens4, sens5, montaigne-monstre]
+    icon: glossary
+    units: []
+
+  - id: idees
+    title: Idées
+    subtitle: Thèses et arguments
+    kind: grammar
+    color: violet
+    icon: bulb
+    units: [ea5, sens1, sens2, sens3, sens4, sens5]
+
+  - id: textes
+    title: Textes
+    subtitle: Explications suivies, paragraphe par paragraphe
+    kind: grammar
+    color: coral
+    icon: page
+    # Une unité par texte étudié (voir content/textes.md).
+    units: [pascal-nous-esperons-de-vivre, aristote-desir-mouvement, montaigne-monstre]
+
+  - id: oeuvres
+    title: Œuvres
+    subtitle: Se situer dans les œuvres
+    kind: grammar
+    color: sky
+    icon: compass
+    units: []
