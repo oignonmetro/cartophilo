@@ -171,9 +171,10 @@ des citations inventées. Donc :
    traité N (…), chapitre C, lignes x-y, Plotin écrit : « [citation GF] ».
    Explique cet argument : pourquoi est-il concluant ? Quelle prémisse
    implicite le rend contraignant, et pourquoi l'adversaire ne peut-il pas
-   la refuser ? » Plusieurs arguments courts d'un même chapitre peuvent
-   partir dans une question, chacun numéroté, s'ils ne dépassent pas
-   cinq. Ne jamais sauter cette question au motif que l'argument me paraît
+   la refuser ? » Quand les arguments sont courts, les demander **par
+   bloc** : tous ceux d'un chapitre (souvent une page de la GF) dans une
+   seule question, en demandant cette explication pour chacun, numéroté ;
+   un argument long ou difficile garde sa question à part. Ne jamais sauter cette question au motif que l'argument me paraît
    clair : au traité 2, les arguments que j'avais jugés clairs (« l'harmonie
    n'est pas une réalité », « serait la santé », « il y aurait plusieurs
    âmes », la plante qui se retire dans la racine, l'âme qui pense, la
@@ -328,10 +329,16 @@ la sienne : par ses raisons, son principe, et ce qu'elle permet d'éviter.
 - **Chaque image expliquée.** Qu'illustre-t-elle, et pourquoi cette image
   plutôt qu'une autre ? Développer l'image (le sanctuaire, les vêtements
   ôtés, la nudité devant le dieu) au lieu de la résumer d'un mot.
-- **Citer plutôt que paraphraser.** Quand le texte dit la chose, le citer,
-  mot pour mot, entre `« »`, puis expliquer. Une formule reprise (« devenir
+- **Citer quand c'est utile, sinon expliquer.** Le rappel n'emploie une
+  citation que lorsqu'elle est vraiment utile (la formule exacte compte,
+  un terme est à retenir) ou marquante (« Salut à vous, je suis un dieu
+  immortel ») ; sinon, il explique, avec ses propres mots et son propre
+  raisonnement, au lieu d'empiler les citations (les cartes-citation, § 5,
+  font de toute façon savoir le texte). Quand on cite, c'est mot pour mot,
+  entre `« »`, puis on explique. Une formule reprise (« devenir
   bonne et belle rend l'âme semblable au dieu ») prend ses guillemets. La
-  paraphrase sans guillemets est à proscrire, et plus encore une phrase de
+  paraphrase (redire le texte en d'autres mots, au lieu de l'expliquer)
+  est à proscrire, et plus encore une phrase de
   la traduction reprise presque telle quelle sans guillemets (au traité 2,
   plusieurs ont échappé au premier jet) : c'est le défaut le plus
   dommageable, parce qu'on apprend alors comme analyse ce qui est le texte.
@@ -341,7 +348,8 @@ la sienne : par ses raisons, son principe, et ce qu'elle permet d'éviter.
   être une réalité, tandis que l'harmonie n'est pas une réalité ») n'est
   pas l'expliquer : il faut dire ensuite pourquoi elle est vraie et
   pourquoi l'adversaire doit l'accorder (l'harmonie n'est qu'une propriété
-  des éléments ajustés, sans existence propre hors d'eux). Chaque item
+  des éléments ajustés, sans existence propre hors d'eux). Si la citation
+  n'apporte rien que l'explication ne dise mieux, elle s'efface. Chaque item
   d'une énumération d'objections reçoit cette explication, pas seulement
   l'argument « décisif ». Le principe s'énonce en termes généraux (la vie
   est l'essence de l'âme et non un attribut reçu ; ce qui est mort n'a
