@@ -132,7 +132,10 @@ organisé » au § 65), des termes des commentateurs donnés pour ceux de Kant
 (« intussusception », « *Schwärmerei* » au § 61), le § 78 placé dans la
 Méthodologie qu'il ne fait qu'annoncer, et un découpage qui rattachait le
 § 66 au système des fins. Ses explications des arguments, en revanche,
-étaient bonnes. Quand le chat de NotebookLM atteint sa limite d'usage, il
+étaient bonnes. Sur la Méthodologie (§ 79-91), il a prêté à Renaut, deux
+fois, l'idée qu'il faut opposer strictement « fin dernière » et « fin
+finale », alors que ses notes 122 et 130 disent l'inverse : **une thèse
+attribuée à l'éditeur se vérifie dans ses notes**, comme une citation. Quand le chat de NotebookLM atteint sa limite d'usage, il
 se bloque une demi-heure : rédiger pendant ce temps les leçons déjà
 documentées.
 

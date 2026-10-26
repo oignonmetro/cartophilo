@@ -1,0 +1,930 @@
+# Cours d'une œuvre (skill cours-oeuvre, piste Œuvres de La vie, voir
+# content/philosophie.md) : Kant, Critique de la faculté de juger, seconde partie,
+# Critique de la faculté de juger téléologique, Méthodologie, § 79-91.
+# Citations : traduction d'Alain Renaut, GF-Flammarion ; repères : les
+# paragraphes de Kant. Analyse recoupée avec le notebook NotebookLM « Kant : la vie »
+# (https://notebook.google.com/notebook/1fb869d6-c4f2-431f-899f-1ced4594c671),
+# dont chaque citation a été vérifiée sur la traduction.
+
+id: kant-cfj-methodologie
+title: "Kant : Méthodologie de la faculté de juger téléologique (§ 79-91)"
+subtitle: "Du vivant à la fin finale : ce qui donne sa valeur à l'existence"
+icon: compass
+color: sky
+group: "Kant : Critique de la faculté de juger"
+lessons:
+- id: kant-cfj-methodologie-l1
+  title: "Repérage : le plan de la Méthodologie"
+  notes: |-
+    La Méthodologie part d'une question (__comment juger la nature d'après des fins, et jusqu'où ce jugement nous mène-t-il ?__) et monte par degrés : de la méthode des sciences du vivant à la place de l'homme dans la nature, puis à la fin de la création tout entière. Sa réponse : {green}__seul l'homme comme être moral donne à l'existence du monde une fin et une valeur__{/green}, et {coral}c'est de là, non de la nature observée, que l'on peut penser un Dieu{/coral}.
+
+    **Les § 79 à 81** {sky}**règlent l'usage de la téléologie dans l'étude du vivant**{/sky} : ni physique ni théologie, elle subordonne le mécanisme à une organisation originaire, et préfère l'{green}épigenèse{/green} à la {red}préformation{/red}. **Les § 82 et 83** {sky}**cherchent la fin dernière de la nature**{/sky} : l'homme, non par son {red}bonheur{/red}, mais par la {green}culture{/green}. **Les § 84 à 87** {sky}**s'élèvent à la fin finale de la création**{/sky} : l'homme comme être moral, seul capable de donner à son existence une valeur absolue, d'où la {coral}preuve morale{/coral} de l'existence de Dieu. **Les § 88 à 91** {sky}**en fixent la portée**{/sky} : une croyance pratique, non un savoir.
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | régler l'usage de la téléologie dans l'étude du vivant | § 79-81 | le mécanisme, à pousser aussi loin que possible, reste subordonné à une organisation originaire : l'épigenèse plutôt que la préformation |
+    | chercher la fin dernière de la nature | § 82-83 | l'homme est la fin dernière de la nature, non par le bonheur, que la nature ne lui garantit pas, mais par la culture |
+    | s'élever à la fin finale de la création | § 84-87 | seul l'homme comme être moral est une fin inconditionnée et donne au monde sa valeur ; d'où la preuve morale de Dieu |
+    | fixer la portée de la preuve morale | § 88-91 | la preuve vaut pour nous, pratiquement : Dieu et la vie future sont objets de croyance, non de savoir |
+
+    ! La Méthodologie ne quitte pas le point de vue critique : la fin finale n'est pas observée dans la nature, elle est pensée par la raison pratique.
+  tables:
+  - table: mouvement-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: kant-cfj-methodologie-l1-q1
+    sentence: "Dans la *Critique de la faculté de juger*, l'Appendice consacré à la ___ de la faculté de juger téléologique occupe les § 79 à 91."
+    answer: "Méthodologie"
+    alt: []
+  - id: kant-cfj-methodologie-l1-q2
+    sentence: "Dans la *Critique de la faculté de juger*, l'« archéologue de la nature » et l'hypothèse d'une « mère primitive commune » des espèces se trouvent au § ___."
+    answer: "80"
+    alt: ["§ 80"]
+  - id: kant-cfj-methodologie-l1-q3
+    sentence: "Dans la *Critique de la faculté de juger*, la préférence pour l'épigenèse et l'hommage à Blumenbach se trouvent au § ___."
+    answer: "81"
+    alt: ["§ 81"]
+  - id: kant-cfj-methodologie-l1-q4
+    sentence: "Dans la *Critique de la faculté de juger*, la culture comme fin dernière de la nature et la note sur la valeur de la vie se trouvent au § ___."
+    answer: "83"
+    alt: ["§ 83"]
+  - id: kant-cfj-methodologie-l1-q5
+    sentence: "Dans la *Critique de la faculté de juger*, l'homme comme noumène, fin finale de la création, est l'objet du § ___."
+    answer: "84"
+    alt: ["§ 84"]
+  - id: kant-cfj-methodologie-l1-q6
+    sentence: "Dans la *Critique de la faculté de juger*, l'exemple de l'honnête homme, Spinoza, persuadé qu'il n'y a ni Dieu ni vie future, se trouve au § ___, consacré à la preuve morale de l'existence de Dieu."
+    answer: "87"
+    alt: ["§ 87"]
+- id: kant-cfj-methodologie-l2
+  title: "Repérage : la Méthodologie paragraphe par paragraphe (§ 79-91)"
+  notes: |-
+    La Méthodologie suit une progression continue : après avoir situé la téléologie parmi les sciences (§ 79), elle en règle l'usage dans l'étude du vivant (§ 80-81), passe des relations entre les êtres organisés à la fin dernière de la nature (§ 82-83), puis à la fin finale de la création (§ 84), qu'aucune théologie physique ne peut atteindre (§ 85) et que seule la théologie morale pense (§ 86-87) ; elle termine en fixant la valeur de la preuve morale (§ 88-91).
+
+    | Paragraphe | Lieu | Ce qui s'y joue |
+    | la place de la téléologie | § 79 | ni doctrine de la nature ni théologie : elle relève de la critique |
+    | la subordination du mécanisme | § 80 | droit illimité d'expliquer mécaniquement, pouvoir limité ; la mère primitive commune |
+    | mécanisme et téléologie associés | § 81 | ni occasionnalisme ni préformation individuelle : l'épigenèse de Blumenbach |
+    | le système des relations extérieures | § 82 | l'homme, fin dernière sur terre, seul à se forger un concept des fins |
+    | la fin dernière de la nature | § 83 | la culture, non le bonheur ; la valeur de la vie |
+    | la fin finale de la création | § 84 | l'homme comme noumène, sujet de la moralité |
+    | la théologie physique | § 85 | elle n'atteint pas la fin finale : une téléologie mal comprise |
+    | la théologie morale | § 86 | sans les hommes, la création serait un désert ; la volonté bonne donne sa valeur à l'existence |
+    | la preuve morale | § 87 | l'honnête homme sans Dieu ni vie future |
+    | la limitation de la preuve | § 88 | une réalité subjectivement pratique |
+    | l'utilité de l'argument moral | § 89 | contre la théosophie et la démonologie ; l'âme connue dans cette vie |
+    | la modalité de l'adhésion | § 90 | une preuve pour nous, hommes, non sur l'objet en soi |
+    | la croyance pratique | § 91 | opinion, savoir, croyance |
+  tables:
+  - table: paragraphe-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+    - {kind: cell, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: kant-cfj-methodologie-l2-q1
+    sentence: "Dans la *Critique de la faculté de juger*, l'affirmation que la téléologie n'appartient à aucune doctrine, mais seulement à la critique, se trouve au § ___."
+    answer: "79"
+    alt: ["§ 79"]
+  - id: kant-cfj-methodologie-l2-q2
+    sentence: "Dans la *Critique de la faculté de juger*, l'exemple de Linné, pour qui les herbivores modèrent la croissance des végétaux, se trouve au § ___."
+    answer: "82"
+    alt: ["§ 82"]
+  - id: kant-cfj-methodologie-l2-q3
+    sentence: "Dans la *Critique de la faculté de juger*, la formule « sans les hommes, la création entière serait un simple désert » se trouve au § ___."
+    answer: "86"
+    alt: ["§ 86"]
+  - id: kant-cfj-methodologie-l2-q4
+    sentence: "Dans la *Critique de la faculté de juger*, la distinction entre opinion, savoir et croyance se trouve au § ___."
+    answer: "91"
+    alt: ["§ 91"]
+- id: kant-cfj-methodologie-l3
+  title: "La place de la téléologie : ni physique ni théologie (§ 79)"
+  notes: |-
+    Le § 79 ouvre la Méthodologie par une question de classement : {teal}« Chaque science doit avoir sa place déterminée dans l'encyclopédie de toutes les sciences. »{/teal} Où mettre la téléologie ? Sa réponse : {green}__ni dans la science de la nature, ni dans la théologie, mais dans la critique__{/green}, ce qui lui laisse pourtant un rôle dans les deux.
+
+    **Elle n'appartient pas à la théologie.** Elle porte sur {teal}« les productions de la nature et leur cause »{/teal}. Si elle renvoie cette cause à un fondement hors de la nature, un auteur divin, ce n'est pas pour le connaître, mais seulement pour la faculté de juger **réfléchissante**, pour guider l'appréciation des choses du monde par une Idée conforme à notre entendement.
+
+    **Elle n'appartient pas non plus à la science de la nature.** Celle-ci a besoin de principes **déterminants**, qui indiquent les causes objectives des effets ; or, pour l'explication mécanique des phénomènes, {coral}on ne gagne rien à considérer la nature selon le rapport réciproque des fins{/coral}. Poser des fins de la nature {teal}« n'appartient proprement qu'à la description de la nature »{/teal} : {yellow}« une grandiose entreprise »{/yellow}, utile à bien des égards, mais qui n'apporte {teal}« absolument aucun éclairage sur la genèse et sur la possibilité interne de ces formes »{/teal}, ce qui est pourtant l'affaire de la science théorique. Décrire un organe par sa fonction, ce n'est pas expliquer comment il se forme.
+
+    **Elle relève donc de la critique, et sa méthodologie a une influence négative.** {teal}« La téléologie comme science n'appartient donc à aucune doctrine, mais seulement à la critique »{/teal}, celle de la faculté de juger. Mais, parce qu'elle contient des principes a priori, elle peut indiquer la **méthode** selon laquelle juger la nature d'après des fins, et exercer ainsi une influence négative : elle empêche la physique de se perdre dans la théologie, et la théologie de se fonder sur la physique.
+
+    ! Une influence « négative » n'est pas une influence nulle : c'est celle d'une règle qui interdit des confusions, ici entre l'explication physique et la considération de Dieu.
+  points:
+  - id: kant-cfj-methodologie-l3-q1
+    sentence: "« Chaque **___** doit avoir sa place déterminée dans __l'encyclopédie de toutes les sciences__. »"
+    answer: "science"
+    alt: []
+  - id: kant-cfj-methodologie-l3-q2
+    sentence: "« Chaque **science** doit avoir sa place déterminée dans ___. »"
+    answer: "l'encyclopédie de toutes les sciences"
+    alt: []
+  - id: kant-cfj-methodologie-l3-q3
+    sentence: "« La téléologie comme science n'appartient donc à **___**, mais seulement à __la critique__ »"
+    answer: "aucune doctrine"
+    alt: []
+  - id: kant-cfj-methodologie-l3-q4
+    sentence: "« La téléologie comme science n'appartient donc à **aucune doctrine**, mais seulement à ___ »"
+    answer: "la critique"
+    alt: []
+  - id: kant-cfj-methodologie-l3-q5
+    sentence: "Poser des fins de la nature n'appartient proprement qu'à la ___ de la nature, non à son explication."
+    answer: "description"
+    alt: []
+  - id: kant-cfj-methodologie-l3-q6
+    sentence: "La téléologie n'apporte « absolument aucun éclairage sur la ___ et sur la possibilité interne de ces formes », ce qui est pourtant l'affaire de la science théorique de la nature."
+    answer: "genèse"
+    alt: []
+  - id: kant-cfj-methodologie-l3-q7
+    sentence: "La téléologie n'appartient pas à la science de la nature, parce que celle-ci a besoin de principes ___, et non pas seulement réfléchissants."
+    answer: "déterminants"
+    alt: []
+  - id: kant-cfj-methodologie-l3-q8
+    sentence: "Comme elle contient des principes a priori, la téléologie peut indiquer la ___ selon laquelle juger la nature d'après des fins : c'est l'objet de la Méthodologie."
+    answer: "méthode"
+    alt: []
+  - id: kant-cfj-methodologie-l3-q9
+    sentence: "La méthodologie de la téléologie n'exerce sur la science théorique de la nature qu'une influence ___ : elle interdit de confondre explication physique et considération de Dieu."
+    answer: "négative"
+    alt: []
+- id: kant-cfj-methodologie-l4
+  title: "La mère primitive commune : jusqu'où va le mécanisme (§ 80)"
+  notes: |-
+    Le § 80 tire les conséquences méthodiques de la Dialectique pour l'étude du vivant. {green}__Le droit d'expliquer mécaniquement est illimité, le pouvoir de le faire est borné__{/green} : il faut donc pousser l'explication mécanique aussi loin que possible, jusqu'à imaginer une parenté de toutes les espèces, sans jamais se dispenser d'une organisation originaire.
+
+    **Un droit illimité, un pouvoir limité.** {teal}« Le droit d'aller à la recherche d'un mode d'explication simplement mécanique pour tous les produits de la nature est en soi totalement illimité »{/teal} ; mais le **pouvoir** d'y parvenir, face aux fins naturelles, est {coral}« non seulement très borné, mais aussi clairement limité »{/coral}. La limite ne vient pas des choses, mais de nous : il faudrait, pour tout expliquer mécaniquement, une autre intuition que la nôtre et une connaissance du substrat intelligible de la nature. Il est donc {coral}« raisonnable, et même méritoire »{/coral} de suivre le mécanisme aussi loin qu'on le peut, en plaçant toujours au fondement {green}une **organisation originaire**{/green} qui se sert du mécanisme pour produire d'autres formes organisées ou développer la sienne.
+
+    **L'anatomie comparée fait espérer une parenté réelle des espèces.** Tant d'espèces animales s'accordent dans {yellow}« un certain schéma commun »{/yellow}, celui du squelette et de l'agencement des parties, où {teal}« une simplicité admirable du plan »{/teal} a produit une grande diversité par l'allongement d'une partie et le raccourcissement d'une autre. Cette analogie des formes fait naître {coral}« un rayon d'espoir, certes faible »{/coral} de réussir avec le mécanisme, et {teal}« fortifie la présomption d'une parenté réelle qui existerait entre elles dans la production par une mère primitive commune »{/teal}, de l'homme au polype, jusqu'aux mousses et aux lichens, et enfin à la matière brute.
+
+    **L'archéologue de la nature peut tout faire naître, sauf l'organisation.** {yellow}L'« archéologue de la nature »{/yellow} peut, à partir des traces des anciennes révolutions du globe, faire sortir de la terre encore chaotique, {yellow}« semblable à un grand animal »{/yellow}, des créatures d'abord peu finalisées, puis d'autres mieux adaptées, jusqu'à ce que cette matrice, {teal}« comme raidie »{/teal}, se limite à des espèces fixées. Mais il doit attribuer à cette **mère universelle** {coral}une organisation finalisée{/coral}, sans laquelle la forme finalisée de ses produits serait impensable. Reculer l'origine dans le temps ne supprime pas la question : il n'a {teal}« fait que situer plus loin le fondement de l'explication »{/teal}.
+
+    **L'« aventure audacieuse de la raison ».** Une note qualifie ainsi cette hypothèse, que bien des chercheurs ont eue. Elle n'est pas aussi absurde que la {red}*generatio aequivoca*{/red}, production d'un être organisé à partir de la matière brute ; elle resterait une *generatio univoca* au sens large, de l'organique par de l'organique, comme si des animaux aquatiques devenaient peu à peu des animaux de marécages, puis terrestres. Elle n'est **pas contradictoire**, mais {coral}l'expérience n'en fournit aucun exemple{/coral} : toute génération connue est *homonyma* (le produit ressemble à son producteur), jamais *heteronyma*.
+
+    **Les variations héréditaires développent des dispositions de l'espèce.** Quand une transformation accidentelle devient héréditaire, il faut y voir {coral}le développement d'une disposition originellement inscrite dans l'espèce{/coral} en vue de sa conservation. Sinon, on ne pourrait plus dire si une partie conservée dans la reproduction a une fin, et le principe de la téléologie ({teal}« dans un être organisé, n'apprécier comme dépourvu de finalité rien de ce qui se conserve dans sa reproduction »{/teal}) perdrait toute fiabilité.
+
+    **L'objection de Hume est nulle.** Hume demandait comment un entendement architecte est lui-même possible, avec tant de pouvoirs réunis. Mais la difficulté téléologique est de trouver une **unité de fondement** pour des parties extérieures les unes aux autres : un entendement, substance simple, la fournit ; la matière, agrégat de substances, ne le peut pas, et {red}l'« autocratie de la matière »{/red} est {teal}« un mot sans signification »{/teal}. Le panthéisme et le spinozisme assurent bien l'unité du fondement, mais non sa relation à des fins : ils laissent la question sans réponse.
+
+    ! Kant n'est pas darwinien : il juge l'hypothèse de la parenté des espèces non contradictoire, mais sans exemple dans l'expérience, et elle ne dispense jamais d'une organisation originaire.
+    ! L'« aventure audacieuse » est la parenté des espèces, non la génération spontanée, que Kant juge bien plus absurde.
+  points:
+  - id: kant-cfj-methodologie-l4-q1
+    sentence: "« Le droit d'aller à la recherche d'un mode d'explication simplement **___** pour tous les produits de la nature est en soi totalement __illimité__ ; mais le **pouvoir** d'y arriver selon cette seule démarche est, en vertu de la constitution de notre entendement, en tant qu'il a affaire à des choses considérées comme des fins naturelles, non seulement très borné, mais aussi clairement __limité__ »"
+    answer: "mécanique"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q2
+    sentence: "« Le droit d'aller à la recherche d'un mode d'explication simplement **mécanique** pour tous les produits de la nature est en soi totalement ___ ; mais le **pouvoir** d'y arriver selon cette seule démarche est, en vertu de la constitution de notre entendement, en tant qu'il a affaire à des choses considérées comme des fins naturelles, non seulement très borné, mais aussi clairement __limité__ »"
+    answer: "illimité"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q3
+    sentence: "« Le droit d'aller à la recherche d'un mode d'explication simplement **mécanique** pour tous les produits de la nature est en soi totalement __illimité__ ; mais le **___** d'y arriver selon cette seule démarche est, en vertu de la constitution de notre entendement, en tant qu'il a affaire à des choses considérées comme des fins naturelles, non seulement très borné, mais aussi clairement __limité__ »"
+    answer: "pouvoir"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q4
+    sentence: "« Le droit d'aller à la recherche d'un mode d'explication simplement **mécanique** pour tous les produits de la nature est en soi totalement __illimité__ ; mais le **pouvoir** d'y arriver selon cette seule démarche est, en vertu de la constitution de notre entendement, en tant qu'il a affaire à des choses considérées comme des fins naturelles, non seulement très borné, mais aussi clairement ___ »"
+    answer: "limité"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q5
+    sentence: "« Cette analogie des formes, dans la mesure où, malgré toute la diversité qu'elles présentent, elles semblent être produites conformément à un **___**, fortifie la présomption d'une __parenté réelle__ qui existerait entre elles dans la production par une __mère primitive commune__ »"
+    answer: "modèle originaire commun"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q6
+    sentence: "« Cette analogie des formes, dans la mesure où, malgré toute la diversité qu'elles présentent, elles semblent être produites conformément à un **modèle originaire commun**, fortifie la présomption d'une ___ qui existerait entre elles dans la production par une __mère primitive commune__ »"
+    answer: "parenté réelle"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q7
+    sentence: "« Cette analogie des formes, dans la mesure où, malgré toute la diversité qu'elles présentent, elles semblent être produites conformément à un **modèle originaire commun**, fortifie la présomption d'une __parenté réelle__ qui existerait entre elles dans la production par une ___ »"
+    answer: "mère primitive commune"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q8
+    sentence: "« Il est donc loisible ici à l'**___** de faire surgir à partir des traces subsistantes des plus anciennes __révolutions de la nature__, d'après tout le mécanisme qu'il en connaît ou qu'il lui prête, cette grande famille de créatures »"
+    answer: "archéologue de la nature"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q9
+    sentence: "« Il est donc loisible ici à l'**archéologue de la nature** de faire surgir à partir des traces subsistantes des plus anciennes ___, d'après tout le mécanisme qu'il en connaît ou qu'il lui prête, cette grande famille de créatures »"
+    answer: "révolutions de la nature"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q10
+    sentence: "« Simplement l'archéologue de la nature doit-il à cette fin attribuer à une telle **___** une __organisation__ qui, vis-à-vis de toutes ces créatures, possède une dimension de **finalité** »"
+    answer: "mère universelle"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q11
+    sentence: "« Simplement l'archéologue de la nature doit-il à cette fin attribuer à une telle **mère universelle** une ___ qui, vis-à-vis de toutes ces créatures, possède une dimension de **finalité** »"
+    answer: "organisation"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q12
+    sentence: "« Simplement l'archéologue de la nature doit-il à cette fin attribuer à une telle **mère universelle** une __organisation__ qui, vis-à-vis de toutes ces créatures, possède une dimension de **___** »"
+    answer: "finalité"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q13
+    sentence: "« Une hypothèse de ce type se peut nommer une ___ »"
+    answer: "aventure audacieuse de la raison"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q14
+    sentence: "Suivre le mécanisme aussi loin que possible est « raisonnable, et même méritoire », à condition de placer toujours au fondement une ___ qui se sert de ce mécanisme pour produire d'autres formes organisées."
+    answer: "organisation originaire"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q15
+    sentence: "Kant appuie l'espoir d'une parenté des espèces sur l'anatomie ___, qui montre de nombreuses espèces animales accordées dans un schéma commun."
+    answer: "comparée"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q16
+    sentence: "La parenté graduelle des espèces irait de l'homme jusqu'au ___, puis aux mousses et aux lichens, et enfin jusqu'à la matière brute."
+    answer: "polype"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q17
+    sentence: "Faire naître un être organisé de la matière brute, sans parent vivant, c'est ce que Kant appelle la *generatio ___*, que Kant juge plus absurde que la parenté des espèces."
+    answer: "aequivoca"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q18
+    sentence: "Selon l'expérience, toute production connue est *generatio ___* : le produit ressemble jusque dans son organisation à ce qui l'a produit."
+    answer: "homonyma"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q19
+    sentence: "La production d'êtres d'une autre espèce par des êtres organisés, la *generatio ___*, ne se rencontre nulle part dans notre connaissance empirique de la nature."
+    answer: "heteronyma"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q20
+    sentence: "Une transformation accidentelle devenue héréditaire doit être jugée comme « un développement occasionnel d'une ___ originellement inscrite dans l'espèce en vue de son autoconservation »."
+    answer: "disposition finale"
+    alt: ["disposition"]
+  - id: kant-cfj-methodologie-l4-q21
+    sentence: "À ceux qui posent un entendement architecte, ___ objecte qu'on pourrait tout aussi bien demander comment un tel entendement est possible."
+    answer: "Hume"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q22
+    sentence: "Chercher dans la matière, agrégat de substances, l'unité de la forme finalisée revient à invoquer une « ___ de la matière », qui est « un mot sans signification »."
+    answer: "autocratie"
+    alt: []
+  - id: kant-cfj-methodologie-l4-q23
+    sentence: "L'archéologue de la nature peut faire naître toutes les espèces d'une mère universelle, mais il doit lui attribuer une organisation finalisée : il n'a donc fait que situer plus ___ le fondement de l'explication."
+    answer: "loin"
+    alt: []
+- id: kant-cfj-methodologie-l5
+  title: "Épigenèse ou préformation : la tendance formatrice (§ 81)"
+  notes: |-
+    Le § 81 fait l'inverse du § 80 : de même que le mécanisme ne suffit pas à penser un être organisé, {green}__le seul principe téléologique ne suffit pas à le juger comme un produit de la nature__{/green}. Il faut les associer, et c'est ce que fait le mieux l'**épigenèse**, que Kant préfère à toutes les théories de la génération de son temps.
+
+    **Sans mécanisme, plus de produit de la nature.** Si l'on ne pensait l'organisme que par une intention, sans le mécanisme comme **instrument** de cette intention, on en ferait une œuvre surnaturelle. Comment deux causalités si différentes s'unissent, la loi universelle de la nature et une Idée qui la restreint à une forme particulière, notre raison ne le comprend pas : cela réside dans le substrat suprasensible. Mais {coral}sans cette sorte de causalité, des êtres organisés comme fins de la nature ne seraient pas des produits de la nature{/coral}.
+
+    **Deux manières de penser l'origine des formes.** L'{red}**occasionnalisme**{/red} fait intervenir la cause suprême à chaque accouplement pour former la matière ; le {pink}**praestabilisme**{/pink} veut qu'elle ait seulement inscrit au commencement la disposition par laquelle un être organique produit son semblable. L'occasionnalisme conduit {red}« la nature tout entière [...] à sa perte »{/red}, et avec elle tout usage de la raison : aucun philosophe ne l'acceptera.
+
+    **Le praestabilisme se divise à son tour.**
+
+    | Système | Ce qu'est la génération |
+    | préformation individuelle | une simple éduction, le développement d'un germe déjà formé |
+    | épigenèse | une production, par le pouvoir producteur des géniteurs |
+
+    La préformation individuelle, ou **théorie de l'évolution** (on dirait mieux : de l'**emboîtement**), fait de chaque individu un germe formé de la main du Créateur et seulement développé. L'épigenèse, que Kant appelle aussi **préformation générique**, ne préforme que le **pouvoir producteur** de l'espèce, ses dispositions, et laisse la nature produire chaque individu.
+
+    **Pourquoi la raison est prévenue en faveur de l'épigenèse.** La préformation individuelle n'échappe pas au surnaturel : former tous les germes au commencement du monde, puis les préserver jusqu'à leur développement, en exige même davantage que l'occasionnalisme. Elle bute sur les {yellow}**bâtards**{/yellow} : pour expliquer qu'un hybride tienne aussi du père, il faut accorder à la semence du mâle une force formatrice qu'on refusait aux deux parents. Elle trouve même aux {yellow}monstruosités{/yellow} une finalité « digne d'étonnement ». L'épigenèse, au contraire, pense la reproduction {coral}« comme autoproduction, et non pas simplement comme développement »{/coral} : {green}« avec un investissement le plus limité possible de surnaturel »{/green}, elle abandonne à la nature tout ce qui suit le premier commencement, sur lequel la physique échoue de toute façon.
+
+    **Blumenbach : la tendance formatrice.** Personne n'a fait plus pour l'épigenèse que {sky}Blumenbach{/sky}. Il fait commencer toute explication physique à la **matière organisée** : que la vie ait surgi d'elle-même de l'inanimé, il le déclare {red}« contraire à toute raison »{/red}. Sous le principe insondable d'une {coral}organisation originaire{/coral}, il laisse au mécanisme une part indéterminable mais indéniable, et nomme le pouvoir de la matière dans un corps organisé {violet}**tendance formatrice**{/violet} (*Bildungstrieb*), qui se tient {teal}« en quelque sorte sous la direction supérieure »{/teal} de cette organisation.
+
+    ! L'épigenèse kantienne n'est pas la génération spontanée : elle part toujours d'une matière déjà organisée, transmise par les géniteurs.
+    ! La « préformation générique » n'est pas la préformation individuelle : seul le pouvoir producteur de l'espèce est préformé, non chaque individu.
+  tables:
+  - table: systeme-ce-qu-est-la-generation
+    exercises:
+    - {kind: cell, column: Système}
+    - {kind: cell, column: Système}
+  points:
+  - id: kant-cfj-methodologie-l5-q1
+    sentence: "« Si l'on admet l'**___** de la production d'êtres organisés, c'est __la nature tout entière__ qui par là se trouve conduite à sa perte, et avec elle tout usage de la raison »"
+    answer: "occasionnalisme"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q2
+    sentence: "« Si l'on admet l'**occasionnalisme** de la production d'êtres organisés, c'est ___ qui par là se trouve conduite à sa perte, et avec elle tout usage de la raison »"
+    answer: "la nature tout entière"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q3
+    sentence: "« Le système des générations par simple **___** s'appelle le système de la __préformation individuelle__, ou encore théorie de l'évolution ; celui des générations par **production** est nommé le système de l'__épigenèse__. »"
+    answer: "éduction"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q4
+    sentence: "« Le système des générations par simple **éduction** s'appelle le système de la ___, ou encore théorie de l'évolution ; celui des générations par **production** est nommé le système de l'__épigenèse__. »"
+    answer: "préformation individuelle"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q5
+    sentence: "« Le système des générations par simple **éduction** s'appelle le système de la __préformation individuelle__, ou encore théorie de l'évolution ; celui des générations par **___** est nommé le système de l'__épigenèse__. »"
+    answer: "production"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q6
+    sentence: "« Le système des générations par simple **éduction** s'appelle le système de la __préformation individuelle__, ou encore théorie de l'évolution ; celui des générations par **production** est nommé le système de l'___. »"
+    answer: "épigenèse"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q7
+    sentence: "« Ce dernier système peut aussi être appelé celui de la **___**, parce que le __pouvoir producteur__ des géniteurs, donc leur forme spécifique, était en tout cas *virtualiter* préformé »"
+    answer: "préformation générique"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q8
+    sentence: "« Ce dernier système peut aussi être appelé celui de la **préformation générique**, parce que le ___ des géniteurs, donc leur forme spécifique, était en tout cas *virtualiter* préformé »"
+    answer: "pouvoir producteur"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q9
+    sentence: "« dans la mesure où il considère la nature [...] comme **___**, et non pas simplement comme __développement__ »"
+    answer: "autoproduction"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q10
+    sentence: "« dans la mesure où il considère la nature [...] comme **autoproduction**, et non pas simplement comme ___ »"
+    answer: "développement"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q11
+    sentence: "Le seul fondement téléologique ne suffit pas à juger un être organisé comme produit de la nature si le ___ de celle-ci ne lui est pas associé, comme l'instrument d'une cause intentionnelle."
+    answer: "mécanisme"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q12
+    sentence: "Le système selon lequel Dieu formerait lui-même chaque embryon, à chaque union des parents, s'appelle l'___."
+    answer: "occasionnalisme"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q13
+    sentence: "Le système selon lequel la cause suprême a seulement inscrit au commencement la disposition par laquelle un être organique produit son semblable s'appelle le ___."
+    answer: "praestabilisme"
+    alt: ["prestabilisme"]
+  - id: kant-cfj-methodologie-l5-q14
+    sentence: "Kant juge qu'il vaudrait mieux appeler la préformation individuelle théorie de l'involution, ou de l'___."
+    answer: "emboîtement"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q15
+    sentence: "La préformation individuelle ne peut inclure la production des ___ : il lui faut accorder à la semence du mâle une force formatrice."
+    answer: "bâtards"
+    alt: ["hybrides"]
+  - id: kant-cfj-methodologie-l5-q16
+    sentence: "L'épigenèse explique la reproduction « avec un investissement le plus limité possible de ___ », et abandonne à la nature tout ce qui suit le premier commencement."
+    answer: "surnaturel"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q17
+    sentence: "Personne n'a fait plus pour l'épigenèse que le conseiller aulique ___, qui fait commencer toute explication physique à la matière organisée."
+    answer: "Blumenbach"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q18
+    sentence: "Le pouvoir propre à la matière d'un être vivant, distinct de la simple force formatrice mécanique de toute matière, Blumenbach le nomme ___ (*Bildungstrieb*)."
+    answer: "tendance formatrice"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q19
+    sentence: "Que la vie ait pu surgir de ce qui est inanimé, Blumenbach le déclare à juste titre « contraire à toute ___ »."
+    answer: "raison"
+    alt: []
+  - id: kant-cfj-methodologie-l5-q20
+    sentence: "Le premier ressort du § 81 est symétrique de celui du § 80 : le mécanisme seul ne permet pas de penser un organisme, mais la fin seule n'en ferait pas un produit de la nature. L'épigenèse convient, parce qu'elle laisse à la nature la ___ de chaque individu sous une organisation originaire."
+    answer: "production"
+    alt: ["production de chaque individu"]
+- id: kant-cfj-methodologie-l6
+  title: "L'homme, fin dernière de la nature sur terre (§ 82)"
+  notes: |-
+    Le § 82 passe de l'organisme aux **relations extérieures** entre les êtres organisés : la nature forme-t-elle un système de fins, et quelle en est la fin dernière ? Sa réponse : {green}__l'homme, parce qu'il est le seul être sur terre à pouvoir se forger un concept des fins__{/green}, bien que l'expérience semble démentir toute fin dans la nature.
+
+    **La finalité externe suppose des êtres organisés.** Une chose sert à une autre de moyen : la terre, l'air, l'eau peuvent être finalisés extérieurement, mais seulement par rapport à des **êtres organisés**, car {coral}une chose n'est moyen que pour une fin{/coral}. L'eau et la terre ne sont pas des moyens pour l'amoncellement des montagnes, qui n'ont rien de finalisé.
+
+    **Une seule finalité externe tient à l'organisation même : les deux sexes.** Pour l'organisation des sexes en vue de la reproduction, on ne peut demander pourquoi ce couple existe : {teal}« Celui-ci constitue d'emblée un tout organisateur, bien qu'il ne soit pas un tout organisé dans un seul corps. »{/teal}
+
+    **Devant un être organisé, on demande : pourquoi existe-t-il ?** Ce n'est guère possible pour ce que produit le seul mécanisme. Mais pour un être organisé, dont nous pensons la possibilité par une intention, nous ne pouvons penser **son existence même** autrement que comme une fin : ou bien sa fin est en lui (il est **fin finale**), ou bien elle est en d'autres êtres (il est aussi **moyen**). Or {red}aucun être de la nature, comme être de la nature, ne peut être fin finale de la création{/red}.
+
+    **La chaîne des fins conduit à l'homme.** Pourquoi les plantes ? Pour les herbivores. Pourquoi les herbivores ? Pour les bêtes de proie. À quoi servent tous ces règnes ? {coral}À l'homme{/coral}, {green}« la fin dernière de la création sur terre, parce qu'il est le seul être sur cette terre qui peut se forger un concept des fins et peut par sa raison, à partir d'un agrégat de choses formées de manière finalisée, construire un système des fins »{/green}. Avec {sky}Linné{/sky}, on peut parcourir la chaîne en sens inverse : les herbivores modèrent les plantes, les carnassiers les herbivores, l'homme les carnassiers, pour l'équilibre des forces productrices et destructrices ; l'homme n'y est plus qu'**un moyen**.
+
+    **L'expérience semble démentir le système des fins.** Le premier objet d'une organisation intentionnelle devrait être le **séjour** des vivants : or la terre et la mer portent les traces de {red}destructions anciennes et puissantes{/red}, {red}« de forces sauvages et omnipotentes d'une nature œuvrant dans un état chaotique »{/red}. La forme même des terres et le cours des fleuves sont l'effet d'éruptions et d'inondations. Si le sol qui porte les vivants ne montre qu'un mécanisme sans intention, de quel droit réclamer une autre origine pour les vivants eux-mêmes ? L'homme, qui selon {sky}Camper{/sky} n'a pas été pris dans ces révolutions, dépend trop des autres créatures pour échapper à leur sort.
+
+    **La réponse : ce sont des principes de la réflexion.** L'argument prouverait trop : que même les êtres organisés n'ont d'autre origine que le mécanisme. Mais la solution de l'antinomie l'a montré : nous ne pouvons penser l'origine des êtres organisés que par des fins, sans rien affirmer de cette origine. D'où {coral}le devoir de tenter, et même avec témérité, de les expliquer mécaniquement{/coral}, tout en sachant n'y jamais parvenir, et la compatibilité des deux points de vue dans le suprasensible.
+
+    ! L'homme fin dernière n'est pas un utilitarisme : sous un autre rapport, la nature le traite comme une espèce parmi d'autres, et Linné en fait un moyen.
+    ! Le désordre géologique ne réfute pas la téléologie, puisqu'elle n'a jamais prétendu dire comment les choses sont produites.
+  points:
+  - id: kant-cfj-methodologie-l6-q1
+    sentence: "« Celui-ci constitue d'emblée un **___**, bien qu'il ne soit pas __un tout organisé dans un seul corps__. »"
+    answer: "tout organisateur"
+    alt: []
+  - id: kant-cfj-methodologie-l6-q2
+    sentence: "« Celui-ci constitue d'emblée un **tout organisateur**, bien qu'il ne soit pas ___. »"
+    answer: "un tout organisé dans un seul corps"
+    alt: []
+  - id: kant-cfj-methodologie-l6-q3
+    sentence: "« il est ici la **___** de la création sur terre, parce qu'il est le seul être sur cette terre qui peut se forger __un concept des fins__ et peut par sa raison, à partir d'un agrégat de choses formées de manière finalisée, construire __un système des fins__. »"
+    answer: "fin dernière"
+    alt: []
+  - id: kant-cfj-methodologie-l6-q4
+    sentence: "« il est ici la **fin dernière** de la création sur terre, parce qu'il est le seul être sur cette terre qui peut se forger ___ et peut par sa raison, à partir d'un agrégat de choses formées de manière finalisée, construire __un système des fins__. »"
+    answer: "un concept des fins"
+    alt: []
+  - id: kant-cfj-methodologie-l6-q5
+    sentence: "« il est ici la **fin dernière** de la création sur terre, parce qu'il est le seul être sur cette terre qui peut se forger __un concept des fins__ et peut par sa raison, à partir d'un agrégat de choses formées de manière finalisée, construire ___. »"
+    answer: "un système des fins"
+    alt: []
+  - id: kant-cfj-methodologie-l6-q6
+    sentence: "La terre, l'air, l'eau ne peuvent être finalisés extérieurement que par rapport à des êtres ___, car une chose n'est moyen que pour une fin."
+    answer: "organisés"
+    alt: []
+  - id: kant-cfj-methodologie-l6-q7
+    sentence: "La seule finalité externe liée à la finalité interne de l'organisation est celle des deux ___ en vue de la reproduction de l'espèce."
+    answer: "sexes"
+    alt: []
+  - id: kant-cfj-methodologie-l6-q8
+    sentence: "On peut demander d'un être organisé : « Pourquoi ___ ? », ce qui n'est guère possible pour ce que produit le seul mécanisme de la nature."
+    answer: "existe-t-il"
+    alt: []
+  - id: kant-cfj-methodologie-l6-q9
+    sentence: "Avec le chevalier ___, on peut dire que les herbivores existent pour contenir la prolifération des plantes, et l'homme pour équilibrer les forces productrices et destructrices de la nature."
+    answer: "Linné"
+    alt: []
+  - id: kant-cfj-methodologie-l6-q10
+    sentence: "La structure de la terre et de la mer présente l'apparence du produit de « forces sauvages et omnipotentes d'une nature œuvrant dans un état ___ »."
+    answer: "chaotique"
+    alt: []
+  - id: kant-cfj-methodologie-l6-q11
+    sentence: "Selon les jugements de ___, l'homme n'aurait pas été compris dans les révolutions de la terre, mais il dépend trop des autres créatures pour échapper à leur mécanisme."
+    answer: "Camper"
+    alt: []
+  - id: kant-cfj-methodologie-l6-q12
+    sentence: "Une note du § 82 propose d'appeler « ___ de la nature » la représentation de l'ancien état de la terre que montre l'histoire de la nature, à partir des pétrifications."
+    answer: "archéologie"
+    alt: []
+  - id: kant-cfj-methodologie-l6-q13
+    sentence: "Aucun être de la nature, comme être de la nature, ne peut prétendre au privilège d'être ___ de la création."
+    answer: "fin finale"
+    alt: []
+- id: kant-cfj-methodologie-l7
+  title: "La culture, non le bonheur : la valeur de la vie (§ 83)"
+  notes: |-
+    Le § 83 cherche ce qui, en l'homme, peut être la **fin dernière de la nature**, c'est-à-dire ce que la nature peut faire pour lui. Deux candidats : son **bonheur**, ou son **aptitude** à se proposer des fins. Réponse : {red}__pas le bonheur__{/red}, que la nature ne peut ni ne veut lui donner, mais {green}__la culture__{/green}. Une note en tire une conclusion sur la valeur de la vie.
+
+    **Le bonheur ne peut être la fin dernière de la nature.**
+    - **Son concept est fluctuant.** Ce n'est pas un instinct, mais {teal}« une simple Idée d'un état »{/teal}, que chacun forge à sa manière avec son imagination et modifie sans cesse : aucune nature, même entièrement soumise à l'arbitre humain, ne pourrait suivre une loi fixe pour la satisfaire.
+    - **La nature humaine ne s'y arrête pas.** Même réduit au besoin naturel ou porté au plus haut degré d'habileté, le bonheur ne serait jamais atteint, car la nature de l'homme {coral}« n'est pas telle qu'elle puisse s'arrêter et trouver sa satisfaction dans la possession et la jouissance »{/coral}.
+    - **La nature ne le ménage pas.** Elle ne l'a pas {red}élu pour son favori{/red} : la peste, la faim, l'eau, le froid, les bêtes l'atteignent comme les autres espèces. Et ce qu'il y a d'incohérent dans ses dispositions le fait se tourmenter lui-même, par la tyrannie et la guerre, jusqu'à travailler à la destruction de son espèce.
+
+    **L'homme n'est fin dernière que sous condition.** Il n'est jamais qu'{red}« un membre dans la chaîne des fins naturelles »{/red}, principe de bien des fins, mais aussi moyen pour d'autres. Seul être doué d'entendement, il est le {yellow}« seigneur de la nature »{/yellow} et sa fin dernière, mais {coral}« de façon conditionnelle »{/coral} : à condition de vouloir établir avec la nature un rapport de fins qui se suffise à lui-même, indépendamment d'elle.
+
+    **Ce que la nature peut faire : la culture.** Il reste ce que la nature peut préparer en vue de ce que l'homme doit faire lui-même : {green}« La production de l'aptitude d'un être raisonnable à de quelconques fins en général (résidant par conséquent dans sa liberté) est la culture. »{/green} La nature ne peut rendre l'homme moral, puisque la moralité est l'œuvre de la liberté ; elle peut développer en lui l'aptitude à se donner des fins.
+
+    **Deux cultures.** La {violet}**culture de l'habileté**{/violet} développe les talents : condition principale de l'aptitude à des fins, elle ne suffit pas à diriger la volonté dans le choix des fins. La {violet}**culture de la discipline**{/violet}, négative, consiste dans {coral}« la libération de la volonté à l'égard du despotisme des désirs »{/coral} : des penchants que la nature nous avait donnés comme {yellow}« fils conducteurs »{/yellow}, nous faisons des chaînes, et la discipline nous en délivre.
+
+    **Comment la nature y parvient : par les maux mêmes.** L'habileté ne se développe que par l'**inégalité**, où le grand nombre peine pour le loisir de quelques-uns qui cultivent la science et l'art ; le luxe accroît la misère des deux côtés, mais développe les dispositions de l'espèce. La condition de ce développement est la **société civile**, puissance légale opposée aux libertés en conflit, et au-delà un **tout cosmopolite** d'États. À défaut, la **guerre** est inévitable : une {red}épreuve effroyable{/red}, mais peut-être une tentative de la sagesse suprême pour préparer une légalité entre les États, et un mobile pour développer tous les talents. De même, les **beaux-arts et les sciences** rendent l'homme, {teal}« sinon moralement meilleur, du moins plus civilisé »{/teal}, et le préparent à une maîtrise où seule la raison doit commander.
+
+    **La note : la valeur de la vie.** Kant y distingue trois manières de l'estimer.
+    - **D'après ce dont on jouit** : sa valeur {red}« tombe au-dessous de zéro »{/red} ; {teal}« car qui voudrait vraiment recommencer sa vie sous les mêmes conditions ou même selon un plan nouveau élaboré par lui [...] mais qui ne serait disposé que pour la jouissance ? »{/teal}
+    - **D'après ce que l'on fait** en suivant les fins que la nature nous assigne : nous n'y sommes toujours que des **moyens** en vue de fins indéterminées.
+    - Il ne reste donc que {green}« la valeur que nous donnons nous-mêmes à notre vie »{/green}, par ce que nous faisons conformément à une fin, {coral}d'une manière si indépendante de la nature que même l'existence de la nature ne puisse être fin qu'à cette condition{/coral}.
+
+    ! Kant ne fait pas l'éloge de la guerre ni de l'inégalité : il les juge comme des moyens par lesquels la nature développe nos dispositions malgré nous, à titre de jugement réfléchissant.
+    ! La note ne dit pas que la vie ne vaut rien : elle dit que la jouissance ne lui donne aucune valeur, et que seule l'action libre lui en donne une.
+  points:
+  - id: kant-cfj-methodologie-l7-q1
+    sentence: "« La première fin de la nature serait le **___**, la seconde __la culture__ de l'homme. »"
+    answer: "bonheur"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q2
+    sentence: "« La première fin de la nature serait le **bonheur**, la seconde ___ de l'homme. »"
+    answer: "la culture"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q3
+    sentence: "« car sa nature n'est pas telle qu'elle puisse **___** et trouver sa satisfaction dans __la possession et la jouissance__. »"
+    answer: "s'arrêter"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q4
+    sentence: "« car sa nature n'est pas telle qu'elle puisse **s'arrêter** et trouver sa satisfaction dans ___. »"
+    answer: "la possession et la jouissance"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q5
+    sentence: "« La production de l'**___** d'un être raisonnable à de quelconques fins en général (résidant par conséquent dans sa __liberté__) est **la culture**. »"
+    answer: "aptitude"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q6
+    sentence: "« La production de l'**aptitude** d'un être raisonnable à de quelconques fins en général (résidant par conséquent dans sa ___) est **la culture**. »"
+    answer: "liberté"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q7
+    sentence: "« La production de l'**aptitude** d'un être raisonnable à de quelconques fins en général (résidant par conséquent dans sa __liberté__) est ___. »"
+    answer: "la culture"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q8
+    sentence: "« La condition dernière de l'aptitude, que l'on pourrait nommer la **___**, est négative et consiste dans la libération de la volonté à l'égard du __despotisme des désirs__ »"
+    answer: "culture de la discipline"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q9
+    sentence: "« La condition dernière de l'aptitude, que l'on pourrait nommer la **culture de la discipline**, est négative et consiste dans la libération de la volonté à l'égard du ___ »"
+    answer: "despotisme des désirs"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q10
+    sentence: "« La valeur que possède pour nous la vie quand elle est estimée uniquement d'après ce dont on **___** [...] est facile à déterminer. Elle tombe __au-dessous de zéro__ ; car qui voudrait vraiment __recommencer sa vie__ sous les mêmes conditions »"
+    answer: "jouit"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q11
+    sentence: "« La valeur que possède pour nous la vie quand elle est estimée uniquement d'après ce dont on **jouit** [...] est facile à déterminer. Elle tombe ___ ; car qui voudrait vraiment __recommencer sa vie__ sous les mêmes conditions »"
+    answer: "au-dessous de zéro"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q12
+    sentence: "« La valeur que possède pour nous la vie quand elle est estimée uniquement d'après ce dont on **jouit** [...] est facile à déterminer. Elle tombe __au-dessous de zéro__ ; car qui voudrait vraiment ___ sous les mêmes conditions »"
+    answer: "recommencer sa vie"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q13
+    sentence: "« Il ne reste donc rien que la valeur que nous **___** à notre vie, non pas simplement par ce que nous faisons, mais aussi par ce que nous faisons qui soit __conforme à une fin__, d'une manière si __indépendante de la nature__ que même l'existence de la nature ne puisse être fin qu'à cette condition. »"
+    answer: "donnons nous-mêmes"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q14
+    sentence: "« Il ne reste donc rien que la valeur que nous **donnons nous-mêmes** à notre vie, non pas simplement par ce que nous faisons, mais aussi par ce que nous faisons qui soit ___, d'une manière si __indépendante de la nature__ que même l'existence de la nature ne puisse être fin qu'à cette condition. »"
+    answer: "conforme à une fin"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q15
+    sentence: "« Il ne reste donc rien que la valeur que nous **donnons nous-mêmes** à notre vie, non pas simplement par ce que nous faisons, mais aussi par ce que nous faisons qui soit __conforme à une fin__, d'une manière si ___ que même l'existence de la nature ne puisse être fin qu'à cette condition. »"
+    answer: "indépendante de la nature"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q16
+    sentence: "Le bonheur n'est pas un concept que l'homme tire de ses instincts, mais une simple ___ d'un état, qu'il forme lui-même et modifie sans cesse."
+    answer: "Idée"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q17
+    sentence: "C'est se tromper que de croire que la nature a élu l'homme pour son ___ particulier : la peste, la faim, le froid l'atteignent comme les autres espèces."
+    answer: "favori"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q18
+    sentence: "En tant que seul être sur terre qui possède un entendement, l'homme est le « ___ de la nature », mais il n'en est la fin dernière que de façon conditionnelle."
+    answer: "seigneur"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q19
+    sentence: "La culture de l'___ est « la principale condition subjective de l'aptitude à réaliser des fins en général », mais elle ne suffit pas à diriger la volonté dans le choix de ses fins."
+    answer: "habileté"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q20
+    sentence: "La discipline nous délivre des pulsions que la nature nous avait données comme « ___ » et dont nous avons fait des chaînes."
+    answer: "fils conducteurs"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q21
+    sentence: "« L'habileté ne peut être bien développée dans l'espèce humaine que par la médiation de l'___ entre les hommes »"
+    answer: "inégalité"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q22
+    sentence: "La condition formelle du plus grand développement des dispositions naturelles est une puissance légale opposée aux libertés en conflit, que Kant nomme ___."
+    answer: "société civile"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q23
+    sentence: "Faute d'un tout cosmopolite, la ___ est inévitable : épreuve effroyable, elle est pourtant un mobile pour développer tous les talents qui servent à la culture."
+    answer: "guerre"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q24
+    sentence: "Les beaux-arts et les sciences rendent l'homme, « sinon moralement meilleur, du moins plus ___ »."
+    answer: "civilisé"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q25
+    sentence: "Selon la note d'Alain Renaut, Kant entend encore par « société civile », comme la tradition du droit naturel, ce que nous appelons l'___."
+    answer: "État"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q26
+    sentence: "Dans la note du § 83, estimée d'après les fins que la nature nous assigne, la vie ne nous laisse jamais que des ___ en vue de fins finales indéterminées."
+    answer: "moyens"
+    alt: []
+  - id: kant-cfj-methodologie-l7-q27
+    sentence: "La nature ne peut donner à l'homme ni le bonheur, qu'il ne saurait atteindre, ni la moralité, qui est l'œuvre de sa liberté. Ce qu'elle peut produire en lui, c'est seulement l'___ à se proposer des fins : la culture."
+    answer: "aptitude"
+    alt: []
+- id: kant-cfj-methodologie-l8
+  title: "La fin finale : l'homme comme être moral (§ 84)"
+  notes: |-
+    Le § 84 franchit le pas que le § 83 préparait : de la **fin dernière de la nature** à la {violet}**fin finale**{/violet} de la création elle-même. {teal}« Fin finale est la fin qui n'a besoin d'aucune autre comme condition de sa possibilité. »{/teal} Sa réponse : {green}__l'homme, mais seulement comme noumène, sujet de la moralité__{/green}.
+
+    **La question n'a de sens que si l'on admet une cause intentionnelle.** Si l'on explique la finalité par le seul mécanisme, au hasard ou par une nécessité aveugle, demander pourquoi les choses existent est {red}une question vide{/red}. Mais si l'on admet que la liaison finale est réelle et qu'un **entendement** est cause des formes, on ne peut s'arrêter à la question de leur forme : il faut demander quel fondement a déterminé cet entendement à produire, c'est-à-dire chercher la fin finale.
+
+    **Rien dans la nature ne peut être fin finale.** Elle est **inconditionnée**, alors que dans la nature tout ce qui détermine est à son tour conditionné, {coral}hors de nous comme en nous{/coral} : la nature pensante, ce que je suis comme être naturel, n'y échappe pas plus que la matière. Une fin finale ne peut dépendre, dans l'ordre des fins, d'aucune autre condition que de sa propre Idée.
+
+    **Un seul être y satisfait : l'homme comme noumène.** Il est le seul dont la causalité soit orientée vers des fins, et selon une loi qu'il se représente comme **inconditionnée** et indépendante de la nature : la loi morale. En lui seul nous reconnaissons {coral}un pouvoir suprasensible, la **liberté**{/coral}, et l'objet qu'il peut se proposer comme fin suprême, le **souverain bien** dans le monde.
+
+    **De lui, on ne peut plus demander pourquoi il existe.** {teal}« Son existence contient en soi la fin suprême »{/teal} à laquelle il peut soumettre la nature entière. Sans lui, la chaîne des fins subordonnées ne serait pas complètement fondée : {green}« c'est l'homme qui est la fin finale de la création »{/green}, mais {teal}« même en lui seulement comme sujet de la moralité »{/teal}, seul capable d'une législation inconditionnée à l'égard des fins.
+
+    **La note : le bonheur n'est qu'une fin conditionnée.** Le bonheur pourrait être une fin de la nature, rien ne l'interdit a priori, mais le § 83 a montré qu'il ne l'est même pas. Surtout, si l'on répondait que les hommes existent pour que la cause suprême les comble de bienfaits, on {red}contredirait la condition à laquelle notre raison soumet elle-même son désir le plus intime de bonheur{/red} : l'accord avec notre propre législation morale. Le bonheur n'est donc qu'une **conséquence**, mesurée à notre accord avec cette fin.
+
+    ! Fin dernière et fin finale ne s'opposent pas comme deux termes techniques figés (Alain Renaut juge qu'une opposition rigide relève d'« un kantisme scolaire, voire scholastique ») : c'est la différence entre l'homme comme terme de la nature et l'homme comme être libre qui compte.
+    ! L'homme n'est pas fin finale par ce qu'il est naturellement, ni par son bonheur, mais comme sujet de la loi morale.
+  points:
+  - id: kant-cfj-methodologie-l8-q1
+    sentence: "« Fin finale est la fin qui n'a besoin d'**___** comme __condition de sa possibilité__. »"
+    answer: "aucune autre"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q2
+    sentence: "« Fin finale est la fin qui n'a besoin d'**aucune autre** comme ___. »"
+    answer: "condition de sa possibilité"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q3
+    sentence: "« L'être de cette espèce est l'**___**, mais considéré comme __noumène__ ; il est le seul être de la nature dans lequel nous pouvons cependant, en vertu de sa constitution spécifique, reconnaître un pouvoir suprasensible (__la liberté__) »"
+    answer: "homme"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q4
+    sentence: "« L'être de cette espèce est l'**homme**, mais considéré comme ___ ; il est le seul être de la nature dans lequel nous pouvons cependant, en vertu de sa constitution spécifique, reconnaître un pouvoir suprasensible (__la liberté__) »"
+    answer: "noumène"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q5
+    sentence: "« L'être de cette espèce est l'**homme**, mais considéré comme __noumène__ ; il est le seul être de la nature dans lequel nous pouvons cependant, en vertu de sa constitution spécifique, reconnaître un pouvoir suprasensible (___) »"
+    answer: "la liberté"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q6
+    sentence: "« on ne peut poser à nouveau la question de savoir pourquoi (*quem in finem*) il existe. Son existence contient en soi ___ »"
+    answer: "la fin suprême"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q7
+    sentence: "« c'est uniquement en l'homme, mais même en lui seulement comme **___**, que se peut rencontrer la __législation inconditionnée__ à l'égard des fins »"
+    answer: "sujet de la moralité"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q8
+    sentence: "« c'est uniquement en l'homme, mais même en lui seulement comme **sujet de la moralité**, que se peut rencontrer la ___ à l'égard des fins »"
+    answer: "législation inconditionnée"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q9
+    sentence: "Si le simple mécanisme est admis comme fondement d'explication de la finalité, on ne peut pas demander ___ les choses du monde existent : la question est vide."
+    answer: "pourquoi"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q10
+    sentence: "La fin finale ne peut être produite par la nature, parce qu'elle est ___, alors que tout fondement de détermination présent dans la nature est à son tour conditionné."
+    answer: "inconditionnée"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q11
+    sentence: "Ce qui vaut de la nature matérielle vaut aussi de la nature ___ en nous : rien de ce que je suis comme être naturel ne peut être fin finale."
+    answer: "pensante"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q12
+    sentence: "L'homme comme être moral peut se proposer comme fin suprême le ___ dans le monde."
+    answer: "souverain bien"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q13
+    sentence: "Sans l'homme comme être moral, « la chaîne des fins subordonnées les unes aux autres ne serait pas complètement ___ »."
+    answer: "fondée"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q14
+    sentence: "Selon la note du § 84, « l'homme ne pourrait être fin finale de la création que comme être ___ », le bonheur ne lui étant associé que comme une conséquence."
+    answer: "moral"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q15
+    sentence: "Selon Alain Renaut, une opposition trop rigide entre fin dernière (*letzter Zweck*) et fin finale (*Endzweck*) relève d'« un kantisme ___, voire scholastique » : Kant lui-même emploie l'une pour l'autre."
+    answer: "scolaire"
+    alt: []
+  - id: kant-cfj-methodologie-l8-q16
+    sentence: "Le raisonnement du § 84 tient en trois temps : une fin finale doit être inconditionnée ; or tout ce qui est nature est conditionné ; seul l'homme, par la loi morale qu'il se donne, a une causalité inconditionnée. Il n'est donc fin finale que comme ___."
+    answer: "noumène"
+    alt: ["sujet de la moralité", "être moral"]
+- id: kant-cfj-methodologie-l9
+  title: "La théologie physique, une téléologie mal comprise (§ 85)"
+  notes: |-
+    Le § 85 examine si l'on peut conclure des fins de la nature à leur cause suprême, comme le veut la {violet}**théologie physique**{/violet}. Sa réponse : {red}__elle ne peut rien nous apprendre d'une fin finale__{/red} ; elle n'est qu'une **propédeutique** à la théologie, qui ne s'achève que par la morale.
+
+    **Deux théologies.** La théologie physique conclut à la cause suprême **à partir des fins de la nature**, connues empiriquement ; la {violet}théologie morale{/violet}, à partir de **la fin morale** des êtres raisonnables, connue a priori. La première vient naturellement avant la seconde.
+
+    **Elle n'accède même pas à la question de la fin finale.** Elle peut justifier le concept d'une **cause intelligente** du monde, seul approprié à notre pouvoir de connaître quand il s'agit de choses compréhensibles par des fins ; mais comme elle considère toujours des relations **conditionnées** dans la nature, {coral}elle ne peut même pas soulever la question de la fin pour laquelle la nature elle-même existe{/coral}, dont le fondement est hors de la nature.
+
+    **Elle n'obtient qu'un entendement artiste, non une sagesse.** Ses données étant empiriques, elle ne peut attribuer à la cause que ce que montrent ses effets ; or l'expérience n'embrasse jamais la nature comme système, et rencontre autant de désordre que d'ordre. Elle obtient donc {coral}« un entendement artiste pour des fins dispersées, mais nullement d'une sagesse pour une fin finale »{/coral}. Pour conclure à un être sage et infini, il faudrait l'omniscience, et pouvoir comparer ce plan à tous les plans possibles. Les **Anciens** étaient conséquents : voyant le bien et le mal mêlés dans le monde, ils pensaient des dieux puissants mais limités.
+
+    **D'où son verdict.** {coral}« La théologie physique est donc une téléologie physique mal comprise »{/coral}, qui ne peut servir que de **propédeutique** à la théologie. Livrée à elle-même, sans les emprunts inaperçus qu'elle fait à la morale, elle ne fonderait qu'{red}« une démonologie »{/red}, au § 86 : des puissances surhumaines, non un Dieu.
+
+    ! Kant ne méprise pas la théologie physique : elle tourne utilement le regard vers une cause intelligente, mais elle ne peut à elle seule en déterminer le concept.
+  points:
+  - id: kant-cfj-methodologie-l9-q1
+    sentence: "« Je disposerais certes d'un **___** pour des __fins dispersées__, mais nullement d'une **sagesse** pour une __fin finale__ »"
+    answer: "entendement artiste"
+    alt: []
+  - id: kant-cfj-methodologie-l9-q2
+    sentence: "« Je disposerais certes d'un **entendement artiste** pour des ___, mais nullement d'une **sagesse** pour une __fin finale__ »"
+    answer: "fins dispersées"
+    alt: []
+  - id: kant-cfj-methodologie-l9-q3
+    sentence: "« Je disposerais certes d'un **entendement artiste** pour des __fins dispersées__, mais nullement d'une **___** pour une __fin finale__ »"
+    answer: "sagesse"
+    alt: []
+  - id: kant-cfj-methodologie-l9-q4
+    sentence: "« Je disposerais certes d'un **entendement artiste** pour des __fins dispersées__, mais nullement d'une **sagesse** pour une ___ »"
+    answer: "fin finale"
+    alt: []
+  - id: kant-cfj-methodologie-l9-q5
+    sentence: "« En ce sens, la théologie physique est donc une ___, qui ne peut servir que de **préparation** (propédeutique) à la théologie »"
+    answer: "téléologie physique mal comprise"
+    alt: []
+  - id: kant-cfj-methodologie-l9-q6
+    sentence: "« En ce sens, la théologie physique est donc une __téléologie physique mal comprise__, qui ne peut servir que de **___** (propédeutique) à la théologie »"
+    answer: "préparation"
+    alt: []
+  - id: kant-cfj-methodologie-l9-q7
+    sentence: "La théologie physique conclut à la cause suprême à partir des fins de la nature ; la théologie ___ part de ce que la loi morale prescrit aux êtres raisonnables."
+    answer: "morale"
+    alt: ["éthique"]
+  - id: kant-cfj-methodologie-l9-q8
+    sentence: "La théologie physique ne peut rien révéler d'une fin finale, car elle considère des relations toujours ___ dans la nature."
+    answer: "conditionnées"
+    alt: []
+  - id: kant-cfj-methodologie-l9-q9
+    sentence: "Pour conclure de la nature à une intelligence infinie, il faudrait supposer en soi l'___, pour voir toutes les fins de la nature liées entre elles et comparer ce plan à tous les plans possibles."
+    answer: "omniscience"
+    alt: []
+  - id: kant-cfj-methodologie-l9-q10
+    sentence: "Les ___, trouvant mêlés dans le monde le bien et le mal, pensaient leurs dieux puissants mais limités, et étaient en cela conséquents."
+    answer: "Anciens"
+    alt: []
+  - id: kant-cfj-methodologie-l9-q11
+    sentence: "Si elle renonçait à ses emprunts inaperçus à la téléologie morale, la téléologie physique ne pourrait fonder par elle-même qu'une ___."
+    answer: "démonologie"
+    alt: []
+- id: kant-cfj-methodologie-l10
+  title: "Ce qui donne sa valeur à l'existence : la volonté bonne (§ 86)"
+  notes: |-
+    Le § 86 fonde la **théologie morale** sur un jugement que fait même l'entendement le plus commun : {green}__sans les hommes, le monde n'aurait pas de fin, et ce qui donne sa valeur à l'existence de l'homme n'est ni sa connaissance ni son bonheur, mais sa volonté bonne__{/green}.
+
+    **Sans les hommes, un désert.** Toutes les créatures, si admirable que soit leur organisation, {teal}« n'existeraient pour rien s'il n'y avait en eux des hommes (des êtres raisonnables en général) : autrement dit, sans les hommes, la création entière serait un simple désert, inutile et dépourvu de fin finale »{/teal}. Une valeur n'existe que pour un être capable de se représenter des fins : un monde de pierres et de bêtes serait un spectacle sans spectateur et sans raison d'être.
+
+    **Ce n'est pas la contemplation qui donne sa valeur au monde.** On pourrait croire que le monde vaut parce qu'il y a quelqu'un pour le **contempler**. Mais si cette contemplation ne lui montrait que des choses sans fin finale, {coral}le fait que le monde soit connu ne saurait donner à son existence une valeur{/coral} : il faut déjà lui supposer une fin finale pour que la contemplation elle-même en prenne une.
+
+    **Ni le bonheur.** Ce n'est pas non plus {red}le bien-être, la jouissance, corporelle ou spirituelle, bref le bonheur{/red}, qui mesure cette valeur absolue. Que l'homme fasse de son bonheur son but ne dit pas pourquoi il existe, ni {coral}quelle valeur il a lui-même pour rendre son existence agréable{/coral}.
+
+    **La volonté bonne : la valeur que seul il peut se donner.** Reste {green}« la valeur que seul il peut se donner lui-même, et qui consiste dans ce qu'il fait »{/green}, dans les principes d'après lesquels il agit, {coral}non comme membre de la nature, mais dans la liberté de son pouvoir de désirer{/coral}, c'est-à-dire une **volonté bonne**, {teal}« ce par quoi seulement son existence peut avoir une valeur absolue »{/teal}. Le jugement commun le confirme : à quoi sert qu'un homme ait du talent, l'exerce avec ardeur et soit utile à tous, s'il n'a pas de volonté bonne ? Il est, dans son intériorité, {red}« un objet de mépris »{/red}.
+
+    **D'où le concept de Dieu.** Puisque l'homme n'est fin finale que comme être moral, la raison peut déterminer le concept de la cause du monde : législatrice dans un règne moral des fins, {coral}omnisciente{/coral} pour voir les intentions, {coral}toute-puissante{/coral} pour accorder la nature à la moralité, {coral}bonne et juste{/coral}. Ainsi {teal}« la téléologie morale comble les lacunes de la téléologie physique »{/teal}.
+
+    ! Ce n'est pas l'homme comme espèce naturelle qui donne au monde sa valeur, mais l'homme comme volonté libre et bonne.
+  points:
+  - id: kant-cfj-methodologie-l10-q1
+    sentence: "« sans les **___**, la création entière serait __un simple désert__, inutile et dépourvu de **fin finale**. »"
+    answer: "hommes"
+    alt: []
+  - id: kant-cfj-methodologie-l10-q2
+    sentence: "« sans les **hommes**, la création entière serait ___, inutile et dépourvu de **fin finale**. »"
+    answer: "un simple désert"
+    alt: []
+  - id: kant-cfj-methodologie-l10-q3
+    sentence: "« sans les **hommes**, la création entière serait __un simple désert__, inutile et dépourvu de **___**. »"
+    answer: "fin finale"
+    alt: []
+  - id: kant-cfj-methodologie-l10-q4
+    sentence: "« la valeur que **___**, et qui consiste dans __ce qu'il fait__, dans la manière et dans les principes d'après lesquels il agit, non comme membre de la nature, mais dans la __liberté__ de son pouvoir de désirer, c'est-à-dire __une volonté bonne__ »"
+    answer: "seul il peut se donner lui-même"
+    alt: []
+  - id: kant-cfj-methodologie-l10-q5
+    sentence: "« la valeur que **seul il peut se donner lui-même**, et qui consiste dans ___, dans la manière et dans les principes d'après lesquels il agit, non comme membre de la nature, mais dans la __liberté__ de son pouvoir de désirer, c'est-à-dire __une volonté bonne__ »"
+    answer: "ce qu'il fait"
+    alt: []
+  - id: kant-cfj-methodologie-l10-q6
+    sentence: "« la valeur que **seul il peut se donner lui-même**, et qui consiste dans __ce qu'il fait__, dans la manière et dans les principes d'après lesquels il agit, non comme membre de la nature, mais dans la ___ de son pouvoir de désirer, c'est-à-dire __une volonté bonne__ »"
+    answer: "liberté"
+    alt: []
+  - id: kant-cfj-methodologie-l10-q7
+    sentence: "« la valeur que **seul il peut se donner lui-même**, et qui consiste dans __ce qu'il fait__, dans la manière et dans les principes d'après lesquels il agit, non comme membre de la nature, mais dans la __liberté__ de son pouvoir de désirer, c'est-à-dire ___ »"
+    answer: "une volonté bonne"
+    alt: []
+  - id: kant-cfj-methodologie-l10-q8
+    sentence: "Si la contemplation du monde ne nous représentait que des choses sans fin finale, le fait que le monde soit ___ ne saurait donner à son existence une valeur."
+    answer: "connu"
+    alt: []
+  - id: kant-cfj-methodologie-l10-q9
+    sentence: "Ce n'est pas le bien-être, la jouissance, bref le ___, qui constitue ce d'après quoi nous apprécions la valeur absolue de l'existence."
+    answer: "bonheur"
+    alt: []
+  - id: kant-cfj-methodologie-l10-q10
+    sentence: "Un homme plein de talent et utile à la communauté, mais sans volonté bonne, est, si on le considère dans son intériorité, « un objet de ___ »."
+    answer: "mépris"
+    alt: []
+  - id: kant-cfj-methodologie-l10-q11
+    sentence: "La téléologie morale pense la cause du monde comme ___, pour que même ce qu'il y a de plus intérieur dans l'intention ne lui soit pas caché."
+    answer: "omnisciente"
+    alt: ["omniscient"]
+  - id: kant-cfj-methodologie-l10-q12
+    sentence: "« la téléologie morale comble les lacunes de la téléologie ___ et constitue la première fondation d'une théologie »"
+    answer: "physique"
+    alt: []
+  - id: kant-cfj-methodologie-l10-q13
+    sentence: "Le § 86 écarte deux réponses à la question de la valeur de l'existence : la connaissance du monde, qui suppose déjà une fin finale, et le bonheur, qui ne dit pas pourquoi l'homme existe. Reste ce que l'homme fait par sa ___."
+    answer: "volonté bonne"
+    alt: ["liberté"]
+- id: kant-cfj-methodologie-l11
+  title: "La preuve morale et l'honnête homme sans Dieu (§ 87)"
+  notes: |-
+    Le § 87 formule la **preuve morale** de l'existence de Dieu. Elle ne part pas de la nature, mais de la loi morale en nous : {green}__la loi nous commande de viser une fin finale, le souverain bien, que nous ne pouvons penser possible sans admettre un auteur moral du monde__{/green}.
+
+    **La téléologie morale est en nous.** Nous trouvons en nous-mêmes, comme êtres libres, une **téléologie morale** déterminée a priori, qui n'a besoin d'aucune cause intelligente hors de nous pour sa légalité intérieure, pas plus que les propriétés des figures géométriques n'ont besoin d'un entendement suprême. Mais elle nous concerne comme êtres du monde, liés aux autres choses : elle pose donc la question de l'accord du monde avec la fin morale.
+
+    **Le raisonnement.** La loi morale nous prescrit une fin finale : le **souverain bien**, le bonheur des êtres raisonnables sous la condition de leur accord avec la loi, qui les rend **dignes d'être heureux**. Or nous ne pouvons nous représenter cette fin comme possible par les seules forces de la nature, qui ne règle pas le bonheur sur le mérite. {coral}Il faut donc admettre une cause morale du monde{/coral} ; et {teal}« dans la mesure où cette loi est nécessaire, dans la même mesure [...] il est nécessaire d'admettre aussi la première proposition - savoir qu'il y a un Dieu »{/teal}. Une note précise : l'argument ne prouve pas Dieu au sceptique, il lui montre que, {coral}s'il veut penser de façon moralement conséquente{/coral}, il doit l'admettre.
+
+    **La morale ne dépend pas de Dieu.** Celui qui se persuade que Dieu n'existe pas et en conclut que le devoir est imaginaire serait {red}« un vaurien »{/red}, et le resterait s'il obéissait par crainte ou par intérêt. Les lois morales commandent inconditionnellement ; ce qu'on abandonnerait sans Dieu, ce n'est pas le devoir, mais **l'espoir de réaliser la fin finale**.
+
+    **L'honnête homme sans Dieu.** Kant imagine {yellow}« un honnête homme (par exemple, Spinoza) qui est fermement persuadé qu'il n'y a pas de Dieu et [...] qu'il n'y a pas non plus de vie future »{/yellow}. Il fait le bien sans rien demander. Mais son effort est limité, et la nature ne s'accorde qu'au hasard avec sa fin : la tromperie, la violence et la jalousie l'entourent, et les gens intègres restent {red}« soumis par la nature, qui ne prête pas attention à cette dignité, à tous les maux de la misère, des maladies et de la mort prématurée, comme c'est le cas des autres animaux de la terre »{/red}, jusqu'à ce qu'{red}« une vaste tombe les engloutisse tous ensemble »{/red}, honnêtes ou non, dans {red}« le gouffre du chaos dépourvu de toute fin qui est celui de la matière d'où ils étaient tirés »{/red}.
+
+    **L'alternative.** Ou bien il abandonne comme impossible la fin que la loi morale lui faisait viser, ce qui affaiblirait le respect qu'elle lui inspire ; ou bien, pour rester fidèle à sa destination morale, il admet, {coral}d'un point de vue pratique{/coral}, ce qui n'a rien de contradictoire : {green}« l'existence d'un auteur moral du monde, c'est-à-dire de Dieu »{/green}.
+
+    ! La preuve morale ne fonde pas le devoir sur Dieu : elle va du devoir à Dieu, et le devoir resterait obligatoire sans lui.
+    ! Kant ne fait pas le procès de Spinoza : il en fait au contraire l'exemple d'un homme moralement irréprochable.
+  points:
+  - id: kant-cfj-methodologie-l11-q1
+    sentence: "« Nous pouvons donc poser l'hypothèse d'un **___** (par exemple, __Spinoza__) qui est fermement persuadé qu'il n'y a pas de Dieu et (puisque, du point de vue de l'objet de la moralité, cela a la même conséquence) qu'il n'y a pas non plus de __vie future__ »"
+    answer: "honnête homme"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q2
+    sentence: "« Nous pouvons donc poser l'hypothèse d'un **honnête homme** (par exemple, ___) qui est fermement persuadé qu'il n'y a pas de Dieu et (puisque, du point de vue de l'objet de la moralité, cela a la même conséquence) qu'il n'y a pas non plus de __vie future__ »"
+    answer: "Spinoza"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q3
+    sentence: "« Nous pouvons donc poser l'hypothèse d'un **honnête homme** (par exemple, __Spinoza__) qui est fermement persuadé qu'il n'y a pas de Dieu et (puisque, du point de vue de l'objet de la moralité, cela a la même conséquence) qu'il n'y a pas non plus de ___ »"
+    answer: "vie future"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q4
+    sentence: "« soumis par la nature, qui ne prête pas attention à cette **___**, à tous les maux de la misère, des maladies et de __la mort prématurée__, comme c'est le cas des __autres animaux de la terre__ »"
+    answer: "dignité"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q5
+    sentence: "« soumis par la nature, qui ne prête pas attention à cette **dignité**, à tous les maux de la misère, des maladies et de ___, comme c'est le cas des __autres animaux de la terre__ »"
+    answer: "la mort prématurée"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q6
+    sentence: "« soumis par la nature, qui ne prête pas attention à cette **dignité**, à tous les maux de la misère, des maladies et de __la mort prématurée__, comme c'est le cas des ___ »"
+    answer: "autres animaux de la terre"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q7
+    sentence: "« jusqu'à ce qu'une **___** les engloutisse tous ensemble (honnêtes ou malhonnêtes, cela est ici sans importance) et les renvoie, eux qui pouvaient croire être fin finale de la création, dans __le gouffre du chaos__ dépourvu de toute fin qui est celui de __la matière__ d'où ils étaient tirés »"
+    answer: "vaste tombe"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q8
+    sentence: "« jusqu'à ce qu'une **vaste tombe** les engloutisse tous ensemble (honnêtes ou malhonnêtes, cela est ici sans importance) et les renvoie, eux qui pouvaient croire être fin finale de la création, dans ___ dépourvu de toute fin qui est celui de __la matière__ d'où ils étaient tirés »"
+    answer: "le gouffre du chaos"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q9
+    sentence: "« jusqu'à ce qu'une **vaste tombe** les engloutisse tous ensemble (honnêtes ou malhonnêtes, cela est ici sans importance) et les renvoie, eux qui pouvaient croire être fin finale de la création, dans __le gouffre du chaos__ dépourvu de toute fin qui est celui de ___ d'où ils étaient tirés »"
+    answer: "la matière"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q10
+    sentence: "La téléologie morale, déterminée a priori en nous, n'a besoin d'aucune cause intelligente extérieure pour sa légalité intérieure, pas plus que les propriétés des figures ___."
+    answer: "géométriques"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q11
+    sentence: "Le souverain bien est le bonheur des êtres raisonnables sous la condition de leur accord avec la loi morale, qui les rend ___ d'être heureux."
+    answer: "dignes"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q12
+    sentence: "L'argument moral ne démontre pas Dieu au sceptique, mais lui montre que, « s'il veut penser de façon moralement ___ », il doit admettre cette proposition parmi les maximes de sa raison pratique."
+    answer: "conséquente"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q13
+    sentence: "Celui qui, persuadé que Dieu n'existe pas, tiendrait les lois du devoir pour imaginaires serait à ses propres yeux un ___."
+    answer: "vaurien"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q14
+    sentence: "L'honnête homme sans Dieu peut admettre l'existence d'un auteur moral du monde, du point de vue ___, puisqu'il n'y a là rien de contradictoire."
+    answer: "pratique"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q15
+    sentence: "Sans Dieu, ce qu'on devrait abandonner n'est pas l'obéissance à la loi morale, qui commande inconditionnellement, mais l'intention de réaliser dans le monde la ___."
+    answer: "fin finale"
+    alt: []
+  - id: kant-cfj-methodologie-l11-q16
+    sentence: "L'argument du § 87 part du devoir : la loi morale nous fait viser le souverain bien ; or la nature, indifférente au mérite, ne le garantit pas. Pour le penser possible, il faut admettre un auteur ___ du monde."
+    answer: "moral"
+    alt: []
+- id: kant-cfj-methodologie-l12
+  title: "La portée de la preuve morale : croire, non savoir (§ 88-91)"
+  notes: |-
+    Les § 88 à 91 fixent la **portée** de la preuve morale. Elle ne donne {red}aucun savoir{/red} de Dieu ni de l'âme : {green}__elle a une réalité pratique, pour nous, et fonde une croyance, non une connaissance__{/green}. Cette limitation, loin d'être une perte, protège la religion de ses dérives.
+
+    **Une réalité subjectivement pratique (§ 88).** La loi morale ne règle pas seulement nos actions, elle nous fait penser un objet à réaliser : {teal}« L'Idée d'une fin finale dans l'usage de la liberté d'après des lois morales a ainsi une réalité subjectivement pratique. »{/teal} Nous devons promouvoir le Bien du monde, l'union du bonheur universel et de la moralité ; la moralité dépend de nous, mais le bonheur dépend de la nature. D'où l'admission d'un auteur moral du monde, **pour nous**, non comme une détermination de l'objet.
+
+    **L'utilité de cette limitation (§ 89).** Restreindre les Idées du suprasensible à l'usage pratique empêche la théologie de se perdre dans la {red}**théosophie**{/red} ou la {red}**démonologie**{/red}, et la religion de sombrer dans la {red}**théurgie**{/red} ou l'{red}**idolâtrie**{/red}. Il en va de même de l'âme : la psychologie rationnelle ne peut devenir une pneumatologie, une science des esprits ; elle est {coral}« une simple anthropologie du sens interne, c'est-à-dire connaissance de notre moi pensant dans la vie »{/coral}, et notre survie n'est admise que comme condition de la fin finale que nous impose la raison.
+
+    **Une preuve pour nous, non sur l'objet en soi (§ 90).** Une preuve doit **convaincre**, non seulement persuader. Elle peut établir ce que l'objet est en soi (*kat' alêtheian*), ou ce qu'il est {teal}« pour nous (pour nous, hommes en général) »{/teal} (*kat' anthrôpon*) : la preuve morale est de la seconde sorte.
+
+    **Opinion, savoir, croyance (§ 91).** Les choses connaissables sont de trois sortes : celles qui donnent matière à **opinion**, les **faits**, et les objets de **croyance**. Dieu et l'immortalité ne sont ni des faits démontrables ni des opinions, puisqu'on ne peut avoir d'opinion sur ce qu'aucune expérience ne peut présenter ; ils sont objets d'une croyance que la raison pratique rend nécessaire.
+
+    ! La limitation de la preuve n'est pas un scepticisme : elle donne une certitude pratique pleine à ce dont il n'y a pas de savoir théorique.
+  points:
+  - id: kant-cfj-methodologie-l12-q1
+    sentence: "« L'Idée d'une **___** dans l'usage de la liberté d'après des lois morales a ainsi une réalité __subjectivement pratique__. »"
+    answer: "fin finale"
+    alt: []
+  - id: kant-cfj-methodologie-l12-q2
+    sentence: "« L'Idée d'une **fin finale** dans l'usage de la liberté d'après des lois morales a ainsi une réalité ___. »"
+    answer: "subjectivement pratique"
+    alt: []
+  - id: kant-cfj-methodologie-l12-q3
+    sentence: "« la psychologie rationnelle ne peut jamais devenir **___** comme science augmentant la connaissance [...] bien au contraire est-elle une simple __anthropologie du sens interne__, c'est-à-dire connaissance de notre moi pensant __dans la vie__ »"
+    answer: "pneumatologie"
+    alt: []
+  - id: kant-cfj-methodologie-l12-q4
+    sentence: "« la psychologie rationnelle ne peut jamais devenir **pneumatologie** comme science augmentant la connaissance [...] bien au contraire est-elle une simple ___, c'est-à-dire connaissance de notre moi pensant __dans la vie__ »"
+    answer: "anthropologie du sens interne"
+    alt: []
+  - id: kant-cfj-methodologie-l12-q5
+    sentence: "« la psychologie rationnelle ne peut jamais devenir **pneumatologie** comme science augmentant la connaissance [...] bien au contraire est-elle une simple __anthropologie du sens interne__, c'est-à-dire connaissance de notre moi pensant ___ »"
+    answer: "dans la vie"
+    alt: []
+  - id: kant-cfj-methodologie-l12-q6
+    sentence: "Limiter les Idées du suprasensible à l'usage pratique évite que la théologie ne se perde dans une ___ ou ne sombre dans la démonologie."
+    answer: "théosophie"
+    alt: []
+  - id: kant-cfj-methodologie-l12-q7
+    sentence: "Cette limitation évite aussi que la religion n'aboutisse à la ___, délire qui croit sentir d'autres êtres suprasensibles et agir sur eux, ou à l'idolâtrie."
+    answer: "théurgie"
+    alt: []
+  - id: kant-cfj-methodologie-l12-q8
+    sentence: "Une preuve qui établit ce que l'objet est pour nous, hommes en général, est dite *kat' ___*, par opposition à celle qui établit ce qu'il est en soi."
+    answer: "anthrôpon"
+    alt: ["anthropon"]
+  - id: kant-cfj-methodologie-l12-q9
+    sentence: "Les choses connaissables sont de trois sortes : celles qui donnent matière à opinion, les faits, et les objets de ___."
+    answer: "croyance"
+    alt: []
+  - id: kant-cfj-methodologie-l12-q10
+    sentence: "On ne peut avoir d'___ sur les objets des simples Idées de la raison, car aucune expérience possible ne peut les présenter."
+    answer: "opinion"
+    alt: []
+  - id: kant-cfj-methodologie-l12-q11
+    sentence: "Le Bien du monde que nous devons promouvoir unit deux éléments : la moralité, qui dépend de nous, et le ___, qui dépend de la constitution de la nature."
+    answer: "bonheur"
+    alt: []
