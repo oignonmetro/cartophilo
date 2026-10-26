@@ -13,6 +13,11 @@ unités-œuvres d'un même auteur.
 Premier exemple : `hors-programme/units/rousseau-contrat-social.yaml`
 (*Du contrat social*, livre II).
 
+À ne pas confondre avec le **cours d'une œuvre** (unité à `lessons` : plan
+en tableau, une leçon par mouvement du raisonnement, rappels et cartes, sur
+le modèle des cours de traités de Plotin), qui s'écrit avec la skill
+`cours-oeuvre` et peut aller dans la même piste.
+
 ## Principe : on écrit le plan, pas les leçons
 
 L'unité ne porte qu'un champ `work` : l'arbre de l'œuvre (livres, blocs de

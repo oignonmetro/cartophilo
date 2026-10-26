@@ -65,7 +65,11 @@ l'épreuve :
   - L'épistémologie
 - **La vie** : les mêmes quatre sous-onglets que Plotin et Marx (Glossaire,
   Idées, Textes), le Repérage s'y appelant **Œuvres** (unités-œuvres sur
-  les œuvres classiques du thème).
+  les œuvres classiques du thème). Le cours d'une œuvre d'un autre auteur
+  que Plotin (leçons, rappels, cartes, comme les traités, à partir d'un
+  notebook NotebookLM et du PDF de l'édition) s'écrit avec la skill
+  `cours-oeuvre` (`.claude/skills/cours-oeuvre/`), qui reprend la méthode
+  de `cours-traite`.
 
 ## Décidé : la correspondance technique avec le moteur de contenu
 
