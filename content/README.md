@@ -148,7 +148,7 @@ règles ou les pièges :
 | `` `will` `` | mot étranger en italique | une forme citée au milieu du français |
 | `**texte**` | gras | l'idée directrice, une opposition |
 | `__texte__` | souligné | le mot qui décide, dans une règle |
-| `*texte*` | italique | une nuance, une glose, un titre d'œuvre |
+| `*texte*` | italique | une nuance, une glose, un titre d'œuvre, une locution latine (*a priori*) ; se cumule avec le gras : `**un fondement *a priori***` |
 | `{violet}texte{/violet}` | teinté (gras) | distinguer deux notions qui reviennent tout au long d'un rappel |
 | `[def]`, `[def:g-vie]` | la définition de l'entrée (ou de `g-vie`), tirée de `definitions.yaml` | l'en-tête d'une entrée du glossaire : « Chez Plotin, la **vie** (*zôê*) est [def]. » ; remplacée à la compilation, cible vérifiée par `content:check` |
 | `[[g-vie\|la vie]]` | renvoi souligné en pointillé, qui ouvre l'unité `g-vie` en feuille | relier une entrée du glossaire à ses voisines (voir la skill `glossaire`) ; rappels seulement, texte littéral, cible vérifiée par `content:check`. `[[traite53\|traité 53]]` vise le traité de rang chronologique 53 : teinte prune, son titre au survol, son résumé au clic |

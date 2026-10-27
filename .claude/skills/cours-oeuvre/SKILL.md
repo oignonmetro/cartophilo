@@ -44,7 +44,7 @@ que la demande ne fixe pas :
   citations ne viendront que de NotebookLM, vérifiées sur ses extraits de
   source (§ 1), et les repères resteront au niveau du chapitre.
 - **L'étendue** : l'œuvre entière, ou une partie (le livre II du *De
-  l'âme*, les § 61-68 de la *Critique de la faculté de juger*). Une œuvre
+  l'âme*, les §61-68 de la *Critique de la faculté de juger*). Une œuvre
   longue se coupe en **une unité par partie** (un livre, une section), chacune
   avec son plan, ses sous-repérages et ses leçons, réunies par `group`.
 - **La piste** : Œuvres de La vie (`la-vie`, piste `oeuvres`), Repérages du
@@ -124,15 +124,15 @@ NotebookLM y sont recensées : les chercher ici aussi (passage voisin pris
 pour le bon, notion venue d'une autre œuvre de l'auteur, causalité
 renversée, citation inventée, analogie que l'auteur récuse ailleurs).
 
-Sur la *Critique de la faculté de juger* (§ 61-78, 2026-10-26), alors même
+Sur la *Critique de la faculté de juger* (§61-78, 2026-10-26), alors même
 que la traduction Renaut était une source du notebook : des citations
 « mot pour mot de la traduction Renaut » qui n'en étaient pas (l'arbre du
-§ 64, la maxime des anatomistes du § 66, « un être animé » pour « un être
-organisé » au § 65), des termes des commentateurs donnés pour ceux de Kant
-(« intussusception », « *Schwärmerei* » au § 61), le § 78 placé dans la
+§64, la maxime des anatomistes du §66, « un être animé » pour « un être
+organisé » au §65), des termes des commentateurs donnés pour ceux de Kant
+(« intussusception », « *Schwärmerei* » au §61), le §78 placé dans la
 Méthodologie qu'il ne fait qu'annoncer, et un découpage qui rattachait le
-§ 66 au système des fins. Ses explications des arguments, en revanche,
-étaient bonnes. Sur la Méthodologie (§ 79-91), il a prêté à Renaut, deux
+§66 au système des fins. Ses explications des arguments, en revanche,
+étaient bonnes. Sur la Méthodologie (§79-91), il a prêté à Renaut, deux
 fois, l'idée qu'il faut opposer strictement « fin dernière » et « fin
 finale », alors que ses notes 122 et 130 disent l'inverse : **une thèse
 attribuée à l'éditeur se vérifie dans ses notes**, comme une citation. Quand le chat de NotebookLM atteint sa limite d'usage, il
@@ -163,14 +163,18 @@ les corriger.
   moteur comme tableau de structure (`locationKey` dans
   `src/engine/exercises.ts`), dans un seul format par tableau, rangés dans
   l'ordre du texte : « II, 1 » (livre, chapitre), « 412a3-b9 » (Bekker,
-  Stephanus), « § 64 » (paragraphe), « chap. 3 ». Pas « livre II, chap. 1 »
+  Stephanus), « §64 » (paragraphe), « chap. 3 ». Pas « livre II, chap. 1 »
   ni « II, 1, 412a3 », que le moteur ne lit pas. L'éditeur visuel (onglet
   Tableaux) dit si un plan est reconnu.
 - **Les repères des rappels et des cartes** : la forme la plus précise que
-  l'édition permet avec certitude (« (412a27-b1) », « (§ 65) », « (II, 1) »),
+  l'édition permet avec certitude (« (412a27-b1) », « (§65) », « (II, 1) »),
   sans jamais déduire une ligne ; dans une leçon qui ne porte que sur un
   chapitre, son repère est dans le titre et les cartes ne le répètent pas,
   comme dans `cours-traite`.
+- **La typographie** : « §64 », sans espace entre le signe et le chiffre ;
+  *a priori* et *a posteriori* en italique, comme toute locution latine, y
+  compris dans le gras (`**un fondement *a priori***`) ; jamais dans une
+  réponse (`answer`, `alt`), qui se tape telle quelle.
 - **Les noms** : « Aristote », « Kant » remplacent « Plotin » partout où
   `cours-traite` le nomme ; les renvois à une autre œuvre de l'auteur
   donnent son titre en italique (« *Métaphysique*, Λ, 7 »).

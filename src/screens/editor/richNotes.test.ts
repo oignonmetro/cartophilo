@@ -74,7 +74,13 @@ describe('richNotes', () => {
     const off = restyle(runs, 3, 6, (marks) => withMark(marks, 'strong', false))
     expect(markupFromRuns(off)).toBe('un mot clef')
     const italic = restyle(runs, 0, 6, (marks) => withMark(marks, 'em', true))
-    expect(markupFromRuns(italic)).toBe('*un mot* clef')
+    expect(markupFromRuns(italic)).toBe('*un ****mot*** clef')
+    expect(runsFromMarkup(markupFromRuns(italic))).toEqual(italic)
+  })
+
+  it('réenregistre l’italique dans le gras à l’identique', () => {
+    const markup = '**le fondement *a priori*** et *a posteriori*'
+    expect(markupFromRuns(runsFromMarkup(markup))).toBe(markup)
   })
 
   it('sépare les blocs que la relecture fondrait sinon', () => {

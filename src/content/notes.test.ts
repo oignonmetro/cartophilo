@@ -219,6 +219,30 @@ describe('mise en forme dans le texte', () => {
     ])
   })
 
+  it('cumule le gras et l’italique', () => {
+    expect(parseInline('**le fondement *a priori***')).toEqual([
+      {
+        kind: 'strong',
+        children: [
+          { kind: 'text', text: 'le fondement ' },
+          { kind: 'em', children: [{ kind: 'text', text: 'a priori' }] },
+        ],
+      },
+    ])
+    expect(parseInline('*le **seul** cas* et **un**')).toEqual([
+      {
+        kind: 'em',
+        children: [
+          { kind: 'text', text: 'le ' },
+          { kind: 'strong', children: [{ kind: 'text', text: 'seul' }] },
+          { kind: 'text', text: ' cas' },
+        ],
+      },
+      { kind: 'text', text: ' et ' },
+      { kind: 'strong', children: [{ kind: 'text', text: 'un' }] },
+    ])
+  })
+
   it('interprète une forme anglaise à l’intérieur du gras', () => {
     // Régression : « **pas de `to`** » affichait les accents graves en clair.
     expect(parseInline('**pas de `to`**')).toEqual([

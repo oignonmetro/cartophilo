@@ -133,7 +133,7 @@ const WRAP: Record<(typeof MARK_ORDER)[number], (inner: string, marks: Marks) =>
   def: (_inner, marks) => marks.def!,
 }
 
-/** L'inverse de `runsFromMarkup`. Gras et italique ne se cumulent pas (le format ne sait pas l'écrire). */
+/** L'inverse de `runsFromMarkup`. L'italique s'écrit dans le gras : `**le fondement *a priori***`. */
 export function markupFromRuns(runs: Run[]): string {
   const level = (group: Run[], depth: number): string => {
     if (depth === MARK_ORDER.length) return runsText(group)
@@ -375,7 +375,7 @@ export function hasMark(runs: Run[], from: number, to: number, key: MarkKey, arg
   return slice.length > 0 && slice.every((run) => (key === 'color' || (key === 'link' && arg) ? run.marks[key] === arg : run.marks[key]))
 }
 
-/** Pose ou retire une mise en forme ; gras et italique s'excluent, une couleur en remplace une autre. */
+/** Pose ou retire une mise en forme ; une couleur en remplace une autre. */
 export function withMark(marks: Marks, key: MarkKey, on: boolean, arg?: string): Marks {
   const next = { ...marks }
   if (!on) {
@@ -389,8 +389,6 @@ export function withMark(marks: Marks, key: MarkKey, on: boolean, arg?: string):
   // Un renvoi et une forme citée sont tous deux littéraux : aucun ne s'écrit dans l'autre.
   if (key === 'link') delete next.form
   if (key === 'form') delete next.link
-  if (key === 'strong') delete next.em
-  if (key === 'em') delete next.strong
   return next
 }
 

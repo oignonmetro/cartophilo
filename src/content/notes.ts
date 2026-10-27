@@ -51,8 +51,10 @@ export type Inline =
   | { kind: 'link'; target: string; text: string }
 
 // Le renvoi vient en dernier : placé avant, il décalerait le `\5` de la couleur.
+// Le gras peut contenir de l'italique (`**le fondement *a priori***`), et
+// l'italique du gras (`*le **seul** cas*`) : c'est ainsi qu'ils se cumulent.
 const INLINE = new RegExp(
-  `\\*\\*([^*]+)\\*\\*|__([^_]+)__|\\*([^*]+)\\*|\`([^\`]+)\`|\\{(${COLOR_NAMES.join('|')})\\}([\\s\\S]*?)\\{/\\5\\}|\\[\\[([^\\]|]+)\\|([^\\]]+)\\]\\]`,
+  `\\*\\*((?:[^*]|\\*[^*]+\\*)+)\\*\\*|__([^_]+)__|\\*((?:[^*]|\\*\\*[^*]+\\*\\*)+)\\*|\`([^\`]+)\`|\\{(${COLOR_NAMES.join('|')})\\}([\\s\\S]*?)\\{/\\5\\}|\\[\\[([^\\]|]+)\\|([^\\]]+)\\]\\]`,
   'g',
 )
 
@@ -75,7 +77,8 @@ function nbspQuotes(text: string): string {
  * `**gras**`, `*italique*`, `__souligné__`, `` `mot étranger` ``,
  * `{couleur}teinté{/couleur}`, `[[unité|renvoi]]`.
  *
- * Les quatre premiers s'imbriquent — « **pas de `to`** » met bien la forme en
+ * Les quatre premiers s'imbriquent (gras et italique se cumulent ainsi :
+ * `**le fondement *a priori***`) — « **pas de `to`** » met bien la forme en
  * valeur à l'intérieur du gras, et une couleur peut elle aussi contenir du
  * gras. Le quatrième (la forme citée) est littéral, comme du code. Un texte
  * sans aucun marqueur ressort en un seul fragment, ce qui rend la fonction

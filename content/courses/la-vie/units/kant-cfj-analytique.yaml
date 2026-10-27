@@ -1,28 +1,28 @@
 # Cours d'une œuvre (skill cours-oeuvre, piste Œuvres de La vie, voir
 # content/philosophie.md) : Kant, Critique de la faculté de juger, seconde partie,
-# Critique de la faculté de juger téléologique, Analytique, § 61-68.
+# Critique de la faculté de juger téléologique, Analytique, §61-68.
 # Citations : traduction d'Alain Renaut, GF-Flammarion ; repères : les
 # paragraphes de Kant. Analyse recoupée avec le notebook NotebookLM « Kant : la vie »
 # (https://notebook.google.com/notebook/1fb869d6-c4f2-431f-899f-1ced4594c671),
 # dont chaque citation a été vérifiée sur la traduction.
 
 id: kant-cfj-analytique
-title: "Kant : Critique de la faculté de juger téléologique, l'Analytique (§ 61-68)"
+title: "Kant : Critique de la faculté de juger téléologique, l'Analytique (§61-68)"
 subtitle: "Ce qui mérite le nom de fin naturelle : l'être organisé"
 icon: compass
 color: sky
 group: "Kant : Critique de la faculté de juger"
 lessons:
 - id: kant-cfj-analytique-l1
-  title: "Repérage : le plan de l'Analytique (§ 61-68)"
+  title: "Repérage : le plan de l'Analytique (§61-68)"
   notes: |-
-    L'**Analytique de la faculté de juger téléologique** cherche ce qui, dans la nature, mérite le nom de **fin naturelle**, et à quel titre on peut en juger. Elle avance par élimination, puis par extension : {green}__seuls les êtres organisés doivent être pensés comme des fins de la nature__{/green}, et leur maxime peut s'étendre à la nature entière, {red}sans jamais devenir une connaissance de la production des choses{/red}.
+    L'**Analytique de la faculté de juger téléologique** cherche ce qui, dans la nature, mérite le nom de {violet}**« fin naturelle »**{/violet}, et à quel titre on peut en juger. Elle avance par élimination, puis par extension : {green}__seuls les êtres organisés doivent être pensés comme des fins de la nature__{/green}, et leur maxime peut s'étendre à la nature entière, {red}sans jamais devenir une connaissance de la production des choses{/red}.
 
     | Mouvement | Lieu | Ce qui s'y joue |
-    | poser la question de la finalité objective | § 61 | juger la nature d'après des fins est légitime, mais seulement pour la faculté de juger réfléchissante |
-    | écarter les fausses finalités | § 62-63 | ni la fécondité des figures géométriques ni l'utilité d'une chose pour une autre ne prouvent une fin de la nature |
-    | définir la fin naturelle : l'être organisé | § 64-65 | une chose est fin naturelle quand ses parties se produisent les unes les autres et produisent le tout, ce que ne fait aucune machine |
-    | tirer la maxime et l'étendre à la nature | § 66-68 | rien n'est en vain dans un être organisé ; la nature entière peut alors se juger comme un système des fins, sans Dieu en physique |
+    | poser la question de la finalité objective | §61 | juger la nature d'après des fins est légitime, mais seulement pour la faculté de juger réfléchissante |
+    | écarter les fausses finalités | §62-63 | ni la fécondité des figures géométriques ni l'utilité d'une chose pour une autre ne prouvent une fin de la nature |
+    | définir la fin naturelle : l'être organisé | §64-65 | une chose est fin naturelle quand ses parties se produisent les unes les autres et produisent le tout, ce que ne fait aucune machine |
+    | tirer la maxime et l'étendre à la nature | §66-68 | rien n'est en vain dans un être organisé ; la nature entière peut alors se juger comme un système des fins, sans Dieu en physique |
 
     ! L'Analytique ne dit pas comment les êtres organisés sont produits : elle dit comment nous devons les juger.
   tables:
@@ -33,7 +33,7 @@ lessons:
     - {kind: cell, column: Lieu}
   points:
   - id: kant-cfj-analytique-l1-q1
-    sentence: "La *Critique de la faculté de juger* comprend deux parties : la critique de la faculté de juger esthétique, puis celle de la faculté de juger ___, dont l'Analytique occupe les § 61 à 68."
+    sentence: "La *Critique de la faculté de juger* comprend deux parties : la critique de la faculté de juger esthétique, puis celle de la faculté de juger ___, dont l'Analytique occupe les §61 à 68."
     answer: "téléologique"
     alt: []
   - id: kant-cfj-analytique-l1-q2
@@ -41,19 +41,19 @@ lessons:
     answer: "62-63"
     alt: ["62 et 63", "62 à 63"]
   - id: kant-cfj-analytique-l1-q3
-    sentence: "Dans l'Analytique de la faculté de juger téléologique, la définition de l'être organisé comme fin naturelle, dont les parties se produisent réciproquement, occupe les § 64 et ___."
+    sentence: "Dans l'Analytique de la faculté de juger téléologique, la définition de l'être organisé comme fin naturelle, dont les parties se produisent réciproquement, occupe les §64 et ___."
     answer: "65"
-    alt: ["§ 65"]
+    alt: ["§65"]
   - id: kant-cfj-analytique-l1-q4
     sentence: "Dans l'Analytique de la faculté de juger téléologique, l'extension de la maxime des êtres organisés à la nature entière comme système des fins se trouve au § ___."
     answer: "67"
-    alt: ["§ 67"]
+    alt: ["§67"]
 - id: kant-cfj-analytique-l2
-  title: "La question : y a-t-il une finalité objective de la nature ? (§ 61)"
+  title: "La question : y a-t-il une finalité objective de la nature ? (§61)"
   notes: |-
-    Le § 61 ouvre la seconde partie en changeant d'objet : après la **finalité subjective** du beau, qui tenait à l'accord de nos facultés, il demande s'il existe une {violet}**finalité objective**{/violet} de la nature, c'est-à-dire des choses dont la possibilité même n'est compréhensible que par des fins. Sa réponse fixe le statut de tout ce qui suit : {green}__un tel jugement est légitime, mais seulement pour la faculté de juger réfléchissante__{/green}.
+    Le §61 ouvre la seconde partie en changeant d'objet : après la **finalité subjective** du beau, qui tenait à l'accord de nos facultés, il demande s'il existe une {violet}**finalité objective**{/violet} de la {violet}nature{/violet}, c'est-à-dire des choses dont la possibilité même n'est compréhensible que par des fins. Sa réponse fixe le statut de tout ce qui suit : {green}__un tel jugement est légitime, mais seulement pour la faculté de juger réfléchissante__{/green}.
 
-    **La finalité esthétique avait un fondement a priori ; la finalité objective n'en a pas.** Pour le beau, la représentation d'une forme est {teal}« quelque chose qui fait partie de nous-mêmes »{/teal} : on pouvait donc concevoir a priori qu'elle convienne à l'accord de nos pouvoirs de connaître, puisque ce rapport se joue tout entier en nous. Une finalité objective, au contraire, prête aux choses {teal}« des fins qui ne sont pas les nôtres et qui n'appartiennent pas non plus à la nature (laquelle nous ne considérons pas comme un être intelligent) »{/teal}. Or __on ne peut légiférer a priori que sur ce qui relève de nos propres facultés__ ; sur ce qui se passe dans les choses hors de nous, rien ne permet de présumer qu'elles se servent les unes des autres comme moyens. L'adversaire ne peut refuser cette prémisse sans effacer la différence entre l'accord de nos représentations et la constitution des corps.
+    **La finalité esthétique avait un fondement *a priori* ; la finalité objective n'en a pas.** Pour le beau, la représentation d'une forme est {teal}« quelque chose qui fait partie de nous-mêmes »{/teal} : on pouvait donc concevoir *a priori* qu'elle convienne à l'accord de nos pouvoirs de connaître, puisque ce rapport se joue tout entier en nous. Une finalité objective, au contraire, prête aux choses {teal}« des fins qui ne sont pas les nôtres et qui n'appartiennent pas non plus à la nature (laquelle nous ne considérons pas comme un être intelligent) »{/teal}. Or __on ne peut légiférer *a priori* que sur ce qui relève de nos propres facultés__ ; sur ce qui se passe dans les choses hors de nous, rien ne permet de présumer qu'elles se servent les unes des autres comme moyens. Cette prémisse est celle de toute la philosophie critique : nous ne pouvons savoir d'avance, sans attendre l'expérience, que ce dont nous sommes nous-mêmes la source, comme les formes de notre intuition ou les règles de notre entendement. Le beau entre dans ce cas, puisqu'il ne concerne que l'accord de nos facultés entre elles ; **la finalité objective n'y entre pas**, puisqu'elle porterait sur la constitution même des choses, que rien en nous ne fixe à l'avance.
 
     **L'expérience ne la prouve pas davantage.** On ne voit jamais une fin : on voit des formes, des mouvements, des successions. Pour croire l'avoir observée, il faudrait un {red}« sophisme »{/red}, qui prendrait une manière de lier nos représentations, appliquée à la nature par analogie, pour une propriété découverte dans les choses.
 
@@ -127,11 +127,11 @@ lessons:
     answer: "déterminante"
     alt: []
   - id: kant-cfj-analytique-l2-q16
-    sentence: "La finalité esthétique avait un fondement a priori parce que la représentation d'une forme est « quelque chose qui fait partie de ___ » : son accord avec nos facultés se joue tout entier en nous."
+    sentence: "La finalité esthétique avait un fondement *a priori* parce que la représentation d'une forme est « quelque chose qui fait partie de ___ » : son accord avec nos facultés se joue tout entier en nous."
     answer: "nous-mêmes"
     alt: []
   - id: kant-cfj-analytique-l2-q17
-    sentence: "Une finalité objective prêterait aux choses « des fins qui ne sont pas les nôtres », alors que nous ne considérons pas la nature comme un ___ : rien ne permet donc de la présumer a priori."
+    sentence: "Une finalité objective prêterait aux choses « des fins qui ne sont pas les nôtres », alors que nous ne considérons pas la nature comme un ___ : rien ne permet donc de la présumer *a priori*."
     answer: "être intelligent"
     alt: []
   - id: kant-cfj-analytique-l2-q18
@@ -151,21 +151,21 @@ lessons:
     answer: "nexus finalis"
     alt: ["*nexus finalis*"]
   - id: kant-cfj-analytique-l2-q22
-    sentence: "Le premier ressort du § 61 est un partage : on peut légiférer a priori sur l'accord de nos propres facultés, non sur ce qui se passe dans les choses. Une finalité objective ne peut donc être ni déduite du concept de nature ni ___ par l'expérience : elle ne peut être qu'un principe de la réflexion."
+    sentence: "Le premier ressort du §61 est un partage : on peut légiférer *a priori* sur l'accord de nos propres facultés, non sur ce qui se passe dans les choses. Une finalité objective ne peut donc être ni déduite du concept de nature ni ___ par l'expérience : elle ne peut être qu'un principe de la réflexion."
     answer: "prouvée"
     alt: ["observée"]
 - id: kant-cfj-analytique-l3
-  title: "Repérage : écarter les fausses finalités (§ 62-63)"
+  title: "Repérage : écarter les fausses finalités (§62-63)"
   notes: |-
-    Avant de dire ce qu'est une fin naturelle, Kant écarte deux finalités qui en ont l'apparence : celle des figures géométriques, {pink}objective mais formelle{/pink} (§ 62), et celle de l'utilité, {red}relative et hypothétique{/red} (§ 63).
+    Avant de dire ce qu'est une fin naturelle, Kant écarte deux finalités qui en ont l'apparence : celle des figures géométriques, {pink}objective mais formelle{/pink} (§62), et celle de l'utilité, {red}relative et hypothétique{/red} (§63).
 
     | Moment | Lieu | Ce qui s'y joue |
-    | la fécondité du cercle | § 62 | une finalité objective et intellectuelle, qui ne suppose aucune fin |
-    | c'est moi qui introduis la finalité | § 62 | l'espace est un mode de représentation en moi |
-    | beauté ou perfection des figures | § 62 | une perfection relative ; seule la démonstration est belle |
-    | utilité et convenance | § 63 | la finalité relative, distincte de la finalité interne |
-    | la chaîne des moyens | § 63 | sans terme qui soit lui-même une fin, elle reste hypothétique |
-    | le Groenlandais et le Lapon | § 63 | dire que la nature les a pourvus serait un jugement audacieux et arbitraire |
+    | la fécondité du cercle | §62 | une finalité objective et intellectuelle, qui ne suppose aucune fin |
+    | c'est moi qui introduis la finalité | §62 | l'espace est un mode de représentation en moi |
+    | beauté ou perfection des figures | §62 | une perfection relative ; seule la démonstration est belle |
+    | utilité et convenance | §63 | la finalité relative, distincte de la finalité interne |
+    | la chaîne des moyens | §63 | sans terme qui soit lui-même une fin, elle reste hypothétique |
+    | le Groenlandais et le Lapon | §63 | dire que la nature les a pourvus serait un jugement audacieux et arbitraire |
   tables:
   - table: moment-lieu-ce-qui-s-y-joue
     exercises:
@@ -176,31 +176,31 @@ lessons:
   - id: kant-cfj-analytique-l3-q1
     sentence: "Dans la *Critique de la faculté de juger*, l'exemple du cercle, dont la simple définition résout une foule de problèmes, illustre la finalité objective mais formelle, au § ___."
     answer: "62"
-    alt: ["§ 62"]
+    alt: ["§62"]
   - id: kant-cfj-analytique-l3-q2
-    sentence: "Dans la *Critique de la faculté de juger*, les exemples du sable laissé par la mer pour les pins et des rennes du Lapon servent à critiquer la finalité ___, au § 63."
+    sentence: "Dans la *Critique de la faculté de juger*, les exemples du sable laissé par la mer pour les pins et des rennes du Lapon servent à critiquer la finalité ___, au §63."
     answer: "relative"
     alt: ["externe"]
   - id: kant-cfj-analytique-l3-q3
     sentence: "Dans la *Critique de la faculté de juger*, la distinction entre l'utilité (pour l'homme) et la convenance (pour toute autre créature) se trouve au § ___."
     answer: "63"
-    alt: ["§ 63"]
+    alt: ["§63"]
 - id: kant-cfj-analytique-l4
-  title: "La finalité objective mais formelle des figures géométriques (§ 62)"
+  title: "La finalité objective mais formelle des figures géométriques (§62)"
   notes: |-
-    Le § 62 étudie un **cas-limite** avant d'aborder les fins naturelles : la finalité des figures géométriques. Elle est **objective**, puisqu'on peut dire à quelle fin la figure sert, mais seulement **formelle** : {green}__elle ne suppose aucune fin à son fondement, parce que c'est nous qui l'introduisons dans la figure en la construisant__{/green}. Le paragraphe ménage ainsi le passage de la finalité subjective du beau à la finalité objective et matérielle des êtres vivants.
+    Le §62 étudie un **cas-limite** avant d'aborder les fins naturelles : la finalité des figures géométriques. Elle est **objective**, puisqu'on peut dire à quelle fin la figure sert, mais seulement **formelle** : {green}__elle ne suppose aucune fin à son fondement, parce que c'est nous qui l'introduisons dans la figure en la construisant__{/green}. Le paragraphe ménage ainsi le passage de la finalité subjective du beau à la finalité objective et matérielle des êtres vivants.
 
     **La finalité des figures est objective et intellectuelle.** {teal}« Toutes les figures géométriques qui sont tracées selon un principe manifestent une finalité objective variée, souvent admirée »{/teal} : une seule règle de construction permet de résoudre une foule de problèmes qu'on n'avait pas en vue en la posant. Kant prend l'exemple du {yellow}**cercle**{/yellow} : construire un triangle à partir d'une base et de l'angle opposé admet une infinité de solutions, que le cercle {teal}« contient pourtant toutes ensemble »{/teal} ; deux cordes qui se coupent dans un cercle se divisent d'elles-mêmes en segments dont les rectangles sont égaux. Cette convenance d'une figure à des usages innombrables est **objective**, puisqu'elle se connaît par la raison et tient à la figure, et non au plaisir de celui qui la regarde.
 
-    **Mais elle est formelle : la figure n'est pas faite pour ces usages.** La fin, ici, ne rend pas possible le concept de l'objet : le cercle n'existe pas *pour* résoudre le problème du triangle, c'est au contraire la solution qui découle de la constitution du cercle. Il en va autrement d'un {yellow}**jardin**{/yellow} : l'ordre de ses allées et de ses parterres ne se déduit d'aucune règle a priori, il porte sur des choses existantes, données empiriquement ; il suppose donc le **concept d'une fin**, le plan du jardinier. D'où la distinction : finalité {violet}formelle{/violet} (sans fin à son fondement) et finalité {violet}réelle{/violet} ou matérielle (qui dépend du concept d'une fin).
+    **Mais elle est formelle : la figure n'est pas faite pour ces usages.** La fin, ici, ne rend pas possible le concept de l'objet : le cercle n'existe pas *pour* résoudre le problème du triangle, c'est au contraire la solution qui découle de la constitution du cercle. Il en va autrement d'un {yellow}**jardin**{/yellow} : l'ordre de ses allées et de ses parterres ne se déduit d'aucune règle *a priori*, il porte sur des choses existantes, données empiriquement ; il suppose donc le **concept d'une fin**, le plan du jardinier. D'où la distinction : finalité {violet}formelle{/violet} (sans fin à son fondement) et finalité {violet}réelle{/violet} ou matérielle (qui dépend du concept d'une fin).
 
-    **La raison : c'est moi qui mets la finalité dans la figure.** L'espace n'est pas une propriété des choses hors de moi, mais {teal}« un simple mode de représentation en moi »{/teal}. En traçant une figure d'après un concept, je détermine moi-même l'espace : {coral}« c'est moi qui introduis la finalité dans la figure que je trace en conformité avec un concept »{/coral}. Je n'ai donc besoin d'aucune fin inscrite dans l'objet pour en rendre compte. Le présupposé est l'idéalité transcendantale de l'espace, établie dans la *Critique de la raison pure* ; sans elle, la fécondité a priori de la géométrie deviendrait un mystère.
+    **La raison : c'est moi qui mets la finalité dans la figure.** L'espace n'est pas une propriété des choses hors de moi, mais {teal}« un simple mode de représentation en moi »{/teal}. En traçant une figure d'après un concept, je détermine moi-même l'espace : {coral}« c'est moi qui introduis la finalité dans la figure que je trace en conformité avec un concept »{/coral}. Je n'ai donc besoin d'aucune fin inscrite dans l'objet pour en rendre compte. Le présupposé est l'idéalité transcendantale de l'espace, établie dans la *Critique de la raison pure* ; sans elle, la fécondité *a priori* de la géométrie deviendrait un mystère.
 
     **L'admiration des géomètres est naturelle, mais Platon s'est mépris sur sa source.** Les géomètres anciens étudiaient la parabole et l'ellipse sans en connaître l'usage, que révéleraient la chute des corps et le mouvement des astres. Cet accord inattendu suscite l'{violet}**admiration**{/violet}, {teal}« un étonnement qui resurgit toujours »{/teal} même une fois le doute dissipé. {sky}Platon{/sky} y a vu le signe d'une {red}communauté intellectuelle avec l'origine de tous les êtres{/red} ; c'est une {red}« admiration suscitée par un malentendu »{/red}, {teal}« pardonnable »{/teal}, car elle prend pour une harmonie des choses ce qui tient à notre propre manière de construire l'espace. Elle reste légitime en un sens : l'accord de l'espace avec l'entendement est inexplicable pour nous, et nous fait pressentir un fondement au-delà du sensible.
 
     **On ne doit donc pas parler de la beauté des figures.** Le jugement qui y trouve de la finalité n'est pas esthétique, sans concept, mais intellectuel, par concepts : il faudrait parler d'une {coral}« perfection relative »{/coral} plutôt que d'une beauté. Seule une **démonstration** peut être dite belle, parce qu'en elle l'entendement et l'imagination se sentent renforcés : c'est l'{violet}« élégance de la démonstration »{/violet}.
 
-    ! La finalité des figures n'est pas une fin naturelle : en mathématique pure, il n'est question que de la possibilité des choses, non de leur existence, donc ni de cause ni d'effet (§ 63, note).
+    ! La finalité des figures n'est pas une fin naturelle : en mathématique pure, il n'est question que de la possibilité des choses, non de leur existence, donc ni de cause ni d'effet (§63, note).
   points:
   - id: kant-cfj-analytique-l4-q1
     sentence: "« Toutes les figures géométriques qui sont tracées selon un principe manifestent une finalité **___** variée, souvent admirée : elle consiste dans la capacité à résoudre de multiples problèmes d'après __un principe unique__ »"
@@ -243,7 +243,7 @@ lessons:
     answer: "cercle"
     alt: []
   - id: kant-cfj-analytique-l4-q11
-    sentence: "À la différence d'une figure, un ___, avec ses allées et ses parterres ordonnés, présente une finalité réelle : cet ordre ne se déduit d'aucune règle a priori et suppose le concept d'une fin."
+    sentence: "À la différence d'une figure, un ___, avec ses allées et ses parterres ordonnés, présente une finalité réelle : cet ordre ne se déduit d'aucune règle *a priori* et suppose le concept d'une fin."
     answer: "jardin"
     alt: []
   - id: kant-cfj-analytique-l4-q12
@@ -275,9 +275,9 @@ lessons:
     answer: "formelle"
     alt: []
 - id: kant-cfj-analytique-l5
-  title: "La finalité relative : l'utilité n'est pas une fin de la nature (§ 63)"
+  title: "La finalité relative : l'utilité n'est pas une fin de la nature (§63)"
   notes: |-
-    Le § 63 isole la seule finalité qui puisse fonder une téléologie de la nature en écartant la plus répandue : l'utilité. Il distingue {green}**finalité interne**{/green}, propre à un être naturel, et {red}**finalité relative**{/red} ou externe, la convenance d'une chose pour une autre, et montre que {coral}__cette dernière n'autorise aucun jugement téléologique absolu__{/coral}.
+    Le §63 isole la seule finalité qui puisse fonder une téléologie de la nature en écartant la plus répandue : l'utilité. Il distingue {green}**finalité interne**{/green}, propre à un être naturel, et {red}**finalité relative**{/red} ou externe, la convenance d'une chose pour une autre, et montre que {coral}__cette dernière n'autorise aucun jugement téléologique absolu__{/coral}.
 
     **Deux manières de juger un effet comme fin.** L'expérience nous conduit au concept d'une fin de la nature quand nous ne pouvons comprendre un rapport de cause à effet qu'en plaçant {teal}« au fondement de la causalité de la cause l'Idée de son effet »{/teal}. Cela peut se faire de deux façons : ou bien l'effet est considéré lui-même comme **produit de l'art** de la nature, et c'est une finalité **interne** ; ou bien il n'est considéré que comme **matériau** pour l'art d'autres êtres, et c'est une finalité **relative**, qui s'appelle {violet}**utilité**{/violet} pour l'homme et {violet}**convenance**{/violet} pour toute autre créature.
 
@@ -294,7 +294,7 @@ lessons:
     **Le Groenlandais et le Lapon ne sont pas des fins de la nature.** La neige protège les semailles et porte les traîneaux, les rennes se nourrissent de mousse et se laissent apprivoiser, la mer apporte du bois et des animaux remplis d'huile : {yellow}« une admirable conjonction »{/yellow} de rapports finaux, dont la fin serait le Groenlandais, le Lapon, le Samoyède. Mais on ne voit pas pourquoi des hommes devraient vivre là. Dire que la nature a disposé tout cela pour {red}« certaines misérables créatures »{/red} serait {red}« un jugement très audacieux et arbitraire »{/red} : l'{coral}« extrême insociabilité des hommes »{/coral} suffit à expliquer qu'ils se soient dispersés jusque dans ces contrées.
 
     ! Kant ne nie pas que le sable convienne aux pins : il refuse d'ériger cette convenance en cause de l'existence du sable.
-    ! La critique de la finalité externe n'en supprime pas tout usage : les § 82-84 penseront encore l'homme comme fin dernière de la nature, à titre de jugement réfléchissant.
+    ! La critique de la finalité externe n'en supprime pas tout usage : les §82-84 penseront encore l'homme comme fin dernière de la nature, à titre de jugement réfléchissant.
   tables:
   - table: finalite-ce-qu-est-la-chose-exemple
     exercises:
@@ -383,22 +383,22 @@ lessons:
     answer: "hypothétique"
     alt: []
   - id: kant-cfj-analytique-l5-q21
-    sentence: "Dans sa note, Alain Renaut rappelle que la philosophie kantienne de l'___ (§ 83-84) suppose encore un usage du principe de finalité externe, malgré sa critique au § 63."
+    sentence: "Dans sa note, Alain Renaut rappelle que la philosophie kantienne de l'___ (§83-84) suppose encore un usage du principe de finalité externe, malgré sa critique au §63."
     answer: "histoire"
     alt: []
 - id: kant-cfj-analytique-l6
-  title: "Repérage : l'être organisé, fin naturelle (§ 64-65)"
+  title: "Repérage : l'être organisé, fin naturelle (§64-65)"
   notes: |-
-    Le § 64 dit ce qu'il faut pour qu'une chose soit pensée comme une fin, puis comme une **fin naturelle** ; le § 65 l'analyse, l'identifie à l'{green}**être organisé**{/green} et en fixe le statut.
+    Le §64 dit ce qu'il faut pour qu'une chose soit pensée comme une fin, puis comme une **fin naturelle** ; le §65 l'analyse, l'identifie à l'{green}**être organisé**{/green} et en fixe le statut.
 
     | Moment | Lieu | Ce qui s'y joue |
-    | la forme contingente pour la raison | § 64 | une chose n'est pensable que comme fin si les lois de la nature ne rendent pas sa forme nécessaire |
-    | l'hexagone dans le sable | § 64 | une fin, mais un produit de l'art |
-    | l'arbre, cause et effet de soi | § 64 | comme espèce, comme individu, dans ses parties |
-    | deux causalités | § 65 | causes réelles et causes idéales |
-    | les parties se produisent réciproquement | § 65 | un être organisé et s'organisant lui-même |
-    | la montre | § 65 | une force motrice, non une force formatrice |
-    | un concept régulateur | § 65 | aucune analogie connue ; un principe pour la réflexion |
+    | la forme contingente pour la raison | §64 | une chose n'est pensable que comme fin si les lois de la nature ne rendent pas sa forme nécessaire |
+    | l'hexagone dans le sable | §64 | une fin, mais un produit de l'art |
+    | l'arbre, cause et effet de soi | §64 | comme espèce, comme individu, dans ses parties |
+    | deux causalités | §65 | causes réelles et causes idéales |
+    | les parties se produisent réciproquement | §65 | un être organisé et s'organisant lui-même |
+    | la montre | §65 | une force motrice, non une force formatrice |
+    | un concept régulateur | §65 | aucune analogie connue ; un principe pour la réflexion |
   tables:
   - table: moment-lieu-ce-qui-s-y-joue
     exercises:
@@ -409,21 +409,21 @@ lessons:
   - id: kant-cfj-analytique-l6-q1
     sentence: "Dans la *Critique de la faculté de juger*, l'exemple de l'arbre qui se produit lui-même comme espèce, comme individu et dans ses parties se trouve au § ___."
     answer: "64"
-    alt: ["§ 64"]
+    alt: ["§64"]
   - id: kant-cfj-analytique-l6-q2
     sentence: "Dans la *Critique de la faculté de juger*, la comparaison de l'être organisé avec une **montre**, dont aucun rouage ne produit l'autre, se trouve au § ___."
     answer: "65"
-    alt: ["§ 65"]
+    alt: ["§65"]
   - id: kant-cfj-analytique-l6-q3
     sentence: "Dans la *Critique de la faculté de juger*, l'hexagone dessiné dans le sable d'un pays qui semble inhabité illustre, au § ___, une fin qui n'est pas une fin naturelle."
     answer: "64"
-    alt: ["§ 64"]
+    alt: ["§64"]
 - id: kant-cfj-analytique-l7
-  title: "Ce qui est cause et effet de soi-même : l'arbre (§ 64)"
+  title: "Ce qui est cause et effet de soi-même : l'arbre (§64)"
   notes: |-
-    Le § 64 dit à quelle condition une chose ne peut être pensée que comme une fin, puis ce qu'il faut de plus pour qu'elle soit une {violet}**fin naturelle**{/violet} et non un produit de l'art. Sa formule provisoire, {green}__une chose est fin naturelle « quand elle est cause et effet d'elle-même »__{/green}, est éclairée par l'exemple de l'arbre avant d'être analysée au § 65.
+    Le §64 dit à quelle condition une chose ne peut être pensée que comme une fin, puis ce qu'il faut de plus pour qu'elle soit une {violet}**fin naturelle**{/violet} et non un produit de l'art. Sa formule provisoire, {green}__une chose est fin naturelle « quand elle est cause et effet d'elle-même »__{/green}, est éclairée par l'exemple de l'arbre avant d'être analysée au §65.
 
-    **Une chose n'est pensable que comme fin quand sa forme est contingente pour la raison.** Il faut que {teal}« sa forme ne soit pas possible d'après de simples lois de la nature »{/teal}, celles que l'entendement connaît. Or la raison veut connaître la **nécessité** de toute forme pour comprendre sa production ; quand les lois mécaniques ne la lui donnent pas, la seule nécessité qui lui reste est celle d'une forme produite d'après un concept. Elle admet donc la causalité qui produit la chose {teal}« comme si elle était possible uniquement par la raison »{/teal}, c'est-à-dire par une volonté. Le mécaniste ne peut refuser la prémisse : les lois du mouvement règlent chocs et attractions, elles ne disent pas pourquoi des parties s'assemblent en un organe adapté.
+    **Une chose n'est pensable que comme fin quand sa forme est contingente pour la raison.** Il faut que {teal}« sa forme ne soit pas possible d'après de simples lois de la nature »{/teal}, celles que l'entendement connaît. Or la raison veut connaître la **nécessité** de toute forme pour comprendre sa production ; quand les lois mécaniques ne la lui donnent pas, la seule nécessité qui lui reste est celle d'une forme produite d'après un concept. Elle admet donc la causalité qui produit la chose {teal}« comme si elle était possible uniquement par la raison »{/teal}, c'est-à-dire par une volonté. Même celui qui veut tout expliquer par le mécanisme doit accorder que ses lois ne suffisent pas ici : les lois du mouvement règlent chocs et attractions, elles ne disent pas pourquoi des parties s'assemblent en un organe adapté.
 
     **Cela ne suffit pas à faire une fin naturelle : l'hexagone dans le sable.** Celui qui, {yellow}dans un pays qui lui semble inhabité, voit un hexagone régulier dessiné dans le sable{/yellow} conclut aussitôt que ni le sable, ni la mer, ni le vent, ni les bêtes n'ont pu le produire : la coïncidence avec un concept que seule la raison fournit serait un hasard infiniment improbable. Il y voit une fin, mais {red}« un produit de l'art »{/red} : {teal}« *vestigium hominis video* »{/teal}, je vois une trace d'homme. La cause est **hors** de la chose. Pour une fin **naturelle**, il faut donc davantage : que la chose soit elle-même la source de sa forme.
 
@@ -520,13 +520,13 @@ lessons:
     answer: "Leibniz"
     alt: []
 - id: kant-cfj-analytique-l8
-  title: "L'être organisé, une fin naturelle (§ 65)"
+  title: "L'être organisé, une fin naturelle (§65)"
   notes: |-
-    Le § 65 déduit la formule provisoire du § 64 ({teal}« manière quelque peu impropre et imprécise de s'exprimer »{/teal}) à partir d'un concept déterminé. Il établit que {green}__les fins naturelles sont les êtres organisés__{/green}, dont {coral}les parties se produisent les unes les autres{/coral}, puis montre qu'{red}aucune analogie connue{/red} ne rend cette organisation compréhensible, et fixe enfin son statut : un concept **régulateur**.
+    Le §65 déduit la formule provisoire du §64 ({teal}« manière quelque peu impropre et imprécise de s'exprimer »{/teal}) à partir d'un concept déterminé. Il établit que {green}__les fins naturelles sont les êtres organisés__{/green}, dont {coral}les parties se produisent les unes les autres{/coral}, puis montre qu'{red}aucune analogie connue{/red} ne rend cette organisation compréhensible, et fixe enfin son statut : un concept **régulateur**.
 
     **Il n'y a que deux causalités pensables.** L'entendement pense une série de causes et d'effets {teal}« toujours descendante »{/teal}, où l'effet ne peut être cause de sa cause : c'est le {violet}*nexus effectivus*{/violet}, la connexion des causes **réelles**. La raison peut penser une connexion {coral}« aussi bien descendante qu'ascendante »{/coral} : la {yellow}maison{/yellow} est cause des loyers qu'elle rapporte, mais la représentation de ces revenus fut la cause de sa construction. C'est le {violet}*nexus finalis*{/violet}, celui des causes **idéales** : l'effet n'agit pas en remontant le temps, c'est sa **représentation** qui agit d'avance.
 
-    **Première condition, commune à toute fin : les parties n'existent que par leur relation au tout.** La chose est une fin, donc comprise sous une Idée qui détermine a priori ce qu'elle doit contenir. Mais si l'on s'en tient là, c'est {red}simplement une œuvre d'art{/red}, le produit d'une cause raisonnable **distincte** de sa matière.
+    **Première condition, commune à toute fin : les parties n'existent que par leur relation au tout.** La chose est une fin, donc comprise sous une Idée qui détermine *a priori* ce qu'elle doit contenir. Mais si l'on s'en tient là, c'est {red}simplement une œuvre d'art{/red}, le produit d'une cause raisonnable **distincte** de sa matière.
 
     **Seconde condition, propre à la fin naturelle : les parties sont réciproquement cause et effet de leur forme.** Sans cause extérieure, il faut que les parties se relient en un tout parce qu'elles se produisent mutuellement. Alors l'Idée du tout détermine en retour la forme des parties, {teal}« non pas en tant que cause - car ce serait alors un produit de l'art -, mais en tant que fondement de la connaissance »{/teal}, pour celui qui juge. Le tout n'est pas une force cachée dans la matière : c'est ce qui nous permet de **comprendre** l'unité de ce que les parties font entre elles.
 
@@ -656,7 +656,7 @@ lessons:
     answer: "réalité objective"
     alt: []
   - id: kant-cfj-analytique-l8-q29
-    sentence: "Dans une note du § 65, Kant juge appropriée l'application du mot « ___ » à la transformation récente d'un grand peuple en un État, car chaque membre doit y être à la fois moyen et fin."
+    sentence: "Dans une note du §65, Kant juge appropriée l'application du mot « ___ » à la transformation récente d'un grand peuple en un État, car chaque membre doit y être à la fois moyen et fin."
     answer: "organisation"
     alt: []
   - id: kant-cfj-analytique-l8-q30
@@ -668,14 +668,14 @@ lessons:
     answer: "formatrice"
     alt: []
 - id: kant-cfj-analytique-l9
-  title: "Repérage : de la maxime au système des fins (§ 66-68)"
+  title: "Repérage : de la maxime au système des fins (§66-68)"
   notes: |-
-    Une fois la fin naturelle définie, Kant en tire le principe qui permet de la juger (§ 66), l'étend à la nature entière (§ 67), puis fixe la place de la téléologie dans la science de la nature (§ 68).
+    Une fois la fin naturelle définie, Kant en tire le principe qui permet de la juger (§66), l'étend à la nature entière (§67), puis fixe la place de la téléologie dans la science de la nature (§68).
 
     | Paragraphe | Lieu | Ce qui s'y joue |
-    | la maxime du jugement sur les organismes | § 66 | rien n'est en vain dans un être organisé |
-    | la nature comme système des fins | § 67 | la maxime s'étend à la nature entière, à titre régulateur |
-    | la téléologie dans la science de la nature | § 68 | « fin de la nature », non « fin divine » : pas de Dieu en physique |
+    | la maxime du jugement sur les organismes | §66 | rien n'est en vain dans un être organisé |
+    | la nature comme système des fins | §67 | la maxime s'étend à la nature entière, à titre régulateur |
+    | la téléologie dans la science de la nature | §68 | « fin de la nature », non « fin divine » : pas de Dieu en physique |
   tables:
   - table: paragraphe-lieu-ce-qui-s-y-joue
     exercises:
@@ -685,23 +685,23 @@ lessons:
   - id: kant-cfj-analytique-l9-q1
     sentence: "Dans la *Critique de la faculté de juger*, la maxime des anatomistes, « rien, dans une telle créature, n'est là pour rien », est formulée au § ___."
     answer: "66"
-    alt: ["§ 66"]
+    alt: ["§66"]
   - id: kant-cfj-analytique-l9-q2
     sentence: "Dans la *Critique de la faculté de juger*, l'exemple de la **vermine** qui inciterait à la propreté illustre, au § ___, l'extension de la maxime téléologique à la nature entière."
     answer: "67"
-    alt: ["§ 67"]
+    alt: ["§67"]
   - id: kant-cfj-analytique-l9-q3
     sentence: "Dans la *Critique de la faculté de juger*, la distinction entre principes domestiques et principes étrangers d'une science, qui exclut Dieu de la physique, se trouve au § ___."
     answer: "68"
-    alt: ["§ 68"]
+    alt: ["§68"]
 - id: kant-cfj-analytique-l10
-  title: "La maxime : rien n'est en vain dans un être organisé (§ 66)"
+  title: "La maxime : rien n'est en vain dans un être organisé (§66)"
   notes: |-
-    Le § 66 tire de la définition de l'être organisé le principe qui permet de le juger. {green}__« Un produit organisé de la nature est celui dans lequel tout est fin et réciproquement aussi moyen »__{/green} : ce principe est à la fois la définition de l'organisme et une {violet}**maxime**{/violet} de la faculté de juger, nécessaire à la recherche, mais régulatrice.
+    Le §66 tire de la définition de l'être organisé le principe qui permet de le juger. {green}__« Un produit organisé de la nature est celui dans lequel tout est fin et réciproquement aussi moyen »__{/green} : ce principe est à la fois la définition de l'organisme et une {violet}**maxime**{/violet} de la faculté de juger, nécessaire à la recherche, mais régulatrice.
 
     **La définition implique la maxime.** Si les parties d'un être organisé se produisent et se conservent mutuellement, une partie qui ne servirait à rien n'y aurait pas de place : elle romprait la réciprocité qui fait le tout. D'où : {teal}« Il n'y a rien en lui qui soit là pour rien, sans fin, ou qui se doive attribuer à un mécanisme aveugle de la nature. »{/teal}
 
-    **L'expérience suscite le principe, mais ne peut le fonder.** Il naît de l'**observation**, cette expérience méthodiquement conduite. Mais il affirme une finalité **universelle et nécessaire**, *rien* en vain ; or l'expérience ne fournit que des régularités constatées, jamais une nécessité ni une universalité stricte. Il doit donc avoir pour fondement {teal}« quelque principe a priori »{/teal}, fût-il seulement régulateur, et les fins ne résident que {coral}« dans l'Idée de celui qui juge »{/coral}, non dans une cause efficiente. L'empiriste ne peut contester que l'induction ne donne jamais l'universel.
+    **L'expérience suscite le principe, mais ne peut le fonder.** Il naît de l'**observation**, cette expérience méthodiquement conduite. Mais il affirme une finalité **universelle et nécessaire**, *rien* en vain ; or l'expérience ne fournit que des régularités constatées, jamais une nécessité ni une universalité stricte. Il doit donc avoir pour fondement {teal}« quelque principe *a priori* »{/teal}, fût-il seulement régulateur, et les fins ne résident que {coral}« dans l'Idée de celui qui juge »{/coral}, non dans une cause efficiente. L'empiriste ne peut contester que l'induction ne donne jamais l'universel.
 
     **Les anatomistes ne peuvent s'en passer, pas plus que les physiciens du principe de causalité.** {yellow}Ceux qui dissèquent les végétaux et les animaux{/yellow} pour savoir pourquoi telle partie leur a été donnée tiennent pour nécessaire cette maxime, et lui donnent {coral}la même valeur{/coral} qu'au principe de toute la science de la nature : {teal}« rien ne se produit par hasard »{/teal}. Abandonner celui-ci, ce serait n'avoir plus d'expérience du tout ; abandonner celle-là, ce serait n'avoir plus de {violet}**fil conducteur**{/violet} pour observer les êtres organisés. Qui renonce à chercher la fonction d'un organe inconnu le déclare un caprice du mécanisme et cesse de chercher.
 
@@ -729,11 +729,11 @@ lessons:
     answer: "mécanisme aveugle"
     alt: []
   - id: kant-cfj-analytique-l10-q5
-    sentence: "« mais, à cause de l'**___** et de la **nécessité** qu'il affirme d'une telle finalité, il ne peut reposer simplement sur des fondements empiriques, mais doit nécessairement avoir pour fondement __quelque principe a priori__ »"
+    sentence: "« mais, à cause de l'**___** et de la **nécessité** qu'il affirme d'une telle finalité, il ne peut reposer simplement sur des fondements empiriques, mais doit nécessairement avoir pour fondement __quelque principe *a priori*__ »"
     answer: "universalité"
     alt: []
   - id: kant-cfj-analytique-l10-q6
-    sentence: "« mais, à cause de l'**universalité** et de la **___** qu'il affirme d'une telle finalité, il ne peut reposer simplement sur des fondements empiriques, mais doit nécessairement avoir pour fondement __quelque principe a priori__ »"
+    sentence: "« mais, à cause de l'**universalité** et de la **___** qu'il affirme d'une telle finalité, il ne peut reposer simplement sur des fondements empiriques, mais doit nécessairement avoir pour fondement __quelque principe *a priori*__ »"
     answer: "nécessité"
     alt: []
   - id: kant-cfj-analytique-l10-q7
@@ -785,9 +785,9 @@ lessons:
     answer: "nécessaire"
     alt: []
 - id: kant-cfj-analytique-l11
-  title: "La nature entière comme système des fins (§ 67)"
+  title: "La nature entière comme système des fins (§67)"
   notes: |-
-    Le § 67 étend le principe téléologique de l'organisme à la **nature entière**. Il revient d'abord sur la finalité externe pour distinguer deux jugements que l'on confond, puis montre que {green}__la matière organisée conduit nécessairement à l'Idée de la nature comme système des fins__{/green}, à titre de maxime régulatrice.
+    Le §67 étend le principe téléologique de l'organisme à la **nature entière**. Il revient d'abord sur la finalité externe pour distinguer deux jugements que l'on confond, puis montre que {green}__la matière organisée conduit nécessairement à l'Idée de la nature comme système des fins__{/green}, à titre de maxime régulatrice.
 
     **L'utilité ne fait toujours pas une fin.** On ne peut tenir pour des fins de la nature les {yellow}fleuves{/yellow} parce qu'ils facilitent les échanges, ni les {yellow}montagnes{/yellow} parce qu'elles portent les sources, ni le bétail parce qu'il sert à l'homme. {coral}Entre des choses dont aucune n'est reconnue fin en elle-même, le rapport externe ne peut être jugé final qu'**hypothétiquement**.{/coral}
 
@@ -873,17 +873,17 @@ lessons:
     answer: "unité"
     alt: []
 - id: kant-cfj-analytique-l12
-  title: "La téléologie dans la science de la nature : pas de Dieu en physique (§ 68)"
+  title: "La téléologie dans la science de la nature : pas de Dieu en physique (§68)"
   notes: |-
-    Le § 68 fixe la place de la téléologie dans la science de la nature. {green}__Elle en est un principe interne, à condition de ne parler que de « fin de la nature », jamais de « fin divine »__{/green} : introduire Dieu en physique ruinerait à la fois la physique et la théologie.
+    Le §68 fixe la place de la téléologie dans la science de la nature. {green}__Elle en est un principe interne, à condition de ne parler que de « fin de la nature », jamais de « fin divine »__{/green} : introduire Dieu en physique ruinerait à la fois la physique et la théologie.
 
     **Une science doit tirer ses principes d'elle-même.** Ses principes sont ou bien {violet}**domestiques**{/violet} (*principia domestica*), intérieurs à elle, ou bien {violet}**étrangers**{/violet} (*principia peregrina*), empruntés à un autre domaine. Toute science est un système, un édifice qui doit tenir par lui-même ; une science qui emprunte son principe d'organisation à une autre en dépend et ne peut plus se justifier seule.
 
-    **Le cercle de la physico-théologie.** {red}Introduire Dieu dans la science de la nature pour expliquer la finalité, puis se servir de cette finalité pour prouver que Dieu existe{/red}, c'est commettre {red}« un diallèle trompeur »{/red}. La physique n'explique plus rien, puisqu'elle s'en remet à une intention qu'elle ne peut observer ; la théologie ne prouve plus rien, puisqu'elle suppose au départ ce qu'elle veut démontrer à la fin. Le partisan de cette démarche ne peut refuser la règle : deux propositions ne peuvent se servir mutuellement de seule preuve.
+    **Le cercle de la physico-théologie.** {red}Introduire Dieu dans la science de la nature pour expliquer la finalité, puis se servir de cette finalité pour prouver que Dieu existe{/red}, c'est commettre {red}« un diallèle trompeur »{/red}. La physique n'explique plus rien, puisqu'elle s'en remet à une intention qu'elle ne peut observer ; la théologie ne prouve plus rien, puisqu'elle suppose au départ ce qu'elle veut démontrer à la fin. Le physico-théologien lui-même doit accorder la règle qui le condamne : deux propositions ne peuvent se servir mutuellement de seule preuve.
 
     **D'où le choix des mots : « fin de la nature ».** Cette expression suffit à écarter la confusion ; il faut {teal}« nous borner scrupuleusement et modestement à l'expression qui dit uniquement juste ce que nous savons »{/teal}. Parler de {red}« fin divine »{/red} paraît plus pieux, mais prétend savoir l'auteur de la nature, alors que la science n'observe que des produits engendrés selon des lois.
 
-    **Ce qui se démontre a priori n'est pas de la téléologie.** Les propriétés géométriques et les lois mécaniques universelles unissent admirablement des règles indépendantes en un principe ; mais elles sont **nécessaires**, démontrables sans expérience : la téléologie ne s'y applique pas, elle ne vaut que pour une classe particulière d'objets, les êtres organisés, dont la forme est contingente au regard des lois générales.
+    **Ce qui se démontre *a priori* n'est pas de la téléologie.** Les propriétés géométriques et les lois mécaniques universelles unissent admirablement des règles indépendantes en un principe ; mais elles sont **nécessaires**, démontrables sans expérience : la téléologie ne s'y applique pas, elle ne vaut que pour une classe particulière d'objets, les êtres organisés, dont la forme est contingente au regard des lois générales.
 
     **On peut parler de la sagesse de la nature, sans en faire un être raisonnable.** La téléologie physique parle légitimement de la {yellow}« sagesse, de l'économie, de la prévoyance, de la bienfaisance »{/yellow} de la nature, {coral}sans pour autant faire d'elle un être raisonnable (parce que ce serait absurde){/coral}, et sans placer au-dessus d'elle un maître d'œuvre, ce qui serait {red}*vermessen*{/red}, démesuré. Ces mots désignent seulement une causalité de la nature pensée **par analogie** avec notre usage technique de la raison, pour se donner la règle selon laquelle explorer certains produits.
 

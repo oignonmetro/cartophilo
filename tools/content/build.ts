@@ -498,8 +498,8 @@ function checkWork(unitId: string, work: Work, problems: string[]) {
     if (!ids.has(recap.at)) problems.push(`${where} : le rappel "${recap.label}" vise une partie inconnue "${recap.at}"`)
     if (anchors.has(recap.at)) problems.push(`${where} : deux rappels s'affichent avant la partie "${recap.at}"`)
     anchors.add(recap.at)
-    if ([...recap.notes.matchAll(/\*\*(.+?)\*\*/g)].some((bold) => bold[1]!.includes('*'))) {
-      warn(where, `rappel "${recap.label}" : italique à l'intérieur d'un gras, que l'analyseur ne sait pas imbriquer`)
+    if (plainInline(recap.notes).includes('*')) {
+      warn(where, `rappel "${recap.label}" : un astérisque reste affiché, gras ou italique mal fermé`)
     }
     if (hasUnquotedEmDash(recap.notes)) warn(where, `rappel "${recap.label}" contient un tiret cadratin (—) hors citation ; remplacez-le`)
   }
