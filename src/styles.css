@@ -92,9 +92,12 @@
    * Retouche suivante : à 62° et valeur ~0,55, le texte (`yellow-deep`) se lisait
    * en olive sombre, et à côté d'`amber` on ne reconnaissait plus un jaune.
    * Teinte 56° (jaune franc), `yellow-deep` éclairci pour le texte.
+   *
+   * Dernière retouche : `yellow` vire au vert clair (teinte ~85°, entre le
+   * jaune et `green` à 140°), lime franc sans aller au fluo, qui fatiguerait.
    */
-  --color-yellow: #ece100;
-  --color-yellow-deep: #b3a800;
+  --color-yellow: #a8e035;
+  --color-yellow-deep: #6fa80f;
   --color-green: #4caf6d;
   --color-green-deep: #2e8b57;
   --color-red: #e63946;
