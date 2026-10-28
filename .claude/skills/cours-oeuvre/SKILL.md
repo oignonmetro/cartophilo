@@ -192,7 +192,7 @@ les corriger.
    du fichier ; `group` commun aux unités d'une même œuvre, qui porte
    l'auteur et l'œuvre (« Kant : Critique de la faculté de juger
    téléologique ») ; `title` le seul titre de la section, sans répéter le
-   groupe (« Analytique de la faculté de juger téléologique (§61-68) ») ;
+   groupe, sous sa forme courte (« L'Analytique (§61-68) ») ;
    `subtitle` ce que la partie établit ; `icon: compass`, `color` celle de
    la piste. Les notions qui commandent toute l'œuvre sans appartenir à une
    section (pour Kant : jugement déterminant et réfléchissant, principe
