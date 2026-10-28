@@ -1,0 +1,349 @@
+# Cours d'une œuvre (skill cours-oeuvre, piste Œuvres de La vie, voir
+# content/philosophie.md) : Kant, Critique de la faculté de juger, introduction
+# au cours sur la Critique de la faculté de juger téléologique (Introduction,
+# Première Introduction, et les passages des §61-78 qui en fixent les notions).
+# Citations : traduction d'Alain Renaut, GF-Flammarion. Analyse recoupée avec le
+# notebook NotebookLM « Kant : la vie »
+# (https://notebook.google.com/notebook/1fb869d6-c4f2-431f-899f-1ced4594c671),
+# dont chaque citation a été vérifiée sur la traduction.
+# Les leçons gardent leurs identifiants d'origine (kant-cfj-analytique-l2b…),
+# écrites dans l'Analytique avant d'en être détachées : la progression est conservée.
+
+id: kant-cfj-introduction
+title: "Introduction à la Critique de la faculté de juger"
+subtitle: "Juger, déterminer, réfléchir : ce que vaut un jugement sur la nature"
+icon: compass
+color: sky
+group: "Kant : Critique de la faculté de juger téléologique"
+lessons:
+- id: kant-cfj-analytique-l2b
+  title: "Jugement déterminant et réfléchissant, principe constitutif et régulateur (Introduction, IV ; §67, §74)"
+  notes: |-
+    Dès son ouverture (§61), la *Critique de la faculté de juger téléologique* range le jugement téléologique du côté de la {violet}**faculté de juger réfléchissante**{/violet} et d'en faire un {violet}**principe régulateur**{/violet}, non {violet}constitutif{/violet}. Ces deux distinctions commandent toute la Critique de la faculté de juger téléologique : __l'Analytique__ s'y réfère pour dire **en quel sens un être organisé est une « fin naturelle »** (§65, §67), __la Dialectique__ s'en sert pour **dissoudre l'antinomie** (§70-71), et les §75-76 expliquent **pourquoi ce jugement ne vaut que** {green}__**pour nous**__{/green}. Il faut donc les comprendre avant d'aller plus loin.
+
+    {violet}**Juger**{/violet}**, c'est penser le particulier sous l'universel ; tout dépend de ce qui est donné.** La {violet}faculté de juger{/violet} en général est {teal}« le pouvoir de penser le particulier comme compris sous l'universel »{/teal} (Introduction, IV). Or ce rapport peut se parcourir dans deux sens.
+
+    - __Si l'universel (la règle, la loi, le concept) est déjà donné__, la faculté de juger n'a qu'à lui {violet}*subsumer*{/violet} le cas particulier : elle est {violet}__**déterminante**__{/violet}. Juger que la chute de ce corps a une cause, c'est appliquer à un phénomène une loi que l'entendement fournit d'avance.
+    - __Si seul le particulier est donné__, en revanche, {teal}« pour lequel l'universel doit être trouvé »{/teal}, la faculté de juger est {violet}__**réfléchissante**__{/violet} : le naturaliste devant un organisme qu'aucune loi connue n'explique doit chercher lui-même la règle qui permettra de l'étudier.
+
+    **Constitutif ou régulateur : ce que le principe fait de l'objet.** La distinction vient de la *Critique de la raison pure*, où les Idées de la raison n'ont qu'un usage « régulateur » (une règle qu'on applique à nous-mêmes) : la raison théorique ne contient par elle-même {teal}« aucun principe *constitutif*, mais des principes simplement *régulateurs* »{/teal} (§76).
+
+    - Un principe {violet}**constitutif**{/violet} dit ce qu'est l'objet, parce qu'il est une condition de sa possibilité même : sans la catégorie de causalité, il n'y aurait pas d'objet d'expérience du tout, seulement une suite de sensations.
+    - Un principe {violet}**régulateur**{/violet}, au contraire, ne dit rien de la constitution de l'objet ; il dit comment nous devons procéder pour l'étudier. Il sert de {yellow}« fil conducteur »{/yellow} (§67) pour {teal}« orienter la recherche »{/teal} (§65).
+
+    **Les deux distinctions se recouvrent sans se confondre.** La faculté de juger *déterminante* applique des principes *constitutifs*, que l'entendement lui prescrit ; la faculté de juger *réfléchissante* se donne des principes *régulateurs*. D'où la formule du §74 : **le concept de fin naturelle** {teal}« n'est pas constitutif pour la faculté de juger déterminante, mais il est __simplement régulateur pour la faculté de juger réfléchissante__ »{/teal}. Mais elles ne disent pas la même chose : {amber}déterminant et réfléchissant{/amber} qualifient le {amber}__mouvement du jugement__{/amber} (de l'universel donné au particulier, ou du particulier donné à l'universel cherché) ; {coral}constitutif et régulateur{/coral} qualifient le {coral}__statut d'un principe__{/coral} (déterminer l'objet, ou guider notre recherche).
+
+    | Ce qui les distingue | Faculté de juger déterminante | Faculté de juger réfléchissante |
+    | ce qui est donné | l'universel (règle, loi, concept) | seulement le particulier |
+    | ce qu'elle fait | subsumer le particulier sous l'universel | chercher l'universel qui convient au particulier |
+    | d'où vient son principe | de l'entendement, qui le lui prescrit | d'elle-même, qui se le donne |
+    | statut du principe | constitutif | régulateur |
+    | à qui il prescrit sa loi | à la nature | à elle-même (héautonomie) |
+    | validité | objective | subjective, mais universelle pour tout entendement humain |
+
+    Reste à savoir pourquoi l'un est objectif et l'autre subjectif.
+  tables:
+  - table: ce-qui-les-distingue-faculte-de-juger-determinante-faculte-d
+    exercises:
+    - {kind: bank, column: Faculté de juger réfléchissante}
+    - {kind: cell, column: Faculté de juger déterminante}
+    - {kind: cell, column: Faculté de juger réfléchissante}
+  points:
+  - id: kant-cfj-analytique-l2b-q1
+    sentence: "« La faculté de juger en général est le pouvoir de penser le **___** comme compris sous l'**universel**. Si l'universel (la règle, le principe, la loi) est donné, la faculté de juger qui __subsume__ sous lui le particulier est **déterminante** [...]. Mais si seul le particulier est donné, pour lequel l'universel doit être __trouvé__, la faculté de juger est simplement **réfléchissante**. » (Introduction, IV)"
+    answer: "particulier"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q2
+    sentence: "« La faculté de juger en général est le pouvoir de penser le **particulier** comme compris sous l'**universel**. Si l'universel (la règle, le principe, la loi) est donné, la faculté de juger qui ___ sous lui le particulier est **déterminante** [...]. Mais si seul le particulier est donné, pour lequel l'universel doit être __trouvé__, la faculté de juger est simplement **réfléchissante**. » (Introduction, IV)"
+    answer: "subsume"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q3
+    sentence: "« La faculté de juger en général est le pouvoir de penser le **particulier** comme compris sous l'**universel**. Si l'universel (la règle, le principe, la loi) est donné, la faculté de juger qui __subsume__ sous lui le particulier est **___** [...]. Mais si seul le particulier est donné, pour lequel l'universel doit être __trouvé__, la faculté de juger est simplement **réfléchissante**. » (Introduction, IV)"
+    answer: "déterminante"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q4
+    sentence: "« La faculté de juger en général est le pouvoir de penser le **particulier** comme compris sous l'**universel**. Si l'universel (la règle, le principe, la loi) est donné, la faculté de juger qui __subsume__ sous lui le particulier est **déterminante** [...]. Mais si seul le particulier est donné, pour lequel l'universel doit être ___, la faculté de juger est simplement **réfléchissante**. » (Introduction, IV)"
+    answer: "trouvé"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q5
+    sentence: "« La faculté de juger en général est le pouvoir de penser le **particulier** comme compris sous l'**universel**. Si l'universel (la règle, le principe, la loi) est donné, la faculté de juger qui __subsume__ sous lui le particulier est **déterminante** [...]. Mais si seul le particulier est donné, pour lequel l'universel doit être __trouvé__, la faculté de juger est simplement **___**. » (Introduction, IV)"
+    answer: "réfléchissante"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q6
+    sentence: "Juger que la chute de ce corps a une cause est un jugement ___ : la loi est fournie d'avance par l'entendement, et le cas particulier n'a qu'à lui être subsumé."
+    answer: "déterminant"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q7
+    sentence: "Un principe constitutif dit ce qu'est l'objet, parce qu'il est une condition de sa possibilité même ; un principe ___ ne dit rien de sa constitution, mais seulement comment nous devons procéder pour l'étudier."
+    answer: "régulateur"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q8
+    sentence: "Déterminant et réfléchissant qualifient le mouvement du jugement (ce qui est donné, ce qui est cherché) ; constitutif et régulateur qualifient le ___ d'un principe (déterminer l'objet, ou guider la recherche)."
+    answer: "statut"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q9
+    sentence: "Selon le §76, la raison, en tant que raison théorique, ne contient par elle-même « aucun principe ___, mais des principes simplement régulateurs »."
+    answer: "constitutif"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q10
+    sentence: "« le concept d'une fin naturelle n'est aucunement démontrable quant à sa **___** par la raison (autrement dit : il n'est pas **constitutif** pour la faculté de juger **déterminante**, mais il est simplement **régulateur** pour la faculté de juger **réfléchissante**) » (§74)"
+    answer: "réalité objective"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q11
+    sentence: "« le concept d'une fin naturelle n'est aucunement démontrable quant à sa **réalité objective** par la raison (autrement dit : il n'est pas **___** pour la faculté de juger **déterminante**, mais il est simplement **régulateur** pour la faculté de juger **réfléchissante**) » (§74)"
+    answer: "constitutif"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q12
+    sentence: "« le concept d'une fin naturelle n'est aucunement démontrable quant à sa **réalité objective** par la raison (autrement dit : il n'est pas **constitutif** pour la faculté de juger **déterminante**, mais il est simplement **___** pour la faculté de juger **réfléchissante**) » (§74)"
+    answer: "régulateur"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q13
+    sentence: "« Il est évident que ce n'est pas là un principe pour la faculté de juger déterminante, mais seulement pour la faculté de juger réfléchissante, qu'il est **régulateur** et non pas **constitutif**, et que nous obtenons par là, uniquement, un **___** pour considérer les choses de la nature [...] selon un nouvel ordre de légalité » (§67)"
+    answer: "fil conducteur"
+    alt: []
+- id: kant-cfj-analytique-l2c
+  title: "Objectif ou subjectif : le jugement déterminant et le jugement réfléchissant (Introduction, II-V ; §70, §75-76)"
+  notes: |-
+    La leçon précédente a distingué deux usages de la faculté de juger. Il faut maintenant comprendre __pourquoi le__ {violet}__jugement déterminant__{/violet} __est__ {violet}__*objectif*__{/violet} __et le jugement__ {violet}__réfléchissant seulement *subjectif*__{/violet}, et en quel sens précis : c'est ce qui permettra au §75 de dire que la finalité ne vaut que « pour nous », sans en faire pour autant une fantaisie.
+
+    **Pourquoi le jugement déterminant est objectif.** D'abord parce que __l'universel qu'il applique est un concept d'objet__, donné par l'{coral}entendement{/coral} : ce n'est pas la manière dont je suis affecté qui décide, c'est __une règle qui vaut pour tout ce qui tombe sous elle__. Ensuite parce que, chez Kant, {green}l'objectivité ne désigne pas l'accès à la chose en soi{/green}, mais __l'unification nécessaire des représentations sous des lois *a priori*__ : les catégories sont les conditions sans lesquelles aucun objet d'expérience ne serait possible, si bien que juger d'après elles, c'est **constituer** l'objet d'expérience. Enfin, et par conséquent, ce jugement vaut {coral}universellement et nécessairement{/coral} : le principe *tout changement a une cause* ne s'impose pas seulement à celui qui l'énonce, mais à tout être qui connaît par un entendement comme le nôtre.
+
+    **Objectif ne veut pas dire vrai, mais valant de l'objet.** Un jugement déterminant peut être faux : on peut subsumer la baleine sous le concept de poisson. Il n'en reste pas moins objectif par sa **prétention** : il affirme quelque chose de l'objet lui-même, ce que l'expérience peut confirmer ou réfuter. C'est en ce sens qu'il est {coral}__nécessairement__ objectif{/coral} : __déterminer, c'est appliquer un concept d'objet, si bien qu'un jugement déterminant qui ne porterait pas sur l'objet ne serait plus déterminant du tout__. L'objectivité n'est pas une qualité qui s'ajouterait à lui ; elle est comprise dans sa définition.
+
+    **Cette objectivité, il ne la tient pas de lui-même, mais de l'entendement.** La faculté de juger déterminante __n'a pas de principe propre__ : {teal}« la faculté de juger déterminante sous des lois transcendantales universelles, que donne l'entendement, se borne à subsumer ; la loi lui est prescrite *a priori* »{/teal} (Introduction, IV). Elle est l'exécutante d'une législation qui vient d'ailleurs, __comme le juge qui applique un code qu'il n'a pas écrit__. Son rapport à l'{coral}entendement{/coral} est donc bien **l'origine de son objectivité** : l'universel qu'elle applique est une catégorie, ou une loi qui en dérive, et les catégories sont les conditions sans lesquelles aucun objet d'expérience ne serait possible. Même quand elle applique un concept empirique (« ceci est un métal »), ce concept ne vaut de l'objet que parce qu'il est tiré de l'expérience et pensé sous les catégories.
+
+    **La raison, en revanche, ne peut lui donner aucun principe objectif pour connaître la nature.** Kant partage les législations : {teal}« La législation par des concepts de la nature s'opère par l'entendement et elle est théorique. La législation par le concept de liberté s'opère par la raison et elle est simplement pratique. »{/teal} (Introduction, II). Dans la connaissance de la nature, la raison ne fait que tirer des conséquences de lois que l'entendement lui fournit ; ses Idées propres (l'âme, le monde comme totalité, Dieu) dépassent toute expérience possible, et __aucune intuition ne leur correspond__. C'est pourquoi elle ne contient {teal}« aucun principe constitutif, mais des principes simplement régulateurs »{/teal} (§76). Si l'on voulait qu'elle prescrive malgré tout sa loi à la faculté de juger déterminante, on obtiendrait, dit le §70, {red}« un principe objectif que la raison prescrirait et auquel la faculté de juger devrait se soumettre quand elle procède à une détermination, mais en se perdant hors du monde sensible, dans le transcendant »{/red} : c'est l'usage **dogmatique** du concept de fin, celui que la Dialectique dénonce (§74).
+
+    **Un jugement déterminant ne pourrait pas être subjectif sans se contredire.** Déterminer, c'est attribuer à l'objet un prédicat. Or {red}un jugement dont le fondement serait seulement un état du sujet{/red} (un plaisir, une sensation, une disposition personnelle) dirait comment le sujet est affecté, non ce qu'est la chose : il ne déterminerait aucun objet. Dès qu'un jugement n'exprime plus que l'état du sujet, ou une manière d'ordonner sa réflexion sans concept donné, il cesse d'être déterminant.
+
+    **Une précision évite le contresens : l'objectivité elle-même vient du sujet.** Les catégories sont des formes *a priori* de *notre* entendement ; en ce sens, toute connaissance a une origine subjective. Il faut donc distinguer {sky}l'__origine__ d'un principe{/sky} et {sky}sa __portée__{/sky}. Les {coral}catégories{/coral} ont une {coral}origine subjective{/coral} mais une {coral}**portée objective**{/coral}, parce que les objets d'expérience ne sont possibles que par elles. Le principe de la faculté de juger réfléchissante a lui aussi une origine *a priori* (il est {teal}« transcendantal quant à son origine »{/teal}, *Première Introduction*, V), mais une **portée seulement subjective**.
+
+    **Pourquoi le jugement réfléchissant est subjectif : il ne prescrit sa loi qu'à lui-même.** La faculté de juger réfléchissante ne peut tirer son principe de l'entendement, {teal}« parce que, sinon, elle serait faculté de juger déterminante »{/teal}, ni le {teal}« prescrire à la nature »{/teal} (Introduction, IV). Elle {teal}« prescrit, non pas à la nature (comme autonomie), mais à elle-même (comme héautonomie) une loi pour la réflexion sur cette nature »{/teal} (Introduction, V). Juger l'oiseau comme une fin naturelle, ce n'est donc pas affirmer qu'une intention l'a produit ; c'est dire que __nous ne pouvons pas comprendre sa possibilité autrement__. Le principe de finalité est ainsi {teal}« une maxime »{/teal} de {coral}« portée subjective pour la seule faculté de juger réfléchissante »{/coral} (§75) : il {teal}« ne vaut donc pour nous que subjectivement, et non pas objectivement »{/teal} (§78).
+
+    **Il ne peut pas être objectif, par définition même.** Ce qui le définit, c'est que l'universel __n'est pas donné__ : il est à trouver. Or le principe qui guide cette recherche ne peut venir de l'entendement (sinon le jugement serait déterminant), ni être tiré de la nature, puisqu'il doit __précéder toute comparaison__ des choses entre elles : on ne peut pas observer que la nature est ordonnée pour nous avant d'avoir commencé à l'ordonner. Il ne peut donc être qu'une règle que notre esprit se donne pour conduire sa propre recherche.
+
+    **Restent deux objections.** La science ne tire-t-elle pas sans cesse du particulier des lois objectives ? Et un jugement seulement subjectif n'est-il pas arbitraire ? La leçon suivante y répond.
+
+    ! Le jugement déterminant n'est pas objectif parce qu'il atteindrait la chose en soi : il vaut pour les objets d'expérience, que nos formes *a priori* rendent possibles.
+    ! Le vocabulaire de l'autonomie varie : dans l'Introduction (V), l'autonomie est celle de l'entendement, qui légifère sur la nature, et l'héautonomie celle de la faculté de juger, qui ne légifère que pour elle-même ; au §71, Kant appelle « autonomie » celle de la faculté de juger réfléchissante et « hétéronomie » celle de la déterminante, qui doit suivre les lois fournies par l'entendement.
+  points:
+  - id: kant-cfj-analytique-l2b-q14
+    sentence: "Un jugement déterminant est objectif d'abord parce que l'universel qu'il applique est un concept d'objet, donné par l'___, et non la manière dont le sujet est affecté."
+    answer: "entendement"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q15
+    sentence: "Chez Kant, l'objectivité ne désigne pas l'accès à la chose en soi, mais la validité pour les objets d'___, que nos formes *a priori* rendent possibles."
+    answer: "expérience"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q5
+    sentence: "Un jugement déterminant peut être faux sans cesser d'être objectif : il prétend valoir de l'___, ce que l'expérience peut confirmer ou réfuter."
+    answer: "objet"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q6
+    sentence: "Le jugement déterminant est nécessairement objectif, car déterminer, c'est appliquer un concept d'___ : un jugement déterminant qui ne porterait pas sur l'objet ne serait plus déterminant."
+    answer: "objet"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q1
+    sentence: "« La faculté de juger déterminante sous des lois transcendantales universelles, que donne l'**___**, se borne à __subsumer__ ; la loi lui est **prescrite *a priori*** et il ne lui est donc pas nécessaire de penser pour elle-même à une loi pour pouvoir subordonner le particulier dans la nature à l'universel. » (Introduction, IV)"
+    answer: "entendement"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q2
+    sentence: "« La faculté de juger déterminante sous des lois transcendantales universelles, que donne l'**entendement**, se borne à ___ ; la loi lui est **prescrite *a priori*** et il ne lui est donc pas nécessaire de penser pour elle-même à une loi pour pouvoir subordonner le particulier dans la nature à l'universel. » (Introduction, IV)"
+    answer: "subsumer"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q3
+    sentence: "« La faculté de juger déterminante sous des lois transcendantales universelles, que donne l'**entendement**, se borne à __subsumer__ ; la loi lui est **___** et il ne lui est donc pas nécessaire de penser pour elle-même à une loi pour pouvoir subordonner le particulier dans la nature à l'universel. » (Introduction, IV)"
+    answer: "prescrite a priori"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q4
+    sentence: "La faculté de juger déterminante n'a pas de principe ___ : elle tient son objectivité de l'universel que l'entendement lui donne, comme un juge applique un code qu'il n'a pas écrit."
+    answer: "propre"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q7
+    sentence: "« La législation par des concepts de la nature s'opère par l'**___** et elle est **théorique**. La législation par le concept de liberté s'opère par la **raison** et elle est simplement **pratique**. » (Introduction, II)"
+    answer: "entendement"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q8
+    sentence: "« La législation par des concepts de la nature s'opère par l'**entendement** et elle est **théorique**. La législation par le concept de liberté s'opère par la **___** et elle est simplement **pratique**. » (Introduction, II)"
+    answer: "raison"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q9
+    sentence: "« La législation par des concepts de la nature s'opère par l'**entendement** et elle est **théorique**. La législation par le concept de liberté s'opère par la **raison** et elle est simplement **___**. » (Introduction, II)"
+    answer: "pratique"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q10
+    sentence: "La raison théorique ne peut fournir au jugement déterminant aucun principe objectif pour connaître la nature, car à ses Idées ne correspond aucune ___."
+    answer: "intuition"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q11
+    sentence: "Selon le §70, un principe de finalité que la raison prescrirait à la faculté de juger déterminante la ferait se perdre « hors du monde sensible, dans le ___ »."
+    answer: "transcendant"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q16
+    sentence: "Un jugement dont le fondement serait seulement un état du sujet (un plaisir, une sensation) dirait comment le sujet est affecté, non ce qu'est la chose : il ne ___ aucun objet, et cesserait donc d'être déterminant."
+    answer: "déterminerait"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q17
+    sentence: "Les catégories ont une origine subjective, puisqu'elles sont les formes *a priori* de notre entendement, mais une portée ___, parce que les objets d'expérience ne sont possibles que par elles."
+    answer: "objective"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q18
+    sentence: "Selon la *Première Introduction* (V), le principe de la faculté de juger réfléchissante est « ___ quant à son origine », bien que sa portée ne soit que subjective."
+    answer: "transcendantal"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q23
+    sentence: "La faculté de juger réfléchissante ne peut tirer son principe de l'entendement, « parce que, sinon, elle serait faculté de juger ___ » (Introduction, IV)."
+    answer: "déterminante"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q19
+    sentence: "« La faculté de juger a donc elle aussi en elle un principe *a priori* pour la possibilité de la nature, mais seulement d'un point de vue __subjectif__ : grâce à ce principe, elle prescrit, non pas à la **___** (comme **autonomie**), mais à **elle-même** (comme **héautonomie**) une loi pour la réflexion sur cette nature » (Introduction, V)"
+    answer: "nature"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q20
+    sentence: "« La faculté de juger a donc elle aussi en elle un principe *a priori* pour la possibilité de la nature, mais seulement d'un point de vue __subjectif__ : grâce à ce principe, elle prescrit, non pas à la **nature** (comme **autonomie**), mais à **___** (comme **héautonomie**) une loi pour la réflexion sur cette nature » (Introduction, V)"
+    answer: "elle-même"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q21
+    sentence: "« La faculté de juger a donc elle aussi en elle un principe *a priori* pour la possibilité de la nature, mais seulement d'un point de vue __subjectif__ : grâce à ce principe, elle prescrit, non pas à la **nature** (comme **autonomie**), mais à **elle-même** (comme **___**) une loi pour la réflexion sur cette nature » (Introduction, V)"
+    answer: "héautonomie"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q22
+    sentence: "« La faculté de juger a donc elle aussi en elle un principe *a priori* pour la possibilité de la nature, mais seulement d'un point de vue ___ : grâce à ce principe, elle prescrit, non pas à la **nature** (comme **autonomie**), mais à **elle-même** (comme **héautonomie**) une loi pour la réflexion sur cette nature » (Introduction, V)"
+    answer: "subjectif"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q24
+    sentence: "Juger l'oiseau comme une fin naturelle, ce n'est pas affirmer qu'une intention l'a produit, mais dire que nous ne pouvons pas comprendre sa ___ autrement."
+    answer: "possibilité"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q25
+    sentence: "« Le premier principe est donc un principe fondamental de portée **___** pour la faculté de juger déterminante, le second un principe fondamental de portée **subjective** pour la seule faculté de juger réfléchissante, par conséquent une **maxime** de celle-ci que la raison lui impose. » (§75)"
+    answer: "objective"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q26
+    sentence: "« Le premier principe est donc un principe fondamental de portée **objective** pour la faculté de juger déterminante, le second un principe fondamental de portée **___** pour la seule faculté de juger réfléchissante, par conséquent une **maxime** de celle-ci que la raison lui impose. » (§75)"
+    answer: "subjective"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q27
+    sentence: "« Le premier principe est donc un principe fondamental de portée **objective** pour la faculté de juger déterminante, le second un principe fondamental de portée **subjective** pour la seule faculté de juger réfléchissante, par conséquent une **___** de celle-ci que la raison lui impose. » (§75)"
+    answer: "maxime"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q28
+    sentence: "Le principe de finalité n'est qu'une maxime de la faculté de juger réfléchissante, « et qu'il ne vaut donc pour nous que ___, et non pas objectivement » (§78)."
+    answer: "subjectivement"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q12
+    sentence: "Le jugement réfléchissant ne peut pas être objectif, car le principe qui guide sa recherche doit précéder toute ___ des choses entre elles : on ne peut pas observer que la nature est ordonnée pour nous avant d'avoir commencé à l'ordonner."
+    answer: "comparaison"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q36
+    sentence: "Au §71, Kant appelle ___ le régime de la faculté de juger réfléchissante, qui ne vaut que subjectivement pour notre usage de la raison, et hétéronomie celui de la faculté de juger déterminante, qui suit les lois fournies par l'entendement."
+    answer: "autonomie"
+    alt: []
+- id: kant-cfj-analytique-l2d
+  title: "L'induction, le vivant et la portée du jugement réfléchissant (Introduction, IV-V ; §70-71, §74-77)"
+  notes: |-
+    La leçon précédente a montré que le jugement réfléchissant ne peut pas être objectif. Deux objections se présentent alors : {pink}la science ne passe-t-elle pas sans cesse du particulier à des lois objectives{/pink} ? Et {pink}un jugement seulement subjectif n'est-il pas arbitraire{/pink} ? Cette leçon y répond, puis montre ce que ce statut permet : {green}__dissoudre l'antinomie du mécanisme et de la finalité__{/green}.
+
+    **L'objection de l'induction.** Mais ne passe-t-on pas sans cesse, dans la vie courante comme en physique, du particulier à des lois générales sur les choses extérieures ? On voit des corps tomber et l'on en tire que tous les corps tombent ; Kepler, à partir des positions observées de Mars, a trouvé les lois du mouvement des planètes. Ces lois ne sont-elles pas objectives ? Kant répond en trois temps.
+    - **Oui, les lois trouvées sont objectives, mais ce n'est pas la réflexion qui les rend telles.** Une fois découverte et confirmée, une loi de Kepler est une détermination de la liaison causale que l'entendement prescrit à toute la nature ; l'appliquer à une planète nouvellement observée est alors un {violet}jugement déterminant{/violet}. La réflexion **trouve** l'universel ; ce qui le fait valoir de l'objet, c'est qu'il s'inscrit dans le cadre des catégories et se vérifie dans l'expérience.
+    - **Mais leur nécessité ne nous est pas donnée.** Les catégories disent que tout changement a une cause, non lesquelles. Les lois particulières {teal}« peuvent bien être contingentes du point de vue de notre entendement »{/teal}, et pourtant il faut, {teal}« si elles doivent être dites des lois »{/teal}, {teal}« qu'elles puissent être considérées comme nécessaires à partir d'un principe d'unité du divers, quand bien même ce principe serait inconnu de nous »{/teal} (Introduction, IV). L'induction seule ne donne qu'une généralité de fait, qu'une seule exception suffirait à défaire.
+    - **Ce qui reste subjectif, c'est le principe de la recherche, non la loi trouvée.** Pour chercher des lois, il faut présupposer que la nature se laisse ranger en genres et en espèces à notre portée, que {teal}« la nature spécifie ses lois universelles selon le principe de la finalité pour notre pouvoir de connaître »{/teal} (Introduction, V). Sans cette présupposition, la réflexion procéderait {red}« de manière aventureuse et aveugle »{/red} (*Première Introduction*, V). Or elle ne peut être prouvée par induction, puisque toute induction la présuppose : elle reste une **maxime** de la faculté de juger, une {pink}finalité formelle{/pink} que nous prêtons à la nature pour pouvoir la connaître.
+
+    **La finalité du vivant, elle, ne deviendra jamais une loi comme celle de Kepler.** Une loi de Kepler lie des phénomènes par la causalité {violet}efficiente{/violet}, que l'expérience peut montrer : une position, puis une autre. La fin naturelle exigerait une cause agissant par la représentation du tout, et __aucune intuition ne montre une telle cause__ : on n'observe jamais une intention (§61). Surtout, notre entendement est {violet}**discursif**{/violet} : il doit {teal}« aller du général analytique (des concepts) au particulier (l'intuition empirique donnée) »{/teal} (§77), donc comprendre un tout à partir de ses parties. Un tout qui détermine ses parties, comme l'organisme, il ne peut le penser que par la représentation d'une fin. La limite n'est donc pas provisoire, comme celle d'une science encore jeune : il est {red}« absurde »{/red} d'espérer {teal}« que puisse un jour surgir encore un Newton qui rende compréhensible ne serait-ce qu'un brin d'herbe d'après des lois naturelles que nulle intention n'a ordonnées »{/teal} (§75). Le jugement téléologique est réfléchissant **pour toujours**.
+
+    **Dans quelle mesure il est subjectif : ni privé, ni arbitraire.** {green}Subjectif, ici, ne veut pas dire « propre à chacun »{/green}, comme l'est le goût de l'agréable. Trois traits le distinguent d'une simple préférence :
+    - **il est universel** : l'entendement limite la validité de ces Idées {teal}« simplement au sujet, encore que toutefois d'une manière universelle pour tous les sujets de cette espèce »{/teal} (§76), parce qu'il tient à la structure de l'entendement humain (discursif, qui distingue le possible et l'effectif) et non à un sentiment personnel
+    - **il est nécessaire** : pour les êtres organisés, la maxime est {coral}« essentiellement nécessaire »{/coral}, car {teal}« même la pensée de ces produits comme choses organisées est impossible si ne s'y trouve pas rattachée celle d'une production intentionnelle »{/teal} (§75) ; il vaut même {teal}« avec autant de nécessité pour notre faculté humaine de juger que s'il était un principe objectif »{/teal} (§76)
+    - **il est fécond** : comme fil conducteur, il fait découvrir des lois que le mécanisme seul laisserait cachées (§67, §75), sans jamais contredire l'explication mécanique
+
+    Ce qui lui manque, c'est seulement la {red}réalité objective{/red} : il ne décide pas si la nature agit réellement d'après des fins ; on ne peut même pas, dit le §74, {teal}« poser la question »{/teal}.
+
+    **L'enjeu : c'est ce qui dissout l'antinomie.** Mécanisme et finalité, pris comme maximes régulatrices de la recherche, ne se contredisent pas : on peut chercher aussi loin que possible des causes mécaniques tout en se laissant guider par l'idée de fin. Ils ne se contredisent que si l'on transforme ces {teal}« principes fondamentaux, régulateurs pour la recherche, en principes constitutifs de la possibilité des objets eux-mêmes »{/teal} (§70). L'apparence d'antinomie vient donc de ce {red}que l'on confond un principe fondamental de la faculté de juger réfléchissante avec celui de la faculté de juger déterminante{/red} (§71).
+
+    ! Régulateur ne veut pas dire facultatif : pour les êtres organisés, la maxime de finalité est indispensable ; seule son extension à la nature entière est « utile, mais non point indispensable » (§75).
+    ! Ce qui est subjectif dans la réflexion n'est pas la loi empirique qu'elle trouve (celle de Kepler vaut de l'objet), mais le principe qui guide sa recherche, et, dans le cas du vivant, le concept de fin lui-même.
+  points:
+  - id: kant-cfj-analytique-l2c-q13
+    sentence: "Une loi empirique trouvée par la réflexion, comme celle de Kepler, s'applique ensuite à une planète nouvellement observée par un jugement ___."
+    answer: "déterminant"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q14
+    sentence: "« des lois qui, certes, comme lois empiriques, peuvent bien être **___** du point de vue de notre **entendement**, mais dont il faut cependant, si elles doivent être dites des lois [...], qu'elles puissent être considérées comme **nécessaires** à partir d'un principe d'**unité du divers**, quand bien même ce principe serait inconnu de nous » (Introduction, IV)"
+    answer: "contingentes"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q15
+    sentence: "« des lois qui, certes, comme lois empiriques, peuvent bien être **contingentes** du point de vue de notre **entendement**, mais dont il faut cependant, si elles doivent être dites des lois [...], qu'elles puissent être considérées comme **___** à partir d'un principe d'**unité du divers**, quand bien même ce principe serait inconnu de nous » (Introduction, IV)"
+    answer: "nécessaires"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q16
+    sentence: "« des lois qui, certes, comme lois empiriques, peuvent bien être **contingentes** du point de vue de notre **entendement**, mais dont il faut cependant, si elles doivent être dites des lois [...], qu'elles puissent être considérées comme **nécessaires** à partir d'un principe d'**___**, quand bien même ce principe serait inconnu de nous » (Introduction, IV)"
+    answer: "unité du divers"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q17
+    sentence: "« des lois qui, certes, comme lois empiriques, peuvent bien être **contingentes** du point de vue de notre **entendement**, mais dont il faut cependant, si elles doivent être dites des lois [...], qu'elles puissent être considérées comme **nécessaires** à partir d'un principe d'**unité du divers**, ___ » (Introduction, IV)"
+    answer: "quand bien même ce principe serait inconnu de nous"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q18
+    sentence: "Pour chercher des lois empiriques, la faculté de juger présuppose que « la nature spécifie ses lois universelles selon le principe de la ___ pour notre pouvoir de connaître » (Introduction, V)."
+    answer: "finalité"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q19
+    sentence: "Sans le principe d'une nature systématique, « tout acte de réflexion interviendrait seulement de manière ___ » (*Première Introduction*, V)."
+    answer: "aventureuse et aveugle"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q20
+    sentence: "Le principe de la spécification de la nature ne peut être prouvé par induction, puisque toute induction le ___ : il reste une maxime de la faculté de juger."
+    answer: "présuppose"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q21
+    sentence: "Une loi de Kepler lie des phénomènes par la causalité ___, que l'expérience peut montrer ; la fin naturelle exigerait une cause agissant par la représentation du tout, qu'aucune intuition ne montre."
+    answer: "efficiente"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q22
+    sentence: "« Car notre entendement a la propriété qu'il lui faut dans sa connaissance, par exemple celle des causes d'un produit, aller du **général ___** (des concepts) au **particulier** (l'intuition empirique donnée) » (§77)"
+    answer: "analytique"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q23
+    sentence: "Parce que notre entendement est ___, il comprend un tout à partir de ses parties, et ne peut penser un tout qui détermine ses parties, comme l'organisme, que par la représentation d'une fin (§77)."
+    answer: "discursif"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q24
+    sentence: "Il est « absurde » d'espérer « que puisse un jour surgir encore un ___ qui rende compréhensible ne serait-ce qu'un brin d'herbe d'après des lois naturelles que nulle intention n'a ordonnées » (§75)."
+    answer: "Newton"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q25
+    sentence: "Il est « absurde » d'espérer « que puisse un jour surgir encore un Newton qui rende compréhensible ne serait-ce qu'un ___ d'après des lois naturelles que nulle intention n'a ordonnées » (§75)."
+    answer: "brin d'herbe"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q29
+    sentence: "Subjectif ne veut pas dire privé : l'entendement limite la validité de ces Idées « simplement au sujet, encore que toutefois d'une manière ___ » (§76)."
+    answer: "universelle pour tous les sujets de cette espèce"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q30
+    sentence: "Le jugement téléologique vaut pour tout entendement humain parce qu'il tient à la ___ de notre pouvoir de connaître, et non à un sentiment personnel comme le goût de l'agréable."
+    answer: "structure"
+    alt: ["constitution", "nature"]
+  - id: kant-cfj-analytique-l2b-q31
+    sentence: "Pour les êtres organisés, la maxime de finalité est « essentiellement nécessaire », car « même la pensée de ces produits comme choses ___ est impossible si ne s'y trouve pas rattachée celle d'une production intentionnelle » (§75)."
+    answer: "organisées"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q32
+    sentence: "Étendue à la nature entière, la maxime de finalité est « certes utile, mais non point ___ » (§75), parce que la nature ne nous est pas donnée en totalité comme organisée."
+    answer: "indispensable"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q33
+    sentence: "Ce qui manque au jugement téléologique, c'est la réalité objective : selon le §74, on ne peut ni décider si les fins naturelles requièrent une causalité intentionnelle, ni même « ___ »."
+    answer: "poser la question"
+    alt: []
+  - id: kant-cfj-analytique-l2c-q26
+    sentence: "Le principe de finalité, en tant que régulateur, vaut « avec autant de nécessité pour notre faculté humaine de juger que s'il était un principe ___ » (§76)."
+    answer: "objectif"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q34
+    sentence: "Mécanisme et finalité ne se contredisent que si l'on transforme ces « principes fondamentaux, régulateurs pour la recherche, en principes ___ de la possibilité des objets eux-mêmes » (§70)."
+    answer: "constitutifs"
+    alt: []
+  - id: kant-cfj-analytique-l2b-q35
+    sentence: "Selon le §71, toute apparence d'antinomie entre mécanisme et finalité repose sur ceci « que l'on confond un principe fondamental de la faculté de juger ___ avec celui de la faculté de juger déterminante »."
+    answer: "réfléchissante"
+    alt: []

@@ -189,9 +189,15 @@ les corriger.
 2. **Le fichier** : `content/courses/<cours>/units/<auteur>-<oeuvre>[-<partie>].yaml`
    (`aristote-de-l-ame-2`, `kant-cfj-analytique`), en tête un commentaire
    qui dit la source (édition, traduction, notebook) ; `id` identique au nom
-   du fichier ; `title` « Aristote, *De l'âme*, livre II » ; `subtitle` ce
-   que la partie établit ; `icon: compass`, `color` celle de la piste ;
-   `group` commun aux unités d'une même œuvre.
+   du fichier ; `group` commun aux unités d'une même œuvre, qui porte
+   l'auteur et l'œuvre (« Kant : Critique de la faculté de juger
+   téléologique ») ; `title` le seul titre de la section, sans répéter le
+   groupe (« Analytique de la faculté de juger téléologique (§61-68) ») ;
+   `subtitle` ce que la partie établit ; `icon: compass`, `color` celle de
+   la piste. Les notions qui commandent toute l'œuvre sans appartenir à une
+   section (pour Kant : jugement déterminant et réfléchissant, principe
+   constitutif et régulateur, objectif et subjectif) vont dans une unité
+   d'introduction en tête du groupe (`kant-cfj-introduction`).
 3. **Le branchement** : ajouter l'`id` à `units:` de la piste choisie dans
    `content/courses/<cours>/course.yaml`, sans toucher aux autres unités
    (d'autres sessions travaillent peut-être en parallèle : une unité à la
