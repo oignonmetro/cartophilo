@@ -143,8 +143,12 @@ export function markupFromRuns(runs: Run[]): string {
     for (let i = 1; i <= group.length; i++) {
       if (i < group.length && group[i]!.marks[key] === group[start]!.marks[key]) continue
       const slice = group.slice(start, i)
-      const inner = level(slice, depth + 1)
-      out += slice[0]!.marks[key] ? WRAP[key](inner, slice[0]!.marks) : inner
+      const text = runsText(slice)
+      // Un délimiteur ne s'ouvre ni ne se ferme contre une espace seule (`*** ***`) :
+      // la relecture le lirait de travers. Une espace seule ne porte donc aucune mise en forme.
+      if (!slice[0]!.marks[key]) out += level(slice, depth + 1)
+      else if (key === 'strong' && /^ +$/.test(text)) out += text
+      else out += WRAP[key](level(slice, depth + 1), slice[0]!.marks)
       start = i
     }
     return out
