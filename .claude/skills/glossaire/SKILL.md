@@ -30,8 +30,16 @@ Tout ce que NotebookLM avance se recoupe sur la GF, selon les règles de
 NotebookLM sont fiables. Pour l'entrée Vie (2026-10-21), il a cité III, 8
 et I, 4 dans une autre traduction que la GF, et inventé une phrase de
 III, 7, 11 ; mais il a apporté un lieu décisif oublié (IV, 7, 9) et les
-contresens à désamorcer. Commencer par `gf.py cherche` sur les formules
-attendues, puis l'interroger.
+contresens à désamorcer.
+
+**NotebookLM cherche, je vérifie** (consigne de l'utilisateur, 2026-10-30) :
+chercher des références dans toute la GF est le travail de NotebookLM, et le
+faire soi-même coûte trop cher en tokens. Je ne vérifie sur la GF
+(`chapitre`, `verifie`, `chapitres`) que des repères précis : ceux que donne
+NotebookLM, ceux de l'utilisateur, ceux d'une entrée existante. Pas de
+balayage `gf.py cherche` pour trouver soi-même les passages, même quand
+NotebookLM est indisponible (limite d'usage) : ouvrir le journal, puis
+attendre.
 
 **Marx.** Pas encore fixées : avant la première entrée de Marx, demander à
 l'utilisateur l'édition de référence (citations, repères) et s'il existe un

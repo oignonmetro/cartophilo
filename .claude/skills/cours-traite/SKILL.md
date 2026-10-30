@@ -638,7 +638,12 @@ de l'argumentation (« posé », « démontré ») qui n'éclairent rien.
 3. **Un traité à la fois** : d'autres sessions travaillent peut-être sur
    d'autres traités. Ne toucher qu'au fichier de ce traité, et à son entrée
    de l'index (`summary`, `theses`), à aligner sur le nouveau
-   cours ; ne jamais régénérer l'index ni d'autres cours.
+   cours ; ne jamais régénérer l'index ni d'autres cours. Faire `git pull`
+   et lire `git log` avant de commencer : une copie locale des générateurs
+   date vite, et la réécrire par-dessus `main` détruit le travail des
+   autres. Un traité nouveau s'ajoute en écrivant seulement son
+   `traiteN.yaml` et en insérant son entrée et son nom dans `units:` de
+   `course.yaml`.
 4. Aligner l'entrée de l'index sur le nouveau cours : `summary` (attaque en
    gras, une puce par mouvement avec ses repères, une phrase de situation) et
    `theses` (trois au plus, courtes, propres à ce traité, puisque les
