@@ -1,0 +1,526 @@
+# Cours sur Bichat (voir content/philosophie.md, § « Un cours sur un auteur,
+# tiré d'un commentaire »), tiré de Philippe Huneman, Bichat, la vie et la
+# mort, PUF, « Philosophies », 1998 : introduction et chapitre I, « La
+# situation du savoir sur le vivant à la fin du XVIIIe siècle ». Citations
+# et repères tels que Huneman les donne (R = Recherches physiologiques sur
+# la vie et la mort, 1800).
+
+id: bichat1
+title: "Le problème de Bichat"
+subtitle: "Mécanisme, animisme, vitalisme : pourquoi la vie résiste à la science au XVIIIe siècle"
+icon: compass
+color: coral
+group: "Bichat : la vie et la mort"
+lessons:
+- id: bichat1-l1
+  title: "La vie définie par la mort"
+  notes: |-
+    Toute l'étude part d'une **définition devenue si fameuse qu'on en a oublié l'auteur** : {teal}« La vie est l'ensemble des fonctions qui résistent à la mort »{/teal}, ouverture des {sky}*Recherches physiologiques sur la vie et la mort*{/sky} (1800) de **Marie-François Xavier Bichat** (1771-1802). Elle paraît familière ; elle est pourtant étrange, puisqu'elle fait entrer {red}la mort au principe même de la vie{/red}.
+
+    **La définition tranche avec celle de la physiologie classique.** Jean **Fernel**, un des premiers à concevoir la physiologie, la définissait en 1645 dans sa *Médecine universelle* comme la science qui {teal}« explore la nature de l'homme sain, toutes ses forces et fonctions »{/teal}. La physiologie classique étudie donc {green}la santé, positivement{/green} ; Bichat la rapporte {red}à son contraire{/red}. D'où la question de départ : __quel tour de pensée a pu pousser Bichat à référer à la mort la « nature de l'homme sain » et la science qui en traite ?__
+
+    **Bichat est au départ de trois traditions.**
+    - En **médecine**, il fonde la médecine sur l'{violet}anatomie pathologique{/violet}, et Michel **Foucault** (*Naissance de la clinique*) a montré le rôle qu'y joue la considération de la mort.
+    - En **anatomie**, il inaugure la science des tissus, l'{violet}histologie{/violet} ; Auguste **Comte** voit en lui un pionnier de l'âge positif et donne son nom à un mois du calendrier positiviste.
+    - En **physiologie**, il ouvre la tradition que **Magendie** puis **Claude Bernard** nommeront {violet}physiologie expérimentale{/violet}.
+
+    **La question devient alors précise** : __pourquoi a-t-il fallu des recherches sur la vie *et la mort* pour que naisse la physiologie expérimentale ?__ Quelle image de la vie s'y dessine, solidaire de la médecine anatomo-pathologique ? Et que dit la célébrité de la définition du statut de cette {coral}« énigmatique conjonction »{/coral} de la vie et de la mort dans notre pensée ?
+
+    ! La définition ne dit pas que la vie est un simple sursis : elle désigne des **fonctions**, actives, qui résistent. Ce que Bichat en tire pour la connaissance du vivant fait l'objet de toute la suite.
+  points:
+  - id: bichat1-l1-p1
+    sentence: "« La vie est l'ensemble des fonctions qui résistent à la ___. » : la définition qui ouvre les *Recherches physiologiques sur la vie et la mort* de Bichat fait entrer la mort au principe de la vie."
+    answer: "mort"
+    alt: []
+  - id: bichat1-l1-p2
+    sentence: "« La vie est l'ensemble des ___ qui résistent à la mort. » : Bichat définit la vie non par une substance ou un principe, mais par des activités."
+    answer: "fonctions"
+    alt: []
+  - id: bichat1-l1-p3
+    sentence: "« La vie est l'ensemble des fonctions qui ___ à la mort. » : la vie, chez Bichat, se définit par une lutte contre ce qui la détruit."
+    answer: "résistent"
+    alt: []
+  - id: bichat1-l1-p4
+    sentence: "La définition « La vie est l'ensemble des fonctions qui résistent à la mort » ouvre les *___* de Bichat, parues en 1800."
+    answer: "Recherches physiologiques sur la vie et la mort"
+    alt: []
+  - id: bichat1-l1-p5
+    sentence: "Bichat, auteur de la définition de la vie comme « ensemble des fonctions qui résistent à la mort », a vécu de 1771 à ___, mort à trente ans."
+    answer: "1802"
+    alt: []
+  - id: bichat1-l1-p6
+    sentence: "La définition de Bichat tranche avec la physiologie classique : Jean ___ la définissait en 1645, dans sa *Médecine universelle*, comme la science qui « explore la nature de l'homme sain, toutes ses forces et fonctions »."
+    answer: "Fernel"
+    alt: []
+  - id: bichat1-l1-p7
+    sentence: "Pour Fernel (1645), la physiologie « explore la nature de l'homme ___, toutes ses forces et fonctions » : c'est cette référence positive à la santé que Bichat remplace par une référence à la mort."
+    answer: "sain"
+    alt: []
+  - id: bichat1-l1-p8
+    sentence: "En médecine, Bichat fonde la connaissance des maladies sur l'anatomie ___, dont Foucault a montré qu'elle donne un rôle décisif à la considération de la mort."
+    answer: "pathologique"
+    alt: []
+  - id: bichat1-l1-p9
+    sentence: "Le rôle de la mort dans la transformation de la médecine par l'anatomie pathologique de Bichat a été montré par Michel ___ dans *Naissance de la clinique*."
+    answer: "Foucault"
+    alt: []
+  - id: bichat1-l1-p10
+    sentence: "En anatomie, Bichat inaugure la science des tissus, ou ___."
+    answer: "histologie"
+    alt: []
+  - id: bichat1-l1-p11
+    sentence: "Célébrant l'âge de la science positive, Auguste ___ voit en Bichat un pionnier de l'âge positif et donne son nom à un mois du calendrier positiviste."
+    answer: "Comte"
+    alt: []
+  - id: bichat1-l1-p12
+    sentence: "Bichat ouvre en physiologie une tradition de recherche que Magendie puis Claude Bernard baptiseront physiologie ___."
+    answer: "expérimentale"
+    alt: []
+  - id: bichat1-l1-p13
+    sentence: "La question qui guide l'étude de Bichat : pourquoi a-t-il fallu des recherches physiologiques sur la vie et la ___ pour que s'institue la physiologie expérimentale ?"
+    answer: "mort"
+    alt: []
+- id: bichat1-l2
+  title: "Une physiologie qui ne connaît que le cadavre"
+  notes: |-
+    À la fin du XVIIIe siècle, **les deux sciences du vivant sont inégalement constituées**, et c'est de ce déséquilibre que part Bichat : il veut donner à la physiologie des bases à partir desquelles elle puisse se développer {yellow}comme la physique depuis les *Principia* de Newton{/yellow}.
+
+    **L'anatomie est achevée.** Depuis **Vésale**, elle décrit à l'aide des dissections les structures internes du corps (musculaire, vasculaire, osseuse, nerveuse) ; les traités de **Soemmering** et de **Winslow**, dans le dernier quart du siècle, en marquent l'état achevé.
+
+    **La physiologie est dispersée.** Malgré la découverte de la circulation du sang par **Harvey**, elle donne l'impression d'une grande confusion, sur ses méthodes, son objet et son rapport à l'anatomie. Certains la tiennent pour un {red}« roman »{/red} ; en {sky}1795{/sky}, à la création de l'**Institut**, {red}il n'y a pas de classe de physiologie{/red}.
+
+    **Elle n'est sérieuse que subordonnée à l'anatomie.** **Vicq d'Azyr** l'écrit en 1790 : {teal}« L'anatomie peut exister séparée de la physiologie ; mais la physiologie ne peut exister seule, elle doit être associée à l'étude du corps humain, sans laquelle elle errera toujours de système en système. »{/teal} Or {coral}__le cadavre est la source du savoir anatomique__{/coral} : la science du vivant semble donc {red}ne connaître le vivant que mort{/red}, et une physiologie comme science du *fonctionnement* reste problématique.
+
+    **Bichat refuse la séparation des deux sciences.** Elle est une erreur, car {teal}« les dépouilles de la mort furent le domaine de l'anatomiste ; le physiologiste eut en partage les phénomènes de la vie comme si les travaux de l'un n'étaient pas enchaînés aux recherches de l'autre ; comme si la connaissance de l'effet pouvait se séparer de celle de l'agent qui le produit »{/teal}. Avec **Haller**, il pose que {teal}« la science des fonctions est le but, celle des organes le moyen »{/teal}.
+
+    **Le symptôme du problème** : l'absence d'une {violet}tradition de recherche unitaire{/violet} en physiologie. La théorie par laquelle Bichat unit anatomie et physiologie ne se comprend que comme une réponse à ce problème.
+
+    ! Le reproche selon lequel on ne connaîtrait le vivant que mort est celui que Bichat retournera : chez lui, c'est le vivant lui-même qui se laissera connaître à partir de sa mortalité.
+  points:
+  - id: bichat1-l2-p1
+    sentence: "À la fin du XVIIIe siècle, la physiologie passe si peu pour une science qu'en 1795, à la création de l'___, il n'y a pas de classe de physiologie."
+    answer: "Institut"
+    alt: []
+  - id: bichat1-l2-p2
+    sentence: "La physiologie de la fin du XVIIIe siècle est si dispersée, dans ses méthodes comme dans son objet, que certains la tiennent pour un « ___ »."
+    answer: "roman"
+    alt: []
+  - id: bichat1-l2-p3
+    sentence: "« L'anatomie peut exister séparée de la physiologie ; mais la physiologie ne peut exister seule, elle doit être associée à l'étude du corps humain, sans laquelle elle errera toujours de système en système. » : cette subordination de la physiologie à l'anatomie est formulée en 1790 par ___."
+    answer: "Vicq d'Azyr"
+    alt: ["Vicq d Azyr"]
+  - id: bichat1-l2-p4
+    sentence: "Pour Vicq d'Azyr (1790), sans l'étude du corps humain, la physiologie « errera toujours de ___ en ___ »."
+    answer: "système ; système"
+    alt: []
+  - id: bichat1-l2-p5
+    sentence: "Comme le cadavre est la source du savoir anatomique, une physiologie subordonnée à l'anatomie semble ne connaître le vivant que ___."
+    answer: "mort"
+    alt: []
+  - id: bichat1-l2-p6
+    sentence: "Bichat veut donner à la physiologie des bases à partir desquelles elle pourra se développer comme la physique depuis les *Principia mathematica* de ___."
+    answer: "Newton"
+    alt: []
+  - id: bichat1-l2-p7
+    sentence: "« Les dépouilles de la mort furent le domaine de l'___ ; le physiologiste eut en partage les phénomènes de la vie » : Bichat dénonce la séparation de l'étude des organes et de celle des fonctions."
+    answer: "anatomiste"
+    alt: []
+  - id: bichat1-l2-p8
+    sentence: "Bichat juge la séparation de l'anatomie et de la physiologie absurde, « comme si la connaissance de l'___ pouvait se séparer de celle de l'agent qui le produit »."
+    answer: "effet"
+    alt: []
+  - id: bichat1-l2-p9
+    sentence: "« La science des fonctions est le but, celle des organes le ___ » : Bichat reprend à Haller l'idée que la physiologie est la fin dont l'anatomie est l'instrument."
+    answer: "moyen"
+    alt: []
+  - id: bichat1-l2-p10
+    sentence: "Bichat reconnaît à ___ d'avoir vu le premier que « la science des fonctions est le but, celle des organes le moyen »."
+    answer: "Haller"
+    alt: []
+  - id: bichat1-l2-p11
+    sentence: "Le symptôme le plus manifeste du problème de la physiologie à la fin du XVIIIe siècle est l'absence d'une ___ de recherche unitaire."
+    answer: "tradition"
+    alt: []
+- id: bichat1-l3
+  title: "Le mécanisme et son aporie"
+  notes: |-
+    **Depuis Descartes et Harvey, le savoir du vivant avance sous le signe du {violet}mécanisme{/violet}.** La circulation du sang inaugure la grande métaphore du corps comme {yellow}machinerie de pompes et de tuyaux{/yellow} ; le dualisme cartésien la légitime en assimilant le corps des animaux à une machine. Sa position fondamentale : {green}aucun principe vital autre que les « lois mécaniques »{/green}.
+
+    **Le mécanisme cartésien superpose deux thèses, souvent mal distinguées.**
+    - {sky}Les animaux sont des machines{/sky} (*Discours de la méthode*, V ; *Traité de l'homme*) : leurs fonctions suivent {teal}« de la seule disposition de ses organes, ni plus ni moins que ne font les mouvements d'une horloge ou d'un automate »{/teal}, sans {teal}« aucune autre âme végétative, ni sensitive »{/teal}. La question de l'ingénieur qui a construit ces machines et fixé leurs fonctions, Dieu, reste dans l'ombre.
+    - {sky}Les lois physiques suffisent à expliquer les prestations et la formation des vivants{/sky} : dans le traité sur la formation du fœtus, Descartes en tire une théorie de l'{violet}épigenèse{/violet}, l'animal construit par ajouts successifs de configurations créées par le mouvement des liquides.
+
+    **Pour les médecins, le mécanisme reste un {violet}idéal régulateur{/violet}.** Ils savent que dans la pratique le vivant ne s'assimile pas entièrement aux phénomènes matériels. D'où l'{red}aporie du mécanisme{/red} : il est commode pour comprendre des **mécanismes locaux** (circulation, digestion), mais {red}l'animal-machine dans son entier ne se laisse pas connaître{/red}.
+
+    **Le mécanisme partage un défaut avec l'animisme qu'il a détruit.** L'{pink}animisme{/pink} de la Renaissance, prolongeant l'aristotélisme, donnait une âme à tous les êtres. Il reposait sur une difficulté d'Aristote : l'âme (*psuchè*) est {violet}entéléchie{/violet}, mais toute substance (*ousia*) en possède une, puisqu'elle est par soi ; le glissement était donc facile vers une âme en tout être. Le mécanisme a éradiqué cet animisme, mais {coral}__ni l'un ni l'autre ne font de différence décisive entre le vivant et le non-vivant__{/coral} : la nature est uniformément animée d'un côté, pure étendue de l'autre.
+
+    ! L'aporie du mécanisme n'est pas d'expliquer mal les fonctions locales, mais de ne pas atteindre le tout de l'organisme : c'est exactement le problème que Bichat reprendra.
+  points:
+  - id: bichat1-l3-p1
+    sentence: "La découverte de la circulation du sang par Harvey inaugure la grande métaphore du corps comme machinerie de pompes et de ___."
+    answer: "tuyaux"
+    alt: []
+  - id: bichat1-l3-p2
+    sentence: "Position fondamentale du mécanisme en physiologie : l'absence de tout principe vital autre que les « lois ___ »."
+    answer: "mécaniques"
+    alt: []
+  - id: bichat1-l3-p3
+    sentence: "Selon le *Traité de l'homme*, les fonctions du corps « suivent toutes naturellement, en cette machine, de la seule disposition de ses ___ »."
+    answer: "organes"
+    alt: []
+  - id: bichat1-l3-p4
+    sentence: "Les fonctions du corps suivent de la disposition de ses organes, selon Descartes, « ni plus ni moins que ne font les mouvements d'une ___ ou d'un automate »."
+    answer: "horloge"
+    alt: []
+  - id: bichat1-l3-p5
+    sentence: "Dans le *Traité de l'homme*, Descartes refuse de concevoir dans la machine du corps « aucune autre âme ___, ni sensitive »."
+    answer: "végétative"
+    alt: []
+  - id: bichat1-l3-p6
+    sentence: "Le mécanisme cartésien superpose deux thèses : les animaux sont des machines, et les lois ___ suffisent à expliquer les prestations et la formation des vivants."
+    answer: "physiques"
+    alt: []
+  - id: bichat1-l3-p7
+    sentence: "Dans son traité sur la formation du fœtus, Descartes explique la construction de l'animal par ajouts progressifs de configurations créées par le mouvement des liquides : c'est une théorie de l'___."
+    answer: "épigenèse"
+    alt: ["epigenese"]
+  - id: bichat1-l3-p8
+    sentence: "Pour les médecins du XVIIIe siècle, qui savent que le vivant ne s'assimile pas entièrement aux phénomènes matériels, le mécanisme cartésien n'a plus que le statut d'idéal ___."
+    answer: "régulateur"
+    alt: []
+  - id: bichat1-l3-p9
+    sentence: "L'aporie du mécanisme : commode pour comprendre des mécanismes ___ comme la circulation ou la digestion, il ne permet pas de connaître l'animal-machine dans son entier."
+    answer: "locaux"
+    alt: []
+  - id: bichat1-l3-p10
+    sentence: "L'animisme de la Renaissance reposait sur une difficulté de l'aristotélisme : l'âme est conçue comme ___, mais toute substance en possède une, puisqu'elle est par soi."
+    answer: "entéléchie"
+    alt: ["entelechie"]
+  - id: bichat1-l3-p11
+    sentence: "Le mécanisme a de commun avec l'animisme qu'il a détruit que ni l'un ni l'autre ne font de différence décisive entre le vivant et le ___ : la nature est uniformément animée d'un côté, pure étendue de l'autre."
+    answer: "non-vivant"
+    alt: ["non vivant"]
+- id: bichat1-l4
+  title: "Stahl : l'âme du vivant et l'organisme"
+  notes: |-
+    **Le mécanisme lève une question qu'il escamote aussitôt** : si la nature comme telle n'est pas vivante, qu'en est-il de ce que nous appelons « vie » ? {teal}« Ce qui me choquait par-dessus tout, écrit Stahl, c'est que dans cette théorie physique du corps humain, la vie, même dès le début, était passée sous silence, et que je n'en voyais nulle part une définition logique. »{/teal}
+
+    **Stahl (1660-1734) renverse l'animisme.** Sa réponse : {green}__précisément parce que les êtres naturels n'ont pas d'âme, étant régis par les lois du mouvement, il faut que les vivants aient une âme irréductible aux choses naturelles__{/green}.
+    - L'{pink}animisme classique{/pink} pense le naturel sur le mode du vivant : tout est vie, latente ou manifeste.
+    - L'{green}animisme stahlien{/green} pense le vivant **par opposition** à la nature dont traite la physique.
+
+    **Cette âme est une raison inconsciente.** Elle reste d'ordre spirituel : elle gouverne l'animal, lui fait éviter les dangers et rechercher ce qui lui convient, sans en avoir conscience. À la nature mécanique, Stahl oppose l'{violet}organisme{/violet}, ensemble de faits qui se coordonnent {teal}« bien certainement en vue d'une fin toute spécifique »{/teal}.
+
+    **La finalité passe à l'intérieur du vivant.** Dans le mécanisme cartésien, {pink}puissance et finalité sont tout entières en Dieu{/pink} : le vivant ne tend à rien, il développe ce que Dieu a mis en lui. Stahl {green}met la finalité dans le vivant, sous forme d'âme{/green}. D'où sa thèse : {teal}« il n'y a de corps vivants que les corps organisés »{/teal}.
+
+    **L'organisme devient le schème du vivant à la fin du siècle.** Même si la pensée de Stahl, embarrassée, fait peu l'unanimité, le concept d'organisme comme corps dont {coral}chaque partie existe pour le tout et comme fin pour les autres{/coral}, élaboré surtout par l'histoire naturelle, devient le moyen de penser la vie hors du mécanisme.
+    - **Kant** (*Critique de la faculté de juger*, §66) : {teal}« Un produit organisé de la nature est celui en lequel tout est fin et réciproquement aussi moyen. »{/teal}
+    - **Lamarck** : les facultés vitales {teal}« résultent essentiellement d'actes de l'organisation »{/teal}.
+    - **Cuvier** : {teal}« La vie en général suppose donc l'organisation en général »{/teal}.
+
+    ! Stahl ne revient pas à l'animisme de la Renaissance : son âme n'anime pas la nature, elle sépare au contraire le vivant de la nature.
+  points:
+  - id: bichat1-l4-p1
+    sentence: "« Ce qui me choquait par-dessus tout, c'est que dans cette théorie physique du corps humain, la ___, même dès le début, était passée sous silence » : Stahl reproche au mécanisme d'escamoter la question de ce qui fait le vivant."
+    answer: "vie"
+    alt: []
+  - id: bichat1-l4-p2
+    sentence: "Le premier à redécouvrir la question de la vie, négligée par le mécanisme cartésien, est le médecin ___ (1660-1734)."
+    answer: "Stahl"
+    alt: []
+  - id: bichat1-l4-p3
+    sentence: "Stahl renverse l'animisme classique : c'est précisément parce que les êtres naturels n'ont pas d'âme, régis par les lois du mouvement, qu'il faut que les vivants aient une âme ___ aux choses naturelles."
+    answer: "irréductible"
+    alt: []
+  - id: bichat1-l4-p4
+    sentence: "L'animisme classique pense le naturel sur le mode du vivant ; l'animisme stahlien pense le vivant par ___ à la nature dont traite la physique."
+    answer: "opposition"
+    alt: []
+  - id: bichat1-l4-p5
+    sentence: "L'âme de Stahl est une sorte de raison qui gouverne l'animal, lui fait éviter les dangers et rechercher ce qui lui convient, mais sans en avoir ___."
+    answer: "conscience"
+    alt: []
+  - id: bichat1-l4-p6
+    sentence: "À la nature régie par le mécanisme, Stahl oppose l'___, ensemble de faits qui se coordonnent « en vue d'une fin toute spécifique »."
+    answer: "organisme"
+    alt: []
+  - id: bichat1-l4-p7
+    sentence: "Dans le mécanisme cartésien, puissance et finalité sont tout entières en Dieu ; Stahl met la finalité à l'___ du vivant, sous forme d'âme."
+    answer: "intérieur"
+    alt: []
+  - id: bichat1-l4-p8
+    sentence: "« Il n'y a de corps vivants que les corps ___ » : chez Stahl, la vie est inséparable de l'organisation."
+    answer: "organisés"
+    alt: []
+  - id: bichat1-l4-p9
+    sentence: "Kant synthétise au §66 de la *Critique de la faculté de juger* le concept d'organisme élaboré au XVIIIe siècle : « Un produit organisé de la nature est celui en lequel tout est ___ et réciproquement aussi moyen. »"
+    answer: "fin"
+    alt: []
+  - id: bichat1-l4-p10
+    sentence: "La définition kantienne du produit organisé de la nature, « celui en lequel tout est fin et réciproquement aussi moyen », se trouve au § ___ de la *Critique de la faculté de juger*."
+    answer: "66"
+    alt: ["§66"]
+  - id: bichat1-l4-p11
+    sentence: "« La vie en général suppose donc l'organisation en général et la vie propre de chaque être suppose l'organisation propre de cet être » : la vie pensée par l'organisation, chez ___ (*Le règne animal*, 1819)."
+    answer: "Cuvier"
+    alt: []
+  - id: bichat1-l4-p12
+    sentence: "Pour Lamarck (*Philosophie zoologique*, 1809), les facultés de la vie « résultent essentiellement d'actes de l'___ »."
+    answer: "organisation"
+    alt: []
+- id: bichat1-l5
+  title: "Spinoza, Leibniz, Newton : la fin de l'inertie"
+  notes: |-
+    **Les réticences des physiologistes envers le mécanisme s'éclairent par la philosophie postcartésienne.** Stahl fut un interlocuteur de **Leibniz**, qui consacra un écrit à réfuter sa *Theoria medica vera* : la physiologie participe donc des mises en question du cartésianisme par Spinoza, Leibniz et Newton.
+
+    **Chez Descartes, les corps sont inertes et le vivant renvoie à Dieu.** L'essence de la matière est l'étendue : les corps n'ont en eux-mêmes aucune force ; Dieu a mis le mouvement dans le monde et en conserve la quantité. Le mécanisme ne peut alors se passer de la théologie : si les animaux sont des machines, {pink}un ingénieur suprême les a construites{/pink}, et l'énigme de leurs prestations finalisées se concentre en Dieu. Détachée de la théologie, la physiologie mécaniste perd sa consistance, comme le montre {amber}la préférence des philosophes (Leibniz, Bonnet, Haller) pour le {violet}préformationnisme{/violet} de Malebranche{/amber}, qui concentre la puissance créatrice à l'origine, en Dieu.
+
+    **Spinoza et Leibniz rendent aux corps une autonomie.**
+    - **Spinoza** : l'essence actuelle d'un corps est son {violet}*conatus*{/violet}, l'effort pour persévérer dans son être (*Éthique*, III, 7). Le corps enveloppe la raison de son mouvement ; sans admettre de finalité, cette spontanéité incite à penser {coral}une vie universelle{/coral} qui se confond avec celle de Dieu (*Deus sive natura*).
+    - **Leibniz** : l'essence d'une substance est sa **force**. Premier à employer le mot d'{violet}organisme{/violet} pour les vivants, il le conçoit comme {yellow}une machine infiniment organisée{/yellow} ; et comme toute monade est perception et appétition, l'organisme tend vers une fin. Mais il n'y a pour lui qu'{red}une différence de degré{/red} entre vivant et artifice (machine infinie, machine finie), quand pour Stahl le vivant s'oppose essentiellement à l'inanimé, dont les lois tendent à sa corruption.
+
+    **Newton fournit à la physiologie sa méthode.** La gravitation est une force émanée de chaque corps, non un mouvement imprimé du dehors. La méthode newtonienne : {green}ne pas faire d'hypothèses sur la cause première, exprimer les lois selon lesquelles agissent les forces{/green}. **Haller** l'applique au vivant : comme Newton constate la gravitation, il constate l'{violet}irritabilité{/violet}, propriété qu'a une partie de se raccourcir quand on la touche, et en mesure les degrés. Elle varie inversement à la {violet}sensibilité{/violet}, propriété de ressentir les excitations par les nerfs pour les transmettre à l'âme.
+
+    **Haller est dualiste au sens de Descartes, mécaniste au sens de Newton.** Dualiste : la matière, brute ou irritable, d'un côté, les âmes de l'autre, dont le signe est la sensibilité. Mécaniste : sans en demander la cause, il étudie les lois d'une propriété constatable.
+
+    ! « Mécaniste au sens de Newton » ne veut pas dire que Haller réduit le vivant à la physique : il lui attribue une propriété propre, l'irritabilité, comme Newton attribue la gravitation aux corps.
+  points:
+  - id: bichat1-l5-p1
+    sentence: "Stahl fut un interlocuteur de ___, qui consacra un écrit à réfuter sa *Theoria medica vera* : la physiologie participe ainsi des débats de la philosophie postcartésienne."
+    answer: "Leibniz"
+    alt: []
+  - id: bichat1-l5-p2
+    sentence: "Détachée de la théologie, la physiologie mécaniste perd sa consistance, comme le montre la préférence des philosophes du XVIIIe siècle pour le ___ de Malebranche, qui concentre la puissance créatrice à l'origine, en Dieu."
+    answer: "préformationnisme"
+    alt: ["preformationnisme"]
+  - id: bichat1-l5-p3
+    sentence: "Pour Spinoza, l'essence actuelle d'un corps quelconque est son ___, son effort pour persévérer dans son être."
+    answer: "conatus"
+    alt: []
+  - id: bichat1-l5-p4
+    sentence: "Chez Spinoza, la spontanéité que le conatus confère aux corps incite à penser une vie universelle qui se confond avec celle de Dieu, selon la formule *Deus sive ___*."
+    answer: "natura"
+    alt: []
+  - id: bichat1-l5-p5
+    sentence: "Leibniz est, avant Stahl, le premier à employer le terme d'___ pour désigner les êtres vivants."
+    answer: "organisme"
+    alt: []
+  - id: bichat1-l5-p6
+    sentence: "Pour Leibniz, l'organisme est une machine ___ organisée."
+    answer: "infiniment"
+    alt: []
+  - id: bichat1-l5-p7
+    sentence: "Leibniz s'oppose à Stahl : entre êtres vivants et êtres artificiels, il n'y a qu'une différence de ___, machine infinie d'un côté, machine finie de l'autre."
+    answer: "degré"
+    alt: []
+  - id: bichat1-l5-p8
+    sentence: "Méthode newtonienne reprise par la physiologie du XVIIIe siècle : ne pas faire d'___ sur la nature des phénomènes ou leur cause première, exprimer les lois selon lesquelles agissent les forces."
+    answer: "hypothèses"
+    alt: []
+  - id: bichat1-l5-p9
+    sentence: "De même que Newton constatait le fait de la gravitation avant d'en donner la loi, Haller constate le fait de l'___, et en teste les degrés dans les parties du corps."
+    answer: "irritabilité"
+    alt: []
+  - id: bichat1-l5-p10
+    sentence: "Chez Haller, l'irritabilité d'une partie du corps varie inversement à sa ___, propriété de ressentir les excitations par le système nerveux pour les transmettre à l'âme."
+    answer: "sensibilité"
+    alt: []
+  - id: bichat1-l5-p11
+    sentence: "Haller est dualiste au sens de Descartes, puisqu'il y a la matière d'un côté et les âmes de l'autre ; mais il est mécaniste au sens de ___, puisqu'il étudie les lois d'une propriété constatable sans en demander la cause."
+    answer: "Newton"
+    alt: []
+  - id: bichat1-l5-p12
+    sentence: "« J'appelle partie irritable du corps humain celle qui devient plus ___ quand quelque corps étranger la touche un peu fortement » (Haller) : l'irritabilité caractérise au premier chef les muscles."
+    answer: "courte"
+    alt: []
+- id: bichat1-l6
+  title: "Haller contre Bordeu : la querelle des propriétés vitales"
+  notes: |-
+    **La spécificité des problèmes physiologiques du tournant du siècle se joue entre Haller et Bordeu**, qui s'affrontent sur la nature des propriétés vitales.
+
+    **Haller : la physiologie, « anatomie animée ».** Chaque organe a une fonction ; l'anatomie en décrit la forme sur le corps mort, la physiologie en saisit la fonction quand l'organe est animé. {pink}L'anatomie est le fil conducteur de la physiologie{/pink} : si tel organe a telle place et telle conformation, il aura telle fonction. La physiologie y ajoute seulement les propriétés vitales (irritabilité, sensibilité) que des expériences mesurent. C'est **la première forme de physiologie expérimentale**, mais parallèle à l'anatomie et portant sur des parties.
+
+    **Bordeu : chaque organe sensible à sa manière.** Principal inspirateur de l'{violet}école vitaliste de Montpellier{/violet} et maître des médecins de l'*Encyclopédie* (Fouquet, Ménuret de Chambaud), il explique dans ses *Recherches sur les glandes* (1751) la sécrétion par une **sensibilité discriminatoire** de chaque glande à certains éléments. Le vivant est un ensemble d'organes dont chacun a sa {violet}« vie propre »{/violet}.
+
+    **Le vitalisme se définit alors.** C'est {green}__penser une autonomie radicale du vivant, définie par une propriété irréductible, la sensibilité__{/green}. Plus besoin d'âme : le corps se gouverne seul, agencement d'êtres sensibles élémentaires, les organes. Et le vivant déroge aux lois physiques : {coral}les propriétés vitales sont plastiques, variables{/coral}, à la différence des propriétés physiques, constantes et régulières.
+
+    **L'enjeu philosophique de la querelle est l'âme.** Pour Haller, les corps bruts ont la gravitation, les vivants l'irritabilité, et certains animaux la sensibilité, {pink}signe d'une âme{/pink} qui reçoit les informations des nerfs. En définissant la vie par la sensibilité, Bordeu {green}économise l'âme{/green}. La querelle de l'irritabilité et de la sensibilité recouvre donc la question de **la pertinence de la notion d'âme pour comprendre le vivant**.
+
+    ! Haller n'est pas animiste : aucune âme chez lui ne dirige les phénomènes vitaux ; l'âme n'est que le récepteur de la sensibilité, propre à certains animaux.
+  points:
+  - id: bichat1-l6-p1
+    sentence: "Haller définit la physiologie comme une « anatomie ___ » : l'anatomie décrit la forme d'un organe sur le corps mort, la physiologie en saisit la fonction sur l'organe vivant."
+    answer: "animée"
+    alt: []
+  - id: bichat1-l6-p2
+    sentence: "Chez Haller, l'___ est le fil conducteur de la physiologie : si un organe est à telle place et présente telle conformation, il aura telle fonction."
+    answer: "anatomie"
+    alt: []
+  - id: bichat1-l6-p3
+    sentence: "Bordeu est le principal inspirateur de l'école vitaliste de ___."
+    answer: "Montpellier"
+    alt: []
+  - id: bichat1-l6-p4
+    sentence: "Dans ses *Recherches sur les glandes* (1751), Bordeu explique la ___ par une sensibilité discriminatoire de chaque glande à certains éléments."
+    answer: "sécrétion"
+    alt: []
+  - id: bichat1-l6-p5
+    sentence: "Pour Bordeu, chaque organe d'un être vivant possède en quelque sorte sa « vie ___ », puisque la vie se manifeste par la sensibilité."
+    answer: "propre"
+    alt: []
+  - id: bichat1-l6-p6
+    sentence: "Le vitalisme consiste à penser une autonomie radicale du vivant, définie par une propriété irréductible : chez Bordeu, la ___."
+    answer: "sensibilité"
+    alt: []
+  - id: bichat1-l6-p7
+    sentence: "Pour le vitalisme, les propriétés vitales sont essentiellement plastiques, ___, à la différence des propriétés physiques, toujours constantes et régulières."
+    answer: "variables"
+    alt: []
+  - id: bichat1-l6-p8
+    sentence: "Bordeu s'oppose à Haller sur un point précis : c'est la sensibilité, et non l'___, qui constitue la propriété vitale originelle."
+    answer: "irritabilité"
+    alt: []
+  - id: bichat1-l6-p9
+    sentence: "Pour Haller, la sensibilité de certains animaux est le signe d'une ___ qui reçoit les informations du système nerveux ; en définissant la vie par la sensibilité, Bordeu fait l'économie de cette notion."
+    answer: "âme"
+    alt: ["ame"]
+  - id: bichat1-l6-p10
+    sentence: "Philosophiquement, la querelle des propriétés vitales entre Haller et Bordeu recouvre la question de la pertinence de la notion d'___ pour comprendre le vivant."
+    answer: "âme"
+    alt: ["ame"]
+- id: bichat1-l7
+  title: "L'économie animale, objet d'observation"
+  notes: |-
+    **Le vitalisme de Bordeu doit comprendre l'accord des organes.** Les manifestations du vivant (reproduction, nutrition, mouvement) tendent toutes à sa conservation : elles témoignent d'une activité ordonnée vers une fin, donc d'**une harmonie nécessaire** entre des organes qui vivent chacun pour soi.
+
+    **L'image de l'essaim d'abeilles.** Bordeu puis Maupertuis comparent l'homme à {yellow}un groupe d'abeilles qui s'attachent à une branche{/yellow}, se pressent, se soutiennent et forment une espèce de tout, {teal}« dans lequel chaque partie vivante à sa manière contribue par la correspondance et la direction de ses mouvements à entretenir cette espèce de vie de tout le corps »{/teal} (Ménuret de Chambaud, *Encyclopédie*, art. « Observation »).
+
+    **L'image fait problème : où est la vie ?** Comment penser le rapport de la vie des parties à celle du tout ?
+    - Si la vie est {pink}dans l'organisation{/pink}, alors {red}les éléments de l'organisation ne vivent pas{/red}.
+    - Si elle est {pink}dans la vie propre des organes{/pink}, alors {red}on ne voit plus ce que l'organisation apporte{/red}, ni comment elle est possible.
+
+    **L'{violet}économie animale{/violet} est l'objet du questionnement vitaliste.** L'organisme se distingue de l'être matériel par son **ordre** (harmonie) et par les **propriétés** de ses éléments (sensibles). {teal}« L'économie animale, c'est l'ordre, le mécanisme, l'ensemble des forces qui entretiennent la vie »{/teal} (Ménuret). Un de ses facteurs majeurs est la {violet}sympathie{/violet}, notion hippocratique : la communication d'affections entre parties éloignées, par des chemins parfois étranges, sans support visible comme les nerfs.
+
+    **Elle s'observe, elle ne s'expérimente pas.** Séparé des lois naturelles, le vivant ne se connaît plus par la mécanique et la chimie : {teal}« appliquons-nous à observer »{/teal}, dit Bordeu. Contre l'{pink}expérimentation hallérienne{/pink}, les vitalistes objectent deux choses : {red}__elle n'opère que sur une partie, et n'accède donc pas à la totalité de l'organisme ; elle crée des conditions artificielles__{/red}, qui ne sont pas celles de l'animal naturel. Goldstein reprendra l'argument contre la reconstruction du système nerveux en réflexes. Seule {green}l'observation respecte le vivant comme vivant{/green}. Son pendant en médecine est la {violet}clinique{/violet} (Cabanis) : non plus classer les maladies comme des espèces (médecine {violet}nosologique{/violet}), mais saisir le mal de chaque malade à partir de l'ensemble de ses symptômes.
+
+    ! L'observation vitaliste n'est pas un retard : elle procède de la modestie newtonienne. Cabanis : la cause qui meut les corps animés est inconnue, comme toute cause première, et sa connaissance ne servirait à rien.
+  points:
+  - id: bichat1-l7-p1
+    sentence: "Pour penser l'accord des organes dotés chacun d'une vie propre, Bordeu puis Maupertuis donnent l'image de l'essaim d'___, sorte de vivant fait d'une agglutination de vivants."
+    answer: "abeilles"
+    alt: []
+  - id: bichat1-l7-p2
+    sentence: "L'image vitaliste de l'essaim d'abeilles pose un problème : si la vie est dans l'organisation, les éléments de l'organisation ne ___ pas ; si elle est dans la vie propre des organes, on ne voit plus ce qu'apporte l'organisation."
+    answer: "vivent"
+    alt: []
+  - id: bichat1-l7-p3
+    sentence: "L'organisme, objet du questionnement vitaliste, se nomme « économie ___ »."
+    answer: "animale"
+    alt: []
+  - id: bichat1-l7-p4
+    sentence: "« L'économie animale, c'est l'ordre, le mécanisme, l'ensemble des ___ qui entretiennent la vie » (Ménuret de Chambaud, *Encyclopédie*)."
+    answer: "forces"
+    alt: []
+  - id: bichat1-l7-p5
+    sentence: "Un des facteurs majeurs de l'ordre de l'économie animale est la ___, notion hippocratique qui recouvre la communication d'affections entre parties du corps éloignées."
+    answer: "sympathie"
+    alt: []
+  - id: bichat1-l7-p6
+    sentence: "« Il y a trop loin des lois de la chimie et de la mécanique à celles de la nature », écrit Bordeu : « appliquons-nous à ___ ». Le vitalisme de Bordeu préfère l'observation à l'application de la mécanique et de la chimie."
+    answer: "observer"
+    alt: []
+  - id: bichat1-l7-p7
+    sentence: "Première objection vitaliste à l'expérimentation de Haller : opérant sur une partie, elle n'accède pas à la ___ de l'organisme."
+    answer: "totalité"
+    alt: []
+  - id: bichat1-l7-p8
+    sentence: "Seconde objection vitaliste à l'expérimentation de Haller : par les dommages qu'elle inflige, elle crée des conditions ___, qui ne sont pas celles de l'animal naturel."
+    answer: "artificielles"
+    alt: []
+  - id: bichat1-l7-p9
+    sentence: "L'argument vitaliste contre l'expérimentation partielle sera redéployé au XXe siècle par le neurologue Kurt ___, contre la reconstruction du système nerveux en réflexes élémentaires."
+    answer: "Goldstein"
+    alt: []
+  - id: bichat1-l7-p10
+    sentence: "Les vitalistes s'écartent de ___, dont les expériences sur la respiration en montraient la nature de combustion, parce que son appareillage provoque des phénomènes artificiels."
+    answer: "Lavoisier"
+    alt: []
+  - id: bichat1-l7-p11
+    sentence: "L'ancienne médecine ___ considérait les maladies comme des entités distinctes, dotées de symptômes caractéristiques, à classer comme des espèces animales."
+    answer: "nosologique"
+    alt: []
+  - id: bichat1-l7-p12
+    sentence: "La médecine ___, dont Cabanis est un représentant majeur, considère le malade individuellement et cerne l'histoire de la maladie chez ce patient à partir de l'ensemble de ses symptômes."
+    answer: "clinique"
+    alt: []
+- id: bichat1-l8
+  title: "Le problème légué à Bichat"
+  notes: |-
+    **Deux physiologies se font face, chacune incomplète.**
+
+    | Physiologie | Méthode | Objet |
+    | Haller | expérimentation | les parties |
+    | vitalistes | observation | la totalité |
+    | Claude Bernard (1856) | expérimentation | la totalité |
+
+    Entre Haller et Claude Bernard se tiennent Bichat et Magendie. La question est donc : __quel changement du statut de l'expérience a permis de faire de la **totalité organique** un objet de savoir **expérimental**, alors qu'auparavant la totalité relevait de l'observation et l'expérimentation des parties ?__
+
+    **Le dilemme légué à Bichat.**
+    - {pink}La physique mécaniste, ou même newtonienne{/pink}, est insuffisante : {red}elle ne fait pas la différence entre vivant et non-vivant{/red}.
+    - {pink}Le vitalisme{/pink} fait la différence, mais {red}__il est incapable d'édifier une science de la vie__{/red}. En définissant la vie par opposition à la nature matérielle, objet de la physique, il l'oppose au domaine de l'être régi par des lois : donc {coral}la vie ne reconnaît pas de lois{/coral}, et n'est plus intelligible scientifiquement. La clinique le confirme : une même maladie évolue différemment selon les sujets.
+
+    **Conclusion paradoxale** : {red}ce qui est scientifiquement connu est, comme tel, non vivant{/red} (les corps morts de l'anatomiste), et {red}le vivant n'est pas connu scientifiquement{/red} ; tout au plus accumule-t-on des descriptions de l'économie animale et des parcours des sympathies.
+
+    **L'aporie tient à la finalité interne.** Le propre du vivant est son rapport à une fin, sa {violet}« finalité interne »{/violet} au sens de Kant : sa tendance à la conservation, à la stabilité et à la reproduction. Or les rapports entre organes qui la rendent possible ne se connaissent ni {pink}par l'observation{/pink}, qui n'accède pas aux processus vitaux eux-mêmes, ni {pink}par l'expérimentation hallérienne{/pink}, qui ne laisse voir que du partiel et de l'artificiel ; ni en subordonnant la physiologie à l'anatomie, vision du corps mort, ni en faisant des organes de petits vivants échangeant comme {yellow}des citoyens dans une économie politique{/yellow}. On pressent que le vivant est un genre d'être spécifique, mais {red}on ne sait pas faire de cette spécificité quelque chose de connaissable{/red}.
+
+    **D'où le paradoxe de Bichat** : {green}__il est vitaliste, et pourtant tout son travail tend à établir une science des phénomènes vivants__{/green}. Comment c'est possible : ses thèses et leur généalogie (unité suivante), l'architecture des *Recherches* (troisième unité), leur portée chez Magendie et Claude Bernard (quatrième).
+  tables:
+  - table: physiologie-methode-objet
+    exercises:
+    - {kind: bank, column: Méthode}
+    - {kind: cell, column: Objet}
+  points:
+  - id: bichat1-l8-p1
+    sentence: "À la fin du XVIIIe siècle, chez Haller la physiologie expérimente mais porte sur les parties ; chez les vitalistes, elle est d'___ et vise la totalité de l'organisme."
+    answer: "observation"
+    alt: []
+  - id: bichat1-l8-p2
+    sentence: "En 1856, Claude Bernard pourra proposer une physiologie expérimentale déliée de l'anatomie et établissant les régularités qui commandent l'organisme dans sa ___ ; entre Haller et lui se tiennent Bichat et Magendie."
+    answer: "totalité"
+    alt: []
+  - id: bichat1-l8-p3
+    sentence: "Le problème de Bichat : comment faire de la totalité organique un objet de savoir ___, alors qu'auparavant la totalité relevait de l'observation et l'expérimentation des parties ?"
+    answer: "expérimental"
+    alt: []
+  - id: bichat1-l8-p4
+    sentence: "La physique, mécaniste ou même newtonienne, est insuffisante pour rendre compte de la vie, parce qu'elle ne fait pas la différence entre ___ et non-vivant."
+    answer: "vivant"
+    alt: []
+  - id: bichat1-l8-p5
+    sentence: "Le vitalisme définit la vie par opposition à la nature matérielle, donc au domaine de l'être régi par des ___ : la vie n'est plus alors susceptible d'une intelligibilité scientifique."
+    answer: "lois"
+    alt: []
+  - id: bichat1-l8-p5x
+    sentence: "Le vitalisme définit la vie par opposition à la nature matérielle ; or la nature matérielle est le domaine de l'être régi par des lois ; la vie échappe donc aux lois. Et comme une science est une connaissance de lois, le vitalisme ne peut produire une ___ de la vie."
+    answer: "science"
+    alt: []
+  - id: bichat1-l8-p6
+    sentence: "La médecine clinique confirme l'impasse du vitalisme : la ___ des évolutions d'une même maladie sur des sujets différents rend impossible de tracer les lois des maladies."
+    answer: "variabilité"
+    alt: []
+  - id: bichat1-l8-p7
+    sentence: "Conclusion paradoxale du savoir sur le vivant à la fin du XVIIIe siècle : ce qui est scientifiquement connu est, comme tel, non ___, et le vivant n'est pas connu scientifiquement."
+    answer: "vivant"
+    alt: []
+  - id: bichat1-l8-p8
+    sentence: "L'aporie de la physiologie au XVIIIe siècle est l'insuffisance du concept d'économie animale à saisir ce rapport à une fin reconnu comme le propre du vivant, sa finalité ___ au sens de Kant."
+    answer: "interne"
+    alt: []
+  - id: bichat1-l8-p9
+    sentence: "Les rapports entre organes qui rendent possible la finalité du vivant ne se connaissent ni en subordonnant la physiologie à l'anatomie, ni en voyant dans les organes de petits vivants qui échangent comme les citoyens dans une économie ___."
+    answer: "politique"
+    alt: []
+  - id: bichat1-l8-p10
+    sentence: "Le paradoxe de Bichat : il est ___, et pourtant tout son travail tend à établir une science des phénomènes vivants."
+    answer: "vitaliste"
+    alt: []

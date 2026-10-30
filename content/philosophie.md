@@ -370,22 +370,100 @@ la laisser grossir.
 > la lesson voisine la plus proche par le sujet, plutôt que de rester seule
 > et de faire échouer la validation.
 
+## Faire comprendre, pas seulement résumer (repris de `cours-traite`)
+
+Les règles qui suivent viennent des retouches de l'utilisateur sur les cours
+de traités de Plotin (`.claude/skills/cours-traite/SKILL.md`, § 4 à 6, qui
+les détaille avec des exemples). Elles valent pour toute leçon
+philosophique, et d'abord pour un cours tiré d'un article ou d'un
+commentaire : le premier jet d'un tel cours est exact mais allusif, il dit
+ce que pense l'auteur sans le faire comprendre.
+
+**Le rappel argumente.** L'auteur s'y présente en « homme de fer » : une
+pensée rendue claire, donc intéressante, et convaincante, chaque thèse
+défendue comme on défendrait la sienne.
+- **Le principe sous l'argument** : nommer ce qui rend l'argument
+  contraignant, et pourquoi l'adversaire ne peut pas le refuser.
+- **La notion contre sa version naïve** : dire ce qu'elle n'est pas, sur un
+  débat concret.
+- **Chaque image expliquée** : ce qu'elle montre, et où elle s'arrête.
+- **Les alternatives déployées** en liste, branche par branche, puis la
+  conclusion dite explicitement.
+- **Des exemples concrets** : celui de l'auteur, signalé comme tel, et au
+  besoin un exemple familier, jamais présenté comme le sien.
+- **Pas d'analyse de l'argumentation pour elle-même** (« la thèse est
+  posée, non démontrée ») sauf quand cela change sa portée.
+
+**Le fil.** Le premier paragraphe, affiché plus grand, dit la fonction de la
+leçon dans l'ensemble, puis ce qu'elle établit. Ensuite un paragraphe par
+étape, ouvert par une courte phrase en gras qui dit ce qu'elle établit, sans
+numérotation (« Premier argument : » est proscrit) ; des connecteurs entre
+les phrases (donc, or, car, en revanche) ; un pont vers la leçon suivante
+quand une difficulté reste ouverte. Les pièges `! …` visent un contresens
+précis.
+
+**Les cartes font retenir le raisonnement, pas seulement les termes.** En
+plus des six familles de points, des **cartes de pivot** : plusieurs
+phrases qui refont l'argument pas à pas, sans guillemets, le trou sur la
+prémisse ou le mot qui le fait tenir (« Dans la vie, les fonctions sont
+simultanées ; la mort les déroule dans le temps, et change ainsi les
+enchaînements logiques en enchaînements ___. »). Et, pour chaque citation
+clé, la **cascade** (point 5 ci-dessus) est la règle, non l'exception.
+
+**La passe de clarification**, avant la validation, leçon par leçon : pour
+chaque paragraphe et chaque carte, (1) est-ce abstrait ? alors le
+développer sur l'exemple même ; (2) peut-on s'y tromper ? alors désamorcer
+le contresens dans le rappel et par un piège ; (3) y a-t-il un argument ?
+alors le déplier jusqu'à convaincre (« si je ne croyais pas l'auteur, ce
+paragraphe me ferait-il changer d'avis ? »), et lui donner sa carte de
+pivot. La passe allonge le cours : c'est voulu.
+
+### Un cours sur un auteur, tiré d'un commentaire
+
+Quand la source est un livre ou un article sur un auteur (Huneman, *Bichat,
+la vie et la mort*, pour le cours `bichat1` à `bichat4`), le cours porte sur
+l'**auteur**, pas sur le commentaire :
+- **pas de repérage du commentaire** : ni plan de ses chapitres, ni point de
+  localisation dans ses pages ; les points de localisation portent sur les
+  œuvres de l'auteur, avec les repères que donne le commentaire
+  (*Recherches*, I, art. 7, §1) ;
+- **une unité par grande partie du commentaire**, une leçon par section ou
+  sous-section, dans son ordre ;
+- **le texte du commentaire peut se reprendre mot pour mot, sans
+  guillemets**, dès lors que le rappel l'explique bien (l'interdit de la
+  paraphrase, propre aux traductions, ne vaut pas ici) ; les guillemets
+  restent réservés aux citations de l'auteur et des autres auteurs ;
+- **les citations que donne le commentaire font foi** : elles se reprennent
+  telles quelles, avec ses repères, sans vérification dans l'œuvre ; seule
+  leur copie se contrôle sur le PDF du commentaire
+  (`python -I .claude/skills/cours-oeuvre/texte.py verifie "<pdf>" <fichier.yaml>`) ;
+- **la lecture du commentateur se dit comme sienne** quand elle va au-delà
+  de ce que l'auteur affirme (pour Huneman : la mort comme accès du savoir
+  aux enchaînements organiques), et un point attributionnel sur un
+  commentateur reste réservé aux vrais débats (Albury contre Huneman sur
+  ce que Magendie doit à Bichat).
+
 ## Déroulé de rédaction
 
 Le déroulé qui suit adapte celui de la skill quizlet-fiche-sep à une
-rédaction sans validation humaine section par section (ce contenu est
-produit par un agent, en tâche de fond) : la prudence qu'apporterait
-normalement cette validation se reporte sur un auto-audit systématique.
+rédaction sans validation humaine avant la relecture finale : on ne pose pas
+de questions à l'utilisateur en cours de route, on écrit tout le cours, et
+l'utilisateur le corrige en le relisant. La prudence qu'apporterait une
+validation section par section se reporte sur un auto-audit systématique.
 
 1. **Une section du texte source à la fois**, dans son ordre. Ne jamais
-   traiter tout un article d'un bloc.
+   traiter tout un article d'un bloc. Avant d'écrire, une courte analyse
+   dans un fichier du dossier temporaire : la question de la section, sa
+   thèse, contre qui, ses arguments dans l'ordre où ils s'enchaînent, les
+   contresens qui guettent.
 2. **Écrire d'abord le rappel (`notes`) de la lesson**, qui résume la section
    avec le soin pédagogique décrit ci-dessus : ce rappel sert de garde-fou de
    compréhension avant la rédaction des points.
 3. **Écrire les points de la lesson**, dans l'ordre du texte, en appliquant
    dès la rédaction (pas seulement en relecture) la règle d'or et le test
    de clarté pédagogique.
-4. **Auto-audit avant de passer à la section suivante**, sur l'ensemble des
+4. **Passe de clarification** (voir plus haut) sur la leçon écrite.
+5. **Auto-audit avant de passer à la section suivante**, sur l'ensemble des
    lessons déjà écrites du cours (pas seulement le dernier lot) :
    - chaque `sentence` passe-t-elle le test des six mois ?
    - chaque point attributionnel de commentateur secondaire relève-t-il
@@ -399,7 +477,7 @@ normalement cette validation se reporte sur un auto-audit systématique.
    - aucun point ne porte `options` ni `translation` ;
    - `answer` reste toujours un terme, un nom ou une référence courte, jamais
      une phrase qui résume l'idée.
-5. **Compiler et valider** avec `npm run content:check` après chaque unité
+6. **Compiler et valider** avec `npm run content:check` après chaque unité
    écrite (pas seulement à la fin) : une erreur trouvée tôt coûte moins cher
    à corriger qu'une erreur découverte après plusieurs unités de plus.
 

@@ -1,0 +1,582 @@
+# Cours sur Bichat (voir content/philosophie.md, § « Un cours sur un auteur,
+# tiré d'un commentaire »), tiré de Philippe Huneman, Bichat, la vie et la
+# mort, PUF, « Philosophies », 1998 : chapitre II, « Les thèses de Bichat et
+# leur généalogie ». Citations et repères tels que Huneman les donne
+# (R = Recherches physiologiques sur la vie et la mort ; AG = Anatomie
+# générale ; AD = Anatomie descriptive).
+
+id: bichat2
+title: "Les thèses de Bichat"
+subtitle: "La vie qui résiste, les deux vies, les tissus et leurs propriétés"
+icon: palette
+color: coral
+group: "Bichat : la vie et la mort"
+lessons:
+- id: bichat2-l1
+  title: "La définition vitaliste de la vie"
+  notes: |-
+    **Bichat est connu pour trois choses**, dont aucune n'est entièrement neuve : son originalité tient à leur **articulation**.
+    - en **anatomie**, considérer le corps selon la texture de chaque {violet}tissu{/violet}, et non selon la distribution spatiale et les voisinages des organes, d'où l'{violet}anatomie pathologique{/violet} : tout trouble renvoie à la lésion déterminée d'un tissu ;
+    - en **physiologie**, la définition {teal}« La vie, c'est l'ensemble des fonctions qui résistent à la mort »{/teal} (*Recherches*, p. 3) ;
+    - la division des fonctions en {violet}vie organique{/violet}, centrée sur soi (respiration, digestion), et {violet}vie animale{/violet}, en relation avec le milieu (sensation, locomotion), à laquelle se réfèrent Hegel, Ravaisson, Comte et surtout Schopenhauer.
+
+    **La définition prolonge Stahl.** Il écrivait déjà : {teal}« On doit entendre par ce mot Vie : la conservation même d'un corps éminemment corruptible, la Faculté ou force par laquelle ce corps est mis à l'abri de l'acte corrupteur. »{/teal} Bichat la développe de façon typiquement vitaliste : {pink}les corps bruts sont régis par des lois fixes, qui entraînent toujours leur dégradation{/pink} ; {green}les corps vivants s'en distinguent par des lois plus variables, qui leur donnent une évolution propre et la conservation d'eux-mêmes{/green}. Soumis à l'action perpétuellement dégradante des forces physiques, le vivant doit avoir {teal}« un principe permanent de réaction »{/teal} (*R*, I, art. 1, §1). **La vie est un principe de résistance aux forces physiques qui tendent à la détruire.** Cuvier, au début de l'*Anatomie comparée*, la personnifie en {yellow}une jeune fille en bonne santé{/yellow}, étonnante parce qu'elle se conserve contre toutes les agressions du dehors, alors que dès sa mort celles-ci l'emportent.
+
+    **Bichat ne dit rien de la nature de la force vitale.** Elle est {teal}« inconnue dans sa nature »{/teal} ; il constate seulement la dualité des forces à partir des phénomènes, qui sont {teal}« d'action et de réaction »{/teal}. Contre **Barthez**, disciple de Bordeu, il refuse de chercher un {red}« principe de vie »{/red}, un {teal}« centre unique de tous les actes qui portent le caractère de la vitalité »{/teal} : les causes premières sont inaccessibles, et d'ailleurs inutiles. {teal}« Ne peut-on sans connaître le principe de la vie, analyser les propriétés des organes qu'elle anime ? »{/teal} (*R*, I, art. 7, §1).
+
+    **Action et réaction sont dans une proportion qui change avec l'âge.** Les forces physiques agissent continûment, en lui et hors de lui ; le vivant réagit ; et la proportion décroît, avec le temps, en faveur des forces physiques.
+
+    ! La définition de Bichat est identique dans sa lettre à celle de Stahl ou de Barthez, mais elle n'aura pas le même sens : chez Bichat, elle donnera accès à la vie par la mort (voir la troisième unité).
+  points:
+  - id: bichat2-l1-p1
+    sentence: "L'originalité de Bichat ne réside dans aucune de ses trois thèses célèbres (tissus, définition de la vie, division des vies), dont aucune n'est entièrement neuve, mais dans leur ___ au sein de son travail."
+    answer: "articulation"
+    alt: []
+  - id: bichat2-l1-p2
+    sentence: "En anatomie, Bichat considère le corps selon la ___ de chaque tissu, et non plus selon la distribution spatiale des organes et leurs voisinages."
+    answer: "texture"
+    alt: []
+  - id: bichat2-l1-p3
+    sentence: "Les *Recherches* de Bichat divisent les fonctions en vie ___, où l'animal est centré sur soi (respiration, digestion), et vie animale, où il est en relation avec son milieu (sensation, locomotion)."
+    answer: "organique"
+    alt: []
+  - id: bichat2-l1-p4
+    sentence: "La division bichatienne de la vie organique et de la vie animale est reprise par Hegel, Ravaisson, Comte et surtout ___, dans le supplément XX du *Monde comme volonté et représentation*."
+    answer: "Schopenhauer"
+    alt: []
+  - id: bichat2-l1-p5
+    sentence: "« On doit entendre par ce mot Vie : la ___ même d'un corps éminemment corruptible, la Faculté ou force par laquelle ce corps est mis à l'abri de l'acte corrupteur » : la définition de Bichat prolonge celle de Stahl."
+    answer: "conservation"
+    alt: []
+  - id: bichat2-l1-p6
+    sentence: "« On doit entendre par ce mot Vie : la conservation même d'un corps éminemment ___ » (Stahl) : le vivant est menacé par sa propre matière."
+    answer: "corruptible"
+    alt: []
+  - id: bichat2-l1-p7
+    sentence: "Pour Stahl, la vie est « la Faculté ou force par laquelle ce corps est mis à l'abri de l'acte ___ »."
+    answer: "corrupteur"
+    alt: []
+  - id: bichat2-l1-p8
+    sentence: "Les corps bruts sont régis par des lois fixes qui entraînent leur dégradation ; les corps vivants s'en distinguent par des lois plus ___, qui leur confèrent une conservation d'eux-mêmes."
+    answer: "variables"
+    alt: []
+  - id: bichat2-l1-p9
+    sentence: "Soumis à l'action perpétuellement dégradante des forces physiques, le corps vivant doit avoir, selon Bichat, « un principe permanent de ___ »."
+    answer: "réaction"
+    alt: []
+  - id: bichat2-l1-p10
+    sentence: "Le « principe permanent de réaction » qui définit le vivant face aux forces physiques est posé par Bichat dans les *Recherches*, ___."
+    answer: "I, art. 1, §1"
+    alt: ["I, article 1, §1", "partie I, art. 1, §1"]
+  - id: bichat2-l1-p11
+    sentence: "Au début de l'*Anatomie comparée*, ___ personnifie la vie en une jeune fille en bonne santé, qui se conserve contre toutes les agressions du dehors, alors que dès sa mort celles-ci l'emportent."
+    answer: "Cuvier"
+    alt: []
+  - id: bichat2-l1-p12
+    sentence: "Bichat n'avance aucune thèse sur la nature de la force vitale, « ___ dans sa nature » : il constate seulement la dualité des forces à partir des phénomènes."
+    answer: "inconnue"
+    alt: []
+  - id: bichat2-l1-p13
+    sentence: "Bichat ne fait que constater la dualité des forces à partir des phénomènes, qui sont « d'action et de ___ »."
+    answer: "réaction"
+    alt: []
+  - id: bichat2-l1-p14
+    sentence: "Contre ___, disciple de Bordeu, Bichat refuse de revenir à un « principe de vie », centre unique de tous les actes de la vitalité."
+    answer: "Barthez"
+    alt: []
+  - id: bichat2-l1-p15
+    sentence: "« Ne peut-on sans connaître le ___ de la vie, analyser les propriétés des organes qu'elle anime ? » : Bichat renonce à la cause première pour étudier les propriétés."
+    answer: "principe"
+    alt: []
+  - id: bichat2-l1-p16
+    sentence: "La proportion entre l'action des forces physiques et la réaction vitale varie avec l'___, décroissant en faveur des forces physiques à mesure que le temps passe."
+    answer: "âge"
+    alt: ["age"]
+- id: bichat2-l2
+  title: "Forces vitales et forces physiques : l'écueil de la variabilité"
+  notes: |-
+    **Les deux types de forces sont hétérogènes**, et c'est là la difficulté de tout vitalisme, que Bichat voit clairement.
+
+    **Les forces physiques sont invariables, les forces vitales varient.** Les premières produisent des phénomènes {teal}« toujours uniformes »{/teal} (*R*, I, art. 7, §1). Ainsi {pink}la « faculté physique d'attirer » reste constante pour un même corps{/pink}, tandis que {green}la « faculté vitale de sentir » est variable pour un même organe{/green}.
+
+    **D'où trois conséquences.**
+    - {red}Cette variabilité empêche d'user du calcul en médecine{/red}, à la différence de la physique.
+    - Les méthodes des autres sciences, appliquées au vivant, en masquent l'originalité : la chimie des fluides vitaux n'est qu'une {teal}« chimie cadavérique des fluides »{/teal}, puisqu'elle analyse des liquides sortis du corps, donc morts.
+    - Cette irrégularité est {teal}« l'écueil »{/teal} des {violet}iatrochimistes{/violet} comme Van Helmont et des plus récents {violet}iatromécaniciens{/violet}, qui ont voulu réduire le corps à la chimie ou à la mécanique.
+
+    **Bichat n'abandonne pas pour autant le dessein d'une science.** Sa conclusion : {teal}« La science des corps organisés doit être traitée d'une manière toute différente de celles qui ont les corps inorganiques pour objet. »{/teal} Tout son travail peut se lire comme {green}__une tentative réussie pour contourner la difficulté du vitalisme en sauvegardant l'ambition d'une science autonome du vivant__{/green}.
+
+    **Une ironie le montre.** Si la physiologie avait été cultivée avant la physique, les hommes, pense Bichat, auraient appliqué la première à la seconde : ils auraient vu {yellow}les fleuves couler par l'action tonique de leurs rivages, les cristaux se réunir par l'excitation de leur sensibilité réciproque, les planètes se mouvoir parce qu'elles s'irritent à distance{/yellow}. L'importation de la physique en physiologie est aussi absurde que serait l'inverse.
+
+    ! La variabilité n'est pas, pour Bichat, un défaut de nos instruments : elle tient à la nature même des propriétés vitales. La question est donc de trouver, dans le vivant, quelque chose qui ne varie pas.
+  points:
+  - id: bichat2-l2-p1
+    sentence: "Pour Bichat, les forces physiques, invariables, produisent des phénomènes « toujours ___ », tandis que les forces vitales varient."
+    answer: "uniformes"
+    alt: []
+  - id: bichat2-l2-p2
+    sentence: "Exemple de Bichat : la « faculté physique d'___ » reste constante pour un même corps, tandis que la faculté vitale de sentir est variable pour un même organe."
+    answer: "attirer"
+    alt: []
+  - id: bichat2-l2-p3
+    sentence: "Exemple de Bichat : la faculté physique d'attirer reste constante pour un même corps, tandis que la « faculté vitale de ___ » est variable pour un même organe."
+    answer: "sentir"
+    alt: []
+  - id: bichat2-l2-p4
+    sentence: "Parce que les forces vitales varient pour un même organe, on ne peut user en médecine du ___, à la différence de ce qui se fait en physique."
+    answer: "calcul"
+    alt: []
+  - id: bichat2-l2-p5
+    sentence: "Pour Bichat, la chimie qui analyse les fluides vitaux hors du corps vivant n'est qu'une « chimie ___ des fluides »."
+    answer: "cadavérique"
+    alt: []
+  - id: bichat2-l2-p6
+    sentence: "L'irrégularité des forces vitales est « l'écueil » des iatrochimistes comme ___, aussi bien que des iatromécaniciens."
+    answer: "Van Helmont"
+    alt: []
+  - id: bichat2-l2-p7
+    sentence: "« La science des corps ___ doit être traitée d'une manière toute différente de celles qui ont les corps inorganiques pour objet » : Bichat garde l'ambition d'une science, mais autonome."
+    answer: "organisés"
+    alt: []
+  - id: bichat2-l2-p8
+    sentence: "« La science des corps organisés doit être traitée d'une manière toute ___ de celles qui ont les corps inorganiques pour objet. »"
+    answer: "différente"
+    alt: []
+  - id: bichat2-l2-p9
+    sentence: "Tout le travail de Bichat peut se lire comme une tentative réussie pour contourner la difficulté du vitalisme, l'irrégularité des lois vitales, en sauvegardant l'ambition d'une science ___ du vivant."
+    answer: "autonome"
+    alt: []
+  - id: bichat2-l2-p9x
+    sentence: "Les forces vitales varient pour un même organe ; une science du vivant ne peut donc porter sur elles. Pour qu'elle reste possible malgré le vitalisme, il faut trouver dans le vivant quelque chose qui ne ___ pas."
+    answer: "varie"
+    alt: []
+  - id: bichat2-l2-p10
+    sentence: "Si la physiologie avait été cultivée avant la physique, pense Bichat, les hommes auraient vu les fleuves couler par l'action ___ de leurs rivages."
+    answer: "tonique"
+    alt: []
+  - id: bichat2-l2-p11
+    sentence: "Si la physiologie avait été cultivée avant la physique, pense Bichat, les hommes auraient vu les planètes se mouvoir parce qu'elles s'___ réciproquement à de grandes distances."
+    answer: "irritent"
+    alt: []
+- id: bichat2-l3
+  title: "La division des vies"
+  notes: |-
+    **Bichat ne veut pas d'une médecine seulement conjecturale**, pourvue d'une {pink}« certitude pratique »{/pink} comme l'enseignait Cabanis. Deux thèses servent cette ambition ; la première est la **division des fonctions**, longuement étudiée dans les *Recherches*.
+
+    **L'idée de diviser les fonctions n'est pas neuve.** Le médecin A. **Louis** distinguait fonctions naturelles (nutrition, génération), vitales (cœur, poumon, cerveau : quand elles cessent, la vie cesse) et animales (sensibilité, locomotion) ; **Cuvier** oppose les caractères communs à tous les corps organisés (génération, nutrition, mort) aux facultés de sentir et de se mouvoir, propres aux animaux.
+
+    **Mais Bichat veut la division « la seule réelle »** (*R*, I, art. 1, §1), et son principe est neuf.
+    - Les autres fondent la division sur {pink}l'importance des organes qui exécutent les fonctions{/pink} (les végétaux peuvent vivre sans système digestif).
+    - Bichat divise {green}__les fonctions elles-mêmes, et non les organes, selon le type de rapport qu'elles établissent__{/green} : rapport à soi, rapport au monde. Le principe est {coral}plus authentiquement physiologique{/coral}, et parent du concept de {violet}milieu{/violet} dont Lamarck esquisse alors les linéaments.
+
+    **Les deux vies.**
+    - Une vie « au-dedans de soi », que vit le végétal : la {violet}vie organique{/violet}.
+    - Une « vie extérieure », propre à l'animal : la {violet}vie animale{/violet}. {teal}« Il rapporte tout à son existence, il existe hors de lui, il est l'habitant du monde. »{/teal}
+
+    **Les fonctions se subdivisent alors d'elles-mêmes.**
+
+    | Vie | Ordre | Fonctions |
+    | organique | assimilation | nutrition, digestion |
+    | organique | désassimilation | absorption, sécrétion |
+    | animale | ordre actif | cerveau vers les sens : motricité |
+    | animale | ordre passif | sens vers le cerveau : sensibilité |
+
+    **Pourquoi c'est la « division la plus naturelle ».** Précisément parce que les fonctions sont divisées à partir d'elles-mêmes, non des organes qui les supportent, la physiologie devient un discours {coral}en complète adéquation avec son objet, les fonctions du vivant{/coral}.
+
+    ! La vie organique n'est pas réservée aux plantes : l'animal vit les deux vies. Le végétal est seulement l'exemple d'un vivant qui n'a que la première.
+  tables:
+  - table: vie-ordre-fonctions
+    exercises:
+    - {kind: bank, column: Ordre}
+    - {kind: cell, column: Ordre}
+  points:
+  - id: bichat2-l3-p1
+    sentence: "Bichat ne veut pas d'une médecine conjecturale, pourvue seulement d'une « certitude ___ » comme l'enseignait Cabanis."
+    answer: "pratique"
+    alt: []
+  - id: bichat2-l3-p2
+    sentence: "Avant Bichat, le médecin A. Louis distinguait fonctions naturelles (nutrition, génération), fonctions ___ (cœur, poumon, cerveau, dont la cessation fait cesser la vie) et fonctions animales (sensibilité, locomotion)."
+    answer: "vitales"
+    alt: []
+  - id: bichat2-l3-p3
+    sentence: "Bichat veut une division des fonctions définitive, qui rompe les querelles de doctrine et soit « la seule ___ »."
+    answer: "réelle"
+    alt: []
+  - id: bichat2-l3-p4
+    sentence: "Louis et Cuvier fondent la division des fonctions sur l'importance des organes qui les exécutent ; Bichat divise les ___ elles-mêmes, selon le type de rapport qu'elles établissent."
+    answer: "fonctions"
+    alt: []
+  - id: bichat2-l3-p5
+    sentence: "Le principe de division de Bichat oppose les fonctions de rapport à soi et les fonctions de rapport au ___, perspective parente du concept de milieu dont Lamarck esquisse alors les linéaments."
+    answer: "monde"
+    alt: []
+  - id: bichat2-l3-p6
+    sentence: "La vie « au-dedans de soi », que vit le végétal, est chez Bichat la vie ___."
+    answer: "organique"
+    alt: []
+  - id: bichat2-l3-p7
+    sentence: "La « vie extérieure », qui caractérise l'animal, est chez Bichat la vie ___."
+    answer: "animale"
+    alt: []
+  - id: bichat2-l3-p8
+    sentence: "« Il rapporte tout à son existence, il existe hors de lui, il est l'___ du monde » : Bichat caractérise ainsi l'animal, vivant de la vie animale."
+    answer: "habitant"
+    alt: []
+  - id: bichat2-l3-p9
+    sentence: "Les fonctions de la vie organique se subdivisent en assimilation (nutrition, digestion) et ___ (absorption, sécrétion)."
+    answer: "désassimilation"
+    alt: []
+  - id: bichat2-l3-p10
+    sentence: "Les fonctions de la vie animale se subdivisent en ordre ___ (du cerveau vers les sens : motricité) et ordre passif (des sens vers le cerveau : sensibilité)."
+    answer: "actif"
+    alt: []
+  - id: bichat2-l3-p11
+    sentence: "Les fonctions de la vie animale se subdivisent en ordre actif (motricité) et ordre ___ (des sens vers le cerveau : sensibilité)."
+    answer: "passif"
+    alt: []
+  - id: bichat2-l3-p12
+    sentence: "Parce qu'il divise les fonctions à partir d'elles-mêmes et non des organes qui les supportent, Bichat peut dire qu'il accomplit la « division la plus ___ »."
+    answer: "naturelle"
+    alt: []
+- id: bichat2-l4
+  title: "La vie localisée dans les tissus"
+  notes: |-
+    **La théorie des tissus doit donner des bases fermes à la science nouvelle** et clore la querelle de l'irritabilité entre Haller et Bordeu. Elle y réussit : elle restera l'élément incontesté du savoir sur le vivant jusqu'à Claude Bernard et la théorie cellulaire.
+
+    **Une histoire de la localisation de la vie.** Rétrospectivement :
+
+    | Époque | Siège de la vie |
+    | science galénique | une âme dont on cherche le siège |
+    | vitalistes | les organes |
+    | Bichat | les tissus |
+    | Schwann, Schleiden, Virchow | la cellule |
+
+    **La généalogie de l'idée.** Haller différenciait déjà les parties par leurs propriétés. Bichat relie cette étude à la médecine : {green}__chaque tissu ayant sa manière propre d'être affecté, on connaît les maladies par l'altération des tissus__{/green}, ce qui constitue l'{violet}anatomie pathologique{/violet}. **Pinel**, dont Bichat suivit les cours, en avait esquissé l'idée dans sa *Nosographie philosophique* (1797), classant les inflammations, ou {violet}phlegmasies{/violet}, d'après les caractères des affections organiques, mais dans un projet encore nosologique. L'ancêtre le plus lointain, retrouvé par Othmar **Keel**, est l'Écossais **Smyth** (1788), qui distinguait les phlegmasies selon la structure des membranes affectées : {coral}l'inflammation est un seul processus qui se diversifie selon les tissus{/coral}. Et c'est **William Hunter** qui le premier a situé le siège de la maladie au niveau du tissu et non de l'organe : la généalogie renvoie à l'{sky}école d'Édimbourg{/sky}, et à travers elle à Locke et Hume.
+
+    **Le *Traité des membranes* ouvre la voie.** La différence entre deux membranes éloignées est {teal}« dans la forme plutôt que dans le fond de leur organisation »{/teal} : il faut donc classer les parties {green}selon leur nature propre, indépendamment du lieu où elles se trouvent{/green}. Deux membranes sont d'une même classe si elles ont même {teal}« conformation extérieure, de structure, de propriétés et de fonctions »{/teal}. Les membranes simples sont muqueuses, séreuses ou fibreuses ; Bichat range parmi les séreuses les {violet}synoviales{/violet}, jusque-là traitées à part. Haller, lui, les confondait toutes comme {pink}« modifications de l'organe cellulaire »{/pink}.
+
+    **Les niveaux d'organisation.** Quelques tissus simples, partout les mêmes, sont les {teal}« éléments organisés de l'économie vivante »{/teal}. La totalité d'un tissu dans le corps est un {violet}système{/violet} (osseux) ; l'union d'éléments de plusieurs systèmes, un {violet}organe{/violet} ; l'union d'organes concourant à une fonction, un {violet}appareil{/violet} (digestif). Le premier niveau est fondamental et invisible, le dernier est celui où se voient les manifestations vitales ; chaque niveau a des propriétés et un usage irréductibles au précédent.
+
+    **Deux anatomies.** Bichat compte {coral}21 tissus{/coral}, qui {teal}« sont le sujet de l'anatomie générale ; leurs combinaisons diverses sont celui de l'anatomie descriptive »{/teal}. Mais {teal}« aucun tissu n'existe isolément »{/teal} : l'anatomie générale est une abstraction, science introductive comparable à la {yellow}chimie de Lavoisier, qui recense les corps simples{/yellow}.
+
+    ! Le « tissu cellulaire » de Bichat n'a pas le sens de la théorie cellulaire : c'est un des 21 tissus, non l'élément de tous.
+  tables:
+  - table: epoque-siege-de-la-vie
+    exercises:
+    - {kind: order, column: Époque}
+    - {kind: cell, column: Siège de la vie}
+  points:
+  - id: bichat2-l4-p1
+    sentence: "Histoire de la localisation de la vie : dans une âme pour la science galénique, dans les organes pour les vitalistes, dans les ___ pour Bichat, dans la cellule pour Schwann, Schleiden et Virchow."
+    answer: "tissus"
+    alt: []
+  - id: bichat2-l4-p2
+    sentence: "Chaque tissu ayant sa manière propre d'être affecté, on peut connaître les maladies en comprenant l'altération des tissus : cette idée constitue l'anatomie ___."
+    answer: "pathologique"
+    alt: []
+  - id: bichat2-l4-p3
+    sentence: "Dans sa *Nosographie philosophique* (1797), ___, dont Bichat suivit les cours, esquisse l'idée de l'anatomie pathologique en classant les inflammations d'après les caractères des affections organiques."
+    answer: "Pinel"
+    alt: []
+  - id: bichat2-l4-p4
+    sentence: "Dans la médecine du XVIIIe siècle, les inflammations s'appellent les ___."
+    answer: "phlegmasies"
+    alt: []
+  - id: bichat2-l4-p5
+    sentence: "L'ancêtre le plus lointain de l'anatomie pathologique, retrouvé par Othmar Keel, est l'Écossais ___, qui distinguait en 1788 les inflammations selon la structure des membranes qu'elles affectaient."
+    answer: "Smyth"
+    alt: []
+  - id: bichat2-l4-p6
+    sentence: "Le premier à signaler que le siège de la maladie pouvait être au niveau du tissu et non de l'organe est William ___ (*Medical observations*, 1764)."
+    answer: "Hunter"
+    alt: []
+  - id: bichat2-l4-p7
+    sentence: "La généalogie de l'anatomie pathologique renvoie, en deçà de Pinel et de Bichat, à l'école médicale d'___ (Cullen, les frères Hunter, les Monro)."
+    answer: "Édimbourg"
+    alt: ["Edimbourg"]
+  - id: bichat2-l4-p8
+    sentence: "Dans le *Traité des ___*, Bichat indique que la différence entre deux membranes éloignées est « dans la forme plutôt que dans le fond de leur organisation »."
+    answer: "membranes"
+    alt: []
+  - id: bichat2-l4-p9
+    sentence: "Puisque la différence entre deux membranes éloignées est « dans la forme plutôt que dans le fond de leur organisation », Bichat classe les parties selon leur nature propre, indépendamment du ___ où elles se trouvent."
+    answer: "lieu"
+    alt: []
+  - id: bichat2-l4-p10
+    sentence: "Les membranes simples se distribuent chez Bichat en trois types : muqueuses, ___ et fibreuses."
+    answer: "séreuses"
+    alt: []
+  - id: bichat2-l4-p11
+    sentence: "Une nouveauté du *Traité des membranes* est de classer parmi les membranes séreuses les ___, qui tapissent les articulations mobiles et étaient auparavant traitées à part."
+    answer: "synoviales"
+    alt: []
+  - id: bichat2-l4-p12
+    sentence: "Chez Bichat, la totalité d'un tissu simple dans le corps est un ___ (osseux, nerveux)."
+    answer: "système"
+    alt: []
+  - id: bichat2-l4-p13
+    sentence: "Chez Bichat, l'union de plusieurs organes concourant à une même fonction est un ___ (digestif)."
+    answer: "appareil"
+    alt: []
+  - id: bichat2-l4-p14
+    sentence: "Bichat compte ___ tissus de base."
+    answer: "21"
+    alt: ["vingt et un"]
+  - id: bichat2-l4-p15
+    sentence: "Les tissus « sont le sujet de l'anatomie ___ ; leurs combinaisons diverses sont celui de l'anatomie descriptive »."
+    answer: "générale"
+    alt: []
+  - id: bichat2-l4-p16
+    sentence: "L'anatomie générale est une abstraction, car « aucun tissu n'existe ___ » : seule l'anatomie descriptive examine les organes tels que la nature nous les présente."
+    answer: "isolément"
+    alt: []
+  - id: bichat2-l4-p17
+    sentence: "Bichat compare l'anatomie générale, science des éléments primitifs de la vie, à la ___ de Lavoisier, établie sur la recension des corps simples."
+    answer: "chimie"
+    alt: []
+- id: bichat2-l5
+  title: "Sensibilité et contractilité : les propriétés vitales"
+  notes: |-
+    **Bichat se réfère à Newton pour faire du vivant l'objet d'une science des phénomènes.** {pink}L'anatomie, la zoologie{/pink} sont, comme la minéralogie, des **sciences des formes** : elles classent. {green}La physique et la physiologie{/green} sont des **sciences des phénomènes**. Le vivant n'a pas encore accédé au statut d'objet d'une science des phénomènes ; or pour Bichat {coral}la vie n'est pas tant une forme qu'un fonctionnement{/coral}, une économie animale, dont il faut trouver l'intelligibilité.
+
+    **L'axiome commun des sciences, et leur hétérogénéité.** Comme en physique et en chimie, l'axiome de la physiologie est {teal}« le rapport des propriétés comme causes avec les phénomènes comme effets »{/teal} (*AG*, préface). Mais si chaque science a ses propriétés cardinales, {red}on ne peut transporter celles de l'une dans l'autre{/red} : le mécanisme a fait fausse route en important attraction et impulsion en physiologie. Si la physiologie emprunte parfois des lois physiques, c'est une **contingence historique** : la physique a été cultivée la première.
+
+    **Les propriétés des tissus tiennent à l'« arrangement » des molécules.** Le vitalisme de Bichat est donc loin de l'animisme et du principe vital de Barthez : il signifie seulement que {coral}cet arrangement ne s'engendre pas par les lois physiques ordinaires{/coral}.
+
+    **Deux propriétés, dédoublées par la division des vies.** {teal}« Sensibilité et contractilité, voilà les propriétés vitales »{/teal}.
+
+    | Propriété | animale | organique |
+    | sensibilité | rapportée au cerveau par les nerfs | localisée dans l'organe, sans conscience |
+    | contractilité | muscles volontaires | principe dans l'organe qui se meut |
+
+    **La sensibilité règle les échanges.** Chaque organe a une {violet}somme initiale de sensibilité{/violet} autour de laquelle sa sensibilité actuelle oscille. Elle fixe ses relations : {coral}seuls deux organes de sensibilités voisines peuvent s'affecter{/coral}, même voisins dans l'espace. D'où la sélectivité des organes de passage (larynx, membranes, lymphatiques), et l'intelligibilité des échanges de l'économie animale.
+
+    **Une continuité, et une épuration.** Une **inflammation** transforme la sensibilité organique d'un organe en sensibilité animale : on sent alors son membre douloureux. Bichat épure le concept flou d'{violet}irritabilité{/violet}, réduit à une contractilité organique ; sa sensibilité évacue l'âme sensitive sans devenir, comme chez les disciples de Bordeu, le principe de la vie. L'originalité n'est pas dans les termes, mais dans le **principe de distinction** (vie animale, vie organique) et la **localisation dans les tissus**.
+
+    **Physiologie et pathologie ont la même source.** {teal}« tout phénomène physiologique se rapporte en dernière instance à ces propriétés (vitales) considérées dans leur état naturel, que tout phénomène pathologique dérive de leur augmentation, diminution ou altération »{/teal}. D'où {teal}« chaque maladie a son remède approprié »{/teal}, contre la médecine purement empirique.
+
+    **Le vivant est décentralisé.** La vie appartient à chaque tissu : chacun {teal}« a son organisation particulière comme il a sa vie propre »{/teal}. La « vie propre » de Bordeu descend au niveau des tissus, et {green}la métaphore de l'essaim d'abeilles n'a plus lieu d'être{/green} : un animal n'est plus fait d'animaux élémentaires.
+  tables:
+  - table: propriete-animale-organique
+    exercises:
+    - {kind: bank, column: organique}
+  points:
+  - id: bichat2-l5-p1
+    sentence: "L'anatomie et la zoologie sont, comme la minéralogie, des sciences des ___ ; la physique et la physiologie sont des sciences des phénomènes."
+    answer: "formes"
+    alt: []
+  - id: bichat2-l5-p2
+    sentence: "Pour Bichat comme pour ses contemporains, la vie n'est pas tant une forme qu'un ___, une économie animale dont il faut rendre intelligibles les phénomènes."
+    answer: "fonctionnement"
+    alt: []
+  - id: bichat2-l5-p3
+    sentence: "Comme en physique et en chimie, l'axiome de la physiologie est « le rapport des ___ comme causes avec les phénomènes comme effets »."
+    answer: "propriétés"
+    alt: []
+  - id: bichat2-l5-p4
+    sentence: "Si chaque science a ses propriétés cardinales, on ne peut transporter celles de l'une dans une autre : le mécanisme a fait fausse route en important l'attraction et l'___ en physiologie."
+    answer: "impulsion"
+    alt: []
+  - id: bichat2-l5-p5
+    sentence: "Si la physiologie emprunte parfois à la physique ses lois et ses termes, ce n'est pas une nécessité d'essence, mais une contingence ___ : la physique a été cultivée avant la physiologie."
+    answer: "historique"
+    alt: []
+  - id: bichat2-l5-p6
+    sentence: "Pour Bichat, les propriétés des tissus sont dues à l'« ___ » des molécules : son vitalisme signifie seulement que cet arrangement ne s'engendre pas par les lois physiques ordinaires."
+    answer: "arrangement"
+    alt: []
+  - id: bichat2-l5-p7
+    sentence: "« Sensibilité et ___, voilà les propriétés vitales » (Bichat, *Anatomie générale*)."
+    answer: "contractilité"
+    alt: []
+  - id: bichat2-l5-p8
+    sentence: "La sensibilité ___ rapporte au cerveau par les nerfs ; la sensibilité organique reste localisée dans l'organe, de sorte que l'âme n'en a pas conscience."
+    answer: "animale"
+    alt: []
+  - id: bichat2-l5-p9
+    sentence: "La contractilité animale siège dans les muscles ___ ; la contractilité organique a son principe dans l'organe qui se meut."
+    answer: "volontaires"
+    alt: []
+  - id: bichat2-l5-p10
+    sentence: "Chaque organe a une somme initiale de sensibilité autour de laquelle sa sensibilité actuelle oscille ; seuls deux organes de sensibilités ___ peuvent s'affecter, même s'ils sont voisins dans l'espace."
+    answer: "voisines"
+    alt: []
+  - id: bichat2-l5-p11
+    sentence: "La somme initiale de sensibilité d'un organe permet à Bichat d'expliquer la ___ des organes de passage (larynx, membranes, lymphatiques)."
+    answer: "sélectivité"
+    alt: []
+  - id: bichat2-l5-p12
+    sentence: "Le propre d'une ___ est de transformer la sensibilité organique d'un organe en sensibilité animale : on sent alors son membre douloureux."
+    answer: "inflammation"
+    alt: []
+  - id: bichat2-l5-p13
+    sentence: "Bichat épure le concept trop flou d'___, qu'il réduit à une contractilité organique."
+    answer: "irritabilité"
+    alt: []
+  - id: bichat2-l5-p14
+    sentence: "Tout phénomène physiologique se rapporte aux propriétés vitales dans leur état naturel ; tout phénomène pathologique dérive de leur augmentation, diminution ou ___."
+    answer: "altération"
+    alt: []
+  - id: bichat2-l5-p15
+    sentence: "Chaque maladie étant l'altération d'une propriété vitale, Bichat condamne la médecine purement empirique : « chaque maladie a son ___ approprié »."
+    answer: "remède"
+    alt: []
+  - id: bichat2-l5-p16
+    sentence: "Bichat veut montrer que chaque tissu « a son organisation particulière comme il a sa vie ___ » : la notion de Bordeu est déplacée au niveau des tissus."
+    answer: "propre"
+    alt: []
+  - id: bichat2-l5-p17
+    sentence: "En passant du niveau des organes à celui des tissus, Bichat élimine la conception d'un animal fait d'animaux élémentaires : la métaphore de l'essaim d'___ n'a plus lieu d'être."
+    answer: "abeilles"
+    alt: []
+- id: bichat2-l6
+  title: "La méthode anatomique"
+  notes: |-
+    **Quatre critères fondent l'identité de deux tissus**, et donnent le plan de l'étude de chaque membrane dans le *Traité* :
+    - la **conformation extérieure** et la **texture**, structure intérieure, qui relèvent de l'observation anatomique ;
+    - les **propriétés vitales** : on teste par des expériences le degré de {violet}tonicité{/violet}, d'irritabilité et de sensibilité de chaque tissu ;
+    - les **fonctions** (le degré de force vitale de la membrane, puisque la vie est répartie dans tous les éléments du corps) et les {violet}sympathies{/violet}, son rapport à l'économie animale entière ;
+    - enfin les **affections** qui lui sont propres.
+
+    L'*Anatomie générale* suit le même plan, en y ajoutant ce qui est nouveau : le {coral}développement{/coral} de chaque système.
+
+    **Une pluralité de moyens.** {teal}« Les expériences sur les animaux vivants, l'essai avec divers réactifs sur les tissus organisés, la dissection, l'ouverture cadavérique, l'observation de l'homme en bonne santé et malade »{/teal}. On y note {green}__l'union de la vision et de l'action sur le corps__{/green}, et l'appel à la chimie : {teal}« Les divers réactifs que j'ai employés n'ont été pour moi qu'un supplément à l'insuffisance du scalpel. »{/teal}
+
+    **La chimie a pris la place de la mécanique.** Depuis les travaux de **Lavoisier** sur la respiration, elle est la science modèle de la physiologie, comme la mécanique l'était au XVIIe siècle ; beaucoup de médecins se sont faits chimistes (Chaptal, Berthollet, Fourcroy). Bichat le remarque dans son *Discours sur l'étude de la physiologie* (1798), mais pour {red}limiter cet annexionnisme chimique{/red} : la chimie n'est qu'un supplément.
+  points:
+  - id: bichat2-l6-p1
+    sentence: "L'étude de chaque membrane suit les quatre critères de l'identité des tissus : conformation extérieure et ___, propriétés vitales, fonctions et sympathies, affections propres."
+    answer: "texture"
+    alt: []
+  - id: bichat2-l6-p2
+    sentence: "Parmi les propriétés vitales que Bichat teste par des expériences sur chaque tissu figurent l'irritabilité, la sensibilité et la ___."
+    answer: "tonicité"
+    alt: []
+  - id: bichat2-l6-p3
+    sentence: "L'*Anatomie générale* reprend le plan du *Traité des membranes*, mais y ajoute ce qui est nouveau : le ___ de chaque système."
+    answer: "développement"
+    alt: []
+  - id: bichat2-l6-p4
+    sentence: "Les moyens d'étude de Bichat : « les expériences sur les animaux ___, l'essai avec divers réactifs sur les tissus organisés, la dissection, l'ouverture cadavérique, l'observation de l'homme en bonne santé et malade »."
+    answer: "vivants"
+    alt: []
+  - id: bichat2-l6-p5
+    sentence: "Ce qui caractérise les moyens d'étude de Bichat est, outre l'appel à la chimie, l'union de la ___ et de l'action sur le corps."
+    answer: "vision"
+    alt: []
+  - id: bichat2-l6-p6
+    sentence: "« Les divers réactifs que j'ai employés n'ont été pour moi qu'un ___ à l'insuffisance du scalpel » : Bichat limite la place de la chimie en anatomie."
+    answer: "supplément"
+    alt: []
+  - id: bichat2-l6-p7
+    sentence: "« Les divers réactifs que j'ai employés n'ont été pour moi qu'un supplément à l'insuffisance du ___. »"
+    answer: "scalpel"
+    alt: []
+  - id: bichat2-l6-p8
+    sentence: "À la fin du XVIIIe siècle, depuis les travaux de ___ sur la respiration, la chimie a pris par rapport à la physiologie la place qu'y occupait la mécanique au XVIIe siècle."
+    answer: "Lavoisier"
+    alt: []
+  - id: bichat2-l6-p9
+    sentence: "Bichat note la place prise par la chimie en physiologie dans son *Discours sur l'étude de la ___* (1798), mais pour limiter cet annexionnisme chimique."
+    answer: "physiologie"
+    alt: []
+- id: bichat2-l7
+  title: "Bichat et Pinel : intégrer le négatif au savoir"
+  notes: |-
+    **L'analyse de Condillac.** Charles **Rosen** (1946) liait l'anatomie pathologique de Pinel et de Bichat à la philosophie de **Condillac** et des {violet}Idéologues{/violet}. Le projet condillacien d'{violet}analyse{/violet}, remonter aux propriétés ultimes observables sans en demander la cause et rendre compte du donné par leur agencement, dérivé de Locke et de Newton, a inspiré la plupart des contemporains de Bichat (et Lavoisier). Classer les maladies d'après les affections de tissus élémentaires relève de cette ascendance, même si Pinel a en fait emprunté l'idée à Smyth. Les titres de Pinel le disent : *Nosographie philosophique ou la méthode de l'analyse appliquée à la médecine*.
+
+    **Une coïncidence de dates.** En octobre 1800, peu avant les *Recherches*, paraît le *Traité médico-philosophique sur l'aliénation mentale ou la manie* de **Pinel**, qui ouvre l'ère de la psychiatrie. Il classe les formes élémentaires de l'aliénation, à reconnaître sous les variations de la folie d'un aliéné, et même quand elle ne donne aucun signe (manie intermittente) : {coral}de même que chez Bichat les tissus se distinguent sous leur apparition mêlée dans les organes{/coral}.
+
+    **Bichat décentralise la vie, Pinel délocalise la folie.** Dans la folie, ce n'est pas tout l'entendement qui est lésé, mais selon les espèces sa mémoire, ses facultés cognitives ou volitives ; l'attention peut même être « exaltée » dans la manie. Comme l'a montré **Gladys Swain**, {green}la folie n'est jamais complète{/green}. Il n'y a donc pas de principe unique de l'entendement à localiser : {teal}« Que deviennent alors des milliers de volumes de métaphysique ? »{/teal}
+
+    **Traiter le négatif selon les mêmes principes que le positif.**
+    - Chez **Bichat**, la science des tissus fonde à la fois la physiologie normale et la connaissance des maladies : {coral}la maladie est réintégrée dans l'immanence de l'activité vitale{/coral}, altération des propriétés usuelles des tissus et non entité autonome.
+    - Chez **Pinel**, le traitement moral repose sur la coexistence d'une partie saine de la raison avec sa partie aliénée : {coral}la folie n'est plus l'autre de la raison, mais son altération partielle{/coral}.
+
+    Les deux œuvres se rejoignent dans {green}__une même intégration du négatif dans l'espace du savoir__{/green}. Broussais formulera clairement l'unité de la physiologie et de la pathologie.
+  points:
+  - id: bichat2-l7-p1
+    sentence: "Charles Rosen (1946) liait la découverte de l'anatomie pathologique chez Pinel et Bichat à la philosophie de ___ et des Idéologues."
+    answer: "Condillac"
+    alt: []
+  - id: bichat2-l7-p2
+    sentence: "Le projet condillacien d'___ consiste à remonter aux propriétés ultimes observables sans en demander la cause, et à rendre compte du donné par leur agencement."
+    answer: "analyse"
+    alt: []
+  - id: bichat2-l7-p3
+    sentence: "Cabanis, acteur de la réforme des hôpitaux et de la médecine clinique, appartenait aux ___, qui se réclamaient de Condillac."
+    answer: "Idéologues"
+    alt: ["Ideologues"]
+  - id: bichat2-l7-p4
+    sentence: "En octobre 1800, peu avant les *Recherches* de Bichat, paraît le *Traité médico-philosophique sur l'aliénation mentale ou la manie* de ___, qui ouvre l'ère de la psychiatrie."
+    answer: "Pinel"
+    alt: []
+  - id: bichat2-l7-p5
+    sentence: "Pinel doit savoir reconnaître l'espèce d'aliénation même quand elle ne donne aucun signe, comme dans la manie ___."
+    answer: "intermittente"
+    alt: []
+  - id: bichat2-l7-p6
+    sentence: "Si Bichat décentralise le vivant, Pinel ___ la folie : ce n'est pas la totalité de l'entendement qui est lésée, mais selon les espèces la mémoire, les facultés cognitives ou volitives."
+    answer: "délocalise"
+    alt: []
+  - id: bichat2-l7-p7
+    sentence: "Comme l'a montré Gladys ___, le principe de la science comme du traitement de la folie chez Pinel est que la folie n'est jamais complète."
+    answer: "Swain"
+    alt: []
+  - id: bichat2-l7-p8
+    sentence: "« Tout cet ensemble de faits peut-il se concilier avec l'opinion d'un siège ou principe unique de l'entendement ? Que deviennent alors des milliers de volumes de ___ ? » (Pinel)."
+    answer: "métaphysique"
+    alt: []
+  - id: bichat2-l7-p9
+    sentence: "Chez Pinel, le traitement ___ des aliénés repose sur la coexistence d'une partie saine de la raison avec sa partie aliénée."
+    answer: "moral"
+    alt: []
+  - id: bichat2-l7-p10
+    sentence: "Bichat et Pinel traitent le négatif selon les mêmes principes que le positif : la folie n'est plus l'autre de la raison, et la maladie est réintégrée dans l'___ de l'activité vitale."
+    answer: "immanence"
+    alt: []
+  - id: bichat2-l7-p11
+    sentence: "Au-delà de la méthode d'analyse de Condillac, Bichat et Pinel se rejoignent dans une même intégration du ___ dans l'espace du savoir."
+    answer: "négatif"
+    alt: []
+  - id: bichat2-l7-p12
+    sentence: "Il reviendra à ___ de formuler clairement la doctrine de l'unité de la physiologie et de la pathologie."
+    answer: "Broussais"
+    alt: []
+- id: bichat2-l8
+  title: "Les difficultés de Bichat"
+  notes: |-
+    **Rien de ce qui précède ne lève la difficulté du vitalisme.** Les thèses de Bichat fondent la physiologie sur de nouvelles bases ; mais deux problèmes demeurent.
+
+    **D'abord, la variabilité des forces vitales** reste entière : elle est même au cœur de la théorie des propriétés.
+
+    **Ensuite, le passage au tout.** Chaque tissu, chaque organe est étudié pour lui-même. {red}Qu'en est-il du fonctionnement de la totalité du vivant ?{/red} Bichat sait que les classifications anatomiques sont {teal}« imparfaites »{/teal} (un même organe peut servir à plusieurs fonctions), de simples {teal}« guides »{/teal}, et que le but est la physiologie. Or {teal}« chaque ordre de fonctions s'enchaîne avec les autres d'une manière plus ou moins rigoureuse »{/teal}, et {teal}« quoique les fonctions soient étudiées séparément, il faut toujours avoir en vue leur enchaînement »{/teal} (*AG*, préface). __Comment passer de l'histologie au tout des {violet}enchaînements{/violet}, c'est-à-dire à l'économie animale comme telle ?__ Et cette considération est-elle scientifiquement possible, vu le {red}« plus ou moins »{/red} qui caractérise le fonctionnement vital ?
+
+    **La sensibilité ouvre une voie, mais ne suffit pas.** Elle règle sélectivement les rapports d'un tissu avec les autres ; mais étant une propriété vitale, {red}elle est imprévisiblement variable{/red} : aucune science n'en résulte.
+
+    **D'où le fil conducteur de la suite** : comment Bichat saute-t-il de l'histologie à la physiologie, dans son traité de physiologie pure, les *Recherches sur la vie et la mort* ? Autrement dit, {green}__pourquoi Bichat y interroge-t-il la mort ?__{/green}
+  points:
+  - id: bichat2-l8-p1
+    sentence: "Pour Bichat, les classifications anatomiques sont par essence « ___ » dans l'économie animale, puisqu'un même organe peut servir à plusieurs fonctions : elles ne sont que des guides."
+    answer: "imparfaites"
+    alt: []
+  - id: bichat2-l8-p2
+    sentence: "« Quoique les fonctions soient étudiées séparément, il faut toujours avoir en vue leur ___ » (Bichat, *Anatomie générale*)."
+    answer: "enchaînement"
+    alt: ["enchainement"]
+  - id: bichat2-l8-p3
+    sentence: "« Chaque ordre de fonctions s'enchaîne avec les autres d'une manière ___ rigoureuse » : ce flottement du fonctionnement vital rend douteuse une science du tout de l'organisme."
+    answer: "plus ou moins"
+    alt: []
+  - id: bichat2-l8-p4
+    sentence: "Le problème laissé ouvert par les ouvrages anatomiques de Bichat : comment passer de l'___ fondamentale à la considération du tout des enchaînements, c'est-à-dire de l'économie animale comme telle ?"
+    answer: "histologie"
+    alt: []
+  - id: bichat2-l8-p5
+    sentence: "La sensibilité, qui règle sélectivement les rapports d'un tissu avec les autres, ouvre une voie vers le tout de l'organisme ; mais, propriété vitale, elle est imprévisiblement ___, et aucune science n'en peut résulter."
+    answer: "variable"
+    alt: []
+  - id: bichat2-l8-p6
+    sentence: "Pour comprendre comment Bichat dissipe l'obstacle épistémologique du vitalisme, il faut se demander pourquoi, dans les *Recherches*, il interroge la ___."
+    answer: "mort"
+    alt: []

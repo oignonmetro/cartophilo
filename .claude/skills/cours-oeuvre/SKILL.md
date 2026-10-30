@@ -1,6 +1,6 @@
 ---
 name: cours-oeuvre
-description: Écrit ou refond le cours d'une œuvre d'un autre auteur que Plotin (le De l'âme d'Aristote, la Critique de la faculté de juger téléologique de Kant, un livre de l'Éthique…) avec exactement la méthode des cours de traités de Plotin (skill cours-traite) : un notebook NotebookLM consacré à l'œuvre (découpage en mouvements, explication de chaque argument) et, si possible, le PDF de l'édition de référence (citations, repères, notes), analyse du raisonnement, questions à l'utilisateur, plan en tableau de structure et sous-repérages, une leçon par mouvement, rappels qui argumentent en homme de fer, cascades de citations et cartes d'argument, passe de clarification, validation, branchement dans la piste (Œuvres de La vie, Repérages du Hors-programme, Repérage de Marx), commit et push. À utiliser dès qu'on demande un « cours » ou une « unité-œuvre » sur une œuvre ou une partie d'œuvre à partir d'un NotebookLM, de « faire comme les traités de Plotin » pour un autre auteur, ou de refondre un tel cours.
+description: Écrit ou refond le cours d'une œuvre d'un autre auteur que Plotin (le De l'âme d'Aristote, la Critique de la faculté de juger téléologique de Kant, un livre de l'Éthique…) avec exactement la méthode des cours de traités de Plotin (skill cours-traite) : un notebook NotebookLM consacré à l'œuvre (découpage en mouvements, explication de chaque argument) et, si possible, le PDF de l'édition de référence (citations, repères, notes), analyse du raisonnement, sans question à l'utilisateur avant sa relecture finale, plan en tableau de structure et sous-repérages, une leçon par mouvement, rappels qui argumentent en homme de fer, cascades de citations et cartes d'argument, passe de clarification, validation, branchement dans la piste (Œuvres de La vie, Repérages du Hors-programme, Repérage de Marx), commit et push. À utiliser dès qu'on demande un « cours » ou une « unité-œuvre » sur une œuvre ou une partie d'œuvre à partir d'un NotebookLM, de « faire comme les traités de Plotin » pour un autre auteur, ou de refondre un tel cours.
 ---
 
 # Écrire le cours d'une œuvre, à la manière des traités de Plotin
@@ -32,27 +32,39 @@ Ne pas confondre avec l'**unité-œuvre à plan seul** de `content/oeuvres.md`
 rappels) : le cours d'une œuvre est une unité à `lessons`, comme `traiteN`.
 Les deux peuvent coexister pour une même œuvre.
 
-## 0. Cadrer avec l'utilisateur, avant tout
+## 0. Cadrer sans interroger l'utilisateur
 
-Poser en une fois (`AskUserQuestion`, une option recommandée en premier) ce
-que la demande ne fixe pas :
+**Pas de validation humaine avant la relecture finale** (décision de
+l'utilisateur, 2026-10-30) : ne poser aucune question en cours de route, ni
+pour cadrer ni après l'analyse (le § 2 de `cours-traite`, « Poser ses
+questions à l'utilisateur », ne s'applique pas ici). Trancher soi-même ce que
+la demande ne fixe pas, écrire tout le cours, et dire les choix faits dans le
+compte rendu final : l'utilisateur corrige en relisant. Seul ce qui empêche
+de commencer se demande (le notebook ou le PDF, s'il n'y a ni l'un ni
+l'autre).
 
-- **Le notebook NotebookLM** de l'œuvre (son lien), s'il ne l'a pas donné.
-- **L'édition de référence et son PDF.** Proposer de ranger les PDF dans
+- **Le notebook NotebookLM** de l'œuvre, s'il est donné ; sinon, s'en
+  passer et expliquer les arguments d'après l'édition et sa propre
+  connaissance de l'auteur.
+- **L'édition de référence et son PDF**, rangés de préférence dans
   `C:\Users\Arthur\Œuvres` (un fichier par œuvre), comme les traités de
-  Plotin dans `C:\Users\Arthur\Traités Plotin`. Sans PDF, prévenir : les
-  citations ne viendront que de NotebookLM, vérifiées sur ses extraits de
-  source (§ 1), et les repères resteront au niveau du chapitre.
+  Plotin dans `C:\Users\Arthur\Traités Plotin`. Sans PDF, les citations ne
+  viennent que de NotebookLM, vérifiées sur ses extraits de source (§ 1),
+  et les repères restent au niveau du chapitre : le dire dans le compte
+  rendu.
 - **L'étendue** : l'œuvre entière, ou une partie (le livre II du *De
   l'âme*, les §61-68 de la *Critique de la faculté de juger*). Une œuvre
   longue se coupe en **une unité par partie** (un livre, une section), chacune
   avec son plan, ses sous-repérages et ses leçons, réunies par `group`.
-- **La piste** : Œuvres de La vie (`la-vie`, piste `oeuvres`), Repérages du
-  Hors-programme (`hors-programme`, piste `reperages`), Repérage de Marx
-  (`marx`). Par défaut, celle dont relève l'œuvre ; pour un auteur classique
-  sur la vie (Aristote, Kant, Bergson, Canguilhem), Œuvres de La vie.
-- **Ce qui sert l'épreuve visée** (la vie, hors-programme), si cela doit
-  orienter le choix des passages développés.
+- **La piste** : par défaut celle dont relève l'œuvre ; pour un auteur
+  classique sur la vie (Aristote, Kant, Bergson, Canguilhem), Œuvres de La
+  vie (`la-vie`, piste `oeuvres`) ; sinon Repérages du Hors-programme
+  (`hors-programme`, piste `reperages`) ou Repérage de Marx (`marx`).
+
+Un **commentaire** sur un auteur (un livre sur Bichat, pas les
+*Recherches*) ne relève pas de cette skill : son cours suit
+`content/philosophie.md` (§ « Un cours sur un auteur, tiré d'un
+commentaire »), sans plan ni repérage du commentaire.
 
 ## 1. Sources, par ordre de fiabilité
 
@@ -214,4 +226,5 @@ les corriger.
 
 Comme au § 8 de `cours-traite` : le découpage (une ligne par leçon, avec ce
 qu'elle établit), le nombre de cartes, les erreurs de NotebookLM corrigées
-sur l'édition, et les points restés ouverts, posés comme des questions.
+sur l'édition, les choix tranchés sans demander (§ 0), et les points restés
+ouverts, posés comme des questions à l'utilisateur pour sa relecture.
