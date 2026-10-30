@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python -I .claude/skills/glossaire/notebook.py crochet"
+            "command": "python -I \"$CLAUDE_PROJECT_DIR/.claude/skills/glossaire/notebook.py\" crochet"
           }
         ]
       }
