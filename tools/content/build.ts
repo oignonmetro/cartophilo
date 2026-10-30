@@ -24,6 +24,7 @@ import { parse as parseYaml } from 'yaml'
 import { z } from 'zod'
 import {
   courseSchema,
+  subjectSchema,
   treatiseEntrySchema,
   unitColorSchema,
   unitSchema,
@@ -34,6 +35,7 @@ import {
   type GrammarLesson,
   type LessonKind,
   type Manifest,
+  type SubjectGroup,
   type TreatiseEntry,
   type Unit,
   type VocabLesson,
@@ -102,6 +104,9 @@ const courseFileSchema = z.discriminatedUnion('layout', [
           // Index de référence pure (voir Plotin, piste Repérage) : entrées
           // écrites en clair ici, jamais renvoyées à units/ comme les leçons.
           entries: z.array(treatiseEntrySchema).optional(),
+          // Liste de sujets (voir La vie, piste Sujets) : le nom d'un fichier
+          // du dossier du cours, lu par `loadSubjects`.
+          subjects: z.string().optional(),
         }),
       )
       .min(1),
@@ -268,7 +273,11 @@ function buildCourse(courseId: string): Course {
             // triées alphabétiquement plutôt que dans l'ordre où elles ont
             // été ajoutées ; les autres pistes gardent l'ordre déclaré
             // (Idées suit le texte source, Repérage l'ordre des Ennéades).
-            return { ...track, units: ALPHABETICAL_TRACKS.has(track.id) ? sortByTitle(resolved) : resolved }
+            const units = ALPHABETICAL_TRACKS.has(track.id) ? sortByTitle(resolved) : resolved
+            if (track.subjects === undefined) return { ...track, units, subjects: undefined }
+            const subjects = loadSubjects(join(dir, track.subjects))
+            checkSubjects(join(dir, track.subjects), subjects, units.map((unit) => unit.id))
+            return { ...track, units, subjects }
           }),
         }
       : {
@@ -291,6 +300,57 @@ function buildCourse(courseId: string): Course {
   const course = withDefinitions(parsed.data, dir)
   checkCoherence(course, dir)
   return withoutArchivedUnits(course)
+}
+
+/**
+ * Fichier d'une liste de sujets : des groupes, chacun avec ses intitulés,
+ * écrits en clair (une chaîne) ou, une fois traités, avec l'unité qui les
+ * traite (`{ title, unit }`).
+ */
+const subjectsFileSchema = z.array(
+  z
+    .object({
+      group: z.string().min(1),
+      note: z.string().min(1).optional(),
+      subjects: z.array(z.union([z.string().min(1), subjectSchema.strict()])).min(1),
+    })
+    .strict(),
+)
+
+function loadSubjects(file: string): SubjectGroup[] {
+  if (!existsSync(file)) fail(file, 'fichier de sujets manquant')
+  const read = subjectsFileSchema.safeParse(readYaml(file))
+  if (!read.success) fail(file, formatIssues(read.error))
+  return read.data.map(({ group, note, subjects }) => ({
+    title: group,
+    ...(note ? { note } : {}),
+    subjects: subjects.map((subject) => (typeof subject === 'string' ? { title: subject } : subject)),
+  }))
+}
+
+/**
+ * Chaque sujet traité est une unité de la piste, et chaque unité de la piste
+ * traite un sujet de la liste : sans quoi elle ne s'ouvrirait de nulle part.
+ */
+function checkSubjects(file: string, groups: readonly SubjectGroup[], units: readonly string[]) {
+  const problems: string[] = []
+  const seen = new Map<string, string>()
+  const linked = new Set<string>()
+  for (const group of groups) {
+    for (const subject of group.subjects) {
+      const where = seen.get(subject.title)
+      if (where) problems.push(`le sujet « ${subject.title} » figure deux fois (${where}, ${group.title})`)
+      seen.set(subject.title, group.title)
+      if (!subject.unit) continue
+      if (!units.includes(subject.unit)) problems.push(`le sujet « ${subject.title} » renvoie à l'unité "${subject.unit}", absente des units de la piste`)
+      if (linked.has(subject.unit)) problems.push(`l'unité "${subject.unit}" traite plusieurs sujets`)
+      linked.add(subject.unit)
+    }
+  }
+  for (const unit of units) {
+    if (!linked.has(unit)) problems.push(`l'unité "${unit}" ne traite aucun sujet de la liste (ajoutez-lui \`unit: ${unit}\`)`)
+  }
+  if (problems.length) fail(file, problems.join('\n    '))
 }
 
 const definitionsFileSchema = z.record(

@@ -63,9 +63,12 @@ l'épreuve :
   - La politique
   - Les sciences humaines
   - L'épistémologie
-- **La vie** : les mêmes quatre sous-onglets que Plotin et Marx (Glossaire,
-  Idées, Textes), le Repérage s'y appelant **Œuvres** (unités-œuvres sur
-  les œuvres classiques du thème). Le cours d'une œuvre d'un autre auteur
+- **La vie** : les sous-onglets de Plotin et Marx (Idées, Textes), le
+  Repérage s'y appelant **Œuvres** (unités-œuvres sur les œuvres classiques
+  du thème), et, à la place du Glossaire, **Sujets** : la liste des sujets
+  passés à consulter (`content/courses/la-vie/sujets.yaml`, rangés par type
+  d'intitulé, avec une recherche), puis les sujets traités, une unité de la
+  piste chacun, reliée à son intitulé par `unit` dans `sujets.yaml`. Le cours d'une œuvre d'un autre auteur
   que Plotin (leçons, rappels, cartes, comme les traités, à partir d'un
   notebook NotebookLM et du PDF de l'édition) s'écrit avec la skill
   `cours-oeuvre` (`.claude/skills/cours-oeuvre/`), qui reprend la méthode

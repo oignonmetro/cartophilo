@@ -1,6 +1,8 @@
-# Les quatre pistes de Plotin et de Marx (voir content/courses/marx/course.yaml),
-# le Repérage s'appelant ici « Œuvres » : pas d'auteur unique, on s'y repère
-# dans les œuvres classiques sur la vie (unités-œuvres, content/oeuvres.md).
+# Les pistes de Plotin et de Marx (voir content/courses/marx/course.yaml), le
+# Glossaire en moins, remplacé par les Sujets (liste des sujets passés, puis
+# sujets traités), et le Repérage s'appelant ici « Œuvres » : pas d'auteur
+# unique, on s'y repère dans les œuvres classiques sur la vie (unités-œuvres,
+# content/oeuvres.md).
 
 id: la-vie
 name: La vie
@@ -11,18 +13,19 @@ tagline: Dissertation sur programme, thème imposé.
 status: available
 default: false
 layout: library
-version: 31
+version: 32
 
 tracks:
-  - id: glossaire
-    title: Glossaire
-    subtitle: Notions centrales
+  - id: sujets
+    title: Sujets
+    subtitle: Sujets de dissertation sur la vie
     kind: grammar
     color: teal
-    icon: glossary
-    # Entrées vides, une par concept des sujets passés sur la vie, à écrire
-    # avec la skill glossaire.
-    units: [g-vie, g-vivant, g-matiere, g-mecanisme, g-vitalisme, g-metaphysique-de-la-vie, g-organisme, g-organisation, g-organe-et-fonction, g-milieu, g-individu, g-machine, g-finalite, g-connaissance-de-la-vie, g-sciences-de-la-vie, g-modele-du-vivant, g-temporalite-du-vivant, g-animal, g-monde-propre, g-psychologie-animale, g-devoirs-envers-le-vivant, g-vie-sauvage, g-beaute-du-vivant, g-espece, g-diversite-des-vivants, g-evolution, g-nature, g-technique, g-intelligence-artificielle, g-experimentation-sur-le-vivant, g-greffe, g-monstruosite, g-mort, g-finitude, g-crainte-de-la-mort, g-mort-de-l-homme, g-droit-de-vie-et-de-mort, g-survie, g-fin-de-vie, g-immortalite, g-sante, g-sante-de-l-ame, g-maladie, g-normal-et-pathologique, g-medecine, g-souffrance, g-vulnerabilite, g-existence, g-sentiment-d-existence, g-naissance, g-vieillissement, g-vie-humaine, g-vie-quotidienne, g-vie-de-l-esprit, g-vie-active, g-monde-de-la-vie, g-songe, g-destin, g-recit-de-vie, g-le-temps-de-vivre, g-conduire-sa-vie, g-recommencer-sa-vie, g-etre-soi-meme, g-corps, g-corps-propre, g-disposer-de-son-corps, g-volonte, g-valeur-de-la-vie, g-sens-de-la-vie, g-vivre-selon-la-nature, g-bonheur, g-bien-vivre, g-ideal, g-vertu, g-art-de-vivre, g-intensite, g-vivre-pour-les-autres, g-respect-de-la-vie, g-biopolitique]
+    icon: magnify
+    # La liste des sujets (sujets.yaml, rangés par type d'intitulé) ; les
+    # units sont les sujets traités, chacun relié à son intitulé par `unit`.
+    subjects: sujets.yaml
+    units: []
 
   - id: idees
     title: Idées

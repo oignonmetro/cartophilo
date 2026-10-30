@@ -433,6 +433,25 @@ export const unitColorSchema = z.enum([
   'pink',
 ])
 
+/**
+ * Un sujet de dissertation de la liste d'une piste « Sujets » (voir La vie) :
+ * son intitulé, et, une fois traité, l'unité de la piste qui le traite.
+ */
+export const subjectSchema = z.object({
+  title: z.string().min(1),
+  unit: slug.optional(),
+})
+export type Subject = z.infer<typeof subjectSchema>
+
+/** Un groupe de la liste des sujets (un type d'intitulé : questions fermées, couples…). */
+export const subjectGroupSchema = z.object({
+  title: z.string().min(1),
+  /** Ce que ce type d'intitulé demande, affiché en tête du groupe ouvert. */
+  note: z.string().optional(),
+  subjects: z.array(subjectSchema).min(1),
+})
+export type SubjectGroup = z.infer<typeof subjectGroupSchema>
+
 /** Couleur du marqueur `{couleur}…{/couleur}` dans un rappel (voir `content/notes.ts`). */
 export const noteColorSchema = z.enum(['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink', 'plum'])
 
@@ -506,6 +525,12 @@ export const trackSchema = z.object({
   entries: z.array(treatiseEntrySchema).optional(),
   /** Les notions d'un glossaire qui ont leur définition (voir `termEntrySchema`) ; compilé, jamais écrit à la main. */
   terms: z.array(termEntrySchema).optional(),
+  /**
+   * Liste de sujets à consulter (voir `subjectGroupSchema`), lue dans le
+   * fichier que nomme la piste dans `course.yaml` : les `units` de la piste
+   * sont alors les sujets traités, chacun relié à son intitulé par `unit`.
+   */
+  subjects: z.array(subjectGroupSchema).optional(),
 })
 
 export const sectionSchema = z.object({

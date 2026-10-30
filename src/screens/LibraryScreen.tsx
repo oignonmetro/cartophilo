@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import type { LibraryCourse, Track, TreatiseEntry, Unit } from '@/content/schema'
+import type { LibraryCourse, SubjectGroup, Track, TreatiseEntry, Unit } from '@/content/schema'
 import { countLabel, courseLabel, isTextUnit, isWorkUnit, itemsOfUnit, unitLetters } from '@/content/course'
 import type { LessonProgressMap } from '@/engine/progress'
 import { dayKey, displayedStreak, levelFromXp, masteryOf, unitMastery, type Mastery } from '@/engine/progress'
@@ -66,7 +66,7 @@ function defaultTrackId(tracks: readonly Track[]): string {
  */
 function opensUnitDirectly(track: Track): boolean {
   // Une piste-index montre son index, même quand un seul traité a son cours.
-  return track.units.length === 1 && !isTextUnit(track.units[0]!) && !track.entries
+  return track.units.length === 1 && !isTextUnit(track.units[0]!) && !track.entries && !track.subjects
 }
 
 /** Avancement d'une unité sur son parcours, pour la carte de la bibliothèque. */
@@ -409,6 +409,57 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   // est déjà restreint au cours affiché.
   const due = useMemo(() => dueCards(Object.values(cards), Date.now()).length, [cards])
 
+  const unitList = (
+    // Pas de grille ici : la liste de tête mélange des unités seules et
+    // des replis de groupe (voir `GroupSection`), deux formes qui ne
+    // tiennent pas la même largeur — une grille à deux colonnes y
+    // laissait les unités seules à moitié de la largeur à côté d'un
+    // vide, quand les replis (pleine largeur) tombaient bien. La
+    // grille à deux colonnes reste posée une fois un repli ouvert
+    // (dans `GroupSection`) : là, tout ce qu'elle affiche est bien de
+    // la même forme (des cartes d'unité), et le rendu est net.
+    <div className="flex flex-col gap-3">
+      {groupUnits(track.units).map((entry) =>
+        entry.kind === 'group' ? (
+          <GroupSection
+            key={entry.group}
+            group={entry.group}
+            units={entry.units}
+            tone={tone}
+            cards={cards}
+            open={openGroups.has(entry.group)}
+            onToggle={() => toggleGroup(entry.group)}
+          >
+            {entry.units.map((unit) => (
+              <UnitCard
+                key={unit.id}
+                unit={unit}
+                tone={tone}
+                mastery={unitMastery(unit, cards)}
+                done={doneNodes(unit, lessons, steps)}
+                onOpen={() => openUnit(unit)}
+                reader={readerOf(unit)}
+                onReadNotes={hasSeveralNotes(unit) ? () => navigate(`/fiches/${unit.id}`) : undefined}
+                compact
+              />
+            ))}
+          </GroupSection>
+        ) : (
+          <UnitCard
+            key={entry.unit.id}
+            unit={entry.unit}
+            tone={tone}
+            mastery={unitMastery(entry.unit, cards)}
+            done={doneNodes(entry.unit, lessons, steps)}
+            onOpen={() => openUnit(entry.unit)}
+            reader={readerOf(entry.unit)}
+            onReadNotes={hasSeveralNotes(entry.unit) ? () => navigate(`/fiches/${entry.unit.id}`) : undefined}
+          />
+        ),
+      )}
+    </div>
+  )
+
   return (
     <div className="relative mx-auto flex h-full w-full max-w-md flex-col overflow-hidden md:max-w-3xl">
       <header className="sticky top-0 z-20 shrink-0 border-b-2 border-line bg-cream/95 backdrop-blur">
@@ -471,57 +522,27 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
               return unit ? unitMastery(unit, cards) : undefined
             }}
           />
+        ) : track.subjects ? (
+          <SubjectsView
+            groups={track.subjects}
+            tone={tone}
+            openGroups={openGroups}
+            onToggleGroup={toggleGroup}
+            onOpenUnit={(unitId) => {
+              const unit = track.units.find((each) => each.id === unitId)
+              if (unit) openUnit(unit)
+            }}
+            unitMasteryOf={(unitId) => {
+              const unit = track.units.find((each) => each.id === unitId)
+              return unit ? unitMastery(unit, cards) : undefined
+            }}
+          >
+            {track.units.length > 0 ? unitList : undefined}
+          </SubjectsView>
         ) : track.units.length === 0 ? (
           <EmptyTrack tone={tone} />
         ) : (
-          // Pas de grille ici : la liste de tête mélange des unités seules et
-          // des replis de groupe (voir `GroupSection`), deux formes qui ne
-          // tiennent pas la même largeur — une grille à deux colonnes y
-          // laissait les unités seules à moitié de la largeur à côté d'un
-          // vide, quand les replis (pleine largeur) tombaient bien. La
-          // grille à deux colonnes reste posée une fois un repli ouvert
-          // (dans `GroupSection`) : là, tout ce qu'elle affiche est bien de
-          // la même forme (des cartes d'unité), et le rendu est net.
-          <div className="flex flex-col gap-3">
-            {groupUnits(track.units).map((entry) =>
-              entry.kind === 'group' ? (
-                <GroupSection
-                  key={entry.group}
-                  group={entry.group}
-                  units={entry.units}
-                  tone={tone}
-                  cards={cards}
-                  open={openGroups.has(entry.group)}
-                  onToggle={() => toggleGroup(entry.group)}
-                >
-                  {entry.units.map((unit) => (
-                    <UnitCard
-                      key={unit.id}
-                      unit={unit}
-                      tone={tone}
-                      mastery={unitMastery(unit, cards)}
-                      done={doneNodes(unit, lessons, steps)}
-                      onOpen={() => openUnit(unit)}
-                      reader={readerOf(unit)}
-                      onReadNotes={hasSeveralNotes(unit) ? () => navigate(`/fiches/${unit.id}`) : undefined}
-                      compact
-                    />
-                  ))}
-                </GroupSection>
-              ) : (
-                <UnitCard
-                  key={entry.unit.id}
-                  unit={entry.unit}
-                  tone={tone}
-                  mastery={unitMastery(entry.unit, cards)}
-                  done={doneNodes(entry.unit, lessons, steps)}
-                  onOpen={() => openUnit(entry.unit)}
-                  reader={readerOf(entry.unit)}
-                  onReadNotes={hasSeveralNotes(entry.unit) ? () => navigate(`/fiches/${entry.unit.id}`) : undefined}
-                />
-              ),
-            )}
-          </div>
+          unitList
         )}
 
       </main>
@@ -1060,6 +1081,149 @@ function TreatiseIndexView({
                       </span>
                     </button>
                   ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+/** Intitulé réduit pour la recherche : sans casse, sans accents, sans ponctuation. */
+function searchable(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .trim()
+}
+
+/**
+ * Piste « Sujets » (voir La vie) : en tête les sujets traités (les unités de
+ * la piste), puis la liste des sujets à consulter, en replis par type
+ * d'intitulé, même gabarit que `TreatiseIndexView`. Une recherche filtre la
+ * liste et ouvre tous les groupes qui ont un résultat. Un sujet traité
+ * s'ouvre depuis la liste comme depuis sa carte.
+ */
+function SubjectsView({
+  groups,
+  tone,
+  openGroups,
+  onToggleGroup,
+  onOpenUnit,
+  unitMasteryOf,
+  children,
+}: {
+  groups: readonly SubjectGroup[]
+  tone: (typeof TRACK_TONES)[string]
+  openGroups: Set<string>
+  onToggleGroup: (group: string) => void
+  onOpenUnit: (unitId: string) => void
+  unitMasteryOf: (unitId: string) => Mastery | undefined
+  /** Les cartes des sujets traités ; rien tant qu'aucun ne l'est. */
+  children?: React.ReactNode
+}) {
+  const [query, setQuery] = useState('')
+  const needle = searchable(query)
+  const shown = useMemo(
+    () =>
+      groups
+        .map((group) => ({
+          ...group,
+          subjects: needle ? group.subjects.filter((subject) => searchable(subject.title).includes(needle)) : group.subjects,
+        }))
+        .filter((group) => group.subjects.length > 0),
+    [groups, needle],
+  )
+  const total = groups.reduce((sum, group) => sum + group.subjects.length, 0)
+  const found = shown.reduce((sum, group) => sum + group.subjects.length, 0)
+
+  return (
+    <div className="flex flex-col gap-3">
+      <h3 className="px-1 text-xs font-black tracking-wide text-ink-faint uppercase">Sujets traités</h3>
+      {children ?? (
+        <p className={`rounded-2xl border-2 border-dashed ${tone.border} px-4 py-4 text-center text-xs text-ink-soft`}>
+          Aucun sujet traité pour l'instant.
+        </p>
+      )}
+
+      <h3 className="mt-3 px-1 text-xs font-black tracking-wide text-ink-faint uppercase">
+        Liste des sujets <span className="font-bold normal-case">({total})</span>
+      </h3>
+      <input
+        type="search"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+        placeholder="Chercher un sujet (mort, corps, finalité…)"
+        aria-label="Chercher un sujet"
+        className="w-full rounded-2xl border-2 border-line bg-cream px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-ink-faint focus:outline-none"
+      />
+      {needle && (
+        <p className="px-1 text-xs font-bold text-ink-faint">
+          {found === 0 ? 'Aucun sujet ne correspond.' : `${found} sujet${found > 1 ? 's' : ''}`}
+        </p>
+      )}
+
+      {shown.map((group) => {
+        const key = `sujets-${group.title}`
+        const open = Boolean(needle) || openGroups.has(key)
+        const treated = group.subjects.filter((subject) => subject.unit).length
+        return (
+          <div key={key} className="flex flex-col gap-3">
+            <button
+              type="button"
+              onClick={() => onToggleGroup(key)}
+              aria-expanded={open}
+              disabled={Boolean(needle)}
+              className="card-3d flex w-full items-center gap-4 px-4 py-4 text-left"
+            >
+              <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} text-sm font-black ${tone.text}`}>
+                {group.subjects.length}
+              </span>
+              <span className="flex-1">
+                <span className="text-base leading-tight font-extrabold">{group.title}</span>
+                <span className="mt-0.5 block text-xs font-bold text-ink-faint">
+                  {group.subjects.length} sujet{group.subjects.length > 1 ? 's' : ''}
+                  {treated > 0 && `, ${treated} traité${treated > 1 ? 's' : ''}`}
+                </span>
+              </span>
+              {!needle && (
+                <span className={`text-ink-faint transition-transform ${open ? 'rotate-90' : '-rotate-90'}`}>
+                  <ChevronLeftIcon size={20} />
+                </span>
+              )}
+            </button>
+
+            <AnimatePresence initial={false}>
+              {open && (
+                <motion.div
+                  initial={{ opacity: 0, y: -6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.15 }}
+                  className="ml-4 flex flex-col gap-2 border-l-2 border-line pl-3"
+                >
+                  {group.note && !needle && <p className="px-1 text-xs leading-snug text-ink-soft italic">{group.note}</p>}
+                  {group.subjects.map((subject) =>
+                    subject.unit ? (
+                      <button
+                        key={subject.title}
+                        type="button"
+                        onClick={() => onOpenUnit(subject.unit!)}
+                        className="flex w-full items-center gap-3 rounded-2xl border-2 border-line/60 bg-ink/[0.03] px-3 py-2.5 text-left"
+                      >
+                        <span className="flex-1 text-sm leading-snug font-extrabold text-ink">{subject.title}</span>
+                        <ProgressMini mastery={unitMasteryOf(subject.unit)} tone={tone} />
+                      </button>
+                    ) : (
+                      <p key={subject.title} className="px-3 py-1.5 text-sm leading-snug text-ink">
+                        {subject.title}
+                      </p>
+                    ),
+                  )}
                 </motion.div>
               )}
             </AnimatePresence>
