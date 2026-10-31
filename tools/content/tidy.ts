@@ -90,12 +90,14 @@ function tidySpaces(line: string): string {
  * (« ainsi »), qu'on ait tapé une espace ordinaire, plusieurs, ou aucune :
  * le guillemet ne se retrouve jamais seul en bout de ligne, dans
  * l'application comme dans l'éditeur, et le texte source dit ce qui
- * s'affiche. L'espace fine insécable déjà là est gardée.
+ * s'affiche. L'espace fine insécable déjà là est gardée. Un » qui ouvre une
+ * ligne garde l'indentation qui le précède : dans un bloc YAML, une
+ * insécable en tête de ligne rendrait le fichier illisible.
  */
 export function nbspQuotes(line: string): string {
   return line
     .replace(/« */g, (match, at: number) => (/[  ]/.test(line[at + match.length] ?? '') ? '«' : '« '))
-    .replace(/(^|[^\s  ]) *»/g, (_, before: string) => `${before} »`)
+    .replace(/([^\s  ]) *»/g, (_, before: string) => `${before} »`)
     .replace(/« (?=$)/g, '«')
 }
 

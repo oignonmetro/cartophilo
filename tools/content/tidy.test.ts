@@ -100,6 +100,11 @@ describe('nbspQuotes', () => {
     expect(nbspQuotes('« la vie »')).toBe('« la vie »')
   })
 
+  test('laisse l’indentation devant un » qui ouvre une ligne', () => {
+    expect(nbspQuotes('      » s’analyse')).toBe('      » s’analyse')
+    expect(tidyText('  comme « mentir est mal\n  » s’analyse')).toBe("  comme « mentir est mal\n  » s'analyse")
+  })
+
   test('passe aussi par tidyLine, marques comprises', () => {
     expect(tidyLine('« __le temps__ » (chap. 8)')).toBe('« __le temps__ » (chap. 8)')
   })
