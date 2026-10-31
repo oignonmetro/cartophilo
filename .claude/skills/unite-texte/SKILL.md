@@ -116,6 +116,18 @@ cartes-explication).
       ce que le texte fait comprendre des **concepts de l'épreuve** (pour La
       vie : *nature*, *vivant*, *norme*…). Élargir au-delà, vers d'autres
       angles d'analyse, se décide au cas par cas, quand le texte y prête.
+      **Texte sur la vie** (La vie, ou tout texte qui porte sur un point
+      précis ou un débat précis de la philosophie de la vie) : ne pas
+      élargir la perspective très loin, mais **couvrir ce que le texte
+      engage du concept de vie et de ce qui le concerne** (la biologie, le
+      vivant, la mort, la santé et la maladie, le sens de la vie, la
+      conduite de sa vie…), et viser précisément ce à quoi on n'aurait pas
+      pensé une fois l'analyse finie : une fois l'explication écrite,
+      reprendre ces domaines un à un et se demander ce que le texte en
+      dit, suppose ou permet d'en penser (chez Montaigne, la vie qui
+      fonctionne à travers l'anomalie, les membres de l'enfant sans tête
+      « nourris et vivants », un vivant ou deux). Ne garder que ce que le
+      texte autorise vraiment ; chaque enjeu va à l'extrait qui le porte.
    5. **Les mouvements et l'explication linéaire** : découper le texte selon
       les arguments distingués, en mouvements (repérés par leurs lignes ou
       leurs paragraphes, chacun avec son rôle : pose, réfute, généralise,
