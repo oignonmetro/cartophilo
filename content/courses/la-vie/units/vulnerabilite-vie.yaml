@@ -1,0 +1,861 @@
+# Sujet traité de la piste Sujets : « La vulnérabilité de la vie »,
+# dissertation fournie par l'utilisateur (« La vulnérabilité de la vie »,
+# 31 octobre 2026). Le cours suit la progression de la copie, introduction,
+# trois parties, conclusion, une leçon par moment, et fait retenir chaque
+# référence, chaque exemple et l'usage que l'argument en fait. Citations et
+# repères tels que la dissertation les donne (voir content/philosophie.md,
+# § « Un cours sur un auteur, tiré d'un commentaire », appliqué ici à une
+# copie) ; les références ont été recoupées sur les œuvres, sans écart.
+#
+# L'exemple de la plante et de la pierre (I), celui de la vaccination (III) et
+# la lecture a contrario de Plotin (II) sont de la dissertation, non des
+# auteurs cités : les rappels le disent.
+
+id: vulnerabilite-vie
+title: "La vulnérabilité de la vie"
+subtitle: "Extérieure ou constitutive ? La résistance, propre de la vie, exposée au dehors"
+icon: magnify
+color: teal
+lessons:
+- id: vulnerabilite-vie-l1
+  title: "Introduction : la bulle et le problème"
+  notes: |-
+    L'introduction part d'un **cas limite**, celui de l'enfant dans la bulle, puis tire du mot « vulnérable » **deux conceptions qui s'excluent** : la vulnérabilité vient du dehors, ou elle est constitutive de la vie. Le problème naît de leur conflit, et le plan le dénoue en trois temps.
+
+    **L'accroche : David Vetter.** Né en {sky}1971 au Texas{/sky} avec un {violet}déficit immunitaire sévère{/violet}, David Vetter a passé presque toute sa vie, qui dura **douze ans**, dans une {yellow}bulle de plastique stérile{/yellow} : l'air, la nourriture, les jouets, tout était filtré ou désinfecté, et il ne touchait les siens qu'à travers des gants fixés à la paroi. Le cas illustre une réponse qui semble aller de soi : __puisque la menace vient du dehors, il faut en séparer la vie__. Mais il en montre aussitôt le prix : {red}la bulle qui préservait la vie de l'enfant le retranchait aussi de presque tout ce qui fait une vie{/red}.
+
+    ! La bulle n'est pas un ornement d'introduction : elle revient à chaque étape (protection impossible en I, échange seulement filtré en II, contre-modèle du vaccin en III, critère des protections en conclusion). Savoir ce qu'elle prouve à chaque fois, c'est savoir le plan.
+
+    **Première conception : une vulnérabilité extérieure.** « Vulnérable » vient du latin {violet}`vulnus`{/violet}, la blessure : est vulnérable **ce qui peut être blessé**. D'où deux traits :
+    - c'est une __possibilité__, non un fait, puisqu'elle précède toute blessure effective ;
+    - elle __regarde vers le dehors__, car une blessure est infligée : elle entame une intégrité à partir de ce qui n'est pas elle.
+
+    D'où la distinction avec la {violet}mortalité{/violet}, avec laquelle on la confond : tout vivant mourra, {pink}par nécessité{/pink}, alors que la vulnérabilité est une {green}exposition contingente{/green} à ce qui peut arriver, ici et maintenant, du fait d'autre chose que soi ; on peut d'ailleurs être blessé sans mourir. **A priori, la vulnérabilité est donc extérieure à la vie, et la seule protection est de se clore**, à la manière de la bulle.
+
+    **Seconde conception : une vulnérabilité constitutive.** Une pierre peut être brisée, elle ne peut pas être blessée ; une table peut être endommagée, elle ne tombe pas malade. La vulnérabilité se distingue donc de la {violet}fragilité{/violet} (de {violet}`frangere`{/violet}, briser), qui concerne la solidité d'une structure : on ne parle de vulnérabilité que **là où il y a quelque chose à perdre**, c'est-à-dire là où il y a de la vie. Elle est alors {coral}un des traits par lesquels la vie se distingue de l'inerte{/coral}, et ne peut plus être seulement extérieure au vivant. Le __singulier__ du sujet va dans le même sens : « la vie », non les vivants vulnérables, comme si la vulnérabilité tenait à la vie elle-même plutôt qu'aux accidents de tel vivant.
+
+    **Le problème.** Si la vulnérabilité vient du dehors, {green}la clôture est la meilleure protection{/green} ; si elle est constitutive, s'en garder reviendrait à cesser de vivre, et {red}la bulle devient une manière d'étouffer ce qu'elle protège{/red}. D'où la question : __comment la vulnérabilité de la vie peut-elle être extérieure au vivant, qui doit alors se clore, alors qu'elle est en même temps constitutive de la vie en tant que distincte de l'inerte ?__
+
+    **Le plan.**
+
+    | Partie | Thèse | Auteurs |
+    | I | Constitutive, envers de l'activité | Aristote, Descartes |
+    | II | Née de l'ouverture au milieu | Aristote, Plotin, Jonas |
+    | III | Extérieure ; la résistance est interne | Spinoza, Bichat, Nietzsche |
+
+    En III, aux trois auteurs du tableau s'ajoutent Montaigne (objection), Canguilhem, Borges et Améry (objection).
+  points:
+  - id: vulnerabilite-vie-l1-p1
+    sentence: "Né en 1971 au Texas avec un déficit immunitaire sévère, ___ passa presque toute sa vie, qui dura douze ans, dans une bulle de plastique stérile : cas limite, en introduction, de la réponse qui sépare la vie de ce qui la menace."
+    answer: "David Vetter"
+    alt: ["Vetter"]
+  - id: vulnerabilite-vie-l1-p2
+    sentence: "Le cas de David Vetter montre d'emblée le prix de la clôture : la ___ qui préservait la vie de l'enfant le retranchait aussi de presque tout ce qui fait une vie."
+    answer: "bulle"
+    alt: []
+  - id: vulnerabilite-vie-l1-p3
+    sentence: "« Vulnérable » vient du latin ___, la blessure : est vulnérable ce qui peut être blessé, ce qui fait de la vulnérabilité une possibilité tournée vers le dehors, puisqu'une blessure est infligée."
+    answer: "vulnus"
+    alt: []
+  - id: vulnerabilite-vie-l1-p4
+    sentence: "Tout vivant mourra par nécessité, alors que la vulnérabilité désigne une exposition ___ à ce qui peut arriver, ici et maintenant, du fait d'autre chose que soi : d'où sa distinction d'avec la mortalité."
+    answer: "contingente"
+    alt: []
+  - id: vulnerabilite-vie-l1-p5
+    sentence: "On distingue la vulnérabilité, exposition contingente, de la ___, nécessité où est tout vivant de mourir : la preuve en est qu'on peut être blessé sans mourir."
+    answer: "mortalité"
+    alt: []
+  - id: vulnerabilite-vie-l1-p6
+    sentence: "Une pierre peut être brisée, elle ne peut pas être blessée : la vulnérabilité se distingue ainsi de la simple ___, qui concerne la solidité d'une structure."
+    answer: "fragilité"
+    alt: []
+  - id: vulnerabilite-vie-l1-p7
+    sentence: "« Fragilité » vient du latin ___, briser : le mot concerne la solidité d'une structure, quand « vulnérabilité » suppose une vie qui peut être blessée."
+    answer: "frangere"
+    alt: []
+  - id: vulnerabilite-vie-l1-p8
+    sentence: "On ne parle de vulnérabilité que là où il y a quelque chose à ___, c'est-à-dire là où il y a de la vie : elle devient alors un trait qui distingue la vie de l'inerte, donc constitutif du vivant."
+    answer: "perdre"
+    alt: []
+  - id: vulnerabilite-vie-l1-p9
+    sentence: "Le sujet dit « la vie » au ___, non « les vivants vulnérables » : comme si la vulnérabilité tenait à la vie elle-même plutôt qu'aux accidents qui frappent tel ou tel vivant."
+    answer: "singulier"
+    alt: []
+  - id: vulnerabilite-vie-l1-p10
+    sentence: "Premier membre du problème de la vulnérabilité de la vie : si elle vient du dehors, le vivant doit s'en garder, et la ___ est sa meilleure protection."
+    answer: "clôture"
+    alt: ["cloture"]
+  - id: vulnerabilite-vie-l1-p11
+    sentence: "Second membre du problème de la vulnérabilité de la vie : si elle est constitutive, s'en garder reviendrait à cesser de vivre, et la bulle n'est plus une protection mais une manière d'___ ce qu'elle protège."
+    answer: "étouffer"
+    alt: ["etouffer"]
+  - id: vulnerabilite-vie-l1-p12
+    sentence: "La première partie de la dissertation sur la vulnérabilité de la vie montre qu'elle est constitutive de la vie, comme l'envers de son ___ : seul ce qui agit de soi-même peut défaillir."
+    answer: "activité"
+    alt: ["activite"]
+  - id: vulnerabilite-vie-l1-p13
+    sentence: "La deuxième partie de la dissertation sur la vulnérabilité de la vie montre qu'elle naît de l'___ du vivant à un milieu dont il vit, au point qu'une vie sans dépendance serait invulnérable."
+    answer: "ouverture"
+    alt: []
+  - id: vulnerabilite-vie-l1-p14
+    sentence: "La troisième partie de la dissertation sur la vulnérabilité de la vie dénoue le problème : la vulnérabilité vient du dehors, et ce qui appartient en propre à la vie, c'est la ___ qu'elle lui oppose."
+    answer: "résistance"
+    alt: ["resistance"]
+
+- id: vulnerabilite-vie-l2
+  title: "I. Aristote : dépérir par soi-même"
+  notes: |-
+    La première partie soutient que **la vulnérabilité appartient à la définition même de la vie**. Elle part de ce qui sépare le vivant de l'inerte, et Aristote lui donne son premier appui : {green}seul le vivant dépérit par lui-même{/green}.
+
+    **Le point de départ : une manière de parler.** On dit d'un vivant qu'il est blessé, qu'il tombe malade, qu'on le tue : {red}comme si la vie était d'elle-même intacte et que la blessure lui venait toujours d'ailleurs{/red}. On se demande au contraire si la vie ne porte pas en elle ce qui la rend vulnérable.
+
+    **La définition d'Aristote.** Parmi les corps naturels, les uns ont la vie, les autres ne l'ont pas, et vivre, c'est {teal}« se nourrir, croître et dépérir par soi-même »{/teal} ({sky}*De l'âme*, II, 1, 412a13-15{/sky}). Ce qui frappe : le **dépérissement** y figure __au même titre que la nutrition et la croissance__, et il est accompli, comme elles, __« par soi-même »__. Il n'est pas un accident qui interromprait la vie du dehors.
+
+    **Trois comparaisons font voir ce « par soi-même ».**
+    - Le vivant se nourrit : ce n'est pas la nourriture qui le nourrit {yellow}comme on remplit un vase{/yellow}, c'est lui qui transforme ce qu'il absorbe en sa propre substance.
+    - Il dépérit de même : ce n'est pas une force extérieure qui le défait {yellow}comme on démolit un mur{/yellow}, c'est sa propre activité qui s'épuise.
+    - La pierre, elle, peut être brisée, usée par l'eau, réduite en poussière, mais toujours sous l'action de ce qui n'est pas elle ; elle ne dépérit pas, **elle change seulement de forme**, et ses fragments sont encore des pierres.
+
+    **Conclusion : le pouvoir de périr définit la vie.** On ne peut retirer au vivant la capacité de dépérir __sans lui retirer en même temps la nutrition et la croissance__, c'est-à-dire sans en faire {coral}une chose{/coral}.
+
+    **L'exemple de la plante et de la pierre** (exemple de la dissertation, non d'Aristote). Dans un lieu sec, {pink}la pierre demeure telle qu'elle était{/pink}, {green}la plante se flétrit{/green}. Ce n'est pas que la sécheresse soit plus violente pour la plante : c'est que **la plante fait quelque chose, se nourrir, qu'elle ne peut plus faire**, alors que la pierre ne fait rien. La sécheresse ne tombe pas sur elle comme un coup sur une matière ; elle l'atteint __dans une activité empêchée__. {coral}Périr, c'est l'échec d'une activité{/coral}, et l'inerte n'a aucune activité qui puisse échouer.
+
+    **Formule de l'étape.** Loin d'être une faiblesse que le vivant partagerait avec les choses fragiles, la vulnérabilité est ce qui l'en sépare : {green}la vulnérabilité de la vie, c'est d'abord le pouvoir de périr par soi-même{/green}.
+
+    **Ce qui reste ouvert.** Aristote rapporte ces opérations à l'{violet}âme{/violet}, forme du corps vivant, et dit que le vivant dépérit **sans montrer comment une activité peut défaillir**. Pourquoi ce qui agit de soi-même peut-il cesser d'agir ? C'est la question posée à Descartes.
+
+    ! « Dépérir par soi-même » ne veut pas dire que la vie veut sa mort : la première partie en tire seulement que périr suppose une activité. La troisième relira ce dépérissement comme la défaillance d'une résistance.
+  points:
+  - id: vulnerabilite-vie-l2-p1
+    sentence: "Pour ___, parmi les corps naturels, les uns ont la vie et les autres ne l'ont pas, et vivre, c'est « se nourrir, croître et dépérir par soi-même » : premier appui de la thèse d'une vulnérabilité constitutive de la vie."
+    answer: "Aristote"
+    alt: []
+  - id: vulnerabilite-vie-l2-p2
+    sentence: "La définition aristotélicienne de la vie comme « se nourrir, croître et dépérir par soi-même », qui ouvre la première partie de la dissertation sur la vulnérabilité de la vie, se trouve dans De l'âme, ___."
+    answer: "II, 1"
+    alt: ["II 1", "livre II, chapitre 1", "II, 1, 412a"]
+    explanation: "Plus précisément 412a13-15."
+  - id: vulnerabilite-vie-l2-p3
+    sentence: "Vivre, c'est « se nourrir, croître et ___ par soi-même » (Aristote, De l'âme, II, 1) : la définition range parmi les opérations de la vie ce qu'on tiendrait pour sa négation."
+    answer: "dépérir"
+    alt: ["deperir"]
+  - id: vulnerabilite-vie-l2-p4
+    sentence: "Vivre, c'est « se nourrir, croître et dépérir par ___ » (Aristote, De l'âme, II, 1) : le dépérissement est accompli par le vivant, comme la nutrition et la croissance, non infligé du dehors."
+    answer: "soi-même"
+    alt: ["soi même", "soi"]
+  - id: vulnerabilite-vie-l2-p5
+    sentence: "Le vivant se nourrit au sens d'Aristote : ce n'est pas la nourriture qui le nourrit comme on remplit un ___, c'est lui qui transforme ce qu'il absorbe en sa propre substance."
+    answer: "vase"
+    alt: []
+  - id: vulnerabilite-vie-l2-p6
+    sentence: "Le vivant dépérit par soi-même, au sens d'Aristote : ce n'est pas une force extérieure qui le défait comme on démolit un ___, c'est sa propre activité qui s'épuise."
+    answer: "mur"
+    alt: []
+  - id: vulnerabilite-vie-l2-p7
+    sentence: "Une pierre peut être brisée ou usée par l'eau, toujours sous l'action de ce qui n'est pas elle : elle ne dépérit pas, elle change seulement de ___, et ses fragments sont encore des pierres."
+    answer: "forme"
+    alt: []
+  - id: vulnerabilite-vie-l2-p8
+    sentence: "Conclusion tirée de la définition d'Aristote : on ne peut retirer au vivant la capacité de dépérir sans lui retirer en même temps la nutrition et la croissance, c'est-à-dire sans en faire une ___."
+    answer: "chose"
+    alt: []
+  - id: vulnerabilite-vie-l2-p9
+    sentence: "Exemple de la première partie : qu'on laisse une plante et une ___ dans un lieu sec ; l'une se flétrit, l'autre demeure telle qu'elle était, parce que seule la première fait quelque chose, se nourrir, qu'elle ne peut plus faire."
+    answer: "pierre"
+    alt: []
+  - id: vulnerabilite-vie-l2-p10
+    sentence: "La sécheresse n'atteint pas la plante comme un coup qui tombe sur une matière : elle l'atteint dans une activité qui se trouve ___. Périr, c'est l'échec d'une activité, et l'inerte n'en a aucune qui puisse échouer."
+    answer: "empêchée"
+    alt: ["empechee"]
+  - id: vulnerabilite-vie-l2-p11
+    sentence: "Loin d'être une faiblesse que le vivant partagerait avec les choses fragiles, la vulnérabilité est ce qui le ___ d'elles : c'est d'abord le pouvoir de périr par soi-même."
+    answer: "sépare"
+    alt: ["separe", "distingue"]
+  - id: vulnerabilite-vie-l2-p12
+    sentence: "Aristote rapporte la nutrition, la croissance et le dépérissement à l'___, forme du corps vivant, sans montrer comment une activité peut défaillir : d'où le recours à Descartes."
+    answer: "âme"
+    alt: ["ame"]
+
+- id: vulnerabilite-vie-l3
+  title: "I. Descartes : la montre rompue"
+  notes: |-
+    Descartes répond à la question laissée par Aristote, **comment une activité peut défaillir**, au prix d'un geste qui semble d'abord réduire la vie à l'inerte : le corps vivant est une machine, et {green}ce qui fait que la machine se meut est exactement ce qui fait qu'elle peut se rompre{/green}.
+
+    **L'âme retirée de l'explication.** Pour Descartes, {red}c'est une erreur de croire que l'âme donne au corps le mouvement et la chaleur{/red} : la mort n'arrive jamais par la faute de l'âme, mais **seulement parce que quelqu'une des principales parties du corps se corrompt**. Le corps vivant diffère du corps mort comme une {yellow}montre{/yellow} ou un autre {violet}automate{/violet} diffère d'elle-même, selon qu'elle est {teal}« montée et qu'elle a en soi le principe corporel des mouvements pour lesquels elle est instituée »{/teal}, ou qu'elle est {teal}« rompue et que le principe de son mouvement cesse d'agir »{/teal} ({sky}*Les Passions de l'âme*, art. 5 et 6{/sky}).
+
+    **L'argument en trois temps.**
+    - __Vivre, c'est être un automate__ au sens propre : une machine qui a en elle le principe de son mouvement, une chose qui se meut d'elle-même.
+    - __Ce qui distingue le vivant de l'inerte est donc une organisation__ : des parties qui concourent à un même mouvement, comme les roues d'une horloge concourent à marquer l'heure.
+    - __Cette organisation est aussi ce qui le rend vulnérable__ : un ensemble de parties qui concourent peut se rompre là où une masse inerte ne le peut pas, et **plus le concours est complexe, plus nombreux sont les points où il peut céder**.
+
+    **Rompre n'est pas briser.** Une pierre brisée donne deux pierres ; {red}une montre rompue n'est plus une montre{/red}, et pourtant sa matière est intacte, chaque roue est encore là. De même, **le cadavre a la même matière que le corps vivant** quelques instants plus tôt. La rupture ne concerne pas la matière mais le {violet}fonctionnement{/violet} : {coral}l'inerte peut être fragmenté, il ne peut pas être rompu{/coral}.
+
+    **Le dérèglement vient du fonctionnement même.** Dans la {sky}*Sixième Méditation*{/sky}, Descartes compare le corps de l'{violet}hydropique{/violet}, qui a soif alors que boire lui nuit, à {yellow}une horloge mal réglée{/yellow} qui n'en suit pas moins exactement les lois de son mécanisme. Le dérèglement n'est pas introduit du dehors : le fonctionnement, dans des circonstances anormales, __se retourne contre ce qu'il servait à conserver__. {coral}La vulnérabilité est intérieure au mécanisme.{/coral}
+
+    **Objection et réponse.** {red}Descartes n'efface-t-il pas la différence du vivant et de l'inerte, puisqu'une montre ne meurt pas, elle s'arrête ?{/red} Mais chez lui la distinction qui compte ne passe pas entre la vie et la machine : elle passe **entre la machine montée et la machine rompue**, entre ce qui fonctionne et ce qui ne fonctionne plus. Or c'est celle qui intéresse la vulnérabilité : {green}est vulnérable ce qui fonctionne, parce que seul ce qui fonctionne peut cesser de fonctionner{/green}. Le mécanisme ne contredit donc pas Aristote, **il en donne la raison** : la mort est l'arrêt d'une activité, non la destruction d'une matière.
+
+    **Bilan de la première partie.** Aristote pose que seul le vivant dépérit par lui-même ; Descartes l'explique, puisque seul ce qui fonctionne peut se rompre. La bulle de David Vetter apparaît alors comme {red}une protection impossible{/red} : ce qui rendait l'enfant vulnérable, c'était sa vie elle-même.
+
+    **Le mot qui relance.** La montre ne fonctionne que si elle est {teal}« montée »{/teal} : son mouvement vient d'une force donnée du dehors, et elle s'arrête si on ne la remonte pas ; de même, le corps ne se meut que s'il est nourri. __La vulnérabilité tient-elle à l'activité, ou à ce dont l'activité dépend ?__
+
+    ! Descartes ne sert pas ici à réduire la vie à l'inerte : la dissertation retient de lui la différence entre fonctionner et ne plus fonctionner, qui est la condition de toute vulnérabilité.
+  points:
+  - id: vulnerabilite-vie-l3-p1
+    sentence: "Pour ___, c'est une erreur de croire que l'âme donne au corps le mouvement et la chaleur : la mort n'arrive jamais par la faute de l'âme, mais seulement parce que quelqu'une des principales parties du corps se corrompt."
+    answer: "Descartes"
+    alt: []
+  - id: vulnerabilite-vie-l3-p2
+    sentence: "La comparaison du corps vivant à une montre montée, et du corps mort à une montre rompue, qui explique dans la première partie comment une activité peut défaillir, se trouve dans Les ___ de Descartes, articles 5 et 6."
+    answer: "Passions de l'âme"
+    alt: ["Passions de l'ame", "Les Passions de l'âme"]
+  - id: vulnerabilite-vie-l3-p3
+    sentence: "La comparaison cartésienne du corps vivant à une montre montée et du cadavre à une montre rompue occupe, dans Les Passions de l'âme, les articles ___."
+    answer: "5 et 6"
+    alt: ["5-6", "5 à 6"]
+  - id: vulnerabilite-vie-l3-p4
+    sentence: "Le corps vivant diffère du corps mort comme une montre selon qu'elle est « ___ et qu'elle a en soi le principe corporel des mouvements pour lesquels elle est instituée » (Descartes, Passions de l'âme, art. 6)."
+    answer: "montée"
+    alt: ["montee"]
+  - id: vulnerabilite-vie-l3-p5
+    sentence: "Le corps vivant diffère du corps mort comme une montre selon qu'elle est « montée et qu'elle a en soi le principe ___ des mouvements pour lesquels elle est instituée » (Descartes, Passions de l'âme, art. 6) : l'âme n'y a aucune part."
+    answer: "corporel"
+    alt: []
+  - id: vulnerabilite-vie-l3-p6
+    sentence: "Le corps mort est, pour Descartes, comme une montre « ___ et que le principe de son mouvement cesse d'agir » (Passions de l'âme, art. 6)."
+    answer: "rompue"
+    alt: []
+  - id: vulnerabilite-vie-l3-p7
+    sentence: "Dans l'argument cartésien en trois temps, le premier retire l'âme de l'explication : vivre, c'est être une machine qui a en elle le principe de son mouvement, c'est-à-dire un ___ au sens propre, une chose qui se meut d'elle-même."
+    answer: "automate"
+    alt: []
+  - id: vulnerabilite-vie-l3-p8
+    sentence: "Pour Descartes, ce qui distingue le vivant de l'inerte est une ___ : des parties qui concourent à un même mouvement, comme les roues d'une horloge concourent à marquer l'heure."
+    answer: "organisation"
+    alt: []
+  - id: vulnerabilite-vie-l3-p9
+    sentence: "Un ensemble de parties qui concourent peut se rompre là où une masse inerte ne le peut pas, et plus le concours est ___, plus nombreux sont les points où il peut céder : ce qui fait que la machine se meut fait qu'elle peut se rompre."
+    answer: "complexe"
+    alt: []
+  - id: vulnerabilite-vie-l3-p10
+    sentence: "Une pierre brisée donne deux pierres ; une montre rompue n'est plus une montre, et pourtant sa matière est intacte : la rupture concerne non la matière mais le ___."
+    answer: "fonctionnement"
+    alt: []
+  - id: vulnerabilite-vie-l3-p11
+    sentence: "Le ___ a la même matière que le corps vivant quelques instants plus tôt : preuve, tirée de l'image cartésienne de la montre, que la mort touche le fonctionnement et non la matière."
+    answer: "cadavre"
+    alt: []
+  - id: vulnerabilite-vie-l3-p12
+    sentence: "On ne parle de rupture que par rapport à une fonction : l'inerte peut être ___, il ne peut pas être rompu."
+    answer: "fragmenté"
+    alt: ["fragmente"]
+  - id: vulnerabilite-vie-l3-p13
+    sentence: "Descartes compare à une horloge mal réglée, qui suit pourtant exactement les lois de son mécanisme, le corps de l'___, qui a soif alors que boire lui nuit : le dérèglement est produit par le fonctionnement lui-même."
+    answer: "hydropique"
+    alt: []
+  - id: vulnerabilite-vie-l3-p14
+    sentence: "La comparaison du corps de l'hydropique à une horloge mal réglée, qui montre que la vulnérabilité est intérieure au mécanisme, se trouve dans la ___ de Descartes."
+    answer: "Sixième Méditation"
+    alt: ["sixième méditation", "Méditation sixième", "6e Méditation", "Méditations, VI"]
+  - id: vulnerabilite-vie-l3-p15
+    sentence: "On objecte que Descartes efface la différence du vivant et de l'inerte, puisqu'une montre ne meurt pas, elle s'arrête. Réponse : la distinction qui compte passe entre la machine montée et la machine ___, entre ce qui fonctionne et ce qui ne fonctionne plus."
+    answer: "rompue"
+    alt: []
+  - id: vulnerabilite-vie-l3-p16
+    sentence: "Est vulnérable ce qui fonctionne, parce que seul ce qui fonctionne peut cesser de fonctionner : le mécanisme de Descartes ne contredit donc pas la thèse d'Aristote sur le dépérir par soi-même, il en donne la ___."
+    answer: "raison"
+    alt: []
+  - id: vulnerabilite-vie-l3-p17
+    sentence: "Au terme de la première partie, la bulle de David Vetter apparaît comme une protection ___ : on ne pouvait pas mettre à l'abri ce qui rendait l'enfant vulnérable, puisque c'était sa vie elle-même."
+    answer: "impossible"
+    alt: []
+  - id: vulnerabilite-vie-l3-p18
+    sentence: "Transition vers la deuxième partie : la montre de Descartes ne fonctionne que si elle est « ___ », son mouvement venant d'une force donnée du dehors, comme le corps ne se meut que s'il est nourri."
+    answer: "montée"
+    alt: ["montee"]
+
+- id: vulnerabilite-vie-l4
+  title: "II. Se nourrir : la bulle n'était qu'un filtre"
+  notes: |-
+    La deuxième partie garde l'acquis de la première, **seul ce qui fonctionne peut se rompre**, et demande d'où vient la rupture : {green}la vulnérabilité naît de ce que le vivant n'existe qu'ouvert à ce qui n'est pas lui{/green}. Premier temps : la nutrition, puis la bulle relue.
+
+    **La définition d'Aristote contenait déjà ce dehors.** Se nourrir, c'est __prendre hors de soi ce dont on est fait__ : la nourriture conserve le vivant, qui ne peut subsister s'il en est privé ({sky}*De l'âme*, II, 4{/sky}). Le « par soi-même » de la première partie {coral}enveloppe donc une dépendance{/coral} : le vivant agit de lui-même, mais sur une matière qu'il reçoit d'ailleurs. Son autonomie est celle d'**une activité qui a sans cesse besoin d'autre chose qu'elle pour s'exercer**.
+
+    **D'où l'exposition.** L'activité qui distingue le vivant de l'inerte est aussi ce qui l'ouvre à ce qui peut lui manquer ou lui nuire :
+    - l'air qu'il respire peut être vicié ;
+    - la nourriture peut faire défaut, ou l'empoisonner ;
+    - le milieu peut changer plus vite qu'il ne s'y accorde.
+
+    **Conclusion** : {green}le vivant est vulnérable non seulement parce qu'il fonctionne, mais parce qu'il fonctionne grâce à ce qu'il reçoit{/green}.
+
+    **La bulle relue.** On a voulu protéger David Vetter en l'enfermant, ce qui correspond exactement à {pink}la première branche du problème{/pink} : la menace venant du dehors, il fallait l'en séparer. Mais {red}la clôture n'a jamais pu être totale{/red} : l'enfant respirait un air **filtré**, mangeait des aliments **stérilisés**, buvait une eau **purifiée**. On n'avait pas supprimé l'échange avec le milieu, __on l'avait seulement filtré__. La plus grande clôture possible n'est jamais qu'{coral}un échange contrôlé{/coral}.
+
+    **La limite est le lieu de l'échange.** Ce qui sépare le vivant de son milieu est aussi ce par quoi il échange avec lui : {green}ce par quoi la vie est blessée est ce par quoi elle vit{/green}.
+
+    **Formule de l'étape.** La vulnérabilité de la vie, c'est **l'exposition qu'impose la dépendance** : le vivant ne peut pas se protéger du dehors en se fermant, puisqu'il vit de ce dehors.
+
+    ! En I, la bulle était une protection impossible parce que la vulnérabilité est la vie même ; en II, elle échoue parce que le vivant vit de ce dont elle voudrait le séparer. Même exemple, deux raisons différentes.
+  points:
+  - id: vulnerabilite-vie-l4-p1
+    sentence: "Pour Aristote, la nourriture conserve le vivant, qui ne peut subsister s'il en est privé : ouverture de la deuxième partie, qui montre que la définition de la vie contenait déjà un dehors. Le passage se trouve dans De l'âme, ___."
+    answer: "II, 4"
+    alt: ["II 4", "livre II, chapitre 4"]
+  - id: vulnerabilite-vie-l4-p2
+    sentence: "Le « par soi-même » de la définition aristotélicienne de la vie enveloppe une ___ : le vivant agit de lui-même, mais sur une matière qu'il reçoit d'ailleurs."
+    answer: "dépendance"
+    alt: ["dependance"]
+  - id: vulnerabilite-vie-l4-p3
+    sentence: "Puisque le vivant n'agit que sur une matière reçue, ce n'est pas seulement parce qu'il fonctionne qu'il est vulnérable, c'est parce qu'il fonctionne grâce à ce qu'il ___."
+    answer: "reçoit"
+    alt: ["recoit"]
+  - id: vulnerabilite-vie-l4-p4
+    sentence: "L'activité qui distingue le vivant de l'inerte l'ouvre à ce qui peut lui manquer ou lui nuire : l'air qu'il respire peut être ___, la nourriture faire défaut ou l'empoisonner, le milieu changer plus vite qu'il ne s'y accorde."
+    answer: "vicié"
+    alt: ["vicie"]
+  - id: vulnerabilite-vie-l4-p5
+    sentence: "Enfermer David Vetter correspond exactement à la première ___ du problème de la vulnérabilité de la vie : puisque la menace venait de l'extérieur, il fallait l'en séparer."
+    answer: "branche"
+    alt: []
+  - id: vulnerabilite-vie-l4-p6
+    sentence: "Dans la bulle, David Vetter respirait un air filtré, mangeait des aliments stérilisés, buvait une eau purifiée : on n'avait pas supprimé l'échange avec le milieu, on l'avait seulement ___."
+    answer: "filtré"
+    alt: ["filtre"]
+  - id: vulnerabilite-vie-l4-p7
+    sentence: "La plus grande clôture possible n'est jamais qu'un échange ___ : le vivant ne peut pas se protéger du dehors en se fermant, puisqu'il vit de ce dehors."
+    answer: "contrôlé"
+    alt: ["controle"]
+  - id: vulnerabilite-vie-l4-p8
+    sentence: "La limite qui sépare le vivant de son milieu est aussi le lieu de son ___ avec lui, de sorte que ce par quoi la vie est blessée est ce par quoi elle vit."
+    answer: "échange"
+    alt: ["echange"]
+  - id: vulnerabilite-vie-l4-p9
+    sentence: "Formule de la deuxième partie, après l'exemple de la bulle relu : la vulnérabilité de la vie, c'est l'___ qu'impose la dépendance."
+    answer: "exposition"
+    alt: []
+
+- id: vulnerabilite-vie-l5
+  title: "II. Plotin : la vie qui ne manque de rien"
+  notes: |-
+    Pour trancher entre l'activité comme telle (I) et l'activité dépendante (II), il faudrait **concevoir une vie pleinement active qui ne dépende de rien** et voir si elle reste vulnérable. Plotin conçoit une telle vie, et l'argument qu'on en tire montre que {green}ce n'est pas l'activité qui rend vulnérable, c'est la dépendance{/green}.
+
+    **La vie de l'Intellect.** Pour Plotin, la vie véritable et parfaite n'est pas celle des corps, c'est celle de l'{violet}Intellect{/violet}, dont les autres vies ne sont que **des images affaiblies** ({sky}*Ennéades*, I, 4 [46], *Sur le bonheur*{/sky}). Cette vie est {violet}éternelle{/violet}, et l'éternité {red}n'est pas une durée sans fin{/red} : {green}c'est une vie qui demeure tout entière présente à elle-même, à laquelle rien ne manque et qui n'a rien à attendre de l'avenir{/green}, alors que les choses engendrées ont besoin de l'avenir et doivent sans cesse acquérir ce qu'elles n'ont pas encore pour continuer d'être ({sky}III, 7 [45], *Sur l'éternité et le temps*{/sky}). Au sommet, le Principe d'où tout procède est **ce qu'il y a de plus autosuffisant**, puisqu'il n'a besoin de rien ({sky}VI, 9 [9], *Sur le Bien ou l'Un*{/sky}).
+
+    **L'argument a contrario** (lecture de la dissertation : on raisonne à partir de l'opposé de la vie biologique).
+    - __La vie de l'Intellect est invulnérable__ : on ne peut rien lui retirer, puisqu'elle ne reçoit rien.
+    - __Elle se caractérise par l'autarcie__ ({violet}autarcie{/violet}, terme grec : le fait de se suffire à soi-même) : elle ne manque de rien et ne dépend de rien d'extérieur.
+    - __Point décisif : elle n'est pas inactive__, elle est au contraire, pour Plotin, **l'activité la plus pleine qui soit**.
+
+    **Conclusion** : {coral}ce n'est pas l'activité comme telle qui rend vulnérable, c'est l'activité dépendante{/coral}. La première partie s'en trouve corrigée : la {yellow}montre{/yellow} de Descartes n'était pas vulnérable parce qu'elle fonctionnait, mais **parce qu'elle fonctionnait grâce à ce qu'on lui donnait**, et elle s'arrêtait dès qu'on cessait de la remonter.
+
+    **Objection et réponse.** {red}La vie de l'Intellect n'est pas une vie biologique ; on ne compare pas un organisme à un principe métaphysique.{/red} C'est pourtant ce qui fait la force de l'argument : Plotin montre **le seul trait qu'il faudrait retirer à la vie pour la rendre invulnérable, la dépendance**. Or une vie sans dépendance ne se nourrirait pas, ne croîtrait pas, ne dépérirait pas : __la définition d'Aristote disparaîtrait tout entière__. Une vie invulnérable cesserait d'être biologique, et {coral}la dépendance n'est pas un défaut accidentel de la vie des corps, elle la constitue{/coral}.
+
+    **Formule de l'étape.** {green}La vulnérabilité de la vie, c'est le manque{/green} : le vivant est vulnérable parce qu'il a besoin de ce qu'il n'est pas ; seule la vie que Plotin réserve à l'Intellect échapperait à la blessure.
+
+    ! Plotin ne sert pas à décrire la vie biologique, mais à isoler, par contraste, ce qui la rend vulnérable : la vie parfaite est active et invulnérable, donc la vulnérabilité ne vient pas de l'activité.
+  points:
+  - id: vulnerabilite-vie-l5-p1
+    sentence: "Pour ___, la vie véritable et parfaite n'est pas celle des corps mais celle de l'Intellect, dont les autres vies ne sont que des images affaiblies : modèle d'une vie pleinement active qui ne dépend de rien."
+    answer: "Plotin"
+    alt: []
+  - id: vulnerabilite-vie-l5-p2
+    sentence: "Plotin fait de la vie de l'Intellect la vie parfaite, dont les autres vies ne sont que des images affaiblies, dans le traité Sur le ___ (Ennéades, I, 4 [46])."
+    answer: "bonheur"
+    alt: []
+  - id: vulnerabilite-vie-l5-p3
+    sentence: "Pour Plotin, l'éternité n'est pas une durée sans ___ : c'est une vie qui demeure tout entière présente à elle-même, à laquelle rien ne manque et qui n'a rien à attendre de l'avenir."
+    answer: "fin"
+    alt: []
+  - id: vulnerabilite-vie-l5-p4
+    sentence: "Pour Plotin, à la différence de la vie éternelle, les choses engendrées ont besoin de l'___ et doivent sans cesse acquérir ce qu'elles n'ont pas encore pour continuer d'être."
+    answer: "avenir"
+    alt: []
+  - id: vulnerabilite-vie-l5-p5
+    sentence: "L'opposition plotinienne entre l'éternité, vie à laquelle rien ne manque, et les choses engendrées, qui ont besoin de l'avenir, se trouve dans le traité Sur l'éternité et le ___ (Ennéades, III, 7 [45])."
+    answer: "temps"
+    alt: []
+  - id: vulnerabilite-vie-l5-p6
+    sentence: "Au sommet, le Principe d'où tout procède est pour Plotin ce qu'il y a de plus ___, puisqu'il n'a besoin de rien (Ennéades, VI, 9 [9], Sur le Bien ou l'Un)."
+    answer: "autosuffisant"
+    alt: ["autarcique"]
+  - id: vulnerabilite-vie-l5-p7
+    sentence: "L'argument tiré de Plotin procède a ___ : il raisonne à partir de ce qui est l'opposé de la vie biologique, une vie pleinement active qui ne dépend de rien, pour isoler ce qui rend vulnérable."
+    answer: "contrario"
+    alt: []
+  - id: vulnerabilite-vie-l5-p8
+    sentence: "Le terme grec qui désigne le fait de se suffire à soi-même, et qui caractérise chez Plotin la vie invulnérable de l'Intellect, ne manquant de rien et ne dépendant de rien d'extérieur, est l'___."
+    answer: "autarcie"
+    alt: []
+  - id: vulnerabilite-vie-l5-p9
+    sentence: "Point décisif de l'argument tiré de Plotin : la vie de l'Intellect, invulnérable, n'est pas inactive, elle est l'activité la plus ___ qui soit."
+    answer: "pleine"
+    alt: []
+  - id: vulnerabilite-vie-l5-p10
+    sentence: "Puisque la vie de l'Intellect est à la fois l'activité la plus pleine et invulnérable, ce n'est pas l'activité comme telle qui rend vulnérable, comme le soutenait la première partie, c'est l'activité ___."
+    answer: "dépendante"
+    alt: ["dependante"]
+  - id: vulnerabilite-vie-l5-p11
+    sentence: "Corrigée par Plotin, la montre de Descartes n'était pas vulnérable parce qu'elle fonctionnait, mais parce qu'elle fonctionnait grâce à ce qu'on lui donnait : elle s'arrêtait dès qu'on cessait de la ___."
+    answer: "remonter"
+    alt: []
+  - id: vulnerabilite-vie-l5-p12
+    sentence: "On objecte que la vie de l'Intellect n'est pas une vie biologique. Réponse : c'est la force de l'argument, puisque Plotin montre le seul trait qu'il faudrait retirer à la vie pour la rendre invulnérable, la ___."
+    answer: "dépendance"
+    alt: ["dependance"]
+  - id: vulnerabilite-vie-l5-p13
+    sentence: "Une vie sans dépendance, comme celle que Plotin prête à l'Intellect, ne se nourrirait pas, ne croîtrait pas et ne dépérirait pas : la définition de la vie que donne ___ disparaîtrait tout entière."
+    answer: "Aristote"
+    alt: []
+  - id: vulnerabilite-vie-l5-p14
+    sentence: "Formule tirée de la vie plotinienne de l'Intellect : la vulnérabilité de la vie, c'est le ___, car le vivant est vulnérable parce qu'il a besoin de ce qu'il n'est pas."
+    answer: "manque"
+    alt: []
+
+- id: vulnerabilite-vie-l6
+  title: "II. La vie au singulier : Aristote, Jonas"
+  notes: |-
+    Dernier temps de la deuxième partie : si le vivant est vulnérable parce qu'il dépend, **la vie au singulier**, que le sujet invite à considérer, semble y échapper, puisqu'elle se renouvelle. Jonas montre qu'elle n'est devenue vulnérable que **du dehors**, et cet argument prépare le renversement de la troisième partie.
+
+    **La vie se maintient par l'espèce.** Aristote observe que la fonction la plus naturelle des vivants est {teal}d'engendrer un autre être semblable à eux{/teal}, afin de **participer à l'éternel et au divin dans la mesure où ils le peuvent** : ne pouvant demeurer les mêmes {pink}en nombre{/pink}, ils demeurent les mêmes {green}en espèce{/green} ({sky}*De l'âme*, II, 4, 415a26-b7{/sky}). Chaque vivant meurt, mais la vie se maintient à travers la mort des individus, par le **renouvellement des générations**. À cette échelle, la vulnérabilité de chaque vivant est compensée : la vie a traversé {yellow}les épidémies, les famines et les extinctions{/yellow}, et s'est chaque fois renouvelée.
+
+    **Ce qui a changé : la technique.** Pour Jonas, la technique moderne a modifié **la nature même de l'agir humain** : pour la première fois, l'action humaine peut atteindre {red}la biosphère dans son ensemble et les conditions d'existence des générations futures{/red} ({sky}*Le Principe responsabilité*, ch. I{/sky}). L'{yellow}arme nucléaire{/yellow} en est l'exemple le plus net : __aucun processus vital ne la produit__, et la vie ne pourrait s'en relever par la reproduction, puisqu'elle __détruirait les conditions mêmes de toute reproduction__.
+
+    **L'argument tiré de Jonas.**
+    - La vie en général ne porte pas en elle ce qui la rendrait vulnérable, puisqu'elle se renouvelle.
+    - Si elle est devenue vulnérable, c'est sous l'effet d'une cause qui excède ce renouvellement : une action technique qui ne fait plus partie du cycle par lequel la vie se reproduit.
+    - Que cette vulnérabilité soit apparue **tardivement**, avec **un agent déterminé**, {coral}montre qu'elle n'appartenait pas à la vie elle-même{/coral}.
+
+    **Formule de l'étape.** {green}La vulnérabilité de la vie, c'est une exposition qui lui vient d'ailleurs{/green} : à l'échelle de la vie elle-même, elle n'apparaît que lorsqu'un agent extérieur au renouvellement peut l'atteindre.
+
+    **Bilan et transition.** La deuxième partie a établi que la vulnérabilité naît de l'ouverture à un dehors dont le vivant dépend : il ne peut se fermer ; seule une vie sans dépendance serait invulnérable ; la vie en général n'est devenue vulnérable que du dehors. C'est {pink}la première branche du problème{/pink}, en apparence contraire à la première partie. Mais Jonas fait apparaître une distinction : **ce qui appartient en propre à la vie, ce n'est pas la vulnérabilité, c'est le renouvellement par lequel elle résiste** ; de même, la montre de Descartes se rompt, mais ce qui lui appartient, c'est le mouvement, {red}la rupture lui arrive{/red}. D'où la question : __la vulnérabilité ne viendrait-elle pas du dehors, ce qui est interne à la vie étant la résistance qu'elle lui oppose ?__
+
+    ! Jonas n'est pas convoqué ici pour son éthique de la responsabilité (elle ne revient qu'en ouverture de la conclusion), mais pour un argument : une vulnérabilité apparue tard, avec un agent déterminé, n'appartient pas à la vie elle-même.
+  points:
+  - id: vulnerabilite-vie-l6-p1
+    sentence: "Pour Aristote, la fonction la plus naturelle des vivants est d'engendrer un autre être semblable à eux, afin de participer à l'éternel et au ___ dans la mesure où ils le peuvent."
+    answer: "divin"
+    alt: []
+  - id: vulnerabilite-vie-l6-p2
+    sentence: "Ne pouvant demeurer les mêmes en ___, les vivants demeurent, selon Aristote, les mêmes en espèce : chaque vivant meurt, mais la vie se maintient."
+    answer: "nombre"
+    alt: []
+  - id: vulnerabilite-vie-l6-p3
+    sentence: "Ne pouvant demeurer les mêmes en nombre, les vivants demeurent, selon Aristote, les mêmes en ___ : la vie au singulier semble ainsi échapper à la vulnérabilité de chaque vivant."
+    answer: "espèce"
+    alt: ["espece"]
+  - id: vulnerabilite-vie-l6-p4
+    sentence: "L'analyse aristotélicienne de la génération, par laquelle les vivants participent à l'éternel en demeurant les mêmes en espèce, se trouve dans De l'âme, ___ (415a26-b7)."
+    answer: "II, 4"
+    alt: ["II 4", "livre II, chapitre 4"]
+  - id: vulnerabilite-vie-l6-p5
+    sentence: "À l'échelle de la vie au singulier, la vulnérabilité de chaque vivant est compensée par le renouvellement des ___ : la vie a traversé les épidémies, les famines et les extinctions."
+    answer: "générations"
+    alt: ["generations"]
+  - id: vulnerabilite-vie-l6-p6
+    sentence: "Pour ___, la technique moderne a modifié la nature même de l'agir humain : pour la première fois, l'action humaine peut atteindre la biosphère dans son ensemble et les conditions d'existence des générations futures."
+    answer: "Jonas"
+    alt: ["Hans Jonas"]
+  - id: vulnerabilite-vie-l6-p7
+    sentence: "Jonas montre que la technique moderne a modifié la nature même de l'agir humain, au point d'atteindre la biosphère, dans Le Principe ___, chapitre I."
+    answer: "responsabilité"
+    alt: ["responsabilite"]
+  - id: vulnerabilite-vie-l6-p8
+    sentence: "Selon Jonas, pour la première fois l'action humaine peut atteindre la ___ dans son ensemble et les conditions d'existence des générations futures."
+    answer: "biosphère"
+    alt: ["biosphere"]
+  - id: vulnerabilite-vie-l6-p9
+    sentence: "L'exemple le plus net de la menace que la technique fait peser sur la vie en général est l'arme ___ : aucun processus vital ne la produit, et elle détruirait les conditions mêmes de toute reproduction."
+    answer: "nucléaire"
+    alt: ["nucleaire"]
+  - id: vulnerabilite-vie-l6-p10
+    sentence: "La vie en général se renouvelle par la reproduction ; si elle est devenue vulnérable, c'est sous l'effet d'une action technique extérieure à ce cycle. Que cette vulnérabilité soit apparue ___, avec un agent déterminé, montre qu'elle n'appartenait pas à la vie elle-même."
+    answer: "tardivement"
+    alt: []
+  - id: vulnerabilite-vie-l6-p11
+    sentence: "L'argument tiré de Jonas fait apparaître que ce qui appartient en propre à la vie en général, ce n'est pas la vulnérabilité, c'est le ___ par lequel elle résiste à ce qui la menace."
+    answer: "renouvellement"
+    alt: []
+  - id: vulnerabilite-vie-l6-p12
+    sentence: "Transition vers la troisième partie : la montre de Descartes se rompt, mais ce qui lui appartient, c'est le ___ ; la rupture lui arrive."
+    answer: "mouvement"
+    alt: []
+
+- id: vulnerabilite-vie-l7
+  title: "III. Spinoza, Bichat : la mort vient du dehors"
+  notes: |-
+    La troisième partie dénoue le problème : {green}la vulnérabilité vient du dehors, et ce qui appartient en propre à la vie, c'est la résistance qu'elle lui oppose{/green}. Premier temps : Spinoza et Bichat posent la thèse, qui permet de relire la première partie sans la renier.
+
+    **Ce que la première partie avait vraiment montré.** Que seul le vivant peut périr, parce qu'il agit. Or Plotin a montré que l'activité comme telle n'est pas vulnérable. {red}On croyait avoir trouvé la vulnérabilité au cœur de la vie{/red} ; {green}on y avait trouvé ce qui lui résiste{/green}, considéré **depuis le moment où il cède**.
+
+    **Spinoza : nulle chose ne se détruit elle-même.** {teal}« Nulle chose ne peut être détruite, sinon par une cause extérieure »{/teal} ({sky}*Éthique*, III, prop. 4{/sky}). La démonstration : __la définition d'une chose affirme ce qu'elle est et ne le nie pas__, de sorte qu'on ne peut trouver dans la chose elle-même rien qui puisse la détruire. Il s'ensuit que chaque chose, {teal}« autant qu'il est en elle, s'efforce de persévérer dans son être »{/teal} ({sky}III, prop. 6{/sky}). Cet effort est le {violet}`conatus`{/violet} (terme latin : la tendance de chaque chose à se maintenir) : chez un {yellow}animal blessé{/yellow}, ce qui le fait se débattre, fuir, puis lécher sa plaie.
+
+    **Bichat : la version biologique.** {teal}« La vie est l'ensemble des fonctions qui résistent à la mort »{/teal}, car {teal}« tel est en effet le mode d'existence des corps vivants, que tout ce qui les entoure tend à les détruire »{/teal} ({sky}*Recherches physiologiques sur la vie et la mort*, première partie, art. 1{/sky}). {coral}La mort vient du dehors, et la vie est la résistance qui lui est opposée.{/coral}
+
+    **La première partie relue.**
+    - Le « dépérir par soi-même » d'Aristote n'est pas une opération que la vie accomplirait comme elle se nourrit : c'est __la défaillance de sa résistance__, le moment où l'activité qui se maintenait cède devant ce qui la surpasse.
+    - Descartes disait lui-même que la mort survient parce qu'une partie {teal}« se corrompt »{/teal} : __la rupture arrive au fonctionnement__, le fonctionnement ne tend pas de lui-même à sa rupture.
+    - L'{violet}hydropique{/violet} ne veut pas sa perte : il est **trompé**, dans une circonstance anormale, par un mécanisme qui sert d'ordinaire à le conserver.
+
+    ! Relire n'est pas réfuter : la troisième partie garde que seul le vivant périt, mais elle place dans le vivant la résistance, et au dehors ce qui la fait céder.
+  points:
+  - id: vulnerabilite-vie-l7-p1
+    sentence: "La troisième partie reprend la première : on croyait y avoir trouvé la vulnérabilité au cœur de la vie ; on y avait trouvé ce qui lui ___, considéré depuis le moment où il cède."
+    answer: "résiste"
+    alt: ["resiste"]
+  - id: vulnerabilite-vie-l7-p2
+    sentence: "Pour ___, « nulle chose ne peut être détruite, sinon par une cause extérieure » : premier appui de la thèse que la vulnérabilité vient du dehors."
+    answer: "Spinoza"
+    alt: []
+  - id: vulnerabilite-vie-l7-p3
+    sentence: "« Nulle chose ne peut être détruite, sinon par une cause ___ » (Spinoza, Éthique, III, prop. 4)."
+    answer: "extérieure"
+    alt: ["exterieure"]
+  - id: vulnerabilite-vie-l7-p4
+    sentence: "La thèse spinoziste « nulle chose ne peut être détruite, sinon par une cause extérieure » est la proposition ___ de la troisième partie de l'Éthique."
+    answer: "4"
+    alt: ["IV", "quatre"]
+  - id: vulnerabilite-vie-l7-p5
+    sentence: "Démonstration de Spinoza : la ___ d'une chose affirme ce qu'elle est et ne le nie pas, de sorte qu'on ne peut trouver dans la chose elle-même rien qui puisse la détruire."
+    answer: "définition"
+    alt: ["definition", "essence"]
+  - id: vulnerabilite-vie-l7-p6
+    sentence: "Chaque chose, « autant qu'il est en elle, s'efforce de ___ dans son être » (Spinoza, Éthique, III, prop. 6)."
+    answer: "persévérer"
+    alt: ["perseverer"]
+  - id: vulnerabilite-vie-l7-p7
+    sentence: "La thèse spinoziste selon laquelle chaque chose, « autant qu'il est en elle, s'efforce de persévérer dans son être » est la proposition ___ de la troisième partie de l'Éthique."
+    answer: "6"
+    alt: ["VI", "six"]
+  - id: vulnerabilite-vie-l7-p8
+    sentence: "Spinoza appelle ___ l'effort de chaque chose pour persévérer dans son être : chez un animal blessé, ce qui le fait se débattre, fuir, puis lécher sa plaie."
+    answer: "conatus"
+    alt: []
+  - id: vulnerabilite-vie-l7-p9
+    sentence: "« La vie est l'ensemble des fonctions qui résistent à la mort » : version proprement biologique de la thèse de Spinoza, donnée par ___."
+    answer: "Bichat"
+    alt: []
+  - id: vulnerabilite-vie-l7-p10
+    sentence: "« La vie est l'ensemble des fonctions qui ___ à la mort » (Bichat, Recherches physiologiques sur la vie et la mort, première partie, art. 1)."
+    answer: "résistent"
+    alt: ["resistent"]
+  - id: vulnerabilite-vie-l7-p11
+    sentence: "Bichat justifie sa définition de la vie : « tel est en effet le mode d'existence des corps vivants, que tout ce qui les ___ tend à les détruire »."
+    answer: "entoure"
+    alt: []
+  - id: vulnerabilite-vie-l7-p12
+    sentence: "La définition de Bichat, « la vie est l'ensemble des fonctions qui résistent à la mort », ouvre ses Recherches physiologiques sur la vie et la mort, première partie, article ___."
+    answer: "1"
+    alt: ["premier", "I"]
+  - id: vulnerabilite-vie-l7-p13
+    sentence: "Relu à partir de Spinoza et de Bichat, le « dépérir par soi-même » d'Aristote n'est pas une opération que la vie accomplirait comme elle se nourrit : c'est la ___ de sa résistance."
+    answer: "défaillance"
+    alt: ["defaillance"]
+  - id: vulnerabilite-vie-l7-p14
+    sentence: "Descartes disait que la mort survient parce qu'une des principales parties du corps « se ___ » : la rupture arrive au fonctionnement, le fonctionnement ne tend pas de lui-même à sa rupture."
+    answer: "corrompt"
+    alt: []
+  - id: vulnerabilite-vie-l7-p15
+    sentence: "L'hydropique de Descartes ne veut pas sa perte : il est ___, dans une circonstance anormale, par un mécanisme qui sert d'ordinaire à le conserver."
+    answer: "trompé"
+    alt: ["trompe"]
+
+- id: vulnerabilite-vie-l8
+  title: "III. Montaigne : la vie bâtit-elle la mort ?"
+  notes: |-
+    Objection à la thèse que la mort vient du dehors : {red}la mort serait présente dans la vie dès son commencement{/red}. Spinoza permet d'y répondre : {green}ce qui use la vie s'accumule sur elle ; l'effort de vivre, lui, ne tend jamais vers sa propre perte{/green}.
+
+    **L'objection de Montaigne.** {teal}« Le continuel ouvrage de votre vie, c'est bâtir la mort »{/teal} ({sky}*Essais*, I, 20{/sky}, « Que philosopher, c'est apprendre à mourir »). Le {violet}vieillissement{/violet} semble lui donner raison : __l'organisme s'use sans qu'aucun coup ne lui soit porté__.
+
+    **La réponse de Spinoza : une puissance finie.** La force par laquelle l'homme persévère dans l'existence est **limitée**, et la puissance des causes extérieures **la surpasse infiniment** ({sky}*Éthique*, IV, prop. 3{/sky}). L'usure {red}n'est pas l'œuvre de la vie contre elle-même{/red} : {green}c'est l'accumulation, sur une puissance finie, de causes qui l'emportent peu à peu{/green}.
+
+    **Le poète espagnol.** Spinoza va jusqu'à admettre qu'un corps peut **changer de nature sans devenir cadavre**, comme {yellow}ce poète espagnol qui, après une maladie, ne reconnaissait plus ses propres œuvres{/yellow} ({sky}IV, prop. 39, scolie{/sky}). Même ce changement radical a une cause, la maladie : __ce qui use la vie s'accumule sur elle__.
+
+    **Ce que Montaigne décrit, et ce qu'il ne montre pas.** Montaigne décrit {pink}le temps vécu qui s'écoule vers sa fin{/pink} ; il ne montre pas {red}que la vie veut sa mort{/red}.
+
+    **Formule de l'étape.** {green}La vulnérabilité de la vie, c'est l'exposition d'un effort qui ne tend jamais de lui-même à sa perte{/green} : la mort vient au vivant du dehors, et ce qui lui appartient en propre est la résistance.
+
+    ! Que la vie aille vers la mort (un fait de durée) ne prouve pas qu'elle y tende (un effort orienté) : la réponse à Montaigne repose sur cette distinction.
+  points:
+  - id: vulnerabilite-vie-l8-p1
+    sentence: "« Le continuel ouvrage de votre vie, c'est bâtir la mort » : objection de ___, dans la troisième partie, à la thèse que la mort vient au vivant du dehors."
+    answer: "Montaigne"
+    alt: []
+  - id: vulnerabilite-vie-l8-p2
+    sentence: "« Le continuel ouvrage de votre vie, c'est ___ la mort » (Montaigne, Essais, I, 20) : la mort serait présente dans la vie dès son commencement."
+    answer: "bâtir"
+    alt: ["batir"]
+  - id: vulnerabilite-vie-l8-p3
+    sentence: "Montaigne écrit que « le continuel ouvrage de votre vie, c'est bâtir la mort » dans les Essais, livre I, chapitre ___."
+    answer: "20"
+    alt: ["XX", "I, 20"]
+  - id: vulnerabilite-vie-l8-p4
+    sentence: "Le chapitre des Essais où Montaigne écrit que « le continuel ouvrage de votre vie, c'est bâtir la mort » s'intitule « Que philosopher, c'est apprendre à ___ »."
+    answer: "mourir"
+    alt: []
+  - id: vulnerabilite-vie-l8-p5
+    sentence: "L'objection de Montaigne semble confirmée par le ___ : l'organisme s'use sans qu'aucun coup ne lui soit porté, comme si la mort venait de la vie elle-même."
+    answer: "vieillissement"
+    alt: []
+  - id: vulnerabilite-vie-l8-p6
+    sentence: "Contre Montaigne, Spinoza : la force par laquelle l'homme persévère dans l'existence est limitée, et la puissance des causes extérieures la surpasse ___ (Éthique, IV, prop. 3)."
+    answer: "infiniment"
+    alt: []
+  - id: vulnerabilite-vie-l8-p7
+    sentence: "La thèse spinoziste selon laquelle la force par laquelle l'homme persévère dans l'existence est limitée, et surpassée infiniment par celle des causes extérieures, est la proposition ___ de la quatrième partie de l'Éthique."
+    answer: "3"
+    alt: ["III", "trois"]
+  - id: vulnerabilite-vie-l8-p8
+    sentence: "Réponse spinoziste au vieillissement : l'usure n'est pas l'œuvre de la vie contre elle-même, c'est l'___, sur une puissance finie, de causes qui l'emportent peu à peu."
+    answer: "accumulation"
+    alt: []
+  - id: vulnerabilite-vie-l8-p9
+    sentence: "Spinoza admet qu'un corps peut changer de nature sans devenir cadavre, comme ce poète ___ qui, après une maladie, ne reconnaissait plus ses propres œuvres."
+    answer: "espagnol"
+    alt: []
+  - id: vulnerabilite-vie-l8-p10
+    sentence: "L'exemple spinoziste du poète espagnol qui, après une maladie, ne reconnaissait plus ses propres œuvres se trouve dans l'Éthique, IV, proposition 39, ___."
+    answer: "scolie"
+    alt: []
+  - id: vulnerabilite-vie-l8-p11
+    sentence: "Montaigne décrit le temps vécu qui s'écoule vers sa fin ; il ne montre pas que la vie ___ sa mort."
+    answer: "veut"
+    alt: []
+  - id: vulnerabilite-vie-l8-p12
+    sentence: "Formule de la réponse à Montaigne : la vulnérabilité de la vie, c'est l'exposition d'un ___ qui ne tend jamais de lui-même à sa perte."
+    answer: "effort"
+    alt: []
+
+- id: vulnerabilite-vie-l9
+  title: "III. Canguilhem, Borges : ce qui peut être perdu importe"
+  notes: |-
+    Si la vulnérabilité est extérieure à la vie, **faut-il souhaiter en être délivré ?** Une vie qui ne pourrait plus être blessée aurait-elle encore un sens ? Canguilhem et Borges répondent : {green}la vulnérabilité donne à la vie un enjeu{/green}.
+
+    **Canguilhem : vivre, c'est préférer.** Pour Canguilhem, {teal}la vie n'est pas indifférente aux conditions dans lesquelles elle est possible{/teal} : vivre, même pour l'organisme le plus simple, c'est déjà **préférer certaines conditions et en exclure d'autres** ({sky}*Le Normal et le pathologique*, deuxième partie{/sky}).
+
+    **Deux sens du mot « sens ».**
+    - {violet}Orientation{/violet} : la résistance à ce qui menace donne à la vie une direction. __Parce qu'il peut être blessé__, le vivant recherche ce qui le conserve et fuit ce qui le détruit ; cette {violet}polarité{/violet} fait de son comportement autre chose qu'un simple mouvement.
+    - {violet}Valeur{/violet} : la finitude biologique de l'homme (la mort, la maladie, la blessure) donne à ses actes leur poids. **Ce qui peut être perdu importe, ce qui ne peut pas l'être est indifférent.**
+
+    {coral}La vulnérabilité extérieure est ce qui fait que la résistance interne devient orientation, puis valeur.{/coral}
+
+    **Borges : les immortels indifférents.** Dans {sky}« L'immortel » (*L'Aleph*){/sky}, les immortels qu'y rencontre le narrateur ne peuvent plus mourir et {red}sont devenus indifférents à tout{/red}, puisque dans un temps infini tout finira par leur arriver ; l'un d'eux, qui fut {yellow}Homère{/yellow}, se souvient à peine de l'*Odyssée*. Par contraste, le narrateur comprend que {green}chez les mortels chaque acte a le prix de ce qui ne se reproduira pas{/green}.
+
+    **Ce que la fiction montre.** Elle ne prouve rien à elle seule, mais elle montre **ce que produit l'absence de vulnérabilité** : supprimer la blessure possible ne libère pas la vie, cela lui retire l'enjeu qui orientait sa résistance. La vie immortelle se défait en une indifférence qui ressemble moins à {pink}la plénitude de l'Intellect plotinien{/pink} qu'à {red}l'inertie de la pierre{/red}.
+
+    **Formule de l'étape.** {green}La vulnérabilité de la vie, c'est ce qui donne à la vie un enjeu{/green} : parce qu'elle peut être perdue, la vie préfère et exclut, et pour l'homme chaque acte prend la valeur de l'irrécupérable.
+
+    ! Le rapprochement avec Plotin et la pierre referme la boucle : l'invulnérabilité acquise par un vivant ne l'élève pas à l'autarcie de l'Intellect, elle le ramène à l'indifférence de l'inerte.
+  points:
+  - id: vulnerabilite-vie-l9-p1
+    sentence: "Pour ___, la vie n'est pas indifférente aux conditions dans lesquelles elle est possible : vivre, même pour l'organisme le plus simple, c'est déjà préférer certaines conditions et en exclure d'autres."
+    answer: "Canguilhem"
+    alt: []
+  - id: vulnerabilite-vie-l9-p2
+    sentence: "Pour Canguilhem, la vie n'est pas ___ aux conditions dans lesquelles elle est possible : vivre, c'est préférer et exclure."
+    answer: "indifférente"
+    alt: ["indifferente"]
+  - id: vulnerabilite-vie-l9-p3
+    sentence: "Canguilhem montre que vivre, même pour l'organisme le plus simple, c'est préférer certaines conditions et en exclure d'autres, dans Le Normal et le pathologique, ___ partie."
+    answer: "deuxième"
+    alt: ["deuxieme", "seconde", "2e"]
+  - id: vulnerabilite-vie-l9-p4
+    sentence: "Des deux sens du mot « sens » distingués à partir de Canguilhem, le premier est celui de l'___ : la résistance à ce qui menace donne à la vie une direction."
+    answer: "orientation"
+    alt: []
+  - id: vulnerabilite-vie-l9-p5
+    sentence: "Parce qu'il peut être blessé, le vivant recherche ce qui le conserve et fuit ce qui le détruit : c'est cette ___ qui fait de son comportement autre chose qu'un simple mouvement."
+    answer: "polarité"
+    alt: ["polarite"]
+  - id: vulnerabilite-vie-l9-p6
+    sentence: "Des deux sens du mot « sens » distingués à partir de Canguilhem, le second est celui de la ___ : la finitude biologique de l'homme donne à ses actes leur poids."
+    answer: "valeur"
+    alt: []
+  - id: vulnerabilite-vie-l9-p7
+    sentence: "La finitude biologique de l'homme (la mort, la maladie, la blessure) donne à ses actes leur poids : ce qui peut être perdu importe, et ce qui ne peut pas l'être est ___."
+    answer: "indifférent"
+    alt: ["indifferent"]
+  - id: vulnerabilite-vie-l9-p8
+    sentence: "Dans « L'immortel », nouvelle de ___, les immortels ne peuvent plus mourir et sont devenus indifférents à tout, puisque dans un temps infini tout finira par leur arriver."
+    answer: "Borges"
+    alt: []
+  - id: vulnerabilite-vie-l9-p9
+    sentence: "« L'immortel », la nouvelle de Borges où les immortels sont devenus indifférents à tout, appartient au recueil ___."
+    answer: "L'Aleph"
+    alt: ["Aleph", "L'aleph"]
+  - id: vulnerabilite-vie-l9-p10
+    sentence: "Parmi les immortels de Borges, indifférents à tout, l'un, qui fut ___, se souvient à peine de l'Odyssée."
+    answer: "Homère"
+    alt: ["Homere"]
+  - id: vulnerabilite-vie-l9-p11
+    sentence: "Par contraste avec les immortels, le narrateur de « L'immortel » de Borges comprend que chez les mortels chaque acte a le prix de ce qui ne se ___ pas."
+    answer: "reproduira"
+    alt: []
+  - id: vulnerabilite-vie-l9-p12
+    sentence: "La vie immortelle des personnages de Borges se défait en une indifférence qui ressemble moins à la plénitude de l'Intellect plotinien qu'à l'inertie de la ___."
+    answer: "pierre"
+    alt: []
+  - id: vulnerabilite-vie-l9-p13
+    sentence: "Formule tirée de Canguilhem et de Borges : la vulnérabilité de la vie, c'est ce qui donne à la vie un ___ ; parce qu'elle peut être perdue, la vie préfère et exclut."
+    answer: "enjeu"
+    alt: []
+  - id: vulnerabilite-vie-l9-p14
+    sentence: "Parce que la vie peut être perdue, pour l'homme chaque acte prend la valeur de l'___."
+    answer: "irrécupérable"
+    alt: ["irrecuperable"]
+
+- id: vulnerabilite-vie-l10
+  title: "III. Nietzsche, le vaccin, Améry"
+  notes: |-
+    Dernier temps : **la résistance n'est-elle qu'une défense ?** Nietzsche répond qu'elle est une puissance qui croît de ce qu'elle surmonte, et le vaccin en donne la preuve médicale, face à la bulle. Améry oblige à borner cette thèse.
+
+    **Le risque d'un retour à la clôture.** La conception de Bichat oppose la vie à {red}un milieu hostile{/red} : prise seule, elle ferait de la résistance une simple défense, et __ramènerait à la clôture dont on est parti__.
+
+    **Nietzsche : la résistance croît.** {teal}« Ce qui ne me tue pas me rend plus fort »{/teal} ({sky}*Crépuscule des idoles*, « Maximes et traits », 8{/sky}). Ailleurs, Nietzsche {red}refuse de faire de la conservation de soi l'instinct premier du vivant{/red} : un être vivant veut **avant tout déployer sa force**, et la conservation de soi n'est qu'une conséquence indirecte de cette volonté ({sky}*Par-delà bien et mal*, § 13{/sky}). {green}La résistance n'est pas une simple défense, c'est une puissance qui croît de ce qu'elle surmonte{/green}. Le vivant ne se protège donc pas en se fermant, ce qui le priverait de ce qui le renforce, mais **en s'exposant et en surmontant**.
+
+    **Le vaccin contre la bulle** (exemple de la dissertation, qui répond terme à terme à l'accroche). La {violet}vaccination{/violet} protège un organisme **en l'exposant à une forme atténuée** de ce qui le menace : il en sort plus résistant, parce qu'il a appris à surmonter ce qu'il rencontrait.
+
+    | Protection | Moyen | Effet sur la résistance |
+    | Bulle | Clôture | Y supplée sans la faire naître |
+    | Vaccin | Exposition | La fait naître |
+
+    {coral}La solution du problème est biologique avant d'être morale{/coral} : le vivant n'a pas à choisir entre se clore et être exposé, puisque **sa manière propre de se protéger passe par l'exposition**.
+
+    **L'objection d'Améry.** Certaines blessures ne tuent pas et ne rendent pas plus fort. Torturé par la {sky}Gestapo{/sky}, Améry témoigne que la torture ne cesse pas avec les coups : dès le premier coup, la victime perd la {teal}« confiance dans le monde »{/teal}, c'est-à-dire __la certitude qu'autrui respectera les limites de son corps et qu'on lui portera secours__, et celui qui a été torturé ne la retrouve jamais ({sky}*Par-delà le crime et le châtiment*, « La torture »{/sky}). {red}Son corps a guéri, sa vie ne s'est pas relevée.{/red}
+
+    **La maxime précisée, non abandonnée.** Elle vaut **tant que ce qui atteint la vie ne détruit pas sa puissance même de résister**. {coral}La blessure la plus grave n'est pas celle qui tue, c'est celle qui laisse vivre en détruisant la résistance.{/coral}
+
+    **Formule de l'étape.** {green}La vulnérabilité de la vie, c'est l'occasion de sa croissance{/green} : exposée du dehors, la vie se protège en se renforçant de ce qu'elle surmonte, tant que ce qui l'atteint ne détruit pas sa puissance de résister.
+
+    **Bilan de la troisième partie.** La vulnérabilité vient du dehors, la résistance appartient à la vie : la mort n'en fait pas partie (Spinoza, Bichat, contre Montaigne), la finitude lui donne un enjeu (Canguilhem, Borges), la résistance croît de ce qu'elle surmonte (Nietzsche, le vaccin, borné par Améry). Le vivant se distingue de l'inerte **parce qu'il résiste** (ce que la première partie avait vu depuis le moment où la résistance cède) ; il est exposé **parce qu'il dépend** (deuxième partie). {coral}La contradiction tenait à ce qu'on attribuait à la vie une vulnérabilité qui était l'envers de sa résistance.{/coral}
+
+    ! Améry ne réfute pas Nietzsche : il marque la limite de sa maxime, la blessure qui atteint la puissance de résister elle-même.
+  points:
+  - id: vulnerabilite-vie-l10-p1
+    sentence: "La conception de Bichat, qui oppose la vie à un milieu hostile, ferait de la résistance une simple ___, et ramènerait ainsi à la clôture dont la dissertation est partie."
+    answer: "défense"
+    alt: ["defense"]
+  - id: vulnerabilite-vie-l10-p2
+    sentence: "« Ce qui ne me tue pas me rend plus fort » : maxime de ___, qui fait de la résistance du vivant une puissance qui croît de ce qu'elle surmonte."
+    answer: "Nietzsche"
+    alt: []
+  - id: vulnerabilite-vie-l10-p3
+    sentence: "« Ce qui ne me tue pas me rend plus ___ » (Nietzsche, Crépuscule des idoles, « Maximes et traits », 8)."
+    answer: "fort"
+    alt: []
+  - id: vulnerabilite-vie-l10-p4
+    sentence: "La maxime de Nietzsche « Ce qui ne me tue pas me rend plus fort » se trouve dans le Crépuscule des idoles, « Maximes et traits », numéro ___."
+    answer: "8"
+    alt: ["huit"]
+  - id: vulnerabilite-vie-l10-p5
+    sentence: "Nietzsche refuse de faire de la conservation de soi l'instinct premier du vivant : un être vivant veut avant tout déployer sa ___, et la conservation de soi n'est qu'une conséquence indirecte de cette volonté."
+    answer: "force"
+    alt: []
+  - id: vulnerabilite-vie-l10-p6
+    sentence: "Nietzsche fait de la conservation de soi une simple conséquence indirecte de la volonté de déployer sa force, dans Par-delà bien et mal, § ___."
+    answer: "13"
+    alt: ["treize"]
+  - id: vulnerabilite-vie-l10-p7
+    sentence: "Si la résistance croît de ce qu'elle surmonte, comme le veut Nietzsche, le vivant ne se protège pas en se fermant, ce qui le priverait de ce qui le renforce, mais en s'___ et en surmontant."
+    answer: "exposant"
+    alt: []
+  - id: vulnerabilite-vie-l10-p8
+    sentence: "Exemple médical qui répond terme à terme à la bulle de David Vetter : la ___ protège un organisme en l'exposant à une forme atténuée de ce qui le menace."
+    answer: "vaccination"
+    alt: ["vaccin"]
+  - id: vulnerabilite-vie-l10-p9
+    sentence: "La bulle de David Vetter protégeait par clôture et ne pouvait que ___ à une résistance absente sans jamais la faire naître ; le vaccin protège par exposition et fait naître la résistance."
+    answer: "suppléer"
+    alt: ["suppleer"]
+  - id: vulnerabilite-vie-l10-p10
+    sentence: "Le contraste de la bulle et du vaccin établit que la solution du problème est ___ avant d'être morale : le vivant n'a pas à choisir entre se clore et être exposé, puisque sa manière propre de se protéger passe par l'exposition."
+    answer: "biologique"
+    alt: []
+  - id: vulnerabilite-vie-l10-p11
+    sentence: "Torturé par la Gestapo, ___ témoigne que la torture ne cesse pas avec les coups : dès le premier coup, la victime perd la « confiance dans le monde », et ne la retrouve jamais."
+    answer: "Améry"
+    alt: ["Amery", "Jean Améry"]
+  - id: vulnerabilite-vie-l10-p12
+    sentence: "Dès le premier coup, la victime de la torture perd ce qu'Améry appelle la « confiance dans le ___ »."
+    answer: "monde"
+    alt: []
+  - id: vulnerabilite-vie-l10-p13
+    sentence: "La « confiance dans le monde », chez Améry, est la certitude qu'autrui respectera les limites de son ___ et qu'on lui portera secours."
+    answer: "corps"
+    alt: []
+  - id: vulnerabilite-vie-l10-p14
+    sentence: "Améry décrit la perte de la « confiance dans le monde » dans Par-delà le crime et le châtiment, au chapitre « La ___ »."
+    answer: "torture"
+    alt: []
+  - id: vulnerabilite-vie-l10-p15
+    sentence: "Le témoignage d'Améry oblige à préciser la maxime de Nietzsche sans l'abandonner : elle vaut tant que ce qui atteint la vie ne détruit pas sa puissance même de ___."
+    answer: "résister"
+    alt: ["resister"]
+  - id: vulnerabilite-vie-l10-p16
+    sentence: "Leçon tirée d'Améry : la blessure la plus grave n'est pas celle qui tue, c'est celle qui laisse ___ en détruisant la résistance."
+    answer: "vivre"
+    alt: []
+  - id: vulnerabilite-vie-l10-p17
+    sentence: "Formule de la dernière étape de la troisième partie : exposée du dehors, la vie se renforce de ce qu'elle surmonte, si bien que sa vulnérabilité est l'occasion de sa ___."
+    answer: "croissance"
+    alt: []
+
+- id: vulnerabilite-vie-l11
+  title: "Conclusion : un critère pour les protections"
+  notes: |-
+    La conclusion **dénoue la contradiction par une distinction**, puis en tire deux conséquences : un critère pour juger les protections, et le sens précis de la responsabilité envers la vie.
+
+    **Le chemin parcouru.** La vulnérabilité a d'abord paru constitutive (seul ce qui agit de soi-même peut défaillir), puis née de la dépendance (une vie sans dépendance serait invulnérable, et la vie en général n'est devenue vulnérable que du dehors). La contradiction se dénoue : {green}ce qui est constitutif de la vie, c'est la résistance{/green} ; {pink}ce qui lui est extérieur, c'est ce qui la menace{/pink}. **La vulnérabilité naît de leur rencontre**, dans l'ouverture par laquelle le vivant dépend de ce qu'il n'est pas. Le vivant n'a donc pas à se clore : {red}la clôture supprimerait ce dont il vit et ce par quoi il se renforce{/red}.
+
+    **La formule finale.** {green}La vulnérabilité de la vie, c'est l'exposition au dehors d'une puissance qui résiste, qui y trouve son enjeu et l'occasion de sa croissance, et qui ne peut être vaincue que par ce qui détruit cette puissance même.{/green}
+
+    **Un critère pour les protections.** {coral}Une protection n'est pas bonne parce qu'elle réduit l'exposition, mais parce qu'elle renforce la résistance au lieu de s'y substituer{/coral} : la bulle de David Vetter suppléait à une résistance absente sans pouvoir la faire naître, le vaccin la fait naître en exposant.
+
+    **Le sens de la responsabilité.** Si la vie n'est menacée comme telle que depuis qu'un vivant peut détruire les conditions de son renouvellement (Jonas), la responsabilité qui en découle {red}ne consiste pas à mettre la vie à l'abri{/red}, ce qui n'aurait pas de sens, mais {green}à ne pas détruire la puissance par laquelle elle se renouvelle{/green}.
+
+    **Les références dans l'ordre de la copie.**
+
+    | Référence | Partie | Ce qu'elle établit |
+    | Aristote, De l'âme, II, 1 | I | Seul le vivant dépérit par soi-même |
+    | Descartes, Passions de l'âme, art. 5-6 | I | Seul ce qui fonctionne peut se rompre |
+    | Descartes, Sixième Méditation | I | Le dérèglement naît du fonctionnement |
+    | Aristote, De l'âme, II, 4 (nutrition) | II | Le vivant vit de ce qu'il reçoit |
+    | Plotin, Ennéades (l'Intellect) | II | Seule une vie sans manque est invulnérable |
+    | Aristote, De l'âme, II, 4 (génération) | II | La vie demeure la même en espèce |
+    | Jonas, Le Principe responsabilité | II | La vie en général menacée du dehors |
+    | Spinoza, Éthique, III, prop. 4 et 6 | III | Nulle chose ne se détruit elle-même |
+    | Bichat, Recherches physiologiques | III | La vie résiste à la mort |
+    | Montaigne, Essais, I, 20 | III | Objection : la vie bâtit la mort |
+    | Spinoza, Éthique, IV, prop. 3 | III | L'usure vient des causes extérieures |
+    | Canguilhem, Le Normal et le pathologique | III | Vivre, c'est préférer et exclure |
+    | Borges, « L'immortel » | III | Sans mort possible, l'indifférence |
+    | Nietzsche, Crépuscule des idoles | III | Ce qui ne tue pas rend plus fort |
+    | Améry, « La torture » | III | La blessure qui détruit la résistance |
+  tables:
+  - table: reference-partie-ce-qu-elle-etablit
+    exercises:
+    - {kind: order, column: Référence}
+    - {kind: bank, column: Référence}
+    - {kind: cell, column: Référence}
+  points:
+  - id: vulnerabilite-vie-l11-p1
+    sentence: "La contradiction du problème de la vulnérabilité de la vie se dénoue dans une distinction : ce qui est constitutif de la vie, c'est la ___, et ce qui lui est extérieur, c'est ce qui la menace."
+    answer: "résistance"
+    alt: ["resistance"]
+  - id: vulnerabilite-vie-l11-p2
+    sentence: "La vulnérabilité naît de la rencontre de la résistance interne et de la menace extérieure, dans l'___ par laquelle le vivant dépend de ce qu'il n'est pas."
+    answer: "ouverture"
+    alt: []
+  - id: vulnerabilite-vie-l11-p3
+    sentence: "Formule finale : la vulnérabilité de la vie, c'est l'exposition au dehors d'une ___ qui résiste, qui y trouve son enjeu et l'occasion de sa croissance, et qui ne peut être vaincue que par ce qui la détruit elle-même."
+    answer: "puissance"
+    alt: []
+  - id: vulnerabilite-vie-l11-p4
+    sentence: "Critère tiré de la dissertation : une protection n'est pas bonne parce qu'elle réduit l'exposition, mais parce qu'elle renforce la résistance au lieu de s'y ___."
+    answer: "substituer"
+    alt: []
+  - id: vulnerabilite-vie-l11-p5
+    sentence: "Selon le critère des protections tiré de la dissertation, la bulle de David Vetter suppléait à une résistance absente sans pouvoir la faire naître, alors que le ___ la fait naître en exposant."
+    answer: "vaccin"
+    alt: []
+  - id: vulnerabilite-vie-l11-p6
+    sentence: "Si la vie n'est menacée comme telle que depuis qu'un vivant peut détruire les conditions de son renouvellement, la responsabilité ne consiste pas à mettre la vie à l'___, mais à ne pas détruire la puissance par laquelle elle se renouvelle."
+    answer: "abri"
+    alt: []

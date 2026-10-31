@@ -13,7 +13,7 @@ tagline: Dissertation sur programme, thème imposé.
 status: available
 default: false
 layout: library
-version: 41
+version: 42
 
 tracks:
   - id: sujets
@@ -25,7 +25,7 @@ tracks:
     # La liste des sujets (sujets.yaml, rangés par type d'intitulé) ; les
     # units sont les sujets traités, chacun relié à son intitulé par `unit`.
     subjects: sujets.yaml
-    units: []
+    units: [vulnerabilite-vie]
 
   - id: idees
     title: Idées
