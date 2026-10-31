@@ -1,6 +1,6 @@
 ---
 name: unite-texte
-description: Crée de A à Z une unité de texte Cartophilo (piste « Textes » de Marx ou de Plotin, ou unité de texte dans une piste du Hors-programme ou de La vie) à partir d'un texte à étudier, d'un PDF (y compris scanné ou sans texte sélectionnable), d'un commentaire, de notes d'édition ou d'un export Quizlet de cartes déjà écrites : leçons d'introduction, une leçon par paragraphe avec texte intégral et rappel explicatif, cartes-citation aux trous choisis, cartes-explication, validation, branchement dans le cours, commit et push. À utiliser dès qu'on demande de « faire une unité-texte », « ficher ce texte pour l'app », « créer les cartes de ce passage », ou d'importer des cartes Quizlet portant sur un texte précis.
+description: Crée de A à Z une unité de texte Cartophilo (piste « Textes » de Marx ou de Plotin, ou unité de texte dans une piste du Hors-programme ou de La vie) à partir d'un texte à étudier (seul, l'analyse étant alors écrite et vérifiée d'abord), d'un PDF (y compris scanné ou sans texte sélectionnable), d'un commentaire, de notes d'édition ou d'un export Quizlet de cartes déjà écrites : leçons d'introduction, une leçon par paragraphe avec texte intégral et rappel explicatif, cartes-citation aux trous choisis, cartes-explication, validation, branchement dans le cours, commit et push. À utiliser dès qu'on demande de « faire une unité-texte », « ficher ce texte pour l'app », « créer les cartes de ce passage », ou d'importer des cartes Quizlet portant sur un texte précis.
 ---
 
 # Créer une unité de texte
@@ -57,6 +57,60 @@ Ne demander que ce qui manque vraiment, en une seule question groupée.
    coquilles étrangères, « illustrations » plaquées) ne vaut pas une note
    d'édition. N'en tirer une carte que si l'information est attestée ou
    vérifiable ; sinon la signaler, sans la faire apprendre.
+
+### Sans commentaire
+
+Quand il n'y a que le texte, sans commentaire ni notes, ne rien demander de
+plus et ne pas écrire pour autant au fil de l'eau d'emblée : **produire
+d'abord le commentaire qui manque**, qui tiendra lieu, dans toute la suite de
+la skill, de « commentaire » (découpage, trous, introduction, sources des
+cartes-explication).
+
+1. **Chercher ce qui existe déjà.** Les notes et la notice de l'édition dont
+   le texte est tiré, si l'utilisateur a le PDF (le lui demander une fois,
+   sans bloquer s'il ne l'a pas) ; un notebook NotebookLM de l'auteur ou de
+   l'œuvre, s'il en est donné un (pour Plotin, le notebook « Plotin » de
+   `cours-traite`), interrogé comme au § 1 bis de `cours-traite` : dans le
+   navigateur intégré, historique supprimé, une question à la fois, en
+   rappelant à chaque fois l'œuvre, la traduction et l'incipit du passage ;
+   enfin le dépôt (`grep` sur l'auteur et l'œuvre dans `content/courses/`) :
+   un cours, une entrée de glossaire ou une unité-œuvre voisins disent déjà
+   le contexte, et l'unité doit s'accorder avec eux.
+2. **Écrire l'analyse du texte entier**, dans un fichier du dossier
+   temporaire, avant la première leçon :
+   - **la question** à laquelle le texte répond, et **ce qui l'amène** à ce
+     point de l'œuvre (ce qui précède, ce qui suit) ;
+   - **la thèse**, en une phrase, et **contre qui** (adversaire, opinion
+     commune, position rivale) ;
+   - **le problème** : ce qui rend la thèse difficile ou paradoxale ;
+   - **les mouvements**, repérés par leurs lignes, avec pour chacun son rôle
+     (pose, objecte, démontre, illustre, conclut) : c'est le découpage du § 1 ;
+   - **les arguments** de chaque mouvement, pas à pas, avec la prémisse
+     implicite qui les rend concluants ;
+   - **les notions** et leurs termes dans la langue de l'auteur ;
+   - **les enjeux** (ce que le texte permet de penser, à quoi il sert dans
+     une dissertation) et **les contresens** à éviter ;
+   - **ce qui est décisif** dans chaque mouvement, le mot ou la modalité sur
+     lesquels tient l'argument : la carte des trous (§ 5), qu'aucun
+     commentateur ne fournit ici.
+   Relire l'analyse d'un bout à l'autre et corriger ce qui ne s'enchaîne
+   pas : c'est la seule vue d'ensemble qu'aura l'unité.
+3. **Vérifier ce qui sort du texte.** Ce que l'analyse tire du texte même
+   (thèse, arguments, structure) s'atteste par le texte cité. Tout le reste
+   (dates, place dans l'œuvre, renvois à d'autres textes, positions des
+   commentateurs, débats d'interprétation) vient de ma connaissance et se
+   vérifie par une recherche avant d'aller dans un rappel ou une carte :
+   vérifier plutôt que retirer, mais ne faire apprendre que ce qui est
+   confirmé, et signaler le reste dans le compte rendu. Un commentateur ne
+   se nomme qu'avec une position attestée, jamais de mémoire seule.
+4. **Écrire l'unité** comme d'ordinaire (§ 1 à § 9), l'analyse tenant lieu de
+   commentaire : les rappels la développent paragraphe par paragraphe, les
+   leçons d'introduction et de prolongement en reprennent la question, les
+   notions, les positions rivales et les enjeux, les trous suivent ce qu'elle
+   a jugé décisif.
+5. **Le dire dans le compte rendu** (§ 10) : l'unité repose sur ma propre
+   analyse, avec les sources consultées (notebook, édition, recherches) et
+   les points d'interprétation où une autre lecture était possible.
 
 ## 1. Préparer
 
@@ -272,7 +326,9 @@ formule, le sens d'une image, un terme technique et son grec, le contresens à
 éviter, un renvoi, une note d'édition, un repère de localisation.
 
 - **Source** : le commentaire, les notes, le rappel ; chaque carte reprend un
-  point du rappel ou des notes, jamais une affirmation non attestée.
+  point du rappel ou des notes, jamais une affirmation non attestée. Sans
+  commentaire, le rappel ne vaut source que pour ce qu'il tire du texte ;
+  le reste doit avoir été vérifié (§ 0, « Sans commentaire »).
 - **Tout le commentaire**, digressions comprises : ce qu'il explique sans
   porter directement sur le texte (autres œuvres de l'auteur, notions de
   fond, débats, réception) se fait carte dès que cela aide à comprendre le
@@ -347,6 +403,8 @@ Pour toute l'unité, vérifier :
 - [ ] tout le commentaire couvert, digressions comprises, chaque carte dans
       la bonne leçon et dans l'ordre du commentaire (§ 6) ;
 - [ ] pas d'italique dans un gras, pas de tiret cadratin hors citation ;
+- [ ] sans commentaire : l'analyse écrite avant la première leçon, et ce
+      qui ne sort pas du texte vérifié ou signalé ;
 - [ ] `version:` du cours incrémentée.
 
 ## 10. Terminer
@@ -357,7 +415,8 @@ Pour toute l'unité, vérifier :
    les leçons et les cartes, et ce qui a été corrigé ou laissé de côté. Faire
    `git fetch` avant de pousser.
 3. Rapporter en quelques lignes : leçons et cartes créées, passages
-   illisibles ou douteux, points à vérifier sur le texte.
+   illisibles ou douteux, points à vérifier sur le texte ; sans commentaire,
+   les sources consultées et les choix d'interprétation.
 
 Les fichiers écrits restent en fins de ligne LF : en Python, écrire avec
 `newline=''` après avoir normalisé `\r\n` en `\n`.
