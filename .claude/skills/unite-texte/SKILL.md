@@ -77,11 +77,20 @@ cartes-explication).
    un cours, une entrée de glossaire ou une unité-œuvre voisins disent déjà
    le contexte, et l'unité doit s'accorder avec eux.
 2. **Écrire l'analyse du texte entier**, dans un fichier du dossier
-   temporaire, avant la première leçon :
+   temporaire, avant la première leçon. Modèle : la fiche d'explication
+   linéaire de Montaigne, « Sur un enfant monstrueux » (2026-09-29, dont
+   est tirée `la-vie/units/montaigne-monstre`) : des préalables (thèse,
+   mouvements, glossaire), puis, mouvement par mouvement, chaque extrait cité
+   suivi de son explication et une synthèse du mouvement. Elle contient :
    - **la question** à laquelle le texte répond, et **ce qui l'amène** à ce
      point de l'œuvre (ce qui précède, ce qui suit) ;
    - **la thèse**, en une phrase, et **contre qui** (adversaire, opinion
-     commune, position rivale) ;
+     commune, position rivale). Qualifier ses affirmations avec le
+     vocabulaire reçu de la discipline (*ontologique*, *anthropologique*,
+     *épistémologique*, *éthique*…), jamais avec une étiquette forgée pour
+     l'occasion : la fiche de Montaigne disait la seconde thèse
+     « diagnostique », l'utilisateur l'a corrigée partout en
+     « anthropologique », et la carte qui la faisait apprendre avec ;
    - **le problème** : ce qui rend la thèse difficile ou paradoxale ;
    - **les mouvements**, repérés par leurs lignes, avec pour chacun son rôle
      (pose, objecte, démontre, illustre, conclut) : c'est le découpage du § 1 ;
@@ -89,7 +98,20 @@ cartes-explication).
      implicite qui les rend concluants ;
    - **les notions** et leurs termes dans la langue de l'auteur ;
    - **les enjeux** (ce que le texte permet de penser, à quoi il sert dans
-     une dissertation) et **les contresens** à éviter ;
+     une dissertation) et **les contresens** à éviter. Un enjeu ne vaut que
+     rattaché à une ligne du texte ou à un auteur précis : la conclusion de
+     Montaigne en « portées » épistémologique, anthropologique, éthique et
+     esthétique, devenue une leçon de prolongement aux réponses vagues
+     (« conjonction », « regarde », « féconde »), a été supprimée en
+     entier ;
+   - **les confrontations** avec les auteurs qui comptent pour l'épreuve
+     (pour La vie, Canguilhem, Aristote, Bergson…), développées d'après leur
+     texte, avec l'ouvrage, la partie et le chapitre, et non en une allusion :
+     la fiche ne disait de Canguilhem qu'une formule (« de valeur
+     négative ») ; l'utilisateur en a tiré une quinzaine de cartes sur « La
+     monstruosité et le monstrueux » (*La Connaissance de la vie*, I, 5) :
+     écart statistique, tératologie, polarité de la vie, monstre et mort,
+     monstre et pathologique ;
    - **ce qui est décisif** dans chaque mouvement, le mot ou la modalité sur
      lesquels tient l'argument : la carte des trous (§ 5), qu'aucun
      commentateur ne fournit ici.
@@ -103,11 +125,22 @@ cartes-explication).
    vérifier plutôt que retirer, mais ne faire apprendre que ce qui est
    confirmé, et signaler le reste dans le compte rendu. Un commentateur ne
    se nomme qu'avec une position attestée, jamais de mémoire seule.
+   **Les renvois à d'autres textes de l'auteur se citent dans la traduction
+   du texte étudié**, retrouvés dans son édition (PDF de l'utilisateur, par
+   exemple `D:\Downloads`), avec le titre et la numérotation de chapitre de
+   cette édition. La fiche de Montaigne citait de mémoire le texte ancien
+   (« On s'apprivoise à toute étrangeté par l'usage », Villey) quand l'unité
+   suit la traduction de Guy de Pernon (« on se fait à n'importe quelle
+   étrangeté au fil du temps et par la force de l'habitude ») et numérotait
+   « Des cannibales » en I, 31 au lieu de « Sur les cannibales », I, 30 :
+   l'utilisateur a tout repris sur l'édition.
 4. **Écrire l'unité** comme d'ordinaire (§ 1 à § 9), l'analyse tenant lieu de
    commentaire : les rappels la développent paragraphe par paragraphe, les
    leçons d'introduction et de prolongement en reprennent la question, les
    notions, les positions rivales et les enjeux, les trous suivent ce qu'elle
-   a jugé décisif.
+   a jugé décisif. Ce que l'analyse remarque sur la manière (la précision
+   d'un récit, une prudence de témoin) se dit dans le rappel, sans faire
+   trouer chaque détail qui l'illustre (§ 5, règle 7).
 5. **Le dire dans le compte rendu** (§ 10) : l'unité repose sur ma propre
    analyse, avec les sources consultées (notebook, édition, recherches) et
    les points d'interprétation où une autre lecture était possible.
@@ -318,6 +351,22 @@ la phrase dans une copie**, et c'est le commentaire qui dit ce qui compte.
 6. **Aucune thèse sans carte** : relire chaque fragment et vérifier que ce
    qu'il affirme d'essentiel a sa carte (« celui qui médite ne requiert aucun
    appui de ce genre »).
+7. **Pas de carte sur un détail sans enjeu** : dans un récit ou une
+   description, l'âge, une mesure, une incise de témoin ne se trouent pas
+   pour eux-mêmes. Chez Montaigne, l'utilisateur a supprimé « très
+   simple », « qui se disaient être », « quatorze mois tout juste »,
+   « quatre doigts environ », « plus courts et plus menus », « La nourrice
+   nous a dit aussi » ; il a gardé ce qui porte la thèse (« d'une forme
+   ordinaire », « comme les autres enfants de son âge »).
+8. **Le trou sur le noyau, son cadre visible** : le verbe introducteur, la
+   conjonction ou le groupe qui amène l'idée restent dans la phrase, et le
+   trou ne prend que ce qui la porte : « Je ___ » (« vis avant-hier »),
+   « de peur que ___ » (« les événements ne viennent le démentir »),
+   « se raccordant à ___ » (« une seule tête »), « pourraient bien
+   constituer pour le roi ___ » (« un présage favorable »). C'est le pendant
+   de la règle 3 : le trou s'élargit quand le mot seul ne dit rien
+   (« pâtre du Médoc », « regard humain »), il se resserre quand ce qui
+   l'entoure n'apprend rien.
 
 ## 6. Les cartes-explication (ensuite, en fin de paragraphe)
 
@@ -343,6 +392,21 @@ formule, le sens d'une image, un terme technique et son grec, le contresens à
   deux phrases.
 - **Réponse unique, non paraphrasable** : un terme, un nom, une référence
   courte. Sinon, déplacer le trou sur un mot pivot.
+- **Une référence se trouve entière** : « II, 31 », pas « 31 » ; livre et
+  chapitre en deux trous (« XVI ; 8 ») plutôt qu'un trou sur l'un et
+  l'autre en clair ; pas de variante en chiffres arabes dans `alt`.
+- **Un renvoi à citer se fait cascade** : une citation d'un autre texte que
+  l'unité fait apprendre (« Des boiteux », III, 11 ; « Sur la façon de
+  ménager sa volonté », III, 10) ne tient pas en une carte au trou d'un
+  mot. Elle est donnée en entier, précédée de sa référence (« *Les Essais*,
+  III, 10, « … » : « … » »), et trouée comme une carte-citation : chacun
+  de ses morceaux, puis le titre, puis la référence.
+- **Un nom propre obscur** (un lieu, une institution) s'éclaire dans
+  `explanation` sur sa carte (le Médoc : « un berger de la région du Médoc,
+  au nord-ouest de Bordeaux »).
+- **Mise en relief** : la notion en **gras**, ce qui la caractérise ou la
+  justifie en __souligné__, comme l'utilisateur l'a fait dans presque toutes
+  les cartes-explication de Montaigne.
 - **Carte autonome** : elle revient seule en révision ; pas de « ce
   passage », « cette formule » sans les rappeler.
 - **Portée visible** : la phrase dit pourquoi le point compte.
@@ -404,7 +468,9 @@ Pour toute l'unité, vérifier :
       la bonne leçon et dans l'ordre du commentaire (§ 6) ;
 - [ ] pas d'italique dans un gras, pas de tiret cadratin hors citation ;
 - [ ] sans commentaire : l'analyse écrite avant la première leçon, et ce
-      qui ne sort pas du texte vérifié ou signalé ;
+      qui ne sort pas du texte vérifié ou signalé ; les renvois cités dans
+      la traduction de l'unité, d'après son édition ; aucune leçon d'enjeux
+      généraux sans ancrage ;
 - [ ] `version:` du cours incrémentée.
 
 ## 10. Terminer
