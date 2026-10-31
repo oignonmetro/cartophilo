@@ -1,0 +1,301 @@
+# Cours sur la vie (voir content/philosophie.md), tiré de l'article « Life »
+# de Carlos Mariscal, Stanford Encyclopedia of Philosophy (révision 2026) :
+# sections 3 à 5, « Artificial and Synthetic Life », « Origin(s) of Life »,
+# « Search For Life ». Citations traduites de l'anglais.
+
+id: sep-vie3
+title: "Faire, remonter, chercher la vie"
+subtitle: "Vie artificielle et synthétique, origine de la vie, recherche de vie dans l'Univers"
+icon: bulb
+color: green
+group: "SEP : Life (Mariscal)"
+lessons:
+- id: sep-vie3-l1
+  title: "La vie artificielle, forte ou faible"
+  notes: |-
+    **La seconde moitié de l'article porte sur les usages du concept de vie.** Plusieurs définitions vues plus haut sont nées chez des chercheurs travaillant sur ces questions appliquées ; la première est la vie artificielle.
+
+    **En principe, la vie peut être créée** : la plupart des scientifiques et des philosophes l'admettent. Mais ils ne s'accordent pas sur ce que cela demanderait.
+
+    **La vie artificielle forte.** Pour les approches {violet}fonctionnelles{/violet}, recréer l'**organisation formelle** des organismes pourrait suffire : des robots complexes ({violet}*hardware*{/violet}) ou des programmes ({violet}*software*{/violet}) pourraient être vivants. C'est la {violet}vie artificielle forte{/violet} (*Strong A-Life*), qui a reçu les mêmes objections que l'intelligence artificielle forte avant elle. Ceux qui la rejettent tiennent que l'approche fonctionnelle manque l'essentiel de la biologie.
+    - Les objections {pink}épistémiques{/pink} : nous n'avons pas le savoir biologique nécessaire pour recréer la vie dans un cadre numérique.
+    - Les objections {pink}ontologiques{/pink}, les plus nombreuses : une représentation ne peut équivaloir à ce qu'elle représente, ou la vie exige une incarnation chimique. {red}Une objection ontologique déclare la vie artificielle forte impossible par décret.{/red}
+
+    **La vie artificielle faible.** Elle ne présume pas l'équivalence ontologique de circuits et de cellules de structure semblable. Son but est plus modeste : {green}__mieux comprendre la vie telle que nous la connaissons en explorant les effets de divers paramètres dans des simulations, et placer la vie dans le cadre plus large de la biologie possible__{/green} (Langton). Exemple : dans le programme **Tierra** (Ray 1993), des logiciels se disputaient la puissance de calcul. Contre l'attente des chercheurs, un {coral}parasitisme logiciel{/coral} apparut, des programmes détournant le processus de reproduction d'autres programmes ; puis des mécanismes de police, et une {yellow}course aux armements entre profiteurs et logiciels qui cherchaient à les arrêter{/yellow}.
+
+    **Les avantages de l'*in silico*.** Forte ou faible, la vie artificielle coûte moins cher que le travail sur des organismes réels, et offre ce que la biologie ordinaire n'offre pas : programmer d'autres paramètres à la place des lois de la nature, explorer des relations à travers des temps et des espaces immenses.
+
+    ! Tierra ne prouve pas que des programmes vivent : il montre que des phénomènes typiques du vivant (parasitisme, course aux armements) surgissent de la seule sélection, quel que soit le support.
+  points:
+  - id: sep-vie3-l1-p1
+    sentence: "En principe, la plupart des scientifiques et philosophes contemporains admettent que la vie peut être ___ ; ils ne s'accordent pas sur ce que cela demanderait."
+    answer: "créée"
+    alt: []
+  - id: sep-vie3-l1-p2
+    sentence: "La vie artificielle ___ tient que recréer l'organisation formelle des organismes pourrait suffire : des robots ou des programmes complexes pourraient être vivants."
+    answer: "forte"
+    alt: []
+  - id: sep-vie3-l1-p3
+    sentence: "La vie artificielle forte a reçu les mêmes objections que l'intelligence ___ forte avant elle."
+    answer: "artificielle"
+    alt: []
+  - id: sep-vie3-l1-p4
+    sentence: "Les objections ___ à la vie artificielle forte tiennent que nous n'avons pas le savoir biologique nécessaire pour recréer la vie dans un cadre numérique."
+    answer: "épistémiques"
+    alt: []
+  - id: sep-vie3-l1-p5
+    sentence: "Les objections ___ à la vie artificielle forte, les plus nombreuses, tiennent qu'une représentation ne peut équivaloir à ce qu'elle représente, ou que la vie exige une incarnation chimique."
+    answer: "ontologiques"
+    alt: []
+  - id: sep-vie3-l1-p6
+    sentence: "Une objection ontologique déclare la vie artificielle forte impossible par ___, au lieu de le montrer."
+    answer: "décret"
+    alt: []
+  - id: sep-vie3-l1-p7
+    sentence: "La vie artificielle ___ ne présume pas l'équivalence de circuits et de cellules : elle veut mieux comprendre la vie telle que nous la connaissons par des simulations."
+    answer: "faible"
+    alt: []
+  - id: sep-vie3-l1-p8
+    sentence: "La vie artificielle faible place la vie terrestre dans le cadre plus large de la biologie ___ (Langton)."
+    answer: "possible"
+    alt: []
+  - id: sep-vie3-l1-p9
+    sentence: "Dans le programme ___ (Ray 1993), des logiciels se disputant la puissance de calcul virent apparaître, contre toute attente, un parasitisme logiciel."
+    answer: "Tierra"
+    alt: ["Terra"]
+  - id: sep-vie3-l1-p10
+    sentence: "Dans le programme Tierra, des programmes en vinrent à détourner le processus de reproduction d'autres programmes : un ___ logiciel, suivi d'une course aux armements avec des mécanismes de police."
+    answer: "parasitisme"
+    alt: []
+  - id: sep-vie3-l1-p11
+    sentence: "Les approches *in ___* de la vie artificielle coûtent moins cher que le travail sur des organismes réels, et permettent de programmer d'autres paramètres à la place des lois de la nature."
+    answer: "silico"
+    alt: []
+- id: sep-vie3-l2
+  title: "La vie synthétique"
+  notes: |-
+    **La vie synthétique ({violet}*wetware*{/violet})** traite certaines questions de la vie artificielle avec un grain de réalisme plus fin : elle travaille avec de la vraie chimie, non des circuits.
+
+    **Ses projets** : produire l'{coral}autoréplication{/coral} (Lincoln et Joyce 2009), des {coral}génomes minimaux{/coral} (Koonin 2000, Hutchinson et al. 2016), une évolution chimique, des machines vivantes synthétiques ou {violet}« xénobots »{/violet}, une {violet}« xénobiologie »{/violet} aux bases génétiques différentes. L'intelligence artificielle a catalysé ces recherches, au point que certains parlent d'un déluge imminent.
+
+    **Ce qu'elle apprend.** Toute la biologie de synthèse n'étudie pas la vie telle qu'elle *pourrait être*, pas plus que toute programmation n'est vie artificielle. Mais ses outils éclairent : {green}__en explorant les possibles, on découvre des relations cachées, et l'on voit quels aspects de la vie sont plus ou moins plausibles qu'on ne le croyait__{/green}.
+
+    | Approche | Support | But |
+    | vie artificielle forte | *hardware*, *software* | créer du vivant |
+    | vie artificielle faible | simulations | comprendre la vie possible |
+    | vie synthétique | *wetware* | recréer en chimie réelle |
+  tables:
+  - table: approche-support-but
+    exercises:
+    - {kind: bank, column: Support}
+  points:
+  - id: sep-vie3-l2-p1
+    sentence: "La vie synthétique, ou *___*, traite certaines questions de la vie artificielle avec un grain de réalisme plus fin, en chimie réelle."
+    answer: "wetware"
+    alt: []
+  - id: sep-vie3-l2-p2
+    sentence: "Parmi les projets de vie synthétique : produire l'autoréplication, des génomes ___, une évolution chimique."
+    answer: "minimaux"
+    alt: []
+  - id: sep-vie3-l2-p3
+    sentence: "Les machines vivantes synthétiques sont appelées « ___ »."
+    answer: "xénobots"
+    alt: ["xenobots"]
+  - id: sep-vie3-l2-p4
+    sentence: "La ___ cherche à produire des êtres vivants aux bases génétiques différentes des nôtres."
+    answer: "xénobiologie"
+    alt: ["xenobiologie"]
+  - id: sep-vie3-l2-p5
+    sentence: "En explorant les possibles, la biologie de synthèse découvre des relations cachées et montre quels aspects de la vie sont plus ou moins ___ qu'on ne le croyait."
+    answer: "plausibles"
+    alt: []
+- id: sep-vie3-l3
+  title: "L'origine de la vie : de Pasteur à Miller"
+  notes: |-
+    **La nature de la vie est inséparable de son origine.** Anciens et modernes admettaient que la vie surgit souvent spontanément du non-vivant ; deux siècles d'expériences ont renversé cette idée. Les expériences de **Pasteur** sur l'{violet}abiogenèse{/violet} ont montré que {green}la vie ne naît pas, d'ordinaire, du non-vivant{/green}. Mais ce résultat a fait de l'origine de la vie {coral}une des plus grandes énigmes de la science{/coral} : si la vie ne vient que de la vie, d'où vient la première ?
+
+    **Darwin en dit peu.** Sa seule spéculation est dans une lettre à son ami Joseph **Hooker** : il imagine la vie naissant dans {yellow}« quelque petite mare tiède »{/yellow}.
+
+    **Le XXe siècle s'en empare.** Entre les deux guerres, Alexandre **Oparine** et J.B.S. **Haldane** proposent séparément des hypothèses sur l'origine de la vie. Dans les années 1950, l'étudiant Stanley **Miller** les met à l'épreuve et découvre {coral}des dizaines d'acides aminés{/coral} dans son mélange (1953). Le champ s'est depuis considérablement étendu.
+
+    **La vie est apparue très tôt.** Nos plus anciennes archives fiables, il y a quelque {coral}3,5 milliards d'années{/coral}, contiennent des fossiles microbiens : des formes distinctes des procaryotes actuels, et des rapports isotopiques du carbone propres à la vie que nous connaissons. {green}__Dès que la Terre ne fut plus en fusion, elle fut pleine de vie.__{/green} Comment la vie a commencé, et pourquoi si vite, reste une des questions ouvertes les plus pressantes de la science.
+  points:
+  - id: sep-vie3-l3-p1
+    sentence: "Les expériences de ___ sur l'abiogenèse ont montré que la vie ne naît pas, d'ordinaire, du non-vivant, renversant l'idée de génération spontanée."
+    answer: "Pasteur"
+    alt: []
+  - id: sep-vie3-l3-p2
+    sentence: "En montrant que la vie ne naît pas du non-vivant, Pasteur a fait de l'___ de la vie une des plus grandes énigmes de la science."
+    answer: "origine"
+    alt: []
+  - id: sep-vie3-l3-p3
+    sentence: "Dans une lettre à Joseph Hooker, Darwin imagine la vie naissant dans « quelque petite mare ___ »."
+    answer: "tiède"
+    alt: []
+  - id: sep-vie3-l3-p4
+    sentence: "Darwin confie son unique spéculation sur l'origine de la vie, « quelque petite mare tiède », dans une lettre à son ami Joseph ___."
+    answer: "Hooker"
+    alt: []
+  - id: sep-vie3-l3-p5
+    sentence: "Entre les deux guerres, Alexandre Oparine et J.B.S. ___ proposent séparément des hypothèses sur l'origine de la vie."
+    answer: "Haldane"
+    alt: []
+  - id: sep-vie3-l3-p6
+    sentence: "En 1953, l'étudiant Stanley ___ met à l'épreuve l'hypothèse d'Oparine et Haldane et découvre des dizaines d'acides aminés dans son mélange."
+    answer: "Miller"
+    alt: []
+  - id: sep-vie3-l3-p7
+    sentence: "L'expérience de Miller (1953) produit des dizaines d'___ dans un mélange imitant la Terre primitive."
+    answer: "acides aminés"
+    alt: []
+  - id: sep-vie3-l3-p8
+    sentence: "Nos plus anciennes archives fiables de la Terre, il y a quelque ___ milliards d'années, contiennent déjà des fossiles microbiens."
+    answer: "3,5"
+    alt: ["3.5"]
+  - id: sep-vie3-l3-p9
+    sentence: "Dès que la Terre ne fut plus en ___, elle fut pleine de vie : pourquoi la vie est apparue si vite reste une question ouverte."
+    answer: "fusion"
+    alt: []
+- id: sep-vie3-l4
+  title: "Remonter ou construire : LUCA et la chimie prébiotique"
+  notes: |-
+    **L'origine de la vie a l'air d'une question, mais elle en est plusieurs.** On peut chercher comment la vie *aurait pu* naître, ou comment elle *est* née ; viser l'adéquation historique, l'explication naturelle, ou la ressemblance à la vie telle que nous la connaissons. Certaines étapes ont pu être {pink}fortuites{/pink}, d'autres {pink}contingentes{/pink}, d'autres encore {pink}la seule voie possible partout dans l'Univers{/pink}.
+
+    **De bas en haut ({violet}*bottom-up*{/violet}).** On part de la chimie prébiotique et l'on cherche comment elle aurait pu résister aux contraintes pour former des entités semblables au vivant, capables d'évoluer. Le problème principal : {red}__la plupart des interactions énergétiquement favorables consommeraient les formes de proto-vie elles-mêmes__{/red}. On relâche alors des hypothèses : l'environnement a peut-être fourni les premières frontières, ou un matériel proto-génétique ; tout a pu se passer dans un solvant visqueux plutôt qu'une cellule, sur une surface (Wächtershäuser), ou avec des entités encapsulées plus tard (Eigen et Schuster). Mais {red}le fossé entre la chimie prébiotique et les formes de vie les plus simples reste immense{/red}.
+
+    **De haut en bas ({violet}*top-down*{/violet}).** On part des taxons actuels et l'on remonte leur ascendance, en comparant la centaine de gènes partagés liés à la traduction biologique (Koonin 2011). Toute la vie partage un {violet}dernier ancêtre commun universel{/violet}, **LUCA** (*Last Universal Common Ancestor*). Il y a peut-être eu plusieurs origines de la vie, mais nous ne pouvons les distinguer d'une seule ; au moins une a conduit à LUCA, contrainte importante pour toute théorie.
+
+    **LUCA n'est pas le premier vivant.** C'était une créature parmi une population plus large, qui a vécu {coral}longtemps après l'origine du premier organisme{/coral}. Restent ouvertes : était-il simple ou complexe ? avait-il une membrane semblable aux nôtres ? son génome était-il d'ADN ? où et quand vivait-il ?
+
+    **Le fossé entre les deux approches est immense** : d'innombrables générations séparent la chimie prébiotique de LUCA. Nous ne résoudrons peut-être jamais l'origine de la vie, mais chaque pas rapproche de la compréhension de la trajectoire.
+
+    ! Remonter jusqu'à LUCA ne remonte pas jusqu'à l'origine : LUCA est le dernier ancêtre commun des vivants actuels, non le premier vivant.
+  points:
+  - id: sep-vie3-l4-p1
+    sentence: "Les chercheurs sur l'origine de la vie peuvent chercher comment la vie aurait pu naître, ou comment elle est ___ : l'origine de la vie a l'air d'une question, mais elle en est plusieurs."
+    answer: "née"
+    alt: []
+  - id: sep-vie3-l4-p2
+    sentence: "L'approche « de bas en haut », ou *___*, part de la chimie prébiotique et cherche comment des entités semblables au vivant auraient pu se former."
+    answer: "bottom-up"
+    alt: ["bottom up"]
+  - id: sep-vie3-l4-p3
+    sentence: "Problème principal de l'approche de bas en haut : la plupart des interactions énergétiquement favorables ___ les formes de proto-vie elles-mêmes."
+    answer: "consommeraient"
+    alt: []
+  - id: sep-vie3-l4-p4
+    sentence: "Pour relâcher les hypothèses de l'approche de bas en haut, on suppose que la vie a pu naître sur une ___ (Wächtershäuser), dans un solvant visqueux, ou avec des entités encapsulées plus tard."
+    answer: "surface"
+    alt: []
+  - id: sep-vie3-l4-p5
+    sentence: "L'approche « de haut en bas », ou *___*, part des taxons actuels et remonte leur ascendance en comparant leurs gènes partagés."
+    answer: "top-down"
+    alt: ["top down"]
+  - id: sep-vie3-l4-p6
+    sentence: "L'approche de haut en bas compare la centaine de gènes partagés par tous les vivants, liés à la ___ biologique (Koonin 2011)."
+    answer: "traduction"
+    alt: []
+  - id: sep-vie3-l4-p7
+    sentence: "Toute la vie terrestre partage un dernier ancêtre commun universel, appelé ___."
+    answer: "LUCA"
+    alt: []
+  - id: sep-vie3-l4-p8
+    sentence: "Il y a peut-être eu plusieurs ___ de la vie, mais nous ne pouvons les distinguer d'une seule ; au moins une a conduit à LUCA."
+    answer: "origines"
+    alt: []
+  - id: sep-vie3-l4-p9
+    sentence: "LUCA n'est pas le premier vivant : c'était une créature parmi une population plus large, qui a vécu longtemps après l'origine du premier ___."
+    answer: "organisme"
+    alt: []
+  - id: sep-vie3-l4-p10
+    sentence: "Une question ouverte sur LUCA : son génome était-il fait d'___ ?"
+    answer: "ADN"
+    alt: []
+- id: sep-vie3-l5
+  title: "Les biosignatures, preuves négatives"
+  notes: |-
+    **Même les analyses les plus pessimistes suggèrent que la vie terrestre n'est pas unique** (Frank et Sullivan 2016) : de quoi justifier qu'on la cherche ailleurs. La recherche vise deux extrêmes : {pink}les sous-produits chimiques de la vie{/pink}, et {pink}les signaux technologiques d'une vie intelligente{/pink}. La biologie de populations extraterrestres serait passionnante, mais elle s'étudie mal à distance.
+
+    **Les {violet}biosignatures{/violet}.** Ce sont des marqueurs de vie : des composés que la simple chimie produit rarement. Elles impliquent une {violet}conception matérielle de la vie{/violet}, biochimique, métabolique ou thermodynamique. On les cherche surtout sur Mars : expériences sur place, observations depuis la Terre ou l'orbite, étude des météorites. Les télescopes cherchent des **gaz hors d'équilibre thermodynamique** : du **méthane** est détecté sporadiquement sur Mars depuis 2004 ; le télescope spatial **James Webb** peut chercher des biomarqueurs gazeux dans l'atmosphère des exoplanètes.
+
+    **Une biosignature est une preuve négative.** {red}__Il faut exclure toutes les possibilités abiotiques__{/red} : une molécule n'atteste la vie que si aucun processus non vivant ne peut la produire. {coral}On ne sera donc jamais sûr d'avoir envisagé toutes les réactions et circonstances qui permettent au non-vivant de produire des molécules typiques de la vie.{/coral}
+
+    **Sur place, Viking et après.** En 1975, la NASA envoie sur Mars les sondes **Viking**, dont certaines expériences devaient détecter la vie. L'une, la {violet}*Labeled Release Experiment*{/violet}, le fit ; mais son résultat contredisait les autres expériences de bord, et fut jugé {red}non concluant{/red}. Le rover **Perseverance** peut évaluer certaines biosignatures, et des missions américaines, chinoises et japonaises cherchent des traces de vie passée ou présente sur Mars.
+
+    **Mars et la Terre échangent des roches.** Des tonnes de roches passent chaque année d'une planète à l'autre : une vie martienne ne serait pas forcément une origine distincte. La météorite martienne **ALH84001**, où des chercheurs de la NASA virent en 1996 des structures semblables à des bactéries, a contribué à fonder l'astrobiologie.
+
+    ! Détecter une biosignature ne prouve pas la vie : cela prouve seulement qu'on n'a pas encore trouvé de chimie qui l'explique.
+  points:
+  - id: sep-vie3-l5-p1
+    sentence: "La recherche de vie ailleurs vise deux extrêmes : les sous-produits chimiques de la vie, et les signaux ___ d'une vie intelligente."
+    answer: "technologiques"
+    alt: []
+  - id: sep-vie3-l5-p2
+    sentence: "Une ___ est un marqueur de vie : un composé que la simple chimie produit rarement."
+    answer: "biosignature"
+    alt: []
+  - id: sep-vie3-l5-p3
+    sentence: "Chercher des biosignatures implique une conception ___ de la vie, biochimique, métabolique ou thermodynamique."
+    answer: "matérielle"
+    alt: []
+  - id: sep-vie3-l5-p4
+    sentence: "Les télescopes cherchent dans les atmosphères planétaires des gaz hors d'___ thermodynamique, signe possible de vie."
+    answer: "équilibre"
+    alt: []
+  - id: sep-vie3-l5-p5
+    sentence: "Du ___ est détecté sporadiquement sur Mars depuis 2004, biosignature possible."
+    answer: "méthane"
+    alt: []
+  - id: sep-vie3-l5-p6
+    sentence: "Une biosignature est une preuve ___ : il faut exclure toutes les possibilités abiotiques."
+    answer: "négative"
+    alt: []
+  - id: sep-vie3-l5-p7
+    sentence: "Une molécule n'atteste la vie que si aucun processus ___ ne peut la produire : on ne sera jamais sûr de les avoir tous envisagés."
+    answer: "abiotique"
+    alt: ["non vivant"]
+  - id: sep-vie3-l5-p8
+    sentence: "En 1975, la NASA envoie sur Mars les sondes ___, dont une expérience détecta la vie, résultat jugé non concluant car il contredisait les autres."
+    answer: "Viking"
+    alt: []
+  - id: sep-vie3-l5-p9
+    sentence: "Une vie découverte sur Mars ne serait pas forcément une origine distincte de la vie terrestre, car les deux planètes échangent chaque année des tonnes de ___."
+    answer: "roches"
+    alt: []
+  - id: sep-vie3-l5-p10
+    sentence: "La météorite martienne ___, où des chercheurs de la NASA virent en 1996 des structures semblables à des bactéries, a contribué à fonder l'astrobiologie."
+    answer: "ALH84001"
+    alt: []
+- id: sep-vie3-l6
+  title: "Les technosignatures : chercher l'intelligence"
+  notes: |-
+    **Chercher une vie intelligente frappe davantage l'imagination.** Dans les années 1890, Percival **Lowell** dessine des {yellow}canaux martiens{/yellow}, influencé par l'observation de chenaux apparents ; la science-fiction imagine aussitôt une civilisation mourante, tirant l'eau des dernières glaces des pôles (Wells 1898).
+
+    **SETI.** L'intérêt pour les signaux radio venus de l'espace croît au XXe siècle, et s'accélère après **Spoutnik** (1957). Le programme {violet}SETI{/violet} n'est plus financé sur fonds publics depuis 1994, mais des donateurs et des chercheurs le poursuivent. Les obstacles sont immenses : l'espace est inimaginablement grand, les signaux faibles, les modes de communication interstellaire innombrables, et nos recherches n'en couvrent qu'une part insignifiante. On s'intéresse toujours aux {violet}technosignatures{/violet}.
+
+    **Envoyer des messages : METI.** Plus controversé : depuis 1974, des dizaines de messages ont été envoyés dans l'espace, surtout par radio vers des étoiles prometteuses. C'est le **SETI actif**, ou {violet}METI{/violet} (*Messaging Extraterrestrial Intelligence*). La pratique continue parce qu'elle est peu coûteuse et facile ; mais beaucoup de philosophes, scientifiques et experts s'y opposent : {red}__elle risque de signaler notre présence à des forces peut-être hostiles, au nom de générations futures qui ne peuvent y consentir__{/red} (Smith 2020).
+  points:
+  - id: sep-vie3-l6-p1
+    sentence: "Dans les années 1890, Percival ___ dessine des canaux martiens, que la science-fiction attribue à une civilisation mourante."
+    answer: "Lowell"
+    alt: []
+  - id: sep-vie3-l6-p2
+    sentence: "L'intérêt pour les signaux radio venus de l'espace s'accélère après le lancement de ___ en 1957."
+    answer: "Spoutnik"
+    alt: ["Sputnik"]
+  - id: sep-vie3-l6-p3
+    sentence: "Le programme de recherche de signaux d'une intelligence extraterrestre, ___, n'est plus financé sur fonds publics depuis 1994."
+    answer: "SETI"
+    alt: []
+  - id: sep-vie3-l6-p4
+    sentence: "Les signes d'une technologie extraterrestre, que l'on cherche à côté des biosignatures, s'appellent des ___."
+    answer: "technosignatures"
+    alt: []
+  - id: sep-vie3-l6-p5
+    sentence: "L'envoi de messages vers des étoiles prometteuses, ou SETI actif, s'appelle aussi ___ (*Messaging Extraterrestrial Intelligence*)."
+    answer: "METI"
+    alt: []
+  - id: sep-vie3-l6-p6
+    sentence: "On reproche au METI de risquer de signaler notre présence à des forces peut-être hostiles, au nom de générations futures qui ne peuvent y ___."
+    answer: "consentir"
+    alt: []

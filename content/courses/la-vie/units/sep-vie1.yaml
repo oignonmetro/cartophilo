@@ -1,0 +1,464 @@
+# Cours sur la vie (voir content/philosophie.md), tiré de l'article « Life »
+# de Carlos Mariscal, Stanford Encyclopedia of Philosophy (première
+# publication 2021, révision substantielle 2026) : introduction et
+# section 1, « Definition(s) ». Citations traduites de l'anglais.
+
+id: sep-vie1
+title: "Définir la vie"
+subtitle: "Ce qu'est une définition, et pourquoi aucune ne fait consensus"
+icon: compass
+color: green
+group: "SEP : Life (Mariscal)"
+lessons:
+- id: sep-vie1-l1
+  title: "Un concept que tout le monde évite"
+  notes: |-
+    **Ouvrez un manuel de biologie : vous y trouverez une définition de la vie**, souvent une liste de caractères qui s'appliquent aux organismes, à leurs parties, à leurs interactions ou à leur histoire. Pourtant, comme tout concept fondamental, {red}la vie est difficile à définir{/red}, et la plupart des gens évitent la question : ils ignorent les cas limites, acceptent des frontières floues, ou déclarent le problème hors de leur domaine.
+
+    **Mais certains ont besoin d'une démarcation rigoureuse.** Dans les sciences nouvelles, {sky}l'astrobiologie, l'étude des origines de la vie, la biologie de synthèse{/sky}, savoir ce qui compte comme vivant n'est pas un luxe : il faut savoir ce que l'on cherche sur Mars, ce que l'on essaie de produire en laboratoire, à partir de quand une chimie devient une biologie.
+
+    **Pourquoi si peu de progrès après tant de recherches ?** Peu de choses en biologie ont été plus discutées que la définition de la vie, et le résultat est {red}frustrant{/red}. Les raisons sont nombreuses : les chercheurs ne s'accordent ni sur {coral}le niveau d'abstraction{/coral}, ni sur {coral}ce qu'il faut inclure{/coral} (les virus ? les prions ?), ni même sur {coral}la nature des définitions{/coral}. Une bonne part du désaccord vient de ce que l'on ne cherche pas le même genre de définition : c'est par là qu'il faut commencer.
+
+    **Le chemin de l'article.** La première moitié porte sur les tentatives de caractériser la vie (définitions, puis scepticisme envers le projet de définir) ; la seconde, sur les usages qui réclament une définition : vie artificielle et synthétique, origine de la vie, recherche de vie dans l'Univers, entités plus grandes ou plus petites que l'organisme, et place de la vie dans la société.
+
+    ! Que la vie soit difficile à définir ne signifie pas qu'elle n'existe pas, ni que la distinction du vivant et du non-vivant soit illusoire : la plupart des chercheurs la tiennent pour réelle.
+  points:
+  - id: sep-vie1-l1-p1
+    sentence: "Comme tout concept fondamental, la vie est difficile à définir : la plupart des gens évitent la question, en ignorant les cas ___, en acceptant des frontières floues ou en la déclarant hors de leur domaine."
+    answer: "limites"
+    alt: ["marginaux"]
+  - id: sep-vie1-l1-p2
+    sentence: "Une définition rigoureuse de la vie est utile dans les sciences nouvelles, comme l'___, l'étude des origines de la vie ou la biologie de synthèse, où il faut savoir ce que l'on cherche ou ce que l'on produit."
+    answer: "astrobiologie"
+    alt: []
+  - id: sep-vie1-l1-p3
+    sentence: "Une définition rigoureuse de la vie est utile en astrobiologie, dans l'étude des origines de la vie, et en biologie de ___, qui cherche à produire du vivant en laboratoire."
+    answer: "synthèse"
+    alt: []
+  - id: sep-vie1-l1-p4
+    sentence: "Peu de choses en biologie ont été plus discutées que la définition de la vie, avec si peu de progrès : les chercheurs ne s'accordent ni sur le niveau d'___, ni sur ce qu'il faut inclure, ni sur la nature des définitions."
+    answer: "abstraction"
+    alt: []
+  - id: sep-vie1-l1-p5
+    sentence: "Une des raisons de l'échec à définir la vie est que les chercheurs ne s'accordent pas sur la nature même des ___ : ils ne cherchent pas le même genre de réponse."
+    answer: "définitions"
+    alt: []
+  - id: sep-vie1-l1-p6
+    sentence: "L'article « Life » de l'encyclopédie de philosophie de Stanford (SEP), sur lequel s'appuie ce cours, est de Carlos ___."
+    answer: "Mariscal"
+    alt: []
+- id: sep-vie1-l2
+  title: "La définition théorique et ses contre-exemples"
+  notes: |-
+    **Les philosophes cherchent d'ordinaire une {violet}définition théorique{/violet}** (dite aussi réelle, idéale ou philosophique). Complète, elle donne des {violet}conditions individuellement nécessaires et conjointement suffisantes{/violet} : tout ce qui les remplit tombe sous le concept, et rien d'autre. *Nécessaires* : chaque condition manque-t-elle, la chose n'est pas vivante. *Suffisantes ensemble* : toutes réunies, elle l'est forcément.
+
+    **Une telle définition est fragile.** {red}__Un seul contre-exemple, même imaginé, suffit à la réfuter__{/red}, puisqu'elle prétend valoir sans exception. L'exemple classique est celui des {yellow}« célibataires » définis comme « hommes non mariés »{/yellow} : la définition paraît évidente, et pourtant des non-célibataires la remplissent, les chiens mâles, les petits garçons, les veufs.
+
+    **Toute définition de la vie inclut du non-vivant ou exclut du vivant.**
+    - La vie est {pink}organisée{/pink}, mais les {red}formations géologiques{/red} aussi.
+    - La vie {pink}transforme de l'énergie{/pink}, mais le {red}feu{/red} aussi.
+    - La vie {pink}évolue au moyen d'une biochimie complexe{/pink}, mais les {red}prions{/red} aussi.
+    - La vie {pink}s'entretient elle-même{/pink}, mais pas les {red}parasites{/red}.
+    - La vie est {pink}en déséquilibre thermodynamique{/pink}, mais bien d'autres choses le sont.
+
+    Chaque critère pèche dans un sens ou dans l'autre : trop large (il laisse entrer le feu, les cristaux, les prions) ou trop étroit (il laisse dehors le parasite, qui vit pourtant).
+
+    **Conclusion : la définition théorique est une norme trop rigide.** {coral}__Le monde réel est bien trop complexe pour que des critères en nombre limité tranchent tous les cas limites.__{/coral}
+
+    ! Le contre-exemple n'a pas besoin d'exister : il suffit qu'il soit concevable, puisque la définition théorique prétend dire ce que la vie est en toute rigueur.
+  points:
+  - id: sep-vie1-l2-p1
+    sentence: "Les philosophes cherchent d'ordinaire une définition ___ (dite aussi réelle, idéale ou philosophique), qui dit ce que la chose est en toute rigueur."
+    answer: "théorique"
+    alt: []
+  - id: sep-vie1-l2-p2
+    sentence: "Une définition théorique complète donne des conditions individuellement nécessaires et conjointement ___ : tout ce qui les remplit tombe sous le concept."
+    answer: "suffisantes"
+    alt: []
+  - id: sep-vie1-l2-p3
+    sentence: "Une définition théorique donne des conditions individuellement ___ et conjointement suffisantes : qu'une seule manque, et la chose ne tombe pas sous le concept."
+    answer: "nécessaires"
+    alt: []
+  - id: sep-vie1-l2-p4
+    sentence: "Une définition théorique prétend valoir sans exception : c'est pourquoi elle est fragile, un seul ___ imaginé suffisant à la réfuter."
+    answer: "contre-exemple"
+    alt: ["contre exemple"]
+  - id: sep-vie1-l2-p5
+    sentence: "Exemple classique de la fragilité des définitions théoriques : définis comme « hommes non mariés », les ___ incluraient les chiens mâles, les petits garçons et les veufs."
+    answer: "célibataires"
+    alt: []
+  - id: sep-vie1-l2-p6
+    sentence: "La vie est organisée, mais les formations ___ aussi : le critère de l'organisation est trop large."
+    answer: "géologiques"
+    alt: []
+  - id: sep-vie1-l2-p7
+    sentence: "La vie transforme de l'énergie, mais le ___ aussi : le critère du métabolisme énergétique laisse entrer du non-vivant."
+    answer: "feu"
+    alt: []
+  - id: sep-vie1-l2-p8
+    sentence: "La vie évolue au moyen d'une biochimie complexe, mais les ___ aussi, qu'on range rarement parmi les vivants."
+    answer: "prions"
+    alt: []
+  - id: sep-vie1-l2-p9
+    sentence: "La vie s'entretient elle-même, mais pas les ___ : le critère de l'autoentretien est trop étroit."
+    answer: "parasites"
+    alt: []
+  - id: sep-vie1-l2-p10
+    sentence: "La vie est en déséquilibre ___, mais bien d'autres choses le sont : le critère ne distingue pas le vivant."
+    answer: "thermodynamique"
+    alt: []
+  - id: sep-vie1-l2-p11
+    sentence: "Un critère de la vie est trop large quand il laisse entrer le feu ou les prions ; il est trop étroit quand il exclut le parasite, qui pourtant ___."
+    answer: "vit"
+    alt: []
+  - id: sep-vie1-l2-p12
+    sentence: "Les définitions théoriques sont une norme trop ___ : le monde réel est bien trop complexe pour que des critères en nombre limité tranchent tous les cas limites."
+    answer: "rigide"
+    alt: []
+- id: sep-vie1-l3
+  title: "Définitions opérationnelle, nominale, ostensive, stipulative"
+  notes: |-
+    **Lassés des allers-retours des définitions théoriques, les non-philosophes préfèrent souvent une {violet}définition opérationnelle{/violet}** (ou de travail) : elle sert en pratique à restreindre le champ des phénomènes étudiés. Les philosophes n'y voient souvent pas une vraie définition ; elle est {red}philosophiquement superficielle{/red}. Exemple : la définition de la vie retenue par la **NASA**, {teal}« un système chimique autoentretenu capable d'évolution darwinienne »{/teal} (Joyce 1994). Elle pourrait {red}inclure les virus{/red} tout en {red}excluant les mules{/red}, qui, stériles, n'évoluent pas.
+
+    **Trois autres sortes de définitions.**
+    - La {violet}définition nominale{/violet} (de lexicographe, de dictionnaire) analyse **l'usage** d'un mot. Elle suit la lente acceptation culturelle : elle ne peut donc guider la recherche sur des questions neuves ou controversées.
+    - La {violet}définition ostensive{/violet} (démonstrative) communique un concept en montrant : {yellow}« ceci est rouge », en désignant un bloc rouge{/yellow}. Le juge **Potter Stewart** définit ainsi la pornographie : {teal}« je la reconnais quand je la vois »{/teal}. Mais ce savoir est {red}illusoire{/red} : une catégorie culturelle intériorisée peut sembler aussi naturelle qu'une espèce naturelle, et chacun comprend différemment ce qu'on lui montre. {yellow}« Ceci est *gavagai* »{/yellow} peut viser la rougeur du bloc, sa dureté ou toute autre propriété. Or les scientifiques ne s'accordent même pas sur les objets terrestres (virus, prions) : {coral}la définition ostensive ne permet pas de comprendre la vie{/coral}.
+    - La {violet}définition stipulative{/violet} introduit et définit un terme **par décret**. En géométrie euclidienne, le cercle n'admet aucun contre-exemple, étant donné les axiomes. Mais dans le monde réel, {red}c'est un piètre refuge{/red} : définir les {yellow}cygnes comme « oiseaux blancs au long cou »{/yellow} y ferait entrer cigognes, grandes aigrettes et grues, et sortir les cygnes noirs d'Australie. Stipuler que la vie est faite d'{pink}« entités reproductrices à base de carbone »{/pink} exclurait par décret une vie à base de silicium : {coral}cela ne fait que déplacer le débat{/coral}, et ne convaincra pas qui trouve la stipulation peu intuitive.
+
+    **Deux définitions concurrentes, aux fins opposées.** La plupart des tentatives de définir la vie sont opérationnelles ou philosophiques : les premières sont {pink}rapides et admettent des contre-exemples{/pink}, les secondes {green}précises et chargées de théorie{/green}. {coral}Certains désaccords se dissolvent dès qu'on précise le type de définition employé.{/coral}
+
+    | Définition | Ce qu'elle fait | Sa limite |
+    | théorique | conditions nécessaires et suffisantes | un contre-exemple la réfute |
+    | opérationnelle | restreint le champ en pratique | superficielle |
+    | nominale | analyse l'usage du mot | suit l'usage, ne guide pas |
+    | ostensive | montre des exemples | ce qu'on montre est ambigu |
+    | stipulative | décrète un sens | déplace le débat |
+  tables:
+  - table: definition-ce-qu-elle-fait-sa-limite
+    exercises:
+    - {kind: bank, column: Sa limite}
+    - {kind: cell, column: Définition}
+  points:
+  - id: sep-vie1-l3-p1
+    sentence: "La définition ___ (ou de travail), préférée par beaucoup de scientifiques, sert en pratique à restreindre le champ des phénomènes étudiés, au prix d'une certaine superficialité philosophique."
+    answer: "opérationnelle"
+    alt: []
+  - id: sep-vie1-l3-p2
+    sentence: "Définition opérationnelle de la vie retenue par la NASA : « un système chimique autoentretenu capable d'évolution ___ »."
+    answer: "darwinienne"
+    alt: []
+  - id: sep-vie1-l3-p3
+    sentence: "La définition opérationnelle de la vie comme « système chimique autoentretenu capable d'évolution darwinienne » est celle de la ___ (Joyce 1994)."
+    answer: "NASA"
+    alt: []
+  - id: sep-vie1-l3-p4
+    sentence: "La définition de la NASA pourrait inclure les virus tout en excluant les ___, qui, stériles, ne participent pas à l'évolution darwinienne."
+    answer: "mules"
+    alt: []
+  - id: sep-vie1-l3-p5
+    sentence: "La définition ___ (de lexicographe, de dictionnaire) analyse l'usage d'un mot : elle suit la lente acceptation culturelle et ne peut guider la recherche sur des questions neuves."
+    answer: "nominale"
+    alt: []
+  - id: sep-vie1-l3-p6
+    sentence: "La définition ___ (ou démonstrative) communique un concept en montrant des exemples : « ceci est rouge », en désignant un bloc rouge."
+    answer: "ostensive"
+    alt: []
+  - id: sep-vie1-l3-p7
+    sentence: "Le juge Potter Stewart définit la pornographie de manière ostensive : « je la ___ quand je la vois »."
+    answer: "reconnais"
+    alt: []
+  - id: sep-vie1-l3-p8
+    sentence: "« Je la reconnais quand je la vois » : cette définition ostensive de la pornographie est celle du juge Potter ___ (1964)."
+    answer: "Stewart"
+    alt: []
+  - id: sep-vie1-l3-p9
+    sentence: "La définition ostensive est ambiguë : « ceci est ___ », en montrant un bloc, peut viser sa rougeur, sa dureté ou toute autre propriété."
+    answer: "gavagai"
+    alt: []
+  - id: sep-vie1-l3-p10
+    sentence: "La définition ostensive ne permet pas de comprendre la vie, puisque les scientifiques ne s'accordent même pas sur des objets terrestres comme les ___ et les prions."
+    answer: "virus"
+    alt: []
+  - id: sep-vie1-l3-p11
+    sentence: "La définition ___ introduit et définit un terme par décret ; elle n'admet aucun contre-exemple à l'intérieur d'axiomes acceptés, comme le cercle en géométrie euclidienne."
+    answer: "stipulative"
+    alt: []
+  - id: sep-vie1-l3-p12
+    sentence: "Stipuler que les cygnes sont des « oiseaux blancs au long cou » y ferait entrer cigognes et grues, et en exclurait les cygnes ___ d'Australie."
+    answer: "noirs"
+    alt: []
+  - id: sep-vie1-l3-p13
+    sentence: "Stipuler que la vie est faite d'« entités reproductrices à base de carbone » exclurait par décret une vie à base de ___ : cela ne fait que déplacer le débat."
+    answer: "silicium"
+    alt: []
+  - id: sep-vie1-l3-p14
+    sentence: "Les définitions opérationnelles sont rapides et admettent des contre-exemples ; les définitions philosophiques sont précises et chargées de ___ : elles poursuivent des fins opposées."
+    answer: "théorie"
+    alt: []
+  - id: sep-vie1-l3-p15
+    sentence: "Certains désaccords sur la vie se ___ dès qu'on précise le type de définition employé : l'un cherchait un critère de travail, l'autre une essence."
+    answer: "dissolvent"
+    alt: []
+- id: sep-vie1-l4
+  title: "Au-delà des définitions : prototypes, exemplaires, théories"
+  notes: |-
+    **Le XXe siècle s'éloigne des définitions** vers d'autres conceptions des concepts. Les trois théories les plus répandues (Machery 2009) : les **prototypes**, les **exemplaires** et les **théories**.
+
+    **Prototypes et exemplaires : des concepts par ressemblance.**
+    - Un {violet}prototype{/violet} rassemble des traits abstraits partagés par **la plupart** des membres d'une catégorie (Rosch). Les définitions de la vie des manuels de biologie, listes de caractères dont aucun n'est exigé de tous, en sont peut-être ; de même les {violet}espèces naturelles à faisceau de propriétés{/violet} (Boyd), prisées en philosophie de la biologie.
+    - Un {violet}exemplaire{/violet} se construit autour de la ressemblance avec **un cas individuel particulier**.
+
+    Tous deux reposent sur la ressemblance à un cas paradigmatique : {pink}un idéal imaginé pour le prototype, un objet réel pour l'exemplaire{/pink}. Mais {red}__pour qu'un concept par ressemblance serve en science, il faut dire quelles ressemblances comptent, combien, et pourquoi__{/red} : un virus ressemble à une cellule par son génome, à un cristal par sa passivité.
+
+    **Les concepts-théories, plus nébuleux.** Un {violet}concept-théorie{/violet} repose sur une **explication** de ce pourquoi les membres d'une catégorie partagent certaines propriétés : il est aussi divers que les théories scientifiques. Selon la théorie de la vie retenue, les cas limites (virus, prions, protocellules) seront inclus ou non.
+
+    **Bilan.** Chaque genre de définition a ses avantages, ses défauts et ses critères de réussite. On a encore peu travaillé la vie comme concept (paradigme, exemplaire) plutôt que comme définition, mais cela change (Mariscal et Doolittle 2020).
+  points:
+  - id: sep-vie1-l4-p1
+    sentence: "Les trois théories des concepts les plus répandues au XXe siècle, qui s'éloignent des définitions, sont les prototypes, les exemplaires et les ___."
+    answer: "théories"
+    alt: []
+  - id: sep-vie1-l4-p2
+    sentence: "Un ___ rassemble des traits abstraits partagés par la plupart des membres d'une catégorie : les listes de caractères des manuels de biologie en sont peut-être."
+    answer: "prototype"
+    alt: []
+  - id: sep-vie1-l4-p3
+    sentence: "La théorie des concepts par prototypes est associée en psychologie aux travaux de ___ (1975, 1978)."
+    answer: "Rosch"
+    alt: []
+  - id: sep-vie1-l4-p4
+    sentence: "Les espèces naturelles à ___ de propriétés, prisées en philosophie de la biologie (Boyd), sont des concepts de type prototype."
+    answer: "faisceau"
+    alt: []
+  - id: sep-vie1-l4-p5
+    sentence: "Un ___ est un concept construit autour de la ressemblance avec un cas individuel particulier, réel."
+    answer: "exemplaire"
+    alt: []
+  - id: sep-vie1-l4-p6
+    sentence: "Prototypes et exemplaires reposent sur la ressemblance à un cas paradigmatique : un idéal ___ pour le prototype, un objet réel pour l'exemplaire."
+    answer: "imaginé"
+    alt: []
+  - id: sep-vie1-l4-p7
+    sentence: "Pour qu'un concept par ressemblance serve en science, il faut dire quelles ressemblances ___, combien, et pourquoi."
+    answer: "comptent"
+    alt: []
+  - id: sep-vie1-l4-p8
+    sentence: "Un concept-___ repose sur une explication de ce pourquoi les membres d'une catégorie partagent certaines propriétés."
+    answer: "théorie"
+    alt: []
+  - id: sep-vie1-l4-p9
+    sentence: "Selon la théorie de la vie retenue, des cas limites comme les virus, les prions ou les ___ seront inclus parmi les vivants ou non."
+    answer: "protocellules"
+    alt: []
+- id: sep-vie1-l5
+  title: "De Platon à Descartes"
+  notes: |-
+    **Les définitions historiques de la vie ne se suivent pas en progrès linéaire** : chaque époque trace la frontière ailleurs. Historiens, philosophes et scientifiques ne la racontent pas de la même façon, ce qui invite à la prudence.
+
+    **Platon : trois vies.** Dans le *Phèdre*, le *Timée* et la *République*, Platon divise la vie en trois : la {violet}vie végétative{/violet}, que possèdent tous les vivants sous forme de **nutrition** et de **reproduction** ; la {violet}vie animale{/violet}, qui y ajoute **sensation** et **locomotion** ; la {violet}vie rationnelle{/violet}, propre à l'homme, qui a les trois. La théologie chrétienne en garde l'esprit, sinon le détail : la vie humaine n'y est pas seulement rationnelle, elle engage {pink}une âme spirituelle, éternelle, et une vie intérieure consciente{/pink}.
+
+    **Aristote : résister aux perturbations.** Pour Aristote, le vivant a une forme, une matière et une orientation vers une fin appropriées (*De l'âme*, 412a1-416b). La vie est une forme de {violet}mouvement de soi{/violet}, de perpétuation ou d'altération de soi. {green}__À la différence du non-vivant, le vivant a la capacité de résister aux perturbations internes et externes__{/green} : c'est pour Aristote la distinction **essentielle**, les autres traits étant **accidentels**. Ce projet de démarquer l'essentiel de l'accidentel dans la vie {coral}persiste jusqu'à nos jours{/coral}.
+
+    **Descartes : la coupure déplacée.** Descartes voit un écart plus grand {red}entre les animaux et les agents rationnels{/red} qu'entre les objets inanimés et les animaux. C'est un tournant : la pensée médiévale plaçait la grande coupure {pink}entre végétaux et animaux{/pink}. Les animaux sont analogues à {yellow}des horloges complexes{/yellow}, privés de la vie intérieure, spirituelle, centrale dans l'expérience humaine. Ses partisans sont dits {violet}mécanistes{/violet}.
+
+    | Auteur | Grande coupure | Critère |
+    | Platon | trois vies emboîtées | nutrition, sensation, raison |
+    | Aristote | vivant et non-vivant | résister aux perturbations |
+    | médiévaux | végétaux et animaux | la sensation |
+    | Descartes | animaux et êtres rationnels | la pensée |
+
+    ! Voir dans le mécanisme cartésien l'ancêtre continu de la science actuelle est un anachronisme : peu de scientifiques d'aujourd'hui acceptent ses fondements théoriques.
+  tables:
+  - table: auteur-grande-coupure-critere
+    exercises:
+    - {kind: bank, column: Grande coupure}
+    - {kind: cell, column: Critère}
+  points:
+  - id: sep-vie1-l5-p1
+    sentence: "Dans le *Phèdre*, le *Timée* et la *République*, ___ divise la vie en trois : végétative, animale et rationnelle."
+    answer: "Platon"
+    alt: []
+  - id: sep-vie1-l5-p2
+    sentence: "Chez Platon, tous les vivants possèdent la vie ___, sous forme de nutrition et de reproduction."
+    answer: "végétative"
+    alt: []
+  - id: sep-vie1-l5-p3
+    sentence: "Chez Platon, les animaux ajoutent à la nutrition et à la reproduction la sensation et la ___."
+    answer: "locomotion"
+    alt: []
+  - id: sep-vie1-l5-p4
+    sentence: "Dans la théologie chrétienne, héritière de l'esprit de Platon, la vie humaine n'est pas seulement rationnelle : elle engage une âme spirituelle, éternelle, et une vie intérieure ___."
+    answer: "consciente"
+    alt: []
+  - id: sep-vie1-l5-p5
+    sentence: "Pour Aristote, la vie est une forme de mouvement de ___, de perpétuation ou d'altération de soi."
+    answer: "soi"
+    alt: []
+  - id: sep-vie1-l5-p6
+    sentence: "Pour Aristote, à la différence du non-vivant, le vivant a la capacité de ___ aux perturbations internes et externes : c'est la distinction essentielle."
+    answer: "résister"
+    alt: []
+  - id: sep-vie1-l5-p7
+    sentence: "Pour Aristote, la résistance aux perturbations est le trait essentiel du vivant, les autres traits étant ___ : ce projet de démarquer l'essentiel persiste jusqu'à nos jours."
+    answer: "accidentels"
+    alt: []
+  - id: sep-vie1-l5-p8
+    sentence: "La caractérisation aristotélicienne du vivant par une forme, une matière et une orientation vers une fin se trouve dans le *___* (412a1-416b)."
+    answer: "De l'âme"
+    alt: ["De anima"]
+  - id: sep-vie1-l5-p9
+    sentence: "La pensée médiévale plaçait la grande coupure du vivant entre végétaux et animaux ; Descartes la place entre animaux et ___."
+    answer: "agents rationnels"
+    alt: ["êtres rationnels"]
+  - id: sep-vie1-l5-p10
+    sentence: "Pour Descartes, les animaux sont analogues à des ___ complexes, privés de vie intérieure."
+    answer: "horloges"
+    alt: []
+  - id: sep-vie1-l5-p11
+    sentence: "Les penseurs qui suivaient Descartes sur la vie animale furent dits ___."
+    answer: "mécanistes"
+    alt: []
+  - id: sep-vie1-l5-p12
+    sentence: "Voir dans le mécanisme cartésien l'ancêtre continu de la science actuelle est un ___ : peu de scientifiques d'aujourd'hui en acceptent les fondements théoriques."
+    answer: "anachronisme"
+    alt: []
+- id: sep-vie1-l6
+  title: "Le vitalisme et la légende de Wöhler"
+  notes: |-
+    **Le {violet}vitalisme{/violet} est l'étiquette collective des réponses à Descartes** pendant trois siècles. C'est une position {coral}hétérogène{/coral} : son seul trait commun est {green}__le doute envers une conception mécaniste de la vie__{/green}. Les vitalistes ont fait reposer la vie sur des causes immatérielles, un arrangement particulier de la matière, un fluide vital spécial, une fin particulière, ou même des forces mentales.
+
+    **La légende de Wöhler.** On apprend parfois que la synthèse de l'**urée** à partir de cyanate d'ammonium par Friedrich **Wöhler** aurait sonné le glas du vitalisme. Le raisonnement prêté à l'histoire : {pink}si des composés biologiques s'obtiennent par simple chimie, alors la biologie n'est que chimie{/pink}. Mais c'est une {red}version caricaturale{/red} : l'histoire a rarement de tels tournants. Beaucoup de chimistes étaient déjà mécanistes, et des théories vitalistes se sont développées jusqu'au XXe siècle, chez **Bergson** et **Driesch**.
+
+    **La disparition du clivage rend la tâche plus difficile.** Au XXe siècle, le clivage du mécanisme et du vitalisme se dissipe. Mais {red}__sans une compréhension vitaliste, distinguer le vivant du non-vivant devient plus difficile__{/red} : on n'a plus de principe propre à invoquer, et il faut trouver la différence dans l'organisation de la matière ordinaire. D'où, depuis un siècle et demi, des centaines de tentatives de définir la vie, souvent stimulées par la vie artificielle, la biologie de synthèse, l'étude des origines de la vie et l'astrobiologie, qui défont les groupements traditionnels de propriétés.
+
+    ! Le vitalisme n'est pas une doctrine unique : on ne peut le réfuter d'un seul coup, ni par une seule expérience.
+  points:
+  - id: sep-vie1-l6-p1
+    sentence: "Le ___ est l'étiquette collective des réponses à Descartes pendant trois siècles, position hétérogène dont le seul trait commun est le doute envers une conception mécaniste de la vie."
+    answer: "vitalisme"
+    alt: []
+  - id: sep-vie1-l6-p2
+    sentence: "Le seul trait commun des vitalistes est le doute envers une conception ___ de la vie."
+    answer: "mécaniste"
+    alt: []
+  - id: sep-vie1-l6-p3
+    sentence: "Les vitalistes ont fait reposer la vie sur des causes immatérielles, un arrangement particulier de la matière, un ___ vital spécial, une fin particulière ou des forces mentales."
+    answer: "fluide"
+    alt: []
+  - id: sep-vie1-l6-p4
+    sentence: "Selon une version caricaturale de l'histoire, la synthèse de l'___ par Friedrich Wöhler aurait sonné le glas du vitalisme."
+    answer: "urée"
+    alt: ["uree"]
+  - id: sep-vie1-l6-p5
+    sentence: "La synthèse de l'urée à partir de cyanate d'ammonium, dont on fait parfois la fin du vitalisme, est due à Friedrich ___."
+    answer: "Wöhler"
+    alt: ["Wohler"]
+  - id: sep-vie1-l6-p6
+    sentence: "Raisonnement prêté à la synthèse de l'urée : si des composés biologiques s'obtiennent par simple chimie, alors la biologie n'est que ___."
+    answer: "chimie"
+    alt: []
+  - id: sep-vie1-l6-p7
+    sentence: "Contre la légende de Wöhler, des théories vitalistes se sont développées jusqu'au XXe siècle, chez ___ et Driesch."
+    answer: "Bergson"
+    alt: []
+  - id: sep-vie1-l6-p8
+    sentence: "Au XXe siècle, le clivage du mécanisme et du vitalisme se dissipe ; mais sans compréhension vitaliste, distinguer le vivant du non-vivant devient plus ___ : on n'a plus de principe propre à invoquer."
+    answer: "difficile"
+    alt: []
+- id: sep-vie1-l7
+  title: "Les définitions contemporaines : classer des milliers de définitions"
+  notes: |-
+    **Il existe peut-être des milliers de définitions concurrentes.** Faute de pouvoir les recenser, on peut en considérer les grandes **catégories** : trois tentatives rigoureuses de ce siècle les classent.
+
+    **Trois méthodes.** **Popa** (2004) et **Trifonov** (2011) ont reconstitué les catégories à partir de dizaines de définitions recueillies auprès de dizaines d'experts ; **Malaterre et Chartier** (2019) ont procédé par {violet}fouille de textes{/violet} sur **30 000 articles scientifiques** de biologie.
+
+    | Classement | Méthode | Exemples de catégories |
+    | Popa 2004 | définitions recueillies | mécaniste, holiste, génétique, cybernétique, vitaliste |
+    | Trifonov 2011 | définitions recueillies | énergie, matière, système, évolution, reproduction |
+    | Malaterre et Chartier 2019 | fouille de textes | métabolisme, structure, environnement, évolution, information |
+
+    Les trois se recoupent en partie (le métabolisme et la matière, l'évolution, l'information et la génétique), mais chacun a ses catégories propres. Chez Popa, par exemple, la définition {violet}cybernétique{/violet} abstrait assez pour inclure la vie artificielle sur ordinateur, la définition {violet}minimaliste{/violet} use du moins d'information possible pour démarquer le vivant.
+
+    **Un classement ouvre la conversation, il ne la ferme pas.** La plupart des définitions chevauchent ces catégories et laissent ambigu leur statut : théorique, opérationnel ou autre. Classer, c'est choisir, et des gens raisonnables peuvent en disputer.
+
+    ! Que des catégories se recoupent d'un classement à l'autre ne montre pas un accord sur ce qu'est la vie : seulement sur les familles de réponses.
+  tables:
+  - table: classement-methode-exemples-de-categories
+    exercises:
+    - {kind: cell, column: Méthode}
+  points:
+  - id: sep-vie1-l7-p1
+    sentence: "Il existe peut-être des ___ de définitions concurrentes de la vie, proposées dans des centaines d'articles."
+    answer: "milliers"
+    alt: []
+  - id: sep-vie1-l7-p2
+    sentence: "Popa (2004) et ___ (2011) ont reconstitué les catégories de définitions de la vie à partir de dizaines de définitions recueillies auprès d'experts."
+    answer: "Trifonov"
+    alt: []
+  - id: sep-vie1-l7-p3
+    sentence: "Malaterre et Chartier (2019) ont classé les définitions de la vie par fouille de textes sur ___ articles scientifiques de biologie."
+    answer: "30 000"
+    alt: ["30000", "trente mille"]
+  - id: sep-vie1-l7-p4
+    sentence: "Malaterre et Chartier (2019) ont classé les définitions de la vie non à partir d'une collecte auprès d'experts, mais par ___ de textes."
+    answer: "fouille"
+    alt: []
+  - id: sep-vie1-l7-p5
+    sentence: "Dans le classement de Popa, la définition ___ abstrait assez pour inclure la vie artificielle sur ordinateur."
+    answer: "cybernétique"
+    alt: []
+  - id: sep-vie1-l7-p6
+    sentence: "Dans le classement de Popa, la définition ___ use du moins d'information possible pour démarquer le vivant du non-vivant."
+    answer: "minimaliste"
+    alt: []
+  - id: sep-vie1-l7-p7
+    sentence: "Dans le classement de Popa, les définitions ___ tiennent la réplication et la variabilité pour l'origine et le trait clé de la vie."
+    answer: "génétiques"
+    alt: []
+  - id: sep-vie1-l7-p8
+    sentence: "Dans le classement de Popa, les définitions ___ traitent la vie comme une propriété collective, par ses fonctions et ses fins."
+    answer: "holistes"
+    alt: ["holistiques"]
+  - id: sep-vie1-l7-p9
+    sentence: "Dans le classement de Popa, les définitions ___ tiennent la cellule seule pour l'origine pertinente, donc le trait central de la vie."
+    answer: "cellularistes"
+    alt: []
+  - id: sep-vie1-l7-p10
+    sentence: "Un classement des définitions de la vie est le début d'une conversation et non sa fin : classer, c'est faire des ___ que des gens raisonnables peuvent disputer."
+    answer: "choix"
+    alt: []
+- id: sep-vie1-l8
+  title: "Aucun consensus en vue, et le pluralisme"
+  notes: |-
+    **La leçon des définitions actuelles : aucun consensus ne s'annonce.** Ces classements résument des tentatives de définir une catégorie sur laquelle on ne s'accorde que vaguement : {red}__beaucoup de scientifiques ne s'accordent même pas sur les phénomènes qu'une définition de la vie devrait unifier__{/red}. Certaines théories incluraient les prions, les virus, et des entités seulement supposées à l'origine de la vie ; d'autres les excluent. Certains admettent les **organismes numériques** comme vivants, d'autres non.
+
+    **On ne peut pas pour autant ignorer la question.** L'{violet}équivoque conceptuelle{/violet} coûte cher à la recherche, en temps et en argent (Trombley et Cottenie 2019) : deux équipes qui croient chercher la même chose sous le même mot ne la cherchent pas.
+
+    **Une issue rarement prise : le pluralisme.** Vu cette diversité, on pourrait adopter un {violet}pluralisme définitionnel{/violet} : {green}il y a plusieurs façons d'être vivant{/green}. Curieusement, cette position est rare dans la littérature.
+
+    ! Le pluralisme n'est pas le relativisme : il ne dit pas que tout se vaut, mais que plusieurs concepts précis de la vie peuvent être légitimes ensemble, chacun pour un usage.
+  points:
+  - id: sep-vie1-l8-p1
+    sentence: "Ce que montrent les définitions actuelles de la vie : aucun ___ ne s'annonce."
+    answer: "consensus"
+    alt: []
+  - id: sep-vie1-l8-p2
+    sentence: "Beaucoup de scientifiques ne s'accordent même pas sur les ___ qu'une définition de la vie devrait unifier : certains incluent prions et virus, d'autres les excluent."
+    answer: "phénomènes"
+    alt: []
+  - id: sep-vie1-l8-p3
+    sentence: "Certains admettent les organismes ___ comme vivants, d'autres refusent cette approche."
+    answer: "numériques"
+    alt: []
+  - id: sep-vie1-l8-p4
+    sentence: "On ne peut ignorer la question de la définition de la vie, car l'___ conceptuelle coûte cher à la recherche, en temps et en argent."
+    answer: "équivoque"
+    alt: []
+  - id: sep-vie1-l8-p5
+    sentence: "Vu la diversité des définitions, on pourrait adopter un ___ définitionnel : il y a plusieurs façons d'être vivant."
+    answer: "pluralisme"
+    alt: []
+  - id: sep-vie1-l8-p6
+    sentence: "Le pluralisme définitionnel tient qu'il y a plusieurs façons d'être ___ ; curieusement, cette position est rare dans la littérature."
+    answer: "vivant"
+    alt: []
