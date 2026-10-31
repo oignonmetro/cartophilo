@@ -115,7 +115,6 @@ python -I $N juge g-x <qid> clair | obscur "ce qui reste obscur"
 python -I $N plan g-x "thèse 1" "thèse 2" …   # fixé, après A à C
 python -I $N valide g-x "raison" [thèses corrigées…]   # corriger un plan fixé
 python -I $N manque g-x <fichier yaml>      # après rédaction
-python -I $N relire g-x <fichier yaml>      # relecture par étape (facultative)
 python -I $N signale g-x "point obscur"     # un point signalé par l'utilisateur
 python -I $N derive g-y g-x "demande" "thèse"  # entrée faite d'étapes sorties de g-x
 python -I $N verifie g-x <fichier yaml>     # avant publication
@@ -190,8 +189,14 @@ toutes les quatre mêmes passages, lues puis recopiées en entier)** :
   explique pas à pas le raisonnement, sans sauter d'étape »), jusqu'à
   « clair ». L'exemple de Plotin aide, mais c'est le raisonnement qu'on
   demande.
-- *F. Ce qui manque* : après rédaction, `manque` fabrique la question à
-  partir des étapes et des passages de l'entrée.
+- *F. Ce qui manque* : après rédaction, `manque` pose la question en
+  s'appuyant sur la conversation, que NotebookLM garde en mémoire : « d'après
+  notre conversation sur X, qu'est-ce qui n'a pas été abordé ? ». **Ne
+  jamais lui faire relire la fiche**, ni en entier ni étape par étape, ni
+  lui en recopier la liste des étapes et des passages : c'est trop long et
+  trop coûteux (consigne de l'utilisateur, 2026-10-31). D'où une condition :
+  l'historique ne s'efface qu'au début d'une entrée, jamais entre ses
+  questions et `manque`.
 - *G. Les points obscurs, par la relecture de l'utilisateur* (choix de
   l'utilisateur, 2026-10-26, pour économiser) : je publie, il relit, et
   chaque point qu'il signale comme obscur ou mal justifié passe par
@@ -201,8 +206,8 @@ toutes les quatre mêmes passages, lues puis recopiées en entier)** :
   n'a pas sa réponse jugée claire. Je ne corrige jamais un point signalé de
   mémoire : la correction vient de l'argument de Plotin rapporté par
   NotebookLM et recoupé sur la GF. La relecture étape par étape par
-  NotebookLM (`relire`) reste disponible, facultative ; l'agent
-  `relecteur-glossaire` aussi.
+  NotebookLM (`relire`) est retirée, pour la même raison que plus haut
+  (2026-10-31) ; l'agent `relecteur-glossaire` reste facultatif.
 
 `verifie` refuse la publication si une question est sans réponse, une
 thèse ou une relance n'est pas jugée claire, le plan n'a pas l'accord de
@@ -627,10 +632,9 @@ cette skill) se scinde **sur demande, une fiche à la fois** :
    - **Une phrase de liaison ?** (« c'est la même raison qui fait que… »)
      La déplier ou la supprimer. Un « voir X » ne se pose que si l'entrée X
      explique vraiment le point : relire X avant de renvoyer.
-   NotebookLM aide à trouver ce qui manque : lui donner la liste de ce que
-   l'entrée couvre déjà (lieux et thèses) et lui demander les passages,
-   arguments et difficultés qui manquent ; recouper chaque apport sur la
-   GF.
+   NotebookLM aide à trouver ce qui manque (`manque`) : sans lui recopier
+   la fiche, lui demander d'après la conversation ce qui n'a pas été
+   abordé ; recouper chaque apport sur la GF.
 2. `python -I .claude/skills/glossaire/passages_chrono.py "content/courses/<cours>/units/g-*.yaml"` :
    les lignes des passages clefs se rangent dans l'ordre chronologique des
    traités (consigne de l'utilisateur, 2026-10-24), la *Vie de Plotin* en

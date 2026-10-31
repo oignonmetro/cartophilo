@@ -46,7 +46,9 @@ RELIRE = ("Voici un paragraphe d'une fiche de révision sur {notion} chez Plotin
           "terme à terme, une thèse affirmée sans sa raison, une phrase de liaison qui renvoie à une idée sans la dire, un terme "
           "technique non expliqué, une thèse de Plotin supposée sans être dite, une citation mal rapportée. Dis ce qui manque et "
           "le passage (traité, chapitre) qui le comblerait. 150 mots au plus. Le paragraphe : « {etape} »")
-MANQUE = "Une entrée à propos de {notion} chez Plotin couvre déjà ceci. Étapes : {etapes}. Passages : {passages}. Quels passages, arguments, distinctions ou difficultés importants manquent, et pourquoi chacun importe-t-il ?"
+# Ni la fiche ni sa liste d'étapes ne se recopient dans NotebookLM (trop long, trop coûteux :
+# consigne du 2026-10-31) : il garde la conversation de l'entrée en mémoire.
+MANQUE = "D'après notre conversation sur {notion}, quels passages, arguments, distinctions ou difficultés importants n'avons-nous pas abordés, et pourquoi chacun importe-t-il ?"
 
 
 def norm(s):
@@ -292,10 +294,7 @@ def cmd_manque(entree, yaml):
     j = charge(entree)
     if not j["plan"] or not all(q["verdict"] == "clair" for q in j["questions"] if a_juger(q) and q["reponse"]):
         sys.exit("Le plan doit être démontré et jugé clair avant la question de ce qui manque.")
-    notes = rappel(yaml)
-    et = "; ".join(norm(t) and re.sub(r"\{/?[a-z]+\}", "", t) for t, _ in etapes(notes))
-    pas = "; ".join(sorted(set(re.findall(r"traité \d+, chap\. \d+", a_plat(notes))), key=lambda s: [int(x) for x in re.findall(r"\d+", s)]))
-    ajoute(j, "F-manque", "F", MANQUE.format(notion=j["notion"], etapes=et, passages=pas))
+    ajoute(j, "F-manque", "F", MANQUE.format(notion=j["notion"]))
     garde(entree, j)
     cmd_question(entree)
 
@@ -309,6 +308,8 @@ def a_plat(s):
 
 def cmd_relire(entree, yaml):
     """Phase G : une question de relecture par étape du rappel."""
+    sys.exit("Retiré (2026-10-31) : ne jamais faire relire la fiche par NotebookLM, trop long et trop coûteux. "
+             "Les points obscurs viennent de la relecture de l'utilisateur (`signale`).")
     j = charge(entree)
     if not any(q["id"] == "F-manque" and q["reponse"] for q in j["questions"]):
         sys.exit("Poser d'abord la question de ce qui manque (`manque`), et en tenir compte.")
