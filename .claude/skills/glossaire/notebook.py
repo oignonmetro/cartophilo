@@ -118,7 +118,7 @@ def cmd_question(entree):
     q, quoi = suivante(j)
     if q is None:
         if not j["plan"] and j.get("plan_propose"):
-            print("Plan proposé, en attente de l'utilisateur : le lui montrer, puis `valide` avec ses mots.")
+            print("Plan proposé mais pas fixé (ancien journal) : `valide` pour le fixer.")
         elif not j["plan"]:
             print("Phases A à C faites. Tirer des réponses le plan : `plan` avec les thèses d'étape.")
         elif not any(x["id"] == "F-manque" for x in j["questions"]):
@@ -210,7 +210,8 @@ def cmd_relance(entree, point, apres=None):
 
 
 def cmd_plan(entree, theses):
-    """Propose le plan : il ne vaut qu'une fois validé par l'utilisateur (`valide`)."""
+    """Fixe le plan et ouvre la phase D, sans attendre l'utilisateur : depuis le
+    2026-10-31, il juge sur la version finale, pas sur un plan (voir SKILL.md)."""
     j = charge(entree)
     for lettre in "ABC":
         if not phase_finie(j, lettre):
@@ -220,22 +221,17 @@ def cmd_plan(entree, theses):
     if len(theses) < 2:
         sys.exit("Un plan a au moins deux thèses d'étape.")
     if j["plan"]:
-        sys.exit("Le plan est déjà validé ; pour le changer, `valide` à nouveau avec l'accord de l'utilisateur.")
+        sys.exit("Le plan est déjà fixé ; pour le changer, `valide` avec les thèses corrigées.")
     j["plan_propose"] = theses
     garde(entree, j)
-    print("Plan proposé. À MONTRER À L'UTILISATEUR, puis attendre sa réponse avant toute rédaction :\n")
+    print("Plan fixé, sans validation préalable (l'utilisateur juge sur la version finale) :\n")
     for k, t in enumerate(theses, 1):
         print(f"  {k}. {t}")
-    relances = [q for q in j["questions"] if q["phase"] == "E"]
-    if relances:
-        print("\nPoints difficiles relevés auprès de NotebookLM :")
-        for q in relances:
-            print("  -", re.sub(r"^Je ne comprends pas pourquoi |\. Explique.*$", "", q["texte"]))
-    print(f"\nPuis : valide {entree} \"ses mots, cités\" [thèses corrigées…]")
+    cmd_valide(entree, "sans validation préalable : l'utilisateur juge sur la version finale (consigne du 2026-10-31)")
 
 
 def cmd_valide(entree, accord, theses=None):
-    """Enregistre l'accord de l'utilisateur sur le plan (ses mots, cités) et ouvre la phase D."""
+    """Fixe le plan (appelé par `plan`, ou à la main pour le corriger) et ouvre la phase D."""
     j = charge(entree)
     if not j.get("plan_propose"):
         sys.exit("Aucun plan proposé : `plan` d'abord.")
@@ -247,7 +243,7 @@ def cmd_valide(entree, accord, theses=None):
     for k, t in enumerate(theses, 1):
         ajoute(j, f"D-these{k}", "D", THESE.format(these=t[0].lower() + t[1:].rstrip(" .")), these=t)
     garde(entree, j)
-    print(f"Plan validé par l'utilisateur ({len(theses)} thèses) : une question chacune.")
+    print(f"\nPlan fixé ({len(theses)} thèses) : une question chacune.")
     cmd_question(entree)
 
 

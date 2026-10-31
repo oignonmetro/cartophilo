@@ -1,6 +1,6 @@
 ---
 name: glossaire
-description: Écrit une entrée du glossaire de Plotin ou de Marx (piste Glossaire, unités g-…) : une notion, une sous-entrée ou une distinction, en une seule leçon (un rappel qui fait comprendre la notion, puis ses cartes), reliée aux entrées voisines par des renvois cliquables dans le rappel. Sources : traduction GF (citations, repères) et NotebookLM (lieux et emplois de la notion), questions à l'utilisateur, passe de clarification, validation, branchement dans la piste, commit et push. Sait aussi scinder une ancienne fiche de plusieurs leçons en entrées d'une leçon reliées par des renvois. À utiliser dès qu'on demande une « entrée du glossaire », une « fiche » sur une notion de Plotin ou de Marx, d'« ajouter X au glossaire », ou de « scinder » une fiche du glossaire.
+description: Écrit une entrée du glossaire de Plotin ou de Marx (piste Glossaire, unités g-…) : une notion, une sous-entrée ou une distinction, en une seule leçon (un rappel qui fait comprendre la notion, puis ses cartes), reliée aux entrées voisines par des renvois cliquables dans le rappel. Sources : traduction GF (citations, repères) et NotebookLM (lieux et emplois de la notion), passe de clarification, sans validation de l'utilisateur avant la version finale, branchement dans la piste, commit et push. Sait aussi scinder une ancienne fiche de plusieurs leçons en entrées d'une leçon reliées par des renvois. À utiliser dès qu'on demande une « entrée du glossaire », une « fiche » sur une notion de Plotin ou de Marx, d'« ajouter X au glossaire », ou de « scinder » une fiche du glossaire.
 ---
 
 # Écrire une entrée du glossaire
@@ -112,8 +112,8 @@ python -I $N reponse g-x <qid> <fichier>   # la réponse, copiée dans un fichie
 python -I $N image g-x "épithète ou image de Plotin"
 python -I $N relance g-x "ce que je ne comprends pas"
 python -I $N juge g-x <qid> clair | obscur "ce qui reste obscur"
-python -I $N plan g-x "thèse 1" "thèse 2" …   # proposé, après A à C
-python -I $N valide g-x "mots de l'utilisateur" [thèses corrigées…]
+python -I $N plan g-x "thèse 1" "thèse 2" …   # fixé, après A à C
+python -I $N valide g-x "raison" [thèses corrigées…]   # corriger un plan fixé
 python -I $N manque g-x <fichier yaml>      # après rédaction
 python -I $N relire g-x <fichier yaml>      # relecture par étape (facultative)
 python -I $N signale g-x "point obscur"     # un point signalé par l'utilisateur
@@ -173,13 +173,14 @@ toutes les quatre mêmes passages, lues puis recopiées en entier)** :
   thèse présupposée ; les objections que Plotin se fait et ses réponses ;
   les contresens courants. Chaque point difficile relevé devient une
   `relance`.
-- *Point d'étape avec l'utilisateur* (choix de l'utilisateur, 2026-10-26) :
-  après A à C et leurs relances, `plan` ne fait que **proposer** les thèses
-  d'étape tirées des réponses ; le programme les affiche avec les points
-  difficiles relevés. Les montrer à l'utilisateur, en quelques lignes, et
-  **attendre sa réponse** avant d'écrire quoi que ce soit ; puis `valide`
-  avec ses mots, cités, et ses corrections du plan s'il en fait.
-- *D. Plan* : seulement après sa validation. Chaque thèse devient une
+- *Pas de point d'étape* (consigne de l'utilisateur, 2026-10-31, qui
+  remplace celle du 2026-10-26) : ne lui faire valider ni plan ni rien
+  d'autre en amont, car c'est en lisant la version finale qu'il voit ce
+  qui manque ou n'est pas clair. Après A à C et leurs relances, `plan`
+  fixe les thèses d'étape tirées des réponses et ouvre la phase D ;
+  `valide` ne sert plus qu'à corriger un plan fixé. L'entrée s'écrit et se
+  publie d'un trait ; le compte rendu final dit les choix faits.
+- *D. Plan* : chaque thèse devient une
   question : comment Plotin l'établit-il, prémisse par prémisse, avec le
   passage de chacune et ce qu'il faut savoir du système pour suivre ?
 - *E. Relances et jugement* : chaque réponse de la phase D et chaque
@@ -214,10 +215,11 @@ l'utilisateur n'a pas été relancé et éclairci.
 relecture g-x "critique"`) et `lecons` les rassemble : les relire avant
 chaque entrée, avec ce qui suit.
 
-Puis poser à l'utilisateur, en une fois (`AskUserQuestion`), ce que les
-sources ne tranchent pas, en particulier **le partage** quand il est
-discutable : faut-il une sous-entrée pour tel sens, une entrée de
-distinction pour telle division ?
+Ce que les sources ne tranchent pas, en particulier **le partage** quand
+il est discutable (une sous-entrée pour tel sens, une entrée de
+distinction pour telle division ?), je le tranche moi-même, sans poser de
+question avant l'écriture (consigne du 2026-10-31), et je dis mon choix
+dans le compte rendu final.
 
 ## 3. Écrire le rappel
 
@@ -664,5 +666,6 @@ cette skill) se scinde **sur demande, une fiche à la fois** :
 5. Commit (« Plotin, Glossaire : … ») et push, sans demander.
 6. Rendre compte en quelques lignes : ce que l'entrée établit, les renvois
    posés (et les renvois inverses ajoutés), les cartes dont la progression
-   repart de zéro ; puis, par `AskUserQuestion`, les entrées que le partage
-   a fait apparaître sans qu'on les écrive, à créer ensuite ou non.
+   repart de zéro, les choix tranchés sans lui (partage, plan) ; puis les
+   entrées que le partage a fait apparaître sans qu'on les écrive, à créer
+   ensuite ou non.
