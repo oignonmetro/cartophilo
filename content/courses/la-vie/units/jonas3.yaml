@@ -1,0 +1,288 @@
+# Cours sur Jonas, fin (voir l'en-tête de jonas1.yaml) : la rupture avec
+# l'anthropocentrisme, la question métaphysique, et les perspectives qui
+# relativisent la peur de la technique (Bies, p. 464-469 ; le scan s'arrête
+# sur la citation de Simondon).
+#
+# Corrigé : Bies écrit « Jünger Habermas » ; il s'agit de Jürgen Habermas,
+# L'avenir de la nature humaine. Vers un eugénisme libéral (trad. 2002).
+# Sloterdijk, Klein, Séris et Simondon ne commentent pas Jonas : Bies les
+# convoque pour nuancer la méfiance envers la technique.
+
+id: jonas3
+title: "Le hasard, la nature humaine et l'exigence d'exister"
+subtitle: "Clonage, eugénisme libéral, question métaphysique : ce que la technique fait à l'humanité"
+icon: compass
+color: green
+group: "Jonas : la responsabilité face au vivant"
+lessons:
+- id: jonas3-l1
+  title: "La rupture avec l'anthropocentrisme"
+  notes: |-
+    Un autre point de Jonas est la {violet}rupture avec l'anthropocentrisme{/violet} : la technique ne prend plus seulement l'homme pour fin, elle le prend pour **objet**, et menace par là la dignité qu'on lui reconnaissait.
+
+    **Maîtriser le vivant, c'est éliminer le hasard.** La capacité croissante de rendre le vivant **prévisible**, grâce aux recherches sur le génome, permettrait de sélectionner à l'avance les caractéristiques des nouveau-nés dans le cadre d'une procréation artificielle. Jonas distingue **deux voies d'élimination du hasard**, qui toutes deux organisent l'être à venir à partir de la base chromatique :
+    - la technique ADN de **recombinaison des cellules germinales** humaines, qui modifie ce qui est donné par hasard, l'améliore, peut-être l'invente ;
+    - la **copie d'individus modèles** par {red}clonage{/red}.
+
+    Dans les deux cas, on veut {red}s'arroger un pouvoir de décision{/red} sur les modalités et le résultat de la procréation : substituer l'art au hasard nous épargnerait toute surprise désagréable et nous rendrait **maîtres de notre développement spécifique**.
+
+    **L'éloge du hasard.** Or le hasard est la **source productrice** du développement des espèces, et la garantie, dans toute procréation sexuelle, que chaque individu né est **unique**. {teal}« Le hasard de l'événement sexuel est la bénédiction irremplaçable, comme le fardeau inévitable de notre tirage au sort, et son imprévisibilité est toujours plus digne de confiance que nos options pesées en une journée. »{/teal} Le paradoxe est voulu : ce qui échappe à notre décision vaut mieux que notre décision, parce qu'il ne reflète {green}les préférences de personne{/green}, alors que nos options pèsent les modes et les désirs d'un moment.
+
+    ! Jonas n'idéalise pas le hasard parce qu'il serait toujours heureux (il est aussi un « fardeau ») : il le préfère parce qu'il garantit l'unicité de chacun et qu'il n'est le choix de personne.
+  points:
+  - id: jonas3-l1-p1
+    sentence: "Un des points par lesquels Jonas fait de la technique moderne un objet pour l'éthique est la rupture avec l'___ : la technique prend l'homme pour objet et menace sa dignité."
+    answer: "anthropocentrisme"
+    alt: []
+  - id: jonas3-l1-p2
+    sentence: "Jonas distingue deux voies d'élimination du hasard dans la procréation : la technique ADN de recombinaison des cellules ___ humaines, et la copie d'individus modèles par clonage."
+    answer: "germinales"
+    alt: []
+  - id: jonas3-l1-p3
+    sentence: "Jonas distingue deux voies d'élimination du hasard dans la procréation : la recombinaison des cellules germinales humaines, et la copie d'individus modèles par ___."
+    answer: "clonage"
+    alt: []
+  - id: jonas3-l1-p4
+    sentence: "Éliminer le hasard de la procréation, c'est substituer l'___ au hasard, pour nous épargner toute surprise désagréable et nous rendre maîtres de notre développement spécifique."
+    answer: "art"
+    alt: []
+  - id: jonas3-l1-p5
+    sentence: "Le hasard est la source productrice du développement des espèces, et la garantie, dans toute procréation sexuelle, que chaque individu né est ___."
+    answer: "unique"
+    alt: []
+  - id: jonas3-l1-p6
+    sentence: "Jonas : « le hasard de l'événement sexuel est la ___ irremplaçable, comme le fardeau inévitable de notre tirage au sort »."
+    answer: "bénédiction"
+    alt: []
+  - id: jonas3-l1-p7
+    sentence: "Jonas : « le hasard de l'événement sexuel est la bénédiction irremplaçable, comme le ___ inévitable de notre tirage au sort »."
+    answer: "fardeau"
+    alt: []
+  - id: jonas3-l1-p8
+    sentence: "Jonas : « le hasard de l'événement sexuel est la bénédiction irremplaçable, comme le fardeau inévitable de notre ___ au sort »."
+    answer: "tirage"
+    alt: []
+  - id: jonas3-l1-p9
+    sentence: "Jonas : l'imprévisibilité du hasard de l'événement sexuel « est toujours plus digne de ___ que nos options pesées en une journée »."
+    answer: "confiance"
+    alt: []
+  - id: jonas3-l1-p10
+    sentence: "Jonas préfère le hasard de la procréation à nos choix : son ___ est toujours plus digne de confiance que nos options pesées en une journée, parce qu'il n'est le choix de personne."
+    answer: "imprévisibilité"
+    alt: []
+
+- id: jonas3-l2
+  title: "Le clone"
+  notes: |-
+    Au-delà de la capacité technique qui rend le clonage possible, Jonas s'interroge sur le **statut du clone** : une simple réplique, sans existence singulière. Il imagine le désarroi de celui qui, connaissant sa situation, prend conscience de sa réalité.
+
+    **Ce que le clone perd.** {teal}« Se savoir pâle copie d'un être, qui s'est déjà révélé dans une vie, doit étouffer l'authenticité d'être soi-même, la liberté de se découvrir comme une surprise pour soi-même et pour les autres avec ce qu'il y a en soi. »{/teal} Le mal n'est pas génétique mais **existentiel** : le clone sait d'avance ce qu'un autre a fait de ce qu'il est. Son avenir est {red}déjà joué{/red} dans la vie de son modèle, et il ne peut plus se découvrir.
+
+    **Ce que perdent les autres.** {teal}« Et ce savoir illicite étouffe la spontanéité de l'environnement à l'égard du nouvel arrivant qui pourtant n'est justement pas nouveau. »{/teal} Parents et proches regardent l'enfant à travers son modèle ; ils attendent de lui une vie qu'ils connaissent déjà. Le savoir est {red}illicite{/red} : nul ne devrait savoir d'avance qui sera un nouveau-né.
+
+    ! L'argument ne suppose pas que le clone serait identique à son modèle (il ne l'est pas) : il suffit qu'il se sache copie, et que les autres le sachent, pour que la liberté de se découvrir soit étouffée.
+  points:
+  - id: jonas3-l2-p1
+    sentence: "Jonas, sur le clone : « Se savoir ___ copie d'un être, qui s'est déjà révélé dans une vie, doit étouffer l'authenticité d'être soi-même. »"
+    answer: "pâle"
+    alt: []
+  - id: jonas3-l2-p2
+    sentence: "Jonas, sur le clone : « Se savoir pâle copie d'un être, qui s'est déjà révélé dans une vie, doit étouffer l'___ d'être soi-même. »"
+    answer: "authenticité"
+    alt: []
+  - id: jonas3-l2-p3
+    sentence: "Jonas, sur le clone : se savoir pâle copie doit étouffer « la liberté de se découvrir comme une ___ pour soi-même et pour les autres avec ce qu'il y a en soi »."
+    answer: "surprise"
+    alt: []
+  - id: jonas3-l2-p4
+    sentence: "Jonas, sur le clone : « ce savoir ___ étouffe la spontanéité de l'environnement à l'égard du nouvel arrivant qui pourtant n'est justement pas nouveau »."
+    answer: "illicite"
+    alt: []
+  - id: jonas3-l2-p5
+    sentence: "Jonas, sur le clone : ce savoir illicite étouffe la ___ de l'environnement à l'égard du nouvel arrivant, qui pourtant n'est justement pas nouveau."
+    answer: "spontanéité"
+    alt: []
+  - id: jonas3-l2-p6
+    sentence: "Le tort du clonage, pour Jonas, n'est pas génétique mais existentiel : le clone sait que l'être dont il est la copie s'est déjà révélé dans une ___, et ne peut plus se découvrir lui-même."
+    answer: "vie"
+    alt: []
+
+- id: jonas3-l3
+  title: "L'eugénisme libéral"
+  notes: |-
+    Les craintes de Jonas se prolongent chez des auteurs plus récents, qui voient venir non un eugénisme d'État, mais un {violet}eugénisme libéral{/violet}, celui du marché et du choix des parents.
+
+    **Habermas.** Dans {sky}*L'avenir de la nature humaine. Vers un eugénisme libéral*{/sky} (2002), Jürgen **Habermas** dit avoir {teal}« préféré adopter la perspective d'un présent futur, à partir de laquelle nous jetterons peut-être, un jour, un regard rétrospectif sur les pratiques, aujourd'hui contestées, ouvrant la voie à un eugénisme libéral, réglé par l'offre et la demande »{/teal}. Il se projette dans un monde dystopique pour dénoncer d'avance les limites, les défauts et le caractère tragique, pour l'espèce, des techniques que nous cherchons à acquérir. L'eugénisme ne viendrait plus des {red}pouvoirs totalitaires{/red}, mais du **progrès scientifique** qui rend possible la sélection des caractéristiques de l'embryon.
+
+    **Le fardeau de l'enfant parfait.** Des parents soucieux de donner à leurs enfants les meilleures chances feraient porter sur eux un lourd fardeau : sélectionnés pour la beauté, l'intelligence ou l'aptitude sportive, ils pourraient ne pas répondre aux attentes, et n'auraient {red}pas droit à l'erreur{/red}, privés surtout de la liberté de déroger au modèle prévu. Il faudrait plutôt, dit Dominique **Lecourt**, considérer {teal}« les enfants comme un don à chérir et non comme le résultat de notre manipulation »{/teal}.
+
+    **Fukuyama.** Dans *La fin de l'homme* (2004), Francis **Fukuyama** dénonce un tri social : les riches sélectionneront les embryons pour optimiser leurs enfants, confirmant la conformité entre origine sociale, aspect et intelligence ; et celui qui échoue pourra incriminer un mauvais choix de gènes plutôt que sa responsabilité. Membre du **Conseil présidentiel de bioéthique** (2001-2004, sous G. W. Bush), il demandait l'interdiction des biotechnologies. Après avoir, à la suite de **Hegel**, annoncé la fin de l'histoire, il constate que la biologie a des effets sur la politique : {teal}« si la science et la technique sont à la source du monde moderne, elles représentent aussi les points les plus vulnérables de notre civilisation »{/teal}, d'où la menace du {red}« bioterrorisme »{/red}. Avec les dystopies (*1984*, *Le meilleur des mondes*), il juge qu'**Huxley** avait raison : la biotechnique peut altérer la nature humaine et nous propulser dans une phase {red}« posthumaine »{/red} de notre histoire.
+
+    ! L'eugénisme libéral n'a besoin d'aucune contrainte : il naît de choix privés et bien intentionnés, ce qui le rend plus difficile à dénoncer que l'eugénisme d'État.
+  points:
+  - id: jonas3-l3-p1
+    sentence: "Jürgen ___, dans *L'avenir de la nature humaine*, dit avoir « préféré adopter la perspective d'un présent futur », pour juger d'avance des pratiques ouvrant la voie à un eugénisme libéral."
+    answer: "Habermas"
+    alt: []
+  - id: jonas3-l3-p2
+    sentence: "Habermas a « préféré adopter la perspective d'un présent futur, à partir de laquelle nous jetterons peut-être, un jour, un regard rétrospectif sur les pratiques, aujourd'hui contestées, ouvrant la voie à un eugénisme ___ »."
+    answer: "libéral"
+    alt: []
+  - id: jonas3-l3-p3
+    sentence: "Pour Habermas, l'eugénisme libéral qui s'annonce serait « réglé par l'___ et la demande » : il ne viendrait plus de pouvoirs totalitaires, mais du marché."
+    answer: "offre"
+    alt: []
+  - id: jonas3-l3-p4
+    sentence: "Pour juger les techniques que nous cherchons à acquérir, Habermas adopte « la perspective d'un présent ___ », d'où il jette un regard rétrospectif sur nos pratiques."
+    answer: "futur"
+    alt: []
+  - id: jonas3-l3-p5
+    sentence: "L'ouvrage où Habermas annonce un eugénisme libéral s'intitule *L'avenir de la nature ___*."
+    answer: "humaine"
+    alt: []
+  - id: jonas3-l3-p6
+    sentence: "Plutôt que de composer l'enfant parfait, il faudrait selon Dominique Lecourt considérer « les enfants comme un ___ à chérir et non comme le résultat de notre manipulation »."
+    answer: "don"
+    alt: []
+  - id: jonas3-l3-p7
+    sentence: "Dans *La fin de l'homme* (2004), Francis ___ dénonce le fait que les riches pourront sélectionner les embryons avant implantation pour optimiser leurs enfants."
+    answer: "Fukuyama"
+    alt: []
+  - id: jonas3-l3-p8
+    sentence: "Fukuyama dénonce les biotechnologies dans *La ___ de l'homme* (2004)."
+    answer: "fin"
+    alt: []
+  - id: jonas3-l3-p9
+    sentence: "Fukuyama : « si la science et la technique sont à la source du monde moderne, elles représentent aussi les points les plus ___ de notre civilisation »."
+    answer: "vulnérables"
+    alt: []
+  - id: jonas3-l3-p10
+    sentence: "Fukuyama insiste sur l'apparition du « ___ comme menace mortelle », qui impose un contrôle rigoureux de l'utilisation des biotechnologies."
+    answer: "bioterrorisme"
+    alt: []
+  - id: jonas3-l3-p11
+    sentence: "Fukuyama juge que, des auteurs de dystopies, ___ avait raison avec *Le meilleur des mondes* : la biotechnique peut altérer la nature humaine."
+    answer: "Huxley"
+    alt: []
+  - id: jonas3-l3-p12
+    sentence: "Pour Fukuyama, la biotechnique contemporaine peut altérer la nature humaine et nous propulser dans une phase « ___ » de notre histoire."
+    answer: "posthumaine"
+    alt: []
+  - id: jonas3-l3-p13
+    sentence: "Avant de dénoncer les biotechnologies, Fukuyama avait soutenu, à la suite de ___, que le développement historique s'était achevé avec les principes de la Révolution française."
+    answer: "Hegel"
+    alt: []
+
+- id: jonas3-l4
+  title: "La question métaphysique"
+  notes: |-
+    Enfin, Jonas évoque la **position de la question métaphysique** : le pouvoir apocalyptique de la technique pose une question à laquelle l'éthique ne s'était jamais confrontée.
+
+    **Une question inédite.** Le potentiel apocalyptique de la technique est double : mettre en danger le **maintien du genre humain**, ou corrompre son **intégrité génétique** en la changeant arbitrairement. Il pose donc la question {violet}métaphysique{/violet} : {red}si et pourquoi il doit y avoir une humanité{/red} ; pourquoi l'homme, tel que l'évolution l'a fait naître, doit être préservé et son héritage génétique respecté ; et même pourquoi il doit y avoir de la vie en général. Tant que l'homme ne pouvait pas abolir l'humanité, la question ne se posait pas pratiquement.
+
+    **La réponse : un impératif catégorique.** Jonas répond par une sorte d'{green}impératif catégorique{/green}, une **exigence à exister** pour l'humanité, qui doit l'empêcher de jouer avec sa propre vie : les risques techniques, même très incertains, sont à **exclure dès le début**. Catégorique, parce qu'il ne dépend d'aucune fin qu'on pourrait ne pas vouloir : l'existence de l'humanité n'est pas un moyen pour autre chose, elle est la condition de toute éthique.
+
+    **La nature humaine en question.** D'où l'enjeu : existe-t-il une **nature humaine** stable et constante, ou n'est-elle qu'une **construction sociale et historique**, appelée à varier ? Sommes-nous des créatures devant respecter des préceptes divins, des êtres naturels devant se plier à notre essence sous peine de transgression, ou un {pink}être plastique, auteur de lui-même{/pink} ? L'éthique de Jonas semble reposer sur l'impératif d'une **persévérance de la vie humaine**, devoir envers les générations futures et envers l'humanité en général.
+
+    ! L'impératif de Jonas exclut les risques même très incertains : quand l'existence de l'humanité est en jeu, l'incertitude ne justifie pas de parier.
+  points:
+  - id: jonas3-l4-p1
+    sentence: "Le dernier point par lequel Jonas fait de la technique un objet pour l'éthique est la position de la question ___ : pourquoi il doit y avoir une humanité."
+    answer: "métaphysique"
+    alt: []
+  - id: jonas3-l4-p2
+    sentence: "Le potentiel ___ de la technique, qui peut mettre en danger le maintien du genre humain ou corrompre son intégrité génétique, pose une question à laquelle l'éthique ne s'était jamais confrontée."
+    answer: "apocalyptique"
+    alt: []
+  - id: jonas3-l4-p3
+    sentence: "Le potentiel apocalyptique de la technique peut mettre en danger le maintien du genre humain, ou corrompre son intégrité ___ en la changeant arbitrairement."
+    answer: "génétique"
+    alt: []
+  - id: jonas3-l4-p4
+    sentence: "À la question de savoir pourquoi il doit y avoir une humanité, Jonas répond en quelque sorte par un impératif ___, une exigence à exister pour l'humanité."
+    answer: "catégorique"
+    alt: []
+  - id: jonas3-l4-p5
+    sentence: "Jonas répond à la question métaphysique par une ___ à exister pour l'humanité, qui doit l'empêcher de jouer avec sa propre vie."
+    answer: "exigence"
+    alt: []
+  - id: jonas3-l4-p6
+    sentence: "Puisque l'humanité doit exister, les risques techniques, même très ___, sont à exclure dès le début."
+    answer: "incertains"
+    alt: []
+  - id: jonas3-l4-p7
+    sentence: "Existe-t-il une nature humaine stable et constante, ou n'est-elle qu'une construction ___ et historique, appelée à varier au fil du temps ?"
+    answer: "sociale"
+    alt: []
+  - id: jonas3-l4-p8
+    sentence: "Contre l'idée d'une essence à respecter sous peine de transgression, l'être humain pourrait n'être pas contraint par de telles limites, mais un être ___, auteur de lui-même."
+    answer: "plastique"
+    alt: []
+  - id: jonas3-l4-p9
+    sentence: "L'éthique de Jonas semble reposer sur l'impératif d'une ___ de la vie humaine, comme devoir envers les générations futures et envers l'humanité en général."
+    answer: "persévérance"
+    alt: []
+
+- id: jonas3-l5
+  title: "Relativiser la peur de la technique"
+  notes: |-
+    Contre une méfiance excessive, d'autres auteurs rappellent que l'homme s'est toujours transformé lui-même, et que la peur de la technique vient souvent de **l'ignorance** qu'on en a. Ce ne sont pas des commentaires de Jonas, mais des objections à une lecture alarmiste.
+
+    **Sloterdijk : rien de nouveau.** L'homme a toujours opéré sur lui-même des modifications ; les transformations techniques ne seraient donc pas une nouveauté. Médicaments, **prothèses** (du genou au cœur, en passant par les dents), pacemakers, greffes, lentilles et lunettes : le transhumanisme serait le simple prolongement d'un mouvement lointain, né avec la {yellow}béquille{/yellow}, qui pallie nos déficiences. Il y a {green}continuité entre les lunettes{/green} qui corrigent la myopie et les techniques qui rendraient la vue aux aveugles.
+
+    **Klein : une mythologie de la technique.** Pour Étienne **Klein**, la technique a bouleversé la vie depuis la révolution industrielle, mais la méfiance qu'elle suscite est amplifiée par une **mythologie** : {teal}« Les technologies, quelles qu'elles soient, ne produisent pas seulement les instruments qui transforment notre vie, elles modifient la réalité qui nous entoure »{/teal}. Elles produisent aussi des mythes et des récits ; or {teal}« par essence, l'imaginaire n'est pas là pour intégrer une technique à une société. Il a plutôt un rôle de transformation symbolique »{/teal}, qui charge affectivement les objets techniques, d'autant plus que la technologie devient **opaque**.
+
+    **Séris : la facilité d'usage, l'ignorance du fonctionnement.** Les objets les plus récents sont faciles à utiliser et très difficiles à comprendre. Jean-Pierre **Séris** : {teal}« nous vivons dans un monde où le 'capital' de savoir technique accumulé est colossal, et en même temps, nous sommes bien plus que nos ancêtres dispensés de tout savoir-faire technique »{/teal}. Ce retrait de la technique donne à la technologie de pointe une aura scientifique, qu'on nomme {violet}technoscience{/violet}.
+
+    **Simondon : l'aliénation par ignorance.** Dans *Du mode d'existence des objets techniques*, Gilbert **Simondon** déconstruit la peur de la machine ou du robot, qui s'affranchirait de la tutelle humaine : cette vision irrationnelle repose sur l'**ignorance**. {teal}« La plus forte cause d'aliénation dans le monde contemporain réside dans cette méconnaissance de la machine, qui n'est pas une aliénation causée par la machine, mais par la non-connaissance de sa nature et de son essence »{/teal}. D'où la nécessité d'une {green}pédagogie de la technique{/green}.
+
+    ! Ces objections ne réfutent pas Jonas : elles visent la peur mal informée, non la responsabilité devant un pouvoir réellement nouveau par son échelle.
+  points:
+  - id: jonas3-l5-p1
+    sentence: "Pour ___, l'homme a toujours opéré sur lui-même des modifications, de sorte que les transformations techniques actuelles ne constitueraient pas une nouveauté."
+    answer: "Sloterdijk"
+    alt: []
+  - id: jonas3-l5-p2
+    sentence: "Le transhumanisme pourrait être compris comme le prolongement d'un mouvement lointain, trouvant son origine dans la simple ___, qui pallie nos déficiences."
+    answer: "béquille"
+    alt: []
+  - id: jonas3-l5-p3
+    sentence: "Il y aurait continuité entre les ___ venant corriger la myopie et des techniques permettant de rendre la vue aux aveugles."
+    answer: "lunettes"
+    alt: []
+  - id: jonas3-l5-p4
+    sentence: "Étienne ___ : « Les technologies, quelles qu'elles soient, ne produisent pas seulement les instruments qui transforment notre vie, elles modifient la réalité qui nous entoure. »"
+    answer: "Klein"
+    alt: []
+  - id: jonas3-l5-p5
+    sentence: "Klein : « par essence, l'___ n'est pas là pour intégrer une technique à une société. Il a plutôt un rôle de transformation symbolique »."
+    answer: "imaginaire"
+    alt: []
+  - id: jonas3-l5-p6
+    sentence: "Klein : par essence, l'imaginaire n'est pas là pour intégrer une technique à une société ; « il a plutôt un rôle de transformation ___ »."
+    answer: "symbolique"
+    alt: []
+  - id: jonas3-l5-p7
+    sentence: "Jean-Pierre ___ : « nous vivons dans un monde où le 'capital' de savoir technique accumulé est colossal, et en même temps, nous sommes bien plus que nos ancêtres dispensés de tout savoir-faire technique »."
+    answer: "Séris"
+    alt: []
+  - id: jonas3-l5-p8
+    sentence: "Séris : le capital de savoir technique accumulé est colossal, et en même temps « nous sommes bien plus que nos ancêtres ___ de tout savoir-faire technique »."
+    answer: "dispensés"
+    alt: []
+  - id: jonas3-l5-p9
+    sentence: "Dans *Du mode d'existence des objets techniques*, Gilbert ___ déconstruit la peur de la machine et du robot, qui repose sur l'ignorance de la technique."
+    answer: "Simondon"
+    alt: []
+  - id: jonas3-l5-p10
+    sentence: "Simondon : « La plus forte cause d'___ dans le monde contemporain réside dans cette méconnaissance de la machine »."
+    answer: "aliénation"
+    alt: []
+  - id: jonas3-l5-p11
+    sentence: "Simondon : la plus forte cause d'aliénation « réside dans cette ___ de la machine, qui n'est pas une aliénation causée par la machine, mais par la non-connaissance de sa nature et de son essence »."
+    answer: "méconnaissance"
+    alt: []
+  - id: jonas3-l5-p12
+    sentence: "L'ouvrage où Simondon attribue l'aliénation à la méconnaissance de la machine s'intitule *Du mode d'existence des objets ___*."
+    answer: "techniques"
+    alt: []

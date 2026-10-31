@@ -1,0 +1,363 @@
+# Cours sur Jonas, suite (voir l'en-tête de jonas1.yaml) : les points par
+# lesquels Jonas, dans « En quel sens la technique moderne est un objet pour
+# l'éthique », fait de la technique un objet pour l'éthique (Bies, p. 458-464).
+# Bies annonce « cinq points essentiels » sans les numéroter tous : il nomme le
+# premier (ambivalence des effets) et le deuxième (caractère inévitable de
+# l'application), puis la dimension globale, la rupture avec
+# l'anthropocentrisme (jonas3) et, « enfin », la question métaphysique.
+#
+# Citations datées par Bies sans titre d'œuvre : [Jonas, 2005, p. 90] et
+# [1990, p. 83] (vraisemblablement Le Principe responsabilité, Cerf, 1990) ;
+# l'œuvre n'est pas nommée dans les cartes.
+
+id: jonas2
+title: "La technique moderne, objet pour l'éthique"
+subtitle: "Ambivalence des effets, application inévitable, dimension globale : la responsabilité à la mesure du pouvoir"
+icon: compass
+color: green
+group: "Jonas : la responsabilité face au vivant"
+lessons:
+- id: jonas2-l1
+  title: "L'ambivalence des effets"
+  notes: |-
+    Dans l'article dont le texte est extrait, Jonas souligne **cinq points** qui font de la technique moderne un objet pour l'éthique. Le premier est {violet}l'ambivalence des effets{/violet} : il ruine le partage traditionnel entre bon et mauvais usage.
+
+    **La conception traditionnelle.** Une chose est bonne, et ne devient mauvaise qu'en raison d'un {red}emploi abusif{/red} : le couteau sert à couper le pain, le meurtrier en abuse. Le mal est dans l'intention, et il suffit de vouloir le bien pour bien faire.
+
+    **La technique moderne.** On a affaire, dit Jonas, à {teal}« un rapport à l'acte où chaque usage à grande échelle d'une aptitude, fût-il même entrepris dans une bonne intention, provoque des effets en fin de compte négatifs, qui s'accumulent et sont inséparables des effets visés les plus manifestement "bons", peut-être au point de les surpasser de beaucoup »{/teal}. Exemple familier : un engrais nourrit des millions d'hommes et, à la même échelle et du même geste, épuise les sols ; on ne peut pas garder l'un en retirant l'autre.
+
+    **D'où trois conséquences.**
+    - Le partage du bien et du mal selon {red}l'intention à l'origine d'une innovation{/red} ne tient plus : la meilleure volonté ne prémunit pas contre des conséquences négatives, produites par un simple **effet quantitatif**.
+    - Les « bonnes techniques » peuvent se révéler mauvaises **à long terme**, ce dont on ne peut se rendre compte immédiatement : la recherche met en place des dispositifs dont elle ignore le terme ultime, qui peuvent contredire ses ambitions de départ.
+    - Les catastrophes possibles ne sont plus circonscrites à un événement localisable dans l'espace ou le temps : elles affectent **l'intégralité de la nature et de l'environnement** (la question écologique) ou **de la nature humaine** (la médecine et la génétique).
+
+    **Le paradoxe de la technique.** C'est la {green}volonté du bien{/green}, ou du moins de l'utile, qui porte en réalité les {red}germes du nuisible{/red} ; et ces germes ne peuvent être entièrement enrayés, puisque ce sont des **besoins humains** qui motivent le progrès.
+
+    ! L'ambivalence ne vient pas d'un mauvais usage : elle se produit dans l'usage le mieux intentionné, du seul fait de l'échelle.
+  points:
+  - id: jonas2-l1-p1
+    sentence: "Le premier des cinq points par lesquels Jonas fait de la technique moderne un objet pour l'éthique est l'___ des effets : le bien et le mal y sont inséparables."
+    answer: "ambivalence"
+    alt: []
+  - id: jonas2-l1-p2
+    sentence: "Selon la conception traditionnelle que Jonas récuse pour la technique moderne, une chose bonne ne devient mauvaise qu'en raison d'un emploi ___."
+    answer: "abusif"
+    alt: []
+  - id: jonas2-l1-p3
+    sentence: "Jonas : on a affaire à « un rapport à l'acte où chaque usage à grande échelle d'une aptitude, fût-il même entrepris dans une bonne ___, provoque des effets en fin de compte négatifs »."
+    answer: "intention"
+    alt: []
+  - id: jonas2-l1-p4
+    sentence: "Jonas : chaque usage à grande échelle d'une aptitude « provoque des effets en fin de compte négatifs, qui s'___ et sont inséparables des effets visés les plus manifestement \"bons\" »."
+    answer: "accumulent"
+    alt: []
+  - id: jonas2-l1-p5
+    sentence: "Pour Jonas, les effets négatifs de la technique sont ___ des effets visés les plus manifestement « bons », peut-être au point de les surpasser de beaucoup : on ne peut garder les uns sans les autres."
+    answer: "inséparables"
+    alt: []
+  - id: jonas2-l1-p6
+    sentence: "Les effets négatifs de chaque usage à grande échelle d'une aptitude technique pourraient, dit Jonas, ___ de beaucoup les effets visés les plus manifestement bons."
+    answer: "surpasser"
+    alt: []
+  - id: jonas2-l1-p7
+    sentence: "L'ambivalence des effets ruine le partage du bien et du mal selon l'intention : la meilleure volonté ne saurait prémunir contre des conséquences négatives produites par un simple effet ___."
+    answer: "quantitatif"
+    alt: []
+  - id: jonas2-l1-p8
+    sentence: "Les « bonnes techniques » peuvent se révéler mauvaises à « long ___ », ce dont on ne peut se rendre compte immédiatement : la recherche ignore le terme ultime des dispositifs qu'elle met en place."
+    answer: "terme"
+    alt: []
+  - id: jonas2-l1-p9
+    sentence: "Les catastrophes que la technique peut entraîner ne sont plus circonscrites à un événement ___ dans l'espace ou dans le temps : elles affectent l'intégralité de la nature, ou de la nature humaine."
+    answer: "localisable"
+    alt: []
+  - id: jonas2-l1-p10
+    sentence: "Paradoxe de la technique selon Jonas : c'est la volonté du bien, ou du moins de l'utile, qui porte en réalité les ___ du nuisible."
+    answer: "germes"
+    alt: []
+  - id: jonas2-l1-p11
+    sentence: "Les germes du nuisible que porte la volonté du bien ne peuvent être entièrement enrayés, puisque ce sont des ___ humains qui motivent le progrès technique."
+    answer: "besoins"
+    alt: []
+
+- id: jonas2-l2
+  title: "La fin de la neutralité éthique"
+  notes: |-
+    Si les meilleures intentions produisent des maux, la science ne peut plus se dire **neutre** : c'est la conséquence que Jonas tire de l'ambivalence des effets.
+
+    **Plus de neutralité.** {teal}« On refuse à la technique l'espace de liberté de la neutralité éthique, où l'on doit seulement se soucier d'efficacité. »{/teal} La neutralité du savoir n'est qu'une {red}illusion{/red}, ou une naïveté : celle d'une connaissance volontairement ignorante de ses conséquences. Le scientifique doit en avoir conscience **dès l'abord de son travail**, sans se contenter du déni, et assumer la responsabilité qui incombe à sa position. Jonas consacre un article du recueil à la question : {sky}« L'indifférence aux valeurs de la science et la responsabilité : l'autocensure de la recherche ? »{/sky}, où il refuse à la science et à la technique {teal}« le lieu d'asile de la neutralité éthique »{/teal}.
+
+    **L'exemple de l'atome.** Des travaux qui ne visaient qu'à atteindre la vérité ont contribué, par l'application qu'ils ont rendue possible, aux pires atrocités : la recherche sur la {red}fission de l'atome{/red}, qui libère une quantité phénoménale d'énergie, a servi à fabriquer l'**arme atomique**. Leçon : la nature des travaux ne définit pas à l'avance l'emploi qui en sera fait, et cet emploi n'est pas limité par le cadre des travaux scientifiques.
+
+    **Des technosciences.** Autrefois la technique dérivait de la science comme l'une de ses expressions ; elle s'en affranchit et s'empare même de la science dans une perspective qui lui est propre. C'est l'avènement, au {sky}XXe siècle{/sky}, des {violet}technosciences{/violet} : la science n'y procède plus de la seule exigence de vérité, mais voit son orientation déterminée par des **buts techniques** ou par sa **rentabilité économique**.
+
+    **Juger par les conséquences, et ensemble.** Puisque les effets sont ambivalents, on ne peut juger la science et la technique selon l'intention de leur auteur, mais {green}selon leurs conséquences possibles{/green}. Cela met en question le **monopole du monde scientifique** et justifie l'existence de {violet}comités d'éthique{/violet}, chargés d'une décision élaborée collectivement : des commissions où siègent des **profanes** de tous les domaines de la vie, échantillon représentatif de la société, puisque les conséquences dépassent les compétences strictement scientifiques et que chacun doit pouvoir se prononcer sur son propre destin.
+
+    ! Refuser la neutralité éthique ne revient pas à accuser les savants d'intentions mauvaises : c'est dire qu'une bonne intention ne suffit plus à décharger de la responsabilité.
+  points:
+  - id: jonas2-l2-p1
+    sentence: "Jonas : « on refuse à la technique l'espace de liberté de la ___ éthique, où l'on doit seulement se soucier d'efficacité »."
+    answer: "neutralité"
+    alt: []
+  - id: jonas2-l2-p2
+    sentence: "Jonas : « on refuse à la technique l'espace de liberté de la neutralité éthique, où l'on doit seulement se soucier d'___ »."
+    answer: "efficacité"
+    alt: []
+  - id: jonas2-l2-p3
+    sentence: "Pour Jonas, la neutralité du savoir scientifique ne relève que d'une forme d'___ ou de naïveté, celle d'une connaissance volontairement ignorante de ses conséquences."
+    answer: "illusion"
+    alt: []
+  - id: jonas2-l2-p4
+    sentence: "Jonas consacre un article à la neutralité scientifique : « L'indifférence aux valeurs de la science et la responsabilité : l'___ de la recherche ? »"
+    answer: "autocensure"
+    alt: []
+  - id: jonas2-l2-p5
+    sentence: "Jonas refuse à la science et à la technique « le lieu d'___ de la neutralité éthique » : la responsabilité du chercheur est engagée immédiatement."
+    answer: "asile"
+    alt: []
+  - id: jonas2-l2-p6
+    sentence: "Des travaux qui ne visaient qu'à atteindre la vérité ont contribué aux pires atrocités : la recherche sur la ___ de l'atome a été employée à la fabrication de l'arme atomique."
+    answer: "fission"
+    alt: []
+  - id: jonas2-l2-p7
+    sentence: "Leçon de l'arme atomique : la nature des travaux scientifiques ne définit pas à l'avance l'___ qui pourra en être fait, qui demeure imprévisible."
+    answer: "emploi"
+    alt: []
+  - id: jonas2-l2-p8
+    sentence: "La technique, qui dérivait autrefois de la science, s'en affranchit et s'en empare : c'est l'avènement, au XXe siècle, des ___, où la science voit son orientation déterminée par des buts techniques ou par sa rentabilité économique."
+    answer: "technosciences"
+    alt: ["technoscience"]
+  - id: jonas2-l2-p9
+    sentence: "Dans les technosciences, l'orientation de la science n'est plus déterminée par la seule exigence de vérité, mais par des buts techniques ou par sa ___ économique."
+    answer: "rentabilité"
+    alt: []
+  - id: jonas2-l2-p10
+    sentence: "En raison de l'ambivalence de leurs effets, la science et la technique ne peuvent être jugées selon l'intention de leur auteur, mais selon leurs ___ possibles."
+    answer: "conséquences"
+    alt: []
+  - id: jonas2-l2-p11
+    sentence: "Juger la science par ses conséquences met en question le monopole du monde scientifique et justifie l'existence de ___ d'éthique, chargés d'une décision élaborée collectivement."
+    answer: "comités"
+    alt: ["commissions"]
+  - id: jonas2-l2-p12
+    sentence: "Les conséquences de la technique dépassant les compétences strictement scientifiques, les commissions d'éthique doivent être occupées par des ___ de tous les domaines de la vie, échantillon représentatif de la société."
+    answer: "profanes"
+    alt: []
+
+- id: jonas2-l3
+  title: "L'application inévitable"
+  notes: |-
+    Le deuxième point de Jonas est le {violet}caractère inévitable de l'application{/violet} : ce qui peut techniquement se faire se fera.
+
+    **Pour un savoir ordinaire, pouvoir n'est pas faire.** La possession d'une aptitude n'implique pas son utilisation : son emploi peut être suspendu en attendant le moment opportun. {yellow}Celui qui maîtrise plusieurs langues peut rester muet{/yellow} ; chaque savoir peut se réserver la possibilité de son application. Ce rapport vaut {red}« entre le pouvoir et l'agir, le savoir et l'application, la possession et l'exercice d'un pouvoir »{/red}.
+
+    **Pour la technique, c'est autre chose.** Nos sociétés sont fondées sur {teal}« l'actualisation incessante de son potentiel technique »{/teal}. Le bon rapport n'est donc {red}pas celui qui relie la capacité de parler à l'expression effective du discours{/red} (on peut se taire), mais {green}la capacité associée à la nécessité de respirer{/green} (on ne peut pas s'en abstenir). Chaque nouvelle possibilité passe à l'acte, d'abord à petite échelle, puis selon des dimensions toujours plus grandes, jusqu'à s'imposer comme un {teal}« besoin vital durable »{/teal}.
+
+    **Deux lois l'illustrent.**
+    - La **loi de Gabor** : {teal}« tout ce qui est possible sera nécessairement réalisé »{/teal}, une sorte de fatalité du progrès, dont certaines inventions irréversibles nous rendent responsables d'un destin qui nous échappe.
+    - La **loi de Moore**, sur les « puces » : leur capacité double tous les ans, selon un **rythme exponentiel**, qui exprime le progrès scientifique lui-même et les développements liés aux NBIC.
+
+    **Un exemple : le Projet Génome Humain**, lancé en {sky}1990{/sky}, alors que dix ans plus tôt les généticiens s'accordaient à dire qu'on ne pourrait jamais séquencer tout notre ADN. Les plus optimistes prévoyaient 15 ans, les sceptiques 3 à 5 siècles. Avec 3 milliards de dollars et des milliers d'experts, il aboutit dès {sky}2000{/sky} à une version ébauchée, non brevetée, puis en {sky}2003{/sky} à une version définitive qui détaille les quelque **vingt-cinq mille gènes** de l'ADN. Le coût du séquençage, de plus d'un million et demi de dollars en 2007, tombe à environ **1 000 dollars** en 2013 : divisé **par un million** en dix ans, ce qui démocratise la technomédecine.
+
+    ! Le caractère inévitable de l'application n'est pas une loi de la nature : il tient à des sociétés qui vivent de l'actualisation de leur potentiel technique, d'où l'urgence d'une éthique qui la limite.
+  points:
+  - id: jonas2-l3-p1
+    sentence: "Le deuxième point par lequel Jonas fait de la technique moderne un objet pour l'éthique est le caractère ___ de l'application : ce qui est techniquement possible passe à l'acte."
+    answer: "inévitable"
+    alt: []
+  - id: jonas2-l3-p2
+    sentence: "Pour un savoir ordinaire, la possession d'une aptitude n'implique pas son utilisation : celui qui maîtrise différentes langues peut rester ___."
+    answer: "muet"
+    alt: []
+  - id: jonas2-l3-p3
+    sentence: "Le rapport où pouvoir n'implique pas faire vaut, pour Jonas, « entre le pouvoir et l'agir, le savoir et l'___, la possession et l'exercice d'un pouvoir », mais non pour la technique moderne."
+    answer: "application"
+    alt: []
+  - id: jonas2-l3-p4
+    sentence: "Nos sociétés, constate Jonas, sont fondées sur le principe de « l'___ incessante de son potentiel technique »."
+    answer: "actualisation"
+    alt: []
+  - id: jonas2-l3-p5
+    sentence: "Le rapport juste pour comprendre l'application de la technique n'est pas celui qui relie la capacité de parler à l'expression du discours, mais la capacité associée à la nécessité de ___ : on ne peut s'en abstenir."
+    answer: "respirer"
+    alt: []
+  - id: jonas2-l3-p6
+    sentence: "Chez Jonas, chaque nouvelle possibilité technique passe à l'acte, d'abord à petite échelle, puis s'impose tel un « besoin ___ durable »."
+    answer: "vital"
+    alt: []
+  - id: jonas2-l3-p7
+    sentence: "La description par Jonas de l'application inévitable fait écho à la loi de ___ : « tout ce qui est possible sera nécessairement réalisé »."
+    answer: "Gabor"
+    alt: []
+  - id: jonas2-l3-p8
+    sentence: "Loi de Gabor : « tout ce qui est possible sera ___ réalisé »."
+    answer: "nécessairement"
+    alt: []
+  - id: jonas2-l3-p9
+    sentence: "La loi de ___, relative à la capacité des « puces », qui doublerait tous les ans selon un rythme exponentiel, exprime le progrès scientifique lui-même."
+    answer: "Moore"
+    alt: []
+  - id: jonas2-l3-p10
+    sentence: "Selon la loi de Moore, la capacité des puces double tous les ans, selon un rythme ___."
+    answer: "exponentiel"
+    alt: []
+  - id: jonas2-l3-p11
+    sentence: "Le programme international Projet Génome Humain est lancé en ___, alors que dix ans plus tôt les généticiens pensaient qu'on ne pourrait jamais séquencer l'intégralité de notre ADN."
+    answer: "1990"
+    alt: []
+  - id: jonas2-l3-p12
+    sentence: "Le Projet Génome Humain aboutit en 2003 à une version définitive qui détaille les quelque vingt-cinq ___ gènes de l'ADN."
+    answer: "mille"
+    alt: []
+  - id: jonas2-l3-p13
+    sentence: "Le coût du séquençage de l'ADN, de plus d'un million et demi de dollars en 2007, tombe à environ 1000 dollars en 2013 : divisé par un ___ en dix ans."
+    answer: "million"
+    alt: []
+
+- id: jonas2-l4
+  title: "La dimension globale"
+  notes: |-
+    Avec le génie génétique, l'application inévitable rejoint la thèse du texte : la **dimension globale dans l'espace et le temps** des effets de la technique.
+
+    **Les conséquences sont déjà dans le travail.** Dès l'abord du travail scientifique, ses conséquences les plus graves sont virtuellement contenues. Jonas le montre dans l'article {sky}« Microbes, gamètes et zygotes : informations supplémentaires sur le nouveau rôle de créateur de l'homme »{/sky}, sur la manipulation génétique : {teal}« on introduit là dans le paysage de la vie, d'un coup et dès la première étape, dans l'ensemble des chromosomes d'une cellule reproductive, toute une descendance d'organismes modifiés, enrichis d'une nouvelle propriété »{/teal}. Modifier l'information génétique d'une **cellule reproductive**, c'est créer d'un coup une {red}lignée héréditaire inédite{/red} : l'acte ponctuel engage toute une descendance.
+
+    **Une éthique nouvelle.** La dimension globale conduit à une nouveauté éthique et à une catégorie originale, la **responsabilité**, qui redéfinit l'éthique. Cette éthique se manifeste par la **régulation du pouvoir de l'homme**, de son développement technique incessant, et des conditions de vie à préserver contre leur dévoiement progressif. Elle ne consiste {red}pas seulement à répondre de nos actes proches{/red} et des infractions qu'ils constituent, mais à garder à l'esprit {green}une plus vaste responsabilité{/green}, qui gouverne nos choix en vue de la **préservation de la vie** au nom de l'humanité et des générations à venir, auxquelles nous devons accorder les mêmes chances.
+
+    **D'où une thèse :** la bioéthique se confondrait avec ce souci de la responsabilité, qui fournit le cadre même où il est possible de la penser.
+
+    ! Le nouveau rôle de l'homme est celui de « créateur » : il ne modifie plus un individu, mais une descendance.
+  points:
+  - id: jonas2-l4-p1
+    sentence: "Jonas, sur la manipulation génétique : « on introduit là dans le paysage de la vie, d'un coup et dès la première étape, dans l'ensemble des ___ d'une cellule reproductive, toute une descendance d'organismes modifiés »."
+    answer: "chromosomes"
+    alt: []
+  - id: jonas2-l4-p2
+    sentence: "Jonas, sur la manipulation génétique : « on introduit là dans le paysage de la vie, d'un coup et dès la première étape, dans l'ensemble des chromosomes d'une cellule ___, toute une descendance d'organismes modifiés »."
+    answer: "reproductive"
+    alt: []
+  - id: jonas2-l4-p3
+    sentence: "Jonas, sur la manipulation génétique : on introduit d'un coup, dans les chromosomes d'une cellule reproductive, « toute une ___ d'organismes modifiés, enrichis d'une nouvelle propriété »."
+    answer: "descendance"
+    alt: []
+  - id: jonas2-l4-p4
+    sentence: "L'article de Jonas sur la manipulation génétique s'intitule « Microbes, gamètes et zygotes : informations supplémentaires sur le nouveau rôle de ___ de l'homme »."
+    answer: "créateur"
+    alt: []
+  - id: jonas2-l4-p5
+    sentence: "Modifier l'information génétique d'une cellule reproductive conduit d'un coup à la création d'une ligne ___ inédite : l'acte ponctuel engage toute une descendance."
+    answer: "héréditaire"
+    alt: []
+  - id: jonas2-l4-p6
+    sentence: "La nouvelle éthique de Jonas se manifeste à travers la ___ du pouvoir de l'homme, de son développement technique incessant, et des conditions de vie à préserver."
+    answer: "régulation"
+    alt: []
+  - id: jonas2-l4-p7
+    sentence: "La responsabilité selon Jonas ne consiste pas seulement à répondre de nos actes ___ et des infractions qu'ils constituent, mais à gouverner nos choix en vue de la préservation de la vie."
+    answer: "proches"
+    alt: []
+  - id: jonas2-l4-p8
+    sentence: "La plus vaste responsabilité que demande Jonas gouverne nos choix en vue de la ___ de la vie, au nom de l'humanité et des générations à venir."
+    answer: "préservation"
+    alt: []
+  - id: jonas2-l4-p9
+    sentence: "Puisque la dimension globale de la technique fait de la responsabilité la catégorie éthique première, la ___ se confondrait avec ce souci de la responsabilité, qui fournit le cadre où il est possible de la penser."
+    answer: "bioéthique"
+    alt: []
+
+- id: jonas2-l5
+  title: "Responsabilité et pouvoir"
+  notes: |-
+    La dernière phrase du texte posait que la responsabilité croît avec le pouvoir. Jonas en fait un rapport **de proportion** et un **fondement** : c'est parce que l'homme peut qu'il doit.
+
+    **Le revers du pouvoir.** Responsabilité et pouvoir sont {coral}le revers l'un de l'autre{/coral} : plus notre pouvoir est grand (et il est devenu considérable avec l'accélération du progrès au XXe siècle), plus la responsabilité qu'il implique est grande. D'où : {teal}« le simple exercice quotidien de notre pouvoir, qui constitue la routine de la civilisation moderne, et dont nous vivons tous, devient un problème éthique »{/teal}.
+
+    **Le savoir en retard sur la puissance.** L'augmentation de la puissance va avec un progrès du savoir qui améliore la portée de la **préscience**, sans permettre une connaissance parfaite de l'avenir. Or la préscience est toujours {red}en retard sur le rayon d'action de la puissance{/red} : il reste toujours un {red}excédent d'imprévisible{/red}, d'autant plus grand que la puissance est considérable.
+
+    **Une dette envers ceux qui n'existent pas.** L'{violet}équité{/violet} du texte prépare la responsabilité : agir comme si nous étions **liés par une dette** envers notre descendance, sans compromettre la possibilité d'existence d'une humanité qui nous sera postérieure. Obligation {red}paradoxale{/red} : elle est contractée envers un acteur **qui n'existe pas encore**, qui ne peut exercer sur nous aucune contrainte, et dont nous pourrions donc nous affranchir. La responsabilité n'est plus de répondre d'un acte précis, déterminé dans l'espace et le temps, mais un {green}engagement global{/green} qui ne se relie pas à l'immédiateté de l'action.
+
+    **Élargir le champ des conséquences.** Je peux me soucier des conséquences de mes actes sur mon entourage ; je peux aussi les considérer **au regard des générations futures** : la société industrielle qui exploite les ressources de la planète pourrait mettre en péril la nature qui assure nos conditions d'existence. Jamais aucune époque n'a disposé d'une telle *puissance*, donc d'une telle *responsabilité*, qui ne peut s'exercer sans un *savoir*.
+
+    **Le fondement : pouvoir, c'est devoir.** {teal}« L'homme est le seul être connu de nous qui puisse avoir une responsabilité. En pouvant l'avoir, il l'a. »{/teal} {teal}« Le pouvoir même entraîne avec lui le devoir. »{/teal} La capacité de responsabilité, {violet}d'ordre éthique{/violet}, repose sur une faculté {violet}d'ordre ontologique{/violet} : celle de {teal}« choisir, sciemment et délibérément, entre des alternatives de l'action »{/teal}. La responsabilité est donc {coral}complémentaire de la liberté{/coral} : c'est {teal}« le fardeau de la liberté propre à un sujet actif »{/teal}. Elle ne dépend d'aucun juge : je suis responsable de mon acte (et de mon omission), {teal}« et peu importe en l'occurrence qu'il y ait là quelqu'un pour me demander d'en répondre »{/teal} ; elle existe {teal}« avec ou sans Dieu, et à plus forte raison, naturellement, avec ou sans tribunal terrestre »{/teal}.
+
+    ! « En pouvant l'avoir, il l'a » : la responsabilité n'est pas d'abord un sentiment ni une convention ; elle découle de ce que l'homme est, un être capable de choisir.
+  points:
+  - id: jonas2-l5-p1
+    sentence: "Pour Jonas, responsabilité et pouvoir sont le ___ l'un de l'autre : plus notre pouvoir est grand, plus la responsabilité qu'il implique est grande."
+    answer: "revers"
+    alt: []
+  - id: jonas2-l5-p2
+    sentence: "Jonas : « le simple exercice quotidien de notre pouvoir, qui constitue la ___ de la civilisation moderne, et dont nous vivons tous, devient un problème éthique »."
+    answer: "routine"
+    alt: []
+  - id: jonas2-l5-p3
+    sentence: "Jonas : « le simple exercice ___ de notre pouvoir, qui constitue la routine de la civilisation moderne, et dont nous vivons tous, devient un problème éthique »."
+    answer: "quotidien"
+    alt: []
+  - id: jonas2-l5-p4
+    sentence: "Le progrès du savoir améliore la portée de la ___, mais celle-ci est toujours en retard sur le rayon d'action de la puissance."
+    answer: "préscience"
+    alt: []
+  - id: jonas2-l5-p5
+    sentence: "La préscience étant toujours en retard sur le rayon d'action de la puissance, il existe toujours un ___ d'imprévisible, d'autant plus important que la puissance est considérable."
+    answer: "excédent"
+    alt: []
+  - id: jonas2-l5-p6
+    sentence: "Envers notre descendance, nous devons agir comme si nous étions liés par une ___ à leur égard, sans compromettre la possibilité d'existence d'une humanité qui nous sera postérieure."
+    answer: "dette"
+    alt: []
+  - id: jonas2-l5-p7
+    sentence: "L'obligation envers les générations futures est ___ : elle est contractée à l'égard d'un acteur qui n'existe pas encore et ne peut exercer aucune contrainte sur nous."
+    answer: "paradoxale"
+    alt: []
+  - id: jonas2-l5-p8
+    sentence: "Jonas repense la responsabilité non comme devant répondre d'un acte précis, déterminé dans l'espace et le temps, mais comme un engagement global qui ne se relie pas à l'___ de l'action."
+    answer: "immédiateté"
+    alt: []
+  - id: jonas2-l5-p9
+    sentence: "Jamais aucune époque n'a disposé d'une telle puissance et donc d'une telle responsabilité, qui ne peut s'exercer sans un ___."
+    answer: "savoir"
+    alt: []
+  - id: jonas2-l5-p10
+    sentence: "Jonas : « L'homme est le seul être connu de nous qui puisse avoir une responsabilité. En ___ l'avoir, il l'a. »"
+    answer: "pouvant"
+    alt: []
+  - id: jonas2-l5-p11
+    sentence: "Jonas : « Être capable de responsabilité signifie déjà être placé sous le commandement de celle-ci : le pouvoir même entraîne avec lui le ___. »"
+    answer: "devoir"
+    alt: []
+  - id: jonas2-l5-p12
+    sentence: "Jonas : « Être capable de responsabilité signifie déjà être placé sous le ___ de celle-ci : le pouvoir même entraîne avec lui le devoir. »"
+    answer: "commandement"
+    alt: []
+  - id: jonas2-l5-p13
+    sentence: "Jonas : « la capacité de responsabilité, capacité d'ordre éthique, repose sur la faculté ___ de l'homme à choisir, sciemment et délibérément, entre des alternatives de l'action »."
+    answer: "ontologique"
+    alt: []
+  - id: jonas2-l5-p14
+    sentence: "Pour Jonas, la capacité de responsabilité repose sur la faculté de l'homme « à ___, sciemment et délibérément, entre des alternatives de l'action »."
+    answer: "choisir"
+    alt: []
+  - id: jonas2-l5-p15
+    sentence: "Jonas : « La responsabilité est donc complémentaire de la ___. C'est le fardeau de la liberté propre à un sujet actif. »"
+    answer: "liberté"
+    alt: []
+  - id: jonas2-l5-p16
+    sentence: "Jonas : la responsabilité est « le ___ de la liberté propre à un sujet actif »."
+    answer: "fardeau"
+    alt: []
+  - id: jonas2-l5-p17
+    sentence: "Jonas : « je suis responsable de mon acte en tant que tel (de même que de son ___), et peu importe en l'occurrence qu'il y ait là quelqu'un pour me demander d'en répondre »."
+    answer: "omission"
+    alt: []
+  - id: jonas2-l5-p18
+    sentence: "Jonas : « La responsabilité existe donc avec ou sans ___, et à plus forte raison, naturellement, avec ou sans tribunal terrestre. »"
+    answer: "Dieu"
+    alt: []
+  - id: jonas2-l5-p19
+    sentence: "Jonas : « La responsabilité existe donc avec ou sans Dieu, et à plus forte raison, naturellement, avec ou sans ___ terrestre. »"
+    answer: "tribunal"
+    alt: []
+  - id: jonas2-l5-p20
+    sentence: "La responsabilité selon Jonas ne dépend d'aucun juge : l'homme seul peut avoir une responsabilité, parce qu'il peut choisir ; et en pouvant l'avoir, il l'a. Le pouvoir même entraîne avec lui le ___."
+    answer: "devoir"
+    alt: []
