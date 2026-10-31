@@ -77,44 +77,68 @@ cartes-explication).
    un cours, une entrée de glossaire ou une unité-œuvre voisins disent déjà
    le contexte, et l'unité doit s'accorder avec eux.
 2. **Écrire l'analyse du texte entier**, dans un fichier du dossier
-   temporaire, avant la première leçon. Modèle : la fiche d'explication
-   linéaire de Montaigne, « Sur un enfant monstrueux » (2026-09-29, dont
-   est tirée `la-vie/units/montaigne-monstre`) : des préalables (thèse,
-   mouvements, glossaire), puis, mouvement par mouvement, chaque extrait cité
-   suivi de son explication et une synthèse du mouvement. Elle contient :
-   - **la question** à laquelle le texte répond, et **ce qui l'amène** à ce
-     point de l'œuvre (ce qui précède, ce qui suit) ;
-   - **la thèse**, en une phrase, et **contre qui** (adversaire, opinion
-     commune, position rivale). Qualifier ses affirmations avec le
-     vocabulaire reçu de la discipline (*ontologique*, *anthropologique*,
-     *épistémologique*, *éthique*…), jamais avec une étiquette forgée pour
-     l'occasion : la fiche de Montaigne disait la seconde thèse
-     « diagnostique », l'utilisateur l'a corrigée partout en
-     « anthropologique », et la carte qui la faisait apprendre avec ;
-   - **le problème** : ce qui rend la thèse difficile ou paradoxale ;
-   - **les mouvements**, repérés par leurs lignes, avec pour chacun son rôle
-     (pose, objecte, démontre, illustre, conclut) : c'est le découpage du § 1 ;
-   - **les arguments** de chaque mouvement, pas à pas, avec la prémisse
-     implicite qui les rend concluants ;
-   - **les notions** et leurs termes dans la langue de l'auteur ;
-   - **les enjeux** (ce que le texte permet de penser, à quoi il sert dans
-     une dissertation) et **les contresens** à éviter. Un enjeu ne vaut que
-     rattaché à une ligne du texte ou à un auteur précis : la conclusion de
-     Montaigne en « portées » épistémologique, anthropologique, éthique et
-     esthétique, devenue une leçon de prolongement aux réponses vagues
-     (« conjonction », « regarde », « féconde »), a été supprimée en
-     entier ;
-   - **les confrontations** avec les auteurs qui comptent pour l'épreuve
-     (pour La vie, Canguilhem, Aristote, Bergson…), développées d'après leur
-     texte, avec l'ouvrage, la partie et le chapitre, et non en une allusion :
-     la fiche ne disait de Canguilhem qu'une formule (« de valeur
-     négative ») ; l'utilisateur en a tiré une quinzaine de cartes sur « La
-     monstruosité et le monstrueux » (*La Connaissance de la vie*, I, 5) :
-     écart statistique, tératologie, polarité de la vie, monstre et mort,
-     monstre et pathologique ;
-   - **ce qui est décisif** dans chaque mouvement, le mot ou la modalité sur
-     lesquels tient l'argument : la carte des trous (§ 5), qu'aucun
-     commentateur ne fournit ici.
+   temporaire, avant la première leçon. Elle suit, étape par étape, les
+   consignes que l'utilisateur a données pour Montaigne, « Sur un enfant
+   monstrueux » (II, 30, conversation du 2026-09-29, d'où vient
+   `la-vie/units/montaigne-monstre`) ; chaque étape s'écrit après la
+   précédente et s'appuie sur elle, comme une suite de questions :
+   1. **Établir le texte** : l'extraire en entier, rétablir ce que
+      l'extraction a perdu (ligatures *fi*, *ff*), mettre les références
+      marginales entre crochets, retirer les notes de bas de page.
+   2. **La thèse** : l'affirmation principale, celle que toutes les autres
+      justifient. Si elle réunit des affirmations de statut différent (chez
+      Montaigne, l'une sur ce qui est, l'autre sur nos jugements), les
+      distinguer et dire ce qui les lie : laquelle dépend de l'autre, pourquoi
+      l'une ne suffit pas à l'autre, donc ce que l'auteur doit fournir (une
+      preuve, une explication de l'erreur). Situer aussi la question à
+      laquelle le texte répond, **contre qui** (adversaire, opinion du temps)
+      et sa place dans l'œuvre. Qualifier chaque affirmation avec le
+      vocabulaire reçu de la discipline (*ontologique*, *anthropologique*,
+      *épistémologique*, *éthique*…), jamais avec une étiquette forgée pour
+      l'occasion : l'analyse de Montaigne disait la seconde thèse « que l'on
+      peut dire diagnostique », l'utilisateur l'a corrigée partout en
+      « anthropologique », et la carte qui la faisait apprendre avec.
+   3. **Les arguments et les sous-arguments**, distingués rigoureusement, en
+      répondant à la question : qu'est-ce qui, dans ce texte, permet à
+      l'auteur d'affirmer sa thèse ? Ouvrir sur un glossaire des notions que
+      les arguments font jouer ensemble. Pour chaque argument : ses étapes,
+      la prémisse implicite qui le rend concluant, ce qu'il établit et **ce
+      qu'il ne suffit pas à établir**, qui appelle l'argument suivant (chez
+      Montaigne, Dieu qui voit tout ne prouve pas qu'il n'y a pas de
+      dérèglement réel, d'où le second sous-argument, Dieu qui produit).
+      Finir chaque argument par ce qui a été établi.
+   4. **Les portées, propres à ce texte** : les domaines qu'il touche
+      réellement, choisis pour lui et non tirés d'une grille (pour
+      Montaigne, l'utilisateur a demandé les portées épistémologique,
+      anthropologique, éthique et esthétique parce que ce texte-là les
+      porte ; un autre texte en appellera d'autres). Distinguer ce que le
+      texte affirme de ce qu'on peut en tirer en le prolongeant. Y joindre
+      ce que le texte fait comprendre des **concepts de l'épreuve** (pour La
+      vie : *nature*, *vivant*, *norme*…). Élargir au-delà, vers d'autres
+      angles d'analyse, se décide au cas par cas, quand le texte y prête.
+   5. **Les mouvements et l'explication linéaire** : découper le texte selon
+      les arguments distingués, en mouvements (repérés par leurs lignes ou
+      leurs paragraphes, chacun avec son rôle : pose, réfute, généralise,
+      démontre, conclut), puis réorganiser tout ce qui précède linéairement,
+      « extrait -> explication », chaque extrait cité en entier, dans
+      l'ordre, et chaque argument et chaque portée à l'endroit du texte qui
+      les porte ; une synthèse par mouvement (ce qui y a été établi), une
+      conclusion. C'est la forme de la fiche de Montaigne
+      (`exemples/montaigne-II-30-analyse.txt`, telle que la conversation l'a rendue, avant les retouches) : préalables (thèse,
+      mouvements, glossaire), puis les mouvements extrait par extrait. Le
+      découpage en extraits est celui de l'unité (§ 1, « Paragraphe long,
+      découpé en extraits » au § 4).
+   À chaque étape, noter aussi **ce qui est décisif** (le mot, la modalité
+   sur lesquels tient l'argument : la carte des trous, § 5, qu'aucun
+   commentateur ne fournit ici), les **contresens** à éviter, et les
+   **confrontations** avec les auteurs qui comptent pour l'épreuve (pour La
+   vie, Canguilhem, Aristote, Bergson…), développées d'après leur texte,
+   avec l'ouvrage, la partie et le chapitre, et non en une allusion :
+   l'analyse ne disait de Canguilhem qu'une formule (« de valeur
+   négative ») ; l'utilisateur en a tiré une quinzaine de cartes sur « La
+   monstruosité et le monstrueux » (*La Connaissance de la vie*, I, 5) :
+   écart statistique, tératologie, polarité de la vie, monstre et mort,
+   monstre et pathologique.
    Relire l'analyse d'un bout à l'autre et corriger ce qui ne s'enchaîne
    pas : c'est la seule vue d'ensemble qu'aura l'unité.
 3. **Vérifier ce qui sort du texte.** Ce que l'analyse tire du texte même
@@ -140,7 +164,13 @@ cartes-explication).
    notions, les positions rivales et les enjeux, les trous suivent ce qu'elle
    a jugé décisif. Ce que l'analyse remarque sur la manière (la précision
    d'un récit, une prudence de témoin) se dit dans le rappel, sans faire
-   trouer chaque détail qui l'illustre (§ 5, règle 7).
+   trouer chaque détail qui l'illustre (§ 5, règle 7). Les portées vont dans
+   le rappel et les cartes de l'extrait qui les porte ; la conclusion de
+   l'analyse, qui les récapitule, ne devient pas à son tour une leçon de
+   prolongement : chez Montaigne, la conclusion convertie telle quelle
+   (« conjonction », « regarde », « féconde ») redisait en réponses vagues
+   ce que les extraits avaient déjà fait apprendre, et l'utilisateur l'a
+   supprimée.
 5. **Le dire dans le compte rendu** (§ 10) : l'unité repose sur ma propre
    analyse, avec les sources consultées (notebook, édition, recherches) et
    les points d'interprétation où une autre lecture était possible.
@@ -469,8 +499,9 @@ Pour toute l'unité, vérifier :
 - [ ] pas d'italique dans un gras, pas de tiret cadratin hors citation ;
 - [ ] sans commentaire : l'analyse écrite avant la première leçon, et ce
       qui ne sort pas du texte vérifié ou signalé ; les renvois cités dans
-      la traduction de l'unité, d'après son édition ; aucune leçon d'enjeux
-      généraux sans ancrage ;
+      la traduction de l'unité, d'après son édition ; des portées choisies
+      pour ce texte, placées à l'extrait qui les porte, sans leçon qui les
+      récapitule ;
 - [ ] `version:` du cours incrémentée.
 
 ## 10. Terminer
