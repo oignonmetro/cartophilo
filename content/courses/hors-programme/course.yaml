@@ -17,7 +17,7 @@ tagline: "Sujet libre : tout peut tomber."
 status: available
 default: true
 layout: library
-version: 66
+version: 67
 
 tracks:
   - id: morale
@@ -89,7 +89,14 @@ tracks:
     kind: grammar
     color: blue
     icon: magnify
-    units: [pascal-les-deux-infinis-2, kant-le-courage-de-savoir, platon-connaissance]
+    units:
+      - pascal-les-deux-infinis-2
+      - kant-le-courage-de-savoir
+      - kant-sciences-conditions
+      - kant-sciences-premiers-principes
+      - kant-sciences-lois
+      - kant-sciences-vivant
+      - platon-connaissance
 
   - id: reperages
     title: Repérages

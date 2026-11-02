@@ -1,0 +1,509 @@
+# Cours tiré de l'article « Kant's Philosophy of Science » (Stanford
+# Encyclopedia of Philosophy, 2003, révision 2023), sections 2.2 à 2.5 :
+# les quatre chapitres des Premiers principes métaphysiques de la science
+# de la nature (1786). Les citations de Kant sont la traduction française
+# de la traduction anglaise de l'article, avec ses repères de l'édition de
+# l'Académie (volume:page).
+#
+# Points laissés de côté : la bibliographie des commentateurs de chaque
+# chapitre (Pollok, Warren, Carrier, etc.) ; la preuve détaillée de la
+# proposition 8 de la Dynamique (cohésion), que l'article n'effleure que par
+# une « suggestion préliminaire » ; les raisons pour lesquelles chaque
+# mouvement de la Phénoménologie reçoit sa modalité, que l'article ne donne
+# pas.
+
+id: kant-sciences-premiers-principes
+title: "Les quatre chapitres des Premiers principes"
+subtitle: "Phoronomie, Dynamique, Mécanique, Phénoménologie (1786)"
+icon: bulb
+color: blue
+group: "Kant : la philosophie des sciences"
+intro: |-
+  Les *Premiers principes métaphysiques de la science de la nature* sont l'application
+  de la métaphysique critique à la matière : la partie pure de la physique. Chaque
+  chapitre ajoute une détermination au concept de matière, dans l'ordre des catégories.
+lessons:
+- id: ks2-l1
+  title: "Phoronomie : composer deux mouvements"
+  notes: |-
+    La Phoronomie, premier chapitre, répond à la catégorie de la **quantité** : comment
+    représenter *a priori* dans l'intuition la quantité du mouvement de la matière, de
+    manière à obtenir les règles nécessaires à l'expérience de la matière en mouvement ?
+    **Elle établit une règle unique : la composition de deux mouvements.**
+
+    **La matière réduite à un point.** Ni l'étendue ni l'impénétrabilité n'interviennent
+    dans la façon dont des grandeurs (ou des degrés) de mouvement se représentent. Kant
+    traite donc ici la matière comme un {violet}point{/violet}, dont le mouvement dans
+    l'espace se représente aisément. La seule question est de représenter la composition de
+    deux mouvements différents d'un même point.
+
+    **Le principe : la relativité de l'espace.** Tout mouvement peut être regardé à volonté
+    comme le mouvement d'un corps dans un espace en repos, ou comme le repos d'un corps dans
+    un espace qui se meut en sens contraire à la même vitesse. De là le théorème :
+    {teal}« la composition de deux mouvements d'un seul et même point ne peut être pensée
+    que de telle manière que l'un soit représenté dans l'espace absolu et que, à la place
+    de l'autre, soit représenté un mouvement de l'espace relatif de même vitesse et de sens
+    opposé »{/teal} (4:490).
+
+    **La preuve** examine les trois cas possibles de composition :
+    - les deux mouvements ont {green}la même direction{/green} ;
+    - ils ont des {green}directions opposées{/green} ;
+    - ils {green}forment un angle{/green}.
+    Dans chaque cas Kant construit *a priori* dans l'intuition un mouvement unique à partir
+    des deux. Le résultat, synthétique *a priori*, recouvre deux résultats fondamentaux de
+    la physique classique : la {violet}règle du parallélogramme{/violet} (addition des
+    vitesses) et les {violet}transformations galiléennes{/violet} de la cinématique.
+
+    **À quoi sert le théorème.** Il sert de prémisse dans la Dynamique, pour inférer *a
+    priori* des forces à partir des mouvements composés qu'elles causent (4:497), et dans
+    la Mécanique, quand Kant « construit la communication du mouvement », c'est-à-dire
+    déduit les lois du choc (4:546). Dans la lecture de Friedman, l'idée directrice est que
+    les catégories de la quantité de la première *Critique* garantissent que le mouvement
+    est une grandeur, donc que la mathématique s'applique au mouvement des corps sous forme
+    de cinématique.
+
+    ! L'espace absolu n'est pas ici affirmé comme une réalité : il sert à représenter la
+    composition. La Phénoménologie dira ce qu'il est (voir plus bas).
+  points:
+  - id: ks2-l1-p1
+    sentence: "Le premier chapitre des *Premiers principes*, qui représente *a priori* la quantité du mouvement de la matière, est la ___."
+    answer: "Phoronomie"
+    alt: ["phoronomie"]
+  - id: ks2-l1-p2
+    sentence: "Comme l'étendue et l'impénétrabilité n'interviennent pas dans la représentation des grandeurs de mouvement, la Phoronomie traite la matière comme un simple ___."
+    answer: "point"
+    alt: []
+  - id: ks2-l1-p3
+    sentence: "Tout mouvement peut être vu soit comme celui d'un corps dans un espace en repos, soit comme le repos d'un corps dans un espace qui se meut en sens contraire à la même vitesse : c'est la ___ de l'espace, sur laquelle repose la Phoronomie."
+    answer: "relativité"
+    alt: []
+  - id: ks2-l1-p4
+    sentence: "Dans le théorème de la Phoronomie, Kant affirme que la composition de deux mouvements d'un seul et même point ne peut être pensée que si l'un est représenté dans l'espace ___, et si, à la place de l'autre, on représente un mouvement de l'espace relatif de même vitesse et de sens opposé."
+    answer: "absolu"
+    alt: []
+  - id: ks2-l1-p5
+    sentence: "Pour prouver le théorème de la Phoronomie, Kant examine trois cas de composition de deux mouvements : même direction, directions opposées, et mouvements qui forment un ___."
+    answer: "angle"
+    alt: ["un angle"]
+  - id: ks2-l1-p6
+    sentence: "Le théorème de composition des mouvements recouvre deux résultats de la physique classique : la règle du parallélogramme pour l'addition des vitesses et les transformations ___."
+    answer: "galiléennes"
+    alt: ["de Galilée", "galiléenne"]
+  - id: ks2-l1-p7
+    sentence: "Dans la Mécanique, Kant s'appuie sur le théorème de composition des mouvements pour « construire la communication du mouvement », c'est-à-dire pour dériver les lois du ___."
+    answer: "choc"
+    alt: ["choc des corps"]
+  - id: ks2-l1-p8
+    sentence: "Dans la lecture de Friedman, les catégories de la quantité de la première *Critique* garantissent que le mouvement est une grandeur, d'où la possibilité d'appliquer la mathématique aux mouvements des corps sous forme de ___."
+    answer: "cinématique"
+    alt: []
+- id: ks2-l2
+  title: "Dynamique (1) : les forces répulsives"
+  notes: |-
+    La Dynamique, deuxième chapitre, répond à la catégorie de la **qualité** : comment est-il
+    possible d'expérimenter la matière comme remplissant une région déterminée de l'espace ?
+    Ses quatre premières propositions établissent la nature et la nécessité des **forces
+    répulsives**, et en tirent une conséquence capitale : la matière est divisible à l'infini.
+
+    **Proposition 1 : remplir l'espace exige une force répulsive.** Une matière qui occupe
+    un espace ne se contente pas d'y être : elle résiste à toute autre matière qui voudrait
+    y entrer. On pourrait croire que la {violet}solidité{/violet} explique cette résistance,
+    et c'est la thèse de {red}Lambert et d'autres{/red}, pour qui la matière la posséderait
+    « par sa seule existence » (4:497). Kant répond que ce n'est pas une explication :
+    dire que la matière résiste parce qu'elle est solide revient à nommer la résistance,
+    non à en rendre compte. Pour qu'une matière en repousse une autre, il faut qu'elle
+    **agisse** sur elle, donc qu'elle ait une force. Si l'on presse la main sur une table,
+    ce n'est pas la simple présence de la table qui nous arrête : c'est qu'elle repousse,
+    d'autant plus que nous pressons.
+
+    **Propositions 2 et 3 : les propriétés de cette force.**
+    - elle admet des {green}degrés à l'infini{/green}, puisqu'on peut toujours penser une
+      force un peu plus grande ou un peu plus petite ;
+    - la matière peut donc être {green}comprimée à l'infini{/green}, mais jamais
+      {red}pénétrée{/red}, car la pénétrer exigerait une force compressive infinie,
+      impossible.
+
+    **Proposition 4 : la matière est infiniment divisible** (4:503). Chaque espace est
+    rempli par une force répulsive ; si l'on partage l'espace, on partage la matière.
+    C'est un revirement sur la *Monadologie physique* de 1756, où Kant admettait forces
+    attractives et répulsives mais refusait l'infinie divisibilité à ce qui constitue en
+    dernier la matière : les monades ou points physiques. Le tournant critique l'explique en
+    partie : puisque l'espace et la divisibilité ne sont que des phénomènes (seconde
+    Antinomie de la *Critique de la raison pure*), on peut rejeter l'idée que les substances
+    simples précèdent les touts qu'elles composent (4:506).
+
+    ! La preuve de la proposition 4 suppose plus que l'existence d'une force répulsive en
+    chaque espace rempli : elle suppose que tout espace se divise en espaces plus petits,
+    remplis par des forces répulsives différentes.
+  points:
+  - id: ks2-l2-p1
+    sentence: "Dans la Dynamique, Kant montre que, pour que la matière remplisse un espace, il faut qu'elle exerce une force ___, par laquelle elle résiste à toute autre matière qui voudrait y pénétrer."
+    answer: "répulsive"
+    alt: ["de répulsion", "répulsion"]
+  - id: ks2-l2-p2
+    sentence: "Kant refuse d'expliquer la résistance de la matière par la solidité conçue comme une propriété que la matière posséderait par sa seule existence : cette thèse est celle de ___ et d'autres."
+    answer: "Lambert"
+    alt: []
+  - id: ks2-l2-p3
+    sentence: "Selon Lambert et d'autres, la solidité est la propriété que posséderait la matière « par sa seule ___ » (4:497), ce que Kant juge incapable d'expliquer comment une matière résiste à la pénétration d'une autre."
+    answer: "existence"
+    alt: []
+  - id: ks2-l2-p4
+    sentence: "Les forces répulsives admettent des degrés à l'infini, car on peut toujours penser une force un peu plus grande ou un peu plus petite ; la matière peut donc être comprimée à l'infini mais jamais pénétrée, puisque cela exigerait une force compressive ___."
+    answer: "infinie"
+    alt: []
+  - id: ks2-l2-p5
+    sentence: "L'infinie divisibilité de la matière est établie dans la proposition ___ de la Dynamique, comme conséquence de la nature des forces répulsives."
+    answer: "4"
+    alt: ["quatre", "la proposition 4", "4:503"]
+  - id: ks2-l2-p6
+    sentence: "En admettant l'infinie divisibilité de la matière, Kant rompt avec sa *Monadologie physique*, où il la refusait à ce qui constitue en dernier la matière, à savoir les points physiques ou ___."
+    answer: "monades"
+    alt: ["les monades"]
+  - id: ks2-l2-p7
+    sentence: "Ce revirement tient en partie au tournant critique, et en particulier à la seconde ___ de la *Critique de la raison pure* : l'espace et la divisibilité ne sont que des phénomènes."
+    answer: "Antinomie"
+    alt: ["antinomie"]
+  - id: ks2-l2-p8
+    sentence: "Une fois admis que l'espace et la divisibilité ne sont que des phénomènes, Kant peut rejeter l'idée, qui rendait nécessaire l'existence de substances simples, que celles-ci précèdent les ___ qu'elles composent (4:506)."
+    answer: "touts"
+    alt: ["tout", "tous", "ensembles"]
+- id: ks2-l3
+  title: "Dynamique (2) : l'attraction, l'action à distance et deux manières d'expliquer"
+  notes: |-
+    Après la répulsion, les propositions 5 à 8 établissent l'**attraction** : **la matière
+    n'est possible que par l'équilibre de deux forces fondamentales**. La Remarque générale
+    en tire une conséquence sur la manière de faire de la physique.
+
+    **Un argument d'équilibre** (propositions 5 et 6). C'est une preuve d'existence pour un
+    type de force : on part d'un fait universel stable, ici la constance de la densité de
+    la matière, et d'une force dont l'existence est déjà prouvée, la répulsion originelle
+    (proposition 4). On montre que cette stabilité serait impossible sans une seconde force
+    qui équilibre la première.
+    - {red}Seulement des forces répulsives{/red} : la matière « se disperserait à l'infini »
+      (4:508), car ni l'espace ni une autre matière ne pourraient la limiter ;
+    - {red}Seulement des forces attractives{/red} : rien ne contrebalancerait l'attraction
+      exercée, et l'univers s'effondrerait en un seul point ;
+    - {green}conclusion{/green} : attraction et répulsion sont toutes deux essentielles à la
+      matière.
+
+    **L'action à distance** (proposition 7). L'attraction est l'action immédiate de la
+    matière sur la matière à travers l'espace vide, donc à distance. Kant affronte ainsi la
+    question métaphysique que Newton évitait en posant l'attraction de façon seulement
+    mathématique : Newton « fait abstraction de toute hypothèse » sur la cause de
+    l'attraction universelle, car cette question est « physique ou métaphysique, mais non
+    mathématique » (4:515). L'objection la plus courante est « qu'une matière ne peut agir
+    immédiatement là où elle n'est pas » (4:513). Kant répond que **l'action à distance
+    n'est pas plus problématique que l'action par contact** (choc ou pression), puisque dans
+    les deux cas un corps agit en dehors de lui-même. La proposition 8 conclut que les
+    forces attractives agissent immédiatement à l'infini, et suggère comment construire la
+    **cohésion**, c'est-à-dire l'attraction limitée au contact.
+
+    **Deux manières d'expliquer** (Remarque générale). Comment ramener les espèces de
+    matière (l'eau et le mercure, par exemple) aux forces fondamentales ? Kant oppose deux
+    modes d'explication.
+
+    | Mode d'explication            | Recourt à                           |
+    | mathématico-mécanique         | atomes et vide, figures et mouvements |
+    | métaphysico-dynamique         | forces motrices fondamentales        |
+
+    Le premier a un avantage : ses postulats peuvent être représentés, et même « vérifiés »
+    (4:525), mathématiquement, alors que la possibilité des forces fondamentales ne peut
+    jamais être comprise. Mais deux inconvénients l'emportent. Il présuppose
+    l'**impénétrabilité absolue**, donc admet à son fondement un {red}« concept vide »{/red}.
+    Et en renonçant à toute force inhérente à la matière, il laisse à l'imagination plus de
+    liberté que ne le permet la prudence de la philosophie (4:525).
+
+    ! Ne pas lire Kant comme un partisan des atomes : il rejette l'atomisme parce qu'il
+    repose sur un concept vide, non parce qu'il serait invérifiable.
+  points:
+  - id: ks2-l3-p1
+    sentence: "Dans la proposition 5 de la Dynamique, Kant soutient que, s'il n'y avait que des forces répulsives, la matière se disperserait ___, car ni l'espace ni une autre matière ne pourraient la limiter."
+    answer: "à l'infini"
+    alt: ["a l'infini", "jusqu'à l'infini"]
+  - id: ks2-l3-p2
+    sentence: "Dans la proposition 6 de la Dynamique, Kant soutient que, si la matière ne consistait qu'en forces attractives, rien ne contrebalancerait l'attraction exercée et l'univers s'effondrerait en un seul ___."
+    answer: "point"
+    alt: []
+  - id: ks2-l3-p3
+    sentence: "Les propositions 5 et 6 forment ensemble un argument ___, que Kant avait déjà employé dans la *Monadologie physique* : à partir d'un fait universel stable et d'une force dont l'existence est connue, on prouve qu'une seconde force existe pour équilibrer la première."
+    answer: "d'équilibre"
+    alt: ["d'équilibrage"]
+  - id: ks2-l3-p4
+    sentence: "Dans l'argument d'équilibre de Kant, le fait universel dont on part est la constance de la ___ de la matière, et la force dont l'existence est déjà prouvée est la répulsion originelle."
+    answer: "densité"
+    alt: ["densité de masse"]
+  - id: ks2-l3-p5
+    sentence: "Dans la proposition 7 de la Dynamique, Kant définit l'attraction comme l'action immédiate de la matière sur la matière à travers l'espace vide, c'est-à-dire comme une action ___."
+    answer: "à distance"
+    alt: ["a distance"]
+  - id: ks2-l3-p6
+    sentence: "Newton fait abstraction de toute hypothèse sur la cause de l'attraction universelle, car, selon Kant, cette question est « physique ou métaphysique, mais non ___ »."
+    answer: "mathématique"
+    alt: []
+  - id: ks2-l3-p7
+    sentence: "À l'objection qu'une matière ne peut agir immédiatement là où elle n'est pas, Kant répond que l'action à distance n'est pas plus problématique que l'action par ___ (choc ou pression), puisque dans les deux cas un corps agit en dehors de lui-même."
+    answer: "contact"
+    alt: []
+  - id: ks2-l3-p8
+    sentence: "À la fin de la proposition 8, Kant esquisse la construction du concept de ___, qu'il comprend comme une attraction restreinte au contact."
+    answer: "cohésion"
+    alt: []
+  - id: ks2-l3-p9
+    sentence: "Le mode d'explication qui postule des atomes et du vide, et n'emploie que les figures et les mouvements de particules fondamentales, est appelé par Kant le mode « mathématico-___ »."
+    answer: "mécanique"
+    alt: []
+  - id: ks2-l3-p10
+    sentence: "Le mode d'explication qui recourt à des forces motrices fondamentales, comme l'attraction et la répulsion, est appelé par Kant le mode « métaphysico-___ »."
+    answer: "dynamique"
+    alt: []
+  - id: ks2-l3-p11
+    sentence: "Kant reproche au mode d'explication mathématico-mécanique de présupposer l'___ absolue, et donc d'accepter à son fondement un « concept vide »."
+    answer: "impénétrabilité"
+    alt: ["impénétrabilité absolue"]
+- id: ks2-l4
+  title: "Mécanique (1) : la quantité de matière et sa conservation"
+  notes: |-
+    La Mécanique, troisième chapitre, répond à la catégorie de la **relation** : comment
+    expérimenter la matière comme dotée d'une force motrice, c'est-à-dire comme
+    communiquant son mouvement à une autre ? Elle commence par préciser comment estimer la
+    quantité de matière (proposition 1), puis énonce trois lois (propositions 2 à 4). **Cette
+    leçon traite la mesure de la quantité de matière et la première loi.**
+
+    **Proposition 1 : mesurer la quantité de matière.** Kant définit la quantité de matière
+    comme l'agrégat du {violet}mobile{/violet} dans un espace déterminé, et la quantité de
+    mouvement (en termes actuels, l'impulsion i = mv). Il soutient que la quantité de
+    matière, comparée à toute autre, ne peut s'estimer que par la quantité de mouvement à
+    vitesse donnée (4:537). La preuve procède par élimination :
+    - {red}compter les parties{/red} : impossible, puisque la Dynamique a établi que toute
+      matière est infiniment divisible ;
+    - {red}considérer le volume{/red} : impossible, puisque des matières différentes ont des
+      densités spécifiques différentes ;
+    - {green}reste{/green} la seule manière universellement applicable : tenir la vitesse
+      constante et comparer les quantités de mouvement.
+
+    **Proposition 2, première loi : la quantité totale de matière reste la même dans tous les
+    changements de la matière** (4:541). La preuve repose sur le principe de la **première
+    Analogie de l'expérience** (aucune substance ne naît ni ne périt dans le changement) et
+    sur l'identification de ce qui, dans la matière, doit être substantiel : Kant tient pour
+    acquis que le sujet ultime de tous les accidents est le mobile dans l'espace, dont la
+    quantité est l'agrégat.
+
+    **Pourquoi la matière ne peut pas s'évanouir par degrés.** Dans sa remarque, Kant
+    souligne une différence essentielle entre substances spatiales et non spatiales : les
+    secondes peuvent s'effacer par degrés (il cite la conscience), non les premières. La
+    quantité de matière est une pluralité de choses réelles extérieures les unes aux autres :
+    elle ne peut diminuer que par **division**, jamais par évanouissement.
+
+    ! La conservation de la matière n'est pas ici une loi empirique : c'est la première
+    Analogie de l'expérience appliquée à la matière.
+  points:
+  - id: ks2-l4-p1
+    sentence: "Dans la proposition 1 de la Mécanique, Kant soutient que la quantité de matière, comparée à toute autre, ne peut être estimée que par la quantité de ___ à une vitesse donnée."
+    answer: "mouvement"
+    alt: []
+  - id: ks2-l4-p2
+    sentence: "Kant définit la quantité de matière comme l'agrégat du ___ dans un espace déterminé."
+    answer: "mobile"
+    alt: ["mouvant", "mobile (movable)"]
+  - id: ks2-l4-p3
+    sentence: "On ne peut estimer la quantité de matière en comptant ses parties, car, la Dynamique l'a établi, toute matière est ___."
+    answer: "infiniment divisible"
+    alt: ["divisible à l'infini", "divisible a l'infini"]
+  - id: ks2-l4-p4
+    sentence: "On ne peut non plus estimer la quantité de matière par le seul volume, car des matières différentes ont des ___ spécifiques différentes."
+    answer: "densités"
+    alt: ["densité", "densités spécifiques"]
+  - id: ks2-l4-p5
+    sentence: "La première loi de la Mécanique, énoncée dans la proposition 2, pose que la quantité totale de ___ demeure la même dans tous les changements de la matière."
+    answer: "matière"
+    alt: []
+  - id: ks2-l4-p6
+    sentence: "Pour prouver la première loi de la Mécanique, Kant s'appuie sur la première Analogie de l'expérience, selon laquelle aucune ___ ne naît ni ne périt dans les changements de la nature."
+    answer: "substance"
+    alt: []
+  - id: ks2-l4-p7
+    sentence: "À la différence d'une substance non spatiale comme la ___, qui pourrait s'évanouir par degrés, la quantité de matière ne peut diminuer que par division."
+    answer: "conscience"
+    alt: []
+- id: ks2-l5
+  title: "Mécanique (2) : l'inertie, la vie et l'égalité de l'action et de la réaction"
+  notes: |-
+    Les deuxième et troisième lois de la Mécanique complètent la première. **Elles font de
+    l'inertie l'absence de vie, et de l'action mutuelle une réaction égale.**
+
+    **Deuxième loi (proposition 3) : tout changement de la matière a une cause externe.**
+    La preuve repose sur la **deuxième Analogie de l'expérience** (tout changement arrive
+    selon la loi de la cause et de l'effet), et sur l'hypothèse supplémentaire que la
+    matière n'a **aucun principe interne de détermination**, comme la pensée ou le désir,
+    mais seulement des relations externes dans l'espace. Kant ajoute entre parenthèses une
+    version de la loi d'inertie plus proche de Newton : tout corps persiste dans son état de
+    repos ou de mouvement, avec la même direction et la même vitesse, s'il n'est pas contraint
+    par une cause externe de quitter cet état (4:543). Comme la deuxième loi n'est pas
+    identique à la loi newtonienne d'inertie, il faudrait de l'argumentation pour montrer
+    que la première entraîne la seconde, et au moyen de quelles hypothèses additionnelles.
+
+    **L'inertie, c'est l'absence de vie.** La remarque oppose l'inertie à la **vie**, capacité
+    d'une substance de se déterminer à agir à partir d'un principe interne. L'inertie ne
+    désigne donc pas « une tendance positive à conserver son état » (4:544), mais ce que le
+    corps ne fait pas : son manque de vie. C'est pourquoi la science de la nature en dépend :
+    la nier serait l'{red}hylozoïsme{/red}, « la mort de toute philosophie de la nature »
+    (4:544). Le raisonnement est le suivant. Si la matière pouvait changer d'état d'elle-même,
+    comme un vivant, aucune cause extérieure ne permettrait plus de prévoir ses états, et la
+    physique serait impossible.
+
+    **Bannir la « force d'inertie ».** Kant demande que la terminologie de la *vis inertiae*
+    soit « entièrement bannie » de la science de la nature (4:550) : elle contient une
+    contradiction dans les termes, elle risque de confondre la loi d'inertie (l'absence de
+    vie) avec la loi de la réaction dans toute communication de mouvement, et elle entretient
+    l'idée fausse de ceux qui connaissent mal les lois mécaniques. Si l'inertie était une
+    résistance active, un corps en mouvement qui en frappe un au repos devrait employer
+    une part de son mouvement à vaincre cette résistance, et pourrait n'avoir plus rien de
+    reste pour le mettre en mouvement, ce que contredit l'expérience.
+
+    **Troisième loi (proposition 4) : l'action est égale à la réaction.** Kant en donne une
+    version de la **troisième Analogie de l'expérience** (toute action externe dans le monde
+    est interaction) et pense que l'enjeu de la mécanique est d'établir que l'action mutuelle
+    est nécessairement réaction.
+    - tout changement de la matière est un changement de mouvement ;
+    - tout changement de mouvement est réciproque et égal, car un corps ne peut se rapprocher
+      d'un autre sans que le second se rapproche du premier, d'exactement autant ;
+    - tout changement de la matière a une cause externe (deuxième loi) ;
+    - donc la cause du changement de mouvement du premier corps entraîne une cause égale et
+      opposée du changement de mouvement du second : {green}l'action est égale à la
+      réaction{/green}.
+  points:
+  - id: ks2-l5-p1
+    sentence: "La deuxième loi de la Mécanique, énoncée dans la proposition 3, pose que tout changement de la matière a une cause ___."
+    answer: "externe"
+    alt: ["extérieure"]
+  - id: ks2-l5-p2
+    sentence: "Pour prouver la deuxième loi de la Mécanique, Kant s'appuie sur la deuxième Analogie de l'expérience, selon laquelle tout changement arrive suivant la loi de la cause et de l'effet, c'est-à-dire sur le principe de ___."
+    answer: "causalité"
+    alt: []
+  - id: ks2-l5-p3
+    sentence: "La preuve de la deuxième loi suppose en outre que la matière n'a aucun principe interne de détermination, comme la ___ ou le désir, mais seulement des relations externes dans l'espace."
+    answer: "pensée"
+    alt: ["le penser"]
+  - id: ks2-l5-p4
+    sentence: "Dans sa remarque, Kant oppose l'inertie à la vie, c'est-à-dire à la capacité d'une substance de se déterminer à agir à partir d'un principe ___."
+    answer: "interne"
+    alt: []
+  - id: ks2-l5-p5
+    sentence: "L'inertie ne désigne pas, selon Kant, un effort positif de conserver son état : elle désigne ce que le corps ne fait pas, à savoir son ___."
+    answer: "absence de vie"
+    alt: ["manque de vie", "inanimation"]
+  - id: ks2-l5-p6
+    sentence: "Rejeter la loi d'inertie reviendrait à admettre l'___, doctrine selon laquelle la matière serait vivante en elle-même."
+    answer: "hylozoïsme"
+    alt: ["hylozoisme"]
+  - id: ks2-l5-p7
+    sentence: "Kant juge que l'hylozoïsme serait « la ___ de toute philosophie de la nature »."
+    answer: "mort"
+    alt: []
+  - id: ks2-l5-p8
+    sentence: "Kant demande que l'expression « force d'___ » (*vis inertiae*) soit entièrement bannie de la science de la nature, notamment parce qu'elle contient une contradiction dans les termes."
+    answer: "inertie"
+    alt: []
+  - id: ks2-l5-p9
+    sentence: "Si l'inertie était une résistance active, un corps en mouvement qui en frappe un au repos devrait employer une part de son mouvement à vaincre cette résistance et pourrait n'avoir plus de mouvement pour mettre l'autre en marche. Cela contredit l'expérience, et Kant rejette donc la notion de force d'___."
+    answer: "inertie"
+    alt: []
+  - id: ks2-l5-p10
+    sentence: "Dans la troisième loi de la Mécanique, Kant pose l'égalité de l'action et de la ___ dans la communication du mouvement."
+    answer: "réaction"
+    alt: []
+  - id: ks2-l5-p11
+    sentence: "Pour prouver la troisième loi, Kant s'appuie sur la troisième Analogie de l'expérience, selon laquelle toute action externe dans le monde est ___."
+    answer: "interaction"
+    alt: ["une interaction", "action réciproque"]
+  - id: ks2-l5-p12
+    sentence: "Tout changement de la matière est un changement de mouvement, et tout changement de mouvement est réciproque et égal, car un corps ne peut se rapprocher d'un autre sans que le second se rapproche du premier d'autant. Comme tout changement a une cause externe, la cause du changement de mouvement de l'un entraîne une cause égale et opposée du changement de l'autre : l'action est égale à la ___."
+    answer: "réaction"
+    alt: []
+- id: ks2-l6
+  title: "Phénoménologie : mouvement possible, réel, nécessaire, et l'espace absolu"
+  notes: |-
+    Le dernier chapitre répond à la catégorie de la **modalité** : à quelles conditions
+    peut-on juger légitimement qu'un corps se meut possiblement, réellement ou
+    nécessairement ? **Il distribue les modalités entre trois sortes de mouvement, puis
+    ramène l'espace absolu, présupposé par tout le livre, au statut d'idée de la raison.**
+
+    **Trois propositions**, qui s'accordent selon Kant avec les résultats des trois chapitres
+    précédents :
+    - le mouvement {green}rectiligne{/green} est un prédicat simplement {violet}possible{/violet}
+      de la matière ;
+    - le mouvement {green}circulaire{/green} en est un prédicat {violet}réel{/violet} ;
+    - le mouvement {green}égal et opposé{/green} d'une matière par rapport à une autre en est
+      un prédicat {violet}nécessaire{/violet}.
+
+    **L'espace absolu, une idée de la raison.** Ces mouvements possibles, réels et nécessaires
+    présupposent l'espace absolu. Or celui-ci n'est pas lui-même un objet d'expérience : il
+    faut donc le représenter par une **idée de la raison**, au sens technique de Kant, un
+    concept auquel aucun objet correspondant ne peut jamais être donné en intuition. Nous ne
+    pouvons jamais connaître l'espace absolu, mais il fonctionne comme un **principe
+    régulateur** de notre pratique scientifique : il nous force à chercher, pour les objets
+    conditionnés de l'expérience, des conditions ultérieures. Cette fonction des idées de la
+    raison est développée dans l'Appendice à la Dialectique transcendantale de la première
+    *Critique*.
+
+    **Une lecture constitutive (Friedman).** Kant rejette l'espace et le temps absolus de
+    Newton ; il doit donc rendre compte du **vrai mouvement** (le changement de vrai lieu au
+    cours du temps) que la mécanique classique présuppose. Dans la lecture de Friedman (1992),
+    Kant tient les lois du mouvement pour **constitutives** du cadre spatio-temporel de la
+    théorie newtonienne, d'où leur caractère *a priori* : les vrais mouvements sont ceux
+    qui obéissent aux lois dynamiques. Pour leur donner un sens objectif, il faut les mesurer,
+    et Kant les ferait valoir dans un référentiel privilégié : le référentiel du **centre de
+    masse** du système du monde, que celui de notre système solaire approche très bien.
+    Encore faut-il le localiser. Si l'on sait *a priori* que tous les corps du système
+    solaire s'attirent, on peut déduire leurs masses de leurs accélérations mutuelles, donc
+    situer le centre de masse : c'est pourquoi la loi de la **gravitation universelle** doit
+    compter comme *a priori*. Mais ce référentiel n'est qu'approximativement inertiel : la
+    recherche doit viser des approximations de plus en plus fines, et l'espace absolu de Kant
+    est justement le concept qui oriente cette recherche. Friedman a depuis corrigé sa thèse
+    (2013) : ce sont les **lois de la mécanique de Kant**, non les trois lois de Newton, qui
+    définissent le référentiel privilégié.
+
+    ! L'espace absolu de Kant n'est pas celui de Newton : c'est une idée régulatrice, non une
+    réalité que l'on pourrait connaître.
+  points:
+  - id: ks2-l6-p1
+    sentence: "Dans la Phénoménologie, Kant établit que le mouvement rectiligne d'une matière est un prédicat simplement ___ de cette matière."
+    answer: "possible"
+    alt: []
+  - id: ks2-l6-p2
+    sentence: "Dans la Phénoménologie, Kant établit que le mouvement circulaire d'une matière est un prédicat ___ de cette matière."
+    answer: "réel"
+    alt: ["actuel"]
+  - id: ks2-l6-p3
+    sentence: "Dans la Phénoménologie, Kant établit que le mouvement égal et opposé d'une matière par rapport à une autre est un prédicat ___ de cette matière."
+    answer: "nécessaire"
+    alt: []
+  - id: ks2-l6-p4
+    sentence: "L'espace absolu n'étant pas lui-même un objet d'expérience, Kant le représente, dans la Remarque générale de la Phénoménologie, par une ___ de la raison, c'est-à-dire un concept auquel aucun objet ne peut jamais être donné en intuition."
+    answer: "idée"
+    alt: []
+  - id: ks2-l6-p5
+    sentence: "Sans pouvoir être connu, l'espace absolu fonctionne comme un principe ___ qui guide la pratique scientifique en nous forçant à chercher de nouvelles conditions pour les objets conditionnés de l'expérience."
+    answer: "régulateur"
+    alt: ["régulatif", "regulateur"]
+  - id: ks2-l6-p6
+    sentence: "Kant développe la fonction régulatrice des idées de la raison dans l'Appendice à la ___ transcendantale de la *Critique de la raison pure*."
+    answer: "Dialectique"
+    alt: ["dialectique"]
+  - id: ks2-l6-p7
+    sentence: "Dans la lecture de Friedman (1992), Kant tient les lois du mouvement pour ___ du cadre spatio-temporel de la théorie newtonienne, ce qui les rend *a priori*."
+    answer: "constitutives"
+    alt: ["constitutif", "définitoires"]
+  - id: ks2-l6-p8
+    sentence: "Dans la lecture de Friedman, les vrais mouvements des corps sont ceux qu'on mesure dans un référentiel privilégié : le référentiel du centre de ___ du système du monde, que celui du système solaire approche très bien."
+    answer: "masse"
+    alt: ["masses"]
+  - id: ks2-l6-p9
+    sentence: "Pour localiser le référentiel du centre de masse du système solaire, il faut, dans la lecture de Friedman, que la loi de la gravitation ___ soit connue *a priori* : on déduit alors les masses des accélérations mutuelles des corps."
+    answer: "universelle"
+    alt: []
+  - id: ks2-l6-p10
+    sentence: "Dans la version de 2013 de sa lecture, Friedman soutient que ce sont les lois de la ___ de Kant, et non les trois lois de Newton, qui définissent le référentiel privilégié par rapport auquel les corps ont des mouvements vrais."
+    answer: "mécanique"
+    alt: []

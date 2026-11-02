@@ -1,0 +1,525 @@
+# Cours tiré de l'article « Kant's Philosophy of Science » (Stanford
+# Encyclopedia of Philosophy, 2003, révision 2023), sections 5 à 8 : la
+# biologie, la chimie, la psychologie, puis l'histoire, la géographie
+# physique et l'anthropologie. Les citations de Kant sont la traduction
+# française de la traduction anglaise de l'article, avec ses repères de
+# l'édition de l'Académie (volume:page ; CJ = Critique de la faculté de
+# juger).
+#
+# Points laissés de côté : le renvoi de l'article à l'entrée « Kant's
+# Aesthetics and Teleology » pour une présentation plus détaillée de la
+# biologie ; les références bibliographiques (Allison, Cohen, Kreines,
+# Zanetti, etc.) citées sans que la thèse propre de chacun soit
+# différenciée ; l'entrée « philosophie de l'esprit » de Kant.
+
+id: kant-sciences-vivant
+title: "Le vivant et les sciences impropres"
+subtitle: "Biologie, chimie, psychologie, histoire : ce que Kant en fait"
+icon: bulb
+color: blue
+group: "Kant : la philosophie des sciences"
+intro: |-
+  Les *Premiers principes* fixaient un modèle, la physique. Les sciences qui ne le
+  satisfont pas ne sont pas pour autant rejetées : Kant leur cherche un autre statut.
+  L'organisme, surtout, le force à une conclusion paradoxale, qu'il faut juger du vivant
+  comme s'il avait un but alors qu'on ne peut le démontrer.
+lessons:
+- id: ks4-l1
+  title: "L'organisme, fin naturelle : pourquoi il n'est pas une machine"
+  notes: |-
+    Kant ne s'intéresse pas qu'aux corps inanimés : il juge que les **organismes** méritent
+    une enquête philosophique supplémentaire, pour deux raisons. **Cette leçon pose ce qu'est
+    un organisme pour Kant, et en quel sens l'on dit qu'il n'est pas explicable
+    mécaniquement.**
+
+    **Premier trait : la contingence.** La symétrie et la régularité de leur structure et de
+    leur fonctionnement rendent les organismes « au plus haut degré contingents » (5:360) et
+    « mécaniquement inexplicables ».
+
+    **Second trait : l'auto-production.** Un organisme vient de son espèce, fait croître ses
+    propres parties fonctionnelles (les organes), les répare quand elles sont abîmées, et
+    présente en général de l'homéostasie. De là cette formule : l'organisme est
+    {teal}« cause et effet de lui-même »{/teal} (5:370). En un sens, un vivant est auto-causé,
+    d'une causalité que nous ne saisissons que « sous l'idée de fins comme principe » (5:383).
+    Les organismes sont donc des {violet}fins naturelles{/violet} : des ensembles, naturels,
+    de parties ajustées à un but et fonctionnant dans l'unité.
+
+    Ces particularités posent des problèmes que la physique et la chimie ne rencontrent pas.
+    Kant les traite dans la seconde moitié de sa troisième grande œuvre, la *Critique de la
+    faculté de juger* (1790).
+
+    **En quel sens « mécaniquement » ?** À l'époque des Lumières, le mot a deux sens :
+    - {green}large{/green} : l'explication par des lois physico-chimiques de causalité
+      efficiente ;
+    - {green}étroit{/green} : la théorie des {violet}machines composées{/violet}, assemblages
+      de parties mobiles qui déplacent des charges ou transmettent de la quantité de
+      mouvement (moteurs, montres).
+
+    McLaughlin (1990) retient le sens étroit. Dans une machine artificielle, les parties
+    précèdent le tout dans le temps et le déterminent : la configuration résulte d'une somme
+    sur les parties, et les lois de fonctionnement sont celles des parties. Dans un
+    organisme, **le tout précède ses parties** (ses organes) et possède des fonctions et des
+    comportements orientés vers un but qu'elles n'ont pas.
+
+    Ginsborg (2004) distingue deux sens du « mécanique ».
+    - Le {green}premier{/green} : expliquer mécaniquement une chose, c'est montrer que sa
+      production résulte, ou résulterait, des « forces non aidées de la matière comme telle »
+      (les forces newtoniennes d'attraction et de répulsion) appliquées à une matière brute
+      et non organisée, dans des conditions initiales arbitraires. Les organismes y échappent
+      parce que leur apparition serait « au plus haut degré contingente » : c'est le sens
+      opérant dans l'Antinomie du jugement téléologique.
+    - Le {green}second, plus fort{/green} : les symétries, régularités et pouvoirs d'un
+      organisme ne s'expliquent pas non plus par les « forces motrices » de ses particules
+      inorganiques ; les pouvoirs au niveau de l'organisme ne sont pas des sommes vectorielles
+      ou des intégrales de forces physico-chimiques.
+
+    ! « Fin naturelle » ne veut pas dire que la nature agit en vue d'un but : c'est l'idée
+    sous laquelle nous saisissons l'auto-production des organismes.
+  points:
+  - id: ks4-l1-p1
+    sentence: "La symétrie et la régularité de leur structure et de leur fonctionnement rendent les organismes, pour Kant, « au plus haut degré ___ » (5:360) et mécaniquement inexplicables."
+    answer: "contingents"
+    alt: ["contingent"]
+  - id: ks4-l1-p2
+    sentence: "Parce qu'un organisme vient de son espèce, fait croître ses propres organes et les répare quand ils sont abîmés, Kant dit qu'il est « cause et ___ de lui-même » (5:370)."
+    answer: "effet"
+    alt: []
+  - id: ks4-l1-p3
+    sentence: "Kant ajoute que cette causalité de soi ne se saisit que « sous l'idée de ___ comme principe » (5:383)."
+    answer: "fins"
+    alt: ["fin", "buts"]
+  - id: ks4-l1-p4
+    sentence: "Les ensembles naturels de parties ajustées à un but et fonctionnant dans l'unité, que sont les organismes, sont appelés par Kant des « ___ naturelles »."
+    answer: "fins"
+    alt: ["fin", "fin naturelle"]
+  - id: ks4-l1-p5
+    sentence: "Kant traite les défis philosophiques que posent les organismes dans la seconde moitié de sa troisième grande œuvre, la ___ (1790)."
+    answer: "Critique de la faculté de juger"
+    alt: ["Critique de la Faculté de juger", "Critique du jugement"]
+  - id: ks4-l1-p6
+    sentence: "McLaughlin (1990) entend « mécanique » au sens étroit de la théorie des machines ___, assemblages de parties mobiles qui déplacent des charges ou transmettent de la quantité de mouvement."
+    answer: "composées"
+    alt: []
+  - id: ks4-l1-p7
+    sentence: "Dans une machine artificielle, les parties précèdent le tout dans le temps et le déterminent ; dans un organisme, c'est l'inverse : le tout précède ses ___, et possède des fonctions et des comportements orientés vers un but qu'elles n'ont pas."
+    answer: "parties"
+    alt: ["organes"]
+  - id: ks4-l1-p8
+    sentence: "Dans le premier sens que Ginsborg (2004) donne à « mécanique », expliquer mécaniquement une chose consiste à montrer que sa production résulte des forces non aidées de la matière comme telle, appliquées à une matière brute et ___."
+    answer: "non organisée"
+    alt: ["inorganisée", "non-organisée"]
+  - id: ks4-l1-p9
+    sentence: "Dans le second sens, plus fort, que Ginsborg donne à « mécanique », les pouvoirs au niveau de l'organisme ne sont pas des ___ vectorielles ni des intégrales de forces physico-chimiques agissant sur ses particules inorganiques."
+    answer: "sommes"
+    alt: ["somme"]
+- id: ks4-l2
+  title: "L'Antinomie du jugement téléologique"
+  notes: |-
+    Pour Kant, vouloir expliquer les organismes crée un conflit inévitable au sein de la
+    faculté de juger **réfléchissante**, celle qui forme nos concepts empiriques, classe les
+    êtres de la nature et unifie nos lois particulières. **Ce conflit est l'Antinomie du
+    jugement téléologique** (*Critique de la faculté de juger*, §§ 69 à 78 ; 5:385-415). Elle
+    oppose deux principes *régulateurs*, à distinguer de deux principes *constitutifs* que
+    Kant discute au même endroit.
+
+    - {green}Thèse{/green} : {teal}« toute production des choses matérielles et de leurs
+      formes doit être jugée possible suivant des lois simplement mécaniques »{/teal} ;
+    - {green}Antithèse{/green} : {teal}« certains produits de la nature matérielle ne peuvent
+      être jugés possibles suivant des lois simplement mécaniques (les juger exige une tout
+      autre loi de causalité, à savoir celle des causes finales) »{/teal} (5:387).
+
+    Trois questions occupent la recherche : en quel sens les organismes sont-ils
+    mécaniquement inexplicables (leçon précédente) ? **Quelle est exactement la contradiction ?**
+    Comment Kant la résout-il (leçon suivante) ?
+
+    **Quelle contradiction ?** Si thèse et antithèse sont des principes régulateurs, on peut y
+    voir des politiques de recherche, que l'on poursuit séparément, à des moments différents,
+    sans contradiction. Pourquoi sont-elles alors antinomiques ?
+    - {green}Watkins (2009){/green} : les deux principes n'énoncent pas seulement des
+      politiques d'explication : ils expriment des engagements à juger de façon **déterminée**
+      des phénomènes biologiques ; juger les organismes purement mécaniquement et les juger
+      non mécaniquement sont des engagements contradictoires.
+    - {green}Teufel (2011){/green} : les deux principes sont des **impératifs hypothétiques**
+      que la raison pratique impose à la faculté de juger réfléchissante ; ils exigent des
+      conduites cognitives contradictoires (juger que les lois mécaniques suffisent, et juger
+      qu'elles ne suffisent pas).
+
+    **Comment Kant justifie-t-il les deux principes ?** Pour chaque antinomie de la *Critique
+    de la raison pure*, Kant dérive thèse et antithèse par déduction de prémisses *a priori*.
+    Ici il ne procède pas ainsi, ce qui rend pressante la question de leur justification.
+    - Pour la thèse, on pense la déduire des trois lois de la mécanique. Mais celles-ci sont
+      des principes *constitutifs*, la thèse est *régulatrice*. Meilleure piste : les trois
+      lois **contraignent** l'éventail des lois empiriques, biologiques comprises, qu'on peut
+      chercher. Elles sont fondamentales (aucune autre loi de la matière ne les explique ni ne
+      les fonde, et elles doivent expliquer toutes les autres, directement ou non). Pour que des
+      régularités biologiques deviennent de vraies lois, elles doivent s'intégrer au système
+      des lois mécaniques déjà connues, et être expliquées en dernière instance par les trois
+      lois de la mécanique (5:386).
+    - Pour l'antithèse, il n'y a pas de preuve officielle, et l'on ne sait même pas ce que la
+      preuve devrait établir. La thèse suggère fortement qu'il s'agit de l'**origine** des
+      organismes ; l'antithèse concerne la façon de juger leur **possibilité**, c'est-à-dire
+      leur structure et leur fonctionnement, non leur production (Ginsborg 2001). Ce sont deux
+      aspects différents, qui exigeraient deux preuves.
+
+    ! Les thèse et antithèse ne sont pas des affirmations sur la nature en soi : ce sont des
+    maximes pour juger.
+  points:
+  - id: ks4-l2-p1
+    sentence: "Dans la *Critique de la faculté de juger*, l'Antinomie du jugement téléologique occupe les paragraphes 69 à ___."
+    answer: "78"
+    alt: ["§78", "§ 78"]
+  - id: ks4-l2-p2
+    sentence: "L'Antinomie du jugement téléologique est un conflit entre deux principes régulateurs au sein de la faculté de juger ___, celle qui forme nos concepts empiriques et unifie nos lois particulières."
+    answer: "réfléchissante"
+    alt: []
+  - id: ks4-l2-p3
+    sentence: "Selon la thèse de l'Antinomie du jugement téléologique, toute production des choses matérielles et de leurs formes doit être jugée possible suivant des lois simplement ___."
+    answer: "mécaniques"
+    alt: []
+  - id: ks4-l2-p4
+    sentence: "Selon l'antithèse de l'Antinomie du jugement téléologique, certains produits de la nature matérielle ne peuvent être jugés possibles suivant des lois simplement mécaniques : en juger exige une tout autre loi de causalité, celle de la causalité ___."
+    answer: "finale"
+    alt: ["des causes finales", "des fins"]
+  - id: ks4-l2-p5
+    sentence: "Pour Watkins (2009), les deux principes de l'Antinomie du jugement téléologique ne sont pas seulement des politiques d'explication : ils expriment des engagements à juger de façon ___ des phénomènes biologiques, ce qui les rend contradictoires."
+    answer: "déterminée"
+    alt: ["déterminante", "déterminé"]
+  - id: ks4-l2-p6
+    sentence: "Pour Teufel (2011), les deux principes de l'Antinomie du jugement téléologique sont des impératifs ___ que la raison pratique impose à la faculté de juger réfléchissante."
+    answer: "hypothétiques"
+    alt: []
+  - id: ks4-l2-p7
+    sentence: "Les trois lois de la mécanique étant des principes constitutifs et la thèse un principe régulateur, il faut plutôt comprendre que ces lois contraignent les lois biologiques qu'on peut chercher : pour devenir de vraies lois, les régularités biologiques doivent s'intégrer au système des lois ___ déjà connues."
+    answer: "mécaniques"
+    alt: []
+  - id: ks4-l2-p8
+    sentence: "Ginsborg (2001) remarque que la thèse de l'Antinomie du jugement téléologique concerne l'___ des organismes, alors que l'antithèse porte sur la façon de juger leur possibilité, c'est-à-dire leur structure et leur fonctionnement."
+    answer: "origine"
+    alt: ["production"]
+- id: ks4-l3
+  title: "Comment dissoudre l'Antinomie du jugement téléologique ?"
+  notes: |-
+    Dans les deux premières *Critiques*, Kant résout chaque antinomie de la même façon : thèse
+    et antithèse supposent toutes deux le **réalisme transcendantal** (elles parlent de
+    choses en soi), et l'idéalisme transcendantal fournit le point de vue d'où la
+    contradiction se défait. **Il ne fait pas cela pour la téléologie** : les interprètes ont
+    donc dû reconstruire une autre solution en son nom. Cinq pistes, puis la solution de
+    Kant lui-même.
+
+    - {green}L'entendement intuitif{/green} (Quarfood 2004, Förster 2008), exposé en 5:401-410.
+      Nos entendements sont {violet}discursifs{/violet} : ils saisissent les objets par des
+      concepts, comme des « parties » assemblées dans des jugements qui se déroulent dans le
+      temps, donc de manière mécanique. Nous avons besoin du concept de **fin** pour juger les
+      organismes précisément parce que nous avons un entendement discursif. Un entendement
+      intuitif saisirait les organismes sans concepts de fin ni principes régulateurs pour
+      juger téléologiquement : pour lui, thèse et antithèse n'auraient pas à être vraies, et
+      aucune antinomie ne naîtrait.
+    - {green}Deux points de vue complémentaires{/green} (Breitenbach 2008). L'Antinomie est
+      dissoute si l'on note que thèse et antithèse ne sont pas contradictoires, mais
+      complémentaires. La thèse mécaniste règle la conduite explicative de la biologie
+      empirique ; l'antithèse gouverne le jugement ordinaire, préthéorique, sur la nature
+      vivante. Ce sont « deux vues différentes sur la nature », compossibles.
+    - {green}Un domaine par principe{/green} (McLaughlin 1990). L'Antinomie ne naît que sous
+      une hypothèse particulière : que tout dans la nature est objectivement explicable par
+      nous. Si on la rejette, thèse et antithèse peuvent être vraies chacune dans son domaine :
+      la première pour les phénomènes que nous pouvons expliquer, la seconde pour ceux que nous
+      ne pouvons pas expliquer. Mais il n'offre pas de critère général de l'explicabilité par
+      nous, en dehors de l'explicabilité mécanique.
+    - {green}Subordonner le mécanisme à la téléologie{/green} (Ginsborg 2008), à partir de la
+      remarque de Kant en 5:414. Naturalistes et physiologistes peuvent expliquer
+      « mécaniquement » l'origine et le fonctionnement des organismes, par les seules lois
+      physico-chimiques, pourvu qu'ils les appliquent non à une matière « brute » mais à une
+      matière {violet}organisée{/violet}, déjà dotée d'une « pulsion formatrice », disposition
+      générique à croître, à se reproduire et à se maintenir. Or cette matière organisée est
+      elle-même inintelligible sans recours aux termes de fin et de dessein : les biologistes
+      « subordonnent » le mécanisme à la téléologie, et le conflit disparaît.
+
+    **Et Kant ?** Chaque proposition rencontre des difficultés philosophiques (Watkins 2009),
+    et peu s'attachent aux mots de Kant, qui suggèrent fortement une solution qui repose
+    indispensablement sur un {red}« fondement suprasensible »{/red} (5:413), principe explicatif
+    situé dans le monde nouménal. Ce fondement pourrait unir mécanisme et téléologie, puisqu'on
+    pourrait déduire des deux thèses antinomiques de lui. Mais les humains ne peuvent avoir
+    aucune connaissance « positive déterminée » d'un être suprasensible : **l'Antinomie est
+    soluble en principe plutôt que résolue en fait.** Kant ne donne pas, du moins dans sa
+    solution officielle, les détails d'une explication effective du conflit au cœur de
+    l'explication biologique.
+
+    ! Aucune des cinq pistes n'est celle de Kant : ce sont des reconstructions, chacune avec
+    ses difficultés.
+  points:
+  - id: ks4-l3-p1
+    sentence: "Dans les deux premières *Critiques*, Kant montre que thèse et antithèse de chaque antinomie supposent le réalisme transcendantal, et il adopte l'idéalisme ___ comme point de vue d'où la contradiction se défait."
+    answer: "transcendantal"
+    alt: []
+  - id: ks4-l3-p2
+    sentence: "Pour Quarfood (2004) et Förster (2008), la clef de la solution de l'Antinomie du jugement téléologique est la notion d'entendement ___, exposée en 5:401-410."
+    answer: "intuitif"
+    alt: []
+  - id: ks4-l3-p3
+    sentence: "Selon Förster, les entendements comme le nôtre sont ___ : ils saisissent les objets par des concepts, comme des parties assemblées dans des jugements qui se déroulent dans le temps, et donc de manière mécaniste."
+    answer: "discursifs"
+    alt: ["discursif"]
+  - id: ks4-l3-p4
+    sentence: "Selon Förster, nous avons besoin du concept de ___ pour juger les organismes précisément parce que nous avons un entendement discursif ; un entendement intuitif s'en passerait, et aucune antinomie n'en naîtrait."
+    answer: "fin"
+    alt: ["but", "finalité", "fins"]
+  - id: ks4-l3-p5
+    sentence: "Pour Breitenbach (2008), l'Antinomie est dissoute parce que thèse et antithèse ne sont pas contradictoires mais ___ : l'une règle la conduite explicative de la biologie empirique, l'autre le jugement ordinaire sur la nature vivante."
+    answer: "complémentaires"
+    alt: []
+  - id: ks4-l3-p6
+    sentence: "Pour McLaughlin (1990), l'Antinomie ne naît que si l'on suppose que tout dans la nature est objectivement ___ par nous ; on la rejette, et thèse et antithèse deviennent vraies chacune dans son domaine."
+    answer: "explicable"
+    alt: []
+  - id: ks4-l3-p7
+    sentence: "Pour Ginsborg (2008), les naturalistes peuvent expliquer l'origine et le fonctionnement des organismes par les seules lois physico-chimiques, pourvu qu'ils les appliquent non à une matière brute mais à une matière ___, déjà dotée d'une disposition générique à croître, à se reproduire et à se maintenir."
+    answer: "organisée"
+    alt: []
+  - id: ks4-l3-p8
+    sentence: "Pour Ginsborg, à partir d'une remarque de Kant en 5:414, les biologistes subordonnent le ___ à la téléologie, et le conflit entre eux est ainsi levé."
+    answer: "mécanisme"
+    alt: []
+  - id: ks4-l3-p9
+    sentence: "La solution de Kant lui-même, dans ses propres mots, repose indispensablement sur un « fondement ___ » (5:413), principe explicatif situé dans le monde nouménal qui pourrait unir mécanisme et téléologie."
+    answer: "suprasensible"
+    alt: ["supra-sensible"]
+  - id: ks4-l3-p10
+    sentence: "Comme les humains ne peuvent avoir aucune connaissance positive déterminée d'un fondement suprasensible, l'Antinomie du jugement téléologique est soluble ___ plutôt que résolue en fait."
+    answer: "en principe"
+    alt: []
+- id: ks4-l4
+  title: "La chimie : une science rationnelle, mais impropre"
+  notes: |-
+    La chimie illustre la distinction que Kant trace entre deux statuts. **Elle est une
+    science rationnelle, non une science proprement dite, et elle le reste même après
+    Lavoisier.**
+
+    **Deux statuts.**
+    - {green}science « proprement dite »{/green} : toute discipline fortement mathématisée,
+      qui s'appuie sur des lois apodictiques et sur des preuves concluantes. L'exemple type
+      est la théorie newtonienne de la gravitation ;
+    - {green}science « rationnelle »{/green} : un corps de propositions systématique, c'est-à-dire
+      unifié dans l'explication, qui comprend des lois. La chimie en est, pour Kant, l'exemple
+      par excellence. Il a vécu un changement considérable de cette discipline : de la
+      théorie du {violet}phlogistique{/violet} de Stahl à la rénovation par Lavoisier de ses
+      processus fondamentaux et de sa taxinomie des substances.
+
+    **Pourquoi pas une science propre ?** Dans une science proprement dite, les concepts de
+    base correspondent à des notions mathématiques, et le garant de cette correspondance est
+    la **métaphysique**, par exemple grâce à une image de l'essence de la matière : elle
+    fournit les principes de la construction des concepts propres à cette science. Or en
+    chimie, aucun garant métaphysique n'est disponible pour corréler concepts de base et
+    mathématique : quand ces corrélations apparaissent (Kant n'ignore pas que la chimie de
+    son temps a trouvé des faits quantitatifs, comme les proportions des réactifs d'une
+    réaction), elles sont connues *a posteriori*. Conclusion : non seulement la chimie n'est pas
+    une science proprement dite, mais elle n'est pas près de le devenir (4:471).
+
+    **Pourquoi pourtant « rationnelle » ?** Parce qu'elle doit son ordre systématique à des
+    idées de la raison : des concepts artificiels, propres à son domaine, introduits pour
+    unifier descriptivement et explicativement de nombreuses régularités locales établies
+    empiriquement. Par exemple, tous les métaux solides alors connus « calcinent » (chauffés à
+    l'air, ils forment des composés plus lourds), et l'on peut les retirer de ces composés dans
+    les bonnes conditions de laboratoire.
+
+    **Après 1790.** Kant semble adopter la nouvelle taxinomie des substances de Lavoisier et
+    son {violet}calorique{/violet} (ou éther), sorte de « fluide impondérable » doué de
+    propriétés causales relevant de la chaleur, de la combustion et des changements de phase.
+    Mais, comme l'a établi la recherche récente (McNulty 2014, 2015, 2016 ; Blomme 2023),
+    même alors Kant maintient ses exigences d'une science propre : la chimie reste une science
+    rationnelle mais **impropre**.
+
+    ! « Impropre » n'est pas péjoratif : il désigne un autre régime de rigueur, systématique
+    mais non mathématisable.
+  points:
+  - id: ks4-l4-p1
+    sentence: "Kant appelle science « proprement dite » toute discipline fortement mathématisée, qui s'appuie sur des lois ___ et sur des preuves concluantes."
+    answer: "apodictiques"
+    alt: ["apodictique"]
+  - id: ks4-l4-p2
+    sentence: "Kant appelle science « rationnelle » un corps de propositions systématique, c'est-à-dire unifié dans l'explication, qui comprend des ___ ; la chimie en est son exemple par excellence."
+    answer: "lois"
+    alt: []
+  - id: ks4-l4-p3
+    sentence: "Kant a vécu en chimie le passage de la théorie du ___ de Georg Stahl à la rénovation de la discipline par Lavoisier."
+    answer: "phlogistique"
+    alt: ["phlogiston"]
+  - id: ks4-l4-p4
+    sentence: "Dans une science proprement dite, la correspondance entre les concepts de base et les notions mathématiques est garantie par la ___, qui fournit les principes de construction des concepts propres à cette science."
+    answer: "métaphysique"
+    alt: []
+  - id: ks4-l4-p5
+    sentence: "Aucun garant métaphysique ne permettant de corréler les concepts de base de la chimie avec la mathématique, les corrélations qu'on y trouve ne sont connues qu'___."
+    answer: "a posteriori"
+    alt: []
+  - id: ks4-l4-p6
+    sentence: "La chimie est rationnelle parce qu'elle doit son ordre systématique à des ___ de la raison : des concepts artificiels, propres à son domaine, introduits pour unifier de nombreuses régularités locales établies empiriquement."
+    answer: "idées"
+    alt: []
+  - id: ks4-l4-p7
+    sentence: "Parmi les régularités unifiées par des concepts artificiels, tous les métaux solides alors connus « calcinent » : chauffés à l'air, ils forment des composés plus ___ et peuvent être retirés de ces composés dans les bonnes conditions."
+    answer: "lourds"
+    alt: []
+  - id: ks4-l4-p8
+    sentence: "Après 1790, Kant semble adopter la taxinomie de Lavoisier et son ___, sorte de « fluide impondérable » aux propriétés causales relevant de la chaleur, de la combustion et des changements de phase."
+    answer: "calorique"
+    alt: ["éther"]
+  - id: ks4-l4-p9
+    sentence: "Même après 1790, Kant maintient ses exigences d'une science proprement dite : la chimie reste, pour lui, une science rationnelle mais ___."
+    answer: "impropre"
+    alt: ["improprement dite"]
+- id: ks4-l5
+  title: "La psychologie : pourquoi même la psychologie empirique est impropre"
+  notes: |-
+    Les vues de Kant sur la psychologie se lient à sa philosophie de l'esprit en général.
+    **Il y distingue la psychologie rationnelle, dont il ruine les prétentions, et la
+    psychologie empirique, qui ne peut elle non plus prétendre au rang de science propre.**
+
+    **Un raisonnement par élimination.**
+    - la {red}psychologie rationnelle{/red} : dans les Paralogismes de la *Critique de la
+      raison pure*, Kant nie qu'elle contienne des arguments justifiant le moindre principe
+      substantiel, notamment sur notre immortalité ;
+    - il semble alors que seule la {green}psychologie empirique{/green} puisse être une
+      science ;
+    - mais si toute science propre exige une partie pure, et si la psychologie rationnelle ne
+      fournit aucun savoir substantiel, la psychologie empirique ne peut non plus être une
+      science proprement dite.
+
+    **Pourquoi ?** Deux lectures.
+    - {green}Hatfield (1992){/green} : la mathématisation, marque d'une science propre, n'est
+      pas possible. Les phénomènes psychiques sont dans le temps, leur forme ordonnatrice *a
+      priori*, et le temps comme forme a trop peu de traits pour porter une forte
+      mathématisation : c'est une variété à **une seule dimension**, représentable par une
+      ligne, trop étroite pour soutenir les constructions en intuition pure qu'exigerait la
+      mathématisation.
+    - {green}McNulty (2014){/green} : la psychologie empirique manque de **véritables lois**.
+      Kant laisse ouverte la perspective de « lois d'association », c'est-à-dire de connaissances
+      de constances de conjonction entre certaines de nos représentations internes, que
+      l'introspection peut découvrir. Mais de telles régularités peuvent ressembler à des lois
+      sans en être. De véritables lois exigent un garant plus fort : des prédictions réussies
+      confirmées par l'expérimentation, ou des observations précises, ce que la psychologie
+      empirique ne peut fournir. Elle serait donc **plus impropre encore que la chimie**, qui
+      dispose, elle, de véritables lois.
+
+    **Postérité.** Kant a influencé la théorie empirique allemande du début du XIXe siècle,
+    mais c'est sa psychologie transcendantale de la *Critique de la raison pure*, non ses vues
+    sur la psychologie empirique, qui fut la plus influente. Sa doctrine de l'espace et du
+    temps comme formes de la sensibilité reçut une lecture naturaliste en physiologie et en
+    psychologie de la perception : puisqu'une forme *a priori* de l'intuition n'a pas à être
+    innée, elle peut se déployer au cours de l'expérience sensible. J. G. Steinbuch (1811)
+    et C. Th. Tourtual (1827) étudièrent donc empiriquement comment naît la représentation
+    de l'espace : comment un sujet voit des choses disposées dans l'espace, perçoit des
+    objets en trois dimensions, représente des structures spatiales. Sturm (2001) soutient que
+    les remarques critiques de Kant visent principalement les conceptions de la psychologie
+    fondées sur l'introspection.
+
+    ! « A priori » ne veut pas dire « inné » : c'est pourquoi la forme a priori de l'espace peut
+    avoir une histoire empirique.
+  points:
+  - id: ks4-l5-p1
+    sentence: "Dans les Paralogismes de la *Critique de la raison pure*, Kant nie que la psychologie ___ contienne des arguments justifiant des principes substantiels, notamment sur notre immortalité."
+    answer: "rationnelle"
+    alt: []
+  - id: ks4-l5-p2
+    sentence: "Une fois la psychologie rationnelle écartée, il semble que seule la psychologie ___ puisse être une science ; mais, faute de partie pure, elle ne peut être une science proprement dite."
+    answer: "empirique"
+    alt: []
+  - id: ks4-l5-p3
+    sentence: "Pour Hatfield (1992), la psychologie échappe à la mathématisation parce que le temps, forme des phénomènes psychiques, est une variété à une seule ___, représentable par une ligne et trop étroite pour soutenir les constructions que la mathématisation exigerait."
+    answer: "dimension"
+    alt: []
+  - id: ks4-l5-p4
+    sentence: "Pour McNulty (2014), la psychologie empirique manque de véritables ___ : elle ne dispose que de régularités que l'introspection peut découvrir."
+    answer: "lois"
+    alt: []
+  - id: ks4-l5-p5
+    sentence: "Kant laisse ouverte la perspective, pour la psychologie empirique, de « lois d'___ », c'est-à-dire de constances de conjonction entre certaines de nos représentations internes, que l'introspection peut découvrir."
+    answer: "association"
+    alt: []
+  - id: ks4-l5-p6
+    sentence: "Selon McNulty, de véritables lois exigent un garant plus fort que l'introspection, principalement des prédictions réussies confirmées par l'___ ou des observations précises, ce que la psychologie empirique ne peut fournir."
+    answer: "expérimentation"
+    alt: ["expérience"]
+  - id: ks4-l5-p7
+    sentence: "Si la psychologie empirique manque de véritables lois, elle est selon cette lecture une science encore plus impropre que la ___, qui dispose, sans doute, de véritables lois."
+    answer: "chimie"
+    alt: []
+  - id: ks4-l5-p8
+    sentence: "Au début du XIXe siècle, c'est la psychologie ___ de la *Critique de la raison pure*, et non les vues de Kant sur la psychologie empirique, qui fut la plus influente."
+    answer: "transcendantale"
+    alt: []
+  - id: ks4-l5-p9
+    sentence: "Puisque pour Kant une forme *a priori* de l'intuition n'a pas à être innée, elle peut se déployer au cours de l'expérience sensible : J. G. Steinbuch (1811) et C. Th. ___ (1827) étudièrent empiriquement comment naît la représentation de l'espace."
+    answer: "Tourtual"
+    alt: []
+- id: ks4-l6
+  title: "Histoire, géographie physique, anthropologie : la coordination par une idée pratique"
+  notes: |-
+    Même rigoureux sur ce qui est science « proprement dite », Kant reconnaît d'autres
+    disciplines comme scientifiques en un autre sens. Ses réflexions sur la science, entendue
+    largement (non seulement *Wissenschaft*, mais toute *Lehre* ou *Kunde*), s'étendent à
+    l'histoire, à la géographie physique et à l'anthropologie. **Elles sont des savoirs dont
+    les connaissances s'ordonnent non par subordination mais par coordination.**
+
+    **Une place prévue dès la Préface.** Dans les *Premiers principes* (4:468), Kant divise
+    la doctrine de la nature en **science de la nature** (la physique, par exemple) et en
+    **doctrine historique de la nature**, elle-même subdivisée en description de la nature et
+    histoire de la nature.
+
+    **Subordination, coordination.**
+    - en {green}physique{/green}, les connaissances sont liées par {violet}subordination{/violet} :
+      l'une se déduit de l'autre ;
+    - en {green}histoire{/green}, elles sont liées par {violet}coordination{/violet} : les
+      faits historiques ne se dérivent pas les uns des autres, ils sont seulement mis en
+      relation dans l'espace (géographiquement) et dans le temps (chronologiquement).
+
+    L'anthropologie recoupe en partie l'objet de la psychologie empirique.
+
+    **Ce qui rend la coordination possible.** Ce n'est pas une idée théorique, mais une idée
+    **pratique**. Pour l'histoire, le principe directeur de la coordination est l'idée de la
+    raison (ou de la liberté), comme dans l'« Idée d'une histoire universelle d'un point de vue
+    cosmopolitique ». L'anthropologie est cadrée par l'idéal moral cosmopolite du meilleur du
+    monde.
+
+    Ainsi l'accent de Kant sur la physique, tout au long de sa carrière, ne l'a pas aveuglé
+    sur la valeur des autres sciences, ni empêché de réfléchir de manière créative à la façon
+    d'en rendre compte du point de vue de la philosophie critique.
+
+    ! La physique, science propre, ordonne par la déduction ; l'histoire, science en un sens
+    plus large, ordonne par un but que la raison pratique se donne.
+  points:
+  - id: ks4-l6-p1
+    sentence: "Dans la Préface des *Premiers principes*, Kant divise la doctrine de la nature en science de la nature, comme la physique, et en doctrine ___ de la nature."
+    answer: "historique"
+    alt: []
+  - id: ks4-l6-p2
+    sentence: "La doctrine historique de la nature se subdivise, pour Kant, en description de la nature et en ___ de la nature."
+    answer: "histoire"
+    alt: []
+  - id: ks4-l6-p3
+    sentence: "En physique, les connaissances sont liées par ___ : une connaissance se déduit d'une autre."
+    answer: "subordination"
+    alt: []
+  - id: ks4-l6-p4
+    sentence: "En histoire, les connaissances sont liées non par subordination mais par ___ : les faits ne se dérivent pas les uns des autres."
+    answer: "coordination"
+    alt: []
+  - id: ks4-l6-p5
+    sentence: "Les faits historiques ne se dérivent pas les uns des autres : ils sont seulement mis en relation dans l'espace, géographiquement, et dans le ___, chronologiquement."
+    answer: "temps"
+    alt: []
+  - id: ks4-l6-p6
+    sentence: "L'anthropologie recoupe en partie par son objet la ___ empirique."
+    answer: "psychologie"
+    alt: []
+  - id: ks4-l6-p7
+    sentence: "Ce qui rend possible la coordination des faits dans ces disciplines n'est pas une idée théorique mais une idée ___."
+    answer: "pratique"
+    alt: []
+  - id: ks4-l6-p8
+    sentence: "En histoire, le principe directeur de la coordination des faits est l'idée de la raison, ou de la ___, comme dans l'« Idée d'une histoire universelle d'un point de vue cosmopolitique »."
+    answer: "liberté"
+    alt: ["liberte"]
+  - id: ks4-l6-p9
+    sentence: "L'anthropologie est cadrée, pour Kant, par l'idéal moral ___ du meilleur du monde."
+    answer: "cosmopolite"
+    alt: ["cosmopolitique"]

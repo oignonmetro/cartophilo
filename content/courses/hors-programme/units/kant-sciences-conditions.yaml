@@ -1,0 +1,339 @@
+# Cours tiré de l'article « Kant's Philosophy of Science » (Stanford
+# Encyclopedia of Philosophy, 2003, révision 2023), sections 1 et 2.1 :
+# la physique avant la période critique, puis la Préface des Premiers
+# principes métaphysiques de la science de la nature (1786). Les citations
+# de Kant sont la traduction française de la traduction anglaise de
+# l'article, avec ses repères de l'édition de l'Académie (volume:page).
+#
+# Point laissé de côté : la bibliographie (Adickes, Friedman, Watkins, etc.)
+# et les débats d'école sur la méthode de la métaphysique spéciale, que
+# l'article pose en questions sans les trancher.
+
+id: kant-sciences-conditions
+title: "Qu'est-ce qu'une science proprement dite ?"
+subtitle: "Le jeune Kant, puis la Préface des Premiers principes (1786)"
+icon: bulb
+color: blue
+group: "Kant : la philosophie des sciences"
+intro: |-
+  Kant a passé sa vie à penser la physique. Ce cours suit sa philosophie des sciences
+  dans l'ordre : d'abord les conditions qu'un savoir doit remplir pour être une science
+  de la nature au sens strict (cette unité), puis la théorie de la matière qui les
+  satisfait (les *Premiers principes*), les lois et les hypothèses, et enfin les sciences
+  qui ne les satisfont pas : biologie, chimie, psychologie, histoire.
+lessons:
+- id: ks1-l1
+  title: "La physique du jeune Kant (1746-1770)"
+  notes: |-
+    Avant la période critique, Kant n'écrit pas de la physique à côté de sa métaphysique :
+    il bâtit **la métaphysique dont sa théorie de la matière a besoin**. Cette leçon montre
+    d'où viennent les questions que les *Premiers principes* de 1786 reprendront, et une
+    méthode qu'il gardera toujours : arbitrer entre deux camps plutôt que de trancher.
+
+    **Une querelle à arbitrer.** Son premier ouvrage, les *Pensées sur la vraie évaluation
+    des forces vives* (1746), s'attaque à la querelle de la {violet}*vis viva*{/violet},
+    rouverte en 1686 quand Leibniz attaque les lois du mouvement de Descartes. Pour les
+    cartésiens, la force d'un corps se mesure par {violet}mv{/violet} ; pour les
+    leibniziens, par {violet}mv²{/violet}. Kant ne tranche pas : **chaque mesure est
+    juste, mais dans un autre contexte.**
+    - en mécanique « mathématique », un corps n'accélère jamais sans cause extérieure :
+      la bonne mesure est {green}mv{/green} (les cartésiens) ;
+    - les « corps naturels » ont un trait que les mathématiques mettent entre parenthèses,
+      la {violet}vivification{/violet}, le pouvoir d'accroître par eux-mêmes la force de
+      mouvement qu'une cause externe ne fait qu'« éveiller » : leur mesure est
+      {green}mv²{/green} (les leibniziens).
+
+    **Les substances et leur action.** La *Nouvelle élucidation des premiers principes de
+    la connaissance métaphysique* (1755) soutient que seules des liaisons causales entre
+    substances peuvent changer leurs états : c'est le principe de {violet}succession{/violet},
+    dirigé contre l'{red}harmonie préétablie{/red} de Leibniz. Mais des substances isolées
+    ne s'accordent que par la coordination de Dieu : c'est le principe de
+    {violet}coexistence{/violet}.
+
+    **La matière.** La *Monadologie physique* (1756) veut accorder l'infinie divisibilité
+    de l'espace (la géométrie) avec la simplicité des substances (la métaphysique). Les
+    substances simples remplissent l'espace non par leur simple existence mais par leurs
+    {violet}sphères d'activité{/violet} : on peut diviser ces sphères sans diviser la
+    substance, car les propriétés spatiales naissent de l'interaction des activités et non
+    de ce que chaque substance est en elle-même. Kant y défend l'attraction, la répulsion
+    et la force d'inertie, donc des principes **newtoniens** qu'il rejetait en 1746.
+
+    **Vers la critique.** En 1763, *L'unique fondement possible d'une démonstration de
+    l'existence de Dieu* critique pour la première fois les trois preuves traditionnelles ;
+    l'*Essai sur les grandeurs négatives*, écrit après la lecture de Hume, distingue
+    l'opposition logique de l'opposition réelle pour répondre à son objection. L'écrit de
+    1768 sur les régions de l'espace admet que la {violet}chiralité{/violet} (deux mains
+    semblables mais non superposables) ne s'explique peut-être pas par les seules relations
+    entre substances matérielles. La *Dissertation inaugurale* (1770) systématise le tout,
+    puis dix ans de silence précèdent la *Critique de la raison pure* (1781).
+
+    ! La médiation de 1746 annonce la manière de Kant : donner raison à chaque camp dans son
+    domaine de validité, au lieu de désigner un vainqueur.
+  points:
+  - id: ks1-l1-p1
+    sentence: "Dans son premier ouvrage, les *Pensées sur la vraie évaluation des forces vives* (1746), Kant tente d'arbitrer la querelle de la *vis viva*, ouverte quand Leibniz attaque en 1686 les lois du mouvement de ___."
+    answer: "Descartes"
+    alt: []
+  - id: ks1-l1-p2
+    sentence: "Kant ne désigne pas de vainqueur dans la querelle de la *vis viva* : il soutient que mv et mv² sont tous deux des mesures justes de la force, mais dans des contextes différents. En mécanique mathématique, où un corps n'accélère que sous l'action d'une cause externe, la mesure appropriée est mv, celle des ___."
+    answer: "cartésiens"
+    alt: []
+  - id: ks1-l1-p3
+    sentence: "Pour les « corps naturels », capables d'accroître par eux-mêmes la force de mouvement qu'une cause externe ne fait qu'éveiller, Kant juge que la mesure juste de la force est la quantité ___, celle de Leibniz."
+    answer: "mv²"
+    alt: ["mv2"]
+  - id: ks1-l1-p4
+    sentence: "Kant appelle ___ le pouvoir qu'ont les corps naturels d'accroître eux-mêmes la force de mouvement qu'une cause externe ne fait qu'« éveiller »."
+    answer: "vivification"
+    alt: []
+  - id: ks1-l1-p5
+    sentence: "Dans la *Nouvelle élucidation* (1755), le principe de succession soutient que seules des liaisons causales entre substances peuvent changer leurs états ; il est dirigé contre l'___ de Leibniz."
+    answer: "harmonie préétablie"
+    alt: ["harmonie pré-établie"]
+  - id: ks1-l1-p6
+    sentence: "Dans la *Monadologie physique* (1756), Kant accorde l'infinie divisibilité de l'espace avec la simplicité des substances en affirmant que les substances simples remplissent l'espace non par leur simple existence, mais par leurs ___."
+    answer: "sphères d'activité"
+    alt: ["sphère d'activité"]
+  - id: ks1-l1-p7
+    sentence: "En 1746, Kant rejetait le principe d'inertie et se rapprochait de Leibniz ; la *Monadologie physique* de 1756 admet au contraire l'attraction, la répulsion et la force d'inertie, c'est-à-dire des principes de la physique de ___."
+    answer: "Newton"
+    alt: []
+  - id: ks1-l1-p8
+    sentence: "Hume objecte qu'on ne trouve aucune contradiction logique à ce qu'une chose existe sans qu'une autre en découle. Pour y répondre, Kant distingue dans son écrit de 1763 sur les grandeurs négatives l'opposition logique de l'opposition ___."
+    answer: "réelle"
+    alt: []
+  - id: ks1-l1-p9
+    sentence: "Dans son écrit de 1768 sur le fondement dernier de la différence des régions dans l'espace, Kant admet que la propriété qu'ont deux mains, droite et gauche, d'être semblables sans être superposables, la ___, ne s'explique peut-être pas par les seules relations entre substances matérielles."
+    answer: "chiralité"
+    alt: []
+  - id: ks1-l1-p10
+    sentence: "Après la *Dissertation inaugurale* de 1770 et dix ans presque sans publication, la *Critique de la raison pure* paraît en ___ et marque la première grande étape du « tournant critique »."
+    answer: "1781"
+    alt: []
+- id: ks1-l2
+  title: "Les conditions d'une science de la nature proprement dite"
+  notes: |-
+    Les *Premiers principes métaphysiques de la science de la nature* (1786) s'ouvrent sur
+    une Préface qui répond à une question de définition : à quelles conditions un savoir
+    de la nature mérite-t-il le nom de science ? **La réponse de Kant est très restrictive :
+    il n'y a de science proprement dite que ce qui est connu *a priori*, avec une
+    certitude apodictique.**
+
+    **Trois exigences.** La connaissance doit être {green}ordonnée en système{/green},
+    {green}selon des principes rationnels{/green} et {green}connue *a priori* avec la
+    « conscience de sa nécessité »{/green} (4:468). Un savoir qui ne s'appuie que sur
+    l'expérience peut dire « cela est ainsi » ; il ne peut jamais dire « cela ne peut pas
+    être autrement ». Or la certitude apodictique est cette seconde assurance.
+
+    **D'où la nécessité d'une partie pure.** La science propre exige donc « une partie
+    pure sur laquelle puisse se fonder la certitude apodictique que la raison cherche »
+    (4:469). Kant appelle {violet}métaphysique{/violet} la connaissance rationnelle pure
+    tirée de concepts : toute science proprement dite exige donc **une métaphysique de la
+    nature**, qui peut prendre deux formes.
+    - la partie {violet}transcendantale{/violet} : les lois qui rendent possible le concept
+      d'une nature en général, « même sans rapport à un objet déterminé de l'expérience »
+      (4:469) ;
+    - la partie {violet}spéciale{/violet} : elle concerne la nature particulière de telle ou
+      telle espèce de choses, dont un concept empirique est donné.
+
+    **Les deux espèces d'objets.** Dans la métaphysique spéciale, les principes de la partie
+    transcendantale « sont appliqués aux deux espèces d'objets de nos sens » (4:470).
+
+    | Sens    | Objets              | Doctrine         |
+    | externe | la matière          | doctrine du corps |
+    | interne | les êtres pensants  | doctrine de l'âme |
+
+    Si la partie transcendantale se confond avec les résultats de la *Critique de la
+    raison pure*, les *Premiers principes* relèvent de la métaphysique spéciale, et il
+    reste à comprendre comment un concept empirique peut y figurer sans ruiner la
+    nécessité exigée de la partie pure. Les leçons suivantes y reviennent.
+
+    ! La métaphysique n'est pas ici une science de l'au-delà : c'est la partie pure et
+    rationnelle de la science de la nature elle-même.
+  points:
+  - id: ks1-l2-p1
+    sentence: "Kant publie en ___ les *Premiers principes métaphysiques de la science de la nature*, son ouvrage le plus influent en philosophie des sciences, qui comprend une Préface et quatre chapitres."
+    answer: "1786"
+    alt: []
+  - id: ks1-l2-p2
+    sentence: "Pour qu'un savoir de la nature soit une science proprement dite, il doit être systématique, procéder de principes rationnels et être connu *a priori* avec une certitude ___, c'est-à-dire avec conscience de sa nécessité."
+    answer: "apodictique"
+    alt: []
+  - id: ks1-l2-p3
+    sentence: "Une certitude apodictique ne peut s'appuyer sur la seule expérience, qui dit ce qui est et non ce qui ne peut être autrement. La science proprement dite exige donc une partie pure ; comme Kant identifie la connaissance rationnelle pure tirée de concepts à la ___, elle exige une métaphysique de la nature."
+    answer: "métaphysique"
+    alt: []
+  - id: ks1-l2-p4
+    sentence: "La partie de la métaphysique de la nature qui expose les lois rendant possible le concept d'une nature en général, même sans rapport à un objet déterminé de l'expérience, est la partie ___."
+    answer: "transcendantale"
+    alt: []
+  - id: ks1-l2-p5
+    sentence: "La partie de la métaphysique de la nature qui concerne la nature particulière de telle ou telle espèce de choses, dont un concept empirique est donné, est la métaphysique ___."
+    answer: "spéciale"
+    alt: ["speciale"]
+  - id: ks1-l2-p6
+    sentence: "Les objets du sens externe forment la matière et donnent lieu à une doctrine du corps ; ceux du ___, les êtres pensants, donnent lieu à une doctrine de l'âme."
+    answer: "sens interne"
+    alt: []
+  - id: ks1-l2-p7
+    sentence: "Les conditions de la science de la nature proprement dite sont posées dans ___ des *Premiers principes métaphysiques de la science de la nature*, avant les quatre chapitres qui développent la métaphysique de la matière."
+    answer: "la Préface"
+    alt: ["la préface"]
+- id: ks1-l3
+  title: "Pas de science sans mathématique : chimie et psychologie exclues"
+  notes: |-
+    Pourquoi la partie pure d'une science de la nature doit-elle faire appel à la
+    mathématique ? C'est la question que tranche cette leçon, et sa réponse **fait
+    disparaître deux sciences du rang de science proprement dite : la chimie et la
+    psychologie, telles qu'on les pratiquait alors.**
+
+    **L'argument.** À partir du seul concept d'une chose naturelle déterminée, on ne peut
+    pas connaître sa possibilité : un concept sans contradiction n'est pas pour autant un
+    concept d'une chose possible. Pour établir qu'une telle chose est possible, il faut que
+    « l'intuition correspondant au concept soit donnée *a priori*, c'est-à-dire que le
+    concept soit construit » (4:470). Or construire un concept dans l'intuition *a priori*,
+    c'est précisément la tâche de la {violet}mathématique{/violet}. Un exemple familier, qui
+    n'est pas celui de Kant : le concept d'un triangle dont les trois angles seraient
+    droits ne se contredit peut-être pas à la seule lecture ; c'est sa construction qui
+    montre qu'aucun triangle ne peut l'être.
+
+    D'où la formule célèbre : {teal}« dans toute doctrine particulière de la nature, il ne
+    peut y avoir de science proprement dite qu'autant qu'il s'y trouve de mathématique »{/teal}
+    (4:470). La nécessité exigée de la partie pure tient donc à la **nécessité des règles
+    selon lesquelles la construction mathématique procède**.
+
+    **Deux exclusions.**
+    - {red}La chimie{/red} : aucune loi d'approche ou d'éloignement des parties de la matière
+      ne permet de rendre intuitifs et de présenter *a priori* dans l'espace leurs mouvements
+      et toutes leurs conséquences (4:471) ; Kant ajoute que cette exigence ne sera remplie
+      qu'« avec beaucoup de peine ». Ses principes sont « simplement empiriques » : elle est
+      au mieux un « art systématique ».
+    - {red}La psychologie{/red} a deux raisons d'échouer. D'une part, la mathématique est
+      inapplicable aux phénomènes du sens interne et à leurs lois : Kant accorde que la loi
+      de continuité vaut pour les changements de nos représentations, mais le temps n'a
+      qu'**une dimension**, ce qui ne donne pas assez de matière pour étendre notre
+      connaissance. D'autre part, la psychologie empirique ne peut pas séparer et
+      recombiner à volonté les phénomènes du sens interne : on ne les sépare que par
+      « simple division en pensée » (4:471), sans expérimentation.
+
+    ! « Pas de science proprement dite » ne veut pas dire « pas de connaissance
+    sérieuse ». Les leçons sur la chimie et la psychologie montrent que Kant leur reconnaît
+    une valeur rationnelle d'un autre genre.
+  points:
+  - id: ks1-l3-p1
+    sentence: "Kant tient qu'on ne peut connaître par leurs seuls concepts la possibilité de choses naturelles déterminées : il faut que l'intuition correspondant au concept soit donnée *a priori*, c'est-à-dire que le concept soit ___, tâche qui revient à la mathématique."
+    answer: "construit"
+    alt: ["construit a priori"]
+  - id: ks1-l3-p2
+    sentence: "Dans la formule célèbre de la Préface, Kant affirme que dans toute doctrine particulière de la ___, il ne peut y avoir de science proprement dite qu'autant qu'il s'y trouve de mathématique."
+    answer: "nature"
+    alt: []
+  - id: ks1-l3-p3
+    sentence: "Dans la formule célèbre de la Préface, Kant affirme que dans toute doctrine particulière de la nature, il ne peut y avoir de science proprement dite qu'autant qu'il s'y trouve de ___."
+    answer: "mathématique"
+    alt: ["mathématiques"]
+  - id: ks1-l3-p4
+    sentence: "Dans la formule célèbre de la Préface, Kant affirme que dans toute doctrine particulière de la nature, il ne peut y avoir de ___ proprement dite qu'autant qu'il s'y trouve de mathématique."
+    answer: "science"
+    alt: []
+  - id: ks1-l3-p5
+    sentence: "Cette formule suggère que la nécessité exigée de la partie pure d'une science de la nature vient de la nécessité des règles selon lesquelles procède la ___ mathématique des choses déterminées."
+    answer: "construction"
+    alt: []
+  - id: ks1-l3-p6
+    sentence: "Puisqu'aucune loi d'approche ou d'éloignement des parties de la matière ne permet de présenter *a priori* dans l'espace leurs mouvements, et que ses principes sont simplement empiriques, la chimie ne peut être, pour Kant, qu'un « ___ systématique »."
+    answer: "art"
+    alt: []
+  - id: ks1-l3-p7
+    sentence: "Pour exclure la psychologie du rang de science proprement dite, Kant note d'abord que la mathématique est inapplicable aux phénomènes du sens interne : même si la loi de continuité vaut pour les changements de nos représentations, le temps n'a qu'une seule ___, ce qui ne donne pas assez de matière pour étendre notre connaissance."
+    answer: "dimension"
+    alt: []
+  - id: ks1-l3-p8
+    sentence: "Pour exclure la psychologie du rang de science proprement dite, Kant relève en second lieu qu'elle ne peut pas séparer et recombiner à volonté les phénomènes du sens interne : on ne peut les séparer que par simple ___ en pensée."
+    answer: "division"
+    alt: []
+- id: ks1-l4
+  title: "Le concept de matière et l'architecture des quatre chapitres"
+  notes: |-
+    Il reste à dire ce qu'il faut entendre par « matière », puisque c'est l'objet du sens
+    externe dont les *Premiers principes* font la métaphysique spéciale. **Cette leçon
+    donne le plan de l'ouvrage : le concept de matière y est déterminé suivant la table
+    des catégories de la *Critique de la raison pure*, un chapitre par catégorie.**
+
+    **Une analyse complète du concept.** Pour que la mathématique s'applique aux corps, il
+    faut d'abord introduire des principes pour la construction des concepts qui
+    appartiennent à la possibilité de la matière en général (4:472). Kant en fait une
+    analyse « complète » qui n'emploie aucune expérience particulière, mais seulement ce
+    que contient le concept lui-même, en rapport avec les intuitions pures de l'espace et
+    du temps et avec les lois attachées au concept de nature en général. Concrètement, la
+    matière est déterminée selon les quatre titres de catégories : quantité, qualité,
+    relation, modalité (4:474-476), et **chaque chapitre ajoute au concept de matière « une
+    nouvelle détermination »** (4:476).
+
+    | Chapitre        | Catégorie | La matière y est envisagée comme       |
+    | Phoronomie      | quantité  | un simple point en mouvement           |
+    | Dynamique       | qualité   | remplissant un espace                  |
+    | Mécanique       | relation  | communiquant son mouvement             |
+    | Phénoménologie | modalité  | possiblement, réellement ou nécessairement mue |
+
+    **Un dilemme sur la nature du concept.** Dans la *Critique de la raison pure*
+    (A847-848/B875-876), la matière est ce qui est impénétrable, étendu et inerte. Au début
+    de la Préface, elle est tout objet du sens externe, et Kant ajoute que la détermination
+    fondamentale d'un objet des sens externes devait être le **mouvement**, car c'est par
+    lui seul que ces sens sont affectés (4:476). Deux voies, deux difficultés :
+    - {red}si la matière est simplement tout objet du sens externe{/red}, comment son
+      concept reste-t-il empirique, et que devient la différence de structure entre la
+      première *Critique* et les *Premiers principes* ?
+    - {red}si ses traits fondamentaux sont l'impénétrabilité, l'étendue et la mobilité{/red},
+      comment savoir *a priori* que tout objet du sens externe obéit aux lois qui
+      régiraient la matière ainsi définie ?
+
+    Reste à savoir si chaque détermination ajoutée est justifiée comme condition de
+    possibilité de son expérience, ce qui ferait des *Premiers principes* un argument
+    transcendantal comparable à celui de la première *Critique* : tout dépend de la
+    manière dont on lit les arguments des quatre chapitres.
+
+    ! Le plan par catégories n'est pas un ornement : c'est lui qui garantit que les
+    principes de la science de la nature sont développés « conformément » à ceux de la
+    *Critique*.
+  points:
+  - id: ks1-l4-p1
+    sentence: "Dans les *Premiers principes métaphysiques de la science de la nature*, Kant détermine le concept de matière suivant la table des catégories de la *Critique de la raison pure* : quantité, qualité, relation et ___."
+    answer: "modalité"
+    alt: []
+  - id: ks1-l4-p2
+    sentence: "Dans chaque chapitre des *Premiers principes*, Kant ajoute au concept de matière une nouvelle ___."
+    answer: "détermination"
+    alt: []
+  - id: ks1-l4-p3
+    sentence: "Le chapitre des *Premiers principes* qui envisage la quantité du mouvement de la matière considérée comme un point est la ___."
+    answer: "Phoronomie"
+    alt: ["phoronomie"]
+  - id: ks1-l4-p4
+    sentence: "Le chapitre des *Premiers principes* qui étudie comment la matière remplit un espace déterminé par des forces d'attraction et de répulsion est la ___."
+    answer: "Dynamique"
+    alt: ["dynamique"]
+  - id: ks1-l4-p5
+    sentence: "Le chapitre des *Premiers principes* qui étudie comment une matière communique son mouvement à une autre par sa force motrice est la ___."
+    answer: "Mécanique"
+    alt: ["mécanique"]
+  - id: ks1-l4-p6
+    sentence: "Le chapitre des *Premiers principes* qui étudie à quelles conditions on juge qu'un mouvement est possible, réel ou nécessaire est la ___."
+    answer: "Phénoménologie"
+    alt: ["phénoménologie", "phenomenologie"]
+  - id: ks1-l4-p7
+    sentence: "Dans la *Critique de la raison pure* (A847-848/B875-876), Kant introduit la matière comme quelque chose d'impénétrable, d'étendu et d'___."
+    answer: "inerte"
+    alt: []
+  - id: ks1-l4-p8
+    sentence: "Dans les *Premiers principes*, Kant avance que la détermination fondamentale de ce qui doit être un objet des sens externes devait être le ___, parce que c'est seulement par lui que ces sens sont affectés."
+    answer: "mouvement"
+    alt: []
+  - id: ks1-l4-p9
+    sentence: "Si le concept de matière désigne simplement tout objet du sens externe, on ne voit plus en quel sens il demeure ___, ni ce qui reste de la différence de structure entre la première *Critique* et les *Premiers principes*."
+    answer: "empirique"
+    alt: []
+  - id: ks1-l4-p10
+    sentence: "Si les traits fondamentaux de la matière sont l'impénétrabilité, l'étendue et la mobilité, on ne voit pas comment savoir ___ que tout objet que nous pourrions rencontrer dans le sens externe obéit aux lois qui régiraient la matière ainsi définie."
+    answer: "a priori"
+    alt: []

@@ -1,0 +1,282 @@
+# Cours tiré de l'article « Kant's Philosophy of Science » (Stanford
+# Encyclopedia of Philosophy, 2003, révision 2023), sections 3 et 4 : les
+# lois et les hypothèses, puis l'Opus postumum. Les citations de Kant sont
+# la traduction française de la traduction anglaise de l'article, avec ses
+# repères de l'édition de l'Académie (volume:page).
+#
+# Point laissé de côté : l'article annonce trois critères de recevabilité
+# d'une hypothèse (Discipline de la raison pure relativement aux
+# hypothèses) mais n'en énonce que deux ; le troisième n'est donc pas
+# reproduit ici et ne sera pas complété de mémoire.
+
+id: kant-sciences-lois
+title: "Lois, hypothèses et Opus postumum"
+subtitle: "Ce qu'est une loi pour Kant, ce qu'est une bonne hypothèse, et la physique de la fin"
+icon: bulb
+color: blue
+group: "Kant : la philosophie des sciences"
+intro: |-
+  Cette unité prend un peu de recul sur les *Premiers principes* : qu'est-ce qu'une loi
+  de la nature pour Kant ? À quelles conditions une hypothèse est-elle légitime ? Et que
+  cherche-t-il encore, jusqu'à la fin de sa vie, dans les brouillons de l'*Opus postumum* ?
+lessons:
+- id: ks3-l1
+  title: "Ce qu'est une loi : trois lectures de Kant"
+  notes: |-
+    La Révolution scientifique a installé un nouveau type de savoir, fondé sur des lois de
+    la nature. La philosophie de la nature de Kant donne à cette notion une place centrale :
+    il l'analyse, il s'en sert pour distinguer des lois fondamentales, et il l'intègre à son
+    image d'une science systématique. **Cette leçon porte sur l'analyse du concept, et sur
+    ce qui en fait l'objet de trois lectures concurrentes.**
+
+    **La définition.** Pour le Kant critique, une loi est un {violet}jugement{/violet}, une
+    proposition **nécessaire** et **imposée par une faculté de l'esprit** : l'entendement ou
+    la raison. Dans la connaissance théorique, les lois **déterminent** l'objet qu'elles
+    gouvernent ; les lois de la raison pratique, elles, **lient** leurs sujets en leur
+    prescrivant une action ou une maxime. Trois classes de lois :
+    - {green}transcendantales{/green} : les principes purs de l'entendement ;
+    - {green}métaphysiques{/green} : par exemple ses trois lois de la mécanique ;
+    - {green}empiriques{/green} : en particulier celles de la chimie.
+
+    **Qu'est-ce qui rend une loi nécessaire ?** Trois réponses.
+    - {green}Watkins (2019){/green} : les lois sont en partie fondées sur la nature de
+      connaisseurs comme nous, c'est-à-dire sur les facultés (et leurs structures *a priori*)
+      que Kant étudie dans la première *Critique*.
+    - {green}La lecture nécessitarienne{/green} (Messina 2017, Massimi 2017, Engelhard 2018) :
+      les lois sont fondées sur les **natures des choses** qu'elles concernent, leurs
+      propriétés essentielles et leurs pouvoirs. Elle fait de Kant un précurseur de la
+      conception de la loi de Fred Dretske.
+    - {green}La lecture du « meilleur système »{/green} (Kitcher 1986, Breitenbach 2018) :
+      certaines propositions comptent comme lois en vertu de leur place dans un ordre de nos
+      connaissances que dirigent les idées de la raison. Elle fait de Kant un précurseur de
+      la conception de David Lewis.
+
+    Watkins soutient que, bien lu, Kant combine les forces des deux dernières images : il
+    garde la dimension nécessitarienne en soulignant le rôle de nos actes, de nous en tant
+    que sujets épistémiques **spontanés**, vis-à-vis de la nature comme objet d'une
+    expérience unifiée.
+
+    ! Les trois lectures répondent à une seule question : d'où vient la nécessité d'une loi,
+    de nous, des choses, ou de la place de la loi dans un système ?
+  points:
+  - id: ks3-l1-p1
+    sentence: "Pour le Kant critique, une loi est un jugement nécessaire imposé par une faculté de l'esprit : l'___ ou la raison."
+    answer: "entendement"
+    alt: []
+  - id: ks3-l1-p2
+    sentence: "Dans la connaissance théorique, les lois ___ l'objet qu'elles gouvernent, alors que les lois de la raison pratique lient leurs sujets en leur prescrivant une action ou une maxime."
+    answer: "déterminent"
+    alt: []
+  - id: ks3-l1-p3
+    sentence: "Kant distingue trois classes de lois : les lois transcendantales (les principes purs de l'entendement), les lois ___ (ses trois lois de la mécanique) et les lois empiriques."
+    answer: "métaphysiques"
+    alt: []
+  - id: ks3-l1-p4
+    sentence: "Parmi les lois que Kant range dans la classe des lois empiriques, il y a en particulier celles de la ___."
+    answer: "chimie"
+    alt: []
+  - id: ks3-l1-p5
+    sentence: "Dans la lecture de Watkins (2019), les lois sont en partie fondées sur la nature de connaisseurs comme nous, c'est-à-dire sur leurs ___ et leurs structures *a priori*, étudiées dans la première *Critique*."
+    answer: "facultés"
+    alt: []
+  - id: ks3-l1-p6
+    sentence: "Dans la lecture nécessitarienne (Messina, Massimi, Engelhard), les lois kantiennes sont fondées sur les ___ des choses qu'elles concernent, c'est-à-dire sur leurs propriétés essentielles et leurs pouvoirs."
+    answer: "natures"
+    alt: ["nature"]
+  - id: ks3-l1-p7
+    sentence: "En fondant les lois dans les natures des choses, la lecture nécessitarienne fait de Kant un précurseur de la conception de la loi de Fred ___."
+    answer: "Dretske"
+    alt: []
+  - id: ks3-l1-p8
+    sentence: "Dans la lecture dite du « meilleur ___ » (Kitcher, Breitenbach), certaines propositions comptent comme lois en vertu de leur place dans un ordre de nos connaissances que dirigent les idées de la raison."
+    answer: "système"
+    alt: ["systeme"]
+  - id: ks3-l1-p9
+    sentence: "En faisant des lois les propositions qui prennent leur place dans le meilleur système de nos connaissances, cette lecture fait de Kant un précurseur de la conception de la loi de David ___."
+    answer: "Lewis"
+    alt: []
+  - id: ks3-l1-p10
+    sentence: "Watkins soutient que Kant combine les deux images précédentes : il garde la dimension nécessitarienne tout en soulignant le rôle de nos actes, en tant que sujets épistémiques ___, à l'égard de la nature comme objet d'expérience unifiée."
+    answer: "spontanés"
+    alt: ["spontané"]
+- id: ks3-l2
+  title: "Lois fondamentales, lois empiriques et hypothèses"
+  notes: |-
+    Après le concept de loi, trois questions de contenu : quelles sont les lois
+    fondamentales de la physique ? Peut-on connaître des lois empiriques ? À quelles
+    conditions une hypothèse est-elle acceptable ? **Kant n'y défend pas une science où
+    tout serait certain : il fixe des seuils, des limites et des critères.**
+
+    **Trois lois fondamentales.** En philosophie de la physique, Kant privilégie la
+    {violet}conservation de la masse{/violet}, la {violet}loi d'inertie{/violet} et
+    l'{violet}égalité de l'action et de la réaction{/violet}. Il les juge fondamentales pour
+    la mécanique telle qu'il la conçoit : une théorie des échanges de quantité de mouvement,
+    ou « communication du mouvement ». Ce sont les lois les plus proches, par
+    l'explication et par la preuve, des **Analogies de l'expérience**, principes les plus
+    généraux de la connaissance théorique. La deuxième Analogie est notamment une prémisse
+    clef de la preuve de la deuxième loi de la mécanique.
+
+    **Les lois empiriques**, qui gouvernent une classe restreinte d'objets ou de propriétés
+    donnés *a posteriori*. Pour qu'un savoir soit une science rationnelle, il doit en comporter
+    qui soient reliées de façon systématique. Deux questions occupent la recherche récente :
+    - ce qui fait d'une proposition une loi empirique : sa place dans un système, pour les
+      uns ; une étape de l'enquête guidée par des principes normatifs kantiens, comme les
+      Postulats de la pensée empirique, pour les autres ;
+    - si l'on peut les **connaître**. {red}Kreines (2017){/red} le nie : malgré la place que
+      Kant leur donne, leur connaissance est hors de notre portée. {green}McNulty (2015) et
+      Cooper (2023){/green} soutiennent qu'une enquête menée dans de bonnes conditions peut
+      découvrir des lois empiriques dans un domaine particulier, par exemple en chimie.
+
+    **Les hypothèses.** La science après 1650 recourt sans cesse à des hypothèses, c'est-à-dire
+    à des affirmations dont les preuves ne sont pas concluantes (optique, électricité,
+    magnétisme, chaleur, chimie, histoire naturelle). Wolff et Émilie du Châtelet avaient
+    développé des doctrines pour en rendre compte. Kant cherche à son tour des **critères
+    normatifs** : des seuils que doit atteindre une hypothèse pour qu'on puisse légitimement
+    raisonner à partir d'elle. Il les défend dans la « Discipline de la raison pure relativement
+    aux hypothèses », partie de la première *Critique*.
+    - {green}Premier critère{/green} : l'hypothèse doit porter sur des choses « réellement
+      possibles », c'est-à-dire des objets et des propriétés spatio-temporels. Cela exclut
+      l'hypothèse, que certains newtoniens avançaient dans les années 1700, selon laquelle
+      Dieu serait la cause de la gravitation.
+    - {green}Deuxième critère{/green} : l'hypothèse doit porter sur des objets et des
+      processus liés causalement (plus largement, par les catégories de la relation) à « ce
+      qui est effectivement donné, et par suite certain » (B798).
+
+    ! Une hypothèse n'est pas une simple supposition : Kant l'encadre, comme il encadre les
+    lois, par des conditions de légitimité.
+  points:
+  - id: ks3-l2-p1
+    sentence: "En philosophie de la physique, Kant privilégie trois lois : la conservation de la masse, la loi d'inertie et l'égalité de l'action et de la ___."
+    answer: "réaction"
+    alt: []
+  - id: ks3-l2-p2
+    sentence: "Ces trois lois sont fondamentales pour la mécanique comprise comme théorie des échanges de quantité de mouvement, que Kant appelle la « ___ du mouvement »."
+    answer: "communication"
+    alt: []
+  - id: ks3-l2-p3
+    sentence: "Les trois lois fondamentales de la mécanique sont celles qui se tiennent le plus près, par l'explication et par la preuve, des ___ de l'expérience, principes les plus généraux de la connaissance théorique."
+    answer: "Analogies"
+    alt: ["analogies"]
+  - id: ks3-l2-p4
+    sentence: "Pour qu'un corps de connaissances soit une science rationnelle, Kant exige qu'il comporte des lois empiriques reliées de façon ___."
+    answer: "systématique"
+    alt: []
+  - id: ks3-l2-p5
+    sentence: "Malgré la place que Kant accorde aux lois empiriques, Kreines (2017) soutient que leur ___ est hors de notre portée."
+    answer: "connaissance"
+    alt: []
+  - id: ks3-l2-p6
+    sentence: "À l'inverse de Kreines, McNulty (2015) et Cooper (2023) soutiennent que, dans de bonnes conditions, la recherche peut conduire à découvrir des lois empiriques dans un domaine particulier, par exemple dans les phénomènes de la ___."
+    answer: "chimie"
+    alt: []
+  - id: ks3-l2-p7
+    sentence: "Kant défend ses critères de recevabilité des hypothèses dans la « Discipline de la raison pure relativement aux ___ », partie de la *Critique de la raison pure*."
+    answer: "hypothèses"
+    alt: []
+  - id: ks3-l2-p8
+    sentence: "Selon l'un des critères de Kant, une hypothèse doit porter sur des choses « réellement possibles », c'est-à-dire sur des objets et des propriétés ___, ce qui exclut que Dieu soit tenu pour la cause de la gravitation."
+    answer: "spatio-temporels"
+    alt: ["spatio-temporel", "dans l'espace et le temps"]
+  - id: ks3-l2-p9
+    sentence: "Selon un autre critère de Kant, une hypothèse doit porter sur des objets et des processus liés causalement, plus largement par les catégories de la ___, à « ce qui est effectivement donné, et par suite certain » (B798)."
+    answer: "relation"
+    alt: []
+- id: ks3-l3
+  title: "L'Opus postumum : la lacune, l'éther et le système des forces"
+  notes: |-
+    Après 1786, Kant ne quitte pas la physique : jusqu'à la fin de sa vie productive, il
+    accumule notes, esquisses et brouillons, surtout à partir de 1796, que l'on réunira plus
+    d'un siècle après sa mort sous le titre d'*Opus postumum*. Le texte est très fragmentaire,
+    sa pensée y reste en mouvement jusqu'aux dernières parties, vers 1802 : **la recherche
+    cherche à en retrouver l'évolution et la portée plutôt qu'une doctrine stable, qui lui
+    manque la plupart du temps.**
+
+    **Pourquoi écrire un nouvel ouvrage ?** Dans des lettres de 1798, Kant parle de manière
+    énigmatique d'une {violet}lacune{/violet} dans sa philosophie critique. Les interprètes
+    la situent tantôt dans sa théorie de la matière (masse et densité), tantôt entre ses
+    approches constitutive et régulatrice des fondements métaphysiques de la science, tantôt
+    dans le schématisme des catégories. Howard (2023) y lit une pièce manquante du
+    « système de la philosophie » tout entier (*hiatus in systemato*, 21:476) : il s'agirait
+    de médiatiser, par une doctrine-passerelle, entre les fondements métaphysiques de la
+    science de la nature et la **physique comme système**. Cette lecture éclaire deux points
+    obscurs : les tentatives répétées de Kant pour formuler une « transition », et celles de
+    définir la physique de façon à pouvoir légitimement dire qu'elle est une science
+    systématique : {teal}« La physique est la recherche systématique de la nature par les
+    forces de la matière données empiriquement, en tant qu'elles sont liées entre elles dans
+    un système »{/teal} (22:298). Cette définition est très large : elle fait entrer dans
+    la physique les « forces » de la chimie, de la science de la chaleur, de la botanique et de
+    la physiologie animale.
+
+    **L'éther.** Kant cherche à démontrer *a priori* l'existence d'une entité qu'il nomme
+    {violet}éther{/violet} ou {violet}calorique{/violet} : une sorte de substrat universel,
+    fluide qui remplit tout l'espace physique, soutient les forces motrices et transporte
+    leurs actions d'un lieu à un autre (comme une pression exercée en un point d'un fluide
+    incompressible se transmet à d'autres points). Il veut en donner une « déduction », une
+    espèce de preuve non empirique de son existence : la « preuve de l'éther »
+    (*Ätherbeweis*), que les interprètes tiennent pour un véritable argument déductif à
+    reconstruire.
+
+    **Un système élémentaire des forces motrices.** Kant cherche une dérivation méthodique
+    des propriétés **spécifiques** de la matière : ni communes à toute matière, ni trop
+    particulières ou passagères, mais propres à une large classe de comportements. Il songe
+    à la chaleur, au poids, à l'élasticité, à la solidité. Ces propriétés résultent d'une
+    force exercée (la gravité induit le poids) ou causent une force de mouvement (le
+    rebond élastique repousse le corps qui comprimait la matière élastique) : un système
+    élémentaire de propriétés est donc aussi un système de forces. Il cherche une
+    **heuristique rationnelle** : un critère d'une taxinomie qui soit *a priori*, c'est-à-dire
+    déductible avant la découverte empirique de ces propriétés.
+
+    **Ce que l'éther devait accomplir.** Les interprétations anciennes y voient le fondement
+    de la transition entre métaphysique et physique empirique. Howard (2023) soutient
+    autrement : la déduction de l'éther et la taxinomie des forces élémentaires fonderaient
+    ce qui fait de la physique empirique un savoir **systématique**, à long terme, si on la
+    poursuit comme il faut.
+
+    ! Il n'y a pas dans l'*Opus postumum* de doctrine stable à retenir : on y retient une
+    question (la transition), une définition de la physique et deux chantiers (l'éther,
+    le système des forces).
+  points:
+  - id: ks3-l3-p1
+    sentence: "Les notes, esquisses et brouillons que Kant rédige sur la physique, surtout à partir de 1796, sont rassemblés plus d'un siècle après sa mort sous le titre d'___."
+    answer: "Opus postumum"
+    alt: ["opus postumum"]
+  - id: ks3-l3-p2
+    sentence: "Dans des lettres de 1798, Kant parle de manière énigmatique d'une ___ dans sa philosophie critique, que l'*Opus postumum* aurait pour but de combler."
+    answer: "lacune"
+    alt: ["un vide"]
+  - id: ks3-l3-p3
+    sentence: "Howard (2023) lit dans l'expression latine « *hiatus in* ___ » (21:476) une pièce manquante du système de la philosophie tout entier, à combler par une doctrine-passerelle."
+    answer: "systemato"
+    alt: []
+  - id: ks3-l3-p4
+    sentence: "Pour Howard, la doctrine-passerelle que Kant cherche sous le nom de « transition » doit médiatiser entre les fondements métaphysiques de la science de la nature et la physique comme ___."
+    answer: "système"
+    alt: []
+  - id: ks3-l3-p5
+    sentence: "Kant définit la physique comme la recherche systématique de la nature par les forces de la matière données ___, en tant qu'elles sont liées entre elles dans un système (22:298)."
+    answer: "empiriquement"
+    alt: []
+  - id: ks3-l3-p6
+    sentence: "Kant définit la physique comme la recherche systématique de la nature par les forces de la matière données empiriquement, en tant qu'elles sont liées entre elles dans un ___ (22:298)."
+    answer: "système"
+    alt: []
+  - id: ks3-l3-p7
+    sentence: "Kant tente de démontrer *a priori* l'existence d'un substrat universel, fluide qui remplit l'espace et transporte les forces motrices, qu'il appelle l'éther ou le ___."
+    answer: "calorique"
+    alt: []
+  - id: ks3-l3-p8
+    sentence: "Dans l'*Opus postumum*, Kant tente une « déduction » de l'éther, c'est-à-dire une ___ non empirique de son existence, que les interprètes tiennent pour un véritable argument déductif."
+    answer: "preuve"
+    alt: ["démonstration"]
+  - id: ks3-l3-p9
+    sentence: "Le terme allemand qui désigne la preuve de l'éther dans l'*Opus postumum* est ___."
+    answer: "Ätherbeweis"
+    alt: ["Aetherbeweis", "atherbeweis"]
+  - id: ks3-l3-p10
+    sentence: "Kant cherche à dériver méthodiquement un « système élémentaire des forces ___ de la nature », c'est-à-dire des propriétés spécifiques de la matière comme la chaleur, le poids, l'élasticité et la solidité."
+    answer: "motrices"
+    alt: ["mouvantes"]
+  - id: ks3-l3-p11
+    sentence: "Pour Howard (2023), la déduction de l'éther et la taxinomie des forces élémentaires fondent ce qui fait de la physique empirique un savoir ___, à long terme, si elle est poursuivie comme il faut."
+    answer: "systématique"
+    alt: []
