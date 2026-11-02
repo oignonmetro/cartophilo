@@ -1,0 +1,335 @@
+# Cours sur la psychologie d'Aristote (voir content/philosophie.md), tiré de
+# l'article « Aristotle's Psychology » de Christopher Shields, Stanford
+# Encyclopedia of Philosophy (première publication 2000, révision substantielle
+# 2020) : introduction, sections 1 et 2. Les citations sont reprises du texte
+# français, non retraduites de l'anglais de l'article : De l'âme, Physique,
+# Métaphysique, Parties des animaux et De la sensation dans les Œuvres
+# complètes (Flammarion), le De l'âme étant traduit par Bodéüs.
+#
+# Vocabulaire de Bodéüs : réalisation (entelecheia, « actuality » dans
+# l'article), intelligence (nous, « mind »), appétit (orexis, « desire »),
+# désir (epithumia), représentation (phantasia).
+#
+# Repère corrigé sur le texte : la question des affections, « 402a3-5 » dans
+# l'article, se lit en 403a3-5. Le plan général de l'article et son renvoi à ses
+# suppléments (« Method in Psychology ») ne donnent pas de carte : ces
+# suppléments ne figurent pas dans le PDF fourni.
+
+id: sep-psy1
+title: "L'enquête sur l'âme"
+subtitle: "Une science de tous les vivants, à cheval sur la physique, et le cadre de l'hylémorphisme"
+icon: compass
+color: orange
+group: "La psychologie d'Aristote (SEP)"
+lessons:
+- id: sep-psy1-l1
+  title: "Aristote et ses écrits psychologiques"
+  notes: |-
+    **La psychologie d'Aristote appartient à sa maturité, et s'écrit depuis sa biologie.** Quelques dates situent ce fait.
+
+    | Période | Dates | Lieu |
+    | l'Académie de Platon | 367-347 | Athènes |
+    | les voyages, la recherche biologique | 347-334 | Assos, Lesbos, Macédoine |
+    | le Lycée, sa propre école | 334-323 | Athènes |
+
+    Né en **384** en Macédoine, mort en **322**, Aristote consacre ses années hors d'Athènes surtout à la recherche biologique. À en juger par leur contenu, ses principaux écrits psychologiques datent probablement du second séjour à Athènes : le {sky}*De l'âme*{/sky} y porte à la fois la marque de son intérêt pour la {violet}taxinomie biologique{/violet} et celle de sa théorie physique et métaphysique la plus élaborée.
+
+    **Deux ensembles de textes, deux niveaux d'abstraction.**
+    - Les {sky}*Parva naturalia*{/sky}, recueil lâche de petits traités (dont *De la sensation* et *De la mémoire*), sont d'orientation **empirique**. Ils annoncent porter sur ce qui est commun à l'âme et au corps : {teal}« celles qui sont communes à la fois à l'âme et au corps, comme la sensation, la mémoire, l'impulsion, l'appétit et le désir en général, et en outre le plaisir et la peine »{/teal} (*De la sensation*, 1, 436a6-10).
+    - Le {sky}*De l'âme*{/sky} pose, lui, la question de savoir si tout est ainsi commun : {teal}« est-ce que toutes appartiennent également en commun à l'être animé ou bien en est-il encore quelqu'une qui soit propre à l'âme elle-même ? Il est, en effet, nécessaire, mais difficile, d'en avoir une idée »{/teal} (I, 1, 403a3-5).
+
+    **La différence tient donc à la question.** {coral}Les *Parva naturalia* étudient les phénomènes communs, le *De l'âme* demande si tous les états psychologiques sont aussi des états matériels du corps.{/coral} D'où son caractère plus théorique, plus conscient de sa méthode, plus attentif aux questions générales sur la perception, la pensée et le rapport de l'âme au corps.
+
+    ! Le *De l'âme* n'est pas un traité sur l'âme humaine ou sur ce qui survit à la mort : son enquête vaut pour tout ce qui vit.
+  tables:
+  - table: periode-dates-lieu
+    exercises:
+    - {kind: bank, column: Dates}
+    - {kind: cell, column: Période}
+  points:
+  - id: sep-psy1-l1-p1
+    sentence: "Aristote, né en 384 en Macédoine, passe vingt ans à l'Académie de Platon (367-347), puis dirige sa propre école à Athènes, le ___ (334-323)."
+    answer: "Lycée"
+    alt: []
+  - id: sep-psy1-l1-p2
+    sentence: "Hors d'Athènes, à Assos et à Lesbos, Aristote se consacre surtout à la recherche ___, ce qui marque le *De l'âme*."
+    answer: "biologique"
+    alt: []
+  - id: sep-psy1-l1-p3
+    sentence: "Les principaux écrits psychologiques d'Aristote datent probablement de son second séjour à Athènes, donc de sa période la plus ___."
+    answer: "mûre"
+    alt: ["mature"]
+  - id: sep-psy1-l1-p4
+    sentence: "En dehors du *De l'âme*, Aristote étudie les phénomènes psychologiques dans le recueil lâche de petits traités appelé les *___*, d'orientation empirique."
+    answer: "Parva naturalia"
+    alt: ["Petits traités d'histoire naturelle"]
+  - id: sep-psy1-l1-p5
+    sentence: "Ouverture des *Parva naturalia* : les propriétés les plus importantes des animaux sont « celles qui sont communes à la fois à l'âme et au ___, comme la sensation, la mémoire, l'impulsion, l'appétit et le désir en général, et en outre le plaisir et la peine »."
+    answer: "corps"
+    alt: []
+  - id: sep-psy1-l1-p6
+    sentence: "L'annonce des phénomènes communs à l'âme et au corps, qui oppose les *Parva naturalia* au *De l'âme*, se lit dans le *De la sensation*, chapitre ___."
+    answer: "1"
+    alt: ["un", "premier"]
+  - id: sep-psy1-l1-p7
+    sentence: "*De l'âme*, I, 1, sur les affections de l'âme : « est-ce que toutes appartiennent également en commun à l'être animé ou bien en est-il encore quelqu'une qui soit ___ à l'âme elle-même ? »"
+    answer: "propre"
+    alt: []
+  - id: sep-psy1-l1-p8
+    sentence: "*De l'âme*, I, 1, sur la question de savoir si toutes les affections sont communes à l'âme et au corps : « Il est, en effet, nécessaire, mais ___, d'en avoir une idée »."
+    answer: "difficile"
+    alt: []
+  - id: sep-psy1-l1-p9
+    sentence: "Les *Parva naturalia* étudient les phénomènes communs à l'âme et au corps ; le *De l'âme* demande si tous les états psychologiques sont aussi des états ___ du corps, et procède ainsi à un plus haut niveau d'abstraction."
+    answer: "matériels"
+    alt: ["physiques"]
+- id: sep-psy1-l2
+  title: "L'âme, principe de la vie"
+  notes: |-
+    **Ce qui étonne d'abord un lecteur moderne : la psychologie d'Aristote étudie les plantes.** Elle est la science de l'âme (`psuchê`, en latin `anima`) ; or l'âme est pour lui un {violet}principe général de la vie{/violet}, non ce qui pense ou ce qui éprouve. {green}__Dès lors, tout ce qui vit a une âme, et la psychologie porte sur tous les vivants, non sur les seuls êtres humains, à qui Aristote réserve l'esprit.__{/green}
+
+    **Le mot contient déjà l'argument.** Un être {violet}animé{/violet} est un être qui a une *anima* : qu'un chêne soit animé n'a rien d'une rêverie animiste, cela veut seulement dire qu'il est vivant. Aussi le *De l'âme* doit-il rendre compte des activités vitales des plantes et des animaux à côté de celles de l'homme, et traite-t-il de la nature de la vie même, sujet qui sort du champ de la psychologie contemporaine.
+
+    **Un point de contact avec la psychologie d'aujourd'hui, pourtant.** Dans les deux cas, des questions différentes appellent des méthodes différentes, au point qu'on se demande si elles relèvent d'une même discipline. {yellow}Le spécialiste de la psychanalyse freudienne n'a, ni par son intérêt ni par sa méthode, de recouvrement immédiat avec le physiologiste du cerveau ou le généticien du comportement.{/yellow} C'est là le problème de la leçon suivante, qu'Aristote rencontre déjà.
+
+    ! « Avoir une âme » ne veut pas dire ici avoir une vie intérieure : la plante a une âme, sans éprouver quoi que ce soit.
+  points:
+  - id: sep-psy1-l2-p1
+    sentence: "La psychologie d'Aristote est la science de l'âme, en grec la ___, en latin *anima*."
+    answer: "psuchê"
+    alt: ["psuche", "psuchè", "psyché", "psyche", "psukhê"]
+  - id: sep-psy1-l2-p2
+    sentence: "Aristote conçoit l'âme comme un principe général de la ___ : sa psychologie étudie donc tous les vivants, et non les seuls êtres humains."
+    answer: "vie"
+    alt: []
+  - id: sep-psy1-l2-p3
+    sentence: "Parce que l'âme est le principe de la vie, le *De l'âme* doit rendre compte des activités vitales des ___ et des animaux à côté de celles de l'homme."
+    answer: "plantes"
+    alt: ["végétaux"]
+  - id: sep-psy1-l2-p4
+    sentence: "Qu'un chêne soit un être ___ (qui a une *anima*) veut seulement dire, chez Aristote, qu'il est vivant, et n'a rien d'animiste."
+    answer: "animé"
+    alt: []
+  - id: sep-psy1-l2-p5
+    sentence: "Comme la psychologie contemporaine, l'enquête d'Aristote sur l'âme se heurte à ceci : des questions différentes appellent des ___ différentes, au point qu'on doute qu'elles relèvent d'une même discipline."
+    answer: "méthodes"
+    alt: []
+- id: sep-psy1-l3
+  title: "Une enquête à cheval sur la science de la nature"
+  notes: |-
+    **L'âme relève-t-elle de la science de la nature ? Aristote répond oui et non, et c'est de là que vient sa difficulté de méthode.** La physique, pour lui, est la science théorique des êtres susceptibles de changement, distincte des mathématiques et de la philosophie première (*Métaphysique*, VI, 1).
+
+    **Oui, pour la plupart des états de l'âme.** La colère, la joie, le courage, la pitié, l'amour et la haine engagent le corps de façon centrale et manifeste : {teal}« les passions expriment ce qui est inhérent à une matière »{/teal} (I, 1, 403a25). Aussi {teal}« un naturaliste est en droit d'avoir ses vues sur l'âme »{/teal} (403a27-28). Sa définition de la colère le montre : le dialecticien y voit {yellow}« un appétit de vengeance »{/yellow}, le naturaliste {yellow}« un bouillonnement du sang qui entoure le cœur »{/yellow} (403a30-b1). L'un donne la forme, l'autre la matière, et il faut les deux. La *Métaphysique* dit de même qu'{teal}« il appartient au physicien d'étudier aussi une certaine âme, pour autant qu'elle n'est pas sans matière »{/teal} (VI, 1, 1026a5-6).
+
+    **Non, pour l'intelligence.** Celle-ci (`nous`) n'est peut-être pas engagée dans le corps à la manière de ces états. L'argument des *Parties des animaux* (I, 1) est une réduction :
+    - Si la science de la nature traitait de toute âme, elle traiterait aussi de l'intellection.
+    - Or une même science étudie les termes relatifs l'un à l'autre : donc aussi les intelligibles, c'est-à-dire tout.
+    - Donc {teal}« si c'est de toute âme, il n'y aura place pour aucune autre philosophie que la science naturelle »{/teal} (641a35-36).
+
+    Conclusion : {teal}« il ne faut pas parler de toute âme, car toute âme n'est pas nature, mais seulement une ou encore plusieurs parties de l'âme »{/teal} (641b9-10).
+
+    **D'où une perplexité authentique sur la méthode.** Si des sciences différentes emploient des méthodes différentes, et que l'étude de l'âme se partage sans appartenir à aucune, on ne sait plus comment procéder (I, 1, 402a16-22). Aristote entreprend donc l'enquête avec modestie : {teal}« il est de toute manière extrêmement malaisé d'atteindre une quelconque position convaincante à son propos »{/teal} (402a10-11). La question n'a pas disparu : à côté d'approches purement naturalistes, la philosophie de l'esprit emploie encore des méthodes *a priori*, et la science cognitive mêle les deux.
+  points:
+  - id: sep-psy1-l3-p1
+    sentence: "Colère, joie, courage, pitié, amour et haine engagent le corps de façon manifeste ; aussi, dit le *De l'âme*, « un ___ est en droit d'avoir ses vues sur l'âme »."
+    answer: "naturaliste"
+    alt: []
+  - id: sep-psy1-l3-p2
+    sentence: "Aristote, sur les passions comme la colère ou la pitié : « les passions expriment ce qui est inhérent à une ___ »."
+    answer: "matière"
+    alt: []
+  - id: sep-psy1-l3-p3
+    sentence: "La colère, pour le naturaliste du *De l'âme* : « un ___ du sang qui entoure le cœur » ; pour le dialecticien : « un appétit de vengeance »."
+    answer: "bouillonnement"
+    alt: []
+  - id: sep-psy1-l3-p4
+    sentence: "La colère, pour le naturaliste du *De l'âme* : « un bouillonnement du sang qui entoure le cœur » ; pour le dialecticien : « un appétit de ___ »."
+    answer: "vengeance"
+    alt: []
+  - id: sep-psy1-l3-p5
+    sentence: "Définir la colère comme un bouillonnement du sang en dit la matière, comme un appétit de vengeance en dit la ___ : le naturaliste doit se placer aux deux points de vue."
+    answer: "forme"
+    alt: []
+  - id: sep-psy1-l3-p6
+    sentence: "*Métaphysique*, VI, 1 : « il appartient au ___ d'étudier aussi une certaine âme, pour autant qu'elle n'est pas sans matière »."
+    answer: "physicien"
+    alt: []
+  - id: sep-psy1-l3-p7
+    sentence: "*Métaphysique*, VI, 1 : « il appartient au physicien d'étudier aussi une certaine âme, pour autant qu'elle n'est pas sans ___ »."
+    answer: "matière"
+    alt: []
+  - id: sep-psy1-l3-p8
+    sentence: "Le partage de l'âme entre le physicien et les autres sciences repose sur l'intelligence, en grec le ___, qui n'est peut-être pas engagée dans le corps comme les autres états."
+    answer: "nous"
+    alt: []
+  - id: sep-psy1-l3-p9
+    sentence: "*Parties des animaux*, I, 1 : si la science de la nature traitait de toute âme, elle traiterait de l'intellection, donc de tous les intelligibles, et « il n'y aura place pour aucune autre ___ que la science naturelle »."
+    answer: "philosophie"
+    alt: []
+  - id: sep-psy1-l3-p10
+    sentence: "*Parties des animaux*, I, 1 : « il ne faut pas parler de toute âme, car toute âme n'est pas ___, mais seulement une ou encore plusieurs parties de l'âme »."
+    answer: "nature"
+    alt: []
+  - id: sep-psy1-l3-p11
+    sentence: "L'argument selon lequel toute âme ne relève pas de la science naturelle, sinon il n'y aurait pas d'autre philosophie qu'elle, se trouve dans les *___*, I, 1."
+    answer: "Parties des animaux"
+    alt: []
+  - id: sep-psy1-l3-p12
+    sentence: "Une même science étudie les termes relatifs l'un à l'autre : si la science de la nature étudiait l'intellection, elle étudierait aussi les ___, c'est-à-dire tout."
+    answer: "intelligibles"
+    alt: []
+  - id: sep-psy1-l3-p13
+    sentence: "Modestie d'Aristote au seuil du *De l'âme* : « il est de toute manière extrêmement ___ d'atteindre une quelconque position convaincante à son propos »."
+    answer: "malaisé"
+    alt: []
+  - id: sep-psy1-l3-p14
+    sentence: "Si l'étude de l'âme se partage sans appartenir à aucune science, on ne sait plus quelle ___ employer : d'où la perplexité qu'Aristote expose dans *De l'âme*, I, 1."
+    answer: "méthode"
+    alt: []
+- id: sep-psy1-l4
+  title: "Les quatre causes"
+  notes: |-
+    **Le *De l'âme* emploie un vocabulaire technique forgé ailleurs : il faut d'abord en rappeler le cadre, l'{violet}hylémorphisme{/violet}.** Le mot est composé des termes grecs pour la matière (`hulê`) et pour la forme ou figure (`morphê`). Ce cadre s'élabore lui-même dans une théorie générale de la cause et de l'explication, celle des quatre causes (`aitiai`), qu'expose la *Physique* (II, 3).
+
+    | Cause | Ce qu'elle dit | La statue d'Hermès |
+    | matérielle | ce dont la chose est faite | le bronze |
+    | formelle | la structure que réalise la matière | la figure d'Hermès |
+    | efficiente | l'agent qui donne la forme | le sculpteur |
+    | finale | le but du composé | honorer Hermès |
+
+    **Le texte de la *Physique*.**
+    - {teal}« la réalité inhérente à une chose dont cette chose est faite, par exemple l'airain de la statue »{/teal} (194b24-25) ;
+    - {teal}« la forme et le modèle, c'est-à-dire la formule de l'être essentiel »{/teal} (194b26-27) ;
+    - {teal}« le principe premier d'où part le changement ou la mise en repos »{/teal} (194b29-30), {yellow}comme le père est cause de l'enfant{/yellow} ;
+    - {teal}« du but, c'est-à-dire du ce en vue de quoi »{/teal} (194b32-33), {yellow}comme la santé est la cause de la promenade{/yellow}.
+
+    **Une double thèse sur ces causes.** {green}__Une explication complète exige de mentionner les quatre, et, cela fait, n'a plus rien à demander.__{/green} L'appel aux quatre causes est donc nécessaire et suffisant, là où elles s'appliquent : toutes les choses explicables ne les ont pas toutes, les figures géométriques n'ayant pas de cause efficiente.
+
+    **Le vivant les a toutes.** {yellow}Un singe a une matière, son corps ; une forme, son âme ; une cause efficiente, son parent ; une cause finale, sa fonction.{/yellow} Dès lors, qu'Aristote donne de l'âme et du corps un traitement hylémorphique n'a rien d'une thèse ajoutée : {coral}c'est sa manière ordinaire d'expliquer.{/coral}
+
+    ! La cause finale d'une statue vient d'une intention, celle du vivant non : la fonction d'un singe n'est le projet de personne.
+  tables:
+  - table: cause-ce-qu-elle-dit-la-statue-d-hermes
+    exercises:
+    - {kind: bank, column: La statue d'Hermès}
+    - {kind: cell, column: Cause}
+  points:
+  - id: sep-psy1-l4-p1
+    sentence: "Le mot d'hylémorphisme est composé des termes grecs pour la forme (*morphê*) et pour la matière (*___*)."
+    answer: "hulê"
+    alt: ["hule", "hylé", "hyle"]
+  - id: sep-psy1-l4-p2
+    sentence: "Le mot d'hylémorphisme est composé des termes grecs pour la matière (*hulê*) et pour la forme ou figure (*___*)."
+    answer: "morphê"
+    alt: ["morphe", "morphè"]
+  - id: sep-psy1-l4-p3
+    sentence: "La cause ___, chez Aristote, c'est ce dont la chose est faite : le bronze de la statue."
+    answer: "matérielle"
+    alt: []
+  - id: sep-psy1-l4-p4
+    sentence: "La cause ___, chez Aristote, c'est la structure que réalise la matière, et qui en fait quelque chose de déterminé : la figure d'Hermès pour cette quantité de bronze."
+    answer: "formelle"
+    alt: []
+  - id: sep-psy1-l4-p5
+    sentence: "La cause ___, chez Aristote, c'est l'agent responsable de ce qu'une matière reçoive sa forme : le sculpteur."
+    answer: "efficiente"
+    alt: ["motrice"]
+  - id: sep-psy1-l4-p6
+    sentence: "La cause ___, chez Aristote, c'est le but du composé de forme et de matière : la statue est faite pour honorer Hermès."
+    answer: "finale"
+    alt: []
+  - id: sep-psy1-l4-p7
+    sentence: "*Physique*, II, 3, sur la cause matérielle : « la réalité inhérente à une chose dont cette chose est faite, par exemple l'___ de la statue »."
+    answer: "airain"
+    alt: []
+  - id: sep-psy1-l4-p8
+    sentence: "*Physique*, II, 3, sur la cause efficiente : « le principe premier d'où part le ___ ou la mise en repos »."
+    answer: "changement"
+    alt: []
+  - id: sep-psy1-l4-p9
+    sentence: "*Physique*, II, 3, sur la cause finale : « du but, c'est-à-dire du ce en vue de ___ »."
+    answer: "quoi"
+    alt: []
+  - id: sep-psy1-l4-p10
+    sentence: "Exemple de la *Physique*, II, 3 : pourquoi se promène-t-il ? Pour être en bonne ___, qui est la cause finale de sa promenade."
+    answer: "santé"
+    alt: []
+  - id: sep-psy1-l4-p11
+    sentence: "Exposé des quatre causes d'Aristote, avec l'airain de la statue : *Physique*, livre ___, chapitre 3."
+    answer: "II"
+    alt: ["2"]
+  - id: sep-psy1-l4-p12
+    sentence: "Pour Aristote, l'appel aux quatre causes, là où elles s'appliquent, est à la fois ___ et suffisant pour une explication complète."
+    answer: "nécessaire"
+    alt: []
+  - id: sep-psy1-l4-p13
+    sentence: "Toutes les choses explicables n'ont pas les quatre causes : les figures géométriques n'ont pas de cause ___."
+    answer: "efficiente"
+    alt: ["motrice"]
+  - id: sep-psy1-l4-p14
+    sentence: "Un singe a pour matière son corps, pour forme son ___, pour cause efficiente son parent, pour cause finale sa fonction."
+    answer: "âme"
+    alt: []
+- id: sep-psy1-l5
+  title: "Matière et forme, puissance et réalisation"
+  notes: |-
+    **La théorie des causes vient de problèmes sur le changement : c'est de là que sortent la matière et la forme.** Aristote soutient que tout changement exige quelque chose de complexe.
+
+    **L'argument.** Quand une statue vient d'un bloc de bronze, il y a un sujet qui persiste, le bronze, et quelque chose qu'il acquiert, sa forme. Sans cette complexité, {red}rien ne pourrait venir à être{/red}, car ce qui naît sortirait de rien ou ne serait que ce qu'il était déjà. {green}__Or il y a génération : la forme et la matière sont donc des traits réels des composés engendrés.__{/green}
+
+    **Le potentiel et l'effectif.** Un bloc indéterminé de bronze ne devient statue qu'en réalisant une certaine figure de statue. La matière est donc en puissance quelque F, jusqu'à ce qu'elle reçoive la forme qui la rend F de façon effective : {teal}« la matière est puissance, alors que la forme est réalisation »{/teal} (*De l'âme*, II, 1, 412a9-10). Le mot grec de **réalisation** est `entelecheia`, l'{violet}entéléchie{/violet}, que l'on traduit aussi par acte ou actualité.
+
+    **Deux sortes de forme.** Le changement qualitatif exige le même appareil : quand on peint une statue, le sujet qui persiste est la statue, et elle acquiert une couleur. Mais cette forme-là est {pink}accidentelle{/pink} : la statue peut la perdre et demeurer. Fondue et refaite en {yellow}douze douzaines de coupe-papier{/yellow}, en revanche, elle perd sa forme {green}essentielle{/green} et cesse d'exister.
+
+    | Forme | Son lien au sujet | En psychologie |
+    | essentielle | la perdre, c'est cesser d'être | l'âme |
+    | accidentelle | on peut la perdre et demeurer | la forme perçue |
+
+    **Ces origines comptent pour la psychologie.** D'abord, Aristote se sert des deux formes : {coral}__l'âme est une forme essentielle, percevoir revient à acquérir des formes accidentelles.__{/coral} Ensuite, un cadre forgé pour le changement {red}se trouve parfois à l'étroit{/red} : Aristote n'accepte pas sans réserve que toute perception ou toute pensée soit un simple changement dans un sujet qui persiste.
+
+    **Et surtout : le corps est-il vraiment une matière ?** Le bronze peut exister en bloc indéterminé, étant en puissance la statue d'un héros. {red}__Le corps n'a pas d'analogue de cet état : il n'attend pas là, comme une provision de matériau, qu'une âme vienne l'informer.__{/red} En un sens important, c'est **en étant animé** que le corps humain devient un corps humain. Il paraît donc mal fait pour tenir le rôle de matière, au sens précis de la théorie de la génération.
+  tables:
+  - table: forme-son-lien-au-sujet-en-psychologie
+    exercises:
+    - {kind: cell, column: En psychologie}
+  points:
+  - id: sep-psy1-l5-p1
+    sentence: "Pour Aristote, tout changement exige quelque chose de complexe : un sujet qui ___ (le bronze) et quelque chose qu'il acquiert (la forme)."
+    answer: "persiste"
+    alt: ["demeure"]
+  - id: sep-psy1-l5-p2
+    sentence: "Sans sujet qui persiste et forme acquise, il n'y aurait pas de ___ ; or il y en a : forme et matière sont donc des traits réels des composés."
+    answer: "génération"
+    alt: []
+  - id: sep-psy1-l5-p3
+    sentence: "*De l'âme*, II, 1 : « la matière est puissance, alors que la forme est ___ »."
+    answer: "réalisation"
+    alt: ["entéléchie", "acte"]
+  - id: sep-psy1-l5-p4
+    sentence: "*De l'âme*, II, 1 : « la matière est ___, alors que la forme est réalisation »."
+    answer: "puissance"
+    alt: []
+  - id: sep-psy1-l5-p5
+    sentence: "Le mot grec que Bodéüs traduit par « réalisation », et d'autres par acte ou actualité, est *___*."
+    answer: "entelecheia"
+    alt: ["entéléchie", "entelekheia"]
+  - id: sep-psy1-l5-p6
+    sentence: "Quand on peint une statue, elle acquiert une forme ___ : elle peut la perdre et demeurer."
+    answer: "accidentelle"
+    alt: []
+  - id: sep-psy1-l5-p7
+    sentence: "Une statue fondue et refaite en douze douzaines de coupe-papier perd sa forme ___ et cesse d'exister."
+    answer: "essentielle"
+    alt: []
+  - id: sep-psy1-l5-p8
+    sentence: "L'âme est une forme essentielle ; percevoir, c'est acquérir des formes ___."
+    answer: "accidentelles"
+    alt: []
+  - id: sep-psy1-l5-p9
+    sentence: "Le bronze peut exister en bloc indéterminé, en puissance la statue d'un héros ; le ___ n'a pas d'analogue de cet état, n'étant pas une provision de matériau qui attendrait son âme."
+    answer: "corps"
+    alt: []
+  - id: sep-psy1-l5-p10
+    sentence: "Le corps humain paraît mal fait pour tenir le rôle de matière, car c'est en étant ___ qu'il devient un corps humain, là où le bronze préexiste à la statue."
+    answer: "animé"
+    alt: []

@@ -1,0 +1,434 @@
+# Cours sur la psychologie d'Aristote (voir content/philosophie.md), tiré de
+# l'article « Aristotle's Psychology » de Christopher Shields, Stanford
+# Encyclopedia of Philosophy : sections 3, 4 et 5. Citations du De l'âme dans la
+# traduction de Bodéüs (Œuvres complètes, Flammarion). Certains passages cités
+# ici (la hache, l'œil, la science et l'acte de spéculer, les figures) viennent
+# directement du De l'âme, pour expliquer ce que l'article résume. Les
+# suppléments sur l'hylémorphisme, simples renvois, ne figurent pas dans le PDF
+# fourni. Le renvoi de l'article à « iii 7, 412a12-14 » pour l'appétit paraît
+# fautif et n'est pas repris.
+
+id: sep-psy2
+title: "L'âme, le corps, les facultés"
+subtitle: "Définir l'âme, la question de l'unité et de la séparation, la hiérarchie des facultés, la nutrition"
+icon: infinity
+color: orange
+group: "La psychologie d'Aristote (SEP)"
+lessons:
+- id: sep-psy2-l1
+  title: "Les définitions de l'âme"
+  notes: |-
+    **Le *De l'âme* donne de l'âme trois formules, qui valent pour les plantes, les animaux et les hommes.** Elles emploient le vocabulaire de l'hylémorphisme, et leur enchaînement est le suivant (II, 1).
+
+    {teal}« Il faut donc nécessairement que l'âme soit substance comme forme d'un corps naturel qui a potentiellement la vie. »{/teal} (412a19-21)
+
+    {teal}« l'âme est la réalisation première d'un corps naturel qui a potentiellement la vie »{/teal} (412a27-28)
+
+    {teal}« la réalisation première d'un corps naturel pourvu d'organes »{/teal} (412b5-6)
+
+    **Pourquoi « première » ?** La réalisation s'entend de deux façons, {yellow}« comme la science »{/yellow} et {yellow}« comme l'acte de spéculer »{/yellow}. Celui qui sait la géométrie la possède même quand il n'y pense pas ; celui qui la pratique l'exerce. Or {green}__l'âme est présente aussi dans le sommeil__{/green}, où le vivant n'exerce rien : elle est donc comme la science possédée, non comme son exercice. Elle est une capacité en place, non une activité en cours.
+
+    **« Qui a potentiellement la vie ».** Le piège est de lire là un corps mort qui attendrait la vie. C'est le contraire : {teal}« ce n'est pas lorsqu'il se trouve dépouillé de son âme que le corps a la puissance de vivre, mais lorsqu'il la possède »{/teal} (412b25-26).
+
+    **Deux images d'Aristote.** Si un outil était un corps naturel, {yellow}l'âme de la hache{/yellow} serait ce qui la fait hache : ôtez-le, {teal}« il n'y aurait plus de hache, sauf de façon purement nominale »{/teal} (412b14-15). Plus près du vivant : {teal}« Si l'œil, en effet, était un animal, la vue en serait l'âme »{/teal} (412b18-19). L'œil sans vue n'est plus un œil que de nom, {yellow}comme l'œil en pierre ou celui qui est dessiné{/yellow}. La hache a une limite : elle n'a pas en elle-même le principe de son mouvement, ce qui est le propre du corps naturel.
+
+    ! L'âme n'est pas une chose logée dans un corps : elle est ce qui fait de ce corps un vivant qui peut exercer ses fonctions, comme la vue fait d'un œil un œil.
+  points:
+  - id: sep-psy2-l1-p1
+    sentence: "*De l'âme*, II, 1 : « l'âme est la réalisation ___ d'un corps naturel qui a potentiellement la vie »."
+    answer: "première"
+    alt: []
+  - id: sep-psy2-l1-p2
+    sentence: "*De l'âme*, II, 1 : « l'âme est la ___ première d'un corps naturel qui a potentiellement la vie »."
+    answer: "réalisation"
+    alt: ["entéléchie", "acte"]
+  - id: sep-psy2-l1-p3
+    sentence: "*De l'âme*, II, 1 : « l'âme est la réalisation première d'un corps ___ qui a potentiellement la vie »."
+    answer: "naturel"
+    alt: []
+  - id: sep-psy2-l1-p4
+    sentence: "*De l'âme*, II, 1 : « l'âme est la réalisation première d'un corps naturel qui a ___ la vie »."
+    answer: "potentiellement"
+    alt: ["en puissance"]
+  - id: sep-psy2-l1-p5
+    sentence: "Formule de l'âme applicable à toute âme, selon *De l'âme*, II, 1 : « la réalisation première d'un corps naturel pourvu d'___ »."
+    answer: "organes"
+    alt: []
+  - id: sep-psy2-l1-p6
+    sentence: "*De l'âme*, II, 1 : « Il faut donc nécessairement que l'âme soit ___ comme forme d'un corps naturel qui a potentiellement la vie. »"
+    answer: "substance"
+    alt: []
+  - id: sep-psy2-l1-p7
+    sentence: "*De l'âme*, II, 1 : « Il faut donc nécessairement que l'âme soit substance comme ___ d'un corps naturel qui a potentiellement la vie. »"
+    answer: "forme"
+    alt: []
+  - id: sep-psy2-l1-p8
+    sentence: "L'âme est présente aussi dans le ___, où rien n'est exercé : elle est donc réalisation première, comme la science possédée, non comme l'acte de spéculer."
+    answer: "sommeil"
+    alt: []
+  - id: sep-psy2-l1-p9
+    sentence: "La réalisation s'entend comme la ___, qu'on possède sans l'exercer, ou comme l'acte de spéculer : l'âme est réalisation au premier sens."
+    answer: "science"
+    alt: []
+  - id: sep-psy2-l1-p10
+    sentence: "Le corps qui a potentiellement la vie n'est pas un cadavre : « ce n'est pas lorsqu'il se trouve dépouillé de son âme que le corps a la ___ de vivre, mais lorsqu'il la possède »."
+    answer: "puissance"
+    alt: []
+  - id: sep-psy2-l1-p11
+    sentence: "*De l'âme*, II, 1 : « Si l'œil, en effet, était un animal, la ___ en serait l'âme »."
+    answer: "vue"
+    alt: []
+  - id: sep-psy2-l1-p12
+    sentence: "Image du *De l'âme*, II, 1 : si un outil était un corps naturel, ce qui le fait être tel serait son âme ; ôtez-le, et « il n'y aurait plus de ___, sauf de façon purement nominale »."
+    answer: "hache"
+    alt: []
+  - id: sep-psy2-l1-p13
+    sentence: "L'œil privé de la vue n'est plus un œil que de nom, comme l'œil en ___ ou celui qui est dessiné."
+    answer: "pierre"
+    alt: []
+- id: sep-psy2-l2
+  title: "L'âme et le corps font-ils un ?"
+  notes: |-
+    **Le rapport de l'âme et du corps se ramène à une analogie générale.**
+
+    | Terme | Sa contrepartie |
+    | l'âme | le corps |
+    | la forme | la matière |
+    | la figure d'Hermès | le bronze |
+
+    **Une querelle court-circuitée.** Le {pink}matérialiste{/pink} tient que tous les états mentaux sont aussi des états physiques. Le {pink}dualiste des substances{/pink} le nie, parce que l'âme est pour lui un sujet qui peut exister seul, séparé du corps. Or, si nous ne voyons pas de question importante à demander si la figure d'Hermès et son bronze sont un, nous n'avons pas de raison d'en voir une pour l'âme et le corps :
+
+    {teal}« C'est pourquoi l'on n'a même pas besoin de chercher si le corps et l'âme font un, exactement comme on ne le demande non plus de la cire et de la figure, ni, globalement, de la matière de chaque chose et de ce qui a cette matière. Car l'un et l'être, dont on parle effectivement en plusieurs sens, c'est, souverainement, la réalisation. »{/teal} (II, 1, 412b6-9)
+
+    **Ce que la phrase ne dit pas.** Aristote ne déclare pas la question dépourvue de sens : il la dégonfle, comme une question facile ou sans importance. {red}__Il ne tranche pas non plus en disant que l'âme et le corps sont identiques__{/red}, ce qu'il nie ailleurs (412a17 ; 414a1-20). De la cire d'une bougie et de sa figure, on peut soutenir qu'elles sont distinctes : la cire peut exister quand la figure n'est plus, et la figure peut survivre au remplacement de sa matière. {coral}De même, on peut nier l'identité de l'âme et du corps.{/coral}
+
+    **Ce qui lui ôte sa force.** La question de l'unité perd son poids dès lors qu'elle n'implique rien de plus que pour un autre composé, {yellow}une maison ou un objet fabriqué{/yellow} : elle n'a plus l'air de contenir le secret de ce que nous sommes.
+  tables:
+  - table: terme-sa-contrepartie
+    exercises: []
+  points:
+  - id: sep-psy2-l2-p1
+    sentence: "Analogie de l'hylémorphisme : l'âme est au corps ce que la forme est à la matière, et ce que la figure d'Hermès est au ___."
+    answer: "bronze"
+    alt: ["airain"]
+  - id: sep-psy2-l2-p2
+    sentence: "*De l'âme*, II, 1 : « l'on n'a même pas besoin de chercher si le corps et l'âme font un, exactement comme on ne le demande non plus de la ___ et de la figure »."
+    answer: "cire"
+    alt: []
+  - id: sep-psy2-l2-p3
+    sentence: "*De l'âme*, II, 1 : « l'on n'a même pas besoin de chercher si le corps et l'âme font un, exactement comme on ne le demande non plus de la cire et de la ___ »."
+    answer: "figure"
+    alt: []
+  - id: sep-psy2-l2-p4
+    sentence: "*De l'âme*, II, 1 : « l'on n'a même pas besoin de chercher si le corps et l'âme font ___, exactement comme on ne le demande non plus de la cire et de la figure »."
+    answer: "un"
+    alt: []
+  - id: sep-psy2-l2-p5
+    sentence: "*De l'âme*, II, 1 : « Car l'un et l'être, dont on parle effectivement en plusieurs sens, c'est, souverainement, la ___. »"
+    answer: "réalisation"
+    alt: ["entéléchie", "acte"]
+  - id: sep-psy2-l2-p6
+    sentence: "Le ___ tient que tous les états mentaux sont aussi des états physiques ; hylémorphisme et analogie de la cire laissent cette querelle de côté."
+    answer: "matérialiste"
+    alt: []
+  - id: sep-psy2-l2-p7
+    sentence: "Le ___ des substances fait de l'âme un sujet d'états mentaux qui peut exister seul, séparé du corps."
+    answer: "dualiste"
+    alt: []
+  - id: sep-psy2-l2-p8
+    sentence: "En écartant la question de l'unité de l'âme et du corps, Aristote ne soutient pas qu'ils sont ___ : la cire peut exister quand sa figure n'est plus."
+    answer: "identiques"
+    alt: []
+  - id: sep-psy2-l2-p9
+    sentence: "La figure d'une bougie peut survivre au remplacement de sa ___ ; on peut ainsi soutenir que la cire et sa figure sont distinctes, comme le corps et l'âme."
+    answer: "matière"
+    alt: ["cire"]
+- id: sep-psy2-l3
+  title: "L'âme est-elle séparable ?"
+  notes: |-
+    **Seconde leçon de l'hylémorphisme : la {violet}séparabilité{/violet} de l'âme**, que les dualistes admettent depuis Platon. L'argument est une analogie : {green}__si nous ne pensons pas que la figure d'Hermès persiste une fois le bronze fondu, nous n'avons pas à penser que l'âme survit à la disparition du corps.__{/green} À moins d'admettre que les formes en général existent sans leur matière, il n'y a pas à faire des âmes un cas d'exception.
+
+    {teal}« On voit donc sans peine que l'âme n'est pas séparable du corps ou qu'elle a des parties qui ne le sont pas, si tant est que la nature l'ait faite morcelable. »{/teal} (II, 1, 413a3-5)
+
+    **Mais la phrase a une réserve.** L'hylémorphisme ne réfute pas toute forme de dualisme : la raison de l'inséparabilité est que l'âme est réalisation de parties du corps, donc là où ce n'est pas le cas, la raison ne vaut plus.
+
+    {teal}« Mais, bien évidemment, en certaines autres parties, rien n'empêche la séparation, parce qu'elles ne sont réalisations d'aucun corps. »{/teal} (413a6-7)
+
+    {coral}Aristote annonce ainsi sa position complexe sur l'intelligence{/coral}, qu'il présente toujours comme une exception parmi les facultés. Il le redit en II, 2 : {teal}« il y a apparence que ce soit un genre d'âme différent. Et il se peut que lui seul soit séparé, comme l'éternel du périssable »{/teal} (413b25-27).
+
+    **Une voie moyenne.** L'âme explique que cette matière soit celle d'un homme, comme la forme fait que ces briques et ce mortier soient {yellow}une maison, plutôt qu'un mur ou un four{/yellow}, en remplissant la fonction de la maison, l'abri. Aristote donne donc à la fois raison et tort aux dualistes :
+    - **Platon et les dualistes ont raison** : on ne peut expliquer un vivant sans parler de son âme.
+    - **Ils ont tort** de conclure de là à la séparabilité, puisque l'appel à la cause formelle ne l'établit pas : l'âme peut être distincte du corps, et en être la réalisation, sans pouvoir exister sans lui.
+
+    {green}__L'hylémorphisme n'embrasse donc ni le matérialisme réducteur ni le dualisme platonicien__{/green} : il montre, implicitement, que ce ne sont pas les seules options. Le mot juste est ici : {teal}« Elle n'est pas un corps, en effet, mais quelque chose du corps. »{/teal} (II, 2, 414a20-21)
+
+    ! Le *De l'âme* ne dit pas que l'âme meurt tout entière : le passage laisse ouverte la question d'une partie qui ne serait réalisation d'aucun corps.
+  points:
+  - id: sep-psy2-l3-p1
+    sentence: "*De l'âme*, II, 1 : « On voit donc sans peine que l'âme n'est pas ___ du corps ou qu'elle a des parties qui ne le sont pas »."
+    answer: "séparable"
+    alt: []
+  - id: sep-psy2-l3-p2
+    sentence: "*De l'âme*, II, 1 : « On voit donc sans peine que l'âme n'est pas séparable du corps ou qu'elle a des ___ qui ne le sont pas »."
+    answer: "parties"
+    alt: []
+  - id: sep-psy2-l3-p3
+    sentence: "Analogie contre la survie de l'âme : si nous ne pensons pas que la figure d'Hermès persiste une fois le bronze ___, nous n'avons pas à penser que l'âme survit à la disparition du corps."
+    answer: "fondu"
+    alt: []
+  - id: sep-psy2-l3-p4
+    sentence: "*De l'âme*, II, 1, réserve à l'inséparabilité de l'âme : « en certaines autres parties, rien n'empêche la ___, parce qu'elles ne sont réalisations d'aucun corps »."
+    answer: "séparation"
+    alt: []
+  - id: sep-psy2-l3-p5
+    sentence: "*De l'âme*, II, 1, réserve à l'inséparabilité de l'âme : « en certaines autres parties, rien n'empêche la séparation, parce qu'elles ne sont réalisations d'aucun ___ »."
+    answer: "corps"
+    alt: []
+  - id: sep-psy2-l3-p6
+    sentence: "La réserve sur l'inséparabilité de l'âme annonce le statut d'exception de l'___ parmi les facultés : « Et il se peut que lui seul soit séparé, comme l'éternel du périssable »."
+    answer: "intelligence"
+    alt: ["intellect", "nous"]
+  - id: sep-psy2-l3-p7
+    sentence: "*De l'âme*, II, 2, sur l'intelligence : « il se peut que lui seul soit séparé, comme l'éternel du ___ »."
+    answer: "périssable"
+    alt: []
+  - id: sep-psy2-l3-p8
+    sentence: "La forme fait que ces briques et ce mortier soient une maison plutôt qu'un mur ou un four, en remplissant la fonction de la maison, l'___."
+    answer: "abri"
+    alt: []
+  - id: sep-psy2-l3-p9
+    sentence: "Platon et les dualistes ont raison de juger l'âme indispensable pour expliquer un vivant, mais la cause ___ ne justifie pas à elle seule la séparabilité."
+    answer: "formelle"
+    alt: []
+  - id: sep-psy2-l3-p10
+    sentence: "L'hylémorphisme d'Aristote n'embrasse ni le matérialisme ___ ni le dualisme platonicien : il montre que ce ne sont pas les seules options."
+    answer: "réducteur"
+    alt: ["réductionniste"]
+  - id: sep-psy2-l3-p11
+    sentence: "L'hylémorphisme d'Aristote n'embrasse ni le matérialisme réducteur ni le dualisme ___ : il montre que ce ne sont pas les seules options."
+    answer: "platonicien"
+    alt: []
+  - id: sep-psy2-l3-p12
+    sentence: "*De l'âme*, II, 2, sur l'âme : « Elle n'est pas un corps, en effet, mais ___ du corps. »"
+    answer: "quelque chose"
+    alt: []
+- id: sep-psy2-l4
+  title: "La hiérarchie des facultés"
+  notes: |-
+    **Aristote consacre l'essentiel de son effort non à la formule générale de l'âme, mais à ses facultés.** Il énumère d'abord la nutrition, la sensation et l'intelligence, la sensation recevant la part du lion ; plus tard, il ajoute l'appétit.
+
+    | Vivant | Nutrition | Sensation | Intelligence |
+    | plante | oui | non | non |
+    | animal | oui | oui | non |
+    | homme | oui | oui | oui |
+
+    **Ce n'est pas une simple liste, c'est une série.** Qui a la raison a la sensation ; qui a la sensation a la nutrition et la reproduction ; l'inverse n'est pas vrai. {teal}« Car sans le nutritif, le sensitif n'existe pas, mais le nutritif se détache du sensitif chez les plantes. »{/teal} (II, 3, 415a1-2)
+
+    **Les raisons sont téléologiques.** Tout vivant, en tant que tel, croît, atteint la maturité, décline. {green}__Sans faculté nutritive, ces activités seraient impossibles__{/green} (III, 12, 434a22-b18) : {teal}« L'être qui est né exige, en effet, nécessairement croissance, maturité et dépérissement. Or cela ne se peut sans nutrition. »{/teal} Voilà pourquoi la psychologie doit traiter de la nutrition, et non de la seule perception ou de la seule pensée.
+
+    **L'unité de l'âme : l'image des figures.** Une âme est-elle la somme de ses facultés ? Certains interprètes s'en contentent ; Aristote exige une unité non agrégative (II, 3, 414b28-32). Il compare les âmes aux figures : {teal}« le quadrilatère implique le triangle et le sensitif, le nutritif »{/teal}. Un carré n'est pas un triangle plus un autre élément posé à côté : il contient le triangle en puissance. De même, {coral}l'âme d'un homme n'est pas une âme de plante à laquelle s'ajouterait une âme de bête{/coral}. Aussi est-il {red}« ridicule »{/red} de chercher une seule formule commune, sans chercher celle de l'âme de chaque vivant (414b25).
+
+    ! Il ne faut pas lire la hiérarchie comme un empilement de trois âmes logées en nous : l'homme a une seule âme, de même qu'un quadrilatère n'est pas plusieurs figures.
+  tables:
+  - table: vivant-nutrition-sensation-intelligence
+    exercises:
+    - {kind: cell, column: Vivant}
+  points:
+  - id: sep-psy2-l4-p1
+    sentence: "Aristote énumère d'abord trois facultés de l'âme : la nutrition, la sensation et l'___, avant d'y ajouter l'appétit."
+    answer: "intelligence"
+    alt: ["intellect", "esprit"]
+  - id: sep-psy2-l4-p2
+    sentence: "Aristote énumère d'abord trois facultés de l'âme : la nutrition, la ___ et l'intelligence, avant d'y ajouter l'appétit."
+    answer: "sensation"
+    alt: ["perception"]
+  - id: sep-psy2-l4-p3
+    sentence: "Les plantes n'ont que l'âme ___ ; les animaux y ajoutent la sensation ; les hommes ont les trois."
+    answer: "nutritive"
+    alt: []
+  - id: sep-psy2-l4-p4
+    sentence: "*De l'âme*, II, 3 : « Car sans le ___, le sensitif n'existe pas, mais le nutritif se détache du sensitif chez les plantes. »"
+    answer: "nutritif"
+    alt: []
+  - id: sep-psy2-l4-p5
+    sentence: "*De l'âme*, II, 3 : « Car sans le nutritif, le sensitif n'existe pas, mais le nutritif se détache du sensitif chez les ___. »"
+    answer: "plantes"
+    alt: []
+  - id: sep-psy2-l4-p6
+    sentence: "La hiérarchie des facultés a des raisons ___ : tout vivant croît, atteint la maturité et décline, ce qui serait impossible sans nutrition."
+    answer: "téléologiques"
+    alt: []
+  - id: sep-psy2-l4-p7
+    sentence: "*De l'âme*, III, 12 : « L'être qui est né exige, en effet, nécessairement croissance, maturité et ___. Or cela ne se peut sans nutrition. »"
+    answer: "dépérissement"
+    alt: []
+  - id: sep-psy2-l4-p8
+    sentence: "Image de l'unité de l'âme, en *De l'âme*, II, 3 : « le ___ implique le triangle et le sensitif, le nutritif »."
+    answer: "quadrilatère"
+    alt: []
+  - id: sep-psy2-l4-p9
+    sentence: "Image de l'unité de l'âme, en *De l'âme*, II, 3 : « le quadrilatère implique le ___ et le sensitif, le nutritif »."
+    answer: "triangle"
+    alt: []
+  - id: sep-psy2-l4-p10
+    sentence: "Certains interprètes tiennent l'âme d'Aristote pour une somme de capacités, alors qu'il exige une unité non ___, comme celle des figures."
+    answer: "agrégative"
+    alt: []
+  - id: sep-psy2-l4-p11
+    sentence: "Puisqu'une formule commune à toutes les âmes ne serait propre à aucune, Aristote la juge « ___ » à chercher si l'on néglige l'âme de chaque vivant."
+    answer: "ridicule"
+    alt: []
+- id: sep-psy2-l5
+  title: "Représentation et appétit : deux facultés à part ?"
+  notes: |-
+    **Quelles capacités comptent comme des facultés à part entière ? Le point est disputé.** Aristote tient à l'évidence pour centrales les trois premières, qui lui servent à tracer la hiérarchie de la vie. Mais il traite aussi de deux autres, qu'il emploie dans sa théorie de la pensée et dans celle de l'action, sans guère les caractériser en elles-mêmes.
+
+    - La {violet}représentation{/violet} (`phantasia`, l'imagination, III, 3) : une faculté subordonnée, semble-t-il, intégrée de diverses façons à la nutrition, à la sensation et à la pensée.
+    - L'{violet}appétit{/violet} (`orexis`, « désir » dans bien des traductions, III, 9-10) : plus complexe. Il ne se trouve pas sans la sensation, mais finit élevé au rang de faculté à part entière, surtout à cause de son rôle dans l'explication de la conduite orientée vers un but.
+
+    Sur ce dernier point, le lien est démontré dès II, 3 : {teal}« qui se trouve doué de sensation, est aussi accessible au plaisir et à la peine »{/teal} (414b4), et donc au désir, {teal}« puisque ce dernier est l'appétit de l'agréable »{/teal} (414b6).
+
+    **Une difficulté qu'Aristote voit lui-même.** Découper l'âme selon ses capacités fait surgir des parties sans fin : {teal}« elles sont manifestement en nombre infini »{/teal} (III, 9, 432a24), et le découpage du calcul, de l'ardeur et du désir, en particulier, ne convient pas à l'appétit, qui se trouverait dans chacune : {teal}« il est déplacé de la mettre en morceaux »{/teal} (432b5). {coral}C'est le même souci de l'unité de l'âme : comment ses capacités s'intègrent-elles en une seule forme ?{/coral}
+
+    ! « Représentation » traduit ici `phantasia` : cela ne veut pas dire une image intentionnellement produite, ni une fiction.
+  points:
+  - id: sep-psy2-l5-p1
+    sentence: "Aristote emploie deux capacités sans guère les caractériser en elles-mêmes : l'appétit, et la représentation, en grec *___* (imagination)."
+    answer: "phantasia"
+    alt: ["phantasie"]
+  - id: sep-psy2-l5-p2
+    sentence: "Aristote emploie deux capacités sans guère les caractériser en elles-mêmes : l'appétit, en grec *___*, et la représentation."
+    answer: "orexis"
+    alt: []
+  - id: sep-psy2-l5-p3
+    sentence: "La *phantasia* de *De l'âme*, III, 3, que Bodéüs rend par ___, est une faculté subordonnée, intégrée à la nutrition, à la sensation et à la pensée."
+    answer: "représentation"
+    alt: ["imagination"]
+  - id: sep-psy2-l5-p4
+    sentence: "L'appétit finit élevé au rang de faculté à part entière, surtout pour son rôle dans l'explication de la conduite orientée vers un ___."
+    answer: "but"
+    alt: []
+  - id: sep-psy2-l5-p5
+    sentence: "*De l'âme*, II, 3 : celui qui a la sensation est accessible au plaisir et à la peine, donc au désir, « puisque ce dernier est l'appétit de l'___ »."
+    answer: "agréable"
+    alt: []
+  - id: sep-psy2-l5-p6
+    sentence: "*De l'âme*, III, 9, sur le découpage de l'âme selon ses capacités : « elles sont manifestement en nombre ___ »."
+    answer: "infini"
+    alt: []
+  - id: sep-psy2-l5-p7
+    sentence: "L'appétit se trouverait dans chacune des trois parties de l'âme de Platon ; aussi, dit Aristote, « il est déplacé de la mettre en ___ »."
+    answer: "morceaux"
+    alt: []
+- id: sep-psy2-l6
+  title: "La nutrition, première des facultés"
+  notes: |-
+    **Aristote commence par la nutrition, pour deux raisons liées.** La psychologie porte sur tout ce qui est animé, et l'âme nutritive se trouve partout : elle est {teal}« la première faculté de l'âme et la plus commune, celle en vertu de laquelle la vie appartient à tous »{/teal} (II, 4, 415a24-25). Et, les formes supérieures la supposant, son explication passe avant dans l'ordre de l'exposé.
+
+    **Un précepte de méthode : une faculté se définit par ses objets.** On distingue la sensation de l'intelligence parce que l'une vise les qualités sensibles, l'autre les formes intelligibles. L'ordre va donc des objets aux actes, et des actes aux facultés : {teal}« les facultés sont précédées par les actes et les actions, selon l'ordre logique »{/teal} (415a18-20), et les actes par leurs objets, {teal}« de la nourriture, du sensible et de l'intelligible »{/teal} (415a22).
+
+    **Une distinction en apparence banale.** Dans la nutrition, il y a trois choses (II, 4, 416b20-23) :
+
+    | Terme | Ce que c'est |
+    | ce qui fait qu'on s'alimente | l'âme primordiale |
+    | ce qui s'alimente | le corps pourvu de cette âme |
+    | ce dont on s'alimente | la nourriture |
+
+    **Son intérêt : seul un vivant peut se nourrir.** {teal}« Or nul ne se nourrit qui n'ait point part à la vie. »{/teal} (415b27-28) La conséquence est tirée plus loin : {teal}« puisque rien ne se nourrit qui n'ait point part à la vie, c'est le corps animé qui s'alimente, en tant qu'il est animé, de telle sorte que la nourriture a une relation au sujet animé qui n'est pas accidentelle »{/teal} (416b9-11). Une chose n'est donc pas d'abord nourriture, puis, par chance, utile aux vivants : {green}ce qui est aliment, en tant qu'aliment, se définit par rapport à la vie.{/green}
+
+    ! La thèse ne porte pas sur la composition de l'aliment : elle dit que rien n'est aliment, en tant qu'aliment, hors de sa relation à un être animé.
+  tables:
+  - table: terme-ce-que-c-est
+    exercises:
+    - {kind: bank, column: Ce que c'est}
+    - {kind: cell, column: Ce que c'est}
+  points:
+  - id: sep-psy2-l6-p1
+    sentence: "*De l'âme*, II, 4, sur l'âme nutritive : « la première faculté de l'âme et la plus ___, celle en vertu de laquelle la vie appartient à tous »."
+    answer: "commune"
+    alt: []
+  - id: sep-psy2-l6-p2
+    sentence: "*De l'âme*, II, 4, sur l'âme nutritive : « la ___ faculté de l'âme et la plus commune, celle en vertu de laquelle la vie appartient à tous »."
+    answer: "première"
+    alt: []
+  - id: sep-psy2-l6-p3
+    sentence: "Précepte de méthode du *De l'âme* : une faculté se définit par ses ___, ce qui distingue la sensation (qualités sensibles) de l'intelligence (formes intelligibles)."
+    answer: "objets"
+    alt: []
+  - id: sep-psy2-l6-p4
+    sentence: "*De l'âme*, II, 4 : « les facultés sont précédées par les ___ et les actions, selon l'ordre logique »."
+    answer: "actes"
+    alt: []
+  - id: sep-psy2-l6-p5
+    sentence: "Les trois objets des facultés selon *De l'âme*, II, 4 : « de la nourriture, du sensible et de l'___ »."
+    answer: "intelligible"
+    alt: []
+  - id: sep-psy2-l6-p6
+    sentence: "*De l'âme*, II, 4 : dans la nutrition, ce qui fait qu'on s'alimente est l'âme ___ ; ce qui s'alimente, le corps qui en est pourvu ; ce dont il s'alimente, la nourriture."
+    answer: "primordiale"
+    alt: []
+  - id: sep-psy2-l6-p7
+    sentence: "*De l'âme*, II, 4 : « Or nul ne se nourrit qui n'ait point part à la ___. »"
+    answer: "vie"
+    alt: []
+  - id: sep-psy2-l6-p8
+    sentence: "*De l'âme*, II, 4 : « c'est le corps animé qui s'alimente, en tant qu'il est animé, de telle sorte que la nourriture a une relation au sujet animé qui n'est pas ___ »."
+    answer: "accidentelle"
+    alt: []
+- id: sep-psy2-l7
+  title: "Pas de définition réductive de la vie"
+  notes: |-
+    **L'observation sur la nourriture porte loin : elle barre la route à une définition réductive de la vie.**
+
+    **La circularité.** Toute explication adéquate de la nutrition doit mentionner la vie. Essayons donc de définir la vie par la nutrition :
+    - un système vivant est ce qui peut se nourrir ;
+    - or la nourriture est ce qui peut entretenir un système vivant.
+
+    {red}__Le cercle est vicieux__{/red} : chaque terme sert à définir l'autre. Si l'on ne peut définir autrement les systèmes vivants, on n'aura pas de définition réductive de la vie. {coral}Aristote résistera donc à toute définition de la vie en des termes qui ne la supposent pas déjà.{/coral}
+
+    **Contre les explications mécaniques de la croissance** (415b27-416a20). Aristote rejette ceux qui expliquent la croissance par les seules tendances des éléments. Empédocle fait croître les plantes vers le bas par la terre, vers le haut par le feu ; mais {teal}« qu'est-ce qui assure la cohésion du feu et de la terre qui se portent en sens opposés ? »{/teal} (416a6-7) D'autres font du feu la cause de la croissance, puisqu'il semble seul à s'alimenter et à croître. Or :
+
+    {teal}« la croissance du feu s'étend à l'infini, tant que le combustible est disponible, alors que les systèmes que forme la nature ont tous une limite et un ordre de grandeur ainsi que de croissance »{/teal} (416a15-17)
+
+    **L'argument est celui de la limite.** Le feu croît au hasard, sans direction, vers tout ce qui brûle, jusqu'à être arrêté du dehors, par un obstacle ou le manque de combustible. {green}__Un vivant, lui, cesse de croître de lui-même, une fois atteinte la structure de son espèce__{/green} : un chêne ne devient pas indéfiniment plus grand parce qu'il a de la terre. Sa croissance suit des voies structurées vers une fin, et ce fait {teal}« manifeste une proportion plutôt qu'une matière »{/teal} (416a17-18).
+
+    **Une portée encore actuelle ?** Les matérialismes visés sont primitifs. On peut donc se demander si la croissance limitée est incompatible avec un matérialisme plus avancé, et s'il serait réducteur au sens d'éviter toute référence à la vie. Jusqu'ici, rien ne prouve qu'Aristote se trompe : {coral}il n'existe pas de définition réductive de la vie qui fasse l'accord général.{/coral} Son approche se retrouve dans toutes les facultés : il rend compte des phénomènes, et il éprouve en même temps la plausibilité d'une réduction.
+
+    ! Refuser la réduction n'est pas revenir au vitalisme : Aristote n'ajoute aucune force au corps, il dit que la vie ne se définit pas sans la vie.
+  points:
+  - id: sep-psy2-l7-p1
+    sentence: "Définir la vie par la nutrition serait une ___ vicieuse : le vivant serait ce qui peut se nourrir, la nourriture ce qui entretient le vivant."
+    answer: "circularité"
+    alt: []
+  - id: sep-psy2-l7-p2
+    sentence: "Puisque l'aliment se définit par rapport au vivant, Aristote résiste à toute définition ___ de la vie, en des termes qui ne la supposent pas déjà."
+    answer: "réductive"
+    alt: []
+  - id: sep-psy2-l7-p3
+    sentence: "Le vivant est ce qui peut se nourrir ; la nourriture est ce qui entretient le vivant ; chaque terme servant à définir l'autre, le cercle est ___."
+    answer: "vicieux"
+    alt: []
+  - id: sep-psy2-l7-p4
+    sentence: "Contre Empédocle, qui fait croître les plantes vers le bas par la terre et vers le haut par le feu, le *De l'âme* demande : « qu'est-ce qui assure la ___ du feu et de la terre qui se portent en sens opposés ? »"
+    answer: "cohésion"
+    alt: []
+  - id: sep-psy2-l7-p5
+    sentence: "L'explication de la croissance par les tendances de la terre et du feu est celle qu'Aristote attribue à ___, en *De l'âme*, II, 4."
+    answer: "Empédocle"
+    alt: []
+  - id: sep-psy2-l7-p6
+    sentence: "*De l'âme*, II, 4 : « la croissance du ___ s'étend à l'infini, tant que le combustible est disponible, alors que les systèmes que forme la nature ont tous une limite »."
+    answer: "feu"
+    alt: []
+  - id: sep-psy2-l7-p7
+    sentence: "*De l'âme*, II, 4 : « la croissance du feu s'étend à l'infini, tant que le combustible est disponible, alors que les systèmes que forme la nature ont tous une ___ et un ordre de grandeur ainsi que de croissance »."
+    answer: "limite"
+    alt: []
+  - id: sep-psy2-l7-p8
+    sentence: "Le feu croît jusqu'à être arrêté du dehors ; un vivant cesse de croître de lui-même, une fois atteinte la structure de son espèce : cette limite, dit Aristote, « manifeste une ___ plutôt qu'une matière »."
+    answer: "proportion"
+    alt: []
+  - id: sep-psy2-l7-p9
+    sentence: "Le feu croît au hasard vers tout ce qui brûle, alors que la croissance d'un vivant suit des voies structurées, orientées vers une ___."
+    answer: "fin"
+    alt: []

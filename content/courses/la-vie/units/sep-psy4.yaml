@@ -1,0 +1,403 @@
+# Cours sur la psychologie d'Aristote (voir content/philosophie.md), tiré de
+# l'article « Aristotle's Psychology » de Christopher Shields, Stanford
+# Encyclopedia of Philosophy : sections 7 et 8. Citations du De l'âme dans la
+# traduction de Bodéüs ; Métaphysique et Éthique à Nicomaque dans les Œuvres
+# complètes (Flammarion).
+#
+# Le supplément sur l'intelligence productrice de III, 5 ne figure pas dans le
+# PDF fourni : ce chapitre n'a donc pas de leçon. Le passage des Seconds
+# Analytiques, I, 31 (87b37-88a7), reste un simple repère : l'extrait reçu venait
+# d'un autre chapitre. L'idée y est citée d'après De l'âme, II, 5, 417b22-23.
+# La continence (Éthique à Nicomaque, I, 13) porte sur les « gens maîtres d'eux-
+# mêmes » de Bodéüs, qui rend ainsi les continents de l'article.
+
+id: sep-psy4
+title: "L'intelligence et l'appétit"
+subtitle: "Penser comme recevoir une forme, une intelligence qui n'est rien avant de penser, et ce qui meut l'animal"
+icon: clock
+color: orange
+group: "La psychologie d'Aristote (SEP)"
+lessons:
+- id: sep-psy4-l1
+  title: "L'intelligence : ce qui fait l'homme"
+  notes: |-
+    **Aristote décrit l'intelligence (`nous`, souvent rendu par « intellect », « esprit » ou « raison ») par sa fonction** : {teal}« la partie de l'âme qui lui permet de connaître et de penser »{/teal} (III, 4, 429a10). Il y va de notre nature : {teal}« Tous les humains ont par nature le désir de savoir. »{/teal} (*Métaphysique*, I, 1, 980a21) {green}__De même qu'avoir des sens est essentiel à l'animal, avoir une intelligence est essentiel à l'homme.__{/green} En l'étudiant, Aristote étudie ce qui fait de l'homme un homme.
+
+    **Une intelligence à deux usages.** L'homme ne fait pas que comprendre : il délibère, pèse des possibilités, conçoit des plans. Aristote attribue aussi ces activités à l'intelligence, et distingue :
+
+    | Intelligence | Ce qu'elle fait |
+    | théorique ou spéculative | comprendre et contempler |
+    | pratique ou exécutive | délibérer et conduire l'action |
+
+    Le *De l'âme* précise que la seconde {teal}« diffère d'ailleurs de l'intelligence spéculative par sa fin »{/teal} (III, 10, 433a14-15). L'*Éthique à Nicomaque* les relie : {teal}« l'intelligence saisit les réalités ultimes dans les deux directions »{/teal} (VI, 1143a35-b1). Dans les démonstrations, {yellow}elle saisit les premiers principes{/yellow} ; dans l'action, {yellow}le cas particulier à exécuter{/yellow}.
+
+    **Où cela se trouve.** L'enquête principale tient dans deux chapitres, {sky}*De l'âme*, III, 4 et III, 5{/sky}, riches et réputés difficiles.
+
+    ! « Intelligence » traduit ici `nous` et non une aptitude à résoudre des problèmes : elle n'est le propre que de l'homme parmi les êtres naturels.
+  tables:
+  - table: intelligence-ce-qu-elle-fait
+    exercises:
+    - {kind: cell, column: Intelligence}
+  points:
+  - id: sep-psy4-l1-p1
+    sentence: "*De l'âme*, III, 4, sur l'intelligence : « la partie de l'âme qui lui permet de connaître et de ___ »."
+    answer: "penser"
+    alt: []
+  - id: sep-psy4-l1-p2
+    sentence: "Le terme grec que Bodéüs traduit par « intelligence », rendu aussi par intellect ou esprit, est *___*."
+    answer: "nous"
+    alt: []
+  - id: sep-psy4-l1-p3
+    sentence: "*Métaphysique*, I, 1 : « Tous les humains ont par ___ le désir de savoir. »"
+    answer: "nature"
+    alt: []
+  - id: sep-psy4-l1-p4
+    sentence: "*Métaphysique*, I, 1 : « Tous les humains ont par nature le désir de ___. »"
+    answer: "savoir"
+    alt: []
+  - id: sep-psy4-l1-p5
+    sentence: "De même qu'avoir des sens est essentiel à l'animal, avoir une ___ est essentiel à l'homme : en l'étudiant, Aristote étudie ce qui fait de l'homme un homme."
+    answer: "intelligence"
+    alt: ["intellect", "esprit"]
+  - id: sep-psy4-l1-p6
+    sentence: "Aristote distingue l'intelligence théorique, qui comprend et contemple, de l'intelligence ___, qui délibère et conduit l'action."
+    answer: "pratique"
+    alt: ["exécutive"]
+  - id: sep-psy4-l1-p7
+    sentence: "*De l'âme*, III, 10, sur l'intelligence qui raisonne en vue d'un but : elle diffère « de l'intelligence spéculative par sa ___ »."
+    answer: "fin"
+    alt: []
+  - id: sep-psy4-l1-p8
+    sentence: "*Éthique à Nicomaque*, VI : « l'intelligence saisit les réalités ultimes dans les deux ___ », les premiers termes des démonstrations et le dernier terme de l'action."
+    answer: "directions"
+    alt: []
+  - id: sep-psy4-l1-p9
+    sentence: "L'enquête principale d'Aristote sur l'intelligence tient dans *De l'âme*, livre III, chapitres ___ et 5."
+    answer: "4"
+    alt: ["quatre"]
+- id: sep-psy4-l2
+  title: "Penser, c'est recevoir une forme"
+  notes: |-
+    **Aristote aborde la pensée avec la même analyse hylémorphique que la perception.** Elle en est le prolongement :
+
+    {teal}« Si, donc, l'opération de l'intelligence se compare à celle du sens, ou bien elle consistera à subir quelque chose sous l'effet de l'intelligible, ou bien elle sera une autre opération du même genre. Il doit donc y avoir un principe indéterminé, mais capable de recevoir la forme, un principe tel en puissance que celle-ci, mais qui n'est pas celle-ci. Et la relation du sensitif aux sensibles doit être celle de l'intelligence aux intelligibles. »{/teal} (III, 4, 429a13-18)
+
+    **Le schéma est le même que pour la perception.** S pense O si et seulement si : (i) S a la capacité requise pour recevoir la **forme intelligible** de O ; (ii) O agit sur cette capacité en lui donnant forme ; (iii) la capacité devient isomorphe à cette forme.
+
+    **Une précision évidente : on reçoit la forme, non le composé.** {teal}« ce n'est pas la pierre qui se trouve dans l'âme, mais sa forme »{/teal} (III, 8, 431b29-432a1). Qui pense à une pierre, plutôt que d'en percevoir une, a une faculté capable de ne faire qu'un, par la forme, avec cette pierre.
+
+    **L'universel et le particulier.** Aristote en tire parfois que la pensée porte sur l'universel et la perception sur le particulier : {teal}« la sensation en acte porte sur les objets particuliers, alors que la science porte sur les objets universels »{/teal} (II, 5, 417b22-23 ; voir aussi *Seconds Analytiques*, I, 31). Il admet ailleurs que nous connaissons aussi les individus (II, 5, 417a29 ; *Métaphysique*, XIII, 10). {coral}Il n'y a pas là de contradiction{/coral} : il peut vouloir dire que la pensée procède à un plus haut degré de généralité, parce qu'elle a affaire à des traits de structure assez abstraits. On peut penser ce que c'est qu'être une pierre ; on ne le perçoit pas, au sens direct.
+
+    ! Avoir la forme de la pierre dans l'âme n'est pas avoir une petite pierre dans la tête : c'est tout l'objet de la leçon suivante.
+  points:
+  - id: sep-psy4-l2-p1
+    sentence: "*De l'âme*, III, 4 : « Il doit donc y avoir un principe ___, mais capable de recevoir la forme, un principe tel en puissance que celle-ci, mais qui n'est pas celle-ci. »"
+    answer: "indéterminé"
+    alt: []
+  - id: sep-psy4-l2-p2
+    sentence: "*De l'âme*, III, 4 : « Il doit donc y avoir un principe indéterminé, mais capable de recevoir la ___, un principe tel en puissance que celle-ci, mais qui n'est pas celle-ci. »"
+    answer: "forme"
+    alt: []
+  - id: sep-psy4-l2-p3
+    sentence: "*De l'âme*, III, 4 : « Il doit donc y avoir un principe indéterminé, mais capable de recevoir la forme, un principe tel en ___ que celle-ci, mais qui n'est pas celle-ci. »"
+    answer: "puissance"
+    alt: []
+  - id: sep-psy4-l2-p4
+    sentence: "*De l'âme*, III, 4 : « Et la relation du sensitif aux sensibles doit être celle de l'intelligence aux ___. »"
+    answer: "intelligibles"
+    alt: []
+  - id: sep-psy4-l2-p5
+    sentence: "*De l'âme*, III, 4 : « Et la relation du sensitif aux ___ doit être celle de l'intelligence aux intelligibles. »"
+    answer: "sensibles"
+    alt: []
+  - id: sep-psy4-l2-p6
+    sentence: "Schéma de la pensée chez Aristote, calqué sur celui de la perception : S a la capacité requise pour recevoir la forme ___ de O, O agit sur elle, et elle lui devient isomorphe."
+    answer: "intelligible"
+    alt: []
+  - id: sep-psy4-l2-p7
+    sentence: "*De l'âme*, III, 8 : « ce n'est pas la ___ qui se trouve dans l'âme, mais sa forme »."
+    answer: "pierre"
+    alt: []
+  - id: sep-psy4-l2-p8
+    sentence: "*De l'âme*, III, 8 : « ce n'est pas la pierre qui se trouve dans l'âme, mais sa ___ »."
+    answer: "forme"
+    alt: []
+  - id: sep-psy4-l2-p9
+    sentence: "*De l'âme*, II, 5 : « la sensation en acte porte sur les objets ___, alors que la science porte sur les objets universels »."
+    answer: "particuliers"
+    alt: []
+  - id: sep-psy4-l2-p10
+    sentence: "*De l'âme*, II, 5 : « la sensation en acte porte sur les objets particuliers, alors que la science porte sur les objets ___ »."
+    answer: "universels"
+    alt: []
+- id: sep-psy4-l3
+  title: "Pas d'organe : un isomorphisme qui représente"
+  notes: |-
+    **Que veut dire « ne faire qu'un par la forme » ? Prenons un cas favorable.** Qui pense que {yellow}les rainettes sont ovipares{/yellow} a une âme dont les états de structure sont, entre autres, un par la forme avec les rainettes. Or son âme ne devient pas une rainette. {red}__L'isomorphisme ne peut donc pas consister à posséder la forme comme la rainette la possède.__{/red} Il ressemble plutôt à celui d'{yellow}un plan et de la maison{/yellow} : il y a une structure commune, déterminée et exprimable, sans que le plan réalise la forme de la maison. Les maisons, après tout, ont trois dimensions.
+
+    **Ce n'est pas un fait contingent : l'intelligence n'a pas d'organe.** Elle n'est pas {teal}« mêlée au corps »{/teal} :
+
+    {teal}« elle ne se trouve pas non plus mêlée au corps. Car elle aurait alors une qualité, devenant ou chaude ou froide, et elle disposerait de quelque organe, comme la faculté sensitive, alors qu'en fait, elle n'en a aucun. »{/teal} (III, 4, 429a24-27)
+
+    **La conséquence.** {yellow}Les briques et le mortier{/yellow} réalisent la forme d'une maison, ils abritent. Une intelligence ainsi comprise ne peut pas abriter. Donc, {coral}__quand elle devient isomorphe à son objet, ce doit être en un sens atténué, non littéral : elle le représente.__{/coral} Le mieux est de lire ainsi Aristote : S pense O quand son intelligence se rend semblable à O en représentant ses traits de structure saillants, par un isomorphisme direct, sans réaliser la forme de O à la manière de O.
+
+    ! La thèse garde un intérêt hors du cadre aristotélicien : penser par isomorphisme entre nos capacités de représentation et les objets de notre connaissance a toujours eu ses partisans.
+  points:
+  - id: sep-psy4-l3-p1
+    sentence: "Qui pense aux rainettes n'a pas une âme qui devient une rainette : l'isomorphisme de la pensée ressemble à celui d'un ___ et de la maison."
+    answer: "plan"
+    alt: []
+  - id: sep-psy4-l3-p2
+    sentence: "*De l'âme*, III, 4, sur l'intelligence : « elle ne se trouve pas non plus ___ au corps »."
+    answer: "mêlée"
+    alt: []
+  - id: sep-psy4-l3-p3
+    sentence: "*De l'âme*, III, 4, sur l'intelligence : « elle disposerait de quelque ___, comme la faculté sensitive, alors qu'en fait, elle n'en a aucun »."
+    answer: "organe"
+    alt: []
+  - id: sep-psy4-l3-p4
+    sentence: "Si l'intelligence était mêlée au corps, elle aurait une ___, devenant ou chaude ou froide : argument de *De l'âme*, III, 4."
+    answer: "qualité"
+    alt: []
+  - id: sep-psy4-l3-p5
+    sentence: "Les briques réalisent la forme d'une maison, elles abritent ; une intelligence sans organe ne peut abriter ; elle ne devient donc isomorphe à son objet qu'en un sens atténué : elle le ___."
+    answer: "représente"
+    alt: []
+  - id: sep-psy4-l3-p6
+    sentence: "S pense O quand son intelligence représente les traits de ___ saillants de O, sans réaliser sa forme à la manière de O."
+    answer: "structure"
+    alt: []
+- id: sep-psy4-l4
+  title: "Rien avant de penser : une difficulté, deux altérations"
+  notes: |-
+    **Ce qui fait la force de l'analyse fait aussi sa faiblesse.** Le changement hylémorphique a deux exigences : (i) un sujet préexistant, (ii) qui convienne à ce changement par sa catégorie. {yellow}Seule une surface peut changer de couleur ; une action, comme le trouble de Socrate sous le regard d'Alcibiade, ne peut pas devenir blanche.{/yellow}
+
+    **Or, au premier pas, le modèle semble dépassé.** Aristote soutient que l'intelligence {teal}« n'est effectivement aucune des réalités avant de penser »{/teal} (III, 4, 429a24), à cause de la plasticité dont elle a besoin pour pouvoir tout penser : {teal}« Dès lors donc qu'elle saisit tout »{/teal}, rien d'étranger ne doit y faire écran (429a18-20), et {teal}« elle ne peut même avoir la moindre nature, en dehors de celle qui consiste à être un possible »{/teal} (429a21-22). {red}__Mais si elle n'est rien en acte avant de penser, comment l'analyse du changement s'y appliquerait-elle ?__{/red} {yellow}Une pâte à laquelle on donne forme de biscuit est déjà de la pâte{/yellow} ; même un organe des sens existe avant d'être affecté. D'où l'image célèbre : {yellow}« comme sur un tableau où aucun dessin ne se trouve réalisé »{/yellow} (429b31-430a1).
+
+    **Une ressource : tout changement n'est pas une perte.** Aristote distingue :
+    - {pink}la clôture brune peinte en blanc{/pink} : il y a destruction et perte de la couleur première ;
+    - {green}le bâtisseur qui prend ses outils et se met à bâtir{/green} : rien n'est détruit, il était déjà capable, et il le devient pleinement.
+
+    Le texte de II, 5 : {teal}« Que se mette, en effet, à spéculer celui qui possède la science, il n'y a pas là précisément d'altération, puisque le progrès va du même au même, dans le sens de la réalisation ; ou bien il s'agit d'un genre d'altération différent. Aussi n'est-on pas en droit de dire de l'être pensant, lorsqu'il pense, qu'il s'altère, non plus que du bâtisseur, lorsqu'il bâtit. »{/teal} (417b5-9) Ou bien on parle d'affection seulement en admettant {teal}« qu'il existe deux modes d'altération »{/teal} (417b14-15).
+
+    **Une issue possible.** L'intelligence serait simplement apte à recevoir la forme d'une infinité d'objets de pensée, et donc rien de déterminé en elle-même. {coral}Loin d'être une anomalie, elle serait dans l'ordre cognitif ce que serait la matière la plus fondamentale, s'il y en a une, dans l'ordre matériel : l'une et l'autre se définiraient par l'étendue de leurs possibles.{/coral} Séparée de la thèse singulière de l'intelligence qui n'est rien avant de penser, l'analyse garde en tout cas sa plausibilité.
+  points:
+  - id: sep-psy4-l4-p1
+    sentence: "Le changement hylémorphique exige un sujet préexistant, et que ce sujet convienne à ce changement par sa ___ : une action ne peut pas devenir blanche."
+    answer: "catégorie"
+    alt: []
+  - id: sep-psy4-l4-p2
+    sentence: "*De l'âme*, III, 4, sur l'intelligence : elle « n'est effectivement aucune des ___ avant de penser »."
+    answer: "réalités"
+    alt: []
+  - id: sep-psy4-l4-p3
+    sentence: "*De l'âme*, III, 4, sur l'intelligence : elle « n'est effectivement aucune des réalités avant de ___ »."
+    answer: "penser"
+    alt: []
+  - id: sep-psy4-l4-p4
+    sentence: "*De l'âme*, III, 4, sur l'intelligence : elle « ne peut même avoir la moindre nature, en dehors de celle qui consiste à être un ___ »."
+    answer: "possible"
+    alt: []
+  - id: sep-psy4-l4-p5
+    sentence: "L'intelligence ne doit rien être de déterminé parce qu'elle doit pouvoir tout penser : c'est la ___ qu'Aristote lui prête."
+    answer: "plasticité"
+    alt: []
+  - id: sep-psy4-l4-p6
+    sentence: "Une pâte à laquelle on donne forme de biscuit est déjà de la pâte ; une intelligence qui n'est rien en acte avant de penser semble donc échapper à l'analyse du ___."
+    answer: "changement"
+    alt: []
+  - id: sep-psy4-l4-p7
+    sentence: "*De l'âme*, III, 4 : l'intelligence est « comme sur un ___ où aucun dessin ne se trouve réalisé »."
+    answer: "tableau"
+    alt: ["tablette"]
+  - id: sep-psy4-l4-p8
+    sentence: "*De l'âme*, II, 5 : « Que se mette, en effet, à spéculer celui qui possède la science, il n'y a pas là précisément d'___ »."
+    answer: "altération"
+    alt: []
+  - id: sep-psy4-l4-p9
+    sentence: "*De l'âme*, II, 5 : celui qui se met à spéculer ne s'altère pas à proprement parler, « puisque le progrès va du ___ au même, dans le sens de la réalisation »."
+    answer: "même"
+    alt: []
+  - id: sep-psy4-l4-p10
+    sentence: "*De l'âme*, II, 5 : « Aussi n'est-on pas en droit de dire de l'être pensant, lorsqu'il pense, qu'il s'altère, non plus que du ___, lorsqu'il bâtit. »"
+    answer: "bâtisseur"
+    alt: []
+  - id: sep-psy4-l4-p11
+    sentence: "*De l'âme*, II, 5 : on ne parle d'affection qu'en admettant « qu'il existe ___ modes d'altération »."
+    answer: "deux"
+    alt: ["2"]
+  - id: sep-psy4-l4-p12
+    sentence: "La clôture brune peinte en blanc perd sa couleur ; le bâtisseur qui se met à bâtir ne perd rien, il réalise un potentiel déjà ___ en lui."
+    answer: "établi"
+    alt: ["présent"]
+  - id: sep-psy4-l4-p13
+    sentence: "L'intelligence serait dans l'ordre cognitif ce que la ___ la plus fondamentale serait dans l'ordre matériel, l'une et l'autre se définissant par l'étendue de leurs possibles."
+    answer: "matière"
+    alt: []
+- id: sep-psy4-l5
+  title: "Qu'est-ce qui meut l'animal ? Trois réponses écartées"
+  notes: |-
+    **Sensation et pensée n'expliquent pas un fait central : les animaux se déplacent à la poursuite de ce qu'ils désirent.** {yellow}Pourquoi l'autruche a-t-elle fui le tigre ? Parce qu'elle voulait survivre. Pourquoi cet être humain a-t-il pris le chemin de l'opéra ? Parce qu'il voulait entendre la musique.{/yellow} L'explication par le désir vient toute seule : voilà pourquoi le *De l'âme* ne s'arrête pas à l'intelligence.
+
+    **La question de III, 9.** {teal}« qu'est-ce qui imprime à l'animal le mouvement de locomotion ? »{/teal} (432b13-14) Aristote écarte une à une les facultés déjà étudiées.
+
+    | Faculté | Pourquoi elle n'explique pas le mouvement |
+    | nutritive | les plantes l'ont et ne se déplacent pas |
+    | sensitive | des animaux l'ont et restent sur place |
+    | intelligence spéculative | elle ne dit rien de ce qu'il faut fuir |
+    | intelligence qui commande | elle ne suffit pas à faire agir |
+
+    **La nutrition.** Le mouvement {teal}« vise toujours un but »{/teal}, et s'accompagne de représentation ou d'appétit. Sinon, les plantes aussi se déplaceraient.
+
+    **La sensation.** {teal}« il est beaucoup d'animaux qui possèdent bel et bien le sens, mais restent sur place »{/teal} (432b19-21) : {yellow}éponges, huîtres, certains testacés{/yellow}. L'argument s'appuie sur un principe : si {teal}« la nature ne fait rien en vain »{/teal} (432b21), et que ces animaux sont complets, puisqu'ils se reproduisent, ils auraient les organes de la marche si la sensation était ce qui meut.
+
+    **L'intelligence.** Spéculative, elle {teal}« ne considère aucune action à accomplir et ne dit rien de ce qui est à fuir ou à poursuivre »{/teal} (432b27-28). Même lorsqu'elle commande, cela ne suffit pas : {teal}« quand bien même l'intelligence ordonne et la réflexion dit de fuir ou de poursuivre quelque chose, on ne bouge pas ; et l'action, au contraire, s'aligne sur le désir »{/teal} (433a1-3), {yellow}et le médecin qui sait la médecine ne soigne pas pour autant{/yellow}.
+
+    ! L'objection n'est pas que l'intelligence ne joue aucun rôle dans l'action, mais qu'elle n'y suffit pas : savoir ce qu'il faut faire n'est pas encore le faire.
+  tables:
+  - table: faculte-pourquoi-elle-n-explique-pas-le-mouvement
+    exercises:
+    - {kind: bank, column: Pourquoi elle n'explique pas le mouvement}
+  points:
+  - id: sep-psy4-l5-p1
+    sentence: "La faculté ___ n'explique pas le mouvement local : les plantes la possèdent et ne se déplacent pas."
+    answer: "nutritive"
+    alt: []
+  - id: sep-psy4-l5-p2
+    sentence: "*De l'âme*, III, 9 : le sens n'est pas ce qui meut, car « il est beaucoup d'animaux qui possèdent bel et bien le sens, mais restent sur ___ »."
+    answer: "place"
+    alt: []
+  - id: sep-psy4-l5-p3
+    sentence: "Aristote a en vue, parmi les animaux qui sentent sans se déplacer, les éponges, les ___ et certains testacés."
+    answer: "huîtres"
+    alt: []
+  - id: sep-psy4-l5-p4
+    sentence: "Si la sensation était ce qui meut, les animaux immobiles, qui sont complets, auraient les organes de la marche, car, selon le principe de *De l'âme*, III, 9, « la nature ne fait rien en ___ »."
+    answer: "vain"
+    alt: []
+  - id: sep-psy4-l5-p5
+    sentence: "*De l'âme*, III, 9 : l'intelligence ___ « ne considère aucune action à accomplir et ne dit rien de ce qui est à fuir ou à poursuivre »."
+    answer: "spéculative"
+    alt: []
+  - id: sep-psy4-l5-p6
+    sentence: "*De l'âme*, III, 9 : « quand bien même l'intelligence ordonne et la réflexion dit de fuir ou de poursuivre quelque chose, on ne ___ pas »."
+    answer: "bouge"
+    alt: []
+  - id: sep-psy4-l5-p7
+    sentence: "*De l'âme*, III, 9 : quand l'intelligence ordonne de fuir, on ne bouge pas, « et l'action, au contraire, s'aligne sur le ___ »."
+    answer: "désir"
+    alt: []
+  - id: sep-psy4-l5-p8
+    sentence: "Exemple de *De l'âme*, III, 9 : celui qui détient la science ___ ne prodigue pas de soin pour autant ; autre chose que la science décide de l'agir."
+    answer: "médicale"
+    alt: []
+- id: sep-psy4-l6
+  title: "Ni l'appétit seul : les gens maîtres d'eux-mêmes"
+  notes: |-
+    **Par le même raisonnement, Aristote écarte d'abord l'appétit lui-même (`orexis`).** Une faculté ne peut expliquer l'action si son activité ne suffit pas à déclencher le mouvement. Or :
+
+    {teal}« les gens maîtres d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'intelligence »{/teal} (III, 9, 433a6-8)
+
+    Les continents, à la différence de ceux qui sont pleinement tempérants, ont des désirs mauvais et n'y cèdent jamais : {green}__leurs désirs ne suffisent donc pas à l'action.__{/green} L'appétit seul, pris comme une faculté unique, ne l'explique pas entièrement.
+
+    **Le conflit a son image dans l'*Éthique à Nicomaque*.** Chez le continent comme chez l'incontinent, il y a {teal}« une autre chose, naturellement distincte de la raison, qui est en conflit avec elle et lui résiste »{/teal} (I, 13, 1102b17-18). {yellow}« exactement comme les membres paralysés du corps qu'on décide de mouvoir vers la droite se portent au contraire vers la gauche »{/yellow} (1102b18-20) : seulement, {teal}« dans les corps, nous voyons ce qui se porte de travers, tandis que dans le cas de l'âme, nous ne le voyons pas »{/teal} (1102b22-23).
+
+    | Personnage | Sa raison | Son désir | Ce qu'il fait |
+    | le continent | correcte | mauvais | il suit la raison |
+    | l'incontinent | correcte | mauvais | il suit le désir |
+    | le tempérant | correcte | accordé | il suit les deux |
+
+    **Le contre-exemple joue donc dans les deux sens.** L'incontinent montre que l'intelligence ne suffit pas à mouvoir ; le continent, que l'appétit ne suffit pas non plus. {coral}C'est de cette double insuffisance que part la solution du chapitre suivant.{/coral}
+  tables:
+  - table: personnage-sa-raison-son-desir-ce-qu-il-fait
+    exercises:
+    - {kind: bank, column: Ce qu'il fait}
+    - {kind: cell, column: Personnage}
+  points:
+  - id: sep-psy4-l6-p1
+    sentence: "*De l'âme*, III, 9 : « les gens ___ d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'intelligence »."
+    answer: "maîtres"
+    alt: []
+  - id: sep-psy4-l6-p2
+    sentence: "*De l'âme*, III, 9 : « les gens maîtres d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'___ »."
+    answer: "intelligence"
+    alt: []
+  - id: sep-psy4-l6-p3
+    sentence: "Les continents ont des désirs mauvais et n'y cèdent pas, à la différence des ___, chez qui raison et désir s'accordent."
+    answer: "tempérants"
+    alt: ["modérés"]
+  - id: sep-psy4-l6-p4
+    sentence: "L'___ montre que l'intelligence ne suffit pas à mouvoir ; le continent, que l'appétit ne suffit pas non plus."
+    answer: "incontinent"
+    alt: []
+  - id: sep-psy4-l6-p5
+    sentence: "L'incontinent montre que l'intelligence ne suffit pas à mouvoir ; le ___, que l'appétit ne suffit pas non plus."
+    answer: "continent"
+    alt: []
+  - id: sep-psy4-l6-p6
+    sentence: "*Éthique à Nicomaque*, I, 13, sur le conflit de la raison et du désir : « exactement comme les membres ___ du corps qu'on décide de mouvoir vers la droite se portent au contraire vers la gauche »."
+    answer: "paralysés"
+    alt: []
+  - id: sep-psy4-l6-p7
+    sentence: "*Éthique à Nicomaque*, I, 13 : « dans les corps, nous voyons ce qui se porte de travers, tandis que dans le cas de l'___, nous ne le voyons pas »."
+    answer: "âme"
+    alt: []
+- id: sep-psy4-l7
+  title: "L'appétit et l'intelligence pratique"
+  notes: |-
+    **Le chapitre III, 10 répond : il y a bien une faculté qui meut, mais elle n'agit pas seule.** Il commence par poser deux principes.
+
+    {teal}« il est au moins manifeste qu'il y a là deux principes qui, alternativement, sont à l'origine du mouvement : l'appétit et l'intelligence, si l'on veut bien poser la représentation comme une sorte d'intellection »{/teal} (433a9-10)
+
+    **Ce qui permet d'étendre la thèse aux animaux.** L'intelligence pratique est ici prise au sens large : elle inclut le traitement d'images que l'on trouve chez les animaux non humains, puisque {teal}« chez les autres animaux, il n'est pas question d'intellection, ni de raisonnement, mais de représentation »{/teal} (433a11-12). Appétit et intelligence pratique agissent de concert chez tous les animaux.
+
+    **Lequel des deux commence ?** L'intelligence pratique est motrice quand elle prend pour point de départ un objet d'appétit. {green}__Le premier moteur n'est donc ni la raison ni la faculté, mais la chose voulue__{/green} : {teal}« Il n'y a donc qu'une seule chose à jouer, au départ, un rôle moteur : c'est l'objet de l'appétit. »{/teal} (433a21) D'où la conclusion :
+
+    {teal}« il est clair que le genre de faculté de l'âme qui imprime le mouvement est ce qu'on appelle l'appétit »{/teal} (433a31)
+
+    Ce qui est visé {teal}« est soit le bien, soit l'apparence du bien »{/teal} (433a28-29), et non n'importe quel bien : celui qui peut se faire. Le mot de la fin : {teal}« c'est donc dans la mesure où il est capable d'appétit, que l'animal est apte à se mouvoir lui-même »{/teal} (433b27-28).
+
+    **Une hésitation bien fondée.** On a jugé ce traitement balbutiant, voire confus. Ce jugement sévère n'a pas de raison d'être : {coral}Aristote est sans doute sensible à la complexité des questions de philosophie de l'action.{/coral} À la différence de certains humiens ultérieurs, il voit que les données y sont instables : l'action a pour antécédent une faculté d'appétit, mais celle-ci n'est pas la seule en cause, et {coral}la raison pratique et la représentation y ont un rôle indispensable.{/coral}
+
+    ! Dire que l'appétit meut ne fait pas d'Aristote un humien pour qui la raison serait esclave des passions : l'intelligence pratique reste indispensable à l'action.
+  points:
+  - id: sep-psy4-l7-p1
+    sentence: "*De l'âme*, III, 10 : « il y a là deux principes qui, alternativement, sont à l'origine du mouvement : l'appétit et l'___ »."
+    answer: "intelligence"
+    alt: []
+  - id: sep-psy4-l7-p2
+    sentence: "*De l'âme*, III, 10 : les deux principes du mouvement sont l'appétit et l'intelligence, « si l'on veut bien poser la ___ comme une sorte d'intellection »."
+    answer: "représentation"
+    alt: []
+  - id: sep-psy4-l7-p3
+    sentence: "L'intelligence pratique inclut, au sens large, le traitement d'images que l'on trouve chez les ___, où il n'y a ni intellection ni raisonnement."
+    answer: "animaux"
+    alt: ["bêtes"]
+  - id: sep-psy4-l7-p4
+    sentence: "*De l'âme*, III, 10 : « Il n'y a donc qu'une seule chose à jouer, au départ, un rôle moteur : c'est l'___ de l'appétit. »"
+    answer: "objet"
+    alt: []
+  - id: sep-psy4-l7-p5
+    sentence: "*De l'âme*, III, 10 : « il est clair que le genre de faculté de l'âme qui imprime le mouvement est ce qu'on appelle l'___ »."
+    answer: "appétit"
+    alt: ["orexis"]
+  - id: sep-psy4-l7-p6
+    sentence: "*De l'âme*, III, 10 : « il est clair que le genre de faculté de l'âme qui imprime le ___ est ce qu'on appelle l'appétit »."
+    answer: "mouvement"
+    alt: []
+  - id: sep-psy4-l7-p7
+    sentence: "*De l'âme*, III, 10, sur l'objet de l'appétit : il « est soit le bien, soit l'___ du bien »."
+    answer: "apparence"
+    alt: []
+  - id: sep-psy4-l7-p8
+    sentence: "*De l'âme*, III, 10 : « c'est donc dans la mesure où il est capable d'appétit, que l'animal est apte à se ___ lui-même »."
+    answer: "mouvoir"
+    alt: []
+  - id: sep-psy4-l7-p9
+    sentence: "La faculté d'appétit, que le *De l'âme* désigne comme ce qui meut l'animal, se dit en grec *___*."
+    answer: "orektikon"
+    alt: []
+  - id: sep-psy4-l7-p10
+    sentence: "À la différence de certains ___ ultérieurs, Aristote voit que les données de la philosophie de l'action sont instables : l'appétit n'y est pas la seule faculté en cause."
+    answer: "humiens"
+    alt: []
