@@ -1,0 +1,396 @@
+# Cours sur la théorie kantienne du jugement (Hanna, SEP), suite : les deux
+# suppléments rattachés à la section 1, « The Togetherness Principle, Kant's
+# Conceptualism, and Kant's Non-Conceptualism » et « Judging, Believing, and
+# Scientific Knowing ». Citations traduites de l'anglais de l'article.
+#
+# « Togetherness principle » est rendu par « principe d'union », d'après la
+# formule de Kant que cite Hanna (« Only from their unification… ») ;
+# l'étiquette anglaise est donnée une fois dans le rappel.
+#
+# Points laissés de côté : les listes de commentateurs du conceptualisme faible
+# (Wenzel, Grüne, Griffith, Land, Bauer, Golob, Williams, Pippin, Soboleva…),
+# citées sans thèse propre : seuls quelques noms figurent dans le tableau.
+
+id: kant-jugement-intuitions
+title: "Des intuitions sans concepts ? Croire et savoir"
+subtitle: "« Les intuitions sans concepts sont aveugles », le non-conceptualisme, le tenir-pour-vrai"
+icon: bulb
+color: blue
+group: "Kant : la théorie du jugement"
+lessons:
+- id: kj2-l1
+  title: "« Des intuitions sans concepts sont aveugles » : le principe d'union"
+  notes: |-
+    **La formule la plus citée de la *Critique* semble ruiner ce que Hanna soutient des intuitions** : si les intuitions sans concepts ne sont rien, en quel sens seraient-elles non conceptuelles ? Cette leçon pose le problème.
+
+    {teal}« Des pensées sans contenu (`Inhalt`) sont vides (`leer`), des intuitions sans concepts sont aveugles (`blind`). »{/teal} (A51/B76) Cette formule résume le {violet}principe d'union{/violet} (le *togetherness principle*, dans l'étiquette de Hanna) : la complémentarité cognitive nécessaire et l'interdépendance sémantique des intuitions et des concepts, sur le fond du dualisme de la sensibilité et de l'entendement. Kant précise : {teal}« L'entendement ne peut rien intuitionner, les sens ne peuvent rien penser. Ce n'est que de leur union que peut naître la connaissance. »{/teal} (A50-51/B74-76)
+
+    **La lecture qui en découle.** Bien des lecteurs (**Sellars**, **McDowell**, **Abela**) en concluent que {red}les intuitions n'ont aucune indépendance{/red} : sans concepts, ou bien elles n'existent pas, ou bien elles n'ont aucun sens. Un autre texte semble les appuyer : {teal}« L'entendement connaît tout uniquement par des concepts »{/teal} (A656/B684).
+
+    **Quatre textes résistent à cette lecture.**
+    - {teal}« Des objets peuvent assurément nous apparaître sans devoir nécessairement se rapporter à des fonctions de l'entendement. »{/teal} (A89/B122)
+    - {teal}« Des phénomènes peuvent certainement être donnés dans l'intuition sans fonctions de l'entendement. »{/teal} (A90/B122)
+    - Des phénomènes pourraient être ainsi faits que l'entendement ne les trouve pas conformes à son unité, si bien que le concept de cause serait vide : ils présenteraient malgré cela des objets à notre intuition, {teal}« car l'intuition n'a nullement besoin des fonctions de la pensée »{/teal} (A90-91/B122-123).
+    - {teal}« Le divers de l'intuition doit déjà être donné avant la synthèse de l'entendement et indépendamment d'elle. »{/teal} (B145)
+
+    **Deux thèses en sortent, pour Hanna.**
+    - {green}L'indépendance des intuitions{/green} : elles suffisent à produire des connaissances objectivement valides, au-delà de tout contenu conceptuel qui peut leur être associé.
+    - {green}Leur autonomie{/green} : Kant admet des êtres connaissants sans entendement, sans capacités conceptuelles, les enfants et les bêtes (McLear), capables pourtant d'intuitions empiriques et pures valides. Les intuitions existent donc aussi en l'absence totale de concepts.
+
+    ! D'où un dilemme : Kant soutient-il à la fois le principe d'union et l'indépendance des intuitions ? La leçon suivante donne la réponse de Hanna.
+  points:
+  - id: kj2-l1-p1
+    sentence: "Dans la formule célèbre de Kant qui résume le principe d'union, des pensées sans ___ sont vides, des intuitions sans concepts sont aveugles."
+    answer: "contenu"
+    alt: []
+  - id: kj2-l1-p2
+    sentence: "Dans la formule célèbre de Kant qui résume le principe d'union, des pensées sans contenu sont ___, des intuitions sans concepts sont aveugles."
+    answer: "vides"
+    alt: []
+  - id: kj2-l1-p3
+    sentence: "Dans la formule célèbre de Kant qui résume le principe d'union, des pensées sans contenu sont vides, des intuitions sans ___ sont aveugles."
+    answer: "concepts"
+    alt: []
+  - id: kj2-l1-p4
+    sentence: "Dans la formule célèbre de Kant qui résume le principe d'union, des pensées sans contenu sont vides, des intuitions sans concepts sont ___."
+    answer: "aveugles"
+    alt: []
+  - id: kj2-l1-p5
+    sentence: "Kant écrit, à propos de l'entendement et des sens : « L'entendement ne peut rien intuitionner, les sens ne peuvent rien ___. »"
+    answer: "penser"
+    alt: []
+  - id: kj2-l1-p6
+    sentence: "Kant écrit, à propos de l'entendement et des sens : « Ce n'est que de leur ___ que peut naître la connaissance » (A50-51/B74-76)."
+    answer: "union"
+    alt: []
+  - id: kj2-l1-p7
+    sentence: "Parmi les lecteurs qui tirent de « des intuitions sans concepts sont aveugles » qu'une intuition sans concept n'existe pas ou n'a aucun sens, on compte Sellars, Abela et John ___."
+    answer: "McDowell"
+    alt: []
+  - id: kj2-l1-p8
+    sentence: "Contre la lecture conceptualiste, Kant écrit : « Des objets peuvent assurément nous ___ sans devoir nécessairement se rapporter à des fonctions de l'entendement » (A89/B122)."
+    answer: "apparaître"
+    alt: []
+  - id: kj2-l1-p9
+    sentence: "Contre la lecture conceptualiste, Kant écrit que des phénomènes présenteraient des objets à notre intuition même si le concept de cause restait vide, « car l'intuition n'a nullement besoin des fonctions de la ___ » (A90-91/B122-123)."
+    answer: "pensée"
+    alt: []
+  - id: kj2-l1-p10
+    sentence: "Contre la lecture conceptualiste, Kant écrit que le divers de l'intuition doit déjà être donné ___ la synthèse de l'entendement et indépendamment d'elle (B145)."
+    answer: "avant"
+    alt: []
+  - id: kj2-l1-p11
+    sentence: "Hanna appelle ___ des intuitions la thèse selon laquelle elles suffisent à produire des connaissances valides au-delà de tout contenu conceptuel qui peut leur être associé."
+    answer: "indépendance"
+    alt: []
+  - id: kj2-l1-p12
+    sentence: "Hanna appelle ___ des intuitions la thèse selon laquelle des êtres sans capacités conceptuelles, les enfants et les bêtes, en ont pourtant de valides, donc en l'absence totale de concepts."
+    answer: "autonomie"
+    alt: []
+- id: kj2-l2
+  title: "Aveugle ne veut pas dire sans objet : la solution de Hanna"
+  notes: |-
+    **Le dilemme se défait si l'on voit à quoi le principe d'union s'applique.** Selon Hanna, Kant dit dans la formule célèbre qu'intuitions et concepts sont complémentaires et interdépendants {green}pour constituer des jugements objectivement valides{/green}, et rien de plus.
+
+    **Deux sens de « connaissance ».** Le principe d'union correspond à un sens étroit de `Erkenntnis`, souligné dans l'édition B : la connaissance comme jugement objectivement valide (Bxxvi et n.). Le sens large de l'édition A est celui de toute représentation consciente objective (A320/B376-377). Le principe vaut pour le premier, non pour le second : hors du contexte du jugement valide, il peut donc y avoir des concepts « vides » et des intuitions « aveugles ».
+
+    **Vide et aveugle ne sont pas des insultes, mais des statuts.**
+    - {violet}Un concept vide{/violet} n'est ni un faux concept, ni un concept sans aucun sens : c'est un concept qui n'est pas objectivement valide, comme les concepts intelligibles d'objets ou de sujets nouménaux.
+    - {violet}Une intuition aveugle{/violet} n'est ni une fausse intuition, ni une intuition sans aucun sens : c'est une intuition objectivement valide de manière autonome et indépendante, une connaissance essentiellement non conceptuelle.
+
+    Une image pour fixer la thèse, qui n'est pas de Kant : un nourrisson voit bien cette chose-ci devant lui, mais il ne peut pas dire ce qu'elle est. Il ne manque pas d'objet ; il lui manque de quoi juger. C'est ce que signifie « aveugle » dans cette lecture : sans jugement possible, non sans objet.
+
+    **Pas d'anticipation de Frege.** Quand Kant écrit que {teal}« l'entendement ne peut faire d'autre usage (`Gebrauch`) des concepts que de juger par leur moyen »{/teal} (A68/B93), il {red}n'annonce pas le principe de contexte de Frege{/red} (les mots n'ont de sens que dans une proposition entière) : les concepts nouménaux, intelligibles hors de tout jugement, en sont des contre-exemples évidents.
+
+    ! Cette solution est la lecture de Hanna, partisan du non-conceptualisme : la leçon suivante montre que tous les kantiens ne l'acceptent pas.
+  points:
+  - id: kj2-l2-p1
+    sentence: "Pour Hanna, le principe d'union dit seulement que les intuitions et les concepts sont complémentaires et interdépendants pour constituer des ___ objectivement valides."
+    answer: "jugements"
+    alt: []
+  - id: kj2-l2-p2
+    sentence: "Dans l'édition B de la première *Critique*, Kant souligne un sens plus ___ de `Erkenntnis`, celui de jugement objectivement valide, alors que l'édition A entendait par là toute représentation consciente objective."
+    answer: "étroit"
+    alt: []
+  - id: kj2-l2-p3
+    sentence: "Pour Hanna, un concept ___ n'est ni un faux concept ni un concept sans aucun sens, mais un concept qui n'est pas objectivement valide, comme les concepts intelligibles d'objets nouménaux."
+    answer: "vide"
+    alt: []
+  - id: kj2-l2-p4
+    sentence: "Pour Hanna, une intuition ___ n'est ni une fausse intuition ni une intuition sans aucun sens, mais une intuition objectivement valide de manière autonome et indépendante des concepts."
+    answer: "aveugle"
+    alt: []
+  - id: kj2-l2-p5
+    sentence: "Kant écrit que l'entendement ne peut faire d'autre ___ (`Gebrauch`) des concepts que de juger par leur moyen (A68/B93)."
+    answer: "usage"
+    alt: []
+  - id: kj2-l2-p6
+    sentence: "Quand Kant dit que l'entendement n'a d'autre usage des concepts que de juger, il n'anticipe pas, selon Hanna, le principe de ___ de Frege, selon lequel les mots n'ont de sens que dans une proposition entière."
+    answer: "contexte"
+    alt: []
+  - id: kj2-l2-p7
+    sentence: "Les contre-exemples à toute lecture frégéenne de Kant, selon laquelle un concept n'aurait de sens que dans un jugement, sont les concepts ___, intelligibles hors de tout jugement."
+    answer: "nouménaux"
+    alt: []
+- id: kj2-l3
+  title: "Conceptualisme contre non-conceptualisme"
+  notes: |-
+    **Le débat engage toute la *Critique* : la nature de l'idéalisme transcendantal comme la Déduction des catégories.** Hanna reconnaît que les textes tirent dans les deux sens et que la question reste très disputée.
+
+    **Les deux thèses générales.**
+    - {pink}Le conceptualisme{/pink} : tout contenu représentatif objectif conscient d'un homme rationnel est strictement déterminé par ses seules capacités conceptuelles ; et les animaux et les hommes non rationnels ne sont pas capables de représentation objective consciente.
+    - {green}Le non-conceptualisme{/green} : tout ce contenu n'est pas déterminé par les seules capacités conceptuelles ; une partie est autonome, indépendante du contenu conceptuel et déterminée par les seules capacités non conceptuelles ; et au moins certains animaux et hommes non rationnels sont capables de représentation objective consciente.
+
+    **Quatre positions kantiennes.**
+
+    | Position | Thèse propre | Tenants |
+    | conceptualisme fort | l'entendement détermine aussi la sensibilité et ses intuitions | Sellars, McDowell, Abela |
+    | conceptualisme faible | la sensibilité fournit une simple condition nécessaire | Wenzel, Ginsborg, Grüne |
+    | non-conceptualisme faible | les intuitions donnent seules un contenu objectif | Rohs, Allais, McLear |
+    | non-conceptualisme fort | ce contenu sert aussi à justifier les croyances | Laiho, Tolley, Hanna |
+
+    **Ce qui sépare les versions fortes et faibles.**
+    - Le conceptualisme faible {coral}préserve minimalement le dualisme des facultés{/coral} et un rôle à demi indépendant pour les intuitions (tout en refusant qu'elles aient un contenu d'une autre nature), et admet que des concepts empiriques opèrent hors de jugements explicites. {red}Le conceptualisme fort réduit explicativement la sensibilité à l'entendement.{/red}
+    - Le non-conceptualisme faible ne répond pas directement à l'objection de **Sellars**, le {violet}mythe du donné{/violet} : rien ne compte comme contenu représentatif objectif, ni ne peut justifier une croyance, sans entrer dans le domaine essentiellement conceptuel de l'{violet}espace des raisons{/violet}. Le non-conceptualisme fort y répond : les intuitions valides par elles-mêmes contribuent directement à justifier les croyances épistémiques et pratiques, par les facteurs normatifs et proto-rationnels que la sensibilité introduit dans leur contenu.
+
+    ! L'enjeu n'est pas seulement de vocabulaire : selon la réponse, le divers sensible peut échapper aux catégories, et la Déduction est en péril (leçon suivante).
+  points:
+  - id: kj2-l3-p1
+    sentence: "Pour le ___, tout contenu représentatif objectif conscient d'un homme rationnel est strictement déterminé par ses seules capacités conceptuelles, et les animaux non rationnels ne sont pas capables d'une telle représentation."
+    answer: "conceptualisme"
+    alt: []
+  - id: kj2-l3-p2
+    sentence: "Pour le ___, une partie du contenu représentatif objectif est autonome et indépendante du contenu conceptuel, et au moins certains animaux non rationnels sont capables de représentation objective consciente."
+    answer: "non-conceptualisme"
+    alt: ["non conceptualisme"]
+  - id: kj2-l3-p3
+    sentence: "Dans le débat sur les intuitions sans concepts, le conceptualisme ___ réduit explicativement la sensibilité à l'entendement, alors que sa version plus modérée préserve minimalement le dualisme des facultés."
+    answer: "fort"
+    alt: []
+  - id: kj2-l3-p4
+    sentence: "Le conceptualisme ___ admet que la sensibilité fournit une condition nécessaire de la représentation objective et que des concepts empiriques opèrent hors de jugements explicites, tout en refusant aux intuitions un contenu d'une autre nature."
+    answer: "faible"
+    alt: []
+  - id: kj2-l3-p5
+    sentence: "Sellars objecte que rien ne compte comme contenu représentatif objectif sans entrer dans un domaine conceptuel : c'est l'objection dite du mythe du ___."
+    answer: "donné"
+    alt: []
+  - id: kj2-l3-p6
+    sentence: "Pour Sellars et McDowell, rien ne peut justifier une croyance hors du domaine essentiellement conceptuel qu'ils appellent l'espace des ___."
+    answer: "raisons"
+    alt: []
+  - id: kj2-l3-p7
+    sentence: "Le non-conceptualisme ___ soutient contre le mythe du donné que les intuitions valides par elles-mêmes contribuent directement à justifier les croyances, sans entrer dans l'espace des raisons."
+    answer: "fort"
+    alt: []
+  - id: kj2-l3-p8
+    sentence: "Le non-conceptualisme kantien faible, selon lequel les intuitions fournissent de manière autonome des contenus objectifs, est notamment défendu par McLear, Rohs et Lucy ___."
+    answer: "Allais"
+    alt: []
+- id: kj2-l4
+  title: "Deux problèmes : la régression et le dilemme de la Déduction"
+  notes: |-
+    **Le débat se noue autour de deux difficultés, toutes deux centrées sur le jugement.**
+
+    **La régression de la « schmimagination »** (Schulting). L'imagination doit médiatiser entre l'entendement et la sensibilité pour former des jugements valides. Or si l'imagination, et avec elle la synthèse, la spontanéité et l'unité objective, se scindent en deux sortes (l'une liée à l'entendement, l'autre à la sensibilité), il faut une quatrième faculté, la {yellow}« schmimagination »{/yellow}, pour unir ces deux sortes, puis une autre, à l'infini. {red}C'est une régression vicieuse de l'explication.{/red}
+
+    Pour l'éviter, on peut adopter le conceptualisme fort, qui réduit la sensibilité à l'entendement. Mais cela ruine le dualisme des facultés, donc ce qui fait que Kant dépasse rationalisme et empirisme, et qu'il reste, au XIXe siècle, un vrai concurrent de l'idéalisme absolu de **Hegel**. {coral}On a donc le choix entre une régression vicieuse et le renoncement à l'originalité de Kant.{/coral}
+
+    **Le dilemme *modus ponens* / *modus tollens* de la Déduction** (Grüne). Les mêmes conditionnels se lisent dans les deux sens.
+    - {green}Le non-conceptualiste{/green} : si le non-conceptualisme est vrai, il existe des intuitions valides de manière autonome ; si elles existent, il y a une lacune dans la Déduction, car la portée cognitive de la sensibilité excède, ou menace d'excéder, celle de l'entendement et de ses concepts purs ; s'il y a une lacune, la Déduction n'est pas probante. Donc elle n'est pas probante.
+    - {pink}Le conceptualiste{/pink} : la Déduction doit être probante ; si elle l'est, il n'y a pas de lacune ; s'il n'y a pas de lacune, il n'existe pas d'intuitions valides de manière autonome ; s'il n'en existe pas, le non-conceptualisme est faux. Donc il est faux.
+
+    {coral}Le *modus ponens* de l'un est le *modus tollens* de l'autre{/coral}, et il ne semble y avoir aucun moyen de principe de trancher.
+
+    ! Ces deux problèmes ne sont pas réglés ici : Hanna y revient en fin de cours, à propos des objets rebelles aux catégories.
+  points:
+  - id: kj2-l4-p1
+    sentence: "Si l'imagination se scinde en deux sortes, l'une liée à l'entendement, l'autre à la sensibilité, il faut une quatrième faculté pour les unir, appelée par plaisanterie la ___, et ainsi de suite à l'infini."
+    answer: "schmimagination"
+    alt: []
+  - id: kj2-l4-p2
+    sentence: "Le problème de la schmimagination tient en ceci que l'imagination scindée en deux exige une quatrième faculté pour unir ses deux sortes, puis une autre : c'est une ___ vicieuse de l'explication."
+    answer: "régression"
+    alt: []
+  - id: kj2-l4-p3
+    sentence: "Échapper à la régression de la schmimagination par le conceptualisme fort revient à ruiner le dualisme des facultés, donc la prétention de Kant à dépasser le rationalisme et l'empirisme et à concurrencer l'idéalisme absolu de ___."
+    answer: "Hegel"
+    alt: []
+  - id: kj2-l4-p4
+    sentence: "Le non-conceptualiste raisonne : s'il existe des intuitions valides de manière autonome, la portée de la sensibilité excède, ou menace d'excéder, celle de l'entendement ; il y a donc une ___ dans la Déduction transcendantale, qui n'est pas probante."
+    answer: "lacune"
+    alt: []
+  - id: kj2-l4-p5
+    sentence: "Le conceptualiste retourne l'argument sur la Déduction transcendantale : celle-ci doit être probante ; il n'y a donc pas de lacune ; il n'existe donc pas d'intuitions valides de manière autonome ; le ___ est donc faux."
+    answer: "non-conceptualisme"
+    alt: ["non conceptualisme"]
+  - id: kj2-l4-p6
+    sentence: "Dans le dilemme de la Déduction transcendantale, le *modus ponens* du non-conceptualiste est le *modus* ___ du conceptualiste, et il ne semble y avoir aucun moyen de principe de trancher."
+    answer: "tollens"
+    alt: []
+- id: kj2-l5
+  title: "Le tenir-pour-vrai : opinion, croyance, savoir"
+  notes: |-
+    **Une théorie de la connaissance kantienne n'est pas une épistémologie au sens actuel.** Dans sa célèbre lettre à **Marcus Herz** (10:129-130), Kant pose la question directrice de la philosophie critique : {teal}« quel est le fondement du rapport à l'objet de ce qu'on appelle en nous "représentation" (`Vorstellung`) ? »{/teal} Comment des représentations mentales objectivement valides, en particulier *a priori*, sont-elles possibles ? C'est l'objet de la {violet}théorie de la connaissance{/violet} (`Erkenntnistheorie`), à ne pas confondre avec {red}l'épistémologie contemporaine{/red}, théorie de la croyance vraie justifiée (avec le problème de Gettier sur la chance) tournée vers le scepticisme. Pour Hanna, la première *Critique* est donc un {green}traité de sémantique cognitive{/green}, à l'intérieur duquel Kant élabore aussi une épistémologie du jugement.
+
+    **Contraste avec Frege.** Pour **Frege**, des pensées composées de sens (`Sinne`) non spatio-temporels sont « saisies », et juger, c'est passer de la pensée saisie à la valeur de vérité : le sujet n'a donc affaire au vrai que dans les attitudes assertives. Pour Kant, les épisodes de jugement sont des actions (`Handlungen`, A69/B94) qui engendrent des propositions, et {green}toute attitude propositionnelle est un cas de{/green} {violet}tenir-pour-vrai{/violet} (`Fürwahrhalten`, A820/B848), une manière dont le sujet s'engage directement envers la valeur de vérité de son jugement.
+
+    **Trois degrés du tenir-pour-vrai.**
+
+    | Degré | Terme allemand | Suffisance |
+    | opinion | `Meinen` | ni subjective ni objective |
+    | croyance | `Glauben` | subjective seulement |
+    | savoir | `Wissen` | subjective et objective |
+
+    - {violet}L'opinion{/violet} n'atteint ni la {violet}persuasion{/violet} (`Überredung`, suffisance simplement subjective) ni la {violet}conviction{/violet} (`Überzeugung`, suffisance objective) : envisager une proposition, feindre, supposer.
+    - {violet}La croyance épistémique{/violet} inclut la persuasion, mais n'atteint pas seule la conviction.
+    - {violet}Le savoir{/violet} est la croyance épistémique achevée, parvenue à la conviction, autrement dit à la suffisance objective, qui inclut nécessairement la vérité en excluant toute liaison accidentelle (toute chance) entre croyance et vérité : d'où son autre nom, la {violet}certitude{/violet} (`Gewissheit`).
+
+    ! `Wissen` n'est pas la simple « connaissance » (`Erkenntnis`), représentation consciente d'un objet : c'est un degré d'engagement envers la vérité. Une représentation peut être une connaissance au sens large sans être un savoir.
+  points:
+  - id: kj2-l5-p1
+    sentence: "Dans sa lettre à Marcus ___, Kant pose la question directrice de la philosophie critique : quel est le fondement du rapport de la représentation à l'objet ?"
+    answer: "Herz"
+    alt: []
+  - id: kj2-l5-p2
+    sentence: "Comme la question directrice de la première *Critique* est de savoir comment une représentation peut se rapporter à son objet, Hanna la tient pour un traité de sémantique ___, non pour un traité d'épistémologie au sens contemporain."
+    answer: "cognitive"
+    alt: []
+  - id: kj2-l5-p3
+    sentence: "Pour Kant, à la différence de Frege, toute attitude propositionnelle engage directement le sujet envers la valeur de vérité de son jugement : c'est un cas de ___."
+    answer: "tenir-pour-vrai"
+    alt: ["tenir pour vrai"]
+  - id: kj2-l5-p4
+    sentence: "Le terme allemand que Kant emploie pour le tenir-pour-vrai, engagement de toute attitude propositionnelle envers la vérité, est ___."
+    answer: "Fürwahrhalten"
+    alt: ["Fuerwahrhalten"]
+  - id: kj2-l5-p5
+    sentence: "Le degré du tenir-pour-vrai qui n'atteint ni la suffisance subjective ni la suffisance objective, comme envisager une proposition ou supposer, est l'___ (`Meinen`)."
+    answer: "opinion"
+    alt: []
+  - id: kj2-l5-p6
+    sentence: "Le terme allemand que Kant emploie pour l'opinion, degré le plus bas du tenir-pour-vrai, est ___."
+    answer: "Meinen"
+    alt: []
+  - id: kj2-l5-p7
+    sentence: "La suffisance simplement subjective du tenir-pour-vrai est ce que Kant appelle la ___ (`Überredung`)."
+    answer: "persuasion"
+    alt: []
+  - id: kj2-l5-p8
+    sentence: "Le terme allemand que Kant emploie pour la persuasion, suffisance simplement subjective du tenir-pour-vrai, est ___."
+    answer: "Überredung"
+    alt: ["Ueberredung"]
+  - id: kj2-l5-p9
+    sentence: "La suffisance objective du tenir-pour-vrai, qui inclut la persuasion et la vérité, est ce que Kant appelle la ___ (`Überzeugung`)."
+    answer: "conviction"
+    alt: []
+  - id: kj2-l5-p10
+    sentence: "Le terme allemand que Kant emploie pour la conviction, suffisance objective du tenir-pour-vrai, est ___."
+    answer: "Überzeugung"
+    alt: ["Ueberzeugung"]
+  - id: kj2-l5-p11
+    sentence: "Le savoir kantien est la croyance épistémique parvenue à la conviction. Elle exclut toute liaison accidentelle entre croyance et vérité, et se nomme aussi ___ (`Gewissheit`)."
+    answer: "certitude"
+    alt: []
+  - id: kj2-l5-p12
+    sentence: "Le terme allemand que Kant emploie pour le savoir, degré du tenir-pour-vrai qui est subjectivement et objectivement suffisant, est ___."
+    answer: "Wissen"
+    alt: []
+- id: kj2-l6
+  title: "Le savoir a priori et le faillibilisme de Kant"
+  notes: |-
+    **Kant est optimiste sur le savoir, mais pas au point d'être infaillibiliste.** Contrairement à bien des épistémologues des XXe et XXIe siècles, il tient le savoir pour possible et réalisé dans deux domaines :
+    - {green}le savoir *a posteriori*{/green}, certitude empirique sur des vérités contingentes, dans la science de la nature et l'expérience courante ;
+    - {green}le savoir *a priori*{/green}, certitude non empirique sur des vérités nécessaires, dans les sciences exactes et la philosophie.
+
+    **Deux formes de savoir *a priori*.**
+    - **Non inférentiel**, avec une phénoménologie cognitive intrinsèquement contraignante : c'est l'{violet}intellection{/violet} rationnelle (`Einsicht`), ce que **Descartes** aurait appelé une intuition rationnelle claire et distincte.
+    - **Inférentiel**, fondé sur une démonstration ou une preuve (A783-794/B810-822) ; même alors, son statut de savoir repose en dernier sur des prémisses que garantit l'intellection rationnelle (Hanna).
+
+    **Le faillibilisme.** Kant distingue soigneusement deux choses : (i) la phénoménologie contraignante propre à l'intellection, l'impression d'évidence ; (ii) la suffisance objective de la croyance *a priori*, sa liaison non accidentelle à une vérité nécessaire. Le premier peut donc se trouver sans le second. J'ai beau trouver une proposition évidente, il se peut que je me trompe : c'est le cas de bien des mathématiciens avant que leur démonstration ne soit réfutée (exemple familier, qui n'est pas de Kant). {coral}À la différence de Descartes et des rationalistes infaillibilistes, et comme les rationalistes « modérés » récents (**BonJour**), Kant est faillibiliste sur l'intellection rationnelle.{/coral}
+
+    ! Faillibiliste ne veut pas dire sceptique : le savoir reste possible et réalisé, l'évidence seule n'en est simplement pas la garantie.
+  points:
+  - id: kj2-l6-p1
+    sentence: "Contrairement à bien des épistémologues récents, Kant tient pour possible et réalisée la certitude ___ sur des vérités contingentes, dans la science de la nature et dans l'expérience courante."
+    answer: "empirique"
+    alt: []
+  - id: kj2-l6-p2
+    sentence: "Le savoir *a priori* non inférentiel, doté d'une phénoménologie cognitive contraignante, est ce que Kant appelle l'intellection (`Einsicht`) ___, et que Descartes aurait appelé une intuition claire et distincte."
+    answer: "rationnelle"
+    alt: []
+  - id: kj2-l6-p3
+    sentence: "Le terme allemand que Kant emploie pour l'intellection rationnelle, savoir *a priori* non inférentiel, est ___."
+    answer: "Einsicht"
+    alt: []
+  - id: kj2-l6-p4
+    sentence: "Le savoir *a priori* inférentiel, fondé sur une démonstration, repose lui-même en dernier sur des ___ que garantit l'intellection rationnelle."
+    answer: "prémisses"
+    alt: []
+  - id: kj2-l6-p5
+    sentence: "Comme la phénoménologie contraignante d'une évidence peut exister sans la suffisance objective de la croyance *a priori*, Kant est, à la différence de Descartes, ___ sur l'intellection rationnelle."
+    answer: "faillibiliste"
+    alt: []
+  - id: kj2-l6-p6
+    sentence: "La position de Kant sur l'intellection rationnelle est proche de celle des rationalistes récents dits ___, comme BonJour, plutôt que de celle des rationalistes infaillibilistes classiques."
+    answer: "modérés"
+    alt: []
+- id: kj2-l7
+  title: "Croyance doctrinale, pragmatique, morale : faire place au Glauben"
+  notes: |-
+    **La croyance ne se réduit pas à sa forme épistémique : c'est la clef de la formule la plus célèbre de la préface de la *Critique*.** Les interprètes récents (**Stevenson**, **Chignell**, **Kain**, **Pasternack**) replacent la croyance dans une {violet}éthique de la croyance{/violet} kantienne, avec quatre sous-espèces de `Glauben`.
+
+    | Croyance | Nature |
+    | épistémique | orientée vers le savoir |
+    | doctrinale | spéculative et théorique |
+    | pragmatique | instrumentale |
+    | morale | éthique, un croire-en |
+
+    **La croyance doctrinale est instable.** C'est le plus près qu'un sujet puisse approcher du scientifique, à propos d'une proposition nouménale sans valeur de vérité. Mais {teal}« il y a quelque chose d'instable dans la croyance simplement doctrinale »{/teal} (A827/B855) : les difficultés de la spéculation, ces sophismes et contradictions dialectiques rationnellement inévitables, en détournent souvent.
+
+    **La croyance morale ne l'est pas.** {teal}« Il en va tout autrement de la croyance morale [...] car il est absolument nécessaire qu'une chose arrive, à savoir que j'obéisse en tous points à la loi morale. »{/teal} (A828/B856) Le mot anglais *faith* traduit mal `Glauben`, car la foi peut désigner un état non rationnel. La croyance morale est une attitude {red}objectivement insuffisante du point de vue épistémique{/red}, mais qui offre une {green}pleine justification pratique{/green}, relativement au système de principes moraux fondé sur l'impératif catégorique, pour choisir et agir *comme si* l'on pouvait croire ou savoir une proposition sur des objets ou des sujets nouménaux. Ses cas principaux sont les {violet}postulats de la raison pure pratique{/violet} (5:122-134), l'immortalité de l'âme et l'existence de Dieu : ils sont impossibles à croire de manière épistémique et à savoir, et ils prescrivent pourtant certaines façons de vivre.
+
+    **Ce que veut dire Bxxx.** Quand Kant écrit dans la préface de la seconde édition {teal}« j'ai dû nier le `Wissen` pour faire place au `Glauben` »{/teal} (Bxxx), il {red}n'oppose pas la foi irrationnelle à la science{/red}. Il dit qu'il a dû restreindre, par sa critique et son idéalisme transcendantal, le champ de la croyance épistémique et du savoir, pour faire place à une croyance morale pleinement justifiée sur le plan pratique. C'est la doctrine du {violet}primat du pratique{/violet} : la croyance morale l'emporte philosophiquement sur la croyance épistémique (sciences exactes comprises) et sur la croyance doctrinale (toute métaphysique spéculative comprise). Mais le fondement rationnel de cette attitude reste le jugement : {coral}la théorie du jugement fonde ainsi la métaphilosophie de Kant{/coral}.
+
+    ! La croyance morale n'est pas une conviction que Dieu existe : c'est le fait de vivre comme si on le savait, pour une raison pratique.
+  points:
+  - id: kj2-l7-p1
+    sentence: "Le mot anglais *faith* traduit mal le terme allemand ___, car la foi peut désigner un état non rationnel, alors que Kant entend une attitude pleinement justifiée sur le plan pratique."
+    answer: "Glauben"
+    alt: []
+  - id: kj2-l7-p2
+    sentence: "La sous-espèce de croyance kantienne, spéculative et théorique, qui est le plus près que l'on puisse approcher du scientifique à propos d'une proposition nouménale, est la croyance ___."
+    answer: "doctrinale"
+    alt: []
+  - id: kj2-l7-p3
+    sentence: "La sous-espèce de croyance kantienne qui est instrumentale, à côté de la croyance épistémique, doctrinale et morale, est la croyance ___."
+    answer: "pragmatique"
+    alt: []
+  - id: kj2-l7-p4
+    sentence: "Kant écrit : « Il y a quelque chose d'___ dans la croyance simplement doctrinale », car les difficultés de la spéculation en détournent souvent (A827/B855)."
+    answer: "instable"
+    alt: []
+  - id: kj2-l7-p5
+    sentence: "Kant oppose à la croyance doctrinale la croyance ___, pour laquelle « il est absolument nécessaire qu'une chose arrive, à savoir que j'obéisse en tous points à la loi morale » (A828/B856)."
+    answer: "morale"
+    alt: []
+  - id: kj2-l7-p6
+    sentence: "Dans la croyance morale, objectivement insuffisante mais pratiquement justifiée, on choisit et on agit comme si l'on pouvait savoir une proposition sur des objets nouménaux, relativement à des principes moraux fondés sur l'impératif ___."
+    answer: "catégorique"
+    alt: []
+  - id: kj2-l7-p7
+    sentence: "Les cas principaux de la croyance morale, l'immortalité de l'âme et l'existence de Dieu, sont ce que Kant appelle les ___ de la raison pure pratique."
+    answer: "postulats"
+    alt: []
+  - id: kj2-l7-p8
+    sentence: "Dans la préface de la seconde édition de la *Critique*, Kant écrit qu'il a dû nier le `___` pour faire place au `Glauben`."
+    answer: "Wissen"
+    alt: []
+  - id: kj2-l7-p9
+    sentence: "La formule selon laquelle Kant a dû nier le savoir pour faire place à la croyance se trouve dans ___ de la *Critique de la raison pure*."
+    answer: "la préface de la seconde édition"
+    alt: ["la Préface B", "la préface B", "la préface de l'édition B"]
+  - id: kj2-l7-p10
+    sentence: "En faisant place au `Glauben`, Kant défend la doctrine selon laquelle la croyance morale l'emporte philosophiquement sur la croyance épistémique et la croyance doctrinale : c'est le ___ du pratique."
+    answer: "primat"
+    alt: []

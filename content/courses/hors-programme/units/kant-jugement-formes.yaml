@@ -1,0 +1,303 @@
+# Cours sur la théorie kantienne du jugement (Hanna, SEP), suite : section 2.1
+# (« Kinds of logical form ») et son supplément, « Do the Apparent Limitations
+# and Confusions of Kant's Logic Undermine his Theory of Judgment? ». Citations
+# traduites de l'anglais de l'article.
+#
+# Point laissé de côté : le débat (Parsons, Friedman, Shabel) sur le rapport
+# entre la forme mathématique et l'étroitesse de la logique kantienne, seulement
+# signalé sans thèses différenciées.
+
+id: kant-jugement-formes
+title: "Les formes logiques du jugement"
+subtitle: "Logique générale pure, table des jugements, limites de la logique kantienne"
+icon: bulb
+color: blue
+group: "Kant : la théorie du jugement"
+lessons:
+- id: kj3-l1
+  title: "La logique générale pure"
+  notes: |-
+    **La forme logique n'existe, pour Kant, que dans le jugement.** Sa conception, plus que sa logique elle-même, a marqué la logique moderne : de **Boole** et **Humboldt** à **Frege**, au second **Wittgenstein** et à **Chomsky**, on retrouve l'idée que la logique n'existe que dans le contexte des activités et des capacités de jugement des animaux rationnels. Cette leçon dit ce qu'est cette logique, avant d'en donner la table.
+
+    **Trois mots à prendre un par un.** La table des jugements relève de la {violet}logique générale pure{/violet} :
+    - {green}pure{/green}, parce qu'elle est *a priori*, nécessaire et sans contenu sensible ;
+    - {green}générale{/green}, parce qu'elle fait abstraction de toute différence particulière entre les objets représentés et {teal}« n'a affaire qu'à la simple forme de la pensée »{/teal} (A54/B78) ;
+    - {green}logique{/green}, parce qu'elle fournit des règles catégoriquement normatives, conditions *sine qua non* de la vérité des jugements (la loi de non-contradiction) et de l'inférence valide (la loi de conséquence logique) (A52-55/B76-79).
+
+    **Logique générale, logique transcendantale.** Toutes deux sont pures et *a priori*. Mais la logique transcendantale est {violet}spéciale{/violet} : elle est restreinte du point de vue de l'être et présuppose l'existence de certaines sortes d'objets (A55-57/B79-82). Elle présuppose donc la logique générale, et elle est synthétique *a priori*, non analytique. Certains interprètes (**Rödl**, **Tolley**) soutiennent {pink}l'inverse{/pink}, au motif que la pensée, par nature, se dirige vers des objets. Hanna répond que cela ne suit pas : une logique générale et formelle peut être objectivement valide sans être pour autant engagée envers telle sorte d'objets.
+
+    **Un « devoir » logique.** La logique générale pure lie absolument tout penseur : ses lois sont les {green}lois catégoriquement normatives de la pensée{/green}, pour tout animal rationnel réel et possible. Elle est donc une science formelle et une science morale, mais {red}non une science de la nature{/red} : le devoir ne se réduit pas à l'être. Comme le devoir moral exprimé par l'impératif catégorique, le devoir logique est rarement bien suivi par des êtres finis et imparfaits, qui commettent sophismes et péchés avec une fréquence comparable ; hélas, le devoir n'entraîne pas l'être. Réciproquement, heureusement, l'être n'entraîne pas le devoir : aucun fait de psychologie empirique ne fait une loi logique. D'où l'{coral}antipsychologisme{/coral} de Kant.
+
+    ! Dire que les gens raisonnent souvent mal ne réfute pas une loi logique : elle prescrit comment on doit penser, elle ne décrit pas comment on pense.
+  points:
+  - id: kj3-l1-p1
+    sentence: "La logique que Kant nomme générale fait abstraction de toute différence particulière entre les objets représentés et n'a affaire, écrit-il, qu'à la simple ___ de la pensée (A54/B78)."
+    answer: "forme"
+    alt: []
+  - id: kj3-l1-p2
+    sentence: "La logique générale pure est *pure* parce qu'elle est *a priori*, nécessaire et sans contenu ___."
+    answer: "sensible"
+    alt: []
+  - id: kj3-l1-p3
+    sentence: "Comme condition *sine qua non* de la vérité d'un jugement, la logique générale pure fournit la loi de ___, c'est-à-dire de cohérence logique."
+    answer: "non-contradiction"
+    alt: ["non contradiction"]
+  - id: kj3-l1-p4
+    sentence: "Comme condition *sine qua non* de l'inférence valide, la logique générale pure fournit la loi de ___ logique."
+    answer: "conséquence"
+    alt: []
+  - id: kj3-l1-p5
+    sentence: "À la différence de la logique générale pure, la logique ___ est spéciale : restreinte du point de vue de l'être, elle présuppose l'existence de certaines sortes d'objets, et elle est synthétique *a priori*."
+    answer: "transcendantale"
+    alt: []
+  - id: kj3-l1-p6
+    sentence: "Contre la thèse selon laquelle la logique transcendantale présuppose la logique générale, Rödl et ___ soutiennent l'inverse, au motif que la pensée, par nature, se dirige vers des objets."
+    answer: "Tolley"
+    alt: []
+  - id: kj3-l1-p7
+    sentence: "Les lois de la logique générale pure sont catégoriquement ___ pour tout animal rationnel réel et possible : elles prescrivent comment on doit penser."
+    answer: "normatives"
+    alt: []
+  - id: kj3-l1-p8
+    sentence: "Science formelle et science morale, la logique générale pure n'est pas une science de la ___, car le devoir ne se réduit pas à l'être."
+    answer: "nature"
+    alt: []
+  - id: kj3-l1-p9
+    sentence: "Aucun fait de psychologie empirique ne fait une loi logique, puisque l'être n'entraîne pas le devoir : c'est l'___ de la logique kantienne."
+    answer: "antipsychologisme"
+    alt: []
+- id: kj3-l2
+  title: "La table des jugements"
+  notes: |-
+    **La table énumère toutes les formes logiques possibles des propositions** : quatre titres, chacun à trois sous-espèces (A70/B95). Kant l'appelle aussi {teal}« les fonctions de l'unité dans les jugements »{/teal} (A69/B94), pour marquer qu'une forme logique n'existe que dans une proposition : le contenu d'un jugement est plus fondamental que sa forme. Les formes logiques correspondent une à une aux catégories, ce qu'établit la {sky}Déduction métaphysique{/sky} (A76-83/B102-109, B159).
+
+    | Titre | Jugement | Forme |
+    | quantité | universel | tous les F sont G |
+    | quantité | particulier | quelques F sont G |
+    | quantité | singulier | ce F est G |
+    | qualité | affirmatif | les F sont G |
+    | qualité | négatif | aucun F n'est G |
+    | qualité | infini | les F sont non-G |
+    | relation | catégorique | les F sont G, atome |
+    | relation | hypothétique | si P alors Q |
+    | relation | disjonctif | les F sont ou G ou H |
+    | modalité | problématique | possiblement P |
+    | modalité | assertorique | effectivement P |
+    | modalité | apodictique | nécessairement P |
+
+    **Tout part de la prédication.** Il est défendable que toutes ces formes soient des modifications ou des composés de la proposition simple à une place, sujet-prédicat, « les F sont G ». Chaque titre répond à une question propre.
+    - **Quantité** : les trois façons dont se combinent et se séparent les extensions de deux concepts.
+    - **Qualité** : les trois façons de poser (`gesetzt`) ou de supprimer (`aufgehoben`) l'existence de ce à quoi renvoient les concepts, en leur attribuant une extension effective non vide ou nulle (A594-595/B622-623).
+    - **Relation** : les propositions sont atomiques (la forme catégorique), ou moléculaires quant à leur valeur de vérité (hypothétique, disjonctif). Dans le jugement disjonctif, les parties sont mutuellement exclusives et leur ensemble est exhaustif.
+    - **Modalité** : voir la leçon suivante.
+
+    ! Le jugement infini n'est pas le jugement négatif : « aucun homme n'est mortel » nie la proposition ; « les hommes sont non-mortels » place les hommes dans la classe des non-mortels.
+  points:
+  - id: kj3-l2-p1
+    sentence: "La table des jugements compte quatre titres : quantité, qualité, relation et ___, chacun à trois sous-espèces."
+    answer: "modalité"
+    alt: []
+  - id: kj3-l2-p2
+    sentence: "Kant appelle aussi la table des jugements « les ___ de l'unité dans les jugements » (A69/B94), pour marquer qu'une forme logique n'existe que dans une proposition."
+    answer: "fonctions"
+    alt: []
+  - id: kj3-l2-p3
+    sentence: "La correspondance terme à terme entre les formes logiques du jugement et les catégories est établie dans ce que Kant appelle la Déduction ___."
+    answer: "métaphysique"
+    alt: []
+  - id: kj3-l2-p4
+    sentence: "Sous le titre de la quantité, la table des jugements compte l'universel, le particulier et le ___, de la forme « ce F est G »."
+    answer: "singulier"
+    alt: []
+  - id: kj3-l2-p5
+    sentence: "Sous le titre de la qualité, la table des jugements compte l'affirmatif, le négatif et l'___, de la forme « les F sont non-G »."
+    answer: "infini"
+    alt: []
+  - id: kj3-l2-p6
+    sentence: "Sous le titre de la relation, la table des jugements compte le ___ (« les F sont G »), l'hypothétique et le disjonctif."
+    answer: "catégorique"
+    alt: []
+  - id: kj3-l2-p7
+    sentence: "Sous le titre de la relation, la table des jugements compte le catégorique, le disjonctif et l'___, de la forme « si P alors Q »."
+    answer: "hypothétique"
+    alt: []
+  - id: kj3-l2-p8
+    sentence: "Sous le titre de la relation, la table des jugements compte le catégorique, l'hypothétique et le ___, où les parties sont mutuellement exclusives et leur ensemble exhaustif."
+    answer: "disjonctif"
+    alt: []
+  - id: kj3-l2-p9
+    sentence: "Sous le titre de la modalité, la table des jugements compte le ___ (« possiblement P »), l'assertorique et l'apodictique."
+    answer: "problématique"
+    alt: []
+  - id: kj3-l2-p10
+    sentence: "Sous le titre de la modalité, la table des jugements compte le problématique, l'apodictique et l'___, de la forme « effectivement P »."
+    answer: "assertorique"
+    alt: []
+  - id: kj3-l2-p11
+    sentence: "Sous le titre de la modalité, la table des jugements compte le problématique, l'assertorique et l'___, de la forme « nécessairement P »."
+    answer: "apodictique"
+    alt: []
+- id: kj3-l3
+  title: "La modalité : ni psychologie, ni épistémologie"
+  notes: |-
+    **Le titre de la modalité semble donner raison à ceux qui font de la logique kantienne une psychologie : Hanna le conteste.** La modalité d'un jugement {teal}« ne contribue en rien au contenu du jugement [...] mais concerne seulement la valeur de la copule par rapport à la pensée en général »{/teal} (A74/B99-100).
+
+    **Le soupçon.** Cette doctrine paraît confondre les trois attitudes de l'{red}opinion, de la croyance et de la certitude{/red} (A820-823/B848-851) avec les notions de possibilité, d'effectivité et de nécessité, voire psychologiser la modalité. C'est un cas de l'interprétation courante, selon laquelle la logique et la théorie du jugement de Kant seraient au fond épistémologiques ou psychologiques.
+
+    **Quatre raisons de la rejeter.**
+    - Kant isole et discute expressément les attitudes propositionnelles dans son épistémologie et son éthique de la croyance : il ne les confond donc pas avec la modalité logique.
+    - Il rejette fermement le psychologisme logique.
+    - La {violet}« valeur »{/violet} (`Wert`) désigne la valeur de vérité de la proposition entière : d'où le fait que le prédicat modal n'ajoute rien au contenu propre, au-delà de cette valeur.
+    - Surtout, la {violet}« pensée en général »{/violet} est pour Kant l'équivalent conceptuel des **mondes logiquement possibles** de Leibniz (Bxvii n., A573/B601).
+
+    **La lecture de Hanna.** Les trois modalités sont les trois façons d'assigner la vérité à une proposition à travers les mondes logiquement possibles :
+
+    | Jugement | Modalité | Vrai dans |
+    | problématique | possibilité | certains mondes |
+    | assertorique | effectivité | ce monde seul |
+    | apodictique | nécessité | tous les mondes |
+
+    Ce monde-ci est fixé par son caractère indexical, par l'intuition sensible humaine : celui où je me trouve.
+
+    ! Cette traduction en mondes possibles est celle de Hanna, non un vocabulaire de Kant : elle sert à montrer que la modalité porte sur la vérité, non sur l'état d'esprit de celui qui juge.
+  points:
+  - id: kj3-l3-p1
+    sentence: "Kant écrit que la modalité d'un jugement « ne contribue en rien au ___ du jugement », mais concerne seulement la valeur de la copule par rapport à la pensée en général (A74/B99-100)."
+    answer: "contenu"
+    alt: []
+  - id: kj3-l3-p2
+    sentence: "Kant écrit que la modalité concerne seulement la ___ de la copule par rapport à la pensée en général (A74/B99-100) ; pour Hanna, le terme désigne la valeur de vérité de la proposition."
+    answer: "valeur"
+    alt: []
+  - id: kj3-l3-p3
+    sentence: "Le soupçon adressé à la doctrine kantienne de la modalité est qu'elle confondrait les notions de possibilité, d'effectivité et de nécessité avec les trois attitudes d'opinion, de croyance et de ___."
+    answer: "certitude"
+    alt: []
+  - id: kj3-l3-p4
+    sentence: "Dans la lecture de Hanna, la « pensée en général » dont parle Kant à propos de la modalité est l'équivalent conceptuel des mondes logiquement possibles de ___."
+    answer: "Leibniz"
+    alt: []
+  - id: kj3-l3-p5
+    sentence: "Dans la lecture de Hanna, un jugement ___ assigne la vérité à une proposition dans certains mondes logiquement possibles."
+    answer: "problématique"
+    alt: []
+  - id: kj3-l3-p6
+    sentence: "Dans la lecture de Hanna, un jugement ___ assigne la vérité à une proposition dans ce monde seul, que l'intuition sensible fixe comme celui où l'on se trouve."
+    answer: "assertorique"
+    alt: []
+  - id: kj3-l3-p7
+    sentence: "Dans la lecture de Hanna, un jugement ___ assigne la vérité à une proposition dans tous les mondes logiquement possibles."
+    answer: "apodictique"
+    alt: []
+- id: kj3-l4
+  title: "Une logique limitée et confuse ?"
+  notes: |-
+    **Vue d'aujourd'hui, la logique de Kant paraît à la fois trop faible et trop forte.** Le logicien **Hazen** la juge {red}« terriblement étroite d'esprit et mathématiquement triviale »{/red}.
+
+    **Deux limites : elle serait trop faible.**
+    - Toutes ses propositions sont sujet-prédicat à une place ou des composés de celles-ci. Elle ignore donc les {violet}prédicats relationnels{/violet} et la {violet}quantification multiple{/violet} : elle est au plus une {violet}logique monadique{/violet} (bien que du second ordre). Les schémas d'arguments de la *Logique* de Jäsche sont tous vérifonctionnels, syllogistiques ou fondés sur l'inclusion analytique.
+    - Sa liste des relations propositionnelles omet la {violet}conjonction{/violet} : même sa logique des fonctions de vérité paraît incomplète.
+
+    Elle est donc nettement plus faible que la logique « élémentaire », et ne peut équivaloir à une logique mathématique à la Frege-Russell. Celle-ci serait d'ailleurs pour Kant une logique transcendantale.
+
+    **Quatre confusions : elle serait trop forte.**
+    - Il donne aux propositions universelles affirmatives (« tous les F sont G ») une {red}portée existentielle{/red}, à la manière d'Aristote, au lieu d'y voir des conditionnels matériels (« pour tout x, si Fx alors Gx »).
+    - Il comprend le conditionnel comme le {red}rapport de principe à conséquence{/red}, confondant ainsi conditionnels stricts et matériels.
+    - En distinguant jugement négatif et jugement infini, il sépare sans nécessité la négation de la proposition et celle du prédicat. D'où une ambiguïté : « les F ne sont pas G » peut se lire « aucun F n'est G » (sans engagement d'existence) ou « les F sont non-G » (avec engagement d'existence).
+    - Il conçoit la disjonction comme le {red}« ou » exclusif{/red}, là où la lecture correcte serait le « ou » inclusif.
+
+    Résultat : sa logique n'est pas une logique extensionnelle.
+
+    ! Ces reproches supposent un point de vue déterminé sur ce qu'est la logique : c'est ce que la leçon suivante examine.
+  points:
+  - id: kj3-l4-p1
+    sentence: "Kant ignorant les prédicats relationnels et la quantification multiple, sa logique générale pure est au plus une logique ___."
+    answer: "monadique"
+    alt: []
+  - id: kj3-l4-p2
+    sentence: "La liste kantienne des relations entre propositions omet la ___, de sorte que sa logique des fonctions de vérité paraît incomplète."
+    answer: "conjonction"
+    alt: []
+  - id: kj3-l4-p3
+    sentence: "La logique mathématique à la Frege-Russell, qui inclut la quantification sur les propriétés, serait pour Kant une logique ___, non une logique générale pure."
+    answer: "transcendantale"
+    alt: []
+  - id: kj3-l4-p4
+    sentence: "Kant donne aux propositions « tous les F sont G » une portée ___, à la manière d'Aristote, alors qu'on les lit aujourd'hui comme des conditionnels matériels."
+    answer: "existentielle"
+    alt: []
+  - id: kj3-l4-p5
+    sentence: "Kant comprend le conditionnel « si P alors Q » comme le rapport de ___ à conséquence, confondant, à ce qu'il semble, conditionnels stricts et conditionnels matériels."
+    answer: "principe"
+    alt: ["fondement"]
+  - id: kj3-l4-p6
+    sentence: "Kant conçoit la disjonction comme le « ou » ___, qui implique que si « P ou Q » est vrai, « P et Q » est faux."
+    answer: "exclusif"
+    alt: []
+  - id: kj3-l4-p7
+    sentence: "Comme le jugement infini « les F sont non-G » garde un engagement d'existence et non le jugement négatif « aucun F n'est G », la phrase « les F ne sont pas G » devient systématiquement ___ dans la logique kantienne."
+    answer: "ambiguë"
+    alt: ["ambigue"]
+  - id: kj3-l4-p8
+    sentence: "Comme Kant admet portée existentielle, principe et conséquence, et disjonction exclusive, sa logique est plus forte que la logique élémentaire et n'est pas une logique ___."
+    answer: "extensionnelle"
+    alt: []
+  - id: kj3-l4-p9
+    sentence: "Le jugement selon lequel la logique de Kant est « terriblement étroite d'esprit et mathématiquement triviale » est dû au logicien ___."
+    answer: "Hazen"
+    alt: []
+- id: kj3-l5
+  title: "Défense de la logique kantienne contre le logicisme"
+  notes: |-
+    **Ces reproches ne menacent pas la théorie du jugement, car ils présupposent le logicisme de Frege et Russell.** Le {violet}logicisme{/violet} tient que les mathématiques, ou du moins l'arithmétique, se réduisent à une logique du second ordre. Hanna oppose à ces reproches trois répliques kantiennes.
+
+    **L'absence de logique des relations n'est pas un oubli.** Si la logique générale pure ne traite ni des relations ni de la quantification multiple, c'est que les relations mathématiques sont, pour Kant, représentées dans l'espace et le temps par l'intuition pure, non dans l'entendement : elles relèvent de l'{sky}Esthétique transcendantale{/sky}. Les vérités mathématiques ne sont donc pas des vérités logiques (analytiques, fondées sur des concepts) mais des {green}vérités synthétiques, fondées sur l'intuition{/green}. Il n'y a donc pas, par nature, de « logique mathématique » authentique. Et cette thèse ne se balaie pas, au vu de ce que l'on sait du statut problématique du logicisme : le paradoxe de **Russell**, le théorème de **Church** sur l'indécidabilité, le premier théorème d'incomplétude de **Gödel**, le théorème de **Tarski** sur l'indéfinissabilité de la vérité, le problème de « César » de **Frege**, le souci de **Benacerraf**.
+
+    **La conjonction et l'inclusion sont implicitement là.** Kant connaît la disjonction inclusive : admettant le conditionnel, il remarque que {teal}« la question de savoir si ces deux propositions sont en elles-mêmes vraies reste ici non décidée »{/teal}, puis distingue le rapport de conséquence de la disjonction exclusive (A73/B98-99). Or, **De Morgan** l'a montré, la conjonction se définit par la négation et la disjonction inclusive ; et, **Sheffer** l'a montré, toutes les fonctions de vérité s'expriment par une seule fonction. Implicitement, {coral}sa logique des fonctions de vérité est donc complète{/coral}.
+
+    **Ne pas être extensionnelle, c'est être intensionnelle.** La logique de Kant est une {violet}logique intensionnelle{/violet}, faite d'engagements d'existence non uniformes, de modalités primitives et de structures conceptuelles fines. Sa liste des formes est donc plus étroite que la logique élémentaire (monadique) et plus large (intensionnelle). Ce double choix se défend pour deux raisons :
+    - parmi les logiques classiques des prédicats, seule la logique monadique est décidable et complète (Boolos et Jeffrey) : la logique générale pure peut prétendre être le {yellow}« noyau *a priori* »{/yellow} de la logique classique ;
+    - les logiques intensionnelles et non classiques se sont développées avec rigueur depuis le milieu du XXe siècle (**Priest**).
+
+    ! Hanna ne dit pas que Kant avait anticipé ces résultats, mais que la thèse kantienne, jugée d'après eux, n'a rien de naïf.
+  points:
+  - id: kj3-l5-p1
+    sentence: "Les reproches adressés à la logique de Kant supposent le ___ de Frege et de Russell, selon lequel les mathématiques, ou du moins l'arithmétique, se réduisent à une logique du second ordre."
+    answer: "logicisme"
+    alt: []
+  - id: kj3-l5-p2
+    sentence: "Si la logique générale pure ne traite pas des relations, c'est que les relations mathématiques sont représentées, pour Kant, dans l'espace et le temps par l'intuition ___, non par l'entendement."
+    answer: "pure"
+    alt: []
+  - id: kj3-l5-p3
+    sentence: "Comme les relations mathématiques relèvent chez Kant de l'intuition, sa théorie des relations mathématiques n'appartient pas à la logique générale pure, mais à l'Esthétique ___."
+    answer: "transcendantale"
+    alt: []
+  - id: kj3-l5-p4
+    sentence: "Les vérités mathématiques ne sont pas pour Kant des vérités logiques, fondées sur des concepts, mais des vérités ___, fondées sur l'intuition : il ne peut donc y avoir de logique mathématique authentique."
+    answer: "synthétiques"
+    alt: []
+  - id: kj3-l5-p5
+    sentence: "En faveur de la thèse kantienne contre le logicisme, Hanna invoque notamment le théorème de ___ sur l'indécidabilité de la logique classique des prédicats, à côté de ceux de Gödel et de Tarski."
+    answer: "Church"
+    alt: []
+  - id: kj3-l5-p6
+    sentence: "En faveur de la thèse kantienne contre le logicisme, Hanna invoque notamment le premier théorème d'incomplétude de ___, à côté de ceux de Church et de Tarski."
+    answer: "Gödel"
+    alt: ["Godel"]
+  - id: kj3-l5-p7
+    sentence: "En faveur de la thèse kantienne contre le logicisme, Hanna invoque notamment le paradoxe de ___, et le problème de « César » de Frege."
+    answer: "Russell"
+    alt: []
+  - id: kj3-l5-p8
+    sentence: "Si la conjonction manque à la liste de Kant, elle se définit par la négation et la disjonction inclusive, comme l'a montré Augustus De Morgan ; et toutes les fonctions de vérité s'expriment par une seule, comme l'a montré ___."
+    answer: "Sheffer"
+    alt: []
+  - id: kj3-l5-p9
+    sentence: "Si la logique de Kant n'est pas extensionnelle, c'est qu'elle est ___, faite d'engagements d'existence non uniformes, de modalités primitives et de structures conceptuelles fines."
+    answer: "intensionnelle"
+    alt: []
+  - id: kj3-l5-p10
+    sentence: "Parmi les logiques classiques des prédicats, seule la logique monadique est décidable et complète : d'où l'idée que la logique générale pure serait le « ___ *a priori* » de la logique classique."
+    answer: "noyau"
+    alt: []

@@ -1,0 +1,455 @@
+# Cours sur la théorie kantienne du jugement (Hanna, SEP), fin : section 3
+# (« The Metaphysics of Judgment »), son supplément « Completing the Picture of
+# Kant's Metaphysics of Judgment » et section 4 (« Problems and Prospects »).
+# Citations traduites de l'anglais de l'article.
+#
+# « Rogue objects » est rendu par « objets rebelles », « categorial anarchy » par
+# « anarchie catégoriale », « bottom-up / top-down problem » par « problème
+# ascendant / descendant », étiquettes de Hanna.
+#
+# Point laissé de côté : le rapport entre Déduction A et Déduction B, que l'article
+# écarte expressément.
+
+id: kant-jugement-metaphysique
+title: "La métaphysique du jugement et ses problèmes"
+subtitle: "Idéalisme transcendantal, Déduction B, schématisme, objets rebelles, rêve"
+icon: bulb
+color: blue
+group: "Kant : la théorie du jugement"
+lessons:
+- id: kj5-l1
+  title: "Un idéalisme fondé sur le jugement"
+  notes: |-
+    **La métaphysique positive de la *Critique* est, pour Hanna, une élaboration de la théorie du jugement.** Kant écrit : {teal}« ce n'est pas du tout de la métaphysique [traditionnelle] que fait la *Critique*, mais une science entièrement nouvelle, jamais encore tentée, à savoir la critique d'une raison qui juge *a priori* »{/teal} (10:340).
+
+    **L'idéalisme transcendantal réunit deux thèses.**
+    - {violet}L'idéalisme cognitif{/violet} : tous les objets propres de la connaissance humaine ne sont que des apparences sensibles dépendantes de l'esprit, des phénomènes, non des choses en soi, des noumènes (A369).
+    - {violet}Le transcendantalisme représentationnel{/violet} : toutes les représentations et leurs contenus se conforment nécessairement aux formes de nos capacités cognitives spontanées innées (Bxvi, A11/B25).
+
+    Ces thèses admettent des lectures plus ou moins fortes (**Allais**). La version la plus forte entraîne que les objets de l'expérience humaine sont **identiques en occurrence** aux contenus sensibles objectivement valides : {teal}« le contenu (`Inbegriff`) d'une représentation est lui-même l'objet »{/teal} (11:314). **Longuenesse** l'appelle {teal}« l'internalisation à la représentation de l'objet de la représentation »{/teal}. Et leurs formes phénoménales sont **identiques en type** à celles qu'introduisent nos facultés, en particulier aux formes spatio-temporelles de l'intuition : c'est l'{violet}idéalité transcendantale de l'espace et du temps{/violet} (A28-30/B44-45). En somme, {green}notre connaissance ne se règle pas sur les objets : ce sont eux qui se règlent nécessairement sur nos facultés{/green} (Bxvi, A92/B125-126).
+
+    **Le passage au jugement.** Supposons cette version forte, et ajoutons la thèse de la centralité et la priorité de la proposition. Il s'ensuit que les objets de l'expérience humaine sont identiques aux contenus propositionnels de jugements empiriques objectivement valides, et leurs formes aux formes de ces contenus, introduites dans la nature par les facultés que fusionne l'acte de juger. C'est un {violet}idéalisme fondé sur le jugement{/violet} : les objets empiriques réels ou possibles ne sont que des propositions empiriques vraies ou fausses, et les contours du monde que nous connaissons sont ceux des facultés qui produisent nos jugements.
+
+    ! « Idéalisme » ne veut pas dire que le monde soit une illusion, mais que ce que nous connaissons se plie aux conditions de notre connaissance : la leçon suivante le montre avec le réalisme empirique.
+  points:
+  - id: kj5-l1-p1
+    sentence: "La thèse selon laquelle tous les objets propres de la connaissance humaine ne sont que des apparences sensibles, des phénomènes, non des choses en soi, est l'idéalisme ___."
+    answer: "cognitif"
+    alt: []
+  - id: kj5-l1-p2
+    sentence: "La thèse selon laquelle toutes les représentations se conforment nécessairement aux formes de nos capacités cognitives innées est le ___ représentationnel."
+    answer: "transcendantalisme"
+    alt: []
+  - id: kj5-l1-p3
+    sentence: "Kant écrit que la *Critique* n'est pas de la métaphysique traditionnelle, mais une science entièrement nouvelle, à savoir la critique d'une raison qui ___ *a priori* (10:340)."
+    answer: "juge"
+    alt: []
+  - id: kj5-l1-p4
+    sentence: "Kant écrit dans une lettre que le contenu (`Inbegriff`) d'une représentation « est lui-même l'___ » (11:314), thèse centrale de la version la plus forte de son idéalisme."
+    answer: "objet"
+    alt: []
+  - id: kj5-l1-p5
+    sentence: "Longuenesse appelle l'identification de l'objet au contenu de la représentation « l'___ à la représentation de l'objet de la représentation »."
+    answer: "internalisation"
+    alt: []
+  - id: kj5-l1-p6
+    sentence: "La thèse selon laquelle l'espace et le temps ne sont que nos formes subjectives d'intuition est l'___ transcendantale de l'espace et du temps."
+    answer: "idéalité"
+    alt: []
+  - id: kj5-l1-p7
+    sentence: "Dans la version forte de l'idéalisme transcendantal, notre connaissance ne se règle pas sur les objets : ce sont les ___ qui se règlent nécessairement sur nos facultés (Bxvi)."
+    answer: "objets"
+    alt: []
+  - id: kj5-l1-p8
+    sentence: "En ajoutant à la version forte de l'idéalisme transcendantal la centralité du jugement et la priorité de la proposition, on obtient, dans les termes de Hanna, un idéalisme fondé sur le ___ : les objets empiriques ne sont que des propositions empiriques vraies ou fausses."
+    answer: "jugement"
+    alt: []
+- id: kj5-l2
+  title: "Réaliste au niveau empirique, antiréaliste au niveau transcendantal"
+  notes: |-
+    **La théorie kantienne de la vérité change selon le niveau où l'on se place.** Si l'idéalisme transcendantal est vrai dans sa version la plus forte, à tout jugement empirique vrai correspond nécessairement un fait empirique réel, et réciproquement ; à tout jugement *a priori* vrai correspond une structure objectivement réelle à travers une classe complète de mondes possibles.
+
+    **Deux niveaux.**
+    - {green}Au niveau empirique, un réalisme{/green} : c'est le {violet}réalisme empirique{/violet} de Kant (A28/B44, A35/B52, A370-373). Les faits se présentent toujours comme extérieurs à notre connaissance à certains égards irréductibles, et nous ne les contrôlons pas. Je ne décide pas qu'il pleut.
+    - {pink}Au niveau transcendantal, un antiréalisme{/pink} complet : {coral}nous imposons la vérité au monde{/coral}. Une fois réunies la version forte de l'idéalisme, la centralité et la priorité de la proposition, tous les jugements bien produits, et eux seuls, sont vrais.
+
+    C'est ce que Kant appelle la {violet}vérité transcendantale{/violet} des jugements (A146/B185). La {violet}fausseté transcendantale{/violet}, elle, résulte toujours d'un accident dans la production d'un jugement : une simple {yellow}« erreur de performance »{/yellow} de nos facultés, non une lacune de notre {yellow}« compétence »{/yellow} cognitive transcendantale. {coral}Tout scepticisme sérieux au niveau transcendantal est donc exclu d'emblée.{/coral}
+
+    ! Ne pas confondre une erreur ordinaire avec la fausseté transcendantale : je peux me tromper empiriquement sur la pluie ; ce que je ne peux pas, c'est que nos facultés en général, si elles sont bien exercées, nous trompent sur la forme du monde. La leçon sur le rêve montrera que cette sûreté est moins solide qu'il n'y paraît.
+  points:
+  - id: kj5-l2-p1
+    sentence: "Comme les faits empiriques se présentent toujours comme extérieurs à notre connaissance et que nous ne les contrôlons pas, la théorie kantienne de la vérité est, au niveau empirique, un ___ empirique."
+    answer: "réalisme"
+    alt: []
+  - id: kj5-l2-p2
+    sentence: "Au niveau transcendantal, la théorie kantienne de la vérité est pleinement ___ : transcendantalement parlant, nous imposons la vérité au monde."
+    answer: "antiréaliste"
+    alt: ["anti-réaliste"]
+  - id: kj5-l2-p3
+    sentence: "Le fait que, si l'idéalisme transcendantal fort est vrai, tous les jugements bien produits, et eux seuls, soient vrais, est ce que Kant appelle la vérité ___ (A146/B185)."
+    answer: "transcendantale"
+    alt: []
+  - id: kj5-l2-p4
+    sentence: "La fausseté transcendantale résulte toujours d'un accident dans la production d'un jugement : c'est une simple erreur de ___ de nos facultés."
+    answer: "performance"
+    alt: []
+  - id: kj5-l2-p5
+    sentence: "Une fausseté transcendantale n'est pas une lacune dans notre ___ cognitive transcendantale, et tout scepticisme sérieux à ce niveau est donc exclu d'emblée."
+    answer: "compétence"
+    alt: []
+- id: kj5-l3
+  title: "Kant est-il vérificationniste ?"
+  notes: |-
+    **Si la vérité dépend de nos facultés, le sens du jugement ne se réduit-il pas à un moyen de le vérifier ?** Le {violet}vérificationnisme{/violet} réduit le sens d'un jugement à une règle pour confirmer ou infirmer son assertion devant le tribunal de l'expérience sensible. Plusieurs commentateurs l'attribuent à Kant : **Bird**, **Strawson**, **Stroud**. Les difficultés sont connues : exposition au scepticisme épistémique, engagement dans une théorie de la vérité comme cohérence, et problème des jugements sur le passé lointain ou l'avenir.
+
+    **Il y a bien des traits vérificationnistes** : le critère de la vérité empirique en est un, et une affinité élective lie la vérité transcendantale et le vérificationnisme, tous deux antiréalistes et fondés sur le jugement.
+
+    **Mais Kant n'est pas réductionniste sur le sens.** Il semble tenir que le contenu d'un jugement n'a de sens empirique que s'il {green}contient{/green} une règle de confirmation ; il ne tient pas que ce contenu {red}n'est rien d'autre{/red} que cette règle. Une condition nécessaire n'est pas une réduction. Outre cette règle, le contenu de tout jugement contient :
+    - une relation de correspondance {coral}« épaisse »{/coral}, non déflationniste, à des faits relativement extérieurs ;
+    - des {coral}formes logiques *a priori*{/coral} venues de l'entendement pur ;
+    - une {coral}unité subjective rationnelle *a priori*{/coral} venue de l'aperception.
+
+    {green}Kant est donc au plus un vérificationniste faible{/green}, tempéré par son non-réductionnisme sémantique, son réalisme empirique et son rationalisme mitigé.
+
+    ! Dire qu'un jugement sans règle de vérification est vide de sens empirique, ce n'est pas dire qu'il est dénué de sens : les jugements sur les noumènes restent pensables.
+  points:
+  - id: kj5-l3-p1
+    sentence: "La thèse qui réduit le sens d'un jugement à une règle pour confirmer ou infirmer son assertion devant le tribunal de l'expérience sensible est le ___."
+    answer: "vérificationnisme"
+    alt: []
+  - id: kj5-l3-p2
+    sentence: "Parmi les commentateurs qui attribuent à Kant le vérificationnisme, on compte Bird, Stroud et Peter ___."
+    answer: "Strawson"
+    alt: []
+  - id: kj5-l3-p3
+    sentence: "Kant semble tenir qu'un jugement n'a de sens empirique que s'il contient une règle de confirmation, mais non que son contenu n'est rien d'autre qu'elle : il n'est donc pas ___ sur le sens."
+    answer: "réductionniste"
+    alt: []
+  - id: kj5-l3-p4
+    sentence: "Outre une règle de confirmation, le contenu de tout jugement contient une relation de ___ « épaisse » à des faits relativement extérieurs, des formes logiques *a priori* et une unité rationnelle venue de l'aperception."
+    answer: "correspondance"
+    alt: []
+  - id: kj5-l3-p5
+    sentence: "Parce que les traits vérificationnistes de sa théorie sont tempérés par son non-réductionnisme, son réalisme empirique et son rationalisme mitigé, Kant est, pour Hanna, au plus un vérificationniste ___."
+    answer: "faible"
+    alt: []
+- id: kj5-l4
+  title: "La Déduction B : pourquoi les catégories s'appliquent aux objets"
+  notes: |-
+    **Kant veut surtout montrer que les principes de sa métaphysique de la nature ont sens et vérité sous l'idéalisme transcendantal.** Le premier pas est la {sky}Déduction transcendantale des concepts purs de l'entendement{/sky}, édition B (B129-B169). En voici la version condensée de Hanna :
+
+    - les jugements d'expérience portent sur des objets de l'expérience ;
+    - dans la version forte de l'idéalisme transcendantal, les formes logiques implicites de ces jugements sont imposées à des perceptions non structurées pour constituer ces objets ;
+    - ces formes sont les {violet}catégories{/violet}, concepts purs dérivés de la logique générale pure ;
+    - l'espace et le temps, formes de l'intuition, et les catégories relèvent également de l'aperception, quand elle s'unit à l'imagination et à sa {violet}synthèse figurée{/violet} (*synthesis speciosa*) : c'est l'{violet}unité synthétique originaire de l'aperception{/violet}. L'objectivité de tout objet de l'expérience est donc strictement déterminée par les formes de l'intuition et par les catégories ;
+    - {coral}donc les catégories s'appliquent nécessairement à tous les objets de l'expérience, et à eux seuls, et elles sont objectivement valides.{/coral}
+
+    **Trois remarques.**
+    - La Déduction {green}dépend intimement de la théorie du jugement{/green} : sans la centralité et la priorité de la proposition, l'argument ne serait même pas valide.
+    - Elle dépend du rôle de l'aperception : sans l'unité de la proposition due à l'aperception, les formes logiques ne se transporteraient pas dans les objets.
+    - {red}La clef de voûte est l'antécédent de la quatrième étape{/red} : l'unité spatio-temporelle de l'intuition et l'unité du contenu propositionnel sont **une seule et même unité**. L'unité intuitive de nos perceptions serait donc nécessairement une unité logico-conceptuelle.
+
+    **D'où les objets rebelles.** Si cette identité est fausse, l'unité de la perception peut différer de celle des jugements, et il pourrait y avoir des objets de l'intuition auxquels les catégories ne s'appliquent pas, ou pas nécessairement. Hanna les appelle des {violet}objets rebelles{/violet}, en {violet}anarchie catégoriale{/violet}. Exemples :
+    - un comportement systématiquement contraire aux lois ({yellow}la magie{/yellow}) ;
+    - un comportement purement aléatoire ({yellow}le pur hasard{/yellow}) ;
+    - un comportement téléologique ({yellow}la vie organique{/yellow}) ;
+    - des ordres arbitraires de représentations dans le sens interne ({yellow}la spontanéité de la conscience{/yellow}) ;
+    - une détermination incompatibiliste à la source de l'action ({yellow}la liberté{/yellow}).
+
+    ! La Déduction ne dit pas seulement que nous pensons le monde avec des catégories ; elle dit que tout objet de l'expérience y obéit. Le point d'attaque des objets rebelles est le passage de l'objet de l'intuition à l'objet de l'expérience.
+  points:
+  - id: kj5-l4-p1
+    sentence: "La conclusion de la ___ transcendantale (édition B) est que les catégories s'appliquent nécessairement à tous les objets de l'expérience et à eux seuls, et qu'elles sont objectivement valides."
+    answer: "Déduction"
+    alt: []
+  - id: kj5-l4-p2
+    sentence: "Pour la Déduction B, l'aperception s'unit à l'imagination et à sa synthèse figurée, en latin *synthesis ___*."
+    answer: "speciosa"
+    alt: []
+  - id: kj5-l4-p3
+    sentence: "Dans la Déduction B, l'union de l'aperception avec l'imagination et sa synthèse figurée est ce que Kant nomme l'unité ___ originaire de l'aperception."
+    answer: "synthétique"
+    alt: []
+  - id: kj5-l4-p4
+    sentence: "La Déduction B dépend de la théorie du jugement : sans la thèse de la centralité et celle de la priorité de la proposition, l'argument ne serait même pas ___."
+    answer: "valide"
+    alt: []
+  - id: kj5-l4-p5
+    sentence: "Selon Hanna, la clef de voûte de la Déduction B est l'affirmation que l'unité spatio-temporelle de l'intuition et l'unité du contenu propositionnel sont une seule et même ___."
+    answer: "unité"
+    alt: []
+  - id: kj5-l4-p6
+    sentence: "Si l'unité des perceptions était distincte de celle des jugements, il pourrait exister des objets de l'intuition auxquels les catégories ne s'appliquent pas : Hanna les appelle des objets ___."
+    answer: "rebelles"
+    alt: []
+  - id: kj5-l4-p7
+    sentence: "Les objets de l'intuition qui échappent aux catégories, comme ceux que produiraient la magie ou le pur hasard, se trouvent dans ce que Hanna nomme une anarchie ___."
+    answer: "catégoriale"
+    alt: []
+  - id: kj5-l4-p8
+    sentence: "Parmi les exemples d'objets rebelles aux catégories, Hanna range un comportement téléologique, celui de la vie ___."
+    answer: "organique"
+    alt: []
+- id: kj5-l5
+  title: "Le schématisme et le système des principes"
+  notes: |-
+    **La Déduction montre que les catégories sont valides ; reste à dire quelles vérités générales elles fondent.** Si elle est probante, on peut formuler des jugements synthétiques *a priori* contenant les catégories, qui héritent de leur validité. Ces jugements sont les {violet}principes de l'entendement pur{/violet} (A148/B187) : ils constituent la métaphysique transcendantale de la nature de Kant. L'{sky}Analytique des principes{/sky}, ou {sky}doctrine transcendantale de la faculté de juger{/sky} (A137/B176), a deux parties : le schématisme (A137-147/B176-187) et le système des principes (A148-235/B187-294).
+
+    | Titre | Catégories | Principes |
+    | quantité | unité, pluralité, totalité | axiomes de l'intuition |
+    | qualité | réalité, négation, limitation | anticipations de la perception |
+    | relation | substance, causalité, communauté | analogies de l'expérience |
+    | modalité | possibilité, existence, nécessité | postulats de la pensée empirique |
+
+    **Pourquoi des schèmes ?** Il y a deux écarts à combler : un écart {red}ontologique{/red}, entre universaux abstraits et particuliers concrets ; un écart {red}cognitif{/red}, entre concepts et intuitions. Le premier existe au niveau empirique comme au niveau transcendantal, où il sépare les catégories des objets individuels de l'expérience. Les {violet}schèmes{/violet} peuvent médiatiser, parce qu'ils sont à la fois {green}figurés et formels, et intrinsèquement sensibles{/green}.
+
+    **Une doctrine sémantique.** Les schèmes sont des règles pour interpréter des termes autrement non interprétés, par des structures sensibles spatio-temporelles intermédiaires, des sortes de modèles, pour qu'ils puissent s'appliquer à ce qui en sera la valeur sémantique. Tous les schèmes transcendantaux expriment des propriétés formelles du {violet}temps{/violet} : {teal}« la série du temps, le contenu du temps, l'ordre du temps et l'ensemble du temps »{/teal} (A145/B184-185). Tout jugement valide comporte donc une composante temporelle *a priori*, implicite, qui interprète ses éléments purement logiques et assure qu'ils s'appliquent aux objets de l'expérience.
+
+    **Les principes**, quant à eux, disent comment une catégorie constitue en partie les objets de l'expérience en général, en déterminant une structure phénoménale objectivement réelle à travers tous les mondes possibles de l'expérience humaine.
+
+    ! Sans schème, une catégorie reste une forme logique sans application aux objets individuels : le schème n'est pas un concept de plus, c'est sa traduction dans le temps.
+  points:
+  - id: kj5-l5-p1
+    sentence: "Les jugements synthétiques *a priori* contenant les catégories, qui composent la métaphysique transcendantale de la nature de Kant, sont les ___ de l'entendement pur."
+    answer: "principes"
+    alt: []
+  - id: kj5-l5-p2
+    sentence: "Kant appelle Analytique des principes, ou doctrine transcendantale de la ___, l'extension de sa théorie du jugement aux principes de l'entendement pur."
+    answer: "faculté de juger"
+    alt: []
+  - id: kj5-l5-p3
+    sentence: "Sous le titre de la quantité, la table des catégories compte l'unité, la pluralité et la ___."
+    answer: "totalité"
+    alt: []
+  - id: kj5-l5-p4
+    sentence: "Sous le titre de la qualité, la table des catégories compte la réalité, la négation et la ___."
+    answer: "limitation"
+    alt: []
+  - id: kj5-l5-p5
+    sentence: "Dans le système des principes de l'entendement pur, les ___ de l'intuition correspondent aux catégories de la quantité."
+    answer: "axiomes"
+    alt: []
+  - id: kj5-l5-p6
+    sentence: "Dans le système des principes de l'entendement pur, les ___ de la perception correspondent aux catégories de la qualité."
+    answer: "anticipations"
+    alt: []
+  - id: kj5-l5-p7
+    sentence: "Dans le système des principes de l'entendement pur, les ___ de l'expérience correspondent aux catégories de la relation."
+    answer: "analogies"
+    alt: []
+  - id: kj5-l5-p8
+    sentence: "Dans le système des principes de l'entendement pur, les ___ de la pensée empirique en général correspondent aux catégories de la modalité."
+    answer: "postulats"
+    alt: []
+  - id: kj5-l5-p9
+    sentence: "Les schèmes de l'imagination comblent un écart cognitif entre concepts et intuitions, et un écart ___ entre universaux abstraits et particuliers concrets."
+    answer: "ontologique"
+    alt: []
+  - id: kj5-l5-p10
+    sentence: "Tous les schèmes transcendantaux expriment, selon Kant, des propriétés formelles du ___ : sa série, son contenu, son ordre et son ensemble (A145/B184-185)."
+    answer: "temps"
+    alt: []
+- id: kj5-l6
+  title: "La deuxième Analogie de l'expérience"
+  notes: |-
+    **Exemple d'un principe de l'entendement pur, et le plus décisif pour tout le reste : la cause.** La {sky}deuxième Analogie{/sky} se décrit comme {teal}« le principe de la succession dans le temps suivant la loi de la causalité »{/teal} et dit que {teal}« tous les changements arrivent suivant la loi de la liaison de la cause et de l'effet »{/teal} (A189-211/B232-256).
+
+    **Le cadre, la première Analogie.** Un changement (un événement singulier) est l'attribution momentanée de propriétés phénoménales distinctes à une substance matérielle permanente dans l'espace, porteuse de ces propriétés et analogue métaphysique du sujet logique de la prédication (A182-189/B224-232).
+
+    **L'idée fondamentale.** Des événements singuliers sont des causes si et seulement si ils déterminent suffisamment, ou nécessitent, des événements ultérieurs selon des lois spécifiques de la nature. C'est {green}la réponse au souci de **Hume**{/green} sur l'absence de connexion nécessaire : les relations causales sont imposées aux phénomènes par les sujets connaissants, par des jugements d'expérience. Elles n'existent ni en elles-mêmes, ni dans les données brutes des sens.
+
+    **L'irréversibilité, sans la réciproque.** Toutes les successions causales sont nécessairement irréversibles dans le temps. Mais Kant {red}ne tient pas la réciproque{/red}, que toute succession irréversible soit causale. Il échappe ainsi à l'accusation célèbre de **Strawson**, celle d'{red}« un *non sequitur* d'une grossièreté stupéfiante »{/red}.
+
+    **Un critère d'objectivité.** Seuls les objets de l'expérience sont tels que chacun de leurs attributs réels dans le temps est causalement nécessité par des événements antérieurs. Ce qui les distingue des suites de propriétés ordonnées arbitrairement au gré du sens interne. Le principe de cause et d'effet est donc aussi un {coral}critère de l'objectivité{/coral} des objets de l'expérience. Et, comme tout principe, il est objectivement valide et nécessairement vrai parce qu'il exprime une catégorie (la cause et l'effet) et un schème *a priori* (le caractère successif du temps, A144/B183), qui garantit qu'elle s'applique aux objets.
+
+    ! Qu'il y ait une cause de tout changement ne dit pas quelle est cette cause : la loi particulière reste à trouver dans l'expérience.
+  points:
+  - id: kj5-l6-p1
+    sentence: "La deuxième Analogie de l'expérience dit que tous les changements arrivent suivant la loi de la liaison de la ___ et de l'effet."
+    answer: "cause"
+    alt: []
+  - id: kj5-l6-p2
+    sentence: "Dans le cadre de la première Analogie, un changement est l'attribution momentanée de propriétés à une ___ matérielle permanente, analogue métaphysique du sujet logique de la prédication."
+    answer: "substance"
+    alt: []
+  - id: kj5-l6-p3
+    sentence: "Dans la deuxième Analogie, Kant répond au souci de ___ sur l'absence de connexion nécessaire : les relations causales sont imposées aux phénomènes par les sujets connaissants, par des jugements d'expérience."
+    answer: "Hume"
+    alt: []
+  - id: kj5-l6-p4
+    sentence: "Toutes les successions causales sont nécessairement ___ dans le temps, sans que la réciproque soit vraie."
+    answer: "irréversibles"
+    alt: []
+  - id: kj5-l6-p5
+    sentence: "Comme Kant n'affirme pas que toute succession irréversible soit causale, il échappe à l'accusation de ___, celle d'un *non sequitur* d'une grossièreté stupéfiante."
+    answer: "Strawson"
+    alt: []
+  - id: kj5-l6-p6
+    sentence: "Le principe de cause et d'effet distingue les objets de l'expérience des suites de propriétés ordonnées arbitrairement dans le sens interne : il est donc aussi un critère de l'___ des objets de l'expérience."
+    answer: "objectivité"
+    alt: []
+  - id: kj5-l6-p7
+    sentence: "La deuxième Analogie exprime la catégorie de cause et d'effet et un schème *a priori*, à savoir le caractère ___ du temps."
+    answer: "successif"
+    alt: []
+- id: kj5-l7
+  title: "Le problème ascendant : l'intuition échappe aux catégories"
+  notes: |-
+    **Trois problèmes sérieux viennent de l'interaction des deux premières thèses avec l'idéalisme transcendantal ; d'où l'idée de Hanna que celui-ci se détache des deux autres.** Le premier vient d'en bas, de la sensibilité.
+
+    **Ce dont la Déduction B a besoin.** L'argument en faveur de la validité objective des catégories ne passe que si tous les objets de l'intuition humaine sont nécessairement aussi des objets de l'expérience, c'est-à-dire correctement représentés par des jugements d'expérience vrais, donc soumis à toutes les catégories, ou du moins à la deuxième Analogie.
+
+    **Ce que le non-conceptualisme en fait.** Si ce non-conceptualisme est vrai, il existe des intuitions empiriques objectivement valides, autonomes et indépendantes des concepts, qui se rapportent directement à des objets. La connaissance de ces objets ne requiert ni concepts ni entendement. Donc :
+    - certaines de ces intuitions peuvent désigner des {violet}objets rebelles{/violet}, hors des contraintes de toutes les catégories, et de la deuxième Analogie en particulier ;
+    - il n'est pas vrai que les catégories et les principes s'appliquent nécessairement à tous les objets de la perception consciente ;
+    - l'{violet}anarchie catégoriale{/violet} d'au moins certains objets sensibles est réellement possible ;
+    - {red}la Déduction B n'est donc pas probante{/red} (**Kitcher**, **Hanna**).
+
+    Une image pour fixer le problème, qui n'est pas de Kant : un oiseau voit un objet sans avoir aucun concept de cause. Rien, dans cette vision seule, n'exige que l'objet obéisse à la loi de cause et d'effet.
+
+    ! C'est le dilemme de l'unité précédente : le conceptualiste en conclura plutôt que le non-conceptualisme est faux. Hanna assume le contraire.
+  points:
+  - id: kj5-l7-p1
+    sentence: "L'argument de la Déduction B ne passe que si tous les objets de l'intuition humaine sont nécessairement aussi des objets de l'___, soumis à toutes les catégories."
+    answer: "expérience"
+    alt: []
+  - id: kj5-l7-p2
+    sentence: "Le problème ___ de la métaphysique kantienne du jugement vient de la sensibilité : si des intuitions valides existent sans concepts, elles peuvent désigner des objets hors des catégories."
+    answer: "ascendant"
+    alt: []
+  - id: kj5-l7-p3
+    sentence: "Si des intuitions empiriques se rapportent à des objets sans requérir de concepts, certaines peuvent désigner des objets hors des contraintes des catégories, dont la deuxième ___ en particulier."
+    answer: "Analogie"
+    alt: []
+  - id: kj5-l7-p4
+    sentence: "Si l'anarchie catégoriale de certains objets sensibles est réellement possible, il n'est pas vrai que les catégories s'appliquent nécessairement à tous les objets de la perception, et la Déduction B n'est pas ___."
+    answer: "probante"
+    alt: []
+  - id: kj5-l7-p5
+    sentence: "Parmi les interprètes qui soutiennent que des intuitions non conceptuelles mettent en péril la Déduction B, on compte Hanna et Patricia ___."
+    answer: "Kitcher"
+    alt: []
+- id: kj5-l8
+  title: "Le problème descendant : l'affinité et l'unité systématique de la nature"
+  notes: |-
+    **Le deuxième problème est l'image inversée du premier ; il vient d'en haut, des principes.** Il affecte la doctrine transcendantale du jugement. Même en admettant le schématisme, rien ne garantit qu'un principe transcendantal, règle pour ordonner les apparences, ait été {red}complètement appliqué{/red} à elles.
+
+    **Affinité transcendantale, affinité empirique.** L'interconnexion réglée par des lois causales de toutes les apparences sous des principes transcendantaux est l'{violet}affinité transcendantale{/violet} du divers de l'intuition (A114). L'édition A soutient que, si les catégories sont objectivement valides, l'affinité transcendantale suit ; puis, sous la version forte de l'idéalisme, que l'{violet}affinité empirique{/violet} en suit aussi (A115). L'affinité empirique étant l'application complète du système des lois causales à la nature réelle, elle équivaut à l'{violet}unité systématique de la nature{/violet}. Celle-ci serait donc une conséquence triviale de l'affinité transcendantale.
+
+    **Kant recule en deux temps.**
+    - L'{sky}Appendice à la Dialectique transcendantale{/sky} traite le principe d'unité systématique comme relevant d'un usage régulateur, non constitutif, du jugement (non sans force transcendantale).
+    - La {sky}Première Introduction à la *Critique de la faculté de juger*{/sky} va plus loin : il est tout à fait possible en soi que la multiplicité des lois empiriques et des formes naturelles soit infinie, et nous présente {teal}« un agrégat brut et chaotique, sans la moindre trace d'un système, même si nous devons présupposer un tel système selon des lois transcendantales »{/teal} (20:209).
+
+    **La conséquence.** L'affinité transcendantale n'entraîne donc pas l'affinité empirique. Si l'unité systématique n'est que subjectivement nécessaire, comme le principe transcendantal des jugements de goût, Kant n'a pas montré que le système des lois causales s'applique complètement : il a seulement montré que nous devons le {red}croire{/red}. Reste la possibilité réelle d'agrégats chaotiques, d'{violet}objets rebelles{/violet}. {red}Le schématisme ne suffit donc pas à combler l'écart entre catégories et apparences, et la doctrine transcendantale du jugement échoue.{/red}
+
+    ! Le problème ascendant part des intuitions (des objets pourraient échapper aux catégories) ; le problème descendant part des principes (ils pourraient ne pas s'appliquer jusqu'au bout). Tous deux aboutissent à la même possibilité d'une anarchie catégoriale.
+  points:
+  - id: kj5-l8-p1
+    sentence: "L'interconnexion réglée par des lois causales de toutes les apparences sous des principes transcendantaux est, selon Kant, l'___ transcendantale du divers de l'intuition (A114)."
+    answer: "affinité"
+    alt: []
+  - id: kj5-l8-p2
+    sentence: "L'application complète du système des lois causales à la nature réelle, ou affinité empirique, équivaut à l'unité ___ de la nature."
+    answer: "systématique"
+    alt: []
+  - id: kj5-l8-p3
+    sentence: "Dans l'édition A de la première *Critique*, l'unité systématique de la nature est une conséquence ___ de l'affinité transcendantale."
+    answer: "triviale"
+    alt: []
+  - id: kj5-l8-p4
+    sentence: "Kant recule sur l'unité systématique de la nature dans l'Appendice à la Dialectique transcendantale, où il y voit le produit d'un usage ___ du jugement, non constitutif."
+    answer: "régulateur"
+    alt: []
+  - id: kj5-l8-p5
+    sentence: "La Première Introduction à la *Critique de la faculté de juger* admet que la multiplicité des lois empiriques puisse nous présenter « un agrégat brut et ___, sans la moindre trace d'un système » (20:209)."
+    answer: "chaotique"
+    alt: []
+  - id: kj5-l8-p6
+    sentence: "La Première Introduction à la *Critique de la faculté de juger* admet que la multiplicité des lois empiriques puisse nous présenter « un agrégat brut et chaotique, sans la moindre trace d'un ___ » (20:209)."
+    answer: "système"
+    alt: []
+  - id: kj5-l8-p7
+    sentence: "L'aveu que l'affinité transcendantale n'entraîne pas l'affinité empirique se trouve dans la ___ à la *Critique de la faculté de juger*, là où Kant envisage un agrégat brut et chaotique de lois."
+    answer: "Première Introduction"
+    alt: ["première Introduction"]
+  - id: kj5-l8-p8
+    sentence: "Si l'unité systématique de la nature n'est que subjectivement nécessaire, Kant a seulement montré que nous devons ___ que les lois causales s'appliquent complètement, non qu'elles le font."
+    answer: "croire"
+    alt: []
+  - id: kj5-l8-p9
+    sentence: "Parce qu'il ne garantit pas l'application complète des lois transcendantales à la nature, le ___ ne suffit pas, selon Hanna, à combler l'écart entre catégories et apparences."
+    answer: "schématisme"
+    alt: []
+- id: kj5-l9
+  title: "Le problème du rêve : l'idéalisme problématique et la deuxième Analogie"
+  notes: |-
+    **Le troisième problème revient à Descartes.** Kant soutient trois thèses : la deuxième Analogie garantit l'objectivité et la nécessité causale des objets de l'expérience ; le critère de la vérité empirique dit qu'un jugement est vrai si sa règle s'applique à nos représentations et s'accorde avec les lois de la nature ; la vérité transcendantale veut que tout jugement d'expérience bien produit soit vrai.
+
+    **L'objection, tirée du « scepticisme du rêve » de la première *Méditation* de Descartes.** Kant nomme cette forme de scepticisme {violet}idéalisme problématique{/violet} (B274). Supposons que toutes les apparences qui satisfont ces trois critères ne soient que {red}des parties causalement bien ordonnées de mon seul sens interne{/red}. L'objet de mon jugement vrai pourrait alors être un rêve très cohérent ou une hallucination. Je peux aussi bien rêver un {yellow}bateau descendant le fleuve{/yellow} qu'en voir un.
+
+    **La Réfutation de l'idéalisme n'y fait rien.** Si elle est probante, elle dit seulement que {teal}« l'expérience interne n'est possible que par l'expérience externe en général »{/teal} (B278-279). Et Kant concède : {teal}« du fait que l'existence d'objets extérieurs est requise pour la possibilité d'une conscience déterminée de nous-mêmes, il ne suit pas que toute représentation intuitive de choses extérieures inclue en même temps leur existence, car elle peut fort bien n'être que le simple effet de l'imagination (dans les rêves comme dans les délires) »{/teal} (B278).
+
+    **La conclusion.** Même si l'expérience interne et l'expérience externe sont liées en général, la vérité et l'objectivité d'un jugement d'expérience *particulier*, selon les critères de Kant lui-même, restent compatibles avec la possibilité que son objet soit un rêve. La note générale sur le système des principes dit bien que nous avons toujours besoin d'{coral}intuitions externes{/coral} (B291). Mais, vu B278, rien ne garantit que des apparences satisfaisant ces critères soient des objets matériels plutôt qu'une imagerie mentale bien ordonnée, de simples {yellow}« fantômes de mon cerveau »{/yellow}. {red}Le critère d'objectivité de la deuxième Analogie est donc finalement insuffisant{/red} pour fonder la vérité empirique, malgré ce que Kant soutient (A202/B247).
+
+    ! Le raisonnement n'attaque pas l'expérience externe en général, mais le passage du général au particulier : qu'il y ait un monde externe n'assure pas que cet objet-ci en soit un.
+  points:
+  - id: kj5-l9-p1
+    sentence: "Kant appelle idéalisme ___ (B274) la forme de scepticisme qu'il emprunte au doute du rêve de la première *Méditation*."
+    answer: "problématique"
+    alt: []
+  - id: kj5-l9-p2
+    sentence: "Si toutes les apparences satisfaisant la deuxième Analogie et le critère de la vérité empirique n'étaient que des parties bien ordonnées de mon seul sens ___, l'objet de mon jugement vrai pourrait être un rêve très cohérent."
+    answer: "interne"
+    alt: []
+  - id: kj5-l9-p3
+    sentence: "Dans la ___ de l'idéalisme, Kant établit, si elle est probante, seulement que l'expérience interne n'est possible que par l'expérience externe en général."
+    answer: "Réfutation"
+    alt: []
+  - id: kj5-l9-p4
+    sentence: "Dans la Réfutation de l'idéalisme, Kant écrit que l'expérience ___ n'est possible que par l'expérience externe en général (B278-279)."
+    answer: "interne"
+    alt: []
+  - id: kj5-l9-p5
+    sentence: "Kant concède qu'il ne suit pas de la Réfutation de l'idéalisme que toute représentation intuitive de choses extérieures inclue leur ___, car elle peut n'être que l'effet de l'imagination (B278)."
+    answer: "existence"
+    alt: []
+  - id: kj5-l9-p6
+    sentence: "Kant concède qu'une représentation intuitive de choses extérieures peut n'être que le simple effet de l'___, dans les rêves comme dans les délires (B278)."
+    answer: "imagination"
+    alt: []
+  - id: kj5-l9-p7
+    sentence: "L'objection tirée du rêve conclut que le critère d'objectivité de la deuxième Analogie est insuffisant pour fonder la vérité empirique d'un jugement d'expérience ___, même si expérience interne et externe sont liées en général."
+    answer: "particulier"
+    alt: []
+- id: kj5-l10
+  title: "Conclusion : le jugement sans idéalisme transcendantal fort ?"
+  notes: |-
+    **La théorie kantienne du jugement n'est pas une curiosité : tel est le verdict de Hanna.** Ces trois problèmes semblent venir principalement de la conjonction de la centralité et de la priorité de la proposition avec l'idéalisme transcendantal. Ils ne ruinent pas la théorie si l'on suppose que :
+    - la version la plus forte de l'idéalisme transcendantal est {red}fausse{/red} ;
+    - et la troisième thèse est soit {green}détachée{/green} logiquement des deux premières, soit {green}conservée sous une version nettement plus faible{/green}.
+
+    **Ce qui reste.**
+    - une théorie kantienne générale de la rationalité humaine, orientée vers le **jugement** ;
+    - des descriptions de la nature et des sortes irréductibles de jugement, orientées vers le **sens empirique anthropocentrique et la vérité de la proposition** ;
+    - une théorie à la fois {coral}cognitiviste, antipsychologiste et antiplatonicienne{/coral}, qui unit les diverses « faces » du jugement en une seule doctrine.
+
+    **L'argument.** La version non qualifiée de l'idéalité transcendantale, jointe aux deux premières thèses, entraîne des contradictions que les deux premières thèses seules n'entraînent pas : la cause des difficultés est donc à chercher du côté de cette version. Ni les ennuis que le non-conceptualisme cause à la Déduction B, ni la probable fausseté de l'idéalisme fort, ne compromettent l'intérêt philosophique, la pertinence actuelle et la défendabilité des autres parties de la théorie.
+
+    ! C'est la thèse de Hanna, non de Kant, pour qui le jugement et l'idéalisme transcendantal vont ensemble. Elle suppose aussi qu'on accepte sa lecture non conceptualiste, qui reste disputée.
+  points:
+  - id: kj5-l10-p1
+    sentence: "Hanna attribue les problèmes de la théorie kantienne du jugement à la conjonction de la centralité et de la priorité de la proposition avec la version la plus forte de l'___."
+    answer: "idéalisme transcendantal"
+    alt: []
+  - id: kj5-l10-p2
+    sentence: "Pour sauver la théorie kantienne du jugement, Hanna propose de ___ logiquement la thèse de l'idéalisme transcendantal des deux autres, ou de la fonder sur une version nettement plus faible."
+    answer: "détacher"
+    alt: []
+  - id: kj5-l10-p3
+    sentence: "Une fois écartée la version forte de l'idéalisme transcendantal, il reste une théorie de la rationalité humaine à la fois cognitiviste, ___ et antiplatonicienne."
+    answer: "antipsychologiste"
+    alt: ["anti-psychologiste"]
+  - id: kj5-l10-p4
+    sentence: "Hanna tient que la version non qualifiée de l'idéalité transcendantale, jointe à la centralité et à la priorité de la proposition, entraîne des ___ que ces deux thèses seules n'entraînent pas."
+    answer: "contradictions"
+    alt: []

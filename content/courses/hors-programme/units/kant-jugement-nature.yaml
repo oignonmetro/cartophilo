@@ -1,0 +1,509 @@
+# Cours sur la théorie kantienne du jugement (voir content/philosophie.md),
+# tiré de l'article « Kant's Theory of Judgment » de Robert Hanna, Stanford
+# Encyclopedia of Philosophy (2004, révision 2017), et de ses cinq suppléments,
+# chacun traité à la place que lui donne la table des matières de l'article.
+# Ici : introduction et section 1 (« The Nature of Judgment »). Citations de
+# Kant traduites de l'anglais de l'article, avec ses repères (A/B pour la
+# Critique de la raison pure, volume:page pour l'édition de l'Académie).
+#
+# Choix de traduction : Erkenntnis se rend par « connaissance » (au sens large
+# de Hanna, toute représentation consciente d'un objet), Umfang par
+# « extension » (l'anglais « comprehension » de Hanna serait un faux ami :
+# la compréhension d'un concept, en français, c'est son Inhalt).
+#
+# Points laissés de côté : la bibliographie des inférentialistes au-delà de
+# Landy et Leech ; le renvoi à Martin 2006 sur les « faces » du jugement.
+
+id: kant-jugement-nature
+title: "Ce qu'est un jugement"
+subtitle: "Les facultés, l'unité du jugement, la proposition, la vérité"
+icon: bulb
+color: blue
+group: "Kant : la théorie du jugement"
+intro: |-
+  Pour Kant, l'homme est d'abord un animal qui juge. Ce cours suit la théorie du jugement dans l'ordre : ce qu'est un jugement (cette unité), le débat sur les intuitions sans concepts et les degrés de la croyance, les formes logiques, les sortes de contenu et d'usage, enfin la métaphysique qu'elle engage et ses difficultés.
+lessons:
+- id: kj1-l1
+  title: "Ni psychologisme ni platonisme : les trois thèses de Kant"
+  notes: |-
+    **Le jugement réunit quatre questions d'ordinaire séparées** : sémantique, logique, psychologie cognitive, épistémologie (et, pour le jugement pratique, action, psychologie morale, éthique). Cette leçon situe Kant face aux deux camps qui se partagent les théories du jugement, puis donne les trois thèses que tout le cours déploie.
+
+    **Deux camps, qui semblent ne jamais pouvoir se rejoindre.**
+    - {red}Le psychologisme{/red} : un jugement n'est qu'une représentation mentale de relations d'idées (la *Logique de Port-Royal*) ou une combinaison mentale ordonnée d'individus, d'universaux et de constantes logiques (le premier Russell).
+    - {pink}Le platonisme{/pink} : un jugement n'est qu'une attitude assertive visant des propositions ou des pensées abstraites, indépendantes de l'esprit (Bolzano, Frege).
+
+    **Kant échappe à l'alternative** : sa théorie est à la fois {green}cognitiviste, antipsychologiste et antiplatonicienne{/green}. Un jugement est un acte de l'esprit, comme le veut le premier camp ; mais son contenu se partage et obéit à des lois logiques, comme le veut le second. Plus précisément, les jugements sont des connaissances conscientes complexes qui :
+    - se rapportent à des objets, directement (par des intuitions) ou indirectement (par des concepts) ;
+    - comprennent des concepts prédiqués de ces objets ou d'autres concepts ;
+    - illustrent des concepts logiques purs et entrent dans des inférences selon des lois logiques pures ;
+    - impliquent de suivre des règles et de les appliquer aux objets que les intuitions désignent ;
+    - expriment des propositions vraies ou fausses ;
+    - servent de médiation à la formation des croyances et d'autres actes intentionnels ;
+    - sont unifiés et conscients d'eux-mêmes.
+
+    **Trois thèses dirigent le tout**, telles que **Hanna** les nomme.
+    - {violet}La thèse de la centralité{/violet} : la capacité innée de juger est la faculté cognitive centrale, car le jugement est, seul parmi nos accomplissements, le produit de toutes les autres facultés opérant ensemble sous une unité supérieure, celle de la conscience de soi rationnelle.
+    - {violet}La thèse de la priorité de la proposition{/violet} : le contenu propositionnel a la priorité explicative sur les intuitions et les concepts qui le composent, sur la forme logique, sur le rôle inférentiel, sur les états psychologiques, sur les croyances et sur les actes qu'il guide.
+    - {violet}La thèse de l'idéalisme transcendantal{/violet} : les jugements n'ont de sens empirique (validité objective) et de vérité (réalité objective) que si l'idéalisme transcendantal est correct.
+
+    ! Les deux premières thèses sont, pour Hanna, détachables de la troisième : c'est la conclusion de tout le cours, et c'est là que sa lecture va au-delà de ce que Kant dirait lui-même.
+  points:
+  - id: kj1-l1-p1
+    sentence: "Pour le camp ___ des théories du jugement, un jugement n'est qu'une représentation mentale de relations d'idées, comme dans la *Logique de Port-Royal*, ou une combinaison mentale d'individus et d'universaux, comme chez le premier Russell."
+    answer: "psychologiste"
+    alt: []
+  - id: kj1-l1-p2
+    sentence: "Pour le camp ___ des théories du jugement, un jugement n'est qu'une attitude assertive visant des propositions abstraites, indépendantes de l'esprit, comme chez Bolzano et Frege."
+    answer: "platonicien"
+    alt: ["platoniste"]
+  - id: kj1-l1-p3
+    sentence: "La théorie du jugement selon laquelle juger revient à viser des pensées abstraites indépendantes de l'esprit est défendue par Bolzano et par ___."
+    answer: "Frege"
+    alt: []
+  - id: kj1-l1-p4
+    sentence: "Contre les deux camps qui se partagent les théories du jugement, celle de Kant est à la fois ___, antipsychologiste et antiplatonicienne."
+    answer: "cognitiviste"
+    alt: []
+  - id: kj1-l1-p5
+    sentence: "La thèse de la ___ tient que la capacité innée de juger est la faculté cognitive principale de l'esprit humain, le jugement étant le produit de toutes les autres facultés opérant ensemble."
+    answer: "centralité"
+    alt: []
+  - id: kj1-l1-p6
+    sentence: "Pour Kant, le contenu d'un jugement l'emporte dans l'ordre de l'explication sur ses constituants, sa forme logique et son rôle inférentiel : c'est la thèse de la priorité de la ___."
+    answer: "proposition"
+    alt: []
+  - id: kj1-l1-p7
+    sentence: "La troisième thèse de la théorie kantienne du jugement, après la centralité et la priorité de la proposition, pose que les jugements n'ont de sens empirique et de vérité que si l'___ transcendantal est correct."
+    answer: "idéalisme"
+    alt: []
+  - id: kj1-l1-p8
+    sentence: "Dans la théorie kantienne, le jugement se rapporte à des objets soit directement, par des ___, soit indirectement, par des concepts."
+    answer: "intuitions"
+    alt: []
+  - id: kj1-l1-p9
+    sentence: "Les trois thèses de la théorie kantienne du jugement ne sont pas solidaires selon Robert ___ : centralité et priorité de la proposition peuvent se défendre sans la version la plus forte de l'idéalisme transcendantal."
+    answer: "Hanna"
+    alt: []
+- id: kj1-l2
+  title: "De la capacité à la faculté : spontanéité et innéité"
+  notes: |-
+    **Le jugement est le produit d'une faculté : encore faut-il dire ce qu'est une faculté.** Un {violet}jugement{/violet} (`Urteil`) est une sorte de {violet}connaissance{/violet} (`Erkenntnis`), que Kant définit génériquement comme toute représentation consciente d'un objet (A320/B376) ; il est le produit caractéristique de la {violet}faculté de juger{/violet} (`Urteilskraft`). Celle-ci est le « pouvoir de juger » (`Vermögen zu urteilen`, A69/B94), qui est aussi le « pouvoir de penser » (`Vermögen zu denken`, A81/B106).
+
+    **Une capacité devient faculté quand elle est spontanée et innée.** Kant conçoit l'esprit comme actif et vivant : {teal}« l'esprit (`Gemüt`) pour lui-même est tout entier vie (le principe même de la vie) »{/teal} (5:278). Une capacité cognitive (`Fähigkeit`) est une propension consciente à produire certaines représentations objectives dans certaines conditions. Qu'y ajoutent la spontanéité et l'innéité ?
+
+    **La spontanéité cognitive est une créativité de structure.** Dès qu'elle reçoit des données sensorielles brutes, la faculté les organise, les « synthétise », d'une manière sans précédent par rapport à ces données, et produit des connaissances structurées nouvelles (B1-2, A50/B74). L'argument est celui de la {violet}pauvreté du stimulus{/violet} : ce qui sort est largement sous-déterminé par ce qui entre, habitudes passées comprises. Un exemple familier, qui n'est pas de Kant : un enfant forme des phrases qu'il n'a jamais entendues. La spontanéité reste cependant toujours déclenchée par une stimulation sensible (B1-2).
+
+    ! À ne pas confondre avec la **spontanéité pratique**, cause mentale qui détermine un effet dans le temps sans avoir elle-même de cause suffisante antérieure (A445/B473). Le point commun est le caractère créateur, sans précédent, des opérations de l'esprit.
+
+    **Une question disputée.** La spontanéité vient-elle seulement de la capacité conceptuelle (B152 ; **Longuenesse**), ou aussi, indépendamment, de la capacité intuitive que nous partageons avec les animaux non rationnels (B151 ; **Hanna**, **McLear**) ? Y a-t-il donc une seule synthèse, ou deux ? C'est la racine du débat sur le non-conceptualisme (unité suivante).
+
+    **L'innéité est de procédure, non de contenu.** Une faculté est innée en trois sens : elle est intrinsèque à l'esprit, donc une partie nécessaire de la nature de l'animal rationnel ; elle contient des structures strictement sous-déterminées par toute impression sensible (c'est-à-dire *a priori*, B2) ; elle synthétise automatiquement les données selon des règles normatives qui reflètent ces structures. L'esprit a donc une {green}disposition active *a priori* à appliquer des règles de synthèse{/green}, et non, comme les idées innées de {red}Descartes et Leibniz{/red}, une réserve infinie de croyances ou de concepts complets. {red}Cette dernière conception surcharge l'esprit{/red}, dont les capacités de stockage sont limitées, comme l'a montré **Locke** ; l'objection ne touche pas l'innéité de procédure, qui ne stocke aucun contenu.
+  points:
+  - id: kj1-l2-p1
+    sentence: "Kant définit génériquement la ___ comme toute représentation consciente d'un objet ; le jugement en est une espèce."
+    answer: "connaissance"
+    alt: []
+  - id: kj1-l2-p2
+    sentence: "Le terme allemand que Kant emploie pour la connaissance, définie comme toute représentation consciente d'un objet, est ___."
+    answer: "Erkenntnis"
+    alt: []
+  - id: kj1-l2-p3
+    sentence: "Le terme allemand que Kant emploie pour le jugement, produit caractéristique de la faculté de juger, est ___."
+    answer: "Urteil"
+    alt: []
+  - id: kj1-l2-p4
+    sentence: "Le terme allemand que Kant emploie pour la faculté de juger, dont le jugement est le produit caractéristique, est ___."
+    answer: "Urteilskraft"
+    alt: []
+  - id: kj1-l2-p5
+    sentence: "Kant identifie le pouvoir de juger (`Vermögen zu urteilen`) au pouvoir de ___ (`Vermögen zu denken`)."
+    answer: "penser"
+    alt: []
+  - id: kj1-l2-p6
+    sentence: "Kant conçoit l'esprit comme actif et vivant : « l'esprit (`Gemüt`) pour lui-même est tout entier ___ (le principe même de celle-ci) » (5:278)."
+    answer: "vie"
+    alt: []
+  - id: kj1-l2-p7
+    sentence: "Ce qui sort d'une faculté de connaître est largement sous-déterminé par les données sensibles qui y entrent, habitudes passées comprises : c'est l'argument de la ___ du stimulus, qui établit la spontanéité cognitive."
+    answer: "pauvreté"
+    alt: []
+  - id: kj1-l2-p8
+    sentence: "La spontanéité cognitive est une créativité de ___ de l'esprit à l'égard de ses représentations : la faculté organise les données brutes d'une manière sans précédent par rapport à elles."
+    answer: "structure"
+    alt: []
+  - id: kj1-l2-p9
+    sentence: "Une cause mentale qui détermine un effet dans le temps sans avoir de cause suffisante antérieure relève, chez Kant, de la spontanéité ___, à distinguer de la spontanéité cognitive."
+    answer: "pratique"
+    alt: []
+  - id: kj1-l2-p10
+    sentence: "Dans le débat sur l'origine de la spontanéité cognitive, ___ soutient qu'elle vient exclusivement de la capacité conceptuelle, alors que Hanna et McLear l'accordent aussi à la capacité intuitive."
+    answer: "Longuenesse"
+    alt: []
+  - id: kj1-l2-p11
+    sentence: "L'innéité kantienne n'est pas celle d'une réserve d'idées, mais une innéité de ___ : une disposition active *a priori* à appliquer des règles normatives de synthèse."
+    answer: "procédure"
+    alt: []
+  - id: kj1-l2-p12
+    sentence: "Contre les idées innées de Descartes et Leibniz, qui placent dans l'esprit une réserve infinie de croyances et de concepts complets, ___ a objecté qu'elles surchargent ses capacités limitées de stockage."
+    answer: "Locke"
+    alt: []
+- id: kj1-l3
+  title: "Deux facultés fondamentales : entendement et sensibilité"
+  notes: |-
+    **Le jugement réunit deux sources que rien ne peut réduire l'une à l'autre.** Les rationalistes ne reconnaissent qu'une faculté fondamentale, la raison ; les empiristes, qu'une seule, la perception sensible. Kant est {green}dualiste des facultés{/green} : l'{violet}entendement{/violet} (`Verstand`) est la faculté des concepts, de la pensée et du discours ; la {violet}sensibilité{/violet} (`Sinnlichkeit`) est celle des intuitions, de la perception sensible et de l'imagerie mentale (A51/B75). La différence essentielle entre ces facultés, et donc entre concepts et intuitions, est un engagement fondamental de toute sa théorie.
+
+    | Trait | Concept | Intuition |
+    | Portée | général, forme de l'universalité | singulier |
+    | Rapport à l'objet | médiat, attributif | immédiat, directement référentiel |
+    | Faculté | entendement | sensibilité |
+    | Dépend-il de l'objet ? | non | oui |
+    | Fonction propre | règle pour classer les perceptions | donner l'objet aux sens |
+
+    **Le concept** est donc une représentation générale (9:91) et discursive, qui exprime des formes logiques pures et tombe sous des lois logiques pures (A68-70/B92-94). C'est aussi une intension complexe, portant sur une {violet}extension{/violet} (`Umfang`) qui contient tous les objets réels et possibles tombant sous elle, ainsi que d'autres extensions plus étroites (9:95-96). Il représente les objets individuels de manière médiate (A320/B376-377), sert de règle pour classer et organiser les perceptions (A106) et est une représentation « réfléchie », qui exprime l'unité supérieure de la conscience de soi rationnelle, l'{violet}aperception{/violet} (B133).
+
+    **L'intuition** est une représentation consciente dirigée vers un objet, qui est singulière (A320/B377), liée aux sens (A19/B33), dépendante de l'objet (B72), immédiate (A90-91/B122-123) et, surtout dans la lecture de **Hanna**, {green}non conceptuelle{/green} (A284/B340). Quand je dis « ce livre », je désigne une chose présente ; quand je dis « livre », je décris toute chose possible qui répond à la description.
+
+    ! Hanna écrit « comprehension » pour `Umfang` : ce mot anglais désigne l'extension du concept (les choses qui tombent sous lui), non ce que le français appelle sa compréhension, c'est-à-dire son contenu.
+  points:
+  - id: kj1-l3-p1
+    sentence: "Face aux rationalistes et aux empiristes, qui ne reconnaissent qu'une faculté cognitive fondamentale, Kant est ___ des facultés : il en admet deux, irréductibles l'une à l'autre."
+    answer: "dualiste"
+    alt: []
+  - id: kj1-l3-p2
+    sentence: "La faculté des concepts, de la pensée et du discours est, chez Kant, l'___."
+    answer: "entendement"
+    alt: []
+  - id: kj1-l3-p3
+    sentence: "Le terme allemand que Kant emploie pour l'entendement, faculté des concepts et de la pensée, est ___."
+    answer: "Verstand"
+    alt: []
+  - id: kj1-l3-p4
+    sentence: "La faculté des intuitions, de la perception sensible et de l'imagerie mentale est, chez Kant, la ___."
+    answer: "sensibilité"
+    alt: []
+  - id: kj1-l3-p5
+    sentence: "Le terme allemand que Kant emploie pour la sensibilité, faculté des intuitions, est ___."
+    answer: "Sinnlichkeit"
+    alt: []
+  - id: kj1-l3-p6
+    sentence: "Un concept se rapporte aux objets individuels de manière ___, par attribution ou description, alors qu'une intuition s'y rapporte immédiatement."
+    answer: "médiate"
+    alt: ["indirecte"]
+  - id: kj1-l3-p7
+    sentence: "Une intuition se distingue d'un concept, représentation générale, en ce qu'elle est ___ : elle porte sur un seul objet."
+    answer: "singulière"
+    alt: []
+  - id: kj1-l3-p8
+    sentence: "Le concept contient, sous lui, tous les objets réels et possibles qui répondent à son intension : c'est son ___ (`Umfang`)."
+    answer: "extension"
+    alt: []
+  - id: kj1-l3-p9
+    sentence: "Le terme allemand que Kant emploie pour l'extension d'un concept, c'est-à-dire pour les objets qui tombent sous lui, est ___."
+    answer: "Umfang"
+    alt: []
+  - id: kj1-l3-p10
+    sentence: "Comme représentation « réfléchie », le concept exprime l'unité supérieure de la conscience de soi rationnelle, que Kant appelle l'___."
+    answer: "aperception"
+    alt: ["apperception"]
+  - id: kj1-l3-p11
+    sentence: "Hanna tient que le trait principal de l'intuition kantienne, en plus d'être singulière, immédiate, sensible et dépendante de l'objet, est d'être ___."
+    answer: "non conceptuelle"
+    alt: ["non-conceptuelle"]
+- id: kj1-l4
+  title: "Imagination, raison, aperception : l'animal qui juge"
+  notes: |-
+    **Autour des deux facultés fondamentales s'en ordonnent trois autres, et leur réunion est ce qu'accomplit le jugement.**
+
+    | Faculté | Terme allemand | Rôle dans le jugement |
+    | imagination | `Einbildungskraft` | synthèse par en bas, schèmes |
+    | raison | `Vernunft` | principes et inférences, par en haut |
+    | aperception | `Ich denke` | unité supérieure, le « je pense » |
+
+    **Par en bas, l'imagination.** Prise génériquement, elle est la source de toute synthèse. Prise comme faculté dédiée, productive ou reproductive, elle produit les formes spatiales et temporelles de l'intuition, l'imagerie nouvelle, la mémoire et les {violet}schèmes{/violet} : des règles qui interprètent les règles conceptuelles générales par des formes spatio-temporelles et des images (A78/B103, B151, A137-142/B176-181). En principe, elle médiatise donc entre les deux facultés, comme une troisième capacité autonome : Kant serait alors {yellow}« trinitaire »{/yellow}. Mais {red}il dit aussi qu'elle appartient à la sensibilité et qu'elle résulte de l'action de l'entendement sur la sensibilité{/red}. Cette obscurité, disputée par **Heidegger**, **Waxman** et **Longuenesse**, pèse sur toute la théorie du jugement.
+
+    **Par en haut, la raison** (`Vernunft`) : elle produit les inférences logiques, accomplit les choix pragmatiques et moraux (les « jugements pratiques »), impose la cohérence à toute connaissance et surtout met en œuvre, sous forme de principes (`Principien`, `Grundsätze`), des concepts fortement modaux et catégoriquement normatifs, comme la vérité nécessaire et l'obligation inconditionnelle (A299-304/B355-361).
+
+    **Au sommet, l'aperception.** L'unité objective de tout jugement est garantie par la conscience de soi rationnelle, qui joue un rôle {yellow}« exécutif »{/yellow} dans l'organisation de l'esprit : elle introduit une seule unité supérieure dans les représentations inférieures. Son produit est le {violet}« je pense »{/violet} (`Ich denke`) : « je pense à X », ou « je pense que P » (B131-132). Il est {teal}« le véhicule de tous les concepts et jugements, quels qu'ils soient »{/teal} (A341/B399), car il est une condition nécessaire de l'unité de tout jugement et met automatiquement en œuvre l'une des formes logiques *a priori*, les {violet}catégories{/violet} (A66-83/B91-116).
+
+    **D'où la centralité.** La faculté de juger n'est pas une faculté fondamentale, et pourtant elle est la faculté centrale : juger rassemble, par l'aperception, les sous-actes de l'intuition, de la conceptualisation, de l'imagination et de la raison, pour produire un seul résultat, le jugement. Elle intègre donc toutes les facultés, et par là constitue {coral}un seul animal humain rationnel{/coral}. Pour Kant, **les hommes sont des animaux qui jugent**.
+
+    ! « Non fondamentale » et « centrale » ne se contredisent pas : la faculté de juger n'est pas une source de plus, elle est le lieu où toutes les sources se rejoignent.
+  points:
+  - id: kj1-l4-p1
+    sentence: "Comme faculté dédiée, l'imagination produit les formes de l'intuition, l'imagerie nouvelle, la mémoire et les ___, règles qui interprètent les règles conceptuelles par des formes spatio-temporelles et des images."
+    answer: "schèmes"
+    alt: []
+  - id: kj1-l4-p2
+    sentence: "Le terme allemand que Kant emploie pour l'imagination, source de toute synthèse, est ___."
+    answer: "Einbildungskraft"
+    alt: []
+  - id: kj1-l4-p3
+    sentence: "Si l'imagination médiatise entre entendement et sensibilité comme une troisième capacité autonome, Kant n'est plus dualiste mais, de fait, ___ des capacités cognitives."
+    answer: "trinitaire"
+    alt: []
+  - id: kj1-l4-p4
+    sentence: "Kant hésite sur l'imagination : il dit tantôt qu'elle est une capacité autonome, tantôt qu'elle appartient à la ___ tout en résultant de l'action de l'entendement sur celle-ci."
+    answer: "sensibilité"
+    alt: []
+  - id: kj1-l4-p5
+    sentence: "La faculté qui produit les inférences logiques, accomplit les choix pratiques et met en œuvre des concepts comme la vérité nécessaire et l'obligation inconditionnelle est la ___."
+    answer: "raison"
+    alt: []
+  - id: kj1-l4-p6
+    sentence: "Le terme allemand que Kant emploie pour la raison, faculté des principes et des inférences, est ___."
+    answer: "Vernunft"
+    alt: []
+  - id: kj1-l4-p7
+    sentence: "Le produit caractéristique de l'aperception, par lequel une seule unité supérieure entre dans toutes les représentations inférieures d'un jugement, est le « ___ » (`Ich denke`)."
+    answer: "je pense"
+    alt: []
+  - id: kj1-l4-p8
+    sentence: "Kant appelle le « je pense » « le ___ de tous les concepts et jugements, quels qu'ils soient » (A341/B399)."
+    answer: "véhicule"
+    alt: []
+  - id: kj1-l4-p9
+    sentence: "Dans la description de l'esprit comme une organisation, l'aperception tient le rôle ___, puisqu'elle introduit une seule unité dans toutes les représentations inférieures."
+    answer: "exécutif"
+    alt: []
+  - id: kj1-l4-p10
+    sentence: "Bien qu'elle ne soit pas une faculté fondamentale, la faculté de juger est la faculté centrale, car elle intègre toutes les autres en un seul produit. Elle constitue ainsi un seul animal rationnel : les hommes sont, pour Kant, des animaux qui ___."
+    answer: "jugent"
+    alt: []
+- id: kj1-l5
+  title: "Ce que n'est pas un jugement : le problème de l'unité"
+  notes: |-
+    **Un jugement n'est pas une liste de concepts : c'est toute la nouveauté de la définition kantienne.** Les logiciens d'avant Kant, comme ceux de Port-Royal, définissent le jugement comme la {red}« représentation d'une relation entre deux concepts »{/red} (B140). Cette définition a deux défauts.
+    - Elle implique que tout jugement est de forme sujet-prédicat. Or, Kant le note à la suite des {sky}logiciens stoïciens{/sky}, les jugements disjonctifs et hypothétiques sont des composés de jugements, dont la forme est celle de fonctions de vérité. L'idée inspirera les « lois de la pensée » de **Boole**.
+    - Surtout, elle n'explique pas {red}l'unité du jugement{/red}, ce qui le distingue d'une simple liste. Un exemple familier : « Socrate, mortel » n'affirme rien ; « Socrate est mortel » est vrai ou faux. Deux concepts mis en relation ne suffisent pas à dire quelque chose. C'est ce qui reviendra, dans la philosophie analytique naissante, comme le problème de l'unité de la proposition.
+
+    **La solution : le jugement est une fonction de liaison.** Kant le conçoit comme une {green}fonction cognitive d'ordre supérieur qui relie des contenus représentatifs d'ordre inférieur{/green}. Il le caractérise de six manières :
+    - un acte de prédication logique, par lequel un concept s'applique à une chose, exprimé par la copule *est* (*La fausse subtilité des quatre figures du syllogisme*, 2:47) ;
+    - la représentation de l'unité de la conscience qui relie plusieurs représentations (*Logique* de Jäsche, 9:101) ;
+    - {teal}« la connaissance médiate d'un objet, par suite la représentation d'une représentation de cet objet »{/teal} (A68/B93) ;
+    - {teal}« des fonctions de l'unité parmi nos représentations »{/teal} (A69/B94) ;
+    - {teal}« la manière de ramener des connaissances données à l'unité objective de l'aperception. C'est à quoi vise la copule *est* en eux : distinguer l'unité objective de représentations données de l'unité subjective »{/teal} (B141) ;
+    - l'acte de la faculté {teal}« de subsumer sous des règles, c'est-à-dire de déterminer si quelque chose se range ou non sous une règle donnée (*casus datae legis*) »{/teal} (A130-132/B170-172).
+
+    **Ces formules convergent.** À retenir :
+    - le jugement {coral}s'ancre dans des intuitions{/coral}, termes singuliers directement référentiels, qu'on ne peut remplacer par des descriptions sans perte de sens (Hanna contre Thompson) ;
+    - le « privilège de la prédication » (**Longuenesse**) sur les autres opérations logiques ;
+    - une forme logique intrinsèque, fondée sur des modifications ou des composés de la copule ;
+    - le caractère de règle ;
+    - un contenu objectif unifié ;
+    - et surtout {coral}un fondement d'unité dans la conscience de soi rationnelle{/coral}.
+
+    ! Les jugements kantiens ne sont donc ni de simples objets psychologiques, ni des objets abstraits indépendants de l'esprit, ni, contrairement à ceux de Frege, des prises pour vrai assertives : ce sont des structures d'actes mentaux, partageables, dont le contenu peut être la cible d'attitudes très diverses.
+  points:
+  - id: kj1-l5-p1
+    sentence: "Avant Kant, les logiciens comme ceux de Port-Royal définissent le jugement comme la représentation d'une ___ entre deux concepts."
+    answer: "relation"
+    alt: []
+  - id: kj1-l5-p2
+    sentence: "Contre la définition du jugement comme relation entre deux concepts, Kant remarque, à la suite des logiciens ___, que les jugements hypothétiques et disjonctifs sont des composés de jugements et n'ont pas la forme sujet-prédicat."
+    answer: "stoïciens"
+    alt: []
+  - id: kj1-l5-p3
+    sentence: "La définition du jugement comme relation entre deux concepts n'explique pas la différence entre un jugement et une simple ___ de concepts : c'est le problème de l'unité du jugement."
+    answer: "liste"
+    alt: []
+  - id: kj1-l5-p4
+    sentence: "Pour résoudre le problème de l'unité du jugement, Kant conçoit le jugement comme une fonction cognitive d'ordre supérieur de ___ de contenus représentatifs d'ordre inférieur."
+    answer: "liaison"
+    alt: []
+  - id: kj1-l5-p5
+    sentence: "Kant écrit : « Le jugement est la connaissance ___ d'un objet, par suite la représentation d'une représentation de cet objet » (A68/B93)."
+    answer: "médiate"
+    alt: []
+  - id: kj1-l5-p6
+    sentence: "Kant écrit : « Le jugement est la connaissance médiate d'un objet, par suite la ___ d'une représentation de cet objet » (A68/B93)."
+    answer: "représentation"
+    alt: []
+  - id: kj1-l5-p7
+    sentence: "Kant écrit : « Tous les jugements sont des ___ de l'unité parmi nos représentations » (A69/B94)."
+    answer: "fonctions"
+    alt: []
+  - id: kj1-l5-p8
+    sentence: "Kant écrit qu'un jugement n'est rien d'autre que la manière de ramener des connaissances données à l'unité ___ de l'aperception (B141)."
+    answer: "objective"
+    alt: []
+  - id: kj1-l5-p9
+    sentence: "Kant écrit qu'un jugement n'est rien d'autre que la manière de ramener des connaissances données à l'unité objective de l'___ (B141)."
+    answer: "aperception"
+    alt: ["apperception"]
+  - id: kj1-l5-p10
+    sentence: "Dans un jugement, la ___ *est* a pour rôle, selon Kant, de distinguer l'unité objective de représentations données de leur unité subjective (B141)."
+    answer: "copule"
+    alt: []
+  - id: kj1-l5-p11
+    sentence: "Si l'entendement est la faculté des règles, la faculté de juger est, selon Kant, la faculté de ___ sous des règles, c'est-à-dire de déterminer si quelque chose se range ou non sous une règle donnée."
+    answer: "subsumer"
+    alt: []
+  - id: kj1-l5-p12
+    sentence: "Longuenesse parle, à propos de Kant, d'un « privilège de la ___ » sur les autres opérations logiques."
+    answer: "prédication"
+    alt: []
+  - id: kj1-l5-p13
+    sentence: "Contrairement à ce qui se passe chez ___, un jugement kantien n'est pas par nature une prise pour vraie assertive d'une proposition : son contenu peut être la cible d'attitudes très diverses."
+    answer: "Frege"
+    alt: []
+- id: kj1-l6
+  title: "La proposition, ce qui est jugé"
+  notes: |-
+    **Sous la forme logique du jugement, il y a plus fondamental : son contenu.** Tout jugement a une intension ou contenu sémantique (`Inhalt`) : la {violet}proposition{/violet} (`Satz`). Elle n'est pas monolithique, mais un composé unifié de parties ayant chacune un sens. C'est le contenu représentatif objectif, unifié, logiquement bien formé, sémantiquement bien composé et ayant une valeur de vérité, d'un jugement ; plus généralement, {green}c'est « ce qui est jugé »{/green} quand on avance une prétention rationnelle sur le monde (9:109).
+
+    **Ni privée, ni abstraite.** Une proposition est toujours produite par des processus psychologiques, mais elle n'est {red}pas privée{/red} : elle est partageable entre sujets et rationnellement communicable, car la même forme et le même contenu peuvent être produits par bien des animaux qui jugent, s'ils ont la même architecture cognitive. C'est pourquoi l'on peut éviter à la fois le psychologisme (elle n'est pas enfermée dans une tête) et le platonisme (elle n'existe pas sans actes qui la produisent). La fonction première de la faculté de juger est de produire ces contenus : les hommes sont, plus précisément, des **animaux propositionnels**.
+
+    **La proposition avant l'inférence.** Tout jugement joue bien un rôle inférentiel (Longuenesse), mais la fonction propositionnelle est plus fondamentale. Aussi les {violet}constantes logiques{/violet} de Kant (tout, quelque, ce, l'affirmation, la négation de la proposition, la négation du prédicat, la copule, si-alors, la disjonction, nécessairement, possiblement, effectivement) sont-elles définies par leur rôle dans le contenu propositionnel, indépendamment des inférences où le jugement peut entrer (A69-76/B94-102).
+
+    **Une lecture rivale.** Les traitements {pink}inférentialistes{/pink} de Kant (**Landy**, **Leech**) tiennent au contraire que les contenus sémantiques et les constantes logiques dépendent essentiellement de leur rôle inférentiel et sont déterminés par lui. La lecture de Hanna, dans laquelle la proposition a la priorité, s'y oppose.
+
+    ! `Inhalt` n'est pas la matière sensible (`Materie`) : le premier est objectif et représentatif, le second subjectif et non représentatif (voir l'unité sur les contenus du jugement).
+  points:
+  - id: kj1-l6-p1
+    sentence: "Le contenu sémantique de tout jugement, ce qui est jugé quand on avance une prétention rationnelle sur le monde, est la ___."
+    answer: "proposition"
+    alt: []
+  - id: kj1-l6-p2
+    sentence: "Le terme allemand que Kant emploie pour la proposition, contenu représentatif objectif d'un jugement, est ___."
+    answer: "Satz"
+    alt: []
+  - id: kj1-l6-p3
+    sentence: "Le terme allemand que Kant emploie pour l'intension ou contenu sémantique d'un jugement ou d'un concept est ___."
+    answer: "Inhalt"
+    alt: []
+  - id: kj1-l6-p4
+    sentence: "Bien qu'elle soit toujours produite par des processus psychologiques, la proposition kantienne n'est pas privée : la même forme et le même contenu peuvent être produits par bien des sujets dotés de la même architecture cognitive, et elle est donc rationnellement ___."
+    answer: "communicable"
+    alt: ["partageable"]
+  - id: kj1-l6-p5
+    sentence: "Puisque la fonction première de la faculté de juger est de produire des contenus de ce genre, les hommes sont, plus précisément que des animaux qui jugent, des animaux ___."
+    answer: "propositionnels"
+    alt: []
+  - id: kj1-l6-p6
+    sentence: "Dans la lecture de Hanna, la fonction propositionnelle du jugement est plus fondamentale que son rôle ___, et les constantes logiques se définissent par leur rôle dans la proposition, indépendamment des raisonnements."
+    answer: "inférentiel"
+    alt: []
+  - id: kj1-l6-p7
+    sentence: "Les lectures ___ de Kant (Landy, Leech) tiennent que les contenus sémantiques et les constantes logiques dépendent essentiellement de leur rôle dans les inférences."
+    answer: "inférentialistes"
+    alt: []
+  - id: kj1-l6-p8
+    sentence: "Dans le débat sur la priorité de la proposition sur l'inférence, l'une des lectures inférentialistes de la logique kantienne est défendue par Landy et par ___."
+    answer: "Leech"
+    alt: []
+- id: kj1-l7
+  title: "Validité objective, réalité objective, jugements vides"
+  notes: |-
+    **Un jugement peut être faux et avoir pourtant un sens : tout l'enjeu est là.** Kant dissocie donc avoir un sens empirique et être vrai.
+
+    **Validité subjective, validité objective.** L'activité rationnelle de tenir pour vrai implique la validité subjective d'un jugement : son sens et sa vérité apparents pour un individu. La {violet}validité objective{/violet} (`objektive Gültigkeit`) en est le sens empirique. Elle repose sur le rapport empirique (`Beziehung`) de ses constituants, intuitions et concepts, lui-même contraint par la dimension sensible et non conceptuelle de l'expérience : la présence brute d'objets matériels à notre réceptivité (affection externe) et les formes nécessaires de l'intuition, l'espace et le temps (A19-22/B33-36).
+
+    **Trois définitions.**
+    - Une **intuition** est objectivement valide si et seulement si elle se rapporte directement à un objet sensible, réel ou possible (ou à la réponse intérieure du sujet à ce rapport), ou si elle représente une condition nécessaire des intuitions empiriques (les formes de l'intuition).
+    - Un **concept** est objectivement valide si et seulement si il s'applique à des objets réels ou possibles de l'intuition empirique (concepts empiriques), ou s'il représente une condition nécessaire des concepts empiriques (concepts purs).
+    - Un **jugement** est objectivement valide si et seulement si il est logiquement bien formé (correct selon la grammaire et selon les sortes de choses) et si tous ses constituants sont objectivement valides (A155-156/B194-195).
+
+    **Validité n'est pas vérité.** La {violet}réalité objective{/violet} (`objektive Realität`) caractérise les représentations valides qui s'appliquent à des objets effectivement existants, non simplement possibles (A242 n.). {coral}Les jugements vrais sont donc les propositions objectivement réelles.{/coral} La validité objective est une condition nécessaire mais non suffisante de la vérité, puisque les jugements faux sont eux aussi objectivement valides (A58/B83). Elle équivaut à **avoir une valeur de vérité**, non à être vrai. « Il y a un éléphant dans cette pièce » (exemple familier) est faux, et parfaitement valide.
+
+    **Le vide n'est pas le non-sens.** Tout jugement qui n'est pas objectivement valide est {violet}vide{/violet} (`leer`), sans valeur de vérité. Mais un jugement vide peut rester rationnellement intelligible si ses concepts sont logiquement cohérents, c'est-à-dire « pensables » (Bxxvi n.). C'est le cas de jugements portant sur des objets nouménaux (les choses en soi) ou des sujets nouménaux (les personnes) : sans sens empirique, ils restent les cibles légitimes de la croyance « doctrinale », et sont même essentiels à la métaphysique théorique et à la métaphysique pratique de la liberté et de la morale (A530-558/B566-586).
+
+    ! « Vide » ne veut pas dire absurde : « l'âme est libre » n'a pas de valeur de vérité, mais se pense sans contradiction.
+  points:
+  - id: kj1-l7-p1
+    sentence: "Le sens empirique d'un jugement, fondé sur le rapport de ses intuitions et de ses concepts à l'expérience, est sa validité ___."
+    answer: "objective"
+    alt: []
+  - id: kj1-l7-p2
+    sentence: "L'expression allemande que Kant emploie pour la validité objective, sens empirique d'un jugement, est ___."
+    answer: "objektive Gültigkeit"
+    alt: ["objektiv Gültigkeit"]
+  - id: kj1-l7-p3
+    sentence: "Un concept est objectivement valide si et seulement si il s'applique à des objets réels ou possibles de l'intuition ___, ou s'il représente une condition nécessaire des concepts de cette sorte."
+    answer: "empirique"
+    alt: []
+  - id: kj1-l7-p4
+    sentence: "Un jugement est objectivement valide si et seulement si il est logiquement ___ et si tous les intuitions et concepts qui le composent sont objectivement valides."
+    answer: "bien formé"
+    alt: []
+  - id: kj1-l7-p5
+    sentence: "Les représentations objectivement valides qui s'appliquent à des objets effectivement existants, et non simplement possibles, ont ce que Kant appelle la ___ objective."
+    answer: "réalité"
+    alt: []
+  - id: kj1-l7-p6
+    sentence: "Comme les jugements faux sont eux aussi objectivement valides, la validité objective d'un jugement équivaut, non pas à sa vérité, mais au fait d'avoir une ___ de vérité."
+    answer: "valeur"
+    alt: []
+  - id: kj1-l7-p7
+    sentence: "Un jugement qui n'est pas objectivement valide n'a pas de valeur de vérité : Kant le dit ___ (`leer`)."
+    answer: "vide"
+    alt: []
+  - id: kj1-l7-p8
+    sentence: "Un jugement vide reste rationnellement intelligible si les concepts qu'il contient sont logiquement cohérents, c'est-à-dire ___ (Bxxvi n.)."
+    answer: "pensables"
+    alt: []
+  - id: kj1-l7-p9
+    sentence: "Les jugements sur des objets nouménaux, sans sens empirique ni valeur de vérité, restent intelligibles et sont les cibles légitimes de ce que Kant appelle la croyance ___."
+    answer: "doctrinale"
+    alt: []
+- id: kj1-l8
+  title: "La vérité : définition nominale et critères"
+  notes: |-
+    **Kant distingue ce qu'est la vérité et le moyen de la reconnaître.** La vérité est un prédicat de jugements entiers, non de leurs parties, intuitions ou concepts (A293/B350). La validité objective et la cohérence logique (A60/B85) en sont des conditions nécessaires, mais non suffisantes.
+
+    **La définition nominale.** La vérité est l'{violet}accord{/violet} ou la correspondance (`Übereinstimmung`) d'une connaissance avec son objet (A58/B82). Une définition nominale dégage l'« essence logique » d'un concept, ses critères, sans atteindre les « déterminations internes » des choses, ce qui serait le rôle d'une définition réelle (9:142-143). L'accord se déplie, dans la lecture de Hanna, en trois conditions :
+    - la structure de l'objet est {coral}isomorphe{/coral} à la forme logique de la proposition ;
+    - le sujet s'oriente dans le monde en projetant l'objet sous des {coral}« points de vue »{/coral} (`Gesichtspunkte`), ceux que tout homme rationnel associerait à ces concepts (8:134-137) ;
+    - l'objet représenté {coral}existe réellement{/coral}.
+
+    Les jugements vrais sont donc des façons de nous projeter rationnellement sur des {violet}vérifacteurs{/violet} effectifs. Ce n'est {red}pas une conception « déflationniste »{/red}, car la vérité ne se réduit pas à asserter les faits : son concept exprime aussi l'intérêt rationnel fondamental à « ne pas se tromper », une orientation cognitive partageable, et il appartient au concept moral de sincérité.
+
+    **Pas de critère universel.** La définition nominale n'est pas le {violet}critère{/violet} (`Kriterium`) de la vérité, règle pour déterminer si des jugements sont vrais dans des contextes précis (A58/B82). Selon Kant, {red}il n'y a pas de critère absolument général{/red} (A58-59), comme la clarté et la distinction des cartésiens : un tel critère devrait faire abstraction de tout contenu, alors que la vérité porte précisément sur le contenu. Mais il y a des critères propres aux trois classes de jugements : analytiques, synthétiques *a posteriori*, synthétiques *a priori*.
+
+    **La vérité empirique est le niveau de base**, car les autres sortes de vérité la présupposent. Son objet est un {violet}objet de l'expérience{/violet} (`Gegenstand der Erfahrung`), réel ou possible : un état de choses empirique, ou une chose matérielle macroscopique pouvant entrer dans des relations causales selon des lois nécessaires (A176-218/B218-265). Ces objets sont les vérifacteurs des jugements empiriques. D'où le {violet}critère de la vérité empirique{/violet} : le contenu d'un jugement empirique peut se spécifier comme une règle conceptuelle nécessaire des apparences sensibles ; si cette règle s'applique effectivement à la succession temporelle de nos représentations, et si elle s'accorde avec les lois causales de la nature, ce jugement est vrai (A191/B236, A451/B479).
+
+    ! La vérité comme correspondance et le critère empirique ne font pas double emploi : la première dit ce qu'est être vrai, le second comment le reconnaître.
+  points:
+  - id: kj1-l8-p1
+    sentence: "La vérité est, selon Kant, un prédicat de ___ entiers, non des intuitions ou des concepts qui en sont les parties."
+    answer: "jugements"
+    alt: []
+  - id: kj1-l8-p2
+    sentence: "La définition nominale de la vérité est, selon Kant, l'___ ou la correspondance d'une connaissance avec son objet (A58/B82)."
+    answer: "accord"
+    alt: []
+  - id: kj1-l8-p3
+    sentence: "Le terme allemand que Kant emploie pour l'accord d'une connaissance avec son objet, définition nominale de la vérité, est ___."
+    answer: "Übereinstimmung"
+    alt: ["Uebereinstimmung"]
+  - id: kj1-l8-p4
+    sentence: "Une définition ___ dégage l'essence logique d'un concept, ses critères, sans atteindre les déterminations internes des choses qui tombent sous lui."
+    answer: "nominale"
+    alt: []
+  - id: kj1-l8-p5
+    sentence: "Dans la lecture de Hanna, la vérité comme accord exige que la structure de l'objet soit ___ à la forme logique de la proposition, que le sujet le projette sous des points de vue partageables, et que cet objet existe réellement."
+    answer: "isomorphe"
+    alt: []
+  - id: kj1-l8-p6
+    sentence: "Le terme allemand que Kant emploie pour les « points de vue » sous lesquels le sujet qui juge projette l'objet est ___."
+    answer: "Gesichtspunkte"
+    alt: ["Gesichtspunkt"]
+  - id: kj1-l8-p7
+    sentence: "La conception kantienne de la vérité n'est pas ___, puisque la vérité ne s'y réduit pas à asserter les faits : elle exprime aussi l'intérêt rationnel à ne pas se tromper et relève du concept moral de sincérité."
+    answer: "déflationniste"
+    alt: []
+  - id: kj1-l8-p8
+    sentence: "Il n'y a pas, pour Kant, de critère absolument général de la vérité, comme celui de la clarté et de la distinction que proposaient les ___."
+    answer: "cartésiens"
+    alt: []
+  - id: kj1-l8-p9
+    sentence: "Le terme allemand que Kant emploie pour le critère, règle qui détermine si des jugements sont vrais dans des contextes précis, est ___."
+    answer: "Kriterium"
+    alt: []
+  - id: kj1-l8-p10
+    sentence: "Les objets de l'expérience, états de choses empiriques ou choses matérielles macroscopiques, sont ce qui rend vrais les jugements ___ : ces jugements fournissent le niveau de base, que les autres sortes de vérité présupposent."
+    answer: "empiriques"
+    alt: []
+  - id: kj1-l8-p11
+    sentence: "Selon le critère de la vérité empirique, un jugement est vrai si la règle qui spécifie son contenu s'applique effectivement à la succession de nos représentations et si elle s'accorde avec les lois ___ de la nature."
+    answer: "causales"
+    alt: []

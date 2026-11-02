@@ -1,0 +1,412 @@
+# Cours sur la théorie kantienne du jugement (Hanna, SEP), suite : section 2.2
+# (« Kinds of propositional content ») et son supplément, « Kinds of Use ».
+# Citations traduites de l'anglais de l'article.
+#
+# Point laissé de côté : le détail de la thèse d'Anderson (2015) sur la pauvreté
+# de la vérité conceptuelle, seulement évoqué comme rivale de la lecture de Hanna.
+
+id: kant-jugement-contenus
+title: "Les contenus et les usages du jugement"
+subtitle: "A priori, analytique, synthétique a priori ; constitutif, régulatif, réfléchissant"
+icon: bulb
+color: blue
+group: "Kant : la théorie du jugement"
+lessons:
+- id: kj4-l1
+  title: "A priori et a posteriori : commencer avec, dériver de"
+  notes: |-
+    **Le contenu d'un jugement varie selon trois axes : son rapport au sensible, aux conditions de vérité, et à la validité objective.** Cette première leçon porte sur le premier.
+
+    **Deux sens de « contenu ».** L'{violet}intension{/violet} (`Inhalt`) est objective et représentative : c'est le contenu sémantique. La {violet}matière sensible{/violet} (`Materie`) est subjective et non représentative : c'est la réponse immédiate de l'esprit aux impressions extérieures (A19-20/B34, A320/B376).
+
+    **Un rationalisme mitigé.** Pour Kant comme pour les empiristes, toute connaissance {green}« commence avec »{/green} (`mit … anfange`) des impressions sensibles. Mais, à l'écart de l'empirisme, toute connaissance {red}ne « dérive » pas{/red} (`entspringt … aus`) de ces impressions : une part unique de sa forme et de son contenu vient des capacités spontanées innées (B1). Hanna lit ce « dériver de » comme une {violet}détermination stricte{/violet}, proche de ce qu'on appelle aujourd'hui la survenance forte : X détermine strictement Y si les traits X d'une chose suffisent à ses traits Y, et si les traits Y ne peuvent changer sans que les traits X changent.
+
+    **Les définitions en découlent.**
+    - Un jugement est {violet}*a posteriori*{/violet} si et seulement si sa forme ou son contenu est strictement déterminé par des impressions sensibles ou des faits naturels contingents.
+    - Il est {violet}*a priori*{/violet} si et seulement si ni sa forme ni son contenu ne le sont, et si tous deux sont déterminés par nos facultés spontanées innées (B2-3), qu'il contienne ou non une matière sensible.
+    - Il est {violet}pur{/violet} s'il est *a priori* et, de plus, ne contient aucune matière sensible (B3). {coral}Certaines connaissances *a priori*, mais non toutes, sont donc pures.{/coral}
+
+    **A priori et nécessaire.** Kant soutient aussi qu'un jugement est *a priori* si et seulement si il est nécessairement vrai (Axv, B3-4, A76/B101). Trois vues le fondent : la contingence d'un jugement tient à la dépendance de son contenu envers le sensible ; la nécessité équivaut à l'{violet}universalité stricte{/violet} (`strenge Allgemeinheit`), l'absence de tout contre-exemple possible (B4) ; la nécessité entraîne la vérité (A75-76/B100-101). Il y a des jugements *a priori* en physique et en métaphysique, et de purs en mathématiques (B4-5, B14-18).
+
+    ! *A priori* ne veut pas dire « sans rapport aux sens » : une connaissance *a priori* peut s'accompagner d'impressions sensibles, à condition qu'elles ne déterminent ni sa forme ni son contenu.
+  points:
+  - id: kj4-l1-p1
+    sentence: "Kant distingue l'intension (`Inhalt`), objective et représentative, de la ___ sensible (`Materie`), subjective et non représentative, réponse immédiate de l'esprit aux impressions."
+    answer: "matière"
+    alt: []
+  - id: kj4-l1-p2
+    sentence: "Le terme allemand que Kant emploie pour la matière sensible, réponse immédiate de l'esprit aux impressions, est ___."
+    answer: "Materie"
+    alt: []
+  - id: kj4-l1-p3
+    sentence: "Pour Kant comme pour les empiristes, toute connaissance ___ avec des impressions sensibles, mais toute connaissance ne dérive pas de ces impressions (B1)."
+    answer: "commence"
+    alt: []
+  - id: kj4-l1-p4
+    sentence: "Pour Kant, toute connaissance commence avec des impressions sensibles, mais toute connaissance ne ___ pas de ces impressions (B1)."
+    answer: "dérive"
+    alt: []
+  - id: kj4-l1-p5
+    sentence: "En rupture avec l'empirisme, Kant soutient qu'une part de la forme et du contenu de la connaissance vient de nos capacités spontanées innées : Hanna y voit un rationalisme ___."
+    answer: "mitigé"
+    alt: []
+  - id: kj4-l1-p6
+    sentence: "Hanna lit le « dériver de » kantien comme une détermination stricte, proche de ce qu'on appelle aujourd'hui la ___ forte : les traits de l'un suffisent à ceux de l'autre."
+    answer: "survenance"
+    alt: []
+  - id: kj4-l1-p7
+    sentence: "Une connaissance *a priori* qui, de plus, ne contient aucune matière sensible est dite ___ (B3)."
+    answer: "pure"
+    alt: []
+  - id: kj4-l1-p8
+    sentence: "Kant soutient qu'un jugement est *a priori* si et seulement si il est ___ vrai."
+    answer: "nécessairement"
+    alt: []
+  - id: kj4-l1-p9
+    sentence: "Pour Kant, la nécessité d'un jugement équivaut à son universalité ___ (`strenge Allgemeinheit`), l'absence de tout contre-exemple possible (B4)."
+    answer: "stricte"
+    alt: []
+- id: kj4-l2
+  title: "Le jugement analytique, un concept plus substantiel qu'on ne le dit"
+  notes: |-
+    **La distinction kantienne n'est pas celle qu'a ruinée Quine.** On lit souvent Kant à travers la distinction aujourd'hui familière : l'analyticité comme vérité par la seule signification linguistique, la synthéticité comme vérité par les faits empiriques, et l'équivalence entre ce partage et celui du nécessaire et du contingent. Reçue vers 1950, elle a été discréditée par **Quine** (« Les deux dogmes de l'empirisme », 1951). Ce serait une erreur de la confondre avec celle de Kant, ou d'y voir une distinction épistémique entre vérités triviales et jugements informatifs. Pour Hanna, Kant distingue {green}deux sortes de contenu sémantique dans des propositions objectivement valides{/green} ; ni épistémique au premier chef, ni portant sur la forme logique (4:266).
+
+    **Frege à moitié juste.** **Frege** voit bien qu'il s'agit de sémantique, de relations internes entre concepts, mais il réduit l'analyticité à {red}« simplement ressortir de la boîte ce que nous venons d'y mettre »{/red}, ce qui la rend triviale. L'accusation est juste si la tradition de **Leibniz** et de **Wolff** détermine la conception de Kant, comme le soutient **Anderson** (2015).
+
+    **Cinq idées en font, pour Hanna, une notion substantielle.**
+    - Tout concept a une microstructure intensionnelle, son « essence logique » (9:61) ;
+    - les mondes logiquement possibles ne sont que des ensembles maximaux et cohérents de concepts, non des choses en soi (A571-573/B599-601) ;
+    - tout concept bien formé et cohérent a une extension non vide à travers les mondes possibles (A239/B298-299) ;
+    - seules les propositions objectivement valides ont une valeur de vérité ;
+    - surtout, l'analyticité couvre non seulement l'inclusion du prédicat dans le sujet et l'identité des concepts, mais aussi toutes les vérités logiques de la logique vérifonctionnelle et monadique.
+
+    **La définition.** Un jugement est {violet}analytique{/violet} si et seulement si son contenu est nécessairement vrai par les relations internes entre ses microstructures conceptuelles ou ses extensions, ou par ses connecteurs logiques. Et, Hanna y insiste, {red}Kant ne définit pas l'analyticité par l'inclusion ou l'identité des concepts{/red} : ce sont au mieux des conditions suffisantes. Il pose un {green}critère universel, nécessaire et suffisant{/green} : un jugement est analytiquement vrai si et seulement si {coral}sa négation entraîne une contradiction{/coral}, en un sens large de l'implication, qui inclut l'implication intensionnelle (A151/B190-191). « Tous les corps sont étendus » (exemple de Kant lui-même, A7/B11) est donc analytique, parce que dire qu'un corps n'est pas étendu se contredit.
+
+    ! Qui tient, avec Anderson, que l'analyticité kantienne se définit par l'inclusion, et adopte une vue conceptualiste du jugement, aura une tout autre idée de l'analytique et du synthétique : c'est un vrai désaccord entre Hanna et Anderson.
+  points:
+  - id: kj4-l2-p1
+    sentence: "La distinction de l'analytique et du synthétique discréditée par Quine dans « Les deux dogmes de l'empirisme » (1951) n'est pas celle de Kant, qui oppose deux sortes de contenu ___ dans des propositions objectivement valides."
+    answer: "sémantique"
+    alt: []
+  - id: kj4-l2-p2
+    sentence: "Le philosophe qui a discrédité la distinction de l'analytique et du synthétique aujourd'hui familière, dans « Les deux dogmes de l'empirisme » (1951), est ___."
+    answer: "Quine"
+    alt: []
+  - id: kj4-l2-p3
+    sentence: "Frege réduit l'analyticité kantienne à simplement ressortir de la ___ ce que nous venons d'y mettre."
+    answer: "boîte"
+    alt: ["boite"]
+  - id: kj4-l2-p4
+    sentence: "Tout concept a, selon Kant, une microstructure intensionnelle, ce qu'il appelle son « essence ___ » (9:61)."
+    answer: "logique"
+    alt: []
+  - id: kj4-l2-p5
+    sentence: "L'idée antileibnizienne de Kant sur l'analyticité est que les mondes logiquement possibles ne sont que des ensembles maximaux et cohérents de ___, non des choses en soi."
+    answer: "concepts"
+    alt: []
+  - id: kj4-l2-p6
+    sentence: "Dans la lecture de Hanna, l'analyticité kantienne couvre, outre l'inclusion du prédicat dans le sujet et l'identité des concepts, toutes les vérités de la logique ___ et de la logique monadique."
+    answer: "vérifonctionnelle"
+    alt: ["des fonctions de vérité"]
+  - id: kj4-l2-p7
+    sentence: "Selon Hanna, Kant ne définit pas l'analyticité par l'inclusion ou l'identité des concepts : ce sont au mieux des conditions ___."
+    answer: "suffisantes"
+    alt: []
+  - id: kj4-l2-p8
+    sentence: "Le critère universel, nécessaire et suffisant de la vérité analytique est qu'un jugement est analytiquement vrai si et seulement si sa ___ entraîne une contradiction (A151/B190-191)."
+    answer: "négation"
+    alt: []
+  - id: kj4-l2-p9
+    sentence: "Le critère universel de la vérité analytique est qu'un jugement est analytiquement vrai si et seulement si sa négation entraîne une ___ (A151/B190-191)."
+    answer: "contradiction"
+    alt: []
+  - id: kj4-l2-p10
+    sentence: "Contre la lecture de Hanna, ___ soutient que la conception kantienne de l'analyticité, définie par l'inclusion des concepts, reste déterminée par la tradition de Leibniz et de Wolff et se trouve donc appauvrie."
+    answer: "Anderson"
+    alt: []
+- id: kj4-l3
+  title: "Le jugement synthétique : la part de l'intuition"
+  notes: |-
+    **On ne connaît d'abord le synthétique que par ce qu'il n'est pas.** Le partage est exhaustif : toute proposition est analytique ou synthétique, jamais les deux. D'où une définition {violet}négative{/violet} : une proposition est synthétique si et seulement si sa vérité n'est pas strictement déterminée par ses seules relations conceptuelles, ni par la seule logique vérifonctionnelle ou monadique ; et un jugement est synthétiquement vrai si et seulement si il est vrai et que {coral}sa négation n'entraîne pas de contradiction{/coral}.
+
+    **Mais que fait alors sa vérité ?** Kant répond en reliant la sémantique de la synthéticité à celle des intuitions, comme il relie l'analyticité à celle des concepts. Définition {violet}positive{/violet} : un jugement est synthétique si et seulement si {green}son sens et sa vérité sont strictement déterminés par les intuitions qui le composent{/green}, empiriques ou pures (A8, A154-155/B193-194, A721/B749).
+
+    Cela {red}ne veut pas dire que les jugements synthétiques ne contiennent pas de concepts{/red} (ils en contiennent toujours), ni que ceux-ci sont sans rapport avec leur sens ou leur vérité (ils y ont toujours rapport) : seulement que ce sont les composantes intuitives qui déterminent strictement le sens et la vérité. **Un jugement synthétique est une proposition fondée sur l'intuition.**
+
+    Prenons « ce chat est sur le tapis » (exemple familier) : le concept de chat y joue son rôle, mais aucune analyse de ce concept ne me dit qu'il y est, il faut voir la chose ; et dire qu'il n'y est pas ne contient aucune contradiction.
+
+    ! Le fondement dans l'intuition vaut pour le synthétique *a posteriori* comme pour le synthétique *a priori* : leur différence tient à la sorte d'intuition, empirique ou pure.
+  points:
+  - id: kj4-l3-p1
+    sentence: "Un jugement est synthétiquement vrai si et seulement si il est vrai et que sa négation n'entraîne pas de ___."
+    answer: "contradiction"
+    alt: []
+  - id: kj4-l3-p2
+    sentence: "Comme Kant relie l'analyticité à la sémantique des concepts, il relie la synthéticité à celle des ___."
+    answer: "intuitions"
+    alt: []
+  - id: kj4-l3-p3
+    sentence: "Un jugement synthétique est, pour Kant, une proposition dont le sens et la vérité sont strictement déterminés par les intuitions qui la composent, ___ ou pures."
+    answer: "empiriques"
+    alt: []
+  - id: kj4-l3-p4
+    sentence: "Les jugements synthétiques contiennent toujours des ___, empiriques ou purs, mais ce sont les composantes intuitives qui déterminent strictement leur sens et leur vérité."
+    answer: "concepts"
+    alt: []
+  - id: kj4-l3-p5
+    sentence: "Comme la distinction de l'analytique et du synthétique est ___, toute proposition est l'un ou l'autre, jamais les deux."
+    answer: "exhaustive"
+    alt: []
+- id: kj4-l4
+  title: "Le synthétique a priori et le dualisme modal"
+  notes: |-
+    **La question de la *Critique* est aussi, selon Hanna, sa thèse la plus audacieuse.** Kant résume son projet par la question {teal}« comment des jugements synthétiques *a priori* sont-ils possibles ? »{/teal} (B19). Il en affirme l'existence en mathématiques, en physique et en métaphysique (B14-18, A158/B197).
+
+    **Une thèse sur la nécessité.** C'est soutenir le {green}dualisme modal{/green} : il existe deux types irréductibles de vérité nécessaire. Or, presque tout le monde, de Descartes à nos jours, défend le {red}monisme modal{/red} : un seul type de vérité nécessaire, la vérité analytique ou logique. Comme la vérité demande des vérifacteurs, le dualisme implique deux types de faits modaux dans le monde. Puisque les énoncés de la métaphysique traditionnelle sont, du moins par intention, synthétiques *a priori* (B18), la critique de cette métaphysique dans la {sky}Dialectique transcendantale{/sky} prolonge la même enquête.
+
+    **Quatre combinaisons, trois existent.**
+
+    | Sorte de jugement | Statut | Fondement |
+    | analytique *a priori* | nécessaire | concepts et logique |
+    | analytique *a posteriori* | n'existe pas | aucun |
+    | synthétique *a posteriori* | empirique, contingent | intuitions empiriques |
+    | synthétique *a priori* | nécessaire, non empirique | intuitions pures |
+
+    Comme tout jugement analytique est nécessaire, et que la nécessité entraîne l'apriorité, {coral}aucun jugement analytique n'est *a posteriori*{/coral}.
+
+    **Trois traits du synthétique *a priori*.**
+    - Parce qu'il est {green}*a priori*{/green}, son sens et sa vérité sont sous-déterminés par le sensible, et il est nécessairement vrai.
+    - Parce qu'il est {green}synthétique{/green}, sa vérité n'est pas déterminée par les seuls facteurs conceptuels et logiques, et sa négation est logiquement cohérente.
+    - Parce que tout jugement synthétique est {green}fondé sur l'intuition{/green}, il repose ici sur les **intuitions pures**, nos représentations formelles *a priori* de l'espace et du temps (B73). C'est le trait décisif.
+
+    ! Sa négation n'est pas contradictoire : cela ne le rend pas contingent. Il y a une nécessité qui ne se réduit pas à la logique, et c'est cela que nie le monisme modal.
+  points:
+  - id: kj4-l4-p1
+    sentence: "Kant résume le projet de la *Critique de la raison pure* par la question : comment des jugements ___ *a priori* sont-ils possibles ? (B19)"
+    answer: "synthétiques"
+    alt: []
+  - id: kj4-l4-p2
+    sentence: "Affirmer l'existence de jugements synthétiques *a priori*, c'est défendre le ___ modal : il y a deux types irréductibles de vérité nécessaire."
+    answer: "dualisme"
+    alt: []
+  - id: kj4-l4-p3
+    sentence: "Contre le dualisme modal de Kant, presque tous les philosophes depuis Descartes tiennent le ___ modal : un seul type de vérité nécessaire, la vérité analytique ou logique."
+    answer: "monisme"
+    alt: []
+  - id: kj4-l4-p4
+    sentence: "Comme les énoncés de la métaphysique traditionnelle sont, par intention, synthétiques *a priori*, sa critique dans la ___ transcendantale prolonge l'enquête sur la possibilité de ces jugements."
+    answer: "Dialectique"
+    alt: []
+  - id: kj4-l4-p5
+    sentence: "Comme tout jugement analytique est nécessaire et que la nécessité entraîne l'apriorité, il n'existe pas, pour Kant, de jugement analytique ___."
+    answer: "a posteriori"
+    alt: []
+  - id: kj4-l4-p6
+    sentence: "Les jugements synthétiques *a posteriori* sont empiriques et ___, à des degrés de généralité divers."
+    answer: "contingents"
+    alt: []
+  - id: kj4-l4-p7
+    sentence: "Parce qu'il n'est pas analytique, un jugement synthétique *a priori* a une négation logiquement ___ : sa nécessité n'est pas logique."
+    answer: "cohérente"
+    alt: []
+  - id: kj4-l4-p8
+    sentence: "Le sens et la vérité d'un jugement synthétique *a priori* reposent sur les intuitions ___, c'est-à-dire sur nos représentations formelles *a priori* de l'espace et du temps."
+    answer: "pures"
+    alt: []
+- id: kj4-l5
+  title: "Une vérité nécessaire à visage humain"
+  notes: |-
+    **Le synthétique *a priori* n'a pas la même portée que l'analytique : c'est ce qui permet de le dire nécessaire sans en faire une vérité logique.** Cette reconstruction en mondes possibles est celle de **Hanna**.
+
+    **Le raisonnement.** Nos représentations formelles de l'espace et du temps sont des conditions nécessaires de l'expérience humaine et de la validité objective des jugements, laquelle confère une valeur de vérité aux propositions. Il s'ensuit qu'un jugement synthétique *a priori* est {green}vrai dans tous les mondes humainement expérimentables, et seulement dans ceux-là, sans valeur de vérité ailleurs{/green}. À l'opposé, un jugement analytique est {pink}vrai dans tous les mondes logiquement possibles{/pink}, y compris ceux où l'expérience humaine n'est pas possible, les mondes nouménaux.
+
+    | Jugement | Contenu | Portée modale |
+    | analytique | fondé sur les concepts et la logique | tous les mondes logiquement possibles |
+    | synthétique *a priori* | fondé sur l'intuition pure | les mondes humainement expérimentables |
+
+    **Pourquoi est-ce encore une nécessité ?** Il existe des mondes logiquement possibles où une proposition comme **« 7+5=12 »** peut être niée sans contradiction : surprenant, mais c'est la conséquence. Pourtant, un jugement synthétique *a priori* est vrai ou sans valeur de vérité dans tout monde logiquement possible : {coral}il n'est faux dans aucun{/coral}. Il satisfait donc la définition générale de la nécessité : une proposition est nécessaire si et seulement si elle est strictement universellement vraie, c'est-à-dire vraie dans toute une classe complète de mondes possibles, sans contre-exemple possible.
+
+    En termes moins lourds, selon la formule de Hanna, un jugement synthétique *a priori* est **une vérité nécessaire à visage humain**.
+
+    ! Sans valeur de vérité n'est pas faux : dans un monde sans espace ni temps, « 7+5=12 » n'est pas réfuté, il cesse simplement d'avoir un sens objectif.
+  points:
+  - id: kj4-l5-p1
+    sentence: "Dans la lecture de Hanna, un jugement synthétique *a priori* est vrai dans tous les mondes ___ expérimentables et seulement dans ceux-là, sans valeur de vérité ailleurs."
+    answer: "humainement"
+    alt: []
+  - id: kj4-l5-p2
+    sentence: "Dans la lecture de Hanna, un jugement analytique est vrai dans tous les mondes ___ possibles, y compris ceux où l'expérience humaine n'est pas possible."
+    answer: "logiquement"
+    alt: []
+  - id: kj4-l5-p3
+    sentence: "Il suit de la portée modale du synthétique *a priori* qu'il y a des mondes logiquement possibles où une proposition comme « ___ » peut être niée sans contradiction."
+    answer: "7+5=12"
+    alt: ["7 + 5 = 12"]
+  - id: kj4-l5-p4
+    sentence: "Un jugement synthétique *a priori* est nécessaire, parce qu'il est vrai ou sans valeur de vérité dans tout monde logiquement possible : il n'est ___ dans aucun."
+    answer: "faux"
+    alt: []
+  - id: kj4-l5-p5
+    sentence: "Une proposition est nécessaire, selon Kant, si et seulement si elle est strictement universellement vraie, c'est-à-dire vraie dans toute une classe complète de mondes possibles, sans ___ possible."
+    answer: "contre-exemple"
+    alt: []
+  - id: kj4-l5-p6
+    sentence: "Selon la formule de Hanna, un jugement synthétique *a priori* est une vérité nécessaire à visage ___."
+    answer: "humain"
+    alt: []
+- id: kj4-l6
+  title: "Juger sans viser le vrai : les usages non théoriques"
+  notes: |-
+    **Un même contenu propositionnel peut servir à plusieurs choses.** Les différences d'**usage** (`Gebrauch`) ne sont pas les trois degrés du tenir-pour-vrai, opinion, croyance, certitude (A820-823/B848-851), qui mesurent l'engagement envers le vrai. Elles portent sur ce qu'on fait du jugement.
+
+    **Théorique, non théorique.**
+    - Un jugement est {violet}théorique{/violet} si sa fonction rationnelle d'ensemble est d'être une proposition vraie sur le monde, phénoménal ou nouménal (20:195).
+    - Il est {violet}non théorique{/violet} s'il est employé sans viser le vrai.
+
+    | Usage non théorique | Fonction | Exemple |
+    | pragmatique ou moral | faire des choix libres | une décision |
+    | esthétique | évaluer le beau ou le sublime | cette rose |
+    | téléologique | traiter la nature comme finalisée | les plantes vers le soleil |
+
+    **Le contenu compte, sa vérité non.** Ce serait une lourde erreur de croire la proposition indifférente à ces usages : c'est elle qui détermine sur quoi porte le jugement. Mais {green}la fonction d'un jugement non théorique peut être remplie même si son contenu est faux{/green}. Ce qui importe est la façon dont les choses paraissent à celui qui juge.
+    - Un choix peut être bon ou droit, même fondé sur de fausses croyances.
+    - L'expérience visuelle de cette chose que vous prenez pour {yellow}une belle rose{/yellow} peut être une véritable expérience du beau, même si ce n'est pas une rose ou si elle n'existe pas (5:205).
+    - Le jugement téléologique sur {yellow}les plantes héliotropes{/yellow}, qui se tournent vers le soleil parce qu'elles « veulent » de la lumière, peut servir de guide heuristique à une théorie mécaniste (5:397-415).
+
+    Kant anticipe en cela la {violet}posture intentionnelle{/violet} de **Dennett** (1987).
+
+    ! Que la vérité du contenu ne soit pas requise ne veut pas dire que ces jugements soient arbitraires : ils ont d'autres conditions, pratiques, esthétiques ou heuristiques.
+  points:
+  - id: kj4-l6-p1
+    sentence: "Un jugement ___ est employé pour être une proposition vraie sur le monde, alors qu'un autre peut être employé pour choisir, évaluer le beau ou traiter la nature comme finalisée."
+    answer: "théorique"
+    alt: []
+  - id: kj4-l6-p2
+    sentence: "Le terme allemand que Kant emploie pour l'usage d'un jugement, à distinguer des degrés du tenir-pour-vrai, est ___."
+    answer: "Gebrauch"
+    alt: []
+  - id: kj4-l6-p3
+    sentence: "Les jugements pragmatiques et moraux ont pour fonction de faire des ___ libres, instrumentaux ou non, et non de dire le vrai."
+    answer: "choix"
+    alt: []
+  - id: kj4-l6-p4
+    sentence: "Les jugements non théoriques qui traitent les choses naturelles comme si elles étaient finalisées, comme guide heuristique d'une explication mécaniste, sont dits ___."
+    answer: "téléologiques"
+    alt: []
+  - id: kj4-l6-p5
+    sentence: "La fonction d'un jugement non théorique peut être remplie même si son contenu est faux, car ce qui importe est la façon dont les choses ___ à celui qui juge."
+    answer: "paraissent"
+    alt: []
+  - id: kj4-l6-p6
+    sentence: "L'expérience visuelle de ce que vous prenez pour une belle ___ peut être une véritable expérience du beau, même si la chose n'est pas ce que vous croyez ou n'existe pas (5:205)."
+    answer: "rose"
+    alt: []
+  - id: kj4-l6-p7
+    sentence: "Traiter les plantes héliotropes comme si elles « voulaient » de la lumière anticipe ce que ___ a appelé la posture intentionnelle."
+    answer: "Dennett"
+    alt: []
+- id: kj4-l7
+  title: "Constitutif et régulatif"
+  notes: |-
+    **Il y a aussi plusieurs usages théoriques ; le premier partage dépend de ce qu'on présuppose.**
+    - Un jugement théorique est employé de façon {violet}constitutive{/violet} si son sens, sa vérité ou sa légitimité comme principe (`Grundsatz`, `Prinzip`) ne reposent sur aucune hypothèse ou supposition de plus.
+    - Il l'est de façon {violet}régulatrice{/violet} s'ils reposent sur une telle hypothèse.
+
+    **Premier cas : les principes de l'entendement pur.** Les principes « mathématiques » sont constitutifs, les principes « dynamiques » sont régulateurs (A178-181/B220-224). {yellow}« 2+2=4 »{/yellow} resterait vrai même si deux paires de pommes, chaque fois qu'on les compte, fusionnaient magiquement en une seule, la Grosse Pomme : sa vérité ne suppose aucune application effective. En revanche « A a causé B » ou « les corps tombent vers la terre à telle vitesse » supposent l'existence de la matière et des événements antérieurs.
+
+    **Deuxième cas : les propositions vides.** Elles contiennent des {violet}idées de la raison pure{/violet}, concepts d'objets nouménaux ou méta-concepts qui totalisent les concepts purs (A320/B377, A326-329/B382-386). Soit :
+    - **(W)** « tout ce qui appartient à l'espèce naturelle de l'eau le doit à son essence lockienne » ;
+    - **(G)** « un Dieu bienveillant existe ».
+    Elles n'ont de valeur de vérité dans aucun des deux usages. Mais elles ont un usage régulateur légitime, en jugeant {green}*comme si* elles étaient vraies{/green}. On traite (W) comme vrai pour rassembler glace, vapeur et eau liquide et chercher les lois qui les expliquent ensemble (A645-647/B673-675) ; on traite (G) comme un postulat de la raison pratique, pour fortifier une résolution morale faible (A633-634/B661-662). Un jugement vide est donc employé de façon régulatrice quand il est adopté **pour faire de l'enquête scientifique ou de la vie morale un tout cohérent et sensé**.
+
+    **Les maximes de la science.** Il en va de même de maximes souvent prises pour des jugements très généraux : la nature ne multiplie pas les êtres sans nécessité ({yellow}le rasoir d'Ockham{/yellow}), la nature ne fait pas de sauts (la loi de continuité, A652-663/B680-691). De près, le monde naturel est désordonné et plein de trous. {violet}L'unité systématique de la nature{/violet} (A650-668/B678-696) comble l'écart entre le désordre du laboratoire et l'élégance des modèles abstraits : elle confère à la recherche la solidarité d'une entreprise rationnelle. Kant est, en ce sens, le découvreur de l'{coral}esthétique de la science{/coral} (Breitenbach).
+
+    ! « Régulateur » ne veut pas dire « subjectif et sans importance » : Kant fait de l'unité systématique une condition de la science.
+  points:
+  - id: kj4-l7-p1
+    sentence: "Un jugement théorique est employé de façon ___ si son sens, sa vérité ou sa légitimité comme principe ne reposent sur aucune hypothèse de plus."
+    answer: "constitutive"
+    alt: []
+  - id: kj4-l7-p2
+    sentence: "Un jugement théorique est employé de façon ___ si son sens, sa vérité ou sa légitimité comme principe reposent sur une hypothèse ou une supposition de plus."
+    answer: "régulatrice"
+    alt: []
+  - id: kj4-l7-p3
+    sentence: "Parmi les principes de l'entendement pur, les principes « ___ » sont constitutifs : « 2+2=4 » resterait vrai même si deux paires de pommes fusionnaient magiquement chaque fois qu'on les compte."
+    answer: "mathématiques"
+    alt: []
+  - id: kj4-l7-p4
+    sentence: "Parmi les principes de l'entendement pur, les principes « ___ » sont régulateurs : « A a causé B » suppose l'existence de la matière et d'événements antérieurs."
+    answer: "dynamiques"
+    alt: []
+  - id: kj4-l7-p5
+    sentence: "Les propositions vides de même forme que des jugements synthétiques *a priori* contiennent, selon Kant, des ___ de la raison pure, concepts d'objets nouménaux ou méta-concepts qui totalisent les concepts purs."
+    answer: "idées"
+    alt: []
+  - id: kj4-l7-p6
+    sentence: "Une proposition vide comme « un Dieu bienveillant existe » n'a pas de valeur de vérité, mais elle a un usage régulateur : on juge *___* si elle était vraie, afin de faire de la vie morale un tout sensé."
+    answer: "comme si"
+    alt: []
+  - id: kj4-l7-p7
+    sentence: "Dans l'usage régulateur de « tout ce qui appartient à l'espèce de l'eau le doit à son essence », on rassemble glace, vapeur et eau liquide pour chercher les ___ qui les expliquent ensemble."
+    answer: "lois"
+    alt: []
+  - id: kj4-l7-p8
+    sentence: "La maxime selon laquelle la nature ne multiplie pas les êtres sans nécessité, souvent prise pour un jugement très général, est le rasoir d'___, qui relève pour Kant de l'usage régulateur."
+    answer: "Ockham"
+    alt: []
+  - id: kj4-l7-p9
+    sentence: "La maxime selon laquelle la nature ne fait pas de sauts, qui relève de l'usage régulateur, est la loi de ___."
+    answer: "continuité"
+    alt: []
+  - id: kj4-l7-p10
+    sentence: "L'idée rationnelle qui comble l'écart entre le désordre du laboratoire et l'élégance des modèles abstraits, et qui donne à la recherche la solidarité d'une entreprise commune, est l'unité ___ de la nature."
+    answer: "systématique"
+    alt: []
+- id: kj4-l8
+  title: "Déterminant et réfléchissant"
+  notes: |-
+    **Le second partage des usages théoriques porte sur le sens dans lequel se lit la prédication.** Il croise le précédent, ce qui le rend déroutant, et Kant ne le mentionne expressément, à la période critique, qu'à partir de la {sky}Première Introduction à la *Critique de la faculté de juger*{/sky} (20:211) ; il s'annonce toutefois dans l'{sky}Appendice à la Dialectique transcendantale{/sky}, où Kant distingue usages « apodictique » et « hypothétique » du jugement (A647/B675).
+
+    **Deux sens de la prédication.**
+    - {violet}Déterminant{/violet} : subsomption d'un individu (Socrate) sous un concept universel (être philosophe), ou d'un concept plus étroit (être humain) sous un plus large (être mortel). Du déterminable au déterminé : l'universel est donné, le particulier s'y range.
+    - {violet}Réfléchissant{/violet} : le sens inverse, du déterminé vers le déterminable. Le jugement va d'un individu ou d'un concept plus étroit vers un concept plus général, comme dans l'induction ou l'abduction ; il est dit réfléchissant parce qu'il invoque aussi la capacité du sujet à se représenter lui-même par la réflexion (`Überlegung`, B2, A260-263/B316-319).
+
+    **Les jugements de goût et les jugements téléologiques sont réfléchissants.**
+
+    **Une présupposition transcendantale, plus qu'une simple aide.** Dans l'Appendice, Kant affirme déjà que certains usages régulateurs, en particulier sur l'unité systématique de la nature, ont un rapport présuppositionnel à la vérité des jugements scientifiques, et ne jouent pas un simple rôle heuristique (A648/B676, A651/B679). La troisième *Critique* en fait une doctrine explicite : les jugements de goût sont gouvernés par un principe transcendantal {coral}« subjectivement nécessaire »{/coral} : nous devons croire que les structures formelles de la nature sont bien ajustées (sans être conçues pour cela) aux structures innées de nos facultés (5:179-186). Les jugements téléologiques sont, en un ou deux endroits, non seulement utiles, mais {coral}heuristiquement nécessaires{/coral} à l'étude mécaniste du vivant (5:376-383, 400) ; en termes actuels, notre biologie, entièrement mécaniste, requiert la posture intentionnelle. Un dernier indice, plus incertain : cette nécessité implique peut-être que nous devons croire (moralement ?) que nos corps sont mus librement par nos volontés (5:397-399).
+
+    ! Les mots de ce partage sont ceux de la troisième *Critique*, mais il croise le précédent : un jugement réfléchissant n'est pas la même chose qu'un jugement régulateur.
+  points:
+  - id: kj4-l8-p1
+    sentence: "L'interprétation de la prédication comme subsomption d'un individu ou d'un concept plus étroit sous un concept plus général, du déterminable au déterminé, est dite ___."
+    answer: "déterminante"
+    alt: ["détermination"]
+  - id: kj4-l8-p2
+    sentence: "L'interprétation de la prédication qui remonte d'un individu ou d'un concept plus étroit vers un concept plus général, comme dans l'induction ou l'abduction, est dite ___."
+    answer: "réfléchissante"
+    alt: []
+  - id: kj4-l8-p3
+    sentence: "À la période critique, Kant ne mentionne expressément le partage du déterminant et du réfléchissant qu'à partir de la Première Introduction à la ___ (20:211)."
+    answer: "Critique de la faculté de juger"
+    alt: []
+  - id: kj4-l8-p4
+    sentence: "Le partage du déterminant et du réfléchissant s'annonce dès l'Appendice à la ___ transcendantale, où Kant distingue usages apodictique et hypothétique du jugement."
+    answer: "Dialectique"
+    alt: []
+  - id: kj4-l8-p5
+    sentence: "Le jugement réfléchissant invoque, outre le passage du particulier au général, la capacité du sujet à se représenter lui-même par la réflexion, en allemand ___."
+    answer: "Überlegung"
+    alt: ["Ueberlegung"]
+  - id: kj4-l8-p6
+    sentence: "Les jugements de goût et les jugements ___ sont, pour Kant, des jugements réfléchissants."
+    answer: "téléologiques"
+    alt: []
+  - id: kj4-l8-p7
+    sentence: "Les jugements de goût sont gouvernés par un principe transcendantal « ___ nécessaire » : nous devons croire que les structures de la nature sont bien ajustées à celles de nos facultés."
+    answer: "subjectivement"
+    alt: []
+  - id: kj4-l8-p8
+    sentence: "En un ou deux endroits de la troisième *Critique*, les jugements téléologiques ne sont pas seulement utiles, mais ___ nécessaires à l'étude mécaniste du vivant."
+    answer: "heuristiquement"
+    alt: []
