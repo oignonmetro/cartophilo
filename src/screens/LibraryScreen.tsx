@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import type { LibraryCourse, SubjectGroup, Track, TreatiseEntry, Unit } from '@/content/schema'
+import type { LibraryCourse, SubjectGroup, TermEntry, Track, TreatiseEntry, Unit } from '@/content/schema'
 import { countLabel, courseLabel, isTextUnit, isWorkUnit, itemsOfUnit, unitLetters } from '@/content/course'
 import type { LessonProgressMap } from '@/engine/progress'
 import { dayKey, displayedStreak, levelFromXp, masteryOf, unitMastery, type Mastery } from '@/engine/progress'
@@ -541,6 +541,25 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
           </SubjectsView>
         ) : track.units.length === 0 ? (
           <EmptyTrack tone={tone} />
+        ) : track.id === 'glossaire' ? (
+          <GlossarySearch key={course.id} units={track.units} terms={track.terms ?? []} list={unitList}>
+            {(units) => (
+              <div className="flex flex-col gap-3">
+                {units.map((unit) => (
+                  <UnitCard
+                    key={unit.id}
+                    unit={unit}
+                    tone={tone}
+                    mastery={unitMastery(unit, cards)}
+                    done={doneNodes(unit, lessons, steps)}
+                    onOpen={() => openUnit(unit)}
+                    reader={readerOf(unit)}
+                    onReadNotes={hasSeveralNotes(unit) ? () => navigate(`/fiches/${unit.id}`) : undefined}
+                  />
+                ))}
+              </div>
+            )}
+          </GlossarySearch>
         ) : (
           unitList
         )}
@@ -1099,6 +1118,59 @@ function searchable(text: string): string {
     .toLowerCase()
     .replace(/[^\p{L}\p{N}]+/gu, ' ')
     .trim()
+}
+
+/**
+ * Piste « Glossaire » de Plotin et de Marx : la liste des entrées, précédée
+ * d'une recherche sur le titre, le sous-titre, le terme grec et la
+ * définition. Tant qu'elle est vide, la liste ordinaire (avec ses replis) ;
+ * sinon les seules entrées qui correspondent, à plat.
+ */
+function GlossarySearch({
+  units,
+  terms,
+  list,
+  children,
+}: {
+  units: readonly Unit[]
+  terms: readonly TermEntry[]
+  list: React.ReactNode
+  children: (found: Unit[]) => React.ReactNode
+}) {
+  const [query, setQuery] = useState('')
+  const needle = searchable(query)
+  const found = useMemo(() => {
+    if (!needle) return []
+    const termOf = new Map(terms.map((term) => [term.id, term]))
+    return units.filter((unit) => {
+      const term = termOf.get(unit.id)
+      const text = [unit.title, unit.subtitle, term?.title, term?.greek, term?.definition].filter(Boolean).join(' ')
+      return searchable(text).includes(needle)
+    })
+  }, [units, terms, needle])
+
+  return (
+    <div className="flex flex-col gap-3">
+      <input
+        type="search"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+        placeholder="Chercher une notion (âme, zôê, travail…)"
+        aria-label="Chercher une notion"
+        className="w-full rounded-2xl border-2 border-line bg-cream px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-ink-faint focus:outline-none"
+      />
+      {needle ? (
+        <>
+          <p className="px-1 text-xs font-bold text-ink-faint">
+            {found.length === 0 ? 'Aucune notion ne correspond.' : `${found.length} notion${found.length > 1 ? 's' : ''}`}
+          </p>
+          {children(found)}
+        </>
+      ) : (
+        list
+      )}
+    </div>
+  )
 }
 
 /**
