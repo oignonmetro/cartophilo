@@ -3,10 +3,10 @@
 # Philosophy : sections 5.2 et 6. Citations d'Aristote dans les Œuvres complètes
 # (Flammarion).
 #
-# Traduites de l'anglais de l'article, faute d'extrait reçu : Parties des
-# animaux, III, 3, 664a14-34 (le n° 7 reçu répétait le n° 6) ; Génération des
-# animaux, II, 1, 734b31-35 et 735a13-14 ; III, 2, 753b19-23 (l'extrait reçu
-# s'arrêtait avant le cœur). À remplacer dès réception du texte français.
+# Traduites de l'anglais de l'article, faute d'extrait reçu : Génération des
+# animaux, II, 1, 735a13-14 (l'extrait reçu s'arrête vers 735a2) ; III, 2,
+# 753b19-20 (l'extrait reçu sous ce numéro est II, 2, 735b13-25). À remplacer
+# dès réception du texte français.
 # « Sperme » : terme de cette traduction pour sperma ; gonê et katamenia sont
 # ceux de l'article. La science de l'embryon est exposée ici comme thèse
 # d'Aristote.
@@ -63,16 +63,16 @@ lessons:
 - id: sep-arbio4-l2
   title: "Pourquoi il y a un cou"
   notes: |-
-    **Reprenons les organes de l'*Histoire*, II : mais on les explique maintenant** (III, 3, 664a14-34).
+    **Reprenons les organes de l'*Histoire*, II : mais on les explique maintenant** (III, 3, 664a14-36).
 
-    {teal}« Tous les animaux n'ont pas de cou, mais seulement ceux qui ont les parties en vue desquelles le cou est naturellement présent : la trachée et la partie dite œsophage. »{/teal} Et : {teal}« Le larynx est présent par nature en vue de la respiration »{/teal}. C'est pourquoi {teal}« ceux qui n'ont pas de poumon n'ont pas de cou, comme la famille des poissons »{/teal}.
+    {teal}« Car tous n'ont pas cette partie, seuls l'ont ceux qui ont ce en vue de quoi le cou existe naturellement, c'est-à-dire le larynx et ce qu'on appelle l'œsophage. »{/teal} Et : {teal}« Le larynx, donc, existe naturellement en vue du passage du souffle »{/teal}. {teal}« C'est pourquoi ceux qui n'ont pas de poumons n'ont pas non plus de cou, par exemple la famille des poissons. »{/teal}
 
     **La suite de la démonstration est conditionnelle.**
-    - L'œsophage n'est pas nécessaire pour la nutrition en lui-même : il ne digère rien, et l'estomac pourrait être près de la bouche.
-    - Pour le poumon, c'est **impossible** : l'air doit d'abord passer par un conduit commun, qui se divise ensuite.
-    - Donc l'organe de la respiration a nécessairement de la longueur, et il faut un œsophage entre la bouche et l'estomac.
+    - {teal}« il n'est pas nécessaire d'avoir un œsophage pour la nutrition, car il ne prend pas part à la préparation de la nourriture »{/teal} : l'estomac pourrait suivre immédiatement la bouche.
+    - Pour le poumon, c'est **impossible** : il faut d'abord {teal}« quelque chose de commun, comme un tuyau »{/teal}, qui se divise ensuite en deux.
+    - {teal}« Et du fait que l'organe qui se rapporte à la respiration a par nécessité une longueur, l'existence de l'œsophage est nécessaire comme intermédiaire entre la bouche et l'estomac. »{/teal}
 
-    **Même la matière s'explique par la fonction.** L'œsophage est {teal}« charnu, d'une élasticité nerveuse »{/teal} : nerveux pour se dilater quand passe la nourriture, charnu pour rester mou et ne pas être abîmé par elle.
+    **Même la matière s'explique par la fonction.** L'œsophage est {teal}« charnu, possédant une élasticité tendineuse, tendineux pour pouvoir subir une tension quand la nourriture est ingérée, charnu pour pouvoir être mou, compressible et pour ne pas être endommagé en étant raboté par les aliments qui descendent »{/teal}.
 
     | *Histoire* (II, 15) | *Parties* (III, 3) |
     | tous ceux qui respirent ont un poumon | les parties sont en vue de la respiration |
@@ -88,19 +88,19 @@ lessons:
     - {kind: bank, column: "Parties (III, 3)"}
   points:
   - id: sep-arbio4-l2-p1
-    sentence: "*Parties des animaux*, III, 3 : seuls certains animaux ont un ___, ceux qui ont les parties en vue desquelles il est naturellement présent, la trachée et l'œsophage."
+    sentence: "*Parties des animaux*, III, 3 : tous n'ont pas de ___ : seuls l'ont ceux qui ont le larynx et ce qu'on appelle l'œsophage."
     answer: "cou"
     alt: []
   - id: sep-arbio4-l2-p2
-    sentence: "*Parties des animaux*, III, 3 : le larynx est présent par nature en vue de la ___."
-    answer: "respiration"
+    sentence: "*Parties des animaux*, III, 3 : « Le larynx, donc, existe naturellement en vue du passage du ___ »"
+    answer: "souffle"
     alt: []
   - id: sep-arbio4-l2-p3
-    sentence: "*Parties des animaux*, III, 3 : ceux qui n'ont pas de poumon n'ont pas de cou, comme la famille des ___."
+    sentence: "*Parties des animaux*, III, 3 : « ceux qui n'ont pas de poumons n'ont pas non plus de cou, par exemple la famille des ___ »"
     answer: "poissons"
     alt: []
   - id: sep-arbio4-l2-p4
-    sentence: "L'estomac pourrait être près de la bouche, mais le poumon non : il faut d'abord un conduit, qui se divise ensuite. L'organe de la respiration a donc nécessairement de la ___, d'où l'œsophage."
+    sentence: "*Parties des animaux*, III, 3 : l'estomac pourrait suivre immédiatement la bouche, mais le poumon non. L'organe de la respiration « a par nécessité une ___ », d'où l'œsophage."
     answer: "longueur"
     alt: []
   - id: sep-arbio4-l2-p5
@@ -123,6 +123,14 @@ lessons:
     sentence: "L'*Histoire* rapporte une corrélation, les *Parties des animaux* une nécessité ___, imposée par les besoins de l'organisme."
     answer: "conditionnelle"
     alt: ["hypothétique"]
+  - id: sep-arbio4-l2-p10
+    sentence: "*Parties des animaux*, III, 3 : « il n'est pas nécessaire d'avoir un ___ pour la nutrition, car il ne prend pas part à la préparation de la nourriture »"
+    answer: "œsophage"
+    alt: ["oesophage"]
+  - id: sep-arbio4-l2-p11
+    sentence: "*Parties des animaux*, III, 3 : l'œsophage est « tendineux pour pouvoir subir une tension quand la nourriture est ingérée, ___ pour pouvoir être mou »"
+    answer: "charnu"
+    alt: []
 - id: sep-arbio4-l3
   title: "Génération des animaux : le plan et les deux sexes"
   notes: |-
@@ -195,7 +203,7 @@ lessons:
 
     **L'application.** La part préparée des `katamenia` est en puissance ce que celui qui fournit le sperme est en acte. Et ce sperme lui transmet un mouvement tel que, {teal}« lorsque son mouvement cesse, chacune des parties est engendrée et animée »{/teal} (734b23-24). {green}__Chaque partie, en venant à être, a déjà sa capacité fonctionnelle : elle naît et elle est animée.__{/green} D'où la thèse : {teal}« il n'y a pas de visage ni de chair qui ne possède une âme et, une fois qu'ils auront été détruits, l'un sera dit visage, l'autre chair par homonymie, de la même façon que s'ils étaient en pierre ou bien en bois »{/teal} (734b24-27).
 
-    **Le chaud et le froid ne suffisent pas.** Dureté, mollesse, ténacité, fragilité peuvent venir du chaud et du froid, {teal}« mais non le caractère définissant (`logos`) en vertu duquel l'une des parties est chair et l'autre os »{/teal} (734b31-35), qui vient du mouvement du géniteur. {coral}Les propriétés d'un tissu suivent de sa fonction, et non l'inverse.{/coral}
+    **Le chaud et le froid ne suffisent pas.** {yellow}Le feu tout seul ne produit pas une hache{/yellow} ; il ne produit pas davantage une main ou de la chair, car {teal}« elle aussi possède une certaine fonction »{/teal}. Chaud et froid peuvent rendre {teal}« durs ou mous, visqueux ou friables »{/teal}, {teal}« en revanche la raison pour laquelle ceci est dorénavant chair, cela os, ils ne peuvent plus la produire »{/teal} (734b31-34). Cette raison ({violet}`logos`{/violet}) vient du mouvement du géniteur, comme dans l'art : {teal}« si le chaud et le froid rendent le fer dur ou mou, l'épée, ce qui la produit, c'est le mouvement des instruments, mouvement qui possède la raison de l'art »{/teal} (734b37-735a2). {coral}Les propriétés d'un tissu suivent de sa fonction, et non l'inverse.{/coral}
 
     **La limite de l'analogie, qui est décisive.** {red}__Les êtres naturels, une fois leur génération commencée, {teal}« croissent par eux-mêmes »{/teal} (735a13-14).__{/red} C'est la différence la plus fondamentale de l'art et de la nature : chacun des êtres naturels, selon la *Physique*, {teal}« possède en elle-même un principe de mouvement et d'arrêt »{/teal} (II, 1, 192b13-14), alors qu'{yellow}un lit, un manteau{/yellow} n'ont {teal}« aucune impulsion innée au changement »{/teal}. Le charpentier doit rester physiquement présent aux mouvements qui font la maison ; {red}le père, ou sa semence, non.{/red}
 
@@ -218,7 +226,7 @@ lessons:
     answer: "homonymie"
     alt: []
   - id: sep-arbio4-l4-p5
-    sentence: "Dureté et mollesse peuvent venir du chaud et du froid, mais non le caractère définissant, en grec le *___*, en vertu duquel une partie est chair et l'autre os."
+    sentence: "*Génération des animaux*, II, 1 : le chaud et le froid ne produisent pas « la raison pour laquelle ceci est dorénavant chair, cela os », en grec le *___*."
     answer: "logos"
     alt: []
   - id: sep-arbio4-l4-p6
@@ -237,6 +245,14 @@ lessons:
     sentence: "Le charpentier doit rester présent aux mouvements qui font la maison ; le ___, ou sa semence, non : le développement a sa source dans l'embryon."
     answer: "père"
     alt: ["géniteur", "mâle"]
+  - id: sep-arbio4-l4-p10
+    sentence: "*Génération des animaux*, II, 1 : « si le chaud et le froid rendent le fer dur ou mou, l'___, ce qui la produit, c'est le mouvement des instruments »"
+    answer: "épée"
+    alt: []
+  - id: sep-arbio4-l4-p11
+    sentence: "*Génération des animaux*, II, 1 : l'épée, ce qui la produit, « c'est le mouvement des ___, mouvement qui possède la raison de l'art »"
+    answer: "instruments"
+    alt: []
 - id: sep-arbio4-l5
   title: "Le cœur, principe de l'embryon"
   notes: |-

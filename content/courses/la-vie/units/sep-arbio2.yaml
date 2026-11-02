@@ -3,9 +3,7 @@
 # Philosophy : section 4. Citations d'Aristote dans les Œuvres complètes
 # (Flammarion).
 #
-# Traduites de l'anglais de l'article, faute d'extrait reçu : Parties des
-# animaux, I, 1, 639b1-2 (la locomotion) et 639b4-5 (l'extrait fourni s'arrêtait
-# à 639a12). Vocabulaire de cette traduction : famille (genos, « kind » dans
+# Vocabulaire de cette traduction : famille (genos, « kind » dans
 # l'article), forme (eidos), le plus et le moins, analogie.
 
 id: sep-arbio2
@@ -90,9 +88,9 @@ lessons:
     - y opère une {violet}nécessité d'un genre propre{/violet}, la nécessité conditionnelle ;
     - il leur faut une {violet}méthode de division à plusieurs différences{/violet}.
 
-    **Le problème d'ouverture : à quel niveau étudier ?** Faut-il partir de groupes proches de la perception, hommes, chevaux, chiens, ou chercher les attributs qui {teal}« appartiennent en commun selon le genre »{/teal} (639b4-5) ? Si beaucoup d'attributs sont communs à ces groupes, en rester à eux, c'est **se répéter**, comme si l'on disait « l'olivier perd ses feuilles », « la vigne perd ses feuilles ».
+    **Le problème d'ouverture : à quel niveau étudier ?** Faut-il définir chaque vivant à part, {teal}« la nature de l'être humain, du lion, du bœuf »{/teal}, ou poser d'abord {teal}« les attributs communs à tous les animaux »{/teal} (639a16-19) ? Le sommeil, la respiration, la croissance, la mort appartiennent {teal}« à la fois aux chevaux, aux chiens et aux êtres humains »{/teal} : en rester à ces groupes, c'est **se répéter**, {teal}« on sera contraint de dire plusieurs fois les mêmes choses »{/teal} (639a25-28).
 
-    **Une distinction parmi les attributs communs.** Certains ne semblent pas différer d'un groupe à l'autre, comme la respiration et la mort ; d'autres sont {violet}distincts par la forme{/violet}, comme la locomotion : {teal}« il est manifeste que la locomotion n'est pas une par la forme, car voler, nager, marcher et ramper diffèrent »{/teal} (639b1-2). Le bon niveau ne sera donc pas le même pour tout : il ne suffit pas de dire « tous les animaux se déplacent ». Aristote répond en I, 4, après avoir introduit une nouvelle idée de la division.
+    **Une distinction parmi les attributs communs.** Certains appartiennent à des animaux de forme différente {teal}« sans qu'ils aient entre eux aucune différence »{/teal} ; d'autres {teal}« relèvent de la même appellation, mais présentent une différence de forme, par exemple le déplacement des animaux, car il semble bien qu'il n'est pas formellement unique. Il y a, en effet, une différence entre le vol, la nage, la marche et la reptation. »{/teal} (639a30-b3) Le bon niveau ne sera donc pas le même pour tout : il ne suffit pas de dire « tous les animaux se déplacent ». D'où la question : {teal}« s'il convient d'étudier les choses d'abord en ce qu'elles ont en commun par genre puis, plus tard, les caractères propres, ou tout de suite les cas particuliers »{/teal} (639b3-5). Aristote répond en I, 4, après avoir introduit une nouvelle idée de la division.
   points:
   - id: sep-arbio2-l2-p1
     sentence: "Les animaux sont des unités complexes de matière (le corps) et de ___ (l'âme), ce qui exige de préciser pour eux les normes des *Seconds Analytiques*."
@@ -111,12 +109,20 @@ lessons:
     answer: "répète"
     alt: []
   - id: sep-arbio2-l2-p5
-    sentence: "*Parties des animaux*, I, 1 : la ___ n'est pas une par la forme, car voler, nager, marcher et ramper diffèrent."
-    answer: "locomotion"
-    alt: []
+    sentence: "*Parties des animaux*, I, 1 : le ___ des animaux « n'est pas formellement unique » : il y a une différence entre le vol, la nage, la marche et la reptation."
+    answer: "déplacement"
+    alt: ["locomotion"]
   - id: sep-arbio2-l2-p6
     sentence: "Parmi les attributs communs, certains ne semblent pas différer d'un groupe à l'autre, comme la ___ et la mort ; d'autres sont distincts par la forme."
     answer: "respiration"
+    alt: []
+  - id: sep-arbio2-l2-p7
+    sentence: "*Parties des animaux*, I, 1, sur le déplacement : « une différence entre le vol, la nage, la marche et la ___ »"
+    answer: "reptation"
+    alt: []
+  - id: sep-arbio2-l2-p8
+    sentence: "*Parties des animaux*, I, 1 : étudier les choses « d'abord en ce qu'elles ont en commun par ___ puis, plus tard, les caractères propres, ou tout de suite les cas particuliers »"
+    answer: "genre"
     alt: []
 - id: sep-arbio2-l3
   title: "La fin, la forme et la nécessité conditionnelle"
