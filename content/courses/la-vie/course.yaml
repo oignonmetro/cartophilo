@@ -13,7 +13,7 @@ tagline: Dissertation sur programme, thème imposé.
 status: available
 default: false
 layout: library
-version: 46
+version: 47
 
 tracks:
   - id: sujets
@@ -33,7 +33,7 @@ tracks:
     kind: grammar
     color: violet
     icon: bulb
-    units: [ea5, sens1, sens2, sens3, sens4, sens5, bichat1, bichat2, bichat3, bichat4, sep-vie1, sep-vie2, sep-vie3, sep-vie4, sep-mort1, sep-mort2, sep-mort3, sep-mort4, sep-camus1, sep-camus2, sep-camus3, jonas1, jonas2, jonas3]
+    units: [ea5, sens1, sens2, sens3, sens4, sens5, bichat1, bichat2, bichat3, bichat4, jonas1, jonas2, jonas3]
 
   - id: textes
     title: Textes
@@ -51,3 +51,12 @@ tracks:
     color: sky
     icon: compass
     units: [kant-cfj-introduction, kant-cfj-analytique, kant-cfj-dialectique, kant-cfj-methodologie]
+
+  - id: sep
+    title: SEP
+    subtitle: Articles de la Stanford Encyclopedia of Philosophy
+    kind: grammar
+    color: green
+    icon: book
+    # Un groupe par article (voir content/philosophie.md).
+    units: [sep-vie1, sep-vie2, sep-vie3, sep-vie4, sep-mort1, sep-mort2, sep-mort3, sep-mort4, sep-camus1, sep-camus2, sep-camus3]

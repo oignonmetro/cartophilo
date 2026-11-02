@@ -75,7 +75,9 @@ l'épreuve :
   que Plotin (leçons, rappels, cartes, comme les traités, à partir d'un
   notebook NotebookLM et du PDF de l'édition) s'écrit avec la skill
   `cours-oeuvre` (`.claude/skills/cours-oeuvre/`), qui reprend la méthode
-  de `cours-traite`.
+  de `cours-traite`. La piste **SEP** regroupe les cours tirés d'articles de la
+  Stanford Encyclopedia of Philosophy, un groupe par article (`sep-vie…`,
+  `sep-mort…`), écrits selon `content/philosophie.md`.
 
 ## Décidé : la correspondance technique avec le moteur de contenu
 
