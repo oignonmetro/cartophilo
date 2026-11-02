@@ -1,0 +1,239 @@
+# Cours sur la biologie d'Aristote (voir content/philosophie.md), tiré de
+# l'article « Aristotle's Biology » de James Lennox, Stanford Encyclopedia of
+# Philosophy : section 5.1. Citations d'Aristote dans les Œuvres complètes
+# (Flammarion), où « gosier » rend l'œsophage de l'article.
+#
+# L'article analyse la tournure grecque hosa... panta en s'appuyant sur sa
+# propre traduction (« as many as... all ») ; celle des Œuvres complètes ne la
+# fait pas apparaître (« tous les quadrupèdes vivipares ont... »). La thèse est
+# donc exposée sur la tournure grecque.
+
+id: sep-arbio3
+title: "L'Histoire des animaux"
+subtitle: "Une enquête sur les faits : les différences, les corrélations, ce qui en est absent, et le poussin"
+icon: people
+color: sky
+group: "La biologie d'Aristote (SEP)"
+lessons:
+- id: sep-arbio3-l1
+  title: "Quatre sortes de différences"
+  notes: |-
+    **L'*Histoire des animaux* n'est pas une compilation mal ordonnée de savoirs sur la nature.** On le répète souvent ; {green}__de nombreuses études, à la suite de {violet}David Balme{/violet}, ont montré qu'elle se construit du début à la fin sur une division à plusieurs différences.__{/green}
+
+    **Elle s'organise selon quatre sortes de différences**, annoncées dès le premier chapitre (486b22-487a14).
+
+    | Différences | Livres |
+    | les parties | I-IV |
+    | les activités et modes de vie : génération | V-VI, IX |
+    | les autres activités et modes de vie | VII |
+    | les caractères | VIII |
+
+    **Le plan des parties.** Les parties non uniformes (nos organes) des sanguins, puis leurs parties uniformes (nos tissus), puis les parties des animaux sans sang.
+
+    **Les groupes d'animaux viennent ensuite.** Ils se reconnaissent à des corrélations stables entre différences : un grand nombre d'animaux ont {yellow}ailes, plumes, bec et deux pattes sans chair{/yellow}, et ce groupe a reçu le nom d'**oiseau**. D'autres n'ont pas de nom : Aristote les désigne par leurs différences corrélées, ainsi {yellow}les quadrupèdes vivipares{/yellow}, qui correspondent à nos mammifères terrestres, à une exception importante près.
+  tables:
+  - table: differences-livres
+    exercises:
+    - {kind: bank, column: Livres}
+  points:
+  - id: sep-arbio3-l1-p1
+    sentence: "Contre l'idée d'une compilation mal ordonnée, David ___ et d'autres ont montré que l'*Histoire des animaux* se construit sur une division à plusieurs différences."
+    answer: "Balme"
+    alt: []
+  - id: sep-arbio3-l1-p2
+    sentence: "L'*Histoire des animaux* s'organise selon quatre sortes de différences : les parties, les activités, les modes de vie et les ___."
+    answer: "caractères"
+    alt: []
+  - id: sep-arbio3-l1-p3
+    sentence: "L'*Histoire des animaux* s'organise selon quatre sortes de différences : les ___, les activités, les modes de vie et les caractères."
+    answer: "parties"
+    alt: []
+  - id: sep-arbio3-l1-p4
+    sentence: "Les parties ___, chez Aristote, correspondent à nos organes ; les parties uniformes, à nos tissus."
+    answer: "non uniformes"
+    alt: ["anoméomères"]
+  - id: sep-arbio3-l1-p5
+    sentence: "Les parties non uniformes, chez Aristote, correspondent à nos organes ; les parties ___, à nos tissus."
+    answer: "uniformes"
+    alt: ["homéomères"]
+  - id: sep-arbio3-l1-p6
+    sentence: "Un grand nombre d'animaux ont ailes, plumes, bec et deux pattes sans chair : le groupe ainsi reconnu par une ___ stable de différences a reçu le nom d'oiseau."
+    answer: "corrélation"
+    alt: []
+  - id: sep-arbio3-l1-p7
+    sentence: "Sans nom reçu, Aristote désigne un groupe par ses différences corrélées : ainsi les quadrupèdes ___, qui correspondent à nos mammifères terrestres."
+    answer: "vivipares"
+    alt: []
+- id: sep-arbio3-l2
+  title: "Les limites de la division"
+  notes: |-
+    **La pratique de l'*Histoire des animaux* montre à la fois la valeur de la division et ses limites.**
+
+    **Elle ne donne pas les genres.** La division suppose ses axes, elle ne les fournit pas. Pourquoi réunir les animaux qui ont **quatre pattes** et qui **donnent naissance à des petits vivants** ? Chacun de ces traits vient bien d'une division, l'une selon la locomotion, l'autre selon la reproduction. {red}__Mais ces divisions ne disent pas que les quadrupèdes vivipares forment un groupe scientifiquement important.__{/red} Il faut autre chose pour reconnaître des genres significatifs, comme {yellow}les céphalopodes ou les cétacés{/yellow}.
+
+    **Elle est indifférente à la cause.** Elle ne distingue pas les caractères causalement fondamentaux des {violet}attributs propres{/violet}, alors que cette distinction est absolument fondamentale pour la science aristotélicienne. Comparer l'*Histoire des animaux* aux *Parties* et à la *Génération* montre comment Aristote l'opère en pratique.
+
+    **La question d'ensemble.** {coral}On voit ainsi Aristote au travail sur la question centrale des *Seconds Analytiques*, II : comment définition, démonstration causale et division se rapportent-elles les unes aux autres dans la quête du savoir ?{/coral} Deux exemples de l'*Histoire* le montreront, à comparer ensuite aux traités explicatifs.
+  points:
+  - id: sep-arbio3-l2-p1
+    sentence: "Première limite de la division dans l'*Histoire des animaux* : elle suppose ses ___, elle ne les fournit pas."
+    answer: "axes"
+    alt: []
+  - id: sep-arbio3-l2-p2
+    sentence: "La division selon la locomotion et selon la reproduction ne dit pas que les quadrupèdes vivipares forment un groupe ___ important."
+    answer: "scientifiquement"
+    alt: []
+  - id: sep-arbio3-l2-p3
+    sentence: "Il faut autre chose que la division pour reconnaître des genres significatifs, comme les céphalopodes ou les ___."
+    answer: "cétacés"
+    alt: []
+  - id: sep-arbio3-l2-p4
+    sentence: "Seconde limite de la division : elle est indifférente à la distinction entre caractères causalement fondamentaux et attributs ___."
+    answer: "propres"
+    alt: []
+- id: sep-arbio3-l3
+  title: "Le poumon : une corrélation à l'extension ouverte"
+  notes: |-
+    **Premier exemple : les organes de la respiration, chez les sanguins** (II, 15).
+
+    {teal}« Donc tous les quadrupèdes vivipares ont un gosier et une trachée-artère et ils sont disposés de la même manière que chez l'être humain. Il en va aussi de même pour tous les quadrupèdes ovipares et chez les oiseaux. Mais ils diffèrent par les formes de ces parties. D'une manière générale, ceux qui inhalent de l'air, l'inspirent et l'expirent, ont tous un poumon, une trachée-artère et un gosier »{/teal} (505b33-506a3)
+
+    **Une tournure et une innovation.** Le grec emploie un tour redondant, {violet}`hosa... panta`{/violet} : « autant qui sont X, tous ont Y ». Aristote ne note pas seulement une corrélation universelle : {green}__il le fait en laissant ouverte son extension.__{/green} On peut découvrir de nouveaux animaux qui la présentent sans changer la généralisation, puisqu'elle porte sur la corrélation entre différences, non sur les genres qui l'illustrent. L'ordre inverse, {violet}`panta hosa`{/violet}, semble marquer un universel convertible, ce que nous appelons une implication.
+
+    **Le schéma inductif.**
+    - Autant qui sont P, tous ont Y ; autant qui sont Q, tous ont Y...
+    - D'une manière générale, tous ceux qui sont X, trait commun à P et Q, ont Y, et eux seuls.
+
+    Ici, X est **inspirer et expirer de l'air**, trait coextensif aux trois organes.
+
+    **Un garde-fou.** La suite met en garde contre une inférence fausse : que tout sanguin aurait un poumon. {teal}« Les sanguins n'ont pas tous de poumon, par exemple les poissons n'en ont pas, ni aucun autre animal qui a des branchies. »{/teal} (506a12) Ici encore, {coral}la corrélation porte sur les branchies, en quelque animal qu'on les trouve, non sur un genre.{/coral}
+  points:
+  - id: sep-arbio3-l3-p1
+    sentence: "*Histoire des animaux*, II, 15 : « ceux qui inhalent de l'air, l'inspirent et l'expirent, ont tous un ___, une trachée-artère et un gosier »."
+    answer: "poumon"
+    alt: []
+  - id: sep-arbio3-l3-p2
+    sentence: "*Histoire des animaux*, II, 15 : « ceux qui inhalent de l'air, l'inspirent et l'expirent, ont tous un poumon, une ___ et un gosier »."
+    answer: "trachée-artère"
+    alt: ["trachée"]
+  - id: sep-arbio3-l3-p3
+    sentence: "*Histoire des animaux*, II, 15 : « ceux qui inhalent de l'air, l'inspirent et l'expirent, ont tous un poumon, une trachée-artère et un ___ »."
+    answer: "gosier"
+    alt: ["oesophage"]
+  - id: sep-arbio3-l3-p4
+    sentence: "Le tour grec *___... panta* (« autant qui sont X, tous ont Y ») note une corrélation universelle en laissant ouverte son extension."
+    answer: "hosa"
+    alt: []
+  - id: sep-arbio3-l3-p5
+    sentence: "Le tour *hosa... panta* est une innovation de méthode : on peut découvrir de nouveaux animaux sans changer la généralisation, parce qu'elle laisse ouverte son ___."
+    answer: "extension"
+    alt: []
+  - id: sep-arbio3-l3-p6
+    sentence: "La généralisation de l'*Histoire des animaux* porte sur la corrélation entre ___, non sur les genres qui l'illustrent."
+    answer: "différences"
+    alt: ["organes"]
+  - id: sep-arbio3-l3-p7
+    sentence: "Par l'ordre inverse, *panta hosa*, Aristote semble marquer un universel ___, ce que nous appelons une implication."
+    answer: "convertible"
+    alt: []
+  - id: sep-arbio3-l3-p8
+    sentence: "*Histoire des animaux*, II, 15 : « Les sanguins n'ont pas tous de poumon, par exemple les poissons n'en ont pas, ni aucun autre animal qui a des ___. »"
+    answer: "branchies"
+    alt: []
+  - id: sep-arbio3-l3-p9
+    sentence: "Trait coextensif au poumon, à la trachée et au gosier, dans l'*Histoire des animaux* : inspirer et expirer de l'___."
+    answer: "air"
+    alt: []
+- id: sep-arbio3-l4
+  title: "Ce qui n'y est pas, et le corps humain comme repère"
+  notes: |-
+    **Le passage sur le poumon vaut autant par ce qu'il tait.** {red}__Aristote n'y affirme presque jamais qu'une corrélation est nécessaire, ne distingue pas l'essence des simples attributs, et évite toute trace d'explication causale.__{/red}
+    - Il note la corrélation entre poumon, trachée et gosier d'une part, inspiration et expiration d'autre part, mais {red}ne dit pas que ces organes sont là pour respirer{/red}. Le mot de « respiration » n'y figure jamais.
+    - Il emploie souvent le mot de « nature », mais ne dit pas que {pink}la nature ne fait rien en vain{/pink}.
+    - Il n'y a presque aucune mention de la distinction de la matière et de la forme.
+
+    {coral}Cette absence est attendue : l'`historia` prépare la recherche des causes, elle ne la fait pas.{/coral} Ce vocabulaire ne vient qu'avec les traités causaux.
+
+    **Le corps humain comme repère.** Second trait de l'*Histoire* : elle se sert du corps humain comme d'une référence, et elle dit pourquoi : {teal}« Mais il faut d'abord saisir les parties de l'être humain, car, de même que chacun évalue une monnaie par rapport à celle qui lui est la mieux connue, de même en est-il aussi dans les autres domaines. Or l'être humain est nécessairement celui des animaux qui nous est le mieux connu. »{/teal} (I, 6, 491a19-23)
+
+    **Deux raisons.** Il est **le plus proche de nous**, du point de vue de la connaissance, et sert de carte pour ne rien omettre. Il suit aussi **l'ordre de la nature**, selon Aristote : le corps humain serait le plus conforme aux dimensions naturelles du cosmos, le haut de l'homme répondant au haut de l'univers (I, 15, 494a26-b1).
+
+    ! Partir de l'homme ne signifie pas qu'il soit la mesure de tous les animaux : c'est un point de départ pour connaître, comme une monnaie familière pour évaluer les autres.
+  points:
+  - id: sep-arbio3-l4-p1
+    sentence: "Dans l'*Histoire des animaux*, Aristote évite toute trace d'explication ___, ce qui n'a rien d'une négligence."
+    answer: "causale"
+    alt: []
+  - id: sep-arbio3-l4-p2
+    sentence: "L'*Histoire des animaux* note la corrélation entre poumon et inspiration, mais ne dit pas que ces organes sont là pour ___."
+    answer: "respirer"
+    alt: []
+  - id: sep-arbio3-l4-p3
+    sentence: "L'*Histoire des animaux* ne dit pas, à la différence des traités causaux, que la nature ne fait rien en ___."
+    answer: "vain"
+    alt: []
+  - id: sep-arbio3-l4-p4
+    sentence: "Il n'y a presque aucune mention de la distinction de la ___ et de la forme dans l'*Histoire des animaux*."
+    answer: "matière"
+    alt: []
+  - id: sep-arbio3-l4-p5
+    sentence: "*Histoire des animaux*, I, 6 : « de même que chacun évalue une ___ par rapport à celle qui lui est la mieux connue, de même en est-il aussi dans les autres domaines »."
+    answer: "monnaie"
+    alt: []
+  - id: sep-arbio3-l4-p6
+    sentence: "*Histoire des animaux*, I, 6 : « Or l'être humain est nécessairement celui des animaux qui nous est le mieux ___. »"
+    answer: "connu"
+    alt: []
+  - id: sep-arbio3-l4-p7
+    sentence: "*Histoire des animaux*, I, 6 : « il faut d'abord saisir les parties de l'___ humain »."
+    answer: "être"
+    alt: []
+  - id: sep-arbio3-l4-p8
+    sentence: "Aristote tient que le corps humain est le plus conforme aux dimensions naturelles du ___, le haut de l'homme répondant au haut de l'univers."
+    answer: "cosmos"
+    alt: ["monde", "univers"]
+- id: sep-arbio3-l5
+  title: "L'embryon de poulet"
+  notes: |-
+    **Second exemple, tiré des livres sur la génération** (VI, 3), à comparer ensuite à la *Génération des animaux*.
+
+    {teal}« La genèse à partir de l'œuf se fait chez les oiseaux de la même manière pour tous, mais le temps nécessaire à leur maturité est différent, comme on l'a dit. Chez les poules, c'est après trois jours et trois nuits qu'apparaît un premier signe, chez les oiseaux plus grands il faut plus de temps et chez les plus petits moins de temps. »{/teal} (561a4-8)
+
+    **Une généralisation et une corrélation de degré.** Elle part de **tous les oiseaux**, puis lie par le plus et le moins la taille de l'oiseau à la vitesse du développement. {green}__Ce procédé fait de la description soignée de l'œuf de poule au quatrième jour une description universelle__{/green} : le même stade survient chez tout oiseau, plus tôt ou plus tard selon sa taille.
+
+    **La description.** {teal}« et de la grosseur d'un point sanguinolent le cœur apparaît dans le blanc. Et ce point palpite et se meut comme un être animé »{/teal} (561a11-12). Puis deux vaisseaux, puis le corps, {teal}« d'abord très petit et blanc. Mais la tête est visible et dans celle-ci les yeux qui font fortement saillie »{/teal} (561a18-20) : {teal}« c'est bien après qu'ils rapetissent et se contractent »{/teal}.
+
+    **Sa postérité.** {coral}Cette expérience classique, déjà consignée dans un traité médical ancien d'embryologie, sera refaite bien des fois à la Renaissance.{/coral} Quiconque a vu des films modernes du poussin à ce stade mesure sa précision, compte tenu de la taille de l'embryon. Mais, comme pour le poumon, il faut remarquer {red}ce qui manque : aucune explication{/red}.
+  points:
+  - id: sep-arbio3-l5-p1
+    sentence: "*Histoire des animaux*, VI, 3 : « Chez les poules, c'est après ___ jours et trois nuits qu'apparaît un premier signe »."
+    answer: "trois"
+    alt: ["3"]
+  - id: sep-arbio3-l5-p2
+    sentence: "*Histoire des animaux*, VI, 3 : chez les poules, un premier signe apparaît après trois jours et trois nuits, « chez les oiseaux plus ___ il faut plus de temps et chez les plus petits moins de temps »."
+    answer: "grands"
+    alt: []
+  - id: sep-arbio3-l5-p3
+    sentence: "En liant par le plus et le moins la taille de l'oiseau à la vitesse du développement, Aristote fait de la description de l'œuf de poule une description ___."
+    answer: "universelle"
+    alt: []
+  - id: sep-arbio3-l5-p4
+    sentence: "*Histoire des animaux*, VI, 3 : « de la grosseur d'un point sanguinolent le ___ apparaît dans le blanc »."
+    answer: "cœur"
+    alt: ["coeur"]
+  - id: sep-arbio3-l5-p5
+    sentence: "*Histoire des animaux*, VI, 3, sur le cœur de l'embryon de poulet : « ce point palpite et se meut comme un être ___ »."
+    answer: "animé"
+    alt: []
+  - id: sep-arbio3-l5-p6
+    sentence: "*Histoire des animaux*, VI, 3, sur l'embryon de poulet : « la tête est visible et dans celle-ci les ___ qui font fortement saillie »."
+    answer: "yeux"
+    alt: []
+  - id: sep-arbio3-l5-p7
+    sentence: "L'expérience de l'œuf ouvert à ce stade, décrite par Aristote, sera refaite bien des fois à la ___."
+    answer: "Renaissance"
+    alt: []
+  - id: sep-arbio3-l5-p8
+    sentence: "Description de l'embryon de poulet : *Histoire des animaux*, livre VI, chapitre ___."
+    answer: "3"
+    alt: ["trois"]

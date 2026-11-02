@@ -1,0 +1,362 @@
+# Cours sur la biologie d'Aristote (voir content/philosophie.md), tiré de
+# l'article « Aristotle's Biology » de James Lennox, Stanford Encyclopedia of
+# Philosophy : sections 5.2 et 6. Citations d'Aristote dans les Œuvres complètes
+# (Flammarion).
+#
+# Traduites de l'anglais de l'article, faute d'extrait reçu : Parties des
+# animaux, III, 3, 664a14-34 (le n° 7 reçu répétait le n° 6) ; Génération des
+# animaux, II, 1, 734b31-35 et 735a13-14 ; III, 2, 753b19-23 (l'extrait reçu
+# s'arrêtait avant le cœur). À remplacer dès réception du texte français.
+# « Sperme » : terme de cette traduction pour sperma ; gonê et katamenia sont
+# ceux de l'article. La science de l'embryon est exposée ici comme thèse
+# d'Aristote.
+
+id: sep-arbio4
+title: "Des faits aux causes"
+subtitle: "Le cou et le poumon expliqués, la génération des animaux, le cœur, et une énigme sur les traités"
+icon: clock
+color: sky
+group: "La biologie d'Aristote (SEP)"
+lessons:
+- id: sep-arbio4-l1
+  title: "Parties des animaux : le plan"
+  notes: |-
+    **Les *Parties des animaux*, II-IV, expliquent ce que l'*Histoire*, I-IV, organise.** Le livre I, on l'a vu, donne les normes. L'explication par les fins et les fonctions est la forme première d'explication causale en biologie.
+
+    | Livres | Sujet |
+    | II, 1-2 | rapports entre parties uniformes et non uniformes |
+    | II, 3-10 | les parties uniformes, du sang à la chair et à l'os |
+    | II, 10-III, 3 | les parties externes de la tête des sanguins |
+    | III, 3-IV, 4 | les organes internes des sanguins |
+    | IV, 5-9 | les animaux sans sang |
+    | IV, 10-14 | tronc et membres, oiseaux, poissons, animaux doubles |
+
+    **Le fil de ce plan.** {green}__Le tout de l'organisme est téléologiquement antérieur à ses parties, et, parmi les parties, les non uniformes aux uniformes.__{/green} On n'explique pas le cœur à partir du tissu, mais le tissu à partir de ce que doit faire le cœur. Aristote se guide encore sur le corps humain, et, pour les organes internes, sur les dissections d'animaux comme le chien et le porc, supposés les plus proches de l'homme.
+
+    **Les animaux sans sang** sont les crustacés, les testacés, les céphalopodes et les insectes. {yellow}Il finit sur ceux qui « dualisent » entre la terre et l'eau, ou l'air{/yellow}.
+  tables:
+  - table: livres-sujet
+    exercises:
+    - {kind: order, column: Livres}
+    - {kind: cell, column: Livres}
+  points:
+  - id: sep-arbio4-l1-p1
+    sentence: "Les *Parties des animaux*, livres II-IV, expliquent ce que l'*___ des animaux*, livres I-IV, organise."
+    answer: "Histoire"
+    alt: []
+  - id: sep-arbio4-l1-p2
+    sentence: "L'explication par les fins et les ___ est la forme première d'explication causale en biologie, selon Aristote."
+    answer: "fonctions"
+    alt: []
+  - id: sep-arbio4-l1-p3
+    sentence: "Le tout de l'organisme est téléologiquement ___ à ses parties, et, parmi les parties, les non uniformes aux uniformes."
+    answer: "antérieur"
+    alt: []
+  - id: sep-arbio4-l1-p4
+    sentence: "Pour les organes internes, Aristote s'appuie sur les dissections d'animaux comme le chien et le ___, supposés les plus proches de l'homme."
+    answer: "porc"
+    alt: ["cochon"]
+  - id: sep-arbio4-l1-p5
+    sentence: "Les animaux sans sang sont, selon Aristote, les crustacés, les testacés, les ___ et les insectes."
+    answer: "céphalopodes"
+    alt: []
+- id: sep-arbio4-l2
+  title: "Pourquoi il y a un cou"
+  notes: |-
+    **Reprenons les organes de l'*Histoire*, II : mais on les explique maintenant** (III, 3, 664a14-34).
+
+    {teal}« Tous les animaux n'ont pas de cou, mais seulement ceux qui ont les parties en vue desquelles le cou est naturellement présent : la trachée et la partie dite œsophage. »{/teal} Et : {teal}« Le larynx est présent par nature en vue de la respiration »{/teal}. C'est pourquoi {teal}« ceux qui n'ont pas de poumon n'ont pas de cou, comme la famille des poissons »{/teal}.
+
+    **La suite de la démonstration est conditionnelle.**
+    - L'œsophage n'est pas nécessaire pour la nutrition en lui-même : il ne digère rien, et l'estomac pourrait être près de la bouche.
+    - Pour le poumon, c'est **impossible** : l'air doit d'abord passer par un conduit commun, qui se divise ensuite.
+    - Donc l'organe de la respiration a nécessairement de la longueur, et il faut un œsophage entre la bouche et l'estomac.
+
+    **Même la matière s'explique par la fonction.** L'œsophage est {teal}« charnu, d'une élasticité nerveuse »{/teal} : nerveux pour se dilater quand passe la nourriture, charnu pour rester mou et ne pas être abîmé par elle.
+
+    | *Histoire* (II, 15) | *Parties* (III, 3) |
+    | tous ceux qui respirent ont un poumon | les parties sont en vue de la respiration |
+    | aucune nécessité | nécessité conditionnelle |
+    | une corrélation | un système d'organes |
+
+    **Ce qui est changé.** {green}__Le langage de la nature, de la nécessité, du possible et du « en vue de » arrive tout d'un coup : les parties sont présentes à cause de la nécessité conditionnelle imposée par les besoins de l'organisme.__{/green} C'est l'Aristote qui a tant impressionné {violet}Georges Cuvier{/violet} : il expose les fonctions adaptatives de chaque organe, et comment les parties internes forment un système organique.
+
+    **Une hiérarchie téléologique.** Inspirer et expirer sont en vue de la respiration, elle-même en vue du refroidissement du sang ; la trachée en vue du transport de l'air ; {coral}le cou en vue de protéger la trachée.{/coral} Et l'on n'y nomme guère de genres : {red}le poisson n'est cité qu'une fois{/red}, car c'est ce système d'organes qu'on explique, en quelque animal qu'il se trouve.
+  tables:
+  - table: histoire-ii-15-parties-iii-3
+    exercises:
+    - {kind: bank, column: "Parties (III, 3)"}
+  points:
+  - id: sep-arbio4-l2-p1
+    sentence: "*Parties des animaux*, III, 3 : seuls certains animaux ont un ___, ceux qui ont les parties en vue desquelles il est naturellement présent, la trachée et l'œsophage."
+    answer: "cou"
+    alt: []
+  - id: sep-arbio4-l2-p2
+    sentence: "*Parties des animaux*, III, 3 : le larynx est présent par nature en vue de la ___."
+    answer: "respiration"
+    alt: []
+  - id: sep-arbio4-l2-p3
+    sentence: "*Parties des animaux*, III, 3 : ceux qui n'ont pas de poumon n'ont pas de cou, comme la famille des ___."
+    answer: "poissons"
+    alt: []
+  - id: sep-arbio4-l2-p4
+    sentence: "L'estomac pourrait être près de la bouche, mais le poumon non : il faut d'abord un conduit, qui se divise ensuite. L'organe de la respiration a donc nécessairement de la ___, d'où l'œsophage."
+    answer: "longueur"
+    alt: []
+  - id: sep-arbio4-l2-p5
+    sentence: "L'œsophage est charnu pour rester mou et ne pas être abîmé par la nourriture : même la ___ d'un tissu s'explique par sa fonction."
+    answer: "matière"
+    alt: []
+  - id: sep-arbio4-l2-p6
+    sentence: "Le grand naturaliste français Georges ___ a été impressionné par l'Aristote qui montre que les parties internes forment un système organique."
+    answer: "Cuvier"
+    alt: []
+  - id: sep-arbio4-l2-p7
+    sentence: "Hiérarchie téléologique : inspirer et expirer sont en vue de la respiration, elle-même en vue du refroidissement du ___."
+    answer: "sang"
+    alt: []
+  - id: sep-arbio4-l2-p8
+    sentence: "Hiérarchie téléologique : le cou est présent pour protéger la ___."
+    answer: "trachée"
+    alt: ["trachée-artère"]
+  - id: sep-arbio4-l2-p9
+    sentence: "L'*Histoire* rapporte une corrélation, les *Parties des animaux* une nécessité ___, imposée par les besoins de l'organisme."
+    answer: "conditionnelle"
+    alt: ["hypothétique"]
+- id: sep-arbio4-l3
+  title: "Génération des animaux : le plan et les deux sexes"
+  notes: |-
+    **La *Génération des animaux* explique deux choses laissées de côté par les *Parties*** : les différences des parties liées à la génération, et la génération des parties. Elle se tourne vers les **causes efficientes**.
+
+    | Livre | Sujet |
+    | I | organes de la reproduction, sperme, contributions |
+    | II | développement des vivipares, à commencer par l'homme |
+    | III | les ovipares, puis la génération spontanée |
+    | IV | mâle et femelle, ressemblances, difformités |
+    | V | variations de couleur, de texture |
+
+    **Une définition d'abord neutre.** {teal}« nous appelons mâle l'animal qui engendre en un autre, femelle celui qui engendre en soi »{/teal} (I, 2, 716a13-15).
+
+    **Les contributions.** Les deux viennent d'un {violet}résidu utile du sang{/violet}, élaboré par coction, celui du mâle étant plus entièrement cuit : c'est la {violet}`gonê`{/violet} (le sperme) ; celui de la femelle, les {violet}`katamenia`{/violet} (menstrues).
+    - Le mâle fournit **une source de mouvement**, une `dunamis` : une capacité de chauffer, présente dans le `pneuma` du sperme. {red}Il n'apporte aucune matière au petit.{/red}
+    - La femelle fournit **une matière préparée**. Il ne lui faut que la présence de cette capacité, et commence un long développement, qu'Aristote compare à {yellow}un automate qui accomplit un ensemble de mouvements coordonnés une fois lancé{/yellow}.
+
+    **L'analogie avec l'art.** {teal}« la nature qui est dans le mâle fait usage du sperme comme d'un outil et comme d'un outil qui possède des mouvements en acte, de la même façon que les outils sont mus dans le cas de ce qui est engendré par l'art. Car c'est en eux que réside en quelque façon le mouvement de l'art. »{/teal} (I, 21, 730b19-23)
+
+    ! Cette répartition, qui fait du mâle la forme et de la femelle la matière, est une thèse d'Aristote, élaborée contre les écrits médicaux qui attribuaient une semence aux deux, non un constat.
+  tables:
+  - table: livre-sujet
+    exercises:
+    - {kind: bank, column: Sujet}
+    - {kind: cell, column: Livre}
+  points:
+  - id: sep-arbio4-l3-p1
+    sentence: "La *Génération des animaux* se tourne vers les causes ___ de la génération des animaux."
+    answer: "efficientes"
+    alt: ["motrices"]
+  - id: sep-arbio4-l3-p2
+    sentence: "*Génération des animaux*, I, 2 : « nous appelons ___ l'animal qui engendre en un autre, femelle celui qui engendre en soi »."
+    answer: "mâle"
+    alt: []
+  - id: sep-arbio4-l3-p3
+    sentence: "*Génération des animaux*, I, 2 : « nous appelons mâle l'animal qui engendre en un autre, ___ celui qui engendre en soi »."
+    answer: "femelle"
+    alt: []
+  - id: sep-arbio4-l3-p4
+    sentence: "Chez Aristote, la contribution du mâle se dit *gonê* (le sperme), celle de la femelle *___* (les menstrues)."
+    answer: "katamenia"
+    alt: []
+  - id: sep-arbio4-l3-p5
+    sentence: "Chez Aristote, la contribution du mâle se dit *___* (le sperme), celle de la femelle *katamenia*."
+    answer: "gonê"
+    alt: ["gone"]
+  - id: sep-arbio4-l3-p6
+    sentence: "Selon Aristote, le mâle fournit une source de mouvement, une capacité de chauffer présente dans le *___* du sperme, et aucune matière."
+    answer: "pneuma"
+    alt: []
+  - id: sep-arbio4-l3-p7
+    sentence: "La femelle fournit, selon Aristote, une ___ préparée, à laquelle il ne manque que la capacité de chauffer venue du mâle."
+    answer: "matière"
+    alt: []
+  - id: sep-arbio4-l3-p8
+    sentence: "Lancé par la chaleur venue du mâle, le développement de l'embryon est comparé par Aristote à un ___ qui accomplit des mouvements coordonnés."
+    answer: "automate"
+    alt: []
+  - id: sep-arbio4-l3-p9
+    sentence: "*Génération des animaux*, I, 21 : « la nature qui est dans le mâle fait usage du sperme comme d'un ___ »."
+    answer: "outil"
+    alt: []
+- id: sep-arbio4-l4
+  title: "L'art, la nature et l'embryon"
+  notes: |-
+    **L'analogie obscure de l'outil se déplie dans les premiers chapitres du livre II.** Son principe vaut pour l'art comme pour la nature :
+
+    {teal}« tout ce qui est engendré par la nature ou par l'art est engendré par un être en acte à partir d'un être de ce type en puissance »{/teal} (II, 1, 734b21-22)
+
+    **L'application.** La part préparée des `katamenia` est en puissance ce que celui qui fournit le sperme est en acte. Et ce sperme lui transmet un mouvement tel que, {teal}« lorsque son mouvement cesse, chacune des parties est engendrée et animée »{/teal} (734b23-24). {green}__Chaque partie, en venant à être, a déjà sa capacité fonctionnelle : elle naît et elle est animée.__{/green} D'où la thèse : {teal}« il n'y a pas de visage ni de chair qui ne possède une âme et, une fois qu'ils auront été détruits, l'un sera dit visage, l'autre chair par homonymie, de la même façon que s'ils étaient en pierre ou bien en bois »{/teal} (734b24-27).
+
+    **Le chaud et le froid ne suffisent pas.** Dureté, mollesse, ténacité, fragilité peuvent venir du chaud et du froid, {teal}« mais non le caractère définissant (`logos`) en vertu duquel l'une des parties est chair et l'autre os »{/teal} (734b31-35), qui vient du mouvement du géniteur. {coral}Les propriétés d'un tissu suivent de sa fonction, et non l'inverse.{/coral}
+
+    **La limite de l'analogie, qui est décisive.** {red}__Les êtres naturels, une fois leur génération commencée, {teal}« croissent par eux-mêmes »{/teal} (735a13-14).__{/red} C'est la différence la plus fondamentale de l'art et de la nature : chacun des êtres naturels, selon la *Physique*, {teal}« possède en elle-même un principe de mouvement et d'arrêt »{/teal} (II, 1, 192b13-14), alors qu'{yellow}un lit, un manteau{/yellow} n'ont {teal}« aucune impulsion innée au changement »{/teal}. Le charpentier doit rester physiquement présent aux mouvements qui font la maison ; {red}le père, ou sa semence, non.{/red}
+
+    **D'où un problème.** Comment un processus lancé par un générateur extérieur devient-il un développement naturel, qui a sa source dans le développant ? Réponse : la leçon suivante.
+  points:
+  - id: sep-arbio4-l4-p1
+    sentence: "*Génération des animaux*, II, 1 : « tout ce qui est engendré par la nature ou par l'art est engendré par un être en ___ à partir d'un être de ce type en puissance »."
+    answer: "acte"
+    alt: []
+  - id: sep-arbio4-l4-p2
+    sentence: "*Génération des animaux*, II, 1 : « tout ce qui est engendré par la nature ou par l'art est engendré par un être en acte à partir d'un être de ce type en ___ »."
+    answer: "puissance"
+    alt: []
+  - id: sep-arbio4-l4-p3
+    sentence: "*Génération des animaux*, II, 1 : lorsque le mouvement du sperme cesse, « chacune des parties est engendrée et ___ »."
+    answer: "animée"
+    alt: []
+  - id: sep-arbio4-l4-p4
+    sentence: "*Génération des animaux*, II, 1 : un visage ou une chair sans âme ne sont dits tels que par ___, « de la même façon que s'ils étaient en pierre ou bien en bois »."
+    answer: "homonymie"
+    alt: []
+  - id: sep-arbio4-l4-p5
+    sentence: "Dureté et mollesse peuvent venir du chaud et du froid, mais non le caractère définissant, en grec le *___*, en vertu duquel une partie est chair et l'autre os."
+    answer: "logos"
+    alt: []
+  - id: sep-arbio4-l4-p6
+    sentence: "La différence la plus fondamentale de l'art et de la nature : les êtres naturels, une fois leur génération commencée, croissent par ___."
+    answer: "eux-mêmes"
+    alt: []
+  - id: sep-arbio4-l4-p7
+    sentence: "*Physique*, II, 1 : chacune des choses naturelles « possède en elle-même un principe de ___ et d'arrêt »."
+    answer: "mouvement"
+    alt: []
+  - id: sep-arbio4-l4-p8
+    sentence: "*Physique*, II, 1 : un lit ou un manteau, en tant que produits d'un art, ne possèdent « aucune impulsion ___ au changement »."
+    answer: "innée"
+    alt: []
+  - id: sep-arbio4-l4-p9
+    sentence: "Le charpentier doit rester présent aux mouvements qui font la maison ; le ___, ou sa semence, non : le développement a sa source dans l'embryon."
+    answer: "père"
+    alt: ["géniteur", "mâle"]
+- id: sep-arbio4-l5
+  title: "Le cœur, principe de l'embryon"
+  notes: |-
+    **Le cœur résout le problème.** Il est la première partie produite par la chaleur venue du père, et devient la source interne de cette chaleur, donc du développement (735a16-26).
+
+    {teal}« même si d'une certaine façon toutes les parties existent en puissance dans l'embryon, ce qui est le plus en avant, c'est le principe. C'est pourquoi c'est le cœur qui acquiert en premier une existence séparée en acte, ce qui est évident non seulement à l'observation (car c'est ainsi que cela se passe), mais également si l'on s'appuie sur le raisonnement »{/teal} (II, 4, 740a2-5)
+
+    **Le raisonnement.** {teal}« dès que ce qui se forme est séparé de ses deux parents, il doit s'administrer lui-même, comme l'enfant qui s'est établi loin de son père. C'est pourquoi il doit posséder un principe »{/teal} (740a5-8). Voilà pourquoi ce principe doit être là d'abord : si le principe {red}venait du dehors pour rester dedans plus tard{/red}, on ne saurait dire quand, et il faut que **d'abord existe la partie d'où viennent la croissance et le mouvement des autres**.
+
+    **Contre Démocrite.** {red}Dire que les parties externes se différencient d'abord, c'est parler {teal}« comme s'il s'agissait d'animaux en bois ou en pierre »{/teal}{/red} (740a15) : les êtres de ce type n'ont pas de principe, les animaux en ont un, à l'intérieur.
+
+    **La conclusion, avec sa raison nutritive.** {teal}« C'est pourquoi c'est manifestement le cœur qui est défini en premier chez tous les animaux sanguins, car il est le principe des homéomères et des anoméomères. »{/teal} (740a17-19) La dernière nourriture de l'animal est le sang, les vaisseaux sont son récipient ; {coral}le cœur est donc aussi leur principe{/coral}. Et Aristote renvoie : {teal}« C'est ce que montrent l'Histoire des animaux et les Dissections. »{/teal}
+
+    **Fait et cause.** Ce que l'*Histoire* décrit, le point qui palpite, la *Génération* l'explique, en changeant de mots : elle dit {red}non qu'il palpite{/red}, mais {green}qu'il est animé dès l'origine et source de toutes les autres parties{/green}.
+  points:
+  - id: sep-arbio4-l5-p1
+    sentence: "*Génération des animaux*, II, 4 : « c'est le ___ qui acquiert en premier une existence séparée en acte »."
+    answer: "cœur"
+    alt: ["coeur"]
+  - id: sep-arbio4-l5-p2
+    sentence: "*Génération des animaux*, II, 4 : l'apparition du cœur en premier est évidente à l'observation, « mais également si l'on s'appuie sur le ___ »."
+    answer: "raisonnement"
+    alt: []
+  - id: sep-arbio4-l5-p3
+    sentence: "*Génération des animaux*, II, 4 : ce qui se forme « doit s'administrer lui-même, comme l'enfant qui s'est établi loin de son ___ »."
+    answer: "père"
+    alt: []
+  - id: sep-arbio4-l5-p4
+    sentence: "*Génération des animaux*, II, 4 : dès que ce qui se forme est séparé de ses parents, « il doit s'___ lui-même »."
+    answer: "administrer"
+    alt: []
+  - id: sep-arbio4-l5-p5
+    sentence: "Ceux qui disent, comme ___, que les parties externes se différencient d'abord parlent « comme s'il s'agissait d'animaux en bois ou en pierre »."
+    answer: "Démocrite"
+    alt: []
+  - id: sep-arbio4-l5-p6
+    sentence: "*Génération des animaux*, II, 4 : le cœur est défini en premier, « car il est le ___ des homéomères et des anoméomères »."
+    answer: "principe"
+    alt: []
+  - id: sep-arbio4-l5-p7
+    sentence: "Puisque la dernière nourriture de l'animal est le sang, et les ___ son récipient, le cœur en est aussi le principe."
+    answer: "vaisseaux"
+    alt: []
+  - id: sep-arbio4-l5-p8
+    sentence: "Le cœur est la première partie produite par la ___ venue du père, et il en devient la source interne : ainsi le développement devient-il naturel."
+    answer: "chaleur"
+    alt: []
+- id: sep-arbio4-l6
+  title: "L'œuf, les yeux"
+  notes: |-
+    **Les ovipares, au livre III, héritent de ce qui est commun.** Les œufs d'oiseaux durcissent à l'air (752a30-b2), mais exigent que la mère couve. Aristote y distingue le blanc et le jaune, {green}non par leur description, comme dans l'*Histoire*, mais par leur fonction{/green} :
+
+    {teal}« C'est à partir de lui en effet que l'animal prend consistance, tandis que le jaune devient sa nourriture, c'est-à-dire que chez ceux qui sont en train de se former, c'est de là que vient la croissance des parties. C'est pour cette raison aussi que le jaune et le blanc sont distingués par des enveloppes, comme s'ils avaient une nature différente »{/teal} (III, 2, 753b11-14)
+
+    Pour le détail, Aristote renvoie à l'*Histoire* ; il retient que {teal}« le cœur est la première chose constituée »{/teal} (753b19-20).
+
+    **Les yeux : un fait, une place dans le plan.** L'*Histoire* décrit les yeux saillants de l'embryon. *Génération des animaux*, III, 2, n'en dit rien ; le livre II, en revanche, en fait un problème :
+
+    {teal}« Mais la région des yeux des animaux pose une difficulté. Dès le début, les yeux sont en effet ce qui paraît le plus grand chez les animaux terrestres, aquatiques et ailés, alors que c'est la partie qui est formée en dernier, car, entre-temps, ils diminuent. »{/teal} (II, 6, 743b32-35)
+
+    **La cause.** Les organes des sens dépendent de conduits, et {teal}« l'organe de l'œil est le seul à posséder un corps particulier »{/teal} (744a5).
+
+    **Deux leçons.** D'abord, l'ordre du traité veut qu'{coral}un fait de grande généralité soit expliqué au livre II{/coral}, quoique le fait de l'*Histoire* concerne un oiseau : l'explication vaut pour les animaux de terre, d'air et d'eau. Ensuite, {coral}la visée causale y est constante, et elle manque, à bon droit, dans l'*Histoire*{/coral}.
+  points:
+  - id: sep-arbio4-l6-p1
+    sentence: "*Génération des animaux*, III, 2 : l'animal prend consistance à partir du blanc, « tandis que le ___ devient sa nourriture »."
+    answer: "jaune"
+    alt: []
+  - id: sep-arbio4-l6-p2
+    sentence: "*Génération des animaux*, III, 2 : le jaune et le blanc « sont distingués par des ___, comme s'ils avaient une nature différente »."
+    answer: "enveloppes"
+    alt: []
+  - id: sep-arbio4-l6-p3
+    sentence: "L'*Histoire des animaux* décrit le blanc et le jaune ; la *Génération des animaux* les distingue par leur ___ : l'un forme l'animal, l'autre le nourrit."
+    answer: "fonction"
+    alt: []
+  - id: sep-arbio4-l6-p4
+    sentence: "*Génération des animaux*, II, 6 : « la région des ___ des animaux pose une difficulté » : ils paraissent d'abord le plus grands, et sont formés en dernier."
+    answer: "yeux"
+    alt: []
+  - id: sep-arbio4-l6-p5
+    sentence: "*Génération des animaux*, II, 6, sur les yeux : ils paraissent d'abord ce qu'il y a de plus grand, « alors que c'est la partie qui est formée en ___ »."
+    answer: "dernier"
+    alt: []
+  - id: sep-arbio4-l6-p6
+    sentence: "*Génération des animaux*, II, 6 : « l'organe de l'___ est le seul à posséder un corps particulier »."
+    answer: "œil"
+    alt: ["oeil"]
+  - id: sep-arbio4-l6-p7
+    sentence: "Pourquoi l'explication des yeux de l'embryon est-elle au livre II de la *Génération*, et non au livre III sur les oiseaux ? Parce que le fait est de grande ___, valant pour tous les animaux."
+    answer: "généralité"
+    alt: []
+- id: sep-arbio4-l7
+  title: "Une énigme : pourquoi des traités séparés ?"
+  notes: |-
+    **La biologie d'Aristote pose une énigme quand on la compare au reste de son œuvre.**
+
+    **Le constat.** La distinction du fait et de la cause est fondamentale dans sa théorie de la science, et les œuvres biologiques la respectent consciemment. {red}__Pourtant, nulle part, ni dans les *Seconds Analytiques* ni ailleurs, Aristote ne dit que ces étapes doivent former des traités distincts sur le même sujet.__{/red}
+
+    **Il ne le fait nulle part ailleurs.** En météorologie, en cosmologie, en psychologie, en éthique, à propos du théâtre ou de la rhétorique, {yellow}un seul traité présente à la fois les faits et leur explication{/yellow}.
+
+    **Ce n'est pas un artefact.**
+    - Les renvois sont réguliers et de sens unique : les traités causaux renvoient à l'*Histoire* et aux dissections, jamais l'inverse.
+    - Le soin avec lequel l'*Histoire* évite tous les concepts de la définition et de l'explication ne peut guère être mis au compte d'un éditeur ultérieur.
+
+    **La question reste ouverte.** {coral}Qu'y a-t-il dans l'étude des animaux qui ait conduit Aristote à faire d'une distinction de méthode entre des étapes de la recherche des traités méthodologiquement distincts ?{/coral}
+  points:
+  - id: sep-arbio4-l7-p1
+    sentence: "Énigme de la biologie d'Aristote : nulle part il ne dit que les étapes du fait et de la cause doivent former des ___ distincts sur le même sujet."
+    answer: "traités"
+    alt: []
+  - id: sep-arbio4-l7-p2
+    sentence: "En météorologie, en psychologie ou en éthique, Aristote présente en un seul traité les faits et leur ___ : la biologie fait exception."
+    answer: "explication"
+    alt: []
+  - id: sep-arbio4-l7-p3
+    sentence: "Le partage entre l'*Histoire des animaux* et les traités causaux n'est pas l'œuvre d'un éditeur, car les ___ y sont réguliers et de sens unique."
+    answer: "renvois"
+    alt: []
+  - id: sep-arbio4-l7-p4
+    sentence: "L'évitement de tous les concepts de définition et d'explication dans l'*Histoire des animaux* ne peut guère être mis au compte d'un ___ ultérieur."
+    answer: "éditeur"
+    alt: []
