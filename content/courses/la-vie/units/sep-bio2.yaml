@@ -1,0 +1,388 @@
+# Cours sur la philosophie de la biologie (voir content/philosophie.md), tiré
+# de l'article « Philosophy of Biology », Stanford Encyclopedia of Philosophy :
+# sections 3 (« Philosophy of Life ») et 4 (« Philosophy of Evolutionary
+# Biology »). L'article nomme sans les définir les trois adaptationnismes de
+# Godfrey-Smith et les écoinçons de Gould et Lewontin : leur explication vient
+# de ces textes eux-mêmes. L'acronyme « LUCU » de l'article est une coquille
+# pour LUCA.
+
+id: sep-bio2
+title: "La vie et l'évolution"
+subtitle: "Définir, créer et faire naître la vie ; forces, dérive, adaptation, unités de sélection"
+icon: bulb
+color: teal
+group: "La philosophie de la biologie (SEP)"
+lessons:
+- id: sep-bio2-l1
+  title: "Qu'est-ce que la vie ? Trois réponses à l'échec des définitions"
+  notes: |-
+    **Une des questions fondamentales de la biologie est aussi la plus vieille.** Déjà {violet}Aristote{/violet} pense que les vivants manifestent le {violet}mouvement de soi{/violet}, avec d'autres traits essentiels (*De l'âme*, 412a-416b). On aimerait une liste de {violet}conditions nécessaires et suffisantes{/violet} pour être vivant.
+
+    **Les listes échouent par contre-exemples.** Beaucoup de biologistes diraient : organisation, métabolisme, reproduction, croissance. Mais :
+    - les {red}ouvrières fourmis{/red} ne se reproduisent pas, et sont vivantes : la reproduction n'est pas nécessaire ;
+    - les {red}formations géologiques{/red} sont organisées, et ne sont pas vivantes : l'organisation n'est pas suffisante ;
+    - les {red}cristaux{/red} croissent, et ne sont pas vivants : la croissance non plus.
+
+    **Trois réponses à cet échec.**
+    - **Renoncer à la forme de la définition** : la vie ne se définit pas par des conditions nécessaires et suffisantes, mais par des {violet}exemplaires, des prototypes ou des faisceaux de propriétés{/violet} (Malaterre et Chartier 2019).
+    - **Le {violet}scepticisme définitionnel{/violet}** (Machery, Cleland 2019) : il y a trop de définitions pour les réunir, et {red}__nous n'examinons qu'un seul cas, celui de notre planète__{/red}. Or on ne généralise pas sûrement à partir d'un seul exemple : peut-être ce que nous tenons pour essentiel n'est-il qu'un accident de la vie terrestre.
+    - **Le {violet}pluralisme{/violet}** : il n'y a pas une seule définition correcte de la « vie », mais plusieurs définitions légitimes (Oliver et Perry 2006, Griesemer 2015, Mix 2015, Bich et Green 2017).
+
+    ! Le sceptique ne dit pas que la vie n'existe pas : il doute que le projet de la **définir** soit, en l'état de nos connaissances, un bon projet.
+  points:
+  - id: sep-bio2-l1-p1
+    sentence: "Pour Aristote (*De l'âme*, 412a-416b), les vivants manifestent le mouvement de ___, avec d'autres traits essentiels."
+    answer: "soi"
+    alt: []
+  - id: sep-bio2-l1-p2
+    sentence: "Contre la reproduction comme condition nécessaire de la vie : les ___ fourmis ne se reproduisent pas, et sont vivantes."
+    answer: "ouvrières"
+    alt: []
+  - id: sep-bio2-l1-p3
+    sentence: "Contre l'organisation comme condition suffisante de la vie : les formations ___ sont organisées, et ne sont pas vivantes."
+    answer: "géologiques"
+    alt: []
+  - id: sep-bio2-l1-p4
+    sentence: "Contre la croissance comme condition suffisante de la vie : les ___ croissent, et ne sont pas vivants."
+    answer: "cristaux"
+    alt: []
+  - id: sep-bio2-l1-p5
+    sentence: "Première réponse à l'échec des conditions nécessaires et suffisantes : définir la vie par des exemplaires, des prototypes ou des ___ de propriétés."
+    answer: "faisceaux"
+    alt: []
+  - id: sep-bio2-l1-p6
+    sentence: "Le scepticisme ___ (Machery, Cleland) tient qu'il y a trop de définitions de la vie à réunir, et que nous n'en examinons qu'un seul cas."
+    answer: "définitionnel"
+    alt: []
+  - id: sep-bio2-l1-p7
+    sentence: "Argument du sceptique sur la définition de la vie : nous n'en examinons qu'un seul cas, celui de notre ___, et ce que nous tenons pour essentiel n'est peut-être qu'un accident."
+    answer: "planète"
+    alt: []
+  - id: sep-bio2-l1-p8
+    sentence: "Le ___ sur la vie tient qu'il n'y a pas une seule définition correcte de la « vie », mais plusieurs définitions légitimes."
+    answer: "pluralisme"
+    alt: []
+- id: sep-bio2-l2
+  title: "Créer la vie, et d'où elle vient"
+  notes: |-
+    **Si l'on ne sait pas définir la vie, peut-on la créer ?** La question de la {violet}vie artificielle{/violet} se pose en deux versions, de force très inégale.
+
+    | Thèse | Ce qu'elle soutient | Son point faible |
+    | vie artificielle forte | robots et programmes peuvent être vivants | oublie des traits cruciaux du vivant |
+    | vie artificielle faible | simuler in silico nous instruit sur le vivant | trop modeste, voire triviale |
+
+    **Vie artificielle forte.** Quand des robots ou des programmes manifestent certaines {violet}propriétés formelles{/violet} comme l'{violet}autoréplication{/violet}, ils sont vivants. C'est une sorte de fonctionnalisme : ce qui compte est l'organisation, non le matériau. Les sceptiques répondent que cette approche {red}laisse de côté des traits cruciaux des vivants{/red} (Sober 1991, Boden 1999, Brooks 2001). Boden demande par exemple si le métabolisme n'est pas nécessaire, ce qu'un programme n'a pas.
+
+    **Vie artificielle faible.** On ne prétend plus que la simulation vit : on apprend sur la nature des vivants en simulant leurs processus {violet}*in silico*{/violet} (Langton 1989, 1995). Une simulation de vol n'a jamais volé, et pourtant elle apprend quelque chose sur le vol (exemple familier). Mais {red}on peut craindre que cette approche soit trop modeste, voire triviale{/red}.
+
+    **L'origine de la vie sur Terre.** La question soulève d'abord des problèmes de **méthode**, car on peut partir de deux bouts :
+    - **depuis le bas** : prendre des {violet}systèmes chimiques prébiotiques{/violet} très simples et « créer » des vivants à partir d'eux ;
+    - **depuis le haut** : remonter à notre {violet}dernier ancêtre commun universel{/violet} (LUCA) pour établir ce qu'était le premier vivant ou type de vivant.
+
+    **La vie existe-t-elle ailleurs dans l'Univers ?** {coral}Cette dernière question nous ramène à la première : pour chercher la vie, il faut savoir ce qu'est la vie.{/coral}
+  tables:
+  - table: these-ce-qu-elle-soutient-son-point-faible
+    exercises:
+    - {kind: bank, column: Son point faible}
+    - {kind: cell, column: Thèse}
+  points:
+  - id: sep-bio2-l2-p1
+    sentence: "Pour les partisans de la vie artificielle ___, des robots ou des programmes qui manifestent certaines propriétés formelles, comme l'autoréplication, sont vivants."
+    answer: "forte"
+    alt: []
+  - id: sep-bio2-l2-p2
+    sentence: "Pour les partisans de la vie artificielle forte, des robots ou des programmes sont vivants dès lors qu'ils manifestent certaines propriétés ___, comme l'autoréplication."
+    answer: "formelles"
+    alt: []
+  - id: sep-bio2-l2-p3
+    sentence: "Pour les partisans de la vie artificielle forte, des robots ou des programmes sont vivants dès lors qu'ils manifestent certaines propriétés formelles, comme l'___."
+    answer: "autoréplication"
+    alt: ["auto-réplication"]
+  - id: sep-bio2-l2-p4
+    sentence: "Pour les partisans de la vie artificielle ___, on apprend sur la nature des vivants en simulant leurs processus *in silico*, sans prétendre que la simulation vit."
+    answer: "faible"
+    alt: []
+  - id: sep-bio2-l2-p5
+    sentence: "La vie artificielle faible étudie les vivants en simulant leurs processus *in ___*."
+    answer: "silico"
+    alt: []
+  - id: sep-bio2-l2-p6
+    sentence: "La vie artificielle faible a pour théoricien Christopher ___ (1989, 1995)."
+    answer: "Langton"
+    alt: []
+  - id: sep-bio2-l2-p7
+    sentence: "Pour étudier l'origine de la vie sur Terre, on peut partir du bas, de systèmes chimiques ___ très simples dont on cherche à faire naître des vivants."
+    answer: "prébiotiques"
+    alt: []
+  - id: sep-bio2-l2-p8
+    sentence: "Pour étudier l'origine de la vie sur Terre, on peut partir du haut, en remontant à notre dernier ___ commun universel (LUCA)."
+    answer: "ancêtre"
+    alt: []
+  - id: sep-bio2-l2-p9
+    sentence: "Chercher si la vie existe ailleurs dans l'Univers ramène à la question de la ___ de la vie : pour la chercher, il faut savoir ce qu'elle est."
+    answer: "définition"
+    alt: []
+- id: sep-bio2-l3
+  title: "La sélection est-elle une force ? Sober contre l'interprétation statistique"
+  notes: |-
+    **La biologie de l'évolution a longtemps pris la part du lion de l'attention philosophique.** Ce travail sert parfois une thèse générale, comme la {violet}conception sémantique{/violet} (ou par modèles) des théories (Beatty, Lloyd, Thompson) ; mais il porte surtout sur des problèmes internes à la théorie, et ressemble alors autant à de la biologie théorique qu'à de la philosophie des sciences pure.
+
+    **L'interprétation de Sober : des forces.** {sky}*The Nature of Selection*{/sky} (1984) d'{violet}Elliott Sober{/violet} marque le moment où beaucoup de philosophes découvrent le champ. Sober analyse la structure de la {violet}génétique des populations{/violet} par une analogie avec la {yellow}mécanique newtonienne et la composition des forces{/yellow}. {green}__Le changement réel des fréquences géniques dans le temps est la résultante de plusieurs « forces » : la sélection, la dérive génétique aléatoire, la mutation et la migration.__{/green} L'analogie va loin : comme un corps qui ne subit aucune force ne change pas de mouvement, une population qu'aucune force n'affecte garde ses fréquences. L'évolution s'explique alors comme un mouvement, par addition de causes.
+
+    **L'interprétation statistique.** Plusieurs philosophes contestent cette lecture (Sterelny et Kitcher 1988, Matthen et Ariew 2002, Walsh, Lewens et Ariew 2002). Selon la lecture {pink}« statistique »{/pink}, ce qui se passe causalement, ce sont les vies, les morts et les naissances des individus ; la sélection et la dérive sont des **résumés statistiques** de ces événements au niveau de la population, non des causes qui s'y ajoutent. {red}Un taux de mortalité dans un pays ne pousse personne vers la tombe{/red} (exemple familier) : de même, la sélection ne serait pas une force qui pousse.
+
+    **Le débat continue**, notamment sur les interprétations « causales » raisonnables de l'{violet}équation de Price{/violet} (Okasha 2006).
+
+    ! Le désaccord ne porte pas sur les chiffres : les deux camps emploient les mêmes équations. Il porte sur ce qu'elles représentent, des causes ou des bilans.
+  points:
+  - id: sep-bio2-l3-p1
+    sentence: "Le travail de philosophie de l'évolution sert parfois une thèse générale de philosophie des sciences, comme la conception ___ (ou par modèles) des théories."
+    answer: "sémantique"
+    alt: []
+  - id: sep-bio2-l3-p2
+    sentence: "*The Nature of Selection* (1984), étude classique qui marque le moment où beaucoup de philosophes découvrent la philosophie de la biologie, est d'Elliott ___."
+    answer: "Sober"
+    alt: []
+  - id: sep-bio2-l3-p3
+    sentence: "L'étude classique d'Elliott Sober parue en 1984, qui analyse la génétique des populations, s'intitule *The Nature of ___*."
+    answer: "Selection"
+    alt: []
+  - id: sep-bio2-l3-p4
+    sentence: "Sober analyse la structure de la génétique des populations par une analogie avec la mécanique ___ et la composition des forces."
+    answer: "newtonienne"
+    alt: []
+  - id: sep-bio2-l3-p5
+    sentence: "Pour Sober, le changement des fréquences géniques résulte de plusieurs « forces » : la sélection, la ___ génétique aléatoire, la mutation et la migration."
+    answer: "dérive"
+    alt: []
+  - id: sep-bio2-l3-p6
+    sentence: "Pour Sober, le changement des fréquences géniques résulte de plusieurs « forces » : la sélection, la dérive génétique aléatoire, la ___ et la migration."
+    answer: "mutation"
+    alt: []
+  - id: sep-bio2-l3-p7
+    sentence: "Pour Sober, le changement des fréquences géniques résulte de plusieurs « forces » : la sélection, la dérive génétique aléatoire, la mutation et la ___."
+    answer: "migration"
+    alt: []
+  - id: sep-bio2-l3-p8
+    sentence: "Contre l'analogie des forces de Sober, une interprétation ___ tient la sélection et la dérive pour des résumés, au niveau de la population, de ce qui arrive aux individus (Matthen et Ariew 2002 ; Walsh, Lewens et Ariew 2002)."
+    answer: "statistique"
+    alt: []
+  - id: sep-bio2-l3-p9
+    sentence: "Dans l'interprétation statistique de l'évolution, un taux de sélection ne pousse pas plus les organismes qu'un taux de ___ dans un pays ne pousse quelqu'un vers la tombe."
+    answer: "mortalité"
+    alt: []
+  - id: sep-bio2-l3-p10
+    sentence: "Le débat entre forces et statistiques se poursuit à propos des interprétations « causales » de l'équation de ___ (Okasha 2006)."
+    answer: "Price"
+    alt: []
+- id: sep-bio2-l4
+  title: "Dérive et sélection : des processus, non des motifs"
+  notes: |-
+    **Comment distinguer la {violet}dérive génétique aléatoire{/violet} de la sélection ?** (Beatty.) La question paraît simple ; elle cache une vraie difficulté conceptuelle.
+
+    **Le même motif, deux origines.** On pense d'ordinaire que la dérive a lieu quand on observe une **fluctuation aléatoire des fréquences géniques**. {red}__Or la sélection dans un environnement changeant peut produire exactement le même motif.__{/red} Si le milieu favorise tantôt un trait, tantôt l'autre, les fréquences oscillent comme si le hasard seul jouait. Le motif observé ne permet donc pas de trancher.
+
+    **Il faut donc les distinguer comme {violet}processus{/violet}, non comme {violet}motifs{/violet}.** Un moyen : la distinction entre {green}échantillonnage discriminant{/green} et {pink}échantillonnage indiscriminé{/pink} (Millstein 2002, 2005 ; Brandon 2005). {coral}__La question devient : le trait qui nous intéresse est-il causalement pertinent ou non pour les changements de fréquence ?__{/coral}
+    - Des oiseaux repèrent les papillons clairs et les mangent : la couleur joue causalement, l'échantillonnage est **discriminant**, c'est de la sélection (exemple familier).
+    - Un incendie brûle tout un côté de la forêt, sans égard à la couleur : même si les clairs en meurent davantage, la couleur ne joue aucun rôle, l'échantillonnage est **indiscriminé**, c'est de la dérive.
+
+    Le résultat chiffré peut être identique dans les deux cas : seule la causalité diffère. Ces analyses soigneuses de la génétique des populations, cœur mathématique de la théorie traditionnelle de l'évolution, restent fécondes (Plutynski 2006, Okasha 2007, Sarkar 2011, Sober 2024).
+
+    ! La dérive n'est pas l'absence de cause : l'incendie est bien une cause de mort. Ce qui manque, c'est un rôle causal du **trait** considéré.
+  points:
+  - id: sep-bio2-l4-p1
+    sentence: "On pense d'ordinaire que la dérive a lieu quand les fréquences géniques fluctuent au hasard ; mais la sélection dans un environnement ___ peut produire exactement le même motif."
+    answer: "changeant"
+    alt: []
+  - id: sep-bio2-l4-p2
+    sentence: "Puisque la sélection dans un environnement changeant imite la fluctuation aléatoire des fréquences géniques, il faut distinguer sélection et dérive comme ___, non comme simples motifs."
+    answer: "processus"
+    alt: []
+  - id: sep-bio2-l4-p3
+    sentence: "Puisque la sélection dans un environnement changeant imite la fluctuation aléatoire des fréquences géniques, il faut distinguer sélection et dérive comme processus, non comme simples ___."
+    answer: "motifs"
+    alt: []
+  - id: sep-bio2-l4-p4
+    sentence: "Roberta Millstein et Brandon distinguent la sélection et la dérive par deux sortes d'échantillonnage : la sélection est un échantillonnage ___."
+    answer: "discriminant"
+    alt: []
+  - id: sep-bio2-l4-p5
+    sentence: "Roberta Millstein et Brandon distinguent la sélection et la dérive par deux sortes d'échantillonnage : la dérive est un échantillonnage ___."
+    answer: "indiscriminé"
+    alt: []
+  - id: sep-bio2-l4-p6
+    sentence: "Pour distinguer sélection et dérive, on demande si le trait considéré est causalement ___ ou non pour les changements de fréquence géniques."
+    answer: "pertinent"
+    alt: []
+  - id: sep-bio2-l4-p7
+    sentence: "Un incendie brûle un côté de la forêt, sans égard à la couleur des papillons ; même si les clairs en meurent davantage, c'est de la ___, la couleur ne jouant aucun rôle causal."
+    answer: "dérive"
+    alt: []
+  - id: sep-bio2-l4-p8
+    sentence: "La génétique des ___ est le cœur mathématique de la théorie traditionnelle de l'évolution, dont les analyses de la dérive et de la sélection restent fécondes."
+    answer: "populations"
+    alt: []
+- id: sep-bio2-l5
+  title: "La sociobiologie et les écoinçons de Saint-Marc"
+  notes: |-
+    **L'intense intérêt philosophique des années 1980 pour la théorie de l'évolution s'explique en partie par deux controverses** (Segerstråle 2000). La première est celle de la {violet}sociobiologie{/violet}.
+
+    **La provocation de Wilson.** {violet}E. O. Wilson{/violet} publie le manuel qui donne son nom à la controverse, {sky}*Sociobiology*{/sky} (1975), puis un livre grand public couronné par le prix Pulitzer, {sky}*On Human Nature*{/sky} (1978). Le geste contesté : appliquer la biologie de l'évolution au comportement social **humain**.
+
+    **La critique de Gould et Lewontin.** Une critique capitale vient de {violet}Stephen Jay Gould et Richard Lewontin{/violet} (1979), dans {sky}« The spandrels of San Marco and the Panglossian paradigm »{/sky}, sous-titré critique du {violet}programme adaptationniste{/violet}. Deux images portent l'argument :
+    - {yellow}Les **écoinçons** (*spandrels*) de Saint-Marc{/yellow} : ces espaces triangulaires entre les arcs de la basilique de Venise sont si richement décorés qu'on les croirait voulus ; ce sont en réalité des sous-produits nécessaires de l'architecture, utilisés après coup. De même, un trait utile n'a pas forcément été sélectionné pour cet usage.
+    - {yellow}Le **paradigme panglossien**{/yellow}, du docteur Pangloss de Voltaire, pour qui tout est au mieux : les nez sont faits pour porter des lunettes. {red}__C'est le défaut que Gould et Lewontin reprochent à l'adaptationniste : inventer pour chaque trait une histoire sur son utilité.__{/red}
+
+    **Le débat s'élargit.** Les discussions sur l'{violet}adaptationnisme{/violet} se révèlent porter sur un ensemble diffus d'inquiétudes : l'évolution produit-elle des adaptations ? quel rôle pour les {violet}modèles d'optimalité{/violet} ? quelle méthode pour la théorie de l'évolution ? Le travail philosophique aide à {coral}distinguer ces fils et à réduire la confusion{/coral} d'une littérature biologique passionnée et polémique, pour et contre (Orzack et Sober 2001).
+
+    ! Gould et Lewontin ne nient pas la sélection naturelle : ils contestent qu'on la suppose partout, sans preuve, comme explication de tout trait.
+  points:
+  - id: sep-bio2-l5-p1
+    sentence: "La première des deux controverses qui expliquent l'intérêt philosophique des années 1980 pour l'évolution est celle de la ___, provoquée par le manuel de 1975 qui porte ce nom."
+    answer: "sociobiologie"
+    alt: []
+  - id: sep-bio2-l5-p2
+    sentence: "*Sociobiology* (1975) et *On Human Nature* (1978), qui appliquent l'évolution au comportement social humain, sont d'E. O. ___."
+    answer: "Wilson"
+    alt: []
+  - id: sep-bio2-l5-p3
+    sentence: "E. O. Wilson publie en 1978 un livre grand public couronné par le prix Pulitzer, *On Human ___*."
+    answer: "Nature"
+    alt: []
+  - id: sep-bio2-l5-p4
+    sentence: "La critique du programme adaptationniste, « The spandrels of San Marco and the Panglossian paradigm » (1979), est due à Stephen Jay Gould et Richard ___."
+    answer: "Lewontin"
+    alt: []
+  - id: sep-bio2-l5-p5
+    sentence: "Gould et Lewontin comparent certains traits biologiques aux ___ (*spandrels*) de Saint-Marc : ces espaces entre les arcs semblent voulus, et sont des sous-produits de l'architecture."
+    answer: "écoinçons"
+    alt: []
+  - id: sep-bio2-l5-p6
+    sentence: "Les écoinçons de Gould et Lewontin sont empruntés à la basilique ___ de Venise."
+    answer: "Saint-Marc"
+    alt: ["Saint Marc"]
+  - id: sep-bio2-l5-p7
+    sentence: "Un trait utile n'a pas forcément été sélectionné pour cet usage : Gould et Lewontin nomment paradigme ___ le défaut d'inventer pour chaque trait une histoire sur son utilité."
+    answer: "panglossien"
+    alt: []
+  - id: sep-bio2-l5-p8
+    sentence: "Les débats sur l'adaptationnisme portent sur un ensemble diffus d'inquiétudes : l'évolution produit-elle des adaptations, quel rôle pour les modèles d'___, quelle méthode pour la théorie de l'évolution ?"
+    answer: "optimalité"
+    alt: []
+- id: sep-bio2-l6
+  title: "Trois sortes d'adaptationnisme"
+  notes: |-
+    **Un exemple de ce que la philosophie apporte : montrer qu'on se dispute sur trois thèses à la fois.** {violet}Peter Godfrey-Smith{/violet} (2001) distingue trois types d'adaptationnisme, logiquement indépendants.
+
+    | Adaptationnisme | Sa thèse | Sa nature |
+    | empirique | la sélection domine, et suffit à prédire les résultats | une thèse sur la nature |
+    | explicatif | l'adaptation est le grand problème, que la sélection résout | une thèse sur ce qui compte |
+    | méthodologique | chercher l'adaptation est la meilleure stratégie | un conseil de recherche |
+
+    **Pourquoi la distinction change le débat.** Ces trois thèses peuvent se séparer.
+    - On peut être {violet}explicatif{/violet} sans être {violet}empirique{/violet} : admettre que la plupart des traits ne sont pas des adaptations, et tenir pourtant que l'œil, seul, pose la grande question à laquelle la sélection répond.
+    - On peut être {violet}méthodologique{/violet} sans être {violet}empirique{/violet} : supposer l'adaptation pour voir ce qu'elle prédit, à titre d'hypothèse de travail, sans croire qu'elle explique tout.
+
+    {coral}__Critiquer l'une de ces thèses ne réfute donc pas les autres__{/coral} : qui attaque l'adaptationniste en montrant un trait non adaptatif n'a touché que la thèse empirique.
+  tables:
+  - table: adaptationnisme-sa-these-sa-nature
+    exercises:
+    - {kind: bank, column: Adaptationnisme}
+    - {kind: cell, column: Adaptationnisme}
+  points:
+  - id: sep-bio2-l6-p1
+    sentence: "La distinction de trois types d'adaptationnisme (empirique, explicatif, méthodologique) est due à Peter ___ (2001)."
+    answer: "Godfrey-Smith"
+    alt: ["Godfrey Smith"]
+  - id: sep-bio2-l6-p2
+    sentence: "L'adaptationnisme ___ tient que la sélection naturelle est une cause si puissante et si répandue qu'elle suffit largement à prédire et expliquer les résultats de l'évolution."
+    answer: "empirique"
+    alt: []
+  - id: sep-bio2-l6-p3
+    sentence: "L'adaptationnisme ___ tient que l'adaptation des organismes est le grand problème de la biologie, et que la sélection naturelle est la clé pour le résoudre, serait-elle rare."
+    answer: "explicatif"
+    alt: []
+  - id: sep-bio2-l6-p4
+    sentence: "L'adaptationnisme ___ tient que chercher des traits d'adaptation et de bon dessein est la meilleure stratégie de recherche, sans se prononcer sur leur fréquence."
+    answer: "méthodologique"
+    alt: []
+  - id: sep-bio2-l6-p5
+    sentence: "Montrer qu'un trait n'est pas une adaptation n'atteint que l'adaptationnisme ___ ; l'explicatif et le méthodologique restent debout."
+    answer: "empirique"
+    alt: []
+- id: sep-bio2-l7
+  title: "Les unités de sélection : le gène égoïste"
+  notes: |-
+    **Seconde controverse des années 1980 : sur quoi la sélection agit-elle ?** Elle s'ouvre avec deux livres.
+
+    **La thèse du gène.** {sky}*Adaptation and Natural Selection*{/sky} de {violet}George Williams{/violet} (1966) et {sky}*The Selfish Gene*{/sky} (*Le Gène égoïste*) de {violet}Richard Dawkins{/violet} (1976) soutiennent que {green}__l'unité de sélection est l'allèle mendélien individuel, et non l'organisme, le groupe d'organismes ou l'espèce__{/green}. Le renversement est net : ce n'est plus le lion qui lutte pour survivre grâce à ses gènes, ce sont les gènes qui se perpétuent à travers des lions.
+
+    **Une explosion de travaux philosophiques sur la question des {violet}unités de sélection{/violet}** (Brandon et Burian 1984). Les premiers débats portent sur deux points (Hull 1980, Wimsatt 1980, Brandon 1982, Sober et Lewontin 1984, Lloyd 1988, Sterelny et Kitcher 1988) :
+    - y a-t-il **une** unité de sélection déterminée ?
+    - **quels critères** permettent de dire laquelle, dans chaque cas ?
+
+    ! Dire que le gène est l'unité de sélection n'est pas dire que les gènes ont des intentions : « égoïste » est une image pour dire qu'ils sont retenus selon leur propre taux de copie.
+  points:
+  - id: sep-bio2-l7-p1
+    sentence: "La seconde controverse qui explique l'intérêt philosophique des années 1980 pour l'évolution porte sur les ___ de sélection."
+    answer: "unités"
+    alt: []
+  - id: sep-bio2-l7-p2
+    sentence: "*Adaptation and Natural Selection* (1966), qui soutient que l'unité de sélection est l'allèle individuel, est de George ___."
+    answer: "Williams"
+    alt: []
+  - id: sep-bio2-l7-p3
+    sentence: "*The Selfish Gene* (1976), qui soutient que l'unité de sélection est l'allèle individuel, est de Richard ___."
+    answer: "Dawkins"
+    alt: []
+  - id: sep-bio2-l7-p4
+    sentence: "Pour Williams et Dawkins, l'unité de sélection est l'___ mendélien individuel, et non l'organisme, le groupe d'organismes ou l'espèce."
+    answer: "allèle"
+    alt: ["allele"]
+  - id: sep-bio2-l7-p5
+    sentence: "Les premiers débats sur les unités de sélection demandent s'il y a une unité de sélection ___, et quels critères permettent de la reconnaître dans chaque cas."
+    answer: "déterminée"
+    alt: []
+  - id: sep-bio2-l7-p6
+    sentence: "« Égoïste » est une image : dans la thèse de Dawkins, les gènes n'ont pas d'intentions, ils sont retenus selon leur propre taux de ___."
+    answer: "copie"
+    alt: ["réplication"]
+- id: sep-bio2-l8
+  title: "Modèles à plusieurs niveaux et sélection de groupe"
+  notes: |-
+    **Quand apparaissent les modèles de {violet}sélection à plusieurs niveaux{/violet} et l'{violet}équation de Price{/violet}, l'attention passe à leur interprétation** (Godfrey-Smith et Lewontin 1993, Lloyd 2005, Waters 2005, Okasha 2006, Birch 2017). Le débat cesse d'être seulement empirique, car un même phénomène se laisse souvent décrire de plusieurs manières.
+
+    **La question d'équivalence.** Pour tout modèle de sélection de groupe, existe-t-il un modèle de sélection individuelle {violet}empiriquement équivalent{/violet} ? (De même pour les modèles génotypiques et géniques.) Si oui, {red}__ces modèles représentent-ils la même structure causale__{/red}, ou seulement les mêmes résultats ? C'est une vraie question philosophique : deux comptabilités peuvent donner le même total sans décrire les mêmes causes. Autre question : la {violet}sélection de parentèle{/violet} est-elle une forme de sélection de groupe ?
+
+    **Une contribution philosophique à la biologie.** On peut soutenir que des philosophes ont contribué de façon significative à la {coral}réhabilitation de certaines formes de « sélection de groupe »{/coral} dans la biologie de l'évolution, dans les années 1990, après **deux décennies de négligence ou de mépris** : c'est le cas de {sky}*Unto Others*{/sky} (1998), du philosophe Elliott Sober et du biologiste David Sloan Wilson.
+
+    ! La réhabilitation ne porte que sur **certaines formes** de sélection de groupe : elle ne rétablit pas l'idée naïve que les traits évoluent « pour le bien de l'espèce ».
+  points:
+  - id: sep-bio2-l8-p1
+    sentence: "Avec les modèles de sélection à plusieurs niveaux et l'équation de ___, les débats sur les unités de sélection portent sur l'interprétation de ces modèles."
+    answer: "Price"
+    alt: []
+  - id: sep-bio2-l8-p2
+    sentence: "Pour tout modèle de sélection de groupe, existe-t-il un modèle de sélection individuelle ___ équivalent ? Et, si oui, représentent-ils la même structure causale ?"
+    answer: "empiriquement"
+    alt: []
+  - id: sep-bio2-l8-p3
+    sentence: "Deux modèles de sélection, l'un de groupe, l'autre individuel, peuvent être empiriquement équivalents : la question devient de savoir s'ils représentent la même structure ___."
+    answer: "causale"
+    alt: []
+  - id: sep-bio2-l8-p4
+    sentence: "Une question d'interprétation des modèles de sélection : la sélection de ___ est-elle une forme de sélection de groupe ?"
+    answer: "parentèle"
+    alt: []
+  - id: sep-bio2-l8-p5
+    sentence: "Des philosophes ont contribué, dans les années 1990, à réhabiliter certaines formes de sélection de ___, après deux décennies de négligence ou de mépris."
+    answer: "groupe"
+    alt: []
+  - id: sep-bio2-l8-p6
+    sentence: "*Unto Others* (1998), qui contribue à réhabiliter certaines formes de sélection de groupe, est du philosophe Elliott Sober et du biologiste David Sloan ___."
+    answer: "Wilson"
+    alt: []
+  - id: sep-bio2-l8-p7
+    sentence: "Le livre du philosophe Elliott Sober et du biologiste David Sloan Wilson qui contribue à réhabiliter certaines formes de sélection de groupe s'intitule *___* (1998)."
+    answer: "Unto Others"
+    alt: []

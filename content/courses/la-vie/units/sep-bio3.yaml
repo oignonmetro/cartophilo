@@ -1,0 +1,366 @@
+# Cours sur la philosophie de la biologie (voir content/philosophie.md), tiré
+# de l'article « Philosophy of Biology », Stanford Encyclopedia of Philosophy :
+# section 5 (« Philosophy of Systematic Biology »). Citations traduites de
+# l'anglais. « Natural kind » est rendu par « genre naturel », pour éviter
+# l'équivoque avec l'espèce biologique.
+
+id: sep-bio3
+title: "Classer le vivant : systématique et espèces"
+subtitle: "La révolution cladistique, l'inférence phylogénétique, et ce qu'est une espèce"
+icon: people
+color: teal
+group: "La philosophie de la biologie (SEP)"
+lessons:
+- id: sep-bio3-l1
+  title: "La révolution cladistique"
+  notes: |-
+    **La discussion philosophique de la {violet}systématique{/violet} répond à une « révolution scientifique » dans cette discipline, dans les années 1960 et 1970.** La science du classement du vivant change alors de but : que doit représenter une classification ?
+
+    **Trois écoles.** La discipline se transforme à partir de la {pink}phénétique{/pink} et de la {pink}taxonomie évolutionniste{/pink}, parallèlement à l'application de méthodes quantitatives. La phénétique regroupe selon la ressemblance d'ensemble ; la taxonomie évolutionniste mêle généalogie et degré de divergence. Leur succède l'approche {green}« cladistique »{/green} de {violet}Willi Hennig{/violet} (1966).
+
+    **La thèse cladistique.** {green}__Le seul but de la systématique doit être de représenter les groupes « naturels » d'organismes__{/green}, et les cladistes entendent par là les {violet}groupes monophylétiques{/violet} : un groupe monophylétique comprend **une espèce ancestrale, et toutes ses espèces descendantes, et elles seules**. Une approche cladistique ne représente donc que la {violet}phylogénie{/violet}, le schéma de la descendance commune.
+
+    **Ce que la règle change.** Les « reptiles », au sens usuel, excluent les oiseaux, qui descendent pourtant de reptiles (exemple familier). Pour un phénéticien, cette exclusion a un sens, car les oiseaux ne leur ressemblent plus. Pour un cladiste, {red}un tel groupe n'est pas naturel{/red}, puisqu'il retire des descendants.
+
+    **Un philosophe dans la bataille.** {violet}David Hull{/violet} participe activement aux débats scientifiques de cette révolution : il préside la {sky}Society of Systematic Zoology{/sky} en 1984-1985, puis la {sky}Philosophy of Science Association{/sky} en 1985-1986.
+
+    ! « Monophylétique » n'est pas « issu d'un ancêtre commun » tout court : il faut encore que le groupe contienne **tous** les descendants de cet ancêtre.
+  points:
+  - id: sep-bio3-l1-p1
+    sentence: "La systématique connaît dans les années 1960 et 1970 une révolution qui la fait passer de la ___ et de la taxonomie évolutionniste à la cladistique."
+    answer: "phénétique"
+    alt: []
+  - id: sep-bio3-l1-p2
+    sentence: "La phénétique regroupe les organismes selon leur ___ d'ensemble, à la différence de la cladistique, qui ne suit que la généalogie."
+    answer: "ressemblance"
+    alt: ["similitude", "similarité"]
+  - id: sep-bio3-l1-p3
+    sentence: "L'approche cladistique de la systématique est due à Willi ___ (1966)."
+    answer: "Hennig"
+    alt: []
+  - id: sep-bio3-l1-p4
+    sentence: "Pour l'approche de Hennig, nommée ___, le seul but de la systématique est de représenter les groupes naturels d'organismes."
+    answer: "cladistique"
+    alt: []
+  - id: sep-bio3-l1-p5
+    sentence: "Les cladistes tiennent pour groupes naturels les groupes ___ : une espèce ancestrale, toutes ses espèces descendantes, et elles seules."
+    answer: "monophylétiques"
+    alt: []
+  - id: sep-bio3-l1-p6
+    sentence: "Une approche cladistique ne représente que la ___, c'est-à-dire le schéma de la descendance commune."
+    answer: "phylogénie"
+    alt: []
+  - id: sep-bio3-l1-p7
+    sentence: "Pour un cladiste, les « reptiles » au sens usuel ne forment pas un groupe naturel, puisqu'ils excluent les ___, qui en descendent."
+    answer: "oiseaux"
+    alt: []
+  - id: sep-bio3-l1-p8
+    sentence: "Un groupe monophylétique comprend une espèce ancestrale et ___ ses descendants : retirer une branche suffit à le rendre non naturel."
+    answer: "tous"
+    alt: []
+  - id: sep-bio3-l1-p9
+    sentence: "Le philosophe David ___ a participé activement à la révolution de la systématique, jusqu'à présider la Society of Systematic Zoology en 1984-1985."
+    answer: "Hull"
+    alt: []
+- id: sep-bio3-l2
+  title: "L'inférence phylogénétique et la parcimonie"
+  notes: |-
+    **Un autre pan du travail conceptuel porte sur l'{violet}inférence phylogénétique{/violet} : comment justifier une hypothèse sur un passé que personne n'a vu ?**
+
+    **Le problème.** Les phylogénies se représentent par des {violet}arbres phylogénétiques{/violet}. Les découvrir pose le problème familier de la {violet}sous-détermination de la théorie par les données{/violet}. Avec seulement **quatre taxons**, il y a **quinze arbres enracinés possibles** ; or {red}__un seul peut correspondre à la lignée historique réelle__{/red}, et la phylogénie ne s'observe pas directement. Elle doit donc s'inférer, et tout le problème est de justifier de telles hypothèses historiques.
+
+    **La parcimonie.** La méthode phylogénétique de choix est d'abord la {violet}parcimonie{/violet} : {green}choisir l'arbre qui suppose le moins d'événements évolutifs{/green}. Si trois espèces ont des ailes semblables, un arbre où les ailes sont apparues une seule fois l'emporte sur un arbre où elles sont apparues trois fois (exemple familier).
+
+    **Une justification poppérienne.** Certains systématiciens phylogénétiques défendent cette méthode par le {violet}falsificationnisme{/violet} de {violet}Karl Popper{/violet} (Wiley 1975, Farris 1983). L'idée : chaque événement supplémentaire qu'un arbre doit supposer est une hypothèse ajoutée pour sauver l'arbre devant les données. L'arbre le plus parcimonieux est donc le moins en difficulté devant elles.
+
+    ! La sous-détermination ne vient pas d'un manque provisoire de fossiles : le nombre d'arbres possibles croît avec celui des taxons, et aucun n'est observable.
+  points:
+  - id: sep-bio3-l2-p1
+    sentence: "Découvrir une phylogénie pose le problème familier de la ___ de la théorie par les données : plusieurs arbres sont compatibles avec les mêmes observations."
+    answer: "sous-détermination"
+    alt: ["sous détermination"]
+  - id: sep-bio3-l2-p2
+    sentence: "Avec seulement quatre taxons, il y a ___ arbres phylogénétiques enracinés possibles, dont un seul correspond à la lignée historique réelle."
+    answer: "quinze"
+    alt: ["15"]
+  - id: sep-bio3-l2-p3
+    sentence: "La phylogénie de taxons donnés ne s'observe pas directement : elle doit s'___, d'où le problème de justifier de telles hypothèses historiques."
+    answer: "inférer"
+    alt: []
+  - id: sep-bio3-l2-p4
+    sentence: "La méthode phylogénétique dite de la ___ prescrit de choisir l'arbre qui suppose le moins d'événements évolutifs."
+    answer: "parcimonie"
+    alt: []
+  - id: sep-bio3-l2-p5
+    sentence: "La parcimonie, méthode d'inférence phylogénétique, prescrit de choisir l'arbre qui suppose le moins d'___ évolutifs."
+    answer: "événements"
+    alt: ["évènements"]
+  - id: sep-bio3-l2-p6
+    sentence: "Certains systématiciens défendent la parcimonie par le falsificationnisme de Karl ___ (Wiley 1975, Farris 1983)."
+    answer: "Popper"
+    alt: []
+  - id: sep-bio3-l2-p7
+    sentence: "Certains systématiciens défendent la parcimonie, méthode d'inférence phylogénétique, par le ___ de Popper : chaque événement ajouté à un arbre est une hypothèse supplémentaire pour le sauver devant les données."
+    answer: "falsificationnisme"
+    alt: []
+- id: sep-bio3-l3
+  title: "L'attraction des longues branches"
+  notes: |-
+    **La parcimonie a un défaut systématique, et c'est un biologiste qui le démontre.**
+
+    **Felsenstein.** Dans les années 1970, {violet}Joseph Felsenstein{/violet} montre que les lignées d'une certaine topologie sont sujettes à une {red}erreur systématique dans l'analyse de parcimonie{/red} (Felsenstein 1978, 2004). C'est le problème de l'{violet}attraction des longues branches{/violet} : {red}__des taxons au bout de longues branches sont groupés à tort par la parcimonie__{/red}, au lieu de l'être avec les taxons dont ils partagent un ancêtre commun plus récent.
+
+    **Pourquoi.** Une longue branche, c'est beaucoup de changement. Deux lignées qui changent beaucoup finissent, par hasard, par se ressembler sur certains caractères : les mêmes mutations surviennent indépendamment. La parcimonie, qui cherche à compter le moins d'événements possible, préfère lire cette ressemblance comme un héritage commun, puisque c'est **moins d'événements**. Elle se trompe donc d'autant plus sûrement qu'il y a plus de données : {coral}le défaut n'est pas un manque d'information, il tient à la règle{/coral}.
+
+    **La solution proposée : la statistique.** Felsenstein propose des techniques statistiques, en particulier les méthodes de {violet}maximum de vraisemblance{/violet} : au lieu de compter les événements, on choisit l'arbre sous lequel, étant donné un modèle du changement évolutif, les données observées sont les plus probables. Un tel modèle prévoit que les longues branches accumulent des coïncidences, et ne s'y laisse donc pas prendre. {sky}Les débats entre les deux camps continuent{/sky} (Sober 2004).
+
+    ! La vraisemblance a un prix : elle exige un modèle du changement évolutif, que la parcimonie semble se dispenser de supposer.
+  points:
+  - id: sep-bio3-l3-p1
+    sentence: "Joseph ___ montre dans les années 1970 que l'analyse de parcimonie est sujette à une erreur systématique pour certaines topologies de lignées."
+    answer: "Felsenstein"
+    alt: []
+  - id: sep-bio3-l3-p2
+    sentence: "L'erreur systématique de la parcimonie en phylogénie, montrée par Felsenstein, se nomme l'attraction des ___ branches."
+    answer: "longues"
+    alt: []
+  - id: sep-bio3-l3-p3
+    sentence: "Dans l'attraction des longues branches, des taxons sont groupés à tort par la parcimonie, au lieu de l'être avec ceux dont ils partagent un ___ commun plus récent."
+    answer: "ancêtre"
+    alt: []
+  - id: sep-bio3-l3-p4
+    sentence: "Deux lignées qui changent beaucoup finissent par se ressembler par hasard ; la parcimonie lit cette ressemblance comme un héritage commun, parce que cela suppose moins d'___."
+    answer: "événements"
+    alt: ["évènements"]
+  - id: sep-bio3-l3-p5
+    sentence: "Pour éviter l'attraction des longues branches, Felsenstein propose des techniques statistiques, en particulier les méthodes de maximum de ___."
+    answer: "vraisemblance"
+    alt: []
+  - id: sep-bio3-l3-p6
+    sentence: "Le maximum de vraisemblance choisit l'arbre sous lequel, étant donné un modèle du changement évolutif, les données observées sont les plus ___."
+    answer: "probables"
+    alt: []
+- id: sep-bio3-l4
+  title: "Les espèces sont des individus"
+  notes: |-
+    **Le biologiste {violet}Michael Ghiselin{/violet} (1974) pique la curiosité des philosophes : la systématique se trompe, dit-il, sur le statut ontologique même des espèces.** On croyait que le tigre était un genre de chose. C'est une chose.
+
+    **La thèse.** {red}Les espèces ne sont pas des {violet}genres naturels{/violet} comme les éléments chimiques.{/red} {green}__Ce sont des {violet}particuliers historiques{/violet}, comme les nations ou les galaxies.__{/green} Comme eux :
+    - elles ont un **commencement**, par la {violet}spéciation{/violet} ;
+    - elles ont des **parties** intégrées dans le temps par des relations biologiques ;
+    - elles **cessent d'exister**, par l'extinction (Mishler et Brandon 1987).
+
+    **La relation de l'organisme à l'espèce change.** Les organismes individuels ne sont pas des **instances** de l'espèce, {yellow}comme une alliance est une instance de l'or{/yellow}. Ils en sont des **parties**, {yellow}comme on est une partie d'une famille{/yellow}. La différence se voit sur un test : de l'or fabriqué sur une autre planète serait de l'or, mais un être semblable au tigre apparu sans lien avec les tigres ne serait pas un tigre (exemple familier), comme un sosie ne fait pas partie de votre famille.
+
+    **La conséquence.** Smart l'avait déjà remarqué : {coral}__il ne peut y avoir de « lois de la nature » sur les espèces biologiques en tant que telles__{/coral}, du moins au sens traditionnel. On n'a pas de loi sur la France ni sur la Voie lactée : on en fait l'histoire.
+
+    **Hull développe la thèse.** {violet}David Hull{/violet} défend la {violet}thèse des espèces comme individus{/violet} et en explore les implications pour les **noms d'espèces**, les **lois de la nature** et la **nature humaine** (Hull 1976, 1978, 1986). S'il n'y a pas de propriété que tout humain doive avoir pour être humain, mais seulement l'appartenance à une lignée, que devient l'idée d'une nature humaine ?
+
+    ! « Individu » n'a pas ici le sens courant d'organisme : c'est le sens logique d'une chose particulière, située dans l'espace et le temps, qui s'oppose à une classe.
+  points:
+  - id: sep-bio3-l4-p1
+    sentence: "Le biologiste Michael ___ (1974) soutient que la systématique se trompe sur le statut ontologique des espèces : ce ne sont pas des genres naturels."
+    answer: "Ghiselin"
+    alt: []
+  - id: sep-bio3-l4-p2
+    sentence: "Pour Ghiselin, les espèces ne sont pas des genres naturels comme les ___ chimiques."
+    answer: "éléments"
+    alt: []
+  - id: sep-bio3-l4-p3
+    sentence: "Pour Ghiselin, les espèces sont des ___ historiques, comme les nations ou les galaxies."
+    answer: "particuliers"
+    alt: []
+  - id: sep-bio3-l4-p4
+    sentence: "Pour Ghiselin, les espèces sont des particuliers historiques, comme les nations ou les ___."
+    answer: "galaxies"
+    alt: []
+  - id: sep-bio3-l4-p5
+    sentence: "Selon la thèse des espèces comme individus, une espèce a un commencement par la ___, des parties intégrées par des relations biologiques, et une fin par l'extinction."
+    answer: "spéciation"
+    alt: []
+  - id: sep-bio3-l4-p6
+    sentence: "Selon la thèse des espèces comme individus, une espèce a un commencement par la spéciation, des parties intégrées par des relations biologiques, et une fin par l'___."
+    answer: "extinction"
+    alt: []
+  - id: sep-bio3-l4-p7
+    sentence: "Selon la thèse des espèces comme individus, les organismes ne sont pas des instances de l'espèce, comme une alliance est une instance de l'___."
+    answer: "or"
+    alt: []
+  - id: sep-bio3-l4-p8
+    sentence: "Selon la thèse des espèces comme individus, les organismes sont des parties de l'espèce, comme on est une partie d'une ___."
+    answer: "famille"
+    alt: []
+  - id: sep-bio3-l4-p9
+    sentence: "Si les espèces sont des individus, il ne peut y avoir de ___ de la nature sur les espèces en tant que telles, conséquence que Smart avait déjà remarquée."
+    answer: "lois"
+    alt: []
+  - id: sep-bio3-l4-p10
+    sentence: "David ___ développe la thèse des espèces comme individus, et en explore les implications pour les noms d'espèces, les lois de la nature et la nature humaine."
+    answer: "Hull"
+    alt: []
+  - id: sep-bio3-l4-p11
+    sentence: "David Hull explore les implications de la thèse des espèces comme individus pour les noms d'espèces, les lois de la nature et la ___ humaine."
+    answer: "nature"
+    alt: []
+- id: sep-bio3-l5
+  title: "Qu'est-ce qu'un individu biologique ?"
+  notes: |-
+    **La thèse des espèces comme individus laisse des questions sans réponse et en soulève de nouvelles** (Kitcher 1984, 1989 ; Ereshefsky 2000). Si l'on sait mieux ce qu'est une espèce, on ne sait pas pour autant ce qu'il faut y compter.
+
+    **Une difficulté de terrain.** Supposez que vous soyez {violet}biologiste des populations{/violet} et que vous deviez {green}recenser les individus d'une population{/green}. {red}__Quelles entités devez-vous compter ?__{/red} Dans un bosquet de trembles issus d'une même racine, y a-t-il un arbre ou mille (exemple familier) ? Une colonie de fourmis est-elle un individu, ou des milliers ?
+
+    **Une longue liste de critères.** Philosophes et biologistes en proposent une variété (Clarke 2013) :
+    - {sky}génétiques et reproductifs{/sky} : la reproduction, les cycles de vie, la génétique, le sexe, les {violet}goulets développementaux{/violet}, la {violet}séparation germen-soma{/violet} ;
+    - {sky}physiologiques{/sky} : la réponse immunitaire, l'autonomie métabolique, l'intégration fonctionnelle, les limites spatiales ou la contiguïté ;
+    - {sky}évolutifs et sociaux{/sky} : la maximisation de la fitness, la coopération et le conflit, les {violet}mécanismes de police{/violet}, la codispersion, les adaptations.
+
+    {coral}__La question de ce qu'est un individu biologique est donc pressante__{/coral} (Wilson 2005, Okasha 2006, Clarke 2011, Pradeu 2012, Bouchard et Huneman 2013, Godfrey-Smith 2013) : ces critères ne découpent pas le vivant de la même façon, et compter les individus décide de ce que mesure la fitness.
+  points:
+  - id: sep-bio3-l5-p1
+    sentence: "Un biologiste des populations qui doit ___ les individus d'une population doit d'abord décider quelles entités compter : d'où la question de l'individu biologique."
+    answer: "recenser"
+    alt: ["compter"]
+  - id: sep-bio3-l5-p2
+    sentence: "Parmi les critères de l'individu biologique, certains sont physiologiques : la réponse ___, l'autonomie métabolique, l'intégration fonctionnelle."
+    answer: "immunitaire"
+    alt: []
+  - id: sep-bio3-l5-p3
+    sentence: "Parmi les critères de l'individu biologique, certains sont physiologiques : la réponse immunitaire, l'autonomie ___, l'intégration fonctionnelle."
+    answer: "métabolique"
+    alt: []
+  - id: sep-bio3-l5-p4
+    sentence: "Parmi les critères de l'individu biologique, certains relèvent de la reproduction : les cycles de vie, les goulets développementaux, la séparation ___-soma."
+    answer: "germen"
+    alt: ["germe"]
+  - id: sep-bio3-l5-p5
+    sentence: "Parmi les critères de l'individu biologique, certains sont évolutifs et sociaux : la coopération et le conflit, la codispersion, les mécanismes de ___."
+    answer: "police"
+    alt: []
+  - id: sep-bio3-l5-p6
+    sentence: "Dans un bosquet de ___ issus d'une même racine, y a-t-il un arbre ou mille ? Cet exemple montre que la question de l'individu biologique se pose dès le recensement."
+    answer: "trembles"
+    alt: []
+- id: sep-bio3-l6
+  title: "Le concept biologique d'espèce"
+  notes: |-
+    **Les biologistes restent profondément divisés sur la catégorie d'espèce** (Ereshefsky, Wheeler et Meier 2000, Coyne et Orr 2004, Wilkins 2009). Le concept le plus célèbre est un bon point de départ, parce que ses limites montrent ce qu'on attend d'un tel concept.
+
+    **Le {violet}concept biologique d'espèce{/violet} (CBE)** d'{violet}Ernst Mayr{/violet} : {teal}« Les espèces sont des groupes de populations naturelles qui se croisent entre elles, et qui sont reproductivement isolés d'autres groupes de ce genre »{/teal} (1963). L'attrait du concept : le critère n'est pas la ressemblance, mais un fait biologique, l'échange de gènes.
+
+    **Trois objections.**
+    - **Les organismes {violet}asexués{/violet} ne se croisent pas** : sur le CBE, {red}il n'y a donc pas d'espèces d'organismes asexués{/red}, ce qui écarte une grande partie du vivant (voir pourtant, en sens contraire, Bobay et Ochman 2017).
+    - **L'{violet}introgression{/violet}** : beaucoup d'espèces échangent quelques gènes avec d'autres, par hybridation. {red}Elles ne pourraient donc être des espèces distinctes{/red} sur ce critère strict : l'ours polaire et le grizzly en donnent un exemple (exemple familier).
+    - **Le registre fossile** : {red}le CBE est extrêmement difficile à appliquer aux espèces fossiles{/red}, car les organes sexuels ne se fossilisent pas d'ordinaire, et le comportement reproducteur est difficile à attester.
+
+    {coral}Devant ces problèmes (et pour d'autres raisons), les biologistes ont avancé d'autres concepts d'espèce{/coral}, d'où la question de la leçon suivante.
+  points:
+  - id: sep-bio3-l6-p1
+    sentence: "Le concept biologique d'espèce, le plus célèbre des concepts d'espèce, est dû à Ernst ___."
+    answer: "Mayr"
+    alt: []
+  - id: sep-bio3-l6-p2
+    sentence: "Mayr : « Les espèces sont des groupes de populations naturelles qui se croisent entre elles, et qui sont reproductivement ___ d'autres groupes de ce genre »."
+    answer: "isolés"
+    alt: []
+  - id: sep-bio3-l6-p3
+    sentence: "Mayr : « Les espèces sont des groupes de populations naturelles qui se ___ entre elles, et qui sont reproductivement isolés d'autres groupes de ce genre »."
+    answer: "croisent"
+    alt: []
+  - id: sep-bio3-l6-p4
+    sentence: "Première objection au concept biologique d'espèce de Mayr : les organismes ___ ne se croisent pas, et il n'y aurait donc pas d'espèces parmi eux."
+    answer: "asexués"
+    alt: []
+  - id: sep-bio3-l6-p5
+    sentence: "Deuxième objection au concept biologique d'espèce de Mayr : beaucoup d'espèces présentent de l'___, un échange de gènes par hybridation, et ne pourraient donc être des espèces distinctes."
+    answer: "introgression"
+    alt: []
+  - id: sep-bio3-l6-p6
+    sentence: "Troisième objection au concept biologique d'espèce de Mayr : il s'applique très mal aux espèces ___, car les organes sexuels ne se conservent pas, et le comportement reproducteur est difficile à attester."
+    answer: "fossiles"
+    alt: []
+- id: sep-bio3-l7
+  title: "Pluralisme et monisme sur les espèces"
+  notes: |-
+    **Une fois admis plusieurs concepts d'espèce, faut-il en choisir un ?** Le débat a trois positions, et il fait toujours rage (Wilson 1999, Wheeler et Meier 2000, Barker 2019).
+
+    | Position | Sa thèse | Auteur cité |
+    | pluralisme | plusieurs concepts d'espèce sont corrects | Ereshefsky |
+    | monisme | un seul concept d'espèce est correct | Hull |
+    | élimination | il faut supprimer le rang d'espèce | Mishler |
+
+    **Le {violet}pluralisme des espèces{/violet}** (Ereshefsky 1992) : il n'y a pas de concept d'espèce unique et correct qui classe tous les organismes de la même façon ; {green}__il y a plusieurs concepts corrects__{/green}. Le point est fort, et il faut le voir : pour certains organismes, {coral}des concepts différents les placeront correctement dans des espèces distinctes{/coral}. Ce n'est pas une affaire de mots ou d'imprécision : deux classements incompatibles peuvent être vrais chacun selon son concept.
+
+    **Le {violet}monisme des espèces{/violet}** : il y a un seul concept correct. Certains allèguent que {pink}le pluralisme n'est que temporaire{/pink}, parce qu'on finira par trouver le meilleur concept (Hull 1999).
+
+    **L'élimination du rang.** D'autres soutiennent même qu'il faut {red}se débarrasser complètement du rang d'espèce{/red} (Mishler 1999, Mishler et Wilkins 2018) : si la cladistique ne reconnaît que des groupes monophylétiques emboîtés, pourquoi privilégier l'un de ces niveaux en l'appelant « espèce » ?
+
+    ! Le pluralisme n'est pas le relativisme : il ne dit pas que tout concept d'espèce se vaut, mais que plusieurs, précis et justifiés, peuvent être corrects ensemble.
+  tables:
+  - table: position-sa-these-auteur-cite
+    exercises:
+    - {kind: bank, column: Position}
+    - {kind: cell, column: Auteur cité}
+  points:
+  - id: sep-bio3-l7-p1
+    sentence: "Le ___ des espèces tient qu'il n'y a pas de concept d'espèce unique et correct, mais plusieurs (Ereshefsky 1992)."
+    answer: "pluralisme"
+    alt: []
+  - id: sep-bio3-l7-p2
+    sentence: "Le pluralisme des espèces, tel qu'il est soutenu notamment par ___ (1992), tient qu'il y a plusieurs concepts d'espèce corrects."
+    answer: "Ereshefsky"
+    alt: []
+  - id: sep-bio3-l7-p3
+    sentence: "Sur le pluralisme des espèces, pour certains organismes, des concepts d'espèce différents les placeront correctement dans des espèces ___."
+    answer: "distinctes"
+    alt: ["différentes"]
+  - id: sep-bio3-l7-p4
+    sentence: "Le ___ des espèces tient qu'il y a un seul concept d'espèce correct."
+    answer: "monisme"
+    alt: []
+  - id: sep-bio3-l7-p5
+    sentence: "Certains, comme Hull (1999), allèguent que le pluralisme des espèces est ___ : on finira par trouver le meilleur concept d'espèce."
+    answer: "temporaire"
+    alt: ["provisoire"]
+  - id: sep-bio3-l7-p6
+    sentence: "Mishler (1999) soutient qu'il faut se débarrasser complètement du ___ d'espèce."
+    answer: "rang"
+    alt: []
+  - id: sep-bio3-l7-p7
+    sentence: "« Getting Rid of Species? » (1999) : Brent ___ y soutient qu'il faut supprimer le rang d'espèce."
+    answer: "Mishler"
+    alt: []
+- id: sep-bio3-l8
+  title: "Genres naturels et pensée populationnelle"
+  notes: |-
+    **Les espèces biologiques sont souvent données comme exemple classique de {violet}genre naturel{/violet} (*natural kind*)** : d'où l'influence majeure de la philosophie de la systématique sur les travaux récents consacrés au classement et aux genres naturels (Dupré 1993, 2002 ; Boyd 1999 ; Griffiths 1999 ; Wilson 1999 ; Okasha 2002 ; Walsh 2006 ; Slater 2015).
+
+    **Le conflit.** Un genre naturel classique suppose une {violet}essence{/violet} : une propriété commune à tous ses membres, comme le numéro atomique pour l'or. Or la biologie pense en {violet}pensée populationnelle{/violet} (*population thinking*, Mayr 1975) : {red}__une population est faite d'individus variables, et aucune variation n'y est un écart par rapport à un type__{/red}. L'évolution suppose même cette variation. Comment concilier les deux ?
+
+    **La question ouverte.** {green}Peut-il y avoir une notion de genre naturel, ou un {violet}essentialisme{/violet}, compatible avec la pensée populationnelle ?{/green} (Mayr 1975, Sober 1980, Ariew 2008.) Plusieurs tentatives modifient l'idée de genre naturel plutôt que d'y renoncer : Boyd (1999) rattache l'unité du genre à une **homéostasie** de propriétés, Griffiths (1999) parle d'{violet}essences historiques{/violet}, puisque ce qui unit une espèce est sa généalogie, non une propriété intrinsèque.
+
+    ! « Espèce naturelle » traduit parfois *natural kind* : il faut éviter de le confondre avec l'espèce biologique, puisque toute la question est de savoir si celle-ci en est une.
+  points:
+  - id: sep-bio3-l8-p1
+    sentence: "Les espèces biologiques sont souvent données comme exemple classique de genre ___, alors même que la thèse de Ghiselin le conteste."
+    answer: "naturel"
+    alt: []
+  - id: sep-bio3-l8-p2
+    sentence: "La pensée ___ (Mayr 1975) tient qu'une population est faite d'individus variables, sans que cette variation soit un écart par rapport à un type."
+    answer: "populationnelle"
+    alt: []
+  - id: sep-bio3-l8-p3
+    sentence: "La notion de pensée populationnelle, qui s'oppose à la pensée par types, est liée au nom d'Ernst ___ (1975)."
+    answer: "Mayr"
+    alt: []
+  - id: sep-bio3-l8-p4
+    sentence: "Une question ouverte sur les genres naturels : peut-il y avoir un ___ compatible avec la pensée populationnelle de la biologie ?"
+    answer: "essentialisme"
+    alt: []
+  - id: sep-bio3-l8-p5
+    sentence: "Griffiths (1999) parle d'essences ___ : ce qui unit une espèce est sa généalogie, non une propriété intrinsèque."
+    answer: "historiques"
+    alt: []
+  - id: sep-bio3-l8-p6
+    sentence: "Boyd (1999) rattache l'unité d'un genre naturel à une ___ de propriétés, plutôt qu'à une essence commune à tous ses membres."
+    answer: "homéostasie"
+    alt: []
