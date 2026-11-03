@@ -5,14 +5,16 @@
 # complètes (Flammarion), du Ménon dans la traduction fournie par l'utilisateur.
 # Citation d'Owen traduite de l'anglais. La chute des feuilles (Seconds
 # Analytiques, II, 16-17, 98a35-b24) est résumée d'après l'article, sans
-# citation : seul 99a21-23 a été fourni.
+# citation : seul 99a21-23 a été fourni. La soustraction des attributs
+# (Seconds Analytiques, I, 5) est un ajout de l'utilisateur à l'article, qui a
+# aussi retiré la leçon sur l'état des sources : ne pas la rétablir.
 #
 # L'article écrit « the eventh successor » pour Andronicos : coquille écartée,
 # son rang n'est pas donné ici.
 
 id: sep-arbio1
 title: "Une science et sa méthode"
-subtitle: "Le fondateur de la biologie, la théorie de la science des Analytiques, et ce que nous ne savons pas"
+subtitle: "Le fondateur de la biologie, et la théorie de la science des Analytiques"
 icon: compass
 color: sky
 group: "La biologie d'Aristote (SEP)"
@@ -167,16 +169,32 @@ lessons:
     answer: "par soi"
     alt: []
   - id: sep-arbio1-l3-p4
-    sentence: "Avoir ses angles égaux à deux droits appartient à tout ___, en vertu de ce qu'il est : exemple de proposition scientifique dans les *Seconds Analytiques*, I, 4-5."
+    sentence: "*Seconds Analytiques*, I, 5 : le terme premier et adéquat auquel appartient la propriété d'avoir ses angles égaux à deux droits est le ___."
     answer: "triangle"
     alt: []
   - id: sep-arbio1-l3-p5
-    sentence: "Un triangle ___ a ses angles égaux à deux droits, non parce qu'il est tel, mais parce qu'il est un triangle : l'explication doit atteindre le bon niveau de généralité."
-    answer: "équilatéral"
+    sentence: "*Seconds Analytiques*, I, 5 : si l'on retire à un triangle en bronze le fait d'être ___, la propriété reste vraie pour les autres triangles : elle ne lui appartient donc pas à ce titre."
+    answer: "isocèle"
     alt: []
-  - id: sep-arbio1-l3-p6
-    sentence: "Exposer pourquoi le triangle a ses angles égaux à deux droits fait appel à son caractère essentiel, à ce que c'est qu'être un ___."
-    answer: "triangle"
+  - id: sep-arbio1-l3-p7
+    sentence: "*Seconds Analytiques*, I, 5 : pour isoler le sujet auquel une propriété appartient à titre premier, Aristote procède par ___ des attributs."
+    answer: "soustraction"
+    alt: ["élimination"]
+  - id: sep-arbio1-l3-p8
+    sentence: "Le sujet auquel une propriété appartient « à titre premier » : l'expression traduit le grec *___*."
+    answer: "prōton"
+    alt: ["proton"]
+  - id: sep-arbio1-l3-p9
+    sentence: "Une véritable démonstration scientifique se dit en grec *___*."
+    answer: "apodeixis"
+    alt: []
+  - id: sep-arbio1-l3-p10
+    sentence: "Une véritable démonstration lie un prédicat à son sujet au niveau de généralité exact où ils sont ___."
+    answer: "coextensifs"
+    alt: []
+  - id: sep-arbio1-l3-p11
+    sentence: "En biologie, Aristote refuse d'expliquer une fonction animale, comme la respiration, espèce par espèce, s'il existe un ___ plus large auquel elle appartient primitivement."
+    answer: "genre"
     alt: []
 - id: sep-arbio1-l4
   title: "Le paradoxe du Ménon et les quatre questions"
@@ -188,7 +206,7 @@ lessons:
     **Quatre questions, en deux paires.** {teal}« Les choses que l'on cherche{/teal} sont {teal}en nombre égal à celles dont on a un savoir scientifique.{/teal} Or {teal}on cherche quatre choses : le fait, le pourquoi, si c'est et ce que c'est. »{/teal} (II, 1, 89b23-25). Autrement dit, les __types de questions que nous posons dans une enquête scientifique__ (`zētēsis`) correspondent exactement aux __types de connaissances scientifiques__ (`epistēmē`) que nous cherchons à constituer.
 
     | Première question | Seconde question | Exemple |
-    | **Le fait** (to hoti) : déterminer *si* un fait est avéré ou si une propriété appartient à un sujet | **Le pourquoi** (to dioti) : déterminer *pourquoi* ce fait se produit, c'est-à-dire en identifier la cause explicative | « La Lune est-elle éclipsée ? » et si oui,  « Pourquoi la Lune s'éclipse-t-elle ? » |
+    | **Le fait** (to hoti) : déterminer *si* un fait est avéré ou si une propriété appartient à un sujet | **Le pourquoi** (to dioti) : déterminer *pourquoi* ce fait se produit, c'est-à-dire en identifier la cause explicative | « La Lune est-elle éclipsée ? » et si oui, « Pourquoi la Lune s'éclipse-t-elle ? » |
     | **L'existence** (ei esti) : déterminer *si* une entité ou un genre particulier existe dans la nature | **L'essence** (*ti estin*) : déterminer *ce qu'est* cette chose, c'est-à-dire formuler sa définition réelle et causale | « Dieu existe-t-il ? » et si oui, « Qu'est-ce qu'un dieu ? » |
 
     Dans chaque paire, l'ordre est naturel : {teal}« quand nous connaissons le fait, nous cherchons le pourquoi »{/teal} (89b29), et {teal}« quand nous avons pris connaissance que la chose est, nous cherchons ce qu'elle est, par exemple : qu'est-ce donc qu'un dieu, ou qu'est-ce qu'un homme ? »{/teal} (89b34-35)
@@ -243,6 +261,18 @@ lessons:
     sentence: "Les quatre questions de la recherche selon Aristote sont exposées dans les *Seconds Analytiques*, livre II, chapitre ___."
     answer: "1"
     alt: ["un", "premier"]
+  - id: sep-arbio1-l4-p12
+    sentence: "Dans le vocabulaire d'Aristote, déterminer si une entité ou un genre existe dans la nature, c'est la question *___*."
+    answer: "ei esti"
+    alt: []
+  - id: sep-arbio1-l4-p13
+    sentence: "Dans le vocabulaire d'Aristote, déterminer ce qu'est une chose, formuler sa définition réelle et causale, c'est la question *___*."
+    answer: "ti estin"
+    alt: []
+  - id: sep-arbio1-l4-p14
+    sentence: "Les types de questions d'une enquête scientifique (*zētēsis*) correspondent exactement aux types de ___ scientifiques (*epistēmē*) que nous cherchons à constituer."
+    answer: "connaissances"
+    alt: ["savoirs"]
 - id: sep-arbio1-l5
   title: "Le moyen terme est la cause"
   notes: |-
@@ -252,7 +282,7 @@ lessons:
 
     **Pourquoi ?** Dans tout {violet}syllogisme valide{/violet}, le {amber}moyen terme garantit la conclusion{/amber}. Dans une explication scientifique, il doit en plus dire **la cause du fait** : ce qui relie le sujet à la propriété. Savoir la cause de quelque chose et savoir ce que c'est deviennent alors un seul savoir.
 
-    **L'exemple du tonnerre :** {teal}« {/teal} il y a, en effet, {teal}une différence entre dire __pourquoi__ il tonne{/teal} et {teal}__ce qu'est__ le tonnerre{/teal} ; car on dira dans le premier cas {teal}"parce que le feu s'éteint dans les nuages"{/teal}, et à la question "qu'est-ce que le tonnerre ?" on répondra {teal}"le bruit d'un feu qui s'éteint dans les nuages"{/teal} ; si bien que __la même formule est énoncée de manière différente__, c'est-à-dire que dans un cas on a une {teal}démonstration continue{/teal}, dans l'autre {teal}une définition. »{/teal} (II, 10, 94a3-7)
+    **L'exemple du tonnerre :** {teal}« {/teal}il y a, en effet, {teal}une différence entre dire __pourquoi__ il tonne{/teal} et {teal}__ce qu'est__ le tonnerre{/teal} ; car on dira dans le premier cas {teal}"parce que le feu s'éteint dans les nuages"{/teal}, et à la question "qu'est-ce que le tonnerre ?" on répondra {teal}"le bruit d'un feu qui s'éteint dans les nuages"{/teal} ; si bien que __la même formule est énoncée de manière différente__, c'est-à-dire que dans un cas on a une {teal}démonstration continue{/teal}, dans l'autre {teal}une définition. »{/teal} (II, 10, 94a3-7)
 
     {coral}__Une même formule, deux dispositions : une démonstration quand elle dit *pourquoi*, une définition quand elle dit *ce que c'est*.__{/coral} Le chapitre 2 donne une autre illustration, l'éclipse : {teal}« Qu'est-ce qu'une éclipse ? La privation pour la Lune de sa lumière du fait de l'interposition de la Terre. »{/teal} (90a15-16) D'où la formule générale : {teal}« le "ce que c'est" et le "du fait de quoi c'est" c'est la même chose »{/teal}.
 
