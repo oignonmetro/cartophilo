@@ -418,6 +418,55 @@ alors le déplier jusqu'à convaincre (« si je ne croyais pas l'auteur, ce
 paragraphe me ferait-il changer d'avis ? »), et lui donner sa carte de
 pivot. La passe allonge le cours : c'est voulu.
 
+### Ce que les retouches de la psychologie d'Aristote ajoutent
+
+Retouches de l'utilisateur sur `sep-psy1` (2026-11-03), sur un premier jet
+exact mais allusif.
+
+**Une citation ne tient pas lieu d'étape.** L'argument de *Parties des
+animaux*, I, 1 tenait en trois lignes : « une même science étudie les termes
+relatifs l'un à l'autre », donc les intelligibles, « c'est-à-dire tout », puis
+deux citations. L'utilisateur a retiré le mot « réduction » et les citations,
+et écrit ce qu'elles supposaient : pourquoi étudier une faculté oblige à
+étudier son objet (la sensation et les couleurs, les sons, les odeurs), pourquoi
+les intelligibles sont la totalité (objets matériels, concepts mathématiques,
+principes métaphysiques), ce qui s'ensuit (une science de toutes choses, qui
+absorbe la philosophie), et où va donc l'étude de l'intellect. À chaque
+« donc », se demander ce qu'un lecteur qui ne connaît pas la thèse devrait
+savoir pour l'accepter ; une formule technique sans exemple n'est pas une
+prémisse expliquée.
+
+**La mise en relief marque la structure, au mot près.** Elle ne colore pas
+une phrase entière quand le contraste tient à quelques mots :
+- une même nuance sur les deux membres d'un parallèle : `{amber}*ce qui* est
+  commun à l'âme et au corps{/amber}` / `{amber}*si* tout est commun à l'âme et
+  au corps{/amber}`, l'italique sur le mot qui fait la différence ;
+- vert et rouge coupés à la virgule, quand une phrase affirme puis nie : `{green}__…
+  tous les vivants,__{/green} {red}__non sur les seuls êtres humains…__{/red}` ;
+- la question mise en vedette, puis ses réponses en paire : `{coral}__**L'âme
+  relève-t-elle de la science de la nature ?**__{/coral}`, puis `__**Oui, pour**__
+  {green}__**la plupart des états de l'âme**__{/green}` et `__**Non, pour**__
+  {red}__**l'intelligence**__{/red}` ;
+- le souligné sur les pôles (`__forme__` / `__matière__`, `__tous__` les états /
+  `__états matériels__`), l'exemple en `yellow` même s'il n'est pas une image.
+
+**Citer à partir de ce qui apporte quelque chose.** Quand la phrase vient de
+dire « ce qui est commun à l'âme et au corps », la citation commence à
+« comme la sensation, la mémoire… » et ne le répète pas.
+
+**Pas de reprise vague.** « Si tout est ainsi commun » devient « si tout est
+commun à l'âme et au corps » : le lecteur n'a pas à remonter chercher le sens
+d'un « ainsi ».
+
+**Un tableau, et non un tableau puis une liste, quand les deux parlent des
+mêmes lignes.** Les quatre causes avaient leur tableau, puis leurs citations de
+la *Physique* en liste : la citation devient une colonne « Le texte », en face
+de la cause. Changer ainsi l'en-tête reprend le tableau de zéro en révision :
+le faire dès le premier jet.
+
+**La *Métaphysique* se cite par ses lettres** : E, 1, et non VI, 1 (A = I,
+Γ = IV, Z = VII, Λ = XII, M = XIII), dans les rappels comme dans les cartes.
+
 ### Un cours sur un auteur, tiré d'un commentaire
 
 Quand la source est un livre ou un article sur un auteur (Huneman, *Bichat,
