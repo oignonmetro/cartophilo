@@ -472,6 +472,46 @@ le faire dès le premier jet.
 **La *Métaphysique* se cite par ses lettres** : E, 1, et non VI, 1 (A = I,
 Γ = IV, Z = VII, Λ = XII, M = XIII), dans les rappels comme dans les cartes.
 
+### Ce que les retouches de la biologie d'Aristote ajoutent
+
+Retouches de l'utilisateur sur `sep-arbio1` (2026-11-03) : elles confirment
+les précédentes et y ajoutent ceci.
+
+**Ne pas tout garder de l'article.** Une leçon sur l'état des sources (« Ce que
+nous ne savons pas » : les textes compilés tard, « notes de cours » ou non, les
+experts consultés) a été supprimée avec ses cartes. Ce qui ne sert pas à
+comprendre ou à discuter la philosophie de l'auteur n'a pas à devenir une leçon,
+même si l'article y consacre une section.
+
+**Aller chercher la méthode de l'auteur, quand l'article ne donne que sa
+conclusion.** « Avoir ses angles égaux à deux droits appartient au triangle comme
+tel » est devenu la procédure de *Seconds Analytiques*, I, 5 : un triangle isocèle
+en bronze, dont on retire chaque attribut, un par un, pour voir à quel moment la
+propriété s'effondre. Le rappel montre comment on trouve le résultat, avant de
+dire où il resservira (en biologie, ne pas expliquer la respiration espèce par
+espèce).
+
+**Une citation se glose aussitôt.** Après les quatre questions, « Autrement dit… »
+dit ce que l'énoncé veut dire, avec ses termes grecs.
+
+**Un tableau qui explique.** Un tableau de notions peut définir chacune dans sa
+case (« **Le fait** (`to hoti`) : déterminer *si*… »), avec des exemples en forme
+de questions, plutôt que de ranger des étiquettes : ici, la règle des cases
+courtes passe après la compréhension. Une case de plus de 60 caractères ne se
+demande jamais seule : prévoir alors la banque, ou `exercises: []`.
+
+**Dans une longue citation, le teal désigne ce qui compte.** Là où `{teal}« …
+»{/teal}` entier ne colore que les guillemets, la citation peut se découper : le
+guillemet ouvrant seul en `{teal}«{/teal}`, puis en teal les membres décisifs, les
+mots de liaison restant nus (`{teal}ce qu'il connaît, il ne le chercherait pas,
+parce qu'il le connaît{/teal}, et le connaissant, …`). On y souligne aussi les
+pôles (`__pourquoi__` / `__ce qu'est__`). Le souligné et le gras se posent donc
+aussi à l'intérieur d'une citation.
+
+**Plus de thèse entière en vert et soulignée.** Une phrase-thèse se distribue :
+`{violet}science{/violet}` pour le terme, `amber` pour chaque élément de la
+définition, `coral` pour ce qui en est établi.
+
 ### Un cours sur un auteur, tiré d'un commentaire
 
 Quand la source est un livre ou un article sur un auteur (Huneman, *Bichat,
