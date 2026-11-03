@@ -2,7 +2,7 @@ import { Fragment, useEffect, useLayoutEffect, useRef, useState, type ReactNode 
 import { createPortal } from 'react-dom'
 import { motion } from 'framer-motion'
 import type { RuleExercise } from '@/engine/exercises'
-import { parseInline, parseNotes, splitAside, type Inline, type NoteBlock, type NoteRule } from '@/content/notes'
+import { parseInline, parseNotes, quoteEdges, splitAside, type Inline, type NoteBlock, type NoteRule } from '@/content/notes'
 import { GAP, type NoteColor } from '@/content/schema'
 import { Button } from '@/components/Button'
 import { PassageText } from '@/components/PassageText'
@@ -632,6 +632,16 @@ function Spans({ spans, colorClass, gaps }: { spans: Inline[]; colorClass?: stri
             )
           case 'color': {
             const tint = INLINE_COLORS[span.color]
+            const quote = span.color === 'teal' ? quoteEdges(span.children) : null
+            if (quote) {
+              return (
+                <Fragment key={index}>
+                  <span className={`font-bold ${tint}`}>«</span>
+                  <Spans spans={quote} colorClass={colorClass} gaps={gaps} />
+                  <span className={`font-bold ${tint}`}>»</span>
+                </Fragment>
+              )
+            }
             return (
               <span key={index} className={`font-bold ${tint}`}>
                 <Spans spans={span.children} colorClass={tint} gaps={gaps} />

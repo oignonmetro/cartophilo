@@ -1,7 +1,18 @@
 import { describe, expect, it } from 'vitest'
-import { leadSentence, noteLinkTargets, parseInline, parseNotes, plainInline, splitAside, splitCells, type NoteRule } from './notes'
+import { leadSentence, noteLinkTargets, parseInline, parseNotes, plainInline, quoteEdges, splitAside, splitCells, type NoteRule } from './notes'
 
 describe('rappels de cours', () => {
+  it('sépare une citation de ses guillemets, et laisse un terme entier', () => {
+    expect(quoteEdges(parseInline('« la vie »'))).toEqual([{ kind: 'text', text: ' la vie ' }])
+    expect(quoteEdges(parseInline('« **la** vie »'))).toEqual([
+      { kind: 'text', text: ' ' },
+      { kind: 'strong', children: [{ kind: 'text', text: 'la' }] },
+      { kind: 'text', text: ' vie ' },
+    ])
+    expect(quoteEdges(parseInline('anima'))).toBeNull()
+    expect(quoteEdges(parseInline('**génie**'))).toBeNull()
+  })
+
   it('recolle une phrase repliée sur plusieurs lignes', () => {
     // Le cas qui motivait tout : le repli à 80 colonnes du fichier YAML
     // s'affichait en deux paragraphes séparés par un blanc.

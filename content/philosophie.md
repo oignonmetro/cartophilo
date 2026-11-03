@@ -336,7 +336,10 @@ les cours :
 - `pink` : libre ; sert volontiers de variante au rouge, pour l'autre pôle
   d'une opposition dont le vert marque le premier ;
 - `violet` : les termes techniques et notions clés ;
-- `teal` : une citation du texte étudié ;
+- `teal` : une citation du texte étudié, toute entière dans la couleur
+  (`{teal}« … »{/teal}`) : l'application ne teinte que ses guillemets, le texte
+  restant en noir, car trop de citations en couleur rendent un rappel
+  illisible (voir `quoteEdges` dans `src/content/notes.ts`) ;
 - `sky` : la structure de l'œuvre (parties, chapitres) et les sources qu'elle
   reprend (un dialogue de Platon, un discours qu'elle cite) ;
 - `coral` : les propriétés établies et les conclusions ;
@@ -431,7 +434,7 @@ et écrit ce qu'elles supposaient : pourquoi étudier une faculté oblige à
 étudier son objet (la sensation et les couleurs, les sons, les odeurs), pourquoi
 les intelligibles sont la totalité (objets matériels, concepts mathématiques,
 principes métaphysiques), ce qui s'ensuit (une science de toutes choses, qui
-absorbe la philosophie), et où va donc l'étude de l'intellect. À chaque
+absorbe la philosophie), et où va donc l'étude de l'intelligence. À chaque
 « donc », se demander ce qu'un lecteur qui ne connaît pas la thèse devrait
 savoir pour l'accepter ; une formule technique sans exemple n'est pas une
 prémisse expliquée.
@@ -453,6 +456,8 @@ une phrase entière quand le contraste tient à quelques mots :
 **Citer à partir de ce qui apporte quelque chose.** Quand la phrase vient de
 dire « ce qui est commun à l'âme et au corps », la citation commence à
 « comme la sensation, la mémoire… » et ne le répète pas.
+
+**Le vocabulaire de la traduction citée, partout.** Le cours suit Bodéüs : « intelligence » pour `nous`, jamais « intellect », y compris dans l'explication.
 
 **Pas de reprise vague.** « Si tout est ainsi commun » devient « si tout est
 commun à l'âme et au corps » : le lecteur n'a pas à remonter chercher le sens

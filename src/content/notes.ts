@@ -114,6 +114,25 @@ export function parseInline(text: string, quotes = true): Inline[] {
   return spans
 }
 
+/**
+ * Le contenu d'une citation entre guillemets, sans ses guillemets : trop de
+ * citations teintées rendent un rappel illisible, si bien que `teal` ne colore
+ * que les guillemets d'un fragment `{teal}« … »{/teal}` (voir `RuleNote.tsx`).
+ * `null` si le fragment n'est pas une citation entière (un terme en `teal`).
+ */
+export function quoteEdges(children: Inline[]): Inline[] | null {
+  const first = children[0]
+  const last = children[children.length - 1]
+  if (first?.kind !== 'text' || last?.kind !== 'text') return null
+  if (!first.text.startsWith('«') || !last.text.endsWith('»')) return null
+  if (first === last) return [{ kind: 'text', text: first.text.slice(1, -1) }]
+  return [
+    { kind: 'text', text: first.text.slice(1) },
+    ...children.slice(1, -1),
+    { kind: 'text', text: last.text.slice(0, -1) },
+  ]
+}
+
 /** Une règle, avec son étiquette éventuelle et son exemple éventuel. */
 export interface NoteRule {
   /** Ce qui précède le « : » — le cas couvert par la règle. */
