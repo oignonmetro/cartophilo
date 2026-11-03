@@ -123,7 +123,9 @@ pas seulement Glossaire et Repérage.
   trou entre « 130a-e » et « 132a-b » se devine) ; le repère seul a ses
   voisins du dessus et du dessous cachés ; la remise en ordre ne montre
   aucune case qui porte elle-même un repère. Dans l'éditeur visuel (`/#/editeur`),
-  l'onglet Tableaux les édite en grille, dit ce que chacun deviendra (et
+  un tableau s'y édite sur place, dans le rappel (case touchée, Entrée, Tab,
+  poignées de ligne et de colonne : `EditableTable`) ; l'onglet Tableaux les
+  édite aussi en grille, dit ce que chacun deviendra (et
   pourquoi un plan n'est pas reconnu) et en joue un aperçu ; il y fixe aussi,
   au besoin, les exercices de chaque tableau et leurs colonnes (`tables:`
   dans la leçon, voir `lessonTableSchema` et `content/philosophie.md`).
