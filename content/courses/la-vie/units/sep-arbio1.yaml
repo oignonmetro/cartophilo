@@ -140,13 +140,19 @@ lessons:
 - id: sep-arbio1-l3
   title: "Le but de la science : les Seconds Analytiques"
   notes: |-
-    **Pour comprendre la biologie d'Aristote, il faut la replacer dans sa philosophie de la science.** Comment passer de l'expérience quotidienne, superficielle et désordonnée, à un savoir scientifique organisé ? Il faut d'abord une idée du but : c'est ce que donnent les *Premiers* et les *Seconds Analytiques*.
+    **Pour comprendre la biologie d'Aristote, il faut la replacer dans sa philosophie de la science.** Comment passer de l'{pink}expérience quotidienne, superficielle et désordonnée{/pink}, à un {green}savoir scientifique organisé{/green} ? Il faut d'abord une idée du but : c'est ce que donnent les *Premiers* et les *Seconds Analytiques*.
 
-    **Le but : un système hiérarchisé.** {green}__La science est un système de concepts et de propositions ordonnés, qui repose en dernier lieu sur la connaissance de la nature essentielle de ses objets et d'autres premiers principes nécessaires.__{/green} Ces définitions et ces principes fondent l'explication causale de toutes les autres vérités universelles du domaine, et celles-ci attribuent à un sujet des propriétés qui lui appartiennent {violet}par soi{/violet}, en vertu de sa nature.
+    **Le but : un système hiérarchisé.** La {violet}science{/violet} est un {amber}système de concepts et de propositions ordonnés{/amber}, qui repose en dernier lieu sur la {amber}connaissance de la nature essentielle de ses objets{/amber} et d'autres {amber}premiers principes nécessaires{/amber}. Ces {coral}définitions{/coral} et ces {coral}principes{/coral} fondent l'{coral}explication causale{/coral} de toutes les autres vérités universelles du domaine, et celles-ci attribuent à un sujet des propriétés qui lui appartiennent {violet}par soi{/violet}, en vertu de sa nature.
 
-    **L'exemple du triangle** (*Seconds Analytiques*, I, 4-5). Avoir ses angles égaux à deux droits appartient à tous les triangles et à eux seuls, en vertu de ce qu'ils sont des triangles. {red}Cela appartient aussi à tout triangle équilatéral, mais non parce qu'il est équilatéral{/red} : c'est parce qu'il est un triangle. Savoir vraiment la proposition, c'est donc montrer pourquoi le triangle comme tel a cette propriété, en faisant appel à ce que c'est qu'être un triangle.
+    *Seconds Analytiques*, I, 5 : **qu'est-ce qu'une véritable démonstration scientifique universelle ?** Pour Aristote, une véritable explication scientifique (`apodeixis`) doit lier un prédicat à son sujet au **niveau de généralité exact où le prédicat et le sujet sont coextensifs.**
 
-    **La distinction qu'il faut retenir.** Constater qu'une propriété appartient à un être n'est pas encore l'expliquer. {coral}L'explication doit atteindre le bon niveau de généralité, celui où sujet et propriété se correspondent exactement.{/coral} C'est ce qu'on retrouvera en biologie.
+    **L'exemple du triangle.** Aristote explique comment isoler le sujet auquel la propriété appartient « à titre premier » (`prōton`). Il propose de procéder par {amber}**élimination ou soustraction des attributs**{/amber}. Prenons un {yellow}__triangle isocèle en bronze__{/yellow} :
+
+    - Si l'on enclenche la soustraction en retirant le fait qu'il soit {yellow}**en bronze**{/yellow}, __la propriété d'avoir ses angles égaux à 180° reste vraie__. La propriété ne lui appartient donc pas *en tant que bronze*.
+    - Si l'on retire le fait qu'il soit {yellow}**isocèle**{/yellow}, __la propriété reste encore vraie__ pour les autres triangles. La propriété ne lui appartient donc pas *en tant qu'isocèle*.
+    - Mais si l'on retire le fait d'être un {yellow}triangle{/yellow} (pour ne garder que « figure » ou « périmètre »), __la propriété s'effondre__ (un quadrilatère vaut 360°, etc.). Le {violet}terme premier et adéquat{/violet} est donc le triangle. C'est à lui que la {coral}démonstration{/coral} s'applique {coral}universellement{/coral}.
+
+    Ce principe méthodologique est central dans toute la philosophie aristotélicienne et on le retrouve en biologie, où Aristote refuse d'expliquer une __fonction animale__ (comme la respiration) espèce par espèce {coral}**s'il existe un genre plus large auquel cette fonction appartient primitivement**{/coral}.
   points:
   - id: sep-arbio1-l3-p1
     sentence: "Le but de la science, selon les *Seconds Analytiques*, est un système de concepts et de propositions organisés ___."
@@ -175,15 +181,15 @@ lessons:
 - id: sep-arbio1-l4
   title: "Le paradoxe du Ménon et les quatre questions"
   notes: |-
-    **Comment atteindre ce but ? Le livre II des *Seconds Analytiques* répond, en résolvant un vieux paradoxe.** Celui du *Ménon* : {teal}« il n'est possible à un homme de chercher ni ce qu'il connaît ni ce qu'il ne connaît pas ! En effet, ce qu'il connaît, il ne le chercherait pas, parce qu'il le connaît, et le connaissant, n'a aucun besoin d'une recherche ; et ce qu'il ne connaît pas, il ne le chercherait pas non plus, parce qu'il ne saurait même pas ce qu'il devrait chercher. »{/teal} (80e)
+    **Comment atteindre ce but ? Le livre II des *Seconds Analytiques* répond, en résolvant un vieux paradoxe** proposé par le *Ménon* : {teal}« {/teal}il n'est possible à un homme de chercher ni ce qu'il connaît ni ce qu'il ne connaît pas ! En effet, {teal}ce qu'il connaît, il ne le chercherait pas, parce qu'il le connaît{/teal}, et le connaissant, n'a aucun besoin d'une recherche ; et {teal}ce qu'il ne connaît pas, il ne le chercherait pas non plus, parce qu'il ne saurait même pas ce qu'il devrait chercher »{/teal} (80e).
 
-    **La solution d'Aristote.** {green}__L'expérience perceptive donne de l'objet de l'enquête une saisie qui n'est pas encore un savoir scientifique, mais qui suffit à diriger la suite.__{/green} Le dilemme suppose qu'on sache tout ou rien ; or on peut savoir *que* la Lune s'éclipse sans savoir *pourquoi*.
+    **La solution d'Aristote.** L'{amber}expérience perceptive{/amber} donne de l'objet de l'enquête {amber}une saisie qui n'est pas encore un savoir scientifique, mais qui suffit à diriger la suite{/amber}. Le dilemme suppose qu'on sache tout ou rien ; or on peut savoir *que* la Lune s'éclipse sans savoir *pourquoi*.
 
-    **Quatre questions, en deux paires.** {teal}« Les choses que l'on cherche sont en nombre égal à celles dont on a un savoir scientifique. Or on cherche quatre choses : le fait, le pourquoi, si c'est et ce que c'est. »{/teal} (II, 1, 89b23-25)
+    **Quatre questions, en deux paires.** {teal}« Les choses que l'on cherche{/teal} sont {teal}en nombre égal à celles dont on a un savoir scientifique.{/teal} Or {teal}on cherche quatre choses : le fait, le pourquoi, si c'est et ce que c'est. »{/teal} (II, 1, 89b23-25). Autrement dit, les __types de questions que nous posons dans une enquête scientifique__ (`zētēsis`) correspondent exactement aux __types de connaissances scientifiques__ (`epistēmē`) que nous cherchons à constituer.
 
     | Première question | Seconde question | Exemple |
-    | le fait | le pourquoi | l'éclipse |
-    | si c'est | ce que c'est | un dieu, un homme |
+    | **Le fait** (to hoti) : déterminer *si* un fait est avéré ou si une propriété appartient à un sujet | **Le pourquoi** (to dioti) : déterminer *pourquoi* ce fait se produit, c'est-à-dire en identifier la cause explicative | « La Lune est-elle éclipsée ? » et si oui,  « Pourquoi la Lune s'éclipse-t-elle ? » |
+    | **L'existence** (ei esti) : déterminer *si* une entité ou un genre particulier existe dans la nature | **L'essence** (*ti estin*) : déterminer *ce qu'est* cette chose, c'est-à-dire formuler sa définition réelle et causale | « Dieu existe-t-il ? » et si oui, « Qu'est-ce qu'un dieu ? » |
 
     Dans chaque paire, l'ordre est naturel : {teal}« quand nous connaissons le fait, nous cherchons le pourquoi »{/teal} (89b29), et {teal}« quand nous avons pris connaissance que la chose est, nous cherchons ce qu'elle est, par exemple : qu'est-ce donc qu'un dieu, ou qu'est-ce qu'un homme ? »{/teal} (89b34-35)
 
@@ -242,15 +248,13 @@ lessons:
   notes: |-
     **Les deux paires de questions se révèlent n'en former qu'une, grâce au {violet}moyen terme{/violet}** : le terme commun aux deux prémisses d'un syllogisme.
 
-    {teal}« Il s'ensuit donc que dans toutes les recherches on cherche soit s'il y a un moyen terme, soit quel est le moyen terme. Car le moyen terme est la cause, et dans tous les cas c'est celle-ci que l'on recherche. »{/teal} (II, 2, 90a5-7)
+    {teal}« {/teal}Il s'ensuit donc que {teal}dans toutes les recherches{/teal} on cherche soit {teal}s'il y a un moyen terme{/teal}, soit {teal}quel est le moyen terme{/teal}. Car le moyen terme est {teal}la cause{/teal}, et dans tous les cas c'est celle-ci que l'on recherche.{teal} »{/teal} (II, 2, 90a5-7)
 
-    **Pourquoi ?** Dans tout syllogisme valide, le moyen terme garantit la conclusion. Dans une explication scientifique, il doit en plus dire **la cause du fait** : ce qui relie le sujet à la propriété. Savoir la cause de quelque chose et savoir ce que c'est deviennent alors un seul savoir.
+    **Pourquoi ?** Dans tout {violet}syllogisme valide{/violet}, le {amber}moyen terme garantit la conclusion{/amber}. Dans une explication scientifique, il doit en plus dire **la cause du fait** : ce qui relie le sujet à la propriété. Savoir la cause de quelque chose et savoir ce que c'est deviennent alors un seul savoir.
 
-    **L'exemple du tonnerre.**
+    **L'exemple du tonnerre :** {teal}« {/teal} il y a, en effet, {teal}une différence entre dire __pourquoi__ il tonne{/teal} et {teal}__ce qu'est__ le tonnerre{/teal} ; car on dira dans le premier cas {teal}"parce que le feu s'éteint dans les nuages"{/teal}, et à la question "qu'est-ce que le tonnerre ?" on répondra {teal}"le bruit d'un feu qui s'éteint dans les nuages"{/teal} ; si bien que __la même formule est énoncée de manière différente__, c'est-à-dire que dans un cas on a une {teal}démonstration continue{/teal}, dans l'autre {teal}une définition. »{/teal} (II, 10, 94a3-7)
 
-    {teal}« il y a, en effet, une différence entre dire pourquoi il tonne et ce qu'est le tonnerre ; car on dira dans le premier cas "parce que le feu s'éteint dans les nuages", et à la question "qu'est-ce que le tonnerre ?" on répondra "le bruit d'un feu qui s'éteint dans les nuages" ; si bien que la même formule est énoncée de manière différente, c'est-à-dire que dans un cas on a une démonstration continue, dans l'autre une définition. »{/teal} (II, 10, 94a3-7)
-
-    {coral}__Une même formule, deux dispositions : une démonstration quand elle dit pourquoi, une définition quand elle dit ce que c'est.__{/coral} Le chapitre 2 donne une autre illustration, l'éclipse : {teal}« Qu'est-ce qu'une éclipse ? La privation pour la Lune de sa lumière du fait de l'interposition de la Terre. »{/teal} (90a15-16) D'où la formule générale : {teal}« le "ce que c'est" et le "du fait de quoi c'est" c'est la même chose »{/teal}.
+    {coral}__Une même formule, deux dispositions : une démonstration quand elle dit *pourquoi*, une définition quand elle dit *ce que c'est*.__{/coral} Le chapitre 2 donne une autre illustration, l'éclipse : {teal}« Qu'est-ce qu'une éclipse ? La privation pour la Lune de sa lumière du fait de l'interposition de la Terre. »{/teal} (90a15-16) D'où la formule générale : {teal}« le "ce que c'est" et le "du fait de quoi c'est" c'est la même chose »{/teal}.
 
     ! Que l'extinction d'un feu soit fausse comme théorie du tonnerre n'importe pas ici : l'exemple illustre la structure d'une explication, non une vérité de physique.
   points:
@@ -293,16 +297,16 @@ lessons:
 - id: sep-arbio1-l6
   title: "Un exemple biologique : la chute des feuilles"
   notes: |-
-    **Les *Seconds Analytiques* ne parlent pas que d'éclipses : ils donnent aussi un long exemple biologique** (II, 16-17), la chute saisonnière des feuilles.
+    **Les** {sky}***Seconds Analytiques***{/sky} **ne parlent pas que d'éclipses : ils donnent aussi un long exemple biologique** (II, 16-17), la chute saisonnière des feuilles.
 
     **Une enquête en trois marches.**
     - **La question.** Pourquoi le {yellow}figuier et la vigne{/yellow} perdent-ils leurs feuilles ?
     - **Une première réponse.** Parce qu'ils ont de {violet}larges feuilles{/violet}. On a trouvé un trait commun aux deux, lié à ce qu'on cherche. Ce « parce que » n'est qu'une étape.
-    - **Le changement de sujet.** La science cherche des attributions {violet}coextensives{/violet} : tout ce qui a le prédicat, et rien d'autre. « Le figuier perd ses feuilles » n'en est pas une, car la vigne aussi les perd. En revanche, {green}« tout ce qui a de larges feuilles perd ses feuilles »{/green} l'est : voilà la proposition à expliquer, et un genre, dont tous les membres et eux seuls perdent leurs feuilles.
+    - **Le changement de sujet.** La science cherche des attributions {violet}coextensives{/violet} : __tout ce qui a le prédicat, et rien d'autre__. « Le figuier perd ses feuilles » n'en est pas une, car la vigne aussi les perd. En revanche, {green}« tout ce qui a de larges feuilles perd ses feuilles »{/green} l'est : voilà la proposition à expliquer, et un genre, dont tous les membres et eux seuls perdent leurs feuilles.
 
-    **Le moyen terme devient sujet.** Ce qui servait d'explication devient ce qu'il faut expliquer. La cause sera quelque chose de plus fondamental : {coral}la solidification de la sève à la jointure de la feuille{/coral}. Et elle donne aussi une définition de la chute des feuilles, conformément à la thèse générale : {teal}« Or le moyen terme est formule du majeur, et c'est pourquoi toutes les sciences naissent par des définitions. »{/teal} (II, 17, 99a22-23)
+    **Le moyen terme devient sujet.** Ce qui servait d'explication devient ce qu'il faut expliquer. La cause sera quelque chose de plus fondamental : {coral}la solidification de la sève à la jointure de la feuille{/coral}. Et elle donne aussi une définition de la chute des feuilles, conformément à la thèse générale : {teal}« Or le moyen terme est formule du majeur, et c'est pourquoi __toutes les sciences naissent par des définitions__. »{/teal} (II, 17, 99a22-23)
 
-    **Une lacune, et le pont vers la suite.** Les *Analytiques* supposent qu'on a identifié le genre « à larges feuilles », {red}sans dire selon quels critères on identifie ces genres de base{/red}. C'est l'un des sujets les plus intéressants du livre I des *Parties des animaux*.
+    **Une lacune, et le pont vers la suite.** Les *Analytiques* supposent qu'on a identifié le genre « à larges feuilles », {red}mais sans dire selon quels critères on identifie ces genres de base{/red}. C'est l'un des sujets les plus intéressants du livre I des *Parties des animaux*.
 
     **Deux questions organisent la suite.** Comment la philosophie de la biologie de *Parties des animaux*, I, se rapporte-t-elle aux *Seconds Analytiques* ? Et les traités qui rapportent les recherches sur les animaux suivent-ils ces normes ?
   points:
@@ -337,37 +341,4 @@ lessons:
   - id: sep-arbio1-l6-p8
     sentence: "Les *Analytiques* ne disent pas selon quels critères on identifie les genres de base, ce que traite le livre I des *___ des animaux*."
     answer: "Parties"
-    alt: []
-- id: sep-arbio1-l7
-  title: "Ce que nous ne savons pas"
-  notes: |-
-    **Trois précautions avant de lire.**
-
-    **Nous avons des écrits, non une recherche.** {red}__Nous avons accès à des textes systématiques sur les animaux, non aux recherches elles-mêmes__{/red} : Aristote ne décrit pas son travail quotidien, et personne ne rapporte l'avoir vu faire. On peut cependant inférer qu'il a consulté des experts, {yellow}apiculteurs, pêcheurs, plongeurs d'éponges{/yellow} ; que lui, ou quelqu'un sous sa direction, a pratiqué beaucoup de {violet}dissections{/violet} sur des animaux très divers ; qu'il en a tiré au moins quelques schémas ; et qu'il disposait d'une importante bibliothèque.
-
-    **Nous ne savons pas à quoi servaient ces textes.** On dit parfois {red}« notes de cours » : c'est assez clairement faux{/red}, car ils sont écrits et structurés avec trop de soin. Mais leurs renvois montrent qu'il fallait en étudier certains dans un certain ordre, peut-être celui d'un cursus au Lycée. Détail frappant : {coral}__tous les autres traités biologiques renvoient aux « enquêtes sur les animaux » et aux « dissections », alors que notre *Histoire des animaux* ne renvoie jamais aux études explicatives__{/coral}. Ces enquêtes jouaient donc sans doute le rôle d'ouvrages de référence.
-
-    **Nos textes ont été compilés bien plus tard.** L'édition dite d'{violet}Andronicos{/violet} date de plusieurs siècles après la mort d'Aristote, et on ne saura sans doute jamais son rapport exact avec ce qu'il a produit.
-
-    **Ce qu'on peut donc faire.** Discuter les traités qui rapportent les résultats, en admettant que les textes reflètent ce qu'il a écrit, et que les renvois sont de lui.
-  points:
-  - id: sep-arbio1-l7-p1
-    sentence: "Aristote a sans doute consulté des experts, comme des apiculteurs, des pêcheurs et des plongeurs d'___."
-    answer: "éponges"
-    alt: []
-  - id: sep-arbio1-l7-p2
-    sentence: "Aristote, ou quelqu'un sous sa direction, a pratiqué beaucoup de ___ sur des animaux très divers, dont il tire au moins quelques schémas."
-    answer: "dissections"
-    alt: []
-  - id: sep-arbio1-l7-p3
-    sentence: "On dit parfois que les traités biologiques d'Aristote sont des notes de ___ : c'est assez clairement faux, car ils sont écrits avec trop de soin."
-    answer: "cours"
-    alt: []
-  - id: sep-arbio1-l7-p4
-    sentence: "Tous les traités biologiques d'Aristote renvoient aux enquêtes et aux dissections, alors que l'*Histoire des animaux* ne renvoie jamais aux études ___."
-    answer: "explicatives"
-    alt: ["causales"]
-  - id: sep-arbio1-l7-p5
-    sentence: "Comme elle ne renvoie jamais aux études explicatives, l'*Histoire des animaux* jouait sans doute le rôle d'un ouvrage de ___."
-    answer: "référence"
     alt: []
