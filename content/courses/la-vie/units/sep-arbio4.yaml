@@ -3,10 +3,6 @@
 # Philosophy : sections 5.2 et 6. Citations d'Aristote dans les Œuvres complètes
 # (Flammarion).
 #
-# Traduites de l'anglais de l'article, faute d'extrait reçu : Génération des
-# animaux, II, 1, 735a13-14 (l'extrait reçu s'arrête vers 735a2) ; III, 2,
-# 753b19-20 (l'extrait reçu sous ce numéro est II, 2, 735b13-25). À remplacer
-# dès réception du texte français.
 # « Sperme » : terme de cette traduction pour sperma ; gonê et katamenia sont
 # ceux de l'article. La science de l'embryon est exposée ici comme thèse
 # d'Aristote.
@@ -205,7 +201,7 @@ lessons:
 
     **Le chaud et le froid ne suffisent pas.** {yellow}Le feu tout seul ne produit pas une hache{/yellow} ; il ne produit pas davantage une main ou de la chair, car {teal}« elle aussi possède une certaine fonction »{/teal}. Chaud et froid peuvent rendre {teal}« durs ou mous, visqueux ou friables »{/teal}, {teal}« en revanche la raison pour laquelle ceci est dorénavant chair, cela os, ils ne peuvent plus la produire »{/teal} (734b31-34). Cette raison ({violet}`logos`{/violet}) vient du mouvement du géniteur, comme dans l'art : {teal}« si le chaud et le froid rendent le fer dur ou mou, l'épée, ce qui la produit, c'est le mouvement des instruments, mouvement qui possède la raison de l'art »{/teal} (734b37-735a2). {coral}Les propriétés d'un tissu suivent de sa fonction, et non l'inverse.{/coral}
 
-    **La limite de l'analogie, qui est décisive.** {red}__Les êtres naturels, une fois leur génération commencée, {teal}« croissent par eux-mêmes »{/teal} (735a13-14).__{/red} C'est la différence la plus fondamentale de l'art et de la nature : chacun des êtres naturels, selon la *Physique*, {teal}« possède en elle-même un principe de mouvement et d'arrêt »{/teal} (II, 1, 192b13-14), alors qu'{yellow}un lit, un manteau{/yellow} n'ont {teal}« aucune impulsion innée au changement »{/teal}. Le charpentier doit rester physiquement présent aux mouvements qui font la maison ; {red}le père, ou sa semence, non.{/red}
+    **La limite de l'analogie, qui est décisive.** {red}__Un être naturel, une fois engendré, se fait croître lui-même :__{/red} {teal}« rien ne s'engendre soi-même, mais c'est seulement à partir du moment où un être est engendré qu'il se fait croître lui-même »{/teal} (735a13-14). C'est la différence la plus fondamentale de l'art et de la nature : chacun des êtres naturels, selon la *Physique*, {teal}« possède en elle-même un principe de mouvement et d'arrêt »{/teal} (II, 1, 192b13-14), alors qu'{yellow}un lit, un manteau{/yellow} n'ont {teal}« aucune impulsion innée au changement »{/teal}. Le charpentier doit rester physiquement présent aux mouvements qui font la maison ; {red}le père, ou sa semence, non.{/red}
 
     **D'où un problème.** Comment un processus lancé par un générateur extérieur devient-il un développement naturel, qui a sa source dans le développant ? Réponse : la leçon suivante.
   points:
@@ -230,8 +226,8 @@ lessons:
     answer: "logos"
     alt: []
   - id: sep-arbio4-l4-p6
-    sentence: "La différence la plus fondamentale de l'art et de la nature : les êtres naturels, une fois leur génération commencée, croissent par ___."
-    answer: "eux-mêmes"
+    sentence: "*Génération des animaux*, II, 1 : « rien ne s'engendre soi-même, mais c'est seulement à partir du moment où un être est engendré qu'il se fait croître ___ »"
+    answer: "lui-même"
     alt: []
   - id: sep-arbio4-l4-p7
     sentence: "*Physique*, II, 1 : chacune des choses naturelles « possède en elle-même un principe de ___ et d'arrêt »."
@@ -256,7 +252,7 @@ lessons:
 - id: sep-arbio4-l5
   title: "Le cœur, principe de l'embryon"
   notes: |-
-    **Le cœur résout le problème.** Il est la première partie produite par la chaleur venue du père, et devient la source interne de cette chaleur, donc du développement (735a16-26).
+    **Le cœur résout le problème.** Le géniteur donne le départ, mais ne fait pas croître : {teal}« l'être humain engendre l'être humain, mais c'est par lui-même qu'il croît »{/teal} (735a21-22). Il faut donc qu'une partie prenne d'abord le relais : {teal}« il est nécessaire que soit engendré en premier ce qui possède le principe de la croissance »{/teal} (735a16-17). Or c'est le cœur : {teal}« si, chez certains animaux, le cœur est engendré en premier et, chez ceux qui n'ont pas de cœur, ce qui lui est analogue, c'est du cœur qu'a des chances de venir le principe chez ceux qui en ont un »{/teal} (735a23-26). Première partie produite par la chaleur venue du père, il devient la source interne de cette chaleur, donc du développement.
 
     {teal}« même si d'une certaine façon toutes les parties existent en puissance dans l'embryon, ce qui est le plus en avant, c'est le principe. C'est pourquoi c'est le cœur qui acquiert en premier une existence séparée en acte, ce qui est évident non seulement à l'observation (car c'est ainsi que cela se passe), mais également si l'on s'appuie sur le raisonnement »{/teal} (II, 4, 740a2-5)
 
@@ -300,6 +296,14 @@ lessons:
     sentence: "Le cœur est la première partie produite par la ___ venue du père, et il en devient la source interne : ainsi le développement devient-il naturel."
     answer: "chaleur"
     alt: []
+  - id: sep-arbio4-l5-p9
+    sentence: "*Génération des animaux*, II, 1 : « l'être humain engendre l'être humain, mais c'est par ___ qu'il croît »"
+    answer: "lui-même"
+    alt: []
+  - id: sep-arbio4-l5-p10
+    sentence: "*Génération des animaux*, II, 1, sur le premier organe formé : « il est nécessaire que soit engendré en premier ce qui possède le principe de la ___ »"
+    answer: "croissance"
+    alt: []
 - id: sep-arbio4-l6
   title: "L'œuf, les yeux"
   notes: |-
@@ -307,7 +311,7 @@ lessons:
 
     {teal}« C'est à partir de lui en effet que l'animal prend consistance, tandis que le jaune devient sa nourriture, c'est-à-dire que chez ceux qui sont en train de se former, c'est de là que vient la croissance des parties. C'est pour cette raison aussi que le jaune et le blanc sont distingués par des enveloppes, comme s'ils avaient une nature différente »{/teal} (III, 2, 753b11-14)
 
-    Pour le détail, Aristote renvoie à l'*Histoire* ; il retient que {teal}« le cœur est la première chose constituée »{/teal} (753b19-20).
+    Pour le détail, Aristote renvoie à l'*Histoire* ; il retient que, {teal}« une fois que le cœur en premier est formé et que la grande veine s'est à partir de lui définie »{/teal}, deux cordons partent de cette veine : l'un vers l'enveloppe qui entoure l'animal, l'autre vers celle du jaune, par lequel l'animal {teal}« reçoit sa nourriture du jaune »{/teal} (753b19-25).
 
     **Les yeux : un fait, une place dans le plan.** L'*Histoire* décrit les yeux saillants de l'embryon. *Génération des animaux*, III, 2, n'en dit rien ; le livre II, en revanche, en fait un problème :
 
@@ -344,6 +348,14 @@ lessons:
   - id: sep-arbio4-l6-p7
     sentence: "Pourquoi l'explication des yeux de l'embryon est-elle au livre II de la *Génération*, et non au livre III sur les oiseaux ? Parce que le fait est de grande ___, valant pour tous les animaux."
     answer: "généralité"
+    alt: []
+  - id: sep-arbio4-l6-p8
+    sentence: "*Génération des animaux*, III, 2, dans l'œuf : « une fois que le cœur en premier est formé et que la grande ___ s'est à partir de lui définie »"
+    answer: "veine"
+    alt: []
+  - id: sep-arbio4-l6-p9
+    sentence: "*Génération des animaux*, III, 2 : deux cordons partent de la veine ; par celui qui va vers l'enveloppe du jaune, l'animal « reçoit sa ___ du jaune »."
+    answer: "nourriture"
     alt: []
 - id: sep-arbio4-l7
   title: "Une énigme : pourquoi des traités séparés ?"
