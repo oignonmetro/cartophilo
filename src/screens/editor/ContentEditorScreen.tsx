@@ -13,6 +13,7 @@ import { RichNotesEditor, TitleField } from './RichNotesEditor'
 import { useFrenchQuotes } from './frenchQuotes'
 import { isCitation } from './textUnit'
 import type { LessonTableDTO, PassageDTO, PointDTO, SkippedRowDTO, TrackKind, TreeCourse, TreeLesson, TreeTrack, TreeUnit } from './types'
+import { SujetsEditor } from './SujetsEditor'
 import { NewLessonDialog, NewUnitDialog, UnitSettingsDialog } from './UnitDialogs'
 
 /**
@@ -127,6 +128,8 @@ export default function ContentEditorScreen() {
   const [trackId, setTrackId] = useState('')
   const [view, setView] = useState<'notes' | 'text' | 'points' | 'tables'>('notes')
   const [dialog, setDialog] = useState<Dialog | null>(null)
+  // Panneau de la liste des sujets de La vie, à la place d'une leçon.
+  const [sujetsOpen, setSujetsOpen] = useState(false)
   // Paragraphe cité d'une leçon de texte ; `null` pour une leçon classique.
   const [passage, setPassage] = useState<PassageDTO | null>(null)
   const [originalPassage, setOriginalPassage] = useState<PassageDTO | null>(null)
@@ -177,6 +180,7 @@ export default function ContentEditorScreen() {
 
   const openLesson = useCallback(async (course: string, track: TreeTrack, unit: string, lesson: string) => {
     rememberPosition({ course, track: track.id, unit, lesson })
+    setSujetsOpen(false)
     setSelection({ course, unit, lesson })
     setTrackKind(track.kind)
     setTrackId(track.id)
@@ -455,6 +459,21 @@ export default function ContentEditorScreen() {
         <nav className="w-72 shrink-0 overflow-y-auto border-r-2 border-line px-3 py-3">
           {treeError && <p className="text-sm text-error">Erreur : {treeError}</p>}
           {!tree && !treeError && <p className="text-sm text-ink-faint">Chargement…</p>}
+          {tree?.some((course) => course.id === 'la-vie') && (
+            <button
+              type="button"
+              onClick={() => {
+                if (dirty && !window.confirm('Des modifications de la leçon ne sont pas enregistrées. Les abandonner ?')) return
+                setSelection(null)
+                setSujetsOpen(true)
+              }}
+              className={`mb-1 w-full rounded-lg px-2 py-1.5 text-left text-sm font-black ${
+                sujetsOpen ? 'bg-teal/15 text-teal-deep' : 'hover:bg-ink/5'
+              }`}
+            >
+              Liste des sujets de La vie
+            </button>
+          )}
           {tree?.map((course) => (
             <details key={course.id} className="mb-1" open>
               <summary className="cursor-pointer rounded-lg px-2 py-1.5 text-sm font-black">{course.name}</summary>
@@ -607,7 +626,9 @@ export default function ContentEditorScreen() {
           ))}
         </nav>
 
-        {!selection && (
+        {!selection && sujetsOpen && <SujetsEditor />}
+
+        {!selection && !sujetsOpen && (
           <div className="flex flex-1 items-center justify-center text-ink-faint">
             Choisis une leçon dans l'arborescence.
           </div>

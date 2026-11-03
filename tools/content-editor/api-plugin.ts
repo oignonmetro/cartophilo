@@ -781,6 +781,67 @@ export function contentEditorApi(): Plugin {
         sendJson(res, 405, { error: 'méthode non supportée' })
       })
 
+      // La liste des sujets de La vie (`sujets.yaml`, voir `subjectGroupSchema`) :
+      // lue en JSON, réécrite en entier (ajouts, suppressions, imports faits
+      // dans l'éditeur). Un sujet traité garde son `unit`.
+      server.middlewares.use('/api/sujets', async (req, res) => {
+        const file = join(contentDir, 'la-vie', 'sujets.yaml')
+        try {
+          if (req.method === 'GET') {
+            sendJson(res, 200, existsSync(file) ? (readYamlDoc(file).toJS() ?? []) : [])
+            return
+          }
+          if (req.method === 'PUT') {
+            const body = JSON.parse(await readBody(req)) as {
+              groups?: { title?: string; note?: string; subjects?: { title?: string; unit?: string }[] }[]
+            }
+            if (!Array.isArray(body.groups)) {
+              sendJson(res, 400, { error: 'groupes manquants' })
+              return
+            }
+            const doc = readYamlDoc(file)
+            const quoted = (text: string) => {
+              const node = new Scalar(text)
+              node.type = 'QUOTE_DOUBLE'
+              return node
+            }
+            const seen = new Set<string>()
+            const groups = new YAMLSeq()
+            for (const group of body.groups) {
+              const title = tidyLine(String(group.title ?? '')).trim()
+              const subjects = new YAMLSeq()
+              for (const subject of group.subjects ?? []) {
+                const text = tidyLine(String(subject.title ?? '')).trim()
+                if (!text || seen.has(text)) continue
+                seen.add(text)
+                if (subject.unit) {
+                  const map = new YAMLMap()
+                  map.set('title', quoted(text))
+                  map.set('unit', subject.unit)
+                  map.flow = true
+                  subjects.add(map)
+                } else subjects.add(quoted(text))
+              }
+              if (!title || subjects.items.length === 0) continue
+              const map = new YAMLMap()
+              map.set('group', quoted(title))
+              const note = tidyLine(String(group.note ?? '')).trim()
+              if (note) map.set('note', quoted(note))
+              map.set('subjects', subjects)
+              if (groups.items.length > 0) map.spaceBefore = true
+              groups.add(map)
+            }
+            doc.contents = groups
+            writeYamlDoc(file, doc, { indentSeq: true })
+            sendJson(res, 200, doc.toJS())
+            return
+          }
+          sendJson(res, 405, { error: 'méthode non supportée' })
+        } catch (error) {
+          sendJson(res, 500, { error: String((error as Error).message) })
+        }
+      })
+
       // Les définitions du glossaire d'un cours (`definitions.yaml`, voir
       // `src/content/definitions.ts`) : lues pour afficher les `[def]` d'un
       // rappel à leur place, réécrites quand on les retouche là.
