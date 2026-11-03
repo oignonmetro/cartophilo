@@ -1142,11 +1142,25 @@ function GlossarySearch({
   const found = useMemo(() => {
     if (!needle) return []
     const termOf = new Map(terms.map((term) => [term.id, term]))
-    return units.filter((unit) => {
+    // Rang d'une entrée : 0 titre identique à la recherche, 1 mot entier dans le
+    // titre, 2 fragment du titre, 3 sous-titre ou terme grec, 4 définition ;
+    // `null` si rien ne correspond. À rang égal, l'ordre de la piste est gardé.
+    const rank = (unit: Unit): number | null => {
       const term = termOf.get(unit.id)
-      const text = [unit.title, unit.subtitle, term?.title, term?.greek, term?.definition].filter(Boolean).join(' ')
-      return searchable(text).includes(needle)
-    })
+      const titles = [unit.title, term?.title].filter(Boolean).map((text) => searchable(text!))
+      if (titles.some((title) => title === needle)) return 0
+      if (titles.some((title) => ` ${title} `.includes(` ${needle} `))) return 1
+      if (titles.some((title) => title.includes(needle))) return 2
+      const others = [unit.subtitle, term?.greek].filter(Boolean).map((text) => searchable(text!))
+      if (others.some((text) => text.includes(needle))) return 3
+      if (term?.definition && searchable(term.definition).includes(needle)) return 4
+      return null
+    }
+    return units
+      .map((unit, index) => ({ unit, index, rank: rank(unit) }))
+      .filter((entry): entry is { unit: Unit; index: number; rank: number } => entry.rank !== null)
+      .sort((a, b) => a.rank - b.rank || a.index - b.index)
+      .map((entry) => entry.unit)
   }, [units, terms, needle])
 
   return (
