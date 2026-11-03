@@ -333,6 +333,25 @@ commentaire du paragraphe, pas un résumé d'une ligne :
   exemples et ce dont ils ont besoin, deux vertus, trois lectures) ;
 - **un piège** (`! …`) en fin : le contresens à éviter.
 
+Retouches de l'utilisateur sur Bichat, à anticiper :
+
+- **Pas de précaution de méthode dans l'intitulé ni dans la phrase** (« Bichat
+  ne nomme personne, et Huneman ne commente pas l'expression : il faut la
+  reconstruire ») : la question suffit, et le tableau dit lui-même, par sa
+  colonne de limite, que la piste est fragile.
+- **Pas d'attribution à un commentateur** (« d'après Huneman », « Huneman
+  note que », « Huneman le résume ») pour ce que le texte ou le raisonnement
+  établit déjà ; le nom ne reste que pour une position qui lui appartient en
+  propre (voir § 5, « Un commentateur »). Une phrase qui résume le texte se
+  dit sans lui.
+- **Cases de tableau courtes** : une référence principale par case ; les
+  textes d'appoint (une méthode, un second auteur) qui l'alourdissent sont
+  retirés.
+- **`tables:` dans la leçon** quand un tableau est écrit : une banque sur la
+  colonne qui s'apprend, une case seule (`cell`) sur chaque étiquette qu'on
+  ne peut pas formuler autrement, ici les trois termes de la définition
+  (`« fonctions »`, `« ensemble »`, `« qui résistent à la mort »`).
+
 ### La mise en relief du rappel
 
 Même règles que pour les unités-œuvres (`cours-traite`, « La mise en
@@ -368,15 +387,46 @@ chaque marque a une fonction. Les retouches de l'utilisateur sur
 - **Une notion et ce qu'on lui refuse** : la notion en `violet` gras, le
   verdict sur elle en `pink` (`**la** {violet}**physiologie**{/violet}
   **n'est** {pink}**pas une science reconnue**{/pink}`).
-- **Sobriété** : les couleurs marquent des mots ou des membres de phrase, pas
-  des phrases entières ; une phrase de simple transition, un contexte
-  historique ou un exemple restent nus. Un ensemble qu'on retient comme tel
-  (« le vivant est entouré d'une destruction permanente ») se marque
-  simplement en `__souligné__`.
+- **Dense, mais par petits groupes de mots** : les retouches de Bichat
+  colorent beaucoup (presque chaque phrase porte une ou deux marques), sur
+  un mot ou un membre court, jamais sur une phrase entière. Ce qui reste nu :
+  les mots de liaison, la transition, le contexte historique. Un ensemble
+  qu'on retient comme tel (« le vivant est entouré d'une destruction
+  permanente ») se marque en `__souligné__`, avec la couleur du rôle sur son
+  noyau (`__le vivant est entouré d'{red}une destruction permanente{/red}__`).
+- **Rôles qui reviennent d'une retouche à l'autre** :
+  - `violet` la notion, **chaque fois** qu'elle est le sujet de la phrase
+    (`vie`, `mort`, `santé`, `milieu`, `menace`), et le terme cité entre
+    guillemets (`{violet}« vie »{/violet}`) ;
+  - `coral` la conclusion d'une phrase ou d'un paragraphe, la thèse que
+    l'argument établit, et ce que le texte « fait comprendre » ; sur
+    l'intitulé d'une étape, son dernier membre (`Le principe de réaction est
+    le **{coral}principe de la vie{/coral}**`) ;
+  - `amber` l'articulation (les « trois temps » d'un paragraphe, chacun
+    marqué), la thèse épistémologique (ce qu'on ne connaît que par ses
+    effets), la nuance ou la prudence, la phrase de synthèse ;
+  - `yellow` les exemples, cas et images : les âges (l'enfant, l'adulte, le
+    vieillard), le pouls du fonctionnaire et du marathonien, « l'un se nourrit
+    de l'autre », la comparaison avec l'anatomie ;
+  - `sky` les noms des commentateurs et des auteurs convoqués
+    (`{sky}Huneman{/sky}`, `{sky}Canguilhem{/sky}`, `{sky}**Claude
+    Bernard**{/sky}`) ;
+  - `red` ou `pink` ce que l'auteur écarte (le calcul en physiologie, le
+    mécanisme, les « considérations abstraites », l'essence), et le cercle
+    vicieux qu'on lui oppose ; `green` le contraire retenu (l'« aperçu
+    général », ce qu'une phrase pose comme réponse).
 - **Une citation** se marque en `teal`, mais pas seulement ses guillemets :
   les mots clefs de la citation sont teintés aussi. On découpe donc la
-  citation : guillemet ouvrant `{teal}«{/teal}`, puis en teal les membres
-  décisifs, les mots de liaison restant nus (voir `content/philosophie.md`).
+  citation : guillemet ouvrant `{teal}« {/teal}`, puis en teal les membres
+  décisifs, les mots de liaison restant nus, le guillemet fermant avec le
+  dernier membre (`{teal}« {/teal}bientôt {teal}ils succomberaient{/teal}
+  s'ils n'avaient en eux {teal}un principe permanent de réaction »{/teal}`),
+  voir `content/philosophie.md`.
+- **Gras d'intitulé** : il ne couvre que ce qui est dit, ponctuation
+  comprise, et il se rompt autour d'une couleur (`**par une définition :**
+  {violet}**la vie**{/violet} **est**`). Une question posée dans
+  l'intitulé y est seule en gras (`**Que visent les « considérations
+  abstraites » ?**`), sans phrase de précaution sur les sources.
 - Reporter ces marques dans les cartes-explication (gras sur les termes clés
   et les conclusions, souligné sur les prémisses), et **garder les retouches
   de l'utilisateur** lors d'une réécriture.
