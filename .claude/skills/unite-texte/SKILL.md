@@ -345,17 +345,22 @@ chaque marque a une fonction. Les retouches de l'utilisateur sur
   l'argument (prémisses, membres d'une alternative). Les deux se combinent
   pour l'intitulé d'une étape.
 - **Couleurs**, le code fixe, toujours le même : `green` la thèse retenue ;
-  `red` ce qui est rejeté ou fait problème, `pink` l'autre pôle d'une
-  opposition (variante du rouge) ; `violet` les termes techniques et notions
+  `red` et `pink` ont la même valeur (le négatif, ce qui est rejeté, le
+  contraire, l'opposition) et alternent surtout pour la lisibilité : deux
+  membres négatifs voisins ne prennent pas la même couleur ; `violet` les termes techniques et notions
   clés ; `teal` les citations ; `sky` la structure et les sources ;
   `coral` les propriétés établies et les conclusions ; `yellow` les images
   et analogies ; `amber` libre, pour une nuance locale.
-- **Dans la phrase de thèse d'ouverture** : la question posée en `amber`, la
-  notion définie en `violet`, la définition en `coral`, chacun en gras
-  (`**Le texte répond à la question** {amber}**« qu'est-ce que la vie ? »**{/amber}
-  **par une définition :** {violet}**la vie**{/violet} **est**
+- **Dans la phrase de thèse d'ouverture**, seuls les mots qui portent
+  l'idée sont colorés, la phrase n'est pas entièrement en couleur : par
+  exemple la question en `amber`, la notion définie en `violet`, la
+  définition en `coral` (`**Le texte répond à la question**
+  {amber}**« qu'est-ce que la vie ? »**{/amber} **par une définition :**
+  {violet}**la vie**{/violet} **est**
   {coral}**l'ensemble des fonctions qui résistent à la mort**{/coral}**.**`).
-- **Les paires vert/rouge (ou vert/rose)** opposent les deux pôles d'une même
+  Chaque couleur garde son rôle ; ce découpage n'est qu'un exemple.
+- **Les paires vert/rouge (ou vert/rose, rouge et rose étant
+  interchangeables)** opposent les deux pôles d'une même
   phrase : ce que la vie n'est pas, `{red}une chose{/red}`, `{red}une
   substance{/red}`, mais `{green}__une activité, un ensemble de
   fonctions__{/green}` ; le statut de ce qu'on ignore en `pink`, ce que
@@ -368,9 +373,10 @@ chaque marque a une fonction. Les retouches de l'utilisateur sur
   historique ou un exemple restent nus. Un ensemble qu'on retient comme tel
   (« le vivant est entouré d'une destruction permanente ») se marque
   simplement en `__souligné__`.
-- **Une citation** entière en `{teal}« … »{/teal}` : seuls ses guillemets
-  sont teintés (`quoteEdges`) ; la découper en teal sur ses membres décisifs
-  quand elle est longue (voir `content/philosophie.md`).
+- **Une citation** se marque en `teal`, mais pas seulement ses guillemets :
+  les mots clefs de la citation sont teintés aussi. On découpe donc la
+  citation : guillemet ouvrant `{teal}«{/teal}`, puis en teal les membres
+  décisifs, les mots de liaison restant nus (voir `content/philosophie.md`).
 - Reporter ces marques dans les cartes-explication (gras sur les termes clés
   et les conclusions, souligné sur les prémisses), et **garder les retouches
   de l'utilisateur** lors d'une réécriture.
