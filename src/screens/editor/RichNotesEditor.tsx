@@ -1,8 +1,8 @@
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react'
 import { createRoot, type Root } from 'react-dom/client'
-import { INLINE_COLORS, NoteTable, type Tone } from '@/components/session/RuleNote'
-import { parseNotes } from '@/content/notes'
+import { INLINE_COLORS, type Tone } from '@/components/session/RuleNote'
 import { splitTermTitle } from '@/content/definitions'
+import { EditableTable } from './EditableTable'
 import type { NoteColor } from '@/content/schema'
 import {
   applyLinks,
@@ -317,9 +317,14 @@ class Controller {
     private cb: Callbacks,
     private selfId: string,
   ) {
+    // Une case de tableau s'écrit dans son propre champ : ni frappe, ni raccourci, ni collage ne passent par le rappel.
     const on = <K extends keyof HTMLElementEventMap>(type: K, fn: (event: HTMLElementEventMap[K]) => void) => {
-      root.addEventListener(type, fn)
-      this.cleanup.push(() => root.removeEventListener(type, fn))
+      const listener = (event: HTMLElementEventMap[K]) => {
+        if (event.target instanceof Element && event.target.closest('textarea')) return
+        fn(event)
+      }
+      root.addEventListener(type, listener)
+      this.cleanup.push(() => root.removeEventListener(type, listener))
     }
     on('keydown', (event) => this.onKeyDown(event))
     on('beforeinput', (event) => this.onBeforeInput(event))
@@ -469,6 +474,35 @@ class Controller {
     return changed
   }
 
+  private tableView(el: HTMLElement, src: string) {
+    return (
+      <TableBlock
+        src={src}
+        tone={this.tone}
+        onChange={(next) => this.setTable(el, next)}
+        onOpen={() => this.cb.onOpenTables()}
+        onRemove={() => this.removeTable(el)}
+        onInsertBefore={() => this.insertBefore(el)}
+      />
+    )
+  }
+
+  /**
+   * Un tableau retouché sur place : son élément reste (la case qu'on écrit
+   * garde son focus), seule sa source change, et le tableau se redessine par
+   * son propre rendu.
+   */
+  private setTable(el: HTMLElement, src: string) {
+    const meta = this.meta.get(el)
+    const index = this.elements().indexOf(el)
+    if (!meta || index === -1) return
+    this.meta.set(el, { ...meta, src })
+    const blocks = this.read()
+    this.meta.set(el, { ...meta, src, layout: this.keyOf(blocks[index]!, layoutOf(blocks, index)) })
+    this.tables.get(el)?.render(this.tableView(el, src))
+    this.commit(blocks, null, 'typing', false)
+  }
+
   private build(block: Block, layout: Layout): HTMLElement {
     const el = document.createElement(block.kind === 'paragraph' ? 'p' : 'div')
     el.dataset.kind = block.kind
@@ -476,15 +510,7 @@ class Controller {
     if (block.kind === 'table') {
       el.contentEditable = 'false'
       const root = createRoot(el)
-      root.render(
-        <TableBlock
-          src={block.src ?? ''}
-          tone={this.tone}
-          onOpen={() => this.cb.onOpenTables()}
-          onRemove={() => this.removeTable(el)}
-          onInsertBefore={() => this.insertBefore(el)}
-        />,
-      )
+      root.render(this.tableView(el, block.src ?? ''))
       this.tables.set(el, root)
       return el
     }
@@ -1211,32 +1237,39 @@ class Controller {
   }
 }
 
-/** Un tableau du rappel : non modifiable ici (l'onglet Tableaux l'édite en grille), mais déplaçable, supprimable. */
+/** Un tableau du rappel, édité sur place (voir `EditableTable`), déplaçable, supprimable ; ses exercices se règlent dans l'onglet Tableaux. */
 function TableBlock({
   src,
   tone,
+  onChange,
   onOpen,
   onRemove,
   onInsertBefore,
 }: {
   src: string
   tone: Tone
+  onChange: (src: string) => void
   onOpen: () => void
   onRemove: () => void
   onInsertBefore: () => void
 }) {
-  const block = parseNotes(src).find((item) => item.kind === 'table')
   const button =
     'rounded-md border-2 border-line bg-paper px-2 py-0.5 text-[0.7rem] font-bold text-ink-soft shadow-sm hover:border-teal hover:text-teal-deep'
   return (
-    <div className="group relative select-none">
-      {block?.kind === 'table' ? <NoteTable block={block} tone={tone} /> : <pre className="text-xs">{src}</pre>}
+    <div className="group relative">
+      <EditableTable src={src} tone={tone} onChange={onChange} />
       <div className="absolute -top-3 right-2 hidden gap-1 group-hover:flex">
         <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={onInsertBefore} className={button}>
           Texte au-dessus
         </button>
-        <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={onOpen} className={button}>
-          Modifier dans Tableaux
+        <button
+          type="button"
+          title="Tableau à trous, repérage : les exercices que le tableau donne"
+          onMouseDown={(event) => event.preventDefault()}
+          onClick={onOpen}
+          className={button}
+        >
+          Exercices
         </button>
         <button
           type="button"
