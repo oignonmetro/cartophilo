@@ -2,8 +2,7 @@
 # Encyclopedia of Philosophy, 2003, révision 2023), sections 2.2 à 2.5 :
 # les quatre chapitres des Premiers principes métaphysiques de la science
 # de la nature (1786). Les citations de Kant sont la traduction française
-# de la traduction anglaise de l'article, avec ses repères de l'édition de
-# l'Académie (volume:page).
+# de la traduction anglaise de l'article, situées par œuvre et section.
 #
 # Points laissés de côté : la bibliographie des commentateurs de chaque
 # chapitre (Pollok, Warren, Carrier, etc.) ; la preuve détaillée de la
@@ -43,7 +42,7 @@ lessons:
     {teal}« la composition de deux mouvements d'un seul et même point ne peut être pensée
     que de telle manière que l'un soit représenté dans l'espace absolu et que, à la place
     de l'autre, soit représenté un mouvement de l'espace relatif de même vitesse et de sens
-    opposé »{/teal} (4:490).
+    opposé »{/teal} (Phoronomie, théorème).
 
     **La preuve** examine les trois cas possibles de composition :
     - les deux mouvements ont {green}la même direction{/green} ;
@@ -55,9 +54,9 @@ lessons:
     vitesses) et les {violet}transformations galiléennes{/violet} de la cinématique.
 
     **À quoi sert le théorème.** Il sert de prémisse dans la Dynamique, pour inférer *a
-    priori* des forces à partir des mouvements composés qu'elles causent (4:497), et dans
+    priori* des forces à partir des mouvements composés qu'elles causent (Dynamique, proposition 1), et dans
     la Mécanique, quand Kant « construit la communication du mouvement », c'est-à-dire
-    déduit les lois du choc (4:546). Dans la lecture de Friedman, l'idée directrice est que
+    déduit les lois du choc (Mécanique, proposition 4). Dans la lecture de Friedman, l'idée directrice est que
     les catégories de la quantité de la première *Critique* garantissent que le mouvement
     est une grandeur, donc que la mathématique s'applique au mouvement des corps sous forme
     de cinématique.
@@ -109,7 +108,7 @@ lessons:
     un espace ne se contente pas d'y être : elle résiste à toute autre matière qui voudrait
     y entrer. On pourrait croire que la {violet}solidité{/violet} explique cette résistance,
     et c'est la thèse de {red}Lambert et d'autres{/red}, pour qui la matière la posséderait
-    « par sa seule existence » (4:497). Kant répond que ce n'est pas une explication :
+    « par sa seule existence » (Dynamique, proposition 1). Kant répond que ce n'est pas une explication :
     dire que la matière résiste parce qu'elle est solide revient à nommer la résistance,
     non à en rendre compte. Pour qu'une matière en repousse une autre, il faut qu'elle
     **agisse** sur elle, donc qu'elle ait une force. Si l'on presse la main sur une table,
@@ -123,14 +122,14 @@ lessons:
       {red}pénétrée{/red}, car la pénétrer exigerait une force compressive infinie,
       impossible.
 
-    **Proposition 4 : la matière est infiniment divisible** (4:503). Chaque espace est
+    **Proposition 4 : la matière est infiniment divisible** (Dynamique, proposition 4). Chaque espace est
     rempli par une force répulsive ; si l'on partage l'espace, on partage la matière.
     C'est un revirement sur la *Monadologie physique* de 1756, où Kant admettait forces
     attractives et répulsives mais refusait l'infinie divisibilité à ce qui constitue en
     dernier la matière : les monades ou points physiques. Le tournant critique l'explique en
     partie : puisque l'espace et la divisibilité ne sont que des phénomènes (seconde
     Antinomie de la *Critique de la raison pure*), on peut rejeter l'idée que les substances
-    simples précèdent les touts qu'elles composent (4:506).
+    simples précèdent les touts qu'elles composent (Dynamique, proposition 4, remarque).
 
     ! La preuve de la proposition 4 suppose plus que l'existence d'une force répulsive en
     chaque espace rempli : elle suppose que tout espace se divise en espaces plus petits,
@@ -145,7 +144,7 @@ lessons:
     answer: "Lambert"
     alt: []
   - id: ks2-l2-p3
-    sentence: "Selon Lambert et d'autres, la solidité est la propriété que posséderait la matière « par sa seule ___ » (4:497), ce que Kant juge incapable d'expliquer comment une matière résiste à la pénétration d'une autre."
+    sentence: "Selon Lambert et d'autres, la solidité est la propriété que posséderait la matière « par sa seule ___ » (Dynamique, proposition 1), ce que Kant juge incapable d'expliquer comment une matière résiste à la pénétration d'une autre."
     answer: "existence"
     alt: []
   - id: ks2-l2-p4
@@ -155,7 +154,7 @@ lessons:
   - id: ks2-l2-p5
     sentence: "L'infinie divisibilité de la matière est établie dans la proposition ___ de la Dynamique, comme conséquence de la nature des forces répulsives."
     answer: "4"
-    alt: ["quatre", "la proposition 4", "4:503"]
+    alt: ["quatre", "la proposition 4", "Dynamique, proposition 4"]
   - id: ks2-l2-p6
     sentence: "En admettant l'infinie divisibilité de la matière, Kant rompt avec sa *Monadologie physique*, où il la refusait à ce qui constitue en dernier la matière, à savoir les points physiques ou ___."
     answer: "monades"
@@ -165,7 +164,7 @@ lessons:
     answer: "Antinomie"
     alt: ["antinomie"]
   - id: ks2-l2-p8
-    sentence: "Une fois admis que l'espace et la divisibilité ne sont que des phénomènes, Kant peut rejeter l'idée, qui rendait nécessaire l'existence de substances simples, que celles-ci précèdent les ___ qu'elles composent (4:506)."
+    sentence: "Une fois admis que l'espace et la divisibilité ne sont que des phénomènes, Kant peut rejeter l'idée, qui rendait nécessaire l'existence de substances simples, que celles-ci précèdent les ___ qu'elles composent (Dynamique, proposition 4, remarque)."
     answer: "touts"
     alt: ["tout", "tous", "ensembles"]
 - id: ks2-l3
@@ -181,7 +180,7 @@ lessons:
     (proposition 4). On montre que cette stabilité serait impossible sans une seconde force
     qui équilibre la première.
     - {red}Seulement des forces répulsives{/red} : la matière « se disperserait à l'infini »
-      (4:508), car ni l'espace ni une autre matière ne pourraient la limiter ;
+      (Dynamique, proposition 5), car ni l'espace ni une autre matière ne pourraient la limiter ;
     - {red}Seulement des forces attractives{/red} : rien ne contrebalancerait l'attraction
       exercée, et l'univers s'effondrerait en un seul point ;
     - {green}conclusion{/green} : attraction et répulsion sont toutes deux essentielles à la
@@ -192,8 +191,8 @@ lessons:
     question métaphysique que Newton évitait en posant l'attraction de façon seulement
     mathématique : Newton « fait abstraction de toute hypothèse » sur la cause de
     l'attraction universelle, car cette question est « physique ou métaphysique, mais non
-    mathématique » (4:515). L'objection la plus courante est « qu'une matière ne peut agir
-    immédiatement là où elle n'est pas » (4:513). Kant répond que **l'action à distance
+    mathématique » (Dynamique, proposition 7, remarque). L'objection la plus courante est « qu'une matière ne peut agir
+    immédiatement là où elle n'est pas » (Dynamique, proposition 7, remarque). Kant répond que **l'action à distance
     n'est pas plus problématique que l'action par contact** (choc ou pression), puisque dans
     les deux cas un corps agit en dehors de lui-même. La proposition 8 conclut que les
     forces attractives agissent immédiatement à l'infini, et suggère comment construire la
@@ -208,11 +207,11 @@ lessons:
     | métaphysico-dynamique         | forces motrices fondamentales        |
 
     Le premier a un avantage : ses postulats peuvent être représentés, et même « vérifiés »
-    (4:525), mathématiquement, alors que la possibilité des forces fondamentales ne peut
+    (Dynamique, Remarque générale), mathématiquement, alors que la possibilité des forces fondamentales ne peut
     jamais être comprise. Mais deux inconvénients l'emportent. Il présuppose
     l'**impénétrabilité absolue**, donc admet à son fondement un {red}« concept vide »{/red}.
     Et en renonçant à toute force inhérente à la matière, il laisse à l'imagination plus de
-    liberté que ne le permet la prudence de la philosophie (4:525).
+    liberté que ne le permet la prudence de la philosophie (Dynamique, Remarque générale).
 
     ! Ne pas lire Kant comme un partisan des atomes : il rejette l'atomisme parce qu'il
     repose sur un concept vide, non parce qu'il serait invérifiable.
@@ -274,7 +273,7 @@ lessons:
     comme l'agrégat du {violet}mobile{/violet} dans un espace déterminé, et la quantité de
     mouvement (en termes actuels, l'impulsion i = mv). Il soutient que la quantité de
     matière, comparée à toute autre, ne peut s'estimer que par la quantité de mouvement à
-    vitesse donnée (4:537). La preuve procède par élimination :
+    vitesse donnée (Mécanique, proposition 1). La preuve procède par élimination :
     - {red}compter les parties{/red} : impossible, puisque la Dynamique a établi que toute
       matière est infiniment divisible ;
     - {red}considérer le volume{/red} : impossible, puisque des matières différentes ont des
@@ -283,7 +282,7 @@ lessons:
       constante et comparer les quantités de mouvement.
 
     **Proposition 2, première loi : la quantité totale de matière reste la même dans tous les
-    changements de la matière** (4:541). La preuve repose sur le principe de la **première
+    changements de la matière** (Mécanique, proposition 2). La preuve repose sur le principe de la **première
     Analogie de l'expérience** (aucune substance ne naît ni ne périt dans le changement) et
     sur l'identification de ce qui, dans la matière, doit être substantiel : Kant tient pour
     acquis que le sujet ultime de tous les accidents est le mobile dans l'espace, dont la
@@ -339,21 +338,21 @@ lessons:
     mais seulement des relations externes dans l'espace. Kant ajoute entre parenthèses une
     version de la loi d'inertie plus proche de Newton : tout corps persiste dans son état de
     repos ou de mouvement, avec la même direction et la même vitesse, s'il n'est pas contraint
-    par une cause externe de quitter cet état (4:543). Comme la deuxième loi n'est pas
+    par une cause externe de quitter cet état (Mécanique, proposition 3). Comme la deuxième loi n'est pas
     identique à la loi newtonienne d'inertie, il faudrait de l'argumentation pour montrer
     que la première entraîne la seconde, et au moyen de quelles hypothèses additionnelles.
 
     **L'inertie, c'est l'absence de vie.** La remarque oppose l'inertie à la **vie**, capacité
     d'une substance de se déterminer à agir à partir d'un principe interne. L'inertie ne
-    désigne donc pas « une tendance positive à conserver son état » (4:544), mais ce que le
+    désigne donc pas « une tendance positive à conserver son état » (Mécanique, proposition 3, remarque), mais ce que le
     corps ne fait pas : son manque de vie. C'est pourquoi la science de la nature en dépend :
     la nier serait l'{red}hylozoïsme{/red}, « la mort de toute philosophie de la nature »
-    (4:544). Le raisonnement est le suivant. Si la matière pouvait changer d'état d'elle-même,
+    (Mécanique, proposition 3, remarque). Le raisonnement est le suivant. Si la matière pouvait changer d'état d'elle-même,
     comme un vivant, aucune cause extérieure ne permettrait plus de prévoir ses états, et la
     physique serait impossible.
 
     **Bannir la « force d'inertie ».** Kant demande que la terminologie de la *vis inertiae*
-    soit « entièrement bannie » de la science de la nature (4:550) : elle contient une
+    soit « entièrement bannie » de la science de la nature (Mécanique, proposition 4, remarque) : elle contient une
     contradiction dans les termes, elle risque de confondre la loi d'inertie (l'absence de
     vie) avec la loi de la réaction dans toute communication de mouvement, et elle entretient
     l'idée fausse de ceux qui connaissent mal les lois mécaniques. Si l'inertie était une
