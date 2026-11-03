@@ -40,14 +40,54 @@ function payload(groups: GroupDTO[]) {
   return { groups }
 }
 
-/** Clef de comparaison : les espaces insécables des intitulés ne les distinguent pas. */
-const key = (title: string) => title.replace(/[  ]/g, ' ').trim()
+/**
+ * Clef de comparaison : deux intitulés qui ne diffèrent que par la casse, les
+ * accents, la ponctuation, les guillemets ou les espaces (insécables compris)
+ * sont des quasi-doublons.
+ */
+const key = (title: string) =>
+  title
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
 
-/** Ce que l'import va faire d'une liste collée : les groupes touchés et les doublons écartés. */
-function parseImport(text: string, target: string, existing: Set<string>) {
-  const added: { group: string; title: string }[] = []
+const OPEN_QUESTION =
+  /^(?:qu['’ ]|que |quel|qui |quoi|comment|pourquoi|ou |d ou|quand|combien|en quoi|a quoi|de quoi|pour quoi|dans quelle mesure|jusqu ou)/
+
+/**
+ * Le type d'intitulé d'un sujet, d'après sa forme (voir les groupes de
+ * `sujets.yaml`) : citation entre guillemets ; avec « ? », question ouverte si
+ * elle commence par un mot interrogatif, sinon fermée ; sans « ? », triplet
+ * « X, Y et Z », couple « X et Y » ou « X ou Y », sinon terme seul. Renvoie le
+ * groupe existant de ce type, ou `null` quand il n'y en a pas (le groupe par
+ * défaut s'applique alors). Une heuristique : l'aperçu de l'import laisse
+ * corriger chaque sujet.
+ */
+function classify(title: string, groups: GroupDTO[]): string | null {
+  const text = title.trim()
+  const lower = key(text)
+  let kind: string
+  if (/^[«"“]/.test(text)) kind = 'citation'
+  else if (/\?\s*$/.test(text)) kind = OPEN_QUESTION.test(lower) ? 'ouvert' : 'ferm'
+  else if (/^[^,]+,[^,]+ et [^,]+$/.test(text) || /^[^,]+,[^,]+,[^,]+$/.test(text)) kind = 'triplet'
+  else if (/ (?:et|ou) /.test(text) || /^[^,]+,[^,]+$/.test(text)) kind = 'couple'
+  else kind = 'terme'
+  return groups.find((g) => key(g.title).includes(kind))?.title ?? null
+}
+
+interface ImportRow {
+  group: string
+  title: string
+}
+
+/** Ce que l'import va faire d'une liste collée : les sujets et leur groupe, les doublons écartés. */
+function parseImport(text: string, target: string, existing: Set<string>, groups: GroupDTO[], autoSort: boolean) {
+  const added: ImportRow[] = []
   let duplicates = 0
   let group = target
+  let explicit = false
   const seen = new Set(existing) // clefs, voir `key`
   for (const rawLine of text.split(/\r?\n/)) {
     const line = rawLine.trim()
@@ -55,12 +95,13 @@ function parseImport(text: string, target: string, existing: Set<string>) {
     const heading = /^#{1,6}\s*(.+)$/.exec(line)
     if (heading) {
       group = heading[1]!.trim()
+      explicit = true
       continue
     }
     // Puces, numéros et guillemets de tableur : « - … », « 12. … », « "…" ».
     const title = line
       .replace(/^(?:[-*•]\s+|\d+[.)]\s+)/, '')
-      .replace(/^["«]\s*|\s*["»]$/g, '')
+      .replace(/^"\s*|\s*"$/g, '')
       .trim()
     if (!title) continue
     if (seen.has(key(title))) {
@@ -68,9 +109,22 @@ function parseImport(text: string, target: string, existing: Set<string>) {
       continue
     }
     seen.add(key(title))
-    added.push({ group, title })
+    // Sous une ligne « # Titre », le groupe est celui qu'on a nommé.
+    added.push({ group: (autoSort && !explicit ? classify(title, groups) : null) ?? group, title })
   }
   return { added, duplicates }
+}
+
+/** Les sujets de la liste qui ne diffèrent que par la casse, la ponctuation ou les accents. */
+function findDuplicates(groups: GroupDTO[]) {
+  const byKey = new Map<string, { group: number; subject: SubjectDTO }[]>()
+  groups.forEach((g, group) =>
+    g.subjects.forEach((subject) => {
+      const k = key(subject.title)
+      byKey.set(k, [...(byKey.get(k) ?? []), { group, subject }])
+    }),
+  )
+  return [...byKey.values()].filter((entries) => entries.length > 1)
 }
 
 export function SujetsEditor() {
@@ -83,6 +137,10 @@ export function SujetsEditor() {
   const [importOpen, setImportOpen] = useState(false)
   const [importTarget, setImportTarget] = useState(0)
   const [importNote, setImportNote] = useState<string | null>(null)
+  const [autoSort, setAutoSort] = useState(true)
+  // Groupe choisi à la main pour un sujet de l'aperçu, qui l'emporte sur la détection.
+  const [overrides, setOverrides] = useState<Record<string, string>>({})
+  const [duplicatesOpen, setDuplicatesOpen] = useState(false)
 
   const load = useCallback(async () => {
     try {
@@ -136,7 +194,7 @@ export function SujetsEditor() {
   }, [save])
 
   const all = useMemo(() => new Set((groups ?? []).flatMap((g) => g.subjects.map((s) => key(s.title)))), [groups])
-  const total = all.size
+  const total = (groups ?? []).reduce((sum, g) => sum + g.subjects.length, 0)
 
   function update(index: number, patch: Partial<GroupDTO>) {
     setGroups((current) => current!.map((g, i) => (i === index ? { ...g, ...patch } : g)))
@@ -171,14 +229,15 @@ export function SujetsEditor() {
   }
 
   const preview = useMemo(
-    () => (groups && importOpen ? parseImport(importText, groups[importTarget]?.title ?? '', all) : null),
-    [groups, importOpen, importText, importTarget, all],
+    () => (groups && importOpen ? parseImport(importText, groups[importTarget]?.title ?? '', all, groups, autoSort) : null),
+    [groups, importOpen, importText, importTarget, all, autoSort],
   )
 
   function runImport() {
     if (!groups || !preview || preview.added.length === 0) return
     const next = groups.map((g) => ({ ...g, subjects: [...g.subjects] }))
-    for (const { group, title } of preview.added) {
+    for (const { group: detected, title } of preview.added) {
+      const group = overrides[title] ?? detected
       let target = next.find((g) => g.title === group)
       if (!target) {
         target = { title: group, subjects: [] }
@@ -193,10 +252,12 @@ export function SujetsEditor() {
         '. Pensez à enregistrer.',
     )
     setImportText('')
+    setOverrides({})
   }
 
   if (!groups) return <p className="p-6 text-sm text-ink-faint">{error ? `Erreur : ${error}` : 'Chargement…'}</p>
 
+  const duplicates = findDuplicates(groups)
   const needle = filter.trim().toLowerCase()
 
   return (
@@ -216,6 +277,16 @@ export function SujetsEditor() {
           className="rounded-lg border-2 border-line px-3 py-1 text-sm font-bold hover:bg-ink/5"
         >
           ⇪ {importOpen ? 'Fermer l’import' : 'Importer une liste…'}
+        </button>
+        <button
+          type="button"
+          onClick={() => setDuplicatesOpen((open) => !open)}
+          title="Sujets qui ne diffèrent que par la casse, la ponctuation ou les accents"
+          className={`rounded-lg border-2 px-3 py-1 text-sm font-bold hover:bg-ink/5 ${
+            duplicates.length ? 'border-amber-deep text-amber-deep' : 'border-line'
+          }`}
+        >
+          Doublons ({duplicates.length})
         </button>
         <button type="button" onClick={addGroup} className="rounded-lg border-2 border-line px-3 py-1 text-sm font-bold hover:bg-ink/5">
           + Groupe
@@ -241,6 +312,33 @@ export function SujetsEditor() {
       </div>
 
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-3">
+        {duplicatesOpen && (
+          <section className="mb-4 flex flex-col gap-3 rounded-xl border-2 border-line p-3">
+            {duplicates.length === 0 && <p className="text-sm text-ink-soft">Aucun doublon ni quasi-doublon.</p>}
+            {duplicates.map((entries) => (
+              <div key={key(entries[0]!.subject.title)} className="flex flex-col gap-1">
+                {entries.map(({ group, subject }) => (
+                  <div key={`${group}:${subject.title}`} className="flex items-center gap-2 rounded-lg px-2 py-1 text-sm hover:bg-ink/5">
+                    <span className="flex-1">{subject.title}</span>
+                    <span className="text-xs text-ink-faint">{groups[group]!.title}</span>
+                    {subject.unit && (
+                      <span className="rounded bg-teal/15 px-1 text-[0.6rem] font-black text-teal-deep uppercase">traité</span>
+                    )}
+                    <button
+                      type="button"
+                      title="Retirer ce sujet"
+                      onClick={() => removeSubject(group, subject)}
+                      className="rounded px-1 text-ink-faint hover:text-error"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </section>
+        )}
+
         {importOpen && (
           <section className="mb-4 flex flex-col gap-2 rounded-xl border-2 border-line p-3">
             <p className="text-xs text-ink-soft">
@@ -260,6 +358,10 @@ export function SujetsEditor() {
                   </option>
                 ))}
               </select>
+            </label>
+            <label className="flex items-center gap-2 text-xs font-bold">
+              <input type="checkbox" checked={autoSort} onChange={(event) => setAutoSort(event.target.checked)} />
+              Ranger automatiquement selon la forme de l’intitulé (les lignes sous un « # Titre » restent dans ce groupe)
             </label>
             <textarea
               value={importText}
@@ -287,6 +389,30 @@ export function SujetsEditor() {
                     : '')}
               </span>
             </div>
+            {preview && preview.added.length > 0 && (
+              <div className="flex max-h-72 flex-col gap-1 overflow-y-auto">
+                {preview.added.map((row) => {
+                  const names = groups.map((g) => g.title)
+                  if (!names.includes(row.group)) names.push(row.group)
+                  return (
+                    <div key={row.title} className="flex items-center gap-2 text-sm">
+                      <span className="flex-1">{row.title}</span>
+                      <select
+                        value={overrides[row.title] ?? row.group}
+                        onChange={(event) => setOverrides((current) => ({ ...current, [row.title]: event.target.value }))}
+                        className="rounded-lg border-2 border-line bg-paper px-1 py-0.5 text-xs"
+                      >
+                        {names.map((name) => (
+                          <option key={name} value={name}>
+                            {name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
           </section>
         )}
 
