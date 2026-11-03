@@ -333,6 +333,48 @@ commentaire du paragraphe, pas un résumé d'une ligne :
   exemples et ce dont ils ont besoin, deux vertus, trois lectures) ;
 - **un piège** (`! …`) en fin : le contresens à éviter.
 
+### La mise en relief du rappel
+
+Même règles que pour les unités-œuvres (`cours-traite`, « La mise en
+relief », et `content/philosophie.md`) : le rappel se lit d'un coup d'œil, et
+chaque marque a une fonction. Les retouches de l'utilisateur sur
+`bichat-vie-mort` les ont confirmées sur une unité de texte.
+
+- **Gras** sur le contenu décisif et les conclusions, pas sur la formule qui
+  l'introduit ; **souligné** (`__…__`) sur les propositions qui portent
+  l'argument (prémisses, membres d'une alternative). Les deux se combinent
+  pour l'intitulé d'une étape.
+- **Couleurs**, le code fixe, toujours le même : `green` la thèse retenue ;
+  `red` ce qui est rejeté ou fait problème, `pink` l'autre pôle d'une
+  opposition (variante du rouge) ; `violet` les termes techniques et notions
+  clés ; `teal` les citations ; `sky` la structure et les sources ;
+  `coral` les propriétés établies et les conclusions ; `yellow` les images
+  et analogies ; `amber` libre, pour une nuance locale.
+- **Dans la phrase de thèse d'ouverture** : la question posée en `amber`, la
+  notion définie en `violet`, la définition en `coral`, chacun en gras
+  (`**Le texte répond à la question** {amber}**« qu'est-ce que la vie ? »**{/amber}
+  **par une définition :** {violet}**la vie**{/violet} **est**
+  {coral}**l'ensemble des fonctions qui résistent à la mort**{/coral}**.**`).
+- **Les paires vert/rouge (ou vert/rose)** opposent les deux pôles d'une même
+  phrase : ce que la vie n'est pas, `{red}une chose{/red}`, `{red}une
+  substance{/red}`, mais `{green}__une activité, un ensemble de
+  fonctions__{/green}` ; le statut de ce qu'on ignore en `pink`, ce que
+  l'on peut malgré tout savoir en `amber`.
+- **Une notion et ce qu'on lui refuse** : la notion en `violet` gras, le
+  verdict sur elle en `pink` (`**la** {violet}**physiologie**{/violet}
+  **n'est** {pink}**pas une science reconnue**{/pink}`).
+- **Sobriété** : les couleurs marquent des mots ou des membres de phrase, pas
+  des phrases entières ; une phrase de simple transition, un contexte
+  historique ou un exemple restent nus. Un ensemble qu'on retient comme tel
+  (« le vivant est entouré d'une destruction permanente ») se marque
+  simplement en `__souligné__`.
+- **Une citation** entière en `{teal}« … »{/teal}` : seuls ses guillemets
+  sont teintés (`quoteEdges`) ; la découper en teal sur ses membres décisifs
+  quand elle est longue (voir `content/philosophie.md`).
+- Reporter ces marques dans les cartes-explication (gras sur les termes clés
+  et les conclusions, souligné sur les prémisses), et **garder les retouches
+  de l'utilisateur** lors d'une réécriture.
+
 **Paragraphe long, découpé en extraits** (une fiche linéaire qui explique
 extrait par extrait) : une seule leçon pour le paragraphe, dont le rappel
 s'ouvre sur une vue d'ensemble du mouvement (affichée avec le paragraphe
