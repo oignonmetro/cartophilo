@@ -455,12 +455,9 @@ class Controller {
       this.meta.set(el, meta)
       return el
     })
-    next.forEach((el, i) => {
-      if (this.root.children[i] !== el) {
-        this.root.insertBefore(el, this.root.children[i] ?? null)
-        changed = true
-      }
-    })
+    // Les blocs périmés partent d'abord : sinon ils décalent les autres, qu'il
+    // faudrait déplacer, et déplacer un élément fait perdre le focus à la case
+    // de tableau qu'il contient (on n'y écrirait qu'une lettre à la fois).
     for (const node of Array.from(this.root.childNodes)) {
       if (node instanceof HTMLElement && next.includes(node)) continue
       const table = node instanceof HTMLElement ? this.tables.get(node) : undefined
@@ -471,6 +468,12 @@ class Controller {
       node.remove()
       changed = true
     }
+    next.forEach((el, i) => {
+      if (this.root.children[i] !== el) {
+        this.root.insertBefore(el, this.root.children[i] ?? null)
+        changed = true
+      }
+    })
     return changed
   }
 
