@@ -127,15 +127,22 @@ cartes-explication).
       dit, suppose ou permet d'en penser (chez Montaigne, la vie qui
       fonctionne à travers l'anomalie, les membres de l'enfant sans tête
       « nourris et vivants », un vivant ou deux). Ne garder que ce que le
-      texte autorise vraiment ; chaque enjeu va à l'extrait qui le porte.
+      texte autorise vraiment. Portées et confrontations vont aux leçons
+      de prolongement (§ 3), jamais dans les leçons de texte. Un texte qui
+      ne parle de la vie qu'indirectement (l'âme chez Aristote) reçoit en
+      plus l'analyse explicite du concept : sa définition, son statut
+      ontologique et épistémologique, ses rapports aux notions voisines
+      (corps, âme, mort, vivant…), et les titres disent, autant que le
+      propos le permet sans le forcer, quelque chose de la vie.
    5. **Les mouvements et l'explication linéaire** : découper le texte selon
       les arguments distingués, en mouvements (repérés par leurs lignes ou
       leurs paragraphes, chacun avec son rôle : pose, réfute, généralise,
       démontre, conclut), puis réorganiser tout ce qui précède linéairement,
       « extrait -> explication », chaque extrait cité en entier, dans
-      l'ordre, et chaque argument et chaque portée à l'endroit du texte qui
-      les porte ; une synthèse par mouvement (ce qui y a été établi), une
-      conclusion. C'est la forme de la fiche de Montaigne
+      l'ordre, et chaque argument à l'endroit du texte qui le porte ; une
+      synthèse par mouvement (ce qui y a été établi), une conclusion ; les
+      portées et les confrontations à part, après l'explication. C'est, pour
+      l'explication, la forme de la fiche de Montaigne
       (`exemples/montaigne-II-30-analyse.txt`, telle que la conversation l'a rendue, avant les retouches) : préalables (thèse,
       mouvements, glossaire), puis les mouvements extrait par extrait. Le
       découpage en extraits est celui de l'unité (§ 1, « Paragraphe long,
@@ -176,13 +183,12 @@ cartes-explication).
    notions, les positions rivales et les enjeux, les trous suivent ce qu'elle
    a jugé décisif. Ce que l'analyse remarque sur la manière (la précision
    d'un récit, une prudence de témoin) se dit dans le rappel, sans faire
-   trouer chaque détail qui l'illustre (§ 5, règle 7). Les portées vont dans
-   le rappel et les cartes de l'extrait qui les porte ; la conclusion de
-   l'analyse, qui les récapitule, ne devient pas à son tour une leçon de
-   prolongement : chez Montaigne, la conclusion convertie telle quelle
-   (« conjonction », « regarde », « féconde ») redisait en réponses vagues
-   ce que les extraits avaient déjà fait apprendre, et l'utilisateur l'a
-   supprimée.
+   trouer chaque détail qui l'illustre (§ 5, règle 7). Portées et
+   confrontations vont en prolongement (§ 3), avec leurs cartes. Ce
+   prolongement apporte du neuf et ne récapitule pas : chez Montaigne, la
+   conclusion de l'analyse convertie telle quelle (« conjonction »,
+   « regarde », « féconde ») redisait en réponses vagues ce que les extraits
+   avaient déjà fait apprendre, et l'utilisateur l'a supprimée.
 5. **Le dire dans le compte rendu** (§ 10) : l'unité repose sur ma propre
    analyse, avec les sources consultées (notebook, édition, recherches) et
    les points d'interprétation où une autre lecture était possible.
@@ -311,14 +317,23 @@ voisins, place dans l'œuvre) vont là, pas dans les paragraphes — sauf quand
 le commentaire les développe à propos d'une ligne précise du texte : elles
 suivent alors le commentaire (§ 6, « Tout le commentaire »).
 
-**Leçons de prolongement** : leur pendant après les paragraphes, pour ce que
-le commentaire développe *après* le texte sans le commenter ligne à ligne (un
-exposé de fond, une notion voisine, la conclusion d'un essai thématique).
-Même forme qu'une introduction : `label: "Prolongement"`, pas de `text`, un
-rappel et des cartes-explication. Le choix entre les deux suit l'ordre du
-commentaire : ce qui prépare la lecture va en introduction, ce qui la
-prolonge va en prolongement. Pour faire apprendre un autre texte, c'est une
-ouverture (§ 6), avec son texte.
+**Leçons de prolongement** : une ou deux, leur pendant à la fin de l'unité,
+après les paragraphes. Elles reçoivent ce que le commentaire développe *après*
+le texte sans le commenter ligne à ligne (un exposé de fond, une notion
+voisine, la conclusion d'un essai thématique), et, **toujours, les portées et
+les confrontations** : la leçon de texte explique le texte, et rien d'autre ne
+s'y mêle (demandé par l'utilisateur sur `aristote-ame-vue-oeil` ; modèle de
+construction : les leçons `o1` et `o2` de `bichat-vie-mort`). Une leçon-paragraphe
+garde seulement une phrase qui dit ce que le passage établit pour le concept de
+l'épreuve. Les passages parallèles qui servent à comprendre une ligne restent
+dans sa leçon ; ceux qui en tirent une thèse sur autre chose passent en
+prolongement. S'il y a deux leçons, l'une pour les portées (le concept), l'autre
+pour les confrontations (les auteurs et les débats). Même forme qu'une
+introduction : `label: "Prolongement"`, pas de `text`, un rappel et des
+cartes-explication. Avec un commentaire, ce qui prépare la lecture va en
+introduction, ce qui la prolonge en prolongement. Pour faire apprendre un autre
+texte, c'est une ouverture (§ 6), avec son texte, placée juste après les
+paragraphes et avant les prolongements.
 
 ## 4. Le rappel de chaque paragraphe
 
@@ -595,8 +610,9 @@ ouvrir l'app dans le navigateur : l'utilisateur regarde l'unité en ligne.
 Pour toute l'unité, vérifier :
 
 - [ ] des leçons d'introduction si le texte est difficile, et de
-      prolongement si le commentaire continue après le texte, chacune avec
-      son rappel et ses cartes ;
+      prolongement pour les portées, les confrontations et ce que le
+      commentaire développe après le texte, chacune avec son rappel et ses
+      cartes ; aucune portée ni confrontation dans une leçon de texte ;
 - [ ] un rappel complet (thèse, argument, tableau s'il y a lieu, piège) pour
       chaque paragraphe ;
 - [ ] chaque trou choisi d'après la règle (§ 5) : thèse d'abord, ce que le
@@ -610,8 +626,8 @@ Pour toute l'unité, vérifier :
 - [ ] sans commentaire : l'analyse écrite avant la première leçon, et ce
       qui ne sort pas du texte vérifié ou signalé ; les renvois cités dans
       la traduction de l'unité, d'après son édition ; des portées choisies
-      pour ce texte, placées à l'extrait qui les porte, sans leçon qui les
-      récapitule ;
+      pour ce texte, passées domaine par domaine (§ 0), qui apprennent du
+      neuf au lieu de récapituler ;
 - [ ] `version:` du cours incrémentée.
 
 ## 10. Terminer
