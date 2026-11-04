@@ -178,7 +178,15 @@ export default function ContentEditorScreen() {
     void loadTree()
   }, [loadTree])
 
+  // Enregistrement automatique en quittant une leçon modifiée : `openLesson`
+  // est défini avant `save`, d'où ces références vers leurs versions à jour.
+  const saveRef = useRef<() => Promise<boolean>>(async () => true)
+  const dirtyRef = useRef(false)
+  dirtyRef.current = dirty
+
   const openLesson = useCallback(async (course: string, track: TreeTrack, unit: string, lesson: string) => {
+    // Si l'enregistrement échoue, on reste sur la leçon pour ne rien perdre.
+    if (dirtyRef.current && !(await saveRef.current())) return
     rememberPosition({ course, track: track.id, unit, lesson })
     setSujetsOpen(false)
     setSelection({ course, unit, lesson })
@@ -323,8 +331,8 @@ export default function ContentEditorScreen() {
     [loadTree],
   )
 
-  const save = useCallback(async () => {
-    if (!selection) return
+  const save = useCallback(async (): Promise<boolean> => {
+    if (!selection) return true
     setStatus('saving')
     setError(null)
     try {
@@ -373,11 +381,14 @@ export default function ContentEditorScreen() {
       // ne rouvre pas complètement l'éditeur.
       // Le repère d'une leçon de texte s'y affiche aussi.
       if (title !== originalTitle || passage?.label !== originalPassage?.label) void loadTree()
+      return true
     } catch (err) {
       setStatus('error')
       setError(String((err as Error).message))
+      return false
     }
   }, [selection, title, originalTitle, notes, defs, originalDefs, points, passage, originalPassage, tables, loadTree])
+  saveRef.current = save
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
