@@ -154,7 +154,7 @@ def texte_envoye(entree, j, q):
     """La question telle qu'elle part : bornée en longueur, et sans redite des passages connus."""
     vus = deja_cites(entree, j)
     # une thèse se démontre avec tous ses passages, même déjà donnés
-    suite = [BREF] + ([DEJA.format(passages=" ; ".join(vus))] if vus and q["phase"] not in ("D", "F", "G") else [])
+    suite = [BREF] + ([DEJA.format(passages=" ; ".join(vus))] if vus and q["phase"] not in ("D", "E", "F", "G") else [])
     return q["texte"] + " " + " ".join(suite)
 
 
