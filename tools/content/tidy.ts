@@ -85,6 +85,12 @@ function tidySpaces(line: string): string {
   return nbspQuotes(out.replace(/ +$/, ''))
 }
 
+/** Ce qui peut séparer un guillemet de son mot : des espaces, et les marques `{teal}`, `{/teal}`, `**`, `*`, `__`, `` ` ``. */
+const QUOTE_GAP = '[ \\u00a0\\u202f]*(?:(?:\\{/?\\w+\\}|\\*+|__|`)[ \\u00a0\\u202f]*)*'
+const QUOTE_SPACES = /[   ]/g
+const AFTER_OPENING_QUOTE = new RegExp(`«(${QUOTE_GAP})`, 'g')
+const BEFORE_CLOSING_QUOTE = new RegExp(`(${QUOTE_GAP})»`, 'g')
+
 /**
  * Les guillemets français prennent une espace insécable à l'intérieur
  * (« ainsi »), qu'on ait tapé une espace ordinaire, plusieurs, ou aucune :
@@ -93,12 +99,24 @@ function tidySpaces(line: string): string {
  * s'affiche. L'espace fine insécable déjà là est gardée. Un » qui ouvre une
  * ligne garde l'indentation qui le précède : dans un bloc YAML, une
  * insécable en tête de ligne rendrait le fichier illisible.
+ *
+ * Les marques ne comptent pas : l'espace d'un guillemet teinté seul peut se
+ * trouver de l'autre côté de sa marque (`{teal}«{/teal}` suivi d'une espace),
+ * et en poser une sans regarder au-delà en ferait deux à l'écran. Entre le
+ * guillemet et le mot, il n'en reste donc qu'une, collée au guillemet.
  */
 export function nbspQuotes(line: string): string {
+  const quoteSpace = (gap: string) => (gap.includes(' ') ? ' ' : ' ')
+  const marksOf = (gap: string) => gap.replace(QUOTE_SPACES, '')
   return line
-    .replace(/« */g, (match, at: number) => (/[  ]/.test(line[at + match.length] ?? '') ? '«' : '« '))
-    .replace(/([^\s  ]) *»/g, (_, before: string) => `${before} »`)
-    .replace(/« (?=$)/g, '«')
+    .replace(AFTER_OPENING_QUOTE, (match, gap: string, at: number, whole: string) =>
+      at + match.length === whole.length ? `«${marksOf(gap)}` : `«${quoteSpace(gap)}${marksOf(gap)}`,
+    )
+    .replace(BEFORE_CLOSING_QUOTE, (match, gap: string, at: number) => {
+      if (at > 0) return `${marksOf(gap)}${quoteSpace(gap)}»`
+      const marks = marksOf(gap)
+      return marks ? `${/^\s*/.exec(gap)![0]}${marks}${quoteSpace(gap)}»` : match
+    })
 }
 
 /** Met en forme un paragraphe (des lignes consécutives non vides). */

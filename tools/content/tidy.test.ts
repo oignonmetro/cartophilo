@@ -110,6 +110,56 @@ describe('nbspQuotes', () => {
   })
 })
 
+describe('nbspQuotes, guillemet seul en couleur', () => {
+  const N = ' '
+
+  test('n’ajoute pas de seconde espace derrière une marque', () => {
+    expect(tidyText(`{teal}«{/teal}${N}une somme`)).toBe(`{teal}«${N}{/teal}une somme`)
+    expect(tidyText(`une somme${N}{teal}»{/teal} a`)).toBe(`une somme{teal}${N}»{/teal} a`)
+  })
+
+  test('une espace ordinaire de l’autre côté de la marque ne compte pas en plus', () => {
+    expect(tidyText(`{teal}«{/teal} une`)).toBe(`{teal}«${N}{/teal}une`)
+    expect(tidyText(`force{/teal} {teal}»{/teal} a`)).toBe(`force{/teal}{teal}${N}»{/teal} a`)
+  })
+
+  test('répare les secondes espaces déjà écrites', () => {
+    expect(tidyText(`{teal}«${N}{/teal}${N}On doit`)).toBe(`{teal}«${N}{/teal}On doit`)
+    expect(tidyText(`{teal}«${N}{/teal} une`)).toBe(`{teal}«${N}{/teal}une`)
+    expect(tidyText(`abri.${N}{teal}${N}»{/teal} fin`)).toBe(`abri.{teal}${N}»{/teal} fin`)
+    expect(nbspQuotes(`«${N}${N}vie${N}${N}»`)).toBe(`«${N}vie${N}»`)
+  })
+
+  test('vaut pour les autres marques', () => {
+    expect(tidyText(`**«**${N}une`)).toBe(`**«${N}**une`)
+    expect(tidyText(`une${N}__»__ a`)).toBe(`une__${N}»__ a`)
+  })
+
+  test('laisse ce qui est déjà bien formé', () => {
+    for (const line of [
+      `{teal}«${N}{/teal}une {teal}somme${N}»{/teal} a`,
+      `{teal}«${N}recréée sans cesse${N}»{/teal}`,
+      `«${N}**mythe**${N}»`,
+      `{teal}« {/teal}une`,
+    ]) {
+      expect(tidyText(line)).toBe(line)
+    }
+  })
+
+  test('est idempotente', () => {
+    for (const line of [`{teal}«{/teal}${N}une ${N}{teal}»{/teal}`, `**«** une *x* {violet}»{/violet}`]) {
+      const once = tidyText(line)
+      expect(tidyText(once)).toBe(once)
+    }
+  })
+
+  test('n’écrit rien en bout de ligne ni en tête de ligne', () => {
+    expect(nbspQuotes('{teal}«{/teal}')).toBe('{teal}«{/teal}')
+    expect(nbspQuotes(`«${N}`)).toBe('«')
+    expect(nbspQuotes('  » suite')).toBe('  » suite')
+  })
+})
+
 describe('échappements de guillemets', () => {
   test('retire la barre d’un \\" laissé dans un texte', () => {
     expect(tidyLine('« une \\"douleur\\" »')).toBe('« une "douleur" »')
