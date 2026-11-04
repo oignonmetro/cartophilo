@@ -311,16 +311,33 @@ et la remplacer par un renvoi.
   nommée, le repère suivant donne la section seule, ou « (*ibid*.) ». Les
   tableaux (passages clefs) gardent le titre entier : ce sont des cases à
   replacer.
-- **Les citations ne prennent pas de couleur décorative** (ni turquoise ni
-  autre) : un rappel de glossaire se lit mieux sans. Seule exception, la
-  couleur qui dit le **rôle logique** d'une partie de la citation (voir
-  plus bas) : l'hypothèse que Marx réfute en rouge, ce qu'il retient en
-  vert, jusque dans les guillemets (retouche de l'entrée Bonheur,
-  2026-10-23). **On y souligne en revanche la
-  partie décisive** de chaque citation, celle qui porte l'idée : « une vie
-  qui __demeure dans l'identité__ parce que __le tout lui est toujours
-  présent__ ». Le souligné se met à l'intérieur des guillemets, sur une
+- **Les citations de Marx prennent le teal** (retouche de l'utilisateur sur
+  Activité vitale, 2026-11-04 ; écart avec le glossaire de Plotin) : **chaque
+  guillemet** en teal et, dans la citation, **les mots clefs** en teal, les mots
+  de liaison restant nus :
+  `{teal}« {/teal}la {teal}seule liberté possible{/teal} est que {teal}l'homme social{/teal}, les producteurs associés {teal}__règlent rationnellement__ leurs échanges avec la nature »{/teal}`.
+  Le guillemet s'attache au mot clef voisin (`{teal}« l'homme{/teal}`,
+  `{teal}libre »{/teal}`) ou se colore seul (`{teal}« {/teal}`, `{teal} »{/teal}`).
+  Une hypothèse réfutée dans la citation reste en rouge, guillemets en teal.
+  **On y souligne aussi la partie décisive**, celle qui porte l'idée, sur une
   proposition ou un groupe de mots, jamais sur toute la citation.
+- **Les noms propres autres que Marx sont en bleu** (`{sky}…{/sky}`), parce que
+  ce sont des références : `{sky}Moses Hess{/sky}`, `{sky}Karl Grün{/sky}`,
+  `{sky}Feuerbach{/sky}`, `{sky}Denis Collin{/sky}`. Même règle pour les
+  commentateurs (même retouche).
+- **Dans le fil, comme sur la même retouche** : `amber` sur la prémisse ou
+  l'élément d'une définition (`{amber}un vivant ne subsiste pas comme une chose
+  déjà là{/amber}`), `coral` sur la conclusion, `yellow` sur l'exemple, `red` sur
+  ce que Marx dénonce (`{red}capitalisme{/red}`), `pink` sur l'autre membre d'une
+  opposition. Dans la définition aussi : `{amber}ce qu'un vivant fait pour
+  vivre{/amber}`, les pôles soulignés (`l'__animal__`, `l'__homme__`).
+- **Chaque paragraphe développe un aspect essentiel de la notion de l'entrée**
+  (relecture d'Activité vitale, 2026-11-04). Avant d'écrire une étape, puis en
+  relisant : dit-elle quelque chose *de cette notion*, ou glisse-t-elle vers une
+  notion voisine ? La dernière étape portait sur le lieu de la liberté dans le
+  *Capital*, et non sur la vie. Deux issues : la réécrire pour qu'on y voie
+  vraiment l'analyse de la notion (en relançant NotebookLM sur ce point), ou la
+  déplacer dans une nouvelle entrée qui lui corresponde, à compléter plus tard.
 - **Les termes techniques allemands en violet**, en plus de l'italique :
   `{violet}*Gattungswesen*{/violet}`.
 - **Ce qu'elle n'est pas** : le contresens principal, désamorcé dans le fil
