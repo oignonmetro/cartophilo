@@ -6,17 +6,26 @@
 # aristote-la-vie-est-une-realisation et -premiere (412a6-412b9).
 
 id: aristote-ame-vue-oeil
-title: "Aristote : l'âme est au corps ce que la vue est à l'œil"
+title: "Aristote : le corps vit comme l'œil voit"
 subtitle: "De l'âme, II, 1, 412b10-413a3"
 icon: page
 color: coral
 intro: |-
-  La suite immédiate de la définition de l'âme : Aristote dit ce qu'elle veut dire. Il prend une hache, puis un œil, comme si l'une était un corps naturel et l'autre un animal, pour faire voir que l'âme est ce que le corps peut faire, non une chose en lui, et que l'animal est l'âme et le corps ensemble.
+  Un texte sur l'âme, et par là sur ce que c'est que vivre. Aristote prend une hache, puis un œil, comme si l'une était un corps naturel et l'autre un animal, pour faire voir que la vie n'est pas une chose ajoutée au corps, mais ce qu'il est et ce qu'il peut, que le vivant le perd en mourant, et que ce qui vit, c'est l'âme et le corps ensemble.
 lessons:
 - id: aristote-ame-vue-oeil-i1
-  title: "La thèse, la question, les mouvements"
+  title: "Un texte sur l'âme, donc sur la vie"
   notes: |-
     **Le texte répond à la question** {amber}**« que veut dire la définition de l'âme ? »**{/amber} **:** {violet}**l'âme**{/violet} **est** {coral}**ce qui fait d'un corps ce qu'il est**{/coral}**, comme** {yellow}**la vue**{/yellow} **fait d'un œil un œil.** Aristote vient de poser (II, 1, 412a6-412b9) que l'âme est {teal}« la réalisation première d'un corps naturel qui a potentiellement la vie »{/teal} ; la formule est abstraite, et elle prête à deux malentendus. Le texte la rend visible sur deux cas, puis lève les malentendus.
+
+    **Il répond par là à une autre question :** {amber}**« qu'est-ce que vivre ? »**{/amber} Le mot n'y revient qu'en passant ({teal}« corps vivant »{/teal}, {teal}« puissance de vivre »{/teal}), parce que le texte parle de ce qui fait vivre. Mais l'{violet}âme{/violet} n'a pas d'autre définition que par la vie : {teal}« l'animé se distingue de l'inanimé par le fait qu'il est en vie »{/teal} (II, 2, 413a20-22), et {teal}« l'être, pour les vivants, c'est la vie. Et ce qui en est responsable, leur principe, c'est l'âme »{/teal} (II, 4, 415b13-14). {coral}__Chaque thèse sur l'âme est donc une thèse sur la vie__{/coral} : il suffit de demander ce qu'elle entraîne pour ce qui vit.
+
+    | Ce que le texte dit de l'âme | Ce qui en suit pour la vie |
+    | elle est la substance selon la raison | la vie est l'être du vivant, non un attribut |
+    | elle est forme d'un corps de telle sorte | la vie n'est pas une propriété de toute matière |
+    | ôtée, il ne reste qu'un nom | perdre la vie, c'est cesser d'être ce corps |
+    | elle est comme la vue, non comme voir | vivre, c'est pouvoir avant d'exercer |
+    | elle forme l'animal avec le corps | ce qui vit, c'est le composé |
 
     La thèse réunit deux affirmations. L'une est **ontologique** : l'âme est la {violet}forme{/violet} du corps, {red}non une chose logée en lui{/red}, {red}ni sa figure{/red}. L'autre porte sur le **mode** de cette forme : elle est {green}__une capacité__{/green}, {pink}non une activité{/pink}, comme la vue et non comme l'acte de voir. La seconde précise la première : __si l'âme était l'exercice, celui qui dort n'aurait plus d'âme__. D'où le corollaire : {coral}l'animal est le composé{/coral}.
 
@@ -29,6 +38,9 @@ lessons:
 
     ! Le texte n'ajoute pas une seconde définition à la première : il dit ce qu'elle veut dire, et l'étend au corps entier.
   tables:
+  - table: ce-que-le-texte-dit-de-l-ame-ce-qui-en-suit-pour-la-vie
+    exercises:
+    - {kind: bank, column: Ce qui en suit pour la vie}
   - table: lignes-ce-qu-elles-font-le-cas
     exercises:
     - {kind: order, column: Lignes}
@@ -36,6 +48,14 @@ lessons:
   passage:
     label: "Introduction"
   points:
+  - id: aristote-ame-vue-oeil-i1-8
+    sentence: "*De l'âme*, II, 2 : « l'animé se distingue de l'inanimé par le fait qu'il est ___ » : c'est la vie qui définit l'âme, et le texte sur l'âme porte par là sur la vie."
+    answer: "en vie"
+    alt: []
+  - id: aristote-ame-vue-oeil-i1-9
+    sentence: "*De l'âme*, II, 4 : « l'être, pour les vivants, c'est la vie. Et ce qui en est responsable, ___, c'est l'âme. »"
+    answer: "leur principe"
+    alt: []
   - id: aristote-ame-vue-oeil-i1-1
     sentence: "*De l'âme*, II, 1, 412b10-413a3 prolonge la définition de l'âme comme réalisation ___ d'un corps naturel qui a potentiellement la vie : il dit ce qu'elle veut dire."
     answer: "première"
@@ -65,7 +85,7 @@ lessons:
     answer: "Démocrite"
     alt: []
 - id: aristote-ame-vue-oeil-i2
-  title: "Les mots du texte"
+  title: "Les mots du texte : la vie, l'âme, vivre"
   notes: |-
     **Le texte tient sur quelques termes techniques que la traduction française rend par des périphrases.** Les retrouver, c'est voir que la hache, l'œil et l'animal disent la même chose.
 
@@ -75,6 +95,8 @@ lessons:
     | de façon nominale | `homônumôs` | par homonymie : le nom seul est commun |
     | réalisation | `entelecheia` | l'acte, la forme atteinte |
     | outil | `organon` | l'instrument ; le même mot que pour l'organe |
+    | l'âme | `psuchê` | le principe de la vie, chez tout vivant |
+    | vivre | `zên` | l'être du vivant, son exercice |
 
     {violet}**« Raison »**{/violet} **ne désigne pas ici la faculté de raisonner**, que l'on n'attend pas chez la plante : `logos` veut dire ici la {coral}formule qui définit{/coral}. La substance {teal}« qui correspond à la raison »{/teal} est donc la substance au sens où l'on répond à la question : __qu'est-ce que c'est ?__ Des trois sens de « substance » distingués plus haut, matière, forme et composé, c'est le deuxième.
 
@@ -82,15 +104,37 @@ lessons:
 
     **Le même mot `organon`** désigne l'outil et l'organe : le corps {teal}« pourvu d'organes »{/teal} de la définition est un corps {amber}pourvu d'outils{/amber}. C'est ce qui rend naturelle la comparaison avec la hache, et ce qui fait la {pink}limite{/pink} qu'Aristote va devoir marquer.
 
+    **Vie, âme, vivre : le texte permet de les distinguer.** Les mots vont ensemble, mais chacun occupe {amber}sa place dans le même schéma{/amber}, celui que la dernière partie du texte met en place :
+
+    | Terme | Son statut | Son modèle |
+    | le corps | la matière, la réalité potentielle | la pupille |
+    | l'âme | la forme, réalisation première : une capacité | la vue |
+    | vivre | la réalisation seconde : l'exercice | l'acte de voir |
+    | le vivant | le composé : ce qui vit | l'œil |
+
+    {violet}**La vie**{/violet} **n'a pas sa case, parce qu'elle les traverse** : {sky}Polansky{/sky} y voit la réalité qui unit capacité et exercice, l'être même de l'organisme. {red}Ne pas dire « la vie, c'est l'âme »{/red} : l'âme est {green}le principe qui fait vivre{/green}, {pink}pas le fait de vivre{/pink}.
+
     ! « Forme » et « essence » ne désignent pas ici une figure visible, mais ce que la chose peut faire.
   passage:
     label: "Introduction"
   tables:
+  - table: terme-son-statut-son-modele
+    exercises:
+    - {kind: bank, column: Son statut}
+    - {kind: bank, column: Son modèle}
   - table: dans-le-texte-grec-sens
     exercises:
     - {kind: bank, column: Sens}
     - {kind: bank, column: Grec}
   points:
+  - id: aristote-ame-vue-oeil-i2-8
+    sentence: "La vie et l'âme ne se confondent pas : l'âme est le ___ qui fait vivre, la vie est l'être du vivant."
+    answer: "principe"
+    alt: []
+  - id: aristote-ame-vue-oeil-i2-9
+    sentence: "Dans le schéma du *De l'âme*, II, 1, **vivre** est à l'âme ce que l'acte de voir est à la ___."
+    answer: "vue"
+    alt: []
   - id: aristote-ame-vue-oeil-i2-1
     sentence: "Chez Aristote, l'expression `to ti ên einai`, que Bodéüs rend par « la détermination qui fait essentiellement », désigne ce qu'on traduit d'ordinaire par l'___."
     answer: "essence"
@@ -120,9 +164,11 @@ lessons:
     answer: "organe"
     alt: []
 - id: aristote-ame-vue-oeil-p1
-  title: "La hache : l'âme est ce qui fait de ce corps ce qu'il est"
+  title: "La hache : la vie n'est pas une chose ajoutée au corps"
   notes: |-
     **Le premier mouvement dit ce qu'est l'âme** {amber}**« en termes généraux »**{/amber} **:** {violet}**la forme**{/violet} **d'un corps de telle sorte.** Une fiction le fait voir, celle de la hache vivante, que le paragraphe retire aussitôt. Il réunit donc une affirmation, une image et une rectification.
+
+    **Pour la vie, le paragraphe établit un statut :** {green}__vivre est ce qu'est ce corps__{/green}, et {red}non quelque chose qu'il aurait en plus{/red}. Il en fixe aussi la condition : {coral}seul vit un corps qui a en lui-même son principe{/coral}.
 
     | Fragment | Ce qu'il fait |
     | 1 | redire la définition : ce qui fait que ce corps est ce qu'il est |
@@ -135,7 +181,15 @@ lessons:
 
     **« De telle sorte de corps » est décisif.** La forme n'est pas celle d'un corps quelconque. Aristote le reprochait à ses prédécesseurs, qui parlent de l'âme {pink}sans dire un mot du corps qui la reçoit{/pink} : {teal}« l'art, en effet, doit disposer de ses instruments et l'âme de son corps »{/teal} (I, 3, 407b25-26).
 
-    **La portée sur la vie est immédiate.** Si l'âme dit ce qu'est ce corps, et si elle est le principe de la vie, alors {coral}__vivre n'est pas une propriété que le vivant aurait en plus__{/coral}. Aristote le dira : {teal}« l'être, pour les vivants, c'est la vie »{/teal} (II, 4, 415b13).
+    **Le statut ontologique de la vie.** Si l'âme dit ce qu'est ce corps, et si elle est le principe de la vie, alors {coral}__vivre n'est pas une propriété que le vivant aurait en plus__{/coral} : un corps peut perdre sa blancheur et rester ce corps, {pink}il ne peut pas perdre la vie et rester ce corps{/pink}. Aristote le dira : {teal}« l'être, pour les vivants, c'est la vie »{/teal} (II, 4, 415b13). {sky}Shields{/sky} en tire que tout vivant est {violet}essentiellement vivant{/violet} ; {sky}Pellegrin{/sky} souligne que la vie n'est donc {red}pas un caractère taxonomique parmi d'autres{/red}.
+
+    | La vie n'est pas | Parce que |
+    | une chose logée dans le corps | l'âme est la forme de ce corps, non un second corps |
+    | un accident du corps | sans elle, ce corps n'est plus |
+    | une figure | le cadavre a la même figure |
+    | une propriété de la matière | seul vit un corps de telle sorte |
+
+    **Ni vitalisme ni mécanisme.** {sky}Driesch{/sky} reprendra au XXe siècle le mot d'{violet}entéléchie{/violet} pour un facteur vital distinct de la matière : le texte l'exclut, {red}l'âme n'étant pas une seconde chose à côté du corps{/red}. Mais il exclut aussi qu'on rende compte de la vie par {pink}la seule matière et sa disposition{/pink}, puisque {green}la forme est ce que ce corps peut faire{/green}.
 
     === 2 Si la hache était un corps naturel
 
@@ -145,11 +199,15 @@ lessons:
 
     Mais il ne suffit pas : une hache n'est pas vivante. {yellow}« C'est comme si »{/yellow} est un **irréel**, qui emprunte à l'outil la seule relation de la forme et de la matière.
 
+    **Pourquoi commencer par un outil : une raison épistémologique.** La vie est {amber}évidente et obscure à la fois{/amber} : on sait ce qui est vivant, sans savoir dire ce que c'est. Or {teal}« la clarté qui satisfait à la connaissance rationnelle procède de données obscures quoique évidentes »{/teal} (II, 2, 413a11-12), et la fonction se voit mieux chez {teal}« toutes celles qui sont comme des instruments et en vue de quelque chose »{/teal} (*Météorologiques*, IV, 12, 389b31-32) : celle de la chair {teal}« est moins évidente que celle de la langue »{/teal} (390a14-15). {coral}__D'où l'ordre du texte, de la hache à l'œil et de l'œil au vivant : du plus clair au moins clair.__{/coral}
+
     === 3 Un principe de mouvement et de stabilité en lui-même
 
     **La fiction se défait d'elle-même :** {amber}« Mais voilà, c'est une hache »{/amber}. Il n'y a pas d'âme dans une hache, parce que {coral}__l'âme n'est forme que d'un corps qui a en lui-même son principe de mouvement__{/coral}. C'est la définition même de la nature : chacune des choses naturelles {teal}« possède en elle-même un principe de mouvement et d'arrêt »{/teal}, alors qu'{yellow}un lit, un manteau{/yellow}, produits d'un art, {teal}« ne possèdent aucune impulsion innée au changement »{/teal} (*Physique*, II, 1, 192b13-19).
 
     **« D'un genre précis »** : {amber}être naturel ne suffit pas{/amber}. Le feu et la terre ont aussi leur principe de mouvement ; il faut un corps organisé.
+
+    **Vivre, c'est donc vivre de soi.** {teal}« En lui-même »{/teal} répond à la définition de la vie donnée plus haut, {teal}« la propriété de par soi-même se nourrir, croître et dépérir »{/teal} (412a14-15) : {coral}__la vie est une autonomie de fonctionnement__{/coral}, et elle comprend {amber}le dépérissement{/amber} lui-même, qui n'est pas pour le vivant un accident venu du dehors.
 
     **« Et de stabilité »** n'est pas une clause de style. Le vivant ne se contente pas de se mouvoir, il {green}__se limite__{/green} : {teal}« la croissance du feu s'étend à l'infini, tant que le combustible est disponible, alors que les systèmes que forme la nature ont tous une limite et un ordre de grandeur ainsi que de croissance. Or cela tient à l'âme »{/teal} (II, 4, 416a15-18).
 
@@ -160,6 +218,9 @@ lessons:
     label: "412b10-17"
     text: "En termes généraux, voilà donc ce qu'est l'âme : c'est la substance, en effet, qui correspond à la raison. Ce qui veut dire : la détermination qui fait essentiellement de telle sorte de corps ce qu'il est. C'est comme si un quelconque des outils était un corps naturel, par exemple une hache. La détermination qui fait essentielle la hache serait sa substance et son âme s'identifierait à cela. Et si l'on mettait cette détermination à part, il n'y aurait plus de hache, sauf de façon purement nominale. Mais voilà, c'est une hache et ce n'est pas, en réalité, de cette sorte de corps que l'âme représente la détermination essentielle et la raison, mais d'un corps naturel, d'un genre précis, qui possède un principe de mouvement et de stabilité en lui-même."
   tables:
+  - table: la-vie-n-est-pas-parce-que
+    exercises:
+    - {kind: bank, column: Parce que}
   - table: fragment-ce-qu-il-fait
     exercises: []
   points:
@@ -181,6 +242,18 @@ lessons:
   - id: aristote-ame-vue-oeil-p1-4
     sentence: "*De l'âme*, II, 4 : « l'être, pour ___, c'est la vie » : __vivre n'est pas une propriété que le vivant aurait en plus__."
     answer: "les vivants"
+    alt: []
+  - id: aristote-ame-vue-oeil-p1-19
+    sentence: "Parce que l'être des vivants est de vivre, la vie n'est pas un ___ du corps : un corps peut perdre sa blancheur et rester ce corps, non perdre la vie."
+    answer: "accident"
+    alt: ["attribut"]
+  - id: aristote-ame-vue-oeil-p1-20
+    sentence: "Shields tire de *De l'âme*, II, 4 que tout vivant est ___ vivant : la vie est son être, non un attribut contingent."
+    answer: "essentiellement"
+    alt: []
+  - id: aristote-ame-vue-oeil-p1-21
+    sentence: "Le mot d'**entéléchie**, repris au XXe siècle par ___ pour un facteur vital distinct de la matière, ne désigne pas chez Aristote une chose distincte du corps."
+    answer: "Driesch"
     alt: []
   - id: aristote-ame-vue-oeil-p1-5
     fragment: "2/3"
@@ -210,6 +283,14 @@ lessons:
     sentence: "L'exemple de la hache repose sur une prémisse implicite : un outil se définit par sa ___."
     answer: "fonction"
     alt: []
+  - id: aristote-ame-vue-oeil-p1-22
+    sentence: "*De l'âme*, II, 2 : « la clarté qui satisfait à la connaissance rationnelle procède de données ___ quoique évidentes » : on sait ce qui vit, sans savoir dire ce que c'est que vivre."
+    answer: "obscures"
+    alt: []
+  - id: aristote-ame-vue-oeil-p1-23
+    sentence: "*Météorologiques*, IV, 12 : la fonction se voit mieux chez les choses « qui sont comme des ___ et en vue de quelque chose » : d'où l'ordre du texte, de la hache au vivant."
+    answer: "instruments"
+    alt: []
   - id: aristote-ame-vue-oeil-p1-11
     fragment: "3/3"
     sentence: "« Mais voilà, ___ et ce n'est pas, en réalité, de cette sorte de corps que l'âme représente la détermination essentielle et la raison, mais d'un corps naturel, d'un genre précis, qui possède un principe de mouvement et de stabilité en lui-même. »"
@@ -237,6 +318,10 @@ lessons:
     sentence: "*De l'âme*, II, 4 : « la croissance du ___ s'étend à l'infini, tant que le combustible est disponible », à la différence de celle du vivant."
     answer: "feu"
     alt: []
+  - id: aristote-ame-vue-oeil-p1-24
+    sentence: "*De l'âme*, II, 1, définition de la vie : « la propriété de par soi-même se nourrir, ___ » : le dépérissement n'y est pas un accident venu du dehors."
+    answer: "croître et dépérir"
+    alt: []
   - id: aristote-ame-vue-oeil-p1-17
     sentence: "La frontière de la hache et du corps naturel revient chez Kant (*Critique de la faculté de juger*, §65) sur l'exemple de la ___ : « une partie existe certes pour l'autre, mais elle n'existe pas par elle »."
     answer: "montre"
@@ -246,9 +331,11 @@ lessons:
     answer: "régulateur"
     alt: []
 - id: aristote-ame-vue-oeil-p2
-  title: "L'œil : la vue est à l'œil ce que l'âme est au corps"
+  title: "L'œil : sans la vie, il n'y a plus de corps que de nom"
   notes: |-
     **Le deuxième mouvement refait l'expérience sur une partie du vivant :** {yellow}**la vue**{/yellow} **est la substance de l'œil, et sans elle** {coral}**il n'y a plus d'œil que de nom**{/coral}**.** Puis il reporte ce résultat sur le corps entier. Les deux cas sont à l'irréel, chacun pour une raison opposée : ils se corrigent l'un l'autre.
+
+    **Pour la vie, le paragraphe établit deux choses :** {green}__elle se mesure à une capacité, non à une apparence__{/green}, et {coral}la mort est la perte de ce qu'était le corps{/coral}. Il indique aussi, en passant par la sensation, que {amber}vivre ne se dit pas d'une seule façon{/amber}.
 
     | Le cas | Ce qu'il fait voir | Ce qui lui manque |
     | la hache | la forme est ce que la chose peut faire | un principe en elle-même |
@@ -272,7 +359,9 @@ lessons:
 
     **Contre** {sky}**Démocrite**{/sky} : {teal}« quand bien même la configuration du cadavre garde même figure, ce n'est pourtant pas un être humain »{/teal} ; et {teal}« aucune des parties du cadavre n'est plus telle qu'elle était, je veux dire par exemple n'est plus un œil ou une main »{/teal} (*Parties des animaux*, I, 1, 640b34-641a5). La règle générale : {teal}« toutes les choses se définissent par leur fonction et leur capacité, de sorte que quand elles ne les ont plus il ne faut pas dire qu'elles sont les mêmes, mais qu'elles ont même nom »{/teal} (*Politiques*, I, 2, 1253a23-25).
 
-    **Portée sur la mort :** {coral}__la mort n'est pas l'altération d'un corps qui resterait le même__{/coral}, puisque {pink}ce qui reste n'est plus ce corps{/pink}.
+    **Vie et corps, vie et mort.** Si ce qui reste n'est corps que de nom, il faut en tirer trois thèses. {coral}__La mort n'est pas l'altération d'un corps qui resterait le même__{/coral} : il n'y a pas {red}un même corps, tantôt vivant, tantôt mort{/red}, et {green}« corps vivant » est presque un pléonasme{/green}. Elle n'est pas davantage {pink}le départ de quelque chose qui continuerait ailleurs{/pink} : le texte n'en dit rien de tel, et {yellow}la vue ne va nulle part{/yellow} quand l'œil cesse de voir. Enfin, {amber}elle ne se confond pas avec le sommeil{/amber}, où la capacité demeure.
+
+    **Ce que cela implique pour la connaissance de la vie.** {teal}« La configuration du cadavre garde même figure »{/teal} : {red}__l'anatomie seule ne dit pas si un corps vit__{/red}. {green}La vie ne se lit pas sur une forme visible{/green}, elle se reconnaît à ce que le corps peut faire.
 
     **Confrontation :** {sky}**Descartes**{/sky}**.** Le corps vivant diffère du mort comme {yellow}une montre{/yellow} {teal}« lorsqu'elle est montée et qu'elle a en soi le principe corporel des mouvements pour lesquels elle est instituée »{/teal} diffère de {teal}« la même montre »{/teal} {teal}« lorsqu'elle est rompue »{/teal} (*Les Passions de l'âme*, art. 6). **« La même » est l'exact contraire de l'homonymie**, et {red}la mort n'arrive jamais « par la faute de l'âme »{/red} (art. 5). Descartes rend à la machine ce qu'Aristote lui refusait, le principe {teal}« en soi »{/teal}, et ôte à l'âme ce qu'Aristote lui donnait, la vie.
 
@@ -291,6 +380,8 @@ lessons:
     **Pourquoi la sensation, et non la vie ?** Parce que la proportion part de l'œil et ne mène qu'à l'animal, qui est {teal}« fondamentalement identifiable grâce au critère de la sensation »{/teal} (II, 2, 413b2). {amber}Le texte s'en tient donc à l'animal ; la plante n'y entre que par la formule commune donnée plus haut.{/amber}
 
     {sky}Polansky{/sky}, dans son commentaire, ajoute une raison : ici {green}un organe précis est associé de façon univoque à une capacité précise{/green}, quand {pink}la vie en général est trop vaste{/pink} pour marquer cette corrélation. {sky}Bolton{/sky} note de même que le passage restreint l'âme et le corps à {amber}l'âme et au corps de l'animal{/amber}.
+
+    **Vivre ne se dit donc pas d'une seule façon.** Le texte le suppose en passant de la vie à la sensation : {teal}« le fait de vivre s'entend de plusieurs façons »{/teal}, et {teal}« il y a vie là où se trouve ne serait-ce qu'une seule »{/teal} des manifestations que sont {yellow}l'intelligence, la sensation, le mouvement local et le mouvement nutritif{/yellow} (II, 2, 413a22-25). Une définition unique manquerait la chose : {teal}« la vie ne se dit pas selon une forme unique : autre est celle qui est le cas pour les animaux, autre pour les végétaux »{/teal} (*Topiques*, VI, 10), et il serait {red}« ridicule »{/red} de chercher {teal}« la formule commune qui ne serait celle, en propre, d'aucune réalité »{/teal} (II, 3, 414b25-26). {sky}Shields{/sky} parle d'une {violet}homonymie reliée à un foyer{/violet}, {sky}Pellegrin{/sky} de {violet}« catégories de la vie »{/violet}. {coral}__Le statut de la définition s'en trouve fixé : elle vaut pour tout vivant, mais elle ne dit en propre la vie d'aucun.__{/coral}
 
     ! La vue n'est pas une petite âme de l'œil, ni l'âme une somme de facultés logées dans les organes : la phrase pose une proportion, non une addition.
   passage:
@@ -390,6 +481,18 @@ lessons:
     sentence: "Shields nomme thèse de la **détermination ___** le principe selon lequel une chose n'appartient à une classe que si elle peut en accomplir la fonction : un œil qui a perdu la vue n'est plus un œil que par homonymie."
     answer: "fonctionnelle"
     alt: []
+  - id: aristote-ame-vue-oeil-p2-27
+    sentence: "*Les Parties des animaux*, I, 1 montre par le cadavre que la vie ne se lit pas sur la ___ : l'anatomie seule ne dit pas si un corps vit."
+    answer: "figure"
+    alt: ["forme visible"]
+  - id: aristote-ame-vue-oeil-p2-28
+    sentence: "Si le cadavre n'est corps que de nom, la mort n'est pas l'___ d'un corps qui resterait le même."
+    answer: "altération"
+    alt: []
+  - id: aristote-ame-vue-oeil-p2-29
+    sentence: "La mort ne se confond pas avec le sommeil : dans le sommeil, la ___ de vivre demeure."
+    answer: "capacité"
+    alt: ["puissance"]
   - id: aristote-ame-vue-oeil-p2-20
     fragment: "3/3"
     sentence: "« On doit donc transférer ce qui est vrai de la partie ___. Car le rapport de partie à partie est celui de la sensation entière au corps entier doué de sensation, en tant que tel. »"
@@ -417,10 +520,32 @@ lessons:
     sentence: "Selon Polansky, Aristote prend l'exemple de l'œil parce qu'un organe précis y est associé de façon ___ à une capacité précise, quand la vie en général est trop vaste."
     answer: "univoque"
     alt: []
+  - id: aristote-ame-vue-oeil-p2-30
+    sentence: "*De l'âme*, II, 2 : « comme le fait de vivre s'entend de ___, nous prétendons qu'il y a vie là où se trouve ne serait-ce qu'une seule » des manifestations de la vie."
+    answer: "plusieurs façons"
+    alt: []
+  - id: aristote-ame-vue-oeil-p2-31
+    sentence: "*De l'âme*, II, 2, les manifestations de la vie : l'intelligence, la ___, le mouvement local et le repos, le mouvement nutritif."
+    answer: "sensation"
+    alt: []
+  - id: aristote-ame-vue-oeil-p2-32
+    sentence: "*Topiques*, VI, 10 : « la vie ne se dit pas selon ___ : autre est celle qui est le cas pour les animaux, autre pour les végétaux »."
+    answer: "une forme unique"
+    alt: []
+  - id: aristote-ame-vue-oeil-p2-33
+    sentence: "*De l'âme*, II, 3 : il est « ___ de chercher » une formule commune « qui ne serait celle, en propre, d'aucune réalité »."
+    answer: "ridicule"
+    alt: []
+  - id: aristote-ame-vue-oeil-p2-34
+    sentence: "Shields décrit la pluralité des sens de **vivre** comme une homonymie reliée à un ___."
+    answer: "foyer"
+    alt: []
 - id: aristote-ame-vue-oeil-p3
-  title: "Le corps qui a la puissance de vivre est celui qui a l'âme"
+  title: "Vivre : pouvoir avant d'exercer, et le composé qui vit"
   notes: |-
     **Le dernier mouvement lève le malentendu de la définition :** {teal}**« qui a potentiellement la vie »**{/teal} **ne désigne** {red}**ni le cadavre ni la semence**{/red}**, mais** {green}**le corps qui a déjà l'âme**{/green}**.** Puis il range ensemble tout ce que le texte a fait voir, et conclut sur l'animal.
+
+    **Pour la vie, c'est le paragraphe décisif :** {green}__vivre se dit de la capacité et de l'exercice__{/green}, et {coral}ce qui vit n'est ni l'âme ni le corps, mais l'animal{/coral}. Il donne aussi la frontière du vivant.
 
     | Fragment | Ce qu'il fait |
     | 1 | préciser la puissance : ni le cadavre, ni la semence |
@@ -439,6 +564,15 @@ lessons:
     | réalisation seconde | celui qui spécule | l'éveillé |
 
     La *Génération des animaux* le dit : {teal}« en puissance une chose peut être plus proche ou plus loin qu'elle-même, comme le géomètre qui dort est plus loin que le géomètre éveillé et celui-ci plus loin que celui qui étudie »{/teal} (II, 1, 735a9-11). Et même : {teal}« la semence n'est pas encore un être humain (il faut en effet qu'elle soit dans un autre et se transforme) »{/teal} (*Métaphysique*, Θ, 7, 1049a14-15).
+
+    **La frontière du vivant.** Le texte permet de ranger ce qui ne vit pas, chaque cas pour une raison différente :
+
+    | Ce qui ne vit pas | Ce qui lui manque |
+    | la hache | un principe de mouvement en elle-même |
+    | le feu | une limite, des organes |
+    | l'œil en pierre | la capacité : il n'a que la figure |
+    | le cadavre | l'âme : il l'a perdue, et le corps avec elle |
+    | la semence | le corps formé : elle ne l'est qu'en puissance |
 
     Les commentateurs marquent le même écart. Pour {sky}Polansky{/sky}, la semence et le fruit ne sont {pink}qu'en puissance un corps ayant la vie en puissance{/pink} : il leur faut d'abord une transformation substantielle. {sky}Freeland{/sky} oppose la capacité de {pink}devenir{/pink}, celle de la semence, à la capacité d'{green}être{/green}, celle du corps formé.
 
@@ -459,19 +593,25 @@ lessons:
 
     **« Réalisation » se dit donc à deux niveaux**, et {amber}la même chose est acte ou puissance selon ce à quoi on la rapporte{/amber} : l'âme est {green}__réalisation du corps__{/green} et {green}__puissance des activités__{/green}. {coral}Vivre se dit donc de deux façons{/coral}, avoir la capacité et l'exercer ; c'est pourquoi {yellow}le dormeur{/yellow} vit.
 
+    **Quelle sorte d'activité est vivre ?** {red}Non un processus qui tendrait vers un résultat{/red}, comme maigrir ou apprendre : {teal}« On vit bien en même temps qu'on a bien vécu »{/teal} (*Métaphysique*, Θ, 6, 1048b25-26). Vivre est une `energeia`, {green}__achevée à chaque instant__{/green}, qui ne s'arrête pas quand son but est atteint. {sky}Polansky{/sky} la décrit comme une activité de {violet}conservation de soi{/violet}.
+
+    **La portée épistémologique : la capacité ne se connaît que par l'acte.** L'âme vient {amber}« première »{/amber} dans le vivant, mais {teal}« les facultés sont précédées par les actes et les actions, selon l'ordre logique »{/teal} (II, 4, 415a18-20). {coral}__On ne définit le pouvoir de vivre que par ce qu'il fait__{/coral}, comme la puissance de la hache par l'action de couper : {sky}Shields{/sky} et {sky}Polansky{/sky} parlent d'une priorité selon la définition. C'est pourquoi le dormeur et le cadavre, qui se ressemblent, ne se distinguent {pink}pas à la vue{/pink}, mais par ce dont l'un reste capable.
+
     **Confrontation :** {sky}**Plotin**{/sky}**.** Contre l'âme-entéléchie, le traité 2 (IV, 7, chap. 8⁵) objecte qu'une âme collée au corps ne pourrait {teal}« faire retraite dans le sommeil »{/teal}, et qu'{red}« il n'y aura même plus de sommeil »{/red}. La répartition d'Aristote répond d'avance : {green}__dans le sommeil, rien ne se retire__{/green}, c'est l'exercice qui cesse et la capacité qui demeure. L'objection ne porte que si l'on tient le sommeil pour une absence de l'âme.
 
     **Portée sur la conduite de sa vie.** Être en vie n'est pas encore bien vivre. L'*Éthique à Eudème* compte le sommeil comme {teal}« une sorte d'inaction et un repos »{/teal} (II, 1, 1219a25), et s'en sert pour répondre à la question : {yellow}pourquoi les gens vertueux ne valent-ils pas mieux que les médiocres {teal}« pendant la moitié de leur vie »{/teal} ?{/yellow} Parce que {teal}« ils sont tous semblables dans le sommeil »{/teal} (1219b18-19). {coral}__La valeur d'une vie se joue dans l'exercice__{/coral}, que la seule capacité ne garantit pas.
 
     **Une limite de la comparaison.** {amber}L'éveil n'est pas le seul exercice{/amber} : {teal}« pendant le sommeil, la partie nutritive est plus active »{/teal} (1219b22-23). Le dormeur exerce donc une part de son âme.
 
-    **Confrontation :** {sky}**Bichat**{/sky}**.** {teal}« L'ensemble des fonctions qui résistent à la mort »{/teal} définit aussi la vie par des fonctions, {red}non par une chose{/red}. Mais Bichat parle de {pink}fonctions exercées{/pink}, et par leur rapport à leur contraire ; Aristote, d'{green}une capacité{/green}, qui n'a pas besoin de la mort pour se définir.
+    **Confrontation :** {sky}**Bichat**{/sky}**.** {teal}« L'ensemble des fonctions qui résistent à la mort »{/teal} définit aussi la vie par des fonctions, {red}non par une chose{/red}. Mais Bichat parle de {pink}fonctions exercées{/pink}, et par leur rapport à leur contraire ; Aristote, d'{green}une capacité{/green}, qui n'a pas besoin de la mort pour se définir. Et {pink}le principe que Bichat déclare inconnu{/pink}, Aristote {green}le définit par ses actes{/green}.
 
     === 3 L'âme et le corps forment l'animal
 
     **Le mot « œil » a changé de sens, et c'est l'argument.** Plus haut {pink}l'œil{/pink} était {teal}« matière de la vue »{/teal} ; ici {green}l'œil{/green} est {teal}« la pupille et la vue »{/teal}, le composé. De même {violet}« corps »{/violet} désigne la matière, et {coral}__l'animal, le composé__{/coral}.
 
     C'est pourquoi {yellow}la pupille{/yellow} (`korê`) n'entre qu'ici : {sky}Polansky{/sky} et {sky}Shields{/sky} le notent, le mot « œil » étant réservé au composé, il faut un autre mot pour la matière.
+
+    **Le sujet de la vie.** {red}L'âme ne vit pas à la place de l'animal{/red} : {teal}« dire que l'âme est en colère, c'est comme si l'on disait que l'âme est en train de tisser ou de bâtir. Il vaudrait mieux, en effet, ne pas dire que c'est l'âme qui a pitié, apprend ou réfléchit, mais que c'est l'homme qui le fait, par son âme »{/teal} (I, 4, 408b11-15). {red}Le corps seul ne vit pas non plus{/red}. {coral}__Ce qui vit, c'est le composé, par son âme.__{/coral} La vie n'est donc pas à loger quelque part en lui.
 
     **Le texte revient à son point de départ :** si l'âme est au corps ce que la vue est à la pupille, {red}il n'y a pas deux choses à réunir{/red}, et l'on {teal}« n'a même pas besoin de chercher si le corps et l'âme font un »{/teal} (412b6). Il écarte en même temps le {pink}dualisme{/pink}, puisqu'{green}on ne voit pas sans pupille{/green}, et le {pink}matérialisme de la figure{/pink}, puisqu'{green}on ne voit pas avec une pupille de pierre{/green}.
 
@@ -480,6 +620,9 @@ lessons:
     label: "412b25-413a3"
     text: "Par ailleurs, ce n'est pas lorsqu'il se trouve dépouillé de son âme que le corps a la puissance de vivre, mais lorsqu'il la possède. Quant à la semence ou au fruit, ils constituent potentiellement le corps de ce genre précis. Donc, si c'est à la manière de l'action de couper ou de voir que l'acte d'être éveillé constitue une réalisation, néanmoins, c'est à la vue ou à la puissance de l'outil que l'âme est comparable, tandis que le corps est la réalité potentielle. Mais, tout comme l'œil comprend la pupille et la vue, dans ce cas-là aussi, c'est l'âme et le corps qui forment l'animal."
   tables:
+  - table: ce-qui-ne-vit-pas-ce-qui-lui-manque
+    exercises:
+    - {kind: bank, column: Ce qui lui manque}
   - table: fragment-ce-qu-il-fait
     exercises: []
   - table: degre-le-savant-ii-5-le-vivant
@@ -548,6 +691,10 @@ lessons:
     sentence: "Whiting : vivre est une `energeia`, dont l'acte ___ avec la puissance : le corps reste donc potentiellement vivant en vivant."
     answer: "coexiste"
     alt: []
+  - id: aristote-ame-vue-oeil-p3-29
+    sentence: "Le texte range ce qui ne vit pas : à la hache il manque un principe de mouvement en elle-même, à l'œil en pierre la ___, au cadavre l'âme."
+    answer: "capacité"
+    alt: ["puissance"]
   - id: aristote-ame-vue-oeil-p3-10
     fragment: "2/3"
     sentence: "« Donc, si c'est à la manière de ___ que l'acte d'être éveillé constitue une réalisation, néanmoins, c'est à la vue ou à la puissance de l'outil que l'âme est comparable, tandis que le corps est la réalité potentielle. »"
@@ -572,6 +719,26 @@ lessons:
     sentence: "L'âme est à la fois **réalisation** du corps et ___ des activités : le même terme est acte ou puissance selon ce à quoi on le rapporte."
     answer: "puissance"
     alt: ["capacité"]
+  - id: aristote-ame-vue-oeil-p3-30
+    sentence: "Dans *De l'âme*, II, 1, **vivre** se dit de deux façons : avoir la capacité et l'___ : c'est pourquoi le dormeur vit."
+    answer: "exercer"
+    alt: []
+  - id: aristote-ame-vue-oeil-p3-31
+    sentence: "*Métaphysique*, Θ, 6 : « On vit bien en même temps qu'on a ___ » : vivre n'est pas un processus tendu vers un résultat."
+    answer: "bien vécu"
+    alt: []
+  - id: aristote-ame-vue-oeil-p3-32
+    sentence: "Vivre n'est pas un mouvement inachevé, comme maigrir, mais une `___`, achevée à chaque instant."
+    answer: "energeia"
+    alt: []
+  - id: aristote-ame-vue-oeil-p3-33
+    sentence: "*De l'âme*, II, 4 : « les facultés sont précédées par les actes et les actions, selon ___ » : on ne définit le pouvoir de vivre que par ce qu'il fait."
+    answer: "l'ordre logique"
+    alt: []
+  - id: aristote-ame-vue-oeil-p3-34
+    sentence: "Polansky décrit la vie, activité qui a sa fin en elle-même, comme une activité de ___ de soi."
+    answer: "conservation"
+    alt: ["sauvegarde"]
   - id: aristote-ame-vue-oeil-p3-15
     sentence: "Plotin, traité 2 (IV, 7, chap. 8⁵), contre l'âme-entéléchie : elle ne pourrait « faire retraite dans le ___ »."
     answer: "sommeil"
@@ -615,12 +782,26 @@ lessons:
     sentence: "Le mot **œil** change de sens dans le texte : il est d'abord « matière de la vue », puis le ___ de la pupille et de la vue."
     answer: "composé"
     alt: []
+  - id: aristote-ame-vue-oeil-p3-35
+    sentence: "*De l'âme*, I, 4 : « dire que l'âme est en colère, c'est comme si l'on disait que l'âme est en train de ___ ou de bâtir »."
+    answer: "tisser"
+    alt: []
+  - id: aristote-ame-vue-oeil-p3-36
+    sentence: "*De l'âme*, I, 4 : « ne pas dire que c'est l'âme qui a pitié, apprend ou réfléchit, mais que c'est ___, par son âme »."
+    answer: "l'homme qui le fait"
+    alt: []
+  - id: aristote-ame-vue-oeil-p3-37
+    sentence: "Le sujet de la vie, chez Aristote, n'est ni l'âme ni le corps, mais le ___."
+    answer: "composé"
+    alt: ["vivant"]
 - id: aristote-ame-vue-oeil-ouverture
-  title: "Ce que la définition laisse ouvert : la séparation et le navigateur"
+  title: "Ce que la définition laisse ouvert : une vie sans corps ?"
   notes: |-
     **Aussitôt après le texte, Aristote tire la conséquence :** {green}**l'âme n'est pas séparable du corps**{/green}**, et il la nuance sur-le-champ.** Si l'âme est au corps ce que la vue est à l'œil, elle ne peut pas lui survivre, {amber}du moins dans celles de ses parties qui sont réalisations de parties du corps{/amber}. Mais {pink}rien n'empêche la séparation{/pink} de celles qui ne le sont d'aucun corps.
 
     **Une question reste expressément ouverte :** {teal}« on ne voit pas encore si l'âme est réalisation du corps, en ayant avec lui la relation du navigateur à son navire »{/teal}. {yellow}Le navigateur{/yellow} commande son navire et peut le quitter : ce serait une réalisation {red}sans l'inséparabilité{/red} que le texte venait de faire voir. Aristote n'écarte pas l'image, il dit **ne pas voir encore**, et donne le tout pour {amber}une « ébauche »{/amber}.
+
+    **Y a-t-il donc une vie sans corps ?** C'est ce que la définition laisse ouvert pour le concept de vie. {coral}Toute vie que le texte décrit est celle d'un corps{/coral}. Mais {teal}« le fait de vivre s'entend de plusieurs façons »{/teal}, et l'une d'elles est l'intelligence. Or la *Métaphysique* attribue la vie à un être qui n'est réalisation d'aucun corps : {teal}« la vie aussi, certes, lui appartient, car l'acte de l'intellect est vie et l'acte est le dieu »{/teal} (Λ, 7, 1072b26-27). {amber}__La définition ne couvre donc pas toute vie : elle dit celle des corps naturels, et elle se donne pour une « ébauche ».__{/amber}
 
     ! Le texte précédent ne prouve donc pas que l'âme entière est mortelle : il le prouve de ce qui, en elle, est réalisation d'une partie du corps.
   passage:
@@ -639,6 +820,14 @@ lessons:
   - id: aristote-ame-vue-oeil-ouverture-3
     sentence: "*De l'âme*, II, 1 : « on ne voit pas encore si l'âme est réalisation du corps, en ayant avec lui la relation du ___ à son navire »."
     answer: "navigateur"
+    alt: []
+  - id: aristote-ame-vue-oeil-ouverture-5
+    sentence: "*Métaphysique*, Λ, 7, sur le dieu : « la vie aussi, certes, lui appartient, car l'acte de l'intellect est ___ et l'acte est le dieu »."
+    answer: "vie"
+    alt: []
+  - id: aristote-ame-vue-oeil-ouverture-6
+    sentence: "La définition du *De l'âme*, II, 1 ne couvre pas toute vie : elle dit celle des corps ___, puisque la *Métaphysique* attribue la vie au dieu."
+    answer: "naturels"
     alt: []
   - id: aristote-ame-vue-oeil-ouverture-4
     sentence: "*De l'âme*, II, 1 : « À titre d'___, on s'en tiendra donc à cette définition et à cette esquisse de l'âme. »"
