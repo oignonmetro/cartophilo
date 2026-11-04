@@ -16,7 +16,7 @@ lessons:
 - id: aristote-ame-vue-oeil-i1
   title: "La thèse, la question, les mouvements"
   notes: |-
-    **Le texte répond à la question** {amber}**« que veut dire la définition de l'âme ? »**{/amber} **:** {violet}**l'âme**{/violet} **est** {coral}**ce qui fait d'un corps de telle sorte ce qu'il est**{/coral}**, comme** {yellow}**la vue**{/yellow} **fait d'un œil un œil.** Aristote vient de poser (II, 1, 412a6-412b9) que l'âme est {teal}« la réalisation première d'un corps naturel qui a potentiellement la vie »{/teal} ; la formule est abstraite, et elle prête à deux malentendus. Le texte la rend visible sur deux cas, puis lève les malentendus.
+    **Le texte répond à la question** {amber}**« que veut dire la définition de l'âme ? »**{/amber} **:** {violet}**l'âme**{/violet} **est** {coral}**ce qui fait d'un corps ce qu'il est**{/coral}**, comme** {yellow}**la vue**{/yellow} **fait d'un œil un œil.** Aristote vient de poser (II, 1, 412a6-412b9) que l'âme est {teal}« la réalisation première d'un corps naturel qui a potentiellement la vie »{/teal} ; la formule est abstraite, et elle prête à deux malentendus. Le texte la rend visible sur deux cas, puis lève les malentendus.
 
     La thèse réunit deux affirmations. L'une est **ontologique** : l'âme est la {violet}forme{/violet} du corps, {red}non une chose logée en lui{/red}, {red}ni sa figure{/red}. L'autre porte sur le **mode** de cette forme : elle est {green}__une capacité__{/green}, {pink}non une activité{/pink}, comme la vue et non comme l'acte de voir. La seconde précise la première : __si l'âme était l'exercice, celui qui dort n'aurait plus d'âme__. D'où le corollaire : {coral}l'animal est le composé{/coral}.
 
@@ -28,13 +28,13 @@ lessons:
     **Contre qui ?** Aristote ne nomme personne ici, mais ses cas visent deux adversaires qu'il nomme ailleurs. {sky}**Démocrite**{/sky} réduit l'être humain à {red}sa figure et sa couleur{/red} (*Parties des animaux*, I, 1) : l'œil en pierre a la figure de l'œil. Les {sky}**pythagoriciens**{/sky} racontent que {teal}« {/teal}{red}n'importe quelle âme{/red} s'insinue en {red}n'importe quel corps{/red}{teal} »{/teal} (*De l'âme*, I, 3, 407b22-23) : or l'âme est celle {green}__« de telle sorte de corps »__{/green}.
 
     ! Le texte n'ajoute pas une seconde définition à la première : il dit ce qu'elle veut dire, et l'étend au corps entier.
-  passage:
-    label: "Introduction"
   tables:
   - table: lignes-ce-qu-elles-font-le-cas
     exercises:
     - {kind: order, column: Lignes}
     - {kind: bank, column: Le cas}
+  passage:
+    label: "Introduction"
   points:
   - id: aristote-ame-vue-oeil-i1-1
     sentence: "*De l'âme*, II, 1, 412b10-413a3 prolonge la définition de l'âme comme réalisation ___ d'un corps naturel qui a potentiellement la vie : il dit ce qu'elle veut dire."
@@ -622,13 +622,11 @@ lessons:
 
     **Une question reste expressément ouverte :** {teal}« on ne voit pas encore si l'âme est réalisation du corps, en ayant avec lui la relation du navigateur à son navire »{/teal}. {yellow}Le navigateur{/yellow} commande son navire et peut le quitter : ce serait une réalisation {red}sans l'inséparabilité{/red} que le texte venait de faire voir. Aristote n'écarte pas l'image, il dit **ne pas voir encore**, et donne le tout pour {amber}une « ébauche »{/amber}.
 
-    **C'est sur cette brèche que porte** {sky}**Plotin**{/sky} : le traité 2 conclut que {green}l'âme est une réalité avant même d'appartenir à un corps{/green}. La discussion de l'âme qui pense revient au livre III.
-
     ! Le texte précédent ne prouve donc pas que l'âme entière est mortelle : il le prouve de ce qui, en elle, est réalisation d'une partie du corps.
   passage:
     label: "Ouverture"
-    source: "De l'âme, II, 1, 413a4-10"
     text: "On voit donc sans peine que l'âme n'est pas séparable du corps ou qu'elle a des parties qui ne le sont pas, si tant est que la nature l'ait faite morcelable. Car, en certaines parties, elle est réalisation des parties mêmes du corps. Mais, bien évidemment, en certaines autres parties, rien n'empêche la séparation, parce qu'elles ne sont réalisations d'aucun corps. – Cependant, on ne voit pas encore si l'âme est réalisation du corps, en ayant avec lui la relation du navigateur à son navire. À titre d'ébauche, on s'en tiendra donc à cette définition et à cette esquisse de l'âme."
+    source: "De l'âme, II, 1, 413a4-10"
   points:
   - id: aristote-ame-vue-oeil-ouverture-1
     sentence: "*De l'âme*, II, 1 : « On voit donc sans peine que l'âme ___ ou qu'elle a des parties qui ne le sont pas, si tant est que la nature l'ait faite morcelable. »"
