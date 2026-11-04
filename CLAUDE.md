@@ -32,7 +32,8 @@ l'épreuve :
 - **Plotin** et **Marx** (explication de texte) : trois sous-onglets communs :
   - **Glossaire** : notions centrales chez l'auteur, une leçon par entrée,
     reliées par des renvois ; pour en écrire une, utiliser la skill
-    `glossaire` (`.claude/skills/glossaire/`). Les définitions s'écrivent à
+    `glossaire` (`.claude/skills/glossaire/`) pour Plotin, `glossaire-marx`
+    (`.claude/skills/glossaire-marx/`) pour Marx. Les définitions s'écrivent à
     part, dans `content/courses/<cours>/definitions.yaml` (une par entrée) :
     elles s'affichent au survol d'un renvoi, se citent dans un rappel par
     `[def]`, tiennent lieu de sous-titre, et nourrissent le **grand exercice

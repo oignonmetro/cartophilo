@@ -1,6 +1,6 @@
 ---
 name: glossaire
-description: Écrit une entrée du glossaire de Plotin ou de Marx (piste Glossaire, unités g-…) : une notion, une sous-entrée ou une distinction, en une seule leçon (un rappel qui fait comprendre la notion, puis ses cartes), reliée aux entrées voisines par des renvois cliquables dans le rappel. Sources : traduction GF (citations, repères) et NotebookLM (lieux et emplois de la notion), passe de clarification, sans validation de l'utilisateur avant la version finale, branchement dans la piste, commit et push. Sait aussi scinder une ancienne fiche de plusieurs leçons en entrées d'une leçon reliées par des renvois. À utiliser dès qu'on demande une « entrée du glossaire », une « fiche » sur une notion de Plotin ou de Marx, d'« ajouter X au glossaire », ou de « scinder » une fiche du glossaire.
+description: Écrit une entrée du glossaire de Plotin (piste Glossaire, unités g-…) : une notion, une sous-entrée ou une distinction, en une seule leçon (un rappel qui fait comprendre la notion, puis ses cartes), reliée aux entrées voisines par des renvois cliquables dans le rappel. Sources : traduction GF (citations, repères) et NotebookLM (lieux et emplois de la notion), passe de clarification, sans validation de l'utilisateur avant la version finale, branchement dans la piste, commit et push. Sait aussi scinder une ancienne fiche de plusieurs leçons en entrées d'une leçon reliées par des renvois. À utiliser dès qu'on demande une « entrée du glossaire », une « fiche » sur une notion de Plotin, d'« ajouter X au glossaire », ou de « scinder » une fiche du glossaire.
 ---
 
 # Écrire une entrée du glossaire
@@ -41,9 +41,7 @@ balayage `gf.py cherche` pour trouver soi-même les passages, même quand
 NotebookLM est indisponible (limite d'usage) : ouvrir le journal, puis
 attendre.
 
-**Marx.** Pas encore fixées : avant la première entrée de Marx, demander à
-l'utilisateur l'édition de référence (citations, repères) et s'il existe un
-notebook NotebookLM, puis consigner la réponse ici.
+**Marx** : skill à part, `glossaire-marx` (`.claude/skills/glossaire-marx/`).
 
 ## 1. Les trois sortes d'entrées
 

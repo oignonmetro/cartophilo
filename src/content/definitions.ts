@@ -16,6 +16,11 @@ import type { TermEntry, Unit } from './schema'
  */
 export type DefinitionSource = string | { def: string; grec?: string; notion?: string }
 
+/** La langue du terme lu dans les titres du glossaire d'un cours, pour les consignes du grand exercice. */
+export function termLanguage(courseId: string): string {
+  return courseId === 'marx' ? 'allemand' : 'grec'
+}
+
 /** « Vie (`zôê`) » → la notion « Vie » et le terme grec « zôê » ; un titre sans grec n'a que sa notion. */
 export function splitTermTitle(title: string): { title: string; greek?: string } {
   const match = /^(.*?)\s*\(`([^`]+)`\)\s*$/.exec(title)

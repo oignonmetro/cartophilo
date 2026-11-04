@@ -2,17 +2,19 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import type { TreatiseChoiceExercise, TreatiseColumn } from '@/engine/exercises'
 import { Button } from '@/components/Button'
+import { useCourse } from '@/content/CourseProvider'
+import { termLanguage } from '@/content/definitions'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 import { OptionList } from './OptionList'
 import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
 
 /** La consigne d'un QCM, d'après ce qu'on donne (`from`) et ce qu'on cherche (`to`). */
-function questionOf(from: TreatiseColumn, to: TreatiseColumn, terms: boolean): string {
+function questionOf(from: TreatiseColumn, to: TreatiseColumn, terms: boolean, language: string): string {
   if (terms) {
-    if (to === 'number') return 'Quel est le terme grec de cette notion ?'
+    if (to === 'number') return `Quel est le terme ${language} de cette notion ?`
     if (to === 'thesis') return 'Quelle est la définition de cette notion ?'
-    return from === 'thesis' ? 'Quelle notion est ainsi définie ?' : 'Quelle notion désigne ce terme grec ?'
+    return from === 'thesis' ? 'Quelle notion est ainsi définie ?' : `Quelle notion désigne ce terme ${language} ?`
   }
   if (to === 'number') return from === 'thesis' ? 'Quelle numérotation porte le traité de cette thèse ?' : 'Quelle numérotation ?'
   if (to === 'thesis') return 'Quelle thèse défend ce traité ?'
@@ -35,6 +37,7 @@ export function TreatiseChoice({
 }) {
   const { prompt, answer, options, from, to } = exercise
   const terms = exercise.domain === 'terms'
+  const language = termLanguage(useCourse().course.id)
   // En italique : le titre d'un traité, le terme grec d'une notion.
   const italic: TreatiseColumn = terms ? 'number' : 'title'
   const [picked, setPicked] = useState<string | null>(null)
@@ -64,7 +67,7 @@ export function TreatiseChoice({
   return (
     <div className="flex flex-1 flex-col gap-6">
       <p className="text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
-        {questionOf(from, to, terms)}
+        {questionOf(from, to, terms, language)}
       </p>
 
       <div className="card-3d px-4 py-4 text-center">

@@ -4,6 +4,8 @@ import type { TreatiseTypeExercise } from '@/engine/exercises'
 import type { Rating } from '@/engine/srs'
 import { isTreatiseAnswerCorrect } from '@/engine/treatiseAnswers'
 import { Button } from '@/components/Button'
+import { useCourse } from '@/content/CourseProvider'
+import { termLanguage } from '@/content/definitions'
 import { useIsDesktop } from '@/lib/useIsDesktop'
 import { useProgress } from '@/store/progressStore'
 import { AnswerModeSwitch } from './AnswerModeSwitch'
@@ -12,10 +14,10 @@ import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
 
 /** La consigne d'un écrit, d'après ce qu'on cherche (`to`) et le mode de réponse. */
-function questionOf(exercise: TreatiseTypeExercise, reveal: boolean, revealed: boolean): string {
+function questionOf(exercise: TreatiseTypeExercise, reveal: boolean, revealed: boolean, language: string): string {
   const { to } = exercise
   if (reveal) return revealed ? 'Notez-vous' : 'Révélez la réponse'
-  if (exercise.domain === 'terms') return to === 'number' ? 'Quel est le terme grec de cette notion ?' : 'Quelle notion est ainsi définie ?'
+  if (exercise.domain === 'terms') return to === 'number' ? `Quel est le terme ${language} de cette notion ?` : 'Quelle notion est ainsi définie ?'
   return to === 'number' ? 'Quelle est la numérotation de ce traité ?' : 'Quel est le titre de ce traité ?'
 }
 
@@ -36,6 +38,7 @@ export function TreatiseType({
 }) {
   const { prompt, given, answer, from, to } = exercise
   const terms = exercise.domain === 'terms'
+  const language = termLanguage(useCourse().course.id)
   // En italique : le titre d'un traité, le terme grec d'une notion.
   const italic = terms ? 'number' : 'title'
   const isDesktop = useIsDesktop()
@@ -99,7 +102,7 @@ export function TreatiseType({
       <div className="sticky top-0 z-10 grid grid-cols-[1fr_auto_1fr] items-center gap-2 bg-cream py-1">
         <span aria-hidden />
         <p className="text-center text-sm font-bold uppercase tracking-wide text-ink-faint">
-          {questionOf(exercise, reveal, revealed)}
+          {questionOf(exercise, reveal, revealed, language)}
         </p>
         <div className="flex justify-end">
           <AnswerModeSwitch mode={mode} disabled={answered} onChange={(next) => setGapMode(device, next)} />
@@ -141,7 +144,7 @@ export function TreatiseType({
           spellCheck={false}
           lang="fr"
           placeholder={
-            terms ? (to === 'number' ? 'Le terme grec, translittéré…' : 'La notion…') : to === 'number' ? 'Rang [Ennéade, place]' : 'Le titre du traité…'
+            terms ? (to === 'number' ? language === 'grec' ? 'Le terme grec, translittéré…' : `Le terme ${language}…` : 'La notion…') : to === 'number' ? 'Rang [Ennéade, place]' : 'Le titre du traité…'
           }
           aria-label="Votre réponse"
           className={`w-full rounded-2xl border-2 bg-paper px-4 py-4 text-lg font-bold outline-none disabled:opacity-70 ${
