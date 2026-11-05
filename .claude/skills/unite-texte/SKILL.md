@@ -397,13 +397,16 @@ chaque marque a une fonction. Les retouches de l'utilisateur sur
   l'introduit ; **souligné** (`__…__`) sur les propositions qui portent
   l'argument (prémisses, membres d'une alternative). Les deux se combinent
   pour l'intitulé d'une étape.
-- **Couleurs**, le code fixe, toujours le même : `green` la thèse retenue ;
+- **Couleurs**, le code fixe de `content/philosophie.md` (harmonisé le
+  2026-11-05), toujours le même : `green` la thèse retenue ;
   `red` et `pink` ont la même valeur (le négatif, ce qui est rejeté, le
   contraire, l'opposition) et alternent surtout pour la lisibilité : deux
   membres négatifs voisins ne prennent pas la même couleur ; `violet` les termes techniques et notions
-  clés ; `teal` les citations ; `sky` la structure et les sources ;
-  `coral` les propriétés établies et les conclusions ; `yellow` les images
-  et analogies ; `amber` libre, pour une nuance locale.
+  clés ; `teal` les citations ; `sky` la structure, les sources et les
+  autres auteurs ; `coral` l'argument (la raison qui justifie, les
+  propriétés établies, les conclusions) ; `amber`, variante du corail, ce
+  qui est central ou fait comprendre un point difficile, et les emplois
+  réguliers listés plus bas ; `yellow` les exemples, images et analogies.
 - **Dans la phrase de thèse d'ouverture**, seuls les mots qui portent
   l'idée sont colorés, la phrase n'est pas entièrement en couleur : par
   exemple la question en `amber`, la notion définie en `violet`, la
@@ -437,7 +440,8 @@ chaque marque a une fonction. Les retouches de l'utilisateur sur
     l'intitulé d'une étape, son dernier membre (`Le principe de réaction est
     le **{coral}principe de la vie{/coral}**`) ;
   - `amber` l'articulation (les « trois temps » d'un paragraphe, chacun
-    marqué), la thèse épistémologique (ce qu'on ne connaît que par ses
+    marqué), la question en vedette, les éléments d'une définition, la
+    prémisse, la thèse épistémologique (ce qu'on ne connaît que par ses
     effets), la nuance ou la prudence, la phrase de synthèse ;
   - `yellow` les exemples, cas et images : les âges (l'enfant, l'adulte, le
     vieillard), le pouls du fonctionnaire et du marathonien, « l'un se nourrit
@@ -455,7 +459,8 @@ chaque marque a une fonction. Les retouches de l'utilisateur sur
   décisifs, les mots de liaison restant nus, le guillemet fermant avec le
   dernier membre (`{teal}« {/teal}bientôt {teal}ils succomberaient{/teal}
   s'ils n'avaient en eux {teal}un principe permanent de réaction »{/teal}`),
-  voir `content/philosophie.md`.
+  voir `content/philosophie.md`. Une citation courte peut s'écrire entière
+  en teal : l'application n'en teinte alors que les guillemets.
 - **Gras d'intitulé** : il ne couvre que ce qui est dit, ponctuation
   comprise, et il se rompt autour d'une couleur (`**par une définition :**
   {violet}**la vie**{/violet} **est**`). Une question posée dans

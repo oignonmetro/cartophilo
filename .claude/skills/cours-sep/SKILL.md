@@ -70,7 +70,7 @@ compléter à la prochaine relecture, et à déclasser si un point n'y revient p
 4. **Les pôles soulignés.** `__forme__` / `__matière__`, `__tous__` les états /
    `__états matériels__`. Le souligné tient aux pôles et aux prémisses.
 5. **La question se voit.** Mise en gras ou en vedette, suivie de ses réponses
-   (`{coral}__**L'âme relève-t-elle… ?**__{/coral}`, puis `**Oui, pour**` /
+   (`{amber}__**L'âme relève-t-elle… ?**__{/amber}`, puis `**Oui, pour**` /
    `**Non, pour**` ; `**qu'est-ce qu'une véritable démonstration… ?**`).
 6. **Le tableau porte le contenu.** Pas d'étiquettes rangées, à côté d'une
    explication dans un autre bloc : la citation y devient une colonne (les causes
@@ -104,10 +104,12 @@ compléter à la prochaine relecture, et à déclasser si un point n'y revient p
 
 ### Décidé par l'utilisateur
 
-**Le teal ne colore pas le texte d'une citation.** Écrire la citation entière
-dans sa couleur, `{teal}« … »{/teal} : l'application n'en teinte que les
-guillemets (`quoteEdges`, `src/content/notes.ts`), car trop de citations en
-couleur rendent un rappel illisible.
+**Les couleurs suivent le code de `content/philosophie.md`** (harmonisé le
+2026-11-05), sans écart propre aux cours SEP. Pour les citations : guillemet
+ouvrant en teal, puis en teal les mots clefs, les mots de liaison restant nus ;
+une citation courte peut s'écrire entière dans la couleur, `{teal}« … »{/teal}`,
+dont l'application ne teinte que les guillemets (`quoteEdges`,
+`src/content/notes.ts`).
 
 ## Déroulé
 

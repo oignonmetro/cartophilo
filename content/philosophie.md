@@ -329,22 +329,47 @@ fonction. Le gras porte le contenu décisif (pas la formule qui l'introduit)
 et les conclusions ; le souligné, les propositions qui portent l'argument
 (prémisses, membres d'une alternative) ; les deux se combinent pour
 l'intitulé d'une étape. Les couleurs suivent un code fixe, le même dans tous
-les cours :
+les cours. **Ce code fait référence** : les skills de contenu (`unite-texte`,
+`cours-traite`, `cours-oeuvre`, `cours-sep`, `cours-dissertation`,
+`glossaire`, `glossaire-marx`) le reprennent sans s'en écarter, sauf écart
+nommé comme tel (harmonisé le 2026-11-05).
 
 - `green` : la thèse retenue par l'auteur ;
-- `red` : ce qu'il rejette, ou ce qui fait problème ;
-- `pink` : libre ; sert volontiers de variante au rouge, pour l'autre pôle
-  d'une opposition dont le vert marque le premier ;
-- `violet` : les termes techniques et notions clés ;
-- `teal` : une citation du texte étudié, toute entière dans la couleur
-  (`{teal}« … »{/teal}`) : l'application ne teinte que ses guillemets, le texte
-  restant en noir, car trop de citations en couleur rendent un rappel
-  illisible (voir `quoteEdges` dans `src/content/notes.ts`) ;
-- `sky` : la structure de l'œuvre (parties, chapitres) et les sources qu'elle
-  reprend (un dialogue de Platon, un discours qu'elle cite) ;
-- `coral` : les propriétés établies et les conclusions ;
-- `yellow` : les images et les analogies (l'aveugle-né, la caverne) ;
-- `amber` : libre, pour une nuance locale ;
+- `red` et `pink` : le négatif, ce que l'auteur rejette, la thèse adverse,
+  l'hypothèse réfutée, ce qui fait problème. Les deux ont la même valeur : le
+  rose sert de variante au rouge, pour l'autre pôle d'une opposition dont le
+  vert marque le premier, ou pour que deux membres négatifs voisins ne
+  prennent pas la même couleur ; la conception naïve écartée se met volontiers
+  en rose, sans obligation ;
+- `violet` : les termes techniques et notions clés (le terme grec ou allemand
+  compris, en plus de l'italique) ;
+- `teal` : les citations du texte étudié. Le guillemet ouvrant en teal, puis en
+  teal les mots clefs de la citation, les mots de liaison restant nus, le
+  guillemet fermant avec le dernier membre : `{teal}« {/teal}bientôt
+  {teal}ils succomberaient{/teal} s'ils n'avaient en eux {teal}un principe
+  permanent de réaction »{/teal}`. Une citation courte peut s'écrire entière
+  dans la couleur (`{teal}« … »{/teal}`) : l'application n'en teinte alors que
+  les guillemets, le texte restant en noir (`quoteEdges` dans
+  `src/content/notes.ts`). Une hypothèse réfutée dans la citation prend le
+  rouge, guillemets en teal. Écart : le glossaire de Plotin ne met pas de teal
+  sur les citations (voir la skill `glossaire`) ;
+- `sky` : la structure de l'œuvre (parties, chapitres), les sources qu'elle
+  reprend (un dialogue de Platon, un discours qu'elle cite), et les noms des
+  autres auteurs et des commentateurs convoqués (`{sky}Huneman{/sky}`,
+  `{sky}Feuerbach{/sky}`) ; une thèse empruntée à un autre auteur prend le
+  sky sur le nom, sa couleur logique sur le contenu ;
+- `coral` : l'argument, ce qui établit comme ce qui est établi : la raison
+  qui justifie (« le temps n'est pas le mouvement, car {coral}les mouvements
+  sont eux-mêmes dans le temps{/coral} »), les propriétés établies, les
+  conclusions ;
+- `amber` : variante du corail, pour mettre en valeur ce qui est central ou ce
+  qui fait comprendre un point difficile, souvent un argument ; et, d'emploi
+  régulier : les éléments d'une définition, la prémisse, l'articulation d'un
+  paragraphe (ses « trois temps »), les deux membres d'un parallèle, la nuance
+  ou la prudence, la question mise en vedette ;
+- `yellow` (un vert fluo à l'écran) : les exemples pris par le philosophe, les
+  images et les analogies (l'aveugle-né, la caverne, le pouls du marathonien),
+  même quand l'exemple n'est pas une image ;
 - `plum` : les traités, réservée aux renvois `[[traiteN|traité N]]` qui la
   prennent d'office (ne pas l'écrire à la main).
 
@@ -446,12 +471,12 @@ une phrase entière quand le contraste tient à quelques mots :
   au corps{/amber}`, l'italique sur le mot qui fait la différence ;
 - vert et rouge coupés à la virgule, quand une phrase affirme puis nie : `{green}__…
   tous les vivants,__{/green} {red}__non sur les seuls êtres humains…__{/red}` ;
-- la question mise en vedette, puis ses réponses en paire : `{coral}__**L'âme
-  relève-t-elle de la science de la nature ?**__{/coral}`, puis `__**Oui, pour**__
+- la question mise en vedette, puis ses réponses en paire : `{amber}__**L'âme
+  relève-t-elle de la science de la nature ?**__{/amber}`, puis `__**Oui, pour**__
   {green}__**la plupart des états de l'âme**__{/green}` et `__**Non, pour**__
   {red}__**l'intelligence**__{/red}` ;
 - le souligné sur les pôles (`__forme__` / `__matière__`, `__tous__` les états /
-  `__états matériels__`), l'exemple en `yellow` même s'il n'est pas une image.
+  `__états matériels__`), l'exemple en `yellow`.
 
 **Citer à partir de ce qui apporte quelque chose.** Quand la phrase vient de
 dire « ce qui est commun à l'âme et au corps », la citation commence à
@@ -500,11 +525,11 @@ de questions, plutôt que de ranger des étiquettes : ici, la règle des cases
 courtes passe après la compréhension. Une case de plus de 60 caractères ne se
 demande jamais seule : prévoir alors la banque, ou `exercises: []`.
 
-**Dans une longue citation, le teal désigne ce qui compte.** Là où `{teal}« …
-»{/teal}` entier ne colore que les guillemets, la citation peut se découper : le
-guillemet ouvrant seul en `{teal}«{/teal}`, puis en teal les membres décisifs, les
-mots de liaison restant nus (`{teal}ce qu'il connaît, il ne le chercherait pas,
-parce qu'il le connaît{/teal}, et le connaissant, …`). On y souligne aussi les
+**Dans une longue citation, le teal désigne ce qui compte** (voir le code
+plus haut) : guillemet ouvrant seul en `{teal}«{/teal}`, puis en teal les
+membres décisifs, les mots de liaison restant nus (`{teal}ce qu'il connaît, il
+ne le chercherait pas, parce qu'il le connaît{/teal}, et le connaissant, …`).
+On y souligne aussi les
 pôles (`__pourquoi__` / `__ce qu'est__`). Le souligné et le gras se posent donc
 aussi à l'intérieur d'une citation.
 

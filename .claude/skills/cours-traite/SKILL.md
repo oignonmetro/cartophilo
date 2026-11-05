@@ -432,14 +432,18 @@ et chaque marque a une fonction.
 - **Souligné** (`__…__`) sur les propositions qui portent l'argument
   (prémisses, membres d'une alternative, ce qu'établit chaque chapitre).
   Gras et souligné se combinent pour l'intitulé d'une étape.
-- **Couleurs** : le code fixe de `content/philosophie.md`. Vert la thèse
-  retenue ; en face, rouge ce qui est rejeté ou fait problème, ou rose
-  (libre, souvent en variante du rouge) pour l'autre pôle d'une opposition ;
-  violet les termes techniques ; turquoise les citations ; bleu ciel la
-  structure et les sources (« l'ascension du discours de Diotime », le
-  *Phédon*) ; corail les propriétés établies et conclusions ; jaune les
-  images et analogies (l'aveugle-né, l'œil sorti de la caverne) ; ambre
-  libre. Les paires vert/rouge (ou vert/rose) opposent les deux pôles d'une
+- **Couleurs** : le code fixe de `content/philosophie.md` (harmonisé le
+  2026-11-05). Vert la thèse retenue ; en face, rouge ce qui est rejeté ou
+  fait problème, ou rose (même valeur, en variante du rouge) pour l'autre
+  pôle d'une opposition ; violet les termes techniques ; turquoise les
+  citations (guillemets et mots clefs) ; bleu ciel la structure, les
+  sources et les autres auteurs (« l'ascension du discours de Diotime », le
+  *Phédon*, les stoïciens) ; corail l'argument, la raison qui justifie
+  comme les propriétés établies et conclusions ; ambre, variante du corail,
+  ce qui est central ou éclaire un point difficile, les éléments d'une
+  définition, la prémisse, l'articulation, la question en vedette ; jaune
+  (vert fluo à l'écran) les exemples, images et analogies (l'aveugle-né,
+  l'œil sorti de la caverne). Les paires vert/rouge (ou vert/rose) opposent les deux pôles d'une
   même phrase : laideur et mélange / vertu et purification.
 - **Grec** translittéré en *italique*, dans le rappel comme dans les cartes
   (*noêsis*, *ekplēxis*, *monos pros monon*) ; plus de backticks.

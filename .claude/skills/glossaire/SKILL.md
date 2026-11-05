@@ -293,7 +293,9 @@ et la remplacer par un renvoi.
   couleur qui dit le **rôle logique** d'une partie de la citation (voir
   plus bas) : l'hypothèse que Plotin réfute en rouge, ce qu'il retient en
   vert, jusque dans les guillemets (retouche de l'entrée Bonheur,
-  2026-10-23). **On y souligne en revanche la
+  2026-10-23). C'est le seul écart du glossaire de Plotin au code de
+  `content/philosophie.md`, maintenu à l'harmonisation du 2026-11-05 (le
+  glossaire de Marx, lui, met ses citations en teal). **On y souligne en revanche la
   partie décisive** de chaque citation, celle qui porte l'idée : « une vie
   qui __demeure dans l'identité__ parce que __le tout lui est toujours
   présent__ ». Le souligné se met à l'intérieur des guillemets, sur une
@@ -370,13 +372,20 @@ passer.
 **Couleurs et mise en relief, d'après les retouches de l'utilisateur**
 (2026-10-23) :
 
-- les couleurs disent le **rôle logique**, chacune toujours le même :
-  {pink}la conception naïve écartée{/pink}, {red}la thèse adverse ou
-  l'hypothèse réfutée{/red} (« pour les {red}stoïciens{/red}, l'âme est un
-  {red}souffle physique{/red} »), {green}la thèse retenue{/green},
-  {coral}la raison qui justifie{/coral} (« le temps n'est pas le
-  mouvement, car {coral}les mouvements sont eux-mêmes dans le temps{/coral} »),
-  {yellow}l'image ou la thèse empruntée à un autre auteur{/yellow} ;
+- les couleurs disent le **rôle logique**, chacune toujours le même, selon
+  le code de `content/philosophie.md` (harmonisé le 2026-11-05) :
+  {green}la thèse retenue{/green} ; {red}la thèse adverse ou l'hypothèse
+  réfutée{/red} (« pour les {sky}stoïciens{/sky}, l'âme est un
+  {red}souffle physique{/red} »), en rouge ou en rose, qui ont la même
+  valeur ({pink}la conception naïve écartée{/pink} se met volontiers en
+  rose) ; {coral}l'argument{/coral}, la raison qui justifie comme ce qui
+  est établi (« le temps n'est pas le mouvement, car {coral}les mouvements
+  sont eux-mêmes dans le temps{/coral} ») ; {amber}ce qui est central ou
+  fait comprendre un point difficile{/amber}, les éléments d'une
+  définition, la prémisse, l'articulation, la question en vedette ;
+  {yellow}l'exemple, l'image, l'analogie{/yellow} ; {sky}les autres
+  auteurs{/sky} et les sources (une thèse empruntée : le nom en sky, le
+  contenu dans sa couleur logique) ;
 - dans l'intitulé d'une étape, la notion en jeu en violet :
   `__**Le temps n'est ni le**__ {violet}__**mouvement**__{/violet} __**ni quelque chose du mouvement.**__` ;
 - l'italique d'insistance, dans un intitulé ou une phrase, sur le mot qui
