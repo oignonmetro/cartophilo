@@ -63,9 +63,12 @@ précisément sa source**. Conséquences :
   absente des PDF n'est pas fausse pour autant : l'OCR de certains volumes est
   fautif (*L'Idéologie allemande* : « ct » pour « et », mots brisés), et
   *Travail salarié et capital* n'y est qu'en Pléiade. Le lancer avant chaque
-  publication et reprendre sur les Éditions sociales toute citation qui s'en
-  écarte (un mot changé, un sujet substitué, « l'animal » pour « il », une
-  autre traduction) ;
+  publication, mais **sans être aussi strict que pour Plotin** (consigne de
+  l'utilisateur, 2026-11-06) : une citation dans une autre traduction, ou que
+  le script ne retrouve pas, reste telle quelle. Préférer l'édition des
+  Éditions sociales quand elle est sous la main, et ne corriger que ce qui
+  est faux (un mot ajouté ou changé qui altère le sens, un sujet substitué :
+  « l'animal » pour « il ») ;
 - ce que dit un commentateur ne s'attribue jamais à Marx : si l'idée vient
   d'une étude et non d'un texte de Marx, le rappel appuie la thèse sur Marx
   ou nomme le commentateur.
