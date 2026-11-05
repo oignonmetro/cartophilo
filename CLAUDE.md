@@ -85,7 +85,9 @@ l'épreuve :
   sur la vie, un groupe par chapitre, à partir des scans océrisés qu'en donne
   l'utilisateur, selon le § « Un cours sur un auteur, tiré d'un commentaire »
   de `content/philosophie.md` et la conduite de `cours-sep` : d'abord
-  l'introduction de Chaintreuil et Rouquayrol (`intro1` à `intro5`).
+  l'introduction de Chaintreuil et Rouquayrol (`intro1` à `intro5`), puis
+  « Vraie vie et modes de vie dans la philosophie antique » de Chapuis
+  (`vies1` à `vies6`).
 
 ## Décidé : la correspondance technique avec le moteur de contenu
 

@@ -1,0 +1,261 @@
+# Cours tiré du chapitre du manuel collectif sur la vie : Maxime Chapuis,
+# « Vraie vie et modes de vie dans la philosophie antique », p. 40-70 (scan
+# fourni par l'utilisateur, océrisé ; pages 48, 52, 62, 63 et 66 relues sur
+# l'image). Voir content/philosophie.md, § « Un cours sur un auteur, tiré d'un
+# commentaire » : citations reprises telles que le chapitre les donne, avec ses
+# traductions (Platon : Robin, Pléiade, sauf les Lois, Brisson et Pradeau ;
+# Éthique à Nicomaque : Tricot ; Politiques : Pellegrin ; Jamblique : Hasnaoui ;
+# Diogène Laërce : dir. Goulet-Cazé), et ses références.
+#
+# Unités vies1 à vies6 : les mots de la vie (zôè, bios, genre, forme, mode et
+# style de vie) ; vivre, c'est mourir ; choisir sa vie (deux chemins, mythe
+# d'Er) ; Pythagore et la panégyrie ; Platon contre Calliclès ; Aristote, vie
+# théorétique et vie pratique, et la conclusion du chapitre.
+
+id: vies1
+title: "Zôè, bios et modes de vie"
+subtitle: "Deux mots grecs pour la vie, et pourquoi parler de « mode de vie »"
+icon: compass
+color: coral
+group: "Vraie vie et modes de vie dans l'Antiquité (Chapuis)"
+lessons:
+- id: vies1-l1
+  title: "Arendt : la vie qui peut se raconter"
+  notes: |-
+    **Le chapitre part d'une distinction devenue classique au XXe siècle : le grec aurait deux mots pour la vie, *zôè* et *bios*.** Cette leçon en donne la version d'Arendt, la suivante celle d'Agamben et ses limites.
+
+    **Arendt : la vie entre naissance et mort.** Dans *Condition de l'homme moderne*, {sky}Hannah Arendt{/sky} donne au mot « vie » un sens tout différent du sens biologique, {teal}« {/teal}si on l'emploie par rapport au monde, pour désigner {teal}l'intervalle entre la naissance et la mort »{/teal}. Bornée par ces deux événements, cette vie {teal}« {/teal}suit {teal}un mouvement strictement linéaire{/teal}, causé néanmoins par le même moteur biologique qui anime tous les vivants et qui conserve perpétuellement {teal}le mouvement cyclique naturel »{/teal}. Le {pink}cycle{/pink} est celui de l'espèce, qui se reproduit sans fin ; la {green}ligne{/green} est celle de l'individu, qui naît une fois et meurt une fois.
+
+    **Son trait principal : elle peut se raconter.** Cette vie spécifiquement humaine est {teal}« {/teal}toujours {teal}emplie d'événements qui à la fin peuvent être racontés, peuvent fonder une biographie »{/teal} ; c'est d'elle, *bios* par opposition à la simple *zôè*, qu'Aristote disait qu'elle {teal}« est en quelque manière une sorte de *praxis* »{/teal} (*Politiques*, I, 4). Car {amber}l'action et la parole{/amber} sont les deux activités dont le résultat sera toujours {teal}« une histoire assez cohérente pour être contée »{/teal}, si fortuits que paraissent un à un les événements.
+
+    **D'où le partage :**
+    - {violet}*zôè*{/violet} : {amber}le simple fait de vivre{/amber}, que les hommes ont en partage avec les animaux et les plantes ;
+    - {violet}*bios*{/violet} : {amber}la vie spécifiquement humaine, digne d'un récit{/amber}, qui mêle parole et action, *logos* et *praxis* : il n'est de récit qu'à condition qu'il y ait une histoire, donc une action qui en soit le moteur, à raconter par la parole.
+
+    ! Le récit n'est pas un ornement de la vie humaine : c'est ce qui la distingue. Une vie de plante ne se raconte pas, elle se décrit.
+  points:
+  - id: vies1-l1-p1
+    sentence: "Dans *Condition de l'homme moderne*, Hannah ___ distingue deux significations du mot vie, qu'elle attribue aux termes grecs *zôè* et *bios*."
+    answer: "Arendt"
+    alt: []
+  - id: vies1-l1-p2
+    sentence: "Arendt : rapportée au monde, la vie désigne « l'___ entre la naissance et la mort »."
+    answer: "intervalle"
+    alt: []
+  - id: vies1-l1-p3
+    sentence: "Arendt : la vie humaine suit « un mouvement strictement ___ », causé par le même moteur biologique qui conserve le mouvement cyclique naturel."
+    answer: "linéaire"
+    alt: []
+  - id: vies1-l1-p4
+    sentence: "Arendt : la vie humaine est toujours « emplie d'événements qui à la fin peuvent être racontés, peuvent fonder une ___ »."
+    answer: "biographie"
+    alt: []
+  - id: vies1-l1-p5
+    sentence: "Arendt rappelle qu'Aristote disait du *bios* qu'il « est en quelque manière une sorte de ___ » (*Politiques*, I, 4)."
+    answer: "praxis"
+    alt: []
+  - id: vies1-l1-p6
+    sentence: "Pour Arendt, l'action et la ___ sont les deux activités dont le résultat sera toujours une histoire assez cohérente pour être contée."
+    answer: "parole"
+    alt: []
+  - id: vies1-l1-p7
+    sentence: "Pour Arendt, *___* est le simple fait de vivre, que les hommes partagent avec les animaux et les plantes."
+    answer: "zôè"
+    alt: ["zoè", "zôê", "zoe"]
+  - id: vies1-l1-p8
+    sentence: "Pour Arendt, *bios* est la vie humaine digne d'un récit : il n'est de récit que s'il y a une histoire, donc une action, à raconter par la parole ; *bios* mêle ainsi *logos* et *___*."
+    answer: "praxis"
+    alt: []
+- id: vies1-l2
+  title: "Agamben, et les limites de la distinction"
+  notes: |-
+    **Agamben reprend la distinction d'Arendt, en lui donnant une inflexion politique**, dès les premières pages d'*Homo sacer* : {teal}« {/teal}*zôè*, qui exprimait {teal}le simple fait de vivre{/teal}, commun à tous les êtres vivants (animaux, hommes ou dieux), et *bios*, qui indiquait {teal}la forme ou la façon de vivre{/teal} propre à un individu ou à un groupe ». *Zôè* désigne ce qu'il appelle la {violet}« vie nue »{/violet}, le processus naturel commun aux vivants ; *bios*, un mode ou un genre de vie.
+
+    **Le texte d'Aristote : l'origine et la fin de la cité.** {sky}Giorgio Agamben{/sky} part des *Politiques*, qui distinguent implicitement {pink}l'origine{/pink} de la cité, la simple survie (les hommes ne se suffisant pas à eux-mêmes doivent s'unir), et {green}son fondement{/green}, la vie bonne, où l'homme accomplit sa nature d'animal doué de *logos* : la cité {teal}« {/teal}s'étant donc constituée {teal}pour permettre de vivre{/teal} [*ginomenê men tou zên eneken*], elle permet, une fois qu'elle existe, de {teal}mener une vie heureuse »{/teal} [*ousa de tou eu zên*] (*Les Politiques*, I, 2). D'où le partage entre {violet}*to zên*{/violet}, le simple fait de vivre (satisfaire ses besoins, procréer), et {violet}*to eu zên*{/violet}, {teal}« la vie politiquement qualifiée »{/teal}, propre aux hommes, et même à certains : les hommes libres, non réduits à la survie, ni {yellow}instruments vivants{/yellow} comme Aristote considère l'esclave, {teal}« {/teal}un {teal}bien acquis animé »{/teal} (*Politiques*, I, 4). Ainsi, pour Agamben, la simple vie naturelle {coral}reste confinée à la sphère de l'*oïkos*{/coral}, la maison, hors de la *polis*.
+
+    **Mais la distinction est moins nette chez les Grecs qu'Agamben ne le croit** : *bios* n'est pas nécessairement réservé aux hommes. {sky}Dubreuil{/sky} le dit d'un trait : {teal}« Agamben épure Aristote{/teal} et il l'extrapole à l'entité merveilleuse "les Grecs" ». L'interprétation d'Arendt et d'Agamben repose sur une affirmation du grammairien {sky}Ammonius{/sky}, selon qui {teal}« *bios* convient aux animaux à raison{/teal} [*logikôn zôôn*], c'est-à-dire aux seuls êtres humains, {teal}*zôè* aux êtres humains et aux animaux sans raison »{/teal}.
+
+    **D'où le choix de vocabulaire du chapitre.** Pour chaque texte grec, il indique le mot employé ; et plutôt que *bios*, qui n'a pas toujours ce sens, il dit {amber}« survie » ou « simple vie »{/amber} pour le processus commun aux vivants, et {amber}« mode de vie »{/amber} pour {coral}une manière de conduire son existence en vue d'une fin{/coral} (connaissance, action), selon une modalité (nécessité, contingence) et par certains procédés.
+  points:
+  - id: vies1-l2-p1
+    sentence: "Dès les premières pages d'*Homo sacer*, Giorgio ___ reprend la distinction d'Arendt entre *zôè* et *bios* en lui donnant une inflexion politique."
+    answer: "Agamben"
+    alt: []
+  - id: vies1-l2-p2
+    sentence: "Agamben appelle « vie ___ » la *zôè*, le processus naturel commun à tous les vivants."
+    answer: "nue"
+    alt: []
+  - id: vies1-l2-p3
+    sentence: "Agamben, *Homo sacer* : *bios* indiquait « la forme ou la ___ de vivre propre à un individu ou à un groupe »."
+    answer: "façon"
+    alt: []
+  - id: vies1-l2-p4
+    sentence: "Aristote, *Les Politiques*, I, 2 : la cité, s'étant constituée « pour permettre de vivre », permet, une fois qu'elle existe, « de mener une vie ___ »."
+    answer: "heureuse"
+    alt: ["bonne"]
+  - id: vies1-l2-p5
+    sentence: "La cité naît en vue du simple vivre, *to zên*, mais existe en vue du bien vivre, en grec *to ___ zên*."
+    answer: "eu"
+    alt: []
+  - id: vies1-l2-p6
+    sentence: "Agamben : *to eu zên*, la bonne vie, est « la vie ___ qualifiée », propre aux hommes libres."
+    answer: "politiquement"
+    alt: []
+  - id: vies1-l2-p7
+    sentence: "Pour Agamben, dans le monde classique, la simple vie naturelle reste confinée, comme vie reproductive, à la sphère de l'*___*, la maison."
+    answer: "oïkos"
+    alt: ["oikos"]
+  - id: vies1-l2-p8
+    sentence: "Aristote, *Politiques*, I, 4 : « l'esclave est un bien acquis ___ »."
+    answer: "animé"
+    alt: []
+  - id: vies1-l2-p9
+    sentence: "Contre Arendt et Agamben, ___ rappelle que *bios* n'est pas réservé aux hommes : « Agamben épure Aristote et il l'extrapole à l'entité merveilleuse \"les Grecs\" »."
+    answer: "Dubreuil"
+    alt: []
+  - id: vies1-l2-p10
+    sentence: "L'interprétation d'Arendt et d'Agamben repose sur le grammairien ___ : *bios* convient aux seuls animaux à raison, *zôè* aux hommes et aux animaux sans raison."
+    answer: "Ammonius"
+    alt: []
+- id: vies1-l3
+  title: "Genre, forme ou mode de vie"
+  notes: |-
+    **Comment nommer ce que choisit une vie philosophique ? Trois expressions sont écartées ou nuancées, pour en garder une.** L'expression {violet}« mode de vie »{/violet} sous-entend {amber}un ensemble de normes{/amber} auquel se soumettre, pour que l'existence corresponde à un idéal, fixé par le sujet lui-même, par son école ou par son maître.
+
+    | Expression | Ce qu'elle dit | Sa limite |
+    | genre de vie | une classe de vies aux caractères communs | nature et culture entremêlées |
+    | forme de vie | des configurations de coexistence | trop hétérogène |
+    | mode de vie | un modèle, une norme à suivre | retenue |
+
+    **Le genre : une origine commune.** Le latin {violet}*genus*{/violet}, l'origine, la naissance, contient l'idée d'{amber}une source commune qui se diversifie en espèces{/amber}. Le géographe {sky}Vidal de la Blache{/sky} définit ainsi les genres de vie comme des {teal}« modes de groupements sociaux{/teal}, originairement sortis de {teal}la collaboration de la nature et des hommes »{/teal}, de plus en plus émancipés des milieux. Le genre a donc {coral}un sous-entendu biologique{/coral} : il est à l'intersection de la « simple vie » et du « mode de vie ».
+
+    **La forme : le vital et le social.** Issue de {sky}Wittgenstein{/sky}, l'expression a pris un nouvel essor avec {sky}Estelle Ferrarese et Sandra Laugier{/sky}. Laugier définit les formes de vie comme {teal}« des configurations de co-existence humaine{/teal}, dont la texture est faite des pratiques ou actions qui les produisent, les modifient, les détruisent », et des {teal}« manières humaines d'être vivant »{/teal}. Notion {red}trop hétérogène pour trouver une unité{/red}, elle pense le vital hors de la biologie, comme un devenir sans cesse refaçonné.
+
+    **Le mode : la juste mesure.** Le latin {violet}*modus*{/violet}, {amber}la mesure, la juste mesure, la limite convenable{/amber}, enveloppe {green}l'idée d'un modèle à suivre ou d'une norme à respecter{/green}. Or c'est bien ce que fait la philosophie antique : elle ne décrit pas seulement comment vivent les hommes, {coral}elle détermine des types de vie et les hiérarchise{/coral}.
+
+    **Un exemple : l'exclusion de la vie chrématistique.** Aristote exclut la vie du commerçant des modes de vie possibles, parce que l'enrichissement n'est pas une fin en soi : {teal}« {/teal}Quant à la vie d'homme d'affaires [*chrèmatistès*], c'est {teal}une vie de contrainte{/teal}, et la richesse n'est évidemment pas le bien que nous cherchons : c'est seulement {teal}une chose utile, un moyen en vue d'une autre chose »{/teal} (*Éthique à Nicomaque*, I, 3). Un mode de vie est donc {coral}recherché pour lui-même{/coral}, et il est {coral}explicitement l'objet d'un choix{/coral}, ce que ne disent ni le genre ni la forme de vie.
+  points:
+  - id: vies1-l3-p1
+    sentence: "Le mot « genre » vient du latin *___*, l'origine, la naissance : il contient l'idée d'une source commune qui se diversifie en espèces."
+    answer: "genus"
+    alt: []
+  - id: vies1-l3-p2
+    sentence: "Le géographe ___ définit les genres de vie comme des « modes de groupements sociaux, originairement sortis de la collaboration de la nature et des hommes »."
+    answer: "Vidal de la Blache"
+    alt: ["Vidal de La Blache"]
+  - id: vies1-l3-p3
+    sentence: "Parce qu'il entremêle nature et culture, le genre de vie se tient à l'intersection de la « simple vie » et du « ___ de vie »."
+    answer: "mode"
+    alt: []
+  - id: vies1-l3-p4
+    sentence: "Sandra ___ définit les formes de vie comme « des configurations de co-existence humaine » et des « manières humaines d'être vivant »."
+    answer: "Laugier"
+    alt: []
+  - id: vies1-l3-p5
+    sentence: "L'expression « forme de vie » est issue de ___ et de la sémiotique de Greimas et Fontanille."
+    answer: "Wittgenstein"
+    alt: []
+  - id: vies1-l3-p6
+    sentence: "Le mot « mode » vient du latin *___*, la mesure, la juste mesure, la limite convenable : il enveloppe l'idée d'un modèle à suivre."
+    answer: "modus"
+    alt: []
+  - id: vies1-l3-p7
+    sentence: "Aristote, *Éthique à Nicomaque*, I, 3 : la vie d'homme d'affaires « c'est une vie de ___ », et la richesse n'est pas le bien que nous cherchons."
+    answer: "contrainte"
+    alt: []
+  - id: vies1-l3-p8
+    sentence: "Aristote exclut la vie ___, celle du commerçant, des modes de vie possibles, parce que la richesse n'est qu'un moyen en vue d'autre chose."
+    answer: "chrématistique"
+    alt: []
+  - id: vies1-l3-p9
+    sentence: "Un mode de vie est recherché pour lui-même, et il est explicitement l'objet d'un ___, ce que ne disent ni le genre ni la forme de vie."
+    answer: "choix"
+    alt: []
+- id: vies1-l4
+  title: "Foucault et Hadot : style de vie ou manière de vivre"
+  notes: |-
+    **Puisqu'un mode de vie se choisit, on pourrait parler, avec Foucault, d'un « style de vie » ou d'une « esthétique de l'existence ».** {sky}Michel Foucault{/sky} entend par {violet}« arts de l'existence »{/violet} {teal}« {/teal}des {teal}pratiques réfléchies et volontaires{/teal} par lesquelles les hommes, non seulement se fixent des règles de conduite, mais {teal}cherchent à se transformer eux-mêmes{/teal}, à se modifier dans leur être singulier, et à {teal}faire de leur vie une œuvre{/teal} qui porte certaines valeurs esthétiques et réponde à certains critères de style ». Les {violet}« techniques de soi »{/violet} sont ces pratiques, liées par exemple {yellow}aux plaisirs sexuels{/yellow}, {yellow}à l'alimentation{/yellow}, {yellow}à l'ascèse{/yellow}. Le {violet}style{/violet}, du latin *stilus*, le poinçon pour écrire, dit bien l'idée : {yellow}« sculpter sa propre statue »{/yellow}, selon l'expression de Plotin (traité 38, VI, 7), faire de sa vie une œuvre d'art.
+
+    **Hadot objecte : on ne sépare pas le beau du bien.** {sky}Pierre Hadot{/sky} reconnaît dans la philosophie un art de vivre, mais reproche à Foucault de {red}séparer le beau du bien{/red}, alors que pour les Grecs {green}le beau (*kalon*) est le bien (*agathon*){/green}. Plutôt qu'une « culture de soi », il parle de {teal}« {/teal}transformation, de transfiguration, de {teal}"dépassement de soi"{/teal} », et d'un terme qu'on ne peut éluder, la {violet}sagesse{/violet} : {teal}« {/teal}l'état auquel peut-être le philosophe {teal}ne parviendra jamais, mais auquel il tend »{/teal}. Elle a trois aspects :
+
+    - {amber}la paix de l'âme{/amber} (*ataraxia*) ;
+    - {amber}la liberté intérieure{/amber} (*autarkeia*) ;
+    - et, sauf pour les sceptiques, {amber}la conscience cosmique{/amber} : la prise de conscience d'appartenir au Tout humain et cosmique, {coral}dilatation du moi qui réalise la grandeur d'âme{/coral} (*megalopsuchia*).
+
+    **Le mode de vie vient avant la doctrine.** Pour Hadot, la philosophie est d'abord une manière de vivre, distincte du discours philosophique, qui en est en partie le produit : {teal}« {/teal}au moins depuis Socrate, {teal}l'option pour un mode de vie ne se situe pas à la fin{/teal} du processus de l'activité philosophique, comme une sorte d'appendice accessoire, mais bien au contraire, {teal}à l'origine{/teal} [...] ; et cette option {teal}détermine{/teal} ainsi jusqu'à un certain point {teal}la doctrine elle-même »{/teal}.
+
+    **Le bilan du chapitre.** On peut reprocher à Hadot {red}une vision réductrice de la richesse des doctrines{/red} ; mais il a, avec Foucault, {green}mis l'accent sur la philosophie comme mode de vie recherché pour lui-même{/green}, qui exige des exercices, une ascèse, une transformation de soi. Le chapitre garde pourtant {amber}« mode de vie »{/amber} plutôt que « manière de vivre », qui ferait du discours le simple produit d'un type de vie.
+  points:
+  - id: vies1-l4-p1
+    sentence: "Michel Foucault parle d'une « ___ de l'existence » : faire de sa vie une œuvre qui réponde à certains critères de style."
+    answer: "esthétique"
+    alt: []
+  - id: vies1-l4-p2
+    sentence: "Foucault : les arts de l'existence sont des pratiques réfléchies et volontaires par lesquelles les hommes cherchent à se transformer eux-mêmes et à faire de leur vie une ___."
+    answer: "œuvre"
+    alt: ["oeuvre"]
+  - id: vies1-l4-p3
+    sentence: "Foucault appelle « techniques de ___ » les pratiques, liées aux plaisirs sexuels, à l'alimentation, à l'ascèse, par lesquelles on se transforme soi-même."
+    answer: "soi"
+    alt: []
+  - id: vies1-l4-p4
+    sentence: "Le style vient du latin *stilus*, le poinçon pour écrire : il s'agit de « sculpter sa propre ___ », selon l'expression de Plotin."
+    answer: "statue"
+    alt: []
+  - id: vies1-l4-p5
+    sentence: "Pierre Hadot reproche à Foucault de séparer le beau du bien, alors que pour les Grecs le beau, *kalon*, est le bien, *___*."
+    answer: "agathon"
+    alt: []
+  - id: vies1-l4-p6
+    sentence: "C'est ___ qui reproche à Foucault de séparer le beau du bien, et préfère parler de transformation, de « dépassement de soi »."
+    answer: "Hadot"
+    alt: ["Pierre Hadot"]
+  - id: vies1-l4-p7
+    sentence: "Hadot : la ___ est l'état auquel peut-être le philosophe ne parviendra jamais, mais auquel il tend."
+    answer: "sagesse"
+    alt: []
+  - id: vies1-l4-p8
+    sentence: "Pour Hadot, la paix de l'âme, premier des trois aspects de la sagesse, se dit en grec *___*."
+    answer: "ataraxia"
+    alt: []
+  - id: vies1-l4-p9
+    sentence: "Pour Hadot, la liberté intérieure, deuxième des trois aspects de la sagesse, se dit en grec *___*."
+    answer: "autarkeia"
+    alt: []
+  - id: vies1-l4-p11
+    sentence: "Pour Hadot, la conscience cosmique, prise de conscience d'appartenir au Tout, dilate le moi et réalise la grandeur d'âme, en grec *___*."
+    answer: "megalopsuchia"
+    alt: ["megalopsychia"]
+  - id: vies1-l4-p10
+    sentence: "Hadot : au moins depuis Socrate, l'option pour un mode de vie se situe non à la fin, mais à l'___ de l'activité philosophique, et détermine jusqu'à un certain point la doctrine."
+    answer: "origine"
+    alt: []
+- id: vies1-l5
+  title: "Les questions que posent les modes de vie"
+  notes: |-
+    **La thématique des modes de vie articule six questions**, qui ordonnent tout le chapitre :
+    - {amber}la pluralité{/amber} : si l'on constate *de facto* plusieurs modes de vie, qu'est-ce qui, *de jure*, autorise et justifie cette diversité ?
+    - {amber}la fin{/amber} : quelle fin vise chacun, quel objet se donne-t-il ?
+    - {amber}la modalité{/amber} : relèvent-ils de la nécessité ou de la contingence ?
+    - {amber}les pratiques{/amber} : comment chacun se traduit-il dans la conduite de l'existence ?
+    - {amber}la hiérarchie{/amber} : sont-ils tous souhaitables ? en est-il qui sont exclus comme possibilité même d'une vie ?
+    - {coral}la vraie vie{/coral} : peut-on parler d'une « vraie vie », et en quel sens ?
+
+    **Le chapitre commence par la dernière**, parce qu'elle est à la fois {green}le point de départ{/green} de la démarche philosophique (c'est pour changer de vie qu'on se consacre à la philosophie) et {green}sa fin{/green} (la philosophie élabore, conceptualise et justifie cette vie). Il y reviendra au terme, après la distinction des modes de vie.
+  points:
+  - id: vies1-l5-p1
+    sentence: "Première question des modes de vie : si l'on en constate plusieurs *de facto*, qu'est-ce qui, *de ___*, autorise et justifie cette diversité ?"
+    answer: "jure"
+    alt: []
+  - id: vies1-l5-p2
+    sentence: "Une des questions des modes de vie porte sur leur modalité : relèvent-ils de la nécessité ou de la ___ ?"
+    answer: "contingence"
+    alt: []
+  - id: vies1-l5-p3
+    sentence: "De la pluralité des modes de vie découle la question de leur ___ : sont-ils tous souhaitables, ou certains sont-ils exclus ?"
+    answer: "hiérarchie"
+    alt: ["hiérarchisation"]
+  - id: vies1-l5-p4
+    sentence: "La question de la « ___ vie » est à la fois le point de départ de la démarche philosophique, puisqu'on philosophe pour changer de vie, et sa fin."
+    answer: "vraie"
+    alt: []

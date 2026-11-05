@@ -1,0 +1,287 @@
+# Chapitre de Maxime Chapuis, « Vraie vie et modes de vie dans la philosophie
+# antique » (voir vies1 pour la source et la méthode) : « La vraie vie et la
+# mort », première section, « Que vivre, c'est mourir ». Phédon 66b-67a relu
+# sur l'image (p. 48).
+
+id: vies2
+title: "Vivre, c'est mourir"
+subtitle: "La vraie vie chez Platon : le corps-tombeau, apprendre à mourir, le sentier vers le réel"
+icon: compass
+color: coral
+group: "Vraie vie et modes de vie dans l'Antiquité (Chapuis)"
+lessons:
+- id: vies2-l1
+  title: "Qu'est-ce que la vraie vie ?"
+  notes: |-
+    **La philosophie ne cesse de se poser la question : qu'est-ce que la vraie vie ?** Non pas seulement une vie {pink}authentiquement vécue{/pink}, au sens étymologique d'« authentique » (le grec {violet}*authentikos*{/violet}, « qui consiste en un pouvoir absolu », d'où « garanti, inattaquable ») : une vie pleinement fidèle à des principes, *quels qu'ils soient*. Mais {green}une vie conforme au concept même de vie{/green}, qui permette de discriminer entre les types de vie, dirigée selon {coral}des principes indubitables, dont tous devraient en droit reconnaître la validité{/coral}.
+
+    ! La différence est décisive : une vie authentique peut être fidèle à de mauvais principes ; la vraie vie est celle dont les principes valent pour tous.
+
+    **Une telle vie formulerait un impératif**, celui du poème de {sky}Rilke{/sky}, « Torse archaïque d'Apollon » : {teal}« Tu dois changer ta vie »{/teal}, que {sky}Peter Sloterdijk{/sky} a repris pour titre d'un ouvrage.
+
+    **La question naît d'une interrogation sur la vie et la mort**, dont {sky}Euripide{/sky} se fait l'écho, dans un fragment probablement tiré de *Polyidos*, que Platon rapporte dans le *Gorgias* (492e) : {teal}« Qui sait si vivre{/teal} [*to zèn*] {teal}ce n'est pas mourir{/teal} [*katthanein*], et si, d'un autre côté, {teal}mourir{/teal} [*to katthanein*], {teal}ce n'est pas vivre{/teal} [*zèn*] ? »
+
+    **Ce qu'affirme la question : la frontière entre vivre et mourir est poreuse.** Les deux verbes substantivés désignent deux processus {amber}indiscernables{/amber}. La mort n'est pas un événement qui marque la fin de la vie : {coral}vivre est un processus équivalent à celui de mourir{/coral}.
+    - {amber}Venir à la vie{/amber}, c'est déjà entamer le processus qui conduit inexorablement à la mort ;
+    - inversement, {amber}mourir{/amber} prouve qu'on est vivant, puisque {yellow}seul peut mourir un vivant{/yellow}.
+
+    Mais Euripide ne l'affirme pas : il le demande ({violet}*tis d'oiden*{/violet}, « qui sait », presque « y a-t-il quelqu'un pour savoir ? »). C'est {coral}une évidence si bien oubliée qu'elle est devenue le secret, le mystère de la vie{/coral}.
+  points:
+  - id: vies2-l1-p1
+    sentence: "Le grec *___*, « qui consiste en un pouvoir absolu », d'où « garanti, inattaquable », donne le mot « authentique »."
+    answer: "authentikos"
+    alt: []
+  - id: vies2-l1-p2
+    sentence: "Une vie authentique est fidèle à des principes, quels qu'ils soient ; la vraie vie est dirigée selon des principes ___, dont tous devraient en droit reconnaître la validité."
+    answer: "indubitables"
+    alt: []
+  - id: vies2-l1-p3
+    sentence: "« Tu dois changer ta vie » : l'impératif vient du poème de ___, « Torse archaïque d'Apollon »."
+    answer: "Rilke"
+    alt: []
+  - id: vies2-l1-p4
+    sentence: "Peter ___ a repris pour titre d'un ouvrage l'impératif de Rilke, « Tu dois changer ta vie »."
+    answer: "Sloterdijk"
+    alt: []
+  - id: vies2-l1-p5
+    sentence: "Fragment d'Euripide : « Qui sait si vivre ce n'est pas ___, et si, d'un autre côté, mourir, ce n'est pas vivre ? »"
+    answer: "mourir"
+    alt: []
+  - id: vies2-l1-p6
+    sentence: "Le fragment d'Euripide « Qui sait si vivre ce n'est pas mourir » est rapporté par Platon dans le *___*, 492e."
+    answer: "Gorgias"
+    alt: []
+  - id: vies2-l1-p7
+    sentence: "« Qui sait si vivre ce n'est pas mourir » : ce fragment, rapporté dans le *Gorgias*, est dû au poète tragique ___."
+    answer: "Euripide"
+    alt: []
+  - id: vies2-l1-p8
+    sentence: "Venir à la vie, c'est déjà entamer le processus qui mène à la mort ; mourir prouve qu'on est vivant, puisque seul peut mourir un vivant : vivre et mourir sont deux processus ___."
+    answer: "indiscernables"
+    alt: ["équivalents"]
+- id: vies2-l2
+  title: "Le Gorgias : nous sommes déjà morts"
+  notes: |-
+    **Platon radicalise la question d'Euripide : non seulement vivre, c'est mourir, mais la vie est la mort, les vivants sont déjà morts** (*Gorgias*, 493a-b) :
+
+    {teal}« Peut-être même en réalité sommes-nous morts !{/teal} C'est justement ce que j'ai déjà entendu soutenir par quelqu'un des Sages [*tôn sophôn*] : à cette heure, disait-il, nous sommes morts, {teal}notre corps{/teal} [*sôma*] {teal}est notre sépulcre{/teal} [*sèma*], et cette partie de l'âme où sont les désirs est précisément de nature à se laisser séduire et retourner sens dessus dessous. C'est ce dont un homme ingénieux, un Sicilien peut-être ou bien un Italique, a fait, dit-on, une fable [*muthologôn*], dans laquelle, donnant au mot un croc-en-jambe, il a appelé {teal}un tonneau{/teal} [*pithos*], cette partie de l'âme, à cause de sa disposition {teal}à se laisser persuader{/teal} [*pithanon*], de sa crédulité [...] ; appelant d'autre part {teal}"tonneau troué"{/teal} cette partie de leur âme à laquelle appartiennent les désirs, la comparant, en raison de {teal}l'insatiabilité de leurs désirs{/teal}, à ce qu'il y a de disloqué dans le tonneau et à son incapacité de ne pas laisser fuir ce qu'on y met. »
+
+    **Deux jeux de mots portent la thèse.**
+    - {yellow}*sôma* / *sèma*{/yellow} : le corps est un tombeau ; l'âme y est enterrée vivante.
+    - {yellow}*pithos* / *pithanon*{/yellow} : la partie désirante est un tonneau, parce qu'elle se laisse persuader ; et un tonneau troué, parce que ses désirs, insatiables, fuient à mesure qu'on les remplit.
+
+    **Platon ne parle pas en son nom.** Pour la question comme pour la réponse, il mobilise {amber}l'opinion{/amber} : celle du {sky}poète tragique{/sky} (Euripide), celle supposément éclairée de {sky}sages anonymes{/sky} (des *sophoi*, non des philosophes), celle enfin d'un {sky}homme ingénieux{/sky}, orphique ou pythagoricien, dont le propos est assimilé à un {violet}mythe{/violet}. Tout se passe comme si, de la relation entre vie et mort, {coral}la philosophie ne pouvait produire elle-même un discours, mais devait le recevoir d'autres genres de discours{/coral} : poétique, savant, mythologique.
+
+    **D'où le paradoxe** : la philosophie, qui ne peut rien dire par elle-même de la mort, est pourtant {green}une pratique qui consiste à apprendre à mourir{/green}. C'est la leçon suivante.
+  points:
+  - id: vies2-l2-p1
+    sentence: "Platon, *Gorgias* : « Peut-être même en réalité sommes-nous ___ ! »"
+    answer: "morts"
+    alt: []
+  - id: vies2-l2-p2
+    sentence: "Platon, *Gorgias* : « notre corps [*sôma*] est notre ___ [*sèma*] »."
+    answer: "sépulcre"
+    alt: []
+  - id: vies2-l2-p3
+    sentence: "Le jeu de mots du *Gorgias* qui fait du corps un tombeau joue sur *sôma*, le corps, et *___*, le tombeau."
+    answer: "sèma"
+    alt: ["sema", "sêma"]
+  - id: vies2-l2-p4
+    sentence: "Dans la fable du *Gorgias*, la partie désirante de l'âme est appelée tonneau, *pithos*, à cause de sa disposition à se laisser ___, *pithanon*."
+    answer: "persuader"
+    alt: []
+  - id: vies2-l2-p5
+    sentence: "Platon, *Gorgias* : la partie de l'âme où sont les désirs est appelée « tonneau ___ », à cause de l'insatiabilité de ses désirs."
+    answer: "troué"
+    alt: []
+  - id: vies2-l2-p6
+    sentence: "Le passage du *Gorgias* où les vivants sont déjà morts, le corps un tombeau et l'âme désirante un tonneau troué, se situe en 493___."
+    answer: "a-b"
+    alt: ["a"]
+  - id: vies2-l2-p7
+    sentence: "Sur la vie et la mort, Platon ne parle pas en son nom : il mobilise l'opinion du poète, des sages anonymes, et d'un homme ingénieux dont le propos est assimilé à un ___."
+    answer: "mythe"
+    alt: []
+  - id: vies2-l2-p8
+    sentence: "L'homme ingénieux qui fait de l'âme désirante un tonneau, « un Sicilien peut-être ou bien un Italique », est sans doute orphique ou ___."
+    answer: "pythagoricien"
+    alt: []
+- id: vies2-l3
+  title: "Le Phédon : apprendre à mourir"
+  notes: |-
+    **La philosophie s'exerce à mourir : c'est la thèse du *Phédon*** (63e-64a), au moment où Socrate s'apprête à boire la ciguë : {teal}« {/teal}je constate chez l'homme qui a passé réellement son existence dans la philosophie {teal}une assurance justifiée au moment où il va mourir{/teal}, un espoir confiant d'obtenir là-bas, quand il sera mort, les biens les plus grands ! [...] pour tous ceux qui, au sens droit du terme, s'attachent éventuellement à la philosophie, les autres hommes ne s'aperçoivent pas qu'{teal}ils n'ont, ces gens-là, d'autre occupation que de mourir et d'être morts »{/teal}.
+
+    **Le temps du verbe compte.** Dans le *Gorgias*, « nous sommes morts » est à l'{violet}indicatif parfait{/violet}, qui exprime {amber}une action passée dont les effets se prolongent dans le présent{/amber}. La mort n'est donc pas seulement un événement qui met fin à un processus, mais {coral}un état qui se prolonge à travers la vie{/coral} : cette vie-ci est le prolongement d'une mort qui a déjà eu lieu. Laquelle ? Puisque le corps est un tombeau, {coral}la mort est la chute de l'âme dans un corps{/coral}.
+
+    **Le corps, prison de l'âme** (*Phédon*, 82d-83a) : {teal}« {/teal}quand leur âme est prise en main par la philosophie, c'était {teal}une âme tout bonnement enchaînée dans un corps{/teal} et collée à lui, forcée d'autre part de regarder les réalités à travers lui {teal}comme à travers la grille d'une prison{/teal}, au lieu de les regarder, toute seule, à travers elle-même [...] ; ce qu'il y a en outre d'extraordinaire dans cette grille, la philosophie s'en est rendu compte, c'est qu'{teal}elle est constituée par le désir{/teal}, en sorte que {teal}personne ne contribuerait autant que l'enchaîné lui-même à faire qu'il soit enchaîné ! »{/teal} Autrement dit : les barreaux sont nos propres désirs ; nous sommes nos propres geôliers.
+
+    **D'où une contradiction apparente** : si la vie sensible est déjà une mort, pourquoi le philosophe devrait-il apprendre à mourir ? {red}Ne devrait-il pas plutôt se réjouir d'être déjà mort ?{/red} La leçon suivante la résout.
+  points:
+  - id: vies2-l3-p1
+    sentence: "Platon, *Phédon* : ceux qui s'attachent à la philosophie au sens droit du terme « n'ont, ces gens-là, d'autre occupation que de mourir et d'être ___ »."
+    answer: "morts"
+    alt: []
+  - id: vies2-l3-p2
+    sentence: "Platon, *Phédon* : l'homme qui a passé son existence dans la philosophie a « une ___ justifiée au moment où il va mourir »."
+    answer: "assurance"
+    alt: []
+  - id: vies2-l3-p3
+    sentence: "Que la philosophie n'ait d'autre occupation que de mourir et d'être mort, Socrate le dit dans le *Phédon*, en 63e-___."
+    answer: "64a"
+    alt: []
+  - id: vies2-l3-p4
+    sentence: "« Nous sommes morts » est à l'indicatif ___ : une action passée dont les effets se prolongent dans le présent, de sorte que la mort est un état qui dure à travers la vie."
+    answer: "parfait"
+    alt: []
+  - id: vies2-l3-p5
+    sentence: "Si cette vie est le prolongement d'une mort déjà advenue, et que le corps est un tombeau, cette mort est la ___ de l'âme dans un corps."
+    answer: "chute"
+    alt: []
+  - id: vies2-l3-p6
+    sentence: "Platon, *Phédon* : l'âme, enchaînée au corps, regarde les réalités à travers lui « comme à travers la grille d'une ___ »."
+    answer: "prison"
+    alt: []
+  - id: vies2-l3-p7
+    sentence: "Platon, *Phédon* : la grille de la prison du corps « est constituée par le ___ »."
+    answer: "désir"
+    alt: []
+  - id: vies2-l3-p8
+    sentence: "Parce que la grille de la prison est faite de nos désirs, « personne ne contribuerait autant que l'___ lui-même à faire qu'il soit enchaîné »."
+    answer: "enchaîné"
+    alt: []
+  - id: vies2-l3-p9
+    sentence: "L'image du corps comme prison dont les barreaux sont faits de désir se trouve dans le *Phédon*, en 82d-___."
+    answer: "83a"
+    alt: []
+- id: vies2-l4
+  title: "Trois mots à double sens : âme, mort, vie"
+  notes: |-
+    **La contradiction ne se résout qu'en clarifiant l'{violet}amphibologie{/violet} des termes** : âme, mort et vie ont chacun deux sens.
+
+    | Terme | Premier sens | Second sens |
+    | âme | le souffle qui anime un corps | la psuchè, principe de connaissance |
+    | mort | la chute de l'âme dans le corps | la séparation de l'âme et du corps |
+    | vie | l'animation du corps par l'âme | le retour de l'âme aux intelligibles |
+
+    - L'{violet}âme{/violet} : à la manière des Anciens, le {yellow}souffle (*pneuma*){/yellow} qui anime un corps ; au sens platonicien, la {green}*psuchè* comme principe de connaissance{/green}.
+    - La {violet}mort{/violet} : la chute de la *psuchè* dans le corps, {red}la mort de l'âme{/red} ; ou la séparation qui libère l'âme du corps, {green}la mort du corps{/green}.
+    - La {violet}vie{/violet} : l'animation du corps par l'âme, {red}la vie du corps{/red} ; ou la libération de l'âme qui retourne aux intelligibles, {green}la vie de l'âme{/green}.
+
+    **La contradiction se dissout.** Le philosophe {amber}est déjà mort{/amber} au premier sens : son âme, principe de connaissance, est tombée dans un corps. Et il {amber}se soucie de mourir{/amber} au second sens : {coral}il emploie cette vie, qui est une mort pour l'âme, à préparer la mort qui séparera l'âme du corps, pour qu'elle puisse enfin retourner à la vraie vie, auprès des intelligibles{/coral}. Apprendre à mourir, c'est délier autant que possible son âme du corps dès maintenant.
+  points:
+  - id: vies2-l4-p1
+    sentence: "La contradiction entre être déjà mort et devoir apprendre à mourir ne se résout qu'en clarifiant l'___ des termes âme, mort et vie."
+    answer: "amphibologie"
+    alt: []
+  - id: vies2-l4-p2
+    sentence: "À la manière des Anciens, l'âme est le souffle, en grec *___*, qui anime un corps ; au sens platonicien, la *psuchè*, principe de connaissance."
+    answer: "pneuma"
+    alt: []
+  - id: vies2-l4-p3
+    sentence: "Au sens platonicien, l'âme, *psuchè*, est un principe de ___, et non seulement le souffle qui anime le corps."
+    answer: "connaissance"
+    alt: []
+  - id: vies2-l4-p4
+    sentence: "La mort a deux sens : la chute de l'âme dans le corps, qui est la mort de l'âme, et la séparation qui libère l'âme, qui est la mort du ___."
+    answer: "corps"
+    alt: []
+  - id: vies2-l4-p5
+    sentence: "La vraie vie, au sens platonicien, est la vie de l'âme libérée du corps, qui retourne aux ___."
+    answer: "intelligibles"
+    alt: []
+  - id: vies2-l4-p6
+    sentence: "Le philosophe est déjà mort, son âme étant tombée dans un corps ; il emploie cette vie à préparer la mort qui ___ l'âme du corps, pour qu'elle retourne à la vraie vie."
+    answer: "séparera"
+    alt: ["sépare"]
+- id: vies2-l5
+  title: "Le sentier et la chasse au réel"
+  notes: |-
+    **Comment l'âme se délie-t-elle du corps ? Par un long chemin, que le *Phédon* décrit** (66b-67a) :
+
+    {teal}« Oui, il se peut bien qu'il existe une sorte de sentier{/teal} [*atrapos*] qui nous conduise, si, dans la recherche, nous accompagne cette pensée que, {teal}aussi longtemps que nous aurons notre corps{/teal}, aussi longtemps notre âme sera pétrie avec pareille malfaisance, {teal}jamais nous ne posséderons comme il faut l'objet que nous désirons{/teal} ; et nous déclarons que c'est la vérité ! Le corps en effet {teal}occupe de mille façons notre activité{/teal} [*ascholias*], à propos de l'obligation de l'entretenir ; sans compter que, si des maladies surviennent, elles sont {teal}des entraves à notre chasse au réel{/teal} [*tèn tou ontos thèran*]. D'un autre côté, voici des amours, des désirs, des craintes, {teal}des simulacres{/teal} [*eidôlôn*] de toute sorte [...]. Eh bien ! c'est, au contraire, pour nous chose prouvée que, si nous devons jamais avoir une pure connaissance de quoi que ce soit, {teal}il faut nous séparer de lui{/teal}, et, avec l'âme en elle-même, {teal}contempler les choses en elles-mêmes{/teal}. [...] Ainsi nous voilà purs, séparés de la folie du corps [...], et c'est par nous tout seuls que nous connaîtrons {teal}ce qui est sans mélange »{/teal}.
+
+    **Un sentier, non un raccourci.** Le terme {violet}*atrapos*{/violet}, souvent compris comme un {red}raccourci{/red}, doit être traduit par {green}« sentier »{/green}, comme l'a montré {sky}Simone Follet{/sky} : un chemin {amber}long et difficile{/amber}, où l'âme se détache autant que possible du corps. Car le corps mobilise tout son temps libre, la {violet}*schôlè*{/violet} qu'il faudrait pour réfléchir (d'où *a-scholia*, l'absence de loisir), et toute son attention, par la recherche des richesses et la soumission aux simulacres (*eidôlôn*).
+
+    **Une chasse.** Si la philosophie consiste à {yellow}chasser (*thèran*) le réel{/yellow}, ce chemin est {coral}une piste pour traquer ce gibier qu'est le réel, l'intelligible{/coral}. Le mode de vie philosophique est donc une {violet}cynégétique{/violet} (un art de la chasse) {coral}du réel au-delà du semblant{/coral}.
+  points:
+  - id: vies2-l5-p1
+    sentence: "Platon, *Phédon* : « il se peut bien qu'il existe une sorte de ___ [*atrapos*] qui nous conduise »."
+    answer: "sentier"
+    alt: []
+  - id: vies2-l5-p2
+    sentence: "Le terme *atrapos* du *Phédon*, souvent compris au sens du raccourci, doit être traduit par « sentier », comme l'a montré Simone ___."
+    answer: "Follet"
+    alt: []
+  - id: vies2-l5-p3
+    sentence: "Platon, *Phédon* : les maladies du corps sont « des entraves à notre ___ au réel »."
+    answer: "chasse"
+    alt: []
+  - id: vies2-l5-p4
+    sentence: "Platon, *Phédon* : le corps nous emplit d'amours, de désirs, de craintes et de ___ [*eidôlôn*] de toute sorte."
+    answer: "simulacres"
+    alt: []
+  - id: vies2-l5-p5
+    sentence: "Platon, *Phédon* : pour avoir une pure connaissance, il faut nous séparer du corps et, avec l'âme en elle-même, contempler les choses en ___."
+    answer: "elles-mêmes"
+    alt: []
+  - id: vies2-l5-p6
+    sentence: "Le corps mobilise tout le temps libre de l'âme, la *___* qu'il faudrait pour réfléchir."
+    answer: "schôlè"
+    alt: ["scholè", "schole", "skholè"]
+  - id: vies2-l5-p7
+    sentence: "Si la philosophie consiste à chasser le réel, comme gibier qu'est l'intelligible, le mode de vie philosophique est une ___ du réel au-delà du semblant."
+    answer: "cynégétique"
+    alt: []
+  - id: vies2-l5-p8
+    sentence: "Le sentier par lequel l'âme se sépare du corps pour chasser le réel est décrit dans le *Phédon*, en 66b-___."
+    answer: "67a"
+    alt: []
+- id: vies2-l6
+  title: "Pourquoi ne pas se tuer"
+  notes: |-
+    **Si l'âme doit se délier du corps, pourquoi ne pas hâter la séparation ?** Le philosophe doit, par une purification, délier autant que possible l'âme du corps, {red}sans toutefois rompre entièrement le lien{/red} : Socrate refuse, étrangement, le {violet}suicide{/violet}, qui anticiperait la séparation. {sky}Cébès{/sky} lui fait remarquer le paradoxe : pourquoi le philosophe ne pourrait-il accélérer ce qui le rapproche des intelligibles ?
+
+    **La réponse de Socrate repose, une fois encore, sur l'opinion, celle des Mystères** (*Phédon*, 62b) : {teal}« "Nous sommes, nous les humains, dans une espèce de garderie{/teal}, et {teal}on n'a pas le droit de s'en libérer soi-même{/teal}, ni de s'en évader". Je vois la majesté de la formule, et, en même temps, la difficulté de la percer à jour. » {coral}L'amour du savoir ne dispense donc pas de se soumettre aux interdits religieux.{/coral}
+
+    **Peut-être un pari : le double espoir** (63b-c) :
+    - {pink}rejoindre, par la mort, d'autres hommes vertueux{/pink} : espoir incertain ;
+    - {green}rejoindre les dieux{/green} : espoir qui relève d'une certitude absolue.
+
+    L'homme n'a de chances de rejoindre les dieux {amber}que lorsque ceux-ci l'y autorisent{/amber} : {coral}c'est par la conduite de sa vie qu'il s'en rendra digne{/coral}, non en devançant l'heure.
+
+    **Le coq d'Esculape.** D'où le sens des derniers mots de Socrate, qui, ayant bu la ciguë, demande à ses amis de {yellow}sacrifier un coq à Esculape{/yellow}, dieu de la médecine : {coral}Esculape guérit Socrate de la mort de l'âme en la déliant du corps{/coral}, et accomplit son vœu de rejoindre les dieux, le semblable s'unissant au semblable, puisque le philosophe cherche à {teal}« se rendre semblable à la Divinité autant que cela se peut pour un homme »{/teal} (*République*, X, 613b).
+
+    **De cet espoir suit l'importance du choix de vie**, sur lequel insiste le mythe d'Er : c'est l'unité suivante.
+  points:
+  - id: vies2-l6-p1
+    sentence: "Dans le *Phédon*, c'est ___ qui fait remarquer à Socrate le paradoxe du suicide : pourquoi le philosophe ne hâterait-il pas la séparation de l'âme et du corps ?"
+    answer: "Cébès"
+    alt: []
+  - id: vies2-l6-p2
+    sentence: "Platon, *Phédon* : « Nous sommes, nous les humains, dans une espèce de ___, et on n'a pas le droit de s'en libérer soi-même »."
+    answer: "garderie"
+    alt: []
+  - id: vies2-l6-p3
+    sentence: "La formule des Mystères qui interdit le suicide, « nous sommes dans une espèce de garderie », se lit dans le *Phédon*, en ___."
+    answer: "62b"
+    alt: []
+  - id: vies2-l6-p4
+    sentence: "Socrate refuse le suicide en s'appuyant sur l'opinion des ___ : l'amour du savoir ne dispense pas des interdits religieux."
+    answer: "Mystères"
+    alt: []
+  - id: vies2-l6-p5
+    sentence: "Des deux espoirs de Socrate devant la mort, rejoindre d'autres hommes vertueux est incertain ; rejoindre les ___ relève d'une certitude absolue."
+    answer: "dieux"
+    alt: []
+  - id: vies2-l6-p6
+    sentence: "L'homme ne peut rejoindre les dieux que lorsqu'ils l'y autorisent : c'est par la ___ de sa vie qu'il s'en rendra digne, non en devançant la mort."
+    answer: "conduite"
+    alt: []
+  - id: vies2-l6-p7
+    sentence: "Socrate, ayant bu la ciguë, demande de sacrifier un coq à ___ : le dieu de la médecine le guérit de la mort de l'âme en la déliant du corps."
+    answer: "Esculape"
+    alt: ["Asclépios"]
+  - id: vies2-l6-p8
+    sentence: "Platon, *République*, X, 613b : le philosophe cherche à « se rendre ___ à la Divinité autant que cela se peut pour un homme »."
+    answer: "semblable"
+    alt: []
