@@ -30,9 +30,12 @@ session.
 **Le notebook « Marx »** (Gemini Notebook, navigateur intégré :
 https://notebook.google.com/notebook/fca9f7c7-bba5-4371-84d7-0d2a22462e25,
 ouvert sur le compte de l'utilisateur) est la source de tout : lieux,
-arguments, citations, repères. Il réunit des textes de Marx (*Manuscrits de
-1844*, *Œuvres* I et III de la Pléiade) et des études (*Le vocabulaire de
-Marx* de Renault, Fischbach, Haber, Mercier-Josa…).
+arguments, citations, repères. Il réunit, au 2026-11-05 (28 sources, que
+l'utilisateur complète : relire la liste à chaque entrée), des textes de Marx
+(*Manuscrits de 1844*, *Œuvres* III de la Pléiade, *Le Capital*, livre 1,
+*Grundrisse*, *Contribution*, *Critique du programme de Gotha*, *Manifeste*)
+et des études (*Le vocabulaire de Marx* de Renault, Fischbach, Haber,
+Mercier-Josa…).
 
 **Pas de vérification des citations sur un PDF** (consigne de l'utilisateur,
 2026-11-04) : on fait confiance à NotebookLM, **à condition qu'il cite
@@ -153,7 +156,10 @@ python -I $N manquantes                      # la liste, pour le compte rendu
 l'auteur dans la question (« comment Marx… ? », « pourquoi Marx… ? »
 restent naturels). Une question par message ; attendre la fin de la
 réponse (d'après la durée moyenne mesurée, non en interrogeant la page
-toutes les deux secondes) ; ne relire que la dernière. L'historique de la
+toutes les deux secondes) ; ne relire que la dernière. Une réponse longue peut
+tarder, et la page montrer un moment la réponse précédente sans signaler d'attente :
+comparer au dernier texte reçu et attendre, sans recharger la page, ce qui fait
+perdre la réponse en cours (2026-11-05). L'historique de la
 discussion s'efface en commençant une entrée, par l'utilisateur (c'est une
 suppression définitive, que je ne fais pas moi-même).
 
