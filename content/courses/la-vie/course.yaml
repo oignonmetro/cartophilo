@@ -13,7 +13,7 @@ tagline: Dissertation sur programme, thème imposé.
 status: available
 default: false
 layout: library
-version: 65
+version: 66
 
 tracks:
   - id: sujets
@@ -33,16 +33,19 @@ tracks:
     kind: grammar
     color: violet
     icon: bulb
-    units: [ea5, sens1, sens2, sens3, sens4, sens5, bichat1, bichat2, bichat3, bichat4, jonas1, jonas2, jonas3]
+    # Les cours tirés d'articles de la SEP (un groupe par article, « … (SEP) »)
+    # y sont rangés depuis la fusion de l'ancienne piste SEP (2026-11-05).
+    units: [ea5, sens1, sens2, sens3, sens4, sens5, bichat1, bichat2, bichat3, bichat4, jonas1, jonas2, jonas3, sep-vie1, sep-vie2, sep-vie3, sep-vie4, sep-mort1, sep-mort2, sep-mort3, sep-mort4, sep-camus1, sep-camus2, sep-camus3, sep-bio1, sep-bio2, sep-bio3, sep-bio4, sep-psy1, sep-psy2, sep-psy3, sep-psy4, sep-arbio1, sep-arbio2, sep-arbio3, sep-arbio4]
 
-  - id: sep
-    title: SEP
-    subtitle: Articles de la Stanford Encyclopedia of Philosophy
+  - id: manuel
+    title: Manuel
+    subtitle: Le manuel collectif sur la vie, chapitre par chapitre
     kind: grammar
     color: green
     icon: book
-    # Un groupe par article (voir content/philosophie.md).
-    units: [sep-vie1, sep-vie2, sep-vie3, sep-vie4, sep-mort1, sep-mort2, sep-mort3, sep-mort4, sep-camus1, sep-camus2, sep-camus3, sep-bio1, sep-bio2, sep-bio3, sep-bio4, sep-psy1, sep-psy2, sep-psy3, sep-psy4, sep-arbio1, sep-arbio2, sep-arbio3, sep-arbio4]
+    # Un groupe par chapitre du manuel (scans fournis par l'utilisateur), à
+    # commencer par l'introduction de Chaintreuil et Rouquayrol (intro…).
+    units: [intro1, intro2, intro3, intro4, intro5]
 
   - id: textes
     title: Textes

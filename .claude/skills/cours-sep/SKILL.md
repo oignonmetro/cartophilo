@@ -1,6 +1,6 @@
 ---
 name: cours-sep
-description: Écrit le cours tiré d'un article de la Stanford Encyclopedia of Philosophy (piste SEP de La vie, ou un domaine du Hors-programme) à partir du PDF de l'article et, quand l'auteur étudié le demande, des passages français que fournit l'utilisateur : une unité par grand ensemble de sections, une leçon par section, rappels qui déplient les arguments, mise en relief au mot près, cartes alignées sur le rappel ; citations reprises du texte français, jamais retraduites ; branchement dans la piste, validation, commit et push. Reprend ce que les retouches de l'utilisateur sur ces cours ont de systématique ou de tendanciel. À utiliser dès qu'on donne un article de la SEP pour en faire un cours, qu'on dit « faisons pareil » sur un nouvel article, ou qu'on demande de reprendre un cours `sep-…`.
+description: Écrit le cours tiré d'un article de la Stanford Encyclopedia of Philosophy (piste Idées de La vie, ou un domaine du Hors-programme) à partir du PDF de l'article et, quand l'auteur étudié le demande, des passages français que fournit l'utilisateur : une unité par grand ensemble de sections, une leçon par section, rappels qui déplient les arguments, mise en relief au mot près, cartes alignées sur le rappel ; citations reprises du texte français, jamais retraduites ; branchement dans la piste, validation, commit et push. Reprend ce que les retouches de l'utilisateur sur ces cours ont de systématique ou de tendanciel. À utiliser dès qu'on donne un article de la SEP pour en faire un cours, qu'on dit « faisons pareil » sur un nouvel article, ou qu'on demande de reprendre un cours `sep-…`.
 ---
 
 # Écrire un cours tiré d'un article de la SEP
@@ -15,13 +15,14 @@ en relisant : **le premier jet est exact mais allusif**, c'est lui qu'il faut
 
 ## Où il va
 
-- Piste **SEP** de La vie (`content/courses/la-vie/course.yaml`, ajouter les
-  unités à `units`), ou le domaine voulu du Hors-programme.
+- Piste **Idées** de La vie (`content/courses/la-vie/course.yaml`, ajouter les
+  unités à `units`, après les autres groupes SEP ; l'ancienne piste SEP y a été
+  fusionnée le 2026-11-06), ou le domaine voulu du Hors-programme.
 - Fichiers `units/sep-<sujet>1.yaml`, `2`…, leçons `sep-<sujet>1-l1`…, même
   `group` (`"La biologie d'Aristote (SEP)"`), une `color` par groupe. Monter
   `version` du cours ; une autre session peut l'avoir montée entre-temps :
   relire le fichier juste avant.
-- Ajouter le préfixe à la liste de la piste SEP dans `CLAUDE.md`.
+- Ajouter le préfixe à la liste des groupes SEP de la piste Idées dans `CLAUDE.md`.
 - En tête de chaque fichier, en commentaire : auteur et révision de l'article,
   sections couvertes, édition des citations, vocabulaire de la traduction,
   coquilles écartées, ce qui reste provisoire.

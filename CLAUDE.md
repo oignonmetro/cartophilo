@@ -76,10 +76,16 @@ l'épreuve :
   que Plotin (leçons, rappels, cartes, comme les traités, à partir d'un
   notebook NotebookLM et du PDF de l'édition) s'écrit avec la skill
   `cours-oeuvre` (`.claude/skills/cours-oeuvre/`), qui reprend la méthode
-  de `cours-traite`. La piste **SEP** regroupe les cours tirés d'articles de la
-  Stanford Encyclopedia of Philosophy, un groupe par article (`sep-vie…`,
-  `sep-mort…`, `sep-bio…`, `sep-psy…`, `sep-arbio…`), écrits avec la skill
-  `cours-sep` (`.claude/skills/cours-sep/`), selon `content/philosophie.md`.
+  de `cours-traite`. Les cours tirés d'articles de la Stanford Encyclopedia
+  of Philosophy sont rangés dans la piste **Idées** (l'ancienne piste SEP y a
+  été fusionnée le 2026-11-06), un groupe par article, « … (SEP) »
+  (`sep-vie…`, `sep-mort…`, `sep-camus…`, `sep-bio…`, `sep-psy…`,
+  `sep-arbio…`), écrits avec la skill `cours-sep` (`.claude/skills/cours-sep/`),
+  selon `content/philosophie.md`. La piste **Manuel** suit le manuel collectif
+  sur la vie, un groupe par chapitre, à partir des scans océrisés qu'en donne
+  l'utilisateur, selon le § « Un cours sur un auteur, tiré d'un commentaire »
+  de `content/philosophie.md` et la conduite de `cours-sep` : d'abord
+  l'introduction de Chaintreuil et Rouquayrol (`intro1` à `intro5`).
 
 ## Décidé : la correspondance technique avec le moteur de contenu
 

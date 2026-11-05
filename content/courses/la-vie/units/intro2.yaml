@@ -1,0 +1,259 @@
+# Introduction du manuel collectif sur la vie (Chaintreuil et Rouquayrol),
+# deuxième partie : « La conception "ordinaire" de la vie » (voir intro1 pour la
+# source et la méthode).
+#
+# Corrections au texte du manuel : il donne « Polos et Cébès » pour les
+# interlocuteurs pythagoriciens du Phédon ; ce sont Simmias et Cébès, et
+# l'objection de l'âme-harmonie est celle de Simmias (Phédon, 85e-86d). Le
+# monstre se dit teras (OCR : « theratos »). La citation de Kant (CRP) porte
+# « attentions » dans le manuel : coquille pour « attendions », corrigée ici.
+# Thalès : le manuel renvoie à De l'âme, I, 2, 405a19-20.
+
+id: intro2
+title: "La conception ordinaire de la vie"
+subtitle: "Des phénomènes vitaux à leur principe, et la question de la finalité"
+icon: compass
+color: amber
+group: "La vie comme problème philosophique (introduction)"
+lessons:
+- id: intro2-l1
+  title: "Les phénomènes vitaux, et où s'arrête la vie"
+  notes: |-
+    **La conception ordinaire comprend d'abord la vie comme un ensemble plus ou moins ouvert de phénomènes qui appartiennent aux vivants** : {yellow}la nutrition{/yellow}, {yellow}la sensibilité{/yellow}, {yellow}la génération{/yellow}, {yellow}la croissance{/yellow}, {yellow}la respiration{/yellow}. Ils se manifestent {amber}dans un intervalle de temps{/amber}, de la naissance à la mort, et {amber}avec un certain degré d'organisation{/amber}. Cette esquisse permet classiquement de distinguer le minéral des règnes végétal, animal et humain ; elle autorise aussi, moyennant des simplifications, des **usages étendus** : la « vie de l'esprit », la « vie sociale », la « vie des civilisations » (voir la dernière unité). Mais elle laisse ouvertes deux séries de questions ; cette leçon traite de la première.
+
+    **Première série : quelle extension donner à ces phénomènes ?** La liste est-elle exhaustive, ou faut-il en retrancher ? De la réponse dépend {coral}la limite qui sépare le vivant du minéral ou de l'inerte{/coral}, et chaque critère retenu fait entrer ou sortir des êtres du règne du vivant :
+
+    | Qui | Limite de la vie | Conséquence |
+    | Démocrite et d'autres | la respiration | les plantes exclues |
+    | Aristote | la nutrition | les plantes vivantes |
+    | Thalès | la motricité | l'aimant vivant |
+
+    - Selon des penseurs comme {sky}Démocrite{/sky}, rapporte Aristote (*De l'âme*, I, 2), {teal}« la limite de la vie{/teal} (*tou zên horon*), {teal}c'est la respiration »{/teal}. Or les Grecs tenaient que {yellow}les plantes ne respirent pas{/yellow} : elles sortiraient donc du règne du vivant.
+    - {sky}Aristote{/sky} cherche plutôt la limite du côté de {green}la nutrition{/green}, accompagnée selon lui de la capacité à se reproduire et à croître : {coral}les plantes sont bel et bien vivantes{/coral}.
+    - {sky}Thalès{/sky} pose {pink}la motricité{/pink} comme limite du vivant ; or {yellow}l'aimant meut le fer{/yellow} : il fait donc nombre avec les êtres vivants (*De l'âme*, I, 2, 405a19-20). Le critère mène à une conséquence que le sens commun refuse.
+
+    **Le flou des limites fait sans doute partie intégrante du concept ordinaire de vie**, et la recherche contemporaine en reste tributaire : les {yellow}virus{/yellow} sont-ils déjà, et jusqu'à quel point, des organismes vivants ? Et les {violet}procaryotes{/violet}, ces organismes unicellulaires dont la structure ne comprend aucun noyau ?
+  points:
+  - id: intro2-l1-p1
+    sentence: "La conception ordinaire comprend la vie comme un ensemble ouvert de phénomènes qui appartiennent aux vivants (nutrition, sensibilité, génération, croissance, respiration), manifestés de la naissance à la mort et avec un certain degré d'___."
+    answer: "organisation"
+    alt: []
+  - id: intro2-l1-p2
+    sentence: "Selon des penseurs comme Démocrite, rapporte Aristote, « la limite de la vie, c'est la ___ » : ce qui exclut les plantes du vivant."
+    answer: "respiration"
+    alt: []
+  - id: intro2-l1-p3
+    sentence: "Aristote rapporte que, selon des penseurs comme ___, la limite de la vie est la respiration, ce qui exclut les plantes du règne du vivant."
+    answer: "Démocrite"
+    alt: []
+  - id: intro2-l1-p4
+    sentence: "« La limite de la vie, c'est la respiration » : cette thèse prêtée à Démocrite est rapportée dans le *De l'âme*, livre I, chapitre ___."
+    answer: "2"
+    alt: ["deux"]
+  - id: intro2-l1-p5
+    sentence: "« La limite de la vie » se dit en grec *tou zên ___*."
+    answer: "horon"
+    alt: []
+  - id: intro2-l1-p6
+    sentence: "Si la limite de la vie était la respiration, les plantes ne seraient pas vivantes, puisque les Grecs tenaient qu'elles ne respirent pas ; Aristote place plutôt la limite du côté de la ___, ce qui fait des plantes des vivants."
+    answer: "nutrition"
+    alt: []
+  - id: intro2-l1-p7
+    sentence: "___ pose la motricité comme limite du vivant ; or l'aimant meut le fer, de sorte qu'il fait nombre avec les êtres vivants."
+    answer: "Thalès"
+    alt: []
+  - id: intro2-l1-p8
+    sentence: "Si la motricité est la limite du vivant, comme le pose Thalès, alors l'___, qui meut le fer, compte parmi les êtres vivants."
+    answer: "aimant"
+    alt: []
+  - id: intro2-l1-p9
+    sentence: "Le flou des limites du vivant demeure dans la recherche contemporaine : les virus sont-ils vivants ? et les ___, organismes unicellulaires sans noyau ?"
+    answer: "procaryotes"
+    alt: []
+- id: intro2-l2
+  title: "L'ordre des phénomènes vitaux"
+  notes: |-
+    **Seconde série de questions : l'ordre et l'unité des phénomènes vitaux**, donc les liens qu'ils entretiennent. Traditionnellement, dans le sillage d'{sky}Aristote{/sky}, leur énumération sert à distinguer des **règnes** au sein des vivants, chacun ajoutant une faculté à celles du précédent :
+
+    | Règne | Facultés |
+    | végétal | se reproduire, se nourrir, croître |
+    | animal | en plus, sentir |
+    | humain | en outre, penser |
+
+    **La question est celle de l'appui.** {amber}À quel point la faculté de sentir s'appuie-t-elle sur la capacité de se nourrir, celle de penser sur celle de sentir ?{/amber} L'échelle dit que l'animal a tout ce qu'a la plante, plus la sensation ; elle ne dit pas encore si la sensation *dépend* de la nutrition, ni comment.
+
+    **Y répondre suppose une caractérisation conceptuelle plus avancée** : faut-il parler d'{violet}activités{/violet}, de {violet}fonctions{/violet}, de {violet}facultés{/violet}, ou d'autre chose encore ? Le mot choisi engage déjà une thèse : une {violet}fonction{/violet} se rapporte à une fin, une {violet}faculté{/violet} à un pouvoir que l'être possède, une {violet}activité{/violet} à ce qu'il fait effectivement.
+  points:
+  - id: intro2-l2-p1
+    sentence: "Dans la tradition aristotélicienne, le règne végétal n'a que les facultés de se reproduire, de se nourrir et de ___."
+    answer: "croître"
+    alt: []
+  - id: intro2-l2-p2
+    sentence: "Dans la tradition aristotélicienne, le règne animal a, en plus des facultés du végétal, la faculté de ___."
+    answer: "sentir"
+    alt: []
+  - id: intro2-l2-p3
+    sentence: "Dans la tradition aristotélicienne, le règne humain a, en outre, la faculté de ___."
+    answer: "penser"
+    alt: []
+  - id: intro2-l2-p4
+    sentence: "L'échelle des règnes pose une question d'ordre : à quel point la faculté de sentir s'appuie-t-elle sur la capacité de se ___ ?"
+    answer: "nourrir"
+    alt: []
+  - id: intro2-l2-p5
+    sentence: "Pour ordonner les phénomènes vitaux, il faut d'abord savoir comment les nommer : activités, facultés, ou ___ ?"
+    answer: "fonctions"
+    alt: []
+- id: intro2-l3
+  title: "Le principe vital"
+  notes: |-
+    **Pour échapper au flou des phénomènes, la tentation est de voir dans la vie leur principe même** : on parle alors de {violet}principe vital{/violet} ou de {violet}force vitale{/violet}. La vie ne s'aborde plus par ses manifestations, mais par ce qui les produit.
+
+    **Deux façons de qualifier ce principe**, selon ce qu'on veut mettre en valeur :
+    - comme {amber}principe interne de changement, et notamment d'action{/amber}, il s'oppose à la matière simplement {red}inerte{/red} ;
+    - comme {amber}principe de réaction des vivants aux agressions du monde extérieur{/amber}, il diffère plus spécifiquement de la matière {red}inorganique{/red}.
+
+    **Bichat prend la seconde voie.** {sky}Xavier Bichat{/sky} (1771-1802) définit très célèbrement la vie comme {teal}« l'ensemble des fonctions qui résistent à la mort »{/teal}, parce que les corps vivants {teal}« {/teal}succomberaient s'ils n'avaient en eux {teal}un principe permanent de réaction »{/teal} (*Recherches physiologiques sur la vie et la mort*). Mais il ajoute une clause : ce principe est {teal}« {/teal}inconnu dans sa nature, [et] ne peut être apprécié {teal}que par ses phénomènes »{/teal}. Il est donc {coral}posé, non connu{/coral} : on ne sait de lui que ce qu'il fait.
+
+    **Cette clause l'oppose à l'animisme.** Contre {sky}Georg Ernst Stahl{/sky} (1659-1734), Bichat refuse d'identifier ce principe à une âme. Or c'est une ancienne tradition qui fait consister dans {violet}l'âme{/violet} (*psychè* pour les Grecs, *anima* pour les Latins) le principe de la vie : le règne du vivant est alors celui des êtres **animés**, par différence avec le règne minéral, celui des choses **inanimées**. S'interroger sur l'âme, pour certains Anciens, c'est s'interroger sur ce qui « anime » un corps, le rend vivant, lui donne ses fonctions.
+
+    **D'où la question du *Phédon* de Platon : ce principe peut-il exister séparé ?**
+    - {green}Socrate espère bien que oui{/green} : l'âme survivrait au corps.
+    - {red}Ou bien l'âme est semblable à l'harmonie d'un instrument de musique{/red}, comme le supposaient certains pythagoriciens : l'objection est celle de {sky}Simmias{/sky}, qui, avec {sky}Cébès{/sky}, représente ce courant. Une harmonie naît de la lyre bien accordée et disparaît avec elle : si l'âme est l'accord du corps, elle périt avant lui.
+
+    Ces débats restent au voisinage du concept ordinaire : ils rapprochent le principe vital d'un {yellow}« souffle »{/yellow} (*psychè*) qui traverse le corps et se manifeste par les activités énumérées plus haut.
+  points:
+  - id: intro2-l3-p1
+    sentence: "Comme principe interne de changement et d'action, le principe vital s'oppose à la matière inerte ; comme principe de ___ aux agressions du monde extérieur, il diffère de la matière inorganique."
+    answer: "réaction"
+    alt: []
+  - id: intro2-l3-p2
+    sentence: "Bichat définit la vie comme « l'ensemble des fonctions qui résistent à la ___ »."
+    answer: "mort"
+    alt: []
+  - id: intro2-l3-p3
+    sentence: "Bichat : les corps vivants « succomberaient s'ils n'avaient en eux un principe ___ de réaction »."
+    answer: "permanent"
+    alt: []
+  - id: intro2-l3-p4
+    sentence: "Bichat : le principe vital est « inconnu dans sa nature, [et] ne peut être apprécié que par ses ___ »."
+    answer: "phénomènes"
+    alt: []
+  - id: intro2-l3-p5
+    sentence: "C'est ___ (1771-1802) qui définit la vie comme « l'ensemble des fonctions qui résistent à la mort »."
+    answer: "Bichat"
+    alt: ["Xavier Bichat"]
+  - id: intro2-l3-p6
+    sentence: "En tenant le principe vital pour inconnu dans sa nature, Bichat s'oppose à l'animisme de Georg Ernst ___ (1659-1734), qui en faisait une âme."
+    answer: "Stahl"
+    alt: []
+  - id: intro2-l3-p7
+    sentence: "Bichat refuse d'identifier le principe vital à une âme : il s'oppose ainsi à l'___ de Stahl."
+    answer: "animisme"
+    alt: []
+  - id: intro2-l3-p8
+    sentence: "Une ancienne tradition fait de l'âme, *psychè* pour les Grecs, *___* pour les Latins, le principe de la vie : le vivant est le règne des êtres animés."
+    answer: "anima"
+    alt: []
+  - id: intro2-l3-p9
+    sentence: "Dans le *Phédon*, l'objection pythagoricienne compare l'âme à l'___ d'un instrument de musique : née de l'accord du corps, elle disparaîtrait avec lui."
+    answer: "harmonie"
+    alt: []
+  - id: intro2-l3-p10
+    sentence: "Dans le *Phédon*, l'objection qui fait de l'âme l'harmonie du corps est celle de ___, interlocuteur pythagoricien de Socrate avec Cébès."
+    answer: "Simmias"
+    alt: []
+- id: intro2-l4
+  title: "La finalité, sur le modèle de l'artefact"
+  notes: |-
+    **Les phénomènes vitaux ont en commun d'être, ou de pouvoir être, « en vue de quelque chose »** : c'est leur trait le plus spécifique. Qu'on aborde la vie par ses manifestations ou par un principe, elle apparaît comme {amber}un domaine autonome d'objets{/amber}, distinct de l'inanimé, et son étude réclame donc des instruments propres (les méthodes, que {sky}Claude Bernard{/sky} examine dans l'*Introduction à l'étude de la médecine expérimentale*, 1865, laissées ici de côté). Le principal : {green}une forme de finalisme{/green}, sous des modalités très diverses. C'est l'un des traits que les sciences du vivant empruntent à la connaissance ordinaire de la vie, et qui {coral}les distinguent des sciences de la nature en général{/coral} : elles enquêtent sur un vaste matériau empirique, rassemblé en vue d'une recherche causale, où l'identification de la fin joue un rôle essentiel.
+
+    **Mais ce finalisme calque le vivant sur l'objet fabriqué.** Dire que le fonctionnement de tout ou partie d'un être naturel advient en fonction d'une {violet}fin{/violet}, c'est le comprendre sur le modèle des {yellow}objets artificiels{/yellow}, où, effectivement, {amber}la représentation de l'effet précède, dans l'esprit de l'artisan, la réalisation de l'objet{/amber}. Le menuisier a l'idée de la table avant de la faire ; mais qui aurait eu l'idée de l'œil avant l'œil ? __Jusqu'à quel point ce raisonnement est-il légitime pour les vivants ?__
+
+    **Première réponse, celle de Kant : la fin tient à notre manière de juger, non à la chose.** La question est de savoir si la finalité constatée dans un organisme concerne {red}la chose elle-même dont on juge{/red}, ou {green}la manière dont on juge de cette chose{/green}. Dans le second cas, on raisonne *comme si* l'organisme avait une fin. Ce n'est pas contraire à l'esprit scientifique, et cela n'expose à aucune erreur, puisqu'il {teal}« {/teal}n'en peut résulter rien de plus, sinon que, là où nous attendions {teal}un lien téléologique{/teal} (*nexus finalis*), nous n'en trouvions qu'{teal}un purement mécanique ou physique{/teal} (*nexus effectivus*) » (*Critique de la raison pure*) : au pire, on cherchait une fin et l'on trouve une cause.
+
+    **L'exemple de l'œil.** Dire que {yellow}l'œil est disposé pour voir{/yellow}, ce n'est pas attribuer {teal}« {/teal}à la nature une cause agissant d'après {teal}la représentation de fins{/teal}, c'est-à-dire {teal}intentionnellement »{/teal} (*Critique de la faculté de juger*). Toute la différence est là :
+
+    | Jugement téléologique | Ce qu'il fait de la fin |
+    | déterminant | une propriété de la chose |
+    | réfléchissant | une manière de juger |
+  points:
+  - id: intro2-l4-p1
+    sentence: "Les phénomènes vitaux ont en commun d'être, ou de pouvoir être, « en vue de quelque chose » : le recours à une forme de ___ distingue ainsi les sciences du vivant des sciences de la nature en général."
+    answer: "finalisme"
+    alt: []
+  - id: intro2-l4-p2
+    sentence: "C'est Claude ___ qui se penche, dans l'*Introduction à l'étude de la médecine expérimentale* (1865), sur les méthodes qui distinguent l'étude de la vie de celle de la matière inerte."
+    answer: "Bernard"
+    alt: []
+  - id: intro2-l4-p3
+    sentence: "Juger qu'un organe advient en vue d'une fin, c'est calquer le vivant sur le modèle des objets ___, où la représentation de l'effet précède, dans l'esprit de l'artisan, la réalisation de l'objet."
+    answer: "artificiels"
+    alt: []
+  - id: intro2-l4-p4
+    sentence: "Raisonner comme si l'organisme avait une fin n'expose à aucune erreur : au pire, là où l'on attendait un lien téléologique (*nexus finalis*), on n'en trouve qu'un purement mécanique, en latin *nexus ___*."
+    answer: "effectivus"
+    alt: []
+  - id: intro2-l4-p5
+    sentence: "Kant, *Critique de la raison pure* : il n'en peut résulter rien de plus, « sinon que, là où nous attendions un lien ___ (*nexus finalis*), nous n'en trouvions qu'un purement mécanique ou physique »."
+    answer: "téléologique"
+    alt: []
+  - id: intro2-l4-p6
+    sentence: "Kant, *Critique de la faculté de juger* : dire que l'œil est disposé pour voir, ce n'est pas attribuer « à la nature une cause agissant d'après la représentation de fins, c'est-à-dire ___ »."
+    answer: "intentionnellement"
+    alt: []
+  - id: intro2-l4-p7
+    sentence: "Le jugement téléologique ___ fait de la fin une propriété de la chose ; le jugement réfléchissant, une manière de juger de la chose."
+    answer: "déterminant"
+    alt: []
+  - id: intro2-l4-p8
+    sentence: "Dire que l'œil est disposé pour voir sans prêter d'intention à la nature, c'est porter un jugement téléologique ___, et non déterminant."
+    answer: "réfléchissant"
+    alt: []
+  - id: intro2-l4-p9
+    sentence: "Que l'œil soit disposé pour voir relève de la manière dont on juge de la chose, non de la chose elle-même : c'est la position de ___ sur la finalité du vivant."
+    answer: "Kant"
+    alt: []
+- id: intro2-l5
+  title: "Finalisme a priori, finalisme a posteriori"
+  notes: |-
+    **Seconde réponse, depuis la biologie contemporaine : distinguer deux finalismes.** On part ici de ce que la biologie appelle une {violet}fonction{/violet}, et l'on distingue avec {sky}Armand de Ricqlès et Jean Gayon{/sky} (article « Fonction », 2009) :
+    - le {red}finalisme *a priori*{/red} : une {teal}« {/teal}finalité {teal}transcendantale{/teal}, ou générale, {teal}plaquée d'emblée{/teal} comme explication globale des structures et fonctions biologiques » ;
+    - le {green}finalisme *a posteriori*{/green} : la simple reconnaissance que {teal}« {/teal}les produits de la {teal}sélection naturelle{/teal} sont bien finalisés, {teal}en tant que résultats fonctionnels{/teal}, et du point de vue des organismes qui les renferment et en bénéficient ».
+
+    **Le premier est exclu de l'étude scientifique de la vie, le second en fait partie intégrante.** Le premier explique *avant* d'observer : tout a été fait pour une fin, qu'on suppose d'emblée. Le second constate *après coup* qu'un organe, produit par la sélection, sert l'organisme qui le porte. Ainsi, {coral}il est difficile de contester que{/coral} {yellow}la trachée des animaux{/yellow} {coral}ait pour fonction de permettre leur respiration{/coral}, comme le soulignait déjà Aristote (*Parties des animaux*, III, 3) : ce n'est pas supposer un dessein, c'est dire ce que fait l'organe pour l'animal.
+
+    ! Le finalisme *a posteriori* n'est pas un retour du dessein : la fin y est un résultat fonctionnel, du point de vue de l'organisme, non une intention qui précède.
+  points:
+  - id: intro2-l5-p1
+    sentence: "Le finalisme ___ est une « finalité transcendantale, ou générale, plaquée d'emblée comme explication globale des structures et fonctions biologiques »."
+    answer: "a priori"
+    alt: []
+  - id: intro2-l5-p2
+    sentence: "Le finalisme ___ est la simple reconnaissance que les produits de la sélection naturelle sont bien finalisés, en tant que résultats fonctionnels."
+    answer: "a posteriori"
+    alt: []
+  - id: intro2-l5-p3
+    sentence: "Ricqlès et Gayon : le finalisme a posteriori reconnaît que « les produits de la ___ naturelle sont bien finalisés, en tant que résultats fonctionnels »."
+    answer: "sélection"
+    alt: []
+  - id: intro2-l5-p4
+    sentence: "Ricqlès et Gayon : le finalisme a priori est une « finalité transcendantale, ou générale, ___ d'emblée comme explication globale des structures et fonctions biologiques »."
+    answer: "plaquée"
+    alt: []
+  - id: intro2-l5-p5
+    sentence: "La distinction du finalisme a priori et a posteriori part de ce que la biologie contemporaine appelle une ___."
+    answer: "fonction"
+    alt: []
+  - id: intro2-l5-p6
+    sentence: "Le finalisme a posteriori fait partie intégrante de la science : il est difficile de contester que la ___ des animaux ait pour fonction de permettre leur respiration."
+    answer: "trachée"
+    alt: []
+  - id: intro2-l5-p7
+    sentence: "Que la trachée des animaux ait pour fonction de permettre leur respiration, Aristote le souligne déjà dans les *Parties des animaux*, livre ___, chapitre 3."
+    answer: "III"
+    alt: ["3"]
+  - id: intro2-l5-p8
+    sentence: "Le finalisme a priori explique avant d'observer, en supposant d'emblée une fin ; le finalisme a posteriori constate après coup qu'un organe sert l'organisme : seul le premier est ___ de l'étude scientifique de la vie."
+    answer: "exclu"
+    alt: []

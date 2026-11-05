@@ -1,0 +1,213 @@
+# Cours tiré de l'introduction du manuel collectif sur la vie : Ulysse
+# Chaintreuil et Louis Rouquayrol, « Introduction : la vie comme problème
+# philosophique », p. 15-37 (scan fourni par l'utilisateur, océrisé ; pages 20,
+# 22 et 29 relues sur l'image). Voir content/philosophie.md, § « Un cours sur un
+# auteur, tiré d'un commentaire » : pas de repérage de l'introduction elle-même,
+# citations reprises telles que l'introduction les donne, avec ses références.
+#
+# Unités intro1 à intro5, une par grande partie : difficultés liminaires ;
+# conception « ordinaire » ; vitalisme et ses concurrents ; questions
+# pratiques ; autres usages. Le dernier paragraphe (présentation des chapitres
+# du manuel) ne donne pas de carte. Les chapitres du manuel auxquels
+# l'introduction renvoie (Fedi sur Bergson, Angleraux, Ribas sur Aristote,
+# Proust sur le Phédon, Hacques, Lema Habash et Zaino sur Spinoza, Caillé sur
+# Descartes et Leibniz, Messerlé sur Diderot, Depetris sur Canguilhem, Soutet,
+# Farge sur Foucault, Chapuis, de Saxcé sur Augustin, Josset, Ballanfat) ne sont
+# pas cités dans les rappels : ils feront leurs propres unités.
+
+id: intro1
+title: "Les difficultés du concept de vie"
+subtitle: "Entre le mystère et la dissolution dans le vivant : pourquoi partir de la conception ordinaire"
+icon: compass
+color: amber
+group: "La vie comme problème philosophique (introduction)"
+lessons:
+- id: intro1-l1
+  title: "Cerner la vie par des oppositions"
+  notes: |-
+    **La vie est un défi pour toute entreprise de conceptualisation** : on l'a souvent répété depuis {sky}Canguilhem{/sky} (« Le concept et la vie », 1966). Et la question n'est pas réservée aux philosophes : {amber}les limites de ce qu'il faut tenir pour vivant{/amber}, {amber}les attributs qui conviennent à la vie{/amber} (la sensibilité ? la conscience ?), {amber}ses origines{/amber} occupent une place de choix dans les conversations ordinaires, surtout depuis que les questions écologiques sont devenues incontournables. Cette leçon montre la première manière de s'y prendre, et l'impasse où elle mène.
+
+    **Une première méthode : gagner en précision par oppositions**, plus ou moins faciles, plus ou moins grossières. Chacune met en avant un trait de la vie en l'opposant à ce qui en est dépourvu :
+
+    | La vie comme | Opposée à |
+    | source d'activité | l'inerte |
+    | principe d'organisation | l'inorganique |
+    | douée de conscience | la matière brute |
+    | facteur d'indétermination | un monde soumis aux lois physiques |
+    | orientée par une fin immanente | les machines |
+
+    **Ainsi présentée, la vie échappe à l'intelligence qui calcule.** Si la vie est ce qui {amber}n'est pas inerte{/amber}, {amber}pas soumis aux lois de la physique{/amber}, {amber}pas machinal{/amber}, alors {red}une intelligence dont la rigueur logique et l'exactitude mathématique sont le principal instrument{/red} ne peut la saisir adéquatement : ses instruments sont justement faits pour l'inerte, le déterminé, le mécanique. Il ne resterait que {pink}le raisonnement par analogie, l'intuition, une certaine empathie{/pink}, à employer avec la plus grande prudence, puisqu'à chaque étape les frontières de l'objet sont difficiles à fixer. Au bout du chemin, le risque : {coral}ne voir dans la vie qu'un simple « mystère »{/coral}.
+
+    ! On a pu attribuer cette position à {sky}Bergson{/sky}, mais c'est une caricature : ses positions sont notablement plus subtiles.
+
+    **La réaction inverse : abandonner la vie pour le vivant.** Si la vie est un mystère qui échappe par définition à la raison, la tentation est grande de {red}se débarrasser du concept de vie{/red}, aux résonances métaphysiques trop embarrassantes, pour étudier plus modestement {green}le vivant{/green}. N'est-ce pas ainsi que devraient procéder les sciences ? Les recherches sur le vivant, sur les conditions de son apparition et de sa perpétuation, sur des phénomènes vitaux comme {yellow}la croissance{/yellow} ou {yellow}la reproduction{/yellow}, permettraient à la biochimie, à la biologie, à l'écologie de construire leur objet en négligeant les {teal}« {/teal}aspects {teal}philosophiques, spirituels ou religieux »{/teal} du concept de vie (Académie des sciences, *Les origines du vivant*, 2016).
+
+    **Mais cette modestie, loin d'évacuer les difficultés, en produit de nouvelles** : c'est l'objet de la leçon suivante.
+  points:
+  - id: intro1-l1-p1
+    sentence: "Que la vie représente un véritable défi pour toute entreprise de conceptualisation, on le répète depuis ___, dans son article « Le concept et la vie » (1966)."
+    answer: "Canguilhem"
+    alt: ["Georges Canguilhem"]
+  - id: intro1-l1-p2
+    sentence: "Une première manière de cerner la vie procède par dichotomies : on oppose la vie, source d'activité, au règne de l'___."
+    answer: "inerte"
+    alt: []
+  - id: intro1-l1-p3
+    sentence: "Une première manière de cerner la vie procède par dichotomies : on oppose la vie, principe d'organisation, à l'___."
+    answer: "inorganique"
+    alt: []
+  - id: intro1-l1-p4
+    sentence: "Une première manière de cerner la vie procède par dichotomies : on oppose la vie, dont les manifestations sont orientées par une fin immanente, aux ___."
+    answer: "machines"
+    alt: []
+  - id: intro1-l1-p5
+    sentence: "Une première manière de cerner la vie procède par dichotomies : on oppose la vie, facteur d'___, à un monde entièrement soumis aux lois de la physique."
+    answer: "indétermination"
+    alt: []
+  - id: intro1-l1-p6
+    sentence: "Si la vie s'oppose à l'inerte, à l'inorganique et aux machines, elle échappe à une intelligence dont l'instrument est la rigueur logique et l'exactitude mathématique : il ne resterait que l'analogie, l'intuition et l'empathie, au risque de ne voir dans la vie qu'un simple ___."
+    answer: "mystère"
+    alt: []
+  - id: intro1-l1-p7
+    sentence: "Faute de prise pour la rigueur logique, la vie ne se saisirait que par le raisonnement par analogie, une certaine forme d'empathie, et l'___."
+    answer: "intuition"
+    alt: []
+  - id: intro1-l1-p8
+    sentence: "On a pu attribuer, de manière caricaturale, la position qui fait de la vie un simple « mystère » à ___, dont les positions sont bien plus subtiles."
+    answer: "Bergson"
+    alt: ["Henri Bergson"]
+  - id: intro1-l1-p9
+    sentence: "Pour échapper au « mystère » de la vie, on est tenté d'abandonner ce concept aux résonances métaphysiques et d'étudier plus modestement le ___."
+    answer: "vivant"
+    alt: []
+  - id: intro1-l1-p10
+    sentence: "Biochimie, biologie et écologie construiraient leur objet en négligeant les « aspects philosophiques, ___ ou religieux » du concept de vie (Académie des sciences, *Les origines du vivant*)."
+    answer: "spirituels"
+    alt: []
+- id: intro1-l2
+  title: "Le vivant des sciences : flou et dispersion"
+  notes: |-
+    **Étudier le seul vivant ne règle rien : les sciences elles-mêmes en donnent une image floue et dispersée.** Deux premières difficultés.
+
+    **D'abord, le flou des frontières.** Biochimie, biologie, écologie donnent du vivant une image où {amber}la part du flou joue un rôle déterminant{/amber}, et sur deux plans :
+    - les frontières entre les différents {violet}règnes{/violet} du vivant ne sont pas nettes ;
+    - dès qu'on étudie {yellow}l'apparition des premières cellules{/yellow}, {yellow}l'« habitabilité » de la Terre{/yellow} ou les {yellow}états de la matière{/yellow}, c'est {coral}la distinction même entre vivant et non-vivant{/coral} qui perd sa netteté.
+
+    L'Académie des sciences en tire la conséquence, à partir de l'évolution : {teal}« {/teal}L'évolutionnisme nous oblige ainsi à accepter qu'il existe {teal}un continuum entre toutes les espèces vivantes{/teal}. Pour les mêmes raisons, la séparation entre "systèmes non vivants" et "systèmes vivants" ne peut, elle aussi, qu'être {teal}conventionnelle{/teal}. [...] Tout se comprend donc dans {teal}une continuité entre l'inerte et le vivant{/teal}, la cellule et l'organisme entier, une espèce et une autre, etc.{teal} »{/teal} Autrement dit : si les espèces sortent les unes des autres par degrés, aucune coupure franche ne les sépare ; et si le vivant est sorti de l'inerte, la ligne qui les sépare est {coral}tracée par nous{/coral}, non trouvée dans les choses.
+
+    **Ensuite, l'unité et l'autonomie des sciences de la vie.** Ces disciplines sont éparpillées, et certaines empruntent {red}à des sciences dont l'objet n'est pas le vivant{/red} leurs méthodes, et parfois une partie de leur contenu. Si la philosophie doit penser la vie en suivant ces sciences, le risque est {coral}la dissolution pure et simple de l'objet{/coral}. {sky}Canguilhem{/sky} pose la condition (*La connaissance de la vie*) : la biologie ne permet de {teal}« repenser ou rectifier des concepts philosophiques fondamentaux{/teal}, comme celui de vie » que si elle n'est pas {teal}« {/teal}fascinée par {teal}le prestige des sciences physico-chimiques{/teal}, réduite ou se réduisant {teal}au rôle de satellite de ces sciences »{/teal}. Une biologie devenue chimie appliquée n'a plus rien à dire de la vie.
+  points:
+  - id: intro1-l2-p1
+    sentence: "Les sciences du vivant en donnent une image floue : les frontières ne sont pas nettes entre les différents ___ du vivant, ni même, pour l'apparition des premières cellules, entre vivant et non-vivant."
+    answer: "règnes"
+    alt: []
+  - id: intro1-l2-p2
+    sentence: "Académie des sciences : « L'évolutionnisme nous oblige ainsi à accepter qu'il existe un ___ entre toutes les espèces vivantes. »"
+    answer: "continuum"
+    alt: []
+  - id: intro1-l2-p3
+    sentence: "Académie des sciences : « Pour les mêmes raisons, la séparation entre \"systèmes non vivants\" et \"systèmes vivants\" ne peut, elle aussi, qu'être ___. »"
+    answer: "conventionnelle"
+    alt: []
+  - id: intro1-l2-p4
+    sentence: "Académie des sciences : « Tout se comprend donc dans une ___ entre l'inerte et le vivant, la cellule et l'organisme entier, une espèce et une autre, etc. »"
+    answer: "continuité"
+    alt: []
+  - id: intro1-l2-p5
+    sentence: "Si les espèces sortent les unes des autres par degrés et le vivant de l'inerte, aucune coupure franche ne sépare vivant et non-vivant : la ligne qui les sépare est tracée par nous, elle est ___."
+    answer: "conventionnelle"
+    alt: []
+  - id: intro1-l2-p6
+    sentence: "Parce que les sciences de la vie sont éparpillées et empruntent leurs méthodes à des sciences dont l'objet n'est pas le vivant, la philosophie qui les suit risque la ___ pure et simple de l'objet qu'elle veut penser."
+    answer: "dissolution"
+    alt: []
+  - id: intro1-l2-p7
+    sentence: "Canguilhem, *La connaissance de la vie* : la biologie ne permet de rectifier le concept de vie que si elle n'est pas « réduite ou se réduisant au rôle de ___ » des sciences physico-chimiques."
+    answer: "satellite"
+    alt: []
+  - id: intro1-l2-p8
+    sentence: "Canguilhem, *La connaissance de la vie* : la biologie ne permet de « repenser ou rectifier des concepts philosophiques fondamentaux, comme celui de vie » que si elle n'est pas fascinée par le prestige des sciences ___."
+    answer: "physico-chimiques"
+    alt: []
+  - id: intro1-l2-p9
+    sentence: "C'est ___ qui pose qu'une biologie fascinée par le prestige des sciences physico-chimiques ne peut plus rectifier le concept de vie."
+    answer: "Canguilhem"
+    alt: ["Georges Canguilhem"]
+- id: intro1-l3
+  title: "Le vivant des sciences : des concepts empruntés"
+  notes: |-
+    **Deux autres difficultés montrent que le refus du concept de vie reste inachevé : les sciences du vivant pensent avec des concepts qu'elles n'ont pas critiqués.**
+
+    **Des métaphores impensées.** {sky}Derrida{/sky} le soulignait, à l'attention des candidats à l'agrégation de 1976 (séminaire *La vie la mort*, 1975-1976) : le geste critique qui refuse le concept de vie comme {violet}hypostase{/violet} du vivant (une abstraction qu'on transforme en chose, une « Vie » qu'on placerait derrière les vivants) {red}présente quelque chose d'inachevé{/red}. Car les spécialistes du vivant parlent de {yellow}« production »{/yellow} et de {yellow}« reproduction »{/yellow}, et, depuis la seconde moitié du XXe siècle, d'{yellow}« information »{/yellow} (le code génétique, le programme). Ils opèrent ainsi avec {coral}des concepts plus ou moins métaphoriques, dont les résonances, éventuellement métaphysiques, demeurent impensées{/coral} : on chasse la métaphysique par la porte, elle revient par le vocabulaire.
+
+    **Scier la branche sur laquelle on est assis.** Les scientifiques ont emprunté à la connaissance ordinaire, au sens commun, {amber}la notion de vivant à partir de laquelle ils ont construit leurs théories{/amber}. Que reste-t-il, dans leurs travaux, de cette notion naïve, et des besoins ontologiques, épistémiques et moraux de démarquer vivant et non-vivant auxquels elle répond ? Les sciences de la vie sont plurielles : {yellow}l'anatomie{/yellow}, qui examine la structure des organismes (muscles, tissus), est une chose ; {yellow}la biologie chimique{/yellow}, qui emprunte ses outils analytiques à la chimie, en est une autre. D'où un **conflit** :
+    - {green}la notion commune de vie{/green}, construite à partir de l'expérience ordinaire de la croissance, de la nutrition, dans leur différence avec la matière inerte, {coral}offre un objet à la biologie{/coral}, qui peut ainsi se constituer en champ scientifique autonome ;
+    - {red}cette science s'est ensuite divisée jusqu'à dissoudre l'unité même du concept qui lui donne son nom{/red}, *bios*.
+
+    ! Ce n'est pas un reproche fait aux sciences : la difficulté est que la biologie vit d'une notion commune qu'elle défait en progressant.
+  points:
+  - id: intro1-l3-p1
+    sentence: "À l'attention des candidats à l'agrégation de 1976, ___ souligne que refuser le concept de vie comme hypostase du vivant reste un geste inachevé."
+    answer: "Derrida"
+    alt: ["Jacques Derrida"]
+  - id: intro1-l3-p2
+    sentence: "Le geste critique des sciences refuse le concept de « vie » comme ___ du « vivant » : une abstraction transformée en chose, placée derrière les vivants."
+    answer: "hypostase"
+    alt: []
+  - id: intro1-l3-p3
+    sentence: "Derrida rappelle que depuis la seconde moitié du XXe siècle, le vocabulaire de l'___ a essaimé dans les sciences du vivant, avec des résonances métaphysiques impensées."
+    answer: "information"
+    alt: []
+  - id: intro1-l3-p4
+    sentence: "Parler de « production », de « reproduction » et d'« information » fait opérer les spécialistes du vivant avec des concepts plus ou moins ___, dont les résonances métaphysiques demeurent impensées."
+    answer: "métaphoriques"
+    alt: []
+  - id: intro1-l3-p5
+    sentence: "Le séminaire où Derrida s'adresse aux candidats à l'agrégation de 1976 s'intitule *La vie la ___*."
+    answer: "mort"
+    alt: []
+  - id: intro1-l3-p6
+    sentence: "Les sciences de la vie sont plurielles : l'___ examine la structure des organismes (muscles, tissus), la biologie chimique emprunte ses outils à la chimie."
+    answer: "anatomie"
+    alt: []
+  - id: intro1-l3-p7
+    sentence: "La notion commune de vie offre un objet à la biologie, qui se constitue en champ autonome ; puis cette science se divise jusqu'à dissoudre l'unité du concept qui lui donne son nom, en grec *___*."
+    answer: "bios"
+    alt: []
+  - id: intro1-l3-p8
+    sentence: "En empruntant au sens commun la notion de vivant puis en la dissolvant, les scientifiques, si l'on peut dire, scient la ___ sur laquelle ils sont assis."
+    answer: "branche"
+    alt: []
+- id: intro1-l4
+  title: "Deux impasses, et un point de départ"
+  notes: |-
+    **Cette première analyse laisse un concept de vie particulièrement instable, et deux impasses** : ce sont les deux leçons qui précèdent, mises face à face.
+    - {pink}Accorder à l'objet le maximum d'originalité et d'autonomie{/pink} : on garde la vie, mais {coral}on se prive des moyens rigoureux de la connaître{/coral} (le « mystère »).
+    - {red}Par réaction antimétaphysique, dissoudre sa singularité{/red} : on garde la rigueur, mais {coral}on perd l'objet même de l'enquête{/coral} (le vivant éparpillé).
+
+    **D'où la méthode : commencer par la conception ordinaire de la vie.** Ce n'est pas une concession au sens commun, mais une exigence de la raison elle-même, que formule {sky}Canguilhem{/sky} (*La connaissance de la vie*) : {teal}« {/teal}un {teal}rationalisme raisonnable{/teal} doit savoir {teal}reconnaître ses limites{/teal} et {teal}intégrer ses conditions d'exercice »{/teal}. Or ces conditions, il les trouve dans {teal}« {/teal}la {teal}connaissance naïve »{/teal} des concepts qu'il met au travail, et c'est singulièrement vrai de la vie : la biologie ne s'est donné un objet qu'à partir de l'expérience commune du vivant. L'unité suivante part donc de cette conception ordinaire.
+  points:
+  - id: intro1-l4-p1
+    sentence: "Première des deux impasses du concept de vie : accorder à l'objet le maximum d'originalité et d'autonomie, au prix de se priver des moyens ___ de le connaître."
+    answer: "rigoureux"
+    alt: []
+  - id: intro1-l4-p2
+    sentence: "Seconde des deux impasses du concept de vie : par réaction ___, dissoudre la singularité de la vie, jusqu'à perdre l'objet même de l'enquête."
+    answer: "antimétaphysique"
+    alt: []
+  - id: intro1-l4-p3
+    sentence: "Canguilhem, *La connaissance de la vie* : « un rationalisme ___ doit savoir reconnaître ses limites et intégrer ses conditions d'exercice »."
+    answer: "raisonnable"
+    alt: []
+  - id: intro1-l4-p4
+    sentence: "Canguilhem, *La connaissance de la vie* : « un rationalisme raisonnable doit savoir reconnaître ses limites et intégrer ses conditions d'___ »."
+    answer: "exercice"
+    alt: []
+  - id: intro1-l4-p5
+    sentence: "Pour Canguilhem, le rationalisme trouve ses conditions d'exercice dans la « connaissance ___ » des concepts qu'il met au travail, ce qui justifie de partir de la conception ordinaire de la vie."
+    answer: "naïve"
+    alt: []
+  - id: intro1-l4-p6
+    sentence: "Entre la vie comme mystère et la vie dissoute dans le vivant, la méthode consiste à partir de la conception ___ de la vie, parce que la biologie elle-même s'est donné son objet à partir d'elle."
+    answer: "ordinaire"
+    alt: ["commune"]
