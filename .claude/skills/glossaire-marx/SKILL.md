@@ -46,6 +46,24 @@ précisément sa source**. Conséquences :
   sa source, et sans source elle ne s'écrit pas ;
 - une citation se reprend mot pour mot, telle que la donne NotebookLM, sans
   retraduction ni correction ;
+- **la traduction peut varier** d'une réponse ou d'une étude à l'autre : ce
+  n'est pas une raison de retirer une citation utile. Mais pour les textes
+  dont on a le PDF des **Éditions sociales**, préférer leur traduction
+  (consigne de l'utilisateur, 2026-11-05). `textes.py verifie <fichier.yaml>`
+  dit, pour chaque citation du rappel et des cartes (trous compris), dans
+  quelle édition on la retrouve ; `textes.py cherche "…"` montre le texte
+  autour, pour reprendre une citation sur la traduction préférée. Les PDF sont
+  dans `C:\Users\Arthur\Œuvres` ; au 2026-11-05, seuls les *Manuscrits de
+  1844* (Bottigelli) y sont aux Éditions sociales, à côté de la Pléiade
+  (*Œuvres* I et III, Rubel : *L'Idéologie allemande*, *Thèses sur
+  Feuerbach*, *Travail salarié et capital*, *Gotha*…) et des *Écrits
+  philosophiques* (Sève). Un volume ajouté se déclare dans `EDITIONS`, en tête
+  du script. Une citation absente des PDF n'est pas fausse pour autant :
+  NotebookLM suit souvent une traduction dont on n'a pas le PDF (celle des
+  *Thèses sur Feuerbach*, de *Travail salarié et capital*, de *Gotha*, ou
+  *Le Capital*). Le lancer avant chaque publication et corriger ce qu'il montre
+  faux : une citation qui s'écarte du texte d'une édition qu'on a (un mot
+  changé, un sujet substitué, « l'animal » pour « il ») ;
 - ce que dit un commentateur ne s'attribue jamais à Marx : si l'idée vient
   d'une étude et non d'un texte de Marx, le rappel appuie la thèse sur Marx
   ou nomme le commentateur.
@@ -537,10 +555,13 @@ demande ; il peut porter une couleur ou un gras à l'extérieur des crochets
 - **Une entrée générale renvoie à ses sous-entrées et à ses distinctions** ;
   une sous-entrée renvoie à son entrée générale dès l'attaque ; une
   distinction renvoie à chacun de ses pôles qui a son entrée.
-- **Une cible doit exister**, ou être écrite dans la même session. Une
-  entrée qu'on voudrait voir exister mais qu'on n'écrit pas maintenant ne
-  reçoit pas de renvoi : la proposer à l'utilisateur en rendant compte
-  (§ 7).
+- **Une cible doit exister.** Une entrée qui serait une bonne piste, et qu'on
+  n'écrit pas maintenant, se **crée vide** (`lessons: []`, sans définition) et
+  reçoit le renvoi : ne pas hésiter à le faire (consigne de l'utilisateur,
+  2026-11-05). Le fichier porte seulement `id`, `title` (avec le terme allemand
+  si les sources le donnent), `icon`, `color` et un commentaire qui la dit à
+  rédiger ; son identifiant s'ajoute à la piste. Le compte rendu (§ 7) dit
+  lesquelles on a créées.
 - **Ajouter le renvoi inverse** quand il manque : écrire une sous-entrée,
   c'est aussi ajouter, dans le rappel de l'entrée générale, le renvoi vers
   elle (modification minimale de l'autre fichier, sans le refondre).
