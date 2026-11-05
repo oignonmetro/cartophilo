@@ -503,10 +503,8 @@ export default function ContentEditorScreen() {
                       >
                         + Nouvelle unité
                       </button>
-                      {groupUnits(track.units).map((entry, index) => (
-                        <div key={index} className="mb-0.5">
-                          {entry.label && <p className="px-2 py-1 text-xs font-black text-ink-faint">{entry.label}</p>}
-                          {entry.units.map((unit) => (
+                      {groupUnits(track.units).map((entry, index) => {
+                        const units = entry.units.map((unit) => (
                             <details key={unit.id} className="mb-0.5">
                               <summary className="group flex cursor-pointer items-center gap-1 rounded-lg px-2 py-1 text-xs font-bold">
                                 <span className="flex-1">{unit.title.replace(/`/g, '')}</span>
@@ -626,9 +624,22 @@ export default function ContentEditorScreen() {
                                 </button>
                               </div>
                             </details>
-                          ))}
-                        </div>
-                      ))}
+                          ))
+                        // Un groupe se déploie comme un sous-onglet : son nom, puis ses unités en retrait.
+                        return entry.label ? (
+                          <details key={`g-${index}-${entry.label}`} className="mb-0.5">
+                            <summary className="cursor-pointer rounded-lg px-2 py-1 text-xs font-black text-ink-soft">
+                              {entry.label}
+                              <span className="ml-1 font-normal text-ink-faint">({entry.units.length})</span>
+                            </summary>
+                            <div className="ml-2 border-l-2 border-line pl-2">{units}</div>
+                          </details>
+                        ) : (
+                          <div key={`u-${index}`} className="mb-0.5">
+                            {units}
+                          </div>
+                        )
+                      })}
                     </div>
                   </details>
                 ))}
