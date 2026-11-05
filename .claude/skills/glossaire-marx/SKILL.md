@@ -53,17 +53,19 @@ précisément sa source**. Conséquences :
   dit, pour chaque citation du rappel et des cartes (trous compris), dans
   quelle édition on la retrouve ; `textes.py cherche "…"` montre le texte
   autour, pour reprendre une citation sur la traduction préférée. Les PDF sont
-  dans `C:\Users\Arthur\Œuvres` ; au 2026-11-05, seuls les *Manuscrits de
-  1844* (Bottigelli) y sont aux Éditions sociales, à côté de la Pléiade
-  (*Œuvres* I et III, Rubel : *L'Idéologie allemande*, *Thèses sur
-  Feuerbach*, *Travail salarié et capital*, *Gotha*…) et des *Écrits
-  philosophiques* (Sève). Un volume ajouté se déclare dans `EDITIONS`, en tête
-  du script. Une citation absente des PDF n'est pas fausse pour autant :
-  NotebookLM suit souvent une traduction dont on n'a pas le PDF (celle des
-  *Thèses sur Feuerbach*, de *Travail salarié et capital*, de *Gotha*, ou
-  *Le Capital*). Le lancer avant chaque publication et corriger ce qu'il montre
-  faux : une citation qui s'écarte du texte d'une édition qu'on a (un mot
-  changé, un sujet substitué, « l'animal » pour « il ») ;
+  dans `C:\Users\Arthur\Œuvres` : depuis le 2026-11-06, les Éditions sociales
+  de toutes les œuvres utiles (*Manuscrits de 1844*, *L'Idéologie allemande*
+  avec les *Thèses sur Feuerbach*, *Le Capital*, livre I, *Grundrisse*,
+  *Contribution*, *Gotha*, *Manifeste*, et les *Écrits philosophiques* de
+  Sève, d'où se citent les extraits du *Capital*, livre III), à côté des deux
+  tomes de la Pléiade (*Œuvres* I et III, Rubel), qui ne servent qu'à défaut.
+  Un volume ajouté se déclare dans `EDITIONS`, en tête du script. Une citation
+  absente des PDF n'est pas fausse pour autant : l'OCR de certains volumes est
+  fautif (*L'Idéologie allemande* : « ct » pour « et », mots brisés), et
+  *Travail salarié et capital* n'y est qu'en Pléiade. Le lancer avant chaque
+  publication et reprendre sur les Éditions sociales toute citation qui s'en
+  écarte (un mot changé, un sujet substitué, « l'animal » pour « il », une
+  autre traduction) ;
 - ce que dit un commentateur ne s'attribue jamais à Marx : si l'idée vient
   d'une étude et non d'un texte de Marx, le rappel appuie la thèse sur Marx
   ou nomme le commentateur.

@@ -1,9 +1,8 @@
 # Entrée du glossaire de Marx (skill glossaire-marx) : notion, entrée générale
 # sur la vie (elle absorbe « vie comme activité »). Citations reprises de
-# NotebookLM avec leur source. De seconde main, le texte manquant au notebook :
-# L'Idéologie allemande, partie III (Fischbach, La production des hommes ; les
-# parties citées de la partie I sont vérifiées sur Œuvres III) ; Le Capital, livre III (Collin ; Ducange, Marx de A à Z). Travail
-# salarié et capital : Œuvres I, sauf « à table, à l'auberge, au lit » (Ducange).
+# NotebookLM avec leur source, puis sur les Éditions sociales quand on en a le PDF
+# (textes.py, 2026-11-06) ; Le Capital, livre III, dans la traduction des Écrits
+# philosophiques (Sève) ; Travail salarié et capital, sans PDF de cette édition.
 
 id: g-activite-vitale
 title: Activité vitale (`Lebenstätigkeit`)
@@ -19,21 +18,21 @@ lessons:
 
     __**L'homme se distingue de l'animal parce qu'il fait de son**__ {violet}__**activité vitale**__{/violet} __**l'objet de sa conscience.**__ L'animal a lui aussi une activité vitale, et il produit ; mais {teal}« l'animal s'identifie directement avec son activité vitale{/teal}. Il ne se distingue pas d'elle. __Il__ {teal}__est cette activité__ »{/teal} (premier manuscrit). Au contraire, {teal}« l'homme{/teal} fait de son activité vitale elle-même {teal}__l'objet de sa volonté et de sa conscience__ »{/teal}, et {teal}« {/teal}c'est pour cela seulement que {teal}son activité{/teal} est activité {teal}libre »{/teal} (*ibid*.). Pourquoi la conscience rend-elle libre ? Parce que {amber}**ce dont je me distingue, je peux le vouloir ou le changer**{/amber}, alors que {pink}je ne peux rien décider de ce que je suis sans écart{/pink}.
 
-    Il en résulte que l'__animal__ {teal}« il{/teal} ne produit que {teal}sous l'empire du besoin physique immédiat{/teal}, tandis que {teal}__l'homme__{/teal} {teal}produit même libéré du besoin physique »{/teal} (*ibid*.). {yellow}L'exemple de l'abeille{/yellow} le montre, plus tard, sur le travail : {teal}« {/teal}ce qui distingue dès l'abord {teal}le plus mauvais architecte{/teal} de l'abeille la plus experte, c'est qu'{teal}il a __construit la cellule dans sa tête__ avant{/teal} de la construire dans la ruche{teal} »{/teal} (*Le Capital*, livre I, 3e section, chap. VII). L'abeille fait mieux, mais sans fin qu'elle se soit donnée ; l'architecte fait moins bien, mais il exécute ce qu'il a d'abord conçu. __Être conscient de son activité__ n'est donc pas l'observer : c'est {green}en fixer la fin{/green}.
+    Il en résulte que l'__animal__ {teal}« il{/teal} ne produit que {teal}sous l'empire du besoin physique immédiat{/teal}, tandis que {teal}__l'homme__{/teal} {teal}produit même libéré du besoin physique »{/teal} (*ibid*.). {yellow}L'exemple de l'abeille{/yellow} le montre, plus tard, sur le travail : {teal}« {/teal}ce qui distingue d'emblée {teal}le plus mauvais architecte{/teal} de la meilleure abeille, c'est qu'{teal}il a __construit la cellule dans sa tête__ avant{/teal} de la construire dans la cire{teal} »{/teal} (*Le Capital*, livre I, 3e section, chap. VII). L'abeille fait mieux, mais sans fin qu'elle se soit donnée ; l'architecte fait moins bien, mais il exécute ce qu'il a d'abord conçu. __Être conscient de son activité__ n'est donc pas l'observer : c'est {green}en fixer la fin{/green}.
 
     __**L'activité vitale est une**__ {green}__**activité objective**__{/green}__**, ni**__ {red}__**pure**__{/red} __**ni**__ {red}__**contemplative.**__{/red} Une activité libre n'est pas une activité sans objet, car {coral}l'homme est un être naturel{/coral}, qui {coral}dépend de ce sur quoi il agit{/coral} : {teal}« {/teal}l'être objectif agit d'une manière objective{teal} »{/teal} et {teal}« {/teal}il ne crée, il ne pose que des objets, __parce qu'__{teal}__il est posé lui-même par des objets__{/teal}{teal} »{/teal} (troisième manuscrit, Critique de la dialectique de Hegel). Marx en tire deux refus :
     - Contre l'{red}activité pure{/red} : {sky}Karl Grün{/sky} et {red}le socialisme vrai{/red} veulent {red}une liberté qui ne doive rien à ses objets{/red}. Marx raille cette {teal}« {/teal}activité pure, absolue{teal} »{/teal} qui serait {teal}« {/teal}fortement salie quand elle a __un substrat et un résultat matériels__{teal} »{/teal} (*L'Idéologie allemande*, partie III, Le socialisme vrai) : sans substrat ni résultat, il n'y a simplement plus d'activité.
-    - Contre la {red}contemplation{/red} : {sky}Feuerbach{/sky} part bien du monde sensible, mais comme d'un spectacle. Son défaut est que {teal}« {/teal}{teal}l'objet, la réalité, le monde sensible{/teal} n'y sont saisis que sous la forme d'objet ou d'intuition, mais non __en tant qu'__{teal}__activité humaine concrète__{/teal}__, en tant que__ {teal}__pratique__{/teal}{teal} »{/teal} (*Thèses sur Feuerbach*, thèse 1).
+    - Contre la {red}contemplation{/red} : {sky}Feuerbach{/sky} part bien du monde sensible, mais comme d'un spectacle. Son défaut est que {teal}« {/teal}{teal}l'objet, la réalité, le monde sensible{/teal} n'y sont saisis que sous la forme d'objet ou d'intuition, mais non __en tant qu'__{teal}__activité humaine concrète__{/teal}__, non en tant que__ {teal}__pratique__{/teal}{teal} »{/teal} (*Thèses sur Feuerbach*, thèse 1).
 
     C'est donc {amber}en transformant le monde que l'homme atteste ce qu'il est{/amber} : {teal}« {/teal}c'est précisément dans le fait d'{teal}__élaborer le monde objectif__{/teal} que l'homme commence donc à faire réellement ses preuves d'être générique{teal} »{/teal} (premier manuscrit).
 
-    __**Les**__ {violet}__**individus**__{/violet} __**sont ce que sont leurs manières de**__ {violet}__**manifester leur vie**__{/violet}__**.**__ Si vivre, c'est agir, être tel vivant, c'est agir de telle façon : il ne reste pas, derrière l'activité, un homme déjà fait qui s'y livrerait. La {amber}production{/amber} n'est donc pas seulement ce qui entretient la survie ; il s'agit {teal}« {/teal}d'une manière déterminée de manifester leur vie, __d'__{teal}__un certain mode de vie__ »{/teal}, et {teal}« {/teal}ainsi {teal}les individus manifestent{/teal}-ils {teal}leur vie{/teal}, ainsi sont-ils{teal} »{/teal} (*L'Idéologie allemande*, partie I, Feuerbach). Marx précise : {teal}« {/teal}ce qu'ils sont {teal}coïncide{/teal} donc {teal}avec leur production{/teal}, avec ce qu'ils produisent aussi bien qu'avec la façon dont ils la produisent{teal} »{/teal} (*ibid*.). Comme cette {teal}activité{/teal} se mène toujours {teal}avec d'autres{/teal}, __l'essence de l'homme__ n'est pas en chacun : {teal}« {/teal}elle est dans sa réalité {teal}__l'ensemble des relations sociales__ »{/teal} (*Thèses sur Feuerbach*, thèse 6).
+    __**Les**__ {violet}__**individus**__{/violet} __**sont ce que sont leurs manières de**__ {violet}__**manifester leur vie**__{/violet}__**.**__ Si vivre, c'est agir, être tel vivant, c'est agir de telle façon : il ne reste pas, derrière l'activité, un homme déjà fait qui s'y livrerait. La {amber}production{/amber} n'est donc pas seulement ce qui entretient la survie ; il s'agit d'{teal}« {/teal}une façon déterminée de manifester leur vie, {teal}__un mode de vie déterminé__ »{/teal}, et {teal}« {/teal}la façon dont {teal}les individus manifestent{/teal} {teal}leur vie{/teal} __reflète très exactement ce qu'ils sont__{teal} »{/teal} (*L'Idéologie allemande*, partie I, Feuerbach). Marx précise : {teal}« {/teal}ce qu'ils sont {teal}coïncide{/teal} donc {teal}avec leur production{/teal}, aussi bien avec ce qu'ils produisent qu'avec la façon dont ils le produisent{teal} »{/teal} (*ibid*.). Comme cette {teal}activité{/teal} se mène toujours {teal}avec d'autres{/teal}, __l'essence de l'homme__ n'est pas en chacun : {teal}« {/teal}elle est dans sa réalité {teal}__l'ensemble des relations sociales__ »{/teal} (*Thèses sur Feuerbach*, thèse 6).
 
     __**Sous le salariat, l'activité vitale est**__ {red}__**vendue**__{/red} __**et devient un**__ {red}__**moyen de vivre**__{/red}__**.**__ Le {violet}travail{/violet} reste {teal}« l'activité vitale propre à l'ouvrier, sa façon à lui de manifester sa vie »{/teal} (*Travail salarié et capital*, section I). Or, privé des moyens de production, l'ouvrier n'a rien d'autre à vendre : {teal}« {/teal}c'est cette activité vitale qu'il __vend à un tiers__ pour s'assurer les moyens de subsistance nécessaires{teal} »{/teal} (*ibid*.). Donc {amber}ce qui devrait être sa vie n'en est plus que la condition{/amber} : {teal}« {/teal}son activité vitale n'est donc pour lui qu'__un moyen de pouvoir exister__. Il travaille pour vivre. Pour lui-même, le travail n'est pas une partie de sa vie, il est plutôt {teal}__un sacrifice de sa vie__ »{/teal} (*ibid*.). Et sa vie passe ailleurs : {teal}« la vie commence pour lui où cesse l'activité{/teal}, à table, à l'auberge, au lit{teal} »{/teal} (*ibid*.). Le mot « vie » change ainsi de sens : ce qui reste à l'ouvrier, hors du travail, ce sont les fonctions qu'il partage avec l'animal, si bien que {teal}« {/teal}{red}le bestial devient l'humain et l'humain devient le bestial{/red}{teal} »{/teal} (*Manuscrits de 1844*, premier manuscrit).
 
-    __**À la maturité, vivre reste agir, mais la**__ {violet}__**vie**__{/violet} __**se partage entre le**__ {violet}__**métabolisme nécessaire**__{/violet} __**et le**__ {violet}__**développement libre**__{/violet}__**.**__ Vivre, c'est d'abord accomplir, dans toute société, l'échange avec la nature, car le {amber}travail{/amber} reste {teal}« {/teal}une {teal}nécessité éternelle{/teal}, le {teal}médiateur des échanges organiques entre la nature et l'homme »{/teal} (*Le Capital*, livre I, 1re section, chap. I) : c'est le {amber}processus constant{/amber} des *Manuscrits de 1844*, sans lequel on meurt. Or cette vie-là est {red}contrainte{/red} : elle satisfait les {pink}besoins physiques{/pink} et {pink}reproduit la force de travail{/pink}. Ce qu'aucune société ne peut supprimer ne peut devenir pure liberté : là, {teal}« {/teal}la {teal}seule liberté possible{/teal} est que {teal}l'homme social{/teal}, les producteurs associés {teal}__règlent rationnellement__ leurs échanges avec la nature »{/teal} (livre III). Le {coral}**travail nécessaire *entretient* donc la vie, sans qu'elle s'y déploie.**{/coral} Elle se déploie ailleurs : {teal}« {/teal}c'est __au-delà__ que commence le développement des forces humaines comme fin en soi{teal} »{/teal}, et {teal}« {/teal}la réduction de la journée de travail est la condition fondamentale de cette libération{teal} »{/teal} (*ibid*.). Si la vie est activité, réduire le travail contraint ne donne pas seulement du repos : cela {amber}**rend du temps à une activité qui n'a d'autre fin qu'elle-même**{/amber}.
+    __**À la maturité, vivre reste agir, mais la**__ {violet}__**vie**__{/violet} __**se partage entre le**__ {violet}__**métabolisme nécessaire**__{/violet} __**et le**__ {violet}__**développement libre**__{/violet}__**.**__ Vivre, c'est d'abord accomplir, dans toute société, l'échange avec la nature, car le {amber}travail{/amber} reste {teal}« {/teal}une {teal}nécessité naturelle éternelle{/teal}, {teal}médiation indispensable au métabolisme qui se produit entre l'homme et la nature, et donc à la vie humaine »{/teal} (*Le Capital*, livre I, 1re section, chap. I) : c'est le {amber}processus constant{/amber} des *Manuscrits de 1844*, sans lequel on meurt. Or cette vie-là est {red}contrainte{/red} : elle satisfait les {pink}besoins physiques{/pink} et {pink}reproduit la force de travail{/pink}. Ce qu'aucune société ne peut supprimer ne peut devenir pure liberté : là, {teal}« {/teal}la {teal}liberté ne peut consister qu'en ceci{/teal} que {teal}l'être humain socialisé{/teal}, que les producteurs associés {teal}__règlent de façon rationnelle__ leurs échanges avec la nature »{/teal} (livre III). Le {coral}**travail nécessaire *entretient* donc la vie, sans qu'elle s'y déploie.**{/coral} Elle se déploie ailleurs : {teal}« {/teal}c'est __au-delà__ que commence le développement des forces humaines comme fin en soi{teal} »{/teal}, et {teal}« {/teal}la condition fondamentale en est la réduction de la journée de travail{teal} »{/teal} (*ibid*.). Si la vie est activité, réduire le travail contraint ne donne pas seulement du repos : cela {amber}**rend du temps à une activité qui n'a d'autre fin qu'elle-même**{/amber}.
 
-    {coral}La thèse que vivre, c'est agir, demeure ; ce qui se déplace, c'est __l'activité où la vie s'accomplit__{/coral} : en {pink}1844{/pink}, le {pink}travail{/pink} ; ici, **le** {green}**temps libéré**{/green}. En 1875, Marx annonce encore le temps où le travail {teal}« {/teal}ne sera pas seulement un moyen de vivre, mais sera devenu {coral}le premier besoin de la vie{/coral}{teal} »{/teal} (*Critique du programme de Gotha*, I). {sky}Denis Collin{/sky} y voit une réminiscence de 1844, en tension avec le *Capital*. Ce qui ne varie pas, c'est le refus d'une vie réduite à un moyen de vivre.
+    {coral}La thèse que vivre, c'est agir, demeure ; ce qui se déplace, c'est __l'activité où la vie s'accomplit__{/coral} : en {pink}1844{/pink}, le {pink}travail{/pink} ; ici, **le** {green}**temps libéré**{/green}. En 1875, Marx annonce encore le temps où le travail {teal}« {/teal}ne sera pas seulement un moyen de vivre, mais deviendra lui-même {coral}le premier besoin vital{/coral}{teal} »{/teal} (*Critique du programme de Gotha*, I). {sky}Denis Collin{/sky} y voit une réminiscence de 1844, en tension avec le *Capital*. Ce qui ne varie pas, c'est le refus d'une vie réduite à un moyen de vivre.
 
     ! Activité vitale n'est pas un mot du seul jeune Marx : il revient en 1849 dans *Travail salarié et capital*. Ce qui change ensuite, c'est le lieu de la liberté, non l'idée que vivre, c'est agir.
 
@@ -49,7 +48,7 @@ lessons:
     | *Travail salarié et capital*, section I | l'activité vitale vendue, simple moyen d'exister |
     | *Le Capital*, livre I, chap. VII | l'architecte et l'abeille : la fin conçue d'abord |
     | *Le Capital*, livre III | la liberté au-delà du royaume de la nécessité |
-    | *Critique du programme de Gotha*, I | le travail devenu premier besoin de la vie |
+    | *Critique du programme de Gotha*, I | le travail devenu premier besoin vital |
 
     **Voir aussi** : [[g-etre-generique|Être générique]] · [[g-travail-aliene|Travail aliéné]] · [[g-metabolisme|Métabolisme]] · [[g-etre-naturel|Être naturel, être objectif]] · [[g-expression-de-la-vie|Expression de la vie]] · [[g-vie-materielle|Vie matérielle]] · [[g-survie|Survie]] · [[g-vie-accomplie|Vie accomplie]] · [[g-milieu|Milieu]]
   tables:
@@ -127,11 +126,11 @@ lessons:
     answer: besoin physique
     alt: []
   - id: g-activite-vitale-l1-q18
-    sentence: "Être conscient de son activité n'est pas l'observer : « ce qui distingue dès l'abord le plus mauvais ___ de l'abeille la plus experte, c'est qu'il a construit la cellule dans sa tête avant de la construire dans la ruche » (Le Capital, livre I)."
+    sentence: "Être conscient de son activité n'est pas l'observer : « ce qui distingue d'emblée le plus mauvais ___ de la meilleure abeille, c'est qu'il a construit la cellule dans sa tête avant de la construire dans la cire » (Le Capital, livre I)."
     answer: architecte
     alt: []
   - id: g-activite-vitale-l1-q19
-    sentence: "Être conscient de son activité n'est pas l'observer : « ce qui distingue dès l'abord le plus mauvais architecte de l'abeille la plus experte, c'est qu'il a construit la cellule ___ avant de la construire dans la ruche » (Le Capital, livre I)."
+    sentence: "Être conscient de son activité n'est pas l'observer : « ce qui distingue d'emblée le plus mauvais architecte de la meilleure abeille, c'est qu'il a construit la cellule ___ avant de la construire dans la cire » (Le Capital, livre I)."
     answer: dans sa tête
     alt: ["dans sa tete"]
   - id: g-activite-vitale-l1-q20
@@ -155,27 +154,27 @@ lessons:
     answer: Grün
     alt: ["Grun", "Gruen"]
   - id: g-activite-vitale-l1-q25
-    sentence: "Contre le matérialisme contemplatif : « l'objet, la réalité, le monde sensible n'y sont saisis que sous la forme d'objet ou d'___, mais non en tant qu'activité humaine concrète, en tant que pratique » (Thèses sur Feuerbach, thèse 1)."
+    sentence: "Contre le matérialisme contemplatif : « l'objet, la réalité, le monde sensible n'y sont saisis que sous la forme d'objet ou d'___, mais non en tant qu'activité humaine concrète, non en tant que pratique » (Thèses sur Feuerbach, thèse 1)."
     answer: intuition
     alt: []
   - id: g-activite-vitale-l1-q26
-    sentence: "Contre le matérialisme contemplatif : « l'objet, la réalité, le monde sensible n'y sont saisis que sous la forme d'objet ou d'intuition, mais non en tant qu'activité humaine concrète, en tant que ___ » (Thèses sur Feuerbach, thèse 1)."
+    sentence: "Contre le matérialisme contemplatif : « l'objet, la réalité, le monde sensible n'y sont saisis que sous la forme d'objet ou d'intuition, mais non en tant qu'activité humaine concrète, non en tant que ___ » (Thèses sur Feuerbach, thèse 1)."
     answer: pratique
     alt: []
   - id: g-activite-vitale-l1-q27
     sentence: "Marx reproche au matérialisme de son prédécesseur de saisir le monde sensible comme un spectacle, non comme une pratique : c'est, dans la thèse 1, le défaut de ___."
     answer: Feuerbach
     alt: []
-  - id: g-activite-vitale-l1-q28
-    sentence: "La production n'entretient pas seulement la survie, elle est un mode de vie : « ainsi les individus ___ leur vie, ainsi sont-ils » (L'Idéologie allemande, partie I)."
-    answer: manifestent-ils
-    alt: ["manifestent ils"]
+  - id: g-activite-vitale-l1-r28
+    sentence: "La production n'entretient pas seulement la survie, elle est un mode de vie : « la façon dont les individus manifestent leur vie ___ très exactement ce qu'ils sont » (L'Idéologie allemande, partie I)."
+    answer: reflète
+    alt: ["reflete"]
   - id: g-activite-vitale-l1-q29
-    sentence: "« Ce qu'ils sont coïncide donc avec leur ___, avec ce qu'ils produisent aussi bien qu'avec la façon dont ils la produisent » (L'Idéologie allemande, partie I)."
+    sentence: "« Ce qu'ils sont coïncide donc avec leur ___, aussi bien avec ce qu'ils produisent qu'avec la façon dont ils le produisent » (L'Idéologie allemande, partie I)."
     answer: production
     alt: []
   - id: g-activite-vitale-l1-q30
-    sentence: "« Ce qu'ils sont coïncide donc avec leur production, avec ce qu'ils produisent aussi bien qu'avec ___ dont ils la produisent » (L'Idéologie allemande, partie I)."
+    sentence: "« Ce qu'ils sont coïncide donc avec leur production, aussi bien avec ce qu'ils produisent qu'avec ___ dont ils le produisent » (L'Idéologie allemande, partie I)."
     answer: la façon
     alt: ["la facon"]
   - id: g-activite-vitale-l1-q31
@@ -210,13 +209,13 @@ lessons:
     sentence: "Hors du travail, il ne reste à l'ouvrier que les fonctions qu'il partage avec l'animal : « le ___ devient l'humain et l'humain devient le bestial » (Manuscrits de 1844, premier manuscrit)."
     answer: bestial
     alt: []
-  - id: g-activite-vitale-l1-q39
-    sentence: "Le travail, quelle que soit la société, reste « une nécessité éternelle, le ___ des échanges organiques entre la nature et l'homme » (Le Capital, livre I, chap. I)."
-    answer: médiateur
-    alt: ["mediateur"]
-  - id: g-activite-vitale-l1-q40
-    sentence: "Ce qu'aucune société ne peut supprimer ne peut devenir pure liberté : « la seule liberté possible est que l'homme social, les producteurs associés règlent ___ leurs échanges avec la nature » (Le Capital, livre III)."
-    answer: rationnellement
+  - id: g-activite-vitale-l1-r39
+    sentence: "Le travail, quelle que soit la société, reste « une nécessité naturelle éternelle, médiation indispensable au ___ qui se produit entre l'homme et la nature, et donc à la vie humaine » (Le Capital, livre I, chap. I)."
+    answer: métabolisme
+    alt: ["metabolisme"]
+  - id: g-activite-vitale-l1-r40
+    sentence: "Ce qu'aucune société ne peut supprimer ne peut devenir pure liberté : « la liberté ne peut consister qu'en ceci que l'être humain socialisé, que les producteurs associés règlent ___ leurs échanges avec la nature » (Le Capital, livre III)."
+    answer: de façon rationnelle
     alt: []
   - id: g-activite-vitale-l1-q41
     sentence: "Dans Le Capital, la liberté se déplace hors du travail nécessaire : « c'est au-delà que commence le développement des forces humaines comme ___ » (livre III)."
@@ -231,14 +230,14 @@ lessons:
     answer: elle-même
     alt: ["elle meme"]
   - id: g-activite-vitale-l1-q42
-    sentence: "Le développement des forces humaines commençant au-delà du travail nécessaire, « la réduction de la ___ de travail est la condition fondamentale de cette libération » (Le Capital, livre III)."
+    sentence: "Le développement des forces humaines commençant au-delà du travail nécessaire, « la condition fondamentale en est la réduction de la ___ de travail » (Le Capital, livre III)."
     answer: journée
     alt: ["journee"]
-  - id: g-activite-vitale-l1-q43
-    sentence: "En 1875 encore, Marx annonce le temps où le travail « ne sera pas seulement un moyen de vivre, mais sera devenu le ___ de la vie », ce que Denis Collin tient pour une réminiscence de 1844."
-    answer: premier besoin
+  - id: g-activite-vitale-l1-r43
+    sentence: "En 1875 encore, Marx annonce le temps où le travail « ne sera pas seulement un moyen de vivre, mais deviendra lui-même le ___ », ce que Denis Collin tient pour une réminiscence de 1844."
+    answer: premier besoin vital
     alt: []
   - id: g-activite-vitale-l1-q44
-    sentence: "Le texte de 1875 où le travail doit devenir « le premier besoin de la vie », en tension avec le royaume de la nécessité du Capital, est la Critique du programme de ___."
+    sentence: "Le texte de 1875 où le travail doit devenir « le premier besoin vital », en tension avec le royaume de la nécessité du Capital, est la Critique du programme de ___."
     answer: Gotha
     alt: []

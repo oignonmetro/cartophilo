@@ -29,12 +29,19 @@ sys.stdout.reconfigure(encoding="utf-8")
 PDF_DIR = r"C:\Users\Arthur\Œuvres"
 CACHE = os.path.join(tempfile.gettempdir(), "textes-marx")
 
-# (motif du nom de fichier, sigle affiché, rang : 0 = Éditions sociales, préférée)
+# (motif du nom de fichier, sigle affiché, rang : 0 = Éditions sociales, préférée ; au 2026-11-06,
+# l'utilisateur a mis dans Œuvres les Éditions sociales de toutes les œuvres de Marx utiles, hors Pléiade)
 EDITIONS = [
     (r"^Manuscrits 1844", "ES, Manuscrits de 1844 (Bottigelli)", 0),
+    (r"^L.?id[ée]ologie allemande", "ES, L'Idéologie allemande", 0),
+    (r"^Le Capital \(Livre 1\)", "ES, Le Capital, livre I", 0),
+    (r"^Manuscrits de 1857", "ES, Grundrisse", 0),
+    (r"^Contribution", "ES, Contribution à la critique de l'économie politique", 0),
+    (r"^Critique Du Programme De Gotha", "ES, Critique du programme de Gotha", 0),
+    (r"^Manifeste du Parti communiste", "ES, Manifeste du Parti communiste", 0),
+    (r"^Écrits philosophiques", "ES, Écrits philosophiques (Sève)", 0),
     (r"^Œuvres I\. Économie", "Pléiade, Œuvres I (Rubel)", 1),
     (r"^Œuvres III\. Philosophie", "Pléiade, Œuvres III (Rubel)", 1),
-    (r"^Écrits philosophiques", "Écrits philosophiques (Sève)", 2),
 ]
 
 
