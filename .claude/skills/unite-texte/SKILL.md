@@ -317,6 +317,25 @@ voisins, place dans l'œuvre) vont là, pas dans les paragraphes — sauf quand
 le commentaire les développe à propos d'une ligne précise du texte : elles
 suivent alors le commentaire (§ 6, « Tout le commentaire »).
 
+**Le plan du texte**, dans la première leçon d'introduction : deux ou trois
+phrases qui disent la progression, chaque groupe de lignes en gras avec son verbe
+(« **Les lignes 412b17-25 refont l'expérience sur l'œil** »), puis un tableau de
+structure `Mouvement | Lieu | Ce qui s'y joue`, sur le modèle de `traite2.yaml`
+(`cours-traite`, « Première leçon : le plan »). Une ligne par mouvement
+argumentatif ; un seul repère dans la colonne Lieu.
+
+- **Mouvement** nomme ce que fait l'auteur et sur quoi : « écarter les mauvaises
+  lectures de « potentiellement », puis distinguer la capacité de l'exercice ».
+  Jamais un verbe seul ni une suite de verbes sans objet (« préciser la
+  puissance, répartir, conclure », « poser », « montrer »), ni l'exemple employé
+  à la place du rôle (« la hache », « l'œil ») : c'est le tableau que
+  l'utilisateur a refusé sur `aristote-ame-vue-oeil`, parce qu'il ne disait pas
+  le rôle de chaque partie.
+- **Ce qui s'y joue** dit, en une phrase complète, la thèse établie et sa raison
+  (« la puissance de vivre suppose l'âme, ce qui exclut le cadavre et la
+  semence ») : on doit pouvoir suivre l'argument du texte en lisant cette seule
+  colonne.
+
 **Leçons de prolongement** : une ou deux, leur pendant à la fin de l'unité,
 après les paragraphes. Elles reçoivent ce que le commentaire développe *après*
 le texte sans le commenter ligne à ligne (un exposé de fond, une notion
@@ -449,7 +468,8 @@ chaque marque a une fonction. Les retouches de l'utilisateur sur
 **Paragraphe long, découpé en extraits** (une fiche linéaire qui explique
 extrait par extrait) : une seule leçon pour le paragraphe, dont le rappel
 s'ouvre sur une vue d'ensemble du mouvement (affichée avec le paragraphe
-entier, un tableau des extraits s'y prête bien), puis une section par
+entier : un tableau `Moment | Fragment | Ce qui s'y joue`, aux mêmes exigences
+que le plan du texte, § 3), puis une section par
 extrait, ouverte par `=== k Intitulé`, où k est le premier fragment de
 l'extrait : elle s'affiche juste avant ses cartes, avec le texte qu'elle
 couvre. Fragments numérotés à la suite dans le paragraphe (un extrait long en

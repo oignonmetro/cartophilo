@@ -29,10 +29,12 @@ lessons:
 
     La thèse réunit deux affirmations. L'une est **ontologique** : l'âme est la {violet}forme{/violet} du corps, {red}non une chose logée en lui{/red}, {red}ni sa figure{/red}. L'autre porte sur le **mode** de cette forme : elle est {green}__une capacité__{/green}, {pink}non une activité{/pink}, comme la vue et non comme l'acte de voir. La seconde précise la première : __si l'âme était l'exercice, celui qui dort n'aurait plus d'âme__. D'où le corollaire : {coral}l'animal est le composé{/coral}.
 
-    | Lignes | Ce qu'elles font | Le cas |
-    | 412b10-17 | poser : l'âme est la forme, propre à un corps naturel | la hache |
-    | 412b17-25 | montrer sur une partie, puis transférer au tout | l'œil |
-    | 412b25-413a3 | préciser la puissance, répartir, conclure | la semence, l'éveil, la pupille |
+    Le texte va de la formule abstraite ({amber}__« que veut dire la définition ? »__{/amber}) à sa conséquence ({green}__l'animal est l'âme et le corps ensemble__{/green}) par deux comparaisons, dont chacune corrige la précédente. **Les lignes** {teal}**412b10-17**{/teal} **font voir** {violet}**l'âme comme forme**{/violet} sur une hache, puis retirent la fiction. **Les lignes** {teal}**412b17-25**{/teal} **refont l'expérience sur** {violet}**l'œil**{/violet} et reportent le résultat sur le corps entier. **Les lignes** {teal}**412b25-413a3**{/teal} **lèvent le malentendu sur** {violet}**« potentiellement »**{/violet}, répartissent tous les termes et concluent sur le composé.
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | faire voir ce qu'est une forme sur un outil, puis réserver la thèse au corps naturel | 412b10-17 | l'âme est ce qui fait qu'un corps est ce qu'il est, comme la hache est ce qu'elle peut faire : ôtée, il ne reste qu'un nom ; mais seul un corps qui a en lui-même son principe de mouvement a une âme |
+    | vérifier la thèse sur un organe naturel, puis l'étendre au vivant entier | 412b17-25 | la vue est à l'œil ce que l'âme est au corps : sans elle, il n'y a plus d'œil que de nom, et le rapport de la vue à l'œil est celui de la sensation au corps sensible |
+    | écarter les mauvaises lectures de « potentiellement », puis distinguer la capacité de l'exercice | 412b25-413a3 | la puissance de vivre suppose l'âme, ce qui exclut le cadavre et la semence ; l'âme est comme la vue, l'éveil comme l'acte de voir, le corps ce qui est en puissance : ensemble, ils forment l'animal |
 
     **Contre qui ?** Aristote ne nomme personne ici, mais ses cas visent deux adversaires qu'il nomme ailleurs. {sky}**Démocrite**{/sky} réduit l'être humain à {red}sa figure et sa couleur{/red} (*Parties des animaux*, I, 1) : l'œil en pierre a la figure de l'œil. Les {sky}**pythagoriciens**{/sky} racontent que {teal}« {/teal}{red}n'importe quelle âme{/red} s'insinue en {red}n'importe quel corps{/red}{teal} »{/teal} (*De l'âme*, I, 3, 407b22-23) : or l'âme est celle {green}__« de telle sorte de corps »__{/green}.
 
@@ -41,10 +43,6 @@ lessons:
   - table: ce-que-le-texte-dit-de-l-ame-ce-qui-en-suit-pour-la-vie
     exercises:
     - {kind: bank, column: Ce qui en suit pour la vie}
-  - table: lignes-ce-qu-elles-font-le-cas
-    exercises:
-    - {kind: order, column: Lignes}
-    - {kind: bank, column: Le cas}
   passage:
     label: "Introduction"
   points:
@@ -170,10 +168,10 @@ lessons:
 
     **Pour la vie, le paragraphe établit un statut :** {green}__vivre est ce qu'est ce corps__{/green}, et {red}non quelque chose qu'il aurait en plus{/red}. Il en fixe aussi la condition : {coral}seul vit un corps qui a en lui-même son principe{/coral}.
 
-    | Fragment | Ce qu'il fait |
-    | 1 | redire la définition : ce qui fait que ce corps est ce qu'il est |
-    | 2 | la faire voir : si la hache était un corps naturel |
-    | 3 | la limiter : un principe de mouvement en lui-même |
+    | Moment | Fragment | Ce qui s'y joue |
+    | redire la définition en termes de substance | 1 | l'âme n'est pas une autre chose que le corps : elle est ce qui fait que ce corps-ci est ce qu'il est |
+    | imaginer une hache vivante pour faire voir ce qu'est une forme | 2 | ce qui fait la hache n'est pas sa figure, mais ce qu'elle peut faire : ôté, il ne reste qu'un nom |
+    | retirer la fiction et limiter la thèse | 3 | l'âme n'est forme que d'un corps naturel et organisé, qui a son principe de mouvement en lui-même |
 
     === 1 Ce qui fait vivre est ce qui fait que ce corps est ce qu'il est
 
@@ -204,7 +202,7 @@ lessons:
     label: "412b10-17"
     text: "En termes généraux, voilà donc ce qu'est l'âme : c'est la substance, en effet, qui correspond à la raison. Ce qui veut dire : la détermination qui fait essentiellement de telle sorte de corps ce qu'il est. C'est comme si un quelconque des outils était un corps naturel, par exemple une hache. La détermination qui fait essentielle la hache serait sa substance et son âme s'identifierait à cela. Et si l'on mettait cette détermination à part, il n'y aurait plus de hache, sauf de façon purement nominale. Mais voilà, c'est une hache et ce n'est pas, en réalité, de cette sorte de corps que l'âme représente la détermination essentielle et la raison, mais d'un corps naturel, d'un genre précis, qui possède un principe de mouvement et de stabilité en lui-même."
   tables:
-  - table: fragment-ce-qu-il-fait
+  - table: moment-fragment-ce-qui-s-y-joue
     exercises: []
   points:
   - id: aristote-ame-vue-oeil-p1-1
@@ -288,6 +286,11 @@ lessons:
 
     **Pour la vie, le paragraphe établit deux choses :** {green}__elle se mesure à une capacité, non à une apparence__{/green}, et {coral}la mort est la perte de ce qu'était le corps{/coral}. Il indique aussi, en passant par la sensation, que {amber}vivre ne se dit pas d'une seule façon{/amber}.
 
+    | Moment | Fragment | Ce qui s'y joue |
+    | transposer sur un organe naturel | 1 | la vue est la forme de l'œil, l'œil sa matière : la capacité appartient cette fois à la chose même |
+    | tirer la conséquence de sa perte | 2 | sans la capacité, même la figure intacte, il n'y a plus d'œil que de nom, comme l'œil en pierre |
+    | reporter le résultat sur le tout | 3 | la vue est à l'œil ce que la sensation est au corps sensible : la thèse vaut pour l'animal entier |
+
     | Le cas | Ce qu'il fait voir | Ce qui lui manque |
     | la hache | la forme est ce que la chose peut faire | un principe en elle-même |
     | l'œil | une capacité naturelle, propre à l'organe | d'être un tout |
@@ -317,6 +320,8 @@ lessons:
     label: "412b17-25"
     text: "On doit voir, au reste, ce qu'on a voulu dire, en prenant le cas des parties du corps. Si l'œil, en effet, était un animal, la vue en serait l'âme, car c'est elle la substance de l'œil qui correspond à sa raison, tandis que l'œil, lui, est matière de la vue. Et, quand cette dernière disparaît, il n'y a plus d'œil, sauf de façon nominale, comme l'œil en pierre ou celui qui est dessiné. On doit donc transférer ce qui est vrai de la partie sur la totalité du corps vivant. Car le rapport de partie à partie est celui de la sensation entière au corps entier doué de sensation, en tant que tel."
   tables:
+  - table: moment-fragment-ce-qui-s-y-joue
+    exercises: []
   - table: le-cas-ce-qu-il-fait-voir-ce-qui-lui-manque
     exercises:
     - {kind: bank, column: Ce qui lui manque}
@@ -398,10 +403,10 @@ lessons:
 
     **Pour la vie, c'est le paragraphe décisif :** {green}__vivre se dit de la capacité et de l'exercice__{/green}, et {coral}ce qui vit n'est ni l'âme ni le corps, mais l'animal{/coral}.
 
-    | Fragment | Ce qu'il fait |
-    | 1 | préciser la puissance : ni le cadavre, ni la semence |
-    | 2 | répartir : l'exercice, la capacité, le corps |
-    | 3 | conclure : l'âme et le corps forment l'animal |
+    | Moment | Fragment | Ce qui s'y joue |
+    | écarter deux mauvaises lectures de « potentiellement » | 1 | la puissance de vivre suppose l'âme : le cadavre l'a perdue, la semence n'est encore que potentiellement ce corps |
+    | répartir tous les termes sur trois plans | 2 | l'éveil est comme couper et voir, l'âme comme la vue et la puissance de l'outil, le corps comme ce qui est en puissance |
+    | conclure sur le composé | 3 | l'œil est la pupille et la vue : de même, l'animal est l'âme et le corps |
 
     === 1 La puissance de vivre : ni le cadavre, ni la semence
 
@@ -444,7 +449,7 @@ lessons:
     label: "412b25-413a3"
     text: "Par ailleurs, ce n'est pas lorsqu'il se trouve dépouillé de son âme que le corps a la puissance de vivre, mais lorsqu'il la possède. Quant à la semence ou au fruit, ils constituent potentiellement le corps de ce genre précis. Donc, si c'est à la manière de l'action de couper ou de voir que l'acte d'être éveillé constitue une réalisation, néanmoins, c'est à la vue ou à la puissance de l'outil que l'âme est comparable, tandis que le corps est la réalité potentielle. Mais, tout comme l'œil comprend la pupille et la vue, dans ce cas-là aussi, c'est l'âme et le corps qui forment l'animal."
   tables:
-  - table: fragment-ce-qu-il-fait
+  - table: moment-fragment-ce-qui-s-y-joue
     exercises: []
   - table: degre-le-savant-ii-5-le-vivant
     exercises:
