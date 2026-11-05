@@ -3,7 +3,7 @@ import { createRoot, type Root } from 'react-dom/client'
 import { INLINE_COLORS, type Tone } from '@/components/session/RuleNote'
 import { splitTermTitle } from '@/content/definitions'
 import { EditableTable } from './EditableTable'
-import type { NoteColor } from '@/content/schema'
+import { COLORS, SWATCH } from './colors'
 import {
   applyLinks,
   blockText,
@@ -1286,21 +1286,6 @@ function TableBlock({
       </div>
     </div>
   )
-}
-
-const COLORS = ['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink', 'plum'] as const
-
-const SWATCH: Record<NoteColor, string> = {
-  teal: 'bg-teal',
-  violet: 'bg-violet',
-  coral: 'bg-coral',
-  amber: 'bg-amber',
-  sky: 'bg-sky',
-  yellow: 'bg-yellow',
-  green: 'bg-green',
-  red: 'bg-red',
-  pink: 'bg-pink',
-  plum: 'bg-plum',
 }
 
 export function RichNotesEditor({

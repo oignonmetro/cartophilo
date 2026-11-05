@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Rich, type Tone } from '@/components/session/RuleNote'
+import { COLORS, SWATCH, cellColor, toggleColor } from './colors'
+import { replaceRange } from './editText'
 import { formattingShortcut } from './formatting'
 import { cleanCell, formatTable, tableSpans } from './tableGrid'
 
@@ -7,7 +9,9 @@ import { cleanCell, formatTable, tableSpans } from './tableGrid'
  * Un tableau du rappel, édité sur place dans son rendu : on touche une case
  * pour la réécrire (son texte brut, avec ses `**` et ses `*`), Entrée passe à
  * la case du dessous, Tab à la suivante ; au survol, des poignées déplacent
- * ou suppriment une colonne ou une ligne, et deux boutons en ajoutent. Les
+ * ou suppriment une colonne ou une ligne, et deux boutons en ajoutent ; la
+ * palette du rappel colore la sélection de la case en cours (toute la case
+ * à défaut de sélection), en `{teal}…{/teal}` comme ailleurs. Les
  * exercices du tableau se règlent toujours dans l'onglet Tableaux (voir
  * `TablesEditor`), qui édite aussi la grille en entier.
  *
@@ -33,6 +37,7 @@ export function EditableTable({
 }) {
   const span = tableSpans(src)[0]
   const [editing, setEditing] = useState<Cell | null>(null)
+  const field = useRef<HTMLTextAreaElement | null>(null)
   if (!span) return <pre className="text-xs">{src}</pre>
   const grid = span.grid
   const width = grid[0]!.length
@@ -75,6 +80,7 @@ export function EditableTable({
           rows={1}
           spellCheck={false}
           ref={(el) => {
+            field.current = el
             if (!el) return
             el.style.height = 'auto'
             // Boîte « border-box » : la hauteur du contenu, plus les bordures.
@@ -126,6 +132,19 @@ export function EditableTable({
 
   // Les poignées gardent le focus de la case en cours d'écriture : elles agissent sans le prendre.
   const keep = (event: React.MouseEvent) => event.preventDefault()
+
+  /** Comme le bouton de couleur du rappel, sur la sélection de la case en cours. */
+  const paint = (color: (typeof COLORS)[number]) => {
+    const el = field.current
+    if (!el) return
+    const change = toggleColor(el.value, el.selectionStart ?? 0, el.selectionEnd ?? 0, color)
+    replaceRange(el, change.start, change.end, change.text)
+    requestAnimationFrame(() => {
+      el.focus()
+      el.setSelectionRange(change.selectStart, change.selectEnd)
+    })
+  }
+  const current = editing ? cellColor(grid[editing.row]?.[editing.column] ?? '') : null
 
   return (
     <div className="group/table flex flex-col gap-1.5">
@@ -239,6 +258,22 @@ export function EditableTable({
           </tbody>
         </table>
       </div>
+      {editing && (
+        <div className="flex flex-wrap items-center gap-1.5" onMouseDown={keep}>
+          <span className="text-[0.7rem] font-bold text-ink-faint">Couleur (la sélection, ou toute la case) :</span>
+          {COLORS.map((color) => (
+            <button
+              key={color}
+              type="button"
+              title={current === color ? `${color} (retirer)` : color}
+              onClick={() => paint(color)}
+              className={`h-5 w-5 shrink-0 rounded-full border-2 border-paper shadow ${SWATCH[color]} ${
+                current === color ? 'ring-2 ring-ink ring-offset-2 ring-offset-paper' : ''
+              }`}
+            />
+          ))}
+        </div>
+      )}
       <div className="flex gap-1.5 opacity-0 transition-opacity group-hover/table:opacity-100 focus-within:opacity-100" onMouseDown={keep}>
         <button
           type="button"
