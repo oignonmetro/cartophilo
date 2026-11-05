@@ -32,7 +32,7 @@ lessons:
     Le texte va de la formule abstraite ({amber}__« que veut dire la définition ? »__{/amber}) à sa conséquence ({green}__l'animal est l'âme et le corps ensemble__{/green}) par deux comparaisons, dont chacune corrige la précédente. **Les lignes** {teal}**412b10-17**{/teal} **font voir** {violet}**l'âme comme forme**{/violet} sur une hache, puis retirent la fiction. **Les lignes** {teal}**412b17-25**{/teal} **refont l'expérience sur** {violet}**l'œil**{/violet} et reportent le résultat sur le corps entier. **Les lignes** {teal}**412b25-413a3**{/teal} **lèvent le malentendu sur** {violet}**« potentiellement »**{/violet}, répartissent tous les termes et concluent sur le composé.
 
     | Mouvement | Lieu | Ce qui s'y joue |
-    | faire voir ce qu'est une forme sur un outil, puis réserver la thèse au corps naturel | 412b10-17 | l'âme est ce qui fait qu'un corps est ce qu'il est, comme la hache est ce qu'elle peut faire : ôtée, il ne reste qu'un nom ; mais seul un corps qui a en lui-même son principe de mouvement a une âme |
+    | faire voir ce qu'est une forme sur un outil, puis réserver la thèse au corps naturel | 412b10-17 | l'âme est ce qui fait qu'un corps est ce qu'il est, comme la hache est ce qu'elle peut faire (sans sa fonctionnalité elle n'est plus une hache) ; mais seul un corps qui a en lui-même son principe de mouvement a une âme |
     | vérifier la thèse sur un organe naturel, puis l'étendre au vivant entier | 412b17-25 | la vue est à l'œil ce que l'âme est au corps : sans elle, il n'y a plus d'œil que de nom, et le rapport de la vue à l'œil est celui de la sensation au corps sensible |
     | écarter les mauvaises lectures de « potentiellement », puis distinguer la capacité de l'exercice | 412b25-413a3 | la puissance de vivre suppose l'âme, ce qui exclut le cadavre et la semence ; l'âme est comme la vue, l'éveil comme l'acte de voir, le corps ce qui est en puissance : ensemble, ils forment l'animal |
 
@@ -81,6 +81,38 @@ lessons:
   - id: aristote-ame-vue-oeil-i1-7
     sentence: "Selon *Les Parties des animaux*, I, 1, ___ croit que l'on sait ce qu'est l'être humain par sa configuration et sa couleur."
     answer: "Démocrite"
+    alt: []
+- id: aristote-ame-vue-oeil-i3
+  title: "Définir l'âme, c'est dire ce que vivre veut dire"
+  notes: |-
+    **En expliquant la définition de l'âme, le texte répond à une autre question :** {amber}**« qu'est-ce que vivre ? »**{/amber} Le mot n'y revient qu'en passant ({teal}« corps vivant »{/teal}, {teal}« puissance de vivre »{/teal}), parce que le texte parle de {amber}ce qui fait vivre{/amber}. Mais l'{violet}âme{/violet} n'a pas d'autre définition que par la vie : {teal}« l'animé se distingue de l'inanimé par le fait qu'il est en vie »{/teal} (II, 2, 413a20-22), et {teal}« l'être, pour les vivants, c'est la vie. Et ce qui en est responsable, leur principe, c'est l'âme »{/teal} (II, 4, 415b13-14). {coral}__Chaque thèse sur l'âme est donc une thèse sur la vie__{/coral} : il suffit de demander ce qu'elle entraîne pour ce qui vit.
+
+    | Ce que le texte dit de l'âme | Ce qui en suit pour la vie |
+    | elle est la substance selon la raison | la vie est l'être du vivant, non un attribut |
+    | elle est la forme de certains corps | la vie n'est pas une propriété de toute matière |
+    | sans elle, le corps ne peut pas être vivant | la vie réside essentiellement dans une fonction |
+    | elle est comme la vue, non comme la vision | vivre, c'est pouvoir exercer des fonctions vitales |
+    | elle forme le vivant avec le corps | ce qui vit, c'est le composé |
+
+    ! L'âme n'est pas ici la conscience, ni l'âme humaine : elle appartient à tout ce qui vit, plantes comprises. C'est pourquoi on peut lire ce qu'on en dit comme une thèse sur la vie.
+  tables:
+  - table: ce-que-le-texte-dit-de-l-ame-ce-qui-en-suit-pour-la-vie
+    exercises:
+    - {kind: bank, column: Ce qui en suit pour la vie}
+  passage:
+    label: "Introduction"
+  points:
+  - id: aristote-ame-vue-oeil-i1-8
+    sentence: "*De l'âme*, II, 2 : « l'animé se distingue de l'inanimé par le fait qu'il est ___ » : c'est par la vie que se définit l'âme."
+    answer: "en vie"
+    alt: []
+  - id: aristote-ame-vue-oeil-i1-9
+    sentence: "*De l'âme*, II, 4 : « l'être, pour les vivants, c'est la vie. Et ce qui en est responsable, ___, c'est l'âme. »"
+    answer: "leur principe"
+    alt: []
+  - id: aristote-ame-vue-oeil-i3-1
+    sentence: "*De l'âme*, II, 4, sur la faculté nutritive : « la première faculté de l'âme et la plus commune, celle en vertu de laquelle ___ » : l'âme n'est pas la conscience, elle est ce par quoi tout vivant vit."
+    answer: "la vie appartient à tous"
     alt: []
 - id: aristote-ame-vue-oeil-i2
   title: "Les mots du texte : la vie, l'âme, vivre"
