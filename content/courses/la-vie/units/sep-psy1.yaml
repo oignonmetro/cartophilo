@@ -44,43 +44,44 @@ lessons:
   tables:
   - table: periode-dates-lieu
     exercises:
-    - {kind: bank, column: Dates}
-    - {kind: cell, column: Période}
+    - {kind: bank, column: Période}
+    - {kind: bank, column: Lieu}
+    - {kind: cell, column: Dates, row: "les voyages, la recherche biologique"}
   points:
   - id: sep-psy1-l1-p1
-    sentence: "Aristote, né en 384 en Macédoine, passe vingt ans à l'Académie de Platon (367-347), puis dirige sa propre école à Athènes, le ___ (334-323)."
+    sentence: "Aristote, né en 384 en Macédoine, passe vingt ans à l'Académie de Platon (367-347), puis **dirige sa propre école à Athènes**, le ___ (334-323)."
     answer: "Lycée"
     alt: []
   - id: sep-psy1-l1-p2
-    sentence: "Hors d'Athènes, à Assos et à Lesbos, Aristote se consacre surtout à la recherche ___, ce qui marque le *De l'âme*."
+    sentence: "__Hors d'Athènes, à Assos et à Lesbos__, Aristote se consacre surtout à la recherche ___, **ce qui marque le *De l'âme***."
     answer: "biologique"
     alt: []
   - id: sep-psy1-l1-p3
-    sentence: "Les principaux écrits psychologiques d'Aristote datent probablement de son second séjour à Athènes, donc de sa période la plus ___."
+    sentence: "__Les principaux écrits psychologiques d'Aristote datent probablement de son second séjour à Athènes__, donc de sa période la plus ___."
     answer: "mûre"
     alt: ["mature"]
   - id: sep-psy1-l1-p4
-    sentence: "En dehors du *De l'âme*, Aristote étudie les phénomènes psychologiques dans le recueil lâche de petits traités appelé les *___*, d'orientation empirique."
+    sentence: "__En dehors du *De l'âme*, Aristote étudie les phénomènes psychologiques__ dans le recueil lâche de petits traités appelé les *___*, **d'orientation empirique**."
     answer: "Parva naturalia"
     alt: ["Petits traités d'histoire naturelle"]
   - id: sep-psy1-l1-p5
-    sentence: "Ouverture des *Parva naturalia* : les propriétés les plus importantes des animaux sont « celles qui sont communes à la fois à l'âme et au ___, comme la sensation, la mémoire, l'impulsion, l'appétit et le désir en général, et en outre le plaisir et la peine »."
+    sentence: "Ouverture des *Parva naturalia* : **les propriétés les plus importantes des animaux** sont « celles qui sont communes à la fois à l'âme et au ___, comme la sensation, la mémoire, l'impulsion, l'appétit et le désir en général, et en outre le plaisir et la peine »."
     answer: "corps"
     alt: []
   - id: sep-psy1-l1-p6
-    sentence: "L'annonce des phénomènes communs à l'âme et au corps, qui oppose les *Parva naturalia* au *De l'âme*, se lit dans le *De la sensation*, chapitre ___."
+    sentence: "L'annonce des phénomènes communs à l'âme et au corps, **qui oppose les *Parva naturalia* au *De l'âme***, se lit dans le *De la sensation*, chapitre ___."
     answer: "1"
     alt: ["un", "premier"]
   - id: sep-psy1-l1-p7
-    sentence: "*De l'âme*, I, 1, sur les affections de l'âme : « est-ce que toutes appartiennent également en commun à l'être animé ou bien en est-il encore quelqu'une qui soit ___ à l'âme elle-même ? »"
+    sentence: "*De l'âme*, I, 1, __sur les affections de l'âme__ : « est-ce que toutes appartiennent également en commun à l'être animé ou bien en est-il encore quelqu'une qui soit ___ à l'âme elle-même ? »"
     answer: "propre"
     alt: []
   - id: sep-psy1-l1-p8
-    sentence: "*De l'âme*, I, 1, sur la question de savoir si toutes les affections sont communes à l'âme et au corps : « Il est, en effet, nécessaire, mais ___, d'en avoir une idée »."
+    sentence: "*De l'âme*, I, 1, __sur la question de savoir si toutes les affections sont communes à l'âme et au corps__ : « Il est, en effet, nécessaire, mais ___, d'en avoir une idée »."
     answer: "difficile"
     alt: []
   - id: sep-psy1-l1-p9
-    sentence: "Les *Parva naturalia* étudient les phénomènes communs à l'âme et au corps ; le *De l'âme* demande si tous les états psychologiques sont aussi des états ___ du corps, et procède ainsi à un plus haut niveau d'abstraction."
+    sentence: "Les *Parva naturalia* étudient les phénomènes communs à l'âme et au corps ; __le *De l'âme* demande si tous les états psychologiques sont aussi des états__ ___ du corps, et procède ainsi **à un plus haut niveau d'abstraction**."
     answer: "matériels"
     alt: ["physiques"]
 - id: sep-psy1-l2
@@ -95,23 +96,23 @@ lessons:
     ! « Avoir une âme » ne veut pas dire ici avoir une vie intérieure : la plante a une âme, sans éprouver quoi que ce soit.
   points:
   - id: sep-psy1-l2-p1
-    sentence: "La psychologie d'Aristote est la science de l'âme, en grec la ___, en latin *anima*."
+    sentence: "**La psychologie d'Aristote** est la science de l'âme, en grec la ___, en latin *anima*."
     answer: "psuchê"
     alt: ["psuche", "psuchè", "psyché", "psyche", "psukhê"]
   - id: sep-psy1-l2-p2
-    sentence: "Aristote conçoit l'âme comme un principe général de la ___ : sa psychologie étudie donc tous les vivants, et non les seuls êtres humains."
+    sentence: "__Aristote conçoit l'âme comme un principe général de la__ ___ : sa psychologie étudie donc **tous les vivants, et non les seuls êtres humains**."
     answer: "vie"
     alt: []
   - id: sep-psy1-l2-p3
-    sentence: "Parce que l'âme est le principe de la vie, le *De l'âme* doit rendre compte des activités vitales des ___ et des animaux à côté de celles de l'homme."
+    sentence: "__Parce que l'âme est le principe de la vie__, le *De l'âme* doit rendre compte des activités vitales des ___ et des animaux à côté de celles de l'homme."
     answer: "plantes"
     alt: ["végétaux"]
   - id: sep-psy1-l2-p4
-    sentence: "Qu'un chêne soit un être ___ (qui a une *anima*) veut seulement dire, chez Aristote, qu'il est vivant, et n'a rien d'animiste."
+    sentence: "Qu'un chêne soit un être ___ (qui a une *anima*) __veut seulement dire, chez Aristote, qu'il est vivant__, et **n'a rien d'animiste**."
     answer: "animé"
     alt: []
   - id: sep-psy1-l2-p5
-    sentence: "Comme la psychologie contemporaine, l'enquête d'Aristote sur l'âme se heurte à ceci : des questions différentes appellent des ___ différentes, au point qu'on doute qu'elles relèvent d'une même discipline."
+    sentence: "Comme la psychologie contemporaine, __l'enquête d'Aristote sur l'âme se heurte à ceci__ : **des questions différentes** appellent des ___ différentes, au point qu'on doute qu'elles relèvent d'une même discipline."
     answer: "méthodes"
     alt: []
 - id: sep-psy1-l3
@@ -132,71 +133,71 @@ lessons:
     **D'où une perplexité authentique sur la méthode.** Si des sciences différentes emploient des méthodes différentes, et que __l'étude de l'âme se partage sans appartenir à aucune__, on ne sait plus comment procéder (I, 1, 402a16-22). Aristote entreprend donc l'enquête avec modestie : {teal}« {/teal}il est de toute manière {teal}extrêmement malaisé{/teal} d'atteindre une quelconque position convaincante à son propos{teal} »{/teal} (402a10-11). La question n'a pas disparu : à côté d'approches purement naturalistes, {yellow}la philosophie de l'esprit emploie encore des méthodes *a priori*, et la science cognitive mêle les deux{/yellow}.
   points:
   - id: sep-psy1-l3-p1
-    sentence: "Colère, joie, courage, pitié, amour et haine engagent le corps de façon manifeste ; aussi, dit le *De l'âme*, « un ___ est en droit d'avoir ses vues sur l'âme »."
+    sentence: "__Colère, joie, courage, pitié, amour et haine engagent le corps de façon manifeste__ ; aussi, dit le *De l'âme*, « un ___ est en droit d'avoir ses vues sur l'âme »."
     answer: "naturaliste"
     alt: []
   - id: sep-psy1-l3-p2
-    sentence: "Aristote, sur les passions comme la colère ou la pitié : « les passions expriment ce qui est inhérent à une ___ »."
+    sentence: "Aristote, sur les passions comme la colère ou la pitié : « **les passions expriment ce qui est inhérent à une** ___ »."
     answer: "matière"
     alt: []
   - id: sep-psy1-l3-p3
-    sentence: "La colère, pour le naturaliste du *De l'âme* : « un ___ du sang qui entoure le cœur » ; pour le dialecticien : « un appétit de vengeance »."
+    sentence: "La colère, **pour le naturaliste du *De l'âme*** : « un ___ du sang qui entoure le cœur » ; pour le dialecticien : « un appétit de vengeance »."
     answer: "bouillonnement"
     alt: []
   - id: sep-psy1-l3-p4
-    sentence: "La colère, pour le naturaliste du *De l'âme* : « un bouillonnement du sang qui entoure le cœur » ; pour le dialecticien : « un appétit de ___ »."
+    sentence: "La colère, pour le naturaliste du *De l'âme* : « un bouillonnement du sang qui entoure le cœur » ; **pour le dialecticien** : « un appétit de ___ »."
     answer: "vengeance"
     alt: []
   - id: sep-psy1-l3-p5
-    sentence: "Définir la colère comme un bouillonnement du sang en dit la matière, comme un appétit de vengeance en dit la ___ : le naturaliste doit se placer aux deux points de vue."
+    sentence: "**Définir la colère comme un bouillonnement du sang en dit la matière**, comme un appétit de vengeance en dit la ___ : __le naturaliste doit se placer aux deux points de vue__."
     answer: "forme"
     alt: []
   - id: sep-psy1-l3-p6
-    sentence: "*Métaphysique*, E, 1 : « il appartient au ___ d'étudier aussi une certaine âme, pour autant qu'elle n'est pas sans matière »."
+    sentence: "*Métaphysique*, E, 1 : « il appartient au ___ **d'étudier aussi une certaine âme**, pour autant qu'elle n'est pas sans matière »."
     answer: "physicien"
     alt: []
   - id: sep-psy1-l3-p7
-    sentence: "*Métaphysique*, E, 1 : « il appartient au physicien d'étudier aussi une certaine âme, pour autant qu'elle n'est pas sans ___ »."
+    sentence: "*Métaphysique*, E, 1 : « il appartient au physicien d'étudier aussi une certaine âme, **pour autant qu'elle n'est pas sans** ___ »."
     answer: "matière"
     alt: []
   - id: sep-psy1-l3-p8
-    sentence: "Le partage de l'âme entre le physicien et les autres sciences repose sur l'intelligence, en grec le ___, qui n'est peut-être pas engagée dans le corps comme les autres états."
+    sentence: "__Le partage de l'âme entre le physicien et les autres sciences repose sur l'intelligence__, en grec le ___, qui n'est peut-être **pas engagée dans le corps comme les autres états**."
     answer: "nous"
     alt: []
   - id: sep-psy1-l3-p9
-    sentence: "*Parties des animaux*, I, 1 : si la science naturelle devait étudier toute l'âme, elle inclurait l'intelligence, donc tous les intelligibles, et absorberait la totalité de la ___."
+    sentence: "*Parties des animaux*, I, 1 : __si la science naturelle devait étudier toute l'âme__, elle inclurait l'intelligence, donc tous les intelligibles, et absorberait la totalité de la ___."
     answer: "philosophie"
     alt: []
   - id: sep-psy1-l3-p10
-    sentence: "L'intelligence ne produit pas de mouvement corporel direct et n'est pas liée à un organe comme les sens : elle n'est pas « ___ » au sens physique."
+    sentence: "__L'intelligence ne produit pas de mouvement corporel direct et n'est pas liée à un organe comme les sens__ : elle n'est pas « ___ » au sens physique."
     answer: "nature"
     alt: []
   - id: sep-psy1-l3-p11
-    sentence: "L'argument selon lequel toute âme ne relève pas de la science naturelle, sinon il n'y aurait pas d'autre philosophie qu'elle, se trouve dans les *___*, I, 1."
+    sentence: "L'argument selon lequel **toute âme ne relève pas de la science naturelle**, sinon il n'y aurait pas d'autre philosophie qu'elle, se trouve dans les *___*, I, 1."
     answer: "Parties des animaux"
     alt: []
   - id: sep-psy1-l3-p12
-    sentence: "Une faculté de connaissance et son objet sont indissociables : si la science naturelle étudiait l'intelligence, elle devrait étudier tous les ___."
+    sentence: "__Une faculté de connaissance et son objet sont indissociables__ : si la science naturelle étudiait l'intelligence, elle devrait étudier tous les ___."
     answer: "intelligibles"
     alt: []
   - id: sep-psy1-l3-p13
-    sentence: "Modestie d'Aristote au seuil du *De l'âme* : « il est de toute manière extrêmement ___ d'atteindre une quelconque position convaincante à son propos »."
+    sentence: "__Modestie d'Aristote au seuil du *De l'âme*__ : « il est de toute manière extrêmement ___ d'atteindre une quelconque position convaincante à son propos »."
     answer: "malaisé"
     alt: []
   - id: sep-psy1-l3-p14
-    sentence: "Si l'étude de l'âme se partage sans appartenir à aucune science, on ne sait plus quelle ___ employer : d'où la perplexité qu'Aristote expose dans *De l'âme*, I, 1."
+    sentence: "__Si l'étude de l'âme se partage sans appartenir à aucune science__, on ne sait plus quelle ___ employer : d'où la perplexité qu'Aristote expose dans *De l'âme*, I, 1."
     answer: "méthode"
     alt: []
   - id: sep-psy1-l3-p15
-    sentence: "Une faculté et son objet sont indissociables : étudier la sensation, c'est nécessairement étudier les objets ___ (les couleurs, les sons, les odeurs)."
+    sentence: "__Une faculté et son objet sont indissociables__ : étudier la sensation, c'est nécessairement étudier les objets ___ (les couleurs, les sons, les odeurs)."
     answer: "sensibles"
     alt: []
   - id: sep-psy1-l3-p16
-    sentence: "L'intelligence peut tout concevoir : objets matériels, concepts mathématiques, principes métaphysiques. Le domaine des intelligibles englobe donc la ___ de ce qui existe."
+    sentence: "__L'intelligence peut tout concevoir__ : objets matériels, concepts mathématiques, principes métaphysiques. Le domaine des intelligibles englobe donc la ___ de ce qui existe."
     answer: "totalité"
     alt: []
   - id: sep-psy1-l3-p17
-    sentence: "L'étude de l'intelligence, qui n'est pas « nature » au sens physique, relève non de la biologie mais de la philosophie ___."
+    sentence: "__L'étude de l'intelligence, qui n'est pas « nature » au sens physique__, relève non de la biologie mais de la philosophie ___."
     answer: "première"
     alt: []
 - id: sep-psy1-l4
@@ -222,59 +223,59 @@ lessons:
     - {kind: cell, column: Cause}
   points:
   - id: sep-psy1-l4-p1
-    sentence: "Le mot d'hylémorphisme est composé des termes grecs pour la forme (*morphê*) et pour la matière (*___*)."
+    sentence: "Le mot d'hylémorphisme est composé des termes grecs pour **la forme** (*morphê*) et pour la matière (*___*)."
     answer: "hulê"
     alt: ["hule", "hylé", "hyle"]
   - id: sep-psy1-l4-p2
-    sentence: "Le mot d'hylémorphisme est composé des termes grecs pour la matière (*hulê*) et pour la forme ou figure (*___*)."
+    sentence: "Le mot d'hylémorphisme est composé des termes grecs pour **la matière** (*hulê*) et pour la forme ou figure (*___*)."
     answer: "morphê"
     alt: ["morphe", "morphè"]
   - id: sep-psy1-l4-p3
-    sentence: "La cause ___, chez Aristote, c'est ce dont la chose est faite : le bronze de la statue."
+    sentence: "La cause ___, chez Aristote, __c'est ce dont la chose est faite__ : le bronze de la statue."
     answer: "matérielle"
     alt: []
   - id: sep-psy1-l4-p4
-    sentence: "La cause ___, chez Aristote, c'est la structure que réalise la matière, et qui en fait quelque chose de déterminé : la figure d'Hermès pour cette quantité de bronze."
+    sentence: "La cause ___, chez Aristote, __c'est la structure que réalise la matière__, et qui en fait quelque chose de déterminé : la figure d'Hermès pour cette quantité de bronze."
     answer: "formelle"
     alt: []
   - id: sep-psy1-l4-p5
-    sentence: "La cause ___, chez Aristote, c'est l'agent responsable de ce qu'une matière reçoive sa forme : le sculpteur."
+    sentence: "La cause ___, chez Aristote, __c'est l'agent responsable de ce qu'une matière reçoive sa forme__ : le sculpteur."
     answer: "efficiente"
     alt: ["motrice"]
   - id: sep-psy1-l4-p6
-    sentence: "La cause ___, chez Aristote, c'est le but du composé de forme et de matière : la statue est faite pour honorer Hermès."
+    sentence: "La cause ___, chez Aristote, __c'est le but du composé de forme et de matière__ : la statue est faite pour honorer Hermès."
     answer: "finale"
     alt: []
   - id: sep-psy1-l4-p7
-    sentence: "*Physique*, II, 3, sur la cause matérielle : « la réalité inhérente à une chose dont cette chose est faite, par exemple l'___ de la statue »."
+    sentence: "*Physique*, II, 3, **sur la cause matérielle** : « la réalité inhérente à une chose dont cette chose est faite, par exemple l'___ de la statue »."
     answer: "airain"
     alt: []
   - id: sep-psy1-l4-p8
-    sentence: "*Physique*, II, 3, sur la cause efficiente : « le principe premier d'où part le ___ ou la mise en repos »."
+    sentence: "*Physique*, II, 3, **sur la cause efficiente** : « le principe premier d'où part le ___ ou la mise en repos »."
     answer: "changement"
     alt: []
   - id: sep-psy1-l4-p9
-    sentence: "*Physique*, II, 3, sur la cause finale : « du but, c'est-à-dire du ce en vue de ___ »."
+    sentence: "*Physique*, II, 3, **sur la cause finale** : « du but, c'est-à-dire du ce en vue de ___ »."
     answer: "quoi"
     alt: []
   - id: sep-psy1-l4-p10
-    sentence: "Exemple de la *Physique*, II, 3 : pourquoi se promène-t-il ? Pour être en bonne ___, qui est la cause finale de sa promenade."
+    sentence: "Exemple de la *Physique*, II, 3 : __pourquoi se promène-t-il ?__ Pour être en bonne ___, qui est la cause finale de sa promenade."
     answer: "santé"
     alt: []
   - id: sep-psy1-l4-p11
-    sentence: "Exposé des quatre causes d'Aristote, avec l'airain de la statue : *Physique*, livre ___, chapitre 3."
+    sentence: "**Exposé des quatre causes d'Aristote**, avec l'airain de la statue : *Physique*, livre ___, chapitre 3."
     answer: "II"
     alt: ["2"]
   - id: sep-psy1-l4-p12
-    sentence: "Pour Aristote, l'appel aux quatre causes, là où elles s'appliquent, est à la fois ___ et suffisant pour une explication complète."
+    sentence: "Pour Aristote, __l'appel aux quatre causes, là où elles s'appliquent, est à la fois__ ___ et suffisant pour une explication complète."
     answer: "nécessaire"
     alt: []
   - id: sep-psy1-l4-p13
-    sentence: "Toutes les choses explicables n'ont pas les quatre causes : les figures géométriques n'ont pas de cause ___."
+    sentence: "__Toutes les choses explicables n'ont pas les quatre causes__ : **les figures géométriques** n'ont pas de cause ___."
     answer: "efficiente"
     alt: ["motrice"]
   - id: sep-psy1-l4-p14
-    sentence: "Un singe a pour matière son corps, pour forme son ___, pour cause efficiente son parent, pour cause finale sa fonction."
+    sentence: "Un singe a pour matière son corps, **pour forme son** ___, pour cause efficiente son parent, pour cause finale sa fonction."
     answer: "âme"
     alt: []
 - id: sep-psy1-l5
@@ -301,42 +302,42 @@ lessons:
     - {kind: cell, column: En psychologie}
   points:
   - id: sep-psy1-l5-p1
-    sentence: "Pour Aristote, tout changement exige quelque chose de complexe : un sujet qui ___ (le bronze) et quelque chose qu'il acquiert (la forme)."
+    sentence: "Pour Aristote, __tout changement exige quelque chose de complexe__ : un sujet qui ___ (le bronze) et quelque chose qu'il acquiert (la forme)."
     answer: "persiste"
     alt: ["demeure"]
   - id: sep-psy1-l5-p2
-    sentence: "Sans sujet qui persiste et forme acquise, il n'y aurait pas de ___ ; or il y en a : forme et matière sont donc des traits réels des composés."
+    sentence: "__Sans sujet qui persiste et forme acquise, il n'y aurait pas de__ ___ ; or il y en a : **forme et matière sont donc des traits réels des composés**."
     answer: "génération"
     alt: []
   - id: sep-psy1-l5-p3
-    sentence: "*De l'âme*, II, 1 : « la matière est puissance, alors que la forme est ___ »."
+    sentence: "*De l'âme*, II, 1 : « **la matière est puissance**, alors que la forme est ___ »."
     answer: "réalisation"
     alt: ["entéléchie", "acte"]
   - id: sep-psy1-l5-p4
-    sentence: "*De l'âme*, II, 1 : « la matière est ___, alors que la forme est réalisation »."
+    sentence: "*De l'âme*, II, 1 : « la matière est ___, **alors que la forme est réalisation** »."
     answer: "puissance"
     alt: []
   - id: sep-psy1-l5-p5
-    sentence: "Le mot grec que Bodéüs traduit par « réalisation », et d'autres par acte ou actualité, est *___*."
+    sentence: "Le mot grec que Bodéüs traduit par **« réalisation »**, et d'autres par acte ou actualité, est *___*."
     answer: "entelecheia"
     alt: ["entéléchie", "entelekheia"]
   - id: sep-psy1-l5-p6
-    sentence: "Quand on peint une statue, elle acquiert une forme ___ : elle peut la perdre et demeurer."
+    sentence: "__Quand on peint une statue, elle acquiert une forme__ ___ : **elle peut la perdre et demeurer**."
     answer: "accidentelle"
     alt: []
   - id: sep-psy1-l5-p7
-    sentence: "Une statue fondue et refaite en douze douzaines de coupe-papier perd sa forme ___ et cesse d'exister."
+    sentence: "Une statue fondue et refaite en douze douzaines de coupe-papier __perd sa forme__ ___ et **cesse d'exister**."
     answer: "essentielle"
     alt: []
   - id: sep-psy1-l5-p8
-    sentence: "L'âme est une forme essentielle ; percevoir, c'est acquérir des formes ___."
+    sentence: "**L'âme est une forme essentielle** ; __percevoir, c'est acquérir des formes__ ___."
     answer: "accidentelles"
     alt: []
   - id: sep-psy1-l5-p9
-    sentence: "Le bronze peut exister en bloc indéterminé, en puissance la statue d'un héros ; le ___ n'a pas d'analogue de cet état, n'étant pas une provision de matériau qui attendrait son âme."
+    sentence: "Le bronze peut exister en bloc indéterminé, en puissance la statue d'un héros ; le ___ n'a pas d'analogue de cet état, __n'étant pas une provision de matériau qui attendrait son âme__."
     answer: "corps"
     alt: []
   - id: sep-psy1-l5-p10
-    sentence: "Le corps humain paraît mal fait pour tenir le rôle de matière, car c'est en étant ___ qu'il devient un corps humain, là où le bronze préexiste à la statue."
+    sentence: "__Le corps humain paraît mal fait pour tenir le rôle de matière__, car c'est en étant ___ qu'il devient un corps humain, **là où le bronze préexiste à la statue**."
     answer: "animé"
     alt: []
