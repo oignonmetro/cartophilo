@@ -88,7 +88,10 @@ compléter à la prochaine relecture, et à déclasser si un point n'y revient p
 
 9. **Assez de cartes, et mises en relief.** Le premier jet du Manuel n'en
    donnait qu'une pour 300 caractères de rappel, sur des termes grecs pris au
-   hasard, en laissant de côté les thèses. Interroger ce que le rappel met en
+   hasard, en laissant de côté les thèses. **La première carte d'une leçon porte
+   son idée directrice** (la phrase d'ouverture en gras, le coral du premier
+   paragraphe), et chaque paragraphe ouvert sur une thèse a la sienne : c'est
+   ce qu'il faut retenir en premier. Interroger ensuite ce que le rappel met en
    relief, sans redondance ni répétition entre leçons, et mettre le relief dans
    la carte elle-même : voir « Le relief dans la carte » et « Ce qu'on
    interroge » dans `content/philosophie.md` (retouches d'`arvie1`, le

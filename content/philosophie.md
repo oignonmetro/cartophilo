@@ -122,6 +122,19 @@ sur `arvie1`, le 2026-11-06) :
 
 ## Ce qu'on interroge
 
+**D'abord l'idée directrice de la leçon.** La thèse que la leçon défend, ou
+l'idée qui la commande (la phrase d'ouverture en gras, ce que le rappel met
+en coral dans son premier paragraphe), est ce qu'il faut retenir en premier :
+elle a toujours sa carte, la première de la leçon, et souvent deux (la thèse,
+puis sa raison). Une leçon dont toutes les cartes portent sur ses exemples, ses
+noms et ses termes, sans que sa thèse soit jamais demandée, est manquée, même
+dense. Ainsi, pour « L'art n'est pas la nature : Pandore, Dédale, Talos », la
+carte « __La distinction de la nature et de l'art fait écho aux mythes
+grecs__, où **le sommet de l'art** serait d'___ la vie à ses productions »
+passe avant Héphaïstos, Pandore et Talos (retouche de l'utilisateur sur
+`arvie1-l2`, 2026-11-06). De même, chaque paragraphe dont l'ouverture en gras
+énonce une thèse a la sienne.
+
 Un rappel bien mis en relief désigne lui-même ce qui mérite une carte : ses
 termes (violet), les éléments d'une définition (amber), les membres d'une
 opposition (vert et rouge), ce qui est établi (coral), ses citations (teal),
@@ -652,6 +665,8 @@ validation section par section se reporte sur un auto-audit systématique.
      source, ni ne contient de renvoi flou ;
    - aucun point de localisation n'est tourné en question ;
    - aucun point ne porte `options` ni `translation` ;
+   - l'idée directrice de chaque leçon, et la thèse de chaque paragraphe
+     ouvert en gras, ont leur carte, en tête (« Ce qu'on interroge ») ;
    - chaque élément mis en relief du rappel qui compte a sa carte, sans
      redondance ni répétition d'une leçon à l'autre (« Ce qu'on interroge ») ;
    - chaque `sentence` porte son relief : gras sur la notion interrogée,
