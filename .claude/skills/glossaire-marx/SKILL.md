@@ -663,7 +663,11 @@ capital comprime les besoins de l'ouvrier, qui sont un coût ; mais pour ___
 la survaleur, il doit vendre »). Une carte n'a pas sa réponse ailleurs dans
 la phrase (« la vie qui détermine la ___ », réponse *conscience*), ni une
 réponse qu'un mot-outil suffit à trouver (« l'expression de ___ vie »,
-réponse *ta*). `verifie` refuse les deux.
+réponse *ta*). `verifie` refuse la réponse écrite dans la phrase et le
+manque de cartes d'argument ; il ne voit pas la réponse qui se devine par
+le sens (« richesse et ___ de l'économie politique », *misère*) ni la carte
+sans enjeu : c'est au relecteur de les relever (premières relectures,
+2026-11-06 : six à dix cartes de ce genre par entrée).
 
 ## 6. Fichier, identifiants, branchement
 
