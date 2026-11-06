@@ -1,34 +1,435 @@
+# Unité de texte (voir content/textes.md) : Aristote, De l'âme, II, 1,
+# 412a6-22, trad. Bodéüs (Œuvres complètes, Flammarion). Titres et cartes-citation
+# de l'utilisateur ; rappels, introductions, cartes-explication et prolongements
+# écrits sans commentaire suivi, d'après l'édition et le notebook « Aristote :
+# la vie » (Shields, Polansky, Bermúdez). Suite : -premiere (412a22-b9), puis
+# aristote-ame-vue-oeil (412b10-413a3).
+
 id: aristote-la-vie-est-une-realisation
 title: "Aristote : le principe de la vie n'est pas le corps"
 subtitle: "De l'âme, II, 1"
 icon: page
 color: coral
+intro: |-
+  L'ouverture de la définition de l'âme (II, 1, 412a6-22). Aristote part des sens de « substance », pose que les corps vivants sont des substances composées, et en conclut que ce qui les fait vivre ne peut pas être leur corps : c'est leur forme, c'est-à-dire leur réalisation.
 lessons:
-- id: aristote-la-vie-est-une-realisation-l1
+- id: "aristote-la-vie-est-une-realisation-i1"
+  title: "Ce qui fait vivre un corps ne peut pas être ce corps : la thèse et le plan"
+  notes: |-
+    **Le texte répond à la question** {amber}**« qu'est-ce que l'âme ? »**{/amber}**, posée ici pour la première fois en propre :** {violet}**l'âme**{/violet} **est** {coral}**la substance comme forme d'un corps naturel qui a potentiellement la vie**{/coral}**, donc sa réalisation.** Après un livre entier consacré à « la tradition de nos devanciers », Aristote revient {teal}« au point de départ, pour tâcher de définir ce qu'est l'âme et ce que peut être sa formule la plus commune »{/teal} (412a3-6). Il ne cherche pas l'âme directement : il part des {yellow}corps vivants{/yellow}, que tout le monde tient pour des substances, et demande ce qui, en eux, fait qu'ils vivent.
+
+    La thèse réunit deux affirmations. L'une est **négative** : {red}__le corps ne saurait être l'âme__{/red}, parce que le corps est {pink}ce qui a la vie{/pink}, non {green}ce par quoi il l'a{/green}. L'autre est **positive** : l'âme est {green}__la forme__{/green}, et la forme est {violet}réalisation{/violet} (`entelecheia`). La première ne suffit pas à la seconde : écarter le corps ne dit pas encore ce qu'est l'âme. Il faut la division de la substance, posée en tête, pour que l'élimination conclue.
+
+    Le texte va donc des instruments à la conclusion. **Les lignes** {teal}**412a6-10**{/teal} **posent** {violet}**les sens de « substance »**{/violet}. **Les lignes** {teal}**412a11-16**{/teal} **font du** {violet}**corps vivant**{/violet} **une substance composée**, et donnent au passage une définition de la vie. **Les lignes** {teal}**412a16-19**{/teal} **écartent le corps**, et **les lignes** {teal}**412a19-22**{/teal} **concluent sur la forme**.
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | distinguer les trois sens de « substance » et les deux sens de « réalisation » | 412a6-10 | la substance est matière, forme ou composé ; la matière est puissance, la forme réalisation, à la manière de la science ou de l'acte de spéculer |
+    | établir que le corps vivant est une substance, et une substance composée | 412a11-16 | les corps naturels sont les substances les plus manifestes ; certains ont la vie, c'est-à-dire se nourrissent, croissent et dépérissent par eux-mêmes : ce sont des composés |
+    | écarter le corps comme principe de la vie | 412a16-19 | le corps est ce qui a la vie, sujet ou matière : il ne peut donc pas être ce qui la lui donne |
+    | conclure que l'âme est forme, donc réalisation | 412a19-22 | reste le troisième sens : l'âme est la substance comme forme d'un corps naturel qui a potentiellement la vie, et la forme étant réalisation, elle est la réalisation de ce corps |
+
+    **Contre qui ?** Le livre I a passé en revue ceux qui font de l'âme {red}un corps{/red} : pour {sky}**Démocrite**{/sky}, elle est {teal}« une sorte de feu et d'élément chaud »{/teal}, faite des atomes sphériques (I, 2, 403b31-404a2) ; d'autres l'ont faite air, eau ou sang. C'est ce matérialisme que le texte écarte. Il prépare aussi la réponse à {sky}**Platon**{/sky} : une forme est forme {green}de ce corps{/green}, et la suite du chapitre dira l'âme {teal}« non séparable du corps »{/teal} (413a4).
+
+    ! « Le corps ne saurait être l'âme » ne fait pas de l'âme une seconde chose logée dans le corps : elle en est la forme, comme la figure n'est pas le bronze sans être une chose à côté de lui.
+  passage:
+    label: "Introduction"
+  points:
+  - id: "aristote-la-vie-est-une-realisation-i1-1"
+    sentence: "Après avoir examiné au livre I « la tradition de nos ___ au sujet de l'âme », Aristote revient en II, 1 « au point de départ » pour la définir."
+    answer: "devanciers"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-i1-2"
+    sentence: "*De l'âme*, II, 1 : Aristote revient au point de départ « pour tâcher de définir ce qu'est l'âme et ce que peut être sa formule ___ »."
+    answer: "la plus commune"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-i1-3"
+    sentence: "Pour définir l'âme, *De l'âme*, II, 1 ne la cherche pas directement : il part des ___, que l'opinion tient pour des substances, et demande ce qui les fait vivre."
+    answer: "corps vivants"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-i1-4"
+    sentence: "Pour que l'élimination du corps conclue que l'âme est forme, il faut que la substance n'ait que ___ sens : matière, forme, composé."
+    answer: "trois"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-i1-5"
+    sentence: "*De l'âme*, I, 2 : pour Démocrite, l'âme est « une sorte de ___ et d'élément chaud », faite des atomes sphériques."
+    answer: "feu"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-i2"
+  title: "Les mots du texte : substance, matière, forme, réalisation"
+  notes: |-
+    **Le texte est écrit dans le vocabulaire de l'hylémorphisme, que la traduction de Bodéüs rend par des périphrases.** Les retrouver, c'est voir que chaque phrase met en place une pièce de la définition.
+
+    | Dans le texte | Grec | Sens |
+    | substance | `ousia` | ce qui est au premier sens, ce qui existe par soi |
+    | matière | `hulê` | ce dont une chose est faite ; par soi, rien de déterminé |
+    | aspect ou forme | `eidos` | ce qui fait d'une matière une chose déterminée |
+    | réalité singulière | `tode ti` | un « ceci », une chose qu'on peut montrer |
+    | puissance | `dunamis` | ce qui peut être ou faire, sans l'être encore |
+    | réalisation | `entelecheia` | l'acte, la forme atteinte |
+    | sujet | `hupokeimenon` | ce dont on dit quelque chose, ce qui est « dessous » |
+
+    **« Se dire d'un sujet. »** La formule vient des *Catégories* : {teal}« Parmi les étants, les uns se disent d'un certain sujet, mais ne sont dans aucun sujet ; par exemple, homme se dit d'un sujet, tel homme »{/teal} (2, 1a20-22). Le *De l'âme* l'emploie plus largement : ce qui {violet}se dit d'un sujet{/violet}, c'est ce qu'on attribue à quelque chose, et {green}__le sujet dernier est la matière__{/green}. D'où l'opposition du paragraphe 412a16-19 : le corps est {pink}ce dont on dit qu'il vit{/pink}, l'âme {green}ce qu'on en dit{/green}.
+
+    **Puissance et réalisation se répondent.** La matière n'est pas « rien » : elle {amber}peut devenir{/amber} telle chose, et la forme est ce qu'elle devient. Mais la réalisation a elle-même deux degrés, que le texte nomme sans encore s'en servir : {yellow}la science qu'on possède{/yellow}, {yellow}l'acte de spéculer{/yellow}. L'unité suivante (412a22-28) en tirera que l'âme est réalisation {coral}« première »{/coral}.
+
+    ! « Forme » ne veut pas dire figure visible : c'est ce qui fait qu'une chose est ce qu'elle est.
+  tables:
+  - table: "dans-le-texte-grec-sens"
+    exercises:
+    - { kind: "bank", column: "Grec" }
+    - { kind: "bank", column: "Sens" }
+  passage:
+    label: "Introduction"
+  points:
+  - id: "aristote-la-vie-est-une-realisation-i2-1"
+    sentence: "Le mot grec que Bodéüs traduit par « réalité singulière », un « ceci » qu'on peut montrer, est `___`."
+    answer: "tode ti"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-i2-2"
+    sentence: "Bodéüs traduit `entelecheia` par ___."
+    answer: "réalisation"
+    alt: [ entéléchie ]
+  - id: "aristote-la-vie-est-une-realisation-i2-3"
+    sentence: "*Catégories*, 2 : « Parmi les étants, les uns se disent d'un certain sujet, mais ne sont dans aucun sujet ; par exemple, homme se dit d'un sujet, ___ »."
+    answer: "tel homme"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-i2-4"
+    sentence: "Dans *De l'âme*, II, 1, le **sujet** dernier, ce dont on dit qu'il vit, est la ___."
+    answer: "matière"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-i2-5"
+    sentence: "La réalisation a deux degrés, que *De l'âme*, II, 1 nomme dès 412a10 sans s'en servir : la science possédée et l'acte de ___."
+    answer: "spéculer"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-l1"
   title: "Les trois sens de « substance » et les deux degrés de réalisation"
-  notes: ""
+  notes: |-
+    **Le paragraphe pose les instruments de la définition :** {violet}**trois sens de la substance**{/violet}**, et deux façons d'être forme.** Rien n'y est encore dit de l'âme ; tout y prépare l'élimination qui suivra.
+
+    **Trois sens.** La {violet}matière{/violet} est ce qui, {teal}« par soi, ne constitue pas une réalité singulière »{/teal} : du bronze n'est pas encore une statue. La {violet}forme{/violet} est ce {teal}« en vertu de quoi, précisément, on peut parler d'une réalité singulière »{/teal} : la figure fait du bronze une statue. Le {violet}composé{/violet} est les deux ensemble, la statue.
+
+    | Sens de « substance » | Ce que c'est | Dans la statue | Dans le vivant |
+    | la matière | ce qui n'est pas par soi une réalité singulière : une puissance | le bronze | le corps |
+    | la forme | ce qui en fait une réalité singulière : une réalisation | la figure | l'âme |
+    | le composé | les deux ensemble | la statue | l'animal, la plante |
+
+    La dernière colonne {amber}anticipe la conclusion{/amber} : le texte ne la remplit qu'en 412a21.
+
+    **Deux façons d'être réalisation.** {green}__La matière est puissance, la forme réalisation__{/green}, mais la réalisation se dit {yellow}« comme la science »{/yellow}, qu'on possède sans l'exercer, ou {yellow}« comme l'acte de spéculer »{/yellow}, qui l'exerce. La distinction est posée ici **en réserve** : elle décidera en 412a22-23 de quelle sorte de réalisation est l'âme.
+
+    **Pour la vie,** le paragraphe fixe d'avance la place qu'elle occupera : {red}ni la matière{/red}, {red}ni un quatrième terme{/red}, mais {green}ce qui fait du composé un vivant{/green}.
+
+    ! La matière n'est pas « rien » : elle est puissance, ce qui peut devenir telle chose.
+  tables:
+  - table: "sens-de-substance-ce-que-c-est-dans-la-statue-dans-le-vivant"
+    exercises:
+    - { kind: "bank", column: "Dans le vivant" }
   passage:
-    label: "-"
+    label: "412a6-10"
     text: "Nous exprimons bien un genre particulier de réalités en parlant de substance. Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une réalité singulière), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme le composé des deux. Par ailleurs, la matière est puissance, alors que la forme est réalisation ; et ce, de deux manières, soit, comme la science, soit, comme l'acte de spéculer."
-  points: [{id: aristote-la-vie-est-une-realisation-l1-p1, sentence: "« Nous exprimons bien un genre particulier de réalités en parlant de ___. »", answer: "substance", alt: []}, {id: aristote-la-vie-est-une-realisation-l1-p2, sentence: "« Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une ___), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme le composé des deux. »", answer: "réalité singulière", alt: []}, {id: aristote-la-vie-est-une-realisation-l1-p3, sentence: "« Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une réalité singulière), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme ___. »", answer: "le composé des deux", alt: []}, {id: aristote-la-vie-est-une-realisation-l1-p4, sentence: "« Nous exprimons bien un genre particulier de réalités en parlant de substance. Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une réalité singulière), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme le composé des deux. Par ailleurs, la matière est ___, alors que la forme est réalisation ; et ce, de deux manières, soit, comme la science, soit, comme l'acte de spéculer. »", answer: "puissance", alt: []}, {id: aristote-la-vie-est-une-realisation-l1-p5, sentence: "« Nous exprimons bien un genre particulier de réalités en parlant de substance. Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une réalité singulière), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme le composé des deux. Par ailleurs, la matière est puissance, alors que la forme est ___ ; et ce, de deux manières, soit, comme la science, soit, comme l'acte de spéculer. »", answer: "réalisation", alt: []}, {id: aristote-la-vie-est-une-realisation-l1-p6, sentence: "« Nous exprimons bien un genre particulier de réalités en parlant de substance. Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une réalité singulière), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme le composé des deux. Par ailleurs, la matière est puissance, alors que la forme est réalisation ; et ce, de deux manières, soit, comme la ___, soit, comme l'acte de spéculer. »", answer: "science", alt: []}, {id: aristote-la-vie-est-une-realisation-l1-p7, sentence: "« Nous exprimons bien un genre particulier de réalités en parlant de substance. Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une réalité singulière), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme le composé des deux. Par ailleurs, la matière est puissance, alors que la forme est réalisation ; et ce, de deux manières, soit, comme la science, soit, comme ___. »", answer: "l'acte de spéculer", alt: []}]
-- id: aristote-la-vie-est-une-realisation-l2
+  points:
+  - id: "aristote-la-vie-est-une-realisation-l1-p1"
+    sentence: "« Nous exprimons bien un genre particulier de réalités en parlant de ___. »"
+    answer: "substance"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l1-p2"
+    sentence: "« Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une ___), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme le composé des deux. »"
+    answer: "réalité singulière"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l1-p3"
+    sentence: "« Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une réalité singulière), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme ___. »"
+    answer: "le composé des deux"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l1-p4"
+    sentence: "« Nous exprimons bien un genre particulier de réalités en parlant de substance. Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une réalité singulière), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme le composé des deux. Par ailleurs, la matière est ___, alors que la forme est réalisation ; et ce, de deux manières, soit, comme la science, soit, comme l'acte de spéculer. »"
+    answer: "puissance"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l1-p5"
+    sentence: "« Nous exprimons bien un genre particulier de réalités en parlant de substance. Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une réalité singulière), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme le composé des deux. Par ailleurs, la matière est puissance, alors que la forme est ___ ; et ce, de deux manières, soit, comme la science, soit, comme l'acte de spéculer. »"
+    answer: "réalisation"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l1-p6"
+    sentence: "« Nous exprimons bien un genre particulier de réalités en parlant de substance. Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une réalité singulière), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme le composé des deux. Par ailleurs, la matière est puissance, alors que la forme est réalisation ; et ce, de deux manières, soit, comme la ___, soit, comme l'acte de spéculer. »"
+    answer: "science"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l1-p7"
+    sentence: "« Nous exprimons bien un genre particulier de réalités en parlant de substance. Mais celle-ci s'entend, soit comme matière (chose qui, par soi, ne constitue pas une réalité singulière), soit comme aspect ou forme (en vertu de quoi, précisément, on peut parler d'une réalité singulière), soit, troisièmement, comme le composé des deux. Par ailleurs, la matière est puissance, alors que la forme est réalisation ; et ce, de deux manières, soit, comme la science, soit, comme ___. »"
+    answer: "l'acte de spéculer"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l1-e1"
+    sentence: "Dans la statue, le bronze est la substance comme matière, la figure la substance comme ___, la statue le composé."
+    answer: "forme"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l1-e2"
+    sentence: "La distinction de la science et de l'acte de spéculer, posée en *De l'âme*, II, 1, 412a10, servira en 412a22 à dire que l'âme est réalisation ___."
+    answer: "première"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l1-e3"
+    sentence: "La division de la substance en matière, forme et composé est la prémisse qui permettra d'écarter le corps : il ne restera à l'âme que la ___."
+    answer: "forme"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-l2"
   title: "Les corps vivants sont des substances"
-  notes: ""
+  notes: |-
+    **Le paragraphe établit que** {violet}**le corps vivant**{/violet} **est une substance, et une substance** {coral}**composée**{/coral}**.** Il le fait en trois pas, et donne au passage la seule définition de la vie que contienne le chapitre.
+
+    **Premier pas : l'opinion.** {teal}« Les substances, dans l'opinion, ce sont surtout les corps »{/teal} : Aristote part de ce qu'on accorde, non d'une thèse à lui. La *Métaphysique* dit de même : {teal}« Selon l'opinion commune, la substance appartient le plus manifestement aux corps ; c'est pourquoi nous affirmons que les animaux, les plantes et leurs parties sont des substances »{/teal} (Z, 2, 1028b8-10). Parmi les corps, les {violet}corps naturels{/violet} passent avant, {teal}« car ils sont principes des autres »{/teal} : les objets de l'art sont faits d'eux.
+
+    **Deuxième pas : certains vivent.** Et {teal}« par vie, nous voulons dire la propriété de par soi-même se nourrir, croître et dépérir »{/teal}. La définition est {amber}minimale{/amber} : elle ne retient que les {green}__fonctions nutritives__{/green}, communes à la plante et à l'animal, et elle {amber}comprend le dépérissement{/amber}. « De par soi-même » écarte ce qui grandit par apport du dehors : {yellow}le tas qui s'accroît{/yellow} ne se nourrit pas.
+
+    **Troisième pas : la conclusion.** {coral}__Tout corps naturel qui a la vie est une substance composée__{/coral}, au sens posé en 412a8-9.
+
+    **Pour la vie,** c'est sa {violet}définition{/violet} et son {violet}statut{/violet} : elle est {pink}une propriété qu'un corps a{/pink}, ce qui prépare le paragraphe suivant ; et elle se reconnaît à une {green}__activité qui part du vivant lui-même__{/green}.
+
+    ! « Peut être substance » rend un optatif grec (`ousia an eiê`) : ce n'est pas une simple possibilité, c'est la conclusion, dite avec prudence.
   passage:
-    label: "-"
+    label: "412a11-16"
     text: "Or, les substances, dans l'opinion, ce sont surtout les corps et, parmi eux, les corps naturels, car ils sont principes des autres. Mais, parmi les corps naturels, les uns ont la vie, cependant que les autres ne l'ont pas ; et par vie, nous voulons dire la propriété de par soi-même se nourrir, croître et dépérir. Si bien que tout corps naturel, ayant la vie en partage, peut être substance, une substance, cependant, comme on l'a dit, composée."
-  points: [{id: aristote-la-vie-est-une-realisation-l2-p1, sentence: "« Or, les substances, dans l'opinion, ___ et, parmi eux, les corps naturels, car ils sont principes des autres. »", answer: "ce sont surtout les corps", alt: []}, {id: aristote-la-vie-est-une-realisation-l2-p2, sentence: "« Mais, parmi les corps naturels, les uns ont la vie, cependant que les autres ne l'ont pas ; et par vie, nous voulons dire ___. »", answer: "la propriété de par soi-même se nourrir, croître et dépérir", alt: []}, {id: aristote-la-vie-est-une-realisation-l2-p3, sentence: "« Si bien que tout corps naturel, ayant la vie en partage, peut être substance, une substance, cependant, comme on l'a dit, ___. »", answer: "composée", alt: []}, {id: aristote-la-vie-est-une-realisation-l2-p4, sentence: "« Or, les substances, ___, ce sont surtout les corps et, parmi eux, les corps naturels, car ils sont principes des autres. »", answer: "dans l'opinion", alt: []}]
-- id: aristote-la-vie-est-une-realisation-l3
+  points:
+  - id: "aristote-la-vie-est-une-realisation-l2-p1"
+    sentence: "« Or, les substances, dans l'opinion, ___ et, parmi eux, les corps naturels, car ils sont principes des autres. »"
+    answer: "ce sont surtout les corps"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l2-p2"
+    sentence: "« Mais, parmi les corps naturels, les uns ont la vie, cependant que les autres ne l'ont pas ; et par vie, nous voulons dire ___. »"
+    answer: "la propriété de par soi-même se nourrir, croître et dépérir"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l2-p3"
+    sentence: "« Si bien que tout corps naturel, ayant la vie en partage, peut être substance, une substance, cependant, comme on l'a dit, ___. »"
+    answer: "composée"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l2-p4"
+    sentence: "« Or, les substances, ___, ce sont surtout les corps et, parmi eux, les corps naturels, car ils sont principes des autres. »"
+    answer: "dans l'opinion"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l2-e1"
+    sentence: "*Métaphysique*, Z, 2 : « Selon l'opinion commune, la substance appartient le plus manifestement aux ___ »."
+    answer: "corps"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l2-e2"
+    sentence: "*Métaphysique*, Z, 2 : « c'est pourquoi nous affirmons que ___, les plantes et leurs parties sont des substances »."
+    answer: "les animaux"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l2-e3"
+    sentence: "Les corps naturels sont « principes des autres » corps parce que les objets de l'___ sont faits d'eux."
+    answer: "art"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l2-e4"
+    sentence: "La définition de la vie de *De l'âme*, II, 1 ne retient que les fonctions ___ : se nourrir, croître et dépérir, communes à la plante et à l'animal."
+    answer: "nutritives"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l2-e5"
+    sentence: "Dans la définition de la vie, « de par soi-même » exclut la croissance par simple ___ du dehors, comme celle d'un tas."
+    answer: "apport"
+    alt: [ ajout ]
+- id: "aristote-la-vie-est-une-realisation-l3"
   title: "L'âme n'est pas réductible au corps"
-  notes: ""
+  notes: |-
+    **Le paragraphe écarte le corps :** {red}**le corps ne saurait être l'âme**{/red}**, parce que le corps est** {pink}**ce qui a la vie**{/pink}**, sujet ou matière, et que l'âme est ce qu'il a.** C'est le pivot du texte, et il est très bref.
+
+    **Deux arguments en un.** {sky}Shields{/sky} y lit deux éliminations successives, qui laissent à l'âme le seul sens restant :
+
+    | Argument | Prémisses | Conclusion |
+    | contre le composé | le corps vivant est une substance composée ; l'âme n'est pas un composé | l'âme n'est pas le corps vivant |
+    | contre la matière | le corps est sujet et ne se dit pas d'un sujet ; l'âme se dit du corps | l'âme n'est pas le corps-matière |
+
+    {sky}Polansky{/sky} le dit autrement : le corps pris {pink}comme simple corps{/pink} n'explique pas la vie, puisque d'autres corps ne vivent pas ; le corps pris {pink}comme corps vivant{/pink} l'expliquerait par une {red}tautologie{/red}, « un corps vivant vit parce qu'il est un corps vivant ». {green}__Il faut un principe qui ne soit ni l'un ni l'autre__{/green}.
+
+    **La prémisse implicite.** Tout repose sur une donnée qu'Aristote ne discute pas : {amber}l'âme est ce qui confère la vie au corps{/amber}. Polansky remarque que, s'il l'avait explicitée, l'argument aurait l'air d'une {red}pétition de principe{/red}, ce qui expliquerait sa brièveté ; Shields juge qu'il ne suffit pas à lui seul, parce qu'en un sens le corps aussi « appartient » au composé.
+
+    **Pour la vie,** le statut se précise : la vie est {pink}attribuée au corps{/pink} (« le corps a la vie »), donc {green}__son principe n'est pas du côté de ce qui la reçoit__{/green}.
+
+    ! Le texte ne dit pas que l'âme est une réalité incorporelle séparée : il dit seulement qu'elle n'est pas le corps, comme la figure n'est pas le bronze.
+  tables:
+  - table: "argument-premisses-conclusion"
+    exercises:
+    - { kind: "bank", column: "Conclusion" }
   passage:
-    label: "-"
+    label: "412a16-19"
     text: "Mais, puisque c'est précisément un corps qui a cette propriété, c'est-à-dire, possède la vie, le corps ne saurait être l'âme. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme sujet ou matière."
-  points: [{id: aristote-la-vie-est-une-realisation-l3-p1, sentence: "« Mais, puisque c'est précisément un corps qui ___, c'est-à-dire, possède la vie, le corps ne saurait être l'âme. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme sujet ou matière. »", answer: "a cette propriété", alt: []}, {id: aristote-la-vie-est-une-realisation-l3-p2, sentence: "« Mais, puisque c'est précisément un corps qui a cette propriété, c'est-à-dire, ___, le corps ne saurait être l'âme. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme sujet ou matière. »", answer: "possède la vie", alt: []}, {id: aristote-la-vie-est-une-realisation-l3-p3, sentence: "« Mais, puisque c'est précisément un corps qui a cette propriété, c'est-à-dire, possède la vie, ___. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme sujet ou matière. »", answer: "le corps ne saurait être l'âme", alt: []}, {id: aristote-la-vie-est-une-realisation-l3-p4, sentence: "« Mais, ___ qui a cette propriété, c'est-à-dire, possède la vie, le corps ne saurait être l'âme. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme sujet ou matière. »", answer: "puisque c'est précisément un corps", alt: []}, {id: aristote-la-vie-est-une-realisation-l3-p5, sentence: "« Mais, puisque c'est précisément un corps qui a cette propriété, c'est-à-dire, possède la vie, le corps ne saurait être l'âme. Le corps, en effet, ne se range pas dans ___, mais se présente plutôt comme sujet ou matière. »", answer: "les réalités qui se disent d'un sujet", alt: []}, {id: aristote-la-vie-est-une-realisation-l3-p6, sentence: "« Mais, puisque c'est précisément un corps qui a cette propriété, c'est-à-dire, possède la vie, le corps ne saurait être l'âme. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme ___. »", answer: "sujet ou matière", alt: []}, {id: aristote-la-vie-est-une-realisation-l3-p7, sentence: "« Mais, ___. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme sujet ou matière. »", answer: "puisque c'est précisément un corps qui a cette propriété, c'est-à-dire, possède la vie, le corps ne saurait être l'âme", alt: []}]
-- id: aristote-la-vie-est-une-realisation-l4
+  points:
+  - id: "aristote-la-vie-est-une-realisation-l3-p1"
+    sentence: "« Mais, puisque c'est précisément un corps qui ___, c'est-à-dire, possède la vie, le corps ne saurait être l'âme. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme sujet ou matière. »"
+    answer: "a cette propriété"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l3-p2"
+    sentence: "« Mais, puisque c'est précisément un corps qui a cette propriété, c'est-à-dire, ___, le corps ne saurait être l'âme. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme sujet ou matière. »"
+    answer: "possède la vie"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l3-p3"
+    sentence: "« Mais, puisque c'est précisément un corps qui a cette propriété, c'est-à-dire, possède la vie, ___. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme sujet ou matière. »"
+    answer: "le corps ne saurait être l'âme"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l3-p4"
+    sentence: "« Mais, ___ qui a cette propriété, c'est-à-dire, possède la vie, le corps ne saurait être l'âme. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme sujet ou matière. »"
+    answer: "puisque c'est précisément un corps"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l3-p5"
+    sentence: "« Mais, puisque c'est précisément un corps qui a cette propriété, c'est-à-dire, possède la vie, le corps ne saurait être l'âme. Le corps, en effet, ne se range pas dans ___, mais se présente plutôt comme sujet ou matière. »"
+    answer: "les réalités qui se disent d'un sujet"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l3-p6"
+    sentence: "« Mais, puisque c'est précisément un corps qui a cette propriété, c'est-à-dire, possède la vie, le corps ne saurait être l'âme. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme ___. »"
+    answer: "sujet ou matière"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l3-p7"
+    sentence: "« Mais, ___. Le corps, en effet, ne se range pas dans les réalités qui se disent d'un sujet, mais se présente plutôt comme sujet ou matière. »"
+    answer: "puisque c'est précisément un corps qui a cette propriété, c'est-à-dire, possède la vie, le corps ne saurait être l'âme"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l3-e1"
+    sentence: "Selon Shields, *De l'âme*, II, 1, 412a16-19 contient deux arguments : l'un écarte le ___, l'autre la matière."
+    answer: "composé"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l3-e2"
+    sentence: "Selon Polansky, si le corps vivant expliquait la vie, l'explication serait une ___ : un corps vivant vit parce qu'il est un corps vivant."
+    answer: "tautologie"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l3-e3"
+    sentence: "La prémisse implicite de l'élimination du corps : l'âme est ce qui ___ la vie au corps."
+    answer: "confère"
+    alt: [ donne ]
+  - id: "aristote-la-vie-est-une-realisation-l3-e4"
+    sentence: "Polansky remarque que, s'il explicitait tous ses présupposés, l'argument de 412a16-19 aurait l'air d'une ___."
+    answer: "pétition de principe"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-l4"
   title: "L'âme est la forme du corps"
-  notes: ""
+  notes: |-
+    **Le paragraphe conclut :** {violet}**l'âme**{/violet} **est** {coral}**substance comme forme**{/coral} **d'un corps naturel qui a potentiellement la vie, et donc sa** {coral}**réalisation**{/coral}**.**
+
+    **Un syllogisme en trois temps.**
+
+    | Étape | Énoncé |
+    | conclusion de l'élimination | l'âme est substance comme forme d'un corps naturel qui a potentiellement la vie |
+    | prémisse posée en 412a10 | la substance comme forme est réalisation |
+    | conclusion | l'âme est la réalisation d'un tel corps |
+
+    **« Il faut donc nécessairement. »** La nécessité vient de l'{amber}exhaustivité{/amber} de la division : la substance n'ayant que trois sens, et l'âme n'étant ni la matière ni le composé, {green}__il ne lui reste que la forme__{/green}.
+
+    **« Qui a potentiellement la vie. »** La formule apparaît ici pour la première fois. Le corps est la matière, donc {violet}puissance{/violet} : ce qui peut vivre, et vit par l'âme. Ce que veut dire au juste ce « potentiellement » ne sera précisé qu'à la fin du chapitre (412b25-26).
+
+    **Pour la vie,** la conclusion lui donne son principe : {coral}__ce qui fait vivre un corps est sa forme, non sa matière__{/coral}. Le titre de l'unité le dit : {green}le principe de la vie n'est pas le corps{/green}.
+
+    ! « Qui a potentiellement la vie » ne désigne pas un corps sans âme qui attendrait de vivre : la fin du chapitre précisera que la puissance de vivre suppose l'âme.
   passage:
-    label: "-"
+    label: "412a19-22"
     text: "Il faut donc nécessairement que l'âme soit substance comme forme d'un corps naturel qui a potentiellement la vie. Or cette substance est réalisation (entéléchie). Donc, elle est la réalisation d'un tel corps."
-  points: [{id: aristote-la-vie-est-une-realisation-l4-p1, sentence: "« Il faut donc nécessairement que l'âme soit substance comme ___ qui a potentiellement la vie. Or cette substance est réalisation (entéléchie). Donc, elle est la réalisation d'un tel corps. »", answer: "forme d'un corps naturel", alt: []}, {id: aristote-la-vie-est-une-realisation-l4-p2, sentence: "« Il faut donc nécessairement que l'âme soit substance comme forme d'un corps naturel ___. Or cette substance est réalisation (entéléchie). Donc, elle est la réalisation d'un tel corps. »", answer: "qui a potentiellement la vie", alt: []}, {id: aristote-la-vie-est-une-realisation-l4-p3, sentence: "« Il faut donc nécessairement que l'âme soit substance comme forme d'un corps naturel qui a potentiellement la vie. Or cette substance est ___. Donc, elle est la réalisation d'un tel corps. »", answer: "réalisation (entéléchie)", alt: []}, {id: aristote-la-vie-est-une-realisation-l4-p4, sentence: "« Il faut donc nécessairement que l'âme soit substance comme forme d'un corps naturel qui a potentiellement la vie. Or cette substance est réalisation (entéléchie). Donc, elle est ___. »", answer: "la réalisation d'un tel corps", alt: []}, {id: aristote-la-vie-est-une-realisation-l4-p5, sentence: "« Il faut donc nécessairement ___. Or cette substance est réalisation (entéléchie). Donc, elle est la réalisation d'un tel corps. »", answer: "que l'âme soit substance comme forme d'un corps naturel qui a potentiellement la vie", alt: []}, {id: aristote-la-vie-est-une-realisation-l4-p6, sentence: "« Il faut donc nécessairement que l'âme soit substance comme forme d'un corps naturel qui a potentiellement la vie. Or cette substance est réalisation (entéléchie). Donc, ___. »", answer: "elle est la réalisation d'un tel corps", alt: []}]
+  points:
+  - id: "aristote-la-vie-est-une-realisation-l4-p1"
+    sentence: "« Il faut donc nécessairement que l'âme soit substance comme ___ qui a potentiellement la vie. Or cette substance est réalisation (entéléchie). Donc, elle est la réalisation d'un tel corps. »"
+    answer: "forme d'un corps naturel"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l4-p2"
+    sentence: "« Il faut donc nécessairement que l'âme soit substance comme forme d'un corps naturel ___. Or cette substance est réalisation (entéléchie). Donc, elle est la réalisation d'un tel corps. »"
+    answer: "qui a potentiellement la vie"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l4-p3"
+    sentence: "« Il faut donc nécessairement que l'âme soit substance comme forme d'un corps naturel qui a potentiellement la vie. Or cette substance est ___. Donc, elle est la réalisation d'un tel corps. »"
+    answer: "réalisation (entéléchie)"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l4-p4"
+    sentence: "« Il faut donc nécessairement que l'âme soit substance comme forme d'un corps naturel qui a potentiellement la vie. Or cette substance est réalisation (entéléchie). Donc, elle est ___. »"
+    answer: "la réalisation d'un tel corps"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l4-p5"
+    sentence: "« Il faut donc nécessairement ___. Or cette substance est réalisation (entéléchie). Donc, elle est la réalisation d'un tel corps. »"
+    answer: "que l'âme soit substance comme forme d'un corps naturel qui a potentiellement la vie"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l4-p6"
+    sentence: "« Il faut donc nécessairement que l'âme soit substance comme forme d'un corps naturel qui a potentiellement la vie. Or cette substance est réalisation (entéléchie). Donc, ___. »"
+    answer: "elle est la réalisation d'un tel corps"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l4-e1"
+    sentence: "Le « donc nécessairement » de *De l'âme*, II, 1, 412a19 suppose que la division de la substance en matière, forme et composé soit ___."
+    answer: "exhaustive"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-l4-e2"
+    sentence: "La conclusion de 412a21, l'âme est réalisation, joint la conclusion de l'élimination à une prémisse posée en ___ : la forme est réalisation."
+    answer: "412a10"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-o1"
+  title: "Ce que le texte dit de la vie : une propriété du corps, un principe qui n'est pas lui"
+  notes: |-
+    **Le texte parle de l'âme, mais il donne sa seule définition de la vie, et il en fixe le statut.** Domaine par domaine :
+
+    **La définition.** {teal}« Par vie, nous voulons dire la propriété de par soi-même se nourrir, croître et dépérir »{/teal} : {green}__vivre, c'est d'abord se nourrir__{/green}. C'est la {violet}vie nutritive{/violet}, celle {teal}« en vertu de laquelle la vie appartient à tous »{/teal} (II, 4, 415a25). La plante en est le cas le plus simple. II, 2 élargira : {teal}« le fait de vivre s'entend de plusieurs façons »{/teal} (413a22). La définition de 412a14 est donc {amber}un plancher, non une essence{/amber}.
+
+    **Le statut ontologique.** La vie est {pink}une propriété qu'un corps a{/pink}, mais {green}__ce qui la lui donne n'est pas un corps__{/green}. Et le vivant est une {violet}substance{/violet}, au plein sens : la *Métaphysique* donne pour exemple de substances {teal}« un humain ou une plante ou autre chose de cette sorte que justement nous disons être au plus haut point des substances »{/teal} (Z, 7, 1032a18-19). {coral}__Le vivant n'est pas un agrégat de matière : il est l'exemple même de ce qui est.__{/coral}
+
+    **Le statut épistémologique.** Aristote ne part pas d'une observation de la vie, mais de {amber}l'opinion{/amber} (« dans l'opinion ») et d'une {amber}division{/amber} : il atteint le principe de la vie {green}par élimination{/green}, non en le montrant.
+
+    **Le vivant et l'inerte.** {teal}« Parmi les corps naturels, les uns ont la vie, cependant que les autres ne l'ont pas »{/teal} : {red}la vie n'est pas une propriété de tout corps{/red}. C'est ce qui interdit de la rapporter au corps comme tel.
+
+    **La mort.** La définition {amber}contient le dépérissement{/amber} : {green}__décliner fait partie de la vie__{/green}, et c'est encore {teal}« de par soi-même »{/teal} que le vivant dépérit.
+
+    | Question | Réponse du texte |
+    | qu'est-ce que vivre ? | se nourrir, croître et dépérir de par soi-même |
+    | qui vit ? | un corps naturel, substance composée |
+    | qu'est-ce qui fait vivre ? | la forme de ce corps, non ce corps |
+    | comment le sait-on ? | par élimination, à partir de l'opinion |
+
+    ! La définition de 412a14 n'est pas celle de toute vie : elle ne retient que la vie nutritive, commune à tout vivant.
+  tables:
+  - table: "question-reponse-du-texte"
+    exercises:
+    - { kind: "bank", column: "Réponse du texte" }
+  passage:
+    label: "Prolongement"
+  points:
+  - id: "aristote-la-vie-est-une-realisation-o1-1"
+    sentence: "*De l'âme*, II, 4 : la faculté nutritive est « la première faculté de l'âme et la plus commune, celle en vertu de laquelle ___ »."
+    answer: "la vie appartient à tous"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-o1-2"
+    sentence: "*De l'âme*, II, 2 : « le fait de vivre s'entend de ___ » : la définition nutritive de II, 1 n'est qu'un plancher."
+    answer: "plusieurs façons"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-o1-3"
+    sentence: "*Métaphysique*, Z, 7 : « un humain ou une plante ou autre chose de cette sorte que justement nous disons être ___ des substances »."
+    answer: "au plus haut point"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-o1-4"
+    sentence: "*De l'âme*, II, 1 n'atteint pas le principe de la vie par observation, mais par ___, à partir de la division de la substance."
+    answer: "élimination"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-o1-5"
+    sentence: "La définition de la vie de *De l'âme*, II, 1 contient le ___ : décliner fait partie de la vie."
+    answer: "dépérissement"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-o2"
+  title: "Le principe de la vie : Aristote face à Démocrite, Platon et Descartes"
+  notes: |-
+    **Dire que le principe de la vie n'est pas le corps, c'est prendre position entre deux camps** : ceux qui font de l'âme un corps, et ceux qui en font une chose séparée.
+
+    **Démocrite : l'âme est un corps.** Pour lui, elle est {teal}« une sorte de feu et d'élément chaud »{/teal} : {teal}« Dans l'infinité des figures et des atomes, en effet, il parle de ceux qui sont sphériques en termes de feu et d'âme »{/teal} (I, 2, 404a1-3). Le texte lui répond : {red}__un corps ne peut pas être ce qui fait vivre un corps__{/red}.
+
+    **Platon : l'âme apporte la vie.** Dans le *Phédon* (105c-d), l'âme est ce qui, présent dans un corps, le rend vivant ; Socrate en tire qu'elle {pink}ne peut recevoir la mort{/pink}, donc qu'elle est immortelle. Aristote garde {green}l'âme principe de la vie{/green}, mais {red}refuse qu'elle soit une chose qui entre dans un corps{/red} : elle en est la forme.
+
+    **Descartes : la vie revient au corps.** L'article 4 des *Passions de l'âme* a pour titre : {teal}« Que la chaleur et le mouvement des membres procèdent du corps, et les pensées de l'âme »{/teal}. {pink}__Le principe de la vie est rendu au corps__{/pink}, et l'âme réduite à la pensée : c'est l'exact renversement du texte, où {green}l'âme est d'abord ce par quoi un corps se nourrit{/green}.
+
+    | Auteur | L'âme | Le principe de la vie |
+    | Démocrite | un corps, des atomes de feu | un corps |
+    | Platon (*Phédon*) | une chose distincte qui entre dans le corps | l'âme |
+    | Aristote | la forme du corps | l'âme, comme forme |
+    | Descartes | la pensée | le corps |
+
+    ! Aristote n'est pas pour autant du côté de Descartes : refuser que l'âme soit une chose ne revient pas à rendre la vie au corps.
+  tables:
+  - table: "auteur-l-ame-le-principe-de-la-vie"
+    exercises:
+    - { kind: "bank", column: "Le principe de la vie" }
+  passage:
+    label: "Prolongement"
+  points:
+  - id: "aristote-la-vie-est-une-realisation-o2-1"
+    sentence: "*De l'âme*, I, 2 : Démocrite, « dans l'infinité des figures et des atomes », parle de ceux qui sont ___ en termes de feu et d'âme."
+    answer: "sphériques"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-o2-2"
+    sentence: "Dans le *Phédon* (105c-d), l'âme est ce qui, présent dans un corps, le rend ___, d'où Socrate tire son immortalité."
+    answer: "vivant"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-o2-3"
+    sentence: "Descartes, *Les Passions de l'âme*, art. 4 : « Que la chaleur et le mouvement des membres procèdent ___, et les pensées de l'âme »."
+    answer: "du corps"
+    alt: []

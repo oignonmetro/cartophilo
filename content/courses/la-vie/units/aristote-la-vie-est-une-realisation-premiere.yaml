@@ -1,40 +1,416 @@
+# Unité de texte (voir content/textes.md) : Aristote, De l'âme, II, 1,
+# 412a22-b9, trad. Bodéüs (Œuvres complètes, Flammarion). Titres et cartes-citation
+# de l'utilisateur ; rappels, introductions, cartes-explication et prolongements
+# écrits sans commentaire suivi, d'après l'édition et le notebook « Aristote :
+# la vie » (Shields, Polansky, Bermúdez, Bolton, Hamlyn). La phrase « En effet,
+# la présence de l'âme implique sommeil et éveil », absente du texte de la
+# première leçon, y est rétablie d'après l'édition. Précède : -realisation
+# (412a6-22) ; suite : aristote-ame-vue-oeil (412b10-413a3).
+
 id: aristote-la-vie-est-une-realisation-premiere
 title: "Aristote : la vie est la capacité d'accomplir ses fonctions vitales"
 subtitle: "De l'âme, II, 1"
 icon: page
 color: coral
+intro: |-
+  La seconde moitié de la définition de l'âme (II, 1, 412a22-b9). L'âme est la réalisation « première » d'un corps naturel, comme la science qu'on possède sans s'en servir, puisque le dormeur vit ; ce corps est pourvu d'organes, jusque chez la plante ; et la question de savoir si l'âme et le corps font un ne se pose plus.
 lessons:
-- id: aristote-la-vie-est-une-realisation-premiere-l1
+- id: "aristote-la-vie-est-une-realisation-premiere-i1"
+  title: "Vivre, c'est pouvoir avant d'exercer : la thèse et le plan"
+  notes: |-
+    **Le texte répond à la question** {amber}**« de quelle sorte de réalisation l'âme est-elle la réalisation, et de quel corps ? »**{/amber} **:** {violet}**l'âme**{/violet} **est** {coral}**la réalisation première d'un corps naturel pourvu d'organes**{/coral}**.** Le passage précédent (412a6-22) avait établi que l'âme est forme, donc réalisation ; mais la réalisation se dit de deux façons, et le corps n'était pas encore qualifié.
+
+    La thèse réunit trois affirmations. L'une porte sur le **mode** de l'âme : elle est {green}__une capacité possédée__{/green}, {pink}non son exercice{/pink}. L'autre porte sur le **corps** : il est {green}__pourvu d'organes__{/green}, ce qui vaut jusque pour la plante. La dernière en tire une **conséquence** : {coral}l'âme et le corps ne sont pas deux choses à unir{/coral}. Chacune dépend de la précédente : on ne pourrait dire de quel corps l'âme est la réalisation sans avoir dit de quelle réalisation il s'agit.
+
+    **Les lignes** {teal}**412a22-25**{/teal} **fixent** {violet}**le degré de la réalisation**{/violet} par l'analogie de la science. **Les lignes** {teal}**412a25-28**{/teal} **la confirment et énoncent la définition**. **Les lignes** {teal}**412a28-b6**{/teal} **disent** {violet}**quel corps**{/violet} l'âme réalise, jusque chez la plante. **Les lignes** {teal}**412b6-9**{/teal} **en tirent que la question de l'unité ne se pose pas**.
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | fixer le degré de la réalisation par l'analogie de la science | 412a22-25 | la réalisation est la science possédée ou l'acte de spéculer ; l'âme est présente dans le sommeil comme dans l'éveil, elle est donc comme la science possédée |
+    | confirmer par le sommeil et par l'ordre de la génération, puis énoncer la définition | 412a25-28 | l'éveil répond à l'acte de spéculer, le sommeil à la science qu'on n'exerce pas, et la science vient la première : l'âme est réalisation première |
+    | qualifier le corps que l'âme réalise, jusque chez la plante | 412a28-b6 | ce corps est pourvu d'organes, même la plante, dont la feuille protège le fruit et la racine fait office de bouche : d'où une formule commune à toute âme |
+    | en tirer que la question de l'unité ne se pose pas | 412b6-9 | on ne demande pas si la cire et sa figure font un ; la réalisation est l'un et l'être au sens premier |
+
+    **Contre qui ?** Contre ceux qui font de l'âme {red}une chose distincte qu'il faudrait relier au corps{/red} : selon {sky}Shields{/sky}, la dernière phrase vise d'abord {sky}**Platon**{/sky}, dont le *Phédon* pose la question de la survie séparée ; selon {sky}Polansky{/sky} et {sky}Bermúdez{/sky}, aussi les {sky}**pythagoriciens**{/sky}, qui attachent l'âme au corps sans dire lequel (I, 3).
+
+    ! « Première » ne veut pas dire la plus importante : c'est le premier des deux degrés de la réalisation, celui de la capacité.
+  passage:
+    label: "Introduction"
+  points:
+  - id: "aristote-la-vie-est-une-realisation-premiere-i1-1"
+    sentence: "*De l'âme*, II, 1, 412a22-b9 précise la définition en deux points : de quelle sorte de ___ il s'agit, et de quel corps."
+    answer: "réalisation"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-i1-2"
+    sentence: "Dans *De l'âme*, II, 1, « réalisation première » désigne le premier des deux degrés de la réalisation : la ___ possédée, non son exercice."
+    answer: "capacité"
+    alt: [ science ]
+  - id: "aristote-la-vie-est-une-realisation-premiere-i1-3"
+    sentence: "Selon Shields, la phrase de *De l'âme*, II, 1 sur l'unité du corps et de l'âme vise d'abord ___, dont le *Phédon* pose la question de la survie séparée."
+    answer: "Platon"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-premiere-i2"
+  title: "Les mots du texte : science, acte de spéculer, organe"
+  notes: |-
+    **L'exemple de la science porte toute la définition.** Il faut l'entendre comme Aristote : {violet}la science{/violet} (`epistêmê`) est {green}un savoir qu'on a{/green}, même quand on n'y pense pas ; {violet}l'acte de spéculer{/violet} (`theôrein`) est {green}l'usage de ce savoir{/green}, le fait d'y penser en acte.
+
+    | Dans le texte | Grec | Sens |
+    | la science | `epistêmê` | un savoir possédé, une disposition |
+    | l'acte de spéculer | `theôrein` | l'exercice de ce savoir, la contemplation en acte |
+    | disposition | `hexis` | un état acquis qu'on a sans l'exercer |
+    | réalisation première | `entelecheia hê prôtê` | le premier degré de la réalisation : la capacité |
+    | pourvu d'organes | `organikon` | qui a des organes, qui sert d'instrument |
+
+    **Le savant en trois états.** *De l'âme*, II, 5 distingue l'homme {yellow}capable d'apprendre{/yellow}, celui qui {yellow}possède la science{/yellow} et {teal}« celui qui est bel et bien en train de spéculer »{/teal}, {teal}« savant par réalisation »{/teal} (417a28-29). Notre texte ne retient que les deux derniers : {coral}__l'âme est au vivant ce que la science est au savant__{/coral}.
+
+    **« Organe » veut dire outil.** `Organon` désigne l'instrument, et `organikon` peut s'entendre {amber}« pourvu d'organes »{/amber} ou {amber}« qui sert d'instrument »{/amber} : le débat est repris dans la leçon 412a28-b6.
+
+    ! La science possédée n'est pas l'ignorance : celui qui sait la géométrie et dort la sait encore, celui qui ne l'a jamais apprise non.
+  tables:
+  - table: "dans-le-texte-grec-sens"
+    exercises:
+    - { kind: "bank", column: "Grec" }
+    - { kind: "bank", column: "Sens" }
+  passage:
+    label: "Introduction"
+  points:
+  - id: "aristote-la-vie-est-une-realisation-premiere-i2-1"
+    sentence: "Dans l'exemple de *De l'âme*, II, 1, la science possédée se dit `epistêmê`, l'acte de spéculer `___`."
+    answer: "theôrein"
+    alt: [ theorein ]
+  - id: "aristote-la-vie-est-une-realisation-premiere-i2-2"
+    sentence: "La science possédée sans être exercée est une ___ (`hexis`), un état acquis."
+    answer: "disposition"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-i2-3"
+    sentence: "*De l'âme*, II, 5 : « celui qui est bel et bien en train de spéculer » est savant par ___."
+    answer: "réalisation"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-i2-4"
+    sentence: "Dans *De l'âme*, II, 1, l'âme est au vivant ce que la ___ est au savant."
+    answer: "science"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-premiere-l1"
   title: "L'âme est à l'exercice des fonctions vitales ce que la science est à la spéculation"
-  notes: ""
+  notes: |-
+    **Le paragraphe fixe le degré de la réalisation :** {violet}**l'âme**{/violet} **est réalisation** {coral}**« comme la science »**{/coral}**,** {red}**non comme l'acte de spéculer**{/red}**.** Il reprend la distinction posée en 412a10 et s'en sert enfin.
+
+    **L'argument tient en une phrase :** {teal}« la présence de l'âme implique sommeil et éveil »{/teal}. Le vivant qui dort {green}a son âme{/green}, et pourtant {pink}n'exerce ni la sensation ni la pensée{/pink}. Si l'âme était l'exercice, {red}__le dormeur n'aurait plus d'âme, donc ne vivrait pas__{/red}. {coral}L'âme est donc ce qu'on a, non ce qu'on fait.{/coral}
+
+    {sky}Shields{/sky} parle de deux {violet}degrés{/violet} de la réalisation, la simple possession et l'usage ; {sky}Polansky{/sky} et {sky}Hamlyn{/sky}, d'une réalisation {violet}« à titre de disposition »{/violet} (`hexis`), qui explique qu'un vivant reste vivant quand il dort.
+
+    **Pour la vie,** c'est sa définition comme {green}__capacité__{/green} : est vivant ce qui {amber}peut{/amber} exercer ses fonctions, même quand il ne les exerce pas.
+
+    ! L'argument ne dit pas que le dormeur n'exerce rien : il se nourrit et respire. Il dit que la présence de l'âme ne se mesure pas à l'exercice de toutes ses fonctions.
   passage:
-    label: "-"
-    text: "Mais cette dernière [la réalisation] s'entend de deux façons, tantôt, comme la science, tantôt, comme l'acte de spéculer. Par conséquent, c'est évidemment comme la science."
-  points: [{id: aristote-la-vie-est-une-realisation-premiere-l1-p1, sentence: "« Mais cette dernière [la réalisation] ___, tantôt, comme la science, tantôt, comme l'acte de spéculer. Par conséquent, c'est évidemment comme la science. »", answer: "s'entend de deux façons", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l1-p2, sentence: "« Mais cette dernière [la réalisation] s'entend de deux façons, tantôt, comme ___, tantôt, comme l'acte de spéculer. Par conséquent, c'est évidemment comme la science. »", answer: "la science", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l1-p3, sentence: "« Mais cette dernière [la réalisation] s'entend de deux façons, tantôt, comme la science, tantôt, comme ___. Par conséquent, c'est évidemment comme la science. »", answer: "l'acte de spéculer", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l1-p4, sentence: "« Mais cette dernière [la réalisation] s'entend de deux façons, tantôt, comme la science, tantôt, comme l'acte de spéculer. Par conséquent, c'est évidemment ___. »", answer: "comme la science", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l1-p5, sentence: "« Mais cette dernière [la réalisation] s'entend de deux façons, ___. Par conséquent, c'est évidemment comme la science. »", answer: "tantôt, comme la science, tantôt, comme l'acte de spéculer", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l1-p6, sentence: "« Mais cette dernière [la réalisation] ___. Par conséquent, c'est évidemment comme la science. »", answer: "s'entend de deux façons, tantôt, comme la science, tantôt, comme l'acte de spéculer", alt: []}]
-- id: aristote-la-vie-est-une-realisation-premiere-l2
+    label: "412a22-25"
+    text: "Mais cette dernière [la réalisation] s'entend de deux façons, tantôt, comme la science, tantôt, comme l'acte de spéculer. Par conséquent, c'est évidemment comme la science. En effet, la présence de l'âme implique sommeil et éveil."
+  points:
+  - id: "aristote-la-vie-est-une-realisation-premiere-l1-p1"
+    sentence: "« Mais cette dernière [la réalisation] ___, tantôt, comme la science, tantôt, comme l'acte de spéculer. Par conséquent, c'est évidemment comme la science. »"
+    answer: "s'entend de deux façons"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l1-p2"
+    sentence: "« Mais cette dernière [la réalisation] s'entend de deux façons, tantôt, comme ___, tantôt, comme l'acte de spéculer. Par conséquent, c'est évidemment comme la science. »"
+    answer: "la science"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l1-p3"
+    sentence: "« Mais cette dernière [la réalisation] s'entend de deux façons, tantôt, comme la science, tantôt, comme ___. Par conséquent, c'est évidemment comme la science. »"
+    answer: "l'acte de spéculer"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l1-p4"
+    sentence: "« Mais cette dernière [la réalisation] s'entend de deux façons, tantôt, comme la science, tantôt, comme l'acte de spéculer. Par conséquent, c'est évidemment ___. »"
+    answer: "comme la science"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l1-p5"
+    sentence: "« Mais cette dernière [la réalisation] s'entend de deux façons, ___. Par conséquent, c'est évidemment comme la science. »"
+    answer: "tantôt, comme la science, tantôt, comme l'acte de spéculer"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l1-p6"
+    sentence: "« Mais cette dernière [la réalisation] ___. Par conséquent, c'est évidemment comme la science. »"
+    answer: "s'entend de deux façons, tantôt, comme la science, tantôt, comme l'acte de spéculer"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l1-p7"
+    sentence: "« Mais cette dernière [la réalisation] s'entend de deux façons, tantôt, comme la science, tantôt, comme l'acte de spéculer. Par conséquent, c'est évidemment comme la science. En effet, la présence de l'âme implique ___. »"
+    answer: "sommeil et éveil"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l1-p8"
+    sentence: "« Mais cette dernière [la réalisation] s'entend de deux façons, tantôt, comme la science, tantôt, comme l'acte de spéculer. Par conséquent, c'est évidemment comme la science. En effet, ___ sommeil et éveil. »"
+    answer: "la présence de l'âme implique"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l1-e1"
+    sentence: "Dans *De l'âme*, II, 1, si l'âme était l'exercice de ses fonctions, celui qui ___ n'aurait plus d'âme : elle est donc réalisation comme la science."
+    answer: "dort"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l1-e2"
+    sentence: "Selon Shields, la réalisation se présente en deux ___ : la simple possession d'une capacité, puis son usage."
+    answer: "degrés"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l1-e3"
+    sentence: "Selon Polansky et Hamlyn, l'âme est réalisation à titre de ___ (`hexis`), ce qui explique qu'un vivant reste vivant en dormant."
+    answer: "disposition"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-premiere-l2"
   title: "L'âme est la réalisation première de la vie"
-  notes: ""
+  notes: |-
+    **Le paragraphe confirme par deux raisons, puis énonce la définition :** {violet}**l'âme**{/violet} **est** {coral}**la réalisation première d'un corps naturel qui a potentiellement la vie**{/coral}**.**
+
+    **Première raison : une correspondance.**
+
+    | | Chez le savant | Chez le vivant |
+    | l'exercice | l'acte de spéculer | l'éveil |
+    | la possession sans exercice | avoir la science sans l'exercer | le sommeil |
+
+    Comme la science demeure quand on n'y pense pas, {green}__l'âme demeure dans le sommeil__{/green}.
+
+    **Seconde raison : l'ordre de la génération.** {teal}« La première des deux à naître chez un même sujet, c'est la science »{/teal} : on {amber}acquiert{/amber} un savoir avant de s'en servir. De même, {green}__le vivant a ses capacités avant de les exercer__{/green}. {sky}Polansky{/sky}, {sky}Shields{/sky} et {sky}Hamlyn{/sky} y lisent la seconde raison du mot « première » : la capacité vient {violet}d'abord dans l'histoire de l'individu{/violet}.
+
+    **Une tension à noter.** Selon la génération, la capacité est première ; mais selon la définition, {teal}« les facultés sont précédées par les actes et les actions, selon l'ordre logique »{/teal} (II, 4, 415a18-20) : on ne définit une capacité que par ce qu'elle fait. {amber}« Première » vaut dans le premier ordre, non dans le second.{/amber}
+
+    **Pour la vie,** le mot « première » distingue {green}être en vie{/green}, qui est une capacité, et {green}vivre en acte{/green}, qui en est l'exercice.
+
+    ! « Première » ne veut pas dire que l'âme précède le corps dans le temps : elle précède son propre exercice.
+  tables:
+  - table: "chez-le-savant-chez-le-vivant"
+    exercises:
+    - { kind: "bank", column: "Chez le vivant" }
   passage:
-    label: "-"
+    label: "412a25-28"
     text: "Or il y a correspondance entre l'éveil et l'acte de spéculer, d'un côté, et, de l'autre, le sommeil et le fait d'avoir cette disposition sans l'exercer ; par ailleurs, la première des deux à naître chez un même sujet, c'est la science. En conséquence, l'âme est la réalisation première d'un corps naturel qui a potentiellement la vie."
-  points: [{id: aristote-la-vie-est-une-realisation-premiere-l2-p1, sentence: "« Or il y a correspondance entre l'éveil et l'acte de spéculer, d'un côté, et, de l'autre, le sommeil et ___ ; par ailleurs, la première des deux à naître chez un même sujet, c'est la science. En conséquence, l'âme est la réalisation première d'un corps naturel qui a potentiellement la vie. »", answer: "le fait d'avoir cette disposition sans l'exercer", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l2-p2, sentence: "« Or il y a correspondance entre l'éveil et l'acte de spéculer, d'un côté, et, de l'autre, le sommeil et le fait d'avoir cette disposition sans l'exercer ; par ailleurs, la première des deux à naître chez un même sujet, c'est la science. En conséquence, l'âme est la ___ d'un corps naturel qui a potentiellement la vie. »", answer: "réalisation première", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l2-p3, sentence: "« Or il y a correspondance entre l'éveil et l'acte de spéculer, d'un côté, et, de l'autre, le sommeil et le fait d'avoir cette disposition sans l'exercer ; par ailleurs, la première des deux à naître chez un même sujet, c'est la science. En conséquence, l'âme est la réalisation première d'un ___ qui a potentiellement la vie. »", answer: "corps naturel", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l2-p4, sentence: "« Or il y a correspondance entre l'éveil et l'acte de spéculer, d'un côté, et, de l'autre, le sommeil et le fait d'avoir cette disposition sans l'exercer ; par ailleurs, la première des deux à naître chez un même sujet, c'est la science. En conséquence, l'âme est la réalisation première d'un corps naturel ___. »", answer: "qui a potentiellement la vie", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l2-p5, sentence: "« Or il y a correspondance entre l'éveil et l'acte de spéculer, d'un côté, et, de l'autre, le sommeil et le fait d'avoir cette disposition sans l'exercer ; par ailleurs, la première des deux à naître chez un même sujet, c'est la science. En conséquence, l'âme est ___. »", answer: "la réalisation première d'un corps naturel qui a potentiellement la vie", alt: []}]
-- id: aristote-la-vie-est-une-realisation-premiere-l3
+  points:
+  - id: "aristote-la-vie-est-une-realisation-premiere-l2-p1"
+    sentence: "« Or il y a correspondance entre l'éveil et l'acte de spéculer, d'un côté, et, de l'autre, le sommeil et ___ ; par ailleurs, la première des deux à naître chez un même sujet, c'est la science. En conséquence, l'âme est la réalisation première d'un corps naturel qui a potentiellement la vie. »"
+    answer: "le fait d'avoir cette disposition sans l'exercer"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l2-p2"
+    sentence: "« Or il y a correspondance entre l'éveil et l'acte de spéculer, d'un côté, et, de l'autre, le sommeil et le fait d'avoir cette disposition sans l'exercer ; par ailleurs, la première des deux à naître chez un même sujet, c'est la science. En conséquence, l'âme est la ___ d'un corps naturel qui a potentiellement la vie. »"
+    answer: "réalisation première"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l2-p3"
+    sentence: "« Or il y a correspondance entre l'éveil et l'acte de spéculer, d'un côté, et, de l'autre, le sommeil et le fait d'avoir cette disposition sans l'exercer ; par ailleurs, la première des deux à naître chez un même sujet, c'est la science. En conséquence, l'âme est la réalisation première d'un ___ qui a potentiellement la vie. »"
+    answer: "corps naturel"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l2-p4"
+    sentence: "« Or il y a correspondance entre l'éveil et l'acte de spéculer, d'un côté, et, de l'autre, le sommeil et le fait d'avoir cette disposition sans l'exercer ; par ailleurs, la première des deux à naître chez un même sujet, c'est la science. En conséquence, l'âme est la réalisation première d'un corps naturel ___. »"
+    answer: "qui a potentiellement la vie"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l2-p5"
+    sentence: "« Or il y a correspondance entre l'éveil et l'acte de spéculer, d'un côté, et, de l'autre, le sommeil et le fait d'avoir cette disposition sans l'exercer ; par ailleurs, la première des deux à naître chez un même sujet, c'est la science. En conséquence, l'âme est ___. »"
+    answer: "la réalisation première d'un corps naturel qui a potentiellement la vie"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l2-e1"
+    sentence: "*De l'âme*, II, 1 : la science est « la première des deux à naître chez un même sujet » : la capacité précède son exercice selon la ___."
+    answer: "génération"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l2-e2"
+    sentence: "Dans l'analogie de *De l'âme*, II, 1, l'acte de spéculer correspond à l'___, et la science qu'on n'exerce pas au sommeil."
+    answer: "éveil"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l2-e3"
+    sentence: "*De l'âme*, II, 4 : « les facultés sont précédées par ___, selon l'ordre logique » : la capacité est première selon la génération, non selon la définition."
+    answer: "les actes et les actions"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-premiere-l3"
   title: "L'organe est le potentiel de vie"
-  notes: ""
+  notes: |-
+    **Le paragraphe qualifie le corps :** {violet}**le corps que l'âme réalise**{/violet} **est** {coral}**pourvu d'organes**{/coral}**, jusque chez la plante ; d'où la formule commune à toute âme.**
+
+    **« Pourvu d'organes ».** Le grec `organikon` vient d'`organon`, l'outil. On le traduit {amber}« pourvu d'organes »{/amber}, avec {sky}Hicks{/sky} et {sky}Bermúdez{/sky}, ou {amber}« instrumental »{/amber}, avec {sky}Polansky{/sky} : {green}__le corps entier est l'instrument de l'âme__{/green}. {sky}Shields{/sky} juge les deux lectures complémentaires : si le corps entier sert d'instrument, il doit avoir des parties elles-mêmes adaptées à chaque fonction. {sky}Bolton{/sky} rapproche le mot des *Parties des animaux* : {teal}« le corps est un instrument (en effet chacune de ses parties est en vue de quelque chose et de même pour le tout) »{/teal} (I, 1, 642a11-13).
+
+    **Pourquoi la plante ?** Parce qu'elle est {amber}le vivant le plus simple{/amber}, et qu'on pourrait douter qu'elle ait des organes. Or {yellow}la feuille protège le péricarpe{/yellow}, {yellow}le péricarpe le fruit{/yellow}, et {yellow}les racines correspondent à la bouche{/yellow}, {teal}« puisque les deux absorbent la nourriture »{/teal}. {coral}__Un organe se reconnaît à sa fonction, non à sa figure__{/coral} : la racine n'a rien d'une bouche, sinon de nourrir.
+
+    **La formule commune.** {teal}« La réalisation première d'un corps naturel pourvu d'organes »{/teal} vaut pour {green}toute âme{/green}, végétale, animale ou humaine. Mais elle n'est qu'{amber}une esquisse{/amber} : pour {sky}Bolton{/sky}, une définition qui dit le fait sans en donner la cause ; pour {sky}Shields{/sky}, comme la définition de la {yellow}figure{/yellow}, qui s'applique au triangle et au quadrilatère sans être celle d'aucun (II, 3, 414b20-28).
+
+    **Pour la vie,** le paragraphe dit {green}__qui vit : tout corps organisé, la plante comprise__{/green}, et il range la vie du côté de la {violet}fonction{/violet}.
+
+    ! « Pourvu d'organes » ne signifie pas « organisé » au sens moderne d'une complexité chimique : c'est un corps dont les parties sont les instruments de ses fonctions.
   passage:
-    label: "-"
+    label: "412a28-b6"
     text: "Tel est, du reste, tout corps pourvu d'organes. Or les parties des plantes aussi sont des organes, mais d'une extrême simplicité : ainsi, la feuille est une protection du péricarpe et le péricarpe une protection du fruit, tandis que les racines correspondent à la bouche, puisque les deux absorbent la nourriture. Et si l'on a besoin d'une formule qui s'applique en commun à toute âme, ce sera : la réalisation première d'un corps naturel pourvu d'organes."
-  points: [{id: aristote-la-vie-est-une-realisation-premiere-l3-p1, sentence: "« Tel est, du reste, tout corps pourvu d'organes. Or les parties des plantes aussi sont des organes, mais d'une extrême simplicité : ainsi, la feuille est une protection du péricarpe et le péricarpe une protection du fruit, tandis que les racines correspondent à la bouche, puisque les deux absorbent la nourriture. Et si l'on a besoin d'___ à toute âme, ce sera : la réalisation première d'un corps naturel pourvu d'organes. »", answer: "une formule qui s'applique en commun", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l3-p2, sentence: "« Et si l'on a besoin d'une formule qui s'applique en commun ___, ce sera : la réalisation première d'un corps naturel pourvu d'organes. »", answer: "à toute âme", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l3-p3, sentence: "« Tel est, du reste, tout corps pourvu d'organes. Or les parties des plantes aussi sont des organes, mais d'une extrême simplicité : ainsi, la feuille est une protection du péricarpe et le péricarpe une protection du fruit, tandis que les racines correspondent à la bouche, puisque les deux absorbent la nourriture. Et si l'on a besoin d'une formule qui s'applique en commun à toute âme, ce sera : la ___. »", answer: "réalisation première d'un corps naturel pourvu d'organes", alt: []}]
-- id: aristote-la-vie-est-une-realisation-premiere-l5
+  points:
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-p1"
+    sentence: "« Tel est, du reste, tout corps pourvu d'organes. Or les parties des plantes aussi sont des organes, mais d'une extrême simplicité : ainsi, la feuille est une protection du péricarpe et le péricarpe une protection du fruit, tandis que les racines correspondent à la bouche, puisque les deux absorbent la nourriture. Et si l'on a besoin d'___ à toute âme, ce sera : la réalisation première d'un corps naturel pourvu d'organes. »"
+    answer: "une formule qui s'applique en commun"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-p2"
+    sentence: "« Et si l'on a besoin d'une formule qui s'applique en commun ___, ce sera : la réalisation première d'un corps naturel pourvu d'organes. »"
+    answer: "à toute âme"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-p3"
+    sentence: "« Tel est, du reste, tout corps pourvu d'organes. Or les parties des plantes aussi sont des organes, mais d'une extrême simplicité : ainsi, la feuille est une protection du péricarpe et le péricarpe une protection du fruit, tandis que les racines correspondent à la bouche, puisque les deux absorbent la nourriture. Et si l'on a besoin d'une formule qui s'applique en commun à toute âme, ce sera : la ___. »"
+    answer: "réalisation première d'un corps naturel pourvu d'organes"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-p4"
+    sentence: "« Tel est, du reste, tout corps pourvu d'organes. Or les parties des plantes aussi sont des organes, mais d'une extrême simplicité : ainsi, la feuille est ___ et le péricarpe une protection du fruit, tandis que les racines correspondent à la bouche, puisque les deux absorbent la nourriture. Et si l'on a besoin d'une formule qui s'applique en commun à toute âme, ce sera : la réalisation première d'un corps naturel pourvu d'organes. »"
+    answer: "une protection du péricarpe"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-p5"
+    sentence: "« Tel est, du reste, tout corps pourvu d'organes. Or les parties des plantes aussi sont des organes, mais d'une extrême simplicité : ainsi, la feuille est une protection du péricarpe et le péricarpe une protection du fruit, tandis que ___, puisque les deux absorbent la nourriture. Et si l'on a besoin d'une formule qui s'applique en commun à toute âme, ce sera : la réalisation première d'un corps naturel pourvu d'organes. »"
+    answer: "les racines correspondent à la bouche"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-p6"
+    sentence: "« Tel est, du reste, tout corps pourvu d'organes. Or les parties des plantes aussi sont des organes, mais d'une extrême simplicité : ainsi, la feuille est une protection du péricarpe et le péricarpe une protection du fruit, tandis que les racines correspondent à la bouche, ___. Et si l'on a besoin d'une formule qui s'applique en commun à toute âme, ce sera : la réalisation première d'un corps naturel pourvu d'organes. »"
+    answer: "puisque les deux absorbent la nourriture"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-p7"
+    sentence: "« Tel est, du reste, tout corps pourvu d'organes. Or les parties des plantes aussi sont des organes, ___ : ainsi, la feuille est une protection du péricarpe et le péricarpe une protection du fruit, tandis que les racines correspondent à la bouche, puisque les deux absorbent la nourriture. Et si l'on a besoin d'une formule qui s'applique en commun à toute âme, ce sera : la réalisation première d'un corps naturel pourvu d'organes. »"
+    answer: "mais d'une extrême simplicité"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-e1"
+    sentence: "Le grec `organikon`, que Bodéüs traduit « pourvu d'organes », vient d'`___`, l'outil."
+    answer: "organon"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-e2"
+    sentence: "Selon Polansky, `organikon` signifie « ___ » : le corps entier est l'instrument de l'âme."
+    answer: "instrumental"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-e3"
+    sentence: "*Les Parties des animaux*, I, 1 : « le corps est un ___ (en effet chacune de ses parties est en vue de quelque chose et de même pour le tout) »."
+    answer: "instrument"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-e4"
+    sentence: "Dans *De l'âme*, II, 1, la racine de la plante est un organe parce qu'elle a la ___ de la bouche, non sa figure."
+    answer: "fonction"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-e5"
+    sentence: "Selon Bolton, la formule commune de *De l'âme*, II, 1 dit le fait sans donner la ___ : c'est une esquisse."
+    answer: "cause"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l3-e6"
+    sentence: "*De l'âme*, II, 3 compare la formule commune de l'âme à celle de la ___, qui s'applique au triangle et au quadrilatère sans être celle d'aucun."
+    answer: "figure"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-premiere-l5"
   title: "La vie et le vivant ne font qu'un"
-  notes: ""
+  notes: |-
+    **Le paragraphe tire la conséquence :** {coral}**on n'a pas besoin de chercher si le corps et l'âme font un**{/coral}**, pas plus que la cire et sa figure, parce que** {violet}**la réalisation**{/violet} **est l'un et l'être au sens premier.**
+
+    **Ce que la phrase ne dit pas.** {red}Elle ne dit pas que l'âme et le corps sont identiques{/red} : Aristote vient de nier que le corps soit l'âme (412a17). {sky}Shields{/sky} le note : la question tombe parce que {green}__sa motivation disparaît__{/green}. Elle supposait {pink}deux choses indépendantes à relier{/pink} ; or l'existence même du corps organique dépend de l'âme.
+
+    **L'exemple de la cire.** Personne ne demande si {yellow}la cire et la figure qu'on y imprime{/yellow} font un : {amber}la figure n'est pas une seconde chose posée sur la cire{/amber}, c'est la cire en tant que figurée. De même, l'âme est le corps {green}en tant qu'il peut vivre{/green}.
+
+    **« L'un et l'être, dont on parle en plusieurs sens, c'est, souverainement, la réalisation. »** Il y a plusieurs façons d'être un ; {green}__la plus forte est celle d'une puissance et de son acte__{/green}. La *Métaphysique* le dit en termes généraux : {teal}« la matière dernière et l'aspect sont une seule et même chose, celle-là en puissance, celui-là en acte »{/teal} (H, 6, 1045b17-19). {sky}Bolton{/sky}, {sky}Bermúdez{/sky} et {sky}Whiting{/sky} renvoient à ce passage.
+
+    **Pour la vie,** la conséquence est capitale : {coral}__le vivant n'est pas l'assemblage d'une vie et d'un corps__{/coral}, mais un seul être, que sa vie fait un.
+
+    ! La question de l'unité tombe, non celle de la séparation : la phrase qui suit (413a4-9) laisse ouvert le cas des parties de l'âme qui ne sont réalisation d'aucun corps.
   passage:
-    label: "-"
+    label: "412b6-9"
     text: "C'est pourquoi l'on n'a même pas besoin de chercher si le corps et l'âme font un, exactement comme on ne le demande non plus de la cire et de la figure, ni, globalement, de la matière de chaque chose et de ce qui a cette matière. Car l'un et l'être, dont on parle effectivement en plusieurs sens, c'est, souverainement, la réalisation."
-  points: [{id: aristote-la-vie-est-une-realisation-premiere-l5-p1, sentence: "« C'est pourquoi l'on n'a même pas besoin de chercher ___, exactement comme on ne le demande non plus de la cire et de la figure, ni, globalement, de la matière de chaque chose et de ce qui a cette matière. »", answer: "si le corps et l'âme font un", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l5-p2, sentence: "« C'est pourquoi l'on n'a même pas besoin de chercher si le corps et l'âme font un, exactement comme on ne le demande non plus ___, ni, globalement, de la matière de chaque chose et de ce qui a cette matière. »", answer: "de la cire et de la figure", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l5-p3, sentence: "« C'est pourquoi l'on n'a même pas besoin de chercher si le corps et l'âme font un, exactement comme on ne le demande non plus de la cire et de la figure, ni, globalement, de la matière de chaque chose et de ce qui a cette matière. Car l'un et l'être, dont on parle effectivement en plusieurs sens, c'est, souverainement, ___. »", answer: "la réalisation", alt: []}, {id: aristote-la-vie-est-une-realisation-premiere-l5-p4, sentence: "« C'est pourquoi l'on n'a même pas besoin de chercher si le corps et l'âme font un, exactement comme on ne le demande non plus de la cire et de la figure, ni, globalement, de la matière de chaque chose et de ce qui a cette matière. Car ___, dont on parle effectivement en plusieurs sens, c'est, souverainement, la réalisation. »", answer: "l'un et l'être", alt: []}]
-- id: aristote-la-vie-est-une-realisation-premiere-l4
+  points:
+  - id: "aristote-la-vie-est-une-realisation-premiere-l5-p1"
+    sentence: "« C'est pourquoi l'on n'a même pas besoin de chercher ___, exactement comme on ne le demande non plus de la cire et de la figure, ni, globalement, de la matière de chaque chose et de ce qui a cette matière. »"
+    answer: "si le corps et l'âme font un"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l5-p2"
+    sentence: "« C'est pourquoi l'on n'a même pas besoin de chercher si le corps et l'âme font un, exactement comme on ne le demande non plus ___, ni, globalement, de la matière de chaque chose et de ce qui a cette matière. »"
+    answer: "de la cire et de la figure"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l5-p3"
+    sentence: "« C'est pourquoi l'on n'a même pas besoin de chercher si le corps et l'âme font un, exactement comme on ne le demande non plus de la cire et de la figure, ni, globalement, de la matière de chaque chose et de ce qui a cette matière. Car l'un et l'être, dont on parle effectivement en plusieurs sens, c'est, souverainement, ___. »"
+    answer: "la réalisation"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l5-p4"
+    sentence: "« C'est pourquoi l'on n'a même pas besoin de chercher si le corps et l'âme font un, exactement comme on ne le demande non plus de la cire et de la figure, ni, globalement, de la matière de chaque chose et de ce qui a cette matière. Car ___, dont on parle effectivement en plusieurs sens, c'est, souverainement, la réalisation. »"
+    answer: "l'un et l'être"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l5-e1"
+    sentence: "Selon Shields, la question de l'unité du corps et de l'âme tombe parce que sa ___ disparaît : elle supposait deux choses indépendantes à relier."
+    answer: "motivation"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l5-e2"
+    sentence: "*Métaphysique*, H, 6 : « la matière dernière et l'aspect sont ___, celle-là en puissance, celui-là en acte »."
+    answer: "une seule et même chose"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l5-e3"
+    sentence: "Dire que l'âme et le corps n'ont pas à être unis n'est pas dire qu'ils sont ___ : Aristote vient de nier que le corps soit l'âme."
+    answer: "identiques"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-premiere-l4"
   title: "La vie, c'est l'âme (réalisation première) et ce qu'elle fait (réalisation seconde)"
-  notes: ""
+  notes: |-
+    **Le texte ne définit pas la vie, il définit l'âme ; mais il permet de dire ce que vivre veut dire.** Domaine par domaine :
+
+    **Une définition à deux étages.** {green}__Vivre se dit de la capacité et de son exercice__{/green}. L'âme est la vie {violet}comme capacité{/violet}, la réalisation première ; ce qu'elle fait, se nourrir, sentir, penser, est la vie {violet}comme exercice{/violet}, la réalisation seconde. *De l'âme*, II, 2 le confirme : {teal}« le fait de vivre s'entend de plusieurs façons »{/teal} (413a22).
+
+    | | Réalisation première | Réalisation seconde |
+    | chez le savant | la science possédée | l'acte de spéculer |
+    | chez le vivant | l'âme | l'exercice des fonctions vitales |
+    | état | le sommeil | l'éveil |
+    | sens de « vivre » | être en vie | vivre en acte |
+
+    **Le statut ontologique.** {red}La vie n'est pas une activité qui commencerait et cesserait sans cesse{/red} : {green}__elle est une disposition durable__{/green}, qui demeure dans le sommeil. Et {coral}le vivant est un{/coral} : ni assemblage d'un corps et d'une vie, ni corps habité par une âme.
+
+    **Le statut épistémologique.** La formule commune n'est qu'{amber}une esquisse{/amber}, et la capacité ne se définit que par ses actes (II, 4, 415a18-20) : {coral}__on connaît la vie par ce que fait le vivant__{/coral}, puis on remonte à ce qu'il peut.
+
+    **Le vivant.** {green}__La plante vit au même titre que l'animal__{/green} : elle a des organes, définis par leur fonction. La vie {red}ne se mesure ni à la complexité{/red} {red}ni à la conscience{/red}.
+
+    **Le sommeil et la mort.** Dormir, c'est {amber}vivre sans exercer{/amber} la sensation ni la pensée ; mourir, ce sera {red}perdre la capacité elle-même{/red}. Le sommeil est donc l'état qui fait voir {green}la vie comme capacité{/green}.
+
+    **La conduite de la vie.** L'*Éthique à Nicomaque* reprend la distinction : {teal}« vu qu'il y a deux façons d'entendre cette vie aussi, il faut poser que c'est la vie en acte, car c'est elle principalement qui semble entendue »{/teal} (I, 6, 1098a5-7). {coral}__Être en vie ne suffit pas à bien vivre__{/coral} : la vie bonne est une affaire d'exercice.
+
+    ! L'âme n'est pas toute la vie : elle en est le premier étage, la capacité ; vivre, c'est aussi l'exercer.
+  tables:
+  - table: "realisation-premiere-realisation-seconde"
+    exercises:
+    - { kind: "bank", column: "Réalisation seconde" }
   passage:
     label: "Prolongement"
-  points: [{id: aristote-la-vie-est-une-realisation-premiere-l4-p1, sentence: "___", answer: "-", alt: []}]
+  points:
+  - id: "aristote-la-vie-est-une-realisation-premiere-l4-e1"
+    sentence: "Pour Aristote, vivre se dit de la capacité et de son exercice : l'âme est la vie comme capacité, la réalisation ___."
+    answer: "première"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l4-e2"
+    sentence: "Le sommeil fait voir la vie comme ___ : le dormeur vit sans exercer la sensation ni la pensée."
+    answer: "capacité"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l4-e3"
+    sentence: "*Éthique à Nicomaque*, I, 6 : « il faut poser que c'est ___, car c'est elle principalement qui semble entendue »."
+    answer: "la vie en acte"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-l4-e4"
+    sentence: "Dans *De l'âme*, II, 1, la plante vit au même titre que l'animal : la vie ne se mesure ni à la complexité ni à la ___."
+    answer: "conscience"
+    alt: []
+- id: "aristote-la-vie-est-une-realisation-premiere-o2"
+  title: "La vie comme capacité : Plotin, Leibniz"
+  notes: |-
+    **L'argument du sommeil a été retourné contre Aristote, et le mot d'entéléchie repris dans un tout autre sens.**
+
+    **Plotin : le sommeil contre l'entéléchie.** Le traité 2 (IV, 7, chap. 8⁵) objecte que l'entéléchie doit {teal}« adhérer naturellement à ce dont elle est entéléchie »{/teal} : l'âme ne pourrait donc pas {teal}« faire retraite dans le sommeil »{/teal}, et {red}« il n'y aura même plus de sommeil »{/red}. Pour Plotin, {pink}le sommeil est une absence de l'âme{/pink}, qui se retire du corps. Notre texte avait répondu d'avance : {green}__dans le sommeil, rien ne se retire__{/green}, puisque l'âme est réalisation {coral}première{/coral}, présente dans le sommeil comme dans l'éveil. Les deux auteurs partent du même fait et en tirent l'inverse.
+
+    **Leibniz : l'entéléchie devient une force.** {teal}« On pourrait donner le nom d'Entéléchies à toutes les substances simples, ou Monades créées, car elles ont en elles une certaine perfection [...], il y a une suffisance qui les rend sources de leurs actions internes, et, pour ainsi dire, des Automates incorporels »{/teal} (*Monadologie*, §18). Et ailleurs : {teal}« Aristote les appelle entéléchies premières, je les appelle peut-être plus intelligiblement forces primitives, qui ne contiennent pas seulement l'acte ou le complément de la possibilité, mais encore une activité originale »{/teal} (cité par Michel Fichant, d'après Gerhardt, IV, 479). {amber}Le mot reste, le sens change{/amber} : chez Aristote, {green}la forme d'un corps{/green} ; chez Leibniz, {pink}une substance simple, source de ses actions{/pink}, qui n'est la forme d'aucun corps.
+
+    | Auteur | L'entéléchie | Le sommeil |
+    | Aristote | la forme d'un corps organisé, capacité possédée | l'âme demeure, l'exercice cesse |
+    | Plotin | une forme collée au corps, qu'il refuse pour l'âme | l'âme se retire |
+    | Leibniz | une substance simple, force primitive | non traité ici |
+
+    ! Leibniz ne reprend pas l'hylémorphisme : ses entéléchies sont des substances, non des formes de corps.
+  tables:
+  - table: "auteur-l-entelechie-le-sommeil"
+    exercises:
+    - { kind: "bank", column: "L'entéléchie" }
+  passage:
+    label: "Prolongement"
+  points:
+  - id: "aristote-la-vie-est-une-realisation-premiere-o2-1"
+    sentence: "Plotin, traité 2 (IV, 7, chap. 8⁵) : l'entéléchie doit « adhérer naturellement à ce dont elle est entéléchie » ; l'âme ne pourrait donc pas « faire retraite dans le ___ »."
+    answer: "sommeil"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-o2-2"
+    sentence: "À l'objection de Plotin, *De l'âme*, II, 1 répond d'avance : l'âme est réalisation ___, présente dans le sommeil comme dans l'éveil."
+    answer: "première"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-o2-3"
+    sentence: "Leibniz, *Monadologie*, §18 : « On pourrait donner le nom d'Entéléchies à toutes les ___, ou Monades créées »."
+    answer: "substances simples"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-o2-4"
+    sentence: "Leibniz, *Monadologie*, §18 : les monades sont « pour ainsi dire, des ___ incorporels »."
+    answer: "Automates"
+    alt: []
+  - id: "aristote-la-vie-est-une-realisation-premiere-o2-5"
+    sentence: "« Aristote les appelle entéléchies premières, je les appelle peut-être plus intelligiblement ___ » (Leibniz)."
+    answer: "forces primitives"
+    alt: []
