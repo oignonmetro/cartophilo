@@ -86,6 +86,14 @@ compléter à la prochaine relecture, et à déclasser si un point n'y revient p
    secondaires (le père et l'enfant, la promenade), anecdotes, et jusqu'à une
    leçon entière sur l'état des sources (« Ce que nous ne savons pas »).
 
+9. **Assez de cartes, et mises en relief.** Le premier jet du Manuel n'en
+   donnait qu'une pour 300 caractères de rappel, sur des termes grecs pris au
+   hasard, en laissant de côté les thèses. Interroger ce que le rappel met en
+   relief, sans redondance ni répétition entre leçons, et mettre le relief dans
+   la carte elle-même : voir « Le relief dans la carte » et « Ce qu'on
+   interroge » dans `content/philosophie.md` (retouches d'`arvie1`, le
+   2026-11-06 ; modèle : `arvie1-l1`).
+
 ### Tendanciel : vu une fois, net, à suivre
 
 - **Dépasser l'article quand il ne donne que la conclusion.** Aller à la méthode

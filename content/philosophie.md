@@ -96,6 +96,55 @@ je sais de quoi « la deuxième » ou « cette distinction » parle, sans avoir
 vu aucune autre carte de la lesson ? » Si la réponse est non, développer
 `sentence` jusqu'à ce qu'elle tienne debout seule.
 
+## Le relief dans la carte
+
+Une carte dirige l'attention comme un rappel : `sentence` porte sa propre mise
+en relief, dans toute carte de Cartophilo (tiré des retouches de l'utilisateur
+sur `arvie1`, le 2026-11-06) :
+
+- **le gras sur la notion interrogée**, celle dont la carte demande le terme
+  grec, la définition ou un élément : « la **croissance** se dit en grec
+  *___* », « la **vie** est l'ensemble des conditions… » ; et sur les éléments
+  décisifs que la phrase donne sans les demander (« penser sa vie » et
+  « décider de sa manière de vivre », raisons de la singularité de l'homme) ;
+- **le souligné sur la question à laquelle répond le trou**, le cadre de la
+  thèse : « __Pour un vivant, se mouvoir__, c'est réaliser les mouvements que
+  sa ___ suppose », « __Parmi les vivants, l'homme se singularise par__ la
+  ___ ». Le gras peut s'y loger (`__Pour un vivant, **se mouvoir**__`) ;
+- **jamais de marque qui enjambe le trou** : la phrase est coupée à `___`, un
+  souligné ouvert avant et fermé après s'afficherait tel quel ;
+- **le trou sur le groupe qui compte**, pas sur son mot le plus faible :
+  « le ___ (*alloiôsis*) », réponse « changement qualitatif », plutôt que « le
+  changement ___ » ; « entre ___ », réponse « la nature et l'art », plutôt que
+  le pôle secondaire « l'animé et l'___ ».
+
+## Ce qu'on interroge
+
+Un rappel bien mis en relief désigne lui-même ce qui mérite une carte : ses
+termes (violet), les éléments d'une définition (amber), les membres d'une
+opposition (vert et rouge), ce qui est établi (coral), ses citations (teal),
+les termes grecs **au centre du propos** (blue). Une énumération qui compte
+(les quatre mouvements naturels des vivants) se décline en une carte par
+membre. Mais **on n'interroge pas tout** :
+
+- **pas de carte redondante** : faire deviner « physicien » quand une autre
+  carte fait deviner *phusikos*, ou « nature » quand la phrase d'une voisine
+  la donne ; la carte la plus riche suffit ;
+- **pas de terme grec en marge du propos** (*bios* / *zôè* dans une leçon sur
+  le principe interne de mouvement) ; un terme grec n'appelle sa carte que
+  quand la leçon le travaille ;
+- **pas de détail secondaire** (un titre d'ouvrage moderne cité en passant,
+  un acteur mineur d'un mythe, une pagination de second rang) ;
+- **pas de répétition d'une leçon à l'autre dans une même unité** : un terme
+  ou une thèse interrogé dans une leçon ne l'est pas de nouveau dans la
+  suivante, même tiré d'une autre citation (*auxesis* en leçon 1 : pas
+  d'*auxèsin* en leçon 5).
+
+Ordre de grandeur, pour un rappel du Manuel ou d'un cours SEP : une carte pour
+60 à 120 caractères de rappel (`arvie1` : 83 cartes pour cinq leçons), soit
+une quinzaine à vingt-cinq pour un rappel de quatre paragraphes. Un rappel qui en donne moins de dix est
+presque toujours sous-interrogé.
+
 ## Six familles de points, dans l'ordre du texte source
 
 Les points d'une leçon suivent l'ordre du texte source, sans en-tête indiquant
@@ -597,6 +646,11 @@ validation section par section se reporte sur un auto-audit systématique.
      source, ni ne contient de renvoi flou ;
    - aucun point de localisation n'est tourné en question ;
    - aucun point ne porte `options` ni `translation` ;
+   - chaque élément mis en relief du rappel qui compte a sa carte, sans
+     redondance ni répétition d'une leçon à l'autre (« Ce qu'on interroge ») ;
+   - chaque `sentence` porte son relief : gras sur la notion interrogée,
+     souligné sur la question, aucune marque qui enjambe le trou (« Le relief
+     dans la carte ») ;
    - `answer` reste toujours un terme, un nom ou une référence courte, jamais
      une phrase qui résume l'idée.
 6. **Compiler et valider** avec `npm run content:check` après chaque unité
