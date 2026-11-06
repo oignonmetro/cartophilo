@@ -27,7 +27,9 @@ MIN_REPONSE = 300  # caractères : en dessous, ce ne sont plus des notes utilisa
 # condition d'une source précise, et on veut savoir quand un texte de Marx manque au notebook.
 SOURCE = ("Pour toute citation, donne le texte exact entre guillemets, l'œuvre de Marx, la section et le document du notebook d'où elle vient ; "
           "si elle vient d'une étude et non du texte de Marx, dis-le et nomme l'étude. Si un texte de Marx nécessaire manque au notebook, dis-le.")
-BREF = "Réponds en 250 mots au plus, sans introduction ni récapitulatif. " + SOURCE
+# Depuis le 2026-11-06, la longueur et la consigne de source sont dans « Configurer le chat » du
+# notebook (choix de l'utilisateur) : on ne les répète plus dans chaque question.
+BREF = ""
 DEJA = "Ne reprends pas les passages déjà donnés ({passages}) : apporte du neuf, ou dis qu'il n'y en a pas."
 
 # Les questions élémentaires vont par deux groupes, réponse en tableau court (même choix) ;
@@ -154,7 +156,7 @@ def texte_envoye(entree, j, q):
     """La question telle qu'elle part : bornée en longueur, et sans redite des passages connus."""
     vus = deja_cites(entree, j)
     # une thèse se démontre avec tous ses passages, même déjà donnés
-    suite = [BREF] + ([DEJA.format(passages=" ; ".join(vus))] if vus and q["phase"] not in ("D", "E", "F", "G") else [])
+    suite = ([BREF] if BREF else []) + ([DEJA.format(passages=" ; ".join(vus))] if vus and q["phase"] not in ("D", "E", "F", "G") else [])
     return q["texte"] + " " + " ".join(suite)
 
 

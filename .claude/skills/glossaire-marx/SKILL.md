@@ -86,8 +86,14 @@ Fischbach »), sans chercher à la vérifier ; le compte rendu final donne la li
 l'utilisateur ajoute le texte au notebook s'il le souhaite. Le dire aussi
 sans attendre, en une ligne, dans le message en cours.
 
-**La consigne de source part avec chaque question** : `question` l'ajoute
-d'office (`SOURCE`, dans `notebook.py`). L'utilisateur peut la poser aussi dans
+**La consigne de source et de longueur est dans « Configurer le chat » du
+notebook** (depuis le 2026-11-06) : « Réponds en 250 mots au plus par partie,
+sans introduction ni récapitulatif. Pour toute citation, donne le texte exact
+entre guillemets, l'œuvre de Marx, la section et le document du notebook
+d'où elle vient ; si elle vient d'une étude et non du texte de Marx, dis-le
+et nomme l'étude. Si un texte de Marx nécessaire manque au notebook,
+dis-le. » On ne la répète donc plus dans les questions : `question` ne
+l'ajoute plus (`BREF` vide dans `notebook.py`). L'utilisateur peut la poser aussi dans
 les paramètres du notebook s'il y a accès ; le 2026-11-04, depuis le navigateur
 intégré, le menu de configuration ne proposait que la suppression de
 l'historique. Le texte à y mettre :
@@ -212,8 +218,9 @@ en est.
 **Économie (choix de l'utilisateur, 2026-10-26, après Végétatif : 19
 questions avant le plan, des réponses de 8 000 caractères qui recitaient
 toutes les quatre mêmes passages, lues puis recopiées en entier)** :
-- `question` ajoute d'office à chaque question « 250 mots au plus » et la
-  liste des passages déjà donnés, à ne pas reprendre ;
+- la longueur (« 250 mots au plus ») est fixée dans « Configurer le chat » ;
+  `question` ajoute d'office la liste des passages déjà donnés, à ne pas
+  reprendre ;
 - le journal garde des **notes**, pas des transcriptions : pour chaque
   réponse, ses thèses, ses prémisses, ses citations avec leur source, et une
   ligne `Passage : œuvre, section` par passage (`question` les relit pour
