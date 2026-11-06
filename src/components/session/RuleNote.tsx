@@ -479,6 +479,12 @@ export function Rich({ text }: { text: string }) {
 const GAP_MARK = ''
 
 /**
+ * Dans la marque d'un trou, sépare son rang de ce qui s'y colle avant et
+ * après (`<marque>l'<sép>0<sép>,<marque>`, voir `RichGaps`).
+ */
+const GLUE = ''
+
+/**
  * Une phrase à trou, avec les mêmes marqueurs qu'un rappel (`*titre*`,
  * `**gras**`, `__souligné__`, `` `forme` ``, `{couleur}…{/couleur}`) :
  * chaque `___` est remplacé, dans l'ordre, par ce que rend `renderGap`,
@@ -489,27 +495,24 @@ export function RichGaps({ text, renderGap }: { text: string; renderGap: (index:
   // rendu n'a ainsi aucun compteur à faire avancer. Un compteur incrémenté
   // pendant le rendu se décalait au second passage que React fait en
   // développement (`StrictMode`), où le premier trou recevait le rang 1.
+  //
+  // Le trou est un bloc en ligne, avant et après lequel le navigateur s'estime
+  // libre de couper, soudeur (U+2060) ou espace insécable compris : une
+  // virgule passait seule au début de la ligne suivante (« nutrition / , la
+  // croissance »), une élision (« l' », « qu' ») ou un guillemet restait seul
+  // en bout de ligne. Tout ce qui touche le trou sans espace (« l' », « « »,
+  // « , », « » », « ; ») passe donc dans sa marque, par-dessus les marqueurs
+  // qui l'entourent (`*___*,`), et `withGaps` le rend avec lui dans une
+  // enveloppe insécable. Un trou précédé d'un mot entier, espace avant, garde
+  // le droit de passer à la ligne suivante.
   const pieces = text.split(GAP)
-  const numbered = pieces
-    .map((piece, index) => {
-      // Le trou est un bloc en ligne : l'espace insécable d'un guillemet qui
-      // le touche (« ___ », « ___ ») n'y suffit pas, le navigateur coupe
-      // quand même entre le trou et le guillemet. Le soudeur (U+2060) y
-      // remédie des deux côtés ; après le trou, il se place avant l'espace
-      // pour que `nbspQuotes` la reconnaisse encore.
-      if (index > 0 && /^\s»/.test(piece)) piece = `⁠${piece}`
-      if (index === pieces.length - 1) return piece
-      // Un trou qui suit directement une élision (« l'___ », « qu'___ »)
-      // forme un seul mot avec elle : rien ne doit jamais les séparer en
-      // retour à la ligne, l'apostrophe se retrouvant seule en bout de
-      // ligne comme une ponctuation orpheline. Un soudeur de mots (U+2060),
-      // invisible et sans largeur, interdit la coupure à cet endroit précis
-      // sans rien ajouter à l'affichage — un trou qui suit un mot entier
-      // (espace avant) garde, lui, le droit de passer à la ligne suivante.
-      const joiner = /\S$|\u00ab\s$/.test(piece) ? '\u2060' : ''
-      return `${piece}${joiner}${GAP_MARK}${index}${GAP_MARK}`
-    })
-    .join('')
+  for (let index = 0; index < pieces.length - 1; index++) {
+    const left = /([^\s*_`{}]*(?:«\s)?)((?:\*+|__|`|\{\w+\})*)$/.exec(pieces[index]!)!
+    const right = /^((?:\*+|__|`|\{\/\w+\})*)((?:\s[»;:!?]|[^\s*_`{}])*)/.exec(pieces[index + 1]!)!
+    pieces[index] = `${pieces[index]!.slice(0, left.index)}${left[2]}${GAP_MARK}${left[1]}${GLUE}${index}${GLUE}${right[2]}${GAP_MARK}`
+    pieces[index + 1] = `${right[1]}${pieces[index + 1]!.slice(right[0].length)}`
+  }
+  const numbered = pieces.join('')
   return <Spans spans={parseInline(numbered)} gaps={{ render: renderGap }} />
 }
 
@@ -590,9 +593,20 @@ function withGaps(text: string, gaps: GapSlots | undefined): ReactNode {
   if (!gaps || !text.includes(GAP_MARK)) return text
   // Découpé sur la marque, le texte alterne morceaux de phrase (rangs pairs)
   // et rangs de trou (rangs impairs).
-  return text.split(GAP_MARK).map((piece, index) => (
-    <Fragment key={index}>{index % 2 === 1 ? gaps.render(Number(piece)) : piece}</Fragment>
-  ))
+  return text.split(GAP_MARK).map((piece, index) => {
+    if (index % 2 === 0) return <Fragment key={index}>{piece}</Fragment>
+    // Ce qui touche le trou sans espace (voir `RichGaps`) est rendu avec lui
+    // dans une enveloppe insécable, sans quoi le navigateur coupe à ses bords.
+    const [before, rank, after] = piece.split(GLUE)
+    if (!before && !after) return <Fragment key={index}>{gaps.render(Number(rank))}</Fragment>
+    return (
+      <span key={index} className="whitespace-nowrap">
+        {before}
+        {gaps.render(Number(rank))}
+        {after}
+      </span>
+    )
+  })
 }
 
 /**
