@@ -45,44 +45,40 @@ lessons:
     **Mais cette modestie, loin d'évacuer les difficultés, en produit de nouvelles** : c'est l'objet de la leçon suivante.
   points:
   - id: intro1-l1-p1
-    sentence: "Que la vie représente un véritable défi pour toute entreprise de conceptualisation, on le répète depuis ___, dans son article « Le concept et la vie » (1966)."
+    sentence: "__Que la vie soit un défi pour toute entreprise de conceptualisation__, on le répète depuis ___, dans « Le concept et la vie » (1966)."
     answer: "Canguilhem"
     alt: ["Georges Canguilhem"]
-  - id: intro1-l1-p2
-    sentence: "Une première manière de cerner la vie procède par dichotomies : on oppose la vie, source d'activité, au règne de l'___."
-    answer: "inerte"
+  - id: intro1-l1-p11
+    sentence: "La question de la vie n'est pas réservée aux philosophes : **les limites du vivant**, **les attributs de la vie** et **ses origines** occupent les conversations ordinaires, surtout depuis que les questions ___ sont devenues incontournables."
+    answer: "écologiques"
     alt: []
-  - id: intro1-l1-p3
-    sentence: "Une première manière de cerner la vie procède par dichotomies : on oppose la vie, principe d'organisation, à l'___."
-    answer: "inorganique"
-    alt: []
-  - id: intro1-l1-p4
-    sentence: "Une première manière de cerner la vie procède par dichotomies : on oppose la vie, dont les manifestations sont orientées par une fin immanente, aux ___."
-    answer: "machines"
-    alt: []
-  - id: intro1-l1-p5
-    sentence: "Une première manière de cerner la vie procède par dichotomies : on oppose la vie, facteur d'___, à un monde entièrement soumis aux lois de la physique."
-    answer: "indétermination"
-    alt: []
-  - id: intro1-l1-p6
-    sentence: "Si la vie s'oppose à l'inerte, à l'inorganique et aux machines, elle échappe à une intelligence dont l'instrument est la rigueur logique et l'exactitude mathématique : il ne resterait que l'analogie, l'intuition et l'empathie, au risque de ne voir dans la vie qu'un simple ___."
-    answer: "mystère"
+  - id: intro1-l1-p13
+    sentence: "__Si la vie est ce qui n'est pas inerte, pas soumis aux lois de la physique, pas machinal__, elle échappe à une intelligence dont la **rigueur** ___ et l'**exactitude mathématique** sont le principal instrument."
+    answer: "logique"
     alt: []
   - id: intro1-l1-p7
-    sentence: "Faute de prise pour la rigueur logique, la vie ne se saisirait que par le raisonnement par analogie, une certaine forme d'empathie, et l'___."
+    sentence: "__Faute de prise pour la rigueur logique__, la vie ne se saisirait que par le **raisonnement par analogie**, une certaine **empathie**, et l'___."
     answer: "intuition"
     alt: []
+  - id: intro1-l1-p6
+    sentence: "Si la vie échappe à l'intelligence qui calcule et ne se saisit que par l'analogie, l'intuition et l'empathie, __le risque, au bout du chemin__, est de ne voir dans la vie qu'un simple « ___ »."
+    answer: "mystère"
+    alt: []
   - id: intro1-l1-p8
-    sentence: "On a pu attribuer, de manière caricaturale, la position qui fait de la vie un simple « mystère » à ___, dont les positions sont bien plus subtiles."
+    sentence: "On a pu attribuer, de manière **caricaturale**, la position qui fait de la vie un simple « mystère » à ___, dont les positions sont bien plus subtiles."
     answer: "Bergson"
     alt: ["Henri Bergson"]
   - id: intro1-l1-p9
-    sentence: "Pour échapper au « mystère » de la vie, on est tenté d'abandonner ce concept aux résonances métaphysiques et d'étudier plus modestement le ___."
+    sentence: "__Pour échapper au « mystère » de la vie__, on est tenté de se débarrasser de ce concept aux **résonances métaphysiques** et d'étudier plus modestement le ___."
     answer: "vivant"
     alt: []
   - id: intro1-l1-p10
-    sentence: "Biochimie, biologie et écologie construiraient leur objet en négligeant les « aspects philosophiques, ___ ou religieux » du concept de vie (Académie des sciences, *Les origines du vivant*)."
+    sentence: "__Biochimie, biologie et écologie construiraient leur objet en négligeant__ les « aspects philosophiques, ___ ou religieux » du concept de vie."
     answer: "spirituels"
+    alt: []
+  - id: intro1-l1-p15
+    sentence: "L'Académie des sciences propose d'étudier le vivant en négligeant les « aspects philosophiques, spirituels ou religieux » du concept de vie dans *___* (2016)."
+    answer: "Les origines du vivant"
     alt: []
 - id: intro1-l2
   title: "Le vivant des sciences : flou et dispersion"
@@ -98,41 +94,49 @@ lessons:
     **Ensuite, l'unité et l'autonomie des sciences de la vie.** Ces disciplines sont éparpillées, et certaines empruntent {red}à des sciences dont l'objet n'est pas le vivant{/red} leurs méthodes, et parfois une partie de leur contenu. Si la philosophie doit penser la vie en suivant ces sciences, le risque est {coral}la dissolution pure et simple de l'objet{/coral}. {sky}Canguilhem{/sky} pose la condition (*La connaissance de la vie*) : la biologie ne permet de {teal}« repenser ou rectifier des concepts philosophiques fondamentaux{/teal}, comme celui de vie » que si elle n'est pas {teal}« {/teal}fascinée par {teal}le prestige des sciences physico-chimiques{/teal}, réduite ou se réduisant {teal}au rôle de satellite de ces sciences »{/teal}. Une biologie devenue chimie appliquée n'a plus rien à dire de la vie.
   points:
   - id: intro1-l2-p1
-    sentence: "Les sciences du vivant en donnent une image floue : les frontières ne sont pas nettes entre les différents ___ du vivant, ni même, pour l'apparition des premières cellules, entre vivant et non-vivant."
+    sentence: "__Les sciences du vivant en donnent une image floue__ : les frontières ne sont pas nettes entre les différents ___ du vivant, ni même, pour l'apparition des premières cellules, entre **vivant et non-vivant**."
     answer: "règnes"
     alt: []
+  - id: intro1-l2-p11
+    sentence: "L'Académie des sciences tire de l'___ la conséquence qu'il existe un **continuum** entre toutes les espèces, et une **continuité** entre l'inerte et le vivant."
+    answer: "évolutionnisme"
+    alt: ["évolution"]
   - id: intro1-l2-p2
-    sentence: "Académie des sciences : « L'évolutionnisme nous oblige ainsi à accepter qu'il existe un ___ entre toutes les espèces vivantes. »"
+    sentence: "Académie des sciences : « L'évolutionnisme nous oblige ainsi à accepter qu'il existe un ___ __entre toutes les espèces vivantes__. »"
     answer: "continuum"
     alt: []
   - id: intro1-l2-p3
-    sentence: "Académie des sciences : « Pour les mêmes raisons, la séparation entre \"systèmes non vivants\" et \"systèmes vivants\" ne peut, elle aussi, qu'être ___. »"
+    sentence: "Académie des sciences : « Pour les mêmes raisons, __la séparation entre \"systèmes non vivants\" et \"systèmes vivants\"__ ne peut, elle aussi, qu'être ___. »"
     answer: "conventionnelle"
     alt: []
   - id: intro1-l2-p4
-    sentence: "Académie des sciences : « Tout se comprend donc dans une ___ entre l'inerte et le vivant, la cellule et l'organisme entier, une espèce et une autre, etc. »"
+    sentence: "Académie des sciences : « Tout se comprend donc dans une ___ __entre l'inerte et le vivant__, la cellule et l'organisme entier, une espèce et une autre, etc. »"
     answer: "continuité"
     alt: []
   - id: intro1-l2-p5
-    sentence: "Si les espèces sortent les unes des autres par degrés et le vivant de l'inerte, aucune coupure franche ne sépare vivant et non-vivant : la ligne qui les sépare est tracée par nous, elle est ___."
-    answer: "conventionnelle"
+    sentence: "__Si les espèces sortent les unes des autres par degrés et le vivant de l'inerte__, aucune coupure franche ne les sépare : la ligne qui sépare vivant et non-vivant est **tracée** ___, non trouvée dans les choses."
+    answer: "par nous"
     alt: []
   - id: intro1-l2-p6
-    sentence: "Parce que les sciences de la vie sont éparpillées et empruntent leurs méthodes à des sciences dont l'objet n'est pas le vivant, la philosophie qui les suit risque la ___ pure et simple de l'objet qu'elle veut penser."
+    sentence: "Parce que les sciences de la vie sont **éparpillées** et **empruntent leurs méthodes** à des sciences dont l'objet n'est pas le vivant, __la philosophie qui les suit risque__ la ___ pure et simple de l'objet qu'elle veut penser."
     answer: "dissolution"
     alt: []
-  - id: intro1-l2-p7
-    sentence: "Canguilhem, *La connaissance de la vie* : la biologie ne permet de rectifier le concept de vie que si elle n'est pas « réduite ou se réduisant au rôle de ___ » des sciences physico-chimiques."
-    answer: "satellite"
-    alt: []
   - id: intro1-l2-p8
-    sentence: "Canguilhem, *La connaissance de la vie* : la biologie ne permet de « repenser ou rectifier des concepts philosophiques fondamentaux, comme celui de vie » que si elle n'est pas fascinée par le prestige des sciences ___."
+    sentence: "Canguilhem : la biologie ne permet de « __repenser ou rectifier des concepts philosophiques fondamentaux, comme celui de vie__ » que si elle n'est pas **fascinée** par le prestige des sciences ___."
     answer: "physico-chimiques"
     alt: []
-  - id: intro1-l2-p9
-    sentence: "C'est ___ qui pose qu'une biologie fascinée par le prestige des sciences physico-chimiques ne peut plus rectifier le concept de vie."
-    answer: "Canguilhem"
-    alt: ["Georges Canguilhem"]
+  - id: intro1-l2-p7
+    sentence: "Canguilhem : __la biologie ne permet de rectifier le concept de vie que si elle n'est pas__ « réduite ou se réduisant au rôle de ___ » des sciences physico-chimiques."
+    answer: "satellite"
+    alt: []
+  - id: intro1-l2-p13
+    sentence: "Pour Canguilhem, une biologie devenue ___ **appliquée** n'a plus rien à dire de la vie."
+    answer: "chimie"
+    alt: []
+  - id: intro1-l2-p14
+    sentence: "Canguilhem pose la condition d'une biologie qui puisse rectifier le concept de vie, sans être le satellite des sciences physico-chimiques, dans *___*."
+    answer: "La connaissance de la vie"
+    alt: []
 - id: intro1-l3
   title: "Le vivant des sciences : des concepts empruntés"
   notes: |-
@@ -147,36 +151,56 @@ lessons:
     ! Ce n'est pas un reproche fait aux sciences : la difficulté est que la biologie vit d'une notion commune qu'elle défait en progressant.
   points:
   - id: intro1-l3-p1
-    sentence: "À l'attention des candidats à l'agrégation de 1976, ___ souligne que refuser le concept de vie comme hypostase du vivant reste un geste inachevé."
+    sentence: "À l'attention des candidats à l'agrégation de 1976, ___ souligne que __refuser le concept de vie comme hypostase du vivant__ reste un geste **inachevé**."
     answer: "Derrida"
     alt: ["Jacques Derrida"]
-  - id: intro1-l3-p2
-    sentence: "Le geste critique des sciences refuse le concept de « vie » comme ___ du « vivant » : une abstraction transformée en chose, placée derrière les vivants."
-    answer: "hypostase"
-    alt: []
-  - id: intro1-l3-p3
-    sentence: "Derrida rappelle que depuis la seconde moitié du XXe siècle, le vocabulaire de l'___ a essaimé dans les sciences du vivant, avec des résonances métaphysiques impensées."
-    answer: "information"
-    alt: []
-  - id: intro1-l3-p4
-    sentence: "Parler de « production », de « reproduction » et d'« information » fait opérer les spécialistes du vivant avec des concepts plus ou moins ___, dont les résonances métaphysiques demeurent impensées."
-    answer: "métaphoriques"
-    alt: []
   - id: intro1-l3-p5
     sentence: "Le séminaire où Derrida s'adresse aux candidats à l'agrégation de 1976 s'intitule *La vie la ___*."
     answer: "mort"
     alt: []
+  - id: intro1-l3-p2
+    sentence: "Le geste critique des sciences refuse le concept de « vie » comme ___ du « vivant » : **une abstraction transformée en chose**, une « Vie » placée derrière les vivants."
+    answer: "hypostase"
+    alt: []
+  - id: intro1-l3-p4
+    sentence: "Parler de « production », de « reproduction » et d'« information » fait opérer les spécialistes du vivant avec __des concepts plus ou moins__ ___, dont les **résonances métaphysiques** demeurent impensées."
+    answer: "métaphoriques"
+    alt: []
+  - id: intro1-l3-p3
+    sentence: "Depuis la seconde moitié du XXe siècle, le vocabulaire de l'___ (le **code génétique**, le **programme**) a essaimé dans les sciences du vivant, avec des résonances métaphysiques impensées."
+    answer: "information"
+    alt: []
+  - id: intro1-l3-p10
+    sentence: "__Les sciences du vivant qui refusent le concept de vie__ chassent la métaphysique par la porte, mais elle revient par le ___."
+    answer: "vocabulaire"
+    alt: []
+  - id: intro1-l3-p11
+    sentence: "Les scientifiques ont emprunté au ___, à la connaissance ordinaire, **la notion de vivant** à partir de laquelle ils ont construit leurs théories."
+    answer: "sens commun"
+    alt: []
   - id: intro1-l3-p6
-    sentence: "Les sciences de la vie sont plurielles : l'___ examine la structure des organismes (muscles, tissus), la biologie chimique emprunte ses outils à la chimie."
+    sentence: "__Les sciences de la vie sont plurielles__ : l'___ examine la **structure des organismes** (muscles, tissus), la biologie chimique emprunte ses outils à la chimie."
     answer: "anatomie"
     alt: []
+  - id: intro1-l3-p13
+    sentence: "**La notion commune de vie** se construit à partir de l'expérience ordinaire de la croissance et de la ___, dans leur différence avec la matière inerte."
+    answer: "nutrition"
+    alt: []
+  - id: intro1-l3-p14
+    sentence: "__La notion commune de vie offre un objet à la biologie__, qui peut ainsi se constituer en **champ scientifique** ___."
+    answer: "autonome"
+    alt: []
   - id: intro1-l3-p7
-    sentence: "La notion commune de vie offre un objet à la biologie, qui se constitue en champ autonome ; puis cette science se divise jusqu'à dissoudre l'unité du concept qui lui donne son nom, en grec *___*."
+    sentence: "La notion commune de vie offre un objet à la biologie ; puis __cette science se divise jusqu'à dissoudre l'unité__ du concept qui lui donne son nom, en grec *___*."
     answer: "bios"
     alt: []
   - id: intro1-l3-p8
-    sentence: "En empruntant au sens commun la notion de vivant puis en la dissolvant, les scientifiques, si l'on peut dire, scient la ___ sur laquelle ils sont assis."
+    sentence: "En **empruntant** au sens commun la notion de vivant puis en la **dissolvant**, les scientifiques, si l'on peut dire, scient la ___ sur laquelle ils sont assis."
     answer: "branche"
+    alt: []
+  - id: intro1-l3-p15
+    sentence: "__Ce n'est pas un reproche fait aux sciences__ : la difficulté est que la biologie **vit d'une notion commune** qu'elle ___ en progressant."
+    answer: "défait"
     alt: []
 - id: intro1-l4
   title: "Deux impasses, et un point de départ"
@@ -188,26 +212,30 @@ lessons:
     **D'où la méthode : commencer par la conception ordinaire de la vie.** Ce n'est pas une concession au sens commun, mais une exigence de la raison elle-même, que formule {sky}Canguilhem{/sky} (*La connaissance de la vie*) : {teal}« {/teal}un {teal}rationalisme raisonnable{/teal} doit savoir {teal}reconnaître ses limites{/teal} et {teal}intégrer ses conditions d'exercice »{/teal}. Or ces conditions, il les trouve dans {teal}« {/teal}la {teal}connaissance naïve »{/teal} des concepts qu'il met au travail, et c'est singulièrement vrai de la vie : la biologie ne s'est donné un objet qu'à partir de l'expérience commune du vivant. L'unité suivante part donc de cette conception ordinaire.
   points:
   - id: intro1-l4-p1
-    sentence: "Première des deux impasses du concept de vie : accorder à l'objet le maximum d'originalité et d'autonomie, au prix de se priver des moyens ___ de le connaître."
+    sentence: "__Première des deux impasses du concept de vie__ : accorder à l'objet le **maximum d'originalité et d'autonomie**, au prix de se priver des moyens ___ de le connaître."
     answer: "rigoureux"
     alt: []
   - id: intro1-l4-p2
-    sentence: "Seconde des deux impasses du concept de vie : par réaction ___, dissoudre la singularité de la vie, jusqu'à perdre l'objet même de l'enquête."
+    sentence: "__Seconde des deux impasses du concept de vie__ : par réaction ___, **dissoudre la singularité** de la vie, jusqu'à perdre l'objet même de l'enquête."
     answer: "antimétaphysique"
     alt: []
+  - id: intro1-l4-p6
+    sentence: "__Entre la vie comme mystère et la vie dissoute dans le vivant__, la méthode consiste à partir de la conception ___ de la vie, parce que **la biologie elle-même s'est donné son objet** à partir d'elle."
+    answer: "ordinaire"
+    alt: ["commune"]
+  - id: intro1-l4-p8
+    sentence: "Partir de la conception ordinaire de la vie n'est pas une ___ au sens commun, mais **une exigence de la raison** elle-même."
+    answer: "concession"
+    alt: []
   - id: intro1-l4-p3
-    sentence: "Canguilhem, *La connaissance de la vie* : « un rationalisme ___ doit savoir reconnaître ses limites et intégrer ses conditions d'exercice »."
+    sentence: "Canguilhem, *La connaissance de la vie* : « un rationalisme ___ __doit savoir reconnaître ses limites__ et intégrer ses conditions d'exercice »."
     answer: "raisonnable"
     alt: []
   - id: intro1-l4-p4
-    sentence: "Canguilhem, *La connaissance de la vie* : « un rationalisme raisonnable doit savoir reconnaître ses limites et intégrer ses conditions d'___ »."
+    sentence: "Canguilhem, *La connaissance de la vie* : « un rationalisme raisonnable doit savoir reconnaître ses limites et __intégrer ses conditions__ d'___ »."
     answer: "exercice"
     alt: []
   - id: intro1-l4-p5
-    sentence: "Pour Canguilhem, le rationalisme trouve ses conditions d'exercice dans la « connaissance ___ » des concepts qu'il met au travail, ce qui justifie de partir de la conception ordinaire de la vie."
+    sentence: "Pour Canguilhem, __le rationalisme trouve ses conditions d'exercice__ dans la « connaissance ___ » des concepts qu'il met au travail : d'où le départ par la **conception ordinaire** de la vie."
     answer: "naïve"
     alt: []
-  - id: intro1-l4-p6
-    sentence: "Entre la vie comme mystère et la vie dissoute dans le vivant, la méthode consiste à partir de la conception ___ de la vie, parce que la biologie elle-même s'est donné son objet à partir d'elle."
-    answer: "ordinaire"
-    alt: ["commune"]
