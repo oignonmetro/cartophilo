@@ -133,6 +133,10 @@ membre. Mais **on n'interroge pas tout** :
 - **pas de terme grec en marge du propos** (*bios* / *zôè* dans une leçon sur
   le principe interne de mouvement) ; un terme grec n'appelle sa carte que
   quand la leçon le travaille ;
+- **pas de carte qui redit un tableau** : ses colonnes exercées (banque, case
+  seule) l'interrogent déjà ; une carte n'y revient que pour ce que le tableau
+  ne dit pas (la raison, l'exemple, la citation) ou pour une colonne que ses
+  exercices laissent de côté (`tables:` dans la leçon) ;
 - **pas de détail secondaire** (un titre d'ouvrage moderne cité en passant,
   un acteur mineur d'un mythe, une pagination de second rang) ;
 - **pas de répétition d'une leçon à l'autre dans une même unité** : un terme
