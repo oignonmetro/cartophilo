@@ -78,8 +78,11 @@ réponse s'appuie sur une œuvre de Marx qui n'est pas dans le notebook, ou ne
 la connaît que par la citation qu'en fait une étude, ou dit ne pas pouvoir
 répondre faute du texte :
 `python -I $N manquante g-x "œuvre" "ce qu'on en voulait"`. La rédaction
-continue, la citation de seconde main restant permise avec son repère chez
-Marx ; le compte rendu final donne la liste (`manquantes`), pour que
+continue : pour une œuvre qu'on n'a ni dans le notebook ni en PDF, on fait
+confiance aux commentateurs et aux spécialistes qui la citent (consigne de
+l'utilisateur, 2026-11-06), et la citation de seconde main s'emploie comme
+une autre, avec son repère chez Marx et le nom du commentateur (« cité par
+Fischbach »), sans chercher à la vérifier ; le compte rendu final donne la liste (`manquantes`), pour que
 l'utilisateur ajoute le texte au notebook s'il le souhaite. Le dire aussi
 sans attendre, en une ligne, dans le message en cours.
 
