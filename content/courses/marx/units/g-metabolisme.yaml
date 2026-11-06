@@ -1,8 +1,143 @@
-# Entrée du glossaire de Marx (skill glossaire-marx), créée vide pour recevoir les
-# renvois des entrées déjà écrites ; à rédiger.
+# Entrée du glossaire de Marx (skill glossaire-marx) : notion. Citations reprises de
+# NotebookLM avec leur source (Le Capital, livre I, éditions sociales) ; Le Capital,
+# livre III, dans la traduction des Écrits philosophiques (Sève). Vérifiées par textes.py.
 
 id: g-metabolisme
 title: Métabolisme (`Stoffwechsel`)
 icon: book
 color: coral
-lessons: []
+lessons:
+- id: g-metabolisme-l1
+  title: Métabolisme
+  notes: |-
+    Chez Marx, le {violet}**métabolisme**{/violet} ({violet}*Stoffwechsel*{/violet}, littéralement « échange de matière ») est [def]. Ce n'est {pink}ni une image biologique ni un simple échange de marchandises{/pink}, mais le processus réel par lequel les hommes vivent de la nature. Le mot vient de la physiologie et de la chimie de son temps, celles de {sky}Liebig{/sky} ; Marx l'emploie pour dire ce que le [[g-corps-non-organique|corps non-organique]] de 1844 disait déjà : l'homme ne vit qu'en échangeant sans cesse avec la nature.
+
+    __**Le**__ {violet}__**métabolisme**__{/violet} __**est l'échange matériel entre l'homme et la nature dont dépend la vie humaine.**__ L'homme est un être corporel, qui doit prendre dans la nature de quoi satisfaire ses besoins ; or la nature ne les satisfait pas telle quelle, et il faut l'adapter par le travail. Donc {teal}« {/teal}le travail, en tant que formateur de valeurs d'usage, en tant que travail utile, est pour l'homme {teal}__une condition d'existence indépendante de toutes les formes de société__{/teal}, une {teal}nécessité naturelle éternelle{/teal}, {teal}__médiation indispensable au métabolisme qui se produit entre l'homme et la nature, et donc à la vie humaine__ »{/teal} (*Le Capital*, livre I, 1re section, chap. I). {coral}Ce qui ne dépend d'aucune forme de société, c'est ce métabolisme{/coral} : on peut produire en esclaves, en serfs ou en salariés, on ne peut pas cesser d'échanger avec la nature sans mourir. La [[g-activite-vitale|vie]] humaine a donc toujours une base matérielle.
+
+    __**Par le travail, l'homme**__ {violet}__**règle**__{/violet} __**ce métabolisme comme une puissance naturelle, et se transforme lui-même.**__ L'animal aussi échange avec la nature, mais sous l'empire de son instinct ; l'homme poursuit un but qu'il a d'abord conçu. D'où la définition : {teal}« {/teal}Le travail est d'abord un procès qui se passe entre l'homme et la nature, un procès dans lequel {teal}__l'homme règle et contrôle son métabolisme avec la nature__{/teal} par la médiation de sa propre action. Il se présente face à la matière naturelle {teal}__comme une puissance naturelle lui-même__ »{/teal} (*Le Capital*, livre I, 3e section, chap. V). {amber}Il agit comme une puissance naturelle{/amber}, parce qu'il est lui-même nature : ses bras, ses jambes, sa tête sont des forces naturelles qu'il met en mouvement. Et l'échange va dans les deux sens : {teal}« {/teal}en agissant sur la nature extérieure et en la modifiant par ce mouvement, {teal}__il modifie aussi sa propre nature__{/teal}. Il {teal}__développe les potentialités qui y sont en sommeil__ »{/teal} (*ibid*.). {coral}Régler le métabolisme, c'est donc aussi se former : l'homme qui façonne le bois développe les facultés qui dormaient en lui.{/coral}
+
+    __**Le**__ {violet}__**métabolisme social**__{/violet} __**fait passer les marchandises aux mains de ceux qui en usent.**__ Le mot s'étend à la société : {teal}« {/teal}Dans la mesure où le procès d'échange fait passer des marchandises {teal}__de mains où elles sont non-valeurs d'usage en des mains où elles sont valeurs d'usage__{/teal}, il s'agit d'un échange de matière, {teal}__du métabolisme social__ »{/teal} (*Le Capital*, livre I, 1re section, chap. III). La toile du tisserand ne lui sert à rien, puisqu'il ne la produit pas pour lui ; elle sert à qui s'en habille, et c'est donc l'échange qui la fait passer de l'un à l'autre. Mais il faut distinguer deux choses dans la circulation : le {violet}métabolisme{/violet} (*Stoffwechsel*), qui déplace des choses utiles, et le {violet}changement de forme{/violet} (*Formwechsel*) de la valeur, de la marchandise à l'argent et de l'argent à la marchandise. {coral}Le premier touche à la vie des hommes ; le second ne change que la forme de la valeur{/coral}, et c'est lui que le capital met au premier plan.
+
+    __**La production capitaliste**__ {red}__**rompt**__{/red} __**le métabolisme entre l'homme et la terre, et ruine la terre et le travailleur.**__ Le métabolisme suppose un cycle : ce que la terre donne doit lui revenir. Or la grande industrie entasse les hommes dans les villes, loin des champs, et {teal}« {/teal}perturbe d'un autre côté {teal}__le métabolisme entre l'homme et la terre__{/teal}, c'est-à-dire {teal}__le retour au sol des composantes de celui-ci usées par l'homme sous forme de nourriture et de vêtements__{/teal}, donc l'éternelle condition naturelle d'une fertilité durable du sol{teal} »{/teal} (*Le Capital*, livre I, 4e section, chap. XIII). Les déchets qui devraient engraisser la terre encombrent la ville. Et comme le capital cherche le rendement immédiat, il épuise la terre comme il épuise l'ouvrier : {teal}« {/teal}tout progrès de l'agriculture capitaliste est non seulement {teal}__un progrès dans l'art de piller le travailleur, mais aussi dans l'art de piller le sol__ »{/teal} (*ibid*.). D'où le paradoxe : la production capitaliste ne développe la technique {teal}« {/teal}qu'{teal}__en ruinant dans le même temps les sources vives de toute richesse : la terre et le travailleur__ »{/teal} (*ibid*.). {coral}Le travailleur et la terre sont ruinés par le même mouvement{/coral}, parce que tous deux sont des sources de richesse qu'on exploite sans les laisser se reconstituer. Les *Grundrisse* disent d'où vient cette ruine : du fait que le travailleur a été coupé de la terre. {teal}« {/teal}Ce qui requiert explication [...] ce n'est pas {teal}__l'unité des êtres humains vivants et actifs avec les conditions naturelles, inorganiques de leur métabolisme avec la nature__{/teal}, ni par suite de leur appropriation de cette nature, mais bien {teal}__la séparation entre ces conditions inorganiques de l'existence humaine et cette existence active__{/teal}, séparation qui n'a été poussée à son extrémité que dans {teal}__le rapport du travail salarié et du capital__ »{/teal} (*Grundrisse*, dans les *Écrits philosophiques*). {amber}L'unité avec la nature est le point de départ{/amber} ; {red}la séparation est l'œuvre de l'histoire{/red}, et le salarié, qui n'a plus que sa force de travail, est l'homme dont le métabolisme ne dépend plus de lui.
+
+    __**Cette rupture oblige à faire du métabolisme la**__ {green}__**loi régulatrice**__{/green} __**de la production sociale.**__ Tant que le métabolisme se réglait de lui-même, par le retour spontané des déchets aux champs, nul n'avait à le régler. Le capitalisme détruit ce cycle naturel ; il faut donc le reconstruire consciemment : la production capitaliste, {teal}« {/teal}en détruisant les facteurs d'origine simplement naturelle de ce métabolisme, elle oblige en même temps {teal}__à instituer systématiquement celui-ci en loi régulatrice de la production sociale__{/teal}, sous une forme adéquate au plein développement de l'homme{teal} »{/teal} (*ibid*.). Au livre III, Marx dit qui doit le régler : {teal}« {/teal}la liberté ne peut consister qu'en ceci que l'être humain socialisé, {teal}__que les producteurs associés règlent de façon rationnelle leurs échanges avec la nature__{/teal}, qu'ils la contrôlent ensemble {teal}__au lieu d'être dominés par sa puissance aveugle__{/teal}, qu'ils procèdent à ces échanges avec {teal}__la plus petite dépense d'énergie__{/teal} et dans les conditions correspondant de la façon la plus digne à leur nature d'êtres humains. Mais {teal}__cela constituera toujours un royaume de nécessité__ »{/teal} (*Le Capital*, livre III, dans les *Écrits philosophiques*). {amber}Le métabolisme ne cesse jamais d'être une nécessité{/amber} : la liberté qu'on y gagne est seulement de le régler au lieu de le subir, et {coral}le véritable royaume de la liberté commence au-delà, sur sa base{/coral}. {coral}Le remède n'est donc pas le retour à une nature intacte, mais une [[g-communaute|communauté]] qui contrôle ce que le marché laisse à l'aveugle.{/coral}
+
+    ! Le métabolisme n'est pas une notion écologiste au sens d'aujourd'hui : Marx ne veut pas préserver une nature vierge, il montre que la vie humaine est un échange matériel avec la nature, que le capitalisme désorganise et que la société devra régler.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | *Grundrisse* (formes antérieures) | ce qui est à expliquer, c'est la séparation du travailleur d'avec les conditions de son métabolisme |
+    | *Le Capital*, livre I, chap. I | le travail, médiation indispensable au métabolisme, donc à la vie humaine |
+    | *Le Capital*, livre I, chap. III | le métabolisme social fait passer les marchandises à leurs usagers |
+    | *Le Capital*, livre I, chap. V | l'homme règle son métabolisme avec la nature et modifie sa propre nature |
+    | *Le Capital*, livre I, chap. XIII | la rupture du métabolisme entre l'homme et la terre, la ruine du sol et du travailleur |
+    | *Le Capital*, livre III | les producteurs associés règlent rationnellement leurs échanges avec la nature |
+
+    **Voir aussi** : [[g-corps-non-organique|Corps non-organique]] · [[g-activite-vitale|Activité vitale]] · [[g-travail-aliene|Travail aliéné]] · [[g-vie-materielle|Vie matérielle]] · [[g-communaute|Communauté]]
+  tables:
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-metabolisme-l1-q1
+    sentence: "L'échange matériel continu entre l'homme et la nature, que le travail règle et dont dépend la vie humaine, Marx l'appelle le ___."
+    answer: métabolisme
+    alt: ["metabolisme"]
+  - id: g-metabolisme-l1-q2
+    sentence: "Le métabolisme, littéralement « échange de matière », se dit en allemand ___."
+    answer: Stoffwechsel
+    alt: []
+  - id: g-metabolisme-l1-q3
+    sentence: "Marx emprunte la notion de métabolisme à la chimie et à la physiologie de son temps, notamment à Justus von ___."
+    answer: Liebig
+    alt: []
+  - id: g-metabolisme-l1-q4
+    sentence: "Le travail utile est pour l'homme « une condition d'existence indépendante de toutes les formes de ___, une nécessité naturelle éternelle » (Le Capital, livre I, chap. I)."
+    answer: société
+    alt: ["societe"]
+  - id: g-metabolisme-l1-q5
+    sentence: "Le travail est la « médiation indispensable au métabolisme qui se produit entre l'homme et la nature, et donc à la ___ humaine » (Le Capital, livre I, chap. I)."
+    answer: vie
+    alt: []
+  - id: g-metabolisme-l1-q6
+    sentence: "Le travail est « un procès dans lequel l'homme règle et ___ son métabolisme avec la nature par la médiation de sa propre action » (Le Capital, livre I, chap. V)."
+    answer: contrôle
+    alt: ["controle"]
+  - id: g-metabolisme-l1-q7
+    sentence: "Dans le travail, l'homme « se présente face à la matière naturelle comme une puissance ___ lui-même » (Le Capital, livre I, chap. V)."
+    answer: naturelle
+    alt: []
+  - id: g-metabolisme-l1-q8
+    sentence: "« En agissant sur la nature extérieure et en la modifiant par ce mouvement, il modifie aussi sa propre ___ » (Le Capital, livre I, chap. V)."
+    answer: nature
+    alt: []
+  - id: g-metabolisme-l1-q9
+    sentence: "La définition du travail comme procès entre l'homme et la nature, où il règle son métabolisme, se trouve dans Le Capital, livre I, au chapitre ___."
+    answer: V
+    alt: ["5"]
+  - id: g-metabolisme-l1-q10
+    sentence: "Le procès d'échange fait passer des marchandises « de mains où elles sont non-valeurs d'usage en des mains où elles sont valeurs d'usage » : il s'agit du métabolisme ___ (Le Capital, livre I, chap. III)."
+    answer: social
+    alt: []
+  - id: g-metabolisme-l1-q11
+    sentence: "Dans la circulation, Marx distingue le métabolisme (Stoffwechsel), qui déplace des choses utiles, du changement de forme de la valeur, en allemand ___."
+    answer: Formwechsel
+    alt: []
+  - id: g-metabolisme-l1-q12
+    sentence: "La production capitaliste « perturbe d'un autre côté le métabolisme entre l'homme et la ___ » (Le Capital, livre I, chap. XIII)."
+    answer: terre
+    alt: []
+  - id: g-metabolisme-l1-q13
+    sentence: "Le métabolisme entre l'homme et la terre, c'est « le retour au ___ des composantes de celui-ci usées par l'homme sous forme de nourriture et de vêtements » (Le Capital, livre I, chap. XIII)."
+    answer: sol
+    alt: []
+  - id: g-metabolisme-l1-q14
+    sentence: "La rupture du métabolisme tient à la population entassée dans les grands centres : les déchets qui devraient retourner aux champs restent dans les ___."
+    answer: villes
+    alt: ["ville"]
+  - id: g-metabolisme-l1-q15
+    sentence: "« Tout progrès de l'agriculture capitaliste est non seulement un progrès dans l'art de piller le ___, mais aussi dans l'art de piller le sol » (Le Capital, livre I, chap. XIII)."
+    answer: travailleur
+    alt: []
+  - id: g-metabolisme-l1-q16
+    sentence: "La production capitaliste ne développe la technique « qu'en ruinant dans le même temps les sources vives de toute ___ : la terre et le travailleur » (Le Capital, livre I, chap. XIII)."
+    answer: richesse
+    alt: []
+  - id: g-metabolisme-l1-q17
+    sentence: "La production capitaliste ruine dans le même temps les sources vives de toute richesse : « la terre et le ___ » (Le Capital, livre I, chap. XIII)."
+    answer: travailleur
+    alt: []
+  - id: g-metabolisme-l1-q18
+    sentence: "En détruisant les facteurs naturels du métabolisme, la production capitaliste « oblige en même temps à instituer systématiquement celui-ci en loi ___ de la production sociale » (Le Capital, livre I, chap. XIII)."
+    answer: régulatrice
+    alt: ["regulatrice"]
+  - id: g-metabolisme-l1-q19
+    sentence: "Le métabolisme doit devenir la loi régulatrice de la production sociale « sous une forme adéquate au plein développement de l'___ » (Le Capital, livre I, chap. XIII)."
+    answer: homme
+    alt: []
+  - id: g-metabolisme-l1-q20
+    sentence: "Selon le livre III du Capital, la liberté consiste en ce que les producteurs ___ règlent de façon rationnelle leurs échanges avec la nature."
+    answer: associés
+    alt: ["associes"]
+  - id: g-metabolisme-l1-q21
+    sentence: "Contre la lecture écologiste, le remède de Marx à la rupture du métabolisme n'est pas le retour à une nature ___, mais sa régulation consciente par la société."
+    answer: intacte
+    alt: ["vierge"]
+  - id: g-metabolisme-l1-q22
+    sentence: "Les producteurs associés contrôlent ensemble leurs échanges avec la nature « au lieu d'être dominés par sa puissance ___ » (Le Capital, livre III)."
+    answer: aveugle
+    alt: []
+  - id: g-metabolisme-l1-q23
+    sentence: "Même réglé rationnellement par les producteurs associés, le métabolisme avec la nature « constituera toujours un royaume de ___ » (Le Capital, livre III)."
+    answer: nécessité
+    alt: ["necessite"]
+  - id: g-metabolisme-l1-q24
+    sentence: "« Ce qui requiert explication [...] ce n'est pas l'unité des êtres humains vivants et actifs avec les conditions naturelles, inorganiques de leur métabolisme avec la nature », mais bien leur ___ (Grundrisse)."
+    answer: séparation
+    alt: ["separation"]
+  - id: g-metabolisme-l1-q25
+    sentence: "La séparation entre les conditions inorganiques de l'existence humaine et cette existence active n'a été poussée à son extrémité que dans le rapport du travail ___ et du capital (Grundrisse)."
+    answer: salarié
+    alt: ["salarie"]
