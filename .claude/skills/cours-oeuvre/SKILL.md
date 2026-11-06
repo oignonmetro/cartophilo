@@ -45,7 +45,21 @@ l'autre).
 
 - **Le notebook NotebookLM** de l'œuvre, s'il est donné ; sinon, s'en
   passer et expliquer les arguments d'après l'édition et sa propre
-  connaissance de l'auteur.
+  connaissance de l'auteur. Pour un notebook partagé en lecture seule, on ne
+  peut pas régler le chat : utiliser la **copie privée** de l'utilisateur, dont
+  « Configurer le chat » porte la consigne générale (citations exactes avec
+  repère, traductions de Gemini signalées, arguments prémisse par prémisse,
+  pas d'introduction ni d'ouverture), et ne pas la répéter dans les
+  questions (choix de l'utilisateur, 2026-11-06) :
+  - Aristote : https://notebook.google.com/notebook/33862375-4a3c-49c4-997e-519d33ead38e
+    (« Aristote : la vie (Cartophilo) », repères Bekker ; sources presque
+    toutes en anglais : une citation traduite par Gemini n'est pas une
+    citation d'édition) ;
+  - Kant : https://notebook.google.com/notebook/a8cfae0a-71fc-4b33-a937-4b6e94d9b0ef
+    (« Kant : la vie (Cartophilo) », traduction Renaut, repères en
+    paragraphes).
+  Pour un nouveau notebook partagé : « Copier le notebook », nommer la copie
+  « … (Cartophilo) », la régler, et l'ajouter à cette liste.
 - **L'édition de référence et son PDF**, rangés de préférence dans
   `C:\Users\Arthur\Œuvres` (un fichier par œuvre), comme les traités de
   Plotin dans `C:\Users\Arthur\Traités Plotin`. Sans PDF, les citations ne
