@@ -128,6 +128,15 @@
   --color-plum-deep: #b44cf0;
 
   /*
+   * `blue`, réservée aux termes latins et grecs (`{blue}physis{/blue}`,
+   * `{blue}a priori{/blue}`), en italique : un bleu franc, à 222°, entre
+   * `sky` (199°, la structure et les noms d'auteurs) et `violet` (247°, les
+   * termes techniques). Rétablie en 2026-11-06, pour cet usage seul.
+   */
+  --color-blue: #4a7bf7;
+  --color-blue-deep: #1f4fc9;
+
+  /*
    * Teintes des pistes et des unités (`color` dans le contenu, voir
    * `unitColorSchema`), séparées de la palette des rappels ci-dessus
    * (`{couleur}…{/couleur}`, voir `noteColorSchema`). Les deux palettes

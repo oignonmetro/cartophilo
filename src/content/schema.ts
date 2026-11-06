@@ -453,7 +453,7 @@ export const subjectGroupSchema = z.object({
 export type SubjectGroup = z.infer<typeof subjectGroupSchema>
 
 /** Couleur du marqueur `{couleur}…{/couleur}` dans un rappel (voir `content/notes.ts`). */
-export const noteColorSchema = z.enum(['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink', 'plum'])
+export const noteColorSchema = z.enum(['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink', 'plum', 'blue'])
 
 export const unitSchema = z.object({
   id: slug,

@@ -341,8 +341,11 @@ nommé comme tel (harmonisé le 2026-11-05).
   vert marque le premier, ou pour que deux membres négatifs voisins ne
   prennent pas la même couleur ; la conception naïve écartée se met volontiers
   en rose, sans obligation ;
-- `violet` : les termes techniques et notions clés (le terme grec ou allemand
-  compris, en plus de l'italique) ;
+- `violet` : les termes techniques et notions clés (le terme allemand compris) ;
+- `blue` : les termes grecs et latins, en italique (`{blue}*zôê*{/blue}`,
+  `{blue}*a priori*{/blue}`), qu'ils soient translittérés ou en caractères
+  grecs ; le terme français qu'ils rendent garde sa couleur (violet si c'est
+  une notion clé). Ajoutée le 2026-11-06 ;
 - `teal` : les citations du texte étudié. Le guillemet ouvrant en teal, puis en
   teal les mots clefs de la citation, les mots de liaison restant nus, le
   guillemet fermant avec le dernier membre : `{teal}« {/teal}bientôt

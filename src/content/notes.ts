@@ -35,7 +35,7 @@ const COLOR_NAMES = noteColorSchema.options
  *
  * `form` marque un mot étranger cité au milieu d'une explication française
  * (allemand, latin…) — voir `RuleNote.tsx`, qui l'affiche en italique.
- * `color` teinte un passage dans l'une des dix couleurs déjà en usage dans
+ * `color` teinte un passage dans l'une des onze couleurs déjà en usage dans
  * l'app, pour distinguer deux notions qui reviennent tout au long d'un
  * rappel (une thèse et l'objection qu'on lui oppose, par exemple).
  */

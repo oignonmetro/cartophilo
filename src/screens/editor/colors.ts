@@ -1,7 +1,7 @@
 import type { NoteColor } from '@/content/schema'
 
 /** La palette de la barre du rappel, reprise telle quelle par les cases de tableau. */
-export const COLORS = ['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink', 'plum'] as const
+export const COLORS = ['teal', 'violet', 'coral', 'amber', 'sky', 'yellow', 'green', 'red', 'pink', 'plum', 'blue'] as const
 
 export const SWATCH: Record<NoteColor, string> = {
   teal: 'bg-teal',
@@ -14,6 +14,7 @@ export const SWATCH: Record<NoteColor, string> = {
   red: 'bg-red',
   pink: 'bg-pink',
   plum: 'bg-plum',
+  blue: 'bg-blue',
 }
 
 const WRAPPED = /^\{(\w+)\}([\s\S]*)\{\/\1\}$/

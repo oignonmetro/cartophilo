@@ -153,9 +153,9 @@ règles ou les pièges :
 | `[def]`, `[def:g-vie]` | la définition de l'entrée (ou de `g-vie`), tirée de `definitions.yaml` | l'en-tête d'une entrée du glossaire : « Chez Plotin, la **vie** (*zôê*) est [def]. » ; remplacée à la compilation, cible vérifiée par `content:check` |
 | `[[g-vie\|la vie]]` | renvoi souligné en pointillé, qui ouvre l'unité `g-vie` en feuille | relier une entrée du glossaire à ses voisines (voir la skill `glossaire`) ; rappels seulement, texte littéral, cible vérifiée par `content:check`. `[[traite53\|traité 53]]` vise le traité de rang chronologique 53 : teinte prune, son titre au survol, son résumé au clic |
 
-`{couleur}…{/couleur}` accepte dix teintes : `teal`, `violet`, `coral`,
-`amber`, `sky`, `yellow`, `green`, `red`, `pink`, `plum` (celle-ci réservée
-aux traités). C'est la palette des
+`{couleur}…{/couleur}` accepte onze teintes : `teal`, `violet`, `coral`,
+`amber`, `sky`, `yellow`, `green`, `red`, `pink`, `plum` (réservée
+aux traités) et `blue` (réservée aux termes latins et grecs, en italique). C'est la palette des
 rappels, distincte de celle des pistes et des unités (`color:`, qui admet en
 plus `orange` et `blue`) : les deux ont leurs propres variables CSS, et
 retoucher l'une ne change pas l'autre. Utile pour opposer deux notions sur toute la longueur d'un

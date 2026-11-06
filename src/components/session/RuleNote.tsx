@@ -71,6 +71,7 @@ export const INLINE_COLORS: Record<NoteColor, string> = {
   red: 'text-red-deep',
   pink: 'text-pink-deep',
   plum: 'text-plum-deep',
+  blue: 'text-blue-deep',
 } as const
 
 export type Tone = (typeof TONES)[keyof typeof TONES]
