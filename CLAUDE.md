@@ -82,7 +82,8 @@ l'épreuve :
   (`sep-vie…`, `sep-mort…`, `sep-camus…`, `sep-bio…`, `sep-psy…`,
   `sep-arbio…`), écrits avec la skill `cours-sep` (`.claude/skills/cours-sep/`),
   selon `content/philosophie.md`. La piste **Manuel** suit le manuel collectif
-  sur la vie, un groupe par chapitre, à partir des scans océrisés qu'en donne
+  sur la vie, un groupe par chapitre (titré par le sujet du chapitre, jamais
+  par le nom de son auteur), à partir des scans océrisés qu'en donne
   l'utilisateur, selon le § « Un cours sur un auteur, tiré d'un commentaire »
   de `content/philosophie.md` et la conduite de `cours-sep` : d'abord
   l'introduction de Chaintreuil et Rouquayrol (`intro1` à `intro5`), puis
