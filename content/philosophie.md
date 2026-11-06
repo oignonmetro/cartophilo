@@ -111,8 +111,10 @@ sur `arvie1`, le 2026-11-06) :
   thèse : « __Pour un vivant, se mouvoir__, c'est réaliser les mouvements que
   sa ___ suppose », « __Parmi les vivants, l'homme se singularise par__ la
   ___ ». Le gras peut s'y loger (`__Pour un vivant, **se mouvoir**__`) ;
-- **jamais de marque qui enjambe le trou** : la phrase est coupée à `___`, un
-  souligné ouvert avant et fermé après s'afficherait tel quel ;
+- **le relief peut toucher le trou, et même l'enjamber** : la phrase s'analyse
+  entière, trous compris (`RichGaps`, `src/components/session/RuleNote.tsx`),
+  de sorte que « __placent l'individu sous la__ ___ » comme « __sous la ___
+  d'autrui__ » s'affichent bien ;
 - **le trou sur le groupe qui compte**, pas sur son mot le plus faible :
   « le ___ (*alloiôsis*) », réponse « changement qualitatif », plutôt que « le
   changement ___ » ; « entre ___ », réponse « la nature et l'art », plutôt que
@@ -653,8 +655,7 @@ validation section par section se reporte sur un auto-audit systématique.
    - chaque élément mis en relief du rappel qui compte a sa carte, sans
      redondance ni répétition d'une leçon à l'autre (« Ce qu'on interroge ») ;
    - chaque `sentence` porte son relief : gras sur la notion interrogée,
-     souligné sur la question, aucune marque qui enjambe le trou (« Le relief
-     dans la carte ») ;
+     souligné sur la question (« Le relief dans la carte ») ;
    - `answer` reste toujours un terme, un nom ou une référence courte, jamais
      une phrase qui résume l'idée.
 6. **Compiler et valider** avec `npm run content:check` après chaque unité
