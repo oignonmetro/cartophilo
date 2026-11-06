@@ -1,7 +1,10 @@
 # Entrée du glossaire de Marx (skill glossaire-marx) : notion. Citations reprises de
-# NotebookLM avec leur source (Manuscrits de 1844, Grundrisse, L'Idéologie allemande,
-# éditions sociales), vérifiées par textes.py ; Notes sur James Mill citées par
-# Shambaugh, absentes du notebook et des PDF.
+# NotebookLM avec leur source (Manuscrits de 1844, L'Idéologie allemande, éditions
+# sociales), vérifiées par textes.py ; Notes sur James Mill connues par les études de
+# Wittmann et de Collin (citations de commentateur sans teal ; Marx cité par un
+# commentateur avec son nom). Refondue le 2026-11-06 après deux relectures : les
+# anciennes étapes redisaient Activité vitale, Être générique, Être naturel et Travail
+# aliéné.
 
 id: g-expression-de-la-vie
 title: Expression de la vie (`Lebensäußerung`)
@@ -11,35 +14,29 @@ lessons:
 - id: g-expression-de-la-vie-l1
   title: Expression de la vie
   notes: |-
-    Chez Marx, l'{violet}**expression de la vie**{/violet} ({violet}*Lebensäußerung*{/violet}), que les Éditions sociales rendent aussi par « manifestation de la vie », est [def]. Le verbe *äußern* veut dire mettre au dehors : {pink}il ne s'agit pas d'exprimer des sentiments ou des idées{/pink}, mais de faire passer ses forces dans des objets. Marx reprend le mot à {sky}Moses Hess{/sky}, pour qui « la vie est échange d'activité vitale productrice » (cité par {sky}Wittmann{/sky}), et l'oppose à son double, la {red}*Lebensentäußerung*{/red}, l'aliénation de la vie. Là où l'[[g-activite-vitale|activité vitale]] dit ce que le vivant fait pour vivre, l'expression dit que ce faire {amber}montre et réalise ce qu'il est{/amber}.
+    Chez Marx, l'{violet}**expression de la vie**{/violet} ({violet}*Lebensäußerung*{/violet}), que les Éditions sociales rendent aussi par « manifestation de la vie », est [def]. Le verbe *äußern* veut dire mettre au dehors : {pink}il ne s'agit pas d'exprimer des sentiments ou des idées{/pink}, mais de faire passer ses forces dans des objets. Marx reprend le mot à {sky}Moses Hess{/sky}, pour qui « la vie est échange d'activité vitale productrice » (cité par {sky}Wittmann{/sky}). Trois thèses voisines sont établies ailleurs : que travailler soit pour l'homme sa façon de manifester sa vie, et que le salarié ne vive plus que hors de son travail ([[g-activite-vitale|activité vitale]]) ; que la manifestation de la vie de chacun soit sociale ([[g-etre-generique|être générique]]) ; que l'objet produit confirme la vie d'un être naturel au lieu de la lui retirer ([[g-etre-naturel|être naturel]]). Le propre de la notion est ailleurs : elle a pour double l'{red}aliénation de la vie{/red}, pour contraire l'{red}avoir{/red}, et elle s'étend aux idées.
 
-    __**L'homme ne peut**__ {violet}__**manifester sa vie**__{/violet} __**qu'à l'aide d'objets réels, sensibles.**__ La manifestation n'est pas un débordement d'une intériorité qui existerait d'abord seule. Car l'homme est un [[g-etre-naturel|être naturel]] : {teal}« {/teal}Dire que l'homme est un être en chair et en os, doué de forces naturelles, vivant, réel, sensible, objectif, c'est dire qu'{teal}__il a pour objet de son être, de la manifestation de sa vie, des objets réels, sensibles__{/teal}, et qu'{teal}__il ne peut manifester sa vie qu'à l'aide d'objets réels, sensibles__ »{/teal} (*Manuscrits de 1844*, troisième manuscrit, critique de Hegel). Ses forces ont leurs objets hors de lui (voir être naturel) ; or une force ne se manifeste qu'en s'exerçant sur quelque chose. Donc {amber}une vie qui ne passerait dans aucun objet ne serait pas exprimée, elle ne serait pas du tout{/amber}. C'est le point contre {sky}Hegel{/sky} : pour lui, l'objet est la conscience devenue étrangère à elle-même ; pour Marx, {coral}l'objet est le lieu même où la vie se manifeste{/coral}. Le modèle en est le travail, où l'homme {teal}« {/teal}{teal}__se contemple donc lui-même dans un monde qu'il a créé__ »{/teal} (*Manuscrits de 1844*, premier manuscrit, [[g-travail-aliene|travail aliéné]]).
+    __**Exprimer sa vie, c'est faire passer ses forces dans un**__ {violet}__**objet**__{/violet}__**, ce qui n'est pas en soi s'aliéner.**__ Contre {sky}Hegel{/sky}, qui confond l'objectivation et l'aliénation, Marx tient que produire un objet confirme la vie du producteur (voir être naturel et [[g-travail-aliene|travail aliéné]]). Si produire un objet n'est pas en soi se perdre, ce qui fait d'une expression une perte n'est donc pas l'acte, mais ses conditions. La langue allemande le marque d'un préfixe : *Äußerung* met au dehors, *Ent-äußerung* met au dehors en séparant, et {red}*Ent-*{/red} dit l'éloignement, la perte ({sky}Fischbach{/sky}). Ces conditions sont celles-ci : quand l'homme produit séparé de ses moyens de production, et que le produit revient à un autre, il ne garde rien de ce qu'il a mis au dehors. La propriété privée exprime alors le fait {teal}« {/teal}que {teal}__la manifestation de sa vie est l'aliénation de sa vie__{/teal}, que {teal}__sa réalisation est sa privation de réalité__{/teal}, une réalité étrangère{teal} »{/teal} (*Manuscrits de 1844*, troisième manuscrit, propriété privée et communisme). {coral}*Lebensäußerung* et *Lebensentäußerung* nomment le même acte, dans deux conditions différentes{/coral} : le second n'est pas un autre acte, c'est le premier quand on en perd le fruit.
 
-    __**La**__ {violet}__**manifestation de la vie**__{/violet} __**de chacun est une manifestation de la vie sociale.**__ On croit que l'individu s'exprime d'abord seul, puis entre en société. Mais même l'activité solitaire du savant use d'une langue et de matériaux qu'il tient des autres. Donc, {teal}« {/teal}{teal}__la manifestation de sa vie__{/teal} – même si elle n'apparaît pas sous la forme immédiate d'une manifestation collective de la vie, accomplie avec d'autres et en même temps qu'eux – {teal}__est donc une manifestation et une affirmation de la vie sociale__ »{/teal} (*Manuscrits de 1844*, troisième manuscrit, propriété privée et communisme). En effet, {teal}« {/teal}{teal}__la vie individuelle et la vie générique de l'homme ne sont pas différentes__{/teal}{teal} »{/teal} (*ibid*.) : {amber}la société n'est pas une abstraction en face de l'individu{/amber}. Les *Notes sur James Mill*, la même année, en tirent ce que serait une production humaine, car {teal}« {/teal}{teal}__l'échange de l'activité humaine au sein de la production elle-même__{/teal} que l'échange réciproque des produits humains {teal}__est = à l'activité générique__{/teal}{teal} »{/teal} (cité par {sky}Wittmann{/sky}). {sky}Wittmann{/sky} en résume la fin en trois moments : produisant librement, j'affirme mon individualité en l'objectivant ; je jouis de ma production, qui est alors « une véritable *Lebensäusserung* et non une activité contrainte » ; et je jouis de la jouissance que mon produit procure à l'autre, « car j'ai satisfait un besoin humain et ainsi objectivé l'essence humaine ». L'expression appelle ainsi la {violet}jouissance{/violet} (*Genuß*) qui la reçoit : en usant de mon produit, l'autre confirme mon activité, comme je confirme la sienne en usant du sien. {coral}Produire pour un autre, c'est alors satisfaire son besoin et confirmer à la fois sa vie et la mienne{/coral} (voir [[g-etre-generique|être générique]]).
+    __**La propriété privée met le**__ {red}__**sens de l'avoir**__{/red} __**à la place de l'expression de la vie.**__ Exprimer sa vie, c'est exercer ses forces sur un objet ; posséder, c'est seulement disposer de l'objet, sans rien y exercer. Or, sous la propriété privée, qui résulte elle-même du travail aliéné (voir travail aliéné), l'activité n'est plus qu'un moyen de gagner de quoi vivre, et l'objet n'est plus rien d'autre qu'un moyen de jouir. D'où un seul rapport aux choses, les avoir : {teal}« {/teal}La propriété privée nous a rendus si sots et si bornés qu'{teal}__un objet n'est nôtre que lorsque nous l'avons__{/teal}, qu'il existe donc pour nous comme capital ou qu'il est immédiatement possédé, mangé, bu, porté sur notre corps, habité par nous{teal} »{/teal} (*ibid*.). Le rapport sensible et multiple aux objets, voir, entendre, aimer, se réduit donc à un seul : {teal}« {/teal}{teal}__à la place de tous les sens physiques et intellectuels est donc apparue la simple aliénation de tous ces sens, le sens de l'avoir__ »{/teal} (*ibid*.), catégorie que Marx dit tenir de {sky}Hess{/sky}. L'économie politique en fait une morale, où ce qu'on ne vit pas s'accumule : {teal}« {/teal}moins tu es, moins tu manifestes ta vie, plus tu possèdes, plus ta vie aliénée grandit{teal} »{/teal} (*Manuscrits de 1844*, troisième manuscrit, besoins). {amber}L'avoir croît à mesure que l'expression décroît{/amber}. C'est pourquoi l'abolition de la propriété privée n'est pas un partage des biens, qui laisserait intact le sens de l'avoir : en rendant les objets à un usage social, elle libère les sens de la possession, si bien qu'ils {teal}« {/teal}{teal}__se rapportent à la chose pour la chose__{/teal}{teal} »{/teal} ; elle est donc {teal}« {/teal}l'émancipation totale de tous les sens et de toutes les qualités humaines{teal} »{/teal} (*Manuscrits de 1844*, troisième manuscrit, propriété privée et communisme). {coral}On retrouve l'expression quand on cesse de vouloir avoir.{/coral}
 
-    __**Sous la propriété privée, l'**__{violet}__**expression de la vie**__{/violet} __**devient**__ {red}__**perte de la vie**__{/red}__**.**__ Le travail objective la vie du producteur ; or, sous la propriété privée, le produit appartient à un autre et se dresse contre lui, si bien que {teal}« {/teal}{teal}__la vie qu'il a prêtée à l'objet s'oppose à lui, hostile et étrangère__ »{/teal} (*Manuscrits de 1844*, premier manuscrit, travail aliéné). Le même acte qui devait réaliser sa vie la lui retire. La propriété privée est l'expression sensible du fait {teal}« {/teal}que {teal}__la manifestation de sa vie est l'aliénation de sa vie__{/teal}, que {teal}__sa réalisation est sa privation de réalité__{/teal}, une réalité étrangère{teal} »{/teal} (*Manuscrits de 1844*, troisième manuscrit, propriété privée et communisme) : en allemand, un simple préfixe sépare les deux, {red}*Lebensäußerung*{/red} devenue {red}*Lebensentäußerung*{/red}. L'économie politique en fait une règle de conduite, car elle prêche l'épargne : {teal}« {/teal}{teal}__moins tu es, moins tu manifestes ta vie__{/teal}, plus tu possèdes, plus ta vie aliénée grandit{teal} »{/teal} (*Manuscrits de 1844*, troisième manuscrit, besoins). {coral}L'avoir prend la place de l'expression{/coral} : ce qu'on ne vit plus, on l'accumule en argent (voir [[g-besoin|besoin]]).
+    __**Dans une production humaine, l'expression de ma vie satisferait le**__ {violet}__**besoin d'autrui**__{/violet} __**et confirmerait sa vie.**__ La même année, dans ses *Notes de lecture sur James Mill*, que le notebook ne contient pas, Marx décrit ce que serait une production qui ne passerait pas par l'argent. {sky}Wittmann{/sky} en résume l'argument : produisant librement, {coral}j'affirme mon individualité en l'objectivant{/coral} ; je jouis de ma production, qui est alors « une véritable *Lebensäusserung* et non une activité contrainte » ; en procurant à l'autre la jouissance de mon produit, je prends plaisir, « car j'ai satisfait un besoin humain et ainsi objectivé l'essence humaine ». Mon expression confirme aussi la vie de l'autre, parce que son [[g-besoin|besoin]] n'est pas un simple manque : c'est une force tendue vers un objet. En lui donnant cet objet, je donne à cette force de quoi s'exercer ; sa jouissance est donc sa propre manifestation de vie, si bien que, selon Wittmann, « dans ma *Lebensäusserung* individuelle, je suis à l'origine de la *Lebensäusserung* de l'autre personne ». L'expression appelle ainsi la {violet}jouissance{/violet} (*Genuß*) d'autrui, qui l'achève. Marx en tire que l'échange des activités dans la production équivaut à l'activité par laquelle l'homme se rapporte à son genre (voir [[g-etre-generique|être générique]]). Dans l'échange marchand, au contraire, chacun ne produit que pour avoir le produit de l'autre, et le lien entre eux est confié à une chose, l'argent. Or ce qui fait le lien règne sur ce qu'il relie : {teal}« {/teal}Rien d'étonnant à ce que {teal}__le médiateur se change en un vrai dieu__{/teal}, car le médiateur règne en vraie puissance sur les choses pour lesquelles il me sert d'intermédiaire. Son culte devient une fin en soi{teal} »{/teal} (cité par {sky}Collin{/sky}). {red}L'argent prend la place de l'expression réciproque.{/red}
 
-    __**Pour le**__ {red}__**salarié**__{/red}__**, la vie commence où cesse l'activité.**__ En 1849, Marx reprend la question sans le vocabulaire de 1844 : l'ouvrier qui tisse ou file douze heures regarde-t-il ce travail {teal}« {/teal}{teal}__comme une manifestation de sa vie, comme sa vie__{/teal} ? Bien au contraire. {teal}__La vie commence pour lui où cesse l'activité__{/teal}, à table, à l'auberge, au lit{teal} »{/teal} (*Travail salarié et capital*, section I). La raison est que ce qu'il fait ne compte pas pour lui, puisque seul le salaire en compte : les douze heures {teal}« {/teal}{teal}__n'ont nullement pour lui le sens de tisser, de filer, de percer__{/teal}, etc., mais celui de gagner ce qui lui permet d'aller à table, à l'auberge, au lit{teal} »{/teal} (*ibid*.). {amber}Le contenu de l'activité, qui devait exprimer l'ouvrier, lui devient indifférent{/amber} (voir [[g-activite-vitale|activité vitale]], pour le sacrifice de la vie). Les *Grundrisse* en donnent le mécanisme : le travailleur ne vend {teal}« {/teal}qu'une disposition temporaire de sa capacité de travail{teal} »{/teal}, qu'il recommence à vendre dès qu'il a ingéré de quoi {teal}« {/teal}{teal}__reproduire ses manifestations d'être vivant__ »{/teal} (*Grundrisse*, chapitre du capital). {red}Ses manifestations de vie sont devenues une marchandise louée à l'heure{/red}.
+    __**La**__ {violet}__**conscience**__{/violet} __**est l'expression de la vie réelle, et l'**__{red}__**idéologie**__{/red} __**celle d'une vie bornée.**__ En 1845, l'expression s'étend aux idées. Les individus sont ce que sont leurs manières de manifester leur vie (voir activité vitale) ; or leurs idées font partie de cette vie, car {teal}« {/teal}la production des idées, des représentations et de la conscience est d'abord directement et intimement mêlée à l'activité matérielle et au commerce matériel des hommes, {teal}__elle est le langage de la vie réelle__ »{/teal} (*L'Idéologie allemande*, I). La conscience, *Bewusstsein*, est l'être devenu conscient, *das bewusste Sein* : {teal}« {/teal}{teal}__la conscience ne peut jamais être autre chose que l'être conscient__{/teal}, et l'être des hommes est leur processus de vie réel{teal} »{/teal} (*ibid*.). Donc {teal}« {/teal}{teal}__ce n'est pas la conscience qui détermine la vie, mais la vie qui détermine la conscience__ »{/teal} (*ibid*.). D'où l'explication de l'{red}idéologie{/red}. La {violet}division du travail{/violet} sépare le travail matériel du travail intellectuel : ceux qui produisent les idées sont détachés de la production, et leurs idées paraissent sortir d'elles-mêmes et diriger le monde. Ce n'est pas une ignorance, qui serait un simple manque, mais une image inversée : la vie réelle s'y exprime bien, mais telle qu'une activité séparée la voit. {teal}« {/teal}Si l'expression consciente des conditions de vie réelles des individus est imaginaire, si, dans leurs représentations, ils mettent la réalité la tête en bas, ce phénomène est encore une conséquence de {teal}__leur mode d'activité matériel borné__{/teal} et des rapports sociaux étriqués qui en résultent{teal} »{/teal} (*ibid*., cité par {sky}Fischbach{/sky}). {amber}L'illusion est l'expression exacte d'une vie mutilée.{/amber} Le vocabulaire a changé depuis 1844 : il n'est plus question d'une essence humaine que la production objectiverait, mais de la vie réelle d'individus déterminés (voir être générique, pour cette rupture).
 
-    __**Ce que sont les individus coïncide avec la manière dont ils**__ {violet}__**manifestent leur vie**__{/violet}__**.**__ En 1845, la notion sert à fonder la conception matérialiste de l'histoire. Les hommes {teal}« {/teal}commencent à se distinguer des animaux dès qu'ils se mettent à produire leurs moyens d'existence{teal} »{/teal} (*L'Idéologie allemande*, I). Or cette production n'est pas une simple reproduction de leur existence physique : c'est déjà {teal}« {/teal}{teal}__une façon déterminée de manifester leur vie, un mode de vie déterminé__{/teal}{teal} »{/teal}. Donc {teal}« {/teal}{teal}__la façon dont les individus manifestent leur vie reflète très exactement ce qu'ils sont__{/teal}. {teal}__Ce qu'ils sont coïncide donc avec leur production__{/teal}, aussi bien avec ce qu'ils produisent qu'avec la façon dont ils le produisent{teal} »{/teal} (*ibid*.). Pourquoi la production plutôt que la conscience ? Parce que la conscience n'est pas un être à part : elle {teal}« {/teal}{teal}__ne peut jamais être autre chose que l'être conscient__{/teal}, et l'être des hommes est leur processus de vie réel{teal} »{/teal} (*ibid*.). Elle dit ce qu'ils vivent, elle ne le fonde pas. La thèse exclut donc deux choses : l'idéalisme qui, de {sky}Hegel{/sky} à {sky}Bauer{/sky}, réduit l'homme à la conscience de soi, et toute {red}essence humaine intemporelle{/red} logée dans l'individu isolé. {amber}Il n'y a pas d'essence humaine derrière la manifestation{/amber} : l'homme est ce qu'il fait, et ce qu'il fait dépend des conditions matérielles de sa production. D'où la formule : {teal}« {/teal}{teal}__ce n'est pas la conscience qui détermine la vie, mais la vie qui détermine la conscience__ »{/teal} (*ibid*.). Même l'illusion s'explique ainsi : si leurs représentations mettent la réalité la tête en bas, {teal}« {/teal}ce phénomène est encore une conséquence de leur {teal}__mode d'activité matériel borné__{/teal} et des rapports sociaux étriqués qui en résultent{teal} »{/teal} (*ibid*., cité par {sky}Fischbach{/sky}). {coral}L'expression de la vie devient ainsi le mode de vie d'une époque{/coral} (voir [[g-vie-materielle|vie matérielle]]).
+    ! L'expression de la vie n'est pas l'expression d'une intériorité, sentiments ou idées : c'est la production d'objets, et les idées elles-mêmes expriment cette vie réelle.
 
-    ! L'expression de la vie n'est pas l'expression d'une intériorité, sentiments ou idées : c'est la production d'objets, et ce que l'individu est ne précède pas ce qu'il manifeste.
-
-    ! *Lebensäußerung* (expression de la vie) et *Lebensentäußerung* (aliénation de la vie) désignent le même acte : selon les conditions où il s'accomplit, il réalise la vie ou la fait perdre.
+    ! *Lebensentäußerung* n'est pas un autre acte que *Lebensäußerung* : c'est la même expression de la vie, dans des conditions où l'on en perd le fruit.
 
     __**Passages clefs.**__
 
     | Passage | Ce qu'il établit |
-    | *Manuscrits de 1844*, premier manuscrit | la vie prêtée à l'objet s'oppose à l'ouvrier |
-    | *Manuscrits de 1844*, troisième manuscrit, propriété privée et communisme | la manifestation de la vie, affirmation de la vie sociale, et sous la propriété privée aliénation de la vie |
+    | *Manuscrits de 1844*, troisième manuscrit, propriété privée et communisme | le sens de l'avoir à la place de tous les sens ; la manifestation de la vie devenue aliénation de la vie |
     | *Manuscrits de 1844*, troisième manuscrit, besoins | moins tu es, plus tu possèdes |
-    | *Manuscrits de 1844*, troisième manuscrit, critique de Hegel | l'homme ne manifeste sa vie qu'à l'aide d'objets sensibles |
-    | *Notes sur James Mill* | l'échange des activités dans la production, activité générique |
-    | *L'Idéologie allemande*, I | ce que sont les individus coïncide avec leur production |
-    | *Travail salarié et capital*, section I | la vie commence où cesse l'activité |
-    | *Grundrisse*, chapitre du capital | les manifestations d'être vivant vendues pour un temps |
+    | *Notes sur James Mill* | une production humaine, expression réciproque de la vie ; l'argent, médiateur devenu dieu |
+    | *L'Idéologie allemande*, I | la conscience, langage de la vie réelle ; l'idéologie, expression d'une vie bornée |
 
-    **Voir aussi** : [[g-activite-vitale|Activité vitale]] · [[g-etre-naturel|Être naturel]] · [[g-etre-generique|Être générique]] · [[g-travail-aliene|Travail aliéné]] · [[g-besoin|Besoin]] · [[g-vie-materielle|Vie matérielle]] · [[g-vie-accomplie|Vie accomplie]]
+    **Voir aussi** : [[g-activite-vitale|Activité vitale]] · [[g-etre-naturel|Être naturel]] · [[g-etre-generique|Être générique]] · [[g-travail-aliene|Travail aliéné]] · [[g-besoin|Besoin]] · [[g-argent|Argent]] · [[g-vie-materielle|Vie matérielle]]
   tables:
   - table: passage-ce-qu-il-etablit
     exercises:
@@ -47,118 +44,70 @@ lessons:
     - {kind: cell, column: Passage}
   points:
   - id: g-expression-de-la-vie-l1-q1
-    sentence: "L'activité par laquelle l'homme met sa vie au dehors, dans des objets sensibles et pour d'autres, Marx l'appelle l'expression de la vie, en allemand ___."
+    sentence: "__L'activité par laquelle l'homme met ses forces au dehors, dans des objets,__ Marx l'appelle l'**expression de la vie**, en allemand ___."
     answer: Lebensäußerung
     alt: ["Lebensausserung", "Lebensäusserung", "Lebensaeusserung"]
   - id: g-expression-de-la-vie-l1-q2
-    sentence: "Marx reprend la notion d'expression de la vie à Moses ___, pour qui « la vie est échange d'activité vitale productrice »."
+    sentence: "__Marx reprend la notion d'**expression de la vie** à__ Moses ___, pour qui « la vie est échange d'activité vitale productrice »."
     answer: Hess
     alt: []
-  - id: g-expression-de-la-vie-l1-q3
-    sentence: "L'aliénation de la vie, double de l'expression de la vie, se dit en allemand ___."
-    answer: Lebensentäußerung
-    alt: ["Lebensentausserung", "Lebensentäusserung", "Lebensentaeusserung"]
-  - id: g-expression-de-la-vie-l1-q4
-    sentence: "L'homme « ne peut manifester sa vie qu'à l'aide d'objets réels, ___ » (Manuscrits de 1844, troisième manuscrit)."
-    answer: sensibles
-    alt: []
-  - id: g-expression-de-la-vie-l1-q5
-    sentence: "Dire que l'homme est un être en chair et en os, c'est dire « qu'il a pour objet de son être, de la ___ de sa vie, des objets réels, sensibles » (Manuscrits de 1844)."
-    answer: manifestation
-    alt: []
-  - id: g-expression-de-la-vie-l1-q7
-    sentence: "Dans le travail, l'homme « se contemple donc lui-même dans un ___ qu'il a créé » (Manuscrits de 1844, premier manuscrit)."
-    answer: monde
-    alt: []
-  - id: g-expression-de-la-vie-l1-q8
-    sentence: "La manifestation de la vie de l'individu « est donc une manifestation et une affirmation de la vie ___ » (Manuscrits de 1844, troisième manuscrit)."
-    answer: sociale
-    alt: []
-  - id: g-expression-de-la-vie-l1-q9
-    sentence: "« La vie individuelle et la vie ___ de l'homme ne sont pas différentes » (Manuscrits de 1844, troisième manuscrit)."
-    answer: générique
-    alt: ["generique"]
-  - id: g-expression-de-la-vie-l1-q12
-    sentence: "Sous la propriété privée, « la vie qu'il a prêtée à l'objet s'oppose à lui, hostile et ___ » (Manuscrits de 1844, premier manuscrit)."
-    answer: étrangère
-    alt: ["etrangere"]
-  - id: g-expression-de-la-vie-l1-q13
-    sentence: "La propriété privée exprime le fait « que la manifestation de sa vie est l'___ de sa vie » (Manuscrits de 1844, troisième manuscrit)."
-    answer: aliénation
-    alt: ["alienation"]
-  - id: g-expression-de-la-vie-l1-q14
-    sentence: "Sous la propriété privée, la réalisation de l'homme « est sa privation de ___ » (Manuscrits de 1844, troisième manuscrit)."
-    answer: réalité
-    alt: ["realite"]
-  - id: g-expression-de-la-vie-l1-q15
-    sentence: "« Moins tu es, moins tu manifestes ta vie, plus tu ___, plus ta vie aliénée grandit » (Manuscrits de 1844, troisième manuscrit)."
-    answer: possèdes
-    alt: ["possedes"]
-  - id: g-expression-de-la-vie-l1-q16
-    sentence: "L'ouvrier regarde-t-il ses douze heures de travail « comme une manifestation de sa vie, comme sa vie ? Bien au ___ » (Travail salarié et capital)."
-    answer: contraire
-    alt: []
-  - id: g-expression-de-la-vie-l1-q17
-    sentence: "Les douze heures de travail « n'ont nullement pour lui le ___ de tisser, de filer, de percer » (Travail salarié et capital)."
-    answer: sens
-    alt: []
-  - id: g-expression-de-la-vie-l1-q18
-    sentence: "Le travailleur ne vend « qu'une disposition ___ de sa capacité de travail » (Grundrisse, chapitre du capital)."
-    answer: temporaire
-    alt: []
-  - id: g-expression-de-la-vie-l1-q19
-    sentence: "L'ouvrier recommence l'échange dès qu'il a ingéré de quoi « reproduire ses manifestations d'être ___ » (Grundrisse, chapitre du capital)."
-    answer: vivant
-    alt: []
-  - id: g-expression-de-la-vie-l1-q21
-    sentence: "Produire ses moyens d'existence, c'est déjà « une façon déterminée de manifester leur vie, un ___ de vie déterminé » (L'Idéologie allemande)."
-    answer: mode
-    alt: []
-  - id: g-expression-de-la-vie-l1-q22
-    sentence: "« La façon dont les individus manifestent leur vie reflète très exactement ce qu'ils ___ » (L'Idéologie allemande)."
-    answer: sont
-    alt: []
-  - id: g-expression-de-la-vie-l1-q23
-    sentence: "« Ce qu'ils sont coïncide donc avec leur ___ » (L'Idéologie allemande)."
-    answer: production
-    alt: []
-  - id: g-expression-de-la-vie-l1-a1
-    sentence: "« Expression » traduit äußern, mettre au dehors : il ne s'agit pas d'exprimer des sentiments, mais de faire passer ses forces dans des ___."
+  - id: g-expression-de-la-vie-l1-b1
+    sentence: "__L'**expression de la vie** n'est pas l'expression de sentiments ou d'idées__ : c'est la production d'___."
     answer: objets
     alt: []
-  - id: g-expression-de-la-vie-l1-a2
-    sentence: "Contre Hegel, pour qui l'objet est la conscience devenue étrangère à elle-même, Marx fait de l'objet le lieu où la vie se ___."
-    answer: manifeste
-    alt: ["réalise", "realise", "manifeste elle-même"]
-  - id: g-expression-de-la-vie-l1-a3
-    sentence: "Même l'activité solitaire du savant est sociale, parce qu'elle use d'une ___ et de matériaux qu'il tient des autres."
-    answer: langue
-    alt: ["langage"]
-  - id: g-expression-de-la-vie-l1-a4
-    sentence: "Dans une production humaine, l'expression de ma vie appelle la ___ de l'autre, qui confirme mon activité en usant de mon produit (Genuß)."
+  - id: g-expression-de-la-vie-l1-b2
+    sentence: "__Ce que le préfixe Ent- ajoute à l'**Äußerung**__ (mettre au dehors), dans Entäußerung : l'éloignement, la ___."
+    answer: perte
+    alt: ["séparation", "separation"]
+  - id: g-expression-de-la-vie-l1-b3
+    sentence: "__Ce qui fait de l'**expression de la vie** une aliénation de la vie__, ce n'est pas l'acte, mais ses ___ : le produit revient à un autre."
+    answer: conditions
+    alt: []
+  - id: g-expression-de-la-vie-l1-q3
+    sentence: "__La **propriété privée** exprime le fait__ « que la manifestation de sa vie est l'aliénation de sa vie, que sa réalisation est sa privation de ___ » (Manuscrits de 1844)."
+    answer: réalité
+    alt: ["realite"]
+  - id: g-expression-de-la-vie-l1-b4
+    sentence: "**Exprimer sa vie**, c'est exercer ses forces sur un objet ; ___, __c'est seulement disposer de l'objet, sans rien y exercer__."
+    answer: posséder
+    alt: ["posseder", "avoir"]
+  - id: g-expression-de-la-vie-l1-q5
+    sentence: "« __À la place de tous les **sens** physiques et intellectuels__ est donc apparue la simple aliénation de tous ces sens, le sens de l'___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: avoir
+    alt: []
+  - id: g-expression-de-la-vie-l1-b5
+    sentence: "L'abolition de la **propriété privée** n'est pas un partage des biens, car __un partage laisserait intact__ le ___ de l'avoir."
+    answer: sens
+    alt: []
+  - id: g-expression-de-la-vie-l1-b6
+    sentence: "__Mon **expression** confirme aussi la vie d'autrui__, parce que son ___ est une force tendue vers un objet, que mon produit lui donne de quoi exercer."
+    answer: besoin
+    alt: []
+  - id: g-expression-de-la-vie-l1-b7
+    sentence: "Selon les Notes sur James Mill, __l'**expression** de ma vie appelle la__ ___ __d'autrui__, qui l'achève en usant de mon produit (Genuß)."
     answer: jouissance
     alt: []
-  - id: g-expression-de-la-vie-l1-a5
-    sentence: "Un simple préfixe sépare l'expression de la vie (Lebensäußerung) de l'___ de la vie (Lebensentäußerung) : le même acte réalise la vie ou la fait perdre."
-    answer: aliénation
-    alt: ["alienation"]
-  - id: g-expression-de-la-vie-l1-a6
-    sentence: "Sous l'économie politique, l'avoir prend la place de l'expression : ce qu'on ne vit plus, on l'accumule en ___."
-    answer: argent
+  - id: g-expression-de-la-vie-l1-b8
+    sentence: "__Dans l'**échange marchand**, le lien entre producteurs est confié à une chose__ : « le médiateur se change en un vrai ___ » (Notes sur James Mill, cité par Collin)."
+    answer: dieu
+    alt: ["Dieu"]
+  - id: g-expression-de-la-vie-l1-b9
+    sentence: "La **conscience** (Bewusstsein) n'est que l'être devenu conscient : « __ce n'est pas la conscience qui détermine la__ ___, mais l'inverse » (L'Idéologie allemande)."
+    answer: vie
     alt: []
-  - id: g-expression-de-la-vie-l1-a7
-    sentence: "Pour le salarié, le contenu de son activité (tisser, filer) devient indifférent, parce que seul compte pour lui le ___."
-    answer: salaire
+  - id: g-expression-de-la-vie-l1-b10
+    sentence: "__La division du travail, d'où naît l'**idéologie**, sépare__ le travail intellectuel du travail ___."
+    answer: matériel
+    alt: ["materiel", "manuel"]
+  - id: g-expression-de-la-vie-l1-b11
+    sentence: "__L'**idéologie** n'est pas une simple ignorance, mais une image__ ___ de la vie réelle, telle qu'une activité séparée la voit."
+    answer: inversée
+    alt: ["inversee", "à l'envers", "renversée", "renversee"]
+  - id: g-expression-de-la-vie-l1-b12
+    sentence: "__L'**expression de la vie** a pour double l'aliénation de la vie, et pour contraire__ l'___."
+    answer: avoir
+    alt: ["possession"]
+  - id: g-expression-de-la-vie-l1-b13
+    sentence: "__Sous la **propriété privée**, un objet n'est nôtre que possédé__, parce que l'activité n'y est plus qu'un moyen de gagner sa vie, et l'objet qu'un moyen de ___."
+    answer: jouir
     alt: []
-  - id: g-expression-de-la-vie-l1-a8
-    sentence: "La conscience « ne peut jamais être autre chose que l'être ___ » (L'Idéologie allemande)."
-    answer: conscient
-    alt: []
-  - id: g-expression-de-la-vie-l1-a9
-    sentence: "Que l'homme soit ce qu'il produit exclut l'idéalisme qui le réduit à la conscience de soi, et toute ___ humaine intemporelle logée dans l'individu isolé."
-    answer: essence
-    alt: []
-  - id: g-expression-de-la-vie-l1-a10
-    sentence: "L'illusion idéologique, qui met la réalité la tête en bas, vient encore d'un mode d'activité matériel ___ (L'Idéologie allemande)."
-    answer: borné
-    alt: ["borne"]

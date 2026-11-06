@@ -1,6 +1,8 @@
 # Entrée du glossaire de Marx (skill glossaire-marx) : notion. Citations reprises de
 # NotebookLM avec leur source (Manuscrits de 1844, Contribution, Grundrisse, Le Capital,
-# Critique du programme de Gotha, éditions sociales), vérifiées par textes.py.
+# Critique du programme de Gotha, éditions sociales ; Grundrisse, fragment sur les
+# machines, dans les Écrits philosophiques de Sève), vérifiées par textes.py. Reprise
+# le 2026-11-06 après deux relectures indépendantes.
 
 id: g-besoin
 title: Besoin (`Bedürfnis`)
@@ -10,35 +12,33 @@ lessons:
 - id: g-besoin-l1
   title: Besoin
   notes: |-
-    Chez Marx, le {violet}**besoin**{/violet} ({violet}*Bedürfnis*{/violet}) est [def]. Ce n'est {pink}ni une simple pulsion biologique ni une préférence subjective{/pink} : il prolonge ce que Marx dit de l'[[g-etre-naturel|être naturel]], passif parce qu'il a hors de lui les objets de ses forces, et il a une histoire. La notion traverse toute l'œuvre : en 1844, elle sert à juger l'économie politique ; en 1857, à penser l'unité de la production et de la consommation ; dans *Le Capital*, à fixer la valeur de la force de travail. C'est par lui que le travail, qui règle le [[g-metabolisme|métabolisme]], a une fin, et par lui encore que Marx pense la richesse d'une [[g-vie-accomplie|vie accomplie]].
+    Chez Marx, le {violet}**besoin**{/violet} ({violet}*Bedürfnis*{/violet}) est [def]. Ce n'est {pink}ni une simple pulsion biologique ni une préférence subjective{/pink} : il prolonge ce que Marx dit de l'[[g-etre-naturel|être naturel]], passif parce qu'il a hors de lui les objets de ses forces, et il a une histoire. La notion traverse toute l'œuvre : en 1844, elle sert à juger l'économie politique ; en 1857, à penser l'unité de la production et de la consommation ; dans *Le Capital*, à fixer la valeur de la force de travail. Trois niveaux sont à distinguer. Les {violet}besoins naturels{/violet} sont ceux du corps : manger, se vêtir, se loger. Les {violet}besoins nécessaires{/violet} sont le seuil qu'une société tient pour indispensable à une vie, et ce seuil est déjà historique. Les {violet}besoins développés{/violet} vont au-delà : la production les fait naître, et certains finissent par passer dans le nécessaire.
 
-    __**Le**__ {violet}__**besoin**__{/violet} __**rapporte l'homme à un objet hors de lui, et donne au travail sa fin.**__ L'homme, [[g-etre-naturel|être naturel]], a hors de lui les objets dont il vit : la faim, dit Marx, est le besoin qu'a le corps d'un objet extérieur, nécessaire pour le compléter (*Manuscrits de 1844*, troisième manuscrit, critique de Hegel ; voir être naturel). {amber}Le besoin n'est donc pas un état intérieur, mais un rapport à un objet{/amber} : on n'a pas faim en général, on a faim de quelque chose. Or cet objet, puisqu'il est hors de moi, il faut aller le prendre ou le faire : c'est pourquoi le besoin devient la fin de l'activité qui produit. Dans l'échange entre les deux moments, {teal}« {/teal}la production crée la matière de la consommation en tant qu'objet extérieur; {teal}__la consommation crée pour la production le besoin en tant qu'objet interne, en tant que but__ »{/teal} (*Contribution*, Introduction de 1857). {coral}Le besoin est le « pour quoi » du travail{/coral} : ce que l'homme réalise dans la matière, c'est ce qu'il se proposait parce qu'il en avait besoin.
+    __**Le**__ {violet}__**besoin**__{/violet} __**rapporte l'homme à un objet hors de lui, et donne au travail sa fin.**__ L'homme, être naturel, a hors de lui les objets dont il vit : la faim, dit Marx, est le besoin qu'a le corps d'un objet extérieur (*Manuscrits de 1844*, troisième manuscrit, critique de Hegel ; voir être naturel). {amber}Le besoin n'est donc pas un sentiment, mais un rapport à un objet{/amber} : on n'a pas faim en général, on a faim de quelque chose. Or la nature ne livre presque rien tel quel. Le travail est l'acte par lequel l'homme met en mouvement ses forces {teal}« {/teal}pour {teal}__s'approprier la matière naturelle sous une forme utile à sa propre vie__ »{/teal} (*Le Capital*, livre I, chap. V) : la forme qu'il donne à la matière est réglée sur le besoin. Et cette forme, il se la représente avant de la produire : {teal}« {/teal}{teal}__Le résultat auquel aboutit le procès de travail était déjà au commencement dans l'imagination du travailleur__{/teal}, existait donc déjà en idée{teal} »{/teal}, si bien qu'il y réalise {teal}« {/teal}{teal}__son propre but__{/teal}, qu'il connaît, qui détermine comme une loi la modalité de son action{teal} »{/teal} (*ibid*.). Donc le besoin fixe le but du travail, par la représentation du produit utile. C'est ce que dit l'Introduction de 1857 sur les deux moments de l'économie : {teal}« {/teal}la production crée la matière de la consommation en tant qu'objet extérieur; {teal}__la consommation crée pour la production le besoin en tant qu'objet interne, en tant que but__ »{/teal} (*Contribution*, Introduction de 1857). « Interne » ne veut pas dire ressenti : l'objet interne est le produit tel qu'on se le propose. {coral}Le besoin est le « pour quoi » du travail{/coral} ; sous le salariat, ce but n'est plus celui de l'ouvrier, mais celui du capitaliste (voir [[g-travail-aliene|travail aliéné]]).
 
-    __**La production produit le**__ {violet}__**besoin**__{/violet}__**, et la satisfaction d'un besoin en fait naître de nouveaux.**__ On croit d'ordinaire que le besoin précède la production, qui ne ferait que le servir. Marx renverse le rapport : {teal}« {/teal}{teal}__la production ne fournit donc pas seulement un objet matériel au besoin, elle fournit aussi un besoin à l'objet matériel__ »{/teal} (*Contribution*, Introduction de 1857). En effet, un objet nouveau apprend à s'en servir et à en jouir : {teal}« {/teal}L'objet d'art – comme tout autre produit – {teal}__crée un public apte à comprendre l'art et à jouir de la beauté__ »{/teal} (*ibid*.). Même le besoin le plus naturel prend la forme que lui donne la production : {teal}« {/teal}{teal}__La faim est la faim, mais la faim qui se satisfait avec de la viande cuite, mangée avec fourchette et couteau, est une autre faim__{/teal} que celle qui avale de la chair crue en se servant des mains, des ongles et des dents{teal} »{/teal} (*ibid*.). {amber}La production crée donc à la fois l'objet, la manière de le consommer et le consommateur{/amber}. Et comme la satisfaction d'un besoin apporte un instrument et une habitude, elle ne s'arrête pas là : les moyens de cette satisfaction {teal}« {/teal}poussent à de nouveaux besoins, et {teal}__cette production de nouveaux besoins est le premier fait historique__ »{/teal} (*L'Idéologie allemande*, I). {coral}Les besoins humains n'ont pas de limite fixe{/coral} : c'est ce qui fait que l'homme a une histoire, quand l'animal tourne dans le cercle des mêmes besoins.
+    __**La production produit le**__ {violet}__**besoin**__{/violet}__**, et la satisfaction d'un besoin en fait naître de nouveaux.**__ On croit d'ordinaire que le besoin précède la production, qui ne ferait que le servir. Marx renverse le rapport : {teal}« {/teal}{teal}__la production ne fournit donc pas seulement un objet matériel au besoin, elle fournit aussi un besoin à l'objet matériel__ »{/teal} (*Contribution*, Introduction de 1857). En effet, un objet nouveau apprend à s'en servir et à en jouir : {teal}« {/teal}L'objet d'art – comme tout autre produit – {teal}__crée un public apte à comprendre l'art et à jouir de la beauté__ »{/teal} (*ibid*.). Même le besoin le plus naturel prend la forme que lui donne la production : {teal}« {/teal}{teal}__La faim est la faim, mais la faim qui se satisfait avec de la viande cuite, mangée avec fourchette et couteau, est une autre faim__{/teal} que celle qui avale de la chair crue en se servant des mains, des ongles et des dents{teal} »{/teal} (*ibid*.). {amber}La production crée donc à la fois l'objet, la manière de le consommer et le consommateur{/amber}. Elle ne s'arrête pas là, car satisfaire un besoin, c'est déjà produire, et produire laisse derrière soi un instrument et un savoir-faire qui ouvrent des possibilités nouvelles. *L'Idéologie allemande* en fait le second point de sa conception de l'histoire, après la production des moyens d'existence : l'action de satisfaire le premier besoin et l'instrument acquis {teal}« {/teal}poussent à de nouveaux besoins, et {teal}__cette production de nouveaux besoins est le premier fait historique__ »{/teal} (*L'Idéologie allemande*, I, traduction des Éditions sociales ; {sky}Renault{/sky}, qui cite une autre traduction, lit « second acte historique » : c'est le second point de l'exposé, mais le premier qui fasse une histoire). {coral}Les besoins humains n'ont pas de limite fixe{/coral}, et c'est par là que l'homme a une histoire. L'animal, au contraire, ne produit que {teal}« {/teal}sous l'empire du besoin physique immédiat{teal} »{/teal} (*Manuscrits de 1844*, premier manuscrit ; voir [[g-activite-vitale|activité vitale]]).
 
-    __**Les**__ {violet}__**besoins nécessaires**__{/violet} __**sont un produit historique, qui fixe la valeur de la force de travail.**__ Dans *Le Capital*, la valeur de la force de travail est celle des moyens de subsistance nécessaires à l'entretien de l'ouvrier. On pourrait croire ce minimum fixé par la nature. Mais si les {teal}« {/teal}{teal}__besoins naturels__{/teal} proprement dits, nourriture, vêtements, chauffage, logement, etc.{teal} »{/teal} varient déjà selon le climat, {teal}« {/teal}{teal}__l'ampleur des besoins dits nécessaires__{/teal}, ainsi que la manière de les satisfaire, {teal}__sont eux-mêmes un produit historique__{/teal} et, du coup, dépendent en grande partie du {teal}__degré de civilisation__{/teal} d'un pays{teal} »{/teal} (*Le Capital*, livre I, chap. IV). Donc, {teal}« {/teal}par opposition aux autres marchandises, {teal}__la détermination de la valeur de la force de travail contient donc un élément historique et moral__ »{/teal} (*ibid*.). {amber}Le salaire ne mesure pas ce qu'il faut à un corps pour survivre{/amber}, mais ce qu'une société tient pour nécessaire à une vie d'ouvrier : contre la « loi d'airain » des salaires, {coral}le minimum vital est une norme sociale et l'enjeu d'une lutte{/coral} (voir [[g-survie|survie]]).
+    __**Les**__ {violet}__**besoins nécessaires**__{/violet} __**sont un produit historique, qui fixe la valeur de la force de travail.**__ Ce que l'ouvrier vend au capitaliste n'est pas son travail, mais sa {violet}force de travail{/violet}, sa capacité de travailler pendant un temps. Comme toute marchandise, elle vaut le temps de travail qu'il faut pour la produire : sa valeur est {teal}« {/teal}déterminée par le temps de travail nécessaire à la production {teal}__donc à la reproduction__{/teal} de tel article spécifique{teal} »{/teal} (*Le Capital*, livre I, chap. IV). Or reproduire une force de travail, c'est entretenir l'ouvrier : sa valeur est celle de ses moyens de subsistance. On pourrait croire ce minimum fixé par le corps. Mais si les {teal}« {/teal}{teal}__besoins naturels__{/teal} proprement dits, nourriture, vêtements, chauffage, logement, etc.{teal} »{/teal} varient déjà selon le climat, {teal}« {/teal}{teal}__l'ampleur des besoins dits nécessaires__{/teal}, ainsi que la manière de les satisfaire, {teal}__sont eux-mêmes un produit historique__{/teal} et, du coup, dépendent en grande partie du {teal}__degré de civilisation__{/teal} d'un pays{teal} »{/teal} (*ibid*.). Donc, {teal}« {/teal}par opposition aux autres marchandises, {teal}__la détermination de la valeur de la force de travail contient donc un élément historique et moral__ »{/teal} (*ibid*.). « Moral » veut dire ici : relatif aux mœurs, à ce qu'une société tient pour dû à une vie d'ouvrier. {amber}Le salaire ne mesure pas ce qu'il faut à un corps pour survivre{/amber}, {coral}mais une norme sociale{/coral}. Le salaire n'est donc pas un simple minimum de survie (voir [[g-survie|survie]]).
 
-    __**L'économie politique réduit l'ouvrier au**__ {red}__**besoin le plus misérable**__{/red} __**et ne produit que le**__ {red}__**besoin d'argent**__{/red}__**.**__ En 1844, Marx lit les économistes comme les théoriciens d'une privation. Pour faire de l'ouvrier une pure force de travail, l'économiste {teal}« {/teal}{teal}__réduit le besoin de l'ouvrier à l'entretien le plus indispensable et le plus misérable de la vie physique__{/teal} et son activité au mouvement mécanique le plus abstrait{teal} »{/teal} (*Manuscrits de 1844*, troisième manuscrit, besoins, production et division du travail). Sa morale est l'épargne : {teal}« {/teal}Cette science de la merveilleuse industrie est aussi {teal}__la science de l'ascétisme__{/teal} et son véritable idéal est {teal}__l'avare ascétique, mais usurier, et l'esclave ascétique, mais producteur__ »{/teal} (*ibid*.). Le riche, lui, a des besoins raffinés, mais ils ne sont pas plus humains, car {teal}« {/teal}{teal}__la propriété privée ne sait pas transformer le besoin grossier en besoin humain__ »{/teal} (*ibid*.) : le producteur flatte des appétits {teal}« {/teal}inhumains, raffinés, contre nature et imaginaires{teal} »{/teal} pour en tirer de l'argent. Or l'argent seul donne accès à tous les objets ; donc tous les besoins se ramènent à lui : {teal}« {/teal}{teal}__Le besoin d'argent est donc le vrai besoin produit par l'économie politique et l'unique besoin qu'elle produit__ »{/teal} (*ibid*.). {red}La misère du pauvre et le luxe du riche sont les deux faces d'une même réduction{/red} : le besoin y perd sa qualité au profit d'une quantité (voir [[g-argent|argent]]).
+    __**L'économie politique réduit l'ouvrier au**__ {red}__**besoin le plus misérable**__{/red} __**et ne produit que le**__ {red}__**besoin d'argent**__{/red}__**.**__ En 1844, « économie politique » désigne à la fois la science des économistes et le système qu'elle décrit et justifie. Marx part d'un critère : dans une société humaine, un besoin nouveau serait {teal}« {/teal}{teal}__une manifestation nouvelle de la force essentielle de l'homme et un enrichissement nouveau de l'essence humaine__{/teal}{teal} »{/teal} ; mais {teal}« {/teal}dans le cadre de la propriété privée, {teal}__les choses prennent une signification inverse__ »{/teal} (*Manuscrits de 1844*, troisième manuscrit, besoins, production et division du travail). Car chacun ne produit que pour l'argent de l'autre, et doit donc lui faire désirer ce qu'il vend : {teal}« {/teal}{teal}__tout homme s'applique à créer pour l'autre un besoin nouveau pour le contraindre à un nouveau sacrifice__{/teal}, le placer dans une nouvelle dépendance et le pousser à un nouveau mode de jouissance et, par suite, de ruine économique{teal} »{/teal} (*ibid*.). Or tous ces besoins ne s'achètent qu'avec de l'argent ; donc ils se ramènent tous à un seul : {teal}« {/teal}{teal}__Le besoin d'argent est donc le vrai besoin produit par l'économie politique et l'unique besoin qu'elle produit__ »{/teal} (*ibid*.). La même cause produit deux effets opposés : {teal}« {/teal}d'un côté, {teal}__le raffinement des besoins__{/teal} et des moyens de les satisfaire, de l'autre le retour à une sauvagerie bestiale, {teal}__la simplicité complète, grossière et abstraite du besoin__ »{/teal} (*ibid*.). D'un côté le riche, chez qui le producteur, {teal}« {/teal}l'eunuque industriel{teal} »{/teal}, excite des appétits {teal}« {/teal}inhumains, raffinés, contre nature et imaginaires{teal} »{/teal} ; de l'autre l'ouvrier, dont l'économiste {teal}« {/teal}{teal}__réduit le besoin à l'entretien le plus indispensable et le plus misérable de la vie physique__ »{/teal}, parce qu'il est un coût. Et comme la richesse naît de l'accumulation, qui exige de ne pas dépenser, la morale de cette science est le renoncement : {teal}« {/teal}Cette science de la merveilleuse industrie est aussi {teal}__la science de l'ascétisme__{/teal} et son véritable idéal est {teal}__l'avare ascétique, mais usurier, et l'esclave ascétique, mais producteur__ »{/teal}, c'est-à-dire le capitaliste qui accumule et l'ouvrier qui épargne (*ibid*.). {amber}Ce que Marx condamne n'est donc pas l'origine imaginaire d'un besoin{/amber} (*Le Capital*, livre I, chap. I, peut dire qu'il importe peu qu'un besoin naisse de l'estomac ou de l'imagination, parce qu'il n'y juge pas les besoins : il analyse la valeur d'usage), {red}mais le besoin réduit à l'argent qu'il rapporte{/red} : {teal}« {/teal}la propriété privée ne sait pas transformer le besoin grossier en besoin humain{teal} »{/teal} (*Manuscrits de 1844*, *ibid*. ; voir [[g-argent|argent]]).
 
-    __**En poussant le travail au-delà des**__ {violet}__**besoins naturels**__{/violet}__**, le capital prépare la**__ {green}__**richesse des besoins**__{/green}__**.**__ Le capital a pourtant un côté civilisateur, qui tient à une double logique. Comme acheteur de force de travail, il veut payer le moins possible : il comprime donc les besoins de l'ouvrier, qui sont pour lui un coût. Mais la survaleur n'est encore que contenue dans les marchandises : pour la réaliser, il faut les vendre, et des besoins déjà satisfaits n'achètent rien de plus. Le capital doit donc ouvrir de nouvelles branches, découvrir de nouveaux usages de la matière et susciter de nouveaux besoins, chez tous les acheteurs, ouvriers compris. Et comme il vise la richesse sous sa forme universelle, l'argent, ce mouvement n'a pas de borne : {teal}« {/teal}en aspirant sans trêve à la forme universelle de la richesse, {teal}__le capital pousse le travail au-delà des frontières de ses besoins naturels__{/teal} et crée ainsi {teal}__les éléments matériels du développement de cette riche individualité__{/teal} qui est aussi polyvalente dans sa production que dans sa consommation{teal} »{/teal}, là {teal}« {/teal}où la nécessité naturelle a disparu sous sa forme immédiate; parce qu'{teal}__un besoin produit par l'histoire est venu remplacer un besoin naturel__ »{/teal} (*Grundrisse*, chapitre du capital). En reliant chaque industrie au marché mondial, il {teal}« {/teal}{teal}__transforme ce qui apparaissait comme superflu en quelque chose de nécessaire, en nécessité produite historiquement__ »{/teal} (*ibid*.). {amber}Le capital développe les besoins qu'il ne satisfait pas{/amber} : il fait naître chez l'ouvrier des besoins que son salaire lui refuse, et c'est cette contradiction qui {green}prépare une richesse humaine{/green} au-delà de lui.
+    __**En poussant le travail au-delà des**__ {violet}__**besoins naturels**__{/violet}__**, le capital prépare la**__ {green}__**richesse des besoins**__{/green}__**.**__ Le capital a pourtant un côté civilisateur, qui tient à une double logique. Il vit de la {violet}survaleur{/violet}, la valeur que l'ouvrier produit au-delà de celle de son salaire. Comme acheteur de force de travail, il veut donc payer le moins possible, et comprime les besoins de l'ouvrier, qui sont pour lui un coût. Mais la survaleur n'est encore que contenue dans les marchandises : pour la réaliser, c'est-à-dire la toucher en argent, il faut les vendre, et des besoins déjà satisfaits n'achètent rien de plus. Le capital doit donc ouvrir de nouvelles branches et susciter de nouveaux besoins, chez tous les acheteurs, ouvriers compris. Et comme il vise la richesse sous sa forme universelle, l'argent, ce mouvement n'a pas de borne : {teal}« {/teal}en aspirant sans trêve à la forme universelle de la richesse, {teal}__le capital pousse le travail au-delà des frontières de ses besoins naturels__{/teal} et crée ainsi {teal}__les éléments matériels du développement de cette riche individualité__{/teal} qui est aussi polyvalente dans sa production que dans sa consommation{teal} »{/teal}, là {teal}« {/teal}où la nécessité naturelle a disparu sous sa forme immédiate; parce qu'{teal}__un besoin produit par l'histoire est venu remplacer un besoin naturel__ »{/teal} (*Grundrisse*, chapitre du capital). En reliant chaque industrie au marché mondial, il {teal}« {/teal}transforme ce qui apparaissait comme superflu en quelque chose de nécessaire, en nécessité produite historiquement{teal} »{/teal} (*ibid*.). Il prépare ainsi ce qui le dépasse, parce que la grande industrie change la source de la richesse : celle-ci dépend de moins en moins du temps de travail immédiat, et de plus en plus de la science et des machines. Le travail nécessaire diminue, et du {violet}temps disponible{/violet} se libère, où des besoins riches pourraient se déployer. Or le capital continue de mesurer la richesse au temps de travail qu'il prend : {teal}« {/teal}{teal}__le vol de temps de travail d'autrui sur quoi repose aujourd'hui la richesse apparaît comme une base misérable__{/teal} comparée à celle, nouvellement développée, qu'a créée la grande industrie elle-même{teal} »{/teal} (*Grundrisse*, fragment sur les machines). {green}La richesse des besoins qu'il fait naître déborde la mesure qu'il lui impose.{/green}
 
-    __**L'**__{green}__**homme riche**__{/green} __**est l'homme qui a besoin d'une totalité de manifestation vitale.**__ Si les besoins se développent avec la production, la richesse ne se mesure plus en choses possédées, mais en besoins : {teal}« {/teal}On voit comment {teal}__l'homme riche et le besoin humain riche prennent la place de la richesse et de la misère de l'économie politique__{/teal}. {teal}__L'homme riche est en même temps l'homme qui a besoin d'une totalité de manifestation vitale humaine__{/teal}. L'homme chez qui {teal}__sa propre réalisation existe comme nécessité intérieure, comme besoin__ »{/teal} (*Manuscrits de 1844*, troisième manuscrit, propriété privée et communisme). {amber}Avoir beaucoup de besoins, c'est avoir beaucoup de façons de vivre{/amber} (voir [[g-expression-de-la-vie|expression de la vie]] et [[g-homme-total|homme total]]). Même la pauvreté change de sens : {teal}« {/teal}elle est {teal}__le lien passif qui fait ressentir aux hommes comme un besoin la richesse la plus grande, l'autre homme__ »{/teal} (*ibid*.). Marx en voit l'amorce chez les ouvriers communistes qui se réunissent pour la propagande : {teal}« {/teal}ils s'approprient par là {teal}__un besoin nouveau, le besoin de la société__{/teal}, et ce qui semble être le moyen est devenu le but{teal} »{/teal} (*Manuscrits de 1844*, troisième manuscrit, besoins). C'est pourquoi Marx rejette le {red}communisme grossier{/red}, qui prêche {teal}« {/teal}le retour à la simplicité contraire à la nature de l'homme pauvre et sans besoin{teal} »{/teal} (*ibid*.). Et le travail lui-même, quand il ne sera plus {teal}« {/teal}seulement un moyen de vivre{teal} »{/teal}, deviendra {teal}« {/teal}{teal}__lui-même le premier besoin vital__ »{/teal} (*Critique du programme de Gotha*, I).
+    __**L'**__{green}__**homme riche**__{/green} __**est l'homme qui a besoin d'une totalité de manifestation vitale.**__ Qu'est-ce que la richesse, une fois ôtée sa forme marchande ? Les *Grundrisse* répondent : {teal}« {/teal}une fois que la forme bourgeoise bornée a disparu, {teal}__qu'est-ce que la richesse, sinon l'universalité des besoins, des capacités, des jouissances, des forces productives des individus__ »{/teal} (*Grundrisse*, chapitre du capital). La raison est qu'un besoin n'est pas un simple manque : chez l'être naturel, c'est une force tendue vers son objet, une passion (voir [[g-etre-naturel|être naturel]]). Avoir un besoin, c'est donc avoir un rapport actif au monde ; {amber}avoir beaucoup de besoins, c'est avoir beaucoup de façons de vivre{/amber}. D'où la formule de 1844 : {teal}« {/teal}On voit comment {teal}__l'homme riche et le besoin humain riche prennent la place de la richesse et de la misère de l'économie politique__{/teal}. {teal}__L'homme riche est en même temps l'homme qui a besoin d'une totalité de manifestation vitale humaine__{/teal}. L'homme chez qui {teal}__sa propre réalisation existe comme nécessité intérieure, comme besoin__ »{/teal} (*Manuscrits de 1844*, troisième manuscrit, propriété privée et communisme) : il ne se réalise pas par devoir, mais parce qu'il en a besoin (voir [[g-expression-de-la-vie|expression de la vie]] et [[g-homme-total|homme total]]). Dans une telle société, la pauvreté change elle aussi de sens. L'homme, être naturel, est passif : il a besoin d'objets hors de lui pour confirmer ses forces. Or ses forces les plus proprement humaines, celles de l'être générique, ne se confirment que dans un autre homme, qui les reconnaît et les partage (voir [[g-etre-generique|être générique]]). L'autre homme est donc le plus riche des objets dont il a besoin ; en manquer, c'est sentir passivement ce lien. La pauvreté est alors {teal}« {/teal}{teal}__le lien passif qui fait ressentir aux hommes comme un besoin la richesse la plus grande, l'autre homme__ »{/teal} (*ibid*.). Marx en voit l'amorce chez les ouvriers communistes qui se réunissent pour la propagande : {teal}« {/teal}ils s'approprient par là {teal}__un besoin nouveau, le besoin de la société__{/teal}, et ce qui semble être le moyen est devenu le but{teal} »{/teal} (*Manuscrits de 1844*, troisième manuscrit, besoins). C'est pourquoi il rejette le {red}communisme grossier{/red}, qui se contente de partager également la propriété et nivelle tout par le bas : il prêche {teal}« {/teal}le retour à la simplicité contraire à la nature de l'homme pauvre et sans besoin{teal} »{/teal} (*Manuscrits de 1844*, troisième manuscrit, propriété privée et communisme). Le travail lui-même, qui sous le salariat n'est qu'un moyen de vivre, doit devenir {teal}« {/teal}le premier besoin vital{teal} »{/teal} (*Critique du programme de Gotha*, I ; voir [[g-activite-vitale|activité vitale]], et pour la limite que *Le Capital*, livre III, y met, [[g-metabolisme|métabolisme]]).
 
-    ! Marx n'oppose pas de vrais besoins naturels à de faux besoins artificiels : tous les besoins développés sont historiques, et ce qu'il critique, c'est leur réduction au minimum physique ou au besoin d'argent.
+    ! Marx n'oppose pas de vrais besoins naturels à de faux besoins artificiels : tous les besoins développés sont historiques. Ce qu'il critique, c'est le besoin réduit au minimum physique, ou suscité pour l'argent.
 
-    ! Le besoin n'est pas une préférence psychologique ni la demande d'un acheteur : c'est le rapport d'un être naturel à des objets hors de lui, et une demande sans argent reste un besoin sans effet.
+    ! Le besoin n'est pas la demande d'un acheteur. Mais sous le règne de l'argent, un besoin sans argent ne compte pas : la différence entre la demande {teal}« {/teal}basée sur mon besoin{teal} »{/teal} et la demande effective, {teal}« {/teal}basée sur l'argent{teal} »{/teal}, est {teal}« {/teal}la différence entre l'être et la pensée{teal} »{/teal}, au point que {teal}« {/teal}si je n'ai pas d'argent pour voyager, je n'ai pas de besoin{teal} »{/teal} de voyager (*Manuscrits de 1844*, troisième manuscrit, pouvoir de l'argent).
 
     __**Passages clefs.**__
 
     | Passage | Ce qu'il établit |
     | *Manuscrits de 1844*, troisième manuscrit, propriété privée et communisme | l'homme riche, qui a besoin d'une totalité de manifestation vitale |
     | *Manuscrits de 1844*, troisième manuscrit, besoins, production et division du travail | la science de l'ascétisme et le besoin d'argent, seul besoin qu'elle produit |
-    | *Manuscrits de 1844*, troisième manuscrit, critique de Hegel | la faim, besoin d'un objet hors du corps |
     | *L'Idéologie allemande*, I | la production de nouveaux besoins, premier fait historique |
     | *Contribution*, Introduction de 1857 | la production fournit un besoin à l'objet |
-    | *Grundrisse*, chapitre du capital | le capital pousse le travail au-delà des besoins naturels |
+    | *Grundrisse*, chapitre du capital | le capital pousse le travail au-delà des besoins naturels ; la richesse, universalité des besoins |
     | *Le Capital*, livre I, chap. IV | l'élément historique et moral de la valeur de la force de travail |
-    | *Critique du programme de Gotha*, I | le travail devenu premier besoin vital |
 
     **Voir aussi** : [[g-etre-naturel|Être naturel]] · [[g-metabolisme|Métabolisme]] · [[g-argent|Argent]] · [[g-survie|Survie]] · [[g-homme-total|Homme total]] · [[g-expression-de-la-vie|Expression de la vie]] · [[g-vie-accomplie|Vie accomplie]]
   tables:
@@ -48,130 +48,110 @@ lessons:
     - {kind: cell, column: Passage}
   points:
   - id: g-besoin-l1-q1
-    sentence: "Le rapport d'un être naturel à l'objet extérieur dont il dépend, que la production transforme en le satisfaisant, Marx l'appelle le ___ (Bedürfnis)."
+    sentence: "__Le rapport d'un être naturel à l'objet extérieur dont il dépend, et qui donne au travail sa fin,__ Marx l'appelle le ___ (en allemand Bedürfnis)."
     answer: besoin
     alt: []
+  - id: g-besoin-l1-d1
+    sentence: "__Le seuil qu'une société tient pour indispensable à une vie__, déjà historique, Marx l'appelle les **besoins** ___."
+    answer: nécessaires
+    alt: ["necessaires"]
+  - id: g-besoin-l1-a2
+    sentence: "Le travail donne à la matière une forme utile à la vie, que l'homme se représente d'avance : __c'est par cette représentation que le **besoin** fixe le__ ___ __du travail__."
+    answer: but
+    alt: ["fin"]
   - id: g-besoin-l1-q3
-    sentence: "« La consommation crée pour la production le besoin en tant qu'objet ___, en tant que but » (Contribution, Introduction de 1857)."
+    sentence: "« __La consommation crée pour la production le **besoin**__ en tant qu'objet ___, en tant que but » (Contribution, Introduction de 1857)."
     answer: interne
     alt: []
-  - id: g-besoin-l1-q6
-    sentence: "« L'objet d'art – comme tout autre produit – crée un ___ apte à comprendre l'art et à jouir de la beauté » (Contribution, Introduction de 1857)."
-    answer: public
-    alt: []
-  - id: g-besoin-l1-q7
-    sentence: "« Cette production de nouveaux besoins est le premier fait ___ » (L'Idéologie allemande)."
-    answer: historique
-    alt: []
-  - id: g-besoin-l1-q8
-    sentence: "« L'ampleur des besoins dits nécessaires, ainsi que la manière de les satisfaire, sont eux-mêmes un produit ___ » (Le Capital, livre I, chap. IV)."
-    answer: historique
-    alt: []
-  - id: g-besoin-l1-q9
-    sentence: "Les besoins dits nécessaires dépendent en grande partie du degré de ___ d'un pays (Le Capital, livre I, chap. IV)."
-    answer: civilisation
-    alt: []
-  - id: g-besoin-l1-q10
-    sentence: "« La détermination de la valeur de la force de travail contient donc un élément historique et ___ » (Le Capital, livre I, chap. IV)."
-    answer: moral
-    alt: []
-  - id: g-besoin-l1-q11
-    sentence: "Ce que l'élément historique et moral permet de fixer, dans Le Capital, c'est la valeur de la force de ___."
-    answer: travail
-    alt: []
-  - id: g-besoin-l1-q12
-    sentence: "L'économiste « réduit le besoin de l'ouvrier à l'entretien le plus indispensable et le plus ___ de la vie physique » (Manuscrits de 1844, troisième manuscrit)."
-    answer: misérable
-    alt: ["miserable"]
-  - id: g-besoin-l1-q14
-    sentence: "« Cette science de la merveilleuse industrie est aussi la science de l'___ » (Manuscrits de 1844, troisième manuscrit)."
-    answer: ascétisme
-    alt: ["ascetisme"]
-  - id: g-besoin-l1-q15
-    sentence: "Le véritable idéal de l'économie politique est « l'avare ascétique, mais ___, et l'esclave ascétique, mais producteur » (Manuscrits de 1844, troisième manuscrit)."
-    answer: usurier
-    alt: []
-  - id: g-besoin-l1-q16
-    sentence: "« La propriété privée ne sait pas transformer le besoin ___ en besoin humain » (Manuscrits de 1844, troisième manuscrit)."
-    answer: grossier
-    alt: []
-  - id: g-besoin-l1-q17
-    sentence: "« Le besoin d'___ est donc le vrai besoin produit par l'économie politique et l'unique besoin qu'elle produit » (Manuscrits de 1844, troisième manuscrit)."
-    answer: argent
-    alt: []
-  - id: g-besoin-l1-q18
-    sentence: "« Le capital pousse le travail au-delà des frontières de ses besoins ___ » (Grundrisse, chapitre du capital)."
-    answer: naturels
-    alt: []
-  - id: g-besoin-l1-q19
-    sentence: "Le capital crée « les éléments matériels du développement de cette riche ___ qui est aussi polyvalente dans sa production que dans sa consommation » (Grundrisse)."
-    answer: individualité
-    alt: ["individualite"]
-  - id: g-besoin-l1-q20
-    sentence: "« Un besoin produit par l'___ est venu remplacer un besoin naturel » (Grundrisse, chapitre du capital)."
-    answer: histoire
-    alt: []
-  - id: g-besoin-l1-q21
-    sentence: "« L'homme riche et le besoin humain riche prennent la place de la richesse et de la ___ de l'économie politique » (Manuscrits de 1844, troisième manuscrit)."
-    answer: misère
-    alt: ["misere"]
-  - id: g-besoin-l1-q22
-    sentence: "« L'homme riche est en même temps l'homme qui a besoin d'une ___ de manifestation vitale humaine » (Manuscrits de 1844, troisième manuscrit)."
-    answer: totalité
-    alt: ["totalite"]
-  - id: g-besoin-l1-q23
-    sentence: "L'homme riche est l'homme chez qui « sa propre réalisation existe comme nécessité ___, comme besoin » (Manuscrits de 1844, troisième manuscrit)."
-    answer: intérieure
-    alt: ["interieure"]
-  - id: g-besoin-l1-q24
-    sentence: "La pauvreté est « le lien ___ qui fait ressentir aux hommes comme un besoin la richesse la plus grande, l'autre homme » (Manuscrits de 1844, troisième manuscrit)."
-    answer: passif
-    alt: []
-  - id: g-besoin-l1-q26
-    sentence: "Le communisme grossier prêche « le retour à la simplicité contraire à la nature de l'homme ___ et sans besoin » (Manuscrits de 1844, troisième manuscrit)."
-    answer: pauvre
-    alt: []
-  - id: g-besoin-l1-q27
-    sentence: "Quand le travail ne sera plus seulement un moyen de vivre, il deviendra « lui-même le premier besoin ___ » (Critique du programme de Gotha)."
-    answer: vital
-    alt: []
-  - id: g-besoin-l1-a1
-    sentence: "Le besoin n'est pas un état intérieur, mais un rapport à un ___ : on n'a pas faim en général, on a faim de quelque chose."
-    answer: objet
-    alt: []
-  - id: g-besoin-l1-a2
-    sentence: "Puisque l'objet dont il a besoin est hors de lui, l'homme doit le prendre ou le faire : c'est pourquoi le besoin donne au travail sa ___."
-    answer: fin
-    alt: ["finalité", "finalite", "but"]
   - id: g-besoin-l1-a3
-    sentence: "Selon l'Introduction de 1857, la production crée l'objet, la manière de le consommer, et même le ___."
+    sentence: "__Selon l'Introduction de 1857, la **production** crée__ l'objet, la manière de le consommer, et même le ___."
     answer: consommateur
     alt: []
   - id: g-besoin-l1-a4
-    sentence: "Parce que la satisfaction d'un besoin en fait naître de nouveaux, l'homme a une ___, quand l'animal tourne dans le cercle des mêmes besoins."
+    sentence: "Parce que satisfaire un besoin laisse un instrument et un savoir-faire qui en ouvrent d'autres, __les **besoins humains** n'ont pas de limite fixe__ : c'est par là que l'homme a une ___."
     answer: histoire
     alt: []
-  - id: g-besoin-l1-a5
-    sentence: "Parce que les besoins nécessaires varient avec le degré de civilisation, le salaire n'est pas un minimum biologique, mais une ___ sociale et l'enjeu d'une lutte."
-    answer: norme
+  - id: g-besoin-l1-q10
+    sentence: "« __La détermination de la valeur de la **force de travail** contient donc un élément__ historique et ___ » (Le Capital, livre I, chap. IV)."
+    answer: moral
     alt: []
-  - id: g-besoin-l1-a6
-    sentence: "L'élément historique et moral de la valeur de la force de travail s'oppose à la « loi d'___ » des salaires, qui la fixe au minimum biologique."
-    answer: airain
+  - id: g-besoin-l1-c1
+    sentence: "__Dans une société humaine, un **besoin nouveau** serait__ « une manifestation nouvelle de la force essentielle de l'homme et un ___ nouveau de l'essence humaine » (Manuscrits de 1844)."
+    answer: enrichissement
     alt: []
-  - id: g-besoin-l1-a7
-    sentence: "Sous la propriété privée, la misère du pauvre et le luxe du riche sont deux faces d'une même réduction : le besoin y perd sa qualité au profit d'une ___."
-    answer: quantité
-    alt: ["quantite"]
-  - id: g-besoin-l1-a8
-    sentence: "Le capital comprime les besoins de l'ouvrier, qui sont pour lui un coût ; mais pour ___ la survaleur contenue dans les marchandises, il doit les vendre, donc susciter de nouveaux besoins."
-    answer: réaliser
-    alt: ["realiser"]
-  - id: g-besoin-l1-a9
-    sentence: "Pour Marx, la richesse humaine ne se mesure pas aux choses possédées, mais à la multiplicité des ___ humains."
-    answer: besoins
+  - id: g-besoin-l1-c2
+    sentence: "__Sous la propriété privée,__ « tout homme s'applique à créer pour l'autre un **besoin nouveau** pour le contraindre à un nouveau ___ » (Manuscrits de 1844)."
+    answer: sacrifice
     alt: []
-  - id: g-besoin-l1-a10
-    sentence: "Marx rejette le communisme ___, qui prêche le retour à la simplicité de l'homme pauvre et sans besoin."
+  - id: g-besoin-l1-q17
+    sentence: "Parce que tous les besoins ne s'achètent qu'avec un même moyen, __ils se ramènent à un seul__ : « le besoin d'___ est donc le vrai besoin produit par l'économie politique et l'unique besoin qu'elle produit » (Manuscrits de 1844)."
+    answer: argent
+    alt: []
+  - id: g-besoin-l1-c3
+    sentence: "__La même aliénation produit chez le riche le__ ___ __des besoins__, et chez l'ouvrier « la simplicité complète, grossière et abstraite du besoin » (Manuscrits de 1844)."
+    answer: raffinement
+    alt: []
+  - id: g-besoin-l1-q12
+    sentence: "Parce que l'ouvrier est un coût, l'économiste « __réduit le **besoin** de l'ouvrier à l'__ ___ le plus indispensable et le plus misérable de la vie physique » (Manuscrits de 1844)."
+    answer: entretien
+    alt: []
+  - id: g-besoin-l1-a13
+    sentence: "Parce que la richesse naît de l'accumulation, qui exige de ne pas dépenser, __l'**économie politique** est aussi la science de__ l'___."
+    answer: ascétisme
+    alt: ["ascetisme"]
+  - id: g-besoin-l1-q16
+    sentence: "« La propriété privée __ne sait pas transformer le **besoin**__ ___ en besoin humain » (Manuscrits de 1844, troisième manuscrit)."
     answer: grossier
     alt: []
+  - id: g-besoin-l1-a8
+    sentence: "Le **capital** comprime les besoins de l'ouvrier, qui sont pour lui un coût ; __mais pour__ ___ __la survaleur contenue dans les marchandises, il doit les vendre__, donc susciter de nouveaux besoins."
+    answer: réaliser
+    alt: ["realiser"]
+  - id: g-besoin-l1-q19
+    sentence: "__Le **capital** crée__ « les éléments matériels du développement de cette riche ___ qui est aussi polyvalente dans sa production que dans sa consommation » (Grundrisse)."
+    answer: individualité
+    alt: ["individualite"]
+  - id: g-besoin-l1-c4
+    sentence: "__La grande industrie fait dépendre la **richesse** moins du temps de travail que de la science et des machines, et libère du temps__ ___."
+    answer: disponible
+    alt: ["libre"]
+  - id: g-besoin-l1-a16
+    sentence: "__Une fois la forme bourgeoise disparue, la **richesse** n'est rien d'autre, selon les Grundrisse, que l'__ ___ des besoins, des capacités, des jouissances."
+    answer: universalité
+    alt: ["universalite"]
+  - id: g-besoin-l1-a17
+    sentence: "Parce qu'un **besoin** est une force tendue vers son objet, __en avoir beaucoup, c'est avoir beaucoup de rapports__ ___ __au monde__."
+    answer: actifs
+    alt: []
+  - id: g-besoin-l1-q22
+    sentence: "« __L'**homme riche** est en même temps l'homme qui a besoin d'une__ ___ de manifestation vitale humaine » (Manuscrits de 1844, troisième manuscrit)."
+    answer: totalité
+    alt: ["totalite"]
+  - id: g-besoin-l1-q23
+    sentence: "__L'**homme riche** est l'homme chez qui__ « sa propre réalisation existe comme nécessité ___, comme besoin » (Manuscrits de 1844)."
+    answer: intérieure
+    alt: ["interieure"]
+  - id: g-besoin-l1-q24
+    sentence: "__Sous le socialisme, la **pauvreté** est__ « le lien ___ qui fait ressentir aux hommes comme un besoin la richesse la plus grande, l'autre homme » (Manuscrits de 1844)."
+    answer: passif
+    alt: []
+  - id: g-besoin-l1-c5
+    sentence: "__Les ouvriers communistes qui se réunissent pour la propagande__ s'approprient « un besoin nouveau, le besoin de la ___, et ce qui semble être le moyen est devenu le but » (Manuscrits de 1844)."
+    answer: société
+    alt: ["societe"]
+  - id: g-besoin-l1-a10
+    sentence: "__Marx rejette le communisme__ ___, qui partage également la propriété et prêche le retour à la simplicité de l'homme pauvre et sans besoin."
+    answer: grossier
+    alt: []
+  - id: g-besoin-l1-a18
+    sentence: "__Entre la demande sans argent, basée sur le **besoin**, et la demande effective__, il y a, dit Marx, « la différence entre l'___ et la pensée » (Manuscrits de 1844)."
+    answer: être
+    alt: ["etre"]
+  - id: g-besoin-l1-e1
+    sentence: "__Marx n'oppose pas de vrais besoins naturels à de faux besoins artificiels__ : ce qu'il condamne, c'est le **besoin** réduit au minimum physique, ou suscité pour l'___."
+    answer: argent
+    alt: []
+  - id: g-besoin-l1-e2
+    sentence: "__L'autre homme est le plus riche des objets dont un homme a besoin__, parce que seules les forces de l'être ___ se confirment dans un autre que soi."
+    answer: générique
+    alt: ["generique"]
