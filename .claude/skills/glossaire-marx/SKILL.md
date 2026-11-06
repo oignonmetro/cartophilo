@@ -144,6 +144,23 @@ analyse ») :
 - **Le partage** : ce qui entre dans cette leçon, et ce qui devient une
   autre entrée (sous-entrée, distinction, notion voisine), vers laquelle on
   renverra.
+- **L'angle propre, avant le plan** (autocritique du 2026-11-06) : relire
+  les intitulés d'étape et les passages clefs des entrées déjà publiées, et
+  écrire en une phrase ce que celle-ci établit qu'aucune autre n'établit.
+  Les entrées sur la vie (Activité vitale, Être naturel, Besoin, Expression
+  de la vie, Vie matérielle, Survie, Vie accomplie) partagent le même noyau
+  de 1844 : Être naturel, Besoin et Expression de la vie citaient toutes la
+  faim et les « objets réels, sensibles », Expression de la vie redisait le
+  salarié d'Activité vitale. Une thèse déjà établie ailleurs ne s'y
+  redémontre pas : une phrase et un renvoi. Ses passages ne font pas de
+  nouvelles cartes. Mieux vaut une entrée plus courte.
+- **Les citations retraduites** : une citation que NotebookLM tire d'une
+  étude en anglais (Shambaugh…) est sa propre traduction, non celle d'une
+  édition ; elle ne s'emploie pas entre guillemets. Chercher une étude
+  française qui la cite (« donne le texte exact tel que cette étude
+  l'imprime »), sinon paraphraser en nommant l'étude (cas des *Notes sur
+  James Mill*, 2026-11-06). Une citation de commentateur (Wittmann, Hess
+  cité par Wittmann) ne prend pas le teal, réservé à Marx.
 
 ### La procédure NotebookLM est pilotée par `notebook.py`
 
@@ -637,6 +654,17 @@ portent en priorité sur :
 Une carte ne renvoie pas à une autre entrée : elle tient seule, et dit en
 quelques mots ce dont elle a besoin d'une notion voisine.
 
+**Au moins un tiers de cartes d'argument, et aucune carte devinable**
+(autocritique du 2026-11-06, à la demande de l'utilisateur). Les entrées
+Besoin et Expression de la vie n'avaient que trois ou quatre cartes sur
+vingt-cinq hors citation : elles faisaient apprendre la lettre des textes,
+pas l'argument. Une carte d'argument troue la raison ou la distinction (« le
+capital comprime les besoins de l'ouvrier, qui sont un coût ; mais pour ___
+la survaleur, il doit vendre »). Une carte n'a pas sa réponse ailleurs dans
+la phrase (« la vie qui détermine la ___ », réponse *conscience*), ni une
+réponse qu'un mot-outil suffit à trouver (« l'expression de ___ vie »,
+réponse *ta*). `verifie` refuse les deux.
+
 ## 6. Fichier, identifiants, branchement
 
 ```yaml
@@ -727,6 +755,13 @@ lessons:
    NotebookLM aide à trouver ce qui manque (`manque`) : sans lui recopier
    la fiche, lui demander d'après la conversation ce qui n'a pas été
    abordé.
+   Puis **la relecture indépendante** (autocritique du 2026-11-06 : je
+   jugeais mes propres thèses claires) : un sous-agent qui n'a pas écrit
+   l'entrée la relit selon `.claude/agents/relecteur-glossaire-marx.md`
+   (agent `relecteur-glossaire-marx`, ou un agent généraliste à qui l'on
+   donne ce fichier) et rend un rapport. Chaque point « à reprendre » se
+   corrige d'après le journal, ou par une relance (`relance`), jamais de
+   mémoire. La relecture de l'utilisateur après publication (phase G) reste.
 2. `python -I .claude/skills/glossaire-marx/passages_chrono.py "content/courses/marx/units/g-*.yaml"` :
    les lignes des passages clefs se rangent dans l'ordre chronologique des
    œuvres (une œuvre inconnue est signalée : l'ajouter à sa liste) ; l'en-tête

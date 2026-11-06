@@ -21,7 +21,8 @@ import glob, re, sys, unicodedata
     ('manifeste', 1848),
     ('luttes de classes', 1850),
     ('18 brumaire', 1852),
-    ('grundrisse', 1857),
+    ('introduction de 1857', 1857),  # avant « contribution » : la case dit « Contribution, Introduction de 1857 »
+    ('grundrisse', 1857.5),
     ('contribution', 1859),
     ('salaire, prix et profit', 1865),
     ('capital', 1867),

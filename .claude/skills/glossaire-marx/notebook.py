@@ -348,6 +348,30 @@ def controle(entree, yaml):
         fautes.append("« Autrement dit » : une paraphrase qui affirme au lieu de démontrer")
     if j["plan"] and not j.get("accord"):
         fautes.append("plan non validé par l'utilisateur (`valide`)")
+    # Autocritique du 2026-11-06 : toutes les thèses jugées claires d'emblée, aucune relance ;
+    # le notebook ne faisait que redonner les citations. Au moins une relance, sur le point le plus
+    # difficile, avant d'écrire.
+    if not j.get("derive_de") and not any(q["phase"] == "E" and q["reponse"] for q in j["questions"]):
+        fautes.append("aucune relance (phase E) : relancer le notebook sur le point le plus difficile du plan")
+    fautes += cartes_faibles(yaml)
+    return fautes
+
+
+def cartes_faibles(yaml):
+    """Cartes dont la réponse se lit dans la phrase même (autocritique du 2026-11-06), et part des
+    cartes d'argument : il en faut au moins un tiers (les autres font retrouver un mot de citation)."""
+    fautes, citations, total = [], 0, 0
+    texte = open(yaml, encoding="utf-8").read()
+    carte = re.compile(r'- id: (\S+)\n\s+sentence: "((?:[^"\\]|\\.)*)"\n\s+answer: "?([^"\n]*)"?')
+    for pid, phrase, rep in carte.findall(texte):
+            total += 1
+            reste = phrase.replace("___", " ")
+            if re.search(r"(?<!\w)" + re.escape(rep.strip()) + r"(?!\w)", reste, re.I):
+                fautes.append(f"carte devinable, la réponse est dans la phrase : {pid}")
+            if re.search(r"«[^»]*___[^»]*»", phrase):
+                citations += 1
+    if total and total - citations < total / 3:
+        fautes.append(f"trop peu de cartes d'argument : {total - citations} sur {total} (au moins un tiers ; les autres complètent une citation)")
     return fautes
 
 
