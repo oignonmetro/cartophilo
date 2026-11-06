@@ -11,6 +11,7 @@ import glob, re, sys, unicodedata
     ('philosophie du droit de hegel', 1843),
     ('question juive', 1844),
     ('manuscrits', 1844),
+    ('james mill', 1844),
     ('notes de lecture', 1844),
     ('sainte famille', 1845),
     ('theses sur feuerbach', 1845),
