@@ -104,7 +104,9 @@ def cmd_debut(entree, notion, allemand=None, voisines=None, effets=None, couvert
     if os.path.exists(chemin(entree, "journal.json")):
         sys.exit(f"Un journal existe déjà pour {entree} (`etat` pour le voir).")
     nom = f"la notion de « {notion} »" + (f" ({allemand})" if allemand else "")
-    deja_entrees = f" Ne développe pas ce que traitent déjà d'autres entrées : {couvert}." if couvert else ""
+    # Le notebook ne connaît pas le glossaire : on nomme les notions voisines elles-mêmes,
+    # jamais « les autres entrées » (remarque de l'utilisateur, 2026-11-06).
+    deja_entrees = f" Ne développe pas pour elles-mêmes ces notions voisines, sauf pour marquer la différence : {couvert}." if couvert else ""
     j = dict(entree=entree, notion=nom, voisines=voisines, effets=effets, plan=[], questions=[])
     ajoute(j, "A-lieux", "A", f"Où Marx établit-il ou définit-il {nom} ? Donne les deux à quatre passages décisifs (œuvre, section), une citation de Marx pour chacun, et ce que chacun établit.")
     ajoute(j, "A-emplois", "A", f"Quels sens ou emplois distincts {nom} a-t-elle chez Marx, comment évoluent-ils des écrits de jeunesse au Capital, et quelles distinctions commande-t-elle ? Pour chacun, un passage (œuvre, section) et une citation.")

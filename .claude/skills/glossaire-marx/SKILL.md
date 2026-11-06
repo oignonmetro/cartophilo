@@ -166,7 +166,7 @@ dont le message dit « retouche ») ; une correction ponctuelle passe par
 
 ```
 N=".claude/skills/glossaire-marx/notebook.py"
-python -I $N debut g-x "terme sans article" --allemand terme --voisines "a, b" --effets "c, d" [--couvert "ce que d'autres entrées traitent"]
+python -I $N debut g-x "terme sans article" --allemand terme --voisines "a, b" --effets "c, d" [--couvert "notions voisines déjà traitées"]
 python -I $N question g-x          # la prochaine question, à coller telle quelle
 python -I $N reponse g-x <qid> <fichier>   # la réponse, copiée dans un fichier
 python -I $N image g-x "formule ou image de Marx"
@@ -226,9 +226,11 @@ toutes les quatre mêmes passages, lues puis recopiées en entier)** :
   ligne `Passage : œuvre, section` par passage (`question` les relit pour
   dire à NotebookLM de ne pas les redonner) ;
 - les questions élémentaires vont en deux messages à réponse en tableau
-  court (`B-statut`, `B-portee`) ; `debut … --couvert "…"` signale ce que
-  traitent déjà des entrées voisines (Croissance, Reproduction…), que
-  NotebookLM ne doit pas redévelopper. Les difficultés, les thèses, les
+  court (`B-statut`, `B-portee`) ; `debut … --couvert "…"` nomme les notions
+  voisines déjà traitées dans le glossaire, que NotebookLM ne doit pas
+  redévelopper. NotebookLM ne connaît pas le glossaire : dans tout message
+  qu'on lui envoie, nommer ces notions elles-mêmes, jamais « les autres
+  entrées » ni « l'entrée sur X » (remarque de l'utilisateur, 2026-11-06). Les difficultés, les thèses, les
   images et les relances restent une par message : c'est là que la
   division importe.
 
