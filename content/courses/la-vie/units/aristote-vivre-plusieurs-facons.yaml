@@ -1,0 +1,612 @@
+# Unité de texte (voir content/textes.md) : Aristote, De l'âme, II, 2,
+# 413a20-b13, trad. Bodéüs (Œuvres complètes, Flammarion), texte fourni par
+# l'utilisateur, vérifié sur l'édition (appels de note et repères marginaux
+# retirés du texte, repères reportés dans les leçons). Sans commentaire suivi :
+# l'unité repose sur une analyse écrite pour elle, d'après l'édition et le
+# notebook « Aristote : la vie » (Polansky, Shields, Hamlyn, Bermúdez).
+
+id: aristote-vivre-plusieurs-facons
+title: "Aristote : vivre se dit de plusieurs façons, et une seule suffit"
+subtitle: "De l'âme, II, 2, 413a20-b13"
+icon: page
+color: coral
+intro: |-
+  Le point de départ du chapitre 2 du livre II. Ce qui distingue l'animé de l'inanimé, c'est la vie ; mais vivre se dit de plusieurs façons, et il suffit d'une seule pour qu'il y ait vie. Ces façons s'ordonnent : se nourrir suffit à vivre, et tout le reste le suppose ; sentir, à commencer par toucher, fait l'animal. L'âme est le principe de ces fonctions, et se définit par elles.
+lessons:
+- id: aristote-vivre-plusieurs-facons-i1
+  title: "Ce qui distingue le vivant : la thèse et le plan"
+  notes: |-
+    **Le texte répond à la question** {amber}**« qu'est-ce qui distingue l'animé de l'inanimé ? »**{/amber} **:** {violet}**la vie**{/violet}**, mais** {coral}**vivre se dit de plusieurs façons, et une seule suffit**{/coral}**.** C'est le « point de départ » du chapitre 2. Le chapitre 1 avait donné une formule commune de l'âme ; or une définition doit {teal}« non seulement montrer le fait dont il s'agit [...], mais encore contenir et rendre manifeste le motif pour lequel il en va ainsi »{/teal} (413a13-16). Aristote repart donc des faits : de ce qu'on voit vivre.
+
+    La thèse réunit deux affirmations. L'une porte sur la **définition** de la vie : {green}__elle se reconnaît à ses manifestations__{/green}, et il suffit d'{amber}une seule{/amber} (intelligence, sensation, mouvement local, nutrition) : le critère est {violet}disjonctif{/violet}. L'autre porte sur leur **ordre** : {green}__la nutrition peut exister seule, les autres non sans elle__{/green}, et la sensation, fondée sur le toucher, fait l'animal. La seconde est nécessaire à la première : {pink}sans cet ordre, la liste ne serait qu'un assemblage{/pink} ; {coral}avec lui, les façons de vivre forment une série qui repose sur la nutrition{/coral}.
+
+    Le texte procède en six temps. **Les lignes** {teal}**413a20-25**{/teal} **posent le critère** et sa pluralité ; **les lignes** {teal}**413a25-31**{/teal} **l'étendent aux plantes** ; **les lignes** {teal}**413a31-b1**{/teal} **ordonnent les façons de vivre** ; **les lignes** {teal}**413b1-4**{/teal} **distinguent l'animal**, **les lignes** {teal}**413b4-10**{/teal} **fondent la sensation sur le toucher**, et **les lignes** {teal}**413b10-13**{/teal} **concluent sur l'âme**.
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | poser le critère du vivant et sa pluralité | 413a20-25 | l'animé se distingue par la vie, et il y a vie dès qu'il y a une seule de ses manifestations : intelligence, sensation, mouvement local, nutrition |
+    | reconnaître la vie aux plantes | 413a25-31 | les plantes croissent et dépérissent de tous côtés par un principe qui est en elles : elles vivent, aussi longtemps qu'elles se nourrissent |
+    | ordonner les façons de vivre | 413a31-b1 | la vie nutritive peut exister seule, les autres ne le peuvent pas sans elle chez les mortels : les végétaux le montrent |
+    | distinguer l'animal par la sensation | 413b1-4 | la nutrition fait le vivant, la sensation l'animal, puisqu'on appelle animaux des êtres fixes qui sentent |
+    | fonder la sensation sur le toucher | 413b4-10 | le toucher se sépare des autres sens comme la nutrition de la sensation, et tous les animaux l'ont |
+    | conclure sur l'âme | 413b10-13 | l'âme est principe de ces fonctions et se définit par elles ; la cause de chacune est remise à plus tard |
+
+    **Contre qui ?** Contre ceux qui ne reconnaissent la vie qu'au {red}mouvement visible{/red} et refuseraient de dire vivante la plante, qui ne se déplace pas. Et contre {sky}**Empédocle**{/sky}, qui explique la croissance des plantes par les éléments, {red}la terre qui descend, le feu qui monte{/red} (II, 4, 415b28-416a2) : la croissance en directions contraires montre {green}un principe propre au vivant{/green}.
+
+    ! La liste n'est pas une conjonction : il ne faut pas toutes ces manifestations pour vivre, une seule suffit.
+  passage:
+    label: "Introduction"
+  points:
+  - id: aristote-vivre-plusieurs-facons-i1-1
+    sentence: "*De l'âme*, II, 2 : une définition doit non seulement montrer le fait, mais encore « contenir et rendre manifeste le ___ pour lequel il en va ainsi »."
+    answer: "motif"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-i1-2
+    sentence: "Le critère du vivant de *De l'âme*, II, 2 est ___ : il suffit d'une seule des manifestations de la vie pour qu'il y ait vie."
+    answer: "disjonctif"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-i1-3
+    sentence: "Dans *De l'âme*, II, 2, les façons de vivre forment une série qui repose sur la ___ : elle peut exister seule, les autres non sans elle."
+    answer: "nutrition"
+    alt: ["fonction nutritive"]
+  - id: aristote-vivre-plusieurs-facons-i1-4
+    sentence: "Dans *De l'âme*, II, 2, ce qui fait l'animal n'est pas le mouvement local mais la ___, fondée sur le toucher."
+    answer: "sensation"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-i1-5
+    sentence: "*De l'âme*, II, 4 reproche à ___ d'expliquer la croissance des plantes par la terre qui descend et le feu qui monte."
+    answer: "Empédocle"
+    alt: []
+- id: aristote-vivre-plusieurs-facons-p1
+  title: "Vivre se dit de plusieurs façons : une seule suffit à faire un vivant"
+  notes: |-
+    **Le paragraphe pose le critère du vivant :** {violet}**l'animé se distingue de l'inanimé par la vie**{/violet}**, et** {coral}**il y a vie dès qu'il y a une seule de ses manifestations**{/coral}**.**
+
+    **Un point de départ, non une démonstration.** {teal}« Disons donc, en guise de point de départ »{/teal} : Aristote ne prouve pas que l'animé se distingue par la vie, il {amber}le pose{/amber}, comme ce que chacun accorde. Le travail commence ensuite : dire ce que « vivre » veut dire.
+
+    **« Vivre s'entend de plusieurs façons. »** Le mot n'a pas un seul sens, parce que les vivants ne vivent pas tous de la même manière. D'où le critère : {green}__il suffit d'une seule manifestation__{/green}, {red}il n'en faut pas toutes{/red}.
+
+    | Manifestation | Qui l'a |
+    | l'intelligence | l'homme |
+    | la sensation | tous les animaux |
+    | le mouvement local et le repos | certains animaux seulement |
+    | le mouvement nutritif, dépérissement et croissance | tout vivant mortel, plante comprise |
+
+    La liste va {amber}du plus haut au plus bas{/amber}, et la dernière ligne est la plus large : elle prépare la suite, qui fera de la nutrition la condition de toutes les autres.
+
+    **Deux précisions de vocabulaire.** {yellow}« Le mouvement local et le repos »{/yellow} vont ensemble : se mouvoir, c'est aussi pouvoir s'arrêter, comme le corps naturel a {teal}« un principe de mouvement et de stabilité en lui-même »{/teal} (412b16-17). Et {yellow}« le mouvement nutritif »{/yellow} prend « mouvement » au sens large de **changement** : croître et dépérir sont des mouvements selon la quantité.
+
+    **Pour la vie,** c'est sa définition la plus large : {coral}__vivre n'est pas une propriété, mais une famille de manières d'être actif__{/coral}.
+
+    ! « Ne serait-ce qu'une seule » : la plante, qui n'a que la nutrition, vit autant que l'homme ; elle ne vit pas moins, elle vit d'une seule façon.
+  passage:
+    label: "413a20-25"
+    text: "Disons donc, en guise de point de départ à l'examen, que l'animé se distingue de l'inanimé par le fait qu'il est en vie. Mais, comme le fait de vivre s'entend de plusieurs façons, nous prétendons qu'il y a vie là où se trouve ne serait-ce qu'une seule quelconque des manifestations telles que l'intelligence, la sensation, le mouvement local et le repos, ou encore le mouvement nutritif, dépérissement et croissance."
+  tables:
+  - table: manifestation-qui-l-a
+    exercises:
+    - {kind: bank, column: Qui l'a}
+  points:
+  - id: aristote-vivre-plusieurs-facons-p1-1
+    sentence: "« Disons donc, en guise de point de départ à l'examen, que ___ par le fait qu'il est en vie. Mais, comme le fait de vivre s'entend de plusieurs façons, nous prétendons qu'il y a vie là où se trouve ne serait-ce qu'une seule quelconque des manifestations telles que l'intelligence, la sensation, le mouvement local et le repos, ou encore le mouvement nutritif, dépérissement et croissance. »"
+    answer: "l'animé se distingue de l'inanimé"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p1-2
+    sentence: "« Disons donc, en guise de point de départ à l'examen, que l'animé se distingue de l'inanimé ___. Mais, comme le fait de vivre s'entend de plusieurs façons, nous prétendons qu'il y a vie là où se trouve ne serait-ce qu'une seule quelconque des manifestations telles que l'intelligence, la sensation, le mouvement local et le repos, ou encore le mouvement nutritif, dépérissement et croissance. »"
+    answer: "par le fait qu'il est en vie"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p1-3
+    sentence: "« Disons donc, en guise de point de départ à l'examen, que l'animé se distingue de l'inanimé par le fait qu'il est en vie. Mais, comme le fait de vivre ___, nous prétendons qu'il y a vie là où se trouve ne serait-ce qu'une seule quelconque des manifestations telles que l'intelligence, la sensation, le mouvement local et le repos, ou encore le mouvement nutritif, dépérissement et croissance. »"
+    answer: "s'entend de plusieurs façons"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p1-4
+    sentence: "« Disons donc, en guise de point de départ à l'examen, que l'animé se distingue de l'inanimé par le fait qu'il est en vie. Mais, comme le fait de vivre s'entend de plusieurs façons, nous prétendons qu'il y a vie là où se trouve ___ des manifestations telles que l'intelligence, la sensation, le mouvement local et le repos, ou encore le mouvement nutritif, dépérissement et croissance. »"
+    answer: "ne serait-ce qu'une seule quelconque"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p1-5
+    sentence: "« Disons donc, en guise de point de départ à l'examen, que l'animé se distingue de l'inanimé par le fait qu'il est en vie. Mais, comme le fait de vivre s'entend de plusieurs façons, nous prétendons qu'il y a vie là où se trouve ne serait-ce qu'une seule quelconque des manifestations telles que ___, le mouvement local et le repos, ou encore le mouvement nutritif, dépérissement et croissance. »"
+    answer: "l'intelligence, la sensation"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p1-6
+    sentence: "« Disons donc, en guise de point de départ à l'examen, que l'animé se distingue de l'inanimé par le fait qu'il est en vie. Mais, comme le fait de vivre s'entend de plusieurs façons, nous prétendons qu'il y a vie là où se trouve ne serait-ce qu'une seule quelconque des manifestations telles que l'intelligence, la sensation, ___, ou encore le mouvement nutritif, dépérissement et croissance. »"
+    answer: "le mouvement local et le repos"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p1-7
+    sentence: "« Disons donc, en guise de point de départ à l'examen, que l'animé se distingue de l'inanimé par le fait qu'il est en vie. Mais, comme le fait de vivre s'entend de plusieurs façons, nous prétendons qu'il y a vie là où se trouve ne serait-ce qu'une seule quelconque des manifestations telles que l'intelligence, la sensation, le mouvement local et le repos, ou encore ___. »"
+    answer: "le mouvement nutritif, dépérissement et croissance"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p1-8
+    sentence: "« Disons donc, ___, que l'animé se distingue de l'inanimé par le fait qu'il est en vie. Mais, comme le fait de vivre s'entend de plusieurs façons, nous prétendons qu'il y a vie là où se trouve ne serait-ce qu'une seule quelconque des manifestations telles que l'intelligence, la sensation, le mouvement local et le repos, ou encore le mouvement nutritif, dépérissement et croissance. »"
+    answer: "en guise de point de départ à l'examen"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p1-9
+    sentence: "Dans la liste des manifestations de la vie de *De l'âme*, II, 2, le mouvement local va avec le ___ : se mouvoir, c'est aussi pouvoir s'arrêter."
+    answer: "repos"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p1-10
+    sentence: "Dans « le mouvement nutritif, dépérissement et croissance », **mouvement** est pris au sens large de ___ : croître et dépérir sont des mouvements selon la quantité."
+    answer: "changement"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p1-11
+    sentence: "Selon *De l'âme*, II, 2, la plante, qui n'a que la nutrition, ne vit pas moins que l'homme : elle vit d'une seule ___."
+    answer: "façon"
+    alt: ["manière"]
+- id: aristote-vivre-plusieurs-facons-p2
+  title: "La plante vit : elle croît par elle-même dans tous les sens"
+  notes: |-
+    **Le paragraphe étend la vie aux plantes :** {violet}**tous les êtres qui croissent**{/violet} **vivent, parce qu'ils ont** {coral}**en eux-mêmes le principe de leur croissance**{/coral}**, une croissance qui va dans des directions contraires.** C'est l'application du critère : une seule manifestation, la nutrition, suffit.
+
+    | Moment | Fragment | Ce qui s'y joue |
+    | tirer la conséquence et en donner la raison | 1 | les plantes vivent, car elles ont en elles le principe qui les fait croître et dépérir dans des directions contraires |
+    | décrire cette croissance et lier la vie à la nourriture | 2 | elles croissent vers le haut et vers le bas, de tous côtés, et vivent aussi longtemps qu'elles se nourrissent |
+
+    === 1 Des directions contraires, un principe intérieur
+
+    **« Tous les êtres qui se développent »** traduit le grec `ta phuomena`, {yellow}les plantes{/yellow}, « ce qui pousse » (du même verbe que `phusis`, la nature). Aristote ne dit pas « il est évident que les plantes vivent » : il en donne {amber}une raison{/amber}, tirée de ce qu'on voit (« visiblement »).
+
+    **La raison.** Un corps inanimé ne se meut que dans un sens : {yellow}le feu vers le haut{/yellow}, {yellow}la terre vers le bas{/yellow}. Or la plante {green}__croît à la fois vers le haut et vers le bas__{/green}, par ses tiges et par ses racines. {red}Aucun élément ne peut l'expliquer{/red}, puisque chacun irait dans une seule direction : il faut {coral}une puissance qui soit dans la plante même{/coral}. {sky}Polansky{/sky}, {sky}Shields{/sky} et {sky}Hamlyn{/sky} lisent ainsi l'argument : la croissance en directions contraires est la marque d'un principe interne.
+
+    === 2 De tous côtés, tant qu'ils se nourrissent
+
+    **« De tous côtés »** ajoute la croissance en largeur : {green}__la plante se développe comme un tout__{/green}. {sky}Shields{/sky} y voit une croissance {violet}réglée et limitée{/violet}, non une expansion brute, comme serait celle d'un feu.
+
+    **« Aussi longtemps qu'ils peuvent absorber de la nourriture. »** La phrase lie la **durée** de la vie à la **nutrition** : {coral}__la plante vit tant qu'elle se nourrit__{/coral}. Vivre, pour elle, c'est {amber}se maintenir{/amber} en assimilant, et cesser de pouvoir se nourrir, c'est mourir.
+
+    **Pour la vie,** le paragraphe donne son critère minimal : {green}__vit ce qui croît et se maintient par un principe qui est en lui__{/green}, non ce qui bouge visiblement.
+
+    ! « Directions contraires » ne veut pas dire que la plante pousse au hasard : c'est une croissance tenue ensemble par un même principe, la preuve qu'elle n'est pas un simple mélange d'éléments.
+  passage:
+    label: "413a25-31"
+    text: "C'est pourquoi l'on considère que tous les êtres qui se développent ont également la vie, car, visiblement, ils ont en eux-mêmes la sorte de puissance ou de principe qui leur permet de suivre, dans leur croissance et leur dépérissement, des directions contraires. La croissance, en effet, ne s'effectue pas vers le haut à l'exclusion du bas, mais c'est pareillement dans les deux sens et de tous côtés que se développent tous les êtres qui ont toujours à se nourrir et dont la vie se maintient aussi longtemps qu'ils peuvent absorber de la nourriture."
+  tables:
+  - table: moment-fragment-ce-qui-s-y-joue
+    exercises: []
+  points:
+  - id: aristote-vivre-plusieurs-facons-p2-1
+    fragment: "1/2"
+    sentence: "« C'est pourquoi l'on considère que tous les êtres qui se développent ___, car, visiblement, ils ont en eux-mêmes la sorte de puissance ou de principe qui leur permet de suivre, dans leur croissance et leur dépérissement, des directions contraires. »"
+    answer: "ont également la vie"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p2-2
+    fragment: "1/2"
+    sentence: "« C'est pourquoi l'on considère que tous les êtres qui se développent ont également la vie, car, visiblement, ils ont ___ la sorte de puissance ou de principe qui leur permet de suivre, dans leur croissance et leur dépérissement, des directions contraires. »"
+    answer: "en eux-mêmes"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p2-3
+    fragment: "1/2"
+    sentence: "« C'est pourquoi l'on considère que tous les êtres qui se développent ont également la vie, car, visiblement, ils ont en eux-mêmes ___ qui leur permet de suivre, dans leur croissance et leur dépérissement, des directions contraires. »"
+    answer: "la sorte de puissance ou de principe"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p2-4
+    fragment: "1/2"
+    sentence: "« C'est pourquoi l'on considère que tous les êtres qui se développent ont également la vie, car, visiblement, ils ont en eux-mêmes la sorte de puissance ou de principe qui leur permet de suivre, dans leur croissance et leur dépérissement, ___. »"
+    answer: "des directions contraires"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p2-5
+    sentence: "Dans *De l'âme*, II, 2, « tous les êtres qui se développent » traduit le grec `ta phuomena` : les ___."
+    answer: "plantes"
+    alt: ["végétaux"]
+  - id: aristote-vivre-plusieurs-facons-p2-6
+    sentence: "Un corps inanimé ne se meut que dans un sens, le feu vers le haut, la terre vers le bas : la croissance de la plante en directions contraires suppose donc un principe ___."
+    answer: "intérieur"
+    alt: ["interne"]
+  - id: aristote-vivre-plusieurs-facons-p2-7
+    fragment: "2/2"
+    sentence: "« La croissance, en effet, ne s'effectue pas ___, mais c'est pareillement dans les deux sens et de tous côtés que se développent tous les êtres qui ont toujours à se nourrir et dont la vie se maintient aussi longtemps qu'ils peuvent absorber de la nourriture. »"
+    answer: "vers le haut à l'exclusion du bas"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p2-8
+    fragment: "2/2"
+    sentence: "« La croissance, en effet, ne s'effectue pas vers le haut à l'exclusion du bas, mais c'est pareillement ___ que se développent tous les êtres qui ont toujours à se nourrir et dont la vie se maintient aussi longtemps qu'ils peuvent absorber de la nourriture. »"
+    answer: "dans les deux sens et de tous côtés"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p2-9
+    fragment: "2/2"
+    sentence: "« La croissance, en effet, ne s'effectue pas vers le haut à l'exclusion du bas, mais c'est pareillement dans les deux sens et de tous côtés que se développent tous les êtres ___ et dont la vie se maintient aussi longtemps qu'ils peuvent absorber de la nourriture. »"
+    answer: "qui ont toujours à se nourrir"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p2-10
+    fragment: "2/2"
+    sentence: "« La croissance, en effet, ne s'effectue pas vers le haut à l'exclusion du bas, mais c'est pareillement dans les deux sens et de tous côtés que se développent tous les êtres qui ont toujours à se nourrir et dont la vie se maintient ___. »"
+    answer: "aussi longtemps qu'ils peuvent absorber de la nourriture"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p2-11
+    sentence: "Selon Shields, la croissance de la plante n'est pas une expansion brute, comme celle d'un feu, mais une croissance ___ et limitée."
+    answer: "réglée"
+    alt: ["structurée"]
+  - id: aristote-vivre-plusieurs-facons-p2-12
+    sentence: "En liant la durée de la vie à la capacité d'absorber de la nourriture, *De l'âme*, II, 2 fait de la vie de la plante un ___ par l'assimilation."
+    answer: "maintien"
+    alt: ["entretien"]
+- id: aristote-vivre-plusieurs-facons-p3
+  title: "Se nourrir suffit à vivre, et toute autre vie le suppose"
+  notes: |-
+    **Le paragraphe ordonne les façons de vivre :** {coral}**la vie nutritive peut exister sans les autres, les autres non sans elle**{/coral}**, du moins** {amber}**chez les mortels**{/amber}**.** La preuve est un fait : {yellow}les végétaux{/yellow}, qui n'ont qu'elle.
+
+    **Une asymétrie.** La nutrition {green}__peut être séparée__{/green} des autres façons de vivre : la plante vit sans sentir. {red}L'inverse est impossible{/red} : pas de sensation, pas de pensée, sans un corps qui se nourrit. La liste du premier paragraphe devient donc une {violet}série{/violet}, dont la nutrition est la base.
+
+    | Vivant | Ses façons de vivre |
+    | la plante | la nutrition seule |
+    | l'animal | la nutrition et la sensation, parfois le mouvement local |
+    | l'homme | la nutrition, la sensation, le mouvement, l'intelligence |
+    | le dieu | l'intelligence, sans nutrition |
+
+    **Quelle séparation ?** {sky}Shields{/sky} et {sky}Polansky{/sky} distinguent la séparation **de lieu**, **de définition** et **de fait**. Ici, c'est une séparation **de fait** : la nutrition {green}existe réellement seule{/green} dans la plante. Chez l'animal, nutrition et sensation ne sont distinctes que {amber}par la définition{/amber}.
+
+    **« Chez les mortels. »** La restriction réserve les vivants qui {red}ne se nourrissent pas{/red}. Pour {sky}Shields{/sky} et {sky}Polansky{/sky}, ce sont les dieux, qui pensent sans corps qui dépérisse ; pour {sky}Pellegrin{/sky}, aussi les astres, vivants mais dépourvus d'âme nutritive. {sky}Shields{/sky} ajoute que la dépendance des autres facultés envers la nutrition est une {violet}nécessité hypothétique{/violet} : un corps qui sent doit d'abord se maintenir.
+
+    **Pour la vie,** c'est sa structure : {coral}__se nourrir est la condition de toute vie mortelle, et suffit à faire un vivant__{/coral}.
+
+    ! « Séparée » ne veut pas dire séparée dans l'espace : chez l'animal, nutrition et sensation sont dans le même vivant ; la plante montre seulement que la première peut exister sans la seconde.
+  passage:
+    label: "413a31-b1"
+    text: "Or, si cette forme de vie peut être séparée des autres, les autres, en revanche, ne peuvent l'être de celle-ci chez les mortels. Et on le voit dans le cas des végétaux, puisque aucune autre faculté de l'âme ne leur est dévolue."
+  tables:
+  - table: vivant-ses-facons-de-vivre
+    exercises:
+    - {kind: bank, column: Ses façons de vivre}
+  points:
+  - id: aristote-vivre-plusieurs-facons-p3-1
+    sentence: "« Or, si cette forme de vie ___, les autres, en revanche, ne peuvent l'être de celle-ci chez les mortels. Et on le voit dans le cas des végétaux, puisque aucune autre faculté de l'âme ne leur est dévolue. »"
+    answer: "peut être séparée des autres"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p3-2
+    sentence: "« Or, si cette forme de vie peut être séparée des autres, les autres, en revanche, ___ chez les mortels. Et on le voit dans le cas des végétaux, puisque aucune autre faculté de l'âme ne leur est dévolue. »"
+    answer: "ne peuvent l'être de celle-ci"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p3-3
+    sentence: "« Or, si cette forme de vie peut être séparée des autres, les autres, en revanche, ne peuvent l'être de celle-ci ___. Et on le voit dans le cas des végétaux, puisque aucune autre faculté de l'âme ne leur est dévolue. »"
+    answer: "chez les mortels"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p3-4
+    sentence: "« Or, si cette forme de vie peut être séparée des autres, les autres, en revanche, ne peuvent l'être de celle-ci chez les mortels. Et on le voit ___, puisque aucune autre faculté de l'âme ne leur est dévolue. »"
+    answer: "dans le cas des végétaux"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p3-5
+    sentence: "« Or, si cette forme de vie peut être séparée des autres, les autres, en revanche, ne peuvent l'être de celle-ci chez les mortels. Et on le voit dans le cas des végétaux, puisque ___. »"
+    answer: "aucune autre faculté de l'âme ne leur est dévolue"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p3-6
+    sentence: "Dans *De l'âme*, II, 2, la nutrition est séparable des autres façons de vivre au sens d'une séparation de ___ : elle existe réellement seule dans la plante."
+    answer: "fait"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p3-7
+    sentence: "Chez l'animal, nutrition et sensation ne sont distinctes que par la ___, non dans le lieu ni dans le fait."
+    answer: "définition"
+    alt: ["raison"]
+  - id: aristote-vivre-plusieurs-facons-p3-8
+    sentence: "La restriction « chez les mortels » réserve, selon Shields et Polansky, les ___, qui pensent sans corps qui se nourrisse ni dépérisse."
+    answer: "dieux"
+    alt: ["dieu"]
+  - id: aristote-vivre-plusieurs-facons-p3-9
+    sentence: "Selon Pellegrin, la restriction « chez les mortels » met aussi à part les ___, vivants mais dépourvus d'âme nutritive."
+    answer: "astres"
+    alt: ["corps célestes"]
+  - id: aristote-vivre-plusieurs-facons-p3-10
+    sentence: "Selon Shields, la dépendance des autres facultés envers la nutrition chez les mortels est une nécessité ___ : un corps qui sent doit d'abord se maintenir."
+    answer: "hypothétique"
+    alt: []
+- id: aristote-vivre-plusieurs-facons-p4
+  title: "Le vivant et l'animal : la sensation, non le mouvement, fait l'animal"
+  notes: |-
+    **Le paragraphe distingue deux critères :** {violet}**la nutrition fait le vivant**{/violet}**,** {coral}**la sensation fait l'animal**{/coral}**.** Et ce n'est pas le mouvement qui fait l'animal, puisque certains sentent sans se déplacer.
+
+    **« En vertu de ce principe ».** Le « donc » tire la conséquence du paragraphe précédent : {green}__c'est par la nutrition que la vie appartient aux vivants__{/green}, à tous, puisqu'elle est la seule qui puisse exister seule.
+
+    **« Bien que ».** La concession introduit un second critère, pour un second concept. Le vivant et l'{violet}animal{/violet} ne se confondent pas : en grec, \`zôon\`, l'animal, est de la famille de \`zên\`, vivre, mais {amber}tout vivant n'est pas un animal{/amber}. L'animal se reconnaît d'abord à la sensation.
+
+    **La preuve : les animaux fixes.** Des êtres {teal}« qui ne bougent pas et ne changent pas de place, mais qui sont doués de sensation »{/teal}, on les appelle {teal}« des animaux et pas seulement des vivants »{/teal}. Si le mouvement faisait l'animal, ils ne seraient que des plantes. L'*Histoire des animaux* en donne des exemples : {yellow}les pinnes{/yellow}, qui {teal}« vivent fixées »{/teal}, {yellow}les ascidies{/yellow}, et {yellow}l'éponge{/yellow}, qui {teal}« ressemble complètement aux plantes »{/teal} (VIII, 1, 588b12-21).
+
+    | Critère | Ce qu'il fait | Le cas qui le montre |
+    | la nutrition | le vivant | la plante, qui n'a qu'elle |
+    | la sensation | l'animal | l'animal fixe, qui sent sans se déplacer |
+    | le mouvement local | certains animaux seulement | l'animal fixe, qui ne l'a pas |
+
+    **Pour la vie,** le paragraphe sépare deux concepts que la langue rapproche : {coral}__être vivant et être animal__{/coral}. La vie s'étend plus loin que l'animalité, jusqu'à la plante.
+
+    ! « Fondamentalement identifiable » ne veut pas dire que tout ce qui est fixe soit une plante : c'est la sensation, non l'immobilité, qui tranche.
+  passage:
+    label: "413b1-4"
+    text: "Donc c'est en vertu de ce principe que la vie est dévolue aux vivants, bien que l'animal soit fondamentalement identifiable grâce au critère de la sensation. En effet, les êtres qui ne bougent pas et ne changent pas de place, mais qui sont doués de sensation, nous les appelons des animaux et pas seulement des vivants."
+  tables:
+  - table: critere-ce-qu-il-fait-le-cas-qui-le-montre
+    exercises:
+    - {kind: bank, column: Ce qu'il fait}
+  points:
+  - id: aristote-vivre-plusieurs-facons-p4-1
+    sentence: "« Donc c'est ___ que la vie est dévolue aux vivants, bien que l'animal soit fondamentalement identifiable grâce au critère de la sensation. En effet, les êtres qui ne bougent pas et ne changent pas de place, mais qui sont doués de sensation, nous les appelons des animaux et pas seulement des vivants. »"
+    answer: "en vertu de ce principe"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p4-2
+    sentence: "« Donc c'est en vertu de ce principe que la vie est dévolue aux vivants, bien que l'animal soit fondamentalement identifiable ___. En effet, les êtres qui ne bougent pas et ne changent pas de place, mais qui sont doués de sensation, nous les appelons des animaux et pas seulement des vivants. »"
+    answer: "grâce au critère de la sensation"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p4-3
+    sentence: "« Donc c'est en vertu de ce principe que la vie est dévolue aux vivants, bien que l'animal soit fondamentalement identifiable grâce au critère de la sensation. En effet, les êtres qui ___, mais qui sont doués de sensation, nous les appelons des animaux et pas seulement des vivants. »"
+    answer: "ne bougent pas et ne changent pas de place"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p4-4
+    sentence: "« Donc c'est en vertu de ce principe que la vie est dévolue aux vivants, bien que l'animal soit fondamentalement identifiable grâce au critère de la sensation. En effet, les êtres qui ne bougent pas et ne changent pas de place, mais qui sont doués de sensation, nous les appelons ___. »"
+    answer: "des animaux et pas seulement des vivants"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p4-5
+    sentence: "Dans *De l'âme*, II, 2, la vie appartient aux vivants en vertu de la ___, la seule façon de vivre qui puisse exister seule."
+    answer: "nutrition"
+    alt: ["fonction nutritive"]
+  - id: aristote-vivre-plusieurs-facons-p4-6
+    sentence: "Les animaux qui sentent sans se déplacer prouvent que ce n'est pas le ___ qui fait l'animal, mais la sensation."
+    answer: "mouvement local"
+    alt: ["mouvement"]
+  - id: aristote-vivre-plusieurs-facons-p4-7
+    sentence: "*Histoire des animaux*, VIII, 1, sur les êtres marins fixés : « les pinnes vivent fixées », et l'___ « ressemble complètement aux plantes »."
+    answer: "éponge"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p4-8
+    sentence: "Le grec `zôon`, l'animal, est de la famille de `___`, vivre : pourtant, dans *De l'âme*, II, 2, tout vivant n'est pas un animal."
+    answer: "zên"
+    alt: ["zen"]
+- id: aristote-vivre-plusieurs-facons-p5
+  title: "Toucher, la condition de la vie animale"
+  notes: |-
+    **Le paragraphe fonde la sensation :** {violet}**le toucher**{/violet} **est** {coral}**le fondement de la sensation**{/coral}**, commun à tous les animaux ; il se sépare des autres sens comme la nutrition se sépare de la sensation.** La structure du vivant se répète donc à l'étage de l'animal.
+
+    **La même asymétrie, un étage plus haut.**
+
+    | Étage | La base, qui peut exister seule | Ce qui la suppose |
+    | le vivant | la nutrition | la sensation |
+    | l'animal | le toucher | les autres sens |
+
+    Comme la plante a la nutrition sans la sensation, {yellow}certains animaux{/yellow} ont le toucher sans les autres sens ; {red}l'inverse ne se trouve pas{/red}. {coral}__Tout animal touche, tout animal ne voit pas.__{/coral}
+
+    **Pourquoi le toucher ?** Le texte remet la raison à plus tard ; *De l'âme*, III, 12-13 la donne : {teal}« s'il n'a pas de sensation quand il est touché, l'animal sera incapable de fuir ceci et de prendre cela. Or, dans ces conditions, il lui sera impossible d'assurer sa conservation »{/teal} (III, 12, 434b14-18). Le toucher est le sens de {green}__ce qui touche le corps__{/green} : la nourriture, que {yellow}le goût{/yellow}, {teal}« une sorte de toucher »{/teal}, saisit, et ce qui menace. Aussi {teal}« il ne peut y avoir d'animal sans le toucher »{/teal}, tandis que {teal}« les autres sens, en revanche, ont pour but le bien-être »{/teal} (434b22-25).
+
+    **« Parcelle » de l'âme.** Le mot annonce la question suivante (413b13-16) : la nutritive est-elle une âme, ou une partie d'âme ?
+
+    **Pour la vie,** le paragraphe lie la sensation à la **conservation** : {coral}__sentir, d'abord, c'est se garder en vie__{/coral}. Le toucher est le sens de la survie, les autres sens servent le bien-vivre.
+
+    ! « Le fondement de la sensation » ne veut pas dire le sens le plus noble : c'est le plus nécessaire, celui sans lequel aucun autre n'existe.
+  passage:
+    label: "413b4-10"
+    text: "Or le fondement de la sensation, dévolu à tous, est le toucher. Et, de même que la fonction nutritive peut être séparée du toucher et de toute sensation, de la même façon le toucher peut l'être des autres sensations. Mais nous appelons nutritive cette sorte de parcelle de l'âme que même les végétaux ont en partage, alors que, manifestement, les animaux possèdent tous la sensation tactile."
+  tables:
+  - table: etage-la-base-qui-peut-exister-seule-ce-qui-la-suppose
+    exercises:
+    - {kind: bank, column: "La base, qui peut exister seule"}
+  points:
+  - id: aristote-vivre-plusieurs-facons-p5-1
+    sentence: "« Or ___, dévolu à tous, est le toucher. Et, de même que la fonction nutritive peut être séparée du toucher et de toute sensation, de la même façon le toucher peut l'être des autres sensations. Mais nous appelons nutritive cette sorte de parcelle de l'âme que même les végétaux ont en partage, alors que, manifestement, les animaux possèdent tous la sensation tactile. »"
+    answer: "le fondement de la sensation"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p5-2
+    sentence: "« Or le fondement de la sensation, dévolu à tous, est ___. Et, de même que la fonction nutritive peut être séparée du toucher et de toute sensation, de la même façon le toucher peut l'être des autres sensations. Mais nous appelons nutritive cette sorte de parcelle de l'âme que même les végétaux ont en partage, alors que, manifestement, les animaux possèdent tous la sensation tactile. »"
+    answer: "le toucher"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p5-3
+    sentence: "« Or le fondement de la sensation, dévolu à tous, est le toucher. Et, de même que la fonction nutritive peut être séparée ___, de la même façon le toucher peut l'être des autres sensations. Mais nous appelons nutritive cette sorte de parcelle de l'âme que même les végétaux ont en partage, alors que, manifestement, les animaux possèdent tous la sensation tactile. »"
+    answer: "du toucher et de toute sensation"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p5-4
+    sentence: "« Or le fondement de la sensation, dévolu à tous, est le toucher. Et, de même que la fonction nutritive peut être séparée du toucher et de toute sensation, de la même façon ___. Mais nous appelons nutritive cette sorte de parcelle de l'âme que même les végétaux ont en partage, alors que, manifestement, les animaux possèdent tous la sensation tactile. »"
+    answer: "le toucher peut l'être des autres sensations"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p5-5
+    sentence: "« Or le fondement de la sensation, dévolu à tous, est le toucher. Et, de même que la fonction nutritive peut être séparée du toucher et de toute sensation, de la même façon le toucher peut l'être des autres sensations. Mais nous appelons nutritive cette sorte de ___ que même les végétaux ont en partage, alors que, manifestement, les animaux possèdent tous la sensation tactile. »"
+    answer: "parcelle de l'âme"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p5-6
+    sentence: "« Or le fondement de la sensation, dévolu à tous, est le toucher. Et, de même que la fonction nutritive peut être séparée du toucher et de toute sensation, de la même façon le toucher peut l'être des autres sensations. Mais nous appelons nutritive cette sorte de parcelle de l'âme que même les végétaux ont en partage, alors que, manifestement, ___. »"
+    answer: "les animaux possèdent tous la sensation tactile"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p5-7
+    sentence: "*De l'âme*, III, 12 : sans le toucher, « l'animal sera incapable de fuir ceci et de prendre cela. Or, dans ces conditions, il lui sera impossible d'assurer sa ___ »."
+    answer: "conservation"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p5-8
+    sentence: "*De l'âme*, III, 12 : « il ne peut y avoir d'animal sans le toucher. Les autres sens, en revanche, ont pour but le ___ »."
+    answer: "bien-être"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p5-9
+    sentence: "*De l'âme*, III, 12 : le goût se présente comme « une sorte de ___ », parce qu'il porte sur la nourriture."
+    answer: "toucher"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p5-10
+    sentence: "Dans *De l'âme*, II, 2, le toucher est à l'animal ce que la ___ est au vivant : la base qui peut exister seule, que tout le reste suppose."
+    answer: "nutrition"
+    alt: ["fonction nutritive"]
+- id: aristote-vivre-plusieurs-facons-p6
+  title: "L'âme se définit par les façons de vivre"
+  notes: |-
+    **Le paragraphe conclut, provisoirement :** {violet}**l'âme**{/violet} **est** {coral}**principe des manifestations de la vie et se définit par elles**{/coral}**.** La cause de chacune est remise à plus tard.
+
+    **« Nous en parlerons plus tard. »** Le chapitre s'était ouvert sur l'exigence d'une définition qui donne {teal}« le motif pour lequel il en va ainsi »{/teal} (413a15-16). Ici, Aristote {amber}ne la remplit pas encore{/amber} : il dit **le fait**, ce que l'âme fait, et renvoie **la cause** aux chapitres qui étudieront chaque faculté. C'est un point de méthode : {green}__on connaît l'âme par ses fonctions avant d'en connaître la raison__{/green}.
+
+    **Le retour de la liste.** Les quatre façons de vivre du début reviennent, mais dans l'**ordre inverse** : la première liste allait de l'intelligence à la nutrition, la conclusion va de la nutrition à la pensée. Entre les deux, le texte a établi que {coral}la nutrition est la base de toutes{/coral}.
+
+    | Façon de vivre (413a23-25) | Fonction de l'âme (413b12-13) |
+    | le mouvement nutritif, dépérissement et croissance | nutritive |
+    | la sensation | sensitive |
+    | l'intelligence | cogitative |
+    | le mouvement local et le repos | le mouvement |
+
+    **Pour la vie,** la conclusion renverse la perspective du chapitre 1 : {green}__l'âme n'est rien d'autre que le principe des façons de vivre__{/green}. On ne définit pas la vie par l'âme, {coral}on définit l'âme par la vie{/coral}.
+
+    ! « Se définit par » ne fait pas de l'âme une somme de facultés : la phrase qui suit (413b13-16) demande si chacune est une âme ou une partie d'âme.
+  passage:
+    label: "413b10-13"
+    text: "Quant à la raison de chacun de ces phénomènes, nous en parlerons plus tard. Et, pour l'instant, l'on se bornera simplement à dire que l'âme est principe des manifestations qu'on vient d'évoquer et qu'elle se définit par les fonctions nutritive, sensitive, cogitative et par le mouvement."
+  tables:
+  - table: facon-de-vivre-413a23-25-fonction-de-l-ame-413b12-13
+    exercises:
+    - {kind: bank, column: Fonction de l'âme (413b12-13)}
+  points:
+  - id: aristote-vivre-plusieurs-facons-p6-1
+    sentence: "« Quant à la raison de chacun de ces phénomènes, nous en parlerons plus tard. Et, pour l'instant, l'on se bornera simplement à dire que l'âme est ___ qu'on vient d'évoquer et qu'elle se définit par les fonctions nutritive, sensitive, cogitative et par le mouvement. »"
+    answer: "principe des manifestations"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p6-2
+    sentence: "« Quant à la raison de chacun de ces phénomènes, nous en parlerons plus tard. Et, pour l'instant, l'on se bornera simplement à dire que l'âme est principe des manifestations qu'on vient d'évoquer et qu'elle ___ nutritive, sensitive, cogitative et par le mouvement. »"
+    answer: "se définit par les fonctions"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p6-3
+    sentence: "« Quant à la raison de chacun de ces phénomènes, nous en parlerons plus tard. Et, pour l'instant, l'on se bornera simplement à dire que l'âme est principe des manifestations qu'on vient d'évoquer et qu'elle se définit par les fonctions ___ et par le mouvement. »"
+    answer: "nutritive, sensitive, cogitative"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p6-4
+    sentence: "« Quant à ___, nous en parlerons plus tard. Et, pour l'instant, l'on se bornera simplement à dire que l'âme est principe des manifestations qu'on vient d'évoquer et qu'elle se définit par les fonctions nutritive, sensitive, cogitative et par le mouvement. »"
+    answer: "la raison de chacun de ces phénomènes"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p6-5
+    sentence: "*De l'âme*, II, 2, 413b10-13 dit le fait, ce que fait l'âme, et remet à plus tard la ___ de chacune de ses fonctions."
+    answer: "cause"
+    alt: ["raison"]
+  - id: aristote-vivre-plusieurs-facons-p6-6
+    sentence: "La conclusion de *De l'âme*, II, 2, 413b12-13 reprend les quatre façons de vivre du début dans l'ordre ___, de la nutrition à la pensée."
+    answer: "inverse"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-p6-7
+    sentence: "Dans *De l'âme*, II, 2, on ne définit pas la vie par l'âme : on définit l'âme par la ___."
+    answer: "vie"
+    alt: []
+- id: aristote-vivre-plusieurs-facons-ouverture
+  title: "Une âme ou des parties d'âme ? La vie de la bouture et de l'insecte coupé"
+  notes: |-
+    **Aussitôt après, Aristote pose la question que la conclusion laissait ouverte :** {amber}**chacune des fonctions est-elle une âme, ou une partie d'âme ?**{/amber} Et si c'est une partie, {amber}est-elle séparée par la raison seulement, ou aussi dans l'espace ?{/amber}
+
+    **Deux cas embarrassants.** {yellow}La plante{/yellow} dont on sépare un rameau : chaque partie vit, {teal}« comme si l'âme qui se trouve en elles était réellement unique en chaque plante et potentiellement multiple »{/teal}. {yellow}L'insecte{/yellow} qu'on sectionne : chaque segment {teal}« est, en effet, doué de sensation ainsi que de mouvement local »{/teal}. {green}__L'âme est une en acte, plusieurs en puissance__{/green} : elle ne se divise pas en morceaux, mais un vivant peut en devenir plusieurs.
+
+    **Pour la vie,** c'est la question de son {violet}unité{/violet} : {coral}__un vivant n'est pas toujours un individu indivisible__{/coral}, et la bouture fait voir qu'une même vie peut se multiplier.
+
+    ! Ces cas ne prouvent pas que l'âme soit faite de parties dans l'espace : chaque segment qui vit a l'âme entière de son espèce, non un morceau d'âme.
+  passage:
+    label: "Ouverture"
+    source: "De l'âme, II, 2, 413b13-22"
+    text: "Est-ce que, cependant, chacun de ces principes constitue une âme ou bien une parcelle d'âme ? Et, dans ce dernier cas, est-ce que cela implique une séparation uniquement de raison ou bien aussi de lieu ? Pour certains d'entre eux, ce n'est pas difficile à voir, mais il y a quelques cas embarrassants. De même, en effet, que chez les plantes, certaines parties segmentées ont manifestement la vie, même lorsqu'on les sépare l'une de l'autre, comme si l'âme qui se trouve en elles était réellement unique en chaque plante et potentiellement multiple, de la même façon, nous voyons que c'est aussi ce qui se produit, avec d'autres traits distinctifs de l'âme, dans le cas des insectes, lorsqu'on les sectionne : chacun des segments est, en effet, doué de sensation ainsi que de mouvement local."
+  points:
+  - id: aristote-vivre-plusieurs-facons-ouverture-1
+    sentence: "*De l'âme*, II, 2 : « Est-ce que, cependant, chacun de ces principes constitue ___ ou bien une parcelle d'âme ? »"
+    answer: "une âme"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-ouverture-2
+    sentence: "*De l'âme*, II, 2 : « est-ce que cela implique une séparation uniquement de raison ou bien aussi de ___ ? »"
+    answer: "lieu"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-ouverture-3
+    sentence: "*De l'âme*, II, 2, sur les plantes dont les parties séparées vivent : « comme si l'âme qui se trouve en elles était réellement unique en chaque plante et ___ »."
+    answer: "potentiellement multiple"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-ouverture-4
+    sentence: "*De l'âme*, II, 2, sur les insectes sectionnés : « chacun des segments est, en effet, doué de ___ ainsi que de mouvement local »."
+    answer: "sensation"
+    alt: []
+- id: aristote-vivre-plusieurs-facons-o1
+  title: "Ce que vivre veut dire, d'après ce texte : une série, de la plante à la pensée"
+  notes: |-
+    **Le texte donne la définition la plus large de la vie chez Aristote.** Domaine par domaine, ce qu'il en dit, suppose ou permet d'en penser :
+
+    **La définition.** {green}__Vivre n'a pas une essence unique : c'est une famille de façons d'être actif__{/green}, et une seule suffit. Mais la famille n'est pas un assemblage : {coral}les façons de vivre forment une série{/coral}, où chacune suppose la précédente, sur la base de la nutrition. Le critère est donc à la fois {violet}disjonctif{/violet} (une seule suffit) et {violet}ordonné{/violet} (pas n'importe laquelle sans la nutrition).
+
+    | Vivant | Ce qu'il est de plus que le précédent | Ce que cela suppose |
+    | la plante | un vivant : il se nourrit, croît, dépérit | rien d'autre |
+    | l'animal | un vivant qui sent, au moins par le toucher | la nutrition |
+    | l'animal qui se déplace | il sent aussi à distance | le toucher |
+    | l'homme | il pense | la sensation |
+
+    **Le statut ontologique.** La vie n'a pas de frontière tranchée : {teal}« Ainsi la nature passe petit à petit des êtres inanimés aux animaux, de sorte que, du fait de cette continuité, on n'aperçoit pas la frontière entre eux »{/teal} (*Histoire des animaux*, VIII, 1, 588b4-6). {amber}La série du *De l'âme* est aussi une continuité dans la nature{/amber} : la plante paraît {teal}« comme animée »{/teal} comparée aux corps, {teal}« et comme inanimée comparée aux animaux »{/teal}.
+
+    **Le statut épistémologique.** Le texte part de ce qui se voit et de ce qui se dit : {yellow}« visiblement »{/yellow}, {yellow}« manifestement »{/yellow}, {yellow}« nous les appelons »{/yellow}. {green}__La vie se reconnaît à ses manifestations__{/green}, et l'âme se définit par elles ; la cause est remise à plus tard. On connaît donc la vie {amber}par en bas et par ses effets{/amber}.
+
+    **La mort.** Deux limites se dessinent. Pour la plante, {red}__la vie dure tant qu'elle peut se nourrir__{/red}. Pour l'animal, le toucher est la condition de la vie : {teal}« c'est par celui-ci que se trouve définie la vie, puisque, sans le toucher, on a montré l'impossibilité d'être un animal »{/teal}, et l'excès du tangible, le trop chaud, le trop froid, {red}« supprime l'animal »{/red}, non l'organe seulement (III, 13, 435b13-17).
+
+    **Vivre et bien vivre.** Le toucher sert à vivre, {teal}« les autres sens, en revanche, l'animal les possède [...] non pour être animal, mais pour l'être bien »{/teal} (III, 13, 435b19-21). {coral}__La série des façons de vivre est aussi une série du nécessaire au meilleur__{/coral} : se nourrir et toucher pour exister, voir et entendre pour vivre bien, penser enfin, ce qui est propre à l'homme.
+
+    ! Dire que la nutrition est la base n'est pas dire qu'elle est la vie la plus haute : elle est la plus commune, et la pensée la plus haute.
+  passage:
+    label: "Prolongement"
+  tables:
+  - table: vivant-ce-qu-il-est-de-plus-que-le-precedent-ce-que-cela-sup
+    exercises:
+    - {kind: bank, column: Ce que cela suppose}
+  points:
+  - id: aristote-vivre-plusieurs-facons-o1-1
+    sentence: "Le critère du vivant de *De l'âme*, II, 2 est à la fois disjonctif, puisqu'une seule façon de vivre suffit, et ___, puisque toutes reposent sur la nutrition."
+    answer: "ordonné"
+    alt: ["hiérarchisé"]
+  - id: aristote-vivre-plusieurs-facons-o1-2
+    sentence: "*Histoire des animaux*, VIII, 1 : « Ainsi la nature passe ___ des êtres inanimés aux animaux »."
+    answer: "petit à petit"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-o1-3
+    sentence: "*Histoire des animaux*, VIII, 1 : « du fait de cette continuité, on n'aperçoit pas ___ entre eux »."
+    answer: "la frontière"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-o1-4
+    sentence: "*Histoire des animaux*, VIII, 1 : la famille des plantes apparaît « comme animée » comparée aux corps, « et comme ___ comparée aux animaux »."
+    answer: "inanimée"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-o1-5
+    sentence: "*De l'âme*, III, 13, sur le toucher : « c'est par celui-ci que se trouve définie ___, puisque, sans le toucher, on a montré l'impossibilité d'être un animal »."
+    answer: "la vie"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-o1-6
+    sentence: "*De l'âme*, III, 13 : l'excès d'intensité des choses tangibles, chaudes, froides et dures, ne détruit pas seulement l'organe, il « supprime l'___ »."
+    answer: "animal"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-o1-7
+    sentence: "*De l'âme*, III, 13 : les autres sens, l'animal les possède « non pour être animal, mais pour l'être ___ »."
+    answer: "bien"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-o1-8
+    sentence: "D'après *De l'âme*, II, 2, la nutrition est la façon de vivre la plus ___, non la plus haute."
+    answer: "commune"
+    alt: []
+- id: aristote-vivre-plusieurs-facons-o2
+  title: "Définir la vie par ses fonctions : Empédocle, Bichat, la biologie d'aujourd'hui"
+  notes: |-
+    **Une définition de la vie par une série de fonctions se mesure à trois autres manières de penser le vivant.**
+
+    **Empédocle : la plante comme mélange d'éléments.** Aristote juge qu'{sky}**Empédocle**{/sky} {teal}« a bien tort d'ajouter à ce propos que la croissance, chez les plantes, s'effectue vers le bas, selon l'enracinement, parce que la terre se porte naturellement dans cette direction, et vers le haut, parce que le feu possède ce mouvement »{/teal} (II, 4, 415b28-416a2). Deux objections : {red}le haut et le bas de la plante ne sont pas ceux du monde{/red}, puisque {teal}« ce qui correspond à la tête des animaux, ce sont les racines des plantes »{/teal} ; et {teal}« qu'est-ce qui assure la cohésion du feu et de la terre qui se portent en sens opposés ? »{/teal} (416a2-8). {green}__C'est l'argument de 413a25-31 retourné contre son adversaire__{/green} : des mouvements contraires tenus ensemble supposent l'âme.
+
+    **Bichat : deux vies au lieu d'une série.** Les *Recherches physiologiques sur la vie et la mort* distinguent une vie {violet}« au-dedans de soi »{/violet}, la {violet}vie organique{/violet}, que vit le végétal, et une vie {violet}animale{/violet}, tournée vers le dehors : l'animal {teal}« rapporte tout à son existence, il existe hors de lui, il est l'habitant du monde »{/teal}. {green}La base végétale est commune aux deux auteurs{/green}. Mais Bichat range la **motricité** avec la sensibilité dans la vie animale, {pink}là où Aristote l'en détache{/pink} par le cas des animaux fixes ; et il parle de {amber}deux vies{/amber}, Aristote d'{amber}une série{/amber} dont chaque terme suppose le précédent.
+
+    **La biologie d'aujourd'hui : l'échec des listes.** Les définitions par une liste de propriétés {red}échouent par contre-exemples{/red} : {yellow}les fourmis ouvrières{/yellow} ne se reproduisent pas et vivent, {yellow}les cristaux{/yellow} croissent et ne vivent pas. D'où, chez certains philosophes de la biologie, {violet}le pluralisme{/violet} : plusieurs définitions légitimes de la vie (cours SEP « Life », dans la piste Idées). Aristote avait déjà renoncé à {red}une liste de conditions toutes nécessaires{/red} : une seule suffit. Et son critère de la croissance écarte le cristal : {green}__la plante croît par un principe qui est en elle, et de tous côtés__{/green}, ce qu'aucun dépôt de matière ne fait. Ce rapprochement est une lecture, non une thèse du texte.
+
+    | Auteur | Comment il pense la vie | Ce qu'Aristote lui oppose ou partage |
+    | Empédocle | un mélange d'éléments qui vont chacun vers son lieu | il faut un principe qui tienne ensemble les mouvements contraires |
+    | Bichat | deux vies, organique et animale | la base végétale, mais la sensation sans le mouvement |
+    | la biologie d'aujourd'hui | plusieurs définitions, faute d'une liste qui tienne | une seule façon de vivre suffit, mais toutes reposent sur la nutrition |
+
+    ! Le pluralisme contemporain renonce à unifier les définitions ; Aristote, lui, les ordonne : plusieurs façons de vivre, une seule base.
+  passage:
+    label: "Prolongement"
+  tables:
+  - table: auteur-comment-il-pense-la-vie-ce-qu-aristote-lui-oppose-ou
+    exercises:
+    - {kind: bank, column: Comment il pense la vie}
+  points:
+  - id: aristote-vivre-plusieurs-facons-o2-1
+    sentence: "*De l'âme*, II, 4 : Empédocle explique la croissance des plantes vers le bas par la ___, qui se porte naturellement dans cette direction, et vers le haut par le feu."
+    answer: "terre"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-o2-2
+    sentence: "*De l'âme*, II, 4, contre Empédocle : « ce qui correspond à la tête des animaux, ce sont les ___ des plantes »."
+    answer: "racines"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-o2-3
+    sentence: "*De l'âme*, II, 4 : « qu'est-ce qui assure la ___ du feu et de la terre qui se portent en sens opposés ? »"
+    answer: "cohésion"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-o2-4
+    sentence: "Bichat distingue la vie organique, que vit le végétal, « au-dedans de soi », et la vie ___, par laquelle l'animal « existe hors de lui »."
+    answer: "animale"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-o2-5
+    sentence: "Bichat range la ___ avec la sensibilité dans la vie animale, là où Aristote l'en détache par le cas des animaux fixes."
+    answer: "motricité"
+    alt: ["locomotion"]
+  - id: aristote-vivre-plusieurs-facons-o2-6
+    sentence: "Les définitions de la vie par une liste échouent : les ___ croissent et ne vivent pas, les fourmis ouvrières ne se reproduisent pas et vivent."
+    answer: "cristaux"
+    alt: []
+  - id: aristote-vivre-plusieurs-facons-o2-7
+    sentence: "Face à l'échec des listes, certains philosophes de la biologie défendent le ___ : plusieurs définitions légitimes de la vie."
+    answer: "pluralisme"
+    alt: []
