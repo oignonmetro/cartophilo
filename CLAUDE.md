@@ -87,7 +87,8 @@ l'épreuve :
   de `content/philosophie.md` et la conduite de `cours-sep` : d'abord
   l'introduction de Chaintreuil et Rouquayrol (`intro1` à `intro5`), puis
   « Vraie vie et modes de vie dans la philosophie antique » de Chapuis
-  (`vies1` à `vies6`).
+  (`vies1` à `vies6`), et « De la biologie à l'éthique : Aristote et la
+  vie » de Ribas (`arvie1` à `arvie4`).
 
 ## Décidé : la correspondance technique avec le moteur de contenu
 
