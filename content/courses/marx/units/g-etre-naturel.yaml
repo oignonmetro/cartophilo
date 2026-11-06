@@ -1,8 +1,153 @@
-# Entrée du glossaire de Marx (skill glossaire-marx), créée vide pour recevoir les
-# renvois des entrées déjà écrites ; à rédiger.
+# Entrée du glossaire de Marx (skill glossaire-marx) : notion. Citations reprises de
+# NotebookLM avec leur source (Manuscrits de 1844, Grundrisse, éditions sociales),
+# vérifiées par textes.py.
 
 id: g-etre-naturel
-title: Être naturel, être objectif (`Naturwesen`)
+title: Être naturel, être objectif (`Naturwesen`, `gegenständliches Wesen`)
 icon: book
 color: coral
-lessons: []
+lessons:
+- id: g-etre-naturel-l1
+  title: Être naturel, être objectif
+  notes: |-
+    Chez Marx, l'{violet}**être naturel**{/violet} ({violet}*Naturwesen*{/violet}), ou {violet}**être objectif**{/violet} ({violet}*gegenständliches Wesen*{/violet}), est [def]. Ce n'est {pink}ni une chose inerte ni un pur esprit{/pink} : c'est un vivant de chair et d'os, qui agit et qui pâtit. Marx forge la notion en 1844, dans sa critique de {sky}Hegel{/sky}, en reprenant le naturalisme de {sky}Feuerbach{/sky} pour en faire une philosophie de l'activité. Elle fonde ce que disent le [[g-corps-non-organique|corps non-organique]], le [[g-besoin|besoin]] et le [[g-metabolisme|métabolisme]].
+
+    __**L'homme est immédiatement un**__ {violet}__**être naturel**__{/violet}__**, actif par ses forces et passif par ses besoins.**__ L'homme n'est pas d'abord une conscience qui aurait ensuite un corps : {teal}« {/teal}L'homme est {teal}__immédiatement être de la nature__{/teal}. En qualité d'être naturel, et d'être naturel vivant, il est d'une part pourvu de forces naturelles, de forces vitales; {teal}__il est un être naturel actif__{/teal}; ces forces existent en lui sous la forme de dispositions et de capacités, sous la forme d'inclinations. D'autre part, en qualité d'être naturel, en chair et en os, sensible, objectif, il est, pareillement aux animaux et aux plantes, {teal}__un être passif, dépendant et limité__ »{/teal} (*Manuscrits de 1844*, troisième manuscrit, critique de Hegel). Les deux pôles vont ensemble, car {amber}les objets de ses inclinations existent en dehors de lui{/amber} : ses forces ne trouvent pas en elles-mêmes de quoi s'exercer. Ces objets sont {teal}« {/teal}{teal}__des objets indispensables, essentiels pour la mise en jeu et la confirmation de ses forces essentielles__ »{/teal} (*ibid*.). {coral}L'homme agit parce qu'il manque{/coral}, comme la plante pousse vers la lumière.
+
+    __**Être**__ {violet}__**objectif**__{/violet}__**, c'est avoir hors de soi des objets essentiels et être soi-même objet pour un autre.**__ Marx en donne une définition générale : {teal}« {/teal}Être objectif, naturel, sensible, c'est la même chose qu'{teal}__avoir en dehors de soi objet, nature, sens__{/teal} ou qu'{teal}__être soi-même objet, nature, sens pour un tiers__ »{/teal} (*ibid*.). L'exemple est celui de la faim, {teal}« {/teal}le besoin avoué qu'a mon corps {teal}__d'un objet qui se trouve en dehors de lui__ »{/teal}, et du soleil : {teal}« {/teal}{teal}__Le soleil est l'objet de la plante__{/teal}, un objet qui lui est indispensable et qui confirme sa vie; de même, {teal}__la plante est l'objet du soleil__ »{/teal} (*ibid*.). Le rapport est réciproque, donc {coral}un être sans objet n'est rien{/coral} : {teal}« {/teal}{teal}__Un être non-objectif est un non-être__{/teal}{teal} »{/teal} (*ibid*.), {teal}« {/teal}un être non réel, non sensible, mais seulement pensé, c'est-à-dire seulement imaginé, {teal}__un être d'abstraction__ »{/teal} (*ibid*.). Un tel être serait seul au monde : dès qu'il existe un autre être, je suis son objet comme il est le mien.
+
+    __**Parce qu'il a des sens, l'homme est un être qui**__ {violet}__**souffre**__{/violet}__**, et par là un être passionné.**__ Avoir des sens, c'est être affecté par des objets qu'on ne produit pas. Donc {teal}« {/teal}{teal}__Avoir des sens signifie souffrir__{/teal}. C'est pourquoi l'homme, en tant qu'être objectif sensible, {teal}__est un être qui souffre__{/teal} et comme il est un être qui ressent sa souffrance, {teal}__il est un être passionné__{/teal}. La passion est {teal}__la force essentielle de l'homme qui tend énergiquement vers son objet__ »{/teal} (*ibid*.). {amber}« Souffrir » traduit *leiden*{/amber}, qui veut d'abord dire pâtir, subir, et non avoir mal : c'est le nom de la passivité. Mais cette passivité ressentie devient {coral}passion, c'est-à-dire élan vers l'objet{/coral} : le manque n'est pas un défaut de l'homme, c'est ce qui le met en mouvement.
+
+    __**L'être objectif ne**__ {violet}__**pose**__{/violet} __**des objets que parce qu'il est lui-même posé par des objets.**__ Pour Hegel, l'homme est {red}conscience de soi{/red}, et l'objet n'est que la conscience devenue étrangère à elle-même, qu'elle doit reprendre. Marx renverse l'ordre : {teal}« {/teal}L'être objectif agit d'une manière objective et il n'agirait pas objectivement si l'objectivité n'était pas incluse dans la détermination de son essence. {teal}__Il ne crée, il ne pose que des objets, parce qu'il est posé lui-même par des objets__{/teal}, parce qu'{teal}__à l'origine il est nature__ »{/teal} (*ibid*.). L'activité ne précède donc pas l'objet : {amber}l'homme ne produit des objets que parce qu'il en est un et qu'il en a besoin{/amber}. Il ne {teal}« {/teal}tombe pas de son activité pure dans une création de l'objet{teal} »{/teal} : {coral}son produit ne fait que confirmer son activité d'être naturel{/coral}. {coral}L'objectivité n'est donc pas une aliénation à surmonter{/coral}, mais sa manière d'être.
+
+    __**L'homme est un être naturel**__ {violet}__**humain**__{/violet}__**, qui a son acte de naissance dans l'histoire.**__ L'homme n'est pas pour autant un animal : {teal}« {/teal}Mais l'homme n'est pas seulement un être naturel, {teal}__il est aussi un être naturel humain__{/teal}; c'est-à-dire un être existant pour soi, donc {teal}__un être générique__ »{/teal} (*ibid*.), qui fait de son espèce et de la nature l'objet de sa conscience (voir [[g-etre-generique|être générique]]). Or ni ses objets ni ses sens ne sont humains tels qu'ils se présentent d'abord : ils doivent le devenir. Donc {teal}« {/teal}de même que {teal}__tout ce qui est naturel doit naître__{/teal}, de même {teal}__l'homme a aussi son acte de naissance, l'histoire__ »{/teal} (*ibid*.), et {teal}« {/teal}{teal}__l'histoire est la véritable histoire naturelle de l'homme__{/teal}{teal} »{/teal} (*ibid*.). {coral}La nature humaine n'est pas donnée une fois pour toutes{/coral} : elle se fait par le travail, ce que {sky}Feuerbach{/sky}, qui contemplait une nature fixe, n'avait pas vu. Les sens eux-mêmes ont une histoire : ils {teal}« {/teal}ne se forment que grâce à l'existence de leur objet, {teal}__à la nature humanisée__{/teal}. {teal}__La formation des cinq sens est le travail de toute l'histoire passée__ »{/teal} (*Manuscrits de 1844*, troisième manuscrit, propriété privée et communisme). L'oreille musicale naît avec la musique.
+
+    __**Le**__ {red}__**travail salarié**__{/red} __**réduit l'homme à une existence purement subjective, privée d'objet.**__ Si l'homme n'est réel qu'avec ses objets, l'en séparer, c'est le réduire à une abstraction. Or c'est ce que fait le capital : le travailleur n'a plus ni terre, ni outils, ni moyens de subsistance, seulement sa capacité de travailler. Les *Grundrisse* le disent : {teal}« {/teal}ce complet dépouillement, c'est {teal}__l'existence purement subjective du travail, démunie de toute objectivité__{/teal}. {teal}__Le travail comme la pauvreté absolue__{/teal}: la pauvreté non comme manque, mais {teal}__comme exclusion totale de la richesse objective__ »{/teal} (*Grundrisse*, chapitre du capital). Déjà en 1844 : {teal}« {/teal}plus cette activité est grande, {teal}__plus l'ouvrier est sans objet__ »{/teal} (*Manuscrits de 1844*, premier manuscrit, [[g-travail-aliene|travail aliéné]]). {coral}L'aliénation n'est donc pas, comme chez Hegel, l'objectivité même, mais la perte de l'objet{/coral} : {red}le salarié est un être objectif à qui l'on a ôté ses objets{/red}.
+
+    ! L'être naturel n'est pas l'homme réduit à son animalité : Marx dit d'emblée qu'il est un être naturel humain, et que sa nature se fait dans l'histoire.
+
+    ! Ni « souffrir » ni « passif » ne sont ici des maux : ils disent que l'homme dépend d'objets extérieurs, et c'est cette dépendance qui fait de lui un être actif.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | *Manuscrits de 1844*, premier manuscrit | plus l'ouvrier produit, plus il est sans objet |
+    | *Manuscrits de 1844*, troisième manuscrit, propriété privée et communisme | la formation des cinq sens, travail de toute l'histoire passée |
+    | *Manuscrits de 1844*, troisième manuscrit, critique de Hegel | l'homme, être naturel actif et passif, objectif, souffrant et passionné, né dans l'histoire |
+    | *Grundrisse*, chapitre du capital | le travail salarié, existence purement subjective et pauvreté absolue |
+
+    **Voir aussi** : [[g-corps-non-organique|Corps non-organique]] · [[g-besoin|Besoin]] · [[g-etre-generique|Être générique]] · [[g-metabolisme|Métabolisme]] · [[g-travail-aliene|Travail aliéné]] · [[g-activite-vitale|Activité vitale]]
+  tables:
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-etre-naturel-l1-q1
+    sentence: "L'homme comme vivant de chair et d'os, actif par ses forces, passif par ses besoins, qui a hors de lui les objets dont il vit, Marx l'appelle un être ___ (en allemand Naturwesen)."
+    answer: naturel
+    alt: []
+  - id: g-etre-naturel-l1-q2
+    sentence: "L'être qui a hors de lui des objets essentiels et qui est lui-même objet pour un autre, Marx l'appelle un être ___ (gegenständliches Wesen)."
+    answer: objectif
+    alt: []
+  - id: g-etre-naturel-l1-q3
+    sentence: "Marx forge la notion d'être naturel dans le troisième manuscrit de 1844, dans sa critique de ___."
+    answer: Hegel
+    alt: []
+  - id: g-etre-naturel-l1-q4
+    sentence: "« L'homme est immédiatement être de la ___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: nature
+    alt: []
+  - id: g-etre-naturel-l1-q5
+    sentence: "Pourvu de forces naturelles, de forces vitales, l'homme « est un être naturel ___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: actif
+    alt: []
+  - id: g-etre-naturel-l1-q6
+    sentence: "En qualité d'être naturel, en chair et en os, l'homme est, « pareillement aux animaux et aux plantes, un être ___, dépendant et limité » (Manuscrits de 1844, troisième manuscrit)."
+    answer: passif
+    alt: []
+  - id: g-etre-naturel-l1-q7
+    sentence: "Les forces de l'homme existent en lui « sous la forme de dispositions et de capacités, sous la forme d'___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: inclinations
+    alt: []
+  - id: g-etre-naturel-l1-q8
+    sentence: "« Être objectif, naturel, sensible, c'est la même chose qu'avoir en dehors de soi objet, nature, sens ou qu'être soi-même objet, nature, sens pour un ___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: tiers
+    alt: []
+  - id: g-etre-naturel-l1-q9
+    sentence: "« Le soleil est l'objet de la ___, un objet qui lui est indispensable et qui confirme sa vie » (Manuscrits de 1844, troisième manuscrit)."
+    answer: plante
+    alt: []
+  - id: g-etre-naturel-l1-q10
+    sentence: "La ___ est « le besoin avoué qu'a mon corps d'un objet qui se trouve en dehors de lui » (Manuscrits de 1844, troisième manuscrit)."
+    answer: faim
+    alt: []
+  - id: g-etre-naturel-l1-q11
+    sentence: "« Un être non-objectif est un ___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: non-être
+    alt: ["non être", "non-etre", "unwesen"]
+  - id: g-etre-naturel-l1-q12
+    sentence: "Un être non objectif est « un être non réel, non sensible, mais seulement pensé, c'est-à-dire seulement imaginé, un être d'___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: abstraction
+    alt: []
+  - id: g-etre-naturel-l1-q13
+    sentence: "« Avoir des sens signifie ___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: souffrir
+    alt: []
+  - id: g-etre-naturel-l1-q14
+    sentence: "Comme il est un être qui ressent sa souffrance, l'homme « est un être ___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: passionné
+    alt: ["passionne"]
+  - id: g-etre-naturel-l1-q15
+    sentence: "« La passion est la force essentielle de l'homme qui tend énergiquement vers son ___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: objet
+    alt: []
+  - id: g-etre-naturel-l1-q16
+    sentence: "« Souffrir » traduit le verbe allemand ___, qui veut d'abord dire pâtir, subir."
+    answer: leiden
+    alt: []
+  - id: g-etre-naturel-l1-q17
+    sentence: "L'être objectif « ne crée, il ne pose que des objets, parce qu'il est ___ lui-même par des objets » (Manuscrits de 1844, troisième manuscrit)."
+    answer: posé
+    alt: ["pose"]
+  - id: g-etre-naturel-l1-q18
+    sentence: "L'être objectif ne pose que des objets « parce qu'à l'origine il est ___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: nature
+    alt: []
+  - id: g-etre-naturel-l1-q19
+    sentence: "Contre Hegel, pour qui l'homme est conscience de soi, Marx soutient que l'___ n'est pas une aliénation à surmonter, mais la manière d'être de l'homme."
+    answer: objectivité
+    alt: ["objectivite"]
+  - id: g-etre-naturel-l1-q20
+    sentence: "« L'homme n'est pas seulement un être naturel, il est aussi un être naturel ___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: humain
+    alt: []
+  - id: g-etre-naturel-l1-q21
+    sentence: "« De même que tout ce qui est naturel doit naître, de même l'homme a aussi son acte de naissance, l'___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: histoire
+    alt: []
+  - id: g-etre-naturel-l1-q22
+    sentence: "« L'histoire est la véritable histoire ___ de l'homme » (Manuscrits de 1844, troisième manuscrit)."
+    answer: naturelle
+    alt: []
+  - id: g-etre-naturel-l1-q23
+    sentence: "Le travail salarié est « l'existence purement ___ du travail, démunie de toute objectivité » (Grundrisse, chapitre du capital)."
+    answer: subjective
+    alt: []
+  - id: g-etre-naturel-l1-q24
+    sentence: "« Le travail comme la pauvreté ___ : la pauvreté non comme manque, mais comme exclusion totale de la richesse objective » (Grundrisse)."
+    answer: absolue
+    alt: []
+  - id: g-etre-naturel-l1-q25
+    sentence: "« Plus cette activité est grande, plus l'ouvrier est sans ___ » (Manuscrits de 1844, premier manuscrit)."
+    answer: objet
+    alt: []
+  - id: g-etre-naturel-l1-q26
+    sentence: "« La ___ des cinq sens est le travail de toute l'histoire passée » (Manuscrits de 1844, troisième manuscrit)."
+    answer: formation
+    alt: []
+  - id: g-etre-naturel-l1-q27
+    sentence: "Les sens humains ne se forment que grâce à l'existence de leur objet, « à la nature ___ » (Manuscrits de 1844, troisième manuscrit)."
+    answer: humanisée
+    alt: ["humanisee"]
