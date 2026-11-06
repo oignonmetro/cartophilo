@@ -241,7 +241,11 @@ toutes les quatre mêmes passages, lues puis recopiées en entier)** :
 - le journal garde des **notes**, pas des transcriptions : pour chaque
   réponse, ses thèses, ses prémisses, ses citations avec leur source, et une
   ligne `Passage : œuvre, section` par passage (`question` les relit pour
-  dire à NotebookLM de ne pas les redonner) ;
+  dire à NotebookLM de ne pas les redonner). Pour les réponses D et E, ces
+  notes gardent **chaque prémisse en entier**, sa citation et sa source :
+  le relecteur juge l'entrée sur le journal, et un résumé en trois lignes
+  (« voir la réponse groupée ») ne lui laisse rien à comparer (relecture
+  d'Expression de la vie, 2026-11-06) ;
 - les questions élémentaires vont en deux messages à réponse en tableau
   court (`B-statut`, `B-portee`) ; `debut … --couvert "…"` nomme les notions
   voisines déjà traitées dans le glossaire, que NotebookLM ne doit pas
