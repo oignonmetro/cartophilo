@@ -1,8 +1,153 @@
-# Entrée du glossaire de Marx (skill glossaire-marx), créée vide pour recevoir les
-# renvois des entrées déjà écrites ; à rédiger.
+# Entrée du glossaire de Marx (skill glossaire-marx) : notion. Citations reprises de
+# NotebookLM avec leur source (Manuscrits de 1844, Grundrisse, Le Capital, livre I,
+# éditions sociales), vérifiées par textes.py.
 
 id: g-corps-non-organique
 title: Corps non-organique (`unorganischer Leib`)
 icon: book
 color: coral
-lessons: []
+lessons:
+- id: g-corps-non-organique-l1
+  title: Corps non-organique
+  notes: |-
+    Chez Marx, le {violet}**corps non-organique**{/violet} ({violet}*unorganischer Leib*{/violet}) est [def]. Il n'est {pink}ni un simple milieu autour de l'homme ni une ressource qu'il posséderait{/pink} : la nature fait partie de lui, comme ses organes. Le concept donne à la [[g-activite-vitale|vie]] humaine son étendue réelle, et à la critique du [[g-travail-aliene|travail aliéné]] sa portée : ce que perd l'ouvrier, c'est une part de son corps.
+
+    __**La nature est le**__ {violet}__**corps non-organique**__{/violet} __**de l'homme, parce qu'il en vit et doit maintenir avec elle un processus constant.**__ {teal}« {/teal}La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, {teal}__est le corps non-organique de l'homme__{/teal}. L'homme vit de la nature signifie : la nature est son corps avec lequel il doit {teal}__maintenir un processus constant pour ne pas mourir__ »{/teal} (*Manuscrits de 1844*, premier manuscrit, Le travail aliéné). La raison du mot « corps » est là : {amber}ce dont un vivant ne peut se séparer sans mourir n'est pas hors de lui{/amber}, même si ce n'est pas un organe. Le pain, l'air, la lumière entrent dans la vie physique de l'homme ; et ils entrent aussi dans sa vie intellectuelle : {teal}« {/teal}les plantes, les animaux, les pierres, l'air, la lumière, etc., constituent du point de vue théorique {teal}__une partie de la conscience humaine__{/teal}, soit en tant qu'objets des sciences de la nature, soit en tant qu'objets de l'art{teal} »{/teal} (*ibid*.). Ce n'est donc pas une métaphore : {teal}« {/teal}la nature est {teal}__indissolublement liée avec elle-même__{/teal}, car {teal}__l'homme est une partie de la nature__ »{/teal} (*ibid*.). Il faut pour cela que l'homme soit un [[g-etre-naturel|être naturel]], {coral}posé lui-même par les objets sur lesquels il agit{/coral}.
+
+    __**Le corps non-organique de l'homme est plus vaste que celui de l'animal, parce que l'homme est**__ {violet}__**universel**__{/violet}__**.**__ L'animal aussi a un corps non-organique : {teal}« {/teal}La vie générique tant chez l'homme que chez l'animal consiste d'abord, au point de vue physique, dans le fait que l'homme (comme l'animal) vit de la nature non-organique, et {teal}__plus l'homme est universel par rapport à l'animal, plus est universel le champ de la nature non-organique dont il vit__ »{/teal} (*ibid*.). La différence est de degré, et elle tient à ce que l'animal ne prend dans la nature que ce dont son espèce a besoin. L'homme, lui, est un [[g-etre-generique|être générique]], qui produit à la mesure de toute espèce : {teal}« {/teal}L'{teal}universalité de l'homme{/teal} apparaît en pratique précisément dans l'universalité qui fait de {teal}__la nature entière son corps non-organique__{/teal}, aussi bien dans la mesure où, premièrement, elle est {teal}__un moyen de subsistance immédiat__{/teal} que dans celle où, [deuxièmement], elle est {teal}__la matière, l'objet et l'outil de son activité vitale__ »{/teal} (*ibid*.). {coral}Son corps non-organique s'étend donc aussi loin que son activité.{/coral}
+    - Moyen de subsistance : ce dont il vit, comme tout vivant.
+    - Matière, objet et outil : ce sur quoi et avec quoi il agit, ce que l'animal ne fait qu'à peine.
+
+    __**Le travail aliéné**__ {red}__**dérobe**__{/red} __**à l'homme son corps non-organique.**__ Si l'homme vit de la nature, ce qui le sépare de la nature le prive d'une part de lui-même. Or, dans le travail aliéné, {teal}« {/teal}l'objectivation se révèle à tel point être la perte de l'objet, que l'ouvrier est {teal}__spolié non seulement des objets les plus nécessaires à la vie, mais encore des objets du travail__ »{/teal} (*ibid*.). Le produit va à un autre, avec la matière et les moyens de travail. Donc {teal}« {/teal}tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, sa véritable objectivité générique, et {teal}__il transforme l'avantage que l'homme a sur l'animal en ce désavantage que son corps non-organique, la nature, lui est dérobé__ »{/teal} (*ibid*.). {coral}Plus le corps non-organique est vaste, plus la perte est grande{/coral} : l'universalité qui faisait la supériorité de l'homme devient l'étendue de sa dépossession. Il ne lui reste que son corps organique : {teal}« {/teal}Le comble de cette servitude est que {teal}__seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet physique__{/teal}, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier{teal} »{/teal} (*ibid*.).
+
+    __**Dans les communautés anciennes, la terre était le**__ {violet}__**corps inorganique**__{/violet} __**du travailleur.**__ Les *Grundrisse* donnent à la notion un sens historique : {teal}« {/teal}le sujet qui travaille est individu naturel, existence naturelle; la première condition objective de son travail apparaît {teal}__comme nature, comme terre, comme son corps inorganique__ »{/teal} (*Grundrisse*, Chapitre du capital). Le travailleur ne produit pas la terre : il la trouve, comme il trouve son propre corps. Mais il ne la tient pas seul, car {teal}« {/teal}sa propriété, c'est-à-dire la relation aux présupposés naturels de sa production en tant qu'ils lui appartiennent [...] {teal}__est médiatisée par le fait qu'il est lui-même membre naturel d'une__ [[g-communaute|communauté]] »{/teal} (*ibid*.). D'où un renversement de la question : {teal}« {/teal}ce n'est pas l'unité des hommes [...] avec les conditions naturelles, inorganiques [...] qui demande à être expliquée [...], mais {teal}__la séparation entre ces conditions inorganiques de l'existence humaine et cette existence active__ »{/teal} (*ibid*.). Cette séparation {teal}« {/teal}n'a été posée comme séparation totale que {teal}__dans le rapport du travail salarié et du capital__ »{/teal} (*ibid*.). {coral}Le salarié est un homme à qui l'histoire a retiré son corps inorganique{/coral} : il ne lui reste qu'une {teal}« {/teal}puissance de travail sans objectivité, purement subjective{teal} »{/teal} (*ibid*.). C'est pourquoi {sky}les économistes{/sky} se trompent en tenant ce rapport pour naturel : {teal}« {/teal}Ce rapport {teal}__ne relève pas de l'histoire naturelle__{/teal} [...]. Il est lui-même de toute évidence {teal}__le résultat d'une évolution historique passée__ »{/teal} (*Le Capital*, livre I, 2e section, chap. IV).
+
+    __**Dans Le Capital, l'outil devient un**__ {violet}__**organe**__{/violet} __**ajouté au corps.**__ Le *Capital* reprend l'idée de 1844 et la précise. Le {violet}moyen de travail{/violet} est {teal}« {/teal}une chose ou un complexe de choses que le travailleur {teal}__insère entre son objet de travail et lui__ »{/teal} (*Le Capital*, livre I, 3e section, chap. V), et la nature le fournit d'abord : {teal}« {/teal}De même que la terre est {yellow}__son garde-manger originel__{/yellow}, elle est {yellow}__l'arsenal originel de ses moyens de travail__{/yellow}{teal} »{/teal} (*ibid*.). Donc {teal}« {/teal}l'élément naturel devient-il lui-même {teal}__un organe de son activité__{/teal}, {teal}__un organe qu'il ajoute à ceux de son propre corps__{/teal} et qui prolonge sa conformation naturelle{teal} »{/teal} (*ibid*.). Le bâton, le levier ou la pierre taillée prolongent la main : ce que 1844 disait de la nature entière, {coral}le *Capital* le montre sur l'outil, dans le travail même{/coral}. Ce travail est un échange réglé avec la nature, le [[g-metabolisme|métabolisme]]. Mais la grande industrie renverse ce prolongement : ce n'est plus l'outil qui s'ajoute au corps de l'ouvrier, c'est l'ouvrier qu'on ajoute à la machine, à {teal}« {/teal}un mécanisme mort auquel on les incorpore {teal}__comme des appendices vivants__ »{/teal} (chap. XIII ; voir [[g-travail-aliene|travail aliéné]]). {coral}Le corps non-organique se retourne alors contre le corps organique.{/coral}
+
+    ! Le corps non-organique n'est pas une idée écologiste avant la lettre : Marx ne demande pas de contempler la nature ni de la laisser intacte, mais montre que l'homme en vit par un échange actif et constant.
+
+    ! « Non-organique » ne veut pas dire « sans vie » : les plantes et les animaux en font partie. Le mot désigne ce qui n'est pas un organe du corps propre, mais en tient lieu.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | *Manuscrits de 1844*, premier manuscrit | la nature, corps non-organique avec lequel l'homme maintient un processus constant |
+    | *Grundrisse*, Chapitre du capital | la terre, corps inorganique du travailleur membre d'une communauté |
+    | *Le Capital*, livre I, chap. IV | la séparation du travailleur, résultat d'une évolution historique |
+    | *Le Capital*, livre I, chap. V | l'élément naturel, organe ajouté au corps |
+
+    **Voir aussi** : [[g-activite-vitale|Activité vitale]] · [[g-etre-generique|Être générique]] · [[g-travail-aliene|Travail aliéné]] · [[g-metabolisme|Métabolisme]] · [[g-etre-naturel|Être naturel, être objectif]] · [[g-communaute|Communauté]]
+  tables:
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-corps-non-organique-l1-q1
+    sentence: "La nature extérieure, en tant qu'elle prolonge le corps de l'homme qui en vit et agit sur elle, Marx l'appelle en 1844 son corps ___."
+    answer: non-organique
+    alt: ["non organique", "inorganique"]
+  - id: g-corps-non-organique-l1-q2
+    sentence: "Le corps non-organique de l'homme se dit en allemand unorganischer ___."
+    answer: Leib
+    alt: []
+  - id: g-corps-non-organique-l1-q3
+    sentence: "« La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est le corps ___ de l'homme » (Manuscrits de 1844, premier manuscrit)."
+    answer: non-organique
+    alt: ["non organique"]
+  - id: g-corps-non-organique-l1-q4
+    sentence: "« L'homme vit de la nature signifie : la nature est son corps avec lequel il doit maintenir un ___ pour ne pas mourir » (Manuscrits de 1844, premier manuscrit)."
+    answer: processus constant
+    alt: []
+  - id: g-corps-non-organique-l1-q5
+    sentence: "« L'homme vit de la nature signifie : la nature est son corps avec lequel il doit maintenir un processus constant pour ne pas ___ » (Manuscrits de 1844, premier manuscrit)."
+    answer: mourir
+    alt: []
+  - id: g-corps-non-organique-l1-q6
+    sentence: "La nature est un corps, et non un simple milieu, car ce dont un vivant ne peut se séparer sans ___ n'est pas hors de lui."
+    answer: mourir
+    alt: []
+  - id: g-corps-non-organique-l1-q7
+    sentence: "Les plantes, les animaux, les pierres, l'air, la lumière « constituent du point de vue théorique une partie de la ___ humaine, soit en tant qu'objets des sciences de la nature, soit en tant qu'objets de l'art » (Manuscrits de 1844, premier manuscrit)."
+    answer: conscience
+    alt: []
+  - id: g-corps-non-organique-l1-q8
+    sentence: "Le corps non-organique n'est pas une métaphore : « la nature est indissolublement liée avec elle-même, car l'homme est une ___ de la nature » (Manuscrits de 1844, premier manuscrit)."
+    answer: partie
+    alt: []
+  - id: g-corps-non-organique-l1-q9
+    sentence: "L'animal aussi vit de la nature non-organique, mais « plus l'homme est ___ par rapport à l'animal, plus est universel le champ de la nature non-organique dont il vit » (Manuscrits de 1844, premier manuscrit)."
+    answer: universel
+    alt: []
+  - id: g-corps-non-organique-l1-q10
+    sentence: "« L'universalité de l'homme apparaît en pratique précisément dans l'universalité qui fait de la nature ___ son corps non-organique » (Manuscrits de 1844, premier manuscrit)."
+    answer: entière
+    alt: ["entiere"]
+  - id: g-corps-non-organique-l1-q11
+    sentence: "La nature est le corps non-organique de l'homme dans la mesure où elle est un moyen de subsistance immédiat, et dans celle où « elle est la matière, l'objet et l'___ de son activité vitale » (Manuscrits de 1844, premier manuscrit)."
+    answer: outil
+    alt: []
+  - id: g-corps-non-organique-l1-q12
+    sentence: "L'homme produisant à la mesure de toute espèce, son corps non-organique s'étend aussi loin que son ___."
+    answer: activité
+    alt: ["activite"]
+  - id: g-corps-non-organique-l1-q13
+    sentence: "Dans le travail aliéné, « l'ouvrier est spolié non seulement des objets les plus nécessaires à la vie, mais encore des objets du ___ » (Manuscrits de 1844, premier manuscrit)."
+    answer: travail
+    alt: []
+  - id: g-corps-non-organique-l1-q14
+    sentence: "Le travail aliéné « transforme l'___ que l'homme a sur l'animal en ce désavantage que son corps non-organique, la nature, lui est dérobé » (Manuscrits de 1844, premier manuscrit)."
+    answer: avantage
+    alt: []
+  - id: g-corps-non-organique-l1-q15
+    sentence: "Le travail aliéné transforme l'avantage que l'homme a sur l'animal en ce désavantage que son corps non-organique, la nature, « lui est ___ » (Manuscrits de 1844, premier manuscrit)."
+    answer: dérobé
+    alt: ["derobe"]
+  - id: g-corps-non-organique-l1-q16
+    sentence: "Plus le corps non-organique de l'homme est vaste, plus sa dépossession est grande : l'universalité qui faisait sa supériorité sur l'animal devient l'étendue de sa ___."
+    answer: dépossession
+    alt: ["depossession"]
+  - id: g-corps-non-organique-l1-q17
+    sentence: "« Le comble de cette servitude est que seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet ___ » (Manuscrits de 1844, premier manuscrit)."
+    answer: physique
+    alt: []
+  - id: g-corps-non-organique-l1-q18
+    sentence: "Dans les Grundrisse, pour le travailleur des communautés anciennes, « la première condition objective de son travail apparaît comme nature, comme ___, comme son corps inorganique » (Chapitre du capital)."
+    answer: terre
+    alt: []
+  - id: g-corps-non-organique-l1-q19
+    sentence: "La relation du travailleur ancien à la terre « est médiatisée par le fait qu'il est lui-même membre naturel d'une ___ » (Grundrisse, Chapitre du capital)."
+    answer: communauté
+    alt: ["communaute"]
+  - id: g-corps-non-organique-l1-q20
+    sentence: "Selon les Grundrisse, ce n'est pas l'unité des hommes avec leurs conditions inorganiques « qui demande à être expliquée [...], mais la ___ entre ces conditions inorganiques de l'existence humaine et cette existence active »."
+    answer: séparation
+    alt: ["separation"]
+  - id: g-corps-non-organique-l1-q21
+    sentence: "La séparation du travailleur et de ses conditions inorganiques « n'a été posée comme séparation totale que dans le rapport du travail ___ et du capital » (Grundrisse)."
+    answer: salarié
+    alt: ["salarie"]
+  - id: g-corps-non-organique-l1-q22
+    sentence: "Séparé de la terre et de la communauté, le travailleur n'est plus qu'une « puissance de travail sans objectivité, purement ___ » (Grundrisse)."
+    answer: subjective
+    alt: []
+  - id: g-corps-non-organique-l1-q23
+    sentence: "Contre les économistes, le rapport du travailleur séparé de ses conditions « ne relève pas de l'histoire ___ » : il est le résultat d'une évolution historique passée (Le Capital, livre I, chap. IV)."
+    answer: naturelle
+    alt: []
+  - id: g-corps-non-organique-l1-q24
+    sentence: "« Le moyen de travail est une chose ou un complexe de choses que le travailleur ___ entre son objet de travail et lui » (Le Capital, livre I, chap. V)."
+    answer: insère
+    alt: ["insere"]
+  - id: g-corps-non-organique-l1-q25
+    sentence: "« De même que la terre est son garde-manger originel, elle est l'___ originel de ses moyens de travail » (Le Capital, livre I, chap. V)."
+    answer: arsenal
+    alt: []
+  - id: g-corps-non-organique-l1-q26
+    sentence: "« Ainsi l'élément naturel devient-il lui-même un ___ de son activité, un organe qu'il ajoute à ceux de son propre corps » (Le Capital, livre I, chap. V)."
+    answer: organe
+    alt: []
+  - id: g-corps-non-organique-l1-q27
+    sentence: "« Non-organique » ne veut pas dire sans vie, puisque plantes et animaux en font partie : le mot désigne ce qui n'est pas un ___ du corps propre, mais en tient lieu."
+    answer: organe
+    alt: []

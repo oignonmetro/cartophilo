@@ -186,6 +186,26 @@ perdre la réponse en cours (2026-11-05). L'historique de la
 discussion s'efface en commençant une entrée, par l'utilisateur (c'est une
 suppression définitive, que je ne fais pas moi-même).
 
+**L'historique, à surveiller** (consigne de l'utilisateur, 2026-11-06) :
+- **avant la première question d'une entrée**, compter les messages de la
+  page (`document.querySelectorAll('chat-message').length`, 0 quand la
+  discussion est vide) ; s'il en reste, **le signaler à l'utilisateur** et lui
+  demander de supprimer la discussion (menu ⋮, « Supprimer l'historique des
+  discussions ») avant de poser quoi que ce soit ;
+- **dès que NotebookLM redonne sa réponse précédente** sous une nouvelle
+  question (le défaut apparaît quand la discussion s'allonge : quatre fois sur
+  trois entrées le 2026-11-06), s'arrêter et faire supprimer la discussion par
+  l'utilisateur, au lieu de reposer la question. Les journaux gardent tout ;
+  on reprend à la question en attente, et l'entrée en cours repart de la
+  discussion vide (la question de ce qui manque ne s'appuie plus alors que
+  sur ce qui suit la suppression : la reposer en rappelant en une phrase les
+  thèses du plan).
+
+Quand l'utilisateur demande d'enchaîner les entrées tant que NotebookLM le
+permet, passer à l'entrée suivante de sa liste après chaque publication ;
+s'arrêter à la limite d'usage (« Chat désactivé jusqu'à … ») en disant où l'on
+en est.
+
 **Économie (choix de l'utilisateur, 2026-10-26, après Végétatif : 19
 questions avant le plan, des réponses de 8 000 caractères qui recitaient
 toutes les quatre mêmes passages, lues puis recopiées en entier)** :
