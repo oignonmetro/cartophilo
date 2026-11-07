@@ -43,6 +43,11 @@ Modèles : `sep-arbio1` et `sep-psy1`, tels que l'utilisateur les a retouchés.
   comprise (« intelligence » chez Bodéüs, jamais « intellect »).
 - **Comparer par script** chaque fragment entre guillemets aux extraits reçus.
 - La *Métaphysique* se cite par ses lettres (E, 1 ; A, 1 ; M, 10).
+- **Pas de citation de philosophe laissée de côté**, surtout en bloc : entière
+  dans le rappel, avec sa référence, et en cascade dans les cartes ; une
+  paraphrase s'ouvre sur sa référence (« *Parties des animaux*, I, 1 : … »).
+  Les phrases des commentateurs, elles, ne s'apprennent pas en morceaux (voir
+  `content/philosophie.md`, « Un cours sur un auteur, tiré d'un commentaire »).
 - Un doute sur une date, un nom, une citation se vérifie par une recherche ; on
   ne retire pas par prudence.
 

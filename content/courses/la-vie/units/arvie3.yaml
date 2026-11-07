@@ -41,7 +41,7 @@ lessons:
     answer: "I, 5"
     alt: ["I 5", "livre I, chapitre 5"]
   - id: arvie3-l1-p7
-    sentence: "Aristote pointe l'incohérence de ceux qui **répugnent à étudier les animaux** pour ne s'occuper que de l'___, sans voir qu'il est un être naturel."
+    sentence: "*Parties des animaux*, I, 5 : Aristote pointe l'incohérence de ceux qui **répugnent à étudier les animaux** pour ne s'occuper que de l'___, sans voir qu'il est un être naturel."
     answer: "homme"
     alt: []
   - id: arvie3-l1-p4
@@ -75,7 +75,7 @@ lessons:
     - {red}La réduction des principes premiers à des principes matériels{/red} : {teal}« {/teal}Les anciens physiologues [...] ne voyaient pas la pluralité des causes, mais uniquement {teal}la cause matérielle et la cause motrice{/teal} lesquelles étaient indistinctes. {teal}Ils ne sont pas attentifs à la cause formelle et la cause finale »{/teal} (*GA*, V, 1). En ignorant que la nature est forme et fin, c'est-à-dire âme dans le vivant, {coral}les atomistes se privent des moyens de distinguer le vivant de l'inerte{/coral}, et d'expliquer qu'un être soit à l'origine de son propre mouvement.
   points:
   - id: arvie3-l2-p1
-    sentence: "__Contre ses prédécesseurs, qui raisonnent de manière logique et abstraite__, le physicien doit partir de l'**expérience**, en grec *___*."
+    sentence: "__Contre ses prédécesseurs, qui raisonnent de manière logique et abstraite__, le physicien doit partir de l'**expérience**, en grec *___* (*Physique*, I, 8)."
     answer: "empeiria"
     alt: []
   - id: arvie3-l2-p8
@@ -105,6 +105,10 @@ lessons:
   - id: arvie3-l2-p6
     sentence: "*Génération des animaux*, V, 1 : les anciens physiologues ne voyaient que la cause matérielle et la cause motrice ; « __ils ne sont pas attentifs à__ la cause formelle et la cause ___ »."
     answer: "finale"
+    alt: []
+  - id: arvie3-l2-p20
+    sentence: "*Génération des animaux*, V, 1 : « Les anciens physiologues [...] ne voyaient pas la pluralité des causes, mais uniquement la cause ___ et la cause motrice lesquelles étaient indistinctes »."
+    answer: "matérielle"
     alt: []
   - id: arvie3-l2-p7
     sentence: "__En ignorant que la nature est forme et fin__, les ___ se privent des moyens de **distinguer le vivant de l'inerte**."
@@ -192,7 +196,7 @@ lessons:
     answer: "absolue"
     alt: []
   - id: arvie3-l4-p2
-    sentence: "__Dans l'organisme__, la nécessité n'est pas absolue mais ___ ou conditionnelle : une chose n'est nécessaire **qu'à condition qu'une fin doive être réalisée**."
+    sentence: "*Parties des animaux*, I, 1 : __dans l'organisme__, la nécessité n'est pas absolue mais ___ ou conditionnelle : une chose n'est nécessaire **qu'à condition qu'une fin doive être réalisée**."
     answer: "hypothétique"
     alt: []
   - id: arvie3-l4-p4
@@ -211,8 +215,12 @@ lessons:
     sentence: "*Physique*, II, 9 : « __Le nécessaire dans les êtres naturels__ c'est ce que l'on présente comme étant la ___ et les mouvements de celle-ci »."
     answer: "matière"
     alt: []
+  - id: arvie3-l4-p20
+    sentence: "*Physique*, II, 9 : « Le nécessaire dans les êtres naturels c'est ce que l'on présente comme étant la matière et les ___ de celle-ci »."
+    answer: "mouvements"
+    alt: []
   - id: arvie3-l4-p7
-    sentence: "__Certains phénomènes sont purement mécaniques, sans finalité__ : la ___, **qui est un résidu**, ou la couleur des yeux."
+    sentence: "__Certains phénomènes sont purement mécaniques, sans finalité__ : la ___, **qui est un résidu**, ou la couleur des yeux (*Parties des animaux*, IV, 2 ; *Génération des animaux*, V, 1)."
     answer: "bile"
     alt: []
   - id: arvie3-l4-p8
@@ -245,7 +253,7 @@ lessons:
     answer: "formatrice"
     alt: []
   - id: arvie3-l5-p3
-    sentence: "__Le monstre naît quand__ le mouvement venu du mâle ne parvient pas à ___, **c'est-à-dire à maîtriser et organiser**, la matière fournie par la femelle."
+    sentence: "*Génération des animaux*, IV, 4 : __le monstre naît quand__ le mouvement venu du mâle ne parvient pas à ___, **c'est-à-dire à maîtriser et organiser**, la matière fournie par la femelle."
     answer: "informer"
     alt: []
   - id: arvie3-l5-p4
@@ -261,12 +269,16 @@ lessons:
     answer: "spontané"
     alt: []
   - id: arvie3-l5-p7
-    sentence: "Le **hasard spontané**, en grec *___*, n'est pas l'absence de cause, mais la production naturelle d'un résultat qui n'était pas la fin du processus."
+    sentence: "*Physique*, II, 6 : le **hasard spontané**, en grec *___*, n'est pas l'absence de cause, mais la production naturelle d'un résultat qui n'était pas la fin du processus."
     answer: "automaton"
     alt: []
   - id: arvie3-l5-p8
     sentence: "*Génération des animaux*, IV, 4 : __le monstre est contraire__ non à la nature **prise absolument**, mais à la nature considérée dans son cours ___."
     answer: "ordinaire"
+    alt: []
+  - id: arvie3-l5-p20
+    sentence: "*Génération des animaux*, IV, 4 : « Le monstre appartient à la classe des phénomènes ___ à la nature, non pas à la nature prise absolument mais à la nature considérée dans son cours ordinaire »."
+    answer: "contraires"
     alt: []
   - id: arvie3-l5-p9
     sentence: "__L'existence du monstre ne réfute pas la téléologie d'Aristote__ : elle en révèle le caractère **conditionnel**, et non ___."

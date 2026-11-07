@@ -627,6 +627,20 @@ l'**auteur**, pas sur le commentaire :
   telles quelles, avec ses repères, sans vérification dans l'œuvre ; seule
   leur copie se contrôle sur le PDF du commentaire
   (`python -I .claude/skills/cours-oeuvre/texte.py verifie "<pdf>" <fichier.yaml>`) ;
+- **aucune citation de philosophe n'est mise de côté**, surtout quand le
+  commentaire la donne en bloc : elle passe entière dans le rappel, avec sa
+  référence (*Parties des animaux*, I, 1, 640b33-641a6, la main d'airain ou de
+  bois), et se fait apprendre en cascade, un trou par carte (retouche de
+  l'utilisateur sur `arvie1`, 2026-11-07). Cela vaut pour les philosophes
+  (Aristote, Platon, Descartes, Hésiode cité par eux) ; **les phrases des
+  commentateurs ne s'apprennent pas en morceaux** (Morel, Labarrière, Lennox,
+  Pellegrin) : leur thèse a sa carte, leur phrase non ;
+- **une paraphrase s'attache à sa référence** : la carte qui reformule un
+  passage situé par le commentaire s'ouvre sur ce repère, comme une citation
+  (« *Parties des animaux*, I, 1 : parce que la forme, identifiée à l'âme,
+  fait du vivant une substance, le naturaliste qui examine les vivants
+  __prendra ___ pour premier objet d'étude__ »), ou le donne entre
+  parenthèses en fin de phrase ;
 - **la lecture du commentateur se dit comme sienne** quand elle va au-delà
   de ce que l'auteur affirme (pour Huneman : la mort comme accès du savoir
   aux enchaînements organiques), et un point attributionnel sur un
