@@ -14,12 +14,16 @@ import type { PassageDTO, PointDTO } from './types'
  * rappel et les cartes-explication suffisent (voir `isTextlessPassageLabel`).
  */
 export function PassageEditor({
+  title,
+  onTitleChange,
   passage,
   onChange,
   points,
   onAddCard,
   onShowCards,
 }: {
+  title: string
+  onTitleChange: (title: string) => void
   passage: PassageDTO
   onChange: (passage: PassageDTO) => void
   points: PointDTO[]
@@ -52,6 +56,16 @@ export function PassageEditor({
   return (
     <div className="flex min-h-0 flex-1">
       <div className="flex min-h-0 flex-1 flex-col gap-3 border-r-2 border-line px-4 py-3">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs font-black tracking-wide text-ink-soft uppercase">Titre</span>
+          <input
+            value={title}
+            onChange={(event) => onTitleChange(event.target.value.replace(/\n/g, ' '))}
+            placeholder="Titre de la leçon"
+            className={`${inputClass} min-w-64 flex-1 py-1 font-bold`}
+          />
+        </div>
+
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-xs font-black tracking-wide text-ink-soft uppercase">Repère</span>
           <input

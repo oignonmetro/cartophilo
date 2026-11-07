@@ -658,6 +658,8 @@ export default function ContentEditorScreen() {
 
         {selection && view === 'text' && passage && (
           <PassageEditor
+            title={title}
+            onTitleChange={setTitle}
             passage={passage}
             onChange={setPassage}
             points={points ?? []}
