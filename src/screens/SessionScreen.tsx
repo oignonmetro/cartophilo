@@ -6,6 +6,7 @@ import { isCitation } from '@/content/course'
 import { ratingFromAnswer, type Rating } from '@/engine/srs'
 import { useCourse } from '@/content/CourseProvider'
 import { useProgress } from '@/store/progressStore'
+import type { SessionSnapshot } from '@/lib/sessionResume'
 import { Flashcard } from '@/components/session/Flashcard'
 import { ChoiceQuestion } from '@/components/session/ChoiceQuestion'
 import { MatchPairs } from '@/components/session/MatchPairs'
@@ -66,6 +67,10 @@ interface SessionScreenProps {
    */
   materialize?: (ghost: TreatiseGhostExercise) => Exercise
   onQuit: () => void
+  /** Session reprise là où elle a été quittée (voir `lib/sessionResume`). */
+  restored?: Omit<SessionSnapshot, 'seed' | 'level'>
+  /** Appelé à chaque pas de la session, pour qu'elle puisse être reprise. */
+  onSnapshot?: (snapshot: Omit<SessionSnapshot, 'seed' | 'level'>) => void
   /** `peakTier` : le plus haut palier de série atteint, voir `useSessionHaptics`. */
   onFinish: (outcome: SessionOutcome, peakTier: number) => void
 }
@@ -224,6 +229,8 @@ function SessionRunner({
   exercises,
   materialize,
   onQuit,
+  restored: resume0,
+  onSnapshot,
   onFinish,
   haptics,
   combo,
@@ -232,14 +239,24 @@ function SessionRunner({
   const { course } = useCourse()
   const gradeItem = useProgress((state) => state.gradeItem)
   const gradeTreatises = useProgress((state) => state.gradeTreatises)
-  const [queue, setQueue] = useState<Exercise[]>(exercises)
-  const [position, setPosition] = useState(0)
-  const [attempt, setAttempt] = useState<Attempt>({ seen: new Set(), passed: new Set(), answers: 0, correct: 0, total: 0 })
+  const [queue, setQueue] = useState<Exercise[]>(() => {
+    if (!resume0) return exercises
+    const byId = new Map(exercises.map((exercise) => [exercise.id, exercise]))
+    return resume0.queue.map((id) => byId.get(id)!)
+  })
+  const [position, setPosition] = useState(resume0?.position ?? 0)
+  const [attempt, setAttempt] = useState<Attempt>(() => ({
+    seen: new Set(resume0?.seen),
+    passed: new Set(resume0?.passed),
+    answers: resume0?.answers ?? 0,
+    correct: resume0?.correct ?? 0,
+    total: resume0?.total ?? 0,
+  }))
   // Nombre d'exercices déjà faits au début du lot courant : la pause suivante
   // tombe dix exercices plus loin, pas au premier multiple de dix atteint
   // dans l'absolu (sans quoi reprendre juste après une pause en déclencherait
   // aussitôt une autre au dixième exercice de la leçon, pas au vingtième).
-  const [batchStart, setBatchStart] = useState(0)
+  const [batchStart, setBatchStart] = useState(resume0?.batchStart ?? 0)
   const [paused, setPaused] = useState(false)
 
   // Mode « citations seules » (voir `citationsOnly` dans le store) : proposé
@@ -284,6 +301,22 @@ function SessionRunner({
     }
     current = made
   }
+  // Instantané de la session, pour la reprendre si on la quitte (leçons
+  // seulement : `onSnapshot` n'est passé que par `LessonRoute`).
+  useEffect(() => {
+    if (!onSnapshot || !current || attempt.answers === 0) return
+    onSnapshot({
+      queue: queue.map((exercise) => exercise.id),
+      position,
+      seen: [...attempt.seen],
+      passed: [...attempt.passed],
+      answers: attempt.answers,
+      correct: attempt.correct,
+      total: attempt.total,
+      batchStart,
+    })
+  }, [onSnapshot, queue, position, attempt, batchStart, current])
+
   const skipped = current !== undefined && skips(current)
   useEffect(() => {
     if (skipped) setPosition((index) => index + 1)

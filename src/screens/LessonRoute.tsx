@@ -7,6 +7,7 @@ import { citationsOnlyLesson, findLesson } from '@/content/course'
 import { lessonDifficulty, type SessionOutcome } from '@/engine/progress'
 import { buildUnitPath, nextNodeAfter, sectionRank } from '@/engine/unitPath'
 import { useProgress } from '@/store/progressStore'
+import { clearSnapshot, loadSnapshot, saveSnapshot } from '@/lib/sessionResume'
 import { SessionScreen } from './SessionScreen'
 import { SessionResult } from './SessionResult'
 
@@ -49,30 +50,45 @@ function LessonSession({ lessonId }: { lessonId: string }) {
   // solide donne d'emblée de la production, la découvrir donne la
   // présentation. Figée à l'ouverture pour que les réponses de la session en
   // cours ne la fassent pas varier en cours de route.
+  // Une session quittée en cours de route se reprend là où elle s'est arrêtée
+  // (voir `sessionResume`). Lue une fois, à l'ouverture.
+  const [saved, setSaved] = useState(() => loadSnapshot(course.id, lessonId))
+
   const [level] = useState(() =>
-    levelLesson ? lessonDifficulty(levelLesson, useProgress.getState().cards[course.id] ?? {}) : 0,
+    saved?.level ?? (levelLesson ? lessonDifficulty(levelLesson, useProgress.getState().cards[course.id] ?? {}) : 0),
   )
 
   // La graine change à chaque tentative pour que « Recommencer » rebatte les cartes.
   const [attempt, setAttempt] = useState(0)
   const [finished, setFinished] = useState<Finished | null>(null)
 
-  const exercises = useMemo(() => {
-    if (!entry) return []
+  const { exercises, seed, resume } = useMemo(() => {
+    if (!entry) return { exercises: [], seed: 0, resume: undefined }
+    const build = (seed: number) =>
+      buildLessonSession(
+        entry.lesson,
+        level,
+        seed,
+        undefined,
+        sectionRank(entry.unit, entry.lesson.id),
+        // L'introduction d'une unité de texte précède son premier paragraphe,
+        // et lui seul : elle ne se relit pas à chaque leçon.
+        entry.unit.lessons[0]?.id === entry.lesson.id ? entry.unit.intro : undefined,
+        entry.unit.work,
+      )
+    if (saved) {
+      const rebuilt = build(saved.seed)
+      const ids = new Set(rebuilt.map((exercise) => exercise.id))
+      // Le contenu a pu changer depuis : un instantané qui ne retombe plus sur
+      // la même session est abandonné plutôt que rejoué de travers.
+      if (saved.queue.every((id) => ids.has(id))) return { exercises: rebuilt, seed: saved.seed, resume: saved }
+    }
     const cards = useProgress.getState().cards[course.id] ?? {}
-    return buildLessonSession(
-      entry.lesson,
-      level,
-      // L'avancement entre dans la graine : rouvrir une leçon un autre jour ne
-      // doit pas redonner la même session, exercice pour exercice.
-      seedFrom(entry.lesson.id, level, attempt, lessonProgress(entry.lesson, cards)),
-      undefined,
-      sectionRank(entry.unit, entry.lesson.id),
-      // L'introduction d'une unité de texte précède son premier paragraphe,
-      // et lui seul : elle ne se relit pas à chaque leçon.
-      entry.unit.lessons[0]?.id === entry.lesson.id ? entry.unit.intro : undefined,
-      entry.unit.work,
-    )
+    // L'avancement entre dans la graine : rouvrir une leçon un autre jour ne
+    // doit pas redonner la même session, exercice pour exercice.
+    const fresh = seedFrom(entry.lesson.id, level, attempt, lessonProgress(entry.lesson, cards))
+    return { exercises: build(fresh), seed: fresh, resume: undefined }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [entry, attempt, level, course.id])
 
   if (!entry) return <Navigate to="/" replace />
@@ -109,6 +125,8 @@ function LessonSession({ lessonId }: { lessonId: string }) {
             : undefined
         }
         onRetry={() => {
+          clearSnapshot(course.id, lessonId)
+          setSaved(null)
           setFinished(null)
           setAttempt((value) => value + 1)
         }}
@@ -123,8 +141,11 @@ function LessonSession({ lessonId }: { lessonId: string }) {
       key={attempt}
       kind="lesson"
       exercises={exercises}
+      restored={resume}
+      onSnapshot={(snapshot) => saveSnapshot(course.id, lessonId, { ...snapshot, seed, level })}
       onQuit={backHome}
       onFinish={(outcome, peakTier) => {
+        clearSnapshot(course.id, lessonId)
         const result = finishLesson(course.id, lessonId, outcome)
         setFinished({ outcome, peakTier, ...result })
       }}
