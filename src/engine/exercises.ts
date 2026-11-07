@@ -1488,7 +1488,11 @@ function buildPassageSession(
     passage: lesson.passage,
     intro,
   }
-  if (rest.length === 0) return [first, ...cards]
+  // Une unité peut n'avoir encore que ses cartes-citation, le rappel étant à
+  // écrire plus tard : le paragraphe s'affiche alors seul à la découverte. Sans
+  // paragraphe ni introduction non plus, il n'y aurait rien à montrer.
+  const empty = !first.notes.trim() && !lesson.passage.text && !intro
+  if (rest.length === 0) return empty ? cards : [first, ...cards]
 
   // Le texte de chaque fragment, tel que le cite sa première carte-citation.
   const texts = new Map<number, string>()

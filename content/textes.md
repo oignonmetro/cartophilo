@@ -103,6 +103,13 @@ lessons:
 - **Rappels** : jamais d'italique à l'intérieur d'un gras
   (`**L'*Éthique* dit…**`) ; l'analyseur ne sait pas les imbriquer et affiche
   les astérisques.
+- **Unité sans rappel** : `notes` est facultatif sur une leçon de texte. Une
+  unité peut ne porter, dans un premier temps, que le paragraphe (`passage.text`)
+  et ses cartes-citation, pour apprendre les citations avant d'écrire les
+  explications : la leçon s'ouvre sur le paragraphe seul (sans titre
+  « Explication »), puis joue ses cartes. Le rappel s'ajoute plus tard sans rien
+  changer d'autre. Une leçon sans rappel, sans paragraphe ni introduction
+  s'ouvre directement sur ses cartes.
 - **Rappel fragment par fragment** : un long paragraphe peut expliquer ses
   extraits un à un. Le rappel commence par une vue d'ensemble, affichée avec
   le paragraphe entier ; puis une ligne `=== k Intitulé` ouvre la section de

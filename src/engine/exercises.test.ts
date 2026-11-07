@@ -1176,6 +1176,19 @@ describe('leçon de texte', () => {
     expect(session.slice(1).flatMap(itemIdsOf)).toEqual(['n-p1-1', 'n-p1-2', 'n-p1-3'])
   })
 
+  it('se joue sans rappel : le paragraphe s’affiche seul, puis les cartes-citation', () => {
+    const bare: GrammarLesson = { ...text, notes: undefined }
+    const session = buildLessonSession(bare, 0, 42)
+    expect(session[0]).toMatchObject({ kind: 'rule', notes: '', passage: text.passage })
+    expect(session.slice(1).map((exercise) => exercise.kind)).toEqual(['passage', 'passage', 'passage'])
+  })
+
+  it('n’ouvre sur aucun écran vide une leçon sans rappel, sans paragraphe ni introduction', () => {
+    const bare: GrammarLesson = { ...text, notes: undefined, passage: { label: '§1' } }
+    const session = buildLessonSession(bare, 0, 42)
+    expect(session.map((exercise) => exercise.kind)).toEqual(['passage', 'passage', 'passage'])
+  })
+
   it('explique fragment par fragment un rappel coupé par ===, chaque section avant les cartes de son fragment', () => {
     const cut: GrammarLesson = {
       ...text,
