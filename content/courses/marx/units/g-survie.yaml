@@ -1,8 +1,121 @@
-# Entrée du glossaire de Marx (skill glossaire-marx), créée vide pour recevoir les
-# renvois des entrées déjà écrites ; à rédiger.
+# Entrée du glossaire de Marx (skill glossaire-marx) : notion. Citations reprises de
+# NotebookLM avec leur source (Manuscrits de 1844, Le Capital, livre I, Critique du
+# programme de Gotha, éditions sociales), vérifiées par textes.py. Angle choisi pour ne
+# pas redire Activité vitale (le salarié travaille pour vivre), Besoin (l'élément
+# historique et moral du salaire) et Vie générique (la survie devenue but du travail
+# aliéné) : le minimum de l'économie politique, la limite inférieure de la valeur de la
+# force de travail, l'usure de la vie ouvrière et la surpopulation relative.
 
 id: g-survie
 title: Survie
 icon: book
 color: coral
-lessons: []
+lessons:
+- id: g-survie-l1
+  title: Survie
+  notes: |-
+    Chez Marx, la {violet}**survie**{/violet} est [def]. Il n'a pas de mot unique pour la dire : il parle de la conservation (*Erhaltung*) de l'ouvrier, de ses moyens de subsistance (*Subsistenzmittel*), de son existence physique (*physische Existenz*). Concrètement, c'est {amber}ce sans quoi l'ouvrier ne peut pas renouveler chaque jour son processus vital{/amber} : manger, dormir, se refaire, assez pour revenir travailler le lendemain. Ce n'est {pink}ni la vie, ni le besoin nécessaire{/pink}. Que le salarié travaille pour vivre et ne vive qu'hors du travail, c'est l'objet de l'[[g-activite-vitale|activité vitale]] ; que le salaire normal contienne un élément historique et moral, celui du [[g-besoin|besoin]] ; que la survie devienne le but du travail aliéné, celui de la [[g-vie-generique|vie générique]]. Ici, la question est ce que le capital fait de la survie de l'ouvrier : il la fixe au minimum, il l'use, et il la rend précaire.
+
+    __**L'économie politique fixe le salaire au**__ {red}__**minimum**__{/red} __**qui conserve l'ouvrier et perpétue la race des ouvriers.**__ Le premier manuscrit de 1844 s'ouvre sur le mécanisme : {teal}« {/teal}{teal}__Le salaire est déterminé par la lutte ouverte entre capitaliste et ouvrier__{/teal}. Nécessité de la victoire pour le capitaliste. {teal}__Le capitaliste peut vivre plus longtemps sans l'ouvrier, que l'ouvrier sans le capitaliste__ »{/teal} (*Manuscrits de 1844*, premier manuscrit, salaire). Le capitaliste a des réserves, l'ouvrier n'a que son salaire : il doit céder le premier, et le salaire descend jusqu'au point où il ne peut plus descendre sans que l'ouvrier cesse de pouvoir travailler. D'où le minimum que les économistes tiennent pour la règle : {teal}« {/teal}{teal}__Le taux minimum et le seul nécessaire pour le salaire est la subsistance de l'ouvrier pendant le travail__{/teal}, et l'excédent nécessaire pour pouvoir nourrir une famille et {teal}__pour que la race des ouvriers ne s'éteigne pas__ »{/teal} (*Manuscrits de 1844*, premier manuscrit, salaire). Ce qu'on conserve n'est pas tel homme, mais l'espèce ouvrière, comme on veille à la reproduction d'un troupeau. Le salaire ordinaire est donc, {teal}« {/teal}d'après Smith, le plus bas qui soit compatible avec la simple humanité, c'est-à-dire {teal}__avec une existence de bête__ »{/teal} (*ibid*.), et l'économie politique peut {teal}« {/teal}établir en principe que, {teal}__tout comme n'importe quel cheval, il doit gagner assez pour pouvoir travailler__ »{/teal} (*ibid*.). {red}La survie de l'ouvrier est celle d'une bête de somme{/red} : on la paie parce qu'il faut qu'elle dure.
+
+    __**La survie n'est que la**__ {violet}__**limite inférieure**__{/violet} __**de la valeur de la force de travail.**__ Dans *Le Capital*, Marx refuse d'en faire la mesure du salaire. Ce que l'ouvrier vend n'est pas son travail, mais sa {violet}force de travail{/violet}, sa capacité de travailler pendant un temps (voir besoin). Comme toute marchandise, elle vaut ce que coûte sa production, ici son entretien : {teal}« {/teal}{teal}__la valeur de la force de travail est la valeur des moyens de subsistance nécessaires à la conservation de celui qui la possède__ »{/teal} (*Le Capital*, livre I, chap. IV). Mais cet entretien normal comprend plus que la survie, car il dépend de ce qu'une société tient pour nécessaire (voir besoin). La survie n'en est que le plancher : {teal}« {/teal}{teal}__La limite extrême ou la limite minimale de la valeur de la force de travail__{/teal} est constituée par la valeur d'une masse de marchandises sans l'apport journalier de laquelle le porteur de la force de travail [...] {teal}__ne peut renouveler son processus vital__ »{/teal} (*ibid*.). Or un salaire réduit à ce plancher ne paie pas la force de travail à sa valeur, puisqu'il ne lui permet que de durer, non de se refaire entière : {teal}« {/teal}Si le prix de la force de travail tombe à ce seuil minimum, {teal}__il tombe en dessous de sa valeur__{/teal}, car elle ne peut alors se conserver et se développer {teal}__que sous une forme étiolée__ »{/teal} (*ibid*.). {coral}Payer la survie, c'est payer la force de travail au-dessous de sa valeur.{/coral} En 1875, le programme du parti ouvrier allemand veut au contraire {teal}« {/teal}abolir le système salarié avec la loi d'airain des salaires{teal} »{/teal} de {sky}Lassalle{/sky}, selon laquelle le salaire serait ramené de lui-même au minimum physiologique (*Critique du programme de Gotha*, II). Marx montre que le programme se contredit. D'abord, cette loi repose sur la loi de population de {sky}Malthus{/sky}, qui vaudrait pour toute société ; or, si elle était vraie, {teal}« {/teal}{teal}__je ne puis pas abolir la loi, dussé-je abolir cent fois le salariat__{/teal}, parce qu'alors la loi ne régit pas seulement le système du salariat, mais tout système social{teal} »{/teal} (*ibid*.) : on ne peut pas abolir avec le salariat une loi qui ne dépend pas de lui. Ensuite, elle croit que le salaire paie le travail, alors qu'il n'est {teal}« {/teal}{teal}__qu'une forme déguisée de la valeur (ou du prix) de la force de travail__ »{/teal} (*ibid*.). Il en suit que l'ouvrier travaille toujours une partie de sa journée gratuitement pour le capitaliste, si bien que {teal}« {/teal}le système du travail salarié est, par conséquent, un système d'esclavage [...] {teal}__quel que soit le salaire, bon ou mauvais, que reçoit l'ouvrier__ »{/teal} (*ibid*.). {amber}Ce qu'il faut combattre n'est donc pas un salaire trop bas, mais le salariat même{/amber} : la survie n'est pas la cause du mal, elle en est seulement la forme la plus visible.
+
+    __**Le**__ {red}__**capital**__{/red}__**, qui a besoin de la force de travail, abrège pourtant la vie de l'ouvrier.**__ Le salaire paie l'entretien de l'ouvrier ; mais l'ouvrier produit, en une partie de la journée, l'équivalent de ce salaire, et le reste de la journée, le {violet}surtravail{/violet}, produit un surplus que garde le capitaliste. Plus la journée est longue, plus ce surplus est grand : le capital tend donc à l'allonger sans limite (voir [[g-travail-aliene|travail aliéné]], pour l'image du vampire). Or une force de travail usée plus vite qu'elle ne se refait meurt plus tôt : la production capitaliste {teal}« {/teal}produit donc avec la prolongation de la journée de travail non seulement l'amoindrissement de la force de travail humaine [...] mais aussi {teal}__l'épuisement et la mort prématurée de cette force__ »{/teal} (*Le Capital*, livre I, chap. VIII, 5). C'est un vol, que Marx fait calculer à l'ouvrier lui-même. Celui-ci vend chaque jour l'usage d'une force qui doit durer toute une vie de travail, disons trente ans : le salaire d'un jour paie donc 1/10 950 de sa valeur totale. Si l'excès de travail l'épuise en dix ans, chaque journée en consomme 1/3 650, trois fois plus. D'où son reproche : {teal}« {/teal}en allongeant démesurément la journée de travail, tu peux dégager en une seule journée un quantum de ma force de travail plus grand que ce que je pourrais remplacer en trois jours{teal} »{/teal}, donc {teal}« {/teal}{teal}__tu me paies la force de travail d'un jour alors que tu en utilises une de trois jours__ »{/teal} (*ibid*., chap. VIII, 1). Pourquoi le capitaliste use-t-il ce dont il a besoin ? D'abord parce que les morts sont aussitôt remplacés, grâce aux ouvriers sans emploi dont il sera question plus bas : {teal}« {/teal}les places de ceux qui disparaissent sont aussitôt réoccupées{teal} »{/teal} (*ibid*., chap. VIII, 5, citant {sky}Wakefield{/sky}). Ensuite parce que chacun ne pense qu'au profit présent : {teal}« {/teal}{teal}__Après moi le déluge !__{/teal} Telle est la devise de tout capitaliste et de toute nation capitaliste{teal} »{/teal} (*ibid*.). Enfin parce que la concurrence l'y oblige : elle {teal}« {/teal}impose à chaque capitaliste pris individuellement les lois immanentes de la production capitaliste {teal}__comme des lois qui le contraignent de l'extérieur__ »{/teal} (*ibid*.). {amber}Seule la loi arrête cette usure{/amber}, et elle s'arrache : {teal}« {/teal}La création d'une journée de travail normale est donc le résultat d'une longue et âpre guerre civile{teal} »{/teal} (*ibid*., chap. VIII, 7). Même hors de l'atelier, la survie de l'ouvrier sert le capital : en mangeant et en dormant, il refait la force qu'il devra revendre, et comme il consomme ce qu'il a gagné, il est contraint de revenir ; {teal}« {/teal}l'esclave romain était attaché à son propriétaire par des chaînes, {teal}__l'ouvrier salarié l'est par des fils invisibles__ »{/teal} (*ibid*., chap. XXI, la reproduction simple).
+
+    __**L'**__{violet}__**accumulation**__{/violet} __**du capital rend des ouvriers superflus, et leur survie même devient incertaine.**__ Sous la pression de la concurrence, chaque capitaliste doit produire moins cher, donc rendre le travail plus productif par les machines. À mesure qu'il s'accumule, le capital investit ainsi davantage en machines et en matières, et moins, proportionnellement, en salaires : il a besoin de moins d'ouvriers pour la même production. Donc {teal}« {/teal}l'accumulation capitaliste produit en permanence [...] {teal}__une population ouvrière excédentaire relative__{/teal}, excédentaire par rapport aux besoins moyens de valorisation du capital et {teal}__donc superflue__ »{/teal} (*Le Capital*, livre I, chap. XXIII, 3). « Relative » veut dire : en trop, non par rapport aux subsistances, mais par rapport aux besoins du capital. Ces chômeurs forment une {violet}armée industrielle de réserve{/violet}, qui pèse sur les ouvriers occupés : la réserve, par la concurrence qu'elle leur fait, {teal}« {/teal}la contraint au surcroît de travail et à la soumission aux diktats du capital{teal} »{/teal} (*ibid*., chap. XXIII, 4). Leur survie ne tient plus qu'au besoin que le capital a d'eux, et les plus usés tombent dans le paupérisme : {teal}« {/teal}{teal}__Le paupérisme est en quelque sorte l'Hôtel des Invalides de l'armée ouvrière active__{/teal} et le poids mort de l'armée industrielle de réserve{teal} »{/teal} (*ibid*., chap. XXIII, 4). Ce n'est pas une loi de la nature, comme le voulait {sky}Malthus{/sky}, pour qui la population croît plus vite que les subsistances : {teal}« {/teal}Il n'y a de {teal}__loi de population abstraite que pour les plantes et les animaux__{/teal}{teal} »{/teal} (*ibid*., chap. XXIII, 3) ; chez les hommes, c'est une loi propre au capital. {red}La même accumulation produit les deux pôles{/red} : {teal}« {/teal}{teal}__L'accumulation de richesse à un pôle signifie donc en même temps à l'autre pôle une accumulation de misère__{/teal}, de torture à la tâche, d'esclavage{teal} »{/teal} (*ibid*., chap. XXIII, 4).
+
+    ! La survie n'est pas la valeur de la force de travail : elle n'en est que la limite inférieure ; un salaire qui tombe à ce plancher paie la force de travail au-dessous de sa valeur.
+
+    ! Marx ne prédit pas que le salaire réel doive baisser sans cesse : le prix de la force de travail peut baisser {teal}« {/teal}sans que cesse de s'accroître la masse des moyens de subsistance des travailleurs{teal} »{/teal} (*Le Capital*, livre I, chap. XV, 1). Ce qui croît avec l'accumulation, c'est la précarité de la survie, non nécessairement sa pauvreté.
+
+    ! La surpopulation n'est pas une loi naturelle, comme chez Malthus : c'est une loi de population propre au mode de production capitaliste.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | *Manuscrits de 1844*, premier manuscrit, salaire | le salaire minimum, pour que la race des ouvriers ne s'éteigne pas |
+    | *Le Capital*, livre I, chap. IV | la survie, limite minimale de la valeur de la force de travail |
+    | *Le Capital*, livre I, chap. VIII | la journée de travail qui épuise et tue avant l'heure ; « Après moi le déluge » |
+    | *Le Capital*, livre I, chap. XXI | l'ouvrier attaché au capital par des fils invisibles |
+    | *Le Capital*, livre I, chap. XXIII | la surpopulation relative et le paupérisme |
+    | *Critique du programme de Gotha* | contre la « loi d'airain » des salaires |
+
+    **Voir aussi** : [[g-besoin|Besoin]] · [[g-activite-vitale|Activité vitale]] · [[g-vie-generique|Vie générique]] · [[g-travail-aliene|Travail aliéné]] · [[g-vie-materielle|Vie matérielle]] · [[g-metabolisme|Métabolisme]]
+  tables:
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-survie-l1-c1
+    sentence: "__En 1844, le capitaliste gagne la lutte qui fixe le **salaire**, parce qu'il peut vivre plus__ ___ sans l'ouvrier que l'ouvrier sans lui."
+    answer: longtemps
+    alt: []
+  - id: g-survie-l1-q1
+    sentence: "__Le **salaire minimum** assure la subsistance de l'ouvrier et l'excédent nécessaire__ « pour que la ___ des ouvriers ne s'éteigne pas » (Manuscrits de 1844)."
+    answer: race
+    alt: []
+  - id: g-survie-l1-q2
+    sentence: "__Pour l'**économie politique**,__ « tout comme n'importe quel ___, il doit gagner assez pour pouvoir travailler » (Manuscrits de 1844)."
+    answer: cheval
+    alt: []
+  - id: g-survie-l1-c2
+    sentence: "__Ce que l'ouvrier vend au capitaliste n'est pas son travail__, mais sa **force de travail**, sa ___ de travailler pendant un temps."
+    answer: capacité
+    alt: ["capacite"]
+  - id: g-survie-l1-a3
+    sentence: "__Quand le salaire tombe au seuil de la **survie**, la force de travail ne peut plus se conserver que__ « sous une forme ___ » (Le Capital, livre I, chap. IV)."
+    answer: étiolée
+    alt: ["etiolee"]
+  - id: g-survie-l1-c3
+    sentence: "__Contre la loi d'airain de **Lassalle**, première raison__ : fondée sur la loi de population de ___, elle vaudrait pour tout système social, et ne s'abolirait pas avec le salariat."
+    answer: Malthus
+    alt: []
+  - id: g-survie-l1-c4
+    sentence: "__Contre la loi d'airain, seconde raison__ : le salariat est un système d'___, quel que soit le salaire, bon ou mauvais."
+    answer: esclavage
+    alt: []
+  - id: g-survie-l1-c5
+    sentence: "__La partie de la journée qui produit au-delà de l'équivalent du salaire__, et dont le capitaliste garde le produit, s'appelle le ___."
+    answer: surtravail
+    alt: []
+  - id: g-survie-l1-c6
+    sentence: "__Pourquoi « trois jours » ?__ Une **force de travail** faite pour durer trente ans, épuisée en ___ ans, perd chaque jour trois fois ce que paie le salaire."
+    answer: dix
+    alt: ["10"]
+  - id: g-survie-l1-a5
+    sentence: "__Le capitaliste use l'ouvrier sans souci de sa durée de vie__, d'abord parce que la ___ ouvrière fournit aussitôt de quoi remplacer les morts."
+    answer: surpopulation
+    alt: ["réserve", "reserve"]
+  - id: g-survie-l1-a6
+    sentence: "__Chaque capitaliste use l'ouvrier, même s'il le voulait autrement__, parce que la ___ lui impose les lois de la production capitaliste comme une contrainte extérieure."
+    answer: concurrence
+    alt: []
+  - id: g-survie-l1-d1
+    sentence: "__Ce qui arrête l'usure de la vie ouvrière__ : la loi qui fixe une journée de travail ___, arrachée par une longue guerre civile."
+    answer: normale
+    alt: []
+  - id: g-survie-l1-b1
+    sentence: "__Même hors du travail, la **survie** de l'ouvrier reproduit le capital__ : l'esclave était attaché par des chaînes, « l'ouvrier salarié l'est par des fils ___ » (Le Capital, livre I, chap. XXI)."
+    answer: invisibles
+    alt: []
+  - id: g-survie-l1-c7
+    sentence: "__Pourquoi l'accumulation fait-elle grandir la part des **machines** ?__ Parce que chaque capitaliste doit rendre le travail plus ___ pour produire moins cher."
+    answer: productif
+    alt: []
+  - id: g-survie-l1-c8
+    sentence: "__La **surpopulation** est dite relative parce qu'elle est en trop, non par rapport aux subsistances, mais par rapport aux besoins du__ ___."
+    answer: capital
+    alt: []
+  - id: g-survie-l1-c9
+    sentence: "__Les chômeurs, disponibles pour le capital et qui pèsent sur les salaires des autres__, forment l'**armée industrielle** de ___."
+    answer: réserve
+    alt: ["reserve"]
+  - id: g-survie-l1-d2
+    sentence: "__Contre **Malthus**, Marx soutient qu'il n'y a de loi de population abstraite que pour__ les plantes et les animaux : chez les hommes, chaque ___ de production a la sienne."
+    answer: mode
+    alt: []
+  - id: g-survie-l1-a9
+    sentence: "__Ce qui croît avec l'accumulation, selon Marx, ce n'est pas nécessairement la pauvreté des ouvriers__, mais la ___ de leur **survie**."
+    answer: précarité
+    alt: ["precarite", "incertitude"]
