@@ -21,9 +21,11 @@ import { Button } from '@/components/Button'
 /**
  * Sessions courtes : une étape de parcours reprend l'essentiel, la révision
  * espacée se charge du reste. Quinze cartes à l'origine, ramenées à dix
- * quand les étapes sont devenues plus rares (voir `layout`, unitPath.ts).
+ * quand les étapes sont devenues plus rares (voir `layout`, unitPath.ts),
+ * remontées à quinze le 2026-11-07 pour s'aligner sur la révision générale
+ * (`REVIEW_LIMIT`, ReviewRoute.tsx).
  */
-const STEP_LIMIT = 10
+const STEP_LIMIT = 15
 
 /**
  * Étape de parcours qui n'est pas une leçon : révision de l'unité,
