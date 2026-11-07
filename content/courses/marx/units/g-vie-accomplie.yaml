@@ -1,8 +1,122 @@
-# Entrée du glossaire de Marx (skill glossaire-marx), créée vide pour recevoir les
-# renvois des entrées déjà écrites ; à rédiger.
+# Entrée du glossaire de Marx (skill glossaire-marx) : notion. Citations reprises de
+# NotebookLM avec leur source et vérifiées par textes.py sur les éditions sociales
+# (L'Idéologie allemande, Manifeste, Grundrisse, Le Capital, livre I, Critique du
+# programme de Gotha) ; le premier passage de L'Idéologie allemande cité par Renault
+# (traduction de la Pléiade). Angle choisi pour ne pas redire Activité vitale (royaume
+# de la nécessité et de la liberté, réduction de la journée de travail), Besoin (l'homme
+# riche, le premier besoin vital, le temps disponible) et Métabolisme : ce qui mutile
+# une vie et ce qui l'accomplit, la division du travail, la manifestation de soi, le
+# travail comme réalisation de soi, l'individu complet.
 
 id: g-vie-accomplie
 title: Vie accomplie
 icon: book
 color: coral
-lessons: []
+lessons:
+- id: g-vie-accomplie-l1
+  title: Vie accomplie
+  notes: |-
+    Chez Marx, une {violet}**vie accomplie**{/violet} est [def]. Il n'a pas de mot unique pour la dire : la {violet}manifestation de soi{/violet} (*Selbstbetätigung*) en 1845-1846, le {violet}libre développement{/violet} des individus en 1848, l'{violet}individu complet{/violet} (*vollständig entwickeltes Individuum*) dans *Le Capital*. Concrètement, c'est une vie où {amber}ce qu'on fait pour vivre est aussi ce par quoi on se réalise{/amber}, et qui n'est pas enfermée dans une seule fonction. Ce n'est {pink}ni un idéal moral ni une vie de loisirs{/pink}. Plusieurs thèses voisines sont établies ailleurs : que la liberté commence au-delà du travail nécessaire, et que sa condition soit la réduction de la journée de travail ([[g-activite-vitale|activité vitale]]) ; que l'homme riche soit celui qui a besoin d'une totalité de manifestation vitale, et que le travail doive devenir le premier besoin vital ([[g-besoin|besoin]]). Ici, la question est ce qui mutile une vie, et à quelles conditions elle s'accomplit.
+
+    __**La**__ {red}__**division du travail**__{/red} __**mutile la vie en enfermant chacun dans un cercle d'activités exclusif.**__ Dès que le travail est réparti, chacun ne vit que de sa fonction, et ne peut donc pas en sortir : {teal}« {/teal}du moment où le travail commence à être réparti, {teal}__chacun entre dans un cercle d'activités déterminé et exclusif qui lui est imposé et dont il ne peut s'évader__{/teal} ; il est chasseur, pêcheur, berger ou critique, et il doit le rester sous peine de perdre les moyens qui lui permettent de vivre{teal} »{/teal} (*L'Idéologie allemande*, I, cité par {sky}Renault{/sky}). D'où la formule célèbre de la société communiste, où il serait possible {teal}« {/teal}de faire aujourd'hui telle chose, demain telle autre, {teal}__de chasser le matin, de pêcher l'après-midi__{/teal}{teal} »{/teal} (*ibid*.), sans devenir pour autant chasseur ou pêcheur de métier. Ce n'est pas un programme champêtre : la phrase dit seulement qu'une activité n'a pas à devenir une identité. La manufacture, puis la machine, poussent la mutilation jusqu'au corps : la division manufacturière {teal}« {/teal}{teal}__fait du travailleur un infirme et une monstruosité__{/teal} en cultivant, comme dans une serre, son savoir-faire de détail, tout en étouffant un monde de pulsions et de talents productifs{teal} »{/teal} (*Le Capital*, livre I, chap. XII), et, sous le capital, les moyens qui visent à développer la production {teal}« {/teal}mutilent le travailleur {teal}__jusqu'à en faire un homme partiel__{/teal}, le dégradent au rang d'accessoire annexe de la machine{teal} »{/teal} (*ibid*., chap. XXIII). {red}L'homme partiel est un homme dont la plupart des facultés ne servent jamais.{/red}
+
+    __**Une vie accomplie est celle où la**__ {violet}__**manifestation de soi**__{/violet} __**coïncide avec la vie matérielle.**__ La {violet}manifestation de soi{/violet} est l'activité par laquelle un individu exerce et développe ses propres facultés. Or, sous la division du travail, ce qu'il fait pour vivre ne les développe pas : c'est un moyen de gagner sa vie, et la vie commence ailleurs (voir activité vitale). Les deux sont séparées, parce que les {violet}forces productives{/violet}, outils, machines, savoirs, travail combiné de tous, n'appartiennent pas à ceux qui travaillent : elles leur font face comme une puissance qu'ils servent, et dont chacun n'exerce qu'une parcelle. Or ces forces forment une totalité, et chacune appelle une faculté pour être mise en œuvre. Donc se les approprier, c'est développer ces facultés : {teal}« {/teal}{teal}__l'appropriation d'une totalité d'instruments de production est déjà le développement d'une totalité de facultés dans les individus eux-mêmes__ »{/teal} (*L'Idéologie allemande*, I). Et comme ces forces sont sociales, seuls les individus unis peuvent se les approprier. Quand ils le font, {teal}« {/teal}c'est seulement à ce stade que {teal}__la manifestation de soi coïncide avec la vie matérielle__{/teal}, ce qui correspond à la transformation des individus en {teal}__individus complets__ »{/teal} (*ibid*.), et à {teal}« {/teal}la transformation du travail en manifestation de soi{teal} »{/teal} (*ibid*.). {coral}Une vie accomplie n'est pas une vie qui s'évade du travail, mais une vie dont le travail même est l'exercice de soi.{/coral}
+
+    __**Le travail accompli est**__ {violet}__**réalisation de soi**__{/violet}__**, ni sacrifice ni jeu.**__ Deux adversaires se trompent en sens contraires. Pour {sky}Adam Smith{/sky}, le travail est une peine, un sacrifice de son repos, et la liberté consiste à ne pas travailler. Marx répond que la liberté peut être dans l'effort même, à une condition : que les buts ne soient plus imposés du dehors. Surmonter des obstacles est une activité de la liberté quand les buts extérieurs perdent {teal}« {/teal}l'apparence d'une nécessité naturelle simplement extérieure{teal} »{/teal} et {teal}« {/teal}{teal}__sont posés comme des buts que l'individu lui-même fixe__{/teal}{teal} »{/teal} ; le travail est alors {teal}« {/teal}{teal}__l'autoeffectuation, l'objectivation du sujet, et, par là même, la liberté réelle__ »{/teal} (*Grundrisse*, chapitre du capital). Le salarié fait des efforts aussi, mais pour des buts qui ne sont pas les siens ; l'effort libre est celui par lequel on fait passer dans un objet un but qu'on s'est donné. Pour {sky}Fourier{/sky}, au contraire, le travail libéré deviendrait un jeu, une « attraction passionnelle ». Marx répond que la liberté n'ôte pas la difficulté : ce travail ne sera pas {teal}« {/teal}pur plaisir, pur amusement comme le pense Fourier [...] Des travaux effectivement libres, la composition d'une œuvre musicale par exemple, requièrent justement à la fois {teal}__un sacré sérieux et l'effort le plus intense__ »{/teal} (*ibid*.). Pour que le travail de production matérielle devienne ainsi libre, deux conditions sont requises : {teal}« {/teal}1) {teal}__si son caractère social est posé__{/teal}, 2) s'il revêt un caractère scientifique tout en étant un travail d'ordre général, c'est-à-dire s'il est l'effort de l'homme {teal}__non en tant que force de la nature dressée__{/teal} d'une façon déterminée, mais en tant que sujet [...] {teal}__comme activité qui règle toutes les forces de la nature__ »{/teal} (*ibid*.). Social, parce qu'un travail fait pour un salaire a ses buts chez un autre ; scientifique, parce que le travailleur doit diriger des processus qu'il comprend, et non être lui-même une force dressée comme un animal de trait. {amber}Le travail accompli garde l'effort, mais l'effort devient le sien.{/amber} Le livre III du *Capital* nuance pourtant : la production matérielle restant soumise à la nécessité, le royaume de la liberté se situe « au-delà de la sphère de production matérielle proprement dite » (cité par {sky}Ducange{/sky}) ; la vie accomplie a donc deux lieux, le travail transformé et le temps libéré (voir activité vitale).
+
+    __**L'**__{violet}__**individu complet**__{/violet} __**n'est pas un idéal : la grande industrie le rend nécessaire, et il ne se développe qu'avec tous.**__ Marx ne dessine pas une société idéale : {teal}« {/teal}le communisme n'est pour nous ni un état qui doit être créé, ni un idéal sur lequel la réalité devra se régler. Nous appelons communisme {teal}__le mouvement réel qui abolit l'état actuel__ »{/teal} (*L'Idéologie allemande*, I). Or ce mouvement est déjà à l'œuvre dans la grande industrie. Comme elle change sans cesse sa base technique, elle {teal}« {/teal}précipite sans arrêt d'une branche de production dans l'autre des masses de capital et d'ouvriers{teal} »{/teal} (*Le Capital*, livre I, chap. XIII) : l'ouvrier fixé à un seul geste devient un obstacle. Elle fait donc du remplacement {teal}« {/teal}de l'individu partiel, simple support d'une fonction sociale de détail, {teal}__par un individu totalement développé__{/teal}, pour qui diverses fonctions sociales sont autant de modes d'activité qui prennent le relais les uns des autres{teal} »{/teal} une {teal}« {/teal}{teal}__question de vie ou de mort__ »{/teal} (*ibid*.). Mais le capital se contredit : il rend nécessaire le travailleur polyvalent, et continue de le mutiler. Sous lui, cette mobilité est subie, comme l'insécurité d'ouvriers tenus en réserve et jetés d'un emploi à l'autre ; elle ne devient accomplissement que lorsque les individus maîtrisent eux-mêmes le passage d'une activité à l'autre. Les écoles techniques en sont le germe, annonçant une éducation {teal}« {/teal}{teal}__pour produire des hommes dont toutes les dimensions soient développées__ »{/teal} (*ibid*.), mais ce germe ne se développe, selon Marx, qu'avec la conquête du pouvoir politique par la classe ouvrière. Enfin, cet individu ne se développe pas contre les autres, pour la raison vue plus haut : ses facultés répondent à des forces productives sociales, que seuls les individus unis peuvent s'approprier. La société à venir revêtira donc {teal}« {/teal}la forme d'une association dans laquelle {teal}__le libre développement de chacun est la condition du libre développement de tous__ »{/teal} (*Manifeste du Parti communiste*, II). {green}L'accomplissement de chacun passe par celui de tous{/green} (voir [[g-communaute|communauté]]). Et il ne passe pas par l'égalité uniforme : un droit égal applique une même mesure à des individus inégaux par leurs facultés et leurs besoins, si bien que la société accomplie devra dépasser {teal}« {/teal}l'horizon borné du droit bourgeois{teal} »{/teal} et écrire sur ses drapeaux : {teal}« {/teal}{teal}__de chacun selon ses capacités, à chacun selon ses besoins__ »{/teal} (*Critique du programme de Gotha*, I).
+
+    ! « Chasser le matin, pêcher l'après-midi » n'est ni un programme ni une vie de loisirs : c'est la critique de l'enfermement de chacun dans une seule fonction.
+
+    ! L'individu complet n'est pas un génie universel : c'est celui pour qui diverses fonctions sociales sont des modes d'activité qui se relaient, et qui maîtrise le passage de l'une à l'autre.
+
+    ! La vie accomplie n'est ni un idéal moral ni l'individualisme libéral : c'est une tendance du mouvement réel, et elle passe par le développement de tous.
+
+    __**Passages clefs.**__
+
+    | Passage | Ce qu'il établit |
+    | *L'Idéologie allemande*, I | le cercle d'activités exclusif ; la manifestation de soi qui coïncide avec la vie matérielle ; le communisme, mouvement réel |
+    | *Manifeste du Parti communiste*, II | le libre développement de chacun, condition de celui de tous |
+    | *Grundrisse*, chapitre du capital | le travail, autoeffectuation et liberté réelle, contre Smith et Fourier |
+    | *Le Capital*, livre I, chap. XII et XIII | l'ouvrier infirme de la manufacture ; l'individu totalement développé, question de vie ou de mort |
+    | *Critique du programme de Gotha*, I | de chacun selon ses capacités, à chacun selon ses besoins |
+
+    **Voir aussi** : [[g-activite-vitale|Activité vitale]] · [[g-besoin|Besoin]] · [[g-expression-de-la-vie|Expression de la vie]] · [[g-homme-total|Homme total]] · [[g-communaute|Communauté]] · [[g-abolition-du-travail|Abolition du travail]]
+  tables:
+  - table: passage-ce-qu-il-etablit
+    exercises:
+    - {kind: bank, column: Ce qu'il établit}
+    - {kind: cell, column: Passage}
+  points:
+  - id: g-vie-accomplie-l1-q1
+    sentence: "__L'activité par laquelle un individu exerce et développe ses propres facultés__, Marx l'appelle en 1845 la **manifestation de soi**, en allemand ___."
+    answer: Selbstbetätigung
+    alt: ["Selbstbetatigung", "selbstbetätigung"]
+  - id: g-vie-accomplie-l1-a1
+    sentence: "__Pourquoi chacun ne peut-il sortir de son cercle d'activités ?__ Parce que, sous la **division du travail**, il ne vit que de sa ___."
+    answer: fonction
+    alt: ["profession", "spécialité"]
+  - id: g-vie-accomplie-l1-a2
+    sentence: "__« Chasser le matin, pêcher l'après-midi » n'est pas un programme champêtre__ : la phrase dit qu'une activité n'a pas à devenir une ___."
+    answer: identité
+    alt: ["identite"]
+  - id: g-vie-accomplie-l1-q4
+    sentence: "__Sous le capital, les moyens de développer la production__ « mutilent le **travailleur** jusqu'à en faire un homme ___, le dégradent au rang d'accessoire annexe de la machine » (Le Capital, livre I, chap. XXIII)."
+    answer: partiel
+    alt: []
+  - id: g-vie-accomplie-l1-b2
+    sentence: "__Pourquoi s'approprier les **forces productives** développe-t-il les individus ?__ Parce que « l'appropriation d'une totalité d'instruments de production est déjà le développement d'une totalité de ___ »."
+    answer: facultés
+    alt: ["facultes"]
+  - id: g-vie-accomplie-l1-a4
+    sentence: "__Pourquoi seuls des individus unis peuvent-ils s'approprier les **forces productives** ?__ Parce qu'elles sont le travail combiné de tous, donc des forces ___."
+    answer: sociales
+    alt: []
+  - id: g-vie-accomplie-l1-q5
+    sentence: "__Quand ils s'approprient ensemble les forces productives__, « la manifestation de soi coïncide avec la vie matérielle, ce qui correspond à la transformation des **individus** en individus ___ »."
+    answer: complets
+    alt: []
+  - id: g-vie-accomplie-l1-b3
+    sentence: "__Une **vie accomplie** n'est pas une vie qui s'évade du travail__, mais une vie dont le travail même est l'___ de soi."
+    answer: exercice
+    alt: []
+  - id: g-vie-accomplie-l1-a5
+    sentence: "Contre Smith : __surmonter des obstacles est une **activité de la liberté**__ quand les buts sont posés comme des buts que ___ lui-même fixe."
+    answer: l'individu
+    alt: ["individu"]
+  - id: g-vie-accomplie-l1-a6
+    sentence: "Contre Fourier, pour qui le **travail libéré** deviendrait un jeu : __les travaux effectivement libres requièrent__ « un sacré ___ et l'effort le plus intense » (Grundrisse)."
+    answer: sérieux
+    alt: ["serieux"]
+  - id: g-vie-accomplie-l1-a7
+    sentence: "__Un **travail scientifique**, selon les Grundrisse, est l'effort de l'homme__ non en tant que force de la nature ___, mais comme activité qui règle toutes les forces de la nature."
+    answer: dressée
+    alt: ["dressee"]
+  - id: g-vie-accomplie-l1-b4
+    sentence: "__La **vie accomplie** a deux lieux, selon le Capital, livre III__ : le temps libéré, et le ___ transformé."
+    answer: travail
+    alt: []
+  - id: g-vie-accomplie-l1-q6
+    sentence: "__Marx ne dessine pas une société idéale__ : « nous appelons **communisme** le mouvement ___ qui abolit l'état actuel » (L'Idéologie allemande)."
+    answer: réel
+    alt: ["reel"]
+  - id: g-vie-accomplie-l1-a8
+    sentence: "__Pourquoi la grande industrie rend-elle nécessaire l'**individu complet** ?__ Parce qu'elle change sans cesse sa base ___ et rejette les ouvriers d'une branche dans l'autre."
+    answer: technique
+    alt: []
+  - id: g-vie-accomplie-l1-a9
+    sentence: "__Ce qui distingue la polyvalence de l'**individu complet** de la mobilité subie sous le capital__ : la ___ du passage d'une activité à l'autre."
+    answer: maîtrise
+    alt: ["maitrise"]
+  - id: g-vie-accomplie-l1-b5
+    sentence: "__Le capital se contredit__ : il rend nécessaire le travailleur polyvalent, et continue de le ___."
+    answer: mutiler
+    alt: []
+  - id: g-vie-accomplie-l1-b6
+    sentence: "__La société accomplie ne vise pas l'égalité uniforme__, parce qu'un droit égal applique une même ___ à des individus inégaux."
+    answer: mesure
+    alt: []
+  - id: g-vie-accomplie-l1-c1
+    sentence: "__Première condition du **travail libre** selon les Grundrisse__ : que son caractère ___ soit posé, et non que ses buts soient fixés par celui qui paie le salaire."
+    answer: social
+    alt: []
