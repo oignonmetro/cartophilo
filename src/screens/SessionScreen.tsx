@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { Exercise, TreatiseGhostExercise } from '@/engine/exercises'
 import { isExplanationOnly, isNonLocating, isPresentation, itemIdsOf, retryIndex } from '@/engine/exercises'
-import { isCitation } from '@/content/course'
+import { isCitation, lessonsOf } from '@/content/course'
 import { ratingFromAnswer, type Rating } from '@/engine/srs'
 import { useCourse } from '@/content/CourseProvider'
 import { useProgress } from '@/store/progressStore'
@@ -236,7 +236,7 @@ function SessionRunner({
   combo,
   peakTier,
 }: SessionScreenProps & { haptics: SessionHaptics; combo: SessionCombo; peakTier: () => number }) {
-  const { course } = useCourse()
+  const { course, itemsById } = useCourse()
   const gradeItem = useProgress((state) => state.gradeItem)
   const gradeTreatises = useProgress((state) => state.gradeTreatises)
   const [queue, setQueue] = useState<Exercise[]>(() => {
@@ -318,6 +318,22 @@ function SessionRunner({
   }, [onSnapshot, queue, position, attempt, batchStart, current])
 
   const skipped = current !== undefined && skips(current)
+
+  // Hors leçon (révision, entraînement…), les exercices se mélangent : le titre
+  // de la leçon d'où vient celui-ci dit sur quoi l'on est interrogé.
+  const lessonTitles = useMemo(
+    () => new Map(lessonsOf(course).map(({ lesson, unit }) => [lesson.id, { lesson: lesson.title, unit: unit.title }])),
+    [course],
+  )
+  const origin = useMemo(() => {
+    if (kind === 'lesson' || !current) return null
+    for (const itemId of itemIdsOf(current)) {
+      const located = itemsById.get(itemId)
+      const titles = located && lessonTitles.get(located.lessonId)
+      if (titles) return titles
+    }
+    return null
+  }, [kind, current, itemsById, lessonTitles])
   useEffect(() => {
     if (skipped) setPosition((index) => index + 1)
   }, [skipped, position])
@@ -574,6 +590,11 @@ function SessionRunner({
           plutôt que couper son bouton, même si l'intention reste que rien
           n'ait normalement besoin de défiler ici. */}
       <main className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 pb-6 md:pb-10">
+        {origin && (
+          <p className="mb-2 truncate text-xs font-bold text-ink-faint" title={`${origin.unit} · ${origin.lesson}`}>
+            {origin.unit !== origin.lesson ? `${origin.unit} · ${origin.lesson}` : origin.lesson}
+          </p>
+        )}
         <AnimatePresence mode="wait">
           <motion.div
             key={`${current.id}:${position}`}
