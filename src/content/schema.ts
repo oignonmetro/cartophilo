@@ -210,7 +210,10 @@ export interface TableExerciseChoice {
 export const grammarLessonSchema = z.object({
   ...lessonBase,
   kind: z.literal('grammar'),
-  points: z.array(grammarPointSchema).min(1),
+  // Une leçon de texte peut n'avoir encore que son paragraphe : ses
+  // cartes-citation se créent ensuite (voir `content/textes.md`). Toute autre
+  // leçon en veut au moins une (voir le `refine` plus bas).
+  points: z.array(grammarPointSchema),
   passage: passageSchema.optional(),
   /** Les exercices choisis pour certains tableaux du rappel (voir `lessonTableSchema`). */
   tables: z.array(lessonTableSchema).optional(),
@@ -220,6 +223,9 @@ export const grammarLessonSchema = z.object({
    * le compilateur l'ajoute en dérivant les leçons de l'arbre de l'œuvre.
    */
   work: z.string().optional(),
+}).refine((lesson) => lesson.points.length > 0 || lesson.passage !== undefined, {
+  path: ['points'],
+  message: 'Too small: expected array to have >=1 items',
 })
 
 export const conjugationLessonSchema = z.object({
