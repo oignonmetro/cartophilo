@@ -414,6 +414,33 @@ def cmd_derive(entree, source, demande, theses):
     print(f"Journal de {entree} dérivé de {source} ({len(theses)} thèse(s)).")
 
 
+def cmd_deplace(source, cible, these):
+    """Une étape passe d'une entrée à une autre (répartition) : sa thèse quitte le plan de la
+    source et rejoint celui de la cible, avec la réponse de phase D qui la démontre."""
+    import shutil
+    js, jc = charge(source), charge(cible)
+    rang = [k for k, t in enumerate(js["plan"], 1) if norm(t) == norm(these)]
+    if not rang:
+        sys.exit(f"Thèse absente du plan de {source} : {these}")
+    k = rang[0]
+    q = next(x for x in js["questions"] if x["id"] == f"D-these{k}")
+    copie = json.loads(json.dumps(q))
+    copie["id"] = f"D-{source}-{k}"
+    copie["these"] = js["plan"][k - 1]
+    if q["reponse"]:
+        copie["reponse"] = f"{source}-{os.path.basename(q['reponse'])}"
+        shutil.copy(chemin(source, q["reponse"]), chemin(cible, copie["reponse"]))
+    jc["questions"].append(copie)
+    jc["plan"].append(js["plan"][k - 1])
+    jc.setdefault("deplacees", []).append({"de": source, "these": js["plan"][k - 1]})
+    # La question reste au journal de la source (les rangs D-theseN ne bougent pas), pas la thèse.
+    js["plan"].pop(k - 1)
+    js.setdefault("cedees", []).append({"vers": cible, "these": copie["these"]})
+    garde(source, js)
+    garde(cible, jc)
+    print(f"« {copie['these']} » : de {source} à {cible}.")
+
+
 def cmd_signale(entree, point):
     """Un point obscur signalé par l'utilisateur : relance auprès de NotebookLM, et critique gardée."""
     j = charge(entree)
@@ -533,6 +560,8 @@ def main(a):
         cmd_relance(a[0], a[1])
     elif c == "derive":
         cmd_derive(a[0], a[1], a[2], a[3:])
+    elif c == "deplace":
+        cmd_deplace(a[0], a[1], a[2])
     elif c == "signale":
         cmd_signale(a[0], a[1])
     elif c == "plan":
