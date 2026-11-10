@@ -1,0 +1,479 @@
+# Cours sur la philosophie sociale et politique de Marx, tiré de l'article
+# « Karl Marx » de David Leopold, SEP (révision 2025) : sections 5 (idéologie),
+# 6 (l'État) et 7 (utopisme). La section 8 (postérité) ne donne pas de leçon.
+#
+# Citations de Marx en français : L'Idéologie allemande (Écrits philosophiques,
+# Sève, pour la camera obscura ; Éditions sociales pour les pensées dominantes,
+# lues sur un OCR fautif et rétablies) ; Le Capital, livre III, cité par Sève
+# (Écrits philosophiques, introduction) ; Manifeste et Critique du programme de
+# Gotha, Éditions sociales ; postface du Capital, livre I, Éditions sociales.
+#
+# Provisoire : les deux formules du 18 Brumaire (« pour sauver sa bourse… »,
+# « se débarrasser de sa propre domination politique… ») sont données en
+# paraphrase, sans guillemets : le texte français n'est pas dans les PDF.
+# La citation d'Elster (autonomie explicative) est traduite de l'anglais.
+
+id: sep-marx4
+title: "Idéologie, État, utopie"
+subtitle: "Pourquoi les dominés consentent, ce que devient l'État, et pourquoi ne pas dessiner l'avenir"
+icon: people
+color: violet
+group: "Karl Marx (SEP)"
+lessons:
+- id: sep-marx4-l1
+  title: "Une théorie critique de l'idéologie"
+  notes: |-
+    **On tient la théorie de l'**{violet}**idéologie**{/violet} **pour l'idée la plus féconde de Marx ; elle est pourtant à peine écrite, et en plusieurs sens.** {sky}Elster{/sky} la compte parmi ses idées les « plus influentes », {sky}Leiter{/sky} y voit la part « la plus fertile » de sa théorie sociale ; {sky}Paul Ricœur{/sky} range Marx, avec {sky}Nietzsche{/sky} et {sky}Freud{/sky}, parmi les {violet}« maîtres du soupçon »{/violet}, qui mettent en doute la transparence de ce que nous croyons savoir de nous-mêmes et du monde social.
+
+    **Peu de textes, et obscurs.** Il y a des formules célèbres, surtout dans *L'Idéologie allemande*, où l'idéologie renverse le rapport des individus et de leurs conditions, comme une {yellow}chambre noire{/yellow} : {teal}« {/teal}Si, dans l'idéologie tout entière, les hommes et leurs rapports apparaissent {teal}__tête en bas comme dans une Camera obscura__{/teal}, ce phénomène résulte tout autant {teal}__du procès historique de leur vie__{/teal} que le renversement des objets sur la rétine d'un procès directement physique{teal} »{/teal}. L'image : la {yellow}camera obscura{/yellow} projette sur un écran une image inversée mais fidèle à la perspective. Elle dit que l'idéologie {coral}inverse sans inventer{/coral}, et que cette inversion a une cause matérielle, comme l'image renversée sur la rétine. Mais elle a plus fasciné qu'éclairé : {red}il n'y a pas chez Marx d'exposé suivi de l'idéologie{/red}.
+
+    **Trois façons de penser l'idéologie** ({sky}Raymond Geuss{/sky}) :
+    - {amber}descriptive{/amber} : l'étude, d'allure anthropologique, des croyances et des rites d'un groupe ;
+    - {amber}positive{/amber} : une {violet}vision du monde{/violet} qui donne aux membres d'un groupe sens et identité ;
+    - {amber}critique{/amber} : un effort pour libérer les individus de formes de compréhension fausses ou trompeuses.
+
+    **C'est la troisième, critique, qui compte dans la théorie de Marx.** Elle a deux formes : une forme étroite, dans *L'Idéologie allemande*, contre l'{red}« idéalisme sociologique »{/red} des Jeunes-Hégéliens ; et une forme large, retenue ici, qui critique {green}les erreurs largement partagées qui servent les intérêts des classes dominantes{/green}. Elle relève de la {violet}sociologie{/violet} de Marx, plutôt que de son anthropologie philosophique ou de sa théorie de l'histoire.
+  points:
+  - id: sep-marx4-l1-p1
+    sentence: "Paul Ricœur range Marx, avec Nietzsche et Freud, parmi les **« maîtres du ___ »**, qui mettent en doute la transparence de ce que nous croyons savoir."
+    answer: "soupçon"
+    alt: []
+  - id: sep-marx4-l1-p2
+    sentence: "Marx est l'un des trois **« maîtres du soupçon »** de Ricœur, avec Nietzsche et ___."
+    answer: "Freud"
+    alt: []
+  - id: sep-marx4-l1-p3
+    sentence: "*L'Idéologie allemande* : « Si, dans l'idéologie tout entière, les hommes et leurs rapports apparaissent tête en bas comme dans une Camera ___ »."
+    answer: "obscura"
+    alt: []
+  - id: sep-marx4-l1-p4
+    sentence: "*L'Idéologie allemande* : si les hommes et leurs rapports apparaissent tête en bas dans l'idéologie, « ce phénomène résulte tout autant du procès ___ de leur vie que le renversement des objets sur la rétine d'un procès directement physique »."
+    answer: "historique"
+    alt: []
+  - id: sep-marx4-l1-p5
+    sentence: "__L'image de la *camera obscura* dit que l'idéologie__ ___ sans inventer, et que ce renversement a une cause matérielle."
+    answer: "inverse"
+    alt: ["renverse"]
+  - id: sep-marx4-l1-p6
+    sentence: "__Des trois façons de penser l'idéologie distinguées par Geuss__, celle qui compte chez Marx est la façon ___, qui veut libérer les individus d'erreurs."
+    answer: "critique"
+    alt: []
+  - id: sep-marx4-l1-p7
+    sentence: "__Au sens positif, l'idéologie est__ une vision du ___ qui donne aux membres d'un groupe sens et identité."
+    answer: "monde"
+    alt: []
+  - id: sep-marx4-l1-p8
+    sentence: "Raymond ___ distingue **trois façons de penser l'idéologie** : descriptive, positive et critique."
+    answer: "Geuss"
+    alt: []
+  - id: sep-marx4-l1-p9
+    sentence: "__Au sens large, l'idéologie critiquée par Marx__ est faite d'erreurs largement partagées qui servent les intérêts des classes ___."
+    answer: "dominantes"
+    alt: []
+  - id: sep-marx4-l1-p10
+    sentence: "__La *camera obscura* projette sur un écran une image__ ___, mais fidèle à la perspective."
+    answer: "inversée"
+    alt: []
+  - id: sep-marx4-l1-p11
+    sentence: "__Au sens étroit, dans *L'Idéologie allemande*, l'idéologie critique__ l'« idéalisme ___ » des Jeunes-Hégéliens."
+    answer: "sociologique"
+    alt: []
+  - id: sep-marx4-l1-p12
+    sentence: "__La théorie de l'idéologie relève de la__ ___ de Marx, plutôt que de son anthropologie ou de sa théorie de l'histoire."
+    answer: "sociologie"
+    alt: []
+  - id: sep-marx4-l1-p13
+    sentence: "__Au sens descriptif, l'idéologie est__ l'étude, d'allure ___, des croyances et des rites d'un groupe."
+    answer: "anthropologique"
+    alt: []
+- id: sep-marx4-l2
+  title: "Pourquoi les dominés consentent"
+  notes: |-
+    **L'idéologie explique une énigme des sociétés de classes : leur** {violet}**stabilité**{/violet}**.** Ces sociétés frustrent l'épanouissement humain et servent une minorité ; pourquoi la majorité dominée les tolère-t-elle, alors que la révolte servirait ses intérêts objectifs ? L'idéologie n'appartient pas à toute société : {amber}à toutes les sociétés de classes{/amber}, {red}non au communisme{/red}.
+
+    **Des sources de stabilité répressives, et non répressives.** Il y a la {red}répression{/red}, ou sa menace ; mais pas seulement. Parmi les sources {violet}non répressives{/violet}, l'idéologie : {coral}les idées sociales dominantes sont fausses ou trompeuses d'une façon qui sert la classe économiquement dominante{/coral}. Elle n'est qu'une part de l'explication : la {yellow}« sourde pression »{/yellow} économique de la vie à gagner, les doutes sur les alternatives, la crainte des coûts du changement, les problèmes d'action collective. Et {green}on n'est pas prisonnier de l'idéologie{/green} : elle cède aux raisons et aux faits, surtout quand les conditions du changement sont réunies.
+
+    **Des croyances sociales, et dominantes.** Elles sont si partagées qu'elles deviennent les idées « dominantes » : {teal}« {/teal}Les pensées de {teal}__la classe dominante__{/teal} sont aussi, à toutes les époques, {teal}__les pensées dominantes__{/teal}, autrement dit la classe qui est la puissance matérielle dominante de la société est aussi la puissance dominante spirituelle{teal} »{/teal} (*L'Idéologie allemande*). Ce sont les vues juridiques, politiques, religieuses et philosophiques d'une époque.
+
+    **Trois traits de la croyance idéologique.**
+    - {amber}__un contenu faux ou trompeur__{/amber}. {red}Toute erreur n'est pas idéologique{/red} ({yellow}l'erreur scientifique honnête{/yellow}), et une croyance peut tromper sans être fausse : les défenseurs du capitalisme présentent la {violet}forme salaire{/violet}, échange d'équivalents, comme {red}toute l'histoire{/red} du rapport entre capital et travail, et taisent l'exploitation dans la production. Deux erreurs typiques : présenter {red}l'intérêt d'une classe{/red} comme {red}l'intérêt de tous{/red}, et ce qui est {red}historique ou artificiel{/red} comme {red}naturel ou nécessaire{/red} ;
+    - {amber}__une origine sociale__{/amber} : la société de classes a {amber}une surface trompeuse, réglée par des rapports essentiels cachés{/amber}. Le capitalisme l'est plus que tout : sous la féodalité, l'exploitation se voit ({yellow}la corvée{/yellow}), le salaire, lui, cache la part du travail nécessaire et du surtravail. D'où la tâche de la science : {teal}« {/teal}Toute science serait superflue s'il y avait {teal}__coïncidence immédiate entre l'essence des choses et leur forme phénoménale__ »{/teal} (*Le Capital*, livre III). Marx oppose ainsi l'{violet}économie politique classique{/violet}, qui cherche l'essence sous les apparences, à l'{violet}économie vulgaire{/violet}, qui s'en tient aux apparences ;
+    - {amber}__une fonction de classe__{/amber} : parmi toutes les idées qui naissent, celles qui « prennent » le font {red}non parce qu'elles sont vraies{/red}, mais {coral}parce qu'elles cachent ou justifient les défauts de la société au profit de la classe dominante{/coral}.
+
+    **L'objection d'**{sky}**Elster**{/sky}**, et deux mécanismes.** On y voit encore une explication fonctionnelle {red}sans mécanisme{/red} : pourquoi les idées dominantes seraient-elles celles de la classe dominante ? Marx en donne pourtant deux :
+    - la classe dominante {green}dispose des moyens de la production intellectuelle{/green} (aujourd'hui la presse et l'audiovisuel, possédés par les plus riches) ;
+    - les individus ont {green}besoin de récits qui légitiment leur position{/green}, ainsi de la consolation religieuse dans les sociétés malades (l'« opium du peuple »).
+  points:
+  - id: sep-marx4-l2-p1
+    sentence: "__La théorie de l'idéologie explique une énigme des sociétés de classes__ : leur ___, l'absence de conflit ouvert entre les classes."
+    answer: "stabilité"
+    alt: []
+  - id: sep-marx4-l2-p2
+    sentence: "__L'idéologie est, avec d'autres, une source de stabilité__ non ___ : elle ne contraint pas, elle trompe."
+    answer: "répressive"
+    alt: []
+  - id: sep-marx4-l2-p3
+    sentence: "__Pour Marx, l'idéologie n'appartient pas à toute société__ : elle disparaîtra avec la société sans classes, le ___."
+    answer: "communisme"
+    alt: []
+  - id: sep-marx4-l2-p4
+    sentence: "*L'Idéologie allemande* : « Les pensées de la classe ___ sont aussi, à toutes les époques, les pensées dominantes »."
+    answer: "dominante"
+    alt: []
+  - id: sep-marx4-l2-p5
+    sentence: "*L'Idéologie allemande* : la classe qui est la puissance ___ dominante de la société est aussi la puissance dominante spirituelle."
+    answer: "matérielle"
+    alt: []
+  - id: sep-marx4-l2-p6
+    sentence: "__Une croyance idéologique peut tromper sans être fausse__ : la forme ___, échange d'équivalents, est présentée comme toute l'histoire du rapport entre capital et travail."
+    answer: "salaire"
+    alt: []
+  - id: sep-marx4-l2-p7
+    sentence: "__Erreur typique de l'idéologie__ : présenter l'intérêt d'une ___ comme l'intérêt de toute la société."
+    answer: "classe"
+    alt: []
+  - id: sep-marx4-l2-p8
+    sentence: "__Erreur typique de l'idéologie__ : présenter ce qui est historique ou artificiel comme ___ ou nécessaire."
+    answer: "naturel"
+    alt: []
+  - id: sep-marx4-l2-p9
+    sentence: "__L'origine sociale de l'idéologie__ : une société de classes a une ___ trompeuse, réglée par des rapports essentiels cachés."
+    answer: "surface"
+    alt: ["apparence"]
+  - id: sep-marx4-l2-p10
+    sentence: "*Le Capital*, livre III : « Toute science serait ___ s'il y avait coïncidence immédiate entre l'essence des choses et leur forme phénoménale »."
+    answer: "superflue"
+    alt: []
+  - id: sep-marx4-l2-p11
+    sentence: "*Le Capital*, livre III : « Toute science serait superflue s'il y avait coïncidence immédiate entre l'___ des choses et leur forme phénoménale »."
+    answer: "essence"
+    alt: []
+  - id: sep-marx4-l2-p12
+    sentence: "Marx oppose l'économie politique classique, qui cherche l'essence sous les apparences, à l'**économie ___**, qui s'en tient aux apparences."
+    answer: "vulgaire"
+    alt: []
+  - id: sep-marx4-l2-p13
+    sentence: "__La fonction de classe de l'idéologie__ : les idées qui « prennent » le font non parce qu'elles sont ___, mais parce qu'elles servent la classe dominante."
+    answer: "vraies"
+    alt: []
+  - id: sep-marx4-l2-p14
+    sentence: "__Premier mécanisme qui fait des idées de la classe dominante les idées dominantes__ : elle dispose des moyens de la production ___."
+    answer: "intellectuelle"
+    alt: []
+  - id: sep-marx4-l2-p15
+    sentence: "__Second mécanisme qui fait des idées de la classe dominante les idées dominantes__ : le besoin de ___ qui légitiment sa position, comme la consolation religieuse."
+    answer: "récits"
+    alt: []
+  - id: sep-marx4-l2-p16
+    sentence: "__Toute erreur n'est pas idéologique__ : l'erreur ___ honnête ne l'est pas."
+    answer: "scientifique"
+    alt: []
+  - id: sep-marx4-l2-p17
+    sentence: "__Parmi les sources non répressives de stabilité, outre l'idéologie__ : la « sourde ___ » économique de la vie à gagner."
+    answer: "pression"
+    alt: []
+- id: sep-marx4-l3
+  title: "L'État dans la société capitaliste"
+  notes: |-
+    **Marx n'a pas de théorie unifiée de l'État, mais trois modèles du rapport entre l'État et la classe dominante, que distingue** {sky}**Jon Elster**{/sky}**.** Ses remarques sont dispersées dans des écrits de circonstance ; Elster y met de l'ordre.
+
+    | Modèle | Ce qu'est l'État |
+    | instrumental | l'outil de la classe dominante |
+    | équilibre des classes | une puissance aux intérêts propres |
+    | abdication | laissé par la bourgeoisie, dans son intérêt |
+
+    **Le modèle** {violet}**instrumental**{/violet}**.** L'État est {amber}directement contrôlé{/amber} par la classe dominante, contre les autres classes. C'est celui du *Manifeste* : {teal}« {/teal}Le pouvoir étatique moderne n'est qu'{teal}__un comité chargé de gérer les affaires communes__{/teal} de la classe bourgeoise tout entière{teal} »{/teal}. Il peut agir contre tel capitaliste ou telle faction, pour l'intérêt à long terme de toute la bourgeoisie ; par quel mécanisme, Marx ne le dit pas.
+
+    **Le modèle de l'**{violet}**équilibre des classes**{/violet}**.** Quand capitalistes et ouvriers ont des forces {amber}presque égales{/amber}, l'État, surtout l'exécutif, s'émancipe des deux et joue de leur conflit pour {amber}ses propres intérêts{/amber}, ceux de la caste politique : en promettant à chaque classe de la protéger de l'autre, il gouverne en toute autonomie. Ainsi des absolutismes survivants après 1848, et du {yellow}bonapartisme{/yellow} de {sky}Napoléon III{/sky} après le coup d'État de décembre 1851. Les intérêts capitalistes ne sont plus que l'{amber}une des limites{/amber} de son action.
+
+    **Le modèle de l'**{violet}**abdication**{/violet}**.** La bourgeoisie {amber}se tient à l'écart du pouvoir politique{/amber}, parce que c'est {coral}son intérêt économique{/coral} : elle abdique un pouvoir qu'elle avait ({yellow}la France{/yellow}), ou s'abstient de le prendre ({yellow}l'Angleterre, l'Allemagne{/yellow}). Le *18 Brumaire* le dit en deux formules : {amber}pour sauver sa bourse, elle doit renoncer à sa couronne{/amber} ; elle cherche à {amber}se débarrasser de sa propre domination politique pour se débarrasser des soucis et des dangers du pouvoir{/amber}. Pourquoi ? Trois raisons possibles :
+    - la bourgeoisie sait que son {yellow}court-termisme{/yellow} lui serait fatal si elle tenait aussi le pouvoir politique ;
+    - gouverner lui coûte trop de temps et d'efforts, et les profits continuent sans cela ;
+    - l'abdication affaiblit ses adversaires : le prolétariat doit se battre {yellow}sur deux fronts{/yellow}, contre le capital et contre le gouvernement.
+
+    **Lequel est la vue réfléchie de Marx ? L'abdication.** Il abandonne l'{red}instrumental{/red} au début des années 1850 : il ne rend pas compte d'États durables qui ne sont pas dirigés par les capitalistes et servent pourtant leurs intérêts. L'{red}équilibre{/red} n'est pour lui qu'une {red}solution temporaire de circonstances exceptionnelles{/red}. Reste l'{green}abdication{/green}, qui garde le lien explicatif voulu : {coral}la vie politique s'explique par la structure économique{/coral}.
+
+    **Quel modèle laisse le plus d'**{violet}**autonomie**{/violet} **à l'État ?**
+    - en un sens faible, l'État est autonome s'il {amber}échappe au contrôle direct{/amber} de la classe dominante : c'est le cas dans l'équilibre et dans l'abdication ;
+    - en un sens fort, l'{violet}autonomie explicative{/violet} (Elster), il l'est quand {amber}ses structures et ses politiques ne s'expliquent pas par l'intérêt de la classe dominante{/amber} : seul l'équilibre la donne. Dans l'abdication, {coral}l'indépendance même de l'État s'explique par l'intérêt capitaliste{/coral}.
+  tables:
+  - table: modele-ce-qu-est-l-etat
+    exercises:
+    - {kind: bank, column: Modèle}
+    - {kind: cell, column: Modèle}
+  points:
+  - id: sep-marx4-l3-p1
+    sentence: "Jon ___ distingue chez Marx **trois modèles du rapport entre l'État et la classe dominante** : instrumental, équilibre des classes, abdication."
+    answer: "Elster"
+    alt: []
+  - id: sep-marx4-l3-p2
+    sentence: "*Manifeste* : « Le pouvoir étatique moderne n'est qu'un ___ chargé de gérer les affaires communes de la classe bourgeoise tout entière »."
+    answer: "comité"
+    alt: []
+  - id: sep-marx4-l3-p3
+    sentence: "*Manifeste* : « Le pouvoir étatique moderne n'est qu'un comité chargé de gérer les affaires ___ de la classe bourgeoise tout entière »."
+    answer: "communes"
+    alt: []
+  - id: sep-marx4-l3-p4
+    sentence: "__Quand capitalistes et ouvriers ont des forces presque égales__, l'État s'émancipe des deux : c'est le modèle de l'___ des classes."
+    answer: "équilibre"
+    alt: []
+  - id: sep-marx4-l3-p5
+    sentence: "__Le modèle de l'équilibre des classes vaut pour__ le ___ de Napoléon III, après le coup d'État de décembre 1851."
+    answer: "bonapartisme"
+    alt: []
+  - id: sep-marx4-l3-p6
+    sentence: "__Dans le modèle de l'abdication, la bourgeoisie se tient à l'écart du pouvoir politique__ parce que c'est son intérêt ___."
+    answer: "économique"
+    alt: []
+  - id: sep-marx4-l3-p7
+    sentence: "*Le 18 Brumaire*, modèle de l'abdication : pour sauver sa ___, la bourgeoisie doit renoncer à sa couronne."
+    answer: "bourse"
+    alt: []
+  - id: sep-marx4-l3-p8
+    sentence: "__Une raison de l'abdication bourgeoise__ : elle affaiblit le prolétariat, contraint de se battre sur deux ___, contre le capital et contre le gouvernement."
+    answer: "fronts"
+    alt: []
+  - id: sep-marx4-l3-p9
+    sentence: "__La vue réfléchie de Marx sur l'État capitaliste__ se rapproche du modèle de l'___."
+    answer: "abdication"
+    alt: []
+  - id: sep-marx4-l3-p10
+    sentence: "__Marx abandonne le modèle instrumental__ au début des années ___ : il ne rend pas compte d'États qui servent les capitalistes sans être dirigés par eux."
+    answer: "1850"
+    alt: []
+  - id: sep-marx4-l3-p11
+    sentence: "__Elster appelle__ autonomie ___ **celle d'un État dont les structures et les politiques ne s'expliquent pas par l'intérêt de la classe dominante**."
+    answer: "explicative"
+    alt: []
+  - id: sep-marx4-l3-p12
+    sentence: "__Seul le modèle de l'__ ___ des classes laisse à l'État une autonomie explicative."
+    answer: "équilibre"
+    alt: []
+  - id: sep-marx4-l3-p13
+    sentence: "__Une raison de l'abdication bourgeoise__ : son ___, qui lui serait fatal si elle tenait aussi le pouvoir politique."
+    answer: "court-termisme"
+    alt: []
+  - id: sep-marx4-l3-p14
+    sentence: "__Le modèle de l'équilibre des classes n'est pour Marx__ qu'une solution ___ de circonstances exceptionnelles."
+    answer: "temporaire"
+    alt: []
+- id: sep-marx4-l4
+  title: "L'État dans la société communiste"
+  notes: |-
+    **Marx dit peu de la société future, mais la** {sky}**Commune de Paris**{/sky} **(1871) lui en montre la forme politique : une démocratie sans professionnels, réduite aux tâches nécessaires.**
+
+    **À ne pas confondre : la** {violet}**dictature du prolétariat**{/violet}**.** Marx emploie rarement l'expression, devenue tristement célèbre. {red}« Dictature » n'y a pas le sens moderne de totalitarisme{/red}, mais {green}le sens antique de gouvernement d'urgence{/green}. Ce gouvernement doit être {amber}démocratique{/amber} (soutenu par la majorité, respectant les libertés d'expression et d'association), mais il est {amber}extra-légal{/amber}, puisqu'il fonde un régime nouveau au lieu d'en préserver un ancien. Il appartient à la {amber}transition{/amber} vers le communisme, non au communisme lui-même : son caractère « dictatorial », c'est-à-dire temporaire et extra-légal, cesse avec l'établissement d'un régime stable.
+
+    **La forme : participation et** {violet}**déprofessionnalisation**{/violet}**.**
+    - une forte {amber}participation{/amber} : élections régulières, suffrage universel, {yellow}mandat impératif{/yellow}, révocabilité, publicité de l'exécutif, décentralisation ;
+    - des fonctions publiques (législatives, exécutives, judiciaires) qui ne sont plus {red}le butin d'une caste politique{/red}, mais {green}des postes de travail{/green}, payés {amber}au salaire moyen de l'ouvrier{/amber}, et tournants par l'élection.
+
+    {sky}Richard Hunt{/sky} l'appelle une {violet}« démocratie sans professionnels »{/violet}. Marx y voit son idée de la liberté : {teal}« {/teal}La liberté consiste à transformer l'État, {teal}__organisme qui est mis au-dessus de la société__{/teal}, en {teal}__un organisme entièrement subordonné à elle__ »{/teal} (*Critique du programme de Gotha*, IV). On y reconnaît une influence {violet}républicaine{/violet} sur Marx ({sky}Leipold{/sky}).
+
+    **La fonction : seulement les tâches nécessaires.** Marx distingue :
+    - les tâches {green}nécessaires{/green} à toute société développée : résoudre démocratiquement les {yellow}problèmes de coordination{/yellow} (de quel côté de la route rouler) et fournir les {yellow}biens publics{/yellow} (santé, protection sociale, éducation) ;
+    - les tâches {red}inutiles{/red} hors des sociétés de classes : la {red}coercition organisée{/red} (armées permanentes, police), que le communisme pourrait réduire, voire supprimer, dans sa phase supérieure, et une fois disparue la menace des sociétés non communistes.
+
+    **Une coercition réduite suppose-t-elle l'unanimité ?** On objecte qu'il faudrait un consensus {red}improbable{/red} et {red}indésirable{/red}, le désaccord ayant sa valeur. Pas nécessairement : une communauté démocratique interdit de {yellow}fumer dans les lieux publics{/yellow} ; {yellow}Anne{/yellow}, fumeuse, a voté contre, mais obéit, {coral}non par peur de la police, mais par respect pour la majorité de la communauté dont elle fait partie{/coral}. Des engagements démocratiques assez forts permettent de réduire la coercition sans supposer l'accord de tous sur tout.
+  points:
+  - id: sep-marx4-l4-p1
+    sentence: "__La forme politique du communisme se devine chez Marx à travers__ la ___ de Paris (1871)."
+    answer: "Commune"
+    alt: []
+  - id: sep-marx4-l4-p2
+    sentence: "__Dans la « dictature du prolétariat », « dictature » a le sens__ ___ de gouvernement d'urgence, non le sens moderne de totalitarisme."
+    answer: "antique"
+    alt: ["ancien"]
+  - id: sep-marx4-l4-p3
+    sentence: "__La dictature du prolétariat est démocratique, mais__ ___, puisqu'elle fonde un régime nouveau au lieu d'en préserver un ancien."
+    answer: "extra-légale"
+    alt: ["extralégale"]
+  - id: sep-marx4-l4-p4
+    sentence: "__La dictature du prolétariat appartient__ à la ___ vers le communisme, non à la société communiste elle-même."
+    answer: "transition"
+    alt: []
+  - id: sep-marx4-l4-p5
+    sentence: "__Les fonctions publiques de la Commune, selon Marx__, sont payées au salaire ___ de l'ouvrier et tournent par l'élection."
+    answer: "moyen"
+    alt: []
+  - id: sep-marx4-l4-p6
+    sentence: "Richard Hunt appelle **la forme politique que Marx tire de la Commune** une « démocratie sans ___ »."
+    answer: "professionnels"
+    alt: []
+  - id: sep-marx4-l4-p7
+    sentence: "*Critique du programme de Gotha* : « La liberté consiste à transformer l'État, organisme qui est mis au-___ de la société, en un organisme entièrement subordonné à elle »."
+    answer: "dessus"
+    alt: []
+  - id: sep-marx4-l4-p8
+    sentence: "*Critique du programme de Gotha* : « La liberté consiste à transformer l'État, organisme qui est mis au-dessus de la société, en un organisme entièrement ___ à elle »."
+    answer: "subordonné"
+    alt: []
+  - id: sep-marx4-l4-p9
+    sentence: "__La participation et la déprofessionnalisation des fonctions publiques__ marquent une influence ___ sur Marx."
+    answer: "républicaine"
+    alt: []
+  - id: sep-marx4-l4-p10
+    sentence: "__Parmi les tâches nécessaires de l'État communiste__ : fournir les biens ___ (santé, protection sociale, éducation)."
+    answer: "publics"
+    alt: []
+  - id: sep-marx4-l4-p11
+    sentence: "__Tâche inutile hors des sociétés de classes, que le communisme pourrait supprimer__ : la ___ organisée, armées permanentes et police."
+    answer: "coercition"
+    alt: []
+  - id: sep-marx4-l4-p12
+    sentence: "Anne, fumeuse mise en minorité, **obéit à l'interdiction de fumer non par peur de la police**, mais par respect pour la ___ de sa communauté."
+    answer: "majorité"
+    alt: []
+  - id: sep-marx4-l4-p13
+    sentence: "__Parmi les arrangements de la Commune que Marx approuve__ : le mandat ___, la révocabilité, la décentralisation."
+    answer: "impératif"
+    alt: []
+  - id: sep-marx4-l4-p14
+    sentence: "__Dans la Commune, les fonctions publiques ne sont plus__ le butin d'une ___ politique, mais des postes de travail."
+    answer: "caste"
+    alt: []
+  - id: sep-marx4-l4-p15
+    sentence: "__Tâche nécessaire de l'État communiste__ : résoudre démocratiquement les problèmes de ___, comme le côté de la route où rouler."
+    answer: "coordination"
+    alt: []
+- id: sep-marx4-l5
+  title: "Marx et les socialistes utopiques"
+  notes: |-
+    **Marx refuse délibérément de décrire la société communiste : il ne veut pas écrire de** {yellow}**« recettes »**{/yellow} **pour l'avenir.** Ce n'est pas un oubli, mais un principe, dit d'une image dans la postface à la deuxième édition du *Capital* : on lui reproche de s'être {teal}« {/teal}borné à {teal}__un simple démontage critique du donné__{/teal}, au lieu de formuler {teal}__des recettes (comtistes ?) pour les gargotes de l'avenir__ »{/teal}. {yellow}La gargote{/yellow} dit le mépris : on ne rédige pas le menu d'un restaurant qui n'existe pas.
+
+    **Ce refus se comprend par sa critique du** {violet}**socialisme utopique**{/violet}**,** dont les trois fondateurs sont {sky}Charles Fourier{/sky}, {sky}Henri Saint-Simon{/sky} et {sky}Robert Owen{/sky}. Ce qui fait l'utopiste : {green}tenir pour légitime et nécessaire de fournir des{/green} {violet}plans{/violet} {green}détaillés de la société socialiste future{/green}, pour guider et motiver ceux qui veulent la faire. Pour lui, {amber}l'avenir doit être dessiné avant d'être réalisé{/amber}.
+
+    ! Tout socialiste non marxien n'est pas utopique : le *Manifeste* critique aussi les « socialistes féodaux ».
+
+    **Éloge et blâme : une structure cohérente sous une apparente contradiction.** Marx loue et blâme les utopistes, mais pas les mêmes choses. Deux distinctions :
+    - {amber}chronologique{/amber} : les trois fondateurs, contre la deuxième génération et les suivantes (disciples fidèles, ou indépendants comme {sky}Étienne Cabet{/sky}) ;
+    - {amber}de contenu{/amber} : la part {green}critique{/green} des écrits utopiques (les défauts de la société capitaliste), contre leur part {red}constructive{/red} (la description de l'avenir).
+
+    Marx préfère {green}la première génération{/green} aux suivantes, et {green}la critique{/green} à {red}la construction{/red}.
+
+    **Pourquoi épargner les fondateurs ? Une question de** {violet}**culpabilité**{/violet}**, non d'erreurs.** Toutes les générations ont, pour Marx, les mêmes idées et les mêmes torts. Mais les fondateurs se sont formés au tournant des XVIIIe et XIXe siècles, dans une société {amber}assez développée pour susciter la critique socialiste{/amber}, {red}pas assez pour qu'elle évite de graves erreurs{/red} : ni les conditions matérielles, ni l'agent historique du socialisme (le prolétariat) n'étaient mûrs. {coral}Leur erreur était historiquement inévitable{/coral}. Les suivants, qui la répètent quand tout a changé, {red}devraient savoir mieux{/red}.
+  points:
+  - id: sep-marx4-l5-p1
+    sentence: "Postface du *Capital* : on reproche à Marx de s'être borné à un simple démontage critique du donné, « au lieu de formuler des ___ (comtistes ?) pour les gargotes de l'avenir »."
+    answer: "recettes"
+    alt: []
+  - id: sep-marx4-l5-p2
+    sentence: "Postface du *Capital* : au lieu de formuler des recettes (comtistes ?) « pour les ___ de l'avenir »."
+    answer: "gargotes"
+    alt: []
+  - id: sep-marx4-l5-p3
+    sentence: "__Les trois fondateurs du socialisme utopique__ sont Fourier, Saint-Simon et ___."
+    answer: "Owen"
+    alt: ["Robert Owen"]
+  - id: sep-marx4-l5-p4
+    sentence: "__Ce qui fait le socialiste utopique__ : tenir pour légitime et nécessaire de fournir des ___ détaillés de la société future."
+    answer: "plans"
+    alt: []
+  - id: sep-marx4-l5-p5
+    sentence: "__Marx préfère, dans les écrits utopiques__, la part ___ (les défauts du capitalisme) à la part constructive."
+    answer: "critique"
+    alt: []
+  - id: sep-marx4-l5-p6
+    sentence: "__Marx préfère__ la ___ génération des socialistes utopiques aux suivantes."
+    answer: "première"
+    alt: []
+  - id: sep-marx4-l5-p7
+    sentence: "__Marx épargne les fondateurs de l'utopisme, non qu'ils se soient moins trompés__, mais par une question de ___ : leur erreur était historiquement inévitable."
+    answer: "culpabilité"
+    alt: []
+  - id: sep-marx4-l5-p8
+    sentence: "__Au tournant des XVIIIe et XIXe siècles__, ni les conditions matérielles, ni l'agent historique du socialisme, le ___, n'étaient assez développés."
+    answer: "prolétariat"
+    alt: []
+  - id: sep-marx4-l5-p9
+    sentence: "__Pour l'utopiste, l'avenir socialiste doit être__ ___ avant d'être réalisé."
+    answer: "dessiné"
+    alt: []
+  - id: sep-marx4-l5-p10
+    sentence: "__Parmi les utopistes postérieurs aux fondateurs__, Marx compte des indépendants comme Étienne ___."
+    answer: "Cabet"
+    alt: []
+  - id: sep-marx4-l5-p11
+    sentence: "Le *Manifeste* critique aussi des socialistes **ni marxiens ni utopiques**, les socialistes ___."
+    answer: "féodaux"
+    alt: []
+  - id: sep-marx4-l5-p12
+    sentence: "__Les utopistes qui répètent les erreurs des fondateurs quand tout a changé__ devraient, selon Marx, savoir ___."
+    answer: "mieux"
+    alt: []
+- id: sep-marx4-l6
+  title: "Pourquoi ne pas dessiner l'avenir"
+  notes: |-
+    **Marx a trois raisons de fond de refuser les plans de l'avenir : ils seraient antidémocratiques, impossibles et superflus ; aucune n'est décisive.** On distingue d'abord deux sortes de critiques :
+    - les critiques {violet}non fondamentales{/violet} rejettent des idées que les utopistes ont pu avoir, {red}sans rejeter l'utopisme comme tel{/red} ;
+    - les critiques {violet}fondamentales{/violet} donnent une raison de {green}renoncer à l'utopisme lui-même{/green}, à toute description de la société future.
+
+    **Une critique non fondamentale : l'**{violet}**anhistorisme**{/violet}**.** Le *Manifeste* reproche aux utopistes de croire que le socialisme pouvait advenir à n'importe quelle époque, pourvu qu'on ait {yellow}le bon plan et assez de volonté{/yellow}, sans voir qu'il dépend de conditions qui n'apparaissent qu'à un stade de l'histoire. Mais {coral}on peut vouloir un plan sans être anhistorique{/coral} : cette critique ne touche pas l'utopisme comme tel.
+
+    **Les trois arguments fondamentaux.**
+
+    | Argument | Thèse | Prémisse |
+    | antidémocratique | normative | un plan limite l'autodétermination |
+    | impossible | épistémologique | un plan utile doit prévoir tout l'avenir |
+    | superflu | empirique | l'histoire produit seule la société future |
+
+    **Antidémocratique.** « Démocratie » veut dire ici {amber}autodétermination{/amber} individuelle et collective. {amber}Limiter l'autodétermination est antidémocratique ; un plan de la société socialiste la limite ; donc fournir un plan est antidémocratique{/amber}, et, si l'on ajoute que l'antidémocratique est indésirable, indésirable. Mais {red}on voit mal en quoi le seul fait de proposer un plan limiterait l'autodétermination{/red} : il aide plutôt à savoir {green}où l'on veut aller, et comment{/green}.
+
+    **Impossible.** Un plan n'est utile que s'il aide à construire la société future ; il ne l'aide que s'il est {amber}parfaitement exact{/amber} ; il n'est exact que s'il {amber}prévoit toutes les circonstances{/amber} de cette société ; or la complexité du monde et les limites humaines l'interdisent ; donc les plans sont inutiles. Mais {red}qu'un plan n'ait de valeur qu'exact est douteux{/red} : {green}un plan n'est pas une prédiction{/green}, et se donner des plans imparfaits fait partie de la façon dont nous déterminons notre avenir.
+
+    **Superflu.** Un plan n'est nécessaire que si la structure de la société future doit être {amber}dessinée{/amber}. Or, pour Marx, {amber}elle se développe d'elle-même au sein du capitalisme{/amber}, et le rôle des hommes est de la {yellow}mettre au monde{/yellow}, non de la dessiner ; donc les plans sont superflus. Mais {red}on ne voit pas qui, ou quoi, dessine à notre place{/red}, et {red}l'histoire depuis Marx ne montre pas{/red} une société socialiste mûrissant d'elle-même dans le capitalisme.
+  tables:
+  - table: argument-these-premisse
+    exercises:
+    - {kind: bank, column: Thèse}
+    - {kind: cell, column: Argument}
+  points:
+  - id: sep-marx4-l6-p1
+    sentence: "__Une critique de l'utopisme est__ ___ **quand elle donne une raison de renoncer à toute description de la société future**, et non seulement à certaines idées des utopistes."
+    answer: "fondamentale"
+    alt: []
+  - id: sep-marx4-l6-p2
+    sentence: "__Le *Manifeste* reproche aux utopistes une vue__ ___ du changement social : ils croient que le socialisme pouvait advenir à n'importe quelle époque."
+    answer: "anhistorique"
+    alt: []
+  - id: sep-marx4-l6-p3
+    sentence: "__Le reproche d'anhistorisme fait aux utopistes est une critique__ non fondamentale : on peut vouloir un ___ sans être anhistorique."
+    answer: "plan"
+    alt: []
+  - id: sep-marx4-l6-p4
+    sentence: "__Les trois arguments fondamentaux de Marx contre l'utopisme__ : les plans de l'avenir seraient antidémocratiques, impossibles et ___."
+    answer: "superflus"
+    alt: ["redondants", "inutiles"]
+  - id: sep-marx4-l6-p5
+    sentence: "__Dans l'argument qui dit les plans antidémocratiques__, « démocratie » signifie l'___ individuelle et collective."
+    answer: "autodétermination"
+    alt: []
+  - id: sep-marx4-l6-p6
+    sentence: "__Réponse à l'argument antidémocratique__ : loin de limiter l'autodétermination, un plan aide à savoir où l'on veut ___, et comment."
+    answer: "aller"
+    alt: []
+  - id: sep-marx4-l6-p7
+    sentence: "__L'argument qui dit les plans impossibles__ suppose qu'un plan n'est utile que s'il est parfaitement ___, donc s'il prévoit toutes les circonstances."
+    answer: "exact"
+    alt: []
+  - id: sep-marx4-l6-p8
+    sentence: "__Réponse à l'argument qui dit les plans impossibles__ : un plan n'est pas une ___, et un plan imparfait aide encore à déterminer l'avenir."
+    answer: "prédiction"
+    alt: []
+  - id: sep-marx4-l6-p9
+    sentence: "__Selon l'argument qui dit les plans superflus__, la structure de la société future se développe d'elle-même au sein du ___."
+    answer: "capitalisme"
+    alt: []
+  - id: sep-marx4-l6-p10
+    sentence: "__Selon Marx, le rôle des hommes envers la société future est de__ la mettre au monde, non de la ___."
+    answer: "dessiner"
+    alt: ["concevoir"]
+  - id: sep-marx4-l6-p11
+    sentence: "__Objection à l'argument qui dit les plans superflus__ : Marx ne dit pas ___, ou quoi, dessine la société future à notre place."
+    answer: "qui"
+    alt: []
+  - id: sep-marx4-l6-p12
+    sentence: "__Une critique non fondamentale de l'utopisme__ rejette des idées des utopistes sans rejeter l'___ comme tel."
+    answer: "utopisme"
+    alt: []

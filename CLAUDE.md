@@ -44,7 +44,9 @@ l'épreuve :
     de QCM ni d'association », comme pour les tableaux à trous : les
     définitions d'un glossaire forment un ensemble fermé.
   - **Idées** : thèses centrales chez l'auteur, en se concentrant sur les
-    arguments déployés pour les défendre.
+    arguments déployés pour les défendre. Chez Marx, la piste s'ouvre sur le
+    cours tiré de l'article « Karl Marx » de la SEP, groupe « Karl Marx
+    (SEP) » (`sep-marx1` à `sep-marx4`), écrit avec la skill `cours-sep`.
   - **Repérage** : se repérer dans les différentes œuvres, savoir où se
     situe tel texte clef, etc. Une œuvre s'y traite en unité-œuvre (voir
     plus bas). Chez Plotin, la piste est l'index des 54 traités : chaque

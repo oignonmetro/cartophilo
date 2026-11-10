@@ -1,0 +1,386 @@
+# Cours sur la philosophie sociale et politique de Marx, tiré de l'article
+# « Karl Marx » de David Leopold, SEP (révision 2025) : sections 3 (économie,
+# 3.1 à 3.3) et 4 (morale, 4.1 à 4.3).
+#
+# Citations de Marx en français, Éditions sociales : Le Capital, livre I
+# (traduction Lefebvre : « force de travail », « survaleur » ; l'article dit
+# « surplus value », rendu ici par « plus-value » dans l'explication, terme
+# usuel, et « survaleur » dans les citations) ; Critique du programme de Gotha.
+# Citations des commentateurs (Roemer, Roberts) traduites de l'anglais : elles
+# n'ont pas de carte en cascade.
+#
+# La leçon 3.1 (« Reading Capital ») est réduite à une phrase de la leçon 1.
+
+id: sep-marx3
+title: "Économie et morale"
+subtitle: "La valeur, la plus-value et l'exploitation ; un capitalisme injuste ?"
+icon: scale
+color: violet
+group: "Karl Marx (SEP)"
+lessons:
+- id: sep-marx3-l1
+  title: "La théorie de la valeur-travail"
+  notes: |-
+    **Le livre I du** {sky}***Capital***{/sky} **(1867) explique pourquoi les marchandises s'échangent dans telle proportion : par le travail qu'elles coûtent.** On l'a lu comme un traité d'économie, fondé sur une {violet}théorie de la valeur-travail{/violet} remaniée ; d'autres, comme {sky}William Clare Roberts{/sky}, y voient d'abord une œuvre de théorie politique. Il contient en tout cas une analyse économique du capitalisme, dont cette leçon pose le premier étage.
+
+    **La** {violet}**marchandise**{/violet} **: un objet extérieur utile, produit pour être échangé sur un marché.** Il y faut deux conditions :
+    - {amber}un marché{/amber}, où l'échange puisse avoir lieu ;
+    - {amber}une division sociale du travail{/amber} : chacun produit autre chose que les autres, sans quoi personne n'aurait de raison d'échanger.
+
+    **Deux valeurs dans une marchandise.**
+    - la {violet}valeur d'usage{/violet} : son utilité, qui se comprend sans peine ;
+    - la {violet}valeur d'échange{/violet} : d'abord, son prix. Elle est {amber}énigmatique{/amber} : pourquoi {yellow}tant de blé s'échange-t-il contre tant de fer{/yellow} ?
+
+    **La réponse : le** {violet}**travail socialement nécessaire**{/violet}**.** {green}La valeur d'une marchandise est déterminée par la quantité de travail socialement nécessaire à sa production{/green}, c'est-à-dire du travail fourni {amber}avec l'intensité et la productivité moyennes{/amber} de la branche. {yellow}Un artisan lent{/yellow} ne rend pas sa table plus précieuse : ce qui compte n'est pas son temps à lui, mais le temps qu'il faut d'ordinaire.
+
+    **Un argument en deux temps.**
+    - {amber}__ce qui s'égale a quelque chose en commun__{/amber} : deux choses qu'on peut poser de part et d'autre d'un signe égal sont réductibles à une troisième, de même grandeur dans les deux. {teal}« {/teal}Prenons encore deux marchandises, disons {yellow}du blé et du fer{/yellow}. [...] Que dit cette équation ? Qu'il existe {teal}__quelque chose de commun et de même dimension__{/teal} dans deux choses différentes, dans 1 quarter de blé tout comme dans a quintal de fer. Les deux choses sont donc {teal}__égales à une troisième__ »{/teal} (*Le Capital*, livre I, chap. 1) ;
+    - {amber}__ce commun est le travail__{/amber} : on cherche cette troisième chose, et le travail est, pour Marx, le seul élément commun plausible. Ce ne peut être une propriété naturelle (poids, couleur), qui ne fait que l'utilité.
+
+    ! Les deux temps sont très contestables : que l'échange suppose une grandeur commune, et que cette grandeur soit le travail.
+  points:
+  - id: sep-marx3-l1-p1
+    sentence: "__Le livre I du *Capital* explique les proportions de l'échange__ par une théorie de la valeur-___."
+    answer: "travail"
+    alt: []
+  - id: sep-marx3-l1-p2
+    sentence: "William Clare Roberts voit dans le livre I du *Capital* **une œuvre de théorie ___** plutôt que d'économie."
+    answer: "politique"
+    alt: []
+  - id: sep-marx3-l1-p3
+    sentence: "La **marchandise** est un objet extérieur utile, produit pour être ___ sur un marché."
+    answer: "échangé"
+    alt: []
+  - id: sep-marx3-l1-p4
+    sentence: "__La production marchande suppose__ un marché et une ___ sociale du travail, sans laquelle personne n'aurait de raison d'échanger."
+    answer: "division"
+    alt: []
+  - id: sep-marx3-l1-p5
+    sentence: "__Toute marchandise a__ une valeur d'___, son utilité, et une valeur d'échange."
+    answer: "usage"
+    alt: []
+  - id: sep-marx3-l1-p6
+    sentence: "Pour Marx, c'est la valeur d'___ **qui est énigmatique** : pourquoi tant d'une marchandise contre tant d'une autre ?"
+    answer: "échange"
+    alt: []
+  - id: sep-marx3-l1-p7
+    sentence: "__La théorie de la valeur-travail__ : la valeur d'une marchandise est déterminée par la quantité de travail socialement ___ à sa production."
+    answer: "nécessaire"
+    alt: []
+  - id: sep-marx3-l1-p8
+    sentence: "__Le travail socialement nécessaire est le travail fourni__ avec l'intensité et la productivité ___ de la branche : un artisan lent ne rend pas sa table plus précieuse."
+    answer: "moyennes"
+    alt: []
+  - id: sep-marx3-l1-p9
+    sentence: "*Le Capital*, livre I, sur l'échange du blé et du fer : « Qu'il existe quelque chose de ___ et de même dimension dans deux choses différentes »."
+    answer: "commun"
+    alt: []
+  - id: sep-marx3-l1-p10
+    sentence: "*Le Capital*, livre I : il existe quelque chose de commun et de même dimension dans le blé et le fer. « Les deux choses sont donc égales à une ___ »."
+    answer: "troisième"
+    alt: []
+  - id: sep-marx3-l1-p11
+    sentence: "__Le second temps de l'argument de la valeur-travail__ cherche la troisième chose commune aux marchandises : c'est le ___, seul élément commun plausible."
+    answer: "travail"
+    alt: []
+  - id: sep-marx3-l1-p12
+    sentence: "*Le Capital*, livre I, sur l'équation 1 quarter de blé = a quintal de fer : « Qu'il existe quelque chose de commun et de même ___ dans deux choses différentes »"
+    answer: "dimension"
+    alt: []
+  - id: sep-marx3-l1-p13
+    sentence: "__Ce qui est commun aux marchandises échangées ne peut être__ une propriété ___ (poids, couleur), qui ne fait que leur utilité."
+    answer: "naturelle"
+    alt: []
+  - id: sep-marx3-l1-p14
+    sentence: "Le livre I du *Capital*, **où Marx expose la théorie de la valeur-travail**, paraît en ___."
+    answer: "1867"
+    alt: []
+- id: sep-marx3-l2
+  title: "La plus-value et ses difficultés"
+  notes: |-
+    **D'où vient le profit, si toutes les marchandises s'échangent à leur valeur ? De la** {violet}**force de travail**{/violet}**, seule marchandise qui produise plus de valeur qu'elle n'en coûte.** C'est la {violet}théorie de la plus-value{/violet}, cœur de l'analyse du capitalisme.
+
+    **Le capitalisme n'est pas seulement l'échange de marchandises.** Le capitaliste {amber}avance de l'argent{/amber} pour {amber}acheter des marchandises{/amber}, les {amber}transformer en d'autres{/amber}, et les {amber}vendre plus cher{/amber}. Mais comment l'ensemble des capitalistes peut-il gagner, si chacun achète et vend à la valeur ? Aucun théoricien, selon Marx, ne l'a expliqué ; sa réponse est l'{violet}exploitation{/violet}.
+
+    **Ce que le capitaliste achète : non le travail, mais la force de travail**, la capacité de travailler, pour une journée. Elle vaut ce que toute marchandise vaut : le travail nécessaire pour la produire, ici {amber}la valeur des biens qui gardent l'ouvrier en vie un jour{/amber}. Supposons qu'ils demandent {yellow}quatre heures{/yellow} de travail :
+    - les quatre premières heures produisent l'équivalent du salaire : c'est le {violet}travail nécessaire{/violet} ;
+    - tout ce qui suit est {violet}surtravail{/violet}, et produit la {violet}plus-value{/violet} (*survaleur*) du capitaliste.
+
+    {coral}La plus-value est la source de tout profit.{/coral} La force de travail est le {violet}capital variable{/violet}, car elle seule crée plus de valeur qu'elle ne vaut ; machines et matières, le {violet}capital constant{/violet}, ne font que transmettre leur valeur au produit.
+
+    **Deux difficultés que Marx affronte dans le livre III.**
+    - la {violet}baisse tendancielle du taux de profit{/violet} : si seul le travail crée de la valeur, plus l'industrie se mécanise (plus de capital constant, moins de variable), plus le taux de profit doit baisser ; Marx y voit une cause de la chute du capitalisme, mais l'analyse est problématique ({sky}Paul Sweezy{/sky}) ;
+    - le {violet}problème de la transformation{/violet} : les industries qui emploient beaucoup de travail devraient faire plus de profit, ce qui est {red}faux dans les faits{/red} et {red}intenable en théorie{/red}. Marx répond que les prix s'écartent systématiquement des valeurs ; mais si la valeur ne rejoint plus le prix que de si loin, {coral}l'intuition qui motivait la théorie s'évanouit{/coral}. D'autres répondent que Marx voulait voir sous les apparences du capitalisme une base qui ne leur ressemble pas ({sky}Heinrich{/sky}).
+
+    **L'objection du blé.** Que seul le travail crée de la plus-value n'est {red}jamais démontré{/red} : on pourrait choisir n'importe quelle marchandise. {sky}John Roemer{/sky} montre qu'une {yellow}théorie de la valeur-blé{/yellow}, où le blé crée plus de valeur qu'il ne coûte, serait formellement identique. L'idée que le travail fait la valeur, et le profit l'exploitation, garde pourtant {green}une force intuitive{/green}.
+
+    **Ce qui reste, même la valeur-travail tombée** ({sky}Joan Robinson{/sky}, 1942) :
+    - {green}le refus d'une harmonie des intérêts{/green} entre ouvrier et capitaliste, remplacée par une analyse de {amber}classes{/amber} ;
+    - {green}le refus de toute tendance à l'équilibre{/green} du marché, et la description du {amber}cycle d'expansion et de crise{/amber}.
+  points:
+  - id: sep-marx3-l2-p1
+    sentence: "__Pour Marx, le capitaliste n'achète pas le travail de l'ouvrier__, mais sa ___ de travail, sa capacité de travailler pour une journée."
+    answer: "force"
+    alt: []
+  - id: sep-marx3-l2-p2
+    sentence: "**La valeur de la force de travail** est __la valeur des biens nécessaires pour garder l'ouvrier__ ___ un jour."
+    answer: "en vie"
+    alt: ["vivant"]
+  - id: sep-marx3-l2-p3
+    sentence: "__La part de la journée qui produit l'équivalent du salaire__ s'appelle le travail ___."
+    answer: "nécessaire"
+    alt: []
+  - id: sep-marx3-l2-p4
+    sentence: "__Le travail que l'ouvrier fournit au-delà de l'équivalent de son salaire__ s'appelle le ___ ; il produit la plus-value."
+    answer: "surtravail"
+    alt: []
+  - id: sep-marx3-l2-p5
+    sentence: "__Pour Marx, la source de tout profit__ est la ___."
+    answer: "plus-value"
+    alt: ["survaleur"]
+  - id: sep-marx3-l2-p6
+    sentence: "La force de travail est le capital ___, __car elle seule crée plus de valeur qu'elle n'en vaut__."
+    answer: "variable"
+    alt: []
+  - id: sep-marx3-l2-p7
+    sentence: "Machines et matières forment le capital ___, __car elles ne font que transmettre leur valeur au produit__."
+    answer: "constant"
+    alt: []
+  - id: sep-marx3-l2-p8
+    sentence: "__Si seul le travail crée de la valeur, la mécanisation fait__ baisser le ___ de profit : Marx y voit une cause de la chute du capitalisme."
+    answer: "taux"
+    alt: []
+  - id: sep-marx3-l2-p9
+    sentence: "Le problème de la ___ : **expliquer pourquoi les prix s'écartent systématiquement des valeurs**, faute de quoi les industries les plus riches en travail feraient le plus de profit."
+    answer: "transformation"
+    alt: []
+  - id: sep-marx3-l2-p10
+    sentence: "John Roemer montre qu'**une théorie de la valeur-___**, où ce produit créerait plus de valeur qu'il ne coûte, serait formellement identique à la valeur-travail."
+    answer: "blé"
+    alt: []
+  - id: sep-marx3-l2-p11
+    sentence: "__Même la valeur-travail tombée__, Joan ___ retient de Marx le refus d'une harmonie des intérêts et le refus de toute tendance du marché à l'équilibre."
+    answer: "Robinson"
+    alt: []
+  - id: sep-marx3-l2-p12
+    sentence: "__Marx refuse au marché toute tendance à l'équilibre__, et décrit le cycle d'expansion et de ___."
+    answer: "crise"
+    alt: []
+  - id: sep-marx3-l2-p13
+    sentence: "__Le capitaliste avance de l'argent pour acheter des marchandises, les transformer et les vendre plus cher__ : son but est le ___."
+    answer: "profit"
+    alt: []
+  - id: sep-marx3-l2-p14
+    sentence: "__Comment l'ensemble des capitalistes gagne-t-il, si tout s'échange à sa valeur ?__ La réponse de Marx est l'___ de l'ouvrier."
+    answer: "exploitation"
+    alt: []
+  - id: sep-marx3-l2-p15
+    sentence: "__Selon l'objection de Roemer, que seul le travail crée de la plus-value__ n'est jamais ___."
+    answer: "démontré"
+    alt: []
+  - id: sep-marx3-l2-p16
+    sentence: "__Dans l'exemple de Marx, si les biens qui gardent l'ouvrier en vie un jour demandent__ ___ heures, le reste de la journée est surtravail."
+    answer: "quatre"
+    alt: []
+- id: sep-marx3-l3
+  title: "L'exploitation sans la valeur-travail"
+  notes: |-
+    **Si l'exploitation ne se définissait que par la plus-value, elle tomberait avec la valeur-travail ; on peut pourtant en sauver le noyau.** C'est l'objection de {sky}Robert Nozick{/sky} (*Anarchie, État et utopie*, 1974) : {red}que la théorie de la valeur-travail soit fausse, et la théorie marxiste de l'exploitation s'effondre{/red}. D'autres répondent qu'{green}on peut définir l'exploitation sans elle{/green} ({sky}Cohen{/sky}, {sky}Wolff{/sky}, {sky}Vrousalis{/sky}).
+
+    **La définition de** {sky}**Roemer**{/sky} **: un** {violet}**échange inégal**{/violet} **de travail contre des biens.** L'exploitation a lieu quand {amber}le travail contenu dans les biens que l'ouvrier peut acheter avec son revenu{/amber} est {amber}moindre que le travail qu'il a fourni pour gagner ce revenu{/amber}. Exemple : je travaille {yellow}huit heures{/yellow} pour mon salaire, et le mieux que je puisse acheter est {yellow}un manteau{/yellow} ; si ce manteau a demandé {yellow}quatre heures{/yellow} de travail en tout, j'ai échangé huit heures de mon travail contre quatre du travail d'autrui : {coral}je suis exploité, sans qu'on ait parlé de valeur{/coral}.
+
+    **La définition demande des retouches.**
+    - si je suis {yellow}imposé au profit de ceux qui ne peuvent travailler{/yellow}, je suis « exploité », {red}ce que la définition ne voulait pas dire{/red} ;
+    - si une seule personne est exploitée bien plus gravement que les autres, {red}il peut se faire que personne d'autre ne le soit{/red}.
+
+    Rien d'insurmontable : on ajuste.
+
+    **Ce qu'on ajoute : la** {violet}**domination**{/violet}**.** Beaucoup de définitions joignent à l'échange inégal une {violet}contrainte{/violet} ({sky}Vrousalis{/sky}) : l'exploité est {amber}forcé d'accepter{/amber} une situation où il ne récupère jamais ce qu'il a mis dans le travail. À première vue, {coral}une telle exploitation paraît injuste{/coral} ; mais attribuer ce jugement à Marx lui-même est très difficile (leçon suivante).
+  points:
+  - id: sep-marx3-l3-p1
+    sentence: "Robert ___ objecte que **si la théorie de la valeur-travail est fausse, la théorie marxiste de l'exploitation s'effondre**."
+    answer: "Nozick"
+    alt: []
+  - id: sep-marx3-l3-p2
+    sentence: "__Selon John Roemer, l'exploitation marxiste se définit comme__ un échange ___ de travail contre des biens."
+    answer: "inégal"
+    alt: []
+  - id: sep-marx3-l3-p3
+    sentence: "__Chez Roemer, l'ouvrier est exploité quand__ le travail contenu dans les biens qu'il achète avec son revenu est ___ que le travail qu'il a fourni pour le gagner."
+    answer: "moindre"
+    alt: ["inférieur"]
+  - id: sep-marx3-l3-p4
+    sentence: "Je travaille huit heures pour acheter **un manteau qui a demandé quatre heures** : __au sens de Roemer, je suis__ ___."
+    answer: "exploité"
+    alt: []
+  - id: sep-marx3-l3-p5
+    sentence: "__Défaut de la définition de Roemer__ : celui qui est ___ au profit de ceux qui ne peuvent travailler serait « exploité »."
+    answer: "imposé"
+    alt: ["taxé"]
+  - id: sep-marx3-l3-p6
+    sentence: "__Beaucoup de définitions de l'exploitation joignent à l'échange inégal__ une ___ : l'exploité est forcé d'accepter sa situation (Vrousalis)."
+    answer: "domination"
+    alt: ["contrainte"]
+  - id: sep-marx3-l3-p7
+    sentence: "__Défaut de la définition de Roemer__ : une seule personne exploitée bien plus gravement que les autres pourrait faire que ___ d'autre ne le soit."
+    answer: "personne"
+    alt: []
+  - id: sep-marx3-l3-p8
+    sentence: "__Contre Nozick, Cohen, Wolff et Vrousalis sauvent le noyau de l'exploitation__ sans la théorie de la ___-travail."
+    answer: "valeur"
+    alt: []
+  - id: sep-marx3-l3-p10
+    sentence: "__L'exploité est forcé d'accepter une situation où il ne récupère jamais ce qu'il a mis__ : à première vue, cette exploitation paraît ___."
+    answer: "injuste"
+    alt: []
+- id: sep-marx3-l4
+  title: "Le capitalisme est-il injuste ?"
+  notes: |-
+    **Marx déteste le capitalisme, mais ne dit jamais qu'il est injuste ; il prend même ses distances avec ceux qui parlent de justice.** D'où une énigme, puisque ses textes sont pleins de jugements moraux indirects. On la décompose en quatre questions : (a) le capitalisme est-il {amber}injuste{/amber} ? (b) peut-il être critiqué moralement {amber}pour d'autres raisons{/amber} ? (c) le communisme serait-il {amber}juste{/amber} ? (d) peut-il être approuvé moralement {amber}pour d'autres raisons{/amber} ? Cette leçon traite des deux premières.
+
+    **L'argument évident : un système qui vit de l'exploitation ne peut qu'être injuste.** Le secret du capitalisme est qu'il n'est {red}pas un règne d'harmonie et d'avantage mutuel{/red}, mais {green}un système où une classe tire systématiquement son profit d'une autre{/green}. Or Marx écrit, de la journée de travail dont la valeur double celle de la force de travail : {teal}« {/teal}cette réalité est {teal}__une chance toute particulière pour l'acheteur__{/teal}, mais {teal}__ne constitue en aucune façon un tort causé au vendeur__ »{/teal} (*Le Capital*, livre I, chap. 5).
+
+    **Pour** {sky}**Allen Wood**{/sky}**, Marx ne tient pas le capitalisme pour injuste.** Sa théorie exclut tout point de vue {violet}trans-historique{/violet} d'où juger un système économique entier :
+    - les institutions juridiques font partie de la {violet}superstructure{/violet}, et les idées de justice sont {violet}idéologiques{/violet} ;
+    - or la fonction de l'une et des autres est de {amber}stabiliser la structure économique{/amber} ;
+    - donc dire qu'une chose est juste sous le capitalisme, c'est seulement juger qu'{coral}elle tend à faire avancer le capitalisme{/coral}.
+
+    On peut juger injuste un acte *dans* le système ({yellow}le vol{/yellow}), non le système lui-même.
+
+    **Pour** {sky}**Ziyad Husami**{/sky}**, Wood oublie que les idées sont déterminées deux fois** : par le système économique, {amber}mais aussi par la classe{/amber}. Les idées du prolétariat, qui ne sont pas celles qu'on applique, s'accordent au communisme ; de ce point de vue, qui est celui de Marx, {green}le capitalisme est injuste{/green}.
+
+    Mais Husami n'explique ni {red}pourquoi Marx ne dit jamais le capitalisme injuste{/red}, ni {red}la distance qu'il met entre son {violet}socialisme scientifique{/violet} et les socialistes qui plaidaient l'injustice{/red}. La vue « officielle » de Marx est donc que {coral}le capitalisme n'est pas injuste{/coral}.
+
+    **L'énigme demeure : Marx parle de** {yellow}**« détournement »**{/yellow}**, de** {yellow}**« vol »**{/yellow}**, d'**{yellow}**« exploitation »**{/yellow}**.** La solution la plus satisfaisante est sans doute celle de {sky}Cohen{/sky} : {green}Marx croyait que le capitalisme était injuste, mais ne croyait pas qu'il le croyait{/green}. Il n'avait pas une connaissance parfaite de son propre esprit : sa vue officielle tient dans ses réflexions explicites, sa vraie vue perce dans les moments moins surveillés.
+
+    **La critique morale, elle, est évidente.** L'ouvrier trouve son travail un tourment, souffre la misère, le surmenage, le manque d'épanouissement et de liberté ; les hommes ne se rapportent pas les uns aux autres comme ils le devraient. {coral}Le capitalisme empêche l'épanouissement humain{/coral} : c'est une critique morale. Pourquoi Marx ne le dit-il pas ? Pour deux raisons :
+    - du point de vue de l'histoire du monde, {green}le capitalisme a aussi beaucoup de bon{/green}, car sans lui pas de communisme : il faut le {amber}dépasser, non l'abolir{/amber}, ce que la philosophie morale dit mal ;
+    - surtout, {red}les socialistes non marxiens en appelaient à la vérité et à la justice universelles{/red} pour faire advenir la société nouvelle ; Marx s'en distingue : {green}c'est l'analyse des forces historiques et sociales, non la morale, qui montre les voies de l'émancipation{/green}. {coral}Tout appel à la morale était pour lui un recul théorique.{/coral}
+  points:
+  - id: sep-marx3-l4-p1
+    sentence: "__L'énigme de Marx et de la morale__ : il condamne le capitalisme, mais ne dit jamais directement qu'il est ___."
+    answer: "injuste"
+    alt: []
+  - id: sep-marx3-l4-p2
+    sentence: "*Le Capital*, livre I : que la force de travail crée plus de valeur qu'elle n'en vaut est « une chance toute particulière pour l'___, mais ne constitue en aucune façon un tort causé au vendeur »."
+    answer: "acheteur"
+    alt: []
+  - id: sep-marx3-l4-p3
+    sentence: "*Le Capital*, livre I : que la force de travail crée plus de valeur qu'elle n'en vaut est « une chance toute particulière pour l'acheteur, mais ne constitue en aucune façon un ___ causé au vendeur »."
+    answer: "tort"
+    alt: []
+  - id: sep-marx3-l4-p4
+    sentence: "Allen ___ soutient que **Marx ne tient pas le capitalisme pour injuste**, faute de point de vue trans-historique d'où le juger."
+    answer: "Wood"
+    alt: []
+  - id: sep-marx3-l4-p5
+    sentence: "__Selon Wood, la théorie de Marx exclut tout point de vue__ ___ d'où juger un système économique entier."
+    answer: "trans-historique"
+    alt: ["transhistorique"]
+  - id: sep-marx3-l4-p6
+    sentence: "__Selon Wood, les idées de justice ont pour fonction de__ ___ la structure économique : dire juste, c'est dire favorable au système."
+    answer: "stabiliser"
+    alt: []
+  - id: sep-marx3-l4-p7
+    sentence: "Ziyad ___ objecte à Wood que **les idées sont déterminées aussi par la classe** : du point de vue du prolétariat, le capitalisme est injuste."
+    answer: "Husami"
+    alt: []
+  - id: sep-marx3-l4-p8
+    sentence: "__Husami n'explique pas la distance que Marx met entre__ son socialisme ___ et les socialistes qui plaidaient l'injustice du capitalisme."
+    answer: "scientifique"
+    alt: []
+  - id: sep-marx3-l4-p9
+    sentence: "Selon ___, **Marx croyait que le capitalisme était injuste, mais ne croyait pas qu'il le croyait**."
+    answer: "Cohen"
+    alt: []
+  - id: sep-marx3-l4-p10
+    sentence: "__Chez Marx, la critique morale du capitalisme est évidente__ : il empêche l'___ humain."
+    answer: "épanouissement"
+    alt: []
+  - id: sep-marx3-l4-p11
+    sentence: "__Première raison de la réserve morale de Marx__ : sans capitalisme, pas de communisme ; il faut le ___, non l'abolir."
+    answer: "dépasser"
+    alt: []
+  - id: sep-marx3-l4-p12
+    sentence: "__Seconde raison de la réserve morale de Marx, contre les autres socialistes__ : c'est l'analyse des forces historiques, non la ___, qui montre les voies de l'émancipation."
+    answer: "morale"
+    alt: []
+  - id: sep-marx3-l4-p13
+    sentence: "__Le secret du capitalisme__ : non un règne d'harmonie et d'avantage mutuel, mais un système où une ___ tire systématiquement son profit d'une autre."
+    answer: "classe"
+    alt: []
+  - id: sep-marx3-l4-p14
+    sentence: "__Selon Wood, on peut juger injuste un acte dans le capitalisme, comme__ le ___, non le système lui-même."
+    answer: "vol"
+    alt: []
+  - id: sep-marx3-l4-p15
+    sentence: "__Marx décrit le capitalisme avec les mots__ « détournement », « vol » et « ___ », qui démentent sa vue officielle."
+    answer: "exploitation"
+    alt: []
+  - id: sep-marx3-l4-p16
+    sentence: "__Pour Marx, contre les socialistes qui plaidaient la justice, tout appel à la morale était__ un ___ théorique."
+    answer: "recul"
+    alt: []
+- id: sep-marx3-l5
+  title: "Le communisme, au-delà de la justice"
+  notes: |-
+    **Le communisme serait-il juste ? Plus probablement, il dépasserait la justice ; mais il resterait, pour Marx, une bonne société.** Deux possibilités seulement : {pink}le communisme est une société juste{/pink}, ou {green}le concept de justice ne s'y applique plus{/green}.
+
+    **La formule de Gotha.** Dans la phase supérieure du communisme, quand {teal}« {/teal}toutes les sources de la richesse collective jailliront avec abondance, alors seulement {teal}__l'horizon borné du droit bourgeois__{/teal} pourra être définitivement dépassé et la société pourra écrire sur ses drapeaux {teal}"__De chacun selon ses capacités, à chacun selon ses besoins__" »{/teal} (*Critique du programme de Gotha*, I). Cela ressemble à une théorie de la justice, et peut être reprise comme telle ({sky}Gilabert{/sky}) ; mais il est plus fidèle à Marx d'y lire un {green}dépassement de la justice{/green} ({sky}Lukes{/sky}) : la formule dit ce que la société *fait*, non ce que chacun peut *réclamer*.
+
+    **Pourquoi la justice deviendrait sans objet : les circonstances de la justice de** {sky}**Hume**{/sky}**.** Si la justice sert à {amber}régler des conflits{/amber}, une société sans conflits n'en a pas besoin. Or {sky}Hume{/sky} montre deux circonstances où l'on n'aurait jamais inventé de règles de justice :
+    - l'{amber}abondance{/amber} : si chacun pouvait avoir tout ce qu'il veut sans empiéter sur la part d'autrui ;
+    - la {amber}bienveillance{/amber} complète entre les hommes, où il n'y aurait pas de conflit.
+
+    Marx laisse entendre que le communisme serait une société d'abondance. On peut douter qu'une telle abondance, ou une telle fraternité, soient possibles ; mais {coral}l'une et l'autre disent clairement en quel sens le communisme dépasse la justice{/coral}.
+
+    **Le communisme reste une bonne société.** Si la morale, ou plutôt l'{violet}éthique{/violet}, porte sur la {amber}vie bonne{/amber}, le communisme en est une : {coral}il favorise l'épanouissement humain{/coral} ({sky}Wills{/sky}), et la carrière de Marx n'a pas de sens sans cette conviction. La seule raison de le nier serait une {red}aversion théorique pour le mot « bon »{/red}. Elle tient à ceci : {red}le communisme ne serait pas l'œuvre de nobles bienfaiteurs de l'humanité{/red}. Pour garder ce trait qui le distinguait des autres socialistes, Marx a sans doute {coral}déprécié la morale plus que sa théorie ne l'exigeait{/coral}.
+  points:
+  - id: sep-marx3-l5-p1
+    sentence: "__Plutôt qu'une société juste, le communisme serait chez Marx__ une société qui ___ la justice."
+    answer: "dépasse"
+    alt: ["transcende"]
+  - id: sep-marx3-l5-p2
+    sentence: "*Critique du programme de Gotha* : la société pourra écrire sur ses drapeaux « De chacun selon ses ___, à chacun selon ses besoins »."
+    answer: "capacités"
+    alt: []
+  - id: sep-marx3-l5-p3
+    sentence: "*Critique du programme de Gotha* : la société pourra écrire sur ses drapeaux « De chacun selon ses capacités, à chacun selon ses ___ »."
+    answer: "besoins"
+    alt: []
+  - id: sep-marx3-l5-p4
+    sentence: "*Critique du programme de Gotha* : quand les sources de la richesse jailliront avec abondance, « alors seulement l'horizon borné du droit ___ pourra être définitivement dépassé »."
+    answer: "bourgeois"
+    alt: []
+  - id: sep-marx3-l5-p5
+    sentence: "« De chacun selon ses capacités, à chacun selon ses besoins » se lit dans la *Critique du programme de ___* (1875)."
+    answer: "Gotha"
+    alt: []
+  - id: sep-marx3-l5-p6
+    sentence: "__Pour montrer que le communisme dépasse la justice__, on reprend les circonstances de la justice de ___ : abondance et bienveillance complète."
+    answer: "Hume"
+    alt: []
+  - id: sep-marx3-l5-p7
+    sentence: "__Selon Hume, on n'aurait jamais inventé de règles de justice__ dans l'___, si chacun avait tout ce qu'il veut sans empiéter sur la part d'autrui."
+    answer: "abondance"
+    alt: []
+  - id: sep-marx3-l5-p8
+    sentence: "__Selon Hume, la justice serait aussi sans objet__ si régnait entre les hommes une ___ complète."
+    answer: "bienveillance"
+    alt: ["fraternité", "sympathie"]
+  - id: sep-marx3-l5-p9
+    sentence: "__Au sens large de l'éthique, qui porte sur la__ ___, le communisme est pour Marx une bonne société, car il favorise l'épanouissement humain."
+    answer: "vie bonne"
+    alt: []
+  - id: sep-marx3-l5-p10
+    sentence: "__Pour se distinguer des autres socialistes__, Marx refuse que le communisme soit l'œuvre de nobles ___ de l'humanité, et déprécie la morale plus que sa théorie ne l'exige."
+    answer: "bienfaiteurs"
+    alt: []
+  - id: sep-marx3-l5-p11
+    sentence: "__Que la formule de Gotha soit une théorie de la justice__, Gilabert le soutient ; qu'elle dépasse la justice, ___ le soutient."
+    answer: "Lukes"
+    alt: []
+  - id: sep-marx3-l5-p12
+    sentence: "__Si la justice sert à régler des__ ___, une société qui n'en a pas n'a pas besoin de justice."
+    answer: "conflits"
+    alt: []
