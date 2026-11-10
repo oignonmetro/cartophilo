@@ -128,6 +128,15 @@ une citation courte peut s'écrire entière dans la couleur, `{teal}« … »{/t
 dont l'application ne teinte que les guillemets (`quoteEdges`,
 `src/content/notes.ts`).
 
+**Le cours ne parle pas de lui-même** (consigne de l'utilisateur, 2026-11-10,
+sur `sep-marx1` à `sep-marx4`). Ni « cette leçon », « cette unité », « la leçon
+suivante », « voir la leçon sur… », ni « retenue ici », « on suit ici » : le
+rappel dit la thèse, pas ce que la leçon va faire. Une phrase d'annonce
+(« Cette leçon définit la notion, puis montre… ») se supprime, ou devient la
+thèse elle-même (« Elles ne disent pas "mal payé" : elles reposent sur… ») ; un
+renvoi à une autre leçon se supprime, ou se dit par son contenu (« car il
+s'interdit de décrire la société future »).
+
 ## Déroulé
 
 1. Lire l'article entier. Pour un classique, demander les passages (voir plus
