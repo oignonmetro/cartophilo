@@ -141,6 +141,8 @@ export function SujetsEditor() {
   // Groupe choisi à la main pour un sujet de l'aperçu, qui l'emporte sur la détection.
   const [overrides, setOverrides] = useState<Record<string, string>>({})
   const [duplicatesOpen, setDuplicatesOpen] = useState(false)
+  // Le sujet dont on choisit le nouveau groupe (clic sur son intitulé) : son groupe et son titre.
+  const [moving, setMoving] = useState<{ group: number; title: string } | null>(null)
 
   const load = useCallback(async () => {
     try {
@@ -214,6 +216,19 @@ export function SujetsEditor() {
   function removeSubject(index: number, subject: SubjectDTO) {
     if (subject.unit && !window.confirm(`« ${subject.title} » est traité (unité ${subject.unit}). Le retirer de la liste ?`)) return
     update(index, { subjects: groups![index]!.subjects.filter((s) => s !== subject) })
+  }
+
+  /** Range le sujet en tête d'un autre groupe, son unité éventuelle avec lui. */
+  function moveSubject(from: number, subject: SubjectDTO, to: number) {
+    if (from === to) return
+    setGroups((current) =>
+      current!.map((g, i) => {
+        if (i === from) return { ...g, subjects: g.subjects.filter((s) => s !== subject) }
+        if (i === to) return { ...g, subjects: [subject, ...g.subjects] }
+        return g
+      }),
+    )
+    setMoving(null)
   }
 
   function removeGroup(index: number) {
@@ -439,9 +454,20 @@ export function SujetsEditor() {
               </summary>
               <div className="flex flex-col gap-2 border-t-2 border-line px-3 py-2">
                 <AddField onAdd={(text) => addSubject(index, text)} />
-                {visible.map((subject) => (
-                  <div key={subject.title} className="group flex items-center gap-2 rounded-lg px-2 py-1 text-sm hover:bg-ink/5">
-                    <span className="flex-1">{subject.title}</span>
+                {visible.map((subject) => {
+                  const picking = moving?.group === index && moving.title === subject.title
+                  return (
+                  <div key={subject.title} className={`flex flex-col rounded-lg ${picking ? 'bg-teal/10' : ''}`}>
+                  <div className="group flex items-center gap-2 rounded-lg px-2 py-1 text-sm hover:bg-ink/5">
+                    <button
+                      type="button"
+                      title="Changer de catégorie"
+                      aria-expanded={picking}
+                      onClick={() => setMoving(picking ? null : { group: index, title: subject.title })}
+                      className="flex-1 cursor-pointer text-left"
+                    >
+                      {subject.title}
+                    </button>
                     {subject.unit && (
                       <span className="rounded bg-teal/15 px-1 text-[0.6rem] font-black text-teal-deep uppercase" title={subject.unit}>
                         traité
@@ -456,7 +482,26 @@ export function SujetsEditor() {
                       ✕
                     </button>
                   </div>
-                ))}
+                  {picking && (
+                    <div className="flex flex-wrap items-center gap-1.5 px-2 pt-0.5 pb-2">
+                      <span className="text-xs font-bold text-ink-soft">Déplacer vers :</span>
+                      {groups.map((target, to) =>
+                        to === index ? null : (
+                          <button
+                            key={to}
+                            type="button"
+                            onClick={() => moveSubject(index, subject, to)}
+                            className="rounded-full border-2 border-line px-2.5 py-0.5 text-xs font-bold hover:border-teal hover:text-teal-deep"
+                          >
+                            {target.title}
+                          </button>
+                        ),
+                      )}
+                    </div>
+                  )}
+                  </div>
+                  )
+                })}
               </div>
             </details>
           )
