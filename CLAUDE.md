@@ -47,7 +47,13 @@ l'épreuve :
     arguments déployés pour les défendre. Chez Marx, la piste s'ouvre sur le
     cours tiré de l'article « Karl Marx » de la SEP (`sep-marx1` à
     `sep-marx4`, quatre unités indépendantes, sans groupe), écrit avec la
-    skill `cours-sep`.
+    skill `cours-sep`, puis suit le cours magistral d'agrégation sur Marx
+    (de l'aliénation des *Manuscrits de 1844* aux *Grundrisse*), d'après les
+    transcriptions de ses séances : `ali1`, `ali2`… dans l'ordre des séances,
+    sans mention du cours dans les titres, citations des *Manuscrits* en GF
+    et des *Grundrisse* dans l'édition de l'utilisateur, repères du manuscrit
+    de Marx. Deux unités-textes viendront ensuite sur les passages lus de
+    suite (le travail aliéné ; le travail comme non-capital, III-9/10).
   - **Repérage** : se repérer dans les différentes œuvres, savoir où se
     situe tel texte clef, etc. Une œuvre s'y traite en unité-œuvre (voir
     plus bas). Chez Plotin, la piste est l'index des 54 traités : chaque
