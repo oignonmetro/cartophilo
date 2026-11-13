@@ -517,6 +517,11 @@ la phrase dans une copie**, et c'est le commentaire qui dit ce qui compte.
 3. **Le groupe qui porte le sens**, pas un mot isolé qui en dépend : « qui
    leur est propre » (l'automotricité) plutôt que « mouvement considérable » ;
    « arrachés à leurs parents » (l'image) plutôt que « dès la naissance ».
+   Même piège avec un nom composé : un nom très général (individu, personne,
+   être, essence, ensemble) qui précède ou suit le mot le plus distinctif ne
+   reste pas hors du trou comme un simple habillage, il fait partie du nom
+   complet de la notion (« l'ensemble des rapports sociaux », pas
+   « rapports sociaux » après « l'ensemble des ___ »).
 4. **Pas de trou qui se devine** : un mot que le contexte ou une symétrie
    donne (« subjectif » après « purement objective », « la vertu morale »
    après « la vertu intellectuelle ») ; s'il compte, il partage sa carte avec

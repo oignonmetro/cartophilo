@@ -118,7 +118,21 @@ sur `arvie1`, le 2026-11-06) :
 - **le trou sur le groupe qui compte**, pas sur son mot le plus faible :
   « le ___ (*alloiôsis*) », réponse « changement qualitatif », plutôt que « le
   changement ___ » ; « entre ___ », réponse « la nature et l'art », plutôt que
-  le pôle secondaire « l'animé et l'___ ».
+  le pôle secondaire « l'animé et l'___ ». **Dès que `answer` nomme une
+  notion ou une formule à plusieurs mots qui ne se reconnaît que prise
+  ensemble** (un concept et son qualificatif : « individu égoïste »,
+  « personne morale », « l'être générique » ; une formule citée :
+  « l'ensemble des rapports sociaux »), **le trou couvre le groupe entier**,
+  y compris son premier mot quand celui-ci, pris seul, semble trop général ou
+  trop faible pour mériter d'être caché (« individu », « personne », « être »,
+  « essence », « ensemble ») : ce mot fait partie du nom, pas de l'habillage
+  de la phrase qui l'amène. Le test : isolé, `answer` serait-il reconnu comme
+  le nom complet de la chose, ou seulement comme un fragment qui ne prend
+  sens qu'avec les mots laissés hors du trou ? Dans le second cas, élargir le
+  trou. Ainsi, pour la formule des *Thèses sur Feuerbach*, tester
+  « l'essence humaine est ___ », réponse « l'ensemble des rapports sociaux »,
+  jamais « l'ensemble des ___ », réponse « rapports sociaux » (retouche de
+  l'utilisateur sur `ali1-l2`, 2026-11-13).
 
 ## Ce qu'on interroge
 

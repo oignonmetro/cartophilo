@@ -500,7 +500,15 @@ la mettre en mouvement, et celui-ci d'un autre encore… »).
   moins évident : « Diotime » plutôt que « *Banquet* », « maison » plutôt que
   « pierres », « *Doryphore* de Polyclète » en entier.
 - **La locution entière, pas un mot isolé** : « un autre point de départ »,
-  « en lui-même », « avare de lui-même », « provient de la réalité ».
+  « en lui-même », « avare de lui-même », « provient de la réalité ». Le
+  piège : un nom très général (individu, personne, être, essence, ensemble)
+  qui précède ou suit le mot le plus distinctif, laissé hors du trou comme un
+  simple habillage alors qu'il fait partie du nom complet de la notion. Le
+  test : isolé, `answer` serait-il reconnu comme le nom complet de la chose
+  (« l'ensemble des rapports sociaux »), ou seulement comme un fragment qui
+  ne prend sens qu'avec les mots laissés dans `sentence` (« rapports
+  sociaux » après « l'ensemble des ___ ») ? (précisé le 2026-11-13, voir
+  `content/philosophie.md`).
 - **Le pivot de chaque étape**, la raison et pas seulement la conclusion.
 - **Le vocabulaire grec** des notions et des affects (*ekplēxis*, *thambos*,
   *aphaíresis*, *ópsis ḗdē génomenos*, *agōn eschatos*).
