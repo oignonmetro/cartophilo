@@ -474,6 +474,10 @@ const ENGLISH_FUNCTION_WORDS_IN_MARKUP =
 // (`*Passions and Persuasion in Aristotle's Rhetoric*, 2015`) : l'italique y
 // est de rigueur, et l'anglais légitime. Retiré avant le contrôle précédent.
 const ENGLISH_TITLE_WITH_YEAR = /\*[^*]+\*(?=,? \(?\d{4}\b)/gu
+// Une citation anglaise que le texte étudié donne lui-même en anglais, en italique
+// (Marx, Introduction de 1843, §22 : *that is the Question*) : légitime dans le texte
+// cité comme dans les cartes-citation qui le reprennent. Retirée avant le contrôle.
+const ENGLISH_CITATION_IN_SOURCE = /\*that is the Question\*/giu
 
 /** Une réponse au-delà de cette longueur sent la paraphrase, pas le terme ou la référence précise. */
 const ANSWER_WORD_LIMIT = 8
@@ -516,7 +520,7 @@ export function philosophyContentRemarks(learning: string, lessons: readonly Phi
     const found = STRAY_ENGLISH_TERMS.find((term) => new RegExp(`\\b${term}\\b`).test(text))
     if (found) {
       remarks.push(`${where} : ${field} contient « ${found} », de l'anglais déjà rencontré à tort ici ; traduisez ou supprimez`)
-    } else if (ENGLISH_FUNCTION_WORDS_IN_MARKUP.test(text.replace(ENGLISH_TITLE_WITH_YEAR, ''))) {
+    } else if (ENGLISH_FUNCTION_WORDS_IN_MARKUP.test(text.replace(ENGLISH_TITLE_WITH_YEAR, '').replace(ENGLISH_CITATION_IN_SOURCE, ''))) {
       remarks.push(`${where} : ${field} porte un mot-outil anglais à l'intérieur d'un marqueur \`*italique*\` ou \`forme\` ; ces marqueurs ne servent jamais à une glose anglaise`)
     }
   }
