@@ -44,6 +44,12 @@ Chaque unité suit le même schéma :
    conclusion d'un essai. Pour faire apprendre un autre texte, préférer
    l'ouverture.
 
+**« Ouverture » et « prolongement » sont réservés aux élargissements** à
+propos de l'ensemble du texte, hors de l'extrait. Le dernier paragraphe de
+l'extrait ne s'appelle jamais ainsi, ni dans son libellé, ni dans son titre, ni
+dans les commentaires de l'unité : c'est un paragraphe comme les autres
+(« conclusion », « dernier moment »…).
+
 Une leçon de texte sans `text` qui n'est ni une introduction ni un
 prolongement est signalée par `npm run content:check` : elle disparaîtrait de
 « Lire le texte ».
