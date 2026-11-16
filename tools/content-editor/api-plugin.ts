@@ -723,10 +723,11 @@ export function contentEditorApi(): Plugin {
           return
         }
 
-        // Déplacement d'une leçon dans son unité : `to` est sa nouvelle position.
+        // Déplacement d'une leçon : `to` est sa nouvelle position, dans son
+        // unité ou, si `toUnit` est donné, dans une autre unité du même cours.
         if (req.method === 'PATCH') {
           try {
-            const body = JSON.parse(await readBody(req)) as { to?: number }
+            const body = JSON.parse(await readBody(req)) as { to?: number; toUnit?: string }
             const doc = readYamlDoc(unitFile)
             const idx = findLessonIndex(doc, lesson)
             if (idx === -1) {
@@ -735,6 +736,51 @@ export function contentEditorApi(): Plugin {
             }
             const lessonsSeq = doc.getIn(['lessons'])
             if (!(lessonsSeq instanceof YAMLSeq)) throw new Error(`"${unit}" n'a pas de tableau lessons`)
+
+            if (body.toUnit && body.toUnit !== unit) {
+              const targetFile = join(contentDir, course, 'units', `${body.toUnit}.yaml`)
+              if (!existsSync(targetFile)) {
+                sendJson(res, 404, { error: `unité "${body.toUnit}" introuvable` })
+                return
+              }
+              if (findTrackKindForUnit(course, unit) !== findTrackKindForUnit(course, body.toUnit)) {
+                sendJson(res, 400, { error: 'les deux unités ne sont pas de la même nature' })
+                return
+              }
+              if (lessonsSeq.items.length <= 1) {
+                sendJson(res, 400, {
+                  error: "impossible de retirer la dernière leçon d'une unité : supprimez l'unité entière",
+                })
+                return
+              }
+              const targetDoc = readYamlDoc(targetFile)
+              const targetSeq = targetDoc.getIn(['lessons'])
+              if (!(targetSeq instanceof YAMLSeq)) throw new Error(`"${body.toUnit}" n'a pas de tableau lessons`)
+              const targetIds = targetSeq.items.map((item) => (isMap(item) ? String(item.get('id')) : ''))
+              const to = Number.isInteger(Number(body.to)) ? Math.min(Math.max(Number(body.to), 0), targetSeq.items.length) : targetSeq.items.length
+              const [moved] = lessonsSeq.items.splice(idx, 1)
+              // Un id déjà pris dans l'unité d'arrivée : la leçon en reçoit un neuf, et ses points avec.
+              if (isMap(moved) && targetIds.includes(lesson)) {
+                const newId = nextLessonId(body.toUnit, targetIds)
+                moved.set('id', newId)
+                for (const key of ['points', 'vocab', 'verbs']) {
+                  const items = moved.get(key)
+                  if (!(items instanceof YAMLSeq)) continue
+                  for (const item of items.items) {
+                    if (!isMap(item)) continue
+                    const pid = String(item.get('id') ?? '')
+                    if (pid.startsWith(`${lesson}-`)) item.set('id', newId + pid.slice(lesson.length))
+                  }
+                }
+              }
+              targetSeq.items.splice(to, 0, moved)
+              // Le fichier d'arrivée d'abord : en cas d'échec, la leçon n'est pas perdue.
+              writeYamlDoc(targetFile, targetDoc)
+              writeYamlDoc(unitFile, doc)
+              sendJson(res, 200, { ok: true })
+              return
+            }
+
             const to = Number(body.to)
             if (!Number.isInteger(to) || to < 0 || to >= lessonsSeq.items.length) {
               sendJson(res, 400, { error: 'position invalide' })

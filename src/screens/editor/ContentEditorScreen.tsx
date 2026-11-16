@@ -313,22 +313,33 @@ export default function ContentEditorScreen() {
   /** Glisser-déposer d'une leçon à une autre position de sa unité. */
   const [drag, setDrag] = useState<{ course: string; unit: string; lesson: string } | null>(null)
   const [dropIndex, setDropIndex] = useState<number | null>(null)
+  const [dropUnit, setDropUnit] = useState<string | null>(null)
   const moveLesson = useCallback(
-    async (course: string, unit: string, lesson: string, to: number) => {
+    async (course: string, unit: string, lesson: string, to: number, toUnit?: string) => {
       try {
         const res = await fetch(`/api/lesson?course=${course}&unit=${unit}&lesson=${lesson}`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ to }),
+          body: JSON.stringify({ to, toUnit }),
         })
         const data = await res.json()
         if (!res.ok) throw new Error(data.error ?? res.statusText)
+        // Passée dans une autre unité, la leçon ouverte (son id a pu changer) se referme.
+        if (
+          toUnit &&
+          toUnit !== unit &&
+          selection?.course === course &&
+          selection?.unit === unit &&
+          selection?.lesson === lesson
+        ) {
+          setSelection(null)
+        }
         await loadTree()
       } catch (err) {
         window.alert(`Impossible de déplacer la leçon : ${(err as Error).message}`)
       }
     },
-    [loadTree],
+    [loadTree, selection],
   )
 
   const save = useCallback(async (): Promise<boolean> => {
@@ -506,7 +517,27 @@ export default function ContentEditorScreen() {
                       {groupUnits(track.units).map((entry, index) => {
                         const units = entry.units.map((unit) => (
                             <details key={unit.id} className="mb-0.5">
-                              <summary className="group flex cursor-pointer items-center gap-1 rounded-lg px-2 py-1 text-xs font-bold">
+                              <summary
+                                onDragOver={(event) => {
+                                  if (!drag || drag.course !== course.id || drag.unit === unit.id) return
+                                  event.preventDefault()
+                                  setDropIndex(null)
+                                  setDropUnit(unit.id)
+                                }}
+                                onDragLeave={() => setDropUnit((current) => (current === unit.id ? null : current))}
+                                onDrop={(event) => {
+                                  if (!drag || drag.course !== course.id || drag.unit === unit.id) return
+                                  event.preventDefault()
+                                  void moveLesson(drag.course, drag.unit, drag.lesson, unit.lessons.length, unit.id)
+                                  setDrag(null)
+                                  setDropIndex(null)
+                                  setDropUnit(null)
+                                }}
+                                title={drag ? 'Déposer ici : la leçon passe à la fin de cette unité' : undefined}
+                                className={`group flex cursor-pointer items-center gap-1 rounded-lg px-2 py-1 text-xs font-bold ${
+                                  drag && dropIndex === null && dropUnit === unit.id ? 'bg-teal/15' : ''
+                                }`}
+                              >
                                 <span className="flex-1">{unit.title.replace(/`/g, '')}</span>
                                 {unit.isText && (
                                   <span
@@ -547,8 +578,9 @@ export default function ContentEditorScreen() {
                                     selection?.course === course.id &&
                                     selection?.unit === unit.id &&
                                     selection?.lesson === lesson.id
-                                  const sameUnit = drag?.course === course.id && drag.unit === unit.id
-                                  const isTarget = sameUnit && dropIndex === lessonIndex && drag.lesson !== lesson.id
+                                  const sameCourse = drag?.course === course.id
+                                  const sameUnit = sameCourse && drag.unit === unit.id
+                                  const isTarget = sameCourse && dropIndex === lessonIndex && drag.lesson !== lesson.id && dropUnit === unit.id
                                   return (
                                     <div
                                       key={lesson.id}
@@ -558,25 +590,31 @@ export default function ContentEditorScreen() {
                                         setDrag({ course: course.id, unit: unit.id, lesson: lesson.id })
                                       }}
                                       onDragOver={(event) => {
-                                        if (!sameUnit) return
+                                        if (!sameCourse) return
                                         event.preventDefault()
                                         setDropIndex(lessonIndex)
+                                        setDropUnit(unit.id)
                                       }}
                                       onDrop={(event) => {
                                         event.preventDefault()
+                                        event.stopPropagation()
                                         if (sameUnit) void moveLesson(drag.course, drag.unit, drag.lesson, lessonIndex)
+                                        else if (sameCourse)
+                                          void moveLesson(drag.course, drag.unit, drag.lesson, lessonIndex, unit.id)
                                         setDrag(null)
                                         setDropIndex(null)
+                                        setDropUnit(null)
                                       }}
                                       onDragEnd={() => {
                                         setDrag(null)
                                         setDropIndex(null)
+                                        setDropUnit(null)
                                       }}
                                       className={`group flex cursor-grab items-center gap-1 border-y-2 border-transparent ${
                                         drag?.lesson === lesson.id ? 'opacity-40' : ''
                                       } ${
                                         isTarget
-                                          ? unit.lessons.findIndex((l) => l.id === drag.lesson) < lessonIndex
+                                          ? sameUnit && unit.lessons.findIndex((l) => l.id === drag.lesson) < lessonIndex
                                             ? 'border-b-teal'
                                             : 'border-t-teal'
                                           : ''
