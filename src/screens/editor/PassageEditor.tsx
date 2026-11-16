@@ -1,9 +1,9 @@
-import { useRef, useState } from 'react'
-import { PassageText } from '@/components/PassageText'
-import { isTextlessPassageLabel } from '@/content/schema'
-import { inputClass } from './Modal'
-import { citationCardFromSelection, isCitation } from './textUnit'
-import type { PassageDTO, PointDTO } from './types'
+import { useRef, useState } from "react";
+import { PassageText } from "@/components/PassageText";
+import { isTextlessPassageLabel } from "@/content/schema";
+import { inputClass } from "./Modal";
+import { citationCardFromSelection, isCitation } from "./textUnit";
+import type { PassageDTO, PointDTO } from "./types";
 
 /**
  * Onglet « Texte » d'une leçon de texte : son repère, le paragraphe cité tel
@@ -22,59 +22,142 @@ export function PassageEditor({
   onAddCard,
   onShowCards,
 }: {
-  title: string
-  onTitleChange: (title: string) => void
-  passage: PassageDTO
-  onChange: (passage: PassageDTO) => void
-  points: PointDTO[]
-  onAddCard: (card: { sentence: string; answer: string }) => void
-  onShowCards: () => void
+  title: string;
+  onTitleChange: (title: string) => void;
+  passage: PassageDTO;
+  onChange: (passage: PassageDTO) => void;
+  points: PointDTO[];
+  onAddCard: (card: { sentence: string; answer: string }) => void;
+  onShowCards: () => void;
 }) {
-  const textareaRef = useRef<HTMLTextAreaElement>(null)
-  const [selection, setSelection] = useState<{ start: number; end: number } | null>(null)
-  const [lastAdded, setLastAdded] = useState<string | null>(null)
-  const textless = isTextlessPassageLabel(passage.label)
-  const isIntro = passage.label.trim().toLowerCase() === 'introduction'
-  const citations = points.filter(isCitation).length
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const [selection, setSelection] = useState<{
+    start: number;
+    end: number;
+  } | null>(null);
+  const [lastAdded, setLastAdded] = useState<string | null>(null);
+  const textless = isTextlessPassageLabel(passage.label);
+  const isIntro = passage.label.trim().toLowerCase() === "introduction";
+  const citations = points.filter(isCitation).length;
 
   function readSelection() {
-    const el = textareaRef.current
-    if (!el) return
-    setSelection(el.selectionEnd > el.selectionStart ? { start: el.selectionStart, end: el.selectionEnd } : null)
+    const el = textareaRef.current;
+    if (!el) return;
+    setSelection(
+      el.selectionEnd > el.selectionStart
+        ? { start: el.selectionStart, end: el.selectionEnd }
+        : null,
+    );
   }
 
-  function addCard(scope: 'sentence' | 'paragraph') {
-    if (!selection) return
-    const card = citationCardFromSelection(passage.text, selection.start, selection.end, scope)
-    if (!card) return
-    onAddCard(card)
-    setLastAdded(card.answer)
+  function addCard(scope: "sentence" | "paragraph") {
+    if (!selection) return;
+    const card = citationCardFromSelection(
+      passage.text,
+      selection.start,
+      selection.end,
+      scope,
+    );
+    if (!card) return;
+    onAddCard(card);
+    setLastAdded(card.answer);
   }
 
-  const selected = selection ? passage.text.slice(selection.start, selection.end).trim() : ''
+  /**
+   * Met la sélection en forme avec les marqueurs de `content/README.md`
+   * (`*italique*`, `**gras**`, `__souligné__`), comme le texte original :
+   * un nouvel appui sur le même bouton retire le marqueur. Les espaces qui
+   * bordent la sélection restent dehors, un marqueur collé à une espace ne
+   * s'appliquant pas.
+   */
+  function format(marker: string) {
+    const el = textareaRef.current;
+    if (!el || el.selectionEnd <= el.selectionStart) return;
+    const text = passage.text;
+    const raw = text.slice(el.selectionStart, el.selectionEnd);
+    const lead = raw.length - raw.trimStart().length;
+    const trail = raw.length - raw.trimEnd().length;
+    const start = el.selectionStart + lead;
+    const end = el.selectionEnd - trail;
+    if (end <= start) return;
+    const inner = text.slice(start, end);
+    const m = marker.length;
+    let next: string;
+    let from = start;
+    let to = end;
+    if (
+      inner.length > 2 * m &&
+      inner.startsWith(marker) &&
+      inner.endsWith(marker) &&
+      !(marker === "*" && inner[1] === "*")
+    ) {
+      const bare = inner.slice(m, inner.length - m);
+      next = text.slice(0, start) + bare + text.slice(end);
+      to = start + bare.length;
+    } else if (
+      text.slice(start - m, start) === marker &&
+      text.slice(end, end + m) === marker &&
+      !(marker === "*" && (text[start - 2] === "*" || text[end + 1] === "*"))
+    ) {
+      next = text.slice(0, start - m) + inner + text.slice(end + m);
+      from = start - m;
+      to = end - m;
+    } else {
+      next = text.slice(0, start) + marker + inner + marker + text.slice(end);
+      from = start + m;
+      to = end + m;
+    }
+    onChange({ ...passage, text: next });
+    requestAnimationFrame(() => {
+      el.focus();
+      el.setSelectionRange(from, to);
+      readSelection();
+    });
+  }
+
+  function onTextKeyDown(event: React.KeyboardEvent<HTMLTextAreaElement>) {
+    if (!(event.ctrlKey || event.metaKey) || event.shiftKey || event.altKey)
+      return;
+    const marker = { b: "**", i: "*", u: "__" }[event.key.toLowerCase()];
+    if (!marker) return;
+    event.preventDefault();
+    format(marker);
+  }
+
+  const selected = selection
+    ? passage.text.slice(selection.start, selection.end).trim()
+    : "";
 
   return (
     <div className="flex min-h-0 flex-1">
       <div className="flex min-h-0 flex-1 flex-col gap-3 border-r-2 border-line px-4 py-3">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-xs font-black tracking-wide text-ink-soft uppercase">Titre</span>
+          <span className="text-xs font-black tracking-wide text-ink-soft uppercase">
+            Titre
+          </span>
           <input
             value={title}
-            onChange={(event) => onTitleChange(event.target.value.replace(/\n/g, ' '))}
+            onChange={(event) =>
+              onTitleChange(event.target.value.replace(/\n/g, " "))
+            }
             placeholder="Titre de la leçon"
             className={`${inputClass} min-w-64 flex-1 py-1 font-bold`}
           />
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-xs font-black tracking-wide text-ink-soft uppercase">Repère</span>
+          <span className="text-xs font-black tracking-wide text-ink-soft uppercase">
+            Repère
+          </span>
           <input
             value={passage.label}
-            onChange={(event) => onChange({ ...passage, label: event.target.value })}
+            onChange={(event) =>
+              onChange({ ...passage, label: event.target.value })
+            }
             placeholder="§1, l. 1-3, 1178a9-22…"
             className={`${inputClass} w-44 py-1`}
           />
-          {['Introduction', 'Prolongement', 'Ouverture'].map((chip) => (
+          {["Introduction", "Prolongement", "Ouverture"].map((chip) => (
             <button
               key={chip}
               type="button"
@@ -93,10 +176,14 @@ export function PassageEditor({
          * quel ouvrage vient ce paragraphe.
          */}
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-xs font-black tracking-wide text-ink-soft uppercase">Référence</span>
+          <span className="text-xs font-black tracking-wide text-ink-soft uppercase">
+            Référence
+          </span>
           <input
-            value={passage.source ?? ''}
-            onChange={(event) => onChange({ ...passage, source: event.target.value || undefined })}
+            value={passage.source ?? ""}
+            onChange={(event) =>
+              onChange({ ...passage, source: event.target.value || undefined })
+            }
             placeholder="Facultatif : l'ouvrage cité, si l'unité en articule plusieurs"
             className={`${inputClass} min-w-64 flex-1 py-1`}
           />
@@ -106,23 +193,71 @@ export function PassageEditor({
           <p className="rounded-xl bg-ink/4 p-4 text-sm text-ink-soft">
             {isIntro ? (
               <>
-                Leçon d’introduction : pas de texte cité. Elle prépare la lecture par son <strong>rappel</strong>{' '}
-                (le problème, les notions, les débats) et ses <strong>cartes-explication</strong>.
+                Leçon d’introduction : pas de texte cité. Elle prépare la
+                lecture par son <strong>rappel</strong> (le problème, les
+                notions, les débats) et ses <strong>cartes-explication</strong>.
               </>
             ) : (
               <>
-                Leçon de prolongement : pas de texte cité. Elle poursuit la lecture hors du texte par son{' '}
-                <strong>rappel</strong> (un exposé de fond, une notion voisine, la suite du commentaire) et ses{' '}
-                <strong>cartes-explication</strong>. Pour citer un autre texte, choisissez plutôt « Ouverture ».
+                Leçon de prolongement : pas de texte cité. Elle poursuit la
+                lecture hors du texte par son <strong>rappel</strong> (un exposé
+                de fond, une notion voisine, la suite du commentaire) et ses{" "}
+                <strong>cartes-explication</strong>. Pour citer un autre texte,
+                choisissez plutôt « Ouverture ».
               </>
             )}
           </p>
         ) : (
           <>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs font-black tracking-wide text-ink-soft uppercase">
+                Mise en forme
+              </span>
+              {[
+                {
+                  marker: "**",
+                  label: "G",
+                  title: "Gras (Ctrl+B)",
+                  className: "font-black",
+                },
+                {
+                  marker: "*",
+                  label: "I",
+                  title: "Italique (Ctrl+I)",
+                  className: "italic",
+                },
+                {
+                  marker: "__",
+                  label: "S",
+                  title: "Souligné (Ctrl+U)",
+                  className: "underline",
+                },
+              ].map((button) => (
+                <button
+                  key={button.marker}
+                  type="button"
+                  title={button.title}
+                  aria-label={button.title}
+                  disabled={!selection}
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => format(button.marker)}
+                  className={`h-7 w-7 rounded-lg border-2 border-line bg-paper font-serif text-sm text-ink-soft disabled:opacity-40 ${button.className}`}
+                >
+                  {button.label}
+                </button>
+              ))}
+              <span className="text-xs text-ink-faint">
+                Sélectionnez des mots : italique des mots de l'original, titres,
+                mots soulignés.
+              </span>
+            </div>
             <textarea
               ref={textareaRef}
+              onKeyDown={onTextKeyDown}
               value={passage.text}
-              onChange={(event) => onChange({ ...passage, text: event.target.value })}
+              onChange={(event) =>
+                onChange({ ...passage, text: event.target.value })
+              }
               onSelect={readSelection}
               onKeyUp={readSelection}
               onMouseUp={readSelection}
@@ -132,17 +267,20 @@ export function PassageEditor({
             />
             <div className="flex flex-col gap-2 rounded-xl bg-ink/4 p-3">
               <p className="text-xs text-ink-soft">
-                <strong>Créer une carte-citation :</strong> sélectionnez dans le texte ce qu’il faudra savoir
-                restituer (la thèse d’abord, pas un mot qui se devine), puis choisissez ce que la carte citera.
+                <strong>Créer une carte-citation :</strong> sélectionnez dans le
+                texte ce qu’il faudra savoir restituer (la thèse d’abord, pas un
+                mot qui se devine), puis choisissez ce que la carte citera.
               </p>
-              <p className={`truncate text-xs ${selected ? 'font-bold text-ink' : 'text-ink-faint'}`}>
-                {selected ? `Trou : « ${selected} »` : 'Aucune sélection'}
+              <p
+                className={`truncate text-xs ${selected ? "font-bold text-ink" : "text-ink-faint"}`}
+              >
+                {selected ? `Trou : « ${selected} »` : "Aucune sélection"}
               </p>
               <div className="flex flex-wrap items-center gap-2">
                 <button
                   type="button"
                   disabled={!selected}
-                  onClick={() => addCard('sentence')}
+                  onClick={() => addCard("sentence")}
                   className="rounded-lg border-2 border-teal-deep bg-teal px-3 py-1.5 text-xs font-bold text-white disabled:opacity-40"
                 >
                   Trouer dans sa phrase
@@ -150,7 +288,7 @@ export function PassageEditor({
                 <button
                   type="button"
                   disabled={!selected}
-                  onClick={() => addCard('paragraph')}
+                  onClick={() => addCard("paragraph")}
                   className="rounded-lg border-2 border-line bg-paper px-3 py-1.5 text-xs font-bold text-ink-soft disabled:opacity-40"
                 >
                   Trouer dans tout le paragraphe
@@ -158,8 +296,12 @@ export function PassageEditor({
               </div>
               {lastAdded && (
                 <p className="text-xs text-teal-deep">
-                  Carte ajoutée (trou : « {lastAdded} »).{' '}
-                  <button type="button" onClick={onShowCards} className="font-bold underline">
+                  Carte ajoutée (trou : « {lastAdded} »).{" "}
+                  <button
+                    type="button"
+                    onClick={onShowCards}
+                    className="font-bold underline"
+                  >
                     Voir les cartes
                   </button>
                 </p>
@@ -171,20 +313,22 @@ export function PassageEditor({
 
       <div className="flex min-h-0 flex-1 flex-col overflow-y-auto bg-ink/3 px-6 py-6">
         <p className="mb-3 text-center text-xs font-black tracking-widest text-ink-faint uppercase">
-          Aperçu · {citations} carte{citations > 1 ? 's' : ''}-citation
+          Aperçu · {citations} carte{citations > 1 ? "s" : ""}-citation
         </p>
         <div className="card-3d mx-auto flex w-full max-w-lg flex-col gap-3 self-center px-6 py-6">
           <p className="text-xs font-black tracking-widest text-violet uppercase">
             {passage.source && `${passage.source} · `}
-            {textless ? passage.label : `Le texte · ${passage.label || '…'}`}
+            {textless ? passage.label : `Le texte · ${passage.label || "…"}`}
           </p>
           {!textless && passage.text.trim() ? (
             <PassageText text={passage.text} />
           ) : (
-            <p className="text-sm text-ink-faint">{textless ? 'Pas de texte cité.' : 'Le texte apparaîtra ici.'}</p>
+            <p className="text-sm text-ink-faint">
+              {textless ? "Pas de texte cité." : "Le texte apparaîtra ici."}
+            </p>
           )}
         </div>
       </div>
     </div>
-  )
+  );
 }

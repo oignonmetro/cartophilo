@@ -44,6 +44,12 @@ Chaque unité suit le même schéma :
    conclusion d'un essai. Pour faire apprendre un autre texte, préférer
    l'ouverture.
 
+**La mise en forme du texte cité** suit celle de l'original : `*italique*`,
+`**gras**`, `__souligné__` s'écrivent dans `text` comme dans un rappel, et
+s'affichent partout où le texte est lu. Dans l'éditeur, l'onglet Texte a les
+boutons G, I, S (ou Ctrl+B, Ctrl+I, Ctrl+U) sur la sélection ; un second appui
+retire le marqueur.
+
 **« Ouverture » et « prolongement » sont réservés aux élargissements** à
 propos de l'ensemble du texte, hors de l'extrait. Le dernier paragraphe de
 l'extrait ne s'appelle jamais ainsi, ni dans son libellé, ni dans son titre, ni
