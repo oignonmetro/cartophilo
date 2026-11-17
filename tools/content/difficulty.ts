@@ -468,8 +468,22 @@ const STRAY_ENGLISH_TERMS = [
 // Frontières de mot en Unicode (`\p{L}`), pas `\b` : `\b` ne connaît que
 // l'ASCII, et prenait le début de `theôria` (« the » suivi de « ô ») pour
 // l'article anglais.
-const ENGLISH_FUNCTION_WORDS_IN_MARKUP =
-  /(?:\*|`)[^*`]*(?<!\p{L})(?:the|and|of|is|are|with|which|that)(?!\p{L})[^*`]*(?:\*|`)/iu
+const ENGLISH_FUNCTION_WORD = /(?<!\p{L})(?:the|and|of|is|are|with|which|that)(?!\p{L})/iu
+// Les segments réellement marqués, ouvrant et fermant appariés : `forme` et
+// *italique* (pas le **gras**). L'ancienne expression allait d'un astérisque
+// à l'autre, et prenait aussi le texte entre la fin d'un marqueur et le début
+// du suivant (« **Mort**{/sky}, l'Uniform Determination of Death Act… »).
+const MARKED_SPANS = /`([^`\n]+)`|(?<!\*)\*(?![\s*])([^*\n]+?)(?<!\s)\*(?!\*)/gu
+// Un titre anglais en italique, sans année (*Biology and Philosophy*,
+// *The Selfish Gene*) : il commence par une majuscule et tous ses mots
+// pleins en portent une ; une glose (*the organism as a whole*) n'en a pas.
+const isEnglishTitle = (span: string) =>
+  /^\p{Lu}/u.test(span) && span.split(/[\s:,]+/).filter((word) => word.length >= 4).every((word) => /^\p{Lu}/u.test(word))
+const hasEnglishGlossInMarkup = (text: string) =>
+  [...text.matchAll(MARKED_SPANS)].some((match) => {
+    const span = match[1] ?? match[2]
+    return ENGLISH_FUNCTION_WORD.test(span) && !isEnglishTitle(span)
+  })
 // Le titre d'un ouvrage anglais cité en référence, suivi de son année
 // (`*Passions and Persuasion in Aristotle's Rhetoric*, 2015`) : l'italique y
 // est de rigueur, et l'anglais légitime. Retiré avant le contrôle précédent.
@@ -520,7 +534,7 @@ export function philosophyContentRemarks(learning: string, lessons: readonly Phi
     const found = STRAY_ENGLISH_TERMS.find((term) => new RegExp(`\\b${term}\\b`).test(text))
     if (found) {
       remarks.push(`${where} : ${field} contient « ${found} », de l'anglais déjà rencontré à tort ici ; traduisez ou supprimez`)
-    } else if (ENGLISH_FUNCTION_WORDS_IN_MARKUP.test(text.replace(ENGLISH_TITLE_WITH_YEAR, '').replace(ENGLISH_CITATION_IN_SOURCE, ''))) {
+    } else if (hasEnglishGlossInMarkup(text.replace(ENGLISH_TITLE_WITH_YEAR, '').replace(ENGLISH_CITATION_IN_SOURCE, ''))) {
       remarks.push(`${where} : ${field} porte un mot-outil anglais à l'intérieur d'un marqueur \`*italique*\` ou \`forme\` ; ces marqueurs ne servent jamais à une glose anglaise`)
     }
   }
