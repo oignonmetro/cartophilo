@@ -121,6 +121,17 @@ export const passageSchema = z.object({
    * exemple) seraient indiscernables.
    */
   source: z.string().min(1).optional(),
+  /**
+   * L'intitulé de la partie du paragraphe que cite cette leçon, quand une
+   * explication très détaillée découpe un paragraphe en parties, « (1) »,
+   * « (2) »… (dans `label` : « §103 (1) »), et chaque partie en plusieurs
+   * leçons qui en citent chacune une portion à la suite (voir
+   * content/textes.md « Un paragraphe en parties »). « Lire le texte »
+   * regroupe alors les leçons consécutives de même repère sous ce seul
+   * intitulé, leurs portions mises bout à bout : le texte se relit d'un
+   * tenant, comme il est écrit.
+   */
+  part: z.string().min(1).optional(),
 })
 
 /**

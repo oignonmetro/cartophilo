@@ -201,6 +201,38 @@ export function isPassageLesson(lesson: Lesson): lesson is GrammarLesson & { pas
   return lesson.kind === 'grammar' && lesson.passage !== undefined
 }
 
+/** Une section de « Lire le texte » : un paragraphe, ou une partie de paragraphe faite de plusieurs leçons. */
+export interface TextSheetSection {
+  id: string
+  label: string
+  title: string
+  text: string
+  source?: string
+}
+
+/**
+ * Regroupe les leçons consécutives qui citent les portions d'une même partie
+ * de paragraphe (même repère, même ouvrage, et un intitulé de partie, voir
+ * `passageSchema.part`) : leurs portions se lisent bout à bout, sous
+ * l'intitulé de la partie. Une leçon sans `part` reste une section à elle,
+ * sous son propre titre, comme avant.
+ */
+export function groupParts(lessons: (GrammarLesson & { passage: Passage })[]): TextSheetSection[] {
+  const sections: TextSheetSection[] = []
+  let previous: Passage | undefined
+  for (const lesson of lessons) {
+    const { label, text = '', source, part } = lesson.passage
+    const last = sections[sections.length - 1]
+    if (last && part && previous?.part === part && previous.label === label && previous.source === source) {
+      last.text = `${last.text.trimEnd()} ${text.trimStart()}`
+    } else {
+      sections.push({ id: lesson.id, label, title: part ?? lesson.title, text, source })
+    }
+    previous = lesson.passage
+  }
+  return sections
+}
+
 /**
  * Une carte-citation cite le texte : elle porte un fragment, ou tient tout
  * entière entre « ». Une carte-explication peut s'ouvrir sur une citation

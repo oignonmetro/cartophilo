@@ -208,6 +208,15 @@ cartes-explication).
   pour l'épreuve peut être sauté.
 - **Fragments** : un paragraphe de plus de 80 mots environ se cite en
   plusieurs fragments (`1/3`, `2/3`, `3/3`), coupés aux fins de phrase.
+- **Paragraphe en parties** : quand l'utilisateur veut une explication très
+  détaillée d'un paragraphe long (chaque mot, chaque phrase, chaque
+  argument), le découper en parties `"§103 (1)"`, `"§103 (2)"`…, une par
+  moment de l'argument, et chaque partie en plusieurs leçons, une par
+  groupe de mots ou de phrases à expliquer : chaque leçon cite sa seule
+  portion dans `passage.text` et porte l'intitulé de sa partie dans
+  `passage.part` (voir `content/textes.md`, « Un paragraphe en parties » ;
+  modèle : `marx/units/n1863`). Vérifier que les portions mises bout à bout
+  redonnent le paragraphe exact.
 - **Introduction** : décider s'il faut des leçons d'introduction (§ 3). Oui
   dès que le texte est difficile, ou que le commentaire consacre une partie au
   problème, aux notions ou aux débats.

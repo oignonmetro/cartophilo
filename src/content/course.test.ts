@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { LibraryCourse, Unit, Vocab } from './schema'
-import { citationsOnlyLesson, courseLabel, findUnit, groupCoursesByLanguage, lessonCountLabel, unitLetters } from './course'
+import { citationsOnlyLesson, courseLabel, findUnit, groupCoursesByLanguage, groupParts, lessonCountLabel, unitLetters } from './course'
 import type { ManifestEntry } from './schema'
 
 function vocab(id: string): Vocab {
@@ -201,5 +201,37 @@ describe('citationsOnlyLesson', () => {
   it("laisse entière une leçon sans carte-citation, et ce qui n'est pas une leçon de texte", () => {
     expect(citationsOnlyLesson(text([point('b', 'La thèse est ___.')], 'Introduction'))).toBeNull()
     expect(citationsOnlyLesson(lesson('v1-l1'))).toBeNull()
+  })
+})
+
+describe('groupParts', () => {
+  const part = (id: string, label: string, text: string, partTitle?: string, source?: string) => ({
+    kind: 'grammar' as const,
+    id,
+    title: `Leçon ${id}`,
+    passage: { label, text, part: partTitle, source },
+    points: [],
+  })
+
+  it("met bout à bout les portions consécutives d'une même partie, sous son intitulé", () => {
+    const sections = groupParts([
+      part('a', '§103 (1)', 'Première phrase.', 'Le renversement'),
+      part('b', '§103 (1)', 'Deuxième phrase.', 'Le renversement'),
+      part('c', '§103 (2)', 'Troisième phrase.', 'La nécessité'),
+    ])
+    expect(sections.map((s) => [s.label, s.title, s.text])).toEqual([
+      ['§103 (1)', 'Le renversement', 'Première phrase. Deuxième phrase.'],
+      ['§103 (2)', 'La nécessité', 'Troisième phrase.'],
+    ])
+  })
+
+  it('laisse séparées les leçons sans partie, et ne fusionne pas deux ouvrages', () => {
+    const sections = groupParts([
+      part('a', '§1', 'Un.'),
+      part('b', '§1', 'Deux.'),
+      part('c', '§1 (1)', 'Trois.', 'P', 'A'),
+      part('d', '§1 (1)', 'Quatre.', 'P', 'B'),
+    ])
+    expect(sections.map((s) => s.title)).toEqual(['Leçon a', 'Leçon b', 'P', 'P'])
   })
 })

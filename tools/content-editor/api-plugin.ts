@@ -73,6 +73,8 @@ interface PassageDTO {
   text: string
   /** L'ouvrage cité, seulement utile dans une unité qui en articule plusieurs (voir `passageSchema.source`). */
   source?: string
+  /** Intitulé de la partie d'un paragraphe découpé en parties (voir `passageSchema.part`). */
+  part?: string
 }
 
 /** Une leçon à créer d'un coup, avec son contenu (voir `POST /api/lessons`). */
@@ -292,6 +294,7 @@ function passageNode(passage: PassageDTO): YAMLMap {
     map.set('text', scalar)
   }
   if (passage.source?.trim()) map.set('source', dq(passage.source.trim()))
+  if (passage.part?.trim()) map.set('part', dq(passage.part.trim()))
   return map
 }
 
@@ -648,6 +651,7 @@ export function contentEditorApi(): Plugin {
                     label: String(passage.label ?? ''),
                     text: String(passage.text ?? ''),
                     source: passage.source ? String(passage.source) : undefined,
+                    part: passage.part ? String(passage.part) : undefined,
                   }
                 : null,
               kind,

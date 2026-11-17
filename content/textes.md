@@ -180,6 +180,31 @@ l'extrait est fragmenté sans suivre les alinéas du texte, prend un repère qui
 ne prétend à aucune réalité textuelle — `"Fragment 1"`, `"Fragment 2"`… —
 plutôt qu'un faux `§n`.
 
+## Un paragraphe en parties
+
+Une explication très détaillée d'un paragraphe long (le Chapitre VI de Marx,
+`n1863`) le découpe en **parties** numérotées dans le repère, `"§103 (1)"`,
+`"§103 (2)"`…, une par moment de l'argument, et chaque partie en **plusieurs
+leçons**, une par phrase ou groupe de phrases à expliquer. Chaque leçon cite
+seulement la portion qu'elle explique, dans `passage.text`, et porte
+l'intitulé de sa partie dans **`passage.part`**, le même pour toutes les
+leçons de la partie :
+
+```yaml
+- id: n1863-p3
+  title: "« Par conséquent » : la domination de la chose sur l'homme"
+  passage:
+    label: "§103 (1)"
+    part: "Le rapport capitaliste comme renversement du sujet et de l'objet"
+    text: "La domination du capitaliste sur le travailleur est par conséquent…"
+```
+
+« Lire le texte » regroupe les leçons consécutives de même repère, même
+`part` et même `source` en une seule section, intitulée par `part`, leurs
+portions mises bout à bout : le paragraphe s'y relit d'un tenant. En leçon et
+en révision, la carte garde le repère de sa partie et le titre de sa leçon.
+Une leçon sans `part` reste, comme avant, une section à elle.
+
 ## Dans l'app
 
 - La carte se joue au choix en **révélant la réponse puis en s'auto-évaluant**

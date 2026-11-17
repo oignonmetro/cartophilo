@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { motion } from 'framer-motion'
-import { isPassageLesson } from '@/content/course'
+import { groupParts, isPassageLesson } from '@/content/course'
 import type { Unit } from '@/content/schema'
 import { PassageText } from '@/components/PassageText'
 import { NoteBlocks, TONES, Rich } from '@/components/session/RuleNote'
@@ -18,7 +18,7 @@ export function TextSheet({ unit, onClose }: { unit: Unit; onClose: () => void }
   const tone = TONES.grammar
   // Les leçons d'introduction n'ont pas de paragraphe cité : le texte
   // intégral ne reprend que les autres.
-  const passages = unit.lessons.filter(isPassageLesson).filter((lesson) => lesson.passage.text)
+  const passages = groupParts(unit.lessons.filter(isPassageLesson).filter((lesson) => lesson.passage.text))
 
   return (
     <motion.div
@@ -51,8 +51,8 @@ export function TextSheet({ unit, onClose }: { unit: Unit; onClose: () => void }
             // Une unité qui articule plusieurs textes (voir content/textes.md
             // « Une unité, plusieurs textes ») annonce chacun d'un repère : sans
             // lui, leurs paragraphes s'enchaîneraient comme un texte unique.
-            const source = lesson.passage.source
-            const newSource = source && source !== passages[index - 1]?.passage.source
+            const source = lesson.source
+            const newSource = source && source !== passages[index - 1]?.source
             return (
               <Fragment key={lesson.id}>
                 {newSource && (
@@ -64,10 +64,10 @@ export function TextSheet({ unit, onClose }: { unit: Unit; onClose: () => void }
                 )}
                 <section className="flex flex-col gap-2">
                   <h3 className="text-sm leading-snug font-extrabold text-ink">
-                    <span className={`font-black ${tone.eyebrow}`}>{lesson.passage.label}</span>{' '}
+                    <span className={`font-black ${tone.eyebrow}`}>{lesson.label}</span>{' '}
                     <span className="text-ink-faint">·</span> {lesson.title}
                   </h3>
-                  <PassageText text={lesson.passage.text ?? ''} />
+                  <PassageText text={lesson.text} />
                 </section>
               </Fragment>
             )

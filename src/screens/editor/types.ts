@@ -48,6 +48,8 @@ export interface PassageDTO {
   text: string
   /** L'ouvrage cité, seulement utile dans une unité qui en articule plusieurs (voir `passageSchema.source`). */
   source?: string
+  /** Intitulé de la partie d'un paragraphe découpé en parties (voir `passageSchema.part`). */
+  part?: string
 }
 
 /** Même forme que la réponse de `POST /api/import-text-cards` (voir `importTextUnitRows`). */
