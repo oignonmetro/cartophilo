@@ -191,7 +191,7 @@ export function PassageEditor({
 
         {/*
          * Facultatif : l'intitulé de la partie d'un paragraphe découpé en
-         * parties, « §103 (1) », « §103 (2) »… (voir `passageSchema.part`).
+         * parties, « 1er mouvement », « §103 (2) »… (voir `passageSchema.part`).
          * Les leçons consécutives de même repère se lisent d'un tenant sous
          * cet intitulé dans « Lire le texte ».
          */}
@@ -205,7 +205,7 @@ export function PassageEditor({
               onChange={(event) =>
                 onChange({ ...passage, part: event.target.value || undefined })
               }
-              placeholder="Facultatif : l'intitulé de la partie, si le paragraphe est découpé en (1), (2)…"
+              placeholder="Facultatif : l'intitulé de la partie, si le paragraphe est découpé en mouvements"
               className={`${inputClass} min-w-64 flex-1 py-1`}
             />
           </div>

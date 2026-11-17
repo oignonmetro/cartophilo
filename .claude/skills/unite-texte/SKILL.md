@@ -210,8 +210,10 @@ cartes-explication).
   plusieurs fragments (`1/3`, `2/3`, `3/3`), coupés aux fins de phrase.
 - **Paragraphe en parties** : quand l'utilisateur veut une explication très
   détaillée d'un paragraphe long (chaque mot, chaque phrase, chaque
-  argument), le découper en parties `"§103 (1)"`, `"§103 (2)"`…, une par
-  moment de l'argument, et chaque partie en plusieurs leçons, une par
+  argument), le découper en parties, une par mouvement de l'argument,
+  repérées `"1er mouvement"`, `"2e mouvement"`… si l'unité n'analyse que ce
+  paragraphe (`"§103 (1)"`, `"§103 (2)"`… si elle en couvre plusieurs), et
+  chaque partie en plusieurs leçons, une par
   groupe de mots ou de phrases à expliquer : chaque leçon cite sa seule
   portion dans `passage.text` et porte l'intitulé de sa partie dans
   `passage.part` (voir `content/textes.md`, « Un paragraphe en parties » ;

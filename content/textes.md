@@ -183,9 +183,12 @@ plutôt qu'un faux `§n`.
 ## Un paragraphe en parties
 
 Une explication très détaillée d'un paragraphe long (le Chapitre VI de Marx,
-`n1863`) le découpe en **parties** numérotées dans le repère, `"§103 (1)"`,
-`"§103 (2)"`…, une par moment de l'argument, et chaque partie en **plusieurs
-leçons**, une par phrase ou groupe de phrases à expliquer. Chaque leçon cite
+`n1863`) le découpe en **parties**, une par mouvement de l'argument, et
+chaque partie en **plusieurs leçons**, une par phrase ou groupe de phrases à
+expliquer. Le repère nomme la partie : quand l'unité n'analyse qu'un seul
+paragraphe, c'est le mouvement, `"1er mouvement"`, `"2e mouvement"`… ; quand
+elle en couvre plusieurs, le paragraphe et la partie, `"§103 (1)"`,
+`"§103 (2)"`… Chaque leçon cite
 seulement la portion qu'elle explique, dans `passage.text`, et porte
 l'intitulé de sa partie dans **`passage.part`**, le même pour toutes les
 leçons de la partie :
@@ -194,7 +197,7 @@ leçons de la partie :
 - id: n1863-p3
   title: "« Par conséquent » : la domination de la chose sur l'homme"
   passage:
-    label: "§103 (1)"
+    label: "1er mouvement"
     part: "Le rapport capitaliste comme renversement du sujet et de l'objet"
     text: "La domination du capitaliste sur le travailleur est par conséquent…"
 ```

@@ -123,8 +123,9 @@ export const passageSchema = z.object({
   source: z.string().min(1).optional(),
   /**
    * L'intitulé de la partie du paragraphe que cite cette leçon, quand une
-   * explication très détaillée découpe un paragraphe en parties, « (1) »,
-   * « (2) »… (dans `label` : « §103 (1) »), et chaque partie en plusieurs
+   * explication très détaillée découpe un paragraphe en parties (dans
+   * `label` : « 1er mouvement » quand l'unité n'analyse qu'un paragraphe,
+   * « §103 (1) » quand elle en couvre plusieurs), et chaque partie en plusieurs
    * leçons qui en citent chacune une portion à la suite (voir
    * content/textes.md « Un paragraphe en parties »). « Lire le texte »
    * regroupe alors les leçons consécutives de même repère sous ce seul
