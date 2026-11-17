@@ -1,6 +1,10 @@
 # Unité de texte (voir content/textes.md) : la note de la thèse de doctorat
 # de 1841 sur les disciples de Hegel, importée depuis un jeu de cartes Quizlet
-# puis structurée par paragraphe. Pas de §3 : écarté volontairement.
+# puis structurée par paragraphe. Pas de §3 : écarté volontairement (sa phrase
+# est citée dans le rappel du §4). Rappels, leçon d'introduction et
+# cartes-explication ajoutées d'après l'explication linéaire fournie par
+# l'utilisateur (2026-11-16) ; les citations de l'Introduction de 1843 suivent
+# la traduction de l'unité n1843 (GEME).
 
 id: n1841
 title: Note sur les disciples de Hegel (1841)
@@ -15,8 +19,86 @@ intro: |-
   hégélienne**, et pose les bases de ce qui deviendra la distinction entre
   jeunes-hégéliens et vieux-hégéliens.
 lessons:
+- id: n1841-i1
+  title: "Après Hegel : que devient une philosophie achevée ?"
+  notes: |-
+    **La note répond à une question : que devient** {violet}**la philosophie**{/violet} **quand** {amber}**un système total**{/amber} **semble l'avoir achevée ?** {sky}Hegel{/sky} meurt en 1831 ; dix ans plus tard, son école se divise, et {sky}Marx{/sky}, dans une note d'une thèse consacrée à {sky}Démocrite{/sky} et à {sky}Épicure{/sky}, règle ses comptes avec elle. Le détour n'est pas arbitraire : {yellow}Épicure vient après Aristote{/yellow}, c'est-à-dire après un grand système, comme {yellow}les jeunes-hégéliens viennent après Hegel{/yellow}.
+
+    **La thèse :** {green}une philosophie achevée ne peut pas rester une pure théorie{/green}. Elle doit se tourner vers le monde, et {coral}elle ne s'y réalise qu'en perdant la forme de système{/coral} qui faisait sa force.
+
+    **Les §1 et §2 critiquent une manière de lire Hegel** et lui substituent une méthode ; **le §4 énonce la loi** du passage de la théorie à la pratique ; **les §5 à §7 en suivent les conséquences**, dans le rapport de la philosophie au monde, dans les disciples, puis dans l'école ; **le §8 récapitule**, et **le §9 tourne à la satire**.
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | écarter l'explication des thèses de Hegel par l'accommodement | §1 | Les disciples qui soupçonnent Hegel se contredisent, et oublient qu'il avait à son système un rapport vivant, eux un rapport de reflet. |
+    | faire de l'accommodement le symptôme d'un principe insuffisant | §2 | Le disciple doit construire la forme essentielle de la conscience du maître, ce qui le conduit au-delà du système. |
+    | lire cette mauvaise explication comme le signe d'une école qui s'émancipe | §3 | Soupçonner le maître marque le passage de la discipline à la liberté. |
+    | énoncer la loi du passage de la théorie à la pratique | §4 | L'esprit théorique devenu libre se tourne en volonté contre le monde, mais sa pratique reste théorique : c'est la critique. |
+    | décrire ce passage du côté de la philosophie et du monde | §5 | Le système devient un côté du monde, et la philosophie se réalise en perdant sa forme. |
+    | décrire ce passage du côté des disciples | §6 | Leur exigence a deux tranchants, contre le monde et contre la philosophie, et ils réalisent le système en croyant le combattre. |
+    | suivre ce passage dans l'école, qui se scinde en deux partis | §7 | Le parti libéral critique le monde, la philosophie positive veut corriger la philosophie, et seul le premier progresse. |
+    | récapituler les trois ruptures | §8 | La rupture avec le monde devient rupture de la conscience avec elle-même, puis séparation en deux tendances. |
+    | caricaturer les épigones | §9 | Les figures subalternes poussent au grotesque les défauts des deux partis, où elles rentrent toutes. |
+
+    **Le fil : une seule idée, à des échelles de plus en plus larges.** {amber}Une limite visible renvoie toujours à une insuffisance du principe{/amber}. Chez un philosophe, cette insuffisance apparaît comme {violet}accommodement{/violet} (§1-2) ; dans le système face au monde, comme le fait que la philosophie combat au-dehors son propre défaut (§4-5) ; chez les disciples, comme une exigence contradictoire (§6) ; dans l'école, comme la scission en deux partis (§7), puis la prolifération des épigones (§9). Passer de l'accommodement au rapport de la philosophie et du monde, ce n'est donc {red}pas changer de sujet{/red}, mais {green}changer d'échelle{/green}. La note, qui commence par défendre Hegel contre ses disciples, finit par expliquer pourquoi {coral}la dissolution de son école était nécessaire{/coral}, sans que ni Hegel ni ses disciples en soient moralement responsables.
+
+    ! La note ne porte ni sur Démocrite ni sur Épicure : elle parle de Hegel et de son école, et à travers eux du destin de tout système achevé.
+  passage:
+    label: "Introduction"
+  points:
+  - id: n1841-i1-1
+    sentence: "La note de 1841 sur les disciples de Hegel est écrite une dizaine d'années après __la mort de **Hegel**__, survenue en ___, au moment où son école se divise."
+    answer: "1831"
+    alt: []
+  - id: n1841-i1-2
+    sentence: "Le détour par l'école hégélienne dans une thèse sur Démocrite et Épicure n'est pas arbitraire : __comme les jeunes-hégéliens viennent après Hegel__, Épicure vient après un grand système, celui d'___."
+    answer: "Aristote"
+    alt: []
+  - id: n1841-i1-3
+    sentence: "Thèse de la note de 1841 : une **philosophie achevée** ne peut pas rester une pure théorie, elle doit se tourner vers le monde, et __elle ne s'y réalise qu'en perdant__ sa forme de ___."
+    answer: "système"
+    alt: []
+  - id: n1841-i1-4
+    sentence: "Le fil de la note de 1841, de l'accommodement d'un philosophe à la scission de l'école hégélienne : __une limite visible renvoie toujours à__ une insuffisance du ___."
+    answer: "principe"
+    alt: []
+  - id: n1841-i1-5
+    sentence: "Dans la note de 1841, passer de l'**accommodement** de Hegel au rapport de la philosophie et du monde, ce n'est pas changer de sujet : __c'est changer d'___.__"
+    answer: "échelle"
+    alt: []
+  - id: n1841-i1-6
+    sentence: "La note de 1841 commence par défendre Hegel contre ses disciples et finit par expliquer pourquoi __la ___ de l'école hégélienne__ était nécessaire, sans que personne en soit moralement responsable."
+    answer: "dissolution"
+    alt: []
 - id: n1841-p1
   title: "Contre l'explication morale du système hégélien"
+  notes: |-
+    **Marx disqualifie une manière de lire Hegel :** {red}**l'explication par l'accommodement**{/red}**.** Certaines thèses du maître embarrassent ses anciens disciples, surtout ses positions conservatrices en politique ({yellow}l'éloge de l'État prussien, la monarchie constitutionnelle{/yellow}) et en religion ({yellow}l'accord affiché entre philosophie et christianisme{/yellow}). Pour sauver le reste du système, ils disent que Hegel les aurait adaptées aux circonstances, par prudence ou par intérêt, et qu'il cachait derrière elles une pensée plus radicale.
+
+    Le paragraphe avance en {amber}trois temps{/amber} : il {amber}nomme la méthode{/amber} qu'il refuse et lui oppose le passé des disciples ; il oppose {amber}la science reçue{/amber} à {amber}la science en devenir{/amber} ; il {amber}retourne le soupçon{/amber} contre les disciples et donne l'argument décisif, la différence entre {green}le rapport substantiel{/green} de Hegel à son système et {pink}le rapport de reflet{/pink} de ses disciples.
+
+    === 1 Expliquer « moralement » : une méthode, et ceux qui l'emploient
+
+    **Expliquer une thèse** {violet}**« moralement »**{/violet}**, c'est l'expliquer par** {red}**les motifs personnels**{/red} **de celui qui la soutient** (ses intentions, sa prudence, son intérêt) plutôt que par {green}la logique interne de la pensée{/green} qui la produit. Marx refuse donc une méthode : celle qui substitue {red}la psychologie de l'auteur{/red} à l'analyse de son système.
+
+    Son premier argument est *ad hominem*. Ces mêmes disciples adhéraient hier {teal}« avec enthousiasme »{/teal} à tous les partis pris de Hegel, et {coral}leurs propres écrits en témoignent{/coral} : ils dénoncent aujourd'hui ce qu'ils approuvaient sans réserve.
+
+    ! « Moralement » ne veut pas dire que les disciples font la morale à Hegel, ni que Marx juge la moralité de Hegel : le mot qualifie une façon d'expliquer.
+
+    === 2 La science reçue et la science en devenir
+
+    **Les disciples ont reçu le système tout fait ; Hegel l'a produit.** Ils se sont adonnés à {pink}la « science reçue toute prête »{/pink} {teal}« avec une conscience naïve et sans esprit critique »{/teal} : il est donc {coral}sans scrupule{/coral} de soupçonner aujourd'hui chez le maître une duplicité qu'ils n'avaient pas aperçue hier, et qu'ils étaient incapables d'apercevoir. Pour Hegel, au contraire, la science n'était {pink}pas « chose reçue »{/pink} mais {green}« chose en devenir »{/green} : il ne l'a pas apprise, il l'a cherchée et produite.
+
+    L'image est organique : {yellow}le « sang spirituel le plus intime »{/yellow} de Hegel {teal}« affluait jusqu'aux extrêmes confins de la science »{/teal}. Sa pensée irriguait le système jusque dans ses parties les plus éloignées, comme le sang irrigue un corps jusqu'aux extrémités : le système n'était pas pour lui un objet extérieur, mais {coral}la vie même de sa pensée{/coral}.
+
+    ! L'image du corps irrigué par le sang n'est pas un ornement : elle revient au §9, retournée en satire, quand les épigones sont logés dans les parties mortes ou extrêmes de ce corps.
+
+    === 3 Le soupçon retourné, et les deux rapports au système
+
+    **En accusant Hegel de cacher une intention secrète, c'est eux-mêmes que les disciples rendent suspects.** S'ils combattent aujourd'hui ce qu'ils ont accepté hier, c'est qu'hier ils ne l'avaient pas pris {teal}« au sérieux »{/teal} : {coral}c'est leur propre adhésion non critique qu'ils combattent{/coral}, en l'attribuant à Hegel.
+
+    **L'argument décisif commande toute la suite de la note.** Hegel avait à son système {green}un rapport « immédiat, substantiel »{/green} : il le produisait en le vivant de l'intérieur. Ses disciples n'en ont qu'{pink}un rapport « de reflet »{/pink} : ils le reçoivent déjà constitué, de l'extérieur, comme un reflet reçoit une image qu'il n'a pas produite. On peut penser à {yellow}un compositeur{/yellow}, qui invente sa musique note après note, et à {yellow}un interprète{/yellow}, qui la joue plus tard d'après une partition déjà écrite : l'interprète peut avoir du talent, il n'a pas vécu de l'intérieur la naissance de l'œuvre.
+
+    L'explication par l'accommodement est ainsi écartée deux fois : ceux qui l'emploient {coral}se contredisent{/coral}, et elle {coral}méconnaît la différence entre les deux rapports au système{/coral}. Reste à dire comment comprendre les inconséquences apparentes d'un philosophe : c'est l'objet du §2.
   passage:
     label: "§1"
     text: "C'est par pure ignorance que les disciples de Hegel s'avisent d'expliquer telle ou telle thèse de son système par l'accommodement et autres choses semblables, en un mot : *moralement*. Ils oublient que, hier encore, comme on pourrait le leur démontrer à l'évidence à l'aide de leurs propres écrits, ils adhéraient avec enthousiasme à tous ses partis pris. S'ils étaient réellement impressionnés par la science reçue toute prête, au point qu'ils s'y sont adonnés avec une conscience naïve et sans esprit critique : combien sont-ils dépourvus de scrupules quand ils reprochent au maître de cacher une intention secrète derrière son jugement, à lui pour qui la science n'était pas chose reçue, mais chose en devenir, dont le sang spirituel le plus intime affluait jusqu'aux extrêmes confins de la science. C'est sur eux-mêmes qu'en vérité ils jettent ainsi la suspicion, comme pour montrer qu'hier ils n'ont pas pris tout cela au sérieux, et c'est leur propre état d'hier qu'ils combattent en l'attribuant à Hegel, mais en oubliant qu'il avait, lui, un rapport immédiat, substantiel, à son système, et eux, un rapport de reflet."
@@ -36,6 +118,34 @@ lessons:
     sentence: "« C'est par pure ignorance que les disciples de Hegel s'avisent d'expliquer telle ou telle thèse de son système par ___ et autres choses semblables, en un mot : ___. Ils oublient que, hier encore, comme on pourrait le leur démontrer à l'évidence à l'aide de leurs propres écrits, ils adhéraient avec enthousiasme à tous ses partis pris. »"
     answer: "l'accommodement ; moralement"
     alt: []
+  - id: n1841-p1-8
+    sentence: "Note de la thèse doctorale de 1841 qui, bien que rattachée formellement à la comparaison entre Démocrite et Épicure, s'en écarte pour régler ses comptes avec l'école hégélienne et poser les bases de ce qui deviendra la distinction entre jeunes-hégéliens et vieux-hégéliens : note 2 du chapitre ___ de la ___ partie, intitulé « Différence générale de principe entre la philosophie naturelle de Démocrite et celle d'Épicure »."
+    answer: "4 ; Ière"
+    alt: []
+  - id: n1841-p1-19
+    sentence: "Les thèses de Hegel que ses disciples expliquent par l'**accommodement** sont surtout ses positions conservatrices, en religion (l'accord affiché entre philosophie et christianisme) et __en politique, l'éloge de__ ___."
+    answer: "l'État prussien"
+    alt: ["État prussien"]
+  - id: n1841-p1-9
+    sentence: "Quand les disciples de Hegel expliquent telle ou telle thèse du système par des motifs de convenance personnelle ou politique, c'est-à-dire, comme le précise Marx, « en un mot : moralement », ils l'expliquent par ce qu'il nomme l'___."
+    answer: "accommodement"
+    alt: []
+  - id: n1841-p1-10
+    sentence: "Quand Marx dit que les disciples expliquent Hegel « en un mot : moralement », il ne porte aucun jugement sur la moralité de Hegel : il vise une méthode d'explication, celle qui rapporte une thèse philosophique à des motifs personnels de ___, plutôt qu'à la logique interne du système."
+    answer: "convenance"
+    alt: []
+  - id: n1841-p1-20
+    sentence: "Expliquer une thèse « **moralement** », au sens où Marx le reproche aux disciples de Hegel, c'est __substituer à l'analyse du système__ la ___ de son auteur."
+    answer: "psychologie"
+    alt: []
+  - id: n1841-p1-11
+    sentence: "Pour disqualifier les disciples qui reprochent à Hegel son accommodement, Marx rappelle qu'hier encore, comme on pourrait le leur démontrer « à l'évidence à l'aide de ___ », ils adhéraient avec enthousiasme aux partis pris qu'ils dénoncent à présent."
+    answer: "leurs propres écrits"
+    alt: []
+  - id: n1841-p1-21
+    sentence: "Le premier argument de Marx contre les disciples qui soupçonnent Hegel d'accommodement, celui qui leur oppose leur propre enthousiasme d'hier, est __un argument__ *___*."
+    answer: "ad hominem"
+    alt: []
   - id: n1841-p1-3
     fragment: "2/3"
     sentence: "« S'ils étaient réellement impressionnés par la science reçue toute prête, au point qu'ils s'y sont adonnés avec une conscience naïve et sans esprit critique : combien sont-ils dépourvus de scrupules quand ils reprochent au maître de cacher ___ derrière son jugement, à lui pour qui la science n'était pas chose reçue, mais chose en devenir, dont le sang spirituel le plus intime affluait jusqu'aux extrêmes confins de la science. »"
@@ -50,6 +160,22 @@ lessons:
     fragment: "2/3"
     sentence: "« S'ils étaient réellement impressionnés par la science reçue toute prête, au point qu'ils s'y sont adonnés avec une conscience naïve et sans esprit critique : combien sont-ils dépourvus de scrupules quand ils reprochent au maître de cacher une intention secrète derrière son jugement, à lui pour qui la science n'était pas chose reçue, mais chose en devenir, dont ___ affluait jusqu'aux extrêmes confins de la science. »"
     answer: "le sang spirituel le plus intime"
+    alt: []
+  - id: n1841-p1-22
+    sentence: "Les disciples de Hegel se sont adonnés à la « science reçue toute prête », écrit Marx, « avec une conscience ___ et sans esprit critique » : ils ne peuvent donc pas soupçonner chez le maître une duplicité qu'ils étaient incapables d'apercevoir."
+    answer: "naïve"
+    alt: []
+  - id: n1841-p1-14
+    sentence: "Là où ses disciples ont affaire à « la science reçue toute prête », Hegel avait affaire, selon Marx, à une science qui n'était pas chose reçue mais « ___ », dont le sang spirituel le plus intime affluait jusqu'aux extrêmes confins de la science."
+    answer: "chose en devenir"
+    alt: []
+  - id: n1841-p1-15
+    sentence: "Pour traduire le rapport vivant de Hegel à son propre système, et montrer que sa pensée l'irriguait jusqu'à ses confins les plus éloignés, Marx la compare à un « ___ le plus intime »."
+    answer: "sang spirituel"
+    alt: []
+  - id: n1841-p1-23
+    sentence: "L'image du **sang spirituel** de Hegel, qui affluait jusqu'aux confins de la science, n'est pas un ornement : __elle revient, retournée en satire, au__ ___, où les épigones sont logés dans les parties mortes ou extrêmes de ce corps."
+    answer: "§9"
     alt: []
   - id: n1841-p1-6
     fragment: "3/3"
@@ -66,21 +192,9 @@ lessons:
     sentence: "« C'est sur eux-mêmes qu'en vérité ils jettent ainsi la suspicion, comme pour montrer qu'hier ils n'ont pas pris tout cela au sérieux, et c'est leur propre état d'hier qu'ils combattent en l'attribuant à Hegel, mais en oubliant qu'il avait, lui, un rapport ___, à son système, et eux, un rapport ___. »"
     answer: "immédiat, substantiel ; de reflet"
     alt: []
-  - id: n1841-p1-8
-    sentence: "Note de la thèse doctorale de 1841 qui, bien que rattachée formellement à la comparaison entre Démocrite et Épicure, s'en écarte pour régler ses comptes avec l'école hégélienne et poser les bases de ce qui deviendra la distinction entre jeunes-hégéliens et vieux-hégéliens : note 2 du chapitre ___ de la ___ partie, intitulé « Différence générale de principe entre la philosophie naturelle de Démocrite et celle d'Épicure »."
-    answer: "4 ; Ière"
-    alt: []
-  - id: n1841-p1-9
-    sentence: "Quand les disciples de Hegel expliquent telle ou telle thèse du système par des motifs de convenance personnelle ou politique, c'est-à-dire, comme le précise Marx, « en un mot : moralement », ils l'expliquent par ce qu'il nomme l'___."
-    answer: "accommodement"
-    alt: []
-  - id: n1841-p1-10
-    sentence: "Quand Marx dit que les disciples expliquent Hegel « en un mot : moralement », il ne porte aucun jugement sur la moralité de Hegel : il vise une méthode d'explication, celle qui rapporte une thèse philosophique à des motifs personnels de ___, plutôt qu'à la logique interne du système."
-    answer: "convenance"
-    alt: []
-  - id: n1841-p1-11
-    sentence: "Pour disqualifier les disciples qui reprochent à Hegel son accommodement, Marx rappelle qu'hier encore, comme on pourrait le leur démontrer « à l'évidence à l'aide de ___ », ils adhéraient avec enthousiasme aux partis pris qu'ils dénoncent à présent."
-    answer: "leurs propres écrits"
+  - id: n1841-p1-24
+    sentence: "En accusant Hegel de cacher une intention secrète, ses disciples jettent la suspicion sur eux-mêmes : s'ils combattent aujourd'hui ce qu'ils acceptaient hier, c'est, dit Marx, qu'__hier ils n'ont pas pris tout cela__ « ___ »."
+    answer: "au sérieux"
     alt: []
   - id: n1841-p1-12
     sentence: "Pour Marx, les mauvais disciples de Hegel croient combattre une intention secrète chez le maître, alors qu'ils combattent en réalité « ___ » qu'ils lui attribuent, à savoir leur propre adhésion non critique d'hier."
@@ -90,20 +204,30 @@ lessons:
     sentence: "Toute la note repose sur le fait que Hegel avait à son système un rapport « immédiat, substantiel », tandis que ses disciples n'en ont qu'un rapport « ___ », puisqu'ils le reçoivent tout constitué, de l'extérieur, comme un objet de savoir et non comme un mouvement de pensée en cours."
     answer: "de reflet"
     alt: []
-  - id: n1841-p1-14
-    sentence: "Là où ses disciples ont affaire à « la science reçue toute prête », Hegel avait affaire, selon Marx, à une science qui n'était pas chose reçue mais « ___ », dont le sang spirituel le plus intime affluait jusqu'aux extrêmes confins de la science."
-    answer: "chose en devenir"
-    alt: []
-  - id: n1841-p1-15
-    sentence: "Pour traduire le rapport vivant de Hegel à son propre système, et montrer que sa pensée l'irriguait jusqu'à ses confins les plus éloignés, Marx la compare à un « ___ le plus intime »."
-    answer: "sang spirituel"
-    alt: []
   - id: n1841-p1-16
     sentence: "Pour illustrer la différence entre le rapport de Hegel à son système et celui de ses disciples, on peut comparer Hegel à un ___, qui invente sa musique note après note en la vivant de l'intérieur, et ses disciples à un ___, qui ne fait qu'exécuter une partition déjà écrite sans l'avoir vécue au moment de sa création."
     answer: "compositeur ; interprète"
     alt: []
 - id: n1841-p2
   title: "La véritable nature de l'accommodement"
+  notes: |-
+    **Marx ne nie pas l'accommodement : il en change le sens.** Un philosophe peut commettre une {teal}« inconséquence apparente »{/teal} par accommodement, et même le savoir. Mais ce qui importe n'est pas ce dont il a conscience : c'est {amber}ce dont il n'a pas conscience{/amber}. Le paragraphe a deux temps : l'accommodement devient {coral}le symptôme d'un principe insuffisant{/coral}, puis {coral}la tâche du disciple{/coral} est redéfinie.
+
+    === 1 L'accommodement, symptôme d'un principe insuffisant
+
+    **Si un philosophe peut s'accommoder sur un point, c'est que son principe le lui permet.** __Un principe parfaitement développé et parfaitement compris ne laisserait aucune place à la transaction__. La {amber}possibilité{/amber} même de l'accommodement est donc le symptôme d'une faille : {teal}« une insuffisance de son principe même »{/teal}, ou {teal}« la compréhension insuffisante de ce principe »{/teal}. L'accommodement n'est {red}jamais un accident psychologique{/red} : c'est {green}l'endroit où un système laisse voir sa propre limite{/green}. Ce que les disciples prennent pour {pink}un défaut de caractère{/pink} est {coral}un défaut de doctrine{/coral}, et ce défaut est philosophiquement instructif.
+
+    D'où deux niveaux dans la pensée d'un philosophe. Sa {violet}conscience « exotérique »{/violet} est celle qu'il exprime et destine au public, tournée vers l'extérieur, avec ses simplifications, ses prudences et ses formules de circonstance. Sa {violet}conscience « intime et essentielle »{/violet} est la logique profonde de son principe, qu'il n'aperçoit pas toujours lui-même entièrement.
+
+    === 2 La tâche du disciple : construire, donc dépasser
+
+    **Le bon disciple ne suspecte pas** {red}**la « conscience particulière »**{/red} **du philosophe** (ses motifs, sa prudence) **: il construit** {green}**« la forme essentielle de sa conscience »**{/green}**.** Il part de la conscience exotérique pour reconstruire la conscience essentielle, et il lui donne {teal}« une figure et une signification déterminées »{/teal}, plus nettes que celles que le maître avait pu lui donner.
+
+    Ce travail n'est pas une simple exégèse : {teal}« ce qui apparaît comme un progrès de la conscience devient en même temps un progrès du savoir »{/teal}, puisqu'il met au jour ce que le système contenait sans le savoir, ses insuffisances comprises. Et {teal}« ce faisant, on va au-delà de ce que l'on a construit »{/teal} : expliciter entièrement un système, c'est rendre visible la limite de son principe, et {coral}on ne voit une limite qu'en se plaçant déjà au-delà d'elle{/coral}.
+
+    **Ce qui explique, plus profondément, l'accommodement.** Un système achevé exige, pour se réaliser, d'être porté tout entier, avec ses deux faces : le mouvement critique vers l'extérieur et la mondanisation de son contenu. Or il n'est porté que par {amber}des consciences finies{/amber} (le philosophe, puis ses disciples), qui ne peuvent en assumer toutes les exigences à la fois : chacune en retient une part et abandonne l'autre. Accommoder, en ce sens, ce n'est {red}pas transiger par calcul{/red} : c'est {coral}amputer le système d'une de ses dimensions pour pouvoir le porter{/coral}. Toute l'histoire de l'école hégélienne (§7, §9) se lit comme une suite de telles amputations, de plus en plus graves.
+
+    ! La question n'est plus de savoir ce que Hegel pensait en secret, mais ce qui arrive à un système quand ses disciples le poussent jusqu'à ses limites.
   passage:
     label: "§2"
     text: "On peut concevoir qu'un philosophe commette telle ou telle inconséquence apparente en raison de tel accommodement ; il se peut qu'il en ait lui-même conscience. Toutefois, ce dont il n'a pas conscience, c'est que la possibilité de cet accommodement apparent ait sa racine la plus intime dans une insuffisance de son principe même ou dans la compréhension insuffisante de ce principe. Et quand même un philosophe se serait réellement accommodé, il incombe à ses disciples d'expliquer, *en scrutant sa conscience intime et essentielle*, ce qui n'avait *pour lui-même* que la forme d'une *conscience exotérique*. De cette façon, ce qui apparaît comme un progrès de la conscience devient en même temps un progrès du savoir. Ce n'est pas la conscience particulière du philosophe que l'on suspecte alors ; c'est la forme essentielle de sa conscience que l'on construit, en l'élevant à une figure et à une signification déterminées ; ce faisant, on va au-delà de ce que l'on a construit."
@@ -123,6 +247,22 @@ lessons:
     sentence: "« On peut concevoir qu'un philosophe commette telle ou telle inconséquence apparente en raison de tel accommodement ; il se peut qu'il en ait lui-même conscience. Toutefois, ce dont il n'a pas conscience, c'est que la possibilité de cet accommodement apparent ait sa racine la plus intime dans une insuffisance de son principe même ou dans la compréhension insuffisante de ce principe. Et quand même un philosophe se serait réellement accommodé, il incombe à ses disciples d'expliquer, *en scrutant sa conscience intime et essentielle*, ce qui n'avait *pour lui-même* que la forme d'une ___. »"
     answer: "conscience exotérique"
     alt: []
+  - id: n1841-p2-11
+    sentence: "Pour Marx, la possibilité même qu'un philosophe s'**accommode** n'est jamais un accident psychologique : __elle est le ___ d'une faille__ dans son principe, ou dans la compréhension qu'il en a."
+    answer: "symptôme"
+    alt: []
+  - id: n1841-p2-12
+    sentence: "Si un philosophe peut s'**accommoder** sur un point, c'est que son principe le lui permet : __un principe parfaitement développé et parfaitement compris ne laisserait aucune place à__ la ___."
+    answer: "transaction"
+    alt: []
+  - id: n1841-p2-13
+    sentence: "Ce que les disciples de Hegel prennent, dans son **accommodement**, pour un défaut de caractère est en réalité, selon Marx, __un défaut de ___,__ et c'est ce qui le rend philosophiquement instructif."
+    answer: "doctrine"
+    alt: []
+  - id: n1841-p2-14
+    sentence: "La **conscience « exotérique »** d'un philosophe, que Marx oppose à sa conscience « intime et essentielle », est celle qu'il exprime et destine au public, avec ses prudences et ses formules de circonstance : au sens propre, __une conscience tournée vers__ ___."
+    answer: "l'extérieur"
+    alt: ["extérieur"]
   - id: n1841-p2-3
     fragment: "2/2"
     sentence: "« De cette façon, ce qui apparaît comme un progrès de la conscience devient en même temps ___. Ce n'est pas la conscience particulière du philosophe que l'on suspecte alors ; c'est la forme essentielle de sa conscience que l'on construit, en l'élevant à une figure et à une signification déterminées ; ce faisant, on va au-delà de ce que l'on a construit. »"
@@ -137,6 +277,14 @@ lessons:
     fragment: "2/2"
     sentence: "« De cette façon, ce qui apparaît comme un progrès de la conscience devient en même temps un progrès du savoir. Ce n'est pas la conscience particulière du philosophe que l'on suspecte alors ; c'est la forme essentielle de sa conscience que l'on construit, en l'élevant à une figure et à une signification déterminées ; ce faisant, ___. »"
     answer: "on va au-delà de ce que l'on a construit"
+    alt: []
+  - id: n1841-p2-15
+    sentence: "Le bon disciple, selon Marx, ne suspecte pas les motifs ou la prudence du philosophe, ce que la note appelle sa « conscience ___ » : il construit la forme essentielle de sa conscience."
+    answer: "particulière"
+    alt: []
+  - id: n1841-p2-16
+    sentence: "« Ce faisant, on va au-delà de ce que l'on a construit » : expliciter entièrement un système, c'est le dépasser, parce qu'on rend visible la ___ de son principe, et qu'on ne peut la voir qu'en se plaçant déjà au-delà d'elle."
+    answer: "limite"
     alt: []
   - id: n1841-p2-6
     sentence: "Selon l'analyse de la note, l'accommodement s'explique en dernière instance par la ___ de toute conscience individuelle face à l'exigence totale que porte un système philosophique achevé."
@@ -156,6 +304,36 @@ lessons:
     alt: []
 - id: n1841-p4
   title: "La loi psychologique du passage à la praxis"
+  notes: |-
+    **Le paragraphe énonce la thèse qui organise le reste de la note :** {green}**une pensée achevée se retourne contre le monde**{/green}**.** Une phrase de transition (§3) y conduit. Marx voit dans l'{teal}« orientation peu philosophique »{/teal} d'une grande partie de l'école hégélienne, celle qui explique le maître par ses motifs, {teal}« un phénomène qui marquera toujours le passage de la discipline à la liberté »{/teal}. Tant qu'ils restent à l'école du maître, les disciples sont sous sa {violet}discipline{/violet} : ils apprennent, ils reçoivent, ils répètent. Quand ils veulent penser par eux-mêmes, leur premier mouvement est maladroit : {amber}faute de pouvoir encore dépasser le système par la théorie, ils s'en libèrent en le soupçonnant{/amber}. La mauvaise explication des §1 et §2 n'est donc plus seulement une erreur de méthode : c'est le symptôme d'un moment historique, dont le §4 donne la loi.
+
+    Le paragraphe a {amber}trois temps{/amber} : {amber}la loi{/amber} du retournement ; {amber}la parenthèse{/amber}, qui interdit d'en faire un mécanisme ; {amber}la précision{/amber} que cette pratique reste théorique.
+
+    === 1 La loi : l'esprit théorique devient volonté
+
+    **Une pensée parvenue à son plein développement, qui n'a plus rien à conquérir en elle-même,** {coral}**se change en énergie pratique**{/coral} **et se tourne contre le monde.**
+
+    {yellow}L'Amenti{/yellow} est, dans la mythologie égyptienne, le séjour des morts, à l'Occident, là où le soleil disparaît. Une philosophie purement théorique lui ressemble : elle est complète, mais {pink}séparée de la vie effective{/pink}, comme les ombres des morts le sont du monde des vivants. En sortir, c'est se rapporter au monde réel, qui existe {teal}« indépendamment »{/teal} de la pensée et ne se plie pas à elle. Le mot {violet}« volonté »{/violet} est précis : chez {sky}Hegel{/sky}, la volonté est l'esprit qui se rapporte {amber}pratiquement{/amber} à son objet, pour le transformer, et non plus théoriquement, pour le connaître.
+
+    **Pourquoi ce retournement est-il nécessaire ?** Trois raisons se renforcent.
+
+    - raison dialectique : une détermination qui a atteint sa pleine cohérence ne reste pas refermée sur elle-même, elle passe à son autre, et l'autre de la pensée pure, c'est le monde ;
+    - raison normative : un système achevé prétend avoir saisi la structure rationnelle du réel lui-même ; une vérité du réel qui ne se rapporterait jamais au réel se contredirait, comme {yellow}une clé{/yellow} qu'on dirait capable d'ouvrir toutes les portes sans jamais l'essayer sur aucune ;
+    - raison psychologique et historique, celle que Marx nomme : une philosophie ne se réalise qu'à travers ses disciples, qui, une fois épuisé ce que le système avait à leur apprendre, tournent leur liberté vers le seul objet qui leur reste, le monde.
+
+    === 2 La parenthèse : chaque philosophie se retourne à sa manière
+
+    **La loi dit que toute philosophie achevée se retourne vers le monde ; elle ne dit pas comment.** Or c'est {amber}le mode déterminé de ce retournement{/amber} (ce qu'une philosophie critique, ce qu'elle épargne, le genre de partis qu'elle engendre) qui révèle {coral}ce qu'elle est en propre{/coral} : sa {teal}« détermination immanente »{/teal}, son {teal}« caractère universel et historique »{/teal}. Ce retournement est son {yellow}*curriculum vitae*{/yellow} : comme un curriculum résume une vie en quelques lignes, il résume le destin historique d'une philosophie, au point où ce destin se joue dans des sujets, {teal}« à sa pointe de subjectivité »{/teal}.
+
+    ! Le passage de la théorie à la pratique n'est pas un mécanisme automatique, identique pour tous les systèmes.
+
+    === 3 Une pratique encore théorique : la critique
+
+    **La** {violet}**praxis**{/violet} **de la philosophie n'est pas encore l'action politique ou révolutionnaire :** {green}**c'est la critique**{/green}**.** Critiquer, c'est {amber}mesurer ce qui existe à ce qui devrait être selon la raison{/amber} : l'existence individuelle à l'essence, la réalité particulière à l'idée. {yellow}Un État qui pratique la censure{/yellow} se dit État ; on peut le mesurer à l'idée de l'État, une communauté rationnelle où la liberté se réalise, et montrer qu'il ne lui est pas conforme. La critique est bien une action, puisqu'elle s'en prend au monde, mais son instrument reste théorique : {coral}elle juge{/coral}.
+
+    La dernière phrase annonce le §5 : cette {teal}« réalisation immédiate »{/teal} de la philosophie est {red}« affligée de contradictions »{/red}, et sa nature contradictoire {teal}« prend forme dans le phénomène »{/teal}, c'est-à-dire devient visible dans l'histoire réelle de l'école.
+
+    ! Ne pas lire ce texte avec le Marx ultérieur : en 1841, la praxis de la philosophie est « elle-même théorique ».
   passage:
     label: "§4"
     text: "Une loi psychologique veut que, après avoir conquis sa liberté intérieure, l'esprit théorique se change en énergie pratique et, sortant du royaume des ombres de l'Amenti, se tourne, comme *volonté*, contre le monde réel qui existe indépendamment de lui. (Il importe cependant, par intérêt philosophique, de mieux spécifier ces aspects ; en effet, c'est du mode déterminé de ce retournement que l'on peut conclure à la détermination immanente et au caractère universel et historique d'une philosophie. Nous tenons ici, pour ainsi dire, son *curriculum vitae* réduit à son expression la plus étroite, à sa pointe de subjectivité.) Mais la *praxis* de la philosophie est elle-même *théorique*. C'est la *critique*, qui mesure l'existence individuelle à l'aune de l'essence, la réalité particulière à l'aune de l'idée. Toutefois, cette *réalisation immédiate* de la philosophie est, par sa nature intime, affligée de contradictions, et cette nature prend forme dans le phénomène et le marque de son sceau."
@@ -180,6 +358,38 @@ lessons:
     sentence: "« Une loi psychologique veut que, après avoir conquis sa liberté intérieure, l'esprit théorique se change en énergie pratique et, sortant du royaume des ombres de l'___, se tourne, comme *volonté*, contre le monde réel qui existe indépendamment de lui. »"
     answer: "Amenti"
     alt: []
+  - id: n1841-p4-17
+    sentence: "Dans la phrase de transition qui précède la loi du passage à la praxis (§3 de la note de 1841), Marx voit dans l'orientation peu philosophique d'une grande partie de l'école hégélienne « un phénomène qui marquera toujours le passage de la ___ à la ___ »."
+    answer: "discipline ; liberté"
+    alt: []
+  - id: n1841-p4-18
+    sentence: "L'explication de Hegel par l'accommodement est la forme immature de l'émancipation de ses disciples : __faute de pouvoir encore dépasser le système par la théorie, ils s'en libèrent en le__ ___."
+    answer: "soupçonnant"
+    alt: []
+  - id: n1841-p4-4
+    sentence: "L'image du « royaume des ombres de l'Amenti » (les enfers de la mythologie égyptienne) signifie que la philosophie, tant qu'elle demeure purement théorique et refermée sur elle-même, est coupée de la ___ effective, comme les ombres des morts sont coupées du monde des vivants."
+    answer: "vie"
+    alt: []
+  - id: n1841-p4-19
+    sentence: "Quand Marx écrit que l'esprit théorique se tourne « comme **volonté** » contre le monde réel, le mot est hégélien : la volonté est l'esprit qui se rapporte à son objet non plus théoriquement, pour le connaître, mais ___, pour le transformer."
+    answer: "pratiquement"
+    alt: []
+  - id: n1841-p4-10
+    sentence: "Dans la logique de Hegel, une détermination de pensée ayant atteint sa pleine cohérence interne ne peut demeurer indéfiniment dans cette clôture sur soi, car le mouvement ___ ne connaît pas d'arrêt : une détermination pleinement achevée est aussitôt requise de passer à la détermination qui lui est opposée."
+    answer: "dialectique"
+    alt: []
+  - id: n1841-p4-11
+    sentence: "Un système philosophique achevé ne se contente pas d'affirmer une cohérence purement interne : il prétend avoir saisi la structure ___ du réel lui-même, si bien qu'une pensée qui resterait purement théorique trahirait la nature objective et universelle qu'elle revendiquait."
+    answer: "rationnelle"
+    alt: []
+  - id: n1841-p4-12
+    sentence: "Une philosophie ne se réalise jamais par elle-même dans l'abstrait : elle se réalise toujours à travers des ___ déterminées, les disciples qui l'ont pleinement intériorisée, et c'est leur propre liberté intérieure, désormais acquise, qui cherche alors un objet sur lequel s'exercer."
+    answer: "consciences individuelles"
+    alt: []
+  - id: n1841-p4-14
+    sentence: "La cause du retournement de la théorie en praxis tient à la convergence de trois niveaux : dialectique (le système a épuisé le travail théorique sur soi), normatif (il porte une prétention à la vérité qui exige sa réalisation) et ___ (cette exigence trouve son vecteur dans les disciples qui l'ont assimilée)."
+    answer: "psychologique et historique"
+    alt: []
   - id: n1841-p4-5
     fragment: "2/3"
     sentence: "« (Il importe cependant, par intérêt philosophique, de mieux spécifier ces aspects ; en effet, c'est ___ que l'on peut conclure à la détermination immanente et au caractère universel et historique d'une philosophie. Nous tenons ici, pour ainsi dire, son *curriculum vitae* réduit à son expression la plus étroite, à sa pointe de subjectivité.) »"
@@ -189,6 +399,14 @@ lessons:
     fragment: "2/3"
     sentence: "« (Il importe cependant, par intérêt philosophique, de mieux spécifier ces aspects ; en effet, c'est du mode déterminé de ce retournement que l'on peut conclure à la détermination immanente et au caractère universel et historique d'une philosophie. Nous tenons ici, pour ainsi dire, son ___, à sa pointe de subjectivité.) »"
     answer: "curriculum vitae réduit à son expression la plus étroite"
+    alt: []
+  - id: n1841-p4-13
+    sentence: "Le passage de la théorie à la praxis n'est pas un mécanisme automatique : Marx signale lui-même la limite de sa formule en précisant qu'il importe de mieux spécifier le ___ de ce retournement, propre à chaque système, dont on peut conclure le caractère immanent et historique d'une philosophie."
+    answer: "mode déterminé"
+    alt: []
+  - id: n1841-p4-20
+    sentence: "Marx appelle le retournement d'une philosophie vers le monde son « *curriculum vitae* » : la manière dont elle se tourne vers le monde (ce qu'elle critique, ce qu'elle épargne, les partis qu'elle engendre) __résume en quelques lignes son destin__ ___."
+    answer: "historique"
     alt: []
   - id: n1841-p4-7
     fragment: "3/3"
@@ -210,32 +428,44 @@ lessons:
     sentence: "« Mais la *praxis* de la philosophie est elle-même *théorique*. C'est la *critique*, qui mesure l'existence individuelle à l'aune de l'essence, la réalité particulière à l'aune de l'idée. Toutefois, cette *réalisation immédiate* de la philosophie est, par sa nature intime, ___, et cette nature prend forme dans le phénomène et le marque de son sceau. »"
     answer: "affligée de contradictions"
     alt: []
-  - id: n1841-p4-4
-    sentence: "L'image du « royaume des ombres de l'Amenti » (les enfers de la mythologie égyptienne) signifie que la philosophie, tant qu'elle demeure purement théorique et refermée sur elle-même, est coupée de la ___ effective, comme les ombres des morts sont coupées du monde des vivants."
-    answer: "vie"
+  - id: n1841-p4-21
+    sentence: "La **critique**, praxis de la philosophie selon la note de 1841, mesure l'existence individuelle à l'essence et la réalité particulière à l'idée : __elle mesure ce qui existe à ce qui ___ selon la raison.__"
+    answer: "devrait être"
     alt: []
-  - id: n1841-p4-10
-    sentence: "Dans la logique de Hegel, une détermination de pensée ayant atteint sa pleine cohérence interne ne peut demeurer indéfiniment dans cette clôture sur soi, car le mouvement ___ ne connaît pas d'arrêt : une détermination pleinement achevée est aussitôt requise de passer à la détermination qui lui est opposée."
-    answer: "dialectique"
+  - id: n1841-p4-22
+    sentence: "Exemple de la **critique** au sens de la note de 1841, proche des préoccupations de Marx à cette époque : __un État qui pratique la ___ se dit État__, mais on peut le mesurer à l'idée de l'État, une communauté rationnelle où la liberté se réalise, et montrer qu'il ne lui est pas conforme."
+    answer: "censure"
     alt: []
-  - id: n1841-p4-11
-    sentence: "Un système philosophique achevé ne se contente pas d'affirmer une cohérence purement interne : il prétend avoir saisi la structure ___ du réel lui-même, si bien qu'une pensée qui resterait purement théorique trahirait la nature objective et universelle qu'elle revendiquait."
-    answer: "rationnelle"
+  - id: n1841-p4-23
+    sentence: "La **critique** est bien une action, puisqu'elle s'en prend au monde, mais __son instrument reste théorique__ : elle ne transforme pas encore matériellement le monde, elle le ___."
+    answer: "juge"
     alt: []
-  - id: n1841-p4-12
-    sentence: "Une philosophie ne se réalise jamais par elle-même dans l'abstrait : elle se réalise toujours à travers des ___ déterminées, les disciples qui l'ont pleinement intériorisée, et c'est leur propre liberté intérieure, désormais acquise, qui cherche alors un objet sur lequel s'exercer."
-    answer: "consciences individuelles"
-    alt: []
-  - id: n1841-p4-13
-    sentence: "Le passage de la théorie à la praxis n'est pas un mécanisme automatique : Marx signale lui-même la limite de sa formule en précisant qu'il importe de mieux spécifier le ___ de ce retournement, propre à chaque système, dont on peut conclure le caractère immanent et historique d'une philosophie."
-    answer: "mode déterminé"
-    alt: []
-  - id: n1841-p4-14
-    sentence: "La cause du retournement de la théorie en praxis tient à la convergence de trois niveaux : dialectique (le système a épuisé le travail théorique sur soi), normatif (il porte une prétention à la vérité qui exige sa réalisation) et ___ (cette exigence trouve son vecteur dans les disciples qui l'ont assimilée)."
-    answer: "psychologique et historique"
+  - id: n1841-p4-24
+    sentence: "La réalisation immédiate de la philosophie est « affligée de contradictions », et sa nature contradictoire « prend forme dans le ___ » : les contradictions ne restent pas cachées, elles deviennent visibles dans l'histoire réelle de l'école hégélienne."
+    answer: "phénomène"
     alt: []
 - id: n1841-p5
   title: "La dialectique de la réalisation et de la perte de la philosophie"
+  notes: |-
+    **Le paragraphe décrit ce qui arrive au système au moment où il se tourne contre le monde,** {amber}**du côté objectif**{/amber}**, indépendamment des individus qui le portent.** Il a deux temps : {amber}la déchéance du système{/amber}, qui n'est plus qu'un côté du monde ; puis {amber}la série de formules paradoxales{/amber} qui en tire les conséquences.
+
+    === 1 Le système devenu un côté du monde
+
+    **En s'opposant au monde, le système cesse d'être** {pink}**le tout**{/pink} **pour devenir** {coral}**une partie**{/coral}**.** Tant qu'il restait en lui-même, il prétendait dire la vérité de tout le réel, sans rien hors de lui. Opposé au monde, il n'est plus qu'un {teal}« côté »{/teal}, face à un autre côté qui ne se laisse pas absorber. Il est {teal}« ravalé »{/teal}, et le mot dit une déchéance : il reste une {violet}totalité{/violet}, puisqu'il garde sa cohérence interne, mais une totalité {violet}« abstraite »{/violet}, séparée de ce qu'elle prétendait englober. Son rapport au monde devient un {violet}« rapport de réflexion »{/violet} : une opposition entre deux termes extérieurs l'un à l'autre, qui se mesurent l'un à l'autre, au lieu d'une unité immédiate. C'est la différence entre {yellow}savoir nager en théorie{/yellow} et {yellow}se jeter dans une eau réelle{/yellow}, qui a ses propres courants.
+
+    La rupture se dit en termes presque affectifs : {teal}« le contentement de soi et l'harmonie sont rompus »{/teal}. Puis en une image : {yellow}« ce qui fut lumière intérieure devient flamme dévorante »{/yellow}. La même énergie change de nature selon sa direction : tournée vers l'intérieur, elle éclairait (la philosophie se comprenait elle-même) ; tournée vers l'extérieur, elle brûle (elle attaque ce qui lui résiste).
+
+    === 2 Les formules du paradoxe
+
+    **Première formule : les deux devenirs sont un seul mouvement.** {amber}Le monde devient philosophique{/amber} : critiqué, il doit se justifier devant la raison, et ce qui ne le peut pas perd sa légitimité. C'est, dans l'Allemagne des années 1830 et 1840, le travail de la critique jeune-hégélienne, qui confronte la religion établie et l'État prussien aux principes hérités de Hegel ({sky}Bruno Bauer{/sky} contre la théologie, {sky}Feuerbach{/sky} contre la religion). {amber}La philosophie devient monde{/amber} : appliquée à des objets concrets et contingents, elle cesse d'être une pensée pure pour devenir une force parmi d'autres dans le débat public, avec ses articles de presse, ses polémiques, ses partis pris. Elle s'incarne, se particularise, se {violet}mondanise{/violet}.
+
+    **Deuxième formule :** {green}**« la réalisation de la philosophie est en même temps sa perte »**{/green}**.** Ce qui se perd est une forme précise, celle {pink}du système clos{/pink}, total, séparé du monde ; ce qui se réalise est {coral}l'effectivité{/coral} : une vérité qui n'était que pensée devient agissante. Le gain et la perte sont {amber}un seul mouvement, vu de deux côtés{/amber}. Ce qui subsiste est une forme intermédiaire, dispersée et partisane, qui garde quelque chose du contenu rationnel sans plus le porter dans sa totalité.
+
+    **Troisième formule : la philosophie combat au-dehors son propre défaut.** La clé est dans {violet}les « facteurs inversés »{/violet}, image d'un rapport dont on intervertit les termes : __la philosophie est de la raison sans réalité, le monde de la réalité sans raison__. Chacun manque de ce que l'autre possède, et le défaut est le même, {coral}une séparation entre raison et réalité{/coral}, vue d'un côté ou de l'autre. Quant aux {yellow}« tares »{/yellow}, l'image est celle de la contamination : en combattant un monde partiel, borné, partisan, la philosophie, qui n'est plus qu'un côté du monde, devient elle-même partielle, bornée, partisane. Elle ne peut pas faire autrement : c'est seulement en entrant dans le monde qu'elle peut le transformer, et elle n'efface donc ces tares {teal}« qu'en les contractant »{/teal}.
+
+    ! La « perte » n'est ni la disparition de toute philosophie ni une simple image : c'est la perte de la forme du système clos.
+
+    ! « Transformer » le monde n'a pas encore le sens de la XIe thèse sur Feuerbach (1845) : en 1841, la philosophie le transforme par la critique, en changeant la manière dont il est jugé et contraint de se justifier.
   passage:
     label: "§5"
     text: "Puisque la philosophie se dresse en tant que volonté contre le monde des phénomènes, le système est ravalé à une totalité abstraite ; autrement dit, il est devenu un côté du monde, auquel s'oppose un autre côté. Son rapport au monde est un rapport de réflexion. Animé du désir de se réaliser, le système entre en conflit avec autrui. Le contentement de soi et l'harmonie sont rompus. Ce qui fut lumière intérieure devient flamme dévorante qui se tourne vers l'extérieur. La conséquence en est que le devenir-philosophique du monde est en même temps un devenir-monde de la philosophie ; que la réalisation de la philosophie est en même temps sa perte ; que ce qu'elle combat à l'extérieur, c'est son propre défaut intérieur ; que c'est précisément en luttant qu'elle contracte elle-même les tares qu'elle combat chez son adversaire, et qu'elle ne peut effacer ces tares qu'en les contractant. Ce qui l'affronte et ce qu'elle combat, c'est toujours ce qu'elle est elle-même, seulement avec des facteurs inversés."
@@ -254,6 +484,26 @@ lessons:
     fragment: "1/2"
     sentence: "« Puisque la philosophie se dresse en tant que volonté contre le monde des phénomènes, le système est ravalé à une totalité abstraite ; autrement dit, il est devenu un côté du monde, auquel s'oppose un autre côté. Son rapport au monde est ___. Animé du désir de se réaliser, le système entre en conflit avec autrui. Le contentement de soi et l'harmonie sont rompus. Ce qui fut lumière intérieure devient flamme dévorante qui se tourne vers l'extérieur. »"
     answer: "un rapport de réflexion"
+    alt: []
+  - id: n1841-p5-23
+    sentence: "Tant qu'il restait en lui-même, le système hégélien se tenait pour le tout ; dès qu'il se dresse contre le monde, écrit Marx, il est « ravalé » à une totalité abstraite : __il cesse d'être le tout pour devenir__ ___, un « côté » auquel s'oppose un autre côté."
+    answer: "une partie"
+    alt: ["partie"]
+  - id: n1841-p5-24
+    sentence: "Le système dressé contre le monde reste une totalité, puisqu'il garde sa cohérence interne, mais une **totalité « abstraite »**, c'est-à-dire ___ de ce qu'elle prétendait englober."
+    answer: "séparée"
+    alt: []
+  - id: n1841-p5-25
+    sentence: "Le **« rapport de réflexion »** du système au monde n'est plus une unité immédiate : c'est __un rapport d'___ entre deux termes extérieurs l'un à l'autre__, qui se mesurent l'un à l'autre."
+    answer: "opposition"
+    alt: []
+  - id: n1841-p5-4
+    sentence: "Pour décrire le moment où le système, jusque-là refermé sur sa propre cohérence interne, se change en énergie conflictuelle tournée contre le monde, Marx écrit que « ce qui fut lumière intérieure devient ___ qui se tourne vers l'extérieur »."
+    answer: "flamme dévorante"
+    alt: []
+  - id: n1841-p5-26
+    sentence: "« Ce qui fut lumière intérieure devient flamme dévorante » : la même énergie change de nature selon sa ___, elle éclairait tant que la philosophie se comprenait elle-même, elle brûle quand elle attaque ce qui lui résiste."
+    answer: "direction"
     alt: []
   - id: n1841-p5-5
     fragment: "2/2"
@@ -285,33 +535,25 @@ lessons:
     sentence: "« La conséquence en est que le devenir-philosophique du monde est en même temps un devenir-monde de la philosophie ; que la réalisation de la philosophie est en même temps sa perte ; que ce qu'elle combat à l'extérieur, c'est son propre défaut intérieur ; que c'est précisément en luttant qu'elle contracte elle-même les tares qu'elle combat chez son adversaire, et qu'elle ne peut effacer ces tares qu'en les contractant. ___, seulement avec des facteurs inversés. »"
     answer: "Ce qui l'affronte et ce qu'elle combat, c'est toujours ce qu'elle est elle-même"
     alt: []
-  - id: n1841-p5-4
-    sentence: "Pour décrire le moment où le système, jusque-là refermé sur sa propre cohérence interne, se change en énergie conflictuelle tournée contre le monde, Marx écrit que « ce qui fut lumière intérieure devient ___ qui se tourne vers l'extérieur »."
-    answer: "flamme dévorante"
-    alt: []
-  - id: n1841-p5-9
-    sentence: "Quand Marx écrit que la philosophie « contracte elle-même les tares qu'elle combat chez son adversaire », il file une métaphore de la contamination : le défaut du monde qu'elle combat n'est jamais éliminé de l'extérieur, sans qu'elle-même en soit ___, comme on attrape une maladie au contact de ce qu'on affronte."
-    answer: "affectée"
-    alt: []
   - id: n1841-p5-14
     sentence: "Formule paradoxale par laquelle Marx désigne le double mouvement où le monde se rend conforme à la raison philosophique tandis que la philosophie elle-même s'incarne dans la réalité concrète : « le devenir-philosophique du monde est en même temps un ___ »."
     answer: "devenir-monde de la philosophie"
-    alt: []
-  - id: n1841-p5-15
-    sentence: "Contresens à éviter sur la formule « transformer » le monde : en 1841, Marx n'a pas encore en vue la praxis révolutionnaire, sociale et matérielle, des Thèses sur Feuerbach de 1845 ; la praxis dont il parle ici reste, comme il le précise lui-même, ___."
-    answer: "elle-même théorique"
-    alt: []
-  - id: n1841-p5-16
-    sentence: "Contresens à éviter sur « la réalisation de la philosophie est en même temps sa perte » : il ne faut y voir ni la disparition totale de toute philosophie, ni une simple métaphore sans portée précise, mais la perte de sa seule forme de système ___."
-    answer: "clos"
     alt: []
   - id: n1841-p5-17
     sentence: "Le devenir-philosophique du monde consiste, concrètement, dans le travail de la critique hégélienne de gauche, qui confronte les institutions et les croyances aux principes rationnels établis par la philosophie et montre qu'elles ne peuvent subsister sans se ___ devant la raison."
     answer: "justifier"
     alt: []
+  - id: n1841-p5-27
+    sentence: "Le devenir-philosophique du monde, dans l'Allemagne des années 1830 et 1840, c'est la critique jeune-hégélienne qui confronte la religion établie et l'État prussien aux principes hérités de Hegel : ___ contre la théologie, ___ contre la religion."
+    answer: "Bruno Bauer ; Feuerbach"
+    alt: ["Bauer ; Feuerbach"]
   - id: n1841-p5-18
     sentence: "En s'appliquant effectivement à juger et à critiquer le monde réel, la philosophie cesse d'être une totalité abstraite repliée sur elle-même : elle se mêle aux contenus concrets et contingents du monde qu'elle critique, c'est-à-dire qu'elle s'incarne, se particularise, se ___."
     answer: "mondanise"
+    alt: []
+  - id: n1841-p5-16
+    sentence: "Contresens à éviter sur « la réalisation de la philosophie est en même temps sa perte » : il ne faut y voir ni la disparition totale de toute philosophie, ni une simple métaphore sans portée précise, mais la perte de sa seule forme de système ___."
+    answer: "clos"
     alt: []
   - id: n1841-p5-19
     sentence: "Ce qui se perd, dans la formule « la réalisation de la philosophie est en même temps sa perte », ce n'est pas son contenu rationnel : c'est très précisément sa forme de système ___, cette intégrité qu'elle possédait tant qu'elle demeurait une totalité séparée du monde."
@@ -329,8 +571,42 @@ lessons:
     sentence: "Entre l'avant et l'après de ce mouvement, le gain est l'effectivité, la perte est l'intégrité systématique ; ces deux termes ne désignent en réalité qu'un seul et même mouvement observé sous ___ aspects."
     answer: "deux"
     alt: []
+  - id: n1841-p5-28
+    sentence: "Ce que la philosophie combat est ce qu'elle est elle-même « avec des **facteurs inversés** » : __la philosophie est de la raison sans ___, le monde de la réalité sans ___.__"
+    answer: "réalité ; raison"
+    alt: []
+  - id: n1841-p5-29
+    sentence: "Le défaut que la philosophie combat dans le monde est son propre défaut intérieur, parce que c'est le même défaut vu de l'un ou de l'autre côté : __une ___ entre raison et réalité.__"
+    answer: "séparation"
+    alt: []
+  - id: n1841-p5-9
+    sentence: "Quand Marx écrit que la philosophie « contracte elle-même les tares qu'elle combat chez son adversaire », il file une métaphore de la contamination : le défaut du monde qu'elle combat n'est jamais éliminé de l'extérieur, sans qu'elle-même en soit ___, comme on attrape une maladie au contact de ce qu'on affronte."
+    answer: "affectée"
+    alt: []
+  - id: n1841-p5-15
+    sentence: "Contresens à éviter sur la formule « transformer » le monde : en 1841, Marx n'a pas encore en vue la praxis révolutionnaire, sociale et matérielle, des Thèses sur Feuerbach de 1845 ; la praxis dont il parle ici reste, comme il le précise lui-même, ___."
+    answer: "elle-même théorique"
+    alt: []
 - id: n1841-p6
   title: "La double exigence des consciences individuelles"
+  notes: |-
+    **Marx passe du système aux personnes : c'est le même processus,** {amber}**vu du côté subjectif**{/amber}**.** Le processus du §5 passe par des {teal}« représentants intellectuels »{/teal}, les consciences individuelles qui portent le progrès du système : les disciples, et Marx parmi eux. Ce n'est {red}pas un second phénomène{/red}, mais {teal}« un autre aspect »{/teal} du même : ce qui, dans l'objet, est {amber}un rapport renversé{/amber} (la philosophie et le monde, chacun le défaut inversé de l'autre) devient, dans les sujets, {amber}une double exigence{/amber}. Trois temps : l'exigence à deux tranchants ; la double libération ; l'illusion des disciples.
+
+    === 1 Une exigence à deux tranchants
+
+    **L'exigence des disciples coupe des deux côtés à la fois.** Le premier tranchant est {coral}la critique du monde{/coral} : soumettre les croyances et les institutions à l'examen rationnel. Le second est {coral}la critique de la philosophie elle-même{/coral}, plus exactement de sa forme de système clos : exiger qu'elle cesse d'être une doctrine achevée, repliée sur soi, pour devenir une activité engagée dans le monde. Les deux exigences ne sont pas indépendantes : __on ne peut critiquer effectivement le monde sans faire éclater la clôture du système__, et faire éclater cette clôture, c'est déjà se tourner vers le monde.
+
+    === 2 Libérer le monde, se libérer du système
+
+    **En libérant le monde de** {violet}**la non-philosophie**{/violet}**, les disciples se libèrent de la philosophie comme système.** La non-philosophie est l'état de ce qui subsiste sans justification rationnelle, simplement parce que cela existe : {yellow}une croyance tenue pour vraie par habitude, une institution acceptée comme allant de soi{/yellow}. Si la philosophie se prétend vraie universellement, tout ce qui lui échappe devient injustifiable : le monde doit s'en libérer, {red}non par un devoir moral imposé du dehors{/red}, mais {green}par la logique même de la prétention philosophique à l'universalité{/green}.
+
+    Or, en libérant le monde, les disciples se libèrent eux-mêmes. Le système les avait {yellow}« chargés de fers »{/yellow} : l'image renvoie à la discipline du §3, l'école tient ses élèves comme des prisonniers. Il cesse de les enchaîner dès qu'ils {coral}s'en servent comme d'une arme{/coral} au lieu de le révérer comme une doctrine.
+
+    === 3 L'illusion : réaliser le système en croyant le combattre
+
+    **Cette libération est illusoire en un point : les disciples n'ont pas dépassé le système** {amber}**« sous le rapport de la théorie »**{/amber}**.** Encore pris {teal}« dans l'acte et dans l'énergie immédiate de l'évolution »{/teal}, ils agissent et combattent sans le recul qui leur ferait voir ce qu'ils font. Ce qu'ils rejettent, c'est {yellow}l'« intégrité sculpturale »{/yellow} du système : une statue, œuvre achevée, d'un seul bloc, figée, par opposition à la pensée en devenir qu'il était pour Hegel (§1). Ils croient ainsi le combattre de l'extérieur. Or leurs armes (les concepts de {violet}raison{/violet}, de {violet}liberté{/violet}, d'{violet}esprit{/violet}, de {violet}critique{/violet}) viennent du système lui-même : en le brisant, ils dispersent ses éléments dans le monde, c'est-à-dire {coral}réalisent ce qu'il contenait déjà{/coral}. Leur opposition est réelle sous le rapport pratique, mais elle reste {coral}immanente au système{/coral} sous le rapport théorique.
+
+    ! Marx décrit ici l'illusion de son propre camp : solidaire du combat jeune-hégélien, il en est déjà le critique, ce qui annonce ses ruptures avec ses anciens compagnons.
   passage:
     label: "§6"
     text: "Voilà l'un des côtés, si nous considérons le problème *de manière purement objective*, comme une réalisation immédiate de la philosophie. Mais il a aussi — et ce n'en est qu'un autre aspect — un côté *subjectif*. C'est *le rapport du système philosophique, qui se réalise, à ses représentants intellectuels*, avec les consciences individuelles qui font apparaître son progrès. De ce rapport qu'implique cette réalisation de la philosophie en face du monde, il résulte que ces consciences individuelles ont toujours une *exigence à deux tranchants*, dont l'un se tourne contre le monde et l'autre contre la philosophie elle-même. En effet, ce qui, dans l'objet, apparaît comme un rapport en soi renversé, se manifeste en ces représentants comme une double exigence et action contradictoire en soi-même. En libérant le monde de la non-philosophie, ils se libèrent eux-mêmes de la philosophie qui, comme système déterminé, les avaient chargés de fers. Étant encore eux-mêmes engagés dans l'acte et dans l'énergie immédiate de l'évolution ; donc, n'ayant pas dépassé ce système sous le rapport de la théorie, ils éprouvent seulement ce qui les oppose au système, à son intégrité sculpturale, sans s'apercevoir qu'en se tournant contre lui, ils ne font qu'en réaliser les divers éléments."
@@ -350,6 +626,18 @@ lessons:
     sentence: "« Voilà l'un des côtés, si nous considérons le problème *de manière purement objective*, comme une réalisation immédiate de la philosophie. Mais il a aussi — et ce n'en est qu'un autre aspect — un côté *subjectif*. C'est *le rapport du système philosophique, qui se réalise, à ses représentants intellectuels*, avec les consciences individuelles qui font apparaître son progrès. De ce rapport qu'implique cette réalisation de la philosophie en face du monde, il résulte que ces consciences individuelles ont toujours une *exigence à deux tranchants*, dont l'un se tourne contre le monde et l'autre contre la philosophie elle-même. En effet, ce qui, dans l'objet, apparaît comme ___, se manifeste en ces représentants comme une double exigence et action contradictoire en soi-même. »"
     answer: "un rapport en soi renversé"
     alt: []
+  - id: n1841-p6-14
+    sentence: "Le côté subjectif de la réalisation de la philosophie, son rapport aux disciples qui la portent, n'est pas pour Marx un second phénomène à côté du côté objectif : il « n'en est qu'___ »."
+    answer: "un autre aspect"
+    alt: []
+  - id: n1841-p6-10
+    sentence: "Chez les disciples qui portent effectivement le progrès du système philosophique, le rapport en soi renversé de la philosophie au monde se manifeste comme une exigence à deux tranchants : l'une tournée contre le monde, l'autre contre ___ elle-même."
+    answer: "la philosophie"
+    alt: []
+  - id: n1841-p6-15
+    sentence: "Les deux tranchants de l'exigence des disciples ne sont pas indépendants : __on ne peut critiquer effectivement le monde sans faire éclater la ___ du système__, et la faire éclater, c'est déjà se tourner vers le monde."
+    answer: "clôture"
+    alt: []
   - id: n1841-p6-4
     fragment: "2/3"
     sentence: "« En libérant le monde de ___, ils se libèrent eux-mêmes de la philosophie qui, comme système déterminé, les avaient chargés de fers. »"
@@ -359,6 +647,22 @@ lessons:
     fragment: "2/3"
     sentence: "« En libérant le monde de la non-philosophie, ils se libèrent eux-mêmes de la philosophie qui, comme système déterminé, les avaient ___. »"
     answer: "chargés de fers"
+    alt: []
+  - id: n1841-p6-11
+    sentence: "Terme par lequel Marx désigne l'état de ce qui, dans le monde, n'a pas encore été soumis à l'examen rationnel (une croyance ou une institution acceptée comme allant de soi, sans justification) : la ___."
+    answer: "non-philosophie"
+    alt: []
+  - id: n1841-p6-12
+    sentence: "Le « devrait » par lequel Marx affirme que le monde doit se libérer de la non-philosophie n'a rien d'un devoir moral extérieurement imposé : il découle strictement de la prétention à ___ que porte le système philosophique lui-même, une fois posé comme achevé."
+    answer: "l'universalité"
+    alt: []
+  - id: n1841-p6-16
+    sentence: "Le système hégélien avait « **chargés de fers** » ses disciples : l'image de la prison renvoie à la ___ du §3, celle de l'école qui tient ses élèves tant qu'ils apprennent, reçoivent et répètent."
+    answer: "discipline"
+    alt: []
+  - id: n1841-p6-17
+    sentence: "Le système hégélien cesse d'enchaîner ses disciples dès qu'ils le tournent contre le monde : __au lieu de le révérer comme une doctrine, ils s'en servent comme d'une__ ___."
+    answer: "arme"
     alt: []
   - id: n1841-p6-6
     fragment: "3/3"
@@ -379,24 +683,46 @@ lessons:
     sentence: "L'expression « intégrité sculpturale » compare le système hégélien, tel qu'il se présentait aux disciples, à une œuvre ___ et achevée, semblable à une statue qu'on ne peut plus retoucher, par opposition à une pensée encore vivante et en mouvement."
     answer: "sculptée"
     alt: []
-  - id: n1841-p6-10
-    sentence: "Chez les disciples qui portent effectivement le progrès du système philosophique, le rapport en soi renversé de la philosophie au monde se manifeste comme une exigence à deux tranchants : l'une tournée contre le monde, l'autre contre ___ elle-même."
-    answer: "la philosophie"
-    alt: []
-  - id: n1841-p6-11
-    sentence: "Terme par lequel Marx désigne l'état de ce qui, dans le monde, n'a pas encore été soumis à l'examen rationnel (une croyance ou une institution acceptée comme allant de soi, sans justification) : la ___."
-    answer: "non-philosophie"
-    alt: []
-  - id: n1841-p6-12
-    sentence: "Le « devrait » par lequel Marx affirme que le monde doit se libérer de la non-philosophie n'a rien d'un devoir moral extérieurement imposé : il découle strictement de la prétention à ___ que porte le système philosophique lui-même, une fois posé comme achevé."
-    answer: "l'universalité"
-    alt: []
   - id: n1841-p6-13
     sentence: "L'erreur des disciples tient à ceci qu'ils sont encore engagés dans l'énergie immédiate de l'action et n'ont donc dépassé le système que dans sa forme figée, sans avoir accompli, sous le rapport de la ___, le dépassement véritable de son contenu."
     answer: "théorie"
     alt: []
+  - id: n1841-p6-18
+    sentence: "Les concepts que les disciples tournent contre le système hégélien (raison, liberté, esprit, critique) viennent de ce système même : leur opposition, réelle sous le rapport pratique, __reste ___ au système sous le rapport théorique.__"
+    answer: "immanente"
+    alt: []
+  - id: n1841-p6-19
+    sentence: "En montrant que les disciples réalisent le système en croyant le combattre, Marx décrit l'illusion de son propre camp, celui des ___ : solidaire de leur combat, il en est déjà le critique."
+    answer: "jeunes-hégéliens"
+    alt: []
 - id: n1841-p7
   title: "La scission en deux partis"
+  notes: |-
+    **La double exigence, qui était une tension dans chaque conscience, devient une division entre deux partis.** Le devenir-philosophique du monde et le devenir-monde de la philosophie sont un seul mouvement, mais son unité ne se maintient pas quand il passe à l'existence : {amber}des consciences finies ne peuvent en assumer toutes les exigences à la fois{/amber}, et chacune en privilégie une. L'accommodement, au sens du §2, prend ici une forme historique : {coral}chaque parti ampute le mouvement d'une de ses deux faces{/coral}. La scission ne rompt donc pas le processus dialectique : elle en est la forme historique nécessaire, l'unité ne passant à l'existence que par des moments partiels et opposés.
+
+    | Trait | Parti libéral | Philosophie positive |
+    | ce qu'il retient | le concept | le non-concept |
+    | son activité | la critique | philosopher |
+    | son mouvement | vers l'extérieur | intérioriser |
+    | où est l'insuffisance | dans le monde | dans la philosophie |
+    | ce qu'il accomplit sans le vouloir | transformer la philosophie | mondaniser la philosophie |
+    | le verdict de Marx | des progrès réels | la folie |
+
+    === 1 Deux noms à ne pas mal entendre
+
+    **Le** {violet}**parti libéral**{/violet} **n'est ni une doctrine économique ni un parti politique au sens moderne :** c'est le parti de la liberté et de la critique, en gros les jeunes-hégéliens ({sky}Bruno Bauer{/sky} et son entourage berlinois, que Marx fréquente alors). Il s'attache au {violet}concept{/violet} : non une simple idée générale, mais ce qui est compris et justifié par la raison, ce dont on peut rendre compte.
+
+    **La** {violet}**philosophie positive**{/violet} **a un sens historique précis :** c'est le nom que le dernier {sky}Schelling{/sky} donne à sa propre philosophie, opposée à la philosophie « négative », purement rationnelle, de Hegel, et défendue avec lui par des théistes spéculatifs. Schelling est d'ailleurs appelé à Berlin en 1841 pour y combattre l'influence hégélienne. Contre le primat du concept, elle part du {violet}non-concept{/violet} : la réalité donnée, positive (la révélation, l'existence, le fait), que la raison ne peut pas produire.
+
+    ! « Libéral » ne désigne pas ici le libéralisme économique, et la philosophie positive ne se confond pas sans nuance avec les « vieux-hégéliens ».
+
+    === 2 Le chiasme, et le verdict
+
+    **Chaque parti accomplit, sans le vouloir, le programme de l'autre.** Le parti libéral veut changer le monde sans toucher à la philosophie, qu'il tient pour vraie ; mais en critiquant, il fait éclater la forme du système, et {coral}transforme donc la philosophie elle-même{/coral}, ce que voulait la philosophie positive. Celle-ci veut corriger la philosophie sans critiquer le monde ; mais en faisant entrer dans la pensée la réalité donnée, elle {coral}mondanise la philosophie{/coral}, ce que visait le parti libéral. D'où la formule : chacun {teal}« fait exactement ce que l'autre voudrait faire et ce qu'il refuse de faire lui-même »{/teal}.
+
+    **Marx ne les renvoie pourtant pas dos à dos.** Le parti libéral, {teal}« malgré sa contradiction interne »{/teal}, a {green}conscience du principe et connaît son but{/green} : parti du concept, il est le seul à faire des progrès réels. Son défaut : réduit à la critique, il s'en tient à {pink}un rapport négatif au monde{/pink}, qui juge et dénonce sans accomplir l'autre moitié du mouvement, et il croit s'opposer au système de l'extérieur alors qu'il en déploie les éléments (§6). La philosophie positive, elle, garde {red}la forme du discours philosophique{/red} (raisonner, démontrer, fonder) en abandonnant son contenu, l'exigence critique de rendre raison : elle parle le langage du concept pour justifier ce qui, par définition, échappe au concept. C'est en ce sens que {teal}« la forme contredit la signification »{/teal}.
+
+    La différence entre les deux contradictions est donc que celle du parti libéral est {green}consciente d'elle-même et orientée{/green}, tandis que celle de la philosophie positive {red}s'ignore{/red}.
   passage:
     label: "§7"
     text: "Finalement, ce dédoublement de la conscience philosophique se manifeste sous l'aspect d'une double tendance marquée d'un antagonisme extrême ; l'une, que nous pouvons désigner d'une façon générale comme le *parti libéral*, s'attache au concept et au principe de la philosophie ; l'autre en retient comme caractère déterminant le *non-concept*, l'élément de la réalité. Cette seconde tendance est la *philosophie positive*. La première a pour activité la critique, donc précisément le mouvement de la philosophie vers l'extérieur ; la seconde agit en essayant de philosopher, donc d'intérioriser la philosophie, sachant que l'insuffisance est inhérente à la philosophie, tandis que la première tendance la conçoit comme insuffisance du monde qu'il convient de rendre philosophique. Chacun de ces partis fait exactement ce que l'autre voudrait faire et ce qu'il refuse de faire lui-même. Mais le premier, malgré sa contradiction interne, a, d'une façon générale, conscience du principe et il connaît son but. Dans le second, l'absurdité — on pourrait dire la folie — se manifeste en tant que telle. Fondamentalement, seul le parti libéral, parce que parti du concept, aboutit à des progrès réels, tandis que la philosophie positive ne parvient qu'à des revendications et des tendances dont la forme contredit la signification."
@@ -410,6 +736,30 @@ lessons:
     fragment: "1/2"
     sentence: "« Finalement, ce dédoublement de la conscience philosophique se manifeste sous l'aspect d'une double tendance marquée d'un antagonisme extrême ; l'une, que nous pouvons désigner d'une façon générale comme le *parti libéral*, s'attache au concept et au principe de la philosophie ; l'autre en retient comme caractère déterminant le *non-concept*, l'élément de la réalité. Cette seconde tendance est ___. »"
     answer: "la philosophie positive"
+    alt: []
+  - id: n1841-p7-14
+    sentence: "Le « **parti libéral** » de la note de 1841 ne désigne ni une doctrine économique ni un parti politique au sens moderne : c'est le parti de la liberté et de la critique, en gros les jeunes-hégéliens, autour de ___, que Marx fréquente alors à Berlin."
+    answer: "Bruno Bauer"
+    alt: ["Bauer"]
+  - id: n1841-p7-18
+    sentence: "Le **concept**, au sens hégélien auquel s'attache le parti libéral, n'est pas une simple idée générale : c'est __une chose comprise et ___ par la raison__, dont on peut rendre compte étape par étape."
+    answer: "justifiée"
+    alt: []
+  - id: n1841-p7-8
+    sentence: "Terme par lequel Marx désigne, par opposition stricte au concept, l'élément de pure positivité que retient la philosophie positive (ce qui est simplement donné, reçu comme un fait dont on ne rend pas raison) : le ___."
+    answer: "non-concept"
+    alt: []
+  - id: n1841-p7-15
+    sentence: "« **Philosophie positive** » a un sens historique précis : c'est le nom que __le dernier ___ donne à sa propre philosophie__, qui part de la réalité donnée (la révélation, l'existence, le fait) comme de ce que la raison ne peut pas produire."
+    answer: "Schelling"
+    alt: []
+  - id: n1841-p7-16
+    sentence: "La **philosophie positive** du dernier Schelling s'oppose à la philosophie de Hegel, qu'elle dit purement rationnelle et qu'elle appelle pour cette raison __philosophie « ___ ».__"
+    answer: "négative"
+    alt: []
+  - id: n1841-p7-17
+    sentence: "L'année même de la thèse de Marx, en ___, Schelling est appelé à Berlin pour y combattre l'influence hégélienne."
+    answer: "1841"
     alt: []
   - id: n1841-p7-3
     fragment: "2/2"
@@ -441,10 +791,6 @@ lessons:
     sentence: "« Fondamentalement, seul le parti libéral, parce que parti du concept, aboutit à ___, tandis que la philosophie positive ne parvient qu'à des revendications et des tendances dont la forme contredit la signification. »"
     answer: "des progrès réels"
     alt: []
-  - id: n1841-p7-8
-    sentence: "Terme par lequel Marx désigne, par opposition stricte au concept, l'élément de pure positivité que retient la philosophie positive (ce qui est simplement donné, reçu comme un fait dont on ne rend pas raison) : le ___."
-    answer: "non-concept"
-    alt: []
   - id: n1841-p7-9
     sentence: "Rien, dans la nature de la conscience individuelle finie, ne garantit que les deux exigences soient assumées ensemble par un même sujet : la finitude propre à toute conscience particulière la porte à privilégier l'une des deux faces au détriment de ___."
     answer: "l'autre"
@@ -453,6 +799,10 @@ lessons:
     sentence: "La scission entre parti libéral et philosophie positive ne rompt nullement le processus dialectique ; elle en constitue au contraire la poursuite nécessaire, tout passage d'une unité en soi à son existence effective procédant, chez Hegel comme chez Marx, par une différenciation en moments ___ et opposés."
     answer: "partiels"
     alt: []
+  - id: n1841-p7-19
+    sentence: "Chaque parti fait ce que l'autre voudrait faire : le **parti libéral** veut changer le monde sans toucher à la philosophie, mais en critiquant il fait éclater la forme du système, et __transforme donc ___ elle-même__, ce que voulait la philosophie positive."
+    answer: "la philosophie"
+    alt: ["philosophie"]
   - id: n1841-p7-11
     sentence: "Objection contre le parti libéral : en réduisant son activité à la seule critique, il s'en tient à un rapport essentiellement ___ au monde, sans jamais accomplir l'autre moitié du mouvement, celle par laquelle la philosophie devait aussi se mondaniser positivement."
     answer: "négatif"
@@ -461,8 +811,27 @@ lessons:
     sentence: "Objection contre la philosophie positive : en s'efforçant d'intérioriser la philosophie dans la positivité déjà donnée, elle prétend conserver la forme du discours philosophique tout en en abandonnant le contenu véritable, à savoir l'exigence ___."
     answer: "critique"
     alt: []
+  - id: n1841-p7-20
+    sentence: "Les revendications de la **philosophie positive** ont une forme qui « contredit la signification » : __elle parle le langage du ___ pour justifier ce qui, par définition, lui échappe.__"
+    answer: "concept"
+    alt: []
+  - id: n1841-p7-21
+    sentence: "Marx ne renvoie pas dos à dos les deux partis issus de Hegel : la contradiction du **parti libéral** est ___ d'elle-même et orientée vers un but, tandis que celle de la philosophie positive s'ignore."
+    answer: "consciente"
+    alt: []
 - id: n1841-p8
   title: "Bilan du mouvement dialectique en trois étapes"
+  notes: |-
+    **Une seule phrase récapitule les §5 à §7 en** {amber}**trois ruptures**{/amber}**.**
+
+    | Rupture | Entre quoi | Lieu |
+    | la première | la philosophie et le monde | §5 |
+    | la deuxième | la conscience individuelle et elle-même | §6 |
+    | la troisième | deux tendances philosophiques | §7 |
+
+    La première est {teal}« une fausse relation »{/teal}, un rapport qui n'est pas celui de l'unité vraie, et {teal}« une rupture hostile »{/teal}, un conflit : la philosophie, devenue un côté, s'oppose à l'autre côté. La deuxième réfléchit cette opposition dans chaque disciple, sous la forme de l'exigence à deux tranchants. La troisième la projette dans l'histoire, sous la forme de deux partis.
+
+    **Le mouvement va** {coral}**de l'extérieur à l'intérieur, puis de nouveau à l'extérieur**{/coral} **:** la rupture avec le monde est intériorisée dans les sujets, puis extériorisée dans l'école. Chaque étape reprend la précédente en la déplaçant, à la manière dont {sky}Hegel{/sky} décrit le développement d'une contradiction. Les §5 à §7 décrivent donc un seul processus, observé successivement dans le rapport de la philosophie au monde, dans les consciences, puis dans l'école. Il reste à montrer ce qu'il devient quand il est porté par des esprits médiocres (§9).
   passage:
     label: "§8"
     text: "Par conséquent, ce qui apparaît en premier lieu comme une fausse relation et une rupture hostile de la philosophie avec le monde devient en second lieu une rupture de la conscience philosophique individuelle avec elle-même, pour se manifester finalement comme une séparation extérieure et un dédoublement de la philosophie, comme deux tendances philosophiques opposées."
@@ -487,8 +856,38 @@ lessons:
     sentence: "Le §8 ne se comprend pas indépendamment des paragraphes qu'il résume : sa troisième étape (la séparation extérieure en deux tendances) présuppose directement la scission déjà exposée au ___."
     answer: "§7"
     alt: []
+  - id: n1841-p8-6
+    sentence: "Les trois ruptures que récapitule le §8 de la note de 1841 dessinent un mouvement : la rupture de la philosophie avec le monde est d'abord ___ dans les consciences des disciples, puis extériorisée dans l'école, en deux tendances opposées."
+    answer: "intériorisée"
+    alt: []
+  - id: n1841-p8-7
+    sentence: "La première rupture, celle de la philosophie avec le monde, est une « **fausse relation** » : __un rapport qui n'est pas celui de l'___ vraie__, puisque la philosophie n'y est plus qu'un côté opposé à un autre."
+    answer: "unité"
+    alt: []
 - id: n1841-p9
   title: "La satire des épigones"
+  notes: |-
+    **Après l'analyse, la satire : elle n'ajoute aucune catégorie, elle pousse à la caricature les défauts des deux partis.** Marx le dit lui-même à la fin : {teal}« Tous ces mollusques vont cependant rentrer dans les deux tendances indiquées ci-dessus »{/teal}. Le paragraphe donne {amber}deux portraits{/amber}, un par parti, puis {amber}une anatomie burlesque{/amber} du système.
+
+    === 1 L'emprunteur de voix
+
+    **Le premier épigone** {teal}**« s'abrite derrière une gigantesque figure philosophique du passé »**{/teal}**.** {yellow}L'âne sous la peau du lion{/yellow} vient de la fable d'{sky}Ésope{/sky}, reprise par {sky}La Fontaine{/sky} : l'âne qui s'est revêtu d'une peau de lion fait illusion jusqu'au moment où il se met à braire. De même l'épigone se pare d'un grand nom, mais sa {teal}« voix pleurarde »{/teal} le trahit, en {teal}« contraste comique »{/teal} avec la voix puissante d'Aristote. Il est comme {yellow}un muet armé d'un énorme porte-voix{/yellow} : un porte-voix amplifie une voix, il n'en donne pas à qui n'en a pas.
+
+    Ce portrait redouble {coral}le défaut de la philosophie positive{/coral} : comme elle prend la réalité donnée pour norme au lieu de la penser, l'épigone prend une pensée déjà constituée pour la sienne au lieu de penser lui-même. Il pousse aussi à l'extrême {pink}le rapport de reflet{/pink} du §1 : il n'a même plus un rapport extérieur à une pensée vivante, il n'en est que l'écho vide.
+
+    === 2 Le lilliputien sur le géant
+
+    **Le second épigone est** {yellow}**un lilliputien**{/yellow}**,** d'après les *Voyages de Gulliver* de {sky}Swift{/sky}, où les habitants de Lilliput sont minuscules à côté du géant Gulliver. Ici, {amber}le géant est le système hégélien{/amber}. {yellow}Les doubles lunettes{/yellow} disent la myopie, qui ne voit que le détail tout proche. Depuis son {blue}*punctum visus*{/blue}, son « point de vue », le lilliputien prétend avoir trouvé {yellow}le point d'Archimède{/yellow}, {blue}*pou stô*{/blue}, d'après le mot attribué à Archimède : « donne-moi un point où me tenir et je soulèverai la terre ». Le ridicule tient à {coral}la disproportion{/coral} entre ce point de vue infime et dérivé, qui n'existe que posé sur le géant, et la prétention de fonder l'univers.
+
+    Il cherche ce point fixe non {teal}« dans les flots du cœur »{/teal}, mais {teal}« sur le terrain ferme et solide où il s'est posté »{/teal}. On peut y lire un écho du §1 : la vie du système était le sang qui affluait jusqu'à ses confins ; le lilliputien cherche la vérité non au cœur, d'où part ce sang, mais sur la surface inerte où il s'est installé. Ce portrait redouble {coral}le défaut du parti libéral{/coral} : le lilliputien croit dominer le géant alors qu'il est assis sur lui, comme le parti libéral croit s'opposer au système de l'extérieur alors qu'il n'en réalise que les éléments.
+
+    === 3 Le corps du système, du vivant au déchet
+
+    **Marx loge chaque épigone dans le corps du système.** {sky}Swedenborg{/sky}, mystique suédois du XVIIIe siècle, se représentait le monde spirituel comme un grand homme, dont chaque région correspond à une partie du corps humain ; Marx applique ironiquement l'image au système hégélien. {yellow}Les cheveux et les ongles{/yellow} sont des parties périphériques et non vivantes, que le corps produit et rejette à sa surface : des penseurs qui ne gardent du système qu'un résidu mort. {yellow}Les orteils{/yellow} sont la partie la plus éloignée de la tête, pour qui prétend au point de vue universel. {yellow}Les excréments{/yellow} ne sont même plus une partie du corps, mais ce qu'il expulse. {yellow}« Mollusques »{/yellow} achève le portrait : des êtres sans squelette, sans structure propre, qui ne tiennent que par le corps auquel ils s'attachent.
+
+    **La gradation prolonge jusqu'au grotesque la logique de l'accommodement.** Les deux partis du §7 amputaient chacun le mouvement d'une de ses faces ; les épigones ne retiennent plus du système qu'un fragment détaché, puis un déchet. Elle confirme le §2 : l'insuffisance qui se montre dans l'accommodement n'était pas le défaut d'un individu, mais {coral}la condition structurelle de toute réalisation historique d'une philosophie{/coral}, que des consciences finies ne portent qu'en la mutilant. Marx annonce enfin, sur les deux tendances et leur rapport à Hegel, une explication complète que la thèse ne donne pas.
+
+    ! La satire n'est pas une digression : tous les épigones rentrent dans les deux tendances du §7.
   passage:
     label: "§9"
     text: "Il va de soi que, de surcroît, émergent en foule des figures subalternes, grincheuses, dépourvues d'individualité, qui, ou bien s'abritent derrière une gigantesque figure philosophique du passé (mais l'on découvre bientôt l'âne sous la peau du lion, la voix pleurarde d'un mannequin d'aujourd'hui et de naguère se lamente, contraste comique avec la voix puissante qui traverse les siècles, celle d'Aristote, par exemple, dont elle s'est faite l'organe mal venu : imaginons un muet s'efforçant de retrouver la parole en s'aidant d'un énorme porte-voix) ; ou bien, armé de doubles lunettes, quelque lilliputien, installé dans un tout petit coin de postérieur du géant, annonce tout émerveillé au monde quelle nouvelle et surprenante perspective s'offre de son *punctum visus*, s'évertuant, non sans ridicule, à démontrer que ce n'est point dans les flots du cœur, mais sur le terrain ferme et solide où il s'est posté, que se trouve le point d'Archimède, ποῦ στῶ, où l'univers est suspendu à des gonds. Et c'est ainsi que naissent des philosophes-cheveux, des philosophes-ongles, des philosophes-orteils, des philosophes-excréments et d'autres qui doivent représenter un lieu pire encore dans le mystique homme-univers de Swedenborg. Tous ces mollusques vont cependant rentrer dans les deux tendances indiquées ci-dessus, qui sont leur élément."
@@ -513,6 +912,26 @@ lessons:
     sentence: "« Il va de soi que, de surcroît, émergent en foule des figures subalternes, grincheuses, dépourvues d'individualité, qui, ou bien s'abritent derrière une gigantesque figure philosophique du passé (mais l'on découvre bientôt l'âne sous la peau du lion, la voix pleurarde d'un mannequin d'aujourd'hui et de naguère se lamente, contraste comique avec la voix puissante qui traverse les siècles, celle d'Aristote, par exemple, dont elle s'est faite l'organe mal venu : imaginons un muet s'efforçant de retrouver la parole en s'aidant d'___) ; »"
     answer: "un énorme porte-voix"
     alt: []
+  - id: n1841-p9-18
+    sentence: "« **L'âne sous la peau du lion** », image par laquelle Marx démasque l'épigone abrité derrière une grande figure du passé, vient d'une fable d'___, reprise par La Fontaine."
+    answer: "Ésope"
+    alt: []
+  - id: n1841-p9-19
+    sentence: "Dans la fable, l'âne revêtu de la peau du lion fait illusion __jusqu'au moment où il se met à ___ :__ de même, c'est sa « voix pleurarde » qui trahit l'épigone paré du nom d'Aristote."
+    answer: "braire"
+    alt: []
+  - id: n1841-p9-20
+    sentence: "L'épigone est comme « un muet s'efforçant de retrouver la parole en s'aidant d'un énorme **porte-voix** » : __un porte-voix ___ une voix__, il n'en donne pas à qui n'en a pas."
+    answer: "amplifie"
+    alt: []
+  - id: n1841-p9-4
+    sentence: "Le premier type d'épigone, celui qui s'abrite derrière une grande figure du passé sans avoir de voix propre, redouble le défaut de la philosophie positive : de même que celle-ci retient le non-concept, cet épigone se contente d'emprunter, sans l'engendrer lui-même, la voix déjà constituée d'un système ___."
+    answer: "passé"
+    alt: []
+  - id: n1841-p9-21
+    sentence: "L'épigone abrité derrière une grande figure du passé pousse à l'extrême le rapport de reflet que le §1 reprochait aux disciples de Hegel : il n'a même plus un rapport extérieur à une pensée vivante, __il n'en est que l'___ vide.__"
+    answer: "écho"
+    alt: []
   - id: n1841-p9-5
     fragment: "2/3"
     sentence: "« ou bien, armé de doubles lunettes, quelque ___, installé dans un tout petit coin de postérieur du géant, annonce tout émerveillé au monde quelle nouvelle et surprenante perspective s'offre de son *punctum visus*, s'évertuant, non sans ridicule, à démontrer que ce n'est point dans les flots du cœur, mais sur le terrain ferme et solide où il s'est posté, que se trouve le point d'Archimède, ποῦ στῶ, où l'univers est suspendu à des gonds. »"
@@ -528,6 +947,42 @@ lessons:
     sentence: "« ou bien, armé de doubles lunettes, quelque lilliputien, installé dans un tout petit coin de postérieur du géant, annonce tout émerveillé au monde quelle nouvelle et surprenante perspective s'offre de son *punctum visus*, s'évertuant, non sans ridicule, à démontrer que ce n'est point dans les flots du cœur, mais sur le terrain ferme et solide où il s'est posté, que se trouve le point d'Archimède, ___, où l'univers est suspendu à des gonds. »"
     answer: "pou stô"
     alt: ["ποῦ στῶ", "pou sto"]
+  - id: n1841-p9-22
+    sentence: "Le « **lilliputien** » de la satire de 1841 vient des *Voyages de Gulliver* de ___, où les habitants de Lilliput sont minuscules à côté du géant."
+    answer: "Swift"
+    alt: []
+  - id: n1841-p9-23
+    sentence: "Dans la satire des épigones, le **géant** sur lequel le lilliputien est installé figure ___."
+    answer: "le système hégélien"
+    alt: ["le système de Hegel", "système hégélien"]
+  - id: n1841-p9-6
+    sentence: "L'image du lilliputien, empruntée aux Voyages de Gulliver, désigne un être minuscule comparé à la stature du géant sur lequel il se tient : elle traduit la disproportion entre le point de vue infime de l'épigone et sa prétention à formuler une vérité ___."
+    answer: "universelle"
+    alt: []
+  - id: n1841-p9-24
+    sentence: "Les « **doubles lunettes** » dont Marx arme le lilliputien sont l'image de la ___, qui ne voit que le détail tout proche."
+    answer: "myopie"
+    alt: []
+  - id: n1841-p9-25
+    sentence: "*Punctum visus*, d'où le lilliputien annonce au monde sa « nouvelle et surprenante perspective », est le latin pour « ___ »."
+    answer: "point de vue"
+    alt: ["point de vision"]
+  - id: n1841-p9-26
+    sentence: "Le **point d'Archimède**, *pou stô*, renvoie au mot attribué à Archimède : « donne-moi un point où me tenir et je ___ »."
+    answer: "soulèverai la terre"
+    alt: []
+  - id: n1841-p9-27
+    sentence: "Le lilliputien cherche le point fixe non « dans les flots du cœur », d'où partait au §1 le sang spirituel de Hegel, mais sur le « terrain ferme et solide » où il s'est posté : __une surface ___, loin de ce qui fait la vie du système.__"
+    answer: "inerte"
+    alt: []
+  - id: n1841-p9-10
+    sentence: "Installer le lilliputien dans « un tout petit coin de postérieur du géant », une partie du corps aussi éloignée que possible de la tête, siège de la raison et de la vision, alors même qu'il prétend avoir trouvé le point de vue universel, constitue un ___ organique volontairement souligné par Marx."
+    answer: "contresens"
+    alt: []
+  - id: n1841-p9-7
+    sentence: "Le second type, le lilliputien juché sur le corps du géant, redouble le défaut du parti libéral : celui-ci croyait s'opposer au système hégélien depuis l'extérieur, alors qu'il n'en réalisait, sans le savoir, que les éléments ___."
+    answer: "constitutifs"
+    alt: []
   - id: n1841-p9-11
     fragment: "3/3"
     sentence: "« Et c'est ainsi que naissent ___ et d'autres qui doivent représenter un lieu pire encore dans le mystique homme-univers de Swedenborg. Tous ces mollusques vont cependant rentrer dans les deux tendances indiquées ci-dessus, qui sont leur élément. »"
@@ -543,21 +998,9 @@ lessons:
     sentence: "« Et c'est ainsi que naissent des philosophes-cheveux, des philosophes-ongles, des philosophes-orteils, des philosophes-excréments et d'autres qui doivent représenter un lieu pire encore dans le mystique homme-univers de Swedenborg. Tous ces mollusques vont cependant rentrer dans ___. »"
     answer: "les deux tendances indiquées ci-dessus, qui sont leur élément"
     alt: []
-  - id: n1841-p9-4
-    sentence: "Le premier type d'épigone, celui qui s'abrite derrière une grande figure du passé sans avoir de voix propre, redouble le défaut de la philosophie positive : de même que celle-ci retient le non-concept, cet épigone se contente d'emprunter, sans l'engendrer lui-même, la voix déjà constituée d'un système ___."
-    answer: "passé"
-    alt: []
-  - id: n1841-p9-6
-    sentence: "L'image du lilliputien, empruntée aux Voyages de Gulliver, désigne un être minuscule comparé à la stature du géant sur lequel il se tient : elle traduit la disproportion entre le point de vue infime de l'épigone et sa prétention à formuler une vérité ___."
-    answer: "universelle"
-    alt: []
-  - id: n1841-p9-7
-    sentence: "Le second type, le lilliputien juché sur le corps du géant, redouble le défaut du parti libéral : celui-ci croyait s'opposer au système hégélien depuis l'extérieur, alors qu'il n'en réalisait, sans le savoir, que les éléments ___."
-    answer: "constitutifs"
-    alt: []
-  - id: n1841-p9-10
-    sentence: "Installer le lilliputien dans « un tout petit coin de postérieur du géant », une partie du corps aussi éloignée que possible de la tête, siège de la raison et de la vision, alors même qu'il prétend avoir trouvé le point de vue universel, constitue un ___ organique volontairement souligné par Marx."
-    answer: "contresens"
+  - id: n1841-p9-28
+    sentence: "Le « mystique homme-univers » auquel Marx rattache ses philosophes-cheveux et ses philosophes-ongles est celui de **Swedenborg**, mystique ___ du XVIIIe siècle, qui se représentait le monde spirituel comme un grand homme dont chaque région correspond à une partie du corps."
+    answer: "suédois"
     alt: []
   - id: n1841-p9-12
     sentence: "Les cheveux et les ongles désignent, par métonymie, les parties du corps humain les plus périphériques et précisément non ___ : une matière que le corps produit et rejette continuellement à sa surface sans qu'elle participe à sa vie intérieure."
@@ -567,12 +1010,28 @@ lessons:
     sentence: "Les philosophes-excréments portent la logique de la satire à son terme radical : ils ne sont même plus une partie du corps, fût-elle morte ou périphérique, mais ce que le corps ___ hors de lui-même."
     answer: "expulse"
     alt: []
+  - id: n1841-p9-29
+    sentence: "« Tous ces **mollusques** » : le dernier mot de la satire désigne des êtres sans ___, c'est-à-dire sans structure propre, qui ne tiennent que par le corps auquel ils s'attachent."
+    answer: "squelette"
+    alt: []
+  - id: n1841-p9-30
+    sentence: "La gradation des philosophes-cheveux aux philosophes-excréments prolonge la logique de l'accommodement : les deux partis amputaient le mouvement d'une face, les épigones ne retiennent plus du système qu'un fragment détaché, __puis un__ ___."
+    answer: "déchet"
+    alt: []
   - id: n1841-p9-16
     sentence: "Ce que la satire finale permet de conclure, rétrospectivement, sur l'accommodement des §1-§2 : l'insuffisance du principe n'était pas un défaut ponctuel affectant tel philosophe pris à part, mais la condition ___ de toute réalisation historique de la philosophie."
     answer: "structurelle"
     alt: []
 - id: n1841-ouverture
   title: "Vers la XIe thèse sur Feuerbach (1845)"
+  notes: |-
+    **La note de 1841 formule, dans un vocabulaire encore hégélien, une idée qui ne quittera plus Marx :** {green}**la philosophie ne s'accomplit qu'en cessant d'être une théorie séparée du monde**{/green}**.**
+
+    **Fin 1843, l'*Introduction* reprend le schéma pour l'Allemagne.** Dans l'*Introduction* à la *Contribution à la critique de la philosophie du droit de Hegel* (parue en 1844), deux partis reçoivent deux reproches symétriques. Au {violet}parti pratique{/violet}, qui tourne le dos à la philosophie, Marx répond : {teal}« vous ne pouvez pas supprimer la philosophie sans l'effectuer »{/teal}. Le {violet}parti théorique{/violet}, lui, a cru pouvoir l'effectuer sans la supprimer. On reconnaît la réalisation qui est en même temps une perte (§5) et le chiasme des deux partis, dont chacun manque ce que l'autre possède (§7). La nouveauté décisive : la philosophie trouve désormais {coral}son agent de réalisation dans une classe sociale{/coral}. {teal}« Le cerveau de cette émancipation est la philosophie, son cœur, le prolétariat. »{/teal}
+
+    **En 1845, la XIe thèse sur Feuerbach donne à l'intuition sa forme la plus célèbre.** De la note à cette thèse, le chemin est réel, mais il n'est pas court : il faut que la praxis cesse d'être {teal}« elle-même théorique »{/teal}, c'est-à-dire que {coral}la critique devienne transformation effective des rapports sociaux{/coral}.
+
+    ! En 1841, il n'y a encore ni prolétariat ni révolution : la philosophie se réalise par la critique, et par ses seuls disciples.
   passage:
     label: "Ouverture"
     text: "Les philosophes n'ont fait qu'interpréter le monde de différentes manières, ce qui importe, c'est de le transformer."
@@ -580,4 +1039,24 @@ lessons:
   - id: n1841-ouverture-1
     sentence: "Marx, XIe thèse sur Feuerbach (1845) : « Les philosophes n'ont fait qu'interpréter le monde de différentes manières, ce qui importe, c'est de ___. », formule vers laquelle tend déjà, dans un vocabulaire encore hégélien, l'idée de la note de 1841 selon laquelle la philosophie ne peut s'accomplir qu'en cessant d'être une pure théorie séparée du monde."
     answer: "le transformer"
+    alt: []
+  - id: n1841-ouverture-2
+    sentence: "Deux ans après la note de 1841, l'*Introduction* de 1843 en reprend la dialectique de la réalisation et de la perte contre le parti pratique, qui tourne le dos à la philosophie : « vous ne pouvez pas supprimer la philosophie sans ___ »."
+    answer: "l'effectuer"
+    alt: []
+  - id: n1841-ouverture-3
+    sentence: "Dans l'*Introduction* de 1843, le reproche fait au **parti théorique** est symétrique de celui fait au parti pratique, comme dans le chiasme des deux partis de 1841 : il a cru pouvoir __effectuer la philosophie sans__ ___."
+    answer: "la supprimer"
+    alt: []
+  - id: n1841-ouverture-4
+    sentence: "La nouveauté décisive de l'*Introduction* de 1843 par rapport à la note de 1841, où la philosophie n'est portée que par ses disciples : elle trouve désormais son agent de réalisation dans une classe sociale, le ___."
+    answer: "prolétariat"
+    alt: []
+  - id: n1841-ouverture-5
+    sentence: "*Introduction* de 1843 : « Le cerveau de cette émancipation est ___, son cœur, ___. »"
+    answer: "la philosophie ; le prolétariat"
+    alt: []
+  - id: n1841-ouverture-6
+    sentence: "De la note de 1841 à la XIe thèse sur Feuerbach, il faut que la praxis cesse d'être « elle-même théorique » : que __la critique devienne transformation effective des__ ___."
+    answer: "rapports sociaux"
     alt: []
