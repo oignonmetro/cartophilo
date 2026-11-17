@@ -1,0 +1,771 @@
+# Cours sur Marx (piste Idées), tiré du cours écrit de Franck Fischbach pour
+# l'agrégation 2027, « Qu'est-ce que l'idéologie chez Marx ? » (voir
+# content/philosophie.md, « Un cours sur un auteur, tiré d'un commentaire »).
+# Source : D:\Downloads\Cours sur Marx - QUEST-CE QUE lIDEOLOGIE.pdf
+#
+# Les citations de Marx sont reprises du cours, avec ses traductions : Manuscrits
+# de 1844 dans la traduction de Fischbach (Vrin, 2007), L'idéologie allemande
+# retraduite par lui d'après l'édition du MEGA (2003-2004), Le Capital dans la
+# traduction dirigée par Lefebvre (PUF). Elles font foi telles que le cours les
+# donne ; seule leur copie se contrôle. Un mot biffé par Marx, que le cours
+# donne entre parenthèses, n'est pas repris.
+#
+# Les rappels reprennent le cours sans le nommer à chaque phrase. Ce qu'il
+# rapporte de Balibar (l'abandon du concept d'idéologie) et de Honneth (les
+# « processus sociaux manqués ») est dit dans le rappel, sans carte.
+
+id: ideo
+title: "Qu'est-ce que l'idéologie ?"
+subtitle: "Une expression nécessaire et inadéquate d'une vie inaccomplie, des Manuscrits de 1844 à L'idéologie allemande"
+icon: compass
+color: violet
+lessons:
+- id: ideo-l1
+  title: "Le problème : l'idéalité, et l'origine du concept"
+  notes: |-
+    **Le concept d'idéologie répond à une question : pourquoi, dès qu'il y va de la vie humaine, y a-t-il non seulement** {violet}**la vie**{/violet}**, mais aussi** {violet}**la conscience et ses représentations**{/violet}**, et quel rapport entretiennent-elles ?**
+
+    **Une conception matérialiste et pratique de l'idéalité.** Marx veut {coral}comprendre l'idéalité comme telle{/coral}, c'est-à-dire le fait que la vie humaine comporte, avec la vie, {teal}« la conscience »{/teal} et ses {teal}« représentations »{/teal}. Et il veut penser le rapport de la conscience et de ses produits à {amber}la vie pratique des hommes{/amber}, cette vie qui est {violet}essentiellement relationnelle et productive{/violet}, {violet}faite ou tissée de rapports pratiques{/violet}.
+
+    **Où chercher l'origine du concept.** Ce que L'idéologie allemande appellera idéologie désigne un problème que Marx avait déjà rencontré et déjà élaboré. Son origine est à chercher du côté d'une {violet}théorie de la conscience{/violet}, dont Marx jette les bases dès les *Manuscrits de 1844*, {coral}sous la forme d'une critique de toute théorie qui commencerait par la « conscience de soi »{/coral}. Le cours suit donc deux temps : d'abord cette théorie de la conscience de 1844, puis le concept d'idéologie lui-même.
+
+    ! L'idéologie n'est pas une invention tardive de Marx : le problème est déjà posé en 1844, avant le mot.
+  points:
+  - id: ideo-l1-p1
+    sentence: "Chez Marx, le concept d'idéologie s'inscrit dans une conception à la fois ___ et pratique de l'idéalité."
+    answer: "matérialiste"
+    alt: []
+  - id: ideo-l1-p2
+    sentence: "Avec le concept d'idéologie, Marx veut rendre compte de l'___ comme telle : le fait que, dès qu'il y va de la vie humaine, il n'y a pas seulement la vie, mais aussi la conscience et ses représentations."
+    answer: "idéalité"
+    alt: []
+  - id: ideo-l1-p3
+    sentence: "Marx veut penser les rapports de la conscience et de ses produits avec la ___ pratique des hommes."
+    answer: "vie"
+    alt: ["vie pratique", "activité pratique"]
+  - id: ideo-l1-p4
+    sentence: "La vie humaine est essentiellement relationnelle et productive : elle est faite ou tissée de ___ pratiques."
+    answer: "rapports"
+    alt: []
+  - id: ideo-l1-p5
+    sentence: "Le problème que L'idéologie allemande nomme idéologie, Marx l'avait déjà rencontré ___."
+    answer: "avant L'idéologie allemande"
+    alt: ["dès les Manuscrits de 1844", "en 1844"]
+  - id: ideo-l1-p6
+    sentence: "L'origine du concept d'idéologie se cherche du côté d'une théorie de la ___, dont Marx jette les bases dès les Manuscrits de 1844."
+    answer: "conscience"
+    alt: []
+  - id: ideo-l1-p7
+    sentence: "La théorie de la conscience des Manuscrits de 1844 est une critique de toute théorie de la conscience qui commencerait par la « ___ »."
+    answer: "conscience de soi"
+    alt: []
+
+- id: ideo-l2
+  title: "La conscience universelle et l'être social : une séparation qui a ses causes"
+  notes: |-
+    **Dans la société actuelle, la conscience du genre humain se présente comme séparée de la vie sociale réelle et hostile à elle, mais cette séparation s'explique par la vie sociale elle-même.**
+
+    **Le texte de départ** (*Manuscrits de 1844*, trad. Fischbach) : {teal}« Ma {/teal}{teal}conscience universelle{/teal}{teal} est seulement {/teal}{teal}la figure théorique{/teal}{teal} de ce dont la communauté réelle, l'être social est {/teal}{teal}la figure vivante{/teal}{teal}, alors qu'aujourd'hui la conscience universelle est {/teal}{teal}une abstraction de la vie réelle{/teal}{teal} qui se présente à cette dernière {/teal}{teal}comme son ennemie{/teal}{teal}. Par suite, l'activité de ma conscience universelle, en tant qu'activité, est aussi mon existence théorique en tant qu'être social »{/teal}.
+
+    **La contradiction vécue.** Dans la pratique, les hommes vivent une existence sociale faite de {red}opposition, de division, de concurrence et de domination{/red} ; mais, dans la théorie, ils ont conscience de {green}leur unité, de leur appartenance à un même genre{/green}. Ils ne peuvent donc réaliser le contenu de leur conscience théorique que contre leur existence sociale réelle, et la vie sociale s'accomplit contre la conscience théorique. Pour vivre et survivre, il leur faut ne songer qu'à leur vie {pink}individuelle et égoïste{/pink}.
+
+    **La cause de la séparation est dans la vie réelle.** La conscience universelle apparaît abstraite, séparée de l'existence sociale, mais {coral}c'est une existence sociale divisée qui l'engendre comme abstraction{/coral}. Cela ne veut pas dire qu'aucune forme de conscience ne soit immanente à cette réalité : il y en a une, {violet}la conscience que les individus prennent d'eux-mêmes comme de Soi individuels, isolés les uns des autres{/violet}. C'est la conscience {violet}de soi{/violet} et non du genre. Mais elle est à son tour une abstraction : {teal}« Le soi qui a été abstrait et fixé pour soi est l'homme en tant qu'égoïste abstrait, c'est l'égoïsme en sa pure abstraction élevé à la pensée »{/teal}.
+
+    **Le résultat.** La vie sociale divisée a son expression dans la conscience : {coral}la conscience de soi, comme individu séparé et sujet autonome, est la forme régnante de la conscience{/coral}, et ce règne a pour conséquence que la conscience du genre paraît extérieure à la vie sociale et opposée à elle. Sur l'être générique, voir [[g-etre-generique|Être générique]].
+
+    ! « Abstrait » ne veut pas dire « irréel » : la conscience de soi de l'individu isolé est bien l'expression réelle d'une société divisée, mais elle est abstraite au sens où elle sépare l'individu de tout ce qui le fait vivre.
+  points:
+  - id: ideo-l2-p1
+    sentence: "Manuscrits de 1844 : « Ma conscience universelle est seulement ___ de ce dont la communauté réelle, l'être social est la figure vivante »."
+    answer: "la figure théorique"
+    alt: []
+  - id: ideo-l2-p2
+    sentence: "Manuscrits de 1844 : « Ma conscience universelle est seulement la figure théorique de ce dont la communauté réelle, l'être social est ___ »."
+    answer: "la figure vivante"
+    alt: []
+  - id: ideo-l2-p3
+    sentence: "Manuscrits de 1844 : « ... alors qu'aujourd'hui la conscience universelle est ___ qui se présente à cette dernière comme son ennemie »."
+    answer: "une abstraction de la vie réelle"
+    alt: []
+  - id: ideo-l2-p4
+    sentence: "Manuscrits de 1844 : « ... une abstraction de la vie réelle qui se présente à cette dernière ___ »."
+    answer: "comme son ennemie"
+    alt: []
+  - id: ideo-l2-p5
+    sentence: "Manuscrits de 1844 : « Par suite, l'activité de ma conscience universelle, en tant qu'activité, est aussi mon ___ en tant qu'être social »."
+    answer: "existence théorique"
+    alt: []
+  - id: ideo-l2-p6
+    sentence: "Dans la société actuelle, les hommes vivent dans la pratique une existence sociale marquée par la division, la concurrence et la ___, tout en ayant théoriquement conscience de l'unité de leur genre."
+    answer: "domination"
+    alt: ["domination des uns par les autres"]
+  - id: ideo-l2-p7
+    sentence: "La conscience universelle apparaît comme abstraite et séparée de la vie sociale, mais les causes de cette séparation sont à chercher dans la ___ elle-même."
+    answer: "vie sociale réelle"
+    alt: ["vie sociale", "vie réelle"]
+  - id: ideo-l2-p8
+    sentence: "La forme de conscience immanente à une société divisée est la conscience de ___, celle des individus isolés les uns des autres, et non la conscience du genre."
+    answer: "soi"
+    alt: ["Soi"]
+  - id: ideo-l2-p9
+    sentence: "Manuscrits de 1844 : « Le soi qui a été abstrait et fixé pour soi est l'homme en tant qu'___ abstrait »."
+    answer: "égoïste"
+    alt: []
+  - id: ideo-l2-p10
+    sentence: "Manuscrits de 1844 : « ... c'est l'égoïsme en sa pure abstraction ___ »."
+    answer: "élevé à la pensée"
+    alt: []
+
+- id: ideo-l3
+  title: "Une seule réalité, deux figures : le parallélisme"
+  notes: |-
+    **Marx ne dit pas que la conscience exprime l'être social, ni qu'elle en est déterminée : il dit que l'être social et la conscience sont deux figures d'une seule et même réalité.**
+
+    **Ce que la formule dit de plus qu'une correspondance.** On pourrait comprendre : à une forme d'être social correspond une forme de conscience théorique. Ce n'est pas faux, mais Marx dit davantage, ou le dit plus précisément. {red}Il ne dit pas que l'être social se traduit dans une forme de conscience, ni qu'il la détermine{/red}. Il dit qu'{coral}une unique réalité est donnée, dont l'être social est la figure vivante et la conscience la figure théorique{/coral} : c'est {violet}une forme de spinozisme{/violet}, deux expressions d'une même réalité.
+
+    **Le texte qui le confirme** : {teal}« En tant que conscience générique, l'homme {/teal}{teal}confirme sa vie sociale réelle{/teal}{teal} et il {/teal}{teal}répète seulement dans la pensée son existence réelle{/teal}{teal}, de même qu'inversement l'être générique se confirme dans la conscience générique et est pour soi dans son universalité en tant qu'être pensant »{/teal}. C'est ce qu'on peut appeler un {violet}parallélisme{/violet} : la vie sociale réelle se confirme en étant répétée, redoublée par la conscience, et inversement.
+
+    **Une seule et même chose dans deux éléments.** Ce qui se passe dans la réalité sociale et ce qui se passe dans la conscience est la même chose, sous deux figures : celle de la {amber}réalité{/amber} et celle de l'{amber}idéalité{/amber} (la conscience et ses représentations).
+
+    **Conséquence : deux thèses qui ne se contredisent pas.** Marx peut dire à la fois que la réalité sociale détermine les idées et que les idées déterminent en retour la réalité sociale : les deux thèses découlent d'une même thèse, celle qui voit une seule réalité s'exprimer {green}dans l'être réel de la société{/green} comme {green}dans l'être idéel des consciences, des représentations et des idées{/green}. Voir [[g-expression-de-la-vie|Expression de la vie]].
+
+    ! Il ne s'agit pas d'un reflet qui suivrait l'original à distance : la conscience n'est pas extérieure à ce qu'elle exprime, elle en est l'autre figure.
+  points:
+  - id: ideo-l3-p1
+    sentence: "L'être social et la conscience sont, pour Marx, deux ___ d'une seule et même réalité."
+    answer: "figures"
+    alt: ["expressions"]
+  - id: ideo-l3-p2
+    sentence: "Cette façon de rapporter la conscience à l'être social relève, dit le cours, d'une forme de ___."
+    answer: "spinozisme"
+    alt: []
+  - id: ideo-l3-p3
+    sentence: "Manuscrits de 1844 : « En tant que conscience générique, l'homme confirme sa vie sociale réelle et il ___ seulement dans la pensée son existence réelle »."
+    answer: "répète"
+    alt: []
+  - id: ideo-l3-p4
+    sentence: "Manuscrits de 1844 : « ... de même qu'inversement l'être générique se confirme dans la conscience générique et est pour soi dans son universalité en tant qu'___ »."
+    answer: "être pensant"
+    alt: []
+  - id: ideo-l3-p5
+    sentence: "Le rapport que Marx établit entre l'être social et la conscience est un ___ : la même chose se passe dans la réalité et dans l'idéalité."
+    answer: "parallélisme"
+    alt: []
+  - id: ideo-l3-p6
+    sentence: "Si l'être social et la conscience sont deux figures d'une même réalité, la réalité sociale détermine les idées et les idées déterminent en retour la réalité sociale : les deux thèses ne se ___ pas."
+    answer: "contredisent"
+    alt: ["contredisent"]
+  - id: ideo-l3-p7
+    sentence: "Marx ne dit pas que l'être social s'exprime ou se traduit dans la conscience, mais qu'une unique ___ se donne sous deux figures."
+    answer: "réalité"
+    alt: []
+
+- id: ideo-l4
+  title: "La conscience n'est pas une faculté : avoir de la conscience, c'est avoir des rapports"
+  notes: |-
+    **Marx ne commence jamais par la conscience comme faculté spécifiquement humaine : il y arrive, comme à l'un des aspects de l'activité humaine réelle, et ce qu'il y trouve est un fait, celui d'avoir des rapports.**
+
+    **Comme Spinoza, il n'y commence pas.** Dans L'idéologie allemande, Marx examine d'abord {amber}quatre aspects des rapports historiques originels{/amber} : 1) les hommes produisent les moyens de satisfaire leurs besoins ; 2) les premiers moyens engendrent de nouveaux besoins ; 3) les hommes se reproduisent et entrent dans des relations naturelles (la famille) ; 4) en produisant et reproduisant leur vie, ils entrent dans des rapports sociaux, nés de {violet}l'action conjuguée{/violet} d'une multiplicité d'individus (*das Zusammenwirken*). {teal}« C'est maintenant seulement, après avoir déjà examiné quatre moments, quatre aspects des rapports historiques originels, que nous trouvons que l'homme a {/teal}{teal}aussi{/teal}{teal} de la “conscience” »{/teal}.
+
+    **Ce qu'on trouve est un fait, non une faculté.** On ne trouve pas la conscience tout de suite ; et ce qu'on trouve n'est pas la faculté de conscience, mais {coral}le fait d'avoir de la conscience{/coral}. Ce fait, on peut dire en quoi il consiste : {coral}avoir de la conscience, c'est avoir des rapports{/coral}. {teal}« Là où existe un rapport, il existe pour moi ; l'animal ne “se rapporte” à rien et ne “se rapporte” absolument pas »{/teal}, et {teal}« ma conscience, c'est mon rapport avec ce qui m'entoure »{/teal} [en allemand, *Mein Verhältnis zu meiner Umgebung ist mein Bewusstsein*].
+
+    **Être en rapports, avoir ses rapports.** Tous les vivants sont en rapports avec le monde et avec les autres vivants. L'homme seul {violet}a ses rapports{/violet} : pour l'animal, son rapport aux autres n'existe pas en tant que rapport. Le savoir de ces rapports double chez l'homme les rapports en quoi consiste la vie. Les faits n'attestent pas une faculté de savoir, mais seulement {amber}l'existence d'un savoir des rapports en plus de l'existence des rapports eux-mêmes{/amber} ; chercher une faculté, ce serait déjà aller au-delà des faits.
+
+    ! Dire que l'homme a de la conscience ne revient pas à lui attribuer un pouvoir que les autres vivants n'auraient pas : cela revient à dire que ses rapports existent aussi pour lui.
+  points:
+  - id: ideo-l4-p1
+    sentence: "Chez Marx, la conscience n'est pas le point de départ : on la trouve seulement après avoir examiné ___ aspects des rapports historiques originels."
+    answer: "quatre"
+    alt: ["4"]
+  - id: ideo-l4-p2
+    sentence: "Premier aspect des rapports historiques originels : les hommes ___ les moyens de satisfaire leurs besoins."
+    answer: "produisent"
+    alt: []
+  - id: ideo-l4-p3
+    sentence: "Deuxième aspect : les premiers moyens de satisfaction des besoins engendrent à leur tour de nouveaux ___."
+    answer: "besoins"
+    alt: []
+  - id: ideo-l4-p4
+    sentence: "Troisième aspect : les hommes se ___ et entrent dans des relations naturelles, la famille."
+    answer: "reproduisent"
+    alt: []
+  - id: ideo-l4-p5
+    sentence: "Quatrième aspect : en produisant et reproduisant leur vie, les hommes entrent dans des rapports sociaux nés de l'« action conjuguée » d'une multiplicité d'individus, en allemand ___."
+    answer: "das Zusammenwirken"
+    alt: ["Zusammenwirken"]
+  - id: ideo-l4-p6
+    sentence: "L'idéologie allemande : « C'est maintenant seulement, après avoir déjà examiné quatre moments [...], que nous trouvons que l'homme a ___ de la “conscience” »."
+    answer: "aussi"
+    alt: []
+  - id: ideo-l4-p7
+    sentence: "Ce que l'examen des faits fait trouver n'est pas une faculté de conscience, mais le ___ d'avoir de la conscience."
+    answer: "fait"
+    alt: []
+  - id: ideo-l4-p8
+    sentence: "Pour Marx, avoir de la conscience, c'est avoir des ___."
+    answer: "rapports"
+    alt: []
+  - id: ideo-l4-p9
+    sentence: "L'idéologie allemande : « Là où existe un rapport, il existe pour moi ; l'___ ne “se rapporte” à rien et ne “se rapporte” absolument pas »."
+    answer: "animal"
+    alt: []
+  - id: ideo-l4-p10
+    sentence: "L'idéologie allemande : « ma conscience, c'est mon ___ avec ce qui m'entoure »."
+    answer: "rapport"
+    alt: ["Verhältnis"]
+  - id: ideo-l4-p11
+    sentence: "Tous les vivants sont en rapports ; l'homme seul ___ ses rapports, qui existent pour lui en tant que rapports."
+    answer: "a"
+    alt: ["possède"]
+
+- id: ideo-l5
+  title: "Contre Hegel et Feuerbach : partir de ce que les hommes ont de commun avec la nature"
+  notes: |-
+    **Marx refuse de définir l'homme par la conscience de soi, parce que c'est faire de la conscience une faculté séparée et de l'homme une exception dans la nature, ce qui conduit à l'impuissance.**
+
+    **Les termes du problème viennent de Feuerbach.** Il ouvre *L'essence du christianisme* ainsi : {teal}« la religion repose sur cette différence essentielle qui distingue l'homme de l'animal, les animaux n'ont pas de religion »{/teal}. Et cette différence repose elle-même sur une autre, plus fondamentale : ce qui distingue l'homme de l'animal, c'est {violet}la conscience{/violet} (*das Bewusstsein*). Quand Marx récuse, dans les *Manuscrits de 1844*, que {teal}« l'homme = la conscience de soi »{/teal} et que {teal}« l'homme soit posé [comme] = le soi »{/teal}, il ne rompt donc pas seulement avec {sky}Hegel{/sky}, mais aussi avec {sky}Feuerbach{/sky}, qui commençait par la conscience de soi comme spécificité essentiellement humaine.
+
+    **Marx commence par le commun.** Il ne commence jamais par ce qui distingue spécifiquement les hommes, mais par ce qu'ils ont en commun avec tous les êtres naturels : ils sont d'abord {coral}des « parties de la nature » parmi les autres{/coral}, dotés comme tous les vivants d'une activité vitale qu'il caractérise comme {violet}productive{/violet}. Parmi les forces naturelles dont ils sont équipés, il y a la conscience. Voir [[g-activite-vitale|Activité vitale]].
+
+    **L'activité vitale consciente.** {teal}« L'animal est immédiatement uni à son activité vitale, il ne s'en différencie pas, il l'est »{/teal} ; l'homme {teal}« fait de son activité vitale elle-même l'objet de sa volonté et de sa conscience ; il a de l'activité vitale consciente »{/teal}. Mais Marx refuse d'en conclure qu'une essence irréductiblement humaine s'exprime dans une faculté de conscience.
+
+    **Pourquoi il refuse ce pas.** Le franchir oblige à {red}autonomiser la faculté de conscience{/red}, à la considérer comme séparée, et finalement à faire des hommes {red}une exception à l'ordre commun de la nature{/red}. Marx y voit {amber}l'origine des illusions idéalistes{/amber}, dont la critique est à faire non pour des raisons dogmatiques mais pour des raisons {coral}pratiques{/coral} : ces illusions conduisent les hommes à l'impuissance, à l'incapacité d'agir et de maîtriser tant leur monde que leur propre vie.
+
+    ! Marx ne nie pas que la conscience soit proprement humaine : il nie qu'elle soit une faculté séparée qui ferait de l'homme un être à part dans la nature.
+  points:
+  - id: ideo-l5-p1
+    sentence: "Feuerbach ouvre L'essence du christianisme en disant que la religion repose sur la différence essentielle de l'homme et de l'___ : les animaux n'ont pas de religion."
+    answer: "animal"
+    alt: []
+  - id: ideo-l5-p2
+    sentence: "Pour Feuerbach, ce qui distingue l'homme de l'animal, et fonde donc sa religion, c'est la ___."
+    answer: "conscience"
+    alt: []
+  - id: ideo-l5-p3
+    sentence: "En récusant que « l'homme = la conscience de soi », Marx rompt avec Hegel et aussi avec ___."
+    answer: "Feuerbach"
+    alt: []
+  - id: ideo-l5-p4
+    sentence: "Marx ne commence jamais par ce qui distingue les hommes, mais par ce qu'ils ont en ___ avec les autres êtres naturels."
+    answer: "commun"
+    alt: []
+  - id: ideo-l5-p5
+    sentence: "Les hommes sont d'abord, pour Marx, des « ___ de la nature » parmi les autres."
+    answer: "parties"
+    alt: []
+  - id: ideo-l5-p6
+    sentence: "Comme tous les vivants, les hommes possèdent une activité vitale, que Marx caractérise comme une activité ___."
+    answer: "productive"
+    alt: []
+  - id: ideo-l5-p7
+    sentence: "Manuscrits de 1844 : « L'animal est immédiatement ___ à son activité vitale, il ne s'en différencie pas, il l'est »."
+    answer: "uni"
+    alt: []
+  - id: ideo-l5-p8
+    sentence: "Manuscrits de 1844 : « l'homme fait de son activité vitale elle-même l'objet de sa ___ et de sa conscience »."
+    answer: "volonté"
+    alt: []
+  - id: ideo-l5-p9
+    sentence: "Faire de la conscience une faculté revient à l'autonomiser, puis à faire des hommes une ___ à l'ordre commun de la nature."
+    answer: "exception"
+    alt: []
+  - id: ideo-l5-p10
+    sentence: "Marx critique les illusions idéalistes pour des raisons non dogmatiques mais ___ : elles conduisent les hommes à l'impuissance."
+    answer: "pratiques"
+    alt: []
+
+- id: ideo-l6
+  title: "Le redoublement : l'homme, être objectif qui se sait tel"
+  notes: |-
+    **L'activité vitale consciente ne soustrait pas l'homme à la nature : elle l'y enfonce davantage, puisque l'homme est un être objectif qui sait qu'il l'est, et c'est ce savoir qui redouble son activité.**
+
+    **Deux sens d'« être objectif ».** L'expression vient de Feuerbach, mais elle change de sens. Pour {sky}Feuerbach{/sky}, les hommes sont les êtres qui prennent leur essence, leur genre, pour objet : ils prennent conscience d'eux-mêmes en prenant leur genre pour objet de leur conscience dans la religion. Pour {sky}Marx{/sky}, ils sont {coral}les êtres qui se connaissent en tant qu'êtres objectifs, c'est-à-dire comme parties de la nature{/coral}.
+
+    **Ce qu'est la conscience pour Marx.** C'est {violet}la connaissance de soi comme objet{/violet}, ce qui ne veut pas dire se prendre soi-même pour objet, mais {amber}se connaître comme un être existant objectivement parmi d'autres dans le tout de la nature{/amber}.
+
+    **Les hommes en rajoutent dans l'objectivité.** Avoir de l'activité vitale consciente ne signifie pas échapper à la condition générale des êtres naturels, mais au contraire {coral}en rajouter dans l'objectivité{/coral} : les hommes dépendent du reste de la nature comme tous les êtres de la nature, et {green}ils savent qu'ils en dépendent{/green}.
+
+    **Le redoublement.** Le déploiement naturel de leur activité vitale, l'activité productive, {violet}se redouble{/violet} d'un savoir de ce déploiement, et donc d'une volonté de manifester cette activité par eux-mêmes, c'est-à-dire, en termes spinozistes, d'{amber}être la cause adéquate de leur propre activité{/amber}. L'activité humaine peut ainsi devenir ce que Marx appelle une *Selbstbetätigung*, une {violet}« autoactivation »{/violet}. Le concept central de la théorie de la conscience de 1844 est donc celui de {violet}*Verdopplung*{/violet}, de « redoublement » : le déploiement de l'activité vitale se redouble, chez les hommes, d'un déploiement de cette même activité dans {coral}l'élément du savoir, c'est-à-dire de l'idéalité{/coral}.
+
+    ! Se connaître comme objet n'est pas se faire son propre objet de contemplation : c'est savoir qu'on est une partie de la nature, parmi d'autres.
+  points:
+  - id: ideo-l6-p1
+    sentence: "Pour Feuerbach, les hommes sont des êtres objectifs parce qu'ils prennent leur ___ ou leur genre pour objet."
+    answer: "essence"
+    alt: ["genre"]
+  - id: ideo-l6-p2
+    sentence: "Pour Marx, les hommes sont des êtres objectifs au sens où ils se connaissent en tant que ___ de la nature."
+    answer: "parties"
+    alt: []
+  - id: ideo-l6-p3
+    sentence: "Pour Marx, la conscience est la connaissance de soi comme ___."
+    answer: "objet"
+    alt: []
+  - id: ideo-l6-p4
+    sentence: "Se connaître comme objet, c'est se connaître comme un être existant ___ parmi d'autres dans le tout de la nature."
+    answer: "objectivement"
+    alt: []
+  - id: ideo-l6-p5
+    sentence: "Par leur activité vitale consciente, les hommes ne sortent pas de la nature : ils en rajoutent dans l'___."
+    answer: "objectivité"
+    alt: []
+  - id: ideo-l6-p6
+    sentence: "Les hommes dépendent du reste de la nature comme tous les êtres naturels, et en outre ils ___ qu'ils en dépendent."
+    answer: "savent"
+    alt: []
+  - id: ideo-l6-p7
+    sentence: "Dans la théorie de la conscience des Manuscrits de 1844, le concept central est la Verdopplung, c'est-à-dire le ___."
+    answer: "redoublement"
+    alt: []
+  - id: ideo-l6-p8
+    sentence: "Le redoublement est celui du déploiement de l'activité vitale dans l'élément du savoir, c'est-à-dire de l'___."
+    answer: "idéalité"
+    alt: []
+  - id: ideo-l6-p9
+    sentence: "Être la cause adéquate de sa propre activité, dans le vocabulaire spinoziste, c'est ce que Marx appelle une Selbstbetätigung, une « ___ »."
+    answer: "autoactivation"
+    alt: ["auto-activation"]
+
+- id: ideo-l7
+  title: "Le soi comme homme abstrait : tout en l'homme se répète dans l'idéalité"
+  notes: |-
+    **Quand Marx dit que l'homme est « de la nature du soi », il veut dire que tout aspect de l'existence humaine se répète dans l'élément du savoir, non que chaque homme posséderait un Soi comme faculté.**
+
+    **Le passage.** À l'endroit où il s'oppose à ce que l'homme soit posé égal au soi, Marx ajoute : {teal}« le soi n'est que l'homme saisi abstraitement et engendré par abstraction »{/teal}, puis : {teal}« l'homme est de la nature du soi ; son œil, son oreille, etc., sont de la nature du soi ; chacune de ses forces essentielles a en lui la propriété de la soi-ïté »{/teal} [*Selbstheit*].
+
+    **La première affirmation est claire.** Le soi, c'est {violet}la conscience comprise comme faculté individuelle{/violet}, à laquelle on aboutit nécessairement quand on saisit l'homme abstraitement : quand on le sépare du reste de la nature, qu'on néglige les rapports qu'il entretient avec elle et ceux que les hommes nouent entre eux.
+
+    **La seconde est plus délicate.** Le soi, c'est la conscience, donc la connaissance ou la pensée, donc l'idéalité ; et la conscience n'est pas une faculté subjective et individuelle. Dire que l'homme est de la nature du soi ne peut alors signifier que ceci : {coral}tous les aspects de l'existence humaine se répètent dans l'élément du savoir{/coral}.
+
+    **Les exemples de Marx.** {yellow}L'œil humain{/yellow} n'est pas seulement un œil voyant : il est toujours en même temps un œil sachant, un œil qui sait qu'il voit. {yellow}L'oreille humaine{/yellow} n'est pas seulement entendante : elle est aussi une oreille qui sait qu'elle entend. Il ne faut donc pas dire que chaque homme a un Soi, mais que {amber}chaque aspect de l'être d'un homme relève en même temps du Soi, du *Ich*, c'est-à-dire de l'idéalité{/amber} : rien dans la réalité sensible humaine qui ne se répète et ne se réaffirme dans l'idéalité, comme réalité sensible (œil, oreille, forces physiques) et comme idéalité (vue consciente, ouïe consciente, force physique consciente).
+
+    ! La « soi-ïté » des forces essentielles n'est pas une conscience de soi réflexive ajoutée à chaque force : c'est le fait que chaque force humaine existe aussi dans l'élément du savoir.
+  points:
+  - id: ideo-l7-p1
+    sentence: "Manuscrits de 1844 : « le soi n'est que l'homme saisi ___ et engendré par abstraction »."
+    answer: "abstraitement"
+    alt: []
+  - id: ideo-l7-p2
+    sentence: "Manuscrits de 1844 : « l'homme est de la nature du soi ; son œil, son oreille, etc., sont de la nature du soi ; chacune de ses forces essentielles a en lui la propriété de la ___ »."
+    answer: "soi-ïté"
+    alt: ["Selbstheit", "soi-ité"]
+  - id: ideo-l7-p3
+    sentence: "Le soi dont parle Marx est la conscience comprise comme faculté ___, à laquelle on aboutit quand on saisit l'homme abstraitement."
+    answer: "individuelle"
+    alt: ["individuelle et subjective"]
+  - id: ideo-l7-p4
+    sentence: "Dire que l'homme est de la nature du soi, c'est dire que tous les aspects de l'existence humaine se ___ dans l'élément du savoir ou de l'idéalité."
+    answer: "répètent"
+    alt: ["redoublent"]
+  - id: ideo-l7-p5
+    sentence: "L'œil humain n'est pas seulement un œil voyant : c'est en même temps un œil ___, qui sait qu'il voit."
+    answer: "sachant"
+    alt: ["conscient"]
+  - id: ideo-l7-p6
+    sentence: "Chaque aspect de la réalité sensible humaine existe à la fois comme réalité sensible et comme ___, qui est le même aspect répété dans le savoir."
+    answer: "idéalité"
+    alt: []
+
+- id: ideo-l8
+  title: "Le « langage de la vie réelle »"
+  notes: |-
+    **Dans la conscience, les hommes expriment, dans l'élément de la représentation, le contenu même de leur vie réelle : la production des idées est le langage de la vie réelle, et ce langage peut être exact ou fautif.**
+
+    **L'idéologie allemande maintient-elle la théorie de 1844 ?** Le concept d'idéologie est-il introduit dans le cadre de cette conception de la conscience, ou au prix d'un renversement ? Marx écrit : {teal}« les représentations que se font les individus sont des idées soit sur leurs rapports avec la nature, soit sur leurs rapports entre eux, soit sur leur propre nature ; il est évident que, dans tous ces cas, ces représentations sont {/teal}{teal}l'expression consciente{/teal}{teal}, {/teal}{teal}réelle ou imaginaire{/teal}{teal}, de leurs rapports et de leurs activités réels »{/teal}.
+
+    **Le contenu réel et son expression.** Ce contenu, c'est une activité de production, des rapports avec la nature ou le monde objectif, un commerce des hommes entre eux. C'est lui qui est exprimé dans l'élément idéel. Marx va jusqu'à dire que les représentations, la pensée, le commerce intellectuel des hommes sont {teal}« l'émanation directe »{/teal} [*direkter Ausfluss*] de leur comportement matériel, d'où la thèse : {teal}« la production des idées, des représentations et de la conscience (…) est {/teal}{teal}le langage de la vie réelle{/teal}{teal} »{/teal} [*die Sprache des wirklichen Lebens*]. C'est bien un redoublement de ce contenu réel dans l'élément idéel de la représentation.
+
+    **Ce langage n'est pas encore l'idéologie.** L'expression peut être {green}« réelle »{/green} ou {red}« imaginaire »{/red}. Que les représentations soient le langage de la vie réelle laisse ouvert qu'il l'exprime correctement ou faussement. En termes spinozistes, qui sont aussi ceux de Marx : les représentations peuvent être {green}adéquates{/green} ou {red}inadéquates et imaginaires{/red}. L'expression est dite {violet}idéologique{/violet} quand elle est fautive, c'est-à-dire non conforme au contenu de la vie réelle. C'est là que le concept d'idéologie apparaît, et là que les problèmes commencent.
+
+    ! Toute représentation n'est pas idéologique : l'idéologie est le cas où le langage de la vie réelle l'exprime de façon inadéquate.
+  points:
+  - id: ideo-l8-p1
+    sentence: "L'idéologie allemande : les représentations sont l'expression consciente, ___, de leurs rapports et de leurs activités réels."
+    answer: "réelle ou imaginaire"
+    alt: []
+  - id: ideo-l8-p2
+    sentence: "L'idéologie allemande : les représentations, la pensée, le commerce intellectuel des hommes sont l'___ de leur comportement matériel."
+    answer: "émanation directe"
+    alt: ["direkter Ausfluss"]
+  - id: ideo-l8-p3
+    sentence: "L'idéologie allemande : « la production des idées, des représentations et de la conscience (…) est le ___ de la vie réelle »."
+    answer: "langage"
+    alt: ["Sprache"]
+  - id: ideo-l8-p4
+    sentence: "Dans la conscience, les hommes expriment, dans l'élément idéel de la représentation, ce qui se passe dans leur ___ réelle."
+    answer: "vie"
+    alt: []
+  - id: ideo-l8-p5
+    sentence: "Les représentations par lesquelles la vie réelle est exprimée peuvent être, en termes spinozistes, ___ ou inadéquates et imaginaires."
+    answer: "adéquates"
+    alt: []
+  - id: ideo-l8-p6
+    sentence: "L'expression de la vie réelle dans la représentation est dite idéologique quand elle est ___, c'est-à-dire non conforme au contenu de la vie réelle."
+    answer: "fautive"
+    alt: ["inadéquate", "imaginaire"]
+  - id: ideo-l8-p7
+    sentence: "Le simple fait que les représentations soient le langage de la vie réelle ne suffit pas à les rendre idéologiques : l'idéologie n'apparaît qu'avec les représentations ___."
+    answer: "imaginaires"
+    alt: ["inadéquates", "fautives"]
+
+- id: ideo-l9
+  title: "Une vie bornée, étriquée, mutilée : d'où vient l'inadéquation"
+  notes: |-
+    **Si les représentations sont l'émanation directe de la vie réelle, une représentation ne peut être fautive que si la vie réelle est elle-même inadéquate à elle-même : l'idéologie est l'expression exacte d'une vie inaccomplie.**
+
+    **Le paradoxe.** Si les représentations accompagnent comme une série le déploiement de la vie réelle, comment peut-il y en avoir de fautives ? L'inadéquation supposerait une extériorité entre le contenu matériel et ses représentations, que tout ce qui précède exclut. Marx le dit lui-même : {teal}« la conscience ne peut jamais être autre chose que {/teal}{teal}l'être conscient{/teal}{teal} »{/teal} [*das bewusste Sein*]. Comment la conscience serait-elle fautive par rapport à l'être, puisqu'elle n'est rien d'autre que l'être, comme être idéel ? Il faut donc comprendre l'adéquation autrement que comme la congruence de deux termes extérieurs l'un à l'autre.
+
+    **La solution de Marx.** {coral}L'inadéquation de l'expression idéelle renvoie à une inadéquation inhérente à la vie réelle elle-même.{/coral} Marx l'écrit : {teal}« si l'expression consciente des conditions de vie réelles des individus est imaginaire, si, dans leurs représentations, ils mettent la réalité la tête en bas, ce phénomène est encore une conséquence de leur {/teal}{teal}mode d'activité matériel borné{/teal}{teal} et des {/teal}{teal}rapports sociaux étriqués{/teal}{teal} qui en résultent »{/teal}.
+
+    **Des représentations qui expriment parfaitement une vie mutilée.** Des individus ne se font des représentations idéologiques que s'ils mènent une vie {violet}bornée et étriquée{/violet}, qu'Adorno dira plus tard {violet}« mutilée »{/violet} : une vie dont les conditions ne permettent pas le développement, la réalisation et l'épanouissement. Ces représentations ne sont donc pas inadéquates à la vie réelle, comme si elles l'exprimaient mal ; au contraire, {coral}elles l'expriment parfaitement, la reflètent fidèlement et l'accompagnent nécessairement{/coral}, cette vie étant elle-même inaccomplie. Si la production des idées est le langage de la vie réelle, {green}la production des idéologies est le langage d'une vie réelle inachevée, inaccomplie et mutilée{/green}. Voir [[g-vie-accomplie|Vie accomplie]].
+
+    **Pas de coupure avec 1843.** Cette conception prolonge la critique de la religion de 1843 : la religion y est la conscience de soi de l'homme qui ou bien ne s'est pas encore conquis, ou bien s'est déjà de nouveau perdu, la « réalisation chimérique » d'une essence non réalisée ici et maintenant. Ce qui change, c'est le concept d'essence : Marx parle désormais des {amber}conditions réelles de l'accomplissement d'une vie{/amber}, non d'une essence non réalisée.
+
+    ! L'idéologie n'est pas une mauvaise copie d'une vie bien portante : c'est la copie fidèle d'une vie qui ne s'est pas accomplie.
+  points:
+  - id: ideo-l9-p1
+    sentence: "L'idéologie allemande : « la conscience ne peut jamais être autre chose que l'___ »."
+    answer: "être conscient"
+    alt: ["das bewusste Sein"]
+  - id: ideo-l9-p2
+    sentence: "L'inadéquation d'une expression idéelle renvoie à une inadéquation inhérente à la ___ elle-même."
+    answer: "vie réelle"
+    alt: ["vie"]
+  - id: ideo-l9-p3
+    sentence: "L'idéologie allemande : « si, dans leurs représentations, ils mettent la réalité la ___ en bas, ce phénomène est encore une conséquence de leur mode d'activité matériel borné »."
+    answer: "tête"
+    alt: []
+  - id: ideo-l9-p4
+    sentence: "L'idéologie allemande : « ... une conséquence de leur mode d'activité matériel ___ et des rapports sociaux étriqués qui en résultent »."
+    answer: "borné"
+    alt: []
+  - id: ideo-l9-p5
+    sentence: "L'idéologie allemande : « ... et des rapports sociaux ___ qui en résultent »."
+    answer: "étriqués"
+    alt: []
+  - id: ideo-l9-p6
+    sentence: "Une vie bornée, étriquée, qu'Adorno dira ___, est une vie dont les conditions ne permettent pas son épanouissement."
+    answer: "mutilée"
+    alt: []
+  - id: ideo-l9-p7
+    sentence: "Les représentations idéologiques expriment ___ une vie réelle elle-même inaccomplie : elles ne la trahissent pas."
+    answer: "parfaitement"
+    alt: ["fidèlement"]
+  - id: ideo-l9-p8
+    sentence: "La production des idéologies est le langage d'une vie réelle ___, inaccomplie et mutilée."
+    answer: "inachevée"
+    alt: ["bornée"]
+  - id: ideo-l9-p9
+    sentence: "Entre la critique de la religion de 1843 et L'idéologie allemande, ce qui change est le concept d'___ : Marx parle désormais des conditions réelles d'accomplissement d'une vie."
+    answer: "essence"
+    alt: []
+
+- id: ideo-l10
+  title: "Mettre la réalité la tête en bas : l'illusion de l'autonomie des idées"
+  notes: |-
+    **« Mettre la réalité la tête en bas », c'est commencer par la conscience et lui conférer une existence indépendante, et une vie mutilée y porte nécessairement.**
+
+    **Une vie qui n'est pas active par elle-même.** Une vie étriquée est une vie qui n'a ni les moyens ni les conditions de se déterminer et de se développer à partir d'elle-même. Elle n'est pas, selon le mot de Marx, {violet}*selbsttätig*{/violet}, {violet}active par elle-même{/violet}. Elle est donc toujours activée par autre chose, par des circonstances, des événements, des causes qu'elle ignore ou ne comprend pas.
+
+    **L'ignorance des causes.** Ignorants des causes qui les déterminent à agir, les individus peuvent se figurer qu'ils agissent à partir des représentations qu'ils se font des choses et de leurs fins, et donc que {red}ces représentations sont premières et déterminantes{/red}. C'est, dit le cours, une inadéquation de type spinoziste : on se croit libre parce qu'on ignore les causes.
+
+    **La division du travail l'aggrave.** Si la division est assez avancée pour que règne la division du {amber}travail matériel{/amber} et du {amber}travail intellectuel{/amber}, entre la production des choses et la production des idées, les individus se figurent d'autant plus aisément que le monde idéel est séparé de la vie matérielle, indépendant d'elle et premier. Marx : {teal}« la conscience peut vraiment s'imaginer qu'elle est autre chose que la conscience de la pratique existante, qu'elle représente réellement quelque chose sans représenter quelque chose de réel »{/teal}, et elle {teal}« est en état de s'émanciper du monde et de passer à la formation de la théorie “pure”, théologie, philosophie, morale, etc. »{/teal}.
+
+    **Le noyau de toutes les idéologies.** Pour Marx, cette division est {coral}une, si ce n'est pas la mutilation fondamentale de la vie humaine{/coral}, puisque, dans une vie accomplie, tout homme doit pouvoir se consacrer aussi bien à la production matérielle des choses qu'à la production intellectuelle des idées. Il est donc compréhensible que cette mutilation s'exprime, du côté de la conscience, en donnant naissance au noyau de toutes les formes d'idéologies : {green}la conception imaginaire de l'autonomie et du caractère déterminant des idées et des représentations par rapport à la vie réelle{/green}.
+
+    ! La tête en bas ne veut pas dire que les idées soient sans rapport avec le réel : elles l'expriment, mais elles se croient premières.
+  points:
+  - id: ideo-l10-p1
+    sentence: "Mettre la réalité la tête en bas, c'est commencer par la ___, et lui conférer une existence indépendante."
+    answer: "conscience"
+    alt: ["conscience et ses représentations"]
+  - id: ideo-l10-p2
+    sentence: "Une vie étriquée n'est pas, selon le mot de Marx, ___ : elle n'est pas active par elle-même."
+    answer: "selbsttätig"
+    alt: []
+  - id: ideo-l10-p3
+    sentence: "Une vie qui n'est pas active par elle-même est toujours activée par autre chose, par des causes qu'elle ___ ou ne comprend pas."
+    answer: "ignore"
+    alt: []
+  - id: ideo-l10-p4
+    sentence: "Ignorants des causes qui les déterminent, les individus se figurent qu'ils agissent à partir des ___ qu'ils se font des choses et de leurs fins."
+    answer: "représentations"
+    alt: []
+  - id: ideo-l10-p5
+    sentence: "Plus la division entre le travail matériel et le travail ___ est avancée, plus le monde des idées paraît séparé de la vie matérielle."
+    answer: "intellectuel"
+    alt: []
+  - id: ideo-l10-p6
+    sentence: "L'idéologie allemande : « la conscience peut vraiment s'imaginer qu'elle est autre chose que la conscience de la pratique existante, qu'elle représente réellement quelque chose sans représenter ___ »."
+    answer: "quelque chose de réel"
+    alt: []
+  - id: ideo-l10-p7
+    sentence: "L'idéologie allemande : « la conscience est en état de s'émanciper du monde et de passer à la formation de la théorie ___ »."
+    answer: "pure"
+    alt: ["“pure”"]
+  - id: ideo-l10-p8
+    sentence: "Pour Marx, la division du travail matériel et du travail intellectuel est une, si ce n'est pas la ___ fondamentale de la vie humaine."
+    answer: "mutilation"
+    alt: []
+  - id: ideo-l10-p9
+    sentence: "Le noyau de toutes les idéologies est la conception imaginaire de l'___ et du caractère déterminant des idées par rapport à la vie réelle."
+    answer: "autonomie"
+    alt: []
+
+- id: ideo-l11
+  title: "La vie détermine la conscience : une formule à ne pas séparer du parallélisme"
+  notes: |-
+    **Marx concentre ses attaques sur l'illusion de l'autonomie des idées, au point de sembler renverser le rapport de détermination ; mais la formule « la vie détermine la conscience » doit se lire avec le parallélisme qu'elle suppose.**
+
+    **La thèse fameuse.** Marx écrit : {teal}« ce n'est pas la conscience qui détermine la vie, mais la vie qui détermine la conscience »{/teal}. Elle suit immédiatement une autre proposition : {teal}« ce sont les hommes qui, en développant leur production matérielle et leur commerce matériel, transforment, avec cette réalité qui leur est propre, également leur pensée et les produits de leur pensée »{/teal}. La transformation de la réalité humaine et celle de la pensée sont {coral}deux processus strictement concomitants{/coral}, le second n'étant pas autre chose que le premier, exprimé dans l'élément de l'idéalité.
+
+    **Pourquoi la formule reste préférable.** À la rigueur, c'est un peu approximatif, mais il vaut mieux dire que la vie détermine la conscience plutôt que l'inverse, parce que cela permet de {amber}lutter directement contre la plus fondamentale des illusions{/amber} : celle qui voit la conscience et le développement des idées premiers et autonomes.
+
+    **Le parallélisme confirmé.** Marx ne manque pas une occasion de rappeler que la vie matérielle et la vie idéelle se déploient en parallèle. {teal}« L'existence de pensées révolutionnaires dans une époque déterminée présuppose l'existence d'une classe révolutionnaire »{/teal} : des idées révolutionnaires signifient nécessairement une pratique révolutionnaire dans la vie matérielle et sociale. De même : {teal}« les pensées de la classe dominante sont, à chaque époque, les pensées dominantes »{/teal}, c'est-à-dire que la domination matérielle d'une classe s'accompagne de la domination de ses idées.
+
+    **La formule la plus claire.** {teal}« Les pensées dominantes ne sont pas autre chose que {/teal}{teal}l'expression idéelle des rapports matériels dominants{/teal}{teal}, elles sont ces rapports matériels dominants saisis en tant que pensées »{/teal} [*der ideelle Ausdruck*]. Le même rapport de domination s'exprime comme domination sociale dans la pratique et, en même temps, comme domination idéelle dans la théorie : {teal}« la classe qui est la puissance matérielle dominante de la société est en même temps la puissance spirituelle dominante de cette société »{/teal}. Voir [[g-vie-materielle|Vie matérielle]].
+
+    ! Le sens de la formule n'est pas que les idées soient un simple effet inerte : la même chose s'exprime des deux côtés, et la formule sert surtout à dénoncer l'illusion contraire.
+  points:
+  - id: ideo-l11-p1
+    sentence: "L'idéologie allemande : « ce n'est pas la conscience qui détermine la vie, mais la ___ qui détermine la conscience »."
+    answer: "vie"
+    alt: []
+  - id: ideo-l11-p2
+    sentence: "La formule « la vie détermine la conscience » suit la proposition selon laquelle les hommes, en développant leur production matérielle et leur commerce matériel, transforment aussi leur ___ et les produits de leur pensée."
+    answer: "pensée"
+    alt: []
+  - id: ideo-l11-p3
+    sentence: "La transformation de la réalité humaine et celle de la pensée humaine sont deux processus strictement ___."
+    answer: "concomitants"
+    alt: ["parallèles"]
+  - id: ideo-l11-p4
+    sentence: "Dire que la vie détermine la conscience permet de lutter directement contre l'illusion de l'___ des idées."
+    answer: "autonomie"
+    alt: ["primauté", "autonomie et de la primauté"]
+  - id: ideo-l11-p5
+    sentence: "L'idéologie allemande : « L'existence de pensées révolutionnaires dans une époque déterminée présuppose l'existence d'une ___ révolutionnaire »."
+    answer: "classe"
+    alt: []
+  - id: ideo-l11-p6
+    sentence: "L'idéologie allemande : « les pensées de la classe dominante sont, à chaque époque, les pensées ___ »."
+    answer: "dominantes"
+    alt: []
+  - id: ideo-l11-p7
+    sentence: "L'idéologie allemande : « les pensées dominantes ne sont pas autre chose que l'___ des rapports matériels dominants »."
+    answer: "expression idéelle"
+    alt: ["der ideelle Ausdruck"]
+  - id: ideo-l11-p8
+    sentence: "L'idéologie allemande : « ... elles sont ces rapports matériels dominants saisis ___ »."
+    answer: "en tant que pensées"
+    alt: []
+  - id: ideo-l11-p9
+    sentence: "L'idéologie allemande : « la classe qui est la puissance matérielle dominante de la société est en même temps la ___ dominante de cette société »."
+    answer: "puissance spirituelle"
+    alt: []
+
+- id: ideo-l12
+  title: "L'idéologie des dominants : l'universalité des penseurs de la classe dominante"
+  notes: |-
+    **Les pensées de la classe dominante sont imaginaires non parce que cette classe manipulerait sciemment, mais parce que la position de ses penseurs, la plus éloignée de la production, les porte à produire les idées les plus abstraites et les plus universelles.**
+
+    **Le problème.** Comment les pensées dominantes, expression idéelle de la domination matérielle, peuvent-elles être imaginaires ? Il est inséparable d'une thèse propre à Marx : les pensées de la classe dominante se présentent comme universelles, et cette classe présente nécessairement ses intérêts particuliers comme {violet}l'intérêt commun de tous les membres de la société{/violet}. Marx : chaque nouvelle classe dominante est contrainte, {teal}« ne serait-ce déjà que pour parvenir à ses fins »{/teal}, de présenter son intérêt comme l'intérêt communautaire de tous, c'est-à-dire de donner à ses pensées {teal}« la forme de l'universalité »{/teal}.
+
+    **Une lecture à écarter.** On a l'impression que l'idéologie serait sciemment constituée et utilisée par la classe dominante pour légitimer sa domination. Si c'était le cas, elle ne serait plus l'ensemble des idées imaginaires qui accompagnent une vie inaccomplie. Mais ce passage de Marx commence par un rappel de la {amber}division du travail{/amber}, {teal}« l'une des puissances majeures de l'histoire jusqu'à maintenant »{/teal}, et elle n'est effective qu'avec la division du travail matériel et du travail intellectuel.
+
+    **La division jusque dans la classe dominante.** Elle s'y manifeste aussi : il faut distinguer les {violet}penseurs de la classe{/violet}, et ses membres {violet}actifs{/violet}, engagés dans la production réelle, ne serait-ce que pour la faire tourner à leur avantage. Or les penseurs de la classe dominante sont, dans une société, {coral}les individus les plus éloignés de la production matérielle{/coral} : ils sont donc les plus portés à autonomiser la conscience théorique. Aucune idée n'est plus autonome, donc plus abstraite, plus générale et plus universelle que les leurs.
+
+    **Conclusion.** Ils ne veulent pas consciemment produire des idées présentant comme universel l'intérêt de leur classe : {coral}en vertu de leur position sociale, ils ne peuvent pas ne pas produire des idées prétendant au maximum d'universalité{/coral}. La domination sociale d'une classe s'exprime par la production d'idées dominantes ; ces idées doivent être d'un haut degré de généralité, très abstraites, parce que leur lieu de production est très éloigné de la production matérielle.
+
+    ! Le cours ne nie pas que l'idéologie serve la domination : il nie qu'elle soit d'abord un mensonge forgé pour elle.
+  points:
+  - id: ideo-l12-p1
+    sentence: "Les pensées de la classe dominante se présentent comme universelles : cette classe présente ses intérêts particuliers comme l'intérêt ___ de tous les membres de la société."
+    answer: "commun"
+    alt: ["communautaire"]
+  - id: ideo-l12-p2
+    sentence: "L'idéologie allemande : la classe dominante est contrainte de donner à ses pensées la forme de l'___."
+    answer: "universalité"
+    alt: ["Allgemeinheit"]
+  - id: ideo-l12-p3
+    sentence: "Lire l'idéologie comme constituée sciemment par la classe dominante pour légitimer sa domination empêche de la comprendre comme l'expression d'une vie ___."
+    answer: "inaccomplie"
+    alt: ["bornée", "mutilée"]
+  - id: ideo-l12-p4
+    sentence: "Le passage de Marx commence par un rappel de la division du ___, « l'une des puissances majeures de l'histoire jusqu'à maintenant »."
+    answer: "travail"
+    alt: []
+  - id: ideo-l12-p5
+    sentence: "La division du travail se manifeste aussi dans la classe dominante : on y distingue les penseurs de cette classe et ses membres ___, engagés dans la production réelle."
+    answer: "actifs"
+    alt: []
+  - id: ideo-l12-p6
+    sentence: "Les penseurs de la classe dominante sont les individus les plus ___ de la production matérielle."
+    answer: "éloignés"
+    alt: []
+  - id: ideo-l12-p7
+    sentence: "Éloignés de la production, les penseurs de la classe dominante sont les plus portés à ___ la conscience théorique et ses représentations."
+    answer: "autonomiser"
+    alt: []
+  - id: ideo-l12-p8
+    sentence: "Ces penseurs ne produisent pas des idées universelles par projet conscient, mais en vertu de leur position ___."
+    answer: "sociale"
+    alt: []
+
+- id: ideo-l13
+  title: "L'idéologie la mieux partagée : dominés, dominants, et la place de Marx"
+  notes: |-
+    **L'idéologie est la chose socialement la mieux partagée, par les dominés comme par les dominants, mais pour des raisons différentes, et personne ne se tient hors d'elle, Marx pas plus qu'un autre.**
+
+    **Les dominés** pensent idéologiquement parce qu'ils vivent dans des conditions qui ne leur permettent pas une vie accomplie : {coral}une vie bornée, étriquée, mutilée s'accompagne d'idées imaginaires et inadéquates{/coral}. Leur impuissance est celle d'une pensée {violet}ignorante des causes{/violet}, qui accompagne une vie déterminée par autre chose qu'elle-même.
+
+    **Les dominants** pensent aussi idéologiquement, pour d'autres raisons. Satisfaits de leurs conditions, ils devraient produire des idées adéquates, mais ils vivent {violet}séparés des tâches de la production matérielle{/violet} : ils sont portés à croire à l'existence autonome de la conscience, et à produire des pensées d'un très haut degré d'abstraction. Leur impuissance est celle d'une pensée abstraite et générale, qui ne permet aucune connaissance précise, mais qui a pour eux l'avantage d'engendrer des concepts universels {amber}fort utiles à la perpétuation de leur situation dominante{/amber}.
+
+    **La faiblesse des dominants.** Elle est d'abord celle de leur pensée : socialement utile, mais impuissante à produire une connaissance adéquate de la réalité sociale. La critique de l'économie politique, qui soumet à la critique la « science » produite par la classe dominante, vise à {green}faire apparaître aux dominés la faiblesse de la pensée des dominants{/green}, leur impuissance à comprendre par les causes la réalité économique dont ils bénéficient.
+
+    **Pas de position hors-idéologie.** Ni les dominants ni les dominés n'échappent à l'idéologie : il n'y a pas de point de vue de « la science » séparé de toute idéologie. Marx n'a pas prétendu l'occuper ; il a voulu l'effort possible dans un univers saturé d'idéologie : {coral}comprendre les choses par leurs causes, atteindre les rapports essentiels sous les formes de l'apparaître{/coral}. L'autre part de sa vie a servi à organiser la pratique révolutionnaire du prolétariat, la seule par laquelle celui-ci peut conquérir {amber}les conditions d'une activité par soi{/amber}, condition de la production d'idées adéquates et d'une sortie de l'idéologie.
+
+    **Le prolétariat n'est pas la classe sans idéologie.** Marx a semblé un moment le penser, le prolétariat étant la classe qui n'a plus d'intérêt de classe particulier à faire prévaloir ; Balibar a pu dire qu'il abandonne le concept d'idéologie quand il renonce à cette idée. Elle n'est pas tenable : sa vie actuellement inaccomplie l'expose à une connaissance imaginaire de lui-même. D'où la nécessité d'une révolution du prolétariat par lui-même : {teal}« la classe qui renverse l'autre ne peut parvenir que dans une révolution à balayer toute la vieille saloperie qu'elle trimbale et à se rendre capable d'une nouvelle fondation de la société »{/teal}.
+
+    ! Sortir de l'idéologie n'est pas une affaire de savoir seulement : c'est une affaire de pratique, puisque la production d'idées adéquates suppose des conditions de vie qui permettent une activité par soi.
+  points:
+  - id: ideo-l13-p1
+    sentence: "L'idéologie est la chose socialement la mieux ___, tant par les dominés que par les dominants, mais pas pour les mêmes raisons."
+    answer: "partagée"
+    alt: []
+  - id: ideo-l13-p2
+    sentence: "Les dominés pensent idéologiquement parce qu'ils vivent dans des conditions qui ne leur permettent pas de mener une vie ___."
+    answer: "accomplie"
+    alt: []
+  - id: ideo-l13-p3
+    sentence: "Chez les dominés, l'impuissance est celle d'une pensée ignorante des ___."
+    answer: "causes"
+    alt: []
+  - id: ideo-l13-p4
+    sentence: "Les dominants pensent idéologiquement parce qu'ils vivent ___ des tâches de la production matérielle."
+    answer: "séparés"
+    alt: ["éloignés"]
+  - id: ideo-l13-p5
+    sentence: "Chez les dominants, l'impuissance est celle d'une pensée abstraite et générale, qui ne permet aucune connaissance précise mais engendre des concepts ___ utiles à la perpétuation de leur domination."
+    answer: "universels"
+    alt: []
+  - id: ideo-l13-p6
+    sentence: "La critique de l'économie politique fait apparaître aux dominés la faiblesse de la ___ des dominants."
+    answer: "pensée"
+    alt: []
+  - id: ideo-l13-p7
+    sentence: "Ni les dominants ni les dominés n'échappent à l'idéologie : il n'y a pas de position hors-idéologie qui serait celle de « la ___ »."
+    answer: "science"
+    alt: []
+  - id: ideo-l13-p8
+    sentence: "L'effort de connaissance possible, pour Marx, consiste à comprendre les choses par leurs causes et à atteindre les rapports ___ sous les formes de l'apparaître."
+    answer: "essentiels"
+    alt: []
+  - id: ideo-l13-p9
+    sentence: "La pratique révolutionnaire du prolétariat est la seule par laquelle il peut conquérir les conditions d'une activité par ___, condition de la production d'idées adéquates."
+    answer: "soi"
+    alt: []
+  - id: ideo-l13-p10
+    sentence: "L'idée que le prolétariat serait la classe dépourvue d'idéologie n'est pas tenable : sa vie actuellement ___ l'expose à une connaissance imaginaire de lui-même."
+    answer: "inaccomplie"
+    alt: ["mutilée"]
+
+- id: ideo-l14
+  title: "Ni illusion ni manipulation : une expression inadéquate, mais objective"
+  notes: |-
+    **Le concept marxien d'idéologie ne relève ni d'une problématique de l'illusion ni de la manipulation, mais de l'expression inadéquate et imaginaire du réel, et il engage une conception de la vérité.**
+
+    **La thèse d'ensemble.** Marx forge un concept d'idéologie pour rendre compte de la production des idéalités comme d'un processus qui accompagne nécessairement la production matérielle des conditions de la vie réelle et se déroule en parallèle. Deux cas : lorsque la vie est {coral}limitée, bornée dans son développement{/coral}, elle s'accompagne de pensées et de représentations {violet}tronquées{/violet} ; lorsqu'elle est {coral}séparée des conditions matérielles de sa propre reproduction{/coral}, elle s'accompagne de pensées {violet}abstraites et générales{/violet}. Dans les deux cas, elles sont inadéquates.
+
+    **Il s'agit bien de vérité.** Le chapitre du *Capital* sur le fétichisme de la marchandise le confirme. Des catégories de l'économie bourgeoise, Marx dit : {teal}« ce sont des formes de pensée qui ont une {/teal}{teal}validité sociale{/teal}{teal}, et donc une {/teal}{teal}objectivité{/teal}{teal}, pour les rapports de production de ce mode de production social historiquement déterminé qu'est la production marchande »{/teal}. Ces catégories sont donc {green}vraies, puisqu'elles ont une objectivité{/green}, et pourtant {red}idéologiques{/red}.
+
+    **Pourquoi elles restent idéologiques.** Il serait faux de croire que ces catégories sont vraies et que seul l'usage qu'en font les économistes bourgeois est faux. Vraies et objectives, elles le sont dans la mesure où elles sont l'expression, dans l'idéalité, du processus réel de la production marchande : ce processus les confirme à chaque instant. Mais elles restent idéologiques parce que {coral}ceux qui les forment ne produisent pas en même temps l'effort critique{/coral} qui permet de comprendre le rapport de nécessité entre un processus social réel et son expression dans l'idéalité.
+
+    **La tâche.** Il s'agit de comprendre à chaque fois {amber}en vertu de quelles causes un processus réel ne peut pas ne pas apparaître idéellement dans telles représentations et telles formes de conscience{/amber}.
+
+    ! « Idéologique » n'est pas synonyme de « faux dans son contenu » : une catégorie peut avoir une objectivité sociale et rester idéologique, faute de comprendre la nécessité qui la produit.
+  points:
+  - id: ideo-l14-p1
+    sentence: "Le concept marxien d'idéologie ne relève ni d'une problématique de l'illusion ni de la manipulation, mais d'une problématique de l'___ inadéquate et imaginaire du réel."
+    answer: "expression"
+    alt: []
+  - id: ideo-l14-p2
+    sentence: "Une vie limitée, bornée dans son développement, s'accompagne de pensées et de représentations ___."
+    answer: "tronquées"
+    alt: ["tronquées et inadéquates"]
+  - id: ideo-l14-p3
+    sentence: "Une vie séparée des conditions matérielles de sa propre reproduction s'accompagne de pensées et de représentations ___ et générales."
+    answer: "abstraites"
+    alt: []
+  - id: ideo-l14-p4
+    sentence: "Le concept d'idéologie engage une conception de la ___, que confirme le chapitre du Capital sur le fétichisme de la marchandise."
+    answer: "vérité"
+    alt: []
+  - id: ideo-l14-p5
+    sentence: "Le Capital : les catégories de l'économie bourgeoise sont « des formes de pensée qui ont une ___ sociale, et donc une objectivité, pour les rapports de production de ce mode de production social historiquement déterminé qu'est la production marchande »."
+    answer: "validité"
+    alt: []
+  - id: ideo-l14-p6
+    sentence: "Le Capital : « ... une validité sociale, et donc une ___, pour les rapports de production de ce mode de production social historiquement déterminé qu'est la production marchande »."
+    answer: "objectivité"
+    alt: []
+  - id: ideo-l14-p7
+    sentence: "Les catégories de l'économie bourgeoise sont objectives, parce qu'elles expriment dans l'idéalité le processus réel de la production ___."
+    answer: "marchande"
+    alt: []
+  - id: ideo-l14-p8
+    sentence: "Ces catégories restent idéologiques parce que ceux qui les forment ne produisent pas l'effort ___ qui permet de comprendre le rapport de nécessité entre processus réel et expression idéelle."
+    answer: "critique"
+    alt: []
+
+- id: ideo-l15
+  title: "Le fétichisme de la marchandise : la genèse d'une représentation nécessaire et imaginaire"
+  notes: |-
+    **Le fétichisme de la marchandise est l'exemple d'une représentation à la fois nécessaire et imaginaire, dont la critique se fait par sa genèse et non depuis l'extérieur d'une « science ».**
+
+    **Le texte.** Marx écrit des producteurs : {teal}« les relations sociales qu'entretiennent leurs travaux privés apparaissent aux producteurs pour ce qu'elles sont, c'est-à-dire, {/teal}{teal}non pas comme des rapports immédiatement sociaux entre les personnes dans leur travail même{/teal}{teal}, mais au contraire comme {/teal}{teal}rapports impersonnels entre des personnes et rapports sociaux entre des choses{/teal}{teal} impersonnelles »{/teal}.
+
+    **Pourquoi cette apparence est nécessaire.** Dans une production marchande, la production se répartit en une multiplicité de {violet}travaux privés{/violet}, effectués séparément les uns des autres, {amber}sans organisation consciente{/amber}. Leurs rapports sociaux apparaissent donc nécessairement aux producteurs sous la forme du rapport social d'{violet}échangeabilité{/violet} des produits de leurs travaux, en tant que marchandises. On a ici la genèse d'une représentation à la fois {coral}nécessaire et imaginaire{/coral}, qui accompagne un processus social certes réel, la production marchande, mais imparfait et inaccompli, dont la maîtrise échappe à ses acteurs.
+
+    **Une critique par la genèse.** La critique de cette représentation ne se fait pas depuis le point de vue extérieur d'une supposée « science » : elle se fait à partir de la genèse de la représentation, de la {green}mise au jour et de la compréhension des causes qui ne peuvent pas ne pas la produire{/green}.
+
+    **La tâche du concept d'idéologie.** Elle est de comprendre la genèse nécessaire des représentations imaginaires, en tant qu'elle accompagne, dans l'idéalité, le déploiement de processus sociaux que l'on peut dire « manqués » ou inaboutis, selon une catégorie d'Axel Honneth (*soziale Fehlentwicklungen*). Ils conduisent à des formes de vie humaines mutilées et inaccomplies. Et cela, {coral}pour qu'une transformation réelle de ces processus permette en même temps de s'émanciper des idéalités imaginaires et de libérer la puissance de comprendre{/coral}.
+
+    ! L'émancipation à l'égard de l'idéologie est une transformation réelle de la vie sociale, et la compréhension de la genèse en est la condition, non le substitut.
+  points:
+  - id: ideo-l15-p1
+    sentence: "Le Capital : les relations sociales qu'entretiennent leurs travaux privés apparaissent aux producteurs non pas comme des rapports ___ sociaux entre les personnes dans leur travail même."
+    answer: "immédiatement"
+    alt: []
+  - id: ideo-l15-p2
+    sentence: "Le Capital : « ... mais au contraire comme rapports ___ entre des personnes et rapports sociaux entre des choses impersonnelles »."
+    answer: "impersonnels"
+    alt: []
+  - id: ideo-l15-p3
+    sentence: "Le Capital : « ... rapports impersonnels entre des personnes et rapports sociaux entre des ___ impersonnelles »."
+    answer: "choses"
+    alt: []
+  - id: ideo-l15-p4
+    sentence: "Dans la production marchande, la production se répartit en une multiplicité de travaux ___ effectués séparément les uns des autres, sans organisation consciente."
+    answer: "privés"
+    alt: []
+  - id: ideo-l15-p5
+    sentence: "Les rapports sociaux des producteurs leur apparaissent sous la forme du rapport social d'___ des produits de leurs travaux en tant que marchandises."
+    answer: "échangeabilité"
+    alt: []
+  - id: ideo-l15-p6
+    sentence: "Le fétichisme de la marchandise est la genèse d'une représentation à la fois nécessaire et ___."
+    answer: "imaginaire"
+    alt: ["inadéquate"]
+  - id: ideo-l15-p7
+    sentence: "La critique d'une représentation idéologique ne se fait pas depuis l'extérieur d'une supposée « science », mais à partir de sa ___."
+    answer: "genèse"
+    alt: []
+  - id: ideo-l15-p8
+    sentence: "Le concept d'idéologie sert à comprendre la genèse nécessaire des représentations imaginaires qui accompagnent des processus sociaux ___, qui conduisent à des formes de vie mutilées."
+    answer: "manqués"
+    alt: ["inaboutis"]
+  - id: ideo-l15-p9
+    sentence: "Une transformation réelle des processus sociaux manqués permet en même temps de s'émanciper des idéalités imaginaires et de libérer la ___ de comprendre."
+    answer: "puissance"
+    alt: []
