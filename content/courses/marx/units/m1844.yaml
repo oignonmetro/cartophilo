@@ -1,0 +1,1259 @@
+# Unité de texte (voir content/textes.md) : Marx, *Manuscrits de 1844*, premier
+# manuscrit, « Travail aliéné et propriété privée » (p. XXII à XXIV du manuscrit
+# de Marx), d'après la traduction GF (Jacques-Pierre Gougeon), choisie par
+# l'utilisateur. Du « fait économique actuel » aux résultats 3) et 4) ; le
+# début (critique de l'économie politique) va dans l'introduction, la suite
+# (« à qui appartient le produit ? ») n'est pas reprise. Les appels de note
+# et les marques de page sont retirés ; le texte est celui de l'extraction du
+# PDF de l'utilisateur. Commentaire : les séances de Fischbach des 13 et
+# 20 octobre et du 3 novembre 2026 (voir les unités ali1 à ali6) ; allemand
+# (Gattungswesen, unorganischer Leib, Entfremdung, Entäußerung) d'après le
+# texte allemand de marxists.org (MEW 40).
+
+id: m1844
+title: "Le travail aliéné (1844)"
+subtitle: "Manuscrits de 1844, premier manuscrit, « Travail aliéné et propriété privée »"
+icon: page
+color: coral
+intro: |-
+  Le passage du premier manuscrit où Marx analyse le travail aliéné : de l'appauvrissement de l'ouvrier à l'aliénation de l'homme par rapport à l'homme, en quatre déterminations (le produit, l'activité, l'être générique, autrui).
+lessons:
+- id: m1844-i1
+  title: "Le fait économique et le plan"
+  notes: |-
+    **Le premier manuscrit part du travail aliéné comme d'un fait économique, et en tire quatre déterminations : le produit, l'activité, l'être générique, autrui.**
+
+    Marx reproche à l'économie politique de partir du fait de {amber}la propriété privée{/amber} sans l'expliquer : elle présuppose ce qu'elle devrait déduire, et se transporte dans {red}un état originel fictif{/red}, comme le théologien qui explique le mal par le péché originel. Lui part d'{violet}un fait économique actuel{/violet} : l'appauvrissement de l'ouvrier à mesure qu'il produit. Le texte découvre ce que ce fait exprime, par un rapprochement de l'objet puis de l'activité, jusqu'à l'être générique.
+
+    | Moment | Lieu | Ce qui s'y joue |
+    | --- | --- | --- |
+    | Le produit du travail | §1 à §8 | le produit se dresse comme un être étranger, et l'ouvrier est coupé de la nature qui fournit matière et moyens de vivre |
+    | L'activité du travail | §9 à §12 | le travail est extérieur à l'ouvrier, forcé, perte de soi : son activité est celle d'un autre |
+    | L'être générique | §13 à §18 | le travail aliéné fait de la vie générique un moyen de la vie individuelle |
+    | Les autres hommes | §19 | étranger à son être générique, l'homme est étranger aux autres hommes |
+
+    ! La suite du manuscrit (à qui appartient le produit ?) n'est pas dans cette unité.
+  passage:
+    label: "Introduction"
+  points:
+  - id: m1844-i1-1
+    sentence: "Marx reproche à l'économie politique de partir du fait de la propriété ___ sans l'expliquer."
+    answer: "privée"
+    alt: []
+  - id: m1844-i1-2
+    sentence: "Marx refuse de se transporter dans un état ___ fictif, comme le théologien qui explique le mal par le péché originel."
+    answer: "originel"
+    alt: []
+  - id: m1844-i1-3
+    sentence: "Le travail aliéné se décline en quatre déterminations : le produit, l'activité, l'être ___ et autrui."
+    answer: "générique"
+    alt: []
+- id: m1844-p1
+  title: "Un fait économique : l'appauvrissement de l'ouvrier"
+  notes: |-
+    **Marx part d'{amber}un fait économique actuel{/amber} : plus l'ouvrier produit de richesse, plus il s'appauvrit.**
+
+    Ce fait est un {red}paradoxe{/red} : {violet}la richesse produite{/violet} croît, et avec elle {coral}la pauvreté de celui qui la produit{/coral}. L'ouvrier devient une marchandise {red}d'autant moins chère{/red} qu'il en crée davantage : {violet}la dévalorisation du monde humain{/violet} va de pair avec {violet}la mise en valeur du monde matériel{/violet}. Le travail ne produit pas seulement des marchandises : il produit aussi {coral}l'ouvrier lui-même comme une marchandise{/coral}.
+
+    ! Marx ne part ni d'un état originel fictif ni d'une définition de l'homme : le reste du passage cherche ce que ce fait exprime.
+  passage:
+    label: "§1"
+    text: "Nous partons d'un fait économique actuel. L'ouvrier devient d'autant plus pauvre qu'il produit plus de richesse, que sa production croît en puissance et en volume. L'ouvrier devient une marchandise au prix d'autant plus bas qu'il crée plus de marchandises. La dévalorisation du monde humain va de pair avec la mise en valeur du monde matériel. Le travail ne produit pas seulement des marchandises ; il se produit lui-même ainsi que l'ouvrier comme une marchandise dans la mesure où il produit des marchandises en général."
+  points:
+  - id: m1844-p1-1
+    fragment: "1/2"
+    sentence: "« Nous partons d'___. L'ouvrier devient d'autant plus pauvre qu'il produit plus de richesse, que sa production croît en puissance et en volume. L'ouvrier devient une marchandise au prix d'autant plus bas qu'il crée plus de marchandises. »"
+    answer: "un fait économique actuel"
+    alt: []
+  - id: m1844-p1-2
+    fragment: "1/2"
+    sentence: "« Nous partons d'un fait économique actuel. L'ouvrier devient ___ qu'il produit plus de richesse, que sa production croît en puissance et en volume. L'ouvrier devient une marchandise au prix d'autant plus bas qu'il crée plus de marchandises. »"
+    answer: "d'autant plus pauvre"
+    alt: []
+  - id: m1844-p1-3
+    fragment: "1/2"
+    sentence: "« Nous partons d'un fait économique actuel. L'ouvrier devient d'autant plus pauvre qu'il produit plus de richesse, ___. L'ouvrier devient une marchandise au prix d'autant plus bas qu'il crée plus de marchandises. »"
+    answer: "que sa production croît en puissance et en volume"
+    alt: []
+  - id: m1844-p1-4
+    fragment: "1/2"
+    sentence: "« Nous partons d'un fait économique actuel. L'ouvrier devient d'autant plus pauvre qu'il produit plus de richesse, que sa production croît en puissance et en volume. L'ouvrier devient ___ qu'il crée plus de marchandises. »"
+    answer: "une marchandise au prix d'autant plus bas"
+    alt: []
+  - id: m1844-p1-5
+    fragment: "2/2"
+    sentence: "« ___ va de pair avec la mise en valeur du monde matériel. Le travail ne produit pas seulement des marchandises ; il se produit lui-même ainsi que l'ouvrier comme une marchandise dans la mesure où il produit des marchandises en général. »"
+    answer: "La dévalorisation du monde humain"
+    alt: []
+  - id: m1844-p1-6
+    fragment: "2/2"
+    sentence: "« La dévalorisation du monde humain va de pair avec ___. Le travail ne produit pas seulement des marchandises ; il se produit lui-même ainsi que l'ouvrier comme une marchandise dans la mesure où il produit des marchandises en général. »"
+    answer: "la mise en valeur du monde matériel"
+    alt: []
+  - id: m1844-p1-7
+    fragment: "2/2"
+    sentence: "« La dévalorisation du monde humain va de pair avec la mise en valeur du monde matériel. Le travail ne produit pas seulement des marchandises ; ___ dans la mesure où il produit des marchandises en général. »"
+    answer: "il se produit lui-même ainsi que l'ouvrier comme une marchandise"
+    alt: []
+  - id: m1844-p1-8
+    fragment: "2/2"
+    sentence: "« La dévalorisation du monde humain va de pair avec la mise en valeur du monde matériel. Le travail ne produit pas seulement des marchandises ; il se produit lui-même ainsi que l'ouvrier comme une marchandise ___. »"
+    answer: "dans la mesure où il produit des marchandises en général"
+    alt: []
+  - id: m1844-p1-9
+    sentence: "Marx part d'un ___ économique actuel, non d'un état originel fictif."
+    answer: "fait"
+    alt: []
+  - id: m1844-p1-10
+    sentence: "Le travail produit des marchandises, et il produit aussi l'ouvrier lui-même comme une ___."
+    answer: "marchandise"
+    alt: []
+- id: m1844-p2
+  title: "Le produit se dresse comme un être étranger"
+  notes: |-
+    **Le fait s'explique ainsi : le produit du travail se dresse devant l'ouvrier comme {red}un être étranger{/red}, et la réalisation du travail apparaît comme la perte de l'objet.**
+
+    Le produit est {violet}l'objectivation{/violet} du travail : du travail {amber}fixé, matérialisé dans un objet{/amber}. La réalisation du travail est son objectivation. Mais {coral}dans le monde de l'économie politique{/coral}, cette réalisation apparaît comme {red}perte de sa réalité{/red} pour l'ouvrier, l'objectivation comme perte de l'objet ou asservissement à lui, l'appropriation comme {violet}aliénation{/violet} et dessaisissement.
+
+    ! Marx ne dit pas que l'objectivation est aliénante en soi : il décrit ce qu'elle devient dans le monde de l'économie politique.
+  passage:
+    label: "§2"
+    text: "Ce fait n'exprime rien d'autre que ceci : l'objet que le travail produit, son produit, se dresse devant lui comme un être étranger, comme une puissance indépendante du producteur. Le produit du travail est le travail qui s'est fixé, matérialisé dans un objet, il est l'objectivation du travail. La réalisation du travail est son objectivation. Dans le monde de l'économie politique, cette réalisation du travail apparaît comme la perte pour l'ouvrier de sa réalité, l'objectivation comme la perte de l'objet ou l'asservissement à celui-ci, l'appropriation comme l'aliénation, le dessaisissement."
+  points:
+  - id: m1844-p2-1
+    fragment: "1/2"
+    sentence: "« Ce fait n'exprime rien d'autre que ceci : l'objet que le travail produit, son produit, se dresse devant lui comme ___, comme une puissance indépendante du producteur. Le produit du travail est le travail qui s'est fixé, matérialisé dans un objet, il est l'objectivation du travail. »"
+    answer: "un être étranger"
+    alt: []
+  - id: m1844-p2-2
+    fragment: "1/2"
+    sentence: "« Ce fait n'exprime rien d'autre que ceci : l'objet que le travail produit, son produit, se dresse devant lui comme un être étranger, comme ___. Le produit du travail est le travail qui s'est fixé, matérialisé dans un objet, il est l'objectivation du travail. »"
+    answer: "une puissance indépendante du producteur"
+    alt: []
+  - id: m1844-p2-3
+    fragment: "1/2"
+    sentence: "« Ce fait n'exprime rien d'autre que ceci : l'objet que le travail produit, son produit, se dresse devant lui comme un être étranger, comme une puissance indépendante du producteur. Le produit du travail est ___, il est l'objectivation du travail. »"
+    answer: "le travail qui s'est fixé, matérialisé dans un objet"
+    alt: []
+  - id: m1844-p2-4
+    fragment: "1/2"
+    sentence: "« Ce fait n'exprime rien d'autre que ceci : l'objet que le travail produit, son produit, se dresse devant lui comme un être étranger, comme une puissance indépendante du producteur. Le produit du travail est le travail qui s'est fixé, matérialisé dans un objet, il est ___. »"
+    answer: "l'objectivation du travail"
+    alt: []
+  - id: m1844-p2-5
+    fragment: "2/2"
+    sentence: "« La réalisation du travail est ___. Dans le monde de l'économie politique, cette réalisation du travail apparaît comme la perte pour l'ouvrier de sa réalité, l'objectivation comme la perte de l'objet ou l'asservissement à celui-ci, l'appropriation comme l'aliénation, le dessaisissement. »"
+    answer: "son objectivation"
+    alt: []
+  - id: m1844-p2-6
+    fragment: "2/2"
+    sentence: "« La réalisation du travail est son objectivation. ___, cette réalisation du travail apparaît comme la perte pour l'ouvrier de sa réalité, l'objectivation comme la perte de l'objet ou l'asservissement à celui-ci, l'appropriation comme l'aliénation, le dessaisissement. »"
+    answer: "Dans le monde de l'économie politique"
+    alt: []
+  - id: m1844-p2-7
+    fragment: "2/2"
+    sentence: "« La réalisation du travail est son objectivation. Dans le monde de l'économie politique, cette réalisation du travail apparaît comme ___, l'objectivation comme la perte de l'objet ou l'asservissement à celui-ci, l'appropriation comme l'aliénation, le dessaisissement. »"
+    answer: "la perte pour l'ouvrier de sa réalité"
+    alt: []
+  - id: m1844-p2-8
+    fragment: "2/2"
+    sentence: "« La réalisation du travail est son objectivation. Dans le monde de l'économie politique, cette réalisation du travail apparaît comme la perte pour l'ouvrier de sa réalité, l'objectivation comme ___, l'appropriation comme l'aliénation, le dessaisissement. »"
+    answer: "la perte de l'objet ou l'asservissement à celui-ci"
+    alt: []
+  - id: m1844-p2-9
+    fragment: "2/2"
+    sentence: "« La réalisation du travail est son objectivation. Dans le monde de l'économie politique, cette réalisation du travail apparaît comme la perte pour l'ouvrier de sa réalité, l'objectivation comme la perte de l'objet ou l'asservissement à celui-ci, ___. »"
+    answer: "l'appropriation comme l'aliénation, le dessaisissement"
+    alt: []
+  - id: m1844-p2-10
+    sentence: "La réalisation du travail est son ___ ; mais dans le monde de l'économie politique, elle apparaît comme la perte de l'objet."
+    answer: "objectivation"
+    alt: []
+  - id: m1844-p2-11
+    sentence: "Marx dit *Entfremdung* pour l'aliénation et ___ pour le dessaisissement."
+    answer: "Entäußerung"
+    alt: []
+- id: m1844-p3
+  title: "Une perte de réalité jusqu'à la mort"
+  notes: |-
+    **La perte est radicale : l'ouvrier perd sa réalité jusqu'à en mourir de faim, et jusqu'à l'objet de son travail lui-même.**
+
+    Le dessaisissement porte sur {red}deux sortes d'objets{/red} : {amber}les objets les plus indispensables à la vie{/amber} et {amber}les objets du travail{/amber}. Le travail lui-même devient un objet dont l'ouvrier ne s'empare que par un grand effort et irrégulièrement. Et {coral}plus il produit d'objets, moins il possède{/coral} : il tombe sous la domination de son propre produit, {violet}le capital{/violet}.
+
+    ! Marx ne dit pas que l'ouvrier produit trop peu : il dit que son produit se retourne contre lui.
+  passage:
+    label: "§3"
+    text: "La réalisation du travail se révèle être à tel point une perte de réalité que l'ouvrier perd sa réalité jusqu'à en mourir de faim. L'objectivation se révèle à tel point être la perte de l'objet que l'ouvrier est spolié non seulement des objets les plus indispensables à la vie, mais encore des objets du travail. Oui, le travail lui-même devient un objet dont il ne peut s'emparer qu'en faisant le plus grand effort et avec les interruptions les plus irrégulières. L'appropriation de l'objet se révèle à tel point être une aliénation que, plus l'ouvrier produit d'objets, moins il peut posséder et plus il tombe sous la domination de son propre produit, le capital."
+  points:
+  - id: m1844-p3-1
+    fragment: "1/2"
+    sentence: "« La réalisation du travail se révèle être à tel point ___ que l'ouvrier perd sa réalité jusqu'à en mourir de faim. L'objectivation se révèle à tel point être la perte de l'objet que l'ouvrier est spolié non seulement des objets les plus indispensables à la vie, mais encore des objets du travail. Oui, le travail lui-même devient un objet dont il ne peut s'emparer qu'en faisant le plus grand effort et avec les interruptions les plus irrégulières. »"
+    answer: "une perte de réalité"
+    alt: []
+  - id: m1844-p3-2
+    fragment: "1/2"
+    sentence: "« La réalisation du travail se révèle être à tel point une perte de réalité que l'ouvrier perd sa réalité ___. L'objectivation se révèle à tel point être la perte de l'objet que l'ouvrier est spolié non seulement des objets les plus indispensables à la vie, mais encore des objets du travail. Oui, le travail lui-même devient un objet dont il ne peut s'emparer qu'en faisant le plus grand effort et avec les interruptions les plus irrégulières. »"
+    answer: "jusqu'à en mourir de faim"
+    alt: []
+  - id: m1844-p3-3
+    fragment: "1/2"
+    sentence: "« La réalisation du travail se révèle être à tel point une perte de réalité que l'ouvrier perd sa réalité jusqu'à en mourir de faim. L'objectivation se révèle à tel point être la perte de l'objet que l'ouvrier est spolié non seulement ___, mais encore des objets du travail. Oui, le travail lui-même devient un objet dont il ne peut s'emparer qu'en faisant le plus grand effort et avec les interruptions les plus irrégulières. »"
+    answer: "des objets les plus indispensables à la vie"
+    alt: []
+  - id: m1844-p3-4
+    fragment: "1/2"
+    sentence: "« La réalisation du travail se révèle être à tel point une perte de réalité que l'ouvrier perd sa réalité jusqu'à en mourir de faim. L'objectivation se révèle à tel point être la perte de l'objet que l'ouvrier est spolié non seulement des objets les plus indispensables à la vie, mais encore ___. Oui, le travail lui-même devient un objet dont il ne peut s'emparer qu'en faisant le plus grand effort et avec les interruptions les plus irrégulières. »"
+    answer: "des objets du travail"
+    alt: []
+  - id: m1844-p3-5
+    fragment: "1/2"
+    sentence: "« La réalisation du travail se révèle être à tel point une perte de réalité que l'ouvrier perd sa réalité jusqu'à en mourir de faim. L'objectivation se révèle à tel point être la perte de l'objet que l'ouvrier est spolié non seulement des objets les plus indispensables à la vie, mais encore des objets du travail. Oui, ___ dont il ne peut s'emparer qu'en faisant le plus grand effort et avec les interruptions les plus irrégulières. »"
+    answer: "le travail lui-même devient un objet"
+    alt: []
+  - id: m1844-p3-6
+    fragment: "2/2"
+    sentence: "« L'appropriation de l'objet se révèle à tel point être ___ que, plus l'ouvrier produit d'objets, moins il peut posséder et plus il tombe sous la domination de son propre produit, le capital. »"
+    answer: "une aliénation"
+    alt: []
+  - id: m1844-p3-7
+    fragment: "2/2"
+    sentence: "« L'appropriation de l'objet se révèle à tel point être une aliénation que, plus l'ouvrier produit d'objets, ___ et plus il tombe sous la domination de son propre produit, le capital. »"
+    answer: "moins il peut posséder"
+    alt: []
+  - id: m1844-p3-8
+    fragment: "2/2"
+    sentence: "« L'appropriation de l'objet se révèle à tel point être une aliénation que, plus l'ouvrier produit d'objets, moins il peut posséder et plus il tombe sous la domination de ___. »"
+    answer: "son propre produit, le capital"
+    alt: []
+  - id: m1844-p3-9
+    sentence: "L'ouvrier est spolié des objets indispensables à la vie, mais aussi des objets du ___."
+    answer: "travail"
+    alt: []
+  - id: m1844-p3-10
+    sentence: "Plus l'ouvrier produit d'objets, plus il tombe sous la domination de son propre produit, le ___."
+    answer: "capital"
+    alt: []
+- id: m1844-p4
+  title: "L'ouvrier dans son produit, comme l'homme en Dieu"
+  notes: |-
+    **Toutes ces conséquences découlent d'un seul rapport : l'ouvrier est devant son produit {red}comme devant un objet étranger{/red}.**
+
+    S'il en est ainsi, plus l'ouvrier se dépense, plus {amber}le monde étranger qu'il crée en face de lui devient puissant{/amber}, et plus il est lui-même pauvre. Marx le compare à {violet}la religion{/violet} : plus l'homme projette de choses en Dieu, moins il en garde en lui-même. L'ouvrier {coral}place sa vie dans l'objet{/coral}, qui la possède désormais. D'où la conclusion : la vie prêtée à l'objet {red}s'oppose à lui, hostile et étrangère{/red}, et son travail devient {violet}une puissance autonome face à lui{/violet}.
+
+    ! L'aliénation n'est pas seulement que le travail devienne un objet : c'est que cet objet existe en dehors de lui et lui fasse face.
+  passage:
+    label: "§4"
+    text: "Toutes ces conséquences découlent du fait que, par définition, l'ouvrier se trouve devant le produit de son propre travail dans le même rapport qu'à l'égard d'un objet étranger. S'il en est ainsi, il est évident que, plus l'ouvrier se dépense au travail, plus le monde étranger, objectif, qu'il crée en face de lui devient puissant, plus il s'appauvrit lui-même et plus son monde intérieur devient pauvre, moins il possède en propre. C'est la même chose avec la religion. Plus l'homme projette de choses en Dieu, moins il en garde en lui-même. L'ouvrier place sa vie dans l'objet. Mais alors celle-ci ne lui appartient plus, elle appartient à l'objet. Plus cette activité est grande, plus l'ouvrier est privé d'objets. Il n'est pas ce qu'il produit par son travail. Plus ce produit gagne en substance, moins l'ouvrier est lui-même. L'aliénation de l'ouvrier dans son produit signifie non seulement que son travail devient un objet, une réalité extérieure, mais que son travail existe en dehors de lui, indépendamment de lui, étranger à lui, et devient une puissance autonome face à lui, que la vie qu'il a prêtée à l'objet s'oppose à lui, hostile et étrangère."
+  points:
+  - id: m1844-p4-1
+    fragment: "1/3"
+    sentence: "« Toutes ces conséquences découlent du fait que, par définition, l'ouvrier se trouve devant le produit de son propre travail ___. S'il en est ainsi, il est évident que, plus l'ouvrier se dépense au travail, plus le monde étranger, objectif, qu'il crée en face de lui devient puissant, plus il s'appauvrit lui-même et plus son monde intérieur devient pauvre, moins il possède en propre. »"
+    answer: "dans le même rapport qu'à l'égard d'un objet étranger"
+    alt: []
+  - id: m1844-p4-2
+    fragment: "1/3"
+    sentence: "« Toutes ces conséquences découlent du fait que, par définition, l'ouvrier se trouve devant le produit de son propre travail dans le même rapport qu'à l'égard d'un objet étranger. S'il en est ainsi, il est évident que, plus l'ouvrier se dépense au travail, ___, plus il s'appauvrit lui-même et plus son monde intérieur devient pauvre, moins il possède en propre. »"
+    answer: "plus le monde étranger, objectif, qu'il crée en face de lui devient puissant"
+    alt: []
+  - id: m1844-p4-3
+    fragment: "1/3"
+    sentence: "« Toutes ces conséquences découlent du fait que, par définition, l'ouvrier se trouve devant le produit de son propre travail dans le même rapport qu'à l'égard d'un objet étranger. S'il en est ainsi, il est évident que, plus l'ouvrier se dépense au travail, plus le monde étranger, objectif, qu'il crée en face de lui devient puissant, plus il s'appauvrit lui-même et plus son monde intérieur devient pauvre, ___. »"
+    answer: "moins il possède en propre"
+    alt: []
+  - id: m1844-p4-4
+    fragment: "2/3"
+    sentence: "« C'est la même chose avec la religion. Plus l'homme projette de choses en Dieu, ___. L'ouvrier place sa vie dans l'objet. Mais alors celle-ci ne lui appartient plus, elle appartient à l'objet. Plus cette activité est grande, plus l'ouvrier est privé d'objets. Il n'est pas ce qu'il produit par son travail. Plus ce produit gagne en substance, moins l'ouvrier est lui-même. »"
+    answer: "moins il en garde en lui-même"
+    alt: []
+  - id: m1844-p4-5
+    fragment: "2/3"
+    sentence: "« C'est la même chose avec la religion. Plus l'homme projette de choses en Dieu, moins il en garde en lui-même. L'ouvrier place ___. Mais alors celle-ci ne lui appartient plus, elle appartient à l'objet. Plus cette activité est grande, plus l'ouvrier est privé d'objets. Il n'est pas ce qu'il produit par son travail. Plus ce produit gagne en substance, moins l'ouvrier est lui-même. »"
+    answer: "sa vie dans l'objet"
+    alt: []
+  - id: m1844-p4-6
+    fragment: "2/3"
+    sentence: "« C'est la même chose avec la religion. Plus l'homme projette de choses en Dieu, moins il en garde en lui-même. L'ouvrier place sa vie dans l'objet. Mais alors celle-ci ne lui appartient plus, ___. Plus cette activité est grande, plus l'ouvrier est privé d'objets. Il n'est pas ce qu'il produit par son travail. Plus ce produit gagne en substance, moins l'ouvrier est lui-même. »"
+    answer: "elle appartient à l'objet"
+    alt: []
+  - id: m1844-p4-7
+    fragment: "2/3"
+    sentence: "« C'est la même chose avec la religion. Plus l'homme projette de choses en Dieu, moins il en garde en lui-même. L'ouvrier place sa vie dans l'objet. Mais alors celle-ci ne lui appartient plus, elle appartient à l'objet. Plus cette activité est grande, ___. Il n'est pas ce qu'il produit par son travail. Plus ce produit gagne en substance, moins l'ouvrier est lui-même. »"
+    answer: "plus l'ouvrier est privé d'objets"
+    alt: []
+  - id: m1844-p4-8
+    fragment: "2/3"
+    sentence: "« C'est la même chose avec la religion. Plus l'homme projette de choses en Dieu, moins il en garde en lui-même. L'ouvrier place sa vie dans l'objet. Mais alors celle-ci ne lui appartient plus, elle appartient à l'objet. Plus cette activité est grande, plus l'ouvrier est privé d'objets. Il n'est pas ce qu'il produit par son travail. Plus ce produit gagne en substance, ___. »"
+    answer: "moins l'ouvrier est lui-même"
+    alt: []
+  - id: m1844-p4-9
+    fragment: "3/3"
+    sentence: "« L'aliénation de l'ouvrier dans son produit signifie non seulement que ___, mais que son travail existe en dehors de lui, indépendamment de lui, étranger à lui, et devient une puissance autonome face à lui, que la vie qu'il a prêtée à l'objet s'oppose à lui, hostile et étrangère. »"
+    answer: "son travail devient un objet, une réalité extérieure"
+    alt: []
+  - id: m1844-p4-10
+    fragment: "3/3"
+    sentence: "« L'aliénation de l'ouvrier dans son produit signifie non seulement que son travail devient un objet, une réalité extérieure, mais que son travail existe en dehors de lui, indépendamment de lui, étranger à lui, et devient ___, que la vie qu'il a prêtée à l'objet s'oppose à lui, hostile et étrangère. »"
+    answer: "une puissance autonome face à lui"
+    alt: []
+  - id: m1844-p4-11
+    fragment: "3/3"
+    sentence: "« L'aliénation de l'ouvrier dans son produit signifie non seulement que son travail devient un objet, une réalité extérieure, mais que son travail existe en dehors de lui, indépendamment de lui, étranger à lui, et devient une puissance autonome face à lui, que ___. »"
+    answer: "la vie qu'il a prêtée à l'objet s'oppose à lui, hostile et étrangère"
+    alt: []
+  - id: m1844-p4-12
+    sentence: "Marx compare l'aliénation de l'ouvrier à celle de l'homme dans la ___ : plus il projette de choses en Dieu, moins il en garde en lui-même."
+    answer: "religion"
+    alt: []
+  - id: m1844-p4-13
+    sentence: "Dans cette comparaison, l'ouvrier est à son produit ce que l'homme est à ___."
+    answer: "Dieu"
+    alt: []
+- id: m1844-p5
+  title: "La nature, matière du travail"
+  notes: |-
+    **Pour examiner l'objectivation, Marx rappelle d'abord que l'ouvrier ne crée rien {red}sans la nature{/red}.**
+
+    La nature, le {violet}monde extérieur sensible{/violet}, est {amber}la matière dans laquelle le travail se réalise{/amber}, au sein de laquelle il s'exerce, à partir de laquelle et au moyen de laquelle il produit. Le travail a donc une condition qui n'est pas lui : un monde d'objets. Marx annonce l'enjeu : l'aliénation est {coral}la perte de l'objet, de son produit{/coral}, mais aussi celle des objets sans lesquels il ne produit rien.
+  passage:
+    label: "§5"
+    text: "Examinons de plus près l'objectivation, la production de l'ouvrier et, en elle, l'aliénation, la perte de l'objet, de son produit. L'ouvrier ne peut plus rien créer sans la nature, sans le monde extérieur sensible. Elle est la matière dans laquelle son travail se réalise, au sein de laquelle il s'exerce, à partir de laquelle et au moyen de laquelle il produit."
+  points:
+  - id: m1844-p5-1
+    sentence: "« Examinons de plus près l'objectivation, la production de l'ouvrier et, en elle, l'aliénation, ___. L'ouvrier ne peut plus rien créer sans la nature, sans le monde extérieur sensible. Elle est la matière dans laquelle son travail se réalise, au sein de laquelle il s'exerce, à partir de laquelle et au moyen de laquelle il produit. »"
+    answer: "la perte de l'objet, de son produit"
+    alt: []
+  - id: m1844-p5-2
+    sentence: "« Examinons de plus près l'objectivation, la production de l'ouvrier et, en elle, l'aliénation, la perte de l'objet, de son produit. L'ouvrier ne peut plus rien créer ___. Elle est la matière dans laquelle son travail se réalise, au sein de laquelle il s'exerce, à partir de laquelle et au moyen de laquelle il produit. »"
+    answer: "sans la nature, sans le monde extérieur sensible"
+    alt: []
+  - id: m1844-p5-3
+    sentence: "« Examinons de plus près l'objectivation, la production de l'ouvrier et, en elle, l'aliénation, la perte de l'objet, de son produit. L'ouvrier ne peut plus rien créer sans la nature, sans le monde extérieur sensible. Elle est ___, au sein de laquelle il s'exerce, à partir de laquelle et au moyen de laquelle il produit. »"
+    answer: "la matière dans laquelle son travail se réalise"
+    alt: []
+  - id: m1844-p5-4
+    sentence: "« Examinons de plus près l'objectivation, la production de l'ouvrier et, en elle, l'aliénation, la perte de l'objet, de son produit. L'ouvrier ne peut plus rien créer sans la nature, sans le monde extérieur sensible. Elle est la matière dans laquelle son travail se réalise, au sein de laquelle il s'exerce, ___. »"
+    answer: "à partir de laquelle et au moyen de laquelle il produit"
+    alt: []
+  - id: m1844-p5-5
+    sentence: "L'ouvrier ne peut rien créer sans la nature, le monde extérieur ___, qui est la matière de son travail."
+    answer: "sensible"
+    alt: []
+- id: m1844-p6
+  title: "Une double privation de moyens de subsistance"
+  notes: |-
+    **La nature fournit des moyens de subsistance {amber}au travail{/amber} et {amber}à l'ouvrier{/amber} : plus l'ouvrier se l'approprie, plus il en est privé, et cela {coral}doublement{/coral}.**
+
+    Le travail {red}ne peut pas vivre sans objets{/red} sur lesquels il s'exerce, et l'ouvrier a besoin de moyens de subsistance au sens restreint, ceux de sa subsistance physique. Mais plus il s'approprie le monde extérieur, plus celui-ci cesse d'être, premièrement, {violet}un objet appartenant à son travail{/violet}, et, deuxièmement, {violet}un moyen pour sa subsistance physique{/violet}. Appropriation et privation vont ensemble : c'est le paradoxe du premier fait.
+  passage:
+    label: "§6"
+    text: "Mais, de même que la nature offre au travail les moyens de subsistance, dans ce sens que le travail ne peut pas vivre sans objets sur lesquels il s'exerce, de même elle fournit des moyens de subsistance au sens restreint, c'est-à-dire les moyens de subsistance physique de l'ouvrier lui-même. Plus l'ouvrier s'approprie par son travail le monde extérieur, la nature sensible, plus il se prive de moyens de subsistance et cela doublement : premièrement, le monde extérieur sensible cesse de plus en plus d'être un objet appartenant à son travail, un moyen de subsistance de son travail ; deuxièmement, il cesse de plus en plus d'être un moyen de subsistance au sens immédiat, c'est-à-dire il cesse d'être un moyen pour la subsistance physique de l'ouvrier."
+  points:
+  - id: m1844-p6-1
+    fragment: "1/3"
+    sentence: "« Mais, de même que la nature offre au travail les moyens de subsistance, dans ce sens que ___, de même elle fournit des moyens de subsistance au sens restreint, c'est-à-dire les moyens de subsistance physique de l'ouvrier lui-même. »"
+    answer: "le travail ne peut pas vivre sans objets sur lesquels il s'exerce"
+    alt: []
+  - id: m1844-p6-2
+    fragment: "1/3"
+    sentence: "« Mais, de même que la nature offre au travail les moyens de subsistance, dans ce sens que le travail ne peut pas vivre sans objets sur lesquels il s'exerce, de même elle fournit ___, c'est-à-dire les moyens de subsistance physique de l'ouvrier lui-même. »"
+    answer: "des moyens de subsistance au sens restreint"
+    alt: []
+  - id: m1844-p6-3
+    fragment: "1/3"
+    sentence: "« Mais, de même que la nature offre au travail les moyens de subsistance, dans ce sens que le travail ne peut pas vivre sans objets sur lesquels il s'exerce, de même elle fournit des moyens de subsistance au sens restreint, c'est-à-dire ___. »"
+    answer: "les moyens de subsistance physique de l'ouvrier lui-même"
+    alt: []
+  - id: m1844-p6-4
+    fragment: "2/3"
+    sentence: "« Plus l'ouvrier s'approprie par son travail le monde extérieur, la nature sensible, ___ : premièrement, le monde extérieur sensible cesse de plus en plus d'être un objet appartenant à son travail, un moyen de subsistance de son travail ; »"
+    answer: "plus il se prive de moyens de subsistance et cela doublement"
+    alt: []
+  - id: m1844-p6-5
+    fragment: "2/3"
+    sentence: "« Plus l'ouvrier s'approprie par son travail le monde extérieur, la nature sensible, plus il se prive de moyens de subsistance et cela doublement : premièrement, le monde extérieur sensible cesse de plus en plus d'être ___ ; »"
+    answer: "un objet appartenant à son travail, un moyen de subsistance de son travail"
+    alt: []
+  - id: m1844-p6-6
+    fragment: "3/3"
+    sentence: "« deuxièmement, il cesse de plus en plus d'être ___, c'est-à-dire il cesse d'être un moyen pour la subsistance physique de l'ouvrier. »"
+    answer: "un moyen de subsistance au sens immédiat"
+    alt: []
+  - id: m1844-p6-7
+    fragment: "3/3"
+    sentence: "« deuxièmement, il cesse de plus en plus d'être un moyen de subsistance au sens immédiat, c'est-à-dire il cesse d'être ___. »"
+    answer: "un moyen pour la subsistance physique de l'ouvrier"
+    alt: []
+  - id: m1844-p6-8
+    sentence: "La nature fournit des moyens de subsistance au travail et à l'ouvrier, au sens ___ : sa subsistance physique."
+    answer: "restreint"
+    alt: []
+  - id: m1844-p6-9
+    sentence: "Plus l'ouvrier s'approprie la nature, plus il se prive de moyens de subsistance, et cela ___."
+    answer: "doublement"
+    alt: []
+- id: m1844-p7
+  title: "L'ouvrier, esclave de son objet"
+  notes: |-
+    **De ce double point de vue, l'ouvrier devient {red}l'esclave de son objet{/red} : il lui doit l'existence comme ouvrier et comme sujet physique.**
+
+    Il reçoit de l'objet {amber}un objet de travail{/amber}, donc du travail, et {amber}des moyens de subsistance{/amber}. Le comble de cette servitude est un cercle : {coral}seule sa qualité d'ouvrier lui permet de se conserver comme sujet physique, et il n'est ouvrier que comme sujet physique{/coral}. La parenthèse énumère, selon les lois de l'économie, une série d'inversions : plus il produit, moins il consomme ; plus le travail est puissant, plus l'ouvrier est impuissant.
+
+    ! Ce sont les lois de l'économie politique elle-même que Marx lit ainsi, non un jugement moral ajouté après coup.
+  passage:
+    label: "§7"
+    text: "De ce double point de vue, l'ouvrier devient donc un esclave de son objet : premièrement, il reçoit un objet de travail, c'est-à-dire du travail, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique. Le comble de cette servitude est que seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet physique, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier. (L'aliénation de l'ouvrier dans son objet s'exprime, selon les lois de l'économie, de la façon suivante : plus l'ouvrier produit, moins il a à consommer ; plus il crée de valeurs, plus il se déprécie et perd en dignité ; plus son produit a de forme, plus l'ouvrier est difforme ; plus son objet est civilisé, plus l'ouvrier est barbare ; plus le travail est puissant, plus l'ouvrier est impuissant ; plus l'ouvrier s'est abruti et est devenu un esclave de la nature.)"
+  points:
+  - id: m1844-p7-1
+    fragment: "1/2"
+    sentence: "« De ce double point de vue, l'ouvrier devient donc ___ : premièrement, il reçoit un objet de travail, c'est-à-dire du travail, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique. Le comble de cette servitude est que seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet physique, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier. »"
+    answer: "un esclave de son objet"
+    alt: []
+  - id: m1844-p7-2
+    fragment: "1/2"
+    sentence: "« De ce double point de vue, l'ouvrier devient donc un esclave de son objet : premièrement, ___, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique. Le comble de cette servitude est que seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet physique, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier. »"
+    answer: "il reçoit un objet de travail, c'est-à-dire du travail"
+    alt: []
+  - id: m1844-p7-3
+    fragment: "1/2"
+    sentence: "« De ce double point de vue, l'ouvrier devient donc un esclave de son objet : premièrement, il reçoit un objet de travail, c'est-à-dire du travail, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc ___. Le comble de cette servitude est que seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet physique, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier. »"
+    answer: "la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique"
+    alt: []
+  - id: m1844-p7-4
+    fragment: "1/2"
+    sentence: "« De ce double point de vue, l'ouvrier devient donc un esclave de son objet : premièrement, il reçoit un objet de travail, c'est-à-dire du travail, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique. Le comble de cette servitude est que ___, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier. »"
+    answer: "seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet physique"
+    alt: []
+  - id: m1844-p7-5
+    fragment: "2/2"
+    sentence: "« (L'aliénation de l'ouvrier dans son objet s'exprime, selon les lois de l'économie, de la façon suivante : plus l'ouvrier produit, ___ ; plus il crée de valeurs, plus il se déprécie et perd en dignité ; plus son produit a de forme, plus l'ouvrier est difforme ; plus son objet est civilisé, plus l'ouvrier est barbare ; plus le travail est puissant, plus l'ouvrier est impuissant ; plus l'ouvrier s'est abruti et est devenu un esclave de la nature.) »"
+    answer: "moins il a à consommer"
+    alt: []
+  - id: m1844-p7-6
+    fragment: "2/2"
+    sentence: "« (L'aliénation de l'ouvrier dans son objet s'exprime, selon les lois de l'économie, de la façon suivante : plus l'ouvrier produit, moins il a à consommer ; plus il crée de valeurs, ___ ; plus son produit a de forme, plus l'ouvrier est difforme ; plus son objet est civilisé, plus l'ouvrier est barbare ; plus le travail est puissant, plus l'ouvrier est impuissant ; plus l'ouvrier s'est abruti et est devenu un esclave de la nature.) »"
+    answer: "plus il se déprécie et perd en dignité"
+    alt: []
+  - id: m1844-p7-7
+    fragment: "2/2"
+    sentence: "« (L'aliénation de l'ouvrier dans son objet s'exprime, selon les lois de l'économie, de la façon suivante : plus l'ouvrier produit, moins il a à consommer ; plus il crée de valeurs, plus il se déprécie et perd en dignité ; plus son produit a de forme, ___ ; plus son objet est civilisé, plus l'ouvrier est barbare ; plus le travail est puissant, plus l'ouvrier est impuissant ; plus l'ouvrier s'est abruti et est devenu un esclave de la nature.) »"
+    answer: "plus l'ouvrier est difforme"
+    alt: []
+  - id: m1844-p7-8
+    fragment: "2/2"
+    sentence: "« (L'aliénation de l'ouvrier dans son objet s'exprime, selon les lois de l'économie, de la façon suivante : plus l'ouvrier produit, moins il a à consommer ; plus il crée de valeurs, plus il se déprécie et perd en dignité ; plus son produit a de forme, plus l'ouvrier est difforme ; plus son objet est civilisé, ___ ; plus le travail est puissant, plus l'ouvrier est impuissant ; plus l'ouvrier s'est abruti et est devenu un esclave de la nature.) »"
+    answer: "plus l'ouvrier est barbare"
+    alt: []
+  - id: m1844-p7-9
+    fragment: "2/2"
+    sentence: "« (L'aliénation de l'ouvrier dans son objet s'exprime, selon les lois de l'économie, de la façon suivante : plus l'ouvrier produit, moins il a à consommer ; plus il crée de valeurs, plus il se déprécie et perd en dignité ; plus son produit a de forme, plus l'ouvrier est difforme ; plus son objet est civilisé, plus l'ouvrier est barbare ; plus le travail est puissant, ___ ; plus l'ouvrier s'est abruti et est devenu un esclave de la nature.) »"
+    answer: "plus l'ouvrier est impuissant"
+    alt: []
+  - id: m1844-p7-10
+    fragment: "2/2"
+    sentence: "« (L'aliénation de l'ouvrier dans son objet s'exprime, selon les lois de l'économie, de la façon suivante : plus l'ouvrier produit, moins il a à consommer ; plus il crée de valeurs, plus il se déprécie et perd en dignité ; plus son produit a de forme, plus l'ouvrier est difforme ; plus son objet est civilisé, plus l'ouvrier est barbare ; plus le travail est puissant, plus l'ouvrier est impuissant ; plus l'ouvrier s'est abruti et est devenu ___.) »"
+    answer: "un esclave de la nature"
+    alt: []
+  - id: m1844-p7-11
+    sentence: "L'ouvrier est esclave de son objet : il en reçoit un objet de travail et des moyens de ___."
+    answer: "subsistance"
+    alt: []
+  - id: m1844-p7-12
+    sentence: "Le comble de la servitude : seule sa qualité d'ouvrier lui permet de se conserver comme sujet ___."
+    answer: "physique"
+    alt: []
+- id: m1844-p8
+  title: "L'économie politique dissimule l'aliénation"
+  notes: |-
+    **L'économie politique {red}dissimule{/red} l'aliénation parce qu'elle ne considère pas {amber}le rapport direct de l'ouvrier à la production{/amber}.**
+
+    Elle voit que le travail produit des merveilles pour les riches. Elle ne voit pas que, pour l'ouvrier, il produit {coral}le dénuement{/coral} : des palais, mais des taudis ; la beauté, mais l'infirmité ; des machines, mais une partie des ouvriers rejetée dans un travail barbare et l'autre transformée en machines ; l'esprit, mais l'abêtissement. Le rapport de l'ouvrier à ses produits est {violet}le rapport immédiat{/violet}, dont celui du riche n'est qu'une conséquence qui le confirme. Questionner le rapport essentiel du travail, c'est donc questionner celui de l'ouvrier à la production.
+  passage:
+    label: "§8"
+    text: "L'économie politique dissimule l'aliénation dans l'essence du travail par le fait qu'elle ne considère pas le rapport direct entre l'ouvrier (le travail) et la production. Certes, le travail produit des merveilles pour les riches, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme. Le rapport immédiat du travail à ses produits est le rapport de l'ouvrier aux objets de sa production. Le rapport de l'homme qui a de la fortune aux objets de la production et à la production elle-même n'est qu'une conséquence de ce premier rapport. Et il le confirme. Nous examinerons cet autre aspect plus tard. Si donc nous posons la question : quel est le rapport essentiel du travail, nous posons la question du rapport essentiel de l'ouvrier à la production."
+  points:
+  - id: m1844-p8-1
+    fragment: "1/3"
+    sentence: "« L'économie politique ___ par le fait qu'elle ne considère pas le rapport direct entre l'ouvrier (le travail) et la production. »"
+    answer: "dissimule l'aliénation dans l'essence du travail"
+    alt: []
+  - id: m1844-p8-2
+    fragment: "1/3"
+    sentence: "« L'économie politique dissimule l'aliénation dans l'essence du travail par le fait qu'elle ne considère pas ___. »"
+    answer: "le rapport direct entre l'ouvrier (le travail) et la production"
+    alt: []
+  - id: m1844-p8-3
+    fragment: "2/3"
+    sentence: "« Certes, le travail produit ___, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme. »"
+    answer: "des merveilles pour les riches"
+    alt: []
+  - id: m1844-p8-4
+    fragment: "2/3"
+    sentence: "« Certes, le travail produit des merveilles pour les riches, mais il produit ___. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme. »"
+    answer: "le dénuement pour l'ouvrier"
+    alt: []
+  - id: m1844-p8-5
+    fragment: "2/3"
+    sentence: "« Certes, le travail produit des merveilles pour les riches, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais ___. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme. »"
+    answer: "des taudis pour l'ouvrier"
+    alt: []
+  - id: m1844-p8-6
+    fragment: "2/3"
+    sentence: "« Certes, le travail produit des merveilles pour les riches, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais ___. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme. »"
+    answer: "l'infirmité pour l'ouvrier"
+    alt: []
+  - id: m1844-p8-7
+    fragment: "2/3"
+    sentence: "« Certes, le travail produit des merveilles pour les riches, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et ___. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme. »"
+    answer: "transforme l'autre partie en machines"
+    alt: []
+  - id: m1844-p8-8
+    fragment: "2/3"
+    sentence: "« Certes, le travail produit des merveilles pour les riches, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit ___. »"
+    answer: "l'abêtissement, le crétinisme"
+    alt: []
+  - id: m1844-p8-9
+    fragment: "3/3"
+    sentence: "« Le rapport immédiat du travail à ses produits est ___. Le rapport de l'homme qui a de la fortune aux objets de la production et à la production elle-même n'est qu'une conséquence de ce premier rapport. Et il le confirme. Nous examinerons cet autre aspect plus tard. Si donc nous posons la question : quel est le rapport essentiel du travail, nous posons la question du rapport essentiel de l'ouvrier à la production. »"
+    answer: "le rapport de l'ouvrier aux objets de sa production"
+    alt: []
+  - id: m1844-p8-10
+    fragment: "3/3"
+    sentence: "« Le rapport immédiat du travail à ses produits est le rapport de l'ouvrier aux objets de sa production. Le rapport de l'homme qui a de la fortune aux objets de la production et à la production elle-même ___. Et il le confirme. Nous examinerons cet autre aspect plus tard. Si donc nous posons la question : quel est le rapport essentiel du travail, nous posons la question du rapport essentiel de l'ouvrier à la production. »"
+    answer: "n'est qu'une conséquence de ce premier rapport"
+    alt: []
+  - id: m1844-p8-11
+    fragment: "3/3"
+    sentence: "« Le rapport immédiat du travail à ses produits est le rapport de l'ouvrier aux objets de sa production. Le rapport de l'homme qui a de la fortune aux objets de la production et à la production elle-même n'est qu'une conséquence de ce premier rapport. Et il le confirme. Nous examinerons cet autre aspect plus tard. Si donc nous posons la question : quel est le rapport essentiel du travail, nous posons ___. »"
+    answer: "la question du rapport essentiel de l'ouvrier à la production"
+    alt: []
+  - id: m1844-p8-12
+    sentence: "L'économie politique dissimule l'aliénation parce qu'elle ne considère pas le rapport ___ entre l'ouvrier et la production."
+    answer: "direct"
+    alt: ["immédiat"]
+  - id: m1844-p8-13
+    sentence: "Le rapport de l'homme qui a de la fortune à la production est une ___ du rapport de l'ouvrier à ses produits."
+    answer: "conséquence"
+    alt: []
+- id: m1844-p9
+  title: "Dans l'acte même de produire"
+  notes: |-
+    **L'aliénation n'est pas seulement dans le résultat : elle est {amber}dans l'acte même de la production{/amber}, dans l'activité productive.**
+
+    Marx n'a considéré jusqu'ici qu'{red}un seul aspect{/red} : le rapport de l'ouvrier au produit. Mais le produit étranger suppose une activité étrangère : {coral}comment le produit ne serait-il pas étranger à l'ouvrier, si celui-ci ne devenait pas étranger à lui-même dans l'acte de produire ?{/coral} Le produit n'est que {violet}le résumé de l'activité{/violet} : si le produit est dépouillement, la production est {violet}dépouillement en acte{/violet}. L'aliénation de l'objet du travail est le résumé de l'aliénation dans l'activité même.
+
+    ! C'est le passage du produit à l'activité, c'est-à-dire de la seconde à la première des déterminations.
+  passage:
+    label: "§9"
+    text: "Nous n'avons considéré jusqu'ici l'aliénation, le dépouillement de l'ouvrier, que sous un seul aspect, celui de son rapport aux produits de son travail. Or, l'aliénation n'apparaît pas seulement dans le résultat, mais aussi dans l'acte même de la production, à l'intérieur de l'activité productive elle-même. Comment le produit ne serait-il pas étranger à l'ouvrier si celui-ci, dans l'acte même de la production, ne devenait pas étranger à lui-même ? Le produit n'est que le résumé de l'activité, de la production. Si le produit du travail est le dépouillement, la production elle-même doit être le dépouillement en acte, le dépouillement de l'activité, l'activité du dépouillement. L'aliénation de l'objet du travail n'est que le résumé de l'aliénation, du dépouillement, dans l'activité du travail elle-même."
+  points:
+  - id: m1844-p9-1
+    fragment: "1/2"
+    sentence: "« Nous n'avons considéré jusqu'ici l'aliénation, le dépouillement de l'ouvrier, que ___, celui de son rapport aux produits de son travail. Or, l'aliénation n'apparaît pas seulement dans le résultat, mais aussi dans l'acte même de la production, à l'intérieur de l'activité productive elle-même. Comment le produit ne serait-il pas étranger à l'ouvrier si celui-ci, dans l'acte même de la production, ne devenait pas étranger à lui-même ? »"
+    answer: "sous un seul aspect"
+    alt: []
+  - id: m1844-p9-2
+    fragment: "1/2"
+    sentence: "« Nous n'avons considéré jusqu'ici l'aliénation, le dépouillement de l'ouvrier, que sous un seul aspect, celui de son rapport aux produits de son travail. Or, l'aliénation n'apparaît pas seulement dans le résultat, mais aussi dans l'acte même de la production, ___. Comment le produit ne serait-il pas étranger à l'ouvrier si celui-ci, dans l'acte même de la production, ne devenait pas étranger à lui-même ? »"
+    answer: "à l'intérieur de l'activité productive elle-même"
+    alt: []
+  - id: m1844-p9-3
+    fragment: "1/2"
+    sentence: "« Nous n'avons considéré jusqu'ici l'aliénation, le dépouillement de l'ouvrier, que sous un seul aspect, celui de son rapport aux produits de son travail. Or, l'aliénation n'apparaît pas seulement dans le résultat, mais aussi dans l'acte même de la production, à l'intérieur de l'activité productive elle-même. Comment le produit ne serait-il pas étranger à l'ouvrier si celui-ci, dans l'acte même de la production, ___ ? »"
+    answer: "ne devenait pas étranger à lui-même"
+    alt: []
+  - id: m1844-p9-4
+    fragment: "2/2"
+    sentence: "« Le produit n'est que ___. Si le produit du travail est le dépouillement, la production elle-même doit être le dépouillement en acte, le dépouillement de l'activité, l'activité du dépouillement. L'aliénation de l'objet du travail n'est que le résumé de l'aliénation, du dépouillement, dans l'activité du travail elle-même. »"
+    answer: "le résumé de l'activité, de la production"
+    alt: []
+  - id: m1844-p9-5
+    fragment: "2/2"
+    sentence: "« Le produit n'est que le résumé de l'activité, de la production. Si le produit du travail est le dépouillement, la production elle-même doit être ___, le dépouillement de l'activité, l'activité du dépouillement. L'aliénation de l'objet du travail n'est que le résumé de l'aliénation, du dépouillement, dans l'activité du travail elle-même. »"
+    answer: "le dépouillement en acte"
+    alt: []
+  - id: m1844-p9-6
+    fragment: "2/2"
+    sentence: "« Le produit n'est que le résumé de l'activité, de la production. Si le produit du travail est le dépouillement, la production elle-même doit être le dépouillement en acte, ___. L'aliénation de l'objet du travail n'est que le résumé de l'aliénation, du dépouillement, dans l'activité du travail elle-même. »"
+    answer: "le dépouillement de l'activité, l'activité du dépouillement"
+    alt: []
+  - id: m1844-p9-7
+    fragment: "2/2"
+    sentence: "« Le produit n'est que le résumé de l'activité, de la production. Si le produit du travail est le dépouillement, la production elle-même doit être le dépouillement en acte, le dépouillement de l'activité, l'activité du dépouillement. L'aliénation de l'objet du travail n'est que ___. »"
+    answer: "le résumé de l'aliénation, du dépouillement, dans l'activité du travail elle-même"
+    alt: []
+  - id: m1844-p9-8
+    sentence: "L'aliénation n'apparaît pas seulement dans le résultat de la production, mais dans l'___ même de la production."
+    answer: "acte"
+    alt: []
+  - id: m1844-p9-9
+    sentence: "Marx déduit l'aliénation du produit de celle de l'activité : le produit n'est que le ___ de l'activité."
+    answer: "résumé"
+    alt: []
+- id: m1844-p10
+  title: "L'aliénation du travail : un travail extérieur, forcé"
+  notes: |-
+    **L'aliénation du travail consiste d'abord en ce que le travail est {red}extérieur à l'ouvrier{/red} : il n'y affirme pas son essence, il s'y nie.**
+
+    Dans son travail, l'ouvrier {coral}ne s'affirme pas, mais se nie{/coral} ; il est malheureux, mortifie son corps et ruine son esprit. Il ne se sent lui-même qu'{amber}en dehors du travail{/amber}, et extérieur à lui-même dans le travail. Le travail n'est donc pas volontaire mais {violet}forcé{/violet} ; il n'est pas la satisfaction d'un besoin, seulement {violet}un moyen de satisfaire des besoins{/violet} hors de lui. Preuve : dès qu'aucune contrainte ne s'exerce, il est fui comme la peste. Enfin il n'est pas le bien de l'ouvrier mais celui {red}d'un autre{/red}. Marx le compare de nouveau à la religion : l'activité de l'ouvrier n'est pas son activité propre, elle est {coral}la perte de soi-même{/coral}.
+
+    ! « Extérieur » ne veut pas dire pénible : le travail est extérieur parce qu'il n'appartient pas à l'essence de l'ouvrier, ni à lui-même.
+  passage:
+    label: "§10"
+    text: "En quoi consiste l'aliénation du travail ? D'abord dans le fait que le travail est extérieur à l'ouvrier, c'est-à-dire qu'il n'appartient pas à son essence, que donc, dans son travail, l'ouvrier ne s'affirme pas, mais se nie, ne se sent pas à l'aise, mais malheureux ; il n'y déploie pas une libre activité physique et intellectuelle, mais mortifie son corps et ruine son esprit. En conséquence, l'ouvrier ne se sent lui-même qu'en dehors du travail et dans le travail il se sent extérieur à lui-même. Il est à l'aise quand il ne travaille pas et, quand il travaille, il ne se sent pas à l'aise. Son travail n'est donc pas volontaire, mais contraint, c'est du travail forcé. Il n'est donc pas la satisfaction d'un besoin, mais seulement un moyen de satisfaire des besoins en dehors du travail. Le caractère du travail apparaît nettement dans le fait que, dès qu'il n'existe pas de contrainte physique ou autre, le travail est fui comme la peste. Le travail extérieur à l'homme, dans lequel il se dépouille, est un travail de sacrifice de soi, de mortification. Enfin le caractère extérieur à l'ouvrier du travail apparaît dans le fait qu'il n'est pas son bien propre, mais celui d'un autre, qu'il ne lui appartient pas, que dans le travail l'ouvrier ne s'appartient pas lui-même, mais appartient à un autre. De même que, dans la religion, l'activité propre de l'imagination humaine, du cerveau humain et du cœur humain, agit sur l'individu indépendamment de lui, c'est-à-dire comme une activité étrangère, divine ou diabolique, de même l'activité de l'ouvrier n'est pas son activité propre. Elle appartient à un autre, elle est la perte de soi-même."
+  points:
+  - id: m1844-p10-1
+    fragment: "1/4"
+    sentence: "« En quoi consiste l'aliénation du travail ? D'abord dans le fait que ___, c'est-à-dire qu'il n'appartient pas à son essence, que donc, dans son travail, l'ouvrier ne s'affirme pas, mais se nie, ne se sent pas à l'aise, mais malheureux ; il n'y déploie pas une libre activité physique et intellectuelle, mais mortifie son corps et ruine son esprit. »"
+    answer: "le travail est extérieur à l'ouvrier"
+    alt: []
+  - id: m1844-p10-2
+    fragment: "1/4"
+    sentence: "« En quoi consiste l'aliénation du travail ? D'abord dans le fait que le travail est extérieur à l'ouvrier, c'est-à-dire qu'___, que donc, dans son travail, l'ouvrier ne s'affirme pas, mais se nie, ne se sent pas à l'aise, mais malheureux ; il n'y déploie pas une libre activité physique et intellectuelle, mais mortifie son corps et ruine son esprit. »"
+    answer: "il n'appartient pas à son essence"
+    alt: []
+  - id: m1844-p10-3
+    fragment: "1/4"
+    sentence: "« En quoi consiste l'aliénation du travail ? D'abord dans le fait que le travail est extérieur à l'ouvrier, c'est-à-dire qu'il n'appartient pas à son essence, que donc, dans son travail, ___, ne se sent pas à l'aise, mais malheureux ; il n'y déploie pas une libre activité physique et intellectuelle, mais mortifie son corps et ruine son esprit. »"
+    answer: "l'ouvrier ne s'affirme pas, mais se nie"
+    alt: []
+  - id: m1844-p10-4
+    fragment: "1/4"
+    sentence: "« En quoi consiste l'aliénation du travail ? D'abord dans le fait que le travail est extérieur à l'ouvrier, c'est-à-dire qu'il n'appartient pas à son essence, que donc, dans son travail, l'ouvrier ne s'affirme pas, mais se nie, ne se sent pas à l'aise, mais malheureux ; il n'y déploie pas une libre activité physique et intellectuelle, mais ___. »"
+    answer: "mortifie son corps et ruine son esprit"
+    alt: []
+  - id: m1844-p10-5
+    fragment: "2/4"
+    sentence: "« En conséquence, l'ouvrier ___ et dans le travail il se sent extérieur à lui-même. Il est à l'aise quand il ne travaille pas et, quand il travaille, il ne se sent pas à l'aise. Son travail n'est donc pas volontaire, mais contraint, c'est du travail forcé. Il n'est donc pas la satisfaction d'un besoin, mais seulement un moyen de satisfaire des besoins en dehors du travail. »"
+    answer: "ne se sent lui-même qu'en dehors du travail"
+    alt: []
+  - id: m1844-p10-6
+    fragment: "2/4"
+    sentence: "« En conséquence, l'ouvrier ne se sent lui-même qu'en dehors du travail et dans le travail il se sent extérieur à lui-même. Il est à l'aise quand il ne travaille pas et, quand il travaille, il ne se sent pas à l'aise. Son travail n'est donc ___. Il n'est donc pas la satisfaction d'un besoin, mais seulement un moyen de satisfaire des besoins en dehors du travail. »"
+    answer: "pas volontaire, mais contraint, c'est du travail forcé"
+    alt: []
+  - id: m1844-p10-7
+    fragment: "2/4"
+    sentence: "« En conséquence, l'ouvrier ne se sent lui-même qu'en dehors du travail et dans le travail il se sent extérieur à lui-même. Il est à l'aise quand il ne travaille pas et, quand il travaille, il ne se sent pas à l'aise. Son travail n'est donc pas volontaire, mais contraint, c'est du travail forcé. Il n'est donc ___. »"
+    answer: "pas la satisfaction d'un besoin, mais seulement un moyen de satisfaire des besoins en dehors du travail"
+    alt: []
+  - id: m1844-p10-8
+    fragment: "3/4"
+    sentence: "« Le caractère du travail apparaît nettement dans le fait que, dès qu'il n'existe pas de contrainte physique ou autre, ___. Le travail extérieur à l'homme, dans lequel il se dépouille, est un travail de sacrifice de soi, de mortification. Enfin le caractère extérieur à l'ouvrier du travail apparaît dans le fait qu'il n'est pas son bien propre, mais celui d'un autre, qu'il ne lui appartient pas, que dans le travail l'ouvrier ne s'appartient pas lui-même, mais appartient à un autre. »"
+    answer: "le travail est fui comme la peste"
+    alt: []
+  - id: m1844-p10-9
+    fragment: "3/4"
+    sentence: "« Le caractère du travail apparaît nettement dans le fait que, dès qu'il n'existe pas de contrainte physique ou autre, le travail est fui comme la peste. Le travail extérieur à l'homme, dans lequel il se dépouille, est ___. Enfin le caractère extérieur à l'ouvrier du travail apparaît dans le fait qu'il n'est pas son bien propre, mais celui d'un autre, qu'il ne lui appartient pas, que dans le travail l'ouvrier ne s'appartient pas lui-même, mais appartient à un autre. »"
+    answer: "un travail de sacrifice de soi, de mortification"
+    alt: []
+  - id: m1844-p10-10
+    fragment: "3/4"
+    sentence: "« Le caractère du travail apparaît nettement dans le fait que, dès qu'il n'existe pas de contrainte physique ou autre, le travail est fui comme la peste. Le travail extérieur à l'homme, dans lequel il se dépouille, est un travail de sacrifice de soi, de mortification. Enfin le caractère extérieur à l'ouvrier du travail apparaît dans le fait qu'il n'est pas son bien propre, ___, qu'il ne lui appartient pas, que dans le travail l'ouvrier ne s'appartient pas lui-même, mais appartient à un autre. »"
+    answer: "mais celui d'un autre"
+    alt: []
+  - id: m1844-p10-11
+    fragment: "4/4"
+    sentence: "« De même que, dans la religion, l'activité propre de l'imagination humaine, du cerveau humain et du cœur humain, agit sur l'individu indépendamment de lui, c'est-à-dire ___, de même l'activité de l'ouvrier n'est pas son activité propre. Elle appartient à un autre, elle est la perte de soi-même. »"
+    answer: "comme une activité étrangère, divine ou diabolique"
+    alt: []
+  - id: m1844-p10-12
+    fragment: "4/4"
+    sentence: "« De même que, dans la religion, l'activité propre de l'imagination humaine, du cerveau humain et du cœur humain, agit sur l'individu indépendamment de lui, c'est-à-dire comme une activité étrangère, divine ou diabolique, de même l'activité de l'ouvrier n'est pas son activité propre. Elle appartient à un autre, elle est ___. »"
+    answer: "la perte de soi-même"
+    alt: []
+  - id: m1844-p10-13
+    sentence: "Premier caractère de l'aliénation du travail : le travail est ___ à l'ouvrier, il n'appartient pas à son essence."
+    answer: "extérieur"
+    alt: []
+  - id: m1844-p10-14
+    sentence: "Marx compare l'activité de l'ouvrier à l'activité de l'imagination humaine qui, dans la ___, agit sur l'individu comme une activité étrangère."
+    answer: "religion"
+    alt: []
+- id: m1844-p11
+  title: "L'animal devient humain, l'humain devient animal"
+  notes: |-
+    **Résultat : l'ouvrier ne se sent libre que dans ses fonctions {red}animales{/red}, et animal dans ses fonctions proprement humaines.**
+
+    Manger, boire, procréer, choisir sa maison : voilà où il se sent libre ; dans {violet}ses fonctions proprement humaines{/violet}, il se sent animal. {coral}Ce qui est animal devient humain, et ce qui est humain devient animal.{/coral} Marx précise : manger, boire, procréer sont {amber}de vraies fonctions humaines{/amber}, mais {red}séparées abstraitement{/red} du reste des activités humaines et devenues la fin dernière et unique, elles ne sont plus que des fonctions animales.
+
+    ! Marx ne méprise pas ces fonctions : c'est leur séparation qui les ravale.
+  passage:
+    label: "§11"
+    text: "On en vient donc à ce résultat que l'homme (l'ouvrier) se sent agir librement seulement dans ses fonctions animales : manger, boire et procréer, ou encore, tout au plus, dans le choix de sa maison, de son habillement, etc. ; en revanche, il se sent animal dans ses fonctions proprement humaines. Ce qui est animal devient humain, et ce qui est humain devient animal. Manger, boire, procréer, etc., sont certes aussi des fonctions authentiquement humaines. Mais séparées abstraitement du reste du champ des activités humaines et devenues ainsi la fin dernière et unique, elles ne sont plus que des fonctions animales."
+  points:
+  - id: m1844-p11-1
+    fragment: "1/2"
+    sentence: "« On en vient donc à ce résultat que l'homme (l'ouvrier) se sent agir librement ___, ou encore, tout au plus, dans le choix de sa maison, de son habillement, etc. ; en revanche, il se sent animal dans ses fonctions proprement humaines. Ce qui est animal devient humain, et ce qui est humain devient animal. »"
+    answer: "seulement dans ses fonctions animales : manger, boire et procréer"
+    alt: []
+  - id: m1844-p11-2
+    fragment: "1/2"
+    sentence: "« On en vient donc à ce résultat que l'homme (l'ouvrier) se sent agir librement seulement dans ses fonctions animales : manger, boire et procréer, ou encore, tout au plus, dans le choix de sa maison, de son habillement, etc. ; en revanche, ___. Ce qui est animal devient humain, et ce qui est humain devient animal. »"
+    answer: "il se sent animal dans ses fonctions proprement humaines"
+    alt: []
+  - id: m1844-p11-3
+    fragment: "1/2"
+    sentence: "« On en vient donc à ce résultat que l'homme (l'ouvrier) se sent agir librement seulement dans ses fonctions animales : manger, boire et procréer, ou encore, tout au plus, dans le choix de sa maison, de son habillement, etc. ; en revanche, il se sent animal dans ses fonctions proprement humaines. Ce qui est animal devient humain, et ___. »"
+    answer: "ce qui est humain devient animal"
+    alt: []
+  - id: m1844-p11-4
+    fragment: "2/2"
+    sentence: "« Manger, boire, procréer, etc., sont certes aussi ___. Mais séparées abstraitement du reste du champ des activités humaines et devenues ainsi la fin dernière et unique, elles ne sont plus que des fonctions animales. »"
+    answer: "des fonctions authentiquement humaines"
+    alt: []
+  - id: m1844-p11-5
+    fragment: "2/2"
+    sentence: "« Manger, boire, procréer, etc., sont certes aussi des fonctions authentiquement humaines. Mais ___ et devenues ainsi la fin dernière et unique, elles ne sont plus que des fonctions animales. »"
+    answer: "séparées abstraitement du reste du champ des activités humaines"
+    alt: []
+  - id: m1844-p11-6
+    fragment: "2/2"
+    sentence: "« Manger, boire, procréer, etc., sont certes aussi des fonctions authentiquement humaines. Mais séparées abstraitement du reste du champ des activités humaines et devenues ainsi ___, elles ne sont plus que des fonctions animales. »"
+    answer: "la fin dernière et unique"
+    alt: []
+  - id: m1844-p11-7
+    fragment: "2/2"
+    sentence: "« Manger, boire, procréer, etc., sont certes aussi des fonctions authentiquement humaines. Mais séparées abstraitement du reste du champ des activités humaines et devenues ainsi la fin dernière et unique, elles ___. »"
+    answer: "ne sont plus que des fonctions animales"
+    alt: []
+  - id: m1844-p11-8
+    sentence: "L'ouvrier se sent libre seulement dans ses fonctions ___ (manger, boire, procréer), et animal dans ses fonctions proprement humaines."
+    answer: "animales"
+    alt: []
+  - id: m1844-p11-9
+    sentence: "Manger, boire, procréer ne sont plus que des fonctions animales lorsqu'elles sont séparées ___ du reste des activités humaines."
+    answer: "abstraitement"
+    alt: []
+- id: m1844-p12
+  title: "Les deux aspects du travail aliéné"
+  notes: |-
+    **Bilan : le travail aliéné a {amber}deux aspects{/amber}, le rapport au produit et le rapport à l'activité.**
+
+    1) Le rapport de l'ouvrier au produit, {red}objet étranger qui le domine{/red}, est aussi son rapport au monde extérieur sensible, étranger et hostile. 2) Le rapport du travail à l'acte de production, à l'intérieur du travail : c'est le rapport de l'ouvrier à sa propre activité comme {red}activité étrangère{/red} qui ne lui appartient pas, {coral}l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration{/coral}. Son énergie, sa vie personnelle, car la vie est l'activité, est transformée en activité dirigée contre lui. C'est {violet}l'aliénation de soi{/violet}, comme la première était l'aliénation de la chose.
+  passage:
+    label: "§12"
+    text: "Nous avons considéré l'acte d'aliénation de l'activité humaine pratique, le travail, sous deux aspects. 1) Le rapport de l'ouvrier au produit du travail en tant qu'objet étranger qui le tient sous sa domination. Ce rapport est en même temps le rapport au monde extérieur sensible, aux objets de la nature, monde qui lui est à la fois étranger et hostile. 2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration. C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est transformée en activité dirigée contre lui-même, indépendante de lui, ne lui appartenant pas. C'est l'aliénation de soi comme, plus haut, l'aliénation de la chose."
+  points:
+  - id: m1844-p12-1
+    fragment: "1/2"
+    sentence: "« Nous avons considéré ___, sous deux aspects. 1) Le rapport de l'ouvrier au produit du travail en tant qu'objet étranger qui le tient sous sa domination. Ce rapport est en même temps le rapport au monde extérieur sensible, aux objets de la nature, monde qui lui est à la fois étranger et hostile. »"
+    answer: "l'acte d'aliénation de l'activité humaine pratique, le travail"
+    alt: []
+  - id: m1844-p12-2
+    fragment: "1/2"
+    sentence: "« Nous avons considéré l'acte d'aliénation de l'activité humaine pratique, le travail, sous deux aspects. 1) Le rapport de l'ouvrier au produit du travail ___. Ce rapport est en même temps le rapport au monde extérieur sensible, aux objets de la nature, monde qui lui est à la fois étranger et hostile. »"
+    answer: "en tant qu'objet étranger qui le tient sous sa domination"
+    alt: []
+  - id: m1844-p12-3
+    fragment: "1/2"
+    sentence: "« Nous avons considéré l'acte d'aliénation de l'activité humaine pratique, le travail, sous deux aspects. 1) Le rapport de l'ouvrier au produit du travail en tant qu'objet étranger qui le tient sous sa domination. Ce rapport est en même temps le rapport au monde extérieur sensible, aux objets de la nature, monde qui lui est ___. »"
+    answer: "à la fois étranger et hostile"
+    alt: []
+  - id: m1844-p12-4
+    fragment: "2/2"
+    sentence: "« 2) Le rapport entre le travail et l'acte de production ___. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration. C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est transformée en activité dirigée contre lui-même, indépendante de lui, ne lui appartenant pas. C'est l'aliénation de soi comme, plus haut, l'aliénation de la chose. »"
+    answer: "à l'intérieur du travail"
+    alt: []
+  - id: m1844-p12-5
+    fragment: "2/2"
+    sentence: "« 2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité ___, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration. C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est transformée en activité dirigée contre lui-même, indépendante de lui, ne lui appartenant pas. C'est l'aliénation de soi comme, plus haut, l'aliénation de la chose. »"
+    answer: "en tant qu'activité étrangère qui ne lui appartient pas"
+    alt: []
+  - id: m1844-p12-6
+    fragment: "2/2"
+    sentence: "« 2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est ___. C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est transformée en activité dirigée contre lui-même, indépendante de lui, ne lui appartenant pas. C'est l'aliénation de soi comme, plus haut, l'aliénation de la chose. »"
+    answer: "l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration"
+    alt: []
+  - id: m1844-p12-7
+    fragment: "2/2"
+    sentence: "« 2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration. C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est ___, indépendante de lui, ne lui appartenant pas. C'est l'aliénation de soi comme, plus haut, l'aliénation de la chose. »"
+    answer: "transformée en activité dirigée contre lui-même"
+    alt: []
+  - id: m1844-p12-8
+    fragment: "2/2"
+    sentence: "« 2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration. C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est transformée en activité dirigée contre lui-même, indépendante de lui, ne lui appartenant pas. C'est ___ comme, plus haut, l'aliénation de la chose. »"
+    answer: "l'aliénation de soi"
+    alt: []
+  - id: m1844-p12-9
+    sentence: "Les deux aspects du travail aliéné : le rapport au produit comme objet étranger, et le rapport de l'ouvrier à sa propre ___ comme activité étrangère."
+    answer: "activité"
+    alt: []
+  - id: m1844-p12-10
+    sentence: "L'aliénation de l'activité est l'aliénation de ___, comme celle du produit est l'aliénation de la chose."
+    answer: "soi"
+    alt: []
+- id: m1844-p13
+  title: "L'homme est un être générique"
+  notes: |-
+    **À ces deux déterminations Marx en ajoute une troisième : {amber}l'homme est un être générique{/amber}.**
+
+    Un être générique, au sens de Marx, est {coral}un être pour qui l'espèce est un objet{/coral}, la sienne comme celle de toute chose, et qui se comporte envers lui-même comme envers {violet}une espèce réelle, vivante{/violet}, donc {violet}un être universel et libre{/violet}. Les deux façons de le dire expriment la même chose.
+
+    ! « Générique » ne veut pas dire « commun à tous » : c'est le rapport de l'homme à son espèce, c'est-à-dire à lui-même comme universel.
+  passage:
+    label: "§13"
+    text: "De ces deux déterminations du travail aliéné, nous devons en tirer une troisième. L'homme est un être générique. Non seulement parce que, sur le plan pratique et théorique, il fait de l'espèce, la sienne propre aussi bien que celle de toute chose, son objet, mais encore – et ceci n'est qu'une autre façon d'exprimer la même chose – parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'une espèce réelle, vivante, parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'un être universel, donc libre."
+  points:
+  - id: m1844-p13-1
+    fragment: "1/2"
+    sentence: "« De ces deux déterminations du travail aliéné, nous devons ___. L'homme est un être générique. »"
+    answer: "en tirer une troisième"
+    alt: []
+  - id: m1844-p13-2
+    fragment: "1/2"
+    sentence: "« De ces deux déterminations du travail aliéné, nous devons en tirer une troisième. L'homme est ___. »"
+    answer: "un être générique"
+    alt: []
+  - id: m1844-p13-3
+    fragment: "2/2"
+    sentence: "« Non seulement parce que, sur le plan pratique et théorique, il ___, mais encore – et ceci n'est qu'une autre façon d'exprimer la même chose – parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'une espèce réelle, vivante, parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'un être universel, donc libre. »"
+    answer: "fait de l'espèce, la sienne propre aussi bien que celle de toute chose, son objet"
+    alt: []
+  - id: m1844-p13-4
+    fragment: "2/2"
+    sentence: "« Non seulement parce que, sur le plan pratique et théorique, il fait de l'espèce, la sienne propre aussi bien que celle de toute chose, son objet, mais encore – et ceci n'est qu'une autre façon d'exprimer la même chose – parce qu'il se comporte vis-à-vis de lui-même ___, parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'un être universel, donc libre. »"
+    answer: "comme vis-à-vis d'une espèce réelle, vivante"
+    alt: []
+  - id: m1844-p13-5
+    fragment: "2/2"
+    sentence: "« Non seulement parce que, sur le plan pratique et théorique, il fait de l'espèce, la sienne propre aussi bien que celle de toute chose, son objet, mais encore – et ceci n'est qu'une autre façon d'exprimer la même chose – parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'une espèce réelle, vivante, parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'___. »"
+    answer: "un être universel, donc libre"
+    alt: []
+  - id: m1844-p13-6
+    sentence: "L'homme est un être ___ : il fait de l'espèce, la sienne comme celle de toute chose, son objet."
+    answer: "générique"
+    alt: []
+  - id: m1844-p13-7
+    sentence: "En allemand, « être générique » se dit *___*."
+    answer: "Gattungswesen"
+    alt: []
+- id: m1844-p14
+  title: "La nature, corps non organique de l'homme"
+  notes: |-
+    **La vie générique consiste d'abord à vivre {amber}de la nature non organique{/amber} : la nature est le {coral}corps non organique de l'homme{/coral}.**
+
+    Plus l'homme est universel comparé à l'animal, plus est universel {violet}le champ de la nature non organique dont il vit{/violet}. Théoriquement, plantes, animaux, pierres, air, lumière sont une partie de la conscience (objets de la science, de l'art) : sa nature spirituelle non organique. Pratiquement, ils sont une part de la vie et de l'activité humaines : nourriture, chauffage, vêtements, habitation. La nature entière est ainsi le corps de l'homme sous deux rapports : {green}moyen de subsistance immédiat{/green} et {green}matière, objet et outil de son activité vitale{/green}. Dire que l'homme vit de la nature, c'est dire qu'il doit {amber}rester en contact avec son corps{/amber} pour ne pas mourir, et que la nature est liée à elle-même, car il en fait partie.
+
+    ! Le corps non organique n'est pas le corps humain : c'est la nature en tant qu'elle n'est pas le corps humain.
+  passage:
+    label: "§14"
+    text: "La vie générique, aussi bien chez l'homme que chez l'animal, consiste d'abord, au point de vue physique, dans le fait que l'homme (comme l'animal) vit de la nature non organique ; et plus l'homme est universel comparé à l'animal, plus est universel le champ de la nature non organique dont il vit. Les plantes, les animaux, les pierres, l'air, la lumière, etc., constituent du point de vue théorique une partie de la conscience humaine, soit en tant qu'objets de la science de la nature, soit en tant qu'objets de l'art : ils constituent sa nature spirituelle non organique et sont les moyens spirituels de subsistance que l'homme doit d'abord préparer pour en jouir et les assimiler. De même, au point de vue pratique, ils constituent une part de la vie et de l'activité humaines. Physiquement, l'homme ne vit que de ces produits naturels, qu'ils apparaissent sous forme de nourriture, de chauffage, de vêtements, d'habitation, etc. L'universalité de l'homme apparaît en pratique précisément dans l'universalité qui fait de la nature entière son corps non organique, dans la mesure où elle est : 1) un moyen de subsistance immédiat, et 2) la matière, l'objet et l'outil de son activité vitale. La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est le corps non organique de l'homme. L'homme vit de la nature signifie : la nature est son corps avec lequel il doit rester constamment en contact pour ne pas mourir. Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon que la nature est liée à elle-même, car l'homme est une partie de la nature."
+  points:
+  - id: m1844-p14-1
+    fragment: "1/4"
+    sentence: "« La vie générique, aussi bien chez l'homme que chez l'animal, consiste d'abord, au point de vue physique, dans le fait que l'homme (comme l'animal) ___ ; et plus l'homme est universel comparé à l'animal, plus est universel le champ de la nature non organique dont il vit. »"
+    answer: "vit de la nature non organique"
+    alt: []
+  - id: m1844-p14-2
+    fragment: "1/4"
+    sentence: "« La vie générique, aussi bien chez l'homme que chez l'animal, consiste d'abord, au point de vue physique, dans le fait que l'homme (comme l'animal) vit de la nature non organique ; et plus l'homme est universel comparé à l'animal, ___. »"
+    answer: "plus est universel le champ de la nature non organique dont il vit"
+    alt: []
+  - id: m1844-p14-3
+    fragment: "2/4"
+    sentence: "« Les plantes, les animaux, les pierres, l'air, la lumière, etc., constituent du point de vue théorique ___, soit en tant qu'objets de la science de la nature, soit en tant qu'objets de l'art : ils constituent sa nature spirituelle non organique et sont les moyens spirituels de subsistance que l'homme doit d'abord préparer pour en jouir et les assimiler. »"
+    answer: "une partie de la conscience humaine"
+    alt: []
+  - id: m1844-p14-4
+    fragment: "2/4"
+    sentence: "« Les plantes, les animaux, les pierres, l'air, la lumière, etc., constituent du point de vue théorique une partie de la conscience humaine, soit en tant qu'objets de la science de la nature, soit en tant qu'objets de l'art : ils constituent ___ et sont les moyens spirituels de subsistance que l'homme doit d'abord préparer pour en jouir et les assimiler. »"
+    answer: "sa nature spirituelle non organique"
+    alt: []
+  - id: m1844-p14-5
+    fragment: "2/4"
+    sentence: "« Les plantes, les animaux, les pierres, l'air, la lumière, etc., constituent du point de vue théorique une partie de la conscience humaine, soit en tant qu'objets de la science de la nature, soit en tant qu'objets de l'art : ils constituent sa nature spirituelle non organique et sont ___ que l'homme doit d'abord préparer pour en jouir et les assimiler. »"
+    answer: "les moyens spirituels de subsistance"
+    alt: []
+  - id: m1844-p14-6
+    fragment: "3/4"
+    sentence: "« De même, au point de vue pratique, ils constituent ___. Physiquement, l'homme ne vit que de ces produits naturels, qu'ils apparaissent sous forme de nourriture, de chauffage, de vêtements, d'habitation, etc. L'universalité de l'homme apparaît en pratique précisément dans l'universalité qui fait de la nature entière son corps non organique, dans la mesure où elle est : 1) un moyen de subsistance immédiat, et 2) la matière, l'objet et l'outil de son activité vitale. »"
+    answer: "une part de la vie et de l'activité humaines"
+    alt: []
+  - id: m1844-p14-7
+    fragment: "3/4"
+    sentence: "« De même, au point de vue pratique, ils constituent une part de la vie et de l'activité humaines. Physiquement, l'homme ne vit que de ces produits naturels, qu'ils apparaissent sous forme de nourriture, de chauffage, de vêtements, d'habitation, etc. L'universalité de l'homme apparaît en pratique précisément dans ___, dans la mesure où elle est : 1) un moyen de subsistance immédiat, et 2) la matière, l'objet et l'outil de son activité vitale. »"
+    answer: "l'universalité qui fait de la nature entière son corps non organique"
+    alt: []
+  - id: m1844-p14-8
+    fragment: "3/4"
+    sentence: "« De même, au point de vue pratique, ils constituent une part de la vie et de l'activité humaines. Physiquement, l'homme ne vit que de ces produits naturels, qu'ils apparaissent sous forme de nourriture, de chauffage, de vêtements, d'habitation, etc. L'universalité de l'homme apparaît en pratique précisément dans l'universalité qui fait de la nature entière son corps non organique, dans la mesure où elle est : 1) ___, et 2) la matière, l'objet et l'outil de son activité vitale. »"
+    answer: "un moyen de subsistance immédiat"
+    alt: []
+  - id: m1844-p14-9
+    fragment: "3/4"
+    sentence: "« De même, au point de vue pratique, ils constituent une part de la vie et de l'activité humaines. Physiquement, l'homme ne vit que de ces produits naturels, qu'ils apparaissent sous forme de nourriture, de chauffage, de vêtements, d'habitation, etc. L'universalité de l'homme apparaît en pratique précisément dans l'universalité qui fait de la nature entière son corps non organique, dans la mesure où elle est : 1) un moyen de subsistance immédiat, et 2) ___. »"
+    answer: "la matière, l'objet et l'outil de son activité vitale"
+    alt: []
+  - id: m1844-p14-10
+    fragment: "4/4"
+    sentence: "« La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est ___. L'homme vit de la nature signifie : la nature est son corps avec lequel il doit rester constamment en contact pour ne pas mourir. Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon que la nature est liée à elle-même, car l'homme est une partie de la nature. »"
+    answer: "le corps non organique de l'homme"
+    alt: []
+  - id: m1844-p14-11
+    fragment: "4/4"
+    sentence: "« La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est le corps non organique de l'homme. L'homme vit de la nature signifie : la nature est ___. Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon que la nature est liée à elle-même, car l'homme est une partie de la nature. »"
+    answer: "son corps avec lequel il doit rester constamment en contact pour ne pas mourir"
+    alt: []
+  - id: m1844-p14-12
+    fragment: "4/4"
+    sentence: "« La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est le corps non organique de l'homme. L'homme vit de la nature signifie : la nature est son corps avec lequel il doit rester constamment en contact pour ne pas mourir. Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon ___, car l'homme est une partie de la nature. »"
+    answer: "que la nature est liée à elle-même"
+    alt: []
+  - id: m1844-p14-13
+    fragment: "4/4"
+    sentence: "« La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est le corps non organique de l'homme. L'homme vit de la nature signifie : la nature est son corps avec lequel il doit rester constamment en contact pour ne pas mourir. Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon que la nature est liée à elle-même, ___. »"
+    answer: "car l'homme est une partie de la nature"
+    alt: []
+  - id: m1844-p14-14
+    sentence: "La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est le ___ de l'homme."
+    answer: "corps non organique"
+    alt: []
+  - id: m1844-p14-15
+    sentence: "En allemand, le corps non organique se dit *unorganischer ___*."
+    answer: "Leib"
+    alt: []
+- id: m1844-p15
+  title: "Le travail aliéné rend étrangère l'espèce humaine"
+  notes: |-
+    **Le travail aliéné rend étrangers à l'homme la nature, lui-même et {amber}l'espèce humaine{/amber} : il fait de la vie générique {coral}le moyen de la vie individuelle{/coral}.**
+
+    Il y a deux temps : {red}premièrement{/red}, il rend étrangères l'une à l'autre la vie générique et la vie individuelle ; {red}deuxièmement{/red}, il fait de la seconde, {violet}réduite à l'abstraction{/violet}, le but de la première, elle aussi prise sous sa forme abstraite et aliénée. Ce qui devrait être la fin (la vie générique) devient un moyen, et ce qui devrait être un moyen (la vie individuelle) devient la fin.
+  passage:
+    label: "§15"
+    text: "Tandis que le travail aliéné rend étrangers à l'homme 1) la nature et 2) lui-même, sa propre fonction active, son activité vitale, il rend aussi l'espèce humaine étrangère à l'homme : il fait pour lui de la vie générique le moyen de la vie individuelle. Premièrement, il rend étrangères la vie générique et la vie individuelle et, deuxièmement, il fait de cette dernière, réduite à l'abstraction, le but de la première, qui est également prise sous sa forme abstraite et aliénée."
+  points:
+  - id: m1844-p15-1
+    fragment: "1/2"
+    sentence: "« Tandis que le travail aliéné rend étrangers à l'homme 1) la nature et 2) lui-même, ___, il rend aussi l'espèce humaine étrangère à l'homme : il fait pour lui de la vie générique le moyen de la vie individuelle. »"
+    answer: "sa propre fonction active, son activité vitale"
+    alt: []
+  - id: m1844-p15-2
+    fragment: "1/2"
+    sentence: "« Tandis que le travail aliéné rend étrangers à l'homme 1) la nature et 2) lui-même, sa propre fonction active, son activité vitale, il rend aussi ___ : il fait pour lui de la vie générique le moyen de la vie individuelle. »"
+    answer: "l'espèce humaine étrangère à l'homme"
+    alt: []
+  - id: m1844-p15-3
+    fragment: "1/2"
+    sentence: "« Tandis que le travail aliéné rend étrangers à l'homme 1) la nature et 2) lui-même, sa propre fonction active, son activité vitale, il rend aussi l'espèce humaine étrangère à l'homme : il fait pour lui de la vie générique ___. »"
+    answer: "le moyen de la vie individuelle"
+    alt: []
+  - id: m1844-p15-4
+    fragment: "2/2"
+    sentence: "« Premièrement, il ___ et, deuxièmement, il fait de cette dernière, réduite à l'abstraction, le but de la première, qui est également prise sous sa forme abstraite et aliénée. »"
+    answer: "rend étrangères la vie générique et la vie individuelle"
+    alt: []
+  - id: m1844-p15-5
+    fragment: "2/2"
+    sentence: "« Premièrement, il rend étrangères la vie générique et la vie individuelle et, deuxièmement, il fait de cette dernière, ___, le but de la première, qui est également prise sous sa forme abstraite et aliénée. »"
+    answer: "réduite à l'abstraction"
+    alt: []
+  - id: m1844-p15-6
+    fragment: "2/2"
+    sentence: "« Premièrement, il rend étrangères la vie générique et la vie individuelle et, deuxièmement, il fait de cette dernière, réduite à l'abstraction, ___, qui est également prise sous sa forme abstraite et aliénée. »"
+    answer: "le but de la première"
+    alt: []
+  - id: m1844-p15-7
+    sentence: "Le travail aliéné rend étrangers à l'homme la nature, lui-même et l'___ humaine."
+    answer: "espèce"
+    alt: []
+  - id: m1844-p15-8
+    sentence: "Le travail aliéné fait de la vie générique le ___ de la vie individuelle."
+    answer: "moyen"
+    alt: []
+- id: m1844-p16
+  title: "L'activité vitale consciente, caractère générique de l'homme"
+  notes: |-
+    **La vie productive est la vie générique ; l'homme, à la différence de l'animal, a une {amber}activité vitale consciente{/amber}, et le travail aliéné en fait un simple moyen.**
+
+    La vie productive est {coral}la vie engendrant la vie{/coral} : dans le mode d'activité vitale tient tout le caractère d'une espèce, et celui de l'homme est {violet}l'activité libre, consciente{/violet}. {red}L'animal{/red} se confond avec son activité vitale ; {green}l'homme{/green} en fait l'objet de sa volonté et de sa conscience. C'est par là qu'il est un être générique et que son activité est libre. Le travail aliéné {red}renverse ce rapport{/red} : l'homme, parce qu'il est conscient, ne fait de son activité vitale, de son essence, qu'un moyen de son existence.
+
+    ! Marx ne dit pas que l'animal n'a pas de vie générique : il dit que celle de l'homme passe par la conscience.
+  passage:
+    label: "§16"
+    text: "Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme un moyen de satisfaire un besoin, le besoin de conservation de l'existence physique. Mais la vie productive est la vie générique. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît que comme moyen de subsistance. L'animal se confond immédiatement avec son activité vitale. Il ne se distingue pas d'elle. Il est cette activité. L'homme fait de son activité vitale elle-même l'objet de sa volonté et de sa conscience. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente distingue directement l'homme de l'activité vitale de l'animal. C'est seulement par là qu'il est un être générique. Ou bien il est seulement un être conscient, autrement dit sa vie propre est pour lui un objet, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est activité libre. Le travail aliéné renverse ce rapport en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, qu'un moyen de son existence."
+  points:
+  - id: m1844-p16-1
+    fragment: "1/3"
+    sentence: "« Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme ___, le besoin de conservation de l'existence physique. Mais la vie productive est la vie générique. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît que comme moyen de subsistance. »"
+    answer: "un moyen de satisfaire un besoin"
+    alt: []
+  - id: m1844-p16-2
+    fragment: "1/3"
+    sentence: "« Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme un moyen de satisfaire un besoin, le besoin de conservation de l'existence physique. Mais la vie productive ___. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît que comme moyen de subsistance. »"
+    answer: "est la vie générique"
+    alt: []
+  - id: m1844-p16-3
+    fragment: "1/3"
+    sentence: "« Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme un moyen de satisfaire un besoin, le besoin de conservation de l'existence physique. Mais la vie productive est la vie générique. C'est ___. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît que comme moyen de subsistance. »"
+    answer: "la vie engendrant la vie"
+    alt: []
+  - id: m1844-p16-4
+    fragment: "1/3"
+    sentence: "« Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme un moyen de satisfaire un besoin, le besoin de conservation de l'existence physique. Mais la vie productive est la vie générique. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et ___. La vie elle-même n'apparaît que comme moyen de subsistance. »"
+    answer: "l'activité libre, consciente, est le caractère générique de l'homme"
+    alt: []
+  - id: m1844-p16-5
+    fragment: "1/3"
+    sentence: "« Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme un moyen de satisfaire un besoin, le besoin de conservation de l'existence physique. Mais la vie productive est la vie générique. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît ___. »"
+    answer: "que comme moyen de subsistance"
+    alt: []
+  - id: m1844-p16-6
+    fragment: "2/3"
+    sentence: "« ___. Il ne se distingue pas d'elle. Il est cette activité. L'homme fait de son activité vitale elle-même l'objet de sa volonté et de sa conscience. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente distingue directement l'homme de l'activité vitale de l'animal. C'est seulement par là qu'il est un être générique. »"
+    answer: "L'animal se confond immédiatement avec son activité vitale"
+    alt: []
+  - id: m1844-p16-7
+    fragment: "2/3"
+    sentence: "« L'animal se confond immédiatement avec son activité vitale. Il ne se distingue pas d'elle. ___. L'homme fait de son activité vitale elle-même l'objet de sa volonté et de sa conscience. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente distingue directement l'homme de l'activité vitale de l'animal. C'est seulement par là qu'il est un être générique. »"
+    answer: "Il est cette activité"
+    alt: []
+  - id: m1844-p16-8
+    fragment: "2/3"
+    sentence: "« L'animal se confond immédiatement avec son activité vitale. Il ne se distingue pas d'elle. Il est cette activité. L'homme fait de son activité vitale elle-même ___. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente distingue directement l'homme de l'activité vitale de l'animal. C'est seulement par là qu'il est un être générique. »"
+    answer: "l'objet de sa volonté et de sa conscience"
+    alt: []
+  - id: m1844-p16-9
+    fragment: "2/3"
+    sentence: "« L'animal se confond immédiatement avec son activité vitale. Il ne se distingue pas d'elle. Il est cette activité. L'homme fait de son activité vitale elle-même l'objet de sa volonté et de sa conscience. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente ___. C'est seulement par là qu'il est un être générique. »"
+    answer: "distingue directement l'homme de l'activité vitale de l'animal"
+    alt: []
+  - id: m1844-p16-10
+    fragment: "2/3"
+    sentence: "« L'animal se confond immédiatement avec son activité vitale. Il ne se distingue pas d'elle. Il est cette activité. L'homme fait de son activité vitale elle-même l'objet de sa volonté et de sa conscience. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente distingue directement l'homme de l'activité vitale de l'animal. C'est seulement par là qu'il est ___. »"
+    answer: "un être générique"
+    alt: []
+  - id: m1844-p16-11
+    fragment: "3/3"
+    sentence: "« Ou bien il est seulement un être conscient, autrement dit ___, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est activité libre. Le travail aliéné renverse ce rapport en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, qu'un moyen de son existence. »"
+    answer: "sa vie propre est pour lui un objet"
+    alt: []
+  - id: m1844-p16-12
+    fragment: "3/3"
+    sentence: "« Ou bien il est seulement un être conscient, autrement dit sa vie propre est pour lui un objet, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est ___. Le travail aliéné renverse ce rapport en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, qu'un moyen de son existence. »"
+    answer: "activité libre"
+    alt: []
+  - id: m1844-p16-13
+    fragment: "3/3"
+    sentence: "« Ou bien il est seulement un être conscient, autrement dit sa vie propre est pour lui un objet, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est activité libre. Le travail aliéné ___ en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, qu'un moyen de son existence. »"
+    answer: "renverse ce rapport"
+    alt: []
+  - id: m1844-p16-14
+    fragment: "3/3"
+    sentence: "« Ou bien il est seulement un être conscient, autrement dit sa vie propre est pour lui un objet, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est activité libre. Le travail aliéné renverse ce rapport en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, ___. »"
+    answer: "qu'un moyen de son existence"
+    alt: []
+  - id: m1844-p16-15
+    sentence: "L'animal se confond avec son activité vitale ; l'homme en fait l'objet de sa ___ et de sa conscience."
+    answer: "volonté"
+    alt: []
+  - id: m1844-p16-16
+    sentence: "L'activité vitale consciente est ce qui distingue l'homme de l'___."
+    answer: "animal"
+    alt: []
+- id: m1844-p17
+  title: "Produire universellement, même libéré du besoin"
+  notes: |-
+    **L'homme s'affirme comme être générique par la production pratique d'un monde objectif ; il produit {green}universellement{/green}, là où l'animal produit {red}unilatéralement{/red}.**
+
+    L'animal produit : le nid, la ruche, la fourmilière. Mais il produit {red}ce dont il a immédiatement besoin{/red}, pour lui ou son petit, sous l'emprise du besoin physique immédiat, et il ne produit que lui-même ; son produit fait partie de son corps. L'homme produit {green}même libéré de tout besoin{/green}, et ne produit vraiment que lorsqu'il l'est ; il reproduit la nature entière ; il affronte librement son produit ; il produit à la mesure de toute espèce, appliquant partout à l'objet sa nature inhérente. {coral}C'est pourquoi il façonne aussi d'après les lois de la beauté.{/coral}
+  passage:
+    label: "§17"
+    text: "Par la production pratique d'un monde objectif, le façonnement de la nature non organique, l'homme s'affirme comme un être générique conscient, c'est-à-dire comme un être qui se comporte à l'égard de l'espèce humaine comme il se comporte à l'égard de sa propre essence, ou à l'égard de soi en tant qu'être générique. Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit d'une façon unilatérale, tandis que l'homme produit d'une façon universelle ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. L'animal ne produit que lui-même, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté."
+  points:
+  - id: m1844-p17-1
+    fragment: "1/3"
+    sentence: "« Par ___, le façonnement de la nature non organique, l'homme s'affirme comme un être générique conscient, c'est-à-dire comme un être qui se comporte à l'égard de l'espèce humaine comme il se comporte à l'égard de sa propre essence, ou à l'égard de soi en tant qu'être générique. »"
+    answer: "la production pratique d'un monde objectif"
+    alt: []
+  - id: m1844-p17-2
+    fragment: "1/3"
+    sentence: "« Par la production pratique d'un monde objectif, le façonnement de la nature non organique, l'homme s'affirme comme ___, c'est-à-dire comme un être qui se comporte à l'égard de l'espèce humaine comme il se comporte à l'égard de sa propre essence, ou à l'égard de soi en tant qu'être générique. »"
+    answer: "un être générique conscient"
+    alt: []
+  - id: m1844-p17-3
+    fragment: "2/3"
+    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ___ ; il produit d'une façon unilatérale, tandis que l'homme produit d'une façon universelle ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
+    answer: "ce dont il a immédiatement besoin pour lui ou pour son petit"
+    alt: []
+  - id: m1844-p17-4
+    fragment: "2/3"
+    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit ___, tandis que l'homme produit d'une façon universelle ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
+    answer: "d'une façon unilatérale"
+    alt: []
+  - id: m1844-p17-5
+    fragment: "2/3"
+    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit d'une façon unilatérale, tandis que l'homme produit ___ ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
+    answer: "d'une façon universelle"
+    alt: []
+  - id: m1844-p17-6
+    fragment: "2/3"
+    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit d'une façon unilatérale, tandis que l'homme produit d'une façon universelle ; il ne produit que ___, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
+    answer: "sous l'emprise du besoin physique immédiat"
+    alt: []
+  - id: m1844-p17-7
+    fragment: "2/3"
+    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit d'une façon unilatérale, tandis que l'homme produit d'une façon universelle ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit ___ et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
+    answer: "même lorsqu'il est libéré de tout besoin physique"
+    alt: []
+  - id: m1844-p17-8
+    fragment: "3/3"
+    sentence: "« L'animal ___, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté. »"
+    answer: "ne produit que lui-même"
+    alt: []
+  - id: m1844-p17-9
+    fragment: "3/3"
+    sentence: "« L'animal ne produit que lui-même, tandis que l'homme ___ ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté. »"
+    answer: "reproduit la nature tout entière"
+    alt: []
+  - id: m1844-p17-10
+    fragment: "3/3"
+    sentence: "« L'animal ne produit que lui-même, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme ___. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté. »"
+    answer: "affronte librement son produit"
+    alt: []
+  - id: m1844-p17-11
+    fragment: "3/3"
+    sentence: "« L'animal ne produit que lui-même, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire ___ et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté. »"
+    answer: "à la mesure de toute espèce"
+    alt: []
+  - id: m1844-p17-12
+    fragment: "3/3"
+    sentence: "« L'animal ne produit que lui-même, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet ___. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté. »"
+    answer: "sa nature inhérente"
+    alt: []
+  - id: m1844-p17-13
+    fragment: "3/3"
+    sentence: "« L'animal ne produit que lui-même, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après ___. »"
+    answer: "les lois de la beauté"
+    alt: []
+  - id: m1844-p17-14
+    sentence: "Ce qui distingue la production humaine de la production animale est qu'elle est ___ : elle s'étend à toute espèce et à toute mesure."
+    answer: "universelle"
+    alt: []
+- id: m1844-p18
+  title: "Ce que le travail aliéné arrache à l'homme"
+  notes: |-
+    **En façonnant le monde objectif, l'homme s'affirme réellement comme être générique ; le travail aliéné lui arrache {red}cet objet{/red}, et avec lui sa vie générique.**
+
+    La production est {violet}la vie générique active{/violet} : la nature y apparaît comme son œuvre et sa réalité. L'objet du travail est {coral}l'objectivation de la vie générique{/coral} : l'homme ne se dédouble pas seulement intellectuellement, comme dans la conscience, mais {amber}activement, réellement{/amber}, et se contemple dans un monde qu'il a créé. Le travail aliéné arrache à l'homme l'objet de sa production, donc sa véritable objectivité générique, et transforme {red}sa supériorité sur l'animal en infériorité{/red}, puisque son corps non organique lui est dérobé. Il dégrade ainsi en moyen la libre activité.
+  passage:
+    label: "§18"
+    text: "C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité. L'objet du travail est donc l'objectivation de la vie générique de l'homme, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et il se contemple ainsi dans un monde qu'il a lui-même créé. Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, sa véritable objectivité générique, et transforme sa supériorité sur l'animal en infériorité, puisque son corps non organique, la nature, lui est dérobé. De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme le moyen de son existence physique."
+  points:
+  - id: m1844-p18-1
+    fragment: "1/2"
+    sentence: "« C'est précisément en façonnant le monde objectif que l'homme ___. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité. L'objet du travail est donc l'objectivation de la vie générique de l'homme, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et il se contemple ainsi dans un monde qu'il a lui-même créé. »"
+    answer: "s'affirme réellement comme un être générique"
+    alt: []
+  - id: m1844-p18-2
+    fragment: "1/2"
+    sentence: "« C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est ___. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité. L'objet du travail est donc l'objectivation de la vie générique de l'homme, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et il se contemple ainsi dans un monde qu'il a lui-même créé. »"
+    answer: "sa vie générique active"
+    alt: []
+  - id: m1844-p18-3
+    fragment: "1/2"
+    sentence: "« C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme ___. L'objet du travail est donc l'objectivation de la vie générique de l'homme, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et il se contemple ainsi dans un monde qu'il a lui-même créé. »"
+    answer: "son œuvre et sa réalité"
+    alt: []
+  - id: m1844-p18-4
+    fragment: "1/2"
+    sentence: "« C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité. L'objet du travail est donc ___, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et il se contemple ainsi dans un monde qu'il a lui-même créé. »"
+    answer: "l'objectivation de la vie générique de l'homme"
+    alt: []
+  - id: m1844-p18-5
+    fragment: "1/2"
+    sentence: "« C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité. L'objet du travail est donc l'objectivation de la vie générique de l'homme, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et ___. »"
+    answer: "il se contemple ainsi dans un monde qu'il a lui-même créé"
+    alt: []
+  - id: m1844-p18-6
+    fragment: "2/2"
+    sentence: "« Ainsi tandis que le travail aliéné ___, il lui arrache sa vie générique, sa véritable objectivité générique, et transforme sa supériorité sur l'animal en infériorité, puisque son corps non organique, la nature, lui est dérobé. De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme le moyen de son existence physique. »"
+    answer: "arrache à l'homme l'objet de sa production"
+    alt: []
+  - id: m1844-p18-7
+    fragment: "2/2"
+    sentence: "« Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, ___, et transforme sa supériorité sur l'animal en infériorité, puisque son corps non organique, la nature, lui est dérobé. De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme le moyen de son existence physique. »"
+    answer: "sa véritable objectivité générique"
+    alt: []
+  - id: m1844-p18-8
+    fragment: "2/2"
+    sentence: "« Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, sa véritable objectivité générique, et ___, puisque son corps non organique, la nature, lui est dérobé. De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme le moyen de son existence physique. »"
+    answer: "transforme sa supériorité sur l'animal en infériorité"
+    alt: []
+  - id: m1844-p18-9
+    fragment: "2/2"
+    sentence: "« Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, sa véritable objectivité générique, et transforme sa supériorité sur l'animal en infériorité, puisque ___. De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme le moyen de son existence physique. »"
+    answer: "son corps non organique, la nature, lui est dérobé"
+    alt: []
+  - id: m1844-p18-10
+    fragment: "2/2"
+    sentence: "« Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, sa véritable objectivité générique, et transforme sa supériorité sur l'animal en infériorité, puisque son corps non organique, la nature, lui est dérobé. De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme ___. »"
+    answer: "le moyen de son existence physique"
+    alt: []
+  - id: m1844-p18-11
+    sentence: "Dans le travail aliéné, l'homme perd son corps non organique, c'est-à-dire la ___."
+    answer: "nature"
+    alt: []
+- id: m1844-p19
+  title: "Étranger à l'être générique, étranger aux autres hommes"
+  notes: |-
+    **Résultats : l'homme est étranger à son être générique, donc {red}étranger à autrui{/red}.**
+
+    3) L'être générique de l'homme est transformé en {violet}moyen de son existence individuelle{/violet} : il est rendu étranger à son corps, au monde extérieur, à son essence humaine. 4) L'aliénation de l'homme par rapport à l'homme en découle {coral}immédiatement{/coral} : ce qui est vrai de son rapport à son travail, à son produit, à lui-même, est vrai de son rapport à l'autre et au travail de l'autre. Être étranger à son être générique, c'est que les hommes sont devenus étrangers les uns aux autres et à l'essence humaine. Son rapport à lui-même se réalise et se reflète dans son rapport à autrui, qu'il considère selon sa propre situation d'ouvrier.
+  passage:
+    label: "§19"
+    text: "Le travail aliéné conduit donc aux résultats suivants : 3) L'être générique de l'homme, sa nature, aussi bien que ses facultés intellectuelles génériques, sont transformés en un être qui lui est étranger, en moyen de son existence individuelle. Le travail aliéné rend l'homme étranger à son propre corps, au monde extérieur aussi bien qu'à son essence spirituelle, à son essence humaine. 4) L'aliénation de l'homme par rapport à l'homme apparaît comme une conséquence immédiate du fait que l'homme est rendu étranger au produit de son travail, à son activité vitale, à son être générique. L'homme s'oppose à lui-même, il s'oppose aussi à autrui. Ce qui est vrai du rapport de l'homme à son travail, au produit de son travail et à lui-même, est vrai du rapport de l'homme à l'autre ainsi qu'au travail et à l'objet du travail de l'autre. D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que les hommes sont devenus étrangers les uns aux autres et que chacun d'eux est devenu étranger à l'essence humaine. L'aliénation de l'homme, plus généralement son rapport à lui-même, se réalise et se reflète dans son rapport à autrui. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui selon les critères et les conditions de sa propre situation en tant qu'ouvrier."
+  points:
+  - id: m1844-p19-1
+    fragment: "1/3"
+    sentence: "« Le travail aliéné conduit donc aux résultats suivants : 3) L'être générique de l'homme, sa nature, aussi bien que ses facultés intellectuelles génériques, sont transformés en ___, en moyen de son existence individuelle. Le travail aliéné rend l'homme étranger à son propre corps, au monde extérieur aussi bien qu'à son essence spirituelle, à son essence humaine. »"
+    answer: "un être qui lui est étranger"
+    alt: []
+  - id: m1844-p19-2
+    fragment: "1/3"
+    sentence: "« Le travail aliéné conduit donc aux résultats suivants : 3) L'être générique de l'homme, sa nature, aussi bien que ses facultés intellectuelles génériques, sont transformés en un être qui lui est étranger, ___. Le travail aliéné rend l'homme étranger à son propre corps, au monde extérieur aussi bien qu'à son essence spirituelle, à son essence humaine. »"
+    answer: "en moyen de son existence individuelle"
+    alt: []
+  - id: m1844-p19-3
+    fragment: "1/3"
+    sentence: "« Le travail aliéné conduit donc aux résultats suivants : 3) L'être générique de l'homme, sa nature, aussi bien que ses facultés intellectuelles génériques, sont transformés en un être qui lui est étranger, en moyen de son existence individuelle. Le travail aliéné rend l'homme ___, au monde extérieur aussi bien qu'à son essence spirituelle, à son essence humaine. »"
+    answer: "étranger à son propre corps"
+    alt: []
+  - id: m1844-p19-4
+    fragment: "2/3"
+    sentence: "« 4) L'aliénation de l'homme par rapport à l'homme apparaît comme ___ du fait que l'homme est rendu étranger au produit de son travail, à son activité vitale, à son être générique. L'homme s'oppose à lui-même, il s'oppose aussi à autrui. Ce qui est vrai du rapport de l'homme à son travail, au produit de son travail et à lui-même, est vrai du rapport de l'homme à l'autre ainsi qu'au travail et à l'objet du travail de l'autre. »"
+    answer: "une conséquence immédiate"
+    alt: []
+  - id: m1844-p19-5
+    fragment: "2/3"
+    sentence: "« 4) L'aliénation de l'homme par rapport à l'homme apparaît comme une conséquence immédiate du fait que l'homme est rendu étranger au produit de son travail, à son activité vitale, à son être générique. L'homme s'oppose à lui-même, ___. Ce qui est vrai du rapport de l'homme à son travail, au produit de son travail et à lui-même, est vrai du rapport de l'homme à l'autre ainsi qu'au travail et à l'objet du travail de l'autre. »"
+    answer: "il s'oppose aussi à autrui"
+    alt: []
+  - id: m1844-p19-6
+    fragment: "2/3"
+    sentence: "« 4) L'aliénation de l'homme par rapport à l'homme apparaît comme une conséquence immédiate du fait que l'homme est rendu étranger au produit de son travail, à son activité vitale, à son être générique. L'homme s'oppose à lui-même, il s'oppose aussi à autrui. Ce qui est vrai du rapport de l'homme à son travail, au produit de son travail et à lui-même, est vrai du rapport de l'homme à l'autre ainsi qu'au travail et ___. »"
+    answer: "à l'objet du travail de l'autre"
+    alt: []
+  - id: m1844-p19-7
+    fragment: "3/3"
+    sentence: "« D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que ___ et que chacun d'eux est devenu étranger à l'essence humaine. L'aliénation de l'homme, plus généralement son rapport à lui-même, se réalise et se reflète dans son rapport à autrui. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui selon les critères et les conditions de sa propre situation en tant qu'ouvrier. »"
+    answer: "les hommes sont devenus étrangers les uns aux autres"
+    alt: []
+  - id: m1844-p19-8
+    fragment: "3/3"
+    sentence: "« D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que les hommes sont devenus étrangers les uns aux autres et que chacun d'eux est devenu ___. L'aliénation de l'homme, plus généralement son rapport à lui-même, se réalise et se reflète dans son rapport à autrui. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui selon les critères et les conditions de sa propre situation en tant qu'ouvrier. »"
+    answer: "étranger à l'essence humaine"
+    alt: []
+  - id: m1844-p19-9
+    fragment: "3/3"
+    sentence: "« D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que les hommes sont devenus étrangers les uns aux autres et que chacun d'eux est devenu étranger à l'essence humaine. L'aliénation de l'homme, plus généralement son rapport à lui-même, ___. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui selon les critères et les conditions de sa propre situation en tant qu'ouvrier. »"
+    answer: "se réalise et se reflète dans son rapport à autrui"
+    alt: []
+  - id: m1844-p19-10
+    fragment: "3/3"
+    sentence: "« D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que les hommes sont devenus étrangers les uns aux autres et que chacun d'eux est devenu étranger à l'essence humaine. L'aliénation de l'homme, plus généralement son rapport à lui-même, se réalise et se reflète dans son rapport à autrui. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui ___. »"
+    answer: "selon les critères et les conditions de sa propre situation en tant qu'ouvrier"
+    alt: []
+  - id: m1844-p19-11
+    sentence: "La quatrième détermination du travail aliéné est l'aliénation de l'homme par rapport à l'___."
+    answer: "homme"
+    alt: []
