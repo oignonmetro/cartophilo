@@ -221,7 +221,9 @@ cartes-explication).
   redonnent le paragraphe exact.
 - **Introduction** : décider s'il faut des leçons d'introduction (§ 3). Oui
   dès que le texte est difficile, ou que le commentaire consacre une partie au
-  problème, aux notions ou aux débats.
+  problème ou aux débats. Les notions, elles, n'y vont pas : repérer pour
+  chacune la leçon où le texte s'en sert pour la première fois, qui la
+  définira dans un encadré (§ 4).
 - **Ce qui compte** : relire le commentaire et les notes pour repérer, dans
   chaque paragraphe, la thèse, les notions, les images, et ce que le
   commentateur désigne comme décisif. C'est la carte des trous (§ 5).
@@ -275,7 +277,7 @@ intro: |-
   <Présentation : deux ou trois phrases de situation.>
 lessons:
 - id: <id>-i1
-  title: "<Le problème, les notions>"
+  title: "<Le texte, sa place, le problème>"
   notes: |-
     <Rappel d'introduction, voir § 3.>
   passage:
@@ -319,9 +321,15 @@ inverses.
 ## 3. Les leçons d'introduction
 
 Avant la première leçon-paragraphe, une ou deux leçons qui donnent ce qu'il
-faut pour comprendre le texte : le problème auquel il répond, les notions
-qu'il suppose (tableau comparatif dès qu'il y en a deux), les positions
-rivales et leurs tenants, sa place dans l'œuvre. Un rappel par leçon, un
+faut pour comprendre le texte : le problème auquel il répond, les positions
+rivales et leurs tenants, sa place dans l'œuvre. **Jamais de leçon sur les
+notions** (« notions à connaître », définitions préalables) : l'utilisateur
+les a fait supprimer sur `n1863`, il veut les découvrir petit à petit, au
+moment où l'explication en a besoin. Chaque notion se définit donc dans un
+encadré `? terme : définition` du rappel de la leçon où le texte l'emploie
+pour la première fois (§ 4), avec ses cartes ; une notion que la seule
+introduction emploie s'y glose en passant, entre parenthèses ou par
+apposition, sans encadré. Un rappel par leçon, un
 écran au plus : au-delà, couper en deux leçons. Puis des cartes-explication
 (§ 6). Les cartes de contexte général (débats d'interprétation, arguments
 voisins, place dans l'œuvre) vont là, pas dans les paragraphes — sauf quand
@@ -383,7 +391,12 @@ commentaire du paragraphe, pas un résumé d'une ligne :
   sert pour la première fois, et l'explication s'en sert sans la redéfinir.
   Jamais de leçon d'introduction consacrée aux notions : l'utilisateur les
   veut introduites petit à petit (`n1863`). Les cartes qui les font
-  apprendre vont dans cette même leçon.
+  apprendre vont dans cette même leçon. L'encadré se place avant la phrase
+  du rappel qui emploie la notion, jamais après ; il garde l'exemple concret
+  qui la fait comprendre (« une table qui demande deux fois plus de travail
+  qu'une chaise vaut deux fois plus »), et sa définition reste en un ou deux
+  membres colorés comme le reste du rappel. Une notion déjà définie ne se
+  redéfinit pas plus loin : l'explication s'en sert.
 
 Retouches de l'utilisateur sur Bichat, à anticiper :
 
