@@ -1,10 +1,10 @@
-# Unité de texte (voir content/textes.md), en préparation : texte isolé et découpé
-# en leçons par paragraphes, sans rappels ni cartes. Marx, « Contribution à la
-# critique de la philosophie du droit de Hegel. Introduction » (1844), §44 à §51,
-# d'après la même traduction que n1844 (Annales franco-allemandes, Éditions
-# sociales, GEME ; PDF Cairn fourni par l'utilisateur). Les italiques sont ceux de
-# l'original ; appels de note, repères de page et astérisques de l'édition retirés.
-# Pas encore branchée dans une piste.
+# Unité de texte (voir content/textes.md) : Marx, « Contribution à la critique de
+# la philosophie du droit de Hegel. Introduction » (1844), §44 à §51, d'après la même
+# traduction que n1844 (Annales franco-allemandes, Éditions sociales, GEME ; PDF
+# Cairn fourni par l'utilisateur). Les italiques sont ceux de l'original ; appels de
+# note, repères de page et astérisques de l'édition retirés. Sans commentaire écrit :
+# les rappels reposent sur le texte lui-même, les notions sont définies en encadré à
+# leur première apparition.
 
 id: n1844a
 title: "Émancipation humaine et prolétariat (1844)"
@@ -14,39 +14,539 @@ color: coral
 intro: |-
   Fin de l'*Introduction* de 1844. Marx y répond à la question de la possibilité positive de l'émancipation allemande : une classe aux chaînes radicales, le prolétariat, dont la philosophie est le cerveau, et le résumé du résultat.
 lessons:
+- id: n1844a-i1
+  title: "Où trouver la force de la révolution radicale ?"
+  notes: |-
+    Ces paragraphes terminent l'*Introduction* de {sky}Marx{/sky}. Ils répondent à une difficulté posée juste avant (§34-43) : la révolution radicale que l'Allemagne doit faire semble manquer de {amber}base matérielle{/amber}. La théorie ne devient effective, disait Marx, que si elle est l'effectuation des besoins d'un peuple (§35), et une révolution radicale suppose {amber}des besoins radicaux{/amber} qui semblent faire défaut (§37). Une simple révolution politique, où {amber}une partie de la société{/amber} s'émancipe au nom de toute la société, est impossible en Allemagne, parce qu'aucune classe n'y a la grandeur d'âme de s'identifier à tout le peuple (§42-43).
+
+    **§44 pose alors la question, et la suite y répond : la possibilité positive de l'émancipation allemande est dans une classe aux chaînes radicales, le prolétariat, qui s'unit à la philosophie.**
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | poser la question de la possibilité positive de l'émancipation et y répondre par une classe aux chaînes radicales | §44-45 | Cette classe souffre d'une injustice universelle, ne réclame aucun droit particulier et ne peut s'émanciper sans émanciper toute la société : c'est le prolétariat. |
+    | dire d'où vient le prolétariat en Allemagne | §46 | Il naît de l'industrialisation et de la dissolution violente de la société, non d'une pauvreté naturelle. |
+    | dire ce que le prolétariat exprime quand il annonce la dissolution de l'ordre du monde | §47 | Il exprime le secret de sa propre existence : il est cette dissolution, et sa demande de négation de la propriété privée dit ce que la société a fait de lui. |
+    | unir la philosophie et le prolétariat | §48 | La philosophie lui donne ses armes intellectuelles, il lui donne ses armes matérielles, et l'émancipation s'accomplit quand la pensée frappe le peuple. |
+    | résumer le résultat | §49-50 | La seule libération pratique possible est celle de la théorie qui fait de l'être humain l'être suprême : la philosophie en est le cerveau, le prolétariat le cœur. |
+    | annoncer le jour de la résurrection allemande | §51 | Il sera annoncé par le chant du coq gaulois, quand les conditions internes seront réunies. |
+
+    ! Marx ne dit pas que la philosophie fait la révolution : il dit que la révolution se fait quand la théorie rencontre une classe qui en a besoin.
+  passage:
+    label: "Introduction"
+  points:
+  - id: n1844a-i1-1
+    sentence: "La question du §44 porte sur la possibilité ___ de l'émancipation allemande."
+    answer: "positive"
+    alt: []
+  - id: n1844a-i1-2
+    sentence: "La réponse de Marx est la formation d'une classe aux ___ radicales."
+    answer: "chaînes"
+    alt: []
+  - id: n1844a-i1-3
+    sentence: "Cette classe, dit Marx au §45, est le ___."
+    answer: "prolétariat"
+    alt: []
+  - id: n1844a-i1-4
+    sentence: "Avant le §44, Marx a montré que la révolution allemande semble manquer d'une ___ matérielle (§35)."
+    answer: "base"
+    alt: []
+  - id: n1844a-i1-5
+    sentence: "Le §48 unit la philosophie et le prolétariat par deux métaphores d'___."
+    answer: "armes"
+    alt: []
+  - id: n1844a-i1-6
+    sentence: "Le §50 résume le résultat : l'émancipation de l'Allemand est l'émancipation de l'___."
+    answer: "être humain"
+    alt: []
+  - id: n1844a-i1-7
+    sentence: "L'*Introduction* se termine sur l'annonce du chant du coq ___."
+    answer: "gaulois"
+    alt: []
 - id: n1844a-p1
   title: "La possibilité positive de l'émancipation : une classe aux chaînes radicales"
+  notes: |-
+    **La possibilité positive de l'émancipation allemande est dans une classe dont la souffrance est universelle, et qui ne peut donc s'émanciper qu'en émancipant toute la société : le prolétariat.** Marx la décrit par une longue suite de traits, qu'on peut grouper.
+
+    ? **Société civile** : l'ensemble des rapports de la vie économique et privée, distincts de l'État ; les classes, les professions, la propriété en font partie.
+
+    ? **État** (au sens d'ordre ou de condition) : un groupe social défini par sa place dans la société, comme la noblesse, le clergé ou le tiers état. « Un état qui est la dissolution de tous les états » n'est pas un rang parmi d'autres : c'est ce qui dissout l'ordre des rangs.
+
+    | Trait de la classe | Ce qu'il veut dire |
+    | une classe de la société civile qui n'est pas une classe de la société civile | elle fait partie de la société sans y avoir de place reconnue |
+    | des souffrances universelles, aucun droit particulier | ce n'est pas une injustice particulière qui lui est faite, mais l'injustice tout court : elle ne réclame pas un privilège |
+    | un titre humain, non historique | elle ne se fonde pas sur la tradition, comme la noblesse, mais sur ce qu'est un être humain |
+    | une opposition globale aux présuppositions de l'État allemand | elle s'oppose au principe même du régime, non à ses seules conséquences |
+    | la perte complète de l'être humain | elle a tout perdu de ce qui fait l'humain, donc ne peut se conquérir qu'en le reconquérant en entier |
+
+    **Pourquoi cette classe peut-elle émanciper toute la société ?** Parce qu'elle {coral}ne peut s'émanciper sans s'émanciper de toutes les autres sphères{/coral} : n'ayant aucun intérêt particulier à défendre, elle ne peut se libérer qu'en libérant tous les autres. C'est l'inverse de la révolution partielle du §40, où une partie de la société s'émancipe au nom de toute la société. Et {coral}elle ne peut se conquérir elle-même que par la reconquête complète de l'être humain{/coral}, parce qu'elle en est {amber}la perte complète{/amber}. Marx lui donne enfin son nom : cette dissolution de la société, prise comme état particulier, c'est {violet}le prolétariat{/violet}.
+
+    ! « Prolétariat » ne désigne pas ici la pauvreté en général : c'est la classe dont la perte est complète, et dont la libération est celle de tous.
   passage:
     label: "§44-45"
     text: "Où se trouve alors la possibilité *positive* de l'émancipation allemande ? *Réponse* : dans la formation d'une classe aux *chaînes radicales*, d'une classe de la société civile qui n'est pas une classe de la société civile, d'un état qui est la dissolution de tous les états, d'une sphère à laquelle ses souffrances universelles confèrent un caractère universel et qui ne revendique aucun *droit particulier*, parce que ce n'est pas une *injustice particulière*, mais bien l'*injustice tout court* qui est commise à son encontre, qui ne peut plus se parer d'un titre *historique*, mais seulement encore d'un titre *humain*, qui ne soit pas dans une opposition unilatérale aux conséquences de l'essence de l'État allemand, mais dans une opposition globale à ses présuppositions, d'une sphère, enfin, qui ne peut s'émanciper [elle-même] sans s'émanciper de toutes les autres sphères de la société et, ce faisant, émanciper toutes les autres sphères de la société, qui est en un mot la *perte complète* de l'être humain, et ne peut donc se conquérir elle-même que par la *reconquête complète de l'être humain*. Cette dissolution de la société, en tant qu'elle prend la forme d'un état particulier, c'est le *prolétariat*."
-  points: []
+  points:
+  - id: n1844a-p1-1
+    fragment: "1/4"
+    sentence: "« Où se trouve alors ___ ? *Réponse* : dans la formation d'une classe aux *chaînes radicales*, d'une classe de la société civile qui n'est pas une classe de la société civile, d'un état qui est la dissolution de tous les états, »"
+    answer: "la possibilité positive de l'émancipation allemande"
+    alt: []
+  - id: n1844a-p1-2
+    fragment: "1/4"
+    sentence: "« Où se trouve alors la possibilité *positive* de l'émancipation allemande ? *Réponse* : dans la formation d'___, d'une classe de la société civile qui n'est pas une classe de la société civile, d'un état qui est la dissolution de tous les états, »"
+    answer: "une classe aux chaînes radicales"
+    alt: []
+  - id: n1844a-p1-3
+    fragment: "1/4"
+    sentence: "« Où se trouve alors la possibilité *positive* de l'émancipation allemande ? *Réponse* : dans la formation d'une classe aux *chaînes radicales*, d'___, d'un état qui est la dissolution de tous les états, »"
+    answer: "une classe de la société civile qui n'est pas une classe de la société civile"
+    alt: []
+  - id: n1844a-p1-4
+    fragment: "1/4"
+    sentence: "« Où se trouve alors la possibilité *positive* de l'émancipation allemande ? *Réponse* : dans la formation d'une classe aux *chaînes radicales*, d'une classe de la société civile qui n'est pas une classe de la société civile, d'___, »"
+    answer: "un état qui est la dissolution de tous les états"
+    alt: []
+  - id: n1844a-p1-5
+    fragment: "2/4"
+    sentence: "« d'une sphère à laquelle ___ et qui ne revendique aucun *droit particulier*, parce que ce n'est pas une *injustice particulière*, mais bien l'*injustice tout court* qui est commise à son encontre, »"
+    answer: "ses souffrances universelles confèrent un caractère universel"
+    alt: []
+  - id: n1844a-p1-6
+    fragment: "2/4"
+    sentence: "« d'une sphère à laquelle ses souffrances universelles confèrent un caractère universel et qui ne revendique ___, parce que ce n'est pas ___, mais bien l'*injustice tout court* qui est commise à son encontre, »"
+    answer: "aucun droit particulier ; une injustice particulière"
+    alt: []
+  - id: n1844a-p1-7
+    fragment: "2/4"
+    sentence: "« d'une sphère à laquelle ses souffrances universelles confèrent un caractère universel et qui ne revendique aucun *droit particulier*, parce que ce n'est pas une *injustice particulière*, mais bien ___ qui est commise à son encontre, »"
+    answer: "l'injustice tout court"
+    alt: []
+  - id: n1844a-p1-8
+    fragment: "3/4"
+    sentence: "« qui ne peut plus se parer d'___, mais seulement encore d'___, qui ne soit pas dans une opposition unilatérale aux conséquences de l'essence de l'État allemand, mais dans une opposition globale à ses présuppositions, »"
+    answer: "un titre historique ; un titre humain"
+    alt: []
+  - id: n1844a-p1-9
+    fragment: "3/4"
+    sentence: "« qui ne peut plus se parer d'un titre *historique*, mais seulement encore d'un titre *humain*, qui ne soit pas dans ___, mais dans ___, »"
+    answer: "une opposition unilatérale aux conséquences de l'essence de l'État allemand ; une opposition globale à ses présuppositions"
+    alt: []
+  - id: n1844a-p1-10
+    fragment: "4/4"
+    sentence: "« d'une sphère, enfin, qui ___ et, ce faisant, émanciper toutes les autres sphères de la société, qui est en un mot la *perte complète* de l'être humain, et ne peut donc se conquérir elle-même que par la *reconquête complète de l'être humain*. Cette dissolution de la société, en tant qu'elle prend la forme d'un état particulier, c'est le *prolétariat*. »"
+    answer: "ne peut s'émanciper [elle-même] sans s'émanciper de toutes les autres sphères de la société"
+    alt: []
+  - id: n1844a-p1-11
+    fragment: "4/4"
+    sentence: "« d'une sphère, enfin, qui ne peut s'émanciper [elle-même] sans s'émanciper de toutes les autres sphères de la société et, ce faisant, émanciper toutes les autres sphères de la société, qui est en un mot ___, et ne peut donc se conquérir elle-même que par la *reconquête complète de l'être humain*. Cette dissolution de la société, en tant qu'elle prend la forme d'un état particulier, c'est le *prolétariat*. »"
+    answer: "la perte complète de l'être humain"
+    alt: []
+  - id: n1844a-p1-12
+    fragment: "4/4"
+    sentence: "« d'une sphère, enfin, qui ne peut s'émanciper [elle-même] sans s'émanciper de toutes les autres sphères de la société et, ce faisant, émanciper toutes les autres sphères de la société, qui est en un mot la *perte complète* de l'être humain, et ne peut donc se conquérir elle-même que par ___. Cette dissolution de la société, en tant qu'elle prend la forme d'un état particulier, c'est le *prolétariat*. »"
+    answer: "la reconquête complète de l'être humain"
+    alt: []
+  - id: n1844a-p1-13
+    fragment: "4/4"
+    sentence: "« d'une sphère, enfin, qui ne peut s'émanciper [elle-même] sans s'émanciper de toutes les autres sphères de la société et, ce faisant, émanciper toutes les autres sphères de la société, qui est en un mot la *perte complète* de l'être humain, et ne peut donc se conquérir elle-même que par la *reconquête complète de l'être humain*. Cette dissolution de la société, en tant qu'elle prend la forme d'un état particulier, c'est ___. »"
+    answer: "le prolétariat"
+    alt: []
+  - id: n1844a-p1-14
+    sentence: "Marx appelle société civile l'ensemble des rapports de la vie économique et privée, distinct de l'___."
+    answer: "État"
+    alt: []
+  - id: n1844a-p1-15
+    sentence: "Une classe de la société civile qui n'est pas une classe de la société civile fait partie de la société sans y avoir de ___ reconnue."
+    answer: "place"
+    alt: []
+  - id: n1844a-p1-16
+    sentence: "Un état qui est la dissolution de tous les états n'est pas un rang parmi d'autres : il est ce qui ___ l'ordre des rangs."
+    answer: "dissout"
+    alt: []
+  - id: n1844a-p1-17
+    sentence: "Un titre historique est un droit fondé sur la ___, comme celui de la noblesse ; la classe du §45 n'a qu'un titre humain."
+    answer: "tradition"
+    alt: []
+  - id: n1844a-p1-18
+    sentence: "Selon Marx, la classe aux chaînes radicales ne peut s'émanciper sans émanciper toutes les autres sphères : sa libération est celle de toute la ___."
+    answer: "société"
+    alt: []
+  - id: n1844a-p1-19
+    sentence: "Parce qu'elle est la perte complète de l'être humain, cette classe ne peut se conquérir qu'en reconquérant l'être humain tout ___."
+    answer: "entier"
+    alt: ["en entier"]
+  - id: n1844a-p1-20
+    sentence: "À la différence de la révolution partielle du §40, où une partie de la société s'émancipe au nom de tous, la classe du §45 ne peut s'émanciper sans émanciper ___ les sphères."
+    answer: "toutes"
+    alt: []
 - id: n1844a-p2
   title: "L'apparition du prolétariat en Allemagne"
+  notes: |-
+    **Le prolétariat n'est pas défini par la pauvreté, mais par la façon dont elle est produite : il naît de l'industrialisation et de la dissolution violente de la société.** Marx le dit par deux oppositions.
+
+    ? **Pauvreté naturelle-spontanée** : la misère qui existe depuis toujours, que causent par exemple les mauvaises récoltes ; elle s'oppose à la pauvreté {coral}produite artificiellement{/coral}, c'est-à-dire fabriquée par l'organisation même de la société.
+
+    ? **État intermédiaire** : ici, les couches moyennes situées entre les grands et les plus pauvres, comme les artisans. L'industrie les ruine, et c'est de leur dissolution que surgit une partie du prolétariat.
+
+    | | Ce que le prolétariat est | Ce qu'il n'est pas |
+    | la pauvreté | produite artificiellement | naissant de façon naturelle-spontanée |
+    | la masse humaine | surgissant de la dissolution violente de la société | mécaniquement accablée par le poids de la société |
+
+    **Pourquoi cette distinction compte-t-elle ?** Une pauvreté naturelle appelle de la charité ; une pauvreté produite par la société appelle un remède social, et celui qui la subit est le résultat d'une dissolution, donc le signe que l'ordre ancien se défait. C'est aussi ce qui explique le moment : {amber}le prolétariat n'est présent en Allemagne que depuis le mouvement industriel qui s'y introduit{/amber}. Marx ajoute que {yellow}la pauvreté naturelle et le servage chrétien germanique{/yellow}, la dépendance héritée du Moyen Âge, viennent peu à peu grossir ses rangs, mais ce n'est pas ce qui le constitue.
+
+    ! Le prolétariat n'est pas la masse des pauvres : c'est celle que la dissolution de la société fabrique.
   passage:
     label: "§46"
     text: "Le prolétariat commence seulement à être présent en Allemagne suite au mouvement *industriel* qui s'y introduit, car ce qui constitue le prolétariat, ce n'est pas la pauvreté *naissant de façon naturelle-spontanée* mais la pauvreté *produite artificiellement*, ce n'est pas la masse humaine mécaniquement accablée par le poids de la société mais la masse humaine surgissant de la *dissolution violente* de la société, particulièrement de la dissolution de l'état intermédiaire, même si peu à peu, comme cela se comprend de soi-même, la pauvreté naturelle-spontanée et le servage chrétien germanique viennent aussi grossir ses rangs."
-  points: []
+  points:
+  - id: n1844a-p2-1
+    fragment: "1/2"
+    sentence: "« Le prolétariat commence seulement à être présent en Allemagne ___, car ce qui constitue le prolétariat, ce n'est pas la pauvreté *naissant de façon naturelle-spontanée* mais la pauvreté *produite artificiellement*, »"
+    answer: "suite au mouvement industriel qui s'y introduit"
+    alt: []
+  - id: n1844a-p2-2
+    fragment: "1/2"
+    sentence: "« Le prolétariat commence seulement à être présent en Allemagne suite au mouvement *industriel* qui s'y introduit, car ce qui constitue le prolétariat, ce n'est pas ___ mais ___, »"
+    answer: "la pauvreté naissant de façon naturelle-spontanée ; la pauvreté produite artificiellement"
+    alt: []
+  - id: n1844a-p2-3
+    fragment: "2/2"
+    sentence: "« ce n'est pas ___ mais la masse humaine surgissant de la *dissolution violente* de la société, particulièrement de la dissolution de l'état intermédiaire, même si peu à peu, comme cela se comprend de soi-même, la pauvreté naturelle-spontanée et le servage chrétien germanique viennent aussi grossir ses rangs. »"
+    answer: "la masse humaine mécaniquement accablée par le poids de la société"
+    alt: []
+  - id: n1844a-p2-4
+    fragment: "2/2"
+    sentence: "« ce n'est pas la masse humaine mécaniquement accablée par le poids de la société mais ___, particulièrement de la dissolution de l'état intermédiaire, même si peu à peu, comme cela se comprend de soi-même, la pauvreté naturelle-spontanée et le servage chrétien germanique viennent aussi grossir ses rangs. »"
+    answer: "la masse humaine surgissant de la dissolution violente de la société"
+    alt: []
+  - id: n1844a-p2-5
+    fragment: "2/2"
+    sentence: "« ce n'est pas la masse humaine mécaniquement accablée par le poids de la société mais la masse humaine surgissant de la *dissolution violente* de la société, particulièrement de ___, même si peu à peu, comme cela se comprend de soi-même, la pauvreté naturelle-spontanée et le servage chrétien germanique viennent aussi grossir ses rangs. »"
+    answer: "la dissolution de l'état intermédiaire"
+    alt: []
+  - id: n1844a-p2-6
+    fragment: "2/2"
+    sentence: "« ce n'est pas la masse humaine mécaniquement accablée par le poids de la société mais la masse humaine surgissant de la *dissolution violente* de la société, particulièrement de la dissolution de l'état intermédiaire, même si peu à peu, comme cela se comprend de soi-même, ___ viennent aussi grossir ses rangs. »"
+    answer: "la pauvreté naturelle-spontanée et le servage chrétien germanique"
+    alt: []
+  - id: n1844a-p2-7
+    sentence: "La pauvreté du prolétariat est produite par la ___ elle-même, et non par la nature."
+    answer: "société"
+    alt: []
+  - id: n1844a-p2-8
+    sentence: "Marx date l'apparition du prolétariat allemand de l'___ du pays, non d'une pauvreté très ancienne."
+    answer: "industrialisation"
+    alt: []
+  - id: n1844a-p2-9
+    sentence: "Une pauvreté naturelle-spontanée est une misère qui existe depuis toujours, comme celle que causent, par exemple, les mauvaises ___."
+    answer: "récoltes"
+    alt: []
+  - id: n1844a-p2-10
+    sentence: "Selon la lecture proposée, l'« état intermédiaire » désigne ici les couches moyennes, comme les artisans, que l'industrie ___."
+    answer: "ruine"
+    alt: []
+  - id: n1844a-p2-11
+    sentence: "Parce que la pauvreté du prolétariat est produite par la société, elle appelle un remède ___, et non naturel."
+    answer: "social"
+    alt: []
+  - id: n1844a-p2-12
+    sentence: "Le servage chrétien germanique est la forme que prenait en Allemagne, au Moyen Âge, la ___ des paysans à un seigneur."
+    answer: "dépendance"
+    alt: []
+  - id: n1844a-p2-13
+    sentence: "Même si la pauvreté naturelle et le servage viennent grossir ses rangs, la masse prolétarienne vient d'abord de la ___ de la société."
+    answer: "dissolution"
+    alt: []
 - id: n1844a-p3
   title: "Le prolétariat exprime le secret de sa propre existence"
+  notes: |-
+    **Quand le prolétariat annonce la dissolution de l'ordre du monde, il ne propose pas une doctrine venue d'ailleurs : il dit ce qu'il est.** Il {amber}est, dans les faits{/amber}, cette dissolution, et ce qu'il exprime est {coral}le secret de sa propre existence{/coral}.
+
+    ? **Propriété privée** : la possession exclusive d'un bien, avec le droit d'en disposer et d'en exclure les autres ; Marx pense surtout à celle des moyens de production.
+
+    **Même logique pour sa demande de négation de la propriété privée.** Il ne fait qu'ériger en principe de la société {coral}ce que la société a érigé comme son principe à lui{/coral}, ce qui est déjà incarné en lui, sans qu'il y soit pour quelque chose, {amber}en tant qu'il est le résultat négatif de la société{/amber} : le prolétaire est ce que la propriété privée produit comme manque, celui qui en est privé. Sa demande ne vient pas d'une théorie, mais de sa condition.
+
+    **La comparaison avec le roi le montre.** Le roi allemand qui appelle le peuple « son » peuple, comme il appelle le cheval « son » cheval, n'a aucun droit particulier à le faire : il énonce seulement ce que la société existante tient pour vrai, que {red}le propriétaire privé est roi{/red}. Le prolétaire a, par rapport au monde à venir, {coral}le même droit{/coral} : il énonce le principe de ce monde, comme le roi énonce celui du monde présent.
+
+    | | Le roi allemand | Le prolétaire |
+    | ce qu'il énonce | le peuple est sa propriété privée | la propriété privée doit être niée |
+    | ce que cela dit | que le propriétaire privé est roi | ce que la société a fait de lui |
+    | le monde dont il énonce le principe | le monde présent | le monde à venir |
+
+    ! Le prolétariat n'invente pas son exigence : il énonce ce que sa propre situation enseigne.
   passage:
     label: "§47"
     text: "Quand le prolétariat annonce la *dissolution de ce qui a été jusqu'à présent l'ordre du monde*, ce n'est que le *secret de sa propre existence* qu'il exprime ainsi, car il *est, dans les faits*, la dissolution de cet ordre du monde. Quand le prolétariat exige la *négation de la propriété privée*, il érige seulement en *principe de la société* ce que la société a érigé comme *son* principe à lui, ce qui est déjà, sans qu'il y soit pour quelque chose, incarné en *lui*, en tant qu'il est le résultat négatif de la société. Le prolétaire a alors, par rapport au monde à venir, le même droit que le *roi allemand* par rapport au monde présent quand ce dernier appelle le peuple *son* peuple, exactement de la même manière qu'il appelle le cheval *son* cheval. Le roi, en proclamant que le peuple est sa propriété privée, se contente d'énoncer que le propriétaire privé est roi."
-  points: []
+  points:
+  - id: n1844a-p3-1
+    fragment: "1/3"
+    sentence: "« Quand le prolétariat annonce ___, ce n'est que le *secret de sa propre existence* qu'il exprime ainsi, car il *est, dans les faits*, la dissolution de cet ordre du monde. »"
+    answer: "la dissolution de ce qui a été jusqu'à présent l'ordre du monde"
+    alt: []
+  - id: n1844a-p3-2
+    fragment: "1/3"
+    sentence: "« Quand le prolétariat annonce la *dissolution de ce qui a été jusqu'à présent l'ordre du monde*, ce n'est que ___ qu'il exprime ainsi, car il *est, dans les faits*, la dissolution de cet ordre du monde. »"
+    answer: "le secret de sa propre existence"
+    alt: []
+  - id: n1844a-p3-3
+    fragment: "1/3"
+    sentence: "« Quand le prolétariat annonce la *dissolution de ce qui a été jusqu'à présent l'ordre du monde*, ce n'est que le *secret de sa propre existence* qu'il exprime ainsi, car ___. »"
+    answer: "il est, dans les faits, la dissolution de cet ordre du monde"
+    alt: []
+  - id: n1844a-p3-4
+    fragment: "2/3"
+    sentence: "« Quand le prolétariat exige ___, il érige seulement en *principe de la société* ce que la société a érigé comme *son* principe à lui, ce qui est déjà, sans qu'il y soit pour quelque chose, incarné en *lui*, en tant qu'il est le résultat négatif de la société. »"
+    answer: "la négation de la propriété privée"
+    alt: []
+  - id: n1844a-p3-5
+    fragment: "2/3"
+    sentence: "« Quand le prolétariat exige la *négation de la propriété privée*, il érige seulement en *principe de la société* ___, ce qui est déjà, sans qu'il y soit pour quelque chose, incarné en *lui*, en tant qu'il est le résultat négatif de la société. »"
+    answer: "ce que la société a érigé comme son principe à lui"
+    alt: []
+  - id: n1844a-p3-6
+    fragment: "2/3"
+    sentence: "« Quand le prolétariat exige la *négation de la propriété privée*, il érige seulement en *principe de la société* ce que la société a érigé comme *son* principe à lui, ce qui est déjà, sans qu'il y soit pour quelque chose, incarné en *lui*, en tant qu'il est ___. »"
+    answer: "le résultat négatif de la société"
+    alt: []
+  - id: n1844a-p3-7
+    fragment: "3/3"
+    sentence: "« Le prolétaire a alors, par rapport au monde à venir, ___ par rapport au monde présent quand ce dernier appelle le peuple *son* peuple, exactement de la même manière qu'il appelle le cheval *son* cheval. Le roi, en proclamant que le peuple est sa propriété privée, se contente d'énoncer que le propriétaire privé est roi. »"
+    answer: "le même droit que le roi allemand"
+    alt: []
+  - id: n1844a-p3-8
+    fragment: "3/3"
+    sentence: "« Le prolétaire a alors, par rapport au monde à venir, le même droit que le *roi allemand* par rapport au monde présent quand ce dernier appelle le peuple *son* peuple, exactement de la même manière qu'___. Le roi, en proclamant que le peuple est sa propriété privée, se contente d'énoncer que le propriétaire privé est roi. »"
+    answer: "il appelle le cheval son cheval"
+    alt: []
+  - id: n1844a-p3-9
+    fragment: "3/3"
+    sentence: "« Le prolétaire a alors, par rapport au monde à venir, le même droit que le *roi allemand* par rapport au monde présent quand ce dernier appelle le peuple *son* peuple, exactement de la même manière qu'il appelle le cheval *son* cheval. Le roi, en proclamant que le peuple est sa propriété privée, se contente d'___. »"
+    answer: "énoncer que le propriétaire privé est roi"
+    alt: []
+  - id: n1844a-p3-10
+    sentence: "Le prolétariat ne propose pas une idée venue d'ailleurs : ce qu'il exprime est ce qu'il ___ déjà dans les faits."
+    answer: "est"
+    alt: []
+  - id: n1844a-p3-11
+    sentence: "Quand le prolétariat exige la négation de la propriété privée, il érige en principe de la société ce qui est déjà incarné en lui, sans qu'il y soit pour ___."
+    answer: "quelque chose"
+    alt: []
+  - id: n1844a-p3-12
+    sentence: "Le prolétariat est le « résultat négatif de la société » : il est celui que la propriété privée prive de ce qu'elle donne aux ___."
+    answer: "propriétaires"
+    alt: []
+  - id: n1844a-p3-13
+    sentence: "Appeler le peuple « son peuple » comme on appelle un cheval « son cheval », c'est traiter le peuple comme une ___ privée."
+    answer: "propriété"
+    alt: []
+  - id: n1844a-p3-14
+    sentence: "Le roi énonce le principe du monde présent ; le prolétaire énonce celui du monde à ___."
+    answer: "venir"
+    alt: []
+  - id: n1844a-p3-15
+    sentence: "La demande de négation de la propriété privée ne vient pas, selon cette lecture, d'une théorie, mais de la ___ du prolétariat."
+    answer: "condition"
+    alt: ["situation"]
 - id: n1844a-p4
   title: "La philosophie et le prolétariat, armes l'un de l'autre"
+  notes: |-
+    **La philosophie et le prolétariat s'arment mutuellement.** La philosophie trouve dans le prolétariat {amber}ses armes matérielles{/amber}, le prolétariat trouve dans la philosophie {amber}ses armes intellectuelles{/amber}. Ce paragraphe reprend le §29 : l'arme de la critique ne remplace pas la critique des armes, un pouvoir matériel ne se renverse que par un pouvoir matériel, et la théorie ne devient pouvoir matériel qu'en s'emparant des masses. Le prolétariat est cette force matérielle.
+
+    | | Ce que chacun apporte |
+    | la philosophie | des armes intellectuelles : la théorie qui dit au prolétariat ce que sa condition a d'indigne d'un être humain |
+    | le prolétariat | des armes matérielles : la force de masse sans laquelle la théorie ne renverse rien |
+
+    **L'image de l'éclair.** {violet}L'éclair de la pensée{/violet} est une lumière soudaine et violente qui frappe {violet}ce naïf sol populaire{/violet} : un peuple « naïf », qui n'a pas encore pensé sa condition, est frappé par la pensée comme la terre par la foudre. Quand elle l'aura frappé {amber}en profondeur{/amber}, c'est-à-dire pas seulement en surface, {coral}s'accomplira l'émancipation qui des Allemands fera des êtres humains{/coral}.
+
+    ! Ce n'est pas la philosophie qui s'émancipe seule, ni le prolétariat seul : l'émancipation vient de leur rencontre.
   passage:
     label: "§48"
     text: "De même que la philosophie trouve dans le prolétariat ses armes matérielles, le prolétariat trouve dans la philosophie ses armes intellectuelles, et dès que l'éclair de la pensée aura frappé en profondeur ce naïf sol populaire, s'accomplira l'émancipation qui des Allemands fera des êtres humains."
-  points: []
+  points:
+  - id: n1844a-p4-1
+    sentence: "« De même que la philosophie trouve dans le prolétariat ___, le prolétariat trouve dans la philosophie ses armes intellectuelles, et dès que l'éclair de la pensée aura frappé en profondeur ce naïf sol populaire, s'accomplira l'émancipation qui des Allemands fera des êtres humains. »"
+    answer: "ses armes matérielles"
+    alt: []
+  - id: n1844a-p4-2
+    sentence: "« De même que la philosophie trouve dans le prolétariat ses armes matérielles, le prolétariat trouve dans la philosophie ___, et dès que l'éclair de la pensée aura frappé en profondeur ce naïf sol populaire, s'accomplira l'émancipation qui des Allemands fera des êtres humains. »"
+    answer: "ses armes intellectuelles"
+    alt: []
+  - id: n1844a-p4-3
+    sentence: "« De même que la philosophie trouve dans le prolétariat ses armes matérielles, le prolétariat trouve dans la philosophie ses armes intellectuelles, et dès que ___, s'accomplira l'émancipation qui des Allemands fera des êtres humains. »"
+    answer: "l'éclair de la pensée aura frappé en profondeur ce naïf sol populaire"
+    alt: []
+  - id: n1844a-p4-4
+    sentence: "« De même que la philosophie trouve dans le prolétariat ses armes matérielles, le prolétariat trouve dans la philosophie ses armes intellectuelles, et dès que l'éclair de la pensée aura frappé en profondeur ce naïf sol populaire, s'accomplira ___. »"
+    answer: "l'émancipation qui des Allemands fera des êtres humains"
+    alt: []
+  - id: n1844a-p4-5
+    sentence: "Selon le §29, l'arme de la critique ne remplace pas la critique des ___ : c'est pourquoi la philosophie a besoin du prolétariat."
+    answer: "armes"
+    alt: []
+  - id: n1844a-p4-6
+    sentence: "Le sol populaire est dit « naïf » : c'est un peuple qui n'a pas encore ___ sa condition."
+    answer: "pensé"
+    alt: []
+  - id: n1844a-p4-7
+    sentence: "La philosophie apporte au prolétariat des armes intellectuelles : la théorie qui lui dit que sa condition est indigne d'un être ___."
+    answer: "humain"
+    alt: []
+  - id: n1844a-p4-8
+    sentence: "L'union des armes se lit en deux sens : la philosophie fournit la théorie, le prolétariat fournit la ___."
+    answer: "force"
+    alt: []
+  - id: n1844a-p4-9
+    sentence: "Ce paragraphe prolonge le §29 : la théorie devient un pouvoir matériel quand elle s'empare des ___."
+    answer: "masses"
+    alt: []
+  - id: n1844a-p4-10
+    sentence: "Selon le §47, le prolétariat exprime le secret de sa propre existence : la philosophie lui donne les mots pour le ___."
+    answer: "dire"
+    alt: []
 - id: n1844a-p5
   title: "Le résultat : l'émancipation de l'Allemand est l'émancipation de l'être humain"
+  notes: |-
+    **Marx résume : la seule libération pratique possible en Allemagne est celle qui part de la théorie faisant de l'être humain l'être suprême, et elle doit être totale.** La première phrase dit {coral}d'où elle part{/coral} : de la théorie que le §29 a introduite, qui proclame que l'être humain est pour l'être humain l'être suprême.
+
+    ? **Dépassements partiels du Moyen Âge** : les solutions à moitié modernes qui sortent du Moyen Âge sans l'abolir complètement, comme une émancipation seulement politique (§40). Pour Marx, l'Allemagne ne peut pas procéder par étapes, comme la France : il lui faut dépasser en même temps le Moyen Âge et ces dépassements partiels.
+
+    **Pourquoi une révolution « de fond en comble » ?** Parce que {coral}aucune forme de servitude ne peut être brisée en Allemagne sans briser toute forme de servitude{/coral} : une servitude brisée à moitié, comme celle du Moyen Âge, laisserait en place celle de l'ordre moderne, et inversement. L'Allemagne « va au fond des choses » : elle ne peut pas faire une demi-révolution, et c'est ce qui rend son émancipation universelle.
+
+    **Puis la formule finale.** {coral}L'émancipation de l'Allemand est l'émancipation de l'être humain{/coral} : en libérant l'Allemand, on libère l'être humain, puisque la classe qui émancipe est celle qui a perdu l'être humain tout entier (§45). {amber}Le cerveau{/amber} de cette émancipation est la philosophie, {amber}son cœur{/amber} le prolétariat : l'un pense, l'autre porte. Et chacun a besoin de l'autre : {coral}la philosophie ne peut s'effectuer sans la suppression du prolétariat{/coral}, car l'effectuer, c'est faire cesser la condition de ceux qui sont réduits à la perte complète de l'être humain ; {coral}le prolétariat ne peut se supprimer sans l'effectuation de la philosophie{/coral}, car il ne se supprime qu'en reconquérant l'être humain, ce que la philosophie pense.
+
+    ! « Unique » ne veut pas dire que la théorie suffit : la seule libération pratique possible est celle qui part de la théorie, mais elle se fait par le prolétariat.
   passage:
     label: "§49-50"
     text: "Résumons le résultat : L'unique libération *pratique* qui soit possible en Allemagne est la libération du point de vue *de la* théorie qui proclame que l'être humain est pour l'être humain l'être suprême. En Allemagne, s'émanciper du *Moyen Âge* n'est possible qu'en s'émancipant en même temps des dépassements *partiels* du Moyen Âge. En Allemagne, *aucune* forme de servitude ne peut être brisée sans briser *toute* forme de servitude. L'Allemagne, *qui va au fond des choses*, ne peut faire la révolution sans la faire *de fond en comble*. L'émancipation de l'Allemand est l'émancipation de l'être humain. Le *cerveau* de cette émancipation est la *philosophie*, son *cœur*, le *prolétariat*. La philosophie ne peut s'effectuer sans la suppression du prolétariat, le prolétariat ne peut pas se supprimer sans l'effectuation de la philosophie."
-  points: []
+  points:
+  - id: n1844a-p5-1
+    fragment: "1/3"
+    sentence: "« Résumons le résultat : ___ est la libération du point de vue *de la* théorie qui proclame que l'être humain est pour l'être humain l'être suprême. »"
+    answer: "L'unique libération pratique qui soit possible en Allemagne"
+    alt: []
+  - id: n1844a-p5-2
+    fragment: "1/3"
+    sentence: "« Résumons le résultat : L'unique libération *pratique* qui soit possible en Allemagne est ___ qui proclame que l'être humain est pour l'être humain l'être suprême. »"
+    answer: "la libération du point de vue de la théorie"
+    alt: []
+  - id: n1844a-p5-3
+    fragment: "1/3"
+    sentence: "« Résumons le résultat : L'unique libération *pratique* qui soit possible en Allemagne est la libération du point de vue *de la* théorie qui proclame que ___. »"
+    answer: "l'être humain est pour l'être humain l'être suprême"
+    alt: []
+  - id: n1844a-p5-4
+    fragment: "2/3"
+    sentence: "« En Allemagne, ___ n'est possible qu'en s'émancipant en même temps ___. En Allemagne, *aucune* forme de servitude ne peut être brisée sans briser *toute* forme de servitude. L'Allemagne, *qui va au fond des choses*, ne peut faire la révolution sans la faire *de fond en comble*. »"
+    answer: "s'émanciper du Moyen Âge ; des dépassements partiels du Moyen Âge"
+    alt: []
+  - id: n1844a-p5-5
+    fragment: "2/3"
+    sentence: "« En Allemagne, s'émanciper du *Moyen Âge* n'est possible qu'en s'émancipant en même temps des dépassements *partiels* du Moyen Âge. En Allemagne, ___ ne peut être brisée sans briser ___. L'Allemagne, *qui va au fond des choses*, ne peut faire la révolution sans la faire *de fond en comble*. »"
+    answer: "aucune forme de servitude ; toute forme de servitude"
+    alt: []
+  - id: n1844a-p5-6
+    fragment: "2/3"
+    sentence: "« En Allemagne, s'émanciper du *Moyen Âge* n'est possible qu'en s'émancipant en même temps des dépassements *partiels* du Moyen Âge. En Allemagne, *aucune* forme de servitude ne peut être brisée sans briser *toute* forme de servitude. L'Allemagne, ___, ne peut faire la révolution sans la faire ___. »"
+    answer: "qui va au fond des choses ; de fond en comble"
+    alt: []
+  - id: n1844a-p5-7
+    fragment: "3/3"
+    sentence: "« ___. Le *cerveau* de cette émancipation est la *philosophie*, son *cœur*, le *prolétariat*. La philosophie ne peut s'effectuer sans la suppression du prolétariat, le prolétariat ne peut pas se supprimer sans l'effectuation de la philosophie. »"
+    answer: "L'émancipation de l'Allemand est l'émancipation de l'être humain"
+    alt: []
+  - id: n1844a-p5-8
+    fragment: "3/3"
+    sentence: "« L'émancipation de l'Allemand est l'émancipation de l'être humain. ___, son *cœur*, le *prolétariat*. La philosophie ne peut s'effectuer sans la suppression du prolétariat, le prolétariat ne peut pas se supprimer sans l'effectuation de la philosophie. »"
+    answer: "Le cerveau de cette émancipation est la philosophie"
+    alt: []
+  - id: n1844a-p5-9
+    fragment: "3/3"
+    sentence: "« L'émancipation de l'Allemand est l'émancipation de l'être humain. Le *cerveau* de cette émancipation est la *philosophie*, ___. La philosophie ne peut s'effectuer sans la suppression du prolétariat, le prolétariat ne peut pas se supprimer sans l'effectuation de la philosophie. »"
+    answer: "son cœur, le prolétariat"
+    alt: []
+  - id: n1844a-p5-10
+    fragment: "3/3"
+    sentence: "« L'émancipation de l'Allemand est l'émancipation de l'être humain. Le *cerveau* de cette émancipation est la *philosophie*, son *cœur*, le *prolétariat*. La philosophie ___, le prolétariat ne peut pas se supprimer sans l'effectuation de la philosophie. »"
+    answer: "ne peut s'effectuer sans la suppression du prolétariat"
+    alt: []
+  - id: n1844a-p5-11
+    fragment: "3/3"
+    sentence: "« L'émancipation de l'Allemand est l'émancipation de l'être humain. Le *cerveau* de cette émancipation est la *philosophie*, son *cœur*, le *prolétariat*. La philosophie ne peut s'effectuer sans la suppression du prolétariat, le prolétariat ___. »"
+    answer: "ne peut pas se supprimer sans l'effectuation de la philosophie"
+    alt: []
+  - id: n1844a-p5-12
+    sentence: "Selon Marx, la seule libération pratique possible en Allemagne part d'une ___, celle qui proclame que l'être humain est l'être suprême."
+    answer: "théorie"
+    alt: []
+  - id: n1844a-p5-13
+    sentence: "Les dépassements partiels du Moyen Âge sont, selon la lecture proposée, des solutions à moitié modernes comme l'émancipation seulement ___."
+    answer: "politique"
+    alt: []
+  - id: n1844a-p5-14
+    sentence: "Selon la lecture proposée, l'Allemagne ne peut pas s'émanciper du Moyen Âge par ___, comme la France, mais d'un seul coup et de fond en comble."
+    answer: "étapes"
+    alt: []
+  - id: n1844a-p5-15
+    sentence: "« Aucune forme de servitude ne peut être brisée sans briser toute forme de servitude » : en Allemagne, la révolution ne peut pas être ___."
+    answer: "partielle"
+    alt: []
+  - id: n1844a-p5-16
+    sentence: "Le cerveau pense et le cœur anime : en faisant de la philosophie le cerveau et du prolétariat le cœur, Marx unit la ___ et la force."
+    answer: "pensée"
+    alt: []
+  - id: n1844a-p5-17
+    sentence: "Effectuer la philosophie, c'est faire cesser la condition de ceux qui sont réduits à la perte complète de l'___."
+    answer: "être humain"
+    alt: []
+  - id: n1844a-p5-18
+    sentence: "Le prolétariat ne se supprime qu'en reconquérant l'être humain, c'est-à-dire en effectuant ce que la ___ pense."
+    answer: "philosophie"
+    alt: []
 - id: n1844a-p6
   title: "Le chant du coq gaulois"
+  notes: |-
+    **L'*Introduction* se termine sur une promesse : l'Allemagne ressuscitera quand ses conditions internes seront réunies, et le signal viendra de France.** Les {violet}conditions internes{/violet} sont celles que le texte vient de nommer : une théorie radicale, et une classe aux chaînes radicales.
+
+    ? **Coq gaulois** : le coq est l'emblème de la France, que les Latins appelaient la Gaule, et son chant annonce l'aube. Marx s'en sert pour dire que l'impulsion viendra du côté français, celui de la Révolution de 1789, dont l'Allemagne était « tout juste » au niveau (§9).
+
+    La phrase répond au début de l'*Introduction*, où l'Allemagne n'avait que sa philosophie pour être la contemporaine du présent. Elle dit que la résurrection allemande, {amber}le jour où elle quittera ce retard{/amber}, ne viendra pas d'elle seule : il faut {coral}que les conditions internes soient réunies{/coral}, et {coral}qu'un signal extérieur l'annonce{/coral}. Marx écrit cette phrase à Paris, dans une revue franco-allemande, et elle s'adresse aux lecteurs des deux pays.
+
+    ! Le coq gaulois n'est pas la cause de la résurrection allemande : il l'annonce, quand les conditions internes sont réunies.
   passage:
     label: "§51"
     text: "Quand toutes les conditions internes seront réunies, le *jour de la résurrection allemande* sera annoncé par le *chant du coq gaulois*."
-  points: []
+  points:
+  - id: n1844a-p6-1
+    sentence: "« Quand ___ seront réunies, le *jour de la résurrection allemande* sera annoncé par le *chant du coq gaulois*. »"
+    answer: "toutes les conditions internes"
+    alt: []
+  - id: n1844a-p6-2
+    sentence: "« Quand toutes les conditions internes seront réunies, ___ sera annoncé par le *chant du coq gaulois*. »"
+    answer: "le jour de la résurrection allemande"
+    alt: []
+  - id: n1844a-p6-3
+    sentence: "« Quand toutes les conditions internes seront réunies, le *jour de la résurrection allemande* sera annoncé par ___. »"
+    answer: "le chant du coq gaulois"
+    alt: []
+  - id: n1844a-p6-4
+    sentence: "Le coq est l'emblème de la ___, que les Latins appelaient la Gaule : Marx s'en sert pour désigner l'impulsion française."
+    answer: "France"
+    alt: []
+  - id: n1844a-p6-5
+    sentence: "Le chant du coq annonce l'aube : le chant du coq gaulois est le ___ qui annoncera la résurrection allemande."
+    answer: "signal"
+    alt: []
+  - id: n1844a-p6-6
+    sentence: "Les conditions internes de la résurrection allemande sont celles qu'on vient de voir : une théorie radicale et une classe aux chaînes ___."
+    answer: "radicales"
+    alt: []
+  - id: n1844a-p6-7
+    sentence: "Le signal de la résurrection allemande vient de France, mais il ne peut agir que lorsque les conditions ___ sont réunies."
+    answer: "internes"
+    alt: []
+  - id: n1844a-p6-8
+    sentence: "La « résurrection allemande » est la sortie du retard décrit au début de l'*Introduction*, où l'Allemagne n'était, disait Marx, que « tout juste en l'an ___ »."
+    answer: "1789"
+    alt: []
+  - id: n1844a-p6-9
+    sentence: "La phrase fait écho à un thème de l'*Introduction* : l'Allemagne n'est la contemporaine du présent que par sa ___."
+    answer: "philosophie"
+    alt: []
