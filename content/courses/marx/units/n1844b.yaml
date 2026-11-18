@@ -1,10 +1,10 @@
-# Unité de texte (voir content/textes.md), en préparation : texte isolé et découpé
-# en leçons par paragraphes, sans rappels ni cartes. Marx, « Contribution à la
-# critique de la philosophie du droit de Hegel. Introduction » (1844), §1 à §7,
-# d'après la même traduction que n1844 (Annales franco-allemandes, Éditions
-# sociales, GEME ; PDF Cairn fourni par l'utilisateur). Les italiques sont ceux de
-# l'original ; appels de note, repères de page et astérisques de l'édition retirés.
-# Pas encore branchée dans une piste.
+# Unité de texte (voir content/textes.md) : Marx, « Contribution à la critique de
+# la philosophie du droit de Hegel. Introduction » (1844), §1 à §7, d'après la même
+# traduction que n1844 (Annales franco-allemandes, Éditions sociales, GEME ; PDF
+# Cairn fourni par l'utilisateur). Les italiques sont ceux de l'original ; appels de
+# note, repères de page et astérisques de l'édition retirés. Sans commentaire écrit :
+# les rappels reposent sur le texte lui-même, les notions sont définies en encadré à
+# leur première apparition.
 
 id: n1844b
 title: "La critique de la religion (1844)"
@@ -14,33 +14,501 @@ color: coral
 intro: |-
   Ouverture de l'*Introduction* de 1844. La critique de la religion y est tenue pour achevée : Marx en rappelle le principe (c'est l'être humain qui fait la religion), le sens (la religion, soupir de la créature opprimée), et ce qu'elle appelle, la critique de la terre, du droit et de la politique.
 lessons:
+- id: n1844b-i1
+  title: "Une critique de la religion qui sert de point de départ"
+  notes: |-
+    Ces sept paragraphes ouvrent l'*Introduction* à la *Contribution à la critique de la philosophie du droit de Hegel*, que {sky}Marx{/sky} écrit à Paris à la fin de 1843 pour l'unique numéro des *Annales franco-allemandes*, la revue qu'il fonde avec {sky}Ruge{/sky}. Le texte commence par un {amber}acquis{/amber} : {coral}la critique de la religion est pour l'essentiel terminée{/coral}. Ces paragraphes en rappellent le principe, en disent le sens, puis en tirent {coral}la tâche suivante : critiquer la terre{/coral}, c'est-à-dire le droit et la politique.
+
+    **Le fil est le suivant : une fois la religion critiquée, on peut passer à ce qu'elle justifiait.** Marx montre d'abord que {violet}l'être humain fait la religion{/violet}, et que le monde qui la produit est un monde à l'envers (§3) ; puis que la religion exprime la misère réelle en l'apaisant (§4-5) ; puis que sa critique sert à agir (§6) ; enfin que la tâche passe du ciel à la terre (§7).
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | poser que la critique de la religion est achevée et qu'elle est la présupposition de toute critique | §1-2 | Réfuter le plaidoyer céleste de l'erreur compromet son existence terrestre : l'être humain n'ira plus se chercher dans le ciel. |
+    | établir que l'être humain fait la religion parce que le monde qui la produit est à l'envers | §3 | La religion est la conscience de soi d'un être humain qui ne s'est pas encore conquis lui-même, donc lutter contre elle, c'est lutter contre ce monde. |
+    | dire ce qu'elle exprime et ce que sa critique exige | §4-5 | La religion exprime la misère réelle et en même temps l'apaise ; la supprimer, c'est exiger le bonheur effectif et donc critiquer la vallée de larmes. |
+    | dire à quoi sert la critique de la religion | §6 | Elle arrache les fleurs imaginaires pour que l'être humain brise les chaînes et se tourne vers lui-même. |
+    | en tirer la tâche suivante | §7 | Il reste à établir la vérité de l'ici-bas : critique du ciel en critique de la terre, de la religion en critique du droit, de la théologie en critique de la politique. |
+
+    ! Ces paragraphes ne critiquent pas encore le droit ni la politique : ils expliquent pourquoi il faut passer à leur critique.
+  passage:
+    label: "Introduction"
+  points:
+  - id: n1844b-i1-1
+    sentence: "Pour l'Allemagne, dit Marx, la critique de la religion est pour l'essentiel ___."
+    answer: "terminée"
+    alt: []
+  - id: n1844b-i1-2
+    sentence: "Marx écrit que la critique de la religion est la ___ de toute critique."
+    answer: "présupposition"
+    alt: []
+  - id: n1844b-i1-3
+    sentence: "Les sept premiers paragraphes de l'*Introduction* mènent de la critique du ciel à la critique de la ___."
+    answer: "terre"
+    alt: []
+  - id: n1844b-i1-4
+    sentence: "Dans l'ordre du texte, Marx établit d'abord, au §3, que c'est l'être humain qui fait la ___."
+    answer: "religion"
+    alt: []
+  - id: n1844b-i1-5
+    sentence: "Aux §4-5, Marx dit ce que la religion exprime, puis ce que sa critique exige : le bonheur ___."
+    answer: "effectif"
+    alt: []
+  - id: n1844b-i1-6
+    sentence: "Au §6, la critique de la religion arrache les fleurs imaginaires qui ornent les ___ pour que l'être humain les brise."
+    answer: "chaînes"
+    alt: []
+  - id: n1844b-i1-7
+    sentence: "La tâche de l'histoire et de la philosophie, après la critique de la religion, est d'établir la vérité de l'___."
+    answer: "ici-bas"
+    alt: []
+  - id: n1844b-i1-8
+    sentence: "L'*Introduction* paraît dans l'unique numéro des *Annales franco-allemandes*, revue de Marx et de ___."
+    answer: "Ruge"
+    alt: []
 - id: n1844b-p1
   title: "La critique de la religion est achevée et compromet l'existence séculière de l'erreur"
+  notes: |-
+    **La critique de la religion est achevée, et c'est ce qui permet de s'en prendre à ce qu'elle protégeait : l'existence terrestre de l'erreur.** Marx distingue deux existences de {violet}l'erreur{/violet} : une existence {amber}céleste{/amber}, la religion, et une existence {amber}séculière{/amber}, le monde terrestre.
+
+    ? **Oratio pro aris et focis** : expression latine, « discours pour les autels et les foyers », le plaidoyer de celui qui défend ce qu'il tient pour le plus sacré. Marx l'applique à la religion, {yellow}plaidoyer céleste{/yellow} de l'erreur.
+
+    ? **Séculier** : du siècle, c'est-à-dire du monde terrestre, par opposition au ciel et à l'Église. L'existence séculière de l'erreur est son existence dans l'État et dans la société.
+
+    Une fois le plaidoyer céleste {red}réfuté{/red}, {coral}l'existence séculière de l'erreur est compromise{/coral} : l'ordre terrestre ne peut plus se justifier en renvoyant au ciel, et c'est pourquoi la critique de la religion est {coral}la présupposition de toute critique{/coral}. Le §3 le précisera : la religion est « le fondement général de sa consolation et de sa justification ».
+
+    **La seconde phrase dit ce que l'être humain a découvert.** Il cherchait un être surhumain dans le ciel et n'y a trouvé que {amber}le reflet de lui-même{/amber}. Il ne se contentera donc plus de trouver, là où il cherche sa vraie effectivité, {red}seulement l'apparence de lui-même, le non-humain{/red} : cette effectivité se cherche {coral}ici-bas{/coral}, le seul endroit où il peut la chercher.
+
+    ! L'« erreur » n'est pas ici une simple idée fausse : c'est tout ce que la religion justifie, un ordre du monde, qui a une existence terrestre.
   passage:
     label: "§1-2"
     text: "En ce qui concerne l'Allemagne, la *critique de la religion* est pour l'essentiel terminée, et la critique de la religion est la présupposition de toute critique. L'existence *séculière* de l'erreur est compromise à partir du moment où son *oratio pro aris et focis céleste* a été réfutée. L'être humain qui, dans la réalité fantastique du ciel où il cherchait un être surhumain, n'a trouvé que le *reflet* de lui-même ne tendra plus à trouver seulement l'*apparence* de lui-même, le non-humain, là où il cherche sa vraie effectivité, au seul endroit où il peut la chercher."
-  points: []
+  points:
+  - id: n1844b-p1-1
+    fragment: "1/2"
+    sentence: "« En ce qui concerne l'Allemagne, la *critique de la religion* est ___, et la critique de la religion est la présupposition de toute critique. L'existence *séculière* de l'erreur est compromise à partir du moment où son *oratio pro aris et focis céleste* a été réfutée. »"
+    answer: "pour l'essentiel terminée"
+    alt: []
+  - id: n1844b-p1-2
+    fragment: "1/2"
+    sentence: "« En ce qui concerne l'Allemagne, la *critique de la religion* est pour l'essentiel terminée, et la critique de la religion est ___. L'existence *séculière* de l'erreur est compromise à partir du moment où son *oratio pro aris et focis céleste* a été réfutée. »"
+    answer: "la présupposition de toute critique"
+    alt: []
+  - id: n1844b-p1-3
+    fragment: "1/2"
+    sentence: "« En ce qui concerne l'Allemagne, la *critique de la religion* est pour l'essentiel terminée, et la critique de la religion est la présupposition de toute critique. ___ à partir du moment où son *oratio pro aris et focis céleste* a été réfutée. »"
+    answer: "L'existence séculière de l'erreur est compromise"
+    alt: []
+  - id: n1844b-p1-4
+    fragment: "1/2"
+    sentence: "« En ce qui concerne l'Allemagne, la *critique de la religion* est pour l'essentiel terminée, et la critique de la religion est la présupposition de toute critique. L'existence *séculière* de l'erreur est compromise à partir du moment où son ___ a été réfutée. »"
+    answer: "oratio pro aris et focis céleste"
+    alt: []
+  - id: n1844b-p1-5
+    fragment: "2/2"
+    sentence: "« L'être humain qui, ___ où il cherchait un être surhumain, n'a trouvé que le *reflet* de lui-même ne tendra plus à trouver seulement l'*apparence* de lui-même, le non-humain, là où il cherche sa vraie effectivité, au seul endroit où il peut la chercher. »"
+    answer: "dans la réalité fantastique du ciel"
+    alt: []
+  - id: n1844b-p1-6
+    fragment: "2/2"
+    sentence: "« L'être humain qui, dans la réalité fantastique du ciel où il cherchait un être surhumain, ___ ne tendra plus à trouver seulement l'*apparence* de lui-même, le non-humain, là où il cherche sa vraie effectivité, au seul endroit où il peut la chercher. »"
+    answer: "n'a trouvé que le reflet de lui-même"
+    alt: []
+  - id: n1844b-p1-7
+    fragment: "2/2"
+    sentence: "« L'être humain qui, dans la réalité fantastique du ciel où il cherchait un être surhumain, n'a trouvé que le *reflet* de lui-même ne tendra plus à trouver seulement ___, là où il cherche sa vraie effectivité, au seul endroit où il peut la chercher. »"
+    answer: "l'apparence de lui-même, le non-humain"
+    alt: []
+  - id: n1844b-p1-8
+    fragment: "2/2"
+    sentence: "« L'être humain qui, dans la réalité fantastique du ciel où il cherchait un être surhumain, n'a trouvé que le *reflet* de lui-même ne tendra plus à trouver seulement l'*apparence* de lui-même, le non-humain, là où il cherche ___, au seul endroit où il peut la chercher. »"
+    answer: "sa vraie effectivité"
+    alt: []
+  - id: n1844b-p1-9
+    sentence: "Selon Marx, l'erreur a deux existences : une existence céleste, la religion, et une existence ___, qui est le monde terrestre."
+    answer: "séculière"
+    alt: []
+  - id: n1844b-p1-10
+    sentence: "Une « oratio pro aris et focis » est un plaidoyer pour les autels et les foyers : Marx y voit la religion comme le plaidoyer ___ de l'erreur."
+    answer: "céleste"
+    alt: []
+  - id: n1844b-p1-11
+    sentence: "« Séculier » signifie qui appartient au siècle, c'est-à-dire au monde ___, par opposition au ciel."
+    answer: "terrestre"
+    alt: []
+  - id: n1844b-p1-12
+    sentence: "Réfuter le plaidoyer céleste de l'erreur compromet son existence séculière : le monde terrestre ne peut plus se justifier en renvoyant au ___."
+    answer: "ciel"
+    alt: []
+  - id: n1844b-p1-13
+    sentence: "Selon la lecture proposée, l'être humain qui a retrouvé son reflet dans le ciel exige désormais de chercher sa vraie effectivité sur la ___."
+    answer: "terre"
+    alt: []
+  - id: n1844b-p1-14
+    sentence: "La critique de la religion est dite « pour l'essentiel » terminée : Marx ne la refait pas ici, il s'en sert comme ___ de la critique du monde."
+    answer: "point de départ"
+    alt: ["présupposition"]
 - id: n1844b-p2
   title: "C'est l'être humain qui fait la religion"
+  notes: |-
+    **La religion n'est pas ce qui fait l'être humain : c'est l'être humain qui la fait, parce que le monde où il vit est un monde à l'envers.** La religion est {coral}la conscience de soi{/coral} d'un être humain {amber}qui ne s'est pas encore conquis lui-même{/amber}, ou qui s'est déjà reperdu. Mais cet être humain n'est pas {red}une essence abstraite hors du monde{/red} : c'est {coral}le monde de l'être humain, l'État, la société{/coral}.
+
+    ? **Monde à l'envers, conscience inversée du monde** : le monde de l'État et de la société est « à l'envers » parce que l'être humain y est privé de sa vraie effectivité, comme le dit la fin du paragraphe, et il produit une conscience qui le représente elle aussi à l'envers : la religion.
+
+    | | Ce que c'est | Rapport à la religion |
+    | l'être humain | pas une essence abstraite hors du monde : le monde de l'être humain, l'État, la société | il la produit |
+    | ce monde | un monde à l'envers | il en produit la conscience inversée |
+    | la religion | la théorie générale de ce monde, son complément solennel, l'effectuation fantastique de l'essence humaine | l'arôme spirituel de ce monde |
+
+    **La religion est la théorie générale de ce monde.** Marx énumère ce qu'elle lui apporte : un {violet}compendium encyclopédique{/violet} (un résumé complet), {violet}une logique sous forme populaire{/violet}, un point d'honneur spiritualiste, un enthousiasme, une sanction morale, {amber}un complément solennel{/amber}, et surtout {coral}le fondement général de sa consolation et de sa justification{/coral} : elle console de ce monde et le justifie.
+
+    **Pourquoi l'appelle-t-il « effectuation fantastique de l'essence humaine » ?** Parce que {red}l'essence humaine ne possède pas de vraie effectivité{/red} dans ce monde : ce qu'il n'a pas dans la réalité, l'être humain se le donne en imagination, dans le ciel. D'où la conséquence : {coral}lutter contre la religion, c'est indirectement lutter contre ce monde-là{/coral}, dont elle est {amber}l'arôme spirituel{/amber}, c'est-à-dire l'émanation immatérielle par laquelle on le reconnaît.
+
+    ! « L'être humain » n'est pas ici un individu isolé ni une essence abstraite : c'est le monde de l'être humain, et c'est pourquoi sa religion est une affaire de ce monde.
   passage:
     label: "§3"
     text: "Le fondement de la critique irréligieuse est le suivant : c'est l'être humain qui fait la religion, ce n'est pas la religion qui fait l'être humain. La religion est en effet la conscience de soi et le sentiment de soi de l'être humain qui ne s'est pas encore conquis lui-même, ou bien qui s'est déjà perdu à nouveau. Mais *l'être humain*, ce n'est pas une essence abstraite recroquevillée hors du monde. L'être humain, c'est *le monde de l'être humain*, l'État, la société. Cet État, cette société produisent la religion, une *conscience inversée du monde*, parce qu'elles sont un *monde à l'envers*. La religion est la théorie générale de ce monde, son compendium encyclopédique, sa logique présentée sous une forme populaire, son *point-d'honneur* spiritualiste, son enthousiasme, sa sanction morale, son complément solennel, le fondement général de sa consolation et de sa justification. Elle est l'*effectuation fantastique* de l'essence humaine, parce que l'*essence humaine* ne possède pas de vraie effectivité. Lutter contre la religion, c'est donc indirectement lutter contre *ce monde-là*, dont la religion est l'*arôme* spirituel."
-  points: []
+  points:
+  - id: n1844b-p2-1
+    fragment: "1/4"
+    sentence: "« Le fondement de la critique irréligieuse est le suivant : ___, ___. La religion est en effet la conscience de soi et le sentiment de soi de l'être humain qui ne s'est pas encore conquis lui-même, ou bien qui s'est déjà perdu à nouveau. »"
+    answer: "c'est l'être humain qui fait la religion ; ce n'est pas la religion qui fait l'être humain"
+    alt: []
+  - id: n1844b-p2-2
+    fragment: "1/4"
+    sentence: "« Le fondement de la critique irréligieuse est le suivant : c'est l'être humain qui fait la religion, ce n'est pas la religion qui fait l'être humain. La religion est en effet ___ qui ne s'est pas encore conquis lui-même, ou bien qui s'est déjà perdu à nouveau. »"
+    answer: "la conscience de soi et le sentiment de soi de l'être humain"
+    alt: []
+  - id: n1844b-p2-3
+    fragment: "1/4"
+    sentence: "« Le fondement de la critique irréligieuse est le suivant : c'est l'être humain qui fait la religion, ce n'est pas la religion qui fait l'être humain. La religion est en effet la conscience de soi et le sentiment de soi de l'être humain ___, ou bien ___. »"
+    answer: "qui ne s'est pas encore conquis lui-même ; qui s'est déjà perdu à nouveau"
+    alt: []
+  - id: n1844b-p2-4
+    fragment: "2/4"
+    sentence: "« Mais *l'être humain*, ce n'est pas ___. L'être humain, c'est *le monde de l'être humain*, l'État, la société. Cet État, cette société produisent la religion, une *conscience inversée du monde*, parce qu'elles sont un *monde à l'envers*. »"
+    answer: "une essence abstraite recroquevillée hors du monde"
+    alt: []
+  - id: n1844b-p2-5
+    fragment: "2/4"
+    sentence: "« Mais *l'être humain*, ce n'est pas une essence abstraite recroquevillée hors du monde. L'être humain, c'est ___. Cet État, cette société produisent la religion, une *conscience inversée du monde*, parce qu'elles sont un *monde à l'envers*. »"
+    answer: "le monde de l'être humain, l'État, la société"
+    alt: []
+  - id: n1844b-p2-6
+    fragment: "2/4"
+    sentence: "« Mais *l'être humain*, ce n'est pas une essence abstraite recroquevillée hors du monde. L'être humain, c'est *le monde de l'être humain*, l'État, la société. Cet État, cette société produisent la religion, ___, parce qu'elles sont ___. »"
+    answer: "une conscience inversée du monde ; un monde à l'envers"
+    alt: []
+  - id: n1844b-p2-7
+    fragment: "3/4"
+    sentence: "« La religion est ___, son compendium encyclopédique, sa logique présentée sous une forme populaire, son *point-d'honneur* spiritualiste, son enthousiasme, sa sanction morale, son complément solennel, le fondement général de sa consolation et de sa justification. »"
+    answer: "la théorie générale de ce monde"
+    alt: []
+  - id: n1844b-p2-8
+    fragment: "3/4"
+    sentence: "« La religion est la théorie générale de ce monde, ___, ___, son *point-d'honneur* spiritualiste, son enthousiasme, sa sanction morale, son complément solennel, le fondement général de sa consolation et de sa justification. »"
+    answer: "son compendium encyclopédique ; sa logique présentée sous une forme populaire"
+    alt: []
+  - id: n1844b-p2-9
+    fragment: "3/4"
+    sentence: "« La religion est la théorie générale de ce monde, son compendium encyclopédique, sa logique présentée sous une forme populaire, son *point-d'honneur* spiritualiste, son enthousiasme, sa sanction morale, ___, le fondement général de sa consolation et de sa justification. »"
+    answer: "son complément solennel"
+    alt: []
+  - id: n1844b-p2-10
+    fragment: "3/4"
+    sentence: "« La religion est la théorie générale de ce monde, son compendium encyclopédique, sa logique présentée sous une forme populaire, son *point-d'honneur* spiritualiste, son enthousiasme, sa sanction morale, son complément solennel, ___. »"
+    answer: "le fondement général de sa consolation et de sa justification"
+    alt: []
+  - id: n1844b-p2-11
+    fragment: "4/4"
+    sentence: "« Elle est ___, parce que l'*essence humaine* ne possède pas de vraie effectivité. Lutter contre la religion, c'est donc indirectement lutter contre *ce monde-là*, dont la religion est l'*arôme* spirituel. »"
+    answer: "l'effectuation fantastique de l'essence humaine"
+    alt: []
+  - id: n1844b-p2-12
+    fragment: "4/4"
+    sentence: "« Elle est l'*effectuation fantastique* de l'essence humaine, parce que l'*essence humaine* ___. Lutter contre la religion, c'est donc indirectement lutter contre *ce monde-là*, dont la religion est l'*arôme* spirituel. »"
+    answer: "ne possède pas de vraie effectivité"
+    alt: []
+  - id: n1844b-p2-13
+    fragment: "4/4"
+    sentence: "« Elle est l'*effectuation fantastique* de l'essence humaine, parce que l'*essence humaine* ne possède pas de vraie effectivité. Lutter contre la religion, c'est donc ___, dont la religion est l'*arôme* spirituel. »"
+    answer: "indirectement lutter contre ce monde-là"
+    alt: []
+  - id: n1844b-p2-14
+    fragment: "4/4"
+    sentence: "« Elle est l'*effectuation fantastique* de l'essence humaine, parce que l'*essence humaine* ne possède pas de vraie effectivité. Lutter contre la religion, c'est donc indirectement lutter contre *ce monde-là*, dont la religion est ___. »"
+    answer: "l'arôme spirituel"
+    alt: []
+  - id: n1844b-p2-15
+    sentence: "Selon la lecture proposée, la conscience que la religion donne du monde est « inversée » parce que le monde de l'État et de la société est lui-même à l'___."
+    answer: "envers"
+    alt: []
+  - id: n1844b-p2-16
+    sentence: "Parce que l'essence humaine ne possède pas de vraie effectivité dans ce monde, la religion la réalise en ___, dans le ciel."
+    answer: "imagination"
+    alt: ["fantasme"]
+  - id: n1844b-p2-17
+    sentence: "Un compendium est un résumé complet : en disant que la religion est le compendium encyclopédique de ce monde, Marx dit qu'elle en donne la théorie ___."
+    answer: "générale"
+    alt: []
+  - id: n1844b-p2-18
+    sentence: "La religion console de ce monde et le justifie : Marx la dit fondement général de sa consolation et de sa ___."
+    answer: "justification"
+    alt: []
+  - id: n1844b-p2-19
+    sentence: "L'arôme est un parfum : en disant que la religion est l'arôme spirituel de ce monde, Marx dit qu'elle en est l'___ immatérielle, par laquelle on le reconnaît."
+    answer: "émanation"
+    alt: []
+  - id: n1844b-p2-20
+    sentence: "Lutter contre la religion revient indirectement à lutter contre le monde à l'envers : c'est pourquoi, après la critique de la religion, Marx passe à la critique de la ___."
+    answer: "terre"
+    alt: []
+  - id: n1844b-p2-21
+    sentence: "Marx refuse de voir dans l'être humain une essence abstraite : l'être humain est le monde de l'être humain, c'est-à-dire l'___ et la société."
+    answer: "État"
+    alt: []
 - id: n1844b-p3
   title: "La religion, opium du peuple, et la critique de la vallée de larmes"
+  notes: |-
+    **La religion n'est pas seulement une illusion : elle exprime une misère réelle, qu'elle apaise sans la supprimer, et c'est pourquoi la critiquer, c'est critiquer en germe cette misère.** Marx lui reconnaît deux faces : elle est {amber}l'expression{/amber} de la misère effective et {amber}la protestation{/amber} contre elle. Trois images le disent :
+
+    | Image | Ce que Marx lui fait dire | Lecture |
+    | le soupir de la créature oppressée | la religion est une plainte | elle dit la souffrance |
+    | l'âme d'un monde sans cœur, l'esprit d'une situation désertée par l'esprit | elle est ce qui reste d'esprit dans un monde sans esprit | elle protège ce qui reste d'humain |
+    | l'opium du peuple | elle apaise la douleur sans en ôter la cause | elle console sans guérir |
+
+    ? **Opium** : stupéfiant qui calme la douleur sans guérir sa cause. L'appeler « opium du peuple », c'est dire que la religion apaise la misère sans la supprimer ; mais Marx l'appelle d'abord {amber}soupir{/amber}, donc plainte.
+
+    **La critique de la religion exige donc plus que la suppression d'une illusion.** {coral}Supprimer la religion en tant que bonheur illusoire du peuple, c'est exiger son bonheur effectif{/coral}, et {coral}exiger l'abandon des illusions sur sa situation, c'est exiger l'abandon d'une situation qui a besoin d'illusions{/coral}. On ne retire pas la consolation en laissant la misère : on demande que la misère disparaisse, et la consolation avec elle.
+
+    ? **Vallée de larmes** : expression de la langue religieuse pour la vie terrestre, lieu de souffrance où l'on attend la consolation d'un autre monde. L'**auréole** est le cercle lumineux dont on entoure la tête d'un saint : la religion est l'auréole de la vallée de larmes, elle la fait paraître sainte.
+
+    La critique de la religion est ainsi {coral}en germe la critique de la vallée de larmes{/coral} : le §2 disait que l'erreur avait une existence terrestre, le §5 dit que c'est cette misère-là qu'il faut critiquer.
+
+    ! L'« opium du peuple » n'est pas ici une injure : Marx écrit d'abord que la religion est un soupir, une plainte avant d'être un calmant.
   passage:
     label: "§4-5"
     text: "La misère *religieuse* est tout à la fois l'*expression* de la misère effective et la *protestation* contre la misère effective. La religion est le soupir de la créature oppressée, l'âme d'un monde sans cœur, de même qu'elle est l'esprit d'une situation désertée par l'esprit. Elle est l'*opium* du peuple. Supprimer la religion en tant que bonheur *illusoire* du peuple, c'est exiger son bonheur *effectif*. Exiger l'abandon des illusions que l'on entretient sur sa propre situation, c'est *exiger l'abandon d'une situation qui a besoin d'illusions*. La critique de la religion est donc en *germe* la critique de la vallée de larmes dont la religion est l'*auréole*."
-  points: []
+  points:
+  - id: n1844b-p3-1
+    fragment: "1/2"
+    sentence: "« La misère *religieuse* est tout à la fois ___ et ___. La religion est le soupir de la créature oppressée, l'âme d'un monde sans cœur, de même qu'elle est l'esprit d'une situation désertée par l'esprit. Elle est l'*opium* du peuple. »"
+    answer: "l'expression de la misère effective ; la protestation contre la misère effective"
+    alt: []
+  - id: n1844b-p3-2
+    fragment: "1/2"
+    sentence: "« La misère *religieuse* est tout à la fois l'*expression* de la misère effective et la *protestation* contre la misère effective. La religion est ___, ___, de même qu'elle est l'esprit d'une situation désertée par l'esprit. Elle est l'*opium* du peuple. »"
+    answer: "le soupir de la créature oppressée ; l'âme d'un monde sans cœur"
+    alt: []
+  - id: n1844b-p3-3
+    fragment: "1/2"
+    sentence: "« La misère *religieuse* est tout à la fois l'*expression* de la misère effective et la *protestation* contre la misère effective. La religion est le soupir de la créature oppressée, l'âme d'un monde sans cœur, de même qu'elle est ___. Elle est l'*opium* du peuple. »"
+    answer: "l'esprit d'une situation désertée par l'esprit"
+    alt: []
+  - id: n1844b-p3-4
+    fragment: "1/2"
+    sentence: "« La misère *religieuse* est tout à la fois l'*expression* de la misère effective et la *protestation* contre la misère effective. La religion est le soupir de la créature oppressée, l'âme d'un monde sans cœur, de même qu'elle est l'esprit d'une situation désertée par l'esprit. Elle est ___. »"
+    answer: "l'opium du peuple"
+    alt: []
+  - id: n1844b-p3-5
+    fragment: "2/2"
+    sentence: "« Supprimer la religion en tant que ___, c'est exiger ___. Exiger l'abandon des illusions que l'on entretient sur sa propre situation, c'est *exiger l'abandon d'une situation qui a besoin d'illusions*. La critique de la religion est donc en *germe* la critique de la vallée de larmes dont la religion est l'*auréole*. »"
+    answer: "bonheur illusoire du peuple ; son bonheur effectif"
+    alt: []
+  - id: n1844b-p3-6
+    fragment: "2/2"
+    sentence: "« Supprimer la religion en tant que bonheur *illusoire* du peuple, c'est exiger son bonheur *effectif*. Exiger l'abandon des illusions que l'on entretient sur sa propre situation, c'est ___. La critique de la religion est donc en *germe* la critique de la vallée de larmes dont la religion est l'*auréole*. »"
+    answer: "exiger l'abandon d'une situation qui a besoin d'illusions"
+    alt: []
+  - id: n1844b-p3-7
+    fragment: "2/2"
+    sentence: "« Supprimer la religion en tant que bonheur *illusoire* du peuple, c'est exiger son bonheur *effectif*. Exiger l'abandon des illusions que l'on entretient sur sa propre situation, c'est *exiger l'abandon d'une situation qui a besoin d'illusions*. La critique de la religion est donc ___ dont la religion est l'*auréole*. »"
+    answer: "en germe la critique de la vallée de larmes"
+    alt: []
+  - id: n1844b-p3-8
+    fragment: "2/2"
+    sentence: "« Supprimer la religion en tant que bonheur *illusoire* du peuple, c'est exiger son bonheur *effectif*. Exiger l'abandon des illusions que l'on entretient sur sa propre situation, c'est *exiger l'abandon d'une situation qui a besoin d'illusions*. La critique de la religion est donc en *germe* la critique de la vallée de larmes dont la religion est ___. »"
+    answer: "l'auréole"
+    alt: []
+  - id: n1844b-p3-9
+    sentence: "L'« opium du peuple » ne dit pas d'abord une injure : Marx écrit d'abord que la religion est le soupir de la créature oppressée, donc une ___ avant d'être un calmant."
+    answer: "plainte"
+    alt: []
+  - id: n1844b-p3-10
+    sentence: "Un opium apaise la douleur sans en supprimer la cause : appelée opium du peuple, la religion apaise la misère sans la ___."
+    answer: "supprimer"
+    alt: []
+  - id: n1844b-p3-11
+    sentence: "La « vallée de larmes » désigne, dans le langage religieux, la vie terrestre comme lieu de ___."
+    answer: "souffrance"
+    alt: []
+  - id: n1844b-p3-12
+    sentence: "Une auréole est le cercle lumineux dont on entoure la tête d'un saint : la religion est l'auréole de la vallée de larmes, c'est-à-dire qu'elle la fait paraître ___."
+    answer: "sainte"
+    alt: ["sacrée"]
+  - id: n1844b-p3-13
+    sentence: "Selon Marx, critiquer la religion revient en germe à critiquer la vallée de larmes, c'est-à-dire la misère ___ dont elle est la consolation."
+    answer: "effective"
+    alt: []
+  - id: n1844b-p3-14
+    sentence: "Au §2, la critique de la religion compromet l'existence séculière de l'erreur ; au §5, elle mène en germe à la critique de la vallée de larmes : dans les deux cas elle mène à la critique de la ___."
+    answer: "terre"
+    alt: []
 - id: n1844b-p4
   title: "Briser les chaînes et cueillir la fleur bien vivante"
+  notes: |-
+    **La critique de la religion n'est pas faite pour laisser l'être humain nu devant sa misère, mais pour qu'il agisse.** Le paragraphe dit la même chose par trois images.
+
+    **Les chaînes et les fleurs.** Les {violet}chaînes{/violet} sont les rapports qui oppriment, la misère effective du §4 ; les {violet}fleurs imaginaires{/violet} qui les ornent sont les illusions religieuses, qui jouent le rôle de l'auréole du §5, une parure qui embellit la misère. La critique les arrache, {red}non pas pour que l'être humain porte des chaînes sinistres et dépourvues de fantaisie{/red}, mais {coral}pour qu'il brise les chaînes et cueille la fleur bien vivante{/coral}, le bonheur réel.
+
+    **L'être humain désillusionné.** La critique le désillusionne {amber}afin qu'il pense, agisse, façonne sa réalité effective{/amber} comme un être humain {amber}parvenu à la raison{/amber} : elle est un {coral}moyen{/coral}, non une fin en soi.
+
+    **Le soleil.** {violet}Gravite{/violet} dit tourner autour d'un centre. Tant que l'être humain ne tourne pas autour de lui-même, {yellow}la religion est le soleil illusoire{/yellow} autour duquel il tourne : il cherche son centre hors de lui. Quand il gravite autour de lui-même, il tourne autour de {coral}son soleil effectif{/coral}, c'est-à-dire de lui-même : l'être humain devient son propre centre.
+
+    ! Marx ne dit pas qu'il faut priver les hommes de leurs consolations et les laisser sans rien : la critique arrache les fleurs pour qu'on brise les chaînes.
   passage:
     label: "§6"
     text: "La critique a mis en pièces les fleurs imaginaires qui ornaient les chaînes, non pas pour que l'être humain porte des chaînes sinistres et dépourvues de fantaisie, mais pour qu'il brise les chaînes et cueille la fleur bien vivante. La critique de la religion désillusionne l'être humain afin qu'il pense, agisse, façonne sa réalité effective à la façon d'un être humain désillusionné, parvenu à la raison, afin qu'il gravite autour de lui-même, et par là autour de son soleil effectif. La religion n'est que le soleil illusoire qui gravite autour de l'être humain tant que ce dernier ne gravite pas autour de lui-même."
-  points: []
+  points:
+  - id: n1844b-p4-1
+    fragment: "1/2"
+    sentence: "« La critique a mis en pièces ___, non pas pour que l'être humain porte des chaînes sinistres et dépourvues de fantaisie, mais pour qu'il brise les chaînes et cueille la fleur bien vivante. »"
+    answer: "les fleurs imaginaires qui ornaient les chaînes"
+    alt: []
+  - id: n1844b-p4-2
+    fragment: "1/2"
+    sentence: "« La critique a mis en pièces les fleurs imaginaires qui ornaient les chaînes, non pas pour que l'être humain porte ___, mais pour qu'il brise les chaînes et cueille la fleur bien vivante. »"
+    answer: "des chaînes sinistres et dépourvues de fantaisie"
+    alt: []
+  - id: n1844b-p4-3
+    fragment: "1/2"
+    sentence: "« La critique a mis en pièces les fleurs imaginaires qui ornaient les chaînes, non pas pour que l'être humain porte des chaînes sinistres et dépourvues de fantaisie, mais pour qu'il ___ et ___. »"
+    answer: "brise les chaînes ; cueille la fleur bien vivante"
+    alt: []
+  - id: n1844b-p4-4
+    fragment: "2/2"
+    sentence: "« La critique de la religion désillusionne l'être humain afin qu'il ___ à la façon d'un être humain désillusionné, parvenu à la raison, afin qu'il gravite autour de lui-même, et par là autour de son soleil effectif. La religion n'est que le soleil illusoire qui gravite autour de l'être humain tant que ce dernier ne gravite pas autour de lui-même. »"
+    answer: "pense, agisse, façonne sa réalité effective"
+    alt: []
+  - id: n1844b-p4-5
+    fragment: "2/2"
+    sentence: "« La critique de la religion désillusionne l'être humain afin qu'il pense, agisse, façonne sa réalité effective à la façon d'___, afin qu'il gravite autour de lui-même, et par là autour de son soleil effectif. La religion n'est que le soleil illusoire qui gravite autour de l'être humain tant que ce dernier ne gravite pas autour de lui-même. »"
+    answer: "un être humain désillusionné, parvenu à la raison"
+    alt: []
+  - id: n1844b-p4-6
+    fragment: "2/2"
+    sentence: "« La critique de la religion désillusionne l'être humain afin qu'il pense, agisse, façonne sa réalité effective à la façon d'un être humain désillusionné, parvenu à la raison, afin qu'il ___, et par là autour de ___. La religion n'est que le soleil illusoire qui gravite autour de l'être humain tant que ce dernier ne gravite pas autour de lui-même. »"
+    answer: "gravite autour de lui-même ; son soleil effectif"
+    alt: []
+  - id: n1844b-p4-7
+    fragment: "2/2"
+    sentence: "« La critique de la religion désillusionne l'être humain afin qu'il pense, agisse, façonne sa réalité effective à la façon d'un être humain désillusionné, parvenu à la raison, afin qu'il gravite autour de lui-même, et par là autour de son soleil effectif. La religion n'est que ___ qui gravite autour de l'être humain tant que ce dernier ne gravite pas autour de lui-même. »"
+    answer: "le soleil illusoire"
+    alt: []
+  - id: n1844b-p4-8
+    fragment: "2/2"
+    sentence: "« La critique de la religion désillusionne l'être humain afin qu'il pense, agisse, façonne sa réalité effective à la façon d'un être humain désillusionné, parvenu à la raison, afin qu'il gravite autour de lui-même, et par là autour de son soleil effectif. La religion n'est que le soleil illusoire qui gravite autour de l'être humain ___. »"
+    answer: "tant que ce dernier ne gravite pas autour de lui-même"
+    alt: []
+  - id: n1844b-p4-9
+    sentence: "Dans l'image du §6, les chaînes sont les rapports qui oppriment, et les fleurs imaginaires les ___ qui les ornent."
+    answer: "illusions"
+    alt: ["consolations"]
+  - id: n1844b-p4-10
+    sentence: "Marx ne veut pas laisser l'être humain enchaîné sans fleurs : la critique de la religion prépare l'___, la libération réelle."
+    answer: "action"
+    alt: []
+  - id: n1844b-p4-11
+    sentence: "La critique de la religion désillusionne l'être humain afin qu'il agisse : elle est un ___ et non une fin en soi."
+    answer: "moyen"
+    alt: []
+  - id: n1844b-p4-12
+    sentence: "Dans l'image du soleil, gravite autour de lui-même, c'est faire de l'être humain son propre ___, au lieu de le chercher hors de lui."
+    answer: "centre"
+    alt: []
+  - id: n1844b-p4-13
+    sentence: "La fleur imaginaire du §6 joue le même rôle que l'___ de la vallée de larmes au §5 : une parure qui embellit la misère."
+    answer: "auréole"
+    alt: []
+  - id: n1844b-p4-14
+    sentence: "Dans l'image du soleil, le soleil illusoire est la ___, et le soleil effectif de l'être humain est lui-même."
+    answer: "religion"
+    alt: []
 - id: n1844b-p5
   title: "De la critique du ciel à la critique de la terre"
+  notes: |-
+    **Une fois la religion critiquée, la tâche passe à ce qu'elle recouvrait : la vérité de l'ici-bas.** La {violet}tâche de l'histoire{/violet}, une fois disparu l'au-delà de la vérité, est d'{coral}établir la vérité de l'ici-bas{/coral}. Et la {violet}tâche de la philosophie{/violet}, qui est au service de l'histoire, est de démasquer l'auto-aliénation humaine dans ses figures profanes.
+
+    ? **Auto-aliénation** : le fait que l'être humain se dépossède lui-même de son essence en la projetant hors de lui, dans le ciel. La religion en est la {amber}figure sacrée{/amber}. Le droit et la politique en sont, d'après la dernière phrase, des {amber}figures profanes{/amber}, c'est-à-dire terrestres.
+
+    **La dernière phrase donne la série.** Chaque critique de la religion se change en une critique terrestre de même nature :
+
+    | On critique | Pour passer à |
+    | le ciel | la terre |
+    | la religion | le droit |
+    | la théologie | la politique |
+
+    La critique de la religion n'est donc pas abandonnée : elle est {coral}la première étape{/coral} d'une critique qui descend vers les institutions. C'est ce que le §8 annonce : l'exposé qui suit se rapporte non à l'original, mais à {amber}une copie{/amber}, la philosophie allemande de l'État et du droit.
+
+    ! La critique de la terre ne remplace pas celle du ciel : elle la suppose.
   passage:
     label: "§7"
     text: "Une fois disparu l'*au-delà de la vérité*, c'est donc la *tâche de l'histoire* que d'établir la *vérité de l'ici-bas*. Une fois démasquée cette auto-aliénation dans sa *figure sacrée*, c'est tout d'abord la *tâche de la philosophie*, qui est au service de l'histoire, que de démasquer l'auto-aliénation humaine dans ses *figures profanes*. La critique du ciel se change par là en critique de la terre, la *critique de la religion* en *critique du droit*, la *critique de la théologie* en *critique de la politique*."
-  points: []
+  points:
+  - id: n1844b-p5-1
+    fragment: "1/2"
+    sentence: "« Une fois disparu l'*au-delà de la vérité*, c'est donc ___ que d'établir ___. Une fois démasquée cette auto-aliénation dans sa *figure sacrée*, c'est tout d'abord la *tâche de la philosophie*, qui est au service de l'histoire, que de démasquer l'auto-aliénation humaine dans ses *figures profanes*. »"
+    answer: "la tâche de l'histoire ; la vérité de l'ici-bas"
+    alt: []
+  - id: n1844b-p5-2
+    fragment: "1/2"
+    sentence: "« Une fois disparu l'*au-delà de la vérité*, c'est donc la *tâche de l'histoire* que d'établir la *vérité de l'ici-bas*. Une fois démasquée ___, c'est tout d'abord la *tâche de la philosophie*, qui est au service de l'histoire, que de démasquer l'auto-aliénation humaine dans ses *figures profanes*. »"
+    answer: "cette auto-aliénation dans sa figure sacrée"
+    alt: []
+  - id: n1844b-p5-3
+    fragment: "1/2"
+    sentence: "« Une fois disparu l'*au-delà de la vérité*, c'est donc la *tâche de l'histoire* que d'établir la *vérité de l'ici-bas*. Une fois démasquée cette auto-aliénation dans sa *figure sacrée*, c'est tout d'abord ___, ___, que de démasquer l'auto-aliénation humaine dans ses *figures profanes*. »"
+    answer: "la tâche de la philosophie ; qui est au service de l'histoire"
+    alt: []
+  - id: n1844b-p5-4
+    fragment: "1/2"
+    sentence: "« Une fois disparu l'*au-delà de la vérité*, c'est donc la *tâche de l'histoire* que d'établir la *vérité de l'ici-bas*. Une fois démasquée cette auto-aliénation dans sa *figure sacrée*, c'est tout d'abord la *tâche de la philosophie*, qui est au service de l'histoire, que de démasquer ___. »"
+    answer: "l'auto-aliénation humaine dans ses figures profanes"
+    alt: []
+  - id: n1844b-p5-5
+    fragment: "2/2"
+    sentence: "« ___, la *critique de la religion* en *critique du droit*, la *critique de la théologie* en *critique de la politique*. »"
+    answer: "La critique du ciel se change par là en critique de la terre"
+    alt: []
+  - id: n1844b-p5-6
+    fragment: "2/2"
+    sentence: "« La critique du ciel se change par là en critique de la terre, ___, la *critique de la théologie* en *critique de la politique*. »"
+    answer: "la critique de la religion en critique du droit"
+    alt: []
+  - id: n1844b-p5-7
+    fragment: "2/2"
+    sentence: "« La critique du ciel se change par là en critique de la terre, la *critique de la religion* en *critique du droit*, ___. »"
+    answer: "la critique de la théologie en critique de la politique"
+    alt: []
+  - id: n1844b-p5-8
+    sentence: "Le terme que Marx emploie, au §7, pour la dépossession de soi dont la religion est la figure sacrée est l'___."
+    answer: "auto-aliénation"
+    alt: []
+  - id: n1844b-p5-9
+    sentence: "Selon Marx, la religion est la figure ___ de l'auto-aliénation ; le droit et la politique en sont des figures profanes."
+    answer: "sacrée"
+    alt: []
+  - id: n1844b-p5-10
+    sentence: "Selon Marx, la critique de la religion est suivie de la critique du ___ et de la politique, qui sont ses figures profanes."
+    answer: "droit"
+    alt: []
+  - id: n1844b-p5-11
+    sentence: "Dans la série ciel et terre, religion et droit, théologie et politique, Marx passe de l'objet religieux à un objet ___ de même nature."
+    answer: "profane"
+    alt: []
+  - id: n1844b-p5-12
+    sentence: "Le §8 annonce que l'exposé qui suit se rapporte à une copie, la philosophie allemande de l'État et du droit, et non à l'___."
+    answer: "original"
+    alt: []
+  - id: n1844b-p5-13
+    sentence: "La critique de la terre ne remplace pas la critique du ciel : elle la ___."
+    answer: "suppose"
+    alt: []
