@@ -1,0 +1,309 @@
+# Unité-œuvre (voir content/oeuvres.md) : le plan du livre I du *Capital*.
+#
+# Source du plan : le cours du CNED de J.-M. Durand-Gasselin, « Karl Marx,
+# œuvres diverses » (PDF fourni par l'utilisateur, 2026-11-17), partie « Le
+# Capital, livre 1 » : trois moments (marchandise et monnaie ; valorisation ;
+# accumulation), dont le cœur est le second. Les thèses sont reformulées d'après
+# ce commentaire, sans guillemets : le cours n'est pas Marx.
+# Les emplacements sont des sections (I à VII), jamais des pages ni des numéros
+# de chapitre, qui changent d'une édition à l'autre ; « III, 2 » est le deuxième
+# moment de la section III, dans l'ordre du livre. La section VII est celle de
+# la traduction Lefebvre ; l'édition Roy en fait deux (VII et VIII, à partir
+# de l'accumulation primitive).
+# Le § 1.3 (forme de la valeur), les sections V et VI et l'ordre des moments de
+# la section III viennent de la structure connue du livre, le cours ne les
+# détaillant pas.
+
+id: capital1
+title: "Le Capital, livre I : le plan"
+subtitle: "Marx · Livre I"
+icon: map
+color: sky
+group: "Marx : Le Capital"
+work:
+  parts:
+    - id: m1
+      label: Section I
+      parts:
+        - id: s1-1
+          label: I, 1
+          parts:
+            - id: s1-1-1
+              label: I, 1.1
+              summary: "La marchandise a deux faces, valeur d'usage et valeur d'échange"
+              points:
+                - id: cap1-1-1a
+                  sentence: "La marchandise est d'abord une valeur d'usage, qui satisfait un besoin ; la valeur d'échange est un rapport quantitatif entre marchandises, qui fait abstraction de leurs qualités et ne repose que sur ce qu'elles ont de commun : être des produits du ___."
+                  answer: travail
+                - id: cap1-1-1b
+                  sentence: "La grandeur de la valeur se mesure au temps de travail moyen socialement ___ à produire la marchandise, dans les conditions normales d'une société donnée."
+                  answer: nécessaire
+            - id: s1-1-2
+              label: I, 1.2
+              summary: "Le travail se dédouble en travail concret et travail abstrait"
+              rel: consequence
+              points:
+                - id: cap1-1-2a
+                  sentence: "Le travail concret ou utile produit des valeurs d'usage variées ; le travail abstrait, mesuré en temps, produit de la valeur d'échange et se ramène au travail moyen ___."
+                  answer: simple
+                  explanation: "Un travail complexe ou qualifié vaut un multiple de travail simple : c'est ce qui donne à Marx un espace de quantification homogène de la valeur."
+            - id: s1-1-3
+              label: I, 1.3
+              summary: "La valeur ne s'exprime que dans une autre marchandise : la forme de la valeur"
+              rel: probleme-solution
+              points:
+                - id: cap1-1-3a
+                  sentence: "La valeur d'une marchandise ne peut s'exprimer que dans la valeur d'usage d'une autre ; le développement de cette expression aboutit à la forme ___, où une marchandise sert d'équivalent à toutes les autres."
+                  answer: monnaie
+                  alt: [argent]
+            - id: s1-1-4
+              label: I, 1.4
+              summary: "Le fétichisme transforme un rapport social en rapport entre choses"
+              rel: consequence
+              points:
+                - id: cap1-1-4a
+                  sentence: "La forme-marchandise fait apparaître le rapport social des producteurs privés comme un rapport entre ___ : c'est le fétichisme, propre à la production marchande."
+                  answer: choses
+                  alt: [choses sociales]
+                  explanation: "Selon le cours, c'est un moment encore abstrait de l'exposé, qui clôt les déterminations de la société marchande et vient avant la section II : on se trompe en en faisant, avec Lukács, le cœur de la critique du capitalisme."
+                - id: cap1-1-4b
+                  sentence: "Le fétichisme disparaît dans les formes de production transparentes (Robinson, le Moyen Âge, l'association d'hommes libres) : il ne disparaît qu'avec un procès de production placé sous le contrôle ___ des producteurs."
+                  answer: conscient
+        - id: s1-2
+          label: I, 2
+          summary: "L'échange suppose le droit, et fait surgir la monnaie"
+          rel: consequence
+          points:
+            - id: cap1-2a
+              sentence: "L'échange suppose que les échangistes se reconnaissent mutuellement comme propriétaires privés liés par un ___ : le droit ne fait rien par lui-même, il exprime un rapport économique."
+              answer: contrat
+            - id: cap1-2b
+              sentence: "La monnaie est la marchandise exclue de la consommation pour servir d'équivalent universel ; le mouvement qui la fait naître disparaît dans son résultat, d'où la « magie » de l'___."
+              answer: argent
+        - id: s1-3
+          label: I, 3
+          summary: "La monnaie a trois fonctions, sous la garantie de l'État"
+          rel: consequence
+          points:
+            - id: cap1-3a
+              sentence: "La monnaie a trois fonctions : mesure de la valeur et étalon des prix, moyen de circulation, et réserve de valeur ou ___."
+              answer: thésaurisation
+              alt: [trésor]
+            - id: cap1-3b
+              sentence: "À ce niveau de l'exposé, l'État n'est pas encore un appareil de classe : il garantit le ___ et le numéraire, pour des producteurs supposés libres et égaux."
+              answer: monnayage
+              alt: [frappe]
+    - id: m2
+      label: Sections II à VI
+      parts:
+        - id: s2
+          label: Section II
+          summary: "L'argent devient capital par un échange contraire à la loi de l'échange"
+          points:
+            - id: cap1-2s-a
+              sentence: "Le circuit M-A-M s'achève dans la consommation ; le circuit A-M-A', fin en soi, n'a ni terme ni ___ : c'est le mouvement du capital."
+              answer: mesure
+            - id: cap1-2s-b
+              sentence: "A' ne peut dépasser A sans contredire l'échange d'équivalents ; la contradiction se résout par l'achat d'une marchandise dont la valeur d'usage est de produire de la valeur : la force de ___."
+              answer: travail
+              explanation: "Cet achat suppose un travailleur libre, propriétaire de lui-même, qui ne vend sa force que pour un temps, et qui n'a rien d'autre à vendre. Sa valeur est celle de ses moyens de subsistance."
+        - id: s3
+          label: Section III
+          rel: consequence
+          parts:
+            - id: s3-1
+              label: III, 1
+              summary: "Le capitaliste veut produire de la survaleur, non seulement de la valeur d'usage"
+              points:
+                - id: cap1-3-1a
+                  sentence: "Dans le procès de travail capitaliste, le travailleur travaille sous le contrôle du capitaliste, à qui appartient le produit ; celui-ci veut non seulement une valeur d'usage ni seulement de la valeur, mais de la ___."
+                  answer: survaleur
+                  alt: [plus-value]
+            - id: s3-2
+              label: III, 2
+              summary: "Le capital constant transmet sa valeur, le capital variable crée un excédent"
+              rel: declinaison
+              points:
+                - id: cap1-3-2a
+                  sentence: "Le capital constant (moyens de production) ne modifie pas sa grandeur de valeur dans le procès ; le capital ___ (force de travail) reproduit son équivalent et un excédent."
+                  answer: variable
+            - id: s3-3
+              label: III, 3
+              summary: "Le taux de survaleur mesure le degré d'exploitation"
+              rel: consequence
+              points:
+                - id: cap1-3-3a
+                  sentence: "Le taux de survaleur est le rapport s/v, du surtravail au travail ___ : il exprime le degré d'exploitation de la force de travail."
+                  answer: nécessaire
+                  explanation: "À ne pas confondre avec le taux de profit, s/(c+v), qui n'apparaît pas à ce niveau de l'exposé."
+            - id: s3-4
+              label: III, 4
+              summary: "La durée de la journée de travail se joue dans les rapports de force"
+              rel: application
+              points:
+                - id: cap1-3-4a
+                  sentence: "Le capitaliste a intérêt à allonger la journée de travail, le travailleur à la raccourcir : l'enjeu est la détermination légale d'une journée « ___ »."
+                  answer: normale
+                  explanation: "Chapitre très historique : le capitalisme anglais y montre l'érosion de toutes les limites, puis les premières conquêtes sociales."
+            - id: s3-5
+              label: III, 5
+              summary: "La masse de survaleur dépend aussi du nombre de travailleurs"
+              rel: limite
+              points:
+                - id: cap1-3-5a
+                  sentence: "La masse de survaleur dépend du taux de survaleur et du nombre de travailleurs exploités : le capitaliste peut compenser une baisse du taux par une hausse du volume de capital ___."
+                  answer: variable
+        - id: s4
+          label: Section IV
+          rel: changement-de-question
+          parts:
+            - id: s4-1
+              label: IV, 1
+              summary: "Le progrès de la productivité baisse la valeur de la force de travail"
+              points:
+                - id: cap1-4-1a
+                  sentence: "Quand la productivité augmente dans les branches qui produisent les biens salaires, le temps de travail nécessaire baisse et le taux de survaleur monte : c'est la survaleur ___."
+                  answer: relative
+                  explanation: "Le capitaliste, qui ne vise que la valeur d'échange, a ainsi intérêt à faire baisser la valeur d'échange des marchandises."
+            - id: s4-2
+              label: IV, 2
+              summary: "La coopération accroît la force productive sans rien coûter au capital"
+              rel: declinaison
+              points:
+                - id: cap1-4-2a
+                  sentence: "La coopération (organisation, commandement, surveillance) est plus productive qu'une somme de travailleurs isolés et ne coûte rien de plus au capitaliste, puisque le capital ___ reste le même."
+                  answer: variable
+            - id: s4-3
+              label: IV, 3
+              summary: "La manufacture parcellise le travail, au profit de la virtuosité du détail"
+              rel: consequence
+              points:
+                - id: cap1-4-3a
+                  sentence: "La manufacture réunit sous l'autorité d'un seul capitaliste la division du travail, qui donne la virtuosité du travailleur de détail au prix de la parcellisation des tâches et de l'___."
+                  answer: ennui
+                  alt: [appauvrissement]
+            - id: s4-4
+              label: IV, 4
+              summary: "La machine détruit le travail artisanal et rend l'exploitation illimitée"
+              rel: consequence
+              points:
+                - id: cap1-4-4a
+                  sentence: "Paradoxe du machinisme : le plus puissant moyen de réduire le temps de travail devient le plus sûr moyen de transformer le temps de vie de l'ouvrier en temps de travail disponible pour la ___ du capital."
+                  answer: valorisation
+                - id: cap1-4-4b
+                  sentence: "La machine permet d'employer femmes et enfants, ce qui déprécie la force de travail ; la législation sur les fabriques, limitant la durée du travail, pousse le capital à miser sur l'___ du travail."
+                  answer: intensité
+        - id: s5-6
+          label: Sections V et VI
+          rel: reprise
+          summary: "Les distinctions acquises sont récapitulées, puis appliquées au salaire"
+          points:
+            - id: cap1-56a
+              sentence: "Les sections V et VI, courtes, ne posent pas de thèse nouvelle : elles récapitulent les acquis sur la survaleur absolue et relative, puis sur le ___."
+              answer: salaire
+              explanation: "Selon le cours, on peut s'y reporter en cours de lecture pour s'assurer que les distinctions essentielles sont bien comprises."
+    - id: m3
+      label: Section VII
+      parts:
+        - id: s7-1
+          label: VII, 1
+          summary: "Le capital se reproduit en reproduisant l'ouvrier salarié"
+          points:
+            - id: cap1-7-1a
+              sentence: "L'accumulation est la retransformation de survaleur en ___ ; elle reproduit à la fois le capital, le capitaliste et l'ouvrier salarié."
+              answer: capital
+            - id: cap1-7-1b
+              sentence: "En reproduisant la richesse objective comme capital, l'ouvrier produit une puissance qui lui est étrangère, qui le domine et l'exploite : l'___ n'a pas disparu du Capital, elle y est réagencée."
+              answer: aliénation
+        - id: s7-2
+          label: VII, 2
+          summary: "L'accumulation élève la composition du capital et le concentre"
+          rel: consequence
+          points:
+            - id: cap1-7-2a
+              sentence: "La composition organique du capital est le rapport du capital constant au capital variable ; la concurrence, jointe à la hausse de productivité, mène à la ___ du capital : les grands capitaux battent les petits."
+              answer: centralisation
+              explanation: "La concentration est l'accroissement du capital par accumulation ; la centralisation en réduit le nombre de détenteurs."
+        - id: s7-3
+          label: VII, 3
+          summary: "Il en résulte une surpopulation relative, l'armée de réserve"
+          rel: consequence
+          points:
+            - id: cap1-7-3a
+              sentence: "Contre Malthus, Marx affirme une loi de population propre au mode de production capitaliste : la surpopulation ouvrière est un levier de l'accumulation, une armée industrielle de ___ qui pèse sur les salaires."
+              answer: réserve
+        - id: s7-4
+          label: VII, 4
+          summary: "L'accumulation primitive n'a rien d'idyllique"
+          rel: changement-de-question
+          points:
+            - id: cap1-7-4a
+              sentence: "Contre la fable de l'élite laborieuse et des fainéants, l'accumulation initiale est l'___ de la paysannerie, que l'Angleterre prend pour modèle."
+              answer: expropriation
+              explanation: "Enclosures, Réforme, dette d'État, colonisation : « le capital vient au monde dégoulinant de sang et de saleté par tous les pores »."
+        - id: s7-5
+          label: VII, 5
+          summary: "La tendance historique mène à l'expropriation des expropriateurs"
+          rel: consequence
+          points:
+            - id: cap1-7-5a
+              sentence: "Par ses lois immanentes, la centralisation socialise le travail jusqu'à le rendre incompatible avec son enveloppe capitaliste : on exproprie les expropriateurs, c'est la négation de la ___."
+              answer: négation
+              explanation: "Passage hégélien et prophétique, qui anticipe sur le livre III et nourrira l'opposition entre révolution et réformisme."
+  links:
+    - from: s1-1-4
+      to: s3-1
+      rel: reprise
+      points:
+        - id: cap1-lien-fetiche-exploitation
+          sentence: "Le fétichisme, propre à la société marchande (section I), précède logiquement le rapport de classe : l'exploitation de la section III le ___, elle ne le produit pas."
+          answer: présuppose
+          alt: [suppose]
+    - from: s2
+      to: s7-1
+      rel: reprise
+      points:
+        - id: cap1-lien-circuit
+          sentence: "Le circuit A-M-A' de la section II, qui n'a ni fin ni mesure, se réalise dans l'accumulation de la section VII : la survaleur est retransformée en capital sur une échelle toujours ___."
+          answer: élargie
+          alt: [croissante]
+  recaps:
+    - at: s1-1
+      label: "Section I"
+      title: "La société marchande, enveloppe du capitalisme"
+      notes: |-
+        **La section I ne décrit pas encore le capitalisme : elle pose la société marchande (circuit M-A-M), détermination première que le capital présuppose.**
+
+        | Moment | Thèse |
+        | I, 1 | la marchandise a deux faces, le travail deux caractères ; la forme de la valeur conduit à la monnaie ; le fétichisme est une illusion de la production marchande |
+        | I, 2 | l'échange suppose le contrat, donc le droit ; il fait naître la monnaie |
+        | I, 3 | les trois fonctions de la monnaie, sous la garantie d'un État encore fonctionnel |
+
+        ! Le fétichisme n'est pas le cœur de la critique du capitalisme : il précède le rapport de classe.
+    - at: s2
+      label: "Sections II à VI"
+      title: "La valorisation : de l'argent au capital, puis à la survaleur"
+      notes: |-
+        **Le cœur du livre : le circuit A-M-A' ne tient que si l'on achète la force de travail, qui produit plus de valeur qu'elle n'en coûte.**
+
+        | Section | Thèse |
+        | II | l'argent devient capital par l'achat de la force de travail |
+        | III | survaleur absolue : allonger la journée de travail |
+        | IV | survaleur relative : hausser la productivité (coopération, manufacture, machine) |
+        | V et VI | récapitulation, puis salaire |
+
+        ! La survaleur n'est pas le profit : s/v n'est pas s/(c+v).
+    - at: s7-1
+      label: "Section VII"
+      title: "L'accumulation et ses tendances"
+      notes: |-
+        **Le dernier moment dit comment le capital dure, se concentre et se renverse.**
+
+        | Moment | Thèse |
+        | VII, 1 | reproduction du capital et de l'ouvrier salarié |
+        | VII, 2 | composition du capital, concentration, centralisation |
+        | VII, 3 | surpopulation relative, armée de réserve |
+        | VII, 4 | accumulation primitive, contre la fable idyllique |
+        | VII, 5 | tendance historique : l'expropriation des expropriateurs |
+
+        ! Les sections IV et VII décrivent des tendances, non seulement une structure.
