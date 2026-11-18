@@ -20,10 +20,13 @@ Chaque unité suit le même schéma :
    intégral.
 2. **Des leçons d'introduction, dès que le texte est difficile ou que la
    matière fournie le permet** (`<id>-i1`, `<id>-i2`…, `passage` avec
-   `label: "Introduction"` et sans `text`) : un rappel qui donne le problème,
-   les notions et les débats nécessaires pour comprendre le texte, puis des
+   `label: "Introduction"` et sans `text`) : un rappel qui donne le problème
+   et les débats nécessaires pour comprendre le texte, puis des
    cartes-explication. On ne fait pas apprendre par cœur un texte qu'on ne
-   comprend pas encore.
+   comprend pas encore. **Pas de leçon consacrée aux notions** : chacune
+   s'introduit au fil des leçons, dans un encadré `? terme : définition` du
+   rappel de la leçon où le texte s'en sert pour la première fois, et ses
+   cartes vont dans cette leçon (demandé par l'utilisateur sur `n1863`).
 3. **Une leçon par paragraphe** (`§1`, `§2`…), dans l'ordre du texte. Chacune
    présente d'abord le paragraphe cité en entier, **suivi de son explication**
    (`notes` : ce que dit le paragraphe, comment il s'articule, les pièges),

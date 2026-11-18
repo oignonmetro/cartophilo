@@ -344,3 +344,19 @@ describe('tableau et renvois', () => {
     expect(splitCells('a | [[x|y]] | c')).toEqual(['a ', ' [[x|y]] ', ' c'])
   })
 })
+
+describe('encadré notion', () => {
+  it('lit « ? Terme : définition » comme une notion, repliée sur plusieurs lignes', () => {
+    const blocks = parseNotes('Le capital se valorise.\n\n? **Survaleur** : le travail fourni\nau-delà du salaire.\n\nSuite.')
+    expect(blocks).toEqual([
+      { kind: 'paragraph', text: 'Le capital se valorise.' },
+      { kind: 'notion', label: '**Survaleur**', text: 'le travail fourni au-delà du salaire.' },
+      { kind: 'paragraph', text: 'Suite.' },
+    ])
+  })
+
+  it('sans étiquette, garde tout le texte ; un « ? » collé ne fait pas un encadré', () => {
+    expect(parseNotes('? Une notion sans étiquette.')).toEqual([{ kind: 'notion', label: null, text: 'Une notion sans étiquette.' }])
+    expect(parseNotes('?Pas une notion.')[0]?.kind).toBe('paragraph')
+  })
+})

@@ -39,7 +39,7 @@ export interface Run {
   marks: Marks
 }
 
-export type BlockKind = 'paragraph' | 'warning' | 'rule' | 'example' | 'table' | 'section'
+export type BlockKind = 'paragraph' | 'warning' | 'notion' | 'rule' | 'example' | 'table' | 'section'
 
 export interface Block {
   kind: BlockKind
@@ -70,6 +70,7 @@ const DEF_TOKEN = /\[def(?::[a-z0-9-]+)?\]/g
 
 const RULE = /^-\s*/
 const WARNING = /^!\s*/
+const NOTION = /^\?\s+/
 const TABLE_ROW = /^\|/
 
 export const runsText = (runs: Run[]): string => runs.map((run) => run.text).join('')
@@ -168,6 +169,8 @@ export function serializeBlock(block: Block): string {
   switch (block.kind) {
     case 'warning':
       return `! ${text}`
+    case 'notion':
+      return `? ${text}`
     case 'rule':
       return `${block.level === 2 ? '  ' : ''}- ${text}`
     case 'example':
@@ -187,7 +190,7 @@ export const RULE_FAMILY = new Set<BlockKind>(['rule', 'example'])
  */
 function gapBetween(prev: Block, next: Block): string {
   const needsBlank =
-    (['paragraph', 'warning'].includes(prev.kind) && ['paragraph', 'example'].includes(next.kind)) ||
+    (['paragraph', 'warning', 'notion'].includes(prev.kind) && ['paragraph', 'example'].includes(next.kind)) ||
     (prev.kind === 'table' && next.kind === 'table') ||
     (next.kind === 'example' && !RULE_FAMILY.has(prev.kind))
   if (next.gap !== undefined && (!needsBlank || /\n[ \t]*\n/.test(next.gap))) return next.gap
@@ -251,6 +254,11 @@ export function parseDoc(notes: string): NotesDoc {
     if (WARNING.test(line)) {
       flush()
       pending = { kind: 'warning', text: line.replace(WARNING, ''), start: index, end: index }
+      return
+    }
+    if (NOTION.test(line)) {
+      flush()
+      pending = { kind: 'notion', text: line.replace(NOTION, ''), start: index, end: index }
       return
     }
     if (TABLE_ROW.test(line)) {
@@ -422,6 +430,7 @@ export function normalizeBlock(block: Block, prev: Block | undefined): { block: 
     if (/^\|.*\|\s*$/.test(body)) return { block: { kind: 'table', runs: [], src: body.trim() }, removed: 0 }
     if (RULE.test(body) && body.length > 0) return strip('rule', RULE)
     if (WARNING.test(body)) return strip('warning', WARNING)
+    if (NOTION.test(body)) return strip('notion', NOTION)
   }
   if (block.kind === 'example' && !(prev && RULE_FAMILY.has(prev.kind))) {
     return { block: { ...block, kind: 'paragraph' }, removed: 0 }

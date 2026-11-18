@@ -138,6 +138,7 @@ notes: |
 | ligne indentée sous une règle | l'exemple de cette règle, en italique |
 | ligne indentée ouverte par « - » sous une règle | une sous-puce de cette règle (un seul niveau ; Tab dans l'éditeur visuel) |
 | `! …` | un piège, encadré en ambre |
+| `? terme : …` | une notion, encadrée en violet, le terme en titre (« ? » suivi d'une espace ; sans « : », pas de titre) |
 | `\| … \| … \| …` | une rangée de tableau ; la ligne suivante qui commence aussi par `\|` en ajoute une autre |
 
 Six marqueurs enrichissent le texte, dans les paragraphes comme dans les

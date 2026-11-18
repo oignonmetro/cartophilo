@@ -75,9 +75,10 @@ export interface ToolbarState {
   marks: Marks
   rule: boolean
   warning: boolean
+  notion: boolean
 }
 
-const EMPTY_STATE: ToolbarState = { marks: {}, rule: false, warning: false }
+const EMPTY_STATE: ToolbarState = { marks: {}, rule: false, warning: false, notion: false }
 
 interface Meta {
   kind: BlockKind
@@ -115,6 +116,8 @@ const LEAD = 'text-justify hyphens-auto text-[0.975rem] leading-relaxed font-sem
 const BODY = 'text-justify hyphens-auto text-sm leading-relaxed text-ink-soft'
 const WARNING =
   "relative rounded-2xl border-2 border-amber/40 bg-amber/10 py-3 pr-4 pl-10 text-justify hyphens-auto text-sm leading-relaxed text-ink before:absolute before:left-4 before:top-3 before:text-base before:leading-tight before:content-['⚠']"
+const NOTION =
+  "relative rounded-2xl border-2 border-violet/35 bg-violet/8 py-3 pr-4 pl-10 text-justify hyphens-auto text-sm leading-relaxed text-ink before:absolute before:left-4 before:top-3 before:text-base before:leading-tight before:text-violet before:content-['◆']"
 const RULE =
   'relative pr-4 pl-[2.125rem] text-justify hyphens-auto text-sm leading-snug text-ink before:absolute before:left-4 before:h-1.5 before:w-1.5 before:rounded-full'
 const SUB_RULE =
@@ -156,6 +159,8 @@ function classesOf(kind: BlockKind, layout: Layout, tone: Tone): string {
       return [top, layout.lead ? LEAD : BODY, layout.placeholder ? PLACEHOLDER : ''].join(' ')
     case 'warning':
       return `${top} ${WARNING}`
+    case 'notion':
+      return `${top} ${NOTION}`
     case 'rule':
       return [
         top,
@@ -983,7 +988,7 @@ class Controller {
   private backspaceAtStart(index: number) {
     const blocks = this.read()
     const block = blocks[index]!
-    if (block.kind === 'rule' || block.kind === 'warning' || block.kind === 'example') {
+    if (block.kind === 'rule' || block.kind === 'warning' || block.kind === 'notion' || block.kind === 'example') {
       blocks[index] = block.level ? { ...block, level: undefined } : { ...block, kind: 'paragraph' }
       this.commit(blocks, this.collapsedAt({ block: index, offset: 0 }), 'op')
       return
@@ -1160,7 +1165,7 @@ class Controller {
   }
 
   /** Fait des blocs sélectionnés des règles (ou des pièges) ; s'ils le sont tous déjà, des paragraphes. */
-  toggleKind(kind: 'rule' | 'warning') {
+  toggleKind(kind: 'rule' | 'warning' | 'notion') {
     const sel = this.current()
     if (!sel) return
     const blocks = this.read()
@@ -1236,6 +1241,7 @@ class Controller {
       marks,
       rule: kinds.length > 0 && kinds.every((block) => block.kind === 'rule'),
       warning: kinds.length > 0 && kinds.every((block) => block.kind === 'warning'),
+      notion: kinds.length > 0 && kinds.every((block) => block.kind === 'notion'),
     })
   }
 }
@@ -1410,6 +1416,9 @@ export function RichNotesEditor({
         </ToolbarButton>
         <ToolbarButton title="Piège (ou « ! » en tête de ligne)" active={state.warning} onClick={run((c) => c.toggleKind('warning'))}>
           ⚠ Piège
+        </ToolbarButton>
+        <ToolbarButton title="Notion : « Terme : définition » (ou « ? » en tête de ligne)" active={state.notion} onClick={run((c) => c.toggleKind('notion'))}>
+          ◆ Notion
         </ToolbarButton>
         <ToolbarButton title="Tableau : deux classifications croisées" active={false} onClick={run((c) => c.insertBlock('table'))}>
           ⊞ Tableau

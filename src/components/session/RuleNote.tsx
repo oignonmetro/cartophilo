@@ -288,6 +288,28 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
           )
         }
 
+        if (block.kind === 'notion') {
+          return (
+            <div
+              key={index}
+              className="flex flex-col gap-1 rounded-2xl border-2 border-violet/35 bg-violet/8 px-4 py-3 text-sm leading-relaxed text-ink"
+            >
+              <p className="text-[0.7rem] font-black tracking-widest text-violet uppercase">
+                Notion
+                {block.label && (
+                  <>
+                    {' · '}
+                    <Rich text={block.label} />
+                  </>
+                )}
+              </p>
+              <p className="text-justify hyphens-auto">
+                <Rich text={block.text} />
+              </p>
+            </div>
+          )
+        }
+
         if (block.kind === 'table') return <NoteTable key={index} block={block} tone={tone} />
 
         return (

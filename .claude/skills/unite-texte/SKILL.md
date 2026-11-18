@@ -376,7 +376,14 @@ commentaire du paragraphe, pas un résumé d'une ligne :
   reprend, ce qu'il prépare) ;
 - **un tableau** dès qu'une notion se compare sur deux axes (quatre
   exemples et ce dont ils ont besoin, deux vertus, trois lectures) ;
-- **un piège** (`! …`) en fin : le contresens à éviter.
+- **un piège** (`! …`) en fin : le contresens à éviter ;
+- **les notions en encadré** (`? terme : définition`, en violet) : chaque
+  notion que l'explication emploie (*valeur*, *capital*, *substance*,
+  *idéologie*…) se définit dans un encadré, à la leçon où le texte s'en
+  sert pour la première fois, et l'explication s'en sert sans la redéfinir.
+  Jamais de leçon d'introduction consacrée aux notions : l'utilisateur les
+  veut introduites petit à petit (`n1863`). Les cartes qui les font
+  apprendre vont dans cette même leçon.
 
 Retouches de l'utilisateur sur Bichat, à anticiper :
 

@@ -341,6 +341,7 @@ porte la synthèse de la section du texte source, ses moments ou étapes, ses
 règles, et les pièges d'interprétation courants, en s'appuyant sur les
 mêmes conventions d'écriture que `content/README.md` documente
 (paragraphes, listes `- …`, étiquettes `- terme : …`, pièges `! …`,
+notions `? terme : …`,
 tableaux `| … | … |` pour une notion qui se divise selon deux axes, et les
 cinq marqueurs `` `terme` ``, `**gras**`, `__souligné__`, `*italique*`,
 `{couleur}texte{/couleur}`).

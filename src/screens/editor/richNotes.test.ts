@@ -169,3 +169,12 @@ describe('définitions citées', () => {
     }
   })
 })
+
+describe('encadré notion dans l’éditeur', () => {
+  it('se lit et se réécrit à l’identique', () => {
+    const text = 'Le capital se valorise.\n\n? **Survaleur** : le travail fourni au-delà du salaire.\n\n! Un piège.'
+    const doc = parseDoc(text)
+    expect(doc.blocks.map((block) => block.kind)).toEqual(['paragraph', 'notion', 'warning'])
+    expect(serializeDoc(doc)).toBe(text)
+  })
+})

@@ -156,6 +156,12 @@ export type NoteBlock =
   /** Suite de règles consécutives : elles s'affichent comme une seule liste. */
   | { kind: 'rules'; rules: NoteRule[] }
   | { kind: 'warning'; text: string }
+  /**
+   * Encadré « notion » (`? Terme : explication`) : la définition d'une notion
+   * que le rappel emploie, mise à part de l'explication qui s'en sert.
+   * `label` est le terme défini, `null` si la ligne n'a pas d'étiquette.
+   */
+  | { kind: 'notion'; label: string | null; text: string }
   /** Croise deux classifications ; voir la ligne d'en-tête dans `parseNotes`. */
   | { kind: 'table'; corner: string; columns: string[]; rows: NoteTableRow[] }
 
@@ -163,6 +169,8 @@ export type NoteTableBlock = Extract<NoteBlock, { kind: 'table' }>
 
 const RULE = /^-\s*/
 const WARNING = /^!\s*/
+/** Un point d'interrogation suivi d'une espace : `?` seul ou collé ne fait pas un encadré. */
+const NOTION = /^\?\s+/
 const TABLE_ROW = /^\|/
 
 /**
@@ -224,7 +232,7 @@ export function parseNotes(notes: string): NoteBlock[] {
   // Bloc de texte en cours de constitution — prose ou piège. Les lignes s'y
   // accumulent jusqu'à ce qu'une ligne vide ou un marqueur vienne le clore,
   // ce qui recolle les phrases repliées quel que soit leur type.
-  let pending: { kind: 'paragraph' | 'warning'; lines: string[] } | null = null
+  let pending: { kind: 'paragraph' | 'warning' | 'notion'; lines: string[] } | null = null
   // Un tableau ne reste ouvert qu'entre deux lignes `|...|` consécutives :
   // une ligne vide le referme, et le `|...|` suivant en commence un autre au
   // lieu de s'ajouter au précédent comme une rangée de plus.
@@ -232,7 +240,11 @@ export function parseNotes(notes: string): NoteBlock[] {
 
   function flush() {
     if (!pending) return
-    blocks.push({ kind: pending.kind, text: pending.lines.join(' ') })
+    const text = pending.lines.join(' ')
+    if (pending.kind === 'notion') {
+      const { label, body } = splitLabel(text)
+      blocks.push({ kind: 'notion', label, text: body })
+    } else blocks.push({ kind: pending.kind, text })
     pending = null
   }
 
@@ -265,6 +277,12 @@ export function parseNotes(notes: string): NoteBlock[] {
     if (WARNING.test(line)) {
       flush()
       pending = { kind: 'warning', lines: [line.replace(WARNING, '')] }
+      continue
+    }
+
+    if (NOTION.test(line)) {
+      flush()
+      pending = { kind: 'notion', lines: [line.replace(NOTION, '')] }
       continue
     }
 
