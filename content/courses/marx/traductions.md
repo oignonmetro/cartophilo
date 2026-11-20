@@ -14,10 +14,11 @@ Les PDF sont dans `C:\Users\Arthur\Œuvres` ; chacun est déclaré au rang 0 dan
 | Œuvre | Traduction de référence | Fichier |
 | --- | --- | --- |
 | *Notes sur James Mill* (1844) | séminaire MARXMILL, université de Nantes (présentation datée de novembre 2022), traduction intégrale annotée, d'après la MEGA | `Notes sur James Mill (Karl Marx, trad. MARXMILL).pdf` |
+| *Contribution à la critique de la philosophie hégélienne du droit* (manuscrit de Kreuznach, 1843), avec les lettres à Ruge de mai et septembre 1843 | GEME, traduction de Jean-François Kervégan (introduction, plan du texte, glossaire des termes) | `Contribution à la critique de la philosophie hégélienne du droit (Karl Marx, GEME, trad. Kervégan).pdf` |
 
 Œuvres dont la référence reste à fixer : *Manuscrits de 1844*, *L'Idéologie
 allemande* et les *Thèses sur Feuerbach*, *Le Capital*, livre I, *Grundrisse*,
 *Contribution* (Préface et Introduction de 1857), *Critique du programme de Gotha*,
-*Manifeste*, *Sur la question juive*, *Travail salarié et capital*. D'ici là, les
+*Manifeste*, *Sur la question juive*, l'*Introduction* de 1843-1844 à la critique de la philosophie du droit de Hegel (que le volume GEME donne en annexe, absente du PDF), *Travail salarié et capital*. D'ici là, les
 volumes des Éditions sociales déclarés dans `textes.py` restent la traduction
 préférée.

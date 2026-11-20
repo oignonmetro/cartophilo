@@ -36,11 +36,12 @@ CACHE = os.path.join(tempfile.gettempdir(), "textes-marx")
 # avant les Éditions sociales des autres volumes.
 EDITIONS = [
     (r"^Notes sur James Mill", "Réf., Notes sur James Mill (MARXMILL)", 0),
+    (r"^Contribution à la critique de la philosophie hégélienne", "Réf., Critique du droit hégélien (GEME, Kervégan)", 0),
     (r"^Manuscrits 1844", "ES, Manuscrits de 1844 (Bottigelli)", 0),
     (r"^L.?id[ée]ologie allemande", "ES, L'Idéologie allemande", 0),
     (r"^Le Capital \(Livre 1\)", "ES, Le Capital, livre I", 0),
     (r"^Manuscrits de 1857", "ES, Grundrisse", 0),
-    (r"^Contribution", "ES, Contribution à la critique de l'économie politique", 0),
+    (r"^Contribution à la critique de l.économie", "ES, Contribution à la critique de l'économie politique", 0),
     (r"^Critique Du Programme De Gotha", "ES, Critique du programme de Gotha", 0),
     (r"^Manifeste du Parti communiste", "ES, Manifeste du Parti communiste", 0),
     (r"^Écrits philosophiques", "ES, Écrits philosophiques (Sève)", 0),
