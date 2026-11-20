@@ -55,6 +55,11 @@ l'épreuve :
     de Marx. Deux unités-textes de la piste Textes portent sur les passages lus de
     suite : `m1844` (le travail aliéné, premier manuscrit) et `g1857` (le
     travail comme non-capital, III-9/10).
+  - **Traductions de référence de Marx** (depuis le 2026-11-20) : une par
+    œuvre, la GEME autant que possible, listées dans
+    `content/courses/marx/traductions.md`. Toute citation de Marx, dans une
+    unité-texte comme dans une unité classique, les adopte dans la mesure du
+    possible.
   - **Repérage** : se repérer dans les différentes œuvres, savoir où se
     situe tel texte clef, etc. Une œuvre s'y traite en unité-œuvre (voir
     plus bas). Chez Plotin, la piste est l'index des 54 traités : chaque

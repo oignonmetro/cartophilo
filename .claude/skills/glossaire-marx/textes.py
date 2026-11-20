@@ -31,7 +31,11 @@ CACHE = os.path.join(tempfile.gettempdir(), "textes-marx")
 
 # (motif du nom de fichier, sigle affiché, rang : 0 = Éditions sociales, préférée ; au 2026-11-06,
 # l'utilisateur a mis dans Œuvres les Éditions sociales de toutes les œuvres de Marx utiles, hors Pléiade)
+# Depuis le 2026-11-20, l'utilisateur fixe une traduction de référence par œuvre, la GEME
+# autant que possible (liste dans content/courses/marx/traductions.md) : elle passe au rang 0,
+# avant les Éditions sociales des autres volumes.
 EDITIONS = [
+    (r"^Notes sur James Mill", "Réf., Notes sur James Mill (MARXMILL)", 0),
     (r"^Manuscrits 1844", "ES, Manuscrits de 1844 (Bottigelli)", 0),
     (r"^L.?id[ée]ologie allemande", "ES, L'Idéologie allemande", 0),
     (r"^Le Capital \(Livre 1\)", "ES, Le Capital, livre I", 0),

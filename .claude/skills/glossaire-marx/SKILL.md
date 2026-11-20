@@ -47,9 +47,12 @@ précisément sa source**. Conséquences :
 - une citation se reprend mot pour mot, telle que la donne NotebookLM, sans
   retraduction ni correction ;
 - **la traduction peut varier** d'une réponse ou d'une étude à l'autre : ce
-  n'est pas une raison de retirer une citation utile. Mais pour les textes
-  dont on a le PDF des **Éditions sociales**, préférer leur traduction
-  (consigne de l'utilisateur, 2026-11-05). `textes.py verifie <fichier.yaml>`
+  n'est pas une raison de retirer une citation utile. Mais une œuvre qui a sa
+  **traduction de référence** (`content/courses/marx/traductions.md`, la GEME
+  autant que possible, consigne de l'utilisateur du 2026-11-20) se cite
+  impérativement dans celle-ci, dans la mesure du possible ; à défaut, pour
+  les textes dont on a le PDF des **Éditions sociales**, préférer leur
+  traduction (consigne du 2026-11-05). `textes.py verifie <fichier.yaml>`
   dit, pour chaque citation du rappel et des cartes (trous compris), dans
   quelle édition on la retrouve ; `textes.py cherche "…"` montre le texte
   autour, pour reprendre une citation sur la traduction préférée. Les PDF sont

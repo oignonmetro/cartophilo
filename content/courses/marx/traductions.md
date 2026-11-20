@@ -1,0 +1,23 @@
+# Traductions de référence de Marx
+
+Fixées par l'utilisateur à partir du 2026-11-20 : la traduction de la **GEME**
+(Grande Édition Marx et Engels, Éditions sociales) autant que possible, sinon celle
+qu'il désigne ici. Toute citation de Marx, dans une unité-texte comme dans une
+unité classique (glossaire, Idées, Repérage), adopte la traduction de référence
+de l'œuvre dans la mesure du possible : on reprend la citation sur le PDF de
+référence (`textes.py cherche "…"`), et l'on n'emploie une autre traduction que
+pour un passage qu'elle ne donne pas, en le disant.
+
+Les PDF sont dans `C:\Users\Arthur\Œuvres` ; chacun est déclaré au rang 0 dans
+`EDITIONS` de `.claude/skills/glossaire-marx/textes.py`.
+
+| Œuvre | Traduction de référence | Fichier |
+| --- | --- | --- |
+| *Notes sur James Mill* (1844) | séminaire MARXMILL, université de Nantes (présentation datée de novembre 2022), traduction intégrale annotée, d'après la MEGA | `Notes sur James Mill (Karl Marx, trad. MARXMILL).pdf` |
+
+Œuvres dont la référence reste à fixer : *Manuscrits de 1844*, *L'Idéologie
+allemande* et les *Thèses sur Feuerbach*, *Le Capital*, livre I, *Grundrisse*,
+*Contribution* (Préface et Introduction de 1857), *Critique du programme de Gotha*,
+*Manifeste*, *Sur la question juive*, *Travail salarié et capital*. D'ici là, les
+volumes des Éditions sociales déclarés dans `textes.py` restent la traduction
+préférée.
