@@ -475,11 +475,13 @@ function SessionRunner({
       // sensation. Vibrer à chaque paire aurait fait exactement le bruit
       // que la parcimonie cherche à éviter.
       haptics.answered(exercise, missed.size === 0)
-      // Toutes les paires finissent trouvées : la manche est réussie, même
-      // si les paires manquées comptent comme un échec au premier essai.
+      // Toutes les paires finissent trouvées : la manche est menée à son terme
+      // (la progression avance), mais une erreur en chemin la marque comme
+      // échouée, au premier essai comme pour tout autre exercice.
       record(exercise, missed.size === 0, true)
-      // Les paires sont toutes trouvées à la fin : inutile de rejouer la manche.
-      advance(false)
+      // Comme un exercice simple raté, la manche à erreurs revient un peu plus
+      // loin dans la file : la session ne s'achève que tout réussi sans faute.
+      advance(missed.size > 0)
     },
     [advance, attempt.seen, course.id, gradeItem, gradeTreatises, haptics, record],
   )
