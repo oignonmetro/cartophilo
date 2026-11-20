@@ -24,6 +24,8 @@ export interface SessionSnapshot {
   correct: number
   total: number
   batchStart: number
+  /** Éléments remis à plus tard pendant la séance (absent des instantanés antérieurs). */
+  deferred?: string[]
 }
 
 const KEY = 'cartophilo.sessionResume.v1'

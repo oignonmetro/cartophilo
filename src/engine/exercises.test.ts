@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { ConjugationLesson, GrammarLesson, PracticeItem, Vocab, VocabLesson } from '@/content/schema'
 import {
+  buildCatchupSession,
   buildLessonSession,
   buildPracticeSession,
   buildReviewSession,
@@ -1630,5 +1631,30 @@ describe('précisions entre parenthèses', () => {
     expect(matchesAnswer('Un', ['Le premier (principe)'], 'le premier')).toBe(true)
     expect(matchesAnswer('(Θ10)', [], 'Θ10')).toBe(true)
     expect(matchesAnswer('(Θ10)', [], '')).toBe(false)
+  })
+})
+
+// --- Rattrapage des cartes remises à plus tard ---------------------------
+
+describe('session de rattrapage', () => {
+  const UNIT = {
+    id: 'g1',
+    title: 'Unité',
+    icon: 'book',
+    color: 'teal' as const,
+    kind: 'grammar' as const,
+    lessons: [GRAMMAR],
+  }
+
+  it('ne reprend que les cartes reportées, précédées du rappel de leur leçon', () => {
+    const session = buildCatchupSession(UNIT, ['p2'], 1)
+    expect(session[0]?.kind).toBe('rule')
+    const graded = session.filter((exercise) => exercise.kind !== 'rule')
+    expect(graded.length).toBeGreaterThan(0)
+    for (const exercise of graded) expect(itemIdsOf(exercise)).toEqual(['p2'])
+  })
+
+  it('ne rejoue rien d’une leçon sans carte reportée', () => {
+    expect(buildCatchupSession(UNIT, [], 1)).toEqual([])
   })
 })

@@ -13,6 +13,7 @@ export function SessionResult({
   passed,
   xp,
   peakTier = 0,
+  deferred = 0,
   onContinue,
   onNext,
   onRetry,
@@ -27,6 +28,8 @@ export function SessionResult({
    * jour) n'ont simplement rien à rappeler ici.
    */
   peakTier?: number
+  /** Cartes remises à plus tard pendant la séance : rappelées ici, pour qu'on sache où les retrouver. */
+  deferred?: number
   onContinue: () => void
   /** Enchaîne sur l'étape suivante, quand il y en a une dans le parcours. */
   onNext?: () => void
@@ -66,6 +69,14 @@ export function SessionResult({
         <Stat label="Réussite" value={`${accuracy} %`} tone="text-teal" />
         <Stat label="XP gagnés" value={`+${xp}`} tone="text-amber" icon />
       </div>
+
+      {deferred > 0 && (
+        <p className="max-w-xs text-sm font-bold text-ink-soft">
+          {deferred === 1
+            ? "Une carte remise à plus tard : elle vous attend au rattrapage, avant la séance finale de l'unité."
+            : `${deferred} cartes remises à plus tard : elles vous attendent au rattrapage, avant la séance finale de l'unité.`}
+        </p>
+      )}
 
       {/* Le même badge qu'en cours de session (voir `ComboBadge`), mais qui
           reste affiché plutôt que de s'effacer après 1,4 s : ici, rien

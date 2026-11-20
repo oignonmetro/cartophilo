@@ -88,6 +88,16 @@ export function RefreshIcon(props: IconProps) {
   )
 }
 
+/** Remettre à plus tard (voir le rattrapage d'une unité). */
+export function ClockIcon(props: IconProps) {
+  return (
+    <svg {...svgProps(props)}>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7.5V12l3 2" />
+    </svg>
+  )
+}
+
 export function ChestIcon(props: IconProps) {
   return (
     <svg {...svgProps(props)}>

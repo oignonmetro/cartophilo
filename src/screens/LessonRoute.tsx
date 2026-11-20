@@ -5,7 +5,7 @@ import { buildLessonSession, lessonProgress } from '@/engine/exercises'
 import { seedFrom } from '@/engine/rng'
 import { citationsOnlyLesson, findLesson } from '@/content/course'
 import { lessonDifficulty, type SessionOutcome } from '@/engine/progress'
-import { buildUnitPath, nextNodeAfter, sectionRank } from '@/engine/unitPath'
+import { buildUnitPath, deferredOfUnit, nextNodeAfter, sectionRank } from '@/engine/unitPath'
 import { useProgress } from '@/store/progressStore'
 import { clearSnapshot, loadSnapshot, saveSnapshot } from '@/lib/sessionResume'
 import { SessionScreen } from './SessionScreen'
@@ -16,6 +16,7 @@ interface Finished {
   passed: boolean
   xp: number
   peakTier: number
+  deferred: number
 }
 
 /**
@@ -103,9 +104,14 @@ function LessonSession({ lessonId }: { lessonId: string }) {
     // L'enchaînement suit l'ordre du parcours, pas celui des seules leçons :
     // la suite peut être une révision, et la sauter viderait le parcours de
     // son sens.
-    const { lessons, steps } = useProgress.getState()
+    const { lessons, steps, deferred } = useProgress.getState()
     const next = nextNodeAfter(
-      buildUnitPath(unit, lessons[course.id] ?? {}, steps[course.id] ?? {}),
+      buildUnitPath(
+        unit,
+        lessons[course.id] ?? {},
+        steps[course.id] ?? {},
+        deferredOfUnit(unit, deferred[course.id] ?? {}).length,
+      ),
       lessonId,
     )
 
@@ -115,6 +121,7 @@ function LessonSession({ lessonId }: { lessonId: string }) {
         passed={finished.passed}
         xp={finished.xp}
         peakTier={finished.peakTier}
+        deferred={finished.deferred}
         onContinue={backHome}
         onNext={
           next && next.status !== 'locked'
@@ -144,10 +151,13 @@ function LessonSession({ lessonId }: { lessonId: string }) {
       restored={resume}
       onSnapshot={(snapshot) => saveSnapshot(course.id, lessonId, { ...snapshot, seed, level })}
       onQuit={backHome}
-      onFinish={(outcome, peakTier) => {
+      onFinish={(outcome, peakTier, deferred) => {
         clearSnapshot(course.id, lessonId)
+        // Une leçon dont des cartes ont été remises à plus tard est tout de
+        // même faite : le parcours continue, et c'est le rattrapage, avant la
+        // séance finale, qui retient l'unité tant qu'elles n'y sont pas reprises.
         const result = finishLesson(course.id, lessonId, outcome)
-        setFinished({ outcome, peakTier, ...result })
+        setFinished({ outcome, peakTier, deferred, ...result })
       }}
     />
   )

@@ -2,12 +2,19 @@ import { useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useCourse } from '@/content/CourseProvider'
 import { findUnit, itemsOfUnit } from '@/content/course'
-import { buildPracticeSession, buildReviewSession, workOrder, type Exercise } from '@/engine/exercises'
+import {
+  buildCatchupSession,
+  buildPracticeSession,
+  buildReviewSession,
+  workOrder,
+  type Exercise,
+} from '@/engine/exercises'
 import { createRng, seedFrom } from '@/engine/rng'
-import type { SessionOutcome } from '@/engine/progress'
+import { withoutDeferred, type SessionOutcome } from '@/engine/progress'
 import {
   buildUnitPath,
   consolidationEntries,
+  deferredOfUnit,
   finalEntries,
   nextNodeAfter,
   stepKey,
@@ -41,14 +48,25 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
   const { course, itemsById } = useCourse()
   const finishStep = useProgress((state) => state.finishStep)
   const skipTo = useProgress((state) => state.skipTo)
-  const [finished, setFinished] = useState<{ outcome: SessionOutcome; xp: number; peakTier: number } | null>(null)
+  const releaseItems = useProgress((state) => state.releaseItems)
+  const [finished, setFinished] = useState<{
+    outcome: SessionOutcome
+    xp: number
+    peakTier: number
+    deferred: number
+  } | null>(null)
 
   const unit = useMemo(() => findUnit(course, unitId), [course, unitId])
   const node = useMemo(() => {
     if (!unit) return null
-    const { lessons, steps } = useProgress.getState()
+    const { lessons, steps, deferred } = useProgress.getState()
     return (
-      buildUnitPath(unit, lessons[course.id] ?? {}, steps[course.id] ?? {}).find(
+      buildUnitPath(
+        unit,
+        lessons[course.id] ?? {},
+        steps[course.id] ?? {},
+        deferredOfUnit(unit, deferred[course.id] ?? {}).length,
+      ).find(
         (candidate) => candidate.id === stepId,
       ) ?? null
     )
@@ -56,13 +74,20 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
 
   // Figé à l'ouverture : les réponses données pendant la session ne doivent
   // pas remanier la file en cours.
+  // Les cartes remises à plus tard attendent le rattrapage : aucune autre
+  // étape ne les reprend avant (voir `withoutDeferred`).
+  const [catchupIds] = useState<string[]>(() =>
+    unit && node?.kind === 'catchup' ? deferredOfUnit(unit, useProgress.getState().deferred[course.id] ?? {}) : [],
+  )
   const [entries] = useState<ConsolidationEntry[]>(() => {
-    if (!unit || !node || node.kind === 'lesson') return []
+    if (!unit || !node || node.kind === 'lesson' || node.kind === 'catchup') return []
     const unitItemIds = itemsOfUnit(unit).map((item) => item.id)
+    const { cards: allCards, deferred } = useProgress.getState()
+    const cards = withoutDeferred(allCards[course.id] ?? {}, deferred[course.id] ?? {})
     // La séance finale ne reprend que les cartes qui ont rechuté plusieurs
     // fois, les plus fragiles d'abord (voir `finalEntries`).
-    if (node.kind === 'final') return finalEntries(useProgress.getState().cards[course.id] ?? {}, itemsById, unitItemIds)
-    return consolidationEntries(useProgress.getState().cards[course.id] ?? {}, itemsById, {
+    if (node.kind === 'final') return finalEntries(cards, itemsById, unitItemIds)
+    return consolidationEntries(cards, itemsById, {
       // Seul l'entraînement sort de l'unité : c'est là qu'on va chercher ce
       // qui a été appris ailleurs et qui redemande du travail.
       scope: node.kind === 'workout' ? 'course' : 'unit',
@@ -74,6 +99,9 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
 
   const exercises = useMemo(() => {
     if (!node) return []
+    // Le rattrapage rejoue les cartes reportées comme à leur découverte
+    // (voir `buildCatchupSession`).
+    if (node.kind === 'catchup' && unit) return buildCatchupSession(unit, catchupIds, seedFrom('catchup', unit.id))
     // L'approfondissement et la séance finale forcent la production ; les
     // deux autres suivent l'état réel de chaque carte.
     const session =
@@ -88,7 +116,7 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
       return order ? [order] : []
     })
     return [...session, ...closing]
-  }, [entries, node, unit])
+  }, [entries, node, unit, catchupIds])
 
   if (!unit || !node || node.kind === 'lesson') return <Navigate to="/" replace />
 
@@ -97,9 +125,14 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
   const backHome = () => navigate(-1)
 
   if (finished) {
-    const { lessons, steps } = useProgress.getState()
+    const { lessons, steps, deferred } = useProgress.getState()
     const next = nextNodeAfter(
-      buildUnitPath(unit, lessons[course.id] ?? {}, steps[course.id] ?? {}),
+      buildUnitPath(
+        unit,
+        lessons[course.id] ?? {},
+        steps[course.id] ?? {},
+        deferredOfUnit(unit, deferred[course.id] ?? {}).length,
+      ),
       stepId,
     )
     return (
@@ -108,6 +141,7 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
         passed
         xp={finished.xp}
         peakTier={finished.peakTier}
+        deferred={finished.deferred}
         onContinue={backHome}
         onNext={
           next && next.status !== 'locked'
@@ -153,9 +187,13 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
       kind={node.kind}
       exercises={exercises}
       onQuit={backHome}
-      onFinish={(outcome, peakTier) =>
-        setFinished({ outcome, peakTier, ...finishStep(course.id, stepKey(unit.id, stepId), outcome) })
-      }
+      onFinish={(outcome, peakTier, deferred) => {
+        // Chaque carte rattrapée a déjà levé son report à sa première bonne
+        // réponse (voir `gradeItem`) ; la séance menée à son terme les lève
+        // toutes, par sûreté.
+        if (node.kind === 'catchup') releaseItems(course.id, catchupIds)
+        setFinished({ outcome, peakTier, deferred, ...finishStep(course.id, stepKey(unit.id, stepId), outcome) })
+      }}
     />
   )
 }

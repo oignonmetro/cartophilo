@@ -7,13 +7,14 @@ import type {
   Passage,
   PassageContext,
   PracticeItem,
+  Unit,
   Vocab,
   Work,
   WorkContext,
   WorkNode,
 } from '@/content/schema'
 import { GAP, type TableExerciseChoice } from '@/content/schema'
-import { isCitation, isPassageLesson, itemsOfLesson, lessonTables, type LessonTable } from '@/content/course'
+import { isCitation, isPassageLesson, itemsOfLesson, itemsOfUnit, lessonTables, type LessonTable } from '@/content/course'
 import { findVocabGap, type TermSplit } from '@/content/text'
 import { fragmentNoteSections, plainInline, splitNoteSections, type NoteTableBlock } from '@/content/notes'
 import {
@@ -26,7 +27,7 @@ import {
   workContextOf,
 } from '@/content/work'
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng'
-import type { CardState } from './srs'
+import { createCard, type CardState } from './srs'
 
 /**
  * Génération des exercices d'une session.
@@ -2808,6 +2809,63 @@ export function buildPracticeSession(
     true,
     canSpeak,
   )
+}
+
+/**
+ * Session de rattrapage d'une unité : les cartes remises à plus tard (voir
+ * `CATCHUP_ID`), reprises comme à leur découverte.
+ *
+ * Une carte reportée n'a souvent jamais été apprise : la reprendre en
+ * révision, à l'échelon d'une carte déjà sue, la réclamerait de mémoire sans
+ * l'avoir jamais montrée. Chaque leçon concernée est donc rejouée à son
+ * premier niveau, puis réduite à ses cartes reportées et aux rappels qui les
+ * précèdent : le rappel de tête (paragraphe, rappel de cours) dès qu'une de
+ * ses cartes revient, une section de fragment seulement si une carte la suit.
+ * Les cartes qui n'y trouveraient aucun exercice (une association à
+ * plusieurs paires, par exemple) passent par une session de révision, pour
+ * ne jamais disparaître du rattrapage.
+ */
+export function buildCatchupSession(unit: Unit, deferredIds: readonly string[], seed: number): Exercise[] {
+  const wanted = new Set(deferredIds)
+  const covered = new Set<string>()
+  const session: Exercise[] = []
+
+  unit.lessons.forEach((lesson, rank) => {
+    if (!itemsOfLesson(lesson, unit).some((item) => wanted.has(item.id))) return
+    const full = buildLessonSession(lesson, 0, seedFrom(seed, lesson.id), false, rank, undefined, unit.work)
+    const keeps = (exercise: Exercise) => {
+      const ids = itemIdsOf(exercise)
+      return ids.length > 0 && ids.every((id) => wanted.has(id))
+    }
+    full.forEach((exercise, index) => {
+      if (exercise.kind !== 'rule') {
+        if (!keeps(exercise)) return
+        session.push(exercise)
+        for (const id of itemIdsOf(exercise)) covered.add(id)
+        return
+      }
+      // Jusqu'où porte ce rappel : le suivant de même rang (une section de
+      // fragment s'arrête au prochain rappel, quel qu'il soit).
+      const head = exercise.fragment === undefined
+      let end = index + 1
+      while (end < full.length) {
+        const next = full[end]!
+        if (next.kind === 'rule' && (!head || next.fragment === undefined)) break
+        end += 1
+      }
+      if (full.slice(index + 1, end).some((next) => next.kind !== 'rule' && keeps(next))) session.push(exercise)
+    })
+  })
+
+  const now = Date.now()
+  const rest = deferredIds.filter((id) => !covered.has(id))
+  if (rest.length === 0) return session
+  const items = new Map(itemsOfUnit(unit).map((item) => [item.id, item]))
+  const entries = rest.flatMap((id) => {
+    const item = items.get(id)
+    return item ? [{ card: createCard(id, now), item }] : []
+  })
+  return [...session, ...buildReviewSession(entries, seedFrom(seed, 'rest'))]
 }
 
 /** Découpe une phrase de grammaire autour de son marqueur `___`. */

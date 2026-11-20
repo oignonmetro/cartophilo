@@ -455,3 +455,26 @@ describe('réinitialisation des chiffres russes appris dans le désordre (format
     expect(state.lessons['fr-ru-a1']).toEqual({ 'u7-l1': lesson })
   })
 })
+
+describe('cartes remises à plus tard', () => {
+  it('reporte puis lève le report à la première bonne réponse', () => {
+    useProgress.getState().reset()
+    useProgress.getState().deferItems('c', ['a', 'b'], 1)
+    expect(Object.keys(useProgress.getState().deferred.c ?? {})).toEqual(['a', 'b'])
+    useProgress.getState().gradeItem('c', 'a', 'again')
+    expect(useProgress.getState().deferred.c?.a).toBe(1)
+    useProgress.getState().gradeItem('c', 'a', 'good')
+    expect(useProgress.getState().deferred.c?.a).toBeUndefined()
+    useProgress.getState().releaseItems('c', ['b'])
+    expect(useProgress.getState().deferred.c).toEqual({})
+  })
+
+  it('passe par la sauvegarde exportée', () => {
+    useProgress.getState().reset()
+    useProgress.getState().deferItems('c', ['a'], 5)
+    const saved = useProgress.getState().exportSave()
+    useProgress.getState().reset()
+    useProgress.getState().importSave(saved)
+    expect(useProgress.getState().deferred.c).toEqual({ a: 5 })
+  })
+})

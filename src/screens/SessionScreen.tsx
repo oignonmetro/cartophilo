@@ -35,7 +35,7 @@ import {
   type SessionHaptics,
 } from '@/components/session/useSessionHaptics'
 import { ComboBadge } from '@/components/session/ComboBadge'
-import { BookIcon, ChestIcon, CloseIcon, FlagIcon, RefreshIcon, StarIcon } from '@/components/icons'
+import { BookIcon, ChestIcon, ClockIcon, CloseIcon, FlagIcon, RefreshIcon, StarIcon } from '@/components/icons'
 import type { SessionOutcome } from '@/engine/progress'
 import type { UnitNodeKind } from '@/engine/unitPath'
 
@@ -71,8 +71,11 @@ interface SessionScreenProps {
   restored?: Omit<SessionSnapshot, 'seed' | 'level'>
   /** Appelé à chaque pas de la session, pour qu'elle puisse être reprise. */
   onSnapshot?: (snapshot: Omit<SessionSnapshot, 'seed' | 'level'>) => void
-  /** `peakTier` : le plus haut palier de série atteint, voir `useSessionHaptics`. */
-  onFinish: (outcome: SessionOutcome, peakTier: number) => void
+  /**
+   * `peakTier` : le plus haut palier de série atteint, voir `useSessionHaptics` ;
+   * `deferred` : cartes remises à plus tard pendant la séance.
+   */
+  onFinish: (outcome: SessionOutcome, peakTier: number, deferred: number) => void
 }
 
 /**
@@ -94,6 +97,7 @@ const SESSION_KIND: Record<UnitNodeKind, { label: string; Icon: typeof BookIcon;
   review: { label: 'Révision', Icon: RefreshIcon, tone: 'bg-sky/15 text-sky', bubble: 'bg-sky' },
   drill: { label: 'Approfondissement', Icon: StarIcon, tone: 'bg-violet/15 text-violet', bubble: 'bg-violet' },
   workout: { label: 'Entraînement', Icon: FlagIcon, tone: 'bg-coral/15 text-coral', bubble: 'bg-coral' },
+  catchup: { label: 'Rattrapage', Icon: ClockIcon, tone: 'bg-blue/15 text-blue', bubble: 'bg-blue' },
   final: { label: 'Séance finale', Icon: ChestIcon, tone: 'bg-amber/15 text-amber', bubble: 'bg-amber' },
 }
 
@@ -239,6 +243,7 @@ function SessionRunner({
   const { course, itemsById } = useCourse()
   const gradeItem = useProgress((state) => state.gradeItem)
   const gradeTreatises = useProgress((state) => state.gradeTreatises)
+  const deferItems = useProgress((state) => state.deferItems)
   const [queue, setQueue] = useState<Exercise[]>(() => {
     if (!resume0) return exercises
     const byId = new Map(exercises.map((exercise) => [exercise.id, exercise]))
@@ -258,6 +263,11 @@ function SessionRunner({
   // aussitôt une autre au dixième exercice de la leçon, pas au vingtième).
   const [batchStart, setBatchStart] = useState(resume0?.batchStart ?? 0)
   const [paused, setPaused] = useState(false)
+  // Éléments remis à plus tard pendant cette séance (bouton « Plus tard ») :
+  // leurs exercices quittent la file et le décompte. Le report lui-même est
+  // enregistré dans le store (voir `deferItems`) ; ce relevé local ne sert
+  // qu'à la séance, et se reprend avec elle.
+  const [deferredHere, setDeferredHere] = useState<ReadonlySet<string>>(() => new Set(resume0?.deferred))
 
   // Mode « citations seules » (voir `citationsOnly` dans le store) : proposé
   // dans une leçon qui cite un texte, et là seulement ; les révisions ne
@@ -314,8 +324,9 @@ function SessionRunner({
       correct: attempt.correct,
       total: attempt.total,
       batchStart,
+      deferred: [...deferredHere],
     })
-  }, [onSnapshot, queue, position, attempt, batchStart, current])
+  }, [onSnapshot, queue, position, attempt, batchStart, current, deferredHere])
 
   const skipped = current !== undefined && skips(current)
 
@@ -339,12 +350,17 @@ function SessionRunner({
   }, [skipped, position])
 
   // Les exercices sautés ne comptent pas, sauf ceux déjà faits avant
-  // d'allumer le mode.
+  // d'allumer le mode ; les exercices remis à plus tard non plus, sauf ceux
+  // déjà réussis avant le report.
   const graded = useMemo(
     () =>
-      exercises.filter((exercise) => !isPresentation(exercise) && (!skips(exercise) || attempt.seen.has(exercise.id)))
-        .length,
-    [exercises, skips, attempt.seen],
+      exercises.filter(
+        (exercise) =>
+          !isPresentation(exercise) &&
+          (!skips(exercise) || attempt.seen.has(exercise.id)) &&
+          (attempt.passed.has(exercise.id) || !itemIdsOf(exercise).some((id) => deferredHere.has(id))),
+      ).length,
+    [exercises, skips, attempt.seen, attempt.passed, deferredHere],
   )
   // La progression compte les exercices réussis, non les exercices vus : un
   // exercice raté revient dans la file (voir `answer`) tant qu'il n'a pas
@@ -486,6 +502,30 @@ function SessionRunner({
     [advance, attempt.seen, course.id, gradeItem, gradeTreatises, haptics, record],
   )
 
+  /**
+   * Remet à plus tard l'élément de l'exercice affiché : il n'est pas noté,
+   * ses exercices restants quittent la file (rappels exceptés), et il
+   * attendra le rattrapage de son unité (voir `CATCHUP_ID`). La progression
+   * affichée n'en profite pas : rien n'est réussi, l'exercice sort seulement
+   * du décompte.
+   */
+  const defer = useCallback(
+    (exercise: Exercise) => {
+      const ids = itemIdsOf(exercise)
+      deferItems(course.id, ids)
+      setDeferredHere((state) => new Set([...state, ...ids]))
+      setQueue((current_) =>
+        current_.filter((candidate, index) => index < position || !itemIdsOf(candidate).some((id) => ids.includes(id))),
+      )
+    },
+    [course.id, deferItems, position],
+  )
+  // Un seul élément par exercice : reporter une association reporterait du
+  // même coup toutes ses paires. Pas de report au rattrapage, qui est
+  // précisément le moment de les reprendre.
+  const deferrable =
+    kind !== 'catchup' && current !== undefined && !isPresentation(current) && itemIdsOf(current).length === 1
+
   // La file est vide : la session est terminée. Le drapeau évite que le rendu
   // suivant ne déclenche une seconde clôture.
   const finished = useRef(false)
@@ -494,8 +534,8 @@ function SessionRunner({
     finished.current = true
     const outcome = { correct: attempt.correct, total: attempt.total }
     haptics.finished(outcome)
-    onFinish(outcome, peakTier())
-  }, [attempt.correct, attempt.total, current, haptics, onFinish, peakTier])
+    onFinish(outcome, peakTier(), deferredHere.size)
+  }, [attempt.correct, attempt.total, current, haptics, onFinish, peakTier, deferredHere])
 
   if (!current || skipped) return null
 
@@ -592,10 +632,28 @@ function SessionRunner({
           plutôt que couper son bouton, même si l'intention reste que rien
           n'ait normalement besoin de défiler ici. */}
       <main className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 pb-6 md:pb-10">
-        {origin && (
-          <p className="mb-2 truncate text-xs font-bold text-ink-faint" title={`${origin.unit} · ${origin.lesson}`}>
-            {origin.unit !== origin.lesson ? `${origin.unit} · ${origin.lesson}` : origin.lesson}
-          </p>
+        {(origin || deferrable) && (
+          <div className="mb-2 flex min-h-6 items-center gap-2">
+            {origin && (
+              <p
+                className="min-w-0 flex-1 truncate text-xs font-bold text-ink-faint"
+                title={`${origin.unit} · ${origin.lesson}`}
+              >
+                {origin.unit !== origin.lesson ? `${origin.unit} · ${origin.lesson}` : origin.lesson}
+              </p>
+            )}
+            {deferrable && (
+              <button
+                type="button"
+                onClick={() => defer(current)}
+                title="Revoir plus tard : cette carte attendra le rattrapage, à la fin de l'unité"
+                className="ml-auto flex shrink-0 items-center gap-1 rounded-full px-2 py-0.5 text-xs font-extrabold text-ink-faint transition-colors hover:bg-ink/5 hover:text-ink-soft"
+              >
+                <ClockIcon size={14} />
+                Revoir plus tard
+              </button>
+            )}
+          </div>
         )}
         <AnimatePresence mode="wait">
           <motion.div

@@ -159,6 +159,12 @@ pas seulement Glossaire et Repérage.
   pourquoi un plan n'est pas reconnu) et en joue un aperçu ; il y fixe aussi,
   au besoin, les exercices de chaque tableau et leurs colonnes (`tables:`
   dans la leçon, voir `lessonTableSchema` et `content/philosophie.md`).
+- Revoir plus tard (2026-11-21) : en séance, une carte peut être remise à
+  plus tard (`deferred` dans le store) ; elle n'est pas notée, sort de la
+  maîtrise affichée et des révisions, et attend le **rattrapage** de son
+  unité (nœud `catchup` de `unitPath.ts`, juste avant la séance finale,
+  qu'il retient ; `buildCatchupSession`). Le rattrapage s'ouvre à tout
+  moment depuis la carte de l'unité, et une bonne réponse lève le report.
 - Le moteur de vocabulaire (`kind: vocab`, plus aucun cours ne l'emploie
   depuis le retrait du cours `demo`) n'a plus d'écran de présentation à part (l'ancienne
   auto-évaluation « nouveau / incertain / je savais ») : un mot rencontre

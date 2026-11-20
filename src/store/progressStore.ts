@@ -7,6 +7,7 @@ import {
   dayKey,
   isPassed,
   xpFor,
+  type DeferredMap,
   type LessonProgressMap,
   type SessionOutcome,
   type Streak,
@@ -63,6 +64,15 @@ export interface ProgressSnapshot {
   cards: CourseBucket<Record<string, CardState>>
   /** Étapes de parcours franchies : clé `unité:nœud` → nombre de passages. */
   steps: CourseBucket<Record<string, number>>
+  /**
+   * Cartes remises à plus tard (bouton « Plus tard » d'une séance, voir
+   * `SessionScreen`) : élément → date du report. Elles sortent de la
+   * maîtrise affichée et des révisions (voir `withoutDeferred`) et attendent
+   * le rattrapage de leur unité (voir `CATCHUP_ID`), qui les lève une à une
+   * à leur première bonne réponse (voir `gradeItem`). Absent des
+   * sauvegardes antérieures : rien n'y était reporté.
+   */
+  deferred: CourseBucket<DeferredMap>
   xp: number
   xpByDay: Record<string, number>
   dailyGoal: number
@@ -178,6 +188,10 @@ interface ProgressState extends ProgressSnapshot {
       session?: string
     }[],
   ) => void
+  /** Remet des éléments à plus tard : ils attendent le rattrapage de leur unité. */
+  deferItems: (courseId: string, itemIds: readonly string[], now?: number) => void
+  /** Lève le report d'éléments (sans effet sur ceux qui n'étaient pas reportés). */
+  releaseItems: (courseId: string, itemIds: readonly string[]) => void
   /** Clôt une session de leçon : plancher d'acquisition, XP, série. */
   finishLesson: (
     courseId: string,
@@ -232,12 +246,14 @@ interface ProgressState extends ProgressSnapshot {
 export const EMPTY_LESSON_PROGRESS: LessonProgressMap = {}
 export const EMPTY_CARDS: Record<string, CardState> = {}
 export const EMPTY_STEPS: Record<string, number> = {}
+export const EMPTY_DEFERRED: DeferredMap = {}
 
 const initial: ProgressSnapshot = {
   lessons: {},
   treatises: {},
   cards: {},
   steps: {},
+  deferred: {},
   xp: 0,
   xpByDay: {},
   dailyGoal: 30,
@@ -498,7 +514,30 @@ export const useProgress = create<ProgressState>()(
         set((state) => {
           const bucket = state.cards[courseId] ?? {}
           const card = bucket[itemId] ?? createCard(itemId, now)
-          return { cards: { ...state.cards, [courseId]: { ...bucket, [itemId]: review(card, rating, now) } } }
+          const cards = { ...state.cards, [courseId]: { ...bucket, [itemId]: review(card, rating, now) } }
+          // Une carte reportée qui reçoit une bonne réponse (au rattrapage, ou
+          // en rejouant sa leçon) est rattrapée : le report tombe de lui-même.
+          const deferred = state.deferred[courseId]
+          if (rating === 'again' || !deferred || !(itemId in deferred)) return { cards }
+          const { [itemId]: _released, ...rest } = deferred
+          return { cards, deferred: { ...state.deferred, [courseId]: rest } }
+        }),
+
+      deferItems: (courseId, itemIds, now = Date.now()) =>
+        set((state) => {
+          if (itemIds.length === 0) return {}
+          const bucket = { ...(state.deferred[courseId] ?? {}) }
+          for (const id of itemIds) bucket[id] ??= now
+          return { deferred: { ...state.deferred, [courseId]: bucket } }
+        }),
+
+      releaseItems: (courseId, itemIds) =>
+        set((state) => {
+          const current = state.deferred[courseId]
+          if (!current || !itemIds.some((id) => id in current)) return {}
+          const bucket = { ...current }
+          for (const id of itemIds) delete bucket[id]
+          return { deferred: { ...state.deferred, [courseId]: bucket } }
         }),
 
       finishLesson: (courseId, lessonId, outcome, now = Date.now()) => {
@@ -606,6 +645,7 @@ export const useProgress = create<ProgressState>()(
           treatises,
           cards,
           steps,
+          deferred,
           xp,
           xpByDay,
           dailyGoal,
@@ -628,6 +668,7 @@ export const useProgress = create<ProgressState>()(
             treatises,
             cards,
             steps,
+            deferred,
             xp,
             xpByDay,
             dailyGoal,
@@ -654,6 +695,7 @@ export const useProgress = create<ProgressState>()(
           treatises?: ProgressSnapshot['treatises']
           cards?: unknown
           steps?: unknown
+          deferred?: ProgressSnapshot['deferred']
           xp?: number
           xpByDay?: Record<string, number>
           dailyGoal?: number
@@ -708,6 +750,7 @@ export const useProgress = create<ProgressState>()(
           treatises: parsed.treatises ?? {},
           cards,
           steps: migrateAlphabetSteps(steps),
+          deferred: parsed.deferred ?? {},
           xp: parsed.xp ?? 0,
           xpByDay: parsed.xpByDay ?? {},
           dailyGoal: parsed.dailyGoal ?? initial.dailyGoal,
@@ -774,6 +817,7 @@ export const useProgress = create<ProgressState>()(
         treatises,
         cards,
         steps,
+        deferred,
         xp,
         xpByDay,
         dailyGoal,
@@ -792,6 +836,7 @@ export const useProgress = create<ProgressState>()(
         treatises,
         cards,
         steps,
+        deferred,
         xp,
         xpByDay,
         dailyGoal,

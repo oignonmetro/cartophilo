@@ -2,9 +2,9 @@ import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCourse } from '@/content/CourseProvider'
 import { buildReviewSession } from '@/engine/exercises'
-import type { SessionOutcome } from '@/engine/progress'
+import { withoutDeferred, type SessionOutcome } from '@/engine/progress'
 import { dueCards, type CardState } from '@/engine/srs'
-import { EMPTY_CARDS, useProgress } from '@/store/progressStore'
+import { EMPTY_CARDS, EMPTY_DEFERRED, useProgress } from '@/store/progressStore'
 import { SessionScreen } from './SessionScreen'
 import { SessionResult } from './SessionResult'
 import { Button } from '@/components/Button'
@@ -16,9 +16,17 @@ const REVIEW_LIMIT = 15
 export function ReviewRoute() {
   const navigate = useNavigate()
   const { course, itemsById } = useCourse()
-  const cards = useProgress((state) => state.cards[course.id] ?? EMPTY_CARDS)
+  const allCards = useProgress((state) => state.cards[course.id] ?? EMPTY_CARDS)
+  const deferred = useProgress((state) => state.deferred[course.id] ?? EMPTY_DEFERRED)
+  // Une carte remise à plus tard attend son rattrapage, pas la révision.
+  const cards = useMemo(() => withoutDeferred(allCards, deferred), [allCards, deferred])
   const finishReview = useProgress((state) => state.finishReview)
-  const [finished, setFinished] = useState<{ outcome: SessionOutcome; xp: number; peakTier: number } | null>(null)
+  const [finished, setFinished] = useState<{
+    outcome: SessionOutcome
+    xp: number
+    peakTier: number
+    deferred: number
+  } | null>(null)
 
   // La file est figée à l'ouverture : les notes données pendant la session ne
   // doivent pas retirer des éléments de la session en cours. Toutes pistes
@@ -41,6 +49,7 @@ export function ReviewRoute() {
         passed
         xp={finished.xp}
         peakTier={finished.peakTier}
+        deferred={finished.deferred}
         onContinue={() => navigate(-1)}
         onRetry={() => navigate(-1)}
       />
@@ -64,7 +73,9 @@ export function ReviewRoute() {
       kind="review"
       exercises={exercises}
       onQuit={() => navigate(-1)}
-      onFinish={(outcome, peakTier) => setFinished({ outcome, peakTier, ...finishReview(outcome) })}
+      onFinish={(outcome, peakTier, deferred) =>
+        setFinished({ outcome, peakTier, deferred, ...finishReview(outcome) })
+      }
     />
   )
 }

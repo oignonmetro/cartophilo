@@ -6,6 +6,8 @@ import { createCard, DAY, type CardState } from './srs'
 import type { LessonProgressMap } from './progress'
 import {
   buildUnitPath,
+  CATCHUP_ID,
+  deferredOfUnit,
   consolidationEntries,
   finalEntries,
   FINAL_LIMIT,
@@ -305,5 +307,36 @@ describe('séance finale', () => {
     const entries = finalEntries(cards, index, ids)
     expect(entries).toHaveLength(FINAL_LIMIT)
     expect(entries[0]!.card.itemId).toBe(ids[ids.length - 1])
+  })
+})
+
+describe('rattrapage des cartes remises à plus tard', () => {
+  const allDone = Object.fromEntries(U2.lessons.map((lesson) => [lesson.id, done]))
+
+  it('n’apparaît que tant que des cartes attendent, juste avant la séance finale', () => {
+    expect(kinds(buildUnitPath(U2, allDone, {}))).not.toContain('catchup')
+    expect(kinds(buildUnitPath(U2, allDone, {}, 1)).slice(-2)).toEqual(['catchup', 'final'])
+  })
+
+  it('s’ouvre à tout moment mais retient la séance finale', () => {
+    const early = buildUnitPath(U2, {}, {}, 1)
+    expect(early.find((node) => node.id === CATCHUP_ID)?.status).toBe('available')
+    expect(early.find((node) => node.id === 'final')?.status).toBe('locked')
+    // La leçon courante reste la destination : le rattrapage ne passe pas devant.
+    expect(currentDestination(U2.id, early)).toEqual({ lessonId: U2.lessons[0]!.id })
+    const late = buildUnitPath(U2, allDone, { [stepKey(U2.id, 'review-1')]: 1, [stepKey(U2.id, 'final')]: 1 }, 1)
+    expect(currentDestination(U2.id, late)).toEqual({ unitId: U2.id, stepId: CATCHUP_ID })
+  })
+
+  it('compte une étape à faire de plus, sans avancer l’unité', () => {
+    const before = buildUnitPath(U2, allDone, {})
+    const after = buildUnitPath(U2, allDone, {}, 1)
+    const count = (nodes: typeof before) => nodes.filter((node) => node.status === 'done').length
+    expect(count(after)).toBe(count(before))
+    expect(after.length).toBe(before.length + 1)
+  })
+
+  it('relève les cartes reportées d’une unité', () => {
+    expect(deferredOfUnit(U2, { 'g1-w2': 1, 'autre': 2 })).toEqual(['g1-w2'])
   })
 })

@@ -95,6 +95,27 @@ export interface Mastery {
   ratio: number
 }
 
+/**
+ * Cartes remises à plus tard (voir `deferred` dans le store) : élément →
+ * date du report. Tant qu'un élément y figure, il ne compte ni dans la
+ * maîtrise affichée ni dans les révisions ; il attend le rattrapage de son
+ * unité (voir `buildCatchupSession`).
+ */
+export type DeferredMap = Record<string, number>
+
+/**
+ * Les cartes d'un cours sans celles des éléments remis à plus tard : une
+ * carte reportée ne fait pas avancer la progression affichée, et ne revient
+ * pas avant son rattrapage dans les révisions. Renvoie l'objet d'origine
+ * quand rien n'est à retirer, pour ne pas casser la mémoïsation.
+ */
+export function withoutDeferred(cards: Record<string, CardState>, deferred: DeferredMap): Record<string, CardState> {
+  if (!Object.keys(deferred).some((id) => id in cards)) return cards
+  const kept: Record<string, CardState> = {}
+  for (const [id, card] of Object.entries(cards)) if (!(id in deferred)) kept[id] = card
+  return kept
+}
+
 export function masteryOf(itemIds: readonly string[], cards: Record<string, CardState>): Mastery {
   let seen = 0
   let known = 0

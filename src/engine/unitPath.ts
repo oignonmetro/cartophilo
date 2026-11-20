@@ -1,5 +1,5 @@
 import type { ItemLocation } from '@/content/course'
-import { lessonCountLabel } from '@/content/course'
+import { itemsOfUnit, lessonCountLabel } from '@/content/course'
 import type { Lesson, PracticeItem, Unit } from '@/content/schema'
 import { dueCards, isFragile, type CardState } from './srs'
 import { levelOf, type LessonProgressMap } from './progress'
@@ -14,7 +14,7 @@ import { levelOf, type LessonProgressMap } from './progress'
  * suite et ce qui alimente chaque étape.
  */
 
-export type UnitStepKind = 'review' | 'drill' | 'workout' | 'final'
+export type UnitStepKind = 'review' | 'drill' | 'workout' | 'catchup' | 'final'
 export type UnitNodeKind = 'lesson' | UnitStepKind
 export type UnitNodeStatus = 'done' | 'available' | 'locked'
 
@@ -40,6 +40,7 @@ const STEP_LABELS: Record<UnitStepKind, { title: string; subtitle: string }> = {
   review: { title: 'Révision', subtitle: "Reprendre ce qui vient d'être vu" },
   drill: { title: 'Approfondissement', subtitle: 'Produire de mémoire, sans aide' },
   workout: { title: 'Entraînement', subtitle: 'Vos points les plus fragiles' },
+  catchup: { title: 'Rattrapage', subtitle: 'Les cartes remises à plus tard' },
   final: { title: 'Séance finale', subtitle: "Bilan complet de l'unité" },
 }
 
@@ -73,7 +74,10 @@ const CONSOLIDATE_EVERY = 4
  * leçon qui précède>`, `consolidate-<rang>`) : une étape qui existait déjà au
  * même endroit reste reconnue comme faite.
  */
-function layout(unit: Unit): { id: string; kind: UnitNodeKind; lesson: Lesson | null; cycle: number }[] {
+function layout(
+  unit: Unit,
+  deferred: number,
+): { id: string; kind: UnitNodeKind; lesson: Lesson | null; cycle: number }[] {
   const nodes: { id: string; kind: UnitNodeKind; lesson: Lesson | null; cycle: number }[] = []
 
   unit.lessons.forEach((lesson, index) => {
@@ -87,7 +91,12 @@ function layout(unit: Unit): { id: string; kind: UnitNodeKind; lesson: Lesson | 
       nodes.push({ id: `consolidate-${index}`, kind: rank % 2 === 0 ? 'workout' : 'drill', lesson: null, cycle })
     }
   })
-  nodes.push({ id: 'final', kind: 'final', lesson: null, cycle: Math.ceil(unit.lessons.length / REVIEW_EVERY) })
+  const last = Math.ceil(unit.lessons.length / REVIEW_EVERY)
+  // Le rattrapage n'existe que tant que des cartes de l'unité attendent
+  // (voir `CATCHUP_ID`) ; il précède le bilan, qui reprend alors aussi ce
+  // qu'il a fait rechuter.
+  if (deferred > 0) nodes.push({ id: CATCHUP_ID, kind: 'catchup', lesson: null, cycle: last })
+  nodes.push({ id: 'final', kind: 'final', lesson: null, cycle: last })
   return nodes
 }
 
@@ -95,19 +104,29 @@ export function buildUnitPath(
   unit: Unit,
   progress: LessonProgressMap,
   steps: Record<string, number>,
+  /** Cartes de l'unité remises à plus tard (voir `deferredOfUnit`). */
+  deferred = 0,
 ): UnitPathNode[] {
   let reached = false
 
-  return layout(unit).map(({ id, kind, lesson, cycle }) => {
-    const done = lesson
-      ? levelOf(progress, lesson.id) >= 1
-      : (steps[stepKey(unit.id, id)] ?? 0) >= 1
+  return layout(unit, deferred).map(({ id, kind, lesson, cycle }) => {
+    // Le rattrapage n'est jamais fait tant qu'il existe : il disparaît du
+    // parcours dès qu'il ne reste plus rien à rattraper.
+    const done =
+      kind === 'catchup'
+        ? false
+        : lesson
+          ? levelOf(progress, lesson.id) >= 1
+          : (steps[stepKey(unit.id, id)] ?? 0) >= 1
 
     // Le premier nœud non fait est l'étape courante ; tout ce qui suit attend.
     // Un nœud déjà fait reste jouable : on peut toujours revenir en arrière.
+    // Le rattrapage, lui, s'ouvre à tout moment (c'est ainsi qu'on lève un
+    // report avant la fin de l'unité), mais bloque toujours ce qui le suit :
+    // l'unité ne se clôt pas sur des cartes laissées de côté.
     let status: UnitNodeStatus = 'done'
     if (!done) {
-      status = reached ? 'locked' : 'available'
+      status = reached && kind !== 'catchup' ? 'locked' : 'available'
       reached = true
     }
 
@@ -121,6 +140,24 @@ export function buildUnitPath(
       cycle,
     }
   })
+}
+
+/**
+ * Identifiant du nœud de rattrapage d'une unité : les cartes que
+ * l'apprenant a remises à plus tard en cours de séance (bouton « Plus
+ * tard », voir `SessionScreen`), réunies à la fin du parcours, juste avant
+ * la séance finale. Elles y reviennent après tout le reste de l'unité, assez
+ * tard pour ne pas gêner ce qui a été jugé plus important, assez tôt pour
+ * que l'unité ne se termine pas sans elles.
+ */
+export const CATCHUP_ID = 'catchup'
+
+/** Éléments d'une unité remis à plus tard, dans l'ordre de l'unité. */
+export function deferredOfUnit(unit: Unit, deferred: Record<string, number>): string[] {
+  if (Object.keys(deferred).length === 0) return []
+  return itemsOfUnit(unit)
+    .map((item) => item.id)
+    .filter((id) => id in deferred)
 }
 
 /** Nœud suivant à faire après celui-ci, pour enchaîner en fin de session. */

@@ -4,10 +4,18 @@ import { AnimatePresence, motion } from 'framer-motion'
 import type { LibraryCourse, SubjectGroup, TermEntry, Track, TreatiseEntry, Unit } from '@/content/schema'
 import { countLabel, courseLabel, isTextUnit, isWorkUnit, itemsOfUnit, unitLetters } from '@/content/course'
 import type { LessonProgressMap } from '@/engine/progress'
-import { dayKey, displayedStreak, levelFromXp, masteryOf, unitMastery, type Mastery } from '@/engine/progress'
-import { buildUnitPath, currentDestination } from '@/engine/unitPath'
+import {
+  dayKey,
+  displayedStreak,
+  levelFromXp,
+  masteryOf,
+  unitMastery,
+  withoutDeferred,
+  type Mastery,
+} from '@/engine/progress'
+import { buildUnitPath, CATCHUP_ID, currentDestination, deferredOfUnit } from '@/engine/unitPath'
 import { dueCards, type CardState } from '@/engine/srs'
-import { EMPTY_CARDS, EMPTY_LESSON_PROGRESS, EMPTY_STEPS, useProgress } from '@/store/progressStore'
+import { EMPTY_CARDS, EMPTY_DEFERRED, EMPTY_LESSON_PROGRESS, EMPTY_STEPS, useProgress } from '@/store/progressStore'
 import { useCourse } from '@/content/CourseProvider'
 import { availableCourses } from '@/content/loader'
 import { ProgressRing } from '@/components/ProgressRing'
@@ -16,7 +24,7 @@ import { TextSheet } from '@/components/TextSheet'
 import { ENNEAD_NUMERALS, acquiredCount } from '@/engine/treatises'
 import { PlanSheet } from '@/components/work/PlanSheet'
 import { NoteBlocks, TONES, Rich } from '@/components/session/RuleNote'
-import { ChevronLeftIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
+import { ChevronLeftIcon, ClockIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
 
 /**
  * Onglet ouvert par défaut : la première piste qui a effectivement une liste
@@ -74,8 +82,11 @@ function doneNodes(
   unit: Unit,
   lessons: LessonProgressMap,
   steps: Record<string, number>,
+  deferred: number,
 ): { count: number; total: number } {
-  const path = buildUnitPath(unit, lessons, steps)
+  // Le rattrapage compte comme une étape à faire tant qu'il existe : remettre
+  // une carte à plus tard ne fait pas avancer l'unité.
+  const path = buildUnitPath(unit, lessons, steps, deferred)
   return { count: path.filter((node) => node.status === 'done').length, total: path.length }
 }
 
@@ -309,7 +320,12 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   const lessons = useProgress((state) => state.lessons[course.id] ?? EMPTY_LESSON_PROGRESS)
   const steps = useProgress((state) => state.steps[course.id] ?? EMPTY_STEPS)
   const treatiseProgress = useProgress((state) => state.treatises[course.id])
-  const cards = useProgress((state) => state.cards[course.id] ?? EMPTY_CARDS)
+  const allCards = useProgress((state) => state.cards[course.id] ?? EMPTY_CARDS)
+  const deferred = useProgress((state) => state.deferred[course.id] ?? EMPTY_DEFERRED)
+  // Les cartes remises à plus tard ne comptent ni dans les anneaux de
+  // maîtrise ni dans les révisions dues, jusqu'à leur rattrapage.
+  const cards = useMemo(() => withoutDeferred(allCards, deferred), [allCards, deferred])
+  const deferredIn = (unit: Unit) => deferredOfUnit(unit, deferred).length
   const xp = useProgress((state) => state.xp)
   const streak = useProgress((state) => state.streak)
 
@@ -373,7 +389,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   // Ouvrir une unité mène droit à son étape courante — pas à un écran de
   // parcours à traverser pour la retrouver (voir `currentDestination`).
   const openUnit = (unit: Unit) => {
-    const destination = currentDestination(unit.id, buildUnitPath(unit, lessons, steps))
+    const destination = currentDestination(unit.id, buildUnitPath(unit, lessons, steps, deferredIn(unit)))
     if (!destination) return
     navigate('lessonId' in destination ? `/lecon/${destination.lessonId}` : `/etape/${destination.unitId}/${destination.stepId}`)
   }
@@ -436,7 +452,9 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                 unit={unit}
                 tone={tone}
                 mastery={unitMastery(unit, cards)}
-                done={doneNodes(unit, lessons, steps)}
+                done={doneNodes(unit, lessons, steps, deferredIn(unit))}
+                deferred={deferredIn(unit)}
+                onCatchUp={() => navigate(`/etape/${unit.id}/${CATCHUP_ID}`)}
                 onOpen={() => openUnit(unit)}
                 reader={readerOf(unit)}
                 onReadNotes={hasSeveralNotes(unit) ? () => navigate(`/fiches/${unit.id}`) : undefined}
@@ -450,7 +468,9 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
             unit={entry.unit}
             tone={tone}
             mastery={unitMastery(entry.unit, cards)}
-            done={doneNodes(entry.unit, lessons, steps)}
+            done={doneNodes(entry.unit, lessons, steps, deferredIn(entry.unit))}
+            deferred={deferredIn(entry.unit)}
+            onCatchUp={() => navigate(`/etape/${entry.unit.id}/${CATCHUP_ID}`)}
             onOpen={() => openUnit(entry.unit)}
             reader={readerOf(entry.unit)}
             onReadNotes={hasSeveralNotes(entry.unit) ? () => navigate(`/fiches/${entry.unit.id}`) : undefined}
@@ -551,7 +571,9 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
                     unit={unit}
                     tone={tone}
                     mastery={unitMastery(unit, cards)}
-                    done={doneNodes(unit, lessons, steps)}
+                    done={doneNodes(unit, lessons, steps, deferredIn(unit))}
+                    deferred={deferredIn(unit)}
+                    onCatchUp={() => navigate(`/etape/${unit.id}/${CATCHUP_ID}`)}
                     onOpen={() => openUnit(unit)}
                     reader={readerOf(unit)}
                     onReadNotes={hasSeveralNotes(unit) ? () => navigate(`/fiches/${unit.id}`) : undefined}
@@ -778,6 +800,8 @@ function UnitCard({
   tone,
   mastery,
   done,
+  deferred = 0,
+  onCatchUp,
   onOpen,
   reader,
   onReadNotes,
@@ -788,6 +812,13 @@ function UnitCard({
   mastery: { known: number; seen: number; total: number; ratio: number }
   /** Étapes franchies sur le parcours de l'unité, et total. */
   done: { count: number; total: number }
+  /** Cartes de l'unité remises à plus tard, en attente de rattrapage. */
+  deferred?: number
+  /**
+   * Ouvre le rattrapage tout de suite, sans attendre la fin du parcours :
+   * c'est ainsi qu'on revient sur un report quand on le souhaite.
+   */
+  onCatchUp?: () => void
   onOpen: () => void
   /**
    * Ce que l'unité donne à lire hors exercice, s'il y a lieu : le texte
@@ -853,6 +884,17 @@ function UnitCard({
           </span>
         )}
       </button>
+      {deferred > 0 && onCatchUp && (
+        <button
+          type="button"
+          onClick={onCatchUp}
+          title="Reprendre maintenant les cartes remises à plus tard"
+          className={`flex w-full items-center justify-center gap-2 border-t-2 border-line py-2.5 text-xs font-black tracking-wide uppercase ${tone.text} transition-colors hover:bg-ink/5`}
+        >
+          <ClockIcon size={16} />
+          Rattraper {deferred === 1 ? 'la carte remise' : `les ${deferred} cartes remises`} à plus tard
+        </button>
+      )}
       {(reader || onReadNotes) && (
         <div className="flex border-t-2 border-line">
           {reader && (
