@@ -191,7 +191,7 @@ export function PassageEditor({
 
         {/*
          * Facultatif : l'intitulé de la partie d'un paragraphe découpé en
-         * parties, « 1er mouvement », « §103 (2) »… (voir `passageSchema.part`).
+         * parties, « 1.1 », « §103 (2) »… (voir `passageSchema.part`).
          * Les leçons consécutives de même repère se lisent d'un tenant sous
          * cet intitulé dans « Lire le texte ».
          */}

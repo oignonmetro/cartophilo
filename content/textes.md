@@ -186,12 +186,14 @@ plutôt qu'un faux `§n`.
 ## Un paragraphe en parties
 
 Une explication très détaillée d'un paragraphe long (le Chapitre VI de Marx,
-`n1863`) le découpe en **parties**, une par mouvement de l'argument, et
-chaque partie en **plusieurs leçons**, une par phrase ou groupe de phrases à
-expliquer. Le repère nomme la partie : quand l'unité n'analyse qu'un seul
-paragraphe, c'est le mouvement, `"1er mouvement"`, `"2e mouvement"`… ; quand
-elle en couvre plusieurs, le paragraphe et la partie, `"§103 (1)"`,
-`"§103 (2)"`… Chaque leçon cite
+`n1863`) le découpe en **mouvements**, chaque mouvement en **trois ou quatre
+parties**, et chaque partie en **plusieurs leçons**, une par phrase ou groupe
+de phrases à expliquer : un repère par mouvement donnerait trop de leçons au
+même repère. Le repère nomme la partie : quand l'unité n'analyse qu'un seul
+paragraphe, `"1.1"`, `"1.2"`… `"3.4"` (mouvement, puis partie), sur le
+découpage de l'explication écrite (le Claude Doc de l'utilisateur, où les
+mêmes numéros intitulent les parties) ; quand elle en couvre plusieurs, le
+paragraphe et la partie, `"§103 (1)"`, `"§103 (2)"`… Chaque leçon cite
 seulement la portion qu'elle explique, dans `passage.text`, et porte
 l'intitulé de sa partie dans **`passage.part`**, le même pour toutes les
 leçons de la partie :
@@ -200,8 +202,8 @@ leçons de la partie :
 - id: n1863-p3
   title: "« Par conséquent » : la domination de la chose sur l'homme"
   passage:
-    label: "1er mouvement"
-    part: "Le rapport capitaliste comme renversement du sujet et de l'objet"
+    label: "1.3"
+    part: "La domination de la chose sur l'homme"
     text: "La domination du capitaliste sur le travailleur est par conséquent…"
 ```
 
