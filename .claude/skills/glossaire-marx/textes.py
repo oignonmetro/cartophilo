@@ -37,6 +37,7 @@ CACHE = os.path.join(tempfile.gettempdir(), "textes-marx")
 EDITIONS = [
     (r"^Notes sur James Mill", "Réf., Notes sur James Mill (MARXMILL)", 0),
     (r"^Contribution à la critique de la philosophie hégélienne", "Réf., Critique du droit hégélien (GEME, Kervégan)", 0),
+    (r"^Le Capital, livre I ", "Réf., Le Capital, livre I (GEME, Lefebvre)", 0),
     (r"^Le Capital, livre II ", "Réf., Le Capital, livre II (GEME, Fondu)", 0),
     (r"^Manuscrits 1844", "ES, Manuscrits de 1844 (Bottigelli)", 0),
     (r"^L.?id[ée]ologie allemande", "ES, L'Idéologie allemande", 0),
