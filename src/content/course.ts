@@ -403,3 +403,42 @@ export const ALPHABETICAL_TRACKS: ReadonlySet<string> = new Set(['glossaire'])
 export function sortByTitle<T extends { title: string }>(items: readonly T[]): T[] {
   return [...items].sort((a, b) => a.title.localeCompare(b.title, 'fr', { sensitivity: 'base' }))
 }
+
+/**
+ * Ordre d'une piste, déclaré par `order:` dans `course.yaml` : `chronological`
+ * range les unités par la date que porte leur titre, en fin de titre et entre
+ * parenthèses (« Le travail aliéné (1844) »), comme la piste Textes de Marx.
+ */
+export type TrackOrder = 'chronological'
+
+/**
+ * L'année d'un titre : la première année (quatre chiffres) de sa dernière
+ * parenthèse, « (1857-1858) » donnant 1857 ; `null` si le titre n'en porte pas.
+ */
+export function titleYear(title: string): number | null {
+  const groups = [...title.matchAll(/\(([^()]*)\)/g)]
+  const last = groups.at(-1)?.[1]
+  const year = last?.match(/\b(\d{4})\b/)
+  return year ? Number(year[1]) : null
+}
+
+/**
+ * Tri chronologique par l'année du titre ; tri stable, de sorte que des textes
+ * de la même année gardent l'ordre de `units:` (celui de l'œuvre). Un titre
+ * sans date passe en dernier : la compilation le refuse de toute façon.
+ */
+export function sortByDate<T extends { title: string }>(items: readonly T[]): T[] {
+  const yearOf = (item: T) => titleYear(item.title) ?? Number.POSITIVE_INFINITY
+  return [...items].sort((a, b) => yearOf(a) - yearOf(b))
+}
+
+/** Les unités d'une piste dans l'ordre où l'app les montre. */
+export function orderTrackUnits<T extends { title: string }>(
+  trackId: string,
+  order: TrackOrder | undefined,
+  units: readonly T[],
+): T[] {
+  if (ALPHABETICAL_TRACKS.has(trackId)) return sortByTitle(units)
+  if (order === 'chronological') return sortByDate(units)
+  return [...units]
+}

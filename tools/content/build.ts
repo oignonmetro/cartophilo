@@ -59,8 +59,9 @@ import {
   lessonsOf,
   resolveTableColumn,
   resolveTableRow,
-  sortByTitle,
+  orderTrackUnits,
   tableIds,
+  titleYear,
   tableKey,
   unitsOf as unitsOfCourse,
 } from '../../src/content/course.ts'
@@ -107,6 +108,9 @@ const courseFileSchema = z.discriminatedUnion('layout', [
           // Liste de sujets (voir La vie, piste Sujets) : le nom d'un fichier
           // du dossier du cours, lu par `loadSubjects`.
           subjects: z.string().optional(),
+          // Ordre des unités, sinon celui de `units:` (voir `orderTrackUnits`) :
+          // `chronological` les range par la date de leur titre.
+          order: z.enum(['chronological']).optional(),
         }),
       )
       .min(1),
@@ -267,13 +271,23 @@ function buildCourse(courseId: string): Course {
     meta.data.layout === 'library'
       ? {
           ...meta.data,
-          tracks: meta.data.tracks.map((track) => {
+          tracks: meta.data.tracks.map(({ order, ...track }) => {
             const resolved = track.units.map((unitId) => take(unitId, `la piste "${track.id}"`))
+            if (order === 'chronological') {
+              const undated = resolved.filter((unit) => titleYear(unit.title) === null)
+              if (undated.length) {
+                fail(
+                  courseFile,
+                  `la piste "${track.id}" se range par date : ${undated.map((unit) => `"${unit.id}" (« ${unit.title} »)`).join(', ')} doit porter sa date en fin de titre, entre parenthèses, « … (1844) »`,
+                )
+              }
+            }
             // Le glossaire se consulte comme un vrai glossaire, ses entrées
             // triées alphabétiquement plutôt que dans l'ordre où elles ont
-            // été ajoutées ; les autres pistes gardent l'ordre déclaré
-            // (Idées suit le texte source, Repérage l'ordre des Ennéades).
-            const units = ALPHABETICAL_TRACKS.has(track.id) ? sortByTitle(resolved) : resolved
+            // été ajoutées ; une piste `order: chronological` se range par la
+            // date des titres ; les autres gardent l'ordre déclaré (Idées suit
+            // le texte source, Repérage l'ordre des Ennéades).
+            const units = orderTrackUnits(track.id, order, resolved)
             if (track.subjects === undefined) return { ...track, units, subjects: undefined }
             const subjects = loadSubjects(join(dir, track.subjects))
             checkSubjects(join(dir, track.subjects), subjects, units.map((unit) => unit.id))

@@ -269,7 +269,7 @@ garde-fou de compréhension avant de choisir les trous.
 # Unité de texte (voir content/textes.md) : <œuvre, référence, traduction>.
 
 id: <id>
-title: "<Titre court du texte>"
+title: "<Titre court du texte> (<année>)"   # date obligatoire chez Marx : la piste Textes se trie par elle
 subtitle: "<Œuvre, livre, chapitre, lignes>"
 icon: page
 color: coral                      # la couleur de la piste

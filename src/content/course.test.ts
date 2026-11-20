@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { LibraryCourse, Unit, Vocab } from './schema'
-import { citationsOnlyLesson, courseLabel, findUnit, groupCoursesByLanguage, groupParts, lessonCountLabel, unitLetters } from './course'
+import { citationsOnlyLesson, courseLabel, findUnit, groupCoursesByLanguage, groupParts, lessonCountLabel, orderTrackUnits, titleYear, unitLetters } from './course'
 import type { ManifestEntry } from './schema'
 
 function vocab(id: string): Vocab {
@@ -233,5 +233,25 @@ describe('groupParts', () => {
       part('d', '§1 (1)', 'Quatre.', 'P', 'B'),
     ])
     expect(sections.map((s) => s.title)).toEqual(['Leçon a', 'Leçon b', 'P', 'P'])
+  })
+})
+
+describe('ordre chronologique des pistes', () => {
+  it("lit l'année dans la dernière parenthèse du titre", () => {
+    expect(titleYear('Le travail aliéné (1844)')).toBe(1844)
+    expect(titleYear('Le travail (salarié) comme non-capital (1857-1858)')).toBe(1857)
+    expect(titleYear('Le capital (livre I)')).toBeNull()
+    expect(titleYear('Sans date')).toBeNull()
+  })
+
+  it('range par date, en gardant l’ordre déclaré à date égale', () => {
+    const units = [
+      { id: 'a', title: 'Fétiche (1867)' },
+      { id: 'b', title: 'Capital personnifié (1864)' },
+      { id: 'c', title: 'Religion (1844)' },
+      { id: 'd', title: 'Prolétariat (1844)' },
+    ]
+    expect(orderTrackUnits('textes', 'chronological', units).map((u) => u.id)).toEqual(['c', 'd', 'b', 'a'])
+    expect(orderTrackUnits('textes', undefined, units).map((u) => u.id)).toEqual(['a', 'b', 'c', 'd'])
   })
 })

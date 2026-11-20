@@ -11,6 +11,13 @@ Ces unités vivent dans la piste **Textes** de Marx et de Plotin. Pour le reste
 principes de `content/philosophie.md` s'appliquent, avec les écarts décrits
 ci-dessous.
 
+**La date dans le titre.** Chez Marx, le titre d'une unité de texte finit
+par sa date entre parenthèses, « Le travail aliéné (1844) » : la piste Textes
+(`order: chronological` dans `course.yaml`) se range d'elle-même par cette
+date, quel que soit l'ordre de `units:`, qui ne départage que les textes de
+la même année ; la compilation refuse un titre sans date. Pour une période,
+« (1857-1858) », c'est la première année qui compte.
+
 ## Le déroulé
 
 Chaque unité suit le même schéma :
