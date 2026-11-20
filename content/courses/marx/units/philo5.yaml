@@ -1,0 +1,292 @@
+# Cours sur la dimension philosophique de l'œuvre de Marx, tiré de
+# l'introduction de Lucien Sève aux Écrits philosophiques de Marx (Flammarion,
+# « Champs classiques », 2011) : voir l'en-tête de philo1. Ici : début de la
+# partie 5, « La logique du Capital », les catégories à dominante
+# gnoséologique : essence, abstraction, universalité, représentation. La
+# suite de la partie 5 est dans philo6 (matérialité, dialectique) et philo7
+# (histoire, pratique, conclusion).
+#
+# Citations : Introduction de 1857 dans les Éditions sociales (Contribution à
+# la critique de l'économie politique) pour « vérité pratique » ; Le Capital,
+# livre III (« Toute science serait superflue… »), 6e thèse sur Feuerbach,
+# Grundrisse (l'universel « forme réelle particulière ») et Hegel dans la
+# traduction de Sève.
+
+id: philo5
+title: "La logique du Capital : les catégories de la connaissance"
+subtitle: "Essence, abstraction, universalité : des rapports qui produisent les choses, des abstractions réelles, des universels qu'on tient dans la main"
+group: "Le philosophique chez Marx"
+icon: compass
+color: coral
+lessons:
+- id: philo5-l1
+  title: "L'essence, rapport qui produit la chose"
+  notes: |-
+    **Lénine l'a dit : « Si Marx n'a pas laissé de Logique (avec un grand L), il nous a laissé la logique du Capital ».** Le premier noyau catégoriel qu'on y rencontre est l'{violet}essence{/violet} (*Wesen*). On y voit souvent un reste d'essentialisme hégélien ; c'est un contresens : {coral}l'essence est la catégorie dont le renversement matérialiste est exemplaire{/coral}.
+
+    **Le vocabulaire.** Autour de *Wesen* : {violet}*Erscheinung*{/violet}, le {violet}phénomène{/violet}, au sens fort de manifestation ou au sens faible d'apparence, et ses composés comme {violet}*Erscheinungsform*{/violet} (forme phénoménale) ; {violet}*Schein*{/violet}, le semblant, le faux-semblant. Énoncé caractéristique, au livre III du *Capital* : {teal}« Toute science serait __superflue__ s'il y avait __coïncidence immédiate__ entre l'essence des choses et leur forme phénoménale. »{/teal} S'il suffisait de regarder pour savoir, on n'aurait pas besoin de science ; mais le salaire, par exemple, paraît payer tout le travail, alors qu'il n'en paie qu'une partie.
+
+    **Un renversement précoce, dès la 6e thèse sur Feuerbach** (1845) : {teal}« l'essence humaine n'est pas __une abstraction__ [*kein Abstraktum*] inhérente à l'individu pris à part. Dans sa réalité, c'est __l'ensemble des rapports sociaux__ »{/teal}.
+
+    **Hegel contre Marx.**
+    - {sky}Hegel{/sky} a fait un grand pas en pensant l'essence comme {green}nœud de rapports{/green} ; mais il l'enferme dans l'idéalisme le plus essentialiste en en faisant un {red}« arrière-fond »{/red}, « la vérité de l'être ».
+    - Marx {coral}congédie l'arrière-fond{/coral} et prend l'idée de rapports au sens le plus matérialiste : l'essence, ce sont {green}les rapports qui produisent la chose{/green}, et qui expliquent donc ses propriétés à travers l'histoire singulière de sa production.
+
+    L'essence n'a donc plus rien ni de l'{red}abstraction spéculative{/red} ni de la {red}naturalité immuable{/red} : c'est la {violet}matrice évolutive{/violet}, concrète mais rarement visible, du phénomène dans sa façon propre d'apparaître. Marx sort ainsi du vieux dilemme entre l'{pink}essentialisme métaphysique{/pink} (les choses ont une nature éternelle cachée) et le {pink}phénoménisme empiriste{/pink} (il n'y a que ce qui apparaît).
+
+    **Vérifiable chez tout lecteur de Marx** : les réalités y sont définies non par une entité ou une nature, mais par leurs {coral}rapports producteurs{/coral}.
+    - le {yellow}capitalisme{/yellow} : la séparation des moyens de production d'avec les producteurs directs ;
+    - le {yellow}communisme{/yellow} : leur appropriation par les travailleurs associés ;
+    - l'{yellow}histoire{/yellow} : la lutte de classes ;
+    - la {yellow}conscience{/yellow} : un rapport pratico-théorique au monde ;
+    - la {yellow}liberté{/yellow} : la maîtrise des nécessités.
+
+    Ce sens neuf de l'essence vaut pour toutes les catégories : toutes sont des {violet}concepts de rapport générateur{/violet}.
+  points:
+  - id: philo5-l1-p1
+    sentence: "Lénine, *Cahiers philosophiques* : « Si Marx n'a pas laissé de Logique (avec un grand L), il nous a laissé la logique du ___ »."
+    answer: "Capital"
+    alt: []
+  - id: philo5-l1-p2
+    sentence: "__L'attachement de Marx à l'essence n'est pas un reste d'essentialisme__ : c'est la catégorie dont le renversement ___ est exemplaire."
+    answer: "matérialiste"
+    alt: ["materialiste"]
+  - id: philo5-l1-p3
+    sentence: "__L'essence__, en allemand : ___."
+    answer: "Wesen"
+    alt: []
+  - id: philo5-l1-p4
+    sentence: "__Le phénomène, au sens fort de manifestation ou au sens faible d'apparence__, en allemand : ___."
+    answer: "Erscheinung"
+    alt: []
+  - id: philo5-l1-p5
+    sentence: "__Le semblant, le faux-semblant__, en allemand : ___."
+    answer: "Schein"
+    alt: []
+  - id: philo5-l1-p6
+    sentence: "*Le Capital*, livre III : « Toute science serait ___ s'il y avait coïncidence immédiate entre l'essence des choses et leur forme phénoménale. »"
+    answer: "superflue"
+    alt: []
+  - id: philo5-l1-p7
+    sentence: "*Le Capital*, livre III : « Toute science serait superflue s'il y avait coïncidence immédiate entre l'essence des choses et leur forme ___. »"
+    answer: "phénoménale"
+    alt: ["phenomenale"]
+  - id: philo5-l1-p8
+    sentence: "6e thèse sur Feuerbach : « l'essence humaine n'est pas une ___ inhérente à l'individu pris à part »."
+    answer: "abstraction"
+    alt: []
+  - id: philo5-l1-p9
+    sentence: "6e thèse sur Feuerbach : « Dans sa réalité, c'est ___ »."
+    answer: "l'ensemble des rapports sociaux"
+    alt: []
+  - id: philo5-l1-p10
+    sentence: "__Hegel pense l'essence comme nœud de rapports__, mais l'enferme dans l'idéalisme en en faisant un « ___ », la vérité de l'être."
+    answer: "arrière-fond"
+    alt: ["arriere-fond"]
+  - id: philo5-l1-p11
+    sentence: "__Chez Marx, l'essence d'une chose__, ce sont les rapports qui la ___ et expliquent donc ses propriétés à travers l'histoire de sa production."
+    answer: "produisent"
+    alt: []
+  - id: philo5-l1-p12
+    sentence: "__L'essence selon Marx, ni abstraction spéculative ni nature immuable__ : la **matrice ___**, concrète mais rarement visible, du phénomène."
+    answer: "évolutive"
+    alt: ["evolutive"]
+  - id: philo5-l1-p13
+    sentence: "__Marx sort du vieux dilemme entre l'essentialisme métaphysique et le__ **phénoménisme ___**."
+    answer: "empiriste"
+    alt: []
+  - id: philo5-l1-p14
+    sentence: "__Définir une réalité par ses rapports producteurs__ : le capitalisme, c'est la ___ des moyens de production d'avec les producteurs directs."
+    answer: "séparation"
+    alt: ["separation"]
+  - id: philo5-l1-p15
+    sentence: "__Définir une réalité par ses rapports producteurs__ : la liberté, c'est la ___ des nécessités."
+    answer: "maîtrise"
+    alt: ["maitrise"]
+  - id: philo5-l1-p16
+    sentence: "__Le sens neuf de l'essence vaut pour toutes les catégories de Marx__ : toutes sont des concepts de rapport ___."
+    answer: "générateur"
+    alt: ["generateur"]
+- id: philo5-l2
+  title: "L'abstrait et le concret"
+  notes: |-
+    **Connexe à l'essence, l'**{violet}**abstraction**{/violet} **(*Abstraktion*), bien plus étudiée : Marx la pense à partir d'un double héritage, et y apporte une distinction lumineuse,** {coral}**concret réel et concret de pensée**{/coral}**.**
+
+    **Le double héritage.**
+    - {sky}**Hegel**{/sky} renverse l'idée classique, où le {pink}concret{/pink} est la particularité du sensible et l'{pink}abstrait{/pink} la généralité que l'entendement en détache. Pour lui, la pensée part d'une abstraction {amber}pauvre et unilatérale{/amber} et s'élève vers le concret, {amber}riche de déterminations{/amber} qu'il concentre : le concret est un résultat.
+    - {sky}**Feuerbach**{/sky} objecte que ce concret-là est l'abstraction spéculative même, où se perdent les vrais rapports : {green}il n'est de concret que la nature et l'homme{/green}.
+
+    **Le concret réel et le concret de pensée** (Introduction de 1857).
+
+    | Concret | Ce que c'est | Comment il se forme |
+    | réel | la chose dans la multitude de ses déterminations | par sa propre histoire |
+    | de pensée | ces déterminations recomposées en un tout logique | par l'analyse, puis la synthèse |
+
+    Le {violet}concret de pensée{/violet} (*Gedankenkonkretum*) se forme ainsi : on part d'une représentation confuse (la {yellow}population{/yellow} d'un pays), on l'analyse en déterminations abstraites (classes, travail salarié, capital, valeur), puis la pensée recompose à partir d'elles un tout articulé. Mais ce chemin est celui par lequel l'esprit {green}reproduit{/green} le concret, non celui par lequel le concret {red}se produit{/red}.
+
+    **L'illusion de l'idéalisme s'éclaire alors** : elle consiste à attribuer à la formation du concret réel {red}la même logique{/red} qu'à la production du concret de pensée à partir de l'abstrait. Comme la science du capital part de la valeur et arrive au capital, on croit que la valeur a engendré le capital ; or la genèse réelle est toute autre.
+
+    ! « Partir de l'abstrait pour aller au concret » est chez Marx une méthode d'exposition, juste dans son ordre ; elle devient idéaliste quand on la prend pour l'histoire des choses.
+  points:
+  - id: philo5-l2-p1
+    sentence: "__Marx distingue le concret réel et le concret de__ ___ : la distinction éclaire l'illusion de l'idéalisme."
+    answer: "pensée"
+    alt: ["pensee"]
+  - id: philo5-l2-p2
+    sentence: "__L'abstraction__, en allemand : ___."
+    answer: "Abstraktion"
+    alt: []
+  - id: philo5-l2-p3
+    sentence: "__Pour Hegel, la pensée s'élève de l'abstraction pauvre et unilatérale au concret__, riche des ___ qu'il concentre."
+    answer: "déterminations"
+    alt: ["determinations"]
+  - id: philo5-l2-p4
+    sentence: "__Contre le concret hégélien, qui serait l'abstraction spéculative même__, Feuerbach tient qu'il n'est de concret que la ___ et l'homme."
+    answer: "nature"
+    alt: []
+  - id: philo5-l2-p5
+    sentence: "__Le concret de pensée__, en allemand : ___."
+    answer: "Gedankenkonkretum"
+    alt: []
+  - id: philo5-l2-p6
+    sentence: "__Le concret de pensée__ : l'esprit recompose en un tout logique les déterminations qu'un travail ___ a d'abord dû expliciter."
+    answer: "analytique"
+    alt: []
+  - id: philo5-l2-p7
+    sentence: "__Exemple de représentation confuse dont part l'analyse, dans l'Introduction de 1857__ : la ___ d'un pays."
+    answer: "population"
+    alt: []
+  - id: philo5-l2-p8
+    sentence: "__L'illusion de l'idéalisme__ : attribuer à la formation du concret ___ la même logique qu'à la production du concret de pensée à partir de l'abstrait."
+    answer: "réel"
+    alt: ["reel"]
+- id: philo5-l3
+  title: "Bonne et mauvaise abstraction ; l'abstraction réelle"
+  notes: |-
+    **Marx est à la fois le plus féroce critique de l'abstraction et un grand penseur de l'abstraction : il faut** {coral}**distinguer les modalités de l'abstraction**{/coral}**, puis découvrir qu'il en existe aussi dans les choses.**
+
+    **Trois sortes d'abstraction.**
+
+    | Abstraction | Exemple | Valeur |
+    | d'entendement | « la population » | utile dans d'étroites limites |
+    | mauvaise | « l'homme » | pense par entités : « la philosophie » |
+    | rationnelle | le rapport générateur | autorise la théorie |
+
+    - L'{violet}abstraction d'entendement{/violet} (*verständige Abstraktion*) : « la population » est utile dans d'étroites limites, au-delà desquelles elle nourrit la {red}généralité creuse{/red}.
+    - Pire, la {violet}mauvaise abstraction{/violet}, qui pense par {red}entités{/red} (« l'homme ») et dont la forme générique est {red}« la philosophie »{/red} : en ce sens, Marx est le plus féroce critique de l'abstraction.
+    - À l'opposé, l'{violet}abstraction rationnelle{/violet}, scientifique, saisit dans des concepts l'{green}essence dialectique de son objet{/green}, le rapport générateur, et autorise l'authentique théorie : en ce sens, Marx est {green}au premier chef un penseur de l'abstraction{/green}. Tout concept a une double relation, à son référent objectif et à ses déterminants sociaux : toute abstraction conceptuelle est un {coral}concret historique{/coral}.
+
+    **L'abstraction réelle.** Plus originale encore : Marx montre une {violet}conaturalité{/violet} entre le processus idéel et le processus réel d'abstraction, sans laquelle on comprendrait mal que le monde soit concevable. Nature et histoire abondent en processus spontanés d'{amber}isolement relatif{/amber}, de {amber}chosification partielle{/amber}, d'{amber}universalisation tendancielle{/amber} : Marx n'hésite pas à parler d'{violet}abstraction réelle{/violet} (*reale Abstraktion*).
+    - Les rapports marchands liquident les vieux liens de dépendance personnelle : surgit l'{yellow}« individu abstrait »{/yellow} de la société bourgeoise, détaché de toute communauté, comme le pense l'économiste.
+    - Le capitalisme rend indifférente la sorte particulière de travail : on passe d'un emploi à l'autre, et l'abstraction du {yellow}« travail en général »{/yellow} devient, dit l'Introduction de 1857, {teal}« __vérité pratique__ »{/teal} : ce que l'économiste abstrait, la société l'a d'abord abstrait dans les faits.
+
+    Le renversement matérialiste donne à voir {coral}ce qui attendait dans l'invisible{/coral} : l'abstraction n'est pas seulement dans nos têtes.
+  points:
+  - id: philo5-l3-p1
+    sentence: "__Marx est à la fois le plus féroce critique de l'abstraction et un penseur de l'abstraction__ : il faut en distinguer les ___."
+    answer: "modalités"
+    alt: ["modalites", "sortes"]
+  - id: philo5-l3-p2
+    sentence: "__Abstraction utile dans d'étroites limites, au-delà desquelles elle nourrit la généralité creuse__ : l'abstraction d'___ (*verständige Abstraktion*), comme « la population »."
+    answer: "entendement"
+    alt: []
+  - id: philo5-l3-p3
+    sentence: "__La mauvaise abstraction pense par__ ___ (« l'homme ») : sa forme générique est « la philosophie »."
+    answer: "entités"
+    alt: ["entites"]
+  - id: philo5-l3-p4
+    sentence: "__L'abstraction qui saisit l'essence dialectique de son objet, le rapport générateur__ : l'**abstraction ___**, scientifique."
+    answer: "rationnelle"
+    alt: []
+  - id: philo5-l3-p5
+    sentence: "__Tout concept ayant une double relation, à son référent objectif et à ses déterminants sociaux__, toute abstraction conceptuelle est un concret ___."
+    answer: "historique"
+    alt: []
+  - id: philo5-l3-p6
+    sentence: "__Nature et histoire abondent en processus spontanés d'isolement, de chosification, d'universalisation__ : Marx parle d'**abstraction ___**."
+    answer: "réelle"
+    alt: ["reelle"]
+  - id: philo5-l3-p7
+    sentence: "__Abstraction réelle produite par les rapports marchands, qui liquident les dépendances personnelles__ : l'« individu ___ » de la société bourgeoise."
+    answer: "abstrait"
+    alt: []
+  - id: philo5-l3-p8
+    sentence: "Introduction de 1857 : dans la société la plus moderne, l'abstraction de la catégorie « travail en général » devient « ___ pratique »."
+    answer: "vérité"
+    alt: ["verite"]
+  - id: philo5-l3-p9
+    sentence: "__Le « travail en général » devient vérité pratique parce que le capitalisme rend__ ___ la sorte particulière de travail."
+    answer: "indifférente"
+    alt: ["indifferente"]
+- id: philo5-l4
+  title: "L'universel, le particulier, le singulier"
+  notes: |-
+    **L'**{violet}**universalité**{/violet} **(*Allgemeinheit*) est l'un des rares noyaux catégoriels qui prennent chez Marx la forme d'une triade, universel, particulier, singulier ; mais sa façon de penser l'universel** {coral}**rompt avec Hegel**{/coral}**.**
+
+    **La triade** {violet}*Allgemeines*{/violet} / {violet}*Besonderes*{/violet} / {violet}*Einzelnes*{/violet} semble venir tout droit de Hegel ; elle remonte en fait à {sky}Kant{/sky}, qui justifie la distinction de l'universel et du singulier.
+
+    **Première rupture : l'universel a une histoire.**
+    - Pour {sky}Hegel{/sky}, l'universel, étranger au devenir, se signale par {teal}« une autoconservation invariable »{/teal}.
+    - Pour Marx, il appartient à la vie des choses et de l'histoire : à côté du fait statique de l'universalité logique, il y a le processus de l'{green}universalisation{/green}, comme la tendance du capitalisme à développer le {yellow}marché mondial{/yellow}.
+
+    **Seconde rupture, plus essentielle : l'universel peut exister comme une chose particulière.** Hegel a vu que l'universalité est elle-même une catégorie particulière. Marx montre bien davantage : dans des processus réels d'universalisation, comme la généralisation des échanges, un élément universel, la {yellow}valeur{/yellow}, vient à exister sous la forme d'une réalité particulière, l'{yellow}argent{/yellow}, forme universelle de la richesse sociale. On tient l'universel dans sa main. De même le {yellow}« capital en général »{/yellow}, dont disposent les banques, est la plus tangible des réalités. D'où la formule des *Grundrisse* : si d'un côté l'universel relève de la pensée, {teal}« il est en même temps __une forme réelle particulière__ à côté de la forme du particulier »{/teal}.
+
+    | Hegel | Marx |
+    | « l'universel, on ne l'entend et on ne le voit pas, mais il n'est que pour l'esprit » | l'universel fait partie de notre univers quotidien |
+
+    Cette émergence d'{violet}universels particuliers{/violet} comme l'argent est d'une portée historique énorme : l'emballement de l'accumulation financière montre la puissance pratique que peuvent prendre ces singularités logiques. Dans le même esprit, Marx pense le singulier comme processus réel de {violet}singularisation{/violet} (*Vereinzelnung*) : l'individu se singularise dans et par l'histoire, éclairage capital pour l'anthropologie.
+
+    **La cohérence des quatre catégories de la connaissance.** Essence, abstraction, universalité, objectivité sont toutes pensées comme des {coral}rapports évolutifs{/coral}, à la fois procès idéels (une théorie dialectique) et procès réels :
+
+    | Catégorie | Procès réel |
+    | essence | essences génératrices |
+    | abstraction | abstractions réelles |
+    | universalité | universels particuliers |
+    | objectivité | objectalisations chosales |
+
+    S'y ajoute une pensée neuve de la {violet}représentation{/violet} (*Vorstellung*), tirée de l'analyse de la monnaie : à la fois façon dont un sujet {amber}se représente{/amber} et façon dont une réalité historique {amber}se présente{/amber}, avec les {red}illusions objectives{/red} qu'elle porte. Marx dépasse ainsi la « théorie de la connaissance » de {sky}Kant{/sky} comme la « phénoménologie de la conscience » de {sky}Hegel{/sky}, vers une connaissance pensée de façon matérialiste, critique et historico-sociale.
+  points:
+  - id: philo5-l4-p1
+    sentence: "__L'universalité__, en allemand : ___."
+    answer: "Allgemeinheit"
+    alt: []
+  - id: philo5-l4-p2
+    sentence: "__La triade universel, particulier, singulier, qui semble venir de Hegel__, remonte en fait à ___."
+    answer: "Kant"
+    alt: []
+  - id: philo5-l4-p3
+    sentence: "__Pour Hegel, l'universel, étranger au devenir__, se signale par « une ___ invariable »."
+    answer: "autoconservation"
+    alt: []
+  - id: philo5-l4-p4
+    sentence: "__Pour Marx, l'universel a une histoire__ : à côté de l'universalité logique, il y a le processus d'___, comme la tendance du capitalisme à développer le marché mondial."
+    answer: "universalisation"
+    alt: []
+  - id: philo5-l4-p5
+    sentence: "__Dans la généralisation des échanges, la valeur, élément universel, vient à exister sous la forme d'une réalité particulière__ : l'___."
+    answer: "argent"
+    alt: []
+  - id: philo5-l4-p6
+    sentence: "*Grundrisse* : si l'universel relève de la pensée, « il est en même temps une forme ___ particulière à côté de la forme du particulier »."
+    answer: "réelle"
+    alt: ["reelle"]
+  - id: philo5-l4-p7
+    sentence: "Hegel : « l'universel, on ne l'entend et on ne le voit pas, mais il n'est que pour l'___ »."
+    answer: "esprit"
+    alt: []
+  - id: philo5-l4-p8
+    sentence: "__Universel qu'on tient dans la main, comme l'argent ou le « capital en général » des banques__ : un **universel ___**."
+    answer: "particulier"
+    alt: []
+  - id: philo5-l4-p9
+    sentence: "__Marx pense le singulier comme processus réel__ de ___ (*Vereinzelnung*), éclairage capital pour l'anthropologie."
+    answer: "singularisation"
+    alt: []
+  - id: philo5-l4-p10
+    sentence: "__Essence, abstraction, universalité, objectivité ont une cohérence inédite__ : toutes sont pensées comme des ___ évolutifs, idéels et réels."
+    answer: "rapports"
+    alt: ["procès", "processus"]
+  - id: philo5-l4-p11
+    sentence: "__La représentation__ (*Vorstellung*) est à la fois la façon dont un sujet se représente et la façon dont une réalité historique se ___, avec ses illusions objectives."
+    answer: "présente"
+    alt: ["presente"]

@@ -47,7 +47,10 @@ l'épreuve :
     arguments déployés pour les défendre. Chez Marx, la piste s'ouvre sur le
     cours tiré de l'article « Karl Marx » de la SEP (`sep-marx1` à
     `sep-marx4`, groupées sous « Idées générales »), écrit avec la
-    skill `cours-sep`, puis suit le cours magistral d'agrégation sur Marx
+    skill `cours-sep`, puis sur le cours tiré de l'introduction de Lucien Sève
+    aux *Écrits philosophiques* de Marx (`philo1` à `philo7`, groupées sous
+    « Le philosophique chez Marx », selon le § « Un cours sur un auteur, tiré
+    d'un commentaire » de `content/philosophie.md`), puis suit le cours magistral d'agrégation sur Marx
     (de l'aliénation des *Manuscrits de 1844* aux *Grundrisse*), d'après les
     transcriptions de ses séances : `ali1`, `ali2`… dans l'ordre des séances,
     sans mention du cours dans les titres, citations des *Manuscrits* en GF

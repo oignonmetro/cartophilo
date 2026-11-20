@@ -1,0 +1,455 @@
+# Cours sur la dimension philosophique de l'œuvre de Marx, tiré de
+# l'introduction de Lucien Sève aux Écrits philosophiques de Marx (Flammarion,
+# « Champs classiques », 2011) : voir l'en-tête de philo1. Ici : suite de la
+# partie 5, « La logique du Capital », les catégories à dominante ontologique
+# de la matérialité (matière, forme, transformation) et de la dialecticité
+# (le procès de la dialectique, le rapport, la contradiction).
+#
+# Citations : Postface du Capital et « sensible suprasensible » (livre I,
+# chap. 1) dans la GEME (Lefebvre) ; Critique du droit politique hégélien
+# dans la GEME (Kervégan) pour « contradiction irréconciliable » ; le reste
+# (Introduction de 1844, Théories sur la plus-value, Grundrisse, Engels) dans
+# la traduction de Sève.
+
+id: philo6
+title: "La logique du Capital : matière, forme, dialectique"
+subtitle: "Une matière qui n'est pas inerte, une forme qui vit et se transforme, des rapports plus essentiels que les choses, et une contradiction qui ne se réconcilie pas"
+group: "Le philosophique chez Marx"
+icon: compass
+color: coral
+lessons:
+- id: philo6-l1
+  title: "La matière"
+  notes: |-
+    **Après les catégories de la connaissance viennent celles qui disent des rapports réels, à dominante ontologique : d'abord celles de la matérialité. Le noyau** {violet}**matière**{/violet} **(*Materie*) est chez Marx** {coral}**d'une complexité très sous-estimée**{/coral}**, d'abord par son vocabulaire.**
+
+    **Un vocabulaire à ne pas écraser.**
+
+    | Mot | Registre |
+    | *Materie* | la catégorie philosophique de matière |
+    | *Stoff* | la matière tangible, la substance |
+    | *Gegenstand* | l'objet (*gegenständlich* : objectal) |
+    | *Sache*, *Ding* | la chose, la pure chosalité |
+
+    Traduire tout cela par le seul trio {red}matière, matériel, matérialisé{/red} fausse la représentation du matérialisme de Marx, jusqu'à lui prêter des absurdités. En particulier, {violet}*gegenständlich*{/violet} veut souvent dire non le passe-partout « objectif », mais le précis {green}objectal{/green} (qui consiste en un objet), et *vergegenständlicht*, {green}objectalisé{/green}.
+
+    **Ni trop, ni trop peu de système.** Marx n'est pas un doctrinaire et ne fixe pas son vocabulaire de façon absolue : quand il écrit que {teal}« le travail s'incarne [*sich verkörpert*], se matérialise [*sich materialisiert*], se réalise [*sich realisiert*] dans son produit »{/teal}, « se matérialise » n'est qu'un {amber}synonyme{/amber} des deux autres verbes, non un terme catégoriel. Il faut donc éviter deux erreurs : {red}systématiser à l'excès sa terminologie{/red}, {red}méconnaître ses déterminations catégorielles majeures{/red}.
+
+    **Une matière active.** La matière de Marx est aux antipodes de la {red}*res extensa*{/red} cartésienne, inerte. Nourri des matérialistes, d'{sky}Épicure{/sky} à {sky}Diderot{/sky}, et des pensées dynamiques de {sky}Spinoza{/sky} et {sky}Leibniz{/sky}, il met dans *Materie* la {green}productivité dialectique{/green} autant que la corporéité massive, et jusqu'à l'être pensant : {teal}« la théorie aussi, dès qu'elle s'empare des masses, devient __une puissance matérielle__ »{/teal}.
+
+    **Une catégorie double**, comme l'avait vu {sky}Lénine{/sky} :
+    - côté {amber}gnoséologique{/amber}, elle {pink}oppose{/pink} la matière à la conscience que nous en avons : l'objectif face au subjectif ;
+    - côté {amber}ontologique{/amber}, elle {green}efface cette opposition{/green} : tout ce qui existe est matériel, le subjectif lui-même ; et la matière objective est apte à devenir sujet, comme dans l'homme.
+  points:
+  - id: philo6-l1-p1
+    sentence: "__Le noyau catégoriel de la matière__ (*Materie*) est chez Marx d'une ___ très sous-estimée, à commencer par son vocabulaire."
+    answer: "complexité"
+    alt: ["complexite"]
+  - id: philo6-l1-p2
+    sentence: "__La matière tangible, la substance__ (et non la catégorie philosophique *Materie*), en allemand : ___."
+    answer: "Stoff"
+    alt: []
+  - id: philo6-l1-p3
+    sentence: "__L'objet__, en allemand : ___ ; l'adjectif qui en dérive veut souvent dire « objectal »."
+    answer: "Gegenstand"
+    alt: []
+  - id: philo6-l1-p4
+    sentence: "__*Gegenständlich* veut souvent dire chez Marx non « objectif », mais__ ___ : qui consiste en un objet."
+    answer: "objectal"
+    alt: []
+  - id: philo6-l1-p5
+    sentence: "__« Le travail s'incarne, se matérialise, se réalise dans son produit »__ : « se matérialise » n'y est qu'un ___ des autres verbes, non un terme catégoriel."
+    answer: "synonyme"
+    alt: []
+  - id: philo6-l1-p6
+    sentence: "__La matière de Marx est aux antipodes de la__ ___ cartésienne et de son inertie."
+    answer: "res extensa"
+    alt: []
+  - id: philo6-l1-p7
+    sentence: "__Marx met dans la matière, outre la corporéité massive__, la productivité ___ et jusqu'à l'être pensant."
+    answer: "dialectique"
+    alt: []
+  - id: philo6-l1-p8
+    sentence: "*Introduction* de 1844 : « la théorie aussi, dès qu'elle s'empare des ___, devient une puissance matérielle »."
+    answer: "masses"
+    alt: []
+  - id: philo6-l1-p9
+    sentence: "*Introduction* de 1844 : « la théorie aussi, dès qu'elle s'empare des masses, devient une puissance ___ »."
+    answer: "matérielle"
+    alt: ["materielle"]
+  - id: philo6-l1-p10
+    sentence: "__La catégorie de matière est double__ : côté ___, elle oppose la matière à la conscience ; côté ontologique, elle efface cette opposition."
+    answer: "gnoséologique"
+    alt: ["gnoseologique"]
+- id: philo6-l2
+  title: "La forme"
+  notes: |-
+    **Lié à la matière, le noyau de la** {violet}**forme**{/violet} **(*Form*) est chez Marx d'une richesse et d'une nouveauté stupéfiantes, et presque pas étudié : selon** {sky}**Sève**{/sky}**,** {coral}**Marx est le grand penseur moderne de la forme**{/coral}**.**
+
+    **Au-delà d'Aristote.** Le couple matière-forme montre ce que Marx doit, par-delà Hegel, à {sky}Aristote{/sky}, qu'il admire. Mais pour Aristote, la forme est l'{red}autre de la matière{/red} : qu'elle soit de marbre ou d'airain, la {yellow}sphère{/yellow} reste la sphère. Elle est donc immatérielle ; comment alors peut-elle se composer avec la matière ? Il faut penser autrement : {green}la forme est la matière considérée sous le seul rapport de sa détermination spatio-temporelle{/green}. Ce mode de rapport à la matière en fait une catégorie philosophique.
+
+    **Un vocabulaire foisonnant.** *Form*, *Gestalt*, *Figur*, *Struktur*, *Organisation*, *Gliederung* : de l'{amber}allure externe{/amber} (*Gestalt*) à la {amber}membrure interne{/amber} (*Gliederung*).
+
+    **Les formes d'une même chose.** Une chose admet une pluralité de formes : la {violet}forme naturelle{/violet}, inhérente à sa matière ; la {violet}forme contingente{/violet}, due aux circonstances ; entre les deux, la {violet}forme essentielle{/violet}, liée à son contenu (*Inhalt*). La dialectique {amber}forme-contenu{/amber} passe chez Marx au premier plan.
+    - Une forme essentielle, comme la {yellow}forme-marchandise{/yellow} des produits sociaux, ne se pense pas hors de sa {violet}formation{/violet} (*Formation*), l'ensemble organique de formes dont elle est membre : « la forme » prise en soi est une mauvaise abstraction.
+    - La forme essentielle impose sa logique jusqu'à {coral}élire, voire produire, sa matière{/coral} : la {yellow}forme-argent{/yellow} s'est incarnée de préférence dans les métaux précieux, divisibles, inaltérables, de grande valeur sous un petit volume. En ce sens, l'adage idéaliste {teal}« la forme crée »{/teal} a une vérité matérialiste.
+
+    **Une forme qui vit.** La forme essentielle n'est pas qu'une figure spatiale, c'est une {green}logique temporelle{/green} : non seulement forme d'apparition du contenu ({violet}*Erscheinungsform*{/violet}), mais forme de son mouvement et de son développement ({violet}*Bewegungsform*{/violet}, {violet}*Entwicklungsform*{/violet}). C'est une nouveauté capitale par rapport au {red}fixisme{/red} de la forme chez Aristote ou Kant : il y a une {coral}vie des formes{/coral}.
+    - Sa prise sur le contenu a des degrés : {amber}externe{/amber}, elle n'est que formelle ; {amber}intériorisée{/amber}, elle devient réelle.
+    - Entre forme et contenu, la dualité peut s'accuser : la forme {red}travestit l'essence{/red}, porte l'{red}illusion fétichiste{/red}, s'aliène, entre en crise ; s'ouvre alors une période de transformation.
+
+    La méconnaissance de cet apport est au principe des difficultés du {sky}gestaltisme{/sky}, puis du {sky}structuralisme{/sky}, à penser ensemble {amber}structure{/amber} et {amber}histoire{/amber}.
+  points:
+  - id: philo6-l2-p1
+    sentence: "__Selon Sève, par la richesse de sa pensée de la forme__, Marx est le grand ___ moderne de la forme."
+    answer: "penseur"
+    alt: []
+  - id: philo6-l2-p2
+    sentence: "__Pour Aristote, la forme est l'autre de la matière__ : qu'elle soit de marbre ou d'airain, la ___ reste la sphère."
+    answer: "sphère"
+    alt: ["sphere"]
+  - id: philo6-l2-p3
+    sentence: "__Pour Marx__, la forme est la matière considérée sous le seul rapport de sa détermination ___."
+    answer: "spatio-temporelle"
+    alt: ["spatiotemporelle"]
+  - id: philo6-l2-p4
+    sentence: "__Dans le vocabulaire de la forme, la membrure interne, à l'opposé de l'allure externe (*Gestalt*)__ : ___."
+    answer: "Gliederung"
+    alt: []
+  - id: philo6-l2-p5
+    sentence: "__Entre la forme naturelle et la forme contingente d'une chose__, la forme ___, liée à son contenu."
+    answer: "essentielle"
+    alt: []
+  - id: philo6-l2-p6
+    sentence: "__Une forme essentielle, comme la forme-marchandise, ne se pense pas hors de sa__ ___, l'ensemble organique de formes dont elle est membre."
+    answer: "formation"
+    alt: []
+  - id: philo6-l2-p7
+    sentence: "__La forme essentielle impose sa logique jusqu'à élire sa matière__ : la forme-argent s'est incarnée de préférence dans les ___."
+    answer: "métaux précieux"
+    alt: ["metaux precieux"]
+  - id: philo6-l2-p8
+    sentence: "__La forme-argent élisant sa matière__ : l'adage idéaliste « la forme ___ » a une vérité matérialiste."
+    answer: "crée"
+    alt: ["cree"]
+  - id: philo6-l2-p9
+    sentence: "__La forme d'apparition d'un contenu__, en allemand : ___."
+    answer: "Erscheinungsform"
+    alt: []
+  - id: philo6-l2-p10
+    sentence: "__Forme non seulement d'apparition, mais de mouvement et de développement du contenu__ : contre le ___ d'Aristote ou de Kant, il y a une vie des formes."
+    answer: "fixisme"
+    alt: []
+  - id: philo6-l2-p11
+    sentence: "__La prise d'une forme sur son contenu a des degrés__ : externe, elle n'est que formelle ; intériorisée, elle devient ___."
+    answer: "réelle"
+    alt: ["reelle"]
+  - id: philo6-l2-p12
+    sentence: "__Méconnaître la pensée marxienne de la forme__ explique les difficultés du gestaltisme, puis du ___, à penser ensemble structure et histoire."
+    answer: "structuralisme"
+    alt: []
+- id: philo6-l3
+  title: "Métamorphose et transformation"
+  notes: |-
+    **La pensée de la forme se redouble à propos du changement de forme, où Marx distingue** {coral}**deux modes**{/coral} **: la métamorphose, qui fait fonctionner une formation, et la transformation, qui la développe.**
+
+    | Mode | Allemand | Passage | Rôle |
+    | métamorphose | *Formwechsel* | à une forme équivalente | fonctionnement |
+    | transformation | *Formverwandlung* | à une forme d'un autre niveau | développement |
+
+    - La {violet}métamorphose{/violet} est le passage d'une forme à une autre {amber}équivalente{/amber}, de même niveau : la marchandise devient argent, l'argent redevient marchandise. C'est le changement de forme comme {green}fonctionnement{/green} de la formation (*Funktionsform*).
+    - La {violet}transformation{/violet} est le passage à une forme {amber}essentiellement différente{/amber}, d'un autre niveau : l'argent devient capital. C'est le changement de forme comme {green}développement{/green} (*Entwicklungsform*).
+
+    Le développement des formes a lui-même des formes de développement. En s'objectivant, les formes s'incrustent dans des supports et se {red}sclérosent{/red} dans des logiques plus ou moins autonomes ; leur stabilisation en une figure annonce souvent leur {red}entrée en crise{/red}.
+
+    **Deux sortes de crise.**
+    - la {violet}crise de fonctionnement{/violet} : l'unité de la forme et du contenu, disjointe, se rétablit plus ou moins violemment (une crise de surproduction, après laquelle le système repart) ;
+    - la {violet}crise de développement{/violet} : un contenu fait éclater sa forme ancienne, ou une forme nouvelle fait muter son contenu ; s'ouvre alors dans l'histoire de la chose une phase de {coral}révolution{/coral} (*Revolution*, *Umstülpung*).
+
+    **Vers la dialecticité.** Avec la transformation, on passe des catégories de la matérialité à celles de la {violet}dialecticité{/violet}, mot qui, à la différence de « matérialité », n'est pas de Marx : premier indice d'un problème.
+  points:
+  - id: philo6-l3-p1
+    sentence: "__Les deux modes du changement de forme chez Marx__ : la métamorphose, qui fait ___ une formation, et la transformation, qui la développe."
+    answer: "fonctionner"
+    alt: []
+  - id: philo6-l3-p2
+    sentence: "__Le passage d'une forme à une autre équivalente, de même niveau__ (la marchandise devient argent) : la ___."
+    answer: "métamorphose"
+    alt: ["metamorphose"]
+  - id: philo6-l3-p3
+    sentence: "__La métamorphose__, en allemand : ___."
+    answer: "Formwechsel"
+    alt: []
+  - id: philo6-l3-p4
+    sentence: "__Le passage à une forme essentiellement différente, d'un autre niveau__ (l'argent devient capital) : la ___."
+    answer: "transformation"
+    alt: []
+  - id: philo6-l3-p5
+    sentence: "__La transformation__, en allemand : ___."
+    answer: "Formverwandlung"
+    alt: []
+  - id: philo6-l3-p6
+    sentence: "__En s'objectivant, les formes se sclérosent__ : leur stabilisation en une figure annonce souvent leur entrée en ___."
+    answer: "crise"
+    alt: []
+  - id: philo6-l3-p7
+    sentence: "__Crise où l'unité disjointe de la forme et du contenu se rétablit plus ou moins violemment__ : la **crise de ___**."
+    answer: "fonctionnement"
+    alt: []
+  - id: philo6-l3-p8
+    sentence: "__Crise où un contenu fait éclater sa forme ancienne__ : la **crise de ___**, qui ouvre une phase de révolution."
+    answer: "développement"
+    alt: ["developpement"]
+  - id: philo6-l3-p9
+    sentence: "__Le mot qui désigne les catégories de la dialectique__, la ___, n'est pas de Marx, à la différence de « matérialité »."
+    answer: "dialecticité"
+    alt: ["dialecticite"]
+- id: philo6-l4
+  title: "Rouvrir le dossier de la dialectique"
+  notes: |-
+    **La dialectique, point focal de l'apport de Hegel, l'est aussi chez Marx ; or les verdicts du milieu du XXe siècle l'ont condamnée, et la recherche s'est tarie.** {sky}Sève{/sky} soutient que {coral}ce décret d'invalidation est lui-même invalide{/coral}.
+
+    **Les verdicts.** Deux grands exemples : {sky}Althusser{/sky}, *Pour Marx* (1965), et {sky}Adorno{/sky}, *Dialectique négative* (1966). L'optimisme d'une {red}dialectique positive{/red}, où les contraires se réconcilient, n'aurait pas seulement marqué le {red}téléologisme{/red} de Hegel : il aurait contaminé sans remède la dialectique de Marx. Devenu vérité dominante, ce verdict a tari la recherche depuis les années 1970 ; la dialectique a sombré dans l'oubli.
+
+    **Pourquoi le réexaminer.** La crise présente du capitalisme oblige à se réapproprier Marx avec une exigence neuve, ce qui est impossible si l'on laisse la dialectique en l'état. Et à reconsidérer ces verdicts, on voit qu'ils dépendaient d'une situation révolue :
+    - {amber}__l'état des lieux__{/amber} : la dialectique dominante était celle du {red}scientisme stalinien{/red}, qu'on avait raison de récuser ;
+    - {amber}__la connaissance des textes__{/amber} : Althusser a construit sa critique sur un corpus où manquait la plus grande partie du *Capital*, des *Grundrisse* au livre IV ; la méditation d'Adorno se tient plus loin encore du texte ;
+    - {amber}__la conjoncture__{/amber} : les crimes staliniens, {yellow}Auschwitz{/yellow}, la crise communiste après 1956 semblaient condamner la « dialectique hégélo-marxiste » pour son assurance mortifère.
+
+    **Ce qui faisait leur force la leur ôte.** Les « lois » de la dialectique ont disparu jusqu'au souvenir ; on juge sévèrement aujourd'hui un procès instruit sans examiner les pièces ; et dans un siècle où se mondialise l'écrasement par la finance, {teal}« ce n'est pas la dialectique, c'est __l'absence de dialectique__ qui tue »{/teal}. Le dossier est donc {green}à rouvrir de fond en comble{/green}.
+  points:
+  - id: philo6-l4-p1
+    sentence: "__Les verdicts du milieu du XXe siècle contre la dialectique de Marx__ : selon Sève, ce décret d'invalidation est lui-même ___."
+    answer: "invalide"
+    alt: []
+  - id: philo6-l4-p2
+    sentence: "__Les deux grands verdicts contre la dialectique__ : *Pour Marx* d'Althusser (1965) et *Dialectique ___* d'Adorno (1966)."
+    answer: "négative"
+    alt: ["negative"]
+  - id: philo6-l4-p3
+    sentence: "__L'auteur de *Dialectique négative* (1966)__ : ___."
+    answer: "Adorno"
+    alt: []
+  - id: philo6-l4-p4
+    sentence: "__Le grief commun aux verdicts__ : l'optimisme d'une dialectique où les contraires se réconcilient aurait contaminé Marx du ___ de Hegel."
+    answer: "téléologisme"
+    alt: ["teleologisme"]
+  - id: philo6-l4-p5
+    sentence: "__À l'époque des verdicts, la représentation dominante de la dialectique était__ celle du scientisme ___, qu'on avait raison de récuser."
+    answer: "stalinien"
+    alt: []
+  - id: philo6-l4-p6
+    sentence: "__La critique d'Althusser reposait sur un corpus incomplet__ : il y manquait la plus grande partie du ___, des *Grundrisse* au livre IV."
+    answer: "Capital"
+    alt: []
+  - id: philo6-l4-p7
+    sentence: "__Selon Sève, dans un siècle où se mondialise l'écrasement par la finance__, ce n'est pas la dialectique, c'est l'___ de dialectique qui tue."
+    answer: "absence"
+    alt: []
+- id: philo6-l5
+  title: "Le rapport, plus essentiel que la chose"
+  notes: |-
+    **Les catégories de la dialecticité disent le rationnellement nécessaire dans tout ce qui est ; on y retrouve l'essence, donc le** {violet}**rapport**{/violet} **(*Verhältnis*), catégorie aussi centrale chez Marx que la forme :** {coral}**le rapport est plus essentiel que la chose**{/coral}**.**
+
+    **Le rapport, unité de multiples.** En son sens fort, le rapport est l'{violet}unité logique de multiples{/violet} :
+    - unité {amber}symétrique{/amber} : l'{yellow}achat{/yellow} et la {yellow}vente{/yellow} dans l'échange marchand ;
+    - unité {amber}dissymétrique{/amber} : le {yellow}capitaliste{/yellow} et le {yellow}salarié{/yellow} dans la production capitaliste.
+
+    L'analyse de Marx cherche partout les rapports structurants et générateurs sous les formes phénoménales et les événements : c'est une conviction de base pour qui a compris ce qu'il entend par essence.
+
+    **Abstrait, et pourtant réel.** Étranger à la choséité, le rapport ne peut être « individualisé que par une abstraction » : toute pensée des rapports est des plus abstraites. Mais, comme l'universel dans un particulier, un rapport peut {coral}s'incarner dans une chose{/coral} : le rapport de valeur dans l'{yellow}argent{/yellow}, chose paradoxale, {teal}« __sensible suprasensible__ »{/teal}, qui signale un rapport sous-jacent en le masquant. Le monde des rapports est donc aussi bien {green}réel{/green} qu'{green}idéel{/green}.
+
+    **Rapport et relation : un contresens à éviter.**
+
+    | Mot | Allemand | Registre |
+    | rapport | *Verhältnis* | l'essentiel, le social, l'objectif |
+    | relation | *Beziehung* | le phénoménal, l'interpersonnel, le subjectif |
+
+    On parle de « {pink}relations humaines{/pink} », mais de « {green}rapports sociaux{/green} », rapports « nécessaires, indépendants de [notre] volonté ». D'où un contresens toujours observable : lire la {sky}6e thèse sur Feuerbach{/sky} comme si elle identifiait l'essence humaine aux {red}relations sociales de l'individu{/red} (ses amis, sa famille, ses collègues), au lieu des {green}rapports objectifs du monde social{/green} existant.
+  points:
+  - id: philo6-l5-p1
+    sentence: "__Conviction dialectique de base chez Marx__ : le rapport est plus ___ que la chose."
+    answer: "essentiel"
+    alt: []
+  - id: philo6-l5-p2
+    sentence: "__Le rapport__, en allemand : ___."
+    answer: "Verhältnis"
+    alt: ["Verhaltnis"]
+  - id: philo6-l5-p3
+    sentence: "__En son sens catégoriel fort, le rapport est__ l'**unité logique de ___**."
+    answer: "multiples"
+    alt: []
+  - id: philo6-l5-p4
+    sentence: "__Exemple d'unité symétrique__ : l'achat et la ___ dans l'échange marchand."
+    answer: "vente"
+    alt: []
+  - id: philo6-l5-p5
+    sentence: "__Exemple d'unité dissymétrique__ : le capitaliste et le ___ dans la production capitaliste."
+    answer: "salarié"
+    alt: ["salarie"]
+  - id: philo6-l5-p6
+    sentence: "__Étranger à la choséité, le rapport ne peut être « individualisé que par une__ ___ »."
+    answer: "abstraction"
+    alt: []
+  - id: philo6-l5-p7
+    sentence: "__Un rapport peut s'incarner dans une chose__ : le rapport de valeur dans l'argent, chose « sensible ___ »."
+    answer: "suprasensible"
+    alt: []
+  - id: philo6-l5-p8
+    sentence: "__À distinguer du rapport (*Verhältnis*), objectif et social__ : la relation, en allemand ___."
+    answer: "Beziehung"
+    alt: []
+  - id: philo6-l5-p9
+    sentence: "__La relation ressortit au phénoménal, à l'interpersonnel__ : on parle de « relations humaines », mais de « rapports ___ »."
+    answer: "sociaux"
+    alt: []
+  - id: philo6-l5-p10
+    sentence: "__Contresens sur la 6e thèse sur Feuerbach__ : y lire que l'essence humaine est faite des ___ sociales de l'individu, au lieu des rapports objectifs du monde social."
+    answer: "relations"
+    alt: []
+- id: philo6-l6
+  title: "Le monde des rapports"
+  notes: |-
+    **Les rapports, qui sous-tendent tout ce qui existe, forment tout un monde catégoriel, en trois rubriques ; et leur ensemble est une** {violet}**unité structurée**{/violet}**,** {coral}**non la Totalité de Hegel**{/coral}**.**
+
+    | Rapports d'ordre | Dialectique | Catégories |
+    | spatial | de l'interne et de l'externe | aliénation, appropriation |
+    | temporel | de l'antérieur et de l'ultérieur | procès, présupposition |
+    | de la complexité | de l'inférieur et du supérieur | seuil, saut qualitatif |
+
+    **1. L'espace : l'interne et l'externe.** Cette dialectique est omniprésente dans la production, qui {amber}objectalise{/amber}, et dans l'appropriation, qui {amber}subjectalise{/amber}. Elle est au cœur de l'{violet}aliénation{/violet} (*Entfremdung*), où le préfixe *Ent-* dit l'{red}extériorisation dépossédante{/red}, et de son opposé, l'{violet}appropriation{/violet} (*Aneignung*).
+
+    **2. Le temps : l'antérieur et l'ultérieur.** Ce sont les {violet}procès{/violet}, mot que Marx a beaucoup contribué à réintroduire en français par la traduction du *Capital*. Le procès est le mode d'être de la plupart des rapports : tout rapport est {amber}produit autant que producteur{/amber}, donc évolutif, mais {red}sans téléologie{/red}.
+    - l'ultérieur ne se produit et ne se comprend qu'à partir de ses {violet}présuppositions{/violet} (*Voraussetzungen*) : il y a une logique réelle des procès ;
+    - mais l'antérieur ne menait pas nécessairement à l'ultérieur : entre les deux interviennent des {coral}hasards{/coral} et s'actualisent imprévisiblement des possibles. {teal}« L'anatomie de l'homme est __la clef de l'anatomie du singe__ »{/teal} (Introduction de 1857) ; mais l'homme n'est pas un avenir déjà écrit dans le singe.
+
+    Marx pense aux antipodes de la *Philosophie de l'histoire* de Hegel : il ne rabat rien sur la {green}nécessité du nécessaire{/green} (le capitalisme est bel et bien mortel), mais la façon dont le nécessaire s'accomplira {red}n'a rien de fatal{/red}.
+
+    **3. La complexité : l'inférieur et le supérieur.** Seuils, {violet}sauts qualitatifs{/violet}, irréductibilité des logiques du complexe à celles du simple. C'est l'un des très rares points où Marx reprend {amber}sans renversement{/amber} la catégorisation de Hegel : un des rares moments de la *Logique* où un matérialiste exigeant ne trouve guère à redire.
+
+    **Le tout.** L'ensemble des rapports forme une {violet}unité structurée{/violet} ; {sky}Althusser{/sky} a justement montré qu'elle diffère foncièrement de la {red}Totalité{/red} hégélienne (*Totalität*), où tout exprime un même principe intérieur. Elle renvoie à une vision matérialiste du {green}tout organique{/green} (*organisches Ganze*).
+  points:
+  - id: philo6-l6-p1
+    sentence: "__Les rapports d'ordre spatial__ relèvent de la dialectique de l'interne et de l'___."
+    answer: "externe"
+    alt: []
+  - id: philo6-l6-p2
+    sentence: "__Dans *Entfremdung* (aliénation)__, le préfixe *Ent-* dit l'**extériorisation ___**."
+    answer: "dépossédante"
+    alt: ["depossedante"]
+  - id: philo6-l6-p3
+    sentence: "__L'opposé de l'aliénation (*Entfremdung*)__ : l'appropriation, en allemand ___."
+    answer: "Aneignung"
+    alt: []
+  - id: philo6-l6-p4
+    sentence: "__Le mode d'être de la plupart des rapports, qui relève de l'antérieur et de l'ultérieur__ : le ___, mot que la traduction du *Capital* a contribué à réintroduire en français."
+    answer: "procès"
+    alt: ["proces"]
+  - id: philo6-l6-p5
+    sentence: "__Tout rapport, produit autant que producteur, est évolutif__, mais selon un mode étranger au ___."
+    answer: "téléologisme"
+    alt: ["teleologisme"]
+  - id: philo6-l6-p6
+    sentence: "__L'ultérieur ne se comprend qu'à partir de ses__ ___ (*Voraussetzungen*) déjà là : il y a une logique réelle des procès."
+    answer: "présuppositions"
+    alt: ["presuppositions"]
+  - id: philo6-l6-p7
+    sentence: "Introduction de 1857 : « L'anatomie de l'homme est la clef de l'anatomie du ___. »"
+    answer: "singe"
+    alt: []
+  - id: philo6-l6-p8
+    sentence: "__L'antérieur ne mène pas nécessairement à l'ultérieur__ : entre les deux interviennent des ___ et s'actualisent imprévisiblement des possibles."
+    answer: "hasards"
+    alt: []
+  - id: philo6-l6-p9
+    sentence: "__Marx ne rabat rien sur la nécessité du nécessaire__ : le capitalisme est mortel, mais la façon dont il finira n'a rien de ___."
+    answer: "fatal"
+    alt: []
+  - id: philo6-l6-p10
+    sentence: "__Les rapports de la complexité__ relèvent de la dialectique de l'inférieur et du ___ : seuils, sauts qualitatifs."
+    answer: "supérieur"
+    alt: ["superieur"]
+  - id: philo6-l6-p11
+    sentence: "__L'un des très rares points où Marx reprend Hegel sans le renverser__ : les rapports de la ___."
+    answer: "complexité"
+    alt: ["complexite"]
+  - id: philo6-l6-p12
+    sentence: "__L'unité structurée des rapports diffère foncièrement de la__ ___ hégélienne, comme l'a montré Althusser."
+    answer: "Totalité"
+    alt: ["Totalite", "totalité"]
+- id: philo6-l7
+  title: "La contradiction, de l'antagonisme au non-antagonique"
+  notes: |-
+    **Avec le rapport, unité de multiples, on est déjà dans la** {violet}**contradiction dialectique**{/violet}**, le noyau le plus central du philosophique marxien. Marx y rompt tôt avec Hegel,** {coral}**puis découvre une complexité qu'il ne nommera jamais nettement**{/coral}**.**
+
+    **Ce qui reste de Hegel.** Son élaboration est si profonde que plusieurs de ses déterminations gardent sens après le renversement : ainsi l'idée de l'{violet}opposition{/violet} (*Gegensatz*) des {violet}contraires{/violet} (*Gegenteile*) comme {violet}contradiction{/violet} (*Widerspruch*), qui déborde d'emblée la logique classique. D'où la conviction tenace que Marx « ne se libéra jamais totalement de Hegel ».
+
+    **Mais la rupture date de 1843.** À la contradiction qui, selon Hegel, se dépasse dans l'{red}État{/red}, Marx oppose la {teal}« __contradiction irréconciliable__ »{/teal}, qui ne peut finir qu'avec l'{green}extinction de l'État{/green}. Si la contradiction est irréconciliable, il faut repenser ou mettre au rancart identité des contraires, médiation, dépassement conservateur, négation de la négation. Pour nommer cette contradiction non hégélienne, Marx emploie dans les années 1850 le mot {violet}antagonisme{/violet} (*Antagonismus*) : ainsi *Klassengegensatz*, l'antagonisme de classes. La Postface du *Capital* garde l'opposition entre les deux dialectiques :
+
+    | Dialectique | Ce qu'elle fait |
+    | mystifiée | « semblait glorifier l'état de choses existant » |
+    | rationnelle | inclut « l'intelligence de sa négation, de sa destruction nécessaire » |
+
+    Rationnelle, la dialectique {teal}« est, dans son essence, __critique et révolutionnaire__ »{/teal}.
+
+    **La complication de l'économie.** Pour penser le dépassement du capitalisme, il faut d'abord comprendre sa structure et son fonctionnement. Or l'échange marchand, la circulation monétaire, la rotation du capital semblent relever de la dialectique de Hegel : partout l'{amber}identité médiatisée des contraires{/amber}, la {amber}réunification des opposés{/amber}, la {amber}négation de la négation cyclique{/amber}. Au même moment, {sky}Engels{/sky}, réfléchissant sur la nature, trouve partout, à côté du {pink}« ou bien… ou bien »{/pink}, l'{green}« aussi bien ceci… que cela »{/green}. Conclusion : à la dialectique de l'{violet}antagonique{/violet} doit se lier une dialectique du {violet}non-antagonique{/violet}, à celle de l'{violet}évolutif{/violet} une dialectique du {violet}stationnaire{/violet}.
+
+    **Un continent exploré sans être nommé.** Marx élabore des sens post-hégéliens :
+    - de la {violet}*Vermittlung*{/violet} : la {green}médiation objectalisée{/green} de l'activité productive ;
+    - de l'{violet}*Aufhebung*{/violet} : un dépassement {green}révolutionnaire plus que conservateur{/green} ;
+    - de la {violet}*Negation der Negation*{/violet} : une logique des procès {green}en spirale, sans téléologie{/green}.
+
+    Mais il ne marque pas leur place dans une vision d'ensemble. Cette incomplétude explique sans doute qu'il n'ait jamais écrit ses « deux ou trois feuilles d'imprimerie » sur la dialectique, et la sous-estimation de son apport. Les logiques de la contradiction n'en sont pas moins à l'œuvre de bout en bout du *Capital*.
+  points:
+  - id: philo6-l7-p1
+    sentence: "__Le noyau catégoriel le plus central de tout le philosophique marxien__ : la ___ dialectique."
+    answer: "contradiction"
+    alt: []
+  - id: philo6-l7-p2
+    sentence: "__Ce qui garde sens de Hegel après le renversement__ : l'idée de l'opposition des contraires comme contradiction, en allemand ___."
+    answer: "Widerspruch"
+    alt: []
+  - id: philo6-l7-p3
+    sentence: "__En 1843, à la contradiction qui selon Hegel se dépasse dans l'État__, Marx oppose la « contradiction ___ »."
+    answer: "irréconciliable"
+    alt: ["irreconciliable"]
+  - id: philo6-l7-p4
+    sentence: "__La contradiction irréconciliable ne peut finir__ qu'avec l'___ de l'État."
+    answer: "extinction"
+    alt: []
+  - id: philo6-l7-p5
+    sentence: "__Pour nommer la contradiction irréconciliable, Marx emploie dans les années 1850 le mot__ ___ (*Antagonismus*)."
+    answer: "antagonisme"
+    alt: []
+  - id: philo6-l7-p6
+    sentence: "Postface du *Capital* : dans sa forme mystifiée, la dialectique « semblait ___ l'état de choses existant »."
+    answer: "glorifier"
+    alt: []
+  - id: philo6-l7-p7
+    sentence: "Postface du *Capital* : dans l'intelligence positive de l'état de choses existant, la dialectique inclut « l'intelligence de sa ___, de sa destruction nécessaire »."
+    answer: "négation"
+    alt: ["negation"]
+  - id: philo6-l7-p8
+    sentence: "Postface du *Capital* : la dialectique rationnelle « est, dans son essence, critique et ___ »."
+    answer: "révolutionnaire"
+    alt: ["revolutionnaire"]
+  - id: philo6-l7-p9
+    sentence: "__Réfléchissant sur la nature, Engels trouve partout, à côté du « ou bien… ou bien »__, l'« ___ ceci… que cela »."
+    answer: "aussi bien"
+    alt: []
+  - id: philo6-l7-p10
+    sentence: "__L'économie oblige à lier à la dialectique de l'antagonique__ une dialectique du ___, et à celle de l'évolutif une dialectique du stationnaire."
+    answer: "non-antagonique"
+    alt: ["non antagonique"]
+  - id: philo6-l7-p11
+    sentence: "__Sens post-hégélien de la *Vermittlung* chez Marx__ : la médiation ___ de l'activité productive."
+    answer: "objectalisée"
+    alt: ["objectalisee"]
+  - id: philo6-l7-p12
+    sentence: "__Sens post-hégélien de l'*Aufhebung* chez Marx__ : un dépassement ___ plus que conservateur."
+    answer: "révolutionnaire"
+    alt: ["revolutionnaire"]
+  - id: philo6-l7-p13
+    sentence: "__Sens post-hégélien de la négation de la négation chez Marx__ : une logique des procès en ___, dégagée du téléologisme."
+    answer: "spirale"
+    alt: []

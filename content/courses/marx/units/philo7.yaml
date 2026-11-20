@@ -1,0 +1,470 @@
+# Cours sur la dimension philosophique de l'œuvre de Marx, tiré de
+# l'introduction de Lucien Sève aux Écrits philosophiques de Marx (Flammarion,
+# « Champs classiques », 2011) : voir l'en-tête de philo1. Ici : fin de la
+# partie 5, « La logique du Capital » (l'histoire, la base, la conscience,
+# l'aliénation, puis les catégories de la pratique : activité, liberté,
+# finalité), et la conclusion de l'introduction.
+#
+# Citations : Manuscrits de 1844 dans les Éditions sociales (Bottigelli) ;
+# L'Idéologie allemande dans les Éditions sociales pour « la conscience ne
+# peut jamais être autre chose que l'Être conscient » et « jouir de la
+# contingence » ; le reste (note de L'Idéologie allemande sur la liberté,
+# Grundrisse, Spinoza, Garo) dans la traduction de Sève. Vadée (Marx penseur
+# du possible) n'est que nommé, comme dans l'introduction.
+
+id: philo7
+title: "La logique du Capital : histoire, pratique, liberté"
+subtitle: "Une histoire nécessaire sans être fatale, une conscience qui est l'être conscient, une aliénation devenue sociale, et un matérialisme de l'activité qui vise la liberté"
+group: "Le philosophique chez Marx"
+icon: compass
+color: coral
+lessons:
+- id: philo7-l1
+  title: "L'histoire : détermination, loi, possible"
+  notes: |-
+    **Les développements de la dialectique nourrissent une catégorie ultime, l'**{violet}**histoire**{/violet}**, où l'on peut voir avec Althusser le nom de tout un continent théorique.** Au-delà de la théorie des formations sociales, trois déterminations y montrent {coral}une nécessité qui inclut la contingence{/coral}.
+
+    **La détermination.** La {violet}détermination{/violet} (*Bestimmung*) ne se rabat pas sur la simple {pink}condition{/pink} (*Bedingung*) : une condition rend possible, une détermination fait être ce qu'une chose est, en excluant ce qu'elle n'est pas. S'y manifeste la vérité dialectique de la formule de {sky}Spinoza{/sky} : {teal}« __omnis determinatio negatio__ »{/teal} (toute détermination est négation).
+
+    **La légalité.** La {violet}légalité{/violet} (*Gesetzmässigkeit*, conformité à des lois), et surtout la {violet}loi tendancielle{/violet}, qui {green}inclut la contingence dans la nécessité{/green}, la contrariété dans la rationalité : la baisse tendancielle du taux de profit est une loi, mais des causes contraires la freinent, et elle ne se lit qu'en moyenne et sur la durée.
+
+    **Nécessité, possibilité, réalité.** Un des apports majeurs de Marx (que {sky}Michel Vadée{/sky} a étudié dans *Marx penseur du possible*) est d'approfondir la distinction :
+
+    | Possibilité | Définie par | Relève de |
+    | formelle | la non-contradiction | la logique formelle |
+    | réelle | la contradiction réelle | la logique dialectique |
+
+    Sous la non-contradiction formelle se trouve la {coral}contradiction réelle{/coral}, qui provoque les {violet}bifurcations{/violet} par où doit passer la réalisation d'un possible. Marx emploie souvent le grec {blue}*dunamei*{/blue} (« en puissance »), signe de sa proximité avec {sky}Aristote{/sky} : un possible inscrit dans la structure même du réel. Mais bien plus souvent il s'attache aux {violet}présupposés externes{/violet} sans lesquels une possibilité formelle ne devient pas réelle : le propre du {red}possible seulement formel{/red} est de ne pas contenir les conditions décisives de son actualisation. Nouvel effet du renversement matérialiste.
+
+    ! Une loi tendancielle n'est pas une loi approximative : sa contingence fait partie de sa nécessité.
+  points:
+  - id: philo7-l1-p1
+    sentence: "__Dans l'histoire selon Marx__, la nécessité inclut la ___ : le nécessaire n'y est jamais fatal."
+    answer: "contingence"
+    alt: []
+  - id: philo7-l1-p2
+    sentence: "__La détermination (*Bestimmung*) ne se rabat pas sur la simple__ ___ (*Bedingung*), qui rend seulement possible."
+    answer: "condition"
+    alt: []
+  - id: philo7-l1-p3
+    sentence: "__La formule de Spinoza où se manifeste la vérité dialectique de la détermination__ : « omnis determinatio ___ »."
+    answer: "negatio"
+    alt: []
+  - id: philo7-l1-p4
+    sentence: "__La légalité__ (conformité à des lois), en allemand : ___."
+    answer: "Gesetzmässigkeit"
+    alt: ["Gesetzmäßigkeit", "Gesetzmassigkeit"]
+  - id: philo7-l1-p5
+    sentence: "__La loi qui inclut la contingence dans la nécessité, la contrariété dans la rationalité__ : la **loi ___**."
+    answer: "tendancielle"
+    alt: []
+  - id: philo7-l1-p6
+    sentence: "__L'ouvrage de Michel Vadée sur Marx et le possible__ : *Marx penseur du ___*."
+    answer: "possible"
+    alt: []
+  - id: philo7-l1-p7
+    sentence: "__La possibilité formelle se définit par__ la ___, au sens de la logique formelle."
+    answer: "non-contradiction"
+    alt: ["non contradiction"]
+  - id: philo7-l1-p8
+    sentence: "__Sous la non-contradiction formelle se trouve la contradiction réelle__, qui provoque les ___ par où doit passer la réalisation d'un possible."
+    answer: "bifurcations"
+    alt: []
+  - id: philo7-l1-p9
+    sentence: "__Le mot grec fréquent chez Marx, qui dit sa proximité avec Aristote sur le possible__ : *___*, « en puissance »."
+    answer: "dunamei"
+    alt: ["δυνάμει"]
+  - id: philo7-l1-p10
+    sentence: "__Le plus souvent, Marx s'attache aux présupposés__ ___ sans lesquels une possibilité formelle ne devient pas réelle."
+    answer: "externes"
+    alt: []
+- id: philo7-l2
+  title: "La base"
+  notes: |-
+    **Entre catégories philosophiques et concepts scientifiques de l'histoire, la frontière n'est pas nette : rapport est une catégorie, rapport social l'est-il encore ? Trois termes de la théorie de l'histoire ont en tout cas une dimension philosophique : base, conscience, aliénation. La** {violet}**base**{/violet} **(*Grundlage*, *Basis*) est** {coral}**ce à partir de quoi l'on peut rendre raison**{/coral} **des réalités sociales.**
+
+    **Un transfert sémantique exemplaire.** La {violet}*Grundlage*{/violet} (base explicative) est à la pensée de Marx ce que le {violet}*Grund*{/violet} (fondement idéel) est à celle de Hegel : l'idéel s'ouvre à la spatio-temporalité du matériel.
+
+    **La base dans l'espace : base et support.** Spatialement, la base est ce sur quoi se fonde le tout ; mais elle ne se confond pas avec le {violet}support{/violet} (*Träger*). Une {yellow}nation{/yellow} a une {yellow}géographie{/yellow} pour support ; sa base explicative est à chercher dans les logiques fondamentales de son {green}histoire{/green}, qui vont jusqu'à modeler en retour le support géographique (on draine, on irrigue, on perce des canaux). Et ce qui fut d'abord base au sens fort n'est souvent plus ensuite que support : {coral}renversement clef de bien des développements{/coral}.
+
+    **La base dans le temps : présupposition et essence.** Temporellement, la base apparaît d'abord comme {violet}présupposition de départ{/violet} (*Voraussetzung*), voire simple préalable empirique ; mais en tant que {green}condition nécessaire dans la durée{/green}, elle est {violet}essence{/violet}, rapport générateur : c'est là le sens matérialiste fort de *Grundlage*.
+
+    **Un schéma qui n'est pas de Marx.** La mise en doctrine du marxisme a ancré le couple potentiellement {red}mécaniste{/red} base-superstructure. Or :
+    - le mot {violet}superstructure{/violet} (*Überbau*) ne se rencontre guère qu'{amber}une dizaine de fois{/amber} dans l'œuvre immense de Marx, en des sens très variés ;
+    - {violet}base{/violet} y figure constamment ;
+    - {red}infrastructure{/red} ne s'y trouve pas du tout.
+
+    C'est que Marx ne cherche pas un {red}schéma passe-partout{/red} de « la » formation sociale, mais les {green}questions universelles à poser devant chaque cas singulier{/green}. Et la question clef est justement celle de la base d'un tout social : quels sont les rapports essentiels qui engendrent ses structures et ses logiques ?
+  points:
+  - id: philo7-l2-p1
+    sentence: "__La base, chez Marx__, est ce à partir de quoi l'on peut ___ des réalités sociales et des événements historiques."
+    answer: "rendre raison"
+    alt: []
+  - id: philo7-l2-p2
+    sentence: "__La base explicative__, en allemand : ___ (à rapprocher du *Grund* de Hegel)."
+    answer: "Grundlage"
+    alt: []
+  - id: philo7-l2-p3
+    sentence: "__La *Grundlage* (base explicative) est à la pensée de Marx ce que le__ ___ (fondement idéel) est à celle de Hegel."
+    answer: "Grund"
+    alt: []
+  - id: philo7-l2-p4
+    sentence: "__Spatialement, la base ne se confond pas avec le__ ___ (*Träger*) : une nation a une géographie pour support, mais sa base est dans son histoire."
+    answer: "support"
+    alt: []
+  - id: philo7-l2-p5
+    sentence: "__Renversement clef de bien des développements__ : ce qui fut d'abord base au sens fort n'est souvent plus ensuite que ___."
+    answer: "support"
+    alt: []
+  - id: philo7-l2-p6
+    sentence: "__Temporellement, la base est d'abord présupposition de départ ; en tant que condition nécessaire dans la durée__, elle est ___, rapport générateur."
+    answer: "essence"
+    alt: []
+  - id: philo7-l2-p7
+    sentence: "__Le mot « superstructure »__ (*Überbau*) ne se rencontre guère qu'une ___ de fois dans l'œuvre de Marx."
+    answer: "dizaine"
+    alt: []
+  - id: philo7-l2-p8
+    sentence: "__Le mot qui ne se trouve pas du tout chez Marx__, malgré la doctrine marxiste : ___."
+    answer: "infrastructure"
+    alt: []
+  - id: philo7-l2-p9
+    sentence: "__Marx ne cherche pas un schéma passe-partout de « la » formation sociale__, mais les questions ___ à poser devant chaque cas singulier."
+    answer: "universelles"
+    alt: []
+- id: philo7-l3
+  title: "La conscience"
+  notes: |-
+    **On croit que Marx, penseur de l'objectivité sociale, n'a rien à dire de la** {violet}**conscience**{/violet} **(*Bewusstsein*). C'est l'inverse : parce qu'il la pense de façon matérialiste et historique, il en dit des choses très pénétrantes, et** {coral}**fait de la prise de conscience un moment capital de la transformation du monde**{/coral}**.**
+
+    **La thèse de *L'Idéologie allemande*.** {teal}« La conscience [*das Bewusstsein*] ne peut jamais être autre chose que __l'Être conscient__ [*das bewusste Sein*] et l'Être des hommes est leur __processus de vie réel__. »{/teal} Le jeu de mots allemand dit la thèse : {red}la conscience n'est pas un être{/red}, une chose à part ; {green}ce sont des êtres qui sont conscients{/green}. Toute la tradition idéaliste est niée.
+
+    **Conséquences.**
+    - Aucune étude de « la conscience » ne vaut si elle fait abstraction des {amber}processus de vie réels{/amber}. Ainsi, on ne comprend pas comment la conscience peut s'imaginer {teal}« qu'elle représente réellement quelque chose sans représenter quelque chose de réel »{/teal} sans la {violet}division sociale entre travail matériel et travail intellectuel{/violet} : dès qu'une classe pense sans produire, ses idées semblent tenir debout toutes seules.
+    - Dans l'humanité développée, la conscience est d'emblée un {violet}produit social{/violet}, comme le langage.
+
+    **La prise de conscience, force historique.** Loin de minorer la conscience, cette conception fait de la {violet}prise de conscience{/violet}, présupposé de toute volonté d'agir, un moment capital. Les *Grundrisse* : pour le salarié, {teal}« reconnaître les produits comme étant __ses propres produits__ »{/teal}, et juger inacceptable de n'avoir aucun pouvoir sur leur production, est {teal}« une __immense conscience__ »{/teal}, qui {teal}« sonne le glas »{/teal} du capital ; de même, quand l'{yellow}esclave{/yellow} prit conscience d'être « une personne », qui ne peut appartenir à un tiers, l'esclavagisme reçut un coup mortel.
+
+    **D'où la politique de Marx.** Un parti de transformation sociale ne se substitue pas aux acteurs (« l'émancipation des travailleurs sera l'œuvre des travailleurs eux-mêmes ») : il les aide à prendre pleine conscience de ce pour quoi ils luttent. D'où l'importance de la {violet}critique de l'idéologie{/violet} dominante. On dit que le mot « idéologie » disparaît après *L'Idéologie allemande* ; mais, comme l'a montré {sky}Isabelle Garo{/sky}, le mot se raréfie parce que son objet s'approfondit et finit par « faire corps avec la critique de l'économie politique elle-même » : tout le livre IV du *Capital* pourrait s'intituler {yellow}*L'Idéologie anglaise*{/yellow}.
+  points:
+  - id: philo7-l3-p1
+    sentence: "__Pensant la conscience de façon matérialiste et historique__, Marx fait de la prise de conscience un moment capital de la ___ du monde."
+    answer: "transformation"
+    alt: []
+  - id: philo7-l3-p2
+    sentence: "*L'Idéologie allemande* : « La conscience ne peut jamais être autre chose que l'Être ___ et l'Être des hommes est leur processus de vie réel. »"
+    answer: "conscient"
+    alt: []
+  - id: philo7-l3-p3
+    sentence: "*L'Idéologie allemande* : « La conscience ne peut jamais être autre chose que l'Être conscient et l'Être des hommes est leur ___ de vie réel. »"
+    answer: "processus"
+    alt: []
+  - id: philo7-l3-p4
+    sentence: "__Le jeu de mots allemand de *L'Idéologie allemande*__ : *das Bewusstsein* n'est rien d'autre que *das bewusste* ___."
+    answer: "Sein"
+    alt: []
+  - id: philo7-l3-p5
+    sentence: "__Contre la tradition idéaliste__ : la conscience n'est pas un être, ce sont des ___ qui sont conscients."
+    answer: "êtres"
+    alt: ["etres"]
+  - id: philo7-l3-p6
+    sentence: "__Ce qui fait croire à la conscience qu'elle représente quelque chose sans représenter quelque chose de réel__ : la division sociale entre travail matériel et travail ___."
+    answer: "intellectuel"
+    alt: []
+  - id: philo7-l3-p7
+    sentence: "*Grundrisse* : pour le salarié, reconnaître les produits comme étant ses propres produits est « une immense ___ », qui sonne le glas du capital."
+    answer: "conscience"
+    alt: []
+  - id: philo7-l3-p8
+    sentence: "__Comme la conscience des salariés pour le capital, la prise de conscience de l'esclave d'être « une ___ » porta un coup mortel à l'esclavagisme.__"
+    answer: "personne"
+    alt: []
+  - id: philo7-l3-p9
+    sentence: "__Le rôle d'un parti de transformation sociale selon Marx__ : non se substituer aux acteurs, mais les aider à prendre ___ de ce pour quoi ils luttent."
+    answer: "conscience"
+    alt: []
+  - id: philo7-l3-p10
+    sentence: "__Le mot « idéologie » se raréfie après 1846 parce que son objet s'approfondit__, selon Isabelle ___ : il fait corps avec la critique de l'économie politique."
+    answer: "Garo"
+    alt: []
+  - id: philo7-l3-p11
+    sentence: "__Selon la formule d'Isabelle Garo, tout le livre IV du *Capital* pourrait s'intituler__ *L'Idéologie ___*."
+    answer: "anglaise"
+    alt: []
+- id: philo7-l4
+  title: "L'aliénation, de 1844 au Capital"
+  notes: |-
+    **On répète, après Althusser (1965), que l'aliénation, catégorie feuerbachienne des** ***Manuscrits de 1844*****, disparaît « complètement » ensuite. Or le vocabulaire de l'aliénation est partout dans** ***Le Capital*** **; mais** {coral}**il y a pris un sens nouveau, par un renversement matérialiste**{/coral}**.**
+
+    **Une contre-vérité, et une vérité.** Que le vocabulaire de l'aliénation ({violet}*Entäusserung*{/violet}, plus souvent {violet}*Entfremdung*{/violet}) soit absent du *Capital* est une {red}contre-vérité flagrante{/red}. Mais Althusser a raison sur un point : dans le texte de 1844 sur le [[g-travail-aliene|travail aliéné]], l'aliénation relève par bien des côtés de l'{violet}humanisme feuerbachien{/violet}.
+
+    **L'aliénation en 1844 : le drame d'un sujet.** Cette quinzaine de pages est une saisissante {violet}phénoménologie du travail aliéné{/violet}, qui renvoie à l'expérience d'un sujet : le travailleur s'aliène dans son travail {yellow}comme le croyant s'aliène en Dieu{/yellow}. L'aliénation y est un {amber}acte du travailleur{/amber} ({violet}*Tat der Entäusserung*{/violet}), dont le travail devient {teal}« une puissance autonome vis-à-vis de lui »{/teal} : c'est « l'homme » qui s'aliène ({violet}*Selbstentfremdung*{/violet}). Le jeune Marx va jusqu'à dire que la propriété privée « résulte par analyse » du concept d'« homme aliéné » : nous sommes encore dans un {red}monde à l'envers{/red}. D'où la question qu'il laisse irrésolue : {teal}« comment cette aliénation est-elle __fondée dans l'essence du développement humain__ ? »{/teal} Faute d'une vision claire du rapport de production capitaliste (il parle du {teal}« système de l'argent »{/teal}), il ne peut y répondre.
+
+    **L'aliénation dans *Le Capital* : l'antagonisme d'un monde social.**
+
+    | Qui aliène ? | 1844 | *Le Capital* |
+    | le sujet de l'aliénation | « l'homme » qui s'aliène | un mode de production qui contraint |
+    | sa nature | drame d'un sujet | antagonisme d'un monde social |
+
+    Ce n'est pas « l'homme » qui s'aliène, {red}vue spéculative{/red}, mais {green}un mode de production défini qui contraint les individus à produire et vivre en des conditions aliénées{/green}. L'aliénation devient l'{coral}ensemble des processus historico-sociaux par lesquels, sur la base des clivages de classe, les forces matérielles et mentales des humains se détachent d'eux pour se constituer en puissances dominatrices{/coral} ({violet}*beherrschende Mächte*{/violet}) qui les écrasent : avoirs privés, raisons d'État, évidences fallacieuses, crises, guerres.
+
+    **Un dépassement au sens de l'*Aufhebung*.** Quelque chose est {red}récusé{/red} (l'homme qui s'aliène), quelque chose {green}conservé sur une autre base{/green} : la phénoménologie du travail aliéné reste vraie, mais ne se comprend sans erreur qu'à partir des rapports historiques qui la sous-tendent. Et une fois sa matrice identifiée, on voit l'immense diversité de l'aliénation : dans le monde du capital, ne sont pas aliénés que le travail, mais la politique, la science, l'amour, le rapport à la nature. Notre histoire n'est encore que {teal}« préhistoire »{/teal}. Le {violet}communisme{/violet} se définit alors comme {green}mouvement d'appropriation{/green} (*Aneignung*), où doivent se dépasser longuement toutes les grandes aliénations de l'humanité.
+  points:
+  - id: philo7-l4-p1
+    sentence: "__Le vocabulaire de l'aliénation est partout dans *Le Capital*__, mais il y a pris un sens nouveau, par un ___ matérialiste."
+    answer: "renversement"
+    alt: []
+  - id: philo7-l4-p2
+    sentence: "__La thèse de 1965 selon laquelle l'aliénation, catégorie feuerbachienne, disparaîtrait « complètement » après 1844__ est celle d'___."
+    answer: "Althusser"
+    alt: []
+  - id: philo7-l4-p3
+    sentence: "__Sur quoi Althusser a raison__ : dans le texte de 1844 sur le travail aliéné, l'aliénation relève par bien des côtés de l'**humanisme ___**."
+    answer: "feuerbachien"
+    alt: []
+  - id: philo7-l4-p4
+    sentence: "__Le texte de 1844 sur le travail aliéné est une__ ___ du travail aliéné, qui renvoie à l'expérience d'un sujet."
+    answer: "phénoménologie"
+    alt: ["phenomenologie"]
+  - id: philo7-l4-p5
+    sentence: "__En 1844, le travailleur s'aliène dans son travail comme__ le croyant s'aliène en ___."
+    answer: "Dieu"
+    alt: []
+  - id: philo7-l4-p6
+    sentence: "*Manuscrits de 1844* : le travail de l'ouvrier existe en dehors de lui, étranger à lui, et devient « une puissance ___ vis-à-vis de lui »."
+    answer: "autonome"
+    alt: []
+  - id: philo7-l4-p7
+    sentence: "__En 1844, c'est « l'homme » qui s'aliène__ : l'aliénation de soi, en allemand ___."
+    answer: "Selbstentfremdung"
+    alt: []
+  - id: philo7-l4-p8
+    sentence: "*Manuscrits de 1844* : « comment cette aliénation est-elle fondée dans l'essence du ___ humain ? », question que le jeune Marx ne peut résoudre."
+    answer: "développement"
+    alt: ["developpement"]
+  - id: philo7-l4-p9
+    sentence: "__Faute d'une vision claire du rapport de production capitaliste, Marx parle en 1844 du__ « système de l'___ »."
+    answer: "argent"
+    alt: []
+  - id: philo7-l4-p10
+    sentence: "__Dans *Le Capital*, ce n'est pas « l'homme » qui s'aliène__, mais un ___ défini qui contraint les individus à produire et vivre en des conditions aliénées."
+    answer: "mode de production"
+    alt: []
+  - id: philo7-l4-p11
+    sentence: "__L'aliénation selon *Le Capital*__ : les forces des humains se détachent d'eux pour se constituer en **puissances ___** (*beherrschende Mächte*)."
+    answer: "dominatrices"
+    alt: []
+  - id: philo7-l4-p12
+    sentence: "__Sous l'aliénation comme drame du sujet humain__, il y a l'aliénation comme ___ d'un monde social."
+    answer: "antagonisme"
+    alt: []
+  - id: philo7-l4-p13
+    sentence: "__Le communisme défini par l'aliénation selon *Le Capital*__ : un mouvement d'___ (*Aneignung*), où se dépassent les grandes aliénations historiques."
+    answer: "appropriation"
+    alt: []
+- id: philo7-l5
+  title: "L'activité, non la praxis"
+  notes: |-
+    **Viennent enfin les** {violet}**catégories de la pratique**{/violet}**, où le subjectif inscrit dans l'objectif devient agissant : activité, liberté, finalité. Contre toute une tradition,** {coral}**la pensée de Marx n'est pas une philosophie de la *Praxis*, mais un matérialisme de la *Tätigkeit***{/coral}**.**
+
+    **La gloire de la praxis.** Le mot {violet}*Praxis*{/violet} fait une irruption spectaculaire dans les *Thèses sur Feuerbach* (1845) : il marque le passage à un matérialisme qui envisage toute chose du point de vue de la pratique. {sky}Gramsci{/sky}, par raison profonde autant que par contrainte policière, prit l'habitude dans ses écrits de prison de nommer la pensée de Marx {yellow}« philosophie de la praxis »{/yellow} : la formule a fait fortune.
+
+    **Un fait masqué : Marx abandonne le mot.** Après 1846, *Praxis* ne fait plus que de rares apparitions, au sens courant de « pratique ». Pourquoi ? Parce qu'il ne marque pas assez le point décisif : ce qui caractérise l'humanité n'est pas n'importe quelle pratique, mais l'{green}activité sociale productive{/green}. Elle a créé au fil des millénaires, et continue de créer, un {violet}monde humain objectif{/violet} (forces productives, rapports sociaux, savoirs, institutions, valeurs), dont chaque petit d'*Homo sapiens* s'approprie une part pour devenir à sa façon un être humain historiquement développé. Or la tradition issue d'{sky}Aristote{/sky} oppose :
+
+    | Terme grec | Sens | Rang |
+    | *praxis* | l'action qui a sa fin en elle-même | noble |
+    | *poièsis* | l'activité qui fabrique | subalterne |
+
+    Ainsi entendu, {red}*praxis* dit le contraire de ce que Marx a en vue{/red} : c'est justement la production qu'il met au centre.
+
+    **Le mot que Marx garde : *Tätigkeit*.** Omniprésent aussi dans les *Thèses*, il traverse toute son œuvre : concept clef de l'idéalisme allemand, reconverti en {violet}catégorie matérialiste de l'activité{/violet}, qui {green}produit quelque chose et produit du même coup son producteur{/green}. La *Tätigkeit* est aussi une {violet}*Betätigung*{/violet}, une {violet}*Selbstbetätigung*{/violet} : une {amber}mise en action de soi{/amber}, où se forment les {violet}capacités{/violet} (*Fähigkeiten*) et se développe la {violet}personnalité{/violet} (*Persönlichkeit*). Le forgeron forge le fer, et se forme en forgeant.
+  points:
+  - id: philo7-l5-p1
+    sentence: "__Contre toute une tradition, la pensée de Marx n'est pas une philosophie de la *Praxis*__, mais un **matérialisme de la ___**."
+    answer: "Tätigkeit"
+    alt: ["Tatigkeit"]
+  - id: philo7-l5-p2
+    sentence: "__Le penseur marxiste qui, dans ses écrits de prison, nomme la pensée de Marx « philosophie de la praxis »__ : ___."
+    answer: "Gramsci"
+    alt: []
+  - id: philo7-l5-p3
+    sentence: "__Le mot *Praxis* fait une irruption spectaculaire en 1845 dans les__ *___ sur Feuerbach*, puis Marx l'abandonne."
+    answer: "Thèses"
+    alt: ["Theses"]
+  - id: philo7-l5-p4
+    sentence: "__Ce qui caractérise en propre l'humanité, selon Marx__ : non n'importe quelle pratique, mais l'**activité sociale ___**."
+    answer: "productive"
+    alt: []
+  - id: philo7-l5-p5
+    sentence: "__Chaque petit d'*Homo sapiens* devient un être humain développé__ par l'appropriation singulière du **monde humain ___** créé par l'activité productive."
+    answer: "objectif"
+    alt: []
+  - id: philo7-l5-p6
+    sentence: "__La tradition issue d'Aristote oppose à la *praxis*__ la ___, activité fabricatrice jugée subalterne."
+    answer: "poièsis"
+    alt: ["poiesis", "poïèsis"]
+  - id: philo7-l5-p7
+    sentence: "__La *Tätigkeit* produit quelque chose__, et produit du même coup son ___."
+    answer: "producteur"
+    alt: []
+  - id: philo7-l5-p8
+    sentence: "__La *Tätigkeit* est aussi une *Selbstbetätigung*__ : une mise en ___ de soi, où se forment les capacités."
+    answer: "action"
+    alt: []
+  - id: philo7-l5-p9
+    sentence: "__Dans l'activité se forment les capacités (*Fähigkeiten*) et se développe__ la ___ (*Persönlichkeit*)."
+    answer: "personnalité"
+    alt: ["personnalite"]
+- id: philo7-l6
+  title: "La liberté et l'émancipation"
+  notes: |-
+    **L'imagerie vulgaire croit que Marx n'a rien à dire de la** {violet}**liberté**{/violet} **(*Freiheit*) : profonde erreur. Il la pense comme** {coral}**puissance sur les circonstances**{/coral}**, et met au jour une dialectique singulière de la liberté bourgeoise.**
+
+    **Deux définitions de la liberté.** Une note de *L'Idéologie allemande* : {teal}« la liberté a été définie jusqu'ici par les philosophes de deux manières : d'un côté, par tous les matérialistes, comme __puissance__, comme __maîtrise sur les circonstances__ et situations où se trouve vivre un individu ; d'un autre côté, par les idéalistes, et spécialement les Allemands, comme __autodétermination__, détachement du monde réel, comme pure liberté imaginaire de l'esprit »{/teal}.
+
+    | Liberté | Chez | Définie comme |
+    | matérialiste | Épicure, Spinoza, Marx | maîtrise sur les circonstances |
+    | idéaliste | les Allemands | autodétermination de l'esprit |
+
+    Marx se range dans la première lignée, celle d'{sky}Épicure{/sky} et de {sky}Spinoza{/sky}. La liberté est bien {violet}autonomie{/violet} (*Selbstständigkeit*), mais {green}autonomie pratique{/green}, qui naît chez les individus comme chez les peuples quand ils {amber}prennent conscience de la nécessité{/amber} tout en se représentant avec quelque justesse les {amber}possibles{/amber}. Elle est donc d'essence {violet}historico-sociale{/violet}.
+
+    **La dialectique de la liberté bourgeoise.**
+    - D'un côté, l'essor des rapports marchands, qui culmine dans le capitalisme, est {green}intensément libérateur{/green} : il rompt les vieux liens de {violet}dépendance personnelle{/violet} (*Abhängigkeit*) des sociétés esclavagistes et féodales. Le salarié n'appartient à personne.
+    - De l'autre, cette liberté individuelle n'est que la faculté de {teal}« jouir de la contingence »{/teal} (*Zufälligkeit*), à l'intérieur d'un {red}asservissement aux gigantesques puissances sociales aliénées{/red} du capitalisme : libre de changer de patron, non de ne pas avoir de patron.
+
+    **D'où l'émancipation.** Le souci de l'{violet}émancipation{/violet} est aussi vif dans *Le Capital* que dans *La Question juive*, et plus consistant : elle doit aller jusqu'à la racine de la dépendance moderne, l'{coral}aliénation économique{/coral}. Et le prétendu fanatique de la production et apologiste du travail est en vérité un inconditionnel de l'essor du {green}temps libre{/green}, condition *sine qua non* de tout épanouissement humain supérieur et de toute liberté concrète.
+  points:
+  - id: philo7-l6-p1
+    sentence: "__Marx pense la liberté comme__ ___ sur les circonstances, contre la liberté imaginaire de l'esprit."
+    answer: "maîtrise"
+    alt: ["maitrise", "puissance"]
+  - id: philo7-l6-p2
+    sentence: "*L'Idéologie allemande* : la liberté a été définie par tous les matérialistes « comme ___, comme maîtrise sur les circonstances » de la vie d'un individu."
+    answer: "puissance"
+    alt: []
+  - id: philo7-l6-p3
+    sentence: "*L'Idéologie allemande* : la liberté a été définie par les idéalistes, spécialement les Allemands, « comme ___, détachement du monde réel »."
+    answer: "autodétermination"
+    alt: ["autodetermination"]
+  - id: philo7-l6-p4
+    sentence: "__Les deux penseurs de la lignée matérialiste de la liberté où se range Marx__ : Épicure et ___."
+    answer: "Spinoza"
+    alt: []
+  - id: philo7-l6-p5
+    sentence: "__La liberté est autonomie pratique__ : elle naît quand individus et peuples prennent conscience de la ___ tout en se représentant justement les possibles."
+    answer: "nécessité"
+    alt: ["necessite"]
+  - id: philo7-l6-p6
+    sentence: "__Ce que les rapports marchands ont d'intensément libérateur__ : ils rompent les vieux liens de ___ personnelle des sociétés esclavagistes et féodales."
+    answer: "dépendance"
+    alt: ["dependance"]
+  - id: philo7-l6-p7
+    sentence: "*L'Idéologie allemande* : la liberté individuelle bourgeoise n'est que la faculté de « jouir de la ___ », au sein d'un asservissement aux puissances sociales aliénées."
+    answer: "contingence"
+    alt: []
+  - id: philo7-l6-p8
+    sentence: "__L'émancipation selon *Le Capital* doit aller jusqu'à la racine de la dépendance moderne__ : l'aliénation ___."
+    answer: "économique"
+    alt: ["economique"]
+  - id: philo7-l6-p9
+    sentence: "__Le prétendu apologiste du travail est un inconditionnel de l'essor du__ ___, condition de toute liberté concrète."
+    answer: "temps libre"
+    alt: []
+- id: philo7-l7
+  title: "Fins et moyens : une politique sans utopie"
+  notes: |-
+    **Marx, grand penseur moderne de la pratique, a joint à la profondeur philosophique une expérience responsable des luttes ; d'où son apport méconnu sur la** {violet}**finalité**{/violet} **(*Zweck*) :** {coral}**chercher dans le présent les conditions de son dépassement**{/coral}**, plutôt qu'un idéal à lui imposer.**
+
+    **Le moyen qui devient fin.** Par une dialectique constante, le {violet}moyen{/violet} terme (*Mittel*) acquiert une puissance déterminante qui le fait se poser en {violet}fin{/violet} (*Zweck*) : exemple type, l'{yellow}argent{/yellow}, qui devait servir l'échange et devient le but de la production. C'est l'inversion caractéristique du capitalisme, liée à celle des rapports entre personne et chose. Mais ce risque guette {amber}toute pratique{/amber}, l'action politique comprise : c'est pourquoi Marx, que son expérience n'inclinait pas à la naïveté, attachait une haute importance à la {green}moralité en politique{/green}, pour ne jamais perdre le cap de l'émancipation et de la {green}fin en soi ultime{/green} : le {coral}libre développement de l'humanité en tous les humains{/coral}.
+
+    **La vraie difficulté : la ligne politique.** Identifier la fin éthique n'est pas le plus dur ; le plus dur est de déterminer la ligne politique appropriée.
+
+    | Démarche | Part de | Puis |
+    | utopiste | la condamnation morale du réel | un idéal sur lequel l'histoire devrait se régler |
+    | de Marx | l'examen le plus décapant de la situation | ses présupposés objectifs de dépassement |
+
+    - La démarche {pink}utopiste{/pink} va de la condamnation morale de la réalité à son dépassement {red}en imagination{/red} : elle joint l'{red}inconsistance idéaliste{/red} de la pensée au {red}subjectivisme volontariste{/red} de l'action. Sympathique comme foi dans le possible, l'utopie risque d'être terriblement contre-productive.
+    - Marx part de l'{green}examen le plus décapant de la situation réelle{/green}, pour y déceler les {violet}présupposés objectifs{/violet} (*Voraussetzungen*) de son dépassement, que ses contradictions comportent toujours, et identifier le {green}futur réaliste{/green}, en un sens déjà là, qu'il s'agit de faire advenir par-delà notre préhistoire.
+
+    Les *Grundrisse* le disent : {teal}« Si dans la société telle qu'elle est nous ne trouvions pas sous le masque __les conditions matérielles de production d'une société sans classes__ et les rapports d'échange correspondants, toutes les tentatives de la faire sauter ne seraient que __don quichottisme__. »{/teal} De quoi réfléchir sur l'échec des révolutions socialistes dans des pays peu développés, comme sur les possibles neufs d'un dépassement du capitalisme.
+  points:
+  - id: philo7-l7-p1
+    sentence: "__La démarche politique de Marx__ : chercher dans le présent les ___ objectifs de son dépassement, plutôt qu'un idéal à lui imposer."
+    answer: "présupposés"
+    alt: ["presupposes"]
+  - id: philo7-l7-p2
+    sentence: "__Par une dialectique constante, le moyen terme acquiert une puissance qui le fait se poser en__ ___ : exemple type, l'argent."
+    answer: "fin"
+    alt: []
+  - id: philo7-l7-p3
+    sentence: "__Parce que l'inversion du moyen en fin guette toute pratique__, Marx attachait une haute importance à la ___ en politique."
+    answer: "moralité"
+    alt: ["moralite"]
+  - id: philo7-l7-p4
+    sentence: "__La fin en soi ultime, selon Marx__ : le libre ___ de l'humanité en tous les humains."
+    answer: "développement"
+    alt: ["developpement"]
+  - id: philo7-l7-p5
+    sentence: "__La démarche qui va de la condamnation morale du réel à son dépassement en imagination__ : la démarche ___."
+    answer: "utopiste"
+    alt: []
+  - id: philo7-l7-p6
+    sentence: "__L'utopisme joint l'inconsistance idéaliste de la pensée__ au subjectivisme ___ de l'action."
+    answer: "volontariste"
+    alt: []
+  - id: philo7-l7-p7
+    sentence: "*Grundrisse* : si nous ne trouvions pas, dans la société telle qu'elle est, les conditions matérielles de production d'une société sans classes, toutes les tentatives de la faire sauter ne seraient que ___."
+    answer: "don quichottisme"
+    alt: ["donquichottisme"]
+  - id: philo7-l7-p8
+    sentence: "*Grundrisse* : « Si dans la société telle qu'elle est nous ne trouvions pas sous le ___ les conditions matérielles de production d'une société sans classes […] »."
+    answer: "masque"
+    alt: []
+- id: philo7-l8
+  title: "Une fin libératoire de « la philosophie »"
+  notes: |-
+    **Marx ne fut ni le premier ni le seul à juger close l'histoire de la philosophie ; mais il est** {coral}**le premier penseur d'une fin authentique et libératoire de « la philosophie »**{/coral}**, parce qu'il la pense comme une** {violet}***Aufhebung***{/violet}**.**
+
+    **L'autre fin de la philosophie : l'agnosticisme.** Bien plus que la critique de Marx, restée confidentielle de son vivant, c'est une autre critique qui a dominé son époque et marque la nôtre. Le {sky}scepticisme de Hume{/sky}, le {sky}criticisme de Kant{/sky}, le {sky}positivisme de Comte{/sky} ont concouru à un {red}agnosticisme philosophique{/red} aux traits communs :
+    - renoncer à jamais connaître la {amber}cause profonde{/amber}, la chose en soi, l'essence réelle ;
+    - limiter le savoir légitime au {amber}constat du fait{/amber}, à la loi du phénomène, et de là à la technique efficace ;
+    - par cette limitation même, faire {amber}place libre{/amber} au choix des valeurs, à la croyance, voire à l'évasion mystique.
+
+    Effet paradoxal : déclarer close la métaphysique offre une {red}vie nouvelle au spéculatif débridé{/red}, dans un monde où font bon ménage scientisme phénoméniste, logicisme formel et irrationalisme conservateur.
+
+    **La fin selon Marx : une *Aufhebung*.** Il pense la fin de la philosophie au double sens du dépassement :
+    - {red}__ce qui est aboli__{/red} : « la philosophie » comme discours de la mauvaise abstraction sur le monde et « l'homme » ; la perpétuer ne relève à ses yeux que du {red}sarcasme{/red} ;
+    - {green}__ce qui est conservé__{/green} : l'acquis catégoriel de deux mille ans de réflexion logico-philosophique ; l'abandonner par cécité dialectique n'appelle que la pitié.
+
+    Marx est ainsi le pionnier de l'alternative au couple improductif de l'{pink}infatuation philosophique{/pink} et de la {pink}résignation positiviste{/pink} : au-delà du formalisme logique, le {green}travail catégoriel, critique et heuristique, à même les savoirs et les pratiques{/green}. Ce que Marx offre n'est {coral}aucunement une philosophie, mais une façon neuve de pratiquer en toute chose l'indispensable travail philosophique{/coral}.
+
+    **Un enjeu politique.** Faire du philosophique un moment non prétentieux, mais peu remplaçable, de la pensée instruite et de la décision responsable est un présupposé direct du communisme de Marx. L'avoir méconnu a coûté cher aux marxistes : ressaisir le philosophique de Marx est un préalable pour que redevienne crédible sa visée de changer le monde.
+  points:
+  - id: philo7-l8-p1
+    sentence: "__Marx est le premier penseur d'une fin authentique et libératoire de « la philosophie »__, parce qu'il la pense comme une ___."
+    answer: "Aufhebung"
+    alt: []
+  - id: philo7-l8-p2
+    sentence: "__Le scepticisme de Hume, le criticisme de Kant, le positivisme de Comte ont concouru à un__ **___ philosophique**."
+    answer: "agnosticisme"
+    alt: []
+  - id: philo7-l8-p3
+    sentence: "__L'agnosticisme philosophique limite le savoir légitime au constat du fait__, et de là à la ___ efficace."
+    answer: "technique"
+    alt: []
+  - id: philo7-l8-p4
+    sentence: "__Effet paradoxal de l'agnosticisme qui déclare close la métaphysique__ : il offre une vie nouvelle au ___ débridé."
+    answer: "spéculatif"
+    alt: ["speculatif"]
+  - id: philo7-l8-p5
+    sentence: "__Ce que l'*Aufhebung* marxienne de la philosophie conserve__ : l'acquis ___ de deux mille ans de réflexion logico-philosophique."
+    answer: "catégoriel"
+    alt: ["categoriel"]
+  - id: philo7-l8-p6
+    sentence: "__Marx, pionnier de l'alternative au couple improductif de l'infatuation philosophique et de la__ **résignation ___**."
+    answer: "positiviste"
+    alt: []
+  - id: philo7-l8-p7
+    sentence: "__Ce que Marx offre__ : non une philosophie, mais une façon neuve de pratiquer en toute chose l'indispensable travail ___."
+    answer: "philosophique"
+    alt: []

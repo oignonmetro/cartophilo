@@ -1,0 +1,374 @@
+# Cours sur la dimension philosophique de l'œuvre de Marx, tiré de
+# l'introduction de Lucien Sève aux Écrits philosophiques de Marx (Flammarion,
+# « Champs classiques », 2011) : voir l'en-tête de philo1. Ici : partie 4,
+# « Un philosophique de nouvelle sorte » (ce qu'est une catégorie
+# philosophique, d'après Lénine ; puis les trois opérations du renversement de
+# la logique hégélienne : fin de la forme-système, nouveau rapport de
+# l'objectif et du subjectif, irruption de l'espace-temps réel).
+#
+# Citations : 1re thèse sur Feuerbach dans les Éditions sociales (volume de
+# L'Idéologie allemande) ; Lénine (Matérialisme et empiriocriticisme), Hegel,
+# Feuerbach et l'Introduction de 1844 (« l'homme, c'est le monde de
+# l'homme ») dans la traduction de Sève. L'exemple de la symétrie et de la
+# brisure de symétrie, que Sève développe dans d'autres ouvrages, est
+# seulement mentionné.
+
+id: philo4
+title: "Un philosophique de nouvelle sorte"
+subtitle: "La catégorie, rapport universel entre nous et les choses ; ce que le renversement matérialiste change à la logique : ni système, ni objectif sans subjectif, ni logique hors de l'espace et du temps"
+group: "Le philosophique chez Marx"
+icon: compass
+color: coral
+lessons:
+- id: philo4-l1
+  title: "Ce qu'est une catégorie philosophique : la leçon de Lénine"
+  notes: |-
+    **Pour savoir ce que sont les catégories chez Marx, le détour par** {sky}**Lénine**{/sky} **est décisif : il montre qu'une catégorie philosophique** {coral}**ne dit pas les propriétés d'un objet, mais notre rapport universel à lui**{/coral}**.** L'œuvre philosophique de Lénine (*Matérialisme et empiriocriticisme*, *Cahiers philosophiques*), recouverte par le mépris, avait été redécouverte en 1968 par {sky}Althusser{/sky}, devant la Société française de philosophie ; l'effort est à reprendre.
+
+    **Le débat : « la matière disparaît ».** Vers 1900, la « nouvelle physique » de l'électron résout la matière en particules qu'on croit alors sans masse mécanique : on en conclut que {red}« la matière disparaît »{/red}, donc que le matérialisme est périmé. Sottise philosophique, répond Lénine dans *Matérialisme et empiriocriticisme* : {teal}« "La matière disparaît", cela veut dire que disparaît __la limite jusqu'à laquelle nous connaissions la matière__, que notre connaissance s'approfondit ; […] Car l'unique "propriété" de la matière dont la reconnaissance est inséparable du matérialisme philosophique, c'est d'__être une réalité objective__, d'__exister en dehors de notre conscience__. »{/teal}
+
+    **D'où la distinction décisive.**
+
+    | Matière | Concept scientifique | Catégorie philosophique |
+    | dit | les propriétés de l'objet | notre rapport à l'objet |
+    | change | avec nos connaissances | non, ou en temps long |
+    | exemple | impénétrabilité, inertie, masse | ce qui existe hors de la conscience |
+
+    Le {pink}concept scientifique{/pink} de matière change avec la physique ; la {green}catégorie philosophique{/green} demeure, parce qu'elle n'énonce pas une propriété de l'objet mais {coral}la propriété de notre rapport cognitif le plus général avec lui{/coral} : il existe en dehors de la conscience que nous en avons, ou non. L'électron existe-t-il ? Les physiciens répondent oui : c'est tout ce que demande le matérialisme.
+
+    **Une définition généralisable.** Toute catégorie philosophique est un {violet}concept de rapport universel entre nous et les choses{/violet}, où l'objectif et le subjectif sont indissociables. Exemples :
+    - {yellow}contradiction dialectique{/yellow} : tout rapport que seuls définissent ses contraires ;
+    - {yellow}quantité{/yellow} : ce qui, dans les choses, se prête à une activité de mesure ;
+    - {yellow}base{/yellow} : l'aspect d'une réalité qui seul permet d'en rendre raison.
+
+    Tout concept vise un objet et est visé par un sujet ; le propre de la catégorie est que {amber}sa dimension subjective entre dans sa définition objective{/amber} : la conscience du physicien n'entre pas dans le concept physique de matière ; la conscience humaine entre dans la catégorie de matière. Toute catégorie est donc {violet}gnoséologique{/violet} (elle concerne la connaissance) en même temps qu'{violet}ontologique{/violet} (elle concerne l'être). Elles sont les {green}déterminations-de-sens universelles de nos rapports cognitifs ou actifs avec le monde{/green} ; d'où leur importance cardinale pour toute pensée et toute action.
+  points:
+  - id: philo4-l1-p1
+    sentence: "__La leçon de Lénine sur les catégories__ : une catégorie philosophique ne dit pas les propriétés d'un objet, mais notre ___ universel à lui."
+    answer: "rapport"
+    alt: []
+  - id: philo4-l1-p2
+    sentence: "__L'œuvre où Lénine répond à ceux qui tirent de la physique de l'électron que « la matière disparaît »__ : *Matérialisme et ___*."
+    answer: "empiriocriticisme"
+    alt: []
+  - id: philo4-l1-p3
+    sentence: "Lénine : « \"La matière disparaît\", cela veut dire que disparaît la ___ jusqu'à laquelle nous connaissions la matière, que notre connaissance s'approfondit »."
+    answer: "limite"
+    alt: []
+  - id: philo4-l1-p4
+    sentence: "Lénine : l'unique « propriété » de la matière inséparable du matérialisme philosophique, « c'est d'être une réalité ___, d'exister en dehors de notre conscience »."
+    answer: "objective"
+    alt: []
+  - id: philo4-l1-p5
+    sentence: "Lénine : l'unique « propriété » de la matière inséparable du matérialisme philosophique, c'est d'être une réalité objective, « d'exister en dehors de notre ___ »."
+    answer: "conscience"
+    alt: []
+  - id: philo4-l1-p6
+    sentence: "__Le concept scientifique de matière change avec nos connaissances__ ; la **catégorie ___** de matière demeure, parce qu'elle dit notre rapport à l'objet."
+    answer: "philosophique"
+    alt: []
+  - id: philo4-l1-p7
+    sentence: "__Toute catégorie philosophique est un concept de rapport__ ___ entre nous et les choses, où l'objectif et le subjectif sont indissociables."
+    answer: "universel"
+    alt: []
+  - id: philo4-l1-p8
+    sentence: "__Exemple de catégorie définie comme rapport entre nous et les choses__ : la ___, ce qui dans les choses se prête à une activité de mesure."
+    answer: "quantité"
+    alt: ["quantite"]
+  - id: philo4-l1-p9
+    sentence: "__Exemple de catégorie définie comme rapport entre nous et les choses__ : la ___, l'aspect d'une réalité qui seul permet d'en rendre raison."
+    answer: "base"
+    alt: []
+  - id: philo4-l1-p10
+    sentence: "__Le propre d'une catégorie philosophique__ : sa dimension ___ fait partie de sa définition objective (la conscience entre dans la catégorie de matière, non dans le concept physique)."
+    answer: "subjective"
+    alt: []
+  - id: philo4-l1-p11
+    sentence: "__Concernant à la fois la connaissance et l'être__, toute catégorie philosophique est **___** en même temps qu'ontologique."
+    answer: "gnoséologique"
+    alt: ["gnoseologique"]
+  - id: philo4-l1-p12
+    sentence: "__Les catégories philosophiques sont__ les **déterminations-de-___ universelles** de nos rapports cognitifs ou actifs avec le monde."
+    answer: "sens"
+    alt: []
+- id: philo4-l2
+  title: "D'où viennent les catégories ?"
+  notes: |-
+    **La définition des catégories comme rapports entre nous et les choses éclaire le choix de Marx : il reprend le mot de Kant contre Hegel, pour** {coral}**rouvrir une perspective critique**{/coral}**, mais va bien au-delà de Kant en posant la question décisive : d'où viennent nos catégories ?**
+
+    **Contre Hegel : rouvrir la critique.** Parlant le langage du {violet}concept{/violet}, Hegel s'émancipe de la perspective critique au sens de Kant : sa *Logique* s'installe d'emblée dans l'être, c'est un {red}dogmatisme du concept{/red}. {sky}Feuerbach{/sky} le refusait déjà : ce n'est pas le concept qui pense dans la tête de l'homme, c'est {green}l'homme qui pense le concept{/green}. En reprenant le mot de {violet}catégorie{/violet}, Marx rouvre consciemment une perspective critique : les concepts ne sont rien d'autre qu'une {coral}transposition du réel dans nos têtes{/coral}.
+
+    **Au-delà de Kant : la genèse des catégories.** Kant se contente d'un {red}sujet transcendantal{/red}, plus abstrait encore que « l'homme » de Feuerbach. Et comme ses catégories ne sont pas des transformées mentales du réel, elles nous {red}enferment dans notre subjectivité{/red} : nous ne connaissons que les phénomènes, jamais les choses. À ce prétendu fait transcendantal inexpliqué, il faut opposer la question : {amber}__d'où proviennent les catégories dans lesquelles nous pensons ?__{/amber}
+
+    **La réponse du matérialisme historique.** C'est ici qu'il révèle sa {violet}portée gnoséologique{/violet} : il n'y a d'attitude vraiment critique que fondée sur une {green}élucidation historico-matérialiste de la genèse de nos catégories{/green}. Elle seule fait comprendre que {coral}si le monde est concevable, c'est que notre conceptualisation est d'origine mondaine{/coral} : nos catégories viennent du monde, de notre activité en lui, et c'est pourquoi elles le saisissent. Marx n'a pas écrit cette histoire immense, mais il en a versé des acomptes, notamment dans l'{sky}Introduction de 1857{/sky}.
+
+    **Le philosophique marxien et ses trois opérations.** Dans l'œuvre de maturité se trouve donc, souvent sans être thématisée, une {violet}élaboration catégorielle{/violet} novatrice : ce que {sky}Sève{/sky} appelle le {green}philosophique marxien{/green}. Passer d'un système idéaliste de logique à une catégorisation émancipée de tout caractère spéculatif, idéaliste et systématique exige trois opérations :
+    - l'{amber}éradication de la forme-système{/amber} ;
+    - la {amber}transmutation du rapport objectif-subjectif{/amber} ;
+    - l'{amber}irruption de la spatio-temporalité réelle dans le logique{/amber}.
+  points:
+  - id: philo4-l2-p1
+    sentence: "__En reprenant le mot « catégorie » contre le concept hégélien__, Marx rouvre consciemment une perspective ___."
+    answer: "critique"
+    alt: []
+  - id: philo4-l2-p2
+    sentence: "__Parce que sa *Logique* s'installe d'emblée dans l'être__, Hegel tombe dans un ___ du concept."
+    answer: "dogmatisme"
+    alt: []
+  - id: philo4-l2-p3
+    sentence: "__Contre Hegel, Feuerbach__ : ce n'est pas le concept qui pense dans la tête de l'homme, c'est l'homme qui pense le ___."
+    answer: "concept"
+    alt: []
+  - id: philo4-l2-p4
+    sentence: "__Kant se contente d'un sujet__ ___, plus abstrait encore que « l'homme » de Feuerbach."
+    answer: "transcendantal"
+    alt: []
+  - id: philo4-l2-p5
+    sentence: "__Les catégories de Kant n'étant pas des transformées mentales du réel__, elles nous enferment dans notre ___."
+    answer: "subjectivité"
+    alt: ["subjectivite"]
+  - id: philo4-l2-p6
+    sentence: "__La question décisive que Marx oppose à Kant__ : d'où ___ les catégories dans lesquelles nous pensons ?"
+    answer: "proviennent"
+    alt: ["viennent"]
+  - id: philo4-l2-p7
+    sentence: "__Il n'y a d'attitude vraiment critique que fondée sur__ une élucidation historico-matérialiste de la ___ de nos catégories."
+    answer: "genèse"
+    alt: ["genese"]
+  - id: philo4-l2-p8
+    sentence: "__Si le monde est concevable__, c'est que notre conceptualisation est d'origine ___."
+    answer: "mondaine"
+    alt: []
+  - id: philo4-l2-p9
+    sentence: "__Première des trois opérations du renversement de la logique hégélienne__ : l'éradication de la ___-système."
+    answer: "forme"
+    alt: []
+  - id: philo4-l2-p10
+    sentence: "__Deuxième des trois opérations du renversement de la logique hégélienne__ : la transmutation du rapport ___-subjectif."
+    answer: "objectif"
+    alt: []
+  - id: philo4-l2-p11
+    sentence: "__Troisième des trois opérations du renversement de la logique hégélienne__ : l'irruption de la ___ réelle dans le logique."
+    answer: "spatio-temporalité"
+    alt: ["spatiotemporalité", "spatio-temporalite"]
+- id: philo4-l3
+  title: "La fin de la forme-système"
+  notes: |-
+    **Pour Hegel, la logique ne peut s'exposer qu'en système ; le renversement matérialiste commence par** {coral}**liquider cette forme-système**{/coral}**, close et réductrice, pour un** {violet}**réseau ouvert**{/violet} **de catégories.**
+
+    **La forme-système selon Hegel.** {teal}« Une démarche philosophique sans système ne peut rien être de scientifique. »{/teal} Le vrai n'est pas dans une proposition isolée, mais dans le tout de la pensée, et ce tout n'est vrai que si ses moments s'enchaînent par une nécessité interne. La forme-système traduit l'{violet}autodéveloppement du concept{/violet} : c'est de lui-même que l'{yellow}être{/yellow} passe au {yellow}néant{/yellow}, et leur rapport au {yellow}devenir{/yellow}. Supprimer le système, ce serait détruire le logique.
+
+    **Trois raisons de la rejeter.**
+    - {red}__Elle est idéaliste.__{/red} L'autodéveloppement du concept, c'est la {violet}métamorphose acritique de l'abstraction en sujet{/violet} : exactement ce que Marx a rejeté avec « la philosophie ». À l'illusion théologique d'un système logique autonome doit succéder l'attention à la {green}genèse profane{/green} de nos catégories.
+    - {red}__Elle est close.__{/red} La liste des catégories y est étrangère au temps des savoirs et des pratiques. Or si les catégories ne changent pas au rythme des concepts scientifiques, elles ont, en temps long, une {green}histoire ouverte{/green}, que Marx a beaucoup élargie.
+    - {red}__Elle est réductrice.__{/red} D'où l'omniprésence de la {violet}triade{/violet} chez Hegel, qui sent le formalisme ; lui disait n'y voir qu'une « table des matières », alors qu'on la retrouve sans cesse dans le contenu. La raison est profonde : dans la série linéaire du système, chaque catégorie a une {amber}place marquée{/amber}, un seul contraire, donc un seul troisième terme. Ainsi la {yellow}forme{/yellow} n'est traitée qu'une fois, dans la Logique de l'essence, alors qu'elle a trois contraires et aurait sa place partout : forme et matière (Logique de l'être), forme et essence (Logique de l'essence), forme et contenu (Logique du concept). Le système l'{red}assigne à résidence{/red}.
+
+    **Ce qui le remplace : non un catalogue, un réseau.** Il ne s'agit pas de retomber dans l'{red}empirisme{/red} d'une collection contingente. Marx ne recense nulle part ses catégories, mais veille à leur cohérence : chaque catégorie, étant universelle, {coral}affecte toutes les autres{/coral}. Si essence change de sens, toutes les catégories changent en leur essence ; si l'abstraction est repensée, toutes deviennent des abstractions d'une autre sorte.
+    - plus de {red}système de places{/red} : chaque catégorie se développe dans toutes ses directions (d'où des sens non hégéliens d'*Entfremdung*, *Grundlage*, *Vergegenständlichung*) ;
+    - la triade devient {amber}exceptionnelle{/amber} ; une catégorie vit en {green}groupe{/green}, avec des partenaires dérivés autant qu'opposés : {yellow}objectif{/yellow} fait corps avec subjectif, mais aussi avec objectal, avec fétichisé.
+
+    D'après le {violet}*rationeller Kern*{/violet} (« noyau rationnel ») de Marx, on peut parler de {violet}noyaux catégoriels{/violet} plutôt que de catégories.
+  points:
+  - id: philo4-l3-p1
+    sentence: "__Le renversement matérialiste de la logique commence par liquider__ la ___-système, close et réductrice, au profit d'un réseau ouvert de catégories."
+    answer: "forme"
+    alt: []
+  - id: philo4-l3-p2
+    sentence: "Hegel : « Une démarche philosophique sans ___ ne peut rien être de scientifique. »"
+    answer: "système"
+    alt: ["systeme"]
+  - id: philo4-l3-p3
+    sentence: "__Pour Hegel, la forme-système traduit__ l'**___ du concept** : c'est de lui-même que l'être passe au néant, et leur rapport au devenir."
+    answer: "autodéveloppement"
+    alt: ["autodeveloppement"]
+  - id: philo4-l3-p4
+    sentence: "__L'autodéveloppement du concept, rejeté par Marx__, c'est la métamorphose acritique de l'abstraction en ___."
+    answer: "sujet"
+    alt: []
+  - id: philo4-l3-p5
+    sentence: "__Contre l'illusion théologique d'un système logique autonome__, Marx s'attache à la genèse ___ de nos catégories."
+    answer: "profane"
+    alt: []
+  - id: philo4-l3-p6
+    sentence: "__La forme-système est close__ : or les catégories, même si elles ne changent pas au rythme des sciences, ont en temps long une ___ ouverte."
+    answer: "histoire"
+    alt: []
+  - id: philo4-l3-p7
+    sentence: "__Effet réducteur de la forme-système__ : l'omniprésence de la ___ chez Hegel, chaque catégorie n'ayant qu'un contraire et un troisième terme."
+    answer: "triade"
+    alt: []
+  - id: philo4-l3-p8
+    sentence: "__Exemple de catégorie assignée à résidence par le système hégélien__ : la ___, traitée une seule fois, dans la Logique de l'essence, alors qu'elle a trois contraires."
+    answer: "forme"
+    alt: []
+  - id: philo4-l3-p9
+    sentence: "__Les trois contraires de la forme, qui lui donneraient place dans les trois Logiques de Hegel__ : la matière, l'essence et le ___."
+    answer: "contenu"
+    alt: []
+  - id: philo4-l3-p10
+    sentence: "__Sortir du système n'est pas retomber dans l'__ ___ d'une collection contingente de catégories."
+    answer: "empirisme"
+    alt: []
+  - id: philo4-l3-p11
+    sentence: "__Chez Marx, plus de système clos, immuable, linéaire__ : les catégories forment ___ de manière ouverte, évolutive, tramée."
+    answer: "réseau"
+    alt: ["reseau"]
+  - id: philo4-l3-p12
+    sentence: "__D'après le *rationeller Kern* de Marx__, on peut parler chez lui de **noyaux ___** plutôt que de catégories."
+    answer: "catégoriels"
+    alt: ["categoriels"]
+- id: philo4-l4
+  title: "L'objectif et le subjectif"
+  notes: |-
+    **Hegel et Feuerbach pensent l'objectif et le subjectif chacun d'un côté ; Marx noue entre eux une** {coral}**connexion dialectique tout à fait neuve**{/coral} **: un** {violet}**matérialisme de l'activité**{/violet}**.**
+
+    **Deux positions renversées l'une par l'autre.**
+    - {sky}**Hegel**{/sky} : la *Logique* semble aller de l'objectif (l'être, l'essence) au subjectif (le concept) ; en réalité elle chemine vers l'objectivité, la plénitude de l'« être en et pour soi du concept ». L'{sky}*Encyclopédie*{/sky} part de Dieu « dans son essence éternelle, avant la création de la nature » et passe « du concept de Dieu à son existence » : c'est un {red}idéalisme objectif{/red}.
+    - {sky}**Feuerbach**{/sky} renverse les deux termes. La vraie objectivité n'est pas Dieu mais la {green}nature{/green} : {teal}« seul est objet ce qui existe à l'extérieur de la tête »{/teal} ; le vrai sujet n'est pas la substance mais {green}l'homme concret{/green} : {teal}« c'est l'homme qui pense, non […] la raison »{/teal}. L'homme en son individualité sensible est la mesure de toute chose : un {red}matérialisme subjectif{/red}.
+
+    **La 1re thèse sur Feuerbach.** {teal}« Le principal défaut, jusqu'ici, du matérialisme de tous les philosophes, y compris celui de Feuerbach, est que l'objet, la réalité, le monde sensible n'y sont saisis que __sous la forme d'objet ou d'intuition__, mais non __en tant qu'activité humaine concrète, non en tant que pratique__, de façon subjective. »{/teal} Autrement dit : l'objectif reste ce qui est {amber}à l'extérieur de la tête{/amber}, et subsiste en son autonomie hors du cerveau, Marx y insiste encore en 1857 ; mais cette extériorité ne nous apparaît jamais qu'{amber}à l'intérieur de notre rapport avec elle{/amber}, qui est d'une façon ou d'une autre pratique. Notre connaissance n'atteint l'objectivité de l'objet {coral}qu'en étant activement subjective{/coral} : on connaît le fer en le forgeant. D'où une position que personne n'avait occupée : un {violet}matérialisme de l'activité{/violet} (*Tätigkeit*).
+
+    **Objectivité et objectalité.** L'objectivité a un double sens matérialiste, à ne pas confondre :
+
+    | Terme | Allemand | Sens |
+    | objectivité | *Objektivität* | justesse d'un savoir par rapport à l'objet |
+    | objectalité | *Gegenständlichkeit* | concrétisation d'une activité dans un objet |
+
+    L'{violet}objectalisation{/violet} (*Vergegenständlichung*) de l'activité est la dimension fondamentale de tout agir productif : le travail se dépose dans son produit.
+
+    **Côté subjectif, tout un monde.** Au concept hégélien, riche et objectif, Feuerbach n'opposait qu'un homme abstrait ; Marx oppose le {green}monde historico-social tout entier{/green} : forces productives, rapports de classe, institutions, formes de conscience. {teal}« L'homme, c'est __le monde de l'homme__ »{/teal}, dit l'*Introduction* de 1844. C'est un {violet}matérialisme objectif de la subjectivité{/violet}, qui dépasse le dilemme du {red}kantisme{/red} (la critique) et de l'{red}hégélianisme{/red} (l'assurance ontologique) : une subjectivité active de l'objectif, une objectivité sociale du subjectif.
+
+    **Conséquence pour les catégories.** Plus de partage entre « logique objective » et « logique subjective » : toutes sont à la fois gnoséologiques et ontologiques, avec des pôles.
+    - catégories {amber}gnoséologiques à portée ontologique{/amber} : {yellow}abstraction{/yellow} ;
+    - catégories {amber}ontologiques à portée gnoséologique{/amber} : {yellow}base{/yellow} ;
+    - {amber}catégories de la pratique{/amber}, où domine la dimension active : {yellow}liberté{/yellow}.
+  points:
+  - id: philo4-l4-p1
+    sentence: "__Entre l'objectif et le subjectif, Marx noue une connexion neuve__ : un **matérialisme de l'___**."
+    answer: "activité"
+    alt: ["activite"]
+  - id: philo4-l4-p2
+    sentence: "__Le matérialisme de l'activité__, en allemand : un matérialisme de la ___."
+    answer: "Tätigkeit"
+    alt: ["Tatigkeit"]
+  - id: philo4-l4-p3
+    sentence: "__La *Logique* de Hegel part de Dieu « avant la création de la nature » et passe « du concept de Dieu à son existence »__ : c'est un **idéalisme ___**."
+    answer: "objectif"
+    alt: []
+  - id: philo4-l4-p4
+    sentence: "Feuerbach : « seul est objet ce qui existe à l'extérieur de la ___ »."
+    answer: "tête"
+    alt: ["tete"]
+  - id: philo4-l4-p5
+    sentence: "__L'homme en son individualité sensible, mesure de toute chose__ : Feuerbach renverse l'idéalisme objectif de Hegel en un **matérialisme ___**."
+    answer: "subjectif"
+    alt: []
+  - id: philo4-l4-p6
+    sentence: "1re thèse sur Feuerbach : le principal défaut de tout matérialisme jusqu'ici est que le monde sensible n'y est saisi « que sous la forme d'objet ou d'___ »."
+    answer: "intuition"
+    alt: []
+  - id: philo4-l4-p7
+    sentence: "1re thèse sur Feuerbach : le monde sensible n'y est pas saisi « en tant qu'activité humaine concrète, non en tant que ___, de façon subjective »."
+    answer: "pratique"
+    alt: []
+  - id: philo4-l4-p8
+    sentence: "__L'objet existe hors de la tête, mais n'apparaît qu'à l'intérieur de notre rapport pratique avec lui__ : notre connaissance n'atteint son objectivité qu'en étant activement ___."
+    answer: "subjective"
+    alt: []
+  - id: philo4-l4-p9
+    sentence: "__À distinguer de l'objectivité (justesse d'un savoir)__ : l'___, concrétisation d'une activité dans un objet."
+    answer: "objectalité"
+    alt: ["objectalite"]
+  - id: philo4-l4-p10
+    sentence: "__L'objectalité, concrétisation d'une activité dans un objet__, en allemand : ___."
+    answer: "Gegenständlichkeit"
+    alt: ["Gegenstandlichkeit"]
+  - id: philo4-l4-p11
+    sentence: "__L'activité qui se dépose dans son produit__ : son **objectalisation**, en allemand ___."
+    answer: "Vergegenständlichung"
+    alt: ["Vergegenstandlichung"]
+  - id: philo4-l4-p12
+    sentence: "*Introduction* de 1844 : « L'homme, c'est le ___ de l'homme »."
+    answer: "monde"
+    alt: []
+  - id: philo4-l4-p13
+    sentence: "__Au concept hégélien, Marx n'oppose pas un homme abstrait mais le monde historico-social entier__ : un **matérialisme objectif de la ___**."
+    answer: "subjectivité"
+    alt: ["subjectivite"]
+  - id: philo4-l4-p14
+    sentence: "__Exemple de catégorie gnoséologique à portée ontologique__ : l'___."
+    answer: "abstraction"
+    alt: []
+  - id: philo4-l4-p15
+    sentence: "__Exemple de catégorie de la pratique, où domine la dimension active__ : la ___."
+    answer: "liberté"
+    alt: ["liberte"]
+- id: philo4-l5
+  title: "L'espace et le temps réels dans le logique"
+  notes: |-
+    **Troisième opération, méconnue : être matérialiste, c'est reconnaître que les catégories renvoient non seulement à des « essentialités pures », comme dit Hegel, mais à des matérialités impures ; or** {coral}**qui dit matérialité dit espace et temps réels**{/coral}**.**
+
+    **Chez Hegel, un espace et un temps de pure logique.** Ses catégories semblent faire place à l'espace et au temps : l'{violet}*Entäusserung*{/violet}, sortie objectivante de soi (interne / externe), la {violet}*Voraussetzung*{/violet}, présupposition (antérieur / ultérieur). Mais ce serait un contresens que de les rapporter au monde réel. Hegel le dit dès la Logique de l'être : {teal}« Une existence telle que la matière sensible __n'a pas encore sa place ici__, pas plus que l'espace et les déterminations spatiales. »{/teal} La *Logique* expose l'essence de Dieu « avant la création de la nature » : elle ne peut contenir que du {red}pseudo-spatial{/red} et du {red}pseudo-temporel{/red}.
+
+    **Chez Marx, les catégories en prise sur le monde.**
+    - L'{violet}*Entfremdung*{/violet}, aliénation du travail salarié, repose sur une {green}séparation spatio-temporelle radicale{/green} entre les producteurs directs et les moyens de production : l'ouvrier n'a pas d'usine, l'usine n'est pas à lui. C'est la base du capitalisme.
+    - La {violet}*Voraussetzung*{/violet}, sans cesser d'être présupposition logique, renvoie aux {green}préconditions sociales{/green} qui jouent un rôle cardinal dans les logiques de l'histoire.
+
+    **Une autre dialectique.** La dialectique de Hegel donne toujours l'{amber}un comme vérité du multiple{/amber}, l'{amber}interne comme vérité de l'externe{/amber} : « un se divise en deux » pour retourner en Un, d'où un fond théologique, téléologique, et un {red}conservatisme ultime{/red}. Le renversement matérialiste ne la prive pas de sens, mais lui accorde autant son opposé :
+
+    | Dialectique | Formule | Exemple |
+    | nécessitante, orientée | un se divise en deux | l'embryogenèse |
+    | féconde en contingence | deux fusionnent en un | la planétogenèse |
+
+    Dans la première, l'embryon se différencie selon un ordre qui va vers une fin ; dans la seconde, des corps distincts s'agrègent sans que rien n'y tende, et pourraient se séparer de nouveau : {green}fécondité du multiple, productivité de l'externe{/green}, et donc {coral}contingence dans les processus{/coral}. De même, à quitter la logique « pure », on découvre que les contraires d'une contradiction peuvent être placés de façon {yellow}symétrique{/yellow} ou {yellow}dissymétrique{/yellow}, dans l'espace comme dans le temps, avec des propriétés logiques toutes différentes ; Marx y a été attentif sans en tirer la théorie.
+
+    **Bilan.** Marx n'a pas mené à bien en tous points la refonte matérialiste de la logique de Hegel. Mais sa catégorisation rompt avec l'assurance du système clos, fait constamment place au {green}possible{/green} et à la {green}pratique humaine{/green} dans la manifestation du nécessaire. Seuls ceux qui l'ont peu lu peuvent lui imputer une mythologie du {red}« Grand Récit »{/red} historique : son œuvre est aux antipodes de la pensée doctrinaire.
+  points:
+  - id: philo4-l5-p1
+    sentence: "__Troisième opération du renversement de la logique de Hegel__ : les catégories renvoient à des matérialités impures, or qui dit matérialité dit ___ et temps réels."
+    answer: "espace"
+    alt: []
+  - id: philo4-l5-p2
+    sentence: "Hegel, Logique de l'être : « Une existence telle que la matière sensible n'a pas encore sa ___ ici, pas plus que l'espace et les déterminations spatiales. »"
+    answer: "place"
+    alt: []
+  - id: philo4-l5-p3
+    sentence: "__La *Logique* exposant l'essence de Dieu avant la création de la nature__, elle ne contient que du **___-spatial** et du pseudo-temporel."
+    answer: "pseudo"
+    alt: []
+  - id: philo4-l5-p4
+    sentence: "__Chez Hegel, sortie objectivante de soi (interne / externe)__ : l'___."
+    answer: "Entäusserung"
+    alt: ["Entausserung"]
+  - id: philo4-l5-p5
+    sentence: "__L'aliénation du travail salarié (*Entfremdung*) repose sur une séparation spatio-temporelle radicale__ entre les producteurs directs et les ___ : c'est la base du capitalisme."
+    answer: "moyens de production"
+    alt: []
+  - id: philo4-l5-p6
+    sentence: "__Chez Marx, la *Voraussetzung* ne reste pas présupposition logique__ : elle renvoie aux ___ sociales, cardinales dans les logiques de l'histoire."
+    answer: "préconditions"
+    alt: ["preconditions"]
+  - id: philo4-l5-p7
+    sentence: "__La dialectique de Hegel donne toujours l'un comme vérité du multiple__ : « un se divise en deux » pour retourner en Un, d'où un ___ ultime."
+    answer: "conservatisme"
+    alt: []
+  - id: philo4-l5-p8
+    sentence: "__Exemple d'une dialectique nécessitante et orientée, « un se divise en deux »__ : l'___."
+    answer: "embryogenèse"
+    alt: ["embryogenese"]
+  - id: philo4-l5-p9
+    sentence: "__Exemple d'une dialectique où « deux fusionnent en un » sans y tendre, et pourraient se séparer__ : la ___."
+    answer: "planétogenèse"
+    alt: ["planetogenese"]
+  - id: philo4-l5-p10
+    sentence: "__La fécondité du multiple et la productivité de l'externe__ induisent de la ___ dans les rapports et les processus."
+    answer: "contingence"
+    alt: []
+  - id: philo4-l5-p11
+    sentence: "__Hors de la logique « pure », les contraires d'une contradiction peuvent être placés de façon symétrique ou__ ___, avec des propriétés logiques différentes."
+    answer: "dissymétrique"
+    alt: ["dissymetrique"]
+  - id: philo4-l5-p12
+    sentence: "__Seuls ceux qui ont peu lu Marx lui imputent une mythologie du__ « ___ » historique."
+    answer: "Grand Récit"
+    alt: ["Grand Recit", "grand récit"]

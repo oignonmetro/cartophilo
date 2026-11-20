@@ -1,0 +1,305 @@
+# Cours sur la dimension philosophique de l'œuvre de Marx (voir
+# content/philosophie.md, § « Un cours sur un auteur, tiré d'un commentaire »,
+# et la conduite de la skill cours-sep), tiré de l'introduction de Lucien Sève,
+# « De "la philosophie" au philosophique » (janvier 2011), à Karl Marx, Écrits
+# philosophiques, cent textes choisis, traduits et présentés par L. Sève,
+# Flammarion, « Champs classiques », 2011. Unités philo1 à philo7, une par
+# grande partie de l'introduction (la cinquième, très longue, en trois unités).
+# Ici : partie 1, « Y a-t-il une philosophie de Marx ? ».
+#
+# Citations : celles de Marx adoptent la traduction de référence quand elle
+# existe (content/courses/marx/traductions.md) ou les Éditions sociales ; les
+# autres (Althusser, Engels, Lénine, et les passages de Marx que les volumes de
+# référence ne donnent pas lisiblement) sont reprises de la traduction de Sève.
+# L'Idéologie allemande et la 11e thèse sur Feuerbach : Éditions sociales.
+
+id: philo1
+title: "Y a-t-il une philosophie de Marx ?"
+subtitle: "Un philosophe de jeunesse qui dit adieu à la philosophie ; les réponses d'Althusser et d'Engels, et pourquoi elles ne suffisent pas"
+group: "Le philosophique chez Marx"
+icon: compass
+color: coral
+lessons:
+- id: philo1-l1
+  title: "Une œuvre philosophique de jeunesse, puis l'adieu"
+  notes: |-
+    **La question « y a-t-il une philosophie de Marx ? » est plus difficile qu'elle n'en a l'air : Marx a été philosophe, puis il a** {coral}**rompu avec « la philosophie »**{/coral}**, en des termes qui semblent définitifs.** Tout le problème est de savoir ce que devient, après cette rupture, la dimension philosophique de son œuvre.
+
+    **Jusqu'en 1848, Marx est clairement un philosophe.** Il fait ses études à {sky}Berlin{/sky} au tournant des années 1830-1840, au moment où l'on fait l'inventaire critique de la plus grande philosophie moderne, celle de {sky}Hegel{/sky}. Il soutient en 1841 une thèse : *Sur la différence de la philosophie naturelle chez Démocrite et chez Épicure*. Empêché d'enseigner pour raisons politiques (sous {sky}Frédéric-Guillaume IV{/sky}), devenu journaliste d'opposition, il poursuit sa critique de Hegel et de {sky}Feuerbach{/sky}, puis s'oppose à des philosophes contemporains comme {sky}Ruge{/sky} ou {sky}Stirner{/sky}. Ses écrits jusqu'à trente ans relèvent de la philosophie :
+
+    | Œuvre | Date |
+    | *Critique du droit politique hégélien* | 1843 |
+    | *Manuscrits de 1844* | 1844 |
+    | *La Sainte Famille*, avec Engels | 1844-1845 |
+    | *Thèses sur Feuerbach* | 1845 |
+    | *L'Idéologie allemande*, avec Engels | 1845-1846 |
+
+    **Mais** {sky}***L'Idéologie allemande***{/sky} **semble y mettre un point final.** Elle reproche à la critique allemande de n'avoir {teal}« pas quitté le terrain de la philosophie »{/teal}, au lieu de s'interroger sur la {amber}connexion entre la philosophie allemande et la réalité allemande{/amber}. Elle déclare ruinée l'idée d'une {red}« philosophie autonome »{/red} : {teal}« détachées de l'histoire réelle »{/teal}, les abstractions philosophiques {teal}« n'ont absolument aucune valeur »{/teal}. La {sky}11e thèse sur Feuerbach{/sky} donne la formule de ce congé : {teal}« Les philosophes n'ont fait qu'__interpréter__ le monde de différentes manières, ce qui importe, c'est de le __transformer__. »{/teal}
+
+    **L'adieu vise aussi l'œuvre de jeunesse de Marx lui-même.** Ce que ses écrits de 1844-1845 avaient de juste restait recouvert par {red}« le vocabulaire philosophique traditionnel »{/red}, et laissait croire que pouvaient encore servir les {yellow}« vieilles vestes théoriques »{/yellow} : des habits usés qu'on ne raccommode pas, qu'on jette. On ne pactise pas avec l'abstraction philosophante : {teal}« il faut laisser de côté la philosophie, il faut en __sortir d'un bond__ et se mettre à l'étude de la réalité en tant qu'homme ordinaire »{/teal}. Autrement dit : ni réforme ni transition, une rupture.
+
+    ! L'adieu n'est pas un abandon de la pensée pour l'action : il vise une manière de penser, l'abstraction coupée de l'histoire réelle, et ouvre sur l'étude de la réalité.
+  points:
+  - id: philo1-l1-p1
+    sentence: "__Marx a été philosophe dans sa jeunesse, puis il a__ **rompu avec « la ___ »**, en des termes qui semblent définitifs : toute la question est de savoir ce que devient ensuite la dimension philosophique de son œuvre."
+    answer: "philosophie"
+    alt: []
+  - id: philo1-l1-p2
+    sentence: "__La thèse de Marx (1841) compare la philosophie naturelle de Démocrite et celle d'__ ___ ; il y prend, contre l'avis de Leibniz et de Hegel, le parti de ce dernier."
+    answer: "Épicure"
+    alt: ["Epicure"]
+  - id: philo1-l1-p3
+    sentence: "__Marx étudie à Berlin au moment où l'on fait l'inventaire critique de__ la plus grande philosophie moderne, celle de ___."
+    answer: "Hegel"
+    alt: []
+  - id: philo1-l1-p4
+    sentence: "__Les *Thèses sur Feuerbach* datent de__ ___, à la veille de *L'Idéologie allemande*."
+    answer: "1845"
+    alt: []
+  - id: philo1-l1-p5
+    sentence: "__L'œuvre où Marx et Engels prennent congé de la philosophie, en 1845-1846__, est *L'___ allemande*."
+    answer: "Idéologie"
+    alt: ["Ideologie"]
+  - id: philo1-l1-p6
+    sentence: "*L'Idéologie allemande* reproche à la critique allemande de n'avoir « pas quitté le ___ de la philosophie », au lieu de chercher la connexion entre la philosophie allemande et la réalité allemande."
+    answer: "terrain"
+    alt: []
+  - id: philo1-l1-p7
+    sentence: "*L'Idéologie allemande* : l'étude critique du monde réel ruine l'idée d'une **philosophie ___**, qui se tiendrait à part de l'histoire."
+    answer: "autonome"
+    alt: []
+  - id: philo1-l1-p8
+    sentence: "*L'Idéologie allemande* : « détachées de l'histoire réelle », les abstractions philosophiques « n'ont absolument aucune ___ »."
+    answer: "valeur"
+    alt: []
+  - id: philo1-l1-p9
+    sentence: "11e thèse sur Feuerbach : « Les philosophes n'ont fait qu'___ le monde de différentes manières, ce qui importe, c'est de le transformer. »"
+    answer: "interpréter"
+    alt: ["interpreter"]
+  - id: philo1-l1-p10
+    sentence: "11e thèse sur Feuerbach : « Les philosophes n'ont fait qu'interpréter le monde de différentes manières, ce qui importe, c'est de le ___. »"
+    answer: "transformer"
+    alt: []
+  - id: philo1-l1-p11
+    sentence: "__L'adieu vise aussi les écrits de Marx de 1844-1845__ : ce qu'ils avaient de juste y restait recouvert par « le ___ philosophique traditionnel »."
+    answer: "vocabulaire"
+    alt: []
+  - id: philo1-l1-p12
+    sentence: "__Ce vocabulaire laissait croire que pouvaient encore servir__ les « vieilles ___ théoriques » : des habits usés, qu'on ne raccommode pas."
+    answer: "vestes"
+    alt: []
+  - id: philo1-l1-p13
+    sentence: "*L'Idéologie allemande* : « il faut laisser de côté la philosophie […], il faut en sortir d'un ___ et se mettre à l'étude de la réalité en tant qu'homme ordinaire »."
+    answer: "bond"
+    alt: []
+  - id: philo1-l1-p14
+    sentence: "*L'Idéologie allemande* : « il faut laisser de côté la philosophie […], il faut en sortir d'un bond et se mettre à l'étude de la ___ en tant qu'homme ordinaire »."
+    answer: "réalité"
+    alt: ["realite"]
+- id: philo1-l2
+  title: "Deux lectures opposées, un dilemme trop simple"
+  notes: |-
+    **L'adieu à la philosophie a reçu deux lectures inverses, qui s'accordent sur un point : après 1846, il n'y aurait plus de philosophie chez Marx.** L'une s'en félicite, l'autre le déplore ; {coral}toutes deux se trompent{/coral}, et pour la même raison.
+
+    **Les deux lectures.**
+    - {pink}__La science contre la philosophie__{/pink}. Au début du XXe siècle, il est classique chez les marxistes, par exemple {sky}Boukharine{/sky}, de faire commencer la vraie pensée de Marx à *Misère de la philosophie* (1847) : il aurait opposé aux mystifications de la philosophie la rigueur de la science, et le marxisme serait une {violet}sociologie critique{/violet}.
+    - {red}__L'humanisme de jeunesse contre le scientisme__{/red}. Quelques décennies plus tard, à l'opposé, des jésuites comme {sky}Jean-Yves Calvez{/sky} ou des penseurs contestataires des pays socialistes réhabilitent l'{violet}humanisme philosophique{/violet} des œuvres de jeunesse, où {amber}« l'homme »{/amber} tient la place centrale, pour mieux déplorer qu'il ait été répudié par le scientisme du {violet}*diamat*{/violet}, le « matérialisme dialectique » devenu doctrine officielle des pays socialistes.
+
+    D'où l'embarras : parler de « la philosophie de Marx » peut passer pour un {yellow}constat élémentaire{/yellow} ou pour un {yellow}contresens fondamental{/yellow}.
+
+    **Le dilemme est trop simple, et se défait en deux temps.**
+    - {green}**Oui**{/green}, il y a chez Marx une riche philosophie de jeunesse, **mais il en est sorti pour de bonnes raisons** : {amber}« l'homme »{/amber} est une abstraction qui désigne dans la confusion l'espèce biologique *Homo sapiens*, le genre humain historiquement évolué et l'individu pris dans l'abstrait. Qui pense avec un tel mot {coral}se condamne à ne rien penser avec rigueur{/coral} : cette pensée de jeunesse ne peut donc pas passer pour « la philosophie de Marx ».
+    - {green}**Oui**{/green}, la pensée mûrie de Marx rompt avec ce qu'on appelait jusque-là philosophie, **mais cela ne fait pas disparaître toute dimension philosophique** : les {sky}*Grundrisse*{/sky}, premier brouillon du *Capital*, et *Le Capital* lui-même ne relèvent pas du {red}positivisme{/red}.
+
+    **D'où la distinction qui commande tout le reste, selon** {sky}**Sève**{/sky} : Marx a rompu avec {red}__la philosophie__{/red}, au sens qu'il donnait à ce mot (reste à le préciser), mais ses travaux ultérieurs ne sont pas étrangers au {green}__philosophique__{/green} (reste à dire ce que ce mot veut dire).
+
+    ! « Sortir de la philosophie » ne veut pas dire passer de la philosophie à une science positive : c'est précisément ce que l'œuvre de maturité dément.
+  points:
+  - id: philo1-l2-p1
+    sentence: "__Les deux lectures classiques de l'adieu à la philosophie s'accordent sur un point__ : après 1846, il n'y aurait plus de ___ chez Marx. L'une s'en félicite, l'autre le déplore."
+    answer: "philosophie"
+    alt: []
+  - id: philo1-l2-p2
+    sentence: "__Pour certains marxistes du début du XXe siècle__, comme ___, la vraie pensée de Marx commence avec *Misère de la philosophie* : la science y remplace la philosophie."
+    answer: "Boukharine"
+    alt: []
+  - id: philo1-l2-p3
+    sentence: "__Pour la lecture scientiste__, la vraie pensée de Marx commence en 1847 avec *___ de la philosophie*."
+    answer: "Misère"
+    alt: ["Misere"]
+  - id: philo1-l2-p4
+    sentence: "__Pour la lecture scientiste, le marxisme serait__ une **sociologie ___**, qui oppose la rigueur de la science aux mystifications de la philosophie."
+    answer: "critique"
+    alt: []
+  - id: philo1-l2-p5
+    sentence: "__La lecture inverse réhabilite__ l'**___ philosophique** des œuvres de jeunesse, où « l'homme » tient la place centrale, et déplore qu'il ait été répudié ensuite."
+    answer: "humanisme"
+    alt: []
+  - id: philo1-l2-p6
+    sentence: "__Parmi ceux qui réhabilitent l'humanisme du jeune Marx__ : des jésuites comme Jean-Yves ___."
+    answer: "Calvez"
+    alt: []
+  - id: philo1-l2-p7
+    sentence: "__Le « matérialisme dialectique », doctrine officielle des pays socialistes, accusé d'avoir répudié l'humanisme du jeune Marx__, se nommait en abrégé le ___."
+    answer: "diamat"
+    alt: []
+  - id: philo1-l2-p8
+    sentence: "__Marx a eu raison de sortir de sa philosophie de jeunesse__ : « l'___ » y désigne dans la confusion l'espèce biologique, le genre humain historique et l'individu abstrait, et l'on ne pense rien avec rigueur avec un tel mot."
+    answer: "homme"
+    alt: []
+  - id: philo1-l2-p9
+    sentence: "__Les *Grundrisse* et *Le Capital* ne relèvent pas du__ ___ : rompre avec la philosophie n'y fait pas disparaître toute dimension philosophique."
+    answer: "positivisme"
+    alt: []
+  - id: philo1-l2-p10
+    sentence: "__Le premier brouillon du *Capital*__, où la dimension philosophique est la plus visible, s'appelle les ___."
+    answer: "Grundrisse"
+    alt: []
+  - id: philo1-l2-p11
+    sentence: "__Selon Sève, Marx a rompu avec « la philosophie »__, mais ses travaux ultérieurs ne sont pas étrangers au ___."
+    answer: "philosophique"
+    alt: []
+- id: philo1-l3
+  title: "Althusser : une philosophie « imaginaire »"
+  notes: |-
+    **Les grands penseurs marxistes ne tranchent pas la question ; le plus prestigieux,** {sky}**Louis Althusser**{/sky} **(1918-1990), finit par prêter à Marx une philosophie qui n'est pas la sienne.** On pourrait interroger {sky}Korsch{/sky}, {sky}Lukács{/sky}, {sky}Gramsci{/sky} ou {sky}Bloch{/sky} ; leur réponse laisse perplexe. Celle d'Althusser, dominante jusqu'à nous, change en deux temps.
+
+    **Deux définitions successives.**
+
+    | Temps | Œuvres | La philosophie de Marx serait |
+    | premier | *Pour Marx*, *Lire Le Capital* (1965) | « la Théorie de la pratique théorique » |
+    | second | *Lénine et la philosophie* (1968), *Éléments d'autocritique* (1974) | « la lutte de classes dans la théorie » |
+
+    - Le {amber}premier temps{/amber} critique les lectures {red}empiristes{/red} et {red}humanistes{/red} : la philosophie de Marx serait une connaissance non des choses, mais d'une abstraite {violet}« production de connaissance »{/violet}.
+    - Le {amber}second temps{/amber} rejette ce {red}« théoricisme »{/red} : la philosophie ne ferait que tracer, dans les savoirs, des {violet}« démarcations »{/violet} entre des {violet}« positions »{/violet} indémontrables (matérialisme, idéalisme), toujours les mêmes, lourdes d'enjeux politiques. Le mérite de Marx serait d'avoir inauguré {teal}« non pas une (nouvelle) __philosophie de la praxis__ mais une __pratique (nouvelle) de la philosophie__ »{/teal}. Une telle philosophie {coral}n'a plus d'objet, et il ne s'y passe rien{/coral} : elle se réduit à intervenir politiquement dans le savoir.
+
+    **Le prix de cette lecture.** Elle a un mérite : elle respecte l'adieu à toute abstraction philosophante, contre le dogmatisme fruste du *diamat* stalinien. Mais elle le paie cher.
+    - {red}__Une cécité de principe__{/red} devant les objets philosophiques qui peuplent l'œuvre d'après 1846 : les {violet}catégories logiques{/violet}, essence, abstraction, universalité, forme, rapport, aliénation. Pour Althusser, la logique est devenue une science formelle (« elle est une science ») : il exclut sans examen le sens neuf que {sky}Hegel{/sky} avait donné au logique, et donc sa refonte par Marx.
+    - {red}__Un Marx qui ne se comprend pas lui-même__{/red}. Ces catégories ne devraient pas s'y trouver ; or elles y sont : Althusser conclut que {teal}« Marx ne se libéra jamais totalement de Hegel »{/teal}. Par une {violet}« lecture symptomale »{/violet}, qui prétend déceler dans le texte les retombées de la pensée, il écarte de vastes pans de l'œuvre : le {yellow}« matérialisme de l'essence »{/yellow} devient une dérive idéaliste, la {yellow}négation de la négation{/yellow} une téléologie, voire une « horreur ».
+
+    **Althusser l'a lui-même reconnu.** {sky}Raymond Aron{/sky} parlait d'un {red}« marxisme imaginaire »{/red} ; Althusser concède qu'Aron « avait un peu raison » : {teal}« Nous avons fabriqué une philosophie "__imaginaire__" pour Marx, une philosophie qui __n'existait pas dans son œuvre__, si l'on s'en tient strictement à la lecture de ses textes. »{/teal} La tentative la plus savante pour situer Marx en philosophie lui a donc imputé une {red}« philosophie improbable »{/red}.
+  points:
+  - id: philo1-l3-p1
+    sentence: "__La tentative la plus savante pour situer Marx en philosophie__, celle de Louis ___, lui a prêté une philosophie « imaginaire »."
+    answer: "Althusser"
+    alt: []
+  - id: philo1-l3-p2
+    sentence: "__Dans *Pour Marx* et *Lire Le Capital* (1965), Althusser définit la philosophie de Marx comme__ « la Théorie de la ___ théorique »."
+    answer: "pratique"
+    alt: []
+  - id: philo1-l3-p3
+    sentence: "__Les deux œuvres de 1965 où Althusser définit la philosophie de Marx comme « Théorie de la pratique théorique »__ : *Pour Marx* et *Lire ___*."
+    answer: "Le Capital"
+    alt: ["le Capital"]
+  - id: philo1-l3-p4
+    sentence: "__À partir de *Lénine et la philosophie* (1968), Althusser rejette le « ___ » de sa première définition__ : la philosophie devient « la lutte de classes dans la théorie »."
+    answer: "théoricisme"
+    alt: ["theoricisme"]
+  - id: philo1-l3-p5
+    sentence: "__Second Althusser__ : la philosophie de Marx serait « la ___ dans la théorie »."
+    answer: "lutte de classes"
+    alt: []
+  - id: philo1-l3-p6
+    sentence: "__Pour le second Althusser, la philosophie ne fait que tracer__ des « ___ » entre des positions indémontrables (matérialisme, idéalisme), toujours les mêmes."
+    answer: "démarcations"
+    alt: ["demarcations"]
+  - id: philo1-l3-p7
+    sentence: "Althusser : Marx aurait inauguré « non pas une (nouvelle) philosophie de la ___ mais une pratique (nouvelle) de la philosophie »."
+    answer: "praxis"
+    alt: []
+  - id: philo1-l3-p8
+    sentence: "Althusser : Marx aurait inauguré « non pas une (nouvelle) philosophie de la praxis mais une ___ (nouvelle) de la philosophie »."
+    answer: "pratique"
+    alt: []
+  - id: philo1-l3-p9
+    sentence: "__Le premier prix de la lecture d'Althusser__ : une cécité de principe devant les **catégories ___** (essence, abstraction, forme, rapport…) qui peuplent l'œuvre d'après 1846."
+    answer: "logiques"
+    alt: []
+  - id: philo1-l3-p10
+    sentence: "__Pour Althusser, la logique est devenue une science formelle__ : il exclut donc sans examen le sens neuf que ___ avait donné au logique, et sa refonte par Marx."
+    answer: "Hegel"
+    alt: []
+  - id: philo1-l3-p11
+    sentence: "Althusser : « Marx ne se libéra jamais totalement de ___. »"
+    answer: "Hegel"
+    alt: []
+  - id: philo1-l3-p12
+    sentence: "__Pour écarter de l'œuvre ce qui ne cadre pas avec sa lecture__, Althusser pratique une « lecture ___ », qui prétend déceler les retombées de la pensée dans le texte."
+    answer: "symptomale"
+    alt: []
+  - id: philo1-l3-p13
+    sentence: "__Ce que la lecture symptomale tient pour une dérive idéaliste__ : le « matérialisme de l'___ » chez Marx."
+    answer: "essence"
+    alt: []
+  - id: philo1-l3-p14
+    sentence: "__Raymond Aron parlait d'un__ « marxisme ___ » ; Althusser a fini par lui donner « un peu raison »."
+    answer: "imaginaire"
+    alt: []
+  - id: philo1-l3-p15
+    sentence: "Althusser : « Nous avons fabriqué une philosophie \"imaginaire\" pour Marx, une philosophie qui n'existait pas dans son ___, si l'on s'en tient strictement à la lecture de ses textes. »"
+    answer: "œuvre"
+    alt: ["oeuvre"]
+- id: philo1-l4
+  title: "Engels : une fin de la philosophie trop positiviste"
+  notes: |-
+    **On pourrait se tourner vers le meilleur connaisseur de Marx,** {sky}**Engels**{/sky}**, mais son** {sky}***Ludwig Feuerbach***{/sky} **(1888) ne répond pas mieux : il pense la fin de la philosophie à la manière des positivistes.** C'est pourquoi, pour savoir ce que Marx a d'original en philosophie, {coral}il faut lire Marx, nul autre{/coral}.
+
+    **Première thèse d'Engels : la philosophie est devenue superflue.** La {violet}*philosophia perennis*{/violet} aurait servi de {yellow}bouche-trou{/yellow} à des sciences trop lacunaires pour donner une vue d'ensemble du monde ; au XIXe siècle, les savoirs positifs ont comblé leurs manques et rendu cet adjuvant {teal}« superflu »{/teal}. Difficile de ne pas penser au dédain de {sky}Comte{/sky} pour toute métaphysique « oiseuse ». Or ce n'est pas la critique de 1846 :
+
+    | La philosophie est | Pour Engels en 1888 | Pour *L'Idéologie allemande* |
+    | critiquée comme | un savoir immature | une entreprise mystificatrice |
+    | sur le plan | intellectuel | politique |
+    | et l'on veut | en pallier les lacunes | en subvertir la démarche |
+
+    **Seconde thèse : il en reste la logique formelle et la dialectique.** Engels refuse pourtant la proscription totale de la philosophie : il en subsiste {teal}« à l'état indépendant » « la doctrine de la pensée et de ses lois, la logique formelle et la dialectique »{/teal}. Deux difficultés.
+    - {red}La logique formelle{/red} se constitue au même moment, avec {sky}Peano{/sky} et {sky}Frege{/sky}, en discipline scientifique rigoureuse, proche parente de l'{amber}arithmétique{/amber} et non de la philosophie.
+    - {red}La dialectique{/red} réduite à une « doctrine de la pensée », c'est la seule {violet}dialectique subjective{/violet} ; or chez Hegel elle est {green}inséparablement objective et subjective{/green}, logique de l'être et de l'essence autant que du concept, et à plus forte raison dans une dialectique matérialiste. On est plus près du {red}néokantisme{/red} fin de siècle que de Marx.
+
+    **Engels n'est pas pour autant le mauvais génie de Marx.** La légende qui fait de lui le vrai père du « marxisme » dogmatique est fausse : d'une culture encyclopédique, il fut un {green}partenaire de pensée à part entière{/green}, qui a parfois ouvert la voie commune (ses {yellow}*Umrisse*{/yellow} de 1844, première critique profonde du capitalisme ; ses travaux sur l'État) ; dans ses lettres des années 1890 à Schmidt, Bloch, Mehring ou Borgius, il met en garde contre le schématisme marxiste qu'on l'accuse d'avoir instauré. Mais en philosophie, son apport n'égale pas celui de Marx : il n'en a {red}ni la profondeur de formation ni la sûreté de vue{/red}. C'est pourquoi un choix de textes philosophiques ne peut puiser indifféremment chez l'un et l'autre.
+
+    ! Rejeter l'interprétation d'Engels en philosophie n'est pas rejeter Engels : sur la dialectique de la nature ou sur la pensée de son ami, il a des vues pénétrantes.
+  points:
+  - id: philo1-l4-p1
+    sentence: "__Pour savoir ce que Marx a d'original en philosophie, on ne peut se fier à Engels__ : il pense la fin de la philosophie à la manière des ___."
+    answer: "positivistes"
+    alt: []
+  - id: philo1-l4-p2
+    sentence: "__L'œuvre où Engels revient en 1888 sur la rupture de 1846 avec la philosophie__ : *Ludwig ___*."
+    answer: "Feuerbach"
+    alt: []
+  - id: philo1-l4-p3
+    sentence: "__Pour Engels en 1888, la philosophie servait de bouche-trou à des sciences lacunaires__ : en comblant leurs manques, les savoirs positifs l'ont rendue « ___ »."
+    answer: "superflue"
+    alt: []
+  - id: philo1-l4-p4
+    sentence: "__La philosophie devenue superflue face à la science__ : on pense au dédain de ___ pour toute métaphysique « oiseuse »."
+    answer: "Comte"
+    alt: []
+  - id: philo1-l4-p5
+    sentence: "__En 1846, la philosophie n'était pas dépréciée comme un savoir immature__, mais mise en cause **politiquement**, comme une entreprise ___."
+    answer: "mystificatrice"
+    alt: []
+  - id: philo1-l4-p6
+    sentence: "Engels : de la philosophie subsiste « à l'état indépendant » « la doctrine de la pensée et de ses lois, la logique ___ et la dialectique »."
+    answer: "formelle"
+    alt: []
+  - id: philo1-l4-p7
+    sentence: "__Contre Engels__ : la logique formelle se constitue au même moment, avec Peano et ___, en discipline rigoureuse proche de l'arithmétique, non de la philosophie."
+    answer: "Frege"
+    alt: []
+  - id: philo1-l4-p8
+    sentence: "__Réduire la dialectique à une « doctrine de la pensée »__, c'est n'en retenir que la **dialectique ___**, quand chez Hegel elle est inséparablement objective et subjective."
+    answer: "subjective"
+    alt: []
+  - id: philo1-l4-p9
+    sentence: "__Avec sa conception de la logique et de la dialectique, Engels est plus près du__ ___ fin de siècle que du matérialisme de Marx."
+    answer: "néokantisme"
+    alt: ["neokantisme"]
+  - id: philo1-l4-p10
+    sentence: "__Engels n'est pas le mauvais génie de Marx__ : dès 1844, ses ___ esquissent une critique profonde du capitalisme."
+    answer: "Umrisse"
+    alt: []
+  - id: philo1-l4-p11
+    sentence: "__Ce qui manque à Engels en philosophie, comparé à Marx__ : la profondeur de la formation et la ___ de vue."
+    answer: "sûreté"
+    alt: ["surete"]

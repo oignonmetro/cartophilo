@@ -1,0 +1,446 @@
+# Cours sur la dimension philosophique de l'œuvre de Marx, tiré de
+# l'introduction de Lucien Sève aux Écrits philosophiques de Marx (Flammarion,
+# « Champs classiques », 2011) : voir l'en-tête de philo1. Ici : partie 2,
+# « L'adieu définitif de Marx à "la philosophie" » (les trois diagnostics de la
+# philosophie, puis le retour du questionnement philosophique avec les
+# Grundrisse).
+#
+# Citations : Critique du droit politique hégélien (1843) dans la traduction
+# de référence (GEME, Kervégan) : « critique véritablement philosophique »,
+# « le vrai chemin est mis sur la tête », « mysticisme logique », « Hegel n'est
+# pas à blâmer… », « logique propre de l'objet propre » ; Manuscrits de 1844
+# (Bottigelli) pour « la logique c'est l'argent de l'esprit » ; Postface du
+# Capital dans la GEME (Lefebvre). Introduction de 1844, lettres à Feuerbach et
+# à Engels, Grundrisse (« Genèse et essence de l'argent ») : traduction de
+# Sève. « Hegel inverse tout » (Sève) n'est pas repris : le volume de référence
+# le rend autrement, et le passage n'est pas situé.
+
+id: philo2
+title: "L'adieu de Marx à « la philosophie »"
+subtitle: "Pourquoi sortir de la philosophie : l'inversion, la mauvaise abstraction, l'apologie de l'existant ; puis la critique de l'économie politique, qui ramène aux catégories"
+group: "Le philosophique chez Marx"
+icon: compass
+color: coral
+lessons:
+- id: philo2-l1
+  title: "Un jeune critique, encore attaché à la philosophie"
+  notes: |-
+    **Le jeune Marx est un critique fougueux de bien des philosophies, mais jusqu'en 1844** {coral}**il ne met pas en cause la philosophie comme telle**{/coral} **: il veut la remettre sur ses pieds, pour qu'elle prenne la tête de l'émancipation.** Pour comprendre l'adieu, il faut d'abord mesurer cet attachement.
+
+    **Une pensée propulsée par la critique.** Étudiant, il défend {sky}Épicure{/sky} contre {sky}Démocrite{/sky}, contre l'avis de Leibniz et de Hegel. Écarté de l'enseignement, il dirige en 1842 la {sky}*Rheinische Zeitung*{/sky} (*Gazette rhénane*), contre le conservatisme et ses justificatifs philosophiques. En 1843, il critique la philosophie politique de {sky}Hegel{/sky} ; dans le troisième des *Manuscrits de 1844*, le cœur de sa pensée, la {violet}dialectique spéculative{/violet}. Puis viennent coup sur coup :
+
+    | Critique de | Œuvre | Date |
+    | Feuerbach, Bauer, Stirner | *L'Idéologie allemande* | 1845-1846 |
+    | Proudhon | *Misère de la philosophie* | 1847 |
+    | le socialisme à l'allemande | *Manifeste du parti communiste* | 1848 |
+
+    **Mais ce sont des philosophies qu'il critique, non la philosophie.**
+    - Dans la *Critique du droit politique hégélien* (1843), à la critique pauvre qui se contente d'exhiber des contradictions, il oppose la {green}critique véritablement philosophique{/green} : celle-ci {teal}« ne s'arrête pas à mettre en lumière des contradictions en tant qu'elles existent, __elle les explique__, elle conçoit __leur genèse, leur nécessité__ »{/teal}.
+    - L'*Introduction* à cette critique (début 1844) fait une place centrale à un thème neuf, l'{violet}abolition-réalisation{/violet}. La philosophie annonce dans l'abstrait la fin de l'aliénation ; l'émancipation humaine concrète va donc à la fois l'{red}infirmer{/red}, {teal}« on ne peut __réaliser__ la philosophie sans l'abolir »{/teal}, et la {green}confirmer{/green}, {teal}« on ne peut l'__abolir__ sans la réaliser »{/teal}. D'où l'alliance : {teal}« La philosophie trouve dans le prolétariat ses __armes matérielles__ comme le prolétariat trouve dans la philosophie ses __armes intellectuelles__. »{/teal}
+    - En août 1844 encore, Marx écrit à {sky}Feuerbach{/sky} qu'il a {teal}« donné un __fondement philosophique__ au socialisme »{/teal}.
+
+    ! Ne pas projeter l'adieu de 1846 sur tout le jeune Marx : jusqu'à l'été 1844, la philosophie est pour lui l'arme intellectuelle de l'émancipation.
+  points:
+  - id: philo2-l1-p1
+    sentence: "__Jusqu'en 1844, Marx critique des philosophies, mais pas la philosophie comme telle__ : il veut la remettre sur ses ___, pour qu'elle prenne la tête de l'émancipation."
+    answer: "pieds"
+    alt: []
+  - id: philo2-l1-p2
+    sentence: "__Le journal que Marx dirige en 1842, contre le conservatisme et ses justificatifs philosophiques__ : la *Rheinische ___* (*Gazette rhénane*)."
+    answer: "Zeitung"
+    alt: []
+  - id: philo2-l1-p3
+    sentence: "__Dans le troisième des *Manuscrits de 1844*, Marx met en examen le cœur de la pensée de Hegel__ : la **dialectique ___**."
+    answer: "spéculative"
+    alt: ["speculative"]
+  - id: philo2-l1-p4
+    sentence: "__Marx critique Proudhon en 1847 dans__ *___ de la philosophie*."
+    answer: "Misère"
+    alt: ["Misere"]
+  - id: philo2-l1-p5
+    sentence: "*Critique du droit politique hégélien* : la critique véritablement philosophique « ne s'arrête pas à mettre en lumière des contradictions en tant qu'elles existent, elle les ___ »."
+    answer: "explique"
+    alt: []
+  - id: philo2-l1-p6
+    sentence: "*Critique du droit politique hégélien* : la critique véritablement philosophique explique les contradictions, « elle conçoit leur ___, leur nécessité »."
+    answer: "genèse"
+    alt: ["genese"]
+  - id: philo2-l1-p7
+    sentence: "__L'*Introduction* de 1844 fait une place centrale au thème de__ l'**___-réalisation** : l'émancipation concrète infirme et confirme à la fois la philosophie."
+    answer: "abolition"
+    alt: []
+  - id: philo2-l1-p8
+    sentence: "*Introduction* de 1844 : « on ne peut ___ la philosophie sans l'abolir »."
+    answer: "réaliser"
+    alt: ["realiser"]
+  - id: philo2-l1-p9
+    sentence: "*Introduction* de 1844 : « on ne peut l'abolir sans la ___ »."
+    answer: "réaliser"
+    alt: ["realiser"]
+  - id: philo2-l1-p10
+    sentence: "*Introduction* de 1844 : « La philosophie trouve dans le ___ ses armes matérielles comme le prolétariat trouve dans la philosophie ses armes intellectuelles. »"
+    answer: "prolétariat"
+    alt: ["proletariat"]
+  - id: philo2-l1-p11
+    sentence: "*Introduction* de 1844 : « La philosophie trouve dans le prolétariat ses armes ___ comme le prolétariat trouve dans la philosophie ses armes intellectuelles. »"
+    answer: "matérielles"
+    alt: ["materielles"]
+  - id: philo2-l1-p12
+    sentence: "__En août 1844 encore, Marx crédite Feuerbach d'avoir__ « donné un fondement ___ au socialisme »."
+    answer: "philosophique"
+    alt: []
+- id: philo2-l2
+  title: "Le basculement de 1844-1845"
+  notes: |-
+    **En quelques mois, l'attitude de Marx envers la philosophie se renverse ; ce qui déclenche la rupture, c'est la** {coral}**critique de Feuerbach**{/coral}**, qui était comme la dernière chance de la philosophie.**
+
+    **Paris, 1844 : des expériences neuves.** Marx y découvre avec enthousiasme le {violet}prolétariat{/violet}, y scelle son amitié avec {sky}Engels{/sky}, entre dans la politique concrète avec la {sky}Ligue des Justes{/sky}, devenue en juin 1847 la {sky}Ligue des Communistes{/sky}, qui lui commandera le *Manifeste*. Sa position bouge :
+
+    | Domaine | À Cologne (1842-1843) | À partir de 1844 |
+    | en philosophie | idéaliste | matérialiste |
+    | en politique | démocrate | communiste |
+
+    **Le renversement, daté.** En {amber}août 1844{/amber}, Feuerbach a encore donné un fondement philosophique au socialisme ; au {amber}printemps 1845{/amber}, la {sky}11e thèse sur Feuerbach{/sky} oppose aux philosophes en général, qui n'ont fait qu'{red}« interpréter »{/red} le monde, qu'il importe de le {green}« transformer »{/green}.
+
+    **Pourquoi Feuerbach était la dernière chance de la philosophie.** Le raisonnement tient en trois temps.
+    - {amber}__La prémisse__{/amber} : l'idéalisme de Hegel est la forme extrême de l'abstraction spéculative ; son renversement matérialiste, celui de {sky}Feuerbach{/sky}, devait donc nous faire accéder enfin à une pensée {green}concrète{/green}.
+    - {amber}__Le constat__{/amber} : il n'en est rien. Mesuré à la révolution sociale qui s'annonce, {red}« l'homme sensible »{/red} de Feuerbach est encore une creuse abstraction : un homme sans histoire ni classe.
+    - {amber}__La conclusion__{/amber} : si même le renversement de la philosophie la plus abstraite laisse dans l'abstraction, c'est que {coral}l'abstraction ne tient pas à tel système, mais à l'attitude philosophique en général{/coral}. {red}La fallacieuse abstraction à répudier, c'est la philosophie même{/red} : c'est ce qu'énonce crûment *L'Idéologie allemande*.
+
+    Reste à dire où est le « péché originel » de l'activité philosophante. Marx en donne trois diagnostics successifs, qu'il gardera tous : l'{violet}inversion{/violet}, la {violet}mauvaise abstraction{/violet}, la {violet}fonction conservatrice{/violet}.
+  points:
+  - id: philo2-l2-p1
+    sentence: "__Ce qui déclenche la rupture de Marx avec la philosophie__ : la critique de ___, qui était comme la dernière chance de la philosophie."
+    answer: "Feuerbach"
+    alt: []
+  - id: philo2-l2-p2
+    sentence: "__L'organisation où Marx entre dans la politique concrète en 1844__, devenue en 1847 la Ligue des Communistes : la Ligue des ___."
+    answer: "Justes"
+    alt: []
+  - id: philo2-l2-p3
+    sentence: "__À Cologne, Marx était encore idéaliste en philosophie et__ ___ en politique ; en 1844, il passe au matérialisme et au communisme."
+    answer: "démocrate"
+    alt: ["democrate"]
+  - id: philo2-l2-p4
+    sentence: "__Le renversement de l'attitude de Marx envers la philosophie se date__ : en août 1844, il loue encore Feuerbach ; au printemps ___, la 11e thèse congédie les philosophes."
+    answer: "1845"
+    alt: []
+  - id: philo2-l2-p5
+    sentence: "__Pourquoi Feuerbach était la dernière chance de la philosophie__ : l'idéalisme de Hegel étant la forme extrême de l'abstraction, son renversement ___ devait enfin donner une pensée concrète."
+    answer: "matérialiste"
+    alt: ["materialiste"]
+  - id: philo2-l2-p6
+    sentence: "__Mesuré à la révolution sociale qui s'annonce__, « l'homme ___ » de Feuerbach est encore une creuse abstraction, un homme sans histoire ni classe."
+    answer: "sensible"
+    alt: []
+  - id: philo2-l2-p7
+    sentence: "__Si même le renversement de la philosophie la plus abstraite laisse dans l'abstraction__, c'est que l'abstraction ne tient pas à tel système mais à l'**___ philosophique** en général."
+    answer: "attitude"
+    alt: []
+  - id: philo2-l2-p8
+    sentence: "__Conclusion de *L'Idéologie allemande*__ : la fallacieuse abstraction à répudier, c'est la ___ même."
+    answer: "philosophie"
+    alt: []
+  - id: philo2-l2-p9
+    sentence: "__Les trois diagnostics de Marx sur le « péché originel » de la philosophie__ : l'inversion, la mauvaise abstraction, la fonction ___."
+    answer: "conservatrice"
+    alt: []
+- id: philo2-l3
+  title: "Premier diagnostic : l'inversion"
+  notes: |-
+    **Dès 1843, Marx donne son nom au vice de la philosophie spéculative : l'**{violet}**inversion**{/violet} **(**{violet}***Umkehrung***{/violet}**), qui** {coral}**met les rapports réels sur la tête**{/coral}**.** On en sort par l'opération inverse, le {violet}renversement matérialiste{/violet}.
+
+    **Ce que fait Hegel.** Dans la {sky}*Philosophie du droit*{/sky}, il fait de l'{red}État{/red} le vrai présupposé de la {green}société civile{/green}, de l'{red}Idée{/red} le réel effectif à la place du {green}peuple{/green}, et ainsi de suite. Or l'expérience de journaliste de Marx lui a appris l'inverse : c'est la société civile, avec ses intérêts, qui fait l'État. Les catégories abstraites passent pour le moteur des développements concrets ; la *Critique du droit politique hégélien* le dit : {teal}« Le vrai chemin est __mis sur la tête__. Le plus simple est le plus compliqué et le plus compliqué le plus simple. »{/teal} Nous sommes en plein {teal}« __mysticisme logique__ »{/teal}.
+
+    **Une découverte définitive, qui revient partout.**
+    - dans *La Sainte Famille*, avec l'apologue du {yellow}« Fruit »{/yellow} : le « mystère de la construction spéculative » ;
+    - au cœur de l'{sky}Introduction de 1857{/sky} ;
+    - dans sa forme classique, la {sky}Postface du *Capital*{/sky} : chez Hegel la dialectique {teal}« est sur la tête. Il faut la retourner pour découvrir le noyau rationnel sous l'enveloppe mystique »{/teal}.
+
+    **Pas seulement Hegel.** L'inversion spéculative se retrouve, profondeur en moins, dans bien des façons communes de penser : chez {sky}Bruno Bauer{/sky}, {sky}Malthus{/sky}, {sky}Adolph Wagner{/sky}. Partout, c'est l'{coral}inversion du rapport entre la chose et le concept{/coral} : on croit que le concept produit la chose, alors que la chose produit le concept. Tel est le ressort de l'idéalisme, savant ou trivial.
+
+    **La sortie.** La philosophie dont il faut sortir, c'est donc l'{red}inversion idéaliste des rapports effectifs{/red} ; on en sort par le {green}renversement matérialiste{/green} ({violet}*materialistische Umstülpung*{/violet}).
+  points:
+  - id: philo2-l3-p1
+    sentence: "__Le premier vice que Marx reconnaît à la philosophie spéculative, dès 1843__ : l'___, qui met les rapports réels sur la tête."
+    answer: "inversion"
+    alt: []
+  - id: philo2-l3-p2
+    sentence: "__L'inversion spéculative__, mot allemand : ___."
+    answer: "Umkehrung"
+    alt: []
+  - id: philo2-l3-p3
+    sentence: "__Inversion hégélienne dénoncée en 1843__ : Hegel fait de l'État le vrai présupposé de la ___, alors que c'est l'inverse."
+    answer: "société civile"
+    alt: ["societe civile"]
+  - id: philo2-l3-p4
+    sentence: "*Critique du droit politique hégélien* : « Le vrai chemin est mis sur la ___. Le plus simple est le plus compliqué et le plus compliqué le plus simple. »"
+    answer: "tête"
+    alt: ["tete"]
+  - id: philo2-l3-p5
+    sentence: "__Quand les catégories abstraites passent pour le moteur des développements concrets__, Marx parle en 1843 de « ___ logique »."
+    answer: "mysticisme"
+    alt: []
+  - id: philo2-l3-p6
+    sentence: "__Dans *La Sainte Famille*, l'inversion spéculative s'expose par l'apologue du__ « ___ » : le mystère de la construction spéculative."
+    answer: "Fruit"
+    alt: ["fruit"]
+  - id: philo2-l3-p7
+    sentence: "Postface du *Capital* : chez Hegel la dialectique « est sur la tête. Il faut la retourner pour découvrir le ___ rationnel sous l'enveloppe mystique »."
+    answer: "noyau"
+    alt: []
+  - id: philo2-l3-p8
+    sentence: "Postface du *Capital* : chez Hegel la dialectique « est sur la tête. Il faut la retourner pour découvrir le noyau rationnel sous l'___ mystique »."
+    answer: "enveloppe"
+    alt: []
+  - id: philo2-l3-p9
+    sentence: "__L'inversion spéculative ne se trouve pas que chez Hegel__ : profondeur en moins, chez Bruno Bauer, Adolph Wagner ou ___."
+    answer: "Malthus"
+    alt: []
+  - id: philo2-l3-p10
+    sentence: "__Le ressort de l'idéalisme, savant ou trivial__ : l'inversion du rapport entre la chose et le ___."
+    answer: "concept"
+    alt: []
+  - id: philo2-l3-p11
+    sentence: "__On sort de l'inversion idéaliste des rapports effectifs par__ le ___ matérialiste."
+    answer: "renversement"
+    alt: []
+  - id: philo2-l3-p12
+    sentence: "__Le renversement matérialiste__, en allemand : *materialistische ___*."
+    answer: "Umstülpung"
+    alt: ["Umstulpung"]
+- id: philo2-l4
+  title: "Deuxième diagnostic : la mauvaise abstraction"
+  notes: |-
+    **Renverser l'inversion ne suffit pas : le cas de Feuerbach montre qu'on peut être matérialiste et rester spéculatif.** Le vice de la philosophie est plus profond : un {coral}usage acritique de l'abstraction{/coral}, qui change l'universel pensé en entité réelle.
+
+    **L'insuffisance du simple renversement.** Feuerbach, penseur du renversement matérialiste, reste pris dans l'abstraction de {red}« l'homme »{/red}, être naturel étranger à toute histoire et à toute classe. Une pensée spéculative simplement retournée {red}ne fait donc pas sortir de la spéculation{/red}.
+
+    **L'hypostase.** L'abstraction est {green}constitutive de la pensée rationnelle{/green} : penser, c'est saisir l'universel dans les choses (le cheval en général à travers les chevaux). Mais elle égare quand l'universel pensé est {red}hypostasié{/red}, c'est-à-dire changé inconsidérément en {violet}entité réelle{/violet}. Toute spéculation est faite de telles hypostases : de la {violet}mauvaise abstraction{/violet}. C'est par elle que {yellow}« l'Idée »{/yellow}, {yellow}« la matière »{/yellow}, {yellow}« l'homme »{/yellow} passent pour les démiurges d'un réel dont ils ne sont que des expressions mentales.
+
+    **D'où la limite du matérialisme comme doctrine.** Le renversement matérialiste a une portée {amber}forte mais limitée{/amber} : il remet sur ses pieds le rapport le plus général entre être et pensée, et vaut comme {green}principe méthodologique{/green}. Érigé en {red}« conception du monde »{/red}, il peut virer à la mystification autant que l'idéalisme : « la matière » devient à son tour une entité démiurge. D'où la réticence de Marx à s'en réclamer ; remise sur ses pieds, la dialectique de Hegel vaut mieux que {teal}« toute la __niaiserie matérialiste__ prise en bloc »{/teal}.
+
+    **Ce qu'il faut à la place : un matérialisme historique, en deux dimensions.**
+    - {amber}objective{/amber} : une pensée de l'historico-social ;
+    - {amber}subjective{/amber}, perdue de vue par le marxisme scolaire : une {violet}critique des activités cognitives{/violet} en général, une critique de nos façons de penser.
+
+    **« La philosophie », désormais entre guillemets**, nomme ce {red}discours de la mauvaise abstraction{/red}, idéaliste même sous des dehors matérialistes, et stérile. On en sort pour un mode de pensée dont le maître mot est {violet}critique{/violet} : non le rejet polémique, mais l'{green}élucidation généalogique{/green}, qui fait comprendre ce qu'on critique pour en dépasser les limites.
+
+    ! Marx ne condamne pas l'abstraction, sans laquelle il n'y a pas de pensée : il condamne l'abstraction qu'on prend pour une chose.
+  points:
+  - id: philo2-l4-p1
+    sentence: "__Le cas de Feuerbach le montre__ : on peut être matérialiste et rester ___ ; renverser l'inversion ne suffit pas."
+    answer: "spéculatif"
+    alt: ["speculatif"]
+  - id: philo2-l4-p2
+    sentence: "__Le vice plus profond de la philosophie__ : un usage ___ de l'abstraction, qui change l'universel pensé en entité réelle."
+    answer: "acritique"
+    alt: []
+  - id: philo2-l4-p3
+    sentence: "__L'abstraction égare quand l'universel pensé est__ ___, c'est-à-dire changé inconsidérément en entité réelle."
+    answer: "hypostasié"
+    alt: ["hypostasie"]
+  - id: philo2-l4-p4
+    sentence: "__La pensée qui change l'universel en entité réelle__ relève de la **___ abstraction** : toute spéculation en est faite."
+    answer: "mauvaise"
+    alt: []
+  - id: philo2-l4-p5
+    sentence: "__Par la mauvaise abstraction__, « l'Idée », « la matière », « l'homme » passent pour les ___ d'un réel dont ils ne sont que des expressions mentales."
+    answer: "démiurges"
+    alt: ["demiurges"]
+  - id: philo2-l4-p6
+    sentence: "__Le renversement matérialiste vaut comme__ **principe ___** : il remet sur ses pieds le rapport le plus général entre être et pensée."
+    answer: "méthodologique"
+    alt: ["methodologique"]
+  - id: philo2-l4-p7
+    sentence: "__Érigé en « conception du ___ », le matérialisme peut virer à la mystification__ autant que l'idéalisme."
+    answer: "monde"
+    alt: []
+  - id: philo2-l4-p8
+    sentence: "__Marx répugne à se dire matérialiste__ : remise sur ses pieds, la dialectique de Hegel vaut mieux que « toute la ___ matérialiste prise en bloc »."
+    answer: "niaiserie"
+    alt: []
+  - id: philo2-l4-p9
+    sentence: "__Pour tenir ses promesses, le renversement doit mener à un__ **matérialisme ___**, objectif et subjectif."
+    answer: "historique"
+    alt: []
+  - id: philo2-l4-p10
+    sentence: "__La dimension subjective du matérialisme historique, perdue de vue par le marxisme scolaire__ : une critique des activités ___ en général."
+    answer: "cognitives"
+    alt: []
+  - id: philo2-l4-p11
+    sentence: "__« La philosophie », entre guillemets, nomme__ le discours de la ___ abstraction, idéaliste même sous des dehors matérialistes."
+    answer: "mauvaise"
+    alt: []
+  - id: philo2-l4-p12
+    sentence: "__Ce qui remplace « la philosophie » : la critique__, non comme rejet polémique, mais comme **élucidation ___**, qui fait comprendre ce qu'on critique pour en dépasser les limites."
+    answer: "généalogique"
+    alt: ["genealogique"]
+- id: philo2-l5
+  title: "Troisième diagnostic : l'apologie de l'existant"
+  notes: |-
+    **Dénoncer l'illusion philosophique ne suffit pas : il faut expliquer pourquoi elle dure depuis deux millénaires. C'est qu'elle a une** {coral}**fonction historique**{/coral} **: elle légitime le monde existant.**
+
+    **L'illusion a des racines sociales.** Que la philosophie ait partie liée, dès ses débuts, avec l'essor des {yellow}échanges marchands{/yellow} et plus encore avec l'institution du {yellow}droit{/yellow} et de l'{yellow}État{/yellow} n'a rien de contingent : la mauvaise abstraction s'ancre dans de puissantes réalités, le {violet}fétichisme de la marchandise{/violet}, les autorités théologico-politiques, la transcendance des valeurs. Les *Manuscrits de 1844* le disent d'un mot : {teal}« la logique c'est l'__argent de l'esprit__ »{/teal}. Comme l'argent fait abstraction de toutes les qualités des marchandises pour n'en garder que la valeur, la logique spéculative fait abstraction de toute détermination réelle.
+
+    **Le cas de Hegel : le réel donné pour rationnel.** La *Critique du droit politique hégélien* le formule : {teal}« Hegel n'est pas à blâmer pour avoir dépeint __l'essence de l'État moderne telle qu'elle est__, mais pour avoir fait passer __ce qui est pour l'essence de l'État__. »{/teal} Autrement dit : décrire l'État prussien tel qu'il est, c'est légitime ; présenter cet État comme ce que l'État doit être par essence, c'est déclarer qu'il n'y a {red}rien d'essentiel à changer{/red}. L'idéalisme spéculatif n'est donc pas seulement mystificateur, il est {coral}conservateur{/coral} : en changeant le concret actuel en abstraction éternelle, il le légitime.
+
+    **Ce qui vaut de Hegel vaut de toute « philosophie ».** Spéculation interprétative, elle est plus encore {violet}idéologie justificative{/violet} du monde existant, ou du retour à ce qu'il devrait être, même à l'insu du philosophe.
+
+    **Deux sens du mot, à distinguer.**
+    - La {green}philosophie sans guillemets{/green}, réflexion rationnelle sur nos rapports cognitifs et actifs avec le monde, a tiré la question au clair avec le dépassement de l'hégélianisme : en ce sens elle est {amber}terminée{/amber}, thèse d'{sky}Engels{/sky} que Marx partageait sans doute.
+    - {red}« La philosophie »{/red}, discours qui légitime la mauvaise abstraction, est {amber}intarissable{/amber} dans le monde tel qu'il va. Une fois compris ce qu'elle est, on ne peut qu'« en sortir d'un bond ».
+
+    C'est ce que fait Marx en 1846 ; après quoi il n'y aura plus jamais de « philosophie de Marx ». Le titre de son premier ouvrage ensuite, *Misère de la philosophie* (1847), est emblématique.
+  points:
+  - id: philo2-l5-p1
+    sentence: "__L'illusion philosophique dure depuis deux millénaires parce qu'elle a une fonction historique__ : elle ___ le monde existant."
+    answer: "légitime"
+    alt: ["legitime", "justifie"]
+  - id: philo2-l5-p2
+    sentence: "__La mauvaise abstraction s'ancre dans des réalités sociales__ : autorités théologico-politiques, transcendance des valeurs, **___ de la marchandise**."
+    answer: "fétichisme"
+    alt: ["fetichisme"]
+  - id: philo2-l5-p3
+    sentence: "*Manuscrits de 1844* : « la logique c'est l'___ de l'esprit »."
+    answer: "argent"
+    alt: []
+  - id: philo2-l5-p4
+    sentence: "*Critique du droit politique hégélien* : « Hegel n'est pas à blâmer pour avoir dépeint l'essence de l'État moderne telle qu'elle est, mais pour avoir fait passer ce qui est pour l'___ de l'État. »"
+    answer: "essence"
+    alt: []
+  - id: philo2-l5-p5
+    sentence: "__En présentant l'État existant comme ce que l'État doit être par essence__, Hegel donne le réel pour ___ : rien d'essentiel n'y est à changer."
+    answer: "rationnel"
+    alt: []
+  - id: philo2-l5-p6
+    sentence: "__L'idéalisme spéculatif n'est pas seulement mystificateur, il est__ ___ : changeant le concret actuel en abstraction éternelle, il le légitime."
+    answer: "conservateur"
+    alt: []
+  - id: philo2-l5-p7
+    sentence: "__Toute « philosophie », même à l'insu du philosophe, est__ **idéologie ___** du monde existant."
+    answer: "justificative"
+    alt: []
+  - id: philo2-l5-p8
+    sentence: "__La philosophie sans guillemets, réflexion rationnelle sur nos rapports au monde, est en ce sens terminée__ : c'est la thèse d'___, que Marx partageait sans doute."
+    answer: "Engels"
+    alt: []
+  - id: philo2-l5-p9
+    sentence: "__« La philosophie », discours qui légitime la mauvaise abstraction, est__ ___ dans le monde tel qu'il va : on ne peut qu'en sortir d'un bond."
+    answer: "intarissable"
+    alt: []
+  - id: philo2-l5-p10
+    sentence: "__Le titre emblématique du premier ouvrage de Marx après l'adieu de 1846__ : *Misère de la ___* (1847)."
+    answer: "philosophie"
+    alt: []
+- id: philo2-l6
+  title: "Sortir de la philosophie, aller au fond de la chose"
+  notes: |-
+    **Sortir de la philosophie n'affaiblit pas l'exigence théorique : c'est l'inverse.** Il s'agit de passer des facilités d'un discours abstrait sur toute chose aux exigences d'une {green}intelligence précise du monde réel{/green}. Et ce travail précis ramène Marx, {coral}par une autre porte, sur le terrain philosophique{/coral}.
+
+    **De la révolution à l'économie politique.** En 1848-1849, Marx anime les luttes, organise le mouvement communiste, écrit dans la *Nouvelle Gazette rhénane*, puis *Les Luttes de classes en France* et *Le 18 Brumaire de Louis Bonaparte*. Fixé à {sky}Londres{/sky} à partir de 1850, dans la misère, il reprend l'étude de l'économie commencée en 1843. Au milieu de {amber}1857{/amber}, il entreprend la {violet}critique de l'économie politique{/violet}, tâche essentielle à trois titres :
+    - pour la {amber}classe ouvrière{/amber}, à qui il faut donner les moyens de comprendre son sort et les voies de son émancipation ;
+    - pour la {amber}stratégie communiste{/amber} : Marx croit encore, après 1846-1848, à un lien de cause à effet entre {red}crise économique et révolution politique{/red}, conviction trop simple dont il devra se défaire ;
+    - pour {amber}lui-même{/amber} : {teal}« Il est absolument nécessaire d'__aller au fond de la chose__ »{/teal}, écrit-il à Engels le 18 décembre 1857, alors qu'il travaille « comme un fou » aux *Grundrisse*.
+
+    **La méthode, d'abord.** Il ne s'agit plus de polémiquer, comme dans le chapitre « La méthode de l'économie politique » de *Misère de la philosophie*, mais d'exposer de façon critique une science entière, dominée par {sky}Adam Smith{/sky} et {sky}David Ricardo{/sky}. D'où une {sky}Introduction{/sky} méthodologique, où sont en jeu des {violet}catégories logiques{/violet} : essence et phénomène, abstrait et concret, universel et particulier, objectif et subjectif.
+
+    **L'exemple de l'argent.** Au début des *Grundrisse*, partant d'un livre du proudhonien {sky}Darimon{/sky}, Marx écrit une dizaine de pages sur « Genèse et essence de l'argent » : la « différence » entre aspects concrets et abstraits de la marchandise s'accentue en {violet}opposition et contradiction{/violet}, d'où déjà la possibilité des crises ; l'argent, simple représentant des valeurs, se pose comme valeur par excellence. Et il conclut : {teal}« Nous voyons donc comment il est immanent à l'argent d'__accomplir ses finalités__ bien qu'en même temps __il les nie__ ; de s'autonomiser face aux marchandises ; __étant moyen, de devenir fin__ ; […] »{/teal} Une simple analyse économique se présente comme un bouquet de {coral}processus dialectiques et de catégories logiques{/coral}.
+
+    ! L'argent qui, « étant moyen », devient fin est un exemple de l'inversion que Marx dénonçait en philosophie, mais cette fois réelle : elle a lieu dans les choses, non dans la tête du philosophe.
+  points:
+  - id: philo2-l6-p1
+    sentence: "__Sortir de la philosophie n'affaiblit pas l'exigence théorique__ : il s'agit de passer d'un discours abstrait sur toute chose à une **intelligence ___ du monde réel**."
+    answer: "précise"
+    alt: ["precise"]
+  - id: philo2-l6-p2
+    sentence: "__La ville où Marx, fixé à partir de 1850, reprend l'étude de l'économie__ : ___."
+    answer: "Londres"
+    alt: []
+  - id: philo2-l6-p3
+    sentence: "__L'entreprise que Marx engage au milieu de 1857, et qui aboutira au *Capital*__ : la ___ de l'économie politique."
+    answer: "critique"
+    alt: []
+  - id: philo2-l6-p4
+    sentence: "__Conviction trop simple qui anime encore Marx en 1857, et dont il devra se défaire__ : un lien de cause à effet entre **crise ___** et révolution politique."
+    answer: "économique"
+    alt: ["economique"]
+  - id: philo2-l6-p5
+    sentence: "Lettre à Engels du 18 décembre 1857 : « Il est absolument nécessaire d'aller au ___ de la chose »."
+    answer: "fond"
+    alt: []
+  - id: philo2-l6-p6
+    sentence: "__Exposer de façon critique une science entière, dominée par Adam Smith et David__ ___, exige d'y voir clair dans la méthode."
+    answer: "Ricardo"
+    alt: []
+  - id: philo2-l6-p7
+    sentence: "__L'Introduction méthodologique de 1857 met en jeu des__ **catégories ___** : essence et phénomène, abstrait et concret, universel et particulier."
+    answer: "logiques"
+    alt: []
+  - id: philo2-l6-p8
+    sentence: "__Le proudhonien dont le livre sur l'argent ouvre les *Grundrisse*__ : ___."
+    answer: "Darimon"
+    alt: []
+  - id: philo2-l6-p9
+    sentence: "*Grundrisse*, « Genèse et essence de l'argent » : la différence entre les aspects concrets et abstraits de la marchandise s'accentue en opposition et ___, d'où la possibilité des crises."
+    answer: "contradiction"
+    alt: []
+  - id: philo2-l6-p10
+    sentence: "*Grundrisse* : « Nous voyons donc comment il est immanent à l'argent d'accomplir ses finalités bien qu'en même temps il les ___ »."
+    answer: "nie"
+    alt: []
+  - id: philo2-l6-p11
+    sentence: "*Grundrisse* : il est immanent à l'argent « de s'autonomiser face aux marchandises ; étant moyen, de devenir ___ »."
+    answer: "fin"
+    alt: []
+- id: philo2-l7
+  title: "La Logique refeuilletée : une rechute hégélienne ?"
+  notes: |-
+    **En 1858, Marx dit avoir tiré grand profit de la *Logique* de Hegel ; on en conclut d'ordinaire que les** ***Grundrisse*** **retombent dans l'hégélianisme.** {sky}Sève{/sky} soutient {coral}l'exact contraire{/coral} : l'épisode est important, mais il ouvre le renversement de Hegel, non une rechute.
+
+    **La lettre de janvier 1858.** À {sky}Engels{/sky} : {teal}« Dans la méthode d'élaboration m'a rendu grand service le fait que par pur hasard, Freiligrath a trouvé quelques volumes de Hegel qui d'origine étaient à Bakounine et me les a envoyés en cadeau, j'avais __refeuilleté la Logique de Hegel__. Si un jour j'ai de nouveau du temps pour ce genre de travaux, j'aurais grande envie, en __deux ou trois feuilles d'imprimerie__, de rendre accessible à l'entendement commun __ce qu'a de rationnel la méthode__ que H[egel] a découverte mais en même temps mystifiée. »{/teal}
+
+    **Premier point : le fait est de grand sens.** On l'a traité en anecdote, ou en tournant « hégélianisant ». Il compte, car si la réception des livres est {yellow}fortuite{/yellow}, le refeuilletage ne l'est pas : Marx s'y livre au moment d'engager le grand œuvre de sa vie. Les preuves en sont nombreuses : sa correspondance ; {amber}trois prises de position sur Hegel{/amber} dans l'Introduction de 1857 ; {amber}quatre références explicites{/amber} à Hegel dans les cinquante premières pages des *Grundrisse*. Et, fait jamais remarqué, la relecture recommence, délibérément cette fois, deux ans plus tard : en commençant les {sky}*Manuscrits de 1861-1863*{/sky}, Marx résume pour lui-même le livre premier de la *Logique*, la {violet}logique de l'être{/violet}.
+
+    **Second point : en quel sens ?** La réponse presque unanime est ravageuse : dans les *Grundrisse*, Marx retomberait sous l'emprise de Hegel. À première vue, tout y porte :
+    - un vocabulaire typiquement hégélien : {violet}*an und für sich*{/violet} (en et pour soi), {violet}*Vermittlung*{/violet} (médiation), {violet}*Entäusserung*{/violet} (aliénation, extériorisation), {violet}*Voraussetzung*{/violet} (présupposition), {violet}*Aufhebung*{/violet} (dépassement) ;
+    - un plan du capital qui semble calqué sur le {red}syllogisme hégélien{/red} de l'{amber}universel{/amber}, du {amber}particulier{/amber} et du {amber}singulier{/amber}, où l'idéel dicterait sa loi au matériel.
+
+    Les *Grundrisse* marqueraient alors un retour en deçà de *L'Idéologie allemande*, une rechute dans « la philosophie ». C'est cette lecture que la suite renverse.
+  points:
+  - id: philo2-l7-p1
+    sentence: "__Lecture ordinaire de la lettre de janvier 1858__ : les *Grundrisse* rechuteraient dans l'hégélianisme. __Selon Sève__, c'est l'___ contraire."
+    answer: "exact"
+    alt: []
+  - id: philo2-l7-p2
+    sentence: "Lettre à Engels, janvier 1858 : par hasard, « j'avais refeuilleté la ___ de Hegel »."
+    answer: "Logique"
+    alt: ["logique"]
+  - id: philo2-l7-p3
+    sentence: "__Les volumes de Hegel refeuilletés par Marx en 1858 lui avaient été envoyés par Freiligrath, et appartenaient d'abord à__ ___."
+    answer: "Bakounine"
+    alt: []
+  - id: philo2-l7-p4
+    sentence: "Lettre à Engels, janvier 1858 : Marx aurait envie, « en deux ou trois feuilles d'___ », de rendre accessible ce qu'a de rationnel la méthode de Hegel."
+    answer: "imprimerie"
+    alt: []
+  - id: philo2-l7-p5
+    sentence: "Lettre à Engels, janvier 1858 : rendre accessible à l'entendement commun « ce qu'a de rationnel la méthode que H[egel] a découverte mais en même temps ___ »."
+    answer: "mystifiée"
+    alt: ["mystifiee"]
+  - id: philo2-l7-p6
+    sentence: "__La relecture de Hegel recommence, délibérément, en 1861__ : en commençant les *Manuscrits de 1861-1863*, Marx résume pour lui-même la **logique de l'___**, livre premier de la *Logique*."
+    answer: "être"
+    alt: ["etre"]
+  - id: philo2-l7-p7
+    sentence: "__Mot hégélien des *Grundrisse*__ : *Vermittlung*, c'est-à-dire la ___."
+    answer: "médiation"
+    alt: ["mediation"]
+  - id: philo2-l7-p8
+    sentence: "__Mot hégélien des *Grundrisse*__ : *Voraussetzung*, c'est-à-dire la ___."
+    answer: "présupposition"
+    alt: ["presupposition"]
+  - id: philo2-l7-p9
+    sentence: "__Le plan du capital esquissé dans les *Grundrisse* semble calqué sur le syllogisme hégélien__ de l'universel, du particulier et du ___."
+    answer: "singulier"
+    alt: []
