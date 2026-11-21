@@ -2003,15 +2003,27 @@ export function retryIndex(queue: readonly Exercise[], position: number): number
 }
 
 /**
- * Ce que le mode « citations seules » saute dans une leçon de texte (voir
- * `citationsOnly` dans le store) : les cartes-explication, et les sections de
- * rappel propres à un fragment. Le premier rappel reste, réduit au paragraphe
- * (voir `RuleNote`), et les cartes-citation se jouent toutes.
+ * Ce que le mode « citations seules » saute (voir `citationsOnly` dans le
+ * store) : les cartes-explication, les tableaux, et les sections de rappel
+ * propres à un fragment. Dans une leçon de texte, le premier rappel reste,
+ * réduit au paragraphe (voir `RuleNote`) ; dans une leçon classique, le
+ * rappel saute aussi, les cartes-citation donnant chacune leur citation
+ * entière. Les cartes-citation se jouent toutes.
  */
 export function isExplanationOnly(exercise: Exercise): boolean {
-  if (exercise.kind === 'passage') return !isCitation(exercise.point)
+  if (exercise.kind === 'passage' || exercise.kind === 'grammar-gap' || exercise.kind === 'grammar-choice') {
+    return !isCitation(exercise.point)
+  }
   if (exercise.kind === 'table-bank' || exercise.kind === 'table-cell' || exercise.kind === 'table-order') return true
-  return exercise.kind === 'rule' && exercise.fragment !== undefined
+  return exercise.kind === 'rule' && (exercise.fragment !== undefined || exercise.passage === undefined)
+}
+
+/** Une carte-citation, de leçon de texte ou de leçon classique (voir `isCitation`). */
+export function isCitationExercise(exercise: Exercise): boolean {
+  return (
+    (exercise.kind === 'passage' || exercise.kind === 'grammar-gap' || exercise.kind === 'grammar-choice') &&
+    isCitation(exercise.point)
+  )
 }
 
 /**

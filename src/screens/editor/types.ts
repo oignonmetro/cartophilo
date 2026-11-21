@@ -40,6 +40,8 @@ export interface PointDTO {
   explanation?: string
   /** Repère de fragment d'une carte-citation (« 1/3 »), leçons de texte seulement. */
   fragment?: string
+  /** Genre de la carte quand la phrase ne le dit pas (voir `isCitation`) : carte-citation ou carte-explication. */
+  citation?: boolean
 }
 
 /** Le paragraphe cité d'une leçon de texte ; `text` vide pour une leçon d'introduction. */

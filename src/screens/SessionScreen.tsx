@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { Exercise, TreatiseGhostExercise } from '@/engine/exercises'
-import { isExplanationOnly, isNonLocating, isPresentation, itemIdsOf, retryIndex } from '@/engine/exercises'
-import { isCitation, lessonsOf } from '@/content/course'
+import { isCitationExercise, isExplanationOnly, isNonLocating, isPresentation, itemIdsOf, retryIndex } from '@/engine/exercises'
+import { lessonsOf } from '@/content/course'
 import { ratingFromAnswer, type Rating } from '@/engine/srs'
 import { useCourse } from '@/content/CourseProvider'
 import { useProgress } from '@/store/progressStore'
@@ -270,17 +270,15 @@ function SessionRunner({
   const [deferredHere, setDeferredHere] = useState<ReadonlySet<string>>(() => new Set(resume0?.deferred))
 
   // Mode « citations seules » (voir `citationsOnly` dans le store) : proposé
-  // dans une leçon qui cite un texte, et là seulement ; les révisions ne
-  // changent pas. Il agit en direct : allumé, il saute ce qui reste de
-  // cartes-explication et de rappels de fragment (voir `isExplanationOnly`),
-  // et les rend si on l'éteint. La file reste entière, seul le parcours
-  // l'enjambe.
+  // dans toute séance, leçon ou révision, qui a des cartes-citation (leçon de
+  // texte, ou citation marquée dans une leçon classique, voir `isCitation`).
+  // Il agit en direct : allumé, il saute ce qui reste de cartes-explication et
+  // de rappels (voir `isExplanationOnly`), et les rend si on l'éteint. La file
+  // reste entière, seul le parcours l'enjambe : une carte sautée en révision
+  // reste due.
   const citationsOnly = useProgress((state) => state.citationsOnly)
   const setCitationsOnly = useProgress((state) => state.setCitationsOnly)
-  const hasCitations = useMemo(
-    () => kind === 'lesson' && exercises.some((exercise) => exercise.kind === 'passage' && isCitation(exercise.point)),
-    [exercises, kind],
-  )
+  const hasCitations = useMemo(() => exercises.some(isCitationExercise), [exercises])
   const skipping = hasCitations && citationsOnly
 
   // Mode « repérage seul » (voir `locateOnly` dans le store) : proposé dès

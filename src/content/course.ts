@@ -237,22 +237,28 @@ export function groupParts(lessons: (GrammarLesson & { passage: Passage })[]): T
  * Une carte-citation cite le texte : elle porte un fragment, ou tient tout
  * entière entre « ». Une carte-explication peut s'ouvrir sur une citation
  * (« « Normal » vient du latin ___ ») : elle continue alors après le ».
+ * Le champ `citation` d'une carte l'emporte sur cette lecture : il marque
+ * notamment, dans une unité classique, les cartes qui font apprendre une
+ * citation et sa référence.
  */
-export function isCitation(card: { sentence: string; fragment?: string }): boolean {
+export function isCitation(card: { sentence: string; fragment?: string; citation?: boolean }): boolean {
+  if (card.citation !== undefined) return card.citation
   const sentence = card.sentence.trim()
   return Boolean(card.fragment) || (sentence.startsWith('«') && sentence.endsWith('»'))
 }
 
 /**
- * La leçon de texte réduite à ses cartes-citation, pour le mode « citations
+ * La leçon réduite à ses cartes-citation, pour le mode « citations
  * seulement » (voir `citationsOnly` dans le store) : sans son explication, le
- * paragraphe s'affiche seul à la découverte, et les cartes-explication sont
- * sautées. `null` quand la leçon n'a rien à réduire : ce n'est pas une leçon
- * de texte, ou elle n'a aucune carte-citation (introduction, prolongement),
- * auquel cas elle se joue en entier plutôt que de ne rien laisser à jouer.
+ * paragraphe d'une leçon de texte s'affiche seul à la découverte, et les
+ * cartes-explication sont sautées. Vaut aussi pour une leçon classique qui
+ * fait apprendre des citations (voir `isCitation`). `null` quand la leçon n'a
+ * rien à réduire : ce n'est pas une leçon de grammaire, ou elle n'a aucune
+ * carte-citation (introduction, prolongement), auquel cas elle se joue en
+ * entier plutôt que de ne rien laisser à jouer.
  */
 export function citationsOnlyLesson(lesson: Lesson): Lesson | null {
-  if (!isPassageLesson(lesson)) return null
+  if (lesson.kind !== 'grammar') return null
   const points = lesson.points.filter(isCitation)
   if (points.length === 0) return null
   return { ...lesson, notes: undefined, points }

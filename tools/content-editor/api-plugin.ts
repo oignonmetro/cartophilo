@@ -65,6 +65,8 @@ interface PointDTO {
   explanation?: string
   /** Repère de fragment d'une carte-citation (« 1/3 »), leçons de texte seulement. */
   fragment?: string
+  /** Genre de la carte quand la phrase ne le dit pas (voir `isCitation`) : carte-citation ou carte-explication. */
+  citation?: boolean
 }
 
 /** Le paragraphe cité d'une leçon de texte ; `text` vide pour une introduction. */
@@ -215,6 +217,7 @@ function buildPointNode(point: PointDTO): YAMLMap {
   map.set('answer', dq(point.answer))
   map.set('alt', altSeq(point.alt))
   if (point.explanation) map.set('explanation', dq(point.explanation))
+  if (point.citation !== undefined) map.set('citation', point.citation)
   return map
 }
 
@@ -244,6 +247,8 @@ function syncPoints(seq: YAMLSeq, points: PointDTO[]): void {
       else existing.delete('explanation')
       if (point.fragment) setScalar(existing, 'fragment', point.fragment)
       else existing.delete('fragment')
+      if (point.citation !== undefined) existing.set('citation', point.citation)
+      else existing.delete('citation')
       return existing
     }
     return buildPointNode(point)

@@ -198,7 +198,22 @@ describe('citationsOnlyLesson', () => {
     expect(reduced && 'passage' in reduced ? reduced.passage?.text : null).toBe('Il était beau.')
   })
 
-  it("laisse entière une leçon sans carte-citation, et ce qui n'est pas une leçon de texte", () => {
+  it('réduit aussi une leçon classique à ses cartes marquées `citation`', () => {
+    const reduced = citationsOnlyLesson({
+      kind: 'grammar' as const,
+      id: 'l1',
+      title: 'Leçon',
+      notes: 'Rappel.',
+      points: [
+        { ...point('a', '« Le travail ___. » (premier manuscrit)'), citation: true },
+        point('b', 'La thèse est ___.'),
+        { ...point('c', '« Il était ___. »'), citation: false },
+      ],
+    })
+    expect(reduced && 'points' in reduced ? reduced.points.map((p) => p.id) : null).toEqual(['a'])
+  })
+
+  it("laisse entière une leçon sans carte-citation, et ce qui n'est pas une leçon de grammaire", () => {
     expect(citationsOnlyLesson(text([point('b', 'La thèse est ___.')], 'Introduction'))).toBeNull()
     expect(citationsOnlyLesson(lesson('v1-l1'))).toBeNull()
   })

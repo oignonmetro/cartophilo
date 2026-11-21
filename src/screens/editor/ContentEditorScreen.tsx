@@ -1132,20 +1132,27 @@ function PointsEditor({
               >
                 ⠿ {index + 1}
               </span>
-              {isText && (
-                <span
-                  title={
-                    isCitation(point)
-                      ? 'Carte-citation : fait retrouver un morceau du texte'
-                      : 'Carte-explication : fait retrouver une idée du commentaire'
-                  }
-                  className={`rounded px-1 text-[0.6rem] font-black uppercase ${
-                    isCitation(point) ? 'bg-violet/15 text-violet' : 'bg-teal/15 text-teal-deep'
-                  }`}
-                >
-                  {isCitation(point) ? 'cit.' : 'expl.'}
-                </span>
-              )}
+              {/* Le genre de la carte, lu sur sa phrase (voir `isCitation`) ; un clic
+                  l'inverse, en écrivant `citation` seulement quand la phrase dirait
+                  l'autre genre. C'est ce que garde l'interrupteur « Citations ». */}
+              <button
+                type="button"
+                onClick={() => {
+                  const next = !isCitation(point)
+                  update(index, { citation: isCitation({ ...point, citation: undefined }) === next ? undefined : next })
+                }}
+                title={
+                  (isCitation(point)
+                    ? 'Carte-citation : fait retrouver une citation ou sa référence'
+                    : 'Carte-explication : fait retrouver une idée du rappel ou du commentaire') +
+                  ' (cliquer pour changer de genre)'
+                }
+                className={`rounded px-1 text-[0.6rem] font-black uppercase ${
+                  isCitation(point) ? 'bg-violet/15 text-violet' : 'bg-teal/15 text-teal-deep'
+                }`}
+              >
+                {isCitation(point) ? 'cit.' : 'expl.'}
+              </button>
             </div>
             <div className="grid flex-1 grid-cols-2 gap-3">
               <div className="flex flex-col gap-1">

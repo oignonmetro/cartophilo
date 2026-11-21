@@ -94,6 +94,14 @@ export const grammarPointSchema = z.object({
    * Affiché en tête de carte, jamais dans la phrase elle-même.
    */
   fragment: z.string().optional(),
+  /**
+   * Genre de la carte, quand la forme de la phrase ne le dit pas (voir
+   * `isCitation`) : `true` pour une carte-citation (un trou dans une citation,
+   * ou sa référence), `false` pour une carte-explication. Sert surtout hors
+   * des leçons de texte, où une citation tirée d'un autre texte s'apprend
+   * aussi, et où l'interrupteur « Citations » ne garde qu'elles.
+   */
+  citation: z.boolean().optional(),
 })
 
 /**

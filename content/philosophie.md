@@ -187,7 +187,14 @@ l'utilisateur, 2026-11-21, pour toute unité) :
   manuscrit ») ;
 - la citation d'un **commentateur ou d'un auteur secondaire** (pas l'auteur
   classique étudié) n'appelle pas forcément de carte, ni sur elle ni sur sa
-  référence : on ne l'interroge que si elle sert hors du rappel.
+  référence : on ne l'interroge que si elle sert hors du rappel ;
+- **ces cartes portent `citation: true`** (cartes à trou dans la citation, et
+  cartes de référence) : c'est ce que garde l'interrupteur « Citations » d'une
+  séance, leçon ou révision, qui saute alors les cartes-explication et le
+  rappel (voir `isCitation`, `isExplanationOnly`). Sans ce champ, seule une
+  carte tout entière entre « » compte comme carte-citation. Dans l'éditeur
+  visuel, le badge « cit. / expl. » d'une carte l'inverse d'un clic. Fait pour
+  ali1 à ali5 (2026-11-21).
 
 Ordre de grandeur, pour un rappel du Manuel ou d'un cours SEP : une carte pour
 60 à 120 caractères de rappel (`arvie1` : 83 cartes pour cinq leçons), soit
