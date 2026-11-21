@@ -28,7 +28,7 @@ session.
 ## 0. Sources
 
 **Le notebook « Marx »** (Gemini Notebook, navigateur intégré :
-https://notebook.google.com/notebook/fca9f7c7-bba5-4371-84d7-0d2a22462e25,
+https://notebook.google.com/notebook/2b769045-43ef-478e-a3cc-04762cf5e226,
 ouvert sur le compte de l'utilisateur) est la source de tout : lieux,
 arguments, citations, repères. Il réunit, au 2026-11-05 (28 sources, que
 l'utilisateur complète : relire la liste à chaque entrée), des textes de Marx
