@@ -424,8 +424,9 @@ et la remplacer par un renvoi.
   *Capital*, et non sur la vie. Deux issues : la réécrire pour qu'on y voie
   vraiment l'analyse de la notion (en relançant NotebookLM sur ce point), ou la
   déplacer dans une nouvelle entrée qui lui corresponde, à compléter plus tard.
-- **Les termes techniques allemands en violet**, en plus de l'italique :
-  `{violet}*Gattungswesen*{/violet}`.
+- **Les termes techniques allemands en bleu**, en plus de l'italique :
+  `{blue}*Gattungswesen*{/blue}` (bleu des termes étrangers, depuis le
+  2026-11-21 ; le terme français qu'ils rendent reste violet).
 - **Ce qu'elle n'est pas** : le contresens principal, désamorcé dans le fil
   du rappel ou par un piège `! …` en fin. **Un piège ne répète pas un
   paragraphe** : si une étape du rappel dit déjà que l'Un est au-dessus de

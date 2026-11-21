@@ -424,11 +424,13 @@ nommé comme tel (harmonisé le 2026-11-05).
   vert marque le premier, ou pour que deux membres négatifs voisins ne
   prennent pas la même couleur ; la conception naïve écartée se met volontiers
   en rose, sans obligation ;
-- `violet` : les termes techniques et notions clés (le terme allemand compris) ;
-- `blue` : les termes grecs et latins, en italique (`{blue}*zôê*{/blue}`,
-  `{blue}*a priori*{/blue}`), qu'ils soient translittérés ou en caractères
-  grecs ; le terme français qu'ils rendent garde sa couleur (violet si c'est
-  une notion clé). Ajoutée le 2026-11-06 ;
+- `violet` : les termes techniques et notions clés, en français ;
+- `blue` : les termes étrangers, grecs, latins et allemands, en italique
+  (`{blue}*zôê*{/blue}`, `{blue}*a priori*{/blue}`, `{blue}*Leib*{/blue}`),
+  que le grec soit translittéré ou en caractères grecs ; le terme français
+  qu'ils rendent garde sa couleur (violet si c'est une notion clé). Ajoutée
+  le 2026-11-06 ; l'allemand y est passé, du violet, le 2026-11-21. Une
+  citation allemande reste en teal ;
 - `teal` : les citations du texte étudié. Le guillemet ouvrant en teal, puis en
   teal les mots clefs de la citation, les mots de liaison restant nus, le
   guillemet fermant avec le dernier membre : `{teal}« {/teal}bientôt
