@@ -435,10 +435,11 @@ nommé comme tel (harmonisé le 2026-11-05).
   teal les mots clefs de la citation, les mots de liaison restant nus, le
   guillemet fermant avec le dernier membre : `{teal}« {/teal}bientôt
   {teal}ils succomberaient{/teal} s'ils n'avaient en eux {teal}un principe
-  permanent de réaction »{/teal}`. Une citation courte peut s'écrire entière
-  dans la couleur (`{teal}« … »{/teal}`) : l'application n'en teinte alors que
-  les guillemets, le texte restant en noir (`quoteEdges` dans
-  `src/content/notes.ts`). Une hypothèse réfutée dans la citation prend le
+  permanent de réaction »{/teal}`. Pas de citation écrite entière dans la
+  couleur (`{teal}« … »{/teal}`), même courte : l'application n'en teinte que
+  les guillemets (`quoteEdges` dans `src/content/notes.ts`), et ses mots clefs
+  restent sans couleur ; le souligné d'un mot clef s'ajoute au teal, il ne le
+  remplace pas (règle redite par l'utilisateur le 2026-11-21). Une hypothèse réfutée dans la citation prend le
   rouge, guillemets en teal. Écart : le glossaire de Plotin ne met pas de teal
   sur les citations (voir la skill `glossaire`) ;
 - `sky` : la structure de l'œuvre (parties, chapitres), les sources qu'elle
