@@ -173,6 +173,22 @@ membre. Mais **on n'interroge pas tout** :
   suivante, même tiré d'une autre citation (*auxesis* en leçon 1 : pas
   d'*auxèsin* en leçon 5).
 
+**Toute citation de l'auteur étudié s'apprend, avec sa référence** (règle de
+l'utilisateur, 2026-11-21, pour toute unité) :
+
+- chaque citation du rappel a ses cartes sur ses mots clefs et ses locutions
+  importantes (ce qui est en teal) ;
+- une citation importante se fait apprendre **en entier, étape par étape**,
+  comme dans les unités-textes : un trou par morceau qui compte, la citation
+  répétée à chaque carte (voir « Citation » plus bas et `content/textes.md`) ;
+- **si je cite, je sais ce que je cite** : toute citation qu'on fait apprendre
+  a aussi sa carte de référence, la citation donnée (au besoin abrégée par
+  « [...] ») et le trou sur l'œuvre ou son repère (« au ___ » : « troisième
+  manuscrit ») ;
+- la citation d'un **commentateur ou d'un auteur secondaire** (pas l'auteur
+  classique étudié) n'appelle pas forcément de carte, ni sur elle ni sur sa
+  référence : on ne l'interroge que si elle sert hors du rappel.
+
 Ordre de grandeur, pour un rappel du Manuel ou d'un cours SEP : une carte pour
 60 à 120 caractères de rappel (`arvie1` : 83 cartes pour cinq leçons), soit
 une quinzaine à vingt-cinq pour un rappel de quatre paragraphes. Un rappel qui en donne moins de dix est
