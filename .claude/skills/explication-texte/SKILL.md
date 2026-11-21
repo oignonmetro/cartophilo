@@ -94,6 +94,20 @@ formulation, vérifier contre le texte :
 - **Le rapport de jury**, s'il est fourni : liste des points attendus,
   contresens signalés. S'il n'y en a pas, n'en pas chercher, ne rien
   attribuer à un jury, faire soi-même le travail qu'il attendrait.
+- **Le notebook NotebookLM de l'auteur**, quand il en existe un (Marx :
+  https://notebook.google.com/notebook/2b769045-43ef-478e-a3cc-04762cf5e226,
+  navigateur intégré), interrogé **à chaque doute**, même quand le cours ou
+  le commentaire semble suffire : une phrase dont l'enchaînement n'est pas
+  sûr, un raisonnement implicite reconstruit, une notion à caractériser dans
+  ce texte précis, une citation qu'on ne retrouve pas. Une question à la
+  fois, le passage cité en entier, « nouvelle question, indépendante des
+  précédentes », « avec le document source de chaque idée », 250 mots au
+  plus. Une reconstruction que ni le cours ni le notebook ne confirment
+  reste signalée comme telle dans le doc. Sur les quatre premiers textes du
+  travail aliéné (2026-11-21), le notebook a été oublié, puis interrogé
+  après coup : il a apporté une citation introuvable (Feuerbach), deux
+  sources pour des reconstructions, et corrigé un contresens (la liberté
+  comme autodétermination, non comme indépendance hégélienne).
 - **Les autres textes de l'auteur**, mobilisés au moment où ils éclairent
   (pas dans une liste finale), avec leur référence précise, vérifiée en
   ligne en cas de doute.
