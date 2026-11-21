@@ -74,7 +74,11 @@ l'épreuve :
   - **Textes** : une unité par texte étudié, qui fait savoir le citer
     (paragraphe par paragraphe, cartes-citation puis cartes-explication).
     Format et consignes dans `content/textes.md` ; pour en créer une,
-    utiliser la skill `unite-texte` (`.claude/skills/unite-texte/`).
+    utiliser la skill `unite-texte` (`.claude/skills/unite-texte/`). Pour
+    expliquer d'abord le texte dans un Claude Doc, la skill
+    `explication-texte` (`.claude/skills/explication-texte/`) : le global
+    provisoire, puis la lecture linéaire en profondeur, partie par partie et
+    mot par mot, puis le retour au global qui corrige, une étape à la fois.
 - **Hors-programme**, un sous-onglet par domaine philosophique :
   - La morale
   - La métaphysique

@@ -64,7 +64,10 @@ Quand il n'y a que le texte, sans commentaire ni notes, ne rien demander de
 plus et ne pas écrire pour autant au fil de l'eau d'emblée : **produire
 d'abord le commentaire qui manque**, qui tiendra lieu, dans toute la suite de
 la skill, de « commentaire » (découpage, trous, introduction, sources des
-cartes-explication).
+cartes-explication). Quand l'utilisateur veut cette explication dans un
+Claude Doc, ou pour un texte difficile, l'écrire avec la skill
+`explication-texte` (global provisoire, lecture linéaire en profondeur,
+retour au global), dont les parties X.Y deviennent les repères des leçons.
 
 1. **Chercher ce qui existe déjà.** Les notes et la notice de l'édition dont
    le texte est tiré, si l'utilisateur a le PDF (le lui demander une fois,
