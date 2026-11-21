@@ -46,7 +46,7 @@ EDITIONS = [
     (r"^Manuscrits de 1857", "ES, Grundrisse", 0),
     (r"^Contribution à la critique de l.économie", "ES, Contribution à la critique de l'économie politique", 0),
     (r"^Critique Du Programme De Gotha", "ES, Critique du programme de Gotha", 0),
-    (r"^Manifeste du Parti communiste", "ES, Manifeste du Parti communiste", 0),
+    (r"^Manifeste du Parti communiste", "Réf., Manifeste du Parti communiste (Sève)", 0),
     (r"^Écrits philosophiques", "ES, Écrits philosophiques (Sève)", 0),
     (r"^Œuvres I\. Économie", "Pléiade, Œuvres I (Rubel)", 1),
     (r"^Œuvres III\. Philosophie", "Pléiade, Œuvres III (Rubel)", 1),
