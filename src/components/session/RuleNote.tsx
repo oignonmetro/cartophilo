@@ -289,24 +289,29 @@ export function NoteBlocks({ notes, tone }: { notes: string; tone: Tone }) {
         }
 
         if (block.kind === 'notion') {
+          // Même apparence que dans l'éditeur visuel (voir `NOTION`,
+          // RichNotesEditor.tsx) : un losange violet, puis « Terme : définition »
+          // d'une seule coulée, le terme en gras.
           return (
-            <div
+            <p
               key={index}
-              className="flex flex-col gap-1 rounded-2xl border-2 border-violet/35 bg-violet/8 px-4 py-3 text-sm leading-relaxed text-ink"
+              className="flex gap-2.5 rounded-2xl border-2 border-violet/35 bg-violet/8 px-4 py-3 text-sm leading-relaxed text-ink"
             >
-              <p className="text-[0.7rem] font-black tracking-widest text-violet uppercase">
-                Notion
+              <span aria-hidden className="text-base leading-tight text-violet">
+                ◆
+              </span>
+              <span className="text-justify hyphens-auto">
                 {block.label && (
                   <>
-                    {' · '}
-                    <Rich text={block.label} />
+                    <strong className="font-black text-ink">
+                      <Rich text={block.label} />
+                    </strong>
+                    {' : '}
                   </>
                 )}
-              </p>
-              <p className="text-justify hyphens-auto">
                 <Rich text={block.text} />
-              </p>
-            </div>
+              </span>
+            </p>
           )
         }
 
