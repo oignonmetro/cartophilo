@@ -15,7 +15,6 @@ interface Finished {
   outcome: SessionOutcome
   passed: boolean
   xp: number
-  peakTier: number
   deferred: number
 }
 
@@ -120,7 +119,6 @@ function LessonSession({ lessonId }: { lessonId: string }) {
         outcome={finished.outcome}
         passed={finished.passed}
         xp={finished.xp}
-        peakTier={finished.peakTier}
         deferred={finished.deferred}
         onContinue={backHome}
         onNext={
@@ -151,13 +149,13 @@ function LessonSession({ lessonId }: { lessonId: string }) {
       restored={resume}
       onSnapshot={(snapshot) => saveSnapshot(course.id, lessonId, { ...snapshot, seed, level })}
       onQuit={backHome}
-      onFinish={(outcome, peakTier, deferred) => {
+      onFinish={(outcome, deferred) => {
         clearSnapshot(course.id, lessonId)
         // Une leçon dont des cartes ont été remises à plus tard est tout de
         // même faite : le parcours continue, et c'est le rattrapage, avant la
         // séance finale, qui retient l'unité tant qu'elles n'y sont pas reprises.
         const result = finishLesson(course.id, lessonId, outcome)
-        setFinished({ outcome, peakTier, deferred, ...result })
+        setFinished({ outcome, deferred, ...result })
       }}
     />
   )

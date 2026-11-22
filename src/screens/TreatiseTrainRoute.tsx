@@ -23,7 +23,7 @@ export function TreatiseTrainRoute({ domain = 'treatises' }: { domain?: DrillDom
   const { course } = useCourse()
   const finishStep = useProgress((state) => state.finishStep)
   const [attempt, setAttempt] = useState(0)
-  const [finished, setFinished] = useState<{ outcome: SessionOutcome; xp: number; peakTier: number } | null>(null)
+  const [finished, setFinished] = useState<{ outcome: SessionOutcome; xp: number } | null>(null)
 
   const entries: readonly DrillEntry[] = useMemo(() => {
     if (course.layout !== 'library') return []
@@ -53,7 +53,6 @@ export function TreatiseTrainRoute({ domain = 'treatises' }: { domain?: DrillDom
         outcome={finished.outcome}
         passed
         xp={finished.xp}
-        peakTier={finished.peakTier}
         onContinue={back}
         onNext={() => {
           setFinished(null)
@@ -72,8 +71,8 @@ export function TreatiseTrainRoute({ domain = 'treatises' }: { domain?: DrillDom
       exercises={ghosts}
       materialize={materialize}
       onQuit={back}
-      onFinish={(outcome, peakTier) =>
-        setFinished({ outcome, peakTier, ...finishStep(course.id, domain === 'terms' ? 'glossaire:revision' : 'traites:reperage', outcome) })
+      onFinish={(outcome) =>
+        setFinished({ outcome, ...finishStep(course.id, domain === 'terms' ? 'glossaire:revision' : 'traites:reperage', outcome) })
       }
     />
   )

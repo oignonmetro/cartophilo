@@ -31,10 +31,8 @@ import { WorkMatch } from '@/components/work/WorkMatch'
 import {
   SessionHapticsProvider,
   useHaptics,
-  type SessionCombo,
   type SessionHaptics,
 } from '@/components/session/useSessionHaptics'
-import { ComboBadge } from '@/components/session/ComboBadge'
 import { BookIcon, ChestIcon, ClockIcon, CloseIcon, FlagIcon, RefreshIcon, StarIcon } from '@/components/icons'
 import type { SessionOutcome } from '@/engine/progress'
 import type { UnitNodeKind } from '@/engine/unitPath'
@@ -72,10 +70,9 @@ interface SessionScreenProps {
   /** Appelé à chaque pas de la session, pour qu'elle puisse être reprise. */
   onSnapshot?: (snapshot: Omit<SessionSnapshot, 'seed' | 'level'>) => void
   /**
-   * `peakTier` : le plus haut palier de série atteint, voir `useSessionHaptics` ;
    * `deferred` : cartes remises à plus tard pendant la séance.
    */
-  onFinish: (outcome: SessionOutcome, peakTier: number, deferred: number) => void
+  onFinish: (outcome: SessionOutcome, deferred: number) => void
 }
 
 /**
@@ -121,8 +118,7 @@ const BATCH_SIZE = 10
  * reste muette tant que personne ne l'a expliquée une fois. Une bulle sous
  * l'icône répète donc le même intitulé au premier affichage de la séance,
  * puis s'efface d'elle-même — un rappel, pas un élément permanent de
- * l'interface, sur le modèle de `ComboBadge` (même minuteur `setTimeout` +
- * sortie en fondu).
+ * l'interface (minuteur `setTimeout` et sortie en fondu).
  */
 /**
  * Interrupteur d'un mode de séance, dans l'en-tête : « citations seules »
@@ -219,10 +215,10 @@ interface Attempt {
  * fois fournir un contexte et le lire.
  */
 export function SessionScreen(props: SessionScreenProps) {
-  const { haptics, combo, peakTier } = useHaptics()
+  const { haptics } = useHaptics()
   return (
     <SessionHapticsProvider value={haptics}>
-      <SessionRunner {...props} haptics={haptics} combo={combo} peakTier={peakTier} />
+      <SessionRunner {...props} haptics={haptics} />
     </SessionHapticsProvider>
   )
 }
@@ -237,9 +233,7 @@ function SessionRunner({
   onSnapshot,
   onFinish,
   haptics,
-  combo,
-  peakTier,
-}: SessionScreenProps & { haptics: SessionHaptics; combo: SessionCombo; peakTier: () => number }) {
+}: SessionScreenProps & { haptics: SessionHaptics }) {
   const { course, itemsById } = useCourse()
   const gradeItem = useProgress((state) => state.gradeItem)
   const gradeTreatises = useProgress((state) => state.gradeTreatises)
@@ -532,8 +526,8 @@ function SessionRunner({
     finished.current = true
     const outcome = { correct: attempt.correct, total: attempt.total }
     haptics.finished(outcome)
-    onFinish(outcome, peakTier(), deferredHere.size)
-  }, [attempt.correct, attempt.total, current, haptics, onFinish, peakTier, deferredHere])
+    onFinish(outcome, deferredHere.size)
+  }, [attempt.correct, attempt.total, current, haptics, onFinish, deferredHere])
 
   if (!current || skipped) return null
 
@@ -599,7 +593,6 @@ function SessionRunner({
         <span className="w-12 text-right text-sm font-extrabold text-ink-faint">
           {attempt.passed.size}/{graded}
         </span>
-        <ComboBadge combo={combo} />
         {hasCitations && (
           <ModeSwitch
             on={citationsOnly}

@@ -52,7 +52,6 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
   const [finished, setFinished] = useState<{
     outcome: SessionOutcome
     xp: number
-    peakTier: number
     deferred: number
   } | null>(null)
 
@@ -140,7 +139,6 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
         outcome={finished.outcome}
         passed
         xp={finished.xp}
-        peakTier={finished.peakTier}
         deferred={finished.deferred}
         onContinue={backHome}
         onNext={
@@ -187,12 +185,12 @@ function StepSession({ unitId, stepId }: { unitId: string; stepId: string }) {
       kind={node.kind}
       exercises={exercises}
       onQuit={backHome}
-      onFinish={(outcome, peakTier, deferred) => {
+      onFinish={(outcome, deferred) => {
         // Chaque carte rattrapée a déjà levé son report à sa première bonne
         // réponse (voir `gradeItem`) ; la séance menée à son terme les lève
         // toutes, par sûreté.
         if (node.kind === 'catchup') releaseItems(course.id, catchupIds)
-        setFinished({ outcome, peakTier, deferred, ...finishStep(course.id, stepKey(unit.id, stepId), outcome) })
+        setFinished({ outcome, deferred, ...finishStep(course.id, stepKey(unit.id, stepId), outcome) })
       }}
     />
   )

@@ -24,7 +24,6 @@ export function ReviewRoute() {
   const [finished, setFinished] = useState<{
     outcome: SessionOutcome
     xp: number
-    peakTier: number
     deferred: number
   } | null>(null)
 
@@ -48,7 +47,6 @@ export function ReviewRoute() {
         outcome={finished.outcome}
         passed
         xp={finished.xp}
-        peakTier={finished.peakTier}
         deferred={finished.deferred}
         onContinue={() => navigate(-1)}
         onRetry={() => navigate(-1)}
@@ -73,8 +71,8 @@ export function ReviewRoute() {
       kind="review"
       exercises={exercises}
       onQuit={() => navigate(-1)}
-      onFinish={(outcome, peakTier, deferred) =>
-        setFinished({ outcome, peakTier, deferred, ...finishReview(outcome) })
+      onFinish={(outcome, deferred) =>
+        setFinished({ outcome, deferred, ...finishReview(outcome) })
       }
     />
   )

@@ -1,18 +1,14 @@
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { Button } from '@/components/Button'
 import { BoltIcon } from '@/components/icons'
-import { COMBO_TIER_LABELS } from '@/components/session/ComboBadge'
 import { accuracyOf, type SessionOutcome } from '@/engine/progress'
 import { useIsDesktop } from '@/lib/useIsDesktop'
-import { useProgress } from '@/store/progressStore'
 
-/** Écran de fin de session : score, XP gagnés, et meilleure série si elle a valu un palier. */
+/** Écran de fin de session : score et XP gagnés. */
 export function SessionResult({
   outcome,
   passed,
   xp,
-  peakTier = 0,
   deferred = 0,
   onContinue,
   onNext,
@@ -21,13 +17,6 @@ export function SessionResult({
   outcome: SessionOutcome
   passed: boolean
   xp: number
-  /**
-   * Plus haut palier de série atteint pendant la session (voir
-   * `useSessionHaptics`). Optionnel : les sessions qui n'ont pas de série à
-   * suivre (celles construites hors de `SessionScreen`, s'il en existe un
-   * jour) n'ont simplement rien à rappeler ici.
-   */
-  peakTier?: number
   /** Cartes remises à plus tard pendant la séance : rappelées ici, pour qu'on sache où les retrouver. */
   deferred?: number
   onContinue: () => void
@@ -36,9 +25,6 @@ export function SessionResult({
   onRetry: () => void
 }) {
   const accuracy = Math.round(accuracyOf(outcome) * 100)
-  const encouragements = useProgress((state) => state.encouragements)
-  // Réglage « Marquer les séries » : désactivé, le rappel de série disparaît aussi ici.
-  const streakTier = encouragements ? Math.min(peakTier, COMBO_TIER_LABELS.length) : 0
   const isDesktop = useIsDesktop()
 
   // Même raccourci que `RuleNote`/`SessionPause` : Entrée déclenche l'action
@@ -76,24 +62,6 @@ export function SessionResult({
             ? "Une carte remise à plus tard : elle vous attend au rattrapage, avant la séance finale de l'unité."
             : `${deferred} cartes remises à plus tard : elles vous attendent au rattrapage, avant la séance finale de l'unité.`}
         </p>
-      )}
-
-      {/* Le même badge qu'en cours de session (voir `ComboBadge`), mais qui
-          reste affiché plutôt que de s'effacer après 1,4 s : ici, rien
-          d'autre ne presse, la série mérite qu'on s'y attarde. */}
-      {streakTier > 0 && (
-        <motion.div
-          initial={{ opacity: 0, y: 8, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.3 }}
-          className="flex items-center gap-1.5 rounded-full bg-coral px-4 py-2 text-sm font-extrabold text-white"
-          style={{ boxShadow: '0 4px 0 0 var(--color-coral-deep)' }}
-        >
-          {Array.from({ length: streakTier }, (_, index) => (
-            <BoltIcon key={index} size={14} />
-          ))}
-          Meilleure série : {COMBO_TIER_LABELS[streakTier - 1]}
-        </motion.div>
       )}
 
       <div className="mt-2 flex w-full max-w-sm flex-col gap-3">
