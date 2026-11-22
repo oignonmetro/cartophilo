@@ -25,7 +25,11 @@ lessons:
   notes: |-
     **Le premier manuscrit part du travail aliéné comme d'un fait économique, et en tire quatre déterminations : le produit, l'activité, l'être générique, autrui.**
 
-    Marx reproche à l'économie politique de partir du fait de {amber}la propriété privée{/amber} sans l'expliquer : elle présuppose ce qu'elle devrait déduire, et se transporte dans {red}un état originel fictif{/red}, comme le théologien qui explique le mal par le péché originel. Lui part d'{violet}un fait économique actuel{/violet} : l'appauvrissement de l'ouvrier à mesure qu'il produit. Le texte découvre ce que ce fait exprime, par un rapprochement de l'objet puis de l'activité, jusqu'à l'être générique.
+    Marx reproche à l'économie politique de partir du fait de {amber}la propriété privée{/amber} sans l'expliquer : elle présuppose ce qu'elle devrait déduire, et se transporte dans {red}un état originel fictif{/red}, comme le théologien qui explique le mal par le péché originel. Lui part d'{violet}un fait économique actuel{/violet} : l'appauvrissement de l'ouvrier à mesure qu'il produit.
+
+    **Ce premier texte pose une question :** que signifie le fait que l'ouvrier s'appauvrisse d'autant plus qu'il produit ? **Sa thèse :** ce fait exprime que {coral}le produit du travail fait face à l'ouvrier comme une puissance étrangère, le capital{/coral}, parce que, dans le monde de l'économie politique, l'objectivation devient pour lui {coral}une perte de l'objet{/coral}. **Sa difficulté :** comment l'objectivation, qui est {amber}la réalisation même du travail{/amber}, peut-elle priver l'ouvrier d'objets, sans que ce soit le fait de s'objectiver qui l'aliène ?
+
+    Le texte avance en trois mouvements : du fait à ce qu'il exprime (§1 et §2), le renversement poussé à l'extrême (§3), le principe et son sens (§4).
 
     | Moment | Lieu | Ce qui s'y joue |
     | Le produit du travail | ce texte et « L'ouvrier, esclave de son objet » | le produit se dresse comme un être étranger, et l'ouvrier est coupé de la nature qui fournit matière et moyens de vivre |
@@ -36,17 +40,36 @@ lessons:
     ! Ce texte ne couvre que le début du passage, le fait de départ et l'aliénation du produit ; les quatre suivants le continuent. La suite du manuscrit (à qui appartient le produit ?) n'est dans aucun.
   passage:
     label: "Introduction"
-  points: []
+  points:
+  - id: m1844-i1-e1
+    sentence: "Marx reproche à l'économie politique de partir du fait de **la propriété privée** __sans ___.__"
+    answer: "l'expliquer"
+    alt: []
+  - id: m1844-i1-e2
+    sentence: "Thèse du premier texte : l'appauvrissement de l'ouvrier exprime que __le produit lui fait face comme une ___,__ le capital."
+    answer: "puissance étrangère"
+    alt: []
+  - id: m1844-i1-e3
+    sentence: "Problématique : comment **l'objectivation**, réalisation du travail, peut-elle __priver l'ouvrier ___,__ sans que s'objectiver soit aliénant ?"
+    answer: "d'objets"
+    alt: ["de ses objets"]
 - id: m1844-p1
-  title: "Un fait économique : l'appauvrissement de l'ouvrier"
+  title: "1.1 Le fait : l'ouvrier s'appauvrit à mesure qu'il produit"
   notes: |-
     **Marx part d'{amber}un fait économique actuel{/amber} : plus l'ouvrier produit de richesse, plus il s'appauvrit.**
 
-    Ce fait est un {red}paradoxe{/red} : {violet}la richesse produite{/violet} croît, et avec elle {coral}la pauvreté de celui qui la produit{/coral}. L'ouvrier devient une marchandise {red}d'autant moins chère{/red} qu'il en crée davantage : {violet}la dévalorisation du monde humain{/violet} va de pair avec {violet}la mise en valeur du monde matériel{/violet}. Le travail ne produit pas seulement des marchandises : il produit aussi {coral}l'ouvrier lui-même comme une marchandise{/coral}.
+    **Un point de départ de méthode.** « Nous partons » répond à l'économiste qui « part » de la propriété privée sans l'expliquer. Le fait est {violet}actuel{/violet} (*gegenwärtig*), présent, {red}non une origine racontée{/red} ; il est {violet}économique{/violet}, décrit dans les termes des économistes eux-mêmes : Marx ne leur oppose pas une indignation morale, il leur retourne leurs propres résultats.
 
-    ! Marx ne part ni d'un état originel fictif ni d'une définition de l'homme : le reste du passage cherche ce que ce fait exprime.
+    **Une proportion, non une coïncidence.** « D'autant plus pauvre qu'il produit plus » : la pauvreté {coral}croît avec{/coral} la richesse. L'allemand dit que la dévalorisation (*Entwertung*) du monde humain augmente {amber}en raison directe{/amber} de la mise en valeur (*Verwertung*) du monde des choses ; la traduction « va de pair » l'affaiblit. Le travail produit des marchandises, et {coral}l'ouvrier lui-même comme une marchandise{/coral}.
+
+    ? **Marchandise** : chose produite pour être vendue, dont le prix se règle sur le marché ; dire que l'ouvrier en devient une, c'est dire qu'il se vend et que son salaire obéit aux lois du prix des choses.
+
+    **Deux prémisses absentes du texte**, établies dans les colonnes qui précèdent : l'ouvrier est une marchandise (« la demande d'hommes règle nécessairement la production des hommes comme de toute autre marchandise ») ; et la richesse produite {amber}ne revient pas à l'ouvrier{/amber}, elle s'accumule ailleurs, en capital, « du travail accumulé ». D'où la proportion inverse : plus la richesse croît, plus elle grossit ce qui fait face à l'ouvrier.
+
+    ! Marx ne décrit pas {red}une pauvreté absolue{/red} mais une proportion ; et « le travail produit l'ouvrier » ne veut pas dire que le travail fait l'homme : il le produit {green}comme marchandise{/green}, l'inverse d'une formation de soi.
   passage:
     label: "§1"
+    part: "1. Du fait à ce qu'il exprime"
     text: |-
       Nous partons d'un fait économique actuel.
       L'ouvrier devient d'autant plus pauvre qu'il produit plus de richesse, que sa production croît en puissance et en volume. L'ouvrier devient une marchandise au prix d'autant plus bas qu'il crée plus de marchandises. La dévalorisation du monde humain va de pair avec la mise en valeur du monde matériel. Le travail ne produit pas seulement des marchandises ; il se produit lui-même ainsi que l'ouvrier comme une marchandise dans la mesure où il produit des marchandises en général.
@@ -91,16 +114,41 @@ lessons:
     sentence: "« La dévalorisation du monde humain va de pair avec la mise en valeur du monde matériel. Le travail ne produit pas seulement des marchandises ; il se produit lui-même ainsi que l'ouvrier comme une marchandise ___. »"
     answer: "dans la mesure où il produit des marchandises en général"
     alt: []
+  - id: m1844-p1-e1
+    sentence: "Marx part d'un fait **actuel**, présent, et non, comme l'économiste, d'__un état ___ imaginaire__."
+    answer: "originel"
+    alt: []
+  - id: m1844-p1-e2
+    sentence: "Allemand : la dévalorisation du monde humain augmente __en raison ___ de la mise en valeur du monde des choses (« va de pair » affaiblit)."
+    answer: "directe"
+    alt: []
+  - id: m1844-p1-e3
+    sentence: "Prémisse absente du §1 : la richesse produite __ne revient pas à l'ouvrier, elle s'accumule en ___,__ « travail accumulé »."
+    answer: "capital"
+    alt: []
+  - id: m1844-p1-e4
+    sentence: "« Le travail produit l'ouvrier comme marchandise » : __non une formation de soi, mais ___.__"
+    answer: "son inverse"
+    alt: ["l'inverse"]
 - id: m1844-p2
-  title: "Le produit se dresse comme un être étranger"
+  title: "1.2 à 1.4 Le produit étranger, l'objectivation, le triple renversement"
   notes: |-
-    **Le fait s'explique ainsi : le produit du travail se dresse devant l'ouvrier comme {red}un être étranger{/red}, et la réalisation du travail apparaît comme la perte de l'objet.**
+    **Le fait exprime un rapport : {coral}le produit fait face à l'ouvrier comme un être étranger{/coral}, parce que l'objectivation, qui est la réalisation du travail, devient pour lui une perte.**
 
-    Le produit est {violet}l'objectivation{/violet} du travail : du travail {amber}fixé, matérialisé dans un objet{/amber}. La réalisation du travail est son objectivation. Mais {coral}dans le monde de l'économie politique{/coral}, cette réalisation apparaît comme {red}perte de sa réalité{/red} pour l'ouvrier, l'objectivation comme perte de l'objet ou asservissement à lui, l'appropriation comme {violet}aliénation{/violet} et dessaisissement.
+    **1.2 Ce que le fait exprime.** « N'exprime rien d'autre que » : le fait économique {amber}n'est que la manifestation{/amber} d'un rapport, et ce rapport l'épuise. Le produit se dresse devant l'ouvrier (*gegenübertreten*) comme {violet}un être étranger{/violet} (*fremd*, racine d'*Entfremdung*), une puissance indépendante du producteur. Raison implicite : la richesse n'est que l'ensemble des produits du travail ; si l'ouvrier s'appauvrit à mesure qu'elle croît, c'est que ses produits {coral}ne lui reviennent pas{/coral} et grossissent ce qui lui fait face.
 
-    ! Marx ne dit pas que l'objectivation est aliénante en soi : il décrit ce qu'elle devient dans le monde de l'économie politique.
+    **1.3 Le produit, travail fixé.** Le produit est {amber}le travail même{/amber}, « fixé, matérialisé dans un objet » (l'allemand dit *sachlich gemacht*, rendu chose, sans rien de péjoratif).
+
+    ? **Objectivation, réalisation** : *Vergegenständlichung*, le fait que le travail passe dans un objet ; *Verwirklichung*, le fait de devenir effectif. Pour le travail, devenir objet et devenir réel sont {coral}une seule et même chose{/coral} : le menuisier ne réalise son travail que dans la table.
+
+    Ce rappel fixe l'étalon : on ne dit pas étranger ce qui n'a jamais été à soi. Et il interdit de faire de l'objectivation la cause de la perte, puisque c'est en s'objectivant que l'ouvrier se réalise.
+
+    **1.4 Le triple renversement.** « Dans le monde de l'économie politique » (*Zustand*, l'état décrit par les économistes), la réalisation {amber}« apparaît »{/amber} comme perte de réalité (*Entwirklichung*), l'objectivation comme {coral}perte de l'objet et servitude{/coral} envers lui (l'allemand dit « et », *Knechtschaft*, le mot du serviteur chez Hegel), l'appropriation comme aliénation et dessaisissement (*Entäußerung*, la perte de ce dans quoi on s'est exprimé, selon Fischbach). Ce n'est pas une perte {red}après{/red} l'objectivation : Fischbach parle d'{green}« un objet toujours déjà perdu »{/green}.
+
+    ! Contresens à éviter : l'aliénation {red}n'est pas l'objectivation{/red}, la fixation de l'activité dans une chose ; Fischbach juge « complet » ce glissement vers la réification, mot absent du passage. C'est {green}ce que devient l'objectivation dans un état déterminé{/green}.
   passage:
     label: "§2"
+    part: "1. Du fait à ce qu'il exprime"
     text: "Ce fait n'exprime rien d'autre que ceci : l'objet que le travail produit, son produit, se dresse devant lui comme un être étranger, comme une puissance indépendante du producteur. Le produit du travail est le travail qui s'est fixé, matérialisé dans un objet, il est l'objectivation du travail. La réalisation du travail est son objectivation. Dans le monde de l'économie politique, cette réalisation du travail apparaît comme la perte pour l'ouvrier de sa réalité, l'objectivation comme la perte de l'objet ou l'asservissement à celui-ci, l'appropriation comme l'aliénation, le dessaisissement."
   points:
   - id: m1844-p2-1
@@ -148,16 +196,47 @@ lessons:
     sentence: "« La réalisation du travail est son objectivation. Dans le monde de l'économie politique, cette réalisation du travail apparaît comme la perte pour l'ouvrier de sa réalité, l'objectivation comme la perte de l'objet ou l'asservissement à celui-ci, ___. »"
     answer: "l'appropriation comme l'aliénation, le dessaisissement"
     alt: []
+  - id: m1844-p2-e1
+    sentence: "« Ce fait n'exprime rien d'autre que » : le fait économique __n'est que la ___ d'un rapport__ de l'ouvrier à son produit."
+    answer: "manifestation"
+    alt: ["expression"]
+  - id: m1844-p2-e2
+    sentence: "Pour le travail, **objectivation** et **réalisation** sont __une ___,__ comme le menuisier ne réalise son travail que dans la table."
+    answer: "seule et même chose"
+    alt: []
+  - id: m1844-p2-e3
+    sentence: "La perte de l'objet n'est pas l'effet de l'objectivation elle-même, mais de ce qu'elle devient __« dans le monde de ___ »__."
+    answer: "l'économie politique"
+    alt: []
+  - id: m1844-p2-e4
+    sentence: "Allemand du §2 : l'objectivation apparaît comme perte de l'objet __et__ comme ___ envers lui (*Knechtschaft*, le mot de Hegel)."
+    answer: "servitude"
+    alt: []
+  - id: m1844-p2-e5
+    sentence: "Pour Fischbach, l'aliénation n'est pas une perte qui suit l'objectivation : c'est la production __d'un objet toujours ___.__"
+    answer: "déjà perdu"
+    alt: []
+  - id: m1844-p2-e6
+    sentence: "Contresens « complet » selon Fischbach : confondre l'aliénation avec la **chosification** ou la ___, mots absents du passage."
+    answer: "réification"
+    alt: []
 - id: m1844-p3
-  title: "Une perte de réalité jusqu'à la mort"
+  title: "2.1 à 2.4 Le renversement poussé à l'extrême"
   notes: |-
-    **La perte est radicale : l'ouvrier perd sa réalité jusqu'à en mourir de faim, et jusqu'à l'objet de son travail lui-même.**
+    **Les trois renversements se vérifient {amber}« à tel point »{/amber} que l'ouvrier perd sa réalité jusqu'à la faim, ses objets jusqu'au travail lui-même, et tombe sous la domination de son produit, {coral}le capital{/coral}.**
 
-    Le dessaisissement porte sur {red}deux sortes d'objets{/red} : {amber}les objets les plus indispensables à la vie{/amber} et {amber}les objets du travail{/amber}. Le travail lui-même devient un objet dont l'ouvrier ne s'empare que par un grand effort et irrégulièrement. Et {coral}plus il produit d'objets, moins il possède{/coral} : il tombe sous la domination de son propre produit, {violet}le capital{/violet}.
+    **2.1 Jusqu'à mourir de faim.** La déréalisation n'est pas une métaphore : la réalité de l'ouvrier, c'est d'abord son existence de vivant. Implicite : il n'a {amber}pas d'autre accès aux vivres que son salaire{/amber}, et son travail dépend de la demande ; dès qu'elle manque, il tombe « dans la mendicité ou la mort par inanition » (colonne du salaire).
 
-    ! Marx ne dit pas que l'ouvrier produit trop peu : il dit que son produit se retourne contre lui.
+    **2.2 Les objets de la vie et les objets du travail.** « Spolié » : vocabulaire du vol, sans voleur nommé. Il perd les vivres, et {coral}la matière et les outils{/coral} de son travail. Implicite : ces outils sont eux-mêmes du travail accumulé, retiré de ses mains ; son objectivation forme le stock d'objets dont il est privé. Fischbach : une perte {green}« bien plus radicale »{/green} que celle du seul produit, une perte d'objectivité.
+
+    **2.3 Le travail lui-même devenu objet.** « Oui » enchérit. L'ouvrier doit s'emparer (*sich bemächtigen*) du travail « en faisant le plus grand effort et avec les interruptions les plus irrégulières » : l'embauche et le chômage. Raison : sans travail, ni pain ni outils ; le travail devient {amber}l'objet essentiel{/amber} qui donne accès à tous les autres, et l'ouvrier est réduit à une {violet}pure capacité de travail{/violet}, séparée des moyens de passer à l'acte.
+
+    **2.4 La domination du capital.** Plus il produit, {coral}moins il peut posséder{/coral}, et plus il tombe sous la domination (*Herrschaft*, qui répond à la *Knechtschaft*) de {amber}« son propre produit, le capital »{/amber} : le capital n'est que ses produits accumulés contre lui. Marx ne nomme pas encore {red}le capitaliste{/red} : la question « à qui appartient le produit ? » viendra au terme du passage.
+
+    ! Contresens « massif » selon Fischbach : croire que l'aliénation est que {red}le travail devienne objet{/red}. Le problème est que l'ouvrier soit {green}séparé{/green} de cet objet devenu essentiel. Ce mouvement ne prouve rien de plus que le §2 : il en {amber}mesure l'ampleur{/amber}.
   passage:
     label: "§3"
+    part: "2. Le renversement poussé à l'extrême"
     text: "La réalisation du travail se révèle être à tel point une perte de réalité que l'ouvrier perd sa réalité jusqu'à en mourir de faim. L'objectivation se révèle à tel point être la perte de l'objet que l'ouvrier est spolié non seulement des objets les plus indispensables à la vie, mais encore des objets du travail. Oui, le travail lui-même devient un objet dont il ne peut s'emparer qu'en faisant le plus grand effort et avec les interruptions les plus irrégulières. L'appropriation de l'objet se révèle à tel point être une aliénation que, plus l'ouvrier produit d'objets, moins il peut posséder et plus il tombe sous la domination de son propre produit, le capital."
   points:
   - id: m1844-p3-1
@@ -200,16 +279,43 @@ lessons:
     sentence: "« L'appropriation de l'objet se révèle à tel point être une aliénation que, plus l'ouvrier produit d'objets, moins il peut posséder et plus il tombe sous la domination de ___. »"
     answer: "son propre produit, le capital"
     alt: []
+  - id: m1844-p3-e1
+    sentence: "Ce qui mène l'ouvrier jusqu'à la faim : __il n'a pas d'autre accès aux vivres que son ___,__ et son travail dépend de la demande."
+    answer: "salaire"
+    alt: []
+  - id: m1844-p3-e2
+    sentence: "Pour Fischbach, la perte des objets de la vie et du travail est une __perte d'___,__ bien plus radicale que celle du seul produit."
+    answer: "objectivité"
+    alt: []
+  - id: m1844-p3-e3
+    sentence: "Le travail devient **l'objet essentiel** parce qu'__il est la condition de l'accès à tous les ___.__"
+    answer: "autres objets"
+    alt: []
+  - id: m1844-p3-e4
+    sentence: "L'ouvrier séparé de ses moyens est réduit à __une pure ___ de travail__, qui attend qu'on lui fournisse de quoi s'exercer."
+    answer: "capacité"
+    alt: []
+  - id: m1844-p3-e5
+    sentence: "Contresens « massif » : l'aliénation n'est pas que le travail devienne objet, mais que l'ouvrier __soit ___ de cet objet__."
+    answer: "séparé"
+    alt: []
 - id: m1844-p4
-  title: "L'ouvrier dans son produit, comme l'homme en Dieu"
+  title: "3.1 à 3.4 Le principe, la religion, l'ouvrier privé d'objets"
   notes: |-
-    **Toutes ces conséquences découlent d'un seul rapport : l'ouvrier est devant son produit {red}comme devant un objet étranger{/red}.**
+    **Toutes les conséquences résident dans {coral}une seule détermination{/coral} ; et cette détermination laisse l'ouvrier {coral}« privé d'objets »{/coral} à mesure qu'il produit.**
 
-    S'il en est ainsi, plus l'ouvrier se dépense, plus {amber}le monde étranger qu'il crée en face de lui devient puissant{/amber}, et plus il est lui-même pauvre. Marx le compare à {violet}la religion{/violet} : plus l'homme projette de choses en Dieu, moins il en garde en lui-même. L'ouvrier {coral}place sa vie dans l'objet{/coral}, qui la possède désormais. D'où la conclusion : la vie prêtée à l'objet {red}s'oppose à lui, hostile et étrangère{/red}, et son travail devient {violet}une puissance autonome face à lui{/violet}.
+    **3.1 Une seule détermination.** L'allemand ne dit pas « par définition » mais *in der Bestimmung* : les conséquences {amber}résident dans la détermination{/amber} selon laquelle l'ouvrier se rapporte à son produit comme à un objet étranger, puis il l'appelle une {violet}présupposition{/violet} (*Voraussetzung*). L'ordre d'exposition, des faits au principe, est {red}l'inverse de l'ordre des raisons{/red}. Implicite du passage d'« étranger » à « puissant » : ce qu'il produit {amber}s'accumule{/amber} au lieu de disparaître, et ce qui s'accumule agit sur lui (le notebook ajoute la prémisse du travail comme {violet}expression vitale{/violet}, *Lebensäußerung*).
 
-    ! L'aliénation n'est pas seulement que le travail devienne un objet : c'est que cet objet existe en dehors de lui et lui fasse face.
+    **3.2 Comme dans la religion.** L'allemand dit seulement « il en va de même » et « place » (*setzt*), non « projette ». Feuerbach : {teal}« Pour enrichir Dieu, l'homme doit se faire pauvre ; pour que Dieu soit tout, l'homme doit n'être rien »{/teal}. Ce qui justifie le parallèle : dans les deux cas, l'objet est fait de la substance de son producteur, celui-ci ne s'y reconnaît pas, et l'objet a sur lui une puissance qu'il tient de lui. Limite : Dieu est {red}imaginaire{/red}, le produit {green}réel{/green}.
+
+    **3.3 L'ouvrier privé d'objets.** Deux « donc » (*also*) que la traduction efface. « Plus cette activité est grande, plus l'ouvrier est privé d'objets » : *gegenstandsloser*, {coral}sans objet{/coral}. Implicite : sa vie mise dans l'objet appartient au capital ; plus il est actif, plus il est séparé des objets de la vie et du travail ; il ne lui reste qu'une capacité sans objet. L'aliénation est donc {green}une perte d'objectivité{/green}, {red}non un excès d'objet{/red} ; et parce que l'homme est un être naturel, cette perte est {amber}une perte de soi{/amber} : « moins l'ouvrier est lui-même ».
+
+    **3.4 Ce que signifie l'aliénation dans le produit.** *Entäußerung* : « non seulement » le travail devient objet, réalité extérieure, ce qui arrive à tout travail, « mais » il {coral}existe hors de lui, indépendant, hostile{/coral}. Deux extériorités : celle de tout produit, et celle d'un produit séparé de son producteur.
+
+    ! Lire l'analogie religieuse comme la clé du texte masque son point le plus original : {red}le croyant n'est pas privé de Dieu{/red}, {green}l'ouvrier est privé d'objets{/green}.
   passage:
     label: "§4"
+    part: "3. Le principe et son sens"
     text: "Toutes ces conséquences découlent du fait que, par définition, l'ouvrier se trouve devant le produit de son propre travail dans le même rapport qu'à l'égard d'un objet étranger. S'il en est ainsi, il est évident que, plus l'ouvrier se dépense au travail, plus le monde étranger, objectif, qu'il crée en face de lui devient puissant, plus il s'appauvrit lui-même et plus son monde intérieur devient pauvre, moins il possède en propre. C'est la même chose avec la religion. Plus l'homme projette de choses en Dieu, moins il en garde en lui-même. L'ouvrier place sa vie dans l'objet. Mais alors celle-ci ne lui appartient plus, elle appartient à l'objet. Plus cette activité est grande, plus l'ouvrier est privé d'objets. Il n'est pas ce qu'il produit par son travail. Plus ce produit gagne en substance, moins l'ouvrier est lui-même. L'aliénation de l'ouvrier dans son produit signifie non seulement que son travail devient un objet, une réalité extérieure, mais que son travail existe en dehors de lui, indépendamment de lui, étranger à lui, et devient une puissance autonome face à lui, que la vie qu'il a prêtée à l'objet s'oppose à lui, hostile et étrangère."
   points:
   - id: m1844-p4-1
@@ -266,4 +372,28 @@ lessons:
     fragment: "3/3"
     sentence: "« L'aliénation de l'ouvrier dans son produit signifie non seulement que son travail devient un objet, une réalité extérieure, mais que son travail existe en dehors de lui, indépendamment de lui, étranger à lui, et devient une puissance autonome face à lui, que ___. »"
     answer: "la vie qu'il a prêtée à l'objet s'oppose à lui, hostile et étrangère"
+    alt: []
+  - id: m1844-p4-e1
+    sentence: "Allemand : les conséquences __« résident dans la ___ »__ (*Bestimmung*), non « par définition », que Marx appelle ensuite une présupposition."
+    answer: "détermination"
+    alt: []
+  - id: m1844-p4-e2
+    sentence: "Au §4, l'ordre d'exposition, des faits au principe, est __l'inverse de l'ordre des ___.__"
+    answer: "raisons"
+    alt: []
+  - id: m1844-p4-e3
+    sentence: "Feuerbach : « Pour enrichir Dieu, l'homme doit se faire ___ ; pour que Dieu soit tout, l'homme doit n'être rien »."
+    answer: "pauvre"
+    alt: []
+  - id: m1844-p4-e4
+    sentence: "Limite de l'analogie religieuse : Dieu est imaginaire, __le produit du travail est ___.__"
+    answer: "réel"
+    alt: []
+  - id: m1844-p4-e5
+    sentence: "« Privé d'objets » (*gegenstandslos*) : l'aliénation est __une perte d'objectivité, non un excès d'___.__"
+    answer: "objet"
+    alt: []
+  - id: m1844-p4-e6
+    sentence: "Au §4, le travail devient objet, ce qui arrive à tout travail, mais aussi __il existe ___ de l'ouvrier__, indépendant et hostile."
+    answer: "hors"
     alt: []
