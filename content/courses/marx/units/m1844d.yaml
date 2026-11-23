@@ -11,6 +11,10 @@
 # 2026-11-21 ; il est réparti en cinq unités (m1844, m1844b à m1844e), qui
 # gardent les identifiants des leçons et des cartes (m1844-p…), donc leur
 # révision, avec des § renumérotés dans chaque unité.
+# Refondu le 2026-11-23 : une leçon par phrase ou segment (m1844-p13, p13b…),
+# deux leçons d'introduction ; les cartes-citation gardent leurs identifiants,
+# recentrées sur leur segment ; les cartes-explication reprises du commentaire
+# de Collin gardent les leurs, les autres sont nouvelles (-x…).
 
 id: m1844d
 title: "L'être générique renversé (1844)"
@@ -22,21 +26,69 @@ intro: |-
   La troisième détermination du travail aliéné : l'homme est un être générique, qui vit de la nature comme de son corps non organique et fait de son activité vitale l'objet de sa conscience ; le travail aliéné renverse ce rapport et fait de la vie générique le moyen de la vie individuelle.
 lessons:
 - id: m1844d-i1
-  title: "Où en est l'argument : la troisième détermination"
+  title: "Le texte, sa place et son plan"
   notes: |-
-    **De l'aliénation du produit et de celle de l'activité, Marx tire une troisième détermination : le travail aliéné rend l'homme étranger à son espèce.**
+    **Le texte est le quatrième des cinq moments du passage sur le travail aliéné : il énonce enfin {coral}ce qu'est l'homme{/coral}, sous le nom d'être générique, pour en tirer une troisième détermination, {coral}l'homme rendu étranger à son espèce{/coral}.** Il se trouve aux pages XXIII et XXIV du manuscrit, de « De ces deux déterminations du travail aliéné, nous devons en tirer une troisième » à la phrase où le travail aliéné « renverse ce rapport ».
 
-    Pour la tirer, il doit dire ce qu'est l'homme, que les textes précédents supposaient (son « essence », ses « fonctions proprement humaines »).
+    **Où en est l'argument.** Les trois textes précédents ont dégagé {amber}l'aliénation de la chose{/amber} (l'ouvrier dépossédé de son produit et de la nature, serviteur de son objet) et {amber}l'aliénation de soi{/amber} (son activité vécue comme celle d'un autre). Ils s'appuyaient sur une conception de l'homme {red}qu'ils supposaient sans l'énoncer{/red} : ils parlaient de son « essence », de ses « fonctions proprement humaines », sans dire ce qu'elles sont.
 
-    **Sa question :** qu'est-ce que l'homme, pour que le travail aliéné puisse lui rendre étrangère son espèce elle-même ? **Sa thèse :** l'homme est {violet}un être générique{/violet}, qui fait de toutes les espèces son objet, vit de la nature entière comme de {violet}son corps non organique{/violet} et {amber}a{/amber} son activité vitale au lieu de l'être ; c'est en lui rendant étrangères la nature et son activité que le travail aliéné lui rend étrangère son espèce, en faisant {coral}de la vie générique un moyen de la vie individuelle{/coral}, et il le peut {coral}parce que l'homme est conscient{/coral}. **Sa difficulté :** comment la conscience, qui fait de l'homme un être libre, peut-elle être aussi ce qui lui permet de réduire son activité à un moyen de survivre ?
+    **Pourquoi la définition de l'homme vient-elle si tard ?** Parce que Marx est parti {green}d'un fait économique{/green}, non d'une définition de l'homme posée d'avance, pour ne pas faire comme l'économiste qui se transporte dans un état originel imaginaire. {coral}La définition vient quand l'analyse du fait la rend nécessaire.{/coral} Le texte suivant achèvera la démonstration et en tirera une quatrième détermination, l'homme étranger à l'homme.
 
-    Trois mouvements : ce qu'est l'homme (§1, §2), le travail aliéné rend l'espèce étrangère (§3), la première preuve (§4).
+    **D'où vient le mot.** *Gattungswesen*, « être générique », est un mot de Feuerbach. Dans *L'Essence du christianisme* (1841), la conscience au sens strict n'existe que là où un être a pour objet {violet}son genre{/violet} : l'animal a le {amber}sentiment de soi{/amber}, il est objet pour lui-même comme individu, non comme genre ; la conscience est science, et il n'y a de science que du général. Marx avait d'abord employé le mot contre l'État : dans *Sur la question juive*, là où il est « considéré comme un être générique », l'homme est {teal}« le membre imaginaire d'une souveraineté illusoire »{/teal}, empli d'une universalité irréelle. En 1844, il le ramène {green}de l'État et de la science à la production{/green}.
 
-    ? **Être générique** : *Gattungswesen*, mot de Feuerbach ; un être qui ne fait pas seulement partie d'une espèce, mais {amber}se rapporte à elle{/amber}, et agit en chacun de ses actes en membre de l'espèce. Chez Marx, ce rapport est d'abord {green}pratique{/green} : il passe par la production.
+    ? **Genre, espèce** (*Gattung*) : l'ensemble des êtres d'une même sorte. **Vie générique** (*Gattungsleben*) : la vie de l'espèce en tant qu'espèce, ce qui en chaque individu relève de ce qu'il a en commun avec les autres. **Activité vitale** (*Lebenstätigkeit*) : le mode d'activité par lequel un vivant entretient sa vie ; chez l'homme, le travail.
 
-    **D'où vient le mot.** Chez Feuerbach (*L'Essence du christianisme*), la conscience au sens strict n'existe que là où un être a pour objet {violet}son genre{/violet} : l'animal a le {amber}sentiment de soi{/amber}, il est objet pour lui-même comme individu, non comme genre ; la conscience est science, et il n'y a de science que du général. Marx avait d'abord employé le mot contre l'État : dans *Sur la question juive*, là où il est « considéré comme un être générique », l'homme est {teal}« le membre imaginaire d'une souveraineté illusoire »{/teal}, empli d'une universalité irréelle. En 1844, il le ramène {green}de l'État et de la science à la production{/green}.
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | ce qu'est l'homme : un être générique | §1 et §2 | L'homme fait de toutes les espèces son objet et se rapporte à lui-même comme à l'espèce, donc comme à un être universel et libre ; cette universalité fait de la nature entière son corps non organique. |
+    | le travail aliéné rend l'espèce étrangère | §3 | En lui rendant étrangères la nature et son activité, il lui rend étrangère son espèce, et fait de la vie générique le moyen de la vie individuelle. |
+    | la première preuve | §4 | La vie productive est la vie générique ; l'animal est son activité, l'homme l'a ; le travail aliéné retourne cette distance, et fait de l'essence un moyen de l'existence. |
 
-    **Un mot bientôt abandonné.** Dès 1845, la sixième des *Thèses sur Feuerbach* reproche au genre feuerbachien d'être une {red}« universalité interne, muette »{/red}, liant naturellement les individus : l'essence humaine sera « l'ensemble des rapports sociaux ». Le mot disparaît, le contenu demeure (travail conscient, rapport universel à la nature), sous le nom de {violet}métabolisme{/violet}.
+    **Un mot bientôt abandonné.** Dès 1845, la sixième des *Thèses sur Feuerbach* reprochera au genre feuerbachien d'être une {red}« universalité interne, muette »{/red}, liant naturellement les individus : l'essence humaine sera « l'ensemble des rapports sociaux ». Le mot disparaîtra ; le contenu demeurera (le travail conscient, le rapport universel à la nature), sous le nom de {violet}métabolisme{/violet}.
+
+    ! Marx ne juge pas le travail aliéné au nom d'{red}une essence éternelle{/red}, d'un âge d'or perdu : il dégage {green}ce qui, dans l'activité humaine présente, la distingue de celle de l'animal{/green}, et que le travail aliéné retourne.
+  passage:
+    label: "Introduction"
+  points:
+  - id: m1844d-i1-x1
+    sentence: "La définition de l'homme vient tard parce que Marx est parti __d'un fait ___,__ non d'une essence posée d'avance."
+    answer: "économique"
+    alt: []
+  - id: m1844d-i1-e3
+    sentence: "Feuerbach : l'animal a le sentiment de soi, non la conscience, car __il n'est pas objet pour lui-même comme ___.__"
+    answer: "genre"
+    alt: []
+  - id: m1844d-i1-e4
+    sentence: "*Sur la question juive* : dans l'État, l'homme considéré comme être générique est __« le membre imaginaire d'une souveraineté ___ »__."
+    answer: "illusoire"
+    alt: []
+  - id: m1844d-i1-e5
+    sentence: "Thèse VI sur Feuerbach : le genre feuerbachien n'est qu'une __« universalité interne, ___ »__."
+    answer: "muette"
+    alt: []
+- id: m1844d-i2
+  title: "La question, la thèse, la problématique"
+  notes: |-
+    **Le texte se demande ce qu'est l'homme, pour que le travail aliéné puisse lui rendre étrangère {coral}non seulement sa production et son activité, mais son espèce elle-même{/coral}.**
+
+    **Pourquoi cette question ?** Pour comprendre ce que l'aliénation fait perdre à l'homme, il faut dire {amber}ce qu'il est{/amber} ; et pour comprendre qu'elle touche l'espèce, il faut montrer que l'homme est, en lui-même, {amber}un rapport à son espèce{/amber}.
+
+    **Les réponses ordinaires.** La tradition définit l'homme par {red}la raison ou la conscience{/red} ; Feuerbach, par {red}la conscience de son genre{/red}. Marx demande à quoi se reconnaît réellement ce rapport de l'homme à son espèce : dans la pensée seulement, ou {green}d'abord dans la manière dont il vit de la nature et la transforme{/green} ?
+
+    **Sa thèse :** l'homme est {violet}un être générique{/violet} : il fait de toutes les espèces son objet et se rapporte à lui-même comme à l'espèce présente en lui, donc comme à {amber}un être universel et libre{/amber} ; cette universalité consiste en pratique à faire de {violet}la nature entière son corps non organique{/violet}, et elle tient à son activité vitale consciente, qu'il {amber}a{/amber} au lieu de l'{amber}être{/amber}. C'est en lui rendant étrangères la nature et son activité que le travail aliéné lui rend étrangère son espèce : il fait de la vie générique, qui est la vie productive, {coral}un simple moyen de la survie individuelle{/coral}, et il le peut {coral}précisément parce que l'homme est conscient{/coral}.
+
+    **Sa problématique :** comment la conscience, qui fait de l'homme un être générique et libre, peut-elle être aussi {coral}ce qui lui permet de réduire son activité vitale à un simple moyen de survivre{/coral} ?
+
+    **Pourquoi est-ce difficile ?** Ce qui distingue l'homme de l'animal, avoir son activité au lieu de l'être, serait aussi ce qui rend possible sa dégradation : l'animal, qui se confond avec son activité, {red}ne peut pas en faire un moyen{/red}. {coral}La liberté de l'homme serait la condition même de son aliénation.{/coral}
+
+    | Difficulté | Où elle se trouve | Réponse du texte |
+    | la conscience, condition de la liberté et de l'aliénation | la dernière phrase | la conscience donne la distance à l'égard de l'activité ; le travail aliéné la retourne |
+    | deux définitions de l'être générique déclarées « la même chose » | §1 | le rapport à soi passe par le rapport aux choses : se rapporter aux espèces et se rapporter à soi comme espèce sont un seul acte |
+    | l'homme universel, et pourtant « partie de la nature » | fin du §2 | l'universalité n'est pas une exception à la nature : c'est la nature qui se rapporte à elle-même par l'une de ses parties |
+    | conscient parce que générique, ou générique parce que conscient | §4, le « ou bien » | les deux ne sont que deux faces d'un même rapport |
+
+    **L'hypothèse de lecture :** Marx reprend le mot de Feuerbach pour en {coral}changer le sens{/coral}. L'être générique n'est plus d'abord la conscience que l'homme a de son genre, mais {green}son rapport pratique à la nature entière{/green}, dont il est une partie et qu'il travaille ; et la conscience n'est plus une intériorité, mais {green}une prise sur sa propre activité{/green}.
+
+    ! La thèse est forte : elle donne enfin la définition de l'homme {green}que tout le passage supposait{/green}. Elle est limitée : cette définition est {amber}posée, décrite et illustrée, non démontrée{/amber}, et la preuve de la troisième détermination, annoncée par « premièrement », ne s'achève que dans le texte suivant.
   passage:
     label: "Introduction"
   points:
@@ -48,407 +100,849 @@ lessons:
     sentence: "Problématique du quatrième texte : comment __la ___,__ qui rend l'homme libre, lui permet-elle aussi de réduire son activité à un moyen ?"
     answer: "conscience"
     alt: []
-  - id: m1844d-i1-e3
-    sentence: "Feuerbach : l'animal a le sentiment de soi, non la conscience, car __il n'est pas objet pour lui-même comme ___.__"
-    answer: "genre"
+  - id: m1844d-i2-x1
+    sentence: "Marx demande si le rapport de l'homme à son espèce se reconnaît dans la pensée, __ou d'abord dans la manière dont il vit de la ___ et la transforme.__"
+    answer: "nature"
     alt: []
-  - id: m1844d-i1-e4
-    sentence: "*Sur la question juive* : dans l'État, l'homme considéré comme être générique est __« le membre imaginaire d'une souveraineté ___ »__."
-    answer: "illusoire"
+  - id: m1844d-i2-x2
+    sentence: "L'animal, qui se confond avec son activité, __ne peut pas en faire un ___.__"
+    answer: "moyen"
     alt: []
-  - id: m1844d-i1-e5
-    sentence: "Thèse VI sur Feuerbach : le genre feuerbachien n'est qu'une __« universalité interne, ___ »__, liant naturellement les individus."
-    answer: "muette"
+  - id: m1844d-i2-x3
+    sentence: "La liberté de l'homme serait __la condition même de son ___.__"
+    answer: "aliénation"
     alt: []
 - id: m1844-p13
-  title: "L'homme est un être générique, universel, donc libre"
+  title: "Une troisième détermination : l'homme est un être générique"
   notes: |-
-    **Marx pose la prémisse de la troisième détermination : {coral}l'homme est un être générique{/coral}, en deux sens qui n'en font qu'un.**
+    **Marx annonce qu'une troisième détermination du travail aliéné va se déduire des deux premières, et pose aussitôt la prémisse dont il a besoin : {coral}l'homme est un être générique{/coral}, un être qui se rapporte à son espèce.** Le texte s'ouvre par un programme et une définition.
 
-    **Un syllogisme.** « Nous devons en tirer » annonce une déduction : le travail aliéné rend étrangers le produit et l'activité ; {amber}or l'homme se rapporte à son espèce par la nature et par son activité{/amber} ; donc il lui rend son espèce étrangère. La définition vient tard parce que Marx est parti d'un fait, non d'une essence posée d'avance.
+    **Pourquoi « déterminations » ?** *Bestimmung*, le mot qui disait, dans le premier texte, {amber}la détermination dont découlent les conséquences{/amber} : un caractère qui définit la chose. Les deux premières sont l'aliénation du produit (et de la nature) et l'aliénation de l'activité.
 
-    **Deux définitions, « la même chose ».** L'homme fait de l'espèce, la sienne et celle de toute chose, son objet ; et il se rapporte à lui-même comme à {violet}« l'espèce présente, vivante »{/violet} (*der gegenwärtigen, lebendigen Gattung*), comme à un être universel, {coral}« donc libre »{/coral} (*darum*).
+    **Pourquoi « nous devons en tirer » ?** *Zu ziehn*, tirer, extraire : le verbe annonce {violet}une déduction{/violet}, non une observation nouvelle, et « devons » marque l'obligation du raisonnement. La numérotation (1, 2, puis 3) organise le passage en déterminations successives.
 
-    **Pourquoi la même chose ?** Pour rencontrer chaque chose selon son espèce, il faut ne pas être enfermé dans un besoin particulier, comme l'abeille qui ne connaît de la fleur que le nectar ; c'est se rapporter à soi comme à l'espèce en sa généralité. La raison : la conscience de soi {amber}passe par l'action objective dans le monde{/amber} ; le rapport à soi se fait par le rapport aux choses.
+    **La déduction se fait-elle des deux déterminations seules ?** Non. Il faut leur ajouter {amber}une prémisse{/amber}, la définition de l'homme, que Marx pose aussitôt sans la démontrer. Le schéma implicite est celui d'un syllogisme.
+    - Le travail aliéné rend étrangers à l'homme {amber}son produit et son activité{/amber} : c'est acquis.
+    - Or l'homme est un être qui {amber}se rapporte à son espèce par son activité et par la nature qu'il transforme{/amber} : c'est ce qui va être posé.
+    - Donc {coral}le travail aliéné lui rend son espèce étrangère{/coral}.
 
-    **Pourquoi « donc libre » ?** La liberté est ici {violet}l'autodétermination{/violet}, être la cause de sa propre action, non pas être mû par un besoin particulier ; c'est l'auto-activité (*Selbstbetätigung*).
+    {yellow}Un professeur qui a montré qu'un élève a perdu son cahier et sa plume, puis qu'il ne sait plus écrire, ajoute : or écrire est ce qui fait de lui un écolier ; et il en tire que l'élève a perdu jusqu'à sa qualité d'écolier.{/yellow}
 
-    Concrètement, l'homme {amber}n'est fixé à aucun mode de vie{/amber} : il habite cavernes, cabanes ou palais, mange racines, gibier ou mets raffinés. {green}La non-fixité est la manifestation de l'autodétermination{/green}. Ce n'est pas le sens abstrait d'{red}être doué de raison{/red} : Hume prêtait déjà une raison aux animaux.
+    **Pourquoi « l'homme » ?** Non plus {red}« l'ouvrier »{/red} : la définition porte sur {green}l'homme en général{/green}, et c'est à partir d'elle qu'on mesurera ce qui arrive à l'ouvrier. « Est » : un énoncé de définition, au présent, sans modalisateur.
 
-    **« Vivante ».** L'espèce dont il s'agit n'est pas le genre pensé par la science, comme chez Feuerbach, mais {green}des individus réels, vivants, en relation{/green}. Le troisième manuscrit en tirera la conséquence : {teal}« L'individu est l'être social »{/teal}, et « la vie individuelle et la vie générique de l'homme ne sont pas différentes » ; la lettre à Feuerbach du 11 août 1844 demande ce qu'est le genre humain ramené sur terre, « sinon le concept de société ». Mais ici, Marx définit l'être générique {amber}d'abord par le rapport à la nature et l'activité libre{/amber}, sans thématiser encore les autres : l'identité avec l'être social est {red}l'aboutissement des *Manuscrits*{/red}, non le point de départ de ce paragraphe.
+    ? **Être générique** (*Gattungswesen*) : un être (*Wesen*, qui veut dire aussi essence) du genre (*Gattung*). Non pas simplement un individu qui appartient à une espèce, {red}ce que fait tout vivant{/red}, mais un être qui {amber}se rapporte à son espèce{/amber}, qui la connaît, agit en elle et pour elle, et met en jeu, en chacun de ses actes, ce qu'il a en commun avec tous les hommes. Chez Marx, ce rapport est {green}d'abord pratique{/green}. {yellow}Le chien appartient à l'espèce canine sans le savoir ; l'homme qui apprend une langue, invente un outil ou écrit une loi agit en membre de l'espèce humaine, et pour elle.{/yellow}
 
-    ? **Universel, libre** : universel, ce dont le rapport au monde ne se limite à aucun secteur ; libre, ce qui n'est déterminé par aucune particularité qui s'imposerait. {red}Non le libre arbitre{/red}, le choix entre deux actions.
+    **Les textes précédents ne supposaient-ils pas déjà cette définition ?** Si : quand ils parlaient de l'« essence » de l'ouvrier, à laquelle le travail est extérieur, et de ses « fonctions proprement humaines ». {coral}Ce texte rend explicite ce qui était implicite.{/coral}
 
-    Feuerbach plaçait l'essence générique dans la conscience théorique, la raison et l'amour ; Marx {green}la rend pratique{/green}.
-
-    ! Marx ne juge pas au nom d'{red}une essence éternelle{/red} : il dégage ce qui, dans l'activité présente, distingue l'homme de l'animal.
+    ! Ces deux phrases {red}ne démontrent rien{/red} : elles posent un programme et une prémisse, et {green}toute la valeur de la déduction à venir dépendra de cette prémisse{/green}.
   passage:
     label: "§1"
-    text: "De ces deux déterminations du travail aliéné, nous devons en tirer une troisième. L'homme est un être générique. Non seulement parce que, sur le plan pratique et théorique, il fait de l'espèce, la sienne propre aussi bien que celle de toute chose, son objet, mais encore – et ceci n'est qu'une autre façon d'exprimer la même chose – parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'une espèce réelle, vivante, parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'un être universel, donc libre."
     part: "1. Ce qu'est l'homme : un être générique"
+    text: "De ces deux déterminations du travail aliéné, nous devons en tirer une troisième. L'homme est un être générique."
   points:
   - id: m1844-p13-1
-    fragment: "1/2"
     sentence: "« De ces deux déterminations du travail aliéné, nous devons ___. L'homme est un être générique. »"
     answer: "en tirer une troisième"
     alt: []
   - id: m1844-p13-2
-    fragment: "1/2"
     sentence: "« De ces deux déterminations du travail aliéné, nous devons en tirer une troisième. L'homme est ___. »"
     answer: "un être générique"
     alt: []
+  - id: m1844-p13-x1
+    sentence: "« Nous devons en tirer » (*zu ziehn*) annonce __une ___,__ non une observation nouvelle."
+    answer: "déduction"
+    alt: []
+  - id: m1844-p13-x2
+    sentence: "La déduction ne se fait pas des deux déterminations seules : __il faut leur ajouter une ___,__ la définition de l'homme."
+    answer: "prémisse"
+    alt: []
+  - id: m1844-p13-x3
+    sentence: "La définition porte sur l'homme, non plus sur l'ouvrier : __c'est à partir d'elle qu'on ___ ce qui arrive à l'ouvrier.__"
+    answer: "mesurera"
+    alt: ["mesure"]
+  - id: m1844-p13-x4
+    sentence: "Les textes précédents supposaient déjà la définition quand ils parlaient de l'« ___ » de l'ouvrier __et de ses fonctions proprement humaines.__"
+    answer: "essence"
+    alt: []
+- id: m1844-p13b
+  title: "Faire de l'espèce son objet, se rapporter à soi comme à un être universel, donc libre"
+  notes: |-
+    **Marx donne deux raisons pour lesquelles l'homme est un être générique, et dit qu'{coral}elles reviennent au même{/coral} : il fait des espèces son objet, et il se rapporte à lui-même comme à l'espèce présente en lui, donc comme à un être universel, et par là libre.**
+
+    **Pourquoi « non seulement parce que… mais encore » ?** L'allemand dit *indem*, « en ce que » : ce ne sont pas {red}des causes{/red}, mais {green}des manières d'être générique{/green}.
+
+    **Pourquoi « sur le plan pratique et théorique » ?** Par l'action et par la connaissance ; et Marx met {amber}la pratique en premier{/amber}.
+
+    **Pourquoi « la sienne propre aussi bien que celle de toute chose » ?** L'élargissement est décisif : l'homme ne connaît et ne travaille pas seulement l'espèce humaine, mais {coral}toutes les espèces{/coral} ; il traite chaque chose selon ce qu'elle est en général. {yellow}Le botaniste qui classe les plantes fait des espèces son objet ; l'éleveur qui sait ce qu'il faut à chaque bête la traite selon son espèce.{/yellow}
+
+    **Pourquoi « une espèce réelle, vivante » ?** L'allemand dit *der gegenwärtigen, lebendigen Gattung*, {violet}« l'espèce présente, vivante »{/violet}, avec l'article défini : l'homme se rapporte à lui-même comme à l'espèce {amber}en tant qu'elle est là, présente en lui{/amber}, {red}non comme à une idée générale{/red}. Ce n'est pas le genre pensé par la science, comme chez Feuerbach, mais {green}des individus réels, vivants, en relation{/green}. Le troisième manuscrit en tirera la conséquence : {teal}« L'individu est l'être social »{/teal}, et « la vie individuelle et la vie générique de l'homme ne sont pas différentes ». Mais ici, Marx définit l'être générique {amber}d'abord par le rapport à la nature et l'activité libre{/amber}, sans thématiser encore les autres : l'identité avec l'être social est l'aboutissement des *Manuscrits*, non le point de départ de ce paragraphe.
+
+    **Pourquoi les deux définitions disent-elles « la même chose » ?** L'incise l'affirme, et ce n'est pas évident. On peut le reconstruire.
+    - Un vivant {amber}enfermé dans sa particularité{/amber} ne rencontre les choses qu'en fonction de son besoin propre : {yellow}l'abeille ne connaît de la fleur que le nectar{/yellow}.
+    - Pour rencontrer chaque chose {amber}selon son espèce{/amber}, selon ce qu'elle est en général, il faut ne pas être enfermé dans un besoin particulier : se rapporter à soi non comme à cet individu-ci, mais comme à un être capable de tout connaître et de tout travailler, {coral}l'espèce en sa généralité{/coral}.
+    - Réciproquement, celui qui se sait l'espèce présente en lui ne se limite à aucun objet.
+
+    Les deux formules décrivent {coral}une même libération à l'égard de la particularité{/coral}, vue du côté des objets, puis du côté de soi. La raison profonde : chez Marx, la conscience de soi {green}passe par l'action objective dans le monde{/green} ; le rapport à soi se fait par le rapport aux choses.
+
+    **Pourquoi « donc libre » ?** *Darum freien* : la liberté est {violet}déduite{/violet} de l'universalité. Un être qui se rapporte à l'universel {amber}n'est rivé à rien{/amber} : il peut choisir son objet, et même produire sans y être poussé par le besoin, ce que le texte suivant dira. La prémisse implicite est une définition de la liberté comme {coral}autodétermination{/coral} : être la cause de sa propre action, au lieu d'être mû par un besoin particulier ; c'est l'auto-activité (*Selbstbetätigung*). Sa face concrète : l'homme {amber}n'est fixé à aucun mode de vie{/amber}, {yellow}il habite cavernes, cabanes ou palais, mange racines, gibier ou mets raffinés{/yellow}. La non-fixité est la manifestation de l'autodétermination.
+
+    ? **Universel, libre** : universel, ce dont le rapport au monde {amber}ne se limite à aucun secteur{/amber}, comme celui de l'abeille aux fleurs ; libre, ce qui {amber}n'est déterminé par aucune particularité qui s'imposerait{/amber}, un besoin, un instinct, un objet unique. {red}Non le libre arbitre{/red}, le pouvoir de choisir entre deux actions ; ni le sens abstrait d'{red}être doué de raison{/red}.
+
+    **L'écart avec Feuerbach.** La première définition est proche de lui, pour qui l'homme est l'être qui a pour objet son genre ; la seconde s'en écarte. Feuerbach plaçait l'essence générique dans {red}la conscience théorique, la raison et l'amour{/red} ; Marx {green}la rend pratique{/green} : se rapporter à soi comme à l'espèce présente, c'est se savoir partie de la nature et agir en conséquence.
+
+    ! « Se rapporter à soi comme à une espèce » n'est pas {red}une opération de pure pensée{/red}, l'idée générale d'homme qu'on aurait en tête : l'espèce est « présente, vivante », et le mot « pratique », placé en premier, {green}interdit cette lecture{/green}.
+  passage:
+    label: "§1"
+    part: "1. Ce qu'est l'homme : un être générique"
+    text: "Non seulement parce que, sur le plan pratique et théorique, il fait de l'espèce, la sienne propre aussi bien que celle de toute chose, son objet, mais encore – et ceci n'est qu'une autre façon d'exprimer la même chose – parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'une espèce réelle, vivante, parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'un être universel, donc libre."
+  points:
   - id: m1844-p13-3
-    fragment: "2/2"
     sentence: "« Non seulement parce que, sur le plan pratique et théorique, il ___, mais encore – et ceci n'est qu'une autre façon d'exprimer la même chose – parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'une espèce réelle, vivante, parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'un être universel, donc libre. »"
     answer: "fait de l'espèce, la sienne propre aussi bien que celle de toute chose, son objet"
     alt: []
   - id: m1844-p13-4
-    fragment: "2/2"
     sentence: "« Non seulement parce que, sur le plan pratique et théorique, il fait de l'espèce, la sienne propre aussi bien que celle de toute chose, son objet, mais encore – et ceci n'est qu'une autre façon d'exprimer la même chose – parce qu'il se comporte vis-à-vis de lui-même ___, parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'un être universel, donc libre. »"
     answer: "comme vis-à-vis d'une espèce réelle, vivante"
     alt: []
   - id: m1844-p13-5
-    fragment: "2/2"
     sentence: "« Non seulement parce que, sur le plan pratique et théorique, il fait de l'espèce, la sienne propre aussi bien que celle de toute chose, son objet, mais encore – et ceci n'est qu'une autre façon d'exprimer la même chose – parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'une espèce réelle, vivante, parce qu'il se comporte vis-à-vis de lui-même comme vis-à-vis d'___. »"
     answer: "un être universel, donc libre"
     alt: []
-  - id: m1844-p13-e1
-    sentence: "L'homme se rapporte à lui-même comme à « l'espèce présente, vivante » (*der gegenwärtigen, lebendigen Gattung*), comme à un être universel, __donc ___ (*darum*).__"
-    answer: "libre"
+  - id: m1844-p13b-x1
+    sentence: "« Non seulement parce que » traduit *indem* : __non des causes, mais des ___ d'être générique.__"
+    answer: "manières"
     alt: []
-  - id: m1844-p13-e2
-    sentence: "Les deux définitions de l'être générique n'en font qu'une parce que __la conscience de soi passe par l'action ___ dans le monde__."
-    answer: "objective"
+  - id: m1844-p13b-x2
+    sentence: "L'homme fait de toutes les espèces son objet : __il traite chaque chose selon ce qu'elle est en ___.__"
+    answer: "général"
+    alt: []
+  - id: m1844-p13b-x3
+    sentence: "*Der gegenwärtigen, lebendigen Gattung* : __l'espèce présente en lui, non ___ générale.__"
+    answer: "une idée"
+    alt: ["l'idée"]
+  - id: m1844-p13b-x4
+    sentence: "Les deux définitions disent la même chose parce que __le rapport à soi se fait par le rapport aux ___.__"
+    answer: "choses"
     alt: []
   - id: m1844-p13-e3
-    sentence: "La liberté de l'être générique est __l'___,__ le fait d'être la cause de sa propre action, non le libre arbitre."
+    sentence: "« Donc libre » (*darum*) : la liberté est ici __l'___, être la cause de sa propre action.__"
     answer: "autodétermination"
-    alt: []
-  - id: m1844-p13-e4
-    sentence: "Feuerbach plaçait l'essence générique dans la conscience théorique ; Marx __la rend ___.__"
-    answer: "pratique"
     alt: []
   - id: m1844-p13-e5
-    sentence: "« Universel, donc libre » : l'homme __n'est fixé à aucun ___,__ cavernes, cabanes ou palais."
+    sentence: "Concrètement, l'homme __n'est fixé à aucun ___,__ cavernes, cabanes ou palais."
     answer: "mode de vie"
-    alt: []
-  - id: m1844-p13-e6
-    sentence: "La non-fixité de l'homme est __la manifestation concrète de son__ ___."
-    answer: "autodétermination"
     alt: []
   - id: m1844-p13-e7
     sentence: "Troisième manuscrit : __« L'individu est l'___ »__ ; la vie individuelle et la vie générique ne sont pas différentes."
     answer: "être social"
     alt: []
-  - id: m1844-p13-e8
-    sentence: "Ici, Marx définit l'être générique __d'abord par le rapport à la ___ et l'activité libre__ ; l'identité avec l'être social est l'aboutissement des *Manuscrits*."
-    answer: "nature"
+  - id: m1844-p13-e4
+    sentence: "Feuerbach plaçait l'essence générique dans la conscience théorique ; __Marx la rend ___.__"
+    answer: "pratique"
     alt: []
 - id: m1844-p14
-  title: "Vivre de la nature, la nature comme corps non organique"
+  title: "Vivre de la nature non organique"
   notes: |-
-    **L'universalité de l'homme se montre en pratique dans le fait que {coral}la nature entière est son corps non organique{/coral}.**
+    **Marx passe de la définition à la vie concrète de l'espèce : comme tout animal, l'homme vit de ce qui n'est pas vivant en lui, la nature qui l'entoure ; mais il en vit {coral}plus largement que l'animal, à la mesure de son universalité{/coral}.** L'universalité de l'homme n'est pas d'abord une affaire de pensée : c'est l'étendue de son rapport à la nature.
 
-    **Vivre de la nature.** Comme l'animal, l'homme vit de la {violet}nature non organique{/violet}, tout ce qui n'est pas un organe de son corps ; mais {amber}plus il est universel, plus le champ dont il vit est universel{/amber}. Prémisse implicite : un vivant se définit par ses objets. En théorie, plantes, pierres, air, lumière sont objets de science et d'art, sa {violet}« nature spirituelle non organique »{/violet}, ses « moyens de subsistance spirituels » (*geistige Lebensmittel*) qu'il doit d'abord préparer {teal}« pour la jouissance et la digestion »{/teal} : la conscience est {green}une manière de se nourrir de la nature{/green}, non de s'en arracher. L'incise « d'abord préparer » annonce que ce rapport passe par le travail.
+    **Pourquoi « aussi bien chez l'homme que chez l'animal » ?** L'animal a lui aussi une vie générique : {amber}la différence ne sera pas de nature, mais d'étendue{/amber}. Marx part de ce que l'homme partage avec tout vivant, pour situer ensuite ce qui le distingue.
 
-    Ce qui fait ici l'universalité n'est plus la conscience, comme chez Feuerbach, mais {amber}l'étendue de nature dont on vit{/amber} : aucun animal ne se nourrit d'autant d'espèces, terrestres, aquatiques ou volantes. « Non organique » ne veut pas dire {red}inerte{/red} : les plantes et le gibier dont il se nourrit sont des vivants, mais non ses organes. Pour la nature spirituelle, un parallélisme d'allure spinoziste, non un reflet : {green}l'esprit se nourrit des idées des choses dont le corps se nourrit{/green}.
+    **Pourquoi « d'abord, au point de vue physique » ?** *Physisch einmal* : le premier aspect, {amber}le plus élémentaire{/amber}. L'esprit viendra ensuite, comme une autre manière de vivre de la même nature.
 
-    **La nature, corps non organique.** Elle l'est {amber}comme moyen de subsistance{/amber} et {amber}comme matière, objet et outil{/amber} de l'activité vitale. Marx écrit d'abord *unorganischer Körper*, puis *Leib*, {violet}le corps de chair{/violet} : la nature prolonge un corps vécu. L'homme doit rester avec elle {teal}« en procès constant »{/teal} (*in beständigem Prozeß*) pour ne pas mourir : la première forme du métabolisme (*Stoffwechsel*) du *Capital*.
+    ? **Nature non organique** (*unorganische Natur*) : non pas {red}la nature minérale ou sans vie{/red}, au sens de la chimie, mais {green}tout ce qui n'est pas un organe du corps vivant{/green}, tout ce qui est hors de lui et dont il vit. Les plantes et le gibier dont l'homme se nourrit sont des vivants, mais non ses organes : ils sont, pour lui, nature non organique.
 
-    **Pourquoi un « corps » ?** Un corps est ce dont un vivant ne peut être séparé sans mourir ; l'homme ne peut pas plus vivre sans air, eau, terre et outils que sans ses organes. Et la dernière phrase renverse la perspective : le lien de l'homme à la nature est {coral}« la nature liée à elle-même, car l'homme est une partie de la nature »{/coral}. Monisme d'inspiration spinoziste : l'homme {red}n'est pas « un empire dans un empire »{/red}.
+    **Pourquoi « plus… plus » ?** La proportion, cette fois, est {green}directe, et positive{/green}, à l'inverse de toutes celles du passage : {coral}plus l'homme est universel, plus est universel le champ dont il vit{/coral}. {yellow}La vache broute l'herbe de son pré ; l'homme mange le blé des plaines et le poisson des mers, se chauffe au charbon et s'éclaire à l'huile de baleine.{/yellow}
 
-    **Le corps prolongé.** Ce monisme se précise par Spinoza : un individu est un corps composé qui ne persévère dans son être qu'en {amber}empruntant sans cesse des corps extérieurs{/amber} pour remplacer ceux qu'il perd ; il n'y a donc pas de frontière nette entre l'individu et son milieu. Le corps propre, organique, a le sentiment de soi ; il {violet}se prolonge dans la nature extérieure{/violet}, son corps non organique. *Le Capital* reprendra l'« outil » : dans le procès de travail, l'élément naturel devient {teal}« un organe qu'il ajoute à ceux de son propre corps »{/teal}, et la terre est à la fois son « garde-manger originel » et son « arsenal originel ».
+    **Pourquoi l'universalité se mesurerait-elle à l'étendue de la nature dont on vit ?** C'est la prémisse implicite du paragraphe : {amber}un vivant se définit par ses objets{/amber}, par ce à quoi il se rapporte pour vivre. L'abeille est ce qu'elle est par les fleurs dont elle vit, l'homme par la nature entière. Dire que l'homme est universel et dire qu'il vit de toute la nature, {coral}c'est dire la même chose sous deux angles{/coral}. C'est une thèse de Feuerbach, que Marx radicalise : l'objet d'un être est son essence devenue objective ; le troisième manuscrit dira : {teal}« un être qui n'a pas sa nature en dehors de lui n'est pas un être naturel »{/teal}.
 
-    ! Faire de la nature le corps de l'homme, ce n'est pas en faire {red}sa propriété{/red} : c'est dire qu'{green}il ne survit pas séparé d'elle{/green}.
+    **Ce qui fait ici l'universalité n'est plus la conscience**, comme chez Feuerbach, mais {amber}l'étendue de nature dont on vit{/amber} : aucun animal ne se nourrit d'autant d'espèces, terrestres, aquatiques ou volantes.
+
+    ! L'homme n'est pas universel {red}malgré{/red} sa dépendance à la nature : il l'est {green}par{/green} elle, par l'étendue de ce dont il dépend.
   passage:
     label: "§2"
-    text: "La vie générique, aussi bien chez l'homme que chez l'animal, consiste d'abord, au point de vue physique, dans le fait que l'homme (comme l'animal) vit de la nature non organique ; et plus l'homme est universel comparé à l'animal, plus est universel le champ de la nature non organique dont il vit. Les plantes, les animaux, les pierres, l'air, la lumière, etc., constituent du point de vue théorique une partie de la conscience humaine, soit en tant qu'objets de la science de la nature, soit en tant qu'objets de l'art : ils constituent sa nature spirituelle non organique et sont les moyens spirituels de subsistance que l'homme doit d'abord préparer pour en jouir et les assimiler. De même, au point de vue pratique, ils constituent une part de la vie et de l'activité humaines. Physiquement, l'homme ne vit que de ces produits naturels, qu'ils apparaissent sous forme de nourriture, de chauffage, de vêtements, d'habitation, etc. L'universalité de l'homme apparaît en pratique précisément dans l'universalité qui fait de la nature entière son corps non organique, dans la mesure où elle est : 1) un moyen de subsistance immédiat, et 2) la matière, l'objet et l'outil de son activité vitale. La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est le corps non organique de l'homme. L'homme vit de la nature signifie : la nature est son corps avec lequel il doit rester constamment en contact pour ne pas mourir. Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon que la nature est liée à elle-même, car l'homme est une partie de la nature."
     part: "1. Ce qu'est l'homme : un être générique"
+    text: "La vie générique, aussi bien chez l'homme que chez l'animal, consiste d'abord, au point de vue physique, dans le fait que l'homme (comme l'animal) vit de la nature non organique ; et plus l'homme est universel comparé à l'animal, plus est universel le champ de la nature non organique dont il vit."
   points:
   - id: m1844-p14-1
-    fragment: "1/4"
     sentence: "« La vie générique, aussi bien chez l'homme que chez l'animal, consiste d'abord, au point de vue physique, dans le fait que l'homme (comme l'animal) ___ ; et plus l'homme est universel comparé à l'animal, plus est universel le champ de la nature non organique dont il vit. »"
     answer: "vit de la nature non organique"
     alt: []
   - id: m1844-p14-2
-    fragment: "1/4"
     sentence: "« La vie générique, aussi bien chez l'homme que chez l'animal, consiste d'abord, au point de vue physique, dans le fait que l'homme (comme l'animal) vit de la nature non organique ; et plus l'homme est universel comparé à l'animal, ___. »"
     answer: "plus est universel le champ de la nature non organique dont il vit"
     alt: []
+  - id: m1844-p14-x1
+    sentence: "L'animal a lui aussi une vie générique : __la différence avec l'homme n'est pas de nature, mais d'___.__"
+    answer: "étendue"
+    alt: []
+  - id: m1844-p14-x2
+    sentence: "**Nature non organique** : non la nature minérale, mais __tout ce qui n'est pas un ___ du corps vivant.__"
+    answer: "organe"
+    alt: []
+  - id: m1844-p14-x3
+    sentence: "Prémisse implicite : __un vivant se définit par ses ___,__ par ce dont il vit."
+    answer: "objets"
+    alt: []
+  - id: m1844-p14-x4
+    sentence: "Troisième manuscrit : « un être qui n'a pas sa nature en dehors de lui __n'est pas un être ___ »__."
+    answer: "naturel"
+    alt: []
+  - id: m1844-p14-e6
+    sentence: "Ce qui fait ici l'universalité n'est plus la conscience, mais __l'étendue de ___ dont on vit.__"
+    answer: "nature"
+    alt: []
+- id: m1844-p14b
+  title: "La nature, nourriture de l'esprit"
+  notes: |-
+    **L'homme vit de la nature aussi en théorie : plantes, bêtes, pierres, air et lumière sont {coral}une nourriture pour l'esprit{/coral}, qu'il doit préparer avant d'en jouir.**
+
+    **Pourquoi cette énumération ?** « Les plantes, les animaux, les pierres, l'air, la lumière » : elle couvre {amber}les trois règnes et les éléments{/amber}. Rien n'est exclu : l'universalité théorique est aussi large que l'universalité pratique.
+
+    **Pourquoi « une partie de la conscience humaine » ?** La nature {amber}entre dans la conscience{/amber}, elle en est un contenu. Ce n'est pas une conscience vide qui ferait face à un monde extérieur : {coral}la conscience est faite de ce qu'elle connaît{/coral}.
+
+    **Pourquoi la science et l'art ?** Ce sont {violet}les deux manières de se rapporter théoriquement à la nature{/violet} : la connaître et la figurer. {yellow}L'astronome qui étudie les étoiles et le peintre qui peint la mer vivent tous deux de la nature, l'un en la comprenant, l'autre en la représentant.{/yellow}
+
+    **Pourquoi « nature spirituelle non organique » et « moyens spirituels de subsistance » ?** *Geistige unorganische Natur*, *geistige Lebensmittel* : {coral}l'esprit aussi a son dehors, dont il vit{/coral}, comme le corps a ses vivres. Marx étend à la conscience le vocabulaire de la nutrition.
+
+    **Pourquoi « préparer pour en jouir et les assimiler » ?** L'allemand dit *zubereiten muss zum Genuss und zur Verdauung* : {violet}préparer pour la jouissance et la digestion{/violet}. La métaphore alimentaire est suivie jusqu'au bout : {yellow}la science est une cuisine de l'esprit, qui apprête la nature brute avant qu'on puisse la goûter et l'assimiler.{/yellow}
+
+    **Que refuse Marx par cette métaphore ?** De {red}séparer la conscience du rapport naturel{/red}. Connaître la nature n'est pas s'en extraire, c'est encore {green}s'en nourrir{/green}. La conscience n'est pas ce qui arrache l'homme à la nature, elle est {coral}une forme de son rapport à elle{/coral} : la connaissance de soi comme partie d'un tout. On peut y voir un parallélisme d'allure spinoziste, plutôt qu'un reflet : {green}l'esprit se nourrit des idées des choses dont le corps se nourrit{/green}.
+
+    **Pourquoi « d'abord préparer » ?** L'incise dit que la nature {amber}n'est pas immédiatement à la mesure de l'homme{/amber} : il doit la transformer pour en vivre, en théorie comme en pratique. {yellow}L'animal mange ce qu'il trouve ; l'homme cuit, construit, étudie.{/yellow} Cette préparation est déjà {coral}le travail{/coral}, et l'incise annonce ce que le dernier paragraphe dira : « la vie productive est la vie générique ».
+
+    ! La métaphore de la digestion n'est pas {red}une image décorative{/red} : elle dit que {green}la conscience est un rapport vital à la nature{/green}, non une contemplation détachée.
+  passage:
+    label: "§2"
+    part: "1. Ce qu'est l'homme : un être générique"
+    text: "Les plantes, les animaux, les pierres, l'air, la lumière, etc., constituent du point de vue théorique une partie de la conscience humaine, soit en tant qu'objets de la science de la nature, soit en tant qu'objets de l'art : ils constituent sa nature spirituelle non organique et sont les moyens spirituels de subsistance que l'homme doit d'abord préparer pour en jouir et les assimiler."
+  points:
   - id: m1844-p14-3
-    fragment: "2/4"
     sentence: "« Les plantes, les animaux, les pierres, l'air, la lumière, etc., constituent du point de vue théorique ___, soit en tant qu'objets de la science de la nature, soit en tant qu'objets de l'art : ils constituent sa nature spirituelle non organique et sont les moyens spirituels de subsistance que l'homme doit d'abord préparer pour en jouir et les assimiler. »"
     answer: "une partie de la conscience humaine"
     alt: []
   - id: m1844-p14-4
-    fragment: "2/4"
     sentence: "« Les plantes, les animaux, les pierres, l'air, la lumière, etc., constituent du point de vue théorique une partie de la conscience humaine, soit en tant qu'objets de la science de la nature, soit en tant qu'objets de l'art : ils constituent ___ et sont les moyens spirituels de subsistance que l'homme doit d'abord préparer pour en jouir et les assimiler. »"
     answer: "sa nature spirituelle non organique"
     alt: []
   - id: m1844-p14-5
-    fragment: "2/4"
     sentence: "« Les plantes, les animaux, les pierres, l'air, la lumière, etc., constituent du point de vue théorique une partie de la conscience humaine, soit en tant qu'objets de la science de la nature, soit en tant qu'objets de l'art : ils constituent sa nature spirituelle non organique et sont ___ que l'homme doit d'abord préparer pour en jouir et les assimiler. »"
     answer: "les moyens spirituels de subsistance"
     alt: []
+  - id: m1844-p14b-x1
+    sentence: "La nature est une partie de la conscience : __la conscience est faite de ce qu'elle ___.__"
+    answer: "connaît"
+    alt: []
+  - id: m1844-p14b-x2
+    sentence: "La science et l'art : __les deux manières de se rapporter ___ à la nature,__ la connaître et la figurer."
+    answer: "théoriquement"
+    alt: []
+  - id: m1844-p14b-x3
+    sentence: "*Zubereiten zum Genuss und zur Verdauung* : __préparer pour la jouissance et la ___.__"
+    answer: "digestion"
+    alt: []
+  - id: m1844-p14b-x4
+    sentence: "Connaître la nature n'est pas s'en extraire : __c'est encore s'en ___.__"
+    answer: "nourrir"
+    alt: []
+  - id: m1844-p14b-x5
+    sentence: "« Que l'homme doit d'abord préparer » : __cette préparation est déjà le ___.__"
+    answer: "travail"
+    alt: []
+- id: m1844-p14c
+  title: "La nature dans la vie pratique"
+  notes: |-
+    **Ce que la nature est pour l'esprit, elle l'est pour l'action : {coral}une part de la vie et de l'activité humaines{/coral}. Et physiquement, l'homme ne vit que de ses produits.**
+
+    **Pourquoi « de même » ?** Le parallèle de la théorie et de la pratique est {amber}strict{/amber} : la nature entre dans la conscience comme objet de science et d'art, et dans l'activité comme matière de la vie. Les deux rapports sont deux faces d'un même rapport vital.
+
+    **Pourquoi « une part de la vie et de l'activité » ?** La nature n'est pas {red}un décor{/red} où l'homme agirait : elle est {green}une part de son activité même{/green}. On ne peut pas décrire ce que fait l'homme sans décrire les choses sur lesquelles il le fait. {yellow}Le travail du forgeron, c'est le fer, le feu, l'eau de la trempe : retirez-les, il ne reste rien de son métier.{/yellow}
+
+    **Pourquoi « ne vit que » ?** La restriction est forte : {coral}physiquement, rien d'autre que la nature ne fait vivre l'homme{/coral}. Il n'a pas d'autre source de vie que ce qu'il tire du monde extérieur.
+
+    **Pourquoi « nourriture, chauffage, vêtements, habitation » ?** Ce sont {amber}les besoins élémentaires{/amber}, ceux de tout homme. Ce sont aussi, exactement, {red}ceux dont l'ouvrier est privé{/red} : le deuxième texte a montré que la nature cesse d'être pour lui un moyen de subsistance immédiat. L'énumération prépare ce que le travail aliéné va retirer. Et « qu'ils apparaissent sous forme de » : les produits naturels ne se présentent jamais bruts, ils prennent la forme que le travail leur a donnée, {yellow}le blé sous forme de pain, la laine sous forme d'habit, l'argile sous forme de brique{/yellow}.
+
+    **Qu'est-ce que la phrase prépare ?** La formule qui suit : si l'homme ne vit que de la nature, et si la nature est une part de son activité, alors elle est {coral}comme son corps{/coral}.
+
+    ! La phrase ne dit pas que l'homme vit {red}seulement pour{/red} ces besoins élémentaires : elle dit qu'il {green}en vit{/green}, comme tout vivant, et que même ses besoins les plus simples passent par la nature transformée.
+  passage:
+    label: "§2"
+    part: "1. Ce qu'est l'homme : un être générique"
+    text: "De même, au point de vue pratique, ils constituent une part de la vie et de l'activité humaines. Physiquement, l'homme ne vit que de ces produits naturels, qu'ils apparaissent sous forme de nourriture, de chauffage, de vêtements, d'habitation, etc."
+  points:
   - id: m1844-p14-6
-    fragment: "3/4"
-    sentence: "« De même, au point de vue pratique, ils constituent ___. Physiquement, l'homme ne vit que de ces produits naturels, qu'ils apparaissent sous forme de nourriture, de chauffage, de vêtements, d'habitation, etc. L'universalité de l'homme apparaît en pratique précisément dans l'universalité qui fait de la nature entière son corps non organique, dans la mesure où elle est : 1) un moyen de subsistance immédiat, et 2) la matière, l'objet et l'outil de son activité vitale. »"
+    sentence: "« De même, au point de vue pratique, ils constituent ___. Physiquement, l'homme ne vit que de ces produits naturels, qu'ils apparaissent sous forme de nourriture, de chauffage, de vêtements, d'habitation, etc. »"
     answer: "une part de la vie et de l'activité humaines"
     alt: []
+  - id: m1844-p14c-x1
+    sentence: "La nature n'est pas un décor où l'homme agirait : __elle est une part de son ___ même.__"
+    answer: "activité"
+    alt: []
+  - id: m1844-p14c-x2
+    sentence: "Nourriture, chauffage, vêtements, habitation : __les besoins dont l'___ est privé.__"
+    answer: "ouvrier"
+    alt: []
+  - id: m1844-p14c-x3
+    sentence: "« Qu'ils apparaissent sous forme de » : les produits naturels __prennent la forme que le ___ leur a donnée.__"
+    answer: "travail"
+    alt: []
+- id: m1844-p14d
+  title: "La nature entière, corps non organique de l'homme"
+  notes: |-
+    **Marx tire la conclusion de ce qui précède : si l'homme vit de toute la nature, {coral}la nature entière est comme son corps{/coral}, un corps qui n'est pas fait d'organes, mais qui le prolonge au-dehors.** Elle l'est de deux façons : comme ce dont il se nourrit, et comme ce sur quoi et avec quoi il travaille.
+
+    **Pourquoi « apparaît en pratique précisément » ?** L'allemand dit *erscheint praktisch eben*, « apparaît pratiquement, justement » : l'universalité, posée au §1, {amber}se montre là et pas ailleurs{/amber}. Ce n'est pas dans sa pensée que l'homme prouve qu'il est universel, c'est dans l'étendue de ce dont il vit.
+
+    **Pourquoi « corps » ?** Ici, l'allemand dit *unorganischer Körper*, {violet}le corps comme masse physique{/violet}. Le mot changera deux phrases plus loin.
+
+    **À quels titres la nature est-elle ce corps ?** « Dans la mesure où » donne {amber}deux titres{/amber}, qui reprennent les deux sens des moyens de vivre du deuxième texte.
+    - **Un moyen de subsistance immédiat** : ce dont l'homme vit sans médiation, les vivres.
+    - **La matière, l'objet et l'outil de son activité vitale** : ce que le travail transforme, ce sur quoi il porte, ce avec quoi il opère.
+
+    {yellow}Pour le paysan, le champ, les bêtes, la rivière et les outils prolongent les mains et l'estomac : la ferme est comme un grand corps dont son propre corps n'est qu'une partie.{/yellow}
+
+    **Pourquoi « l'outil » ?** C'est le point le plus fort : l'outil, fait de nature, {coral}prolonge l'organe{/coral}. *Le Capital* le reprendra : dans le procès de travail, l'élément naturel devient {teal}« un organe qu'il ajoute à ceux de son propre corps »{/teal}, et la terre est à la fois son « garde-manger originel » et son « arsenal originel ».
+
+    ? **Activité vitale** (*Lebenstätigkeit*) : le mode d'activité par lequel un vivant entretient sa vie ; {yellow}brouter pour la vache, bâtir des alvéoles pour l'abeille{/yellow}, travailler pour l'homme. Le dernier paragraphe en fera ce qui définit chaque espèce.
+
+    **Pourquoi l'universalité fait-elle de la nature un corps ?** Parce que le corps d'un vivant est {amber}l'étendue de son rapport au monde{/amber}. Un vivant dont le rapport au monde se limite à un secteur a un corps limité à ses organes ; un vivant universel, qui vit de tout et travaille tout, a pour corps {coral}tout ce dont il vit{/coral}.
+
+    ! « Corps non organique » ne veut pas dire que la nature soit {red}la propriété{/red} de l'homme : c'est dire qu'{green}il ne survit pas séparé d'elle{/green}, comme il ne survit pas séparé de ses membres.
+  passage:
+    label: "§2"
+    part: "1. Ce qu'est l'homme : un être générique"
+    text: "L'universalité de l'homme apparaît en pratique précisément dans l'universalité qui fait de la nature entière son corps non organique, dans la mesure où elle est : 1) un moyen de subsistance immédiat, et 2) la matière, l'objet et l'outil de son activité vitale."
+  points:
   - id: m1844-p14-7
-    fragment: "3/4"
-    sentence: "« De même, au point de vue pratique, ils constituent une part de la vie et de l'activité humaines. Physiquement, l'homme ne vit que de ces produits naturels, qu'ils apparaissent sous forme de nourriture, de chauffage, de vêtements, d'habitation, etc. L'universalité de l'homme apparaît en pratique précisément dans ___, dans la mesure où elle est : 1) un moyen de subsistance immédiat, et 2) la matière, l'objet et l'outil de son activité vitale. »"
+    sentence: "« L'universalité de l'homme apparaît en pratique précisément dans ___, dans la mesure où elle est : 1) un moyen de subsistance immédiat, et 2) la matière, l'objet et l'outil de son activité vitale. »"
     answer: "l'universalité qui fait de la nature entière son corps non organique"
     alt: []
   - id: m1844-p14-8
-    fragment: "3/4"
-    sentence: "« De même, au point de vue pratique, ils constituent une part de la vie et de l'activité humaines. Physiquement, l'homme ne vit que de ces produits naturels, qu'ils apparaissent sous forme de nourriture, de chauffage, de vêtements, d'habitation, etc. L'universalité de l'homme apparaît en pratique précisément dans l'universalité qui fait de la nature entière son corps non organique, dans la mesure où elle est : 1) ___, et 2) la matière, l'objet et l'outil de son activité vitale. »"
+    sentence: "« L'universalité de l'homme apparaît en pratique précisément dans l'universalité qui fait de la nature entière son corps non organique, dans la mesure où elle est : 1) ___, et 2) la matière, l'objet et l'outil de son activité vitale. »"
     answer: "un moyen de subsistance immédiat"
     alt: []
   - id: m1844-p14-9
-    fragment: "3/4"
-    sentence: "« De même, au point de vue pratique, ils constituent une part de la vie et de l'activité humaines. Physiquement, l'homme ne vit que de ces produits naturels, qu'ils apparaissent sous forme de nourriture, de chauffage, de vêtements, d'habitation, etc. L'universalité de l'homme apparaît en pratique précisément dans l'universalité qui fait de la nature entière son corps non organique, dans la mesure où elle est : 1) un moyen de subsistance immédiat, et 2) ___. »"
+    sentence: "« L'universalité de l'homme apparaît en pratique précisément dans l'universalité qui fait de la nature entière son corps non organique, dans la mesure où elle est : 1) un moyen de subsistance immédiat, et 2) ___. »"
     answer: "la matière, l'objet et l'outil de son activité vitale"
     alt: []
-  - id: m1844-p14-10
-    fragment: "4/4"
-    sentence: "« La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est ___. L'homme vit de la nature signifie : la nature est son corps avec lequel il doit rester constamment en contact pour ne pas mourir. Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon que la nature est liée à elle-même, car l'homme est une partie de la nature. »"
-    answer: "le corps non organique de l'homme"
+  - id: m1844-p14d-x1
+    sentence: "*Erscheint praktisch eben* : __l'universalité se montre en ___,__ non dans la pensée."
+    answer: "pratique"
     alt: []
-  - id: m1844-p14-11
-    fragment: "4/4"
-    sentence: "« La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est le corps non organique de l'homme. L'homme vit de la nature signifie : la nature est ___. Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon que la nature est liée à elle-même, car l'homme est une partie de la nature. »"
-    answer: "son corps avec lequel il doit rester constamment en contact pour ne pas mourir"
-    alt: []
-  - id: m1844-p14-12
-    fragment: "4/4"
-    sentence: "« La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est le corps non organique de l'homme. L'homme vit de la nature signifie : la nature est son corps avec lequel il doit rester constamment en contact pour ne pas mourir. Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon ___, car l'homme est une partie de la nature. »"
-    answer: "que la nature est liée à elle-même"
-    alt: []
-  - id: m1844-p14-13
-    fragment: "4/4"
-    sentence: "« La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est le corps non organique de l'homme. L'homme vit de la nature signifie : la nature est son corps avec lequel il doit rester constamment en contact pour ne pas mourir. Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon que la nature est liée à elle-même, ___. »"
-    answer: "car l'homme est une partie de la nature"
-    alt: []
-  - id: m1844-p14-e1
-    sentence: "Plus l'homme est universel comparé à l'animal, __plus est universel le champ de ___ dont il vit__."
-    answer: "la nature non organique"
-    alt: []
-  - id: m1844-p14-e2
-    sentence: "Science et art sont la « nature spirituelle non organique » de l'homme : __la conscience est une manière de se ___ de la nature__, non de s'en arracher."
-    answer: "nourrir"
-    alt: []
-  - id: m1844-p14-e3
-    sentence: "Marx écrit d'abord *unorganischer Körper*, puis __*unorganischer ___*,__ le corps de chair."
-    answer: "Leib"
-    alt: []
-  - id: m1844-p14-e4
-    sentence: "« En procès constant » (*in beständigem Prozeß*) : première forme __du ___ (*Stoffwechsel*)__ du *Capital*."
-    answer: "métabolisme"
-    alt: []
-  - id: m1844-p14-e5
-    sentence: "Le lien de l'homme à la nature n'est que __« la nature liée à ___ »__, car l'homme est une partie de la nature."
-    answer: "elle-même"
-    alt: []
-  - id: m1844-p14-e6
-    sentence: "Ce qui fait ici l'universalité n'est plus la conscience, mais __l'étendue de ___ dont on vit__."
-    answer: "nature"
-    alt: []
-  - id: m1844-p14-e7
-    sentence: "Par un parallélisme d'allure spinoziste, __l'esprit se nourrit des ___ des choses dont le corps se nourrit__."
-    answer: "idées"
+  - id: m1844-p14d-x2
+    sentence: "La nature est corps non organique à deux titres : __moyen de subsistance immédiat, et matière, objet et ___ de l'activité vitale.__"
+    answer: "outil"
     alt: []
   - id: m1844-p14-e8
     sentence: "*Le Capital* : l'élément naturel devient __« un ___ qu'il ajoute à ceux de son propre corps »__."
     answer: "organe"
     alt: []
-- id: m1844-p15
-  title: "L'aliénation de la vie générique"
+  - id: m1844-p14d-x4
+    sentence: "Un vivant universel, qui vit de tout et travaille tout, __a pour corps tout ce dont il ___.__"
+    answer: "vit"
+    alt: []
+- id: m1844-p14e
+  title: "Le corps de chair, en procès constant"
   notes: |-
-    **En rendant étrangères la nature et l'activité, le travail aliéné rend étrangère l'espèce : {coral}il fait de la vie générique le moyen de la vie individuelle{/coral}.**
+    **Marx précise et durcit la formule : la nature, {coral}hors du corps humain{/coral}, est le corps de l'homme, et vivre de la nature, c'est {coral}être en échange continuel avec elle, faute de quoi on meurt{/coral}.**
 
-    **2.1 Une dérivation que la traduction efface.** « Tandis que » traduit *Indem … so*, « en ce que…, par là » : {amber}c'est en rendant étrangères la nature et l'activité{/amber} que le travail aliéné rend étrangère l'espèce. Syllogisme : l'homme est générique par son rapport à la nature et par son activité vitale consciente ; le travail aliéné lui retire l'une et l'autre ; il lui retire donc ce par quoi il est générique.
+    **Pourquoi « la nature qui n'est pas elle-même le corps humain » ?** La précision {amber}écarte une confusion{/amber} : le corps organique, fait d'organes, est une chose ; le corps non organique, toute la nature au-dehors, en est une autre.
 
-    **2.2 L'inversion de la fin et du moyen.** {violet}La vie générique{/violet} (*Gattungsleben*) est l'activité libre et consciente par laquelle les hommes transforment ensemble le monde ; {violet}la vie individuelle{/violet}, la simple subsistance de chacun. Deux temps : elles sont d'abord {amber}rendues étrangères l'une à l'autre{/amber}, puis la seconde, « réduite à l'abstraction », devient {coral}le but de la première{/coral}, elle aussi abstraite. Une fois séparées, l'activité n'est plus vécue que pour ce qu'elle rapporte, la survie.
+    **Pourquoi le mot change-t-il ?** Cette fois, l'allemand dit *der unorganische Leib* : {violet}le corps vivant, le corps de chair{/violet}, et non plus *Körper*, la masse physique. Le passage d'un mot à l'autre fait de la nature {coral}non plus seulement une masse extérieure, mais le prolongement d'un corps vécu{/coral}. Il faut même inverser les choses : le corps de chaque individu est inscrit comme une partie au sein d'un corps plus large, qui n'est autre que la nature elle-même.
 
-    ? **Abstraction** : séparation d'avec les rapports. La vie individuelle isolée devient un « égoïsme abstrait » ; la vie générique coupée des individus, {amber}une contrainte qui ne vit en personne{/amber}.
+    **Pourquoi « signifie » ?** Marx {amber}définit une expression courante{/amber}, « l'homme vit de la nature », en lui donnant un sens fort. Ce que tout le monde dit sans y penser, il le prend au pied de la lettre.
 
-    *Sur la question juive* le disait déjà de la société civile, où l'homme {teal}« considère les autres comme des moyens, se ravale lui-même au rang de moyen »{/teal} ; le travail aliéné en donne la racine {green}dans la production{/green}.
+    **Pourquoi « constamment en contact » ?** L'allemand dit *in beständigem Prozeß bleiben*, {violet}« rester en procès constant »{/violet} : non un simple contact, mais {amber}un échange continu{/amber}. {yellow}On respire, on mange, on rejette, on se chauffe, à chaque instant : un homme qui cesserait d'échanger avec la nature mourrait en quelques minutes.{/yellow} C'est la première forme de ce que *Le Capital* appellera le {violet}métabolisme{/violet} (*Stoffwechsel*), le procès par lequel l'homme règle ses échanges de matière avec la nature.
 
-    ! Il ne s'agit pas de {red}morale{/red}, comme si l'ouvrier préférait son intérêt : c'est {green}la structure de l'activité{/green} qui renverse la fin et le moyen.
+    **Pourquoi un « corps », et non seulement un milieu ?** Le raisonnement implicite passe par une définition du corps que le texte ne donne pas. {coral}Un corps, c'est ce dont un vivant ne peut être séparé sans mourir{/coral} : la main, l'estomac, les poumons. Or l'homme ne peut pas plus vivre sans l'air, l'eau, les plantes et la terre qu'il travaille que sans ses poumons ou ses mains ; et son activité vitale s'étend à travers les outils et les matières comme à travers des organes extérieurs. La nature remplit donc la fonction d'un corps ; elle n'en diffère qu'en ce qu'elle n'est pas faite d'organes, d'où « non organique ».
 
-    ! On pourrait lire que Marx veut l'inverse, {red}la vie individuelle sacrifiée à l'espèce{/red}. Non : la vie générique n'est pas celle d'un collectif au-dessus des individus, mais {green}la vie de chacun en tant qu'être universel{/green}. Que l'essence devienne le moyen de l'existence, telle est précisément l'aliénation.
+    **Le corps prolongé.** On peut préciser ce rapport par Spinoza : un individu est un corps composé qui ne persévère dans son être qu'en {amber}empruntant sans cesse des corps extérieurs{/amber} pour remplacer ceux qu'il perd. Il n'y a donc {red}pas de frontière nette{/red} entre l'individu et son milieu : le corps propre, qui a le sentiment de soi, {green}se prolonge dans la nature extérieure{/green}.
+
+    ! « Corps non organique » n'est pas {red}une métaphore{/red} : c'est {green}une thèse{/green}, qui dit que l'homme ne peut pas plus survivre séparé de la nature que privé de ses organes.
+  passage:
+    label: "§2"
+    part: "1. Ce qu'est l'homme : un être générique"
+    text: "La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est le corps non organique de l'homme. L'homme vit de la nature signifie : la nature est son corps avec lequel il doit rester constamment en contact pour ne pas mourir."
+  points:
+  - id: m1844-p14-10
+    sentence: "« La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est ___. L'homme vit de la nature signifie : la nature est son corps avec lequel il doit rester constamment en contact pour ne pas mourir. »"
+    answer: "le corps non organique de l'homme"
+    alt: []
+  - id: m1844-p14-11
+    sentence: "« La nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est le corps non organique de l'homme. L'homme vit de la nature signifie : la nature est ___. »"
+    answer: "son corps avec lequel il doit rester constamment en contact pour ne pas mourir"
+    alt: []
+  - id: m1844-p14-e3
+    sentence: "Marx écrit d'abord *unorganischer Körper*, puis __*unorganischer ___*,__ le corps de chair."
+    answer: "Leib"
+    alt: []
+  - id: m1844-p14e-x2
+    sentence: "« Constamment en contact » traduit *in beständigem Prozeß* : __non un simple contact, mais un ___ continu.__"
+    answer: "échange"
+    alt: []
+  - id: m1844-p14-e4
+    sentence: "Le « procès constant » est la première forme __du ___ (*Stoffwechsel*)__ du *Capital*."
+    answer: "métabolisme"
+    alt: []
+  - id: m1844-p14e-x4
+    sentence: "Un corps est __ce dont un vivant ne peut être ___ sans mourir.__"
+    answer: "séparé"
+    alt: []
+  - id: m1844-p14e-x5
+    sentence: "Un individu ne persévère qu'en empruntant des corps extérieurs : __pas de frontière nette entre l'individu et son ___.__"
+    answer: "milieu"
+    alt: []
+- id: m1844-p14f
+  title: "La nature liée à elle-même"
+  notes: |-
+    **La dernière phrase renverse la perspective : si l'homme est lié à la nature, c'est qu'{coral}il en est une partie{/coral}, et ce lien n'est qu'{coral}un rapport de la nature à elle-même{/coral}.**
+
+    **Pourquoi « physique et intellectuelle » ?** La phrase reprend {amber}les deux points de vue{/amber} du paragraphe, le pratique et le théorique : le corps et l'esprit sont également liés à la nature.
+
+    **Pourquoi « indissolublement liée » ?** *Zusammenhängt*, tient ensemble : {amber}on ne peut pas les séparer sans les détruire{/amber}.
+
+    **Pourquoi « ne signifie pas autre chose sinon » ?** Une nouvelle équivalence, qui {coral}écarte toute lecture dualiste{/coral}. Marx ne dit pas qu'il y a deux choses, l'homme et la nature, qui seraient liées ; il dit que ce lien n'est rien d'autre que la nature liée à elle-même.
+
+    **Que veut dire « la nature est liée à elle-même » ?** Il n'y a pas {red}deux substances{/red}, l'homme et la nature, mais {green}une seule, la nature{/green}, qui se rapporte à elle-même à travers l'une de ses parties. L'homme {red}n'est pas « un empire dans un empire »{/red}, selon le mot de Spinoza : il n'est pas un esprit tombé dans le monde, mais un morceau du monde qui se rapporte au reste.
+
+    **Pourquoi « car » en dernière position ?** La raison, donnée à la fin, {coral}fonde tout le paragraphe{/coral} : c'est parce que l'homme est une partie de la nature que la nature peut être son corps.
+
+    **La troisième difficulté est résolue.** Comment l'homme peut-il être universel et pourtant partie de la nature ? Son universalité {red}n'est pas une exception à la nature{/red} : {green}c'est la nature qui se rapporte à elle-même, à travers l'une de ses parties, sous une forme universelle{/green}. {yellow}Comme l'œil, qui fait partie du corps, peut voir tout le corps, l'homme, partie de la nature, peut se rapporter à la nature entière.{/yellow}
+
+    **Pourquoi cette phrase rend-elle l'aliénation si grave ?** Si l'homme est une partie de la nature, la séparation de l'homme d'avec la nature, que les textes précédents ont décrite, {coral}coupe une partie de son tout, un membre de son corps{/coral}. Ce que le travail aliéné va retirer à l'homme, c'est ce corps, et avec lui son universalité.
+
+    ! Faire de la nature le corps de l'homme, ce n'est pas {red}justifier une domination sans limite{/red} de la nature par l'homme : l'homme n'y est {green}qu'une partie{/green}, et son rapport à elle un rapport de la nature à elle-même.
+  passage:
+    label: "§2"
+    part: "1. Ce qu'est l'homme : un être générique"
+    text: "Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon que la nature est liée à elle-même, car l'homme est une partie de la nature."
+  points:
+  - id: m1844-p14-12
+    sentence: "« Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon ___, car l'homme est une partie de la nature. »"
+    answer: "que la nature est liée à elle-même"
+    alt: []
+  - id: m1844-p14-13
+    sentence: "« Dire que la vie physique et intellectuelle de l'homme est indissolublement liée à la nature ne signifie pas autre chose sinon que la nature est liée à elle-même, ___. »"
+    answer: "car l'homme est une partie de la nature"
+    alt: []
+  - id: m1844-p14f-x1
+    sentence: "« Ne signifie pas autre chose sinon » : __une équivalence qui écarte toute lecture ___.__"
+    answer: "dualiste"
+    alt: []
+  - id: m1844-p14f-x2
+    sentence: "Il n'y a pas deux substances, mais __une seule, la ___, qui se rapporte à elle-même__ à travers l'une de ses parties."
+    answer: "nature"
+    alt: []
+  - id: m1844-p14f-x3
+    sentence: "L'homme n'est pas, selon le mot de Spinoza, __« un ___ dans un empire »__."
+    answer: "empire"
+    alt: []
+  - id: m1844-p14f-x4
+    sentence: "L'universalité de l'homme __n'est pas une ___ à la nature :__ c'est la nature qui se rapporte à elle-même."
+    answer: "exception"
+    alt: []
+  - id: m1844-p14f-x5
+    sentence: "Séparer l'homme de la nature, c'est __couper une partie de son ___,__ un membre de son corps."
+    answer: "tout"
+    alt: []
+- id: m1844-p15
+  title: "Après la nature et l'activité, l'espèce"
+  notes: |-
+    **Marx énonce la troisième détermination en la rattachant aux deux premières : {coral}en rendant à l'homme la nature et sa propre activité étrangères, le travail aliéné lui rend du même coup étrangère son espèce{/coral}, et fait de la vie de l'espèce le moyen de sa vie individuelle.**
+
+    **Pourquoi « tandis que » ?** C'est le point décisif, et la traduction l'efface. L'allemand dit *Indem … so*, {violet}« en ce que…, par là »{/violet}, « du fait que…, de ce fait » : la construction est {amber}causale et instrumentale{/amber}, {red}non temporelle ni concessive{/red}. {coral}C'est en rendant étrangères la nature et l'activité que le travail aliéné rend étrangère l'espèce.{/coral} « Tandis que », qui juxtapose, efface cette dérivation ; et « aussi » ajoute une troisième aliénation, là où l'allemand en fait une conséquence.
+
+    **Pourquoi « 1) la nature et 2) lui-même » ?** La numérotation reprend les deux déterminations, mais la première est désormais désignée {amber}par la nature, non plus par le produit{/amber} : le bilan du texte précédent avait dit que le rapport au produit est « en même temps le rapport au monde extérieur sensible ». La seconde est nommée par le mot que le dernier paragraphe va développer, {violet}l'activité vitale{/violet}.
+
+    **Pourquoi l'aliénation de la nature et de l'activité entraîne-t-elle celle de l'espèce ?** Le raisonnement est un syllogisme dont le premier mouvement a fourni la majeure.
+    - L'homme est générique {amber}par deux choses{/amber} : son rapport à la nature entière, qui est son corps non organique, et son activité vitale consciente, par laquelle il fait de toutes les espèces son objet.
+    - Or le travail aliéné {amber}lui retire l'une et l'autre{/amber} : la nature devient la propriété d'un autre, l'activité devient une contrainte.
+    - Il lui retire donc {coral}ce par quoi il est générique{/coral}, et l'espèce lui devient étrangère.
+
+    {yellow}Un musicien privé de son instrument et obligé de jouer sur commande une musique qu'il n'a pas choisie n'est pas seulement privé d'un objet et d'un plaisir : il est coupé de ce qui faisait de lui un musicien parmi les musiciens.{/yellow}
+
+    **Pourquoi Marx devait-il poser la définition avant ?** Parce que la dérivation n'est rigoureuse {green}qu'à condition d'admettre la définition de l'homme{/green}. Sans elle, perdre la nature et son activité serait perdre deux choses ; avec elle, c'est perdre son appartenance à l'espèce.
+
+    **En quoi consiste cette perte ?** La fin de la phrase le dit : le travail aliéné fait {coral}« de la vie générique le moyen de la vie individuelle »{/coral}. « Pour lui » (*sie macht ihm*) : le renversement est vécu par l'homme lui-même. La phrase suivante en détaille les deux temps.
+
+    ! L'aliénation de l'espèce ne s'ajoute pas aux deux autres {red}comme un troisième mal indépendant{/red} : {green}elle en est la conséquence{/green}, et c'est ce qui donne à la phrase sa force, celle d'une déduction.
   passage:
     label: "§3"
-    text: "Tandis que le travail aliéné rend étrangers à l'homme 1) la nature et 2) lui-même, sa propre fonction active, son activité vitale, il rend aussi l'espèce humaine étrangère à l'homme : il fait pour lui de la vie générique le moyen de la vie individuelle. Premièrement, il rend étrangères la vie générique et la vie individuelle et, deuxièmement, il fait de cette dernière, réduite à l'abstraction, le but de la première, qui est également prise sous sa forme abstraite et aliénée."
     part: "2. Le travail aliéné rend l'espèce étrangère"
+    text: "Tandis que le travail aliéné rend étrangers à l'homme 1) la nature et 2) lui-même, sa propre fonction active, son activité vitale, il rend aussi l'espèce humaine étrangère à l'homme : il fait pour lui de la vie générique le moyen de la vie individuelle."
   points:
   - id: m1844-p15-1
-    fragment: "1/2"
     sentence: "« Tandis que le travail aliéné rend étrangers à l'homme 1) la nature et 2) lui-même, ___, il rend aussi l'espèce humaine étrangère à l'homme : il fait pour lui de la vie générique le moyen de la vie individuelle. »"
     answer: "sa propre fonction active, son activité vitale"
     alt: []
   - id: m1844-p15-2
-    fragment: "1/2"
     sentence: "« Tandis que le travail aliéné rend étrangers à l'homme 1) la nature et 2) lui-même, sa propre fonction active, son activité vitale, il rend aussi ___ : il fait pour lui de la vie générique le moyen de la vie individuelle. »"
     answer: "l'espèce humaine étrangère à l'homme"
     alt: []
   - id: m1844-p15-3
-    fragment: "1/2"
     sentence: "« Tandis que le travail aliéné rend étrangers à l'homme 1) la nature et 2) lui-même, sa propre fonction active, son activité vitale, il rend aussi l'espèce humaine étrangère à l'homme : il fait pour lui de la vie générique ___. »"
     answer: "le moyen de la vie individuelle"
     alt: []
+  - id: m1844-p15-e1
+    sentence: "« Tandis que » traduit *Indem … so* : __c'est en rendant étrangères la nature et l'activité que le travail aliéné rend étrangère ___.__"
+    answer: "l'espèce"
+    alt: ["l'espèce humaine"]
+  - id: m1844-p15-x2
+    sentence: "La construction *Indem … so* est __causale et ___,__ non temporelle ni concessive."
+    answer: "instrumentale"
+    alt: []
+  - id: m1844-p15-x3
+    sentence: "La première détermination est désormais désignée __par la ___, non plus par le produit.__"
+    answer: "nature"
+    alt: []
+  - id: m1844-p15-x4
+    sentence: "Le travail aliéné retire à l'homme la nature et son activité, donc __ce par quoi il est ___.__"
+    answer: "générique"
+    alt: []
+- id: m1844-p15b
+  title: "La vie générique, moyen de la vie individuelle"
+  notes: |-
+    **L'aliénation de l'espèce est {coral}un renversement de la fin et du moyen{/coral}, en deux temps : d'abord, les deux vies sont séparées ; ensuite, la vie individuelle, appauvrie, devient le but de la vie générique, elle-même appauvrie.**
+
+    **Que sont les deux vies ?**
+    - {violet}La vie générique{/violet} (*Gattungsleben*) : l'activité libre et consciente par laquelle les hommes {amber}transforment ensemble le monde{/amber} et déploient leurs puissances.
+    - {violet}La vie individuelle{/violet} : {amber}la simple subsistance{/amber} de chacun, manger, boire, s'abriter, entretenir sa force.
+
+    Dans un rapport non aliéné, les deux {green}ne s'opposent pas{/green} : l'individu vit en participant à la vie de l'espèce, et sa subsistance est une condition de cette participation.
+
+    **Pourquoi « premièrement… deuxièmement » ?** Deux {amber}temps{/amber}, non deux causes.
+    - **Il les rend étrangères** : il les {coral}sépare{/coral}. Normalement, elles ne font qu'une, puisque l'individu vit en vivant la vie de son espèce.
+    - **Il fait de la seconde le but de la première** : *zum Zweck*, le but, la fin. {coral}Le moyen et la fin sont échangés.{/coral}
+
+    **Pourquoi la séparation produit-elle l'inversion ?** Une fois les deux vies séparées, l'activité productive n'est plus vécue par l'ouvrier {red}ni comme la sienne ni comme celle de l'espèce{/red}, mais comme une contrainte extérieure ; et sa seule fin, pour lui, devient {amber}ce qu'elle lui rapporte{/amber} : la survie. Le texte précédent l'a montré : le travail n'y est « qu'un moyen de satisfaire des besoins en dehors du travail ». {yellow}Le médecin qui ne soigne plus que pour gagner sa vie fait de la médecine, œuvre de l'espèce pour l'espèce, un moyen de payer son loyer.{/yellow}
+
+    ? **Abstraction** : chez Marx, {violet}la séparation d'avec les rapports{/violet}, non l'idée générale. La vie individuelle « réduite à l'abstraction » est celle d'un individu coupé de l'espèce, {amber}un égoïsme abstrait{/amber} ; la vie générique « également prise sous sa forme abstraite » est une activité coupée des individus, {amber}une contrainte qui ne vit en personne{/amber}.
+
+    **Pourquoi les deux vies sont-elles dégradées ?** Parce que chacune, séparée de l'autre, {coral}perd ce qui la faisait vivre{/coral}. La vie individuelle n'est plus que survie ; la vie générique n'est plus que la marche d'une production qui n'est celle de personne.
+
+    **Un écho de *Sur la question juive*.** Marx y décrivait la société civile, où l'homme {teal}« considère les autres comme des moyens, se ravale lui-même au rang de moyen »{/teal}, tandis que la vie générique n'existait plus que dans l'abstraction de l'État. Le travail aliéné en donne ici {green}la racine, dans la production elle-même{/green}.
+
+    ! On pourrait lire que Marx veut l'inverse, {red}la vie individuelle sacrifiée à l'espèce{/red}. Non : la vie générique n'est pas celle d'un collectif au-dessus des individus, mais {green}la vie de chacun en tant qu'être universel{/green}. Et il ne s'agit pas de morale, comme si l'ouvrier préférait son intérêt : c'est {green}la structure de l'activité{/green} qui renverse la fin et le moyen.
+  passage:
+    label: "§3"
+    part: "2. Le travail aliéné rend l'espèce étrangère"
+    text: "Premièrement, il rend étrangères la vie générique et la vie individuelle et, deuxièmement, il fait de cette dernière, réduite à l'abstraction, le but de la première, qui est également prise sous sa forme abstraite et aliénée."
+  points:
   - id: m1844-p15-4
-    fragment: "2/2"
     sentence: "« Premièrement, il ___ et, deuxièmement, il fait de cette dernière, réduite à l'abstraction, le but de la première, qui est également prise sous sa forme abstraite et aliénée. »"
     answer: "rend étrangères la vie générique et la vie individuelle"
     alt: []
   - id: m1844-p15-5
-    fragment: "2/2"
     sentence: "« Premièrement, il rend étrangères la vie générique et la vie individuelle et, deuxièmement, il fait de cette dernière, ___, le but de la première, qui est également prise sous sa forme abstraite et aliénée. »"
     answer: "réduite à l'abstraction"
     alt: []
   - id: m1844-p15-6
-    fragment: "2/2"
     sentence: "« Premièrement, il rend étrangères la vie générique et la vie individuelle et, deuxièmement, il fait de cette dernière, réduite à l'abstraction, ___, qui est également prise sous sa forme abstraite et aliénée. »"
     answer: "le but de la première"
     alt: []
-  - id: m1844-p15-e1
-    sentence: "« Tandis que » traduit *Indem … so* : c'est __en rendant étrangères la nature et l'activité__ que le travail aliéné rend étrangère ___."
-    answer: "l'espèce"
-    alt: ["l'espèce humaine"]
   - id: m1844-p15-e2
     sentence: "La **vie générique** est l'activité libre et consciente des hommes ; __la vie individuelle, leur simple ___.__"
     answer: "subsistance"
     alt: []
-  - id: m1844-p15-e3
-    sentence: "Le travail aliéné fait de la vie générique __le ___ de la vie individuelle__ : inversion de la fin et du moyen."
-    answer: "moyen"
+  - id: m1844-p15b-x2
+    sentence: "Premier temps : le travail aliéné __rend étrangères, c'est-à-dire ___, la vie générique et la vie individuelle.__"
+    answer: "sépare"
+    alt: []
+  - id: m1844-p15b-x3
+    sentence: "Second temps : __le moyen et la ___ sont échangés.__"
+    answer: "fin"
+    alt: []
+  - id: m1844-p15b-x4
+    sentence: "La vie individuelle réduite à l'abstraction est __un égoïsme ___ ;__ la vie générique abstraite, une contrainte qui ne vit en personne."
+    answer: "abstrait"
     alt: []
   - id: m1844-p15-e4
-    sentence: "*Sur la question juive* : dans la société civile, l'homme « considère les autres comme des moyens, se ___ lui-même au rang de moyen »."
+    sentence: "*Sur la question juive* : dans la société civile, l'homme « considère les autres comme des moyens, __se ___ lui-même au rang de moyen »__."
     answer: "ravale"
     alt: []
   - id: m1844-p15-e5
-    sentence: "Contresens à éviter : la vie générique n'est pas celle d'un collectif au-dessus des individus, mais __la vie de chacun en tant qu'être ___.__"
+    sentence: "Contresens à éviter : la vie générique n'est pas celle d'un collectif, mais __la vie de chacun en tant qu'être ___.__"
     answer: "universel"
     alt: []
 - id: m1844-p16
-  title: "La vie productive, l'animal et l'homme, le renversement"
+  title: "Le travail, simple moyen de la conservation physique"
   notes: |-
-    **Première preuve : la vie productive est la vie générique ; or le travail aliéné n'en fait qu'un moyen de survivre ; et il le peut {coral}parce que l'homme est conscient{/coral}.**
+    **Marx commence la preuve de ce qu'il vient d'énoncer : dans le travail aliéné, l'activité productive, qui est la vie même de l'homme, {coral}ne lui apparaît plus que comme un moyen de se maintenir en vie{/coral}.**
 
-    **3.1 et 3.2 Un syllogisme.** Majeure : le travail n'apparaît à l'homme {amber}« que comme un moyen »{/amber} de conserver son existence physique. Mineure (« mais ») : {coral}« la vie productive est la vie générique »{/coral}, {teal}« la vie engendrant la vie »{/teal}. Il faut y lire un redoublement : l'homme produit les conditions de vie de toute son espèce, une histoire et une culture. Principe posé : {violet}une espèce se définit par son mode d'activité vitale{/violet} (*species*), et celui de l'homme est l'activité libre et consciente.
+    **Pourquoi « car » ?** *Denn* : la phrase {amber}justifie{/amber} ce qui précède. La troisième détermination a été énoncée ; elle va être prouvée.
 
-    **3.3 L'animal est son activité, l'homme l'a.** L'animal {amber}« est »{/amber} son activité (*Es ist sie*), sans distance ; l'homme l'{amber}« a »{/amber} (*Er hat*) : il en fait l'objet de sa volonté et de sa conscience. Le « ou bien » qui semble renverser la dépendance (conscient parce que générique) n'est pas une contradiction : la priorité est {green}un faux problème{/green}, conscience et être générique sont les deux faces d'un même rapport.
+    **Pourquoi « premièrement » ?** *Erstens* : le premier d'une série dont {amber}le second terme ne viendra que dans le texte suivant{/amber}, avec la production d'un monde objectif. La preuve est donc incomplète dans ce texte.
 
-    ? **Conscience** : chez Marx, le fait que « sa vie propre est pour lui un objet » ; non une intériorité, mais {amber}une prise sur sa propre activité{/amber}, se savoir partie de la nature.
+    **Pourquoi trois noms, « le travail, l'activité vitale, la vie productive » ?** Trois noms pour {violet}une même chose{/violet}, du plus courant au plus philosophique. La gradation prépare l'identification de la phrase suivante : la vie productive est la vie générique.
 
-    *Le Capital* garde l'idée sans le mot : ce qui distingue {teal}« le plus mauvais architecte de la meilleure abeille »{/teal}, c'est qu'il a construit la cellule dans sa tête avant de la construire dans la cire ; le résultat {amber}« existait donc déjà en idée »{/amber}. Avoir son activité, c'est pouvoir s'en proposer la fin.
+    **Pourquoi « n'apparaissent à l'homme » ?** *Erscheint dem Menschen* : c'est {amber}la manière dont il vit son propre travail{/amber}. Et « que comme un moyen » : la restriction est le cœur de la phrase.
 
-    **3.4 Le renversement.** *Eben, weil er ein bewußtes Wesen ist* : {coral}précisément parce qu'il est conscient{/coral}, l'homme fait de son essence un moyen de son existence. Faire de quelque chose un moyen suppose de s'en distinguer : l'animal ne le peut pas, l'homme le peut. La conscience est {coral}la condition commune de la liberté et de l'aliénation{/coral} : le travail aliéné ne l'invente pas, {green}il retourne cette distance{/green}.
+    **Quel besoin ?** Un besoin {amber}unique et le plus bas{/amber} : survivre, « la conservation de l'existence physique ». On retrouve le « sujet physique » du deuxième texte et la « satisfaction d'un besoin » du troisième. {yellow}L'ouvrier qui répond à la question « pourquoi travailles-tu ? » par « pour manger » dit exactement cela.{/yellow}
 
-    ! Marx {red}n'accuse pas la conscience{/red} : l'aliénation est {green}un malheur propre à un être libre{/green}. La preuve, annoncée par « premièrement », s'achève dans le texte suivant.
+    **La phrase prouve-t-elle quelque chose ?** {red}Pas à elle seule.{/red} Que le travail n'apparaisse que comme un moyen de survivre ne montre pas que la vie générique soit dégradée, {amber}tant qu'on n'a pas établi que le travail est la vie générique{/amber}. Le raisonnement complet a la forme d'un syllogisme.
+    - **Majeure** (cette phrase) : le travail n'apparaît que comme moyen de la survie individuelle.
+    - **Mineure** (la phrase suivante) : or le travail est la vie générique.
+    - **Conclusion** : donc la vie générique n'apparaît que comme moyen de la vie individuelle.
+
+    La majeure reprend ce que le texte précédent a établi : un travail extérieur, forcé, {teal}« seulement un moyen de satisfaire des besoins en dehors du travail »{/teal}.
+
+    ! Marx ne reproche pas à l'homme de {red}travailler pour vivre{/red}, ce que tout homme fait : « que comme » est décisif. Ce qui est dénoncé, c'est que le travail {green}ne serve plus qu'à cela{/green}.
   passage:
     label: "§4"
-    text: "Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme un moyen de satisfaire un besoin, le besoin de conservation de l'existence physique. Mais la vie productive est la vie générique. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît que comme moyen de subsistance. L'animal se confond immédiatement avec son activité vitale. Il ne se distingue pas d'elle. Il est cette activité. L'homme fait de son activité vitale elle-même l'objet de sa volonté et de sa conscience. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente distingue directement l'homme de l'activité vitale de l'animal. C'est seulement par là qu'il est un être générique. Ou bien il est seulement un être conscient, autrement dit sa vie propre est pour lui un objet, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est activité libre. Le travail aliéné renverse ce rapport en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, qu'un moyen de son existence."
     part: "3. La première preuve : l'activité vitale réduite à un moyen"
+    text: "Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme un moyen de satisfaire un besoin, le besoin de conservation de l'existence physique."
   points:
   - id: m1844-p16-1
-    fragment: "1/3"
-    sentence: "« Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme ___, le besoin de conservation de l'existence physique. Mais la vie productive est la vie générique. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît que comme moyen de subsistance. »"
+    sentence: "« Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme ___, le besoin de conservation de l'existence physique. »"
     answer: "un moyen de satisfaire un besoin"
     alt: []
+  - id: m1844-p16-x1
+    sentence: "« Premièrement » : __le second terme de la preuve ne viendra que dans le ___ suivant.__"
+    answer: "texte"
+    alt: []
+  - id: m1844-p16-x2
+    sentence: "« Le travail, l'activité vitale, la vie productive » : __trois noms pour une même ___.__"
+    answer: "chose"
+    alt: []
+  - id: m1844-p16-x3
+    sentence: "Majeure du syllogisme : le travail n'apparaît que comme moyen de survivre ; __mineure : or le travail est la vie ___.__"
+    answer: "générique"
+    alt: []
+  - id: m1844-p16-x4
+    sentence: "« Que comme » est décisif : ce qui est dénoncé, __c'est que le travail ne serve plus qu'à ___.__"
+    answer: "survivre"
+    alt: ["vivre"]
+- id: m1844-p16b
+  title: "La vie productive, la vie engendrant la vie"
+  notes: |-
+    **Marx pose la mineure qui manquait : {coral}la vie productive est la vie même de l'espèce{/coral}, une vie qui produit de la vie. Chaque espèce se reconnaît à sa manière d'agir pour vivre, et celle de l'homme est l'activité libre et consciente. La conclusion tombe : c'est la vie elle-même qui n'est plus qu'un moyen.**
+
+    **Pourquoi « mais » ?** *Aber* : la mineure {amber}s'oppose{/amber} à ce qui vient d'être dit. Le travail n'apparaît que comme moyen, {coral}mais il est en réalité la vie générique{/coral}.
+
+    **Pourquoi « la vie engendrant la vie » ?** *Das Leben erzeugende Leben*. Le verbe *erzeugen*, engendrer, produire, s'applique aussi à la génération. On pourrait l'entendre au sens {red}biologique{/red}, la reproduction de l'espèce, ou {red}économique{/red}, la production des moyens de subsistance. Il faut y lire davantage, {green}un redoublement{/green} : par le travail, l'homme ne se contente pas d'entretenir son organisme, il produit volontairement {amber}les conditions d'existence et le mode de vie de toute son espèce{/amber}, ce qui fait de la vie humaine une histoire et une culture. {yellow}Ce que l'homme produit, maisons, outils, champs cultivés, savoirs, devient la condition de vie des autres hommes et des générations suivantes.{/yellow} C'est pourquoi produire, c'est vivre la vie de l'espèce.
+
+    **Pourquoi « le mode d'activité vitale renferme tout le caractère d'une espèce » ?** C'est {violet}un principe général{/violet}, que Marx pose pour toute espèce (l'allemand dit *species*, en latin, le mot de la classification naturelle) : {coral}une espèce se définit par sa manière de vivre{/coral}, non par sa forme ou sa substance. {yellow}Le castor se reconnaît à ses barrages, l'abeille à ses alvéoles ; l'homme, à ce qu'il produit en le voulant et en le sachant.{/yellow}
+
+    ? **Caractère générique** (*Gattungscharakter*) : ce qui distingue une espèce des autres, et qui se lit dans sa manière de vivre. Pour l'homme, {amber}l'activité libre et consciente{/amber} : une activité qu'il veut et qu'il sait, et {red}non une activité qui le traverse comme un instinct{/red}. « Libre » et « consciente » vont ensemble : la liberté tient à la conscience.
+
+    **Pourquoi « la vie elle-même » ?** C'est la conclusion du syllogisme, énoncée sans « donc » : {coral}ce n'est plus seulement le travail, c'est « la vie elle-même » qui n'est plus qu'un moyen de subsistance{/coral}. Si la vie productive est la vie générique, et que le travail aliéné en fait un moyen de survivre, alors la vie tout entière est réduite à un moyen de vivre.
+
+    **Ce que dira *L'Idéologie allemande*.** La même idée, sans le vocabulaire de l'espèce : les hommes se distinguent des animaux {teal}« dès qu'ils commencent à produire leurs moyens d'existence »{/teal}.
+
+    ! Marx ne réduit pas l'homme à {red}un producteur économique{/red} : la production dont il parle est {green}la vie générique tout entière{/green}, qui comprend la science et l'art, et que le texte suivant étendra à la production « d'après les lois de la beauté ».
+  passage:
+    label: "§4"
+    part: "3. La première preuve : l'activité vitale réduite à un moyen"
+    text: "Mais la vie productive est la vie générique. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît que comme moyen de subsistance."
+  points:
   - id: m1844-p16-2
-    fragment: "1/3"
-    sentence: "« Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme un moyen de satisfaire un besoin, le besoin de conservation de l'existence physique. Mais la vie productive ___. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît que comme moyen de subsistance. »"
+    sentence: "« Mais la vie productive ___. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît que comme moyen de subsistance. »"
     answer: "est la vie générique"
     alt: []
   - id: m1844-p16-3
-    fragment: "1/3"
-    sentence: "« Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme un moyen de satisfaire un besoin, le besoin de conservation de l'existence physique. Mais la vie productive est la vie générique. C'est ___. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît que comme moyen de subsistance. »"
+    sentence: "« Mais la vie productive est la vie générique. C'est ___. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît que comme moyen de subsistance. »"
     answer: "la vie engendrant la vie"
     alt: []
   - id: m1844-p16-4
-    fragment: "1/3"
-    sentence: "« Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme un moyen de satisfaire un besoin, le besoin de conservation de l'existence physique. Mais la vie productive est la vie générique. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et ___. La vie elle-même n'apparaît que comme moyen de subsistance. »"
+    sentence: "« Mais la vie productive est la vie générique. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et ___. La vie elle-même n'apparaît que comme moyen de subsistance. »"
     answer: "l'activité libre, consciente, est le caractère générique de l'homme"
     alt: []
   - id: m1844-p16-5
-    fragment: "1/3"
-    sentence: "« Car, premièrement, le travail, l'activité vitale, la vie productive n'apparaissent eux-mêmes à l'homme que comme un moyen de satisfaire un besoin, le besoin de conservation de l'existence physique. Mais la vie productive est la vie générique. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît ___. »"
+    sentence: "« Mais la vie productive est la vie générique. C'est la vie engendrant la vie. Le mode d'activité vitale renferme tout le caractère d'une espèce, son caractère générique, et l'activité libre, consciente, est le caractère générique de l'homme. La vie elle-même n'apparaît ___. »"
     answer: "que comme moyen de subsistance"
     alt: []
+  - id: m1844-p16b-x1
+    sentence: "« La vie engendrant la vie » : __un redoublement :__ l'homme produit les conditions de vie de toute son espèce, __une histoire et une ___.__"
+    answer: "culture"
+    alt: []
+  - id: m1844-p16-e2
+    sentence: "Principe posé : une espèce se définit par __son mode d'___.__"
+    answer: "activité vitale"
+    alt: []
+  - id: m1844-p16b-x3
+    sentence: "Le **caractère générique** de l'homme est l'activité libre et consciente : __une activité qu'il veut et qu'il ___.__"
+    answer: "sait"
+    alt: []
+  - id: m1844-p16b-x4
+    sentence: "Conclusion du syllogisme : __c'est « la vie ___ » qui n'est plus qu'un moyen de subsistance.__"
+    answer: "elle-même"
+    alt: []
+  - id: m1844-p16b-x5
+    sentence: "*L'Idéologie allemande* : les hommes se distinguent des animaux __« dès qu'ils commencent à produire leurs ___ »__."
+    answer: "moyens d'existence"
+    alt: []
+- id: m1844-p16c
+  title: "L'animal est son activité, l'homme l'a"
+  notes: |-
+    **Marx explique ce que veut dire « activité libre et consciente » en comparant l'homme et l'animal : {coral}l'animal est son activité, l'homme l'a{/coral}. C'est cela qui fait de lui un être générique.**
+
+    **Pourquoi trois phrases brèves pour l'animal ?** « Se confond immédiatement avec », « ne se distingue pas d'elle », « est cette activité » : {amber}de plus en plus fortes, jusqu'à l'identité{/amber} (*Es ist sie*). « Immédiatement » (*unmittelbar*) veut dire {violet}sans médiation, sans distance{/violet} entre l'animal et ce qu'il fait. {yellow}L'abeille butine ; elle ne décide pas de butiner, et ne peut pas faire autre chose.{/yellow}
+
+    **Pourquoi « l'objet de sa volonté et de sa conscience » ?** *Zum Gegenstand seines Wollens und seines Bewußtseins* : l'homme {amber}met son activité devant lui{/amber}, il peut la regarder, la vouloir, la changer. Et {coral}la volonté vient avant la conscience{/coral} : la prise sur l'activité est pratique autant que théorique.
+
+    **Pourquoi « il a » ?** *Er hat* : le verbe avoir {coral}s'oppose au verbe être{/coral} de l'animal. Avoir son activité, c'est {amber}en prendre possession{/amber}, reprendre à son compte l'activité naturelle qui nous traverse. {yellow}Le maraudeur qui cueille des fruits pour se nourrir et le jardinier qui décide de planter un verger, choisit les espèces et prévoit les récoltes font tous deux quelque chose pour vivre ; seul le second a son activité.{/yellow}
+
+    **Pourquoi « une détermination avec laquelle il se confond » ?** *Eine Bestimmtheit* : {violet}un caractère fixé{/violet}, qui définirait l'homme sans qu'il y soit pour rien, comme l'instinct définit l'animal. L'activité de l'homme n'est pas fixée d'avance : elle est {green}ce qu'il en fait{/green}.
+
+    **Pourquoi « c'est seulement par là » ?** *Eben nur dadurch* : l'insistance (*eben*) et la restriction (*nur*) ensemble. {coral}C'est la conscience de son activité, et rien d'autre, qui fait de l'homme un être générique.{/coral} Pourquoi ? Parce que celui qui a son activité devant lui peut la rapporter à toutes les espèces, et se rapporter à soi comme à l'espèce : l'universalité du §1 suppose cette distance.
+
+    ? **Conscience** : chez Marx, le fait que {amber}« sa vie propre est pour lui un objet »{/amber} ; non {red}une intériorité séparée du monde{/red}, mais {green}une prise sur sa propre activité{/green}, et la connaissance de soi comme partie de la nature.
+
+    **Ce que dira *Le Capital*.** L'idée y demeure, sans le mot : ce qui distingue {teal}« le plus mauvais architecte de la meilleure abeille »{/teal}, c'est qu'il a construit la cellule dans sa tête avant de la construire dans la cire ; le résultat {teal}« existait donc déjà en idée »{/teal}. Avoir son activité, c'est pouvoir s'en proposer la fin.
+
+    ! Marx ne place pas la différence de l'homme {red}dans la pensée{/red}, comme la tradition qui le définit par la raison : ce que l'homme a pour objet, c'est {green}son activité vitale{/green}, et la conscience est une prise pratique sur ce qu'il fait.
+  passage:
+    label: "§4"
+    part: "3. La première preuve : l'activité vitale réduite à un moyen"
+    text: "L'animal se confond immédiatement avec son activité vitale. Il ne se distingue pas d'elle. Il est cette activité. L'homme fait de son activité vitale elle-même l'objet de sa volonté et de sa conscience. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente distingue directement l'homme de l'activité vitale de l'animal. C'est seulement par là qu'il est un être générique."
+  points:
   - id: m1844-p16-6
-    fragment: "2/3"
     sentence: "« ___. Il ne se distingue pas d'elle. Il est cette activité. L'homme fait de son activité vitale elle-même l'objet de sa volonté et de sa conscience. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente distingue directement l'homme de l'activité vitale de l'animal. C'est seulement par là qu'il est un être générique. »"
     answer: "L'animal se confond immédiatement avec son activité vitale"
     alt: []
   - id: m1844-p16-7
-    fragment: "2/3"
     sentence: "« L'animal se confond immédiatement avec son activité vitale. Il ne se distingue pas d'elle. ___. L'homme fait de son activité vitale elle-même l'objet de sa volonté et de sa conscience. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente distingue directement l'homme de l'activité vitale de l'animal. C'est seulement par là qu'il est un être générique. »"
     answer: "Il est cette activité"
     alt: []
   - id: m1844-p16-8
-    fragment: "2/3"
     sentence: "« L'animal se confond immédiatement avec son activité vitale. Il ne se distingue pas d'elle. Il est cette activité. L'homme fait de son activité vitale elle-même ___. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente distingue directement l'homme de l'activité vitale de l'animal. C'est seulement par là qu'il est un être générique. »"
     answer: "l'objet de sa volonté et de sa conscience"
     alt: []
   - id: m1844-p16-9
-    fragment: "2/3"
     sentence: "« L'animal se confond immédiatement avec son activité vitale. Il ne se distingue pas d'elle. Il est cette activité. L'homme fait de son activité vitale elle-même l'objet de sa volonté et de sa conscience. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente ___. C'est seulement par là qu'il est un être générique. »"
     answer: "distingue directement l'homme de l'activité vitale de l'animal"
     alt: []
   - id: m1844-p16-10
-    fragment: "2/3"
     sentence: "« L'animal se confond immédiatement avec son activité vitale. Il ne se distingue pas d'elle. Il est cette activité. L'homme fait de son activité vitale elle-même l'objet de sa volonté et de sa conscience. Il a une activité vitale consciente ; elle n'est pas une détermination avec laquelle il se confond immédiatement. L'activité vitale consciente distingue directement l'homme de l'activité vitale de l'animal. C'est seulement par là qu'il est ___. »"
     answer: "un être générique"
     alt: []
-  - id: m1844-p16-11
-    fragment: "3/3"
-    sentence: "« Ou bien il est seulement un être conscient, autrement dit ___, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est activité libre. Le travail aliéné renverse ce rapport en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, qu'un moyen de son existence. »"
-    answer: "sa vie propre est pour lui un objet"
-    alt: []
-  - id: m1844-p16-12
-    fragment: "3/3"
-    sentence: "« Ou bien il est seulement un être conscient, autrement dit sa vie propre est pour lui un objet, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est ___. Le travail aliéné renverse ce rapport en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, qu'un moyen de son existence. »"
-    answer: "activité libre"
-    alt: []
-  - id: m1844-p16-13
-    fragment: "3/3"
-    sentence: "« Ou bien il est seulement un être conscient, autrement dit sa vie propre est pour lui un objet, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est activité libre. Le travail aliéné ___ en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, qu'un moyen de son existence. »"
-    answer: "renverse ce rapport"
-    alt: []
-  - id: m1844-p16-14
-    fragment: "3/3"
-    sentence: "« Ou bien il est seulement un être conscient, autrement dit sa vie propre est pour lui un objet, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est activité libre. Le travail aliéné renverse ce rapport en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, ___. »"
-    answer: "qu'un moyen de son existence"
-    alt: []
-  - id: m1844-p16-e1
-    sentence: "Mineure de la preuve : __« la vie productive est la ___ »__, la vie engendrant la vie."
-    answer: "vie générique"
-    alt: []
-  - id: m1844-p16-e2
-    sentence: "Principe posé au §4 : une espèce se définit par __son mode d'___.__"
-    answer: "activité vitale"
+  - id: m1844-p16c-x1
+    sentence: "L'animal « se confond immédiatement » avec son activité : __sans ___, sans distance.__"
+    answer: "médiation"
     alt: []
   - id: m1844-p16-e3
     sentence: "L'animal « est » son activité vitale, __l'homme l'___ :__ il en fait l'objet de sa volonté et de sa conscience."
     answer: "a"
     alt: []
+  - id: m1844-p16c-x3
+    sentence: "« L'objet de sa volonté et de sa conscience » : la volonté vient avant la conscience ; __la prise sur l'activité est ___ autant que théorique.__"
+    answer: "pratique"
+    alt: []
+  - id: m1844-p16c-x4
+    sentence: "*Eine Bestimmtheit* : __un caractère ___,__ comme l'instinct définit l'animal."
+    answer: "fixé"
+    alt: []
+  - id: m1844-p16c-x5
+    sentence: "La **conscience**, chez Marx : non une intériorité, mais __une ___ sur sa propre activité.__"
+    answer: "prise"
+    alt: []
+  - id: m1844-p16-e7
+    sentence: "*Le Capital* : __le plus mauvais architecte a construit la cellule ___ avant de la construire dans la cire__."
+    answer: "dans sa tête"
+    alt: []
+- id: m1844-p16d
+  title: "Conscient parce que générique : une activité libre"
+  notes: |-
+    **Marx retourne la formule : l'homme est conscient {coral}parce qu'il{/coral} est générique, et c'est pour cela que son activité est libre.** On semble tourner en rond ; il n'en est rien.
+
+    **Pourquoi « ou bien » ?** *Oder* annonce {amber}une autre formulation{/amber}, presque une correction. La phrase précédente disait : l'homme est générique {violet}parce qu'il{/violet} a une activité consciente (« c'est seulement par là »). Celle-ci dit : il est conscient {violet}parce qu'il{/violet} est générique (« précisément parce que »).
+
+    **Y a-t-il un cercle ?** On le croirait : chaque terme fonde l'autre. Mais {green}la question de la priorité est ici un faux problème{/green}. La conscience et l'être générique sont {coral}les deux faces, théorique et pratique, d'une même réalité{/coral} : c'est l'élaboration du monde objectif qui fait de l'homme, d'un même acte, un être conscient et un être générique. Le « ou bien » {red}ne corrige pas{/red} la première formule, il {green}en donne l'autre face{/green}, comme le §1 disait déjà que les deux définitions de l'être générique ne sont qu'« une autre façon d'exprimer la même chose ».
+
+    **Que veut dire « sa vie propre est pour lui un objet » ?** C'est {amber}la définition de la conscience{/amber} : avoir sa propre activité vitale devant soi, pouvoir la vouloir et la connaître. {yellow}Celui qui se demande ce qu'il fera de sa vie a sa vie pour objet ; le chat qui chasse ne se le demande pas.{/yellow}
+
+    **Pourquoi « c'est pour cela seulement que son activité est activité libre » ?** *Nur darum* : une nouvelle déduction de la liberté. Celui qui {amber}a{/amber} son activité peut {coral}s'en distancier{/coral}, la vouloir ou non, la diriger vers telle fin plutôt que telle autre ; celui qui {amber}l'est{/amber}, comme l'animal, ne peut que l'accomplir. Pouvoir prendre son activité pour objet {green}affranchit l'homme de la contrainte biologique immédiate{/green}, et fait de son travail une activité autodéterminée.
+
+    **La liberté repose donc sur une distance.** C'est le point que la phrase suivante va retourner : la distance qui permet à l'homme de vouloir son activité pour elle-même lui permet aussi, si le travail lui est imposé du dehors, {red}de ne la vouloir que pour ce qu'elle rapporte{/red}.
+
+    ! Le « ou bien » n'est pas {red}une contradiction{/red} : c'est {green}une équivalence{/green}, la même que celle du début du texte.
+  passage:
+    label: "§4"
+    part: "3. La première preuve : l'activité vitale réduite à un moyen"
+    text: "Ou bien il est seulement un être conscient, autrement dit sa vie propre est pour lui un objet, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est activité libre."
+  points:
+  - id: m1844-p16-11
+    sentence: "« Ou bien il est seulement un être conscient, autrement dit ___, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est activité libre. »"
+    answer: "sa vie propre est pour lui un objet"
+    alt: []
+  - id: m1844-p16-12
+    sentence: "« Ou bien il est seulement un être conscient, autrement dit sa vie propre est pour lui un objet, précisément parce qu'il est un être générique. C'est pour cela seulement que son activité est ___. »"
+    answer: "activité libre"
+    alt: []
   - id: m1844-p16-e4
-    sentence: "La priorité de la conscience ou de l'être générique est __un faux ___ :__ deux faces d'un même rapport."
+    sentence: "« Ou bien » : l'homme est générique parce que conscient, et conscient parce que générique ; __la priorité est un faux ___.__"
     answer: "problème"
     alt: []
-  - id: m1844-p16-e5
-    sentence: "La **conscience** est __la condition commune de la liberté__ et de ___."
-    answer: "l'aliénation"
+  - id: m1844-p16d-x2
+    sentence: "Conscience et être générique sont __les deux ___ d'une même réalité,__ théorique et pratique."
+    answer: "faces"
+    alt: []
+  - id: m1844-p16d-x3
+    sentence: "Celui qui a son activité peut __s'en ___,__ la vouloir ou non ; celui qui l'est ne peut que l'accomplir."
+    answer: "distancier"
+    alt: ["distinguer"]
+  - id: m1844-p16d-x4
+    sentence: "La liberté de l'homme repose sur __une ___ à l'égard de son activité.__"
+    answer: "distance"
+    alt: []
+- id: m1844-p16e
+  title: "Le renversement"
+  notes: |-
+    **La phrase conclut le texte en retournant ce qui vient d'être établi : la distance qui permettait à l'homme d'avoir son activité, et par là d'être libre, est {coral}celle qui lui permet, dans le travail aliéné, de la traiter comme un simple instrument pour survivre{/coral}.** La conscience est la condition commune de la liberté et de l'aliénation.
+
+    **Pourquoi « renverse ce rapport » ?** *Kehrt das Verhältnis um* : le rapport renversé est {amber}celui de l'homme à son activité{/amber}, décrit dans les phrases précédentes. L'homme avait son activité pour la vouloir ; il l'a maintenant pour s'en servir.
+
+    **Pourquoi « du fait qu'il est un être conscient » ?** L'allemand dit *eben, weil er ein bewußtes Wesen ist* : {coral}« précisément parce qu'il est un être conscient »{/coral}. Le *eben* insiste : c'est {green}la conscience même{/green}, et {red}non une défaillance de la conscience{/red}, qui rend le renversement possible.
+
+    **Pourquoi « son activité vitale, son essence » ?** L'apposition {amber}identifie l'activité vitale et l'essence{/amber} (*Wesen*) : ce qui est dégradé, c'est ce que l'homme est.
+
+    ? **Essence, existence** : l'essence est {violet}ce qu'est une chose{/violet}, ce qui la définit ; l'existence, {violet}le simple fait qu'elle soit{/violet}, qu'elle subsiste. Le renversement {coral}subordonne ce qu'on est au fait d'être là{/coral} : l'homme sacrifie son essence, l'activité libre, à sa simple subsistance.
+
+    **Pourquoi est-ce précisément parce qu'il est conscient que l'homme peut faire de son activité un moyen ?** Le raisonnement implicite tient en trois étapes.
+    - **Faire de quelque chose un moyen suppose de s'en distinguer** : on ne peut se servir que de ce qu'on n'est pas, et qu'on tient à distance comme un instrument.
+    - **L'animal, qui est son activité, ne peut pas s'en distinguer**, donc ne peut pas en faire un moyen : {amber}il ne peut pas être aliéné de cette manière{/amber}.
+    - **L'homme, qui a son activité, peut s'en distinguer** : cette distance, condition de sa liberté, est aussi {coral}la condition de son aliénation{/coral}.
+
+    {yellow}Celui qui a choisi un métier par goût et ne l'exerce plus que pour son salaire a gardé la distance qui lui permettait de choisir ; mais elle ne lui sert plus qu'à calculer ce que son travail lui rapporte.{/yellow}
+
+    **La problématique est résolue.** Ce n'est pas la conscience qui aliène ; c'est {coral}le travail aliéné qui se sert d'elle{/coral}. Mais ce qui aliène ne pourrait pas aliéner un être qui n'aurait pas cette distance : {green}l'aliénation est un malheur propre à un être libre{/green}. Le travail aliéné ne l'invente pas, {amber}il retourne cette distance{/amber}.
+
+    **Ce qui reste à prouver.** La preuve, annoncée par « premièrement », s'achève dans le texte suivant, avec la production d'un monde objectif ; il en tirera que le travail aliéné {teal}change sa supériorité sur l'animal en infériorité{/teal}.
+
+    ! Marx {red}n'accuse pas la conscience{/red}, comme si penser rendait malheureux ; et le sujet grammatical est l'homme, mais {green}le sujet réel est le travail aliéné{/green}, qui « renverse ce rapport ». L'ouvrier n'y commet aucune faute.
+  passage:
+    label: "§4"
+    part: "3. La première preuve : l'activité vitale réduite à un moyen"
+    text: "Le travail aliéné renverse ce rapport en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, qu'un moyen de son existence."
+  points:
+  - id: m1844-p16-13
+    sentence: "« Le travail aliéné ___ en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, qu'un moyen de son existence. »"
+    answer: "renverse ce rapport"
+    alt: []
+  - id: m1844-p16-14
+    sentence: "« Le travail aliéné renverse ce rapport en ce sens que l'homme, du fait qu'il est un être conscient, ne fait de son activité vitale, de son essence, ___. »"
+    answer: "qu'un moyen de son existence"
+    alt: []
+  - id: m1844-p16e-x1
+    sentence: "*Eben, weil er ein bewußtes Wesen ist* : __c'est la conscience même, non une ___ de la conscience,__ qui rend le renversement possible."
+    answer: "défaillance"
+    alt: []
+  - id: m1844-p16e-x2
+    sentence: "« Son activité vitale, son essence » : __l'apposition identifie l'activité vitale et l'___.__"
+    answer: "essence"
+    alt: []
+  - id: m1844-p16e-x3
+    sentence: "Le renversement __subordonne ce qu'on est au fait d'être ___ :__ l'essence à l'existence."
+    answer: "là"
     alt: []
   - id: m1844-p16-e6
     sentence: "Faire de son activité un moyen suppose __de s'en ___,__ ce que l'animal ne peut pas."
     answer: "distinguer"
     alt: []
-  - id: m1844-p16-e7
-    sentence: "*Le Capital* garde l'idée : __le plus mauvais architecte a construit la cellule ___ avant de la construire dans la cire__."
-    answer: "dans sa tête"
+  - id: m1844-p16-e5
+    sentence: "La **conscience** est __la condition commune de la liberté et de l'___.__"
+    answer: "aliénation"
+    alt: []
+  - id: m1844-p16e-x6
+    sentence: "L'aliénation est __un malheur propre à un être ___.__"
+    answer: "libre"
     alt: []
