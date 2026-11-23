@@ -11,6 +11,9 @@
 # 2026-11-21 ; il est réparti en cinq unités (m1844, m1844b à m1844e), qui
 # gardent les identifiants des leçons et des cartes (m1844-p…), donc leur
 # révision, avec des § renumérotés dans chaque unité.
+# Refondu le 2026-11-23 : une leçon par phrase ou segment (m1844-p9, p9b…),
+# deux leçons d'introduction ; les cartes-citation gardent leurs identifiants,
+# recentrées sur leur segment ; les cartes-explication sont nouvelles (-x…).
 
 id: m1844c
 title: "L'activité étrangère à l'ouvrier (1844)"
@@ -22,15 +25,66 @@ intro: |-
   La deuxième détermination du travail aliéné : l'aliénation n'est pas seulement dans le produit, mais dans l'acte même de produire ; le travail est extérieur à l'ouvrier, forcé, il appartient à un autre, et l'ouvrier ne se sent libre que dans ses fonctions animales.
 lessons:
 - id: m1844c-i1
-  title: "Où en est l'argument : du produit à l'activité"
+  title: "Le texte, sa place et son plan"
   notes: |-
-    **Ce texte remonte du produit à l'acte qui le produit : c'est la deuxième détermination du travail aliéné.**
+    **Le texte est le troisième des cinq moments du passage sur le travail aliéné : il {coral}remonte du produit à l'acte de produire{/coral}, et dégage la deuxième détermination, l'aliénation de l'activité.** Il se trouve à la page XXIII du manuscrit, de « Nous n'avons considéré jusqu'ici l'aliénation… que sous un seul aspect » à « l'aliénation de soi comme, plus haut, l'aliénation de la chose ».
 
-    Les deux textes précédents n'ont considéré l'aliénation que sous un aspect, {amber}le rapport de l'ouvrier aux produits de son travail{/amber}. Marx examine maintenant l'activité elle-même.
+    **Où en est l'argument.** Les deux textes précédents ont dégagé {amber}la première détermination{/amber} : le rapport de l'ouvrier à son produit. Le produit lui fait face comme une puissance étrangère, le capital ; l'ouvrier est privé de la nature et devient le serviteur de son objet ; l'économie politique dissimule ce rapport. Le texte précédent concluait : la question de l'essence du travail est celle du {teal}« rapport essentiel de l'ouvrier à la production »{/teal}.
 
-    **Sa question :** en quoi consiste l'aliénation dans l'acte même de travailler ? Elle s'inscrit dans le débat sur la peine du travail : la malédiction de la Genèse, et Smith, à qui Marx reprochera d'envisager le travail {teal}« comme malédiction »{/teal} (*Grundrisse*). **Sa thèse :** l'aliénation est {coral}d'abord dans l'activité{/coral}, dont le produit n'est que le résumé ; le travail est {violet}extérieur{/violet} à l'ouvrier, {violet}forcé{/violet}, et {violet}appartient à un autre{/violet}, si bien qu'il éprouve son activité comme {coral}une passion subie{/coral} et ne se sent libre que dans ses fonctions animales. **Sa difficulté :** comment l'activité par laquelle l'homme devrait s'affirmer peut-elle être vécue comme la perte de soi, au point qu'il ne se sente libre que hors d'elle ?
+    **Pourquoi fallait-il passer à l'activité ?** Parce que la « production » désigne à la fois {violet}ce qui est produit{/violet} et {violet}l'acte de produire{/violet}. Jusqu'ici, Marx n'a regardé que le premier sens. Or c'est dans l'acte que le rapport de l'ouvrier à la production se noue : il faut dire non plus seulement ce que l'ouvrier perd quand son produit lui est pris, mais {coral}ce qu'il éprouve et ce qu'il devient pendant qu'il travaille{/coral}. Le texte suivant tirera une troisième détermination, l'aliénation de l'être générique.
 
-    Trois mouvements : du produit à l'acte (§1), en quoi consiste l'aliénation du travail (§2), le résultat et le bilan (§3, §4).
+    **Deux éléments de cadre.**
+    - **La religion selon Feuerbach**, convoquée une seconde fois, sous un autre angle : non plus la richesse que l'homme place en Dieu, mais {amber}l'activité de son imagination qui agit sur lui comme une activité étrangère{/amber}.
+    - **L'homme, être naturel, actif et passif à la fois** : un être qui a des besoins, qui pâtit de ce qui l'affecte, et qui agit pour y répondre.
+
+    ? **Dessaisissement** (*Entäußerung*) : le fait de se mettre hors de soi, de se défaire de soi. C'est le mot central du texte, que la traduction rend tantôt par « aliénation », tantôt par « dépouillement » : la question du deuxième paragraphe est « en quoi consiste l'*Entäußerung* du travail ? ».
+
+    ? **Activité propre** (*Selbsttätigkeit*) : l'activité qui part de soi. Son contraire, l'activité qu'un autre déclenche en moi, on peut l'appeler une {violet}allo-activité{/violet}.
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | du produit à l'acte | §1 | L'aliénation du produit suppose celle de l'activité, dont le produit n'est que le résumé : l'ordre suivi jusqu'ici s'inverse. |
+    | en quoi consiste l'aliénation du travail | §2 | Trois caractères qui n'en font qu'un : le travail est extérieur à l'ouvrier, forcé, et appartient à un autre ; il est fui comme la peste ; il est la perte de soi. |
+    | le résultat et le bilan | §3 et §4 | L'ouvrier ne se sent libre que dans ses fonctions animales ; récapitulation des deux aspects, l'aliénation de la chose et l'aliénation de soi. |
+
+    ! Le texte décrit l'aliénation {green}telle que l'ouvrier l'éprouve{/green} : se sentir chez soi ou hors de soi, à l'aise ou malheureux, libre ou animal. Ce n'est pas {red}une psychologie{/red} : l'épreuve vécue est le signe d'un rapport réel.
+  passage:
+    label: "Introduction"
+  points:
+  - id: m1844c-i1-x1
+    sentence: "La « production » désigne à la fois ce qui est produit et __l'___ de produire,__ que ce texte examine."
+    answer: "acte"
+    alt: []
+  - id: m1844c-i1-x2
+    sentence: "La question du deuxième paragraphe porte sur __l'*___* du travail,__ le dessaisissement."
+    answer: "Entäußerung"
+    alt: []
+  - id: m1844c-i1-x3
+    sentence: "*Selbsttätigkeit*, l'**activité propre** : __l'activité qui part de ___.__"
+    answer: "soi"
+    alt: []
+- id: m1844c-i2
+  title: "La question, la thèse, la problématique"
+  notes: |-
+    **Le texte se demande {coral}en quoi consiste l'aliénation du travail dans l'acte même de travailler{/coral}, et non plus seulement dans ce que le travail produit.**
+
+    **Contre quelle réponse ordinaire ?** Une longue tradition tient le travail pour {red}une peine par nature{/red}, depuis la malédiction de la Genèse, « tu travailleras à la sueur de ton front ». L'économie politique la reprend : Smith conçoit le travail comme un sacrifice du repos et de la liberté. La question de Marx est donc de savoir si la peine que l'ouvrier éprouve tient {amber}à l'essence du travail{/amber}, ou {amber}à la forme qu'il prend quand il est aliéné{/amber}.
+
+    **Sa thèse :** l'aliénation n'est pas seulement dans le produit, elle est {coral}d'abord dans l'acte de produire{/coral}, dont le produit n'est que le résumé. Le travail aliéné est {violet}extérieur{/violet} à l'ouvrier, il n'appartient pas à son essence et appartient à un autre : l'ouvrier ne s'y affirme pas mais s'y nie, ne le fait que contraint et comme simple moyen de satisfaire des besoins qui lui sont extérieurs, et éprouve sa propre activité {violet}comme une passion subie{/violet}, la perte de lui-même. Il en résulte que l'ouvrier {coral}ne se sent libre que dans ses fonctions animales{/coral}, et animal dans le travail, sa fonction la plus humaine.
+
+    **Sa problématique :** comment l'activité par laquelle l'homme devrait s'affirmer peut-elle être vécue par l'ouvrier comme la perte de lui-même, au point que ce soit {coral}hors d'elle, dans ses fonctions animales, qu'il se sente libre{/coral} ?
+
+    **Pourquoi est-ce difficile ?**
+    - L'activité semble {amber}ce qu'il y a de plus propre à chacun{/amber}. On peut perdre un produit, qu'un autre emporte ; on ne voit pas comment on perdrait son activité au moment même où on l'exerce, puisque c'est soi qui agit. Dire que l'activité de l'ouvrier « appartient à un autre », c'est dire qu'{red}il agit sans que ce soit lui qui agisse{/red}. Le texte aggrave la difficulté avec « l'activité qui est passivité », « la force qui est impuissance ».
+    - Si le travail aliéné rend l'ouvrier « animal », Marx semble {red}mépriser les fonctions du corps{/red} ; or il les dit lui-même « authentiquement humaines ».
+
+    | Difficulté | Où elle se trouve | Réponse du texte |
+    | on agit sans que l'activité soit sienne | « elle appartient à un autre » | l'ouvrier a vendu la disposition de son activité : elle est déclenchée et dirigée par un autre |
+    | une activité qui est passivité | le bilan, §4 | séparé du besoin qui devait le mettre en mouvement, l'ouvrier retrouve la passivité dans son agir même |
+    | l'homme devenu animal par son corps | « ses fonctions animales » | ce n'est pas le corps qui animalise, c'est l'abstraction qui le coupe du reste de la vie |
+
+    **L'hypothèse de lecture :** le texte répond par deux distinctions. L'une, qu'il {amber}suppose{/amber}, oppose l'activité qui part de soi et l'activité qui appartient à un autre ; l'autre, qu'il {amber}formule{/amber}, oppose une fonction prise dans l'ensemble de la vie et la même fonction isolée, devenue fin unique.
+
+    ! La thèse est forte sur l'ordre des raisons : l'aliénation de l'activité {green}fonde{/green} celle du produit, {red}non l'inverse{/red}. Elle est limitée sur un point : l'extériorité du travail, dont tout découle, est {amber}décrite plutôt que déduite{/amber}.
   passage:
     label: "Introduction"
   points:
@@ -38,315 +92,729 @@ lessons:
     sentence: "Thèse du troisième texte : l'aliénation est d'abord dans l'activité, __dont le produit n'est que le ___.__"
     answer: "résumé"
     alt: []
-  - id: m1844c-i1-e2
-    sentence: "Dans les *Grundrisse*, Marx reproche à Smith d'envisager le travail __« comme ___ »__."
-    answer: "malédiction"
+  - id: m1844c-i2-x1
+    sentence: "Marx demande si la peine du travail tient à son essence ou __à la forme qu'il prend quand il est ___.__"
+    answer: "aliéné"
+    alt: []
+  - id: m1844c-i2-x2
+    sentence: "Problématique : comment l'activité par laquelle l'homme devrait s'affirmer __peut-elle être vécue comme la ___ de lui-même ?__"
+    answer: "perte"
+    alt: []
+  - id: m1844c-i2-x3
+    sentence: "L'ouvrier agit sans que son activité soit la sienne, parce qu'il __en a vendu la ___.__"
+    answer: "disposition"
+    alt: []
+  - id: m1844c-i2-x4
+    sentence: "Ce n'est pas le corps qui animalise l'ouvrier, mais __l'___ qui coupe ses fonctions du reste de sa vie.__"
+    answer: "abstraction"
     alt: []
 - id: m1844-p9
-  title: "1.1 et 1.2 Dans l'acte même de produire"
+  title: "L'aliénation dans l'acte même de produire"
   notes: |-
-    **L'aliénation n'est pas seulement dans le résultat, elle est {coral}dans l'acte même de la production{/coral}, et c'est elle qui fonde celle du produit.**
+    **Marx fait le point : jusqu'ici, il n'a regardé l'aliénation que du côté du produit. Il annonce qu'elle est aussi {coral}dans l'acte de produire{/coral}, et le justifie par une question : un produit ne peut devenir étranger à celui qui le fait que si celui-ci, en le faisant, est déjà étranger à lui-même.**
 
-    **1.1 Un argument par la condition.** L'allemand juxtapose *Entfremdung* et *Entäußerung*, devenir étranger et se dessaisir. La question « comment le produit ne serait-il pas étranger à l'ouvrier si celui-ci… ne devenait pas étranger à lui-même ? » est rhétorique, mais elle contient un argument : le produit n'est que le travail fixé dans un objet ; si l'activité était vraiment la sienne, son produit le serait aussi ; s'il lui est étranger, {amber}c'est que l'activité l'était déjà{/amber}. Le verbe est réfléchi (*sich selbst entfremdete*) : l'ouvrier est à la fois l'agent et l'objet de son aliénation.
+    **Pourquoi « jusqu'ici » et « sous un seul aspect » ?** Marx regarde le chemin parcouru, ce que font les deux textes précédents. « Sous un seul aspect » {amber}annonce qu'il y en a d'autres{/amber}. Et « or » (*Aber*, mais) corrige une vue partielle : ce qui a été dit n'est pas faux, il est incomplet.
 
-    **1.2 Le produit, résumé de l'activité.** *Ist ja nur das Resümee* : le produit n'est {coral}que le condensé{/coral} de l'activité. Le *also* et le *muß* (« donc », « doit ») marquent une nécessité d'inférence : si le produit est dessaisissement, la production est {violet}« dessaisissement en acte »{/violet} (*tätige Entäußerung*), « le dépouillement de l'activité, l'activité du dépouillement » : l'ouvrier perd en agissant, et son agir est cette perte même.
+    **Pourquoi « l'aliénation, le dépouillement » ?** L'allemand juxtapose *Entfremdung* et *Entäußerung*, {violet}devenir étranger{/violet} et {violet}se dessaisir{/violet}. Les deux mots disent les deux faces d'une même perte : ce qui était à soi devient étranger, et l'on s'en est soi-même défait.
 
-    **L'ordre des raisons s'inverse.** Ce qui avait été exposé en premier, l'aliénation du produit, {coral}dépend{/coral} de ce qui vient maintenant. En résumé : l'ouvrier vit son activité {teal}comme activité d'un autre et pour un autre{/teal}.
+    **Pourquoi « dans le résultat… dans l'acte même » ?** L'opposition est celle du {amber}produit fini{/amber} et de {amber}l'activité qui se déroule{/amber}. « À l'intérieur de l'activité productive elle-même » insiste : il s'agit de ce qui se passe {coral}pendant{/coral} le travail. Et « n'apparaît pas seulement » traduit *zeigt sich*, « se montre » : l'aliénation est visible aussi dans l'acte, pour qui sait regarder.
 
-    ! On serait tenté de croire que l'ouvrier travaille mal parce qu'il sait que son produit lui sera pris ; Marx dit l'inverse : {red}le produit ne fait que garder la marque{/red} d'une activité {green}déjà aliénée{/green}.
+    **Pourquoi une question ?** « Comment… ne serait-il pas… si… ne devenait pas » : la question est {amber}rhétorique{/amber}, et elle a la forme d'un raisonnement {violet}par la condition nécessaire{/violet}. Une question rhétorique n'est pas une démonstration ; mais celle-ci contient un argument qu'on peut déplier.
+    - Ce qui devient étranger à l'ouvrier, c'est un produit qui, d'après le premier texte, {amber}n'est que son travail fixé dans un objet{/amber}.
+    - Si l'activité était vraiment la sienne, le produit, qui n'en est que la forme fixe, {amber}le serait aussi{/amber}.
+    - Si le produit lui est étranger, {coral}c'est donc que l'activité l'était déjà{/coral}.
+
+    {yellow}Un écrivain qui ne se reconnaît pas dans le livre qu'il a écrit l'a sans doute écrit sous la dictée d'un autre.{/yellow}
+
+    **Pourquoi « devenait étranger à lui-même » ?** L'allemand dit *sich nicht sich selbst entfremdete*, « ne s'aliénait pas lui-même à lui-même ». Le verbe est {violet}réfléchi{/violet} : l'ouvrier est à la fois {coral}l'agent et l'objet de son aliénation{/coral}. Ce n'est pas seulement qu'on lui prend quelque chose : c'est lui qui, en agissant, se rend étranger à lui-même.
+
+    **Qu'est-ce que la phrase change ?** On serait tenté de croire que Marx {red}ajoute un second aspect au premier{/red}, comme on ajoute une remarque. En réalité, il en fait {green}la condition du premier{/green}, et {coral}renverse l'ordre suivi jusqu'ici{/coral} : ce qui avait été exposé en premier, l'aliénation du produit, dépend de ce qui vient maintenant. L'ouvrier vit son activité {amber}comme activité d'un autre et pour un autre{/amber}.
+
+    ! L'aliénation de l'activité n'est pas {red}la conséquence{/red} de celle du produit, comme si l'ouvrier, sachant qu'on lui prendra son produit, travaillait sans cœur : elle en est {green}la condition{/green}.
   passage:
     label: "§1"
     part: "1. Du produit à l'acte"
-    text: "Nous n'avons considéré jusqu'ici l'aliénation, le dépouillement de l'ouvrier, que sous un seul aspect, celui de son rapport aux produits de son travail. Or, l'aliénation n'apparaît pas seulement dans le résultat, mais aussi dans l'acte même de la production, à l'intérieur de l'activité productive elle-même. Comment le produit ne serait-il pas étranger à l'ouvrier si celui-ci, dans l'acte même de la production, ne devenait pas étranger à lui-même ? Le produit n'est que le résumé de l'activité, de la production. Si le produit du travail est le dépouillement, la production elle-même doit être le dépouillement en acte, le dépouillement de l'activité, l'activité du dépouillement. L'aliénation de l'objet du travail n'est que le résumé de l'aliénation, du dépouillement, dans l'activité du travail elle-même."
+    text: "Nous n'avons considéré jusqu'ici l'aliénation, le dépouillement de l'ouvrier, que sous un seul aspect, celui de son rapport aux produits de son travail. Or, l'aliénation n'apparaît pas seulement dans le résultat, mais aussi dans l'acte même de la production, à l'intérieur de l'activité productive elle-même. Comment le produit ne serait-il pas étranger à l'ouvrier si celui-ci, dans l'acte même de la production, ne devenait pas étranger à lui-même ?"
   points:
   - id: m1844-p9-1
-    fragment: "1/2"
     sentence: "« Nous n'avons considéré jusqu'ici l'aliénation, le dépouillement de l'ouvrier, que ___, celui de son rapport aux produits de son travail. Or, l'aliénation n'apparaît pas seulement dans le résultat, mais aussi dans l'acte même de la production, à l'intérieur de l'activité productive elle-même. Comment le produit ne serait-il pas étranger à l'ouvrier si celui-ci, dans l'acte même de la production, ne devenait pas étranger à lui-même ? »"
     answer: "sous un seul aspect"
     alt: []
   - id: m1844-p9-2
-    fragment: "1/2"
     sentence: "« Nous n'avons considéré jusqu'ici l'aliénation, le dépouillement de l'ouvrier, que sous un seul aspect, celui de son rapport aux produits de son travail. Or, l'aliénation n'apparaît pas seulement dans le résultat, mais aussi dans l'acte même de la production, ___. Comment le produit ne serait-il pas étranger à l'ouvrier si celui-ci, dans l'acte même de la production, ne devenait pas étranger à lui-même ? »"
     answer: "à l'intérieur de l'activité productive elle-même"
     alt: []
   - id: m1844-p9-3
-    fragment: "1/2"
     sentence: "« Nous n'avons considéré jusqu'ici l'aliénation, le dépouillement de l'ouvrier, que sous un seul aspect, celui de son rapport aux produits de son travail. Or, l'aliénation n'apparaît pas seulement dans le résultat, mais aussi dans l'acte même de la production, à l'intérieur de l'activité productive elle-même. Comment le produit ne serait-il pas étranger à l'ouvrier si celui-ci, dans l'acte même de la production, ___ ? »"
     answer: "ne devenait pas étranger à lui-même"
     alt: []
+  - id: m1844-p9-x1
+    sentence: "« L'aliénation, le dépouillement » : l'allemand juxtapose *Entfremdung* et *Entäußerung*, __devenir étranger et se ___.__"
+    answer: "dessaisir"
+    alt: []
+  - id: m1844-p9-x2
+    sentence: "La question rhétorique a la forme d'un raisonnement __par la ___ nécessaire.__"
+    answer: "condition"
+    alt: []
+  - id: m1844-p9-x3
+    sentence: "Si l'activité était vraiment la sienne, le produit, qui n'en est que la forme fixe, le serait aussi : __s'il lui est étranger, c'est que l'activité l'était ___.__"
+    answer: "déjà"
+    alt: []
+  - id: m1844-p9-x4
+    sentence: "*Sich selbst entfremden* : le verbe réfléchi fait de l'ouvrier __à la fois l'agent et l'___ de son aliénation.__"
+    answer: "objet"
+    alt: []
+  - id: m1844-p9-x5
+    sentence: "Marx ne fait pas que compléter le premier aspect : __il en fait la ___,__ et renverse l'ordre suivi jusqu'ici."
+    answer: "condition"
+    alt: []
+- id: m1844-p9b
+  title: "Le produit, résumé de l'activité"
+  notes: |-
+    **Marx donne la raison de sa question : {coral}le produit n'est que l'activité condensée{/coral} ; s'il est perte, l'activité qui l'a fait est déjà une perte, en train de se faire.** L'aliénation du produit n'est que le résultat résumé de celle de l'activité.
+
+    **Pourquoi « n'est que le résumé » ?** L'allemand dit *ist ja nur das Resümee* : le *ja* marque {amber}une évidence partagée{/amber}, « n'est bien que », et le *Resümee* est {violet}le condensé d'un déroulement{/violet}. Le produit est l'activité arrêtée, ramassée en une chose. {yellow}Une fausse note dans un enregistrement ne fait que conserver une fausse note jouée : le défaut du résultat est celui de l'exécution.{/yellow}
+
+    **Pourquoi « doit être » ?** L'allemand ajoute *also*, « donc », et *muß*, « doit » : c'est {amber}une nécessité d'inférence{/amber}, {red}non un devoir{/red}. Si le produit est dessaisissement, la production ne peut pas ne pas l'être.
+
+    **Que veut dire « le dépouillement en acte » ?** *Tätige Entäußerung*, un dessaisissement {violet}actif{/violet}, en train de se faire. Le dessaisissement n'est pas un état où l'on tombe après coup : il a lieu {coral}dans l'agir même{/coral}.
+
+    **Pourquoi le chiasme « le dépouillement de l'activité, l'activité du dépouillement » ?** Il dit deux choses à la fois.
+    - **Le dépouillement de l'activité** : l'activité est {amber}dépouillée{/amber}, elle est ôtée à l'ouvrier.
+    - **L'activité du dépouillement** : l'activité {amber}consiste à dépouiller{/amber}, c'est en agissant que l'ouvrier se défait de lui-même.
+
+    L'ouvrier {coral}perd en agissant, et son agir est cette perte même{/coral}.
+
+    **Pourquoi la dernière phrase ?** Elle reprend la première et l'applique à l'aliénation : l'aliénation de l'objet n'est que {coral}le résumé de l'aliénation dans l'activité{/coral}. L'ordre des raisons est fixé : l'activité d'abord, le produit ensuite.
+
+    **Le raisonnement est-il valide ?** Oui, mais il repose entièrement sur sa première phrase, {amber}qui n'est pas démontrée ici{/amber} : que le produit ne soit que le résumé de l'activité. C'est la définition posée au début du passage, {teal}« le produit du travail est le travail qui s'est fixé, matérialisé dans un objet »{/teal}. Et elle a une conséquence qu'il faut voir : si le produit n'est que l'activité condensée, {coral}tout ce qu'on a dit de lui, puissance étrangère, perte, servitude, doit déjà se trouver dans l'activité{/coral}. C'est ce que le paragraphe suivant va chercher.
+
+    ! « Résumé » ne veut pas dire {red}un résumé fidèle qui en dirait moins{/red} : le produit garde {green}la marque{/green} de l'activité, et c'est pourquoi on peut remonter de l'un à l'autre.
+  passage:
+    label: "§1"
+    part: "1. Du produit à l'acte"
+    text: "Le produit n'est que le résumé de l'activité, de la production. Si le produit du travail est le dépouillement, la production elle-même doit être le dépouillement en acte, le dépouillement de l'activité, l'activité du dépouillement. L'aliénation de l'objet du travail n'est que le résumé de l'aliénation, du dépouillement, dans l'activité du travail elle-même."
+  points:
   - id: m1844-p9-4
-    fragment: "2/2"
     sentence: "« Le produit n'est que ___. Si le produit du travail est le dépouillement, la production elle-même doit être le dépouillement en acte, le dépouillement de l'activité, l'activité du dépouillement. L'aliénation de l'objet du travail n'est que le résumé de l'aliénation, du dépouillement, dans l'activité du travail elle-même. »"
     answer: "le résumé de l'activité, de la production"
     alt: []
   - id: m1844-p9-5
-    fragment: "2/2"
     sentence: "« Le produit n'est que le résumé de l'activité, de la production. Si le produit du travail est le dépouillement, la production elle-même doit être ___, le dépouillement de l'activité, l'activité du dépouillement. L'aliénation de l'objet du travail n'est que le résumé de l'aliénation, du dépouillement, dans l'activité du travail elle-même. »"
     answer: "le dépouillement en acte"
     alt: []
   - id: m1844-p9-6
-    fragment: "2/2"
     sentence: "« Le produit n'est que le résumé de l'activité, de la production. Si le produit du travail est le dépouillement, la production elle-même doit être le dépouillement en acte, ___. L'aliénation de l'objet du travail n'est que le résumé de l'aliénation, du dépouillement, dans l'activité du travail elle-même. »"
     answer: "le dépouillement de l'activité, l'activité du dépouillement"
     alt: []
   - id: m1844-p9-7
-    fragment: "2/2"
     sentence: "« Le produit n'est que le résumé de l'activité, de la production. Si le produit du travail est le dépouillement, la production elle-même doit être le dépouillement en acte, le dépouillement de l'activité, l'activité du dépouillement. L'aliénation de l'objet du travail n'est que ___. »"
     answer: "le résumé de l'aliénation, du dépouillement, dans l'activité du travail elle-même"
     alt: []
-  - id: m1844-p9-e1
-    sentence: "Argument par la condition : si le produit est étranger à l'ouvrier, __c'est que son ___ l'était déjà__."
+  - id: m1844-p9b-x1
+    sentence: "*Ist ja nur das Resümee* : le *Resümee* est __le ___ d'un déroulement,__ l'activité ramassée en une chose."
+    answer: "condensé"
+    alt: []
+  - id: m1844-p9b-x2
+    sentence: "« Doit être » (*also*, *muß*) : __une nécessité d'___, non un devoir.__"
+    answer: "inférence"
+    alt: []
+  - id: m1844-p9b-x3
+    sentence: "« Le dépouillement de l'activité, l'activité du dépouillement » : __l'ouvrier perd en agissant, et son agir est cette ___ même.__"
+    answer: "perte"
+    alt: []
+  - id: m1844-p9b-x4
+    sentence: "Si le produit n'est que l'activité condensée, __tout ce qu'on a dit du produit doit déjà se trouver dans l'___.__"
     answer: "activité"
     alt: []
-  - id: m1844-p9-e2
-    sentence: "*Tätige Entäußerung* : la production est __le dessaisissement ___,__ l'ouvrier perd en agissant."
-    answer: "en acte"
-    alt: []
-  - id: m1844-p9-e3
-    sentence: "Au §1, l'ordre des raisons s'inverse : __l'aliénation du produit ___ de celle de l'activité__."
-    answer: "dépend"
-    alt: []
-  - id: m1844-p9-e4
-    sentence: "L'ouvrier vit son activité __comme activité ___ et pour un autre.__"
-    answer: "d'un autre"
-    alt: []
 - id: m1844-p10
-  title: "2.1 à 2.4 Un travail extérieur, forcé, qui appartient à un autre"
+  title: "Un travail extérieur, où l'ouvrier se nie"
   notes: |-
-    **L'aliénation du travail consiste en ce que le travail est {coral}extérieur{/coral} à l'ouvrier, {coral}forcé{/coral}, et {coral}appartient à un autre{/coral} : son activité est la perte de lui-même.**
+    **Marx pose sa question et donne le premier caractère de l'activité aliénée : {coral}le travail est extérieur à l'ouvrier{/coral}, il ne fait pas partie de ce qu'il est.** Il en tire aussitôt les conséquences : au lieu de s'y affirmer, l'ouvrier s'y nie ; au lieu de s'y sentir bien, il y est malheureux ; au lieu d'y déployer ses forces, il y use son corps et son esprit. Le paragraphe entier va dérouler les conséquences de ce principe.
 
-    **2.1 Un travail extérieur.** La question dit *Entäußerung*, et la réponse joue sur la racine : le dessaisissement consiste en une extériorité (*äußerlich*). Extérieur veut dire qu'il {amber}« n'appartient pas à son essence »{/amber} : {red}non pénible{/red}, mais {green}qui ne part pas de soi{/green}. Cette prémisse n'est pas démontrée ; elle repose sur un présupposé normatif hérité de Hess et de Feuerbach : le travail doit être une {violet}expression vitale{/violet} (*Lebensäußerung*) et une auto-activité. Le travail aliéné en est l'inverse, une {violet}allo-activité{/violet}, une activité qu'un autre déclenche en soi.
+    **Pourquoi « extérieur » ?** La question porte sur l'*Entäußerung* du travail, le dessaisissement, et la réponse joue sur le mot : le travail est *äußerlich*, extérieur, de {violet}la même racine{/violet} (*äußer-*, le dehors). {coral}Le dessaisissement consiste en une extériorité.{/coral}
 
-    **2.2 Un travail forcé, simple moyen.** Une chaîne de {amber}quatre *daher*{/amber} : l'ouvrier ne se sent chez lui (*bei sich*, *zu Hause*) qu'en dehors du travail ; son travail est {violet}forcé{/violet} (*Zwangsarbeit*) ; il n'est pas la satisfaction d'un besoin, mais {coral}un moyen{/coral} de satisfaire des besoins hors de lui. L'ouvrier est séparé du besoin, la part passive qui devrait le mettre au travail.
+    **Extérieur à quoi ?** « C'est-à-dire qu'il n'appartient pas à son essence » (*nicht zu seinem Wesen gehört*). Extérieur ne veut pas dire {red}hors de son corps{/red}, mais {green}hors de ce qu'il est essentiellement{/green} : l'extériorité est {amber}ontologique, non spatiale{/amber}. L'ouvrier est bien là, à l'établi ; mais ce qu'il fait n'est pas lui.
 
-    **2.3 La preuve.** Dès que cesse la contrainte, physique ou autre (la faim), le travail est {teal}« fui comme la peste »{/teal}. La preuve est limitée : elle suppose qu'{amber}un autre travail soit possible{/amber}, sinon elle donnerait raison à Smith. Les *Grundrisse* répondent que surmonter les obstacles du travail est {green}« l'exercice même de la liberté »{/green}, la composition musicale demandant {teal}« l'effort le plus intense »{/teal}. *Selbstaufopferung*, *Kasteiung* : le vocabulaire de l'ascèse.
+    **Pourquoi « d'abord » ?** *Erstens* : c'est {amber}le premier de trois caractères{/amber} ; le troisième viendra avec « enfin ». Et « que donc » (*daher*) ouvre {violet}une chaîne de conséquences{/violet} : l'allemand enchaîne quatre *daher* dans le paragraphe.
 
-    **2.4 L'activité d'un autre, comme dans la religion.** Pendant le temps vendu, {coral}l'ouvrier ne s'appartient pas{/coral}. Comme l'imagination du croyant agit sur lui comme une activité divine ou diabolique, son activité n'est pas sa *Selbsttätigkeit* : {coral}« elle est la perte de soi-même »{/coral}. Mais ce qui est illusion dans la religion est {green}rapport effectif{/green} dans le travail : un autre dispose réellement de son activité.
+    **Pourquoi « ne s'affirme pas, mais se nie » ?** *Nicht bejaht, sondern verneint* : le vocabulaire est celui de Hegel, {amber}affirmation et négation{/amber}. Dans son activité, l'homme devrait poser ce qu'il est ; il le défait. Puis le texte passe {violet}de l'être au sentir{/violet} : « ne se sent pas à l'aise, mais malheureux ». L'aliénation est décrite telle que l'ouvrier l'éprouve.
 
-    ! La contradiction apparente (agir sans que son activité soit la sienne) se lève : {green}il en a vendu la disposition{/green}.
+    **Pourquoi « une libre activité physique et intellectuelle » ?** C'est {green}ce que le travail devrait être{/green} : le déploiement libre des forces du corps et de l'esprit ensemble. À la place : il « mortifie son corps et ruine son esprit ». La mortification est {violet}un mot religieux{/violet}, celui de l'ascète qui se fait souffrir ; il reviendra deux phrases plus loin. {yellow}L'employé qui tape toute la journée des chiffres qui ne signifient rien pour lui, pour une affaire qui ne le concerne pas, ne met rien de lui-même dans ce qu'il fait ; il en sort vidé.{/yellow}
+
+    **Pourquoi le travail serait-il extérieur à l'essence de l'ouvrier ?** Toute la chaîne repose sur cette affirmation, et le texte {red}ne la démontre pas{/red}. On peut reconstruire deux raisons.
+    - **Par ce qui précède.** L'ouvrier, séparé de la matière et des outils, ne travaille que lorsqu'un autre lui fournit de quoi travailler : {amber}ce qu'il fait, quand, comment et pour quoi, ne part pas de lui{/amber}.
+    - **Par ce qui suit.** Le texte suivant dira que l'essence de l'homme est {amber}une activité libre et consciente{/amber}. Un travail dont l'ouvrier ne décide ni le but ni la manière ne peut être l'expression de cette essence.
+
+    Le « donc » suit alors : {coral}si ce que je fais n'est pas ce que je suis, en le faisant je ne me pose pas, je me retire de moi-même, et j'en souffre{/coral}.
+
+    **Un présupposé.** Sous ce raisonnement, il y a un présupposé normatif, hérité de Hess et de Feuerbach : le travail {violet}doit être{/violet} une expression de la vie (*Lebensäußerung*) et une activité propre. Marx ne le démontre pas ; il le confronte à l'expérience vécue de l'ouvrier, et c'est {amber}l'écart entre les deux{/amber} qui fait dire que le travail est « extérieur ». Le travail aliéné est l'inverse de l'activité propre : {violet}une allo-activité{/violet}, une activité qu'un autre déclenche en moi.
+
+    ! « Extérieur » ne veut pas dire {red}pénible{/red}. Un travail peut être épuisant et pleinement le sien, comme celui d'un artiste ou d'un chercheur. L'extériorité n'est pas l'effort : {green}c'est le fait que l'activité ne parte pas de soi{/green}.
   passage:
     label: "§2"
     part: "2. En quoi consiste l'aliénation du travail"
-    text: "En quoi consiste l'aliénation du travail ? D'abord dans le fait que le travail est extérieur à l'ouvrier, c'est-à-dire qu'il n'appartient pas à son essence, que donc, dans son travail, l'ouvrier ne s'affirme pas, mais se nie, ne se sent pas à l'aise, mais malheureux ; il n'y déploie pas une libre activité physique et intellectuelle, mais mortifie son corps et ruine son esprit. En conséquence, l'ouvrier ne se sent lui-même qu'en dehors du travail et dans le travail il se sent extérieur à lui-même. Il est à l'aise quand il ne travaille pas et, quand il travaille, il ne se sent pas à l'aise. Son travail n'est donc pas volontaire, mais contraint, c'est du travail forcé. Il n'est donc pas la satisfaction d'un besoin, mais seulement un moyen de satisfaire des besoins en dehors du travail. Le caractère du travail apparaît nettement dans le fait que, dès qu'il n'existe pas de contrainte physique ou autre, le travail est fui comme la peste. Le travail extérieur à l'homme, dans lequel il se dépouille, est un travail de sacrifice de soi, de mortification. Enfin le caractère extérieur à l'ouvrier du travail apparaît dans le fait qu'il n'est pas son bien propre, mais celui d'un autre, qu'il ne lui appartient pas, que dans le travail l'ouvrier ne s'appartient pas lui-même, mais appartient à un autre. De même que, dans la religion, l'activité propre de l'imagination humaine, du cerveau humain et du cœur humain, agit sur l'individu indépendamment de lui, c'est-à-dire comme une activité étrangère, divine ou diabolique, de même l'activité de l'ouvrier n'est pas son activité propre. Elle appartient à un autre, elle est la perte de soi-même."
+    text: "En quoi consiste l'aliénation du travail ? D'abord dans le fait que le travail est extérieur à l'ouvrier, c'est-à-dire qu'il n'appartient pas à son essence, que donc, dans son travail, l'ouvrier ne s'affirme pas, mais se nie, ne se sent pas à l'aise, mais malheureux ; il n'y déploie pas une libre activité physique et intellectuelle, mais mortifie son corps et ruine son esprit."
   points:
   - id: m1844-p10-1
-    fragment: "1/4"
     sentence: "« En quoi consiste l'aliénation du travail ? D'abord dans le fait que ___, c'est-à-dire qu'il n'appartient pas à son essence, que donc, dans son travail, l'ouvrier ne s'affirme pas, mais se nie, ne se sent pas à l'aise, mais malheureux ; il n'y déploie pas une libre activité physique et intellectuelle, mais mortifie son corps et ruine son esprit. »"
     answer: "le travail est extérieur à l'ouvrier"
     alt: []
   - id: m1844-p10-2
-    fragment: "1/4"
     sentence: "« En quoi consiste l'aliénation du travail ? D'abord dans le fait que le travail est extérieur à l'ouvrier, c'est-à-dire qu'___, que donc, dans son travail, l'ouvrier ne s'affirme pas, mais se nie, ne se sent pas à l'aise, mais malheureux ; il n'y déploie pas une libre activité physique et intellectuelle, mais mortifie son corps et ruine son esprit. »"
     answer: "il n'appartient pas à son essence"
     alt: []
   - id: m1844-p10-3
-    fragment: "1/4"
     sentence: "« En quoi consiste l'aliénation du travail ? D'abord dans le fait que le travail est extérieur à l'ouvrier, c'est-à-dire qu'il n'appartient pas à son essence, que donc, dans son travail, ___, ne se sent pas à l'aise, mais malheureux ; il n'y déploie pas une libre activité physique et intellectuelle, mais mortifie son corps et ruine son esprit. »"
     answer: "l'ouvrier ne s'affirme pas, mais se nie"
     alt: []
   - id: m1844-p10-4
-    fragment: "1/4"
     sentence: "« En quoi consiste l'aliénation du travail ? D'abord dans le fait que le travail est extérieur à l'ouvrier, c'est-à-dire qu'il n'appartient pas à son essence, que donc, dans son travail, l'ouvrier ne s'affirme pas, mais se nie, ne se sent pas à l'aise, mais malheureux ; il n'y déploie pas une libre activité physique et intellectuelle, mais ___. »"
     answer: "mortifie son corps et ruine son esprit"
     alt: []
+  - id: m1844-p10-x1
+    sentence: "*Entäußerung* et *äußerlich* ont la même racine : __le dessaisissement consiste en une ___.__"
+    answer: "extériorité"
+    alt: []
+  - id: m1844-p10-x2
+    sentence: "« Il n'appartient pas à son essence » : l'extériorité du travail est __ontologique, non ___.__"
+    answer: "spatiale"
+    alt: []
+  - id: m1844-p10-x3
+    sentence: "« Ne s'affirme pas, mais se nie » (*bejaht*, *verneint*) : __le vocabulaire est celui de ___.__"
+    answer: "Hegel"
+    alt: []
+  - id: m1844-p10-x4
+    sentence: "« Mortifie son corps » : __la mortification est un mot ___,__ celui de l'ascète."
+    answer: "religieux"
+    alt: []
+  - id: m1844-p10-x5
+    sentence: "Le travail est extérieur à l'ouvrier parce que __ce qu'il fait, quand, comment et pour quoi, ne part pas de ___.__"
+    answer: "lui"
+    alt: []
+  - id: m1844-p10-x6
+    sentence: "« Extérieur » ne veut pas dire pénible : __c'est le fait que l'activité ne ___ pas de soi.__"
+    answer: "parte"
+    alt: []
+- id: m1844-p10b
+  title: "Chez soi hors du travail, hors de soi dans le travail"
+  notes: |-
+    **La chaîne de conséquences continue : puisque le travail n'est pas à lui, {coral}l'ouvrier n'est lui-même que quand il ne travaille pas{/coral}.** La vie de l'ouvrier se coupe en deux : le temps où il est lui, le temps où il est hors de lui.
+
+    **Pourquoi « en conséquence » ?** L'allemand dit encore *daher* : c'est {amber}le deuxième maillon{/amber} de la chaîne. Si le travail n'appartient pas à l'essence de l'ouvrier, l'ouvrier ne peut se retrouver lui-même que là où le travail n'est pas.
+
+    **Pourquoi « ne se sent lui-même » et « se sent extérieur à lui-même » ?** L'allemand oppose {violet}*bei sich*{/violet}, « auprès de soi », chez soi, et {violet}*außer sich*{/violet}, « hors de soi ». L'expression *außer sich* veut dire aussi, en allemand courant, {amber}être hors de soi, perdre la maîtrise de soi{/amber}. Le travail n'est pas seulement un lieu où l'ouvrier n'est pas lui-même : c'est un lieu où il ne se possède plus.
+
+    **Pourquoi « à l'aise » ?** L'allemand dit *zu Hause*, {coral}« chez soi »{/coral}, que la traduction affaiblit. Le travail est {amber}le lieu où l'ouvrier n'est pas chez lui{/amber}. L'image est forte : l'endroit où il passe la plus grande partie de ses journées est une terre étrangère.
+
+    **Pourquoi la seconde phrase répète-t-elle la première ?** Elle la redit sous forme de {violet}chiasme{/violet} : à l'aise quand il ne travaille pas, pas à l'aise quand il travaille. La répétition n'est pas une négligence : elle {coral}enferme l'ouvrier dans une alternative{/coral}, qui recouvre toute sa vie. {yellow}Le salarié qui compte les heures jusqu'au soir et les jours jusqu'au dimanche ne vit vraiment qu'en dehors de son travail.{/yellow}
+
+    **Qu'est-ce que la phrase suppose ?** Que le soi de l'ouvrier soit {amber}ailleurs que dans son activité principale{/amber}. Or, chez un être dont l'essence est l'activité, ce partage est une mutilation : le temps « à soi » est le temps où l'on ne fait rien de ce qui fait l'homme. C'est ce que le troisième paragraphe tirera : {coral}l'ouvrier ne se sent libre que dans ses fonctions animales{/coral}.
+
+    ! La phrase ne décrit pas {red}une humeur{/red}, une lassitude passagère : elle décrit {green}une coupure de la vie{/green}, que le texte va donner pour nécessaire.
+  passage:
+    label: "§2"
+    part: "2. En quoi consiste l'aliénation du travail"
+    text: "En conséquence, l'ouvrier ne se sent lui-même qu'en dehors du travail et dans le travail il se sent extérieur à lui-même. Il est à l'aise quand il ne travaille pas et, quand il travaille, il ne se sent pas à l'aise."
+  points:
   - id: m1844-p10-5
-    fragment: "2/4"
-    sentence: "« En conséquence, l'ouvrier ___ et dans le travail il se sent extérieur à lui-même. Il est à l'aise quand il ne travaille pas et, quand il travaille, il ne se sent pas à l'aise. Son travail n'est donc pas volontaire, mais contraint, c'est du travail forcé. Il n'est donc pas la satisfaction d'un besoin, mais seulement un moyen de satisfaire des besoins en dehors du travail. »"
+    sentence: "« En conséquence, l'ouvrier ___ et dans le travail il se sent extérieur à lui-même. Il est à l'aise quand il ne travaille pas et, quand il travaille, il ne se sent pas à l'aise. »"
     answer: "ne se sent lui-même qu'en dehors du travail"
     alt: []
+  - id: m1844-p10b-x1
+    sentence: "*Bei sich* et *außer sich* : __chez soi, et hors de soi,__ ce qui veut dire aussi perdre la ___ de soi."
+    answer: "maîtrise"
+    alt: []
+  - id: m1844-p10b-x2
+    sentence: "« À l'aise » traduit *zu Hause* : __le travail est le lieu où l'ouvrier n'est pas ___.__"
+    answer: "chez lui"
+    alt: ["chez soi"]
+  - id: m1844-p10b-x3
+    sentence: "Le chiasme (à l'aise quand il ne travaille pas, mal à l'aise quand il travaille) __enferme l'ouvrier dans une ___.__"
+    answer: "alternative"
+    alt: []
+- id: m1844-p10c
+  title: "Un travail forcé, simple moyen"
+  notes: |-
+    **Puisqu'il ne s'y sent pas chez lui, l'ouvrier ne va au travail que contraint ; et puisqu'il y est contraint, {coral}ce travail ne répond à aucun de ses besoins : il n'est qu'un moyen{/coral}.** L'extériorité passe de l'épreuve intérieure à sa forme objective : la contrainte, et le rapport de moyen à fin.
+
+    **Pourquoi deux « donc » ?** Ce sont les deux derniers *daher* de la chaîne. Le texte se présente comme {amber}une déduction en cascade{/amber} : extérieur, donc malheureux ; donc hors de lui dans le travail ; donc contraint ; donc simple moyen.
+
+    **Pourquoi « travail forcé » ?** *Zwangsarbeit*, {violet}le mot qui désigne le travail des bagnards{/violet}. La gradation va de l'absence de volonté (« pas volontaire ») à la contrainte (« contraint »), puis à la peine (« forcé »).
+
+    **Mais le salarié n'a-t-il pas signé librement son contrat ?** Si. La contrainte n'est pas {red}celle d'un maître qui fouette{/red} : c'est {green}celle du besoin{/green}. L'ouvrier, séparé de tout moyen de vivre, n'a pas d'autre choix que de travailler. {yellow}Personne ne force le journalier à se présenter à l'usine ; mais s'il ne s'y présente pas, il n'a rien à manger.{/yellow}
+
+    **Pourquoi « pas la satisfaction d'un besoin » ?** C'est le maillon le plus riche, et il faut déplier ce qu'il suppose.
+    - **Normalement**, le travail {amber}répond à un besoin{/amber} : on a faim, on cultive ; on a froid, on bâtit. Le besoin est au principe de l'activité, et l'activité est la satisfaction du besoin, puisqu'elle en est la réponse directe.
+    - **Dans le travail aliéné**, ce lien est {red}rompu{/red} : l'ouvrier ne tisse pas parce qu'il a besoin d'étoffe, il tisse pour un salaire, avec lequel il achètera du pain. Son activité n'a plus de rapport avec ce dont il a besoin.
+
+    Le travail n'est donc plus qu'{coral}un moyen{/coral}, et les besoins qu'il sert sont {coral}« en dehors du travail »{/coral}. Le texte suivant en tirera la formule la plus générale : le travail aliéné fait {violet}de la vie générique un moyen de la vie individuelle{/violet}.
+
+    **Ce que l'ouvrier perd avec le besoin.** Le besoin est {amber}la part passive{/amber} de notre être : ce que nous subissons, et qui nous met en mouvement. Privé de ce principe passif, puisque ce n'est plus son besoin qui le fait travailler, l'ouvrier est réduit à {violet}une pure capacité d'agir{/violet}, qui attend qu'on lui fournisse de quoi s'exercer. La passivité qu'il aurait dû éprouver au départ lui manque ; il la retrouvera au moment où il agit, sous la forme de la contrainte. Le bilan du §4 le dira : {coral}« l'activité qui est passivité »{/coral}.
+
+    ! La chaîne de « donc » est {green}rigoureuse à partir de sa première prémisse{/green} ; c'est cette prémisse, l'extériorité du travail, qui porte {amber}tout le poids{/amber}.
+  passage:
+    label: "§2"
+    part: "2. En quoi consiste l'aliénation du travail"
+    text: "Son travail n'est donc pas volontaire, mais contraint, c'est du travail forcé. Il n'est donc pas la satisfaction d'un besoin, mais seulement un moyen de satisfaire des besoins en dehors du travail."
+  points:
   - id: m1844-p10-6
-    fragment: "2/4"
-    sentence: "« En conséquence, l'ouvrier ne se sent lui-même qu'en dehors du travail et dans le travail il se sent extérieur à lui-même. Il est à l'aise quand il ne travaille pas et, quand il travaille, il ne se sent pas à l'aise. Son travail n'est donc ___. Il n'est donc pas la satisfaction d'un besoin, mais seulement un moyen de satisfaire des besoins en dehors du travail. »"
+    sentence: "« Son travail n'est donc ___. Il n'est donc pas la satisfaction d'un besoin, mais seulement un moyen de satisfaire des besoins en dehors du travail. »"
     answer: "pas volontaire, mais contraint, c'est du travail forcé"
     alt: []
   - id: m1844-p10-7
-    fragment: "2/4"
-    sentence: "« En conséquence, l'ouvrier ne se sent lui-même qu'en dehors du travail et dans le travail il se sent extérieur à lui-même. Il est à l'aise quand il ne travaille pas et, quand il travaille, il ne se sent pas à l'aise. Son travail n'est donc pas volontaire, mais contraint, c'est du travail forcé. Il n'est donc ___. »"
+    sentence: "« Son travail n'est donc pas volontaire, mais contraint, c'est du travail forcé. Il n'est donc ___. »"
     answer: "pas la satisfaction d'un besoin, mais seulement un moyen de satisfaire des besoins en dehors du travail"
     alt: []
+  - id: m1844-p10c-x1
+    sentence: "« Travail forcé » traduit *Zwangsarbeit*, __le mot qui désigne le travail des ___.__"
+    answer: "bagnards"
+    alt: ["forçats"]
+  - id: m1844-p10c-x2
+    sentence: "Le salarié signe librement son contrat ; __la contrainte est celle du ___,__ non d'un maître qui fouette."
+    answer: "besoin"
+    alt: []
+  - id: m1844-p10c-x3
+    sentence: "Dans le travail aliéné, __l'ouvrier ne tisse pas parce qu'il a besoin d'étoffe, il tisse pour un ___.__"
+    answer: "salaire"
+    alt: []
+  - id: m1844-p10c-x4
+    sentence: "__Le besoin est la part ___ de notre être,__ ce qui nous met en mouvement : l'ouvrier en est privé."
+    answer: "passive"
+    alt: []
+  - id: m1844-p10c-x5
+    sentence: "Le texte suivant en tirera la formule : le travail aliéné fait __de la vie générique un moyen de la vie ___.__"
+    answer: "individuelle"
+    alt: []
+- id: m1844-p10d
+  title: "La preuve : fui comme la peste"
+  notes: |-
+    **Marx donne une preuve tirée de l'expérience : {coral}on fuit le travail dès qu'on le peut{/coral}, ce qui montre qu'on ne le fait que contraint. Et il qualifie ce travail d'un mot religieux : sacrifice de soi et mortification.**
+
+    **Pourquoi « le caractère du travail » ?** L'allemand dit *ihre Fremdheit*, {violet}« son caractère étranger »{/violet} : la traduction perd le mot étranger. « Apparaît nettement » traduit *tritt rein hervor*, {amber}« se montre à l'état pur »{/amber}, sans mélange : quand la contrainte cesse, on voit ce que le travail est pour l'ouvrier.
+
+    **Quelles contraintes ?** « Physique ou autre » : la contrainte physique est celle {amber}du fouet, de la prison, de la maison de travail{/amber} ; l'« autre » est {amber}la faim, la nécessité de gagner sa vie{/amber}. Ôtez l'une et l'autre, et le travail est fui {violet}« comme la peste »{/violet}, comme une épidémie qu'on fuit pour sauver sa vie. {yellow}La foule qui quitte l'usine à la sirène du soir dit la même chose.{/yellow}
+
+    **La preuve suffit-elle ?** Non, et il faut en mesurer la portée. Qu'on fuie le travail dès que la contrainte cesse prouve qu'{amber}on ne le veut pas pour lui-même{/amber}. Cela {red}ne prouve pas, à soi seul, qu'il soit extérieur à l'essence de l'homme{/red} : on pourrait y voir, avec Smith, la preuve que tout travail est une peine. Pour que la preuve vaille, il faut admettre qu'{green}un autre travail est possible{/green}, que l'homme ferait sans y être contraint. C'est ce que le texte suivant affirmera : l'homme {teal}« produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré »{/teal}. L'expérience {amber}atteste{/amber} la thèse plus qu'elle ne la démontre.
+
+    **La réponse à Smith.** Smith prend la forme particulière du travail aliéné pour {red}une fatalité de la condition humaine{/red}. Marx le lui reprochera dans les *Grundrisse* : Smith envisage le travail {teal}« comme malédiction »{/teal}, alors qu'il peut devenir {teal}« travail attractif, autoeffectuation de l'individu »{/teal}. Ce qui ne veut pas dire {red}un amusement{/red} : un travail libre, comme la composition musicale, demande le plus grand sérieux et l'effort le plus intense. La fuite du travail ne prouve donc pas que le travail soit une peine par nature, mais {coral}qu'il l'est devenu sous la contrainte{/coral}.
+
+    **Pourquoi « sacrifice de soi, mortification » ?** *Selbstaufopferung*, *Kasteiung* : {violet}le vocabulaire de l'ascèse chrétienne{/violet}. Dans l'ascèse, l'homme se mortifie pour un dieu, et sacrifie sa vie présente à une fin qui le dépasse ; dans le travail aliéné, l'ouvrier {coral}se sacrifie pour une fin qui n'est pas la sienne{/coral}. Et « extérieur à l'homme » : le sujet n'est plus l'ouvrier, mais l'homme ; ce qui est atteint, c'est {amber}l'humanité de l'ouvrier{/amber}.
+
+    ! Le sacrifice suppose {green}quelqu'un à qui l'on sacrifie{/green} : la phrase prépare le troisième caractère, le travail qui appartient à un autre.
+  passage:
+    label: "§2"
+    part: "2. En quoi consiste l'aliénation du travail"
+    text: "Le caractère du travail apparaît nettement dans le fait que, dès qu'il n'existe pas de contrainte physique ou autre, le travail est fui comme la peste. Le travail extérieur à l'homme, dans lequel il se dépouille, est un travail de sacrifice de soi, de mortification."
+  points:
   - id: m1844-p10-8
-    fragment: "3/4"
-    sentence: "« Le caractère du travail apparaît nettement dans le fait que, dès qu'il n'existe pas de contrainte physique ou autre, ___. Le travail extérieur à l'homme, dans lequel il se dépouille, est un travail de sacrifice de soi, de mortification. Enfin le caractère extérieur à l'ouvrier du travail apparaît dans le fait qu'il n'est pas son bien propre, mais celui d'un autre, qu'il ne lui appartient pas, que dans le travail l'ouvrier ne s'appartient pas lui-même, mais appartient à un autre. »"
+    sentence: "« Le caractère du travail apparaît nettement dans le fait que, dès qu'il n'existe pas de contrainte physique ou autre, ___. Le travail extérieur à l'homme, dans lequel il se dépouille, est un travail de sacrifice de soi, de mortification. »"
     answer: "le travail est fui comme la peste"
     alt: []
   - id: m1844-p10-9
-    fragment: "3/4"
-    sentence: "« Le caractère du travail apparaît nettement dans le fait que, dès qu'il n'existe pas de contrainte physique ou autre, le travail est fui comme la peste. Le travail extérieur à l'homme, dans lequel il se dépouille, est ___. Enfin le caractère extérieur à l'ouvrier du travail apparaît dans le fait qu'il n'est pas son bien propre, mais celui d'un autre, qu'il ne lui appartient pas, que dans le travail l'ouvrier ne s'appartient pas lui-même, mais appartient à un autre. »"
+    sentence: "« Le caractère du travail apparaît nettement dans le fait que, dès qu'il n'existe pas de contrainte physique ou autre, le travail est fui comme la peste. Le travail extérieur à l'homme, dans lequel il se dépouille, est ___. »"
     answer: "un travail de sacrifice de soi, de mortification"
     alt: []
+  - id: m1844c-i1-e2
+    sentence: "Dans les *Grundrisse*, Marx reproche à Smith d'envisager le travail __« comme ___ »__."
+    answer: "malédiction"
+    alt: []
+  - id: m1844-p10d-x1
+    sentence: "« Le caractère du travail » traduit *ihre Fremdheit*, __son caractère ___.__"
+    answer: "étranger"
+    alt: []
+  - id: m1844-p10d-x2
+    sentence: "« Contrainte physique ou autre » : le fouet ou la prison, et __la ___, la nécessité de gagner sa vie.__"
+    answer: "faim"
+    alt: []
+  - id: m1844-p10d-x3
+    sentence: "La fuite du travail ne prouve l'aliénation que si l'on admet __qu'un autre travail est ___,__ que l'homme ferait sans contrainte."
+    answer: "possible"
+    alt: []
+  - id: m1844-p10d-x4
+    sentence: "*Grundrisse* : le travail peut devenir __« travail attractif, ___ de l'individu »__."
+    answer: "autoeffectuation"
+    alt: []
+  - id: m1844-p10d-x5
+    sentence: "*Selbstaufopferung*, *Kasteiung* : __le vocabulaire de l'___ chrétienne.__"
+    answer: "ascèse"
+    alt: []
+- id: m1844-p10e
+  title: "Le travail qui appartient à un autre"
+  notes: |-
+    **Le troisième caractère est l'appartenance : le travail de l'ouvrier {coral}est à un autre{/coral}, et, pendant qu'il travaille, {coral}l'ouvrier lui-même est à un autre{/coral}.** L'extériorité reçoit sa forme la plus nette.
+
+    **Pourquoi « enfin » et « le caractère extérieur » ?** *Endlich* répond au « d'abord » : c'est le troisième caractère. Et le mot *Äußerlichkeit*, l'extériorité, {amber}reprend le premier{/amber}. Les trois caractères ne sont donc pas trois choses : {coral}ils n'en font qu'un, vu sous trois angles{/coral}, l'extériorité éprouvée (le malheur), l'extériorité imposée (la contrainte), l'extériorité possédée (l'appartenance).
+
+    **Pourquoi le vocabulaire de la propriété ?** *Nicht sein eigen, sondern eines andern* : « non son bien propre, mais celui d'un autre ». L'extériorité, jusqu'ici décrite comme une épreuve, est maintenant dite {violet}en termes de propriété{/violet}. Ce qui est extérieur à l'ouvrier, c'est {amber}ce qui appartient à un autre{/amber}.
+
+    **Pourquoi la phrase passe-t-elle du travail à l'homme ?** « Il ne lui appartient pas » porte sur le travail ; « l'ouvrier ne s'appartient pas lui-même » porte sur l'ouvrier. {coral}L'appartenance passe du travail à la personne{/coral} : pendant le temps vendu, c'est l'ouvrier lui-même qui est à un autre. Comment est-ce possible ? Parce que l'activité ne se détache pas de celui qui l'exerce : {amber}vendre son activité, c'est vendre l'usage de soi{/amber} pendant qu'on l'exerce. {yellow}L'ouvrier qui a vendu ses journées ne s'appartient plus de huit heures à dix-huit heures : on lui dit où se tenir, quoi faire et à quel rythme.{/yellow}
+
+    **Qui est « un autre » ?** *Eines andern*, au masculin ou au neutre : le texte {red}ne dit pas encore qui{/red}. Mais c'est la première fois que l'autre n'est plus seulement un objet. Marx ne posera la question « à qui appartient-elle ? » qu'après avoir dégagé les quatre déterminations, et y répondra : {teal}« un autre homme que l'ouvrier »{/teal}.
+
+    **Qu'est-ce que la phrase suppose ?** Que l'ouvrier ait {amber}vendu la disposition de son activité{/amber} : c'est ce que les colonnes sur le salaire ont décrit. Sans cette vente, on ne comprendrait pas que l'activité la plus propre puisse être la propriété d'un autre.
+
+    ! « Un autre » ne désigne pas encore {red}le capitaliste{/red} : le texte se garde de le nommer, pour {green}le déduire{/green} plus tard du travail aliéné.
+  passage:
+    label: "§2"
+    part: "2. En quoi consiste l'aliénation du travail"
+    text: "Enfin le caractère extérieur à l'ouvrier du travail apparaît dans le fait qu'il n'est pas son bien propre, mais celui d'un autre, qu'il ne lui appartient pas, que dans le travail l'ouvrier ne s'appartient pas lui-même, mais appartient à un autre."
+  points:
   - id: m1844-p10-10
-    fragment: "3/4"
-    sentence: "« Le caractère du travail apparaît nettement dans le fait que, dès qu'il n'existe pas de contrainte physique ou autre, le travail est fui comme la peste. Le travail extérieur à l'homme, dans lequel il se dépouille, est un travail de sacrifice de soi, de mortification. Enfin le caractère extérieur à l'ouvrier du travail apparaît dans le fait qu'il n'est pas son bien propre, ___, qu'il ne lui appartient pas, que dans le travail l'ouvrier ne s'appartient pas lui-même, mais appartient à un autre. »"
+    sentence: "« Enfin le caractère extérieur à l'ouvrier du travail apparaît dans le fait qu'il n'est pas son bien propre, ___, qu'il ne lui appartient pas, que dans le travail l'ouvrier ne s'appartient pas lui-même, mais appartient à un autre. »"
     answer: "mais celui d'un autre"
     alt: []
+  - id: m1844-p10e-x1
+    sentence: "« Le caractère extérieur » (*Äußerlichkeit*) reprend le premier caractère : __les trois caractères n'en font qu'___.__"
+    answer: "un"
+    alt: []
+  - id: m1844-p10e-x2
+    sentence: "*Nicht sein eigen, sondern eines andern* : __l'extériorité dite en termes de ___.__"
+    answer: "propriété"
+    alt: []
+  - id: m1844-p10e-x3
+    sentence: "L'appartenance passe du travail à la personne : __vendre son activité, c'est vendre l'___ de soi__ pendant qu'on l'exerce."
+    answer: "usage"
+    alt: []
+  - id: m1844-p10e-x4
+    sentence: "Le texte ne dit pas encore qui est « un autre » ; Marx répondra plus tard : __« un autre homme que ___ »__."
+    answer: "l'ouvrier"
+    alt: []
+- id: m1844-p10f
+  title: "L'activité d'un autre, comme dans la religion"
+  notes: |-
+    **Marx compare l'ouvrier au croyant, qui éprouve l'activité de sa propre imagination {coral}comme l'action d'un dieu ou d'un démon{/coral}.** De même, l'activité de l'ouvrier n'est pas la sienne : elle est la perte de soi.
+
+    **Pourquoi « l'activité propre » ?** *Die Selbsttätigkeit*, {violet}l'activité qui part de soi{/violet}. Le mot n'est pas appliqué à l'ouvrier, mais à l'imagination du croyant : dans la religion, c'est bien {amber}l'homme qui agit{/amber}, même s'il croit subir.
+
+    **Pourquoi « de l'imagination, du cerveau et du cœur » ?** *Phantasie*, *Hirn*, *Herz* : la triade désigne {amber}les facultés qui produisent la religion{/amber}, la fantaisie, la pensée et le sentiment. Le triple « humain » insiste sur leur origine : ce qui agit sur le croyant vient de lui.
+
+    **Pourquoi « divine ou diabolique » ?** Bienveillante ou malveillante, l'inspiration ou la tentation, {red}peu importe{/red} : dans les deux cas, {coral}ce n'est plus moi qui agis{/coral}. Ce que l'homme produit en lui-même se retourne sur lui comme une force venue d'ailleurs.
+
+    **En quoi cette comparaison diffère-t-elle de celle du premier texte ?** Là, Marx comparait {amber}le produit à Dieu{/amber} : la richesse que l'homme place hors de lui. Ici, il compare {amber}l'activité à l'activité religieuse{/amber} : non plus ce que l'homme a produit, mais la manière dont il éprouve ce qu'il fait. C'est la même inversion, {coral}portée à l'intérieur de l'activité{/coral}.
+
+    **Qu'est-ce qui justifie le parallèle ?** Une structure commune en trois points.
+    - Une {amber}activité humaine réelle{/amber}, l'imagination du croyant ou le travail de l'ouvrier, se déroule en l'homme lui-même.
+    - Elle est {amber}vécue comme l'activité d'un autre{/amber}, qui agit en lui et sur lui.
+    - L'homme est {amber}dépossédé de ce qui est le plus intime{/amber}, son propre agir.
+
+    **Où le parallèle s'arrête-t-il ?** Chez le croyant, l'activité est sienne et seulement {red}vécue{/red} comme étrangère : l'étrangeté est une illusion, que la critique de Feuerbach dissipe. Chez l'ouvrier, l'activité appartient à un autre {green}réellement{/green}, puisque celui qui a acheté son temps en dispose. {coral}Ce qui est illusion dans la religion est rapport effectif dans le travail.{/coral}
+
+    **La première difficulté est résolue.** Comment un homme peut-il agir sans que son activité soit la sienne ? L'ouvrier agit, mais son activité {red}n'est pas une activité propre{/red} : elle est {green}déclenchée, dirigée et possédée par un autre{/green}. Il n'y a pas de contradiction, dès lors qu'il a vendu la disposition de cette activité. {yellow}L'ouvrier à la chaîne fait bien chaque geste lui-même ; mais le rythme, l'ordre et le but de ses gestes lui sont imposés.{/yellow}
+
+    ! « La perte de soi-même » (*der Verlust seiner selbst*) est {green}la formule ultime de l'extériorité{/green} : ce n'est plus un bien, ni même un produit, que l'ouvrier perd, c'est lui-même.
+  passage:
+    label: "§2"
+    part: "2. En quoi consiste l'aliénation du travail"
+    text: "De même que, dans la religion, l'activité propre de l'imagination humaine, du cerveau humain et du cœur humain, agit sur l'individu indépendamment de lui, c'est-à-dire comme une activité étrangère, divine ou diabolique, de même l'activité de l'ouvrier n'est pas son activité propre. Elle appartient à un autre, elle est la perte de soi-même."
+  points:
   - id: m1844-p10-11
-    fragment: "4/4"
     sentence: "« De même que, dans la religion, l'activité propre de l'imagination humaine, du cerveau humain et du cœur humain, agit sur l'individu indépendamment de lui, c'est-à-dire ___, de même l'activité de l'ouvrier n'est pas son activité propre. Elle appartient à un autre, elle est la perte de soi-même. »"
     answer: "comme une activité étrangère, divine ou diabolique"
     alt: []
   - id: m1844-p10-12
-    fragment: "4/4"
     sentence: "« De même que, dans la religion, l'activité propre de l'imagination humaine, du cerveau humain et du cœur humain, agit sur l'individu indépendamment de lui, c'est-à-dire comme une activité étrangère, divine ou diabolique, de même l'activité de l'ouvrier n'est pas son activité propre. Elle appartient à un autre, elle est ___. »"
     answer: "la perte de soi-même"
     alt: []
-  - id: m1844-p10-e1
-    sentence: "Le travail est « extérieur » à l'ouvrier non parce qu'il est pénible, mais parce qu'__il ne ___ de soi__."
-    answer: "part pas"
+  - id: m1844-p10f-x1
+    sentence: "*Phantasie*, *Hirn*, *Herz* : __les facultés qui ___ la religion,__ la fantaisie, la pensée, le sentiment."
+    answer: "produisent"
     alt: []
-  - id: m1844-p10-e2
-    sentence: "Présupposé normatif hérité de Hess et Feuerbach : le travail doit être une **expression vitale** (*___*)."
-    answer: "Lebensäußerung"
+  - id: m1844-p10f-x2
+    sentence: "Le premier texte comparait le produit à Dieu ; celui-ci compare __l'___ à l'activité religieuse.__"
+    answer: "activité"
     alt: []
-  - id: m1844-p10-e3
-    sentence: "Le travail aliéné est __une ___,__ une activité qu'un autre déclenche en soi."
-    answer: "allo-activité"
+  - id: m1844-p10f-x3
+    sentence: "Chez le croyant, l'activité est seulement vécue comme étrangère ; chez l'ouvrier, __elle appartient à un autre ___.__"
+    answer: "réellement"
     alt: []
-  - id: m1844-p10-e4
-    sentence: "L'ouvrier ne se sent chez lui qu'hors du travail : l'allemand dit *bei sich* et *___*, que « à l'aise » affaiblit."
-    answer: "zu Hause"
+  - id: m1844-p10f-x4
+    sentence: "L'activité de l'ouvrier n'est pas une activité propre : __elle est déclenchée, dirigée et ___ par un autre.__"
+    answer: "possédée"
     alt: []
-  - id: m1844-p10-e5
-    sentence: "La preuve par la fuite du travail suppose qu'__un autre travail soit ___,__ sinon elle donnerait raison à Smith."
-    answer: "possible"
-    alt: []
-  - id: m1844-p10-e6
-    sentence: "Dans la religion l'activité étrangère est une illusion ; dans le travail, __c'est un rapport ___ :__ un autre dispose de l'activité."
-    answer: "effectif"
-    alt: ["réel"]
 - id: m1844-p11
-  title: "3.1 et 3.2 L'animal devient humain, l'humain devient animal"
+  title: "L'animal devient humain, l'humain devient animal"
   notes: |-
-    **L'ouvrier ne se sent libre que dans ses fonctions animales, et animal dans le travail : {coral}« ce qui est animal devient humain, et ce qui est humain devient animal »{/coral}.**
+    **Marx tire le résultat de ce qui précède : puisque l'ouvrier ne se sent lui-même qu'en dehors du travail, {coral}il ne se sent libre que dans ses fonctions animales{/coral} ; et dans le travail, qui devrait être son activité la plus humaine, il se sent une bête de somme.** L'aliénation de l'activité reçoit sa formule la plus frappante, un chiasme.
 
-    **3.1 Le résultat.** *Es kömmt daher* : le dernier *daher* de la chaîne. « L'homme (l'ouvrier) » : ce qui arrive à l'ouvrier arrive à l'homme. Il ne se sent libre (*freitätig*) {amber}« plus que »{/amber} (*nur mehr*) en mangeant, buvant, procréant, et tout au plus dans le choix de son logis et de sa parure (*Schmuck*). Le chiasme dit {coral}l'inversion complète{/coral} des valeurs de la vie. Prémisse implicite, établie dans le texte suivant : le travail est {violet}la fonction proprement humaine{/violet}.
+    **Pourquoi « donc » et « résultat » ?** *Es kömmt daher zu dem Resultat* : c'est {amber}le dernier *daher*{/amber} du texte, la conséquence de toute la chaîne.
 
-    **3.2 Des fonctions humaines séparées abstraitement.** La concession (*zwar auch*) est réelle : manger, boire, procréer sont {green}« authentiquement humaines »{/green}. Elles deviennent animales {amber}« séparées abstraitement »{/amber} du reste des activités et devenues {coral}« la fin dernière et unique »{/coral}.
+    **Pourquoi « l'homme (l'ouvrier) » ?** La parenthèse {coral}renverse celle du texte précédent{/coral}, « l'ouvrier (le travail) ». Là, l'économie réduisait l'ouvrier à du travail ; ici, l'ouvrier est un homme, et {amber}ce qui lui arrive arrive à l'homme{/amber}.
 
-    ? **Abstrait** : chez Marx, formé à l'école de Hegel, ce qui est {violet}séparé{/violet}, isolé, privé de ses rapports ; le concret est ce qui est complet, pris dans tous ses rapports.
+    **Pourquoi « se sent agir librement » ?** *Sich als freitätig fühlt*, se sent librement actif : c'est encore {violet}l'épreuve vécue{/violet}. Et « seulement » traduit *nur mehr*, « ne… plus que », comme dans le comble de la servitude du texte précédent : il y avait autre chose, il n'y a plus que cela.
 
-    Une fonction humaine l'est par ses rapports au reste de la vie : on mange pour vivre, mais aussi pour travailler, penser, aimer. Coupée de ce tout, elle retombe à ce qu'elle est chez l'animal, {amber}le tout de la vie{/amber}. Ce n'est donc pas le corps qui animalise l'homme, c'est {coral}l'abstraction{/coral} produite par le travail aliéné, qui chasse hors du travail tout ce qu'il peut éprouver comme sien.
+    **Quelles fonctions ?**
+    - {amber}Manger, boire et procréer{/amber} : les fonctions du vivant, que l'homme partage avec l'animal.
+    - {amber}« Tout au plus », le logement et la parure{/amber} (l'allemand dit *Wohnung*, *Schmuck*) : une petite liberté de consommation, la seule qui reste.
+    - {amber}Les fonctions « proprement humaines »{/amber} : celles qui distinguent l'homme, au premier rang desquelles le travail, l'activité consciente et productive.
 
-    ! Marx ne prône pas {red}un idéal ascétique{/red} : il reproche au travail aliéné d'avoir {green}appauvri jusqu'aux plaisirs du corps{/green}.
+    {yellow}L'ouvrier qui attend toute la semaine le repas du dimanche comme le seul moment qui soit à lui vit ce renversement.{/yellow}
+
+    **Pourquoi le chiasme ?** « Ce qui est animal devient humain, et ce qui est humain devient animal » : la construction en miroir dit {coral}l'inversion complète des valeurs de la vie{/coral}. Ce n'est pas seulement que l'ouvrier perd sa part humaine : c'est que {amber}la liberté change de place{/amber}, et se réfugie là où l'homme est le moins homme.
+
+    **Le raisonnement implicite.** Il tient en deux prémisses.
+    - La première est {green}acquise{/green} : l'ouvrier ne se sent libre qu'en dehors du travail.
+    - La seconde {red}ne l'est pas encore{/red} : le travail est la fonction proprement humaine, celle qui distingue l'homme de l'animal. Le texte suivant l'établira, avec {violet}l'activité vitale consciente{/violet}.
+
+    Si on admet les deux, le résultat suit : {coral}la liberté se réfugie dans ce que l'homme a de commun avec l'animal, et ce qu'il a de propre devient une servitude animale{/coral}.
+
+    ! On serait tenté d'y lire {red}un mépris pour le corps et ses plaisirs{/red} ; la phrase suivante prévient le contresens.
   passage:
     label: "§3"
     part: "3. Le résultat et le bilan"
-    text: "On en vient donc à ce résultat que l'homme (l'ouvrier) se sent agir librement seulement dans ses fonctions animales : manger, boire et procréer, ou encore, tout au plus, dans le choix de sa maison, de son habillement, etc. ; en revanche, il se sent animal dans ses fonctions proprement humaines. Ce qui est animal devient humain, et ce qui est humain devient animal. Manger, boire, procréer, etc., sont certes aussi des fonctions authentiquement humaines. Mais séparées abstraitement du reste du champ des activités humaines et devenues ainsi la fin dernière et unique, elles ne sont plus que des fonctions animales."
+    text: "On en vient donc à ce résultat que l'homme (l'ouvrier) se sent agir librement seulement dans ses fonctions animales : manger, boire et procréer, ou encore, tout au plus, dans le choix de sa maison, de son habillement, etc. ; en revanche, il se sent animal dans ses fonctions proprement humaines. Ce qui est animal devient humain, et ce qui est humain devient animal."
   points:
   - id: m1844-p11-1
-    fragment: "1/2"
     sentence: "« On en vient donc à ce résultat que l'homme (l'ouvrier) se sent agir librement ___, ou encore, tout au plus, dans le choix de sa maison, de son habillement, etc. ; en revanche, il se sent animal dans ses fonctions proprement humaines. Ce qui est animal devient humain, et ce qui est humain devient animal. »"
     answer: "seulement dans ses fonctions animales : manger, boire et procréer"
     alt: []
   - id: m1844-p11-2
-    fragment: "1/2"
     sentence: "« On en vient donc à ce résultat que l'homme (l'ouvrier) se sent agir librement seulement dans ses fonctions animales : manger, boire et procréer, ou encore, tout au plus, dans le choix de sa maison, de son habillement, etc. ; en revanche, ___. Ce qui est animal devient humain, et ce qui est humain devient animal. »"
     answer: "il se sent animal dans ses fonctions proprement humaines"
     alt: []
   - id: m1844-p11-3
-    fragment: "1/2"
     sentence: "« On en vient donc à ce résultat que l'homme (l'ouvrier) se sent agir librement seulement dans ses fonctions animales : manger, boire et procréer, ou encore, tout au plus, dans le choix de sa maison, de son habillement, etc. ; en revanche, il se sent animal dans ses fonctions proprement humaines. Ce qui est animal devient humain, et ___. »"
     answer: "ce qui est humain devient animal"
     alt: []
+  - id: m1844-p11-x1
+    sentence: "« L'homme (l'ouvrier) » renverse la parenthèse du texte précédent, __« l'ouvrier (___) »__."
+    answer: "le travail"
+    alt: []
+  - id: m1844-p11-x2
+    sentence: "« Tout au plus » le logement et la parure : __une petite liberté de ___,__ la seule qui reste."
+    answer: "consommation"
+    alt: []
+  - id: m1844-p11-x3
+    sentence: "Le chiasme dit que __la liberté change de ___ :__ elle se réfugie là où l'homme est le moins homme."
+    answer: "place"
+    alt: []
+  - id: m1844-p11-x4
+    sentence: "Prémisse établie seulement dans le texte suivant : __le travail est la fonction proprement ___.__"
+    answer: "humaine"
+    alt: []
+- id: m1844-p11b
+  title: "Des fonctions humaines séparées abstraitement"
+  notes: |-
+    **Marx précise sa formule pour qu'on ne la prenne pas pour un mépris du corps : manger, boire, aimer sont {green}pleinement humains{/green}. Ce qui les rend animales, c'est d'être {coral}coupées du reste de la vie humaine et de devenir le seul but de l'existence{/coral}.** L'homme devient animal non par ce qu'il fait, mais par la place que ce qu'il fait occupe dans sa vie.
+
+    **Pourquoi « certes aussi » ?** *Zwar auch* : la concession est {amber}réelle{/amber}. Marx ne retire rien à la dignité du corps. « Authentiquement humaines » (*echt menschliche*) : chez l'homme, ces fonctions sont prises dans la culture, le goût, le lien aux autres.
+
+    **Pourquoi « séparées abstraitement » ?** L'allemand dit « dans l'abstraction qui les sépare » (*In der Abstraktion aber, die sie… trennt*). {coral}Abstraire, c'est ici séparer{/coral}, isoler une partie du tout.
+
+    ? **Abstrait** : chez Marx, formé à l'école de Hegel, {violet}ce qui est séparé{/violet}, isolé, privé de ses rapports avec autre chose que soi ; le {violet}concret{/violet} est ce qui est complet, pris dans la multiplicité de ses rapports. Le mot ne désigne pas {red}une idée générale{/red}, mais {green}une partie coupée de son tout{/green}.
+
+    **Pourquoi « du reste du champ des activités humaines » ?** *Umkreis*, le cercle, le pourtour : ces fonctions {amber}avaient leur place dans un ensemble{/amber}. On mange pour vivre, mais aussi pour travailler, penser, aimer ; un repas est pris dans une journée, une famille, une fête.
+
+    **Pourquoi « la fin dernière et unique » ?** *Zu letzten und alleinigen Endzwecken* : ce qui devait être {amber}une part de la vie{/amber} en devient {coral}le but{/coral}. Et « ne sont plus que » dit une perte.
+
+    **Comment une fonction humaine devient-elle animale ?** Le raisonnement tient à la conception de l'abstrait.
+    - Une fonction humaine {amber}est humaine par ses rapports{/amber} aux autres activités.
+    - Isolée de ce tout et devenue fin unique, elle {amber}perd ce qui la rendait humaine{/amber}.
+    - Elle retombe au rang de la fonction animale, qui chez l'animal est en effet {coral}le tout de la vie{/coral}.
+
+    {yellow}Un repas partagé, préparé avec soin, où l'on parle et où l'on fête quelque chose, est une activité humaine ; le même repas avalé seul, comme l'unique récompense d'une journée vide, n'est plus que nourriture.{/yellow}
+
+    **Qui produit cette abstraction ?** {coral}Le travail aliéné{/coral}, qui chasse hors du travail tout ce que l'ouvrier peut éprouver comme sien. Puisque le travail n'est plus qu'un moyen, la vie hors du travail devient la seule fin ; et puisque l'ouvrier, épuisé, n'a guère d'autre vie que celle du corps, ce sont les fonctions du corps qui deviennent fins dernières. La seconde difficulté est résolue : {green}ce n'est pas le corps qui animalise l'homme, c'est l'abstraction qui coupe le corps du reste de la vie{/green}.
+
+    ! Le texte n'exprime pas {red}un idéal ascétique{/red} : il reproche au contraire au travail aliéné d'avoir {green}appauvri jusqu'aux plaisirs du corps{/green}.
+  passage:
+    label: "§3"
+    part: "3. Le résultat et le bilan"
+    text: "Manger, boire, procréer, etc., sont certes aussi des fonctions authentiquement humaines. Mais séparées abstraitement du reste du champ des activités humaines et devenues ainsi la fin dernière et unique, elles ne sont plus que des fonctions animales."
+  points:
   - id: m1844-p11-4
-    fragment: "2/2"
     sentence: "« Manger, boire, procréer, etc., sont certes aussi ___. Mais séparées abstraitement du reste du champ des activités humaines et devenues ainsi la fin dernière et unique, elles ne sont plus que des fonctions animales. »"
     answer: "des fonctions authentiquement humaines"
     alt: []
   - id: m1844-p11-5
-    fragment: "2/2"
     sentence: "« Manger, boire, procréer, etc., sont certes aussi des fonctions authentiquement humaines. Mais ___ et devenues ainsi la fin dernière et unique, elles ne sont plus que des fonctions animales. »"
     answer: "séparées abstraitement du reste du champ des activités humaines"
     alt: []
   - id: m1844-p11-6
-    fragment: "2/2"
     sentence: "« Manger, boire, procréer, etc., sont certes aussi des fonctions authentiquement humaines. Mais séparées abstraitement du reste du champ des activités humaines et devenues ainsi ___, elles ne sont plus que des fonctions animales. »"
     answer: "la fin dernière et unique"
     alt: []
   - id: m1844-p11-7
-    fragment: "2/2"
     sentence: "« Manger, boire, procréer, etc., sont certes aussi des fonctions authentiquement humaines. Mais séparées abstraitement du reste du champ des activités humaines et devenues ainsi la fin dernière et unique, elles ___. »"
     answer: "ne sont plus que des fonctions animales"
     alt: []
-  - id: m1844-p11-e1
-    sentence: "Prémisse implicite du chiasme, établie dans le texte suivant : le travail est __la fonction ___ de l'homme__."
-    answer: "proprement humaine"
+  - id: m1844-p11b-x1
+    sentence: "« Certes aussi » (*zwar auch*) : __la concession est ___ :__ Marx ne retire rien à la dignité du corps."
+    answer: "réelle"
     alt: []
-  - id: m1844-p11-e2
-    sentence: "Chez Marx, **abstrait** veut dire __ce qui est ___, isolé, privé de ses rapports__."
-    answer: "séparé"
+  - id: m1844-p11b-x2
+    sentence: "L'allemand dit « dans l'abstraction qui les sépare » : __abstraire, c'est ici ___.__"
+    answer: "séparer"
+    alt: ["isoler"]
+  - id: m1844-p11b-x3
+    sentence: "**Abstrait**, chez Marx : __ce qui est séparé, privé de ses ___ ;__ le concret est ce qui est complet."
+    answer: "rapports"
     alt: []
-  - id: m1844-p11-e3
-    sentence: "Ce n'est pas le corps qui animalise l'homme, mais __l'___ qui coupe ses fonctions du reste de sa vie__."
-    answer: "abstraction"
+  - id: m1844-p11b-x4
+    sentence: "Une fonction humaine est humaine __par ses ___ aux autres activités ;__ isolée, elle retombe au rang animal."
+    answer: "rapports"
+    alt: []
+  - id: m1844-p11b-x5
+    sentence: "Ce n'est pas le corps qui animalise l'homme, mais __l'abstraction produite par le travail ___.__"
+    answer: "aliéné"
     alt: []
 - id: m1844-p12
-  title: "3.3 Les deux aspects : l'aliénation de la chose et l'aliénation de soi"
+  title: "Premier aspect : le rapport au produit et à la nature"
   notes: |-
-    **Bilan : le travail aliéné a deux aspects, {coral}l'aliénation de la chose{/coral} (le produit, et avec lui la nature) et {coral}l'aliénation de soi{/coral} (l'activité, vécue comme passion).**
+    **Marx récapitule les deux déterminations acquises, avant d'en tirer, dans le texte suivant, une troisième. La première est {coral}le rapport de l'ouvrier à son produit, qui est aussi son rapport à la nature{/coral}.**
 
-    **Le premier aspect** est le rapport de l'ouvrier au produit, {amber}objet étranger qui le domine{/amber}, qui est « en même temps » son rapport au monde extérieur sensible : la synthèse des deux textes précédents.
+    **Pourquoi « l'activité humaine pratique » ?** *Der praktischen menschlichen Tätigkeit* : le travail est {violet}l'activité pratique par excellence{/violet}, celle qui transforme le monde, par opposition à l'activité théorique. Et Marx parle de « l'acte d'aliénation » : même le bilan du produit est pris du côté de l'acte, conformément à l'ordre des raisons que le §1 a fixé.
 
-    **Le second** est le rapport à sa propre activité comme activité étrangère : {teal}« l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration »{/teal}. L'allemand dit *die Tätigkeit als Leiden* : {violet}*Leiden*{/violet}, souffrance et passion, le fait de subir.
+    **Que résume « qui le tient sous sa domination » ?** Le premier texte : le produit se dresse devant l'ouvrier comme {amber}une puissance indépendante{/amber}, et plus l'ouvrier produit, plus il tombe sous la domination de son propre produit, {teal}« le capital »{/teal}.
 
-    **Comment une activité peut-elle être une passivité ?** Le raisonnement implicite : un être naturel est à la fois passif et actif, il pâtit du besoin et agit pour y répondre. L'ouvrier aliéné est séparé de ce principe passif : ce n'est pas son besoin qui le met au travail, il n'est plus qu'{amber}une pure capacité d'agir{/amber} qu'un autre met en œuvre. Alors, là où il devrait faire l'expérience de son activité, {teal}il fait l'expérience d'une passivité{/teal}, {coral}une passivité qui n'est pas la sienne{/coral}.
+    **Que résume « en même temps le rapport au monde extérieur sensible » ?** Le deuxième texte : la nature, matière du travail et source des vivres, a cessé d'être à l'ouvrier, et il en est devenu {amber}le serviteur{/amber}. {coral}Le produit et la nature ne font qu'un objet{/coral} : tout produit est nature transformée, et toute la nature à laquelle l'ouvrier a affaire passe par des produits qui ne sont pas à lui.
 
-    « Car qu'est-ce que la vie sinon l'activité ? » : l'activité aliénée est {amber}une vie aliénée{/amber}, la « vie personnelle » de l'ouvrier retournée contre lui (*wider ihn selbst gewendete*). D'où la formule finale : {violet}*Selbstentfremdung*{/violet}, l'aliénation de soi, comme plus haut l'*Entfremdung der Sache*.
+    **Pourquoi « étranger et hostile » ?** L'hostilité {amber}s'ajoute{/amber} à l'étrangeté : la nature n'est pas seulement hors de la portée de l'ouvrier, elle se dresse contre lui, sous la forme du capital qui la possède. {yellow}La forêt que le bûcheron abat pour un marchand de bois est à la fois ce qu'il ne possède pas et ce qui décide de son embauche.{/yellow}
 
-    ! Le bilan suit l'ordre de l'exposition, mais {red}l'ordre des raisons{/red} est l'inverse : {green}l'aliénation de soi fonde celle de la chose{/green}.
+    **Pourquoi un bilan ici ?** Pour {amber}rassembler{/amber} ce qui a été établi, et préparer la phrase qui ouvre le texte suivant : {teal}« de ces deux déterminations du travail aliéné, nous devons en tirer une troisième »{/teal}. La troisième, l'être générique, se tirera précisément de ces deux rapports, à la nature et à l'activité.
+
+    ! Le bilan suit l'ordre d'{red}exposition{/red} (le produit, puis l'activité) ; il ne doit pas faire oublier l'ordre des {green}raisons{/green}, que le §1 a fixé : l'aliénation de l'activité fonde celle du produit.
   passage:
     label: "§4"
     part: "3. Le résultat et le bilan"
-    text: "Nous avons considéré l'acte d'aliénation de l'activité humaine pratique, le travail, sous deux aspects. 1) Le rapport de l'ouvrier au produit du travail en tant qu'objet étranger qui le tient sous sa domination. Ce rapport est en même temps le rapport au monde extérieur sensible, aux objets de la nature, monde qui lui est à la fois étranger et hostile. 2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration. C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est transformée en activité dirigée contre lui-même, indépendante de lui, ne lui appartenant pas. C'est l'aliénation de soi comme, plus haut, l'aliénation de la chose."
+    text: "Nous avons considéré l'acte d'aliénation de l'activité humaine pratique, le travail, sous deux aspects. 1) Le rapport de l'ouvrier au produit du travail en tant qu'objet étranger qui le tient sous sa domination. Ce rapport est en même temps le rapport au monde extérieur sensible, aux objets de la nature, monde qui lui est à la fois étranger et hostile."
   points:
   - id: m1844-p12-1
-    fragment: "1/2"
     sentence: "« Nous avons considéré ___, sous deux aspects. 1) Le rapport de l'ouvrier au produit du travail en tant qu'objet étranger qui le tient sous sa domination. Ce rapport est en même temps le rapport au monde extérieur sensible, aux objets de la nature, monde qui lui est à la fois étranger et hostile. »"
     answer: "l'acte d'aliénation de l'activité humaine pratique, le travail"
     alt: []
   - id: m1844-p12-2
-    fragment: "1/2"
     sentence: "« Nous avons considéré l'acte d'aliénation de l'activité humaine pratique, le travail, sous deux aspects. 1) Le rapport de l'ouvrier au produit du travail ___. Ce rapport est en même temps le rapport au monde extérieur sensible, aux objets de la nature, monde qui lui est à la fois étranger et hostile. »"
     answer: "en tant qu'objet étranger qui le tient sous sa domination"
     alt: []
   - id: m1844-p12-3
-    fragment: "1/2"
     sentence: "« Nous avons considéré l'acte d'aliénation de l'activité humaine pratique, le travail, sous deux aspects. 1) Le rapport de l'ouvrier au produit du travail en tant qu'objet étranger qui le tient sous sa domination. Ce rapport est en même temps le rapport au monde extérieur sensible, aux objets de la nature, monde qui lui est ___. »"
     answer: "à la fois étranger et hostile"
     alt: []
+  - id: m1844-p12-x1
+    sentence: "Le travail est __l'activité humaine ___ par excellence,__ celle qui transforme le monde."
+    answer: "pratique"
+    alt: []
+  - id: m1844-p12-x2
+    sentence: "Le premier aspect réunit les deux premiers textes : __le produit et la ___ ne font qu'un objet,__ étranger et hostile."
+    answer: "nature"
+    alt: []
+  - id: m1844-p12-x3
+    sentence: "Le bilan suit l'ordre d'exposition ; __l'ordre des ___ va de l'activité au produit.__"
+    answer: "raisons"
+    alt: []
+- id: m1844-p12b
+  title: "Second aspect : l'activité qui est passivité"
+  notes: |-
+    **Le second aspect est le rapport de l'ouvrier à sa propre activité, devenue étrangère, au point que {coral}son agir est un subir, sa force une impuissance, sa fécondité une stérilité{/coral}.** Trois formules unissent les contraires, et la première est la plus difficile du texte.
+
+    **Pourquoi « à l'intérieur du travail » ?** C'est le second aspect annoncé au §1 : non plus le résultat, mais {amber}l'acte de production tel qu'il se déroule{/amber}. « Activité étrangère qui ne lui appartient pas » résume le §2.
+
+    **Que veut dire « l'activité qui est passivité » ?** L'allemand dit *die Tätigkeit als Leiden* : l'activité {violet}comme souffrance, comme passion{/violet}. *Leiden* désigne le fait de pâtir, de subir ; la traduction choisit l'un de ses sens.
+
+    **Comment une activité peut-elle être une passivité ?** Le raisonnement implicite passe par trois étapes.
+    - **Un être naturel est actif et passif à la fois** : il {amber}pâtit du besoin{/amber}, qui l'affecte, et il {amber}agit pour y répondre{/amber}. La passivité du besoin est au principe de son activité.
+    - **L'ouvrier aliéné est séparé de ce principe** : ce n'est pas son besoin qui le met au travail, et il n'est plus qu'{amber}une pure capacité d'agir{/amber}, qui attend qu'un autre lui fournisse de quoi s'exercer.
+    - **Quand cette capacité est mise en œuvre**, elle l'est par un autre et pour un autre : l'ouvrier {coral}éprouve son propre agir comme quelque chose qu'il subit{/coral}.
+
+    Là où il devrait faire l'expérience de son activité, il fait l'expérience d'une passivité, mais {red}d'une passivité qui n'est pas la sienne{/red}, qui lui vient du dehors. L'aliénation n'est pas qu'{red}une chose agisse à la place de l'ouvrier{/red} : c'est que {green}l'ouvrier soit séparé de sa propre passivité, et la retrouve, retournée contre lui, dans son activité{/green}. {yellow}L'ouvrier à la chaîne dépense toute son énergie, et n'éprouve le soir que la fatigue d'avoir été mené par la machine : il a agi toute la journée, et il a vécu cette journée comme une chose subie.{/yellow}
+
+    **Pourquoi « la force qui est impuissance » ?** *Die Kraft als Ohnmacht* : la formule reprend {amber}le cinquième couple des six inversions{/amber}, « plus le travail est puissant, plus l'ouvrier est impuissant ». La force de l'ouvrier passe dans ce qui le domine.
+
+    **Pourquoi « la procréation qui est castration » ?** *Die Zeugung als Entmannung* : l'image sexuelle dit que {coral}la puissance d'engendrer, de produire du nouveau, est retranchée à celui qui l'exerce{/coral}. Produire, c'est mettre au monde ; l'ouvrier met au monde ce qui ne sera pas à lui, et en sort diminué.
+
+    ! Les trois formules ne sont pas {red}des paradoxes rhétoriques{/red} : chacune dit {green}un rapport réel{/green}, où ce que l'ouvrier exerce se retourne contre lui.
+  passage:
+    label: "§4"
+    part: "3. Le résultat et le bilan"
+    text: "2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration."
+  points:
   - id: m1844-p12-4
-    fragment: "2/2"
-    sentence: "« 2) Le rapport entre le travail et l'acte de production ___. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration. C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est transformée en activité dirigée contre lui-même, indépendante de lui, ne lui appartenant pas. C'est l'aliénation de soi comme, plus haut, l'aliénation de la chose. »"
+    sentence: "« 2) Le rapport entre le travail et l'acte de production ___. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration. »"
     answer: "à l'intérieur du travail"
     alt: []
   - id: m1844-p12-5
-    fragment: "2/2"
-    sentence: "« 2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité ___, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration. C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est transformée en activité dirigée contre lui-même, indépendante de lui, ne lui appartenant pas. C'est l'aliénation de soi comme, plus haut, l'aliénation de la chose. »"
+    sentence: "« 2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité ___, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration. »"
     answer: "en tant qu'activité étrangère qui ne lui appartient pas"
     alt: []
   - id: m1844-p12-6
-    fragment: "2/2"
-    sentence: "« 2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est ___. C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est transformée en activité dirigée contre lui-même, indépendante de lui, ne lui appartenant pas. C'est l'aliénation de soi comme, plus haut, l'aliénation de la chose. »"
+    sentence: "« 2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est ___. »"
     answer: "l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration"
     alt: []
+  - id: m1844-p12b-x1
+    sentence: "« L'activité qui est passivité » traduit *die Tätigkeit als Leiden* : __l'activité comme souffrance, comme ___.__"
+    answer: "passion"
+    alt: []
+  - id: m1844-p12b-x2
+    sentence: "Un être naturel __pâtit du ___ et agit pour y répondre :__ la passivité est au principe de son activité."
+    answer: "besoin"
+    alt: []
+  - id: m1844-p12b-x3
+    sentence: "L'ouvrier aliéné, séparé de son besoin, n'est plus __qu'une pure ___ d'agir__ qu'un autre met en œuvre."
+    answer: "capacité"
+    alt: []
+  - id: m1844-p12b-x4
+    sentence: "L'ouvrier est séparé de sa propre passivité, et __la retrouve, retournée contre lui, dans son ___.__"
+    answer: "activité"
+    alt: []
+  - id: m1844-p12b-x5
+    sentence: "« La force qui est impuissance » reprend __le cinquième couple des six ___.__"
+    answer: "inversions"
+    alt: []
+  - id: m1844-p12b-x6
+    sentence: "« La procréation qui est castration » : __la puissance d'___ est retranchée à celui qui l'exerce.__"
+    answer: "engendrer"
+    alt: []
+- id: m1844-p12c
+  title: "La vie retournée contre l'ouvrier, l'aliénation de soi"
+  notes: |-
+    **Ce qui est retourné contre l'ouvrier, c'est {coral}sa vie personnelle{/coral}, puisque la vie n'est rien d'autre que l'activité. Marx nomme pour finir les deux déterminations en une formule symétrique : {coral}l'aliénation de soi, comme l'aliénation de la chose{/coral}.**
+
+    **Pourquoi « l'énergie physique et intellectuelle » ?** C'est ce que le §2 appelait {amber}« une libre activité physique et intellectuelle »{/amber} : le corps et l'esprit ensemble. Ce qui devait se déployer librement est {red}retourné contre lui{/red}.
+
+    **Pourquoi l'incise « qu'est-ce que la vie sinon l'activité ? » ?** Elle porte une thèse qui fonde tout le paragraphe : {coral}la vie est l'activité{/coral}. Si c'est vrai, l'activité aliénée est {amber}une vie aliénée{/amber}, et l'ouvrier ne perd pas seulement son travail, il perd sa « vie personnelle ». {yellow}Les dix heures passées à l'usine ne sont pas un temps pris à côté de la vie de l'ouvrier : elles sont sa vie, la plus grande part de ses journées éveillées.{/yellow} Le texte suivant tirera de cette identité la notion d'{violet}activité vitale{/violet}.
+
+    **Pourquoi « dirigée contre lui-même, indépendante de lui, ne lui appartenant pas » ?** *Wider ihn selbst gewendete* : {amber}retournée contre lui{/amber}. La gradation reprend dans l'ordre inverse ce que le premier texte disait du produit, « indépendant », « étranger », « hostile » : l'activité subit le même sort que l'objet.
+
+    **Pourquoi « l'aliénation de soi comme, plus haut, l'aliénation de la chose » ?** *Selbstentfremdung* et *Entfremdung der Sache* : la phrase nomme {coral}les deux déterminations{/coral} en une formule symétrique.
+
+    | Aliénation de la chose | Aliénation de soi |
+    | le rapport au produit et à la nature | le rapport à sa propre activité |
+    | ce que l'ouvrier perd | ce que l'ouvrier devient |
+    | exposée dans les deux premiers textes | exposée dans celui-ci |
+    | conséquence | fondement |
+
+    **Deux aliénations parallèles ?** On serait tenté de le croire, puisque la formule les met en regard. Mais le §1 a montré que {coral}la seconde fonde la première{/coral} : le produit n'est que le résumé de l'activité. La symétrie de la formule est celle de l'exposition ; {amber}l'ordre des raisons{/amber} va de soi à la chose.
+
+    **Qu'est-ce que le bilan prépare ?** La phrase qui ouvre le texte suivant : {teal}« de ces deux déterminations du travail aliéné, nous devons en tirer une troisième »{/teal}. Si l'homme est aliéné dans son rapport à la nature et dans son rapport à son activité, et si c'est par ces deux rapports qu'il est un être générique, alors il est aliéné de son être générique.
+
+    ! « Aliénation de soi » ne veut pas dire {red}un trouble intérieur{/red}, une conscience malheureuse : c'est {green}la perte réelle de sa propre activité{/green}, donc de sa propre vie.
+  passage:
+    label: "§4"
+    part: "3. Le résultat et le bilan"
+    text: "C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est transformée en activité dirigée contre lui-même, indépendante de lui, ne lui appartenant pas. C'est l'aliénation de soi comme, plus haut, l'aliénation de la chose."
+  points:
   - id: m1844-p12-7
-    fragment: "2/2"
-    sentence: "« 2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration. C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est ___, indépendante de lui, ne lui appartenant pas. C'est l'aliénation de soi comme, plus haut, l'aliénation de la chose. »"
+    sentence: "« C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est ___, indépendante de lui, ne lui appartenant pas. C'est l'aliénation de soi comme, plus haut, l'aliénation de la chose. »"
     answer: "transformée en activité dirigée contre lui-même"
     alt: []
   - id: m1844-p12-8
-    fragment: "2/2"
-    sentence: "« 2) Le rapport entre le travail et l'acte de production à l'intérieur du travail. Ce rapport est le rapport de l'ouvrier à sa propre activité en tant qu'activité étrangère qui ne lui appartient pas, c'est l'activité qui est passivité, la force qui est impuissance, la procréation qui est castration. C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est transformée en activité dirigée contre lui-même, indépendante de lui, ne lui appartenant pas. C'est ___ comme, plus haut, l'aliénation de la chose. »"
+    sentence: "« C'est l'énergie physique et intellectuelle de l'ouvrier, sa vie personnelle – car qu'est-ce que la vie sinon l'activité ? – qui est transformée en activité dirigée contre lui-même, indépendante de lui, ne lui appartenant pas. C'est ___ comme, plus haut, l'aliénation de la chose. »"
     answer: "l'aliénation de soi"
     alt: []
-  - id: m1844-p12-e1
-    sentence: "« L'activité qui est passivité » traduit *die Tätigkeit als ___*, souffrance et passion, le fait de subir."
-    answer: "Leiden"
+  - id: m1844-p12c-x1
+    sentence: "« Qu'est-ce que la vie sinon l'activité ? » : __si la vie est l'activité, l'activité aliénée est une ___ aliénée.__"
+    answer: "vie"
     alt: []
-  - id: m1844-p12-e2
-    sentence: "L'ouvrier est séparé du besoin qui devrait le mettre au travail, et __éprouve dans son activité une passivité qui n'est pas ___.__"
-    answer: "la sienne"
+  - id: m1844-p12c-x2
+    sentence: "*Wider ihn selbst gewendete* : __l'activité est ___ contre l'ouvrier.__"
+    answer: "retournée"
+    alt: ["dirigée"]
+  - id: m1844-p12c-x3
+    sentence: "*Selbstentfremdung* et *Entfremdung der Sache* : __l'aliénation de soi, comme l'aliénation de la ___.__"
+    answer: "chose"
     alt: []
-  - id: m1844-p12-e3
-    sentence: "Le bilan suit l'ordre de l'exposition, mais dans l'ordre des raisons __l'aliénation de soi ___ celle de la chose__."
+  - id: m1844-p12c-x4
+    sentence: "La symétrie est celle de l'exposition : dans l'ordre des raisons, __l'aliénation de soi ___ l'aliénation de la chose.__"
     answer: "fonde"
     alt: []
