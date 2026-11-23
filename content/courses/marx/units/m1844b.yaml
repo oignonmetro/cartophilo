@@ -11,6 +11,10 @@
 # 2026-11-21 ; il est réparti en cinq unités (m1844, m1844b à m1844e), qui
 # gardent les identifiants des leçons et des cartes (m1844-p…), donc leur
 # révision, avec des § renumérotés dans chaque unité.
+# Refondu le 2026-11-23 : une leçon par phrase ou segment (m1844-p5, p5b…),
+# deux leçons d'introduction ; « Six inversions » (m1844-p7b) gardée telle
+# quelle ; les cartes-citation gardent leurs identifiants, recentrées sur leur
+# segment ; les cartes-explication sont nouvelles (-x…).
 
 id: m1844b
 title: "L'ouvrier, esclave de son objet (1844)"
@@ -22,15 +26,66 @@ intro: |-
   La perte de l'objet examinée de plus près : la nature fournit au travail sa matière et à l'ouvrier ses moyens de subsistance, et l'ouvrier, qui s'en approprie toujours plus par son travail, en est doublement privé ; il devient l'esclave de son objet, ce que l'économie politique dissimule.
 lessons:
 - id: m1844b-i1
-  title: "Où en est l'argument : la perte de l'objet"
+  title: "Le texte, sa place et son plan"
   notes: |-
-    **Ce texte reprend l'aliénation du produit pour la creuser : il montre ce que l'ouvrier perd quand il perd l'objet, et pourquoi l'économie politique ne le voit pas.**
+    **Le texte est le deuxième des cinq moments du passage sur le travail aliéné : il reprend {coral}« de plus près »{/coral} la perte de l'objet, et dit ce que l'ouvrier perd au juste.** Il commence à la page XXIII du manuscrit, par « Examinons de plus près l'objectivation », et s'arrête sur la question du rapport essentiel de l'ouvrier à la production. Il compte quatre paragraphes ; le troisième se prolonge par une parenthèse, les six inversions « selon les lois de l'économie ».
 
-    Le texte précédent a établi que {coral}l'objectivation devient pour l'ouvrier la perte de l'objet{/coral}, et laissé une formule déroutante : plus il est actif, plus il est {teal}« privé d'objets »{/teal}. Celui-ci dit quels objets : {amber}la nature{/amber}, matière de son travail et source de sa subsistance.
+    **Où en est l'argument.** Le texte précédent est parti d'un fait, l'ouvrier s'appauvrit à mesure qu'il produit, et en a dégagé le sens : dans le monde de l'économie politique, {amber}l'objectivation devient pour l'ouvrier une perte de l'objet{/amber}, et son produit lui fait face comme une puissance étrangère, le capital. Il s'achevait sur une formule déroutante : plus l'ouvrier est actif, plus il est {teal}« privé d'objets »{/teal}.
 
-    **Sa question :** que perd exactement l'ouvrier, et pourquoi l'économie politique, qui décrit sa misère, ne le voit-elle pas ? **Sa thèse :** l'acte de s'approprier la nature est à l'ouvrier, mais {coral}la nature appropriée ne l'est pas{/coral} ; plus il travaille, plus il en est doublement privé, si bien qu'il doit recevoir de son objet de quoi travailler et de quoi vivre, et devient {violet}le serviteur de son objet{/violet} ; l'économie politique {amber}dissimule{/amber} cette aliénation en ne considérant pas le rapport immédiat de l'ouvrier à la production. **Sa difficulté :** comment l'appropriation de la nature, par laquelle l'homme se rend maître de son monde, peut-elle faire de lui un serviteur, et le serviteur {red}non d'un maître{/red} mais {green}de son propre objet{/green} ?
+    **Pourquoi un deuxième texte était-il nécessaire ?** Parce que cette formule restait {red}sans contenu{/red} : privé de quels objets ? et pourquoi cette privation ferait-elle de lui un homme dépendant, et non seulement un homme démuni ? Celui-ci répond en désignant {coral}l'objet de tout travail, la nature{/coral}, et en montrant ce que sa perte fait de l'ouvrier : {violet}un serviteur de ce qu'il produit{/violet}. Le texte suivant remontera du produit à l'activité qui le produit.
 
-    Trois mouvements : la nature perdue deux fois (§1, §2), le serviteur de son objet (§3 et la parenthèse des six inversions), ce que l'économie politique dissimule (§4).
+    **Trois éléments de cadre.**
+    - **L'homme, être naturel.** Pour Marx, l'homme est une partie de la nature : il ne vit et n'agit qu'en rapport avec elle. Ce qui l'aliène n'est donc pas d'avoir la nature hors de lui, mais {amber}d'être séparé d'elle{/amber}.
+    - **Le maître et le serviteur.** Dans la *Phénoménologie de l'esprit*, Hegel montre un serviteur (*Knecht*) qui, en travaillant la chose pour son maître, finit par s'en rendre maître et par se libérer. Marx reprend le mot de *Knecht* pour dire l'ouvrier « esclave de son objet », et {coral}renverse le schéma{/coral} : ici, le travail asservit.
+    - **L'économie politique**, de Smith à Ricardo, dont Marx prend les lois au mot dans la parenthèse, et qu'il accuse, à la fin, de dissimuler l'aliénation.
+
+    ? **Moyens de subsistance** : l'allemand *Lebensmittel*, littéralement {violet}« moyens de vivre »{/violet}, désigne couramment les vivres. Marx joue sur le mot tout au long du texte : ce dont {amber}le travail{/amber} vit, la matière sur laquelle il s'exerce, et ce dont {amber}l'ouvrier{/amber} vit, sa nourriture.
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | la nature perdue deux fois | §1 et §2 | La nature fournit au travail sa matière et à l'ouvrier ses vivres ; plus il se l'approprie par son travail, plus il en est privé, sous ces deux rapports. |
+    | le serviteur de son objet | §3 et sa parenthèse | Privé de la nature, l'ouvrier doit recevoir de son objet du travail et de quoi vivre : il en devient le serviteur, enfermé dans un cercle ; les lois de l'économie le disent en six inversions. |
+    | ce que l'économie politique dissimule | §4 | Elle ne considère pas le rapport direct de l'ouvrier à la production, dont le rapport du riche n'est que la conséquence. |
+
+    ! Le texte va {green}des choses à l'homme, puis de l'homme au savoir{/green} : d'abord ce que l'ouvrier perd, puis ce qu'il devient, enfin pourquoi la science qui décrit sa misère ne voit pas son aliénation.
+  passage:
+    label: "Introduction"
+  points:
+  - id: m1844b-i1-x1
+    sentence: "Le texte donne un contenu à l'ouvrier « privé d'objets » : __l'objet de tout travail, la ___.__"
+    answer: "nature"
+    alt: []
+  - id: m1844b-i1-x2
+    sentence: "*Lebensmittel*, « moyens de vivre » : __ce dont le travail vit, et ce dont l'___ vit.__"
+    answer: "ouvrier"
+    alt: []
+  - id: m1844b-i1-x3
+    sentence: "Chez Hegel, le serviteur (*Knecht*) se libère par son travail ; __chez Marx, le travail ___.__"
+    answer: "asservit"
+    alt: []
+- id: m1844b-i2
+  title: "La question, la thèse, la problématique"
+  notes: |-
+    **Le texte se demande ce que perd exactement l'ouvrier quand son objectivation devient une perte de l'objet, et {coral}pourquoi l'économie politique, qui décrit pourtant sa misère, ne le voit pas{/coral}.**
+
+    **Une question en deux temps.** Elle porte d'abord sur {amber}le contenu de la perte{/amber}, et sur la forme de dépendance qu'elle engendre. Elle porte ensuite sur {amber}un savoir{/amber}. Les économistes ne nient pas la misère ouvrière : Smith reconnaissait que le salaire tend vers le minimum et que la division du travail abrutit l'ouvrier. Si l'aliénation n'est pas vue, ce n'est donc {red}pas faute de faits{/red}. Qu'est-ce que l'économie politique manque, dans des faits qu'elle a sous les yeux ?
+
+    **Sa thèse :** le travail ne peut rien créer sans la nature, qui lui fournit sa matière et fournit à l'ouvrier ses moyens de vivre. Or, dans le travail aliéné, {coral}l'acte de s'approprier la nature est à l'ouvrier, mais la nature appropriée ne l'est pas{/coral} : plus il travaille, plus il en est privé, sous ce double rapport. Il doit alors {amber}recevoir{/amber} de son objet de quoi travailler et de quoi vivre, et devient {violet}le serviteur (*Knecht*) de ce qu'il produit{/violet}, enfermé dans le cercle d'un homme qui ne vit que pour travailler et ne travaille que pour vivre. L'économie politique dissimule cette aliénation parce qu'elle {red}ne considère pas le rapport immédiat de l'ouvrier à la production{/red}, dont le rapport du riche n'est que la conséquence.
+
+    **Sa problématique :** comment l'appropriation de la nature par le travail, l'acte même par lequel l'homme se rend maître de son monde, peut-elle faire de l'ouvrier un serviteur, et {coral}le serviteur non d'un maître, mais de son propre objet{/coral} ?
+
+    **Pourquoi est-ce difficile ?** Pour deux raisons.
+    - Travailler, c'est s'approprier : transformer la matière pour la faire sienne. On s'attend donc à ce que {green}plus l'ouvrier travaille, plus la nature lui appartienne{/green} ; le texte affirme l'inverse, et en fait une loi.
+    - La servitude suppose d'ordinaire {amber}un maître{/amber}, quelqu'un qui commande. Or Marx parle d'un serviteur {red}« de son objet »{/red}, d'une chose, et d'une chose qu'il a lui-même produite.
+
+    | Difficulté | Où elle se trouve | Réponse du texte |
+    | l'appropriation prive au lieu d'enrichir | « plus l'ouvrier s'approprie… plus il se prive » | l'acte d'approprier est à l'ouvrier, la nature appropriée à un autre |
+    | le serviteur d'une chose, sans maître | « un esclave de son objet » | le texte ne considère encore que le rapport de l'ouvrier à son objet : le maître est différé |
+    | l'ouvrier « esclave de la nature », alors que le travail devait l'en affranchir | la sixième inversion | le travail le ramène à la nécessité la plus élémentaire, survivre |
+    | une science qui cache ce qu'elle décrit | « l'économie politique dissimule » | elle voit les faits depuis la place du possesseur, non depuis le rapport de l'ouvrier |
+
+    **L'hypothèse de lecture :** tout repose sur une distinction que le texte {amber}suppose plus qu'il ne la formule{/amber}, celle de {violet}l'acte de s'approprier{/violet} et de {violet}la propriété de ce qui est approprié{/violet}. Elle affleure dans « un objet appartenant à son travail », puis dans l'opposition de ce que le travail produit « pour les riches » et « pour l'ouvrier ».
+
+    ! Le maître n'est pas {red}absent{/red} du texte : il est {green}différé{/green}. Il s'annonce à la fin, avec « l'homme qui a de la fortune », dont Marx dit qu'il examinera le rapport « plus tard ».
   passage:
     label: "Introduction"
   points:
@@ -42,179 +97,359 @@ lessons:
     sentence: "Problématique : comment l'appropriation de la nature peut-elle faire de l'ouvrier __le serviteur, non d'un maître, mais ___ ?__"
     answer: "de son propre objet"
     alt: ["de son objet"]
+  - id: m1844b-i2-x1
+    sentence: "Les économistes ne nient pas la misère ouvrière : si l'aliénation n'est pas vue, __ce n'est pas faute de ___.__"
+    answer: "faits"
+    alt: []
+  - id: m1844b-i2-x2
+    sentence: "Distinction que le texte suppose : __l'acte de s'approprier et la ___ de ce qui est approprié.__"
+    answer: "propriété"
+    alt: []
+  - id: m1844b-i2-x3
+    sentence: "Le maître n'est pas absent du texte, __il est ___ :__ « nous examinerons cet autre aspect plus tard »."
+    answer: "différé"
+    alt: []
 - id: m1844-p5
-  title: "1.1 La nature, matière de tout travail"
+  title: "Examiner de plus près l'objectivation"
   notes: |-
-    **Pour examiner de près la perte de l'objet, Marx rappelle que {coral}l'ouvrier ne peut rien créer sans la nature{/coral}, le monde extérieur sensible.**
+    **Marx annonce qu'il va regarder {coral}de plus près{/coral} ce que le texte précédent a décrit : l'objectivation, et la perte de l'objet qui s'y loge.** Ce n'est pas un nouveau sujet, c'est un approfondissement.
 
-    **« Et, en elle, l'aliénation ».** L'aliénation est {amber}dans{/amber} l'objectivation, {red}non après elle{/red} : c'est une objectivation qui est en même temps une perte.
+    **Pourquoi « de plus près » ?** L'allemand *Betrachten wir nun näher* dit « examinons maintenant de plus près » : le *nun* marque {amber}une étape{/amber}, le comparatif un resserrement du regard. Le texte précédent avait établi le renversement à grands traits ; il avait laissé une formule sans contenu, l'ouvrier « privé d'objets ». Il faut maintenant dire {coral}quels objets{/coral}, et comment leur perte se produit.
 
-    **Quatre rôles de la nature.** Elle est la matière « dans laquelle » le travail se réalise, « au sein de laquelle » il s'exerce, « à partir de laquelle » (matière première) et « au moyen de laquelle » (instrument) il produit : {amber}rien de ce qui fait le travail n'échappe à la nature{/amber}. L'allemand dit seulement « ne peut rien créer » (*kann nichts schaffen*), sans le « plus » de la traduction : c'est une condition de tout travail, non une situation nouvelle.
+    **Pourquoi « l'objectivation, la production de l'ouvrier » ?** L'apposition {amber}identifie{/amber} l'objectivation et l'acte de produire : s'objectiver, pour l'ouvrier, c'est produire, et produire, c'est mettre son travail dans un objet. Le texte précédent l'avait posé : {teal}« la réalisation du travail est son objectivation »{/teal}.
 
-    ? **Monde extérieur sensible** : *sinnliche Außenwelt*, l'ensemble des choses matérielles hors de l'homme, qui s'offrent aux sens ; le mot est celui de Feuerbach contre l'idéalisme. Le texte suivant du passage dira que cette nature est le {violet}« corps non organique »{/violet} de l'homme.
+    **Pourquoi « et, en elle, l'aliénation » ?** C'est le mot le plus important de la phrase. L'aliénation est {coral}dans{/coral} l'objectivation, {red}non après elle{/red}. Marx ne dit pas que l'ouvrier produit d'abord, puis perd ce qu'il a produit, comme on perd un bien qu'on a possédé ; il dit que {green}produire, dans ces conditions, est déjà perdre{/green}. {yellow}L'ouvrier de la fabrique de meubles ne possède jamais, fût-ce un instant, la table qu'il fait : elle est à un autre dès le premier coup de rabot.{/yellow} L'aliénation est une objectivation qui est en même temps une perte.
 
-    **Pourquoi partir de la nature ?** Si tout produit est de la nature transformée, perdre ses produits, c'est perdre la nature qu'on a faite sienne ; et si le travail ne s'exerce que sur la nature, perdre l'accès à la nature, c'est {coral}perdre la possibilité de travailler{/coral}. Prémisse : l'homme est {violet}une partie de la nature{/violet} ; pour un tel être, ce qui aliène n'est pas d'avoir la nature hors de soi, mais {green}d'être privé de ce rapport{/green}.
+    **Pourquoi « la perte de l'objet, de son produit » ?** La seconde apposition semble {amber}restreindre{/amber} l'objet au produit : ce que l'ouvrier perd, ce serait ce qu'il a fait. La suite va l'{amber}élargir{/amber} : l'objet perdu sera la nature entière, dont tout produit est fait et sans laquelle aucun travail n'est possible. Le texte part de la formule acquise et va lui donner sa portée.
 
-    Marx le maintiendra en 1875 : {teal}« le travail n'est pas la source de toute richesse. La nature est tout autant la source des valeurs d'usage »{/teal} (*Critique du programme de Gotha*).
-
-    ! La banalité (pas de table sans bois) a une fonction critique : le travail dépend de conditions qui ne sont pas en lui, et {amber}on peut en être séparé{/amber}.
+    ! « Examinons de plus près » n'annonce pas {red}une preuve nouvelle{/red} du renversement : il annonce {green}son contenu{/green}, ce qu'est au juste l'objet perdu.
   passage:
     label: "§1"
     part: "1. La nature perdue deux fois"
-    text: "Examinons de plus près l'objectivation, la production de l'ouvrier et, en elle, l'aliénation, la perte de l'objet, de son produit. L'ouvrier ne peut plus rien créer sans la nature, sans le monde extérieur sensible. Elle est la matière dans laquelle son travail se réalise, au sein de laquelle il s'exerce, à partir de laquelle et au moyen de laquelle il produit."
+    text: "Examinons de plus près l'objectivation, la production de l'ouvrier et, en elle, l'aliénation, la perte de l'objet, de son produit."
   points:
   - id: m1844-p5-1
-    sentence: "« Examinons de plus près l'objectivation, la production de l'ouvrier et, en elle, l'aliénation, ___. L'ouvrier ne peut plus rien créer sans la nature, sans le monde extérieur sensible. Elle est la matière dans laquelle son travail se réalise, au sein de laquelle il s'exerce, à partir de laquelle et au moyen de laquelle il produit. »"
+    sentence: "« Examinons de plus près l'objectivation, la production de l'ouvrier et, en elle, l'aliénation, ___. »"
     answer: "la perte de l'objet, de son produit"
     alt: []
+  - id: m1844-p5-x1
+    sentence: "« Examinons de plus près » annonce __un ___, non un nouveau sujet.__"
+    answer: "approfondissement"
+    alt: []
+  - id: m1844-p5-x2
+    sentence: "« Et, en elle, l'aliénation » : l'aliénation est dans l'objectivation, __non ___ elle.__"
+    answer: "après"
+    alt: []
+  - id: m1844-p5-x3
+    sentence: "L'apposition « la perte de l'objet, de son produit » semble restreindre l'objet au produit ; __la suite l'élargit à la ___ entière.__"
+    answer: "nature"
+    alt: []
+- id: m1844-p5b
+  title: "La nature, matière de tout travail"
+  notes: |-
+    **Marx rappelle une condition de tout travail : {coral}on ne produit rien sans la nature{/coral}. Elle est la matière que le travail transforme, le lieu où il s'exerce, le point de départ et l'instrument de la production.**
+
+    **Pourquoi « créer » ?** Le mot (*schaffen*) est fort : il prête au travail une puissance de création. Mais la phrase en {amber}limite aussitôt la portée{/amber} : la création humaine suppose une matière qu'elle ne crée pas. L'homme ne crée pas {red}à partir de rien{/red}, il {green}transforme ce qui lui est donné{/green}.
+
+    **Pourquoi « ne peut plus » ?** L'allemand dit seulement *kann nichts schaffen*, « ne peut rien créer », sans « plus ». La phrase énonce {amber}une condition de tout travail{/amber}, non une situation nouvelle, comme la traduction pourrait le laisser croire.
+
+    **Pourquoi « le monde extérieur sensible » ?** *Die sinnliche Außenwelt.* {violet}Extérieur{/violet}, parce qu'il est hors de l'ouvrier ; {violet}sensible{/violet}, parce qu'il s'offre aux sens, par opposition à ce qui n'existe que dans la pensée. Le mot est celui de Feuerbach, qui oppose à l'idéalisme la réalité de ce qu'on touche et voit. Marx ne parle pas d'une Nature métaphysique, mais de la terre, du bois, des métaux, de l'eau.
+
+    **Pourquoi quatre relatifs ?** « Dans laquelle », « au sein de laquelle », « à partir de laquelle », « au moyen de laquelle » : la phrase énumère {coral}quatre rôles de la nature{/coral}, et aucun aspect du travail ne lui échappe.
+
+    | Relatif | Rôle de la nature | Pour le menuisier |
+    | dans laquelle | ce en quoi le travail prend forme | la table achevée, faite de bois |
+    | au sein de laquelle | le milieu où il agit | l'atelier, la lumière, l'air |
+    | à partir de laquelle | la matière première d'où il part | la planche, venue de l'arbre |
+    | au moyen de laquelle | l'instrument dont il se sert | le rabot, fait d'acier et de bois |
+
+    **Pourquoi Marx commence-t-il par la nature, pour examiner la perte de l'objet ?** Le raisonnement implicite tient en deux étapes.
+    - Si tout produit est fait de nature transformée, {amber}perdre ses produits, c'est perdre la part de nature{/amber} que son travail a faite sienne.
+    - Si le travail ne peut s'exercer que sur la nature, {amber}perdre l'accès à la nature, c'est perdre la possibilité même de travailler{/amber}.
+
+    La perte de l'objet devient ainsi {coral}une perte de la nature{/coral}, et l'ouvrier « privé d'objets » reçoit son contenu.
+
+    **Ce que ce raisonnement suppose.** Une thèse que le paragraphe ne formule pas, mais qu'il rend nécessaire : l'homme {red}n'est pas un esprit qui ferait face à la nature{/red}, il {green}en est une partie{/green}, qui ne vit et n'agit qu'en rapport avec elle. Pour un tel être, ce qui aliène n'est pas d'avoir la nature hors de soi, mais {coral}d'être privé de ce rapport{/coral}. Le texte sur l'être générique dira que la nature est le {violet}« corps non organique »{/violet} de l'homme. Et Marx maintiendra la thèse toute sa vie : en 1875 encore, il objectera au parti ouvrier allemand que {teal}« le travail n'est pas la source de toute richesse »{/teal}, la nature l'étant {teal}« tout autant »{/teal} (*Critique du programme de Gotha*).
+
+    ! On serait tenté d'y voir {red}une banalité{/red}, qu'on ne fait pas de table sans bois. Mais la banalité a {green}une fonction critique{/green} : elle rappelle que le travail dépend de conditions qui ne sont pas en lui, et donc {amber}qu'on peut en être séparé{/amber}. {yellow}Un ébéniste qui aurait toute l'habileté du monde ne produirait rien s'il n'avait accès à aucun bois.{/yellow}
+  passage:
+    label: "§1"
+    part: "1. La nature perdue deux fois"
+    text: "L'ouvrier ne peut plus rien créer sans la nature, sans le monde extérieur sensible. Elle est la matière dans laquelle son travail se réalise, au sein de laquelle il s'exerce, à partir de laquelle et au moyen de laquelle il produit."
+  points:
   - id: m1844-p5-2
-    sentence: "« Examinons de plus près l'objectivation, la production de l'ouvrier et, en elle, l'aliénation, la perte de l'objet, de son produit. L'ouvrier ne peut plus rien créer ___. Elle est la matière dans laquelle son travail se réalise, au sein de laquelle il s'exerce, à partir de laquelle et au moyen de laquelle il produit. »"
+    sentence: "« L'ouvrier ne peut plus rien créer ___. Elle est la matière dans laquelle son travail se réalise, au sein de laquelle il s'exerce, à partir de laquelle et au moyen de laquelle il produit. »"
     answer: "sans la nature, sans le monde extérieur sensible"
     alt: []
   - id: m1844-p5-3
-    sentence: "« Examinons de plus près l'objectivation, la production de l'ouvrier et, en elle, l'aliénation, la perte de l'objet, de son produit. L'ouvrier ne peut plus rien créer sans la nature, sans le monde extérieur sensible. Elle est ___, au sein de laquelle il s'exerce, à partir de laquelle et au moyen de laquelle il produit. »"
+    sentence: "« L'ouvrier ne peut plus rien créer sans la nature, sans le monde extérieur sensible. Elle est ___, au sein de laquelle il s'exerce, à partir de laquelle et au moyen de laquelle il produit. »"
     answer: "la matière dans laquelle son travail se réalise"
     alt: []
   - id: m1844-p5-4
-    sentence: "« Examinons de plus près l'objectivation, la production de l'ouvrier et, en elle, l'aliénation, la perte de l'objet, de son produit. L'ouvrier ne peut plus rien créer sans la nature, sans le monde extérieur sensible. Elle est la matière dans laquelle son travail se réalise, au sein de laquelle il s'exerce, ___. »"
+    sentence: "« L'ouvrier ne peut plus rien créer sans la nature, sans le monde extérieur sensible. Elle est la matière dans laquelle son travail se réalise, au sein de laquelle il s'exerce, ___. »"
     answer: "à partir de laquelle et au moyen de laquelle il produit"
     alt: []
-  - id: m1844-p5-e1
-    sentence: "« Et, en elle, l'aliénation » : l'aliénation est __dans l'objectivation, non ___ elle__."
-    answer: "après"
+  - id: m1844-p5b-x1
+    sentence: "« Créer » (*schaffen*) : la création humaine suppose __une ___ qu'elle ne crée pas.__"
+    answer: "matière"
     alt: []
-  - id: m1844-p5-e2
-    sentence: "La nature est la matière dans laquelle, au sein de laquelle, à partir de laquelle et __au moyen de laquelle__ le travail produit : ___ n'échappe à la nature."
-    answer: "rien de ce qui fait le travail"
+  - id: m1844-p5b-x2
+    sentence: "**Le monde extérieur sensible** : extérieur, parce qu'il est hors de l'ouvrier ; __sensible, parce qu'il s'offre aux ___.__"
+    answer: "sens"
     alt: []
-  - id: m1844-p5-e3
-    sentence: "Pour un être naturel, ce qui aliène n'est pas d'avoir la nature hors de soi, mais __d'être ___ de ce rapport__."
+  - id: m1844-p5b-x3
+    sentence: "Les quatre relatifs énumèrent __quatre ___ de la nature__ dans le travail : forme, milieu, matière première, instrument."
+    answer: "rôles"
+    alt: []
+  - id: m1844-p5b-x4
+    sentence: "Si le travail ne s'exerce que sur la nature, __perdre l'accès à la nature, c'est perdre la possibilité de ___.__"
+    answer: "travailler"
+    alt: []
+  - id: m1844-p5b-x5
+    sentence: "Pour un être naturel, ce qui aliène n'est pas d'avoir la nature hors de soi, mais __d'être ___ de ce rapport.__"
     answer: "privé"
-    alt: []
-  - id: m1844-p5-e4
-    sentence: "*Critique du programme de Gotha* : « le travail n'est pas la source de toute richesse. La ___ est tout autant la source des valeurs d'usage »."
-    answer: "nature"
+    alt: ["séparé"]
+  - id: m1844-p5b-x6
+    sentence: "*Critique du programme de Gotha* (1875) : __« le travail n'est pas la source de toute ___ »__."
+    answer: "richesse"
     alt: []
 - id: m1844-p6
-  title: "1.2 et 1.3 Les deux sens des moyens de vivre, la double privation"
+  title: "Les deux sens des moyens de vivre"
   notes: |-
-    **La nature nourrit le travail et l'ouvrier ; or plus l'ouvrier se l'approprie par son travail, {coral}plus il en est privé, et doublement{/coral}.**
+    **La nature nourrit deux choses : {coral}le travail{/coral}, qui a besoin de matières sur lesquelles s'exercer, et {coral}l'ouvrier{/coral}, qui a besoin de manger, de se vêtir, de se loger.** La phrase dédouble le rapport de l'ouvrier à la nature, pour que la privation qui suit puisse être double.
 
-    **1.2 Deux sens des moyens de vivre.** *Lebensmittel*, « moyens de vivre », les vivres. Au sens large, la nature nourrit {amber}le travail{/amber}, qui « ne peut pas vivre sans objets sur lesquels il s'exerce » ; au sens restreint, elle nourrit {amber}l'ouvrier{/amber}, sa subsistance physique. Ce qui justifie le parallèle : l'homme vit comme organisme, qui se nourrit, et comme activité, qui s'exerce sur des objets ; pour un être naturel, {coral}travailler, c'est vivre autant que manger{/coral}.
+    **Pourquoi « mais » ?** L'allemand *Wie aber* marque moins une opposition {amber}qu'une progression{/amber} : après la nature comme matière, voici la nature comme subsistance.
 
-    **1.3 La double privation.** L'allemand ajoute un *also*, « donc », que la traduction omet. « Il se prive » : l'ouvrier est l'agent de sa propre privation ; c'est son travail qui le dépouille. « De plus en plus » : une dépossession qui avance avec le travail.
+    **Pourquoi « le travail ne peut pas vivre » ?** Marx {violet}prête une vie au travail{/violet}. Le travail est une activité vivante, qui s'éteint si elle n'a rien à quoi s'appliquer, {yellow}comme un corps s'éteint s'il n'a rien à manger{/yellow}. Les « objets sur lesquels il s'exerce » sont ses vivres : la matière et les outils.
 
-    **Le « donc » ne tient qu'à une prémisse implicite.** De ce que la nature nourrit l'ouvrier, on conclurait plutôt qu'il s'enrichit en se l'appropriant. Il faut distinguer {violet}l'acte de s'approprier{/violet} (*Aneignung*), qui est à l'ouvrier, et {violet}la propriété{/violet} de ce qui est approprié (*Eigentum*), qui est à un autre : chaque morceau de nature qu'il transforme passe du côté du capital. L'appropriation s'effectue {amber}sous le régime de la propriété privée{/amber}.
+    **Pourquoi « au sens restreint » ?** *In dem engern Sinn* : le sens courant, étroit, de *Lebensmittel*, {amber}les vivres{/amber}. Et « l'ouvrier lui-même » distingue l'ouvrier de son travail, {violet}comme deux êtres qui ont chacun leur vie et leurs vivres{/violet}. {yellow}Le tisserand a besoin de laine pour tisser et de pain pour vivre, et la laine comme le blé viennent de la terre.{/yellow}
 
-    Résultat : l'ouvrier n'a plus d'accès direct à la matière, {teal}« il faut qu'on la lui présente »{/teal}, ni aux vivres, qu'il n'atteint qu'en accédant d'abord au travail.
+    **Qu'est-ce qui justifie le parallèle ?** Le texte ne le dit pas, et il porte pourtant toute la suite. Le travail et l'ouvrier ont chacun besoin de la nature parce qu'ils sont {coral}deux faces d'un même être vivant{/coral} : l'homme vit comme {amber}organisme{/amber}, qui se nourrit, et comme {amber}activité{/amber}, qui s'exerce sur des objets. Pour un être naturel, ces deux vies sont également des rapports à la nature : {green}travailler, c'est vivre autant que manger{/green}.
 
-    ! Il ne s'agit pas d'{red}un épuisement de la nature{/red} par le travail, mais d'{green}une dépossession{/green} : la nature transformée existe, elle n'est simplement plus à lui.
+    Le parallèle n'est donc {red}pas une métaphore ornementale{/red} : il dit que l'activité de l'homme dépend de la nature comme son corps en dépend, et que l'en priver, {coral}c'est l'affamer{/coral}. Or le travail aliéné est précisément contraint de vivre à cette condition d'impossibilité : un travail qui n'a pas ses objets à lui.
+
+    **Pourquoi le travail d'abord, l'ouvrier ensuite ?** L'ordre suggère que {amber}la vie active est aussi essentielle que la vie physique{/amber}. Ce n'est pas le pain qui vient en premier, c'est la matière à travailler : un homme qui mangerait à sa faim sans pouvoir rien faire serait, lui aussi, privé de vie.
+
+    ! On serait tenté de prendre le premier sens pour {red}une simple image{/red}, seul le second, la nourriture, comptant vraiment. Le texte les met {green}sur le même plan{/green}, et cette distinction commande les deux « premièrement » et « deuxièmement » qui vont suivre.
   passage:
     label: "§2"
     part: "1. La nature perdue deux fois"
-    text: "Mais, de même que la nature offre au travail les moyens de subsistance, dans ce sens que le travail ne peut pas vivre sans objets sur lesquels il s'exerce, de même elle fournit des moyens de subsistance au sens restreint, c'est-à-dire les moyens de subsistance physique de l'ouvrier lui-même. Plus l'ouvrier s'approprie par son travail le monde extérieur, la nature sensible, plus il se prive de moyens de subsistance et cela doublement : premièrement, le monde extérieur sensible cesse de plus en plus d'être un objet appartenant à son travail, un moyen de subsistance de son travail ; deuxièmement, il cesse de plus en plus d'être un moyen de subsistance au sens immédiat, c'est-à-dire il cesse d'être un moyen pour la subsistance physique de l'ouvrier."
+    text: "Mais, de même que la nature offre au travail les moyens de subsistance, dans ce sens que le travail ne peut pas vivre sans objets sur lesquels il s'exerce, de même elle fournit des moyens de subsistance au sens restreint, c'est-à-dire les moyens de subsistance physique de l'ouvrier lui-même."
   points:
   - id: m1844-p6-1
-    fragment: "1/3"
     sentence: "« Mais, de même que la nature offre au travail les moyens de subsistance, dans ce sens que ___, de même elle fournit des moyens de subsistance au sens restreint, c'est-à-dire les moyens de subsistance physique de l'ouvrier lui-même. »"
     answer: "le travail ne peut pas vivre sans objets sur lesquels il s'exerce"
     alt: []
   - id: m1844-p6-2
-    fragment: "1/3"
     sentence: "« Mais, de même que la nature offre au travail les moyens de subsistance, dans ce sens que le travail ne peut pas vivre sans objets sur lesquels il s'exerce, de même elle fournit ___, c'est-à-dire les moyens de subsistance physique de l'ouvrier lui-même. »"
     answer: "des moyens de subsistance au sens restreint"
     alt: []
   - id: m1844-p6-3
-    fragment: "1/3"
     sentence: "« Mais, de même que la nature offre au travail les moyens de subsistance, dans ce sens que le travail ne peut pas vivre sans objets sur lesquels il s'exerce, de même elle fournit des moyens de subsistance au sens restreint, c'est-à-dire ___. »"
     answer: "les moyens de subsistance physique de l'ouvrier lui-même"
     alt: []
+  - id: m1844-p6-x1
+    sentence: "« Mais » (*Wie aber*) marque moins une opposition __qu'une ___ :__ après la nature comme matière, la nature comme subsistance."
+    answer: "progression"
+    alt: []
+  - id: m1844-p6-x2
+    sentence: "« Le travail ne peut pas vivre » : Marx __prête une ___ au travail,__ activité qui s'éteint sans matière."
+    answer: "vie"
+    alt: []
+  - id: m1844-p6-x3
+    sentence: "Le parallèle tient à ce que l'homme vit __comme organisme et comme ___ :__ deux rapports à la nature."
+    answer: "activité"
+    alt: []
+  - id: m1844-p6-x4
+    sentence: "Pour un être naturel, __travailler, c'est ___ autant que manger.__"
+    answer: "vivre"
+    alt: []
+- id: m1844-p6b
+  title: "Plus il s'approprie la nature, plus il en est privé"
+  notes: |-
+    **La proportion inverse du texte précédent revient, appliquée à la nature : {coral}plus l'ouvrier fait sienne la nature en la travaillant, plus elle lui échappe{/coral}, sous les deux rapports qu'on vient de distinguer.** Elle cesse d'être la matière de son travail à lui, et elle cesse d'être ce dont il vit.
+
+    **Pourquoi « plus… plus » ?** L'allemand ajoute *also*, {violet}« donc »{/violet}, que la traduction omet : la phrase se donne comme {amber}la conséquence{/amber} des deux précédentes.
+
+    **Pourquoi « s'approprie » ?** *Sich aneignen*, faire sien, rendre propre. Le mot reprend l'« appropriation » du texte précédent, devenue aliénation. Et « par son travail » insiste : {amber}c'est bien l'ouvrier qui s'approprie{/amber}, par son activité propre.
+
+    **Pourquoi « il se prive » ?** L'allemand dit qu'il se soustrait à lui-même des moyens de vivre : le pronominal fait de l'ouvrier {coral}l'agent de sa propre privation{/coral}. Ce n'est pas un voleur qui le dépouille, {red}c'est son travail{/red}.
+
+    **Pourquoi « doublement » ?** Selon les deux sens distingués à la phrase précédente.
+    - **Premièrement**, la nature cesse d'être {violet}« un objet appartenant à son travail »{/violet} : l'appartenance est attribuée au travail, non à l'ouvrier. La matière devrait être celle de son activité ; elle devient celle d'un autre.
+    - **Deuxièmement**, elle cesse d'être un moyen de subsistance {violet}« au sens immédiat »{/violet}, le sens premier, élémentaire : ce dont son corps vit.
+
+    « Cesse de plus en plus » : le processus est {amber}progressif{/amber}, une dépossession qui avance à mesure que le travail avance.
+
+    **Le « donc » tient-il ?** Non, pas à lui seul. De ce que la nature nourrit le travail et l'ouvrier, on conclurait plutôt {red}l'inverse{/red} : plus l'ouvrier se l'approprie, plus il devrait en disposer. Pour que la conséquence tienne, il faut distinguer {coral}deux sens de l'appropriation{/coral}.
+
+    | L'acte de s'approprier | La propriété de ce qui est approprié |
+    | le travail, transformer la nature (*Aneignung*) | le résultat, la nature transformée (*Eigentum*) |
+    | il est à l'ouvrier | il est à un autre |
+
+    Chaque morceau de nature que l'ouvrier transforme devient un produit qui ne lui appartient pas, et qui s'ajoute à ce qui lui fait face. {coral}Plus il travaille, plus la nature transformée passe du côté du capital{/coral}, et moins il en reste à sa portée. {yellow}Le paysan devenu ouvrier agricole laboure chaque année plus de terre, mais aucune de ces terres n'est à lui, et le blé qu'il fait pousser, il doit l'acheter.{/yellow} Le texte ne nomme pas cette distinction ; l'expression « un objet appartenant à son travail » la fait sentir, puisque c'est cette appartenance qui se perd.
+
+    **Le travail présent fait-il tout ?** Non. Cette dépossession suppose que {amber}la terre, les matières et les instruments soient déjà propriété d'autrui{/amber}, ce que les colonnes sur la rente et le profit ont décrit. Le « de plus en plus » dit que le travail de l'ouvrier {coral}aggrave une séparation qu'il trouve déjà en place{/coral}. Résultat : l'ouvrier n'a plus d'accès direct à la matière, il faut qu'on la lui présente ; et il n'accède aux vivres qu'en accédant d'abord au travail.
+
+    ! Marx ne décrit pas {red}un épuisement de la nature{/red}, comme si l'ouvrier la détruisait en la transformant : il décrit {green}une dépossession{/green}. La nature transformée existe bel et bien ; elle n'est simplement plus à lui.
+  passage:
+    label: "§2"
+    part: "1. La nature perdue deux fois"
+    text: "Plus l'ouvrier s'approprie par son travail le monde extérieur, la nature sensible, plus il se prive de moyens de subsistance et cela doublement : premièrement, le monde extérieur sensible cesse de plus en plus d'être un objet appartenant à son travail, un moyen de subsistance de son travail ; deuxièmement, il cesse de plus en plus d'être un moyen de subsistance au sens immédiat, c'est-à-dire il cesse d'être un moyen pour la subsistance physique de l'ouvrier."
+  points:
   - id: m1844-p6-4
-    fragment: "2/3"
-    sentence: "« Plus l'ouvrier s'approprie par son travail le monde extérieur, la nature sensible, ___ : premièrement, le monde extérieur sensible cesse de plus en plus d'être un objet appartenant à son travail, un moyen de subsistance de son travail ; »"
+    sentence: "« Plus l'ouvrier s'approprie par son travail le monde extérieur, la nature sensible, ___ : premièrement, le monde extérieur sensible cesse de plus en plus d'être un objet appartenant à son travail, un moyen de subsistance de son travail ; deuxièmement, il cesse de plus en plus d'être un moyen de subsistance au sens immédiat, c'est-à-dire il cesse d'être un moyen pour la subsistance physique de l'ouvrier. »"
     answer: "plus il se prive de moyens de subsistance et cela doublement"
     alt: []
   - id: m1844-p6-5
-    fragment: "2/3"
-    sentence: "« Plus l'ouvrier s'approprie par son travail le monde extérieur, la nature sensible, plus il se prive de moyens de subsistance et cela doublement : premièrement, le monde extérieur sensible cesse de plus en plus d'être ___ ; »"
+    sentence: "« Plus l'ouvrier s'approprie par son travail le monde extérieur, la nature sensible, plus il se prive de moyens de subsistance et cela doublement : premièrement, le monde extérieur sensible cesse de plus en plus d'être ___ ; deuxièmement, il cesse de plus en plus d'être un moyen de subsistance au sens immédiat, c'est-à-dire il cesse d'être un moyen pour la subsistance physique de l'ouvrier. »"
     answer: "un objet appartenant à son travail, un moyen de subsistance de son travail"
     alt: []
   - id: m1844-p6-6
-    fragment: "3/3"
-    sentence: "« deuxièmement, il cesse de plus en plus d'être ___, c'est-à-dire il cesse d'être un moyen pour la subsistance physique de l'ouvrier. »"
+    sentence: "« Plus l'ouvrier s'approprie par son travail le monde extérieur, la nature sensible, plus il se prive de moyens de subsistance et cela doublement : premièrement, le monde extérieur sensible cesse de plus en plus d'être un objet appartenant à son travail, un moyen de subsistance de son travail ; deuxièmement, il cesse de plus en plus d'être ___, c'est-à-dire il cesse d'être un moyen pour la subsistance physique de l'ouvrier. »"
     answer: "un moyen de subsistance au sens immédiat"
     alt: []
   - id: m1844-p6-7
-    fragment: "3/3"
-    sentence: "« deuxièmement, il cesse de plus en plus d'être un moyen de subsistance au sens immédiat, c'est-à-dire il cesse d'être ___. »"
+    sentence: "« Plus l'ouvrier s'approprie par son travail le monde extérieur, la nature sensible, plus il se prive de moyens de subsistance et cela doublement : premièrement, le monde extérieur sensible cesse de plus en plus d'être un objet appartenant à son travail, un moyen de subsistance de son travail ; deuxièmement, il cesse de plus en plus d'être un moyen de subsistance au sens immédiat, c'est-à-dire il cesse d'être ___. »"
     answer: "un moyen pour la subsistance physique de l'ouvrier"
     alt: []
-  - id: m1844-p6-e1
-    sentence: "Ce qui justifie le parallèle des deux moyens de vivre : pour un être naturel, __travailler, c'est ___ autant que manger__."
-    answer: "vivre"
+  - id: m1844-p6b-x1
+    sentence: "« Il se prive » : le pronominal fait de l'ouvrier __l'___ de sa propre privation.__"
+    answer: "agent"
     alt: []
-  - id: m1844-p6-e2
-    sentence: "« Il se prive » : l'ouvrier est __l'agent de sa propre ___,__ c'est son travail qui le dépouille."
-    answer: "privation"
+  - id: m1844-p6b-x2
+    sentence: "« Un objet appartenant à son travail » : __l'appartenance est attribuée au ___,__ non à l'ouvrier."
+    answer: "travail"
     alt: []
-  - id: m1844-p6-e3
-    sentence: "Prémisse du « donc » : distinguer l'acte de s'approprier (*Aneignung*), qui est à l'ouvrier, et __la ___ de ce qui est approprié__ (*Eigentum*)."
+  - id: m1844-p6b-x3
+    sentence: "Le « donc » ne tient qu'en distinguant l'acte de s'approprier, qui est à l'ouvrier, et __la ___ de ce qui est approprié,__ qui est à un autre."
     answer: "propriété"
     alt: []
-  - id: m1844-p6-e4
-    sentence: "La double privation n'est pas un épuisement de la nature, mais __une ___ :__ la nature transformée n'est plus à lui."
+  - id: m1844-p6b-x4
+    sentence: "Plus l'ouvrier travaille, plus la nature transformée __passe du côté du ___.__"
+    answer: "capital"
+    alt: []
+  - id: m1844-p6b-x5
+    sentence: "« De plus en plus » : le travail de l'ouvrier __aggrave une séparation qu'il trouve déjà en ___.__"
+    answer: "place"
+    alt: []
+  - id: m1844-p6b-x6
+    sentence: "Marx ne décrit pas un épuisement de la nature, mais __une ___ :__ la nature transformée n'est plus à l'ouvrier."
     answer: "dépossession"
     alt: []
 - id: m1844-p7
-  title: "2.1 et 2.2 Le serviteur de son objet, le comble de la servitude"
+  title: "Recevoir du travail, recevoir de quoi vivre"
   notes: |-
-    **De la double privation, Marx déduit une double dépendance : l'ouvrier devient {coral}le serviteur de son objet{/coral}, et le comble de cette servitude est {coral}un cercle{/coral}.**
+    **Puisque l'ouvrier est privé de la nature sous ses deux faces, il ne peut plus y accéder par lui-même : {coral}il doit la recevoir{/coral}. Il en devient le serviteur.** La double privation se convertit en double dépendance, et la dépendance en servitude.
 
-    **2.1 Recevoir du travail, recevoir de quoi vivre.** « Esclave » traduit *Knecht*, {amber}le serviteur de Hegel{/amber}, non *Sklave*. Le verbe dit le renversement : celui qui produit {violet}« reçoit »{/violet}, un objet de travail, « c'est-à-dire du travail », et des vivres ; il lui doit d'exister comme ouvrier et comme sujet physique.
+    **Pourquoi « donc » ?** *Also* : la servitude est {amber}déduite{/amber} de la double privation. « De ce double point de vue » tient jusqu'au bout les deux sens des moyens de vivre.
 
-    **Pourquoi une servitude, et non une simple dépendance ?** On dépend du pain sans en être le serviteur. Une dépendance devient servitude quand {amber}l'accès à ce dont on dépend passe par un autre{/amber} : l'ouvrier ne peut plus atteindre la nature, et c'est de son objet devenu capital qu'il reçoit le droit de travailler. Chez Hegel, le serviteur se libère par le travail, parce qu'il forme la chose ; ici, {red}la chose formée ne lui reste pas{/red}, et le travail asservit.
+    **Pourquoi « esclave » ?** L'allemand dit *Knecht*, {violet}serviteur, valet{/violet}, non *Sklave*. C'est le mot de Hegel, et c'est dans la langue de la dialectique du maître et du serviteur qu'il faut l'entendre. Ce n'est pas {red}une hyperbole morale{/red} : c'est {green}un terme technique{/green}, celui d'une dépendance personnelle transposée à un rapport aux choses.
 
-    **2.2 Le comble : un cercle.** *Spitze*, la pointe. Seule sa qualité d'ouvrier le conserve comme sujet physique (il ne vit que de son salaire), et il n'est plus ouvrier qu'en tant que sujet physique : son travail n'emploie plus que {amber}sa force{/amber} et ne sert plus qu'{amber}à entretenir son corps{/amber}, les deux sens à retenir. L'allemand dit deux fois *nur mehr*, « ne… plus que » : il n'y a plus que cela.
+    **Pourquoi « de son objet » ?** Le maître {coral}n'est pas un homme, c'est une chose{/coral}, et une chose qui est « son » objet, celui qu'il a produit ou devrait avoir.
 
-    Le cercle {coral}n'a pas d'issue intérieure{/coral} : il travaille pour vivre et ne vit que pour travailler. C'est une {green}réduction{/green} de l'homme à deux fonctions qui n'existent plus que l'une pour l'autre, {red}plus qu'une pauvreté{/red}.
+    **Pourquoi « il reçoit » ?** *Erhält* : celui qui produit est réduit à recevoir. {coral}Le renversement est dans le verbe{/coral}. Ce qu'il devrait se donner par son activité, il doit l'attendre d'un autre.
 
-    ! « Esclave » n'est pas une hyperbole morale : c'est {green}un rapport de dépendance personnelle transposé à un rapport aux choses{/green}.
+    **Pourquoi « un objet de travail, c'est-à-dire du travail » ?** L'équivalence est capitale : recevoir une matière à travailler, {amber}c'est recevoir le droit de travailler{/amber}. Le travail lui-même devient quelque chose qu'on reçoit, comme le disait le texte précédent : un objet {teal}« dont il ne peut s'emparer qu'en faisant le plus grand effort »{/teal}.
+
+    **Pourquoi « il lui doit » ?** La dépendance prend {violet}la forme d'une dette{/violet}, comme celle du serviteur envers celui qui le nourrit. Et ce qu'il doit n'est pas tel bien, mais {coral}« la possibilité d'exister »{/coral}, sous deux formes qui répondent aux deux sens des moyens de vivre : en tant qu'ouvrier, et en tant que sujet physique, c'est-à-dire comme corps vivant. {yellow}L'ouvrier d'une cité minière, logé par la compagnie, nourri par le magasin de la compagnie, employé par elle, ne tient son métier et sa vie que de la mine.{/yellow}
+
+    **Pourquoi la dépendance envers un objet serait-elle une servitude ?** On dépend du pain sans en être le serviteur. Le raisonnement implicite passe par deux étapes.
+    - L'ouvrier ne dépend pas de la nature comme tout vivant en dépend : il dépend d'{amber}une nature qu'il ne peut plus atteindre lui-même{/amber} et qu'on doit lui donner. {coral}Une dépendance naturelle devient servitude quand l'accès à ce dont on dépend passe par la volonté d'un autre.{/coral}
+    - Ce qui lui donne ou lui refuse l'accès, c'est {amber}son objet devenu capital{/amber} : la matière, les outils et les vivres sont concentrés de ce côté, et c'est de ce côté qu'on décide s'il travaille et ce qu'il reçoit.
+
+    **L'écart avec Hegel.** Dans la *Phénoménologie de l'esprit*, le serviteur, parce qu'il travaille la chose et lui donne forme, découvre en elle sa propre puissance, et {green}se libère{/green} ; le maître, qui ne fait que jouir, reste dépendant. Chez Marx, le travail {red}ne libère pas{/red}, puisque la chose formée ne reste pas à l'ouvrier : {coral}la voie hégélienne de l'émancipation par le travail est barrée par la séparation{/coral}.
+
+    ! Le texte ne dit pas encore {red}qui se tient derrière la chose{/red} : il garde le régime impersonnel d'un ouvrier face à un objet. Le serviteur d'une chose est déjà, sans le savoir, {green}le serviteur de celui qui la possède{/green}.
   passage:
     label: "§3 (1)"
     part: "2. Le serviteur de son objet"
-    text: "De ce double point de vue, l'ouvrier devient donc un esclave de son objet : premièrement, il reçoit un objet de travail, c'est-à-dire du travail, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique. Le comble de cette servitude est que seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet physique, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier."
+    text: "De ce double point de vue, l'ouvrier devient donc un esclave de son objet : premièrement, il reçoit un objet de travail, c'est-à-dire du travail, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique."
   points:
   - id: m1844-p7-1
-    sentence: "« De ce double point de vue, l'ouvrier devient donc ___ : premièrement, il reçoit un objet de travail, c'est-à-dire du travail, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique. Le comble de cette servitude est que seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet physique, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier. »"
+    sentence: "« De ce double point de vue, l'ouvrier devient donc ___ : premièrement, il reçoit un objet de travail, c'est-à-dire du travail, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique. »"
     answer: "un esclave de son objet"
     alt: []
   - id: m1844-p7-2
-    sentence: "« De ce double point de vue, l'ouvrier devient donc un esclave de son objet : premièrement, ___, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique. Le comble de cette servitude est que seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet physique, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier. »"
+    sentence: "« De ce double point de vue, l'ouvrier devient donc un esclave de son objet : premièrement, ___, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique. »"
     answer: "il reçoit un objet de travail, c'est-à-dire du travail"
     alt: []
   - id: m1844-p7-3
-    sentence: "« De ce double point de vue, l'ouvrier devient donc un esclave de son objet : premièrement, il reçoit un objet de travail, c'est-à-dire du travail, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc ___. Le comble de cette servitude est que seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet physique, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier. »"
+    sentence: "« De ce double point de vue, l'ouvrier devient donc un esclave de son objet : premièrement, il reçoit un objet de travail, c'est-à-dire du travail, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc ___. »"
     answer: "la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique"
     alt: []
+  - id: m1844-p7-x1
+    sentence: "« Esclave » traduit *Knecht*, __le ___ de la dialectique hégélienne__ du maître et du serviteur."
+    answer: "serviteur"
+    alt: ["valet"]
+  - id: m1844-p7-x2
+    sentence: "« Il reçoit » (*erhält*) : celui qui produit est réduit à recevoir ; __le renversement est dans le ___.__"
+    answer: "verbe"
+    alt: []
+  - id: m1844-p7-x3
+    sentence: "« Un objet de travail, c'est-à-dire du travail » : __recevoir une matière à travailler, c'est recevoir le ___ de travailler.__"
+    answer: "droit"
+    alt: []
+  - id: m1844-p7-x4
+    sentence: "Une dépendance naturelle devient servitude __quand l'accès à ce dont on dépend passe par la volonté d'___.__"
+    answer: "un autre"
+    alt: ["autrui"]
+  - id: m1844-p7-x5
+    sentence: "Chez Hegel, le serviteur se libère par le travail ; chez Marx, __cette voie est barrée par la ___ de l'ouvrier d'avec son produit.__"
+    answer: "séparation"
+    alt: []
+- id: m1844-p7c
+  title: "Le comble de la servitude : un cercle"
+  notes: |-
+    **La phrase referme les deux dépendances l'une sur l'autre : l'ouvrier ne peut rester en vie qu'en travaillant, et il n'est ouvrier que comme corps. {coral}Il travaille pour vivre et ne vit que pour travailler.{/coral}** La servitude atteint sa forme achevée : non plus une dépendance, mais une existence réduite à deux fonctions qui se commandent l'une l'autre.
+
+    **Pourquoi « le comble » ?** L'allemand dit *Spitze*, la pointe, le sommet : {amber}le degré extrême{/amber}, au-delà duquel la servitude ne peut aller. « De cette servitude » : *Knechtschaft*, la condition du *Knecht*.
+
+    **Pourquoi « seule » et « ne… plus que » ?** L'allemand dit deux fois *nur mehr*, « ne… plus que », qui marque à la fois {amber}une restriction{/amber} et {amber}une perte{/amber} : il n'y a plus que cela, alors qu'il y avait autre chose. « Se conserver encore » : survivre, et « encore » dit {red}une survie précaire{/red}.
+
+    **Pourquoi « sujet physique » ?** L'homme pris comme corps vivant, organisme à nourrir. Le mot {violet}« sujet »{/violet} est presque ironique : ce sujet n'a plus que la vie du corps.
+
+    **Pourquoi un chiasme ?** Ouvrier, sujet physique ; sujet physique, ouvrier. {coral}La construction en miroir dit l'enfermement qu'elle décrit{/coral} : on sort de chaque terme pour retomber dans l'autre. {yellow}Le manutentionnaire qui porte des sacs dix heures par jour pour gagner de quoi manger, et qui mange juste assez pour porter des sacs le lendemain, n'a pas d'autre existence que ce cercle.{/yellow}
+
+    **La première moitié se comprend d'elle-même :** le salaire est {amber}le seul accès aux vivres{/amber}, donc seule sa qualité d'ouvrier conserve l'ouvrier en vie.
+
+    **Mais pourquoi ne serait-il ouvrier « qu'en tant que sujet physique » ?** C'est la moitié difficile, et le texte ne la justifie pas. On peut l'entendre de deux manières, qui se complètent.
+    - **Ce que le travail emploie.** Dans la fabrique et sous la division du travail, l'ouvrier n'est plus requis que comme {amber}dépense de force{/amber} : ses capacités d'invention et de jugement n'y ont plus d'usage. La parenthèse qui suit le dira : plus le travail est riche d'esprit, plus l'ouvrier en est dépourvu.
+    - **Ce que le travail vise.** Son travail ne sert plus qu'{amber}à entretenir son corps{/amber}, puisque le salaire tend vers le minimum nécessaire à la survie.
+
+    Dans les deux cas, ce qui disparaît, c'est {coral}tout ce que l'homme est au-delà du corps et du travail{/coral}. Les textes suivants le nommeront : l'ouvrier qui ne se sent libre que dans ses fonctions animales, puis la vie générique devenue simple moyen de l'existence physique.
+
+    **Pourquoi un cercle est-il pire qu'une dépendance ?** Parce que {coral}la servitude se reproduit d'elle-même{/coral}. L'ouvrier ne peut sortir de sa condition par son travail, puisque son travail ne lui rapporte que de quoi continuer à travailler ; et il ne peut sortir de son travail, puisque sans lui il ne vit pas. {red}Le cercle n'a pas d'issue intérieure.{/red}
+
+    ! La phrase ne décrit pas {red}une pauvreté extrême{/red}, mais {green}une réduction{/green} : celle d'un homme ramené à deux fonctions, survivre et travailler, dont chacune n'existe plus que pour l'autre.
+  passage:
+    label: "§3 (1)"
+    part: "2. Le serviteur de son objet"
+    text: "Le comble de cette servitude est que seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet physique, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier."
+  points:
   - id: m1844-p7-4
-    sentence: "« De ce double point de vue, l'ouvrier devient donc un esclave de son objet : premièrement, il reçoit un objet de travail, c'est-à-dire du travail, et, deuxièmement, il reçoit des moyens de subsistance. Il lui doit donc la possibilité d'exister premièrement en tant qu'ouvrier et deuxièmement en tant que sujet physique. Le comble de cette servitude est que ___, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier. »"
+    sentence: "« Le comble de cette servitude est que ___, et que ce n'est plus qu'en tant que sujet physique qu'il est ouvrier. »"
     answer: "seule sa qualité d'ouvrier lui permet de se conserver encore en tant que sujet physique"
     alt: []
-  - id: m1844-p7-e1
-    sentence: "« Esclave de son objet » traduit *Knecht*, __le ___ de Hegel__, et non *Sklave*."
-    answer: "serviteur"
+  - id: m1844-p7c-x1
+    sentence: "« Le comble » traduit *Spitze*, __la pointe : le degré ___ de la servitude.__"
+    answer: "extrême"
     alt: []
-  - id: m1844-p7-e2
-    sentence: "Une dépendance devient **servitude** quand __l'accès à ce dont on dépend passe par ___.__"
-    answer: "un autre"
+  - id: m1844-p7c-x2
+    sentence: "Le chiasme (ouvrier, sujet physique ; sujet physique, ouvrier) __dit l'___ qu'il décrit.__"
+    answer: "enfermement"
     alt: []
-  - id: m1844-p7-e3
-    sentence: "Chez Hegel, le serviteur se libère en formant la chose ; chez Marx, __la chose formée ne lui ___ pas__."
-    answer: "reste"
+  - id: m1844-p7c-x3
+    sentence: "L'ouvrier n'est ouvrier qu'en tant que sujet physique : __son travail n'emploie plus que sa ___,__ et ne sert plus qu'à entretenir son corps."
+    answer: "force"
+    alt: ["force physique"]
+  - id: m1844-p7c-x4
+    sentence: "Le cercle de la servitude __n'a pas d'issue ___ :__ le travail ne rapporte que de quoi continuer à travailler."
+    answer: "intérieure"
     alt: []
-  - id: m1844-p7-e4
-    sentence: "Le comble de la servitude est __un ___ :__ travailler pour vivre, ne vivre que pour travailler."
-    answer: "cercle"
+  - id: m1844-p7c-x5
+    sentence: "La phrase ne décrit pas une pauvreté extrême, mais __une ___ :__ l'homme ramené à survivre et travailler."
+    answer: "réduction"
     alt: []
 - id: m1844-p7b
   title: "Six inversions selon les lois de l'économie"
@@ -330,94 +565,237 @@ lessons:
     answer: "spirituel"
     alt: []
 - id: m1844-p8
-  title: "3.1 à 3.3 Ce que l'économie politique dissimule"
+  title: "L'économie politique dissimule l'aliénation"
   notes: |-
-    **L'économie politique {coral}dissimule{/coral} l'aliénation parce qu'elle ne considère pas {amber}le rapport immédiat de l'ouvrier à la production{/amber}, dont le rapport du riche n'est que la conséquence.**
+    **Après avoir montré l'aliénation dans les faits mêmes de l'économie, Marx explique pourquoi les économistes ne la voient pas : {coral}ils ne regardent pas ce qui se passe entre l'ouvrier et ce qu'il produit{/coral}.** La critique passe des faits au savoir qui les décrit.
 
-    **3.1 Dissimuler.** *Verbirgt* : cacher, plus fort que méconnaître. L'aliénation est {violet}« dans l'essence du travail »{/violet}, non un accident extérieur. Pourquoi une science cacherait-elle ce qu'elle décrit ? Parce qu'elle adopte {amber}le point de vue du possesseur{/amber} et prend la propriété privée pour un dogme de départ ; le travail y est un coût, l'ouvrier un vendeur de travail. {coral}Les faits sont vus, leur sens est caché{/coral} : dissimulation, non ignorance. La parenthèse « l'ouvrier (le travail) » dit la réduction que l'économiste opère sans la voir.
+    **Pourquoi « dissimule » ?** *Verbirgt* : cacher, mettre à l'abri des regards. Le mot est {amber}plus fort que méconnaître{/amber} : il dit qu'un savoir peut recouvrir ce qu'il touche. Mais il a pour sujet {violet}une science{/violet}, non des personnes : ce n'est {red}ni un mensonge ni une erreur de calcul{/red}, c'est un regard qui se porte ailleurs.
 
-    **3.2 Pour les riches, pour l'ouvrier.** « Certes » (*Allerdings*) concède ce que voient les économistes. Le même sujet, {amber}le travail{/amber}, produit les deux membres de chaque couple : merveilles et dénuement (*Entblößung*, mise à nu), palais et taudis, beauté et infirmité, machines et ouvriers rejetés dans un travail barbare ou faits machines, esprit et crétinisme. Implicite : le produit passe d'un côté, {coral}le coût reste de l'autre{/coral}. Les riches n'apparaissent qu'au datif, « pour les riches » : bénéficiaires, non encore agents.
+    **Pourquoi « l'aliénation dans l'essence du travail » ?** L'aliénation {red}n'est pas un accident extérieur{/red} au travail : elle est inscrite dans ce qu'est le travail dans ces conditions. La cacher, c'est donc {coral}cacher l'essence même de ce que l'économie étudie{/coral}.
 
-    **3.3 Le rapport immédiat, et celui du riche comme sa conséquence.** « L'homme qui a de la fortune » : *der Vermögende*, de *Vermögen*, fortune et pouvoir. Son rapport n'est {coral}« qu'une conséquence »{/coral} de celui de l'ouvrier : il ne possède que ce dont l'ouvrier est dépossédé. « Et il le confirme » : à la fin du manuscrit, ce qui est chez l'ouvrier activité de dessaisissement apparaît chez le non-ouvrier {teal}« comme état de dessaisissement, d'aliénation »{/teal}. Marx renverse l'ordre de l'économie politique, et en tire la méthode de la suite : examiner le rapport de l'ouvrier {green}dans l'acte même de produire{/green}.
+    **Pourquoi « par le fait que » ?** *Dadurch, daß* : la dissimulation a {amber}une cause précise{/amber}, un choix d'objet. « Ne considère pas » : ce que l'économie ne regarde pas, elle ne peut le voir.
 
-    ! Le riche n'est {red}pas absous{/red} : son rapport n'est pas premier {green}dans l'ordre de l'explication{/green}, et Marx le réserve « pour plus tard ».
+    **Pourquoi « le rapport direct » ?** *Das unmittelbare Verhältnis*, le rapport {violet}immédiat{/violet}, sans intermédiaire. L'économie considère l'ouvrier à travers des médiations, le marché, le salaire, le prix ; jamais dans son rapport sans médiation à ce qu'il fait. {yellow}Le comptable d'une fabrique voit les salaires comme une dépense parmi d'autres, à côté du charbon et de la laine ; il ne voit jamais l'ouvrier devant l'étoffe qu'il a tissée et qui part sans lui.{/yellow}
+
+    **Pourquoi « l'ouvrier (le travail) » ?** La parenthèse {amber}identifie l'ouvrier et le travail{/amber}, comme le fait l'économie, pour qui l'ouvrier n'est que du travail. Mais elle dit aussi l'inverse : {green}le rapport du travail à la production est un rapport humain{/green}, celui d'un ouvrier. Le Chapitre VI du *Capital* fera de cette équivalence le résultat du rapport capitaliste : le travailleur y devient {teal}« simple personnification du travail pour le capital »{/teal}.
+
+    **Comment une science peut-elle cacher ce qu'elle décrit ?** Le texte ne le dit pas ; le raisonnement tient au {coral}point de vue{/coral}.
+    - L'économie politique, Marx l'a dit avant le passage, {amber}part du fait de la propriété privée{/amber} sans l'expliquer.
+    - Elle considère donc la production {amber}depuis la place de celui qui possède{/amber}, pour qui le travail est un facteur de production parmi d'autres, et le salaire un coût.
+    - De cette place, le rapport de l'ouvrier à son produit {red}n'apparaît pas{/red} : l'ouvrier n'y figure que comme vendeur de travail, son produit comme marchandise appartenant à un autre.
+
+    La misère ouvrière apparaît bien, mais comme {amber}un effet des lois du salaire{/amber}, non comme l'expression d'un rapport entre un homme et son œuvre. {coral}Les faits sont vus, leur sens est caché{/coral} : c'est en ce sens précis qu'il y a dissimulation, et non ignorance.
+
+    ! Marx n'accuse pas les économistes de {red}mauvaise foi{/red} : il accuse {green}leur point de vue{/green}, qui rend invisible ce qu'ils décrivent.
   passage:
     label: "§4"
     part: "3. Ce que l'économie politique dissimule"
-    text: "L'économie politique dissimule l'aliénation dans l'essence du travail par le fait qu'elle ne considère pas le rapport direct entre l'ouvrier (le travail) et la production. Certes, le travail produit des merveilles pour les riches, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme. Le rapport immédiat du travail à ses produits est le rapport de l'ouvrier aux objets de sa production. Le rapport de l'homme qui a de la fortune aux objets de la production et à la production elle-même n'est qu'une conséquence de ce premier rapport. Et il le confirme. Nous examinerons cet autre aspect plus tard. Si donc nous posons la question : quel est le rapport essentiel du travail, nous posons la question du rapport essentiel de l'ouvrier à la production."
+    text: "L'économie politique dissimule l'aliénation dans l'essence du travail par le fait qu'elle ne considère pas le rapport direct entre l'ouvrier (le travail) et la production."
   points:
   - id: m1844-p8-1
-    fragment: "1/3"
     sentence: "« L'économie politique ___ par le fait qu'elle ne considère pas le rapport direct entre l'ouvrier (le travail) et la production. »"
     answer: "dissimule l'aliénation dans l'essence du travail"
     alt: []
   - id: m1844-p8-2
-    fragment: "1/3"
     sentence: "« L'économie politique dissimule l'aliénation dans l'essence du travail par le fait qu'elle ne considère pas ___. »"
     answer: "le rapport direct entre l'ouvrier (le travail) et la production"
     alt: []
+  - id: m1844-p8-x1
+    sentence: "« Dissimule » (*verbirgt*) a pour sujet une science : __ni un mensonge ni une erreur, mais un regard qui se porte ___.__"
+    answer: "ailleurs"
+    alt: []
+  - id: m1844-p8-x2
+    sentence: "« Le rapport direct » (*unmittelbare*) : __sans ___,__ alors que l'économie voit l'ouvrier à travers le marché, le salaire, le prix."
+    answer: "intermédiaire"
+    alt: ["médiation"]
+  - id: m1844-p8-x3
+    sentence: "« L'ouvrier (le travail) » : pour l'économie, __l'ouvrier n'est que du ___.__"
+    answer: "travail"
+    alt: []
+  - id: m1844-p8-x4
+    sentence: "L'économie part de la propriété privée : elle voit la production __depuis la place de celui qui ___.__"
+    answer: "possède"
+    alt: []
+  - id: m1844-p8-x5
+    sentence: "La dissimulation n'est pas une ignorance : __les faits sont vus, leur ___ est caché.__"
+    answer: "sens"
+    alt: []
+- id: m1844-p8b
+  title: "Pour les riches, pour l'ouvrier"
+  notes: |-
+    **Marx montre ce que l'économie politique voit et ce qu'elle cache, en cinq oppositions construites de la même façon : {coral}ce que le travail produit pour les riches, et ce qu'il produit pour l'ouvrier{/coral}.**
+
+    | Pour les riches | Pour l'ouvrier |
+    | des merveilles | le dénuement |
+    | des palais | des taudis |
+    | la beauté | l'infirmité |
+    | des machines | un travail barbare, ou l'ouvrier devenu machine |
+    | l'esprit | l'abêtissement, le crétinisme |
+
+    **Pourquoi « certes… mais » ?** La concession {amber}accorde aux économistes ce qu'ils disent{/amber}, la puissance productive du travail, pour lui opposer ce qu'ils ne disent pas.
+
+    **Pourquoi le même sujet, « le travail », dans les deux membres ?** C'est le point décisif. Ce n'est pas le travail qui produit les palais et autre chose qui produit les taudis : {coral}c'est le même travail{/coral}, et le dénuement est {violet}un produit au même titre que les merveilles{/violet}.
+
+    **Pourquoi le même travail produirait-il le palais et le taudis ?** Parce que {coral}le produit passe d'un côté et que le coût reste de l'autre{/coral}. Ce que l'ouvrier met de lui-même dans le travail, sa force, sa santé, son temps, passe dans le palais, qui va au riche ; il ne lui reste que {amber}ce que le travail lui a coûté{/amber} : l'usure de son corps, et un salaire minimal qui lui paie un taudis. {yellow}L'ouvrier qui sculpte les ornements d'un hôtel particulier rentre le soir dans une mansarde, les poumons pris par la poussière de pierre.{/yellow} C'est la structure des six inversions, avec {amber}un personnage de plus{/amber} : ce que l'objet gagnait, ce sont maintenant les riches qui en jouissent.
+
+    **Pourquoi « pour les riches » ?** Un second personnage apparaît, absent jusque-là. Le texte cesse de mettre l'ouvrier seul face à son objet. Mais les riches n'apparaissent {violet}qu'au datif{/violet}, « pour les riches », comme {green}bénéficiaires{/green}, {red}non comme agents{/red} : le texte oppose deux destinations d'un même produit, non deux camps.
+
+    **Pourquoi « le dénuement » ?** L'allemand dit *Entblößung*, le fait d'être mis à nu, dépouillé : {amber}non une simple pauvreté, un dépouillement{/amber}.
+
+    **Pourquoi la phrase sur les machines rompt-elle le parallélisme ?** Parce que la machine est un produit qui {coral}frappe le travail lui-même{/coral}. Elle a deux effets : rejeter une partie des ouvriers en arrière (*zurückwerfen*), vers un travail plus grossier, et faire de l'autre partie {violet}des machines{/violet}, des rouages qui répètent un geste. *Le Capital* développera longuement cette figure de l'ouvrier devenu appendice de la machine.
+
+    **Pourquoi « le crétinisme » ?** Le mot (*Kretinismus*) est {amber}médical{/amber} : il désignait une dégénérescence physique et mentale. Marx le prend au sens fort, celui d'un esprit détruit par les conditions de vie ; Smith lui-même concédait que l'homme qui passe sa vie à répéter quelques opérations simples devient aussi stupide et ignorant qu'une créature humaine peut l'être.
+
+    **Qu'est-ce que l'économie politique ne voit pas ?** Elle voit {amber}les deux côtés{/amber}, mais {red}séparément{/red} : la richesse nationale d'une part, la question des salaires de l'autre. Elle ne voit pas qu'{green}ils sont les deux faces d'un seul rapport{/green}, ce que la phrase suivante va dire.
+
+    ! Ces phrases ne sont pas {red}une simple dénonciation des inégalités{/red} : elles montrent qu'{green}un même travail produit les deux membres{/green} de chaque couple.
+  passage:
+    label: "§4"
+    part: "3. Ce que l'économie politique dissimule"
+    text: "Certes, le travail produit des merveilles pour les riches, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme."
+  points:
   - id: m1844-p8-3
-    fragment: "2/3"
     sentence: "« Certes, le travail produit ___, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme. »"
     answer: "des merveilles pour les riches"
     alt: []
   - id: m1844-p8-4
-    fragment: "2/3"
     sentence: "« Certes, le travail produit des merveilles pour les riches, mais il produit ___. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme. »"
     answer: "le dénuement pour l'ouvrier"
     alt: []
   - id: m1844-p8-5
-    fragment: "2/3"
     sentence: "« Certes, le travail produit des merveilles pour les riches, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais ___. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme. »"
     answer: "des taudis pour l'ouvrier"
     alt: []
   - id: m1844-p8-6
-    fragment: "2/3"
     sentence: "« Certes, le travail produit des merveilles pour les riches, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais ___. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme. »"
     answer: "l'infirmité pour l'ouvrier"
     alt: []
   - id: m1844-p8-7
-    fragment: "2/3"
     sentence: "« Certes, le travail produit des merveilles pour les riches, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et ___. Il produit l'esprit, mais, pour l'ouvrier, il produit l'abêtissement, le crétinisme. »"
     answer: "transforme l'autre partie en machines"
     alt: []
   - id: m1844-p8-8
-    fragment: "2/3"
     sentence: "« Certes, le travail produit des merveilles pour les riches, mais il produit le dénuement pour l'ouvrier. Il produit des palais, mais des taudis pour l'ouvrier. Il produit la beauté, mais l'infirmité pour l'ouvrier. Il remplace le travail par des machines, mais il rejette une partie des ouvriers dans un travail barbare et transforme l'autre partie en machines. Il produit l'esprit, mais, pour l'ouvrier, il produit ___. »"
     answer: "l'abêtissement, le crétinisme"
     alt: []
+  - id: m1844-p8b-x1
+    sentence: "« Certes… mais » : la concession __accorde aux économistes la puissance ___ du travail.__"
+    answer: "productive"
+    alt: []
+  - id: m1844-p8b-x2
+    sentence: "Le même sujet, le travail, produit les deux membres : __le dénuement est un ___ au même titre que les merveilles.__"
+    answer: "produit"
+    alt: []
+  - id: m1844-p8b-x3
+    sentence: "Le même travail produit le palais et le taudis parce que __le produit passe d'un côté et que le ___ reste de l'autre.__"
+    answer: "coût"
+    alt: []
+  - id: m1844-p8b-x4
+    sentence: "Les riches n'apparaissent qu'au datif, « pour les riches » : __comme ___, non comme agents.__"
+    answer: "bénéficiaires"
+    alt: []
+  - id: m1844-p8b-x5
+    sentence: "Le dénuement traduit *Entblößung* : __non une simple pauvreté, un ___.__"
+    answer: "dépouillement"
+    alt: []
+  - id: m1844-p8b-x6
+    sentence: "L'économie politique voit la richesse et la misère, __mais ___ :__ non comme deux faces d'un seul rapport."
+    answer: "séparément"
+    alt: []
+- id: m1844-p8c
+  title: "Le rapport du riche, conséquence du rapport de l'ouvrier"
+  notes: |-
+    **Marx établit {coral}un ordre entre deux rapports{/coral} : le rapport immédiat, celui de l'ouvrier à ce qu'il produit, est premier ; celui du riche à la production en découle, et le confirme.** C'est l'inverse de l'ordre de l'économie politique.
+
+    **Pourquoi identifier « le travail » et « l'ouvrier » ?** La première phrase reprend la parenthèse précédente : parler du rapport du travail à ses produits, {amber}c'est parler d'hommes qui travaillent{/amber}. Le travail n'est pas une abstraction, c'est l'activité d'un ouvrier devant des objets.
+
+    **Pourquoi « l'homme qui a de la fortune » ?** L'allemand dit *der Vermögende*, de *Vermögen*, qui signifie à la fois {violet}la fortune et le pouvoir, la faculté{/violet}. Le riche est {amber}celui qui peut{/amber} ; l'ouvrier, celui dont la puissance est passée dans l'objet. Et le riche se rapporte aux produits et à la production {red}du dehors{/red}, comme propriétaire, non comme producteur.
+
+    **Pourquoi le rapport du riche serait-il la conséquence de celui de l'ouvrier, et non l'inverse ?** C'est la thèse la plus lourde du paragraphe, et le texte la pose sans la démontrer. On peut reconstruire le raisonnement.
+    - Le riche {amber}ne produit pas{/amber} les objets qu'il possède.
+    - Il ne peut donc les avoir que si {amber}ceux qui les produisent ne les ont pas{/amber} : sa possession suppose la dépossession de l'ouvrier.
+    - La dépossession de l'ouvrier, elle, ne suppose rien d'autre que le rapport aliéné de l'ouvrier à son produit, décrit depuis le début.
+
+    Le rapport du riche est donc {coral}second, comme l'envers d'une chose est second par rapport à la chose{/coral}. {yellow}Le propriétaire d'une filature ne possède les étoffes que parce que les tisserands ne les possèdent pas ; sa fortune est l'envers de leur dépouillement.{/yellow}
+
+    **Pourquoi « et il le confirme » ?** La phrase est brève, isolée, et c'est la plus dense du paragraphe : {coral}la richesse des uns devient la preuve de l'aliénation des autres{/coral}. Une conséquence atteste son principe, comme un effet atteste sa cause : le palais habité par un autre atteste que le travail qui l'a bâti a été aliéné. La fin du premier manuscrit le précisera : {teal}« le non-ouvrier fait contre l'ouvrier tout ce que l'ouvrier fait contre lui-même »{/teal}. Ce que l'ouvrier vit comme un acte qui le dépouille, le riche le détient comme un état.
+
+    **Pourquoi cet ordre est-il décisif ?** Parce qu'il {coral}renverse celui de l'économie politique{/coral}, qui part de la propriété privée, c'est-à-dire du rapport du possesseur, et en déduit les salaires. Marx part du rapport de l'ouvrier, et en déduira, à la fin du passage, la propriété privée elle-même, {teal}« la conséquence nécessaire du travail aliéné »{/teal}, alors qu'elle en paraît la cause.
+
+    **Pourquoi « plus tard » ?** Marx {amber}remet à plus tard{/amber} l'analyse du rapport du non-ouvrier ; il ne fera que l'aborder à la toute fin du premier manuscrit, interrompu peu après. Le maître, différé depuis le début du texte, est désormais nommé, mais pas encore examiné.
+
+    ! Dire que le rapport du riche n'est « qu'une conséquence », ce n'est pas {red}l'absoudre{/red} : c'est dire qu'il n'est {green}pas premier dans l'ordre de l'explication{/green}.
+  passage:
+    label: "§4"
+    part: "3. Ce que l'économie politique dissimule"
+    text: "Le rapport immédiat du travail à ses produits est le rapport de l'ouvrier aux objets de sa production. Le rapport de l'homme qui a de la fortune aux objets de la production et à la production elle-même n'est qu'une conséquence de ce premier rapport. Et il le confirme. Nous examinerons cet autre aspect plus tard."
+  points:
   - id: m1844-p8-9
-    fragment: "3/3"
-    sentence: "« Le rapport immédiat du travail à ses produits est ___. Le rapport de l'homme qui a de la fortune aux objets de la production et à la production elle-même n'est qu'une conséquence de ce premier rapport. Et il le confirme. Nous examinerons cet autre aspect plus tard. Si donc nous posons la question : quel est le rapport essentiel du travail, nous posons la question du rapport essentiel de l'ouvrier à la production. »"
+    sentence: "« Le rapport immédiat du travail à ses produits est ___. Le rapport de l'homme qui a de la fortune aux objets de la production et à la production elle-même n'est qu'une conséquence de ce premier rapport. Et il le confirme. Nous examinerons cet autre aspect plus tard. »"
     answer: "le rapport de l'ouvrier aux objets de sa production"
     alt: []
   - id: m1844-p8-10
-    fragment: "3/3"
-    sentence: "« Le rapport immédiat du travail à ses produits est le rapport de l'ouvrier aux objets de sa production. Le rapport de l'homme qui a de la fortune aux objets de la production et à la production elle-même ___. Et il le confirme. Nous examinerons cet autre aspect plus tard. Si donc nous posons la question : quel est le rapport essentiel du travail, nous posons la question du rapport essentiel de l'ouvrier à la production. »"
+    sentence: "« Le rapport immédiat du travail à ses produits est le rapport de l'ouvrier aux objets de sa production. Le rapport de l'homme qui a de la fortune aux objets de la production et à la production elle-même ___. Et il le confirme. Nous examinerons cet autre aspect plus tard. »"
     answer: "n'est qu'une conséquence de ce premier rapport"
     alt: []
+  - id: m1844-p8c-x1
+    sentence: "*Der Vermögende* : *Vermögen* signifie à la fois __la fortune et le ___.__"
+    answer: "pouvoir"
+    alt: ["la faculté"]
+  - id: m1844-p8c-x2
+    sentence: "Le riche ne produit pas ce qu'il possède : __sa possession suppose la ___ de l'ouvrier.__"
+    answer: "dépossession"
+    alt: []
+  - id: m1844-p8c-x3
+    sentence: "« Et il le confirme » : __la richesse des uns devient la ___ de l'aliénation des autres.__"
+    answer: "preuve"
+    alt: []
+  - id: m1844-p8c-x4
+    sentence: "Fin du premier manuscrit : __« le non-ouvrier fait contre l'ouvrier tout ce que l'ouvrier fait contre ___ »__."
+    answer: "lui-même"
+    alt: []
+  - id: m1844-p8c-x5
+    sentence: "Cet ordre renverse celui de l'économie politique, __qui part de la ___ et en déduit les salaires.__"
+    answer: "propriété privée"
+    alt: []
+- id: m1844-p8d
+  title: "La question du rapport essentiel de l'ouvrier à la production"
+  notes: |-
+    **La dernière phrase tire {coral}une règle de méthode{/coral} de ce qui précède : la question de l'essence du travail est celle du rapport de l'ouvrier à la production.** Elle fixe la direction de toute la suite du passage.
+
+    **Pourquoi « si donc » ?** *Wenn wir also fragen* : la conclusion {amber}se tire de la priorité{/amber} qui vient d'être posée. Si le rapport de l'ouvrier est premier et celui du riche second, c'est le premier qu'il faut interroger pour comprendre le travail.
+
+    **Pourquoi « le rapport essentiel » ?** *Das wesentliche Verhältnis* : {violet}le rapport qui fait l'essence du travail{/violet}, celui sans lequel le travail ne serait pas ce qu'il est. Ce n'est pas un rapport parmi d'autres, c'est celui dont les autres dérivent. Dans la seconde moitié, l'allemand dit seulement « le rapport de l'ouvrier à la production » : la traduction répète « essentiel ».
+
+    **Pourquoi ce déplacement compte-t-il ?** Parce qu'il change {coral}la place d'où l'on regarde{/coral}. L'économie politique interroge le travail depuis le possesseur : combien il coûte, combien il rapporte. Marx l'interroge {green}depuis celui qui travaille{/green}. {yellow}Demander ce qu'est le travail au propriétaire de la filature, c'est obtenir un prix de revient ; le demander au tisserand, c'est apprendre ce qu'il vit au métier.{/yellow}
+
+    **Qu'est-ce que la phrase annonce ?** Si l'essence du travail est dans le rapport de l'ouvrier à la production, il faut examiner ce rapport {amber}non seulement dans le produit{/amber}, ce que Marx a fait jusqu'ici, {amber}mais dans l'acte même de produire{/amber}. Le texte suivant le fera : « la production » désigne à la fois ce qui est produit et l'acte de produire, et Marx va passer de l'un à l'autre. Le produit, dira-t-il, n'est que {teal}« le résumé de l'activité »{/teal}.
+
+    **Quelle est la force du paragraphe ?** Celle d'{amber}une thèse de méthode{/amber}, posée plus que démontrée, mais que toute la suite va mettre en œuvre. Le troisième mouvement a déplacé la critique des faits vers le savoir qui les décrit : pour voir l'aliénation, {coral}il faut se placer là où elle se produit{/coral}, dans le rapport immédiat de l'ouvrier à la production.
+
+    ! La question n'est pas {red}une question morale{/red} sur la condition ouvrière : c'est {green}une question d'essence{/green}, ce qu'est le travail.
+  passage:
+    label: "§4"
+    part: "3. Ce que l'économie politique dissimule"
+    text: "Si donc nous posons la question : quel est le rapport essentiel du travail, nous posons la question du rapport essentiel de l'ouvrier à la production."
+  points:
   - id: m1844-p8-11
-    fragment: "3/3"
-    sentence: "« Le rapport immédiat du travail à ses produits est le rapport de l'ouvrier aux objets de sa production. Le rapport de l'homme qui a de la fortune aux objets de la production et à la production elle-même n'est qu'une conséquence de ce premier rapport. Et il le confirme. Nous examinerons cet autre aspect plus tard. Si donc nous posons la question : quel est le rapport essentiel du travail, nous posons ___. »"
+    sentence: "« Si donc nous posons la question : quel est le rapport essentiel du travail, nous posons ___. »"
     answer: "la question du rapport essentiel de l'ouvrier à la production"
     alt: []
-  - id: m1844-p8-e1
-    sentence: "L'économie politique dissimule l'aliénation parce qu'elle adopte __le point de vue du__ ___ et prend la propriété privée pour un dogme."
-    answer: "possesseur"
+  - id: m1844-p8d-x1
+    sentence: "« Si donc » : __la conclusion se tire de la ___ posée__ entre le rapport de l'ouvrier et celui du riche."
+    answer: "priorité"
     alt: []
-  - id: m1844-p8-e2
-    sentence: "Dissimulation, non ignorance : __les faits sont vus, leur ___ est caché__."
-    answer: "sens"
+  - id: m1844-p8d-x2
+    sentence: "*Das wesentliche Verhältnis* : __le rapport qui fait l'___ du travail.__"
+    answer: "essence"
     alt: []
-  - id: m1844-p8-e3
-    sentence: "Dans « des palais, mais des taudis pour l'ouvrier », __le même sujet, ___,__ produit les deux membres du couple."
-    answer: "le travail"
+  - id: m1844-p8d-x3
+    sentence: "Marx interroge le travail __depuis celui qui ___,__ non depuis le possesseur."
+    answer: "travaille"
     alt: []
-  - id: m1844-p8-e4
-    sentence: "« Et il le confirme » : ce qui est chez l'ouvrier activité de dessaisissement apparaît chez le non-ouvrier __comme ___ de dessaisissement__."
-    answer: "état"
-    alt: []
-  - id: m1844-p8-e5
-    sentence: "*Der Vermögende*, « l'homme qui a de la fortune », de *Vermögen* : __à la fois la fortune et le ___.__"
-    answer: "pouvoir"
+  - id: m1844-p8d-x4
+    sentence: "La phrase annonce le texte suivant : examiner le rapport de l'ouvrier __non seulement dans le produit, mais dans l'___ même de produire.__"
+    answer: "acte"
     alt: []
