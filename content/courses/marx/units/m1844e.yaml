@@ -11,6 +11,9 @@
 # 2026-11-21 ; il est réparti en cinq unités (m1844, m1844b à m1844e), qui
 # gardent les identifiants des leçons et des cartes (m1844-p…), donc leur
 # révision, avec des § renumérotés dans chaque unité.
+# Refondu le 2026-11-23 : une leçon par phrase ou segment (m1844-p17, p17b…),
+# deux leçons d'introduction ; le prolongement (m1844e-o1) gardé tel quel ; les
+# cartes-citation et les cartes-explication reprises gardent leurs identifiants.
 # La dernière phrase du §2 (« La conscience que l'homme a de son genre… »)
 # manquait à l'extraction du PDF GF : elle est reprise des Éditions sociales
 # (Bottigelli), faute du texte GF, à remplacer par lui dès qu'on l'a (2026-11-22).
@@ -25,15 +28,66 @@ intro: |-
   La fin du passage sur le travail aliéné : l'homme s'affirme comme être générique en façonnant le monde objectif, à la mesure de toute espèce et d'après les lois de la beauté ; en lui arrachant l'objet de sa production, le travail aliéné lui arrache sa vie générique, et le rend étranger aux autres hommes.
 lessons:
 - id: m1844e-i1
-  title: "Où en est l'argument : la production et l'autre homme"
+  title: "Le texte, sa place et son plan"
   notes: |-
-    **Ce texte achève la preuve de la troisième détermination et en tire la quatrième : {coral}l'homme rendu étranger à l'homme{/coral}.**
+    **Le texte est le dernier des cinq moments du passage sur le travail aliéné : il achève la preuve de la troisième détermination, puis tire {coral}les deux derniers résultats{/coral}, l'être générique devenu étranger à l'homme, et {coral}l'homme étranger à l'homme{/coral}.** Il se trouve aux pages XXIV et XXV du manuscrit, de « Par la production pratique d'un monde objectif » à la phrase où chaque homme considère autrui « selon les critères et les conditions de sa propre situation en tant qu'ouvrier ».
 
-    Le texte précédent a posé que l'homme est un être générique et donné un premier argument (« premièrement ») : le travail aliéné fait de la vie générique un moyen de survivre. Celui-ci donne le second, la production d'un monde objectif, puis les résultats 3) et 4).
+    **Où en est l'argument.** Le texte précédent a posé que l'homme est un être générique, qui vit de la nature entière comme de son corps non organique et {amber}a{/amber} son activité vitale au lieu de l'{amber}être{/amber}. Il a commencé de prouver la troisième détermination, {violet}la vie générique devenue moyen de la vie individuelle{/violet}, par un « premièrement » : le travail n'apparaît à l'homme que comme moyen de survivre. Il manquait {red}le second volet{/red} de la preuve.
 
-    **Sa question :** en quoi l'homme s'affirme-t-il comme être générique dans ce qu'il produit, et que lui fait perdre le travail aliéné, jusque dans son rapport aux autres ? **Sa thèse :** c'est en façonnant le monde objectif, {amber}universellement, libre du besoin, à la mesure de toute espèce et d'après les lois de la beauté{/amber}, que l'homme s'affirme et {violet}se contemple dans un monde qu'il a créé{/violet} ; en lui arrachant ce produit, le travail aliéné lui arrache sa vie générique et {coral}change sa supériorité sur l'animal en infériorité{/coral} ; et, parce que son rapport à lui-même se réalise dans son rapport aux autres, {coral}il le rend étranger aux autres hommes{/coral}. **Sa difficulté :** comment la perte d'un objet peut-elle retirer à l'homme sa supériorité sur l'animal, et le rendre étranger aux autres ?
+    **Ce que ce texte apporte.** Le second volet, {coral}la production d'un monde objectif{/coral} : ce que l'homme perd quand on lui prend non plus son activité, mais l'objet qu'il produit. Puis les deux résultats. Après lui, Marx demandera à qui appartiennent le produit et l'activité de l'ouvrier, et déduira la propriété privée du travail aliéné.
 
-    Trois mouvements : l'homme s'affirme dans sa production (§1), ce que le travail aliéné arrache (§2), les deux derniers résultats (§3).
+    **Deux éléments de cadre.**
+    - **Le dédoublement hégélien.** Chez Hegel, l'esprit se dédouble et se reconnaît dans ce qu'il produit. Marx reprend l'idée en la rendant {amber}pratique et matérielle{/amber} : l'homme se dédouble non dans la conscience, mais dans un monde qu'il façonne.
+    - **L'homme et l'animal.** La comparaison classique de la production humaine et de la production animale (l'abeille, le castor, la fourmi), que Marx retourne : {coral}la supériorité de l'homme peut devenir une infériorité{/coral}.
+
+    **Une remarque sur le texte.** La phrase « La conscience que l'homme a de son genre se transforme donc… » manquait à l'extraction de la traduction GF ; elle est reprise des Éditions sociales, à sa place, à la fin du deuxième paragraphe.
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | l'homme s'affirme dans sa production | §1 | Par contraste avec l'animal, la production humaine est universelle, libre du besoin, à la mesure de toute espèce, jusqu'à la beauté. |
+    | ce que le travail aliéné arrache | §2 | L'homme se contemple dans le monde qu'il crée ; lui arracher son produit, c'est lui arracher sa vie générique, et changer sa supériorité sur l'animal en infériorité. |
+    | les deux derniers résultats | §3 | L'être générique devient étranger à l'homme ; et, conséquence immédiate, l'homme devient étranger à l'homme. |
+
+    ! Le passage, parti du rapport d'un ouvrier à son produit, aboutit {green}au rapport des hommes entre eux{/green}, sans quitter le terrain de la production : l'étrangeté entre les hommes n'est {red}pas d'abord morale ou politique{/red}, elle naît de la manière dont ils produisent.
+  passage:
+    label: "Introduction"
+  points:
+  - id: m1844e-i1-x1
+    sentence: "Ce texte donne le second volet de la preuve de la troisième détermination : __la production d'un monde ___.__"
+    answer: "objectif"
+    alt: []
+  - id: m1844e-i1-x2
+    sentence: "Marx reprend le dédoublement hégélien en le rendant __pratique et ___ :__ l'homme se dédouble dans un monde qu'il façonne."
+    answer: "matériel"
+    alt: []
+  - id: m1844e-i1-x3
+    sentence: "La phrase sur la conscience du genre, absente de l'extraction GF, __est reprise des Éditions ___.__"
+    answer: "sociales"
+    alt: []
+- id: m1844e-i2
+  title: "La question, la thèse, la problématique"
+  notes: |-
+    **Le texte se demande en quoi l'homme s'affirme comme être générique dans ce qu'il produit, et {coral}ce que le travail aliéné, en lui retirant ce produit, lui fait perdre jusque dans son rapport aux autres hommes{/coral}.**
+
+    **Le débat.** Celui de la différence entre l'homme et l'animal. On la place d'ordinaire {red}dans la raison ou la conscience{/red} ; Marx la place {green}dans la manière de produire{/green}, et en tire que la perte du produit est la perte de cette différence même, et, au-delà, celle du lien entre les hommes.
+
+    **Sa thèse :** c'est {coral}en façonnant le monde objectif{/coral} que l'homme s'affirme réellement comme être générique : à la différence de l'animal, il produit {amber}universellement, même libre du besoin, à la mesure de toute espèce et d'après les lois de la beauté{/amber}, et il {violet}se contemple dans un monde qu'il a lui-même créé{/violet}. En lui arrachant l'objet de sa production, le travail aliéné lui arrache donc sa vie générique, {coral}change sa supériorité sur l'animal en infériorité{/coral}, et fait de son être générique un moyen de son existence individuelle ; et, parce que le rapport de l'homme à lui-même se réalise dans son rapport aux autres, {coral}l'homme devient étranger à l'homme{/coral}.
+
+    **Sa problématique :** comment la perte d'un objet, le produit du travail, peut-elle retirer à l'homme sa supériorité sur l'animal et le rendre étranger aux autres hommes, alors que {amber}la supériorité humaine semble tenir à ce que l'homme est, non à ce qu'il possède{/amber} ?
+
+    **Pourquoi est-ce difficile ?** Il y a {red}une disproportion entre la cause et l'effet{/red}.
+    - On admet que l'ouvrier dépossédé de son produit soit appauvri ; on comprend moins qu'il perde par là {amber}ce qui fait de lui un homme{/amber}, {red}comme si l'humanité était une affaire d'objets{/red}.
+    - On comprend moins encore qu'une perte subie par chacun dans son rapport à son produit {amber}devienne un rapport entre les hommes{/amber}.
+
+    | Difficulté | Où elle se trouve | Réponse du texte |
+    | l'humanité perdue avec un objet | « transforme sa supériorité sur l'animal en infériorité » | pour un être naturel, l'humanité n'est pas une qualité intérieure : elle passe par les objets qu'il façonne |
+    | une supériorité changée en infériorité, non en égalité | même phrase | plus le corps non organique est vaste, plus sa perte laisse l'homme démuni |
+    | une perte individuelle devenue rapport entre les hommes | le résultat 4) | l'être générique est d'emblée social : le rapport à soi se réalise dans le rapport aux autres |
+
+    **L'hypothèse de lecture :** le texte répond en deux temps. D'abord, l'homme {amber}se dédouble et se contemple dans le monde qu'il produit{/amber} : perdre ce monde, c'est perdre le miroir où il se voit. Ensuite, s'il se rapporte à lui-même comme à l'espèce, {amber}son rapport à lui-même est déjà un rapport aux autres{/amber} : l'aliénation de l'un est immédiatement celle de l'autre.
+
+    **Un fil que la traduction efface.** La {violet}« mesure »{/violet} (*Maß*) de toute espèce, propre à la production libre, se rétrécit à la fin en un seul {violet}« étalon »{/violet} (*Maßstab*), celui de la condition d'ouvrier, à travers lequel chacun regarde les autres.
+
+    ! L'humanité n'est pas {red}une affaire d'objets{/red} ; mais pour un être naturel, {green}elle passe par eux{/green}.
   passage:
     label: "Introduction"
   points:
@@ -45,97 +99,116 @@ lessons:
     sentence: "Le quatrième résultat découle du troisième parce que __le rapport de l'homme à lui-même se réalise dans son rapport ___.__"
     answer: "aux autres"
     alt: ["à autrui"]
+  - id: m1844e-i2-x1
+    sentence: "Marx place la différence de l'homme et de l'animal __non dans la raison, mais dans la manière de ___.__"
+    answer: "produire"
+    alt: []
+  - id: m1844e-i2-x2
+    sentence: "Difficulté : __une disproportion entre la cause et l'___,__ comme si l'humanité était une affaire d'objets."
+    answer: "effet"
+    alt: []
+  - id: m1844e-i2-x3
+    sentence: "La « mesure » (*Maß*) de toute espèce se rétrécit à la fin __en un seul « ___ » (*Maßstab*),__ la condition d'ouvrier."
+    answer: "étalon"
+    alt: []
 - id: m1844-p17
-  title: "1.1 à 1.3 Produire universellement, d'après les lois de la beauté"
+  title: "Produire un monde objectif"
   notes: |-
-    **Par contraste avec l'animal, Marx décrit ce qu'a de générique la production humaine : {coral}universelle, libre du besoin, à la mesure de toute espèce, jusqu'à la beauté{/coral}.**
+    **Marx dit où l'homme fait la preuve de ce qu'il est : {coral}dans la production d'un monde d'objets{/coral}, la transformation de la nature. C'est là qu'il se montre être générique, un être pour qui l'espèce humaine n'est pas une idée lointaine, mais sa propre essence.** Le second volet de la preuve commence ici.
 
-    **1.1 Produire un monde objectif.** La production d'un monde objectif est la {violet}*Bewährung*{/violet} de l'homme, sa mise à l'épreuve, sa confirmation : une essence {amber}se vérifie dans ce qu'on fait{/amber}. Le second volet de la preuve commence ici : l'homme est générique par son activité vitale, et l'activité vitale humaine est la production.
+    **Pourquoi « production pratique d'un monde objectif » ?** L'allemand dit *das praktische Erzeugen einer gegenständlichen Welt*, {violet}l'engendrement pratique d'un monde d'objets{/violet} : le mot *erzeugen* est celui de « la vie engendrant la vie » du texte précédent. « Le façonnement de la nature non organique » (*Bearbeitung*, le travail de la matière) définit la production comme {amber}transformation de la nature{/amber}.
 
-    Traduire *Bewährung* par « conservation », c'est {red}le confondre avec *Bewahrung*{/red}, qui veut dire conservation ; *Bewährung* est l'épreuve réussie, l'attestation (GF « s'affirme », on peut dire aussi « s'atteste »). Le monde produit {violet}représente l'activité humaine{/violet} : dans la nature travaillée, l'homme trouve sa propre marque.
+    ? **Monde objectif** : l'ensemble des objets que l'homme produit et qui forment son milieu : {yellow}maisons, outils, champs, routes, villes, œuvres{/yellow}. Un monde, non un tas d'objets : un ensemble durable et commun, où les hommes vivent ensemble.
 
-    **1.2 L'unilatéral et l'universel.** L'animal produit aussi (l'abeille, le castor, la fourmi), mais {red}pour son besoin immédiat, sous la domination du besoin{/red} (*Herrschaft*), ne produit que lui-même, et son produit fait partie de son corps. L'homme produit {green}universellement{/green}, reproduit la nature entière, fait {green}librement face{/green} à son produit, et ne produit {coral}« vraiment »{/coral} (*erst wahrhaft*) que libéré du besoin : ce qu'on produit sous la contrainte montre le besoin, non ce qu'on est. La production animale est engluée dans l'instinct, la production humaine est libre.
+    **Pourquoi « s'affirme » ?** L'allemand dit *ist die Bewährung* : {violet}la mise à l'épreuve, la confirmation{/violet}. L'homme {amber}fait ses preuves{/amber}, il se vérifie comme être générique, comme on dit d'une qualité qu'elle s'avère. Une essence ne se possède pas comme une qualité cachée : {coral}elle se vérifie dans ce qu'on fait{/coral}. Traduire *Bewährung* par « conservation », comme on l'a fait, serait {red}le confondre avec *Bewahrung*{/red}, qui veut dire conservation.
 
-    **Ce que la comparaison rend inévitable :** l'ouvrier aliéné, qui ne travaille que pour survivre, sous la contrainte du besoin, {amber}produit sur le mode animal{/amber}. C'est ce que dira le paragraphe suivant.
+    **Pourquoi dans la production plutôt que dans la pensée ?** Le raisonnement implicite reprend le texte précédent.
+    - L'être générique a été défini par {amber}l'activité vitale consciente{/amber}.
+    - L'activité vitale de l'homme est {amber}la vie productive{/amber}.
+    - C'est donc {coral}dans la production qu'il doit faire la preuve de ce qu'il est{/coral}.
 
-    **1.3 La mesure et la beauté.** L'animal façonne selon la mesure de son espèce ; l'homme sait produire {violet}« à la mesure de toute espèce »{/violet} et appliquer à l'objet {violet}« la mesure inhérente »{/violet} (*das inhärente Maß* ; GF dit « sa nature inhérente ») ; {amber}donc{/amber} (*daher*) il façonne aussi {coral}« d'après les lois de la beauté »{/coral}. La fréquentation des belles formes éduque les facultés génériques. La beauté est {violet}l'accord de la forme et de la mesure de l'objet{/violet} : créant selon les lois des choses et de leur genre, l'homme {violet}fait apparaître ces lois dans l'objet{/violet}, et y manifeste sa relation au genre. On peut y voir aussi un Marx « grec », pour qui l'art grec garde une valeur éternelle.
+    **Pourquoi la production montre-t-elle que l'homme agit pour l'espèce ?** Parce qu'{amber}un objet produit sert à d'autres que son producteur, et lui survit{/amber}. {yellow}Le bâtisseur d'un pont travaille pour des passants qu'il ne connaîtra pas : il agit pour l'espèce comme pour lui-même.{/yellow} Le monde objectif est le lieu où l'homme montre qu'il se rapporte à l'espèce « comme à sa propre essence ».
 
-    Des exemples : l'homme ne bâtit pas que des cabanes pour lui, mais {amber}des étables et des bergeries{/amber} ; il cultive chaque plante selon le terrain qui lui convient, en l'améliorant. Produire à la mesure de chaque espèce, c'est {green}servir la mesure d'un autre que soi{/green}.
+    **Pourquoi la fin de la phrase ?** « Qui se comporte à l'égard de l'espèce humaine comme… à l'égard de sa propre essence, ou à l'égard de soi en tant qu'être générique » : les deux formules sont {violet}réciproques{/violet}. L'espèce est pour l'homme ce qu'il est lui-même ; et se rapporter à soi, c'est se rapporter à l'espèce. On retrouve l'équivalence posée au début du texte précédent.
 
-    ! La beauté n'est pas {red}un luxe réservé à l'art{/red} : c'est {green}une dimension de toute production libre{/green}, celle de l'ébéniste comme celle du peintre.
+    ! « Production » ne désigne pas ici {red}la seule production économique{/red} : la suite l'étend à la production d'après les lois de la beauté. C'est {green}toute transformation de la nature par l'homme{/green}.
   passage:
     label: "§1"
     part: "1. L'homme s'affirme dans sa production"
-    text: "Par la production pratique d'un monde objectif, le façonnement de la nature non organique, l'homme s'affirme comme un être générique conscient, c'est-à-dire comme un être qui se comporte à l'égard de l'espèce humaine comme il se comporte à l'égard de sa propre essence, ou à l'égard de soi en tant qu'être générique. Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit d'une façon unilatérale, tandis que l'homme produit d'une façon universelle ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. L'animal ne produit que lui-même, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté."
+    text: "Par la production pratique d'un monde objectif, le façonnement de la nature non organique, l'homme s'affirme comme un être générique conscient, c'est-à-dire comme un être qui se comporte à l'égard de l'espèce humaine comme il se comporte à l'égard de sa propre essence, ou à l'égard de soi en tant qu'être générique."
   points:
   - id: m1844-p17-1
-    fragment: "1/3"
     sentence: "« Par ___, le façonnement de la nature non organique, l'homme s'affirme comme un être générique conscient, c'est-à-dire comme un être qui se comporte à l'égard de l'espèce humaine comme il se comporte à l'égard de sa propre essence, ou à l'égard de soi en tant qu'être générique. »"
     answer: "la production pratique d'un monde objectif"
     alt: []
   - id: m1844-p17-2
-    fragment: "1/3"
     sentence: "« Par la production pratique d'un monde objectif, le façonnement de la nature non organique, l'homme s'affirme comme ___, c'est-à-dire comme un être qui se comporte à l'égard de l'espèce humaine comme il se comporte à l'égard de sa propre essence, ou à l'égard de soi en tant qu'être générique. »"
     answer: "un être générique conscient"
-    alt: []
-  - id: m1844-p17-3
-    fragment: "2/3"
-    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ___ ; il produit d'une façon unilatérale, tandis que l'homme produit d'une façon universelle ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
-    answer: "ce dont il a immédiatement besoin pour lui ou pour son petit"
-    alt: []
-  - id: m1844-p17-4
-    fragment: "2/3"
-    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit ___, tandis que l'homme produit d'une façon universelle ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
-    answer: "d'une façon unilatérale"
-    alt: []
-  - id: m1844-p17-5
-    fragment: "2/3"
-    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit d'une façon unilatérale, tandis que l'homme produit ___ ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
-    answer: "d'une façon universelle"
-    alt: []
-  - id: m1844-p17-6
-    fragment: "2/3"
-    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit d'une façon unilatérale, tandis que l'homme produit d'une façon universelle ; il ne produit que ___, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
-    answer: "sous l'emprise du besoin physique immédiat"
-    alt: []
-  - id: m1844-p17-7
-    fragment: "2/3"
-    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit d'une façon unilatérale, tandis que l'homme produit d'une façon universelle ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit ___ et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
-    answer: "même lorsqu'il est libéré de tout besoin physique"
-    alt: []
-  - id: m1844-p17-8
-    fragment: "3/3"
-    sentence: "« L'animal ___, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté. »"
-    answer: "ne produit que lui-même"
-    alt: []
-  - id: m1844-p17-9
-    fragment: "3/3"
-    sentence: "« L'animal ne produit que lui-même, tandis que l'homme ___ ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté. »"
-    answer: "reproduit la nature tout entière"
-    alt: []
-  - id: m1844-p17-10
-    fragment: "3/3"
-    sentence: "« L'animal ne produit que lui-même, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme ___. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté. »"
-    answer: "affronte librement son produit"
-    alt: []
-  - id: m1844-p17-11
-    fragment: "3/3"
-    sentence: "« L'animal ne produit que lui-même, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire ___ et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté. »"
-    answer: "à la mesure de toute espèce"
-    alt: []
-  - id: m1844-p17-12
-    fragment: "3/3"
-    sentence: "« L'animal ne produit que lui-même, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet ___. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté. »"
-    answer: "sa nature inhérente"
-    alt: []
-  - id: m1844-p17-13
-    fragment: "3/3"
-    sentence: "« L'animal ne produit que lui-même, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après ___. »"
-    answer: "les lois de la beauté"
     alt: []
   - id: m1844-p17-e1
     sentence: "La production d'un monde objectif est la *Bewährung* de l'homme : __sa mise à l'___,__ sa confirmation comme être générique."
     answer: "épreuve"
+    alt: []
+  - id: m1844-p17-e6
+    sentence: "Traduire *Bewährung* par « conservation », c'est __le confondre avec *___*.__"
+    answer: "Bewahrung"
+    alt: []
+  - id: m1844-p17-x1
+    sentence: "*Das praktische Erzeugen* : __le mot *erzeugen* est celui de « la vie ___ la vie »__."
+    answer: "engendrant"
+    alt: []
+  - id: m1844-p17-x2
+    sentence: "Une essence ne se possède pas comme une qualité cachée : __elle se ___ dans ce qu'on fait.__"
+    answer: "vérifie"
+    alt: []
+  - id: m1844-p17-x3
+    sentence: "La production montre que l'homme agit pour l'espèce, parce qu'__un objet produit sert à d'autres que son producteur, et lui ___.__"
+    answer: "survit"
+    alt: []
+- id: m1844-p17b
+  title: "L'animal et l'homme : l'unilatéral et l'universel"
+  notes: |-
+    **Marx concède que l'animal produit, puis distingue sa production de celle de l'homme : l'animal produit {red}pour son besoin immédiat, de façon unilatérale, sous l'emprise du besoin{/red} ; l'homme produit {green}universellement, même libre du besoin{/green}, et ne produit vraiment que libéré de lui.**
+
+    **Pourquoi « certes, l'animal aussi produit » ?** La concession {amber}écarte l'idée que produire suffirait à définir l'homme{/amber} : la différence n'est pas dans le fait de produire, mais dans la manière. Et Marx choisit {violet}les exemples les plus favorables à l'animal{/violet} : l'abeille, le castor, la fourmi, trois bâtisseurs.
+
+    **Pourquoi « ce dont il a immédiatement besoin pour lui ou pour son petit » ?** C'est {amber}le cercle du besoin propre et de la reproduction{/amber}. L'animal ne produit rien au-delà.
+
+    **Pourquoi « unilatérale » et « universelle » ?** *Einseitig* : {violet}d'un seul côté{/violet}, selon une seule ligne ; universelle, selon toutes les directions. {yellow}Le castor bâtit toujours le même barrage, pour s'abriter ; l'homme construit des maisons, mais aussi des observatoires, des jardins et des cathédrales.{/yellow}
+
+    **Pourquoi « sous l'emprise » ?** L'allemand dit *unter der Herrschaft*, {red}sous la domination{/red} : le mot même de la domination du capital, au premier texte. L'animal est dominé par son besoin comme l'ouvrier par son produit.
+
+    **Pourquoi l'homme ne produit-il « vraiment » que libéré du besoin ?** *Erst wahrhaft*, « seulement alors vraiment » : {coral}la production vraie commence où finit la contrainte{/coral}. Le raisonnement implicite est le suivant. Ce qu'un être produit sous la contrainte d'un besoin {amber}révèle ce besoin, non ce qu'il est{/amber} ; ce qu'il produit sans y être contraint {amber}révèle ce qu'il est{/amber}. L'animal ne produit que sous le besoin, et sa production ne montre que son espèce ; l'homme, qui peut produire libre du besoin, montre dans cette production libre ce qui le caractérise, l'universalité. Tant qu'il produit sous la seule nécessité biologique, il ne fait que reproduire sa subsistance {red}sur un mode animal{/red}.
+
+    **Ce que la comparaison rend inévitable.** L'ouvrier aliéné, d'après les textes précédents, ne travaille que pour survivre, sous la contrainte du besoin physique : {coral}il produit donc sur le mode animal{/coral}. Les traits de la production animale sont ceux du travail aliéné : produire pour son seul besoin, sous la domination du besoin. La comparaison n'est pas {red}une digression sur les animaux{/red} : elle est {green}la mesure de ce que l'ouvrier perd{/green}. C'est ce que dira le paragraphe suivant.
+
+    **La preuve qui manquait au troisième texte.** La fuite du travail « comme la peste » ne prouvait l'aliénation qu'à condition qu'un autre travail soit possible ; la voici affirmée : {green}l'homme produit même libéré de tout besoin physique{/green}.
+
+    ! Marx ne {red}méprise pas le travail de subsistance{/red} : il dit seulement que la production humaine {green}ne s'y réduit pas{/green}, et que l'homme ne s'y montre pas tel qu'il est.
+  passage:
+    label: "§1"
+    part: "1. L'homme s'affirme dans sa production"
+    text: "Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit d'une façon unilatérale, tandis que l'homme produit d'une façon universelle ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré."
+  points:
+  - id: m1844-p17-3
+    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ___ ; il produit d'une façon unilatérale, tandis que l'homme produit d'une façon universelle ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
+    answer: "ce dont il a immédiatement besoin pour lui ou pour son petit"
+    alt: []
+  - id: m1844-p17-4
+    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit ___, tandis que l'homme produit d'une façon universelle ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
+    answer: "d'une façon unilatérale"
+    alt: []
+  - id: m1844-p17-5
+    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit d'une façon unilatérale, tandis que l'homme produit ___ ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
+    answer: "d'une façon universelle"
+    alt: []
+  - id: m1844-p17-6
+    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit d'une façon unilatérale, tandis que l'homme produit d'une façon universelle ; il ne produit que ___, tandis que l'homme produit même lorsqu'il est libéré de tout besoin physique et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
+    answer: "sous l'emprise du besoin physique immédiat"
+    alt: []
+  - id: m1844-p17-7
+    sentence: "« Certes, l'animal aussi produit. Il se construit un nid, des habitations, comme l'abeille, le castor, la fourmi, etc. Mais il ne produit que ce dont il a immédiatement besoin pour lui ou pour son petit ; il produit d'une façon unilatérale, tandis que l'homme produit d'une façon universelle ; il ne produit que sous l'emprise du besoin physique immédiat, tandis que l'homme produit ___ et ne produit vraiment que lorsqu'il en est vraiment libéré. »"
+    answer: "même lorsqu'il est libéré de tout besoin physique"
     alt: []
   - id: m1844-p17-e2
     sentence: "L'homme ne produit « vraiment » que libéré du besoin, car __ce qu'on produit sous la contrainte montre le ___,__ non ce qu'on est."
@@ -145,6 +218,108 @@ lessons:
     sentence: "L'ouvrier aliéné, qui ne travaille que pour survivre, __produit sur le mode ___.__"
     answer: "animal"
     alt: []
+  - id: m1844-p17b-x1
+    sentence: "« Certes, l'animal aussi produit » : __la différence n'est pas dans le fait de produire, mais dans la ___.__"
+    answer: "manière"
+    alt: []
+  - id: m1844-p17b-x2
+    sentence: "*Einseitig*, unilatérale : __selon une seule ___ ;__ universelle, selon toutes les directions."
+    answer: "ligne"
+    alt: ["direction"]
+  - id: m1844-p17b-x3
+    sentence: "« Sous l'emprise » traduit *unter der Herrschaft* : __le mot de la ___ du capital.__"
+    answer: "domination"
+    alt: []
+  - id: m1844-p17b-x4
+    sentence: "*Erst wahrhaft* : __la production vraie commence où finit la ___.__"
+    answer: "contrainte"
+    alt: []
+- id: m1844-p17c
+  title: "Reproduire la nature entière, faire librement face à son produit"
+  notes: |-
+    **Deux oppositions encore : l'animal {red}ne produit que lui-même{/red}, l'homme {green}reproduit la nature tout entière{/green} ; le produit de l'animal {red}fait partie de son corps{/red}, l'homme {green}fait librement face à son produit{/green}.**
+
+    **Que veut dire « l'animal ne produit que lui-même » ?** *Nur sich selbst* : l'animal {amber}reproduit son espèce et son mode de vie{/amber}, toujours les mêmes. Ce qu'il produit le refait tel qu'il était. {yellow}La ruche d'aujourd'hui est celle d'il y a dix mille ans.{/yellow}
+
+    **Que veut dire « l'homme reproduit la nature tout entière » ?** *Die ganze Natur reproduziert* : l'homme produit {amber}selon toutes les espèces{/amber}, il refait la nature à sa manière, la cultive, l'élève, la bâtit. C'est la forme pratique de l'universalité : le corps non organique du texte précédent devient {coral}un monde transformé{/coral}. Dans la nature travaillée, l'homme trouve sa propre marque : le monde produit {violet}représente l'activité humaine{/violet}.
+
+    **Pourquoi « fait directement partie de son corps physique » ?** L'allemand dit *Leib* : {amber}le nid prolonge l'animal{/amber}, comme un organe de plus. L'animal ne peut pas s'en détacher pour le regarder.
+
+    **Pourquoi « affronte librement son produit » ?** *Tritt frei seinem Produkt gegenüber* : c'est {coral}le verbe du premier texte{/coral}, *gegenübertreten*, où le produit « se dresse devant » l'ouvrier comme un être étranger. Ici, le même verbe est pris {green}dans son sens normal{/green} : l'homme se tient librement en face de ce qu'il a fait, il peut le regarder, le juger, le refaire autrement. Le travail aliéné ne crée pas la position en face, il {red}la rend hostile{/red}.
+
+    **Pourquoi cette distance est-elle une liberté ?** Parce que celui qui fait face à son produit {amber}n'est pas confondu avec lui{/amber}, comme l'animal avec son activité : il peut le vouloir autre. C'est la même distance que celle du texte précédent, où l'homme {amber}a{/amber} son activité au lieu de l'{amber}être{/amber}. {yellow}Le peintre recule pour juger son tableau ; l'oiseau ne recule pas pour juger son nid.{/yellow}
+
+    ! « Affronter » n'a pas ici {red}le sens d'un combat{/red} : c'est {green}se tenir en face{/green}, librement, ce que le travail aliéné va retourner en hostilité.
+  passage:
+    label: "§1"
+    part: "1. L'homme s'affirme dans sa production"
+    text: "L'animal ne produit que lui-même, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit."
+  points:
+  - id: m1844-p17-8
+    sentence: "« L'animal ___, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. »"
+    answer: "ne produit que lui-même"
+    alt: []
+  - id: m1844-p17-9
+    sentence: "« L'animal ne produit que lui-même, tandis que l'homme ___ ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme affronte librement son produit. »"
+    answer: "reproduit la nature tout entière"
+    alt: []
+  - id: m1844-p17-10
+    sentence: "« L'animal ne produit que lui-même, tandis que l'homme reproduit la nature tout entière ; le produit de l'animal fait directement partie de son corps physique, tandis que l'homme ___. »"
+    answer: "affronte librement son produit"
+    alt: []
+  - id: m1844-p17c-x1
+    sentence: "« L'animal ne produit que lui-même » : __il reproduit son espèce et son ___ de vie,__ toujours les mêmes."
+    answer: "mode"
+    alt: []
+  - id: m1844-p17c-x2
+    sentence: "Le produit de l'animal fait partie de son corps (*Leib*) : __le nid ___ l'animal.__"
+    answer: "prolonge"
+    alt: []
+  - id: m1844-p17c-x3
+    sentence: "« Affronte librement son produit » reprend *gegenübertreten*, __le verbe du premier texte, ici dans son sens ___.__"
+    answer: "normal"
+    alt: []
+  - id: m1844-p17c-x4
+    sentence: "Le travail aliéné ne crée pas la position en face du produit : __il la rend ___.__"
+    answer: "hostile"
+    alt: []
+- id: m1844-p17d
+  title: "À la mesure de toute espèce, d'après les lois de la beauté"
+  notes: |-
+    **L'animal façonne selon le modèle et les besoins de sa propre espèce ; l'homme sait produire {coral}selon le modèle de n'importe quelle espèce{/coral}, et donner à chaque objet la forme qui lui convient. {coral}C'est pourquoi il façonne aussi d'après les lois de la beauté.{/coral}** La description de la production humaine s'achève sur sa forme la plus haute.
+
+    ? **Mesure** (*Maß*) : la norme qui règle la forme d'une chose, {violet}le patron d'après lequel elle est faite{/violet}, ou la proportion qui lui convient. L'animal n'en connaît qu'une, celle de son espèce.
+
+    **Pourquoi « à la mesure de toute espèce » ?** *Nach dem Maß jeder species* : l'homme ne façonne pas seulement pour lui, selon ses besoins, mais {amber}selon ce qui convient à chaque chose{/amber}. {yellow}Il ne construit pas que des maisons pour lui : il construit des étables et des bergeries, et cultive chaque plante selon le terrain qui lui convient.{/yellow} Produire à la mesure de chaque espèce, c'est {green}servir la mesure d'un autre que soi{/green}. Et « sait produire » : savoir est ici {violet}un savoir-faire{/violet}.
+
+    **Pourquoi « sa nature inhérente » ?** L'allemand dit *das inhärente Maß dem Gegenstand anzulegen*, {violet}« appliquer à l'objet la mesure inhérente »{/violet}. La traduction « nature » {red}affaiblit le mot de mesure{/red}, qui fait le lien avec ce qui précède : l'homme donne à chaque objet la mesure qui lui est propre.
+
+    **Pourquoi « c'est pourquoi » ?** *Daher* : {coral}la beauté est déduite{/coral}. Le *daher* suppose deux prémisses.
+    - L'homme, {amber}libre du besoin{/amber}, n'est pas contraint d'imposer à la matière la forme qu'exige son besoin : il peut lui donner celle qui lui convient à elle.
+    - La beauté consiste dans {amber}l'accord d'une forme avec la mesure propre de son objet{/amber}, ce que la tradition classique appelait proportion ou convenance.
+
+    Si on admet les deux, la conclusion suit : un être qui sait produire selon la mesure de chaque chose, et qui n'en est pas empêché par l'urgence du besoin, {coral}peut produire de belles choses{/coral}. Créant selon les lois des choses et de leur genre, l'homme {violet}fait apparaître ces lois dans l'objet{/violet}, et y manifeste sa relation au genre. {yellow}Le jardinier qui taille un rosier selon la croissance propre du rosier, l'ébéniste qui suit le fil du bois au lieu de le forcer, produisent selon la mesure de l'objet ; et c'est de cet accord que naît la beauté de la rose taillée ou du meuble.{/yellow}
+
+    **Pourquoi « aussi » et « les lois » ?** *Auch* : la beauté {amber}s'ajoute à l'utilité, elle ne la remplace pas{/amber}. Et la beauté a {violet}des lois{/violet} : elle n'est pas un caprice. Marx ne dit pas lesquelles ; la définition de la beauté reste une reconstruction. La fréquentation des belles formes, d'ailleurs, éduque les facultés de l'espèce et forme des sens capables de jouissances humaines.
+
+    ! La beauté n'est pas {red}un luxe réservé à l'art{/red}, ni une théorie de l'art pour l'art : c'est {green}une dimension de toute production libre{/green}, celle de l'ébéniste comme celle du peintre.
+  passage:
+    label: "§1"
+    part: "1. L'homme s'affirme dans sa production"
+    text: "L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté."
+  points:
+  - id: m1844-p17-11
+    sentence: "« L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire ___ et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté. »"
+    answer: "à la mesure de toute espèce"
+    alt: []
+  - id: m1844-p17-12
+    sentence: "« L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet ___. C'est pourquoi l'homme façonne aussi d'après les lois de la beauté. »"
+    answer: "sa nature inhérente"
+    alt: []
+  - id: m1844-p17-13
+    sentence: "« L'animal ne façonne que selon la mesure et selon les besoins de l'espèce à laquelle il appartient, tandis que l'homme sait produire à la mesure de toute espèce et sait appliquer partout à l'objet sa nature inhérente. C'est pourquoi l'homme façonne aussi d'après ___. »"
+    answer: "les lois de la beauté"
+    alt: []
   - id: m1844-p17-e4
     sentence: "*Das inhärente Maß* : l'homme sait appliquer à l'objet __la ___ inhérente__ (GF : « sa nature inhérente »)."
     answer: "mesure"
@@ -152,10 +327,6 @@ lessons:
   - id: m1844-p17-e5
     sentence: "La beauté n'est pas un luxe : c'est __une dimension de toute production ___.__"
     answer: "libre"
-    alt: []
-  - id: m1844-p17-e6
-    sentence: "Traduire *Bewährung* par « conservation », c'est __le confondre avec *___*.__"
-    answer: "Bewahrung"
     alt: []
   - id: m1844-p17-e7
     sentence: "Produire à la mesure de chaque espèce : l'homme bâtit __des ___ et des bergeries__, pas seulement des cabanes pour lui."
@@ -165,76 +336,105 @@ lessons:
     sentence: "Créant selon les lois des choses, l'homme __fait ___ ces lois dans l'objet__ et y manifeste sa relation au genre."
     answer: "apparaître"
     alt: []
+  - id: m1844-p17d-x1
+    sentence: "La **mesure** (*Maß*) : __le ___ d'après lequel une chose est faite,__ ou la proportion qui lui convient."
+    answer: "patron"
+    alt: ["modèle"]
+  - id: m1844-p17d-x2
+    sentence: "« C'est pourquoi » (*daher*) : __la beauté est ___.__"
+    answer: "déduite"
+    alt: []
+  - id: m1844-p17d-x3
+    sentence: "Prémisse implicite : la beauté est __l'accord d'une forme avec la ___ propre de son objet.__"
+    answer: "mesure"
+    alt: []
+  - id: m1844-p17d-x4
+    sentence: "« Aussi » (*auch*) : __la beauté s'ajoute à l'___, elle ne la remplace pas.__"
+    answer: "utilité"
+    alt: []
 - id: m1844-p18
-  title: "2.1 à 2.3 Se contempler dans son monde, la supériorité changée en infériorité"
+  title: "En façonnant le monde, la nature devient son œuvre"
   notes: |-
-    **L'objet produit est {coral}la vie générique de l'homme devenue objet{/coral} ; le lui arracher, c'est lui arracher sa vie générique, et {coral}changer sa supériorité sur l'animal en infériorité{/coral}.**
+    **Marx tire la conséquence de la description : c'est en façonnant le monde que l'homme est {coral}réellement{/coral} générique, et cette production est {coral}sa vie générique en acte{/coral}. La nature transformée devient son œuvre et sa réalité.**
 
-    **2.1 Se contempler dans un monde qu'il a créé.** « Précisément » (*Eben … daher*) : la phrase est déduite. La nature façonnée devient {violet}« son œuvre et sa réalité »{/violet} (*Werk*, *Wirklichkeit*). L'homme se {violet}dédouble{/violet} (*verdoppelt*), non seulement en pensée, comme la conscience de soi chez Hegel, mais {amber}« activement, réellement »{/amber}, et {coral}« se contemple dans un monde qu'il a lui-même créé »{/coral}. C'est le redoublement par lequel l'homme reprend à son compte l'activité vitale. Conséquence implicite : {amber}le rapport à soi passe par le monde produit{/amber}, et celui qui en est privé perd le moyen de se reconnaître.
+    **Pourquoi « précisément » ?** L'allemand dit *Eben* avec *daher*, « c'est justement donc » : {amber}la phrase est déduite{/amber} de la comparaison avec l'animal. Puisque la production humaine est universelle, libre, à la mesure de toute espèce, c'est en elle que l'homme se montre générique.
 
-    On y entend un écho de la *Phénoménologie* que loue le troisième manuscrit : Hegel conçoit {teal}« l'homme objectif, véritable parce que réel, comme le résultat de son propre travail »{/teal}, et le rapport actif de l'homme à lui-même comme être générique n'est possible que s'il {amber}« extériorise réellement par la création toutes ses forces génériques »{/amber}. Le travail, médiation entre l'homme et la nature, est aussi {green}la médiation entre l'homme et lui-même{/green}.
+    **Pourquoi « s'affirme réellement » ?** *Bewährt sich… erst wirklich* : se vérifie {violet}seulement alors effectivement{/violet}. Avant de produire, l'homme n'est générique qu'en puissance ; {coral}c'est dans l'œuvre qu'il le devient effectivement{/coral}.
 
-    **2.2 La supériorité changée en infériorité.** « Tandis que » traduit encore *Indem daher*. Le travail aliéné lui arrache sa vie générique, son {violet}« objectivité générique »{/violet}, et change son avantage en désavantage, l'allemand dit {amber}« en ce désavantage que »{/amber} sa nature, son corps non organique, lui est soustraite. Pourquoi une infériorité ? L'animal ne vit que d'une petite part de nature, mais {green}il la garde{/green} : son nid fait partie de son corps. L'homme vit de la nature entière ; si ce corps lui est retiré, {red}il est plus démuni que l'animal{/red}. Plus le corps est grand, plus la perte est grande.
+    **Pourquoi « sa vie générique active » ?** *Werktätiges Gattungsleben* : {violet}la vie générique en œuvre, au travail{/violet}. La vie de l'espèce n'est pas une idée qui planerait au-dessus des hommes : {amber}elle existe dans l'activité qui façonne le monde{/amber}.
 
-    **La propriété, privation de la nature.** Là est la racine d'une critique écologique : la propriété privée, d'abord celle de la terre, est {red}une privation de la nature{/red} ; l'ouvrier n'a plus de rapport direct à son corps non organique et ne l'atteint qu'en travaillant pour un autre. Si la nature est le corps de l'homme, la {violet}rupture du métabolisme{/violet} dont parlera *Le Capital* est {coral}l'aliénation fondamentale{/coral}, déjà là en germe.
+    **Pourquoi « son œuvre et sa réalité » ?** *Werk*, l'ouvrage ; *Wirklichkeit*, l'effectivité, de *wirken*, agir. La nature transformée est {coral}la réalité de l'homme{/coral}, au sens où elle est {amber}son effet{/amber} : en elle, son activité est devenue visible et durable. {yellow}Le paysan qui regarde ses champs, ses haies et ses chemins voit dans le paysage ce que lui et les siens ont fait de la terre.{/yellow}
 
-    **2.3 La vie générique, moyen de l'existence physique.** « De même » (*Ebenso*) : le premier volet, en faisant de l'activité libre un moyen, rejoint le second. Puis une phrase longtemps absente du texte de l'unité : {teal}« La conscience que l'homme a de son genre se transforme donc du fait de l'aliénation de telle façon que la vie générique devient pour lui un moyen »{/teal}. Pointe contre Feuerbach : la {violet}« conscience du genre »{/violet} n'est pas une faculté autonome, mais {coral}le redoublement de la pratique{/coral}, et elle se dégrade quand la pratique est réduite à la survie.
+    **Que prépare cette phrase ?** Si la nature façonnée est la réalité de l'homme, {red}lui en retirer l'accès, c'est lui retirer sa réalité{/red}. On retrouve la « perte de réalité » du premier texte, maintenant comprise : ce que l'ouvrier perd, c'est le monde où son activité devient réelle.
 
-    ! L'humanité n'est pas {red}une affaire d'objets{/red} ; mais pour un être naturel, {green}elle passe par eux{/green}.
+    **Un écho de Hegel.** Le troisième manuscrit loue la *Phénoménologie* d'avoir conçu {teal}« l'homme objectif, véritable parce que réel, comme le résultat de son propre travail »{/teal}. Marx en garde l'idée, mais la rapporte à {green}un être naturel qui façonne la matière{/green}, non à l'esprit.
+
+    ! La « réalité » de l'homme n'est pas {red}une possession{/red} : c'est {green}ce que son activité a produit et où elle demeure{/green}.
   passage:
     label: "§2"
     part: "2. Ce que le travail aliéné arrache"
-    text: "C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité. L'objet du travail est donc l'objectivation de la vie générique de l'homme, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et il se contemple ainsi dans un monde qu'il a lui-même créé. Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, sa véritable objectivité générique, et transforme sa supériorité sur l'animal en infériorité, puisque son corps non organique, la nature, lui est dérobé. De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme le moyen de son existence physique. La conscience que l'homme a de son genre se transforme donc du fait de l'aliénation de telle façon que la vie générique devient pour lui un moyen."
+    text: "C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité."
   points:
   - id: m1844-p18-1
-    fragment: "1/2"
-    sentence: "« C'est précisément en façonnant le monde objectif que l'homme ___. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité. L'objet du travail est donc l'objectivation de la vie générique de l'homme, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et il se contemple ainsi dans un monde qu'il a lui-même créé. »"
+    sentence: "« C'est précisément en façonnant le monde objectif que l'homme ___. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité. »"
     answer: "s'affirme réellement comme un être générique"
     alt: []
   - id: m1844-p18-2
-    fragment: "1/2"
-    sentence: "« C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est ___. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité. L'objet du travail est donc l'objectivation de la vie générique de l'homme, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et il se contemple ainsi dans un monde qu'il a lui-même créé. »"
+    sentence: "« C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est ___. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité. »"
     answer: "sa vie générique active"
     alt: []
   - id: m1844-p18-3
-    fragment: "1/2"
-    sentence: "« C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme ___. L'objet du travail est donc l'objectivation de la vie générique de l'homme, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et il se contemple ainsi dans un monde qu'il a lui-même créé. »"
+    sentence: "« C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme ___. »"
     answer: "son œuvre et sa réalité"
     alt: []
+  - id: m1844-p18-e6
+    sentence: "Troisième manuscrit : Hegel conçoit __« l'homme objectif […] comme le ___ de son propre travail »__."
+    answer: "résultat"
+    alt: []
+  - id: m1844-p18-x1
+    sentence: "*Bewährt sich erst wirklich* : __c'est dans l'œuvre que l'homme devient ___ générique.__"
+    answer: "effectivement"
+    alt: ["réellement"]
+  - id: m1844-p18-x2
+    sentence: "*Werktätiges Gattungsleben* : __la vie générique en ___, au travail.__"
+    answer: "œuvre"
+    alt: []
+  - id: m1844-p18-x3
+    sentence: "*Werk*, *Wirklichkeit* : la nature transformée est la réalité de l'homme, __au sens où elle est son ___.__"
+    answer: "effet"
+    alt: []
+- id: m1844-p18b
+  title: "Se contempler dans un monde qu'il a créé"
+  notes: |-
+    **L'objet produit est {coral}la vie générique de l'homme devenue objet{/coral} : l'homme s'y dédouble, non en pensée, mais en réalité, et {coral}il se voit lui-même dans le monde qu'il a fait{/coral}.**
+
+    **Pourquoi « l'objectivation de la vie générique » ?** *Vergegenständlichung des Gattungslebens* : le mot du premier texte, où « la réalisation du travail est son objectivation », appliqué maintenant {amber}à l'espèce{/amber}. Ce que l'objet fixe, ce n'est pas seulement le travail d'un ouvrier, c'est la vie de l'espèce en lui.
+
+    **Que veut dire « se dédoubler » ?** *Sich verdoppeln* : le mot de Hegel, pour qui {violet}la conscience de soi est un dédoublement{/violet} : l'esprit se pose comme objet pour lui-même et se reconnaît dans cet objet.
+
+    ? **Dédoublement** (*Verdopplung*) : le mouvement par lequel un être {amber}se pose hors de lui pour se rapporter à lui-même{/amber}. C'est aussi le redoublement par lequel l'activité vitale, qui traverse tout vivant, est reprise par l'homme et devient la sienne.
+
+    **Pourquoi « non seulement intellectuellement, mais activement, réellement » ?** Marx {coral}garde la structure hégélienne et change le lieu{/coral}. L'homme ne se dédouble pas d'abord dans la pensée, mais {amber}dans la matière qu'il transforme{/amber} (*werktätig*, *wirklich*, par l'œuvre, effectivement). C'est dans le monde façonné qu'il se voit, {yellow}comme dans un miroir que son activité a fabriqué{/yellow}.
+
+    **Pourquoi « il se contemple » ?** *Anschaut* : il se voit, il s'intuitionne. Ce n'est pas {red}une jouissance narcissique{/red} : c'est {green}la confirmation de soi que procure l'œuvre{/green}. {yellow}L'artisan qui reconnaît sa main dans le meuble qu'il a fait sait, en le regardant, ce qu'il est capable de faire.{/yellow}
+
+    **La prémisse décisive.** Il en résulte que {coral}le rapport à soi de l'homme passe par le monde qu'il produit{/coral}. Celui qui en est privé {red}perd aussi le moyen de se reconnaître{/red}. C'est ce que la phrase suivante va tirer.
+
+    **Le travail comme double médiation.** Le travail est la médiation entre l'homme et la nature ; par là, il est aussi {coral}la médiation entre l'homme et lui-même{/coral}. Le troisième manuscrit le dit : le rapport actif de l'homme à lui-même comme être générique n'est possible que s'il {teal}« extériorise réellement par la création toutes ses forces génériques »{/teal}.
+
+    ! Se contempler dans son œuvre n'est pas {red}une affaire de conscience{/red}, qui pourrait se faire sans objet : c'est {green}une affaire de monde{/green}, qui suppose l'objet.
+  passage:
+    label: "§2"
+    part: "2. Ce que le travail aliéné arrache"
+    text: "L'objet du travail est donc l'objectivation de la vie générique de l'homme, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et il se contemple ainsi dans un monde qu'il a lui-même créé."
+  points:
   - id: m1844-p18-4
-    fragment: "1/2"
-    sentence: "« C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité. L'objet du travail est donc ___, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et il se contemple ainsi dans un monde qu'il a lui-même créé. »"
+    sentence: "« L'objet du travail est donc ___, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et il se contemple ainsi dans un monde qu'il a lui-même créé. »"
     answer: "l'objectivation de la vie générique de l'homme"
     alt: []
   - id: m1844-p18-5
-    fragment: "1/2"
-    sentence: "« C'est précisément en façonnant le monde objectif que l'homme s'affirme réellement comme un être générique. Cette production est sa vie générique active. Grâce à cette production, la nature apparaît comme son œuvre et sa réalité. L'objet du travail est donc l'objectivation de la vie générique de l'homme, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et ___. »"
+    sentence: "« L'objet du travail est donc l'objectivation de la vie générique de l'homme, car il ne se dédouble pas lui-même de façon seulement intellectuelle, comme c'est le cas dans la conscience, mais activement, réellement, et ___. »"
     answer: "il se contemple ainsi dans un monde qu'il a lui-même créé"
-    alt: []
-  - id: m1844-p18-6
-    fragment: "2/2"
-    sentence: "« Ainsi tandis que le travail aliéné ___, il lui arrache sa vie générique, sa véritable objectivité générique, et transforme sa supériorité sur l'animal en infériorité, puisque son corps non organique, la nature, lui est dérobé. De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme le moyen de son existence physique. »"
-    answer: "arrache à l'homme l'objet de sa production"
-    alt: []
-  - id: m1844-p18-7
-    fragment: "2/2"
-    sentence: "« Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, ___, et transforme sa supériorité sur l'animal en infériorité, puisque son corps non organique, la nature, lui est dérobé. De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme le moyen de son existence physique. »"
-    answer: "sa véritable objectivité générique"
-    alt: []
-  - id: m1844-p18-8
-    fragment: "2/2"
-    sentence: "« Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, sa véritable objectivité générique, et ___, puisque son corps non organique, la nature, lui est dérobé. De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme le moyen de son existence physique. »"
-    answer: "transforme sa supériorité sur l'animal en infériorité"
-    alt: []
-  - id: m1844-p18-9
-    fragment: "2/2"
-    sentence: "« Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, sa véritable objectivité générique, et transforme sa supériorité sur l'animal en infériorité, puisque ___. De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme le moyen de son existence physique. »"
-    answer: "son corps non organique, la nature, lui est dérobé"
-    alt: []
-  - id: m1844-p18-10
-    fragment: "2/2"
-    sentence: "« Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, sa véritable objectivité générique, et transforme sa supériorité sur l'animal en infériorité, puisque son corps non organique, la nature, lui est dérobé. De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme ___. »"
-    answer: "le moyen de son existence physique"
     alt: []
   - id: m1844-p18-e1
     sentence: "L'homme se dédouble non seulement en pensée, mais activement, et __« se contemple dans un monde qu'il a ___ »__."
@@ -244,9 +444,117 @@ lessons:
     sentence: "Conséquence implicite : __le rapport à soi passe par le ___,__ et celui qui en est privé perd le moyen de se reconnaître."
     answer: "monde produit"
     alt: []
+  - id: m1844-p18-e7
+    sentence: "Le travail, médiation entre l'homme et la nature, est aussi __la médiation entre l'homme et ___.__"
+    answer: "lui-même"
+    alt: []
+  - id: m1844-p18b-x1
+    sentence: "*Sich verdoppeln* : chez Hegel, __la conscience de soi est un ___.__"
+    answer: "dédoublement"
+    alt: []
+  - id: m1844-p18b-x2
+    sentence: "Marx garde la structure hégélienne du dédoublement __et change le ___ :__ la matière, non la pensée."
+    answer: "lieu"
+    alt: []
+  - id: m1844-p18b-x3
+    sentence: "« Il se contemple » : non une jouissance narcissique, mais __la ___ de soi que procure l'œuvre.__"
+    answer: "confirmation"
+    alt: []
+- id: m1844-p18c
+  title: "La supériorité changée en infériorité"
+  notes: |-
+    **Puisque l'objet produit est la vie générique de l'homme devenue objet, {coral}le lui prendre, c'est lui prendre sa vie générique{/coral}. Et ce qui faisait sa supériorité sur l'animal, faire de toute la nature son corps, {coral}devient une infériorité{/coral}, puisque ce corps lui est retiré.** La première moitié de la problématique est résolue.
+
+    **Pourquoi « ainsi tandis que » ?** L'allemand dit *Indem daher*, {violet}« en ce que donc »{/violet} : comme dans le texte précédent, la traduction {red}efface une construction causale{/red}, et le *daher* fait de la phrase une conséquence de la précédente. C'est {amber}en arrachant l'objet{/amber} que le travail aliéné arrache la vie générique.
+
+    **Pourquoi « arrache » ?** *Entreißt* : le mot est violent, et il est {amber}répété{/amber}. Ce qu'on arrache à l'homme avec l'objet, c'est sa vie générique.
+
+    **Pourquoi « sa véritable objectivité générique » ?** *Seine wirkliche Gattungsgegenständlichkeit* : {violet}la forme objective que prend sa vie générique dans le monde{/violet}. L'homme ne perd pas un objet parmi d'autres, il perd {coral}l'existence objective de ce qu'il est{/coral}.
+
+    **Pourquoi une infériorité, et non une simple égalité avec l'animal ?** L'allemand dit *in den Nachteil, daß*, {amber}« en ce désavantage que »{/amber} : l'infériorité consiste précisément en ceci que son corps non organique lui est retiré. Le raisonnement implicite tient à l'étendue même de ce que l'homme a de plus.
+    - L'animal ne vit que d'{amber}une petite part de nature{/amber}, mais {green}il la garde{/green} : son nid, son terrier font partie de son corps, personne ne les lui prend.
+    - L'homme vit de {amber}la nature entière{/amber}, qui est son corps ; si ce corps lui est retiré, il est dépossédé de tout ce dont il vit, et {red}plus démuni que l'animal{/red}, qui a au moins son terrier.
+
+    {coral}Plus le corps est grand, plus la perte est grande.{/coral} {yellow}Le maçon qui bâtit des immeubles pour toute une ville est moins bien logé que l'oiseau dans son nid.{/yellow}
+
+    **La première difficulté est résolue.** La supériorité de l'homme ne tient pas {red}à ce qu'il possède{/red}, mais {green}à la manière dont il se rapporte à la nature et s'y réalise{/green}. Mais cette manière {amber}passe par des objets{/amber} : si les objets lui sont retirés, la supériorité n'a plus où s'exercer.
+
+    **La propriété, privation de la nature.** Là est la racine d'une critique écologique : la propriété privée, d'abord celle de la terre, est {red}une privation de la nature{/red} ; l'ouvrier n'a plus de rapport direct à son corps non organique, et ne l'atteint qu'en travaillant pour un autre. Si la nature est le corps de l'homme, la {violet}rupture du métabolisme{/violet} dont parlera *Le Capital* est {coral}l'aliénation fondamentale{/coral}, déjà là en germe (voir le prolongement).
+
+    ! Marx ne {red}confond pas l'être et l'avoir{/red} : il dit que, pour un être naturel, {green}être suppose d'avoir accès à la nature{/green}, et que le travail aliéné coupe cet accès.
+  passage:
+    label: "§2"
+    part: "2. Ce que le travail aliéné arrache"
+    text: "Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, sa véritable objectivité générique, et transforme sa supériorité sur l'animal en infériorité, puisque son corps non organique, la nature, lui est dérobé."
+  points:
+  - id: m1844-p18-6
+    sentence: "« Ainsi tandis que le travail aliéné ___, il lui arrache sa vie générique, sa véritable objectivité générique, et transforme sa supériorité sur l'animal en infériorité, puisque son corps non organique, la nature, lui est dérobé. »"
+    answer: "arrache à l'homme l'objet de sa production"
+    alt: []
+  - id: m1844-p18-7
+    sentence: "« Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, ___, et transforme sa supériorité sur l'animal en infériorité, puisque son corps non organique, la nature, lui est dérobé. »"
+    answer: "sa véritable objectivité générique"
+    alt: []
+  - id: m1844-p18-8
+    sentence: "« Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, sa véritable objectivité générique, et ___, puisque son corps non organique, la nature, lui est dérobé. »"
+    answer: "transforme sa supériorité sur l'animal en infériorité"
+    alt: []
+  - id: m1844-p18-9
+    sentence: "« Ainsi tandis que le travail aliéné arrache à l'homme l'objet de sa production, il lui arrache sa vie générique, sa véritable objectivité générique, et transforme sa supériorité sur l'animal en infériorité, puisque ___. »"
+    answer: "son corps non organique, la nature, lui est dérobé"
+    alt: []
   - id: m1844-p18-e3
     sentence: "L'animal garde son nid ; l'homme, privé de la nature entière, son corps non organique, __est plus ___ que l'animal__."
     answer: "démuni"
+    alt: []
+  - id: m1844-p18-e8
+    sentence: "La propriété privée, d'abord celle de la terre, est __une ___ de la nature__."
+    answer: "privation"
+    alt: []
+  - id: m1844-p18c-x1
+    sentence: "« Ainsi tandis que » traduit *Indem daher* : __c'est en arrachant l'objet que le travail aliéné arrache la vie ___.__"
+    answer: "générique"
+    alt: []
+  - id: m1844-p18c-x2
+    sentence: "*Gattungsgegenständlichkeit* : __la forme ___ que prend la vie générique dans le monde.__"
+    answer: "objective"
+    alt: []
+  - id: m1844-p18c-x3
+    sentence: "Pourquoi une infériorité : __plus le corps est grand, plus la ___ est grande.__"
+    answer: "perte"
+    alt: []
+  - id: m1844-p18c-x4
+    sentence: "Pour un être naturel, __être suppose d'avoir ___ à la nature.__"
+    answer: "accès"
+    alt: []
+- id: m1844-p18d
+  title: "La vie générique, moyen de l'existence physique"
+  notes: |-
+    **Marx réunit les deux volets de la preuve : en dégradant l'activité libre au rang de moyen, {coral}le travail aliéné fait de la vie générique un moyen de survivre{/coral}. Et il en tire la conséquence pour la conscience même : {coral}l'espèce n'est plus pour l'homme qu'un moyen{/coral}.**
+
+    **Pourquoi « de même » ?** *Ebenso* : le second argument est {amber}mis en parallèle{/amber} avec le premier. Le travail aliéné prend à l'homme son objet (ce texte) et dégrade son activité (le texte précédent) : {coral}des deux côtés, il lui ôte sa vie générique{/coral}. La troisième détermination est ainsi établie.
+
+    **Pourquoi « l'activité propre, la libre activité » ?** *Die Selbsttätigkeit, die freie Tätigkeit* : {violet}l'auto-activité{/violet} du troisième texte, l'activité qui part de soi. « Dégrader au rang de moyen » (*zum Mittel herabsetzt*) : abaisser.
+
+    **Une phrase rétablie.** La seconde phrase manquait à l'extraction GF ; elle est reprise des Éditions sociales. Elle a une portée qu'il faut mesurer.
+
+    **Pourquoi « la conscience que l'homme a de son genre » ?** *Das Bewußtsein, welches der Mensch von seiner Gattung hat* : c'est {violet}le vocabulaire de Feuerbach{/violet}, pour qui l'homme se définit par la conscience de son genre. La phrase porte {coral}une pointe contre lui{/coral}.
+    - Pour Feuerbach, la conscience du genre est {red}une faculté théorique{/red} qui fait l'homme.
+    - Marx montre qu'{green}elle dépend de la pratique{/green} : si la vie générique est réduite à un moyen dans le travail, la conscience que l'homme a de son espèce se transforme en conséquence.
+
+    {coral}La conscience suit la pratique, au lieu de la fonder.{/coral} Elle n'est que le redoublement de la pratique, et elle se dégrade quand la pratique est réduite à la survie. {yellow}L'ouvrier qui ne travaille que pour son salaire finit par ne plus voir dans la société des hommes qu'une machine à fournir des salaires.{/yellow}
+
+    **Pourquoi « donc » ?** *Also* : la transformation de la conscience est {amber}une conséquence{/amber} de la dégradation de l'activité. La phrase sert de {violet}pivot{/violet} entre la démonstration et les résultats.
+
+    ! La première phrase ne fait pas que {red}répéter{/red} le texte précédent : elle {green}réunit les deux volets{/green} de la preuve avant les résultats, et la seconde ajoute l'effet de l'aliénation sur la conscience elle-même.
+  passage:
+    label: "§2"
+    part: "2. Ce que le travail aliéné arrache"
+    text: "De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme le moyen de son existence physique. La conscience que l'homme a de son genre se transforme donc du fait de l'aliénation de telle façon que la vie générique devient pour lui un moyen."
+  points:
+  - id: m1844-p18-10
+    sentence: "« De même, en dégradant au rang de moyen l'activité propre, la libre activité, le travail aliéné fait de la vie générique de l'homme ___. La conscience que l'homme a de son genre se transforme donc du fait de l'aliénation de telle façon que la vie générique devient pour lui un moyen. »"
+    answer: "le moyen de son existence physique"
     alt: []
   - id: m1844-p18-e4
     sentence: "Phrase rétablie : la conscience que l'homme a de son genre se transforme de telle façon que __la vie générique devient pour lui un ___.__"
@@ -256,92 +564,197 @@ lessons:
     sentence: "Pointe contre Feuerbach : la « conscience du genre » n'est pas une faculté autonome, mais __le ___ de la pratique__."
     answer: "redoublement"
     alt: []
-  - id: m1844-p18-e6
-    sentence: "Troisième manuscrit : Hegel conçoit __« l'homme objectif […] comme le ___ de son propre travail »__."
-    answer: "résultat"
+  - id: m1844-p18d-x1
+    sentence: "« De même » (*Ebenso*) : le travail aliéné ôte la vie générique des deux côtés, __l'objet et l'___.__"
+    answer: "activité"
     alt: []
-  - id: m1844-p18-e7
-    sentence: "Le travail, médiation entre l'homme et la nature, est aussi __la médiation entre l'homme et ___.__"
-    answer: "lui-même"
-    alt: []
-  - id: m1844-p18-e8
-    sentence: "La propriété privée, d'abord celle de la terre, est __une ___ de la nature__."
-    answer: "privation"
+  - id: m1844-p18d-x2
+    sentence: "La conscience du genre dépend de la pratique : __la conscience suit la pratique, au lieu de la ___.__"
+    answer: "fonder"
     alt: []
 - id: m1844-p19
-  title: "3.1 à 3.3 L'être générique étranger, l'homme étranger à l'homme"
+  title: "Le résultat 3) : l'être générique devenu étranger"
   notes: |-
-    **Les deux derniers résultats : l'être générique devient étranger à l'homme ; et, {coral}conséquence immédiate{/coral}, l'homme devient étranger à l'homme.**
+    **Marx énonce le troisième résultat : ce qui fait de l'homme un être générique, son rapport à la nature et ses facultés spirituelles, {coral}lui devient étranger et ne sert plus qu'à sa survie{/coral}. Puis il en détaille l'étendue : rien de l'homme n'est épargné.**
 
-    **3.1 Le résultat 3).** « Conduit donc » : *macht also*. L'être générique, « aussi bien la nature » (l'allemand dit *die Natur*, la nature extérieure ; GF « sa nature » prête à confusion) que ses facultés spirituelles, devient un être étranger, {amber}un moyen de son existence individuelle{/amber}. L'énumération (corps, monde extérieur, essence spirituelle, essence humaine) montre que {coral}rien de l'homme n'est épargné{/coral}.
+    **Pourquoi « conduit donc » ?** L'allemand dit *macht also*, « fait donc » : c'est {amber}la conclusion de toute la démonstration{/amber}. Et « 3) » reprend la numérotation du début du texte précédent, « 1) la nature et 2) lui-même ».
 
-    **3.2 Le résultat 4) : l'homme étranger à l'homme.** {teal}« Une conséquence immédiate »{/teal} (*unmittelbare Konsequenz*). Pourquoi immédiate ? Parce que l'être générique est {amber}d'emblée social{/amber} : se rapporter à soi comme à l'espèce, c'est déjà se rapporter aux autres, et l'aliénation de soi « se réalise et se reflète » dans le rapport à autrui. L'allemand le dit avec le verbe du premier texte : si l'homme se fait face à lui-même, {violet}l'autre homme lui fait face{/violet} (*steht ihm gegenüber*). Le travail est d'ailleurs une activité coopérative.
+    **Pourquoi « sa nature » ?** L'allemand dit *sowohl die Natur als sein geistiges Gattungsvermögen*, « aussi bien {violet}la nature{/violet} que sa faculté générique spirituelle ». Il s'agit de {amber}la nature extérieure{/amber}, le corps non organique ; la traduction « sa nature » {red}prête à confusion{/red}, comme s'il s'agissait de la nature intérieure de l'homme.
 
-    **3.3 Autrui mesuré à la condition d'ouvrier.** *Also* : chacun considère l'autre {coral}« selon les critères et les conditions de sa propre situation en tant qu'ouvrier »{/coral}, comme un rival pour sa subsistance ou comme un moyen. L'allemand dit *Maßstab*, l'étalon : on peut y entendre un écho à la « mesure de toute espèce » du premier paragraphe, l'universalité réduite à {amber}un seul étalon{/amber}.
+    **Que résume la phrase ?** Ce que le passage a démontré en trois temps : l'homme perd {amber}la nature{/amber}, son corps non organique ; {amber}son activité{/amber}, sa fonction proprement humaine ; et par là {amber}son espèce{/amber}, puisqu'il était générique par l'une et l'autre. Ce qui était sa vie générique devient {coral}« un moyen de son existence individuelle »{/coral}, la formule de l'inversion.
 
-    ! Pas de {red}morale de la fraternité perdue{/red} : une déduction à partir de la définition de l'homme, qui prépare la question suivante, {green}« à qui appartient le produit ? »{/green}, à « un autre homme que l'ouvrier ».
+    **Pourquoi l'énumération finale ?** « Son propre corps, le monde extérieur, son essence spirituelle, son essence humaine » : {coral}rien de ce qui constitue l'homme n'est épargné{/coral}. L'aliénation n'est {red}pas une perte partielle{/red}, elle touche l'homme {green}en tous ses rapports{/green}. « Son propre corps » traduit *seinen eignen Leib*, le corps de chair. {yellow}L'ouvrier dont le corps est usé par la chaîne, qui ne voit de la nature que l'atelier et dont l'esprit n'a plus d'emploi, est étranger à tout ce qui fait de lui un homme.{/yellow}
+
+    **Pourquoi l'esprit est-il sur le même plan que le corps ?** On serait tenté de croire que l'aliénation de l'esprit est {red}d'un autre ordre{/red}. Le texte les met {green}sur le même plan{/green}, parce que l'homme est un être naturel dont l'esprit aussi vit de la nature : le texte précédent parlait de sa {violet}« nature spirituelle non organique »{/violet}. Perdre la nature, c'est aussi perdre ce dont l'esprit se nourrit.
+
+    ! Le passage {red}ne démontre rien de nouveau{/red} : il récapitule la troisième détermination dans {green}une formule à retenir{/green}.
   passage:
     label: "§3"
     part: "3. Les deux derniers résultats"
-    text: "Le travail aliéné conduit donc aux résultats suivants : 3) L'être générique de l'homme, sa nature, aussi bien que ses facultés intellectuelles génériques, sont transformés en un être qui lui est étranger, en moyen de son existence individuelle. Le travail aliéné rend l'homme étranger à son propre corps, au monde extérieur aussi bien qu'à son essence spirituelle, à son essence humaine. 4) L'aliénation de l'homme par rapport à l'homme apparaît comme une conséquence immédiate du fait que l'homme est rendu étranger au produit de son travail, à son activité vitale, à son être générique. L'homme s'oppose à lui-même, il s'oppose aussi à autrui. Ce qui est vrai du rapport de l'homme à son travail, au produit de son travail et à lui-même, est vrai du rapport de l'homme à l'autre ainsi qu'au travail et à l'objet du travail de l'autre. D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que les hommes sont devenus étrangers les uns aux autres et que chacun d'eux est devenu étranger à l'essence humaine. L'aliénation de l'homme, plus généralement son rapport à lui-même, se réalise et se reflète dans son rapport à autrui. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui selon les critères et les conditions de sa propre situation en tant qu'ouvrier."
+    text: "Le travail aliéné conduit donc aux résultats suivants : 3) L'être générique de l'homme, sa nature, aussi bien que ses facultés intellectuelles génériques, sont transformés en un être qui lui est étranger, en moyen de son existence individuelle. Le travail aliéné rend l'homme étranger à son propre corps, au monde extérieur aussi bien qu'à son essence spirituelle, à son essence humaine."
   points:
   - id: m1844-p19-1
-    fragment: "1/3"
     sentence: "« Le travail aliéné conduit donc aux résultats suivants : 3) L'être générique de l'homme, sa nature, aussi bien que ses facultés intellectuelles génériques, sont transformés en ___, en moyen de son existence individuelle. Le travail aliéné rend l'homme étranger à son propre corps, au monde extérieur aussi bien qu'à son essence spirituelle, à son essence humaine. »"
     answer: "un être qui lui est étranger"
     alt: []
   - id: m1844-p19-2
-    fragment: "1/3"
     sentence: "« Le travail aliéné conduit donc aux résultats suivants : 3) L'être générique de l'homme, sa nature, aussi bien que ses facultés intellectuelles génériques, sont transformés en un être qui lui est étranger, ___. Le travail aliéné rend l'homme étranger à son propre corps, au monde extérieur aussi bien qu'à son essence spirituelle, à son essence humaine. »"
     answer: "en moyen de son existence individuelle"
     alt: []
   - id: m1844-p19-3
-    fragment: "1/3"
     sentence: "« Le travail aliéné conduit donc aux résultats suivants : 3) L'être générique de l'homme, sa nature, aussi bien que ses facultés intellectuelles génériques, sont transformés en un être qui lui est étranger, en moyen de son existence individuelle. Le travail aliéné rend l'homme ___, au monde extérieur aussi bien qu'à son essence spirituelle, à son essence humaine. »"
     answer: "étranger à son propre corps"
-    alt: []
-  - id: m1844-p19-4
-    fragment: "2/3"
-    sentence: "« 4) L'aliénation de l'homme par rapport à l'homme apparaît comme ___ du fait que l'homme est rendu étranger au produit de son travail, à son activité vitale, à son être générique. L'homme s'oppose à lui-même, il s'oppose aussi à autrui. Ce qui est vrai du rapport de l'homme à son travail, au produit de son travail et à lui-même, est vrai du rapport de l'homme à l'autre ainsi qu'au travail et à l'objet du travail de l'autre. »"
-    answer: "une conséquence immédiate"
-    alt: []
-  - id: m1844-p19-5
-    fragment: "2/3"
-    sentence: "« 4) L'aliénation de l'homme par rapport à l'homme apparaît comme une conséquence immédiate du fait que l'homme est rendu étranger au produit de son travail, à son activité vitale, à son être générique. L'homme s'oppose à lui-même, ___. Ce qui est vrai du rapport de l'homme à son travail, au produit de son travail et à lui-même, est vrai du rapport de l'homme à l'autre ainsi qu'au travail et à l'objet du travail de l'autre. »"
-    answer: "il s'oppose aussi à autrui"
-    alt: []
-  - id: m1844-p19-6
-    fragment: "2/3"
-    sentence: "« 4) L'aliénation de l'homme par rapport à l'homme apparaît comme une conséquence immédiate du fait que l'homme est rendu étranger au produit de son travail, à son activité vitale, à son être générique. L'homme s'oppose à lui-même, il s'oppose aussi à autrui. Ce qui est vrai du rapport de l'homme à son travail, au produit de son travail et à lui-même, est vrai du rapport de l'homme à l'autre ainsi qu'au travail et ___. »"
-    answer: "à l'objet du travail de l'autre"
-    alt: []
-  - id: m1844-p19-7
-    fragment: "3/3"
-    sentence: "« D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que ___ et que chacun d'eux est devenu étranger à l'essence humaine. L'aliénation de l'homme, plus généralement son rapport à lui-même, se réalise et se reflète dans son rapport à autrui. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui selon les critères et les conditions de sa propre situation en tant qu'ouvrier. »"
-    answer: "les hommes sont devenus étrangers les uns aux autres"
-    alt: []
-  - id: m1844-p19-8
-    fragment: "3/3"
-    sentence: "« D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que les hommes sont devenus étrangers les uns aux autres et que chacun d'eux est devenu ___. L'aliénation de l'homme, plus généralement son rapport à lui-même, se réalise et se reflète dans son rapport à autrui. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui selon les critères et les conditions de sa propre situation en tant qu'ouvrier. »"
-    answer: "étranger à l'essence humaine"
-    alt: []
-  - id: m1844-p19-9
-    fragment: "3/3"
-    sentence: "« D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que les hommes sont devenus étrangers les uns aux autres et que chacun d'eux est devenu étranger à l'essence humaine. L'aliénation de l'homme, plus généralement son rapport à lui-même, ___. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui selon les critères et les conditions de sa propre situation en tant qu'ouvrier. »"
-    answer: "se réalise et se reflète dans son rapport à autrui"
-    alt: []
-  - id: m1844-p19-10
-    fragment: "3/3"
-    sentence: "« D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que les hommes sont devenus étrangers les uns aux autres et que chacun d'eux est devenu étranger à l'essence humaine. L'aliénation de l'homme, plus généralement son rapport à lui-même, se réalise et se reflète dans son rapport à autrui. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui ___. »"
-    answer: "selon les critères et les conditions de sa propre situation en tant qu'ouvrier"
     alt: []
   - id: m1844-p19-e1
     sentence: "Résultat 3) : l'allemand dit *sowohl die Natur als*, __la nature ___,__ là où GF dit « sa nature »."
     answer: "extérieure"
     alt: []
+  - id: m1844-p19-x1
+    sentence: "« Conduit donc » (*macht also*) : __la conclusion de toute la ___.__"
+    answer: "démonstration"
+    alt: []
+  - id: m1844-p19-x2
+    sentence: "Corps, monde extérieur, esprit, essence : __l'aliénation n'est pas une perte ___,__ elle touche l'homme en tous ses rapports."
+    answer: "partielle"
+    alt: []
+  - id: m1844-p19-x3
+    sentence: "L'esprit est sur le même plan que le corps, parce que l'esprit aussi __vit de la ___.__"
+    answer: "nature"
+    alt: []
+- id: m1844-p19b
+  title: "Le résultat 4) : l'homme étranger à l'homme"
+  notes: |-
+    **Marx tire la quatrième détermination : l'homme devenu étranger à son produit, à son activité et à son espèce {coral}devient étranger aux autres hommes{/coral}. Et il la donne pour {coral}une conséquence immédiate{/coral}.**
+
+    **Pourquoi « une conséquence immédiate » ?** *Unmittelbare Konsequenz* : {violet}sans moyen terme{/violet}. Le raisonnement implicite tient à la définition de l'être générique.
+    - L'homme {amber}se rapporte à lui-même comme à l'espèce{/amber} : c'est ce qui le fait générique.
+    - Son rapport à lui-même est donc {amber}déjà un rapport aux autres{/amber}, qui sont l'espèce présente.
+    - Perdre son être générique, c'est donc, sans étape intermédiaire, {coral}perdre le lien aux autres{/coral}.
+
+    L'être générique est {coral}d'emblée social{/coral}. La déduction est bien immédiate, {amber}à condition d'admettre la définition{/amber} posée dans le texte précédent.
+
+    **Pourquoi l'énumération « au produit, à son activité vitale, à son être générique » ?** Ce sont {violet}les trois déterminations{/violet} acquises, rappelées dans l'ordre. La quatrième les suppose toutes.
+
+    **Pourquoi « l'homme s'oppose à lui-même, il s'oppose aussi à autrui » ?** L'allemand dit : si l'homme se fait face à lui-même, {violet}alors l'autre homme lui fait face{/violet} (*so steht ihm der andre Mensch gegenüber*). C'est {coral}le verbe de l'objet étranger du premier texte{/coral}, *gegenübertreten* : le produit « se dressait devant » l'ouvrier ; c'est maintenant l'autre homme qui se dresse devant lui. {yellow}Deux ouvriers qui se disputent la même place à l'embauche se voient l'un l'autre comme des concurrents, non comme des membres d'une même espèce.{/yellow}
+
+    **Pourquoi le passage à autrui est-il si important ?** Parce qu'il fait passer l'aliénation {amber}du rapport d'un homme à ses choses au rapport des hommes entre eux{/amber}. C'est ce qui permettra, aussitôt après, de demander à qui appartient le produit, et de répondre : à {teal}« un autre homme que l'ouvrier »{/teal}.
+
+    ! Ce n'est pas {red}une morale de la fraternité perdue{/red} : c'est {green}une déduction à partir de la définition de l'homme{/green}, et c'est pourquoi elle peut être « immédiate ».
+  passage:
+    label: "§3"
+    part: "3. Les deux derniers résultats"
+    text: "4) L'aliénation de l'homme par rapport à l'homme apparaît comme une conséquence immédiate du fait que l'homme est rendu étranger au produit de son travail, à son activité vitale, à son être générique. L'homme s'oppose à lui-même, il s'oppose aussi à autrui."
+  points:
+  - id: m1844-p19-4
+    sentence: "« 4) L'aliénation de l'homme par rapport à l'homme apparaît comme ___ du fait que l'homme est rendu étranger au produit de son travail, à son activité vitale, à son être générique. L'homme s'oppose à lui-même, il s'oppose aussi à autrui. »"
+    answer: "une conséquence immédiate"
+    alt: []
+  - id: m1844-p19-5
+    sentence: "« 4) L'aliénation de l'homme par rapport à l'homme apparaît comme une conséquence immédiate du fait que l'homme est rendu étranger au produit de son travail, à son activité vitale, à son être générique. L'homme s'oppose à lui-même, ___. »"
+    answer: "il s'oppose aussi à autrui"
+    alt: []
   - id: m1844-p19-e2
     sentence: "L'aliénation d'autrui est « immédiate » parce que __l'être générique est d'emblée ___.__"
     answer: "social"
+    alt: []
+  - id: m1844-p19b-x1
+    sentence: "*Unmittelbare Konsequenz* : __une conséquence sans ___ terme.__"
+    answer: "moyen"
+    alt: []
+  - id: m1844-p19b-x2
+    sentence: "Se rapporter à soi comme à l'espèce, __c'est déjà se rapporter aux ___.__"
+    answer: "autres"
+    alt: []
+  - id: m1844-p19b-x3
+    sentence: "L'allemand dit que l'autre homme lui fait face (*steht gegenüber*) : __le verbe de l'objet ___ du premier texte.__"
+    answer: "étranger"
+    alt: []
+- id: m1844-p19c
+  title: "Ce qui est vrai du rapport à soi est vrai du rapport à l'autre"
+  notes: |-
+    **Marx étend aux rapports entre les hommes tout ce qu'il a dit du rapport de l'homme à lui-même : {coral}ce qui vaut de l'un vaut de l'autre{/coral}. Et il donne la formule générale : être étranger à son être générique, {coral}c'est être étranger aux autres{/coral}.**
+
+    **Pourquoi « ce qui est vrai… est vrai » ?** La phrase pose {amber}une correspondance terme à terme{/amber}.
+
+    | Rapport à soi | Rapport à l'autre |
+    | à son travail | au travail de l'autre |
+    | au produit de son travail | à l'objet du travail de l'autre |
+    | à lui-même | à l'autre homme |
+
+    Le travail et le produit de l'autre sont {amber}aussi étrangers à l'ouvrier que les siens{/amber}. {yellow}Le tisserand ne voit pas dans le pain qu'il achète le travail d'un boulanger, son semblable, mais une marchandise dont le prix pèse sur son salaire.{/yellow}
+
+    **Pourquoi « d'une manière générale, dire que… c'est dire que » ?** La formule est {violet}une équivalence{/violet}, non une inférence : être étranger à son être générique et être étranger aux autres hommes, {coral}c'est la même chose dite de deux façons{/coral}. On retrouve la structure des équivalences du texte précédent : les deux définitions de l'être générique, la conscience et l'espèce.
+
+    **Pourquoi « chacun d'eux est devenu étranger à l'essence humaine » ?** L'essence humaine n'est pas {red}une idée{/red} que chacun porterait en soi : elle existe {green}dans les rapports entre les hommes{/green}. Si ces rapports se défont, chacun perd ce qui faisait de lui un homme. La séparation des hommes entre eux et la perte de leur humanité sont {coral}un seul et même événement{/coral}.
+
+    **Ce que la phrase annonce.** Un an plus tard, la sixième des *Thèses sur Feuerbach* dira que l'essence humaine est {teal}« l'ensemble des rapports sociaux »{/teal}. La formule est déjà en germe ici : on ne peut être étranger à l'essence humaine qu'en étant étranger aux autres.
+
+    ! L'étrangeté entre les hommes n'est pas {red}un sentiment{/red} d'éloignement : c'est {green}un rapport réel{/green}, celui où le travail et le produit de chacun sont étrangers à tous.
+  passage:
+    label: "§3"
+    part: "3. Les deux derniers résultats"
+    text: "Ce qui est vrai du rapport de l'homme à son travail, au produit de son travail et à lui-même, est vrai du rapport de l'homme à l'autre ainsi qu'au travail et à l'objet du travail de l'autre. D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que les hommes sont devenus étrangers les uns aux autres et que chacun d'eux est devenu étranger à l'essence humaine."
+  points:
+  - id: m1844-p19-6
+    sentence: "« Ce qui est vrai du rapport de l'homme à son travail, au produit de son travail et à lui-même, est vrai du rapport de l'homme à l'autre ainsi qu'au travail et ___. D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que les hommes sont devenus étrangers les uns aux autres et que chacun d'eux est devenu étranger à l'essence humaine. »"
+    answer: "à l'objet du travail de l'autre"
+    alt: []
+  - id: m1844-p19-7
+    sentence: "« Ce qui est vrai du rapport de l'homme à son travail, au produit de son travail et à lui-même, est vrai du rapport de l'homme à l'autre ainsi qu'au travail et à l'objet du travail de l'autre. D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que ___ et que chacun d'eux est devenu étranger à l'essence humaine. »"
+    answer: "les hommes sont devenus étrangers les uns aux autres"
+    alt: []
+  - id: m1844-p19-8
+    sentence: "« Ce qui est vrai du rapport de l'homme à son travail, au produit de son travail et à lui-même, est vrai du rapport de l'homme à l'autre ainsi qu'au travail et à l'objet du travail de l'autre. D'une manière générale, dire que l'homme est étranger à son être générique, c'est dire que les hommes sont devenus étrangers les uns aux autres et que chacun d'eux est devenu ___. »"
+    answer: "étranger à l'essence humaine"
+    alt: []
+  - id: m1844-p19c-x1
+    sentence: "« Ce qui est vrai… est vrai » : une correspondance terme à terme __entre le rapport à soi et le rapport à ___.__"
+    answer: "l'autre"
+    alt: ["autrui"]
+  - id: m1844-p19c-x2
+    sentence: "« Dire que… c'est dire que » : __une ___, non une inférence.__"
+    answer: "équivalence"
+    alt: []
+  - id: m1844-p19c-x3
+    sentence: "L'essence humaine n'est pas une idée en chacun : __elle existe dans les ___ entre les hommes.__"
+    answer: "rapports"
+    alt: []
+  - id: m1844-p19c-x4
+    sentence: "Thèse VI sur Feuerbach : l'essence humaine est __« l'ensemble des rapports ___ »__."
+    answer: "sociaux"
+    alt: []
+- id: m1844-p19d
+  title: "Autrui mesuré à la condition d'ouvrier"
+  notes: |-
+    **Le rapport de l'homme à lui-même {coral}se réalise et se reflète{/coral} dans son rapport aux autres ; donc chacun juge l'autre {coral}d'après ce qu'il est lui-même devenu, un ouvrier{/coral}.** L'aliénation de chacun devient la forme même du rapport entre tous.
+
+    **Pourquoi « se réalise et se reflète » ?** Le rapport à autrui n'est {red}pas un rapport de plus{/red}, à côté du rapport à soi : c'est {green}le lieu où le rapport à soi devient effectif et visible{/green}. On ne sait ce qu'est un homme pour lui-même qu'en voyant comment il traite les autres.
+
+    **Pourquoi « donc » ?** *Also*, en tête de phrase : {amber}une conclusion{/amber}. Le raisonnement implicite tient en deux étapes.
+    - Chacun ne peut regarder autrui {amber}qu'à partir de ce qu'il est{/amber} : son rapport aux autres prolonge son rapport à lui-même.
+    - Ce que l'ouvrier est devenu, c'est {amber}un être dont l'activité n'est qu'un moyen de survivre et dont le produit appartient à un autre{/amber}.
+
+    Il ne peut donc voir l'autre homme que selon cette même mesure : {coral}comme un moyen, un concurrent ou un maître{/coral}, jamais comme un être générique avec qui il partage une espèce. Au lieu d'une coopération consciente, le travail aliéné installe {red}la concurrence entre des individus séparés{/red}. {yellow}Le mineur qui craint que l'embauche d'un nouveau venu fasse baisser son salaire le voit d'abord comme une menace.{/yellow}
+
+    **Pourquoi « pris dans le rapport du travail aliéné » ?** *In dem Verhältnis der entfremdeten Arbeit* : le travail aliéné est {violet}un rapport{/violet}, dans lequel les hommes sont pris, non une simple manière de travailler. C'est le rapport qui façonne leur manière de se voir.
+
+    **Pourquoi « les critères et les conditions » ?** L'allemand dit *nach dem Maßstab und dem Verhältnis*, {violet}« selon l'étalon et le rapport »{/violet}. Le mot *Maßstab*, l'étalon, {coral}fait écho à la « mesure » (*Maß*) du premier paragraphe{/coral}. L'homme non aliéné savait produire « à la mesure de toute espèce » ; l'homme aliéné n'a plus {red}qu'une mesure{/red}, celle de sa condition d'ouvrier, et il l'applique à tout, y compris aux autres hommes. {amber}L'universalité s'est rétrécie en un seul étalon{/amber}, comme celle de l'animal qui ne façonne que « selon la mesure de son espèce ».
+
+    **Pourquoi « chaque homme » ?** *Jeder Mensch*, {amber}sans exception{/amber} : y compris celui qui fait travailler, que la suite du manuscrit va considérer. Marx demandera aussitôt à qui appartient le produit, et répondra : à {teal}« un autre homme que l'ouvrier »{/teal}. La propriété privée en sera {teal}« la conséquence nécessaire »{/teal}.
+
+    ! Ce n'est pas {red}une observation morale sur l'égoïsme des ouvriers{/red} : c'est {green}une structure{/green}, où chacun est contraint de mesurer l'autre à la mesure de sa propre condition.
+  passage:
+    label: "§3"
+    part: "3. Les deux derniers résultats"
+    text: "L'aliénation de l'homme, plus généralement son rapport à lui-même, se réalise et se reflète dans son rapport à autrui. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui selon les critères et les conditions de sa propre situation en tant qu'ouvrier."
+  points:
+  - id: m1844-p19-9
+    sentence: "« L'aliénation de l'homme, plus généralement son rapport à lui-même, ___. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui selon les critères et les conditions de sa propre situation en tant qu'ouvrier. »"
+    answer: "se réalise et se reflète dans son rapport à autrui"
+    alt: []
+  - id: m1844-p19-10
+    sentence: "« L'aliénation de l'homme, plus généralement son rapport à lui-même, se réalise et se reflète dans son rapport à autrui. Donc, pris dans le rapport du travail aliéné, chaque homme considère autrui ___. »"
+    answer: "selon les critères et les conditions de sa propre situation en tant qu'ouvrier"
     alt: []
   - id: m1844-p19-e3
     sentence: "L'aliénation de soi __« se réalise et se ___ »__ dans le rapport à autrui."
@@ -351,6 +764,22 @@ lessons:
     sentence: "Chacun considère l'autre selon sa condition d'ouvrier : __comme un ___ pour sa subsistance, ou comme un moyen__."
     answer: "rival"
     alt: ["concurrent"]
+  - id: m1844-p19d-x1
+    sentence: "Le rapport à autrui __est le lieu où le rapport à soi devient ___ et visible.__"
+    answer: "effectif"
+    alt: []
+  - id: m1844-p19d-x2
+    sentence: "« Pris dans le rapport du travail aliéné » : __le travail aliéné est un ___, où les hommes sont pris.__"
+    answer: "rapport"
+    alt: []
+  - id: m1844-p19d-x3
+    sentence: "*Maßstab*, l'étalon, fait écho à la *Maß* du premier paragraphe : __l'universalité s'est rétrécie en un seul ___.__"
+    answer: "étalon"
+    alt: []
+  - id: m1844-p19d-x4
+    sentence: "« Chaque homme » : __y compris celui qui fait ___,__ que la suite du manuscrit va considérer."
+    answer: "travailler"
+    alt: []
 - id: m1844e-o1
   title: "La rupture du métabolisme"
   notes: |-
