@@ -3,10 +3,10 @@ import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { ServerResponse } from 'node:http'
 import type { Plugin, Connect } from 'vite'
-import { parseDocument, Document, Scalar, YAMLSeq, YAMLMap, isMap } from 'yaml'
+import { parseDocument, Document, Pair, Scalar, YAMLSeq, YAMLMap, isMap, isScalar } from 'yaml'
 import { importQuizletRows, importTextUnitRows } from '../content/quizletImport.ts'
 import { pointProblems, tidyLine, tidyPoint, tidyText } from '../content/tidy.ts'
-import { orderTrackUnits } from '../../src/content/course.ts'
+import { ALPHABETICAL_TRACKS, orderTrackUnits } from '../../src/content/course.ts'
 
 /**
  * API de développement pour l'éditeur de contenu : lit et réécrit les
@@ -43,6 +43,7 @@ interface TreeTrack {
   title: string
   kind: string
   units: TreeUnit[]
+  sorted: boolean
 }
 
 interface TreeCourse {
@@ -172,6 +173,7 @@ function buildTree(): TreeCourse[] {
         title: String(t.title ?? t.id),
         kind: String(t.kind ?? 'grammar'),
         units: orderTrackUnits(id, t.order === 'chronological' ? 'chronological' : undefined, units),
+        sorted: ALPHABETICAL_TRACKS.has(id) || t.order === 'chronological',
       })
     }
     courses.push({ id: courseId, name, tracks })
@@ -253,6 +255,31 @@ function syncPoints(seq: YAMLSeq, points: PointDTO[]): void {
     }
     return buildPointNode(point)
   })
+}
+
+/**
+ * Pose ou retire le `group` d'une unité. Un groupe neuf se range juste après
+ * le sous-titre (ou le titre), là où les unités écrites à la main le portent,
+ * plutôt qu'en fin de fichier, après les leçons. Renvoie vrai si le fichier
+ * a changé.
+ */
+function setUnitGroup(root: YAMLMap, group: string | null): boolean {
+  const current = root.get('group')
+  const now = current == null ? null : String(current)
+  if (now === group) return false
+  if (group === null) {
+    root.delete('group')
+    return true
+  }
+  if (root.has('group')) {
+    setScalar(root, 'group', group)
+    return true
+  }
+  const after = ['subtitle', 'title', 'id']
+    .map((key) => root.items.findIndex((pair) => isScalar(pair.key) && pair.key.value === key))
+    .find((index) => index !== -1)
+  root.items.splice((after ?? -1) + 1, 0, new Pair(new Scalar('group'), dq(group)))
+  return true
 }
 
 /** Modifie la valeur d'un scalaire existant en place, plutôt que de le remplacer. */
@@ -506,6 +533,65 @@ export function contentEditorApi(): Plugin {
     configureServer(server) {
       server.middlewares.use('/api/tree', (_req, res) => {
         sendJson(res, 200, buildTree())
+      })
+
+      // Ordre et groupes des unités d'une piste, après un glisser-déposer
+      // dans l'arborescence : l'ordre s'écrit dans `course.yaml` (sauf pour
+      // une piste triée d'office, voir `orderTrackUnits`), le groupe dans le
+      // fichier de chaque unité dont il change. Les unités envoyées doivent
+      // être exactement celles de la piste.
+      server.middlewares.use('/api/track-units', async (req, res) => {
+        if (req.method !== 'PUT') {
+          sendJson(res, 405, { error: 'méthode non supportée' })
+          return
+        }
+        const url = new URL(req.url ?? '', 'http://localhost')
+        const course = url.searchParams.get('course')
+        const track = url.searchParams.get('track')
+        if (!course || !track) {
+          sendJson(res, 400, { error: 'course et track sont requis' })
+          return
+        }
+        try {
+          const body = JSON.parse(await readBody(req)) as { units?: { id?: string; group?: string | null }[] }
+          const wanted = (body.units ?? []).map((unit) => ({
+            id: String(unit.id ?? ''),
+            group: unit.group?.trim() ? unit.group.trim() : null,
+          }))
+          const courseFile = join(contentDir, course, 'course.yaml')
+          const courseDoc = readYamlDoc(courseFile)
+          const tracksData = ((courseDoc.toJS() as Record<string, unknown>).tracks ?? []) as Record<string, unknown>[]
+          const trackIdx = tracksData.findIndex((t) => t.id === track)
+          if (trackIdx === -1) {
+            sendJson(res, 404, { error: `piste "${track}" introuvable` })
+            return
+          }
+          const unitsSeq = courseDoc.getIn(['tracks', trackIdx, 'units'])
+          if (!(unitsSeq instanceof YAMLSeq)) throw new Error(`piste "${track}" sans tableau units`)
+          const nodes = new Map(unitsSeq.items.map((node) => [String(isScalar(node) ? node.value : node), node]))
+          if (wanted.length !== nodes.size || !wanted.every((unit) => nodes.has(unit.id))) {
+            sendJson(res, 409, { error: "les unités envoyées ne sont plus celles de la piste : recharge l'éditeur" })
+            return
+          }
+
+          const sorted = ALPHABETICAL_TRACKS.has(track) || tracksData[trackIdx]!.order === 'chronological'
+          if (!sorted) {
+            const order = wanted.map((unit) => unit.id)
+            if (order.join() !== [...nodes.keys()].join()) {
+              unitsSeq.items = order.map((id) => nodes.get(id)!)
+              writeYamlDoc(courseFile, courseDoc, { indentSeq: true })
+            }
+          }
+          for (const unit of wanted) {
+            const unitFile = join(contentDir, course, 'units', `${unit.id}.yaml`)
+            const doc = readYamlDoc(unitFile)
+            if (!isMap(doc.contents)) continue
+            if (setUnitGroup(doc.contents, unit.group)) writeYamlDoc(unitFile, doc)
+          }
+          sendJson(res, 200, { ok: true })
+        } catch (error) {
+          sendJson(res, 500, { error: String((error as Error).message) })
+        }
       })
 
       // Même conversion que `tools/content/from-quizlet.ts`, mais qui rend

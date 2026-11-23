@@ -23,6 +23,8 @@ export interface TreeTrack {
   title: string
   kind: TrackKind
   units: TreeUnit[]
+  /** Piste rangée d'office (glossaire par titre, piste chronologique) : son ordre ne se déplace pas. */
+  sorted: boolean
 }
 
 export interface TreeCourse {

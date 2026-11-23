@@ -15,6 +15,7 @@ import { isCitation } from './textUnit'
 import type { LessonTableDTO, PassageDTO, PointDTO, SkippedRowDTO, TrackKind, TreeCourse, TreeLesson, TreeTrack, TreeUnit } from './types'
 import { SujetsEditor } from './SujetsEditor'
 import { NewLessonDialog, NewUnitDialog, UnitSettingsDialog } from './UnitDialogs'
+import { moveUnit, type UnitTarget } from './unitGroups'
 
 /**
  * Éditeur visuel des rappels de cours, réservé au développement (`npm run
@@ -342,6 +343,63 @@ export default function ContentEditorScreen() {
     [loadTree, selection],
   )
 
+  /**
+   * Glisser-déposer d'une unité : la ranger ailleurs dans sa piste, dans un
+   * groupe ou hors de tout groupe (voir `moveUnit`). Les groupes créés par
+   * « + Nouveau groupe » restent vides, et propres à l'éditeur, tant
+   * qu'aucune unité n'y a été déposée : un groupe n'existe dans le contenu
+   * que par le `group` de ses unités.
+   */
+  const [unitDrag, setUnitDrag] = useState<{ course: string; track: string; unit: string } | null>(null)
+  const [unitDrop, setUnitDrop] = useState<UnitTarget | null>(null)
+  const [pendingGroups, setPendingGroups] = useState<Record<string, string[]>>({})
+  const writeTrackUnits = useCallback(
+    async (course: string, track: TreeTrack, units: { id: string; group: string | null }[]) => {
+      try {
+        const res = await fetch(`/api/track-units?course=${course}&track=${track.id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ units }),
+        })
+        const data = await res.json()
+        if (!res.ok) throw new Error(data.error ?? res.statusText)
+        const used = new Set(units.map((unit) => unit.group))
+        const key = `${course}/${track.id}`
+        setPendingGroups((current) => ({ ...current, [key]: (current[key] ?? []).filter((label) => !used.has(label)) }))
+        await loadTree()
+      } catch (err) {
+        window.alert(`Impossible de ranger les unités : ${(err as Error).message}`)
+      }
+    },
+    [loadTree],
+  )
+  const dropUnitOn = useCallback(
+    (course: string, track: TreeTrack, target: UnitTarget) => {
+      const dragged = unitDrag
+      setUnitDrag(null)
+      setUnitDrop(null)
+      if (!dragged || dragged.course !== course || dragged.track !== track.id) return
+      const next = moveUnit(track.units, dragged.unit, target)
+      const same = next.every(
+        (unit, index) => unit.id === track.units[index]?.id && unit.group === track.units[index]?.group,
+      )
+      if (!same) void writeTrackUnits(course, track, next)
+    },
+    [unitDrag, writeTrackUnits],
+  )
+  /** Renomme (`label`) ou défait (`null`) un groupe : ses unités changent de `group`, sans bouger. */
+  const regroup = useCallback(
+    (course: string, track: TreeTrack, members: TreeUnit[], label: string | null) => {
+      const ids = new Set(members.map((unit) => unit.id))
+      void writeTrackUnits(
+        course,
+        track,
+        track.units.map((unit) => ({ id: unit.id, group: ids.has(unit.id) ? label : unit.group })),
+      )
+    },
+    [writeTrackUnits],
+  )
+
   const save = useCallback(async (): Promise<boolean> => {
     if (!selection) return true
     setStatus('saving')
@@ -507,18 +565,56 @@ export default function ContentEditorScreen() {
                       {track.units.length === 0 && <span className="ml-1 font-normal text-ink-faint">(vide)</span>}
                     </summary>
                     <div className="ml-2 border-l-2 border-line pl-2">
-                      <button
-                        type="button"
-                        onClick={() => setDialog({ kind: 'newUnit', course: course.id, track })}
-                        className="mb-0.5 rounded-lg px-2 py-1 text-left text-xs font-bold text-ink-faint hover:bg-ink/5 hover:text-teal-deep"
-                      >
-                        + Nouvelle unité
-                      </button>
+                      <div className="flex gap-1">
+                        <button
+                          type="button"
+                          onClick={() => setDialog({ kind: 'newUnit', course: course.id, track })}
+                          className="mb-0.5 rounded-lg px-2 py-1 text-left text-xs font-bold text-ink-faint hover:bg-ink/5 hover:text-teal-deep"
+                        >
+                          + Nouvelle unité
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => {
+                              const label = window.prompt('Nom du nouveau groupe')?.trim()
+                              if (!label) return
+                              const key = `${course.id}/${track.id}`
+                              setPendingGroups((current) => ({
+                                ...current,
+                                [key]: [...(current[key] ?? []).filter((each) => each !== label), label],
+                              }))
+                            }}
+                            title="Créer un groupe, puis y glisser des unités"
+                            className="mb-0.5 rounded-lg px-2 py-1 text-left text-xs font-bold text-ink-faint hover:bg-ink/5 hover:text-teal-deep"
+                          >
+                            + Nouveau groupe
+                          </button>
+                      </div>
                       {groupUnits(track.units).map((entry, index) => {
                         const units = entry.units.map((unit) => (
                             <details key={unit.id} className="mb-0.5">
                               <summary
+                                draggable
+                                onDragStart={(event) => {
+                                  event.dataTransfer.effectAllowed = 'move'
+                                  setUnitDrag({ course: course.id, track: track.id, unit: unit.id })
+                                }}
+                                onDragEnd={() => {
+                                  setUnitDrag(null)
+                                  setUnitDrop(null)
+                                }}
                                 onDragOver={(event) => {
+                                  if (unitDrag) {
+                                    if (unitDrag.course !== course.id || unitDrag.track !== track.id || unitDrag.unit === unit.id)
+                                      return
+                                    event.preventDefault()
+                                    // Piste rangée d'office : l'unité ne fait que rejoindre le groupe de l'autre.
+                                    const box = event.currentTarget.getBoundingClientRect()
+                                    const side =
+                                      !track.sorted && event.clientY < box.top + box.height / 2 ? 'before' : 'after'
+                                    setUnitDrop({ kind: 'unit', unit: unit.id, side })
+                                    return
+                                  }
                                   if (!drag || drag.course !== course.id || drag.unit === unit.id) return
                                   event.preventDefault()
                                   setDropIndex(null)
@@ -526,6 +622,11 @@ export default function ContentEditorScreen() {
                                 }}
                                 onDragLeave={() => setDropUnit((current) => (current === unit.id ? null : current))}
                                 onDrop={(event) => {
+                                  if (unitDrag) {
+                                    event.preventDefault()
+                                    if (unitDrop?.kind === 'unit' && unitDrop.unit === unit.id) dropUnitOn(course.id, track, unitDrop)
+                                    return
+                                  }
                                   if (!drag || drag.course !== course.id || drag.unit === unit.id) return
                                   event.preventDefault()
                                   void moveLesson(drag.course, drag.unit, drag.lesson, unit.lessons.length, unit.id)
@@ -533,9 +634,23 @@ export default function ContentEditorScreen() {
                                   setDropIndex(null)
                                   setDropUnit(null)
                                 }}
-                                title={drag ? 'Déposer ici : la leçon passe à la fin de cette unité' : undefined}
-                                className={`group flex cursor-pointer items-center gap-1 rounded-lg px-2 py-1 text-xs font-bold ${
+                                title={
+                                  drag
+                                    ? 'Déposer ici : la leçon passe à la fin de cette unité'
+                                    : track.sorted
+                                      ? "Glisser l'unité dans un groupe (la piste reste rangée d'office)"
+                                      : "Glisser l'unité pour la ranger ailleurs ou dans un groupe"
+                                }
+                                className={`group flex cursor-pointer items-center gap-1 rounded-lg border-y-2 border-transparent px-2 py-1 text-xs font-bold ${
                                   drag && dropIndex === null && dropUnit === unit.id ? 'bg-teal/15' : ''
+                                } ${unitDrag?.unit === unit.id ? 'opacity-40' : ''} ${
+                                  unitDrop?.kind === 'unit' && unitDrop.unit === unit.id
+                                    ? track.sorted
+                                      ? 'bg-teal/15'
+                                      : unitDrop.side === 'before'
+                                      ? 'border-t-teal'
+                                      : 'border-b-teal'
+                                    : ''
                                 }`}
                               >
                                 <span className="flex-1">{unit.title.replace(/`/g, '')}</span>
@@ -664,11 +779,55 @@ export default function ContentEditorScreen() {
                             </details>
                           ))
                         // Un groupe se déploie comme un sous-onglet : son nom, puis ses unités en retrait.
-                        return entry.label ? (
-                          <details key={`g-${index}-${entry.label}`} className="mb-0.5">
-                            <summary className="cursor-pointer rounded-lg px-2 py-1 text-xs font-black text-ink-soft">
-                              {entry.label}
-                              <span className="ml-1 font-normal text-ink-faint">({entry.units.length})</span>
+                        const label = entry.label
+                        return label ? (
+                          <details key={`g-${index}-${label}`} className="mb-0.5">
+                            <summary
+                              onDragOver={(event) => {
+                                if (!unitDrag || unitDrag.course !== course.id || unitDrag.track !== track.id) return
+                                event.preventDefault()
+                                setUnitDrop({ kind: 'group', label })
+                              }}
+                              onDrop={(event) => {
+                                if (!unitDrag) return
+                                event.preventDefault()
+                                dropUnitOn(course.id, track, { kind: 'group', label })
+                              }}
+                              title={unitDrag ? "Déposer ici : l'unité passe à la fin de ce groupe" : undefined}
+                              className={`group flex cursor-pointer items-center gap-1 rounded-lg px-2 py-1 text-xs font-black text-ink-soft ${
+                                unitDrop?.kind === 'group' && unitDrop.label === label ? 'bg-teal/15' : ''
+                              }`}
+                            >
+                              <span className="flex-1">
+                                {label}
+                                <span className="ml-1 font-normal text-ink-faint">({entry.units.length})</span>
+                              </span>
+                              <button
+                                type="button"
+                                title="Renommer le groupe"
+                                onClick={(event) => {
+                                  event.preventDefault()
+                                  event.stopPropagation()
+                                  const renamed = window.prompt('Nouveau nom du groupe', label)?.trim()
+                                  if (renamed && renamed !== label) regroup(course.id, track, entry.units, renamed)
+                                }}
+                                className="rounded px-1 text-ink-faint opacity-0 hover:text-teal-deep group-hover:opacity-100"
+                              >
+                                ✎
+                              </button>
+                              <button
+                                type="button"
+                                title="Défaire le groupe (ses unités restent, sans groupe)"
+                                onClick={(event) => {
+                                  event.preventDefault()
+                                  event.stopPropagation()
+                                  if (window.confirm(`Défaire le groupe « ${label} » ? Ses unités restent à leur place, sans groupe.`))
+                                    regroup(course.id, track, entry.units, null)
+                                }}
+                                className="rounded px-1 text-ink-faint opacity-0 hover:text-error group-hover:opacity-100"
+                              >
+                                ✕
+                              </button>
                             </summary>
                             <div className="ml-2 border-l-2 border-line pl-2">{units}</div>
                           </details>
@@ -678,6 +837,62 @@ export default function ContentEditorScreen() {
                           </div>
                         )
                       })}
+                      {(pendingGroups[`${course.id}/${track.id}`] ?? [])
+                        .filter((label) => !track.units.some((unit) => unit.group === label))
+                        .map((label) => (
+                          <div
+                            key={`pending-${label}`}
+                            onDragOver={(event) => {
+                              if (!unitDrag || unitDrag.course !== course.id || unitDrag.track !== track.id) return
+                              event.preventDefault()
+                              setUnitDrop({ kind: 'group', label })
+                            }}
+                            onDrop={(event) => {
+                              if (!unitDrag) return
+                              event.preventDefault()
+                              dropUnitOn(course.id, track, { kind: 'group', label })
+                            }}
+                            className={`mb-0.5 flex items-center gap-1 rounded-lg border-2 border-dashed px-2 py-1 text-xs ${
+                              unitDrop?.kind === 'group' && unitDrop.label === label ? 'border-teal bg-teal/15' : 'border-line'
+                            }`}
+                          >
+                            <span className="flex-1">
+                              <span className="font-black text-ink-soft">{label}</span>
+                              <span className="ml-1 text-ink-faint">glisser des unités ici</span>
+                            </span>
+                            <button
+                              type="button"
+                              title="Retirer ce groupe vide"
+                              onClick={() => {
+                                const key = `${course.id}/${track.id}`
+                                setPendingGroups((current) => ({
+                                  ...current,
+                                  [key]: (current[key] ?? []).filter((each) => each !== label),
+                                }))
+                              }}
+                              className="rounded px-1 text-ink-faint hover:text-error"
+                            >
+                              ✕
+                            </button>
+                          </div>
+                        ))}
+                      {unitDrag?.course === course.id && unitDrag.track === track.id && (
+                        <div
+                          onDragOver={(event) => {
+                            event.preventDefault()
+                            setUnitDrop({ kind: 'loose' })
+                          }}
+                          onDrop={(event) => {
+                            event.preventDefault()
+                            dropUnitOn(course.id, track, { kind: 'loose' })
+                          }}
+                          className={`mb-0.5 rounded-lg border-2 border-dashed px-2 py-1 text-xs text-ink-faint ${
+                            unitDrop?.kind === 'loose' ? 'border-teal bg-teal/15' : 'border-line'
+                          }`}
+                        >
+                          {track.sorted ? 'Hors groupe' : 'Hors groupe, à la fin de la piste'}
+                        </div>
+                      )}
                     </div>
                   </details>
                 ))}
