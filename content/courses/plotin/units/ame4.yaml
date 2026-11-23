@@ -1,0 +1,318 @@
+# Cours « L'âme et sa descente », voir l'en-tête de ame1.yaml.
+# ame4 : pourquoi l'âme descend. Ce que Lacroix et Narbonne supposent connu
+# (la cause de la descente, le volontaire et le nécessaire, les deux fautes,
+# la puissance qui doit se manifester) est repris des cours des traités 6,
+# 10 et 27 (citations GF) ; s'y ajoutent Narbonne, p. 696-697 (le Phèdre
+# contre la République et le Timée), p. 700-701 (traités 33, 3 et 4) et
+# Lacroix, p. 100-107 (le traité 27 et la décision des âmes, ῥοπὴ
+# αὐτεξούσιος).
+
+id: ame4
+title: "Pourquoi l'âme descend"
+subtitle: "Une faute ou une mission ? L'audace, l'isolement, une inclinaison volontaire et nécessaire, une puissance qui doit se manifester"
+group: "L'âme et sa descente"
+icon: scale
+color: teal
+lessons:
+- id: ame4-l1
+  title: "Le problème : une faute ou une mission ?"
+  notes: |-
+    **La descente pose une question que Plotin trouve chez Platon même :** {amber}**l'âme vient-elle dans le corps par sa faute, ou envoyée par le dieu pour achever l'univers ?**{/amber} Toute la doctrine de la descente est une manière de tenir les deux à la fois.
+
+    **L'embarras de Plotin.** Le [[traite6|traité 6]] s'ouvre sur l'âme vue **par le haut** : Plotin, « redescendu de l'Intellect vers le raisonnement », ne sait pas {teal}« {/teal}{teal}__comment cette descente a lieu__ »{/teal}, ni comment son âme a jamais pu se trouver dans son corps, si elle est vraiment telle qu'elle s'est montrée. {coral}Quand on part de l'âme en elle-même, ce n'est plus la sortie du corps qui étonne, c'est l'entrée.{/coral}
+
+    **Deux séries de textes chez Platon.**
+
+    | Conception | Dialogues | La descente est… |
+    | pessimiste | Phédon, République, Phèdre | une faute et une peine |
+    | cosmologique | Timée | un achèvement voulu par le dieu |
+
+    - Dans la première série, {red}l'âme est enchaînée, ensevelie dans le corps, dans la caverne ; elle a perdu ses ailes{/red} : elle est responsable de sa chute et la subit comme une peine.
+    - Dans le *{sky}Timée{/sky}*, {green}l'âme est donnée par la bonté du démiurge pour que l'univers soit intelligent{/green} : sans elle, il manquerait au monde les genres de vivants qu'il doit contenir.
+
+    {amber}Si la descente est une faute, comment le dieu peut-il l'avoir voulue ? Si elle est voulue par le dieu, comment peut-elle être une faute ?{/amber}
+
+    **Ce que Plotin en tire.** {sky}Narbonne{/sky} montre que la tension entre ces énoncés lui fournit l'occasion d'une de ses conceptions les plus célèbres. On peut soutenir à la fois :
+
+    - {amber}avec le *Phèdre*{/amber} (248a et suiv.), que l'âme est **condamnée à descendre** dans le devenir ;
+    - {amber}avec la *République* et le *Timée*{/amber}, que cette descente **n'abolit pas la structure profonde, intellective et divine, de l'âme**, qui se maintient dans la descente.
+
+    L'âme en perd peut-être **conscience** en cours de route, mais elle peut, à force d'exercices philosophiques, la reconquérir par elle-même, puisqu'elle ne l'a jamais définitivement perdue (voir [[ame6|l'âme non descendue]]). Les successeurs de Plotin, {sky}Jamblique{/sky} puis {sky}Proclus{/sky}, tireront au contraire du *Phèdre* l'essentiel de leurs objections : pour eux, l'âme descend tout entière.
+
+    ! Plotin ne reproche pas à Platon d'être incohérent : il lit ses deux séries de textes comme deux points de vue sur une même réalité, la descente vue du côté de l'âme qui la fait et du côté de l'univers qui la reçoit.
+  points:
+  - id: ame4-l1-p1
+    sentence: "__La descente pose une question que Plotin trouve chez Platon même__ : l'âme vient-elle dans le corps par sa ___, ou envoyée par le dieu pour achever l'univers ?"
+    answer: "faute"
+    alt: []
+  - id: ame4-l1-p2
+    sentence: "__En partant de l'âme vue en elle-même, par le haut__, ce n'est plus la sortie du corps qui étonne, c'est l'___ : comment l'âme a-t-elle jamais pu y venir ?"
+    answer: "entrée"
+    alt: ["entree"]
+  - id: ame4-l1-p3
+    sentence: "__Le dialogue de Platon où l'âme est donnée par la bonté du démiurge pour que l'univers soit intelligent__, et où la descente est donc un achèvement, est le ___."
+    answer: "Timée"
+    alt: ["Timee"]
+  - id: ame4-l1-p4
+    sentence: "__Le dialogue de Platon où l'âme perd ses ailes, et qui fait de la descente une condamnation__, est le ___."
+    answer: "Phèdre"
+    alt: ["Phedre"]
+  - id: ame4-l1-p5
+    sentence: "__Le passage du *Phèdre* sur la descente des âmes partielles dans la génération__, dont Jamblique et Proclus tireront leurs objections à Plotin, se lit en ___ et suiv."
+    answer: "248a"
+    alt: ["248 a"]
+  - id: ame4-l1-p6
+    sentence: "__Selon Narbonne, Plotin tient à la fois le *Phèdre* et la *République* avec le *Timée*__ : l'âme est condamnée à descendre, mais cette descente n'abolit pas sa structure ___ et divine."
+    answer: "intellective"
+    alt: []
+  - id: ame4-l1-p7
+    sentence: "__Dans la descente, l'âme perd peut-être__ ___ de sa structure divine, mais elle peut la reconquérir par des exercices philosophiques, puisqu'elle ne l'a jamais perdue."
+    answer: "conscience"
+    alt: []
+  - id: ame4-l1-p8
+    sentence: "__Les deux successeurs néoplatoniciens qui tireront du *Phèdre* leurs objections contre l'âme non descendue__ sont Jamblique et ___."
+    answer: "Proclus"
+    alt: []
+  - id: ame4-l1-p9
+    sentence: "__Plotin lit les deux séries de textes de Platon sur la descente__ non comme une contradiction, mais comme deux ___ sur une même réalité."
+    answer: "points de vue"
+    alt: []
+
+- id: ame4-l2
+  title: "La cause : l'audace et l'isolement"
+  notes: |-
+    **Ce qui fait descendre l'âme n'est pas le corps, qui ne la tire pas, ni un décret qui l'y envoie : c'est un mouvement de l'âme elle-même,** {red}**l'audace de vouloir s'appartenir**{/red}**, par lequel elle quitte le tout pour s'occuper d'une partie.**
+
+    **L'audace.** Le [[traite10|traité 10]] s'ouvre sur la question : qu'est-ce qui a fait que les âmes ont oublié le dieu qui est leur père ? Réponse : {teal}« {/teal}L'origine du mal pour elles, c'est bien {teal}__l'audace__{/teal}, la génération, l'altérité première et {teal}__le fait de vouloir s'appartenir à elles-mêmes__ »{/teal} (chap. 1). L'{violet}audace{/violet} ({blue}*tolma*{/blue}) n'est pas un accident qui frappe l'âme du dehors : c'est **l'usage qu'elle fait de sa propre indépendance**, en courant dans la direction opposée à son principe, jusqu'à oublier sa lignée.
+
+    **L'isolement.** Le [[traite6|traité 6]] décrit le même mouvement de l'intérieur (chap. 4). Tant que les âmes restent avec l'Âme totale, elles gouvernent avec elle sans descendre, {yellow}comme ceux qui aident le roi à gouverner sans quitter les demeures royales{/yellow}. Puis {teal}« {/teal}les âmes s'éloignent de ce tout que forme l'Âme pour {teal}__devenir une partie__{/teal} et {teal}__être leurs propres maîtres__ »{/teal}, comme fatiguées d'être avec une autre. Le reste suit pas à pas : l'âme cesse de regarder l'intelligible, **s'isole, s'affaiblit, s'affaire**, se juche sur un seul objet, son corps, sans cesse heurté par tout le reste, et le gouverne avec embarras en pénétrant profondément en lui. {coral}La chute n'est pas d'avoir un corps, c'est de rétrécir son attention à une partie.{/coral}
+
+    **Pas un décret divin : une loi inscrite dans l'âme.** Au [[traite27|traité 27]], Plotin se distancie des thèses gnostiques : {green}la descente est le fait des âmes individuelles elles-mêmes{/green}, {red}non d'un décret divin{/red} (13, 17). Elles aperçoivent leur image {yellow}« comme si c'était dans le miroir de Dionysos »{/yellow} et s'élancent (chap. 12) ; chacune va vers le corps qui correspond à sa disposition, sans qu'on l'envoie, et descend, le moment venu, {yellow}comme à l'appel d'un héraut{/yellow} (chap. 13). Elle ne vient {red}ni de son plein gré, au sens d'un choix{/red}, {red}ni envoyée{/red} : c'est {green}comme un bond naturel{/green}.
+
+    {yellow}Le fonctionnaire qui quitte le conseil du roi pour administrer seul un village toujours menacé{/yellow} : il n'a pas été chassé, il a voulu être son propre maître, et c'est son nouveau poste qui l'accable.
+
+    ! L'âme n'est pas punie pour avoir un corps, comme si le corps était mauvais : elle souffre parce qu'elle s'est enfermée dans le souci d'une partie au lieu de gouverner avec le tout.
+  points:
+  - id: ame4-l2-p1
+    sentence: "__Ce qui fait descendre l'âme n'est ni le corps ni un décret__ : c'est un mouvement de l'âme elle-même, l'audace de vouloir s'___."
+    answer: "appartenir"
+    alt: []
+  - id: ame4-l2-p2
+    sentence: "« L'origine du mal pour elles, c'est bien ___, la génération, l'altérité première et le fait de vouloir s'appartenir à elles-mêmes » (traité 10, chap. 1)."
+    answer: "l'audace"
+    alt: []
+    citation: true
+  - id: ame4-l2-p3
+    sentence: "« L'origine du mal pour elles, c'est bien l'audace, la génération, l'altérité première et ___ » (traité 10, chap. 1)."
+    answer: "le fait de vouloir s'appartenir à elles-mêmes"
+    alt: []
+    citation: true
+  - id: ame4-l2-p4
+    sentence: "« L'origine du mal pour elles, c'est bien l'audace [...] » : __la question de l'oubli des âmes et sa réponse__ ouvrent le traité ___."
+    answer: "10 (V, 1)"
+    alt: ["10", "V, 1"]
+    citation: true
+  - id: ame4-l2-p5
+    sentence: "__L'audace de l'âme, origine de son mal__, se dit en grec *___*."
+    answer: "tolma"
+    alt: []
+  - id: ame4-l2-p6
+    sentence: "**L'audace** __n'est pas un accident qui frappe l'âme du dehors__ : c'est l'usage qu'elle fait de sa propre ___."
+    answer: "indépendance"
+    alt: ["independance"]
+  - id: ame4-l2-p7
+    sentence: "« Mais les âmes s'éloignent de ce tout que forme l'Âme pour devenir une partie et ___ » (traité 6, chap. 4)."
+    answer: "être leurs propres maîtres"
+    alt: []
+    citation: true
+  - id: ame4-l2-p8
+    sentence: "__Séparée du tout__, l'âme cesse de regarder l'intelligible, s'isole, s'affaiblit, s'___, et se juche sur un seul objet, son corps (traité 6, chap. 4)."
+    answer: "affaire"
+    alt: []
+  - id: ame4-l2-p9
+    sentence: "**La chute** __n'est pas d'avoir un corps__ : c'est de rétrécir son ___ à une partie, au lieu de gouverner avec le tout."
+    answer: "attention"
+    alt: []
+  - id: ame4-l2-p10
+    sentence: "__Au traité 27, Plotin se distancie des gnostiques__ : la descente est le fait des âmes individuelles elles-mêmes, non d'un ___ divin."
+    answer: "décret"
+    alt: ["decret"]
+  - id: ame4-l2-p11
+    sentence: "__Les âmes humaines aperçoivent leur image__ « comme si c'était dans le miroir de ___ » et s'élancent (traité 27, chap. 12)."
+    answer: "Dionysos"
+    alt: []
+    citation: true
+  - id: ame4-l2-p12
+    sentence: "__Au traité 27, chaque âme descend, le moment venu__, comme à l'appel d'un ___ : ni de son plein gré, ni envoyée."
+    answer: "héraut"
+    alt: ["heraut"]
+  - id: ame4-l2-p13
+    sentence: "__Ni choisie, ni imposée, la descente de l'âme ressemble au traité 27 à__ un ___ naturel."
+    answer: "bond"
+    alt: []
+
+- id: ame4-l3
+  title: "Volontaire et nécessaire ; les deux fautes"
+  notes: |-
+    **La descente est à la fois volontaire et nécessaire, parce que pour l'âme les deux coïncident :** {green}**« le volontaire est justement compris dans la nécessité »**{/green} ([[traite6|traité 6]], 5, 1-4). C'est ainsi que Plotin réconcilie la faute et la mission.
+
+    **« Volontaire » : un mouvement propre.** Il ne s'agit pas d'un choix entre plusieurs possibles : l'âme n'a pas la liberté de ne pas descendre. Le {violet}volontaire{/violet} ({blue}*hekousion*{/blue}) désigne un mouvement qu'aucune force extérieure ne contraint. Plotin parle d'une {violet}**inclinaison autonome**{/violet} ({blue}*rhopê autexousios*{/blue}) : l'âme vient dans le corps {teal}« {/teal}{teal}__par une libre inclinaison__{/teal}, et {teal}pour exercer sa puissance{/teal} et {teal}__mettre en ordre ce qui vient après elle__ »{/teal} (5, 26). Ce qui est **involontaire**, c'est le pire auquel elle aboutit.
+
+    **« Nécessaire » : une loi de sa nature.** La nécessité n'est pas une contrainte extérieure, mais **« une loi éternelle de la nature »** (5, 9-11) : la nature même de l'âme, qu'elle tient de son principe. Dire qu'un dieu l'a envoyée n'est donc pas faux, puisque tout doit être rapporté au principe dont il est issu.
+
+    **Comment les deux coïncident.** {coral}Une âme qui ne descendrait jamais cesserait d'être âme, puisque c'est sa fonction de gouverner qui la distingue de l'Intellect.{/coral} En descendant, elle **suit sa nature** (volontaire) et **s'inscrit dans l'ordre de l'univers** (nécessaire). {yellow}Le musicien de talent joue parce qu'il le veut, et pourtant il ne pourrait pas ne jamais jouer sans cesser d'être musicien.{/yellow}
+
+    **Les deux fautes** (5, 16-24). {teal}« {/teal}Cependant, étant donné que {teal}__la faute de l'âme est double__{/teal}, l'une concernant {teal}la cause de la descente{/teal}, l'autre {teal}le mal qu'elle commet quand elle est arrivée ici-bas{/teal}, le châtiment de la première faute est {teal}__cela même qu'elle subit en descendant__{/teal} […]{teal} »{/teal}.
+
+    | Faute | En quoi elle consiste | Son châtiment |
+    | la première | la cause de la descente | ce qu'elle subit en descendant |
+    | la seconde | le mal commis ici-bas | plonger dans d'autres corps |
+
+    {coral}Le premier châtiment n'est pas ajouté du dehors : c'est la descente même, avec ses peines.{/coral} Plotin retrouve les deux moments du mythe du *{sky}Phèdre{/sky}* : l'alourdissement de l'âme avant sa chute, puis la vie plus ou moins juste qu'elle mène dans le corps.
+
+    **Un problème qui restera.** Ce traité parle d'une **double faute**, parce que l'âme choisit de venir ici-bas ; le [[traite53|traité 53]], à la fin de la vie de Plotin, dira au contraire que **l'inclinaison n'est pas une faute** (voir [[ame5|l'unité suivante]]).
+
+    ! « Volontaire » ne veut pas dire « choisi » : l'âme adhère à sa nature, elle ne délibère pas. Et « nécessaire » ne veut pas dire « forcé » : la nécessité, c'est sa nature même.
+  points:
+  - id: ame4-l3-p1
+    sentence: "__La descente est volontaire et nécessaire, car pour l'âme__ « le volontaire est justement compris dans ___ » (traité 6, 5, 1-4)."
+    answer: "la nécessité"
+    alt: ["la necessite"]
+    citation: true
+  - id: ame4-l3-p2
+    sentence: "__Le « volontaire » de la descente n'est pas un choix entre des possibles__ : c'est un mouvement ___, qu'aucune force extérieure ne contraint."
+    answer: "propre"
+    alt: []
+  - id: ame4-l3-p3
+    sentence: "__Le « volontaire » de la descente__ se dit en grec *___*."
+    answer: "hekousion"
+    alt: ["hekousios"]
+  - id: ame4-l3-p4
+    sentence: "L'âme vient dans le corps « ___, et pour exercer sa puissance et mettre en ordre ce qui vient après elle » (traité 6, 5, 26)."
+    answer: "par une libre inclinaison"
+    alt: []
+    citation: true
+  - id: ame4-l3-p5
+    sentence: "L'âme vient dans le corps « par une libre inclinaison, et pour exercer sa puissance et ___ » (traité 6, 5, 26)."
+    answer: "mettre en ordre ce qui vient après elle"
+    alt: []
+    citation: true
+  - id: ame4-l3-p6
+    sentence: "__La « libre inclinaison » de l'âme au traité 6, inclinaison autonome__, se dit en grec *rhopê ___*."
+    answer: "autexousios"
+    alt: []
+  - id: ame4-l3-p7
+    sentence: "__La nécessité de la descente n'est pas une contrainte extérieure__ : c'est « une loi éternelle de la ___ » (traité 6, 5, 9-11)."
+    answer: "nature"
+    alt: []
+    citation: true
+  - id: ame4-l3-p8
+    sentence: "__Une âme qui ne descendrait jamais cesserait d'être âme__, puisque c'est sa fonction de ___ qui la distingue de l'Intellect."
+    answer: "gouverner"
+    alt: []
+  - id: ame4-l3-p9
+    sentence: "__En descendant, l'âme suit sa nature, ce qui la rend volontaire__, et s'inscrit dans l'ordre de l'___, ce qui la rend nécessaire."
+    answer: "univers"
+    alt: []
+  - id: ame4-l3-p10
+    sentence: "« Cependant, étant donné que ___, l'une concernant la cause de la descente, l'autre le mal qu'elle commet quand elle est arrivée ici-bas [...] » (traité 6, 5, 16-24)."
+    answer: "la faute de l'âme est double"
+    alt: []
+    citation: true
+  - id: ame4-l3-p11
+    sentence: "« le châtiment de la première faute est ___ » (traité 6, 5, 16-24) : il n'est pas ajouté du dehors, c'est la descente même."
+    answer: "cela même qu'elle subit en descendant"
+    alt: []
+    citation: true
+  - id: ame4-l3-p12
+    sentence: "__Le châtiment de la seconde faute de l'âme, le mal commis ici-bas__, est de plonger dans d'autres ___ (traité 6, chap. 5)."
+    answer: "corps"
+    alt: []
+  - id: ame4-l3-p13
+    sentence: "__Le traité 6 parle d'une double faute de l'âme ; à la fin de sa vie, le traité__ ___ __dira que l'inclinaison n'est pas une faute__."
+    answer: "53 (I, 1)"
+    alt: ["53", "I, 1"]
+
+- id: ame4-l4
+  title: "Pourquoi la descente est un bien : la puissance qui doit se donner"
+  notes: |-
+    **La descente n'est pas seulement une peine qu'on explique : c'est une œuvre. L'âme descend pour exercer sa puissance, et cette puissance vient de l'Un, qui ne la retient pas :** {coral}**une puissance qui s'arrêterait avant le corps serait une avarice**{/coral}. C'est la justification la plus profonde de la descente, et l'arme de Plotin contre les gnostiques.
+
+    **Une puissance qui ne s'exerce pas existe en vain.** Les puissances de l'âme, si elles étaient restées en repos dans l'incorporel, {red}« auraient existé en vain »{/red} ([[traite6|traité 6]], 5, 31). {teal}« {/teal}L'acte {teal}__révèle partout la puissance__{/teal} qui sans lui {teal}demeurerait totalement cachée »{/teal}. Plus encore, l'âme elle-même aurait ignoré ce qu'elle possède : {coral}le corps est ce par quoi l'âme devient visible à elle-même{/coral}. {yellow}Un pianiste qui n'aurait jamais touché un clavier ne saurait même pas qu'il l'est.{/yellow}
+
+    **La puissance sans jalousie.** Le [[traite6|traité 6]] fonde ce point sur ce qui fonde tout le système (chap. 6) : s'il n'y avait que l'Un, tout resterait caché ; de même, il ne faut pas qu'existent seulement des âmes sans que leurs produits deviennent visibles. La puissance venue de l'Un {green}« ne doit pas s'immobiliser, comme bornée par la jalousie »{/green}, mais avancer jusqu'à l'ultime limite possible (le dieu du *{sky}Timée{/sky}* était bon, et le bon est sans jalousie). D'où la conclusion : {teal}« {/teal}tout est {teal}__solidaire pour toujours__ »{/teal}, l'intelligible et le sensible, le sensible imitant l'intelligible autant qu'il le peut (6, 25-28). Le verbe grec dit que tout est **tenu ensemble** ({blue}*sunechetai*{/blue}).
+
+    **Chacun doit donner de lui-même.** Le [[traite33|traité 33]], contre les gnostiques, le redit avec une image : l'âme, toujours illuminée, fournit la lumière aux choses qui la suivent, {yellow}« comme si un feu demeurait quelque part au centre, et que venaient se réchauffer ceux qui le peuvent »{/yellow}. Et l'argument : {teal}« {/teal}nécessairement, {teal}__chacun doit donner de lui-même à un autre__{/teal}, ou {teal}le Bien ne sera pas un bien{/teal}, l'Intellect un intellect, ou l'Âme cela qu'elle est{teal} »{/teal} (3, 1-11). {coral}Donner n'est pas un accident de l'Âme, c'est son essence : une Âme qui ne donnerait rien ne serait plus une âme.{/coral}
+
+    **Contre une Âme qui serait tombée par oubli.** Les gnostiques racontent que l'Âme du monde s'est inclinée et a produit le monde après avoir oublié les réalités d'en haut. Plotin répond : {teal}« {/teal}Si l'âme s'est inclinée, c'est manifestement parce qu'elle a oublié les réalités de là-bas. Mais {teal}__si elle les a oubliées, comment peut-elle produire__ ?{/teal} Car d'où lui vient sa capacité de produire, sinon {teal}des réalités qu'elle a vues là-bas ? »{/teal} ([[traite33|traité 33]], 4, 7-9). {coral}Produire, c'est imiter ce qu'on contemple : une âme qui aurait oublié l'intelligible n'aurait plus rien à reproduire.{/coral}
+
+    **Même la chute instruit.** L'âme peut remonter après avoir éprouvé le mal : {teal}« {/teal}l'expérience du mal offre {teal}__une connaissance plus manifeste du bien__ »{/teal} à ceux qui sont trop faibles pour le connaître par une science préalable ([[traite6|traité 6]], chap. 7). {yellow}On ne mesure la santé qu'après avoir été malade{/yellow} : non que la maladie soit bonne, mais le contraste instruit.
+
+    ! Justifier la descente, ce n'est pas justifier le mal : c'est montrer que la production du monde par l'âme est un don nécessaire, et que la souffrance vient seulement de ce qu'une âme s'y enferme.
+  points:
+  - id: ame4-l4-p1
+    sentence: "__La puissance de l'âme vient de l'Un, qui ne la retient pas__ : une puissance qui s'arrêterait avant le corps serait une ___."
+    answer: "avarice"
+    alt: ["jalousie"]
+  - id: ame4-l4-p2
+    sentence: "__Les puissances de l'âme, restées en repos dans l'incorporel__, « auraient existé ___ » (traité 6, 5, 31)."
+    answer: "en vain"
+    alt: []
+    citation: true
+  - id: ame4-l4-p3
+    sentence: "« L'acte révèle partout la puissance qui sans lui ___ » (traité 6, chap. 5)."
+    answer: "demeurerait totalement cachée"
+    alt: []
+    citation: true
+  - id: ame4-l4-p4
+    sentence: "__Sans la descente, l'âme aurait ignoré ce qu'elle possède__ : le corps est ce par quoi l'âme devient ___ à elle-même."
+    answer: "visible"
+    alt: []
+  - id: ame4-l4-p5
+    sentence: "__La puissance venue de l'Un__ « ne doit pas s'immobiliser, comme bornée par la ___ » (traité 6, chap. 6)."
+    answer: "jalousie"
+    alt: []
+    citation: true
+  - id: ame4-l4-p6
+    sentence: "« tout est ___ pour toujours » (traité 6, 6, 25-28) : l'intelligible et le sensible, qui imite l'intelligible autant qu'il le peut."
+    answer: "solidaire"
+    alt: []
+    citation: true
+  - id: ame4-l4-p7
+    sentence: "__Que tout est « solidaire », « tenu ensemble » pour toujours (traité 6, chap. 6)__, le grec le dit par le verbe *___*."
+    answer: "sunechetai"
+    alt: ["synechetai", "sunekhetai"]
+  - id: ame4-l4-p8
+    sentence: "__L'âme toujours illuminée fournit la lumière à ce qui la suit__, « comme si un ___ demeurait quelque part au centre, et que venaient se réchauffer ceux qui le peuvent » (traité 33, chap. 3)."
+    answer: "feu"
+    alt: []
+    citation: true
+  - id: ame4-l4-p9
+    sentence: "« nécessairement, ___ à un autre, ou le Bien ne sera pas un bien, l'Intellect un intellect, ou l'Âme cela qu'elle est » (traité 33, 3, 1-11)."
+    answer: "chacun doit donner de lui-même"
+    alt: []
+    citation: true
+  - id: ame4-l4-p10
+    sentence: "« nécessairement, chacun doit donner de lui-même à un autre, ou ___, l'Intellect un intellect, ou l'Âme cela qu'elle est » (traité 33, 3, 1-11)."
+    answer: "le Bien ne sera pas un bien"
+    alt: []
+    citation: true
+  - id: ame4-l4-p11
+    sentence: "« Si l'âme s'est inclinée, c'est manifestement parce qu'elle a oublié les réalités de là-bas. Mais ___ ? » (traité 33, 4, 7-9)."
+    answer: "si elle les a oubliées, comment peut-elle produire"
+    alt: []
+    citation: true
+  - id: ame4-l4-p12
+    sentence: "« Car d'où lui vient sa capacité de produire, sinon ___ ? » (traité 33, 4, 7-9) : contre l'Âme du monde des gnostiques, tombée par oubli."
+    answer: "des réalités qu'elle a vues là-bas"
+    alt: []
+    citation: true
+  - id: ame4-l4-p13
+    sentence: "__Produire, c'est imiter ce qu'on contemple__ : une âme qui aurait ___ l'intelligible n'aurait plus rien à reproduire."
+    answer: "oublié"
+    alt: ["oublie"]
+  - id: ame4-l4-p14
+    sentence: "« l'expérience du mal offre une connaissance plus manifeste du ___ » (traité 6, chap. 7), à ceux qui sont trop faibles pour le connaître par une science préalable."
+    answer: "bien"
+    alt: []
+    citation: true

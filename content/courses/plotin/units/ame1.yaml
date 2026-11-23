@@ -1,0 +1,259 @@
+# Cours « L'âme et sa descente » (piste Idées de Plotin), unités ame1 à ame7,
+# selon le § « Un cours sur un auteur, tiré d'un commentaire » de
+# content/philosophie.md. Sources fournies par l'utilisateur (2026-11-23) :
+#  - F. Lacroix, mémoire sur le traité 6 (IV, 8), chap. 3 « L'âme chez Plotin »
+#    (p. 27-38) et chap. 5 « La descente de l'âme chez Plotin » (p. 100-111) ;
+#  - J.-M. Narbonne, « L'énigme de la non-descente partielle de l'âme chez
+#    Plotin : la piste gnostique/hermétique de l'ὁμοούσιος », Laval théologique
+#    et philosophique, 64, 3, 2008, p. 691-708.
+# Ce que ces textes supposent connu (la cause de la descente, le volontaire et
+# le nécessaire, les deux fautes, les âmes sœurs du traité 27) vient des cours
+# des traités 6, 10 et 27 déjà écrits d'après la GF ; leurs citations y sont
+# reprises dans la traduction GF, pour ne pas faire apprendre deux traductions
+# du même passage. Les autres citations de Plotin sont celles des deux
+# commentaires, dans leur traduction.
+#
+# ame1 : ce qu'est l'âme (Lacroix, chap. 3, introduction et 3.1 ; 3.2.2 pour
+# les logoi).
+
+id: ame1
+title: "Ce qu'est l'âme"
+subtitle: "Un logos de l'Intellect, une réalité indivisible, éternelle et pourtant dans le temps"
+group: "L'âme et sa descente"
+icon: wave
+color: teal
+lessons:
+- id: ame1-l1
+  title: "L'âme, image et raison de l'Intellect"
+  notes: |-
+    **Pour comprendre la descente de l'âme, il faut d'abord savoir ce qui descend : une réalité intelligible, la troisième après l'Un et l'Intellect, qui est la** {violet}**raison**{/violet} **(`logos`) de l'Intellect, c'est-à-dire l'Intellect déployé et rendu actif au-dehors.** Tout ce qu'on dira de ses rapports au corps découle de ce point : l'âme ne vient pas du corps, c'est le corps qui vient d'elle.
+
+    **L'âme vient de l'Intellect comme sa seconde activité.** Plotin le dit au [[traite10|traité 10]] : l'âme {teal}« {/teal}n'est qu'{teal}__une image de l'Intellect__ »{/teal}. Et il précise par une comparaison : {teal}« Tout comme le discours prononcé{/teal} est une image de {teal}la raison{/teal} qui se trouve dans l'âme, de même, l'âme est {teal}__la raison de l'Intellect__ »{/teal} (chap. 3). {yellow}Celui qui parle déploie en mots successifs une pensée qui, en lui, tient tout entière à la fois{/yellow} : l'âme est à l'Intellect ce que la phrase est à la pensée. Elle ne lui ajoute aucun contenu, elle le **déroule**.
+
+    **Elle est un {violet}logos{/violet}, et une multitude de {violet}logoi{/violet}.** {sky}Narbonne{/sky} résume ainsi ce point du système : « L'Âme est un logos universel et une pluralité de logoi ou principes rationnels ». Le mot vient des {sky}stoïciens{/sky}, mais Plotin le **platonise** ({sky}Brisson{/sky}) : chez les stoïciens, le logos qui façonne la matière est lui-même un corps ; chez Plotin, un contenu rationnel suppose {amber}une Forme dont il dépend, qu'il manifeste et qu'il rend présente{/amber}. Les logoi ont ainsi deux faces :
+
+    - {amber}l'expression des Formes dans le discours rationnel{/amber} : ce par quoi nous pouvons dire et définir ;
+    - {amber}des principes actifs{/amber} qui font apparaître dans le monde sensible **les images des Formes** : {yellow}le logos de l'olivier, présent dans la graine, fait pousser un olivier et non un chêne{/yellow}.
+
+    ! Un logos n'est pas un raisonnement. Le logos est un principe rationnel, présent tout entier et d'un coup ; le raisonnement ({blue}*logismos*{/blue}) va d'une prémisse à une conclusion. L'âme possède les logoi sans avoir à raisonner pour les avoir.
+
+    **L'âme est aussi pauvreté.** Dans le mythe de la naissance d'Éros du *{sky}Banquet{/sky}*, que lit le [[traite50|traité 50]], {sky}Hadot{/sky} voit dans {violet}Poros{/violet} (Expédient) l'âme du monde en tant qu'elle est {amber}le déploiement des Formes{/amber}, qui deviennent en elle des logoi, et dans {violet}Pénia{/violet} (Pauvreté) l'âme du monde en tant qu'elle est {amber}le réceptacle, la matière des logoi{/amber}, l'indigence de l'âme qui, par elle-même, est privée du beau et du bien, mais qui les désire. {coral}L'âme reçoit tout ce qu'elle a de l'Intellect : c'est pourquoi elle désire, et c'est pourquoi elle peut se tourner vers lui ou s'en détourner.{/coral}
+
+    **Une réalité intermédiaire.** Image de l'Intellect par le haut, principe des corps par le bas, l'âme est la seule réalité qui touche à la fois l'intelligible et le sensible. Toute la question de sa « descente » vient de là : comment une réalité de là-haut peut-elle être ici sans cesser d'être ce qu'elle est ?
+  points:
+  - id: ame1-l1-p1
+    sentence: "__L'âme ne vient pas du corps__ : troisième réalité après l'Un et l'Intellect, elle est **la ___ (logos) de l'Intellect**, l'Intellect déployé au-dehors."
+    answer: "raison"
+    alt: []
+  - id: ame1-l1-p2
+    sentence: "« Tout comme le discours prononcé est une image de la raison qui se trouve dans l'âme, de même, l'âme est la ___ » (traité 10, chap. 3)."
+    answer: "raison de l'Intellect"
+    alt: []
+    citation: true
+  - id: ame1-l1-p3
+    sentence: "« Tout comme ___ est une image de la raison qui se trouve dans l'âme, de même, l'âme est la raison de l'Intellect » (traité 10, chap. 3)."
+    answer: "le discours prononcé"
+    alt: []
+    citation: true
+  - id: ame1-l1-p4
+    sentence: "« Tout comme le discours prononcé est une image de la raison qui se trouve dans l'âme, de même, l'âme est la raison de l'Intellect » : __la comparaison qui fait de l'âme le déploiement de l'Intellect__ se lit au chapitre 3 du traité ___."
+    answer: "10 (V, 1)"
+    alt: ["10", "V, 1"]
+    citation: true
+  - id: ame1-l1-p5
+    sentence: "__La phrase déroule en mots successifs une pensée qui tient d'un coup__ : de même, l'âme n'ajoute aucun contenu à l'Intellect, elle le ___."
+    answer: "déroule"
+    alt: ["deroule", "déploie"]
+  - id: ame1-l1-p6
+    sentence: "__Pour résumer ce que l'âme est dans le système de Plotin__, Narbonne écrit : « l'Âme est un ___ universel et une pluralité de logoi ou principes rationnels »."
+    answer: "logos"
+    alt: []
+  - id: ame1-l1-p7
+    sentence: "__Le terme de logos, Plotin l'emprunte aux__ ___, mais il le platonise : le logos ne façonne plus la matière comme un corps, il dépend d'une Forme qu'il manifeste."
+    answer: "stoïciens"
+    alt: ["stoiciens", "Stoïciens"]
+  - id: ame1-l1-p8
+    sentence: "__Chez Plotin, le logos platonisé suppose__ une ___ dont il dépend, qu'il manifeste et qu'il rend présente."
+    answer: "Forme"
+    alt: ["forme"]
+  - id: ame1-l1-p9
+    sentence: "__Les logoi de l'âme ont deux faces__ : l'expression des Formes dans le discours rationnel, et des **principes ___** qui font apparaître dans le sensible les images des Formes."
+    answer: "actifs"
+    alt: []
+  - id: ame1-l1-p10
+    sentence: "**Un logos n'est pas un raisonnement** : __le principe rationnel est présent d'un coup, quand le raisonnement va d'une prémisse à une conclusion__ ; le raisonnement se dit en grec *___*."
+    answer: "logismos"
+    alt: []
+  - id: ame1-l1-p11
+    sentence: "__Dans le mythe du *Banquet* lu par le traité 50, Hadot voit dans__ **___** l'âme du monde en tant qu'elle est le déploiement des Formes, devenues en elle des logoi."
+    answer: "Poros"
+    alt: []
+  - id: ame1-l1-p12
+    sentence: "__Dans le mythe du *Banquet* lu par le traité 50, Hadot voit dans__ **___** l'âme du monde en tant qu'elle est le réceptacle des logoi, l'indigence qui, par elle-même, est privée du beau et du bien, mais les désire."
+    answer: "Pénia"
+    alt: ["Penia"]
+  - id: ame1-l1-p13
+    sentence: "__L'âme reçoit tout ce qu'elle a de l'Intellect__ : c'est pourquoi elle ___, et c'est pourquoi elle peut se tourner vers lui ou s'en détourner."
+    answer: "désire"
+    alt: ["desire"]
+  - id: ame1-l1-p14
+    sentence: "__Image de l'Intellect par le haut, principe des corps par le bas__, l'âme est la seule réalité qui touche à la fois l'intelligible et le ___ : d'où la question de sa descente."
+    answer: "sensible"
+    alt: []
+
+- id: ame1-l2
+  title: "Une âme sans parties : des puissances, non des morceaux"
+  notes: |-
+    **On parle des « parties » de l'âme (nutritive, sensitive, discursive, intellective), mais l'âme n'a pas de parties : ce sont des** {violet}**puissances**{/violet} **(`dunamis`) d'une réalité indivisible, et leurs distinctions sont** {coral}**purement logiques**{/coral}. C'est la condition de tout ce qui suit : si l'âme pouvait se couper, une part pourrait tomber et l'autre rester ; puisqu'elle ne se coupe pas, il faudra comprendre autrement qu'elle soit à la fois ici et là-bas.
+
+    **Le vocabulaire de Plotin.** Pour désigner les différents modes de l'âme, Plotin emploie à dessein le terme {blue}*dunamis*{/blue}, « puissance », et rappelle que l'âme n'est pas divisible ([[traite4|traité 4]], 1, 62-63 ; [[traite9|traité 9]], 1, 39-40).
+
+    **Pourtant, l'âme serait « divisible dans les corps ».** Le [[traite4|traité 4]] le dit (1, 74), ce qui semble contredire la thèse. {sky}Karfík{/sky} lève la difficulté : {coral}ce n'est pas l'âme qui est divisible, c'est le corps{/coral}, qui, étant divisible, doit être animé **dans chacune de ses parties**. {yellow}La main, l'œil et le pied vivent tous{/yellow}, mais ils ne reçoivent pas chacun un morceau d'âme : l'âme tout entière est présente à chacun, en y exerçant la fonction que l'organe permet (voir, toucher, marcher). D'où ses fonctions multiples, par lesquelles elle **rend manifestes toutes ses puissances** ([[traite6|traité 6]], 5, 29-30 ; [[traite8|traité 8]], 3, 10 et suiv.).
+
+    {yellow}Une science est tout entière en chacun de ses théorèmes{/yellow} : le [[traite27|traité 27]] retient ce seul sens du mot « partie » pour l'âme, d'où sa formule : {teal}« {/teal}chaque âme est {teal}__toute âme__ »{/teal} (chap. 2).
+
+    **La substance de l'âme ne dépend pas du corps.** Contre la lecture de {sky}Blumenthal{/sky}, qui prête à Plotin une âme-fonction de type {sky}aristotélicien{/sky}, {sky}Caluori{/sky} rappelle que {coral}c'est le corps qui dépend de l'âme{/coral} : l'âme n'est pas dans le corps comme chez {sky}Alexandre d'Aphrodise{/sky}. {red}Une âme qui ne serait que la fonction d'un corps naîtrait et périrait avec lui{/red} ; {green}l'âme de Plotin existe avant le corps et le fait vivre{/green}.
+
+    **Deux conséquences pour la descente.**
+
+    - Quand le [[traite6|traité 6]] dit qu'une **partie** ({blue}*meros*{/blue}) de notre âme est restée là-haut (4, 30-35 ; 8, 17 et suiv.), il parle **métaphoriquement** : une même âme indivisible exerce des puissances tournées vers le haut et vers le bas.
+    - De même, la séparation de l'âme en trois, l'Âme divine, l'âme du monde et l'âme dans les corps, n'est qu'**une manière de s'exprimer** au sujet d'une même réalité, selon la fonction qu'elle remplit (idée avancée déjà par {sky}Rich{/sky}).
+
+    ! « Partie » de l'âme ne désigne jamais un morceau : c'est une puissance, ou un rapport de l'âme tout entière à ce sur quoi elle agit.
+  points:
+  - id: ame1-l2-p1
+    sentence: "**L'âme n'a pas de parties** : nutritive, sensitive, discursive ou intellective, __ce qu'on appelle ses parties sont des__ ___ d'une réalité indivisible."
+    answer: "puissances"
+    alt: []
+  - id: ame1-l2-p2
+    sentence: "__Pour désigner les modes de l'âme, Plotin emploie à dessein le terme grec__ *___*, « puissance »."
+    answer: "dunamis"
+    alt: ["dynamis"]
+  - id: ame1-l2-p3
+    sentence: "__Les distinctions entre les facultés de l'âme__ (nutritive, sensitive…) sont purement ___ : elles ne découpent pas l'âme."
+    answer: "logiques"
+    alt: []
+  - id: ame1-l2-p4
+    sentence: "__Quand le traité 4 dit l'âme « divisible dans les corps »__, ce n'est pas l'âme qui se divise : c'est le ___, divisible, qui doit être animé dans chacune de ses parties."
+    answer: "corps"
+    alt: []
+  - id: ame1-l2-p5
+    sentence: "__Le commentateur qui explique que l'âme n'est « divisible dans les corps » que parce que le corps doit être animé partout__ est ___."
+    answer: "Karfík"
+    alt: ["Karfik"]
+  - id: ame1-l2-p6
+    sentence: "__La main, l'œil et le pied ne reçoivent pas chacun un morceau d'âme__ : l'âme **tout entière** est présente à chacun, en y exerçant la ___ que l'organe permet."
+    answer: "fonction"
+    alt: ["faculté", "puissance"]
+  - id: ame1-l2-p7
+    sentence: "« chaque âme est ___ » (traité 27, chap. 2) : comme une science tout entière en chacun de ses théorèmes."
+    answer: "toute âme"
+    alt: ["toute ame"]
+    citation: true
+  - id: ame1-l2-p8
+    sentence: "__Contre la lecture de Blumenthal, qui prête à Plotin une âme-fonction de type aristotélicien__, Caluori rappelle que c'est le ___ qui dépend de l'âme, et non l'inverse."
+    answer: "corps"
+    alt: []
+  - id: ame1-l2-p9
+    sentence: "__Le commentateur qui prête à Plotin une âme-fonction de type aristotélicien__, critiqué par Caluori, est ___."
+    answer: "Blumenthal"
+    alt: []
+  - id: ame1-l2-p10
+    sentence: "__Chez Plotin, l'âme n'est pas dans le corps comme chez__ ___, l'aristotélicien : sa substance ne dépend pas du corps."
+    answer: "Alexandre d'Aphrodise"
+    alt: ["Alexandre"]
+  - id: ame1-l2-p11
+    sentence: "__Une âme qui ne serait que la fonction d'un corps__ naîtrait et ___ avec lui ; l'âme de Plotin existe avant le corps et le fait vivre."
+    answer: "périrait"
+    alt: ["perirait", "mourrait"]
+  - id: ame1-l2-p12
+    sentence: "__Quand le traité 6 dit qu'une partie de notre âme est restée là-haut__, il parle ___ : une même âme indivisible a des puissances tournées vers le haut et vers le bas."
+    answer: "métaphoriquement"
+    alt: ["metaphoriquement"]
+  - id: ame1-l2-p13
+    sentence: "__La « partie » de l'âme restée là-haut, au traité 6__, traduit le grec *___*."
+    answer: "meros"
+    alt: ["méros"]
+  - id: ame1-l2-p14
+    sentence: "__La séparation de l'âme en Âme divine, âme du monde et âme dans les corps__ n'est qu'une manière de s'exprimer au sujet d'une même réalité, selon la ___ qu'elle remplit."
+    answer: "fonction"
+    alt: []
+
+- id: ame1-l3
+  title: "Éternelle et temporelle : l'âme et le temps"
+  notes: |-
+    **L'âme est à la fois éternelle, par ce qui la rattache à l'Intellect, et temporelle, puisqu'elle s'est « asservie au temps » : c'est la même tension que celle de la non-descente, et elle se résout de la même façon,** {coral}**en voyant dans le temps la vie même de l'âme**{/coral}.
+
+    **L'âme divine est hors du temps.** {teal}« Toute âme{/teal} est {teal}__sœur__{/teal} de celle qui est là-bas{teal} »{/teal} ([[traite27|traité 27]], 6, 13 ; [[traite33|traité 33]], 18, 16) : tout ce qui vit est donc relié à l'{violet}Âme divine{/violet}. Or celle-ci demeure auprès de l'Intellect, partage sa vie éternelle ([[traite45|traité 45]], chap. 11) et ne s'inscrit pas dans le temps : {teal}« là-bas{/teal}, {teal}__tout est ensemble__ »{/teal} ([[traite32|traité 32]], 10, 6-8). Rien n'y a de parties, rien n'y est divisé.
+
+    **Mais l'âme s'est asservie au temps.** Le traité *Sur l'éternité et le temps* dit que l'âme {teal}« {/teal}s'est elle-même {teal}__asservie au temps__ »{/teal} ([[traite45|traité 45]], 11, 31), {teal}« {/teal}en produisant {teal}__le temps au lieu de l'éternité__ »{/teal}. Cela implique une **dissémination** dans le monde sensible et dans le temps. Mais {green}l'âme se disperse en restant accrochée à sa ramification divine{/green} : d'où son statut d'{violet}**âme amphibie**{/violet} ([[traite6|traité 6]], chap. 4). **La non-descente partielle de l'âme est donc liée chez Plotin à la conception du temps**, et à la nécessité de penser l'éternel.
+
+    **Pourquoi il faut une part non descendue pour parler de l'éternité.** Comme le rappelle {sky}Hoffmann{/sky}, la condition de possibilité du discours sur l'éternité réside dans la participation de l'intellect humain à l'Intellect divin, où demeure une part « non descendue » de l'âme. {yellow}Un être entièrement plongé dans le temps n'aurait aucune idée de l'éternité, comme un poisson qui n'aurait jamais quitté l'eau n'aurait pas l'idée de l'air{/yellow}. Parler de l'éternité, c'est donc déjà s'interroger sur notre propre vie, se demander {amber}comment devenir éternel{/amber}, jusqu'à devenir **soi-même intellect**.
+
+    **La difficulté.** {amber}__**Comment une même chose peut-elle être à la fois éternelle et temporelle ?**__{/amber}
+
+    - {amber}si l'âme est éternelle{/amber}, elle doit n'être qu'une seule et même réalité indivisible ;
+    - {amber}si elle est temporelle{/amber}, elle s'inscrit dans le devenir : elle vit à un moment *x*, puis à un moment *y*, et semble se répartir entre eux.
+
+    **La solution de Plotin** : {green}le temps est la vie de l'âme{/green}, et cette vie est éternelle ([[traite45|traité 45]], 11, 50-51 ; 12, 10). L'âme n'a donc pas de parties, puisque sa vie embrasse tous les moments **en même temps** : ce sont ses produits qui se succèdent, non elle qui se morcelle.
+
+    ! Que l'âme soit « dans le temps » ne veut pas dire qu'elle soit comme un corps qui dure : le temps n'est pas un cadre où elle entrerait, c'est sa propre vie qui se déploie.
+  points:
+  - id: ame1-l3-p1
+    sentence: "__L'âme est à la fois éternelle et temporelle__ : Plotin résout la tension en voyant dans le temps la ___ même de l'âme."
+    answer: "vie"
+    alt: []
+  - id: ame1-l3-p2
+    sentence: "« Toute âme est ___ de celle qui est là-bas » (traité 27, 6, 13) : tout ce qui vit est relié à l'Âme divine."
+    answer: "sœur"
+    alt: ["soeur"]
+    citation: true
+  - id: ame1-l3-p3
+    sentence: "« Toute âme est sœur de celle qui est là-bas » : __la formule qui relie tout ce qui vit à l'Âme divine__ se lit au traité ___ (6, 13), et encore au traité 33 (18, 16)."
+    answer: "27 (IV, 3)"
+    alt: ["27", "IV, 3"]
+    citation: true
+  - id: ame1-l3-p4
+    sentence: "« là-bas, ___ » (traité 32, 10, 6-8) : l'Âme divine, auprès de l'Intellect, ne s'inscrit pas dans le temps et n'a pas de parties."
+    answer: "tout est ensemble"
+    alt: []
+    citation: true
+  - id: ame1-l3-p5
+    sentence: "__Le traité *Sur l'éternité et le temps* dit que l'âme__ « s'est elle-même ___ au temps » (traité 45, 11, 31)."
+    answer: "asservie"
+    alt: []
+    citation: true
+  - id: ame1-l3-p6
+    sentence: "L'âme s'est elle-même asservie au temps, « en produisant ___ » (traité 45, chap. 11)."
+    answer: "le temps au lieu de l'éternité"
+    alt: []
+    citation: true
+  - id: ame1-l3-p7
+    sentence: "L'âme « s'est elle-même asservie au temps » : __le traité où Plotin l'écrit__, *Sur l'éternité et le temps*, est le traité ___."
+    answer: "45 (III, 7)"
+    alt: ["45", "III, 7"]
+    citation: true
+  - id: ame1-l3-p8
+    sentence: "__Asservie au temps, l'âme se disperse dans le sensible__, mais en restant accrochée à sa ramification divine : d'où son statut d'âme ___ (traité 6, chap. 4)."
+    answer: "amphibie"
+    alt: []
+  - id: ame1-l3-p9
+    sentence: "__La non-descente partielle de l'âme est liée chez Plotin à la conception__ du ___ et à la nécessité de penser l'éternel."
+    answer: "temps"
+    alt: []
+  - id: ame1-l3-p10
+    sentence: "__Selon Hoffmann, la condition de possibilité du discours sur l'éternité__ est la participation de l'intellect humain à l'Intellect divin, où demeure une part ___ de l'âme."
+    answer: "non descendue"
+    alt: ["non-descendue"]
+  - id: ame1-l3-p11
+    sentence: "__Parler de l'éternité, c'est s'interroger sur notre propre vie__ : se demander comment devenir éternel, jusqu'à devenir soi-même ___."
+    answer: "intellect"
+    alt: []
+  - id: ame1-l3-p12
+    sentence: "__Si l'âme est temporelle__, elle vit à un moment x puis à un moment y : elle semble se répartir entre eux, alors qu'éternelle elle devrait être une seule réalité ___."
+    answer: "indivisible"
+    alt: []
+  - id: ame1-l3-p13
+    sentence: "__L'âme n'a pas de parties, même dans le temps__ : sa vie, qui est le temps, embrasse tous les moments ___."
+    answer: "en même temps"
+    alt: ["ensemble", "à la fois"]

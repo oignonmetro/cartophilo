@@ -44,7 +44,11 @@ l'épreuve :
     de QCM ni d'association », comme pour les tableaux à trous : les
     définitions d'un glossaire forment un ensemble fermé.
   - **Idées** : thèses centrales chez l'auteur, en se concentrant sur les
-    arguments déployés pour les défendre. Chez Marx, la piste s'ouvre sur le
+    arguments déployés pour les défendre. Chez Plotin, le groupe « L'âme et
+    sa descente » (`ame1` à `ame7`, 2026-11-23) est tiré de deux chapitres
+    d'un mémoire de F. Lacroix sur le traité 6 et de l'article de Narbonne
+    sur la non-descente (2008), complétés par les citations GF des cours des
+    traités 6, 10 et 27. Chez Marx, la piste s'ouvre sur le
     cours tiré de l'article « Karl Marx » de la SEP (`sep-marx1` à
     `sep-marx4`, groupées sous « Idées générales »), écrit avec la
     skill `cours-sep`, puis sur le cours tiré de l'introduction de Lucien Sève
