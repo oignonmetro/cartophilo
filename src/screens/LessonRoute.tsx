@@ -3,9 +3,9 @@ import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useCourse } from '@/content/CourseProvider'
 import { buildLessonSession, lessonProgress } from '@/engine/exercises'
 import { seedFrom } from '@/engine/rng'
-import { citationsOnlyLesson, findLesson } from '@/content/course'
+import { asideFrom, citationsOnlyLesson, findLesson, itemsOfLesson } from '@/content/course'
 import { lessonDifficulty, type SessionOutcome } from '@/engine/progress'
-import { buildUnitPath, deferredOfUnit, nextNodeAfter, sectionRank } from '@/engine/unitPath'
+import { buildUnitPath, deferredOfUnit, nextNodeAfter, sectionRank, stepKey } from '@/engine/unitPath'
 import { useProgress } from '@/store/progressStore'
 import { clearSnapshot, loadSnapshot, saveSnapshot } from '@/lib/sessionResume'
 import { SessionScreen } from './SessionScreen'
@@ -94,6 +94,73 @@ function LessonSession({ lessonId }: { lessonId: string }) {
   if (!entry) return <Navigate to="/" replace />
 
   const unit = entry.unit
+  const aside = asideFrom(unit, lessonId)
+
+  // Ce qui suit dans le parcours le nœud `afterId`, s'il est ouvert.
+  const nextAfter = (afterId: string) => {
+    const { lessons, steps, deferred } = useProgress.getState()
+    const next = nextNodeAfter(
+      buildUnitPath(
+        unit,
+        lessons[course.id] ?? {},
+        steps[course.id] ?? {},
+        deferredOfUnit(unit, deferred[course.id] ?? {}).length,
+      ),
+      afterId,
+    )
+    return next && next.status !== 'locked' ? next : null
+  }
+  const goTo = (node: NonNullable<ReturnType<typeof nextAfter>>) =>
+    navigate(node.lesson ? `/lecon/${node.lesson.id}` : `/etape/${unit.id}/${node.id}`, { replace: true })
+
+  // « Sauter la parenthèse » : ses cartes, de cette leçon à sa fin, sont
+  // remises à plus tard, comme par « Revoir plus tard » (le rattrapage les
+  // reprendra avec leurs rappels, voir `buildCatchupSession`), et ses leçons
+  // comptent pour faites, sans carte créée (voir `skipTo`) : le parcours
+  // reprend juste après elle. Les étapes logées entre ses leçons (une
+  // révision qui tombe au milieu) sont sautées avec elles : restées à faire,
+  // elles retiendraient tout ce qui suit.
+  const skipAside = () => {
+    const { deferItems, skipTo, lessons, steps } = useProgress.getState()
+    const last = aside[aside.length - 1]!.id
+    const path = buildUnitPath(unit, lessons[course.id] ?? {}, steps[course.id] ?? {})
+    const end = path.findIndex((node) => node.id === last)
+    const inside = path.slice(path.findIndex((node) => node.id === lessonId), end)
+    // La révision qui suit la parenthèse, quand elle ne reprend que des
+    // leçons de la parenthèse (son bloc, voir `cycle`), n'aurait plus rien à
+    // réviser : elle est sautée avec elle.
+    const skipped = new Set(aside.map((lesson) => lesson.id))
+    const cycleOf = new Map(path.filter((node) => node.lesson).map((node) => [node.id, node.cycle]))
+    for (const node of path.slice(end + 1)) {
+      if (node.kind !== 'review') break
+      const ofCycle = unit.lessons.filter((lesson) => cycleOf.get(lesson.id) === node.cycle)
+      if (!ofCycle.every((lesson) => skipped.has(lesson.id))) break
+      inside.push(node)
+    }
+    deferItems(
+      course.id,
+      aside.flatMap((lesson) => itemsOfLesson(lesson, unit).map((item) => item.id)),
+    )
+    skipTo(
+      course.id,
+      aside.map((lesson) => lesson.id),
+      inside.filter((node) => !node.lesson).map((node) => stepKey(unit.id, node.id)),
+    )
+    for (const lesson of aside) clearSnapshot(course.id, lesson.id)
+    // Le nœud qui suit la parenthèse, s'il est ouvert ; sinon (une leçon
+    // antérieure reste à faire), retour d'où l'on vient, plutôt qu'au
+    // rattrapage, toujours ouvert, qui reprendrait aussitôt la parenthèse.
+    const after = useProgress.getState()
+    const path_ = buildUnitPath(
+      unit,
+      after.lessons[course.id] ?? {},
+      after.steps[course.id] ?? {},
+      deferredOfUnit(unit, after.deferred[course.id] ?? {}).length,
+    )
+    const next = path_.slice(path_.findIndex((node) => node.id === last) + 1).find((node) => node.status !== 'done')
+    if (next && next.status === 'available' && next.kind !== 'catchup') goTo(next)
+    else backHome()
+  }
   // Pas `navigate('/')` : on quitte une leçon ouverte depuis la bibliothèque,
   // une révision, un succès… — revenir en arrière, plutôt qu'à l'accueil,
   // retombe sur cette page-là plutôt que de forcer celle du cours courant.
@@ -103,16 +170,7 @@ function LessonSession({ lessonId }: { lessonId: string }) {
     // L'enchaînement suit l'ordre du parcours, pas celui des seules leçons :
     // la suite peut être une révision, et la sauter viderait le parcours de
     // son sens.
-    const { lessons, steps, deferred } = useProgress.getState()
-    const next = nextNodeAfter(
-      buildUnitPath(
-        unit,
-        lessons[course.id] ?? {},
-        steps[course.id] ?? {},
-        deferredOfUnit(unit, deferred[course.id] ?? {}).length,
-      ),
-      lessonId,
-    )
+    const next = nextAfter(lessonId)
 
     return (
       <SessionResult
@@ -121,14 +179,7 @@ function LessonSession({ lessonId }: { lessonId: string }) {
         xp={finished.xp}
         deferred={finished.deferred}
         onContinue={backHome}
-        onNext={
-          next && next.status !== 'locked'
-            ? () =>
-                navigate(next.lesson ? `/lecon/${next.lesson.id}` : `/etape/${unit.id}/${next.id}`, {
-                  replace: true,
-                })
-            : undefined
-        }
+        onNext={next ? () => goTo(next) : undefined}
         onRetry={() => {
           clearSnapshot(course.id, lessonId)
           setSaved(null)
@@ -149,6 +200,7 @@ function LessonSession({ lessonId }: { lessonId: string }) {
       restored={resume}
       onSnapshot={(snapshot) => saveSnapshot(course.id, lessonId, { ...snapshot, seed, level })}
       onQuit={backHome}
+      onSkipAside={aside.length > 0 ? skipAside : undefined}
       onFinish={(outcome, deferred) => {
         clearSnapshot(course.id, lessonId)
         // Une leçon dont des cartes ont été remises à plus tard est tout de

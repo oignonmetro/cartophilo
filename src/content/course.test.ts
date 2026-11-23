@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { LibraryCourse, Unit, Vocab } from './schema'
-import { citationsOnlyLesson, courseLabel, findUnit, groupCoursesByLanguage, groupParts, lessonCountLabel, orderTrackUnits, titleYear, unitLetters } from './course'
+import { asideFrom, citationsOnlyLesson, courseLabel, findUnit, groupCoursesByLanguage, groupParts, lessonCountLabel, orderTrackUnits, titleYear, unitLetters } from './course'
 import type { ManifestEntry } from './schema'
 
 function vocab(id: string): Vocab {
@@ -268,5 +268,27 @@ describe('ordre chronologique des pistes', () => {
     ]
     expect(orderTrackUnits('textes', 'chronological', units).map((u) => u.id)).toEqual(['c', 'd', 'b', 'a'])
     expect(orderTrackUnits('textes', undefined, units).map((u) => u.id)).toEqual(['a', 'b', 'c', 'd'])
+  })
+})
+
+describe('asideFrom', () => {
+  const aside = (id: string, key?: string) => ({ ...lesson(id), ...(key ? { aside: key } : {}) })
+  const u: Unit = {
+    ...unit('u', []),
+    lessons: [aside('a'), aside('p1', 'p'), aside('p2', 'p'), aside('p3', 'p'), aside('b'), aside('q1', 'q')],
+  }
+
+  it('rend la parenthèse de la leçon à sa fin', () => {
+    expect(asideFrom(u, 'p1').map((l) => l.id)).toEqual(['p1', 'p2', 'p3'])
+    expect(asideFrom(u, 'p2').map((l) => l.id)).toEqual(['p2', 'p3'])
+  })
+
+  it('ne rend rien hors parenthèse', () => {
+    expect(asideFrom(u, 'a')).toEqual([])
+    expect(asideFrom(u, 'inconnue')).toEqual([])
+  })
+
+  it("s'arrête à la première leçon d'une autre clé", () => {
+    expect(asideFrom(u, 'q1').map((l) => l.id)).toEqual(['q1'])
   })
 })

@@ -48,6 +48,25 @@ export function findLesson(course: Course, lessonId: string): LessonEntry | null
 }
 
 /**
+ * La parenthèse (voir `aside` dans `lessonSchema`) que la leçon ouvre ou
+ * continue, de cette leçon à la dernière de la parenthèse : ce que « Sauter
+ * la parenthèse » remet à plus tard. Vide pour une leçon hors parenthèse. Les
+ * leçons déjà passées de la parenthèse n'y sont pas : leurs cartes, déjà
+ * vues, restent dans la révision.
+ */
+export function asideFrom(unit: Unit, lessonId: string): Lesson[] {
+  const start = unit.lessons.findIndex((lesson) => lesson.id === lessonId)
+  const key = unit.lessons[start]?.aside
+  if (start === -1 || !key) return []
+  const rest: Lesson[] = []
+  for (const lesson of unit.lessons.slice(start)) {
+    if (lesson.aside !== key) break
+    rest.push(lesson)
+  }
+  return rest
+}
+
+/**
  * Les éléments pratiquables d'une leçon, à plat.
  * C'est cette liste qui alimente la révision espacée : un élément, une carte.
  *

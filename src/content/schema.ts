@@ -180,6 +180,13 @@ const lessonBase = {
   title: z.string().min(1),
   /** Rappel de cours affiché avant la pratique. */
   notes: z.string().optional(),
+  /**
+   * Parenthèse : des leçons consécutives d'une unité qui portent la même clé
+   * forment un détour qu'on peut sauter d'un coup (« Sauter la parenthèse »,
+   * voir `asideFrom` et `LessonRoute`) ; leurs cartes attendent alors le
+   * rattrapage de l'unité.
+   */
+  aside: z.string().min(1).optional(),
 }
 
 export const vocabLessonSchema = z.object({

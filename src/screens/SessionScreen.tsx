@@ -33,7 +33,7 @@ import {
   useHaptics,
   type SessionHaptics,
 } from '@/components/session/useSessionHaptics'
-import { BookIcon, ChestIcon, ClockIcon, CloseIcon, FlagIcon, RefreshIcon, StarIcon } from '@/components/icons'
+import { BookIcon, ChestIcon, ChevronLeftIcon, ClockIcon, CloseIcon, FlagIcon, RefreshIcon, StarIcon } from '@/components/icons'
 import type { SessionOutcome } from '@/engine/progress'
 import type { UnitNodeKind } from '@/engine/unitPath'
 
@@ -73,6 +73,12 @@ interface SessionScreenProps {
    * `deferred` : cartes remises à plus tard pendant la séance.
    */
   onFinish: (outcome: SessionOutcome, deferred: number) => void
+  /**
+   * Leçon d'une parenthèse (voir `asideFrom`) : remet à plus tard la
+   * parenthèse entière, de cette leçon à sa fin (bouton « Sauter la
+   * parenthèse », à côté de « Revoir plus tard »).
+   */
+  onSkipAside?: () => void
 }
 
 /**
@@ -232,6 +238,7 @@ function SessionRunner({
   restored: resume0,
   onSnapshot,
   onFinish,
+  onSkipAside,
   haptics,
 }: SessionScreenProps & { haptics: SessionHaptics }) {
   const { course, itemsById } = useCourse()
@@ -623,7 +630,7 @@ function SessionRunner({
           plutôt que couper son bouton, même si l'intention reste que rien
           n'ait normalement besoin de défiler ici. */}
       <main className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 pb-6 md:pb-10">
-        {(origin || deferrable) && (
+        {(origin || deferrable || onSkipAside) && (
           <div className="mb-2 flex min-h-6 items-center gap-2">
             {origin && (
               <p
@@ -642,6 +649,19 @@ function SessionRunner({
               >
                 <ClockIcon size={14} />
                 Revoir plus tard
+              </button>
+            )}
+            {onSkipAside && (
+              <button
+                type="button"
+                onClick={onSkipAside}
+                title="Revoir plus tard toute la parenthèse : ses leçons, de celle-ci à la dernière, attendront le rattrapage, à la fin de l'unité"
+                className={`${deferrable ? '' : 'ml-auto '}flex shrink-0 items-center gap-1 rounded-full px-2 py-0.5 text-xs font-extrabold text-ink-faint transition-colors hover:bg-ink/5 hover:text-ink-soft`}
+              >
+                <span className="inline-flex rotate-180">
+                  <ChevronLeftIcon size={14} />
+                </span>
+                Sauter la parenthèse
               </button>
             )}
           </div>

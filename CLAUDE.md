@@ -175,6 +175,12 @@ pas seulement Glossaire et Repérage.
   unité (nœud `catchup` de `unitPath.ts`, juste avant la séance finale,
   qu'il retient ; `buildCatchupSession`). Le rattrapage s'ouvre à tout
   moment depuis la carte de l'unité, et une bonne réponse lève le report.
+- Parenthèse (2026-11-23) : des leçons consécutives d'une unité qui portent
+  la même clé `aside:` (ainsi `aside: parmenide` sur `platon-idees-i1b`,
+  `i1d`, `i1c`) forment une parenthèse. Dans leur séance, rappel compris,
+  un bouton « Sauter la parenthèse » remet à plus tard ses cartes, de la
+  leçon en cours à la dernière de la parenthèse, compte ces leçons pour
+  faites et reprend le parcours juste après (`asideFrom`, `LessonRoute`).
 - Le moteur de vocabulaire (`kind: vocab`, plus aucun cours ne l'emploie
   depuis le retrait du cours `demo`) n'a plus d'écran de présentation à part (l'ancienne
   auto-évaluation « nouveau / incertain / je savais ») : un mot rencontre
