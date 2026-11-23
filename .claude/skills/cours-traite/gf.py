@@ -377,7 +377,8 @@ def controle(path, t=None):
     data = json.loads(js)
     T = _corpus()
     cache = {}
-    ref = re.compile(r"^[^«\n]{0,90}?\((?:chap\. ([\d¹²³⁴⁵⁶⁷⁸⁹]+), )?l\. (\d+)(?:-(\d+))?\)")
+    # le repère doit suivre la citation dans la même proposition (ni « ; » ni fin de phrase)
+    ref = re.compile(r"^(?:(?![«\n;]|\. ).){0,90}?\((?:chap\. ([\d¹²³⁴⁵⁶⁷⁸⁹]+), )?l\. (\d+)(?:-(\d+))?\)")
     pb = []
 
     def check(text, where, defaut):
