@@ -10,6 +10,9 @@ extrait une fois (pdftotext) dans un cache du dossier temporaire.
       (chaque citation « » du fichier, à partir de cette leçon, se retrouve-t-elle dans la GF ?)
   python -I .claude/skills/cours-traite/gf.py chapitres <fichier.yaml> [id-de-leçon]
       (chaque citation suivie d'un repère « traité N, chap. M » est-elle bien dans ce chapitre ?)
+  python -I .claude/skills/cours-traite/gf.py controle <traiteN.yaml> [N]
+      (contrôle complet : citations relues le trou rempli par la réponse, fragments courts
+      compris, et numéros de lignes « (l. x-y) » confrontés aux repères de la GF)
   python -I .claude/skills/cours-traite/gf.py reprises <fichier.yaml> [id-de-leçon]
       (passages repris de la GF sans guillemets, à citer ou reformuler)
 
@@ -300,6 +303,129 @@ def chapitres(path, depuis=None):
     print(n, "citation(s) hors du chapitre annoncé ;", na, "repère(s) placé(s) avant ;", nv, "non vérifiable(s)")
 
 
+SUP = str.maketrans("¹²³⁴⁵⁶⁷⁸⁹", "123456789")
+
+
+def _num_chap(s):
+    """« 8³ » -> 83 (chapitres intercalés du traité 2), « 12 » -> 12."""
+    return int(s.strip().translate(SUP))
+
+
+def _chapitre_reperes(t, c):
+    """(texte aplati du chapitre, [(position, numéro de ligne)]) : les repères [5], [10]…
+    de la traduction gardés à leur place dans le texte aplati."""
+    seg = chapitre_texte(t, c)
+    if c > 9:
+        # Un appel de note collé au numéro (« 85102. On pourrait », traité 2, chap. 8⁵)
+        # cache le vrai début, et une note du traité précédent (« 85. Phèdre… ») peut
+        # passer pour lui : on prend le dernier début collé suivi d'un [5], s'il vient après.
+        L, debut, fin = _bornes(t)
+        R = " ".join(x.strip() for x in L[debut:fin] if x.strip())
+        ici = R.find(seg[:300]) if seg else -1
+        for m in reversed(list(re.finditer(r"(?<![\w\[])%d\d{1,3}\. (?=[A-ZÀ-ÖØ-Þ«–])" % c, R))):
+            nx = re.search(r"\[(\d+)\]", R[m.end():])
+            if m.start() > ici and nx and nx.group(1) == "5":
+                # le chapitre suivant est le prochain « N. » lui-même suivi d'un [5]
+                # (un appel de note, « »105. Si donc », est suivi du repère courant)
+                o, bout = m.end() + nx.end(), len(R)
+                for s2 in re.finditer(r"(?<![\w\[])\d{1,3}\. (?=[A-ZÀ-ÖØ-Þ«–])", R[o:]):
+                    n2 = re.search(r"\[(\d+)\]", R[o + s2.end():])
+                    if n2 and n2.group(1) == "5":
+                        bout = o + s2.start()
+                        break
+                seg = R[m.start():bout]
+                break
+    if seg is None:
+        return None
+    flat, marks = "", []
+    for piece in re.split(r"(\[\d+\])", re.sub(r"^\d+\. ", "", seg)):
+        mk = re.fullmatch(r"\[(\d+)\]", piece)
+        if mk:
+            marks.append((len(flat), int(mk.group(1))))
+        elif _flat(piece):
+            flat += (" " if flat else "") + _flat(piece)
+    return flat, marks
+
+
+def _ligne(marks, pos, strict=False):
+    """Dernier repère avant pos : la ligne est entre ce repère et lui + 4."""
+    last = 1
+    for p, v in marks:
+        if p < pos or (p == pos and not strict):
+            last = v
+    return last
+
+
+def controle(path, t=None):
+    """Contrôle complet d'un cours de traité : chaque citation, rappels et cartes, est
+    relue le trou rempli par la réponse et cherchée mot pour mot dans la GF (y compris
+    les fragments courts que verifie ignore) ; chaque citation suivie, dans le même
+    paragraphe, de « (l. x-y) » ou « (chap. N, l. x-y) » doit tenir entre les repères de
+    ligne de ce chapitre. Le chapitre par défaut est celui du titre de la leçon,
+    s'il n'en nomme qu'un."""
+    import json, subprocess
+    if t is None:
+        m = re.search(r"traite(\d+)\.yaml$", path.replace("\\", "/"))
+        if not m:
+            sys.exit("préciser le numéro du traité")
+        t = int(m.group(1))
+    js = subprocess.run(
+        ["node", "-e", "const y=require('yaml'),fs=require('fs');"
+         "process.stdout.write(JSON.stringify(y.parse(fs.readFileSync(process.argv[1],'utf8'))))",
+         os.path.abspath(path)],
+        capture_output=True, text=True, encoding="utf-8").stdout
+    data = json.loads(js)
+    T = _corpus()
+    cache = {}
+    ref = re.compile(r"^[^«\n]{0,90}?\((?:chap\. ([\d¹²³⁴⁵⁶⁷⁸⁹]+), )?l\. (\d+)(?:-(\d+))?\)")
+    pb = []
+
+    def check(text, where, defaut):
+        text = re.sub(r"\{/?[a-z]+\}", "", text).replace("**", "").replace("__", "")
+        for m in re.finditer(r"«([^«»]+)»", text):
+            q = m.group(1)
+            frags = [_flat(f) for f in re.split(r"\[[^\]]*\]|\.\.\.|…|\"", q)]
+            frags = [f for f in frags if len(f.split()) >= 3]
+            manque = [f for f in frags if f not in T]
+            for f in manque:
+                pb.append(f"TEXTE   {where} : « {f[:110]} » introuvable dans la GF")
+            r = ref.match(text[m.end():])
+            if not r or manque or not frags:
+                continue
+            c = _num_chap(r.group(1)) if r.group(1) else defaut
+            a, b = int(r.group(2)), int(r.group(3) or r.group(2))
+            if c is None:
+                pb.append(f"CHAPITRE {where} : « {q.strip()[:60]} » (l. {a}-{b}) sans chapitre sûr")
+                continue
+            if c not in cache:
+                cache[c] = _chapitre_reperes(t, c)
+            if cache[c] is None:
+                pb.append(f"NON VÉRIFIABLE {where} : chap. {c} introuvable")
+                continue
+            flat, marks = cache[c]
+            s = flat.find(frags[0])
+            e = flat.find(frags[-1], max(s, 0))
+            if s < 0 or e < 0:
+                pb.append(f"AILLEURS {where} : « {q.strip()[:60]} » n'est pas dans le chap. {c}")
+                continue
+            ls, le = _ligne(marks, s), _ligne(marks, e + len(frags[-1]), True)
+            if a > ls + 4 or b < ls or a > le + 4 or b < le:
+                pb.append(f"LIGNES  {where} : « {q.strip()[:60]} » donné l. {a}-{b}, "
+                          f"le texte va de la l. {ls}-{ls + 4} à la l. {le}-{le + 4} (chap. {c})")
+
+    for les in data.get("lessons", []):
+        m = re.search(r"\(chap\. ([\d¹²³⁴⁵⁶⁷⁸⁹]+)(?:[,)])", les.get("title", ""))
+        defaut = _num_chap(m.group(1)) if m else None
+        check(les.get("notes", "") or "", les["id"] + " (rappel)", defaut)
+        for p in les.get("points", []):
+            s = p["sentence"]
+            for a in (p["answer"] if isinstance(p["answer"], list) else [p["answer"]]):
+                s = s.replace("___", a, 1)
+            check(s, p["id"], defaut)
+    print("\n".join(pb) or "rien à signaler")
+    print(len(pb), "problème(s)")
+
+
 if __name__ == "__main__":
     cmd, *args = sys.argv[1:] or ["aide"]
     if cmd == "cherche":
@@ -312,6 +438,8 @@ if __name__ == "__main__":
         verifie(args[0], args[1] if len(args) > 1 else None)
     elif cmd == "chapitres":
         chapitres(args[0], args[1] if len(args) > 1 else None)
+    elif cmd == "controle":
+        controle(args[0], int(args[1]) if len(args) > 1 else None)
     elif cmd == "reprises":
         reprises(args[0], args[1] if len(args) > 1 else None)
     else:

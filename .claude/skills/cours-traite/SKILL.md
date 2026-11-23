@@ -639,10 +639,20 @@ de l'argumentation (« posé », « démontré ») qui n'éclairent rien.
    ```bash
    python -I .claude/skills/cours-traite/gf.py verifie <fichier.yaml> <id de la première leçon>
    python -I .claude/skills/cours-traite/gf.py reprises <fichier.yaml> <id de la première leçon>
+   python -I .claude/skills/cours-traite/gf.py controle <traiteN.yaml>
    ```
    `verifie` doit ne laisser aucune citation introuvable (hors formules
    du cours) ; `reprises` signale ce qui suit la GF, ou ses notes, sans
-   guillemets : citer mot pour mot ou reformuler.
+   guillemets : citer mot pour mot ou reformuler. `controle` relit tout le
+   fichier plus sévèrement : chaque carte avec sa réponse à la place du
+   trou, les fragments courts que `verifie` laisse passer, et chaque
+   repère « (l. x-y) » ou « (chap. N, l. x-y) » qui suit une citation,
+   confronté aux numéros de ligne que la GF imprime de cinq en cinq (le
+   chapitre par défaut est celui du titre de la leçon). Il doit finir sur
+   « rien à signaler » ; une formule du cours entre guillemets qui n'est
+   pas une citation passe en italique. Seule exception tolérée : une
+   alerte LIGNES dont le repère appartient visiblement à la phrase
+   suivante.
 2. `npm run content:build`, puis regarder le rendu : `#/fiches/traiteN` dans
    le navigateur intégré (serveur de dev sur le port 5173, déjà lancé ou via
    `preview_start`). Vérifier que les attaques se lisent comme l'idée de la
