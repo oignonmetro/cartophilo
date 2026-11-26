@@ -181,8 +181,8 @@ pas seulement Glossaire et Repérage.
   un bouton « Sauter la parenthèse » remet à plus tard ses cartes, de la
   leçon en cours à la dernière de la parenthèse, compte ces leçons pour
   faites et reprend le parcours juste après (`asideFrom`, `LessonRoute`).
-  Dans l'éditeur visuel, la case « Entre parenthèses », sous le titre d'une
-  leçon, l'y met : elle rejoint la parenthèse d'une leçon voisine, ou en
+  Dans l'éditeur visuel, le bouton « ( ) Parenthèse », dans la barre du
+  haut (à côté d'Annuler), y met la leçon ouverte : elle rejoint la parenthèse d'une leçon voisine, ou en
   ouvre une (`asideKeyFor`) ; l'arborescence marque ces leçons d'un « ( ) ».
 - Le moteur de vocabulaire (`kind: vocab`, plus aucun cours ne l'emploie
   depuis le retrait du cours `demo`) n'a plus d'écran de présentation à part (l'ancienne
