@@ -31,7 +31,7 @@ lessons:
   - id: theta1-i1-p1
     sentence: "Dans la classification des **quatre sens de l'être** (Δ7, reprise en E2), le livre Θ de la *Métaphysique* étudie l'être en puissance et en acte, et, __dans son dernier chapitre, l'être comme__ ___."
     answer: "vrai et faux"
-    alt: []
+    alt: ["vrai"]
   - id: theta1-i1-p2
     sentence: "Des **quatre sens de l'être distingués en Δ7**, __l'être par__ ___ est étudié en E2-3."
     answer: "accident"
@@ -53,7 +53,7 @@ lessons:
     answer: "matière"
     alt: []
   - id: theta1-i1-p8
-    sentence: "Le chapitre de la *Métaphysique* qui, pour expliquer l'**unité des composés**, rapporte la forme à l'acte et la matière à la puissance, __et dont Θ doit clarifier les notions, est__ ___."
+    sentence: "Le chapitre de la *Métaphysique* qui, pour __expliquer l'unité des composés__, **rapporte la forme à l'acte et la matière à la puissance**, __et dont Θ doit clarifier les notions, est__ ___."
     answer: "H6"
     alt: ["Êta 6"]
   - id: theta1-i1-p9
@@ -96,19 +96,12 @@ lessons:
     {sky}Makin{/sky} préfère Frede, notamment parce que Θ5 aboutit à une théorie de la manière dont les capacités donnent lieu aux changements, et que Θ2-4 préparent ce résultat. Il traduit par un même mot, « changement », `kinêsis` et `metabolê`, dont Aristote ne tire rien ici.
 
     ! Θ1-5 ne sont pas un préambule de physique : la capacité non exercée est déjà une manière d'être en puissance.
+  tables:
+  - table: lecture-1-5-6-9
+    exercises:
+    - {kind: bank, column: Θ1-5}
+    - {kind: bank, column: Θ6-9}
   points:
-  - id: theta1-i2-p1
-    sentence: "Makin donne trois raisons de commencer Θ par le rapport d'une capacité au changement qu'elle produit ; la **première** : __les cas familiers éclairent les cas__ ___ et opaques auxquels Aristote étend ces notions."
-    answer: "nouveaux"
-    alt: []
-  - id: theta1-i2-p2
-    sentence: "Deuxième des trois raisons de Makin de partir du changement : le rapport capacité/changement recouvre une **grande variété de cas** (actifs et passifs, à une ou deux voies, rationnels ou non, innés ou acquis) __qu'il faut__ ___."
-    answer: "ordonner"
-    alt: []
-  - id: theta1-i2-p3
-    sentence: "Troisième des trois raisons de Makin de partir du changement : pour servir de cas clair, le rapport capacité/changement __doit être aussi un cas__ ___, **sans quoi il n'éclairerait pas le rapport de la forme et de la matière**."
-    answer: "sûr"
-    alt: []
   - id: theta1-i2-p4
     sentence: "Le changement, cas **le plus familier** par lequel Θ1-5 abordent la puissance, __se dit en grec__ ___ (ou `metabolê`)."
     answer: "kinêsis"
@@ -126,20 +119,8 @@ lessons:
     answer: "5"
     alt: ["Θ5"]
   - id: theta1-i2-p8
-    sentence: "Dans le premier bloc du livre Θ, le chapitre **Θ4** __distingue le possible de l'__ ___."
-    answer: "impossible"
-    alt: []
-  - id: theta1-i2-p9
-    sentence: "__Pour__ ___, que suit Makin, **Θ1-5 traitent déjà de l'être en puissance et en acte** : une capacité non exercée, comme celle d'une scie de couper du bois, est déjà une manière d'être en puissance."
-    answer: "Frede"
-    alt: ["Michael Frede"]
-  - id: theta1-i2-p10
-    sentence: "__Pour__ ___, contre Frede, Θ1-5 traitent de la capacité de produire un changement dans autre chose et **ne font que préparer Θ6-9**, consacrés à la potentialité de passer à un nouvel état."
-    answer: "Ross"
-    alt: []
-  - id: theta1-i2-p11
-    sentence: "Selon la lecture de Frede, **Θ6-9** __étendent la notion d'être en puissance, par__ ___, à des cas où il n'y a plus de changement à proprement parler, comme vivre ou être une maison."
-    answer: "analogie"
+    sentence: "Dans le premier bloc du livre Θ, le chapitre ___ distingue le possible de l'impossible."
+    answer: "4"
     alt: []
 - id: theta1-l1
   title: "Θ1 : la puissance au sens le plus propre"
@@ -155,6 +136,11 @@ lessons:
     L'homonymie désigne des choses que le même mot recouvre de façon accidentelle : {yellow}en français, « souris » (l'animal, l'accessoire d'ordinateur){/yellow}, car ce qu'est être une souris n'est pas la même chose dans les deux cas. Les commentateurs divergent sur le nombre de cas visés, la géométrie seule ou deux emplois ; {sky}Makin{/sky} en retient deux, comme en Δ12. {green}La puissance cherchée est un principe réel, qui réside dans un sujet{/green}.
 
     ! La puissance liée au changement n'est qu'un point de départ : la notion s'étend bien au-delà du changement physique.
+  tables:
+  - table: emploi-homonyme-ecarte-exemple
+    exercises:
+    - {kind: bank, column: Exemple}
+    - {kind: cell, column: Emploi homonyme écarté, row: mathématique}
   points:
   - id: theta1-l1-p1
     sentence: "__Aristote commence le livre Θ par la puissance au sens le plus__ ___ (`kuriôtata`) : **la capacité liée au changement**."
@@ -201,12 +187,12 @@ lessons:
     answer: "en son sens le plus propre"
     alt: []
   - id: theta1-l1-p12
-    sentence: "« définissons aussi la puissance et l'état accompli, et d'abord la puissance dite en son sens le plus propre, __celle qui pourtant__ ___ à **ce que nous voulons dire maintenant**, car la puissance et l'acte s'étendent au-delà des choses dites seulement selon le mouvement. » (Θ1, 1045b34-1046a2)"
-    answer: "n'est pas vraiment la plus utile"
+    sentence: "« définissons aussi la puissance et l'état accompli, et d'abord la puissance dite en son sens le plus propre, __celle qui pourtant n'est pas vraiment__ ___ à **ce que nous voulons dire maintenant**, car la puissance et l'acte s'étendent au-delà des choses dites seulement selon le mouvement. » (Θ1, 1045b34-1046a2)"
+    answer: "la plus utile"
     alt: []
   - id: theta1-l1-p13
-    sentence: "« définissons aussi la puissance et l'état accompli, et **d'abord la puissance dite en son sens le plus propre**, celle qui pourtant n'est pas vraiment la plus utile à ce que nous voulons dire maintenant, __car la puissance et l'acte__ ___. » (Θ1, 1045b34-1046a2)"
-    answer: "s'étendent au-delà des choses dites seulement selon le mouvement"
+    sentence: "« définissons aussi la puissance et l'état accompli, et **d'abord la puissance dite en son sens le plus propre**, celle qui pourtant n'est pas vraiment la plus utile à ce que nous voulons dire maintenant, __car la puissance et l'acte s'étendent au-delà des choses dites seulement selon le ___. » (Θ1, 1045b34-1046a2)"
+    answer: "mouvement__"
     alt: []
   - id: theta1-l1-p14
     sentence: "« D'une part, __laissons de côté toutes celles d'entre les puissances qu'on appelle ainsi__ ___, car **certaines sont appelées ainsi par similitude**, par exemple en géométrie et quand nous disons que les choses sont possibles ou impossibles du fait qu'elles sont d'une certaine façon ou ne sont pas. » (Θ1, 1046a5-9)"
