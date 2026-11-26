@@ -525,6 +525,13 @@ export default function ContentEditorScreen() {
 
         {selection && (
           <div className="flex items-center gap-3 text-sm">
+            {unitLessons && (
+              <AsideToggle
+                aside={aside}
+                companions={aside ? asideCompanions(unitLessons, selection.lesson, aside) : []}
+                onChange={(on) => setAside(on ? asideKeyFor(unitLessons, selection.lesson) : null)}
+              />
+            )}
             <SaveStatus status={status} dirty={dirty} error={error} problems={problems} />
             <button
               type="button"
@@ -992,13 +999,6 @@ export default function ContentEditorScreen() {
                 <header className="flex flex-col gap-3">
                   <span className={`h-1.5 w-10 rounded-full ${tone.accent}`} />
                   <TitleField value={title} onChange={setTitle} />
-                  {unitLessons && (
-                    <AsideToggle
-                      aside={aside}
-                      companions={aside ? asideCompanions(unitLessons, selection.lesson, aside) : []}
-                      onChange={(on) => setAside(on ? asideKeyFor(unitLessons, selection.lesson) : null)}
-                    />
-                  )}
                 </header>
                 {passage?.text.trim() && (
                   <>
@@ -1546,17 +1546,23 @@ function AsideToggle({
   companions: TreeLesson[]
   onChange: (on: boolean) => void
 }) {
+  const on = aside !== null
+  const hint = !on
+    ? "Mettre la leçon entre parenthèses : l'app proposera de la sauter"
+    : companions.length === 0
+      ? "Entre parenthèses, seule leçon de la parenthèse : l'app proposera de la sauter. Cliquer pour l'en sortir"
+      : `Entre parenthèses, avec ${companions.map((lesson) => `« ${lesson.title} »`).join(', ')} : l'app proposera de les sauter ensemble. Cliquer pour l'en sortir`
   return (
-    <label className="flex cursor-pointer items-baseline gap-2 text-xs font-bold text-ink-soft select-none">
-      <input type="checkbox" checked={aside !== null} onChange={(event) => onChange(event.target.checked)} />
-      <span className="shrink-0 whitespace-nowrap">Entre parenthèses</span>
-      {aside !== null && (
-        <span className="font-normal text-ink-faint">
-          {companions.length === 0
-            ? "(seule leçon de la parenthèse : l'app proposera de la sauter)"
-            : `(avec ${companions.map((lesson) => `« ${lesson.title} »`).join(', ')} : l'app proposera de les sauter ensemble)`}
-        </span>
-      )}
-    </label>
+    <button
+      type="button"
+      aria-pressed={on}
+      title={hint}
+      onClick={() => onChange(!on)}
+      className={`rounded-lg border-2 px-3 py-1.5 font-bold ${
+        on ? 'border-amber bg-amber/15 text-amber' : 'border-line text-ink-soft hover:bg-ink/5'
+      }`}
+    >
+      ( ) Parenthèse{on && companions.length > 0 ? ` · ${companions.length + 1} leçons` : ''}
+    </button>
   )
 }
