@@ -334,6 +334,11 @@ lessons:
     {amber}**Platon a-t-il changé d'avis d'une période à l'autre ?**{/amber} Deux camps de commentateurs s'opposent : les {violet}unitaristes{/violet}, comme {sky}Shorey{/sky}, pour qui {amber}il garde ses thèses centrales{/amber} ; les {violet}évolutionnistes{/violet}, comme {sky}Owen{/sky}, pour qui {amber}il en change{/amber}. La position la plus plausible, sans doute dominante aujourd'hui, est {green}intermédiaire{/green} : sur certaines thèses, Platon {coral}approfondit, découvre des difficultés, voire se dédit{/coral} ; sur d'autres, {coral}il maintient ses intuitions fondamentales{/coral}.
 
     ! Les dialogues de la maturité ne donnent que les {amber}__premières__ pensées métaphysiques de Platon{/amber} : {coral}les dialogues tardifs semblent en modifier des doctrines clefs{/coral}.
+  tables:
+  - table: periode-dialogues
+    exercises:
+    - {kind: bank, column: Dialogues}
+    - {kind: cell, column: Période}
   points:
   - id: platon-idees-i2-p1
     sentence: "Platon faisant parler Socrate dans la plupart de ses dialogues, le lecteur doit se demander s'il lit les **doctrines de Socrate, de Platon, ou d'aucun des deux** : __c'est la question__ ___, liée à la chronologie des dialogues."
@@ -347,6 +352,14 @@ lessons:
     sentence: "Les **dialogues de la maturité**, où Platon expose pour la première fois l'immortalité de l'âme, les Idées et la réminiscence, __sont le *Cratyle*, le *Banquet*, le *Phédon*,__ ___, et peut-être le *Phèdre*."
     answer: "la République"
     alt: ["République"]
+  - id: platon-idees-i2-p11
+    sentence: "Les **dialogues de la maturité**, où Platon expose pour la première fois l'immortalité de l'âme, les Idées et la réminiscence, __sont le *Cratyle*, ___, le *Phédon*, la *République*__, et peut-être le *Phèdre*."
+    answer: "le Banquet"
+    alt: []
+  - id: platon-idees-i2-p12
+    sentence: "Les **dialogues de la maturité**, où Platon expose pour la première fois l'immortalité de l'âme, les Idées et la réminiscence, __sont le *Cratyle*, le *Banquet*, ___, la *République*__, et peut-être le *Phèdre*."
+    answer: "le Phédon"
+    alt: []
   - id: platon-idees-i2-p4
     sentence: "__Le *Ménon* et le__ ___ appartiennent à la **fin de la période socratique** et confinent déjà à la période de la maturité."
     answer: "Gorgias"
@@ -393,8 +406,8 @@ lessons:
     **La propriété socratique est un** {violet}**universel immanent**{/violet}**, c'est-à-dire** {amber}**présent dans les choses sensibles elles-mêmes**{/amber} : la piété est en Socrate, si bien que {coral}la définition de la Piété vaut aussi pour lui{/coral}. « Séparer l'universel », c'est {red}refuser cette thèse{/red} et {green}poser la Piété hors des choses pieuses{/green} ; et si Aristote a raison, Platon le fait {coral}parce que les choses sensibles changent{/coral}.
   points:
   - id: platon-idees-i3-p1
-    sentence: "« __Mais Socrate__ ___ ; eux, au contraire, **les ont séparés** et ont appelé Idées ceux des êtres qui sont tels. » (Aristote, *Métaphysique*, M, 4, 1078b30-32)"
-    answer: "ne rendait séparables ni les universels ni les définitions"
+    sentence: "« __Mais Socrate ne rendait séparables__ ___ ; eux [Platon et ses disciples], au contraire, **les ont séparés** et ont appelé Idées ceux des êtres qui sont tels. » (Aristote, *Métaphysique*, M, 4, 1078b30-32)"
+    answer: "ni les universels ni les définitions"
     alt: []
   - id: platon-idees-i3-p2
     sentence: "« La doctrine des formes est venue à ceux qui la soutiennent parce qu'ils ont été convaincus, __au sujet de la vérité, par__ ___ selon lesquels **tous les sensibles s'écoulent sans cesse**, d'où il s'ensuit que, s'il y a science et pensée de quelque chose, il faut qu'existent, en dehors des natures sensibles, d'autres natures qui demeurent, car il n'y a pas de science de ce qui s'écoule. » (Aristote, *Métaphysique*, M, 4, 1078b12-17)"
@@ -405,9 +418,9 @@ lessons:
     answer: "il n'y a pas de science de ce qui s'écoule"
     alt: []
   - id: platon-idees-i3-p4
-    sentence: "« Mais Socrate **ne rendait séparables ni les universels ni les définitions** ; __eux, au contraire, les ont séparés et__ ___ ceux des êtres qui sont tels. » (Aristote, *Métaphysique*, M, 4, 1078b30-32)"
-    answer: "ont appelé Idées"
-    alt: []
+    sentence: "« Mais Socrate **ne rendait séparables ni les universels ni les définitions** ; __eux, au contraire, les ont séparés et ont appelé__ ___ ceux des êtres qui sont tels. » (Aristote, *Métaphysique*, M, 4, 1078b30-32)"
+    answer: "Idées"
+    alt: ["Formes"]
   - id: platon-idees-i3-p5
     sentence: "Un ___ __est ce qui se prédique de plusieurs choses__ : ce qu'ont en commun une boule de bowling, un ballon et un cercle tracé au tableau, à savoir la **rondeur**."
     answer: "universel"
@@ -424,14 +437,6 @@ lessons:
     sentence: "__Au cœur de l'elenchos se trouve la question__ « ___ ? », où X nomme d'ordinaire une **propriété éthique** comme la piété ou le courage."
     answer: "qu'est-ce que X"
     alt: ["Qu'est-ce que X"]
-  - id: platon-idees-i3-p9
-    sentence: "Une réponse à la question « qu'est-ce que la piété ? » __est trop ___ quand__ elle **laisse de côté certains cas de piété**."
-    answer: "étroite"
-    alt: []
-  - id: platon-idees-i3-p10
-    sentence: "Une réponse à la question « qu'est-ce que la piété ? » __est trop ___ quand, tout en couvrant tous les cas de piété__, elle inclut aussi des **cas de justice ou d'impiété**."
-    answer: "large"
-    alt: []
   - id: platon-idees-i3-p11
     sentence: "La Piété peut rendre Socrate pieux parce qu'**elle est elle-même pieuse** : __la propriété socratique__ s'___."
     answer: "auto-prédique"
@@ -441,9 +446,9 @@ lessons:
     answer: "prédication"
     alt: []
   - id: platon-idees-i3-p13
-    sentence: "On connaît une propriété socratique quand on peut en **rendre raison** (`logos`), c'est-à-dire en donner la définition, __qui en dit__ l'___ (`ousia`)."
-    answer: "essence"
-    alt: []
+    sentence: "On connaît une propriété socratique quand on peut en **rendre raison** (`logos`), c'est-à-dire en donner la définition, __qui en dit__ l'___."
+    answer: "essence (`ousia`)"
+    alt: ["essence", "ousia"]
   - id: platon-idees-i3-p14
     sentence: "__La propriété socratique est un universel__ ___ : elle est **dans les sensibles**, si bien que la définition de la Piété se dit aussi de Socrate."
     answer: "immanent"
@@ -495,8 +500,8 @@ lessons:
     answer: "reconstruction"
     alt: []
   - id: platon-idees-i4-p6
-    sentence: "Définir le particulier comme ce dont des propriétés se prédiquent et qui ne se prédique de rien __est une définition__ ___ : elle **ne se trouve pas chez Platon**, même si elle rend peut-être sa pensée."
-    answer: "stipulée"
+    sentence: "Définir le ___ comme __ce dont des propriétés se prédiquent et qui ne se prédique de rien__ est une définition stipulée : elle **ne se trouve pas chez Platon**, même si elle rend peut-être sa pensée."
+    answer: "particulier"
     alt: []
   - id: platon-idees-i4-p7
     sentence: "Au début du *Phédon*, __l'âme cherche à être ___ du corps__ (`chôris`), qui la gêne et la distrait, pour être **elle-même par elle-même** et saisir au mieux la vérité."
