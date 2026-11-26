@@ -1,0 +1,610 @@
+# Cours tiré d'un chapitre de manuel collectif sur la vie : Alexandra
+# Michalewski, « Y a-t-il une unité des différents sens de la vie ? Une
+# réflexion à partir de Plotin », La vie comme problème pour la pensée, chap. 2,
+# p. 47-62 (scan sans texte, fourni par l'utilisateur, lu sur l'image). Voir
+# content/philosophie.md, § « Un cours sur un auteur, tiré d'un commentaire » :
+# pas de repérage du chapitre, citations reprises telles qu'il les donne
+# (Plotin : Bréhier, Les Belles Lettres), avec ses références (*Ennéades*, rang
+# porphyrien, puis numéro chronologique du traité entre crochets).
+#
+# Unités plvie1 à plvie3 : la vie de l'Intellect (introduction et partie 1) ; la
+# vie de l'âme (partie 2) ; le retour à l'origine (partie 3 et conclusion).
+#
+# Coquille écartée : dans la citation de VI, 7 [38], 17, le chapitre écrit « une
+# fois qu'elle l'a vue » ; l'objet est l'Un : lu « vu ».
+# Références ajoutées, absentes du chapitre : II, 9 [33], 9 pour les modes de
+# vie des sages et de la multitude (plvie2) ; VI, 7 [38], 22 pour le vivant plus
+# beau que la statue (plvie3). Le chapitre renvoie au discours de Diotime par
+# « Banquet, 201d-208c » : le discours se poursuit au-delà de 208c, seul le
+# début du repère est repris.
+
+id: plvie1
+title: "La vie de l'Intellect"
+subtitle: "Une seule vie en plusieurs sens, dont le foyer est la pensée, et non le corps vivant"
+icon: compass
+color: violet
+group: "Plotin : l'unité des sens de la vie"
+lessons:
+- id: plvie1-l1
+  title: "Que nomme-t-on quand on nomme la vie ?"
+  notes: |-
+    **La vie de l'être humain, celle de l'animal, la vie de l'au-delà : le même mot désigne-t-il la même chose ?** Trois réponses se présentent. {amber}Une réalité{/amber} {violet}univoque{/violet} {amber}fonde toutes ces vies{/amber}. Ou bien nous avons affaire à {amber}une pluralité de sens irréductibles{/amber} les uns aux autres, et il faut renoncer à l'idée d'une unité. Ou encore {amber}la vie des vivants n'est que la trace d'un fondement{/amber} qui rend possible la vie multiple.
+
+    **Plotin permet de reprendre la question.** Né en 204/205 et mort en 270 ap. J.-C., il passe pour le père du {violet}néoplatonisme{/violet}, une interprétation de {sky}Platon{/sky} selon laquelle {coral}tout le réel dérive d'une unité première, l'Un-Bien{/coral}, situé au-delà de l'être et de l'intellection. Héritier aussi d'{sky}Aristote{/sky} et de la tradition hellénistique, il apporte plusieurs innovations, au premier rang desquelles celle-ci : {green}l'ensemble du réel forme une{/green} {teal}« vaste vie »{/teal} (*Ennéades*, V, 2 [11], 2).
+
+    ? Les trois principes : l'{violet}Un{/violet}, source de tout ; l'{violet}Intellect{/violet}, la pensée qui se pense elle-même et contient toutes les Formes ; l'{violet}Âme{/violet}, qui donne vie et ordre au monde des corps. Les corps viennent après eux.
+
+    **Mais cette vie, pourtant une, se dit en plusieurs sens** selon les niveaux de réalité où on l'envisage : de l'Intellect à l'âme, puis au monde des corps, elle n'a pas {amber}le même degré de clarté, d'intensité et de puissance{/amber}. D'où la difficulté : {amber}__**si la vie se dit en plusieurs sens, comment maintenir son unité sans la réduire à une simple équivocité verbale ?**__{/amber} Il y a équivocité verbale quand un mot couvre des choses que rien ne relie, comme le {yellow}chien{/yellow}, l'animal et la constellation : le nom est commun par accident.
+
+    **La réponse tient dans une** {violet}homonymie hiérarchique{/violet}**.** Les sens de la vie ne sont pas arbitrairement liés : ils sont organisés selon {coral}un rapport de modèle à image, de cause à effet{/coral}. Ils correspondent aux différents niveaux d'être de cette métaphysique {violet}gradualiste{/violet}, qui sont aussi des niveaux de vie et de pensée : {amber}tout ce qui existe est indissociablement vivant et pensant{/amber}.
+
+    **La perspective habituelle s'en trouve inversée** : {green}la vie est d'abord spirituelle{/green}, {red}et non biologique{/red}, parce qu'elle exprime {coral}l'activité la plus haute qui soit, celle de l'Intellect{/coral}.
+
+    ! Homonymie ne veut pas dire ici confusion de mots : c'est un ordre entre des réalités, où ce qui vient après tient son nom de ce qui vient avant.
+  points:
+  - id: plvie1-l1-p1
+    sentence: "__Pour Plotin, les différents sens de la vie sont unis par__ une homonymie ___ : ils sont ordonnés les uns aux autres sans partager une même définition."
+    answer: "hiérarchique"
+    alt: []
+  - id: plvie1-l1-p2
+    sentence: "__Les sens de la vie ne sont pas arbitrairement liés__ : ils sont organisés selon un rapport de ___ à image."
+    answer: "modèle"
+    alt: []
+  - id: plvie1-l1-p3
+    sentence: "__Les sens de la vie ne sont pas arbitrairement liés__ : ils sont organisés selon un rapport de modèle à ___, de cause à effet."
+    answer: "image"
+    alt: []
+  - id: plvie1-l1-p4
+    sentence: "Vie de l'être humain, de l'animal, de l'au-delà : la première hypothèse est qu'une réalité ___ les fonde toutes, c'est-à-dire **un seul et même sens** de la vie."
+    answer: "univoque"
+    alt: []
+  - id: plvie1-l1-p5
+    sentence: "Contre l'unité des sens de la vie : nous serions en présence d'une **pluralité de sens** ___ les uns aux autres."
+    answer: "irréductibles"
+    alt: []
+  - id: plvie1-l1-p6
+    sentence: "Troisième hypothèse sur l'unité de la vie : la vie multiple des vivants ne serait que la ___ __d'un fondement__ qui la rend possible."
+    answer: "trace"
+    alt: []
+  - id: plvie1-l1-p7
+    sentence: "__Plotin est tenu pour le père du__ ___, interprétation de Platon selon laquelle tout le réel dérive d'une unité première."
+    answer: "néoplatonisme"
+    alt: []
+  - id: plvie1-l1-p8
+    sentence: "Dans le néoplatonisme de Plotin, __tout le réel dérive d'une unité première__, ___, situé **au-delà de l'être et de l'intellection**."
+    answer: "l'Un-Bien"
+    alt: ["l'Un", "Un-Bien"]
+  - id: plvie1-l1-p9
+    sentence: "__Innovation majeure de Plotin__ (*Ennéades*, V, 2 [11], 2) : l'ensemble du réel forme une « ___ »."
+    answer: "vaste vie"
+    alt: []
+    citation: true
+  - id: plvie1-l1-p10
+    sentence: "__L'ensemble du réel forme une « vaste vie »__ : *Ennéades*, ___."
+    answer: "V, 2 [11], 2"
+    alt: ["V, 2", "V 2", "traité 11"]
+    citation: true
+  - id: plvie1-l1-p11
+    sentence: "De l'Intellect à l'âme puis aux corps, **la vie** __n'a pas le même degré de__ ___, d'intensité et de puissance."
+    answer: "clarté"
+    alt: []
+  - id: plvie1-l1-p12
+    sentence: "__La difficulté propre à Plotin__ : si la vie se dit en plusieurs sens, comment maintenir son unité sans la réduire à une simple ___ verbale ?"
+    answer: "équivocité"
+    alt: []
+  - id: plvie1-l1-p13
+    sentence: "La **métaphysique** de Plotin est dite ___ : les niveaux d'être y sont aussi des niveaux de vie et de pensée."
+    answer: "gradualiste"
+    alt: []
+  - id: plvie1-l1-p14
+    sentence: "__Pour Plotin, tout ce qui existe est indissociablement vivant et__ ___ : les niveaux d'être sont aussi des niveaux de vie."
+    answer: "pensant"
+    alt: []
+  - id: plvie1-l1-p15
+    sentence: "__Plotin inverse la perspective habituelle__ : la vie est d'abord ___ et non biologique."
+    answer: "spirituelle"
+    alt: []
+  - id: plvie1-l1-p16
+    sentence: "Si **la vie est d'abord spirituelle**, c'est qu'elle exprime l'activité la plus haute qui soit, __celle de__ ___."
+    answer: "l'Intellect"
+    alt: []
+- id: plvie1-l2
+  title: "Une notion centrale et paradoxale"
+  notes: |-
+    **La vie est chez Plotin une notion à la fois** {amber}centrale et transversale{/amber} : elle irrigue toute sa métaphysique. Elle y est aussi {amber}paradoxale{/amber} et {amber}difficile à saisir{/amber}.
+
+    **Paradoxale, parce que le principe de la vie la reçoit.** L'{violet}âme{/violet} est définie comme {coral}principe de vie{/coral}, mais elle {coral}reçoit elle-même la vie d'un niveau supérieur{/coral}, l'Intellect, qui dépend à son tour d'un premier principe, l'Un. Un principe semble pourtant n'avoir rien à recevoir : comment ce qui donne la vie peut-il la tenir d'un autre ?
+
+    **Difficile à saisir, parce que la vie n'est pas seulement homonyme, mais aussi** {violet}polysémique{/violet} : Plotin introduit en philosophie un sens nouveau du terme. Dans le traité *Sur l'éternité et le temps* (III, 7 [45]), {coral}l'éternité et le temps constituent respectivement la vie{/coral} ({blue}*zôè*{/blue}) {coral}de l'Intellect et de l'Âme{/coral}, c'est-à-dire {amber}la manière qu'ont ces principes de se manifester et d'exister{/amber}.
+
+    **Ce sens nouveau engage une question sur l'existence que nous voulons mener**, notre {blue}*bios*{/blue}, notre genre de vie. Si le temps est la marque de ce qui nous fait passer d'un état de vie à un autre, {amber}__**quel type de vie faut-il choisir ?**__{/amber}
+    - {red}vivre uniquement selon la modalité temporelle{/red} et changeante de notre existence ;
+    - ou {green}remonter jusqu'à la vie même de l'Intellect, l'éternité{/green}, mode de vie stable et parfait.
+
+    **L'enjeu est alors de savoir si ces sens se laissent réunir.** En les déclinant, Plotin veut-il faire de la vie {red}un terme strictement polysémique{/red}, ou invite-t-il à les articuler {green}pour dégager une signification unitaire{/green} ? La réponse passe par trois lieux : l'Intellect, foyer véritable de la vie, de l'être et de la pensée ; l'Âme, qui reçoit et transmet une vie dérivée ; enfin la vie comme puissance d'expansion et élan de retour vers l'origine.
+
+    ! {blue}*Zôè*{/blue} désigne ici la vie d'un principe, sa manière d'être ; {blue}*bios*{/blue}, l'état ou le genre de vie.
+  points:
+  - id: plvie1-l2-p1
+    sentence: "**La vie est paradoxale chez Plotin** : l'âme, définie comme principe de vie, ___ elle-même la vie d'un niveau supérieur."
+    answer: "reçoit"
+    alt: []
+  - id: plvie1-l2-p2
+    sentence: "La vie irrigue toute la métaphysique de Plotin : c'est une notion à la fois centrale et ___."
+    answer: "transversale"
+    alt: []
+  - id: plvie1-l2-p3
+    sentence: "__L'âme, principe de vie, reçoit la vie__ d'un niveau supérieur, ___, qui dépend à son tour d'un premier principe."
+    answer: "l'Intellect"
+    alt: []
+  - id: plvie1-l2-p4
+    sentence: "__L'âme reçoit la vie de l'Intellect__, qui dépend à son tour d'un **premier principe**, ___."
+    answer: "l'Un"
+    alt: []
+  - id: plvie1-l2-p5
+    sentence: "Chez Plotin, **la vie** __n'est pas seulement homonyme, mais aussi__ ___ : il introduit en philosophie un sens nouveau du terme."
+    answer: "polysémique"
+    alt: ["une réalité polysémique"]
+  - id: plvie1-l2-p6
+    sentence: "__Le **sens nouveau** de la vie est introduit dans le traité__ *___* (III, 7 [45])."
+    answer: "Sur l'éternité et le temps"
+    alt: ["De l'éternité et du temps"]
+  - id: plvie1-l2-p7
+    sentence: "Au traité III, 7, __la vie__ (*zôè*) __de l'Intellect__ est ___."
+    answer: "l'éternité"
+    alt: []
+  - id: plvie1-l2-p8
+    sentence: "Au traité III, 7, __la vie__ (*zôè*) __de l'Âme__ est ___."
+    answer: "le temps"
+    alt: []
+  - id: plvie1-l2-p9
+    sentence: "Éternité et temps sont la **vie** de l'Intellect et de l'Âme, en grec *___*, __la manière qu'ont ces principes de se manifester et d'exister__."
+    answer: "zôè"
+    alt: ["zôê", "zoè"]
+  - id: plvie1-l2-p10
+    sentence: "La vie de l'Intellect et de l'Âme est la **manière** qu'ont ces principes de se manifester et d'___."
+    answer: "exister"
+    alt: []
+  - id: plvie1-l2-p11
+    sentence: "__Le sens nouveau de la vie invite à réfléchir__ au **type d'existence** que nous souhaitons mener, en grec *___*."
+    answer: "bios"
+    alt: []
+  - id: plvie1-l2-p12
+    sentence: "__Quel type de vie choisir ?__ Vivre selon la seule modalité ___ et changeante de notre existence, ou remonter jusqu'à la vie de l'Intellect."
+    answer: "temporelle"
+    alt: []
+  - id: plvie1-l2-p13
+    sentence: "__Remonter jusqu'à la vie même de l'Intellect__, c'est rejoindre un mode de vie ___ et parfait."
+    answer: "stable"
+    alt: []
+- id: plvie1-l3
+  title: "Partir de la pensée, non du vivant"
+  notes: |-
+    **Comment dire que la vie est d'abord intellectuelle et non biologique ?** La tradition antique la définit par {amber}ses manifestations les plus immédiatement observables{/amber} : la {yellow}croissance{/yellow}, la {yellow}nutrition{/yellow}, la {yellow}reproduction{/yellow}, la {yellow}sensation{/yellow}. C'est de ces fonctions qu'elle monte ensuite vers les facultés supérieures de l'âme.
+
+    **Plotin renverse la démarche** : {red}il ne s'agit pas de partir du vivant pour comprendre la pensée{/red}, mais {green}de partir de la pensée pour comprendre ce qu'est la vie{/green}. Il faut montrer que {coral}l'activité la plus haute, celle de l'Intellect divin, est aussi la vie la plus accomplie{/coral}, et que les formes inférieures ne sont des vies que {amber}par participation et dérivation{/amber} depuis ce foyer. Ce renversement exige de transformer les concepts hérités, à commencer par celui d'{violet}activité{/violet} ({blue}*energeia*{/blue}) d'Aristote.
+
+    **Chez Platon, un être véritable ne peut être sans vie.** {sky}*Sophiste*, 248e-249a{/sky} : l'être véritable ne peut exister sans posséder {amber}la vie, l'intellect et le mouvement{/amber}. La thèse visait les partisans d'un être immobile, les {sky}« amis des Formes »{/sky}. Plotin la radicalise : {coral}un être sans vie et sans mouvement serait inerte, comparable à un corps{/coral}. Or l'être intelligible vaut mieux qu'un corps. Ce mouvement n'est pourtant {red}pas un déplacement local{/red} : c'est {green}un mouvement de pensée{/green} ({blue}*noèsis*{/blue}), une activité interne qui constitue la vie parfaite de l'Intellect.
+
+    **La vie lie l'un et le multiple.** Elle est aussi un principe de pluralisation interne : toute vie est {amber}une pluralité qui se résorbe dans l'unité{/amber}. Le {sky}*Timée*{/sky} (31a) montrait l'Intellect démiurgique contemplant la totalité des Formes réunies dans le {violet}Vivant total{/violet} ; Plotin {coral}intériorise ce Vivant au sein même de l'Intellect{/coral}. La vie devient le lien entre l'unité de l'Intellect et la multiplicité des Formes.
+
+    **Aristote fournit l'activité, que Plotin met en mouvement.** Selon {sky}*Métaphysique*, Λ, 7{/sky} (1072b26-28), l'activité divine de l'Intellect est celle d'une vie parfaite et éternelle. Plotin recueille l'héritage et en change le sens : cette vie n'est {red}pas le repos immobile d'un Premier Moteur qui se pense lui-même{/red}, mais {green}un mouvement intérieur, à la fois auto-contemplation et auto-production des Formes{/green}. Quand l'Intellect pense, il se pense lui-même, {amber}c'est-à-dire qu'il pense la totalité des Formes{/amber} : lui et les intelligibles ne forment qu'une seule nature, qui dérive éternellement de l'Un.
+
+    ! Le partage des héritages : {sky}Aristote{/sky} donne les instruments pour identifier la vie à l'activité intellectuelle ; {sky}Platon{/sky}, de quoi fixer le statut ontologique de la vie dans le monde intelligible.
+  points:
+  - id: plvie1-l3-p1
+    sentence: "__Plotin renverse la démarche habituelle__ : il ne part pas du vivant, mais de la ___, pour comprendre ce qu'est la vie."
+    answer: "pensée"
+    alt: []
+  - id: plvie1-l3-p2
+    sentence: "__L'activité la plus haute__, celle de l'Intellect divin, __est aussi__ la **vie** la plus ___."
+    answer: "accomplie"
+    alt: []
+  - id: plvie1-l3-p3
+    sentence: "__Les formes inférieures de la vie ne sont des vies que__ par ___ et dérivation depuis le foyer intellectuel."
+    answer: "participation"
+    alt: []
+  - id: plvie1-l3-p4
+    sentence: "__La tradition antique définit d'ordinaire la vie par ses manifestations les plus observables__ : croissance, ___, reproduction, sensation."
+    answer: "nutrition"
+    alt: []
+  - id: plvie1-l3-p5
+    sentence: "Pour penser la vie de l'Intellect, Plotin doit transformer la notion aristotélicienne d'**activité**, en grec *___*."
+    answer: "energeia"
+    alt: []
+  - id: plvie1-l3-p6
+    sentence: "__L'être véritable ne peut exister sans posséder la vie, l'intellect et le mouvement__ : thèse de Platon dans le *___* (248e-249a), reprise par Plotin."
+    answer: "Sophiste"
+    alt: []
+  - id: plvie1-l3-p7
+    sentence: "*Sophiste*, 248e-249a : l'être véritable ne peut exister sans posséder la vie, l'intellect et le ___."
+    answer: "mouvement"
+    alt: []
+  - id: plvie1-l3-p8
+    sentence: "__La thèse du *Sophiste*, qu'un être véritable doit être vivant, visait__ les partisans d'un être immobile, les « ___ »."
+    answer: "amis des Formes"
+    alt: []
+  - id: plvie1-l3-p9
+    sentence: "__Pourquoi l'être intelligible doit-il être vivant ?__ Un être sans vie et sans mouvement serait ___, comparable à un corps."
+    answer: "inerte"
+    alt: []
+  - id: plvie1-l3-p10
+    sentence: "__Le mouvement de l'être intelligible n'est pas un mouvement local__, mais un mouvement de ___, une activité interne."
+    answer: "pensée"
+    alt: []
+  - id: plvie1-l3-p11
+    sentence: "Le **mouvement de pensée** qui constitue la vie parfaite de l'Intellect se dit en grec *___*."
+    answer: "noèsis"
+    alt: ["noêsis", "noesis"]
+  - id: plvie1-l3-p12
+    sentence: "__La vie est un principe de pluralisation interne__ : toute vie est une **pluralité** qui se résorbe dans l'___."
+    answer: "unité"
+    alt: []
+  - id: plvie1-l3-p13
+    sentence: "*Timée*, 31a : Plotin __intériorise au sein même de l'Intellect__ le ___, où sont réunies toutes les Formes."
+    answer: "Vivant total"
+    alt: ["Vivant"]
+  - id: plvie1-l3-p14
+    sentence: "__La vie devient chez Plotin le lien__ entre l'unité de l'Intellect et la ___ des Formes."
+    answer: "multiplicité"
+    alt: []
+  - id: plvie1-l3-p15
+    sentence: "__L'activité divine de l'Intellect est une vie parfaite et éternelle__ : thèse d'Aristote au livre ___ de la *Métaphysique*, chapitre 7."
+    answer: "Λ"
+    alt: ["Lambda", "XII"]
+  - id: plvie1-l3-p16
+    sentence: "__Plotin transforme Aristote__ : la vie de l'Intellect n'est pas le **repos immobile** d'un ___ qui se pense lui-même."
+    answer: "Premier Moteur"
+    alt: []
+  - id: plvie1-l3-p17
+    sentence: "Pour Plotin, la **vie de l'Intellect** est un mouvement intérieur qui est __simultanément auto-contemplation et__ ___ des Formes."
+    answer: "auto-production"
+    alt: ["autoproduction"]
+  - id: plvie1-l3-p18
+    sentence: "__Quand l'Intellect pense, il se pense lui-même__, c'est-à-dire qu'il pense la totalité des ___."
+    answer: "Formes"
+    alt: []
+  - id: plvie1-l3-p19
+    sentence: "Aristote donne à Plotin de quoi identifier la vie à l'activité intellectuelle ; **Platon**, de quoi déterminer son statut ___ dans le monde intelligible."
+    answer: "ontologique"
+    alt: []
+- id: plvie1-l4
+  title: "La genèse de l'Intellect en trois moments"
+  notes: |-
+    **La vie est la caractéristique première de l'Intellect, ce qui se voit à la manière dont il se rapporte à son principe, l'Un.** Cette relation est exposée sous la forme d'un récit de genèse, {amber}purement logique et non temporelle{/amber} : il ne raconte pas ce qui s'est passé un jour, il distingue des moments dans une dépendance éternelle. Sa présentation la plus achevée est au traité VI, 7 [38].
+
+    | Moment | Ce qui se passe | Ce qu'est la vie |
+    | émanation | l'Un produit un premier rejeton | une vie indéterminée |
+    | conversion | elle se retourne vers l'Un | limite, forme et contenu reçus |
+    | constitution | l'Intellect est pleinement formé | le Vivant total |
+
+    **L'émanation : une vie encore sans contour.** L'Un, {coral}en vertu de sa puissance infinie{/coral}, produit au-dehors de lui-même un premier rejeton, une {violet}vie indéterminée{/violet} : une activité {amber}pré-intellectuelle{/amber}, qui n'est encore que {amber}pure orientation vers l'origine{/amber}. Plotin la décrit ainsi (VI, 7 [38], 17, 14-16) : {teal}« {/teal}Au moment où {teal}la vie dirigeait ses regards vers lui{/teal} [l'Un], elle {teal}était encore illimitée{/teal} ; une fois qu'elle l'a vu, {teal}elle a été limitée{/teal}, sans que {teal}l'Un lui-même ait aucune limite »{/teal}.
+
+    **La conversion : en regardant, elle prend forme.** La vie indéterminée se retourne vers l'Un et, {coral}dans ce geste même, reçoit limitation, forme et contenu{/coral} : elle devient {violet}auto-contemplation{/violet}. C'est la constitution de l'Intellect comme {amber}acte de pensée{/amber}. À ce stade, la vie est {coral}ce qui engendre toutes les Formes intelligibles en les structurant en un tout organique parfait{/coral}. La limite ne vient donc pas d'une borne que l'Un possèderait et transmettrait : lui n'en a aucune.
+
+    **L'Intellect achevé : le Vivant total.** Il englobe toutes les Formes, en tant qu'êtres vivants individuels, et forme ce que Plotin, d'après le {sky}*Timée*{/sky}, appelle le {violet}Vivant total{/violet}, complet et ne manquant de rien. Une {yellow}course{/yellow} tout à la fois {teal}« vagabonde »{/teal} et {teal}« immobile »{/teal} parcourt éternellement les Formes (VI, 7 [38], 13) : {amber}vagabonde{/amber}, car la pensée va d'une Forme à l'autre ; {amber}immobile{/amber}, car elle ne sort jamais d'elle-même et ne passe pas dans le temps.
+
+    **Dans l'Intellect achevé, la vie empêche l'être d'être une substance inerte** : elle est {coral}le mouvement interne qui fait que l'être pense et que la pensée existe{/coral}, et qui permet à l'Intellect d'être une totalité unifiée, en parfaite cohérence avec elle-même.
+
+    ! L'antériorité de la vie indéterminée sur l'Intellect n'est pas une antériorité dans le temps.
+  points:
+  - id: plvie1-l4-p1
+    sentence: "__La genèse de l'Intellect depuis l'Un__ est un récit **purement logique** et non ___."
+    answer: "temporel"
+    alt: ["temporelle"]
+  - id: plvie1-l4-p2
+    sentence: "Dans la genèse de l'Intellect, le premier moment, l'**émanation**, voit l'Un produire un premier rejeton, une ___."
+    answer: "vie indéterminée"
+    alt: []
+  - id: plvie1-l4-p3
+    sentence: "__L'Un produit hors de lui-même un premier rejeton__ en vertu de sa ___ infinie."
+    answer: "puissance"
+    alt: []
+  - id: plvie1-l4-p4
+    sentence: "La **vie indéterminée** est une activité ___, qui n'est encore que pure orientation vers l'origine."
+    answer: "pré-intellectuelle"
+    alt: ["préintellectuelle"]
+  - id: plvie1-l4-p5
+    sentence: "La **vie indéterminée**, premier rejeton de l'Un, n'est encore que pure ___ vers l'origine."
+    answer: "orientation"
+    alt: []
+  - id: plvie1-l4-p6
+    sentence: "VI, 7 [38], 17 : « Au moment où la vie dirigeait ses regards vers lui [l'Un], elle était encore ___ ; une fois qu'elle l'a vu, elle a été limitée, sans que l'Un lui-même ait aucune limite »."
+    answer: "illimitée"
+    alt: []
+    citation: true
+  - id: plvie1-l4-p7
+    sentence: "VI, 7 [38], 17 : « Au moment où la vie dirigeait ses regards vers lui [l'Un], elle était encore illimitée ; une fois qu'elle l'a vu, elle a été ___, sans que l'Un lui-même ait aucune limite »."
+    answer: "limitée"
+    alt: []
+    citation: true
+  - id: plvie1-l4-p8
+    sentence: "VI, 7 [38], 17 : « Au moment où la vie ___ vers lui [l'Un], elle était encore illimitée ; une fois qu'elle l'a vu, elle a été limitée, sans que l'Un lui-même ait aucune limite »."
+    answer: "dirigeait ses regards"
+    alt: []
+    citation: true
+  - id: plvie1-l4-p9
+    sentence: "VI, 7 [38], 17 : « Au moment où la vie dirigeait ses regards vers lui [l'Un], elle était encore illimitée ; une fois qu'elle l'a vu, elle a été limitée, sans que l'Un lui-même ait ___ »."
+    answer: "aucune limite"
+    alt: []
+    citation: true
+  - id: plvie1-l4-p10
+    sentence: "« Au moment où la vie dirigeait ses regards vers lui [l'Un], elle était encore illimitée ; une fois qu'elle l'a vu, elle a été limitée » : *Ennéades*, ___."
+    answer: "VI, 7 [38], 17"
+    alt: ["VI, 7", "VI 7", "traité 38"]
+    citation: true
+  - id: plvie1-l4-p11
+    sentence: "Deuxième moment de la genèse de l'Intellect, la ___ : la vie indéterminée **se retourne vers l'Un**."
+    answer: "conversion"
+    alt: []
+  - id: plvie1-l4-p12
+    sentence: "__En se retournant vers l'Un__, la vie indéterminée reçoit ___, forme et contenu."
+    answer: "limitation"
+    alt: ["limite"]
+  - id: plvie1-l4-p13
+    sentence: "Par la conversion vers l'Un, la **vie indéterminée** devient ___ : l'Intellect se constitue comme acte de pensée."
+    answer: "auto-contemplation"
+    alt: ["autocontemplation"]
+  - id: plvie1-l4-p14
+    sentence: "__Au moment de la constitution de l'Intellect, la vie engendre les Formes__ en les structurant en un tout ___ parfait."
+    answer: "organique"
+    alt: []
+  - id: plvie1-l4-p15
+    sentence: "Troisième moment : l'**Intellect pleinement constitué** englobe toutes les Formes comme êtres vivants individuels et forme le ___, complet et ne manquant de rien."
+    answer: "Vivant total"
+    alt: []
+  - id: plvie1-l4-p16
+    sentence: "VI, 7 [38], 13 : __l'Intellect parcourt éternellement les Formes__ d'une course à la fois « ___ » et « immobile »."
+    answer: "vagabonde"
+    alt: []
+    citation: true
+  - id: plvie1-l4-p17
+    sentence: "VI, 7 [38], 13 : __l'Intellect parcourt éternellement les Formes__ d'une course à la fois « vagabonde » et « ___ »."
+    answer: "immobile"
+    alt: []
+    citation: true
+  - id: plvie1-l4-p18
+    sentence: "__Dans l'Intellect achevé__, la **vie** est ce qui empêche l'être d'être une substance ___."
+    answer: "inerte"
+    alt: []
+- id: plvie1-l5
+  title: "La tension qui unifie : l'Intellect est la vie"
+  notes: |-
+    **La vie comme mouvement interne à la totalité de l'être transpose dans l'intelligible une théorie stoïcienne, celle de la** {violet}tension{/violet} ({blue}*tonos*{/blue}). Pour les {sky}stoïciens{/sky}, ainsi chez {sky}Cléanthe{/sky}, le {yellow}feu{/yellow} qui anime toute chose possède un {blue}*tonos*{/blue} qui agit dans les corps comme {amber}principe de cohésion et de mouvement{/amber}. Plotin {coral}dématérialise cette idée{/coral} : la vie devient {green}la tension spirituelle qui unifie l'Intellect et lui permet de penser les Formes{/green}.
+
+    **Il retourne du même coup contre eux leur** {violet}sympathie universelle{/violet}. Les stoïciens affirment que tout ce qui est réel est corporel : ils ne peuvent donc saisir le sens véritable de la vie, car {coral}la séparation spatiale des parties d'un tout physique le rend susceptible de fragmentation{/coral} et {coral}le prive de l'immédiateté de l'unité véritable{/coral}. {yellow}Un corps peut toujours être coupé{/yellow} : une unité faite de parties placées les unes hors des autres reste précaire.
+
+    **La vie est ainsi à la fois ce qui forme l'Intellect et ce qu'il est.** D'une part, elle est la réalité primordiale qui lui permet de se former ; d'autre part, l'Intellect est une réalité vivante, parce qu'il est {amber}une unité qui se multiplie et se déploie par division interne, tout en restant parfaitement identique à elle-même{/amber} dans son activité. On voit par là le rôle central de la triade que {sky}Pierre Hadot{/sky} a nommée {violet}« être-vie-pensée »{/violet}.
+
+    **La vie n'est pas une Forme intelligible parmi d'autres, mais une** {violet}propriété catégoriale{/violet}**.** {red}L'Intellect n'__a__ pas la vie{/red}, comme une propriété à côté d'autres ; {green}il __est__ la vie{/green}, ce qui témoigne de son {amber}autonomie ontologique{/amber} : {teal}« {/teal}Ce qui {teal}vit par soi-même{/teal} et {teal}existe par soi-même{/teal} est {teal}l'être premier{/teal} et {teal}le premier vivant »{/teal} (IV, 7 [2], 9, 14-15).
+
+    **Cette autonomie va avec la totalité** : l'Intellect est l'être le plus {violet}autarcique{/violet}, parce qu'il est une totalité parfaitement unifiée, qui {coral}coïncide immédiatement avec son objet{/coral}. Il n'a rien à chercher hors de lui, puisque ce qu'il pense, c'est lui-même.
+
+    ! La tension est stoïcienne d'origine, mais elle n'a plus rien de corporel chez Plotin.
+  points:
+  - id: plvie1-l5-p1
+    sentence: "__Plotin transpose dans le monde intelligible__ la théorie stoïcienne de la ___ : la vie est ce qui unifie l'Intellect."
+    answer: "tension"
+    alt: []
+  - id: plvie1-l5-p2
+    sentence: "La **tension** des stoïciens, que Plotin transpose dans l'intelligible, se dit en grec *___*."
+    answer: "tonos"
+    alt: []
+  - id: plvie1-l5-p3
+    sentence: "Pour les stoïciens, comme Cléanthe, le ___ qui anime toute chose possède un *tonos*, principe de cohésion et de mouvement."
+    answer: "feu"
+    alt: []
+  - id: plvie1-l5-p4
+    sentence: "Chez les stoïciens, le **tonos** agit dans les corps comme __principe de__ ___ et de mouvement."
+    answer: "cohésion"
+    alt: []
+  - id: plvie1-l5-p5
+    sentence: "__Du *tonos* stoïcien à la vie de l'Intellect__ : Plotin ___ cette idée."
+    answer: "dématérialise"
+    alt: []
+  - id: plvie1-l5-p6
+    sentence: "Chez Plotin, **la vie** devient la tension ___ qui unifie l'Intellect et lui permet de penser les Formes."
+    answer: "spirituelle"
+    alt: []
+  - id: plvie1-l5-p7
+    sentence: "Plotin retourne contre les stoïciens leur doctrine de la ___ universelle."
+    answer: "sympathie"
+    alt: []
+  - id: plvie1-l5-p8
+    sentence: "__Pourquoi les stoïciens manquent-ils le sens véritable de la vie ?__ Ils affirment que tout ce qui est réel est ___."
+    answer: "corporel"
+    alt: ["un corps"]
+  - id: plvie1-l5-p9
+    sentence: "La **séparation spatiale** des parties d'un tout physique le rend susceptible de ___ et le prive de l'immédiateté de l'unité véritable."
+    answer: "fragmentation"
+    alt: []
+  - id: plvie1-l5-p10
+    sentence: "__L'Intellect est une réalité vivante__ parce que c'est une unité qui se multiplie par **division interne** tout en restant parfaitement ___ à elle-même."
+    answer: "identique"
+    alt: []
+  - id: plvie1-l5-p11
+    sentence: "__La triade qui joue un rôle central dans la métaphysique de Plotin__, nommée par Pierre Hadot : « ___ »."
+    answer: "être-vie-pensée"
+    alt: ["être, vie, pensée"]
+  - id: plvie1-l5-p12
+    sentence: "__La **vie** n'est pas une Forme intelligible__, mais une propriété ___."
+    answer: "catégoriale"
+    alt: []
+  - id: plvie1-l5-p13
+    sentence: "__L'Intellect n'*a* pas la vie__ comme une propriété parmi d'autres : il ___."
+    answer: "est la vie"
+    alt: ["est"]
+  - id: plvie1-l5-p14
+    sentence: "IV, 7 [2], 9 : « Ce qui ___ et existe par soi-même est l'être premier et le premier vivant »."
+    answer: "vit par soi-même"
+    alt: []
+    citation: true
+  - id: plvie1-l5-p15
+    sentence: "IV, 7 [2], 9 : « Ce qui vit par soi-même et ___ est l'être premier et le premier vivant »."
+    answer: "existe par soi-même"
+    alt: []
+    citation: true
+  - id: plvie1-l5-p16
+    sentence: "IV, 7 [2], 9 : « Ce qui vit par soi-même et existe par soi-même est ___ et le premier vivant »."
+    answer: "l'être premier"
+    alt: []
+    citation: true
+  - id: plvie1-l5-p17
+    sentence: "IV, 7 [2], 9 : « Ce qui vit par soi-même et existe par soi-même est l'être premier et ___ »."
+    answer: "le premier vivant"
+    alt: []
+    citation: true
+  - id: plvie1-l5-p18
+    sentence: "« Ce qui vit par soi-même et existe par soi-même est l'être premier et le premier vivant » : *Ennéades*, ___."
+    answer: "IV, 7 [2], 9"
+    alt: ["IV, 7", "IV 7", "traité 2"]
+    citation: true
+  - id: plvie1-l5-p19
+    sentence: "__L'Intellect est l'être le plus__ ___ : totalité parfaitement unifiée, il coïncide immédiatement avec son objet."
+    answer: "autarcique"
+    alt: []
+- id: plvie1-l6
+  title: "Des Formes vivantes"
+  notes: |-
+    **Si la vie est la marque de l'être le plus accompli, les Formes intelligibles doivent-elles vivre ?** Chez {sky}Platon{/sky}, elles sont éternelles et séparées, mais {pink}il n'est pas évident qu'elles soient vivantes{/pink} au sens plein. {sky}Aristote{/sky} les critique précisément parce qu'elles sont {red}inactives{/red}, {red}incapables d'exercer une causalité efficace sans l'intermédiaire d'un Intellect moteur{/red}.
+
+    **Plotin répond en** {violet}vivifiant{/violet} **les Formes, par leur intériorisation dans l'Intellect.** Elles ne sont {red}pas des réalités séparées que l'Intellect contemplerait de l'extérieur{/red}, mais {green}les actes mêmes dans lesquels il se déploie et se pense{/green}.
+
+    **Un double déplacement face à Platon :**
+    - ce qui était le propre de l'âme, {amber}être source et principe de mouvement et de vie{/amber} ({sky}*Phèdre*, 245c{/sky}), remonte d'un cran et devient {coral}l'apanage de l'Intellect{/coral} : la vie première est son activité éternelle ;
+    - puisque l'Intellect ne forme avec les Formes qu'une seule nature, {coral}les Formes sont elles aussi des réalités vivantes{/coral}.
+
+    **Chaque Forme est une singularité totale.** Les Formes naissent toutes ensemble, dans le mouvement par lequel l'Intellect se constitue, et chacune est un aspect, une puissance particulière de l'Intellect divin. Cette genèse simultanée implique que {amber}chacune, en se déterminant, se détermine aussi par rapport à toutes les autres{/amber}. Chacune exprime donc la raison d'être de toutes les autres et porte en elle, {coral}de manière indivise{/coral}, tout ce qui sera développé dans le sensible.
+
+    **La causalité des Formes change de nature.** Unie aux notions de vie, d'acte et de pensée, la Forme {red}n'a plus besoin d'une cause ouvrière{/red} pour agir : {green}la seule perfection de son existence suffit pour qu'une image en dérive{/green}. Il suffit au monde intelligible d'exister pour produire spontanément et immédiatement une image de lui-même, le {violet}monde sensible{/violet}, lui aussi, quoique sur un mode moins unifié, {amber}un tout vivant et en sympathie avec lui-même{/amber} (III, 2 [47], 2).
+
+    **La critique d'Aristote se retourne ainsi contre lui** : les Formes séparées ne sont inefficaces que si on les pense privées de vie.
+
+    ! La {violet}cause ouvrière{/violet} est l'artisan qui regarde un modèle et fabrique d'après lui : Plotin s'en passe.
+  points:
+  - id: plvie1-l6-p1
+    sentence: "__Pour répondre à la critique d'Aristote__, Plotin vivifie les Formes en les ___ dans l'Intellect."
+    answer: "intériorisant"
+    alt: []
+  - id: plvie1-l6-p2
+    sentence: "**Aristote** critique les **Formes séparées** parce qu'elles sont ___, incapables d'agir sans un Intellect moteur."
+    answer: "inactives"
+    alt: []
+  - id: plvie1-l6-p3
+    sentence: "Les Formes de Plotin ne sont pas contemplées de l'extérieur : elles sont les ___ mêmes dans lesquels l'Intellect se déploie et se pense."
+    answer: "actes"
+    alt: []
+  - id: plvie1-l6-p4
+    sentence: "__Premier déplacement par rapport à Platon__ : être source de mouvement et de vie, propre de l'___ selon le *Phèdre*, devient l'apanage de l'Intellect."
+    answer: "âme"
+    alt: []
+  - id: plvie1-l6-p5
+    sentence: "__L'âme comme source et principe de mouvement et de vie__, que Plotin fait remonter à l'Intellect, est une thèse de Platon dans le *___*, 245c."
+    answer: "Phèdre"
+    alt: []
+  - id: plvie1-l6-p6
+    sentence: "Second déplacement par rapport à Platon : puisque **les Formes** ne forment avec l'Intellect qu'une seule ___, elles sont aussi des réalités vivantes."
+    answer: "nature"
+    alt: []
+  - id: plvie1-l6-p7
+    sentence: "__Née du mouvement par lequel l'Intellect se constitue__, chaque **Forme** représente un aspect, une ___ particulière de l'Intellect divin."
+    answer: "puissance"
+    alt: []
+  - id: plvie1-l6-p8
+    sentence: "__La genèse des Formes est simultanée__ : chacune, en se déterminant, se détermine aussi par rapport à ___."
+    answer: "toutes les autres"
+    alt: []
+  - id: plvie1-l6-p9
+    sentence: "Chaque **Forme** est une ___ totale : elle exprime la raison d'être de toutes les autres."
+    answer: "singularité"
+    alt: []
+  - id: plvie1-l6-p10
+    sentence: "__Chaque Forme porte en elle__, de manière ___, tout ce qui sera développé dans le sensible."
+    answer: "indivise"
+    alt: []
+  - id: plvie1-l6-p11
+    sentence: "Enrichie de la vie, **la Forme** __n'a plus besoin pour agir__ de l'intervention d'une ___."
+    answer: "cause ouvrière"
+    alt: []
+  - id: plvie1-l6-p12
+    sentence: "__La causalité des Formes__ : la seule ___ de leur existence suffit pour qu'une image en dérive."
+    answer: "perfection"
+    alt: []
+  - id: plvie1-l6-p13
+    sentence: "Il suffit au monde intelligible d'exister pour produire spontanément et immédiatement une ___ de lui-même, le monde sensible."
+    answer: "image"
+    alt: []
+  - id: plvie1-l6-p14
+    sentence: "III, 2 [47], 2 : le **monde sensible** est lui aussi, sur un mode moins unifié, __un tout vivant et en__ ___ avec lui-même."
+    answer: "sympathie"
+    alt: []
+- id: plvie1-l7
+  title: "Contre Aristote : un mouvement sans manque, un dieu qui produit"
+  notes: |-
+    **Plotin ne se contente pas d'unir Platon et Aristote : il soutient qu'Aristote s'est trompé sur la définition du mouvement.** Pour {sky}Aristote{/sky}, le mouvement est un {violet}acte imparfait{/violet}, {amber}une réalité toujours en chemin vers une fin qui lui est extérieure{/amber}. Ainsi {yellow}bâtir{/yellow} n'est achevé que lorsque la maison, qui n'est pas l'acte de bâtir, est là.
+
+    **Or il existe dans l'Intellect un autre mouvement** : {green}un mouvement sans manque et sans extériorité{/green}, qui est l'autre nom de cette activité {coral}sans transition et sans passage{/coral} qu'est la vie. Dire que l'Intellect se meut ne revient donc pas à dire qu'il lui manque quelque chose.
+
+    **Plus profondément, Aristote a négligé la fécondité de la vie** : {coral}pour être pleinement vivant, l'intellect parfait devait aussi engendrer une réalité dérivée{/coral}. Un dieu qui se pense sans rien produire n'aurait pas la plénitude de la vie. Le raisonnement se suit ainsi :
+    - l'être et la vie sont deux termes {amber}interchangeables{/amber} ;
+    - donc toute Forme est {amber}vivante{/amber}, et le dieu est {amber}producteur{/amber} ;
+    - il faut donc non seulement affirmer l'existence des Formes transcendantes, mais leur restituer {amber}le caractère vivant, pensant et productif{/amber} qu'Aristote leur avait retiré.
+
+    **Il en résulte une nouvelle** {violet}cosmologie{/violet}**.** L'Intellect uni aux Formes est le niveau ontologique privilégié du déploiement de la vie ; depuis lui, chaque niveau du réel se déploie graduellement jusqu'au sensible, qui {red}ne porte qu'une trace lointaine de la vie première{/red}.
+
+    **L'âme y tient un rôle fondamental** : elle est {coral}l'instance intermédiaire qui dispense la vie au monde des corps{/coral} et communique au sensible les déterminations issues de l'Intellect.
+
+    ! Le mouvement de l'Intellect n'est pas un changement : il ne va de rien à rien, il est activité présente tout entière.
+  points:
+  - id: plvie1-l7-p1
+    sentence: "__Contre Aristote, Plotin soutient qu'il existe dans l'Intellect__ un mouvement sans ___ et sans extériorité."
+    answer: "manque"
+    alt: []
+  - id: plvie1-l7-p2
+    sentence: "Pour **Aristote**, le **mouvement** est un acte ___, en chemin vers une fin qui lui est extérieure."
+    answer: "imparfait"
+    alt: []
+  - id: plvie1-l7-p3
+    sentence: "Pour **Aristote**, le mouvement est une réalité toujours en chemin vers une fin qui lui est ___."
+    answer: "extérieure"
+    alt: []
+  - id: plvie1-l7-p4
+    sentence: "Dans l'Intellect de Plotin, le **mouvement sans manque** est l'autre nom d'une activité sans transition et sans passage : ___."
+    answer: "la vie"
+    alt: []
+  - id: plvie1-l7-p5
+    sentence: "La vie est une activité __sans__ ___ et sans passage."
+    answer: "transition"
+    alt: []
+  - id: plvie1-l7-p6
+    sentence: "__Ce qu'Aristote a négligé__ : pour être pleinement vivant, l'intellect parfait devait aussi ___ une réalité dérivée."
+    answer: "engendrer"
+    alt: ["produire"]
+  - id: plvie1-l7-p7
+    sentence: "__Pourquoi toute Forme est-elle vivante, et le dieu producteur ?__ Parce que l'être et la vie sont deux termes ___."
+    answer: "interchangeables"
+    alt: []
+  - id: plvie1-l7-p8
+    sentence: "Si l'être et la vie sont interchangeables, toute Forme est vivante et **le dieu** est ___."
+    answer: "producteur"
+    alt: []
+  - id: plvie1-l7-p9
+    sentence: "__Il faut rendre aux Formes ce qu'Aristote leur avait retiré__ : un caractère vivant, pensant et ___."
+    answer: "productif"
+    alt: []
+  - id: plvie1-l7-p10
+    sentence: "Dans la nouvelle cosmologie de Plotin, le **sensible** ne porte qu'une ___ lointaine de la vie première."
+    answer: "trace"
+    alt: []
+  - id: plvie1-l7-p11
+    sentence: "Depuis l'Intellect, chaque niveau du réel se déploie ___ jusqu'au sensible."
+    answer: "graduellement"
+    alt: []
+  - id: plvie1-l7-p12
+    sentence: "__L'instance intermédiaire qui dispense la vie au monde des corps__ est ___."
+    answer: "l'âme"
+    alt: []
+  - id: plvie1-l7-p13
+    sentence: "**L'âme** communique au sensible les ___ issues de l'Intellect."
+    answer: "déterminations"
+    alt: []

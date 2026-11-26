@@ -117,7 +117,9 @@ l'épreuve :
   l'introduction de Chaintreuil et Rouquayrol (`intro1` à `intro5`), puis
   « Vraie vie et modes de vie dans la philosophie antique » de Chapuis
   (`vies1` à `vies6`), et « De la biologie à l'éthique : Aristote et la
-  vie » de Ribas (`arvie1` à `arvie4`).
+  vie » de Ribas (`arvie1` à `arvie4`). La piste accueille aussi les
+  chapitres d'un autre collectif, *La vie comme problème pour la pensée* :
+  Michalewski sur Plotin et l'unité des sens de la vie (`plvie1` à `plvie3`).
 
 ## Décidé : la correspondance technique avec le moteur de contenu
 
