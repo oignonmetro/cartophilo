@@ -6,17 +6,21 @@
 # sur le modèle des unités de texte portent des identifiants en -nK. Retirées
 # parce qu'elles redoublaient une carte-citation ou une autre carte :
 # m7-l4-p5, m7-l4-p6, m7-l9-p3, m7-l9-p5, m7-l10-p5.
+# Refondue le 2026-11-26 (niveau normale) : 47d-48a coupé en trois leçons,
+# une par fragment, son rappel réparti entre elles sans rien en retirer ; les
+# autres leçons gardées telles quelles.
 
-id: m7
+id: "m7"
 title: "Le Criton : l'argument moral"
 subtitle: "Platon, Criton, 47d-48a, 48b, 49c-d"
-icon: page
-color: yellow
+icon: "page"
+color: "yellow"
 group: "Socrate : la morale"
+depth: "normale"
 intro: |-
   Dans sa prison, Socrate refuse l'évasion que Criton lui propose. Trois passages des principes sur lesquels il fonde ce refus : la vie ne vaut pas d'être vécue avec une âme ruinée (47d-48a) ; ce qui importe n'est pas de vivre, mais de bien vivre (48b) ; il ne faut jamais rendre l'injustice pour l'injustice (49c-d).
 lessons:
-- id: m7-l1
+- id: "m7-l1"
   title: "Socrate en prison : la situation du dialogue"
   notes: |-
     **Condamné à mort, Socrate attend en prison l'exécution de la sentence ; son ami Criton vient le presser de s'évader, et Socrate refuse, au terme d'un examen {amber}qui ne retient qu'une question : s'évader serait-il juste ?{/amber}**
@@ -41,35 +45,35 @@ lessons:
   passage:
     label: "Introduction"
   points:
-  - id: m7-l1-n1
+  - id: "m7-l1-n1"
     sentence: "**L'exécution de Socrate** __est différée jusqu'au retour du navire envoyé à__ ___ : pendant son voyage sacré, la cité ne met personne à mort."
     answer: "Délos"
     alt: []
-  - id: m7-l8-p1
+  - id: "m7-l8-p1"
     sentence: "__Du même âge et du même dème que Socrate, l'Athénien fortuné__ ___ a tout préparé pour son évasion : c'est **son plaidoyer** qui force Socrate à trancher."
     answer: "Criton"
     alt: []
-  - id: m7-l1-n2
+  - id: "m7-l1-n2"
     sentence: "__Criton presse Socrate de fuir en invoquant__ ___ : **on croira que ses amis n'ont pas voulu payer pour le sauver**."
     answer: "l'opinion du grand nombre"
     alt: ["l'opinion de la foule", "l'opinion", "la réputation"]
-  - id: m7-l1-n3
+  - id: "m7-l1-n3"
     sentence: "__Socrate dit n'obéir qu'au seul__ ___ qui, à l'examen, lui paraît le meilleur (46b) : **la menace de la mort** ne le lui fera pas abandonner."
     answer: "raisonnement"
     alt: ["logos", "argument"]
-  - id: m7-l1-p2
+  - id: "m7-l1-p2"
     sentence: "Dans le *Criton* (48c-d), Socrate soutient que la décision de s'évader __ne doit dépendre que d'**une seule considération** : savoir si l'acte serait__ ___."
     answer: "juste ou injuste"
     alt: []
-  - id: m7-l1-n4
+  - id: "m7-l1-n4"
     sentence: "Après les principes (46b-49e) et leur application à l'évasion (49e-50a), __Socrate fait parler les **Lois d'Athènes** : c'est la__ ___ des Lois (50a-54d)."
     answer: "prosopopée"
     alt: []
-  - id: m7-l1-p1
+  - id: "m7-l1-p1"
     sentence: "Le *Criton* prolonge l'*Apologie*, où l'élenchos avait une **double finalité** : __aiguillonner moralement les Athéniens, et__ ___ de l'oracle rendu à Delphes."
     answer: "tester la signification"
     alt: ["tester le sens", "mettre à l'épreuve la signification", "mettre à l'épreuve le sens"]
-- id: m7-l3
+- id: "m7-l3"
   title: "L'opinion de l'expert, non celle du grand nombre"
   notes: |-
     **Il ne faut pas faire cas de toutes les opinions, mais seulement de celle de l'homme qui sait : en matière de juste et d'injuste comme en matière de santé, {green}c'est l'expert qu'on doit suivre, non le grand nombre{/green}.**
@@ -90,134 +94,158 @@ lessons:
   passage:
     label: "Introduction"
   points:
-  - id: m7-l3-n1
+  - id: "m7-l3-n1"
     sentence: "__Le grand nombre ne peut rendre un homme ni__ ___ ni insensé : il **agit au hasard** (44d)."
     answer: "sensé"
     alt: ["sage", "raisonnable"]
-  - id: m7-l3-p1
+  - id: "m7-l3-p1"
     sentence: "Pour montrer qu'il ne faut suivre que **l'opinion de l'expert**, __Socrate part de l'exemple de__ l'___ : celui qui s'exerce n'écoute qu'un seul homme, celui qui s'y connaît."
     answer: "entraînement du corps"
     alt: ["exercice du corps", "entraînement", "gymnastique"]
-  - id: m7-l3-p2
+  - id: "m7-l3-p2"
     sentence: "Celui qui s'entraîne __ne fait cas que de l'éloge et du blâme d'un seul homme,__ ___, médecin ou maître de gymnastique, et non **du grand nombre**."
     answer: "l'expert"
     alt: ["celui qui s'y connaît", "le connaisseur"]
-  - id: m7-l3-p3
+  - id: "m7-l3-p3"
     sentence: "**L'exemple de l'entraînement du corps**, qui établit qu'il faut suivre l'expert et non le grand nombre, __se trouve dans le *Criton* en__ ___."
     answer: "47b-c"
     alt: ["47a-c"]
-  - id: m7-l3-p4
+  - id: "m7-l3-p4"
     sentence: "Socrate étend la règle de l'expert **au juste et à l'injuste**, au beau et au laid, au bien et au mal, __dans le *Criton* en__ ___."
     answer: "47c-d"
     alt: []
-  - id: m7-l8-p3
+  - id: "m7-l8-p3"
     sentence: "En matière de **juste et d'injuste**, __l'homme qui s'y connaît est pour l'âme ce qu'est le__ ___ pour le corps."
     answer: "médecin"
     alt: ["maître de gymnastique", "pédotribe"]
-  - id: m7-l10-p6
+  - id: "m7-l10-p6"
     sentence: "**Quand Criton invoque l'opinion du grand nombre**, Socrate répond qu'en matière de juste et d'injuste __seule compte celle de__ l'___, et de la vérité elle-même (48a)."
     answer: "expert"
     alt: ["homme qui s'y connaît"]
-  - id: m7-l3-n2
+  - id: "m7-l3-n2"
     sentence: "__Criton objecte que le grand nombre peut nous__ ___ (48a) : Socrate répond que **ce n'est pas vivre, mais bien vivre**, qui importe."
     answer: "faire mourir"
     alt: ["tuer", "mettre à mort"]
-- id: m7-l4
-  title: "Le corps et l'âme : une vie qui ne vaut pas d'être vécue"
+- id: "m7-l4"
+  title: "Ce qu'un mauvais régime abîme : le corps"
   notes: |-
-    **Si la vie ne vaut pas d'être vécue avec un corps ruiné, elle le vaut moins encore avec une âme ruinée, car cette partie de nous-mêmes que concernent la justice et l'injustice est plus précieuse que le corps.**
+    **Le passage tire la conséquence de l'exemple de l'entraînement :** {coral}**ce qu'un régime malsain détériore, et qu'on abîme en n'écoutant pas ceux qui s'y connaissent, c'est le corps.**{/coral}
 
-    Le passage tire la conséquence de l'exemple de l'entraînement. {amber}Il avance en trois temps, un par fragment{/amber} :
+    **Pourquoi « Poursuivons donc » ?** Socrate vient d'obtenir que, pour le corps, il faut suivre l'expert et non le grand nombre (47b-c). {amber}Le passage avance en trois temps, un par fragment{/amber} : le corps (ici), puis la partie de nous-mêmes que concerne la justice, puis la comparaison de leurs valeurs.
 
     | Fragment | Ce que Socrate fait admettre |
     | 1/3 | ce qu'un régime malsain détériore, et qu'on abîme en n'écoutant pas ceux qui s'y connaissent, c'est le corps |
     | 2/3 | la vie ne vaut pas d'être vécue avec un corps ruiné ; la vaut-elle quand est ruiné ce que l'injustice abîme ? |
     | 3/3 | cette partie de nous-mêmes n'a pas moins, mais beaucoup plus de valeur que le corps |
 
-    L'argument est {blue}*a fortiori*{/blue} : {coral}la ruine du corps suffit à rendre la vie invivable ; celle d'une partie plus précieuse la rend plus invivable encore{/coral}. {amber}Il repose sur une analogie{/amber} : de part et d'autre, une réalité qui peut s'améliorer ou se détériorer, ce qui l'améliore (un régime sain, la justice), ce qui la détériore (un régime malsain, l'injustice), et un expert qu'il faut écouter pour ne pas l'abîmer.
+    **Pourquoi « en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent » ?** Le dommage n'arrive pas au hasard : {red}on l'inflige soi-même{/red}, en préférant l'avis du grand nombre à celui de l'expert. {yellow}Celui qui suit les conseils de ses amis contre ceux du médecin ruine sa santé par sa propre faute.{/yellow}
 
-    L'âme n'est pas nommée. Socrate la désigne par ce qui l'affecte, {teal}« {/teal}ce que l'injustice abîme et ce à quoi {teal}la justice profite »{/teal}, puis {teal}« {/teal}cette partie de nous-mêmes, quelle {teal}qu'elle soit »{/teal} (en grec `ὅτι ποτ' ἐστίν`) : {red}il ne dit pas ce qu'elle est{/red}, seulement qu'elle a plus de valeur que le corps. C'est sur cette conclusion que s'appuie, juste après, la formule du bien-vivre {sky}(48b){/sky}.
+    **Pourquoi « est-ce que la vie vaudra d'être vécue » ?** La question annonce l'enjeu de tout le passage : non pas seulement {red}vivre{/red}, mais {green}une vie qui vaille d'être vécue{/green}. Elle prépare la formule du bien-vivre (48b).
+
+    ! Le corps n'est pas ici {red}méprisé{/red} : il sert de {green}premier terme d'une analogie{/green}, dont l'âme sera le second.
+  passage:
+    label: "47d-48a"
+    text: "SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain, cette chose nous l'endommageons en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera corrompue ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui."
+  points:
+  - id: "m7-l4-p7"
+    sentence: "« SOCRATE Poursuivons donc. Si ___, **cette chose nous l'endommageons** en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera corrompue ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. »"
+    answer: "ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain"
+    alt: []
+  - id: "m7-l4-p8"
+    sentence: "« SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un **régime malsain**, __cette chose nous l'endommageons__ ___, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera corrompue ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. »"
+    answer: "en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent"
+    alt: []
+  - id: "m7-l4-n1"
+    sentence: "« SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain, cette chose nous l'endommageons en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, __est-ce que__ ___, **une fois que cette chose sera corrompue** ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. »"
+    answer: "la vie vaudra d'être vécue"
+    alt: []
+  - id: "m7-l4-p9"
+    sentence: "« SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain, cette chose nous l'endommageons en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera **corrompue** ? __Or, cette chose__ ___, n'est-ce pas ? CRITON Oui. »"
+    answer: "c'est le corps"
+    alt: []
+  - id: "m7-l4-p2"
+    sentence: "**Le corps s'améliore par un régime sain** et __se détériore par un__ ___ ; l'âme, de même, par la justice et par l'injustice."
+    answer: "régime malsain"
+    alt: ["mauvais régime"]
+- id: "m7-l4b"
+  title: "La vie avec ce que l'injustice abîme"
+  notes: |-
+    **La vie ne vaut pas d'être vécue avec un corps ruiné : la vaut-elle quand est ruiné** {coral}**ce que l'injustice abîme et ce à quoi la justice profite**{/coral} **?**
+
+    **Pourquoi « en loques et en ruines » ?** Criton accorde sans peine que {red}la vie ne vaut pas d'être vécue avec un corps ruiné{/red}. C'est le point d'appui : un accord sur le corps, que Socrate va transposer.
+
+    **L'analogie.** {amber}Elle repose sur une structure commune{/amber} : de part et d'autre, une réalité qui peut s'améliorer ou se détériorer, ce qui l'améliore (un régime sain, la justice), ce qui la détériore (un régime malsain, l'injustice), et un expert qu'il faut écouter pour ne pas l'abîmer.
+
+    ? **Âme** : chez Platon, ce qui en nous pense, veut et vit, et que la justice améliore comme la santé le corps. Ici, Socrate {red}ne la nomme pas{/red}.
+
+    **Pourquoi ne pas la nommer ?** Socrate la désigne par ce qui l'affecte, {teal}« {/teal}ce que l'injustice abîme et ce à quoi {teal}la justice profite »{/teal} (47e). Il n'a pas besoin de dire ce qu'elle est : {coral}il suffit, pour l'argument, qu'elle soit ce que la justice et l'injustice concernent{/coral}.
 
     ! Le passage ne dit pas en quoi consiste le dommage que l'injustice inflige à l'âme : il le pose par analogie avec la maladie du corps, sans le décrire (voir le prolongement sur {sky}*La République*{/sky} et le {sky}*Gorgias*{/sky}).
   passage:
     label: "47d-48a"
-    text: "SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain, cette chose nous l'endommageons en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera corrompue ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. SOCRATE Eh bien, la vie vaut-elle d'être vécue avec un corps en loques et en ruines ? CRITON Non, assurément. SOCRATE Mais la vie vaut-elle d'être vécue quand, ce qui en nous est ruiné, c'est ce que l'injustice abîme et ce à quoi la justice profite ? Ou bien allons-nous attribuer au corps plus de valeur qu'à cette partie de nous-mêmes, quelle qu'elle soit, que concernent l'injustice et la justice ? CRITON Non certes. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément."
+    text: "SOCRATE Eh bien, la vie vaut-elle d'être vécue avec un corps en loques et en ruines ? CRITON Non, assurément. SOCRATE Mais la vie vaut-elle d'être vécue quand, ce qui en nous est ruiné, c'est ce que l'injustice abîme et ce à quoi la justice profite ?"
   points:
-  - id: m7-l4-p7
-    fragment: "1/3"
-    sentence: "« __SOCRATE Poursuivons donc. Si__ ___, **cette chose nous l'endommageons** en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera corrompue ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. »"
-    answer: "ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain"
-    alt: []
-  - id: m7-l4-p8
-    fragment: "1/3"
-    sentence: "« SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un **régime malsain**, __cette chose nous l'endommageons__ ___, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera corrompue ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. »"
-    answer: "en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent"
-    alt: []
-  - id: m7-l4-n1
-    fragment: "1/3"
-    sentence: "« SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain, cette chose nous l'endommageons en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, __est-ce que__ ___, **une fois que cette chose sera corrompue** ? Or, cette chose c'est le corps, n'est-ce pas ? CRITON Oui. »"
-    answer: "la vie vaudra d'être vécue"
-    alt: []
-  - id: m7-l4-p9
-    fragment: "1/3"
-    sentence: "« SOCRATE Poursuivons donc. Si ce qui s'améliore par un régime sain, et qui se détériore par un régime malsain, cette chose nous l'endommageons en ne donnant pas notre assentiment à l'opinion de ceux qui s'y connaissent, est-ce que la vie vaudra d'être vécue, une fois que cette chose sera **corrompue** ? __Or, cette chose__ ___, n'est-ce pas ? CRITON Oui. »"
-    answer: "c'est le corps"
-    alt: []
-  - id: m7-l4-p10
-    fragment: "2/3"
+  - id: "m7-l4-p10"
     sentence: "« SOCRATE Eh bien, __la vie vaut-elle d'être vécue__ ___ ? CRITON **Non, assurément**. SOCRATE Mais la vie vaut-elle d'être vécue quand, ce qui en nous est ruiné, c'est ce que l'injustice abîme et ce à quoi la justice profite ? »"
     answer: "avec un corps en loques et en ruines"
     alt: []
-  - id: m7-l4-p11
-    fragment: "2/3"
+  - id: "m7-l4-p11"
     sentence: "« SOCRATE Eh bien, **la vie vaut-elle d'être vécue** avec un corps en loques et en ruines ? CRITON Non, assurément. SOCRATE Mais la vie vaut-elle d'être vécue quand, __ce qui en nous est ruiné, c'est__ ___ ? »"
     answer: "ce que l'injustice abîme et ce à quoi la justice profite"
     alt: []
-  - id: m7-l4-p12
-    fragment: "3/3"
-    sentence: "« __Ou bien allons-nous__ ___ qu'à cette partie de nous-mêmes, quelle qu'elle soit, que concernent l'**injustice et la justice** ? CRITON Non certes. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément. »"
-    answer: "attribuer au corps plus de valeur"
-    alt: []
-  - id: m7-l4-p13
-    fragment: "3/3"
-    sentence: "« Ou bien allons-nous __attribuer au corps plus de valeur qu'à__ ___, que concernent l'**injustice et la justice** ? CRITON Non certes. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément. »"
-    answer: "cette partie de nous-mêmes, quelle qu'elle soit"
-    alt: []
-  - id: m7-l4-p14
-    fragment: "3/3"
-    sentence: "« Ou bien allons-nous attribuer au corps plus de valeur qu'à cette partie de nous-mêmes, __quelle qu'elle soit,__ ___ ? CRITON **Non certes**. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément. »"
-    answer: "que concernent l'injustice et la justice"
-    alt: []
-  - id: m7-l4-p15
-    fragment: "3/3"
-    sentence: "« Ou bien allons-nous attribuer au corps plus de valeur qu'à cette partie de nous-mêmes, quelle qu'elle soit, que concernent l'injustice et la justice ? CRITON Non certes. SOCRATE __N'est-elle pas au contraire__ ___ ? CRITON **Beaucoup plus assurément**. »"
-    answer: "plus précieuse"
-    alt: []
-  - id: m7-l8-p2
-    sentence: "Si la vie ne vaut pas d'être vécue avec un corps ruiné, elle le vaut moins encore __quand est ruinée__ ___, **plus précieuse que le corps** : l'argument est *a fortiori*."
-    answer: "l'âme"
-    alt: []
-  - id: m7-l4-p2
-    sentence: "**Le corps s'améliore par un régime sain** et __se détériore par un__ ___ ; l'âme, de même, par la justice et par l'injustice."
-    answer: "régime malsain"
-    alt: ["mauvais régime"]
-  - id: m7-l4-p4
+  - id: "m7-l4-p4"
     sentence: "**La justice** est à l'âme __ce qu'un régime sain est au corps : ce qui lui__ ___."
     answer: "profite"
     alt: ["est profitable", "fait du bien"]
-  - id: m7-l4-p1
+  - id: "m7-l4-p1"
     sentence: "**Socrate ne nomme pas l'âme** : il la désigne par ce qui l'affecte, __ce que l'injustice__ ___ et ce à quoi la justice profite."
     answer: "abîme"
     alt: []
-  - id: m7-l4-p3
+  - id: "m7-l4-p3"
     sentence: "**La périphrase qui désigne l'âme sans la nommer**, « ce que l'injustice abîme et ce à quoi la justice profite », __se trouve dans le *Criton* en__ ___."
     answer: "47e"
     alt: []
-  - id: m7-l1-p3
+- id: "m7-l4c"
+  title: "Une partie de nous-mêmes plus précieuse que le corps"
+  notes: |-
+    **Si la vie ne vaut pas d'être vécue avec un corps ruiné, elle le vaut moins encore avec une âme ruinée, car** {coral}**cette partie de nous-mêmes que concernent la justice et l'injustice est plus précieuse que le corps.**{/coral}
+
+    **Pourquoi « allons-nous attribuer au corps plus de valeur » ?** La question {amber}compare les valeurs{/amber} : Socrate fait admettre à Criton que le corps ne vaut pas plus, puis qu'il vaut {green}beaucoup moins{/green}.
+
+    **L'argument est *a fortiori*.** {coral}La ruine du corps suffit à rendre la vie invivable ; celle d'une partie plus précieuse la rend plus invivable encore.{/coral}
+
+    **Pourquoi « quelle qu'elle soit » ?** Socrate désigne l'âme par {teal}« {/teal}cette partie de nous-mêmes, quelle {teal}qu'elle soit »{/teal} (en grec `ὅτι ποτ' ἐστίν`) : {red}il ne dit pas ce qu'elle est{/red}, seulement qu'elle a plus de valeur que le corps. C'est sur cette conclusion que s'appuie, juste après, la formule du bien-vivre {sky}(48b){/sky}.
+
+    ! Criton ne concède pas seulement que l'âme vaut {red}autant{/red} que le corps : il accorde qu'elle vaut {green}« beaucoup plus »{/green}, ce qui donne sa force à l'*a fortiori*.
+  passage:
+    label: "47d-48a"
+    text: "Ou bien allons-nous attribuer au corps plus de valeur qu'à cette partie de nous-mêmes, quelle qu'elle soit, que concernent l'injustice et la justice ? CRITON Non certes. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément."
+  points:
+  - id: "m7-l4-p12"
+    sentence: "« Ou bien allons-nous ___ qu'à cette partie de nous-mêmes, quelle qu'elle soit, que concernent l'**injustice et la justice** ? CRITON Non certes. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément. »"
+    answer: "attribuer au corps plus de valeur"
+    alt: []
+  - id: "m7-l4-p13"
+    sentence: "« Ou bien allons-nous __attribuer au corps plus de valeur qu'à__ ___, que concernent l'**injustice et la justice** ? CRITON Non certes. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément. »"
+    answer: "cette partie de nous-mêmes, quelle qu'elle soit"
+    alt: []
+  - id: "m7-l4-p14"
+    sentence: "« Ou bien allons-nous attribuer au corps plus de valeur qu'à cette partie de nous-mêmes, __quelle qu'elle soit,__ ___ ? CRITON **Non certes**. SOCRATE N'est-elle pas au contraire plus précieuse ? CRITON Beaucoup plus assurément. »"
+    answer: "que concernent l'injustice et la justice"
+    alt: []
+  - id: "m7-l4-p15"
+    sentence: "« Ou bien allons-nous attribuer au corps plus de valeur qu'à cette partie de nous-mêmes, quelle qu'elle soit, que concernent l'injustice et la justice ? CRITON Non certes. SOCRATE __N'est-elle pas au contraire__ ___ ? CRITON **Beaucoup plus assurément**. »"
+    answer: "plus précieuse"
+    alt: []
+  - id: "m7-l8-p2"
+    sentence: "Si la vie ne vaut pas d'être vécue avec un corps ruiné, elle le vaut moins encore __quand est ruinée__ ___, **plus précieuse que le corps** : l'argument est *a fortiori*."
+    answer: "l'âme"
+    alt: []
+  - id: "m7-l1-p3"
     sentence: "Que la vie ne vaille pas d'être vécue avec une âme **ruinée par l'injustice**, __Socrate l'établit dans le *Criton* en__ ___, juste avant la formule du bien-vivre."
     answer: "47e-48a"
     alt: ["47e", "47d-48a"]
-- id: m7-l2
+- id: "m7-l2"
   title: "Non pas vivre, mais bien vivre"
   notes: |-
     **Ce qui importe n'est pas de vivre, mais de bien vivre ; et {green}bien vivre, vivre honorablement et vivre justement sont une seule et même chose{/green}.**
@@ -237,63 +265,63 @@ lessons:
     label: "48b"
     text: "l'important n'est pas de vivre, mais de vivre dans le bien"
   points:
-  - id: m7-l2-p1
+  - id: "m7-l2-p1"
     sentence: "« __**l'important** n'est pas__ ___ »"
     answer: "de vivre, mais de vivre dans le bien"
     alt: []
-  - id: m7-l2-n1
+  - id: "m7-l2-n1"
     sentence: "« **l'important** n'est pas __de vivre, mais__ ___ »"
     answer: "de vivre dans le bien"
     alt: []
-  - id: m7-l8-p4
+  - id: "m7-l8-p4"
     sentence: "__La formule de 48b sépare deux expressions grecques :__ `ζῆν` (___), **vivre au sens de subsister**, et `εὖ ζῆν`, bien vivre."
     answer: "zên"
     alt: ["zen", "zēn"]
-  - id: m7-l8-p5
+  - id: "m7-l8-p5"
     sentence: "La formule de 48b sépare `ζῆν`, vivre au sens de subsister, __et `εὖ ζῆν`__ (___), **bien vivre**."
     answer: "eu zên"
     alt: ["eu zen", "eu zēn"]
-  - id: m7-l8-p7
+  - id: "m7-l8-p7"
     sentence: "__En 48b, **bien vivre**, vivre__ ___ (`καλῶς`) et vivre justement (`δικαίως`) sont une seule et même chose."
     answer: "honorablement"
     alt: ["noblement", "avec honneur"]
-  - id: m7-l2-p2
+  - id: "m7-l2-p2"
     sentence: "En 48b, Criton accorde que bien vivre, __vivre honorablement et vivre__ ___ sont **une seule et même chose** (`ταὐτόν`)."
     answer: "justement"
     alt: []
-  - id: m7-l2-p3
+  - id: "m7-l2-p3"
     sentence: "« **Justement** », dans la formule de 48b, __traduit l'adverbe grec__ ___."
     answer: "dikaiôs"
     alt: ["δικαίως", "dikaios", "dikaiōs"]
-  - id: m7-l9-p2
+  - id: "m7-l9-p2"
     sentence: "Si la valeur d'une vie tient à **la partie de nous-mêmes que concernent la justice et l'injustice**, __bien vivre, c'est vivre avec cette partie en__ ___."
     answer: "bon état"
     alt: []
-  - id: m7-l9-p4
+  - id: "m7-l9-p4"
     sentence: "Pour Socrate, **ce qui fait la valeur d'une vie** __n'est pas sa durée, mais sa__ ___ : la manière dont elle est vécue."
     answer: "qualité"
     alt: []
-  - id: m7-l8-p6
+  - id: "m7-l8-p6"
     sentence: "Il ne faut se soucier ni de vivre le plus longtemps possible __ni de préserver son__ ___ comme une fin en soi, mais seulement de **bien vivre**."
     answer: "existence biologique"
     alt: ["existence", "vie biologique"]
-  - id: m7-l2-n2
+  - id: "m7-l2-n2"
     sentence: "**L'argent, la réputation, l'éducation des enfants** : __ce sont, pour Socrate, les raisons du__ ___, qui fait mourir à la légère et rendrait la vie de même s'il le pouvait (48c)."
     answer: "grand nombre"
     alt: ["la foule", "foule"]
-  - id: m7-l9-p1
+  - id: "m7-l9-p1"
     sentence: "La formule du bien-vivre prépare la **question de 48b-c** : __s'évader sans l'accord de la__ ___, serait-ce juste ?"
     answer: "cité"
     alt: ["des Athéniens", "Athènes"]
-  - id: m7-l8-p8
+  - id: "m7-l8-p8"
     sentence: "Identifier **bien vivre et vivre justement** __disqualifie tout argument fondé sur la__ ___, au sens de `ζῆν`, qui ne se soucierait pas d'abord de la justice."
     answer: "préservation de la vie"
     alt: ["survie"]
-  - id: m7-l8-p9
+  - id: "m7-l8-p9"
     sentence: "Puisque **bien vivre, c'est vivre justement**, __la seule question que pose l'évasion est celle de sa__ ___, non de ses conséquences pour la survie de Socrate."
     answer: "justice"
     alt: []
-- id: m7-l6
+- id: "m7-l6"
   title: "Ne jamais rendre l'injustice pour l'injustice"
   notes: |-
     **Puisque faire du tort, c'est commettre une injustice, {green}il ne faut jamais rendre le mal pour le mal ni faire de tort à personne, quel que soit le mal subi{/green}.**
@@ -314,63 +342,63 @@ lessons:
     label: "49c-d"
     text: "SOCRATE Mais quoi ! Rendre le mal pour le mal, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, il ne faut pas répondre à l'injustice par l'injustice et faire de tort à qui que soit, quel que soit le mal subi."
   points:
-  - id: m7-l6-n1
+  - id: "m7-l6-n1"
     sentence: "« __SOCRATE Mais quoi !__ ___, **comme le recommande le grand nombre**, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, il ne faut pas répondre à l'injustice par l'injustice et faire de tort à qui que soit, quel que soit le mal subi. »"
     answer: "Rendre le mal pour le mal"
     alt: []
-  - id: m7-l6-n2
+  - id: "m7-l6-n2"
     sentence: "« SOCRATE Mais quoi ! __Rendre le mal pour le mal, comme__ ___, est-ce un **acte juste ou un acte injuste** ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, il ne faut pas répondre à l'injustice par l'injustice et faire de tort à qui que soit, quel que soit le mal subi. »"
     answer: "le recommande le grand nombre"
     alt: []
-  - id: m7-l6-n3
+  - id: "m7-l6-n3"
     sentence: "« SOCRATE Mais quoi ! Rendre le mal pour le mal, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON **Ce n'est d'aucune manière un acte juste**. SOCRATE __Car__ ___, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, il ne faut pas répondre à l'injustice par l'injustice et faire de tort à qui que soit, quel que soit le mal subi. »"
     answer: "faire du tort à quelqu'un"
     alt: []
-  - id: m7-l6-n4
+  - id: "m7-l6-n4"
     sentence: "« SOCRATE Mais quoi ! Rendre le mal pour le mal, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car **faire du tort à quelqu'un**, __cela revient à__ ___, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, il ne faut pas répondre à l'injustice par l'injustice et faire de tort à qui que soit, quel que soit le mal subi. »"
     answer: "commettre un acte injuste"
     alt: []
-  - id: m7-l6-p2
+  - id: "m7-l6-p2"
     sentence: "« SOCRATE Mais quoi ! Rendre le mal pour le mal, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE __Par conséquent, il ne faut pas__ ___ et **faire de tort à qui que soit**, quel que soit le mal subi. »"
     answer: "répondre à l'injustice par l'injustice"
     alt: []
-  - id: m7-l6-p3
+  - id: "m7-l6-p3"
     sentence: "« SOCRATE Mais quoi ! Rendre le mal pour le mal, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, __il ne faut pas répondre à l'injustice par l'injustice et__ ___, **quel que soit le mal subi**. »"
     answer: "faire de tort à qui que soit"
     alt: []
-  - id: m7-l6-p4
+  - id: "m7-l6-p4"
     sentence: "« SOCRATE Mais quoi ! Rendre le mal pour le mal, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE Par conséquent, il ne faut pas répondre à l'injustice par l'injustice et **faire de tort à qui que soit**, __quel que soit__ ___. »"
     answer: "le mal subi"
     alt: []
-  - id: m7-l6-p5
+  - id: "m7-l6-p5"
     sentence: "« SOCRATE Mais quoi ! Rendre le mal pour le mal, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. SOCRATE __Par conséquent, il ne faut pas__ ___, **quel que soit le mal subi**. »"
     answer: "répondre à l'injustice par l'injustice et faire de tort à qui que soit"
     alt: []
-  - id: m7-l6-p6
+  - id: "m7-l6-p6"
     sentence: "« SOCRATE Mais quoi ! **Rendre le mal pour le mal**, comme le recommande le grand nombre, est-ce un acte juste ou un acte injuste ? CRITON Ce n'est d'aucune manière un acte juste. SOCRATE Car faire du tort à quelqu'un, cela revient à commettre un acte injuste, je suppose. CRITON Tu dis vrai. __SOCRATE Par conséquent,__ ___. »"
     answer: "il ne faut pas répondre à l'injustice par l'injustice et faire de tort à qui que soit, quel que soit le mal subi"
     alt: []
-  - id: m7-l6-n5
+  - id: "m7-l6-n5"
     sentence: "Le refus de rendre l'injustice pour l'injustice suit d'un **principe posé en 49a** : __on ne doit en aucune manière commettre l'injustice__ ___."
     answer: "volontairement"
     alt: ["de son plein gré", "de plein gré"]
-  - id: m7-l6-n6
+  - id: "m7-l6-n6"
     sentence: "**Commettre l'injustice en retour**, quand on la subit, __se dit en grec__ ___ (49b-d)."
     answer: "antadikein"
     alt: ["ἀνταδικεῖν"]
-  - id: m7-l6-n7
+  - id: "m7-l6-n7"
     sentence: "Entre ceux qui **refusent de rendre l'injustice pour l'injustice** et les autres, __il n'y a pas de__ ___ possible (49d)."
     answer: "délibération commune"
     alt: ["décision commune", "commune délibération"]
-  - id: m7-l6-n8
+  - id: "m7-l6-n8"
     sentence: "**Socrate fait admettre** qu'__on doit faire ce dont on est convenu avec quelqu'un, pourvu que ce soit__ ___ (49e)."
     answer: "juste"
     alt: ["des choses justes"]
-  - id: m7-l6-n9
+  - id: "m7-l6-n9"
     sentence: "**Appliqué à l'évasion**, le principe demande si __partir sans avoir__ ___ la cité, ce ne serait pas lui faire du tort (49e-50a)."
     answer: "persuadé"
     alt: ["convaincu"]
-- id: m7-l5
+- id: "m7-l5"
   title: "Le dommage de l'injustice : République et Gorgias"
   notes: |-
     **Que l'injustice ruine l'âme, l'argument de 47d-48a le pose par analogie avec la maladie du corps, {red}sans dire en quoi consiste ce dommage{/red} : d'autres dialogues le décrivent.**
@@ -387,31 +415,31 @@ lessons:
   passage:
     label: "Prolongement"
   points:
-  - id: m7-l5-p1
+  - id: "m7-l5-p1"
     sentence: "Le *Criton* __ne dit pas en quoi consiste le dommage que__ ___ inflige à l'âme : il le pose **par analogie avec la maladie du corps**."
     answer: "l'injustice"
     alt: []
-  - id: m7-l5-p2
+  - id: "m7-l5-p2"
     sentence: "Au livre I de *La République*, **l'injustice, vice de l'âme**, __l'empêche d'accomplir sa__ ___ : délibérer, commander, vivre."
     answer: "fonction propre"
     alt: ["fonction", "ergon"]
-  - id: m7-l5-p3
+  - id: "m7-l5-p3"
     sentence: "__C'est dans le__ ___ que Platon établit que commettre l'injustice est le **plus grand des maux**, pire que la subir."
     answer: "Gorgias"
     alt: []
-  - id: m7-l5-p5
+  - id: "m7-l5-p5"
     sentence: "__Le tort (`βλάβη`) que cause__ l'___ n'est pas une souffrance ressentie, mais **une atteinte à l'âme**, comme la maladie au corps."
     answer: "injustice"
     alt: []
-  - id: m7-l5-p4
+  - id: "m7-l5-p4"
     sentence: "Le dommage de l'injustice peut rester **imperceptible à celui qui le porte**, et __rien ne l'incite alors à s'en__ ___ : c'est ce qui le rend si grave."
     answer: "défaire"
     alt: ["délivrer", "débarrasser"]
-  - id: m7-l6-p1
+  - id: "m7-l6-p1"
     sentence: "**Ce qui rend l'injustice redoutable** n'est pas d'abord le tort fait à autrui, mais __le dommage qu'elle inflige à__ ___ de son auteur."
     answer: "l'âme"
     alt: []
-- id: m7-l10
+- id: "m7-l10"
   title: "Le vocabulaire grec du juste"
   notes: |-
     **L'argument tient, en grec, {amber}à une seule famille de mots{/amber}, dont la traduction française varie d'une ligne à l'autre.**
@@ -430,23 +458,23 @@ lessons:
   passage:
     label: "Prolongement"
   points:
-  - id: m7-l10-p3
+  - id: "m7-l10-p3"
     sentence: "« Ce que l'injustice abîme et ce à quoi la justice profite » (47e) traduit **deux adjectifs neutres**, `τὸ ἄδικον` et `τὸ δίκαιον` : __littéralement l'injuste et__ ___."
     answer: "le juste"
     alt: []
-  - id: m7-l10-p4
+  - id: "m7-l10-p4"
     sentence: "« Ce que l'injustice abîme et ce à quoi la justice profite » (47e) traduit **deux adjectifs neutres**, `τὸ ἄδικον` et `τὸ δίκαιον` : __littéralement__ ___ et le juste."
     answer: "l'injuste"
     alt: []
-  - id: m7-l10-p2
+  - id: "m7-l10-p2"
     sentence: "« L'injustice et la justice », en **47e-48a**, __traduisent__ ___ et `δικαιοσύνη`."
     answer: "adikia"
     alt: ["ἀδικία"]
-  - id: m7-l10-n1
+  - id: "m7-l10-n1"
     sentence: "« Justement » (48b) et « la justice » (47e-48a) **ne traduisent pas le même mot grec** : `δικαίως` __pour l'un,__ ___ pour l'autre."
     answer: "dikaiosunè"
     alt: ["δικαιοσύνη", "dikaiosune", "dikaiosunê"]
-  - id: m7-l10-p1
+  - id: "m7-l10-p1"
     sentence: "Dans le *Criton*, `δίκη` (dikè) **ne désigne pas la justice comme vertu**, __mais le__ ___ rendu : les Lois reprochent à l'évadé de priver de force les jugements (50b)."
     answer: "jugement"
     alt: ["procès"]
