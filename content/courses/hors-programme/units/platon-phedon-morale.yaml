@@ -8,19 +8,26 @@
 # Coquilles de la source corrigées : « Phédon, 74-74c » (lu 74a-c) ; « le
 # divân » (lu « le divin », p. 52) ; « les pierres de bois “égales” » (p. 49,
 # laissé hors des cartes). Traducteur non indiqué par le scan.
+# Refondue le 2026-11-26 (niveau normale) : 74a-c coupé en quatre leçons et
+# 79c-d en deux, selon les fragments, rappels répartis paragraphe par
+# paragraphe sans rien retirer ; cartes reprises selon les règles actuelles :
+# les citations d'autres dialogues donnent d'abord leur référence et se
+# trouent en cascade (référence, puis passage décisif), les trous sur un mot
+# banal portent désormais sur la notion ou la locution entière.
 
-id: platon-phedon-morale
+id: "platon-phedon-morale"
 title: "L'âme, les Idées et la morale"
 subtitle: "Platon, Phédon, 74a-c, 79c-d, 66d"
-icon: page
-color: yellow
+icon: "page"
+color: "yellow"
 group: "Platon : la morale"
+depth: "normale"
 intro: |-
   Trois extraits du *Phédon* : l'Égal en soi, distinct des choses égales (74a-c) ; l'âme errante quand elle se sert du corps, apaisée quand elle pense seule (79c-d) ; la séparation d'avec le corps qu'exige une connaissance épurée (66d).
 
   Chez Platon, la morale n'est pas un code de règles, elle se fonde sur l'ontologie des Idées et sur la connaissance qu'en prend l'âme, qui les désire parce qu'elle leur est apparentée.
 lessons:
-- id: platon-phedon-morale-i1
+- id: "platon-phedon-morale-i1"
   title: "Deux espèces d'êtres, deux modes de connaître"
   notes: |-
     {green}**L'ontologie platonicienne est dualiste : il y a deux espèces d'êtres**{/green}**, et chacune exige son propre mode de connaissance.** Dès les premiers et jusqu'aux derniers dialogues, les êtres ne sont pas tous du même ordre. Les uns se saisissent par la vue, l'ouïe et les autres sensations corporelles, et apparaissent toujours changeants, selon les conditions de la perception et du temps ; les autres demeurent éternellement identiques et ne se saisissent que par l'âme toute seule, la pensée pure. Le {sky}*Phédon*{/sky} le dit en 79a : {teal}« {/teal}il y a deux espèces d'êtres [`ὄντων`], l'une visible, {teal}l'autre invisible »{/teal}.
@@ -37,67 +44,71 @@ lessons:
   passage:
     label: "Introduction"
   points:
-  - id: platon-phedon-morale-i1-1
+  - id: "platon-phedon-morale-i1-1"
     sentence: "Selon **l'ontologie platonicienne**, les êtres __se divisent en deux__ ___, l'une visible, l'autre invisible."
     answer: "espèces"
     alt: []
-  - id: platon-phedon-morale-i1-2
+  - id: "platon-phedon-morale-i1-2"
     sentence: "Les êtres **saisis par la vue, l'ouïe et les autres sensations corporelles** __apparaissent toujours__ ___, selon les conditions de la perception et du temps."
     answer: "changeants"
     alt: []
-  - id: platon-phedon-morale-i1-3
+  - id: "platon-phedon-morale-i1-3"
     sentence: "Les êtres qui **demeurent éternellement identiques** __ne peuvent être saisis que par l'âme toute seule, ou la__ ___."
     answer: "pensée pure"
     alt: []
-  - id: platon-phedon-morale-i1-4
+  - id: "platon-phedon-morale-i1-4"
     sentence: "L'affirmation qu'il y a « **deux espèces** d'`ὄντων` [d'êtres], l'une visible, l'autre invisible » __se trouve dans le *Phédon*, en__ ___."
     answer: "79a"
     alt: []
-  - id: platon-phedon-morale-i1-5
+  - id: "platon-phedon-morale-i1-5"
     sentence: "**Le dualisme ontologique** fonde __la distinction entre une âme qui__ ___, rendant possible l'intellection, et un corps qui sent."
     answer: "pense"
     alt: []
-  - id: platon-phedon-morale-i1-6
+  - id: "platon-phedon-morale-i1-6"
     sentence: "Le **corps qui sent** __permet la formation de plusieurs__ ___ différentes concernant les choses."
     answer: "opinions"
     alt: []
-  - id: platon-phedon-morale-i1-7
+  - id: "platon-phedon-morale-i1-7"
     sentence: "Le *Timée* déduit l'**existence en soi des Idées** __de la distinction entre l'intellection et__ l'___ : deux genres distincts."
     answer: "opinion vraie"
     alt: []
-  - id: platon-phedon-morale-i1-8
-    sentence: "« si l'intellection et l'opinion vraie sont **deux genres distincts**, ces objets invisibles existent en soi » : __*Timée*,__ ___."
+  - id: "platon-phedon-morale-i1-8"
+    sentence: "*Timée*, ___ : « si l'intellection et l'opinion vraie sont **deux genres distincts**, ces objets invisibles existent en soi »."
     answer: "51d"
     alt: []
-  - id: platon-phedon-morale-i1-9
+  - id: "platon-phedon-morale-i1-8c"
+    sentence: "*Timée*, 51d : « si l'intellection et l'opinion vraie sont ___, **ces objets invisibles existent en soi** »."
+    answer: "deux genres distincts"
+    alt: []
+  - id: "platon-phedon-morale-i1-9"
     sentence: "__Les **Idées** se disent en grec__ « ___ » (`Εἴδη`) ou « Ideai » (`Ἰδέαι`)."
     answer: "Eidè"
     alt: ["Eide", "eidè"]
-  - id: platon-phedon-morale-i1-10
-    sentence: "« **le Beau en soi-même**, le Juste » : __le *Phédon* nomme ces Idées en__ ___."
+  - id: "platon-phedon-morale-i1-10"
+    sentence: "Le *Phédon* nomme les Idées, __en ___ :__ « **le Beau en soi-même**, le Juste »."
     answer: "75d"
     alt: []
-  - id: platon-phedon-morale-i1-11
+  - id: "platon-phedon-morale-i1-11"
     sentence: "__Chaque espèce d'êtres exige un__ ___ approprié pour être saisie : il y a donc **deux modes distincts de connaissance**."
     answer: "instrument"
     alt: []
-  - id: platon-phedon-morale-i1-12
+  - id: "platon-phedon-morale-i1-12"
     sentence: "__Des deux modes de connaissance, l'un est procuré par le__ ___, **l'autre par l'âme**."
     answer: "corps"
     alt: []
-  - id: platon-phedon-morale-i1-13
+  - id: "platon-phedon-morale-i1-13"
     sentence: "__L'ontologie de Platon fonde sa__ ___, c'est-à-dire sa théorie de la connaissance, et du même coup **sa morale**."
     answer: "gnoséologie"
     alt: []
-  - id: platon-phedon-morale-i1-14
+  - id: "platon-phedon-morale-i1-14"
     sentence: "Le **noyau central de la conception éthique** de Platon __réside, avant tout, dans sa conception de__ l'___."
     answer: "âme"
     alt: []
-  - id: platon-phedon-morale-i1-15
+  - id: "platon-phedon-morale-i1-15"
     sentence: "__L'âme est le sujet de__ l'___ : l'intellect ou, à proprement parler, « **la pensée en elle-même** » (66a)."
     answer: "intellection"
     alt: []
-- id: platon-phedon-morale-i2
+- id: "platon-phedon-morale-i2"
   title: "Les Idées, objet du désir de l'âme"
   notes: |-
     **{green}L'âme n'a pas seulement la faculté de penser les Idées : elle veut les penser, et ce désir est sa mission morale{/green}.** Les Idées sont son objet propre : objet de désir (66b), d'aspiration continue (65c), ce vers quoi elle {teal}« {/teal}s'élance » (79d), ce vers quoi elle se meut naturellement d'elle-même ({sky}*Phèdre*{/sky}, 245e). L'âme a donc un but d'orientation, une direction. Si elle ne s'oriente pas vers les Idées, elle n'est pas conforme à sa propre nature : elle n'est pas elle-même. {coral}Pour être elle-même, elle *doit* penser les Idées{/coral} ; son désir naturel est aussi son devoir.
@@ -108,59 +119,63 @@ lessons:
   passage:
     label: "Introduction"
   points:
-  - id: platon-phedon-morale-i2-1
-    sentence: "**Les Idées** ne sont pas seulement ce que l'âme peut penser : __elles sont, pour elle, son objet__ ___."
-    answer: "propre"
+  - id: "platon-phedon-morale-i2-1"
+    sentence: "**Les Idées** ne sont pas seulement ce que l'âme peut penser : __elles sont, pour elle, ___.__"
+    answer: "son objet propre"
     alt: []
-  - id: platon-phedon-morale-i2-2
+  - id: "platon-phedon-morale-i2-2"
     sentence: "L'âme n'a pas seulement une faculté ; __elle a un but__ d'___, **une direction**."
     answer: "orientation"
     alt: []
-  - id: platon-phedon-morale-i2-3
-    sentence: "L'âme n'a pas seulement la **capacité** __de penser les Idées ; elle__ ___ penser les Idées."
-    answer: "veut"
+  - id: "platon-phedon-morale-i2-3"
+    sentence: "L'âme n'a pas seulement la **capacité** de penser les Idées, elle en a __la ___ :__ penser est pour elle une aspiration."
+    answer: "volonté"
     alt: []
-  - id: platon-phedon-morale-i2-4
+  - id: "platon-phedon-morale-i2-4"
     sentence: "Les Idées __sont l'objet propre de__ ___ de l'âme (66b), son **objet d'aspiration continue** (65c)."
     answer: "désir"
     alt: []
-  - id: platon-phedon-morale-i2-5
+  - id: "platon-phedon-morale-i2-5"
     sentence: "**Les Idées** sont l'objet vers lequel __l'âme, naturellement, « __s'___ » (79d)."
     answer: "élance"
     alt: []
-  - id: platon-phedon-morale-i2-6
+  - id: "platon-phedon-morale-i2-6"
     sentence: "L'âme se meut naturellement, **d'elle-même et par elle-même**, __vers les Idées : *Phèdre*,__ ___."
     answer: "245e"
     alt: []
-  - id: platon-phedon-morale-i2-7
+  - id: "platon-phedon-morale-i2-7"
     sentence: "**Si elle ne s'oriente pas vers les Idées**, __l'âme n'est pas conforme à sa propre nature : elle n'est pas__ ___."
     answer: "elle-même"
     alt: []
-  - id: platon-phedon-morale-i2-8
+  - id: "platon-phedon-morale-i2-8"
     sentence: "**Pour être elle-même, l'âme doit penser les Idées** : __son désir naturel est du coup aussi son__ ___, sa mission morale."
     answer: "devoir"
     alt: []
-  - id: platon-phedon-morale-i2-9
+  - id: "platon-phedon-morale-i2-9"
     sentence: "Les Idées forment l'**objet du désir de l'âme**, __l'objet-but de sa propre__ ___."
     answer: "automotricité"
     alt: []
-  - id: platon-phedon-morale-i2-10
-    sentence: "**Les Idées forment l'objet du désir de l'âme** __parce que, tout d'abord, elles__ ___ : il n'y a pas que les objets des sens."
-    answer: "existent"
+  - id: "platon-phedon-morale-i2-10"
+    sentence: "**Les Idées forment l'objet du désir de l'âme** d'abord parce qu'elles ont __une existence ___,__ et ne sont pas de simples pensées."
+    answer: "en soi"
     alt: []
-  - id: platon-phedon-morale-i2-11
+  - id: "platon-phedon-morale-i2-11"
     sentence: "**La morale**, chez Platon, __a sa source et son fondement dans__ l'___ de l'existence des Idées."
     answer: "hypothèse"
     alt: []
-  - id: platon-phedon-morale-i2-12
-    sentence: "« s'il existe, comme nous le répétons sans cesse, un Beau, un Bon [...], **notre âme aussi** [...] existe » : __*Phédon*,__ ___."
+  - id: "platon-phedon-morale-i2-12"
+    sentence: "*Phédon*, ___ : « s'il existe, comme nous le répétons sans cesse, un Beau, un Bon [...], **notre âme aussi** [...] existe »."
     answer: "76d-e"
     alt: []
-  - id: platon-phedon-morale-i2-13
+  - id: "platon-phedon-morale-i2-12c"
+    sentence: "*Phédon*, 76d-e : « s'il existe, comme nous le répétons sans cesse, un Beau, un Bon [...], ___ [...] existe »."
+    answer: "notre âme aussi"
+    alt: []
+  - id: "platon-phedon-morale-i2-13"
     sentence: "Si le Beau, le Bon et ce qui est du même ordre **n'existent pas**, conclut le *Phédon* (76d-e), « __nous aurons peut-être raisonné en__ ___ »."
     answer: "pure perte"
     alt: []
-- id: platon-phedon-morale-i3
+- id: "platon-phedon-morale-i3"
   title: "Connaissance et action morale"
   notes: |-
     **{green}La mission de l'âme est morale pour deux raisons : elle lui permet d'être elle-même, et la connaissance conduit à l'action morale{/green}.** D'une part, l'âme doit accomplir cette mission afin de réaliser sa propre essence. D'autre part, la connaissance que l'âme peut acquérir conduit, en tant que telle, à *l'action morale*.
@@ -173,39 +188,39 @@ lessons:
   passage:
     label: "Introduction"
   points:
-  - id: platon-phedon-morale-i3-1
+  - id: "platon-phedon-morale-i3-1"
     sentence: "**La mission de l'âme** est morale, d'une part, __afin qu'elle puisse réaliser sa propre__ ___."
     answer: "essence"
     alt: []
-  - id: platon-phedon-morale-i3-2
+  - id: "platon-phedon-morale-i3-2"
     sentence: "La mission de l'âme est morale, **d'autre part**, __parce que la connaissance elle-même peut conduire à__ l'___ morale."
     answer: "action"
     alt: []
-  - id: platon-phedon-morale-i3-3
+  - id: "platon-phedon-morale-i3-3"
     sentence: "**Connaître la Vertu**, ce n'est pas énumérer des personnes « vertueuses », __c'est connaître ce qu'est__ l'___ de la Vertu."
     answer: "Idée en soi"
     alt: ["idée en soi"]
-  - id: platon-phedon-morale-i3-4
-    sentence: "**Qui connaît la Vertu en elle-même** __peut agir de la façon qui serait__ ___ « vertueuse », et non de celle qu'il croirait l'être."
-    answer: "vraiment"
+  - id: "platon-phedon-morale-i3-4"
+    sentence: "**Qui connaît la Vertu en elle-même** peut agir de façon vraiment vertueuse, __et non de celle qu'il ___ l'être.__"
+    answer: "croirait"
     alt: []
-  - id: platon-phedon-morale-i3-5
+  - id: "platon-phedon-morale-i3-5"
     sentence: "**Connaître le Mauvais en soi et le Laid en soi** __peut conduire à la__ ___ ferme de ne pas agir de manière mauvaise et laide."
     answer: "décision"
     alt: []
-  - id: platon-phedon-morale-i3-6
+  - id: "platon-phedon-morale-i3-6"
     sentence: "La conduite éthique est fondée sur l'**existence en soi des Idées** et sur __la possibilité de leur__ ___."
     answer: "connaissance"
     alt: []
-  - id: platon-phedon-morale-i3-7
+  - id: "platon-phedon-morale-i3-7"
     sentence: "Selon une conception fondamentale de Platon, __nul n'est méchant__ ___, mais seulement **par manque de connaissance ou par ignorance**."
     answer: "volontairement"
     alt: []
-  - id: platon-phedon-morale-i3-8
+  - id: "platon-phedon-morale-i3-8"
     sentence: "__La thèse que **nul n'est méchant volontairement** se trouve dans le__ *___* (345d-e, 358b-d)."
     answer: "Protagoras"
     alt: []
-- id: platon-phedon-morale-i4
+- id: "platon-phedon-morale-i4"
   title: "Le divin et la parenté de l'âme"
   notes: |-
     **{green}Les Idées sont « le divin », et l'âme leur est apparentée{/green} : penser, pour elle, c'est acquérir la connaissance du divin.** Le mouvement de l'âme vers les Idées a une valeur morale pour une autre raison encore : les Idées sont « ce qui est invisible, ce qui est divin, immortel, sage » (81a), « ce qui est pur » (79d), « intelligible, [...] et demeure toujours identique à soi-même » (80a-b). Quand l'âme s'applique par elle-même à l'examen, elle s'élance vers elles (79d).
@@ -224,55 +239,55 @@ lessons:
   passage:
     label: "Introduction"
   points:
-  - id: platon-phedon-morale-i4-1
+  - id: "platon-phedon-morale-i4-1"
     sentence: "Pour Platon, **les Idées elles-mêmes** __sont ce qui constitue, à proprement parler,__ « le ___ »."
     answer: "divin"
     alt: []
-  - id: platon-phedon-morale-i4-2
+  - id: "platon-phedon-morale-i4-2"
     sentence: "Les Idées sont « ce qui est **invisible**, __ce qui est divin, immortel,__ ___ » (81a)."
     answer: "sage"
     alt: []
-  - id: platon-phedon-morale-i4-3
+  - id: "platon-phedon-morale-i4-3"
     sentence: "L'**acte de penser** signifie, pour l'âme, __la possibilité d'acquérir la__ ___ du divin."
     answer: "connaissance"
     alt: []
-  - id: platon-phedon-morale-i4-4
+  - id: "platon-phedon-morale-i4-4"
     sentence: "L'âme a pour **fonction naturelle de se mouvoir vers les Idées** __à cause de sa__ « ___ » avec le divin."
     answer: "parenté"
     alt: []
-  - id: platon-phedon-morale-i4-5
+  - id: "platon-phedon-morale-i4-5"
     sentence: "L'âme « **s'apparente** » au divin (79d) et __lui__ « ___ » (80a)."
     answer: "ressemble"
     alt: []
-  - id: platon-phedon-morale-i4-6
+  - id: "platon-phedon-morale-i4-6"
     sentence: "L'âme **ressemble au divin** __parce qu'elle aussi « est chose__ ___ » (79b)."
     answer: "invisible"
     alt: []
-  - id: platon-phedon-morale-i4-7
-    sentence: "Chez Platon, le **divin** peut, dans un certain sens, __« être rencontré__ ___ »."
-    answer: "partout"
+  - id: "platon-phedon-morale-i4-7"
+    sentence: "Chez Platon, le **divin** peut « être rencontré partout », parce que __toutes les choses visibles ___ aux Idées.__"
+    answer: "participent"
     alt: []
-  - id: platon-phedon-morale-i4-8
-    sentence: "Par leur relation avec le divin, les **choses visibles** ressemblent aux Idées (74d-e) et __portent chacune le même__ ___ que leur Idée-« cause »."
-    answer: "nom"
+  - id: "platon-phedon-morale-i4-8"
+    sentence: "Par leur relation avec le divin, les **choses visibles** ressemblent aux Idées (74d-e) et __portent ___ que leur Idée-« cause ».__"
+    answer: "le même nom"
     alt: []
-  - id: platon-phedon-morale-i4-9
+  - id: "platon-phedon-morale-i4-9"
     sentence: "La **ressemblance de l'âme au divin** __n'est pas identique à celle qui existe entre les choses__ ___ et les Idées."
     answer: "visibles"
     alt: []
-  - id: platon-phedon-morale-i4-10
+  - id: "platon-phedon-morale-i4-10"
     sentence: "La **parenté de l'âme avec le divin** explique qu'elle __possède la nature particulière d'être__ ___."
     answer: "pensante"
     alt: []
-  - id: platon-phedon-morale-i4-11
+  - id: "platon-phedon-morale-i4-11"
     sentence: "L'**association de l'âme au divin** __ne provient pas d'une__ ___ quelconque, imposée à elle de l'extérieur."
     answer: "obligation"
     alt: []
-  - id: platon-phedon-morale-i4-12
+  - id: "platon-phedon-morale-i4-12"
     sentence: "C'est __par son propre désir et par__ ___ intérieure que **l'âme doit « aspirer » au divin**."
     answer: "nécessité"
     alt: []
-- id: platon-phedon-morale-i5
+- id: "platon-phedon-morale-i5"
   title: "Une morale sans code"
   notes: |-
     **{green}La morale platonicienne n'est pas un code de règles : elle se fonde sur l'ontologie{/green}, et d'abord sur le fait que le divin, que l'âme désire connaître, existe.** {red}Aucun code de cette sorte n'existe{/red}. La conception de la morale est entièrement liée au système *ontologique* de Platon : les Idées en soi existent, et la Vertu en soi n'est qu'*une* de ces Idées.
@@ -285,39 +300,39 @@ lessons:
   passage:
     label: "Introduction"
   points:
-  - id: platon-phedon-morale-i5-1
+  - id: "platon-phedon-morale-i5-1"
     sentence: "**La morale, chez Platon**, __n'est pas du tout liée à un__ « ___ » quelconque de règles de conduite à suivre."
     answer: "code"
     alt: []
-  - id: platon-phedon-morale-i5-2
+  - id: "platon-phedon-morale-i5-2"
     sentence: "La **conception platonicienne de la morale** est __entièrement et exclusivement liée au système__ ___ propre de Platon."
     answer: "ontologique"
     alt: []
-  - id: platon-phedon-morale-i5-3
+  - id: "platon-phedon-morale-i5-3"
     sentence: "La morale **se fonde d'abord sur le fait** __que « le divin », que l'âme désire connaître et peut connaître,__ ___."
     answer: "existe"
     alt: []
-  - id: platon-phedon-morale-i5-4
-    sentence: "La **Vertu en soi**, dont la connaissance peut conduire à des actes vertueux, __n'est__ qu'___ des Idées."
-    answer: "une"
+  - id: "platon-phedon-morale-i5-4"
+    sentence: "La **Vertu en soi** n'est qu'une Idée parmi d'autres, __une Idée qui est aussi une ___ morale.__"
+    answer: "valeur"
     alt: []
-  - id: platon-phedon-morale-i5-5
+  - id: "platon-phedon-morale-i5-5"
     sentence: "Au moment de leur connaissance, les **Idées-Valeurs morales** __deviennent aussi des__ ___, ou des normes, d'action et de conduite morale."
     answer: "paradigmes"
     alt: []
-  - id: platon-phedon-morale-i5-6
+  - id: "platon-phedon-morale-i5-6"
     sentence: "Les **normes morales** ne se produisent que pour l'âme __de la personne qui__ s'___ vers les Idées-Valeurs morales et réussit à les connaître."
     answer: "oriente"
     alt: []
-  - id: platon-phedon-morale-i5-7
+  - id: "platon-phedon-morale-i5-7"
     sentence: "Les **Valeurs morales** ne sont ni ce que chacun croit, __ni ce qu'on pourrait imposer__ ___ aux autres."
     answer: "arbitrairement"
     alt: []
-  - id: platon-phedon-morale-i5-8
+  - id: "platon-phedon-morale-i5-8"
     sentence: "Sans **connaissance préalable des Idées-Valeurs morales**, __il ne peut pas y avoir de__ ___ morale."
     answer: "pratique"
     alt: []
-- id: platon-phedon-morale-i6
+- id: "platon-phedon-morale-i6"
   title: "Le lieu des Idées, la mission de l'âme"
   notes: |-
     **{green}Les Idées ont un lieu propre, non physique, que l'âme a contemplé avant la naissance{/green} ; sa mission morale est de regagner cet état.** Le {sky}*Phèdre*{/sky} décrit cette vie préempirique, qui a lieu dans le ciel : les âmes, figurées par {yellow}l'image d'un attelage ailé de deux chevaux conduit par un cocher{/yellow} (246a-b), « aspir[ent] toutes à monter » (248a) vers le « dos de la voûte céleste » (247b), pour contempler les Idées, « en dehors du ciel » (247c). Dans ce « si grand effort pour apercevoir où est la plaine de vérité », elles « sombrent dans le remous qui les entraîne, se piétinant et se bousculant entre elles » (248a-b). Le but de la lutte : la contemplation des Idées dans le « lieu supracéleste » (247c).
@@ -330,69 +345,161 @@ lessons:
   passage:
     label: "Introduction"
   points:
-  - id: platon-phedon-morale-i6-1
+  - id: "platon-phedon-morale-i6-1"
     sentence: "Les Idées sont l'objet que l'âme avait la possibilité de **contempler** __lors de sa vie__ ___, avant la naissance."
     answer: "préempirique"
     alt: []
-  - id: platon-phedon-morale-i6-2
+  - id: "platon-phedon-morale-i6-2"
     sentence: "Dans le *Phèdre*, __**les âmes** sont présentées à travers l'image d'un__ ___ ailé de deux chevaux, conduit par un cocher (246a-b)."
     answer: "attelage"
     alt: []
-  - id: platon-phedon-morale-i6-3
+  - id: "platon-phedon-morale-i6-3"
     sentence: "Dans le *Phèdre*, les âmes aspirent toutes à **monter** __vers le « dos de la__ ___ » (247b)."
     answer: "voûte céleste"
     alt: []
-  - id: platon-phedon-morale-i6-4
+  - id: "platon-phedon-morale-i6-4"
     sentence: "Les Idées que les âmes veulent **contempler** __sont « en dehors du__ ___ » (*Phèdre*, 247c)."
     answer: "ciel"
     alt: []
-  - id: platon-phedon-morale-i6-5
+  - id: "platon-phedon-morale-i6-5"
     sentence: "Dans leur effort pour apercevoir la **plaine de vérité**, __les âmes__ « ___ dans le remous qui les entraîne, se piétinant et se bousculant entre elles » (*Phèdre*, 248a-b)."
     answer: "sombrent"
     alt: []
-  - id: platon-phedon-morale-i6-6
+  - id: "platon-phedon-morale-i6-6"
     sentence: "Le but de la lutte des âmes est la **contemplation des Idées**, qui se trouvent __dans le « lieu__ ___ » (*Phèdre*, 247c)."
     answer: "supracéleste"
     alt: []
-  - id: platon-phedon-morale-i6-7
+  - id: "platon-phedon-morale-i6-7"
     sentence: "Le **lieu propre des Idées** __n'est pas un lieu__ ___, puisque les Idées ne sont pas des êtres sensibles."
     answer: "physique"
     alt: []
-  - id: platon-phedon-morale-i6-8
+  - id: "platon-phedon-morale-i6-8"
     sentence: "Il n'y a, pour Platon, __qu'un seul__ ___ : le **lieu des Idées** n'en est pas un autre."
     answer: "monde"
     alt: []
-  - id: platon-phedon-morale-i6-9
+  - id: "platon-phedon-morale-i6-9"
     sentence: "Le **lieu des Idées** __est « un autre lieu [...],__ ___ » (80d)."
     answer: "invisible"
     alt: []
-  - id: platon-phedon-morale-i6-10
+  - id: "platon-phedon-morale-i6-10"
     sentence: "La **mission morale** vient de la nature que l'âme possédait __avant sa__ ___ sur la terre et son union avec le corps (*Phèdre*, 248c)."
     answer: "chute"
     alt: []
-  - id: platon-phedon-morale-i6-11
+  - id: "platon-phedon-morale-i6-11"
     sentence: "__La **nature de l'âme** est dite__ « ___ » dans le *Timée* (90d), « primitive » dans *La République* (X, 611d)."
     answer: "originelle"
     alt: []
-  - id: platon-phedon-morale-i6-12
+  - id: "platon-phedon-morale-i6-12"
     sentence: "Le **rapport préempirique de l'âme avec le divin** __est la source__ ___ de sa mission morale."
     answer: "permanente"
     alt: []
-  - id: platon-phedon-morale-i6-13
+  - id: "platon-phedon-morale-i6-13"
     sentence: "Devant les objets égaux, l'âme tire la **connaissance de l'Égal en soi** : __elle « se__ ___ » de lui (75e-76a)."
     answer: "rappeler"
     alt: []
-- id: platon-phedon-morale-p1
-  title: "L'Égal en soi et les choses égales"
+- id: "platon-phedon-morale-p1"
+  title: "Il y a quelque chose d'« égal »"
   notes: |-
     **{green}Les choses égales ne sont pas l'Égal en soi, et c'est pourtant d'elles que la pensée tire la connaissance de l'Égal{/green}.** Socrate distingue l'égalité d'un bout de bois et d'un autre, d'une pierre et d'une autre, de ce qui, comparé à tout cela, *en est distinct* : l'Égal en soi-même. {sky}Simmias{/sky} accorde que c'est quelque chose, et qu'on sait ce qu'il est.
 
+    ? **Idée** (`εἶδος`, `ἰδέα`) : chez Platon, la réalité en soi, invisible et toujours identique, que la pensée saisit et dont les choses sensibles reçoivent leur nom : l'Égal en soi, le Beau en soi.
+
+    ! Socrate ne demande pas si l'Égal est {red}une idée de notre esprit{/red}, mais s'il est {green}« quelque chose »{/green} : la question porte sur l'être, non sur la pensée.
+  passage:
+    label: "74a-c"
+    text: "Nous affirmons sans doute qu'il y a quelque chose d'“égal”. Je ne parle pas de l'égalité d'un bout de bois et d'un autre bout de bois, d'une pierre et d'une autre pierre, ni de rien de cet ordre, mais de ce qui, comparé à tout cela, en est distinct, l'Égal en soi-même. Devons-nous affirmer que c'est quelque chose, ou que ce n'est rien ? – Par Zeus, dit Simmias, nous devons affirmer que c'est quelque chose. [...]"
+  points:
+  - id: "platon-phedon-morale-p1-1"
+    sentence: "« Nous affirmons sans doute qu'il y a quelque chose d'“égal”. __Je ne parle pas de l'égalité__ ___, **ni de rien de cet ordre**, mais de ce qui, comparé à tout cela, en est distinct, l'Égal en soi-même. Devons-nous affirmer que c'est quelque chose, ou que ce n'est rien ? – Par Zeus, dit Simmias, nous devons affirmer que c'est quelque chose. [...] »"
+    answer: "d'un bout de bois et d'un autre bout de bois, d'une pierre et d'une autre pierre"
+    alt: []
+  - id: "platon-phedon-morale-p1-2"
+    sentence: "« Nous affirmons sans doute qu'il y a quelque chose d'“égal”. Je ne parle pas de l'égalité d'un bout de bois et d'un autre bout de bois, d'une pierre et d'une autre pierre, __ni de rien de cet ordre, mais de__ ___, **l'Égal en soi-même**. Devons-nous affirmer que c'est quelque chose, ou que ce n'est rien ? – Par Zeus, dit Simmias, nous devons affirmer que c'est quelque chose. [...] »"
+    answer: "ce qui, comparé à tout cela, en est distinct"
+    alt: []
+  - id: "platon-phedon-morale-p1-3"
+    sentence: "« Nous affirmons sans doute qu'il y a quelque chose d'“égal”. Je ne parle pas de l'égalité d'un bout de bois et d'un autre bout de bois, d'une pierre et d'une autre pierre, ni de rien de cet ordre, __mais de ce qui, comparé à tout cela, en est distinct,__ ___. **Devons-nous affirmer que c'est quelque chose**, ou que ce n'est rien ? – Par Zeus, dit Simmias, nous devons affirmer que c'est quelque chose. [...] »"
+    answer: "l'Égal en soi-même"
+    alt: []
+  - id: "platon-phedon-morale-p1-4"
+    sentence: "« Nous affirmons sans doute qu'il y a **quelque chose** d'“égal”. Je ne parle pas de l'égalité d'un bout de bois et d'un autre bout de bois, d'une pierre et d'une autre pierre, ni de rien de cet ordre, mais de ce qui, comparé à tout cela, en est distinct, l'Égal en soi-même. Devons-nous affirmer que c'est quelque chose, ou que ce n'est rien ? – Par Zeus, __dit Simmias,__ ___. [...] »"
+    answer: "nous devons affirmer que c'est quelque chose"
+    alt: []
+- id: "platon-phedon-morale-p1b"
+  title: "Où la pensée prend-elle la connaissance de l'Égal ?"
+  notes: |-
+    **Socrate demande d'où vient la connaissance de l'Égal :** {coral}**la pensée la tire des choses que nous avons perçues comme égales, mais ce qu'elle en tire se distingue d'elles.**{/coral}
+
+    **Pourquoi « Savons-nous aussi ce qu'il est » ?** Il ne suffit pas d'accorder que l'Égal existe : Simmias accorde aussi {amber}qu'on le connaît{/amber}. D'où la question suivante, décisive : {teal}« Où prenons-nous la connaissance que nous avons de lui ? »{/teal}
+
+    **Pourquoi « des choses dont nous parlions tout à l'heure » ?** La réponse semble aller de soi : {yellow}des bouts de bois, des pierres, perçus comme égaux{/yellow}. Les sens sont {amber}l'occasion{/amber} de la connaissance.
+
+    **Pourquoi « qui se distingue d'elles » ?** Mais ce que la pensée {teal}« a tiré d'elles »{/teal} n'est pas l'une d'elles : {coral}l'Égal se distingue des choses égales qui en ont donné l'occasion{/coral}. Le paragraphe suivant le prouve.
+
+    ! « Tirer de » ne veut pas dire {red}abstraire en faisant la somme{/red} des choses égales : la pensée y découvre {green}autre chose qu'elles{/green}.
+  passage:
+    label: "74a-c"
+    text: "– Savons-nous aussi ce qu'il est en lui-même ? – Bien sûr, répondit-il. – Où prenons-nous la connaissance que nous avons de lui ? N'est-ce pas des choses dont nous parlions tout à l'heure, de ces bouts de bois, de ces pierres, et d'autres objets du même genre que nous avons perçus comme égaux ? Notre pensée a tiré d'elles cet “Égal” qui se distingue d'elles : ne t'en paraît-il pas différent ?"
+  points:
+  - id: "platon-phedon-morale-p1-5"
+    sentence: "« – ___ – __Bien sûr, répondit-il.__ – **Où prenons-nous la connaissance** que nous avons de lui ? N'est-ce pas des choses dont nous parlions tout à l'heure, de ces bouts de bois, de ces pierres, et d'autres objets du même genre que nous avons perçus comme égaux ? Notre pensée a tiré d'elles cet “Égal” qui se distingue d'elles : ne t'en paraît-il pas différent ? »"
+    answer: "Savons-nous aussi ce qu'il est en lui-même ?"
+    alt: []
+  - id: "platon-phedon-morale-p1-6"
+    sentence: "« – Savons-nous aussi ce qu'il est en lui-même ? – __Bien sûr, répondit-il. –__ ___ N'est-ce pas des choses dont nous parlions tout à l'heure, de ces **bouts de bois**, de ces pierres, et d'autres objets du même genre que nous avons perçus comme égaux ? Notre pensée a tiré d'elles cet “Égal” qui se distingue d'elles : ne t'en paraît-il pas différent ? »"
+    answer: "Où prenons-nous la connaissance que nous avons de lui ?"
+    alt: []
+  - id: "platon-phedon-morale-p1-7"
+    sentence: "« – Savons-nous aussi ce qu'il est en lui-même ? – Bien sûr, répondit-il. – Où prenons-nous la connaissance que nous avons de lui ? N'est-ce pas des choses dont nous parlions tout à l'heure, __de ces bouts de bois, de ces pierres, et d'autres objets du même genre__ ___ ? **Notre pensée a tiré d'elles** cet “Égal” qui se distingue d'elles : ne t'en paraît-il pas différent ? »"
+    answer: "que nous avons perçus comme égaux"
+    alt: []
+  - id: "platon-phedon-morale-p1-8"
+    sentence: "« – Savons-nous aussi ce qu'il est en lui-même ? – Bien sûr, répondit-il. – Où prenons-nous la connaissance que nous avons de lui ? N'est-ce pas des choses dont nous parlions tout à l'heure, de ces bouts de bois, de ces pierres, et d'autres objets du même genre __que nous avons perçus comme égaux ?__ ___ cet “Égal” **qui se distingue d'elles** : ne t'en paraît-il pas différent ? »"
+    answer: "Notre pensée a tiré d'elles"
+    alt: []
+  - id: "platon-phedon-morale-p1-9"
+    sentence: "« – Savons-nous aussi ce qu'il est en lui-même ? – Bien sûr, répondit-il. – Où prenons-nous la connaissance que nous avons de lui ? N'est-ce pas des choses dont nous parlions tout à l'heure, de ces bouts de bois, de ces pierres, et d'autres objets du même genre que nous avons perçus comme égaux ? __Notre pensée a tiré d'elles cet “Égal”__ ___ : **ne t'en paraît-il pas différent** ? »"
+    answer: "qui se distingue d'elles"
+    alt: []
+- id: "platon-phedon-morale-p1c"
+  title: "Tantôt égaux, tantôt inégaux ; l'Égal, jamais inégal"
+  notes: |-
     L'argument tient en une différence de comportement. {yellow}Les pierres et les bouts de bois, *tout en restant les mêmes*, se montrent tantôt égaux, tantôt inégaux{/yellow} ; l'Égal en soi ne s'est jamais montré inégal. Ils ne sont donc pas la même chose. Et pourtant, la connaissance de l'Égal vient de ces objets perçus comme égaux : la pensée l'a « tiré d'elles ». Le passage pose à la fois la {violet}**distinction**{/violet} de l'Idée et des choses, et le {violet}**point de départ sensible**{/violet} de sa connaissance.
 
     | | Les choses égales | L'Égal en soi |
     | Ce qu'elles montrent | tantôt l'égalité, tantôt l'inégalité | jamais l'inégalité |
     | Ce qui les saisit | les sens | la pensée, qui le tire d'elles |
-
+  passage:
+    label: "74a-c"
+    text: "Examine encore la question de la façon suivante : est-ce que parfois des pierres ou des bouts de bois, tout en restant les mêmes, se montrent tantôt égaux, tantôt inégaux ? – Bien sûr. – Mais encore ? L'Égal en soi s'est-il quelquefois montré à toi inégal, ou l'Égalité s'est-elle montrée inégalité ? – Jamais, Socrate."
+  points:
+  - id: "platon-phedon-morale-p1-10"
+    sentence: "« Examine encore la question de la façon suivante : __est-ce que parfois des pierres ou des bouts de bois,__ ___, se montrent tantôt égaux, tantôt inégaux ? – Bien sûr. – Mais encore ? L'Égal en soi s'est-il quelquefois montré à toi inégal, ou l'Égalité s'est-elle montrée inégalité ? – Jamais, Socrate. »"
+    answer: "tout en restant les mêmes"
+    alt: []
+  - id: "platon-phedon-morale-p1-11"
+    sentence: "« Examine encore la question de la façon suivante : est-ce que parfois des **pierres ou des bouts de bois**, __tout en restant les mêmes,__ ___ ? – Bien sûr. – Mais encore ? L'Égal en soi s'est-il quelquefois montré à toi inégal, ou l'Égalité s'est-elle montrée inégalité ? – Jamais, Socrate. »"
+    answer: "se montrent tantôt égaux, tantôt inégaux"
+    alt: []
+  - id: "platon-phedon-morale-p1-12"
+    sentence: "« Examine encore la question de la façon suivante : est-ce que parfois des pierres ou des bouts de bois, tout en restant les mêmes, se montrent tantôt égaux, tantôt inégaux ? – __Bien sûr. – Mais encore ?__ ___, ou **l'Égalité s'est-elle montrée inégalité** ? – Jamais, Socrate. »"
+    answer: "L'Égal en soi s'est-il quelquefois montré à toi inégal"
+    alt: []
+  - id: "platon-phedon-morale-p1-13"
+    sentence: "« Examine encore la question de la façon suivante : est-ce que parfois des pierres ou des bouts de bois, tout en restant les mêmes, se montrent tantôt égaux, tantôt inégaux ? – Bien sûr. – Mais encore ? __L'Égal en soi s'est-il quelquefois montré à toi inégal,__ ___ – **Jamais, Socrate**. »"
+    answer: "ou l'Égalité s'est-elle montrée inégalité ?"
+    alt: []
+  - id: "platon-phedon-morale-p1-14"
+    sentence: "« Examine encore la question de la façon suivante : est-ce que parfois des pierres ou des bouts de bois, tout en restant les mêmes, se montrent tantôt égaux, tantôt inégaux ? – **Bien sûr**. – Mais encore ? __L'Égal en soi s'est-il quelquefois montré à toi inégal, ou l'Égalité s'est-elle montrée inégalité ? –__ ___, Socrate. »"
+    answer: "Jamais"
+    alt: []
+  - id: "platon-phedon-morale-p1-32"
+    sentence: "L'Égal en soi est l'être invisible, « cause » **de toute égalité visible**, __qui est__ ___."
+    answer: "toujours le même"
+    alt: []
+- id: "platon-phedon-morale-p1d"
+  title: "Les choses égales et l'Égalité ne sont pas la même chose"
+  notes: |-
     Le commentaire y lit la {violet}**relation de causalité**{/violet} entre choses et Idées. Les Idées sont des « hypothèses » (101d), mais cette hypothèse est une « évidence » (77a) : sans l'espèce invisible, impossible d'expliquer l'existence des choses visibles, c'est-à-dire du monde. Les bouts de bois égaux ne sont égaux que parce qu'ils ont en eux « cet Égal » que la pensée peut « tir[er] d'elles », mais qui n'est pas identique à elles. {coral}Tout objet visible n'existe qu'à cause de sa relation à l'Idée homonyme{/coral}, qui, existant en soi, peut aussi être observée « dans » cet objet. Platon nomme cette relation « présence », « communication », « imitation », « participation », et l'expose des premiers jusqu'aux derniers dialogues :
 
     | Idée en soi | Choses | Formule |
@@ -407,168 +514,94 @@ lessons:
     ! La connaissance de l'Égal part des choses égales, mais l'Égal n'est pas l'une d'elles, ni leur somme.
   passage:
     label: "74a-c"
-    text: "Nous affirmons sans doute qu'il y a quelque chose d'“égal”. Je ne parle pas de l'égalité d'un bout de bois et d'un autre bout de bois, d'une pierre et d'une autre pierre, ni de rien de cet ordre, mais de ce qui, comparé à tout cela, en est distinct, l'Égal en soi-même. Devons-nous affirmer que c'est quelque chose, ou que ce n'est rien ? – Par Zeus, dit Simmias, nous devons affirmer que c'est quelque chose. [...] – Savons-nous aussi ce qu'il est en lui-même ? – Bien sûr, répondit-il. – Où prenons-nous la connaissance que nous avons de lui ? N'est-ce pas des choses dont nous parlions tout à l'heure, de ces bouts de bois, de ces pierres, et d'autres objets du même genre que nous avons perçus comme égaux ? Notre pensée a tiré d'elles cet “Égal” qui se distingue d'elles : ne t'en paraît-il pas différent ? Examine encore la question de la façon suivante : est-ce que parfois des pierres ou des bouts de bois, tout en restant les mêmes, se montrent tantôt égaux, tantôt inégaux ? – Bien sûr. – Mais encore ? L'Égal en soi s'est-il quelquefois montré à toi inégal, ou l'Égalité s'est-elle montrée inégalité ? – Jamais, Socrate. – Ainsi, donc, reprit-il, ces objets égaux, et l'Égalité, ce n'est pas la même chose ? – À mes yeux, pas le moins du monde, Socrate. – N'est-ce point pourtant, dit-il, de ces objets égaux, différents de l'Égal dont nous parlons, que ta pensée a tiré la connaissance de l'Égal ? – C'est bien vrai, dit-il."
+    text: "– Ainsi, donc, reprit-il, ces objets égaux, et l'Égalité, ce n'est pas la même chose ? – À mes yeux, pas le moins du monde, Socrate. – N'est-ce point pourtant, dit-il, de ces objets égaux, différents de l'Égal dont nous parlons, que ta pensée a tiré la connaissance de l'Égal ? – C'est bien vrai, dit-il."
   points:
-  - id: platon-phedon-morale-p1-1
-    fragment: "1/4"
-    sentence: "« Nous affirmons sans doute qu'il y a quelque chose d'“égal”. __Je ne parle pas de l'égalité__ ___, **ni de rien de cet ordre**, mais de ce qui, comparé à tout cela, en est distinct, l'Égal en soi-même. Devons-nous affirmer que c'est quelque chose, ou que ce n'est rien ? – Par Zeus, dit Simmias, nous devons affirmer que c'est quelque chose. [...] »"
-    answer: "d'un bout de bois et d'un autre bout de bois, d'une pierre et d'une autre pierre"
-    alt: []
-  - id: platon-phedon-morale-p1-2
-    fragment: "1/4"
-    sentence: "« Nous affirmons sans doute qu'il y a quelque chose d'“égal”. Je ne parle pas de l'égalité d'un bout de bois et d'un autre bout de bois, d'une pierre et d'une autre pierre, __ni de rien de cet ordre, mais de__ ___, **l'Égal en soi-même**. Devons-nous affirmer que c'est quelque chose, ou que ce n'est rien ? – Par Zeus, dit Simmias, nous devons affirmer que c'est quelque chose. [...] »"
-    answer: "ce qui, comparé à tout cela, en est distinct"
-    alt: []
-  - id: platon-phedon-morale-p1-3
-    fragment: "1/4"
-    sentence: "« Nous affirmons sans doute qu'il y a quelque chose d'“égal”. Je ne parle pas de l'égalité d'un bout de bois et d'un autre bout de bois, d'une pierre et d'une autre pierre, ni de rien de cet ordre, __mais de ce qui, comparé à tout cela, en est distinct,__ ___. **Devons-nous affirmer que c'est quelque chose**, ou que ce n'est rien ? – Par Zeus, dit Simmias, nous devons affirmer que c'est quelque chose. [...] »"
-    answer: "l'Égal en soi-même"
-    alt: []
-  - id: platon-phedon-morale-p1-4
-    fragment: "1/4"
-    sentence: "« Nous affirmons sans doute qu'il y a **quelque chose** d'“égal”. Je ne parle pas de l'égalité d'un bout de bois et d'un autre bout de bois, d'une pierre et d'une autre pierre, ni de rien de cet ordre, mais de ce qui, comparé à tout cela, en est distinct, l'Égal en soi-même. Devons-nous affirmer que c'est quelque chose, ou que ce n'est rien ? – Par Zeus, __dit Simmias,__ ___. [...] »"
-    answer: "nous devons affirmer que c'est quelque chose"
-    alt: []
-  - id: platon-phedon-morale-p1-5
-    fragment: "2/4"
-    sentence: "« – ___ – __Bien sûr, répondit-il.__ – **Où prenons-nous la connaissance** que nous avons de lui ? N'est-ce pas des choses dont nous parlions tout à l'heure, de ces bouts de bois, de ces pierres, et d'autres objets du même genre que nous avons perçus comme égaux ? Notre pensée a tiré d'elles cet “Égal” qui se distingue d'elles : ne t'en paraît-il pas différent ? »"
-    answer: "Savons-nous aussi ce qu'il est en lui-même ?"
-    alt: []
-  - id: platon-phedon-morale-p1-6
-    fragment: "2/4"
-    sentence: "« – Savons-nous aussi ce qu'il est en lui-même ? – __Bien sûr, répondit-il. –__ ___ N'est-ce pas des choses dont nous parlions tout à l'heure, de ces **bouts de bois**, de ces pierres, et d'autres objets du même genre que nous avons perçus comme égaux ? Notre pensée a tiré d'elles cet “Égal” qui se distingue d'elles : ne t'en paraît-il pas différent ? »"
-    answer: "Où prenons-nous la connaissance que nous avons de lui ?"
-    alt: []
-  - id: platon-phedon-morale-p1-7
-    fragment: "2/4"
-    sentence: "« – Savons-nous aussi ce qu'il est en lui-même ? – Bien sûr, répondit-il. – Où prenons-nous la connaissance que nous avons de lui ? N'est-ce pas des choses dont nous parlions tout à l'heure, __de ces bouts de bois, de ces pierres, et d'autres objets du même genre__ ___ ? **Notre pensée a tiré d'elles** cet “Égal” qui se distingue d'elles : ne t'en paraît-il pas différent ? »"
-    answer: "que nous avons perçus comme égaux"
-    alt: []
-  - id: platon-phedon-morale-p1-8
-    fragment: "2/4"
-    sentence: "« – Savons-nous aussi ce qu'il est en lui-même ? – Bien sûr, répondit-il. – Où prenons-nous la connaissance que nous avons de lui ? N'est-ce pas des choses dont nous parlions tout à l'heure, de ces bouts de bois, de ces pierres, et d'autres objets du même genre __que nous avons perçus comme égaux ?__ ___ cet “Égal” **qui se distingue d'elles** : ne t'en paraît-il pas différent ? »"
-    answer: "Notre pensée a tiré d'elles"
-    alt: []
-  - id: platon-phedon-morale-p1-9
-    fragment: "2/4"
-    sentence: "« – Savons-nous aussi ce qu'il est en lui-même ? – Bien sûr, répondit-il. – Où prenons-nous la connaissance que nous avons de lui ? N'est-ce pas des choses dont nous parlions tout à l'heure, de ces bouts de bois, de ces pierres, et d'autres objets du même genre que nous avons perçus comme égaux ? __Notre pensée a tiré d'elles cet “Égal”__ ___ : **ne t'en paraît-il pas différent** ? »"
-    answer: "qui se distingue d'elles"
-    alt: []
-  - id: platon-phedon-morale-p1-10
-    fragment: "3/4"
-    sentence: "« **Examine encore la question** de la façon suivante : __est-ce que parfois des pierres ou des bouts de bois,__ ___, se montrent tantôt égaux, tantôt inégaux ? – Bien sûr. – Mais encore ? L'Égal en soi s'est-il quelquefois montré à toi inégal, ou l'Égalité s'est-elle montrée inégalité ? – Jamais, Socrate. »"
-    answer: "tout en restant les mêmes"
-    alt: []
-  - id: platon-phedon-morale-p1-11
-    fragment: "3/4"
-    sentence: "« Examine encore la question de la façon suivante : est-ce que parfois des **pierres ou des bouts de bois**, __tout en restant les mêmes,__ ___ ? – Bien sûr. – Mais encore ? L'Égal en soi s'est-il quelquefois montré à toi inégal, ou l'Égalité s'est-elle montrée inégalité ? – Jamais, Socrate. »"
-    answer: "se montrent tantôt égaux, tantôt inégaux"
-    alt: []
-  - id: platon-phedon-morale-p1-12
-    fragment: "3/4"
-    sentence: "« Examine encore la question de la façon suivante : est-ce que parfois des pierres ou des bouts de bois, tout en restant les mêmes, se montrent tantôt égaux, tantôt inégaux ? – __Bien sûr. – Mais encore ?__ ___, ou **l'Égalité s'est-elle montrée inégalité** ? – Jamais, Socrate. »"
-    answer: "L'Égal en soi s'est-il quelquefois montré à toi inégal"
-    alt: []
-  - id: platon-phedon-morale-p1-13
-    fragment: "3/4"
-    sentence: "« Examine encore la question de la façon suivante : est-ce que parfois des pierres ou des bouts de bois, tout en restant les mêmes, se montrent tantôt égaux, tantôt inégaux ? – Bien sûr. – Mais encore ? __L'Égal en soi s'est-il quelquefois montré à toi inégal,__ ___ – **Jamais, Socrate**. »"
-    answer: "ou l'Égalité s'est-elle montrée inégalité ?"
-    alt: []
-  - id: platon-phedon-morale-p1-14
-    fragment: "3/4"
-    sentence: "« Examine encore la question de la façon suivante : est-ce que parfois des pierres ou des bouts de bois, tout en restant les mêmes, se montrent tantôt égaux, tantôt inégaux ? – **Bien sûr**. – Mais encore ? __L'Égal en soi s'est-il quelquefois montré à toi inégal, ou l'Égalité s'est-elle montrée inégalité ? –__ ___, Socrate. »"
-    answer: "Jamais"
-    alt: []
-  - id: platon-phedon-morale-p1-15
-    fragment: "4/4"
+  - id: "platon-phedon-morale-p1-15"
     sentence: "« – __Ainsi, donc, reprit-il,__ ___ – **À mes yeux, pas le moins du monde**, Socrate. – N'est-ce point pourtant, dit-il, de ces objets égaux, différents de l'Égal dont nous parlons, que ta pensée a tiré la connaissance de l'Égal ? – C'est bien vrai, dit-il. »"
     answer: "ces objets égaux, et l'Égalité, ce n'est pas la même chose ?"
     alt: []
-  - id: platon-phedon-morale-p1-16
-    fragment: "4/4"
+  - id: "platon-phedon-morale-p1-16"
     sentence: "« – Ainsi, donc, reprit-il, **ces objets égaux, et l'Égalité**, ce n'est pas la même chose ? – __À mes yeux, pas le moins du monde, Socrate. –__ ___, dit-il, de ces objets égaux, différents de l'Égal dont nous parlons, que ta pensée a tiré la connaissance de l'Égal ? – C'est bien vrai, dit-il. »"
     answer: "N'est-ce point pourtant"
     alt: []
-  - id: platon-phedon-morale-p1-17
-    fragment: "4/4"
+  - id: "platon-phedon-morale-p1-17"
     sentence: "« – Ainsi, donc, reprit-il, ces objets égaux, et l'Égalité, ce n'est pas la même chose ? – À mes yeux, pas le moins du monde, Socrate. – __N'est-ce point pourtant, dit-il,__ ___, **que ta pensée a tiré la connaissance de l'Égal** ? – C'est bien vrai, dit-il. »"
     answer: "de ces objets égaux, différents de l'Égal dont nous parlons"
     alt: []
-  - id: platon-phedon-morale-p1-18
-    fragment: "4/4"
+  - id: "platon-phedon-morale-p1-18"
     sentence: "« – Ainsi, donc, reprit-il, ces objets égaux, et l'Égalité, ce n'est pas la même chose ? – À mes yeux, pas le moins du monde, Socrate. – N'est-ce point pourtant, dit-il, __de ces objets égaux, différents de l'Égal dont nous parlons,__ ___ ? – **C'est bien vrai**, dit-il. »"
     answer: "que ta pensée a tiré la connaissance de l'Égal"
     alt: []
-  - id: platon-phedon-morale-p1-19
+  - id: "platon-phedon-morale-p1-19"
     sentence: "__Malgré leur caractère de simples__ « ___ » (101d), **Platon croit fermement à l'existence des Idées**."
     answer: "hypothèses"
     alt: []
-  - id: platon-phedon-morale-p1-20
+  - id: "platon-phedon-morale-p1-20"
     sentence: "L'**hypothèse de l'existence des Idées** est __aussi, pour Platon, une certitude, une__ « ___ » (77a)."
     answer: "évidence"
     alt: []
-  - id: platon-phedon-morale-p1-21
+  - id: "platon-phedon-morale-p1-21"
     sentence: "**Sans l'espèce invisible des êtres**, __il serait impossible d'expliquer l'existence des choses__ ___, c'est-à-dire l'existence du monde."
     answer: "visibles"
     alt: []
-  - id: platon-phedon-morale-p1-22
+  - id: "platon-phedon-morale-p1-22"
     sentence: "**Les bouts de bois égaux** ne sont égaux que parce qu'ils ont en eux « cet Égal » que la pensée peut « tir[er] d'elles », __mais qui n'est pas__ ___ à elles."
     answer: "identique"
     alt: []
-  - id: platon-phedon-morale-p1-23
+  - id: "platon-phedon-morale-p1-23"
     sentence: "**Un objet visible** n'existe qu'__à cause de sa relation avec l'Idée__ ___ qui lui correspond."
     answer: "homonyme"
     alt: []
-  - id: platon-phedon-morale-p1-24
+  - id: "platon-phedon-morale-p1-24"
     sentence: "__La relation de__ ___ entre les **choses visibles et les Idées invisibles** est exposée dans tous les dialogues, des premiers jusqu'aux derniers."
     answer: "causalité"
     alt: []
-  - id: platon-phedon-morale-p1-25
+  - id: "platon-phedon-morale-p1-25"
     sentence: "**Pour dire le rapport des choses aux Idées**, Platon parle de « présence », de « communication », __d'« imitation » et de__ « ___ »."
     answer: "participation"
     alt: []
-  - id: platon-phedon-morale-p1-26
+  - id: "platon-phedon-morale-p1-26"
     sentence: "__Les Idées sont les__ « ___ » **en soi des choses sensibles** (100c, 101c), sans lesquelles rien de ce que nous percevons n'existerait."
     answer: "causes"
     alt: []
-  - id: platon-phedon-morale-p1-27
-    sentence: "« cet `Εἶδος`-là en lui-même qui fait que **toutes les choses pieuses sont pieuses** » __: *Euthyphron*,__ ___."
+  - id: "platon-phedon-morale-p1-27"
+    sentence: "*Euthyphron*, ___ : « cet `Εἶδος`-là en lui-même qui fait que **toutes les choses pieuses sont pieuses** »."
     answer: "6d"
     alt: []
-  - id: platon-phedon-morale-p1-28
+  - id: "platon-phedon-morale-p1-27c"
+    sentence: "*Euthyphron*, 6d : « cet `Εἶδος`-là en lui-même ___ »."
+    answer: "qui fait que toutes les choses pieuses sont pieuses"
+    alt: []
+  - id: "platon-phedon-morale-p1-28"
     sentence: "**Le Beau en soi** est __ce « par quoi toutes choses sont belles », selon l'__*___* (288a)."
     answer: "Hippias majeur"
     alt: ["Hippias Majeur"]
-  - id: platon-phedon-morale-p1-29
+  - id: "platon-phedon-morale-p1-29"
     sentence: "Aucun ___ __mental ne pouvant faire venir quoi que ce soit à l'existence__, **les Idées ne sont pas seulement des idées de l'esprit**."
     answer: "concept"
     alt: []
-  - id: platon-phedon-morale-p1-30
+  - id: "platon-phedon-morale-p1-30"
     sentence: "**Loin de provoquer l'incertitude**, l'hypothèse des Idées __offre avant tout de la__ « ___ » (101d)."
     answer: "sécurité"
     alt: []
-  - id: platon-phedon-morale-p1-31
+  - id: "platon-phedon-morale-p1-31"
     sentence: "**Si les Idées n'existaient pas**, ni la connaissance, __ni ainsi non plus la__ ___ ne seraient possibles."
     answer: "morale"
     alt: []
-  - id: platon-phedon-morale-p1-32
-    sentence: "L'Égal en soi est l'être invisible, « cause » **de toute égalité visible**, __qui est toujours__ ___."
-    answer: "le même"
-    alt: []
-  - id: platon-phedon-morale-p1-33
+  - id: "platon-phedon-morale-p1-33"
     sentence: "Si l'âme cherchait **par les sens du corps** à apprendre ce qu'est l'Égal, __elle serait__ ___ : elle prendrait les égalités visibles pour objet."
     answer: "désorientée"
     alt: []
-  - id: platon-phedon-morale-p1-34
+  - id: "platon-phedon-morale-p1-34"
     sentence: "Au lieu de se conduire vers la vérité, l'âme qui se sert des sens « **errerait** » (79c), __en passant d'une__ ___ à une autre."
     answer: "opinion"
     alt: []
-  - id: platon-phedon-morale-p1-35
+  - id: "platon-phedon-morale-p1-35"
     sentence: "La « **conversion** » de l'âme du Sensible à l'Intelligible __est conçue comme le but même de__ l'___ (*République*, VII, 518d)."
     answer: "éducation"
     alt: []
-- id: platon-phedon-morale-p2
-  title: "L'âme errante et la pensée pure"
+- id: "platon-phedon-morale-p2"
+  title: "L'âme errante"
   notes: |-
     **Selon qu'elle se sert du corps ou s'applique par elle-même, l'âme erre parmi ce qui change ou demeure identique auprès de ce qui ne change pas : {green}cet état est la pensée pure{/green}.** Le passage oppose deux usages de l'âme, terme à terme. Par les sens, qui supposent la *médiation du corps*, {red}elle est entraînée vers ce qui ne reste jamais identique et devient elle-même errante, par contact{/red}. Par elle-même et avec ses propres forces, elle s'élance vers ce qui est pur, éternel, immortel, identique ; {coral}parce qu'elle *s'apparente* à cette réalité, elle s'y attache quand elle est isolée en elle-même{/coral}, et devient à son tour identique à elle-même, par contact.
 
@@ -576,6 +609,40 @@ lessons:
     | Vers quoi | ce qui ne reste jamais identique à soi | ce qui est pur, existe toujours, ne meurt point |
     | Son état | errante | elle cesse d'errer, demeure identique à elle-même |
     | Son nom | (l'opinion, selon le commentaire) | la pensée pure |
+  passage:
+    label: "79c-d"
+    text: "Quand l'âme se sert du corps pour examiner quelque objet, par la vue, ou par l'ouïe, ou par toute autre sensation (car il y a médiation du corps, quand l'examen se fait par l'intermédiaire de la sensation) [...] elle est entraînée par le corps vers ce qui ne reste jamais identique à soi-même, elle est, elle-même, errante [...] du fait de son contact avec des choses de cet ordre."
+  points:
+  - id: "platon-phedon-morale-p2-1"
+    sentence: "« Quand l'âme ___ pour examiner quelque objet, **par la vue, ou par l'ouïe**, ou par toute autre sensation (car il y a médiation du corps, quand l'examen se fait par l'intermédiaire de la sensation) [...] elle est entraînée par le corps vers ce qui ne reste jamais identique à soi-même, elle est, elle-même, errante [...] du fait de son contact avec des choses de cet ordre. »"
+    answer: "se sert du corps"
+    alt: []
+  - id: "platon-phedon-morale-p2-2"
+    sentence: "« Quand l'âme se sert du corps pour examiner quelque objet, **par la vue, ou par l'ouïe**, ou par toute autre sensation (___, __quand l'examen se fait par l'intermédiaire de la sensation__) [...] elle est entraînée par le corps vers ce qui ne reste jamais identique à soi-même, elle est, elle-même, errante [...] du fait de son contact avec des choses de cet ordre. »"
+    answer: "car il y a médiation du corps"
+    alt: []
+  - id: "platon-phedon-morale-p2-3"
+    sentence: "« Quand l'âme se sert du corps pour examiner quelque objet, par la vue, ou par l'ouïe, ou par toute autre sensation (car il y a médiation du corps, quand l'examen se fait par l'intermédiaire de la sensation) [...] ___ __vers ce qui ne reste jamais **identique à soi-même**__, elle est, elle-même, errante [...] du fait de son contact avec des choses de cet ordre. »"
+    answer: "elle est entraînée par le corps"
+    alt: []
+  - id: "platon-phedon-morale-p2-4"
+    sentence: "« Quand l'âme se sert du corps pour examiner quelque objet, par la vue, ou par l'ouïe, ou par toute autre sensation (car il y a médiation du corps, quand l'examen se fait par l'intermédiaire de la sensation) [...] __elle est entraînée par le corps__ ___, elle est, elle-même, **errante** [...] du fait de son contact avec des choses de cet ordre. »"
+    answer: "vers ce qui ne reste jamais identique à soi-même"
+    alt: []
+  - id: "platon-phedon-morale-p2-5"
+    sentence: "« Quand l'âme se sert du corps pour examiner quelque objet, par la vue, ou par l'ouïe, ou par toute autre sensation (car il y a médiation du corps, quand l'examen se fait par l'intermédiaire de la sensation) [...] elle est entraînée par le corps vers ce qui ne reste jamais identique à soi-même, __elle est, elle-même,__ ___ [...] **du fait de son contact** avec des choses de cet ordre. »"
+    answer: "errante"
+    alt: []
+  - id: "platon-phedon-morale-p2-6"
+    sentence: "« Quand l'âme se sert du corps pour examiner quelque objet, par la vue, ou par l'ouïe, ou par toute autre sensation (car il y a médiation du corps, quand l'examen se fait par l'intermédiaire de la sensation) [...] elle est entraînée par le corps vers ce qui ne reste jamais identique à soi-même, elle est, elle-même, __**errante** [...]__ ___. »"
+    answer: "du fait de son contact avec des choses de cet ordre"
+    alt: []
+- id: "platon-phedon-morale-p2b"
+  title: "L'âme qui s'applique par elle-même : la pensée pure"
+  notes: |-
+    **Quand l'âme examine par elle-même, elle** {coral}**s'élance vers ce qui est pur et toujours identique, s'y attache parce qu'elle lui est apparentée, et cesse d'errer**{/coral}**.**
+
+    ? **Pensée pure** (`φρόνησις`) : l'état de l'âme qui examine par elle-même, sans le corps, et demeure identique à elle-même au contact de ce qui ne change pas.
 
     Le commentaire en tire les **conditions** de la mission morale, qui n'est pas une possibilité directe. Avant la naissance, elle dépend de l'issue de la lutte entre les âmes pour monter vers la voûte céleste ; pendant la vie, de ce que l'âme laisse ou non le corps intervenir dans ses recherches. Car l'âme, invisible, « ressemble au divin » (80a), et le corps, visible, « au mortel » : le *Phédon* souligne cette opposition absolue en 80a-b. Âme et corps appartiennent à deux espèces d'êtres et ont deux objets d'*orientation* : les Idées pour l'une, le corporel et le visible pour l'autre.
 
@@ -586,144 +653,109 @@ lessons:
     ! L'âme ne devient pas errante parce qu'elle serait mauvaise : elle le devient par contact, en se servant du corps.
   passage:
     label: "79c-d"
-    text: "Quand l'âme se sert du corps pour examiner quelque objet, par la vue, ou par l'ouïe, ou par toute autre sensation (car il y a médiation du corps, quand l'examen se fait par l'intermédiaire de la sensation) [...] elle est entraînée par le corps vers ce qui ne reste jamais identique à soi-même, elle est, elle-même, errante [...] du fait de son contact avec des choses de cet ordre. – Bien sûr. – Mais quand l'âme s'applique par elle-même et avec ses propres forces à l'examen, elle s'élance là-bas vers ce qui est pur, qui existe toujours, qui ne meurt point, qui reste identique à soi-même ; et comme elle s'apparente à cette réalité, elle s'attache toujours à elle quand, se trouvant isolée en elle-même, il lui est possible de le faire ; elle cesse d'errer, et dans le voisinage de ces réalités-là elle demeure identique à elle-même, du fait de son contact avec des objets qui ont ce même caractère. Cet état de l'âme, nous l'avons appelé pensée pure, n'est-ce pas ? – Fort bien, Socrate ! Cela est tout à fait vrai, dit Cébès."
+    text: "– Bien sûr. – Mais quand l'âme s'applique par elle-même et avec ses propres forces à l'examen, elle s'élance là-bas vers ce qui est pur, qui existe toujours, qui ne meurt point, qui reste identique à soi-même ; et comme elle s'apparente à cette réalité, elle s'attache toujours à elle quand, se trouvant isolée en elle-même, il lui est possible de le faire ; elle cesse d'errer, et dans le voisinage de ces réalités-là elle demeure identique à elle-même, du fait de son contact avec des objets qui ont ce même caractère. Cet état de l'âme, nous l'avons appelé pensée pure, n'est-ce pas ? – Fort bien, Socrate ! Cela est tout à fait vrai, dit Cébès."
   points:
-  - id: platon-phedon-morale-p2-1
-    fragment: "1/3"
-    sentence: "« __Quand l'âme__ ___ pour examiner quelque objet, **par la vue, ou par l'ouïe**, ou par toute autre sensation (car il y a médiation du corps, quand l'examen se fait par l'intermédiaire de la sensation) [...] elle est entraînée par le corps vers ce qui ne reste jamais identique à soi-même, elle est, elle-même, errante [...] du fait de son contact avec des choses de cet ordre. »"
-    answer: "se sert du corps"
-    alt: []
-  - id: platon-phedon-morale-p2-2
-    fragment: "1/3"
-    sentence: "« Quand l'âme se sert du corps pour examiner quelque objet, **par la vue, ou par l'ouïe**, ou par toute autre sensation (___, __quand l'examen se fait par l'intermédiaire de la sensation__) [...] elle est entraînée par le corps vers ce qui ne reste jamais identique à soi-même, elle est, elle-même, errante [...] du fait de son contact avec des choses de cet ordre. »"
-    answer: "car il y a médiation du corps"
-    alt: []
-  - id: platon-phedon-morale-p2-3
-    fragment: "1/3"
-    sentence: "« Quand l'âme se sert du corps pour examiner quelque objet, par la vue, ou par l'ouïe, ou par toute autre sensation (car il y a médiation du corps, quand l'examen se fait par l'intermédiaire de la sensation) [...] ___ __vers ce qui ne reste jamais **identique à soi-même**__, elle est, elle-même, errante [...] du fait de son contact avec des choses de cet ordre. »"
-    answer: "elle est entraînée par le corps"
-    alt: []
-  - id: platon-phedon-morale-p2-4
-    fragment: "1/3"
-    sentence: "« Quand l'âme se sert du corps pour examiner quelque objet, par la vue, ou par l'ouïe, ou par toute autre sensation (car il y a médiation du corps, quand l'examen se fait par l'intermédiaire de la sensation) [...] __elle est entraînée par le corps__ ___, elle est, elle-même, **errante** [...] du fait de son contact avec des choses de cet ordre. »"
-    answer: "vers ce qui ne reste jamais identique à soi-même"
-    alt: []
-  - id: platon-phedon-morale-p2-5
-    fragment: "1/3"
-    sentence: "« Quand l'âme se sert du corps pour examiner quelque objet, par la vue, ou par l'ouïe, ou par toute autre sensation (car il y a médiation du corps, quand l'examen se fait par l'intermédiaire de la sensation) [...] elle est entraînée par le corps vers ce qui ne reste jamais identique à soi-même, __elle est, elle-même,__ ___ [...] **du fait de son contact** avec des choses de cet ordre. »"
-    answer: "errante"
-    alt: []
-  - id: platon-phedon-morale-p2-6
-    fragment: "1/3"
-    sentence: "« Quand l'âme se sert du corps pour examiner quelque objet, par la vue, ou par l'ouïe, ou par toute autre sensation (car il y a médiation du corps, quand l'examen se fait par l'intermédiaire de la sensation) [...] elle est entraînée par le corps vers ce qui ne reste jamais identique à soi-même, elle est, elle-même, __**errante** [...]__ ___. »"
-    answer: "du fait de son contact avec des choses de cet ordre"
-    alt: []
-  - id: platon-phedon-morale-p2-7
-    fragment: "2/3"
+  - id: "platon-phedon-morale-p2-7"
     sentence: "« – Bien sûr. – __Mais quand l'âme s'applique__ ___ **à l'examen**, elle s'élance là-bas vers ce qui est pur, qui existe toujours, qui ne meurt point, qui reste identique à soi-même ; et comme elle s'apparente à cette réalité, elle s'attache toujours à elle quand, se trouvant isolée en elle-même, il lui est possible de le faire ; elle cesse d'errer, et dans le voisinage de ces réalités-là elle demeure identique à elle-même, du fait de son contact avec des objets qui ont ce même caractère. »"
     answer: "par elle-même et avec ses propres forces"
     alt: []
-  - id: platon-phedon-morale-p2-8
-    fragment: "2/3"
+  - id: "platon-phedon-morale-p2-8"
     sentence: "« – Bien sûr. – Mais quand l'âme s'applique par elle-même et __avec ses propres forces à l'examen,__ ___ vers **ce qui est pur**, qui existe toujours, qui ne meurt point, qui reste identique à soi-même ; et comme elle s'apparente à cette réalité, elle s'attache toujours à elle quand, se trouvant isolée en elle-même, il lui est possible de le faire ; elle cesse d'errer, et dans le voisinage de ces réalités-là elle demeure identique à elle-même, du fait de son contact avec des objets qui ont ce même caractère. »"
     answer: "elle s'élance là-bas"
     alt: []
-  - id: platon-phedon-morale-p2-9
-    fragment: "2/3"
+  - id: "platon-phedon-morale-p2-9"
     sentence: "« – Bien sûr. – Mais quand l'âme s'applique par elle-même et avec ses propres forces à l'examen, __elle s'élance là-bas vers__ ___, qui **ne meurt point**, qui reste identique à soi-même ; et comme elle s'apparente à cette réalité, elle s'attache toujours à elle quand, se trouvant isolée en elle-même, il lui est possible de le faire ; elle cesse d'errer, et dans le voisinage de ces réalités-là elle demeure identique à elle-même, du fait de son contact avec des objets qui ont ce même caractère. »"
     answer: "ce qui est pur, qui existe toujours"
     alt: []
-  - id: platon-phedon-morale-p2-10
-    fragment: "2/3"
+  - id: "platon-phedon-morale-p2-10"
     sentence: "« – Bien sûr. – Mais quand l'âme s'applique par elle-même et avec ses propres forces à l'examen, __elle s'élance là-bas vers__ ___ ; et comme elle **s'apparente à cette réalité**, elle s'attache toujours à elle quand, se trouvant isolée en elle-même, il lui est possible de le faire ; elle cesse d'errer, et dans le voisinage de ces réalités-là elle demeure identique à elle-même, du fait de son contact avec des objets qui ont ce même caractère. »"
     answer: "ce qui est pur, qui existe toujours, qui ne meurt point, qui reste identique à soi-même"
     alt: []
-  - id: platon-phedon-morale-p2-11
-    fragment: "2/3"
+  - id: "platon-phedon-morale-p2-11"
     sentence: "« – Bien sûr. – Mais quand l'âme s'applique par elle-même et avec ses propres forces à l'examen, elle s'élance là-bas vers ce qui est pur, qui existe toujours, qui ne meurt point, qui reste identique à soi-même __; et__ ___, **elle s'attache toujours à elle** quand, se trouvant isolée en elle-même, il lui est possible de le faire ; elle cesse d'errer, et dans le voisinage de ces réalités-là elle demeure identique à elle-même, du fait de son contact avec des objets qui ont ce même caractère. »"
     answer: "comme elle s'apparente à cette réalité"
     alt: []
-  - id: platon-phedon-morale-p2-12
-    fragment: "2/3"
+  - id: "platon-phedon-morale-p2-12"
     sentence: "« – Bien sûr. – Mais quand l'âme s'applique par elle-même et avec ses propres forces à l'examen, elle s'élance là-bas vers ce qui est pur, qui existe toujours, qui ne meurt point, qui reste identique à soi-même ; et comme elle s'apparente à cette réalité, __elle s'attache toujours à elle quand,__ ___, **il lui est possible de le faire** ; elle cesse d'errer, et dans le voisinage de ces réalités-là elle demeure identique à elle-même, du fait de son contact avec des objets qui ont ce même caractère. »"
     answer: "se trouvant isolée en elle-même"
     alt: []
-  - id: platon-phedon-morale-p2-13
-    fragment: "2/3"
+  - id: "platon-phedon-morale-p2-13"
     sentence: "« – Bien sûr. – Mais quand l'âme s'applique par elle-même et avec ses propres forces à l'examen, elle s'élance là-bas vers ce qui est pur, qui existe toujours, qui ne meurt point, qui reste identique à soi-même ; et comme elle s'apparente à cette réalité, elle s'attache toujours à elle quand, se trouvant isolée en elle-même, __il lui est possible de le faire ;__ ___, et **dans le voisinage de ces réalités-là** elle demeure identique à elle-même, du fait de son contact avec des objets qui ont ce même caractère. »"
     answer: "elle cesse d'errer"
     alt: []
-  - id: platon-phedon-morale-p2-14
-    fragment: "2/3"
+  - id: "platon-phedon-morale-p2-14"
     sentence: "« – Bien sûr. – Mais quand l'âme s'applique par elle-même et avec ses propres forces à l'examen, elle s'élance là-bas vers ce qui est pur, qui existe toujours, qui ne meurt point, qui reste identique à soi-même ; et comme elle s'apparente à cette réalité, elle s'attache toujours à elle quand, se trouvant isolée en elle-même, il lui est possible de le faire ; elle cesse d'errer, __et dans le voisinage de ces réalités-là__ ___, **du fait de son contact avec des objets qui ont ce même caractère**. »"
     answer: "elle demeure identique à elle-même"
     alt: []
-  - id: platon-phedon-morale-p2-15
-    fragment: "3/3"
-    sentence: "« __**Cet état de l'âme**, nous l'avons appelé__ ___, n'est-ce pas ? – Fort bien, Socrate ! Cela est tout à fait vrai, dit Cébès. »"
+  - id: "platon-phedon-morale-p2-15"
+    sentence: "« Cet état de l'âme, nous l'avons appelé ___, n'est-ce pas ? – Fort bien, Socrate ! Cela est tout à fait vrai, dit Cébès. »"
     answer: "pensée pure"
     alt: []
-  - id: platon-phedon-morale-p2-16
+  - id: "platon-phedon-morale-p2-16"
     sentence: "La **réalisation de la mission morale de l'âme** __n'est pas une possibilité__ ___ : elle dépend de certaines conditions."
     answer: "directe"
     alt: []
-  - id: platon-phedon-morale-p2-17
+  - id: "platon-phedon-morale-p2-17"
     sentence: "**Avant la naissance**, contempler les Idées dépend, pour chaque âme, __du résultat de la__ ___ qui oppose toutes les âmes pour monter vers le dos de la voûte céleste."
     answer: "lutte"
     alt: []
-  - id: platon-phedon-morale-p2-18
+  - id: "platon-phedon-morale-p2-18"
     sentence: "**Pendant la vie empirique**, la mission morale dépend de ce que l'âme __laisse, ou ne laisse pas, le__ ___ intervenir dans ses propres recherches."
     answer: "corps"
     alt: []
-  - id: platon-phedon-morale-p2-19
+  - id: "platon-phedon-morale-p2-19"
     sentence: "L'âme, invisible, « **ressemble au divin** » (80a) ; __le corps, visible, ressemble « au__ ___ »."
     answer: "mortel"
     alt: []
-  - id: platon-phedon-morale-p2-20
+  - id: "platon-phedon-morale-p2-20"
     sentence: "**L'opposition absolue** entre l'âme, qui ressemble au divin, et le corps, qui ressemble au mortel, __est soulignée dans le *Phédon*, en__ ___."
     answer: "80a-b"
     alt: ["80a-80b"]
-  - id: platon-phedon-morale-p2-21
+  - id: "platon-phedon-morale-p2-21"
     sentence: "Appartenant à **deux espèces d'êtres**, l'âme et le corps __ont deux objets__ d'___ différents : les Idées, et le corporel et le visible."
     answer: "orientation"
     alt: []
-  - id: platon-phedon-morale-p2-22
-    sentence: "Pour **réaliser son essence** et accomplir sa mission morale sans rencontrer d'obstacles, __l'âme doit être toute__ ___."
-    answer: "seule"
+  - id: "platon-phedon-morale-p2-22"
+    sentence: "Pour **réaliser son essence** et accomplir sa mission morale sans rencontrer d'obstacles, __l'âme doit être__ ___."
+    answer: "toute seule"
     alt: []
-  - id: platon-phedon-morale-p2-23
+  - id: "platon-phedon-morale-p2-23"
     sentence: "__L'isolement de l'âme, ou sa__ ___, était une réalité pendant la **vie préempirique**, où chaque âme vivait séparément du corps."
     answer: "pureté"
     alt: []
-  - id: platon-phedon-morale-p2-24
+  - id: "platon-phedon-morale-p2-24"
     sentence: "Exercer la **fonction de penser**, c'est réaliser ce qui constitue, __au sens plus élargi du terme, la__ « ___ » de l'âme."
     answer: "vertu"
     alt: []
-  - id: platon-phedon-morale-p2-25
+  - id: "platon-phedon-morale-p2-25"
     sentence: "Même unie au corps, l'âme doit examiner __en « envoyant__ ___ le corps et **rompant dans la mesure du possible tout commerce et tout contact avec lui** » (65c)."
     answer: "promener"
     alt: []
-  - id: platon-phedon-morale-p2-26
+  - id: "platon-phedon-morale-p2-26"
     sentence: "Les Idées pures ne sont atteintes que par la « **pensée pure** », car le Pur __ne peut être saisi que par le__ ___ (67b)."
     answer: "pur"
     alt: []
-  - id: platon-phedon-morale-p2-27
+  - id: "platon-phedon-morale-p2-27"
     sentence: "L'âme, « **apparentée** » aux Idées, __est__ l'___ invisible et pur, et donc approprié, pour acquérir la connaissance du divin."
     answer: "instrument"
     alt: []
-  - id: platon-phedon-morale-p2-28
+  - id: "platon-phedon-morale-p2-28"
     sentence: "Le **divin**, même communiqué « partout », __est de l'ordre du__ ___, non du perceptible par les sens."
     answer: "pensable"
     alt: []
-  - id: platon-phedon-morale-p2-29
-    sentence: "La capture du divin permet à l'âme de devenir « **elle-même vraiment divine** » : __*Lois*, X,__ ___."
+  - id: "platon-phedon-morale-p2-29"
+    sentence: "*Lois*, X, ___ : la capture du divin permet à l'âme de devenir « **elle-même vraiment divine** »."
     answer: "897b"
     alt: []
-  - id: platon-phedon-morale-p2-30
+  - id: "platon-phedon-morale-p2-29c"
+    sentence: "*Lois*, X, 897b : la capture du divin permet à l'âme de devenir « ___ »."
+    answer: "elle-même vraiment divine"
+    alt: []
+  - id: "platon-phedon-morale-p2-30"
     sentence: "Bien que d'origine naturelle, la moralité de l'homme **n'est pas certaine** : __elle nécessite un__ ___ constant."
     answer: "effort"
     alt: []
-- id: platon-phedon-morale-p3
+- id: "platon-phedon-morale-p3"
   title: "Se séparer du corps"
   notes: |-
     **{green}Une connaissance épurée exige de se séparer du corps{/green} : l'âme en elle-même doit considérer les choses en elles-mêmes.** La phrase noue la conclusion des deux autres extraits : puisque les Idées sont *en elles-mêmes* et que le corps entraîne l'âme vers ce qui change, seule l'âme *en elle-même* peut les connaître. Le parallélisme de la formule (l'âme en elle-même, les choses en elles-mêmes) dit la règle du {teal}« {/teal}pur par le pur ».
@@ -746,115 +778,119 @@ lessons:
     label: "66d"
     text: "Il nous est réellement prouvé que, si nous devons jamais avoir d'un objet une connaissance épurée, il faudra nous séparer du corps et considérer avec l'âme en elle-même les choses en elles-mêmes."
   points:
-  - id: platon-phedon-morale-p3-1
+  - id: "platon-phedon-morale-p3-1"
     sentence: "« Il nous est réellement prouvé que, si nous devons **jamais avoir** __d'un objet une__ ___, il faudra nous séparer du corps et considérer avec l'âme en elle-même les choses en elles-mêmes. »"
     answer: "connaissance épurée"
     alt: []
-  - id: platon-phedon-morale-p3-2
+  - id: "platon-phedon-morale-p3-2"
     sentence: "« Il nous est réellement prouvé que, si nous devons jamais avoir d'un objet une **connaissance épurée**, __il faudra__ ___ et considérer avec l'âme en elle-même les choses en elles-mêmes. »"
     answer: "nous séparer du corps"
     alt: []
-  - id: platon-phedon-morale-p3-3
+  - id: "platon-phedon-morale-p3-3"
     sentence: "« Il nous est réellement prouvé que, si nous devons jamais avoir d'un objet une connaissance épurée, il faudra **nous séparer du corps** __et considérer__ ___ les choses en elles-mêmes. »"
     answer: "avec l'âme en elle-même"
     alt: []
-  - id: platon-phedon-morale-p3-4
+  - id: "platon-phedon-morale-p3-4"
     sentence: "« Il nous est réellement prouvé que, si nous devons jamais avoir d'un objet une connaissance épurée, il faudra nous séparer du corps et **considérer** __avec l'âme en elle-même__ ___. »"
     answer: "les choses en elles-mêmes"
     alt: []
-  - id: platon-phedon-morale-p3-5
+  - id: "platon-phedon-morale-p3-5"
     sentence: "« Il nous est réellement prouvé que, si nous devons jamais avoir d'un objet une **connaissance épurée**, __il faudra__ ___. »"
     answer: "nous séparer du corps et considérer avec l'âme en elle-même les choses en elles-mêmes"
     alt: []
-  - id: platon-phedon-morale-p3-6
+  - id: "platon-phedon-morale-p3-6"
     sentence: "Chez Platon, la **moralité de l'homme est naturelle**, mais elle n'est pas un fait : __elle constitue un__ ___."
     answer: "résultat"
     alt: []
-  - id: platon-phedon-morale-p3-7
+  - id: "platon-phedon-morale-p3-7"
     sentence: "La moralité présuppose que l'âme réussisse à **se libérer**, __ou à se détacher, des__ « ___ » du corps (67d)."
     answer: "liens"
     alt: []
-  - id: platon-phedon-morale-p3-8
+  - id: "platon-phedon-morale-p3-8"
     sentence: "Le « **détachement** » de l'âme (67d) est __aussi appelé sa__ « ___ » (67c)."
     answer: "purification"
     alt: []
-  - id: platon-phedon-morale-p3-9
+  - id: "platon-phedon-morale-p3-9"
     sentence: "La **connaissance épurée** (66d) est la seule véritable : celle du « vrai, du divin, __de ce qui n'est pas objet de__ l'___ » (84a)."
     answer: "opinion"
     alt: []
-  - id: platon-phedon-morale-p3-10
+  - id: "platon-phedon-morale-p3-10"
     sentence: "Tout homme ne réussit pas à **se détacher du corps**, __car cela présuppose une__ ___ incessante de l'âme pour le garder à distance."
     answer: "lutte"
     alt: []
-  - id: platon-phedon-morale-p3-11
+  - id: "platon-phedon-morale-p3-11"
     sentence: "Le détachement est le **but constant** de « ceux qui __pratiquent la philosophie au__ ___ du terme » (67e)."
     answer: "droit sens"
     alt: []
-  - id: platon-phedon-morale-p3-12
+  - id: "platon-phedon-morale-p3-12"
     sentence: "Les **vrais philosophes** philosophent « __en toute pureté et__ ___ » (*Sophiste*, 253e)."
     answer: "justice"
     alt: []
-  - id: platon-phedon-morale-p3-13
+  - id: "platon-phedon-morale-p3-13"
     sentence: "**Ce que les vrais philosophes désirent** tout au long de leur vie __est précisément « la__ ___ » (68a)."
     answer: "pensée pure"
     alt: []
-  - id: platon-phedon-morale-p3-14
+  - id: "platon-phedon-morale-p3-14"
     sentence: "Dans le *Gorgias* __(459a-b),__ l'___ paraît **plus persuasif que le médecin sur la santé**, « sans être médecin lui-même »."
     answer: "orateur"
     alt: []
-  - id: platon-phedon-morale-p3-15
+  - id: "platon-phedon-morale-p3-15"
     sentence: "**Le sophiste** n'est point un sage, __mais un__ « ___ du sage » (*Sophiste*, 268c)."
     answer: "imitateur"
     alt: []
-  - id: platon-phedon-morale-p3-16
+  - id: "platon-phedon-morale-p3-16"
     sentence: "Les vrais philosophes désirent la **pensée pure** au point de __s'exercer à faire__ ___ leur corps (67e)."
     answer: "mourir"
     alt: []
-  - id: platon-phedon-morale-p3-17
+  - id: "platon-phedon-morale-p3-17"
     sentence: "Pour Platon, le rôle de la philosophie __à la morale est__ ___, car **le vrai philosophe est l'homme moral par excellence**."
     answer: "capital"
     alt: []
-  - id: platon-phedon-morale-p3-18
+  - id: "platon-phedon-morale-p3-18"
     sentence: "La « **pensée pure** » __est le__ « ___ » même de l'âme à l'égard du corps."
     answer: "détachement"
     alt: []
-  - id: platon-phedon-morale-p3-19
+  - id: "platon-phedon-morale-p3-19"
     sentence: "**Désirer le détachement** ne veut pas dire que le corps __n'a, pour Platon, aucune__ ___."
     answer: "valeur"
     alt: []
-  - id: platon-phedon-morale-p3-20
+  - id: "platon-phedon-morale-p3-20"
     sentence: "Pour que l'âme puisse « **se ressouvenir** » des Idées, __il faut d'abord que l'homme__ ___, par les sens, les choses visibles."
     answer: "perçoive"
     alt: []
-  - id: platon-phedon-morale-p3-21
-    sentence: "L'origine de la pensée de l'Égal ne provient « que de **l'acte de la vue, du toucher**, ou de telle autre sensation » __: *Phédon*,__ ___."
+  - id: "platon-phedon-morale-p3-21"
+    sentence: "*Phédon*, ___ : l'origine de la pensée de l'Égal ne provient « que de **l'acte de la vue, du toucher**, ou de telle autre sensation »."
     answer: "75a"
     alt: []
-  - id: platon-phedon-morale-p3-22
+  - id: "platon-phedon-morale-p3-22"
     sentence: "La **connaissance par les sens** __n'est pas__ ___ à la connaissance véritable : il faut partir des sens pour avancer plus loin qu'eux."
     answer: "identique"
     alt: []
-  - id: platon-phedon-morale-p3-23
+  - id: "platon-phedon-morale-p3-23"
     sentence: "**La morale**, d'après Platon, __n'est pas quelque chose__ d'___, ou de genre seulement pratique."
     answer: "autonome"
     alt: []
-  - id: platon-phedon-morale-p3-24
+  - id: "platon-phedon-morale-p3-24"
     sentence: "La **pratique vertueuse** __est uniquement une__ ___ de la connaissance véritable de ce qu'est en soi la Vertu."
     answer: "conséquence"
     alt: []
-  - id: platon-phedon-morale-p3-25
+  - id: "platon-phedon-morale-p3-25"
     sentence: "Dans l'*Euthyphron*, l'interlocuteur de Socrate a faussement identifié le **Pieux** __avec un simple__ ___ isolé d'acte pieux."
     answer: "exemple"
     alt: []
-  - id: platon-phedon-morale-p3-26
-    sentence: "« je ne t'ai pas invité à me faire connaître **une ou deux de ces nombreuses choses qui sont pieuses** ; je t'ai demandé quel est précisément `ἐκεῖνο αὐτό τό εἶδος` » __: *Euthyphron*,__ ___."
+  - id: "platon-phedon-morale-p3-26"
+    sentence: "*Euthyphron*, ___ : « je ne t'ai pas invité à me faire connaître **une ou deux de ces nombreuses choses qui sont pieuses** ; je t'ai demandé quel est précisément `ἐκεῖνο αὐτό τό εἶδος` »."
     answer: "6d"
     alt: []
-  - id: platon-phedon-morale-p3-27
+  - id: "platon-phedon-morale-p3-26c"
+    sentence: "*Euthyphron*, 6d : « je ne t'ai pas invité à me faire connaître ___ ; je t'ai demandé quel est précisément `ἐκεῖνο αὐτό τό εἶδος` »."
+    answer: "une ou deux de ces nombreuses choses qui sont pieuses"
+    alt: []
+  - id: "platon-phedon-morale-p3-27"
     sentence: "Le vrai philosophe est l'homme moral par excellence parce qu'il **sait comment arriver au vrai savoir** : __il possède « le don__ ___ » (*Sophiste*, 253e)."
     answer: "dialectique"
     alt: []
-- id: platon-phedon-morale-o1
+- id: "platon-phedon-morale-o1"
   title: "La dialectique"
   notes: |-
     **La dialectique est la science du philosophe : elle découvre les liaisons entre les Idées, et c'est d'elle que dépend la morale, {green}puisque la morale est connaissance{/green}.** Elle est « la science » ({sky}*Sophiste*{/sky}, 253d) par laquelle le philosophe cherche à saisir « méthodiquement l'essence de chaque chose » (*République*, VII, 533b). Partant des données des sens, elle découvre, par un processus intellectuel d'abord ascendant puis descendant (101d-e ; *Phèdre*, 265d-e ; *République*, VI, 511b-c), quelles Idées peuvent se lier ou s'associer entre elles et lesquelles ne le peuvent pas (*Sophiste*, 253d-e, 253b).
@@ -874,71 +910,75 @@ lessons:
   passage:
     label: "Prolongement"
   points:
-  - id: platon-phedon-morale-o1-1
+  - id: "platon-phedon-morale-o1-1"
     sentence: "__La dialectique est « la__ ___ » (*Sophiste*, 253d) dont use le **philosophe** dans son travail de penser."
     answer: "science"
     alt: []
-  - id: platon-phedon-morale-o1-2
+  - id: "platon-phedon-morale-o1-2"
     sentence: "La dialectique __cherche à saisir__ « ___ l'**essence de chaque chose** » (*République*, VII, 533b)."
     answer: "méthodiquement"
     alt: []
-  - id: platon-phedon-morale-o1-3
+  - id: "platon-phedon-morale-o1-3"
     sentence: "**Partant des données des sens**, la dialectique __suit un processus intellectuel d'abord__ ___, et ensuite descendant."
     answer: "ascendant"
     alt: []
-  - id: platon-phedon-morale-o1-4
+  - id: "platon-phedon-morale-o1-4"
     sentence: "La dialectique découvre **quelles Idées peuvent se lier** __ou__ s'___ entre elles, et lesquelles ne le peuvent pas (*Sophiste*, 253d-e)."
     answer: "associer"
     alt: []
-  - id: platon-phedon-morale-o1-5
+  - id: "platon-phedon-morale-o1-5"
     sentence: "**Certaines Idées** se lient à d'autres __selon le type de rapport qui unit un__ ___ à ses espèces."
     answer: "genre"
     alt: []
-  - id: platon-phedon-morale-o1-6
+  - id: "platon-phedon-morale-o1-6"
     sentence: "La **Rondeur** « est une figure, __mais non pas la figure__ ___ » (*Ménon*, 73e)."
     answer: "simplement"
     alt: []
-  - id: platon-phedon-morale-o1-7
-    sentence: "« **la Rondeur** est une figure, mais non pas la figure simplement » __: *Ménon*,__ ___."
+  - id: "platon-phedon-morale-o1-7"
+    sentence: "*Ménon*, ___ : « **la Rondeur** est une figure, mais non pas la figure simplement »."
     answer: "73e"
     alt: []
-  - id: platon-phedon-morale-o1-8
+  - id: "platon-phedon-morale-o1-7c"
+    sentence: "*Ménon*, 73e : « la Rondeur est une figure, ___ »."
+    answer: "mais non pas la figure simplement"
+    alt: []
+  - id: "platon-phedon-morale-o1-8"
     sentence: "La dialectique donne le **vrai savoir de chaque chose dans son essence propre**, __sans__ ___ ni identifications fausses."
     answer: "confusions"
     alt: []
-  - id: platon-phedon-morale-o1-9
+  - id: "platon-phedon-morale-o1-9"
     sentence: "Le *Protagoras* (329c-d) distingue **la Vertu**-« genre », qui est « une », et ses espèces __ou__ « ___ », qui sont plusieurs."
     answer: "parties"
     alt: []
-  - id: platon-phedon-morale-o1-10
+  - id: "platon-phedon-morale-o1-10"
     sentence: "__Dans le *Lachès*, le__ ___ est présenté « comme une des **parties de la vertu** » (198a)."
     answer: "Courage"
     alt: ["courage"]
-  - id: platon-phedon-morale-o1-11
+  - id: "platon-phedon-morale-o1-11"
     sentence: "**Les autres parties de la vertu**, selon le *Lachès*, sont __« la sagesse, la__ ___, et le reste »."
     answer: "justice"
     alt: []
-  - id: platon-phedon-morale-o1-12
+  - id: "platon-phedon-morale-o1-12"
     sentence: "Pour connaître l'Idée d'un objet quelconque ou celle d'une valeur morale, la **démarche dialectique** __est toujours__ ___."
     answer: "la même"
     alt: []
-  - id: platon-phedon-morale-o1-13
+  - id: "platon-phedon-morale-o1-13"
     sentence: "La **dialectique démontre** __« quels genres sont mutuellement__ ___ et quels autres ne se peuvent souffrir » (*Sophiste*, 253b)."
     answer: "consonants"
     alt: []
-  - id: platon-phedon-morale-o1-14
+  - id: "platon-phedon-morale-o1-14"
     sentence: "La morale n'est pas **indépendante du processus de la connaissance** : __chez Platon, la morale__ ___ connaissance."
     answer: "est"
     alt: []
-  - id: platon-phedon-morale-o1-15
+  - id: "platon-phedon-morale-o1-15"
     sentence: "**Si la Sagesse, la Piété, la Vertu sont des objets connaissables**, __elles sont aussi des choses qui__ s'___."
     answer: "enseignent"
     alt: []
-  - id: platon-phedon-morale-o1-16
+  - id: "platon-phedon-morale-o1-16"
     sentence: "L'enseignement de la vertu **n'aboutit que si** celui qui l'offre __est, lui-même, un vrai__ ___."
     answer: "connaisseur"
     alt: []
-- id: platon-phedon-morale-o2
+- id: "platon-phedon-morale-o2"
   title: "L'Idée du Bien, principe de tout"
   notes: |-
     **{green}Au terme de la dialectique ascendante se trouve l'Idée du Bien, cause des Idées et, à travers elles, de tout{/green} : Platon place une valeur morale au principe de l'être et de la vérité.** Des choses sensibles, la pensée tire l'hypothèse des Idées. Chaque Idée, simple « hypothèse » qui ne peut rendre raison d'elle-même, conduit à une autre, « jusqu'au principe de tout, qui n'admet plus d'hypothèse » (*République*, VI, 511b) : le Bien, principe « anhypothétique », qui peut alors *fonder* les hypothèses en les convertissant en vérités (VI, 510d-511c).
@@ -957,59 +997,59 @@ lessons:
   passage:
     label: "Prolongement"
   points:
-  - id: platon-phedon-morale-o2-1
-    sentence: "Au terme du processus ascendant de la dialectique se trouve « **l'Idée du Bien** » __: *République*, VI,__ ___."
+  - id: "platon-phedon-morale-o2-1"
+    sentence: "*La République*, VI, ___ : au terme du processus ascendant de la dialectique se trouve « **l'Idée du Bien** »."
     answer: "508e"
     alt: []
-  - id: platon-phedon-morale-o2-2
+  - id: "platon-phedon-morale-o2-2"
     sentence: "**Chaque Idée**, tirée de l'observation de la multiplicité sensible, __n'est qu'une simple__ « ___ » qui ne peut rendre raison d'elle-même."
     answer: "hypothèse"
     alt: []
-  - id: platon-phedon-morale-o2-3
+  - id: "platon-phedon-morale-o2-3"
     sentence: "Le **dialecticien monte** « __jusqu'au__ ___ de tout, qui n'admet plus d'hypothèse » (*République*, VI, 511b)."
     answer: "principe"
     alt: []
-  - id: platon-phedon-morale-o2-4
+  - id: "platon-phedon-morale-o2-4"
     sentence: "__Le Bien est un principe__ « ___ » : il **n'a pas lui-même besoin d'un fondement** et ne peut être mis en doute."
     answer: "anhypothétique"
     alt: []
-  - id: platon-phedon-morale-o2-5
+  - id: "platon-phedon-morale-o2-5"
     sentence: "Le Bien **fonde les** « hypothèses » __en les convertissant en__ ___ (*République*, VI, 510d-511c)."
     answer: "vérités"
     alt: []
-  - id: platon-phedon-morale-o2-6
+  - id: "platon-phedon-morale-o2-6"
     sentence: "De même que les **choses sensibles** ont pour « cause » les Idées, __les Idées ont elles aussi une « cause » qui les fonde : le__ ___."
     answer: "Bien"
     alt: []
-  - id: platon-phedon-morale-o2-7
+  - id: "platon-phedon-morale-o2-7"
     sentence: "Il faut tenir « pour assuré » que le **Bien** est « __ce qui__ ___ la vérité » aux Idées."
     answer: "communique"
     alt: []
-  - id: platon-phedon-morale-o2-8
+  - id: "platon-phedon-morale-o2-8"
     sentence: "**À travers les Idées**, le Bien __est « la cause__ ___ de tout » (*République*, VII, 517c)."
     answer: "universelle"
     alt: []
-  - id: platon-phedon-morale-o2-9
+  - id: "platon-phedon-morale-o2-9"
     sentence: "La **cause universelle est anhypothétique**, __mais non pas__ ___ : elle est le Bien, l'Idée en soi de la Bonté."
     answer: "anonyme"
     alt: []
-  - id: platon-phedon-morale-o2-10
+  - id: "platon-phedon-morale-o2-10"
     sentence: "Platon a posé comme « cause » de la vérité, et de tout en général, __une__ ___ morale : l'**Idée-Valeur suprême du Bien**."
     answer: "valeur"
     alt: []
-  - id: platon-phedon-morale-o2-11
+  - id: "platon-phedon-morale-o2-11"
     sentence: "Pour Platon, **toutes les Idées** sont __aussi, toutes,__ « ___ »."
     answer: "bonnes"
     alt: []
-  - id: platon-phedon-morale-o2-12
+  - id: "platon-phedon-morale-o2-12"
     sentence: "**Fondées sur le Bien**, les Idées __constituent toutes précisément la__ ___."
     answer: "vérité"
     alt: []
-  - id: platon-phedon-morale-o2-13
+  - id: "platon-phedon-morale-o2-13"
     sentence: "Les choses sensibles « participent » aux Idées **pour exister** ; __les Idées « participent » au__ ___ pour être."
     answer: "Bien"
     alt: []
-- id: platon-phedon-morale-o3
+- id: "platon-phedon-morale-o3"
   title: "Le Bien, la cité et l'Être"
   notes: |-
     **{green}Le Bien donne à l'âme la faculté de connaître ; qui le connaît doit gouverner{/green} ; et le Bien, Idée et non Dieu créateur, doit être rapproché de l'Être en tant qu'être.** Si l'âme peut reconnaître le divin « dans » les choses, ce n'est pas seulement parce qu'elle appartient à la même espèce d'être que les Idées : c'est que le Bien, qui communique la vérité aux Idées, communique aussi « à l'esprit la faculté de connaître » (*République*, VI, 508e). Par elle, l'âme connaît les Idées, les Idées-Valeurs morales et, « avec peine » (VII, 517b), l'Idée du Bien.
@@ -1022,59 +1062,59 @@ lessons:
   passage:
     label: "Prolongement"
   points:
-  - id: platon-phedon-morale-o3-1
+  - id: "platon-phedon-morale-o3-1"
     sentence: "**Le Bien communique** __« à l'esprit la faculté de__ ___ » (*République*, VI, 508e)."
     answer: "connaître"
     alt: []
-  - id: platon-phedon-morale-o3-2
+  - id: "platon-phedon-morale-o3-2"
     sentence: "La **connaissance de l'Idée du Bien** __ne s'atteint qu'« avec__ ___ » (*République*, VII, 517b), mais elle n'est pas impossible."
     answer: "peine"
     alt: []
-  - id: platon-phedon-morale-o3-3
+  - id: "platon-phedon-morale-o3-3"
     sentence: "C'est au **dialecticien**, qui acquiert la connaissance du Bien par la science la plus haute (*République*, VII, 534e), qu'il faudrait attribuer __le pouvoir de__ ___ l'État."
     answer: "gouverner"
     alt: []
-  - id: platon-phedon-morale-o3-4
+  - id: "platon-phedon-morale-o3-4"
     sentence: "Seul celui qui **a « vu » l'Idée du Bien** peut agir avec sagesse dans la vie privée __comme dans la vie__ ___ (*République*, VII, 517c)."
     answer: "publique"
     alt: []
-  - id: platon-phedon-morale-o3-5
+  - id: "platon-phedon-morale-o3-5"
     sentence: "Le **gouvernant philosophe** __garde toujours le Bien lui-même comme__ « ___ » d'action (*République*, VII, 540a-b)."
     answer: "paradigme"
     alt: []
-  - id: platon-phedon-morale-o3-6
+  - id: "platon-phedon-morale-o3-6"
     sentence: "L'**ontologie platonicienne**, en fondant l'éthique, __fonde par là même aussi la__ ___."
     answer: "politique"
     alt: []
-  - id: platon-phedon-morale-o3-7
+  - id: "platon-phedon-morale-o3-7"
     sentence: "L'**homme politique** doit être nécessairement un homme moral, et donc __nécessairement un vrai__ ___."
     answer: "philosophe"
     alt: []
-  - id: platon-phedon-morale-o3-8
+  - id: "platon-phedon-morale-o3-8"
     sentence: "**Le Bien** est une « Idée » __: « tèn tou agathou__ ___ » (*République*, VI, 508e)."
     answer: "idean"
     alt: []
-  - id: platon-phedon-morale-o3-9
+  - id: "platon-phedon-morale-o3-9"
     sentence: "**Le Bien** __n'est pas un Dieu__ ___, qui créerait le monde sans être lui-même une Idée."
     answer: "créateur"
     alt: []
-  - id: platon-phedon-morale-o3-10
+  - id: "platon-phedon-morale-o3-10"
     sentence: "**Le Bien** __ne doit pas être identifié au__ « ___ » du *Timée* (28a), qui n'est qu'un personnage mythique."
     answer: "démiurge"
     alt: []
-  - id: platon-phedon-morale-o3-11
-    sentence: "**Le Bien doit être rapproché** __de l'__Idée-« genre » de l'___, à laquelle tous les autres êtres participent pour être."
+  - id: "platon-phedon-morale-o3-11"
+    sentence: "**Le Bien doit être rapproché** de l'Idée-« genre » __de l'___,__ à laquelle tous les autres êtres participent pour être."
     answer: "Être"
     alt: ["être"]
-  - id: platon-phedon-morale-o3-12
-    sentence: "Le Mouvement « est », « **du fait qu'il participe à l'être** » : __*Sophiste*,__ ___."
+  - id: "platon-phedon-morale-o3-12"
+    sentence: "*Sophiste*, ___ : le Mouvement « est », « **du fait qu'il participe à l'être** »."
     answer: "256a"
     alt: []
-  - id: platon-phedon-morale-o3-13
+  - id: "platon-phedon-morale-o3-13"
     sentence: "**Le sophiste** « se réfugie __dans l'obscurité du__ ___ » (*Sophiste*, 254a)."
     answer: "non-être"
     alt: []
-- id: platon-phedon-morale-o4
+- id: "platon-phedon-morale-o4"
   title: "Le dilemme éthique"
   notes: |-
     **Toute vie se joue dans un choix : {green}se tourner vers l'Être et la connaissance{/green}, ou {red}rester prisonnier du corps et du non-être{/red} ; ce dilemme est d'abord éthique.** Diriger l'âme vers « l'éclat dont resplendit cette région » de l'Être, ou la garder prisonnière du corps et « dans l'obscurité du non-être » : la réponse de chacun est la marque de sa possibilité de devenir *moral*. Le {sky}*Gorgias*{/sky} le dit vers sa fin : « il s'agit de savoir quel genre de vie nous devons adopter » (500c).
@@ -1091,47 +1131,47 @@ lessons:
   passage:
     label: "Prolongement"
   points:
-  - id: platon-phedon-morale-o4-1
+  - id: "platon-phedon-morale-o4-1"
     sentence: "La question fondamentale est de diriger l'âme __vers « __l'___ dont resplendit cette région » de l'Être, ou de la **garder prisonnière du corps**."
     answer: "éclat"
     alt: []
-  - id: platon-phedon-morale-o4-2
+  - id: "platon-phedon-morale-o4-2"
     sentence: "Vers la fin du *Gorgias*, il est affirmé qu'« **il s'agit de savoir** __quel__ ___ de vie nous devons adopter » (500c)."
     answer: "genre"
     alt: []
-  - id: platon-phedon-morale-o4-3
+  - id: "platon-phedon-morale-o4-3"
     sentence: "**Ce qui s'impose à tout individu** dans sa vie, en dernière analyse, est la __nécessité de faire un__ ___."
     answer: "choix"
     alt: []
-  - id: platon-phedon-morale-o4-4
+  - id: "platon-phedon-morale-o4-4"
     sentence: "**Gorgias** veut « paraître [...] savant [...], et [...] __semble__ ___ homme sans l'être » (*Gorgias*, 459d-e)."
     answer: "honnête"
     alt: []
-  - id: platon-phedon-morale-o4-5
+  - id: "platon-phedon-morale-o4-5"
     sentence: "**Socrate considère** que « chacun doit s'appliquer par-dessus tout __à être bon plutôt qu'à le__ ___ » (*Gorgias*, 527b)."
     answer: "paraître"
     alt: []
-  - id: platon-phedon-morale-o4-6
+  - id: "platon-phedon-morale-o4-6"
     sentence: "**Le sophiste** choisit de __« paraître et sembler sans__ ___ » (*Sophiste*, 236e)."
     answer: "être"
     alt: []
-  - id: platon-phedon-morale-o4-7
+  - id: "platon-phedon-morale-o4-7"
     sentence: "**Le dilemme entre être et paraître**, savoir et ignorer, __est de lui-même, tout d'abord, un dilemme__ ___."
     answer: "éthique"
     alt: []
-  - id: platon-phedon-morale-o4-8
+  - id: "platon-phedon-morale-o4-8"
     sentence: "__Platon a assurément choisi le côté de la__ ___, et il **nous propose de faire de même**."
     answer: "philosophie"
     alt: []
-  - id: platon-phedon-morale-o4-9
+  - id: "platon-phedon-morale-o4-9"
     sentence: "**Choisir la connaissance véritable** donne accès à la vérité, donc __à une parole sage et à une vie__ ___."
     answer: "morale"
     alt: []
-  - id: platon-phedon-morale-o4-10
+  - id: "platon-phedon-morale-o4-10"
     sentence: "De même que le philosophe désire le Vrai, **l'homme moral** est celui qui, __par ses__ ___, a affaire au Vrai."
     answer: "actions"
     alt: []
-  - id: platon-phedon-morale-o4-11
+  - id: "platon-phedon-morale-o4-11"
     sentence: "Connues en leur essence propre, les **Valeurs morales** __peuvent servir, aussi, de__ ___ à l'action morale."
     answer: "paradigme"
     alt: []

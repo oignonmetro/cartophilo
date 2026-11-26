@@ -164,6 +164,16 @@ def recentre(p, passage, segs, edits):
     return hi, q
 
 
+def insert_after(pts, after):
+    """Insère des cartes juste après celles qu'elles prolongent (ordre du commentaire)."""
+    for anchor, cards in (after or {}).items():
+        k = next((i for i, p in enumerate(pts) if p["id"] == anchor), None)
+        if k is None:
+            sys.exit(f"after : carte introuvable {anchor}")
+        pts[k + 1:k + 1] = cards
+    return pts
+
+
 def dump(obj, ind=0):
     sp = " " * ind
     lines = []
@@ -232,7 +242,7 @@ def main():
             edits = item.get("edit", {})
             pts = [{**p, **edits.get(p["id"], {})} for p in l.get("points", []) if p["id"] not in drop]
             pts += item.get("add", [])
-            l["points"] = pts
+            l["points"] = insert_after(pts, item.get("after"))
             used |= {p["id"] for p in old[item["keep"]].get("points", [])}
             lessons.append(l)
             continue
@@ -297,7 +307,7 @@ def main():
                 l["tables"] = s["tables"]
             cit = [p for p in b if is_citation(p)]
             oth = [p for p in b if not is_citation(p)]
-            l["points"] = cit + oth + s.get("add", [])
+            l["points"] = insert_after(cit + oth + s.get("add", []), s.get("after"))
             lessons.append(l)
 
     for sid, (n, got) in usedp.items():
