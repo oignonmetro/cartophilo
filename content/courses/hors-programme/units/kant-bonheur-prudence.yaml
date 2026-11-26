@@ -1,436 +1,686 @@
 # Unité de texte (voir content/textes.md) : Kant, Fondements de la
 # métaphysique des mœurs, Deuxième section (« Passage de la philosophie
 # morale populaire à la Métaphysique des mœurs »), AK IV, 418-419, trad.
-# V. Delbos, Delagrave, 1999, p. 131-132. Cartes-explication tirées d'un
-# commentaire anonyme du même extrait (scan agrégation).
+# V. Delbos, Delagrave, 1999, p. 131-132. Commentaire : un commentaire
+# anonyme du même extrait (scan agrégation, p. 242-258), qui lit le texte
+# comme un syllogisme en trois moments.
+# Refondue le 2026-11-26 (niveau normale) : une leçon par phrase ou segment
+# (p1, p1b, p2, p2b…), trois leçons d'introduction, deux de prolongement ;
+# les cartes-citation gardent leurs identifiants, recentrées sur leur
+# segment ; les cartes-explication sont nouvelles (-x…), sauf celles des
+# introductions et de l'ouverture, reprises.
 
 id: kant-bonheur-prudence
-title: "Le bonheur ne peut pas commander"
-subtitle: "Fondements de la métaphysique des mœurs, AK IV, 418-419"
+title: "Le bonheur ne peut pas commander (1785)"
+subtitle: "Fondements de la métaphysique des mœurs, II, AK IV, 418-419"
 icon: page
 color: yellow
 group: "Kant : la morale"
+depth: normale
 intro: |-
-  Un extrait des *Fondements de la métaphysique des mœurs* où Kant réfute l'eudémonisme,
-  la doctrine qui place le bonheur au fondement de la moralité : non pas parce que
-  personne ne désirerait être heureux, mais parce qu'aucun être fini ne peut savoir, en
-  termes précis et cohérents, ce qui le rendrait véritablement heureux. Kant construit sa
-  démonstration comme un syllogisme, en trois moments.
+  Un extrait des *Fondements de la métaphysique des mœurs* où Kant montre que le bonheur ne peut fournir aucune règle qui commande l'action : non que personne ne le désire, mais parce qu'aucun être fini ne peut savoir, en termes précis et cohérents, ce qui le rendrait véritablement heureux. Les impératifs de la prudence ne sont donc que des conseils, et le bonheur un idéal de l'imagination.
 lessons:
 - id: kant-bonheur-prudence-i1
-  title: "La conscience morale et le problème du bonheur"
+  title: "Le texte, sa place et son plan"
   notes: |-
-    Kant part d'un fait : la {violet}**conscience morale commune**{/violet} {green}a, dans tous les cas, la pleine{/green}
-    {green}compétence pour distinguer ce qui est bien de ce qui est mal{/green}, sans avoir besoin ni de
-    science ni de philosophie. Sa tâche n'est donc pas d'inventer une nouvelle morale, mais
-    de rendre la raison attentive à son propre principe, contre les {red}mauvaises{/red}
-    {red}interprétations{/red} qu'on a pu faire de cette conscience commune.
+    **Le texte est tiré de la deuxième section des** {sky}*Fondements de la métaphysique des mœurs*{/sky} **(1785), intitulée** {teal}« Passage de la philosophie morale populaire à la Métaphysique des mœurs »{/teal}. Il est cité dans la traduction de Victor Delbos. Kant y cherche la formule du principe suprême de la moralité, l'{violet}impératif catégorique{/violet}. Il ne prétend pas inventer une morale nouvelle : il veut {amber}rendre la raison attentive à son propre principe{/amber}, que la {violet}conscience morale commune{/violet} applique déjà sans savoir le formuler.
 
-    La plus répandue de ces mauvaises interprétations est l'{violet}eudémonisme{/violet}, qui met le
-    bonheur au principe de la moralité. Elle s'appuie sur un fait tout aussi commun : Kant
-    lui-même reconnaît que, face aux commandements du devoir, l'homme sent en lui-même
-    un puissant contrepoids qui réside dans ses besoins et ses inclinations, dont il résume
-    sous le nom de bonheur la perspective d'une complète satisfaction. Le penchant naturel
-    qu'a la raison de corrompre les lois strictes du devoir en voulant les adapter à ces
-    inclinations, Kant l'appelle la {teal}« {/teal}dialectique {teal}naturelle »{/teal} de la raison.
+    **Pourquoi, dans cette recherche, un texte sur le bonheur ?** Parce que la conscience commune se heurte à une opinion aussi commune qu'elle : nos actions vertueuses devraient être intéressées, au plus haut point, par la poursuite du bonheur. Kant ne nie pas la force de cette pente : l'homme sent en lui, face aux commandements du devoir, {teal}« un puissant contrepoids qui réside dans ses besoins et dans ses inclinations »{/teal} {sky}(AK IV, 405){/sky}, dont il résume la satisfaction complète sous le nom de bonheur. La raison a même un penchant à plier les lois strictes du devoir à ces inclinations : c'est la {violet}« dialectique naturelle »{/violet} de la raison. Sa forme savante est l'{red}eudémonisme{/red} (du grec `eudaimonia`, bonheur), qui place le bonheur au fondement de la moralité. **Le texte le prive de ce fondement :** {coral}le bonheur ne doit pas commander nos actions, et surtout il ne le peut pas{/coral}.
 
-    Notre extrait est exactement cette réfutation, dans la Deuxième section des
-    {sky}*Fondements*{/sky} : {green}Kant n'y démontre pas seulement que le bonheur ne doit pas être placé{/green}
-    {green}au principe de nos actions, mais qu'il ne peut littéralement pas l'être{/green}, {coral}tant sa{/coral}
-    {coral}recherche entre en contradiction avec elle-même{/coral}.
+    **Le plan.** {amber}Les deux premières phrases posent la thèse et sa raison{/amber} ; {amber}la phrase ouverte par « Or » l'étend à tout être fini{/amber}, l'illustre de quatre exemples et la fonde sur le défaut d'omniscience ; {amber}la conclusion ouverte par « Il suit de là »{/amber} en tire le statut des impératifs de la prudence. Le texte a la forme d'un {violet}syllogisme{/violet} : une majeure, une mineure, une conclusion.
 
-    ! Kant ne nie à aucun moment que nous désirions tous être heureux : c'est un fait. Ce
-    qu'il conteste, c'est que ce désir puisse fonder ou commander nos actions.
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | poser l'indétermination du concept de bonheur, puis en donner la raison | Premier moment | Personne ne peut dire ce qu'il veut en voulant être heureux, parce que les éléments du bonheur sont empiriques alors que son idée exige un tout absolu. |
+    | étendre l'impossibilité à tout être fini par quatre exemples, puis la fonder sur le défaut d'omniscience | Deuxième moment | Même l'être fini le plus perspicace et le plus puissant ne peut savoir ce qui le rendrait heureux, car il faudrait tout savoir ; on n'agit donc que d'après des conseils empiriques. |
+    | tirer le statut des impératifs de la prudence, puis nommer la cause de l'erreur | Troisième moment | Ces impératifs conseillent sans commander, parce que le bonheur est un idéal de l'imagination fondé sur l'expérience, non un principe de la raison. |
+
+    ! Kant ne nie à aucun moment que nous désirions tous être heureux : c'est un {green}fait{/green}. Il conteste que ce désir puisse {red}fonder ou commander{/red} nos actions.
   passage:
     label: "Introduction"
   points:
-  - id: kant-bonheur-prudence-i1-1
-    sentence: "Selon le commentaire, l'itinéraire des *Fondements de la métaphysique des mœurs* consiste, pour Kant, __à formuler logiquement ce que chaque personne entend et que l'on pourrait appeler la__ ___ **morale commune**."
-    answer: "conscience"
-    alt: []
-  - id: kant-bonheur-prudence-i1-2
-    sentence: "Selon le commentaire, Kant ne cherche pas à inventer une nouvelle morale, mais à rendre la raison **attentive à son propre principe**, __en réfutant les mauvaises interprétations de la conscience morale commune, dont celle de__ l'___."
-    answer: "eudémonisme"
-    alt: []
-  - id: kant-bonheur-prudence-i1-3
-    sentence: "Selon le commentaire, __le penchant naturel qu'a la raison de corrompre les lois strictes du devoir en voulant les adapter à nos inclinations s'appelle la__ \"___ **naturelle**\" de la raison."
-    answer: "dialectique"
-    alt: []
-  - id: kant-bonheur-prudence-i1-4
-    sentence: "Kant reconnaît que la **conviction morale commune** se heurte à une opinion tout aussi commune, __selon laquelle nos actions vertueuses devraient être intéressées par la poursuite du__ ___."
-    answer: "bonheur"
-    alt: []
-  - id: kant-bonheur-prudence-i1-5
-    sentence: "Selon Kant, l'homme sent en lui-même, vis-à-vis des **commandements du devoir**, __un puissant contrepoids qui réside dans ses besoins et ses__ ___."
-    answer: "inclinations"
-    alt: []
   - id: kant-bonheur-prudence-i1-6
-    sentence: "Notre extrait est tiré de la **Deuxième section** des *Fondements de la métaphysique des mœurs*, __intitulée : \"Passage de la philosophie morale populaire à la__ ___ des mœurs\"."
+    sentence: "Le texte est tiré de la **deuxième section** des *Fondements de la métaphysique des mœurs*, __« Passage de la philosophie morale populaire à la ___ des mœurs »__."
     answer: "Métaphysique"
     alt: []
+  - id: kant-bonheur-prudence-i1-5
+    sentence: "Face aux **commandements du devoir**, l'homme sent en lui __« un puissant contrepoids qui réside dans ses besoins et dans ses ___ »__ (AK IV, 405)."
+    answer: "inclinations"
+    alt: []
+  - id: kant-bonheur-prudence-i1-3
+    sentence: "Le penchant de la raison à plier les lois strictes du devoir à nos inclinations s'appelle __la « ___ naturelle » de la raison.__"
+    answer: "dialectique"
+    alt: []
+  - id: kant-bonheur-prudence-i1-2
+    sentence: "La doctrine qui place **le bonheur** au fondement de la moralité, et que le texte réfute, __s'appelle l'___.__"
+    answer: "eudémonisme"
+    alt: []
+  - id: kant-bonheur-prudence-i1-x1
+    sentence: "L'argument du texte a la forme d'un **syllogisme** : la majeure, puis __la mineure ouverte par « ___ »,__ puis la conclusion ouverte par « Il suit de là »."
+    answer: "Or"
+    alt: []
 - id: kant-bonheur-prudence-i2
-  title: "L'impératif, hypothétique et catégorique"
+  title: "Les trois sortes d'impératifs"
   notes: |-
-    Kant définit l'impératif ainsi : {teal}« {/teal}La représentation d'un principe objectif, en tant
-    qu'il est contraignant pour une volonté, se nomme un commandement (de la raison), et
-    la formule du commandement se nomme {teal}un impératif. »{/teal} {sky}(AK IV, 412-413.){/sky}
+    **Le texte suppose la théorie de l'impératif que Kant vient d'exposer : il porte sur l'une de ses espèces, {violet}l'impératif de la prudence{/violet}.**
 
-    Pour une volonté purement raisonnable, par exemple divine et omnisciente, {green}la raison{/green}
-    {green}détermine infailliblement la volonté : un tel être n'a pas besoin d'impératif{/green}, il agit
-    de lui-même conformément à la raison. Mais pour un être raisonnable et pourtant fini,
-    comme l'homme, la volonté reste aussi soumise à des mobiles subjectifs venus de la
-    sensibilité, qui ne s'accordent pas toujours avec ce que la raison reconnaît comme
-    nécessaire : {coral}c'est pourquoi il lui faut un impératif, une contrainte représentée comme{/coral}
-    {coral}telle{/coral}.
+    **Pourquoi faut-il des impératifs ?** Kant définit l'impératif ainsi : {teal}« {/teal}La représentation d'un principe objectif, en tant qu'il est {teal}contraignant pour une volonté{/teal}, se nomme un commandement (de la raison), et la formule du commandement se nomme {teal}un impératif. »{/teal} {sky}(AK IV, 412-413.){/sky} Chez un être {yellow}purement raisonnable, une volonté divine par exemple{/yellow}, {green}la raison détermine infailliblement la volonté{/green} : il fait de lui-même ce qui est bon, et n'a besoin d'aucun impératif. Chez un être raisonnable mais fini, comme l'homme, la volonté est soumise aussi à des {red}mobiles venus de la sensibilité{/red}, qui ne s'accordent pas toujours avec la raison : {coral}ce qui est bon se présente alors à lui comme une contrainte{/coral}, un « tu dois ».
 
-    Kant distingue alors {amber}plusieurs impératifs hypothétiques{/amber} (qui commandent un moyen en
-    vue d'une fin), tous étrangers à l'impératif catégorique (moral, inconditionné). Les
-    {violet}règles de l'habileté{/violet} visent une fin arbitraire, que chacun peut ne pas se donner :
-    {yellow}vouloir devenir sportif de haut niveau ne vaut que pour qui se donne cette fin{/yellow}. Les
-    {violet}conseils de la prudence{/violet}, eux, visent le bonheur, fin que tout être raisonnable et fini
-    possède nécessairement. Notre extrait porte tout entier sur cette seconde espèce.
+    **Les trois espèces.** Un impératif est {violet}hypothétique{/violet} quand il commande un moyen en vue d'une fin (« si tu veux telle chose, fais ceci »), {violet}catégorique{/violet} quand il commande une action pour elle-même, sans condition. Kant distingue deux impératifs hypothétiques selon que la fin est seulement possible ou réelle chez tous.
 
-    |            | Habileté                 | Prudence           | Catégorique         |
-    | Fin        | arbitraire (ex. sportif) | le bonheur          | le devoir lui-même  |
-    | Universel ?| non                      | non (notre texte)   | oui                 |
+    | Impératif | Fin visée | Ce qu'il donne |
+    | de l'habileté | une fin seulement possible, que chacun peut ne pas se proposer : {yellow}guérir un malade, ou l'empoisonner{/yellow} | des règles ; hypothétique problématique |
+    | de la prudence | le bonheur, fin réelle chez tous les êtres raisonnables finis | des conseils ; hypothétique assertorique |
+    | de la moralité | aucune fin préalable : l'action est bonne en elle-même | des commandements (lois) ; catégorique, apodictique |
 
-    ! Ne pas confondre l'impératif de la prudence, hypothétique, avec l'impératif
-    catégorique, moral : notre texte démontre justement que le premier ne peut jamais
-    s'ériger en second.
+    **Pourquoi ce tableau prépare-t-il le texte ?** Parce que {amber}« qui veut la fin veut aussi les moyens »{/amber} est, dit Kant, une proposition {violet}analytique{/violet} : vouloir la fin, c'est déjà vouloir ce qui y mène. L'impératif de l'habileté commande donc sans difficulté, dès qu'on connaît les moyens. {coral}Celui de la prudence le pourrait aussi, si l'on savait ce qu'est le bonheur{/coral}, puisque sa fin est voulue par tous. Le texte montre justement qu'on ne le sait pas.
+
+    ! La prudence n'est pas la moralité : son impératif reste {red}hypothétique{/red}, même si sa fin est universelle. Le texte établit qu'il ne peut jamais s'ériger en {green}loi{/green}.
   passage:
     label: "Introduction"
   points:
   - id: kant-bonheur-prudence-i2-1
-    sentence: "**Kant définit l'impératif** ainsi : __la formule d'un commandement de la raison, contraignant pour une volonté, est ce qu'on appelle un__ ___."
-    answer: "impératif"
+    sentence: "**Kant définit l'impératif** comme __la formule d'un commandement de la raison, principe objectif ___ pour une volonté.__"
+    answer: "contraignant"
     alt: []
   - id: kant-bonheur-prudence-i2-2
-    sentence: "Pour un être **purement raisonnable**, comme une volonté divine omnisciente, __la raison détermine__ ___ la volonté."
+    sentence: "Pour un être **purement raisonnable**, comme une volonté divine, __la raison détermine ___ la volonté,__ sans impératif."
     answer: "infailliblement"
     alt: []
   - id: kant-bonheur-prudence-i2-3
-    sentence: "Pour un être **raisonnable et pourtant fini**, comme l'homme, __la volonté reste soumise non seulement à la raison, mais aussi à des mobiles subjectifs venus de la__ ___."
+    sentence: "Chez un être **raisonnable mais fini**, la volonté est soumise aussi __à des mobiles venus de la ___,__ d'où la contrainte de l'impératif."
     answer: "sensibilité"
     alt: []
   - id: kant-bonheur-prudence-i2-4
-    sentence: "Les impératifs qui recommandent des moyens __pour une **fin arbitraire**, comme devenir sportif de haut niveau, s'appellent des règles de__ l'___."
+    sentence: "L'impératif qui prescrit les moyens d'une **fin seulement possible**, comme guérir un malade, __est un impératif de l'___.__"
     answer: "habileté"
     alt: []
   - id: kant-bonheur-prudence-i2-5
-    sentence: "Les impératifs qui recommandent des moyens pour atteindre **le bonheur**, fin que tout être raisonnable et fini possède nécessairement, __s'appellent des conseils de la__ ___."
+    sentence: "L'impératif qui prescrit les moyens du **bonheur**, fin réelle chez tous les êtres finis, __est un impératif de la ___.__"
     answer: "prudence"
     alt: []
-- id: kant-bonheur-prudence-p1
-  title: "Le concept indéterminé du bonheur"
+  - id: kant-bonheur-prudence-i2-x1
+    sentence: "Parce que sa fin est réelle chez tous, l'impératif de la prudence est dit par Kant __hypothétique ___,__ celui de l'habileté hypothétique problématique."
+    answer: "assertorique"
+    alt: []
+  - id: kant-bonheur-prudence-i2-x2
+    sentence: "« **Qui veut la fin veut aussi les moyens** » est, selon Kant, __une proposition ___.__"
+    answer: "analytique"
+    alt: []
+- id: kant-bonheur-prudence-i3
+  title: "La question, la thèse, la problématique"
   notes: |-
-    Ce premier moment énonce la {violet}**majeure**{/violet} du syllogisme construit par Kant : {green}le concept{/green}
-    {green}de bonheur est si indéterminé que personne ne peut dire, en termes précis et{/green}
-    {green}cohérents, ce qu'il désire et veut véritablement pour l'atteindre{/green}.
+    **Le texte se demande si {amber}le bonheur peut donner à la volonté une règle qui commande{/amber}.** Autrement dit : la fin que tous poursuivent peut-elle fonder un impératif, et par là, comme le veut l'eudémonisme, la moralité ?
 
-    Dès la première phrase, Kant noue la contradiction entre le désir d'être heureux et
-    l'impossibilité de savoir en quoi ce désir consiste. La seconde phrase, introduite par
-    {teal}« {/teal}La raison {teal}en est que »{/teal}, l'explique : {coral}tous les éléments du concept de bonheur sont{/coral}
-    {coral}empiriques, tirés de l'expérience, alors que l'*idée* de bonheur exige un tout absolu{/coral},
-    un maximum de bien-être dans le présent et dans tout l'avenir. Or un absolu ne peut,
-    par définition, se trouver parmi les phénomènes de l'expérience. D'un côté la
-    multiplicité non ordonnée des faits empiriques, de l'autre une totalité absolue : le
-    concept glisse vers l'idée, et il devient nécessaire que l'idée de bonheur et sa
-    réalisation ne se rencontrent jamais.
+    **Pourquoi est-ce une question ?** Parce que tout semble l'y destiner. Le bonheur est voulu par tous, et nécessairement : {teal}« Être heureux est{/teal} nécessairement {teal}ce à quoi aspire tout être raisonnable, mais fini »{/teal}, écrit Kant dans la {sky}*Critique de la raison pratique*{/sky}. Et qui veut la fin veut les moyens. Il suffirait donc, semble-t-il, de connaître les moyens du bonheur pour tenir {yellow}une règle valable pour tous, comme la règle du médecin vaut pour quiconque veut guérir{/yellow}. C'est la réponse ordinaire, celle des morales antiques et de l'eudémonisme : {red}la raison calcule les moyens du bonheur, et la vertu est ce calcul bien fait{/red}.
 
-    Kant choisit ici le mot *concept*, et non *idée* : le concept est nécessairement
-    concept de l'entendement, tandis que l'idée, depuis la {sky}*Critique de la raison pure*{/sky},
-    a pour caractéristique d'être totale, totalisante.
+    **Sa thèse :** {coral}le concept du bonheur est si indéterminé que personne ne peut dire ce qu'il veut en le voulant{/coral} ; il n'y a donc pas d'impératif qui commande de faire ce qui rend heureux, seulement des {amber}conseils{/amber}, parce que {green}le bonheur est un idéal, non de la raison, mais de l'imagination{/green}.
 
-    ! Ce premier moment n'établit encore qu'{red}une impossibilité de fait, non de droit{/red} :
-    Kant l'élèvera en impossibilité {blue}*a priori*{/blue} dans le deuxième moment, qui suit.
+    **Sa problématique :** comment une fin {amber}voulue par tous et nécessairement{/amber} peut-elle ne rien commander, alors que vouloir une fin, c'est vouloir ses moyens ? La difficulté est que la thèse doit tenir ensemble deux affirmations : le désir de bonheur est universel, et il ne fournit aucune règle universelle. Si le désir était incertain, il n'y aurait pas de problème ; si son objet était connu, il y aurait un impératif. {coral}Tout repose donc sur l'écart entre la certitude du désir et l'indétermination de son objet.{/coral}
+
+    | Difficulté | Où elle se trouve | Réponse du texte |
+    | tous veulent le bonheur, et personne ne sait ce qu'il veut | « malgré le désir qu'a tout homme » | le désir vise une idée, un tout absolu, que des éléments empiriques ne remplissent jamais |
+    | on pourrait n'y voir qu'une ignorance qu'un savoir plus grand corrigerait | « si perspicace et en même temps si puissant » | il faudrait l'omniscience, que nul être fini n'a : l'impossibilité est de droit |
+    | l'expérience donne pourtant des recettes du bien-être | « conseils empiriques » | elles valent en général, jamais avec certitude : elles conseillent, sans commander |
+
+    ! Le texte ne demande pas s'il faut {red}renoncer au bonheur{/red}, mais si le bonheur peut {green}commander{/green}. Kant le réintroduira plus tard, à une autre place (voir le prolongement).
+  passage:
+    label: "Introduction"
+  tables:
+  - table: difficulte-ou-elle-se-trouve-reponse-du-texte
+    exercises:
+    - {kind: bank, column: Réponse du texte}
+    - {kind: cell, column: Où elle se trouve}
+  points:
+  - id: kant-bonheur-prudence-i3-1
+    sentence: "*Critique de la raison pratique* : « Être heureux est nécessairement __ce à quoi aspire ___ »__."
+    answer: "tout être raisonnable, mais fini"
+    alt: []
+  - id: kant-bonheur-prudence-i3-x1
+    sentence: "Thèse : il n'y a pas d'impératif qui commande de faire ce qui rend heureux, __seulement des ___.__"
+    answer: "conseils"
+    alt: []
+  - id: kant-bonheur-prudence-i3-x2
+    sentence: "Problématique : comment une fin voulue **par tous et nécessairement** __peut-elle ne rien ___ ?__"
+    answer: "commander"
+    alt: []
+  - id: kant-bonheur-prudence-i3-x3
+    sentence: "Tout le texte repose sur l'écart entre __la certitude du ___ de bonheur__ et l'indétermination de son objet."
+    answer: "désir"
+    alt: []
+- id: kant-bonheur-prudence-p1
+  title: "Un concept si indéterminé"
+  notes: |-
+    **La première phrase pose la thèse du texte :** {violet}**le concept du bonheur**{/violet} **est** {coral}**si indéterminé**{/coral} **que personne ne peut dire ce qu'il veut en voulant être heureux.**
+
+    ? **Bonheur** : chez Kant, la satisfaction de {amber}toutes nos inclinations{/amber}, aussi grande, aussi durable et aussi étendue que possible ({sky}*Critique de la raison pure*, Canon de la raison pure{/sky}). {yellow}Être à la fois riche, estimé, aimé, en bonne santé, et le rester toujours{/yellow}.
+
+    **Pourquoi « concept » ?** Avoir le concept d'une chose, c'est pouvoir dire ce qui tombe sous lui et ce qui n'y tombe pas : {yellow}je sais reconnaître un triangle parmi les figures{/yellow}. Un concept {red}« indéterminé »{/red} est presque une contradiction : il nomme sans délimiter. {coral}Je dis « bonheur », mais je ne sais pas reconnaître, parmi les vies possibles, celle qui me rendrait heureux.{/coral}
+
+    **Pourquoi « malgré le désir qu'a tout homme d'arriver à être heureux » ?** C'est une concession, et elle fait le problème. Kant accorde {green}le fait{/green} : tout homme désire le bonheur. Si personne ne le désirait, son indétermination serait sans conséquence. {amber}Le désir est certain, son objet ne l'est pas{/amber} : on veut quelque chose sans pouvoir dire quoi.
+
+    **Pourquoi « dire en termes précis et cohérents » ?** Deux exigences distinctes. {amber}Précis{/amber} : savoir quel contenu on vise. {amber}Cohérents{/amber} : que ces contenus s'accordent entre eux, {yellow}alors que la richesse trouble la tranquillité, et que le savoir aiguise la crainte{/yellow}. Et « dire » est l'œuvre de la raison, qui procède par concepts : {coral}on sent le bien-être, on ne peut pas en énoncer la règle.{/coral}
+
+    **Pourquoi « il désire et il veut » ?** Désirer relève des {violet}inclinations{/violet}, vouloir de la {violet}volonté{/violet}, qui se fixe une fin et par là ses moyens. On peut désirer vaguement ; on ne peut pas vouloir vaguement, puisque vouloir une fin, c'est vouloir ce qui y mène. {coral}C'est pourquoi l'indétermination de l'objet paralyse la volonté elle-même.{/coral}
+
+    **Ce que la phrase prépare.** Si le concept du bonheur était déterminé, les impératifs de la prudence seraient {amber}analytiques{/amber} comme ceux de l'habileté, et commanderaient. Toute la suite explique pourquoi il ne l'est pas, et ce qui s'ensuit.
+
+    ! Kant ne dit pas que le bonheur {red}n'existe pas{/red} ou qu'on ne le {red}sent{/red} pas : ce qu'on ne peut pas, c'est {green}le dire{/green}, donc en tirer une règle.
   passage:
     label: "Premier moment"
-    text: "Le concept du bonheur est un concept si indéterminé, que, malgré le désir qu'a tout homme d'arriver à être heureux, personne ne peut jamais dire en termes précis et cohérents ce que véritablement il désire et il veut. La raison en est que tous les éléments qui font partie du concept du bonheur sont dans leur ensemble empiriques, c'est-à-dire qu'ils doivent être empruntés à l'expérience, et que cependant pour l'idée du bonheur un tout absolu, un maximum de bien-être (Wohl) dans mon état présent et dans toute ma condition future, est nécessaire."
+    part: "1. La majeure : un concept indéterminé"
+    text: "Le concept du bonheur est un concept si indéterminé, que, malgré le désir qu'a tout homme d'arriver à être heureux, personne ne peut jamais dire en termes précis et cohérents ce que véritablement il désire et il veut."
   points:
   - id: kant-bonheur-prudence-p1-1
-    fragment: "1/2"
-    sentence: "« __Le concept du bonheur est__ ___, que, **malgré le désir qu'a tout homme d'arriver à être heureux**, personne ne peut jamais dire en termes précis et cohérents ce que véritablement il désire et il veut. »"
+    sentence: "« Le concept du bonheur est ___, que, malgré le désir qu'a tout homme d'arriver à être heureux, personne ne peut jamais dire en termes précis et cohérents ce que véritablement il désire et il veut. »"
     answer: "un concept si indéterminé"
     alt: []
   - id: kant-bonheur-prudence-p1-2
-    fragment: "1/2"
-    sentence: "« **Le concept du bonheur** est un concept si __indéterminé, que,__ ___, personne ne peut jamais dire en termes précis et cohérents ce que véritablement il désire et il veut. »"
+    sentence: "« Le concept du bonheur est un concept si indéterminé, que, ___, personne ne peut jamais dire en termes précis et cohérents ce que véritablement il désire et il veut. »"
     answer: "malgré le désir qu'a tout homme d'arriver à être heureux"
     alt: []
   - id: kant-bonheur-prudence-p1-3
-    fragment: "1/2"
-    sentence: "« Le concept du bonheur est un **concept si indéterminé**, que, __malgré le désir qu'a tout homme d'arriver à être heureux,__ ___. »"
+    sentence: "« Le concept du bonheur est un concept si indéterminé, que, malgré le désir qu'a tout homme d'arriver à être heureux, ___. »"
     answer: "personne ne peut jamais dire en termes précis et cohérents ce que véritablement il désire et il veut"
     alt: []
+  - id: kant-bonheur-prudence-p1-x1
+    sentence: "Chez Kant, le **bonheur** est __la satisfaction de toutes nos ___.__"
+    answer: "inclinations"
+    alt: []
+  - id: kant-bonheur-prudence-p1-x2
+    sentence: "Par sa concession, Kant accorde que le désir d'être heureux est certain : __c'est son ___ qui ne l'est pas.__"
+    answer: "objet"
+    alt: []
+  - id: kant-bonheur-prudence-p1-x3
+    sentence: "Si le concept du bonheur était déterminé, les impératifs de la prudence __seraient ___ comme ceux de l'habileté,__ et commanderaient."
+    answer: "analytiques"
+    alt: []
+- id: kant-bonheur-prudence-p1b
+  title: "Des éléments empiriques pour un tout absolu"
+  notes: |-
+    **La deuxième phrase donne la raison de l'indétermination : un écart entre** {coral}**des éléments empiriques**{/coral} **et** {coral}**une idée qui exige un tout absolu**{/coral}.
+
+    ? **Empirique** et {blue}*a priori*{/blue} : est {violet}empirique{/violet} ce qui est tiré de l'expérience, donc particulier et contingent (cela vaut pour ce cas, et aurait pu être autrement) ; est {violet}*a priori*{/violet} ce qui ne dépend pas de l'expérience, et vaut de façon nécessaire et universelle. {yellow}« Ce café me plaît » est empirique ; « 7 + 5 = 12 » est *a priori*.{/yellow}
+
+    **Pourquoi les éléments du bonheur sont-ils tous empiriques ?** Parce que ce qui nous plaît ne se sait qu'en l'éprouvant : {yellow}personne ne sait d'avance s'il aimera la vie de marin ou celle de notaire{/yellow}. Ces éléments varient donc d'un homme à l'autre, et chez le même homme d'un âge à l'autre. {red}Aucun ne se laisse déduire{/red} : ils doivent être {teal}« empruntés à l'expérience »{/teal}.
+
+    ? **Idée** : chez Kant, depuis la {sky}*Critique de la raison pure*{/sky}, un concept de la raison qui pense {amber}une totalité inconditionnée{/amber}, à laquelle aucun objet de l'expérience ne correspond (l'âme, le monde comme tout, Dieu).
+
+    **Pourquoi « un tout absolu, un maximum » ?** Ce qu'on veut sous le nom de bonheur n'est pas tel plaisir, mais {amber}tout le bien-être possible{/amber}, et sans fin : {teal}« dans mon état présent et dans toute ma condition future »{/teal}. Un bonheur qui laisserait une inquiétude, ou qui devrait cesser, ne serait pas le bonheur. Le bonheur est donc pensé comme une idée, une totalité.
+
+    **Pourquoi « et que cependant » ?** Parce que les deux exigences se contredisent. {coral}Des éléments empiriques ne composent jamais un tout absolu{/coral} : l'expérience donne toujours une série finie de cas, et l'on a beau ajouter des plaisirs, on n'obtient jamais un maximum. {coral}L'idée du bonheur et sa réalisation ne peuvent donc pas se rencontrer.{/coral} Le concept est indéterminé parce qu'il tient de deux sources : sa matière vient de l'expérience, sa forme de totalité vient de la raison.
+
+    **Pourquoi « bien-être (Wohl) » ?** Kant précise l'allemand pour fixer ce dont il parle : le bien-être, l'état agréable du sujet, qu'il distingue ailleurs soigneusement {red}du bien{/red} (*das Gute*), objet de la morale ({sky}*Critique de la raison pratique*, Analytique, chap. II{/sky}). Le bonheur est un maximum de {amber}bien-être{/amber}, {red}non de bien{/red}.
+
+    ! L'écart ne vient pas d'un {red}manque de données{/red} : davantage d'expérience ne ferait jamais un tout absolu. C'est un écart {green}de nature{/green}, entre l'expérience et l'idée.
+  passage:
+    label: "Premier moment"
+    part: "1. La majeure : un concept indéterminé"
+    text: "La raison en est que tous les éléments qui font partie du concept du bonheur sont dans leur ensemble empiriques, c'est-à-dire qu'ils doivent être empruntés à l'expérience, et que cependant pour l'idée du bonheur un tout absolu, un maximum de bien-être (Wohl) dans mon état présent et dans toute ma condition future, est nécessaire."
+  points:
   - id: kant-bonheur-prudence-p1-4
-    fragment: "2/2"
-    sentence: "« __La raison en est que__ ___, c'est-à-dire qu'ils doivent être **empruntés à l'expérience**, et que cependant pour l'idée du bonheur un tout absolu, un maximum de bien-être (Wohl) dans mon état présent et dans toute ma condition future, est nécessaire. »"
+    sentence: "« La raison en est que ___, c'est-à-dire qu'ils doivent être empruntés à l'expérience, et que cependant pour l'idée du bonheur un tout absolu, un maximum de bien-être (Wohl) dans mon état présent et dans toute ma condition future, est nécessaire. »"
     answer: "tous les éléments qui font partie du concept du bonheur sont dans leur ensemble empiriques"
     alt: []
   - id: kant-bonheur-prudence-p1-5
-    fragment: "2/2"
-    sentence: "« La raison en est que tous les éléments qui font partie du concept du bonheur **sont dans leur ensemble empiriques**, c'est-à-dire qu'ils doivent être empruntés à l'expérience, __et que cependant pour l'idée du bonheur__ ___. »"
+    sentence: "« La raison en est que tous les éléments qui font partie du concept du bonheur sont dans leur ensemble empiriques, c'est-à-dire qu'ils doivent être empruntés à l'expérience, et que cependant pour l'idée du bonheur ___. »"
     answer: "un tout absolu, un maximum de bien-être (Wohl) dans mon état présent et dans toute ma condition future, est nécessaire"
     alt: []
-  - id: kant-bonheur-prudence-p1-6
-    sentence: "Selon le commentaire, __ce premier moment constitue la__ ___ du **syllogisme** construit par Kant dans notre extrait."
+  - id: kant-bonheur-prudence-p1-x4
+    sentence: "Chez Kant, une **idée** pense __une ___ inconditionnée,__ à laquelle aucun objet de l'expérience ne correspond."
+    answer: "totalité"
+    alt: []
+  - id: kant-bonheur-prudence-p1-x5
+    sentence: "Le bonheur est un maximum de bien-être, en allemand __*___*,__ et non de bien, *das Gute*."
+    answer: "Wohl"
+    alt: []
+  - id: kant-bonheur-prudence-p1-x6
+    sentence: "Les deux premières phrases du texte forment __la ___ du syllogisme.__"
     answer: "majeure"
     alt: []
-  - id: kant-bonheur-prudence-p1-7
-    sentence: "Kant choisit ici le mot \"concept\" plutôt que celui d'\"idée\" : **le concept est nécessairement concept de l'entendement**, tandis que l'idée, depuis la *Critique de la raison pure*, __a pour caractéristique d'être__ ___."
-    answer: "totale"
-    alt: []
-  - id: kant-bonheur-prudence-p1-8
-    sentence: "Selon le commentaire, **le paradoxe construit dans ce premier moment** est que __l'idée du bonheur ne permet pas une formulation__ ___ de ce qu'il faudrait faire pour y accéder."
-    answer: "rationnelle"
-    alt: []
-  - id: kant-bonheur-prudence-p1-9
-    sentence: "Ce premier moment n'établit encore qu'une **impossibilité de fait** ; __c'est le deuxième moment qui l'élèvera en impossibilité de__ ___."
-    answer: "droit"
-    alt: []
 - id: kant-bonheur-prudence-p2
-  title: "Richesse, savoir, longévité, santé : les faux moyens du bonheur"
+  title: "Même l'être fini le plus perspicace"
   notes: |-
-    C'est l'impossibilité, pour un {teal}« {/teal}{teal}être fini »{/teal}, de rencontrer le bonheur dans le monde
-    sensible qui constitue la {violet}**mineure**{/violet} du syllogisme. Alors que le premier moment
-    procédait presque anthropologiquement ({teal}« {/teal}{teal}l'homme »{/teal}), celui-ci construit un argument
-    {blue}*a fortiori*{/blue} : {coral}si c'est le cas pour l'être fini le plus perspicace et le plus{/coral}
-    {coral}puissant qu'on puisse supposer, alors c'est aussi le cas pour l'être fini le plus{/coral}
-    {coral}ordinaire{/coral}.
+    **La mineure étend l'impossibilité de l'homme à** {violet}**tout être fini**{/violet}, **même le mieux doué qu'on puisse supposer.**
 
-    Les quatre exemples, tous formulés avec le même verbe, *vouloir* (`wollen`), ne sont
-    pas de simples illustrations : ils sont la seule conséquence possible de l'argument de
-    Kant. Puisque personne ne peut donner de définition claire du bonheur, il ne reste que
-    le désir et ses incertitudes ; chacun cherche alors de faux synonymes du bonheur, qui,
-    par définition, resteront toujours insuffisants.
+    ? **Être fini** : un être raisonnable dont la raison est liée à une {amber}sensibilité{/amber} : il est affecté par des inclinations, et ne connaît que ce que l'expérience lui donne. Il s'oppose à l'être infini, Dieu, dont la volonté est sainte et qui connaît toutes choses.
 
-    | Exemple      | Le risque que Kant y voit                                            |
-    | Richesse     | soucis, envie, pièges                                                |
-    | Connaissance | des maux d'autant plus terribles à voir venir, ou des besoins accrus |
-    | Longue vie   | une longue souffrance                                                |
-    | Santé        | des excès qu'une indisposition passagère aurait pourtant évités      |
+    **Pourquoi « Or » ?** Le mot ouvre la {violet}mineure{/violet} du syllogisme. Et il change de sujet : la majeure parlait de {teal}« tout homme »{/teal}, constat presque anthropologique ; la mineure parle d'{teal}« un être fini »{/teal}, c'est-à-dire d'une classe définie par sa condition. {coral}Ce qui valait de l'homme en fait va valoir de tout être fini par définition.{/coral}
 
-    {amber}La mention de l'omniscience, à la toute fin de la phrase, est décisive{/amber} : c'est par
-    elle que l'impossibilité cesse d'être seulement de fait pour devenir une impossibilité
-    {blue}*a priori*{/blue}, de droit. D'où la conclusion, introduite par {teal}« {/teal}{teal}donc »{/teal} : {green}on ne peut agir{/green}
-    {green}pour être heureux que d'après des conseils empiriques, jamais d'après des principes{/green}
-    {green}déterminés{/green}.
+    **Pourquoi « si perspicace et en même temps si puissant qu'on le suppose » ?** On pourrait croire que l'échec vient d'un défaut de {amber}perspicacité{/amber} (on prévoit mal les suites de ses choix) ou de {amber}puissance{/amber} (on n'a pas les moyens de ce qu'on choisit). Kant accorde l'une et l'autre au plus haut degré, sans aller jusqu'à l'infini : l'argument est *a fortiori*. Si même cet être-là ne peut pas savoir ce qu'il veut, {coral}aucun être fini ne le peut, et l'impossibilité n'est pas affaire de degré.{/coral} {yellow}Un roi très savant, qui peut tout s'offrir, n'en sait pas davantage ce qui le rendra heureux.{/yellow}
 
-    ! Les exemples ne visent pas seulement à montrer que la richesse, la connaissance ou
-    la santé ne garantissent pas le bonheur dans la durée, mais que les fins qu'elles
-    induisent sont elles-mêmes incertaines et inadéquates au but que l'on avait en tête.
+    **Pourquoi « ici véritablement » ?** « Ici » : en matière de bonheur, et non pour une fin particulière, où l'on sait fort bien ce qu'on veut. « Véritablement » : il peut {red}croire{/red} le savoir, prendre la richesse pour le bonheur ; il ne le sait pas {green}en vérité{/green}. Les exemples qui suivent montrent cet écart.
+
+    ! L'impossibilité ne tient pas à la {red}sottise{/red} ou à la {red}faiblesse{/red} de certains hommes : elle vaut {green}dans le meilleur des cas{/green}.
   passage:
     label: "Deuxième moment"
-    text: "Or il est impossible qu'un être fini, si perspicace et en même temps si puissant qu'on le suppose, se fasse un concept déterminé de ce qu'il veut ici véritablement. Veut-il la richesse ? Que de soucis, que d'envie, que de pièges ne peut-il pas par-là attirer sur sa tête ! Veut-il beaucoup de connaissance et de lumières ? Peut-être cela ne fera-t-il que lui donner un regard plus pénétrant pour lui représenter d'une manière d'autant plus terrible les maux qui jusqu'à présent se dérobent à sa vue et qui sont pourtant inévitables, ou bien que charger de plus de besoins encore ses désirs qu'il a déjà bien assez de peine à satisfaire. Veut-il une longue vie ? Qui lui répond que ce ne serait pas une longue souffrance ? Veut-il du moins la santé ? Que de fois l'indisposition du corps a détourné d'excès où aurait fait tomber une santé parfaite, etc. ! Bref, il est incapable de déterminer avec une entière certitude d'après quelque principe ce qui le rendrait véritablement heureux : pour cela, il lui faudrait l'omniscience. On ne peut donc pas agir, pour être heureux, d'après des principes déterminés, mais seulement d'après des conseils empiriques, qui recommandent, par exemple, un régime sévère, l'économie, la politesse, la réserve, etc., toutes choses qui, selon les enseignements de l'expérience, contribuent en thèse générale pour la plus grande part au bien-être."
+    part: "2. La mineure : tout être fini"
+    text: "Or il est impossible qu'un être fini, si perspicace et en même temps si puissant qu'on le suppose, se fasse un concept déterminé de ce qu'il veut ici véritablement."
   points:
   - id: kant-bonheur-prudence-p2-1
-    fragment: "1/3"
-    sentence: "« __Or il est impossible__ qu'___, se fasse un **concept déterminé** de ce qu'il veut ici véritablement. Veut-il la richesse ? Que de soucis, que d'envie, que de pièges ne peut-il pas par-là attirer sur sa tête ! Veut-il beaucoup de connaissance et de lumières ? Peut-être cela ne fera-t-il que lui donner un regard plus pénétrant pour lui représenter d'une manière d'autant plus terrible les maux qui jusqu'à présent se dérobent à sa vue et qui sont pourtant inévitables, ou bien que charger de plus de besoins encore ses désirs qu'il a déjà bien assez de peine à satisfaire. »"
+    sentence: "« Or il est impossible qu'___, se fasse un concept déterminé de ce qu'il veut ici véritablement. »"
     answer: "un être fini, si perspicace et en même temps si puissant qu'on le suppose"
     alt: []
   - id: kant-bonheur-prudence-p2-2
-    fragment: "1/3"
-    sentence: "« **Or il est impossible qu'un être fini**, __si perspicace et en même temps si puissant qu'on le suppose,__ ___. Veut-il la richesse ? Que de soucis, que d'envie, que de pièges ne peut-il pas par-là attirer sur sa tête ! Veut-il beaucoup de connaissance et de lumières ? Peut-être cela ne fera-t-il que lui donner un regard plus pénétrant pour lui représenter d'une manière d'autant plus terrible les maux qui jusqu'à présent se dérobent à sa vue et qui sont pourtant inévitables, ou bien que charger de plus de besoins encore ses désirs qu'il a déjà bien assez de peine à satisfaire. »"
+    sentence: "« Or il est impossible qu'un être fini, si perspicace et en même temps si puissant qu'on le suppose, ___. »"
     answer: "se fasse un concept déterminé de ce qu'il veut ici véritablement"
     alt: []
+  - id: kant-bonheur-prudence-p2-x1
+    sentence: "En supposant l'être fini **le plus perspicace et le plus puissant**, Kant raisonne __*a ___*__ : s'il échoue, tout être fini échoue."
+    answer: "fortiori"
+    alt: []
+  - id: kant-bonheur-prudence-p2-x2
+    sentence: "La phrase ouverte par « Or » commence __la ___ du syllogisme.__"
+    answer: "mineure"
+    alt: []
+  - id: kant-bonheur-prudence-p2-x3
+    sentence: "De « tout homme » à « un être fini », Kant passe d'un **constat sur l'homme** __à une thèse sur une ___ d'êtres définie par sa condition.__"
+    answer: "classe"
+    alt: []
+- id: kant-bonheur-prudence-p2b
+  title: "La richesse et la connaissance"
+  notes: |-
+    **Chaque bien qu'on prend pour le bonheur peut** {red}**se retourner contre lui**{/red} **: les deux premiers exemples le montrent de la richesse et du savoir.**
+
+    **Pourquoi ces exemples ?** Ils ne sont pas pris au hasard : ce sont les {amber}lieux communs{/amber} du bonheur, ce que chacun met d'abord sous ce mot. Et tous sont construits sur le même verbe, {teal}« Veut-il »{/teal} (*wollen*). Derrière chaque « veut-il la richesse ? » se cache une condition non écrite : {amber}« s'il veut être heureux »{/amber}. On veut la richesse {coral}comme moyen{/coral}, parce qu'on croit qu'elle rendra heureux ; faute de savoir ce qu'est le bonheur, on en cherche de faux synonymes.
+
+    **Pourquoi la richesse échoue-t-elle ?** Elle apporte avec elle {yellow}des soucis (il faut la garder), l'envie (des autres, qui la convoitent) et des pièges (ceux qu'on tend au riche){/yellow}. Le moyen choisi produit {red}le contraire de sa fin{/red}.
+
+    **Pourquoi la connaissance échoue-t-elle ?** De deux façons. Soit elle donne {yellow}un regard plus pénétrant sur des maux inévitables{/yellow}, qu'on ne voyait pas et qu'on verra venir d'autant plus terriblement ; soit elle {yellow}multiplie les besoins{/yellow} d'un désir déjà difficile à contenter. L'exemple est le plus fort : {coral}même le bien propre de la raison, le savoir, n'est pas un moyen sûr du bonheur.{/coral} Il prépare la fin de la phrase : seul un savoir total, l'omniscience, suffirait.
+
+    **Pourquoi « ne peut-il pas » et « peut-être » ?** Kant n'affirme pas que la richesse rend malheureux, ni que le savoir désespère : il dit que {amber}rien ne garantit le contraire{/amber}. C'est l'incertitude des suites, non une loi inverse, qui ruine le moyen.
+
+    ! Les exemples ne sont pas {red}de simples illustrations{/red} : faute de définition claire du bonheur, il ne reste que des désirs variables et des moyens incertains, et les exemples sont {green}la seule forme que puisse prendre la preuve{/green}.
+  passage:
+    label: "Deuxième moment"
+    part: "2. La mineure : tout être fini"
+    text: "Veut-il la richesse ? Que de soucis, que d'envie, que de pièges ne peut-il pas par-là attirer sur sa tête ! Veut-il beaucoup de connaissance et de lumières ? Peut-être cela ne fera-t-il que lui donner un regard plus pénétrant pour lui représenter d'une manière d'autant plus terrible les maux qui jusqu'à présent se dérobent à sa vue et qui sont pourtant inévitables, ou bien que charger de plus de besoins encore ses désirs qu'il a déjà bien assez de peine à satisfaire."
+  points:
   - id: kant-bonheur-prudence-p2-3
-    fragment: "1/3"
-    sentence: "« Or il est impossible qu'un être fini, si perspicace et en même temps si puissant qu'on le suppose, se fasse un concept déterminé de ce qu'il veut ici véritablement. __Veut-il la **richesse** ?__ ___ ! Veut-il beaucoup de connaissance et de lumières ? Peut-être cela ne fera-t-il que lui donner un regard plus pénétrant pour lui représenter d'une manière d'autant plus terrible les maux qui jusqu'à présent se dérobent à sa vue et qui sont pourtant inévitables, ou bien que charger de plus de besoins encore ses désirs qu'il a déjà bien assez de peine à satisfaire. »"
+    sentence: "« Veut-il la richesse ? ___ ! »"
     answer: "Que de soucis, que d'envie, que de pièges ne peut-il pas par-là attirer sur sa tête"
     alt: []
   - id: kant-bonheur-prudence-p2-4
-    fragment: "1/3"
-    sentence: "« Or il est impossible qu'un être fini, si perspicace et en même temps si puissant qu'on le suppose, se fasse un concept déterminé de ce qu'il veut ici véritablement. Veut-il la richesse ? Que de soucis, que d'envie, que de pièges ne peut-il pas par-là attirer sur sa tête ! Veut-il **beaucoup de connaissance et de lumières** ? __Peut-être cela ne fera-t-il que lui donner un regard plus pénétrant pour__ ___ et qui sont pourtant inévitables, ou bien que ___. »"
+    sentence: "« Veut-il beaucoup de connaissance et de lumières ? Peut-être cela ne fera-t-il que lui donner un regard plus pénétrant pour ___ et qui sont pourtant inévitables, ou bien que ___. »"
     answer: "lui représenter d'une manière d'autant plus terrible les maux qui jusqu'à présent se dérobent à sa vue ; charger de plus de besoins encore ses désirs qu'il a déjà bien assez de peine à satisfaire"
     alt: []
+  - id: kant-bonheur-prudence-p2-x4
+    sentence: "Les exemples de Kant reprennent __les ___ communs__ de ce qu'on met sous le concept de bonheur."
+    answer: "lieux"
+    alt: []
+  - id: kant-bonheur-prudence-p2-x5
+    sentence: "Tous les exemples sont construits sur le verbe vouloir, __en allemand *___*,__ derrière lequel se cache « s'il veut être heureux »."
+    answer: "wollen"
+    alt: []
+  - id: kant-bonheur-prudence-p2-x6
+    sentence: "L'exemple de la connaissance montre que **même le bien propre de la raison** __n'est pas un moyen ___ du bonheur.__"
+    answer: "sûr"
+    alt: []
+- id: kant-bonheur-prudence-p2c
+  title: "La longue vie et la santé"
+  notes: |-
+    **Même les biens les plus élémentaires, la vie et la santé,** {red}**ne sont pas des moyens sûrs**{/red} **du bonheur.**
+
+    **Pourquoi « du moins » ?** Les exemples suivent une {amber}gradation descendante{/amber} : de biens dont on pourrait se passer (la richesse, le savoir) aux biens qui semblent la condition de tous les autres (vivre, et vivre en bonne santé). {coral}Si même le minimum n'est pas sûr, rien ne l'est.{/coral}
+
+    **Pourquoi la longue vie ?** {yellow}« Qui lui répond que ce ne serait pas une longue souffrance ? »{/yellow} La question est rhétorique : personne ne peut s'en porter garant. La durée multiplie le bonheur comme le malheur ; elle n'est un bien que selon ce qu'elle contient, qu'on ignore d'avance.
+
+    **Pourquoi la santé ?** C'est l'exemple le plus paradoxal : {yellow}une indisposition a souvent détourné d'excès où une santé parfaite aurait fait tomber{/yellow}. Un mal a produit un bien, un bien aurait produit un mal. {coral}La valeur d'une chose pour le bonheur ne tient donc pas à elle, mais à toute la série de ses suites.{/coral} C'est exactement ce qui conduira à l'omniscience.
+
+    **Pourquoi « etc. » ?** La liste reste ouverte, et elle doit l'être : les éléments du bonheur, empiriques, {red}ne se laissent pas énumérer{/red}.
+
+    | Ce qu'il veut | Ce qui peut s'ensuivre |
+    | la richesse | soucis, envie, pièges |
+    | la connaissance | des maux inévitables vus plus terriblement, ou des besoins accrus |
+    | une longue vie | une longue souffrance |
+    | la santé | les excès qu'une indisposition aurait évités |
+
+    ! Kant ne fait pas l'éloge de la maladie : il montre que {red}rien n'est bon pour le bonheur en soi{/red}, et que {green}tout dépend de conséquences qu'on ne connaît pas{/green}.
+  passage:
+    label: "Deuxième moment"
+    part: "2. La mineure : tout être fini"
+    text: "Veut-il une longue vie ? Qui lui répond que ce ne serait pas une longue souffrance ? Veut-il du moins la santé ? Que de fois l'indisposition du corps a détourné d'excès où aurait fait tomber une santé parfaite, etc. !"
+  tables:
+  - table: ce-qu-il-veut-ce-qui-peut-s-ensuivre
+    exercises:
+    - {kind: bank, column: Ce qui peut s'ensuivre}
+    - {kind: cell, column: Ce qui peut s'ensuivre}
+  points:
   - id: kant-bonheur-prudence-p2-5
-    fragment: "2/3"
-    sentence: "« __Veut-il une **longue vie** ?__ ___ ? Veut-il du moins la santé ? Que de fois l'indisposition du corps a détourné d'excès où aurait fait tomber une santé parfaite, etc. ! Bref, il est incapable de déterminer avec une entière certitude d'après quelque principe ce qui le rendrait véritablement heureux : pour cela, il lui faudrait l'omniscience. »"
+    sentence: "« Veut-il une longue vie ? ___ ? »"
     answer: "Qui lui répond que ce ne serait pas une longue souffrance"
     alt: []
   - id: kant-bonheur-prudence-p2-6
-    fragment: "2/3"
-    sentence: "« Veut-il une longue vie ? Qui lui répond que ce ne serait pas une longue souffrance ? __Veut-il du moins la **santé** ? Que de fois__ ___, etc. ! Bref, il est incapable de déterminer avec une entière certitude d'après quelque principe ce qui le rendrait véritablement heureux : pour cela, il lui faudrait l'omniscience. »"
+    sentence: "« Veut-il du moins la santé ? Que de fois ___, etc. ! »"
     answer: "l'indisposition du corps a détourné d'excès où aurait fait tomber une santé parfaite"
     alt: []
+  - id: kant-bonheur-prudence-p2-x7
+    sentence: "Les quatre exemples suivent __une ___ descendante,__ des biens superflus aux plus élémentaires."
+    answer: "gradation"
+    alt: []
+  - id: kant-bonheur-prudence-p2-x8
+    sentence: "L'exemple de la santé montre que la valeur d'un bien pour le bonheur __dépend de toute la ___ de ses conséquences.__"
+    answer: "série"
+    alt: []
+- id: kant-bonheur-prudence-p2d
+  title: "Il lui faudrait l'omniscience"
+  notes: |-
+    **Le résumé des exemples nomme ce qui manquerait :** {coral}**l'omniscience**{/coral}. **C'est le pivot du texte : par elle, l'impossibilité de fait devient une impossibilité de droit.**
+
+    ? **Omniscience** : la science de toutes choses, y compris de toutes les suites futures de chaque acte ; elle n'appartient qu'à l'être infini.
+
+    **Pourquoi « Bref » ?** Le mot ramasse les exemples en une seule thèse : l'être fini {red}est incapable de déterminer ce qui le rendrait heureux{/red}. Les exemples montraient des cas ; « bref » en tire la règle.
+
+    **Pourquoi « avec une entière certitude » et « d'après quelque principe » ?** Ce sont les deux exigences d'un commandement. La {amber}certitude{/amber} : un commandement présente une action comme nécessaire, non comme probable. Le {amber}principe{/amber} : on ne demande pas qu'il tombe par chance sur ce qui le rend heureux, mais qu'il le détermine d'après une règle.
+
+    **Pourquoi l'omniscience ?** Les exemples ont montré que la valeur d'un moyen dépend de la série de ses suites. Pour savoir avec certitude ce qui rendrait heureux, {coral}il faudrait connaître toutes les suites de toutes ses actions, dans tout l'avenir{/coral} : savoir tout. Or {amber}un être fini est par définition non omniscient{/amber}. {coral}L'impossibilité ne tient donc plus à l'état présent de notre savoir, mais à notre condition : elle est de droit.{/coral} C'est pourquoi la mention, placée à la toute fin de la phrase, change la portée de tout ce qui précède.
+
+    **Ce que l'argument reprend.** Kant a déjà opposé l'être purement raisonnable, que la raison détermine infailliblement, à l'être fini, soumis à la sensibilité. Il l'avait même dit au début des {sky}*Fondements*{/sky} ({sky}première section{/sky}) : si la nature n'avait visé que notre bonheur, elle l'aurait mieux confié à {yellow}l'instinct{/yellow} qu'à la raison. {coral}La raison n'est pas faite pour servir d'auxiliaire au désir d'être heureux.{/coral}
+
+    ! « Impossibilité de droit » ne veut pas dire qu'on ne sera {red}jamais heureux{/red} : on ne pourra jamais {green}savoir d'avance, avec certitude{/green}, ce qui rend heureux. Aucun progrès du savoir n'y changera rien.
+  passage:
+    label: "Deuxième moment"
+    part: "2. La mineure : tout être fini"
+    text: "Bref, il est incapable de déterminer avec une entière certitude d'après quelque principe ce qui le rendrait véritablement heureux : pour cela, il lui faudrait l'omniscience."
+  points:
   - id: kant-bonheur-prudence-p2-7
-    fragment: "2/3"
-    sentence: "« Veut-il une longue vie ? Qui lui répond que ce ne serait pas une longue souffrance ? Veut-il du moins la santé ? Que de fois l'indisposition du corps a détourné d'excès où aurait fait tomber une santé parfaite, __etc. ! Bref,__ ___ : pour cela, il lui faudrait l'**omniscience**. »"
+    sentence: "« Bref, ___ : pour cela, il lui faudrait l'omniscience. »"
     answer: "il est incapable de déterminer avec une entière certitude d'après quelque principe ce qui le rendrait véritablement heureux"
     alt: []
   - id: kant-bonheur-prudence-p2-8
-    fragment: "2/3"
-    sentence: "« Veut-il une longue vie ? Qui lui répond que ce ne serait pas une longue souffrance ? Veut-il du moins la santé ? Que de fois l'indisposition du corps a détourné d'excès où aurait fait tomber une santé parfaite, etc. ! Bref, il est incapable de déterminer avec une entière certitude d'après quelque principe **ce qui le rendrait véritablement heureux** : __pour cela,__ ___. »"
+    sentence: "« Bref, il est incapable de déterminer avec une entière certitude d'après quelque principe ce qui le rendrait véritablement heureux : pour cela, ___. »"
     answer: "il lui faudrait l'omniscience"
     alt: []
+  - id: kant-bonheur-prudence-p2-x9
+    sentence: "Par la mention de l'**omniscience**, l'impossibilité établie dans la majeure __devient une impossibilité de ___,__ et non plus seulement de fait."
+    answer: "droit"
+    alt: []
+  - id: kant-bonheur-prudence-p2-x10
+    sentence: "Au début des *Fondements*, Kant soutient que, si la nature n'avait visé que notre bonheur, __elle l'aurait mieux confié à l'___ qu'à la raison.__"
+    answer: "instinct"
+    alt: []
+- id: kant-bonheur-prudence-p2e
+  title: "Des conseils empiriques"
+  notes: |-
+    **La conséquence, introduite par « donc » :** {red}**pas de principes déterminés**{/red} **pour être heureux,** {amber}**seulement des conseils empiriques**{/amber}.
+
+    ? **Conseil** : une règle qui {amber}recommande{/amber} un moyen comme utile le plus souvent, sans le présenter comme nécessaire. Elle vaut pour qui veut la suivre, et autant que l'expérience l'a confirmée.
+
+    **Pourquoi « principes déterminés » contre « conseils empiriques » ?** Un {violet}principe déterminé{/violet} dirait ce qu'il faut faire, avec nécessité et pour tout être raisonnable. Un {violet}conseil empirique{/violet} dit ce qui, d'expérience, réussit d'ordinaire. Puisque nul ne peut savoir avec certitude ce qui rend heureux, {coral}il ne reste que le second{/coral}.
+
+    **Pourquoi ces exemples, « un régime sévère, l'économie, la politesse, la réserve » ?** Ce sont {yellow}les maximes de la sagesse ordinaire{/yellow}, celles qu'on donne à un jeune homme qui entre dans le monde. Kant ne les méprise pas : elles {green}contribuent au bien-être{/green}. Mais aucune ne vaut absolument : {yellow}un régime sévère, utile au plus grand nombre, peut mener plus vite à la mort un maigre maladif{/yellow}.
+
+    **Pourquoi « en thèse générale pour la plus grande part » ?** L'expression mesure exactement ce que l'expérience peut donner : une {amber}généralité comparative{/amber}, valable dans la plupart des cas, non une {red}universalité stricte{/red}, valable sans exception. {coral}Ce qui vient de l'expérience peut être général, jamais nécessaire.{/coral}
+
+    ! Kant ne dit pas que les conseils sont {red}inutiles{/red} : ils sont utiles {green}en général{/green}. Il dit qu'ils ne peuvent pas commander.
+  passage:
+    label: "Deuxième moment"
+    part: "2. La mineure : tout être fini"
+    text: "On ne peut donc pas agir, pour être heureux, d'après des principes déterminés, mais seulement d'après des conseils empiriques, qui recommandent, par exemple, un régime sévère, l'économie, la politesse, la réserve, etc., toutes choses qui, selon les enseignements de l'expérience, contribuent en thèse générale pour la plus grande part au bien-être."
+  points:
   - id: kant-bonheur-prudence-p2-9
-    fragment: "3/3"
-    sentence: "« ___, __mais seulement d'après des **conseils empiriques**__, qui recommandent, par exemple, un régime sévère, l'économie, la politesse, la réserve, etc., toutes choses qui, selon les enseignements de l'expérience, contribuent en thèse générale pour la plus grande part au bien-être. »"
+    sentence: "« ___, mais seulement d'après des conseils empiriques, qui recommandent, par exemple, un régime sévère, l'économie, la politesse, la réserve, etc., toutes choses qui, selon les enseignements de l'expérience, contribuent en thèse générale pour la plus grande part au bien-être. »"
     answer: "On ne peut donc pas agir, pour être heureux, d'après des principes déterminés"
     alt: []
   - id: kant-bonheur-prudence-p2-10
-    fragment: "3/3"
-    sentence: "« __On ne peut donc pas agir, pour être heureux, d'après des **principes déterminés**, mais__ ___, qui recommandent, par exemple, un régime sévère, l'économie, la politesse, la réserve, etc., toutes choses qui, selon les enseignements de l'expérience, contribuent en thèse générale pour la plus grande part au bien-être. »"
+    sentence: "« On ne peut donc pas agir, pour être heureux, d'après des principes déterminés, mais ___, qui recommandent, par exemple, un régime sévère, l'économie, la politesse, la réserve, etc., toutes choses qui, selon les enseignements de l'expérience, contribuent en thèse générale pour la plus grande part au bien-être. »"
     answer: "seulement d'après des conseils empiriques"
     alt: []
   - id: kant-bonheur-prudence-p2-11
-    fragment: "3/3"
-    sentence: "« On ne peut donc pas agir, pour être heureux, d'après des principes déterminés, mais seulement d'après des **conseils empiriques**, __qui recommandent, par exemple,__ ___, etc., toutes choses qui, selon les enseignements de l'expérience, contribuent en thèse générale pour la plus grande part au bien-être. »"
+    sentence: "« On ne peut donc pas agir, pour être heureux, d'après des principes déterminés, mais seulement d'après des conseils empiriques, qui recommandent, par exemple, ___, etc., toutes choses qui, selon les enseignements de l'expérience, contribuent en thèse générale pour la plus grande part au bien-être. »"
     answer: "un régime sévère, l'économie, la politesse, la réserve"
     alt: []
-  - id: kant-bonheur-prudence-p2-12
-    sentence: "Selon le commentaire, __ce deuxième moment constitue la__ ___ du **syllogisme**, qui vient développer la contradiction déjà annoncée par la majeure."
-    answer: "mineure"
+  - id: kant-bonheur-prudence-p2-12b
+    sentence: "« On ne peut donc pas agir, pour être heureux, d'après des principes déterminés, mais seulement d'après des conseils empiriques, qui recommandent, par exemple, un régime sévère, l'économie, la politesse, la réserve, etc., toutes choses qui, selon les enseignements de l'expérience, ___ au bien-être. »"
+    answer: "contribuent en thèse générale pour la plus grande part"
     alt: []
-  - id: kant-bonheur-prudence-p2-13
-    sentence: "**Le premier argument de Kant** était d'ordre quasi anthropologique ; dans ce deuxième moment, l'argument prend la forme d'un raisonnement *a ___*, __valable pour l'être fini le plus perspicace comme pour le plus ordinaire__."
-    answer: "fortiori"
-    alt: []
-  - id: kant-bonheur-prudence-p2-14
-    sentence: "Selon le commentaire, les exemples de la richesse, de la connaissance, de la longue vie et de la santé ne sont pas choisis au hasard : __ce sont des__ ___ communs de ce qu'on met sous le **concept de bonheur**."
-    answer: "lieux"
-    alt: []
-  - id: kant-bonheur-prudence-p2-15
-    sentence: "Le verbe mis au cœur de **chaque exemple**, en allemand *wollen*, __est le verbe__ ___."
-    answer: "vouloir"
-    alt: []
-  - id: kant-bonheur-prudence-p2-16
-    sentence: "Selon le commentaire, **ce deuxième moment** fait passer l'impossibilité établie par la majeure __d'une impossibilité de fait à une impossibilité de__ ___."
-    answer: "droit"
+  - id: kant-bonheur-prudence-p2-x11
+    sentence: "L'expérience ne donne __qu'une généralité ___,__ valable « en thèse générale », jamais une universalité stricte."
+    answer: "comparative"
     alt: []
 - id: kant-bonheur-prudence-p3
-  title: "Un problème tout à fait insoluble"
+  title: "Des conseils, non des commandements"
   notes: |-
-    Kant a démontré la thèse énoncée dans la première phrase de notre extrait. Reste à en
-    tirer les conséquences ({teal}« {/teal}il suit {teal}de là »{/teal}) : c'est la {violet}**conclusion**{/violet} du syllogisme, qui
-    porte sur le statut même d'un impératif de la prudence.
+    **La conclusion tire le statut des impératifs de la prudence :** {red}**ils ne commandent en rien**{/red}**, ce sont des** {amber}**conseils**{/amber}.
 
-    {coral}Puisque les impératifs de la prudence ne peuvent pas représenter des actions comme{/coral}
-    {coral}objectivement et pratiquement nécessaires, il faut les tenir pour de simples conseils{/coral}
-    ({blue}*consilia*{/blue}), non pour des commandements ({blue}*praecepta*{/blue}) de la raison : le problème de
-    déterminer sûrement quelle action favorise le bonheur est {red}un problème tout à fait{/red}
-    {red}insoluble{/red}. Dire qu'un problème est insoluble, précise le commentaire, revient ici à
-    dire que c'est un faux problème : sa résolution n'attend pas d'être trouvée, puisqu'elle
-    serait de toute façon impossible. Ce problème n'est en fait pas un problème *de* la
-    raison, pas même une tâche pour elle.
+    ? **Impératif de la prudence** : l'impératif hypothétique qui prescrit les moyens du bonheur, fin que tout être fini poursuit ; il a la forme « si tu veux être heureux, fais ceci ».
 
-    D'où la conclusion finale : le bonheur n'est pas un idéal de la raison mais de
-    l'{violet}**imagination**{/violet}, seule capable de se représenter comme réalisable une action qui
-    atteindrait la totalité, en réalité infinie, de ses conséquences. Fondé uniquement sur
-    des principes empiriques, il ne peut avoir aucune réalité pratique : voilà pourquoi
-    aucun impératif ne peut, au sens strict, commander de faire ce qui rend heureux.
+    **Pourquoi « Il suit de là » ?** La formule ouvre le dernier moment : Kant a établi que personne ne peut déterminer ce qui rend heureux ; il en tire {coral}ce que valent les impératifs qui prétendent y mener{/coral}.
 
-    ! Ne pas lire cette conclusion comme un simple renoncement : Kant ne dit pas qu'il ne
-    faut pas rechercher le bonheur, mais seulement qu'aucune loi rationnelle ne peut nous
-    dire comment l'atteindre à coup sûr.
+    **Pourquoi « à parler exactement » ?** Dans l'usage, on les appelle impératifs, et Kant lui-même vient de le faire. {amber}En toute rigueur{/amber}, le mot ne leur convient pas, puisqu'un impératif commande et qu'eux ne commandent pas.
+
+    **Que veut dire « commander » ?** Kant le définit dans la phrase même : {teal}« représenter des actions d'une manière objective comme pratiquement nécessaires »{/teal}. Trois exigences : {amber}objective{/amber}, valable pour tout être raisonnable, et non selon mon goût ; {amber}pratique{/amber}, portant sur l'action ; {amber}nécessaire{/amber}, et non seulement utile. {coral}Le conseil de prudence manque la nécessité, puisque ses moyens sont incertains, et l'objectivité, puisque son contenu varie d'un homme à l'autre.{/coral}
+
+    **Pourquoi le latin, *consilia* et *praecepta* ?** Kant fixe la distinction dans les termes reçus de l'école : le {violet}conseil{/violet} (*consilium*) laisse juge celui qui le reçoit ; le {violet}précepte{/violet} (*praeceptum*) oblige. {coral}La prudence est ainsi vidée de sa prétention à commander{/coral}, que lui prêtaient les morales qui y voyaient la vertu par excellence.
+
+    ! Le conseil garde {green}la forme hypothétique{/green} d'un impératif (« si tu veux…, fais… ») : ce qui lui est refusé, c'est {red}la nécessité{/red}, non la forme.
   passage:
     label: "Troisième moment"
-    text: "Il suit de là que les impératifs de la prudence, à parler exactement, ne peuvent commander en rien, c'est-à-dire représenter des actions d'une manière objective comme pratiquement nécessaires, qu'il faut les tenir plutôt pour des conseils (consilia) que pour des commandements (praecepta) de la raison ; le problème qui consiste à déterminer d'une façon sûre et générale quelle action peut favoriser le bonheur d'un être raisonnable est un problème tout à fait insoluble ; il n'y a donc pas à cet égard d'impératif qui puisse commander, au sens strict du mot, de faire ce qui rend heureux, parce que le bonheur est un idéal, non de la raison, mais de l'imagination, fondé uniquement sur des principes empiriques, dont on attendrait vainement qu'ils puissent déterminer une action par laquelle serait atteinte la totalité d'une série de conséquences en réalité infinie."
+    part: "3. La conclusion : un idéal de l'imagination"
+    text: "Il suit de là que les impératifs de la prudence, à parler exactement, ne peuvent commander en rien, c'est-à-dire représenter des actions d'une manière objective comme pratiquement nécessaires, qu'il faut les tenir plutôt pour des conseils (consilia) que pour des commandements (praecepta) de la raison ;"
   points:
   - id: kant-bonheur-prudence-p3-1
-    sentence: "« __Il suit de là que__ ___, c'est-à-dire **représenter des actions d'une manière objective** comme pratiquement nécessaires, qu'il faut les tenir plutôt pour des conseils (consilia) que pour des commandements (praecepta) de la raison ; le problème qui consiste à déterminer d'une façon sûre et générale quelle action peut favoriser le bonheur d'un être raisonnable est un problème tout à fait insoluble ; il n'y a donc pas à cet égard d'impératif qui puisse commander, au sens strict du mot, de faire ce qui rend heureux, parce que le bonheur est un idéal, non de la raison, mais de l'imagination, fondé uniquement sur des principes empiriques, dont on attendrait vainement qu'ils puissent déterminer une action par laquelle serait atteinte la totalité d'une série de conséquences en réalité infinie. »"
+    sentence: "« Il suit de là que ___, c'est-à-dire représenter des actions d'une manière objective comme pratiquement nécessaires, qu'il faut les tenir plutôt pour des conseils (consilia) que pour des commandements (praecepta) de la raison ; »"
     answer: "les impératifs de la prudence, à parler exactement, ne peuvent commander en rien"
     alt: []
   - id: kant-bonheur-prudence-p3-2
-    sentence: "« Il suit de là que les **impératifs de la prudence**, à parler exactement, __ne peuvent commander en rien, c'est-à-dire__ ___, qu'il faut les tenir plutôt pour des conseils (consilia) que pour des commandements (praecepta) de la raison ; le problème qui consiste à déterminer d'une façon sûre et générale quelle action peut favoriser le bonheur d'un être raisonnable est un problème tout à fait insoluble ; il n'y a donc pas à cet égard d'impératif qui puisse commander, au sens strict du mot, de faire ce qui rend heureux, parce que le bonheur est un idéal, non de la raison, mais de l'imagination, fondé uniquement sur des principes empiriques, dont on attendrait vainement qu'ils puissent déterminer une action par laquelle serait atteinte la totalité d'une série de conséquences en réalité infinie. »"
+    sentence: "« Il suit de là que les impératifs de la prudence, à parler exactement, ne peuvent commander en rien, c'est-à-dire ___, qu'il faut les tenir plutôt pour des conseils (consilia) que pour des commandements (praecepta) de la raison ; »"
     answer: "représenter des actions d'une manière objective comme pratiquement nécessaires"
     alt: []
   - id: kant-bonheur-prudence-p3-3
-    sentence: "« Il suit de là que les impératifs de la prudence, à parler exactement, ne peuvent commander en rien, c'est-à-dire représenter des actions d'une manière objective comme pratiquement nécessaires, __qu'il faut les tenir plutôt pour__ ___ que pour ___ **de la raison** ; le problème qui consiste à déterminer d'une façon sûre et générale quelle action peut favoriser le bonheur d'un être raisonnable est un problème tout à fait insoluble ; il n'y a donc pas à cet égard d'impératif qui puisse commander, au sens strict du mot, de faire ce qui rend heureux, parce que le bonheur est un idéal, non de la raison, mais de l'imagination, fondé uniquement sur des principes empiriques, dont on attendrait vainement qu'ils puissent déterminer une action par laquelle serait atteinte la totalité d'une série de conséquences en réalité infinie. »"
+    sentence: "« Il suit de là que les impératifs de la prudence, à parler exactement, ne peuvent commander en rien, c'est-à-dire représenter des actions d'une manière objective comme pratiquement nécessaires, qu'il faut les tenir plutôt pour ___ que pour ___ de la raison ; »"
     answer: "des conseils (consilia) ; des commandements (praecepta)"
     alt: []
+  - id: kant-bonheur-prudence-p3-x1
+    sentence: "Au conseil de prudence manquent __la ___, puisque ses moyens sont incertains,__ et l'objectivité, puisque son contenu varie."
+    answer: "nécessité"
+    alt: []
+- id: kant-bonheur-prudence-p3b
+  title: "Un problème tout à fait insoluble"
+  notes: |-
+    **Le problème de déterminer quelle action rend heureux est** {red}**tout à fait insoluble**{/red} **: ce n'est pas un problème que la raison pourrait résoudre.**
+
+    **Pourquoi « d'une façon sûre et générale » ?** Ce sont encore les exigences d'un commandement : la {amber}sûreté{/amber} (la certitude, non la probabilité) et la {amber}généralité{/amber} (pour tout être raisonnable, non pour moi seul). Le problème n'est insoluble que posé ainsi : {green}déterminer ce qui, souvent, contribue au bien-être{/green} est possible, c'est le conseil.
+
+    **Pourquoi « tout à fait » ?** L'insolubilité n'est pas une difficulté qu'un esprit plus fin surmonterait : elle découle de l'omniscience qu'il faudrait. {coral}Un problème dont la solution exigerait de tout savoir n'a pas de solution pour un être fini.{/coral}
+
+    **Que veut dire « insoluble » ici ?** Dire qu'un problème est insoluble par principe, c'est dire qu'il est {red}mal posé{/red} : un {amber}faux problème{/amber}, qu'il n'y a pas lieu de chercher à résoudre. {coral}Le problème des moyens du bonheur n'est pas un problème *de* la raison{/coral}, ni même une tâche qu'elle pourrait se donner, comme elle se donne de s'approcher sans fin de ses idées. C'est ce que la dernière phrase va expliquer : le bonheur n'est pas un idéal de la raison.
+
+    ! Insoluble ne veut pas dire qu'on ne peut pas {red}être heureux{/red} : on peut l'être par chance, ou aidé de l'expérience ; on ne peut pas le {green}devenir à coup sûr, par une règle{/green}.
+  passage:
+    label: "Troisième moment"
+    part: "3. La conclusion : un idéal de l'imagination"
+    text: "le problème qui consiste à déterminer d'une façon sûre et générale quelle action peut favoriser le bonheur d'un être raisonnable est un problème tout à fait insoluble ;"
+  points:
   - id: kant-bonheur-prudence-p3-4
-    sentence: "« Il suit de là que les impératifs de la prudence, à parler exactement, ne peuvent commander en rien, c'est-à-dire représenter des actions d'une manière objective comme pratiquement nécessaires, qu'il faut les tenir plutôt pour des conseils (consilia) que pour des commandements (praecepta) de la raison ; __le problème qui consiste à__ ___ ; **il n'y a donc pas à cet égard d'impératif** qui puisse commander, au sens strict du mot, de faire ce qui rend heureux, parce que le bonheur est un idéal, non de la raison, mais de l'imagination, fondé uniquement sur des principes empiriques, dont on attendrait vainement qu'ils puissent déterminer une action par laquelle serait atteinte la totalité d'une série de conséquences en réalité infinie. »"
+    sentence: "« le problème qui consiste à ___ ; »"
     answer: "déterminer d'une façon sûre et générale quelle action peut favoriser le bonheur d'un être raisonnable est un problème tout à fait insoluble"
     alt: []
+  - id: kant-bonheur-prudence-p3-4b
+    sentence: "« le problème qui consiste à déterminer d'une façon sûre et générale quelle action peut favoriser le bonheur d'un être raisonnable est ___ ; »"
+    answer: "un problème tout à fait insoluble"
+    alt: []
+  - id: kant-bonheur-prudence-p3-x2
+    sentence: "Dire que le problème des moyens du bonheur est **insoluble par principe**, __c'est dire que c'est un ___ problème,__ qui n'a pas à être résolu."
+    answer: "faux"
+    alt: []
+  - id: kant-bonheur-prudence-p3-x3
+    sentence: "Le problème des moyens du bonheur __n'est pas un problème *de* la ___,__ ni même une tâche qu'elle pourrait se donner."
+    answer: "raison"
+    alt: []
+- id: kant-bonheur-prudence-p3c
+  title: "Un idéal, non de la raison, mais de l'imagination"
+  notes: |-
+    **Kant nomme enfin la cause de tout le texte :** {violet}**le bonheur est un idéal**{/violet}**,** {red}**non de la raison**{/red}**,** {green}**mais de l'imagination**{/green}.
+
+    **Pourquoi « donc » ?** Il conclut le problème insoluble : faute de solution, {red}pas d'impératif{/red} qui commande, {teal}« au sens strict du mot »{/teal}, de faire ce qui rend heureux. Le « au sens strict » répond au « à parler exactement » du début de la phrase : il y a des conseils, au sens large ; il n'y a pas d'impératif, au sens strict.
+
+    ? **Idéal** : chez Kant, une idée représentée non seulement *in concreto* mais *in individuo*, comme une chose singulière parfaite ({sky}*Critique de la raison pure*, « De l'idéal en général »{/sky}). Un {violet}idéal de la raison{/violet}, {yellow}le sage des stoïciens{/yellow}, est déterminé par une idée et sert de modèle à l'action ; un {violet}idéal de l'imagination{/violet} est une image composée d'éléments d'expérience, sans règle qui la détermine.
+
+    **Pourquoi « idéal » après « concept » et « idée » ?** Le texte a parlé du {amber}concept{/amber} du bonheur (qu'on ne peut pas déterminer), puis de son {amber}idée{/amber} (un tout absolu), et maintenant de son {amber}idéal{/amber}. Le mot garde ce que le bonheur a de visé, d'une perfection qu'on se représente et vers laquelle on tend ; mais il le retire du champ de la connaissance.
+
+    **Pourquoi « de l'imagination » ?** Parce que c'est elle qui {amber}compose, à partir des plaisirs éprouvés, l'image d'une satisfaction complète{/amber}, et qui se la représente comme accessible par telle action : {yellow}je m'imagine heureux une fois riche{/yellow}. La raison, elle, ne peut que penser le contraire : que cette totalité ne se trouve pas dans l'expérience. {coral}Prendre cet idéal de l'imagination pour un idéal de la raison, c'est l'erreur même de l'eudémonisme{/coral}, et la « dialectique naturelle » qui fait plier le devoir devant le bonheur.
+
+    ! « Idéal de l'imagination » ne veut pas dire que le bonheur est {red}une illusion{/red} ou {red}un mal{/red} : il est réellement visé par tous ; il ne peut pas {green}fonder une loi{/green}.
+  passage:
+    label: "Troisième moment"
+    part: "3. La conclusion : un idéal de l'imagination"
+    text: "il n'y a donc pas à cet égard d'impératif qui puisse commander, au sens strict du mot, de faire ce qui rend heureux, parce que le bonheur est un idéal, non de la raison, mais de l'imagination,"
+  points:
   - id: kant-bonheur-prudence-p3-5
-    sentence: "« Il suit de là que les impératifs de la prudence, à parler exactement, ne peuvent commander en rien, c'est-à-dire représenter des actions d'une manière objective comme pratiquement nécessaires, qu'il faut les tenir plutôt pour des conseils (consilia) que pour des commandements (praecepta) de la raison ; le problème qui consiste à déterminer d'une façon sûre et générale quelle action peut favoriser le bonheur d'un être raisonnable __est un problème tout à fait insoluble ;__ ___, parce que le **bonheur est un idéal**, non de la raison, mais de l'imagination, fondé uniquement sur des principes empiriques, dont on attendrait vainement qu'ils puissent déterminer une action par laquelle serait atteinte la totalité d'une série de conséquences en réalité infinie. »"
+    sentence: "« ___, parce que le bonheur est un idéal, non de la raison, mais de l'imagination, »"
     answer: "il n'y a donc pas à cet égard d'impératif qui puisse commander, au sens strict du mot, de faire ce qui rend heureux"
     alt: []
   - id: kant-bonheur-prudence-p3-6
-    sentence: "« Il suit de là que les impératifs de la prudence, à parler exactement, ne peuvent commander en rien, c'est-à-dire représenter des actions d'une manière objective comme pratiquement nécessaires, qu'il faut les tenir plutôt pour des conseils (consilia) que pour des commandements (praecepta) de la raison ; le problème qui consiste à déterminer d'une façon sûre et générale quelle action peut favoriser le bonheur d'un être raisonnable est un problème tout à fait insoluble ; il n'y a donc pas à cet égard d'impératif qui puisse commander, au sens strict du mot, __de faire ce qui rend heureux, parce que__ ___, **fondé uniquement sur des principes empiriques**, dont on attendrait vainement qu'ils puissent déterminer une action par laquelle serait atteinte la totalité d'une série de conséquences en réalité infinie. »"
+    sentence: "« il n'y a donc pas à cet égard d'impératif qui puisse commander, au sens strict du mot, de faire ce qui rend heureux, parce que ___, »"
     answer: "le bonheur est un idéal, non de la raison, mais de l'imagination"
     alt: []
+  - id: kant-bonheur-prudence-p3-x4
+    sentence: "Le texte passe du **concept** du bonheur à son **idée**, __puis à son ___.__"
+    answer: "idéal"
+    alt: []
+  - id: kant-bonheur-prudence-p3-x5
+    sentence: "Chez Kant, un **idéal** est une idée représentée __*in ___*, comme une chose singulière parfaite.__"
+    answer: "individuo"
+    alt: []
+- id: kant-bonheur-prudence-p3d
+  title: "Une série de conséquences en réalité infinie"
+  notes: |-
+    **Le dernier membre explique pourquoi le bonheur relève de l'imagination : fondé sur l'expérience, il exigerait de connaître** {coral}**une série infinie de conséquences**{/coral}.
+
+    **Pourquoi « fondé uniquement sur des principes empiriques » ?** C'est le premier moment repris : les éléments du bonheur sont {amber}empiriques{/amber}. « Uniquement » : rien en lui ne vient de la raison, sinon l'exigence de totalité.
+
+    **Pourquoi « on attendrait vainement » ?** L'expression décrit l'espoir de l'eudémoniste : qu'à force d'expérience on trouve l'action qui rend heureux. {red}Cet espoir est vain par principe{/red}, non faute d'expérience suffisante.
+
+    **Pourquoi « la totalité d'une série de conséquences en réalité infinie » ?** Toute action a des suites, et ces suites en ont d'autres, sans terme assignable. Le bonheur étant {amber}un tout absolu{/amber}, l'action qui y mènerait devrait atteindre {coral}la totalité de cette série{/coral}, et donc la connaître : c'est l'omniscience du deuxième moment. {coral}Une série infinie ne peut pas être totalisée par un être fini.{/coral} L'imagination se la représente pourtant comme achevée : c'est en cela que le bonheur est son idéal.
+
+    **Le texte se referme sur son début.** La dernière proposition redit la première sous une autre forme, et montre qu'elle était démontrée :
+
+    | Premier moment | Troisième moment |
+    | des éléments empiriques | des principes empiriques |
+    | un tout absolu, un maximum de bien-être | la totalité d'une série de conséquences infinie |
+    | personne ne peut dire ce qu'il veut | aucun impératif ne peut commander |
+
+    ! « En réalité infinie » ne veut pas dire {red}très longue{/red} : même avec un temps illimité, un être fini {green}ne parcourrait jamais une série infinie{/green}. L'obstacle n'est pas le temps, c'est la finitude.
+  passage:
+    label: "Troisième moment"
+    part: "3. La conclusion : un idéal de l'imagination"
+    text: "fondé uniquement sur des principes empiriques, dont on attendrait vainement qu'ils puissent déterminer une action par laquelle serait atteinte la totalité d'une série de conséquences en réalité infinie."
+  tables:
+  - table: premier-moment-troisieme-moment
+    exercises:
+    - {kind: bank, column: Troisième moment}
+    - {kind: cell, column: Troisième moment}
+  points:
   - id: kant-bonheur-prudence-p3-7
-    sentence: "« Il suit de là que les impératifs de la prudence, à parler exactement, ne peuvent commander en rien, c'est-à-dire représenter des actions d'une manière objective comme pratiquement nécessaires, qu'il faut les tenir plutôt pour des conseils (consilia) que pour des commandements (praecepta) de la raison ; le problème qui consiste à déterminer d'une façon sûre et générale quelle action peut favoriser le bonheur d'un être raisonnable est un problème tout à fait insoluble ; il n'y a donc pas à cet égard d'impératif qui puisse commander, au sens strict du mot, de faire ce qui rend heureux, parce que le bonheur est un idéal, __non de la raison, mais de l'**imagination**,__ ___, dont on attendrait vainement qu'ils puissent déterminer une action par laquelle serait atteinte la totalité d'une série de conséquences en réalité infinie. »"
+    sentence: "« ___, dont on attendrait vainement qu'ils puissent déterminer une action par laquelle serait atteinte la totalité d'une série de conséquences en réalité infinie. »"
     answer: "fondé uniquement sur des principes empiriques"
     alt: []
   - id: kant-bonheur-prudence-p3-8
-    sentence: "« Il suit de là que les impératifs de la prudence, à parler exactement, ne peuvent commander en rien, c'est-à-dire représenter des actions d'une manière objective comme pratiquement nécessaires, qu'il faut les tenir plutôt pour des conseils (consilia) que pour des commandements (praecepta) de la raison ; le problème qui consiste à déterminer d'une façon sûre et générale quelle action peut favoriser le bonheur d'un être raisonnable est un problème tout à fait insoluble ; il n'y a donc pas à cet égard d'impératif qui puisse commander, au sens strict du mot, de faire ce qui rend heureux, parce que le bonheur est un idéal, non de la raison, mais de l'imagination, fondé uniquement sur des principes empiriques, __dont on attendrait vainement qu'ils puissent **déterminer une action** par laquelle serait__ ___. »"
+    sentence: "« fondé uniquement sur des principes empiriques, dont on attendrait vainement qu'ils puissent déterminer une action par laquelle serait ___. »"
     answer: "atteinte la totalité d'une série de conséquences en réalité infinie"
     alt: []
-  - id: kant-bonheur-prudence-p3-9
-    sentence: "Selon le commentaire, **ce dernier moment** tire les conséquences du syllogisme, __introduites par la formule__ \"___\"."
-    answer: "Il suit de là"
-    alt: []
-  - id: kant-bonheur-prudence-p3-10
-    sentence: "En distinguant les conseils (*consilia*) des **commandements** (*praecepta*) de la raison, __Kant vide de tout son sens le concept même de__ ___."
-    answer: "prudence"
-    alt: []
-  - id: kant-bonheur-prudence-p3-11
-    sentence: "Selon le commentaire, dire que le problème du bonheur est \"**insoluble**\" __revient à dire que c'est un__ ___ problème, qui n'a donc pas à être résolu."
-    answer: "faux"
-    alt: []
-  - id: kant-bonheur-prudence-p3-12
-    sentence: "Selon le commentaire, __ce **problème** n'est en fait pas un problème de la__ ___ : il n'appartient même pas au registre où la raison pourrait chercher une solution."
-    answer: "raison"
-    alt: []
-  - id: kant-bonheur-prudence-p3-13
-    sentence: "Le bonheur est un **idéal de l'imagination** et non de la raison, car l'imagination seule peut se représenter comme réalisable __une action qui atteindrait une série de conséquences en réalité__ ___."
-    answer: "infinie"
+  - id: kant-bonheur-prudence-p3-x6
+    sentence: "Atteindre la totalité des conséquences d'une action supposerait de les connaître toutes, __c'est-à-dire l'___,__ que nul être fini n'a."
+    answer: "omniscience"
     alt: []
 - id: kant-bonheur-prudence-ouverture
   title: "La conscience morale commune"
   notes: |-
-    Au tout début des {sky}*Fondements*{/sky}, avant même d'entamer la démonstration de notre
-    extrait, Kant était déjà parti de ce même point : {green}la conscience morale commune n'a{/green}
-    {green}besoin d'aucune science pour juger, infailliblement, du bien et du mal{/green}. C'est ce
-    passage, tiré de la {sky}Première section (AK IV, 404){/sky}, que Kant résume à la fin de cette
-    même section.
+    **Kant part, dès la première section des** {sky}*Fondements*{/sky}**, de ce que le texte suppose :** {green}la raison humaine commune n'a besoin d'aucune science pour juger du bien et du mal{/green} {sky}(AK IV, 404){/sky}.
 
-    La méthode que Kant y prête à la raison humaine commune est {amber}explicitement socratique{/amber} :
-    il ne s'agit pas de lui apprendre quoi que ce soit de nouveau, mais de la rendre
-    attentive à un principe qu'elle possède déjà. C'est très exactement la tâche que Kant
-    mène à bien dans notre extrait, par la négative : {coral}en réfutant l'eudémonisme, il ne fait{/coral}
-    {coral}que rendre attentive la raison à son propre principe{/coral}, contre une confusion qui l'avait
-    brouillé.
+    **Pourquoi « comme le faisait Socrate » ?** La méthode que Kant prête à la philosophie est {amber}socratique{/amber} : ne rien apprendre de nouveau à la raison commune, mais la rendre attentive à un principe qu'elle possède déjà. C'est ce que fait notre extrait, par la négative : {coral}en montrant que le bonheur ne peut pas commander, il écarte une confusion qui brouillait ce principe{/coral}, sans rien ajouter à la conscience morale.
 
-    Cette confiance dans la conscience morale commune n'empêche pas Kant de reconnaître
-    que la recherche du bonheur reste un fait, quoique non apodictique : rien n'empêche
-    un être humain d'y renoncer ou de la sacrifier, si les moyens pour l'atteindre en
-    viennent à rendre incertaine la fin elle-même. Aussi, si le bonheur ne peut pas être
-    le principe de la volonté morale, Kant le réintroduira plus tard, non plus comme
-    fondement mais comme visée seconde de cette volonté : {green}un bonheur proportionné à la{/green}
-    {green}vertu{/green}.
+    **Pourquoi « ni de science ni de philosophie » ?** Parce que la loi morale ne dépend d'aucun savoir sur le monde, au contraire du bonheur, qui en exigerait un infini. {coral}Savoir ce qu'on doit faire est à la portée de tous ; savoir ce qui rendra heureux ne l'est de personne.{/coral} Le contraste éclaire le texte : l'omniscience qu'il faudrait pour le bonheur, la moralité n'en a nul besoin.
 
-    ! Cette confiance dans la conscience morale commune n'a rien d'un relativisme : elle
-    suppose au contraire un principe unique et universel, que la philosophie a seulement
-    pour tâche d'expliciter, non d'inventer.
+    ! Cette confiance dans la conscience commune n'a rien d'un {red}relativisme{/red} : elle suppose {green}un principe unique et universel{/green}, que la philosophie a seulement à expliciter.
   passage:
     label: "Ouverture"
+    source: "Fondements de la métaphysique des mœurs, Première section, AK IV, 404"
     text: "[La raison humaine commune] a dans tous les cas qui surviennent la pleine compétence qu'il faut pour distinguer ce qui est bien, ce qui est mal, ce qui est conforme ou contraire au devoir, pourvu que, sans lui rien apprendre le moins du monde de nouveau, on la rende attentive, comme le faisait Socrate, à son propre principe, de montrer par suite qu'il n'est besoin ni de science ni de philosophie pour savoir ce qu'on a à faire, pour être honnête et bon, même sage et vertueux."
   points:
   - id: kant-bonheur-prudence-ouverture-1
-    sentence: "« [La raison humaine commune] __a dans tous les cas qui surviennent__ ___, pourvu que, **sans lui rien apprendre le moins du monde de nouveau**, on la rende attentive, comme le faisait Socrate, à son propre principe, de montrer par suite qu'il n'est besoin ni de science ni de philosophie pour savoir ce qu'on a à faire, pour être honnête et bon, même sage et vertueux. »"
+    sentence: "« [La raison humaine commune] a dans tous les cas qui surviennent ___, pourvu que, sans lui rien apprendre le moins du monde de nouveau, on la rende attentive, comme le faisait Socrate, à son propre principe, de montrer par suite qu'il n'est besoin ni de science ni de philosophie pour savoir ce qu'on a à faire, pour être honnête et bon, même sage et vertueux. »"
     answer: "la pleine compétence qu'il faut pour distinguer ce qui est bien, ce qui est mal, ce qui est conforme ou contraire au devoir"
     alt: []
   - id: kant-bonheur-prudence-ouverture-2
-    sentence: "« [La raison humaine commune] a dans tous les cas qui surviennent la pleine compétence qu'il faut pour distinguer ce qui est bien, ce qui est mal, ce qui est conforme ou contraire au devoir, __pourvu que,__ **sans lui rien apprendre le moins du monde de nouveau**, ___, de montrer par suite qu'il n'est besoin ni de science ni de philosophie pour savoir ce qu'on a à faire, pour être honnête et bon, même sage et vertueux. »"
+    sentence: "« [La raison humaine commune] a dans tous les cas qui surviennent la pleine compétence qu'il faut pour distinguer ce qui est bien, ce qui est mal, ce qui est conforme ou contraire au devoir, pourvu que, sans lui rien apprendre le moins du monde de nouveau, ___, de montrer par suite qu'il n'est besoin ni de science ni de philosophie pour savoir ce qu'on a à faire, pour être honnête et bon, même sage et vertueux. »"
     answer: "on la rende attentive, comme le faisait Socrate, à son propre principe"
     alt: []
   - id: kant-bonheur-prudence-ouverture-3
-    sentence: "« [La raison humaine commune] a dans tous les cas qui surviennent la pleine compétence qu'il faut pour distinguer ce qui est bien, ce qui est mal, ce qui est conforme ou contraire au devoir, pourvu que, sans lui rien apprendre le moins du monde de nouveau, on la rende attentive, comme le faisait Socrate, à son propre principe, __de montrer par suite__ qu'___, pour être **honnête et bon**, même sage et vertueux. »"
+    sentence: "« [La raison humaine commune] a dans tous les cas qui surviennent la pleine compétence qu'il faut pour distinguer ce qui est bien, ce qui est mal, ce qui est conforme ou contraire au devoir, pourvu que, sans lui rien apprendre le moins du monde de nouveau, on la rende attentive, comme le faisait Socrate, à son propre principe, de montrer par suite qu'___, pour être honnête et bon, même sage et vertueux. »"
     answer: "il n'est besoin ni de science ni de philosophie pour savoir ce qu'on a à faire"
     alt: []
   - id: kant-bonheur-prudence-ouverture-4
-    sentence: "« [La raison humaine commune] a dans tous les cas qui surviennent la pleine compétence qu'il faut pour distinguer ce qui est bien, ce qui est mal, ce qui est conforme ou contraire au devoir, pourvu que, sans lui rien apprendre le moins du monde de nouveau, on la rende attentive, comme le faisait Socrate, à son propre principe, de montrer par suite qu'il n'est besoin **ni de science ni de philosophie** pour savoir __ce qu'on a à faire,__ ___. »"
+    sentence: "« [La raison humaine commune] a dans tous les cas qui surviennent la pleine compétence qu'il faut pour distinguer ce qui est bien, ce qui est mal, ce qui est conforme ou contraire au devoir, pourvu que, sans lui rien apprendre le moins du monde de nouveau, on la rende attentive, comme le faisait Socrate, à son propre principe, de montrer par suite qu'il n'est besoin ni de science ni de philosophie pour savoir ce qu'on a à faire, ___. »"
     answer: "pour être honnête et bon, même sage et vertueux"
     alt: []
+  - id: kant-bonheur-prudence-ouverture-x1
+    sentence: "La méthode que Kant prête à la philosophie morale, rendre la raison commune attentive à son propre principe sans rien lui apprendre, __est dite par lui celle de ___.__"
+    answer: "Socrate"
+    alt: []
+- id: kant-bonheur-prudence-o1
+  title: "Ce que le texte établit pour la morale"
+  notes: |-
+    **Le texte est négatif, mais il ouvre la voie de toute la morale kantienne :** {coral}**puisque le bonheur ne peut pas commander, le principe de la moralité doit être cherché ailleurs que dans une fin**{/coral}.
+
+    **Une morale formelle.** Si toute fin qu'on se propose est, comme le bonheur, tirée de l'expérience, aucune ne peut fonder une loi nécessaire et universelle. {amber}Il ne reste que la forme de la loi elle-même{/amber} : l'{violet}impératif catégorique{/violet}, qui commande d'agir selon une maxime qu'on puisse vouloir voir devenir une loi universelle {sky}(AK IV, 421){/sky}. Il ne pose {red}aucune condition{/red}, aucun « si tu veux être heureux » : c'est précisément ce que l'analyse du bonheur rendait nécessaire. {coral}La confusion entre un idéal de l'imagination et un idéal de la raison une fois défaite, le véritable impératif moral peut trouver sa formule.{/coral}
+
+    **Un fait, non une nécessité.** Que tous désirent le bonheur est {amber}un fait{/amber}, mais non un fait {violet}apodictique{/violet} (nécessaire) : {yellow}un homme peut renoncer à son bonheur ou le sacrifier{/yellow}, au devoir par exemple, et c'est même là que la moralité se montre. Le désir de bonheur ne règle donc pas la volonté de l'intérieur.
+
+    **Le bonheur à sa place.** Kant ne chasse pas le bonheur de la vie morale : il le déplace. Dans la {sky}*Critique de la raison pratique*{/sky} (Dialectique), le {violet}souverain bien{/violet} réunit la vertu et {green}un bonheur proportionné à la vertu{/green}. Le bonheur n'est plus le principe de la loi, mais ce qu'on peut espérer quand on la suit : la morale n'est pas la doctrine qui enseigne comment se rendre heureux, mais comment se rendre {amber}digne du bonheur{/amber}.
+
+    **Pour l'anthropologie.** Le texte décrit l'homme comme {violet}être fini{/violet}, partagé entre une raison qui exige la totalité et une sensibilité qui ne lui offre que des fragments. {coral}Le malheur de l'homme n'est pas d'abord de manquer de biens, mais de ne pas savoir ce qu'il veut en les voulant.{/coral}
+
+    ! Kant ne prêche pas {red}le renoncement au bonheur{/red} : il refuse qu'il soit {green}le fondement{/green} de la morale, et lui garde une place dans son {green}prolongement{/green}.
+  passage:
+    label: "Prolongement"
+  points:
   - id: kant-bonheur-prudence-ouverture-5
-    sentence: "Selon le commentaire, Kant ne nie pas que le bonheur soit désiré par tous : __c'est un fait, mais non un fait__ ___, puisque **rien n'empêche un être humain d'y renoncer ou de le sacrifier**."
+    sentence: "Que le bonheur soit désiré par tous est **un fait**, __mais non un fait ___,__ puisqu'un homme peut y renoncer ou le sacrifier."
     answer: "apodictique"
     alt: []
   - id: kant-bonheur-prudence-ouverture-6
-    sentence: "Selon le commentaire, si la recherche du bonheur ne peut pas être le principe de la volonté morale, Kant la réintroduira plus tard comme **visée seconde** de cette volonté, __comme un bonheur proportionné à la__ ___."
+    sentence: "Dans le **souverain bien**, Kant réintroduit le bonheur, __non comme principe de la loi, mais comme bonheur proportionné à la ___.__"
     answer: "vertu"
+    alt: []
+  - id: kant-bonheur-prudence-o1-x1
+    sentence: "La morale n'enseigne pas comment se rendre heureux, __mais comment se rendre ___ du bonheur.__"
+    answer: "digne"
+    alt: ["dignes"]
+  - id: kant-bonheur-prudence-o1-x2
+    sentence: "Puisqu'aucune fin empirique ne peut fonder une loi, **l'impératif moral** __ne pose aucune ___,__ aucun « si tu veux être heureux »."
+    answer: "condition"
+    alt: []
+- id: kant-bonheur-prudence-o2
+  title: "Contre la prudence des Anciens"
+  notes: |-
+    **Le texte s'inscrit dans un débat avec les morales antiques, qui faisaient du bonheur la fin de la vie bonne et de la prudence la vertu qui y conduit :** {sky}**Aristote**{/sky} **est le premier visé.**
+
+    **Le bonheur comme fin dernière.** Pour {sky}Aristote{/sky}, le bonheur (`eudaimonia`) est {green}la fin dernière{/green}, voulue pour elle-même et en vue de laquelle on veut tout le reste ({sky}*Éthique à Nicomaque*, I, 1 et I, 7{/sky}). Kant l'accorde : le bonheur est bien la fin que tous poursuivent. Il conteste qu'on puisse {red}en tirer une règle{/red}.
+
+    **Deux prudences.** Chez Aristote, la {violet}prudence{/violet} (`phronèsis`) est {amber}une vertu{/amber} : la capacité de délibérer correctement sur ce qui est bon pour soi en vue de {yellow}vivre bien en général{/yellow} ({sky}*Éthique à Nicomaque*, VI, 5{/sky}). Elle appartient à la vie morale. Chez Kant, la prudence (*Klugheit*) n'est plus qu'{red}une habileté à choisir les moyens de son bien-être{/red} : elle sort de la morale, et ses règles ne sont que des conseils. {coral}Ce qui était chez Aristote le cœur de la vertu devient chez Kant un savoir-faire étranger au devoir.{/coral}
+
+    **L'imprécision, reconnue des deux côtés.** Aristote admettait déjà qu'en éthique {amber}on ne doit chercher que la précision que comporte le sujet{/amber} ({sky}*Éthique à Nicomaque*, I, 3{/sky}) : des vérités qui valent « le plus souvent ». Kant fait le même constat, mais en tire la conclusion inverse : {coral}ce qui ne vaut que le plus souvent ne peut pas fonder la morale{/coral}, qui exige la nécessité.
+
+    **Le calcul des plaisirs.** {sky}Épicure{/sky} demandait de choisir entre les plaisirs en les mesurant à leurs suites, d'en refuser certains pour les peines qu'ils entraînent ({sky}*Lettre à Ménécée*{/sky}). Les exemples de Kant ruinent ce calcul : {red}les suites d'un plaisir ou d'une peine forment une série qu'on ne peut pas parcourir{/red}, et {yellow}la maladie qui protège des excès{/yellow} montre qu'on ne sait jamais d'avance où est le gain.
+
+    ! Kant ne reproche pas aux Anciens d'avoir {red}aimé le bonheur{/red}, mais d'avoir pris un idéal de l'imagination pour {green}un principe de la raison{/green}.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: kant-bonheur-prudence-o2-x1
+    sentence: "Pour Aristote, le bonheur, `eudaimonia`, est __la fin ___,__ voulue pour elle-même et en vue de laquelle on veut tout le reste."
+    answer: "dernière"
+    alt: []
+  - id: kant-bonheur-prudence-o2-x2
+    sentence: "Chez Aristote, la prudence, `phronèsis`, est __une ___,__ partie de la vie morale ; chez Kant, une habileté étrangère au devoir."
+    answer: "vertu"
+    alt: []
+  - id: kant-bonheur-prudence-o2-x3
+    sentence: "Aristote demande de ne chercher en éthique __que la ___ que comporte le sujet__ (*Éthique à Nicomaque*, I, 3)."
+    answer: "précision"
+    alt: []
+  - id: kant-bonheur-prudence-o2-x4
+    sentence: "La prudence d'Aristote est définie au **livre VI** de l'*Éthique à Nicomaque*, __au chapitre ___.__"
+    answer: "5"
     alt: []
