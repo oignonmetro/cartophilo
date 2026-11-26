@@ -507,6 +507,14 @@ export const unitSchema = z.object({
    */
   group: z.string().optional(),
   /**
+   * Niveau d'approfondissement d'une unité de texte (voir `content/textes.md`,
+   * « Trois niveaux ») : `approfondie` (une leçon par segment de phrase),
+   * `normale` (une ou deux phrases par leçon), `allegee` (un texte à
+   * apprendre par cœur, peu à commenter). Absent : normale. Sans effet sur
+   * l'app, il dit à l'auteur à quel grain l'unité est écrite.
+   */
+  depth: z.enum(['approfondie', 'normale', 'allegee']).optional(),
+  /**
    * Introduction d'une unité de texte (contexte, grandes idées), facultative :
    * affichée en tête du texte intégral et avant le premier paragraphe.
    */

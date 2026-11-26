@@ -34,8 +34,10 @@ Chaque unité suit le même schéma :
    s'introduit au fil des leçons, dans un encadré `? terme : définition` du
    rappel de la leçon où le texte s'en sert pour la première fois, et ses
    cartes vont dans cette leçon (demandé par l'utilisateur sur `n1863`).
-3. **Une leçon par paragraphe** (`§1`, `§2`…), dans l'ordre du texte. Chacune
-   présente d'abord le paragraphe cité en entier, **suivi de son explication**
+3. **Une leçon par paragraphe ou par segment** (`§1`, `§2`…), dans l'ordre du
+   texte, au grain que fixe le niveau de l'unité (voir « Trois niveaux »
+   plus bas). Chacune
+   présente d'abord le passage cité en entier, **suivi de son explication**
    (`notes` : ce que dit le paragraphe, comment il s'articule, les pièges),
    puis ses cartes, **jouées dans l'ordre écrit** (jamais mélangées) :
    - d'abord les **cartes-citation** : le fragment cité, avec un trou sur un
@@ -72,6 +74,41 @@ prolongement est signalée par `npm run content:check` : elle disparaîtrait de
 
 Un paragraphe peut être sauté s'il ne mérite pas d'être appris : ses voisins
 gardent leur numéro (§2 puis §4).
+
+## Trois niveaux
+
+Une unité de texte s'écrit à l'un de trois niveaux, que dit le champ `depth`
+de l'unité (`approfondie`, `normale`, `allegee` ; absent, `normale`). Le
+niveau change **le grain du découpage et l'ampleur du commentaire, jamais la
+rigueur** : à tous les niveaux, rien n'est affirmé sans être justifié, et
+chaque « donc », chaque prémisse implicite du passage expliqué est dépliée
+(voir la skill `unite-texte`, § 4, « Le rappel »). Le niveau se choisit d'après le texte,
+non d'après le temps dont on dispose (décidé avec l'utilisateur le
+2026-11-26).
+
+| | Approfondie | Normale | Allégée |
+| Pour quel texte | dense et central : chaque mot compte, on pourrait avoir à l'expliquer | le cas ordinaire | peu à expliquer et à commenter ; le but est surtout de l'apprendre par cœur |
+| Modèle | `n1863` | `m1844` à `m1844e` | à venir |
+| Une leçon pour | un segment de phrase (une proposition, une incise) | une ou deux phrases | un paragraphe ; s'il est trop long, une, deux ou trois phrases |
+| Le rappel | interroge chaque mot (« pourquoi ce mot, cette tournure, cet ordre ? ») jusqu'à sa conclusion | interroge chaque phrase : ses mots décisifs, ses prémisses implicites, son articulation avec la précédente | donne la structure argumentative du passage (thèse, raisons, « donc », ce qui est posé et ce qui est déduit), pour le comprendre vite et facilement ; pas les mouvements du texte |
+| Notions, exemples | un encadré pour chaque notion, un exemple pour chaque question | un encadré pour chaque notion nouvelle, un exemple par leçon | les notions sans lesquelles on ne comprend pas ; un exemple si le passage est abstrait |
+| Autres textes de l'auteur | cités et expliqués : en quoi ils éclairent la phrase | cités quand ils éclairent | seulement s'ils sont indispensables |
+| Cartes-explication | nombreuses (une par question du rappel, environ) | quelques-unes par leçon | peu : l'essentiel des cartes fait apprendre le texte |
+
+**Les leçons d'introduction ne dépendent pas du niveau**, mais du texte
+seul : y a-t-il beaucoup à savoir pour le comprendre (ce qui le précède, le
+débat où il entre, des notions qu'il suppose) ? Un texte allégé peut avoir
+deux leçons d'introduction, un texte approfondi une seule, ou aucune si le
+texte se comprend de lui-même.
+
+**Changer de niveau sans perdre la révision.** On peut reprendre une unité à
+un niveau supérieur (une allégée devenue normale, une normale devenue
+approfondie) : on redécoupe les leçons, et les cartes-citation gardent leurs
+identifiants, recentrées sur leur nouveau segment, ainsi que les
+cartes-explication dont le contenu ne change pas (refonte de `m1844` à
+`m1844e`, 2026-11-22 et 23). Des leçons consécutives d'un même paragraphe
+portent le même `label` et le même `part` : « Lire le texte » les recoud
+en un seul paragraphe.
 
 ## Le format
 

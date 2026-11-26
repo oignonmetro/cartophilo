@@ -198,6 +198,25 @@ retour au global), dont les parties X.Y deviennent les repères des leçons.
 
 ## 1. Préparer
 
+- **Le niveau de l'unité** (`depth:` dans l'en-tête ; table complète dans
+  `content/textes.md`, « Trois niveaux ») : il fixe le grain du découpage et
+  l'ampleur du rappel, jamais la rigueur. Le choisir d'après le texte, ou
+  prendre celui que l'utilisateur demande ; sinon `normale`, et le dire.
+  - **`approfondie`** : texte dense et central, où chaque mot compte. Une
+    leçon par segment de phrase (une proposition, une incise) ; le rappel
+    interroge chaque mot. Modèle : `marx/units/n1863`.
+  - **`normale`** : le cas ordinaire. Une leçon par phrase ou par deux
+    phrases ; le rappel interroge chaque phrase, ses mots décisifs, ses
+    prémisses implicites, son lien avec la précédente. Modèle :
+    `marx/units/m1844` à `m1844e`.
+  - **`allegee`** : texte où il y a peu à expliquer et à commenter, dont le
+    but est surtout d'être appris par cœur. Une leçon par paragraphe, ou,
+    si le paragraphe est trop long, une leçon pour une, deux ou trois
+    phrases. Le rappel ne donne pas les mouvements du texte : il en donne
+    **la structure argumentative** (la thèse, ses raisons, chaque « donc »,
+    ce qui est posé et ce qui est déduit), pour le comprendre vite et
+    facilement. Peu de cartes-explication : l'essentiel des cartes fait
+    apprendre le texte.
 - **Identifiant de l'unité** : court, sans accent, unique dans le cours
   (`n1841`, `t10c1`, `m8`). Leçons `<id>-i1`, `<id>-i2`… (introduction),
   `<id>-p1`, `<id>-p2`… (paragraphes), `<id>-o1`, `<id>-o2`…
@@ -208,7 +227,14 @@ retour au global), dont les parties X.Y deviennent les repères des leçons.
   sinon ses mouvements, repérés par leurs lignes (`label: "1178a22-28"`,
   `"l. 3-11"`), de préférence selon le découpage du commentaire. Un intitulé
   court par paragraphe, qui dit son mouvement. Un paragraphe sans intérêt
-  pour l'épreuve peut être sauté.
+  pour l'épreuve peut être sauté. **Puis les leçons, au grain du niveau** :
+  quand un paragraphe se coupe en plusieurs leçons (`normale`, `approfondie`,
+  ou un long paragraphe d'une unité `allegee`), chaque leçon cite sa seule
+  portion dans `passage.text`, et toutes portent le même `label` et le même
+  `part`, pour que « Lire le texte » recouse le paragraphe ; leurs
+  identifiants suivent celui du paragraphe (`<id>-p1`, `<id>-p1b`,
+  `<id>-p1c`…), sans numéro dans le titre. Les cartes-citation citent alors
+  leur seul segment, entre « », sans `fragment`.
 - **Fragments** : un paragraphe de plus de 80 mots environ se cite en
   plusieurs fragments (`1/3`, `2/3`, `3/3`), coupés aux fins de phrase.
 - **Paragraphe en parties** : quand l'utilisateur veut une explication très
@@ -277,6 +303,7 @@ subtitle: "<Œuvre, livre, chapitre, lignes>"
 icon: page
 color: coral                      # la couleur de la piste
 group: "<Groupe>"                 # Hors-programme ou La vie seulement
+depth: normale                    # approfondie | normale | allegee, voir § 1
 intro: |-
   <Présentation : deux ou trois phrases de situation.>
 lessons:
@@ -324,7 +351,16 @@ inverses.
 
 ## 3. Les leçons d'introduction
 
-Avant la première leçon-paragraphe, une ou deux leçons qui donnent ce qu'il
+**Leur nombre ne dépend que du texte, jamais du niveau** : y a-t-il beaucoup
+à savoir pour le comprendre (ce qui le précède, le débat où il entre, ce
+qu'il suppose) ? Aucune si le texte se comprend de lui-même ; une s'il suffit
+de le situer et d'en donner le plan ; deux quand il faut aussi poser la
+question, la réponse ordinaire qu'il conteste, sa thèse, sa problématique et
+ses difficultés (modèle : `m1844-i1` et `m1844-i2`, « Le texte, sa place et
+son plan », puis « La question, la thèse, la problématique », avec un tableau
+`Difficulté | Où elle se trouve | Réponse du texte`).
+
+Avant la première leçon-paragraphe, ces leçons donnent ce qu'il
 faut pour comprendre le texte : le problème auquel il répond, les positions
 rivales et leurs tenants, sa place dans l'œuvre. **Jamais de leçon sur les
 notions** (« notions à connaître », définitions préalables) : l'utilisateur
@@ -380,7 +416,30 @@ paragraphes et avant les prolongements.
 ## 4. Le rappel de chaque paragraphe
 
 Affiché sous le texte cité, avec le titre « Explication ». C'est un vrai
-commentaire du paragraphe, pas un résumé d'une ligne :
+commentaire du passage, pas un résumé d'une ligne.
+
+**Tout justifier, à tous les niveaux.** Le rappel s'interroge sur tout ce
+qu'il touche (« pourquoi ce mot ? pourquoi cette phrase ici ? pourquoi
+« donc » ? ») et n'accepte rien qui ne soit justifié : il cherche chaque
+prémisse implicite, chaque articulation, même imperceptible, et mène chaque
+question jusqu'à sa conclusion, en gras (`**Pourquoi… ?**`). Le niveau ne
+règle que **ce sur quoi** portent ces questions : chaque mot (`approfondie`),
+chaque phrase (`normale`), la chaîne d'arguments du passage (`allegee`).
+C'est le reproche de l'utilisateur aux premières versions de `m1844` à
+`m1844e` (2026-11-22) : des sous-parties de deux phrases juxtaposées, des
+prémisses posées sans être dépliées (« Prémisse implicite : … » sans suite),
+de l'allemand en parenthèse sans conséquence, aucune notion définie, aucun
+exemple. À éviter :
+
+- les intertitres numérotés dans un même rappel (« 1.1 », « 1.2 ») : un
+  rappel suit un seul fil ;
+- une remarque de traduction qui ne mène à aucune conclusion : relever
+  l'allemand seulement quand il change le sens (un « donc » effacé, un
+  mot qui revient d'un texte à l'autre) ;
+- une phrase de commentateur gardée entre guillemets sans son nom : la
+  rendre en paraphrase.
+
+Le rappel contient :
 
 - **la thèse**, dans un premier paragraphe dont l'idée directrice est en
   gras ;
