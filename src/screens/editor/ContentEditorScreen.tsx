@@ -14,6 +14,7 @@ import { useFrenchQuotes } from './frenchQuotes'
 import { isCitation } from './textUnit'
 import type { LessonTableDTO, PassageDTO, PointDTO, SkippedRowDTO, TrackKind, TreeCourse, TreeLesson, TreeTrack, TreeUnit } from './types'
 import { SujetsEditor } from './SujetsEditor'
+import { asideCompanions, asideKeyFor } from './aside'
 import { NewLessonDialog, NewUnitDialog, UnitSettingsDialog } from './UnitDialogs'
 import { moveUnit, type UnitTarget } from './unitGroups'
 
@@ -136,6 +137,9 @@ export default function ContentEditorScreen() {
   const [originalPassage, setOriginalPassage] = useState<PassageDTO | null>(null)
   const [title, setTitle] = useState('')
   const [originalTitle, setOriginalTitle] = useState('')
+  // Clé de la parenthèse de la leçon (`aside:`), `null` hors parenthèse.
+  const [aside, setAside] = useState<string | null>(null)
+  const [originalAside, setOriginalAside] = useState<string | null>(null)
   const [notes, setNotes] = useState('')
   const [original, setOriginal] = useState('')
   // Les définitions du glossaire du cours ouvert : les `[def]` du rappel les
@@ -160,11 +164,23 @@ export default function ContentEditorScreen() {
 
   const dirty =
     title !== originalTitle ||
+    aside !== originalAside ||
     notes !== original ||
     JSON.stringify(defs) !== JSON.stringify(originalDefs) ||
     JSON.stringify(points) !== JSON.stringify(originalPoints) ||
     JSON.stringify(passage) !== JSON.stringify(originalPassage) ||
     JSON.stringify(tables) !== JSON.stringify(originalTables)
+
+  // Les leçons de l'unité ouverte, telles qu'enregistrées : de quoi rattacher
+  // la leçon à la parenthèse voisine (voir `asideKeyFor`).
+  const unitLessons = useMemo(
+    () =>
+      tree
+        ?.find((course) => course.id === selection?.course)
+        ?.tracks.flatMap((track) => track.units)
+        .find((unit) => unit.id === selection?.unit)?.lessons ?? null,
+    [tree, selection],
+  )
 
   const loadTree = useCallback(async () => {
     try {
@@ -211,6 +227,8 @@ export default function ContentEditorScreen() {
       setOriginalDefs(loadedDefs)
       setTitle(data.title)
       setOriginalTitle(data.title)
+      setAside(data.aside ?? null)
+      setOriginalAside(data.aside ?? null)
       setNotes(data.notes)
       setOriginal(data.notes)
       setPoints(data.points)
@@ -408,7 +426,7 @@ export default function ContentEditorScreen() {
       const res = await fetch(`/api/lesson?course=${selection.course}&unit=${selection.unit}&lesson=${selection.lesson}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title, notes, points: points ?? undefined, passage: passage ?? undefined, tables }),
+        body: JSON.stringify({ title, aside, notes, points: points ?? undefined, passage: passage ?? undefined, tables }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error ?? res.statusText)
@@ -438,6 +456,7 @@ export default function ContentEditorScreen() {
       // `AltField`) : il ne reprend la version enregistrée qu'en se remontant.
       if (JSON.stringify(savedPoints) !== JSON.stringify(points)) setResetToken((token) => token + 1)
       setOriginalTitle(savedTitle)
+      setOriginalAside(aside)
       setOriginal(savedNotes)
       setOriginalPoints(savedPoints)
       setOriginalPassage(savedPassage)
@@ -449,14 +468,14 @@ export default function ContentEditorScreen() {
       // un renommage resterait invisible dans la barre latérale tant qu'on
       // ne rouvre pas complètement l'éditeur.
       // Le repère d'une leçon de texte s'y affiche aussi.
-      if (title !== originalTitle || passage?.label !== originalPassage?.label) void loadTree()
+      if (title !== originalTitle || aside !== originalAside || passage?.label !== originalPassage?.label) void loadTree()
       return true
     } catch (err) {
       setStatus('error')
       setError(String((err as Error).message))
       return false
     }
-  }, [selection, title, originalTitle, notes, defs, originalDefs, points, passage, originalPassage, tables, loadTree])
+  }, [selection, title, originalTitle, aside, originalAside, notes, defs, originalDefs, points, passage, originalPassage, tables, loadTree])
   saveRef.current = save
 
   useEffect(() => {
@@ -511,6 +530,7 @@ export default function ContentEditorScreen() {
               type="button"
               onClick={() => {
                 setTitle(originalTitle)
+                setAside(originalAside)
                 setNotes(original)
                 setDefs(originalDefs)
                 setPoints(originalPoints)
@@ -742,6 +762,11 @@ export default function ContentEditorScreen() {
                                           active ? 'bg-teal/15 font-bold text-teal-deep' : 'text-ink-soft hover:bg-ink/5'
                                         }`}
                                       >
+                                        {lesson.aside && (
+                                          <span className="mr-1 font-black text-amber" title="Entre parenthèses">
+                                            ( )
+                                          </span>
+                                        )}
                                         {lesson.label && (
                                           <span className="mr-1 font-black text-violet">{lesson.label}</span>
                                         )}
@@ -967,6 +992,13 @@ export default function ContentEditorScreen() {
                 <header className="flex flex-col gap-3">
                   <span className={`h-1.5 w-10 rounded-full ${tone.accent}`} />
                   <TitleField value={title} onChange={setTitle} />
+                  {unitLessons && (
+                    <AsideToggle
+                      aside={aside}
+                      companions={aside ? asideCompanions(unitLessons, selection.lesson, aside) : []}
+                      onChange={(on) => setAside(on ? asideKeyFor(unitLessons, selection.lesson) : null)}
+                    />
+                  )}
                 </header>
                 {passage?.text.trim() && (
                   <>
@@ -1497,5 +1529,34 @@ function AltField({ alt, onChange }: { alt: string[]; onChange: (alt: string[]) 
       placeholder="séparées par ;"
       className="w-48 rounded-md border border-line bg-paper px-2 py-1 text-ink outline-none focus:border-teal"
     />
+  )
+}
+
+/**
+ * Met la leçon entre parenthèses (voir `aside` dans `lessonSchema`) : elle
+ * rejoint la parenthèse d'une leçon voisine, ou en ouvre une. Dans l'app, une
+ * parenthèse se saute d'un coup (« Sauter la parenthèse », voir `LessonRoute`).
+ */
+function AsideToggle({
+  aside,
+  companions,
+  onChange,
+}: {
+  aside: string | null
+  companions: TreeLesson[]
+  onChange: (on: boolean) => void
+}) {
+  return (
+    <label className="flex cursor-pointer items-baseline gap-2 text-xs font-bold text-ink-soft select-none">
+      <input type="checkbox" checked={aside !== null} onChange={(event) => onChange(event.target.checked)} />
+      <span className="shrink-0 whitespace-nowrap">Entre parenthèses</span>
+      {aside !== null && (
+        <span className="font-normal text-ink-faint">
+          {companions.length === 0
+            ? "(seule leçon de la parenthèse : l'app proposera de la sauter)"
+            : `(avec ${companions.map((lesson) => `« ${lesson.title} »`).join(', ')} : l'app proposera de les sauter ensemble)`}
+        </span>
+      )}
+    </label>
   )
 }

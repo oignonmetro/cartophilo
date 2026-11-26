@@ -5,6 +5,8 @@ export interface TreeLesson {
   title: string
   /** Repère d'une leçon de texte (« §1 », « Introduction ») ; `null` ailleurs. */
   label: string | null
+  /** Clé de la parenthèse dont la leçon fait partie (voir `aside` dans `lessonSchema`) ; `null` hors parenthèse. */
+  aside: string | null
 }
 
 export interface TreeUnit {

@@ -27,6 +27,8 @@ interface TreeLesson {
   title: string
   /** Repère d'une leçon de texte (« §1 », « Introduction ») ; `null` ailleurs. */
   label: string | null
+  /** Clé de la parenthèse dont la leçon fait partie (voir `aside` dans `lessonSchema`). */
+  aside: string | null
 }
 
 interface TreeUnit {
@@ -156,6 +158,7 @@ function buildTree(): TreeCourse[] {
           id: String(l.id),
           title: String(l.title ?? l.id),
           label: l.passage ? String((l.passage as Record<string, unknown>).label ?? '') : null,
+          aside: l.aside ? String(l.aside) : null,
         }))
         units.push({
           id: unitId,
@@ -283,6 +286,21 @@ function setUnitGroup(root: YAMLMap, group: string | null): boolean {
 }
 
 /** Modifie la valeur d'un scalaire existant en place, plutôt que de le remplacer. */
+/**
+ * Met la leçon entre parenthèses (`aside: <clé>`, juste après son titre) ou
+ * l'en sort (`null` retire la clef).
+ */
+function setAside(doc: Document, lessonIdx: number, aside: string | null): void {
+  const lesson = doc.getIn(['lessons', lessonIdx], true)
+  if (!isMap(lesson)) return
+  lesson.delete('aside')
+  if (!aside) return
+  const titleIdx = lesson.items.findIndex((pair) => String((pair.key as Scalar | string)?.toString()) === 'title')
+  const pair = doc.createPair('aside', aside)
+  if (titleIdx === -1) lesson.items.push(pair)
+  else lesson.items.splice(titleIdx + 1, 0, pair)
+}
+
 function setScalar(map: YAMLMap, key: string, value: string): void {
   const node = map.get(key, true) as { value: unknown } | undefined
   if (node && typeof node === 'object' && 'value' in node) node.value = value
@@ -736,6 +754,7 @@ export function contentEditorApi(): Plugin {
             const passage = lessonData.passage as Record<string, unknown> | undefined
             sendJson(res, 200, {
               title: String(lessonData.title ?? lesson),
+              aside: lessonData.aside ? String(lessonData.aside) : null,
               notes: String(lessonData.notes ?? ''),
               tables: (lessonData.tables as LessonTableDTO[] | undefined) ?? [],
               passage: passage
@@ -765,6 +784,8 @@ export function contentEditorApi(): Plugin {
           try {
             const body = JSON.parse(await readBody(req)) as {
               title?: string
+              /** Clé de parenthèse ; `null` sort la leçon de sa parenthèse, absent n'y touche pas. */
+              aside?: string | null
               notes: string
               points?: PointDTO[]
               passage?: PassageDTO | null
@@ -795,6 +816,14 @@ export function contentEditorApi(): Plugin {
               }
               const lessonNode = doc.getIn(['lessons', idx])
               if (isMap(lessonNode)) setScalar(lessonNode, 'title', title)
+            }
+            if (body.aside !== undefined) {
+              const aside = body.aside?.trim() || null
+              if (aside && !slugPattern.test(aside)) {
+                sendJson(res, 400, { error: `clé de parenthèse invalide : « ${aside} »` })
+                return
+              }
+              setAside(doc, idx, aside)
             }
             setNotes(doc, idx, body.notes)
             if (body.tables) setTables(doc, idx, body.tables)
