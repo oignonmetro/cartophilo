@@ -4,19 +4,23 @@
 # « Désir, mouvement et action dans le Traité de l'âme d'Aristote »
 # (scan agrégation), digressions comprises, dans l'ordre du commentaire.
 # La leçon i3 est placée entre i1 et i2 : elle suit l'ordre du commentaire.
+# Refondue le 2026-11-26 (niveau normale) : chaque fragment coupé selon ses
+# fragments de citation, rappels répartis paragraphe par paragraphe sans rien
+# retirer, cartes sans « selon le commentaire », un prolongement sur la vie.
 
-id: aristote-desir-mouvement
+id: "aristote-desir-mouvement"
 title: "Aristote : qu'est-ce qui meut le vivant ?"
 subtitle: "De l'âme, III, 9-10, 432b15-433a15"
-icon: page
-color: teal
+icon: "page"
+color: "teal"
+depth: "normale"
 intro: |-
   Un extrait du *Traité de l'âme* où Aristote cherche ce qui, dans l'animal, cause le
   mouvement local : ni la faculté nutritive, ni la faculté sensitive, ni même
   l'intelligence spéculative seule ne suffisent. Le texte conclut que deux principes
   agissent de concert, alternativement : l'appétit et l'intelligence.
 lessons:
-- id: aristote-desir-mouvement-i1
+- id: "aristote-desir-mouvement-i1"
   title: "Qu'est-ce que l'âme ?"
   notes: |-
     Au livre III, chapitre 9, Aristote cherche {amber}ce qui distingue le mouvement des animaux{/amber}
@@ -55,83 +59,83 @@ lessons:
   passage:
     label: "Introduction"
   points:
-  - id: aristote-desir-mouvement-i1-6
+  - id: "aristote-desir-mouvement-i1-6"
     sentence: "Au livre III du *De l'âme*, Aristote cherche ce qui distingue le mouvement des animaux du changement des non-vivants, mus par un principe extérieur, et de celui des ___, qui se nourrissent et croissent en vertu d'un principe intérieur sans pouvoir changer de lieu par eux-mêmes."
     answer: "végétaux"
     alt: []
-  - id: aristote-desir-mouvement-i1-7
+  - id: "aristote-desir-mouvement-i1-7"
     sentence: "Dans les premiers chapitres du *De l'âme*, Aristote adopte une approche dialectique, fondée sur l'étude et la réfutation des ___ répandues chez les philosophes qui l'ont précédé."
     answer: "opinions"
     alt: []
-  - id: aristote-desir-mouvement-i1-8
+  - id: "aristote-desir-mouvement-i1-8"
     sentence: "Contre l'hylémorphisme, certains présocratiques affirment que l'âme est une chose physique : pour Démocrite, elle est faite de ___."
     answer: "feu"
     alt: []
-  - id: aristote-desir-mouvement-i1-3
+  - id: "aristote-desir-mouvement-i1-3"
     sentence: "La thèse hylémorphiste d'Aristote, qui distingue logiquement l'âme et le corps sans qu'aucun des deux existe sans l'autre, peut être qualifiée de \"monisme ___\"."
     answer: "subtil"
     alt: []
-  - id: aristote-desir-mouvement-i1-9
+  - id: "aristote-desir-mouvement-i1-9"
     sentence: "Le dualisme qui réifie la forme et la matière pour les opposer s'accompagne souvent du postulat d'une substantialité et d'une ___ de l'âme après la mort du corps."
     answer: "immortalité"
     alt: []
-  - id: aristote-desir-mouvement-i1-1
+  - id: "aristote-desir-mouvement-i1-1"
     sentence: "Aristote définit l'âme comme la réalisation première d'un corps naturel qui a potentiellement la ___."
     answer: "vie"
     alt: []
-  - id: aristote-desir-mouvement-i1-2
+  - id: "aristote-desir-mouvement-i1-2"
     sentence: "L'âme est l'acte premier, la première perfection d'un vivant ; elle s'oppose à sa perfection dernière, qui, chez l'être humain, est le ___."
     answer: "bonheur"
     alt: []
-  - id: aristote-desir-mouvement-i1-10
+  - id: "aristote-desir-mouvement-i1-10"
     sentence: "Pour l'être humain, le bonheur est accessible sous les doubles auspices de la vie active et de la vie ___ (*Éthique à Nicomaque*, X, 7-8)."
     answer: "contemplative"
     alt: []
-  - id: aristote-desir-mouvement-i1-11
+  - id: "aristote-desir-mouvement-i1-11"
     sentence: "À l'intersection de la physique, de la biologie, de la psychologie et de l'éthique, le *De l'âme* est moins un traité de psychologie qu'un traité de physique \"___\", qui cherche à comprendre le mouvement des vivants."
     answer: "locale"
     alt: []
-  - id: aristote-desir-mouvement-i1-12
+  - id: "aristote-desir-mouvement-i1-12"
     sentence: "Dans la théorie aristotélicienne du mouvement, le désir est le principe moteur universel : il meut tout mobile (animal, humain, dieu, corps céleste) vers sa fin, et l'univers tout entier vers son ___."
     answer: "bien"
     alt: []
-  - id: aristote-desir-mouvement-i1-13
+  - id: "aristote-desir-mouvement-i1-13"
     sentence: "Selon Pierre-Luc Desjardins, la question qui se dessine en filigrane du *De l'âme*, III, 9 est celle de la ___ de l'action humaine."
     answer: "naturalité"
     alt: []
-  - id: aristote-desir-mouvement-i1-4
+  - id: "aristote-desir-mouvement-i1-4"
     sentence: "Tous les vivants possèdent une âme ___, capable de nutrition, de croissance et de reproduction."
     answer: "végétative"
     alt: []
-  - id: aristote-desir-mouvement-i1-14
+  - id: "aristote-desir-mouvement-i1-14"
     sentence: "L'être humain se distingue des autres animaux par son âme intellective, sa capacité à raisonner, qui le rapproche des réalités ___."
     answer: "divines"
     alt: []
-  - id: aristote-desir-mouvement-i1-5
-    sentence: "Selon le commentaire, les espèces animales les plus complexes peuvent accomplir ce que peuvent accomplir les espèces plus simples, mais l'inverse n'est pas ___."
+  - id: "aristote-desir-mouvement-i1-5"
+    sentence: "Les espèces animales les plus complexes peuvent accomplir ce que peuvent accomplir les espèces plus simples, mais l'inverse n'est pas ___."
     answer: "vrai"
     alt: []
-  - id: aristote-desir-mouvement-i1-15
+  - id: "aristote-desir-mouvement-i1-15"
     sentence: "Au livre II du *De l'âme*, Aristote soutient que, parmi les facultés de l'âme humaine, seul l'___ pourrait être séparé des autres."
     answer: "intellect"
     alt: []
-  - id: aristote-desir-mouvement-i1-16
+  - id: "aristote-desir-mouvement-i1-16"
     sentence: "Aristote abandonne la question avant de préciser si la séparation de l'intellect est une séparation \"uniquement de raison ou bien aussi de ___\"."
     answer: "lieu"
     alt: []
-  - id: aristote-desir-mouvement-i1-17
+  - id: "aristote-desir-mouvement-i1-17"
     sentence: "Cette difficulté non résolue donnera naissance, au Moyen Âge, au débat sur l'unité ou la ___ des formes substantielles."
     answer: "pluralité"
     alt: []
-  - id: aristote-desir-mouvement-i1-18
+  - id: "aristote-desir-mouvement-i1-18"
     sentence: "Pour les médiévaux, soucieux de fonder l'immortalité de l'âme individuelle, seule l'âme ___ peut survivre à la mort du corps : sans quoi les animaux \"brutes\" seraient eux aussi promis à la vie éternelle."
     answer: "intellective"
     alt: []
-  - id: aristote-desir-mouvement-i1-19
+  - id: "aristote-desir-mouvement-i1-19"
     sentence: "En pensant les \"parties\" de l'âme comme des facultés plutôt que comme des substances distinctes, Aristote rejette la division locale de l'âme proposée par ___."
     answer: "Platon"
     alt: []
-- id: aristote-desir-mouvement-i3
+- id: "aristote-desir-mouvement-i3"
   title: "La nature et le changement"
   notes: |-
     La *Physique* définit la {violet}**nature**{/violet} comme {teal}« {/teal}un certain principe, à savoir {teal}une cause du{/teal}
@@ -165,71 +169,71 @@ lessons:
   passage:
     label: "Introduction"
   points:
-  - id: aristote-desir-mouvement-i3-1
+  - id: "aristote-desir-mouvement-i3-1"
     sentence: "La *Physique* définit la nature comme un certain principe, cause du fait d'être mû et d'être en ___ pour ce à quoi elle appartient immédiatement par soi et non par accident."
     answer: "repos"
     alt: []
-  - id: aristote-desir-mouvement-i3-2
+  - id: "aristote-desir-mouvement-i3-2"
     sentence: "La nature d'une chose définit le type de chose qu'elle est et ce en vue de quoi elle existe : elle est simultanément cause formelle et cause ___."
     answer: "finale"
     alt: []
-  - id: aristote-desir-mouvement-i3-3
+  - id: "aristote-desir-mouvement-i3-3"
     sentence: "Si la nature dans son ensemble est en devenir, certaines réalités sont éternelles : le ciel, le mouvement circulaire des corps célestes, le monde, et le Premier moteur ___."
     answer: "immobile"
     alt: []
-  - id: aristote-desir-mouvement-i3-4
+  - id: "aristote-desir-mouvement-i3-4"
     sentence: "Dans tout ce qui naît et meurt, les changements se laissent catégoriser en ___ espèces."
     answer: "quatre"
     alt: []
-  - id: aristote-desir-mouvement-i3-5
+  - id: "aristote-desir-mouvement-i3-5"
     sentence: "Trois espèces de changement adviennent de manière accidentelle, selon la qualité, la quantité et le ___."
     answer: "lieu"
     alt: []
-  - id: aristote-desir-mouvement-i3-6
-    sentence: "Bucéphale peut croître, pâlir ou traverser au galop un champ de bataille tout en demeurant \"la même ___\" : ces changements sont accidentels."
-    answer: "chose"
+  - id: "aristote-desir-mouvement-i3-6"
+    sentence: "Bucéphale peut croître, pâlir ou traverser au galop un champ de bataille tout en demeurant « la même chose » : __ces changements sont ___.__"
+    answer: "accidentels"
     alt: []
-  - id: aristote-desir-mouvement-i3-7
+  - id: "aristote-desir-mouvement-i3-7"
     sentence: "Tout changement se fait \"de quelque chose vers quelque chose\" et est dénommé, c'est-à-dire défini, par sa ___."
     answer: "fin"
     alt: []
-  - id: aristote-desir-mouvement-i3-8
+  - id: "aristote-desir-mouvement-i3-8"
     sentence: "L'apparition d'une nouvelle forme, comme le gris de la robe de Bucéphale, s'effectue dans un instant \"___\", qui rompt avec la continuité temporelle qui l'a précédée."
     answer: "insécable"
     alt: []
-  - id: aristote-desir-mouvement-i3-9
+  - id: "aristote-desir-mouvement-i3-9"
     sentence: "Les changements accidentels s'effectuent entre deux termes ___, états opposés appartenant au même genre, comme le blanc et le gris."
     answer: "contraires"
     alt: []
-  - id: aristote-desir-mouvement-i3-10
+  - id: "aristote-desir-mouvement-i3-10"
     sentence: "Une seule espèce de changement a lieu dans la catégorie de substance : la génération, et son opposé, la ___."
     answer: "corruption"
     alt: []
-  - id: aristote-desir-mouvement-i3-11
+  - id: "aristote-desir-mouvement-i3-11"
     sentence: "À la différence du changement accidentel, le changement substantiel s'opère entre deux termes ___, qui n'appartiennent ni à la même espèce ni au même genre."
     answer: "contradictoires"
     alt: []
-  - id: aristote-desir-mouvement-i3-12
+  - id: "aristote-desir-mouvement-i3-12"
     sentence: "Le cadavre d'un cheval n'est plus un cheval, et ne peut plus être appelé ainsi que de manière ___."
     answer: "homonymique"
     alt: []
-  - id: aristote-desir-mouvement-i3-13
+  - id: "aristote-desir-mouvement-i3-13"
     sentence: "Par nature, les corps légers, comme le feu et l'air, sont portés vers le haut, et les corps lourds, comme l'eau et la terre, vers le ___."
     answer: "bas"
     alt: []
-  - id: aristote-desir-mouvement-i3-14
+  - id: "aristote-desir-mouvement-i3-14"
     sentence: "Parce que l'animal se déplace lorsqu'il est mû par une fin qu'il se représente, le mouvement local animal est, par définition, un mouvement ___ plutôt que contraint ou violent."
     answer: "naturel"
     alt: []
-  - id: aristote-desir-mouvement-i3-15
+  - id: "aristote-desir-mouvement-i3-15"
     sentence: "Une chose subit un changement violent dès qu'un principe ___ la force à suivre une tendance contraire à sa tendance naturelle."
     answer: "extérieur"
     alt: []
-  - id: aristote-desir-mouvement-i3-16
+  - id: "aristote-desir-mouvement-i3-16"
     sentence: "Le vivant en général se définit par ce qu'il a en lui le principe de son ___ : croissance, reproduction, déplacement, action."
     answer: "changement"
     alt: []
-- id: aristote-desir-mouvement-i2
+- id: "aristote-desir-mouvement-i2"
   title: "Désir et représentation"
   notes: |-
     Notre texte affirme que le mouvement animal {teal}« s'accompagne, soit de représentation,{/teal}
@@ -259,44 +263,122 @@ lessons:
   passage:
     label: "Introduction"
   points:
-  - id: aristote-desir-mouvement-i2-1
+  - id: "aristote-desir-mouvement-i2-1"
     sentence: "La représentation (*phantasia*) est définie par Aristote comme le mouvement qui se produit sous l'effet du sens en ___."
     answer: "activité"
     alt: []
-  - id: aristote-desir-mouvement-i2-2
+  - id: "aristote-desir-mouvement-i2-2"
     sentence: "L'appétit se divise en trois espèces : le désir (*epithumia*), l'ardeur (*thumos*), et le souhait, ou désir rationnel, appelé la ___."
     answer: "boulêsis"
     alt: []
-  - id: aristote-desir-mouvement-i2-6
+  - id: "aristote-desir-mouvement-i2-6"
     sentence: "Le désir (*epithumia*) est commun à l'homme et aux autres animaux ; l'ardeur (*thumos*) et le souhait (*boulêsis*) sont des formes proprement ___ de l'appétit."
     answer: "humaines"
     alt: []
-  - id: aristote-desir-mouvement-i2-7
+  - id: "aristote-desir-mouvement-i2-7"
     sentence: "Les termes d'*epithumia* et de *thumos*, que reprend l'*Éthique à Nicomaque*, viennent de la ___ de Platon."
     answer: "République"
     alt: []
-  - id: aristote-desir-mouvement-i2-3
+  - id: "aristote-desir-mouvement-i2-3"
     sentence: "L'ardeur, ou *thumos*, désigne un \"irrationnel rationnel\" capable d'obéir à la raison ou de lui ___."
     answer: "résister"
     alt: []
-  - id: aristote-desir-mouvement-i2-5
+  - id: "aristote-desir-mouvement-i2-5"
     sentence: "La *boulêsis*, désir rationnel propre à l'homme, sera traduite par les latins par le mot ___."
     answer: "voluntas"
     alt: []
-- id: aristote-desir-mouvement-p1
-  title: "Ni la faculté nutritive, ni la faculté sensitive"
+- id: "aristote-desir-mouvement-p1"
+  title: "Qu'est-ce qui meut l'animal ? Pas la faculté nutritive"
   notes: |-
     Aristote {red}rejette d'abord la faculté nutritive, puis la faculté sensitive{/red}, comme
     principe du mouvement local animal. L'enjeu est double : classer les vivants capables
     de locomotion, et réaffirmer le principe du mouvement naturel des vivants, le désir,
     dans une conception {violet}**finaliste**{/violet} de la nature.
 
+    **Pourquoi « qui vise toujours un but » ?** Le mouvement local n'est pas une simple agitation : {yellow}l'animal va vers la nourriture, fuit le prédateur{/yellow}. Un mouvement orienté suppose qu'on se {amber}représente{/amber} ce vers quoi l'on va, ou qu'on le {amber}désire{/amber}. {coral}Or la faculté nutritive ne se représente rien et ne désire rien{/coral} : elle ne peut donc pas être le principe de la locomotion.
+  passage:
+    label: "Fragment 1"
+    text: "Mais il faut considérer la question du mouvement local : qu'est-ce qui imprime à l'animal le mouvement de locomotion ? Or donc, ce n'est pas la capacité nutritive, évidemment, parce que le mouvement en question, qui vise toujours un but, s'accompagne, soit de représentation, soit d'appétit."
+  points:
+  - id: "aristote-desir-mouvement-p1-1"
+    sentence: "« Mais il faut considérer la question du mouvement local : ___ ? Or donc, ce n'est pas la capacité nutritive, évidemment, parce que le mouvement en question, qui vise toujours un but, s'accompagne, soit de représentation, soit d'appétit. »"
+    answer: "qu'est-ce qui imprime à l'animal le mouvement de locomotion"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-2"
+    sentence: "« Mais il faut considérer la question du mouvement local : qu'est-ce qui imprime à l'animal le mouvement de locomotion ? Or donc, ___, évidemment, parce que le mouvement en question, qui vise toujours un but, s'accompagne, soit de représentation, soit d'appétit. »"
+    answer: "ce n'est pas la capacité nutritive"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-3"
+    sentence: "« Mais il faut considérer la question du mouvement local : qu'est-ce qui imprime à l'animal le mouvement de locomotion ? Or donc, ce n'est pas la capacité nutritive, évidemment, parce que le mouvement en question, ___. »"
+    answer: "qui vise toujours un but, s'accompagne, soit de représentation, soit d'appétit"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-17"
+    sentence: "L'enjeu de la démonstration est double : définir et classifier les vivants capables de locomotion, et réaffirmer le principe qui gouverne le mouvement naturel des vivants, le ___."
+    answer: "désir"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-18"
+    sentence: "Les treize premières lignes du texte présupposent et réaffirment une conception ___ de la nature, dont les implications sont à la fois biologiques et politiques."
+    answer: "finaliste"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-13"
+    sentence: "L'argument le plus fondamental, non seulement contre la faculté nutritive mais pour tout l'extrait, est que le mouvement local vise toujours un ___."
+    answer: "but"
+    alt: []
+- id: "aristote-desir-mouvement-p1b"
+  title: "Ni les plantes, ni la sensation seule"
+  notes: |-
     {amber}Première raison, contre la faculté nutritive{/amber} : {coral}tout mouvement local vise un but{/coral}, et
     s'accompagne donc nécessairement de représentation ou d'appétit, sans quoi rien ne se
     meut, sauf par violence. {yellow}Or les plantes possèdent bien la faculté nutritive{/yellow}, et
     pourtant ne se déplacent pas ; si cette faculté suffisait à causer le mouvement, les
     plantes en seraient donc, elles aussi, capables.
 
+    ? **Faculté sensitive** : la capacité de l'âme animale à percevoir, par les sens, et d'abord par le toucher, que tout animal possède. Elle sépare l'animal de la plante, mais {red}non l'animal qui se déplace de celui qui reste sur place{/red}.
+
+    ! L'argument ne nie pas que la sensation serve au mouvement : il nie qu'{green}elle suffise{/green} à le produire, puisque des animaux sentent sans se mouvoir.
+  passage:
+    label: "Fragment 1"
+    text: "S'il ne manifeste pas, en effet, d'appétit ou d'aversion, nul ne se met en mouvement, sauf contraint par violence. En outre, même les plantes, alors, seraient aptes au mouvement et posséderaient quelque partie susceptible de servir d'organe à ce type de mouvement. De même, ce n'est pas non plus la partie sensitive, parce qu'il est beaucoup d'animaux qui possèdent bel et bien le sens, mais restent sur place, sans être doués de mouvement, tout au long de l'existence."
+  points:
+  - id: "aristote-desir-mouvement-p1-4"
+    sentence: "« S'il ne manifeste pas, en effet, d'appétit ou d'aversion, ___. En outre, même les plantes, alors, seraient aptes au mouvement et posséderaient quelque partie susceptible de servir d'organe à ce type de mouvement. De même, ce n'est pas non plus la partie sensitive, parce qu'il est beaucoup d'animaux qui possèdent bel et bien le sens, mais restent sur place, sans être doués de mouvement, tout au long de l'existence. »"
+    answer: "nul ne se met en mouvement, sauf contraint par violence"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-5"
+    sentence: "« S'il ne manifeste pas, en effet, d'appétit ou d'aversion, nul ne se met en mouvement, sauf contraint par violence. En outre, ___ et posséderaient quelque partie susceptible de servir d'organe à ce type de mouvement. De même, ce n'est pas non plus la partie sensitive, parce qu'il est beaucoup d'animaux qui possèdent bel et bien le sens, mais restent sur place, sans être doués de mouvement, tout au long de l'existence. »"
+    answer: "même les plantes, alors, seraient aptes au mouvement"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-6"
+    sentence: "« S'il ne manifeste pas, en effet, d'appétit ou d'aversion, nul ne se met en mouvement, sauf contraint par violence. En outre, même les plantes, alors, seraient aptes au mouvement et posséderaient quelque partie susceptible de servir d'organe à ce type de mouvement. De même, ___, parce qu'il est beaucoup d'animaux qui possèdent bel et bien le sens, mais restent sur place, sans être doués de mouvement, tout au long de l'existence. »"
+    answer: "ce n'est pas non plus la partie sensitive"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-7"
+    sentence: "« S'il ne manifeste pas, en effet, d'appétit ou d'aversion, nul ne se met en mouvement, sauf contraint par violence. En outre, même les plantes, alors, seraient aptes au mouvement et posséderaient quelque partie susceptible de servir d'organe à ce type de mouvement. De même, ce n'est pas non plus la partie sensitive, parce qu'il est ___. »"
+    answer: "beaucoup d'animaux qui possèdent bel et bien le sens, mais restent sur place, sans être doués de mouvement, tout au long de l'existence"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-19"
+    sentence: "Si certaines plantes se déplacent d'une certaine manière, le mouvement du tournesol a davantage en commun avec le mouvement naturel du ___ qui s'élève qu'avec le galop de Bucéphale."
+    answer: "feu"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-20"
+    sentence: "Par son origine latine, le mot \"animal\" évoque le fait d'être ___, entendu comme la capacité de se déplacer ; pourtant le mouvement local n'est pas partagé par tout le genre animal."
+    answer: "animé"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-21"
+    sentence: "Certains animaux, quoique dotés de l'âme sensitive, \"restent fixés au même ___\" (*De l'âme*, I, 5)."
+    answer: "endroit"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-15"
+    sentence: "Certains animaux dotés de sensation mais dépourvus de mouvement local ne posséderaient, par exemple, \"que le sens du ___\"."
+    answer: "toucher"
+    alt: []
+  - id: "aristote-desir-mouvement-p1-22"
+    sentence: "Puisqu'elle doit inclure les espèces incapables de mouvement, la définition de l'animalité se fonde sur la ___ sensible, commune à tous les animaux, plutôt que sur le mouvement."
+    answer: "perception"
+    alt: []
+- id: "aristote-desir-mouvement-p1c"
+  title: "La nature ne fait rien en vain"
+  notes: |-
     {amber}Seconde raison, contre la faculté sensitive{/amber} : {yellow}beaucoup d'animaux possèdent le sens{/yellow}
     mais restent immobiles toute leur existence. Cet argument mobilise le principe le plus
     important de la physique aristotélicienne, formulé ici pour la première fois : {teal}« la{/teal}
@@ -333,240 +415,169 @@ lessons:
     espèce possèdent normalement.
   passage:
     label: "Fragment 1"
-    text: "Mais il faut considérer la question du mouvement local : qu'est-ce qui imprime à l'animal le mouvement de locomotion ? Or donc, ce n'est pas la capacité nutritive, évidemment, parce que le mouvement en question, qui vise toujours un but, s'accompagne, soit de représentation, soit d'appétit. S'il ne manifeste pas, en effet, d'appétit ou d'aversion, nul ne se met en mouvement, sauf contraint par violence. En outre, même les plantes, alors, seraient aptes au mouvement et posséderaient quelque partie susceptible de servir d'organe à ce type de mouvement. De même, ce n'est pas non plus la partie sensitive, parce qu'il est beaucoup d'animaux qui possèdent bel et bien le sens, mais restent sur place, sans être doués de mouvement, tout au long de l'existence. Si donc la nature ne fait rien en vain, ni ne néglige quoi que ce soit de nécessaire, sauf dans le cas des êtres atrophiés et celui des êtres incomplets ; et si, d'autre part, ces sortes d'animaux sont complètes et ne montrent pas d'atrophie (or c'est ce qu'indique le fait qu'ils sont aptes à se reproduire, arrivent à maturité, puis dépérissent), il en résulte qu'ils devraient également posséder les parties susceptibles de servir d'organe à la marche."
+    text: "Si donc la nature ne fait rien en vain, ni ne néglige quoi que ce soit de nécessaire, sauf dans le cas des êtres atrophiés et celui des êtres incomplets ; et si, d'autre part, ces sortes d'animaux sont complètes et ne montrent pas d'atrophie (or c'est ce qu'indique le fait qu'ils sont aptes à se reproduire, arrivent à maturité, puis dépérissent), il en résulte qu'ils devraient également posséder les parties susceptibles de servir d'organe à la marche."
   points:
-  - id: aristote-desir-mouvement-p1-1
-    fragment: "1/3"
-    sentence: "« Mais il faut considérer la question du mouvement local : ___ ? Or donc, ce n'est pas la capacité nutritive, évidemment, parce que le mouvement en question, qui vise toujours un but, s'accompagne, soit de représentation, soit d'appétit. »"
-    answer: "qu'est-ce qui imprime à l'animal le mouvement de locomotion"
-    alt: []
-  - id: aristote-desir-mouvement-p1-2
-    fragment: "1/3"
-    sentence: "« Mais il faut considérer la question du mouvement local : qu'est-ce qui imprime à l'animal le mouvement de locomotion ? Or donc, ___, évidemment, parce que le mouvement en question, qui vise toujours un but, s'accompagne, soit de représentation, soit d'appétit. »"
-    answer: "ce n'est pas la capacité nutritive"
-    alt: []
-  - id: aristote-desir-mouvement-p1-3
-    fragment: "1/3"
-    sentence: "« Mais il faut considérer la question du mouvement local : qu'est-ce qui imprime à l'animal le mouvement de locomotion ? Or donc, ce n'est pas la capacité nutritive, évidemment, parce que le mouvement en question, ___. »"
-    answer: "qui vise toujours un but, s'accompagne, soit de représentation, soit d'appétit"
-    alt: []
-  - id: aristote-desir-mouvement-p1-4
-    fragment: "2/3"
-    sentence: "« S'il ne manifeste pas, en effet, d'appétit ou d'aversion, ___. En outre, même les plantes, alors, seraient aptes au mouvement et posséderaient quelque partie susceptible de servir d'organe à ce type de mouvement. De même, ce n'est pas non plus la partie sensitive, parce qu'il est beaucoup d'animaux qui possèdent bel et bien le sens, mais restent sur place, sans être doués de mouvement, tout au long de l'existence. »"
-    answer: "nul ne se met en mouvement, sauf contraint par violence"
-    alt: []
-  - id: aristote-desir-mouvement-p1-5
-    fragment: "2/3"
-    sentence: "« S'il ne manifeste pas, en effet, d'appétit ou d'aversion, nul ne se met en mouvement, sauf contraint par violence. En outre, ___ et posséderaient quelque partie susceptible de servir d'organe à ce type de mouvement. De même, ce n'est pas non plus la partie sensitive, parce qu'il est beaucoup d'animaux qui possèdent bel et bien le sens, mais restent sur place, sans être doués de mouvement, tout au long de l'existence. »"
-    answer: "même les plantes, alors, seraient aptes au mouvement"
-    alt: []
-  - id: aristote-desir-mouvement-p1-6
-    fragment: "2/3"
-    sentence: "« S'il ne manifeste pas, en effet, d'appétit ou d'aversion, nul ne se met en mouvement, sauf contraint par violence. En outre, même les plantes, alors, seraient aptes au mouvement et posséderaient quelque partie susceptible de servir d'organe à ce type de mouvement. De même, ___, parce qu'il est beaucoup d'animaux qui possèdent bel et bien le sens, mais restent sur place, sans être doués de mouvement, tout au long de l'existence. »"
-    answer: "ce n'est pas non plus la partie sensitive"
-    alt: []
-  - id: aristote-desir-mouvement-p1-7
-    fragment: "2/3"
-    sentence: "« S'il ne manifeste pas, en effet, d'appétit ou d'aversion, nul ne se met en mouvement, sauf contraint par violence. En outre, même les plantes, alors, seraient aptes au mouvement et posséderaient quelque partie susceptible de servir d'organe à ce type de mouvement. De même, ce n'est pas non plus la partie sensitive, parce qu'il est ___. »"
-    answer: "beaucoup d'animaux qui possèdent bel et bien le sens, mais restent sur place, sans être doués de mouvement, tout au long de l'existence"
-    alt: []
-  - id: aristote-desir-mouvement-p1-8
-    fragment: "3/3"
+  - id: "aristote-desir-mouvement-p1-8"
     sentence: "« Si donc ___, sauf dans le cas des êtres atrophiés et celui des êtres incomplets ; et si, d'autre part, ces sortes d'animaux sont complètes et ne montrent pas d'atrophie (or c'est ce qu'indique le fait qu'ils sont aptes à se reproduire, arrivent à maturité, puis dépérissent), il en résulte qu'ils devraient également posséder les parties susceptibles de servir d'organe à la marche. »"
     answer: "la nature ne fait rien en vain, ni ne néglige quoi que ce soit de nécessaire"
     alt: []
-  - id: aristote-desir-mouvement-p1-9
-    fragment: "3/3"
+  - id: "aristote-desir-mouvement-p1-9"
     sentence: "« Si donc la nature ne fait rien en vain, ni ne néglige quoi que ce soit de nécessaire, ___ ; et si, d'autre part, ces sortes d'animaux sont complètes et ne montrent pas d'atrophie (or c'est ce qu'indique le fait qu'ils sont aptes à se reproduire, arrivent à maturité, puis dépérissent), il en résulte qu'ils devraient également posséder les parties susceptibles de servir d'organe à la marche. »"
     answer: "sauf dans le cas des êtres atrophiés et celui des êtres incomplets"
     alt: []
-  - id: aristote-desir-mouvement-p1-10
-    fragment: "3/3"
+  - id: "aristote-desir-mouvement-p1-10"
     sentence: "« Si donc la nature ne fait rien en vain, ni ne néglige quoi que ce soit de nécessaire, sauf dans le cas des êtres atrophiés et celui des êtres incomplets ; et si, d'autre part, ces sortes d'animaux sont complètes et ne montrent pas d'atrophie (or c'est ce qu'indique le fait qu'ils sont ___), il en résulte qu'ils devraient également posséder les parties susceptibles de servir d'organe à la marche. »"
     answer: "aptes à se reproduire, arrivent à maturité, puis dépérissent"
     alt: []
-  - id: aristote-desir-mouvement-p1-11
-    fragment: "3/3"
+  - id: "aristote-desir-mouvement-p1-11"
     sentence: "« Si donc la nature ne fait rien en vain, ni ne néglige quoi que ce soit de nécessaire, sauf dans le cas des êtres atrophiés et celui des êtres incomplets ; et si, d'autre part, ces sortes d'animaux sont complètes et ne montrent pas d'atrophie (or c'est ce qu'indique le fait qu'ils sont aptes à se reproduire, arrivent à maturité, puis dépérissent), ___. »"
     answer: "il en résulte qu'ils devraient également posséder les parties susceptibles de servir d'organe à la marche"
     alt: []
-  - id: aristote-desir-mouvement-p1-17
-    sentence: "Selon le commentaire, l'enjeu de la démonstration est double : définir et classifier les vivants capables de locomotion, et réaffirmer le principe qui gouverne le mouvement naturel des vivants, le ___."
-    answer: "désir"
-    alt: []
-  - id: aristote-desir-mouvement-p1-18
-    sentence: "Les treize premières lignes du texte présupposent et réaffirment une conception ___ de la nature, dont les implications sont à la fois biologiques et politiques."
-    answer: "finaliste"
-    alt: []
-  - id: aristote-desir-mouvement-p1-13
-    sentence: "Selon le commentaire, l'argument le plus fondamental, non seulement contre la faculté nutritive mais pour tout l'extrait, est que le mouvement local vise toujours un ___."
-    answer: "but"
-    alt: []
-  - id: aristote-desir-mouvement-p1-19
-    sentence: "Si certaines plantes se déplacent d'une certaine manière, le mouvement du tournesol a davantage en commun avec le mouvement naturel du ___ qui s'élève qu'avec le galop de Bucéphale."
-    answer: "feu"
-    alt: []
-  - id: aristote-desir-mouvement-p1-20
-    sentence: "Par son origine latine, le mot \"animal\" évoque le fait d'être ___, entendu comme la capacité de se déplacer ; pourtant le mouvement local n'est pas partagé par tout le genre animal."
-    answer: "animé"
-    alt: []
-  - id: aristote-desir-mouvement-p1-21
-    sentence: "Certains animaux, quoique dotés de l'âme sensitive, \"restent fixés au même ___\" (*De l'âme*, I, 5)."
-    answer: "endroit"
-    alt: []
-  - id: aristote-desir-mouvement-p1-15
-    sentence: "Selon le commentaire, certains animaux dotés de sensation mais dépourvus de mouvement local ne posséderaient, par exemple, \"que le sens du ___\"."
-    answer: "toucher"
-    alt: []
-  - id: aristote-desir-mouvement-p1-22
-    sentence: "Puisqu'elle doit inclure les espèces incapables de mouvement, la définition de l'animalité se fonde sur la ___ sensible, commune à tous les animaux, plutôt que sur le mouvement."
-    answer: "perception"
-    alt: []
-  - id: aristote-desir-mouvement-p1-12
+  - id: "aristote-desir-mouvement-p1-12"
     sentence: "Le raisonnement qui exclut la faculté sensitive se reconstruit en un syllogisme dont la conclusion est : la ___ ne suffit pas à causer la locomotion."
     answer: "sensation"
     alt: []
-  - id: aristote-desir-mouvement-p1-14
+  - id: "aristote-desir-mouvement-p1-14"
     sentence: "Le principe le plus important de la physique aristotélicienne, formulé pour la première fois dans notre texte, veut que la nature ne fasse rien en ___."
     answer: "vain"
     alt: []
-  - id: aristote-desir-mouvement-p1-23
+  - id: "aristote-desir-mouvement-p1-23"
     sentence: "L'une des occurrences les mieux connues du principe selon lequel la nature ne fait rien en vain se trouve au livre I des ___ d'Aristote."
     answer: "Politiques"
     alt: []
-  - id: aristote-desir-mouvement-p1-24
+  - id: "aristote-desir-mouvement-p1-24"
     sentence: "La nécessité que la nature ne néglige jamais est d'ordre ___ : c'est la nécessité de l'outil dans l'accomplissement d'une tâche déterminée."
     answer: "hypothétique"
     alt: []
-  - id: aristote-desir-mouvement-p1-25
+  - id: "aristote-desir-mouvement-p1-25"
     sentence: "Les *Parties des animaux* conçoivent la ___ comme l'organe le plus adapté à l'intelligence de l'animal le plus élevé, l'homme."
     answer: "main"
     alt: []
-  - id: aristote-desir-mouvement-p1-26
+  - id: "aristote-desir-mouvement-p1-26"
     sentence: "Selon les *Parties des animaux*, \"la nature, comme quelqu'un d'intelligent, distribue toujours chaque instrument à celui qui est capable de s'en ___\"."
     answer: "servir"
     alt: []
-  - id: aristote-desir-mouvement-p1-27
+  - id: "aristote-desir-mouvement-p1-27"
     sentence: "Plutôt que de concevoir les facultés comme émergeant de manière évolutive des besoins des vivants, Aristote les comprend comme des aptitudes distribuées de manière ___ par la nature."
     answer: "hiérarchique"
     alt: []
-  - id: aristote-desir-mouvement-p1-28
+  - id: "aristote-desir-mouvement-p1-28"
     sentence: "Ce passage des *Parties des animaux* entre en dialogue avec le mythe de ___ présenté dans le *Protagoras* de Platon."
     answer: "Prométhée"
     alt: []
-  - id: aristote-desir-mouvement-p1-29
+  - id: "aristote-desir-mouvement-p1-29"
     sentence: "La même idée d'une nature qui distribue les aptitudes se retrouve dans la doctrine aristotélicienne de l'esclave \"par ___\"."
     answer: "nature"
     alt: []
-  - id: aristote-desir-mouvement-p1-30
+  - id: "aristote-desir-mouvement-p1-30"
     sentence: "Selon Aristote, l'esclave naturel, incapable de se gouverner lui-même, trouve avantage à se mettre au service d'un autre et à se faire ainsi \"___ animé\"."
     answer: "outil"
     alt: []
-  - id: aristote-desir-mouvement-p1-31
+  - id: "aristote-desir-mouvement-p1-31"
     sentence: "Pour Aristote, la cité est elle-même une réalité ___, dont les hiérarchies sont fonction des aptitudes de chacun."
     answer: "naturelle"
     alt: []
-  - id: aristote-desir-mouvement-p1-32
+  - id: "aristote-desir-mouvement-p1-32"
     sentence: "Définir les aptitudes d'une espèce par sa fin, et connaître sa fin par ses aptitudes : Aristote semble ici frayer avec la *petitio ___*."
     answer: "principii"
     alt: []
-  - id: aristote-desir-mouvement-p1-33
+  - id: "aristote-desir-mouvement-p1-33"
     sentence: "C'est en observant que l'homme possède le ___ et s'organise en communautés politiques qu'Aristote le définit comme un animal politique."
     answer: "logos"
     alt: []
-  - id: aristote-desir-mouvement-p1-16
-    sentence: "Selon le commentaire, l'atrophie et l'incomplétude désignent l'absence contingente, chez un individu, de propriétés rencontrées chez les autres membres de la même ___."
+  - id: "aristote-desir-mouvement-p1-16"
+    sentence: "L'atrophie et l'incomplétude désignent l'absence contingente, chez un individu, de propriétés rencontrées chez les autres membres de la même ___."
     answer: "espèce"
     alt: []
-  - id: aristote-desir-mouvement-p1-34
+  - id: "aristote-desir-mouvement-p1-34"
     sentence: "Un animal incomplet est un animal auquel manque un organe ou une faculté rencontrés chez les autres membres de son espèce : par exemple, un chien qui n'aurait que trois ___."
     answer: "pattes"
     alt: []
-  - id: aristote-desir-mouvement-p1-35
+  - id: "aristote-desir-mouvement-p1-35"
     sentence: "Au sens du *De l'âme*, III, 9, un homme tout simplement incapable de vivre en société serait un être ___."
     answer: "incomplet"
     alt: []
-  - id: aristote-desir-mouvement-p1-36
+  - id: "aristote-desir-mouvement-p1-36"
     sentence: "L'existence d'animaux immobiles semble entrer en tension avec l'affirmation du livre II selon laquelle la sensation implique représentation et ___."
     answer: "appétit"
     alt: []
-  - id: aristote-desir-mouvement-p1-37
-    sentence: "Selon le commentaire, l'incapacité à se mouvoir est pour Aristote un cas ___ de l'animalité, qui mérite explication."
+  - id: "aristote-desir-mouvement-p1-37"
+    sentence: "L'incapacité à se mouvoir est pour Aristote un cas ___ de l'animalité, qui mérite explication."
     answer: "limite"
     alt: []
-  - id: aristote-desir-mouvement-p1-38
+  - id: "aristote-desir-mouvement-p1-38"
     sentence: "Ni la représentation seule, ni le désir seul ne suffisent : la locomotion exige l'opération ___ de ces deux actes intérieurs."
     answer: "conjointe"
     alt: []
-  - id: aristote-desir-mouvement-p1-39
+  - id: "aristote-desir-mouvement-p1-39"
     sentence: "Sans la double capacité de se représenter et de désirer sa fin, le mouvement de l'animal serait un mouvement ___, causé par un principe extérieur."
     answer: "violent"
     alt: []
-  - id: aristote-desir-mouvement-p1-40
+  - id: "aristote-desir-mouvement-p1-40"
     sentence: "Comme tout principe naturel, à l'exception du Premier moteur, l'âme est un moteur ___ : elle est mue par des objets qui lui impriment une forme."
     answer: "mû"
     alt: []
-  - id: aristote-desir-mouvement-p1-41
+  - id: "aristote-desir-mouvement-p1-41"
     sentence: "La cause efficiente est définie dans la *Physique* comme \"le principe d'où part le changement ou l'___\"."
     answer: "immobilité"
     alt: []
-  - id: aristote-desir-mouvement-p1-42
+  - id: "aristote-desir-mouvement-p1-42"
     sentence: "Influencés notamment par la lecture d'___, les médiévaux construiront des théories distinguant plusieurs sens internes, dont la *phantasia*."
     answer: "Avicenne"
     alt: []
-  - id: aristote-desir-mouvement-p1-43
+  - id: "aristote-desir-mouvement-p1-43"
     sentence: "L'image produite par la *phantasia* est nécessaire à toute ___ (*De l'âme*, III, 7)."
     answer: "pensée"
     alt: []
-  - id: aristote-desir-mouvement-p1-44
+  - id: "aristote-desir-mouvement-p1-44"
     sentence: "Aristote concède que la représentation \"doit nécessairement ___ à la sensation\"."
     answer: "ressembler"
     alt: []
-  - id: aristote-desir-mouvement-p1-45
+  - id: "aristote-desir-mouvement-p1-45"
     sentence: "Aristote définit l'*epithumia* comme un \"appétit de l'___\"."
     answer: "agréable"
     alt: []
-  - id: aristote-desir-mouvement-p1-46
+  - id: "aristote-desir-mouvement-p1-46"
     sentence: "Selon les *Politiques*, l'agréable est à la sensibilité ce que le bien et le ___ sont à la rationalité."
     answer: "juste"
     alt: []
-  - id: aristote-desir-mouvement-p1-47
+  - id: "aristote-desir-mouvement-p1-47"
     sentence: "Le plaisir est la marque d'un acte sensoriel ___ : il résulte de la perfection de l'acte qui l'a produit."
     answer: "parfait"
     alt: []
-  - id: aristote-desir-mouvement-p1-48
+  - id: "aristote-desir-mouvement-p1-48"
     sentence: "Le plaisir que procurent les sensations, et surtout la vue, explique en partie le désir naturel de ___ qu'Aristote trouve en l'homme au début de la *Métaphysique*."
     answer: "connaître"
     alt: []
-  - id: aristote-desir-mouvement-p1-49
-    sentence: "Selon le commentaire, la cause de la locomotion se trouve dans la tétrade représentation-désir-fin-___."
+  - id: "aristote-desir-mouvement-p1-49"
+    sentence: "La cause de la locomotion se trouve dans la tétrade représentation-désir-fin-___."
     answer: "plaisir"
     alt: []
-  - id: aristote-desir-mouvement-p1-50
+  - id: "aristote-desir-mouvement-p1-50"
     sentence: "Dans cette tétrade, le plaisir est l'achèvement du mouvement, une \"fin survenue par ___\" (*Éthique à Nicomaque*, X, 4)."
     answer: "surcroît"
     alt: []
-  - id: aristote-desir-mouvement-p1-51
+  - id: "aristote-desir-mouvement-p1-51"
     sentence: "La perfection d'une espèce est définie par l'excellence dans l'exercice de sa propre ___ naturelle."
     answer: "fonction"
     alt: []
-  - id: aristote-desir-mouvement-p1-52
+  - id: "aristote-desir-mouvement-p1-52"
     sentence: "La vie contemplative exige l'apaisement des passions, rendu possible par la maîtrise de soi : aucun sage n'est donc moralement ___."
     answer: "vicieux"
     alt: []
-  - id: aristote-desir-mouvement-p1-53
+  - id: "aristote-desir-mouvement-p1-53"
     sentence: "La fonction végétative, par laquelle un vivant produit \"un autre vivant tel que lui\", est le seul moyen, pour les vivants incapables de vie active ou contemplative, de participer à l'___."
     answer: "éternité"
     alt: []
-  - id: aristote-desir-mouvement-p1-54
+  - id: "aristote-desir-mouvement-p1-54"
     sentence: "Selon l'*Éthique à Nicomaque*, \"l'homme doit, dans la mesure du possible, s'___\"."
     answer: "immortaliser"
     alt: []
-  - id: aristote-desir-mouvement-p1-55
-    sentence: "Selon le commentaire, le *De l'âme*, III, 9 est bien plus qu'un texte de biologie : il exprime la manière dont s'applique au cas de la locomotion la structure ___ du mouvement."
+  - id: "aristote-desir-mouvement-p1-55"
+    sentence: "Le *De l'âme*, III, 9 est bien plus qu'un texte de biologie : il exprime la manière dont s'applique au cas de la locomotion la structure ___ du mouvement."
     answer: "universelle"
     alt: []
-- id: aristote-desir-mouvement-p2
+- id: "aristote-desir-mouvement-p2"
   title: "L'intelligence spéculative ne commande pas"
   notes: |-
     {red}Ni la partie intellective, l'intelligence, n'imprime le mouvement{/red} : du moins pas
@@ -579,13 +590,105 @@ lessons:
     lui-même sa propre fin, et {coral}elle ne formule aucun jugement normatif sur ce qu'il faut{/coral}
     faire. {amber}L'action, elle, porte sur le singulier et vise une fin extérieure{/amber} ; même l'acte
     vertueux, qui procure du plaisir, reste ordonné au bonheur, qualité d'une vie entière.
-
+  passage:
+    label: "Fragment 2"
+    text: "Mais ce n'est pas non plus la partie intellective ou ce qu'on appelle l'intelligence, qui imprime le mouvement. L'intelligence spéculative, en effet, ne considère aucune action à accomplir et ne dit rien de ce qui est à fuir ou à poursuivre, alors que l'action implique toujours la fuite ou la poursuite de quelque chose."
+  points:
+  - id: "aristote-desir-mouvement-p2-1"
+    sentence: "« Mais ___. L'intelligence spéculative, en effet, ne considère aucune action à accomplir et ne dit rien de ce qui est à fuir ou à poursuivre, alors que l'action implique toujours la fuite ou la poursuite de quelque chose. »"
+    answer: "ce n'est pas non plus la partie intellective ou ce qu'on appelle l'intelligence, qui imprime le mouvement"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-2"
+    sentence: "« Mais ce n'est pas non plus la partie intellective ou ce qu'on appelle l'intelligence, qui imprime le mouvement. ___, alors que l'action implique toujours la fuite ou la poursuite de quelque chose. »"
+    answer: "L'intelligence spéculative, en effet, ne considère aucune action à accomplir et ne dit rien de ce qui est à fuir ou à poursuivre"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-3"
+    sentence: "« Mais ce n'est pas non plus la partie intellective ou ce qu'on appelle l'intelligence, qui imprime le mouvement. L'intelligence spéculative, en effet, ne considère aucune action à accomplir et ne dit rien de ce qui est à fuir ou à poursuivre, alors que ___. »"
+    answer: "l'action implique toujours la fuite ou la poursuite de quelque chose"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-16"
+    sentence: "L'intelligence, en grec ___, est une faculté proprement humaine."
+    answer: "nous"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-17"
+    sentence: "Les deux *Éthiques* affirment que l'action humaine diffère du mouvement des autres animaux par son ___."
+    answer: "principe"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-18"
+    sentence: "Aristote aurait pu écarter l'intelligence parce qu'elle ne se rencontre pas chez tous les animaux capables de locomotion, comme il le fait dans les *___* ; il rappelle plutôt le rôle essentiel du désir."
+    answer: "Parties des animaux"
+    alt: ["Les Parties des animaux", "Des parties des animaux"]
+  - id: "aristote-desir-mouvement-p2-11"
+    sentence: "L'intelligence qui pense les réalités universelles en tant que telles, sans considérer aucune action à accomplir, s'appelle l'intelligence ___."
+    answer: "spéculative"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-19"
+    sentence: "Les latins distingueront, dans l'intelligence qui contemple les réalités universelles, l'intellect possible (*intellectus possibilis*) et l'intellect ___ (*intellectus agens*)."
+    answer: "agent"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-20"
+    sentence: "Le *De l'âme*, III, 5 distingue une faculté qui se caractérise par le fait qu'elle devient toutes choses, et une autre par le fait qu'elle ___ toutes choses."
+    answer: "produit"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-21"
+    sentence: "L'acte d'intellection, que produisent ensemble ces deux facultés de l'intelligence, est à lui-même sa propre ___."
+    answer: "fin"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-22"
+    sentence: "L'intelligence spéculative pense l'universel et ne s'intéresse pas à l'action, ___ par définition."
+    answer: "singulière"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-23"
+    sentence: "L'intelligence spéculative contemple ce qui est : elle ne formule pas, au sujet des choses, de jugement ___ sur la manière dont il faut se comporter envers elles."
+    answer: "normatif"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-24"
+    sentence: "L'autotélicité de l'acte vertueux n'est que partielle : une action peut être dite vertueuse ou vicieuse, mais c'est une vie ___ que l'on qualifiera d'heureuse ou de malheureuse."
+    answer: "entière"
+    alt: []
+- id: "aristote-desir-mouvement-p2b"
+  title: "Penser l'effrayant n'est pas avoir peur"
+  notes: |-
     Même quand l'intelligence spéculative réfléchit à une chose effrayante ou plaisante,
     elle ne commande pas la peur ou le plaisir correspondant : {green}pour se mouvoir, il faut{/green}
     {green}s'émouvoir{/green}, et c'est le cœur, ou un autre organe, qui s'émeut. Là où {sky}Platon{/sky} logeait le
     *thumos* dans le cœur, {coral}Aristote affirme une diffusion corporelle du désir{/coral}, qui reste
     pourtant un acte de l'âme.
-
+  passage:
+    label: "Fragment 2"
+    text: "Mais, lors même qu'elle considère une chose de cette sorte, elle ne commande pas, pour autant, de la fuir ou de la poursuivre. Ainsi, souvent réfléchit-elle à quelque chose d'effrayant ou de plaisant, mais ne commande pas d'avoir peur ; c'est le cœur qui est agité ou, dans le cas d'une chose plaisante, un autre organe."
+  points:
+  - id: "aristote-desir-mouvement-p2-4"
+    sentence: "« Mais, lors même qu'elle considère une chose de cette sorte, ___. Ainsi, souvent réfléchit-elle à quelque chose d'effrayant ou de plaisant, mais ne commande pas d'avoir peur ; c'est le cœur qui est agité ou, dans le cas d'une chose plaisante, un autre organe. »"
+    answer: "elle ne commande pas, pour autant, de la fuir ou de la poursuivre"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-5"
+    sentence: "« Mais, lors même qu'elle considère une chose de cette sorte, elle ne commande pas, pour autant, de la fuir ou de la poursuivre. Ainsi, ___ ; c'est le cœur qui est agité ou, dans le cas d'une chose plaisante, un autre organe. »"
+    answer: "souvent réfléchit-elle à quelque chose d'effrayant ou de plaisant, mais ne commande pas d'avoir peur"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-6"
+    sentence: "« Mais, lors même qu'elle considère une chose de cette sorte, elle ne commande pas, pour autant, de la fuir ou de la poursuivre. Ainsi, souvent réfléchit-elle à quelque chose d'effrayant ou de plaisant, mais ne commande pas d'avoir peur ; ___. »"
+    answer: "c'est le cœur qui est agité ou, dans le cas d'une chose plaisante, un autre organe"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-25"
+    sentence: "Pour se mouvoir il faut, en quelque sorte, s'___."
+    answer: "émouvoir"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-15"
+    sentence: "L'organe où Aristote situe le lieu du désir capable de fuir ou de poursuivre est le ___, ou un autre organe."
+    answer: "cœur"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-26"
+    sentence: "Dans *La République*, Platon trouvait dans le cœur le lieu du ___, cette ardeur morale capable d'obéir à la raison."
+    answer: "thumos"
+    alt: []
+  - id: "aristote-desir-mouvement-p2-27"
+    sentence: "Plutôt qu'une division locale de l'âme, le texte affirme une diffusion ___ du désir : c'est dans le corps qu'est éprouvé le besoin de poursuivre ou de fuir."
+    answer: "corporelle"
+    alt: []
+- id: "aristote-desir-mouvement-p2c"
+  title: "L'action s'aligne sur le désir"
+  notes: |-
     {amber}La preuve la plus frappante{/amber} en est que même lorsque l'intelligence ordonne quelque
     chose, il arrive qu'on ne bouge pas, {coral}parce que l'action s'aligne sur le désir{/coral} : c'est
     ce qui arrive aux gens qui ne sont pas {teal}« maîtres d'eux-mêmes »{/teal} ({violet}l'*akrasia*{/violet}). De même,
@@ -598,124 +701,34 @@ lessons:
     « ce loup-ci » qui poursuit.
   passage:
     label: "Fragment 2"
-    text: "Mais ce n'est pas non plus la partie intellective ou ce qu'on appelle l'intelligence, qui imprime le mouvement. L'intelligence spéculative, en effet, ne considère aucune action à accomplir et ne dit rien de ce qui est à fuir ou à poursuivre, alors que l'action implique toujours la fuite ou la poursuite de quelque chose. Mais, lors même qu'elle considère une chose de cette sorte, elle ne commande pas, pour autant, de la fuir ou de la poursuivre. Ainsi, souvent réfléchit-elle à quelque chose d'effrayant ou de plaisant, mais ne commande pas d'avoir peur ; c'est le cœur qui est agité ou, dans le cas d'une chose plaisante, un autre organe. En outre, quand bien même l'intelligence ordonne et la réflexion dit de fuir ou de poursuivre quelque chose, on ne bouge pas ; et l'action, au contraire, s'aligne sur le désir. Ainsi font les gens qui ne sont pas maîtres d'eux-mêmes. Et, généralement, nous voyons d'ailleurs que celui qui détient la science médicale ne prodigue pas de soin, comme quoi c'est autre chose qui décide souverainement de le faire selon la science, et non la science."
+    text: "En outre, quand bien même l'intelligence ordonne et la réflexion dit de fuir ou de poursuivre quelque chose, on ne bouge pas ; et l'action, au contraire, s'aligne sur le désir. Ainsi font les gens qui ne sont pas maîtres d'eux-mêmes. Et, généralement, nous voyons d'ailleurs que celui qui détient la science médicale ne prodigue pas de soin, comme quoi c'est autre chose qui décide souverainement de le faire selon la science, et non la science."
   points:
-  - id: aristote-desir-mouvement-p2-1
-    fragment: "1/3"
-    sentence: "« Mais ___. L'intelligence spéculative, en effet, ne considère aucune action à accomplir et ne dit rien de ce qui est à fuir ou à poursuivre, alors que l'action implique toujours la fuite ou la poursuite de quelque chose. »"
-    answer: "ce n'est pas non plus la partie intellective ou ce qu'on appelle l'intelligence, qui imprime le mouvement"
-    alt: []
-  - id: aristote-desir-mouvement-p2-2
-    fragment: "1/3"
-    sentence: "« Mais ce n'est pas non plus la partie intellective ou ce qu'on appelle l'intelligence, qui imprime le mouvement. ___, alors que l'action implique toujours la fuite ou la poursuite de quelque chose. »"
-    answer: "L'intelligence spéculative, en effet, ne considère aucune action à accomplir et ne dit rien de ce qui est à fuir ou à poursuivre"
-    alt: []
-  - id: aristote-desir-mouvement-p2-3
-    fragment: "1/3"
-    sentence: "« Mais ce n'est pas non plus la partie intellective ou ce qu'on appelle l'intelligence, qui imprime le mouvement. L'intelligence spéculative, en effet, ne considère aucune action à accomplir et ne dit rien de ce qui est à fuir ou à poursuivre, alors que ___. »"
-    answer: "l'action implique toujours la fuite ou la poursuite de quelque chose"
-    alt: []
-  - id: aristote-desir-mouvement-p2-4
-    fragment: "2/3"
-    sentence: "« Mais, lors même qu'elle considère une chose de cette sorte, ___. Ainsi, souvent réfléchit-elle à quelque chose d'effrayant ou de plaisant, mais ne commande pas d'avoir peur ; c'est le cœur qui est agité ou, dans le cas d'une chose plaisante, un autre organe. »"
-    answer: "elle ne commande pas, pour autant, de la fuir ou de la poursuivre"
-    alt: []
-  - id: aristote-desir-mouvement-p2-5
-    fragment: "2/3"
-    sentence: "« Mais, lors même qu'elle considère une chose de cette sorte, elle ne commande pas, pour autant, de la fuir ou de la poursuivre. Ainsi, ___ ; c'est le cœur qui est agité ou, dans le cas d'une chose plaisante, un autre organe. »"
-    answer: "souvent réfléchit-elle à quelque chose d'effrayant ou de plaisant, mais ne commande pas d'avoir peur"
-    alt: []
-  - id: aristote-desir-mouvement-p2-6
-    fragment: "2/3"
-    sentence: "« Mais, lors même qu'elle considère une chose de cette sorte, elle ne commande pas, pour autant, de la fuir ou de la poursuivre. Ainsi, souvent réfléchit-elle à quelque chose d'effrayant ou de plaisant, mais ne commande pas d'avoir peur ; ___. »"
-    answer: "c'est le cœur qui est agité ou, dans le cas d'une chose plaisante, un autre organe"
-    alt: []
-  - id: aristote-desir-mouvement-p2-7
-    fragment: "3/3"
+  - id: "aristote-desir-mouvement-p2-7"
     sentence: "« En outre, ___ ; et l'action, au contraire, s'aligne sur le désir. Ainsi font les gens qui ne sont pas maîtres d'eux-mêmes. Et, généralement, nous voyons d'ailleurs que celui qui détient la science médicale ne prodigue pas de soin, comme quoi c'est autre chose qui décide souverainement de le faire selon la science, et non la science. »"
     answer: "quand bien même l'intelligence ordonne et la réflexion dit de fuir ou de poursuivre quelque chose, on ne bouge pas"
     alt: []
-  - id: aristote-desir-mouvement-p2-8
-    fragment: "3/3"
+  - id: "aristote-desir-mouvement-p2-8"
     sentence: "« En outre, quand bien même l'intelligence ordonne et la réflexion dit de fuir ou de poursuivre quelque chose, on ne bouge pas ; et ___. Ainsi font les gens qui ne sont pas maîtres d'eux-mêmes. Et, généralement, nous voyons d'ailleurs que celui qui détient la science médicale ne prodigue pas de soin, comme quoi c'est autre chose qui décide souverainement de le faire selon la science, et non la science. »"
     answer: "l'action, au contraire, s'aligne sur le désir"
     alt: []
-  - id: aristote-desir-mouvement-p2-9
-    fragment: "3/3"
+  - id: "aristote-desir-mouvement-p2-9"
     sentence: "« En outre, quand bien même l'intelligence ordonne et la réflexion dit de fuir ou de poursuivre quelque chose, on ne bouge pas ; et l'action, au contraire, s'aligne sur le désir. ___. Et, généralement, nous voyons d'ailleurs que celui qui détient la science médicale ne prodigue pas de soin, comme quoi c'est autre chose qui décide souverainement de le faire selon la science, et non la science. »"
     answer: "Ainsi font les gens qui ne sont pas maîtres d'eux-mêmes"
     alt: []
-  - id: aristote-desir-mouvement-p2-10
-    fragment: "3/3"
+  - id: "aristote-desir-mouvement-p2-10"
     sentence: "« En outre, quand bien même l'intelligence ordonne et la réflexion dit de fuir ou de poursuivre quelque chose, on ne bouge pas ; et l'action, au contraire, s'aligne sur le désir. Ainsi font les gens qui ne sont pas maîtres d'eux-mêmes. Et, généralement, nous voyons d'ailleurs que ___. »"
     answer: "celui qui détient la science médicale ne prodigue pas de soin, comme quoi c'est autre chose qui décide souverainement de le faire selon la science, et non la science"
     alt: []
-  - id: aristote-desir-mouvement-p2-16
-    sentence: "L'intelligence, en grec ___, est une faculté proprement humaine."
-    answer: "nous"
-    alt: []
-  - id: aristote-desir-mouvement-p2-17
-    sentence: "Les deux *Éthiques* affirment que l'action humaine diffère du mouvement des autres animaux par son ___."
-    answer: "principe"
-    alt: []
-  - id: aristote-desir-mouvement-p2-18
-    sentence: "Aristote aurait pu écarter l'intelligence parce qu'elle ne se rencontre pas chez tous les animaux capables de locomotion, comme il le fait dans les *___* ; il rappelle plutôt le rôle essentiel du désir."
-    answer: "Parties des animaux"
-    alt: ["Les Parties des animaux", "Des parties des animaux"]
-  - id: aristote-desir-mouvement-p2-11
-    sentence: "L'intelligence qui pense les réalités universelles en tant que telles, sans considérer aucune action à accomplir, s'appelle l'intelligence ___."
-    answer: "spéculative"
-    alt: []
-  - id: aristote-desir-mouvement-p2-19
-    sentence: "Les latins distingueront, dans l'intelligence qui contemple les réalités universelles, l'intellect possible (*intellectus possibilis*) et l'intellect ___ (*intellectus agens*)."
-    answer: "agent"
-    alt: []
-  - id: aristote-desir-mouvement-p2-20
-    sentence: "Le *De l'âme*, III, 5 distingue une faculté qui se caractérise par le fait qu'elle devient toutes choses, et une autre par le fait qu'elle ___ toutes choses."
-    answer: "produit"
-    alt: []
-  - id: aristote-desir-mouvement-p2-21
-    sentence: "L'acte d'intellection, que produisent ensemble ces deux facultés de l'intelligence, est à lui-même sa propre ___."
-    answer: "fin"
-    alt: []
-  - id: aristote-desir-mouvement-p2-22
-    sentence: "L'intelligence spéculative pense l'universel et ne s'intéresse pas à l'action, ___ par définition."
-    answer: "singulière"
-    alt: []
-  - id: aristote-desir-mouvement-p2-23
-    sentence: "L'intelligence spéculative contemple ce qui est : elle ne formule pas, au sujet des choses, de jugement ___ sur la manière dont il faut se comporter envers elles."
-    answer: "normatif"
-    alt: []
-  - id: aristote-desir-mouvement-p2-24
-    sentence: "L'autotélicité de l'acte vertueux n'est que partielle : une action peut être dite vertueuse ou vicieuse, mais c'est une vie ___ que l'on qualifiera d'heureuse ou de malheureuse."
-    answer: "entière"
-    alt: []
-  - id: aristote-desir-mouvement-p2-25
-    sentence: "Pour se mouvoir, selon le commentaire, il faut, en quelque sorte, s'___."
-    answer: "émouvoir"
-    alt: []
-  - id: aristote-desir-mouvement-p2-15
-    sentence: "Selon le commentaire, l'organe où Aristote situe le lieu du désir capable de fuir ou de poursuivre est le ___, ou un autre organe."
-    answer: "cœur"
-    alt: []
-  - id: aristote-desir-mouvement-p2-26
-    sentence: "Dans *La République*, Platon trouvait dans le cœur le lieu du ___, cette ardeur morale capable d'obéir à la raison."
-    answer: "thumos"
-    alt: []
-  - id: aristote-desir-mouvement-p2-27
-    sentence: "Plutôt qu'une division locale de l'âme, le texte affirme une diffusion ___ du désir : c'est dans le corps qu'est éprouvé le besoin de poursuivre ou de fuir."
-    answer: "corporelle"
-    alt: []
-  - id: aristote-desir-mouvement-p2-12
-    sentence: "Selon le commentaire, même si l'intelligence spéculative jugeait qu'un loup est dangereux, ce jugement ne suffirait pas à faire fuir, parce qu'il serait d'ordre strictement ___."
+  - id: "aristote-desir-mouvement-p2-12"
+    sentence: "Même si l'intelligence spéculative jugeait qu'un loup est dangereux, ce jugement ne suffirait pas à faire fuir, parce qu'il serait d'ordre strictement ___."
     answer: "théorique"
     alt: []
-  - id: aristote-desir-mouvement-p2-13
+  - id: "aristote-desir-mouvement-p2-13"
     sentence: "Le phénomène par lequel une personne n'accomplit pas les actions que son intelligence lui ordonne, parce que son action s'aligne sur le désir, s'appelle en grec l'___."
     answer: "acrasie"
     alt: []
-- id: aristote-desir-mouvement-p3
-  title: "Deux principes qui alternent"
+- id: "aristote-desir-mouvement-p3"
+  title: "Ni l'appétit seul : deux principes qui alternent"
   notes: |-
     Symétriquement, {red}l'appétit seul ne décide pas non plus souverainement du mouvement{/red} :
     les gens maîtres d'eux-mêmes n'accomplissent pas toujours ce dont ils ont l'appétit,
@@ -735,7 +748,45 @@ lessons:
     les autres animaux, la faculté représentative, mais aussi l'intelligence ; du côté de
     l'appétit, celui-ci se divise en trois espèces, dont deux, l'ardeur et le souhait, sont
     susceptibles d'obéir au jugement de la raison.
-
+  passage:
+    label: "Fragment 3"
+    text: "Mais ce n'est même pas l'appétit qui décide souverainement de ce mouvement, car les gens maîtres d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'intelligence ! Cependant il est au moins manifeste qu'il y a là deux principes qui, alternativement, sont à l'origine du mouvement : l'appétit et l'intelligence, si l'on veut bien poser la représentation comme une sorte d'intellection."
+  points:
+  - id: "aristote-desir-mouvement-p3-1"
+    sentence: "« Mais ___, car les gens maîtres d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'intelligence ! Cependant il est au moins manifeste qu'il y a là deux principes qui, alternativement, sont à l'origine du mouvement : l'appétit et l'intelligence, si l'on veut bien poser la représentation comme une sorte d'intellection. »"
+    answer: "ce n'est même pas l'appétit qui décide souverainement de ce mouvement"
+    alt: []
+  - id: "aristote-desir-mouvement-p3-2"
+    sentence: "« Mais ce n'est même pas l'appétit qui décide souverainement de ce mouvement, car ___ ! Cependant il est au moins manifeste qu'il y a là deux principes qui, alternativement, sont à l'origine du mouvement : l'appétit et l'intelligence, si l'on veut bien poser la représentation comme une sorte d'intellection. »"
+    answer: "les gens maîtres d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'intelligence"
+    alt: []
+  - id: "aristote-desir-mouvement-p3-3"
+    sentence: "« Mais ce n'est même pas l'appétit qui décide souverainement de ce mouvement, car les gens maîtres d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'intelligence ! Cependant il est au moins manifeste qu'___ : l'appétit et l'intelligence, si l'on veut bien poser la représentation comme une sorte d'intellection. »"
+    answer: "il y a là deux principes qui, alternativement, sont à l'origine du mouvement"
+    alt: []
+  - id: "aristote-desir-mouvement-p3-4"
+    sentence: "« Mais ce n'est même pas l'appétit qui décide souverainement de ce mouvement, car les gens maîtres d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'intelligence ! Cependant il est au moins manifeste qu'il y a là deux principes qui, alternativement, sont à l'origine du mouvement : l'appétit et l'intelligence, ___. »"
+    answer: "si l'on veut bien poser la représentation comme une sorte d'intellection"
+    alt: []
+  - id: "aristote-desir-mouvement-p3-13"
+    sentence: "Aristote pose une ___ : l'intelligence spéculative ne peut se faire obéir par le corps désirant, mais le désir seul ne cause pas non plus le mouvement humain."
+    answer: "antinomie"
+    alt: []
+  - id: "aristote-desir-mouvement-p3-11"
+    sentence: "Loin de s'achever sur une aporie, notre texte répond dès sa ligne 3 : les deux causes qui agissent de concert sont la représentation et l'___."
+    answer: "appétit"
+    alt: []
+  - id: "aristote-desir-mouvement-p3-9"
+    sentence: "Le principe du mouvement humain est, tout comme celui du mouvement animal en général, d'une nature doublement ___."
+    answer: "duelle"
+    alt: []
+  - id: "aristote-desir-mouvement-p3-10"
+    sentence: "Le désir proprement humain qui, à la différence du simple désir, est susceptible d'obéir au jugement de la raison, comprend l'ardeur et le ___."
+    answer: "souhait"
+    alt: []
+- id: "aristote-desir-mouvement-p3b"
+  title: "L'intelligence et l'appétit, ensemble"
+  notes: |-
     Les dernières lignes préparent la distinction, faite au chapitre 10, entre
     {amber}intelligence spéculative et intelligence pratique{/amber}. La maîtrise de soi (*enkrateia*)
     {red}n'y vient pas d'un enseignement{/red}, mais de {coral}l'entraînement à la vertu morale{/coral} : l'action
@@ -755,120 +806,106 @@ lessons:
     qu'annonçaient ses toutes premières lignes.
   passage:
     label: "Fragment 3"
-    text: "Mais ce n'est même pas l'appétit qui décide souverainement de ce mouvement, car les gens maîtres d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'intelligence ! Cependant il est au moins manifeste qu'il y a là deux principes qui, alternativement, sont à l'origine du mouvement : l'appétit et l'intelligence, si l'on veut bien poser la représentation comme une sorte d'intellection. Car bien des démarches qui dérogent à la science obéissent aux ordres de la représentation et, chez les autres animaux, il n'est pas question d'intellection, ni de raisonnement, mais de représentation. Ce sont donc là ensemble les deux principes de nature à imprimer le mouvement local : l'intelligence et l'appétit."
+    text: "Car bien des démarches qui dérogent à la science obéissent aux ordres de la représentation et, chez les autres animaux, il n'est pas question d'intellection, ni de raisonnement, mais de représentation. Ce sont donc là ensemble les deux principes de nature à imprimer le mouvement local : l'intelligence et l'appétit."
   points:
-  - id: aristote-desir-mouvement-p3-1
-    fragment: "1/2"
-    sentence: "« Mais ___, car les gens maîtres d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'intelligence ! Cependant il est au moins manifeste qu'il y a là deux principes qui, alternativement, sont à l'origine du mouvement : l'appétit et l'intelligence, si l'on veut bien poser la représentation comme une sorte d'intellection. »"
-    answer: "ce n'est même pas l'appétit qui décide souverainement de ce mouvement"
-    alt: []
-  - id: aristote-desir-mouvement-p3-2
-    fragment: "1/2"
-    sentence: "« Mais ce n'est même pas l'appétit qui décide souverainement de ce mouvement, car ___ ! Cependant il est au moins manifeste qu'il y a là deux principes qui, alternativement, sont à l'origine du mouvement : l'appétit et l'intelligence, si l'on veut bien poser la représentation comme une sorte d'intellection. »"
-    answer: "les gens maîtres d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'intelligence"
-    alt: []
-  - id: aristote-desir-mouvement-p3-3
-    fragment: "1/2"
-    sentence: "« Mais ce n'est même pas l'appétit qui décide souverainement de ce mouvement, car les gens maîtres d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'intelligence ! Cependant il est au moins manifeste qu'___ : l'appétit et l'intelligence, si l'on veut bien poser la représentation comme une sorte d'intellection. »"
-    answer: "il y a là deux principes qui, alternativement, sont à l'origine du mouvement"
-    alt: []
-  - id: aristote-desir-mouvement-p3-4
-    fragment: "1/2"
-    sentence: "« Mais ce n'est même pas l'appétit qui décide souverainement de ce mouvement, car les gens maîtres d'eux-mêmes, malgré leur appétit et leur désir, n'accomplissent pas les actions dont ils ont l'appétit, mais obéissent à l'intelligence ! Cependant il est au moins manifeste qu'il y a là deux principes qui, alternativement, sont à l'origine du mouvement : l'appétit et l'intelligence, ___. »"
-    answer: "si l'on veut bien poser la représentation comme une sorte d'intellection"
-    alt: []
-  - id: aristote-desir-mouvement-p3-5
-    fragment: "2/2"
+  - id: "aristote-desir-mouvement-p3-5"
     sentence: "« Car ___ et, chez les autres animaux, il n'est pas question d'intellection, ni de raisonnement, mais de représentation. Ce sont donc là ensemble les deux principes de nature à imprimer le mouvement local : l'intelligence et l'appétit. »"
     answer: "bien des démarches qui dérogent à la science obéissent aux ordres de la représentation"
     alt: []
-  - id: aristote-desir-mouvement-p3-6
-    fragment: "2/2"
+  - id: "aristote-desir-mouvement-p3-6"
     sentence: "« Car bien des démarches qui dérogent à la science obéissent aux ordres de la représentation et, ___. Ce sont donc là ensemble les deux principes de nature à imprimer le mouvement local : l'intelligence et l'appétit. »"
     answer: "chez les autres animaux, il n'est pas question d'intellection, ni de raisonnement, mais de représentation"
     alt: []
-  - id: aristote-desir-mouvement-p3-7
-    fragment: "2/2"
+  - id: "aristote-desir-mouvement-p3-7"
     sentence: "« Car bien des démarches qui dérogent à la science obéissent aux ordres de la représentation et, chez les autres animaux, il n'est pas question d'intellection, ni de raisonnement, mais de représentation. ___. »"
     answer: "Ce sont donc là ensemble les deux principes de nature à imprimer le mouvement local : l'intelligence et l'appétit"
     alt: []
-  - id: aristote-desir-mouvement-p3-13
-    sentence: "Selon le commentaire, Aristote pose une ___ : l'intelligence spéculative ne peut se faire obéir par le corps désirant, mais le désir seul ne cause pas non plus le mouvement humain."
-    answer: "antinomie"
-    alt: []
-  - id: aristote-desir-mouvement-p3-11
-    sentence: "Selon le commentaire, loin de s'achever sur une aporie, notre texte répond dès sa ligne 3 : les deux causes qui agissent de concert sont la représentation et l'___."
-    answer: "appétit"
-    alt: []
-  - id: aristote-desir-mouvement-p3-9
-    sentence: "Selon le commentaire, le principe du mouvement humain est, tout comme celui du mouvement animal en général, d'une nature doublement ___."
-    answer: "duelle"
-    alt: []
-  - id: aristote-desir-mouvement-p3-10
-    sentence: "Le désir proprement humain qui, à la différence du simple désir, est susceptible d'obéir au jugement de la raison, comprend l'ardeur et le ___."
-    answer: "souhait"
-    alt: []
-  - id: aristote-desir-mouvement-p3-12
+  - id: "aristote-desir-mouvement-p3-12"
     sentence: "La distinction entre intelligence spéculative et intelligence pratique, que prépare la fin de notre texte, est développée par Aristote au chapitre ___ du même livre III du traité."
     answer: "10"
     alt: []
-  - id: aristote-desir-mouvement-p3-14
+  - id: "aristote-desir-mouvement-p3-14"
     sentence: "Chez l'animal, une seule forme de représentation intervient entre la fin et le désir ; chez l'homme, la représentation est double : sensible et ___."
     answer: "rationnelle"
     alt: []
-  - id: aristote-desir-mouvement-p3-15
+  - id: "aristote-desir-mouvement-p3-15"
     sentence: "Dans la démultiplication des facultés de la psyché humaine se loge le spectre du libre ___, qui offre à l'homme des possibilités alternatives que ne possède pas l'animal."
     answer: "arbitre"
     alt: []
-  - id: aristote-desir-mouvement-p3-16
+  - id: "aristote-desir-mouvement-p3-16"
     sentence: "La question de la maîtrise de soi, en grec ___, résonne dans l'ambiguïté sur laquelle se termine le *De l'âme*, III, 9."
     answer: "enkrateia"
     alt: []
-  - id: aristote-desir-mouvement-p3-17
+  - id: "aristote-desir-mouvement-p3-17"
     sentence: "La maîtrise de soi ne vient pas d'un enseignement théorique, mais de l'___ à la vertu morale, sous la forme de dispositions acquises à bien agir."
     answer: "entraînement"
     alt: []
-  - id: aristote-desir-mouvement-p3-18
+  - id: "aristote-desir-mouvement-p3-18"
     sentence: "Selon l'*Éthique à Nicomaque*, c'est l'entraînement à l'action vertueuse qui engendre le caractère vertueux : l'action précède la ___."
     answer: "disposition"
     alt: []
-  - id: aristote-desir-mouvement-p3-19
+  - id: "aristote-desir-mouvement-p3-19"
     sentence: "D'un texte sur le mouvement animal, l'extrait se transforme, dans son dernier quart, en un texte sur la ___ humaine."
     answer: "morale"
     alt: []
-  - id: aristote-desir-mouvement-p3-20
+  - id: "aristote-desir-mouvement-p3-20"
     sentence: "Chez l'homme, la fuite devant un loup peut être un simple déplacement, un acte courageux ou un acte ___."
     answer: "lâche"
     alt: []
-  - id: aristote-desir-mouvement-p3-21
+  - id: "aristote-desir-mouvement-p3-21"
     sentence: "L'action, dont seul l'homme est capable, implique d'être, au sens plein, principe de ses actes, en grec ___."
     answer: "arkhè"
     alt: []
-  - id: aristote-desir-mouvement-p3-22
+  - id: "aristote-desir-mouvement-p3-22"
     sentence: "Sans traiter de la voûte céleste ni du Premier moteur, le *De l'âme*, III, 9 donne accès, en creux, à un ___ de la physique aristotélicienne."
     answer: "microcosme"
     alt: []
-  - id: aristote-desir-mouvement-p3-23
+  - id: "aristote-desir-mouvement-p3-23"
     sentence: "L'animal se meut sous l'impulsion du désir que fait naître en lui la représentation d'une fin bonne ; de même, les corps célestes sont mus par le désir du Premier ___."
     answer: "moteur"
     alt: []
-  - id: aristote-desir-mouvement-p3-24
+  - id: "aristote-desir-mouvement-p3-24"
     sentence: "Selon l'*Éthique à Nicomaque*, le législateur doit distinguer les actions volontaires, involontaires et \"___\" pour attribuer correctement louanges et blâmes."
     answer: "mixtes"
     alt: []
-  - id: aristote-desir-mouvement-p3-25
+  - id: "aristote-desir-mouvement-p3-25"
     sentence: "Le volontaire est l'analogue du mouvement naturel ; l'acte contraint, celui du mouvement ___."
     answer: "contre-nature"
     alt: []
-  - id: aristote-desir-mouvement-p3-26
+  - id: "aristote-desir-mouvement-p3-26"
     sentence: "Selon l'*Éthique à Nicomaque*, ce n'est \"ni par nature, ni contrairement à la nature que naissent en nous les ___\"."
     answer: "vertus"
     alt: []
-  - id: aristote-desir-mouvement-p3-27
+  - id: "aristote-desir-mouvement-p3-27"
     sentence: "L'habitude est une \"___ nature\" : l'acquisition de la vertu permet à l'homme d'accomplir au mieux sa fin naturelle, son \"œuvre propre\"."
     answer: "seconde"
     alt: []
-  - id: aristote-desir-mouvement-p3-28
+  - id: "aristote-desir-mouvement-p3-28"
     sentence: "C'est en ___ qu'Aristote aborde les questions de morale et de politique, selon lui indissociables."
     answer: "naturaliste"
+    alt: []
+- id: "aristote-desir-mouvement-o1"
+  title: "Ce que le texte dit de la vie"
+  notes: |-
+    **Le chapitre classe les vivants par ce qu'ils peuvent faire, et fait du désir le principe de la vie animale en mouvement.**
+
+    **Une échelle des vivants.** Les {yellow}plantes{/yellow} se nourrissent sans sentir ni se déplacer ; certains {yellow}animaux{/yellow} sentent sans se déplacer ; d'autres se déplacent. {coral}Vivre se dit en plusieurs sens, selon les facultés de l'âme qu'un vivant possède{/coral}, et chaque faculté supérieure suppose les inférieures sans en découler.
+
+    **Le vivant, être orienté.** Le mouvement local n'est pas une agitation : {amber}il vise toujours un but{/amber}. Le principe du mouvement animal est {violet}le désir{/violet}, joint à la représentation de son objet : {coral}l'animal se meut parce qu'il tend vers ce qu'il se représente comme bon{/coral}. La vie animale est ainsi une {amber}vie de désir{/amber}, et non un mécanisme.
+
+    **Une nature qui ne fait rien en vain.** Que des animaux complets restent immobiles prouve, par le principe finaliste, qu'{coral}ils n'ont pas besoin de se mouvoir{/coral} : la nature donne à chaque vivant les organes que réclame sa manière de vivre. {yellow}L'huître n'a pas de pattes parce qu'elle n'en a pas l'usage, non parce qu'elle en serait privée.{/yellow}
+
+    **L'homme.** Chez lui seul, le désir peut obéir à l'intelligence ou lui résister : {coral}la vie humaine ajoute à la vie animale la possibilité de l'action, et donc de la maîtrise de soi{/coral}.
+
+    ! Le texte ne réduit pas la vie {red}au mouvement{/red} : le mouvement local n'est qu'{green}une des manières de vivre{/green}, propre à certains animaux.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: "aristote-desir-mouvement-o1-x1"
+    sentence: "Pour Aristote, le principe du mouvement local de l'animal est __le ___,__ joint à la représentation de son objet."
+    answer: "désir"
+    alt: []
+  - id: "aristote-desir-mouvement-o1-x2"
+    sentence: "Que des animaux complets restent immobiles montre, par le principe finaliste, __qu'ils n'ont pas ___ de se mouvoir.__"
+    answer: "besoin"
     alt: []
