@@ -258,7 +258,7 @@ et la remplacer par un renvoi.
   notion et à son terme grec (QCM, association, écrit). Elle peut porter
   couleurs et renvois ; ils sont retirés dans la bulle et l'exercice.
 - **L'en-tête du rappel cite la définition par `[def]`**, sans la recopier :
-  « Chez Plotin, le {violet}**temps**{/violet} (*khronos*) est [def]. »
+  « Chez Plotin, le {violet}**temps**{/violet} ({blue}*khronos*{/blue}) est [def]. »
   (`[def:g-autre]` cite celle d'une autre entrée). La conception écartée,
   en rose, vient juste après, dans une phrase à elle : « Il n'est
   {pink}ni le mouvement des astres ni la mesure de ce mouvement{/pink}. »
@@ -300,8 +300,12 @@ et la remplacer par un renvoi.
   qui __demeure dans l'identité__ parce que __le tout lui est toujours
   présent__ ». Le souligné se met à l'intérieur des guillemets, sur une
   proposition ou un groupe de mots, jamais sur toute la citation.
-- **Les termes techniques grecs en violet**, en plus de l'italique :
-  `{violet}*pollakhôs legomenon*{/violet}`.
+- **Les termes grecs en bleu**, en plus de l'italique, comme dans tous
+  les cours (`content/philosophie.md`, depuis le 2026-11-06 ; aligné ici le
+  2026-11-26, le glossaire les mettait jusque-là en violet) :
+  `{blue}*pollakhôs legomenon*{/blue}`, et dans l'en-tête
+  « le {violet}**temps**{/violet} ({blue}*khronos*{/blue}) ». Le terme
+  français qu'ils rendent garde son violet.
 - **Ce qu'elle n'est pas** : le contresens principal, désamorcé dans le fil
   du rappel ou par un piège `! …` en fin. **Un piège ne répète pas un
   paragraphe** : si une étape du rappel dit déjà que l'Un est au-dessus de

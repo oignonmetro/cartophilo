@@ -519,7 +519,12 @@ def cmd_crochet():
         elif f in ajoutes or rel in nouveaux:
             fautes.append(f"{entree} : entrée nouvelle sans journal NotebookLM")
         elif not retouche and ETAPE.search(git("diff", "-U0", "HEAD", "--", rel)):
-            fautes.append(f"{entree} : des intitulés d'étape changent sans journal (une refonte commence par `notebook.py debut`)")
+            # seule compte la suite des intitulés, mise en forme ôtée : une harmonisation de la
+            # mise en relief, ou une prémisse ajoutée au corps d'une étape, n'est pas une refonte
+            avant = re.search(r"notes: \|-\n(.*?)\n  [a-z]+:", git("show", f"HEAD:{rel}"), re.S)
+            titres = lambda notes: [norm(t) for t, _ in etapes(notes)]
+            if not avant or titres(avant.group(1)) != titres(rappel(yaml)):
+                fautes.append(f"{entree} : des intitulés d'étape changent sans journal (une refonte commence par `notebook.py debut`)")
     if fautes:
         refuse("Procédure NotebookLM inachevée (notebook.py) :\n" + "\n".join(fautes))
 
