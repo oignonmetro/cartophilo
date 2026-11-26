@@ -206,6 +206,7 @@ def main():
     unit = yaml.safe_load(raw)
     old = {l["id"]: l for l in unit["lessons"]}
     used, report, lessons = set(), [], []
+    usedp = {}
     allpts = {p["id"]: p for l in unit["lessons"] for p in l.get("points", [])}
     taken = {pid for it in plan["lessons"] if "new" in it for pid in it["new"].get("take", [])}
 
@@ -223,6 +224,8 @@ def main():
             for f in ("title", "notes", "tables", "aside"):
                 if f in item:
                     l[f] = item[f]
+            if item.get("append"):
+                l["notes"] = (l.get("notes") or "").rstrip() + "\n\n" + item["append"].strip()
             if "passage" in item:
                 l["passage"] = {**l.get("passage", {}), **item["passage"]}
             drop = set(item.get("drop", []))
@@ -282,7 +285,13 @@ def main():
             l = {"id": s["id"], "title": s["title"]}
             if s.get("aside"):
                 l["aside"] = s["aside"]
-            l["notes"] = s["notes"]
+            if "paras" in s:
+                paras = [x for x in re.split(r"\n\s*\n", (src.get("notes") or "").strip()) if x.strip()]
+                usedp.setdefault(item["split"], (len(paras), set()))[1].update(s["paras"])
+                body = [paras[i] for i in s["paras"]]
+                l["notes"] = "\n\n".join(([s["prepend"]] if s.get("prepend") else []) + body + ([s["append"]] if s.get("append") else []))
+            else:
+                l["notes"] = s["notes"]
             l["passage"] = passage
             if s.get("tables"):
                 l["tables"] = s["tables"]
@@ -291,6 +300,10 @@ def main():
             l["points"] = cit + oth + s.get("add", [])
             lessons.append(l)
 
+    for sid, (n, got) in usedp.items():
+        miss = sorted(set(range(n)) - got)
+        if miss:
+            report.append(f"paragraphes du rappel de {sid} non repris : {miss}")
     lost = [p["id"] for l in unit["lessons"] for p in l.get("points", []) if p["id"] not in used]
     if lost:
         report.append("cartes d'anciennes leçons non reprises : " + ", ".join(lost))
