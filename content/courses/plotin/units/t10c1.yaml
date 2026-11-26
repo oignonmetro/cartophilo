@@ -1,11 +1,16 @@
 # Unité de texte (voir content/textes.md) : Plotin, traité 10 (V, 1),
 # chapitre 1, traduction F. Fronterotta. Mouvements repérés par leurs lignes.
+# Refondue le 2026-11-26 (niveau normale) : rappels écrits d'après les
+# cartes-explication (notes de Fronterotta), une leçon d'introduction, les
+# mouvements longs coupés en deux, un prolongement ; les cartes-citation
+# gardent leur identifiant, recentrées sur leur segment.
 
-id: t10c1
-title: L'oubli des âmes (10 [V, 1], 1)
-subtitle: Traité 10, Des trois hypostases qui ont rang de principes, chapitre 1
-icon: page
-color: coral
+id: "t10c1"
+title: "L'oubli des âmes (10 [V, 1], 1)"
+subtitle: "Traité 10, Des trois hypostases qui ont rang de principes, chapitre 1"
+icon: "page"
+color: "coral"
+depth: "normale"
 intro: |-
   Premier chapitre du traité 10 (V, 1), *Des trois hypostases qui ont rang de
   principes*, dans la traduction de F. Fronterotta (édition de L. Brisson et
@@ -16,473 +21,592 @@ intro: |-
   qui fait se remémorer à l'âme son origine et sa dignité, ouvre la recherche
   des chapitres suivants.
 lessons:
-- id: t10c1-p1
+- id: "t10c1-i1"
+  title: "Le chapitre, sa place et son plan"
+  notes: |-
+    **Le texte ouvre le traité 10 (V, 1), {sky}*Des trois hypostases qui ont rang de principes*{/sky}, cité dans la traduction de {sky}F. Fronterotta{/sky}.** Le traité expose l'Âme, l'Intellect et l'Un ; mais il commence par l'âme humaine, et par une question : {amber}pourquoi les âmes ont-elles oublié le dieu qui est leur père ?{/amber}
+
+    **Pourquoi commencer par l'oubli ?** Le traité 9 (VI, 9), *Sur le Bien ou l'Un*, vient de décrire la source merveilleuse dont tout procède. Une question s'ensuit : si l'âme vient d'un tel principe, {red}pourquoi s'en est-elle éloignée{/red}, et pourquoi s'attache-t-elle au sensible ? Le chapitre 1 répond par la {violet}cause{/violet} de l'éloignement, puis annonce le {violet}remède{/violet} : un discours qui rappelle à l'âme ce qu'elle est. Les chapitres suivants le prononcent, en remontant de l'âme jusqu'à l'Intellect et à l'Un.
+
+    **Sa thèse :** {coral}l'âme ne s'est pas éloignée de son principe par contrainte, mais par l'audace de vouloir s'appartenir{/coral} ; en admirant les choses d'ici-bas, elle s'est jugée inférieure à elles, et cette mésestime de soi la rend incapable de concevoir le dieu. {green}Le remède est de lui faire se souvenir de son origine et de sa dignité.{/green}
+
+    **Le plan.**
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | poser la question de l'oubli | l. 1-3 | Les âmes, parties issues du dieu, l'ignorent et s'ignorent elles-mêmes, ce qui demande une cause. |
+    | nommer l'origine du mal | l. 3-11 | L'audace, la génération, l'altérité et la volonté de s'appartenir font courir l'âme loin de sa source, comme un enfant élevé loin de ses parents. |
+    | décrire l'effet de l'éloignement | l. 11-22 | Admirant le sensible, l'âme s'avoue inférieure à lui, se juge la plus mortelle des choses, et ne peut plus concevoir le dieu. |
+    | annoncer le remède | l. 22-31 | Deux discours : l'un montre que ce que l'âme estime ne vaut rien, l'autre lui rappelle son origine et sa dignité, et vient en premier. |
+    | fonder la recherche | l. 31-35 | C'est l'âme qui cherche ; elle peut trouver ce qu'elle cherche parce qu'elle lui est apparentée. |
+
+    ! Le texte ne décrit pas {red}une faute à punir{/red}, mais {green}un oubli à guérir{/green} : le remède est un savoir, non une expiation.
+  passage:
+    label: "Introduction"
+  tables:
+  - table: "mouvement-lieu-ce-qui-s-y-joue"
+    exercises:
+    - {kind: bank, column: Ce qui s'y joue}
+  points:
+  - id: "t10c1-i1-x1"
+    sentence: "Le chapitre 1 du traité 10 répond à la question __de l'___ par les âmes du dieu qui est leur père.__"
+    answer: "oubli"
+    alt: []
+  - id: "t10c1-i1-x2"
+    sentence: "Le remède à l'oubli est un discours qui fait se remémorer à l'âme __son origine et sa ___.__"
+    answer: "dignité"
+    alt: []
+- id: "t10c1-p1"
   title: "La question de l'oubli du père"
+  notes: |-
+    **Le traité s'ouvre sur une question :** {amber}**qu'est-ce qui a fait que les âmes ont oublié le dieu qui est leur père, et se sont ignorées elles-mêmes ?**{/amber}
+
+    **Pourquoi « Mais alors » ?** Le chapitre commence comme une {amber}objection{/amber}, dans la forme du dialogue intérieur qu'affectionne Plotin : si l'âme vient d'une source aussi parfaite que celle que décrivait le traité 9, son oubli devient incompréhensible. La question n'est donc pas une curiosité : {coral}elle naît d'une contradiction apparente{/coral}.
+
+    **Qui est « le dieu qui est leur père » ?** Pour Fronterotta, {violet}l'Intellect{/violet}, non l'Un : les âmes sont dites {teal}« des parties qui viennent de là-bas »{/teal}, réalités plurielles issues du monde intelligible, comme les Formes. Plotin figure ailleurs l'Intellect par {yellow}Kronos, entre son père Ouranos, l'Un, et son fils Zeus, l'Âme{/yellow} (traité 31, V, 8, 13). D'autres interprètes y lisent {violet}l'Un{/violet}, auquel Plotin réserve souvent le titre de père, après la *Lettre VI* de Platon. Le mot « père » vient aussi du {sky}*Timée*{/sky}, où le démiurge est « le producteur et le père » de l'univers.
+
+    ? **Hypostase** (`hupostasis`) : une réalité véritable et subsistante. {sky}Porphyre{/sky}, qui a donné leurs titres aux traités, nomme ainsi les trois principes, l'Un, l'Intellect et l'Âme ; Plotin emploie le mot en un sens moins strict.
+
+    **Pourquoi « ignorantes d'elles-mêmes que de lui » ?** Les deux ignorances vont ensemble : {coral}l'âme étant une partie qui vient du dieu, ignorer son origine, c'est ignorer ce qu'elle est{/coral}. Inversement, se connaître elle-même la reconduira vers lui (l. 31-35).
+
+    **Pourquoi « alors même qu'elles […] lui appartiennent entièrement » ?** La concessive fait le paradoxe : {red}l'oubli devrait être impossible{/red} à une partie de ce qu'elle oublie. Il faut donc une cause.
+
+    ! Le texte ne demande pas {red}si{/red} les âmes ont oublié, mais {green}ce qui l'a fait{/green} : l'oubli est un fait, sa cause est la question.
   passage:
     label: "l. 1-3"
     text: "– Mais alors qu'est-ce qui a fait que les âmes ont oublié le dieu qui est leur père, et qu'elles sont aussi bien ignorantes d'elles-mêmes que de lui, alors même qu'elles sont des parties qui viennent de là-bas et qui lui appartiennent entièrement ?"
   points:
-  - id: t10c1-p1-1
+  - id: "t10c1-p1-1"
     sentence: "« Mais alors qu'est-ce qui a fait que les âmes ont ___ le dieu qui est leur père, et qu'elles sont aussi bien ignorantes d'elles-mêmes que de lui, alors même qu'elles sont des parties qui viennent de là-bas et qui lui appartiennent entièrement ? »"
     answer: "oublié"
     alt: []
-  - id: t10c1-p1-2
+  - id: "t10c1-p1-2"
     sentence: "« Mais alors qu'est-ce qui a fait que les âmes ont oublié le dieu qui est ___, et qu'elles sont aussi bien ignorantes d'elles-mêmes que de lui, alors même qu'elles sont des parties qui viennent de là-bas et qui lui appartiennent entièrement ? »"
     answer: "leur père"
     alt: []
-  - id: t10c1-p1-3
+  - id: "t10c1-p1-3"
     sentence: "« Mais alors qu'est-ce qui a fait que les âmes ont oublié le dieu qui est leur père, et qu'elles sont aussi bien ___ que de lui, alors même qu'elles sont des parties qui viennent de là-bas et qui lui appartiennent entièrement ? »"
     answer: "ignorantes d'elles-mêmes"
     alt: []
-  - id: t10c1-p1-4
+  - id: "t10c1-p1-4"
     sentence: "« Mais alors qu'est-ce qui a fait que les âmes ont oublié le dieu qui est leur père, et qu'elles sont aussi bien ignorantes d'elles-mêmes que de lui, alors même qu'elles sont ___ et qui lui appartiennent entièrement ? »"
     answer: "des parties qui viennent de là-bas"
     alt: []
-  - id: t10c1-p1-5
+  - id: "t10c1-p1-5"
     sentence: "La question « qu'est-ce qui a fait que les âmes ont oublié le dieu qui est leur père ? » ouvre le traité *Des trois hypostases qui ont rang de principes*, ___ dans l'ordre de Porphyre."
     answer: "V, 1"
     alt: []
-  - id: t10c1-p1-6
+  - id: "t10c1-p1-6"
     sentence: "Le traité *Des trois hypostases qui ont rang de principes* (V, 1), qui s'ouvre sur l'oubli par les âmes du dieu qui est leur père, occupe le rang ___ dans l'ordre chronologique de rédaction."
     answer: "10"
     alt: []
-  - id: t10c1-p1-7
+  - id: "t10c1-p1-7"
     sentence: "Selon l'ordre chronologique établi par Porphyre, le traité 10 (V, 1), Sur les trois hypostases qui ont rang de principes, suit immédiatement le traité 9 (___), Sur le Bien ou l'Un, dont il entend pour partie poursuivre l'examen. En effet, si l'Un est la réalité merveilleuse et toute-puissante qu'a décrite le traité 9, et que l'Âme en provient, pourquoi cette dernière s'est-elle éloignée d'une telle source ? Et, s'éloignant ainsi de son principe pour parvenir jusqu'au sensible, comment se fait-il qu'elle y demeure ?"
     answer: "VI, 9"
     alt: []
-  - id: t10c1-p1-8
+  - id: "t10c1-p1-8"
     sentence: "Dans la question qui ouvre V, 1 [10], « le dieu qui est leur père » n'est pas l'Un mais l'___ : les âmes y sont dites « des parties qui viennent de là-bas », réalités plurielles issues du monde intelligible, comme les Formes."
     answer: "Intellect"
     alt: []
-  - id: t10c1-p1-9
+  - id: "t10c1-p1-9"
     sentence: "Pour l'Intellect « père » de l'âme, Fronterotta renvoie à V, 8 [31], 13, où l'Intellect, figuré par ___, se tient entre son propre père Ouranos, l'Un, et son fils Zeus, l'Âme."
     answer: "Kronos"
     alt: []
-  - id: t10c1-p1-10
+  - id: "t10c1-p1-10"
     sentence: "L'exégèse où Kronos, figure de l'Intellect, se tient entre un père meilleur que lui (Ouranos) et un fils qui lui est inférieur (Zeus, l'Âme) se lit dans le traité 31 [V, 8] au chapitre ___."
     answer: "13"
     alt: []
-  - id: t10c1-p1-11
+  - id: "t10c1-p1-11"
     sentence: "Si Fronterotta lit l'Intellect dans « le dieu qui est leur père » (V, 1 [10], 1, l. 1), d'autres interprètes y lisent l'___ : après la *Lettre VI* de Platon (323d), Plotin réserve souvent le titre de « père » au Premier."
     answer: "Un"
     alt: []
-  - id: t10c1-p1-12
+  - id: "t10c1-p1-12"
     sentence: "C'est ___, qui a donné leurs titres aux traités de Plotin, qui emploie le terme `hupostasis` pour désigner les trois réalités véritables ; Plotin, lui, l'emploie en un sens moins strict."
     answer: "Porphyre"
     alt: []
-  - id: t10c1-p1-13
+  - id: "t10c1-p1-13"
     sentence: "Pour éclairer « le dieu qui est leur père » (V, 1, 1, l. 1), Fronterotta rappelle que Platon, dans le *Timée* (28c3), dit du démiurge qu'il est « le producteur et le père », en grec, translittéré, ___, de l'univers."
     answer: "poiêtês kai patêr"
     alt: []
-  notes: ""
-- id: t10c1-p2
-  title: "L'origine du mal : l'audace et l'éloignement"
+- id: "t10c1-p2"
+  title: "L'origine du mal : l'audace"
+  notes: |-
+    **Plotin nomme l'origine du mal des âmes :** {coral}**l'audace, la génération, l'altérité première et la volonté de s'appartenir à elles-mêmes.**{/coral}
+
+    ? **Audace** (`tolma`) : chez Plotin, le mouvement par lequel une réalité s'écarte de son principe pour être par elle-même. Le mot vient du vocabulaire {sky}néopythagoricien{/sky} et gnostique.
+
+    **Pourquoi quatre termes ?** Ils disent le même mouvement sous quatre aspects. L'{amber}audace{/amber} les nomme tous : c'est l'élan de l'âme hors de sa source. La {amber}génération{/amber} (`genesis`) : l'âme entre dans le devenir. L'{amber}altérité première{/amber} (`prôtê heterotês`) : elle devient autre que ce dont elle vient, première différence d'où procède la multiplicité. La {amber}volonté de s'appartenir{/amber} : elle veut être à elle-même, et non à son principe.
+
+    **Pourquoi « l'origine du mal » ?** L'audace a {amber}deux faces{/amber} : {violet}ontologique{/violet}, l'âme descend dans la hiérarchie des êtres ; {violet}éthique{/violet}, elle se dégrade moralement. Le mal n'est pas d'abord une mauvaise action, mais {coral}cet éloignement même{/coral}.
+
+    **Est-ce une faute ?** Pas simplement. Comme l'a montré {sky}D. O'Brien{/sky}, l'audace est à la fois {amber}un acte libre{/amber}, du point de vue de l'âme, et {amber}un moment nécessaire{/amber} de la procession du réel : seule l'âme qui s'éloigne peut animer et ordonner le sensible. Le chapitre ouvre cette tension sans la résoudre.
+
+    ! L'audace n'est pas {red}une révolte{/red} contre le principe : c'est {green}le désir d'être soi{/green}, qui sépare sans opposer.
   passage:
     label: "l. 3-11"
-    text: "– L'origine du mal pour elles, c'est bien l'audace, la génération, l'altérité première et le fait de vouloir s'appartenir à elles-mêmes. Chaque fois qu'elles croient jouir de leur indépendance, elles se servent du mouvement considérable qui leur est propre, elles se mettent à courir dans la direction contraire et se portent au plus loin de là-bas, en allant jusqu'à ignorer qu'elles en proviennent elles aussi. Elles sont comme des enfants qui, arrachés à leurs parents dès la naissance et longtemps élevés loin d'eux, s'ignorent eux-mêmes comme ils ignorent leurs parents."
+    text: "– L'origine du mal pour elles, c'est bien l'audace, la génération, l'altérité première et le fait de vouloir s'appartenir à elles-mêmes."
   points:
-  - id: t10c1-p2-1
-    fragment: "1/2"
-    sentence: "« L'origine du ___ pour elles, c'est bien l'audace, la génération, l'altérité première et le fait de vouloir s'appartenir à elles-mêmes. Chaque fois qu'elles croient jouir de leur indépendance, elles se servent du mouvement considérable qui leur est propre, elles se mettent à courir dans la direction contraire et se portent au plus loin de là-bas, en allant jusqu'à ignorer qu'elles en proviennent elles aussi. »"
+  - id: "t10c1-p2-1"
+    sentence: "« L'origine du ___ pour elles, c'est bien l'audace, la génération, l'altérité première et le fait de vouloir s'appartenir à elles-mêmes. »"
     answer: "mal"
     alt: []
-  - id: t10c1-p2-2
-    fragment: "1/2"
-    sentence: "« L'origine du mal pour elles, c'est bien ___, la génération, l'altérité première et le fait de vouloir s'appartenir à elles-mêmes. Chaque fois qu'elles croient jouir de leur indépendance, elles se servent du mouvement considérable qui leur est propre, elles se mettent à courir dans la direction contraire et se portent au plus loin de là-bas, en allant jusqu'à ignorer qu'elles en proviennent elles aussi. »"
+  - id: "t10c1-p2-2"
+    sentence: "« L'origine du mal pour elles, c'est bien ___, la génération, l'altérité première et le fait de vouloir s'appartenir à elles-mêmes. »"
     answer: "l'audace"
     alt: []
-  - id: t10c1-p2-3
-    fragment: "1/2"
-    sentence: "« L'origine du mal pour elles, c'est bien l'audace, ___, ___ et le fait de vouloir s'appartenir à elles-mêmes. Chaque fois qu'elles croient jouir de leur indépendance, elles se servent du mouvement considérable qui leur est propre, elles se mettent à courir dans la direction contraire et se portent au plus loin de là-bas, en allant jusqu'à ignorer qu'elles en proviennent elles aussi. »"
+  - id: "t10c1-p2-3"
+    sentence: "« L'origine du mal pour elles, c'est bien l'audace, ___, ___ et le fait de vouloir s'appartenir à elles-mêmes. »"
     answer: "la génération ; l'altérité première"
     alt: []
-  - id: t10c1-p2-4
-    fragment: "1/2"
-    sentence: "« L'origine du mal pour elles, c'est bien l'audace, la génération, l'altérité première et le fait de vouloir ___. Chaque fois qu'elles croient jouir de leur indépendance, elles se servent du mouvement considérable qui leur est propre, elles se mettent à courir dans la direction contraire et se portent au plus loin de là-bas, en allant jusqu'à ignorer qu'elles en proviennent elles aussi. »"
+  - id: "t10c1-p2-4"
+    sentence: "« L'origine du mal pour elles, c'est bien l'audace, la génération, l'altérité première et le fait de vouloir ___. »"
     answer: "s'appartenir à elles-mêmes"
     alt: []
-  - id: t10c1-p2-5
-    fragment: "1/2"
-    sentence: "« L'origine du mal pour elles, c'est bien l'audace, la génération, l'altérité première et le fait de vouloir s'appartenir à elles-mêmes. Chaque fois qu'elles croient jouir de leur ___, elles se servent du mouvement considérable qui leur est propre, elles se mettent à courir dans la direction contraire et se portent au plus loin de là-bas, en allant jusqu'à ignorer qu'elles en proviennent elles aussi. »"
-    answer: "indépendance"
-    alt: []
-  - id: t10c1-p2-6
-    fragment: "1/2"
-    sentence: "« L'origine du mal pour elles, c'est bien l'audace, la génération, l'altérité première et le fait de vouloir s'appartenir à elles-mêmes. Chaque fois qu'elles croient jouir de leur indépendance, elles se servent du mouvement considérable ___, elles se mettent à courir dans la direction contraire et se portent au plus loin de là-bas, en allant jusqu'à ignorer qu'elles en proviennent elles aussi. »"
-    answer: "qui leur est propre"
-    alt: []
-  - id: t10c1-p2-7
-    fragment: "1/2"
-    sentence: "« L'origine du mal pour elles, c'est bien l'audace, la génération, l'altérité première et le fait de vouloir s'appartenir à elles-mêmes. Chaque fois qu'elles croient jouir de leur indépendance, elles se servent du mouvement considérable qui leur est propre, elles se mettent à courir dans ___ et se portent au plus loin de là-bas, en allant jusqu'à ignorer qu'elles en proviennent elles aussi. »"
-    answer: "la direction contraire"
-    alt: []
-  - id: t10c1-p2-8
-    fragment: "2/2"
-    sentence: "« Elles sont comme des ___ qui, arrachés à leurs parents dès la naissance et longtemps élevés loin d'eux, s'ignorent eux-mêmes comme ils ignorent leurs parents. »"
-    answer: "enfants"
-    alt: []
-  - id: t10c1-p2-9
-    fragment: "2/2"
-    sentence: "« Elles sont comme des enfants qui, ___ dès la naissance et longtemps élevés loin d'eux, s'ignorent eux-mêmes comme ils ignorent leurs parents. »"
-    answer: "arrachés à leurs parents"
-    alt: []
-  - id: t10c1-p2-10
-    fragment: "2/2"
-    sentence: "« Elles sont comme des enfants qui, arrachés à leurs parents dès la naissance et longtemps élevés loin d'eux, ___ comme ils ignorent leurs parents. »"
-    answer: "s'ignorent eux-mêmes"
-    alt: []
-  - id: t10c1-p2-11
+  - id: "t10c1-p2-11"
     sentence: "Des quatre facteurs que Plotin donne pour origine du mal des âmes (l'audace, la génération, l'altérité première, la volonté de s'appartenir à elles-mêmes), c'est l'___ qui vient nommer l'ensemble de leur mouvement d'éloignement."
     answer: "audace"
     alt: []
-  - id: t10c1-p2-12
+  - id: "t10c1-p2-12"
     sentence: "L'audace, qui nomme chez Plotin l'ensemble du mouvement par lequel l'âme s'éloigne de son principe, se dit en grec, translittéré, ___."
     answer: "tolma"
     alt: []
-  - id: t10c1-p2-13
+  - id: "t10c1-p2-13"
     sentence: "Le terme de `tolma`, par lequel Plotin nomme l'audace des âmes qui s'éloignent de leur principe, est emprunté au vocabulaire ___ et gnostique."
     answer: "néopythagoricien"
     alt: []
-  - id: t10c1-p2-14
+  - id: "t10c1-p2-14"
     sentence: "L'audace (`tolma`) nomme l'éloignement de l'âme sous deux faces à la fois : une face ___, sa dégradation dans la hiérarchie des êtres, et une face éthique, sa dégradation morale."
     answer: "ontologique"
     alt: []
-  - id: t10c1-p2-15
+  - id: "t10c1-p2-15"
     sentence: "Comme l'a souligné D. O'Brien, l'audace de l'âme se donne à la fois comme un acte libre et comme un moment ___ de la procession du réel : volontaire du point de vue de l'âme, elle est requise par l'ensemble, puisqu'elle seule permet à l'âme d'animer et d'ordonner le sensible."
     answer: "nécessaire"
     alt: []
-  - id: t10c1-p2-16
-    sentence: "L'argument de l'automotricité de l'âme, qui permet aux âmes de se porter d'elles-mêmes loin de leur principe, vient du ___ de Platon, où il servait au contraire à démontrer l'immortalité de l'âme."
-    answer: "Phèdre"
-    alt: []
-  - id: t10c1-p2-17
-    sentence: "Le passage du *Phèdre* où Platon démontre l'immortalité de l'âme par son automotricité, argument que Plotin retourne contre l'âme au début de V, 1, se trouve en ___."
-    answer: "245c"
-    alt: []
-  - id: t10c1-p2-18
-    sentence: "En faisant de l'automotricité la cause de l'éloignement des âmes, Plotin retourne contre l'âme la preuve de sa propre ___ : la même capacité de se mouvoir par soi, mal orientée, l'éloigne de son principe."
-    answer: "dignité"
-    alt: []
-  - id: t10c1-p2-19
-    sentence: "Selon F. Brunner, l'image des enfants arrachés à leurs parents dès la naissance ne comporte aucune nuance de désobéissance ni de ___, contrairement à ce que suggérerait un rapprochement hâtif avec la chute chrétienne."
-    answer: "révolte"
-    alt: []
-  - id: t10c1-p2-20
-    sentence: "Dans l'image des enfants arrachés à leurs parents, les âmes ne se retournent pas contre leur origine : elles s'en ___ simplement pour mener une vie autonome."
-    answer: "détournent"
-    alt: []
-  - id: t10c1-p2-21
+  - id: "t10c1-p2-21"
     sentence: "Des quatre facteurs de l'origine du mal des âmes en V, 1, 1, « l'altérité première » traduit le grec, translittéré, ___."
     answer: "prôtê heterotês"
     alt: []
-  - id: t10c1-p2-22
+  - id: "t10c1-p2-22"
     sentence: "Des quatre facteurs de l'origine du mal des âmes en V, 1, 1, « la génération » traduit le grec, translittéré, ___."
     answer: "genesis"
     alt: []
-  - id: t10c1-p2-23
+  - id: "t10c1-p2-23"
     sentence: "Des quatre facteurs de l'origine du mal des âmes en V, 1, 1, « le fait de vouloir s'appartenir à elles-mêmes » traduit le grec, translittéré, ___."
     answer: "to boulêthênai heautôn einai"
     alt: []
-  - id: t10c1-p2-24
+- id: "t10c1-p2b"
+  title: "Courir au plus loin, comme des enfants arrachés"
+  notes: |-
+    **L'âme qui croit jouir de son indépendance** {coral}**se sert de son propre mouvement pour courir à l'opposé de sa source**{/coral}**, jusqu'à ignorer qu'elle en vient, comme des enfants élevés loin de leurs parents.**
+
+    **Pourquoi « elles croient jouir de leur indépendance » ?** L'indépendance (`autexousios`, synonyme de *hekousios*, le volontaire, que le traité 39, VI, 8, examine) est {red}une illusion{/red} : l'âme croit s'appartenir, alors qu'elle ne fait que s'éloigner de ce qui la fait être. Le médioplatonicien {sky}Albinus{/sky} parlait déjà du « choix erroné de l'indépendance ».
+
+    **Pourquoi « le mouvement considérable qui leur est propre » ?** C'est l'{violet}automotricité{/violet} de l'âme, sa capacité de se mouvoir par soi. Dans le {sky}*Phèdre*{/sky} (245c), elle prouvait son {green}immortalité{/green}. Plotin {coral}retourne contre l'âme la preuve de sa dignité{/coral} : la même capacité, mal orientée, l'emporte loin de son principe.
+
+    **Pourquoi « courir dans la direction contraire » ?** Le mouvement de l'âme n'est pas un égarement au hasard, mais un {amber}détournement{/amber} : elle tourne le dos à sa source et va {teal}« au plus loin de là-bas »{/teal}. Plus elle va loin, plus elle oublie, {red}jusqu'à ignorer qu'elle en provient{/red}.
+
+    **Pourquoi l'image des enfants ?** {yellow}Arrachés à leurs parents dès la naissance et élevés loin d'eux, ils ne savent plus ni qui sont leurs parents ni qui ils sont{/yellow}. L'image, déjà dans le traité 9 (VI, 9, 7), dit l'enchaînement des deux ignorances de la question initiale. Elle ne comporte, note {sky}F. Brunner{/sky}, {red}aucune nuance de désobéissance ni de révolte{/red} : les âmes ne se retournent pas contre leur origine, elles s'en détournent.
+
+    ! Ne pas lire l'image comme {red}la chute chrétienne{/red} : il n'y a ni désobéissance ni châtiment, mais {green}un oubli progressif{/green}.
+  passage:
+    label: "l. 3-11"
+    text: "Chaque fois qu'elles croient jouir de leur indépendance, elles se servent du mouvement considérable qui leur est propre, elles se mettent à courir dans la direction contraire et se portent au plus loin de là-bas, en allant jusqu'à ignorer qu'elles en proviennent elles aussi. Elles sont comme des enfants qui, arrachés à leurs parents dès la naissance et longtemps élevés loin d'eux, s'ignorent eux-mêmes comme ils ignorent leurs parents."
+  points:
+  - id: "t10c1-p2-5"
+    sentence: "« Chaque fois qu'elles croient jouir de leur ___, elles se servent du mouvement considérable qui leur est propre, elles se mettent à courir dans la direction contraire et se portent au plus loin de là-bas, en allant jusqu'à ignorer qu'elles en proviennent elles aussi. »"
+    answer: "indépendance"
+    alt: []
+  - id: "t10c1-p2-6"
+    sentence: "« Chaque fois qu'elles croient jouir de leur indépendance, elles se servent du mouvement considérable ___, elles se mettent à courir dans la direction contraire et se portent au plus loin de là-bas, en allant jusqu'à ignorer qu'elles en proviennent elles aussi. »"
+    answer: "qui leur est propre"
+    alt: []
+  - id: "t10c1-p2-7"
+    sentence: "« Chaque fois qu'elles croient jouir de leur indépendance, elles se servent du mouvement considérable qui leur est propre, elles se mettent à courir dans ___ et se portent au plus loin de là-bas, en allant jusqu'à ignorer qu'elles en proviennent elles aussi. »"
+    answer: "la direction contraire"
+    alt: []
+  - id: "t10c1-p2-8"
+    sentence: "« Elles sont comme des ___ qui, arrachés à leurs parents dès la naissance et longtemps élevés loin d'eux, s'ignorent eux-mêmes comme ils ignorent leurs parents. »"
+    answer: "enfants"
+    alt: []
+  - id: "t10c1-p2-9"
+    sentence: "« Elles sont comme des enfants qui, ___ dès la naissance et longtemps élevés loin d'eux, s'ignorent eux-mêmes comme ils ignorent leurs parents. »"
+    answer: "arrachés à leurs parents"
+    alt: []
+  - id: "t10c1-p2-10"
+    sentence: "« Elles sont comme des enfants qui, arrachés à leurs parents dès la naissance et longtemps élevés loin d'eux, ___ comme ils ignorent leurs parents. »"
+    answer: "s'ignorent eux-mêmes"
+    alt: []
+  - id: "t10c1-p2-16"
+    sentence: "L'argument de l'automotricité de l'âme, qui permet aux âmes de se porter d'elles-mêmes loin de leur principe, vient du ___ de Platon, où il servait au contraire à démontrer l'immortalité de l'âme."
+    answer: "Phèdre"
+    alt: []
+  - id: "t10c1-p2-17"
+    sentence: "Le passage du *Phèdre* où Platon démontre l'immortalité de l'âme par son automotricité, argument que Plotin retourne contre l'âme au début de V, 1, se trouve en ___."
+    answer: "245c"
+    alt: []
+  - id: "t10c1-p2-18"
+    sentence: "En faisant de l'automotricité la cause de l'éloignement des âmes, Plotin retourne contre l'âme la preuve de sa propre ___ : la même capacité de se mouvoir par soi, mal orientée, l'éloigne de son principe."
+    answer: "dignité"
+    alt: []
+  - id: "t10c1-p2-19"
+    sentence: "Selon F. Brunner, l'image des enfants arrachés à leurs parents dès la naissance ne comporte aucune nuance de désobéissance ni de ___, contrairement à ce que suggérerait un rapprochement hâtif avec la chute chrétienne."
+    answer: "révolte"
+    alt: []
+  - id: "t10c1-p2-20"
+    sentence: "Dans l'image des enfants arrachés à leurs parents, les âmes ne se retournent pas contre leur origine : elles s'en ___ simplement pour mener une vie autonome."
+    answer: "détournent"
+    alt: []
+  - id: "t10c1-p2-24"
     sentence: "« L'indépendance » dont les âmes croient jouir (V, 1, 1, l. 6) traduit le grec, translittéré, ___, formé sur `autos` et `exousia` : la libre disposition de soi."
     answer: "autexousion"
     alt: []
-  - id: t10c1-p2-25
-    sentence: "La tension entre descente libre et descente nécessaire de l'âme, que V, 1, 1 ouvre sans la résoudre, est résolue au traité 6, en ___."
-    answer: "IV, 8, 5"
-    alt: []
-  - id: t10c1-p2-26
-    sentence: "Au traité 6, Plotin résout la tension entre descente libre et descente nécessaire : « Il n'y a donc pas de contradiction entre ces expressions : l'ensemencement dans le devenir, la descente en vue de l'achèvement de l'univers, le jugement et la caverne, la nécessité et le volontaire, puisque le ___ est justement compris dans la nécessité. »"
-    answer: "volontaire"
-    alt: []
-  - id: t10c1-p2-27
+  - id: "t10c1-p2-27"
     sentence: "Le terme `autexousios` (« indépendant »), par lequel V, 1, 1 dit l'indépendance dont les âmes croient jouir, est synonyme de ___, fréquemment employé dans le traité 39 (VI, 8), *Sur le volontaire*."
     answer: "hekousios"
     alt: []
-  - id: t10c1-p2-28
+  - id: "t10c1-p2-28"
     sentence: "Selon un témoignage de Jamblique, le médioplatonicien ___ évoquait déjà le « choix erroné de l'indépendance », qui produit « les choses inférieures d'ici-bas »."
     answer: "Albinus"
     alt: []
-  - id: t10c1-p2-29
+  - id: "t10c1-p2-29"
     sentence: "À la ligne 6 de V, 1, 1, Fronterotta traduit ensemble `ephanesan` et `hêstheisai` (« elles croient jouir de leur indépendance »), là où ___ les traduit séparément : « elles sont apparues ici-bas, joyeuses de leur indépendance »."
     answer: "Atkinson"
     alt: []
-  - id: t10c1-p2-30
+  - id: "t10c1-p2-30"
     sentence: "L'exemple des enfants arrachés à leurs parents, qui ne savent plus ce qu'ils sont ni d'où ils proviennent, se trouve déjà dans le traité 9, en ___."
     answer: "VI, 9, 7"
     alt: []
-  - id: t10c1-p2-31
-    sentence: "La tension entre la descente comme nécessité ontologique et comme acte volontaire, qu'ouvre V, 1, 1, est éclairée par l'article de D. O'Brien, « Le volontaire et la ___ »."
-    answer: "nécessité"
-    alt: []
-- id: t10c1-p3
-  title: "L'admiration du sensible et l'ignorance du dieu"
+- id: "t10c1-p3"
+  title: "L'admiration du sensible et la mésestime de soi"
+  notes: |-
+    **L'éloignement a un effet :** {coral}**l'âme, ne se voyant plus, admire toutes choses plutôt qu'elle-même**{/coral}**, s'y attache, et cette estime du sensible jointe à la mésestime de soi est la cause de son ignorance du dieu.**
+
+    **Pourquoi « elles ne s'estiment pas » ?** Ne connaissant plus son origine, l'âme {red}ignore sa propre valeur{/red}, qui lui vient de là. Elle reporte alors son estime sur {amber}les autres choses{/amber}, celles qu'elle voit.
+
+    **Pourquoi « émerveillées », « frappées de stupéfaction et d'admiration » ?** Les mots s'accumulent pour dire un {amber}saisissement{/amber} : l'âme est captivée par le sensible comme par un spectacle. {yellow}Un enfant élevé dans une maison étrangère en admire les richesses sans savoir qu'il est l'héritier d'une demeure plus belle.{/yellow}
+
+    **Pourquoi « s'y attachent » ?** Le verbe (`exartaô`) rappelle l'{sky}*Ion*{/sky} de Platon (533d-e), où il dit l'aimantation qui relie le poète inspiré au dieu. Plotin {coral}applique le même dispositif à un objet inversé{/coral} : l'âme s'aimante aux choses les plus basses.
+
+    **Pourquoi « elles se détachent […] des choses dont elles se sont détournées » ?** Le mouvement est double : attachement au sensible, {red}détachement de l'intelligible{/red}. L'un nourrit l'autre. D'où la conclusion : {coral}l'estime des choses d'ici-bas et le manque d'estime de soi sont la cause de l'ignorance totale du dieu{/coral}.
+
+    ! La cause de l'ignorance n'est pas {red}un défaut d'intelligence{/red}, mais {green}une erreur d'estime{/green} : l'âme se trompe sur la valeur des choses et sur la sienne.
   passage:
     label: "l. 11-22"
-    text: "Ne voyant plus ni leurs parents ni elles-mêmes, elles ne s'estiment pas, car elles méconnaissent leur origine en estimant les autres choses. Elles sont émerveillées par toutes choses plutôt que par elles-mêmes, elles sont devant toutes choses frappées de stupéfaction et d'admiration, et s'y attachent. Elles se détachent alors autant qu'elles le peuvent des choses dont elles se sont détournées parce qu'elles ne les estimaient pas, aussi l'estime des choses d'ici-bas et le manque d'estime d'elles-mêmes sont la cause de leur ignorance totale du dieu. Car poursuivre et admirer une autre chose, c'est en même temps pour ce qui l'admire et qui la poursuit admettre qu'il lui est inférieur ; mais ce qui se considère inférieur aux choses qui naissent et qui périssent, et qui se tient pour la moins estimable et la plus mortelle de toutes les choses qu'il estime, ne pourra jamais « se mettre dans l'esprit » la nature et la puissance du dieu."
+    text: "Ne voyant plus ni leurs parents ni elles-mêmes, elles ne s'estiment pas, car elles méconnaissent leur origine en estimant les autres choses. Elles sont émerveillées par toutes choses plutôt que par elles-mêmes, elles sont devant toutes choses frappées de stupéfaction et d'admiration, et s'y attachent. Elles se détachent alors autant qu'elles le peuvent des choses dont elles se sont détournées parce qu'elles ne les estimaient pas, aussi l'estime des choses d'ici-bas et le manque d'estime d'elles-mêmes sont la cause de leur ignorance totale du dieu."
   points:
-  - id: t10c1-p3-1
-    fragment: "1/3"
+  - id: "t10c1-p3-1"
     sentence: "« Ne voyant plus ni leurs parents ni elles-mêmes, elles ne ___ pas, car elles méconnaissent leur origine en estimant les autres choses. Elles sont émerveillées par toutes choses plutôt que par elles-mêmes, elles sont devant toutes choses frappées de stupéfaction et d'admiration, et s'y attachent. »"
     answer: "s'estiment"
     alt: []
-  - id: t10c1-p3-2
-    fragment: "1/3"
+  - id: "t10c1-p3-2"
     sentence: "« Ne voyant plus ni leurs parents ni elles-mêmes, elles ne s'estiment pas, car elles méconnaissent leur origine ___. Elles sont émerveillées par toutes choses plutôt que par elles-mêmes, elles sont devant toutes choses frappées de stupéfaction et d'admiration, et s'y attachent. »"
     answer: "en estimant les autres choses"
     alt: []
-  - id: t10c1-p3-3
-    fragment: "1/3"
+  - id: "t10c1-p3-3"
     sentence: "« Ne voyant plus ni leurs parents ni elles-mêmes, elles ne s'estiment pas, car elles méconnaissent leur origine en estimant les autres choses. Elles sont émerveillées par toutes choses plutôt que par elles-mêmes, elles sont devant toutes choses frappées de ___ et ___, et s'y attachent. »"
     answer: "stupéfaction ; d'admiration"
     alt: []
-  - id: t10c1-p3-4
-    fragment: "1/3"
+  - id: "t10c1-p3-4"
     sentence: "« Ne voyant plus ni leurs parents ni elles-mêmes, elles ne s'estiment pas, car elles méconnaissent leur origine en estimant les autres choses. Elles sont émerveillées par toutes choses plutôt que par elles-mêmes, elles sont devant toutes choses frappées de stupéfaction et d'admiration, et ___. »"
     answer: "s'y attachent"
     alt: []
-  - id: t10c1-p3-5
-    fragment: "2/3"
+  - id: "t10c1-p3-5"
     sentence: "« Elles ___ alors autant qu'elles le peuvent des choses dont elles se sont détournées parce qu'elles ne les estimaient pas, aussi l'estime des choses d'ici-bas et le manque d'estime d'elles-mêmes sont la cause de leur ignorance totale du dieu. »"
     answer: "se détachent"
     alt: []
-  - id: t10c1-p3-6
-    fragment: "2/3"
+  - id: "t10c1-p3-6"
     sentence: "« Elles se détachent alors autant qu'elles le peuvent des choses dont elles se sont détournées parce qu'elles ne les estimaient pas, aussi ___ et ___ sont la cause de leur ignorance totale du dieu. »"
     answer: "l'estime des choses d'ici-bas ; le manque d'estime d'elles-mêmes"
     alt: []
-  - id: t10c1-p3-7
-    fragment: "2/3"
+  - id: "t10c1-p3-7"
     sentence: "« Elles se détachent alors autant qu'elles le peuvent des choses dont elles se sont détournées parce qu'elles ne les estimaient pas, aussi l'estime des choses d'ici-bas et le manque d'estime d'elles-mêmes sont la cause de leur ___ du dieu. »"
     answer: "ignorance totale"
     alt: []
-  - id: t10c1-p3-8
-    fragment: "3/3"
-    sentence: "« Car ___ une autre chose, c'est en même temps pour ce qui l'admire et qui la poursuit admettre qu'il lui est inférieur ; mais ce qui se considère inférieur aux choses qui naissent et qui périssent, et qui se tient pour la moins estimable et la plus mortelle de toutes les choses qu'il estime, ne pourra jamais \"se mettre dans l'esprit\" la nature et la puissance du dieu. »"
-    answer: "poursuivre et admirer"
-    alt: []
-  - id: t10c1-p3-9
-    fragment: "3/3"
-    sentence: "« Car poursuivre et admirer une autre chose, c'est en même temps pour ce qui l'admire et qui la poursuit ___ ; mais ce qui se considère inférieur aux choses qui naissent et qui périssent, et qui se tient pour la moins estimable et la plus mortelle de toutes les choses qu'il estime, ne pourra jamais \"se mettre dans l'esprit\" la nature et la puissance du dieu. »"
-    answer: "admettre qu'il lui est inférieur"
-    alt: []
-  - id: t10c1-p3-10
-    fragment: "3/3"
-    sentence: "« Car poursuivre et admirer une autre chose, c'est en même temps pour ce qui l'admire et qui la poursuit admettre qu'il lui est inférieur ; mais ce qui se considère inférieur aux choses qui naissent et qui périssent, et qui se tient pour la moins estimable et ___ de toutes les choses qu'il estime, ne pourra jamais \"se mettre dans l'esprit\" la nature et la puissance du dieu. »"
-    answer: "la plus mortelle"
-    alt: []
-  - id: t10c1-p3-11
-    fragment: "3/3"
-    sentence: "« Car poursuivre et admirer une autre chose, c'est en même temps pour ce qui l'admire et qui la poursuit admettre qu'il lui est inférieur ; mais ce qui se considère inférieur aux choses qui naissent et qui périssent, et qui se tient pour la moins estimable et la plus mortelle de toutes les choses qu'il estime, ne pourra jamais \"___\" la nature et la puissance du dieu. »"
-    answer: "se mettre dans l'esprit"
-    alt: []
-  - id: t10c1-p3-12
-    fragment: "3/3"
-    sentence: "« Car poursuivre et admirer une autre chose, c'est en même temps pour ce qui l'admire et qui la poursuit admettre qu'il lui est inférieur ; mais ce qui se considère inférieur aux choses qui naissent et qui périssent, et qui se tient pour la moins estimable et la plus mortelle de toutes les choses qu'il estime, ne pourra jamais \"se mettre dans l'esprit\" ___ et ___ du dieu. »"
-    answer: "la nature ; la puissance"
-    alt: []
-  - id: t10c1-p3-13
+  - id: "t10c1-p3-13"
     sentence: "Le verbe grec traduit par « s'attacher », qui dit comment les âmes, frappées d'admiration, s'attachent aux choses d'ici-bas, est, translittéré, ___."
     answer: "exartaô"
     alt: []
-  - id: t10c1-p3-14
+  - id: "t10c1-p3-14"
     sentence: "Le verbe `exartaô`, par lequel Plotin dit l'attachement des âmes aux choses d'ici-bas, est vraisemblablement une réminiscence de l'___ de Platon, où il désigne la force d'attraction magnétique qui relie le poète inspiré au dieu."
     answer: "Ion"
     alt: []
-  - id: t10c1-p3-15
+  - id: "t10c1-p3-15"
     sentence: "Le passage de l'*Ion* où Platon décrit la force d'attraction magnétique qui relie le poète inspiré au dieu, et que rappelle le verbe « s'attacher » (`exartaô`) de V, 1, 1, se trouve en ___."
     answer: "533d-e"
     alt: []
-  - id: t10c1-p3-16
+  - id: "t10c1-p3-16"
     sentence: "En reprenant le verbe par lequel l'*Ion* dit l'attachement du poète inspiré au dieu, Plotin décrit paradoxalement l'attachement de l'âme aux choses les plus ___ : le même dispositif psychique, appliqué à un objet inversé."
     answer: "basses"
     alt: []
-  - id: t10c1-p3-17
+- id: "t10c1-p3b"
+  title: "Admirer, c'est s'avouer inférieur"
+  notes: |-
+    **Plotin justifie la conclusion par un principe :** {coral}**admirer et poursuivre une chose, c'est s'avouer inférieur à elle**{/coral} **; l'âme qui se juge inférieure à ce qui naît et périt ne pourra jamais concevoir le dieu.**
+
+    **Pourquoi « Car » ?** La phrase donne la {amber}raison{/amber} de ce qui précède. Selon une thèse proprement plotinienne, {violet}toute réalité admire et poursuit ce qu'elle juge supérieur à elle{/violet} : l'admiration est donc toujours l'aveu de sa propre {red}infériorité{/red}. {yellow}On n'admire pas ce qu'on se sait capable de surpasser.{/yellow}
+
+    **Pourquoi « la moins estimable et la plus mortelle » ?** En admirant les choses qui naissent et périssent, l'âme se met {red}au-dessous du périssable{/red} : elle se tient pour {teal}« la plus mortelle »{/teal} (`thnêtotaton`, superlatif forgé par Plotin, qu'il n'emploie qu'ici). C'est le comble du renversement : l'âme, immortelle, se croit plus mortelle que les choses mortelles.
+
+    **Pourquoi ne pourra-t-elle « se mettre dans l'esprit » le dieu ?** L'expression vient d'{sky}Homère{/sky} (*Iliade*, XV, 566). Une âme qui se croit la plus basse des choses {coral}ne peut concevoir ce qui est le plus haut{/coral} : elle n'a plus en elle de quoi le mesurer. Le « dieu » est ici encore {violet}l'Intellect{/violet}, sa nature et sa puissance.
+
+    ! Le principe ne condamne pas {red}l'admiration{/red} : admirer ce qui est réellement supérieur, l'intelligible, est {green}le chemin de la remontée{/green}.
+  passage:
+    label: "l. 11-22"
+    text: "Car poursuivre et admirer une autre chose, c'est en même temps pour ce qui l'admire et qui la poursuit admettre qu'il lui est inférieur ; mais ce qui se considère inférieur aux choses qui naissent et qui périssent, et qui se tient pour la moins estimable et la plus mortelle de toutes les choses qu'il estime, ne pourra jamais « se mettre dans l'esprit » la nature et la puissance du dieu."
+  points:
+  - id: "t10c1-p3-8"
+    sentence: "« Car ___ une autre chose, c'est en même temps pour ce qui l'admire et qui la poursuit admettre qu'il lui est inférieur ; mais ce qui se considère inférieur aux choses qui naissent et qui périssent, et qui se tient pour la moins estimable et la plus mortelle de toutes les choses qu'il estime, ne pourra jamais \"se mettre dans l'esprit\" la nature et la puissance du dieu. »"
+    answer: "poursuivre et admirer"
+    alt: []
+  - id: "t10c1-p3-9"
+    sentence: "« Car poursuivre et admirer une autre chose, c'est en même temps pour ce qui l'admire et qui la poursuit ___ ; mais ce qui se considère inférieur aux choses qui naissent et qui périssent, et qui se tient pour la moins estimable et la plus mortelle de toutes les choses qu'il estime, ne pourra jamais \"se mettre dans l'esprit\" la nature et la puissance du dieu. »"
+    answer: "admettre qu'il lui est inférieur"
+    alt: []
+  - id: "t10c1-p3-10"
+    sentence: "« Car poursuivre et admirer une autre chose, c'est en même temps pour ce qui l'admire et qui la poursuit admettre qu'il lui est inférieur ; mais ce qui se considère inférieur aux choses qui naissent et qui périssent, et qui se tient pour la moins estimable et ___ de toutes les choses qu'il estime, ne pourra jamais \"se mettre dans l'esprit\" la nature et la puissance du dieu. »"
+    answer: "la plus mortelle"
+    alt: []
+  - id: "t10c1-p3-11"
+    sentence: "« Car poursuivre et admirer une autre chose, c'est en même temps pour ce qui l'admire et qui la poursuit admettre qu'il lui est inférieur ; mais ce qui se considère inférieur aux choses qui naissent et qui périssent, et qui se tient pour la moins estimable et la plus mortelle de toutes les choses qu'il estime, ne pourra jamais \"___\" la nature et la puissance du dieu. »"
+    answer: "se mettre dans l'esprit"
+    alt: []
+  - id: "t10c1-p3-12"
+    sentence: "« Car poursuivre et admirer une autre chose, c'est en même temps pour ce qui l'admire et qui la poursuit admettre qu'il lui est inférieur ; mais ce qui se considère inférieur aux choses qui naissent et qui périssent, et qui se tient pour la moins estimable et la plus mortelle de toutes les choses qu'il estime, ne pourra jamais \"se mettre dans l'esprit\" ___ et ___ du dieu. »"
+    answer: "la nature ; la puissance"
+    alt: []
+  - id: "t10c1-p3-17"
     sentence: "Selon une thèse proprement plotinienne, toute réalité admire et poursuit ce qu'elle juge supérieur à elle : l'admiration est donc toujours l'aveu, par celui qui admire, de sa propre ___."
     answer: "infériorité"
     alt: []
-  - id: t10c1-p3-18
+  - id: "t10c1-p3-18"
     sentence: "Le terme grec rendu par « la plus mortelle », superlatif absolu forgé sur `thnêtos` et hapax dans les traités de Plotin, est, translittéré, ___."
     answer: "thnêtotaton"
     alt: []
-  - id: t10c1-p3-19
+  - id: "t10c1-p3-19"
     sentence: "L'expression « se mettre dans l'esprit », par laquelle Plotin dit que l'âme qui s'estime la plus mortelle des choses ne pourra concevoir la nature et la puissance du dieu, est empruntée à ___."
     answer: "Homère"
     explanation: "Iliade, XV, 566."
     alt: []
-  - id: t10c1-p3-20
+  - id: "t10c1-p3-20"
     sentence: "Comme au début de V, 1, 1, le « dieu » dont l'âme qui s'estime inférieure au sensible ne peut « se mettre dans l'esprit » la nature et la puissance est l'___, et non l'Un."
     answer: "Intellect"
     alt: []
-  - id: t10c1-p3-21
+  - id: "t10c1-p3-21"
     sentence: "L'expression « se mettre dans l'esprit » (V, 1, 1, l. 21-22), par laquelle Plotin dit ce dont l'âme qui s'estime la plus mortelle des choses est incapable, reprend le grec homérique, translittéré, ___."
     answer: "en thumôi thesthai"
     alt: []
-  - id: t10c1-p3-22
+  - id: "t10c1-p3-22"
     sentence: "L'expression « se mettre dans l'esprit », que Plotin reprend à Homère en V, 1, 1, vient de l'*Iliade*, ___."
     answer: "XV, 566"
     alt: []
-  - id: t10c1-p3-23
+  - id: "t10c1-p3-23"
     sentence: "« Elles se détachent alors autant qu'elles le peuvent des choses dont elles se sont détournées » (V, 1, 1, l. 15-16) : ces choses sont les réalités ___, leur père et leur propre nature, dont le mépris de soi les éloigne davantage."
     answer: "intelligibles"
     alt: []
-  - id: t10c1-p3-24
-    sentence: "Selon Fronterotta, la thèse selon laquelle l'ignorance et le manque d'estime de soi font descendre les âmes dans le sensible est un lieu commun des traités, qui forment ensemble une exhortation à la ___."
-    answer: "philosophie"
-    alt: []
-  - id: t10c1-p3-25
+  - id: "t10c1-p3-25"
     sentence: "« Les choses qui naissent et qui périssent » (V, 1, 1, l. 19-20), par lesquelles Plotin désigne le sensible que l'âme admire, sont une expression typiquement ___."
     answer: "platonicienne"
     alt: []
-- id: t10c1-p4
-  title: "Les deux discours"
+- id: "t10c1-p4"
+  title: "Il faut deux discours"
+  notes: |-
+    **De ce diagnostic suit le remède :** {coral}**il faut adresser deux discours à l'âme pour la faire se retourner vers les choses premières**{/coral} **et la reconduire à l'Un.**
+
+    **Pourquoi « Voilà pourquoi » ?** Le remède se règle sur la cause. Puisque le mal vient d'{red}une erreur d'estime{/red}, il se guérit par {green}un discours{/green}, qui corrige cette estime : c'est une thérapie par la connaissance.
+
+    **Pourquoi « se retourner dans la direction contraire » ?** L'expression répond exactement à la course des l. 3-11 : les âmes couraient {red}« dans la direction contraire »{/red} de leur source ; il faut les faire {amber}se retourner{/amber} dans l'autre sens. C'est une {violet}conversion{/violet} (`epistrophê`), un retournement vers le principe.
+
+    **Pourquoi « ce qui est le plus haut, un et premier » ?** Le terme de la remontée est {violet}l'Un{/violet}, le premier principe, au-delà de l'Intellect. Le traité suivra cet ordre, de l'âme à l'Intellect, puis à l'Un.
+
+    ! Le discours ne s'adresse pas à {red}quelqu'un d'autre{/red} que l'âme égarée : c'est {green}l'âme elle-même{/green} qu'il faut convaincre.
   passage:
     label: "l. 22-31"
-    text: "Voilà pourquoi il faut adresser deux discours à ceux qui se trouvent dans cette situation, si quelqu'un doit les faire se retourner dans la direction contraire, vers les choses qui sont premières, et les reconduire à ce qui est le plus haut, un et premier.
-
-
-      – Quels sont donc ces deux discours ?
-
-
-      – Le premier est celui qui montre combien ce que l'âme tient alors pour estimable ne l'est pas (ce que nous développerons davantage ailleurs) ; le second est celui qui instruit l'âme et qui lui fait se remémorer son origine et sa dignité (ce discours précède le premier et, une fois clarifié, il éclairera également le précédent). C'est donc de cela qu'il faut maintenant parler, car le second discours est le plus proche de l'objet de notre recherche et il servira au premier."
+    text: "Voilà pourquoi il faut adresser deux discours à ceux qui se trouvent dans cette situation, si quelqu'un doit les faire se retourner dans la direction contraire, vers les choses qui sont premières, et les reconduire à ce qui est le plus haut, un et premier."
   points:
-  - id: t10c1-p4-1
-    fragment: "1/3"
+  - id: "t10c1-p4-1"
     sentence: "« Voilà pourquoi il faut adresser ___ à ceux qui se trouvent dans cette situation, si quelqu'un doit les faire se retourner dans la direction contraire, vers les choses qui sont premières, et les reconduire à ce qui est le plus haut, un et premier. »"
     answer: "deux discours"
     alt: []
-  - id: t10c1-p4-2
-    fragment: "1/3"
+  - id: "t10c1-p4-2"
     sentence: "« Voilà pourquoi il faut adresser deux discours à ceux qui se trouvent dans cette situation, si quelqu'un doit les faire ___ dans la direction contraire, vers les choses qui sont premières, et les reconduire à ce qui est le plus haut, un et premier. »"
     answer: "se retourner"
     alt: []
-  - id: t10c1-p4-3
-    fragment: "1/3"
+  - id: "t10c1-p4-3"
     sentence: "« Voilà pourquoi il faut adresser deux discours à ceux qui se trouvent dans cette situation, si quelqu'un doit les faire se retourner dans la direction contraire, vers les choses qui sont premières, et les reconduire à ce qui est ___. »"
     answer: "le plus haut, un et premier"
     alt: []
-  - id: t10c1-p4-4
-    fragment: "2/3"
+- id: "t10c1-p4b"
+  title: "Le second discours vient en premier"
+  notes: |-
+    **Les deux discours :** {red}**le premier montre que ce que l'âme estime ne vaut rien**{/red} **;** {green}**le second lui rappelle son origine et sa dignité**{/green} **et vient en premier, car il est le plus proche de la recherche.**
+
+    **Pourquoi deux discours ?** Ils répondent aux deux faces de l'erreur : {red}l'estime du sensible{/red}, corrigée par le premier, qui montre l'infériorité des choses d'ici-bas ; {red}la mésestime de soi{/red}, corrigée par le second, qui montre la supériorité de l'âme. Plotin développe le premier ailleurs, selon Fronterotta dans *Des deux matières* (II, 4) et dans le traité III, 4, *Du démon qui nous a reçus en partage*.
+
+    **Pourquoi le second « précède le premier » ?** Parce qu'il porte sur {amber}la nature de l'âme{/amber}, objet même de la recherche du traité. Et, une fois clarifié, {coral}il éclaire le premier{/coral} : on ne voit bien que le sensible ne vaut rien qu'après avoir vu ce que vaut l'âme. {yellow}On mesure la valeur d'une pièce fausse en la comparant à la vraie.{/yellow}
+
+    **Pourquoi « se remémorer » ?** L'âme n'apprend pas du nouveau : elle {amber}se souvient{/amber} de ce qu'elle a oublié, en écho à la réminiscence platonicienne. Le second discours est, pour {sky}F. Brunner{/sky}, « scientifique et {violet}anagogique{/violet} » : il fait connaître et fait remonter. Il rejoint ce que Plotin appelle ailleurs le {violet}« discours qui guide »{/violet} vers la vérité (V, 9, 2).
+
+    ! Le premier discours n'est pas {red}abandonné{/red} : il est {green}subordonné{/green} au second, qui le rend clair.
+  passage:
+    label: "l. 22-31"
+    text: |-
+      – Quels sont donc ces deux discours ?
+
+      – Le premier est celui qui montre combien ce que l'âme tient alors pour estimable ne l'est pas (ce que nous développerons davantage ailleurs) ; le second est celui qui instruit l'âme et qui lui fait se remémorer son origine et sa dignité (ce discours précède le premier et, une fois clarifié, il éclairera également le précédent). C'est donc de cela qu'il faut maintenant parler, car le second discours est le plus proche de l'objet de notre recherche et il servira au premier.
+  points:
+  - id: "t10c1-p4-4"
     sentence: "« Le premier est celui qui montre combien ce que l'âme tient alors pour ___ ne l'est pas (ce que nous développerons davantage ailleurs) ; le second est celui qui instruit l'âme et qui lui fait se remémorer son origine et sa dignité (ce discours précède le premier et, une fois clarifié, il éclairera également le précédent). »"
     answer: "estimable"
     alt: []
-  - id: t10c1-p4-5
-    fragment: "2/3"
+  - id: "t10c1-p4-5"
     sentence: "« Le premier est celui qui montre combien ce que l'âme tient alors pour estimable ne l'est pas (ce que nous développerons davantage ailleurs) ; le second est celui qui instruit l'âme et qui lui fait ___ son origine et sa dignité (ce discours précède le premier et, une fois clarifié, il éclairera également le précédent). »"
     answer: "se remémorer"
     alt: []
-  - id: t10c1-p4-6
-    fragment: "2/3"
+  - id: "t10c1-p4-6"
     sentence: "« Le premier est celui qui montre combien ce que l'âme tient alors pour estimable ne l'est pas (ce que nous développerons davantage ailleurs) ; le second est celui qui instruit l'âme et qui lui fait se remémorer ___ (ce discours précède le premier et, une fois clarifié, il éclairera également le précédent). »"
     answer: "son origine et sa dignité"
     alt: []
-  - id: t10c1-p4-7
-    fragment: "2/3"
+  - id: "t10c1-p4-7"
     sentence: "« Le premier est celui qui montre combien ce que l'âme tient alors pour estimable ne l'est pas (ce que nous développerons davantage ailleurs) ; le second est celui qui instruit l'âme et qui lui fait se remémorer son origine et sa dignité (ce discours ___ le premier et, une fois clarifié, il éclairera également le précédent). »"
     answer: "précède"
     alt: []
-  - id: t10c1-p4-8
-    fragment: "3/3"
+  - id: "t10c1-p4-8"
     sentence: "« C'est donc de cela qu'il faut maintenant parler, car le second discours est le plus proche de ___ et il servira au premier. »"
     answer: "l'objet de notre recherche"
     alt: []
-  - id: t10c1-p4-10
+  - id: "t10c1-p4-10"
     sentence: "Des deux discours que Plotin annonce en V, 1, 1, le second, qui fait se remémorer à l'âme son origine et sa dignité, précède le premier parce qu'il porte directement sur la ___ de l'âme, objet même de la recherche entreprise."
     answer: "nature"
     alt: []
-  - id: t10c1-p4-11
+  - id: "t10c1-p4-11"
     sentence: "F. Brunner voit dans le second des deux discours de V, 1, 1, celui qui fait se remémorer à l'âme son origine et sa dignité, un discours à la fois « scientifique et ___ » : la théorie y vise autant à transformer l'âme qu'à la connaître."
     answer: "anagogique"
     alt: []
-  - id: t10c1-p4-12
+  - id: "t10c1-p4-12"
     sentence: "Pour sa force persuasive, le double discours annoncé en V, 1, 1 rejoint ce que Plotin appelle ailleurs le « discours qui guide » vers la vérité, en grec, translittéré, ___."
     answer: "ho paidagôgôn logos"
     alt: []
-  - id: t10c1-p4-13
+  - id: "t10c1-p4-13"
     sentence: "« Ce qui est le plus haut, un et premier » (V, 1, 1, l. 25), vers quoi il faut reconduire les âmes, désigne l'___ : le retour vise au-delà de leur père, l'Intellect."
     answer: "Un"
     alt: []
-  - id: t10c1-p4-14
+  - id: "t10c1-p4-14"
     sentence: "Pour la force de persuasion du double discours de V, 1, 1, Fronterotta renvoie au « discours qui guide » vers la vérité (`ho paidagôgôn logos`), en ___, lignes 11-12."
     answer: "V, 9, 2"
     alt: []
-  - id: t10c1-p4-15
+  - id: "t10c1-p4-15"
     sentence: "Le premier des deux discours de V, 1, 1, qui montre que ce que l'âme estime n'est pas estimable, Plotin le développe, selon Fronterotta, dans *Des deux matières* (II, 4) et dans *Du démon qui nous a reçus en partage*, soit le traité ___."
     answer: "III, 4"
     alt: []
-  - id: t10c1-p4-16
+  - id: "t10c1-p4-16"
     sentence: "À la ligne 26 de V, 1, 1, Fronterotta suit la plupart des manuscrits en lisant ___, « ce que l'âme tient pour estimable ne l'est pas », plutôt que `aitian`, « la cause de ce que l'âme tient pour estimable », leçon du seul manuscrit W."
     answer: "atimian"
     alt: []
-  - id: t10c1-p4-17
+  - id: "t10c1-p4-17"
     sentence: "Si le premier des deux discours de V, 1, 1 explique l'infériorité des choses sensibles par rapport à l'âme, le second souligne la ___ de l'âme par rapport aux choses sensibles."
     answer: "supériorité"
     alt: []
-- id: t10c1-p5
+- id: "t10c1-p5"
   title: "Ce qui cherche, c'est l'âme"
+  notes: |-
+    **Le chapitre se referme sur le fondement de toute la recherche :** {coral}**c'est l'âme qui cherche, et elle peut trouver ce qu'elle cherche parce qu'elle lui est apparentée.**{/coral}
+
+    **Pourquoi « Ce qui cherche, c'est l'âme » ?** La recherche ({violet}`zêtein`{/violet}, verbe qui revient avec insistance) a un sujet, l'âme, et un objet, ce qu'elle doit connaître. Elle doit {amber}d'abord se connaître elle-même{/amber} : c'est la première étape, développée au traité 49 (V, 3).
+
+    **Pourquoi « si elle a un œil capable de voir » ?** Avant de chercher, l'âme doit savoir {amber}si elle en est capable{/amber}. L'{violet}œil de l'âme{/violet} est une image platonicienne (*Alcibiade*, 133b-c ; *Sophiste*, 254a ; *République*, VII, 533d) : la faculté de voir l'intelligible.
+
+    **Pourquoi « si ce qu'elle cherche lui est étranger, à quoi bon chercher ? »** Un objet {red}étranger{/red} ne pourrait être ni reconnu ni atteint. Au contraire, s'il lui est {green}apparenté{/green} (`suggenê`), elle peut le trouver. C'est le principe ancien que {violet}le semblable connaît le semblable{/violet}, qu'on trouve déjà chez {sky}Empédocle{/sky}, {sky}Philolaos{/sky} et {sky}Démocrite{/sky}, et que Platon reprend (*République*, VI, 490b).
+
+    **Ce que la fin autorise.** Puisque l'âme est apparentée à l'intelligible, {coral}l'oubli n'est pas une perte définitive{/coral} : la remontée que le traité va développer est possible en droit.
+
+    ! La parenté de l'âme avec le dieu n'est pas {red}une conclusion{/red} du chapitre, mais {green}une condition{/green} de la recherche, que les chapitres suivants établiront.
   passage:
     label: "l. 31-35"
     text: "Ce qui cherche, en effet, c'est l'âme, et ce qui est cherché, c'est ce que l'âme doit connaître, afin d'abord de se connaître elle-même, puis de savoir si elle a la capacité d'entreprendre une telle recherche, si elle a un œil capable de voir et s'il lui convient de chercher. Car si ce qu'elle cherche lui est étranger, à quoi bon chercher ? En revanche, si cet objet lui est apparenté, il convient qu'elle le cherche et elle est capable de le trouver."
   points:
-  - id: t10c1-p5-1
-    fragment: "1/2"
+  - id: "t10c1-p5-1"
     sentence: "« Ce qui cherche, en effet, c'est ___, et ce qui est cherché, c'est ce que l'âme doit connaître, afin d'abord de se connaître elle-même, puis de savoir si elle a la capacité d'entreprendre une telle recherche, si elle a un œil capable de voir et s'il lui convient de chercher. »"
     answer: "l'âme"
     alt: []
-  - id: t10c1-p5-2
-    fragment: "1/2"
+  - id: "t10c1-p5-2"
     sentence: "« Ce qui cherche, en effet, c'est l'âme, et ce qui est cherché, c'est ce que l'âme doit connaître, afin d'abord de ___, puis de savoir si elle a la capacité d'entreprendre une telle recherche, si elle a un œil capable de voir et s'il lui convient de chercher. »"
     answer: "se connaître elle-même"
     alt: []
-  - id: t10c1-p5-3
-    fragment: "1/2"
+  - id: "t10c1-p5-3"
     sentence: "« Ce qui cherche, en effet, c'est l'âme, et ce qui est cherché, c'est ce que l'âme doit connaître, afin d'abord de se connaître elle-même, puis de savoir si elle a la capacité d'entreprendre une telle recherche, si elle a ___ et s'il lui convient de chercher. »"
     answer: "un œil capable de voir"
     alt: []
-  - id: t10c1-p5-4
-    fragment: "2/2"
+  - id: "t10c1-p5-4"
     sentence: "« Car si ce qu'elle cherche lui est ___, à quoi bon chercher ? En revanche, si cet objet lui est apparenté, il convient qu'elle le cherche et elle est capable de le trouver. »"
     answer: "étranger"
     alt: []
-  - id: t10c1-p5-5
-    fragment: "2/2"
+  - id: "t10c1-p5-5"
     sentence: "« Car si ce qu'elle cherche lui est étranger, à quoi bon chercher ? En revanche, si cet objet lui est ___, il convient qu'elle le cherche et elle est capable de le trouver. »"
     answer: "apparenté"
     alt: []
-  - id: t10c1-p5-6
-    fragment: "2/2"
+  - id: "t10c1-p5-6"
     sentence: "« Car si ce qu'elle cherche lui est étranger, à quoi bon chercher ? En revanche, si cet objet lui est apparenté, il convient qu'elle le cherche et ___. »"
     answer: "elle est capable de le trouver"
     alt: []
-  - id: t10c1-p5-7
+  - id: "t10c1-p5-7"
     sentence: "Le verbe grec « chercher », qui revient à plusieurs reprises et sous plusieurs formes à la fin de V, 1, 1, marquant l'insistance du texte sur l'exigence de la recherche, est, translittéré, ___."
     answer: "zêtein"
     alt: []
-  - id: t10c1-p5-8
+  - id: "t10c1-p5-8"
     sentence: "L'image de l'œil de l'âme, capable de voir, que Plotin reprend à la fin de V, 1, 1, est platonicienne : on la trouve dans l'*Alcibiade*, dans le *Sophiste* et au livre ___ de *La République*."
     answer: "VII"
     alt: []
-  - id: t10c1-p5-9
+  - id: "t10c1-p5-9"
     sentence: "V, 1, 1 se referme sur le principe épistémologique selon lequel le ___ connaît le semblable : si l'âme peut trouver ce qu'elle cherche, c'est qu'elle lui est apparentée."
     answer: "semblable"
     alt: []
-  - id: t10c1-p5-10
+  - id: "t10c1-p5-10"
     sentence: "Le principe selon lequel le semblable connaît le semblable, sur lequel se referme V, 1, 1, est fort ancien : on le trouve déjà chez Philolaos, chez Démocrite et chez ___."
     answer: "Empédocle"
     alt: []
-  - id: t10c1-p5-11
+  - id: "t10c1-p5-11"
     sentence: "Si l'âme est capable de trouver ce qu'elle cherche, c'est qu'elle lui est ___ par nature : la fin de V, 1, 1 autorise ainsi, en germe, tout le mouvement de remontée que le traité va développer."
     answer: "apparentée"
     alt: []
-  - id: t10c1-p5-12
+  - id: "t10c1-p5-12"
     sentence: "La connaissance de soi, que V, 1, 1 pose comme première étape de la recherche de l'âme, reçoit son développement complet dans le traité 49, ___."
     answer: "V, 3"
     alt: []
-  - id: t10c1-p5-13
+  - id: "t10c1-p5-13"
     sentence: "Pour l'œil de l'âme de V, 1, 1, Fronterotta renvoie à *La République* (VII, 533d), au *Sophiste* (254a) et à l'*Alcibiade*, en ___."
     answer: "133b-c"
     alt: []
-  - id: t10c1-p5-14
+  - id: "t10c1-p5-14"
     sentence: "Selon le principe sur lequel se clôt V, 1, 1, la connaissance se fait entre termes « apparentés », en grec, translittéré, ___, comme le dit déjà Platon (*République*, VI, 490b)."
     answer: "suggenê"
+    alt: []
+- id: "t10c1-o1"
+  title: "Une descente libre et nécessaire"
+  notes: |-
+    **Le chapitre ouvre une difficulté que Plotin ne résout qu'ailleurs :** {amber}**la descente de l'âme est-elle une faute libre ou une nécessité de l'ordre du monde ?**{/amber}
+
+    **Les deux lectures.** Ici, l'âme s'éloigne par {red}audace{/red}, et le mot sonne comme un reproche : elle aurait pu ne pas partir. Mais ailleurs, la descente est {green}requise par l'univers{/green} : sans âme qui descende, le sensible ne serait ni animé ni ordonné.
+
+    **La solution du traité 6.** Dans *Sur la descente de l'âme dans les corps* (IV, 8, 5), Plotin montre qu'il n'y a pas de contradiction : {coral}le volontaire est compris dans la nécessité{/coral}. L'âme descend de son plein gré, mais ce gré même entre dans l'ordre nécessaire du tout. C'est la lecture de {sky}D. O'Brien{/sky}, dans « Le volontaire et la nécessité ».
+
+    **Une exhortation à la philosophie.** Que l'ignorance et la mésestime de soi fassent descendre l'âme est, selon Fronterotta, un lieu commun des traités : ensemble, ils forment {amber}une exhortation à la philosophie{/amber}, qui est le second discours du chapitre 1 développé à l'échelle de toute l'œuvre.
+
+    ! La descente n'est pas {red}un malheur sans remède{/red} : parce que l'âme reste apparentée à son principe, {green}la remontée reste possible{/green}.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: "t10c1-p2-25"
+    sentence: "La tension entre descente libre et descente nécessaire de l'âme, que V, 1, 1 ouvre sans la résoudre, est résolue au traité 6, en ___."
+    answer: "IV, 8, 5"
+    alt: []
+  - id: "t10c1-p2-26"
+    sentence: "Au traité 6, Plotin résout la tension entre descente libre et descente nécessaire : « Il n'y a donc pas de contradiction entre ces expressions : l'ensemencement dans le devenir, la descente en vue de l'achèvement de l'univers, le jugement et la caverne, la nécessité et le volontaire, puisque le ___ est justement compris dans la nécessité. »"
+    answer: "volontaire"
+    alt: []
+  - id: "t10c1-p2-31"
+    sentence: "La tension entre la descente comme nécessité ontologique et comme acte volontaire, qu'ouvre V, 1, 1, est éclairée par l'article de D. O'Brien, « Le volontaire et la ___ »."
+    answer: "nécessité"
+    alt: []
+  - id: "t10c1-p3-24"
+    sentence: "Selon Fronterotta, la thèse selon laquelle l'ignorance et le manque d'estime de soi font descendre les âmes dans le sensible est un lieu commun des traités, qui forment ensemble une exhortation à la ___."
+    answer: "philosophie"
     alt: []
