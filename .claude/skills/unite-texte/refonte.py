@@ -251,7 +251,7 @@ def main():
             sys.exit(f"texte restant après le dernier segment de {item['split']} : {rest[:60]!r}")
         for st in segtexts:
             a = tn.find(norm(st), cur)
-            segs.append((a, a + len(norm(st))))
+            segs.append((cur if segs else a, a + len(norm(st))))
             cur = a + len(norm(st))
         drop = set(item.get("drop", []))
         edits = item.get("edit", {})
@@ -309,7 +309,7 @@ def main():
     out = head + "\n" + "\n".join(dump(hdr)) + "\nlessons:\n"
     for l in lessons:
         sub = dump(l, 2)
-        out += "- " + sub[0].lstrip() + "\n" + "\n".join(x[2:] if x.startswith("  ") else x for x in sub[1:]) + "\n"
+        out += "- " + sub[0].lstrip() + "\n" + "\n".join(sub[1:]) + "\n"
     for r in report:
         print(r)
     print(f"{len(lessons)} leçons, {len(ids)} cartes (avant : {len(unit['lessons'])} leçons, "
