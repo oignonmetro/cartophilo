@@ -1,251 +1,448 @@
-id: rousseau-le-droit-du-plus-fort
-title: "Rousseau : \"le droit du plus fort\""
-subtitle: "Du Contrat Social, I, 3"
+# Unité de texte (voir content/textes.md) : Rousseau, Du contrat social (1762),
+# livre I, chapitre 3, « Du droit du plus fort », en entier. Cartes de
+# l'utilisateur (export Quizlet), gardées telles quelles.
+# Refondue le 2026-11-26 (niveau normale) : rappels écrits (ils étaient vides),
+# deux leçons d'introduction, les §1 à §3 coupés en deux, un prolongement ;
+# les cartes-citation gardent leur identifiant, recentrées sur leur segment.
+
+id: "rousseau-le-droit-du-plus-fort"
+title: "Rousseau : « le droit du plus fort » (1762)"
+subtitle: "Du contrat social, I, 3"
+icon: "page"
+color: "red"
 group: "Rousseau : Du contrat social"
-icon: page
-color: red
+depth: "normale"
+intro: |-
+  Le chapitre où Rousseau réfute le « droit du plus fort » : la force est une puissance physique, dont aucune obligation ne peut naître ; un droit fondé sur elle périt avec elle et ne signifie rien. Il ne reste qu'à obéir aux puissances légitimes, dont il faut encore trouver le fondement.
 lessons:
-- id: rousseau-le-droit-du-plus-fort-l1
+- id: "rousseau-le-droit-du-plus-fort-i1"
+  title: "Le chapitre, sa place et son plan"
+  notes: |-
+    **Le texte est le chapitre 3 du livre I du {sky}*Contrat social*{/sky} (1762), intitulé {teal}« Du droit du plus fort »{/teal}.** Il appartient à une série de réfutations : avant de dire ce qui fonde une autorité légitime, Rousseau écarte les fondements qu'on lui donne d'ordinaire.
+
+    **Ce qui précède.** Le livre s'ouvre sur un constat et une question : {teal}« L'homme est né libre, et partout il est dans les fers »{/teal} ; comment ce changement s'est-il fait, Rousseau dit l'ignorer, mais {amber}qu'est-ce qui peut le rendre légitime ?{/amber} (I, 1). C'est la {violet}« question primitive »{/violet} que la dernière phrase du chapitre retrouve. Le chapitre 2 a écarté un premier fondement, {red}la famille{/red} : l'autorité du père ne dure que tant que l'enfant a besoin de lui, et ne peut servir de modèle à celle d'un roi.
+
+    **Ce qui suit.** Le chapitre 4, « De l'esclavage », écarte {red}la convention de servitude{/red} : on ne peut pas renoncer à sa liberté. Après ces trois exclusions, il ne reste qu'un fondement possible, {green}une convention par laquelle chacun s'associe à tous{/green}, le pacte social (I, 6).
+
+    **Le plan.**
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | expliquer d'où vient l'idée d'un droit du plus fort, puis l'objecter : la force est physique | §1 | Le fort veut durer et convertit sa force en droit ; mais céder à la force est un acte de nécessité, non de volonté, donc jamais un devoir. |
+    | supposer ce droit et en tirer l'absurdité | §2 | Un droit fondé sur la force change avec elle, légitime la révolte réussie, périt quand elle cesse : le mot de droit n'ajoute rien à la force. |
+    | réfuter la lecture religieuse du précepte « Obéissez aux puissances » | §3 | Si obéir veut dire céder, le précepte est superflu ; que toute puissance vienne de Dieu n'oblige pas plus à obéir au brigand qu'à ne pas soigner la maladie. |
+    | conclure et revenir à la question | §4 | La force ne fait pas droit : on ne doit obéir qu'aux puissances légitimes, et il reste à savoir lesquelles. |
+
+    ! Le chapitre ne dit pas encore {red}ce qui fonde{/red} l'autorité : il dit {green}ce qui ne la fonde pas{/green}.
+  passage:
+    label: "Introduction"
+  tables:
+  - table: "mouvement-lieu-ce-qui-s-y-joue"
+    exercises:
+    - {kind: bank, column: Ce qui s'y joue}
+  points:
+  - id: "rousseau-le-droit-du-plus-fort-i1-x1"
+    sentence: "*Du contrat social*, I, 1 : « L'homme est né libre, __et partout il est dans les ___ »__."
+    answer: "fers"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-i1-x2"
+    sentence: "La **« question primitive »** du *Contrat social* est de savoir __ce qui peut rendre l'ordre social ___.__"
+    answer: "légitime"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-i1-x3"
+    sentence: "Avant le droit du plus fort, le chapitre I, 2 du *Contrat social* écarte un premier fondement de l'autorité : __la ___.__"
+    answer: "famille"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-i1-x4"
+    sentence: "Après le droit du plus fort, le chapitre I, 4 du *Contrat social* écarte __la convention d'___.__"
+    answer: "esclavage"
+    alt: ["esclavage volontaire"]
+- id: "rousseau-le-droit-du-plus-fort-i2"
+  title: "La question, la thèse, la problématique"
+  notes: |-
+    **Le texte se demande si {amber}la force peut fonder un droit{/amber}**, c'est-à-dire une obligation d'obéir.
+
+    **Pourquoi est-ce une question ?** Parce que, de fait, les pouvoirs établis sont presque tous nés de la force : {yellow}conquêtes, usurpations, guerres{/yellow}. Et l'on a toujours trouvé des raisons de dire que cette force donnait un titre : la nature, qui fait commander le plus fort (c'est la thèse que {sky}Calliclès{/sky} prête à la nature dans le *Gorgias* de {sky}Platon{/sky}), ou Dieu, de qui toute puissance viendrait. Si la force fondait le droit, {red}tout pouvoir de fait serait légitime{/red}, et la question du *Contrat social* n'aurait pas lieu d'être.
+
+    **Sa thèse :** {coral}la force ne fait pas droit{/coral}. La force est une puissance physique ; le droit est une affaire morale, qui oblige la volonté. Aucun passage de l'un à l'autre n'est possible : {green}on n'est obligé d'obéir qu'aux puissances légitimes{/green}.
+
+    **Sa problématique :** comment montrer que l'expression « droit du plus fort » est vide, alors qu'elle décrit l'origine de presque tous les pouvoirs et qu'elle est {amber}« réellement établie en principe »{/amber} ? Rousseau ne nie pas le fait ; il montre que {coral}le mot de droit n'y ajoute rien{/coral}, et que, pris au sérieux, il se détruit lui-même.
+
+    ? **Droit et fait** : le {violet}fait{/violet} est ce qui est, le {violet}droit{/violet} ce qui doit être, ce qui est légitime. Que le plus fort commande est un fait ; qu'il doive commander serait un droit. Rousseau refuse de {red}tirer le droit du fait{/red}.
+
+    ! Rousseau ne dit pas que {red}la force n'existe pas{/red} ou qu'il faut lui résister à tout prix : céder peut être {green}prudent{/green}, jamais {red}obligatoire{/red}.
+  passage:
+    label: "Introduction"
+  points:
+  - id: "rousseau-le-droit-du-plus-fort-i2-x1"
+    sentence: "Thèse du chapitre : __la force ne fait pas ___,__ et l'on n'est obligé d'obéir qu'aux puissances légitimes."
+    answer: "droit"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-i2-x2"
+    sentence: "Rousseau refuse de tirer __le droit du ___ :__ que le plus fort commande ne prouve pas qu'il doive commander."
+    answer: "fait"
+    alt: []
+- id: "rousseau-le-droit-du-plus-fort-l1"
   title: "Le fossé entre la force et le droit"
-  notes: ""
+  notes: |-
+    **Rousseau commence par expliquer d'où vient l'idée d'un droit du plus fort :** {coral}**la force ne suffit pas à durer, le plus fort doit la convertir en droit.**{/coral}
+
+    **Pourquoi « jamais assez fort pour être toujours le maître » ?** La force d'un homme n'est jamais {amber}pérenne{/amber} : {yellow}il vieillit, il dort, il rencontre plus fort que lui, et ceux qu'il domine peuvent s'unir contre lui{/yellow}. Une domination qui ne repose que sur la force dure ce que dure la force, c'est-à-dire peu.
+
+    **Pourquoi « transformer sa force en droit et l'obéissance en devoir » ?** C'est le {amber}stratagème{/amber} du fort : faire croire qu'il a {violet}le droit{/violet} de commander, pour que le faible se sente {violet}obligé{/violet} d'obéir. Alors le faible obéit même quand le fort ne le contraint plus : {coral}l'obéissance ne dépend plus de la force présente, mais de la conscience du sujet{/coral}. Une relation de fait est déguisée en relation de droit.
+
+    ? **Devoir** : une obligation qui s'adresse à la volonté, et qui vaut même quand personne ne nous contraint. {yellow}Je dois rendre un dépôt même si personne ne sait que je l'ai reçu.{/yellow}
+
+    **Pourquoi « pris ironiquement en apparence, et réellement établi en principe » ?** L'expression {teal}« droit du plus fort »{/teal} sonne comme une moquerie, {yellow}comme on dirait « la loi de la jungle »{/yellow} ; mais elle est {red}réellement enseignée comme principe{/red}, par ceux qui fondent le pouvoir sur la conquête. L'écart entre l'ironie du mot et le sérieux de son usage {coral}révèle déjà son illégitimité{/coral}.
+
+    ! Rousseau ne nie pas que le fort {red}veuille un droit{/red} : il explique ce désir, {green}pour montrer ensuite qu'il ne peut être satisfait{/green}.
   passage:
     label: "§1"
-    text: "Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. De là le droit du plus fort ; droit pris ironiquement en apparence, et réellement établi en principe. Mais ne nous expliquera-t-on jamais ce mot ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un acte de nécessité, non de volonté ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ?"
+    text: "Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. De là le droit du plus fort ; droit pris ironiquement en apparence, et réellement établi en principe."
   points:
-  - id: rousseau-le-droit-du-plus-fort-l1-p1
-    sentence: "« ___, __s'il ne transforme sa force en droit__ et **l'obéissance en devoir**. De là le droit du plus fort ; droit pris ironiquement en apparence, et réellement établi en principe. Mais ne nous expliquera-t-on jamais ce mot ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un acte de nécessité, non de volonté ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ? »"
+  - id: "rousseau-le-droit-du-plus-fort-l1-p1"
+    sentence: "« ___, __s'il ne transforme sa force en droit__ et **l'obéissance en devoir**. De là le droit du plus fort ; droit pris ironiquement en apparence, et réellement établi en principe. »"
     answer: "Le plus fort n'est jamais assez fort pour être toujours le maître"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p2
-    sentence: "« __Le plus fort n'est jamais assez fort pour être toujours **le maître**,__ ___. De là le droit du plus fort ; droit pris ironiquement en apparence, et réellement établi en principe. Mais ne nous expliquera-t-on jamais ce mot ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un acte de nécessité, non de volonté ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ? »"
+  - id: "rousseau-le-droit-du-plus-fort-l1-p2"
+    sentence: "« Le plus fort n'est jamais assez fort pour être toujours **le maître**, ___. De là le droit du plus fort ; droit pris ironiquement en apparence, et réellement établi en principe. »"
     answer: "s'il ne transforme sa force en droit et l'obéissance en devoir"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p3
-    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. ___ ; __droit pris ironiquement en apparence__, et **réellement établi en principe**. Mais ne nous expliquera-t-on jamais ce mot ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un acte de nécessité, non de volonté ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ? »"
+  - id: "rousseau-le-droit-du-plus-fort-l1-p3"
+    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. ___ ; __droit pris ironiquement en apparence__, et **réellement établi en principe**. »"
     answer: "De là le droit du plus fort"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p4
-    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. De là le **droit du plus fort** ; ___, __et réellement établi en principe__. Mais ne nous expliquera-t-on jamais ce mot ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un acte de nécessité, non de volonté ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ? »"
+  - id: "rousseau-le-droit-du-plus-fort-l1-p4"
+    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. De là le **droit du plus fort** ; ___, __et réellement établi en principe__. »"
     answer: "droit pris ironiquement en apparence"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p5
-    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. De là le droit du plus fort ; __droit pris ironiquement en apparence,__ ___. Mais ne nous expliquera-t-on jamais **ce mot** ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un acte de nécessité, non de volonté ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ? »"
+  - id: "rousseau-le-droit-du-plus-fort-l1-p5"
+    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. De là le droit du plus fort ; __droit pris ironiquement en apparence,__ ___. »"
     answer: "et réellement établi en principe"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p6
-    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. De là le droit du plus fort ; droit pris ironiquement en apparence, et réellement établi en principe. ___ ? __La force est une__ **puissance physique** ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un acte de nécessité, non de volonté ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ? »"
-    answer: "Mais ne nous expliquera-t-on jamais ce mot"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p7
-    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. De là le droit du plus fort ; droit pris ironiquement en apparence, et réellement établi en principe. Mais ne nous expliquera-t-on jamais ce mot ? ___ ; __je ne vois point quelle **moralité** peut résulter de ses effets__. Céder à la force est un acte de nécessité, non de volonté ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ? »"
-    answer: "La force est une puissance physique"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p8
-    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. De là le droit du plus fort ; droit pris ironiquement en apparence, et réellement établi en principe. Mais ne nous expliquera-t-on jamais ce mot ? La force est une **puissance physique** ; ___. __Céder à la force est un acte de nécessité, non de volonté__ ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ? »"
-    answer: "je ne vois point quelle moralité peut résulter de ses effets"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p9
-    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. De là le droit du plus fort ; droit pris ironiquement en apparence, et réellement établi en principe. Mais ne nous expliquera-t-on jamais ce mot ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses **effets**. ___ ; __c'est tout au plus un acte de prudence__. En quel sens pourra-ce être un devoir ? »"
-    answer: "Céder à la force est un acte de nécessité, non de volonté"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p10
-    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en devoir. De là le droit du plus fort ; droit pris ironiquement en apparence, et réellement établi en principe. Mais ne nous expliquera-t-on jamais ce mot ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un **acte de nécessité, non de volonté** ; ___. __En quel sens pourra-ce être un devoir__ ? »"
-    answer: "c'est tout au plus un acte de prudence"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p11
-    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme sa force en droit et l'obéissance en **devoir**. De là le droit du plus fort ; droit pris ironiquement en apparence, et réellement établi en principe. Mais ne nous expliquera-t-on jamais ce mot ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un acte de nécessité, non de volonté ; __c'est tout au plus un acte de prudence__. ___ ? »"
-    answer: "En quel sens pourra-ce être un devoir"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p12
+  - id: "rousseau-le-droit-du-plus-fort-l1-p12"
     sentence: "La force d'un individu __n'étant jamais assez__ ___ pour assurer une **domination permanente**, puisqu'elle peut s'affaiblir ou rencontrer plus forte qu'elle, le plus fort doit, pour la pérenniser, transformer sa force en droit et l'obéissance en devoir."
     answer: "pérenne"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p13
+  - id: "rousseau-le-droit-du-plus-fort-l1-p13"
     sentence: "Pour pérenniser malgré tout sa domination, le plus fort recourt à un **stratagème** : __il prétend avoir un véritable__ ___ sur le plus faible, et fait ainsi peser sur lui un devoir d'obéissance, fondant en droit une relation qui n'existait que de fait."
     answer: "droit"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p14
+  - id: "rousseau-le-droit-du-plus-fort-l1-p14"
     sentence: "L'expression « droit du plus fort » relève d'une ironie structurale : ce qui est présenté comme **seulement apparent** (« pris ironiquement en apparence ») est en réalité __ce qui se trouve véritablement__ ___ (« réellement établi en principe »), et cet écart entre l'ironie du droit et l'effectivité de son application en révèle l'illégitimité."
     answer: "établi"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p15
+- id: "rousseau-le-droit-du-plus-fort-l1b"
+  title: "La force est une puissance physique"
+  notes: |-
+    **L'objection de Rousseau tient en une distinction :** {coral}**la force est une puissance physique, le devoir est moral, et céder à la force est un acte de nécessité, non de volonté.**{/coral}
+
+    **Pourquoi « ne nous expliquera-t-on jamais ce mot ? »** Rousseau demande qu'on définisse {amber}le mot « droit »{/amber} dans l'expression : s'il a un sens, il doit ajouter quelque chose à la force. Le §2 montrera qu'il n'ajoute rien.
+
+    **Pourquoi « une puissance physique » ?** La force agit sur les {amber}corps{/amber} : elle pousse, enchaîne, frappe. Or {coral}aucune cause physique ne produit un effet moral{/coral}. {yellow}La pierre qui tombe m'écrase, elle ne m'oblige pas.{/yellow} La moralité, elle, concerne la {violet}volonté{/violet} : elle suppose qu'on puisse faire autrement.
+
+    **Pourquoi « un acte de nécessité, non de volonté » ?** Quand je cède à la force, {red}je ne choisis pas{/red} : je fais ce que je ne peux pas ne pas faire. Un tel acte n'est ni bon ni mauvais moralement. {amber}« Tout au plus un acte de prudence »{/amber} : je calcule qu'il vaut mieux céder que mourir. La prudence vaut pour telle situation ; le devoir oblige quelles que soient les circonstances.
+
+    **Pourquoi la question finale ?** {teal}« En quel sens pourra-ce être un devoir ? »{/teal} La réponse attendue est {red}aucun{/red} : on ne peut pas être obligé de faire ce qu'on ne peut pas ne pas faire.
+
+    ! « Prudence » n'est pas un reproche : céder au plus fort peut être {green}raisonnable{/green}, mais ce n'est jamais {red}un devoir{/red}.
+  passage:
+    label: "§1"
+    text: "Mais ne nous expliquera-t-on jamais ce mot ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un acte de nécessité, non de volonté ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ?"
+  points:
+  - id: "rousseau-le-droit-du-plus-fort-l1-p6"
+    sentence: "« ___ ? __La force est une__ **puissance physique** ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un acte de nécessité, non de volonté ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ? »"
+    answer: "Mais ne nous expliquera-t-on jamais ce mot"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l1-p7"
+    sentence: "« Mais ne nous expliquera-t-on jamais ce mot ? ___ ; __je ne vois point quelle **moralité** peut résulter de ses effets__. Céder à la force est un acte de nécessité, non de volonté ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ? »"
+    answer: "La force est une puissance physique"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l1-p8"
+    sentence: "« Mais ne nous expliquera-t-on jamais ce mot ? La force est une **puissance physique** ; ___. __Céder à la force est un acte de nécessité, non de volonté__ ; c'est tout au plus un acte de prudence. En quel sens pourra-ce être un devoir ? »"
+    answer: "je ne vois point quelle moralité peut résulter de ses effets"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l1-p9"
+    sentence: "« Mais ne nous expliquera-t-on jamais ce mot ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses **effets**. ___ ; __c'est tout au plus un acte de prudence__. En quel sens pourra-ce être un devoir ? »"
+    answer: "Céder à la force est un acte de nécessité, non de volonté"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l1-p10"
+    sentence: "« Mais ne nous expliquera-t-on jamais ce mot ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un **acte de nécessité, non de volonté** ; ___. __En quel sens pourra-ce être un devoir__ ? »"
+    answer: "c'est tout au plus un acte de prudence"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l1-p11"
+    sentence: "« Mais ne nous expliquera-t-on jamais ce mot ? La force est une puissance physique ; je ne vois point quelle moralité peut résulter de ses effets. Céder à la force est un acte de nécessité, non de volonté ; __c'est tout au plus un acte de prudence__. ___ ? »"
+    answer: "En quel sens pourra-ce être un devoir"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l1-p15"
     sentence: "Rousseau objecte que __la force est une puissance seulement__ ___ ; or **aucune cause physique ne saurait engendrer un effet moral**, ce qui interdit de faire dériver le droit, qui relève de la volonté et du devoir, de la seule force."
     answer: "physique"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l1-p16
+  - id: "rousseau-le-droit-du-plus-fort-l1-p16"
     sentence: "Dans « céder à la force est un acte de nécessité, non de volonté ; __c'est tout au plus un acte de__ ___ », la force ne relève donc que de la **contrainte physique** et, tout au plus, de la prudence propre à telle situation, tandis que le devoir oblige la volonté indépendamment des circonstances."
     answer: "prudence"
     alt: []
-- id: rousseau-le-droit-du-plus-fort-l2
-  title: "La force est une contrainte physique, pas une obligation"
-  notes: ""
+- id: "rousseau-le-droit-du-plus-fort-l2"
+  title: "Supposons ce prétendu droit"
+  notes: |-
+    **Rousseau raisonne par l'absurde : il suppose le droit du plus fort, et montre qu'il n'en résulte qu'un** {red}**« galimatias inexplicable »**{/red}**, car un droit fondé sur la force change avec elle.**
+
+    **Pourquoi « supposons » ?** Après l'objection de principe (§1), Rousseau accorde un moment la thèse adverse pour en {amber}tirer les conséquences{/amber}. Si elles sont absurdes, la thèse l'est.
+
+    ? **Galimatias** : un discours embrouillé, qui n'a pas de sens. Le mot dit que le droit du plus fort n'est pas seulement injuste, mais {amber}incohérent{/amber}.
+
+    **Pourquoi « l'effet change avec la cause » ?** Si c'est la force qui fait le droit, la force est la {violet}cause{/violet} et le droit l'{violet}effet{/violet} ; or la force est {amber}relative{/amber} : on est toujours plus ou moins fort qu'un autre, et « le plus fort » ne l'est que par rapport à ceux qu'on considère à un moment donné. {coral}Le droit change donc de titulaire chaque fois que la force change de mains.{/coral}
+
+    **Pourquoi « toute force qui surmonte la première succède à son droit » ?** Conséquence immédiate : {yellow}l'usurpateur qui renverse le roi hérite de son droit, au moment même où il le renverse{/yellow}. Le droit qui devait protéger le pouvoir établi {red}légitime sa chute{/red}.
+
+    ! Le défaut n'est pas que ce droit soit {red}mal fondé{/red} : c'est qu'il {green}ne fonde rien de stable{/green}, ce qui est le contraire d'un droit.
   passage:
     label: "§2"
-    text: "Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première succède à son droit. Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout."
+    text: "Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première succède à son droit."
   points:
-  - id: rousseau-le-droit-du-plus-fort-l2-p1
-    sentence: "« ___. __Je dis qu'il n'en résulte__ qu'un **galimatias inexplicable**. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première succède à son droit. Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout. »"
+  - id: "rousseau-le-droit-du-plus-fort-l2-p1"
+    sentence: "« ___. __Je dis qu'il n'en résulte__ qu'un **galimatias inexplicable**. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première succède à son droit. »"
     answer: "Supposons un moment ce prétendu droit"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p2
-    sentence: "« __Supposons un moment__ ce **prétendu droit**. ___. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première succède à son droit. Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout. »"
+  - id: "rousseau-le-droit-du-plus-fort-l2-p2"
+    sentence: "« Supposons un moment ce **prétendu droit**. ___. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première succède à son droit. »"
     answer: "Je dis qu'il n'en résulte qu'un galimatias inexplicable"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p3
-    sentence: "« Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. ___ ; __toute force qui surmonte la première succède à son droit__. **Sitôt qu'**on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout. »"
+  - id: "rousseau-le-droit-du-plus-fort-l2-p3"
+    sentence: "« Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. ___ ; __toute force qui surmonte la première succède à son droit__. »"
     answer: "Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p4
-    sentence: "« Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. Car sitôt que c'est **la force qui fait le droit**, l'effet change avec la cause ; ___. __Sitôt qu'on peut désobéir impunément on le peut légitimement__, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout. »"
+  - id: "rousseau-le-droit-du-plus-fort-l2-p4"
+    sentence: "« Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. Car sitôt que c'est **la force qui fait le droit**, l'effet change avec la cause ; ___. »"
     answer: "toute force qui surmonte la première succède à son droit"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p5
-    sentence: "« Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première **succède à son droit**. ___, __et puisque le plus fort a toujours raison__, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout. »"
-    answer: "Sitôt qu'on peut désobéir impunément on le peut légitimement"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p6
-    sentence: "« Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première succède à son droit. Sitôt qu'on peut désobéir impunément on le peut légitimement, ___. __Or qu'est-ce qu'un droit qui périt quand la force cesse__ ? **S'il faut obéir par force** on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout. »"
-    answer: "et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p7
-    sentence: "« Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première succède à son droit. Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque **le plus fort** a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. ___ ? __S'il faut obéir par force on n'a pas besoin d'obéir par devoir__, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout. »"
-    answer: "Or qu'est-ce qu'un droit qui périt quand la force cesse"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p8
-    sentence: "« Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première succède à son droit. Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un **droit qui périt quand la force cesse** ? ___, __et si l'on n'est plus forcé d'obéir on n'y est plus obligé__. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout. »"
-    answer: "S'il faut obéir par force on n'a pas besoin d'obéir par devoir"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p9
-    sentence: "« Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première succède à son droit. Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'**obéir par devoir**, ___. __On voit donc que ce mot de droit n'ajoute rien à la force__ ; il ne signifie ici rien du tout. »"
-    answer: "et si l'on n'est plus forcé d'obéir on n'y est plus obligé"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p10
-    sentence: "« Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première succède à son droit. Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est **plus obligé**. ___ ; __il ne signifie ici rien du tout__. »"
-    answer: "On voit donc que ce mot de droit n'ajoute rien à la force"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p11
-    sentence: "« Supposons un moment ce prétendu droit. Je dis qu'il n'en résulte qu'un galimatias inexplicable. Car sitôt que c'est la force qui fait le droit, l'effet change avec la cause ; toute force qui surmonte la première succède à son droit. Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. __On voit donc que ce **mot de droit** n'ajoute rien à la force__ ; ___. »"
-    answer: "il ne signifie ici rien du tout"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p12
+  - id: "rousseau-le-droit-du-plus-fort-l2-p12"
     sentence: "Instituer un droit du plus fort, c'est faire croire que **la force est un principe immuable**, alors qu'elle est au contraire __un principe purement__ ___ : on est toujours plus ou moins fort par rapport aux autres, et le superlatif « le plus fort » n'est lui-même relatif qu'aux autres qu'on considère à un moment donné."
     answer: "relatif"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p13
+  - id: "rousseau-le-droit-du-plus-fort-l2-p13"
     sentence: "__Rousseau examine la définition même du « prétendu__ ___ » du plus fort pour en tirer un **galimatias inexplicable** : si l'obligation dépend entièrement de la force, elle disparaît avec elle, si bien que ce mot de droit n'ajoute rien à la force."
     answer: "droit"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p14
+  - id: "rousseau-le-droit-du-plus-fort-l2-p14"
     sentence: "Puisque « __toute force qui surmonte la première succède à son__ ___ », il devient légitime, en vertu de ce droit, de **se soulever contre le pouvoir établi** dès lors qu'on est assez fort pour le renverser."
     answer: "droit"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p15
+- id: "rousseau-le-droit-du-plus-fort-l2b"
+  title: "Le mot de droit n'ajoute rien à la force"
+  notes: |-
+    **Les conséquences s'enchaînent jusqu'à la conclusion :** {coral}**le mot de droit n'ajoute rien à la force, il ne signifie ici rien du tout.**{/coral}
+
+    **Pourquoi « sitôt qu'on peut désobéir impunément on le peut légitimement » ?** Si le droit suit la force, celui qui échappe à la force échappe au droit. {red}L'impunité{/red}, ordinairement le contraire de la justice, {red}se confond avec elle{/red}. Le droit du plus fort, loin d'assurer l'obéissance, {coral}motive la désobéissance{/coral} : il n'y a qu'à devenir le plus fort.
+
+    **Pourquoi « qu'est-ce qu'un droit qui périt quand la force cesse ? »** Un droit véritable {amber}survit à la force{/amber} : {yellow}le propriétaire volé garde son droit sur la chose, même quand il ne peut pas la reprendre{/yellow}. Un « droit » qui disparaît avec la force n'est que la force sous un autre nom.
+
+    **Pourquoi « s'il faut obéir par force on n'a pas besoin d'obéir par devoir » ?** Le dilemme est complet. Ou bien la force contraint, et {red}le devoir est superflu{/red} ; ou bien elle ne contraint plus, et {red}le devoir disparaît avec elle{/red}. Dans les deux cas, il ne fait rien. La force vient de l'extérieur et s'annule avec sa cause ; l'obligation véritable viendrait de l'intérieur et engagerait la volonté.
+
+    **Pourquoi « il ne signifie ici rien du tout » ?** C'est la réponse à la question du §1 : on demandait d'expliquer le mot, et {coral}le mot n'a pas de sens{/coral}. Le droit du plus fort n'est qu'une {violet}contrainte{/violet} qui se donne un nom flatteur.
+
+    ! Rousseau ne réfute pas le droit du plus fort par {red}l'indignation{/red}, mais par {green}la logique{/green} : la notion se contredit.
+  passage:
+    label: "§2"
+    text: "Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout."
+  points:
+  - id: "rousseau-le-droit-du-plus-fort-l2-p5"
+    sentence: "« ___, __et puisque le plus fort a toujours raison__, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout. »"
+    answer: "Sitôt qu'on peut désobéir impunément on le peut légitimement"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l2-p6"
+    sentence: "« Sitôt qu'on peut désobéir impunément on le peut légitimement, ___. __Or qu'est-ce qu'un droit qui périt quand la force cesse__ ? **S'il faut obéir par force** on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout. »"
+    answer: "et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l2-p7"
+    sentence: "« Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque **le plus fort** a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. ___ ? __S'il faut obéir par force on n'a pas besoin d'obéir par devoir__, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout. »"
+    answer: "Or qu'est-ce qu'un droit qui périt quand la force cesse"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l2-p8"
+    sentence: "« Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un **droit qui périt quand la force cesse** ? ___, __et si l'on n'est plus forcé d'obéir on n'y est plus obligé__. On voit donc que ce mot de droit n'ajoute rien à la force ; il ne signifie ici rien du tout. »"
+    answer: "S'il faut obéir par force on n'a pas besoin d'obéir par devoir"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l2-p9"
+    sentence: "« Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'**obéir par devoir**, ___. __On voit donc que ce mot de droit n'ajoute rien à la force__ ; il ne signifie ici rien du tout. »"
+    answer: "et si l'on n'est plus forcé d'obéir on n'y est plus obligé"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l2-p10"
+    sentence: "« Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est **plus obligé**. ___ ; __il ne signifie ici rien du tout__. »"
+    answer: "On voit donc que ce mot de droit n'ajoute rien à la force"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l2-p11"
+    sentence: "« Sitôt qu'on peut désobéir impunément on le peut légitimement, et puisque le plus fort a toujours raison, il ne s'agit que de faire en sorte qu'on soit le plus fort. Or qu'est-ce qu'un droit qui périt quand la force cesse ? S'il faut obéir par force on n'a pas besoin d'obéir par devoir, et si l'on n'est plus forcé d'obéir on n'y est plus obligé. __On voit donc que ce **mot de droit** n'ajoute rien à la force__ ; ___. »"
+    answer: "il ne signifie ici rien du tout"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l2-p15"
     sentence: "Loin d'assurer l'obéissance des sujets, le **droit du plus fort** motive au contraire __leur__ ___ : au lieu de l'interdire, il la légitime, puisque le plus fort a toujours raison."
     answer: "désobéissance"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p16
+  - id: "rousseau-le-droit-du-plus-fort-l2-p16"
     sentence: "Avec le droit du plus fort, **l'impunité**, ordinairement opposée à la justice, se confond avec elle : « __Or qu'est-ce qu'un droit qui périt quand la force__ ___ ? »"
     answer: "cesse"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l2-p17
+  - id: "rousseau-le-droit-du-plus-fort-l2-p17"
     sentence: "**Le droit du plus fort ne fait jamais qu'exprimer une contrainte** : la force vient de l'extérieur et s'annule avec sa cause, tandis que l'obligation véritable viendrait de l'intérieur et engagerait la volonté ; c'est pourquoi ce mot de droit n'ajoute rien à la force, __il ne signifie ici__ rien du ___."
     answer: "tout"
     alt: []
-- id: rousseau-le-droit-du-plus-fort-l3
-  title: "L'obéissance à la force n'est qu'une contrainte"
-  notes: ""
+- id: "rousseau-le-droit-du-plus-fort-l3"
+  title: "Obéissez aux puissances"
+  notes: |-
+    **Rousseau réfute la justification religieuse de l'obéissance :** {coral}**que toute puissance vienne de Dieu n'oblige pas à s'y soumettre, pas plus que la maladie n'interdit d'appeler le médecin.**{/coral}
+
+    **D'où vient « Obéissez aux puissances » ?** C'est le précepte que la tradition tire de l'{sky}Épître aux Romains{/sky} (13, 1-2) : tout homme doit être soumis aux autorités, car il n'y a d'autorité que par Dieu, et qui s'oppose à l'autorité se rebelle contre l'ordre voulu par Dieu. On en faisait le fondement de l'{violet}obéissance passive{/violet} des sujets à leur souverain.
+
+    **Pourquoi « bon, mais superflu » ?** Rousseau feint d'accorder le précepte en le lisant comme « cédez à la force ». Mais alors {amber}il ne sera jamais violé{/amber} : on cède toujours à une force à laquelle on ne peut pas résister. {yellow}Ordonner d'obéir à la force, c'est comme ordonner de ne pas respirer sous l'eau.{/yellow} Un précepte qu'on ne peut pas enfreindre {red}ne commande rien{/red}.
+
+    **Pourquoi « toute maladie en vient aussi » ?** Rousseau {amber}accorde la prémisse pour en refuser la conclusion{/amber}. Si tout ce qui vient de Dieu devait être respecté, il faudrait respecter la maladie. Or {yellow}personne ne pense qu'il soit défendu d'appeler le médecin{/yellow}. L'existence même de la médecine montre qu'il y a des puissances qu'on combat légitimement. {coral}Venir de Dieu ne rend donc pas une puissance légitime.{/coral}
+
+    ! Rousseau ne nie pas que {red}toute puissance vienne de Dieu{/red} : il nie qu'il en suive {green}un devoir d'obéir{/green}.
   passage:
     label: "§3"
-    text: "Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais superflu ; je réponds qu'il ne sera jamais violé. Toute puissance vient de Dieu, je l'avoue ; mais toute maladie en vient aussi. Est-ce à dire qu'il soit défendu d'appeler le médecin ? Qu'un brigand me surprenne au coin d'un bois : non seulement il faut par force donner la bourse, mais quand je pourrais la soustraire suis-je en conscience obligé de la donner ? car enfin le pistolet qu'il tient est aussi une puissance."
+    text: "Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais superflu ; je réponds qu'il ne sera jamais violé. Toute puissance vient de Dieu, je l'avoue ; mais toute maladie en vient aussi. Est-ce à dire qu'il soit défendu d'appeler le médecin ?"
   points:
-  - id: rousseau-le-droit-du-plus-fort-l3-p1
-    sentence: "« ___. __Si cela veut dire__, **cédez à la force**, le précepte est bon, mais superflu ; je réponds qu'il ne sera jamais violé. Toute puissance vient de Dieu, je l'avoue ; mais toute maladie en vient aussi. Est-ce à dire qu'il soit défendu d'appeler le médecin ? Qu'un brigand me surprenne au coin d'un bois : non seulement il faut par force donner la bourse, mais quand je pourrais la soustraire suis-je en conscience obligé de la donner ? car enfin le pistolet qu'il tient est aussi une puissance. »"
+  - id: "rousseau-le-droit-du-plus-fort-l3-p1"
+    sentence: "« ___. __Si cela veut dire__, **cédez à la force**, le précepte est bon, mais superflu ; je réponds qu'il ne sera jamais violé. Toute puissance vient de Dieu, je l'avoue ; mais toute maladie en vient aussi. Est-ce à dire qu'il soit défendu d'appeler le médecin ? »"
     answer: "Obéissez aux puissances"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p2
-    sentence: "« **Obéissez aux puissances**. ___ ; __je réponds qu'il ne sera jamais violé__. Toute puissance vient de Dieu, je l'avoue ; mais toute maladie en vient aussi. Est-ce à dire qu'il soit défendu d'appeler le médecin ? Qu'un brigand me surprenne au coin d'un bois : non seulement il faut par force donner la bourse, mais quand je pourrais la soustraire suis-je en conscience obligé de la donner ? car enfin le pistolet qu'il tient est aussi une puissance. »"
+  - id: "rousseau-le-droit-du-plus-fort-l3-p2"
+    sentence: "« Obéissez aux puissances. ___ ; __je réponds qu'il ne sera jamais violé__. Toute puissance vient de Dieu, je l'avoue ; mais toute maladie en vient aussi. Est-ce à dire qu'il soit défendu d'appeler le médecin ? »"
     answer: "Si cela veut dire, cédez à la force, le précepte est bon, mais superflu"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p3
-    sentence: "« Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais **superflu** ; ___. __Toute puissance vient de Dieu, je l'avoue__ ; mais toute maladie en vient aussi. Est-ce à dire qu'il soit défendu d'appeler le médecin ? Qu'un brigand me surprenne au coin d'un bois : non seulement il faut par force donner la bourse, mais quand je pourrais la soustraire suis-je en conscience obligé de la donner ? car enfin le pistolet qu'il tient est aussi une puissance. »"
+  - id: "rousseau-le-droit-du-plus-fort-l3-p3"
+    sentence: "« Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais **superflu** ; ___. __Toute puissance vient de Dieu, je l'avoue__ ; mais toute maladie en vient aussi. Est-ce à dire qu'il soit défendu d'appeler le médecin ? »"
     answer: "je réponds qu'il ne sera jamais violé"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p4
-    sentence: "« Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais superflu ; **je réponds qu'il ne sera jamais violé**. ___ ; __mais toute maladie en vient aussi__. Est-ce à dire qu'il soit défendu d'appeler le médecin ? Qu'un brigand me surprenne au coin d'un bois : non seulement il faut par force donner la bourse, mais quand je pourrais la soustraire suis-je en conscience obligé de la donner ? car enfin le pistolet qu'il tient est aussi une puissance. »"
+  - id: "rousseau-le-droit-du-plus-fort-l3-p4"
+    sentence: "« Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais superflu ; **je réponds qu'il ne sera jamais violé**. ___ ; __mais toute maladie en vient aussi__. Est-ce à dire qu'il soit défendu d'appeler le médecin ? »"
     answer: "Toute puissance vient de Dieu, je l'avoue"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p5
-    sentence: "« Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais superflu ; je réponds qu'il ne sera jamais violé. **Toute puissance vient de Dieu**, je l'avoue ; ___. __Est-ce à dire qu'il soit défendu d'appeler le médecin__ ? Qu'un brigand me surprenne au coin d'un bois : non seulement il faut par force donner la bourse, mais quand je pourrais la soustraire suis-je en conscience obligé de la donner ? car enfin le pistolet qu'il tient est aussi une puissance. »"
+  - id: "rousseau-le-droit-du-plus-fort-l3-p5"
+    sentence: "« Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais superflu ; je réponds qu'il ne sera jamais violé. **Toute puissance vient de Dieu**, je l'avoue ; ___. __Est-ce à dire qu'il soit défendu d'appeler le médecin__ ? »"
     answer: "mais toute maladie en vient aussi"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p6
-    sentence: "« Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais superflu ; je réponds qu'il ne sera jamais violé. Toute puissance vient de Dieu, je l'avoue ; mais toute **maladie** en vient aussi. ___ ? __Qu'un brigand me surprenne au coin d'un bois__ : non seulement il faut par force donner la bourse, mais quand je pourrais la soustraire suis-je en conscience obligé de la donner ? car enfin le pistolet qu'il tient est aussi une puissance. »"
+  - id: "rousseau-le-droit-du-plus-fort-l3-p6"
+    sentence: "« Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais superflu ; je réponds qu'il ne sera jamais violé. Toute puissance vient de Dieu, je l'avoue ; mais toute **maladie** en vient aussi. ___ ? »"
     answer: "Est-ce à dire qu'il soit défendu d'appeler le médecin"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p7
-    sentence: "« Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais superflu ; je réponds qu'il ne sera jamais violé. Toute puissance vient de Dieu, je l'avoue ; mais toute maladie en vient aussi. Est-ce à dire qu'il soit défendu d'**appeler le médecin** ? ___ : __non seulement il faut par force donner la bourse__, mais quand je pourrais la soustraire suis-je en conscience obligé de la donner ? car enfin le pistolet qu'il tient est aussi une puissance. »"
-    answer: "Qu'un brigand me surprenne au coin d'un bois"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p8
-    sentence: "« Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais superflu ; je réponds qu'il ne sera jamais violé. Toute puissance vient de Dieu, je l'avoue ; mais toute maladie en vient aussi. Est-ce à dire qu'il soit défendu d'appeler le médecin ? Qu'un **brigand** me surprenne au coin d'un bois : ___, __mais quand je pourrais la soustraire suis-je en conscience obligé de la donner__ ? car enfin le pistolet qu'il tient est aussi une puissance. »"
-    answer: "non seulement il faut par force donner la bourse"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p9
-    sentence: "« Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais superflu ; je réponds qu'il ne sera jamais violé. Toute puissance vient de Dieu, je l'avoue ; mais toute maladie en vient aussi. Est-ce à dire qu'il soit défendu d'appeler le médecin ? Qu'un brigand me surprenne au coin d'un bois : non seulement il faut par force **donner la bourse**, ___ ? __car enfin le pistolet qu'il tient est aussi une puissance__. »"
-    answer: "mais quand je pourrais la soustraire suis-je en conscience obligé de la donner"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p10
-    sentence: "« Obéissez aux puissances. Si cela veut dire, cédez à la force, le précepte est bon, mais superflu ; je réponds qu'il ne sera jamais violé. Toute puissance vient de Dieu, je l'avoue ; mais toute maladie en vient aussi. __Est-ce à dire__ qu'il soit défendu d'appeler le médecin ? Qu'un brigand me surprenne au coin d'un bois : non seulement il faut par force donner la bourse, **mais quand je pourrais la soustraire** suis-je en conscience obligé de la donner ? ___. »"
-    answer: "car enfin le pistolet qu'il tient est aussi une puissance"
-    alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p11
+  - id: "rousseau-le-droit-du-plus-fort-l3-p11"
     sentence: "**Rousseau feint l'ironie** en jugeant le précepte « bon, mais superflu » : dire qu'il ne sera jamais violé, c'est dire qu'il est absurde, puisqu'il est impossible, de fait, de lui désobéir ; __l'injonction d'obéir aux puissances équivaut alors à celle de retenir sa__ ___ sous l'eau."
     answer: "respiration"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p12
+  - id: "rousseau-le-droit-du-plus-fort-l3-p12"
     sentence: "C'est un passage de l'Épître aux Romains (13, dans la Traduction Œcuménique de la Bible) auquel Rousseau fait allusion : « Que tout homme soit soumis aux autorités qui exercent le pouvoir, car il n'y a d'autorité que par Dieu et celles qui existent sont établies par lui. __Ainsi__ ___, et **les rebelles attireront la condamnation sur eux-mêmes**. »"
     answer: "celui qui s'oppose à l'autorité se rebelle contre l'ordre voulu par Dieu"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p13
+  - id: "rousseau-le-droit-du-plus-fort-l3-p13"
     sentence: "Rousseau accorde d'abord que **toute puissance vient de Dieu**, __mais c'est pour mieux en refuser la__ ___ : il existe en effet des puissances, comme la maladie, que le sens commun ne juge pas devoir être respectées."
     answer: "conclusion"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p14
+  - id: "rousseau-le-droit-du-plus-fort-l3-p14"
     sentence: "Par la question rhétorique « est-ce à dire qu'il soit défendu d'**appeler le médecin** ? », Rousseau insinue que __l'existence même de la__ ___ atteste qu'il y a des puissances, comme la maladie, que les hommes cherchent légitimement à combattre."
     answer: "médecine"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l3-p15
+- id: "rousseau-le-droit-du-plus-fort-l3b"
+  title: "Le brigand au coin d'un bois"
+  notes: |-
+    **L'exemple du brigand achève la réfutation :** {coral}**céder à son pistolet est forcé, mais aucune conscience ne s'y sent obligée.**{/coral}
+
+    **Pourquoi un brigand ?** Il incarne {red}l'injustice{/red} : il s'empare par la force du bien d'autrui. Personne ne soutiendra qu'il a un droit sur ma bourse. C'est le {amber}cas limite{/amber} qui rend l'argument évident.
+
+    **Pourquoi « non seulement il faut par force donner la bourse, mais quand je pourrais la soustraire » ?** Rousseau distingue deux situations. {yellow}Le pistolet sur la tempe{/yellow}, je donne : c'est la nécessité. Mais {yellow}si je peux cacher ma bourse sans risque{/yellow}, suis-je obligé de la donner ? {coral}Évidemment non{/coral} : la conscience n'y trouve aucune obligation. On ne lui obéit que par {violet}contrainte{/violet}.
+
+    **Pourquoi « le pistolet qu'il tient est aussi une puissance » ?** La chute est ironique : si toute puissance devait être obéie, {red}le pistolet du brigand aussi{/red}. Le mot « puissance » désigne indifféremment le roi et l'arme ; {coral}il ne suffit donc pas qu'une puissance soit une puissance pour qu'on lui doive obéissance{/coral}. Le recours à Dieu ne justifie pas la soumission à n'importe quelle autorité.
+
+    ! Le brigand n'est pas {red}une exception{/red} : c'est le modèle de {green}tout pouvoir qui ne repose que sur la force{/green}.
+  passage:
+    label: "§3"
+    text: "Qu'un brigand me surprenne au coin d'un bois : non seulement il faut par force donner la bourse, mais quand je pourrais la soustraire suis-je en conscience obligé de la donner ? car enfin le pistolet qu'il tient est aussi une puissance."
+  points:
+  - id: "rousseau-le-droit-du-plus-fort-l3-p7"
+    sentence: "« ___ : __non seulement il faut par force donner la bourse__, mais quand je pourrais la soustraire suis-je en conscience obligé de la donner ? car enfin le pistolet qu'il tient est aussi une puissance. »"
+    answer: "Qu'un brigand me surprenne au coin d'un bois"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l3-p8"
+    sentence: "« Qu'un **brigand** me surprenne au coin d'un bois : ___, __mais quand je pourrais la soustraire suis-je en conscience obligé de la donner__ ? car enfin le pistolet qu'il tient est aussi une puissance. »"
+    answer: "non seulement il faut par force donner la bourse"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l3-p9"
+    sentence: "« Qu'un brigand me surprenne au coin d'un bois : non seulement il faut par force **donner la bourse**, ___ ? __car enfin le pistolet qu'il tient est aussi une puissance__. »"
+    answer: "mais quand je pourrais la soustraire suis-je en conscience obligé de la donner"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l3-p10"
+    sentence: "« Qu'un brigand me surprenne au coin d'un bois : non seulement il faut par force donner la bourse, **mais quand je pourrais la soustraire** suis-je en conscience obligé de la donner ? ___. »"
+    answer: "car enfin le pistolet qu'il tient est aussi une puissance"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-l3-p15"
     sentence: "L'exemple du **brigand** est probant parce que le brigand incarne l'injustice en s'octroyant par la force le bien d'autrui : __on ne lui obéit alors que par__ ___, sans qu'aucune conscience n'y trouve d'obligation véritable, ce qui montre qu'il serait absurde de tenir toute puissance pour légitime, et rend caduc le recours à Dieu pour justifier la soumission à la moindre autorité."
     answer: "contrainte"
     alt: []
-- id: rousseau-le-droit-du-plus-fort-l4
-  title: "On n'obligation qu'envers ce qui mérite de l'être"
-  notes: ""
+- id: "rousseau-le-droit-du-plus-fort-l4"
+  title: "On n'est obligé qu'envers les puissances légitimes"
+  notes: |-
+    **La conclusion a deux faces :** {red}**négative**{/red}**, la force ne fait pas droit ;** {green}**positive**{/green}**, on n'est obligé d'obéir qu'aux puissances légitimes.**
+
+    **Pourquoi « convenons » ?** Rousseau en appelle à l'accord du lecteur : après le §2 et le §3, {amber}la conclusion s'impose d'elle-même{/amber}.
+
+    ? **Légitime** : conforme au droit, et non seulement établi en fait. Une puissance {violet}légitime{/violet} est celle à laquelle on doit obéir même quand elle ne pourrait pas nous contraindre.
+
+    **Pourquoi « doublement illusoire » ?** La transformation de la force en droit devait {red}fonder{/red} le pouvoir et le {red}faire durer{/red}. Elle échoue sur les deux points : elle ne fonde rien, puisque le mot ne signifie rien, et elle ne fait pas durer, puisqu'elle justifie la révolte de quiconque devient plus fort.
+
+    **Pourquoi « ma question primitive revient toujours » ?** La question du chapitre 1, {amber}qu'est-ce qui rend l'ordre social légitime ?{/amber}, reste entière : on sait maintenant que ce n'est pas la force. {coral}Le chapitre déblaie le terrain{/coral} pour la réponse du pacte social.
+
+    ! La conclusion ne dit pas encore {red}quelles{/red} puissances sont légitimes : elle dit seulement {green}qu'il faut en chercher le fondement ailleurs que dans la force{/green}.
   passage:
     label: "§4"
     text: "Convenons donc que force ne fait pas droit, et qu'on n'est obligé d'obéir qu'aux puissances légitimes. Ainsi ma question primitive revient toujours."
   points:
-  - id: rousseau-le-droit-du-plus-fort-l4-p1
+  - id: "rousseau-le-droit-du-plus-fort-l4-p1"
     sentence: "« ___, __et qu'on n'est obligé d'obéir qu'aux puissances légitimes__. Ainsi ma **question primitive** revient toujours. »"
     answer: "Convenons donc que force ne fait pas droit"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l4-p2
+  - id: "rousseau-le-droit-du-plus-fort-l4-p2"
     sentence: "« Convenons donc que **force ne fait pas droit**, ___. __Ainsi ma question primitive revient toujours__. »"
     answer: "et qu'on n'est obligé d'obéir qu'aux puissances légitimes"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l4-p3
+  - id: "rousseau-le-droit-du-plus-fort-l4-p3"
     sentence: "« Convenons donc que **force ne fait pas droit**, __et qu'on n'est obligé d'obéir qu'aux puissances légitimes.__ ___. »"
     answer: "Ainsi ma question primitive revient toujours"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l4-p4
+  - id: "rousseau-le-droit-du-plus-fort-l4-p4"
     sentence: "La **conclusion de Rousseau** comporte un __pendant négatif__, le rejet d'un droit du plus fort (« ___ »), et un pendant positif restrictif (« ___ »)."
     answer: "force ne fait pas droit ; on n'est obligé d'obéir qu'aux puissances légitimes"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l4-p5
+  - id: "rousseau-le-droit-du-plus-fort-l4-p6"
+    sentence: "__Le rejet du droit du plus fort par Rousseau est__ ___ : la **transformation de la force en droit**, destinée à légitimer artificiellement le pouvoir établi, échoue aussi bien à le fonder qu'à le pérenniser, puisqu'elle justifie du même mouvement les volontés de rébellion de quiconque se révèle à son tour le plus fort."
+    answer: "doublement illusoire"
+    alt: []
+- id: "rousseau-le-droit-du-plus-fort-o1"
+  title: "Force et droit, de Calliclès à Pascal"
+  notes: |-
+    **Le chapitre entre dans un débat ancien sur le rapport de la force et du droit, et en tire une conséquence politique.**
+
+    **Contre Calliclès.** Dans le {sky}*Gorgias*{/sky} de {sky}Platon{/sky}, {sky}Calliclès{/sky} soutient que, selon la nature, {red}il est juste que le plus fort ait plus que le plus faible{/red}, et que les lois ne sont qu'une invention des faibles pour se protéger. Rousseau lui oppose que la nature ne donne {amber}que des faits{/amber} : de la force naturelle on ne tire aucun droit.
+
+    **Après Pascal.** {sky}Pascal{/sky} constatait que, {teal}« ne pouvant faire que ce qui est juste fût fort, on a fait que ce qui est fort fût juste »{/teal} (*Pensées*, 298 B). Il décrivait l'opération même que Rousseau dénonce au §1, la force {red}déguisée en justice{/red}. Mais là où Pascal invitait à respecter l'ordre établi, faute de mieux, Rousseau cherche {green}un fondement légitime{/green}.
+
+    **La conséquence politique.** Si nul droit ne naît de la force, {red}la monarchie absolue{/red}, issue de la conquête ou appuyée sur l'obéissance passive, ne peut être légitime par ce moyen. Il ne reste qu'un fondement : {green}la convention{/green}, par laquelle chacun s'engage librement. C'est le pacte social (I, 6), où l'on obéit à la loi parce qu'on en est l'auteur.
+
+    ! Rousseau ne fait pas de la force {red}une illusion{/red} : il en fait {green}un fait sans valeur de droit{/green}, ce qui laisse la question de la légitimité entière.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: "rousseau-le-droit-du-plus-fort-l4-p5"
     sentence: "**Rousseau tire du rejet du droit du plus fort une conséquence politique** : si nul droit ne peut naître de la seule force, alors la ___, où un seul gouverne sans être responsable devant personne, __ne saurait être légitime par ce moyen__."
     answer: "monarchie absolue"
     alt: []
-  - id: rousseau-le-droit-du-plus-fort-l4-p6
-    sentence: "__Le rejet du droit du plus fort par Rousseau est__ ___ : la **transformation de la force en droit**, destinée à légitimer artificiellement le pouvoir établi, échoue aussi bien à le fonder qu'à le pérenniser, puisqu'elle justifie du même mouvement les volontés de rébellion de quiconque se révèle à son tour le plus fort."
-    answer: "doublement illusoire"
+  - id: "rousseau-le-droit-du-plus-fort-o1-x1"
+    sentence: "Dans le *Gorgias*, ___ __soutient qu'il est juste, selon la nature, que le plus fort ait plus que le plus faible.__"
+    answer: "Calliclès"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-o1-x2"
+    sentence: "Pascal, *Pensées*, 298 B : « ne pouvant faire que ce qui est juste fût fort, __on a fait que ce qui est fort fût ___ »__."
+    answer: "juste"
+    alt: []
+  - id: "rousseau-le-droit-du-plus-fort-o1-x3"
+    sentence: "Exclus la famille, la force et l'esclavage, le seul fondement légitime de l'autorité est __la ___, le pacte social__ (I, 6)."
+    answer: "convention"
     alt: []

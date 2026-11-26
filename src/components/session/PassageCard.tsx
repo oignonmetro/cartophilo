@@ -10,6 +10,7 @@ import { useKeyboardOpen } from '@/lib/useKeyboardOpen'
 import { useProgress, type AnswerMode } from '@/store/progressStore'
 import { Rich, RichGaps } from './RuleNote'
 import { AnswerModeSwitch } from './AnswerModeSwitch'
+import { CorrectionGap } from './CorrectionGap'
 import { RATINGS, RevealButtons } from './RevealButtons'
 import { useSessionHaptics } from './useSessionHaptics'
 import { useSessionSounds } from './useSessionSounds'
@@ -32,6 +33,11 @@ import { useSessionSounds } from './useSessionSounds'
  * Une carte peut porter plusieurs trous : ses réponses les remplissent dans
  * l'ordre, séparées par « ; » (voir `splitGaps`), et se saisissent de même
  * dans un seul champ.
+ *
+ * Une réponse écrite fausse se recopie avant de continuer, comme dans toute
+ * phrase à trou (`GrammarGap`, voir `CorrectionGap`) : sans quoi les cartes
+ * d'une unité de texte étaient les seules où l'erreur passait sans
+ * réécriture. « J'avais bon » reste possible sans recopier.
  */
 export function PassageCard({
   exercise,
@@ -59,12 +65,14 @@ export function PassageCard({
   const [revealed, setRevealed] = useState(false)
   const [value, setValue] = useState('')
   const [checked, setChecked] = useState<null | boolean>(null)
+  const [gapResolved, setGapResolved] = useState(false)
   const input = useRef<HTMLTextAreaElement>(null)
 
   useEffect(() => {
     setRevealed(false)
     setValue('')
     setChecked(null)
+    setGapResolved(false)
   }, [exercise.id])
 
   // La réponse ne se révèle qu'une fois : changer de mode après coup ne doit
@@ -113,12 +121,13 @@ export function PassageCard({
         return
       }
       if (event.key !== 'Enter' || checked === null) return
+      if (!checked && !gapResolved) return // « Continuer » attend la recopie
       event.preventDefault()
       onAnswer(checked)
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [isDesktop, mode, revealed, checked, onAnswer])
+  }, [isDesktop, mode, revealed, checked, gapResolved, onAnswer])
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3">
@@ -188,23 +197,22 @@ export function PassageCard({
           >
             {checked ? (
               <p className="font-extrabold text-success">Exact.</p>
-            ) : value.trim() ? (
-              <>
-                <p className="text-error">
-                  <span className="font-bold">Votre réponse : </span>
-                  <span className="line-through">{value}</span>
-                </p>
-                <p className="text-ink-soft">La bonne réponse est affichée dans le texte.</p>
-              </>
             ) : (
-              <p className="font-bold text-error">La bonne réponse est affichée dans le texte.</p>
+              <div className="text-error">
+                <CorrectionGap typed={value} expected={point.answer} onResolved={() => setGapResolved(true)} />
+              </div>
             )}
           </motion.div>
         )}
 
         {checked !== null ? (
           <div className="flex flex-col items-center gap-2">
-            <Button block tone={checked ? 'success' : 'error'} onClick={() => onAnswer(checked)}>
+            <Button
+              block
+              tone={checked ? 'success' : 'error'}
+              disabled={!checked && !gapResolved}
+              onClick={() => onAnswer(checked)}
+            >
               Continuer
             </Button>
             {!checked && value.trim() && (
