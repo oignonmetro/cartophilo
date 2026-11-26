@@ -26,8 +26,6 @@ lessons:
     | les effets de la nécessité | 47e-69a | le réceptacle, les éléments, les sensations |
     | l'Intellect et la nécessité ensemble | 69a-92c | le corps et l'âme de l'homme, les maladies, les animaux |
 
-    Ce plan se joue en fin de leçon comme un exercice de repérage (remettre les moments dans l'ordre, replacer leurs repères) ; les leçons de repérage, à la fin de l'unité, le détaillent partie par partie.
-
     Après le prélude, le discours de Timée n'est plus interrompu jusqu'à la fin : c'est un {amber}monologue{/amber}, qui ressemble plus à {green}un exposé faisant autorité{/green} qu'à {pink}une enquête par questions{/pink}.
 
     **Sa fortune.** Traduit en latin par {sky}Calcidius{/sky} au IVe siècle, le *Timée* fut {coral}le seul texte de Platon accessible dans l'Occident latin jusqu'au XIIe siècle{/coral} ; {sky}Kepler{/sky} s'y réfère encore. Longtemps {pink}jugé philosophiquement mineur au XXe siècle{/pink}, il connaît depuis quelques décennies {green}un fort regain d'intérêt{/green}.
@@ -36,9 +34,12 @@ lessons:
   tables:
   - table: moment-repere-contenu
     exercises:
-    - {kind: bank, column: Repère}
+    - {kind: bank, column: Moment}
     - {kind: order, column: Repère}
-    - {kind: cell, column: Moment}
+    - {kind: bank, column: Contenu}
+    - {kind: cell, column: Repère, row: les œuvres de l'Intellect}
+    - {kind: cell, column: Repère, row: les effets de la nécessité}
+    - {kind: cell, column: Repère, row: l'Intellect et la nécessité ensemble}
   points:
   - id: platon-timee-i1-p1
     sentence: "Dans le *Timée*, __l'univers est l'œuvre d'un dieu artisan, le__ ___, qui impose un **ordre mathématique** à un **chaos préexistant**."
