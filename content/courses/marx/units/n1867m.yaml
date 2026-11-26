@@ -1,0 +1,948 @@
+# Unité de texte (voir content/textes.md) : Marx, *Le Capital*, livre I,
+# chapitre XIII « La machinerie et la grande industrie », section 10
+# « Grande industrie et agriculture », §296, d'après la traduction de
+# référence (GEME, Jean-Pierre Lefebvre). Les appels de note et les repères de
+# page sont retirés. Le §295, préliminaire et statistique, est résumé en
+# introduction. Pas de commentaire suivi : analyse propre, recoupée sur le
+# notebook « Marx » et sur l'allemand de la première édition (1867, notes sur
+# Urquhart et sur Liebig) ; contexte (Liebig, Londres, guano, Fraas) d'après un
+# chapitre de Denis Collin sur Marx et la nature ; lettre à Engels du 25 mars
+# 1868 sur Fraas. La citation de la note sur Liebig est celle de la traduction
+# PUF de Lefebvre (les notes de Marx manquent au PDF de la GEME).
+
+id: n1867m
+title: "La rupture du métabolisme (1867)"
+subtitle: "Le Capital, livre I, chapitre XIII, section 10"
+icon: page
+color: coral
+depth: normale
+intro: |-
+  La dernière page du chapitre sur la machinerie et la grande industrie : ce que celle-ci fait à la campagne. Elle y abat le paysan, perturbe le métabolisme entre l'homme et la terre, et ne développe la technique qu'en ruinant la terre et le travailleur.
+lessons:
+- id: n1867m-i1
+  title: "Le texte, sa place et son plan"
+  notes: |-
+    **Le texte demande ce que la** {violet}**grande industrie**{/violet} **fait à la campagne, et répond :** {coral}**elle y révolutionne tout, mais ne développe la technique qu'en ruinant la terre et le travailleur**{/coral}**.**
+
+    **Où est-il dans** {sky}*Le Capital*{/sky} **?** Au livre I (1867), chapitre XIII, « La machinerie et la grande industrie », {amber}dixième et dernière section{/amber}, « Grande industrie et agriculture ». Le chapitre a montré, sur la fabrique, ce que la machine fait au travail et à l'ouvrier ; cette dernière section {amber}transporte l'examen à la campagne{/amber}.
+
+    **Ce qui précède immédiatement.** La section 9, sur la législation de fabrique, conclut que le développement capitaliste fait mûrir à la fois {teal}« les contradictions et les antagonismes de sa forme capitaliste »{/teal} et {teal}« les éléments constitutifs d'une nouvelle société »{/teal}. Le texte sur l'agriculture suit {coral}la même double lecture{/coral} : destruction et préparation.
+
+    **Le paragraphe qui l'ouvre.** Marx annonce qu'il ne traitera la question qu'{amber}« brièvement et par anticipation »{/amber}. La machine n'inflige pas aux travailleurs des champs les mêmes dommages physiques qu'à ceux des fabriques, mais elle les rend plus vite superflus : {yellow}dans les comtés de Cambridge et de Suffolk, la surface cultivée a beaucoup augmenté en vingt ans, tandis que la population rurale diminuait, même en chiffres absolus{/yellow}. Le paragraphe étudié ici est le suivant, le dernier de la section et du chapitre.
+
+    **La progression.** **Les phrases 1 à 5 décrivent la révolution que la grande industrie opère** dans les rapports sociaux et la technique des campagnes. **Les phrases 6 à 8 passent à l'échange avec la terre**, que la concentration urbaine perturbe. **Les phrases 9 à 11 reviennent aux producteurs**, agricoles comme industriels. **Les phrases 12 à 14 réunissent la terre et le travailleur** dans une même spoliation.
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | montrer ce que la grande industrie révolutionne à la campagne | phrases 1-5 | Elle abat le paysan, remplace la routine par la science et achève de séparer agriculture et manufacture, ce qui prépare leur synthèse. |
+    | montrer que le métabolisme entre l'homme et la terre est perturbé | phrases 6-8 | La concentration urbaine empêche le retour au sol de ce qui en a été tiré, ce qui oblige à instituer consciemment ce retour. |
+    | décrire le sort des producteurs sous la forme capitaliste | phrases 9-11 | Comme dans la manufacture, le progrès des moyens de travail se paie d'une oppression et d'un épuisement du travailleur. |
+    | conclure sur la double ruine | phrases 12-14 | Chaque progrès pille à la fois le travailleur et le sol, les deux sources de toute richesse. |
+  passage:
+    label: "Introduction"
+  points:
+  - id: n1867m-i1-1
+    sentence: "__Le passage sur la rupture du métabolisme se trouve dans *Le Capital*, livre I, au chapitre sur la machinerie et la **grande ___**.__"
+    answer: "industrie"
+    alt: []
+  - id: n1867m-i1-2
+    sentence: "Il en est la dixième et dernière section, intitulée « Grande industrie et ___ »."
+    answer: "agriculture"
+    alt: []
+  - id: n1867m-i1-3
+    sentence: "La section 9 conclut que le capitalisme fait mûrir à la fois ses contradictions et __les éléments constitutifs d'une ___.__"
+    answer: "nouvelle société"
+    alt: []
+  - id: n1867m-i1-4
+    sentence: "Au début de la section, Marx annonce qu'il évoquera la révolution de l'agriculture « brièvement et par ___ »."
+    answer: "anticipation"
+    alt: []
+  - id: n1867m-i1-5
+    sentence: "Dans les comtés de Cambridge et de Suffolk, __la surface cultivée augmente__ tandis que __la population ___ diminue__, même en chiffres absolus."
+    answer: "rurale"
+    alt: []
+
+- id: n1867m-i2
+  title: "La question, la thèse, la problématique"
+  notes: |-
+    **La question est :** {amber}**la grande industrie, en gagnant la campagne, est-elle un progrès ?**{/amber}
+
+    **La réponse ordinaire, des deux côtés.** Les uns célèbrent le progrès : des machines, de la chimie, des rendements. Les autres regrettent {pink}la vieille campagne{/pink} et dénoncent la ville. Marx cite en note, à propos de ce passage, un tel critique, {sky}David Urquhart{/sky}, qui s'indigne de voir la nation coupée en deux camps hostiles, rustres d'un côté, nains débilités de l'autre. Il relève {amber}la force et la faiblesse{/amber} de cette critique : elle sait {green}juger et condamner{/green} le présent, {red}non le comprendre{/red}.
+
+    **La thèse.** **C'est à la campagne que la grande industrie est** {violet}**la plus révolutionnaire**{/violet} **: elle y abat le paysan et la routine, mais** {coral}**ne développe la technique qu'en ruinant la terre et le travailleur**{/coral} **; et cette ruine** {green}**oblige à régler consciemment l'échange avec la nature**{/green}**.**
+
+    **Pourquoi la thèse est-elle difficile à tenir ?** Parce qu'elle affirme {amber}à la fois{/amber} un progrès et une destruction, et que le second n'est {red}pas un accident{/red} du premier. La problématique : {coral}**comment un même mouvement peut-il être le plus révolutionnaire, préparer une société supérieure et ruiner les sources de toute richesse ?**{/coral}
+
+    | Difficulté | Où elle se trouve | Réponse du texte |
+    | un progrès qui détruit | phrases 1-5 et 12-14 | La même science qui remplace la routine devient, sous sa forme capitaliste, un art de piller. |
+    | une séparation qui prépare une union | phrases 4-5 | Chaque terme se développe contre l'autre, ce qui rend possible une synthèse plus haute. |
+    | une destruction qui oblige à construire | phrases 6-8 | Quand l'échange avec la terre ne se fait plus de lui-même, il faut l'organiser. |
+    | deux victimes pour un seul créateur de valeur | phrases 12-14 | La richesse a deux sources, la terre et le travailleur, même si seul le travail crée la valeur. |
+
+    ! Le texte n'est {red}ni un éloge du progrès, ni une nostalgie de la campagne{/red} : il cherche {green}ce que la destruction rend possible et nécessaire{/green}.
+  passage:
+    label: "Introduction"
+  points:
+  - id: n1867m-i2-1
+    sentence: "__Le critique de la séparation ville-campagne que Marx cite en note__ est David ___."
+    answer: "Urquhart"
+    alt: []
+  - id: n1867m-i2-2
+    sentence: "La faiblesse de cette critique, selon Marx : elle sait juger et condamner le présent, __mais non le ___.__"
+    answer: "comprendre"
+    alt: []
+  - id: n1867m-i2-3
+    sentence: "__La thèse du passage__ : la grande industrie ne développe la technique qu'en ruinant __la terre et le ___.__"
+    answer: "travailleur"
+    alt: []
+  - id: n1867m-i2-4
+    sentence: "La problématique : comment un même mouvement peut-il être **le plus ___**, préparer une société supérieure et ruiner les sources de toute richesse ?"
+    answer: "révolutionnaire"
+    alt: []
+  - id: n1867m-i2-5
+    sentence: "Le texte n'est ni un éloge du progrès ni __une ___ de la campagne__ : il cherche ce que la destruction rend possible."
+    answer: "nostalgie"
+    alt: []
+
+- id: n1867m-i3
+  title: "Avant le texte : le travail comme métabolisme, et Liebig"
+  notes: |-
+    **Pourquoi remonter au chapitre V ?** Le texte parlera d'un échange « entre l'homme et la terre » comme d'une chose connue. {sky}*Le Capital*{/sky} l'a posée en définissant le travail : {teal}« {/teal}un processus dans lequel {teal}l'homme règle et contrôle son métabolisme avec la nature{/teal} par la médiation de {teal}sa propre action »{/teal}.
+
+    **Pourquoi « régler » ?** Tout vivant échange des matières avec son milieu. L'homme ne se distingue {red}pas en échappant à cet échange{/red}, mais en le {green}conduisant par son travail{/green}, selon un but.
+
+    **Pourquoi cet échange ne dépend-il d'aucune société ?** On ne peut {red}cesser d'échanger avec la nature sans mourir{/red}. Le travail est donc {teal}« {/teal}la condition générale du métabolisme entre l'homme et la nature, {teal}la condition naturelle éternelle de la vie des hommes »{/teal}. {coral}Les sociétés changent la forme de l'échange, non sa nécessité.{/coral}
+
+    **Et la terre ?** Le chapitre I avait déjà dit que le travail {red}n'est pas la source unique{/red} de la richesse matérielle : {teal}« {/teal}Comme le dit {sky}Petty{/sky}, celle-ci {teal}a pour père le travail et pour mère la terre »{/teal}.
+
+    **Ce que Liebig apporte.** {sky}Justus von Liebig{/sky} (1803-1873), chimiste, fondateur de la chimie agricole, établit que les plantes tirent du sol des {violet}éléments minéraux{/violet} (phosphore, potasse) et que la fertilité ne dure que si ces éléments y {green}retournent{/green}. Or l'agriculture moderne {red}expédie les récoltes vers les villes{/red}, qui rejettent leurs déchets {yellow}dans les fleuves : la puanteur de la Tamise, à Londres, était célèbre{/yellow}. Pour compenser, l'Angleterre {yellow}importe du guano et des os du monde entier{/yellow}. Liebig parle d'une {violet}agriculture de spoliation{/violet} (*Raubbau*).
+
+    **Ce que Marx lui doit.** Il lit la septième édition de sa chimie agricole (1862) et la cite en note dans ce paragraphe : {teal}« {/teal}L'un des {teal}immortels mérites de Liebig{/teal} est d'avoir développé {teal}le côté négatif de l'agriculture moderne{/teal}, {teal}du point de vue des sciences naturelles »{/teal}. {amber}« Du point de vue des sciences naturelles »{/amber} marque la limite : Liebig montre l'épuisement des sols ; Marx demande {coral}quel mode de production le produit{/coral}, et y joint le travailleur.
+  passage:
+    label: "Introduction"
+  points:
+  - id: n1867m-i3-1
+    sentence: "*Le Capital*, chapitre V : le travail est un processus dans lequel l'homme __règle et contrôle son ___ avec la nature__."
+    answer: "métabolisme"
+    alt: []
+  - id: n1867m-i3-2
+    sentence: "Chapitre V : l'homme règle son métabolisme avec la nature « par la médiation de sa propre ___ »."
+    answer: "action"
+    alt: []
+  - id: n1867m-i3-3
+    sentence: "Chapitre V : le travail est « la condition naturelle ___ de la vie des hommes »."
+    answer: "éternelle"
+    alt: []
+  - id: n1867m-i3-4
+    sentence: "Les sociétés changent **la forme** de l'échange avec la nature, __non sa ___.__"
+    answer: "nécessité"
+    alt: []
+  - id: n1867m-i3-5
+    sentence: "*Le Capital*, chapitre I : « Comme le dit ___, celle-ci a pour père le travail et pour mère la terre. »"
+    answer: "Petty"
+    alt: []
+  - id: n1867m-i3-6
+    sentence: "La richesse matérielle, selon Petty, __a pour père le travail et pour mère ___.__"
+    answer: "la terre"
+    alt: []
+  - id: n1867m-i3-7
+    sentence: "__Le chimiste qui montre que la fertilité exige le retour au sol de ses éléments minéraux__ est Justus von ___."
+    answer: "Liebig"
+    alt: []
+  - id: n1867m-i3-8
+    sentence: "L'agriculture moderne épuise les sols parce qu'elle __expédie les récoltes vers les ___, qui rejettent leurs déchets dans les fleuves__."
+    answer: "villes"
+    alt: []
+  - id: n1867m-i3-9
+    sentence: "**L'agriculture de spoliation** (*Raubbau*), critiquée par Liebig, __prend au ___ plus qu'elle ne lui rend__."
+    answer: "sol"
+    alt: []
+  - id: n1867m-i3-10
+    sentence: "Note du *Capital* : « L'un des immortels mérites de Liebig est d'avoir développé le côté ___ de l'agriculture moderne […] »"
+    answer: "négatif"
+    alt: []
+  - id: n1867m-i3-11
+    sentence: "Note du *Capital* : Liebig a développé le côté négatif de l'agriculture moderne « du point de vue des ___ »."
+    answer: "sciences naturelles"
+    alt: []
+  - id: n1867m-i3-12
+    sentence: "Liebig montre l'épuisement des sols ; Marx demande __quel **mode de ___** le produit__."
+    answer: "production"
+    alt: []
+
+- id: n1867m-p1
+  title: "La grande industrie abat le paysan"
+  notes: |-
+    **La première phrase pose** {coral}**le lieu où la grande industrie révolutionne le plus**{/coral} **: l'agriculture, parce qu'elle y supprime une figure sociale, le paysan, au profit du salarié.**
+
+    ? **Grande industrie** : la production par un {violet}système de machines{/violet}, où la science appliquée et la coopération remplacent l'habileté de l'ouvrier à manier son outil.
+
+    **Pourquoi « le plus révolutionnaire » à la campagne,** alors que le paragraphe précédent disait que la machine y abîme moins les corps ? Parce que la révolution {red}ne se mesure pas aux dommages{/red}, mais {green}à la transformation des rapports sociaux{/green}. Dans les villes, l'artisan avait déjà largement cédé la place à l'ouvrier ; à la campagne subsistait une forme entière de société, que la machine {amber}atteint d'un seul coup{/amber}.
+
+    **Pourquoi « dans la mesure où » ?** La formule {amber}donne la raison et la mesure{/amber} : ce qui est révolutionnaire n'est pas la machine comme objet, c'est qu'elle {coral}anéantit un bastion{/coral}.
+
+    **Pourquoi le paysan est-il un « bastion de l'ancienne société » ?** L'allemand dit *Bollwerk* [rempart]. Le paysan qui dispose de sa terre et de ses instruments {green}produit avec les siens{/green} et {red}n'est pas contraint de vendre sa force de travail{/red} : il résiste, par sa seule existence, à la généralisation du salariat. Le chapitre sur l'accumulation le dira : ce petit mode de production {pink}exclut la concentration des moyens de production, la coopération et le libre développement des forces productives{/pink}. Vouloir le perpétuer serait, selon le mot de {sky}Pecqueur{/sky} que Marx approuve, {teal}« décréter la médiocrité générale »{/teal}.
+
+    **Pourquoi « paysan » entre guillemets ?** Ils désignent moins des individus qu'une {violet}figure sociale{/violet}, avec la stabilité qu'on lui prête (lecture que les guillemets permettent, sans l'imposer).
+
+    **Par quoi est-il remplacé ?** Par {green}__l'ouvrier salarié__{/green} : celui qui travaille la terre n'en dispose plus et vend à un autre sa capacité de travail. {coral}La campagne reçoit ainsi le rapport capitaliste lui-même.{/coral}
+
+    ! « Révolutionnaire » {red}ne veut pas dire bienfaisant{/red} : le mot dit que {green}tout est transformé de fond en comble{/green}, pour le meilleur et pour le pire.
+  passage:
+    label: "§296"
+    part: "1. La révolution dans les campagnes"
+    text: "C'est dans la sphère de l'agriculture que la grande industrie a l'effet le plus révolutionnaire, dans la mesure où elle anéantit ce bastion de l'ancienne société qu'est le « paysan » et lui substitue l'ouvrier salarié."
+  points:
+  - id: n1867m-p1-1
+    sentence: "« C'est dans la sphère de ___ que la grande industrie a l'effet le plus révolutionnaire, dans la mesure où elle anéantit ce bastion de l'ancienne société qu'est le « paysan » et lui substitue l'ouvrier salarié. »"
+    answer: "l'agriculture"
+    alt: []
+  - id: n1867m-p1-2
+    sentence: "« C'est dans la sphère de l'agriculture que la grande industrie a ___, dans la mesure où elle anéantit ce bastion de l'ancienne société qu'est le « paysan » et lui substitue l'ouvrier salarié. »"
+    answer: "l'effet le plus révolutionnaire"
+    alt: []
+  - id: n1867m-p1-3
+    sentence: "« C'est dans la sphère de l'agriculture que la grande industrie a l'effet le plus révolutionnaire, dans la mesure où elle anéantit ce ___ qu'est le « paysan » et lui substitue l'ouvrier salarié. »"
+    answer: "bastion de l'ancienne société"
+    alt: []
+  - id: n1867m-p1-4
+    sentence: "« C'est dans la sphère de l'agriculture que la grande industrie a l'effet le plus révolutionnaire, dans la mesure où elle anéantit ce bastion de l'ancienne société qu'est ___ et lui substitue ___. »"
+    answer: "le « paysan » ; l'ouvrier salarié"
+    alt: []
+  - id: n1867m-p1-5
+    sentence: "**La grande industrie** est la production par un __système de ___, où la science appliquée remplace l'habileté de l'ouvrier__."
+    answer: "machines"
+    alt: []
+  - id: n1867m-p1-6
+    sentence: "__La révolution agricole__ ne se mesure pas aux dommages physiques, mais à la transformation des **rapports ___**."
+    answer: "sociaux"
+    alt: []
+  - id: n1867m-p1-7
+    sentence: "Le paysan résiste au salariat parce qu'il dispose de ses moyens de production et __n'est pas contraint de vendre sa ___.__"
+    answer: "force de travail"
+    alt: []
+  - id: n1867m-p1-8
+    sentence: "*Le Capital* : vouloir perpétuer le petit mode de production serait, selon Pecqueur, « décréter la ___ »."
+    answer: "médiocrité générale"
+    alt: []
+  - id: n1867m-p1-9
+    sentence: "__L'auteur cité par Marx pour juger le petit mode de production__, qui y voit la « médiocrité générale » décrétée, est ___."
+    answer: "Pecqueur"
+    alt: []
+
+- id: n1867m-p1b
+  title: "La campagne alignée sur la ville, la science contre la routine"
+  notes: |-
+    **Deux conséquences suivent :** {coral}**une conséquence sociale**{/coral} **(la campagne prend les oppositions de la ville) et** {coral}**une conséquence technique**{/coral} **(la science y remplace la routine).**
+
+    **Pourquoi « ainsi » ?** Parce que le salarié a pris la place du paysan. Là où l'on trouve désormais, comme en ville, {violet}des capitalistes et des salariés{/violet}, on trouve {amber}les mêmes oppositions{/amber}, et donc le même besoin de les renverser.
+
+    **Pourquoi « besoins de bouleversement » ?** L'allemand parle d'*Umwälzungsbedürfnisse* [besoins de révolution] : la campagne, longtemps {pink}tenue pour le lieu de l'immobilité{/pink}, {green}a désormais besoin, elle aussi, d'une transformation de la société{/green}. L'opposition entre ville et campagne ne disparaît pas, mais {coral}la campagne cesse d'être un abri hors du conflit{/coral}.
+
+    ? **Mode d'exploitation** : ici, la {violet}manière de cultiver la terre{/violet} (*Betrieb*), et non l'exploitation du travailleur.
+
+    **Pourquoi « le plus routinier et le plus irrationnel » ?** L'allemand dit *gewohnheitsfaul*, [engourdi par l'habitude] : on cultivait {red}comme on avait toujours fait{/red}, sans connaître les raisons de ce qu'on faisait.
+
+    **Pourquoi « consciente » ?** La science appliquée {green}sait pourquoi elle agit{/green}, à la différence de la coutume : {yellow}on ne laisse plus la terre se reposer parce que les pères le faisaient, on analyse le sol et l'on choisit l'engrais{/yellow}. Marx accorde donc à la grande industrie {coral}un progrès réel{/coral}.
+
+    **Pourquoi ce mot compte-t-il pour la suite ?** Le paragraphe réclamera que l'échange avec la terre soit institué {amber}« systématiquement »{/amber}. La science capitaliste est consciente de ses moyens ; elle {red}ne l'est pas encore{/red} de ce qu'elle détruit.
+
+    ! Marx ne regrette {red}pas la vieille agriculture{/red} : il la dit {pink}la plus irrationnelle{/pink}.
+  passage:
+    label: "§296"
+    part: "1. La révolution dans les campagnes"
+    text: "Les besoins de bouleversement et les oppositions au sein de la société rurale sont ainsi alignés sur ceux de la ville. Le mode d'exploitation le plus routinier et le plus irrationnel est remplacé par l'application technologique consciente de la science."
+  points:
+  - id: n1867m-p1b-1
+    sentence: "« Les ___ au sein de la société rurale sont ainsi alignés sur ceux de la ville. Le mode d'exploitation le plus routinier et le plus irrationnel est remplacé par l'application technologique consciente de la science. »"
+    answer: "besoins de bouleversement et les oppositions"
+    alt: []
+  - id: n1867m-p1b-2
+    sentence: "« Les besoins de bouleversement et les oppositions au sein de la société rurale sont ainsi ___. Le mode d'exploitation le plus routinier et le plus irrationnel est remplacé par l'application technologique consciente de la science. »"
+    answer: "alignés sur ceux de la ville"
+    alt: []
+  - id: n1867m-p1b-3
+    sentence: "« Les besoins de bouleversement et les oppositions au sein de la société rurale sont ainsi alignés sur ceux de la ville. Le mode d'exploitation ___ est remplacé par l'application technologique consciente de la science. »"
+    answer: "le plus routinier et le plus irrationnel"
+    alt: []
+  - id: n1867m-p1b-4
+    sentence: "« Les besoins de bouleversement et les oppositions au sein de la société rurale sont ainsi alignés sur ceux de la ville. Le mode d'exploitation le plus routinier et le plus irrationnel est remplacé par ___. »"
+    answer: "l'application technologique consciente de la science"
+    alt: []
+  - id: n1867m-p1b-5
+    sentence: "__La campagne prend les oppositions de la ville__ parce que l'**ouvrier ___** y a pris la place du paysan."
+    answer: "salarié"
+    alt: []
+  - id: n1867m-p1b-6
+    sentence: "Dans « le mode d'exploitation le plus routinier », **exploitation** désigne la manière de __cultiver la ___, non l'exploitation du travailleur__."
+    answer: "terre"
+    alt: []
+  - id: n1867m-p1b-7
+    sentence: "Contre la coutume, **l'application ___ de la science** __sait pourquoi elle agit__."
+    answer: "consciente"
+    alt: []
+
+- id: n1867m-p1c
+  title: "La rupture de l'agriculture et de la manufacture, condition d'une synthèse"
+  notes: |-
+    **Le mouvement s'achève sur** {coral}**une dialectique**{/coral} **: le capitalisme achève de séparer l'agriculture de la manufacture, et cette séparation crée les conditions de leur union à un niveau supérieur.**
+
+    ? **Manufacture** : ici, le travail de transformation, d'abord artisanal et domestique ({yellow}filer, tisser{/yellow}), qui s'ajoutait au travail des champs.
+
+    **Pourquoi « lien de parenté » ?** L'allemand parle d'un *Familienband* [lien de famille] : dans la famille paysanne, {violet}les mêmes personnes cultivaient et fabriquaient{/violet}. **Pourquoi « au stade infantile » ?** Cette unité tenait à {red}la faiblesse des deux activités{/red}, trop peu développées pour exiger chacune ses hommes et ses savoirs.
+
+    **Pourquoi « consomme » ?** Le verbe veut dire {amber}achever{/amber} (*vollenden*). La séparation est ancienne : {teal}« {/teal}le fondement de toute division du travail évoluée {teal}[…] est la séparation entre la ville et la campagne{/teal}{teal} »{/teal} (chapitre XII). La grande industrie l'achève en {teal}« extirpant ses racines, le filage et le tissage »{/teal} (chapitre XXIV).
+
+    **Pourquoi « mais » et « en même temps » ?** Parce que la rupture {red}n'est pas seulement une perte{/red} : elle est {green}la condition d'un progrès{/green}. Séparées, chaque activité a pu développer ses machines, ses sciences et sa coopération. Une synthèse n'unit que des termes développés ; réunir deux activités enfantines {pink}ne donnerait que l'ancienne médiocrité{/pink}.
+
+    **Pourquoi des « présupposés matériels » ?** La synthèse {red}n'est pas réalisée{/red} : le capitalisme en fournit seulement {amber}les conditions{/amber}, les forces dont une autre société pourra disposer.
+
+    **Pourquoi « sur la base des configurations propres qu'elles se sont élaborées en opposition l'une à l'autre » ?** L'union future ne rétablira pas la famille paysanne : elle partira {coral}des formes que chacune a prises contre l'autre{/coral}, la grande industrie mécanisée et la grande culture scientifique. Le {sky}*Manifeste*{/sky} en faisait déjà un programme : {teal}« Coordination de l'activité agricole et industrielle ; mesures tendant à supprimer progressivement l'opposition ville-campagne. »{/teal}
+
+    | Moment | Agriculture et manufacture |
+    | l'union ancienne | liées dans la famille paysanne, l'une et l'autre peu développées |
+    | la rupture | séparées et opposées, chacune développant ses propres formes |
+    | la synthèse à venir | associées à un niveau supérieur, sur la base de ces formes |
+
+    ! La synthèse n'est {red}pas un retour à la terre{/red} : elle est {green}plus haute{/green} que les deux états qui la précèdent.
+  passage:
+    label: "§296"
+    part: "1. La révolution dans les campagnes"
+    text: "Le mode de production capitaliste consomme la rupture du lien de parenté qui unissait initialement l'agriculture et la manufacture au stade infantile et non développé de l'une et de l'autre. Mais cette rupture crée en même temps les présupposés matériels d'une nouvelle synthèse à un niveau supérieur, de l'association de l'agriculture et de l'industrie sur la base des configurations propres qu'elles se sont élaborées en opposition l'une à l'autre."
+  points:
+  - id: n1867m-p1c-1
+    fragment: "1/2"
+    sentence: "« Le mode de production capitaliste ___ qui unissait initialement l'agriculture et la manufacture au stade infantile et non développé de l'une et de l'autre. »"
+    answer: "consomme la rupture du lien de parenté"
+    alt: []
+  - id: n1867m-p1c-2
+    fragment: "1/2"
+    sentence: "« Le mode de production capitaliste consomme la rupture du lien de parenté qui unissait initialement ___ au stade infantile et non développé de l'une et de l'autre. »"
+    answer: "l'agriculture et la manufacture"
+    alt: []
+  - id: n1867m-p1c-3
+    fragment: "1/2"
+    sentence: "« Le mode de production capitaliste consomme la rupture du lien de parenté qui unissait initialement l'agriculture et la manufacture au ___ de l'une et de l'autre. »"
+    answer: "stade infantile et non développé"
+    alt: []
+  - id: n1867m-p1c-4
+    fragment: "2/2"
+    sentence: "« Mais cette rupture crée en même temps les ___ d'une nouvelle synthèse à un niveau supérieur, de l'association de l'agriculture et de l'industrie sur la base des configurations propres qu'elles se sont élaborées en opposition l'une à l'autre. »"
+    answer: "présupposés matériels"
+    alt: []
+  - id: n1867m-p1c-5
+    fragment: "2/2"
+    sentence: "« Mais cette rupture crée en même temps les présupposés matériels d'une ___, de l'association de l'agriculture et de l'industrie sur la base des configurations propres qu'elles se sont élaborées en opposition l'une à l'autre. »"
+    answer: "nouvelle synthèse à un niveau supérieur"
+    alt: []
+  - id: n1867m-p1c-6
+    fragment: "2/2"
+    sentence: "« Mais cette rupture crée en même temps les présupposés matériels d'une nouvelle synthèse à un niveau supérieur, de l'___ sur la base des configurations propres qu'elles se sont élaborées en opposition l'une à l'autre. »"
+    answer: "association de l'agriculture et de l'industrie"
+    alt: []
+  - id: n1867m-p1c-7
+    fragment: "2/2"
+    sentence: "« Mais cette rupture crée en même temps les présupposés matériels d'une nouvelle synthèse à un niveau supérieur, de l'association de l'agriculture et de l'industrie sur la base des ___ qu'elles se sont élaborées ___. »"
+    answer: "configurations propres ; en opposition l'une à l'autre"
+    alt: []
+  - id: n1867m-p1c-8
+    sentence: "__L'union ancienne de l'agriculture et de la manufacture__ était celle de la **famille ___**, où les mêmes personnes cultivaient et fabriquaient."
+    answer: "paysanne"
+    alt: []
+  - id: n1867m-p1c-9
+    sentence: "*Le Capital*, chapitre XII : le fondement de toute division du travail évoluée « est la séparation entre ___ »."
+    answer: "la ville et la campagne"
+    alt: []
+  - id: n1867m-p1c-10
+    sentence: "La grande industrie achève la séparation de l'agriculture et de l'industrie domestique rurale en extirpant ses racines, __le filage et le ___.__"
+    answer: "tissage"
+    alt: []
+  - id: n1867m-p1c-11
+    sentence: "__La rupture est la condition de la synthèse__ parce qu'une synthèse n'unit que des termes **___**."
+    answer: "développés"
+    alt: []
+  - id: n1867m-p1c-12
+    sentence: "*Manifeste* : « mesures tendant à supprimer progressivement l'opposition ___ »."
+    answer: "ville-campagne"
+    alt: []
+
+- id: n1867m-p2
+  title: "La concentration urbaine perturbe le métabolisme"
+  notes: |-
+    **Le texte passe des rapports entre les hommes à leur échange avec la terre :** {coral}**la même concentration urbaine rassemble la force qui fait l'histoire et interrompt le retour au sol de ce qui en a été tiré.**{/coral}
+
+    **Pourquoi partir de la population des villes ?** Parce que le sort du sol dépend de {amber}l'endroit où vivent ceux qui en consomment les produits{/amber}. Le capital {violet}entasse{/violet} les hommes dans de grands centres : il les y attire et les chasse des campagnes.
+
+    **Pourquoi « d'un côté », « d'un autre côté » ?** Une seule cause, deux effets de signe contraire.
+
+    **Que veut dire « la force motrice historique de la société » ?** {green}Les travailleurs rassemblés{/green} : réunis, ils coopèrent, s'organisent, résistent, et portent la transformation de la société. La grande ville est {coral}un lieu d'avenir{/coral}, et non seulement de misère.
+
+    ? **Métabolisme** (*Stoffwechsel*, littéralement « échange de matières ») : l'ensemble des échanges de matières par lesquels les hommes {violet}tirent de la terre de quoi vivre et lui rendent ce qu'ils ne gardent pas{/violet}.
+
+    **Pourquoi « c'est-à-dire le retour au sol » ?** Marx donne à la notion {amber}un contenu précis{/amber} : {yellow}le blé et la laine partent pour Londres ; les éléments qu'ils ont pris au sol, mangés ou usés, finissent dans la Tamise au lieu de retourner au champ{/yellow}. La nourriture {amber}et les vêtements{/amber} : tout ce que les hommes consomment du sol.
+
+    **Pourquoi « perturbe » ?** L'allemand dit *stört* [dérange] : un cycle est rompu en un point, le retour. Le prélèvement continue ; {red}la restitution cesse{/red}.
+
+    **Pourquoi « l'éternelle condition naturelle d'une fertilité durable » ?** « Éternelle » : elle vaut {green}pour toute société{/green}, comme le travail du chapitre V ; aucune forme sociale n'en dispense. « Durable » : un sol {amber}peut encore donner beaucoup pendant qu'il s'épuise{/amber} ; ce qui est atteint, c'est sa capacité de continuer.
+
+    ! Le métabolisme {red}n'est pas l'équilibre d'une nature sans hommes{/red} : c'est {green}un échange avec les hommes, que le travail règle{/green}.
+  passage:
+    label: "§296"
+    part: "2. Le métabolisme perturbé, et obligé de se refaire"
+    text: "Avec la prépondérance toujours croissante de la population urbaine qu'elle entasse dans de grands centres, la production capitaliste amasse d'un côté la force motrice historique de la société et perturbe d'un autre côté le métabolisme entre l'homme et la terre, c'est-à-dire le retour au sol des composantes de celui-ci usées par l'homme sous forme de nourriture et de vêtements, donc l'éternelle condition naturelle d'une fertilité durable du sol."
+  points:
+  - id: n1867m-p2-1
+    sentence: "« Avec la prépondérance toujours croissante de la ___ qu'elle entasse dans de grands centres, la production capitaliste amasse d'un côté la force motrice historique de la société et perturbe d'un autre côté le métabolisme entre l'homme et la terre, c'est-à-dire le retour au sol des composantes de celui-ci usées par l'homme sous forme de nourriture et de vêtements, donc l'éternelle condition naturelle d'une fertilité durable du sol. »"
+    answer: "population urbaine"
+    alt: []
+  - id: n1867m-p2-2
+    sentence: "« Avec la prépondérance toujours croissante de la population urbaine qu'elle ___, la production capitaliste amasse d'un côté la force motrice historique de la société et perturbe d'un autre côté le métabolisme entre l'homme et la terre, c'est-à-dire le retour au sol des composantes de celui-ci usées par l'homme sous forme de nourriture et de vêtements, donc l'éternelle condition naturelle d'une fertilité durable du sol. »"
+    answer: "entasse dans de grands centres"
+    alt: []
+  - id: n1867m-p2-3
+    sentence: "« Avec la prépondérance toujours croissante de la population urbaine qu'elle entasse dans de grands centres, la production capitaliste amasse d'un côté la ___ et perturbe d'un autre côté le métabolisme entre l'homme et la terre, c'est-à-dire le retour au sol des composantes de celui-ci usées par l'homme sous forme de nourriture et de vêtements, donc l'éternelle condition naturelle d'une fertilité durable du sol. »"
+    answer: "force motrice historique de la société"
+    alt: []
+  - id: n1867m-p2-4
+    sentence: "« Avec la prépondérance toujours croissante de la population urbaine qu'elle entasse dans de grands centres, la production capitaliste amasse d'un côté la force motrice historique de la société et perturbe d'un autre côté ___, c'est-à-dire le retour au sol des composantes de celui-ci usées par l'homme sous forme de nourriture et de vêtements, donc l'éternelle condition naturelle d'une fertilité durable du sol. »"
+    answer: "le métabolisme entre l'homme et la terre"
+    alt: []
+  - id: n1867m-p2-5
+    sentence: "« Avec la prépondérance toujours croissante de la population urbaine qu'elle entasse dans de grands centres, la production capitaliste amasse d'un côté la force motrice historique de la société et perturbe d'un autre côté le métabolisme entre l'homme et la terre, c'est-à-dire le ___ des composantes de celui-ci usées par l'homme sous forme de ___, donc l'éternelle condition naturelle d'une fertilité durable du sol. »"
+    answer: "retour au sol ; nourriture et de vêtements"
+    alt: []
+  - id: n1867m-p2-6
+    sentence: "« Avec la prépondérance toujours croissante de la population urbaine qu'elle entasse dans de grands centres, la production capitaliste amasse d'un côté la force motrice historique de la société et perturbe d'un autre côté le métabolisme entre l'homme et la terre, c'est-à-dire le retour au sol des composantes de celui-ci usées par l'homme sous forme de nourriture et de vêtements, donc ___. »"
+    answer: "l'éternelle condition naturelle d'une fertilité durable du sol"
+    alt: []
+  - id: n1867m-p2-7
+    sentence: "__La force motrice historique que la ville amasse__, ce sont les **___** rassemblés, qui coopèrent, s'organisent et résistent."
+    answer: "travailleurs"
+    alt: ["ouvriers"]
+  - id: n1867m-p2-8
+    sentence: "**Métabolisme** traduit l'allemand `Stoffwechsel`, __littéralement « échange de ___ »__."
+    answer: "matières"
+    alt: []
+  - id: n1867m-p2-9
+    sentence: "Le métabolisme est perturbé parce que le prélèvement sur le sol continue mais que __la ___ au sol cesse__."
+    answer: "restitution"
+    alt: []
+  - id: n1867m-p2-10
+    sentence: "La condition de la fertilité est dite **___** parce qu'elle __vaut pour toute société__."
+    answer: "éternelle"
+    alt: []
+  - id: n1867m-p2-11
+    sentence: "Un sol peut encore donner beaucoup pendant qu'il s'épuise : ce qui est atteint est sa fertilité **___**."
+    answer: "durable"
+    alt: []
+
+- id: n1867m-p2b
+  title: "La santé des uns, la vie intellectuelle des autres"
+  notes: |-
+    **La phrase tire** {coral}**la conséquence humaine**{/coral} **de la perturbation : elle atteint la santé physique en ville et la vie intellectuelle à la campagne.**
+
+    **Pourquoi « par là même » ?** Parce que c'est {amber}la même concentration{/amber} qui agit. En ville, les hommes et leurs déchets s'accumulent : ce qui {red}manque au champ empoisonne la cité{/red}. À la campagne, les travailleurs restent {pink}clairsemés et isolés{/pink}, loin de ce que la ville rassemble. {coral}Une seule séparation fait un trop-plein d'un côté, un vide de l'autre.{/coral}
+
+    **Pourquoi « détruit », après « perturbe » ?** Le verbe est {amber}plus fort{/amber} : un cycle dérangé peut être rétabli ; une santé ruinée, une intelligence laissée sans exercice {red}ne se réparent pas aussi aisément{/red}.
+
+    **Pourquoi deux biens différents ?** La phrase nomme {violet}le corps{/violet} d'un côté, {violet}l'esprit{/violet} de l'autre : chacune des deux populations est mutilée {amber}d'une moitié d'elle-même{/amber}. Ce que le premier manuscrit de 1844 appelait la vie physique et spirituelle liée à la nature est atteint {coral}dans ses deux dimensions{/coral}.
+
+    **Le Manifeste disait-il le contraire ?** Il créditait les grandes cités d'avoir arraché {teal}« une partie importante de la population à l'abrutissement de la vie des champs »{/teal}. Les deux textes se concilient (c'est une lecture) : {green}ceux qui partent sont arrachés à cet isolement{/green}, {pink}ceux qui restent{/pink} sont privés de la vie de l'esprit dans une campagne vidée.
+
+    **Ce que Marx ajoute en note.** Il cite ici {sky}Urquhart{/sky} : la séparation de la ville et de la campagne coupe un peuple {red}en deux moitiés mutilées{/red}.
+
+    ! La destruction ne frappe {red}pas les seuls ouvriers d'usine{/red} : les travailleurs des champs perdent eux aussi, {green}autre chose{/green}.
+  passage:
+    label: "§296"
+    part: "2. Le métabolisme perturbé, et obligé de se refaire"
+    text: "Elle détruit par là même à la fois la santé physique des travailleurs des villes et la vie intellectuelle des travailleurs agricoles."
+  points:
+  - id: n1867m-p2b-1
+    sentence: "« Elle ___ à la fois la santé physique des travailleurs des villes et la vie intellectuelle des travailleurs agricoles. »"
+    answer: "détruit par là même"
+    alt: []
+  - id: n1867m-p2b-2
+    sentence: "« Elle détruit par là même à la fois la ___ des travailleurs des villes et la vie intellectuelle des travailleurs agricoles. »"
+    answer: "santé physique"
+    alt: []
+  - id: n1867m-p2b-3
+    sentence: "« Elle détruit par là même à la fois la santé physique des travailleurs des villes et la ___. »"
+    answer: "vie intellectuelle des travailleurs agricoles"
+    alt: []
+  - id: n1867m-p2b-4
+    sentence: "__La santé et la vie intellectuelle sont détruites « par là même »__ parce que la même **___** urbaine accumule hommes et déchets d'un côté et vide la campagne de l'autre."
+    answer: "concentration"
+    alt: []
+  - id: n1867m-p2b-5
+    sentence: "*Manifeste* : la bourgeoisie a arraché une partie importante de la population à « ___ de la vie des champs »."
+    answer: "l'abrutissement"
+    alt: []
+
+- id: n1867m-p2c
+  title: "Détruire le métabolisme spontané oblige à l'instituer"
+  notes: |-
+    **La phrase retourne le réquisitoire :** {coral}**en détruisant les circonstances qui assuraient d'elles-mêmes le métabolisme, la production capitaliste oblige à l'instituer consciemment, sous une forme plus haute.**{/coral}
+
+    **Pourquoi « mais » et « en même temps » ?** C'est {amber}le même tour que pour l'agriculture et la manufacture{/amber} : la rupture qui détruit prépare ce qui la dépasse.
+
+    ? **D'origine simplement naturelle** (*naturwüchsig*) : ce qui a {violet}poussé de soi-même, sans que personne l'ait décidé ni pensé{/violet}.
+
+    **Qu'est-ce qui est détruit ?** {red}Non pas le métabolisme{/red}, condition éternelle qu'on ne supprime pas sans mourir, mais {green}les facteurs qui l'assuraient sans qu'on y pense{/green} : {yellow}quand ceux qui consomment vivent sur la terre qui les nourrit, le fumier et les restes retournent au champ d'eux-mêmes{/yellow}. Le chimiste n'est nécessaire que lorsque ce retour ne va plus de soi.
+
+    **Pourquoi la destruction « oblige »-t-elle ?** Une fois le retour spontané supprimé, il ne reste que deux issues : {green}l'organiser{/green}, ou {red}laisser dépérir le sol et les hommes{/red}. La contrainte n'est {pink}pas un vœu moral{/pink} : elle vient de la condition naturelle elle-même.
+
+    **Pourquoi « systématiquement » et « loi régulatrice » ?** Il ne suffit pas de réparer ici ou là : l'échange avec la terre doit {coral}commander ce qu'on produit et comment{/coral}, à la place que tient aujourd'hui {red}le profit{/red}. L'allemand dit *herstellen* [établir, et aussi rétablir].
+
+    **Pourquoi « adéquate au plein développement de l'homme » ?** La nouvelle forme {red}ne restaure pas l'ancienne{/red} : elle doit servir {green}la santé, la liberté, les facultés{/green} que la phrase précédente montrait détruites.
+
+    **Le capitalisme peut-il le faire ?** La phrase dit seulement qu'il {amber}oblige{/amber}. Qu'il ne puisse l'accomplir lui-même suit du reste du paragraphe, où chaque progrès ruine les sources ; le {sky}livre III{/sky} confiera cette tâche aux {violet}producteurs associés{/violet}.
+
+    ! Sans cette phrase, on lit {red}une simple plainte écologique{/red} ; avec elle, {green}la destruction devient le point de départ d'une régulation{/green}.
+  passage:
+    label: "§296"
+    part: "2. Le métabolisme perturbé, et obligé de se refaire"
+    text: "Mais en détruisant les facteurs d'origine simplement naturelle de ce métabolisme, elle oblige en même temps à instituer systématiquement celui-ci en loi régulatrice de la production sociale, sous une forme adéquate au plein développement de l'homme."
+  points:
+  - id: n1867m-p2c-1
+    sentence: "« Mais en détruisant les ___ de ce métabolisme, elle oblige en même temps à instituer systématiquement celui-ci en loi régulatrice de la production sociale, sous une forme adéquate au plein développement de l'homme. »"
+    answer: "facteurs d'origine simplement naturelle"
+    alt: []
+  - id: n1867m-p2c-2
+    sentence: "« Mais en détruisant les facteurs d'origine simplement naturelle de ce métabolisme, elle ___ instituer systématiquement celui-ci en loi régulatrice de la production sociale, sous une forme adéquate au plein développement de l'homme. »"
+    answer: "oblige en même temps à"
+    alt: []
+  - id: n1867m-p2c-3
+    sentence: "« Mais en détruisant les facteurs d'origine simplement naturelle de ce métabolisme, elle oblige en même temps à ___ celui-ci en loi régulatrice de la production sociale, sous une forme adéquate au plein développement de l'homme. »"
+    answer: "instituer systématiquement"
+    alt: []
+  - id: n1867m-p2c-4
+    sentence: "« Mais en détruisant les facteurs d'origine simplement naturelle de ce métabolisme, elle oblige en même temps à instituer systématiquement celui-ci en ___ de la production sociale, sous une forme adéquate au plein développement de l'homme. »"
+    answer: "loi régulatrice"
+    alt: []
+  - id: n1867m-p2c-5
+    sentence: "« Mais en détruisant les facteurs d'origine simplement naturelle de ce métabolisme, elle oblige en même temps à instituer systématiquement celui-ci en loi régulatrice de la production sociale, sous une forme adéquate au ___. »"
+    answer: "plein développement de l'homme"
+    alt: []
+  - id: n1867m-p2c-6
+    sentence: "__Ce qui s'est formé de soi-même, sans que personne l'ait décidé__, Marx l'appelle en allemand `___`."
+    answer: "naturwüchsig"
+    alt: []
+  - id: n1867m-p2c-7
+    sentence: "La production capitaliste détruit **non pas le ___**, condition éternelle, mais __les facteurs qui l'assuraient d'eux-mêmes__."
+    answer: "métabolisme"
+    alt: []
+  - id: n1867m-p2c-8
+    sentence: "Le métabolisme institué en loi régulatrice doit commander la production, __à la place que tient aujourd'hui le ___.__"
+    answer: "profit"
+    alt: []
+  - id: n1867m-p2c-9
+    sentence: "La tâche d'instituer cette régulation, que le capital impose sans l'accomplir, revient au livre III aux **___**."
+    answer: "producteurs associés"
+    alt: []
+
+- id: n1867m-p3
+  title: "Le martyrologe des producteurs"
+  notes: |-
+    **Le texte revient du sol aux hommes qui produisent :** {coral}**la transformation capitaliste, à la campagne comme à l'usine, retourne contre eux le processus, les moyens et la coopération.**{/coral}
+
+    **Pourquoi « dans l'agriculture comme dans la manufacture » ?** Le chapitre l'a montré pour l'industrie ; Marx étend le verdict : {amber}la campagne n'échappe pas{/amber} à ce que la fabrique fait à l'ouvrier.
+
+    **Pourquoi préciser « la mutation capitaliste » ?** Marx n'accuse {red}pas la technique comme telle{/red}, mais {green}la forme sous laquelle elle se transforme{/green}.
+
+    ? **Martyrologe** : à l'origine la {violet}liste des martyrs{/violet} ; ici, l'histoire des souffrances des producteurs. La traduction écrit « martyrologue ».
+
+    **Pourquoi « apparaît en même temps comme » ?** « En même temps » : la même transformation qui accroît les forces productives {amber}est aussi{/amber} cette souffrance ; ce ne sont pas deux histoires. « Apparaît » ne désigne {red}pas une illusion{/red} : c'est {green}la figure réelle{/green} qu'elle prend pour eux.
+
+    **Pourquoi trois membres ?** Marx reprend {amber}tout ce qui compose la production{/amber} et montre chaque terme retourné contre le travailleur.
+
+    | Ce qui devrait servir | Comment il apparaît |
+    | la transformation du processus de production | comme le martyrologe des producteurs |
+    | le moyen de travail | comme le moyen d'assujettir, d'exploiter et d'appauvrir le travailleur |
+    | la combinaison sociale du processus de travail | comme la répression organisée de sa vitalité, de sa liberté et de son autonomie |
+
+    **Le moyen de travail.** La machine prolonge la main ; sous le capital, {red}elle commande l'ouvrier et le rend superflu{/red}. Le premier manuscrit de 1844 voyait le produit se dresser contre le producteur ; {coral}c'est maintenant l'instrument{/coral}.
+
+    ? **Combinaison sociale du travail** : la {violet}coopération organisée{/violet} de nombreux travailleurs, qui multiplie leurs forces.
+
+    **Pourquoi « répression organisée » ?** Ce qui multiplie les forces de tous {red}étouffe celles de chacun{/red}, et méthodiquement. Vitalité, liberté, autonomie : l'allemand de 1867 parle de la *Lebendigkeit* [la vitalité, le caractère vivant] de l'individu. {coral}Ce qui est atteint, c'est le travailleur comme vivant.{/coral}
+
+    ! Marx ne demande {red}pas de renoncer aux machines ni à la coopération{/red} : il montre {green}sous quelle forme elles se retournent{/green} contre ceux qui produisent.
+  passage:
+    label: "§296"
+    part: "3. Le martyrologe des producteurs"
+    text: "Dans l'agriculture comme dans la manufacture, la mutation capitaliste du processus de production apparaît en même temps comme le martyrologue des producteurs, le moyen de travail apparaît comme le moyen d'assujettir, d'exploiter et d'appauvrir le travailleur, la combinaison sociale du processus de travail comme répression organisée de sa vitalité, de sa liberté, et de son autonomie d'individu."
+  points:
+  - id: n1867m-p3-1
+    sentence: "« Dans l'agriculture comme dans la manufacture, la ___ du processus de production apparaît en même temps comme le martyrologue des producteurs, le moyen de travail apparaît comme le moyen d'assujettir, d'exploiter et d'appauvrir le travailleur, la combinaison sociale du processus de travail comme répression organisée de sa vitalité, de sa liberté, et de son autonomie d'individu. »"
+    answer: "mutation capitaliste"
+    alt: []
+  - id: n1867m-p3-2
+    sentence: "« Dans l'agriculture comme dans la manufacture, la mutation capitaliste du processus de production apparaît en même temps comme ___, le moyen de travail apparaît comme le moyen d'assujettir, d'exploiter et d'appauvrir le travailleur, la combinaison sociale du processus de travail comme répression organisée de sa vitalité, de sa liberté, et de son autonomie d'individu. »"
+    answer: "le martyrologue des producteurs"
+    alt: ["le martyrologe des producteurs"]
+  - id: n1867m-p3-3
+    sentence: "« Dans l'agriculture comme dans la manufacture, la mutation capitaliste du processus de production apparaît en même temps comme le martyrologue des producteurs, le moyen de travail apparaît comme le moyen ___ le travailleur, la combinaison sociale du processus de travail comme répression organisée de sa vitalité, de sa liberté, et de son autonomie d'individu. »"
+    answer: "d'assujettir, d'exploiter et d'appauvrir"
+    alt: []
+  - id: n1867m-p3-4
+    sentence: "« Dans l'agriculture comme dans la manufacture, la mutation capitaliste du processus de production apparaît en même temps comme le martyrologue des producteurs, le moyen de travail apparaît comme le moyen d'assujettir, d'exploiter et d'appauvrir le travailleur, la ___ comme répression organisée de sa vitalité, de sa liberté, et de son autonomie d'individu. »"
+    answer: "combinaison sociale du processus de travail"
+    alt: []
+  - id: n1867m-p3-5
+    sentence: "« Dans l'agriculture comme dans la manufacture, la mutation capitaliste du processus de production apparaît en même temps comme le martyrologue des producteurs, le moyen de travail apparaît comme le moyen d'assujettir, d'exploiter et d'appauvrir le travailleur, la combinaison sociale du processus de travail comme ___ de sa vitalité, de sa liberté, et de son autonomie d'individu. »"
+    answer: "répression organisée"
+    alt: []
+  - id: n1867m-p3-6
+    sentence: "« Dans l'agriculture comme dans la manufacture, la mutation capitaliste du processus de production apparaît en même temps comme le martyrologue des producteurs, le moyen de travail apparaît comme le moyen d'assujettir, d'exploiter et d'appauvrir le travailleur, la combinaison sociale du processus de travail comme répression organisée de ___. »"
+    answer: "sa vitalité, de sa liberté, et de son autonomie d'individu"
+    alt: []
+  - id: n1867m-p3-7
+    sentence: "Un **martyrologe** est à l'origine __la liste des ___.__"
+    answer: "martyrs"
+    alt: []
+  - id: n1867m-p3-8
+    sentence: "Marx n'accuse pas la technique comme telle, mais la forme **___** sous laquelle elle se transforme."
+    answer: "capitaliste"
+    alt: []
+  - id: n1867m-p3-9
+    sentence: "__La coopération organisée de nombreux travailleurs__, Marx l'appelle la **___** du travail."
+    answer: "combinaison sociale"
+    alt: []
+
+- id: n1867m-p3b
+  title: "La résistance brisée, la force de travail dévastée"
+  notes: |-
+    **Marx compare ensuite les deux populations :** {coral}**à la campagne la dispersion affaiblit la résistance, et le progrès s'y paie, comme en ville, de la ruine de la force de travail.**{/coral}
+
+    **Pourquoi la résistance diffère-t-elle ?** Parce qu'elle suppose {amber}d'être ensemble{/amber}. {yellow}Mille ouvriers d'une même usine peuvent s'entendre et cesser le travail ; quelques journaliers épars sur de grands domaines le peuvent à peine.{/yellow} Voilà pourquoi la ville amassait {violet}la force motrice historique{/violet}.
+
+    **Pourquoi « comme dans l'industrie urbaine » ?** La différence de résistance {red}ne change pas le mécanisme{/red} : des deux côtés, {green}le progrès a le même prix{/green}.
+
+    ? **Fluidité du travail** (*Flüssigmachung*) : un travail {violet}mis en mouvement plus vite, en plus grande quantité, et déplaçable{/violet} d'une tâche à l'autre.
+
+    ? **Force de travail** : {teal}« {/teal}le résumé de {teal}toutes les aptitudes physiques et intellectuelles{/teal} qui existent dans la corporéité, {teal}la personnalité vivante d'un être humain »{/teal} (chapitre IV), que le salarié vend pour un temps.
+
+    **Pourquoi « payés au prix » ?** Le gain {red}n'est pas gratuit{/red} : ce qu'on obtient en rendement est {amber}prélevé sur celui qui le produit{/amber}. Le délabrement n'atteint pas un accessoire mais {coral}la force de travail elle-même{/coral}, la source qu'on exploite.
+
+    **Pourquoi les mots allemands comptent-ils ?** Marx écrit *Verwüstung und Versiechung* [dévastation, changement en désert, et dépérissement]. {coral}La force de travail est décrite avec les mots d'une terre ravagée{/coral} : la phrase suivante pourra réunir le travailleur et le sol.
+
+    | | Industrie urbaine | Agriculture moderne |
+    | les travailleurs | concentrés | dispersés |
+    | leur résistance | accrue | brisée |
+    | le prix du progrès | délabrement et maladies | délabrement et maladies |
+
+    ! La concentration {red}ne protège pas la santé{/red} des ouvriers des villes : elle {green}accroît leur force de résistance{/green}, ce qui est autre chose.
+  passage:
+    label: "§296"
+    part: "3. Le martyrologe des producteurs"
+    text: "La dispersion des travailleurs agricoles sur de plus grandes surfaces brise en même temps leur force de résistance, tandis que la concentration accroît celle des travailleurs des villes. Comme dans l'industrie urbaine, l'augmentation de la force productive et le plus grand degré de fluidité du travail sont payés dans l'agriculture moderne au prix du délabrement et des maladies qui minent la force de travail elle-même."
+  points:
+  - id: n1867m-p3b-1
+    fragment: "1/2"
+    sentence: "« La ___ des travailleurs agricoles sur de plus grandes surfaces brise en même temps leur force de résistance, tandis que la ___ accroît celle des travailleurs des villes. »"
+    answer: "dispersion ; concentration"
+    alt: []
+  - id: n1867m-p3b-2
+    fragment: "1/2"
+    sentence: "« La dispersion des travailleurs agricoles sur de plus grandes surfaces brise en même temps leur ___, tandis que la concentration accroît celle des travailleurs des villes. »"
+    answer: "force de résistance"
+    alt: []
+  - id: n1867m-p3b-3
+    fragment: "2/2"
+    sentence: "« Comme dans l'industrie urbaine, l'___ et le plus grand degré de fluidité du travail sont payés dans l'agriculture moderne au prix du délabrement et des maladies qui minent la force de travail elle-même. »"
+    answer: "augmentation de la force productive"
+    alt: []
+  - id: n1867m-p3b-4
+    fragment: "2/2"
+    sentence: "« Comme dans l'industrie urbaine, l'augmentation de la force productive et le plus grand degré de ___ sont payés dans l'agriculture moderne au prix du délabrement et des maladies qui minent la force de travail elle-même. »"
+    answer: "fluidité du travail"
+    alt: []
+  - id: n1867m-p3b-5
+    fragment: "2/2"
+    sentence: "« Comme dans l'industrie urbaine, l'augmentation de la force productive et le plus grand degré de fluidité du travail sont payés dans l'agriculture moderne au prix ___ qui minent la force de travail elle-même. »"
+    answer: "du délabrement et des maladies"
+    alt: []
+  - id: n1867m-p3b-6
+    fragment: "2/2"
+    sentence: "« Comme dans l'industrie urbaine, l'augmentation de la force productive et le plus grand degré de fluidité du travail sont payés dans l'agriculture moderne au prix du délabrement et des maladies qui minent ___. »"
+    answer: "la force de travail elle-même"
+    alt: []
+  - id: n1867m-p3b-7
+    sentence: "*Le Capital*, chapitre IV : la force de travail est le résumé de toutes les aptitudes __physiques et ___ d'un être humain__."
+    answer: "intellectuelles"
+    alt: []
+  - id: n1867m-p3b-8
+    sentence: "*Le Capital*, chapitre IV : les aptitudes qui composent la force de travail existent dans « la corporéité, la personnalité ___ d'un être humain »."
+    answer: "vivante"
+    alt: []
+  - id: n1867m-p3b-9
+    sentence: "__Par *Verwüstung*, Marx décrit la force de travail avec le mot d'une terre__ **___** (changée en désert)."
+    answer: "dévastée"
+    alt: ["ravagée"]
+
+- id: n1867m-p4
+  title: "Piller le travailleur, piller le sol"
+  notes: |-
+    **Les deux fils se nouent :** {coral}**tout progrès de l'agriculture capitaliste est un progrès dans la spoliation du travailleur et du sol à la fois, et il va d'autant plus vite que la grande industrie est la base du pays.**{/coral}
+
+    **Pourquoi « piller » ?** L'allemand dit *berauben* [dépouiller, voler] : le mot renvoie à l'{violet}agriculture de spoliation{/violet} (*Raubbau*) de {sky}Liebig{/sky}. Piller, c'est {red}prendre sans rendre{/red}.
+
+    **Pourquoi « un progrès dans l'art » ?** Marx garde le mot que ses adversaires emploient : il y a bien {green}progrès, savoir-faire, rendement accru{/green} ; mais ce que l'on sait mieux faire, c'est {red}dépouiller{/red}.
+
+    **Pourquoi « non seulement… mais aussi » ?** La spoliation du travailleur était connue par l'analyse de la fabrique ; Marx y {amber}joint le sol{/amber}, au même titre.
+
+    **Comment un accroissement de fertilité peut-il être une ruine ?** Tout tient au {violet}temps{/violet}. La fertilité s'accroît {teal}« pour un laps de temps donné »{/teal} ; ce qui est ruiné, ce sont les {teal}« sources durables de cette fertilité »{/teal}. {yellow}Un engrais ou un labour plus profond arrache davantage au champ cette année, en puisant dans la réserve des années à venir.{/yellow} {coral}Le gain présent est emprunté à l'avenir.{/coral}
+
+    **Pourquoi les États-Unis ?** Ils servent d'{amber}épreuve{/amber} : un pays qui {green}part de la grande industrie{/green}, sans longue tradition agricole pour freiner, doit montrer la destruction {coral}plus rapide{/coral}. Elle est donc proportionnée à la base industrielle capitaliste : {red}ce n'est pas un reste d'arriération{/red}.
+
+    **Que dit « comme arrière-plan » ?** La grande industrie n'agit pas seulement dans les champs : elle est {amber}le fond sur lequel tout le pays se développe{/amber}, avec ses villes, ses transports et son marché.
+
+    ! Marx ne dit {red}pas que la fertilité baisse toujours{/red} : elle peut {green}monter un temps{/green}, et c'est ce qui cache la ruine.
+  passage:
+    label: "§296"
+    part: "4. Une double spoliation"
+    text: "Et tout progrès de l'agriculture capitaliste est non seulement un progrès dans l'art de piller le travailleur, mais aussi dans l'art de piller le sol ; tout progrès dans l'accroissement de sa fertilité pour un laps de temps donné est en même temps un progrès de la ruine des sources durables de cette fertilité. Plus un pays, comme, par exemple, les États-Unis d'Amérique, part de la grande industrie comme arrière-plan de son développement et plus ce processus de destruction est rapide."
+  points:
+  - id: n1867m-p4-1
+    fragment: "1/2"
+    sentence: "« Et tout progrès de l'agriculture capitaliste est non seulement un progrès dans l'art de ___, mais aussi dans l'art de piller le sol ; tout progrès dans l'accroissement de sa fertilité pour un laps de temps donné est en même temps un progrès de la ruine des sources durables de cette fertilité. »"
+    answer: "piller le travailleur"
+    alt: []
+  - id: n1867m-p4-2
+    fragment: "1/2"
+    sentence: "« Et tout progrès de l'agriculture capitaliste est non seulement un progrès dans l'art de piller le travailleur, mais aussi dans l'art de ___ ; tout progrès dans l'accroissement de sa fertilité pour un laps de temps donné est en même temps un progrès de la ruine des sources durables de cette fertilité. »"
+    answer: "piller le sol"
+    alt: []
+  - id: n1867m-p4-3
+    fragment: "1/2"
+    sentence: "« Et tout progrès de l'agriculture capitaliste est non seulement un progrès dans l'art de piller le travailleur, mais aussi dans l'art de piller le sol ; tout progrès dans l'accroissement de sa fertilité ___ est en même temps un progrès de la ruine des sources durables de cette fertilité. »"
+    answer: "pour un laps de temps donné"
+    alt: []
+  - id: n1867m-p4-4
+    fragment: "1/2"
+    sentence: "« Et tout progrès de l'agriculture capitaliste est non seulement un progrès dans l'art de piller le travailleur, mais aussi dans l'art de piller le sol ; tout progrès dans l'accroissement de sa fertilité pour un laps de temps donné est en même temps un progrès de la ___ de cette fertilité. »"
+    answer: "ruine des sources durables"
+    alt: []
+  - id: n1867m-p4-5
+    fragment: "2/2"
+    sentence: "« Plus un pays, comme, par exemple, les ___, part de la grande industrie comme arrière-plan de son développement et plus ce processus de destruction est rapide. »"
+    answer: "États-Unis d'Amérique"
+    alt: ["États-Unis"]
+  - id: n1867m-p4-6
+    fragment: "2/2"
+    sentence: "« Plus un pays, comme, par exemple, les États-Unis d'Amérique, part de la ___ de son développement et plus ce processus de destruction est rapide. »"
+    answer: "grande industrie comme arrière-plan"
+    alt: []
+  - id: n1867m-p4-7
+    sentence: "__Piller__, c'est prendre sans ___ : le mot renvoie à l'**agriculture de spoliation** de Liebig."
+    answer: "rendre"
+    alt: []
+  - id: n1867m-p4-8
+    sentence: "__Un accroissement de fertilité peut être une ruine__ parce que le gain présent est emprunté à l'___."
+    answer: "avenir"
+    alt: []
+  - id: n1867m-p4-9
+    sentence: "__Le pays dont le développement montre la destruction la plus rapide__ est celui qui **part de la grande industrie** : les ___."
+    answer: "États-Unis"
+    alt: ["États-Unis d'Amérique"]
+
+- id: n1867m-p4b
+  title: "Les deux sources de toute richesse"
+  notes: |-
+    **La conclusion, du paragraphe comme du chapitre :** {coral}**la production capitaliste ne développe la technique et la coopération qu'en ruinant les deux sources de toute richesse, la terre et le travailleur.**{/coral}
+
+    **Pourquoi « si bien que » ?** La phrase {amber}ramasse tout ce qui précède{/amber} : le métabolisme perturbé, la force de travail minée, la double spoliation.
+
+    **Pourquoi « la technique et la combinaison » ?** Ce sont {green}les deux progrès{/green} que le texte a reconnus : la science appliquée et le travail coopératif. {red}Marx ne les retire pas.{/red}
+
+    **Pourquoi « ne… qu'en » ?** La ruine {red}n'est ni un accident ni un excès{/red} : elle est {coral}la condition sous laquelle ce développement a lieu{/coral}. La raison tient au capital, qui cherche la survaleur : il traite le travailleur et le sol comme des {amber}moyens à tirer au plus vite{/amber}, sans compter le temps qu'il leur faut pour se refaire.
+
+    ? **Richesse et valeur** : la richesse matérielle est l'ensemble des {violet}valeurs d'usage{/violet}, des choses utiles ; la {violet}valeur{/violet} est la forme sociale que le travail humain donne aux marchandises.
+
+    **Pourquoi la terre est-elle une source,** si seul le travail crée la valeur ? Parce que la phrase parle de {green}richesse{/green}, {red}non de valeur{/red} : la terre fournit la matière et les forces sans lesquelles rien d'utile ne se produit. N'étant pas un produit du travail, elle n'a {pink}pas de valeur{/pink} ; on peut tirer de là (c'est une lecture) qu'un mode de production réglé sur la valeur {amber}tient peu compte de ce qu'il lui prend{/amber}.
+
+    **Pourquoi « sources vives » ?** L'allemand dit *Springquellen* [sources jaillissantes] : elles {green}donnent sans cesse{/green} tant qu'elles vivent, et peuvent {red}tarir{/red}.
+
+    **Où cela laisse-t-il le chapitre ?** Il s'ouvrait sur la machine, qui multiplie les forces productives ; il se ferme sur {coral}les sources de ces forces mêmes{/coral}. Le mode de production {amber}sape ses propres conditions{/amber}.
+
+    ! La grande industrie reste {green}la plus révolutionnaire{/green} : la dernière phrase {red}ne dément pas la première{/red}, elle en dit le prix.
+  passage:
+    label: "§296"
+    part: "4. Une double spoliation"
+    text: "Si bien que la production capitaliste ne développe la technique et la combinaison du processus social de production qu'en ruinant dans le même temps les sources vives de toute richesse : la terre et le travailleur."
+  points:
+  - id: n1867m-p4b-1
+    sentence: "« Si bien que la production capitaliste ne développe ___ qu'en ruinant dans le même temps les sources vives de toute richesse : la terre et le travailleur. »"
+    answer: "la technique et la combinaison du processus social de production"
+    alt: []
+  - id: n1867m-p4b-2
+    sentence: "« Si bien que la production capitaliste ne développe la technique et la combinaison du processus social de production ___ dans le même temps les sources vives de toute richesse : la terre et le travailleur. »"
+    answer: "qu'en ruinant"
+    alt: []
+  - id: n1867m-p4b-3
+    sentence: "« Si bien que la production capitaliste ne développe la technique et la combinaison du processus social de production qu'en ruinant dans le même temps les ___ : la terre et le travailleur. »"
+    answer: "sources vives de toute richesse"
+    alt: []
+  - id: n1867m-p4b-4
+    sentence: "« Si bien que la production capitaliste ne développe la technique et la combinaison du processus social de production qu'en ruinant dans le même temps les sources vives de toute richesse : ___. »"
+    answer: "la terre et le travailleur"
+    alt: []
+  - id: n1867m-p4b-5
+    sentence: "**La richesse matérielle** est l'ensemble des __valeurs d'___.__"
+    answer: "usage"
+    alt: []
+  - id: n1867m-p4b-6
+    sentence: "__La terre est source de **richesse** sans être créatrice de **___**__, que seul le travail humain produit."
+    answer: "valeur"
+    alt: []
+  - id: n1867m-p4b-7
+    sentence: "__La ruine des sources n'est pas un accident__ : la production capitaliste ne développe la technique **qu'en ___** ces sources."
+    answer: "ruinant"
+    alt: []
+  - id: n1867m-p4b-8
+    sentence: "Les « sources vives » traduisent l'allemand `___`, des sources jaillissantes."
+    answer: "Springquellen"
+    alt: []
+
+- id: n1867m-o1
+  title: "Portées : la vie, la nature, une seule ruine"
+  notes: |-
+    **Ce que le texte permet de penser de la vie :** {coral}**elle tient à un échange avec la terre qu'un mode de production peut dérégler, et dont la rupture atteint ensemble le sol, le corps et l'esprit.**{/coral}
+
+    **La vie comme échange.** Vivre n'est {red}pas une propriété qu'un être aurait par lui seul{/red} : c'est {green}prendre dans la terre et lui rendre{/green}. La vie humaine a donc une condition qui ne dépend d'aucune société, et des formes qui en dépendent toutes.
+
+    **Une condition naturelle sous une forme historique.** Le métabolisme est {violet}éternel{/violet} ; sa perturbation est {violet}historique{/violet}. {amber}Une société ne peut abolir cette condition, mais elle peut la compromettre{/amber}, et elle est seule à pouvoir l'organiser.
+
+    **Toute la vie est atteinte.** Le texte nomme la santé physique, la vie intellectuelle, la vitalité, la liberté, la force de travail comme personnalité vivante : {coral}la vie dont il s'agit n'est pas la seule survie{/coral}.
+
+    **De 1844 à 1867.** Le premier manuscrit posait que {teal}« {/teal}la nature, c'est-à-dire la nature qui n'est pas elle-même le corps humain, est {teal}le corps non organique de l'homme »{/teal}, et que le travail aliéné le lui arrache. Ici, plus de {pink}corps non organique{/pink} ni d'{pink}être générique{/pink}, mais un {green}métabolisme perturbé{/green} : ce qui se disait comme une perte de l'essence humaine se montre comme {coral}un processus matériel, daté, observable{/coral}.
+
+    **Une seule ruine.** La terre et le travailleur ne sont {red}pas deux dossiers séparés{/red}, l'un écologique et l'autre social : {green}le même processus les épuise{/green}, par les mêmes moyens. On peut soutenir contre qui les sépare que l'exploitation de l'homme et celle de la nature sont deux faces d'une même chose.
+
+    **Un Marx prométhéen ?** On lui a prêté l'idéal d'une {red}domination sans limite de la nature{/red}. Ce texte reconnaît le progrès technique, mais en {amber}mesure la valeur à ce qu'il laisse subsister{/amber} : une fertilité {green}durable{/green} et un homme {green}pleinement développé{/green}.
+
+    ? **Rupture du métabolisme** : l'expression, d'après la « faille » dont parle le livre III, a été popularisée par {sky}John Bellamy Foster{/sky} ; notre texte, lui, écrit que la production capitaliste {violet}perturbe{/violet} le métabolisme.
+
+    ! Faire de Marx un écologiste d'aujourd'hui serait {red}forcer le texte{/red} : son objet reste {green}le mode de production{/green}, et la nature y compte comme condition de la vie humaine.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: n1867m-o1-1
+    sentence: "__Le métabolisme est une condition éternelle, mais sa perturbation__ est **___**."
+    answer: "historique"
+    alt: []
+  - id: n1867m-o1-2
+    sentence: "*Manuscrits de 1844* : la nature qui n'est pas elle-même le corps humain est « le corps ___ de l'homme »."
+    answer: "non organique"
+    alt: ["inorganique"]
+  - id: n1867m-o1-3
+    sentence: "Ce que 1844 disait comme perte de l'essence humaine, 1867 le montre comme **un processus ___** perturbé, daté et observable."
+    answer: "matériel"
+    alt: []
+  - id: n1867m-o1-4
+    sentence: "__La ruine de la terre et celle du travailleur__ ne sont pas deux questions séparées : le même **___** les épuise."
+    answer: "processus"
+    alt: ["mode de production"]
+  - id: n1867m-o1-5
+    sentence: "__On prête à Marx un idéal de domination sans limite de la nature__ : on parle d'un Marx ___."
+    answer: "prométhéen"
+    alt: []
+  - id: n1867m-o1-6
+    sentence: "__L'auteur qui a popularisé l'expression de **rupture du métabolisme**__ est John Bellamy ___."
+    answer: "Foster"
+    alt: []
+
+- id: n1867m-o2
+  title: "Après 1867 : de Liebig à Fraas"
+  notes: |-
+    **La question ne s'arrête pas au livre I :** {coral}**Marx l'approfondit dans ses lectures d'agronomie, et le dernier Marx en tire des conséquences que ce texte ne tirait pas encore.**{/coral}
+
+    **Un débat entre agronomes.** {sky}Liebig{/sky} proposait de rendre aux sols leurs éléments par des {violet}engrais minéraux{/violet}. D'autres jugeaient le remède limité. {sky}Carl Fraas{/sky} (1810-1875) insiste sur le {amber}climat{/amber} et imagine une agriculture qui régénère les sols.
+
+    **Que montre Fraas ?** Dans *Climat et monde végétal dans le temps* (1847), que climat et végétation {green}changent à l'échelle de l'histoire{/green} sous l'effet de la culture : {yellow}le déboisement excessif a contribué à faire des déserts de régions jadis fertiles, en Perse, en Mésopotamie, et à appauvrir la Grèce{/yellow}.
+
+    **Ce que Marx en retient.** Il écrit à Engels, le 25 mars 1868, un an après le livre I, que la culture, quand elle avance *naturwüchsig vorschreitend und nicht bewußt beherrscht* [en progressant spontanément et sans maîtrise consciente], laisse derrière elle des déserts ; et il voit là {amber}une tendance socialiste inconsciente{/amber}.
+
+    **Pourquoi ces mots importent-ils pour notre texte ?** Ce sont les siens : au spontané (*naturwüchsig*), qui détruit, s'oppose le {green}conscient{/green}. {coral}L'institution systématique du métabolisme que la phrase 8 exigeait trouve là un appui d'agronome.{/coral} Une différence : en 1867, le spontané désignait ce que le capital détruit ; dans la lettre, il désigne une culture {red}qui détruit faute d'être maîtrisée{/red}.
+
+    **Le tournant discuté.** {sky}Kohei Saito{/sky} soutient qu'après ces lectures Marx abandonne l'idée d'un {red}développement illimité des forces productives{/red}. Marx étudie aussi les communautés agraires à propriété commune et, en 1881, répond à {sky}Vera Zassoulitch{/sky} sur la commune paysanne russe. La thèse de Saito est {amber}une interprétation disputée{/amber}, qui dépasse ce que le paragraphe affirme.
+
+    ! Le texte de 1867 {red}n'annonce pas la décroissance{/red} : il dit que le développement capitaliste {green}ruine ses sources{/green}, ce qui est autre chose.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: n1867m-o2-1
+    sentence: "__L'agronome allemand qui montre, contre un remède purement chimique, le rôle du climat__ est Carl ___."
+    answer: "Fraas"
+    alt: []
+  - id: n1867m-o2-2
+    sentence: "Fraas montre que la culture, par le **___** excessif, a contribué à transformer des régions fertiles en déserts."
+    answer: "déboisement"
+    alt: []
+  - id: n1867m-o2-3
+    sentence: "Lettre du 25 mars 1868 : la culture qui avance spontanément, __sans maîtrise **___**__, laisse derrière elle des déserts."
+    answer: "consciente"
+    alt: []
+  - id: n1867m-o2-4
+    sentence: "Marx voit dans la conclusion de Fraas **une tendance ___ inconsciente**."
+    answer: "socialiste"
+    alt: []
+  - id: n1867m-o2-5
+    sentence: "__Selon Kohei ___, le dernier Marx abandonne l'idée d'un développement illimité des forces productives__."
+    answer: "Saito"
+    alt: []
+  - id: n1867m-o2-6
+    sentence: "__En 1881, Marx répond sur la commune paysanne russe__ à Vera ___."
+    answer: "Zassoulitch"
+    alt: []
+
+- id: n1867m-o3
+  title: "Rétablir le métabolisme : les producteurs associés"
+  notes: |-
+    **Qui instituera le métabolisme en loi ?** Le livre III répond : {coral}**les producteurs associés, qui règlent en commun leurs échanges avec la nature.**{/coral}
+
+    **La réponse.** {teal}« {/teal}En ce domaine, la liberté ne peut consister qu'en ceci : que l'être humain socialisé, que {teal}les producteurs associés règlent de façon rationnelle leurs échanges avec la nature{/teal}, qu'ils la {teal}contrôlent ensemble{/teal} au lieu d'être {teal}dominés par sa puissance aveugle{/teal} ; qu'ils procèdent à ces échanges avec {teal}la plus petite dépense d'énergie{/teal} et dans les conditions correspondant {teal}de la façon la plus digne à leur nature d'êtres humains »{/teal}.
+
+    **« En ce domaine » ?** Celui de la production matérielle, que Marx appelle le {violet}royaume de la nécessité{/violet}. L'association ne supprime pas la contrainte de produire ; elle {green}change qui la conduit et comment{/green}. Le {violet}royaume de la liberté{/violet} commence au-delà, et la réduction de la journée de travail en est la condition.
+
+    **Pourquoi « rationnelle » et « ensemble » ?** Un producteur privé, tenu par la concurrence, {red}ne règle que son entreprise{/red} ; le métabolisme, qui passe à travers toute la société, {green}ne se règle qu'en commun{/green}.
+
+    **La propriété de la terre.** Le chapitre sur l'accumulation nomme le renversement : {teal}« C'est la négation de la négation. »{/teal} Elle ne rétablit pas la propriété privée, mais {teal}« {/teal}la {teal}propriété individuelle{/teal} fondée sur les conquêtes mêmes de l'ère capitaliste : sur {teal}la coopération et la propriété commune de la terre{/teal} et des moyens de production produits par le travail lui-même{teal} »{/teal}.
+
+    **Le même mouvement que dans notre texte.** Union ancienne, rupture, synthèse supérieure : pour {violet}l'agriculture et la manufacture{/violet} comme pour {violet}le producteur et sa terre{/violet}, {coral}Marx ne revient pas au point de départ{/coral} ; il garde ce que la rupture a développé.
+
+    ! La régulation rationnelle {red}n'est pas une domination sans mesure{/red} de la nature : sa règle est {green}la moindre dépense{/green} et la dignité de ceux qui produisent.
+  passage:
+    label: "Prolongement"
+  points:
+  - id: n1867m-o3-1
+    sentence: "Livre III : en ce domaine, la liberté consiste en ce que les ___ règlent de façon rationnelle leurs échanges avec la nature."
+    answer: "producteurs associés"
+    alt: []
+  - id: n1867m-o3-2
+    sentence: "Livre III : les producteurs associés règlent de façon ___ leurs échanges avec la nature."
+    answer: "rationnelle"
+    alt: []
+  - id: n1867m-o3-3
+    sentence: "Livre III : ils contrôlent ensemble la nature « au lieu d'être dominés par sa puissance ___ »."
+    answer: "aveugle"
+    alt: []
+  - id: n1867m-o3-4
+    sentence: "Livre III : ils procèdent à ces échanges « avec la plus petite dépense d'___ »."
+    answer: "énergie"
+    alt: []
+  - id: n1867m-o3-5
+    sentence: "Livre III : ces échanges se font dans les conditions correspondant de la façon la plus ___ à leur nature d'êtres humains."
+    answer: "digne"
+    alt: []
+  - id: n1867m-o3-6
+    sentence: "__La production matérielle__, même réglée par les producteurs associés, __reste le royaume de la ___.__"
+    answer: "nécessité"
+    alt: []
+  - id: n1867m-o3-7
+    sentence: "*Le Capital*, livre I, sur l'expropriation des expropriateurs : « C'est la négation de la ___. »"
+    answer: "négation"
+    alt: []
+  - id: n1867m-o3-8
+    sentence: "La propriété rétablie se fonde sur la coopération et sur __la propriété ___ de la terre et des moyens de production__."
+    answer: "commune"
+    alt: []
