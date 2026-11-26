@@ -3,322 +3,312 @@
 # (21a : trad. Brisson). Anciennement unité classique : chaque carte garde son
 # identifiant, pour que la révision espacée continue. 22e-23c : texte complet
 # fourni par l'utilisateur, sans les repères [23a] et [23b].
+# Refondue le 2026-11-26 (niveau normale) : les deux leçons d'introduction
+# (m6-l3, m6-l4) fusionnées sous m6-l3, avec le plan ; les deux prolongements
+# courts (m6-l2, m6-l7) fusionnés sous m6-l2 ; 22e-23b coupé en deux ;
+# rappels approfondis, sans rien retirer ; toutes les cartes gardées.
 
-id: m6
+id: "m6"
 title: "L'Apologie de Socrate"
 subtitle: "Platon, Apologie de Socrate, 21a, 22e-23c, 28b-c"
-icon: page
-color: yellow
+icon: "page"
+color: "yellow"
 group: "Socrate : la morale"
+depth: "normale"
 intro: |-
   Le discours de défense de Socrate à son procès (399 av. J.-C.), le seul texte de Platon qui ne soit pas un dialogue. Trois passages : l'oracle rendu à Chéréphon (21a), son interprétation et sa mise à l'épreuve (23a-b), l'exemple d'Achille (28b-c).
 lessons:
-- id: m6-l3
-  title: "Un discours continu, et les deux chefs d'accusation"
+- id: "m6-l3"
+  title: "Le procès, l'accusation et le plan"
   notes: |-
-    Contrairement à tous les autres dialogues de Platon, bâtis sur des
-    questions-réponses, l'Apologie prend la forme d'{green}**un discours continu**{/green} :
-    c'est un plaidoyer, pas un dialogue.
+    **L'*Apologie de Socrate* est le discours de défense que Platon prête à Socrate lors de son procès, en 399 av. J.-C.** Contrairement à tous les autres dialogues de Platon, bâtis sur des questions-réponses, elle prend la forme d'{green}**un discours continu**{/green} : c'est un plaidoyer, pas un dialogue.
 
-    L'accusation officielle portée contre Socrate tient en deux chefs :
-    {red}**corrompre la jeunesse**{/red} et {red}**introduire de nouveaux dieux**{/red}. Platon
-    suggère que ce préjugé préexistait déjà au procès : la comédie
-    d'{sky}Aristophane{/sky} {sky}*Les Nuées*{/sky} montrait Socrate remplacer les dieux
-    traditionnels par des explications naturalistes et enseigner à faire
-    triompher l'argument le plus faible, {coral}préparant ainsi, des années à{/coral}
-    {coral}l'avance, les deux chefs d'accusation{/coral}.
+    **L'accusation.** L'accusation officielle tient en deux chefs : {red}**corrompre la jeunesse**{/red} et {red}**introduire de nouveaux dieux**{/red}. Platon suggère que ce préjugé préexistait au procès : la comédie d'{sky}Aristophane{/sky}, {sky}*Les Nuées*{/sky}, montrait Socrate remplacer les dieux traditionnels par des explications naturalistes et enseigner à faire triompher l'argument le plus faible, {coral}préparant ainsi, des années à l'avance, les deux chefs d'accusation{/coral}.
+
+    **La défense.** Socrate commence par nier avoir jamais rien enseigné : il désavoue tout intérêt pour la {violet}**science de la nature**{/violet} (l'objet des {sky}philosophes présocratiques{/sky}) et pour l'{violet}**enseignement de la rhétorique**{/violet} (le métier, rémunéré, des {sky}sophistes{/sky}). Mais s'il n'a rien enseigné, d'où vient la suspicion qui pèse sur lui ? {coral}Socrate répond qu'elle vient d'une vie qui parut étrange à ses concitoyens{/coral}, menée en accomplissement de {violet}**sa mission**{/violet}, dont les textes qui suivent disent l'origine.
+
+    **Les passages étudiés.**
+
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | raconter l'oracle rendu à Chéréphon | 21a | La Pythie déclare que personne n'est plus savant que Socrate : c'est l'origine de sa mission. |
+    | dire le prix de l'enquête, puis interpréter l'oracle | 22e-23b | L'enquête lui vaut haines et réputation de savant ; l'oracle signifie que seul le dieu est savant et que le plus savant des hommes est celui qui sait que son savoir ne vaut rien. |
+    | mettre l'oracle à l'épreuve | 23b-c | Socrate examine ceux qui passent pour savants et, en montrant qu'ils ne le sont pas, sert le dieu, au prix de sa fortune. |
+    | refuser de mesurer l'action au danger | 28b-c | Comme Achille, l'homme de valeur ne regarde que si son action est juste, non si elle le met en danger. |
+
+    ! La défense de Socrate n'est pas {red}une réfutation point par point{/red} des chefs d'accusation : elle raconte {green}une vie{/green}, et en donne la raison.
   passage:
     label: "Introduction"
   points:
-  - id: m6-l3-p1
+  - id: "m6-l3-p1"
     sentence: "**Unique parmi les dialogues de Platon**, l'Apologie __n'est pas un dialogue de questions-réponses mais__ ___"
     answer: "un discours continu"
     alt: []
-  - id: m6-l3-p2
+  - id: "m6-l3-p2"
     sentence: "Selon l'**accusation officielle** portée contre Socrate lors de son procès, __il aurait corrompu la jeunesse et introduit__ ___"
     answer: "de nouveaux dieux"
     alt: []
-  - id: m6-l3-p3
+  - id: "m6-l3-p3"
     sentence: "En montrant Socrate **remplacer les dieux par des explications naturalistes** et enseigner à faire triompher l'argument le plus faible, __la comédie d'Aristophane intitulée__ ___ a préparé les deux chefs d'accusation de son procès"
     answer: "les Nuées"
     alt: []
-- id: m6-l4
-  title: "Ce que Socrate nie avoir enseigné"
-  notes: |-
-    Face à ces accusations, Socrate commence par nier avoir jamais rien
-    enseigné : il désavoue tout intérêt pour la {violet}**science de la nature**{/violet}
-    (l'objet des {sky}philosophes présocratiques{/sky}) et pour l'{violet}**enseignement de la{/violet}
-    {violet}rhétorique**{/violet} (le métier des {sky}sophistes{/sky}, rémunéré).
-
-    Mais s'il n'a rien enseigné, d'où vient la suspicion qui pèse sur lui ?
-    {coral}Socrate répond qu'elle vient d'une vie qui parut étrange à ses{/coral}
-    {coral}concitoyens{/coral}, menée en accomplissement de {violet}**sa mission**{/violet}, dont l'origine
-    va être précisée.
-  passage:
-    label: "Introduction"
-  points:
-  - id: m6-l4-p1
+  - id: "m6-l4-p1"
     sentence: "Face aux accusations portées contre lui, Socrate nie avoir jamais rien enseigné et désavoue tout intérêt pour **deux domaines** : __la science de__ ___ et l'enseignement de la rhétorique"
     answer: "la nature"
     alt: []
-  - id: m6-l4-p2
+  - id: "m6-l4-p2"
     sentence: "Face aux accusations portées contre lui, Socrate nie avoir jamais rien enseigné et désavoue tout intérêt pour **deux domaines** : la science de la nature et __l'enseignement de__ ___"
     answer: "la rhétorique"
     alt: []
-  - id: m6-l4-p3
+  - id: "m6-l4-p3"
     sentence: "Si Socrate n'a rien enseigné, d'où vient alors la suspicion qui pèse sur lui ? Selon l'Apologie, elle vient de ce qu'il a mené **une vie qui parut étrange à ses concitoyens**, __en accomplissement de__ ___"
     answer: "sa mission"
     alt: []
-- id: m6-p21a
+- id: "m6-p21a"
   title: "L'oracle rendu à Chéréphon"
   notes: |-
-    {amber}**Tout part d'une question posée à Delphes : existe-t-il quelqu'un de plus savant que Socrate ? La Pythie répond que non.**{/amber} C'est {sky}**Chéréphon**{/sky}, ami d'enfance de Socrate, connu pour l'impétuosité qu'il mettait en tout, qui osa consulter l'oracle. Socrate prévient les cris du jury : la réponse a de quoi choquer.
+    {amber}**Tout part d'une question posée à Delphes : existe-t-il quelqu'un de plus savant que Socrate ? La Pythie répond que non.**{/amber}
 
-    C'est cet oracle que toute la suite interprète {sky}(23a-b){/sky} puis met à l'épreuve {sky}(23b){/sky} : il est l'origine de la {violet}**mission**{/violet} de Socrate, qui explique la vie étrange que lui reprochent ses concitoyens, et donc le procès.
+    **Pourquoi Chéréphon, et son « impétuosité » ?** C'est {sky}**Chéréphon**{/sky}, ami d'enfance de Socrate, connu pour l'impétuosité qu'il mettait en tout, qui osa consulter l'oracle. Le trait de caractère {amber}explique l'audace de la question{/amber} : il fallait de l'emportement pour demander au dieu si quelqu'un surpassait son ami.
+
+    **Pourquoi « n'allez pas […] m'interrompre par vos cris » ?** Socrate prévient le tumulte du jury : la réponse a {red}de quoi choquer{/red}, puisqu'elle semble le placer au-dessus de tous. Il sait qu'elle sera prise pour de l'orgueil.
+
+    **Pourquoi l'oracle compte-t-il ?** C'est cet oracle que toute la suite interprète {sky}(22e-23b){/sky} puis met à l'épreuve {sky}(23b-c){/sky} : il est l'origine de la {violet}**mission**{/violet} de Socrate, qui explique la vie étrange que lui reprochent ses concitoyens, et donc le procès. {coral}Socrate répond à l'accusation d'impiété en se réclamant d'Apollon.{/coral}
 
     ! L'oracle ne dit pas que Socrate est savant : il dit que {green}personne n'est plus savant que lui{/green}. Toute l'interprétation joue sur cet écart.
   passage:
     label: "21a"
     text: "Vous savez bien aussi quelle sorte d'individu était Chéréphon, quelle impétuosité il mettait dans tout ce qu'il entreprenait. En particulier, un jour qu'il s'était rendu à Delphes, il osa consulter l'oracle pour lui demander - et n'allez pas, je le répète, m'interrompre par vos cris, citoyens - si, en fait, il pouvait exister quelqu'un de plus savant que moi. Or la Pythie répondit qu'il n'y avait personne de plus savant."
   points:
-  - id: m6-l7-p3
+  - id: "m6-l7-p3"
     sentence: "« Vous savez bien aussi __quelle sorte d'individu était__ ___, quelle **impétuosité** il mettait dans tout ce qu'il entreprenait. En particulier, un jour qu'il s'était rendu à Delphes, il osa consulter l'oracle pour lui demander - et n'allez pas, je le répète, m'interrompre par vos cris, citoyens - si, en fait, il pouvait exister quelqu'un de plus savant que moi. Or la Pythie répondit qu'il n'y avait personne de plus savant. »"
     answer: "Chéréphon"
     alt: []
-  - id: m6-p21a-1
+  - id: "m6-p21a-1"
     sentence: "« Vous savez bien aussi quelle sorte d'individu était Chéréphon, quelle impétuosité il mettait dans tout ce qu'il entreprenait. En particulier, un jour qu'il s'était rendu à Delphes, il osa consulter l'oracle pour lui demander - et n'allez pas, je le répète, m'interrompre par vos cris, citoyens - __si, en fait,__ ___. Or la Pythie répondit qu'il n'y avait **personne de plus savant**. »"
     answer: "il pouvait exister quelqu'un de plus savant que moi"
     alt: []
-  - id: m6-l7-p4
+  - id: "m6-l7-p4"
     sentence: "« Vous savez bien aussi quelle sorte d'individu était Chéréphon, quelle impétuosité il mettait dans tout ce qu'il entreprenait. En particulier, un jour qu'il s'était rendu à Delphes, il osa consulter l'oracle pour lui demander - et n'allez pas, je le répète, m'interrompre par vos cris, citoyens - si, en fait, il pouvait exister quelqu'un de plus savant que moi. __Or la **Pythie** répondit qu'il n'y avait__ ___. »"
     answer: "personne de plus savant"
     alt: []
-  - id: m6-p21a-2
+  - id: "m6-p21a-2"
     sentence: "**L'oracle rendu à Chéréphon** __est à l'origine de la__ ___ de Socrate, qui explique la vie étrange que lui reprochent ses concitoyens."
     answer: "mission"
     alt: []
-- id: m6-l5
+- id: "m6-l5"
+  title: "Le prix de l'enquête : le nom de « savant »"
+  notes: |-
+    **L'enquête par laquelle Socrate a voulu comprendre l'oracle lui a valu** {red}**des inimitiés, des calomnies**{/red} **et un nom,** {teal}**« savant »**{/teal}**, qui repose sur un malentendu.**
+
+    **Pourquoi « cette enquête » ?** Socrate vient de raconter comment il a interrogé les hommes politiques, les poètes et les artisans, pour trouver quelqu'un de plus savant que lui et comprendre l'oracle. Chaque fois, il a montré à son interlocuteur qu'il ne savait pas ce qu'il croyait savoir. {red}D'où des inimitiés nombreuses et graves{/red} : personne n'aime être convaincu d'ignorance en public.
+
+    **Pourquoi le nom de « savant » ?** Ceux qui assistent aux discussions raisonnent simplement : {coral}qui réfute un savoir doit le posséder{/coral}. {yellow}Celui qui montre qu'un médecin se trompe passe pour meilleur médecin que lui.{/yellow} Ils croient donc Socrate savant dans les matières où il éprouve les autres.
+
+    **Pourquoi est-ce un malentendu ?** Socrate {amber}éprouve{/amber} le savoir des autres sans prétendre en avoir un : réfuter n'est pas savoir. Mais le nom de {teal}« savant »{/teal} le range parmi les sophistes et les physiciens, et c'est lui qui {red}nourrit l'accusation{/red}.
+
+    ! Socrate ne se plaint pas d'être {red}haï{/red} : il explique pourquoi on le {green}croit savant{/green}, et pourquoi on a tort.
+  passage:
+    label: "22e-23b"
+    text: "C'est précisément cette enquête, Athéniens, qui m'a valu des inimitiés si nombreuses, qui présentaient une virulence et une gravité d'une telle importance qu'elles ont suscité maintes calomnies et m'ont valu de me voir attribuer ce nom, celui de « savant ». Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve."
+  points:
+  - id: "m6-l5-p10"
+    sentence: "« C'est précisément cette **enquête**, Athéniens, qui m'a valu ___, qui présentaient une virulence et une gravité d'une telle importance qu'elles ont suscité maintes calomnies et m'ont valu de me voir attribuer ce nom, celui de « savant ». »"
+    answer: "des inimitiés si nombreuses"
+    alt: []
+  - id: "m6-l5-p11"
+    sentence: "« C'est précisément cette enquête, Athéniens, qui m'a valu des inimitiés si nombreuses, qui présentaient une **virulence et une gravité** d'une telle importance __qu'elles ont suscité__ ___ et m'ont valu de me voir attribuer ce nom, celui de « savant ». »"
+    answer: "maintes calomnies"
+    alt: []
+  - id: "m6-l5-p12"
+    sentence: "« C'est précisément cette enquête, Athéniens, qui m'a valu des inimitiés si nombreuses, qui présentaient une virulence et une gravité d'une telle importance qu'elles ont suscité maintes calomnies et __m'ont valu de me voir attribuer **ce nom**,__ ___. »"
+    answer: "celui de « savant »"
+    alt: []
+- id: "m6-l5b"
   title: "Le sens de l'oracle"
   notes: |-
     {green}**Un dieu ne peut mentir : si l'oracle déclare que nul n'est plus savant que Socrate, il faut qu'il veuille dire autre chose, à savoir que le vrai savant, c'est le dieu, et que le savoir humain ne vaut presque rien.**{/green} Socrate tient sa mission d'**Apollon**, par l'intermédiaire de l'oracle de Delphes {sky}(23a-c){/sky}.
 
-    Le passage part du prix de l'enquête : des {red}**inimitiés**{/red} nombreuses et graves, des {red}**calomnies**{/red}, et une réputation, celle de {teal}« savant »{/teal}. {coral}Car ceux qui assistent aux discussions croient Socrate savant dans les matières où il éprouve les autres{/coral}. Le raisonnement devient alors interprétatif : le dieu, par l'oracle, dirait {teal}« le vrai savant, ce soit le dieu, et [...] le savoir que possède l'homme présente peu de valeur, et peut-être même aucune »{/teal}. Le nom de Socrate ne serait qu'un exemple : est {teal}« le plus savant »{/teal} celui qui, comme lui, {teal}« {/teal}a reconnu que réellement il ne vaut rien pour ce qui est du {teal}savoir ».{/teal}
+    **Pourquoi « il y a bien des chances » ?** Socrate {amber}interprète{/amber}, il ne prétend pas savoir ce que pense le dieu. La prudence de la formule est elle-même socratique : même du sens de l'oracle, il ne se dit pas certain.
+
+    **Pourquoi « le vrai savant ce soit le dieu » ?** Le raisonnement devient interprétatif : le dieu, par l'oracle, dirait {teal}« le vrai savant, ce soit le dieu, et [...] le savoir que possède l'homme présente peu de valeur, et peut-être même aucune »{/teal}. {coral}La sagesse véritable n'appartient qu'au dieu{/coral} ; comparée à elle, toute science humaine est presque rien.
+
+    **Pourquoi le nom de Socrate ?** Il ne serait qu'{yellow}un exemple{/yellow} : le dieu s'est servi de son nom comme pour dire qu'est {teal}« le plus savant »{/teal} celui qui, comme lui, {teal}« {/teal}a reconnu que réellement il ne vaut rien pour ce qui est du {teal}savoir ».{/teal} La supériorité de Socrate n'est pas un savoir de plus, mais {amber}la conscience de ne pas savoir{/amber}.
 
     {green}La sagesse véritable n'appartient donc qu'**au dieu**{/green} ; l'homme, au mieux, peut reconnaître son ignorance. Le nom de {teal}« savant »{/teal} que lui valent ses examens est ainsi {red}un malentendu{/red} : c'est lui qui nourrit l'accusation.
 
     ! Socrate ne se dit pas savant d'un savoir supérieur : sa seule supériorité est de savoir qu'il ne sait rien qui vaille.
   passage:
     label: "22e-23b"
-    text: "C'est précisément cette enquête, Athéniens, qui m'a valu des inimitiés si nombreuses, qui présentaient une virulence et une gravité d'une telle importance qu'elles ont suscité maintes calomnies et m'ont valu de me voir attribuer ce nom, celui de « savant ». Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir. »"
+    text: "Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : « Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir. »"
   points:
-  - id: m6-l5-p10
-    fragment: "1/2"
-    sentence: "« __C'est précisément cette **enquête**, Athéniens, qui m'a valu__ ___, qui présentaient une virulence et une gravité d'une telle importance qu'elles ont suscité maintes calomnies et m'ont valu de me voir attribuer ce nom, celui de « savant ». »"
-    answer: "des inimitiés si nombreuses"
-    alt: []
-  - id: m6-l5-p11
-    fragment: "1/2"
-    sentence: "« C'est précisément cette enquête, Athéniens, qui m'a valu des inimitiés si nombreuses, qui présentaient une **virulence et une gravité** d'une telle importance __qu'elles ont suscité__ ___ et m'ont valu de me voir attribuer ce nom, celui de « savant ». »"
-    answer: "maintes calomnies"
-    alt: []
-  - id: m6-l5-p12
-    fragment: "1/2"
-    sentence: "« C'est précisément cette enquête, Athéniens, qui m'a valu des inimitiés si nombreuses, qui présentaient une virulence et une gravité d'une telle importance qu'elles ont suscité maintes calomnies et __m'ont valu de me voir attribuer **ce nom**,__ ___. »"
-    answer: "celui de « savant »"
-    alt: []
-  - id: m6-l5-p2
-    fragment: "2/2"
-    sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, __il y a bien des chances pour que le **vrai savant**__ ___ et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir.\" »"
+  - id: "m6-l5-p2"
+    sentence: "« Mais, citoyens, __il y a bien des chances pour que le **vrai savant**__ ___ et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir.\" »"
     answer: "ce soit le dieu"
     alt: []
-  - id: m6-l5-p4
-    fragment: "2/2"
-    sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, __il ait voulu dire la chose suivante :__ ___ présente **peu de valeur**, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir.\" »"
+  - id: "m6-l5-p4"
+    sentence: "« Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, __il ait voulu dire la chose suivante :__ ___ présente **peu de valeur**, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir.\" »"
     answer: "le savoir que possède l'homme"
     alt: []
-  - id: m6-l5-p3
-    fragment: "2/2"
-    sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : __le **savoir que possède l'homme**__ ___. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir.\" »"
+  - id: "m6-l5-p3"
+    sentence: "« Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : __le **savoir que possède l'homme**__ ___. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir.\" »"
     answer: "présente peu de valeur, et peut-être même aucune"
     alt: []
-  - id: m6-l6-p1
-    fragment: "2/2"
-    sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet **oracle**, __il ait voulu dire la chose suivante :__ ___. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir.\" »"
+  - id: "m6-l6-p1"
+    sentence: "« Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet **oracle**, __il ait voulu dire la chose suivante :__ ___. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate, a reconnu que réellement il ne vaut rien pour ce qui est du savoir.\" »"
     answer: "le savoir que possède l'homme présente peu de valeur, et peut-être même aucune"
     alt: []
-  - id: m6-l5-p7
-    fragment: "2/2"
-    sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"__Parmi vous, humains,__ ___, **comme l'a fait Socrate**, a reconnu que réellement il ne vaut rien pour ce qui est du savoir.\" »"
+  - id: "m6-l5-p7"
+    sentence: "« Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"__Parmi vous, humains,__ ___, **comme l'a fait Socrate**, a reconnu que réellement il ne vaut rien pour ce qui est du savoir.\" »"
     answer: "celui-là est le plus savant qui"
     alt: []
-  - id: m6-l5-p6
-    fragment: "2/2"
-    sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, __celui-là est le plus savant qui,__ ___, a **reconnu que réellement il ne vaut rien** pour ce qui est du savoir.\" »"
+  - id: "m6-l5-p6"
+    sentence: "« Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, __celui-là est le plus savant qui,__ ___, a **reconnu que réellement il ne vaut rien** pour ce qui est du savoir.\" »"
     answer: "comme l'a fait Socrate"
     alt: []
-  - id: m6-l5-p8
-    fragment: "2/2"
-    sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, __me prenant pour exemple, il a utilisé mon nom,__ comme pour dire : \"___, **a reconnu que réellement il ne vaut rien pour ce qui est du savoir**.\" »"
+  - id: "m6-l5-p8"
+    sentence: "« Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, __me prenant pour exemple, il a utilisé mon nom,__ comme pour dire : \"___, **a reconnu que réellement il ne vaut rien pour ce qui est du savoir**.\" »"
     answer: "Parmi vous, humains, celui-là est le plus savant qui, comme l'a fait Socrate"
     alt: []
-  - id: m6-l5-p5
-    fragment: "2/2"
-    sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, celui-là est le plus savant qui, **comme l'a fait Socrate**, __a reconnu que__ ___.\" »"
+  - id: "m6-l5-p5"
+    sentence: "« Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, celui-là est le plus savant qui, **comme l'a fait Socrate**, __a reconnu que__ ___.\" »"
     answer: "réellement il ne vaut rien pour ce qui est du savoir"
     alt: []
-  - id: m6-l5-p9
-    fragment: "2/2"
-    sentence: "« Chaque fois, c'est la même chose : ceux qui assistent à la discussion s'imaginent en effet que je suis moi-même savant dans les matières où je mets mon interlocuteur à l'épreuve. Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, **celui-là est le plus savant qui**, __comme l'a fait Socrate,__ ___.\" »"
+  - id: "m6-l5-p9"
+    sentence: "« Mais, citoyens, il y a bien des chances pour que le vrai savant ce soit le dieu et que, par cet oracle, il ait voulu dire la chose suivante : le savoir que possède l'homme présente peu de valeur, et peut-être même aucune. Et, s'il a parlé de ce Socrate qui est ici devant vous, c'est probablement que, me prenant pour exemple, il a utilisé mon nom, comme pour dire : \"Parmi vous, humains, **celui-là est le plus savant qui**, __comme l'a fait Socrate,__ ___.\" »"
     answer: "a reconnu que réellement il ne vaut rien pour ce qui est du savoir"
     alt: []
-  - id: m6-l5-p1
+  - id: "m6-l5-p1"
     sentence: "Dans l'Apologie, **Socrate affirme tenir d'un dieu la mission** qui est à l'origine de son procès : __il s'agit__ d'___ (23a-c)"
     answer: "Apollon"
     alt: []
-  - id: m6-l7-p5
+  - id: "m6-l7-p5"
     sentence: "Selon la **conclusion que Socrate tire de son enquête** sur le sens de l'oracle, __la sagesse véritable appartient uniquement__ ___ (23a-c)"
     answer: "au dieu"
     alt: []
-- id: m6-l6
+- id: "m6-l6"
   title: "Mettre l'oracle à l'épreuve"
   notes: |-
-    {green}**Socrate vérifie l'interprétation de l'oracle par une enquête : il examine ceux qui passent pour savants et, chaque fois qu'ils ne le sont pas, il « prête main-forte au dieu ».**{/green} Il va de-ci de-là, parmi les Athéniens et les étrangers, cherchant quelqu'un de réellement **savant**. Chaque échec confirme, cas après cas, la thèse de l'oracle.
+    {green}**Socrate vérifie l'interprétation de l'oracle par une enquête : il examine ceux qui passent pour savants et, chaque fois qu'ils ne le sont pas, il « prête main-forte au dieu ».**{/green}
 
-    {amber}Cette enquête a un coût{/amber} : l'{violet}**absence de loisir**{/violet} ne lui laisse le temps de s'occuper sérieusement ni des affaires de la cité, ni des siennes. Il vit dans une {violet}**extrême pauvreté**{/violet}, parce qu'il est {teal}« au service du dieu »{/teal}.
+    **Pourquoi « en allant de-ci de-là » ?** L'enquête est {amber}continue{/amber} et s'adresse à tous, Athéniens et étrangers : Socrate cherche quelqu'un de réellement **savant**. Chaque échec confirme, cas après cas, la thèse de l'oracle.
 
-    De cette enquête naît la posture que {sky}la littérature secondaire{/sky} appelle {violet}**l'ignorance socratique**{/violet} : reconnaître son inadéquation en sagesse, tout en jugeant que nul n'est plus sage que celui qui en a conscience. C'est {green}la seule forme de savoir que Socrate revendique{/green}.
+    **Pourquoi « je prête main-forte au dieu » ?** En montrant qu'un homme n'est pas savant, Socrate {coral}confirme ce que le dieu a dit{/coral} : que le savoir humain ne vaut presque rien. Réfuter devient un acte de piété. {yellow}Celui qu'on accuse d'introduire de nouveaux dieux se présente comme le serviteur d'Apollon.{/yellow}
+
+    **Pourquoi « l'absence de loisir » et « l'extrême pauvreté » ?** {amber}Cette enquête a un coût{/amber} : l'{violet}**absence de loisir**{/violet} ne lui laisse le temps de s'occuper sérieusement ni des affaires de la cité, ni des siennes. Il vit dans une {violet}**extrême pauvreté**{/violet}, parce qu'il est {teal}« au service du dieu »{/teal}. La pauvreté est aussi {coral}une preuve{/coral} : à la différence des sophistes, il ne se fait pas payer.
+
+    ? **Ignorance socratique** : la posture que {sky}la littérature secondaire{/sky} désigne ainsi consiste à reconnaître son inadéquation en sagesse, tout en jugeant que nul n'est plus sage que celui qui en a conscience. C'est {green}la seule forme de savoir que Socrate revendique{/green}.
 
     ! L'enquête n'est pas une provocation contre les savants : Socrate la présente comme un service rendu au dieu.
   passage:
     label: "23b-c"
     text: "Or, en allant de-ci de-là, je poursuis ma recherche et, pour comprendre ce qu'a voulu dire le dieu, je cherche à découvrir si, parmi les gens d'Athènes et parmi les étrangers, il ne s'en trouve pas un qui soit savant. Et, chaque fois qu'il me paraît que ce n'est pas le cas, je prête main-forte au dieu en montrant que cet homme n'est pas savant. Et l'absence de loisir qui en résulte explique qu'il ne me reste pas de temps pour m'occuper sérieusement des affaires de la cité et des miennes ; aussi est-ce dans une extrême pauvreté que je vis, parce que je suis au service du dieu."
   points:
-  - id: m6-l6-p2
-    fragment: "1/2"
+  - id: "m6-l6-p2"
     sentence: "« Or, en allant de-ci de-là, je poursuis ma recherche et, pour comprendre ce qu'a voulu dire le dieu, **je cherche à découvrir** si, parmi les gens d'Athènes et parmi les étrangers, __il ne s'en trouve pas un qui soit__ ___. Et, chaque fois qu'il me paraît que ce n'est pas le cas, je prête main-forte au dieu en montrant que cet homme n'est pas savant. »"
     answer: "savant"
     alt: []
-  - id: m6-l6-p3
-    fragment: "1/2"
+  - id: "m6-l6-p3"
     sentence: "« Or, en allant de-ci de-là, je poursuis ma recherche et, pour comprendre ce qu'a voulu dire le dieu, je cherche à découvrir si, parmi les gens d'Athènes et parmi les étrangers, il ne s'en trouve pas un qui soit savant. Et, **chaque fois qu'il me paraît que ce n'est pas le cas**, __je prête main-forte au dieu__ ___. »"
     answer: "en montrant que cet homme n'est pas savant"
     alt: []
-  - id: m6-l6-p4
-    fragment: "1/2"
+  - id: "m6-l6-p4"
     sentence: "« Or, en allant de-ci de-là, je poursuis ma recherche et, pour comprendre ce qu'a voulu dire le dieu, je cherche à découvrir si, parmi les gens d'Athènes et parmi les étrangers, **il ne s'en trouve pas un qui soit savant**. __Et, chaque fois qu'il me paraît que ce n'est pas le cas,__ ___. »"
     answer: "je prête main-forte au dieu en montrant que cet homme n'est pas savant"
     alt: []
-  - id: m6-l6-p5
-    fragment: "2/2"
-    sentence: "« __Et__ ___ qui en résulte explique qu'il **ne me reste pas de temps** pour m'occuper sérieusement des affaires de la cité et des miennes ; aussi est-ce dans une extrême pauvreté que je vis, parce que je suis au service du dieu. »"
+  - id: "m6-l6-p5"
+    sentence: "« Et ___ qui en résulte explique qu'il **ne me reste pas de temps** pour m'occuper sérieusement des affaires de la cité et des miennes ; aussi est-ce dans une extrême pauvreté que je vis, parce que je suis au service du dieu. »"
     answer: "l'absence de loisir"
     alt: []
-  - id: m6-l6-p6
-    fragment: "2/2"
+  - id: "m6-l6-p6"
     sentence: "« Et **l'absence de loisir** qui en résulte __explique qu'il ne me reste pas de temps pour__ ___ ; aussi est-ce dans une extrême pauvreté que je vis, parce que je suis au service du dieu. »"
     answer: "m'occuper sérieusement des affaires de la cité et des miennes"
     alt: []
-  - id: m6-l6-p7
-    fragment: "2/2"
+  - id: "m6-l6-p7"
     sentence: "« Et l'absence de loisir qui en résulte explique qu'il ne me reste pas de temps pour m'occuper sérieusement des **affaires de la cité** et des miennes ; __aussi est-ce__ ___ que je vis, parce que je suis au service du dieu. »"
     answer: "dans une extrême pauvreté"
     alt: []
-  - id: m6-l6-p8
-    fragment: "2/2"
+  - id: "m6-l6-p8"
     sentence: "« Et l'absence de loisir qui en résulte explique qu'il ne me reste pas de temps pour m'occuper sérieusement des affaires de la cité et des miennes ; aussi est-ce __dans une **extrême pauvreté** que je vis,__ ___. »"
     answer: "parce que je suis au service du dieu"
     alt: []
-  - id: m6-l7-p6
+  - id: "m6-l7-p6"
     sentence: "__La littérature secondaire appelle__ ___ la posture de Socrate consistant à reconnaître son **inadéquation en sagesse** tout en jugeant que nul n'est plus sage que celui qui en a conscience"
     answer: "l'ignorance socratique"
     alt: []
-- id: m6-l1
+- id: "m6-l1"
   title: "Le danger n'est pas la mesure de l'action juste"
   notes: |-
-    Dans l'**Apologie**, Platon met en scène le discours de défense de Socrate
-    lors de son procès (399 av. J.-C.). Un principe le traverse d'un bout à
-    l'autre : {green}celui qui vaut quelque chose ne calcule jamais son action d'après{/green}
-    {green}le risque qu'elle lui fait courir, mais seulement d'après une question{/green},
-    la seule qui compte : {amber}**est-elle juste ou injuste ?**{/amber}
+    **Un principe traverse l'*Apologie* d'un bout à l'autre :** {green}**celui qui vaut quelque chose ne calcule jamais son action d'après le risque qu'elle lui fait courir, mais seulement d'après une question**{/green}, la seule qui compte : {amber}**est-elle juste ou injuste ?**{/amber}
 
-    Socrate illustre ce principe par {yellow}l'exemple d'Achille, tiré de l'Iliade{/yellow}.
-    Thétis avait averti son fils que le venger de la mort de son ami Patrocle
-    en tuant Hector lui coûterait la vie, {teal}« tout de suite après Hector »{/teal}.
-    {coral}Achille passe outre{/coral} : il fait {teal}« {/teal}si peu de cas du danger, comparé au
-    {teal}déshonneur ».{/teal} Socrate revendique la même hiérarchie : {green}le déshonneur d'une{/green}
-    {green}action injuste pèse plus lourd que n'importe quel péril{/green}.
+    **Pourquoi « À ton avis en tout cas » ?** Socrate répond à un interlocuteur imaginaire qui lui reproche de mener une vie qui le met en danger de mort. Il retourne l'objection : {red}si le danger était la mesure de l'action{/red}, il faudrait mépriser les héros de Troie.
+
+    **Pourquoi Achille ?** Socrate illustre le principe par {yellow}l'exemple d'Achille, tiré de l'*Iliade*{/yellow}. Thétis avait averti son fils que venger la mort de son ami Patrocle en tuant Hector lui coûterait la vie, {teal}« tout de suite après Hector »{/teal}. {coral}Achille passe outre{/coral} : il fait {teal}« {/teal}si peu de cas du danger, comparé au {teal}déshonneur ».{/teal} L'exemple est habile : on ne peut accuser de folie le héros que toute la Grèce admire.
+
+    **Ce que Socrate en tire.** Il revendique la même hiérarchie : {green}le déshonneur d'une action injuste pèse plus lourd que n'importe quel péril{/green}. Il ne cessera donc pas de philosopher pour échapper à la mort.
 
     ! Achille n'est pas cité pour sa bravoure guerrière : Socrate retient la hiérarchie qu'il incarne, le déshonneur pesant plus que le danger.
   passage:
     label: "28b-c"
     text: "À ton avis en tout cas, ce seraient, en effet, de pauvres types tous ces demi-dieux qui ont trouvé la mort devant Troie, et tout particulièrement le fils de Thétis [Achille], qui faisait si peu de cas du danger, comparé au déshonneur. Sa mère, qui était une déesse, lui avait tenu, en le voyant tout impatient d'aller tuer Hector, les propos qui, sauf erreur de ma part, sont à peu près les suivants : \"Mon enfant, dit le poète, si tu dois venger le meurtre de ton ami Patrocle et tuer Hector, toi aussi tu mourras, car 'tout de suite après Hector la mort est préparée pour toi'."
   points:
-  - id: m6-l1-p2
+  - id: "m6-l1-p2"
     sentence: "« À ton avis en tout cas, ce seraient, en effet, de pauvres types tous ces demi-dieux qui ont trouvé la mort devant Troie, et tout particulièrement __le fils de Thétis [Achille], qui__ ___, **comparé au déshonneur**. Sa mère, qui était une déesse, lui avait tenu, en le voyant tout impatient d'aller tuer Hector, les propos qui, sauf erreur de ma part, sont à peu près les suivants : \"Mon enfant, dit le poète, si tu dois venger le meurtre de ton ami Patrocle et tuer Hector, toi aussi tu mourras, car 'tout de suite après Hector la mort est préparée pour toi'. »"
     answer: "faisait si peu de cas du danger"
     alt: []
-  - id: m6-l1-p3
+  - id: "m6-l1-p3"
     sentence: "« À ton avis en tout cas, ce seraient, en effet, de pauvres types tous ces demi-dieux qui ont trouvé la mort devant Troie, et tout particulièrement le fils de Thétis [Achille], qui faisait si peu de cas du danger, comparé au déshonneur. Sa mère, qui était une déesse, lui avait tenu, en le voyant tout impatient d'aller tuer Hector, les propos qui, sauf erreur de ma part, sont à peu près les suivants : \"**Mon enfant**, dit le poète, __si tu dois venger le meurtre de ton ami__ ___ et tuer Hector, toi aussi tu mourras, car 'tout de suite après Hector la mort est préparée pour toi'. »"
     answer: "Patrocle"
     alt: []
-  - id: m6-l1-p4
+  - id: "m6-l1-p4"
     sentence: "« À ton avis en tout cas, ce seraient, en effet, de pauvres types tous ces demi-dieux qui ont trouvé la mort devant Troie, et tout particulièrement le fils de Thétis [Achille], qui faisait si peu de cas du danger, comparé au déshonneur. Sa mère, qui était une déesse, lui avait tenu, en le voyant tout impatient d'aller tuer Hector, les propos qui, sauf erreur de ma part, sont à peu près les suivants : \"Mon enfant, dit le poète, si tu dois **venger le meurtre de ton ami Patrocle** __et tuer__ ___, toi aussi tu mourras, car 'tout de suite après Hector la mort est préparée pour toi'. »"
     answer: "Hector"
     alt: []
-  - id: m6-l1-p1
+  - id: "m6-l1-p1"
     sentence: "Dans l'Apologie (28b-c), **l'homme qui vaut quelque chose** ne calcule pas si son action met sa vie en danger ; __il ne regarde qu'une seule chose : si ce qu'il fait est__ « ___ »"
     answer: "juste ou injuste"
     alt: ["juste"]
-- id: m6-l2
-  title: "Le soin de l'âme et de la vérité plutôt que la richesse"
+- id: "m6-l2"
+  title: "Le soin de l'âme, le taon et l'élenchos"
   notes: |-
-    Socrate reproche aux Athéniens de courir après la {red}**richesse**{/red}, la
-    {red}**réputation**{/red} et l'{red}**honneur**{/red}, sans se soucier ni de la {green}**sagesse**{/green}, ni
-    de la {green}**vérité**{/green}, ni du soin de rendre leur {green}**âme**{/green} meilleure : {amber}la{/amber}
-    {amber}hiérarchie qui organise tout son discours (l'âme avant les biens{/amber}
-    {amber}extérieurs){/amber} trouve ici sa formulation la plus directe.
+    **La hiérarchie qui organise tout le discours, l'âme avant les biens extérieurs, se formule directement dans la suite de l'*Apologie*.**
 
-    Il en tire une conséquence radicale sur le sort de l'homme bon : rien de
-    mauvais ne peut lui arriver, {green}**ni dans la vie, ni dans la mort**{/green}, {coral}puisque{/coral}
-    {coral}seule l'injustice, un mal de l'âme, mérite ce nom, et qu'un homme bon ne la{/coral}
-    {coral}commet pas{/coral}.
+    Socrate reproche aux Athéniens de courir après la {red}**richesse**{/red}, la {red}**réputation**{/red} et l'{red}**honneur**{/red}, sans se soucier ni de la {green}**sagesse**{/green}, ni de la {green}**vérité**{/green}, ni du soin de rendre leur {green}**âme**{/green} meilleure : {amber}la hiérarchie qui organise tout son discours (l'âme avant les biens extérieurs){/amber} trouve ici sa formulation la plus directe.
+
+    Il en tire une conséquence radicale sur le sort de l'homme bon : rien de mauvais ne peut lui arriver, {green}**ni dans la vie, ni dans la mort**{/green}, {coral}puisque seule l'injustice, un mal de l'âme, mérite ce nom, et qu'un homme bon ne la commet pas{/coral}.
+
+    **Le taon.** Socrate décrit sa mission d'aiguillon moral par {yellow}une image animale : il se compare à **un taon** (30e-31a), dont la piqûre importune mais réveille{/yellow}. La cité est comme un grand cheval paresseux, que le taon empêche de s'endormir.
+
+    **L'élenchos.** Sa méthode de questionnement porte un nom, {violet}l'**élenchos**{/violet} [`elenchein`] : le verbe grec dont il dérive signifie {teal}« faire honte »{/teal}, ce qui suggère une première finalité de la méthode : {green}pousser ses concitoyens vers la vertu en leur faisant honte de leur ignorance prétendue{/green}.
+
+    ! Le soin de l'âme n'est pas {red}un mépris du corps{/red} : c'est {green}un ordre de priorité{/green}, les biens extérieurs n'ayant de valeur que par l'âme qui en use.
   passage:
     label: "Prolongement"
   points:
-  - id: m6-l2-p1
+  - id: "m6-l2-p1"
     sentence: "Dans l'Apologie, Socrate reproche aux Athéniens de courir après **la richesse, la réputation et l'honneur** __sans se soucier de__ ___, de la vérité, ni du soin de rendre leur âme meilleure"
     answer: "la sagesse"
     alt: []
-  - id: m6-l2-p2
+  - id: "m6-l2-p2"
     sentence: "Dans l'Apologie, Socrate reproche aux Athéniens de courir après **la richesse, la réputation et l'honneur** __sans se soucier de la sagesse, de__ ___, ni du soin de rendre leur âme meilleure"
     answer: "la vérité"
     alt: []
-  - id: m6-l2-p3
+  - id: "m6-l2-p3"
     sentence: "Dans l'Apologie, Socrate reproche aux Athéniens de courir après **la richesse, la réputation et l'honneur** sans se soucier de la sagesse, de la vérité, __ni du soin de rendre leur__ ___ meilleure"
     answer: "âme"
     alt: []
-  - id: m6-l2-p4
+  - id: "m6-l2-p4"
     sentence: "Dans l'Apologie, Socrate soutient que __rien de mauvais ne peut arriver à__ ___, **ni dans la vie, ni dans la mort**"
     answer: "un homme bon"
     alt: []
-- id: m6-l7
-  title: "Le taon et l'élenchos"
-  notes: |-
-    Socrate décrit sa mission d'aiguillon moral par {yellow}une image animale : il se compare à **un taon** (30e-31a), dont la piqûre importune mais réveille{/yellow}.
-
-    Sa méthode de questionnement porte un nom, {violet}l'**élenchos**{/violet} [`elenchein`] : le verbe grec dont il dérive signifie {teal}« faire honte »{/teal}, ce qui suggère une première finalité de la méthode : {green}pousser ses concitoyens vers la vertu en leur faisant honte de leur ignorance prétendue{/green}.
-  passage:
-    label: "Prolongement"
-  points:
-  - id: m6-l7-p1
+  - id: "m6-l7-p1"
     sentence: "Socrate décrit sa **mission d'aiguillon moral** auprès de ses concitoyens par une image animale : __il se compare à__ ___ (30e-31a)"
     answer: "un taon"
     alt: []
-  - id: m6-l7-p2
+  - id: "m6-l7-p2"
     sentence: "**L'élenchos** a peut-être été développé par Socrate pour faire honte à ses concitoyens et les pousser vers la vertu : __le mot dérive en effet du verbe grec__ ___, qui signifie « faire honte »."
     answer: "elenchein"
     alt: []
-- id: m6-l9
+- id: "m6-l9"
   title: "Une défense sincère ou stratégique ?"
   notes: |-
     Sur la vie après la mort, Socrate se présente dans l'Apologie comme
@@ -341,19 +331,19 @@ lessons:
   passage:
     label: "Prolongement"
   points:
-  - id: m6-l9-p1
+  - id: "m6-l9-p1"
     sentence: "**Sur la vie après la mort**, __Socrate se présente dans l'Apologie comme__ ___, alors que d'autres dialogues le montrent engagé en faveur de l'immortalité de l'âme"
     answer: "agnostique"
     alt: []
-  - id: m6-l9-p2
+  - id: "m6-l9-p2"
     sentence: "Selon **Leibowitz**, la défense que Socrate présente à son procès __ne serait pas sincère mais__ ___ : Socrate ne chercherait pas vraiment l'acquittement"
     answer: "ironique"
     alt: []
-  - id: m6-l9-p3
+  - id: "m6-l9-p3"
     sentence: "**L'objectif habituel d'une plaidoirie judiciaire** est l'acquittement ; __ce que semble viser Socrate est tout autre, à savoir faire apparaître__ ___, quitte à indisposer le jury"
     answer: "la vérité de sa vie"
     alt: []
-  - id: m6-l9-p4
+  - id: "m6-l9-p4"
     sentence: "Alors même qu'il commence l'Apologie par le **désaveu habituel de tout art oratoire**, __Socrate parle avec assez de maîtrise pour que son discours illustre un manuel de__ ___"
     answer: "(technique) rhétorique"
     alt: []
