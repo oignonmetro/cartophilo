@@ -1,0 +1,681 @@
+# Cours d'une œuvre (skill cours-oeuvre, piste Œuvres de La vie, voir
+# content/philosophie.md) : Platon, Phédon, les trois premiers arguments (69e-84b).
+# Citations : traduction de Monique Dixsaut, GF-Flammarion, 1991 ; repères :
+# pagination Stephanus. Analyse : introduction et notes de Dixsaut, recoupées avec
+# le notebook NotebookLM « Platon, le Phédon »
+# (https://notebook.google.com/notebook/94dc410f-59bd-4f81-a649-e363a6ee0de4).
+
+id: platon-phedon-arguments
+title: "Les trois premiers arguments (69e-84b)"
+subtitle: "Contraires, réminiscence, affinité : l'âme avant la naissance et après la mort"
+icon: compass
+color: sky
+group: "Platon : Phédon"
+lessons:
+- id: platon-phedon-arguments-l1
+  title: "Repérage : les trois premiers arguments (69e-84b)"
+  notes: |-
+    L'apologie a laissé Cébès sur sa faim : elle supposait que l'âme subsiste après la mort, sans le prouver. Socrate avance alors **trois arguments**, qui répondent chacun à une part de la crainte : {coral}l'âme existe après la mort{/coral} (les contraires), {coral}elle existait avant la naissance et pensait{/coral} (la réminiscence), {coral}elle est d'une nature qui ne se disperse pas{/coral} (l'affinité). Chacun établit quelque chose, aucun n'établit tout : c'est ce que les objections révéleront.
+
+    | Moment | Lieu | Ce qui s'y joue |
+    | la demande de Cébès | 69e-70b | l'âme ne se dissipe-t-elle pas comme un souffle ? il faut prouver qu'elle existe et pense après la mort |
+    | le devenir entre contraires | 70c-72e | tout contraire naît de son contraire : les vivants naissent des morts, sinon tout finirait mort |
+    | la réminiscence | 72e-77a | juger les choses égales déficientes suppose de connaître l'égal en soi avant la naissance |
+    | intermède | 77a-78b | les deux arguments réunis ; l'enfant qui a peur réclame une incantation |
+    | l'affinité | 78b-80c | l'âme ressemble à l'invisible, toujours même que soi : elle est indissoluble, ou presque |
+    | le sort des âmes | 80c-84b | l'âme pure va vers l'invisible ; l'âme alourdie par le corps lui reste enchaînée |
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: platon-phedon-arguments-l1-q1
+    sentence: "Le premier argument du *Phédon*, celui des contraires, occupe les pages ___ : les vivants naissent des morts."
+    answer: "70c-72e"
+    alt: []
+  - id: platon-phedon-arguments-l1-q2
+    sentence: "L'argument de la réminiscence (72e-77a) établit que notre âme existait ___ notre naissance."
+    answer: "avant"
+    alt: []
+  - id: platon-phedon-arguments-l1-q3
+    sentence: "L'argument de l'affinité (78b-80c) conclut que l'âme est « totalement indissoluble, ou ___ »."
+    answer: "presque"
+    alt: []
+  - id: platon-phedon-arguments-l1-q4
+    sentence: "Aucun des trois premiers arguments n'établit tout : ce sont les ___ de Simmias et de Cébès qui le révéleront."
+    answer: "objections"
+    alt: []
+- id: platon-phedon-arguments-l2
+  title: "La demande de Cébès et la loi des contraires (69e-71b)"
+  notes: |-
+    Le premier argument ouvre la partie démonstrative du dialogue. Il répond à une crainte précise, celle d'une âme qui se dissiperait à la mort, et s'appuie sur une loi très générale : {green}__tout ce qui a un contraire naît de son contraire__{/green}.
+
+    **La demande de Cébès.** Cébès trouve excellent ce qu'a dit Socrate, mais les hommes ont du mal à croire qu'une fois séparée du corps l'âme existe encore ; ils craignent qu'elle ne s'en aille {yellow}« comme un souffle ou une fumée »{/yellow} et ne soit plus rien. Il faudrait donc une parole qui rassure et qui convainque {amber}« que l'âme existe après que l'homme est mort, qu'elle conserve aussi une certaine force et de la pensée »{/amber}. Deux choses sont demandées : que l'âme **existe** encore, et qu'elle **pense** encore. Le premier argument ne répondra qu'à la première.
+
+    **Le point de départ : une antique tradition.** Socrate pose la question en termes d'Hadès : les âmes des morts y existent-elles ? Une {sky}« antique tradition »{/sky}, celle de la palingénésie (orphique ou pythagoricienne), dit que les âmes vont là-bas, puis reviennent ici et {teal}« naissent à partir des morts »{/teal}. Si c'est vrai, nos âmes doivent exister là-bas, car {coral}« elles ne pourraient en aucune façon naître à nouveau si elles n'avaient pas d'être »{/coral}. Il suffit donc de montrer {teal}« que les vivants ne proviennent d'absolument rien d'autre que des morts »{/teal}. La tradition ne sert pas d'autorité : elle fournit l'hypothèse que le raisonnement va mettre à l'épreuve.
+
+    **La loi : tout contraire naît de son contraire.** Pour le comprendre facilement, il faut l'examiner non seulement chez les hommes, mais chez tous les animaux, toutes les plantes, toutes les choses qui ont un devenir. Quand une chose devient {yellow}plus grande{/yellow}, c'est nécessairement après avoir été plus petite ; le plus faible vient du plus fort, le plus rapide du plus lent, le pire du meilleur. La loi n'est pas une observation de physicien : elle découle de ce que veut dire **devenir**. Devenir, c'est passer d'un état à un autre ; si l'état d'arrivée a un contraire, l'état de départ ne peut être que ce contraire. On ne devient pas grand en partant de rien, mais en partant du petit.
+
+    **Entre deux contraires, deux devenirs.** Puisqu'il y a deux termes, il y a aussi {teal}« un double devenir »{/teal}, de l'un vers l'autre et de l'autre vers l'un : {yellow}s'accroître et diminuer, se diviser et se rassembler, se refroidir et se réchauffer{/yellow}. Même quand nous n'avons pas de mot pour l'un des deux devenirs, il faut qu'il existe, car le parcours d'un pôle à l'autre est réversible. C'est cette seconde loi qui fera tout le poids de l'argument.
+
+    ! La loi porte sur les choses qui deviennent et sur des contraires relatifs (plus grand, plus petit), non sur les Formes : le grand en soi ne devient jamais petit (102d-103c).
+    ! Le premier argument répond à la crainte de la dispersion, non à la question de la pensée : il dira que l'âme existe, non qu'elle pense.
+  points:
+  - id: platon-phedon-arguments-l2-q1
+    sentence: "Les hommes craignent qu'une fois séparée du corps, l'âme ne s'en aille « comme un souffle ou une ___ »."
+    answer: "fumée"
+    alt: []
+  - id: platon-phedon-arguments-l2-q2
+    sentence: "« sans doute est-il grand besoin ici d'une parole qui **___** et qui nous convainque que l'âme __existe après que l'homme est mort__, qu'elle conserve aussi une certaine force et de la **pensée** »"
+    answer: "rassure"
+    alt: []
+  - id: platon-phedon-arguments-l2-q3
+    sentence: "« sans doute est-il grand besoin ici d'une parole qui **rassure** et qui nous convainque que l'âme ___, qu'elle conserve aussi une certaine force et de la **pensée** »"
+    answer: "existe après que l'homme est mort"
+    alt: []
+  - id: platon-phedon-arguments-l2-q4
+    sentence: "« sans doute est-il grand besoin ici d'une parole qui **rassure** et qui nous convainque que l'âme __existe après que l'homme est mort__, qu'elle conserve aussi une certaine force et de la **___** »"
+    answer: "pensée"
+    alt: []
+  - id: platon-phedon-arguments-l2-q5
+    sentence: "Selon une « antique tradition », les âmes vont dans l'Hadès puis reviennent ici et « naissent à partir des ___ »."
+    answer: "morts"
+    alt: []
+  - id: platon-phedon-arguments-l2-q6
+    sentence: "Les âmes doivent exister dans l'Hadès, car « elles ne pourraient en aucune façon naître à nouveau si elles n'avaient pas d'___ »."
+    answer: "être"
+    alt: []
+  - id: platon-phedon-arguments-l2-q7
+    sentence: "Il suffirait de montrer « que les vivants ne proviennent d'absolument rien d'autre que des ___ »."
+    answer: "morts"
+    alt: []
+  - id: platon-phedon-arguments-l2-q8
+    sentence: "La loi : quand une chose devient plus grande, c'est nécessairement après avoir été plus ___."
+    answer: "petite"
+    alt: []
+  - id: platon-phedon-arguments-l2-q9
+    sentence: "La loi des contraires découle de ce que veut dire ___ : passer d'un état à un autre, l'état de départ étant le contraire de l'état d'arrivée."
+    answer: "devenir"
+    alt: []
+  - id: platon-phedon-arguments-l2-q10
+    sentence: "Entre deux contraires se produit « un double ___ », de l'un vers l'autre et de l'autre vers l'un."
+    answer: "devenir"
+    alt: []
+  - id: platon-phedon-arguments-l2-q11
+    sentence: "Exemples de doubles devenirs : s'accroître et diminuer, se diviser et se rassembler, se refroidir et se ___."
+    answer: "réchauffer"
+    alt: []
+  - id: platon-phedon-arguments-l2-q12
+    sentence: "Le double devenir existe même quand nous n'avons pas de ___ pour l'un des deux processus."
+    answer: "mot"
+    alt: []
+- id: platon-phedon-arguments-l3
+  title: "Vivre et être mort : pourquoi la nature ne peut pas boiter (71b-72e)"
+  notes: |-
+    Socrate applique les deux lois au couple qui l'intéresse, et montre par l'absurde que le devenir doit être **circulaire** : {green}__si les vivants meurent, il faut que des morts reviennent à la vie__{/green}, sans quoi tout finirait mort.
+
+    **Dormir et veiller, vivre et être mort.** Socrate prend d'abord un couple familier : {yellow}dormir et être éveillé{/yellow}. De dormir vient être éveillé, et d'être éveillé, dormir ; les deux devenirs sont s'endormir et s'éveiller. Le choix n'est pas innocent : Sommeil et Mort sont frères chez Homère et Hésiode. Cébès applique ensuite le schéma : être mort est le contraire de vivre ; du vivant vient le mort, et du mort, il faut l'accorder, le vivant. Conclusion : {coral}« Elles existent donc bien, [...] nos âmes à nous, dans l'Hadès »{/coral}.
+
+    **La nature ne doit pas boiter.** Des deux devenirs, l'un est évident : mourir. Faut-il le laisser sans contrepartie ? {red}« En ce cas la nature sera boiteuse »{/red}. Il faut donc le compenser par le devenir inverse, le {violet}« revivre »{/violet} (*anabiôskesthai*), qui va des morts aux vivants. Le mot ne désigne pas une seconde vie qui s'ajouterait à la première, mais le passage de l'état de mort à l'état de vie.
+
+    **La preuve par l'absurde : un devenir en ligne droite.** Supposons que le devenir aille {red}« en ligne droite »{/red}, d'un terme à son opposé, {teal}« sans jamais faire retour vers le premier terme ni décrire le tournant »{/teal} (image de la course au stade, où l'on tourne autour de la borne pour revenir). Alors toutes choses finiraient par avoir le même aspect et cesseraient de devenir :
+    - si l'on s'endormait sans jamais se réveiller, l'aventure d'{yellow}Endymion{/yellow}, endormi pour toujours, ne serait qu'une plaisanterie, puisque tout dormirait comme lui
+    - si tout se rassemblait sans jamais se diviser, la formule d'{sky}Anaxagore{/sky}, {teal}« Ensemble sont toutes choses »{/teal}, serait vite accomplie
+    - de même, si tout ce qui vit mourait et que rien ne revînt à la vie, {red}« n'est-ce pas une nécessité absolue qu'à la fin tout soit mort, et rien ne vive ? »{/red}
+
+    La prémisse implicite qui rend l'argument contraignant est que **la vie ne peut pas s'épuiser** : il y a toujours des vivants. Or, si les vivants venaient d'autres vivants et mouraient sans retour, mourir voudrait dire retourner au néant, et rien n'empêcherait que tout soit à la fin {teal}« englouti dans la mort »{/teal}. Puisque ce n'est pas le cas, le revivre existe, et les âmes des morts existent quelque part.
+
+    **Ce que l'argument établit, et ce qu'il n'établit pas.** Socrate conclut que le revivre existe, que les vivants viennent des morts, que les âmes des morts existent, {teal}« et même que du meilleur est réservé aux âmes bonnes, et du pire aux mauvaises »{/teal}. Cette dernière phrase ne découle pas du raisonnement : elle reprend la tradition (celle que cite le *Ménon*) et l'espoir de l'apologie. L'argument montre qu'**une âme subsiste** et parcourt le cycle des naissances ; il ne montre ni qu'elle pense, ni qu'elle reste la même âme, ni qu'elle ne finira pas par s'épuiser au fil des cycles (ce sera l'objection de Cébès, 86e-88b).
+
+    ! « Revivre » ne veut pas dire vivre une seconde fois la même vie : c'est passer de l'état de mort à l'état de vie.
+    ! L'argument prouve la subsistance d'un principe qui parcourt le cycle, non l'immortalité d'une âme qui pense.
+  points:
+  - id: platon-phedon-arguments-l3-q1
+    sentence: "Pour faire comprendre le couple vivre et être mort, Socrate prend d'abord le couple dormir et être ___."
+    answer: "éveillé"
+    alt: []
+  - id: platon-phedon-arguments-l3-q2
+    sentence: "Le choix du sommeil n'est pas innocent : chez Homère et Hésiode, Sommeil et Mort sont ___."
+    answer: "frères"
+    alt: []
+  - id: platon-phedon-arguments-l3-q3
+    sentence: "De ce qui est vivant vient ce qui est mort ; de ce qui est mort, on doit convenir que vient ce qui est ___."
+    answer: "vivant"
+    alt: []
+  - id: platon-phedon-arguments-l3-q4
+    sentence: "Si l'on laissait le « mourir » sans le devenir inverse, « en ce cas la nature sera ___ »."
+    answer: "boiteuse"
+    alt: []
+  - id: platon-phedon-arguments-l3-q5
+    sentence: "Le devenir qui compense le mourir et va des morts aux vivants s'appelle le « ___ »."
+    answer: "revivre"
+    alt: []
+  - id: platon-phedon-arguments-l3-q6
+    sentence: "« Car si les choses en devenir ne **___** pas perpétuellement les unes les autres, tout à fait comme si elles opéraient **un parcours circulaire**, si au contraire il y avait une sorte de devenir **en ligne droite**, allant seulement d'un terme vers son opposé, sans jamais faire retour vers le premier terme ni **décrire le tournant**, tu vois bien que toutes choses finiraient par offrir le même aspect »"
+    answer: "s'équilibraient"
+    alt: []
+  - id: platon-phedon-arguments-l3-q7
+    sentence: "« Car si les choses en devenir ne **s'équilibraient** pas perpétuellement les unes les autres, tout à fait comme si elles opéraient **___**, si au contraire il y avait une sorte de devenir **en ligne droite**, allant seulement d'un terme vers son opposé, sans jamais faire retour vers le premier terme ni **décrire le tournant**, tu vois bien que toutes choses finiraient par offrir le même aspect »"
+    answer: "un parcours circulaire"
+    alt: []
+  - id: platon-phedon-arguments-l3-q8
+    sentence: "« Car si les choses en devenir ne **s'équilibraient** pas perpétuellement les unes les autres, tout à fait comme si elles opéraient **un parcours circulaire**, si au contraire il y avait une sorte de devenir **___**, allant seulement d'un terme vers son opposé, sans jamais faire retour vers le premier terme ni **décrire le tournant**, tu vois bien que toutes choses finiraient par offrir le même aspect »"
+    answer: "en ligne droite"
+    alt: []
+  - id: platon-phedon-arguments-l3-q9
+    sentence: "« Car si les choses en devenir ne **s'équilibraient** pas perpétuellement les unes les autres, tout à fait comme si elles opéraient **un parcours circulaire**, si au contraire il y avait une sorte de devenir **en ligne droite**, allant seulement d'un terme vers son opposé, sans jamais faire retour vers le premier terme ni **___**, tu vois bien que toutes choses finiraient par offrir le même aspect »"
+    answer: "décrire le tournant"
+    alt: []
+  - id: platon-phedon-arguments-l3-q10
+    sentence: "« Décrire le tournant » est une image empruntée à la course au ___, où l'on tourne autour de la borne pour revenir au point de départ."
+    answer: "stade"
+    alt: []
+  - id: platon-phedon-arguments-l3-q11
+    sentence: "Si l'on s'endormait sans jamais se réveiller, l'aventure d'___, endormi pour toujours, ne serait qu'une plaisanterie."
+    answer: "Endymion"
+    alt: []
+  - id: platon-phedon-arguments-l3-q12
+    sentence: "Si tout se rassemblait sans jamais se diviser, la formule d'___, « Ensemble sont toutes choses », serait vite accomplie."
+    answer: "Anaxagore"
+    alt: []
+  - id: platon-phedon-arguments-l3-q13
+    sentence: "Si tout ce qui vit mourait sans revenir à la vie, « n'est-ce pas une nécessité absolue qu'à la fin tout soit ___, et rien ne vive ? »"
+    answer: "mort"
+    alt: []
+  - id: platon-phedon-arguments-l3-q14
+    sentence: "La prémisse implicite de la preuve par l'absurde : la ___ ne peut pas s'épuiser, il y a toujours des vivants."
+    answer: "vie"
+    alt: []
+  - id: platon-phedon-arguments-l3-q15
+    sentence: "L'argument des contraires montre qu'une âme subsiste et parcourt le cycle des naissances, non qu'elle ___ encore après la mort."
+    answer: "pense"
+    alt: []
+- id: platon-phedon-arguments-l4
+  title: "La réminiscence : percevoir une chose, en concevoir une autre (72e-74a)"
+  notes: |-
+    Cébès relance le dialogue : si **apprendre, c'est se ressouvenir**, notre âme existait avant d'entrer dans un corps. L'argument de la réminiscence va le montrer, et donner du même coup ce qui manquait au premier : {green}__une âme qui pense__{/green}.
+
+    **La preuve rappelée par Cébès.** Selon une formule que Socrate a coutume de répéter, {teal}« l'acquisition d'un savoir se trouve n'être rien d'autre qu'une réminiscence »{/teal} : il faut donc que nous ayons appris auparavant ce dont nous nous souvenons, ce qui serait impossible si l'âme n'existait pas avant d'entrer {teal}« dans cette forme humaine »{/teal}. La preuve, dit Cébès, est que les hommes bien interrogés {teal}« d'eux-mêmes, ils disent tout ce qui est comme c'est »{/teal}, surtout devant des {yellow}figures géométriques{/yellow} : c'est l'expérience du {sky}*Ménon*{/sky}, où un esclave retrouve seul une vérité de géométrie. Simmias ne s'en souvient pas bien : Socrate reprend autrement, en partant non des figures, mais d'**une sensation quelconque**.
+
+    **Ce qu'est se ressouvenir.** Deux conditions. D'abord, pour se ressouvenir d'une chose, il faut l'avoir sue auparavant. Ensuite, il y a réminiscence quand, percevant une chose par un sens, {amber}« non seulement on perçoit cette chose, mais on conçoit en plus une autre chose »{/amber}, qui relève d'un autre savoir. Le passage se fait de ce qu'on perçoit à ce qu'on ne perçoit pas.
+
+    **Les exemples : la lyre, le portrait.** Les amants, à la vue d'une {yellow}lyre{/yellow} ou d'un manteau de celui qu'ils aiment, pensent aussitôt au garçon à qui la lyre appartient : c'est une réminiscence. Voir Simmias fait souvent penser à Cébès ; voir le dessin d'un cheval peut faire penser à un homme. On se ressouvient donc à partir du **dissemblable** (la lyre fait penser à l'aimé) comme du **semblable** (le {yellow}portrait de Simmias{/yellow} fait penser à Simmias lui-même).
+
+    **Le semblable oblige à juger de ce qui manque.** Mais quand on se ressouvient à partir d'une chose semblable, on est forcé de {coral}juger de ce qui manque à l'image pour ressembler à son modèle{/coral}. Juger qu'un portrait est imparfait, c'est le mesurer à l'original, qu'il faut donc déjà connaître. Encore faut-il désirer l'original : pour celui qui n'aime pas, une lyre n'est qu'une lyre ; c'est l'amant qui sent ce qui manque au portrait. La réminiscence suppose ainsi un regard d'amoureux, ou de philosophe.
+
+    ! La réminiscence ne part pas seulement des figures géométriques, comme dans le *Ménon* : dans le *Phédon*, n'importe quelle sensation peut en être l'occasion.
+    ! Se ressouvenir n'est pas recevoir une information du dehors : c'est concevoir, à l'occasion d'une perception, ce qu'on savait déjà.
+  points:
+  - id: platon-phedon-arguments-l4-q1
+    sentence: "Selon la formule que rappelle Cébès, « l'acquisition d'un savoir se trouve n'être rien d'autre qu'une ___ »."
+    answer: "réminiscence"
+    alt: []
+  - id: platon-phedon-arguments-l4-q2
+    sentence: "Si apprendre est se ressouvenir, l'âme existait avant d'être entrée « dans cette ___ humaine »."
+    answer: "forme"
+    alt: []
+  - id: platon-phedon-arguments-l4-q3
+    sentence: "La preuve de Cébès : interrogés comme il faut, les hommes « d'eux-mêmes, ils disent tout ce qui est comme c'est », surtout devant des ___ géométriques."
+    answer: "figures"
+    alt: []
+  - id: platon-phedon-arguments-l4-q4
+    sentence: "L'expérience d'un esclave qui retrouve seul une vérité de géométrie, à laquelle renvoie Cébès, se trouve dans le ___."
+    answer: "Ménon"
+    alt: ["*Ménon*"]
+  - id: platon-phedon-arguments-l4-q5
+    sentence: "« toutes les fois que voyant une chose ou l'entendant, ou la saisissant par une **___**, non seulement on **perçoit** cette chose, mais on **conçoit** en plus __une autre chose__ »"
+    answer: "sensation quelconque"
+    alt: []
+  - id: platon-phedon-arguments-l4-q6
+    sentence: "« toutes les fois que voyant une chose ou l'entendant, ou la saisissant par une **sensation quelconque**, non seulement on **___** cette chose, mais on **conçoit** en plus __une autre chose__ »"
+    answer: "perçoit"
+    alt: []
+  - id: platon-phedon-arguments-l4-q7
+    sentence: "« toutes les fois que voyant une chose ou l'entendant, ou la saisissant par une **sensation quelconque**, non seulement on **perçoit** cette chose, mais on **___** en plus __une autre chose__ »"
+    answer: "conçoit"
+    alt: []
+  - id: platon-phedon-arguments-l4-q8
+    sentence: "« toutes les fois que voyant une chose ou l'entendant, ou la saisissant par une **sensation quelconque**, non seulement on **perçoit** cette chose, mais on **conçoit** en plus ___ »"
+    answer: "une autre chose"
+    alt: []
+  - id: platon-phedon-arguments-l4-q9
+    sentence: "Pour se ressouvenir d'une chose, il faut qu'auparavant on en ait eu un ___."
+    answer: "savoir"
+    alt: []
+  - id: platon-phedon-arguments-l4-q10
+    sentence: "À la vue d'une ___ appartenant à celui qu'ils aiment, les amants pensent aussitôt au garçon : c'est une réminiscence."
+    answer: "lyre"
+    alt: []
+  - id: platon-phedon-arguments-l4-q11
+    sentence: "D'après ces exemples, « la réminiscence s'opère aussi bien à partir de choses semblables qu'à partir de choses ___ »."
+    answer: "dissemblables"
+    alt: []
+  - id: platon-phedon-arguments-l4-q12
+    sentence: "Quand on se ressouvient à partir d'une chose semblable, on est forcé de juger de ce qui ___ à l'image pour ressembler à son modèle."
+    answer: "manque"
+    alt: []
+  - id: platon-phedon-arguments-l4-q13
+    sentence: "Juger qu'un portrait est imparfait suppose de le mesurer à l'___, qu'il faut donc déjà connaître."
+    answer: "original"
+    alt: []
+- id: platon-phedon-arguments-l5
+  title: "L'égal en soi : pourquoi il faut l'avoir connu avant de percevoir (74a-75c)"
+  notes: |-
+    Le cœur de l'argument est un exemple choisi avec soin : **l'égal**. Socrate montre que {green}__nous ne pouvons pas tirer des choses égales la connaissance de l'égal lui-même__{/green}, puisque c'est elle qui nous permet de les juger déficientes.
+
+    **L'égal lui-même.** Il existe de l'égal : non l'égalité d'{yellow}un bout de bois et d'un bout de bois, d'un caillou et d'un caillou{/yellow}, mais quelque chose de différent, {teal}« l'égal lui-même »{/teal}. Simmias l'accorde avec force : c'est {teal}« incroyablement quelque chose »{/teal}, et nous savons ce qu'il est.
+
+    **Il n'est pas les choses égales.** D'où vient ce savoir ? Des bouts de bois égaux ? Mais ils apparaissent {red}« égaux à un moment, mais non à un autre »{/red}, tout en restant les mêmes (égaux selon qu'on les mesure, qu'on les regarde de près ou de loin, ou qu'on les compare à autre chose). Au contraire, l'égal en soi ne nous est jamais apparu inégal. Ce qui peut paraître inégal ne peut pas être ce qui ne le paraît jamais : {coral}les choses égales et l'égal en soi ne sont pas la même chose{/coral}.
+
+    **Et pourtant on le conçoit à partir d'elles.** C'est bien à l'occasion de ces choses égales que nous avons conçu l'égal. Peu importe qu'elles lui ressemblent ou non : dès que voir une chose fait concevoir une autre, il y a réminiscence.
+
+    **La déficience : ce que les choses égales « aspirent » à être.** Les bouts de bois égaux ne paraissent pas égaux comme l'égal lui-même : il leur manque quelque chose, {teal}« et pas qu'un peu »{/teal}. Quand on juge ainsi que ce qu'on voit {amber}« souhaite » être semblable à une autre réalité, mais « reste en défaut »{/amber}, il faut avoir connu auparavant cette réalité. Le raisonnement repose sur une prémisse que l'empiriste ne peut pas refuser : **on ne peut mesurer un écart qu'à une règle qu'on possède déjà**. Celui qui dirait que nous formons l'idée d'égalité parfaite en idéalisant des choses à peu près égales suppose ce qu'il veut expliquer : pour dire « à peu près égal », il faut déjà savoir ce qu'est l'égal.
+
+    **Donc avant toute perception, donc avant la naissance.** Or c'est seulement par les sens que nous pouvons remarquer que toutes les égalités sensibles aspirent à l'égal en soi sans l'atteindre. Il faut donc avoir possédé le savoir de l'égal {teal}« avant d'avoir commencé à voir, à entendre, à user de nos autres sens »{/teal}. Mais nous voyons et entendons dès la naissance : ce savoir, nous l'avons donc acquis {green}avant de naître{/green}.
+
+    ! La sensation n'est plus ici un simple obstacle, comme dans l'apologie : elle est l'occasion nécessaire du ressouvenir, à condition d'y lire un manque.
+    ! L'égal en soi n'est pas tiré des choses égales par abstraction : il est la règle qui permet de les juger égales et déficientes.
+  points:
+  - id: platon-phedon-arguments-l5-q1
+    sentence: "« Nous disons bien, je pense, qu'il existe de l'égal — je ne parle pas de l'égalité entre **___**, un caillou et un caillou, ni de rien d'autre de ce genre, non, mais de quelque chose qui, comparé à tout cela, est différent : **l'égal lui-même**. »"
+    answer: "un bout de bois et un bout de bois"
+    alt: []
+  - id: platon-phedon-arguments-l5-q2
+    sentence: "« Nous disons bien, je pense, qu'il existe de l'égal — je ne parle pas de l'égalité entre **un bout de bois et un bout de bois**, un caillou et un caillou, ni de rien d'autre de ce genre, non, mais de quelque chose qui, comparé à tout cela, est différent : **___**. »"
+    answer: "l'égal lui-même"
+    alt: []
+  - id: platon-phedon-arguments-l5-q3
+    sentence: "Simmias accorde que l'égal lui-même est quelque chose, et même « ___ quelque chose »."
+    answer: "incroyablement"
+    alt: []
+  - id: platon-phedon-arguments-l5-q4
+    sentence: "Des bouts de bois égaux apparaissent parfois, tout en restant les mêmes, « égaux à un moment, mais non à un ___ »."
+    answer: "autre"
+    alt: []
+  - id: platon-phedon-arguments-l5-q5
+    sentence: "L'égal en soi ne nous est jamais apparu ___ : il ne peut donc pas être la même chose que les choses égales."
+    answer: "inégal"
+    alt: []
+  - id: platon-phedon-arguments-l5-q6
+    sentence: "Peu importe que les choses égales ressemblent ou non à l'égal en soi : dès que voir une chose en fait concevoir une autre, il y a ___."
+    answer: "réminiscence"
+    alt: []
+  - id: platon-phedon-arguments-l5-q7
+    sentence: "Les bouts de bois égaux ne paraissent pas égaux comme l'égal lui-même : il leur manque quelque chose, « et pas qu'un ___ »."
+    answer: "peu"
+    alt: []
+  - id: platon-phedon-arguments-l5-q8
+    sentence: "« ce qu'elle **___**, cette chose que moi je vois maintenant, c'est être semblable à une autre réalité, mais elle **reste en défaut** et elle est impuissante à être égale de la même façon que l'autre, en vérité elle est **plus imparfaite** »"
+    answer: "souhaite"
+    alt: []
+  - id: platon-phedon-arguments-l5-q9
+    sentence: "« ce qu'elle **souhaite**, cette chose que moi je vois maintenant, c'est être semblable à une autre réalité, mais elle **___** et elle est impuissante à être égale de la même façon que l'autre, en vérité elle est **plus imparfaite** »"
+    answer: "reste en défaut"
+    alt: []
+  - id: platon-phedon-arguments-l5-q10
+    sentence: "« ce qu'elle **souhaite**, cette chose que moi je vois maintenant, c'est être semblable à une autre réalité, mais elle **reste en défaut** et elle est impuissante à être égale de la même façon que l'autre, en vérité elle est **___** »"
+    answer: "plus imparfaite"
+    alt: []
+  - id: platon-phedon-arguments-l5-q11
+    sentence: "Prémisse implicite de la réminiscence : on ne peut mesurer un écart qu'à une ___ qu'on possède déjà."
+    answer: "règle"
+    alt: []
+  - id: platon-phedon-arguments-l5-q12
+    sentence: "Idéaliser des choses « à peu près égales » suppose déjà de savoir ce qu'est l'___ : l'empirisme présuppose ce qu'il veut expliquer."
+    answer: "égal"
+    alt: []
+  - id: platon-phedon-arguments-l5-q13
+    sentence: "Il fallait posséder le savoir de l'égal « avant d'avoir commencé à voir, à entendre, à user de nos autres ___ »."
+    answer: "sens"
+    alt: []
+  - id: platon-phedon-arguments-l5-q14
+    sentence: "Comme nous voyons et entendons dès la naissance, le savoir de l'égal a été acquis avant de ___."
+    answer: "naître"
+    alt: []
+- id: platon-phedon-arguments-l6
+  title: "Avant la naissance : rendre raison et l'égale nécessité (75c-77a)"
+  notes: |-
+    Socrate étend l'argument à toutes les réalités en soi, tranche un dilemme et conclut par une proposition remarquable : {green}__l'existence de notre âme avant la naissance est aussi nécessaire que celle des réalités en soi__{/green}.
+
+    **L'extension à tout ce qui est « ce que c'est ».** Le raisonnement ne vaut pas plus pour l'égal que pour {teal}« le beau en soi, le bon en soi, ou le juste, ou le pieux »{/teal}, bref pour {amber}« tout ce à quoi nous imprimons la marque "ce que c'est" »{/amber} quand nous interrogeons et répondons. C'est la question du dialecticien, « qu'est-ce que ? », qui désigne ces réalités.
+
+    **Le dilemme : savoir dès la naissance, ou se ressouvenir.** Deux possibilités : {pink}ou bien nous naissons avec ces savoirs et les gardons toute notre vie{/pink}, {green}ou bien nous les avons perdus en naissant et nous les reprenons ensuite{/green}, et c'est ce qu'on appelle apprendre. Car savoir, c'est garder ce qu'on a acquis ; l'oubli est {teal}« la perte d'un savoir »{/teal}. Apprendre serait alors {teal}« reprendre possession d'une science qui nous est propre »{/teal}.
+
+    **Le critère qui tranche : rendre raison.** Simmias ne sait pas choisir. Socrate lui propose un choix plus facile : celui qui sait peut-il {violet}rendre raison{/violet} de ce qu'il sait ? Oui, nécessairement. Or tout le monde peut-il rendre raison du beau, du bien ? Simmias craint qu'il n'y ait plus personne, demain à cette heure, pour le faire. Tous ne savent donc pas ; c'est qu'ils **se ressouviennent** de ce qu'ils ont su. La première branche tombe, la seconde reste.
+
+    **L'objection de la naissance.** Simmias tente une issue : nous recevrions ces savoirs au moment même de naître. Mais nous venons d'accorder qu'à la naissance nous ne les avons pas : il faudrait donc les perdre {red}au moment même où nous les acquérons{/red}, ce qui est absurde. Simmias s'incline : il a {teal}« perdu une bonne occasion de [s]e taire »{/teal}. Nos âmes existaient donc {coral}« avant même d'être entrées dans une forme d'homme »{/coral}, séparées des corps et **douées de pensée** : voilà ce qui manquait au premier argument.
+
+    **L'égale nécessité.** S'il existe {teal}« un beau, un bien, et tout ce qui comporte ce même mode d'existence »{/teal}, et si nous rapportons à lui les données sensibles, alors notre âme existe avant notre naissance ; sinon, tout le raisonnement est vain. {amber}« Il y a égale nécessité d'existence et pour ces réalités et pour nos âmes avant notre naissance »{/amber}. Pour Simmias, rien n'est plus évident que l'être du beau et du bien : la démonstration lui suffit. L'« avant » n'est d'ailleurs pas seulement chronologique : il dit aussi que l'âme pensante a part au mode d'être des réalités qu'elle pense.
+
+    ! Rendre raison n'est pas argumenter ou démontrer : c'est pouvoir dire ce qu'est la chose, ce que fait le dialecticien.
+    ! La réminiscence n'est pas le souvenir des Formes comme d'images innées : c'est la reprise d'un savoir que l'âme ne reçoit pas du dehors.
+  points:
+  - id: platon-phedon-arguments-l6-q1
+    sentence: "Le raisonnement vaut « sur le beau en soi, le bon en soi, ou le juste, ou le pieux — en un mot, sur tout ce à quoi nous imprimons la marque \"___\" »."
+    answer: "ce que c'est"
+    alt: []
+  - id: platon-phedon-arguments-l6-q2
+    sentence: "Dilemme : ou bien nous naissons avec ces savoirs et les gardons toute notre vie, ou bien nous les avons ___ en naissant et nous les reprenons ensuite."
+    answer: "perdus"
+    alt: []
+  - id: platon-phedon-arguments-l6-q3
+    sentence: "Ce que nous appelons oubli, c'est « la ___ d'un savoir »."
+    answer: "perte"
+    alt: []
+  - id: platon-phedon-arguments-l6-q4
+    sentence: "Apprendre serait « reprendre possession d'une science qui nous est ___ »."
+    answer: "propre"
+    alt: []
+  - id: platon-phedon-arguments-l6-q5
+    sentence: "Le critère qui tranche le dilemme : celui qui sait peut ___ de ce qu'il sait."
+    answer: "rendre raison"
+    alt: []
+  - id: platon-phedon-arguments-l6-q6
+    sentence: "Simmias craint qu'il n'y ait bientôt plus personne capable de rendre raison du beau et du bien : c'est que tous ne ___ pas."
+    answer: "savent"
+    alt: []
+  - id: platon-phedon-arguments-l6-q7
+    sentence: "Objection de Simmias : nous recevrions ces savoirs au moment même de ___ ; il faudrait alors les perdre au moment où nous les acquérons."
+    answer: "naître"
+    alt: []
+  - id: platon-phedon-arguments-l6-q8
+    sentence: "« Elles existaient donc, Simmias, ces âmes, **___**, elles étaient __séparées des corps__ et **douées de pensée**. »"
+    answer: "avant même d'être entrées dans une forme d'homme"
+    alt: []
+  - id: platon-phedon-arguments-l6-q9
+    sentence: "« Elles existaient donc, Simmias, ces âmes, **avant même d'être entrées dans une forme d'homme**, elles étaient ___ et **douées de pensée**. »"
+    answer: "séparées des corps"
+    alt: []
+  - id: platon-phedon-arguments-l6-q10
+    sentence: "« Elles existaient donc, Simmias, ces âmes, **avant même d'être entrées dans une forme d'homme**, elles étaient __séparées des corps__ et **___**. »"
+    answer: "douées de pensée"
+    alt: []
+  - id: platon-phedon-arguments-l6-q11
+    sentence: "« Il y a égale ___ d'existence et pour ces réalités et pour nos âmes avant notre naissance »"
+    answer: "nécessité"
+    alt: []
+  - id: platon-phedon-arguments-l6-q12
+    sentence: "Si les réalités en soi n'existent pas, l'âme n'existe pas non plus avant la naissance, et tout le raisonnement est ___."
+    answer: "vain"
+    alt: []
+- id: platon-phedon-arguments-l7
+  title: "Une démonstration faite à moitié ? L'enfant qui a peur (77a-78b)"
+  notes: |-
+    Simmias et Cébès jugent la preuve incomplète : la réminiscence montre que l'âme existait **avant** la naissance, non qu'elle existera **après** la mort. Socrate répond qu'elle est achevée si l'on joint les deux arguments ; mais il reconnaît qu'il reste une peur que les arguments ne suffisent pas à calmer.
+
+    **La moitié manquante.** Pour Simmias, rien n'empêche d'affirmer à la fois que l'âme a son origine ailleurs et existe avant le corps, et qu'une fois entrée dans un corps et séparée de lui, elle subit {red}« sa fin et sa complète corruption »{/red}. La crainte du grand nombre tient toujours. Cébès précise : la démonstration n'a été faite {teal}« qu'à moitié »{/teal}.
+
+    **La jonction des deux arguments.** Socrate répond que la preuve est achevée {teal}« si vous voulez bien articuler en un même raisonnement celui-ci avec le précédent »{/teal}. Le premier a établi que tout ce qui vit naît de ce qui est mort ; le second, que l'âme existe avant de naître. Si l'âme existe avant et que sa naissance ne peut venir que d'une mort, {coral}comment nier qu'elle existe aussi après la mort, puisqu'il lui faut naître de nouveau ?{/coral} La jonction n'est pas sans difficulté : le premier argument parle d'un principe qui parcourt le cycle des vies, le second d'une âme qui pense ; ce n'est pas tout à fait la même âme.
+
+    **L'enfant qui a peur.** Socrate les soupçonne de craindre, {red}« d'une crainte enfantine »{/red}, que le vent n'éparpille l'âme à sa sortie du corps, surtout si l'on meurt {yellow}« lors d'une grande tempête »{/yellow}. Cébès en rit : il y a peut-être en nous {yellow}« comme un enfant »{/yellow} qui a peur de la mort comme d'un croque-mitaine. Cet enfant, c'est la part de nous que la démonstration convainc sans la rassurer.
+
+    **L'incantation.** Il lui faut {teal}« une incantation quotidienne »{/teal} (*epôidê*). Le mot vient de la magie, mais Platon l'emploie pour les beaux discours qui soignent l'âme (*Charmide*) : l'incantation, c'est le raisonnement répété jusqu'à devenir une conviction. Où trouver l'enchanteur, puisque Socrate s'en va ? La Grèce est vaste, et il faut chercher partout sans épargner ni peine ni argent ; mais surtout {coral}les uns parmi les autres{/coral}, car ils trouveront difficilement plus aptes qu'eux-mêmes. C'est dire que la philosophie, en commun, doit prendre le relais de Socrate.
+
+    ! L'incantation n'est pas une formule magique : c'est le discours répété qui transforme une démonstration en conviction.
+    ! Socrate juge la preuve achevée en joignant les deux arguments, mais l'âme qui parcourt le cycle des vies et l'âme qui pense ne sont pas exactement la même.
+  points:
+  - id: platon-phedon-arguments-l7-q1
+    sentence: "Pour Simmias, rien n'empêche que l'âme existe avant le corps, puis subisse, une fois séparée de lui, « sa fin et sa complète ___ »."
+    answer: "corruption"
+    alt: []
+  - id: platon-phedon-arguments-l7-q2
+    sentence: "Selon Cébès, la démonstration n'a été faite « qu'à ___ » : elle montre l'existence de l'âme avant la naissance, non après la mort."
+    answer: "moitié"
+    alt: []
+  - id: platon-phedon-arguments-l7-q3
+    sentence: "Pour Socrate, la preuve est achevée si l'on articule en un même raisonnement la réminiscence et l'argument des ___."
+    answer: "contraires"
+    alt: []
+  - id: platon-phedon-arguments-l7-q4
+    sentence: "Si l'âme existe avant de naître et que sa naissance vient d'une mort, elle doit exister après la mort, puisqu'il lui faut ___ de nouveau."
+    answer: "naître"
+    alt: []
+  - id: platon-phedon-arguments-l7-q5
+    sentence: "Socrate soupçonne Simmias et Cébès de craindre que le vent n'éparpille l'âme, surtout si l'on meurt « lors d'une grande ___ »."
+    answer: "tempête"
+    alt: []
+  - id: platon-phedon-arguments-l7-q6
+    sentence: "Cébès reconnaît qu'il y a peut-être en nous « comme un ___ » qui a peur de la mort comme d'un croque-mitaine."
+    answer: "enfant"
+    alt: []
+  - id: platon-phedon-arguments-l7-q7
+    sentence: "Pour l'enfant qui a peur, il faut « une ___ quotidienne », jusqu'à ce que sa peur soit exorcisée."
+    answer: "incantation"
+    alt: []
+  - id: platon-phedon-arguments-l7-q8
+    sentence: "L'incantation (*epôidê*) désigne, dans le *Charmide*, les beaux ___ qui soignent l'âme."
+    answer: "discours"
+    alt: []
+  - id: platon-phedon-arguments-l7-q9
+    sentence: "Pour trouver l'enchanteur, Simmias et Cébès doivent chercher partout, mais surtout les uns parmi les ___."
+    answer: "autres"
+    alt: []
+- id: platon-phedon-arguments-l8
+  title: "L'affinité : l'âme ressemble à ce qui ne se dissout pas (78b-80c)"
+  notes: |-
+    Le troisième argument prend la crainte au mot : avoir peur que l'âme se disperse, c'est la ranger parmi les choses qui se dispersent. Socrate classe donc les choses en deux espèces et montre que {green}__l'âme ressemble à celle qui ne se dissout pas__{/green}.
+
+    **La bonne question.** {amber}« à quelle espèce de chose peut-il bien convenir de subir une dispersion ? »{/amber} Il faudra ensuite chercher à laquelle des deux espèces appartient l'âme, et en tirer {teal}« confiance ou crainte »{/teal}.
+
+    **Composé et non composé.** Il convient à ce qui a été composé de se décomposer {teal}« exactement selon le même processus que celui qui a présidé à sa composition »{/teal} : se dissoudre, c'est se séparer en ses parties. Ce qui n'est pas composé n'a pas de parties à séparer : {coral}« c'est par excellence à elle, et à elle seule, qu'il convient de ne pas subir ce processus »{/coral}.
+
+    **Ce qui reste même que soi, ce qui change.** Les choses non composées sont vraisemblablement celles qui sont {teal}« toujours mêmes qu'elles-mêmes »{/teal}, comme {yellow}l'égal en soi, le beau en soi{/yellow}, qui ne reçoivent jamais aucune altération parce que chacun {teal}« comporte en soi et par soi une unique forme »{/teal}. Les {yellow}choses belles, hommes, chevaux, vêtements{/yellow}, au contraire, ne sont jamais les mêmes. Les premières ne se saisissent que par le raisonnement : elles sont **invisibles** ; les secondes se voient et se touchent.
+
+    **Deux espèces, et l'âme du côté de l'invisible.** Posons donc deux espèces d'êtres : l'une visible et jamais la même, l'autre invisible et toujours la même. Nous sommes faits d'un corps et d'une âme. Le corps ressemble au visible ; l'âme, que personne ne voit, ressemble davantage à l'invisible.
+
+    **L'âme ivre et l'âme qui pense.** La preuve vient aussi de ce que fait l'âme. Quand elle se sert du corps pour examiner, elle est traînée vers ce qui change {red}« et la voilà en proie à l'errance, au trouble, au vertige, comme si elle était ivre »{/red}. Quand elle examine seule par elle-même, elle s'élance vers ce qui est pur, immortel, toujours semblable à soi, et elle reste semblable à elle-même : {green}« Cet état de l'âme, c'est bien ce qu'on appelle la pensée »{/green}. L'âme se comporte comme ce avec quoi elle est en contact : c'est le signe de sa parenté avec l'invisible.
+
+    **Commander et obéir.** Enfin, quand l'âme et le corps sont ensemble, la nature prescrit à l'âme de **commander**, au corps d'obéir. Or il revient au divin de commander, au mortel d'obéir : l'âme ressemble au divin.
+
+    **La conclusion : indissoluble, ou presque.** L'âme ressemble à ce qui est {coral}« divin, immortel, objet pour l'intelligence, qui possède une forme unique, qui est indissoluble et toujours semblablement même que soi-même »{/coral} ; le corps à ce qui est humain, mortel, multiforme, sujet à dissolution. Il convient donc au corps de se dissoudre vite, et à l'âme {green}« d'être totalement indissoluble, ou presque »{/green}. L'argument ne conclut qu'à une **ressemblance** et à un « presque » : Socrate ne dit jamais que l'âme est non composée, il dit qu'elle ressemble à ce qui ne l'est pas. Elle peut d'ailleurs devenir plus ou moins semblable à l'invisible selon qu'elle pense ou qu'elle se livre aux sens. Ce « presque » laissera une prise aux objections.
+
+    ! L'argument de l'affinité est un raisonnement de ressemblance : il rend très vraisemblable l'indissolubilité de l'âme, il ne la démontre pas.
+    ! L'âme n'est pas une Forme : elle ressemble à l'invisible, et sa ressemblance croît ou décroît selon qu'elle pense ou qu'elle se laisse traîner par le corps.
+  points:
+  - id: platon-phedon-arguments-l8-q1
+    sentence: "La question qui ouvre l'argument de l'affinité : « à quelle espèce de chose peut-il bien convenir de subir une ___ ? »"
+    answer: "dispersion"
+    alt: []
+  - id: platon-phedon-arguments-l8-q2
+    sentence: "Il convient à ce qui a été composé de se décomposer « exactement selon le même ___ que celui qui a présidé à sa composition »."
+    answer: "processus"
+    alt: []
+  - id: platon-phedon-arguments-l8-q3
+    sentence: "Ce qui n'est pas composé n'a pas de ___ à séparer : il ne peut pas se dissoudre."
+    answer: "parties"
+    alt: []
+  - id: platon-phedon-arguments-l8-q4
+    sentence: "L'égal en soi, le beau en soi ne reçoivent aucune altération, car chacun « comporte en soi et par soi une unique ___ »."
+    answer: "forme"
+    alt: []
+  - id: platon-phedon-arguments-l8-q5
+    sentence: "Les choses qui restent mêmes qu'elles-mêmes ne se saisissent que par le raisonnement : elles sont ___."
+    answer: "invisibles"
+    alt: []
+  - id: platon-phedon-arguments-l8-q6
+    sentence: "Socrate pose deux espèces d'êtres : l'une visible et jamais la même, l'autre invisible et ___ la même."
+    answer: "toujours"
+    alt: []
+  - id: platon-phedon-arguments-l8-q7
+    sentence: "Le corps ressemble au visible ; l'âme, que personne ne voit, ressemble davantage à l'___."
+    answer: "invisible"
+    alt: []
+  - id: platon-phedon-arguments-l8-q8
+    sentence: "« alors elle est traînée par le corps dans la direction de ce qui jamais ne reste même que soi, et la voilà en proie à **___**, au trouble, au vertige, comme si elle était **ivre** »"
+    answer: "l'errance"
+    alt: []
+  - id: platon-phedon-arguments-l8-q9
+    sentence: "« alors elle est traînée par le corps dans la direction de ce qui jamais ne reste même que soi, et la voilà en proie à **l'errance**, au trouble, au vertige, comme si elle était **___** »"
+    answer: "ivre"
+    alt: []
+  - id: platon-phedon-arguments-l8-q10
+    sentence: "Quand l'âme examine seule par elle-même et reste semblable à elle-même, « cet état de l'âme, c'est bien ce qu'on appelle la ___ »."
+    answer: "pensée"
+    alt: []
+  - id: platon-phedon-arguments-l8-q11
+    sentence: "Quand l'âme et le corps sont ensemble, la nature prescrit à l'âme de ___ et au corps d'obéir : l'âme ressemble au divin."
+    answer: "commander"
+    alt: []
+  - id: platon-phedon-arguments-l8-q12
+    sentence: "« ce qui est **___**, immortel, objet pour l'intelligence, qui possède **une forme unique**, qui est **indissoluble** et toujours semblablement même que soi-même, voilà ce avec quoi l'âme offre le plus de ressemblance »"
+    answer: "divin"
+    alt: []
+  - id: platon-phedon-arguments-l8-q13
+    sentence: "« ce qui est **divin**, immortel, objet pour l'intelligence, qui possède **___**, qui est **indissoluble** et toujours semblablement même que soi-même, voilà ce avec quoi l'âme offre le plus de ressemblance »"
+    answer: "une forme unique"
+    alt: []
+  - id: platon-phedon-arguments-l8-q14
+    sentence: "« ce qui est **divin**, immortel, objet pour l'intelligence, qui possède **une forme unique**, qui est **___** et toujours semblablement même que soi-même, voilà ce avec quoi l'âme offre le plus de ressemblance »"
+    answer: "indissoluble"
+    alt: []
+  - id: platon-phedon-arguments-l8-q15
+    sentence: "Il convient au corps de se dissoudre rapidement, et à l'âme « d'être totalement ___, ou presque »."
+    answer: "indissoluble"
+    alt: []
+  - id: platon-phedon-arguments-l8-q16
+    sentence: "L'argument de l'affinité ne conclut qu'à une ___ : Socrate ne dit jamais que l'âme est non composée."
+    answer: "ressemblance"
+    alt: []
+- id: platon-phedon-arguments-l9
+  title: "Le sort des âmes : l'âme pure et l'âme alourdie (80c-82c)"
+  notes: |-
+    De l'affinité, Socrate tire une conséquence éthique : ce que devient l'âme après la mort dépend de ce qu'elle a fait de sa vie. {green}__L'âme qui s'est exercée à être morte rejoint ce qui lui ressemble__{/green} ; celle qui s'est attachée au corps en reste lourde.
+
+    **Le cadavre dure, l'âme se disperserait ?** Même le corps, fait pour se dissoudre, résiste longtemps après la mort ; un corps desséché comme les {yellow}momies d'Égypte{/yellow} se conserve presque entier, et certaines parties, {yellow}os et tendons{/yellow}, sont {teal}« pour ainsi dire immortelles »{/teal}. Il serait absurde que l'âme, l'invisible, qui s'en va vers l'{violet}Invisible véritable, Hadès{/violet} (Platon joue sur *aidês*, l'invisible, et Hadès), se disperse et périsse dès qu'elle quitte le corps.
+
+    **L'âme pure.** Si l'âme se sépare pure, sans rien entraîner du corps, parce qu'elle a passé sa vie à le fuir et à se concentrer en elle-même, c'est qu'elle a pratiqué {teal}« droitement la philosophie »{/teal} et s'est exercée à être morte. Elle s'en va vers ce qui lui ressemble, {coral}le divin, l'immortel, le sensé{/coral}, débarrassée de l'errance, de la déraison, des terreurs et des désirs sauvages, et passe, selon la formule des initiés, {teal}« dans la compagnie des dieux »{/teal} tout le temps à venir.
+
+    **L'âme alourdie.** Si au contraire l'âme a été {red}ensorcelée par le corps{/red}, au point de ne tenir pour vrai que ce qu'on peut toucher, voir, boire, manger, et de détester ce qui est invisible et saisissable par la philosophie, elle sort du corps {red}« complètement pénétrée »{/red} de corporel. {yellow}« cela pèse, ami, [...] c'est lourd, terreux »{/yellow} : elle est tirée vers le visible, erre autour des tombeaux, où l'on voit des apparitions, ombres d'âmes qui ne sont pas parties pures.
+
+    **Chacune devient ce qu'elle était déjà.** Ces âmes errent jusqu'à ce que leur appétit du corporel les fasse s'enchaîner de nouveau à un corps semblable à leurs occupations :
+    - les gloutons, ivrognes et débauchés, dans des {yellow}ânes{/yellow} et des bêtes de ce genre
+    - ceux qui ont préféré l'injustice, la tyrannie, le rapt, dans des {yellow}loups, des faucons, des milans{/yellow}
+    - ceux qui ont pratiqué la {pink}« vertu publique et sociale »{/pink}, née de l'habitude sans philosophie ni intelligence, dans des espèces sociables, {yellow}abeilles, guêpes ou fourmis{/yellow}, ou de nouveau dans des hommes {teal}« bien comme il faut »{/teal}
+
+    Ces réincarnations sont moins une zoologie qu'une **classification des âmes** : celui qui vit pour bâfrer est déjà un âne, celui qui ravit est déjà un loup. Et seul celui qui aime apprendre, parfaitement pur, peut rejoindre {green}« l'espèce des dieux »{/green}. Voilà pourquoi les vrais philosophes se tiennent à l'écart des appétits du corps, ne craignent ni la pauvreté ni l'obscurité.
+
+    ! Les réincarnations animales disent ce qu'une âme est devenue par sa manière de vivre ; il ne faut pas les lire comme une doctrine zoologique.
+    ! La vertu sociale, née de l'habitude, vaut mieux que le vice, mais ne suffit pas : sans philosophie, elle ne mène pas jusqu'aux dieux.
+  points:
+  - id: platon-phedon-arguments-l9-q1
+    sentence: "Après la mort, certaines parties du corps, os et tendons, sont, même quand le corps se putréfie, « pour ainsi dire ___ »."
+    answer: "immortelles"
+    alt: []
+  - id: platon-phedon-arguments-l9-q2
+    sentence: "Un corps desséché comme les ___ d'Égypte se conserve presque entier pendant un temps inimaginable."
+    answer: "momies"
+    alt: []
+  - id: platon-phedon-arguments-l9-q3
+    sentence: "L'âme s'en va vers l'« Invisible véritable », ___ : Platon joue sur *aidês*, l'invisible."
+    answer: "Hadès"
+    alt: []
+  - id: platon-phedon-arguments-l9-q4
+    sentence: "L'âme qui se sépare pure du corps a pratiqué « droitement la ___ » et s'est exercée à être morte."
+    answer: "philosophie"
+    alt: []
+  - id: platon-phedon-arguments-l9-q5
+    sentence: "Selon la formule des initiés, l'âme pure passe tout le temps à venir « dans la compagnie des ___ »."
+    answer: "dieux"
+    alt: []
+  - id: platon-phedon-arguments-l9-q6
+    sentence: "L'âme ensorcelée par le corps ne tient pour vrai que ce qu'on peut toucher, voir, boire, manger : elle sort du corps « complètement ___ » de corporel."
+    answer: "pénétrée"
+    alt: []
+  - id: platon-phedon-arguments-l9-q7
+    sentence: "L'âme chargée de corporel : « cela pèse, ami, [...] c'est lourd, ___ »."
+    answer: "terreux"
+    alt: []
+  - id: platon-phedon-arguments-l9-q8
+    sentence: "Les âmes alourdies errent autour des ___, où l'on voit des apparitions."
+    answer: "tombeaux"
+    alt: []
+  - id: platon-phedon-arguments-l9-q9
+    sentence: "Les gloutons, ivrognes et débauchés se réincarnent vraisemblablement dans des ___ et des bêtes de ce genre."
+    answer: "ânes"
+    alt: []
+  - id: platon-phedon-arguments-l9-q10
+    sentence: "Ceux qui ont préféré l'injustice, la tyrannie, le rapt se réincarnent dans des loups, des faucons, des ___."
+    answer: "milans"
+    alt: []
+  - id: platon-phedon-arguments-l9-q11
+    sentence: "Ceux qui ont pratiqué la vertu « publique et ___ », sans philosophie, renaissent abeilles, guêpes ou fourmis."
+    answer: "sociale"
+    alt: []
+  - id: platon-phedon-arguments-l9-q12
+    sentence: "Les réincarnations animales sont moins une zoologie qu'une classification des ___."
+    answer: "âmes"
+    alt: []
+  - id: platon-phedon-arguments-l9-q13
+    sentence: "Seul celui qui aime ___, parfaitement pur, peut rejoindre l'espèce des dieux."
+    answer: "apprendre"
+    alt: []
+- id: platon-phedon-arguments-l10
+  title: "La philosophie délie l'âme de sa prison (82c-84b)"
+  notes: |-
+    Socrate achève la section en décrivant le travail de la philosophie sur l'âme. Le corps n'est pas une prison par lui-même : {green}__c'est l'appétit qui enchaîne l'âme, et l'âme qui coopère à son propre enchaînement__{/green}. La philosophie la délie.
+
+    **L'état où la philosophie trouve l'âme.** Quand la philosophie en prend possession, l'âme est {red}« enchaînée à l'intérieur d'un corps, agrippée à lui »{/red}, contrainte d'examiner les êtres à travers lui {yellow}« comme à travers les barreaux d'une prison »{/yellow}, au lieu de le faire elle-même, et vautrée dans l'ignorance.
+
+    **L'enchaîné coopère à ses chaînes.** Le plus terrible dans cet emprisonnement, c'est qu'{amber}« il est l'œuvre de l'appétit, de sorte que c'est l'enchaîné lui-même qui coopère de la manière la plus efficace à parfaire son état d'enchaîné »{/amber}. La prison n'est plus l'« assignation à résidence » voulue par les dieux (62b) : c'est l'attention exclusive au corporel. Personne ne nous y tient que nous-mêmes.
+
+    **Ce que fait la philosophie.** Elle parle doucement à l'âme et commence à la délier, en lui montrant que l'examen par les yeux, les oreilles, les autres sens, est plein d'illusions ; elle la persuade de s'en écarter autant qu'il n'est pas indispensable, de {teal}« se rassembler et à se ramasser elle-même en elle-même »{/teal}, de ne se fier qu'à elle-même, et de tenir pour sans vérité ce qui varie selon les instruments par lesquels on le saisit.
+
+    **Le plus grand des maux.** Pourquoi l'âme du philosophe se tient-elle à l'écart des plaisirs, des peines, des craintes ? Non d'abord pour éviter la maladie ou la ruine, mais à cause d'un mal plus grand, qu'on subit sans le voir : l'âme {red}« est conduite à tenir ce qui cause l'affection la plus intense pour ce qui possède le plus d'évidence et de réalité véritable »{/red}. Un plaisir violent persuade que son objet est ce qu'il y a de plus réel ; or ce sont justement des choses visibles, qui ne le sont pas.
+
+    **Le clou.** {yellow}« Chaque plaisir, chaque peine, c'est comme s'ils possédaient un clou avec lequel ils clouent l'âme au corps »{/yellow}, la fixent en lui et lui donnent la forme du corps : {teal}« À force de conformer ses jugements à ceux du corps et de se plaire aux mêmes objets »{/teal}, elle lui devient semblable. Elle ne peut donc arriver pure chez Hadès, et retombe aussitôt dans un autre corps, {yellow}« comme une nouvelle semence »{/yellow}.
+
+    **Pénélope.** Une âme de philosophe ne serait pas assez sotte pour se laisser délier par la philosophie et, pendant ce temps, se rattacher aux plaisirs et aux peines : ce serait le travail sans fin d'une {yellow}Pénélope{/yellow} qui déferait sur sa toile ce que la philosophie a tissé. Elle apaise au contraire cette mer agitée, se laisse conduire par le raisonnement, se nourrit du vrai et du divin. Une âme ainsi formée {green}n'a pas à craindre d'être dispersée par les vents{/green} en quittant le corps.
+
+    ! La prison, ici, n'est pas le corps lui-même, mais l'attention exclusive au corporel : c'est l'appétit qui enchaîne.
+    ! Le plus grand mal n'est pas la douleur ou la ruine, mais l'illusion que l'objet d'une affection intense est ce qu'il y a de plus réel.
+  points:
+  - id: platon-phedon-arguments-l10-q1
+    sentence: "Quand la philosophie en prend possession, l'âme examine les êtres à travers le corps « comme à travers les ___ d'une prison »."
+    answer: "barreaux"
+    alt: []
+  - id: platon-phedon-arguments-l10-q2
+    sentence: "« ce qu'il y a de plus terrible dans cet emprisonnement, c'est qu'il est l'œuvre de **___**, de sorte que c'est **l'enchaîné lui-même** qui coopère de la manière la plus efficace à parfaire son état d'enchaîné »"
+    answer: "l'appétit"
+    alt: []
+  - id: platon-phedon-arguments-l10-q3
+    sentence: "« ce qu'il y a de plus terrible dans cet emprisonnement, c'est qu'il est l'œuvre de **l'appétit**, de sorte que c'est **___** qui coopère de la manière la plus efficace à parfaire son état d'enchaîné »"
+    answer: "l'enchaîné lui-même"
+    alt: []
+  - id: platon-phedon-arguments-l10-q4
+    sentence: "La prison de 82e n'est plus l'assignation à résidence voulue par les dieux : c'est l'attention exclusive au ___."
+    answer: "corporel"
+    alt: []
+  - id: platon-phedon-arguments-l10-q5
+    sentence: "La philosophie montre à l'âme que l'examen par les yeux et les oreilles est plein d'___."
+    answer: "illusions"
+    alt: []
+  - id: platon-phedon-arguments-l10-q6
+    sentence: "Le plus grand des maux : l'âme « est conduite à tenir ce qui cause l'affection la plus ___ pour ce qui possède le plus d'évidence et de réalité véritable »."
+    answer: "intense"
+    alt: []
+  - id: platon-phedon-arguments-l10-q7
+    sentence: "« Chaque plaisir, chaque peine, c'est comme s'ils possédaient **___** avec lequel ils __clouent l'âme au corps__, la fixent en lui, et lui donnent **une forme qui est celle du corps** »"
+    answer: "un clou"
+    alt: []
+  - id: platon-phedon-arguments-l10-q8
+    sentence: "« Chaque plaisir, chaque peine, c'est comme s'ils possédaient **un clou** avec lequel ils ___, la fixent en lui, et lui donnent **une forme qui est celle du corps** »"
+    answer: "clouent l'âme au corps"
+    alt: []
+  - id: platon-phedon-arguments-l10-q9
+    sentence: "« Chaque plaisir, chaque peine, c'est comme s'ils possédaient **un clou** avec lequel ils __clouent l'âme au corps__, la fixent en lui, et lui donnent **___** »"
+    answer: "une forme qui est celle du corps"
+    alt: []
+  - id: platon-phedon-arguments-l10-q10
+    sentence: "L'âme clouée au corps retombe aussitôt dans un autre corps et s'y enracine « comme une nouvelle ___ »."
+    answer: "semence"
+    alt: []
+  - id: platon-phedon-arguments-l10-q11
+    sentence: "L'âme qui se laisserait délier par la philosophie tout en se rattachant aux plaisirs ferait le travail sans fin d'une ___ défaisant sa toile."
+    answer: "Pénélope"
+    alt: []
+  - id: platon-phedon-arguments-l10-q12
+    sentence: "Une âme formée par la philosophie n'a pas à craindre d'être ___ par les vents en quittant le corps."
+    answer: "dispersée"
+    alt: []
