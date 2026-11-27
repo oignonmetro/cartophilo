@@ -220,10 +220,11 @@ les corriger.
    téléologique ») ; `title` le seul titre de la section, sans répéter le
    groupe, sous sa forme courte (« L'Analytique (§61-68) ») ;
    `subtitle` ce que la partie établit ; `icon: compass`, `color` celle de
-   la piste. Les notions qui commandent toute l'œuvre sans appartenir à une
-   section (pour Kant : jugement déterminant et réfléchissant, principe
-   constitutif et régulateur, objectif et subjectif) vont dans une unité
-   d'introduction en tête du groupe (`kant-cfj-introduction`).
+   la piste. Les notions qui traversent l'œuvre s'expliquent au fil des
+   leçons, à leur première apparition (encadré `? terme : …`), jamais dans
+   une leçon ou une unité qui leur serait consacrée (règle générale de
+   l'utilisateur, 2026-11-27) ; `kant-cfj-introduction`, faite à sa demande
+   auparavant, reste une exception.
 3. **Le branchement** : ajouter l'`id` à `units:` de la piste choisie dans
    `content/courses/<cours>/course.yaml`, sans toucher aux autres unités
    (d'autres sessions travaillent peut-être en parallèle : une unité à la
