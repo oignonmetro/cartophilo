@@ -1,0 +1,498 @@
+# Cours d'une œuvre (skill cours-oeuvre, piste Œuvres de La vie, voir
+# content/philosophie.md) : Platon, Phédon, l'autobiographie et le dernier argument
+# (95a-107a).
+# Citations : traduction de Monique Dixsaut, GF-Flammarion, 1991 ; repères :
+# pagination Stephanus. Analyse : introduction et notes de Dixsaut, recoupées avec
+# le notebook NotebookLM « Platon, le Phédon »
+# (https://notebook.google.com/notebook/94dc410f-59bd-4f81-a649-e363a6ee0de4).
+
+id: platon-phedon-causes
+title: "L'autobiographie et le dernier argument (95a-107a)"
+subtitle: "Les Formes comme causes : l'âme apporte la vie et ne peut recevoir la mort"
+icon: compass
+color: sky
+group: "Platon : Phédon"
+lessons:
+- id: platon-phedon-causes-l1
+  title: "Repérage : l'autobiographie et le dernier argument (95a-107a)"
+  notes: |-
+    Pour répondre à Cébès, il ne suffit plus de montrer que l'âme dure : il faut savoir **ce qui fait naître et périr les choses**. Socrate raconte donc comment il a cherché les causes, de la science de la nature à Anaxagore, puis par la « seconde navigation » qui pose les Formes comme causes. Sur ce fondement, le **dernier argument** montre que l'âme, qui apporte la vie, ne peut pas recevoir la mort.
+
+    | Moment | Lieu | Ce qui s'y joue |
+    | la question reformulée | 95a-e | durer longtemps n'est pas être immortel : il faut savoir pourquoi les choses naissent et périssent |
+    | la science de la nature | 95e-97b | expliquer par la matière rend aveugle : la même cause produit des effets contraires |
+    | Anaxagore | 97b-99c | l'Intelligence promettait le meilleur ; elle ne donne que des conditions, os et tendons |
+    | la seconde navigation | 99c-102a | se réfugier dans les raisonnements : les Formes sont les seules causes sûres |
+    | l'exclusion des contraires | 102a-105b | un contraire, ou ce qui l'apporte toujours, ne reçoit jamais son contraire |
+    | l'âme immortelle et indestructible | 105b-107a | l'âme apporte la vie, ne reçoit donc pas la mort, et se retire intacte |
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: platon-phedon-causes-l1-q1
+    sentence: "Pour répondre à Cébès, il faut étudier à fond la cause qui préside à la génération et à la ___."
+    answer: "corruption"
+    alt: []
+  - id: platon-phedon-causes-l1-q2
+    sentence: "Après la déception d'Anaxagore, Socrate entreprend sa « seconde ___ » (99c-d)."
+    answer: "navigation"
+    alt: []
+  - id: platon-phedon-causes-l1-q3
+    sentence: "Le dernier argument montre que l'âme, qui apporte la ___, ne peut pas recevoir la mort (105b-107a)."
+    answer: "vie"
+    alt: []
+  - id: platon-phedon-causes-l1-q4
+    sentence: "L'autobiographie de Socrate occupe les pages 95e-___ ; le dernier argument, 102a-107a."
+    answer: "102a"
+    alt: []
+- id: platon-phedon-causes-l2
+  title: "Durer n'est pas être immortel : la question de Cébès reformulée (95a-96a)"
+  notes: |-
+    Avant de répondre, Socrate reformule longuement l'objection de Cébès. Il en dégage ce qu'il faudra prouver : {green}__non que l'âme dure, mais qu'elle est indestructible__{/green} ; et ce qu'il faudra examiner pour le prouver : {amber}la cause de toute génération et de toute corruption{/amber}.
+
+    **Cadmos après Harmonie.** Cébès s'émerveille de la réfutation de Simmias et s'attend à voir tomber de même la sienne. Socrate le fait taire : {teal}« Baisse le ton, mon très cher ! dit Socrate, de peur que le mauvais œil ne mette en déroute le raisonnement à venir »{/teal} ; c'est l'affaire du dieu, la leur est d'aller {yellow}« comme dans Homère, au corps à corps avec l'adversaire »{/yellow}.
+
+    **Ce que Cébès demande.** Il faut démontrer que notre âme {coral}« est une chose indestructible et immortelle »{/coral}, sans quoi la confiance du philosophe mourant serait {red}« insensée et imbécile »{/red}. Montrer qu'elle est vigoureuse, divine, qu'elle existait avant nous et savait beaucoup de choses, cela prouve seulement qu'elle **dure** longtemps. Son entrée dans un corps pourrait être pour elle {red}« le commencement de sa destruction, une espèce de maladie »{/red}, et elle finirait par périr, épuisée, lors d'une de ses morts. Qu'elle entre une ou plusieurs fois dans un corps n'y change rien : à moins de savoir qu'elle est immortelle, il est normal d'avoir peur.
+
+    **Ce que la réponse exige.** Socrate reste longtemps silencieux, puis répond que ce n'est pas peu de chose : {amber}« cela exige qu'on étudie à fond la cause qui, d'une manière générale, préside à la génération et à la corruption »{/amber}. Pour savoir si l'âme peut périr, il faut savoir pourquoi, en général, les choses naissent et périssent. D'où le récit de ses propres recherches.
+
+    ! L'objection de Cébès redouble la peur : peur que l'âme périsse cette fois-ci, et peur que le discours soit impuissant à prouver qu'elle ne le peut pas.
+    ! Le détour par la cause de la génération n'est pas une digression de physicien : c'est la seule manière de répondre à la question de l'indestructibilité.
+  points:
+  - id: platon-phedon-causes-l2-q1
+    sentence: "« Baisse le ton, mon très cher ! dit Socrate, de peur que le ___ ne mette en déroute le raisonnement à venir. »"
+    answer: "mauvais œil"
+    alt: []
+  - id: platon-phedon-causes-l2-q2
+    sentence: "Il faut démontrer que notre âme « est une chose indestructible et ___ »."
+    answer: "immortelle"
+    alt: []
+  - id: platon-phedon-causes-l2-q3
+    sentence: "Sans cette démonstration, la confiance du philosophe mourant serait « insensée et ___ »."
+    answer: "imbécile"
+    alt: []
+  - id: platon-phedon-causes-l2-q4
+    sentence: "Selon l'objection, l'entrée de l'âme dans un corps pourrait être « le commencement de sa destruction, une espèce de ___ »."
+    answer: "maladie"
+    alt: []
+  - id: platon-phedon-causes-l2-q5
+    sentence: "« cela exige qu'on étudie à fond **___** qui, d'une manière générale, préside à **la génération** et à **la corruption** »"
+    answer: "la cause"
+    alt: []
+  - id: platon-phedon-causes-l2-q6
+    sentence: "« cela exige qu'on étudie à fond **la cause** qui, d'une manière générale, préside à **___** et à **la corruption** »"
+    answer: "la génération"
+    alt: []
+  - id: platon-phedon-causes-l2-q7
+    sentence: "« cela exige qu'on étudie à fond **la cause** qui, d'une manière générale, préside à **la génération** et à **___** »"
+    answer: "la corruption"
+    alt: []
+  - id: platon-phedon-causes-l2-q8
+    sentence: "Pour savoir si l'âme peut périr, il faut savoir pourquoi, en général, les choses naissent et ___."
+    answer: "périssent"
+    alt: []
+- id: platon-phedon-causes-l3
+  title: "La science de la nature rend aveugle (96a-97b)"
+  notes: |-
+    Socrate raconte sa jeunesse : il s'est passionné pour la science de la nature, et elle l'a rendu **aveugle**. L'échec n'est pas un manque de talent : {red}__une explication par la matière rend raison des mêmes effets par des causes contraires__{/red}, et donc n'explique rien.
+
+    **L'appétit de la jeunesse.** Jeune, Socrate fut pris {teal}« d'un appétit extraordinaire »{/teal} pour la {violet}« science de la nature »{/violet}, capable de savoir {teal}« le pourquoi de sa génération, de sa disparition et de son existence »{/teal}. Il se demandait si les vivants naissent quand {yellow}le chaud et le froid s'emparent d'une putréfaction{/yellow}, si l'on pense par le sang, l'air, le feu, ou par le cerveau, qui fournit les sensations d'où naissent mémoire, opinion et savoir. C'est la méthode des savants de son temps : expliquer le supérieur par l'inférieur, la pensée par le corps.
+
+    **Désapprendre ce qu'on croyait savoir.** Résultat : il fut rendu {red}« si profondément aveugle »{/red} qu'il désapprit même ce qu'il croyait savoir. Il croyait savoir {yellow}pourquoi un homme grandit{/yellow} : en mangeant et en buvant, la chair s'ajoute à la chair, l'os aux os. Il croyait qu'un homme est plus grand qu'un autre {yellow}« de la tête »{/yellow}, que {teal}« dix est plus que huit parce que deux viennent s'adjoindre à huit »{/teal}, qu'une double coudée dépasse la coudée de sa moitié.
+
+    **Pourquoi ces explications ne tiennent pas.** Quand on ajoute une chose à une chose, qu'est-ce qui est devenu deux ? Chacune était une ; c'est leur rapprochement qui les ferait deux. Mais si l'on coupe une chose en deux, c'est cette fois la séparation qui fait deux. {red}Deux opérations contraires produisent le même effet{/red} : le rapprochement et la séparation ne peuvent être, l'un et l'autre, la cause du deux. De même, la tête qui rend l'un plus grand rend l'autre plus petit : une même cause produirait deux effets contraires. La prémisse implicite qui rend l'argument contraignant est qu'**une cause véritable ne peut pas produire des effets contraires, ni un effet venir de causes contraires**. Avec cette méthode, Socrate ne peut savoir pourquoi rien naît, périt ou est.
+
+    ! L'échec n'est pas celui d'un esprit peu doué : la méthode elle-même confond les causes avec des opérations matérielles qui peuvent produire des effets contraires.
+    ! Les exemples mêlent à dessein croissance physique et rapports mathématiques : la méthode rend obscur jusqu'à ce qui était clair.
+  points:
+  - id: platon-phedon-causes-l3-q1
+    sentence: "Jeune, Socrate fut pris d'un appétit extraordinaire pour la « science de la ___ »."
+    answer: "nature"
+    alt: []
+  - id: platon-phedon-causes-l3-q2
+    sentence: "Cette science promettait de connaître « le pourquoi de sa génération, de sa disparition et de son ___ »."
+    answer: "existence"
+    alt: []
+  - id: platon-phedon-causes-l3-q3
+    sentence: "Socrate se demandait si l'on pense par le sang, l'air, le feu, ou par le ___, qui fournit les sensations d'où naissent mémoire et opinion."
+    answer: "cerveau"
+    alt: []
+  - id: platon-phedon-causes-l3-q4
+    sentence: "La science de la nature rendit Socrate « si profondément ___ » qu'il désapprit ce qu'il croyait savoir."
+    answer: "aveugle"
+    alt: []
+  - id: platon-phedon-causes-l3-q5
+    sentence: "Socrate croyait qu'un homme grandit parce qu'en mangeant, la ___ s'ajoute à la chair et l'os aux os."
+    answer: "chair"
+    alt: []
+  - id: platon-phedon-causes-l3-q6
+    sentence: "Il croyait qu'un homme est plus grand qu'un autre « de la ___ »."
+    answer: "tête"
+    alt: []
+  - id: platon-phedon-causes-l3-q7
+    sentence: "Le rapprochement et la séparation produisent le même effet, le deux : deux opérations ___ ne peuvent être, l'une et l'autre, sa cause."
+    answer: "contraires"
+    alt: []
+  - id: platon-phedon-causes-l3-q8
+    sentence: "Prémisse implicite : une cause véritable ne peut pas produire des effets ___."
+    answer: "contraires"
+    alt: []
+- id: platon-phedon-causes-l4
+  title: "Anaxagore : la vraie cause et ses conditions (97b-99c)"
+  notes: |-
+    Un livre d'Anaxagore promet ce que Socrate cherchait ; sa lecture le déçoit. La déception enseigne une distinction décisive : {green}__la cause véritable n'est pas la condition matérielle sans laquelle elle ne pourrait agir__{/green}.
+
+    **L'espoir.** Socrate entend lire un livre d'{sky}Anaxagore{/sky} affirmant que {teal}« c'est l'intelligence qui est cause ordonnatrice et universelle »{/teal}. Il en conclut aussitôt : si c'est l'intelligence qui ordonne, elle doit disposer chaque chose {coral}« de la meilleure manière possible »{/coral}. Expliquer une chose, ce serait donc dire pourquoi il est **meilleur** pour elle d'être ce qu'elle est : si la Terre est plate ou ronde, et pourquoi c'est mieux ainsi ; de même pour le soleil, la lune, les astres. La prémisse est que **qui pose une intelligence comme cause pose du même coup le meilleur comme raison**.
+
+    **La déception.** Il tombe {red}« de [s]on haut »{/red} : Anaxagore ne fait aucun usage de l'intelligence, et invoque comme causes {red}« les actions des airs, des éthers, des eaux »{/red}.
+
+    **L'exemple de Socrate en prison.** C'est comme si l'on disait que Socrate fait tout ce qu'il fait par intelligence, puis qu'on expliquait qu'il est assis là parce que {yellow}son corps est fait d'os et de muscles{/yellow}, que les os jouent dans leurs jointures et que les muscles se tendent et se relâchent ; ou qu'on expliquait leur dialogue par les sons, l'air et l'audition. La vraie cause est tout autre : {coral}les Athéniens ont jugé meilleur de le condamner, et lui a jugé meilleur et plus juste de rester et de subir sa peine{/coral}. Car, {teal}« par le Chien »{/teal}, il y a longtemps que ces os et ces muscles se trouveraient {yellow}« du côté de Mégare ou de la Béotie »{/yellow}, emportés par une autre opinion du meilleur, s'il n'avait pas jugé plus juste de se soumettre à la Cité que de fuir.
+
+    **La distinction.** Certes, sans os ni muscles, Socrate ne pourrait pas faire ce qu'il juge bon. Mais il y a {amber}« deux choses bien distinctes : ce qui, réellement, est cause ; et ce sans quoi la cause ne pourrait jamais être cause »{/amber}. Les physiciens, {red}tâtonnant dans le noir{/red}, donnent le nom de cause à la seconde : l'un entoure la Terre d'un tourbillon, l'autre la pose sur l'air comme une huche, sans voir que c'est {green}« le bien »{/green} qui lie et tient ensemble ; ils croient avoir trouvé {yellow}« un nouvel Atlas »{/yellow} plus fort que le premier.
+
+    ! Platon ne nie pas le rôle des os et des muscles : il en fait des conditions nécessaires, non la cause.
+    ! La déception porte sur Anaxagore, non sur l'idée d'une cause par le meilleur ; mais faute de la trouver, Socrate prend un autre chemin.
+  points:
+  - id: platon-phedon-causes-l4-q1
+    sentence: "Le livre d'Anaxagore affirmait que « c'est l'___ qui est cause ordonnatrice et universelle »."
+    answer: "intelligence"
+    alt: []
+  - id: platon-phedon-causes-l4-q2
+    sentence: "Si l'intelligence ordonne tout, elle doit disposer chaque chose « de la ___ manière possible »."
+    answer: "meilleure"
+    alt: []
+  - id: platon-phedon-causes-l4-q3
+    sentence: "Prémisse de l'espoir de Socrate : qui pose une intelligence comme cause pose du même coup le ___ comme raison."
+    answer: "meilleur"
+    alt: []
+  - id: platon-phedon-causes-l4-q4
+    sentence: "Anaxagore n'use pas de l'intelligence : il invoque comme causes « les actions des airs, des éthers, des ___ »."
+    answer: "eaux"
+    alt: []
+  - id: platon-phedon-causes-l4-q5
+    sentence: "La vraie cause de la présence de Socrate en prison : il a jugé meilleur et plus ___ de rester et de subir sa peine."
+    answer: "juste"
+    alt: []
+  - id: platon-phedon-causes-l4-q6
+    sentence: "Sans sa décision, les os et les muscles de Socrate se trouveraient depuis longtemps « du côté de ___ ou de la Béotie »."
+    answer: "Mégare"
+    alt: []
+  - id: platon-phedon-causes-l4-q7
+    sentence: "« Ce serait se révéler incapable de voir qu'il y a là deux choses bien distinctes : **___** ; et **ce sans quoi la cause ne pourrait jamais être cause**. »"
+    answer: "ce qui, réellement, est cause"
+    alt: []
+  - id: platon-phedon-causes-l4-q8
+    sentence: "« Ce serait se révéler incapable de voir qu'il y a là deux choses bien distinctes : **ce qui, réellement, est cause** ; et **___**. »"
+    answer: "ce sans quoi la cause ne pourrait jamais être cause"
+    alt: []
+  - id: platon-phedon-causes-l4-q9
+    sentence: "Les physiciens ne voient pas que c'est le ___ qui lie et tient ensemble toutes choses."
+    answer: "bien"
+    alt: []
+  - id: platon-phedon-causes-l4-q10
+    sentence: "Les physiciens croient avoir trouvé « un nouvel ___ », plus fort que le premier, pour soutenir la Terre."
+    answer: "Atlas"
+    alt: []
+- id: platon-phedon-causes-l5
+  title: "La seconde navigation : se réfugier dans les raisonnements (99c-100c)"
+  notes: |-
+    Faute d'avoir trouvé ou appris la cause par le meilleur, Socrate change de route : c'est la **seconde navigation**. Il ne regarde plus les choses en face, il les examine {green}__dans les raisonnements__{/green}, en posant les Formes comme causes.
+
+    **Pourquoi « seconde navigation ».** L'expression vient des marins : quand le vent tombe, on prend les rames. C'est un chemin plus long, plus laborieux, mais plus sûr. Ce n'est pas un pis-aller : la voie directe de la physique menait à l'aveuglement, et la nouvelle voie mène à la véritable intelligibilité.
+
+    **L'image de l'éclipse.** Ceux qui observent une {yellow}éclipse de soleil{/yellow} s'abîment parfois les yeux s'ils ne regardent pas son image dans l'eau. Socrate craignit que son âme ne devienne {red}« totalement aveugle »{/red} à force de regarder les choses avec les yeux et de les atteindre par les sens. Il décida donc de {green}« me réfugier du côté des raisonnements, et, à l'intérieur de ces raisonnements, examiner la vérité des êtres »{/green}.
+
+    **L'image ne vaut pas jusqu'au bout.** Socrate la corrige aussitôt : il n'accorde pas qu'examiner les êtres dans les raisonnements, ce soit avoir affaire à leurs images plus que lorsqu'on les examine dans l'expérience directe. C'est même l'inverse : l'expérience ne livre que des images, la réflexion atteint la réalité.
+
+    **La méthode : poser, puis juger par l'accord.** {coral}« En chaque cas, je pose un raisonnement que je juge avoir une très grande force, et tout ce qui me paraît consoner avec lui, je le pose comme étant vrai »{/coral}, le reste comme n'étant pas vrai. C'est la méthode par {violet}hypothèse{/violet} : on part d'une proposition solide et l'on examine ce qui s'accorde avec elle.
+
+    **Le point de départ : les Formes.** Cébès ne comprend pas ; Socrate revient aux {teal}« formules cent fois ressassées »{/teal} : {amber}« je commence par poser un beau en soi et par soi, un bon, un grand, et ainsi pour tout le reste »{/amber}. Si Cébès les lui accorde, il espère à partir d'eux montrer {teal}« la cause en raison de laquelle l'âme est une chose immortelle »{/teal}. Cébès accorde, et le presse d'en venir au fait.
+
+    ! « Seconde navigation » ne veut pas dire pis-aller : c'est la voie plus longue mais plus sûre, qui atteint ce que la première manquait.
+    ! Examiner les choses dans les raisonnements n'est pas se contenter d'images : c'est l'expérience sensible qui n'en livre que des images.
+  points:
+  - id: platon-phedon-causes-l5-q1
+    sentence: "L'expression « seconde navigation » désigne le recours aux ___ quand le vent tombe : un chemin plus long mais plus sûr."
+    answer: "rames"
+    alt: []
+  - id: platon-phedon-causes-l5-q2
+    sentence: "Ceux qui observent une éclipse de soleil s'abîment les yeux s'ils ne regardent pas son ___ dans l'eau."
+    answer: "image"
+    alt: []
+  - id: platon-phedon-causes-l5-q3
+    sentence: "Socrate craignit que son âme ne devienne « totalement ___ » à force de regarder les choses avec les yeux."
+    answer: "aveugle"
+    alt: []
+  - id: platon-phedon-causes-l5-q4
+    sentence: "« Voici alors ce qu'il me sembla devoir faire : me réfugier du côté des **___**, et, à l'intérieur de ces raisonnements, examiner **la vérité des êtres**. »"
+    answer: "raisonnements"
+    alt: []
+  - id: platon-phedon-causes-l5-q5
+    sentence: "« Voici alors ce qu'il me sembla devoir faire : me réfugier du côté des **raisonnements**, et, à l'intérieur de ces raisonnements, examiner **___**. »"
+    answer: "la vérité des êtres"
+    alt: []
+  - id: platon-phedon-causes-l5-q6
+    sentence: "Socrate n'accorde pas qu'examiner les êtres dans les raisonnements, ce soit avoir affaire à leurs ___ plus que dans l'expérience directe."
+    answer: "images"
+    alt: []
+  - id: platon-phedon-causes-l5-q7
+    sentence: "« En chaque cas, je **___** que je juge avoir **une très grande force**, et tout ce qui me paraît **consoner** avec lui, je le pose comme étant vrai »"
+    answer: "pose un raisonnement"
+    alt: []
+  - id: platon-phedon-causes-l5-q8
+    sentence: "« En chaque cas, je **pose un raisonnement** que je juge avoir **___**, et tout ce qui me paraît **consoner** avec lui, je le pose comme étant vrai »"
+    answer: "une très grande force"
+    alt: []
+  - id: platon-phedon-causes-l5-q9
+    sentence: "« En chaque cas, je **pose un raisonnement** que je juge avoir **une très grande force**, et tout ce qui me paraît **___** avec lui, je le pose comme étant vrai »"
+    answer: "consoner"
+    alt: []
+  - id: platon-phedon-causes-l5-q10
+    sentence: "Le point de départ de Socrate : « je commence par poser un ___ en soi et par soi, un bon, un grand, et ainsi pour tout le reste »."
+    answer: "beau"
+    alt: []
+  - id: platon-phedon-causes-l5-q11
+    sentence: "À partir des Formes, Socrate espère montrer « la cause en raison de laquelle l'âme est une chose ___ »."
+    answer: "immortelle"
+    alt: []
+- id: platon-phedon-causes-l6
+  title: "Par le beau, les belles choses sont belles : la cause sûre (100c-102a)"
+  notes: |-
+    Les Formes posées, Socrate en tire la seule cause qu'il accepte désormais : {green}__une chose est belle parce qu'elle participe au beau__{/green}. La réponse paraît naïve ; elle a l'avantage décisif d'être sûre.
+
+    **La participation.** {coral}« si, en dehors du beau en soi, il existe une chose belle, la seule raison pour laquelle cette chose est belle est qu'elle participe à ce beau en soi »{/coral}. Socrate tourne poliment le dos aux {red}« causes savantes »{/red} : la couleur éclatante, la forme. Il s'en tient, {teal}« avec naïveté sans doute »{/teal}, à ceci : {amber}« c'est par le beau que toutes les belles choses deviennent belles »{/amber}, que ce soit par présence, communauté ou autrement, peu importe le comment.
+
+    **Pourquoi c'est sûr.** Cette réponse évite les contradictions qui aveuglaient le jeune Socrate. Dire que l'un est plus grand que l'autre « de la tête », c'est expliquer par une seule et même chose la supériorité de l'un et l'infériorité de l'autre, et, pire, qu'on est grand {red}« en raison de quelque chose de petit »{/red}, une tête : un prodige. Il faut dire que le plus grand est plus grand par la **grandeur**, et le plus petit plus petit par la **petitesse**. De même, dix est plus que huit par une **quantité**, et le deux vient de la participation à la **dyade**, non de l'addition ou de la division. Chaque effet a sa cause, et aucune cause ne produit deux effets contraires.
+
+    **La méthode de l'hypothèse.** Il faut s'en tenir à {teal}« cette fameuse sécurité qui est le propre de cette hypothèse »{/teal}. Si quelqu'un l'attaque, on ne répond pas avant d'avoir examiné si ses conséquences {teal}« sont mutuellement consonantes ou dissonantes »{/teal}. Et s'il faut rendre compte de l'hypothèse elle-même, on en pose une autre, plus haute, {teal}« jusqu'à ce que tu atteignes quelque chose de satisfaisant »{/teal}. Il ne faut pas mêler, comme les {pink}controversistes{/pink}, la discussion du principe et celle de ses conséquences. Simmias et Cébès approuvent en chœur, et Échécrate interrompt pour dire combien tout est lumineux.
+
+    ! La réponse « par le beau » n'est pas une tautologie vide : elle désigne la cause qui rend la chose intelligible, et elle protège des contradictions des causes matérielles.
+    ! Socrate ne prétend pas savoir comment se fait la participation : il affirme seulement que la beauté des choses belles vient du beau.
+  points:
+  - id: platon-phedon-causes-l6-q1
+    sentence: "« si, en dehors du **___**, il existe une chose belle, la seule raison pour laquelle cette chose est belle est qu'elle **participe** à ce beau en soi »"
+    answer: "beau en soi"
+    alt: []
+  - id: platon-phedon-causes-l6-q2
+    sentence: "« si, en dehors du **beau en soi**, il existe une chose belle, la seule raison pour laquelle cette chose est belle est qu'elle **___** à ce beau en soi »"
+    answer: "participe"
+    alt: []
+  - id: platon-phedon-causes-l6-q3
+    sentence: "Socrate tourne poliment le dos aux « causes ___ » : la couleur éclatante, la forme."
+    answer: "savantes"
+    alt: []
+  - id: platon-phedon-causes-l6-q4
+    sentence: "Socrate s'en tient, « avec ___ sans doute », à ceci : la beauté des choses belles vient du beau seul."
+    answer: "naïveté"
+    alt: []
+  - id: platon-phedon-causes-l6-q5
+    sentence: "« c'est par le beau que toutes les belles choses deviennent ___ »"
+    answer: "belles"
+    alt: []
+  - id: platon-phedon-causes-l6-q6
+    sentence: "Dire qu'on est plus grand « de la tête », c'est être grand « en raison de quelque chose de ___ » : un prodige."
+    answer: "petit"
+    alt: []
+  - id: platon-phedon-causes-l6-q7
+    sentence: "Le plus grand est plus grand par la ___, et le plus petit plus petit par la petitesse."
+    answer: "grandeur"
+    alt: []
+  - id: platon-phedon-causes-l6-q8
+    sentence: "Ce qui devient deux le devient par participation à la ___, non par addition ou division."
+    answer: "dyade"
+    alt: []
+  - id: platon-phedon-causes-l6-q9
+    sentence: "Si l'on attaque l'hypothèse, on examine d'abord si ses conséquences sont mutuellement consonantes ou ___."
+    answer: "dissonantes"
+    alt: []
+  - id: platon-phedon-causes-l6-q10
+    sentence: "Pour rendre compte d'une hypothèse, on en pose une autre plus haute, « jusqu'à ce que tu atteignes quelque chose de ___ »."
+    answer: "satisfaisant"
+    alt: []
+- id: platon-phedon-causes-l7
+  title: "Les contraires s'excluent : la grandeur en nous (102a-103c)"
+  notes: |-
+    Le dernier argument commence par un principe : {green}__un contraire ne reçoit jamais son contraire__{/green}. Quand le contraire s'approche, il se retire ou il périt.
+
+    **Simmias grand et petit.** Simmias est plus grand que Socrate et plus petit que Phédon : il y a donc en lui grandeur et petitesse. Mais ce n'est pas parce qu'il est Simmias qu'il dépasse Socrate : c'est par {teal}« la grandeur qui se trouve être la sienne »{/teal} relativement à la petitesse de Socrate. Un même sujet peut recevoir deux contraires, parce qu'aucun ne lui est essentiel. Socrate s'amuse de ces formules : il a l'air de {yellow}« rédiger un contrat »{/yellow}.
+
+    **La grandeur en nous ne devient pas petite.** Non seulement {violet}la grandeur en soi{/violet} ne consent jamais à être à la fois grande et petite, mais {violet}la grandeur qui est en nous{/violet} non plus : {coral}« jamais elle n'accueille en elle le petit »{/coral}. À l'approche de la petitesse, {amber}« ou bien elle s'enfuit et se retire quand s'avance sur elle son contraire, le petit, ou bien, du fait de l'arrivée de ce contraire, elle périt complètement »{/amber}. Socrate, lui, peut recevoir la petitesse et rester Socrate ; mais la grandeur qui est en lui n'a pas {teal}« l'audace, étant grande, d'être petite »{/teal}. Il en va de même de tout contraire.
+
+    **L'objection de l'auditeur.** Quelqu'un, dont Phédon ne se rappelle pas le nom, objecte : n'avait-on pas dit que les contraires naissent des contraires (70c-72e) ? Socrate distingue : on parlait alors {pink}des choses qui ont des propriétés contraires{/pink} (le sujet passe du petit au grand) ; on parle maintenant {green}des contraires eux-mêmes{/green}, qui ne deviennent jamais leur contraire. Le sujet change ; la propriété, elle, ne change pas en son contraire : elle cède la place. La prémisse implicite qui rend l'argument contraignant : **une propriété est ce qu'elle est**, et ne peut devenir son contraire sans cesser d'être elle-même.
+
+    ! Les deux formules ne se contredisent pas : les choses deviennent leur contraire, les contraires eux-mêmes jamais.
+    ! La grandeur en nous n'est pas une troisième réalité entre Simmias et la grandeur en soi : elle est la présence en lui de la Forme.
+  points:
+  - id: platon-phedon-causes-l7-q1
+    sentence: "Si Simmias dépasse Socrate, ce n'est pas en tant que Simmias, mais par « la ___ qui se trouve être la sienne »."
+    answer: "grandeur"
+    alt: []
+  - id: platon-phedon-causes-l7-q2
+    sentence: "Un même sujet peut recevoir deux contraires parce qu'aucun des deux ne lui est ___."
+    answer: "essentiel"
+    alt: []
+  - id: platon-phedon-causes-l7-q3
+    sentence: "Socrate s'amuse de ses formules : il a l'air de « rédiger un ___ »."
+    answer: "contrat"
+    alt: []
+  - id: platon-phedon-causes-l7-q4
+    sentence: "La grandeur qui est en nous, « jamais elle n'accueille en elle le ___ »."
+    answer: "petit"
+    alt: []
+  - id: platon-phedon-causes-l7-q5
+    sentence: "À l'approche de son contraire, la grandeur en nous ou bien s'enfuit et se ___, ou bien elle périt."
+    answer: "retire"
+    alt: []
+  - id: platon-phedon-causes-l7-q6
+    sentence: "La grandeur qui est en Socrate n'a pas « l'___, étant grande, d'être petite »."
+    answer: "audace"
+    alt: []
+  - id: platon-phedon-causes-l7-q7
+    sentence: "Objection de l'auditeur : n'avait-on pas dit que les contraires naissent des ___ ?"
+    answer: "contraires"
+    alt: []
+  - id: platon-phedon-causes-l7-q8
+    sentence: "Réponse : on parlait alors des choses qui ont des propriétés contraires ; on parle maintenant des contraires ___."
+    answer: "eux-mêmes"
+    alt: []
+  - id: platon-phedon-causes-l7-q9
+    sentence: "« jamais le contraire ne sera à lui-même son propre ___ »"
+    answer: "contraire"
+    alt: []
+- id: platon-phedon-causes-l8
+  title: "Ce qui apporte un contraire : la neige, le feu, le trois (103c-105c)"
+  notes: |-
+    Socrate étend le principe à des choses qui ne sont pas des contraires, mais qui **apportent toujours un contraire**. C'est cette extension qui permettra de l'appliquer à l'âme.
+
+    **La neige et le feu.** Le chaud n'est pas le feu, le froid n'est pas la neige. Pourtant, {yellow}la neige{/yellow}, tant qu'elle est neige, ne recevra jamais le chaud : à son approche, {coral}elle se retirera ou périra{/coral}, elle ne restera pas de la neige chaude. De même {yellow}le feu{/yellow}, à l'approche du froid, se dérobe ou s'éteint. Il y a donc des choses qui, sans être la Forme, possèdent toujours son caractère.
+
+    **Le trois et l'impair.** {yellow}Le trois{/yellow} n'est pas l'impair, mais il est toujours impair : il {teal}« préférerait périr et subir n'importe quoi plutôt que de rester là, et, tout en restant trois, de devenir pair »{/teal}. Or le deux n'est pas le contraire du trois. Ce ne sont donc pas seulement les contraires qui s'excluent, mais aussi ce qui **porte** toujours l'un d'eux.
+
+    **La règle générale.** Certaines Formes obligent ce dont elles s'emparent à avoir non seulement leur caractère propre, mais toujours aussi celui d'un contraire. {amber}« Ce n'est pas seulement le contraire qui ne peut recevoir son contraire, mais il y a aussi le cas de ce qui apporte un contraire déterminé »{/amber} : celui-là n'admettra jamais le contraire de ce qu'il apporte. Le cinq n'admet pas le pair, le dix n'admet pas l'impair.
+
+    **La réponse plus raffinée.** D'où une nouvelle manière de répondre, aussi sûre que la première mais plus fine. À la question {teal}« Qu'est-ce qui, en entrant dans une chose, [...] la rendra chaude ? »{/teal}, on ne répondra plus naïvement {pink}« c'est la chaleur »{/pink}, mais {green}« c'est le feu »{/green} ; ce qui rend un corps malade, ce sont {green}« les fièvres »{/green} ; ce qui rend un nombre impair, {green}« la monade »{/green}. On désigne ainsi l'intermédiaire qui apporte la Forme, et dont il faut une connaissance (de physicien, de médecin, de mathématicien).
+
+    ! Ce qui apporte un contraire n'est pas lui-même ce contraire : la fièvre rend malade sans être malade, la monade rend impair sans être un nombre impair.
+    ! La réponse raffinée ne remplace pas la participation : elle y ajoute le terme qui apporte la Forme.
+  points:
+  - id: platon-phedon-causes-l8-q1
+    sentence: "La neige, tant qu'elle est neige, ne recevra jamais le ___ : à son approche, elle se retirera ou périra."
+    answer: "chaud"
+    alt: []
+  - id: platon-phedon-causes-l8-q2
+    sentence: "« À l'approche du froid, ou bien il se dérobe, ou bien il ___ » : le feu n'est jamais froid."
+    answer: "périt"
+    alt: []
+  - id: platon-phedon-causes-l8-q3
+    sentence: "Le trois « préférerait périr et subir n'importe quoi plutôt que de rester là, et, tout en restant trois, de devenir ___ »."
+    answer: "pair"
+    alt: []
+  - id: platon-phedon-causes-l8-q4
+    sentence: "Le deux n'est pas le ___ du trois : ce ne sont donc pas seulement les contraires qui s'excluent."
+    answer: "contraire"
+    alt: []
+  - id: platon-phedon-causes-l8-q5
+    sentence: "« Ce n'est pas seulement le contraire qui ne peut recevoir son contraire, mais il y a aussi le cas de ce qui ___ un contraire déterminé »"
+    answer: "apporte"
+    alt: []
+  - id: platon-phedon-causes-l8-q6
+    sentence: "Le cinq n'admet pas le ___, le dix n'admet pas l'impair."
+    answer: "pair"
+    alt: []
+  - id: platon-phedon-causes-l8-q7
+    sentence: "Réponse raffinée : ce qui rend une chose chaude, ce n'est plus « la chaleur », c'est « le ___ »."
+    answer: "feu"
+    alt: []
+  - id: platon-phedon-causes-l8-q8
+    sentence: "Réponse raffinée : ce qui rend un corps malade, ce sont « les ___ »."
+    answer: "fièvres"
+    alt: []
+  - id: platon-phedon-causes-l8-q9
+    sentence: "Réponse raffinée : ce qui rend un nombre impair, c'est « la ___ »."
+    answer: "monade"
+    alt: []
+  - id: platon-phedon-causes-l8-q10
+    sentence: "La fièvre rend malade sans être ___ : ce qui apporte un contraire n'est pas lui-même ce contraire."
+    answer: "malade"
+    alt: []
+- id: platon-phedon-causes-l9
+  title: "L'âme apporte la vie : immortelle et indestructible (105c-107a)"
+  notes: |-
+    Socrate applique enfin la réponse raffinée à l'âme. Le raisonnement tient en peu de mots : {green}__l'âme apporte la vie, elle ne peut donc pas recevoir la mort, elle est donc immortelle__{/green} ; et parce qu'elle est immortelle, elle est indestructible.
+
+    **L'âme apporte la vie.** {teal}« qu'est-ce qui, en entrant dans un corps, le rendra vivant ? »{/teal} {coral}« Une âme »{/coral}, répond Cébès, et toujours. L'âme, {teal}« quelle que soit la chose dont elle s'empare, vient toujours vers elle en lui apportant la vie »{/teal}. Elle est donc, pour la vie, ce que le feu est pour le chaud et le trois pour l'impair.
+
+    **Elle ne reçoit pas la mort : elle est immortelle.** La vie a un contraire, la mort. Or ce qui apporte toujours un caractère ne reçoit jamais son contraire : l'âme {red}ne recevra jamais la mort{/red}. Et comme ce qui ne reçoit pas le pair s'appelle impair, ce qui ne reçoit pas le juste injuste, ce qui ne reçoit pas la mort s'appelle {violet}**immortel**{/violet}. Donc {green}« c'est une chose immortelle qu'une âme »{/green}. Cébès juge la démonstration suffisante.
+
+    **D'immortel à indestructible.** Il reste une difficulté, et Socrate la soulève lui-même. Le trois ne devient jamais pair ; mais qu'est-ce qui l'empêche, à l'approche du pair, de **périr** plutôt que de se retirer ? Rien, car l'impair n'est pas indestructible. Si la neige était indestructible, elle se retirerait intacte devant le chaud ; mais elle fond. De même, ne pas recevoir la mort ne suffit pas : il faut encore que ce qui est immortel soit **indestructible**, sinon l'âme pourrait périr à l'approche de la mort au lieu de se retirer. Cébès l'accorde sans peine : si ce qui est immortel, donc éternel, se corrompait, quelle réalité y échapperait ? Socrate ajoute que {teal}« le dieu, la forme même de la vie »{/teal} et tout ce qui est immortel ne périssent jamais, de l'aveu de tous. Donc {coral}« quand la mort approche l'homme, c'est vraisemblablement ce qu'il y a de mortel en lui qui meurt, mais ce qu'il y a d'immortel s'éloigne et s'en va, intact et sans corruption »{/coral}. Et nos âmes existeront dans l'Hadès.
+
+    **La réticence de Simmias.** Cébès n'a plus rien à objecter. Simmias non plus, mais la grandeur du sujet et {red}« le peu de considération »{/red} qu'il a pour la faiblesse humaine lui laissent une réticence. Socrate l'approuve, et va plus loin : il faut aussi réexaminer {amber}« les hypothèses qui nous ont servi de point de départ »{/amber}, et, si elles deviennent tout à fait claires, on suivra le raisonnement aussi loin qu'un homme le peut.
+
+    **Les faiblesses relevées.** Dès l'Antiquité ({sky}Straton de Lampsaque{/sky}), on a objecté que l'argument joue sur « immortel » : ne pas pouvoir être une âme morte n'est pas ne pas pouvoir cesser d'exister ; le passage à l'indestructible repose sur un accord plus que sur une preuve. Platon en a conscience, puisqu'il fait lui-même soulever la difficulté et renvoie à l'examen des hypothèses.
+
+    ! *Immortel* veut d'abord dire ici *qui ne reçoit pas la mort*, comme *impair* veut dire *qui ne reçoit pas le pair* ; il faut un pas de plus pour conclure à l'indestructible.
+    ! Platon ne cache pas la fragilité du passage : c'est Socrate qui pose l'objection de l'impair qui pourrait périr, et qui invite à réexaminer les hypothèses.
+  points:
+  - id: platon-phedon-causes-l9-q1
+    sentence: "À la question « qu'est-ce qui, en entrant dans un corps, le rendra vivant ? », Cébès répond : « Une ___ »."
+    answer: "âme"
+    alt: []
+  - id: platon-phedon-causes-l9-q2
+    sentence: "Une âme, « quelle que soit la chose dont elle s'empare, vient toujours vers elle en lui apportant la ___ »."
+    answer: "vie"
+    alt: []
+  - id: platon-phedon-causes-l9-q3
+    sentence: "Ce qui apporte toujours la vie ne peut recevoir son contraire, la ___."
+    answer: "mort"
+    alt: []
+  - id: platon-phedon-causes-l9-q4
+    sentence: "Ce qui ne reçoit pas le pair s'appelle impair ; ce qui ne reçoit pas la mort s'appelle ___."
+    answer: "immortel"
+    alt: []
+  - id: platon-phedon-causes-l9-q5
+    sentence: "« c'est une chose ___ qu'une âme »"
+    answer: "immortelle"
+    alt: []
+  - id: platon-phedon-causes-l9-q6
+    sentence: "Le trois ne devient jamais pair, mais rien ne l'empêche de ___ à l'approche du pair, car l'impair n'est pas indestructible."
+    answer: "périr"
+    alt: []
+  - id: platon-phedon-causes-l9-q7
+    sentence: "Si la neige était indestructible, elle se ___ intacte devant le chaud au lieu de fondre."
+    answer: "retirerait"
+    alt: []
+  - id: platon-phedon-causes-l9-q8
+    sentence: "Pour conclure, il faut encore que ce qui est immortel soit ___, sinon l'âme pourrait périr au lieu de se retirer."
+    answer: "indestructible"
+    alt: []
+  - id: platon-phedon-causes-l9-q9
+    sentence: "De l'aveu de tous, « le dieu, la ___ même de la vie » et tout ce qui est immortel ne périssent jamais."
+    answer: "forme"
+    alt: []
+  - id: platon-phedon-causes-l9-q10
+    sentence: "« quand la mort approche l'homme, c'est vraisemblablement ce qu'il y a de **___** en lui qui meurt, mais ce qu'il y a d'**immortel** s'éloigne et s'en va, __intact et sans corruption__ »"
+    answer: "mortel"
+    alt: []
+  - id: platon-phedon-causes-l9-q11
+    sentence: "« quand la mort approche l'homme, c'est vraisemblablement ce qu'il y a de **mortel** en lui qui meurt, mais ce qu'il y a d'**___** s'éloigne et s'en va, __intact et sans corruption__ »"
+    answer: "immortel"
+    alt: []
+  - id: platon-phedon-causes-l9-q12
+    sentence: "« quand la mort approche l'homme, c'est vraisemblablement ce qu'il y a de **mortel** en lui qui meurt, mais ce qu'il y a d'**immortel** s'éloigne et s'en va, ___ »"
+    answer: "intact et sans corruption"
+    alt: []
+  - id: platon-phedon-causes-l9-q13
+    sentence: "Malgré la démonstration, la grandeur du sujet et le peu de considération qu'il a pour la faiblesse humaine laissent à ___ une réticence."
+    answer: "Simmias"
+    alt: []
+  - id: platon-phedon-causes-l9-q14
+    sentence: "Socrate invite à réexaminer « les ___ qui nous ont servi de point de départ »."
+    answer: "hypothèses"
+    alt: []
+  - id: platon-phedon-causes-l9-q15
+    sentence: "Dès l'Antiquité, ___ de Lampsaque objecta que ne pas pouvoir être une âme morte n'est pas ne pas pouvoir cesser d'exister."
+    answer: "Straton"
+    alt: []
