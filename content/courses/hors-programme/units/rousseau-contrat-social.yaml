@@ -6,8 +6,12 @@
 # l'instant, la structure seule. Un plan général, puis un sous-repérage par
 # bloc de chapitres, chacun avec une colonne « Lien » (les relations de
 # l'ancien plan) ; les cartes de l'ancien plan y sont rangées, identifiants et
-# explications gardés. Rappels de chapitre et cartes manquantes viendront d'un
-# notebook NotebookLM que fournira l'utilisateur.
+# explications gardés. Sous chaque bloc, un sous-repérage par chapitre,
+# paragraphe par paragraphe (2026-11-27), comme au livre I : plans tirés du
+# texte GF, de D. L. Williams, *Rousseau's Social Contract: An Introduction*
+# (Cambridge, 2014), qui numérote les paragraphes comme la GF (« SC, 2.4.5 »),
+# et des notes de B. Bernardi. Rappels de chapitre et cartes manquantes
+# viendront du notebook NotebookLM fourni par l'utilisateur.
 #
 # Source du plan : un schéma de manuel, corrigé d'après les réponses de
 # l'utilisateur (fichier « rousseau contrat social livre II.odt », 2026-09-27).
@@ -97,6 +101,108 @@ lessons:
     sentence: "**Le peuple n'est jamais corrompu, mais il est souvent trompé** : __par les brigues et les associations__ ___, qui font prévaloir un intérêt de groupe sur l'intérêt commun."
     answer: partielles
     explanation: "D'où la conclusion du chapitre : pour que la volonté générale s'énonce bien, il ne doit pas y avoir de société partielle dans l'État."
+- id: rousseau-contrat-social-c1
+  title: "Repérage : la souveraineté inaliénable (II, 1)"
+  notes: |-
+    **Le chapitre 1 tire du pacte sa première conséquence : seule la volonté générale peut diriger les forces de l'État, donc la souveraineté, qui n'en est que l'exercice, ne peut s'aliéner.**
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | le bien commun, fin de l'État | § 1 | l'opposition des intérêts a rendu la société nécessaire, leur accord l'a rendue possible : elle doit être gouvernée sur l'intérêt commun | point de départ |
+    | la souveraineté inaliénable | § 2 | exercice de la volonté générale, elle ne peut s'aliéner ni être représentée | conséquence |
+    | la preuve | § 3 | la volonté particulière tend aux préférences, la générale à l'égalité ; un peuple qui promet d'obéir se dissout | justification |
+    | le silence du souverain | § 4 | les ordres des chefs valent volontés générales tant que le souverain, libre de s'y opposer, se tait | précision |
+
+    ! Une volonté particulière peut coïncider avec la volonté générale, mais par hasard : on ne peut s'engager à vouloir demain ce que voudra un homme.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-c1-q1
+    sentence: "« car si l'opposition des intérêts particuliers a rendu nécessaire l'établissement des sociétés, __c'est l'accord de ces mêmes intérêts qui l'a rendu__ ___ » (II, 1, § 1)."
+    answer: "possible"
+  - id: rousseau-contrat-social-c1-q2
+    sentence: "« car **la volonté particulière** __tend par sa nature aux__ ___, et la volonté générale à l'égalité » (II, 1, § 3)."
+    answer: "préférences"
+  - id: rousseau-contrat-social-c1-q3
+    sentence: "« puisqu'il est absurde __que la volonté se donne des__ ___ __pour l'avenir__ » (II, 1, § 3)."
+    answer: "chaînes"
+  - id: rousseau-contrat-social-c1-q4
+    sentence: "« Si donc **le peuple promet simplement d'obéir**, il se dissout par cet acte, il perd sa qualité de peuple ; __à l'instant qu'il y a un__ ___ __il n'y a plus de Souverain__ » (II, 1, § 3)."
+    answer: "maître"
+  - id: rousseau-contrat-social-c1-q5
+    sentence: "Les ordres des chefs peuvent passer pour des volontés générales tant que le souverain, libre de s'y opposer, ne le fait pas : « __du silence universel on doit présumer le__ ___ du peuple » (II, 1, § 4)."
+    answer: "consentement"
+- id: rousseau-contrat-social-c2
+  title: "Repérage : la souveraineté indivisible (II, 2)"
+  notes: |-
+    **Le chapitre 2 montre que la souveraineté est indivisible pour la même raison qu'elle est inaliénable : la volonté est générale ou ne l'est pas.** Ceux qui la divisent prennent pour ses parties ce qui n'en est que des émanations.
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | la volonté est générale ou ne l'est pas | § 1 | volonté du corps du peuple, elle fait loi ; d'une partie, ce n'est qu'un décret | point de départ |
+    | l'erreur des politiques | § 2 | ils divisent la souveraineté dans son objet : les charlatans du Japon | réfutation |
+    | parties ou émanations | § 3-4 | déclarer la guerre n'est pas une loi mais une application de la loi ; ces droits supposent tous des volontés suprêmes | explication |
+    | Grotius et Barbeyrac | § 5 | ce défaut d'exactitude obscurcit le droit politique : ils dépouillent les peuples pour faire leur cour aux rois | application |
+
+    ! Le chapitre ne vise pas la séparation des pouvoirs de Montesquieu : législatif et exécutif peuvent être distincts, pourvu que l'exécutif ne soit qu'une émanation de la volonté souveraine.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-c2-q1
+    sentence: "« Dans le premier cas cette volonté déclarée est un acte de souveraineté et fait loi : Dans le second, ce n'est qu'une volonté particulière, ou un acte de magistrature ; __c'est un__ ___ __tout au plus__. » (II, 2, § 1)"
+    answer: "décret"
+  - id: rousseau-contrat-social-c2-q2
+    sentence: "« Mais **nos politiques** ne pouvant diviser la souveraineté dans son principe, __la divisent dans son__ ___ » (II, 2, § 2)."
+    answer: "objet"
+  - id: rousseau-contrat-social-c2-q3
+    sentence: "Image de ceux qui divisent la souveraineté : « __Les charlatans du__ ___ dépècent, dit-on, un enfant aux yeux des spectateurs, puis jetant en l'air tous ses membres l'un après l'autre, ils font retomber l'enfant vivant et tout rassemblé » (II, 2, § 2)."
+    answer: "Japon"
+  - id: rousseau-contrat-social-c2-q4
+    sentence: "Déclarer la guerre ou faire la paix ne sont pas des actes de souveraineté, « puisque chacun de ces actes n'est point une loi __mais seulement une__ ___ __de la loi__ » (II, 2, § 3)."
+    answer: "application"
+  - id: rousseau-contrat-social-c2-q5
+    sentence: "Contre Grotius et Barbeyrac : « Or la vérité __ne mène point à la__ ___ et le peuple ne donne ni ambassades, ni chaires, ni pensions. » (II, 2, § 5)"
+    answer: "fortune"
+- id: rousseau-contrat-social-c3
+  title: "Repérage : la volonté générale peut-elle errer ? (II, 3)"
+  notes: |-
+    **Le chapitre 3 distingue la rectitude de la volonté générale de celle des délibérations du peuple, et cherche à quelles conditions celles-ci l'énoncent.**
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | la volonté générale est toujours droite | § 1 | mais non les délibérations : on ne corrompt jamais le peuple, souvent on le trompe | point de départ |
+    | volonté de tous et volonté générale | § 2 | une somme de volontés particulières, ou ce qui reste quand les plus et les moins s'entre-détruisent | distinction |
+    | les associations partielles | § 3 | sans communication, la somme des petites différences donne la volonté générale ; une brigue dominante la réduit à un avis particulier | explication |
+    | les remèdes | § 4 | pas de société partielle, sinon en multiplier le nombre et en prévenir l'inégalité | conséquence |
+
+    ! La volonté générale n'est pas ce que décide le peuple, quoi qu'il décide : un peuple trompé peut voter contre elle.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-c3-q1
+    sentence: "« mais ôtez de ces mêmes volontés les plus et les moins qui s'entre-détruisent, __reste pour somme des__ ___ **la volonté générale** » (II, 3, § 2)."
+    answer: "différences"
+  - id: rousseau-contrat-social-c3-q2
+    sentence: "« Si, quand le peuple suffisamment informé délibère, __les Citoyens n'avaient aucune__ ___ __entre eux__, du grand nombre de petites différences résulterait toujours la volonté générale » (II, 3, § 3)."
+    answer: "communication"
+  - id: rousseau-contrat-social-c3-q3
+    sentence: "Quand une association l'emporte sur toutes les autres, « vous n'avez plus pour résultat une somme de petites différences, __mais une différence__ ___ » (II, 3, § 3)."
+    answer: "unique"
+  - id: rousseau-contrat-social-c3-q4
+    sentence: "« Il importe donc pour avoir bien l'énoncé de la volonté générale qu'il n'y ait pas de société partielle dans l'État __et que chaque Citoyen n'opine que d'après__ ___ » (II, 3, § 4)."
+    answer: "lui"
+  - id: rousseau-contrat-social-c3-q5
+    sentence: "Aucune société partielle dans l'État : « Telle fut l'unique et sublime institution __du grand__ ___. » (II, 3, § 4)"
+    answer: "Lycurgue"
 - id: rousseau-contrat-social-l3
   title: "Repérage : les bornes du souverain et la loi (II, 4-6)"
   notes: |-
@@ -149,6 +255,126 @@ lessons:
   - id: cs2-lien-3-6
     sentence: "« On veut toujours son bien, mais on ne le voit pas toujours » : même formule en II, 3 et en **II, 6**, deux usages. En II, 3, __le peuple qui ne voit pas son bien est__ ___ par les brigues ; en II, 6, il est aveugle, incapable de concevoir seul un code de lois."
     answer: trompé
+- id: rousseau-contrat-social-c4
+  title: "Repérage : les bornes du pouvoir souverain (II, 4)"
+  notes: |-
+    **Le chapitre 4 montre que le souverain, absolu, est pourtant borné, et par sa nature même : la volonté générale ne peut porter que sur un objet général et n'imposer que ce qui sert la communauté.**
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | un pouvoir absolu | § 1 | comme la nature donne à l'homme un pouvoir absolu sur ses membres, le pacte au corps politique | point de départ |
+    | la question des bornes | § 2-3 | distinguer les droits du souverain du droit naturel des hommes ; chacun n'aliène que ce dont l'usage importe à la communauté | problème |
+    | l'utilité commune | § 4 | le souverain ne peut charger les sujets d'aucune chaîne inutile à la communauté | limite |
+    | la généralité de l'objet | § 5-7 | la volonté générale doit partir de tous pour s'appliquer à tous ; sur un objet particulier, elle n'est plus qu'une partie dans un procès | limite |
+    | l'acte de souveraineté | § 8-9 | une convention du corps avec chacun de ses membres, qui ne passe pas les bornes des conventions générales | conclusion |
+    | un échange avantageux | § 10 | au lieu d'une aliénation, l'indépendance naturelle échangée contre la liberté ; même la vie exposée pour la patrie | conséquence |
+
+    ! Les bornes ne viennent pas d'un droit extérieur opposé au souverain : elles tiennent à ce qu'est une volonté générale.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-c4-q1
+    sentence: "Le pacte social donne au corps politique un pouvoir absolu sur tous ses membres, « et c'est ce même pouvoir, qui, dirigé par la volonté générale porte, comme j'ai dit, __le nom de__ ___ » (II, 4, § 1)."
+    answer: "souveraineté"
+  - id: rousseau-contrat-social-c4-q2
+    sentence: "Chacun n'aliène que la partie de sa puissance, de ses biens et de sa liberté dont l'usage importe à la communauté, « mais il faut convenir aussi __que le Souverain seul est__ ___ __de cette importance__ » (II, 4, § 3)."
+    answer: "juge"
+  - id: rousseau-contrat-social-c4-q3
+    sentence: "« mais **le Souverain** de son côté __ne peut charger les sujets d'aucune chaîne__ ___ __à la communauté__ » (II, 4, § 4)."
+    answer: "inutile"
+  - id: rousseau-contrat-social-c4-q4
+    sentence: "La volonté générale, pour être vraiment telle, « __doit partir de tous pour s'appliquer à__ ___ » (II, 4, § 5)."
+    answer: "tous"
+  - id: rousseau-contrat-social-c4-q5
+    sentence: "« On doit concevoir par là, que **ce qui généralise la volonté** est moins le nombre des voix __que l'__ ___ __qui les unit__ » (II, 4, § 7)."
+    answer: "intérêt commun"
+  - id: rousseau-contrat-social-c4-q6
+    sentence: "Dans la délibération commune, chacun se soumet aux conditions qu'il impose aux autres : « __accord admirable de l'intérêt et de la__ ___ » (II, 4, § 7)."
+    answer: "justice"
+  - id: rousseau-contrat-social-c4-q7
+    sentence: "**L'acte de souveraineté** « n'est pas une convention du supérieur avec l'inférieur, __mais une convention du__ ___ __avec chacun de ses membres__ » (II, 4, § 8)."
+    answer: "corps"
+  - id: rousseau-contrat-social-c4-q8
+    sentence: "Par le contrat, les particuliers ne renoncent à rien : « au lieu d'une aliénation, __ils n'ont fait qu'un__ ___ __avantageux__ » (II, 4, § 10)."
+    answer: "échange"
+- id: rousseau-contrat-social-c5
+  title: "Repérage : le droit de vie et de mort (II, 5)"
+  notes: |-
+    **Le chapitre 5 répond à une objection : comment des particuliers qui ne peuvent disposer de leur vie donneraient-ils ce droit au souverain ?** Il en tire le droit d'exposer le citoyen, puis la peine de mort et le droit de grâce.
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | la question mal posée | § 1 | tout homme a droit de risquer sa vie pour la conserver | point de départ |
+    | la vie, don de l'État | § 2 | qui veut la fin veut les moyens : le citoyen doit mourir si la loi l'exige | réponse |
+    | la peine de mort | § 3-4 | on consent à mourir si l'on devient assassin ; le malfaiteur, qui a rompu le traité, meurt en ennemi | application |
+    | la condamnation, acte particulier | § 5 | elle n'appartient pas au souverain, qui peut seulement en conférer le droit | objection |
+    | la rareté des supplices et des grâces | § 6-7 | la fréquence des supplices est signe de faiblesse ; le droit de grâce n'appartient qu'au souverain | limite |
+
+    ! Le chapitre s'accorde mal avec le reste du livre : il fait du criminel un ennemi, alors que la guerre est une relation d'État à État (I, 4).
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-c5-q1
+    sentence: "Contre l'objection, « __Tout homme a droit de__ ___ **sa propre vie** pour la conserver. » (II, 5, § 1)"
+    answer: "risquer"
+  - id: rousseau-contrat-social-c5-q2
+    sentence: "Exposé par la loi, le citoyen doit mourir, « puisque ce n'est qu'à cette condition qu'il a vécu en sûreté jusqu'alors, et que sa vie n'est plus seulement un bienfait de la nature, __mais un don__ ___ __de l'État__ » (II, 5, § 2)."
+    answer: "conditionnel"
+  - id: rousseau-contrat-social-c5-q3
+    sentence: "« La peine de mort infligée aux criminels peut être envisagée à peu près sous le même point de vue : __c'est pour n'être pas la victime d'un__ ___ __que l'on consent à mourir si on le devient__. » (II, 5, § 3)"
+    answer: "assassin"
+  - id: rousseau-contrat-social-c5-q4
+    sentence: "La condamnation d'un criminel est un acte particulier, « aussi cette condamnation n'appartient-elle point au Souverain ; __c'est un droit qu'il peut__ ___ __sans pouvoir l'exercer lui-même__ » (II, 5, § 5)."
+    answer: "conférer"
+  - id: rousseau-contrat-social-c5-q5
+    sentence: "« Au reste, **la fréquence des supplices** __est toujours un signe de faiblesse ou de__ ___ __dans le Gouvernement__. » (II, 5, § 6)"
+    answer: "paresse"
+- id: rousseau-contrat-social-c6
+  title: "Repérage : la loi (II, 6)"
+  notes: |-
+    **Le chapitre 6, pivot du livre, définit la loi : le pacte a donné l'existence au corps politique, la législation doit lui donner le mouvement et la volonté.** Il s'achève sur le problème que les chapitres suivants résolvent.
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | de l'existence au mouvement | § 1 | l'acte primitif ne détermine rien de ce que le corps doit faire pour se conserver | point de départ |
+    | pourquoi des lois | § 2 | la justice universelle, sans sanction naturelle, n'est admise qu'à condition d'être réciproque | justification |
+    | qu'est-ce qu'une loi ? | § 3-5 | pas de volonté générale sur un objet particulier ; quand tout le peuple statue sur tout le peuple, c'est une loi | définition |
+    | l'objet toujours général | § 6 | la loi peut établir des privilèges ou une royauté, jamais nommer quelqu'un | précision |
+    | les conséquences | § 7-8 | qui fait les lois, si le Prince est au-dessus d'elles, si la loi peut être injuste ; le décret n'est pas une loi | conséquence |
+    | la République | § 9 | tout État régi par des lois, sous quelque forme d'administration que ce soit | conséquence |
+    | le problème | § 10 | le peuple, auteur des lois, est une multitude aveugle : la nécessité d'un Législateur | problème |
+
+    ! « République » ne désigne pas une forme de gouvernement : tout gouvernement légitime, même royal, est républicain.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-c6-q1
+    sentence: "« Par le pacte social nous avons donné l'existence et la vie au corps politique : __il s'agit maintenant de lui donner le mouvement et la__ ___ __par la législation__. » (II, 6, § 1)"
+    answer: "volonté"
+  - id: rousseau-contrat-social-c6-q2
+    sentence: "« **Toute justice vient de Dieu**, lui seul en est la source ; __mais si nous savions la recevoir de si haut nous n'aurions besoin ni de gouvernement ni de__ ___. » (II, 6, § 2)"
+    answer: "lois"
+  - id: rousseau-contrat-social-c6-q3
+    sentence: "« Sans doute il est **une justice universelle** émanée de la raison seule ; __mais cette justice pour être admise entre nous doit être__ ___. » (II, 6, § 2)"
+    answer: "réciproque"
+  - id: rousseau-contrat-social-c6-q4
+    sentence: "« Quand je dis que **l'objet des lois** est toujours général, __j'entends que la loi considère les sujets en corps et les actions comme__ ___, jamais un homme comme individu ni une action particulière. » (II, 6, § 6)"
+    answer: "abstraites"
+  - id: rousseau-contrat-social-c6-q5
+    sentence: "On ne demande plus « comment on est libre et soumis aux lois, __puisqu'elles ne sont que des__ ___ __de nos volontés__ » (II, 6, § 7)."
+    answer: "registres"
+  - id: rousseau-contrat-social-c6-q6
+    sentence: "« J'appelle donc ___ **tout État régi par des lois**, sous quelque forme d'administration que ce puisse être » (II, 6, § 9)."
+    answer: "République"
 - id: rousseau-contrat-social-l4
   title: "Repérage : le Législateur et le peuple (II, 7-10)"
   notes: |-
@@ -204,6 +430,149 @@ lessons:
     sentence: "Aux conditions qui rendent un peuple propre à recevoir des lois (âge, étendue, rapport entre terre et habitants) **s'en ajoute une de moment** : on n'institue un peuple que s'il jouit de __l'abondance et de la__ ___, le temps où l'État s'ordonne étant celui où il résiste le moins."
     answer: paix
     explanation: "C'est au terme de ce chapitre que Rousseau nomme la Corse, seul pays d'Europe encore capable de recevoir une législation."
+- id: rousseau-contrat-social-c7
+  title: "Repérage : le Législateur (II, 7)"
+  notes: |-
+    **Le chapitre 7 fait paraître une figure hors du commun, qui rédige les lois sans pouvoir les imposer : le peuple seul les fait siennes.** D'où sa difficulté propre, qu'il résout par une autorité d'un autre ordre.
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | il faudrait des Dieux | § 1-2 | une intelligence supérieure ; le Législateur, mécanicien qui invente la machine | point de départ |
+    | changer la nature humaine | § 3 | faire de chaque individu, tout parfait et solitaire, la partie d'un plus grand tout | précision |
+    | un emploi hors de la constitution | § 4-7 | ni magistrature ni souveraineté : Lycurgue abdique ; celui qui rédige les lois n'a aucun droit législatif | limite |
+    | deux choses incompatibles | § 8 | une entreprise au-dessus de la force humaine, une autorité qui n'est rien | difficulté |
+    | l'autorité d'un autre ordre | § 9-11 | ni force ni raisonnement : entraîner sans violence, persuader sans convaincre ; la grande âme du Législateur | solution |
+    | politique et religion | § 12 | contre Warburton : à l'origine des nations, l'une sert d'instrument à l'autre | précision |
+
+    ! Le Législateur intervient pour l'institution du peuple, non dans le peuple institué : une fois la république établie, le peuple fait lui-même ses lois.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-c7-q1
+    sentence: "« **Il faudrait des** ___ __pour donner des lois aux hommes__. » (II, 7, § 1)"
+    answer: "Dieux"
+  - id: rousseau-contrat-social-c7-q2
+    sentence: "Le grand Prince et le grand Législateur : « Celui-ci est __le__ ___ __qui invente la machine__, celui-là n'est que l'ouvrier qui la monte et la fait marcher. » (II, 7, § 2)"
+    answer: "mécanicien"
+  - id: rousseau-contrat-social-c7-q3
+    sentence: "L'emploi du **Législateur** : « Cet emploi, qui constitue la république, __n'entre point dans sa__ ___ » (II, 7, § 4)."
+    answer: "constitution"
+  - id: rousseau-contrat-social-c7-q4
+    sentence: "« Ainsi l'on trouve à la fois dans l'ouvrage de la législation deux choses qui semblent incompatibles : une entreprise au-dessus de la force humaine, et pour l'exécuter, __une autorité qui n'est__ ___. » (II, 7, § 8)"
+    answer: "rien"
+  - id: rousseau-contrat-social-c7-q5
+    sentence: "Ne pouvant employer ni la force ni le raisonnement, le Législateur doit recourir « à **une autorité d'un autre ordre**, qui puisse entraîner sans violence __et persuader sans__ ___ » (II, 7, § 9)."
+    answer: "convaincre"
+  - id: rousseau-contrat-social-c7-q6
+    sentence: "« **La grande âme du Législateur** __est le vrai__ ___ __qui doit prouver sa mission__. » (II, 7, § 11)"
+    answer: "miracle"
+  - id: rousseau-contrat-social-c7-q7
+    sentence: "Contre Warburton : la politique et la religion n'ont pas parmi nous un objet commun, « __mais que dans l'origine des nations l'une sert d'__ ___ __à l'autre__ » (II, 7, § 12)."
+    answer: "instrument"
+- id: rousseau-contrat-social-c8
+  title: "Repérage : du peuple (II, 8)"
+  notes: |-
+    **Le chapitre 8 ouvre l'examen du peuple propre à recevoir des lois par la condition du temps : un peuple n'est docile que jeune.**
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | l'architecte sonde le sol | § 1 | le sage instituteur examine d'abord si le peuple est propre à supporter les lois | point de départ |
+    | la jeunesse des peuples | § 2 | dociles dans leur jeunesse, ils deviennent incorrigibles en vieillissant | condition |
+    | les révolutions qui font renaître | § 3-4 | Sparte, Rome, la Hollande, la Suisse ; mais une seule fois : on peut acquérir la liberté, on ne la recouvre jamais | exception |
+    | la maturité d'un peuple | § 5 | la prévenir manque l'ouvrage : Pierre le Grand a policé les Russes trop tôt | précision |
+
+    ! Jeunesse et maturité ne se contredisent pas : il faut un peuple qui n'ait pas encore de coutumes enracinées, mais qui soit en état de recevoir des lois.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-c8-q1
+    sentence: "« c'est pour cela qu'on vit en Crète de bonnes lois et de méchants hommes, __parce que__ ___ n'avait discipliné qu'un peuple chargé de vices » (II, 8, § 1)."
+    answer: "Minos"
+  - id: rousseau-contrat-social-c8-q2
+    sentence: "Il est des époques violentes « où l'État, embrasé par les guerres civiles, __renaît pour ainsi dire de sa__ ___ et reprend la vigueur de la jeunesse » (II, 8, § 3)."
+    answer: "cendre"
+  - id: rousseau-contrat-social-c8-q3
+    sentence: "« Peuples libres, souvenez-vous de cette maxime : **On peut acquérir la liberté** ; __mais on ne la__ ___ __jamais__. » (II, 8, § 4)"
+    answer: "recouvre"
+  - id: rousseau-contrat-social-c8-q4
+    sentence: "« Il est pour les Nations comme pour les hommes __un temps de__ ___ __qu'il faut attendre__ avant de les soumettre à des lois » (II, 8, § 5)."
+    answer: "maturité"
+  - id: rousseau-contrat-social-c8-q5
+    sentence: "« **Les Russes** ne seront jamais vraiment policés, __parce qu'ils l'ont été trop__ ___. » (II, 8, § 5)"
+    answer: "tôt"
+- id: rousseau-contrat-social-c9
+  title: "Repérage : l'étendue de l'État (II, 9)"
+  notes: |-
+    **Le chapitre 9 traite de la deuxième condition, l'étendue : un État a, comme un corps, des bornes au-delà desquelles il s'affaiblit.**
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | ni trop grand ni trop petit | § 1 | plus le lien social s'étend, plus il se relâche | point de départ |
+    | contre les grands États | § 2-3 | administration plus pénible et plus onéreuse ; moins d'affection, lois inadaptées ; un corps écrasé sous son propre poids | justification |
+    | une base pour résister | § 4 | la force centrifuge des peuples : il faut tenir contre les voisins | objection |
+    | la juste proportion | § 5 | les raisons de s'étendre, extérieures, cèdent aux raisons de se resserrer, internes | conclusion |
+    | les États conquérants | § 6 | la nécessité des conquêtes marque le terme de leur grandeur et le moment de leur chute | précision |
+
+    ! La préférence pour les petits États n'est pas un goût personnel : la volonté générale se forme mal entre citoyens inconnus les uns aux autres.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-c9-q1
+    sentence: "« Premièrement **l'administration** devient plus pénible dans les grandes distances, __comme un poids devient plus lourd au bout d'un plus grand__ ___. » (II, 9, § 2)"
+    answer: "levier"
+  - id: rousseau-contrat-social-c9-q2
+    sentence: "Dans un grand État, « Les talents sont enfouis, les vertus ignorées, __les vices__ ___, dans cette multitude d'hommes inconnus les uns aux autres » (II, 9, § 3)."
+    answer: "impunis"
+  - id: rousseau-contrat-social-c9-q3
+    sentence: "« car tous les peuples ont __une espèce de force__ ___, par laquelle ils agissent continuellement les uns contre les autres et tendent à s'agrandir aux dépens de leurs voisins » (II, 9, § 4)."
+    answer: "centrifuge"
+  - id: rousseau-contrat-social-c9-q4
+    sentence: "« et l'on doit plus compter sur la vigueur qui naît d'un bon gouvernement, __que sur les ressources que fournit un grand__ ___ » (II, 9, § 5)."
+    answer: "territoire"
+- id: rousseau-contrat-social-c10
+  title: "Repérage : le territoire et le moment (II, 10)"
+  notes: |-
+    **Le chapitre 10 achève l'examen du peuple : le rapport du territoire à la population, puis le moment de l'institution, et enfin le portrait du peuple propre à la législation.**
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | territoire et population | § 1 | que la terre suffise à ses habitants : le terrain de trop cause les guerres défensives, le manque les offensives | point de départ |
+    | pas de rapport fixe | § 2 | sol, climat, tempéraments, fécondité : juger sur ce qu'on prévoit | précision |
+    | l'abondance et la paix | § 3-4 | le moment de l'institution distingue l'œuvre du Législateur de celle du Tyran | condition |
+    | le peuple propre à la législation | § 5 | la consistance d'un ancien peuple avec la docilité d'un peuple nouveau | récapitulation |
+    | la Corse | § 6 | il est encore en Europe un pays capable de législation | application |
+
+    ! Le peuple doit être « déjà lié par quelque union » : le Législateur ne crée pas le lien social de rien, il lui donne des lois.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-c10-q1
+    sentence: "« Tout peuple qui n'a par sa position que l'alternative __entre le commerce ou la__ ___, est faible en lui-même » (II, 10, § 1)."
+    answer: "guerre"
+  - id: rousseau-contrat-social-c10-q2
+    sentence: "Le Législateur, pour régler le rapport de la terre et des hommes, « __ne doit pas fonder son jugement sur ce qu'il voit mais sur ce qu'il__ ___ » (II, 10, § 2)."
+    answer: "prévoit"
+  - id: rousseau-contrat-social-c10-q3
+    sentence: "« **Le choix du moment de l'institution** est un des caractères les plus sûrs par lesquels on peut distinguer l'œuvre du Législateur __d'avec celle du__ ___. » (II, 10, § 4)"
+    answer: "Tyran"
+  - id: rousseau-contrat-social-c10-q4
+    sentence: "Le peuple propre à la législation est, enfin, « celui qui réunit la consistance d'un ancien peuple __avec la__ ___ __d'un peuple nouveau__ » (II, 10, § 5)."
+    answer: "docilité"
+  - id: rousseau-contrat-social-c10-q5
+    sentence: "« Il est encore en Europe **un pays capable de législation** ; __c'est l'Île de__ ___. » (II, 10, § 6)"
+    answer: "Corse"
 - id: rousseau-contrat-social-l5
   title: "Repérage : les fins et les sortes de lois (II, 11-12)"
   notes: |-
@@ -241,3 +610,67 @@ lessons:
   - id: cs2-12b
     sentence: "« À ces trois sortes de lois, il s'en joint une **quatrième**, la plus importante de toutes ; qui ne se grave ni sur le marbre ni sur l'airain, mais dans les cœurs des citoyens [...] Je parle des mœurs, des coutumes, et __surtout de__ l'___. »"
     answer: opinion
+- id: rousseau-contrat-social-c11
+  title: "Repérage : les systèmes de législation (II, 11)"
+  notes: |-
+    **Le chapitre 11 dit les deux fins de toute législation, la liberté et l'égalité, puis comment elles se modifient selon chaque peuple.**
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | les deux fins | § 1 | liberté et égalité, car la liberté ne peut subsister sans l'égalité | point de départ |
+    | ce qu'est l'égalité | § 2 | non des degrés identiques : nul assez opulent pour acheter un autre, nul assez pauvre pour se vendre | précision |
+    | une chimère ? | § 3 | la force des choses détruit l'égalité, la force de la législation doit la maintenir | objection |
+    | un système propre à chaque peuple | § 4 | la situation locale et le caractère des habitants : industrie, agriculture, mer | application |
+    | la convenance | § 5 | les lois doivent accompagner les rapports naturels, sinon l'invincible nature reprend son empire | conclusion |
+
+    ! L'égalité visée n'est pas une égalité de fait des fortunes : c'est l'absence de toute dépendance d'un citoyen à l'égard d'un autre.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-c11-q1
+    sentence: "Quant à la richesse, il faut « que nul citoyen ne soit assez opulent pour en pouvoir acheter un autre, __et nul assez pauvre pour être contraint de se__ ___ » (II, 11, § 2)."
+    answer: "vendre"
+  - id: rousseau-contrat-social-c11-q2
+    sentence: "« C'est précisément parce que **la force des choses** tend toujours à détruire l'égalité, __que la force de la__ ___ __doit toujours tendre à la maintenir__. » (II, 11, § 3)"
+    answer: "législation"
+  - id: rousseau-contrat-social-c11-q3
+    sentence: "« Occupez-vous des rivages étendus et commodes ? Couvrez la mer de vaisseaux, cultivez le commerce et la navigation ; __vous aurez une existence brillante et__ ___. » (II, 11, § 4)"
+    answer: "courte"
+  - id: rousseau-contrat-social-c11-q4
+    sentence: "Si le Législateur prend un principe contraire à la nature des choses, l'État sera agité « jusqu'à ce qu'il soit détruit ou changé, __et que l'invincible__ ___ __ait repris son empire__ » (II, 11, § 5)."
+    answer: "nature"
+- id: rousseau-contrat-social-c12
+  title: "Repérage : la division des lois (II, 12)"
+  notes: |-
+    **Le chapitre 12 classe les lois selon les rapports qu'elles règlent, et fait des mœurs la plus importante de toutes.**
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | les lois politiques | § 1-2 | le rapport du tout au tout, du Souverain à l'État ; un peuple reste maître de changer ses lois | point de départ |
+    | les lois civiles | § 3 | les membres entre eux : indépendance de chacun à l'égard des autres, dépendance à l'égard de la Cité | déclinaison |
+    | les lois criminelles | § 4 | moins une espèce de lois que la sanction de toutes les autres | déclinaison |
+    | les mœurs | § 5 | gravées dans les cœurs des citoyens, elles font la véritable constitution de l'État | déclinaison |
+    | retour au sujet | § 6 | seules les lois politiques relèvent de l'ouvrage | conclusion |
+
+    ! Les lois criminelles ne règlent pas un rapport de plus : elles sanctionnent les autres.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-c12-q1
+    sentence: "« un peuple est toujours le maître de changer ses lois, même les meilleures ; car s'il lui plaît de se faire mal à lui-même, __qui est-ce qui a__ ___ __de l'en empêcher__ ? » (II, 12, § 2)"
+    answer: "droit"
+  - id: rousseau-contrat-social-c12-q2
+    sentence: "Les **lois civiles** : « en sorte que chaque Citoyen soit dans une parfaite indépendance de tous les autres, __et dans une excessive__ ___ __de la Cité__ » (II, 12, § 3)."
+    answer: "dépendance"
+  - id: rousseau-contrat-social-c12-q3
+    sentence: "Les **lois criminelles**, « qui dans le fond sont moins une espèce particulière de lois, __que la__ ___ __de toutes les autres__ » (II, 12, § 4)."
+    answer: "sanction"
+  - id: rousseau-contrat-social-c12-q4
+    sentence: "Le grand Législateur paraît se borner « à des règlements particuliers qui ne sont que le cintre de la voûte, __dont les mœurs, plus lentes à naître, forment enfin l'inébranlable__ ___ » (II, 12, § 5)."
+    answer: "Clef"
