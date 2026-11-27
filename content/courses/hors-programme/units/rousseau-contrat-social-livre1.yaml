@@ -1,0 +1,402 @@
+# Cours d'une œuvre (unités-œuvres en leçons, sur le modèle du Phédon, voir
+# content/philosophie.md) : Rousseau, *Du contrat social*, livre I. Livre II :
+# rousseau-contrat-social.
+#
+# Pour l'instant, la structure seule (2026-11-27) : un plan général, puis un
+# sous-repérage par mouvement, paragraphe par paragraphe, avec une colonne
+# « Lien » (lien avec ce qui précède). Rappels et cartes manquantes viendront
+# d'un notebook NotebookLM que fournira l'utilisateur.
+#
+# Plan : commentaire du livre I par B. Bernardi (CNED, Terminale, leçon 32),
+# qui numérote les paragraphes de chaque chapitre (« chap. IV, § 2-5 »).
+# Citations : GF Flammarion (éd. Bruno Bernardi, 2001, revue 2012).
+
+id: rousseau-contrat-social-livre1
+title: "Livre I : le pacte social"
+subtitle: "Rousseau · Du contrat social"
+icon: map
+color: sky
+group: "Rousseau : Du contrat social"
+lessons:
+- id: rousseau-contrat-social-livre1-l1
+  title: "Repérage : le plan du livre I (I, 1-9)"
+  notes: |-
+    Le livre I ne pose qu'**un seul problème**, celui de la {amber}**légitimité de l'ordre civil**{/amber}, et le résout. Il procède en {sky}deux temps{/sky} : {red}__une partie négative__{/red} (chap. 2 à 5) écarte les fausses conceptions du lien social et remonte à la première convention ; {green}__une partie positive__{/green} (chap. 6 à 9) forme le pacte social et en tire les conséquences. Le préambule, écrit après coup, ouvre le chapitre 1.
+
+    | Mouvement | Lieu | Ce qui s'y joue | Lien |
+    | le problème (préambule et chap. 1) | I, 1 | l'homme est né libre, et partout il est dans les fers : qu'est-ce qui peut rendre ce changement légitime ? | point de départ |
+    | les fausses conceptions du lien social | I, 2-4 | ni la nature, ni la force, ni une convention de soumission ne fondent une autorité légitime | réfutation |
+    | la première convention | I, 5 | tout pacte de soumission suppose l'acte par lequel un peuple est un peuple | conséquence |
+    | le pacte social | I, 6 | une association où chacun, s'unissant à tous, n'obéit qu'à lui-même : l'aliénation totale à la communauté | solution |
+    | les effets du pacte | I, 7-9 | les obligations du souverain et des sujets, le passage à l'état civil, la propriété | conséquence |
+
+    {coral}__Ouvert sur la liberté, le livre se referme sur l'égalité__{/coral} : « L'homme est né libre » (I, 1) ; les hommes « deviennent tous égaux par convention et de droit » (I, 9).
+
+    ! La partie négative n'est pas un préalable sans contenu : chaque réfutation y pose une thèse positive du droit politique.
+  tables:
+  - table: mouvement-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-livre1-l1-q1
+    sentence: "Le livre I du *Contrat social* procède en deux temps : les chapitres 2 à 5 __réfutent les fausses conceptions du__ ___ **social**, les chapitres 6 à 9 forment le pacte social et en tirent les conséquences."
+    answer: "lien"
+  - id: rousseau-contrat-social-livre1-l1-q2
+    sentence: "Les chapitres 2 à 4 du livre I du *Contrat social* écartent trois fondements de l'autorité : la nature, __la__ ___, et une convention de soumission."
+    answer: "force"
+  - id: rousseau-contrat-social-livre1-l1-q3
+    sentence: "Le chapitre 6 du livre I du *Contrat social*, « Du pacte social », énonce le « __problème__ ___ » dont le contrat social donne la solution."
+    answer: "fondamental"
+  - id: rousseau-contrat-social-livre1-l1-q4
+    sentence: "Ouvert sur la liberté, le livre I du *Contrat social* se referme sur l'**égalité** : les hommes « __deviennent tous égaux par__ ___ et de droit » (I, 9, § 8)."
+    answer: "convention"
+- id: rousseau-contrat-social-livre1-l2
+  title: "Repérage : le problème (préambule et I, 1)"
+  notes: |-
+    **Le préambule et le chapitre 1 formulent deux fois le même problème, celui de la légitimité de l'ordre civil.** Le préambule en donne la forme générale et le point de vue, celui du {sky}citoyen{/sky} ; le chapitre 1 lui donne son contenu, la liberté perdue, et la direction de la solution, la convention.
+
+    | Préambule | Lieu | Ce qui s'y joue | Lien |
+    | l'objet de la recherche | § 1 | une règle d'administration légitime et sûre, qui allie ce que le droit permet et ce que l'intérêt prescrit | point de départ |
+    | ni prince ni législateur | § 2 | c'est pour cela même qu'il écrit sur la politique : qui gouverne agit ou se tait | motif |
+    | le point de vue du citoyen | § 3 | membre du souverain, le droit de voter lui impose le devoir de s'instruire | motif |
+
+    | Chapitre 1 | Lieu | Ce qui s'y joue | Lien |
+    | les données du problème | § 1 | né libre, l'homme est partout dans les fers ; on ne demande pas comment, mais ce qui peut rendre ce changement légitime | point de départ |
+    | l'hypothèse de la force | § 2 | si seule la force comptait, le peuple qui secoue le joug ferait encore mieux | réfutation |
+    | la direction de la solution | § 2 | l'ordre social est un droit sacré, qui ne vient pas de la nature : il est fondé sur des conventions | conséquence |
+    | l'annonce de la suite | § 2 | avant de dire quelles sont ces conventions, établir ce qui vient d'être avancé | annonce |
+
+    ! Le problème n'est pas théorique (comment la liberté s'est perdue, question du second *Discours*) mais de droit : ce qui peut rendre l'ordre civil légitime.
+  tables:
+  - table: preambule-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  - table: chapitre-1-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-livre1-l2-q1
+    sentence: "« Je veux chercher si dans l'ordre civil il peut y avoir quelque **règle d'administration** __légitime et__ ___, en prenant les hommes tels qu'ils sont, et les lois telles qu'elles peuvent être » (I, préambule, § 1)."
+    answer: "sûre"
+  - id: rousseau-contrat-social-livre1-l2-q2
+    sentence: "« Je tâcherai d'allier toujours dans cette recherche ce que **le droit permet** __avec ce que l'intérêt__ ___, afin que la justice et l'utilité ne se trouvent point divisées » (I, préambule, § 1)."
+    answer: "prescrit"
+  - id: rousseau-contrat-social-livre1-l2-q3
+    sentence: "« Né citoyen d'un État libre, et **membre du souverain**, quelque faible influence que puisse avoir ma voix dans les affaires publiques, le droit d'y voter __suffit pour m'imposer le__ ___ de m'en instruire » (I, préambule, § 3)."
+    answer: "devoir"
+  - id: rousseau-contrat-social-livre1-l2-q4
+    sentence: "« L'homme est né libre, __et partout il est dans les__ ___. » (I, 1, § 1)"
+    answer: "fers"
+  - id: rousseau-contrat-social-livre1-l2-q5
+    sentence: "« Comment ce changement s'est-il fait ? Je l'ignore. **Qu'est-ce qui peut le rendre** ___ ? Je crois pouvoir résoudre cette question. » (I, 1, § 1)"
+    answer: "légitime"
+  - id: rousseau-contrat-social-livre1-l2-q6
+    sentence: "« Mais **l'ordre social est un droit sacré**, qui sert de base à tous les autres. Cependant ce droit ne vient point de la nature ; __il est donc fondé sur des__ ___. » (I, 1, § 2)"
+    answer: "conventions"
+- id: rousseau-contrat-social-livre1-l3
+  title: "Repérage : les premières sociétés (I, 2)"
+  notes: |-
+    **Le chapitre 2 éprouve l'hypothèse d'une soumission fondée en nature, sous trois formes, dans un ordre de crédibilité décroissant.** Chaque réfutation y est l'occasion de poser une thèse du droit politique : le lien social est conventionnel, et la conservation de soi est la « première loi » de l'homme.
+
+    | Hypothèse | Lieu | Ce qui s'y joue | Lien |
+    | la famille, modèle de la société politique | § 1-3 | le lien naturel ne dure qu'autant que le besoin ; s'il continue, c'est par convention | point de départ |
+    | des hommes nés pour l'esclavage | § 4-8 | Grotius, Hobbes, Caligula, Aristote ; mais la force a fait les premiers esclaves, leur lâcheté les a perpétués | déclinaison |
+    | l'autorité héritée d'Adam | § 9 | réfutée par la seule ironie : Adam fut souverain du monde comme Robinson de son île | déclinaison |
+
+    ! Rousseau accorde le fait (« Aristote avait raison ») pour mieux en contester la cause : la servitude n'est pas naturelle, elle est produite.
+  tables:
+  - table: hypothese-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-livre1-l3-q1
+    sentence: "« **La plus ancienne de toutes les sociétés** __et la seule naturelle est celle de la__ ___. » (I, 2, § 1)"
+    answer: "famille"
+  - id: rousseau-contrat-social-livre1-l3-q2
+    sentence: "« S'ils continuent de rester unis ce n'est plus naturellement c'est volontairement, et **la famille elle-même** __ne se maintient que par__ ___. » (I, 2, § 1)"
+    answer: "convention"
+  - id: rousseau-contrat-social-livre1-l3-q3
+    sentence: "« Cette liberté commune est une conséquence de la nature de l'homme. **Sa première loi** __est de veiller à sa propre__ ___ » (I, 2, § 2)."
+    answer: "conservation"
+  - id: rousseau-contrat-social-livre1-l3-q4
+    sentence: "« **Aristote avait raison**, __mais il prenait l'effet pour la__ ___. » (I, 2, § 8)"
+    answer: "cause"
+  - id: rousseau-contrat-social-livre1-l3-q5
+    sentence: "« S'il y a donc des esclaves par nature, c'est parce qu'il y a eu des esclaves contre nature. **La force a fait les premiers esclaves**, __leur__ ___ __les a perpétués__. » (I, 2, § 8)"
+    answer: "lâcheté"
+  - id: rousseau-contrat-social-livre1-l3-q6
+    sentence: "La troisième forme de soumission naturelle qu'examine le chapitre 2 du livre I, l'autorité héritée d'___ par succession, n'est réfutée que par l'**ironie** (I, 2, § 9)."
+    answer: "Adam"
+- id: rousseau-contrat-social-livre1-l4
+  title: "Repérage : le droit du plus fort (I, 3)"
+  notes: |-
+    **Le chapitre 3 montre que la force ne peut produire aucune obligation : un « droit du plus fort » se détruit lui-même.** Il dégage par contraste ce qui définit le droit, sa durée et l'obéissance par devoir.
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | la force ne produit aucune moralité | § 1 | céder à la force est un acte de nécessité, non de volonté | point de départ |
+    | le galimatias | § 2 | par l'absurde : un droit qui périt quand la force cesse n'ajoute rien à la force | démonstration |
+    | « Obéissez aux puissances » | § 3 | la maladie et le brigand : une puissance n'est pas une autorité | application |
+    | la conclusion | § 4 | force ne fait pas droit ; la question primitive revient | conclusion |
+
+    ! Le chapitre ne combat pas seulement une thèse adverse : il montre ce que doit admettre quiconque accorde à la force le nom de droit.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-livre1-l4-q1
+    sentence: "« Le plus fort n'est jamais assez fort pour être toujours le maître, **s'il ne transforme sa force** __en__ ___ et l'obéissance en devoir. » (I, 3, § 1)"
+    answer: "droit"
+  - id: rousseau-contrat-social-livre1-l4-q2
+    sentence: "« **Céder à la force** est un acte de nécessité, non de volonté ; __c'est tout au plus un acte de__ ___. » (I, 3, § 1)"
+    answer: "prudence"
+  - id: rousseau-contrat-social-livre1-l4-q3
+    sentence: "« Supposons un moment ce prétendu droit. __Je dis qu'il n'en résulte qu'un__ ___ **inexplicable**. » (I, 3, § 2)"
+    answer: "galimatias"
+  - id: rousseau-contrat-social-livre1-l4-q4
+    sentence: "« **Toute puissance vient de Dieu**, je l'avoue ; __mais toute__ ___ __en vient aussi__. Est-ce à dire qu'il soit défendu d'appeler le médecin ? » (I, 3, § 3)"
+    answer: "maladie"
+  - id: rousseau-contrat-social-livre1-l4-q5
+    sentence: "« Convenons donc que **force ne fait pas droit**, et __qu'on n'est obligé d'obéir qu'aux puissances__ ___. » (I, 3, § 4)"
+    answer: "légitimes"
+- id: rousseau-contrat-social-livre1-l5
+  title: "Repérage : l'esclavage (I, 4)"
+  notes: |-
+    **Le chapitre 4 écarte la thèse la plus dangereuse : une convention par laquelle des hommes renonceraient librement à leur liberté.** Deux arguments prétendent fonder ainsi la soumission, l'échange de la liberté contre la sécurité (§ 2-6), et celui de la liberté contre la vie (§ 7-12) ; Rousseau en tire qu'une convention suppose et conserve la liberté de ceux qui la passent.
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | restent les conventions | § 1 | ni la nature ni la force ne fondent l'autorité : restent les conventions | conséquence |
+    | un peuple peut-il s'aliéner ? | § 2-5 | contre Grotius : un peuple ne se vend ni ne se donne, et nul n'aliène ses enfants | réfutation |
+    | une aliénation impensable | § 6 | renoncer à sa liberté, c'est renoncer à sa qualité d'homme | principe |
+    | la liberté contre la vie | § 7 | le vainqueur, qui aurait le droit de tuer, laisserait la vie au vaincu contre sa liberté | objection |
+    | la guerre, relation d'État à État | § 8-9 | sans relations réelles, il n'y a pas d'état de guerre entre les hommes | réfutation |
+    | le droit de la guerre | § 10-12 | la guerre ne donne aucun droit qui ne soit nécessaire à sa fin ; le cercle vicieux | conséquence |
+    | la conclusion | § 13-14 | la convention prolonge l'état de guerre ; « esclavage » et « droit » s'excluent | conclusion |
+
+    ! Le § 6, qui semble une incise, est le foyer du livre : la liberté n'est pas un bien qu'on possède, elle fait l'homme, et ne peut donc s'aliéner.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-livre1-l5-q1
+    sentence: "« Puisque aucun homme n'a une autorité naturelle sur son semblable, et puisque la force ne produit aucun droit, __restent donc les__ ___ **pour base de toute autorité légitime** parmi les hommes. » (I, 4, § 1)"
+    answer: "conventions"
+  - id: rousseau-contrat-social-livre1-l5-q2
+    sentence: "Contre Grotius, Rousseau définit le mot équivoque : « **Aliéner** __c'est donner ou__ ___. » (I, 4, § 2)"
+    answer: "vendre"
+  - id: rousseau-contrat-social-livre1-l5-q3
+    sentence: "Contre l'argument de la tranquillité civile assurée par le despote : « __On vit tranquille aussi dans les__ ___ ; en est-ce assez pour s'y trouver bien ? » (I, 4, § 3)"
+    answer: "cachots"
+  - id: rousseau-contrat-social-livre1-l5-q4
+    sentence: "« **Renoncer à sa liberté** __c'est renoncer à sa__ ___ __d'homme__, aux droits de l'humanité, même à ses devoirs. » (I, 4, § 6)"
+    answer: "qualité"
+  - id: rousseau-contrat-social-livre1-l5-q5
+    sentence: "« c'est ôter toute ___ __à ses actions que d'ôter toute__ **liberté à sa volonté** » (I, 4, § 6)."
+    answer: "moralité"
+  - id: rousseau-contrat-social-livre1-l5-q6
+    sentence: "« **La guerre** n'est donc point une relation d'homme à homme, mais une relation d'État à État, dans laquelle les particuliers __ne sont ennemis__ qu'___ » (I, 4, § 10)."
+    answer: "accidentellement"
+  - id: rousseau-contrat-social-livre1-l5-q7
+    sentence: "« En établissant le droit de vie et de mort sur le droit d'esclavage, et le droit d'esclavage sur le droit de vie et de mort, __n'est-il pas clair qu'on tombe dans le__ ___ ? » (I, 4, § 12)"
+    answer: "cercle vicieux"
+  - id: rousseau-contrat-social-livre1-l5-q8
+    sentence: "« Ces mots, **esclavage, et, droit** __sont__ ___ ; ils s'excluent mutuellement. » (I, 4, § 14)"
+    answer: "contradictoires"
+- id: rousseau-contrat-social-livre1-l6
+  title: "Repérage : la première convention (I, 5)"
+  notes: |-
+    **Le chapitre 5 établit à nouveaux frais ce que les chapitres 2 à 4 ont montré, mais par une voie directe : l'analyse du concept même de société.** Il clôt la partie négative en découvrant le vrai fondement de la société, que le chapitre 6 va expliquer.
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | agrégation et association | § 1 | soumettre une multitude n'est pas régir une société : un maître et des esclaves ne font pas un peuple | point de départ |
+    | l'acte par lequel un peuple est un peuple | § 2 | Grotius suppose le peuple avant son don à un roi : cet acte antérieur est le vrai fondement | conséquence |
+    | la règle de la majorité | § 3 | la loi de la pluralité des suffrages suppose au moins une fois l'unanimité | confirmation |
+
+    ! L'argument retourne contre Grotius sa propre thèse : pour se donner à un roi, un peuple doit déjà avoir une volonté commune.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-livre1-l6-q1
+    sentence: "« Il y aura toujours une grande différence **entre soumettre une multitude**, __et__ ___ __une société__. » (I, 5, § 1)"
+    answer: "régir"
+  - id: rousseau-contrat-social-livre1-l6-q2
+    sentence: "Des hommes épars asservis à un seul : « c'est si l'on veut une ___, __mais non pas une__ **association** ; il n'y a là ni bien public ni corps politique » (I, 5, § 1)."
+    answer: "agrégation"
+  - id: rousseau-contrat-social-livre1-l6-q3
+    sentence: "« il serait bon d'examiner **l'acte par lequel un peuple est un peuple**. Car cet acte étant __nécessairement__ ___ __à l'autre__ est le vrai fondement de la société. » (I, 5, § 2)"
+    answer: "antérieur"
+  - id: rousseau-contrat-social-livre1-l6-q4
+    sentence: "« **La loi de la pluralité des suffrages** est elle-même un établissement de convention, __et suppose au moins une fois__ l'___. » (I, 5, § 3)"
+    answer: "unanimité"
+  - id: rousseau-contrat-social-livre1-l6-q5
+    sentence: "Le chapitre 5 du livre I démontre à nouveaux frais ce que les chapitres 2 à 4 ont établi, __mais par une voie__ ___ : l'analyse du concept même de **société**."
+    answer: "directe"
+- id: rousseau-contrat-social-livre1-l7
+  title: "Repérage : le pacte social (I, 6)"
+  notes: |-
+    **Le chapitre 6 rejoue en raccourci le mouvement du livre entier : les données du problème, sa formulation, sa solution, puis ses conséquences.** Le problème, posé dans toute sa précision, détermine entièrement sa solution.
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | une nécessité | § 1 | les obstacles à la conservation l'emportent : le genre humain périrait s'il ne changeait sa manière d'être | point de départ |
+    | une possibilité | § 2 | les hommes ne peuvent engendrer de forces nouvelles, seulement unir celles qui existent | conséquence |
+    | une condition | § 3 | la force et la liberté de chacun sont les premiers instruments de sa conservation | difficulté |
+    | le problème fondamental | § 4 | une association par laquelle chacun, s'unissant à tous, n'obéisse qu'à lui-même | synthèse |
+    | la solution | § 5-8 | les clauses se réduisent à une seule : l'aliénation totale de chaque associé à toute la communauté | solution |
+    | la formule du pacte | § 9 | chacun met en commun sa personne sous la suprême direction de la volonté générale | résumé |
+    | les concepts du droit politique | § 10 | République, État, Souverain, Puissance ; peuple, citoyens, sujets | conséquence |
+
+    ! L'aliénation totale n'est pas l'aliénation refusée au chapitre 4 : elle se fait à une communauté dont on est membre, et non à un maître.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-livre1-l7-q1
+    sentence: "« Trouver une forme d'association qui défende et protège de toute la force commune la personne et les biens de chaque associé, et par laquelle **chacun s'unissant à tous** __n'obéisse pourtant qu'à__ ___ et reste aussi libre qu'auparavant ? » (I, 6, § 4)"
+    answer: "lui-même"
+  - id: rousseau-contrat-social-livre1-l7-q2
+    sentence: "« **Les clauses de ce contrat** __sont tellement déterminées par la__ ___ __de l'acte__, que la moindre modification les rendrait vaines et de nul effet » (I, 6, § 5)."
+    answer: "nature"
+  - id: rousseau-contrat-social-livre1-l7-q3
+    sentence: "« Ces clauses bien entendues se réduisent toutes à une seule, savoir **l'aliénation** ___ __de chaque associé avec tous ses droits à toute la communauté__ » (I, 6, § 6)."
+    answer: "totale"
+  - id: rousseau-contrat-social-livre1-l7-q4
+    sentence: "« Enfin **chacun se donnant à tous** __ne se donne à__ ___ » (I, 6, § 8)."
+    answer: "personne"
+  - id: rousseau-contrat-social-livre1-l7-q5
+    sentence: "« Chacun de nous met en commun sa personne et toute sa puissance __sous la suprême direction de la__ ___ ; et nous recevons en corps chaque membre comme partie indivisible du tout. » (I, 6, § 9)"
+    answer: "volonté générale"
+  - id: rousseau-contrat-social-livre1-l7-q6
+    sentence: "Le **corps politique** « est appelé par ses membres État quand il est passif, ___ __quand il est actif__, Puissance en le comparant à ses semblables » (I, 6, § 10)."
+    answer: "Souverain"
+  - id: rousseau-contrat-social-livre1-l7-q7
+    sentence: "Les **associés** « s'appellent en particulier Citoyens comme participants à l'autorité souveraine, et ___ __comme soumis aux lois de l'État__ » (I, 6, § 10)."
+    answer: "Sujets"
+- id: rousseau-contrat-social-livre1-l8
+  title: "Repérage : le souverain (I, 7)"
+  notes: |-
+    **Le chapitre 7 considère le souverain sous l'angle de l'obligation : à quoi est-il obligé, en quoi oblige-t-il ?** La théorie de la souveraineté elle-même sera développée en II, 1-6.
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | un engagement réciproque | § 1 | chacun est engagé comme membre du Souverain envers les particuliers, et comme membre de l'État envers le Souverain | point de départ |
+    | un souverain sans loi fondamentale | § 2 | nulle loi fondamentale obligatoire pour le corps du peuple, pas même le contrat social | conséquence |
+    | la sainteté du contrat | § 3-4 | ni s'aliéner ni se soumettre ; on ne peut offenser un membre sans attaquer le corps | limite |
+    | un souverain sans garant | § 5 | il ne peut avoir d'intérêt contraire à celui des particuliers qui le composent | conséquence |
+    | les obligations des sujets | § 6-8 | quiconque refusera d'obéir à la volonté générale y sera contraint : on le forcera d'être libre | contrepartie |
+
+    ! « On le forcera d'être libre » vise le sujet, non le citoyen : le contraindre à obéir aux lois, c'est lui faire respecter la volonté qu'il a eue comme citoyen.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-livre1-l8-q1
+    sentence: "« chaque individu, contractant, pour ainsi dire, avec lui-même, __se trouve engagé sous un__ ___ **rapport** ; savoir, comme membre du Souverain envers les particuliers, et comme membre de l'État envers le Souverain » (I, 7, § 1)."
+    answer: "double"
+  - id: rousseau-contrat-social-livre1-l8-q2
+    sentence: "« il n'y a ni ne peut y avoir nulle espèce de **loi fondamentale obligatoire pour le corps du peuple**, __pas même le__ ___ » (I, 7, § 2)."
+    answer: "contrat social"
+  - id: rousseau-contrat-social-livre1-l8-q3
+    sentence: "« Mais le corps politique ou le Souverain __ne tirant son être que de la__ ___ **du contrat** ne peut jamais s'obliger, même envers autrui, à rien qui déroge à cet acte primitif » (I, 7, § 3)."
+    answer: "sainteté"
+  - id: rousseau-contrat-social-livre1-l8-q4
+    sentence: "« **Le Souverain**, par cela seul qu'il est, __est toujours tout ce qu'il__ ___ __être__. » (I, 7, § 5)"
+    answer: "doit"
+  - id: rousseau-contrat-social-livre1-l8-q5
+    sentence: "« En effet chaque individu peut comme homme avoir une **volonté** ___ __contraire ou dissemblable à la volonté générale__ qu'il a comme Citoyen. » (I, 7, § 7)"
+    answer: "particulière"
+  - id: rousseau-contrat-social-livre1-l8-q6
+    sentence: "« quiconque refusera d'obéir à la volonté générale y sera contraint par tout le corps : __ce qui ne signifie autre chose sinon qu'on le__ **forcera d'être** ___ » (I, 7, § 8)."
+    answer: "libre"
+- id: rousseau-contrat-social-livre1-l9
+  title: "Repérage : l'état civil (I, 8)"
+  notes: |-
+    **Le chapitre 8 évalue le changement que produit dans l'homme le passage à l'état civil : élévation ou dégradation.** L'ambivalence tient à ce que l'état civil est double : l'état civil légitime, que le livre fonde, et l'état civil corrompu, où l'homme est « dans les fers ».
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | le changement de l'homme | § 1 | la justice substituée à l'instinct ; d'un animal stupide et borné, un être intelligent et un homme | point de départ |
+    | la balance | § 2 | perdus, la liberté naturelle et un droit illimité ; gagnés, la liberté civile et la propriété | bilan |
+    | la liberté morale | § 3 | l'obéissance à la loi qu'on s'est prescrite est liberté | ajout |
+
+    ! La liberté naturelle n'a pour bornes que les forces de l'individu ; la liberté civile est limitée par la volonté générale : ce ne sont pas deux degrés d'une même liberté.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-livre1-l9-q1
+    sentence: "« Ce passage de l'état de nature à l'état civil produit dans l'homme un changement très remarquable, __en substituant dans sa conduite la__ ___ **à l'instinct** » (I, 8, § 1)."
+    answer: "justice"
+  - id: rousseau-contrat-social-livre1-l9-q2
+    sentence: "Le passage à l'état civil devrait faire bénir l'instant « qui, **d'un animal stupide et borné**, __fit un être__ ___ __et un homme__ » (I, 8, § 1)."
+    answer: "intelligent"
+  - id: rousseau-contrat-social-livre1-l9-q3
+    sentence: "« Ce que l'homme perd par le contrat social, c'est sa liberté naturelle et un droit illimité à tout ce qui le tente et qu'il peut atteindre ; __ce qu'il gagne, c'est la liberté__ ___ et la **propriété** de tout ce qu'il possède. » (I, 8, § 2)"
+    answer: "civile"
+  - id: rousseau-contrat-social-livre1-l9-q4
+    sentence: "Il faut distinguer « **la possession** qui n'est que l'effet de la force ou le droit du premier occupant, de la propriété __qui ne peut être fondée que sur un titre__ ___ » (I, 8, § 2)."
+    answer: "positif"
+  - id: rousseau-contrat-social-livre1-l9-q5
+    sentence: "« car l'impulsion du seul appétit est esclavage, et **l'obéissance à la loi** __qu'on s'est__ ___ __est liberté__ » (I, 8, § 3)."
+    answer: "prescrite"
+- id: rousseau-contrat-social-livre1-l10
+  title: "Repérage : le domaine réel (I, 9)"
+  notes: |-
+    **Le chapitre 9 tire du pacte la distinction de la possession et de la propriété : ce n'est pas la propriété qui fonde la société, c'est la société qui fonde la propriété.** Il s'achève, avec le livre, sur l'égalité.
+
+    | Moment | Lieu | Ce qui s'y joue | Lien |
+    | la possession publique | § 1 | chacun se donne avec ses biens ; la possession publique est plus forte, non plus légitime à l'égard des étrangers | point de départ |
+    | le droit du premier occupant | § 2-4 | il ne devient un vrai droit qu'après la propriété, et sous trois conditions : terrain inhabité, besoin, travail | limite |
+    | territoire et souveraineté | § 5 | les rois des Perses, chefs des hommes ; les rois de France, maîtres du pays | ironie |
+    | la propriété garantie | § 6-7 | la communauté change l'usurpation en un véritable droit ; le droit du particulier reste subordonné à celui de la communauté | conséquence |
+    | l'égalité par convention | § 8 | le pacte substitue une égalité morale et légitime à l'inégalité physique | conclusion |
+
+    ! L'aliénation des biens à la communauté ne dépouille pas les particuliers : elle leur assure la légitime possession de ce qu'ils ont donné.
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue-lien
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: bank, column: Lien}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: rousseau-contrat-social-livre1-l10-q1
+    sentence: "« **Le droit de premier occupant**, quoique plus réel que celui du plus fort, __ne devient un vrai droit qu'après l'établissement de celui de__ ___. » (I, 9, § 2)"
+    answer: "propriété"
+  - id: rousseau-contrat-social-livre1-l10-q2
+    sentence: "Troisième condition du droit de premier occupant : « qu'on en prenne possession, non par une vaine cérémonie, __mais par le__ ___ __et la culture__, seul signe de propriété qui au défaut de titres juridiques doive être respecté d'autrui » (I, 9, § 3)."
+    answer: "travail"
+  - id: rousseau-contrat-social-livre1-l10-q3
+    sentence: "Les anciens monarques, « ne s'appelant que **rois des Perses**, des Scythes, des Macédoniens, semblaient se regarder __comme les chefs des__ ___ plutôt que comme les maîtres du pays » (I, 9, § 5)."
+    answer: "hommes"
+  - id: rousseau-contrat-social-livre1-l10-q4
+    sentence: "La communauté, en acceptant les biens des particuliers, « ne fait que leur en assurer la légitime possession, changer l'usurpation en un véritable droit, __et la__ ___ **en propriété** » (I, 9, § 6)."
+    answer: "jouissance"
+  - id: rousseau-contrat-social-livre1-l10-q5
+    sentence: "« **le droit que chaque particulier a sur son propre fond** __est toujours__ ___ __au droit que la communauté a sur tous__ » (I, 9, § 7)."
+    answer: "subordonné"
+  - id: rousseau-contrat-social-livre1-l10-q6
+    sentence: "« au lieu de détruire l'égalité naturelle, **le pacte fondamental** substitue au contraire __une égalité morale et__ ___ à ce que la nature avait pu mettre d'inégalité physique entre les hommes » (I, 9, § 8)."
+    answer: "légitime"
