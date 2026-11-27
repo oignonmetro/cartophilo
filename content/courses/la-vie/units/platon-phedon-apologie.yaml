@@ -1,0 +1,622 @@
+# Cours d'une œuvre (skill cours-oeuvre, piste Œuvres de La vie, voir
+# content/philosophie.md) : Platon, Phédon, le prologue et l'apologie (57a-69e).
+# Citations : traduction de Monique Dixsaut, GF-Flammarion, 1991 ; repères :
+# pagination Stephanus. Analyse : introduction et notes de Dixsaut, recoupées avec
+# le notebook NotebookLM « Platon, le Phédon »
+# (https://notebook.google.com/notebook/94dc410f-59bd-4f81-a649-e363a6ee0de4).
+
+id: platon-phedon-apologie
+title: "Le prologue et l'apologie (57a-69e)"
+subtitle: "Philosopher, c'est s'exercer à mourir"
+icon: compass
+color: sky
+group: "Platon : Phédon"
+lessons:
+- id: platon-phedon-apologie-l1
+  title: "Repérage : le plan du Phédon (57a-118a)"
+  notes: |-
+    Le *Phédon* est le **récit** que fait Phédon, à Phlionte, devant Échécrate, de la dernière journée de Socrate, qui boit la ciguë au coucher du soleil. Toute la conversation tourne autour d'une question que Cébès formule après l'apologie : {amber}**l'âme existe-t-elle encore, une fois séparée du corps, et garde-t-elle « une certaine force et de la pensée » (70b) ?**{/amber} Le dialogue y répond en {sky}cinq grands temps{/sky} : Socrate justifie d'abord sa sérénité, puis la fonde par trois arguments, les voit ébranlés par deux objections, répond par un dernier argument appuyé sur les Formes, et conclut par un mythe avant de mourir.
+
+    | Section | Lieu | Ce qui s'y joue |
+    | le prologue et l'apologie | 57a-69e | le philosophe ne craint pas la mort, car philosopher, c'est déjà séparer l'âme du corps |
+    | les trois premiers arguments | 69e-84b | contraires, réminiscence, affinité : l'âme existait avant la naissance et doit subsister après la mort |
+    | les objections et la misologie | 84b-95a | l'âme-harmonie de Simmias réfutée ; l'âme qui s'use de Cébès reste à réfuter ; ne pas haïr les raisonnements |
+    | l'autobiographie et le dernier argument | 95a-107a | les Formes comme causes ; l'âme apporte la vie et ne peut donc pas recevoir la mort |
+    | le mythe et la mort de Socrate | 107a-118a | le sort des âmes dépend de leur purification ; Socrate meurt en philosophe |
+
+    {green}__Le dialogue ne se contente pas de démontrer l'immortalité__{/green} : il montre aussi, en Socrate, ce qu'est une vie qui s'est exercée à mourir, si bien que le récit de sa mort fait partie de l'argument.
+  tables:
+  - table: section-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: platon-phedon-apologie-l1-q1
+    sentence: "Le *Phédon* est le récit que fait ___, présent auprès de Socrate le jour de sa mort, devant Échécrate."
+    answer: "Phédon"
+    alt: []
+  - id: platon-phedon-apologie-l1-q2
+    sentence: "Phédon fait son récit à Échécrate dans la cité de ___, dans le Péloponnèse."
+    answer: "Phlionte"
+    alt: []
+  - id: platon-phedon-apologie-l1-q3
+    sentence: "Les deux interlocuteurs principaux de Socrate dans le *Phédon* sont Simmias et ___, deux Thébains familiers du pythagoricien Philolaos."
+    answer: "Cébès"
+    alt: []
+  - id: platon-phedon-apologie-l1-q4
+    sentence: "La question que Cébès pose après l'apologie : l'âme existe-t-elle encore après la mort, et garde-t-elle « une certaine force et de la ___ » (70b) ?"
+    answer: "pensée"
+    alt: []
+  - id: platon-phedon-apologie-l1-q5
+    sentence: "Les trois premiers arguments du *Phédon* sont celui des contraires, celui de la ___ et celui de l'affinité (69e-84b)."
+    answer: "réminiscence"
+    alt: []
+  - id: platon-phedon-apologie-l1-q6
+    sentence: "Les deux objections qui ébranlent les premiers arguments sont celle de Simmias (l'âme est une ___) et celle de Cébès (l'âme s'use) (84b-88b)."
+    answer: "harmonie"
+    alt: []
+  - id: platon-phedon-apologie-l1-q7
+    sentence: "Le dernier argument du *Phédon* établit que l'âme, qui apporte la ___ au corps, ne peut pas recevoir la mort (102a-107a)."
+    answer: "vie"
+    alt: []
+- id: platon-phedon-apologie-l2
+  title: "Repérage : le prologue et l'apologie (57a-69e)"
+  notes: |-
+    La première section prépare tout le dialogue. Le **prologue** et l'**introduction du récit** posent, sous des mots ordinaires, les thèmes qui seront ensuite travaillés (le « soi-même », la pureté, les contraires qui se suivent). Puis vient l'**apologie** : Socrate se défend, comme devant un tribunal, d'accepter trop facilement de mourir. Elle n'est pas encore une démonstration : elle montre qu'{green}__il serait absurde qu'un philosophe craigne la mort__{/green}, puisque philosopher, c'est déjà séparer l'âme du corps.
+
+    | Moment | Lieu | Ce qui s'y joue |
+    | le prologue | 57a-58d | Phédon, présent lui-même, raconte ; la fête de Délos explique le délai avant l'exécution |
+    | l'introduction du récit | 58e-61c | un mélange de plaisir et de douleur ; Socrate délié ; le rêve qui ordonne de composer |
+    | l'absurdité remise à sa place | 61c-63e | il ne faut pas se tuer, et pourtant le philosophe accepte de mourir |
+    | l'opinion des philosophes | 63e-68b | philosopher, c'est s'exercer à mourir, c'est-à-dire séparer l'âme du corps |
+    | vertus illusoires et vertus vraies | 68b-69e | sans la pensée, courage et modération ne sont qu'un calcul de peurs et de plaisirs |
+  tables:
+  - table: moment-lieu-ce-qui-s-y-joue
+    exercises:
+    - {kind: order, column: Lieu}
+    - {kind: cell, column: Lieu}
+    - {kind: cell, column: Lieu}
+  points:
+  - id: platon-phedon-apologie-l2-q1
+    sentence: "Le prologue du *Phédon* occupe les pages ___ : Phédon y explique à Échécrate pourquoi Socrate est mort si longtemps après son procès."
+    answer: "57a-58d"
+    alt: []
+  - id: platon-phedon-apologie-l2-q2
+    sentence: "Dans l'apologie (61c-69e), Socrate se défend, comme devant un ___, d'accepter trop facilement de mourir."
+    answer: "tribunal"
+    alt: []
+  - id: platon-phedon-apologie-l2-q3
+    sentence: "L'apologie ne démontre pas encore l'immortalité : elle montre qu'il serait ___ qu'un philosophe craigne la mort."
+    answer: "absurde"
+    alt: []
+  - id: platon-phedon-apologie-l2-q4
+    sentence: "La dernière partie de l'apologie (68b-69e) oppose les vertus illusoires du grand nombre à la vertu vraie, que seule rend possible la ___."
+    answer: "pensée"
+    alt: []
+- id: platon-phedon-apologie-l3
+  title: "Le prologue : ce que les premiers mots annoncent (57a-61c)"
+  notes: |-
+    Le prologue ne fait pas que planter le décor : selon son habitude, Platon y emploie dans leur sens courant des mots qui seront ensuite **retravaillés**, et qui annoncent le vrai sujet du dialogue.
+
+    **« Toi-même » : qui est Phédon, qui est Socrate ?** Le premier mot d'Échécrate est {teal}« Toi-même »{/teal} (*autos*) : était-il présent lui-même, ou l'a-t-il appris d'un autre ? Sous la question banale du témoin se cache celle de tout le dialogue : {amber}à quoi identifier ce « soi-même », au corps ou à l'âme ?{/amber} À la fin, Socrate reprochera à Criton de croire qu'on enterrera « Socrate », alors qu'on n'enterrera qu'un corps (115c-e). {sky}Monique Dixsaut{/sky} y voit le passage décisif où l'homme cesse de se penser comme son corps pour se penser comme son âme.
+
+    **Le délai de Délos : une cité qui doit rester pure.** Socrate n'est pas mort le lendemain du verdict, parce que la veille, on avait couronné la poupe du {yellow}navire envoyé à Délos{/yellow} en mémoire de Thésée ; pendant tout ce voyage, {teal}« la cité restera pure »{/teal}, et l'on n'exécute personne. Cette pureté rituelle, qui consiste seulement à s'abstenir un temps de verser le sang, annonce le thème central de l'apologie : la **purification** véritable, celle de l'âme par la pensée.
+
+    **Un sentiment déconcertant : plaisir et douleur mêlés.** Phédon n'éprouvait pas de pitié, tant Socrate paraissait heureux ; mais pas non plus le plaisir habituel de philosopher avec lui : un {teal}« curieux mélange où entrait certes du plaisir, mais aussi de la douleur »{/teal}, la douleur revenant chaque fois qu'il pensait à la mort prochaine. Les assistants passent du rire aux larmes.
+
+    **L'agréable et le pénible : deux contraires qui se suivent.** Délié de ses chaînes, Socrate frotte sa jambe et s'étonne : en l'homme, {teal}« aucun des deux ne consent à coexister avec l'autre »{/teal}, et pourtant qui attrape l'un attrape presque toujours l'autre, {yellow}« comme si, bien qu'étant deux, ils étaient attachés à une unique tête »{/yellow}. Il en fait une fable à la manière d'{sky}Ésope{/sky}. L'observation est minuscule, mais elle contient en germe le **premier argument** (70c-72e) : {coral}des contraires ne coexistent pas, mais ils naissent l'un de l'autre{/coral}.
+
+    **Le rêve : « fais une œuvre d'art ».** Cébès demande pourquoi Socrate, qui n'avait jamais rien composé, s'est mis en prison à écrire un hymne à Apollon et à mettre en vers les fables d'Ésope. Un même rêve lui disait souvent : {teal}« Socrate, fais une œuvre d'art, travaille »{/teal}. Il croyait jusque-là que le rêve l'encourageait à continuer ce qu'il faisait, car {green}__« la philosophie était l'œuvre d'art la plus haute »__{/green} ; par scrupule, il a voulu obéir aussi au sens ordinaire du mot. Mais, n'étant pas doué pour inventer des histoires, il a pris celles d'Ésope : il **transpose** au lieu d'inventer, comme Platon transpose dans le *Phédon* le récit d'un témoin.
+
+    ! Le prologue n'est pas un simple décor : « toi-même », la pureté, les contraires qui se suivent, la musique et Apollon annoncent les thèmes de tout le dialogue.
+    ! Socrate ne renie pas la philosophie pour la poésie : il obéit au rêve par scrupule, en tenant toujours la philosophie pour « l'œuvre d'art la plus haute ».
+  points:
+  - id: platon-phedon-apologie-l3-q1
+    sentence: "Le premier mot d'Échécrate à Phédon est « ___ » (*autos*) : sous la question du témoin se cache celle de tout le dialogue, à quoi identifier le soi."
+    answer: "Toi-même"
+    alt: []
+  - id: platon-phedon-apologie-l3-q2
+    sentence: "Socrate est mort longtemps après son procès parce que, pendant le pèlerinage à Délos, la cité doit rester ___ : on n'y exécute personne."
+    answer: "pure"
+    alt: []
+  - id: platon-phedon-apologie-l3-q3
+    sentence: "La pureté rituelle de la cité pendant le pèlerinage de Délos annonce le thème central de l'apologie : la ___ de l'âme par la pensée."
+    answer: "purification"
+    alt: []
+  - id: platon-phedon-apologie-l3-q4
+    sentence: "Phédon n'éprouvait ni pitié ni le plaisir habituel de philosopher, mais un « curieux ___ où entrait certes du plaisir, mais aussi de la douleur »."
+    answer: "mélange"
+    alt: []
+  - id: platon-phedon-apologie-l3-q5
+    sentence: "« Quelle chose déconcertante, mes amis, dit-il, semble être ce que les hommes appellent **___**, et quel étonnant rapport sa nature entretient avec ce qu'on tient pour être son contraire, **le pénible** : en l'homme, aucun des deux ne consent à __coexister avec l'autre__, mais si on poursuit l'un et qu'on l'attrape, on peut presque dire qu'on est obligé d'attraper toujours aussi l'autre ; comme si, bien qu'étant deux, ils étaient attachés à **une unique tête**. »"
+    answer: "l'agréable"
+    alt: []
+  - id: platon-phedon-apologie-l3-q6
+    sentence: "« Quelle chose déconcertante, mes amis, dit-il, semble être ce que les hommes appellent **l'agréable**, et quel étonnant rapport sa nature entretient avec ce qu'on tient pour être son contraire, **___** : en l'homme, aucun des deux ne consent à __coexister avec l'autre__, mais si on poursuit l'un et qu'on l'attrape, on peut presque dire qu'on est obligé d'attraper toujours aussi l'autre ; comme si, bien qu'étant deux, ils étaient attachés à **une unique tête**. »"
+    answer: "le pénible"
+    alt: []
+  - id: platon-phedon-apologie-l3-q7
+    sentence: "« Quelle chose déconcertante, mes amis, dit-il, semble être ce que les hommes appellent **l'agréable**, et quel étonnant rapport sa nature entretient avec ce qu'on tient pour être son contraire, **le pénible** : en l'homme, aucun des deux ne consent à ___, mais si on poursuit l'un et qu'on l'attrape, on peut presque dire qu'on est obligé d'attraper toujours aussi l'autre ; comme si, bien qu'étant deux, ils étaient attachés à **une unique tête**. »"
+    answer: "coexister avec l'autre"
+    alt: []
+  - id: platon-phedon-apologie-l3-q8
+    sentence: "« Quelle chose déconcertante, mes amis, dit-il, semble être ce que les hommes appellent **l'agréable**, et quel étonnant rapport sa nature entretient avec ce qu'on tient pour être son contraire, **le pénible** : en l'homme, aucun des deux ne consent à __coexister avec l'autre__, mais si on poursuit l'un et qu'on l'attrape, on peut presque dire qu'on est obligé d'attraper toujours aussi l'autre ; comme si, bien qu'étant deux, ils étaient attachés à **___**. »"
+    answer: "une unique tête"
+    alt: []
+  - id: platon-phedon-apologie-l3-q9
+    sentence: "Socrate dit qu'Ésope aurait fait une ___ de la succession de l'agréable et du pénible : le dieu, ne pouvant faire cesser leur guerre, attacha leurs deux têtes ensemble."
+    answer: "fable"
+    alt: []
+  - id: platon-phedon-apologie-l3-q10
+    sentence: "La remarque de Socrate sur sa jambe annonce le premier argument : des contraires ne coexistent pas, mais ils ___ l'un de l'autre (70c-72e)."
+    answer: "naissent"
+    alt: []
+  - id: platon-phedon-apologie-l3-q11
+    sentence: "En prison, Socrate a composé un hymne à ___ et mis en vers des fables d'Ésope."
+    answer: "Apollon"
+    alt: []
+  - id: platon-phedon-apologie-l3-q12
+    sentence: "Le rêve disait toujours à Socrate : « Socrate, fais une ___, travaille. »"
+    answer: "œuvre d'art"
+    alt: []
+  - id: platon-phedon-apologie-l3-q13
+    sentence: "Socrate croyait que le rêve l'encourageait à continuer, car, dans son esprit, « la philosophie était l'œuvre d'art la plus ___ »."
+    answer: "haute"
+    alt: []
+  - id: platon-phedon-apologie-l3-q14
+    sentence: "N'étant pas doué pour inventer des histoires, Socrate a mis en vers les fables d'___, qu'il savait par cœur."
+    answer: "Ésope"
+    alt: []
+- id: platon-phedon-apologie-l4
+  title: "Il ne faut pas se tuer, et pourtant le philosophe accepte de mourir (61c-63e)"
+  notes: |-
+    La première difficulté de l'apologie est un **paradoxe** : le philosophe doit consentir à mourir, mais il lui est interdit de se tuer. Socrate montre qu'{green}__il n'y a là rien d'absurde__{/green}, puis il doit répondre à une objection plus redoutable : pourquoi un homme sensé accepterait-il de quitter de bons maîtres, les dieux ?
+
+    **Le paradoxe.** Socrate fait dire à Évènos, s'il est sage, de {teal}« se mettre à [s]a poursuite le plus vite possible »{/teal}. Évènos le fera volontiers s'il est philosophe, ajoute-t-il, mais {red}sans aller jusqu'à se tuer{/red}, car c'est interdit. Cébès s'étonne : d'un côté il est interdit de se tuer, de l'autre le philosophe {teal}« doit chercher à suivre celui qui meurt »{/teal}.
+
+    **Une règle absolue dans un monde où tout dépend du sort.** Socrate précise ce qui déconcerte. Ordinairement, ce qui est bon ou mauvais l'est selon les circonstances : la santé, la richesse, la vie même ne valent que selon l'usage et le moment. Or il paraît que {amber}« cette unique chose, entre toutes, soit absolue »{/amber} : {teal}« qu'il y a des moments où, et des gens pour qui, il vaut mieux être mort que vivre »{/teal}. Et l'étrangeté redouble : si la mort est un bien pour ces hommes, pourquoi leur serait-il {red}impie de se procurer ce bienfait{/red}, au lieu d'attendre {teal}« un bienfaiteur étranger »{/teal} ?
+
+    **La formule des Mystères : nous n'appartenons pas à nous-mêmes.** Socrate s'appuie sur une formule sacrée, sans doute orphique ou pythagoricienne : {teal}« Nous, les humains, sommes comme assignés à résidence et nul ne doit s'affranchir lui-même de ces liens ni s'évader »{/teal}. Le mot grec, {violet}*phroura*{/violet}, désigne à la fois un lieu de détention (le corps-prison) et un poste de garde qu'on n'a pas le droit de déserter. Socrate en retient au moins ceci : {coral}les dieux sont nos gardiens, et nous faisons partie de leurs troupeaux{/coral}. L'argument se fait alors par {yellow}analogie avec un propriétaire{/yellow} : si l'un de tes esclaves se tuait sans que tu lui aies signifié vouloir sa mort, ne serais-tu pas en colère ? La prémisse implicite qui rend l'argument contraignant est que __notre vie n'est pas notre propriété__ : on ne dispose pas de ce qui appartient à un autre. Il ne faut donc pas se donner la mort {teal}« avant qu'un dieu ne nous ait envoyé quelque signe inéluctable, pareil à celui qui maintenant, pour nous, est là »{/teal} : Socrate lit sa condamnation comme ce signe, l'occasion que lui donne le dieu d'achever d'être ce qu'il est.
+
+    **L'objection de Cébès : les sensés devraient se révolter.** Cébès accepte l'interdiction, mais en tire une conséquence qui ruine l'attitude de Socrate. Si les dieux sont nos gardiens et {teal}« les meilleurs maîtres qui soient »{/teal}, nul homme sensé ne peut croire qu'une fois libéré il prendra mieux soin de lui-même ; seul un insensé voudrait fuir un bon maître. D'où le renversement : {red}« c'est aux hommes sensés qu'il convient de se révolter quand ils meurent, et aux insensés de s'en réjouir »{/red}. Simmias ajoute que l'objection vise Socrate lui-même, qui abandonne si facilement ses amis et les dieux.
+
+    **La défense : un espoir, pas encore une preuve.** Socrate accepte de se défendre {teal}« comme devant un tribunal »{/teal}, et de façon {teal}« plus persuasive »{/teal} que devant ses juges. Il ne se révolte pas parce qu'il croit aller {green}auprès d'autres dieux, sages et bons{/green}, et peut-être auprès d'hommes meilleurs. Il distingue la force de ses deux espoirs : celui de rejoindre des hommes bons, il ne le défendra pas jusqu'au bout ; celui d'aller auprès de {teal}« dieux qui sont des maîtres parfaitement bons »{/teal}, il le défendra {teal}« envers et contre tout »{/teal}. Mourir n'est donc pas quitter la tutelle des dieux, mais passer à une tutelle aussi bonne. Seulement, ce n'est encore qu'un **espoir**, appuyé sur une tradition : il suppose que l'âme subsiste après la mort, ce que Cébès exigera qu'on démontre (70a-b).
+
+    ! Il n'y a pas de contradiction entre désirer la mort et refuser le suicide : la vie appartient aux dieux, et c'est à eux d'envoyer le signe.
+    ! *Phroura* a deux sens, prison et poste de garde ; Platon laisse probablement jouer les deux.
+    ! L'apologie ne prouve pas l'immortalité : elle fonde une attitude sur un espoir que les arguments devront justifier.
+  points:
+  - id: platon-phedon-apologie-l4-q1
+    sentence: "Socrate fait dire à Évènos, s'il est sage, de « se mettre à [s]a ___ le plus vite possible »."
+    answer: "poursuite"
+    alt: []
+  - id: platon-phedon-apologie-l4-q2
+    sentence: "Cébès s'étonne : il est interdit de se tuer, et pourtant le philosophe doit chercher à « suivre celui qui ___ »."
+    answer: "meurt"
+    alt: []
+  - id: platon-phedon-apologie-l4-q3
+    sentence: "« Sans doute va-t-il te paraître étonnant que cette unique chose, entre toutes, soit **___**, et n'arrive jamais à l'homme __au gré du sort__ comme toutes les autres lui arrivent : à savoir qu'il y a des moments où, et des gens pour qui, il vaut mieux **être mort que vivre**. »"
+    answer: "absolue"
+    alt: []
+  - id: platon-phedon-apologie-l4-q4
+    sentence: "« Sans doute va-t-il te paraître étonnant que cette unique chose, entre toutes, soit **absolue**, et n'arrive jamais à l'homme ___ comme toutes les autres lui arrivent : à savoir qu'il y a des moments où, et des gens pour qui, il vaut mieux **être mort que vivre**. »"
+    answer: "au gré du sort"
+    alt: []
+  - id: platon-phedon-apologie-l4-q5
+    sentence: "« Sans doute va-t-il te paraître étonnant que cette unique chose, entre toutes, soit **absolue**, et n'arrive jamais à l'homme __au gré du sort__ comme toutes les autres lui arrivent : à savoir qu'il y a des moments où, et des gens pour qui, il vaut mieux **___**. »"
+    answer: "être mort que vivre"
+    alt: []
+  - id: platon-phedon-apologie-l4-q6
+    sentence: "Ce qui étonne Cébès, c'est que, s'il vaut mieux être mort pour certains, il leur soit impie de se procurer ce bienfait et qu'ils doivent attendre « un bienfaiteur ___ »."
+    answer: "étranger"
+    alt: []
+  - id: platon-phedon-apologie-l4-q7
+    sentence: "« Nous, les humains, sommes comme **___** et nul ne doit s'affranchir lui-même de **ces liens** ni s'évader »"
+    answer: "assignés à résidence"
+    alt: []
+  - id: platon-phedon-apologie-l4-q8
+    sentence: "« Nous, les humains, sommes comme **assignés à résidence** et nul ne doit s'affranchir lui-même de **___** ni s'évader »"
+    answer: "ces liens"
+    alt: []
+  - id: platon-phedon-apologie-l4-q9
+    sentence: "Le mot grec que Dixsaut traduit par « assignés à résidence », ___, désigne à la fois un lieu de détention et un poste de garde qu'on n'a pas le droit de déserter."
+    answer: "phroura"
+    alt: ["*phroura*"]
+  - id: platon-phedon-apologie-l4-q10
+    sentence: "Socrate tire de la formule des Mystères que les dieux sont nos gardiens, et que nous faisons partie de leurs ___."
+    answer: "troupeaux"
+    alt: []
+  - id: platon-phedon-apologie-l4-q11
+    sentence: "Si l'un de tes esclaves se tuait sans ton ordre, tu serais en colère : l'interdiction du suicide repose sur l'idée que notre vie n'est pas notre ___."
+    answer: "propriété"
+    alt: []
+  - id: platon-phedon-apologie-l4-q12
+    sentence: "« il n'y a alors peut-être rien d'absurde à affirmer qu'il ne faut pas se donner la mort avant qu'un dieu ne nous ait envoyé quelque **___**, pareil à celui qui maintenant, pour nous, est là. »"
+    answer: "signe inéluctable"
+    alt: []
+  - id: platon-phedon-apologie-l4-q13
+    sentence: "Socrate interprète sa ___ à mort comme le « signe inéluctable » envoyé par le dieu."
+    answer: "condamnation"
+    alt: []
+  - id: platon-phedon-apologie-l4-q14
+    sentence: "Objection de Cébès : si les dieux sont les meilleurs maîtres, « c'est aux hommes ___ qu'il convient de se révolter quand ils meurent, et aux insensés de s'en réjouir »."
+    answer: "sensés"
+    alt: []
+  - id: platon-phedon-apologie-l4-q15
+    sentence: "Socrate accepte la mort parce qu'il espère rejoindre des dieux, maîtres « parfaitement bons », espoir qu'il défendra « envers et contre ___ »."
+    answer: "tout"
+    alt: []
+  - id: platon-phedon-apologie-l4-q16
+    sentence: "L'espoir d'aller auprès d'hommes meilleurs, Socrate ne le défendra pas jusqu'au ___ ; celui d'aller auprès de dieux bons, il le défendra envers et contre tout."
+    answer: "bout"
+    alt: []
+  - id: platon-phedon-apologie-l4-q17
+    sentence: "La première défense de Socrate n'est encore qu'un ___ : elle suppose que l'âme subsiste après la mort, ce que Cébès demandera de démontrer."
+    answer: "espoir"
+    alt: []
+- id: platon-phedon-apologie-l5
+  title: "Philosopher, c'est s'occuper de mourir : la mort et les plaisirs du corps (63e-65a)"
+  notes: |-
+    Socrate transforme sa défense en thèse : il serait **absurde** que le philosophe craigne la mort, parce que {green}__philosopher, c'est déjà s'occuper de mourir__{/green}. Pour le montrer, il lui faut d'abord dire ce qu'est la mort, puis montrer que la vie du philosophe en est l'exercice.
+
+    **La thèse.** {teal}« tous ceux qui s'appliquent à la philosophie et s'y appliquent droitement ne s'occupent de rien d'autre que de mourir et d'être morts »{/teal}. Si c'est vrai, il serait déconcertant d'avoir eu cette seule chose à cœur toute sa vie, et de se révolter quand elle arrive. Simmias en rit : la foule dirait que les philosophes réclament la mort et la méritent bien. Socrate répond qu'elle ne dirait vrai qu'à moitié, car elle ignore {amber}« en quel sens réclament la mort ceux qui sont vraiment philosophes, en quel sens ils méritent la mort, et laquelle »{/amber}. Il faut donc s'entendre sur ce qu'est la mort.
+
+    **La définition de la mort : une séparation.** {teal}« Se peut-il qu'elle soit autre chose que la séparation de l'âme d'avec le corps ? »{/teal} Être mort, c'est que le corps, séparé de l'âme, {teal}« en vient à n'être que lui-même en lui-même »{/teal}, et que l'âme, séparée du corps, {teal}« est elle-même en elle-même »{/teal}. La définition est volontairement **minimale** : elle dépouille la mort des images et des terreurs qu'on y attache, et elle ne dit pas encore combien de temps l'âme subsiste ainsi séparée. Elle ne présuppose donc pas l'immortalité, mais seulement que l'âme et le corps sont deux choses distinctes ; c'est la persistance de l'âme séparée que Cébès mettra en doute (70a).
+
+    **Le philosophe ne prend pas au sérieux les plaisirs du corps.** Socrate passe en revue {yellow}les plaisirs de la nourriture et de la boisson, les plaisirs charnels, les manteaux et les chaussures distingués{/yellow} : le philosophe ne leur accorde aucune importance, {teal}« pour autant du moins qu'il n'est pas absolument obligé d'en prendre sa part »{/teal}. Ce n'est pas un **ascétisme** : il ne s'impose pas de privations par haine du corps, il n'y prend tout simplement pas plaisir, parce que son désir est tourné vers autre chose, qui en vaut davantage. Sa préoccupation n'est pas de soigner le corps mais {teal}« de s'en éloigner autant qu'il en est capable, et de se tourner vers l'âme »{/teal}.
+
+    **C'est là qu'apparaît la ressemblance avec la mort.** Le philosophe {coral}« délie son âme, autant qu'il le peut, de toute association avec le corps »{/coral}. Or la mort est justement cette déliaison. Aux yeux du grand nombre, d'ailleurs, celui qui ne prend aucun plaisir aux plaisirs du corps mène une vie qui ne vaut pas la peine d'être vécue, et tend {teal}« vers un état passablement proche de la mort »{/teal} : la foule voit juste, sans comprendre ce qu'elle voit.
+
+    ! La définition de la mort comme séparation ne prouve pas l'immortalité : elle dit ce qu'est l'événement, non ce que devient l'âme ensuite.
+    ! Le détachement du philosophe n'est pas un ascétisme : il prend sa part du nécessaire, mais son désir va ailleurs.
+    ! « Philosopher, c'est apprendre à mourir » (Cicéron, Montaigne) déforme la thèse : il ne s'agit pas de se préparer à une mort digne, mais de purifier la pensée de ce qui lui vient du corps.
+  points:
+  - id: platon-phedon-apologie-l5-q1
+    sentence: "« tous ceux qui s'appliquent à la philosophie et s'y appliquent **___** ne s'occupent de rien d'autre que **de mourir et d'être morts** »"
+    answer: "droitement"
+    alt: []
+  - id: platon-phedon-apologie-l5-q2
+    sentence: "« tous ceux qui s'appliquent à la philosophie et s'y appliquent **droitement** ne s'occupent de rien d'autre que **___** »"
+    answer: "de mourir et d'être morts"
+    alt: []
+  - id: platon-phedon-apologie-l5-q3
+    sentence: "Si philosopher, c'est s'occuper de mourir, il serait déconcertant que le philosophe se ___ contre la mort au moment où elle arrive."
+    answer: "révolte"
+    alt: []
+  - id: platon-phedon-apologie-l5-q4
+    sentence: "La foule ignore « en quel sens réclament la mort ceux qui sont vraiment philosophes, en quel sens ils méritent la mort, et ___ »."
+    answer: "laquelle"
+    alt: []
+  - id: platon-phedon-apologie-l5-q5
+    sentence: "« Se peut-il qu'elle soit autre chose que **___** de l'âme d'avec le corps ? C'est bien cela, être mort : le corps séparé d'avec l'âme en vient à n'être que **lui-même en lui-même**, tandis que l'âme séparée d'avec le corps est **elle-même en elle-même** ? »"
+    answer: "la séparation"
+    alt: []
+  - id: platon-phedon-apologie-l5-q6
+    sentence: "« Se peut-il qu'elle soit autre chose que **la séparation** de l'âme d'avec le corps ? C'est bien cela, être mort : le corps séparé d'avec l'âme en vient à n'être que **___**, tandis que l'âme séparée d'avec le corps est **elle-même en elle-même** ? »"
+    answer: "lui-même en lui-même"
+    alt: []
+  - id: platon-phedon-apologie-l5-q7
+    sentence: "« Se peut-il qu'elle soit autre chose que **la séparation** de l'âme d'avec le corps ? C'est bien cela, être mort : le corps séparé d'avec l'âme en vient à n'être que **lui-même en lui-même**, tandis que l'âme séparée d'avec le corps est **___** ? »"
+    answer: "elle-même en elle-même"
+    alt: []
+  - id: platon-phedon-apologie-l5-q8
+    sentence: "La définition de la mort comme séparation ne présuppose pas l'immortalité : elle ne dit pas encore combien de temps l'âme ___ une fois séparée."
+    answer: "subsiste"
+    alt: []
+  - id: platon-phedon-apologie-l5-q9
+    sentence: "Le philosophe n'accorde aucune importance aux plaisirs du corps, « pour autant du moins qu'il n'est pas absolument ___ d'en prendre sa part »."
+    answer: "obligé"
+    alt: []
+  - id: platon-phedon-apologie-l5-q10
+    sentence: "Le détachement du philosophe envers les plaisirs du corps n'est pas un ___ : il ne s'impose pas de privations, son désir est tourné vers autre chose."
+    answer: "ascétisme"
+    alt: []
+  - id: platon-phedon-apologie-l5-q11
+    sentence: "La préoccupation du philosophe n'est pas de soigner le corps mais « de s'en éloigner autant qu'il en est capable, et de se tourner vers l'___ »."
+    answer: "âme"
+    alt: []
+  - id: platon-phedon-apologie-l5-q12
+    sentence: "Le philosophe « ___ son âme, autant qu'il le peut, de toute association avec le corps » : c'est en cela que sa vie ressemble à la mort."
+    answer: "délie"
+    alt: []
+  - id: platon-phedon-apologie-l5-q13
+    sentence: "Pour la foule, celui qui ne prend pas plaisir aux plaisirs du corps tend « vers un état passablement proche de la ___ »."
+    answer: "mort"
+    alt: []
+  - id: platon-phedon-apologie-l5-q14
+    sentence: "La formule « philosopher, c'est apprendre à mourir », reprise de Cicéron par ___, déforme la thèse du *Phédon*."
+    answer: "Montaigne"
+    alt: []
+- id: platon-phedon-apologie-l6
+  title: "Le corps, obstacle à la pensée : le raccourci des philosophes (65a-67b)"
+  notes: |-
+    Le corps ne procure pas seulement des plaisirs : c'est aussi **par lui que nous sentons**, et c'est par là qu'il fait {red}obstacle à la pensée{/red}. Socrate en tire, dans le discours que les philosophes se tiennent entre eux, une conclusion décisive : {green}__le savoir pur n'est possible qu'une fois l'âme séparée du corps__{/green}.
+
+    **Les sens ne donnent rien d'exact.** La vue et l'ouïe, les plus fines des perceptions, ne comportent aucune vérité exacte ; les autres le sont moins encore. Chaque fois que l'âme se sert du corps pour examiner quelque chose, {teal}« il est évident qu'elle est totalement trompée par lui »{/teal}. Ce qu'est réellement une chose ne se manifeste que {coral}« dans l'acte de raisonner, et nulle part ailleurs »{/coral}.
+
+    **L'âme pense le mieux quand elle se rassemble en elle-même.** Elle raisonne le plus parfaitement {teal}« quand ne viennent la perturber ni audition, ni vision, ni douleur, ni plaisir aucun »{/teal}, quand elle {teal}« se concentre le plus possible en elle-même et envoie poliment promener le corps »{/teal}. La séparation d'avec le corps est donc à la fois la conséquence du désir de connaître et la condition de la connaissance.
+
+    **Le juste, le beau, le bon : jamais vus des yeux.** Socrate fait admettre qu'{amber}il existe « quelque chose de juste en soi », de beau, de bon{/amber}, et que personne ne l'a jamais vu de ses yeux. Il en va de même de ce qu'est {yellow}la grandeur, la santé, la force{/yellow} : leur {violet}essence{/violet}, {teal}« ce que chacune se trouve être »{/teal}. Puisque ces réalités ne tombent pas sous les sens, seule la pensée y accède, et celui qui les atteindra le mieux est celui qui use {teal}« de la réflexion en elle-même et sans mélange »{/teal} pour {teal}« faire la chasse à ce que chacun des êtres est en lui-même et sans mélange »{/teal}. Le principe implicite est celui de la **parenté** : seul ce qui est pur peut saisir ce qui est pur. Ce sont les premières mentions, dans le dialogue, de ce que Platon appelle ailleurs les **Formes**.
+
+    **Le corps, obstacle en deux sens.** Les philosophes se tiennent alors un discours, un {teal}« raccourci »{/teal} qui les mène droit au but. Le corps est d'abord un obstacle **extérieur** : il est source de {teal}« mille affairements »{/teal}, parce qu'il faut le nourrir et le soigner ; il nous remplit de désirs, de peurs et de futilités ; {teal}« toutes les guerres ont pour origine l'appropriation des richesses »{/teal}, et {teal}« c'est le corps qui nous force à les acquérir »{/teal}. Il ne nous laisse ainsi jamais de {violet}temps libre{/violet} (*skholê*) pour la philosophie. Il est ensuite un obstacle **intérieur** : même quand on se met à chercher, {teal}« le voilà qui débarque au milieu de nos recherches »{/teal}, il trouble et étourdit, si bien que nous ne discernons pas le vrai.
+
+    **Le dilemme : le savoir après la mort, ou nulle part.** D'où la conclusion : {teal}« si nous devons jamais savoir purement quelque chose, il faut que nous nous séparions de lui et que nous considérions avec l'âme elle-même les choses elles-mêmes »{/teal}. Or, s'il est impossible de rien connaître purement avec le corps, alors :
+    - {red}ou bien il n'existe aucun moyen d'acquérir le savoir{/red}
+    - {green}ou bien on ne l'acquiert qu'après la mort{/green}, quand l'âme sera séparée du corps
+
+    La première branche est exclue par une prémisse que le philosophe ne peut pas lâcher : __son désir de savoir n'est pas vain__. Reste la seconde. Ce n'est pas la recherche qui est remise à après la mort, mais la **possession** pleine du savoir ; de notre vivant, nous nous en approcherons d'autant plus que nous nous serons purifiés du corps, {teal}« jusqu'à ce que le dieu lui-même nous ait déliés »{/teal}. Car {coral}« ne pas être pur et se saisir du pur, il faut craindre que ce ne soit pas là chose permise »{/coral}.
+
+    ! Le corps n'est pas mauvais en lui-même : il l'est en tant qu'il disperse l'attention et interpose sa manière de connaître entre la pensée et le vrai.
+    ! Le dilemme ne décourage pas la recherche présente : seule la possession complète du savoir est différée.
+    ! Le raccourci n'est pas le suicide : c'est le discours qui empêche la recherche de s'égarer dans le sensible.
+  points:
+  - id: platon-phedon-apologie-l6-q1
+    sentence: "Chaque fois que l'âme se sert du corps pour examiner quelque chose, « il est évident qu'elle est totalement ___ par lui »."
+    answer: "trompée"
+    alt: []
+  - id: platon-phedon-apologie-l6-q2
+    sentence: "Ce qu'est réellement une chose ne se manifeste à l'âme que « dans l'acte de ___, et nulle part ailleurs »."
+    answer: "raisonner"
+    alt: []
+  - id: platon-phedon-apologie-l6-q3
+    sentence: "« l'âme raisonne le plus parfaitement quand ne viennent la perturber ni **___**, ni **vision**, ni douleur, ni plaisir aucun ; quand au contraire elle __se concentre le plus possible en elle-même__ et envoie poliment promener le corps ; quand, rompant autant qu'elle en est capable toute association comme tout contact avec lui, elle aspire à **ce qui est** »"
+    answer: "audition"
+    alt: []
+  - id: platon-phedon-apologie-l6-q4
+    sentence: "« l'âme raisonne le plus parfaitement quand ne viennent la perturber ni **audition**, ni **___**, ni douleur, ni plaisir aucun ; quand au contraire elle __se concentre le plus possible en elle-même__ et envoie poliment promener le corps ; quand, rompant autant qu'elle en est capable toute association comme tout contact avec lui, elle aspire à **ce qui est** »"
+    answer: "vision"
+    alt: []
+  - id: platon-phedon-apologie-l6-q5
+    sentence: "« l'âme raisonne le plus parfaitement quand ne viennent la perturber ni **audition**, ni **vision**, ni douleur, ni plaisir aucun ; quand au contraire elle ___ et envoie poliment promener le corps ; quand, rompant autant qu'elle en est capable toute association comme tout contact avec lui, elle aspire à **ce qui est** »"
+    answer: "se concentre le plus possible en elle-même"
+    alt: []
+  - id: platon-phedon-apologie-l6-q6
+    sentence: "« l'âme raisonne le plus parfaitement quand ne viennent la perturber ni **audition**, ni **vision**, ni douleur, ni plaisir aucun ; quand au contraire elle __se concentre le plus possible en elle-même__ et envoie poliment promener le corps ; quand, rompant autant qu'elle en est capable toute association comme tout contact avec lui, elle aspire à **___** »"
+    answer: "ce qui est"
+    alt: []
+  - id: platon-phedon-apologie-l6-q7
+    sentence: "Socrate fait admettre à Simmias qu'il existe quelque chose de ___ en soi, de beau, de bon, que personne n'a jamais vu de ses yeux."
+    answer: "juste"
+    alt: []
+  - id: platon-phedon-apologie-l6-q8
+    sentence: "La grandeur, la santé, la force ont une ___, « ce que chacune se trouve être », que seule la pensée saisit."
+    answer: "essence"
+    alt: []
+  - id: platon-phedon-apologie-l6-q9
+    sentence: "« Se servant au contraire de **___**, c'est ainsi qu'il entreprendrait de **faire la chasse** à ce que chacun des êtres est __en lui-même et sans mélange__. »"
+    answer: "la réflexion en elle-même et sans mélange"
+    alt: []
+  - id: platon-phedon-apologie-l6-q10
+    sentence: "« Se servant au contraire de **la réflexion en elle-même et sans mélange**, c'est ainsi qu'il entreprendrait de **___** à ce que chacun des êtres est __en lui-même et sans mélange__. »"
+    answer: "faire la chasse"
+    alt: []
+  - id: platon-phedon-apologie-l6-q11
+    sentence: "« Se servant au contraire de **la réflexion en elle-même et sans mélange**, c'est ainsi qu'il entreprendrait de **faire la chasse** à ce que chacun des êtres est ___. »"
+    answer: "en lui-même et sans mélange"
+    alt: []
+  - id: platon-phedon-apologie-l6-q12
+    sentence: "Seul ce qui est pur peut saisir ce qui est pur : c'est le principe de ___ qui fonde l'exigence de séparer la pensée du corps."
+    answer: "parenté"
+    alt: []
+  - id: platon-phedon-apologie-l6-q13
+    sentence: "Le discours que se tiennent les philosophes est comme un « ___ » qui les mène droit au but."
+    answer: "raccourci"
+    alt: []
+  - id: platon-phedon-apologie-l6-q14
+    sentence: "Le corps est source de « mille ___ », car il faut le nourrir et le soigner."
+    answer: "affairements"
+    alt: []
+  - id: platon-phedon-apologie-l6-q15
+    sentence: "« toutes les guerres ont pour origine l'appropriation des ___ » : le corps nous oblige à les accumuler."
+    answer: "richesses"
+    alt: []
+  - id: platon-phedon-apologie-l6-q16
+    sentence: "À cause de toutes ces affaires, le corps ne nous laisse jamais de ___ pour la philosophie (*skholê*)."
+    answer: "temps libre"
+    alt: []
+  - id: platon-phedon-apologie-l6-q17
+    sentence: "Même quand on se met à chercher, le corps est un obstacle intérieur : « le voilà qui ___ au milieu de nos recherches »."
+    answer: "débarque"
+    alt: []
+  - id: platon-phedon-apologie-l6-q18
+    sentence: "« si nous devons jamais **___** quelque chose, il faut que nous nous séparions de lui et que nous considérions __avec l'âme elle-même__ **les choses elles-mêmes**. »"
+    answer: "savoir purement"
+    alt: []
+  - id: platon-phedon-apologie-l6-q19
+    sentence: "« si nous devons jamais **savoir purement** quelque chose, il faut que nous nous séparions de lui et que nous considérions ___ **les choses elles-mêmes**. »"
+    answer: "avec l'âme elle-même"
+    alt: []
+  - id: platon-phedon-apologie-l6-q20
+    sentence: "« si nous devons jamais **savoir purement** quelque chose, il faut que nous nous séparions de lui et que nous considérions __avec l'âme elle-même__ **___**. »"
+    answer: "les choses elles-mêmes"
+    alt: []
+  - id: platon-phedon-apologie-l6-q21
+    sentence: "Dilemme : s'il est impossible de rien connaître purement avec le corps, ou bien le savoir est impossible, ou bien on ne l'acquiert qu'après la ___."
+    answer: "mort"
+    alt: []
+  - id: platon-phedon-apologie-l6-q22
+    sentence: "Le philosophe exclut la première branche du dilemme parce que son ___ de savoir n'est pas vain."
+    answer: "désir"
+    alt: []
+  - id: platon-phedon-apologie-l6-q23
+    sentence: "Ce n'est pas la recherche qui est remise à après la mort, mais la ___ pleine du savoir."
+    answer: "possession"
+    alt: []
+  - id: platon-phedon-apologie-l6-q24
+    sentence: "« ne pas être pur et se saisir du ___, il faut craindre que ce ne soit pas là chose permise »"
+    answer: "pur"
+    alt: []
+- id: platon-phedon-apologie-l7
+  title: "La purification : pourquoi le philosophe ne peut pas craindre la mort (67b-68b)"
+  notes: |-
+    De l'opinion des philosophes, Socrate tire la conclusion de l'apologie : puisque la philosophie est une **purification** et que la purification est une **déliaison**, {green}__il serait le comble de l'illogisme qu'un philosophe ait peur de mourir__{/green}.
+
+    **La purification, c'est la séparation.** Qui arrive là où va Socrate a {teal}« grand espoir »{/teal} d'y acquérir ce qu'il a cherché toute sa vie, à condition que sa réflexion soit {teal}« comme purifiée »{/teal}. Or la {violet}purification{/violet} (*katharsis*), c'est justement {teal}« séparer le plus possible l'âme du corps, l'habituer à se rassembler elle-même en elle-même à partir de tous les points du corps »{/teal}, à vivre {teal}« isolée en elle-même »{/teal}, à se délier du corps {yellow}« comme on se délie de ses chaînes »{/yellow}. Platon reprend le mot des rites religieux, mais la pureté n'est plus affaire de rites : elle est celle d'une pensée qui se dégage de ce que le corps induit en elle.
+
+    **Deux noms pour une même opération.** Ce qu'on nomme mort est {teal}« une déliaison et une séparation de l'âme d'avec le corps »{/teal} ; or ceux qui ne cessent de s'employer à délier l'âme sont {teal}« seulement ceux qui philosophent droitement »{/teal}. Philosopher et mourir désignent donc la même séparation : quand le philosophe pense, elle s'appelle philosopher ; quand il considère ce qu'il fait, elle s'appelle mourir. D'où la formule : {coral}« ceux qui philosophent droitement s'exercent à mourir »{/coral}.
+
+    **L'argument : la peur serait le comble de l'illogisme.** Le philosophe est {teal}« complètement brouillé »{/teal} avec son corps et désire que son âme soit toute à elle-même. S'il avait peur au moment où cela arrive, il se révolterait contre ce qu'il a désiré toute sa vie : ce serait {red}« le comble de l'illogisme »{/red}. Le mot « là-bas » joue ici sur deux sens, l'Hadès et le lieu des réalités invisibles : c'est cette équivoque qui fait de la mort le terme du désir de penser.
+
+    **L'argument *a fortiori* : les amants qui descendent chez Hadès.** {yellow}Bien des hommes, pour une épouse ou un jeune garçon aimés et morts, ont voulu aller dans l'Hadès{/yellow}, dans l'espoir d'y revoir l'objet de leur désir (on pense à Orphée). Si un amour humain suffit à faire affronter la mort, à plus forte raison celui qui est {teal}« réellement amoureux »{/teal} de la pensée, et qui croit ne pouvoir la rencontrer en toute pureté que là-bas, se réjouira-t-il d'y aller.
+
+    **Le signe de reconnaissance.** D'où un {violet}« signe de reconnaissance »{/violet} (*tekmêrion*), un indice infaillible : {teal}« si tu vois un homme se révolter quand il est sur le point de mourir, c'est qu'il n'était pas ami du savoir mais un quelconque ami du corps »{/teal}, et aussi, peut-être, {pink}ami de l'argent, ami des honneurs{/pink}. L'ambitieux est rangé parmi les amis du corps : comme l'avare, il cherche à avoir le dessus sur les autres, non à se dominer lui-même.
+
+    ! La purification platonicienne n'est pas un rite : elle désigne le travail par lequel la pensée se dégage de ce que le corps induit en elle.
+    ! *S'exercer à mourir* ne veut pas dire désirer périr : la mort dont il s'agit est la séparation de l'âme d'avec le corps, que la pensée pratique dès cette vie.
+  points:
+  - id: platon-phedon-apologie-l7-q1
+    sentence: "Pour qui arrive là où va Socrate, il y a « grand ___ » d'acquérir ce qu'on a cherché toute sa vie."
+    answer: "espoir"
+    alt: []
+  - id: platon-phedon-apologie-l7-q2
+    sentence: "« séparer le plus possible l'âme du corps, l'habituer à **___** à partir de tous les points du corps, à se ramasser et à vivre, dans le moment présent comme dans celui à venir, **isolée en elle-même** autant qu'elle le peut, travaillant à se délier du corps comme on se délie de **ses chaînes** »"
+    answer: "se rassembler elle-même en elle-même"
+    alt: []
+  - id: platon-phedon-apologie-l7-q3
+    sentence: "« séparer le plus possible l'âme du corps, l'habituer à **se rassembler elle-même en elle-même** à partir de tous les points du corps, à se ramasser et à vivre, dans le moment présent comme dans celui à venir, **___** autant qu'elle le peut, travaillant à se délier du corps comme on se délie de **ses chaînes** »"
+    answer: "isolée en elle-même"
+    alt: []
+  - id: platon-phedon-apologie-l7-q4
+    sentence: "« séparer le plus possible l'âme du corps, l'habituer à **se rassembler elle-même en elle-même** à partir de tous les points du corps, à se ramasser et à vivre, dans le moment présent comme dans celui à venir, **isolée en elle-même** autant qu'elle le peut, travaillant à se délier du corps comme on se délie de **___** »"
+    answer: "ses chaînes"
+    alt: []
+  - id: platon-phedon-apologie-l7-q5
+    sentence: "Cette séparation de l'âme d'avec le corps, Socrate la nomme ___ (*katharsis*), reprenant le mot des rites religieux."
+    answer: "purification"
+    alt: []
+  - id: platon-phedon-apologie-l7-q6
+    sentence: "Ce qu'on nomme mort est « une ___ et une séparation de l'âme d'avec le corps »."
+    answer: "déliaison"
+    alt: []
+  - id: platon-phedon-apologie-l7-q7
+    sentence: "Ceux qui ne cessent de s'employer à délier l'âme sont « seulement ceux qui philosophent ___ »."
+    answer: "droitement"
+    alt: []
+  - id: platon-phedon-apologie-l7-q8
+    sentence: "« ceux qui philosophent droitement s'___ à mourir »"
+    answer: "exercent"
+    alt: []
+  - id: platon-phedon-apologie-l7-q9
+    sentence: "Philosopher et mourir désignent la même ___ de l'âme d'avec le corps : philosopher quand on pense, mourir quand on considère ce qu'on fait."
+    answer: "séparation"
+    alt: []
+  - id: platon-phedon-apologie-l7-q10
+    sentence: "Si le philosophe avait peur de mourir, ce serait « le comble de l'___ » : il se révolterait contre ce qu'il a désiré toute sa vie."
+    answer: "illogisme"
+    alt: []
+  - id: platon-phedon-apologie-l7-q11
+    sentence: "Le mot « là-bas » joue sur deux sens : l'___ et le lieu des réalités invisibles."
+    answer: "Hadès"
+    alt: []
+  - id: platon-phedon-apologie-l7-q12
+    sentence: "Argument *a fortiori* : si l'amour d'un être humain mort a poussé bien des hommes vers l'Hadès, à plus forte raison l'amoureux de la ___ s'y rendra-t-il avec joie."
+    answer: "pensée"
+    alt: []
+  - id: platon-phedon-apologie-l7-q13
+    sentence: "Le « signe de ___ » (*tekmêrion*) : qui se révolte au moment de mourir n'était pas ami du savoir mais ami du corps."
+    answer: "reconnaissance"
+    alt: []
+  - id: platon-phedon-apologie-l7-q14
+    sentence: "Qui se révolte devant la mort est un ami du corps, et peut-être aussi ami de l'argent et ami des ___."
+    answer: "honneurs"
+    alt: []
+- id: platon-phedon-apologie-l8
+  title: "Vertus en trompe-l'œil et vertu vraie : la pensée, seule monnaie (68b-69e)"
+  notes: |-
+    L'apologie s'achève sur les **vertus**. Si l'on remonte des actes à leurs motifs, le courage et la modération du grand nombre se révèlent être leur contraire ; {green}__seule la pensée rend les vertus vraies__{/green}, parce qu'elle seule purifie l'âme de ses fausses peurs et de ses faux plaisirs.
+
+    **Le courage du grand nombre est une lâcheté.** Pour presque tous, la mort est l'un des plus grands maux. Quand ils l'affrontent, c'est donc {teal}« par peur de maux encore plus grands »{/teal} : la honte, l'esclavage, le déshonneur. Le ressort de leur action reste la peur ; ils ne dominent pas la peur de la mort, ils sont dominés par une peur plus forte. Or être gouverné par la peur, c'est la définition même de la lâcheté : ils sont courageux {red}« par peur et par lâcheté »{/red}, ce qui est absurde.
+
+    **Leur modération est un dérèglement.** De même, ceux qui ont une conduite réglée s'abstiennent de certains plaisirs parce qu'ils ont peur d'être privés d'autres plaisirs qui leur font envie. Ils ne dominent certains plaisirs que {red}« parce qu'ils sont dominés par des plaisirs »{/red} : c'est {teal}« d'une certaine manière, un dérèglement qui les rend modérés »{/teal}. La raison est la même : tant que le plaisir reste le critère, on calcule mieux, mais on reste esclave.
+
+    **L'image de la monnaie.** Ce n'est pas, pour acquérir la vertu, {teal}« un mode correct d'échange »{/teal} que celui {teal}« qui consiste à échanger des plaisirs contre des plaisirs, des peines contre des peines, de la peur contre de la peur »{/teal}, plus contre moins, {yellow}« comme si c'étaient des pièces de monnaie »{/yellow}. Un tel calcul ne fait jamais que troquer le même contre le même. Il n'y a qu'{amber}« une seule monnaie qui vaille et en fonction de laquelle tout doit être échangé : la pensée »{/amber} (*phronêsis*). Achetées avec elle, ces choses deviennent {teal}« réellement, du courage, de la modération, de la justice »{/teal}, une vertu {teal}« qu'accompagne de la pensée »{/teal}. Coupée de la pensée, la vertu n'est qu'une {red}« vertu en trompe-l'œil »{/red} (*skiagraphia*, une peinture d'ombres qui donne l'illusion du relief), {red}« vertu réellement servile »{/red}. La métaphore a ses limites : la pensée, à la différence d'une pièce, ne se perd pas quand on « achète » avec elle, et elle vaut par elle-même ; elle dit surtout que **la pensée est la mesure commune** qui seule permet de juger ce qui est vraiment à craindre et vraiment désirable.
+
+    **La vertu vraie est une purification.** Le vrai {teal}« constitue une purification à l'égard de toutes les choses de cette sorte »{/teal}, et la pensée est {teal}« comme un moyen de cette purification »{/teal} (un *katharmos*, mot des Mystères). En déterminant ce qui est vraiment un mal, et ce qui est vraiment agréable ou pénible, la pensée débarrasse l'âme de ses peurs illusoires et de ses faux plaisirs : le courage vrai n'est pas un sentiment dompté par une volonté, il est fait de réflexion.
+
+    **Les Bacchants : la vraie initiation.** Ceux qui ont institué les initiations disaient que le non-initié {teal}« sera couché dans le bourbier »{/teal}, et l'initié {teal}« partagera, une fois arrivé là-bas, la demeure des dieux »{/teal} ; et encore : {yellow}« des porteurs de thyrse, oui, il y en a beaucoup, mais les Bacchants sont rares »{/yellow}. Socrate donne à la formule son sens philosophique : les vrais Bacchants, les vrais initiés, {coral}« ne sont autres que ceux qui, toujours, se sont occupés à philosopher droitement »{/coral}.
+
+    **La fin de l'apologie.** Telle est sa défense : il est raisonnable de quitter ses amis et les maîtres d'ici sans révolte, puisqu'il croit trouver là-bas des maîtres et des compagnons bons. Si elle convainc mieux que devant les juges d'Athènes, {teal}« tant mieux »{/teal}. Mais ce n'est qu'une conviction, que seuls partagent ceux qui sont déjà philosophes : il reste à montrer que l'âme subsiste.
+
+    | Vertu | Ce qu'elle est chez le grand nombre | Ce qu'elle est avec la pensée |
+    | courage | affronter un danger par peur d'un plus grand : une lâcheté | savoir ce qui est vraiment à craindre |
+    | modération | renoncer à des plaisirs par envie d'autres : un dérèglement | ne pas être dominé par les plaisirs, parce qu'on sait ce qu'ils valent |
+
+    ! Platon ne nie pas que le soldat tienne son poste : il nie que ce comportement soit une vertu quand son motif est la peur.
+    ! La pensée n'est pas une vertu parmi d'autres qu'on échangerait : elle est ce qui rend les autres vertus vraies.
+    ! Socrate ne rejette pas les Mystères : il en donne le sens philosophique.
+  tables:
+  - table: vertu-ce-qu-elle-est-chez-le-grand-nombre-ce-qu-elle-est-ave
+    exercises:
+    - {kind: bank, column: Ce qu'elle est chez le grand nombre}
+    - {kind: cell, column: Vertu}
+    - {kind: cell, column: Vertu}
+  points:
+  - id: platon-phedon-apologie-l8-q1
+    sentence: "Ceux qui affrontent la mort sans être philosophes le font « par peur de maux encore plus ___ »."
+    answer: "grands"
+    alt: []
+  - id: platon-phedon-apologie-l8-q2
+    sentence: "Les gens courageux, sauf les philosophes, le sont « par peur et par ___ », ce qui est absurde."
+    answer: "lâcheté"
+    alt: []
+  - id: platon-phedon-apologie-l8-q3
+    sentence: "Ceux qui ont une conduite réglée ne dominent certains plaisirs que parce qu'ils sont ___ par des plaisirs."
+    answer: "dominés"
+    alt: []
+  - id: platon-phedon-apologie-l8-q4
+    sentence: "C'est, d'une certaine manière, un ___ qui rend modérés ceux qui ne sont pas philosophes."
+    answer: "dérèglement"
+    alt: []
+  - id: platon-phedon-apologie-l8-q5
+    sentence: "« Mon cher Simmias, il y a fort à craindre que ce ne soit pas, pour acquérir de la vertu, **___**, celui qui consiste à échanger des plaisirs contre des plaisirs, des peines contre des peines, de la peur contre de la peur — une plus grande quantité contre une plus petite, comme si c'étaient des **pièces de monnaie** ; à craindre qu'il n'y ait au contraire qu'**une seule monnaie** qui vaille et en fonction de laquelle tout doit être échangé : **la pensée** »"
+    answer: "un mode correct d'échange"
+    alt: []
+  - id: platon-phedon-apologie-l8-q6
+    sentence: "« Mon cher Simmias, il y a fort à craindre que ce ne soit pas, pour acquérir de la vertu, **un mode correct d'échange**, celui qui consiste à échanger des plaisirs contre des plaisirs, des peines contre des peines, de la peur contre de la peur — une plus grande quantité contre une plus petite, comme si c'étaient des **___** ; à craindre qu'il n'y ait au contraire qu'**une seule monnaie** qui vaille et en fonction de laquelle tout doit être échangé : **la pensée** »"
+    answer: "pièces de monnaie"
+    alt: []
+  - id: platon-phedon-apologie-l8-q7
+    sentence: "« Mon cher Simmias, il y a fort à craindre que ce ne soit pas, pour acquérir de la vertu, **un mode correct d'échange**, celui qui consiste à échanger des plaisirs contre des plaisirs, des peines contre des peines, de la peur contre de la peur — une plus grande quantité contre une plus petite, comme si c'étaient des **pièces de monnaie** ; à craindre qu'il n'y ait au contraire qu'**___** qui vaille et en fonction de laquelle tout doit être échangé : **la pensée** »"
+    answer: "une seule monnaie"
+    alt: []
+  - id: platon-phedon-apologie-l8-q8
+    sentence: "« Mon cher Simmias, il y a fort à craindre que ce ne soit pas, pour acquérir de la vertu, **un mode correct d'échange**, celui qui consiste à échanger des plaisirs contre des plaisirs, des peines contre des peines, de la peur contre de la peur — une plus grande quantité contre une plus petite, comme si c'étaient des **pièces de monnaie** ; à craindre qu'il n'y ait au contraire qu'**une seule monnaie** qui vaille et en fonction de laquelle tout doit être échangé : **___** »"
+    answer: "la pensée"
+    alt: []
+  - id: platon-phedon-apologie-l8-q9
+    sentence: "Échanger des plaisirs contre des plaisirs ne fait jamais que troquer le ___ contre le même : on calcule mieux, mais on reste esclave."
+    answer: "même"
+    alt: []
+  - id: platon-phedon-apologie-l8-q10
+    sentence: "Achetées avec la pensée, ces choses deviennent une vertu vraie « qu'___ de la pensée »."
+    answer: "accompagne"
+    alt: []
+  - id: platon-phedon-apologie-l8-q11
+    sentence: "Coupée de la pensée, la vertu n'est qu'une « vertu en ___ », une peinture d'ombres (*skiagraphia*)."
+    answer: "trompe-l'œil"
+    alt: []
+  - id: platon-phedon-apologie-l8-q12
+    sentence: "La vertu sans pensée est une « vertu réellement ___ qui ne comporte rien de sain »."
+    answer: "servile"
+    alt: []
+  - id: platon-phedon-apologie-l8-q13
+    sentence: "La métaphore de la monnaie a ses limites : à la différence d'une pièce, la pensée ne se ___ pas quand on achète la vertu avec elle."
+    answer: "perd"
+    alt: []
+  - id: platon-phedon-apologie-l8-q14
+    sentence: "Le vrai constitue une ___ à l'égard des peurs et des plaisirs, et la pensée est comme un moyen de cette purification."
+    answer: "purification"
+    alt: []
+  - id: platon-phedon-apologie-l8-q15
+    sentence: "Selon la formule des initiations, « des porteurs de ___, oui, il y en a beaucoup, mais les Bacchants sont rares »."
+    answer: "thyrse"
+    alt: []
+  - id: platon-phedon-apologie-l8-q16
+    sentence: "Pour Socrate, les vrais Bacchants « ne sont autres que ceux qui, toujours, se sont occupés à ___ droitement »."
+    answer: "philosopher"
+    alt: []
+  - id: platon-phedon-apologie-l8-q17
+    sentence: "Selon la formule des initiations, qui arrive dans l'Hadès sans être initié « sera couché dans le ___ »."
+    answer: "bourbier"
+    alt: []
