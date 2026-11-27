@@ -767,3 +767,26 @@ Pour toute l'unité, vérifier :
 
 Les fichiers écrits restent en fins de ligne LF : en Python, écrire avec
 `newline=''` après avoir normalisé `\r\n` en `\n`.
+
+## 11. Refondre une ancienne unité
+
+Une unité antérieure aux normes (sans `depth:`) se refond **au cas par cas**
+(rappel vide et cartes riches, ou l'inverse), en demandant à l'utilisateur
+dès qu'un choix lui revient. Outil : `refonte.py` (même dossier), qui lit un
+plan YAML (son en-tête dit le format) et remonte les cartes existantes mot
+pour mot : une carte-citation va dans la leçon dont le segment contient ses
+trous, recentrée sur lui, avec son identifiant ; `paras:` reprend un rappel
+paragraphe par paragraphe et signale tout paragraphe perdu ; `edit:` et
+`after:` corrigent ou insèrent des cartes à leur place. Règles tirées de la
+refonte de septembre (2026-11-26) :
+
+- fusionner les leçons très courtes ; couper les longs paragraphes selon
+  leurs fragments ; laisser tel quel un paragraphe déjà découpé en extraits
+  (`=== k`) ;
+- ne rien retirer d'une unité tirée d'un scan : on répartit et on complète ;
+- reprendre aussi les exercices : citation d'une autre œuvre référence
+  d'abord (« *Timée*, 51d : « … » »), puis cascade ; pas de trou sur un mot
+  banal (« une », « nom », « partout ») ; pas de « selon le commentaire » ;
+- ne committer que ses propres fichiers (`git add` fichier par fichier) :
+  l'éditeur visuel ou une autre session peuvent modifier le dépôt en même
+  temps.
