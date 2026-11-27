@@ -34,7 +34,7 @@ lessons:
   - table: moment-lieu-contenu
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lieu}
+    - {kind: bank, column: Contenu}
     - {kind: cell, column: Lieu}
     - {kind: cell, column: Lieu}
   points:
@@ -106,6 +106,14 @@ lessons:
     {green}**Le repère le plus sûr**{/green} : que fait Parménide ? Dans la première partie, il {amber}**objecte**{/amber} (il joue l'adversaire de la théorie). Dans la seconde, il {amber}**démontre**{/amber} (il déroule des déductions). Le passage de l'un à l'autre est marqué en {sky}135c-136c{/sky}, quand il explique en quoi consistera l'exercice.
 
     ! Les bornes exactes varient selon les découpages : le plan de la leçon d'introduction place les critiques jusqu'en {sky}134e{/sky} et le programme de l'exercice en {sky}134e-137c{/sky} ; ici, on retient {sky}135c{/sky} comme fin de la première partie et {sky}135d{/sky} comme début de la seconde.
+  tables:
+  - table: partie-repere-interlocuteur-de-parmenide-objet-methode
+    exercises:
+    - {kind: bank, column: Interlocuteur de Parménide}
+    - {kind: bank, column: Objet}
+    - {kind: bank, column: Méthode}
+    - {kind: cell, column: Méthode}
+    - {kind: cell, column: Objet}
   points:
   - id: platon-parmenide-i21-p1
     sentence: "Dans la **première partie** du *Parménide*, Parménide joue l'adversaire de la théorie des Idées : __il ___ à Socrate des difficultés__."

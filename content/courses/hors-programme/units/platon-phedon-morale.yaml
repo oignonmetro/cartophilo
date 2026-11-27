@@ -29,6 +29,7 @@ intro: |-
 lessons:
 - id: "platon-phedon-morale-i1"
   title: "Deux espèces d'êtres, deux modes de connaître"
+  aside: platon-phedon-morale-i1
   notes: |-
     {green}**L'ontologie platonicienne est dualiste : il y a deux espèces d'êtres**{/green}**, et chacune exige son propre mode de connaissance.** Dès les premiers et jusqu'aux derniers dialogues, les êtres ne sont pas tous du même ordre. Les uns se saisissent par la vue, l'ouïe et les autres sensations corporelles, et apparaissent toujours changeants, selon les conditions de la perception et du temps ; les autres demeurent éternellement identiques et ne se saisissent que par l'âme toute seule, la pensée pure. Le {sky}*Phédon*{/sky} le dit en 79a : {teal}« {/teal}il y a deux espèces d'êtres [`ὄντων`], l'une visible, {teal}l'autre invisible »{/teal}.
 
@@ -41,6 +42,11 @@ lessons:
     Les Idées, « Eidè » (`Εἴδη`) ou « Ideai » (`Ἰδέαι`), telles « l'Égal en soi-même » (74b) ou « le Beau en soi-même, le Juste » (75d), sont des êtres autres que les choses sensibles. D'où une {violet}gnoséologie{/violet} : deux modes distincts de connaissance, l'un par le corps, l'autre par l'âme. L'ontologie fonde ainsi la gnoséologie, mais aussi la morale, dont le noyau est la conception de l'âme : le sujet qui pense et raisonne (65c), « la pensée en elle-même » (66a), qui saisit ce que le corps ne peut saisir, les Idées en soi.
 
     ! L'ontologie ne fonde pas seulement la théorie de la connaissance : chez Platon, elle fonde aussi la morale.
+  tables:
+  - table: espece-d-etres-caractere-ce-qui-la-saisit
+    exercises:
+    - {kind: bank, column: Caractère}
+    - {kind: bank, column: Ce qui la saisit}
   passage:
     label: "Introduction"
   points:
@@ -177,6 +183,7 @@ lessons:
     alt: []
 - id: "platon-phedon-morale-i3"
   title: "Connaissance et action morale"
+  aside: platon-phedon-morale-i3
   notes: |-
     **{green}La mission de l'âme est morale pour deux raisons : elle lui permet d'être elle-même, et la connaissance conduit à l'action morale{/green}.** D'une part, l'âme doit accomplir cette mission afin de réaliser sa propre essence. D'autre part, la connaissance que l'âme peut acquérir conduit, en tant que telle, à *l'action morale*.
 
@@ -199,13 +206,9 @@ lessons:
   - id: "platon-phedon-morale-i3-3"
     sentence: "**Connaître la Vertu**, ce n'est pas énumérer des personnes « vertueuses », __c'est connaître ce qu'est__ l'___ de la Vertu."
     answer: "Idée en soi"
-    alt: ["idée en soi"]
-  - id: "platon-phedon-morale-i3-4"
-    sentence: "**Qui connaît la Vertu en elle-même** peut agir de façon vraiment vertueuse, __et non de celle qu'il ___ l'être.__"
-    answer: "croirait"
-    alt: []
+    alt: ["idée en soi", "essence", "Forme", "Idée"]
   - id: "platon-phedon-morale-i3-5"
-    sentence: "**Connaître le Mauvais en soi et le Laid en soi** __peut conduire à la__ ___ ferme de ne pas agir de manière mauvaise et laide."
+    sentence: "**Connaître le Mauvais en soi et le Laid en soi** __peut conduire à la__ ___ ferme de __ne pas agir de manière mauvaise et laide__."
     answer: "décision"
     alt: []
   - id: "platon-phedon-morale-i3-6"
@@ -225,9 +228,9 @@ lessons:
   notes: |-
     **{green}Les Idées sont « le divin », et l'âme leur est apparentée{/green} : penser, pour elle, c'est acquérir la connaissance du divin.** Le mouvement de l'âme vers les Idées a une valeur morale pour une autre raison encore : les Idées sont « ce qui est invisible, ce qui est divin, immortel, sage » (81a), « ce qui est pur » (79d), « intelligible, [...] et demeure toujours identique à soi-même » (80a-b). Quand l'âme s'applique par elle-même à l'examen, elle s'élance vers elles (79d).
 
-    Pourquoi l'âme a-t-elle pour fonction naturelle de se mouvoir vers les Idées ? À cause de sa {violet}**« parenté »**{/violet} avec le divin. Elle ne l'a pas seulement pour objet de désir : elle « s'apparente » à lui (79d), lui « ressemble » (80a), parce qu'elle aussi « est chose invisible » (79b). Tout en étant autre que les Idées, elle appartient à l'espèce invisible des êtres.
+    Pourquoi l'âme a-t-elle pour **fonction naturelle** de __se mouvoir vers les Idées__ ? À cause de sa {violet}**« parenté »**{/violet} avec le divin. Elle ne l'a pas seulement pour objet de désir : elle « s'apparente » à lui (79d), lui « ressemble » (80a), parce qu'elle aussi « est chose invisible » (79b). Tout en étant __autre que les Idées__, elle appartient à l'espèce invisible des êtres.
 
-    Le divin peut ainsi « être rencontré partout ». Les Idées sont le divin lui-même ; par la relation de causalité, il est aussi présent « dans » les choses visibles, qui ont du divin en elles, « ressemblent » aux Idées (74d-e) et portent le même nom que leur Idée-cause, comme les choses « égales » (74d-75). Mais la ressemblance de l'âme n'est pas celle des choses :
+    Le **divin** peut ainsi « être rencontré partout ». Les Idées sont le divin lui-même ; par la relation de causalité, il est aussi __présent « dans » les choses visibles__, qui ont du divin en elles, « ressemblent » aux Idées (74d-e) et portent le même nom que leur Idée-cause, comme les choses « égales » (74d-75). Mais la ressemblance de l'âme n'est pas celle des choses :
 
     | | Les choses visibles | L'âme |
     | Ce qui les lie aux Idées | la causalité : elles tiennent d'elles leur existence | la parenté : invisible comme elles |
@@ -292,9 +295,9 @@ lessons:
   notes: |-
     **{green}La morale platonicienne n'est pas un code de règles : elle se fonde sur l'ontologie{/green}, et d'abord sur le fait que le divin, que l'âme désire connaître, existe.** {red}Aucun code de cette sorte n'existe{/red}. La conception de la morale est entièrement liée au système *ontologique* de Platon : les Idées en soi existent, et la Vertu en soi n'est qu'*une* de ces Idées.
 
-    Une fois atteinte la connaissance de la Vertu, ou d'une autre Idée qui est une valeur morale (la Justice, la Tempérance, le Courage), des actes « vertueux », « justes », « tempérants » deviennent possibles. Ces Idées-Valeurs morales deviennent *aussi*, au moment où on les connaît, des {violet}**paradigmes**{/violet}, des normes d'action et de conduite.
+    Une fois atteinte la __connaissance de la Vertu__, ou d'une autre Idée qui est une valeur morale (la Justice, la Tempérance, le Courage), des actes « vertueux », « justes », « tempérants » deviennent possibles. Ces **Idées-Valeurs morales** deviennent *aussi*, au moment où on les connaît, des {violet}**paradigmes**{/violet}, __des normes d'action et de conduite__.
 
-    Mais ces normes ne forment pas le contenu d'un code tout prêt, fourni de l'extérieur et à tous. Elles ne se produisent *que pour l'âme de la personne qui s'oriente* vers les Idées-Valeurs et réussit à les *connaître*. Les Valeurs morales *sont* des Idées en soi, d'essence propre, toujours identiques : ni ce que chacun croit, ni ce qu'on pourrait imposer arbitrairement aux autres. *Sans l'acquisition de la connaissance*, rien ne pourrait constituer un paradigme ; {coral}sans connaissance préalable des Idées-Valeurs, il ne peut y avoir de pratique morale{/coral}.
+    Mais ces normes ne forment pas le contenu d'{pink}un code tout prêt{/pink}, fourni de l'extérieur et à tous. Elles ne se produisent *que pour l'âme de la personne qui s'oriente* vers les Idées-Valeurs et réussit à les *connaître*. Les {amber}Valeurs morales *sont* des Idées en soi{/amber}, d'essence propre, toujours identiques : {pink}ni ce que chacun croit, ni ce qu'on pourrait imposer arbitrairement aux autres{/pink}. *Sans l'acquisition de la connaissance*, rien ne pourrait constituer un paradigme ; {coral}sans connaissance préalable des Idées-Valeurs, il ne peut y avoir de pratique morale{/coral}. Le normatif vient de l'absoluité des Idées morales.
 
     ! Les normes morales existent, mais elles ne se reçoivent pas comme un règlement : on ne les a qu'en connaissant.
   passage:
