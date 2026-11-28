@@ -48,7 +48,9 @@ l'épreuve :
     sa descente » (`ame1` à `ame7`, 2026-11-23) est tiré de deux chapitres
     d'un mémoire de F. Lacroix sur le traité 6 et de l'article de Narbonne
     sur la non-descente (2008), complétés par les citations GF des cours des
-    traités 6, 10 et 27. Chez Marx, la piste s'ouvre sur le
+    traités 6, 10 et 27. Le groupe « L'unité des sens de la vie » (`plvie1` à
+    `plvie3`) est tiré du chapitre de Michalewski dans le collectif *La vie
+    comme problème pour la pensée* (scan, citations en Bréhier). Chez Marx, la piste s'ouvre sur le
     cours tiré de l'article « Karl Marx » de la SEP (`sep-marx1` à
     `sep-marx4`, groupées sous « Idées générales »), écrit avec la
     skill `cours-sep`, puis sur le cours tiré de l'introduction de Lucien Sève
@@ -117,9 +119,7 @@ l'épreuve :
   l'introduction de Chaintreuil et Rouquayrol (`intro1` à `intro5`), puis
   « Vraie vie et modes de vie dans la philosophie antique » de Chapuis
   (`vies1` à `vies6`), et « De la biologie à l'éthique : Aristote et la
-  vie » de Ribas (`arvie1` à `arvie4`). La piste accueille aussi les
-  chapitres d'un autre collectif, *La vie comme problème pour la pensée* :
-  Michalewski sur Plotin et l'unité des sens de la vie (`plvie1` à `plvie3`).
+  vie » de Ribas (`arvie1` à `arvie4`).
 
 ## Décidé : la correspondance technique avec le moteur de contenu
 
