@@ -413,7 +413,7 @@ export function RuleNote({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.25 }}
-          className="card-3d mx-auto flex w-full max-w-lg flex-col gap-4 px-6 py-6 md:max-w-3xl md:px-10 md:py-10"
+          className="card-3d mx-auto flex w-full max-w-lg flex-col gap-4 px-6 py-6 md:max-w-3xl md:px-10 md:py-10 lg:max-w-[52rem]"
         >
           <header className="flex flex-col gap-3">
             <span className={`h-1.5 w-10 rounded-full ${tone.accent}`} />
@@ -439,7 +439,7 @@ export function RuleNote({
         </motion.div>
       </div>
 
-      <div className="w-full max-w-lg shrink-0 self-center pt-1 md:max-w-3xl">
+      <div className="w-full max-w-lg shrink-0 self-center pt-1 md:max-w-3xl lg:max-w-[50rem]">
         {footer ?? (
           <Button block tone={tone.button} onClick={onNext}>
             C'est parti

@@ -10,6 +10,7 @@ import {
 } from '@/engine/achievements'
 import { useProgress } from '@/store/progressStore'
 import { BookIcon, CheckIcon, ChevronLeftIcon, FlameIcon } from '@/components/icons'
+import { WithSidebar } from '@/components/Sidebar'
 
 /**
  * Écran des succès (voir `engine/achievements.ts`).
@@ -42,31 +43,33 @@ export function AchievementsScreen() {
   const statuses = ACHIEVEMENTS.map((family) => achievementStatus(family, values[family.id]))
 
   return (
-    <div className="mx-auto flex h-full w-full max-w-md flex-col overflow-hidden md:max-w-3xl">
-      <header className="flex shrink-0 items-center gap-2 px-4 pt-4 md:px-2">
-        <button
-          type="button"
-          onClick={() => navigate(-1)}
-          aria-label="Retour"
-          className="rounded-full p-2 text-ink-faint hover:text-ink"
-        >
-          <ChevronLeftIcon size={24} />
-        </button>
-        <h1 className="text-xl font-black">Succès</h1>
-      </header>
+    <WithSidebar>
+      <div className="mx-auto flex h-full w-full max-w-md min-w-0 flex-col overflow-hidden md:max-w-3xl lg:max-w-[90rem] lg:flex-1">
+        <header className="flex shrink-0 items-center gap-2 px-4 pt-4 md:px-2 lg:px-8 lg:pt-6">
+          <button
+            type="button"
+            onClick={() => navigate(-1)}
+            aria-label="Retour"
+            className="rounded-full p-2 text-ink-faint hover:text-ink"
+          >
+            <ChevronLeftIcon size={24} />
+          </button>
+          <h1 className="text-xl font-black">Succès</h1>
+        </header>
 
-      <main className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto px-4 pt-5 pb-16 [&>*]:shrink-0 md:px-2">
-        <p className="text-sm text-ink-soft">Communs à tous les cours : le même tableau, quel que soit celui ouvert.</p>
-        {/* Exactement trois familles de succès : un tableau à trois colonnes
-            sur ordinateur les utilise toutes, plutôt que d'étirer une
-            colonne unique de cartes sur toute la largeur. */}
-        <div className="flex flex-col gap-4 md:grid md:grid-cols-3 md:items-start md:gap-4">
-          {statuses.map((status) => (
-            <AchievementCard key={status.family.id} status={status} />
-          ))}
-        </div>
-      </main>
-    </div>
+        <main className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto px-4 pt-5 pb-16 [&>*]:shrink-0 md:px-2 lg:px-8">
+          <p className="text-sm text-ink-soft">Communs à tous les cours : le même tableau, quel que soit celui ouvert.</p>
+          {/* Exactement trois familles de succès : un tableau à trois colonnes
+              sur ordinateur les utilise toutes, plutôt que d'étirer une
+              colonne unique de cartes sur toute la largeur. */}
+          <div className="flex flex-col gap-4 md:grid md:grid-cols-3 md:items-start md:gap-4">
+            {statuses.map((status) => (
+              <AchievementCard key={status.family.id} status={status} />
+            ))}
+          </div>
+        </main>
+      </div>
+    </WithSidebar>
   )
 }
 

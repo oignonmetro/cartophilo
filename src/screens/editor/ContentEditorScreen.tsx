@@ -500,7 +500,7 @@ export default function ContentEditorScreen() {
   )
 
   return (
-    <div className="flex h-screen flex-col bg-paper text-ink">
+    <div data-fixed-scale className="flex h-screen flex-col bg-paper text-ink">
       <header className="flex items-center justify-between border-b-2 border-line px-4 py-2.5">
         <h1 className="text-sm font-black uppercase tracking-widest text-ink-soft">Éditeur de contenu</h1>
 

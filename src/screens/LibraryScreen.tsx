@@ -13,12 +13,16 @@ import {
   withoutDeferred,
   type Mastery,
 } from '@/engine/progress'
-import { buildUnitPath, CATCHUP_ID, currentDestination, deferredOfUnit } from '@/engine/unitPath'
+import { buildUnitPath, CATCHUP_ID, deferredOfUnit } from '@/engine/unitPath'
 import { dueCards, type CardState } from '@/engine/srs'
 import { EMPTY_CARDS, EMPTY_DEFERRED, EMPTY_LESSON_PROGRESS, EMPTY_STEPS, useProgress } from '@/store/progressStore'
 import { useCourse } from '@/content/CourseProvider'
 import { availableCourses } from '@/content/loader'
 import { ProgressRing } from '@/components/ProgressRing'
+import { AppSidebar } from '@/components/Sidebar'
+import { TRACK_TONES } from '@/components/trackTones'
+import { defaultTrackId, opensUnitDirectly, rememberedTrack, rememberTrack } from '@/lib/tracks'
+import { useOpenUnit } from '@/lib/useOpenUnit'
 import { CoursePicker } from '@/components/CoursePicker'
 import { TextSheet } from '@/components/TextSheet'
 import { ENNEAD_NUMERALS, acquiredCount } from '@/engine/treatises'
@@ -27,55 +31,27 @@ import { NoteBlocks, TONES, Rich } from '@/components/session/RuleNote'
 import { ChevronLeftIcon, ClockIcon, FlameIcon, StarIcon, UnitIcon } from '@/components/icons'
 
 /**
- * Onglet ouvert par défaut : la première piste qui a effectivement une liste
- * à montrer.
- *
- * Une piste à une seule unité (voir `selectTrack`) n'affiche jamais rien en
- * elle-même — son clic redirige aussitôt vers l'unité. La retenir comme
- * onglet par défaut laisserait l'écran s'ouvrir sur une liste à un seul
- * élément que le clic lui-même ne montre jamais.
+ * Cartes en pile sur téléphone, en grille sur ordinateur, avec autant de
+ * colonnes que la largeur en admet. `dense` : le contenu d'un groupe déplié
+ * prend toute la largeur, et les cartes suivantes viennent combler la rangée
+ * de son en-tête, au-dessus de lui.
  */
-const ACTIVE_TRACK_KEY = 'cartophilo.active-tracks.v1'
+const CARD_GRID =
+  'flex flex-col gap-3 lg:grid lg:grid-flow-row-dense lg:grid-cols-[repeat(auto-fill,minmax(min(100%,21rem),1fr))]'
 
-/**
- * Piste ouverte, retenue par cours : l'écran se remonte à chaque retour d'une
- * leçon ou d'une étape (quitter y ramène par l'historique), et sans cette
- * mémoire il retombait toujours sur la première piste du cours.
- */
-function rememberedTrack(courseId: string, tracks: readonly Track[]): string | null {
-  try {
-    const saved = JSON.parse(localStorage.getItem(ACTIVE_TRACK_KEY) ?? '{}')[courseId]
-    return typeof saved === 'string' && tracks.some((track) => track.id === saved && !opensUnitDirectly(track)) ? saved : null
-  } catch {
-    return null
-  }
-}
+/** Contenu d'un groupe déplié : en retrait sur téléphone, en colonnes sur toute la largeur sur ordinateur. */
+const GROUP_PANEL =
+  'ml-4 flex flex-col gap-2 border-l-2 border-line pl-3 lg:col-span-full lg:grid lg:grid-cols-[repeat(auto-fill,minmax(min(100%,21rem),1fr))]'
 
-function rememberTrack(courseId: string, trackId: string): void {
-  try {
-    const all = JSON.parse(localStorage.getItem(ACTIVE_TRACK_KEY) ?? '{}')
-    localStorage.setItem(ACTIVE_TRACK_KEY, JSON.stringify({ ...all, [courseId]: trackId }))
-  } catch {
-    // Mémoire facultative : sans elle, on retombe sur la piste par défaut.
-  }
+/** Intitulé du groupe en tête de son contenu, sur ordinateur : l'en-tête n'est plus forcément juste au-dessus. */
+function PanelTitle({ title, tone }: { title: string; tone: (typeof TRACK_TONES)[string] }) {
+  return (
+    <p className={`hidden text-xs font-black tracking-widest uppercase lg:col-span-full lg:block ${tone.text}`}>{title}</p>
+  )
 }
 
 /** Groupes dépliés, par piste, le temps de la session (même raison que `rememberedTrack`). */
 const openGroupsMemory = new Map<string, Set<string>>()
-
-function defaultTrackId(tracks: readonly Track[]): string {
-  return (tracks.find((track) => !opensUnitDirectly(track)) ?? tracks[0]!).id
-}
-
-/**
- * Une piste à une seule unité mène droit à elle (voir `selectTrack`), sauf
- * si c'est une unité de texte : sa carte porte aussi « Lire le texte », que
- * le raccourci rendrait inaccessible.
- */
-function opensUnitDirectly(track: Track): boolean {
-  // Une piste-index montre son index, même quand un seul traité a son cours.
-  return track.units.length === 1 && !isTextUnit(track.units[0]!) && !track.entries && !track.subjects
-}
 
 /** Avancement d'une unité sur son parcours, pour la carte de la bibliothèque. */
 function doneNodes(
@@ -222,98 +198,6 @@ function savedTreatiseOrder(): TreatiseOrder {
  * accordéon pour éviter un niveau de navigation supplémentaire.
  */
 
-/** Chaque piste a sa teinte : on sait au premier regard où l'on se trouve. */
-const TRACK_TONES: Record<string, { text: string; bg: string; soft: string; border: string; css: string; deep: string }> = {
-  teal: {
-    text: 'text-unit-teal',
-    bg: 'bg-unit-teal',
-    soft: 'bg-unit-teal/10',
-    border: 'border-unit-teal',
-    css: 'var(--color-unit-teal)',
-    deep: 'var(--color-unit-teal-deep)',
-  },
-  violet: {
-    text: 'text-unit-violet',
-    bg: 'bg-unit-violet',
-    soft: 'bg-unit-violet/10',
-    border: 'border-unit-violet',
-    css: 'var(--color-unit-violet)',
-    deep: 'var(--color-unit-violet-deep)',
-  },
-  coral: {
-    text: 'text-unit-coral',
-    bg: 'bg-unit-coral',
-    soft: 'bg-unit-coral/10',
-    border: 'border-unit-coral',
-    css: 'var(--color-unit-coral)',
-    deep: 'var(--color-unit-coral-deep)',
-  },
-  amber: {
-    text: 'text-unit-amber',
-    bg: 'bg-unit-amber',
-    soft: 'bg-unit-amber/10',
-    border: 'border-unit-amber',
-    css: 'var(--color-unit-amber)',
-    deep: 'var(--color-unit-amber-deep)',
-  },
-  sky: {
-    text: 'text-unit-sky',
-    bg: 'bg-unit-sky',
-    soft: 'bg-unit-sky/10',
-    border: 'border-unit-sky',
-    css: 'var(--color-unit-sky)',
-    deep: 'var(--color-unit-sky-deep)',
-  },
-  yellow: {
-    text: 'text-unit-yellow',
-    bg: 'bg-unit-yellow',
-    soft: 'bg-unit-yellow/10',
-    border: 'border-unit-yellow',
-    css: 'var(--color-unit-yellow)',
-    deep: 'var(--color-unit-yellow-deep)',
-  },
-  green: {
-    text: 'text-unit-green',
-    bg: 'bg-unit-green',
-    soft: 'bg-unit-green/10',
-    border: 'border-unit-green',
-    css: 'var(--color-unit-green)',
-    deep: 'var(--color-unit-green-deep)',
-  },
-  red: {
-    text: 'text-unit-red',
-    bg: 'bg-unit-red',
-    soft: 'bg-unit-red/10',
-    border: 'border-unit-red',
-    css: 'var(--color-unit-red)',
-    deep: 'var(--color-unit-red-deep)',
-  },
-  orange: {
-    text: 'text-unit-orange',
-    bg: 'bg-unit-orange',
-    soft: 'bg-unit-orange/10',
-    border: 'border-unit-orange',
-    css: 'var(--color-unit-orange)',
-    deep: 'var(--color-unit-orange-deep)',
-  },
-  blue: {
-    text: 'text-unit-blue',
-    bg: 'bg-unit-blue',
-    soft: 'bg-unit-blue/10',
-    border: 'border-unit-blue',
-    css: 'var(--color-unit-blue)',
-    deep: 'var(--color-unit-blue-deep)',
-  },
-  pink: {
-    text: 'text-unit-pink',
-    bg: 'bg-unit-pink',
-    soft: 'bg-unit-pink/10',
-    border: 'border-unit-pink',
-    css: 'var(--color-unit-pink)',
-    deep: 'var(--color-unit-pink-deep)',
-  },
-}
-
 export function LibraryScreen({ course }: { course: LibraryCourse }) {
   const navigate = useNavigate()
   const { manifest, switchCourse } = useCourse()
@@ -386,13 +270,7 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
         ? { label: 'Lire le texte', icon: 'page', onRead: () => setOpenText(unit) }
         : undefined
 
-  // Ouvrir une unité mène droit à son étape courante — pas à un écran de
-  // parcours à traverser pour la retrouver (voir `currentDestination`).
-  const openUnit = (unit: Unit) => {
-    const destination = currentDestination(unit.id, buildUnitPath(unit, lessons, steps, deferredIn(unit)))
-    if (!destination) return
-    navigate('lessonId' in destination ? `/lecon/${destination.lessonId}` : `/etape/${destination.unitId}/${destination.stepId}`)
-  }
+  const openUnit = useOpenUnit(course)
 
   // Une piste à une seule unité n'a rien à choisir en son sein : cliquer son
   // onglet mène directement à l'unité plutôt que
@@ -426,15 +304,9 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   const due = useMemo(() => dueCards(Object.values(cards), Date.now()).length, [cards])
 
   const unitList = (
-    // Pas de grille ici : la liste de tête mélange des unités seules et
-    // des replis de groupe (voir `GroupSection`), deux formes qui ne
-    // tiennent pas la même largeur — une grille à deux colonnes y
-    // laissait les unités seules à moitié de la largeur à côté d'un
-    // vide, quand les replis (pleine largeur) tombaient bien. La
-    // grille à deux colonnes reste posée une fois un repli ouvert
-    // (dans `GroupSection`) : là, tout ce qu'elle affiche est bien de
-    // la même forme (des cartes d'unité), et le rendu est net.
-    <div className="flex flex-col gap-3">
+    // Unités seules et en-têtes de groupe (voir `GroupSection`) partagent la
+    // même grille : ce sont des cartes de même gabarit.
+    <div className={CARD_GRID}>
       {groupUnits(track.units).map((entry) =>
         entry.kind === 'group' ? (
           <GroupSection
@@ -481,169 +353,177 @@ export function LibraryScreen({ course }: { course: LibraryCourse }) {
   )
 
   return (
-    <div className="relative mx-auto flex h-full w-full max-w-md flex-col overflow-hidden md:max-w-3xl">
-      <header className="sticky top-0 z-20 shrink-0 border-b-2 border-line bg-cream/95 backdrop-blur">
-        <div className="flex items-center justify-between gap-3 px-4 py-3 md:px-2">
-          <button
-            type="button"
-            onClick={() => setPickerOpen(true)}
-            aria-label={`${courseLabel(course)}, changer de niveau`}
-            className="flex items-center gap-2 rounded-full py-1 pr-2 pl-1 transition-colors hover:bg-ink/5 active:bg-ink/10"
-          >
-            <span className="text-2xl" aria-hidden>
-              {course.flag}
-            </span>
-            {course.level && (
-              <span className="rounded-full bg-scrim px-2 py-0.5 text-[0.65rem] font-black tracking-wide text-white">
-                {course.level}
-              </span>
-            )}
-            <ChevronLeftIcon size={14} className="-rotate-90 text-ink-faint" />
-          </button>
-          <div className="flex items-center gap-4 text-sm font-extrabold">
-            <span className="flex items-center gap-1 text-coral">
-              <FlameIcon size={20} /> {currentStreak}
-            </span>
+    <div className="flex h-full">
+      <AppSidebar activeTrackId={track.id} onSelectTrack={selectTrack} />
+      <div className="relative mx-auto flex h-full w-full max-w-md min-w-0 flex-col overflow-hidden md:max-w-3xl lg:max-w-none lg:flex-1">
+        {/* Sur ordinateur, le panneau latéral porte tout ce que dit cet en-tête. */}
+        <header className="sticky top-0 z-20 shrink-0 border-b-2 border-line bg-cream/95 backdrop-blur lg:hidden">
+          <div className="flex items-center justify-between gap-3 px-4 py-3 md:px-2">
             <button
               type="button"
-              onClick={() => navigate('/profil')}
-              className="rounded-full bg-violet px-3 py-1 text-white"
+              onClick={() => setPickerOpen(true)}
+              aria-label={`${courseLabel(course)}, changer de niveau`}
+              className="flex items-center gap-2 rounded-full py-1 pr-2 pl-1 transition-colors hover:bg-ink/5 active:bg-ink/10"
             >
-              Niv. {level}
+              <span className="text-2xl" aria-hidden>
+                {course.flag}
+              </span>
+              {course.level && (
+                <span className="rounded-full bg-scrim px-2 py-0.5 text-[0.65rem] font-black tracking-wide text-white">
+                  {course.level}
+                </span>
+              )}
+              <ChevronLeftIcon size={14} className="-rotate-90 text-ink-faint" />
             </button>
+            <div className="flex items-center gap-4 text-sm font-extrabold">
+              <span className="flex items-center gap-1 text-coral">
+                <FlameIcon size={20} /> {currentStreak}
+              </span>
+              <button
+                type="button"
+                onClick={() => navigate('/profil')}
+                className="rounded-full bg-violet px-3 py-1 text-white"
+              >
+                Niv. {level}
+              </button>
+            </div>
           </div>
-        </div>
 
-        <TrackTabs tracks={course.tracks} activeId={track.id} onSelect={selectTrack} />
-      </header>
+          <TrackTabs tracks={course.tracks} activeId={track.id} onSelect={selectTrack} />
+        </header>
 
-      <main className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto px-4 pt-4 pb-16 [&>*]:shrink-0 md:px-2">
-        {/* Le rappel de révision à droite du titre, petit : c'est l'action du
-            jour, celle qui fait revenir ce qui a été appris, mais elle ne doit
-            pas prendre la forme d'une carte d'unité. Elle vaut pour toutes
-            les pistes à la fois — mélanger les natures d'exercices vaut mieux
-            que réviser le vocabulaire d'un bloc. */}
-        <div className="flex items-center justify-between gap-3">
-          <TrackTitle track={track} tone={tone} />
-          {due > 0 && <ReviewCallout due={due} onReview={() => navigate('/revision')} />}
-        </div>
-
-        <TrackSummary track={track} known={trackMastery.known} seen={trackMastery.seen} />
-
-        {track.entries ? (
-          <TreatiseIndexView
-            entries={track.entries}
-            tone={tone}
-            openGroups={openGroups}
-            onToggleGroup={toggleGroup}
-            onOpenTreatise={setOpenTreatise}
-            unitMasteryOf={(unitId) => {
-              const unit = track.units.find((each) => each.id === unitId)
-              return unit ? unitMastery(unit, cards) : undefined
-            }}
-          />
-        ) : track.subjects ? (
-          <SubjectsView
-            groups={track.subjects}
-            tone={tone}
-            openGroups={openGroups}
-            onToggleGroup={toggleGroup}
-            onOpenUnit={(unitId) => {
-              const unit = track.units.find((each) => each.id === unitId)
-              if (unit) openUnit(unit)
-            }}
-            unitMasteryOf={(unitId) => {
-              const unit = track.units.find((each) => each.id === unitId)
-              return unit ? unitMastery(unit, cards) : undefined
-            }}
-          >
-            {track.units.length > 0 ? unitList : undefined}
-          </SubjectsView>
-        ) : track.units.length === 0 ? (
-          <EmptyTrack tone={tone} />
-        ) : track.id === 'glossaire' ? (
-          <GlossarySearch key={course.id} units={track.units} terms={track.terms ?? []} list={unitList}>
-            {(units) => (
-              <div className="flex flex-col gap-3">
-                {units.map((unit) => (
-                  <UnitCard
-                    key={unit.id}
-                    unit={unit}
-                    tone={tone}
-                    mastery={unitMastery(unit, cards)}
-                    done={doneNodes(unit, lessons, steps, deferredIn(unit))}
-                    deferred={deferredIn(unit)}
-                    onCatchUp={() => navigate(`/etape/${unit.id}/${CATCHUP_ID}`)}
-                    onOpen={() => openUnit(unit)}
-                    reader={readerOf(unit)}
-                    onReadNotes={hasSeveralNotes(unit) ? () => navigate(`/fiches/${unit.id}`) : undefined}
-                  />
-                ))}
-              </div>
+        <main className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto px-4 pt-4 pb-16 [&>*]:shrink-0 md:px-2 lg:gap-4 lg:px-8 lg:pt-6 lg:pb-28">
+          {/* Le rappel de révision à droite du titre, petit : c'est l'action du
+              jour, celle qui fait revenir ce qui a été appris, mais elle ne doit
+              pas prendre la forme d'une carte d'unité. Elle vaut pour toutes
+              les pistes à la fois — mélanger les natures d'exercices vaut mieux
+              que réviser le vocabulaire d'un bloc. */}
+          <div className="flex items-center justify-between gap-3">
+            <TrackTitle track={track} tone={tone} />
+            {due > 0 && (
+              <span className="lg:hidden">
+                <ReviewCallout due={due} onReview={() => navigate('/revision')} />
+              </span>
             )}
-          </GlossarySearch>
-        ) : (
-          unitList
-        )}
+          </div>
 
-      </main>
+          <TrackSummary track={track} known={trackMastery.known} seen={trackMastery.seen} />
 
-      {/* Le repérage général (voir `TreatiseTrainRoute`) : un bouton rond posé
-          dans l'angle bas droit de l'écran, hors de la zone qui défile — il ne
-          bouge pas avec la liste, et ne se range pas parmi ses cartes. */}
-      {track.entries && (
-        <TreatiseTrainButton
-          acquired={acquiredCount(track.entries, treatiseProgress ?? {})}
-          total={track.entries.length}
-          tone={tone}
-          onClick={() => navigate('/reperage')}
-        />
-      )}
-      {/* Le grand exercice de révision du glossaire : le même bouton, sur les
-          notions qui ont leur définition (voir `termEntrySchema`). */}
-      {track.terms && track.terms.length > 0 && (
-        <TreatiseTrainButton
-          acquired={acquiredCount(track.terms, treatiseProgress ?? {})}
-          total={track.terms.length}
-          tone={tone}
-          label="Réviser le glossaire"
-          unit="notions maîtrisées"
-          onClick={() => navigate('/glossaire-revision')}
-        />
-      )}
+          {track.entries ? (
+            <TreatiseIndexView
+              entries={track.entries}
+              tone={tone}
+              openGroups={openGroups}
+              onToggleGroup={toggleGroup}
+              onOpenTreatise={setOpenTreatise}
+              unitMasteryOf={(unitId) => {
+                const unit = track.units.find((each) => each.id === unitId)
+                return unit ? unitMastery(unit, cards) : undefined
+              }}
+            />
+          ) : track.subjects ? (
+            <SubjectsView
+              groups={track.subjects}
+              tone={tone}
+              openGroups={openGroups}
+              onToggleGroup={toggleGroup}
+              onOpenUnit={(unitId) => {
+                const unit = track.units.find((each) => each.id === unitId)
+                if (unit) openUnit(unit)
+              }}
+              unitMasteryOf={(unitId) => {
+                const unit = track.units.find((each) => each.id === unitId)
+                return unit ? unitMastery(unit, cards) : undefined
+              }}
+            >
+              {track.units.length > 0 ? unitList : undefined}
+            </SubjectsView>
+          ) : track.units.length === 0 ? (
+            <EmptyTrack tone={tone} />
+          ) : track.id === 'glossaire' ? (
+            <GlossarySearch key={course.id} units={track.units} terms={track.terms ?? []} list={unitList}>
+              {(units) => (
+                <div className={CARD_GRID}>
+                  {units.map((unit) => (
+                    <UnitCard
+                      key={unit.id}
+                      unit={unit}
+                      tone={tone}
+                      mastery={unitMastery(unit, cards)}
+                      done={doneNodes(unit, lessons, steps, deferredIn(unit))}
+                      deferred={deferredIn(unit)}
+                      onCatchUp={() => navigate(`/etape/${unit.id}/${CATCHUP_ID}`)}
+                      onOpen={() => openUnit(unit)}
+                      reader={readerOf(unit)}
+                      onReadNotes={hasSeveralNotes(unit) ? () => navigate(`/fiches/${unit.id}`) : undefined}
+                    />
+                  ))}
+                </div>
+              )}
+            </GlossarySearch>
+          ) : (
+            unitList
+          )}
 
-      <AnimatePresence>
-        {pickerOpen && (
-          <CoursePicker
-            courses={pickableCourses}
-            activeId={course.id}
-            onSelect={switchCourse}
-            onClose={() => setPickerOpen(false)}
+        </main>
+
+        {/* Le repérage général (voir `TreatiseTrainRoute`) : un bouton rond posé
+            dans l'angle bas droit de l'écran, hors de la zone qui défile — il ne
+            bouge pas avec la liste, et ne se range pas parmi ses cartes. */}
+        {track.entries && (
+          <TreatiseTrainButton
+            acquired={acquiredCount(track.entries, treatiseProgress ?? {})}
+            total={track.entries.length}
+            tone={tone}
+            onClick={() => navigate('/reperage')}
           />
         )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {openTreatise && (
-          <TreatiseSheet
-            entry={openTreatise}
-            unit={track.units.find((unit) => unit.id === openTreatise.unit)}
-            mastery={(() => {
-              const unit = track.units.find((each) => each.id === openTreatise.unit)
-              return unit ? unitMastery(unit, cards) : undefined
-            })()}
-            onOpenUnit={(unit) => {
-              setOpenTreatise(null)
-              openUnit(unit)
-            }}
-            onClose={() => setOpenTreatise(null)}
+        {/* Le grand exercice de révision du glossaire : le même bouton, sur les
+            notions qui ont leur définition (voir `termEntrySchema`). */}
+        {track.terms && track.terms.length > 0 && (
+          <TreatiseTrainButton
+            acquired={acquiredCount(track.terms, treatiseProgress ?? {})}
+            total={track.terms.length}
+            tone={tone}
+            label="Réviser le glossaire"
+            unit="notions maîtrisées"
+            onClick={() => navigate('/glossaire-revision')}
           />
         )}
-      </AnimatePresence>
 
-      <AnimatePresence>{openText && <TextSheet unit={openText} onClose={() => setOpenText(null)} />}</AnimatePresence>
+        <AnimatePresence>
+          {pickerOpen && (
+            <CoursePicker
+              courses={pickableCourses}
+              activeId={course.id}
+              onSelect={switchCourse}
+              onClose={() => setPickerOpen(false)}
+            />
+          )}
+        </AnimatePresence>
 
-      <AnimatePresence>{openPlan && <PlanSheet unit={openPlan} onClose={() => setOpenPlan(null)} />}</AnimatePresence>
+        <AnimatePresence>
+          {openTreatise && (
+            <TreatiseSheet
+              entry={openTreatise}
+              unit={track.units.find((unit) => unit.id === openTreatise.unit)}
+              mastery={(() => {
+                const unit = track.units.find((each) => each.id === openTreatise.unit)
+                return unit ? unitMastery(unit, cards) : undefined
+              })()}
+              onOpenUnit={(unit) => {
+                setOpenTreatise(null)
+                openUnit(unit)
+              }}
+              onClose={() => setOpenTreatise(null)}
+            />
+          )}
+        </AnimatePresence>
+
+        <AnimatePresence>{openText && <TextSheet unit={openText} onClose={() => setOpenText(null)} />}</AnimatePresence>
+
+        <AnimatePresence>{openPlan && <PlanSheet unit={openPlan} onClose={() => setOpenPlan(null)} />}</AnimatePresence>
+      </div>
     </div>
   )
 }
@@ -716,7 +596,7 @@ function TrackTitle({ track, tone }: { track: Track; tone: (typeof TRACK_TONES)[
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.15 }}
-        className={`px-1 text-lg font-extrabold ${tone.text}`}
+        className={`px-1 text-lg font-extrabold lg:text-2xl ${tone.text}`}
       >
         {track.title}
       </motion.h2>
@@ -846,15 +726,17 @@ function UnitCard({
     <section
       className={
         compact
-          ? 'overflow-hidden rounded-2xl border-2 border-line/60 bg-ink/[0.03]'
-          : 'card-3d overflow-hidden'
+          ? 'flex flex-col overflow-hidden rounded-2xl border-2 border-line/60 bg-ink/[0.03]'
+          : 'card-3d flex flex-col overflow-hidden'
       }
     >
       <button
         type="button"
         onClick={onOpen}
         disabled={unit.lessons.length === 0}
-        className={`flex w-full items-center gap-4 text-left disabled:cursor-default ${compact ? 'px-3 py-3' : 'px-4 py-4'}`}
+        // `flex-1` : dans la grille, une carte s'étire à la hauteur de sa
+        // rangée, et ses boutons du bas restent en bas.
+        className={`flex w-full flex-1 items-center gap-4 text-left disabled:cursor-default ${compact ? 'px-3 py-3' : 'px-4 py-4'}`}
       >
         <ProgressRing
           ratio={mastery.ratio}
@@ -952,12 +834,12 @@ function GroupSection({
   const mastery = masteryOf(itemIds, cards)
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 lg:contents">
       <button
         type="button"
         onClick={onToggle}
         aria-expanded={open}
-        className="card-3d flex w-full items-center gap-4 px-4 py-4 text-left"
+        className={`card-3d flex w-full items-center gap-4 px-4 py-4 text-left ${open ? tone.openBorder : ''}`}
       >
         <ProgressRing
           ratio={mastery.ratio}
@@ -983,9 +865,8 @@ function GroupSection({
           rang — une grille les en aurait trop rapprochées visuellement des
           cartes de la liste, qui leur sont pourtant supérieures d'un
           niveau ; `compact` sur `UnitCard` (voir plus bas) les distingue en
-          plus par un relief atténué. Même mise en page sur téléphone et sur
-          ordinateur : la hiérarchie compte plus ici que la largeur
-          disponible. */}
+          plus par un relief atténué. Sur ordinateur, ce contenu prend toute la
+          largeur de la grille, sous le nom du groupe (voir `GROUP_PANEL`). */}
       <AnimatePresence initial={false}>
         {open && (
           <motion.div
@@ -993,8 +874,9 @@ function GroupSection({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
-            className="ml-4 flex flex-col gap-2 border-l-2 border-line pl-3"
+            className={GROUP_PANEL}
           >
+            <PanelTitle title={group} tone={tone} />
             {children}
           </motion.div>
         )}
@@ -1050,10 +932,14 @@ function TreatiseIndexView({
   )
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className={CARD_GRID}>
       {/* Deux lectures du même index : l'ordre de Porphyre (les Ennéades) ou
           l'ordre de rédaction, regroupé comme dans l'édition GF. */}
-      <div className="flex gap-0.5 self-center rounded-xl border-2 border-line p-1" role="group" aria-label="Ordre des traités">
+      <div
+        className="flex gap-0.5 self-center rounded-xl border-2 border-line p-1 lg:col-span-full lg:justify-self-start"
+        role="group"
+        aria-label="Ordre des traités"
+      >
         {(
           [
             ['porphyry', 'Ennéades'],
@@ -1076,12 +962,12 @@ function TreatiseIndexView({
       {groups.map(({ key, badge, cover, title, entries: group }) => {
         const open = openGroups.has(key)
         return (
-          <div key={key} className="flex flex-col gap-3">
+          <div key={key} className="flex flex-col gap-3 lg:contents">
             <button
               type="button"
               onClick={() => onToggleGroup(key)}
               aria-expanded={open}
-              className="card-3d flex w-full items-center gap-4 px-4 py-4 text-left"
+              className={`card-3d flex w-full items-center gap-4 px-4 py-4 text-left ${open ? tone.openBorder : ''}`}
             >
               {cover ? (
                 <img src={cover} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-line" />
@@ -1114,8 +1000,9 @@ function TreatiseIndexView({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.15 }}
-                  className="ml-4 flex flex-col gap-2 border-l-2 border-line pl-3"
+                  className={GROUP_PANEL}
                 >
+                  <PanelTitle title={title} tone={tone} />
                   {group.map((entry) => (
                     <button
                       key={entry.id}
@@ -1213,7 +1100,7 @@ function GlossarySearch({
         onChange={(event) => setQuery(event.target.value)}
         placeholder="Chercher une notion (âme, zôê, travail…)"
         aria-label="Chercher une notion"
-        className="w-full rounded-2xl border-2 border-line bg-cream px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-ink-faint focus:outline-none"
+        className="w-full rounded-2xl border-2 border-line bg-cream px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-ink-faint focus:outline-none lg:max-w-xl"
       />
       {needle ? (
         <>
@@ -1287,7 +1174,7 @@ function SubjectsView({
         onChange={(event) => setQuery(event.target.value)}
         placeholder="Chercher un sujet (mort, corps, finalité…)"
         aria-label="Chercher un sujet"
-        className="w-full rounded-2xl border-2 border-line bg-cream px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-ink-faint focus:outline-none"
+        className="w-full rounded-2xl border-2 border-line bg-cream px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-ink-faint focus:outline-none lg:max-w-xl"
       />
       {needle && (
         <p className="px-1 text-xs font-bold text-ink-faint">
@@ -1295,69 +1182,76 @@ function SubjectsView({
         </p>
       )}
 
-      {shown.map((group) => {
-        const key = `sujets-${group.title}`
-        const open = Boolean(needle) || openGroups.has(key)
-        const treated = group.subjects.filter((subject) => subject.unit).length
-        return (
-          <div key={key} className="flex flex-col gap-3">
-            <button
-              type="button"
-              onClick={() => onToggleGroup(key)}
-              aria-expanded={open}
-              disabled={Boolean(needle)}
-              className="card-3d flex w-full items-center gap-4 px-4 py-4 text-left"
-            >
-              <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} text-sm font-black ${tone.text}`}>
-                {group.subjects.length}
-              </span>
-              <span className="flex-1">
-                <span className="text-base leading-tight font-extrabold">{group.title}</span>
-                <span className="mt-0.5 block text-xs font-bold text-ink-faint">
-                  {group.subjects.length} sujet{group.subjects.length > 1 ? 's' : ''}
-                  {treated > 0 && `, ${treated} traité${treated > 1 ? 's' : ''}`}
+      {/* Pas de grille pendant une recherche : tous les groupes y sont
+          ouverts, et leurs en-têtes se retrouveraient loin de leurs sujets. */}
+      <div className={needle ? 'flex flex-col gap-3' : CARD_GRID}>
+        {shown.map((group) => {
+          const key = `sujets-${group.title}`
+          const open = Boolean(needle) || openGroups.has(key)
+          const treated = group.subjects.filter((subject) => subject.unit).length
+          return (
+            <div key={key} className={`flex flex-col gap-3 ${needle ? '' : 'lg:contents'}`}>
+              <button
+                type="button"
+                onClick={() => onToggleGroup(key)}
+                aria-expanded={open}
+                disabled={Boolean(needle)}
+                className={`card-3d flex w-full items-center gap-4 px-4 py-4 text-left ${open && !needle ? tone.openBorder : ''}`}
+              >
+                <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} text-sm font-black ${tone.text}`}>
+                  {group.subjects.length}
                 </span>
-              </span>
-              {!needle && (
-                <span className={`text-ink-faint transition-transform ${open ? 'rotate-90' : '-rotate-90'}`}>
-                  <ChevronLeftIcon size={20} />
+                <span className="flex-1">
+                  <span className="text-base leading-tight font-extrabold">{group.title}</span>
+                  <span className="mt-0.5 block text-xs font-bold text-ink-faint">
+                    {group.subjects.length} sujet{group.subjects.length > 1 ? 's' : ''}
+                    {treated > 0 && `, ${treated} traité${treated > 1 ? 's' : ''}`}
+                  </span>
                 </span>
-              )}
-            </button>
+                {!needle && (
+                  <span className={`text-ink-faint transition-transform ${open ? 'rotate-90' : '-rotate-90'}`}>
+                    <ChevronLeftIcon size={20} />
+                  </span>
+                )}
+              </button>
 
-            <AnimatePresence initial={false}>
-              {open && (
-                <motion.div
-                  initial={{ opacity: 0, y: -6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.15 }}
-                  className="ml-4 flex flex-col gap-2 border-l-2 border-line pl-3"
-                >
-                  {group.note && !needle && <p className="px-1 text-xs leading-snug text-ink-soft italic">{group.note}</p>}
-                  {group.subjects.map((subject) =>
-                    subject.unit ? (
-                      <button
-                        key={subject.title}
-                        type="button"
-                        onClick={() => onOpenUnit(subject.unit!)}
-                        className="flex w-full items-center gap-3 rounded-2xl border-2 border-line/60 bg-ink/[0.03] px-3 py-2.5 text-left"
-                      >
-                        <span className="flex-1 text-sm leading-snug font-extrabold text-ink">{subject.title}</span>
-                        <ProgressMini mastery={unitMasteryOf(subject.unit)} tone={tone} />
-                      </button>
-                    ) : (
-                      <p key={subject.title} className="px-3 py-1.5 text-sm leading-snug text-ink">
-                        {subject.title}
-                      </p>
-                    ),
-                  )}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        )
-      })}
+              <AnimatePresence initial={false}>
+                {open && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.15 }}
+                    className={GROUP_PANEL}
+                  >
+                    {!needle && <PanelTitle title={group.title} tone={tone} />}
+                    {group.note && !needle && (
+                      <p className="px-1 text-xs leading-snug text-ink-soft italic lg:col-span-full">{group.note}</p>
+                    )}
+                    {group.subjects.map((subject) =>
+                      subject.unit ? (
+                        <button
+                          key={subject.title}
+                          type="button"
+                          onClick={() => onOpenUnit(subject.unit!)}
+                          className="flex w-full items-center gap-3 rounded-2xl border-2 border-line/60 bg-ink/[0.03] px-3 py-2.5 text-left"
+                        >
+                          <span className="flex-1 text-sm leading-snug font-extrabold text-ink">{subject.title}</span>
+                          <ProgressMini mastery={unitMasteryOf(subject.unit)} tone={tone} />
+                        </button>
+                      ) : (
+                        <p key={subject.title} className="px-3 py-1.5 text-sm leading-snug text-ink">
+                          {subject.title}
+                        </p>
+                      ),
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
@@ -1402,7 +1296,7 @@ function TreatiseSheet({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-30 flex items-end justify-center bg-scrim/40 p-4"
+      className="fixed inset-0 z-30 flex items-end justify-center bg-scrim/40 p-4 lg:items-center"
       onClick={onClose}
     >
       <motion.div
@@ -1410,7 +1304,7 @@ function TreatiseSheet({
         animate={{ y: 0 }}
         exit={{ y: 60 }}
         onClick={(event) => event.stopPropagation()}
-        className="flex max-h-[85dvh] w-full max-w-md flex-col gap-4 rounded-blob bg-paper p-5"
+        className="flex max-h-[85dvh] w-full max-w-md flex-col gap-4 rounded-blob bg-paper p-5 md:max-w-2xl"
       >
         <h2 className="shrink-0 text-lg leading-tight font-extrabold text-ink">
           <span className={`font-black ${tone.eyebrow}`}>
@@ -1474,8 +1368,8 @@ function TreatiseTrainButton({
   const circumference = 2 * Math.PI * radius
   const ratio = total === 0 ? 0 : Math.min(1, acquired / total)
   return (
-    <div className="pointer-events-none absolute right-1 bottom-1 z-10 flex h-[76px] w-[76px] items-center justify-center">
-      <svg width={size} height={size} className="absolute inset-0 -rotate-90" aria-hidden>
+    <div className="pointer-events-none absolute right-1 bottom-1 z-10 flex h-[4.75rem] w-[4.75rem] items-center justify-center lg:right-6 lg:bottom-6">
+      <svg viewBox={`0 0 ${size} ${size}`} className="absolute inset-0 h-full w-full -rotate-90" aria-hidden>
         <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="var(--color-line)" strokeWidth={stroke} />
         {ratio > 0 && (
           <circle

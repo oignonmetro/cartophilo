@@ -9,8 +9,11 @@ interface IconProps {
 
 function svgProps({ size = 24, className }: IconProps) {
   return {
-    width: size,
-    height: size,
+    // En `rem` : les icônes grandissent avec le texte sur grand écran (voir
+    // la taille de base dans `styles.css`). `size` reste exprimé en pixels
+    // d'un écran ordinaire.
+    width: `${size / 16}rem`,
+    height: `${size / 16}rem`,
     viewBox: '0 0 24 24',
     fill: 'none',
     stroke: 'currentColor',

@@ -9,6 +9,7 @@ import { EMPTY_CARDS, useProgress } from '@/store/progressStore'
 import { canVibrate } from '@/lib/haptics'
 import { Button } from '@/components/Button'
 import { AppUpdateCard } from '@/components/AppUpdateCard'
+import { WithSidebar } from '@/components/Sidebar'
 import { BoltIcon, ChestIcon, ChevronLeftIcon, FlameIcon } from '@/components/icons'
 
 const STRENGTHS = ['new', 'learning', 'known', 'mastered'] as const
@@ -90,211 +91,213 @@ export function ProfileScreen() {
   }
 
   return (
-    <div className="mx-auto flex h-full w-full max-w-md flex-col overflow-hidden md:max-w-3xl">
-      <header className="flex shrink-0 items-center gap-2 px-4 pt-4 md:px-2">
-        <button
-          type="button"
-          onClick={() => navigate(-1)}
-          aria-label="Retour"
-          className="rounded-full p-2 text-ink-faint hover:text-ink"
-        >
-          <ChevronLeftIcon size={24} />
-        </button>
-        <h1 className="text-xl font-black">Profil</h1>
-      </header>
+    <WithSidebar>
+      <div className="mx-auto flex h-full w-full max-w-md min-w-0 flex-col overflow-hidden md:max-w-3xl lg:max-w-[90rem] lg:flex-1">
+        <header className="flex shrink-0 items-center gap-2 px-4 pt-4 md:px-2 lg:px-8 lg:pt-6">
+          <button
+            type="button"
+            onClick={() => navigate(-1)}
+            aria-label="Retour"
+            className="rounded-full p-2 text-ink-faint hover:text-ink"
+          >
+            <ChevronLeftIcon size={24} />
+          </button>
+          <h1 className="text-xl font-black">Profil</h1>
+        </header>
 
-      {/* `md:grid md:grid-cols-2` : une longue colonne de réglages devient
-          vide dès qu'on l'étire à la largeur d'un écran de bureau. Chaque
-          section garde sa propre carte (pas de fusion visuelle), mais les
-          plus courtes (objectif, thème, sons…) se retrouvent deux par
-          rangée plutôt qu'une sous l'autre ; les sections qui veulent
-          rester pleine largeur (niveau, statistiques, succès, contenu
-          travaillé, réinitialiser) portent `md:col-span-2`. */}
-      <main className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto px-4 pt-5 pb-16 [&>*]:shrink-0 md:grid md:grid-cols-2 md:items-start md:gap-5 md:px-2">
-        <section className="card-3d px-5 py-5 md:col-span-2">
-          <p className="text-sm font-bold text-ink-soft">Niveau {level}</p>
-          <div className="mt-2 h-3 overflow-hidden rounded-full bg-line">
-            <div className="h-full rounded-full bg-violet" style={{ width: `${(into / span) * 100}%` }} />
-          </div>
-          <p className="mt-1 text-xs text-ink-faint">
-            {into} / {span} XP vers le niveau {level + 1}
-          </p>
-        </section>
-
-        <section className="grid grid-cols-3 gap-3 md:col-span-2">
-          <Tile label="Série" value={String(displayedStreak(state.streak, today))} icon={<FlameIcon size={18} />} tone="text-coral" />
-          <Tile label="XP total" value={String(state.xp)} icon={<BoltIcon size={18} />} tone="text-amber" />
-          <Tile label="À réviser" value={String(due)} tone="text-teal" />
-        </section>
-
-        <button
-          type="button"
-          onClick={() => navigate('/succes')}
-          className="card-3d flex items-center gap-3 px-5 py-4 text-left md:col-span-2"
-        >
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber">
-            <ChestIcon size={20} />
-          </span>
-          <span className="min-w-0 flex-1">
-            <span className="block text-sm font-extrabold">Succès</span>
-            <span className="block text-xs text-ink-faint">
-              {achievementsUnlocked} / {achievementsTotal} paliers débloqués
-            </span>
-          </span>
-          <ChevronLeftIcon size={18} className="rotate-180 shrink-0 text-ink-faint" />
-        </button>
-
-        <section className="card-3d px-5 py-5 md:col-span-2">
-          <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Contenu travaillé</h2>
-          <p className="mt-1 text-2xl font-black">
-            {cards.length}
-            <span className="text-base font-bold text-ink-faint"> / {totalItems} éléments rencontrés</span>
-          </p>
-
-          <div className="mt-4 flex h-4 overflow-hidden rounded-full bg-line">
-            {STRENGTHS.map((key) => (
-              <div
-                key={key}
-                className={STRENGTH_TONE[key]}
-                style={{ width: cards.length ? `${(breakdown[key] / cards.length) * 100}%` : '0%' }}
-              />
-            ))}
-          </div>
-          <ul className="mt-3 grid grid-cols-2 gap-2 text-xs font-bold text-ink-soft">
-            {STRENGTHS.map((key) => (
-              <li key={key} className="flex items-center gap-2">
-                <span className={`h-3 w-3 rounded-full ${STRENGTH_TONE[key]}`} />
-                {STRENGTH_LABELS[key]} · {breakdown[key]}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="card-3d flex flex-col gap-3 px-5 py-5">
-          <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Objectif quotidien</h2>
-          <div className="flex gap-2">
-            {[20, 30, 50, 80].map((goal) => (
-              <button
-                key={goal}
-                type="button"
-                onClick={() => state.setDailyGoal(goal)}
-                className={`flex-1 rounded-2xl border-2 py-3 text-sm font-extrabold ${
-                  state.dailyGoal === goal ? 'border-teal bg-teal/15 text-teal' : 'border-line text-ink-soft'
-                }`}
-              >
-                {goal} XP
-              </button>
-            ))}
-          </div>
-          <p className="text-xs text-ink-faint">
-            Aujourd'hui : {state.xpByDay[today] ?? 0} / {state.dailyGoal} XP
-          </p>
-        </section>
-
-        <section className="card-3d flex flex-col gap-3 px-5 py-5">
-          <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Thème</h2>
-          <div className="flex gap-2">
-            {THEME_OPTIONS.map(({ value, label }) => (
-              <button
-                key={value}
-                type="button"
-                onClick={() => state.setTheme(value)}
-                className={`flex-1 rounded-2xl border-2 py-3 text-sm font-extrabold ${
-                  state.theme === value ? 'border-teal bg-teal/15 text-teal' : 'border-line text-ink-soft'
-                }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        </section>
-
-        <section className="card-3d flex flex-col gap-3 px-5 py-5">
-          <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Sons</h2>
-          <Switch
-            label="Une note à chaque bonne réponse"
-            on={state.sounds}
-            onToggle={() => state.setSounds(!state.sounds)}
-          />
-          <p className="text-xs text-ink-faint">
-            Rien ne se perd à les couper : une bonne réponse se voit déjà à l'écran.
-          </p>
-        </section>
-
-        {canVibrate && (
-          <section className="card-3d flex flex-col gap-3 px-5 py-5">
-            <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Vibrations</h2>
-            <Switch
-              label="Sentir les séries et la fin de session"
-              on={state.haptics}
-              onToggle={() => state.setHaptics(!state.haptics)}
-            />
-            <p className="text-xs text-ink-faint">
-              Éteintes par défaut, et volontairement rares : elles ne marquent ni les bonnes ni les mauvaises
-              réponses, seulement une série qui monte, une série qui se casse, et la session qui se termine.
+        {/* `md:grid md:grid-cols-2` : une longue colonne de réglages devient
+            vide dès qu'on l'étire à la largeur d'un écran de bureau. Chaque
+            section garde sa propre carte (pas de fusion visuelle), mais les
+            plus courtes (objectif, thème, sons…) se retrouvent deux par
+            rangée plutôt qu'une sous l'autre ; les sections qui veulent
+            rester pleine largeur (niveau, statistiques, succès, contenu
+            travaillé, réinitialiser) portent `md:col-span-2`. */}
+        <main className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto px-4 pt-5 pb-16 [&>*]:shrink-0 md:grid md:grid-cols-2 md:content-start md:items-start md:gap-5 md:px-2 lg:px-8 xl:grid-cols-3">
+          <section className="card-3d px-5 py-5 md:col-span-2 xl:col-span-1 xl:self-stretch">
+            <p className="text-sm font-bold text-ink-soft">Niveau {level}</p>
+            <div className="mt-2 h-3 overflow-hidden rounded-full bg-line">
+              <div className="h-full rounded-full bg-violet" style={{ width: `${(into / span) * 100}%` }} />
+            </div>
+            <p className="mt-1 text-xs text-ink-faint">
+              {into} / {span} XP vers le niveau {level + 1}
             </p>
           </section>
-        )}
 
-        <section className="card-3d flex flex-col gap-3 px-5 py-5">
-          <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Correction</h2>
-          <Switch
-            label="Auto-correction ciblée"
-            on={state.targetedCorrection}
-            onToggle={() => state.setTargetedCorrection(!state.targetedCorrection)}
-          />
-          <p className="text-xs text-ink-faint">
-            Après une erreur, réécrivez tout le mot par défaut — ça ancre mieux l'orthographe correcte. Activez pour
-            ne corriger que la partie fautive, le reste de la réponse restant déjà affiché.
-          </p>
-        </section>
+          <section className="grid grid-cols-3 gap-3 md:col-span-2 xl:self-stretch">
+            <Tile label="Série" value={String(displayedStreak(state.streak, today))} icon={<FlameIcon size={18} />} tone="text-coral" />
+            <Tile label="XP total" value={String(state.xp)} icon={<BoltIcon size={18} />} tone="text-amber" />
+            <Tile label="À réviser" value={String(due)} tone="text-teal" />
+          </section>
 
-        <section className="card-3d flex flex-col gap-3 px-5 py-5">
-          <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Sauvegarde</h2>
-          <p className="text-xs text-ink-soft">
-            Toute la progression reste sur cet appareil. Exportez un fichier pour la transférer ou la conserver.
-          </p>
-          <div className="flex gap-3">
-            <Button tone="neutral" className="flex-1 text-xs" onClick={download}>
-              Exporter
-            </Button>
-            <Button tone="neutral" className="flex-1 text-xs" onClick={() => fileInput.current?.click()}>
-              Importer
-            </Button>
-          </div>
-          <input
-            ref={fileInput}
-            type="file"
-            accept="application/json"
-            className="hidden"
-            onChange={(event) => {
-              const file = event.target.files?.[0]
-              if (file) void upload(file)
-              event.target.value = ''
-            }}
-          />
-          {message && <p className="text-xs font-bold text-teal">{message}</p>}
-        </section>
-
-        <div className="md:col-span-2">
-          <AppUpdateCard />
-        </div>
-
-        <section className="flex flex-col gap-2 md:col-span-2">
-          <Button
-            tone="error"
-            onClick={() => {
-              if (confirm('Effacer toute la progression ? Cette action est irréversible.')) {
-                state.reset()
-                setMessage('Progression effacée.')
-              }
-            }}
+          <button
+            type="button"
+            onClick={() => navigate('/succes')}
+            className="card-3d flex items-center gap-3 px-5 py-4 text-left md:col-span-2 xl:col-span-1 xl:self-stretch"
           >
-            Réinitialiser
-          </Button>
-        </section>
-      </main>
-    </div>
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber">
+              <ChestIcon size={20} />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-sm font-extrabold">Succès</span>
+              <span className="block text-xs text-ink-faint">
+                {achievementsUnlocked} / {achievementsTotal} paliers débloqués
+              </span>
+            </span>
+            <ChevronLeftIcon size={18} className="rotate-180 shrink-0 text-ink-faint" />
+          </button>
+
+          <section className="card-3d px-5 py-5 md:col-span-2">
+            <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Contenu travaillé</h2>
+            <p className="mt-1 text-2xl font-black">
+              {cards.length}
+              <span className="text-base font-bold text-ink-faint"> / {totalItems} éléments rencontrés</span>
+            </p>
+
+            <div className="mt-4 flex h-4 overflow-hidden rounded-full bg-line">
+              {STRENGTHS.map((key) => (
+                <div
+                  key={key}
+                  className={STRENGTH_TONE[key]}
+                  style={{ width: cards.length ? `${(breakdown[key] / cards.length) * 100}%` : '0%' }}
+                />
+              ))}
+            </div>
+            <ul className="mt-3 grid grid-cols-2 gap-2 text-xs font-bold text-ink-soft">
+              {STRENGTHS.map((key) => (
+                <li key={key} className="flex items-center gap-2">
+                  <span className={`h-3 w-3 rounded-full ${STRENGTH_TONE[key]}`} />
+                  {STRENGTH_LABELS[key]} · {breakdown[key]}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="card-3d flex flex-col gap-3 px-5 py-5">
+            <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Objectif quotidien</h2>
+            <div className="flex gap-2">
+              {[20, 30, 50, 80].map((goal) => (
+                <button
+                  key={goal}
+                  type="button"
+                  onClick={() => state.setDailyGoal(goal)}
+                  className={`flex-1 rounded-2xl border-2 py-3 text-sm font-extrabold ${
+                    state.dailyGoal === goal ? 'border-teal bg-teal/15 text-teal' : 'border-line text-ink-soft'
+                  }`}
+                >
+                  {goal} XP
+                </button>
+              ))}
+            </div>
+            <p className="text-xs text-ink-faint">
+              Aujourd'hui : {state.xpByDay[today] ?? 0} / {state.dailyGoal} XP
+            </p>
+          </section>
+
+          <section className="card-3d flex flex-col gap-3 px-5 py-5">
+            <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Thème</h2>
+            <div className="flex gap-2">
+              {THEME_OPTIONS.map(({ value, label }) => (
+                <button
+                  key={value}
+                  type="button"
+                  onClick={() => state.setTheme(value)}
+                  className={`flex-1 rounded-2xl border-2 py-3 text-sm font-extrabold ${
+                    state.theme === value ? 'border-teal bg-teal/15 text-teal' : 'border-line text-ink-soft'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          </section>
+
+          <section className="card-3d flex flex-col gap-3 px-5 py-5">
+            <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Sons</h2>
+            <Switch
+              label="Une note à chaque bonne réponse"
+              on={state.sounds}
+              onToggle={() => state.setSounds(!state.sounds)}
+            />
+            <p className="text-xs text-ink-faint">
+              Rien ne se perd à les couper : une bonne réponse se voit déjà à l'écran.
+            </p>
+          </section>
+
+          {canVibrate && (
+            <section className="card-3d flex flex-col gap-3 px-5 py-5">
+              <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Vibrations</h2>
+              <Switch
+                label="Sentir les séries et la fin de session"
+                on={state.haptics}
+                onToggle={() => state.setHaptics(!state.haptics)}
+              />
+              <p className="text-xs text-ink-faint">
+                Éteintes par défaut, et volontairement rares : elles ne marquent ni les bonnes ni les mauvaises
+                réponses, seulement une série qui monte, une série qui se casse, et la session qui se termine.
+              </p>
+            </section>
+          )}
+
+          <section className="card-3d flex flex-col gap-3 px-5 py-5">
+            <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Correction</h2>
+            <Switch
+              label="Auto-correction ciblée"
+              on={state.targetedCorrection}
+              onToggle={() => state.setTargetedCorrection(!state.targetedCorrection)}
+            />
+            <p className="text-xs text-ink-faint">
+              Après une erreur, réécrivez tout le mot par défaut — ça ancre mieux l'orthographe correcte. Activez pour
+              ne corriger que la partie fautive, le reste de la réponse restant déjà affiché.
+            </p>
+          </section>
+
+          <section className="card-3d flex flex-col gap-3 px-5 py-5">
+            <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink-faint">Sauvegarde</h2>
+            <p className="text-xs text-ink-soft">
+              Toute la progression reste sur cet appareil. Exportez un fichier pour la transférer ou la conserver.
+            </p>
+            <div className="flex gap-3">
+              <Button tone="neutral" className="flex-1 text-xs" onClick={download}>
+                Exporter
+              </Button>
+              <Button tone="neutral" className="flex-1 text-xs" onClick={() => fileInput.current?.click()}>
+                Importer
+              </Button>
+            </div>
+            <input
+              ref={fileInput}
+              type="file"
+              accept="application/json"
+              className="hidden"
+              onChange={(event) => {
+                const file = event.target.files?.[0]
+                if (file) void upload(file)
+                event.target.value = ''
+              }}
+            />
+            {message && <p className="text-xs font-bold text-teal">{message}</p>}
+          </section>
+
+          <div className="md:col-span-2 xl:col-span-3">
+            <AppUpdateCard />
+          </div>
+
+          <section className="flex flex-col gap-2 md:col-span-2 xl:col-span-3">
+            <Button
+              tone="error"
+              onClick={() => {
+                if (confirm('Effacer toute la progression ? Cette action est irréversible.')) {
+                  state.reset()
+                  setMessage('Progression effacée.')
+                }
+              }}
+            >
+              Réinitialiser
+            </Button>
+          </section>
+        </main>
+      </div>
+    </WithSidebar>
   )
 }
 

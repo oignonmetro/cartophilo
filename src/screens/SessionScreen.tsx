@@ -541,7 +541,7 @@ function SessionRunner({
   if (paused) {
     return (
       <div
-        className="mx-auto flex w-full max-w-md flex-col overflow-hidden md:max-w-3xl"
+        className="mx-auto flex w-full max-w-md flex-col overflow-hidden md:max-w-3xl lg:max-w-[52rem]"
         style={{ height: 'var(--app-vh, 100dvh)' }}
       >
         <SessionPause
@@ -577,7 +577,7 @@ function SessionRunner({
     // fichier (voir `useKeyboardOpen`, plus bas) n'existe simplement pas
     // sur un ordinateur, la carte peut y respirer.
     <div
-      className="mx-auto flex w-full max-w-md flex-col overflow-hidden md:max-w-3xl"
+      className="mx-auto flex w-full max-w-md flex-col overflow-hidden md:max-w-3xl lg:max-w-[52rem]"
       style={{ height: 'var(--app-vh, 100dvh)' }}
     >
       <header className="flex items-center gap-3 px-4 py-3 md:py-5">

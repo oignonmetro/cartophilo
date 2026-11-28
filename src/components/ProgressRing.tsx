@@ -37,8 +37,10 @@ export function ProgressRing({
   const seen = Math.max(known, clamp(seenRatio))
 
   return (
-    <div className="relative shrink-0" style={{ width: size, height: size }}>
-      <svg width={size} height={size} className="-rotate-90" aria-hidden>
+    // En `rem`, comme le texte au centre : l'anneau grandit avec lui sur grand
+    // écran (voir la taille de base dans `styles.css`).
+    <div className="relative shrink-0" style={{ width: `${size / 16}rem`, height: `${size / 16}rem` }}>
+      <svg viewBox={`0 0 ${size} ${size}`} className="h-full w-full -rotate-90" aria-hidden>
         <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="var(--color-line)" strokeWidth={stroke} />
         <Arc size={size} radius={radius} stroke={stroke} color={color} circumference={circumference} value={seen} opacity={0.3} />
         <Arc size={size} radius={radius} stroke={stroke} color={color} circumference={circumference} value={known} opacity={1} />

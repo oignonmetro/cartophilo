@@ -245,6 +245,19 @@
   button {
     touch-action: manipulation;
   }
+
+  /*
+   * Sur ordinateur, tout est exprimé en `rem` : la taille de base grandit avec
+   * l'écran, de 16 à 20 px, pour que l'application ne paraisse pas minuscule
+   * sur un grand moniteur. La hauteur compte autant que la largeur : une
+   * séance doit tenir sans défiler sur un écran large mais bas. L'éditeur
+   * visuel (`data-fixed-scale`) garde sa taille, il a besoin de toute sa place.
+   */
+  @media (min-width: 1024px) {
+    html:not(:has([data-fixed-scale])) {
+      font-size: clamp(100%, min(1.15vw, 2.2vh), 125%);
+    }
+  }
 }
 
 @layer components {
