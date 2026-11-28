@@ -10,6 +10,7 @@ import {
   syncDefs,
   findGlossaryLinks,
   hasMark,
+  lostInRewrite,
   markupFromRuns,
   normalizeBlock,
   parseDoc,
@@ -50,6 +51,13 @@ describe('richNotes', () => {
       })
       expect(shape(parseDoc(regenerated).blocks), id).toEqual(shape(doc.blocks))
     }
+  })
+
+  it('signale la mise en forme qu’une réécriture perdrait', () => {
+    // Une espace seule en gras entre deux couleurs : l’éditeur ne sait pas l’écrire.
+    const lossy = 'La nature, **{teal}une loi{/teal} {teal}éternelle{/teal}**.'
+    expect(lostInRewrite(lossy)).toBe(lossy)
+    expect(lostInRewrite('La nature, **{teal}une loi{/teal}** **{teal}éternelle{/teal}**.')).toBeNull()
   })
 
   it('imbrique les mises en forme dans un ordre que l’analyse relit', () => {

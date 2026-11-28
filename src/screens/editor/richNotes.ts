@@ -210,6 +210,29 @@ export function serializeDoc(doc: NotesDoc): string {
   return out + doc.tail
 }
 
+/**
+ * Le rappel survit-il à une réécriture par l'éditeur ? Chaque bloc est régénéré
+ * depuis ses segments, puis relu : on doit retrouver la même chose, sans quoi
+ * retoucher ce bloc perdrait une mise en forme. Renvoie la source du premier
+ * bloc qui diffère, `null` si tout se retrouve (voir `content:check`).
+ */
+export function lostInRewrite(notes: string): string | null {
+  const doc = parseDoc(notes)
+  const rewritten = serializeDoc({
+    ...doc,
+    blocks: doc.blocks.map((block) => ({ kind: block.kind, runs: block.runs, src: block.kind === 'table' ? block.src : undefined })),
+  })
+  const again = parseDoc(rewritten).blocks
+  // L'ordre des clefs d'une mise en forme ne compte pas.
+  const shape = (block: Block | undefined) =>
+    JSON.stringify(block && [block.kind, block.runs, block.kind === 'table' ? block.src : null], (_key, value: unknown) =>
+      value && typeof value === 'object' && !Array.isArray(value) ? Object.fromEntries(Object.entries(value).sort()) : value,
+    )
+  const lost = doc.blocks.findIndex((block, i) => shape(block) !== shape(again[i]))
+  if (lost >= 0) return doc.blocks[lost]!.src ?? blockText(doc.blocks[lost]!)
+  return again.length > doc.blocks.length ? blockText(again[doc.blocks.length]!) : null
+}
+
 /** Analyse un `notes:` en blocs, sur les règles de `parseNotes`, sections en plus. */
 export function parseDoc(notes: string): NotesDoc {
   const lines = notes.split('\n')

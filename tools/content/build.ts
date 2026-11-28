@@ -65,6 +65,7 @@ import {
   tableKey,
   unitsOf as unitsOfCourse,
 } from '../../src/content/course.ts'
+import { lostInRewrite } from '../../src/screens/editor/richNotes.ts'
 import {
   alphabetGatingRemarks,
   conjugationVerbRemarks,
@@ -154,6 +155,25 @@ function formatIssues(error: z.ZodError): string {
     .join('\n    ')
 }
 
+/**
+ * Un rappel que l'éditeur visuel ne saurait pas réécrire à l'identique (le
+ * plus souvent une espace restée seule en gras entre deux couleurs) fait
+ * échouer les tests, donc la CI : on le signale ici, avant de pousser.
+ */
+function checkNotesRewrite(file: string, raw: unknown, problems: string[]) {
+  const lessons = (raw as { lessons?: { id?: string; notes?: unknown }[] } | null)?.lessons
+  if (!Array.isArray(lessons)) return
+  for (const lesson of lessons) {
+    if (typeof lesson?.notes !== 'string') continue
+    const lost = lostInRewrite(lesson.notes)
+    if (lost === null) continue
+    problems.push(
+      `${file}\n    leçon "${lesson.id}" : l'éditeur ne saurait pas réécrire ce passage du rappel sans perdre une mise en forme ` +
+        `(une espace seule en gras ? écrire **a** **b** plutôt que **a b** coupé par des couleurs) :\n    ${lost}`,
+    )
+  }
+}
+
 /** Propage la nature du contenu depuis la piste jusqu'aux leçons. */
 function withKind(raw: unknown, kind: LessonKind): unknown {
   if (typeof raw !== 'object' || raw === null) return raw
@@ -213,6 +233,10 @@ function loadUnits(dir: string, kindOf: (unitId: string) => LessonKind): Map<str
       problems.push(`${file}\n    YAML illisible : ${(error as Error).message}`)
       continue
     }
+
+    // À la seule vérification : la compilation, elle, ne doit pas bloquer le
+    // déploiement pour une mise en forme.
+    if (checkOnly) checkNotesRewrite(file, raw, problems)
 
     const parsed = unitSchema.safeParse(withKind(withWorkLessons(raw), kindOf(expected)))
     if (!parsed.success) {
