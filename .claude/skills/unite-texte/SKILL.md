@@ -223,6 +223,15 @@ retour au global), dont les parties X.Y deviennent les repères des leçons.
   (prolongement), `<id>-ouverture` ; cartes
   `<id>-p1-1`… Un identifiant ne se réutilise jamais : la révision espacée
   s'y rattache.
+- **Fusions au remplissage** (demandé le 2026-11-28) : au moment de remplir
+  une unité laissée vide, relire son découpage et réunir les leçons voisines
+  qui sont claires et peu denses et portent un même mouvement (environ 180
+  mots au plus après réunion ; deux courts paragraphes voisins peuvent l'être,
+  repère `"§33-34"`, sans couper un paragraphe entre deux repères). La
+  première leçon garde son identifiant, toutes les cartes sont gardées, et
+  celles qui citent un morceau reçoivent un `fragment` (`1/2`, `2/2`). Modèle :
+  les unités `hobbes-leviathan-13` et `-14`. **Pas pour Plotin**, dont
+  l'écriture est très dense.
 - **Découpage en paragraphes** : la numérotation du texte s'il en a une ;
   sinon ses mouvements, repérés par leurs lignes (`label: "1178a22-28"`,
   `"l. 3-11"`), de préférence selon le découpage du commentaire. Un intitulé
@@ -359,6 +368,25 @@ question, la réponse ordinaire qu'il conteste, sa thèse, sa problématique et
 ses difficultés (modèle : `m1844-i1` et `m1844-i2`, « Le texte, sa place et
 son plan », puis « La question, la thèse, la problématique », avec un tableau
 `Difficulté | Où elle se trouve | Réponse du texte`).
+
+**La question, la thèse et la problématique ne s'annoncent pas comme telles**
+(retouches de l'utilisateur sur `rousseau-le-droit-du-plus-fort-i2`,
+2026-11-27). Le rappel les énonce directement : ni « La question : », ni « Sa
+thèse : », ni « Sa problématique : », ni « Pourquoi est-ce une question ?
+Parce que… ». C'est la phrase et son enchaînement qui disent leur rôle :
+
+- la question vient dans la phrase qui la porte (« **Le texte se demande si
+  {amber}la force peut fonder un droit{/amber}** ») ;
+- ce qui en fait une difficulté suit aussitôt, sans être introduit (« De
+  fait, les pouvoirs établis sont presque tous nés de la force… ») ;
+- la thèse s'affirme en tête de son paragraphe (« {coral}**La force ne fait
+  pas droit.**{/coral} ») ;
+- la problématique s'enchaîne par un connecteur et se pose en question,
+  soulignée (« __Dès lors, comment montrer que… ?__ »).
+
+La règle vaut aussi quand le modèle cité plus haut, ou une analyse écrite au
+préalable (§ 0), emploie ces étiquettes. Le titre de la leçon, lui, peut les
+nommer.
 
 Avant la première leçon-paragraphe, ces leçons donnent ce qu'il
 faut pour comprendre le texte : le problème auquel il répond, les positions

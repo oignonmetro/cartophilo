@@ -34,6 +34,9 @@ Chaque unité suit le même schéma :
    s'introduit au fil des leçons, dans un encadré `? terme : définition` du
    rappel de la leçon où le texte s'en sert pour la première fois, et ses
    cartes vont dans cette leçon (demandé par l'utilisateur sur `n1863`).
+   **La question, la thèse et la problématique ne s'annoncent pas comme
+   telles** (ni « Sa thèse : » ni « Sa problématique : ») : elles s'énoncent
+   directement (voir la skill `unite-texte`, § 3).
 3. **Une leçon par paragraphe ou par segment** (`§1`, `§2`…), dans l'ordre du
    texte, au grain que fixe le niveau de l'unité (voir « Trois niveaux »
    plus bas). Chacune
