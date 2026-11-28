@@ -1,0 +1,821 @@
+# Cours sur Marx (piste Idées), tiré d'un chapitre de commentaire, « Le travail
+# comme expérience de la vérité (Marx) », scan de 11 pages (p. 223-243 d'un
+# livre dont le scan ne donne ni l'auteur ni le titre) ; voir
+# content/philosophie.md, « Un cours sur un auteur, tiré d'un commentaire ».
+# Source : D:\Downloads\scan 10.2026\Marx, La vérité du travail.pdf
+# Ici : la section « De l'idéologie » (p. 229-236).
+#
+# Citations de Marx reprises des traductions de référence
+# (content/courses/marx/traductions.md), et non de celles du chapitre :
+# L'Idéologie allemande, Badia (Éditions sociales, 2012) ; Le Capital, livre I,
+# GEME (Lefebvre). Manuscrits de 1844 : la référence (GF) n'étant pas sur la
+# machine, les deux phrases sont reprises de la traduction Bottigelli (Éditions
+# sociales). La phrase « Le monde religieux n'est que le reflet du monde réel »,
+# que cite le chapitre, n'est pas dans la GEME (elle vient de l'édition française
+# de 1872-1875, reprise par la Pléiade) : elle est remplacée par la phrase
+# correspondante de la GEME sur le reflet religieux.
+#
+# Le chapitre écrit « plus-value » ; la traduction de référence, « survaleur ».
+# La définition de l'idéologie est celle d'Althusser, que le chapitre reprend.
+
+id: verite2
+title: "De l'idéologie"
+subtitle: "Un rapport imaginaire aux conditions d'existence : propriété privée, théorie pure, fétiches, État et violence recouverte"
+group: "Le travail comme expérience de la vérité"
+icon: compass
+color: sky
+lessons:
+- id: verite2-l1
+  title: "Un rapport imaginaire aux conditions réelles"
+  notes: |-
+    **L'idéologie est le** {amber}**rapport imaginaire des hommes à leurs conditions réelles d'existence**{/amber}**.** La définition, au sens marxien du terme, revient à {sky}Louis Althusser{/sky} : ces conditions sont liées aux structures de la {blue}*praxis*{/blue} productive et à leur mouvement, qui est {coral}l'histoire même des hommes{/coral}.
+
+    **« Imaginaire » qualifie le tout de la relation**, et non quelques idées fausses mêlées à d'autres vraies. C'est un {red}égarement{/red} qui porte les hommes à {amber}ne pas reconnaître la réalité de leurs conditions{/amber} et à {amber}donner de la réalité à ce qui n'en a pas{/amber} : des {violet}fantasmagories{/violet}.
+
+    **À quoi les reconnaît-on ?** À une {red}__double impossibilité__{/red} :
+    - leur attribuer une {amber}détermination{/amber} ;
+    - attester leur existence par des {amber}données effectives, ostensibles{/amber}, que plusieurs pourraient valider ensemble et tenir pour des évidences communes.
+
+    Ce sont des {violet}fantômes{/violet}, des {violet}fétiches{/violet} : des choses qu'on honore et qu'on craint, sans pouvoir dire ce qu'elles sont ni les montrer. Le critère du réel est ainsi {green}la donnée partageable{/green}, non la force de la croyance.
+
+    **La structure générale de l'idéologie, Marx la désigne du terme d'**{violet}**aliénation**{/violet}. Trois figures en sont privilégiées : la {amber}religion{/amber}, l'{amber}économie politique{/amber} et la {amber}croyance en la légitimité de l'État{/amber}.
+
+    **L'idéologie n'est pas une simple erreur.** Sous sa modalité, {coral}l'existence tout entière s'est rendue étrangère à soi{/coral}. Il faut la comprendre comme {red}__violence__{/red} et comme {red}__occultation de sa propre violence__{/red}, donc de la violence de l'histoire : elle ne trompe pas seulement sur le monde, elle cache qu'on y est contraint, et elle cache qu'elle le cache.
+
+    ! « Imaginaire » ne veut pas dire sans effets : un rapport imaginaire organise réellement la conduite de ceux qui le vivent.
+  points:
+  - id: verite2-l1-p1
+    sentence: "__L'idéologie s'entend comme le rapport **___** des hommes à leurs conditions réelles d'existence__."
+    answer: "imaginaire"
+    alt: []
+  - id: verite2-l1-p2
+    sentence: "__L'idéologie est le rapport imaginaire des hommes__ à leurs **___ d'existence**."
+    answer: "conditions réelles"
+    alt: ["conditions reelles"]
+  - id: verite2-l1-p3
+    sentence: "__La meilleure définition de l'idéologie au sens marxien__, comme rapport imaginaire aux conditions d'existence, revient à ___."
+    answer: "Althusser"
+    alt: ["Louis Althusser"]
+  - id: verite2-l1-p4
+    sentence: "__L'égarement idéologique porte les hommes à donner une réalité à ce qui n'en a pas__ : à des ___."
+    answer: "fantasmagories"
+    alt: ["fantasmagorie"]
+  - id: verite2-l1-p5
+    sentence: "__Première impossibilité à laquelle se reconnaît une fantasmagorie__ : on ne peut lui attribuer une ___."
+    answer: "détermination"
+    alt: ["determination"]
+  - id: verite2-l1-p6
+    sentence: "__Seconde impossibilité à laquelle se reconnaît une fantasmagorie__ : on ne peut attester son existence par des **___** effectives et ostensibles."
+    answer: "données"
+    alt: ["donnees"]
+  - id: verite2-l1-p7
+    sentence: "__Ce qu'on ne peut ni déterminer ni attester par des données partageables__ : des fantômes, des ___."
+    answer: "fétiches"
+    alt: ["fetiches"]
+  - id: verite2-l1-p8
+    sentence: "__La structure générale de l'idéologie__, Marx la désigne du terme d'___."
+    answer: "aliénation"
+    alt: ["alienation"]
+  - id: verite2-l1-p9
+    sentence: "__Les trois figures privilégiées de l'aliénation sont la religion, l'__ ___ et la croyance en la légitimité de l'État."
+    answer: "économie politique"
+    alt: ["economie politique"]
+  - id: verite2-l1-p10
+    sentence: "__Les trois figures privilégiées de l'aliénation sont la religion, l'économie politique et la croyance en la **___** de l'État__."
+    answer: "légitimité"
+    alt: ["legitimite"]
+  - id: verite2-l1-p11
+    sentence: "__Sous la modalité de l'idéologie__, c'est l'existence tout entière qui s'est rendue ___."
+    answer: "étrangère à soi"
+    alt: ["etrangere a soi"]
+  - id: verite2-l1-p12
+    sentence: "__L'idéologie est à la fois violence__ et **___** de sa propre violence."
+    answer: "occultation"
+    alt: []
+  - id: verite2-l1-p13
+    sentence: "__En occultant sa propre violence, l'idéologie occulte la violence de l'__ ___."
+    answer: "histoire"
+    alt: []
+
+- id: verite2-l2
+  title: "Le sujet séparé de l'objet : la propriété privée"
+  notes: |-
+    **L'existence est aliénée quand les hommes** {red}**ne voient pas que c'est le travail qui la produit socialement**{/red}**.** L'aveuglement a une forme philosophique précise : l'{violet}opposition du sujet et de l'objet{/violet}, posés comme {pink}deux réalités qui subsisteraient en soi et par soi{/pink}.
+
+    **Ce que cette opposition méconnaît tient en deux processus.**
+    - Un sujet humain se constitue comme tel dans un {violet}processus de subjectivation{/violet}, lié à son {amber}opération de producteur{/amber}.
+    - Symétriquement, les objets, naturels ou fabriqués, prennent figure dans un {violet}processus d'objectivation{/violet}, inséparable des {amber}opérations du travail{/amber}.
+
+    **La forme supérieure de l'aliénation est la** {violet}**propriété privée**{/violet}**,** qui {coral}institue socialement la séparation du sujet et de l'objet{/coral} : __une chose est de produire l'objet, une autre de le posséder__. L'ouvrier qui fabrique une {yellow}table{/yellow} n'en dispose pas, celui qui en dispose ne l'a pas faite. Tout un ordre social, avec ses objets traités en marchandises, ses moyens de les produire et de les échanger, repose sur cette séparation comme sur son principe.
+
+    **En quoi cette aliénation est-elle idéologique ?** En ce qu'elle s'explicite en une {violet}représentation abstraite{/violet}, qui {coral}sépare ce qui ne se laisse penser que comme un tout{/coral}.
+
+    **Mais l'abstraction n'est pas disqualifiable en elle-même.** Elle devient idéologique quand elle {red}__se voile comme abstraction__{/red} : quand elle dissimule qu'elle dissimule l'unité des deux processus. Celui qui isole un objet pour l'étudier et le sait abstrait ne se trompe pas ; celui qui le tient pour subsistant par lui-même se trompe, et ne peut le savoir.
+
+    **Cette unité est** {violet}**concrète**{/violet}**,** au sens du latin {blue}*concrescere*{/blue}, « croître ensemble » : sujet et objet {green}croissent ensemble{/green}, l'un en {amber}force productive{/amber}, l'autre en {amber}richesse humaine{/amber}.
+  points:
+  - id: verite2-l2-p1
+    sentence: "__L'existence est aliénée quand les hommes ne voient pas__ que c'est le ___ qui la produit socialement."
+    answer: "travail"
+    alt: []
+  - id: verite2-l2-p2
+    sentence: "__Le travail méconnu, l'aliénation oppose deux réalités censées subsister en soi et par soi__ : le sujet et l'___."
+    answer: "objet"
+    alt: []
+  - id: verite2-l2-p3
+    sentence: "__Un sujet humain se constitue comme tel dans un **processus de ___**__, lié à son opération de producteur."
+    answer: "subjectivation"
+    alt: []
+  - id: verite2-l2-p4
+    sentence: "__Les objets, naturels ou fabriqués, prennent figure dans un **processus d'___**__, inséparable des opérations du travail."
+    answer: "objectivation"
+    alt: []
+  - id: verite2-l2-p5
+    sentence: "__La forme supérieure de l'aliénation__ consiste dans la ___."
+    answer: "propriété privée"
+    alt: ["propriete privee"]
+  - id: verite2-l2-p6
+    sentence: "__La propriété privée institue socialement la **___** du sujet et de l'objet__."
+    answer: "séparation"
+    alt: ["separation"]
+  - id: verite2-l2-p7
+    sentence: "__Sous la propriété privée, une chose est de produire l'objet__, une autre de le ___."
+    answer: "posséder"
+    alt: ["posseder"]
+  - id: verite2-l2-p8
+    sentence: "__L'aliénation est idéologique parce qu'elle s'explicite__ en une **représentation ___**, qui sépare ce qui ne se pense que comme un tout."
+    answer: "abstraite"
+    alt: []
+  - id: verite2-l2-p9
+    sentence: "__La représentation abstraite de l'aliénation sépare__ ce qui ne se laisse penser que comme un ___."
+    answer: "tout"
+    alt: []
+  - id: verite2-l2-p10
+    sentence: "__L'abstraction n'est pas disqualifiable en elle-même__ : elle devient idéologique quand elle **se ___ comme abstraction**."
+    answer: "voile"
+    alt: ["dissimule", "cache"]
+  - id: verite2-l2-p11
+    sentence: "__Sujet et objet forment une unité **___**__, parce qu'ils croissent ensemble."
+    answer: "concrète"
+    alt: ["concrete"]
+  - id: verite2-l2-p12
+    sentence: "__Le verbe latin qui dit « croître ensemble »__, d'où se tire le sens d'« unité concrète », est ___."
+    answer: "concrescere"
+    alt: []
+  - id: verite2-l2-p13
+    sentence: "__Sujet et objet croissent ensemble__ : le sujet en qualité de **___**, l'objet en qualité de richesse humaine."
+    answer: "force productive"
+    alt: []
+  - id: verite2-l2-p14
+    sentence: "__Sujet et objet croissent ensemble__ : le sujet en force productive, l'objet en qualité de **___** pour lui."
+    answer: "richesse humaine"
+    alt: []
+
+- id: verite2-l3
+  title: "L'homme socialiste et l'homme qui meurt de faim"
+  notes: |-
+    **L'aliénation ne se dépasse que par l'**{violet}**abolition de la propriété privée**{/violet}**,** puisque c'est elle qui institue la séparation. Ce dépassement a la figure de l'{green}homme socialiste{/green} dans les {sky}*Manuscrits de 1844*{/sky} ; à partir de {sky}*L'Idéologie allemande*{/sky}, Marx parle de {violet}communisme{/violet}.
+
+    **Dans l'existence aliénée**, le travailleur rencontre le produit de son travail, la richesse produite et les structures sociales mêmes {red}comme des puissances hostiles{/red}. Cela ne veut pas dire qu'il ne se rende compte de rien ni qu'il ne souffre pas : {coral}sa souffrance l'expose aux représentations idéologiques{/coral} qui le persuadent de renoncer à s'opposer à l'ordre de la propriété privée.
+
+    **L'homme socialiste, lui, jouit** {green}__socialement__{/green} **d'un monde qu'il sait socialement produit.** {teal}« {/teal}L'{teal}abolition de la propriété privée{/teal} est donc l'{teal}__émancipation totale de tous les sens__{/teal} et de toutes les {teal}qualités humaines{/teal} ; mais elle est cette émancipation précisément parce que ces sens et ces qualités sont {teal}__devenus humains__{/teal}, {teal}tant subjectivement qu'objectivement{/teal}.{teal} »{/teal} ({sky}*Manuscrits de 1844*{/sky}, troisième manuscrit)
+
+    **L'exemple de la musique.** {yellow}L'oreille musicienne ne jouit pas comme l'oreille non musicienne{/yellow} : la musique que j'écoute et que j'aime unit l'éducation de mes sens, la production artistique comme entreprise sociale, l'expérience partagée du plaisir, mon corps, mais comme corps humain, et le son, phénomène naturel, mais reçu à l'horizon de la vie pratique et productive. {coral}La musique n'a sa réalité effective que dans l'unité de tous ces moments{/coral}.
+
+    **Le contre-exemple.** {teal}« {/teal}Pour l'{teal}homme qui meurt de faim{/teal}, la {teal}__forme humaine de l'aliment__{/teal} n'existe pas, mais seulement son {teal}__existence abstraite en tant qu'aliment__{/teal}{teal} »{/teal} (même manuscrit). L'affamé n'objective pas son essence humaine dans un repas produit et consommé socialement : la nourriture n'est pour lui qu'un moyen de soutenir son {red}indigence biologique{/red}, ce qu'elle est pour l'animal.
+
+    **La faim n'est pas seule en cause.** Sous la propriété privée, même le {yellow}riche consommateur{/yellow} inquiet des effets de ses aliments sur son organisme est condamné à {red}se vivre comme un animal indigent{/red}, et à vivre le travail comme une torture à laquelle consentir pour survivre.
+
+    **La vraie relation aux choses commence par une reconnaissance** : le travail est effort, mais aussi {green}force{/green}, puissance de {amber}figurer les choses en un monde{/amber}. Il faut reconnaître cette puissance sociale pour mieux la laisser s'affirmer, {coral}la reconnaissance étant le commencement même de l'affirmation{/coral}.
+  points:
+  - id: verite2-l3-p1
+    sentence: "__Le dépassement de l'aliénation ne peut consister__ qu'en l'**abolition de la ___**."
+    answer: "propriété privée"
+    alt: ["propriete privee"]
+  - id: verite2-l3-p2
+    sentence: "__Dans les *Manuscrits de 1844*, le dépassement de l'aliénation__ s'explicite à travers la figure de l'**homme ___**."
+    answer: "socialiste"
+    alt: []
+  - id: verite2-l3-p3
+    sentence: "__Dans l'existence aliénée, le travailleur rencontre son produit__ et les structures sociales comme des **puissances ___**."
+    answer: "hostiles"
+    alt: []
+  - id: verite2-l3-p4
+    sentence: "__Le travailleur aliéné n'est pas insensible__ : sa ___ l'expose aux représentations idéologiques qui le persuadent de renoncer."
+    answer: "souffrance"
+    alt: []
+  - id: verite2-l3-p5
+    sentence: "__L'homme socialiste jouit **___** de l'existence__, qu'il sait produite par le travail commun."
+    answer: "socialement"
+    alt: []
+  - id: verite2-l3-p6
+    sentence: "*Manuscrits de 1844* : « L'abolition de la propriété privée est donc l'___ de tous les sens et de toutes les qualités humaines »."
+    answer: "émancipation totale"
+    alt: ["emancipation totale"]
+    citation: true
+  - id: verite2-l3-p7
+    sentence: "*Manuscrits de 1844* : « L'abolition de la propriété privée est donc l'émancipation totale de ___ et de toutes les qualités humaines »."
+    answer: "tous les sens"
+    alt: []
+    citation: true
+  - id: verite2-l3-p8
+    sentence: "*Manuscrits de 1844* : « elle est cette émancipation précisément parce que ces sens et ces qualités sont ___, tant subjectivement qu'objectivement »."
+    answer: "devenus humains"
+    alt: []
+    citation: true
+  - id: verite2-l3-p9
+    sentence: "*Manuscrits de 1844* : « ces sens et ces qualités sont devenus humains, tant ___ »."
+    answer: "subjectivement qu'objectivement"
+    alt: []
+    citation: true
+  - id: verite2-l3-p10
+    sentence: "« L'abolition de la propriété privée est donc l'émancipation totale de tous les sens » : __la phrase se lit dans les__ *___*."
+    answer: "Manuscrits de 1844"
+    alt: ["Manuscrits"]
+    citation: true
+  - id: verite2-l3-p11
+    sentence: "__La **musique** a sa réalité effective__ dans l'___ de tous ses moments : sens éduqués, production artistique sociale, plaisir partagé, corps et son humainement reçus."
+    answer: "unité"
+    alt: ["unite"]
+  - id: verite2-l3-p12
+    sentence: "*Manuscrits de 1844* : « Pour l'homme qui meurt de faim, la ___ n'existe pas, mais seulement son existence abstraite en tant qu'aliment »."
+    answer: "forme humaine de l'aliment"
+    alt: []
+    citation: true
+  - id: verite2-l3-p13
+    sentence: "*Manuscrits de 1844* : « Pour l'homme qui meurt de faim, la forme humaine de l'aliment n'existe pas, mais seulement son ___ en tant qu'aliment »."
+    answer: "existence abstraite"
+    alt: []
+    citation: true
+  - id: verite2-l3-p14
+    sentence: "__Pour l'affamé comme pour l'animal, la nourriture__ n'est qu'un moyen de soutenir une **___ biologique**."
+    answer: "indigence"
+    alt: []
+  - id: verite2-l3-p15
+    sentence: "__Sous la propriété privée, même le riche consommateur inquiet pour son organisme__ est condamné à se vivre comme un **___**."
+    answer: "animal indigent"
+    alt: []
+  - id: verite2-l3-p16
+    sentence: "__La figure de l'homme socialiste esquisse une relation vraie aux choses__, fondée sur la **___** du travail comme force et puissance."
+    answer: "reconnaissance"
+    alt: []
+  - id: verite2-l3-p17
+    sentence: "__Reconnu comme force, le travail est la puissance__ de figurer les choses en un ___."
+    answer: "monde"
+    alt: []
+
+- id: verite2-l4
+  title: "La théorie pure et sa triple relation à la production"
+  notes: |-
+    **La séparation du sujet et de l'objet s'explicite en une séparation de la théorie et de la réalité : l'existence d'une** {violet}**théorie pure**{/violet}**.** Pour qu'il y ait aliénation, {coral}la conscience doit s'être posée comme séparée de la pratique réelle{/coral}. Et cette séparation n'est possible qu'avec la {violet}division sociale du travail{/violet}, dès qu'elle oppose réellement le travail {amber}matériel{/amber} au travail {amber}intellectuel{/amber}.
+
+    **Le moment de la rupture** ({sky}*L'Idéologie allemande*{/sky}, I) : {teal}« {/teal}A partir de ce moment, la conscience peut vraiment {teal}__s'imaginer__{/teal} qu'elle est {teal}autre chose que la conscience de la pratique existante{/teal}, qu'elle représente réellement quelque chose sans {teal}représenter quelque chose de réel{/teal}. A partir de ce moment, la conscience est en état de {teal}__s'émanciper du monde__{/teal} et de passer à la formation de la {teal}théorie « pure »{/teal}, théologie, philosophie, morale, etc.{teal} »{/teal}
+
+    **La suite interdit de croire la théorie vraiment détachée.** {teal}« {/teal}Mais, même lorsque cette théorie […] {teal}entrent en contradiction avec les rapports existants{/teal}, cela ne peut se produire que du fait que les {teal}__rapports sociaux existants__{/teal} sont entrés en contradiction avec la {teal}__force productive existante__{/teal}{teal} »{/teal}. {coral}La théorie qui s'oppose au monde tient encore du monde son opposition{/coral}.
+
+    **La théorie pure est la** {red}**forme accomplie du voilement**{/red}, parce qu'elle a sa possibilité dans l'abstraction idéologique qui sépare travail manuel et travail intellectuel. Son divorce d'avec la {blue}*praxis*{/blue} réelle ne la met pas hors du jeu : il la rapporte au mode de production de trois façons.
+
+    | Rapport au mode de production | Figure |
+    | elle le légitime | le commandement donné à ceux qui savent |
+    | elle se marginalise en ce monde | Thalès l'astronome ridiculisé |
+    | elle entre en conflit avec la domination | Socrate mis à mort |
+
+    **Légitimer.** C'est, chez {sky}Aristote{/sky}, l'attribution du commandement à ceux qui savent, d'un savoir intellectuel s'entend.
+
+    **Se marginaliser.** {sky}Thalès{/sky}, l'astronome, est raillé non seulement par les {yellow}servantes{/yellow}, mais par les {yellow}oligarques{/yellow}.
+
+    **Entrer en conflit.** {sky}Socrate{/sky} est mis à mort pour avoir affirmé {green}la théorie comme puissance sociale{/green}, sur fond des conflits qui affectent alors la structure de la Cité : la {blue}*stasis*{/blue}, la guerre civile portée par l'antagonisme des riches et des pauvres.
+  points:
+  - id: verite2-l4-p1
+    sentence: "__La forme accomplie du voilement__, née de la séparation de la théorie et de la réalité, est la **théorie ___**."
+    answer: "pure"
+    alt: []
+  - id: verite2-l4-p2
+    sentence: "__Pour qu'il y ait aliénation__, il faut que la ___ se soit posée comme séparée de la pratique réelle."
+    answer: "conscience"
+    alt: []
+  - id: verite2-l4-p3
+    sentence: "__La conscience peut se séparer de la pratique__ dès que la division du travail oppose le travail matériel au travail ___."
+    answer: "intellectuel"
+    alt: []
+  - id: verite2-l4-p4
+    sentence: "*L'Idéologie allemande* : « la conscience peut vraiment s'imaginer qu'elle est autre chose que la conscience de la ___ »."
+    answer: "pratique existante"
+    alt: []
+    citation: true
+  - id: verite2-l4-p5
+    sentence: "*L'Idéologie allemande* : la conscience s'imagine « qu'elle représente réellement quelque chose sans représenter quelque chose de ___ »."
+    answer: "réel"
+    alt: ["reel"]
+    citation: true
+  - id: verite2-l4-p6
+    sentence: "*L'Idéologie allemande* : « la conscience est en état de s'émanciper du ___ et de passer à la formation de la théorie « pure » »."
+    answer: "monde"
+    alt: []
+    citation: true
+  - id: verite2-l4-p7
+    sentence: "*L'Idéologie allemande* : la conscience peut passer à la formation de la théorie « pure », « ___, philosophie, morale, etc. »."
+    answer: "théologie"
+    alt: ["theologie"]
+    citation: true
+  - id: verite2-l4-p8
+    sentence: "*L'Idéologie allemande* : si la théorie contredit les rapports existants, c'est que « les rapports sociaux existants sont entrés en contradiction avec la ___ »."
+    answer: "force productive existante"
+    alt: ["force productive"]
+    citation: true
+  - id: verite2-l4-p9
+    sentence: "« La conscience peut vraiment s'imaginer qu'elle est autre chose que la conscience de la pratique existante » : __la phrase se lit dans__ *___*."
+    answer: "L'Idéologie allemande"
+    alt: ["Idéologie allemande", "L'Ideologie allemande"]
+    citation: true
+  - id: verite2-l4-p10
+    sentence: "__Premier des trois rapports de la théorie pure au mode de production__ : elle le ___."
+    answer: "légitime"
+    alt: ["legitime"]
+  - id: verite2-l4-p11
+    sentence: "__La théorie légitime le mode de production__ quand, avec ___, elle attribue le commandement à ceux qui savent."
+    answer: "Aristote"
+    alt: []
+  - id: verite2-l4-p12
+    sentence: "__Deuxième des trois rapports de la théorie pure au mode de production__ : en ce monde, elle se ___."
+    answer: "marginalise"
+    alt: []
+  - id: verite2-l4-p13
+    sentence: "__La marginalisation de la théorie a pour figure ___, l'astronome ridiculisé__ par les servantes et par les oligarques."
+    answer: "Thalès"
+    alt: ["Thales"]
+  - id: verite2-l4-p14
+    sentence: "__Troisième des trois rapports de la théorie pure au mode de production__ : elle entre en conflit avec la ___."
+    answer: "domination"
+    alt: []
+  - id: verite2-l4-p15
+    sentence: "__Le conflit de la théorie avec la domination a pour figure ___, mis à mort__ pour avoir affirmé la théorie comme puissance sociale."
+    answer: "Socrate"
+    alt: []
+  - id: verite2-l4-p16
+    sentence: "__La guerre civile portée par l'antagonisme des riches et des pauvres__, sur fond de laquelle meurt Socrate, se dit en grec ___."
+    answer: "stasis"
+    alt: []
+
+- id: verite2-l5
+  title: "Les fétiches : religion, économie, État"
+  notes: |-
+    **Dans l'aliénation, la conscience** {red}**se cherche où elle n'est pas**{/red}**, et ne se trouve pas où elle est** : un rapport à soi pervers et malheureux, un rapport de désir, qui produit des {violet}idoles érigées en fétiches{/violet}.
+
+    **Deux modalités du fétiche.**
+    - {amber}La religion{/amber} : la conscience {violet}hypostasie{/violet} ses fétiches, c'est-à-dire qu'elle en fait des êtres subsistants, projections spectrales d'{yellow}esprits{/yellow} et de {yellow}divinités{/yellow}.
+    - {amber}L'économie{/amber} : vidée de ce qu'elle contenait de spirituel, la {violet}marchandise{/violet} vit sa vie de valeur marchande, dans la croyance des « agents économiques » et des économistes qui la soutiennent de leurs catégories. Elle passe pour le produit d'une négociation entre l'offre et la demande ; le {amber}prix de marché{/amber} dit sa vérité et s'impose comme principe de tout arbitrage des conflits.
+
+    **L'économie requiert un troisième fétiche.** Il lui faut une {violet}gouvernementalité{/violet} et un ordre juridique : la {red}fiction de la souveraineté étatique{/red} au service de l'intérêt général. L'État se lie aux deux autres pour garantir le crédit des institutions qui dirigent l'exploitation du travail, et, par les programmes de recherche et d'enseignement, pour favoriser un enseignement qui rend méconnaissable la {blue}*praxis*{/blue} productive.
+
+    **Religion et économie s'opposent, mais se** {coral}**médiatisent**{/coral}**.** {sky}*Le Capital*{/sky}, livre I, chap. I, 4 : pour une société de producteurs de marchandises, qui rapportent leurs travaux privés les uns aux autres comme autant de travail humain semblable, {teal}« {/teal}le {teal}__christianisme__{/teal} avec son {teal}__culte de l'homme abstrait__{/teal}, notamment dans son {teal}développement bourgeois{/teal}, dans le protestantisme, le déisme, etc., est la {teal}forme de religion la plus appropriée{/teal}.{teal} »{/teal} À des travaux comptés comme travail humain en général répond le culte de l'homme en général.
+
+    **Aux sociétés peu développées répondent d'autres cultes.** Quand les forces productives sont basses et les rapports entre les hommes, comme avec la nature, bornés, {teal}« {/teal}cette {teal}inhibition réelle{/teal} {teal}__se reflète idéellement__{/teal} dans les {teal}vieilles religions de la nature{/teal} et les religions populaires{teal} »{/teal}. La société marchande se cherche dans l'{amber}homme universel abstrait{/amber} ; les sociétés proprement « économiques », reposant sur l'{blue}*oikos*{/blue}, le foyer domestique comme unité de production, dans des {amber}divinités tutélaires locales{/amber}.
+
+    **La disparition a une condition réelle.** {teal}« {/teal}Le {teal}__reflet religieux du monde réel__{/teal} ne peut disparaître de manière générale qu'une fois que les rapports de la vie pratique des travaux et des jours représentent pour les hommes, de manière quotidienne et {teal}transparente{/teal}, des {teal}__relations rationnelles__{/teal} entre eux et avec la nature.{teal} »{/teal}
+
+    **À l'économie du fait religieux répond la** {violet}**religiosité du fait économique**{/violet} : la marchandise a elle aussi ses croyants.
+  points:
+  - id: verite2-l5-p1
+    sentence: "__Dans l'aliénation, la conscience se cherche **où elle n'est pas**__, et produit des idoles érigées en ___."
+    answer: "fétiches"
+    alt: ["fetiches"]
+  - id: verite2-l5-p2
+    sentence: "__Sous la modalité de la religion, la conscience ___ ses fétiches__ en projections spectrales d'esprits et de divinités."
+    answer: "hypostasie"
+    alt: []
+  - id: verite2-l5-p3
+    sentence: "__Sous la modalité de l'économie__, c'est la ___ qui vit sa vie de valeur marchande, dans la croyance des agents et des économistes."
+    answer: "marchandise"
+    alt: []
+  - id: verite2-l5-p4
+    sentence: "__Dans la croyance économique, la vérité de la marchandise est dite__ par le **___ de marché**, érigé en principe de tout arbitrage."
+    answer: "prix"
+    alt: []
+  - id: verite2-l5-p5
+    sentence: "__L'économie requiert sa gouvernementalité__ : c'est la fiction de la **___ étatique** comme fonction de l'intérêt général."
+    answer: "souveraineté"
+    alt: ["souverainete"]
+  - id: verite2-l5-p6
+    sentence: "__La souveraineté étatique est présentée comme fonction de l'**___**__, commun ou général."
+    answer: "intérêt général"
+    alt: ["interet general", "intérêt universel"]
+  - id: verite2-l5-p7
+    sentence: "*Le Capital*, livre I : pour une société de producteurs de marchandises, « le ___ avec son culte de l'homme abstrait […] est la forme de religion la plus appropriée »."
+    answer: "christianisme"
+    alt: []
+    citation: true
+  - id: verite2-l5-p8
+    sentence: "*Le Capital*, livre I : « le christianisme avec son culte de l'___ […] est la forme de religion la plus appropriée »."
+    answer: "homme abstrait"
+    alt: []
+    citation: true
+  - id: verite2-l5-p9
+    sentence: "*Le Capital*, livre I : le christianisme convient « notamment dans son développement ___, dans le protestantisme, le déisme, etc. »."
+    answer: "bourgeois"
+    alt: []
+    citation: true
+  - id: verite2-l5-p10
+    sentence: "« Le christianisme avec son culte de l'homme abstrait […] est la forme de religion la plus appropriée » : __la phrase se lit au__ *___*, livre I, chapitre I."
+    answer: "Capital"
+    alt: ["Le Capital"]
+    citation: true
+  - id: verite2-l5-p11
+    sentence: "*Le Capital*, livre I : « Cette inhibition réelle se reflète idéellement dans les vieilles religions de la ___ et les religions populaires. »"
+    answer: "nature"
+    alt: []
+    citation: true
+  - id: verite2-l5-p12
+    sentence: "*Le Capital*, livre I : « Cette ___ se reflète idéellement dans les vieilles religions de la nature et les religions populaires. »"
+    answer: "inhibition réelle"
+    alt: ["inhibition reelle"]
+    citation: true
+  - id: verite2-l5-p13
+    sentence: "__Les sociétés proprement « économiques » reposent sur le foyer domestique comme unité de production__, en grec l'___."
+    answer: "oikos"
+    alt: ["oïkos"]
+  - id: verite2-l5-p14
+    sentence: "__La société marchande se cherche dans l'homme universel abstrait__ ; les sociétés fondées sur le foyer, dans des **divinités ___** locales."
+    answer: "tutélaires"
+    alt: ["tutelaires"]
+  - id: verite2-l5-p15
+    sentence: "*Le Capital*, livre I : « Le ___ du monde réel ne peut disparaître de manière générale » qu'à des conditions pratiques."
+    answer: "reflet religieux"
+    alt: []
+    citation: true
+  - id: verite2-l5-p16
+    sentence: "*Le Capital*, livre I : le reflet religieux ne disparaît qu'une fois que les rapports de la vie pratique représentent pour les hommes « des relations ___ entre eux et avec la nature »."
+    answer: "rationnelles"
+    alt: []
+    citation: true
+  - id: verite2-l5-p17
+    sentence: "__À l'économie du fait religieux répond__ la **___ du fait économique**."
+    answer: "religiosité"
+    alt: ["religiosite"]
+
+- id: verite2-l6
+  title: "Le fétichisme de la marchandise"
+  notes: |-
+    **Le fétichisme de la marchandise consiste à** {red}**croire**{/red}**, pour les agents de l'échange, et à** {red}**faire croire**{/red}**, pour les théoriciens de l'économie,** que la réalité humaine, c'est la réalité effective de l'économie.
+
+    **Et la réalité effective de l'économie serait le** {amber}**prix**{/amber} : il reflète une négociation entre des {pink}agents privés{/pink}, arbitrée par la qualité de l'{amber}information{/amber} dont ils disposent, là où ils compareraient les valeurs des produits par une opération de connaissance. Ces valeurs dépendraient à leur tour de l'{pink}agrégation des opérations productives d'agents individuels{/pink}.
+
+    **Suivons la chaîne des identifications** : la {amber}marchandise{/amber} serait sa {amber}valeur{/amber}, sa valeur son {amber}prix{/amber}, son prix la {amber}représentation de son utilité{/amber} par les agents. Au bout de la chaîne, l'utilité ne serait même plus la {violet}valeur d'usage{/violet}, ce à quoi la chose sert réellement, mais {red}sa représentation dans l'espace de l'échange marchand{/red}. Un {yellow}manteau{/yellow} ne vaudrait plus parce qu'il protège du froid et parce qu'il a coûté un travail, mais pour ce que des acheteurs se représentent de lui.
+
+    **La définition.** {coral}Le fétichisme de la marchandise est la **séparation abstraite** de la marchandise comme objet et du **procès de travail** comme processus social de subjectivation dont elle dépend{/coral}. On retrouve le sujet coupé de l'objet, au cœur de l'économie.
+
+    **Ce qui est nié dans ce jeu de dupes**, intérieur à la conscience, n'est rien de moins que la {red}__violence de l'histoire__{/red}.
+
+    ! Le fétichisme n'est pas l'amour des objets de consommation : c'est la croyance que la marchandise tient sa valeur d'elle-même et de l'échange, coupée du travail social.
+  points:
+  - id: verite2-l6-p1
+    sentence: "__Le fétichisme de la marchandise sépare abstraitement__ la marchandise comme objet et le **___** comme processus social de subjectivation."
+    answer: "procès de travail"
+    alt: ["proces de travail", "processus de travail"]
+  - id: verite2-l6-p2
+    sentence: "__La séparation abstraite entre la marchandise comme objet et le procès de travail dont elle dépend__ définit le **___ de la marchandise**."
+    answer: "fétichisme"
+    alt: ["fetichisme"]
+  - id: verite2-l6-p3
+    sentence: "__Le fétichisme fait croire que la réalité humaine__, c'est la réalité effective de l'___."
+    answer: "économie"
+    alt: ["economie"]
+  - id: verite2-l6-n1
+    sentence: "__Le fétichisme consiste à croire, pour les agents de l'échange__, et à ___, pour les théoriciens de l'économie."
+    answer: "faire croire"
+    alt: []
+  - id: verite2-l6-p4
+    sentence: "__Dans la croyance fétichiste, la réalité effective de l'économie__ est le ___, qui reflète une négociation entre agents privés."
+    answer: "prix"
+    alt: []
+  - id: verite2-l6-n2
+    sentence: "__Le prix reflèterait, selon la croyance fétichiste, une négociation__ entre des **agents ___**."
+    answer: "privés"
+    alt: ["prives"]
+  - id: verite2-l6-p5
+    sentence: "__La négociation entre agents privés, dont le prix serait le reflet__, serait arbitrée par la qualité de l'___ dont ils disposent."
+    answer: "information"
+    alt: []
+  - id: verite2-l6-n3
+    sentence: "__Dans la croyance fétichiste, les valeurs des produits dépendraient__ de l'___ des opérations productives d'agents individuels."
+    answer: "agrégation"
+    alt: ["agregation"]
+  - id: verite2-l6-p6
+    sentence: "__Chaîne des identifications fétichistes__ : la marchandise serait sa ___, et celle-ci son prix."
+    answer: "valeur"
+    alt: []
+  - id: verite2-l6-p7
+    sentence: "__Chaîne des identifications fétichistes__ : le prix de la marchandise serait la représentation de son ___ par les agents."
+    answer: "utilité"
+    alt: ["utilite"]
+  - id: verite2-l6-p8
+    sentence: "__Dans l'économie fétichiste, l'utilité n'est plus la **___**__ mais sa représentation dans l'espace de l'échange."
+    answer: "valeur d'usage"
+    alt: []
+  - id: verite2-l6-p9
+    sentence: "__Ce que nie le jeu de dupes du fétichisme__, intérieur à la conscience, c'est la ___."
+    answer: "violence de l'histoire"
+    alt: []
+
+- id: verite2-l7
+  title: "Les économistes ont vu sans en croire leurs yeux"
+  notes: |-
+    **Marx** {red}**ne reproche pas**{/red} **aux économistes de ne pas voir le procès de travail** : il leur reproche de {amber}**ne pas en croire leurs yeux**{/amber}, de ne pas voir les conséquences de ce qu'ils ont eux-mêmes mis en évidence.
+
+    **Ils ont à peu près tout vu** : les facteurs de production ({yellow}la terre{/yellow} avec ses minerais et ses énergies, {yellow}le capital{/yellow}, {yellow}le travail{/yellow}) ; le {green}travail comme fondement de la valeur{/green} ; le {green}surtravail{/green}, érigé en loi d'airain de l'économie ; la division internationale du travail ; les régulations convenables au capitalisme. Certains, comme {sky}Adam Smith{/sky}, ont admis qu'il fallait contenir la spéculation financière ; ils ont compris aussi qu'il fallait contenir les {yellow}coalitions d'ouvriers{/yellow}, les syndicats, pour ne pas fausser le marché du travail.
+
+    **Leur discours contient deux motifs d'aveuglement**, dont la dissimulation est un {coral}impératif de système{/coral}, et qui tiennent tous deux à la propriété privée, celle du capital et celle du travail :
+    - ils ne voient pas la {red}__spécificité de la propriété privée capitaliste__{/red} ;
+    - ils ne voient pas l'évidence du {red}__caractère social du travail__{/red} dans le mode de production capitaliste.
+
+    **Le premier point s'entend par deux cycles de la marchandise.**
+
+    | Cycle | Ce qu'il figure |
+    | M-A-M | vendre pour acheter |
+    | A-M-A' | investir pour accroître la mise |
+
+    **M-A-M** (marchandise, argent, marchandise) figure la condition d'un producteur qui peut acheter une marchandise parce qu'il en a vendu une autre. Ce cycle {pink}n'est pas capitaliste{/pink} : la monnaie n'y fait que {amber}médiatiser l'échange{/amber}, sans dynamique d'accroissement d'une mise de départ. Il règle l'expansion lente des {yellow}sociétés traditionnelles{/yellow}.
+
+    **A-M-A'** (argent, marchandise, argent accru) règle l'{violet}accumulation{/violet} capitaliste : un capital initial achète de la marchandise et réalise un bénéfice en la revendant. {amber}__**À quelle condition ?**__{/amber} À la condition de {coral}ne rémunérer qu'une partie du temps de travail{/coral}, celle qui, établit Marx, suffit à {coral}reproduire la force de travail{/coral}. Or l'opération n'est bénéfique qu'à grande échelle : d'où la production en masse et le regroupement des artisans en {violet}manufacture{/violet}.
+  points:
+  - id: verite2-l7-p1
+    sentence: "__Aux économistes, Marx ne reproche pas de ne pas voir le procès de travail__, mais de ne pas en croire leurs ___."
+    answer: "yeux"
+    alt: []
+  - id: verite2-l7-p2
+    sentence: "__Les économistes ont eux-mêmes vu__ que le travail est le fondement de la ___."
+    answer: "valeur"
+    alt: []
+  - id: verite2-l7-p3
+    sentence: "__Les économistes ont érigé en loi d'airain de l'économie__ le ___."
+    answer: "surtravail"
+    alt: []
+  - id: verite2-l7-n1
+    sentence: "__Adam Smith figure parmi les économistes qui ont admis__ qu'il fallait contenir les poussées de la ___ financière."
+    answer: "spéculation"
+    alt: ["speculation"]
+  - id: verite2-l7-n2
+    sentence: "__Les économistes ont compris qu'il fallait contenir les **___ d'ouvriers**__ pour ne pas fausser le marché du travail."
+    answer: "coalitions"
+    alt: []
+  - id: verite2-l7-p4
+    sentence: "__Premier motif d'aveuglement des économistes__ : ils ne voient pas la spécificité de la **___ capitaliste**."
+    answer: "propriété privée"
+    alt: ["propriete privee"]
+  - id: verite2-l7-p5
+    sentence: "__Second motif d'aveuglement des économistes__ : ils ne voient pas le **caractère ___ du travail** dans le mode de production capitaliste."
+    answer: "social"
+    alt: []
+  - id: verite2-l7-p6
+    sentence: "__La dissimulation propre au discours des économistes n'est pas une faute individuelle__ : c'est un **impératif de ___**."
+    answer: "système"
+    alt: ["systeme"]
+  - id: verite2-l7-p7
+    sentence: "__Le cycle où un producteur achète une marchandise parce qu'il en a vendu une autre__ se note ___."
+    answer: "M-A-M"
+    alt: ["MAM", "M A M"]
+  - id: verite2-l7-p8
+    sentence: "__Le cycle d'accumulation et d'expansion capitaliste__, où l'argent investi revient accru, se note ___."
+    answer: "A-M-A'"
+    alt: ["A-M-A", "AMA'"]
+  - id: verite2-l7-p9
+    sentence: "__Dans le cycle M-A-M, qui n'est pas capitaliste__, la monnaie ne remplit qu'une fonction de ___ dans l'échange."
+    answer: "médiation"
+    alt: ["mediation"]
+  - id: verite2-l7-p10
+    sentence: "__Le cycle M-A-M règle les dynamiques d'expansion lente__ des sociétés ___."
+    answer: "traditionnelles"
+    alt: []
+  - id: verite2-l7-p11
+    sentence: "__Le capital ne réalise un bénéfice__ qu'en ne rémunérant qu'une partie du **___ de travail**."
+    answer: "temps"
+    alt: []
+  - id: verite2-l7-p12
+    sentence: "__La partie du temps de travail que le capital rémunère__ est celle qui suffit à la reproduction de la ___."
+    answer: "force de travail"
+    alt: []
+  - id: verite2-l7-p13
+    sentence: "__L'opération capitaliste n'étant bénéfique qu'à grande échelle__, elle regroupe les artisans en ___."
+    answer: "manufacture"
+    alt: ["manufactures"]
+
+- id: verite2-l8
+  title: "Le travail devenu social et la dissonance du capital"
+  notes: |-
+    **En concentrant les facteurs, capital et travail, le capitalisme** {coral}**change l'essence même du travail**{/coral} : sous les conditions d'une {violet}coopération forcée{/violet}, il cesse d'être une {pink}addition d'opérations privées{/pink} pour devenir la moyenne, la médiation des opérations individuelles : un {green}**travail social**{/green}. Dans une {yellow}manufacture{/yellow}, aucun ouvrier ne fait l'objet : ce que vaut un geste se mesure à ce qu'il apporte à l'ensemble, au rythme moyen de tous.
+
+    **La conséquence est décisive** : l'échelle de l'individu et l'individualité de son opération {red}cessent de fonder la mesure de la valeur{/red} du travail.
+
+    **Le capitalisme est donc affecté d'une** {violet}**dissonance affective et cognitive**{/violet}, et il s'aveugle scrupuleusement à son sujet.
+
+    | Plan | Ce que fait le capitalisme |
+    | cognitif | il mesure la valeur à l'échelle de l'individu |
+    | affectif | il individualise contrats et évaluations |
+
+    **Sur le plan cognitif**, prendre la {violet}survaleur{/violet} (ou plus-value) de l'individu pour fondement de la mesure de la valeur est une norme {red}irréelle, donc imaginaire{/red}, puisque {coral}la valeur est produite socialement{/coral}.
+
+    **Sur le plan affectif**, le capitalisme oppose ses stratégies d'individualisation du contrat de travail et d'évaluation des performances, le {yellow}management{/yellow}, au {green}collectif de travail{/green}, où la puissance du travail social se fait sujet.
+
+    **Il ne voit donc pas la** {violet}**lutte des classes**{/violet} **comme sa réalité même**, sociale aussi bien qu'historique. Pour Marx, en son temps, {coral}l'accumulation du capital a sa réalité dans l'accumulation des bases révolutionnaires de son propre dépassement{/coral} : plus le capital rassemble de travailleurs, plus il forme le collectif qui peut le renverser.
+  points:
+  - id: verite2-l8-p1
+    sentence: "__Sous les conditions d'une coopération forcée, le travail__ cesse d'être une somme d'opérations privées pour devenir un **___**."
+    answer: "travail social"
+    alt: []
+  - id: verite2-l8-p2
+    sentence: "__La concentration du capital et du travail transforme le travail__ sous les conditions d'une **___ forcée**."
+    answer: "coopération"
+    alt: ["cooperation", "co-opération"]
+  - id: verite2-l8-n1
+    sentence: "__Devenu social, le travail cesse d'être une agrégation__ d'**opérations ___**."
+    answer: "privées"
+    alt: ["privees"]
+  - id: verite2-l8-p3
+    sentence: "__Le travail étant devenu social__, l'échelle de l'___ cesse d'être le fondement de la mesure de la valeur du travail."
+    answer: "individu"
+    alt: []
+  - id: verite2-l8-p4
+    sentence: "__Le mode de production capitaliste est affecté d'une ___ **affective et cognitive**__, au sujet de laquelle il s'aveugle."
+    answer: "dissonance"
+    alt: []
+  - id: verite2-l8-n2
+    sentence: "__La dissonance qui affecte le mode de production capitaliste__ est à la fois affective et ___."
+    answer: "cognitive"
+    alt: []
+  - id: verite2-l8-p5
+    sentence: "__Sur le plan cognitif, la mesure de la valeur par la survaleur de l'individu__ est irréelle, puisque la valeur est produite ___."
+    answer: "socialement"
+    alt: []
+  - id: verite2-l8-p6
+    sentence: "__Une norme qui prend l'individu pour mesure d'une valeur produite socialement__ est irréelle, donc ___."
+    answer: "imaginaire"
+    alt: []
+  - id: verite2-l8-p7
+    sentence: "__Sur le plan affectif, le capitalisme oppose au collectif de travail__ l'___ du contrat de travail et l'évaluation des performances."
+    answer: "individualisation"
+    alt: []
+  - id: verite2-l8-p8
+    sentence: "__Le nom de la stratégie qui individualise l'évaluation des performances__ contre le collectif de travail : le ___."
+    answer: "management"
+    alt: []
+  - id: verite2-l8-p9
+    sentence: "__Le capitalisme ne voit pas comme sa réalité même__, sociale aussi bien qu'historique, la ___."
+    answer: "lutte des classes"
+    alt: []
+  - id: verite2-l8-p10
+    sentence: "__Pour Marx, l'accumulation du capital a sa réalité__ dans l'accumulation des bases **___** de son propre dépassement."
+    answer: "révolutionnaires"
+    alt: ["revolutionnaires"]
+
+- id: verite2-l9
+  title: "La critique de l'État moderne"
+  notes: |-
+    **La critique marxienne de l'État moderne vise un** {violet}**dispositif idéologique**{/violet}, qui agence une autorité instituée en {amber}pouvoir souverain{/amber}.
+
+    **Les pièces du dispositif** :
+    - un pouvoir distinct de la {violet}société civile{/violet}, champ des interactions négociées entre individus et groupes ;
+    - le principe d'un {amber}intérêt général{/amber} qui transcende les intérêts particuliers ;
+    - la distinction des trois pouvoirs, législatif, exécutif et judiciaire ;
+    - des {amber}droits opposables{/amber} reconnus aux individus comme hommes et comme citoyens, pour les garantir contre l'arbitraire de l'État.
+
+    **{sky}*Sur la question juive*{/sky}** analyse la {sky}*Déclaration des droits de l'homme et du citoyen*{/sky} et rattache à l'institution du {violet}droit de propriété{/violet} tous les droits reconnus au citoyen comme individu humain : {coral}liberté et égalité sont surdéterminées par le principe « sacré » de la propriété{/coral}. Cette priorité éclate quand le parlementarisme bourgeois est exposé à la poussée des revendications ouvrières, c'est-à-dire à l'affirmation politiquement révolutionnaire du travail comme puissance sociale. {sky}*Le 18 Brumaire de Louis-Napoléon Bonaparte*{/sky} dénonce alors le {red}caractère cosmétique{/red} de la liberté et de l'égalité {violet}formelles{/violet}.
+
+    **La réalité effective de l'État est la** {red}__**guerre sociale**__{/red}, condition réelle de l'existence des hommes en tant que puissance sociale de la {blue}*praxis*{/blue} productive. Le rapport imaginaire à cette condition est l'{amber}oscillation du citoyen{/amber} entre l'{pink}illusion parlementariste{/pink} et l'{pink}illusion césariste{/pink}, anti-parlementariste. C'est encore la croyance en une {violet}émancipation politique{/violet} dont l'État serait l'opérateur et le médiateur, là où {green}il n'y a d'émancipation qu'humaine{/green}, comme auto-affirmation de la *praxis* productive.
+
+    **La portée de la thèse est précise.** Marx {red}ne dit pas{/red} que l'émancipation humaine exclut toute stratégie pour conquérir et exercer le pouvoir d'État, au besoin dans des {yellow}coalitions parlementaires{/yellow} ; il dit qu'{coral}une stratégie politique ne peut être jugée pertinente, au regard des conditions réelles, que dans un horizon d'émancipation humaine plutôt que politique{/coral}. L'horizon de cette émancipation est le {violet}**dépérissement de l'État**{/violet}.
+  points:
+  - id: verite2-l9-p1
+    sentence: "__La réalité effective de l'État__, sous la fiction de l'intérêt général, est la ___."
+    answer: "guerre sociale"
+    alt: []
+  - id: verite2-l9-n1
+    sentence: "__La critique marxienne de l'État moderne vise un **dispositif ___**__, qui agence une autorité en pouvoir souverain."
+    answer: "idéologique"
+    alt: ["ideologique"]
+  - id: verite2-l9-p2
+    sentence: "__Le dispositif de l'État moderne institue un pouvoir souverain__ distinct de la **___**, champ des interactions négociées."
+    answer: "société civile"
+    alt: ["societe civile"]
+  - id: verite2-l9-p3
+    sentence: "__L'État moderne se réclame du principe d'un **___**__ qui transcende les intérêts particuliers."
+    answer: "intérêt général"
+    alt: ["interet general"]
+  - id: verite2-l9-p4
+    sentence: "__L'analyse de la *Déclaration des droits de l'homme et du citoyen* qui rattache les droits à la propriété__ se trouve dans *___*."
+    answer: "Sur la question juive"
+    alt: ["La Question juive", "Sur la Question juive"]
+  - id: verite2-l9-p5
+    sentence: "__*Sur la question juive* rattache tous les droits du citoyen__ à l'institution du **droit de ___**."
+    answer: "propriété"
+    alt: ["propriete"]
+  - id: verite2-l9-p6
+    sentence: "__Liberté et égalité sont **___** par le principe « sacré » de la propriété__."
+    answer: "surdéterminées"
+    alt: ["surdeterminees"]
+  - id: verite2-l9-p7
+    sentence: "__Le caractère cosmétique de la liberté et de l'égalité formelles__ est dénoncé dans *Le ___ de Louis-Napoléon Bonaparte*."
+    answer: "18 Brumaire"
+    alt: ["Dix-huit Brumaire"]
+  - id: verite2-l9-p8
+    sentence: "*Le 18 Brumaire* dénonce le caractère **___** de la liberté et de l'égalité formelles."
+    answer: "cosmétique"
+    alt: ["cosmetique"]
+  - id: verite2-l9-p9
+    sentence: "__Le rapport imaginaire à la guerre sociale__ fait osciller le citoyen entre l'illusion parlementariste et l'illusion ___."
+    answer: "césariste"
+    alt: ["cesariste"]
+  - id: verite2-l9-p10
+    sentence: "__L'illusion d'une émancipation dont l'État serait l'opérateur__ est la croyance en l'**émancipation ___**."
+    answer: "politique"
+    alt: []
+  - id: verite2-l9-p11
+    sentence: "__Pour Marx, il n'y a d'émancipation qu'**___**__, comme auto-affirmation de la *praxis* productive."
+    answer: "humaine"
+    alt: []
+  - id: verite2-l9-p12
+    sentence: "__Marx n'exclut pas toute stratégie de conquête du pouvoir d'État__ : une stratégie politique se juge dans un **horizon d'___** plutôt que politique."
+    answer: "émancipation humaine"
+    alt: ["emancipation humaine"]
+  - id: verite2-l9-p13
+    sentence: "__L'horizon de l'émancipation humaine__ est le **___ de l'État**."
+    answer: "dépérissement"
+    alt: ["deperissement"]
+
+- id: verite2-l10
+  title: "L'accumulation initiale : la violence recouverte"
+  notes: |-
+    **La gouvernementalité étatique de la** {blue}***praxis***{/blue} **productive se confond avec la** {red}**violence de l'histoire**{/red}, et cette violence est la réalité que l'économie, comme savoir académique et comme pratique sociale, recouvre et dissimule.
+
+    **Sa présentation idéologique : l'**{violet}**accumulation primitive**{/violet} **de** {sky}**Smith**{/sky} (« accumulation initiale » dans la traduction Lefebvre du *Capital*). Censée expliquer d'où vient la première mise du cycle A-M-A', elle raconte une {pink}aimable histoire de réussites{/pink} : des entreprises menées par des agents qui auraient su, avec de la chance, du talent et du flair, changer en capital les bénéfices d'un patient travail, vertueusement accumulés et transmis. Les sentiments moraux aidant, le désir d'être envié de son semblable, le petit propriétaire devient entrepreneur {yellow}comme la chenille devient papillon{/yellow}.
+
+    **Ce que le récit oublie.** Avec le capital, c'est un {amber}fonds de travail social disponible{/amber} qui est requis. D'où le lien entre la multiplicité des {violet}expropriations{/violet}, historiquement documentées, et la nécessité d'une {violet}armée de réserve{/violet} de prolétaires pour coopérer à la {yellow}mine{/yellow}, dans le {yellow}textile{/yellow}, la {yellow}sidérurgie{/yellow}.
+
+    **La conclusion de Marx** ({sky}*Le Capital*{/sky}, livre I, chap. XXIV, 1) : {teal}« {/teal}Chacun sait que dans l'{teal}histoire réelle{/teal} le premier rôle est tenu par la {teal}__conquête__{/teal}, l'{teal}asservissement{/teal}, le crime et le pillage, en un mot, par la {teal}__violence__{/teal}. Dans la suave {teal}économie politique{/teal}, c'est l'{teal}__idylle__{/teal} qui a toujours régné.{teal} »{/teal}
+
+    **La force se double d'un droit.** Sous couleur d'affranchir le serf attaché à la glèbe, un ordre juridique universalise la {violet}personnalité juridique{/violet}, sans laquelle le travailleur ne pourrait pas signer le contrat de travail. Désaffiliation sociale, production de masse, objet traité en marchandise, négociation érigée en lien social et marché du travail s'impliquent nécessairement : le travailleur « autonome » y vend sa force de travail par un contrat qui fonde sa rémunération sur la survaleur qu'il dégage.
+
+    **La genèse des conditions de l'accumulation met donc au jour des dynamiques de** {red}__violence institutionnelle__{/red}, l'{violet}institution{/violet} s'entendant comme {amber}**l'ensemble des conditions de l'administration organisée de la violence**{/amber}.
+
+    **La théorie s'oppose ici à l'idéologie** : elle rapporte les hommes à leurs conditions réelles d'existence, mais aussi au recouvrement idéologique de ces conditions, et elle le fait en créant un {green}savoir{/green}.
+  points:
+  - id: verite2-l10-p1
+    sentence: "__La genèse de l'accumulation capitaliste montre que l'**institution**__ est l'ensemble des conditions de l'administration organisée de la ___."
+    answer: "violence"
+    alt: []
+  - id: verite2-l10-p2
+    sentence: "__L'ensemble des conditions de l'administration organisée de la violence__ définit l'___."
+    answer: "institution"
+    alt: []
+  - id: verite2-l10-p3
+    sentence: "__La présentation idéologique de la violence qui produit le capital__ est le concept d'___, repris de Smith."
+    answer: "accumulation primitive"
+    alt: ["accumulation initiale"]
+  - id: verite2-l10-p4
+    sentence: "__Le concept d'accumulation primitive, censé expliquer la genèse du capital__, vient d'Adam ___."
+    answer: "Smith"
+    alt: []
+  - id: verite2-l10-p5
+    sentence: "__Le récit idéologique change le petit propriétaire en entrepreneur__ comme la chenille se métamorphose en ___."
+    answer: "papillon"
+    alt: []
+  - id: verite2-l10-p6
+    sentence: "__Le capital requiert un fonds de travail social disponible__ : il lui faut une « **___** » de prolétaires."
+    answer: "armée de réserve"
+    alt: ["armee de reserve"]
+  - id: verite2-l10-p7
+    sentence: "*Le Capital*, livre I : « Chacun sait que dans l'histoire réelle le premier rôle est tenu par la ___, l'asservissement, le crime et le pillage »."
+    answer: "conquête"
+    alt: ["conquete"]
+    citation: true
+  - id: verite2-l10-p8
+    sentence: "*Le Capital*, livre I : « le premier rôle est tenu par la conquête, l'___, le crime et le pillage »."
+    answer: "asservissement"
+    alt: []
+    citation: true
+  - id: verite2-l10-p9
+    sentence: "*Le Capital*, livre I : « la conquête, l'asservissement, le crime et le pillage, en un mot, par la ___ »."
+    answer: "violence"
+    alt: []
+    citation: true
+  - id: verite2-l10-p10
+    sentence: "*Le Capital*, livre I : « Dans la suave économie politique, c'est l'___ qui a toujours régné. »"
+    answer: "idylle"
+    alt: []
+    citation: true
+  - id: verite2-l10-p11
+    sentence: "« Chacun sait que dans l'histoire réelle le premier rôle est tenu par la conquête » : __la phrase se lit au__ *___*, livre I, chapitre XXIV."
+    answer: "Capital"
+    alt: ["Le Capital"]
+    citation: true
+  - id: verite2-l10-p12
+    sentence: "__Sous couleur d'affranchir le serf, un ordre juridique universalise__ la **___ juridique**, sans laquelle pas de contrat de travail."
+    answer: "personnalité"
+    alt: ["personnalite"]
+  - id: verite2-l10-p13
+    sentence: "__Sans la reconnaissance de la personnalité juridique__, le travailleur ne pourrait pas signer le **___ de travail**."
+    answer: "contrat"
+    alt: []
+  - id: verite2-l10-p14
+    sentence: "__Par opposition à l'idéologie, la théorie rapporte les hommes à leurs conditions réelles__ et à leur recouvrement, à travers la création d'un ___."
+    answer: "savoir"
+    alt: []

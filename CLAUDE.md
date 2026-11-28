@@ -61,7 +61,11 @@ l'épreuve :
     transcriptions de ses séances : `ali1`, `ali2`… dans l'ordre des séances,
     sans mention du cours dans les titres, citations des *Manuscrits* en GF
     et des *Grundrisse* dans l'édition de l'utilisateur, repères du manuscrit
-    de Marx. Des unités-textes de la piste Textes portent sur les passages lus de
+    de Marx. Elle s'achève sur le cours tiré d'un chapitre de commentaire,
+    « Le travail comme expérience de la vérité (Marx) » (scan sans auteur ni
+    titre de livre, p. 223-243), en trois unités groupées sous « Le travail
+    comme expérience de la vérité » (`verite1` à `verite3`).
+    Des unités-textes de la piste Textes portent sur les passages lus de
     suite : le travail aliéné du premier manuscrit, en cinq unités groupées
     sous « Le travail aliéné (Manuscrits de 1844) » (`m1844`, `m1844b` à
     `m1844e`, une thèse chacune, depuis le 2026-11-21), et `g1857` (le
