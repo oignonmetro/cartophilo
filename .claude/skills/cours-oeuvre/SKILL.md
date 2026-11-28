@@ -192,6 +192,11 @@ les corriger.
   Stephanus), « §64 » (paragraphe), « chap. 3 ». Pas « livre II, chap. 1 »
   ni « II, 1, 412a3 », que le moteur ne lit pas. L'éditeur visuel (onglet
   Tableaux) dit si un plan est reconnu.
+- **Pas de liens entre les parties** (2026-11-28, l'utilisateur les juge
+  inutiles) : ni colonne « Lien » dans les repérages, ni phrase de rappel ou
+  carte qui dise qu'un chapitre est la conséquence, la nuance, la limite ou
+  la solution d'un autre. Les colonnes du plan : Moment, Lieu, Ce qui s'y
+  joue. Voir `content/oeuvres.md`, « Pas de relations ».
 - **Les repères des rappels et des cartes** : la forme la plus précise que
   l'édition permet avec certitude (« (412a27-b1) », « (§65) », « (II, 1) »),
   sans jamais déduire une ligne ; dans une leçon qui ne porte que sur un

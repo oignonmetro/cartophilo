@@ -3,8 +3,8 @@
 # rousseau-contrat-social.
 #
 # Pour l'instant, la structure seule (2026-11-27) : un plan général, puis un
-# sous-repérage par mouvement, paragraphe par paragraphe, avec une colonne
-# « Lien » (lien avec ce qui précède). Rappels et cartes manquantes viendront
+# sous-repérage par mouvement, paragraphe par paragraphe ; les relations
+# entre parties (colonne « Lien ») sont abandonnées depuis le 2026-11-28. Rappels et cartes manquantes viendront
 # d'un notebook NotebookLM que fournira l'utilisateur.
 #
 # Plan : commentaire du livre I par B. Bernardi (CNED, Terminale, leçon 32),
@@ -61,28 +61,26 @@ lessons:
   notes: |-
     **Le préambule et le chapitre 1 formulent deux fois le même problème, celui de la légitimité de l'ordre civil.** Le préambule en donne la forme générale et le point de vue, celui du {sky}citoyen{/sky} ; le chapitre 1 lui donne son contenu, la liberté perdue, et la direction de la solution, la convention.
 
-    | Préambule | Lieu | Ce qui s'y joue | Lien |
-    | l'objet de la recherche | § 1 | une règle d'administration légitime et sûre, qui allie ce que le droit permet et ce que l'intérêt prescrit | point de départ |
-    | ni prince ni législateur | § 2 | c'est pour cela même qu'il écrit sur la politique : qui gouverne agit ou se tait | motif |
-    | le point de vue du citoyen | § 3 | membre du souverain, le droit de voter lui impose le devoir de s'instruire | motif |
+    | Préambule | Lieu | Ce qui s'y joue |
+    | l'objet de la recherche | § 1 | une règle d'administration légitime et sûre, qui allie ce que le droit permet et ce que l'intérêt prescrit |
+    | ni prince ni législateur | § 2 | c'est pour cela même qu'il écrit sur la politique : qui gouverne agit ou se tait |
+    | le point de vue du citoyen | § 3 | membre du souverain, le droit de voter lui impose le devoir de s'instruire |
 
-    | Chapitre 1 | Lieu | Ce qui s'y joue | Lien |
-    | les données du problème | § 1 | né libre, l'homme est partout dans les fers ; on ne demande pas comment, mais ce qui peut rendre ce changement légitime | point de départ |
-    | l'hypothèse de la force | § 2 | si seule la force comptait, le peuple qui secoue le joug ferait encore mieux | réfutation |
-    | la direction de la solution | § 2 | l'ordre social est un droit sacré, qui ne vient pas de la nature : il est fondé sur des conventions | conséquence |
-    | l'annonce de la suite | § 2 | avant de dire quelles sont ces conventions, établir ce qui vient d'être avancé | annonce |
+    | Chapitre 1 | Lieu | Ce qui s'y joue |
+    | les données du problème | § 1 | né libre, l'homme est partout dans les fers ; on ne demande pas comment, mais ce qui peut rendre ce changement légitime |
+    | l'hypothèse de la force | § 2 | si seule la force comptait, le peuple qui secoue le joug ferait encore mieux |
+    | la direction de la solution | § 2 | l'ordre social est un droit sacré, qui ne vient pas de la nature : il est fondé sur des conventions |
+    | l'annonce de la suite | § 2 | avant de dire quelles sont ces conventions, établir ce qui vient d'être avancé |
 
     ! Le problème n'est pas théorique (comment la liberté s'est perdue, question du second *Discours*) mais de droit : ce qui peut rendre l'ordre civil légitime.
   tables:
-  - table: preambule-lieu-ce-qui-s-y-joue-lien
+  - table: preambule-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
-  - table: chapitre-1-lieu-ce-qui-s-y-joue-lien
+  - table: chapitre-1-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-livre1-l2-q1
@@ -108,17 +106,16 @@ lessons:
   notes: |-
     **Le chapitre 2 éprouve l'hypothèse d'une soumission fondée en nature, sous trois formes, dans un ordre de crédibilité décroissant.** Chaque réfutation y est l'occasion de poser une thèse du droit politique : le lien social est conventionnel, et la conservation de soi est la « première loi » de l'homme.
 
-    | Hypothèse | Lieu | Ce qui s'y joue | Lien |
-    | la famille, modèle de la société politique | § 1-3 | le lien naturel ne dure qu'autant que le besoin ; s'il continue, c'est par convention | point de départ |
-    | des hommes nés pour l'esclavage | § 4-8 | Grotius, Hobbes, Caligula, Aristote ; mais la force a fait les premiers esclaves, leur lâcheté les a perpétués | déclinaison |
-    | l'autorité héritée d'Adam | § 9 | réfutée par la seule ironie : Adam fut souverain du monde comme Robinson de son île | déclinaison |
+    | Hypothèse | Lieu | Ce qui s'y joue |
+    | la famille, modèle de la société politique | § 1-3 | le lien naturel ne dure qu'autant que le besoin ; s'il continue, c'est par convention |
+    | des hommes nés pour l'esclavage | § 4-8 | Grotius, Hobbes, Caligula, Aristote ; mais la force a fait les premiers esclaves, leur lâcheté les a perpétués |
+    | l'autorité héritée d'Adam | § 9 | réfutée par la seule ironie : Adam fut souverain du monde comme Robinson de son île |
 
     ! Rousseau accorde le fait (« Aristote avait raison ») pour mieux en contester la cause : la servitude n'est pas naturelle, elle est produite.
   tables:
-  - table: hypothese-lieu-ce-qui-s-y-joue-lien
+  - table: hypothese-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-livre1-l3-q1
@@ -144,18 +141,17 @@ lessons:
   notes: |-
     **Le chapitre 3 montre que la force ne peut produire aucune obligation : un « droit du plus fort » se détruit lui-même.** Il dégage par contraste ce qui définit le droit, sa durée et l'obéissance par devoir.
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | la force ne produit aucune moralité | § 1 | céder à la force est un acte de nécessité, non de volonté | point de départ |
-    | le galimatias | § 2 | par l'absurde : un droit qui périt quand la force cesse n'ajoute rien à la force | démonstration |
-    | « Obéissez aux puissances » | § 3 | la maladie et le brigand : une puissance n'est pas une autorité | application |
-    | la conclusion | § 4 | force ne fait pas droit ; la question primitive revient | conclusion |
+    | Moment | Lieu | Ce qui s'y joue |
+    | la force ne produit aucune moralité | § 1 | céder à la force est un acte de nécessité, non de volonté |
+    | le galimatias | § 2 | par l'absurde : un droit qui périt quand la force cesse n'ajoute rien à la force |
+    | « Obéissez aux puissances » | § 3 | la maladie et le brigand : une puissance n'est pas une autorité |
+    | la conclusion | § 4 | force ne fait pas droit ; la question primitive revient |
 
     ! Le chapitre ne combat pas seulement une thèse adverse : il montre ce que doit admettre quiconque accorde à la force le nom de droit.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-livre1-l4-q1
@@ -178,21 +174,20 @@ lessons:
   notes: |-
     **Le chapitre 4 écarte la thèse la plus dangereuse : une convention par laquelle des hommes renonceraient librement à leur liberté.** Deux arguments prétendent fonder ainsi la soumission, l'échange de la liberté contre la sécurité (§ 2-6), et celui de la liberté contre la vie (§ 7-12) ; Rousseau en tire qu'une convention suppose et conserve la liberté de ceux qui la passent.
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | restent les conventions | § 1 | ni la nature ni la force ne fondent l'autorité : restent les conventions | conséquence |
-    | un peuple peut-il s'aliéner ? | § 2-5 | contre Grotius : un peuple ne se vend ni ne se donne, et nul n'aliène ses enfants | réfutation |
-    | une aliénation impensable | § 6 | renoncer à sa liberté, c'est renoncer à sa qualité d'homme | principe |
-    | la liberté contre la vie | § 7 | le vainqueur, qui aurait le droit de tuer, laisserait la vie au vaincu contre sa liberté | objection |
-    | la guerre, relation d'État à État | § 8-9 | sans relations réelles, il n'y a pas d'état de guerre entre les hommes | réfutation |
-    | le droit de la guerre | § 10-12 | la guerre ne donne aucun droit qui ne soit nécessaire à sa fin ; le cercle vicieux | conséquence |
-    | la conclusion | § 13-14 | la convention prolonge l'état de guerre ; « esclavage » et « droit » s'excluent | conclusion |
+    | Moment | Lieu | Ce qui s'y joue |
+    | restent les conventions | § 1 | ni la nature ni la force ne fondent l'autorité : restent les conventions |
+    | un peuple peut-il s'aliéner ? | § 2-5 | contre Grotius : un peuple ne se vend ni ne se donne, et nul n'aliène ses enfants |
+    | une aliénation impensable | § 6 | renoncer à sa liberté, c'est renoncer à sa qualité d'homme |
+    | la liberté contre la vie | § 7 | le vainqueur, qui aurait le droit de tuer, laisserait la vie au vaincu contre sa liberté |
+    | la guerre, relation d'État à État | § 8-9 | sans relations réelles, il n'y a pas d'état de guerre entre les hommes |
+    | le droit de la guerre | § 10-12 | la guerre ne donne aucun droit qui ne soit nécessaire à sa fin ; le cercle vicieux |
+    | la conclusion | § 13-14 | la convention prolonge l'état de guerre ; « esclavage » et « droit » s'excluent |
 
-    ! Le § 6, qui semble une incise, est le foyer du livre : la liberté n'est pas un bien qu'on possède, elle fait l'homme, et ne peut donc s'aliéner.
+    ! La liberté n'est pas un bien qu'on possède : elle fait l'homme, et ne peut donc s'aliéner (§ 6).
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-livre1-l5-q1
@@ -222,19 +217,18 @@ lessons:
 - id: rousseau-contrat-social-livre1-l6
   title: "Repérage : la première convention (I, 5)"
   notes: |-
-    **Le chapitre 5 établit à nouveaux frais ce que les chapitres 2 à 4 ont montré, mais par une voie directe : l'analyse du concept même de société.** Il clôt la partie négative en découvrant le vrai fondement de la société, que le chapitre 6 va expliquer.
+    **Le chapitre 5 établit à nouveaux frais ce que les chapitres 2 à 4 ont montré, mais par une voie directe : l'analyse du concept même de société.**
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | agrégation et association | § 1 | soumettre une multitude n'est pas régir une société : un maître et des esclaves ne font pas un peuple | point de départ |
-    | l'acte par lequel un peuple est un peuple | § 2 | Grotius suppose le peuple avant son don à un roi : cet acte antérieur est le vrai fondement | conséquence |
-    | la règle de la majorité | § 3 | la loi de la pluralité des suffrages suppose au moins une fois l'unanimité | confirmation |
+    | Moment | Lieu | Ce qui s'y joue |
+    | agrégation et association | § 1 | soumettre une multitude n'est pas régir une société : un maître et des esclaves ne font pas un peuple |
+    | l'acte par lequel un peuple est un peuple | § 2 | Grotius suppose le peuple avant son don à un roi : cet acte antérieur est le vrai fondement |
+    | la règle de la majorité | § 3 | la loi de la pluralité des suffrages suppose au moins une fois l'unanimité |
 
     ! L'argument retourne contre Grotius sa propre thèse : pour se donner à un roi, un peuple doit déjà avoir une volonté commune.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-livre1-l6-q1
@@ -257,21 +251,20 @@ lessons:
   notes: |-
     **Le chapitre 6 rejoue en raccourci le mouvement du livre entier : les données du problème, sa formulation, sa solution, puis ses conséquences.** Le problème, posé dans toute sa précision, détermine entièrement sa solution.
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | une nécessité | § 1 | les obstacles à la conservation l'emportent : le genre humain périrait s'il ne changeait sa manière d'être | point de départ |
-    | une possibilité | § 2 | les hommes ne peuvent engendrer de forces nouvelles, seulement unir celles qui existent | conséquence |
-    | une condition | § 3 | la force et la liberté de chacun sont les premiers instruments de sa conservation | difficulté |
-    | le problème fondamental | § 4 | une association par laquelle chacun, s'unissant à tous, n'obéisse qu'à lui-même | synthèse |
-    | la solution | § 5-8 | les clauses se réduisent à une seule : l'aliénation totale de chaque associé à toute la communauté | solution |
-    | la formule du pacte | § 9 | chacun met en commun sa personne sous la suprême direction de la volonté générale | résumé |
-    | les concepts du droit politique | § 10 | République, État, Souverain, Puissance ; peuple, citoyens, sujets | conséquence |
+    | Moment | Lieu | Ce qui s'y joue |
+    | une nécessité | § 1 | les obstacles à la conservation l'emportent : le genre humain périrait s'il ne changeait sa manière d'être |
+    | une possibilité | § 2 | les hommes ne peuvent engendrer de forces nouvelles, seulement unir celles qui existent |
+    | une condition | § 3 | la force et la liberté de chacun sont les premiers instruments de sa conservation |
+    | le problème fondamental | § 4 | une association par laquelle chacun, s'unissant à tous, n'obéisse qu'à lui-même |
+    | la solution | § 5-8 | les clauses se réduisent à une seule : l'aliénation totale de chaque associé à toute la communauté |
+    | la formule du pacte | § 9 | chacun met en commun sa personne sous la suprême direction de la volonté générale |
+    | les concepts du droit politique | § 10 | République, État, Souverain, Puissance ; peuple, citoyens, sujets |
 
     ! L'aliénation totale n'est pas l'aliénation refusée au chapitre 4 : elle se fait à une communauté dont on est membre, et non à un maître.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-livre1-l7-q1
@@ -300,19 +293,18 @@ lessons:
   notes: |-
     **Le chapitre 7 considère le souverain sous l'angle de l'obligation : à quoi est-il obligé, en quoi oblige-t-il ?** La théorie de la souveraineté elle-même sera développée en II, 1-6.
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | un engagement réciproque | § 1 | chacun est engagé comme membre du Souverain envers les particuliers, et comme membre de l'État envers le Souverain | point de départ |
-    | un souverain sans loi fondamentale | § 2 | nulle loi fondamentale obligatoire pour le corps du peuple, pas même le contrat social | conséquence |
-    | la sainteté du contrat | § 3-4 | ni s'aliéner ni se soumettre ; on ne peut offenser un membre sans attaquer le corps | limite |
-    | un souverain sans garant | § 5 | il ne peut avoir d'intérêt contraire à celui des particuliers qui le composent | conséquence |
-    | les obligations des sujets | § 6-8 | quiconque refusera d'obéir à la volonté générale y sera contraint : on le forcera d'être libre | contrepartie |
+    | Moment | Lieu | Ce qui s'y joue |
+    | un engagement réciproque | § 1 | chacun est engagé comme membre du Souverain envers les particuliers, et comme membre de l'État envers le Souverain |
+    | un souverain sans loi fondamentale | § 2 | nulle loi fondamentale obligatoire pour le corps du peuple, pas même le contrat social |
+    | la sainteté du contrat | § 3-4 | ni s'aliéner ni se soumettre ; on ne peut offenser un membre sans attaquer le corps |
+    | un souverain sans garant | § 5 | il ne peut avoir d'intérêt contraire à celui des particuliers qui le composent |
+    | les obligations des sujets | § 6-8 | quiconque refusera d'obéir à la volonté générale y sera contraint : on le forcera d'être libre |
 
     ! « On le forcera d'être libre » vise le sujet, non le citoyen : le contraindre à obéir aux lois, c'est lui faire respecter la volonté qu'il a eue comme citoyen.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-livre1-l8-q1
@@ -338,17 +330,16 @@ lessons:
   notes: |-
     **Le chapitre 8 évalue le changement que produit dans l'homme le passage à l'état civil : élévation ou dégradation.** L'ambivalence tient à ce que l'état civil est double : l'état civil légitime, que le livre fonde, et l'état civil corrompu, où l'homme est « dans les fers ».
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | le changement de l'homme | § 1 | la justice substituée à l'instinct ; d'un animal stupide et borné, un être intelligent et un homme | point de départ |
-    | la balance | § 2 | perdus, la liberté naturelle et un droit illimité ; gagnés, la liberté civile et la propriété | bilan |
-    | la liberté morale | § 3 | l'obéissance à la loi qu'on s'est prescrite est liberté | ajout |
+    | Moment | Lieu | Ce qui s'y joue |
+    | le changement de l'homme | § 1 | la justice substituée à l'instinct ; d'un animal stupide et borné, un être intelligent et un homme |
+    | la balance | § 2 | perdus, la liberté naturelle et un droit illimité ; gagnés, la liberté civile et la propriété |
+    | la liberté morale | § 3 | l'obéissance à la loi qu'on s'est prescrite est liberté |
 
     ! La liberté naturelle n'a pour bornes que les forces de l'individu ; la liberté civile est limitée par la volonté générale : ce ne sont pas deux degrés d'une même liberté.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-livre1-l9-q1
@@ -371,19 +362,18 @@ lessons:
   notes: |-
     **Le chapitre 9 tire du pacte la distinction de la possession et de la propriété : ce n'est pas la propriété qui fonde la société, c'est la société qui fonde la propriété.** Il s'achève, avec le livre, sur l'égalité.
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | la possession publique | § 1 | chacun se donne avec ses biens ; la possession publique est plus forte, non plus légitime à l'égard des étrangers | point de départ |
-    | le droit du premier occupant | § 2-4 | il ne devient un vrai droit qu'après la propriété, et sous trois conditions : terrain inhabité, besoin, travail | limite |
-    | territoire et souveraineté | § 5 | les rois des Perses, chefs des hommes ; les rois de France, maîtres du pays | ironie |
-    | la propriété garantie | § 6-7 | la communauté change l'usurpation en un véritable droit ; le droit du particulier reste subordonné à celui de la communauté | conséquence |
-    | l'égalité par convention | § 8 | le pacte substitue une égalité morale et légitime à l'inégalité physique | conclusion |
+    | Moment | Lieu | Ce qui s'y joue |
+    | la possession publique | § 1 | chacun se donne avec ses biens ; la possession publique est plus forte, non plus légitime à l'égard des étrangers |
+    | le droit du premier occupant | § 2-4 | il ne devient un vrai droit qu'après la propriété, et sous trois conditions : terrain inhabité, besoin, travail |
+    | territoire et souveraineté | § 5 | les rois des Perses, chefs des hommes ; les rois de France, maîtres du pays |
+    | la propriété garantie | § 6-7 | la communauté change l'usurpation en un véritable droit ; le droit du particulier reste subordonné à celui de la communauté |
+    | l'égalité par convention | § 8 | le pacte substitue une égalité morale et légitime à l'inégalité physique |
 
     ! L'aliénation des biens à la communauté ne dépouille pas les particuliers : elle leur assure la légitime possession de ce qu'ils ont donné.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-livre1-l10-q1

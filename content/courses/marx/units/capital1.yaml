@@ -41,7 +41,6 @@ work:
             - id: s1-1-2
               label: I, 1.2
               summary: "Le travail se dédouble en travail concret et travail abstrait"
-              rel: consequence
               points:
                 - id: cap1-1-2a
                   sentence: "Le travail concret ou utile produit des valeurs d'usage variées ; le travail abstrait, mesuré en temps, produit de la valeur d'échange et se ramène au travail moyen ___."
@@ -50,7 +49,6 @@ work:
             - id: s1-1-3
               label: I, 1.3
               summary: "La valeur ne s'exprime que dans une autre marchandise : la forme de la valeur"
-              rel: probleme-solution
               points:
                 - id: cap1-1-3a
                   sentence: "La valeur d'une marchandise ne peut s'exprimer que dans la valeur d'usage d'une autre ; le développement de cette expression aboutit à la forme ___, où une marchandise sert d'équivalent à toutes les autres."
@@ -59,7 +57,6 @@ work:
             - id: s1-1-4
               label: I, 1.4
               summary: "Le fétichisme transforme un rapport social en rapport entre choses"
-              rel: consequence
               points:
                 - id: cap1-1-4a
                   sentence: "La forme-marchandise fait apparaître le rapport social des producteurs privés comme un rapport entre ___ : c'est le fétichisme, propre à la production marchande."
@@ -72,7 +69,6 @@ work:
         - id: s1-2
           label: I, 2
           summary: "L'échange suppose le droit, et fait surgir la monnaie"
-          rel: consequence
           points:
             - id: cap1-2a
               sentence: "L'échange suppose que les échangistes se reconnaissent mutuellement comme propriétaires privés liés par un ___ : le droit ne fait rien par lui-même, il exprime un rapport économique."
@@ -83,7 +79,6 @@ work:
         - id: s1-3
           label: I, 3
           summary: "La monnaie a trois fonctions, sous la garantie de l'État"
-          rel: consequence
           points:
             - id: cap1-3a
               sentence: "La monnaie a trois fonctions : mesure de la valeur et étalon des prix, moyen de circulation, et réserve de valeur ou ___."
@@ -109,7 +104,6 @@ work:
               explanation: "Cet achat suppose un travailleur libre, propriétaire de lui-même, qui ne vend sa force que pour un temps, et qui n'a rien d'autre à vendre. Sa valeur est celle de ses moyens de subsistance."
         - id: s3
           label: Section III
-          rel: consequence
           parts:
             - id: s3-1
               label: III, 1
@@ -122,7 +116,6 @@ work:
             - id: s3-2
               label: III, 2
               summary: "Le capital constant transmet sa valeur, le capital variable crée un excédent"
-              rel: declinaison
               points:
                 - id: cap1-3-2a
                   sentence: "Le capital constant (moyens de production) ne modifie pas sa grandeur de valeur dans le procès ; le capital ___ (force de travail) reproduit son équivalent et un excédent."
@@ -130,7 +123,6 @@ work:
             - id: s3-3
               label: III, 3
               summary: "Le taux de survaleur mesure le degré d'exploitation"
-              rel: consequence
               points:
                 - id: cap1-3-3a
                   sentence: "Le taux de survaleur est le rapport s/v, du surtravail au travail ___ : il exprime le degré d'exploitation de la force de travail."
@@ -139,7 +131,6 @@ work:
             - id: s3-4
               label: III, 4
               summary: "La durée de la journée de travail se joue dans les rapports de force"
-              rel: application
               points:
                 - id: cap1-3-4a
                   sentence: "Le capitaliste a intérêt à allonger la journée de travail, le travailleur à la raccourcir : l'enjeu est la détermination légale d'une journée « ___ »."
@@ -148,14 +139,12 @@ work:
             - id: s3-5
               label: III, 5
               summary: "La masse de survaleur dépend aussi du nombre de travailleurs"
-              rel: limite
               points:
                 - id: cap1-3-5a
                   sentence: "La masse de survaleur dépend du taux de survaleur et du nombre de travailleurs exploités : le capitaliste peut compenser une baisse du taux par une hausse du volume de capital ___."
                   answer: variable
         - id: s4
           label: Section IV
-          rel: changement-de-question
           parts:
             - id: s4-1
               label: IV, 1
@@ -168,7 +157,6 @@ work:
             - id: s4-2
               label: IV, 2
               summary: "La coopération accroît la force productive sans rien coûter au capital"
-              rel: declinaison
               points:
                 - id: cap1-4-2a
                   sentence: "La coopération (organisation, commandement, surveillance) est plus productive qu'une somme de travailleurs isolés et ne coûte rien de plus au capitaliste, puisque le capital ___ reste le même."
@@ -176,7 +164,6 @@ work:
             - id: s4-3
               label: IV, 3
               summary: "La manufacture parcellise le travail, au profit de la virtuosité du détail"
-              rel: consequence
               points:
                 - id: cap1-4-3a
                   sentence: "La manufacture réunit sous l'autorité d'un seul capitaliste la division du travail, qui donne la virtuosité du travailleur de détail au prix de la parcellisation des tâches et de l'___."
@@ -185,7 +172,6 @@ work:
             - id: s4-4
               label: IV, 4
               summary: "La machine détruit le travail artisanal et rend l'exploitation illimitée"
-              rel: consequence
               points:
                 - id: cap1-4-4a
                   sentence: "Paradoxe du machinisme : le plus puissant moyen de réduire le temps de travail devient le plus sûr moyen de transformer le temps de vie de l'ouvrier en temps de travail disponible pour la ___ du capital."
@@ -195,7 +181,6 @@ work:
                   answer: intensité
         - id: s5-6
           label: Sections V et VI
-          rel: reprise
           summary: "Les distinctions acquises sont récapitulées, puis appliquées au salaire"
           points:
             - id: cap1-56a
@@ -218,7 +203,6 @@ work:
         - id: s7-2
           label: VII, 2
           summary: "L'accumulation élève la composition du capital et le concentre"
-          rel: consequence
           points:
             - id: cap1-7-2a
               sentence: "La composition organique du capital est le rapport du capital constant au capital variable ; la concurrence, jointe à la hausse de productivité, mène à la ___ du capital : les grands capitaux battent les petits."
@@ -227,7 +211,6 @@ work:
         - id: s7-3
           label: VII, 3
           summary: "Il en résulte une surpopulation relative, l'armée de réserve"
-          rel: consequence
           points:
             - id: cap1-7-3a
               sentence: "Contre Malthus, Marx affirme une loi de population propre au mode de production capitaliste : la surpopulation ouvrière est un levier de l'accumulation, une armée industrielle de ___ qui pèse sur les salaires."
@@ -235,7 +218,6 @@ work:
         - id: s7-4
           label: VII, 4
           summary: "L'accumulation primitive n'a rien d'idyllique"
-          rel: changement-de-question
           points:
             - id: cap1-7-4a
               sentence: "Contre la fable de l'élite laborieuse et des fainéants, l'accumulation initiale est l'___ de la paysannerie, que l'Angleterre prend pour modèle."
@@ -244,29 +226,11 @@ work:
         - id: s7-5
           label: VII, 5
           summary: "La tendance historique mène à l'expropriation des expropriateurs"
-          rel: consequence
           points:
             - id: cap1-7-5a
               sentence: "Par ses lois immanentes, la centralisation socialise le travail jusqu'à le rendre incompatible avec son enveloppe capitaliste : on exproprie les expropriateurs, c'est la négation de la ___."
               answer: négation
               explanation: "Passage hégélien et prophétique, qui anticipe sur le livre III et nourrira l'opposition entre révolution et réformisme."
-  links:
-    - from: s1-1-4
-      to: s3-1
-      rel: reprise
-      points:
-        - id: cap1-lien-fetiche-exploitation
-          sentence: "Le fétichisme, propre à la société marchande (section I), précède logiquement le rapport de classe : l'exploitation de la section III le ___, elle ne le produit pas."
-          answer: présuppose
-          alt: [suppose]
-    - from: s2
-      to: s7-1
-      rel: reprise
-      points:
-        - id: cap1-lien-circuit
-          sentence: "Le circuit A-M-A' de la section II, qui n'a ni fin ni mesure, se réalise dans l'accumulation de la section VII : la survaleur est retransformée en capital sur une échelle toujours ___."
-          answer: élargie
-          alt: [croissante]
   recaps:
     - at: s1-1
       label: "Section I"

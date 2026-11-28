@@ -45,7 +45,6 @@ work:
                 - id: p2
                   label: "§2"
                   summary: "La satisfaction qui détermine le jugement de goût est désintéressée"
-                  rel: declinaison
                   points:
                     - id: ka2a
                       sentence: "On nomme **intérêt** __la satisfaction que nous lions à la représentation de__ l'___ d'un objet."
@@ -61,7 +60,6 @@ work:
                 - id: p3
                   label: "§3"
                   summary: "L'agréable est lié à un intérêt"
-                  rel: declinaison
                   points:
                     - id: ka3a
                       sentence: "« __Est **agréable** ce qui plaît aux__ ___ dans la sensation. »"
@@ -73,7 +71,6 @@ work:
                 - id: p4
                   label: "§4"
                   summary: "Le bon est lié à un intérêt de la raison"
-                  rel: declinaison
                   points:
                     - id: ka4a
                       sentence: "Est **bon** ce qui plaît, par l'intermédiaire de la raison, __par le simple__ ___."
@@ -85,7 +82,6 @@ work:
             - id: p5
               label: "§5"
               summary: "Des trois satisfactions, seule celle du beau n'est contrainte par rien"
-              rel: consequence
               points:
                 - id: ka5a
                   sentence: "À l'agréable répond l'**inclination**, au bon le **respect**, __au beau la__ ___."
@@ -104,7 +100,6 @@ work:
                   explanation: "Définition du beau tirée du premier moment : « On appelle beau l'objet d'une telle satisfaction. »"
         - id: m2
           label: "§6-9"
-          rel: consequence
           parts:
             - id: b6-8
               label: "§6-8"
@@ -123,7 +118,6 @@ work:
                 - id: p7
                   label: "§7"
                   summary: "L'agréable vaut pour chacun, le beau pour tous"
-                  rel: declinaison
                   points:
                     - id: ka7a
                       sentence: "Pour l'**agréable** vaut le principe : « __à chacun son__ ___ »."
@@ -139,7 +133,6 @@ work:
                 - id: p8
                   label: "§8"
                   summary: "« Cette rose est belle » : un jugement sur un seul objet, qui vaut pour tous"
-                  rel: declinaison
                   points:
                     - id: ka8a
                       sentence: "Selon la **quantité logique**, __tout jugement de goût est un jugement__ ___ : « cette rose est belle »."
@@ -157,7 +150,6 @@ work:
             - id: p9
               label: "§9"
               summary: "Le jugement précède le plaisir, et en est le fondement"
-              rel: probleme-solution
               points:
                 - id: ka9a
                   sentence: "Savoir si **le plaisir précède le jugement ou le jugement le plaisir** : __Kant fait de ce problème la__ ___ de la critique du goût."
@@ -175,7 +167,6 @@ work:
                   explanation: "Définition du beau tirée du second moment."
         - id: m3
           label: "§10-17"
-          rel: changement-de-question
           parts:
             - id: b10-12
               label: "§10-12"
@@ -194,7 +185,6 @@ work:
                 - id: p11
                   label: "§11"
                   summary: "Le jugement de goût n'a pour fondement que la forme de la finalité"
-                  rel: declinaison
                   points:
                     - id: ka11a
                       sentence: "Le jugement de goût ne repose ni sur une **fin subjective**, __qui le rendrait__ ___, ni sur une **fin objective**, qui supposerait un concept."
@@ -202,7 +192,6 @@ work:
                 - id: p12
                   label: "§12"
                   summary: "La contemplation du beau se prolonge d'elle-même"
-                  rel: declinaison
                   points:
                     - id: ka12a
                       sentence: "La conscience de la **finalité purement formelle** dans le jeu des facultés de connaître __est le ___ lui-même__."
@@ -213,7 +202,6 @@ work:
                       alt: ["attardons à la contemplation"]
             - id: b13-15
               label: "§13-15"
-              rel: consequence
               parts:
                 - id: p13
                   label: "§13"
@@ -228,7 +216,6 @@ work:
                 - id: p14
                   label: "§14"
                   summary: "Seule la forme est l'objet propre du goût"
-                  rel: declinaison
                   points:
                     - id: ka14a
                       sentence: "Dans la peinture, la sculpture, l'architecture, __l'essentiel est le__ ___ : les couleurs qui l'enluminent relèvent de l'**attrait**."
@@ -240,7 +227,6 @@ work:
                 - id: p15
                   label: "§15"
                   summary: "Juger du beau n'est pas juger de ce que la chose doit être"
-                  rel: declinaison
                   points:
                     - id: ka15a
                       sentence: "La **finalité objective interne** d'une chose, l'accord de son divers avec le concept de ce qu'elle doit être, __est sa__ ___."
@@ -252,7 +238,6 @@ work:
             - id: p16
               label: "§16"
               summary: "Seule la beauté qui ne suppose aucun concept donne un jugement sans mélange"
-              rel: consequence
               points:
                 - id: ka16a
                   sentence: "La **beauté libre**, qui ne présuppose aucun concept de ce que l'objet doit être, __se dit en latin pulchritudo__ ___."
@@ -281,7 +266,6 @@ work:
             - id: p17
               label: "§17"
               summary: "Un modèle achevé de la beauté n'est possible que pour la figure humaine"
-              rel: changement-de-question
               points:
                 - id: ka17a
                   sentence: "Il ne peut y avoir de **règle objective du goût**, __qui déterminerait par des ___ ce qui est beau__."
@@ -315,7 +299,6 @@ work:
                   explanation: "Définition du beau tirée du troisième moment."
         - id: m4
           label: "§18-22"
-          rel: changement-de-question
           parts:
             - id: b18-19
               label: "§18-19"
@@ -334,7 +317,6 @@ work:
                 - id: p19
                   label: "§19"
                   summary: "Chacun doit donner son assentiment, si j'ai bien jugé"
-                  rel: declinaison
                   points:
                     - id: ka19a
                       sentence: "Le « **devoir** » du jugement de goût (chacun doit donner son assentiment) __n'est prononcé que de manière__ ___."
@@ -342,7 +324,6 @@ work:
                       alt: ["conditionnelle", "conditionnellement"]
             - id: b20-22
               label: "§20-22"
-              rel: probleme-solution
               parts:
                 - id: p20
                   label: "§20"
@@ -357,7 +338,6 @@ work:
                 - id: p21
                   label: "§21"
                   summary: "On a de bonnes raisons de présupposer un sens commun"
-                  rel: declinaison
                   points:
                     - id: ka21a
                       sentence: "Connaissances et jugements doivent pouvoir se communiquer universellement, __sans quoi ils ne seraient qu'un jeu__ ___ des facultés de représentation, comme le veut le **scepticisme**."
@@ -368,7 +348,6 @@ work:
                 - id: p22
                   label: "§22"
                   summary: "Le sens commun dit ce qui doit être, non ce qui est"
-                  rel: declinaison
                   points:
                     - id: ka22a
                       sentence: "__Le sens commun n'est qu'une norme__ ___ : il ne dit pas que chacun s'accordera avec mon jugement, mais **qu'il le doit**."
@@ -383,7 +362,6 @@ work:
         - id: rg1
           label: "Remarque générale"
           summary: "Le goût juge un libre accord de l'imagination avec l'entendement"
-          rel: consequence
           points:
             - id: ka-rg1a
               sentence: "Le **goût** est la faculté de juger d'un objet __en rapport avec la libre ___ de l'imagination__."
@@ -439,7 +417,6 @@ work:
             - id: p24
               label: "§24"
               summary: "Le sublime est mathématique ou dynamique"
-              rel: consequence
               points:
                 - id: ks24a
                   sentence: "Le **sublime mathématique** __rapporte le mouvement de l'esprit à la faculté de__ ___."
@@ -452,7 +429,6 @@ work:
                   answer: "quantité"
         - id: s2
           label: "§25-27"
-          rel: consequence
           parts:
             - id: p25
               label: "§25"
@@ -473,7 +449,6 @@ work:
             - id: p26
               label: "§26"
               summary: "L'imagination rencontre une limite quand elle veut tout saisir d'un coup"
-              rel: consequence
               points:
                 - id: ks26a
                   sentence: "__L'évaluation ___ des grandeurs, par les nombres, n'a pas de maximum__ ; l'**évaluation esthétique**, dans l'intuition, en a un."
@@ -497,7 +472,6 @@ work:
             - id: p27
               label: "§27"
               summary: "Le sublime : un déplaisir qui éveille la conscience de notre destination"
-              rel: consequence
               points:
                 - id: ks27a
                   sentence: "« Le sentiment de l'**inadéquation de notre pouvoir à atteindre une Idée**, __qui pour nous est loi, est le__ ___. »"
@@ -517,7 +491,6 @@ work:
                   answer: "violence"
         - id: s3
           label: "§28-29"
-          rel: declinaison
           parts:
             - id: p28
               label: "§28"
@@ -541,7 +514,6 @@ work:
             - id: p29
               label: "§29"
               summary: "Juger du sublime demande une préparation, mais repose sur une disposition naturelle"
-              rel: changement-de-question
               points:
                 - id: ks29a
                   sentence: "Le jugement sur le **sublime de la nature** __requiert, bien plus que celui sur le beau, une__ ___."
@@ -558,7 +530,6 @@ work:
         - id: rg2
           label: "Remarque générale"
           summary: "Beau et sublime préparent au sentiment moral"
-          rel: consequence
           points:
             - id: ks-rg2a
               sentence: "« __Le beau nous prépare à__ ___ quelque chose, même la nature, sans intérêt ; **le sublime, à l'estimer**, même contre notre intérêt (sensible). »"
@@ -590,7 +561,6 @@ work:
             - id: p31
               label: "§31"
               summary: "Un jugement qui prétend à la nécessité doit montrer de quel droit"
-              rel: consequence
               points:
                 - id: kd31a
                   sentence: "__Une **déduction** est la garantie de la__ ___ d'une sorte de jugements : elle n'est requise que pour ceux qui prétendent à la nécessité."
@@ -600,7 +570,6 @@ work:
                   answer: "singulier"
         - id: d2
           label: "§32-34"
-          rel: consequence
           parts:
             - id: p32
               label: "§32"
@@ -618,7 +587,6 @@ work:
             - id: p33
               label: "§33"
               summary: "Aucune preuve ne le détermine, comme s'il était seulement subjectif"
-              rel: declinaison
               points:
                 - id: kd33a
                   sentence: "__Si l'on m'oppose Batteux ou__ ___ contre mon jugement de goût, **je me bouche les oreilles** : je ne veux pas que des raisons décident de ma satisfaction."
@@ -629,7 +597,6 @@ work:
             - id: p34
               label: "§34"
               summary: "Il n'y a pas de principe objectif du goût"
-              rel: consequence
               points:
                 - id: kd34a
                   sentence: "Quand elle montre sur des **exemples** le jeu des facultés, __la critique du goût est un__ ___, non une science."
@@ -639,7 +606,6 @@ work:
                   answer: "transcendantale"
         - id: d3
           label: "§35-38"
-          rel: consequence
           parts:
             - id: p35
               label: "§35"
@@ -654,7 +620,6 @@ work:
             - id: p36
               label: "§36"
               summary: "Le problème : comment des jugements de goût sont-ils possibles ?"
-              rel: consequence
               points:
                 - id: kd36a
                   sentence: "__Le jugement de goût est un jugement__ ___ *a priori* : il ajoute à la représentation de l'objet un plaisir, et **le prétend valable pour tous**."
@@ -662,7 +627,6 @@ work:
             - id: p37
               label: "§37"
               summary: "Ce qui est affirmé a priori, c'est la validité du plaisir pour tous"
-              rel: declinaison
               points:
                 - id: kd37a
                   sentence: "« __Ce n'est pas le plaisir, mais__ l'___ de ce plaisir, perçu comme lié dans l'esprit au simple jugement sur un objet, que nous nous représentons *a priori* dans un jugement de goût. »"
@@ -670,7 +634,6 @@ work:
             - id: p38
               label: "§38"
               summary: "La déduction : le plaisir tient aux conditions subjectives de toute connaissance"
-              rel: probleme-solution
               points:
                 - id: kd38a
                   sentence: "Les **conditions subjectives** de la faculté de juger sont les mêmes chez tous les hommes, __sans quoi ils ne pourraient se__ ___ leurs représentations et leurs connaissances."
@@ -680,7 +643,6 @@ work:
                   answer: "réalité"
         - id: d4
           label: "§39-40"
-          rel: consequence
           parts:
             - id: p39
               label: "§39"
@@ -692,7 +654,6 @@ work:
             - id: p40
               label: "§40"
               summary: "Le goût est une sorte de sens commun"
-              rel: consequence
               points:
                 - id: kd40a
                   sentence: "**Première maxime** de l'entendement commun : __penser par__ ___ ; c'est la manière de penser sans préjugés."
@@ -708,7 +669,6 @@ work:
                   answer: "aestheticus"
         - id: d5
           label: "§41-42"
-          rel: changement-de-question
           parts:
             - id: p41
               label: "§41"
@@ -723,7 +683,6 @@ work:
             - id: p42
               label: "§42"
               summary: "S'intéresser directement à la beauté des fleurs et des oiseaux marque une âme bonne"
-              rel: limite
               points:
                 - id: kd42a
                   sentence: "__Prendre un intérêt immédiat à la beauté de la__ ___ est toujours le signe d'une **âme bonne**."
@@ -736,7 +695,6 @@ work:
                   answer: "aubergiste"
         - id: d6
           label: "§43-50"
-          rel: changement-de-question
           parts:
             - id: p43
               label: "§43"
@@ -751,7 +709,6 @@ work:
             - id: p44
               label: "§44"
               summary: "Beaux-arts, arts d'agrément, art mécanique"
-              rel: consequence
               points:
                 - id: kd44a
                   sentence: "Les **beaux-arts** ont pour fin le plaisir qui accompagne les représentations __en tant que modes de__ ___."
@@ -762,7 +719,6 @@ work:
             - id: p45
               label: "§45"
               summary: "Une œuvre belle doit paraître naturelle"
-              rel: consequence
               points:
                 - id: kd45a
                   sentence: "« **La nature était belle** lorsqu'en même temps __elle avait l'apparence de__ l'___. »"
@@ -770,7 +726,6 @@ work:
             - id: p46
               label: "§46"
               summary: "Les beaux-arts sont les arts du génie"
-              rel: probleme-solution
               points:
                 - id: kd46a
                   sentence: "Le **génie** est la disposition innée de l'esprit (ingenium) __par laquelle la ___ donne ses règles à l'art__."
@@ -781,7 +736,6 @@ work:
             - id: p47
               label: "§47"
               summary: "Le génie n'est pas le grand savant"
-              rel: consequence
               points:
                 - id: kd47a
                   sentence: "___ __pouvait montrer chacun des pas__ qui l'avaient conduit à ses découvertes : ce n'était **pas un génie** au sens de Kant."
@@ -792,7 +746,6 @@ work:
             - id: p48
               label: "§48"
               summary: "Le goût juge, le génie produit"
-              rel: consequence
               points:
                 - id: kd48a
                   sentence: "Une beauté de la nature est une **belle chose** ; __une beauté artistique, une belle__ ___ d'une chose."
@@ -803,7 +756,6 @@ work:
             - id: p49
               label: "§49"
               summary: "Le génie produit des images qui donnent à penser plus qu'aucun concept"
-              rel: consequence
               points:
                 - id: kd49a
                   sentence: "Ce qui manque aux œuvres élégantes mais « **sans âme** », __c'est le principe ___ de l'esprit__."
@@ -814,14 +766,12 @@ work:
             - id: p50
               label: "§50"
               summary: "En cas de conflit, c'est au génie de céder"
-              rel: limite
               points:
                 - id: kd50a
                   sentence: "__Le goût est la ___ du génie__ : il lui **rogne les ailes**, et le rend civilisé et poli."
                   answer: "discipline"
         - id: d7
           label: "§51-54"
-          rel: consequence
           parts:
             - id: p51
               label: "§51"
@@ -833,7 +783,6 @@ work:
             - id: p52
               label: "§52"
               summary: "Les beaux-arts peuvent s'unir en une même œuvre"
-              rel: consequence
               points:
                 - id: kd52a
                   sentence: "Quand les beaux-arts ne sont pas __liés, de près ou de loin, à des Idées__ ___, ils ne servent qu'à la **distraction**."
@@ -841,7 +790,6 @@ work:
             - id: p53
               label: "§53"
               summary: "Hiérarchie des beaux-arts : l'art du langage en tête, la musique en débat"
-              rel: consequence
               points:
                 - id: kd53a
                   sentence: "Parmi tous les **beaux-arts**, __c'est la ___ qui tient le premier rang__."
@@ -852,7 +800,6 @@ work:
             - id: p54
               label: "§54"
               summary: "Le jeu et le rire font du bien au corps"
-              rel: consequence
               points:
                 - id: kd54a
                   sentence: "__Le rire naît de la soudaine réduction à__ ___ d'une **attente tendue**."
@@ -877,7 +824,6 @@ work:
               answer: "a priori"
         - id: x1
           label: "§56-57"
-          rel: consequence
           parts:
             - id: p56
               label: "§56"
@@ -901,7 +847,6 @@ work:
             - id: p57
               label: "§57"
               summary: "Le mot « concept » n'a pas le même sens dans la thèse et l'antithèse"
-              rel: probleme-solution
               points:
                 - id: kx57a
                   sentence: "Dans la **thèse**, il faut entendre : __le jugement de goût ne se fonde pas sur des concepts__ ___."
@@ -919,7 +864,6 @@ work:
             - id: p57r1
               label: "§57, Rem. I"
               summary: "Idées esthétiques et Idées de la raison se répondent"
-              rel: consequence
               points:
                 - id: kx57r1a
                   sentence: "__Une **Idée esthétique** est une représentation__ ___ de l'imagination : aucun concept ne peut l'exposer."
@@ -930,7 +874,6 @@ work:
             - id: p57r2
               label: "§57, Rem. II"
               summary: "Chaque faculté supérieure a son antinomie"
-              rel: consequence
               points:
                 - id: kx57r2a
                   sentence: "Il y a **trois antinomies**, pour la faculté de connaître, pour le sentiment de plaisir et de peine, __et pour la faculté de__ ___."
@@ -941,7 +884,6 @@ work:
         - id: p58
           label: "§58"
           summary: "La finalité du beau est idéale, non réelle"
-          rel: changement-de-question
           points:
             - id: kx58a
               sentence: "L'___ __du goût réduit le beau à l'agréable__ ; le **rationalisme** le fonde sur des principes *a priori*."
@@ -957,7 +899,6 @@ work:
               answer: "propriété"
         - id: x2
           label: "§59-60"
-          rel: changement-de-question
           parts:
             - id: p59
               label: "§59"
@@ -990,7 +931,6 @@ work:
             - id: p60
               label: "§60"
               summary: "Le goût s'éveille, il ne s'enseigne pas"
-              rel: consequence
               points:
                 - id: kx60a
                   sentence: "Il n'y a pas, pour les beaux-arts, de **méthode (methodus)**, __mais seulement une__ ___ (modus)."
@@ -1004,50 +944,6 @@ work:
                 - id: kx60d
                   sentence: "La **vraie propédeutique** pour fonder le goût est le développement des Idées morales et __la culture du sentiment__ ___."
                   answer: "moral"
-  links:
-    - from: p5
-      to: p27
-      rel: reprise
-      points:
-        - id: kl-respect
-          sentence: "Le sentiment du sublime reprend, à l'égard de notre propre destination, le **respect** __que le §5 réservait au__ ___."
-          answer: "bon"
-          alt: ["bien"]
-    - from: p22
-      to: p29
-      rel: reprise
-      points:
-        - id: kl-modalite
-          sentence: "Ce que le sens commun est au beau (§22), __la disposition au sentiment ___ l'est au sublime__ (§29) : le **fondement de sa nécessité**."
-          answer: "moral"
-    - from: p9
-      to: p38
-      rel: reprise
-      points:
-        - id: kl-cle
-          sentence: "La déduction du §38 fonde en droit ce que posait la « **clé** » du §9 : __le plaisir repose sur des conditions subjectives__ ___ à tous les hommes."
-          answer: "communes"
-    - from: p22
-      to: p40
-      rel: reprise
-      points:
-        - id: kl-sens-commun
-          sentence: "Le §40 reprend le sens commun du §22 : le goût est un **sensus communis aestheticus**, __l'entendement sain un sensus communis__ ___."
-          answer: "logicus"
-    - from: p49
-      to: p57r1
-      rel: reprise
-      points:
-        - id: kl-idees
-          sentence: "La Remarque I du §57 reprend l'**Idée esthétique** du §49, __comme le pendant exact de l'Idée de la__ ___."
-          answer: "raison"
-    - from: p17
-      to: p59
-      rel: reprise
-      points:
-        - id: kl-moral
-          sentence: "__L'idéal de la beauté exprimait déjà le__ ___ dans la figure humaine (§17), avant que le §59 fasse du beau le **symbole du bien moral**."
-          answer: "moral"
   recaps:
     - at: m1
       label: "§1-5"

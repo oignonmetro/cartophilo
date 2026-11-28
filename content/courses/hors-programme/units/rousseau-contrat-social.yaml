@@ -4,9 +4,9 @@
 #
 # Refondue le 2026-11-27 depuis l'ancienne unité-œuvre à plan (`work:`) : pour
 # l'instant, la structure seule. Un plan général, puis un sous-repérage par
-# bloc de chapitres, chacun avec une colonne « Lien » (les relations de
-# l'ancien plan) ; les cartes de l'ancien plan y sont rangées, identifiants et
-# explications gardés. Sous chaque bloc, un sous-repérage par chapitre,
+# bloc de chapitres ; les cartes de l'ancien plan y sont rangées, identifiants
+# et explications gardés. Les relations entre parties (colonne « Lien »,
+# liens à distance) sont abandonnées depuis le 2026-11-28. Sous chaque bloc, un sous-repérage par chapitre,
 # paragraphe par paragraphe (2026-11-27), comme au livre I : plans tirés du
 # texte GF, de D. L. Williams, *Rousseau's Social Contract: An Introduction*
 # (Cambridge, 2014), qui numérote les paragraphes comme la GF (« SC, 2.4.5 »),
@@ -41,13 +41,10 @@ lessons:
     | la loi | II, 6 | tout le peuple statue sur tout le peuple ; mais une multitude aveugle ne peut concevoir seule ses lois |
     | le Législateur et le peuple | II, 7-10 | un Législateur sans droit législatif propose les lois à un peuple propre à les supporter |
     | les fins et les sortes de lois | II, 11-12 | liberté et égalité, modifiées selon chaque peuple ; quatre sortes de lois, dont les mœurs |
-
-    {coral}__Le chapitre 6 est la charnière du livre__{/coral} : il achève la théorie de la volonté générale et ouvre le problème que les chapitres suivants résolvent, celui de sa formation.
   tables:
-  - table: mouvement-lieu-ce-qui-s-y-joue-lien
+  - table: mouvement-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-l1-q1
@@ -67,10 +64,10 @@ lessons:
   notes: |-
     **Les trois premiers chapitres tirent les propriétés de la souveraineté de sa définition : n'étant que l'exercice de la volonté générale, elle en a tous les caractères.** Ils sont de même plan : trois faces d'une même idée, non trois étapes.
 
-    | Chapitre | La souveraineté est… | parce que… | Lien |
-    | II, 1 | inaliénable : elle ne peut être ni cédée ni représentée | le pouvoir peut se transmettre, mais non la volonté ; un peuple qui promet d'obéir à un maître cesse d'être un peuple | point de départ |
-    | II, 2 | indivisible | la volonté est générale ou ne l'est pas ; législatif, exécutif, droit de guerre, de justice ou d'impôt n'en sont que des émanations (contre Grotius et Barbeyrac) | déclinaison |
-    | II, 3 | toujours droite | la volonté générale ne regarde qu'à l'intérêt commun ; seules les brigues et les associations partielles trompent le peuple | déclinaison |
+    | Chapitre | La souveraineté est… | parce que… |
+    | II, 1 | inaliénable : elle ne peut être ni cédée ni représentée | le pouvoir peut se transmettre, mais non la volonté ; un peuple qui promet d'obéir à un maître cesse d'être un peuple |
+    | II, 2 | indivisible | la volonté est générale ou ne l'est pas ; législatif, exécutif, droit de guerre, de justice ou d'impôt n'en sont que des émanations (contre Grotius et Barbeyrac) |
+    | II, 3 | toujours droite | la volonté générale ne regarde qu'à l'intérêt commun ; seules les brigues et les associations partielles trompent le peuple |
 
     Le texte : « le pouvoir peut bien se transmettre, mais non pas la volonté » (II, 1) ; « la volonté générale est toujours droite et tend toujours à l'utilité publique : mais il ne s'ensuit pas que les délibérations du peuple aient toujours la même rectitude » (II, 3).
 
@@ -78,10 +75,9 @@ lessons:
 
     ! La volonté générale n'est ni la volonté de tous ni celle de la majorité : c'est la volonté tournée vers l'intérêt commun.
   tables:
-  - table: chapitre-la-souverainete-est-parce-que-lien
+  - table: chapitre-la-souverainete-est-parce-que
     exercises:
     - {kind: order, column: Chapitre}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Chapitre}
   points:
   - id: cs2-1
@@ -108,18 +104,17 @@ lessons:
   notes: |-
     **Le chapitre 1 tire du pacte sa première conséquence : seule la volonté générale peut diriger les forces de l'État, donc la souveraineté, qui n'en est que l'exercice, ne peut s'aliéner.**
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | le bien commun, fin de l'État | § 1 | l'opposition des intérêts a rendu la société nécessaire, leur accord l'a rendue possible : elle doit être gouvernée sur l'intérêt commun | point de départ |
-    | la souveraineté inaliénable | § 2 | exercice de la volonté générale, elle ne peut s'aliéner ni être représentée | conséquence |
-    | la preuve | § 3 | la volonté particulière tend aux préférences, la générale à l'égalité ; un peuple qui promet d'obéir se dissout | justification |
-    | le silence du souverain | § 4 | les ordres des chefs valent volontés générales tant que le souverain, libre de s'y opposer, se tait | précision |
+    | Moment | Lieu | Ce qui s'y joue |
+    | le bien commun, fin de l'État | § 1 | l'opposition des intérêts a rendu la société nécessaire, leur accord l'a rendue possible : elle doit être gouvernée sur l'intérêt commun |
+    | la souveraineté inaliénable | § 2 | exercice de la volonté générale, elle ne peut s'aliéner ni être représentée |
+    | la preuve | § 3 | la volonté particulière tend aux préférences, la générale à l'égalité ; un peuple qui promet d'obéir se dissout |
+    | le silence du souverain | § 4 | les ordres des chefs valent volontés générales tant que le souverain, libre de s'y opposer, se tait |
 
     ! Une volonté particulière peut coïncider avec la volonté générale, mais par hasard : on ne peut s'engager à vouloir demain ce que voudra un homme.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-c1-q1
@@ -142,18 +137,17 @@ lessons:
   notes: |-
     **Le chapitre 2 montre que la souveraineté est indivisible pour la même raison qu'elle est inaliénable : la volonté est générale ou ne l'est pas.** Ceux qui la divisent prennent pour ses parties ce qui n'en est que des émanations.
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | la volonté est générale ou ne l'est pas | § 1 | volonté du corps du peuple, elle fait loi ; d'une partie, ce n'est qu'un décret | point de départ |
-    | l'erreur des politiques | § 2 | ils divisent la souveraineté dans son objet : les charlatans du Japon | réfutation |
-    | parties ou émanations | § 3-4 | déclarer la guerre n'est pas une loi mais une application de la loi ; ces droits supposent tous des volontés suprêmes | explication |
-    | Grotius et Barbeyrac | § 5 | ce défaut d'exactitude obscurcit le droit politique : ils dépouillent les peuples pour faire leur cour aux rois | application |
+    | Moment | Lieu | Ce qui s'y joue |
+    | la volonté est générale ou ne l'est pas | § 1 | volonté du corps du peuple, elle fait loi ; d'une partie, ce n'est qu'un décret |
+    | l'erreur des politiques | § 2 | ils divisent la souveraineté dans son objet : les charlatans du Japon |
+    | parties ou émanations | § 3-4 | déclarer la guerre n'est pas une loi mais une application de la loi ; ces droits supposent tous des volontés suprêmes |
+    | Grotius et Barbeyrac | § 5 | ce défaut d'exactitude obscurcit le droit politique : ils dépouillent les peuples pour faire leur cour aux rois |
 
     ! Le chapitre ne vise pas la séparation des pouvoirs de Montesquieu : législatif et exécutif peuvent être distincts, pourvu que l'exécutif ne soit qu'une émanation de la volonté souveraine.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-c2-q1
@@ -176,18 +170,17 @@ lessons:
   notes: |-
     **Le chapitre 3 distingue la rectitude de la volonté générale de celle des délibérations du peuple, et cherche à quelles conditions celles-ci l'énoncent.**
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | la volonté générale est toujours droite | § 1 | mais non les délibérations : on ne corrompt jamais le peuple, souvent on le trompe | point de départ |
-    | volonté de tous et volonté générale | § 2 | une somme de volontés particulières, ou ce qui reste quand les plus et les moins s'entre-détruisent | distinction |
-    | les associations partielles | § 3 | sans communication, la somme des petites différences donne la volonté générale ; une brigue dominante la réduit à un avis particulier | explication |
-    | les remèdes | § 4 | pas de société partielle, sinon en multiplier le nombre et en prévenir l'inégalité | conséquence |
+    | Moment | Lieu | Ce qui s'y joue |
+    | la volonté générale est toujours droite | § 1 | mais non les délibérations : on ne corrompt jamais le peuple, souvent on le trompe |
+    | volonté de tous et volonté générale | § 2 | une somme de volontés particulières, ou ce qui reste quand les plus et les moins s'entre-détruisent |
+    | les associations partielles | § 3 | sans communication, la somme des petites différences donne la volonté générale ; une brigue dominante la réduit à un avis particulier |
+    | les remèdes | § 4 | pas de société partielle, sinon en multiplier le nombre et en prévenir l'inégalité |
 
     ! La volonté générale n'est pas ce que décide le peuple, quoi qu'il décide : un peuple trompé peut voter contre elle.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-c3-q1
@@ -208,25 +201,20 @@ lessons:
 - id: rousseau-contrat-social-l3
   title: "Repérage : les bornes du souverain et la loi (II, 4-6)"
   notes: |-
-    **Absolu, le souverain est pourtant borné, et par sa nature même : la volonté générale doit partir de tous pour s'appliquer à tous. Le chapitre 6 en tire la définition de la loi, charnière du livre.** Les chapitres 4 et 5 marquent la {sky}limite{/sky} des propriétés établies en II, 1-3.
+    **Absolu, le souverain est pourtant borné, et par sa nature même : la volonté générale doit partir de tous pour s'appliquer à tous. Le chapitre 6 définit la loi.**
 
-    | Chapitre | Thèse | Argument | Lien |
-    | II, 4 | le souverain est absolu, mais borné | tournée vers un objet individuel et déterminé, la volonté générale perd sa rectitude | limite |
-    | II, 5 | il peut exiger la vie du citoyen | le traité a pour fin la conservation des contractants ; le malfaiteur, qui a rompu le traité, est frappé comme ennemi | application |
-    | II, 6 | la loi : tout le peuple statue sur tout le peuple | la volonté et la matière sont alors également générales ; nul n'est injuste envers lui-même | conséquence |
+    | Chapitre | Thèse | Argument |
+    | II, 4 | le souverain est absolu, mais borné | tournée vers un objet individuel et déterminé, la volonté générale perd sa rectitude |
+    | II, 5 | il peut exiger la vie du citoyen | le traité a pour fin la conservation des contractants ; le malfaiteur, qui a rompu le traité, est frappé comme ennemi |
+    | II, 6 | la loi : tout le peuple statue sur tout le peuple | la volonté et la matière sont alors également générales ; nul n'est injuste envers lui-même |
 
     Le texte : « le pouvoir Souverain, tout absolu, tout sacré, tout inviolable qu'il est, ne passe ni ne peut passer les bornes des conventions générales » (II, 4) ; « Le traité social a pour fin la conservation des contractants. Qui veut la fin veut aussi les moyens » (II, 5) ; « quand tout le peuple statue sur tout le peuple [...]. Alors la matière sur laquelle on statue est générale comme la volonté qui statue. C'est cet acte que j'appelle une loi » (II, 6).
 
-    **Un lien à distance : II, 6 reprend II, 3.** « On veut toujours son bien, mais on ne le voit pas toujours » revient, pour un autre usage : en II, 3, le peuple qui ne voit pas son bien est trompé par les brigues ; en II, 6, il est aveugle, incapable de concevoir seul un code de lois.
-
     La charnière : le peuple soumis aux lois doit en être l'auteur, mais une multitude aveugle, qui souvent ne sait ce qu'elle veut, ne peut concevoir d'elle-même un système de législation. « Voilà d'où naît la nécessité d'un Législateur. »
-
-    ! Le droit de vie et de mort n'est pas une exception aux bornes du souverain : il en est une application, puisque le malfaiteur n'est plus membre de l'État.
   tables:
-  - table: chapitre-these-argument-lien
+  - table: chapitre-these-argument
     exercises:
     - {kind: order, column: Chapitre}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Chapitre}
   points:
   - id: cs2-4a
@@ -254,28 +242,24 @@ lessons:
     sentence: "Le peuple soumis aux lois doit en être l'**auteur**, __mais une multitude__ ___, qui souvent ne sait ce qu'elle veut, ne peut concevoir d'elle-même un système de législation."
     answer: aveugle
     explanation: "Au chapitre 3, le peuple qui ne voit pas son bien est trompé par les brigues ; au chapitre 6, il manque de lumières pour rédiger ses lois. Le problème n'est plus politique mais d'entendement."
-  - id: cs2-lien-3-6
-    sentence: "« On veut toujours son bien, mais on ne le voit pas toujours » : même formule en II, 3 et en **II, 6**, deux usages. En II, 3, __le peuple qui ne voit pas son bien est__ ___ par les brigues ; en II, 6, il est aveugle, incapable de concevoir seul un code de lois."
-    answer: trompé
 - id: rousseau-contrat-social-c4
   title: "Repérage : les bornes du pouvoir souverain (II, 4)"
   notes: |-
     **Le chapitre 4 montre que le souverain, absolu, est pourtant borné, et par sa nature même : la volonté générale ne peut porter que sur un objet général et n'imposer que ce qui sert la communauté.**
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | un pouvoir absolu | § 1 | comme la nature donne à l'homme un pouvoir absolu sur ses membres, le pacte au corps politique | point de départ |
-    | la question des bornes | § 2-3 | distinguer les droits du souverain du droit naturel des hommes ; chacun n'aliène que ce dont l'usage importe à la communauté | problème |
-    | l'utilité commune | § 4 | le souverain ne peut charger les sujets d'aucune chaîne inutile à la communauté | limite |
-    | la généralité de l'objet | § 5-7 | la volonté générale doit partir de tous pour s'appliquer à tous ; sur un objet particulier, elle n'est plus qu'une partie dans un procès | limite |
-    | l'acte de souveraineté | § 8-9 | une convention du corps avec chacun de ses membres, qui ne passe pas les bornes des conventions générales | conclusion |
-    | un échange avantageux | § 10 | au lieu d'une aliénation, l'indépendance naturelle échangée contre la liberté ; même la vie exposée pour la patrie | conséquence |
+    | Moment | Lieu | Ce qui s'y joue |
+    | un pouvoir absolu | § 1 | comme la nature donne à l'homme un pouvoir absolu sur ses membres, le pacte au corps politique |
+    | la question des bornes | § 2-3 | distinguer les droits du souverain du droit naturel des hommes ; chacun n'aliène que ce dont l'usage importe à la communauté |
+    | l'utilité commune | § 4 | le souverain ne peut charger les sujets d'aucune chaîne inutile à la communauté |
+    | la généralité de l'objet | § 5-7 | la volonté générale doit partir de tous pour s'appliquer à tous ; sur un objet particulier, elle n'est plus qu'une partie dans un procès |
+    | l'acte de souveraineté | § 8-9 | une convention du corps avec chacun de ses membres, qui ne passe pas les bornes des conventions générales |
+    | un échange avantageux | § 10 | au lieu d'une aliénation, l'indépendance naturelle échangée contre la liberté ; même la vie exposée pour la patrie |
 
     ! Les bornes ne viennent pas d'un droit extérieur opposé au souverain : elles tiennent à ce qu'est une volonté générale.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-c4-q1
@@ -307,19 +291,18 @@ lessons:
   notes: |-
     **Le chapitre 5 répond à une objection : comment des particuliers qui ne peuvent disposer de leur vie donneraient-ils ce droit au souverain ?** Il en tire le droit d'exposer le citoyen, puis la peine de mort et le droit de grâce.
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | la question mal posée | § 1 | tout homme a droit de risquer sa vie pour la conserver | point de départ |
-    | la vie, don de l'État | § 2 | qui veut la fin veut les moyens : le citoyen doit mourir si la loi l'exige | réponse |
-    | la peine de mort | § 3-4 | on consent à mourir si l'on devient assassin ; le malfaiteur, qui a rompu le traité, meurt en ennemi | application |
-    | la condamnation, acte particulier | § 5 | elle n'appartient pas au souverain, qui peut seulement en conférer le droit | objection |
-    | la rareté des supplices et des grâces | § 6-7 | la fréquence des supplices est signe de faiblesse ; le droit de grâce n'appartient qu'au souverain | limite |
+    | Moment | Lieu | Ce qui s'y joue |
+    | la question mal posée | § 1 | tout homme a droit de risquer sa vie pour la conserver |
+    | la vie, don de l'État | § 2 | qui veut la fin veut les moyens : le citoyen doit mourir si la loi l'exige |
+    | la peine de mort | § 3-4 | on consent à mourir si l'on devient assassin ; le malfaiteur, qui a rompu le traité, meurt en ennemi |
+    | la condamnation, acte particulier | § 5 | elle n'appartient pas au souverain, qui peut seulement en conférer le droit |
+    | la rareté des supplices et des grâces | § 6-7 | la fréquence des supplices est signe de faiblesse ; le droit de grâce n'appartient qu'au souverain |
 
     ! Le chapitre s'accorde mal avec le reste du livre : il fait du criminel un ennemi, alors que la guerre est une relation d'État à État (I, 4).
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-c5-q1
@@ -340,23 +323,22 @@ lessons:
 - id: rousseau-contrat-social-c6
   title: "Repérage : la loi (II, 6)"
   notes: |-
-    **Le chapitre 6, pivot du livre, définit la loi : le pacte a donné l'existence au corps politique, la législation doit lui donner le mouvement et la volonté.** Il s'achève sur le problème que les chapitres suivants résolvent.
+    **Le chapitre 6, pivot du livre, définit la loi : le pacte a donné l'existence au corps politique, la législation doit lui donner le mouvement et la volonté.**
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | de l'existence au mouvement | § 1 | l'acte primitif ne détermine rien de ce que le corps doit faire pour se conserver | point de départ |
-    | pourquoi des lois | § 2 | la justice universelle, sans sanction naturelle, n'est admise qu'à condition d'être réciproque | justification |
-    | qu'est-ce qu'une loi ? | § 3-5 | pas de volonté générale sur un objet particulier ; quand tout le peuple statue sur tout le peuple, c'est une loi | définition |
-    | l'objet toujours général | § 6 | la loi peut établir des privilèges ou une royauté, jamais nommer quelqu'un | précision |
-    | les conséquences | § 7-8 | qui fait les lois, si le Prince est au-dessus d'elles, si la loi peut être injuste ; le décret n'est pas une loi | conséquence |
-    | la République | § 9 | tout État régi par des lois, sous quelque forme d'administration que ce soit | conséquence |
-    | le problème | § 10 | le peuple, auteur des lois, est une multitude aveugle : la nécessité d'un Législateur | problème |
+    | Moment | Lieu | Ce qui s'y joue |
+    | de l'existence au mouvement | § 1 | l'acte primitif ne détermine rien de ce que le corps doit faire pour se conserver |
+    | pourquoi des lois | § 2 | la justice universelle, sans sanction naturelle, n'est admise qu'à condition d'être réciproque |
+    | qu'est-ce qu'une loi ? | § 3-5 | pas de volonté générale sur un objet particulier ; quand tout le peuple statue sur tout le peuple, c'est une loi |
+    | l'objet toujours général | § 6 | la loi peut établir des privilèges ou une royauté, jamais nommer quelqu'un |
+    | les conséquences | § 7-8 | qui fait les lois, si le Prince est au-dessus d'elles, si la loi peut être injuste ; le décret n'est pas une loi |
+    | la République | § 9 | tout État régi par des lois, sous quelque forme d'administration que ce soit |
+    | le problème | § 10 | le peuple, auteur des lois, est une multitude aveugle : la nécessité d'un Législateur |
 
     ! « République » ne désigne pas une forme de gouvernement : tout gouvernement légitime, même royal, est républicain.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-c6-q1
@@ -380,15 +362,13 @@ lessons:
 - id: rousseau-contrat-social-l4
   title: "Repérage : le Législateur et le peuple (II, 7-10)"
   notes: |-
-    **Comment le peuple peut-il se donner de bonnes lois ? Par un Législateur qui les propose sans rien imposer (chap. 7), à un peuple qui soit en état de les recevoir (chap. 8-10).** Le bloc répond au problème que pose la fin de II, 6.
+    **Comment le peuple peut-il se donner de bonnes lois ? Par un Législateur qui les propose sans rien imposer (chap. 7), à un peuple qui soit en état de les recevoir (chap. 8-10).**
 
-    | Chapitre | Thèse | Argument | Lien |
-    | II, 7 | le Législateur propose, le peuple adopte | seule la volonté générale oblige : celui qui rédige les lois n'a aucun droit législatif | solution |
-    | II, 8 | le peuple doit être encore jeune | une fois les coutumes établies et les préjugés enracinés, il est dangereux et vain de les réformer | application |
-    | II, 9 | l'État, ni trop grand ni trop petit | plus le lien social s'étend, plus il se relâche | déclinaison |
-    | II, 10 | la terre doit nourrir ses habitants | ce sont les hommes qui font l'État, et le terrain qui nourrit les hommes ; il faut aussi l'abondance et la paix | déclinaison |
-
-    **Un lien à distance : II, 7 résout le problème de II, 6.** Le peuple, auteur légitime des lois, veut le bien sans toujours le voir ; il faut unir l'entendement à la volonté dans le corps social : « Voilà d'où naît la nécessité d'un Législateur. »
+    | Chapitre | Thèse | Argument |
+    | II, 7 | le Législateur propose, le peuple adopte | seule la volonté générale oblige : celui qui rédige les lois n'a aucun droit législatif |
+    | II, 8 | le peuple doit être encore jeune | une fois les coutumes établies et les préjugés enracinés, il est dangereux et vain de les réformer |
+    | II, 9 | l'État, ni trop grand ni trop petit | plus le lien social s'étend, plus il se relâche |
+    | II, 10 | la terre doit nourrir ses habitants | ce sont les hommes qui font l'État, et le terrain qui nourrit les hommes ; il faut aussi l'abondance et la paix |
 
     Le texte : « Celui qui ose entreprendre d'instituer un peuple doit se sentir en état de changer, pour ainsi dire, la nature humaine » (II, 7) ; « Plus le lien social s'étend, plus il se relâche, et en général un petit État est proportionnellement plus fort qu'un grand » (II, 9) ; le rapport est « que la terre suffise à l'entretien de ses habitants, et qu'il y ait autant d'habitants que la terre en peut nourrir » (II, 10).
 
@@ -396,10 +376,9 @@ lessons:
 
     ! Le Législateur n'est ni magistrat ni souverain : il n'a aucun droit législatif, et n'impose rien.
   tables:
-  - table: chapitre-these-argument-lien
+  - table: chapitre-these-argument
     exercises:
     - {kind: order, column: Chapitre}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Chapitre}
   points:
   - id: cs2-lien-6-7
@@ -437,20 +416,19 @@ lessons:
   notes: |-
     **Le chapitre 7 fait paraître une figure hors du commun, qui rédige les lois sans pouvoir les imposer : le peuple seul les fait siennes.** D'où sa difficulté propre, qu'il résout par une autorité d'un autre ordre.
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | il faudrait des Dieux | § 1-2 | une intelligence supérieure ; le Législateur, mécanicien qui invente la machine | point de départ |
-    | changer la nature humaine | § 3 | faire de chaque individu, tout parfait et solitaire, la partie d'un plus grand tout | précision |
-    | un emploi hors de la constitution | § 4-7 | ni magistrature ni souveraineté : Lycurgue abdique ; celui qui rédige les lois n'a aucun droit législatif | limite |
-    | deux choses incompatibles | § 8 | une entreprise au-dessus de la force humaine, une autorité qui n'est rien | difficulté |
-    | l'autorité d'un autre ordre | § 9-11 | ni force ni raisonnement : entraîner sans violence, persuader sans convaincre ; la grande âme du Législateur | solution |
-    | politique et religion | § 12 | contre Warburton : à l'origine des nations, l'une sert d'instrument à l'autre | précision |
+    | Moment | Lieu | Ce qui s'y joue |
+    | il faudrait des Dieux | § 1-2 | une intelligence supérieure ; le Législateur, mécanicien qui invente la machine |
+    | changer la nature humaine | § 3 | faire de chaque individu, tout parfait et solitaire, la partie d'un plus grand tout |
+    | un emploi hors de la constitution | § 4-7 | ni magistrature ni souveraineté : Lycurgue abdique ; celui qui rédige les lois n'a aucun droit législatif |
+    | deux choses incompatibles | § 8 | une entreprise au-dessus de la force humaine, une autorité qui n'est rien |
+    | l'autorité d'un autre ordre | § 9-11 | ni force ni raisonnement : entraîner sans violence, persuader sans convaincre ; la grande âme du Législateur |
+    | politique et religion | § 12 | contre Warburton : à l'origine des nations, l'une sert d'instrument à l'autre |
 
     ! Le Législateur intervient pour l'institution du peuple, non dans le peuple institué : une fois la république établie, le peuple fait lui-même ses lois.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-c7-q1
@@ -479,18 +457,17 @@ lessons:
   notes: |-
     **Le chapitre 8 ouvre l'examen du peuple propre à recevoir des lois par la condition du temps : un peuple n'est docile que jeune.**
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | l'architecte sonde le sol | § 1 | le sage instituteur examine d'abord si le peuple est propre à supporter les lois | point de départ |
-    | la jeunesse des peuples | § 2 | dociles dans leur jeunesse, ils deviennent incorrigibles en vieillissant | condition |
-    | les révolutions qui font renaître | § 3-4 | Sparte, Rome, la Hollande, la Suisse ; mais une seule fois : on peut acquérir la liberté, on ne la recouvre jamais | exception |
-    | la maturité d'un peuple | § 5 | la prévenir manque l'ouvrage : Pierre le Grand a policé les Russes trop tôt | précision |
+    | Moment | Lieu | Ce qui s'y joue |
+    | l'architecte sonde le sol | § 1 | le sage instituteur examine d'abord si le peuple est propre à supporter les lois |
+    | la jeunesse des peuples | § 2 | dociles dans leur jeunesse, ils deviennent incorrigibles en vieillissant |
+    | les révolutions qui font renaître | § 3-4 | Sparte, Rome, la Hollande, la Suisse ; mais une seule fois : on peut acquérir la liberté, on ne la recouvre jamais |
+    | la maturité d'un peuple | § 5 | la prévenir manque l'ouvrage : Pierre le Grand a policé les Russes trop tôt |
 
     ! Jeunesse et maturité ne se contredisent pas : il faut un peuple qui n'ait pas encore de coutumes enracinées, mais qui soit en état de recevoir des lois.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-c8-q1
@@ -513,19 +490,18 @@ lessons:
   notes: |-
     **Le chapitre 9 traite de la deuxième condition, l'étendue : un État a, comme un corps, des bornes au-delà desquelles il s'affaiblit.**
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | ni trop grand ni trop petit | § 1 | plus le lien social s'étend, plus il se relâche | point de départ |
-    | contre les grands États | § 2-3 | administration plus pénible et plus onéreuse ; moins d'affection, lois inadaptées ; un corps écrasé sous son propre poids | justification |
-    | une base pour résister | § 4 | la force centrifuge des peuples : il faut tenir contre les voisins | objection |
-    | la juste proportion | § 5 | les raisons de s'étendre, extérieures, cèdent aux raisons de se resserrer, internes | conclusion |
-    | les États conquérants | § 6 | la nécessité des conquêtes marque le terme de leur grandeur et le moment de leur chute | précision |
+    | Moment | Lieu | Ce qui s'y joue |
+    | ni trop grand ni trop petit | § 1 | plus le lien social s'étend, plus il se relâche |
+    | contre les grands États | § 2-3 | administration plus pénible et plus onéreuse ; moins d'affection, lois inadaptées ; un corps écrasé sous son propre poids |
+    | une base pour résister | § 4 | la force centrifuge des peuples : il faut tenir contre les voisins |
+    | la juste proportion | § 5 | les raisons de s'étendre, extérieures, cèdent aux raisons de se resserrer, internes |
+    | les États conquérants | § 6 | la nécessité des conquêtes marque le terme de leur grandeur et le moment de leur chute |
 
     ! La préférence pour les petits États n'est pas un goût personnel : la volonté générale se forme mal entre citoyens inconnus les uns aux autres.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-c9-q1
@@ -545,19 +521,18 @@ lessons:
   notes: |-
     **Le chapitre 10 achève l'examen du peuple : le rapport du territoire à la population, puis le moment de l'institution, et enfin le portrait du peuple propre à la législation.**
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | territoire et population | § 1 | que la terre suffise à ses habitants : le terrain de trop cause les guerres défensives, le manque les offensives | point de départ |
-    | pas de rapport fixe | § 2 | sol, climat, tempéraments, fécondité : juger sur ce qu'on prévoit | précision |
-    | l'abondance et la paix | § 3-4 | le moment de l'institution distingue l'œuvre du Législateur de celle du Tyran | condition |
-    | le peuple propre à la législation | § 5 | la consistance d'un ancien peuple avec la docilité d'un peuple nouveau | récapitulation |
-    | la Corse | § 6 | il est encore en Europe un pays capable de législation | application |
+    | Moment | Lieu | Ce qui s'y joue |
+    | territoire et population | § 1 | que la terre suffise à ses habitants : le terrain de trop cause les guerres défensives, le manque les offensives |
+    | pas de rapport fixe | § 2 | sol, climat, tempéraments, fécondité : juger sur ce qu'on prévoit |
+    | l'abondance et la paix | § 3-4 | le moment de l'institution distingue l'œuvre du Législateur de celle du Tyran |
+    | le peuple propre à la législation | § 5 | la consistance d'un ancien peuple avec la docilité d'un peuple nouveau |
+    | la Corse | § 6 | il est encore en Europe un pays capable de législation |
 
     ! Le peuple doit être « déjà lié par quelque union » : le Législateur ne crée pas le lien social de rien, il lui donne des lois.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-c10-q1
@@ -578,13 +553,13 @@ lessons:
 - id: rousseau-contrat-social-l5
   title: "Repérage : les fins et les sortes de lois (II, 11-12)"
   notes: |-
-    **Les deux derniers chapitres disent à quoi doit tendre toute législation, la liberté et l'égalité, puis distinguent quatre sortes de lois, dont la plus importante ne s'écrit pas : les mœurs.** Ils tirent les conséquences de ce qui précède : ce que le Législateur doit viser, et ce qu'il institue.
+    **Les deux derniers chapitres disent à quoi doit tendre toute législation, la liberté et l'égalité, puis distinguent quatre sortes de lois, dont la plus importante ne s'écrit pas : les mœurs.**
 
-    | Chapitre | Thèse | Argument | Lien |
-    | II, 11 | les lois doivent viser la liberté et l'égalité | toute dépendance particulière ôte autant de force à l'État, et la liberté ne peut subsister sans l'égalité | conséquence |
-    | II, 11 | ces deux fins se modifient selon chaque peuple | la situation locale et le caractère des habitants donnent à chacun un système qui lui est propre | application |
-    | II, 12 | les lois politiques, civiles et criminelles | chacune règle un rapport différent : du tout au tout, des membres entre eux, de la désobéissance à la peine | conséquence |
-    | II, 12 | la quatrième, la plus importante : les mœurs | elles se gravent dans les cœurs des citoyens et font la véritable constitution de l'État | déclinaison |
+    | Chapitre | Thèse | Argument |
+    | II, 11 | les lois doivent viser la liberté et l'égalité | toute dépendance particulière ôte autant de force à l'État, et la liberté ne peut subsister sans l'égalité |
+    | II, 11 | ces deux fins se modifient selon chaque peuple | la situation locale et le caractère des habitants donnent à chacun un système qui lui est propre |
+    | II, 12 | les lois politiques, civiles et criminelles | chacune règle un rapport différent : du tout au tout, des membres entre eux, de la désobéissance à la peine |
+    | II, 12 | la quatrième, la plus importante : les mœurs | elles se gravent dans les cœurs des citoyens et font la véritable constitution de l'État |
 
     Le texte : le plus grand bien de tous « se réduit à ces deux objets principaux, la liberté et l'égalité » (II, 11) ; la quatrième sorte de lois, « la plus importante de toutes ; qui ne se grave ni sur le marbre ni sur l'airain, mais dans les cœurs des citoyens [...] Je parle des mœurs, des coutumes, et surtout de l'opinion » (II, 12).
 
@@ -592,10 +567,9 @@ lessons:
 
     ! Les mœurs ne sont pas un simple complément des lois : Rousseau en fait la plus importante de toutes.
   tables:
-  - table: chapitre-these-argument-lien
+  - table: chapitre-these-argument
     exercises:
     - {kind: order, column: Chapitre}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Chapitre}
   points:
   - id: cs2-11a
@@ -617,19 +591,18 @@ lessons:
   notes: |-
     **Le chapitre 11 dit les deux fins de toute législation, la liberté et l'égalité, puis comment elles se modifient selon chaque peuple.**
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | les deux fins | § 1 | liberté et égalité, car la liberté ne peut subsister sans l'égalité | point de départ |
-    | ce qu'est l'égalité | § 2 | non des degrés identiques : nul assez opulent pour acheter un autre, nul assez pauvre pour se vendre | précision |
-    | une chimère ? | § 3 | la force des choses détruit l'égalité, la force de la législation doit la maintenir | objection |
-    | un système propre à chaque peuple | § 4 | la situation locale et le caractère des habitants : industrie, agriculture, mer | application |
-    | la convenance | § 5 | les lois doivent accompagner les rapports naturels, sinon l'invincible nature reprend son empire | conclusion |
+    | Moment | Lieu | Ce qui s'y joue |
+    | les deux fins | § 1 | liberté et égalité, car la liberté ne peut subsister sans l'égalité |
+    | ce qu'est l'égalité | § 2 | non des degrés identiques : nul assez opulent pour acheter un autre, nul assez pauvre pour se vendre |
+    | une chimère ? | § 3 | la force des choses détruit l'égalité, la force de la législation doit la maintenir |
+    | un système propre à chaque peuple | § 4 | la situation locale et le caractère des habitants : industrie, agriculture, mer |
+    | la convenance | § 5 | les lois doivent accompagner les rapports naturels, sinon l'invincible nature reprend son empire |
 
     ! L'égalité visée n'est pas une égalité de fait des fortunes : c'est l'absence de toute dépendance d'un citoyen à l'égard d'un autre.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-c11-q1
@@ -649,19 +622,18 @@ lessons:
   notes: |-
     **Le chapitre 12 classe les lois selon les rapports qu'elles règlent, et fait des mœurs la plus importante de toutes.**
 
-    | Moment | Lieu | Ce qui s'y joue | Lien |
-    | les lois politiques | § 1-2 | le rapport du tout au tout, du Souverain à l'État ; un peuple reste maître de changer ses lois | point de départ |
-    | les lois civiles | § 3 | les membres entre eux : indépendance de chacun à l'égard des autres, dépendance à l'égard de la Cité | déclinaison |
-    | les lois criminelles | § 4 | moins une espèce de lois que la sanction de toutes les autres | déclinaison |
-    | les mœurs | § 5 | gravées dans les cœurs des citoyens, elles font la véritable constitution de l'État | déclinaison |
-    | retour au sujet | § 6 | seules les lois politiques relèvent de l'ouvrage | conclusion |
+    | Moment | Lieu | Ce qui s'y joue |
+    | les lois politiques | § 1-2 | le rapport du tout au tout, du Souverain à l'État ; un peuple reste maître de changer ses lois |
+    | les lois civiles | § 3 | les membres entre eux : indépendance de chacun à l'égard des autres, dépendance à l'égard de la Cité |
+    | les lois criminelles | § 4 | moins une espèce de lois que la sanction de toutes les autres |
+    | les mœurs | § 5 | gravées dans les cœurs des citoyens, elles font la véritable constitution de l'État |
+    | retour au sujet | § 6 | seules les lois politiques relèvent de l'ouvrage |
 
     ! Les lois criminelles ne règlent pas un rapport de plus : elles sanctionnent les autres.
   tables:
-  - table: moment-lieu-ce-qui-s-y-joue-lien
+  - table: moment-lieu-ce-qui-s-y-joue
     exercises:
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
     - {kind: cell, column: Lieu}
   points:
   - id: rousseau-contrat-social-c12-q1
