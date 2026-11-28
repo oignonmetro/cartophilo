@@ -48,20 +48,24 @@ lessons:
     answer: "la philosophie morale populaire"
     alt: []
   - id: kant-bonheur-prudence-i1-5
+    sentence: "Face aux **commandements du devoir**, l'homme sent en lui __« un ___ qui réside dans ses besoins et dans ses inclinations »__ (*Fondements*, I)."
+    answer: "puissant contrepoids"
+    alt: []
+  - id: kant-bonheur-prudence-i1-p1
+    sentence: "Face aux **commandements du devoir**, l'homme sent en lui __« un puissant contrepoids qui réside dans ses ___ et dans ses inclinations »__ (*Fondements*, I)."
+    answer: "besoins"
+    alt: []
+  - id: kant-bonheur-prudence-i1-p2
     sentence: "Face aux **commandements du devoir**, l'homme sent en lui __« un puissant contrepoids qui réside dans ses besoins et dans ses ___ »__ (*Fondements*, I)."
     answer: "inclinations"
     alt: []
   - id: kant-bonheur-prudence-i1-3
-    sentence: "Le penchant de la raison à plier les lois strictes du devoir à nos inclinations s'appelle __la « ___ naturelle » de la raison.__"
-    answer: "dialectique"
+    sentence: "Le penchant de la raison à plier les lois strictes du devoir à nos inclinations s'appelle __la « ___ » de la raison.__"
+    answer: "dialectique naturelle"
     alt: []
   - id: kant-bonheur-prudence-i1-2
     sentence: "La doctrine qui place **le bonheur** au fondement de la moralité, et que le texte réfute, __s'appelle l'___.__"
     answer: "eudémonisme"
-    alt: []
-  - id: kant-bonheur-prudence-i1-x1
-    sentence: "L'argument du texte a la forme d'un **syllogisme** : la majeure, puis __la mineure ouverte par « ___ »,__ puis la conclusion ouverte par « Il suit de là »."
-    answer: "Or"
     alt: []
 - id: kant-bonheur-prudence-i2
   title: "Les trois sortes d'impératifs"
@@ -77,15 +81,39 @@ lessons:
     | de la prudence | le bonheur, fin réelle chez tous les êtres raisonnables finis | des conseils ; hypothétique assertorique |
     | de la moralité | aucune fin préalable : l'action est bonne en elle-même | des commandements (lois) ; catégorique, apodictique |
 
-    **Pourquoi ce tableau prépare-t-il le texte ?** Parce que {amber}« qui veut la fin veut aussi les moyens »{/amber} est, dit Kant, une proposition {violet}analytique{/violet} : vouloir la fin, c'est déjà vouloir ce qui y mène. L'impératif de l'habileté commande donc sans difficulté, dès qu'on connaît les moyens. {coral}Celui de la prudence le pourrait aussi, si l'on savait ce qu'est le bonheur{/coral}, puisque sa fin est voulue par tous. Le texte montre justement qu'on ne le sait pas.
+    {amber}« Qui veut la fin veut aussi les moyens »{/amber} est, dit Kant, une proposition {violet}analytique{/violet} : vouloir la fin, c'est déjà vouloir ce qui y mène. L'**impératif de l'habileté** commande donc sans difficulté, dès qu'on connaît les moyens. {coral}Celui de la prudence le pourrait aussi, si l'on savait ce qu'est le bonheur{/coral}, puisque sa fin est voulue par tous. Le texte montre justement qu'on ne le sait pas.
 
-    ! La prudence n'est pas la moralité : son impératif reste {red}hypothétique{/red}, même si sa fin est universelle. Le texte établit qu'il ne peut jamais s'ériger en {green}loi{/green}.
+    ! La {violet}**prudence**{/violet} n'est pas la moralité : son impératif reste {red}hypothétique{/red}, même si sa fin est universelle. Le texte établit qu'il ne peut jamais s'ériger en {green}loi{/green}.
+  tables:
+  - table: imperatif-fin-visee-ce-qu-il-donne
+    exercises:
+    - {kind: bank, column: Fin visée}
+    - {kind: cell, column: Impératif, row: de la moralité}
+    - {kind: cell, column: Impératif, row: de la prudence}
+    - {kind: cell, column: Impératif, row: de l'habileté}
+    - {kind: bank, column: Ce qu'il donne}
   passage:
     label: "Introduction"
   points:
   - id: kant-bonheur-prudence-i2-1
     sentence: "**Kant définit l'impératif** comme __la formule d'un commandement de la raison, principe objectif ___ pour une volonté.__"
     answer: "contraignant"
+    alt: []
+  - id: kant-bonheur-prudence-i2-p1
+    sentence: "Kant définit l'impératif ainsi : {teal}« {/teal}La représentation d'un principe objectif, en tant qu'il est {teal}___{/teal}, se nomme un commandement (de la raison), et la formule du commandement se nomme {teal}un impératif. »{/teal} {sky}(*Fondements*, II.){/sky}"
+    answer: "contraignant pour une volonté"
+    alt: []
+  - id: kant-bonheur-prudence-i2-p2
+    sentence: "Kant définit l'impératif ainsi : {teal}« {/teal}La ___, en tant qu'il est {teal}contraignant pour une volonté{/teal}, se nomme un commandement (de la raison), et la formule du commandement se nomme {teal}un impératif. »{/teal} {sky}(*Fondements*, II.){/sky}"
+    answer: "représentation d'un principe objectif"
+    alt: []
+  - id: kant-bonheur-prudence-i2-p3
+    sentence: "Kant définit l'impératif ainsi : {teal}« {/teal}La représentation d'un principe objectif, en tant qu'il est {teal}contraignant pour une volonté{/teal}, se nomme un ___ (de la raison), et la formule du commandement se nomme {teal}un impératif. »{/teal} {sky}(*Fondements*, II.){/sky}"
+    answer: "commandement"
+    alt: []
+  - id: kant-bonheur-prudence-i2-p4
+    sentence: "Kant définit l'impératif ainsi : {teal}« {/teal}La représentation d'un principe objectif, en tant qu'il est {teal}contraignant pour une volonté{/teal}, se nomme un commandement (de la raison), et la formule du commandement se nomme {teal}un ___. »{/teal} {sky}(*Fondements*, II.){/sky}"
+    answer: "impératif"
     alt: []
   - id: kant-bonheur-prudence-i2-2
     sentence: "Pour un être **purement raisonnable**, comme une volonté divine, __la raison détermine ___ la volonté,__ sans impératif."

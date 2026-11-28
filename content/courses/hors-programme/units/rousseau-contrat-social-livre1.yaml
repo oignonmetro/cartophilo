@@ -23,35 +23,39 @@ lessons:
   notes: |-
     Le livre I ne pose qu'**un seul problème**, celui de la {amber}**légitimité de l'ordre civil**{/amber}, et le résout. Il procède en {sky}deux temps{/sky} : {red}__une partie négative__{/red} (chap. 2 à 5) écarte les fausses conceptions du lien social et remonte à la première convention ; {green}__une partie positive__{/green} (chap. 6 à 9) forme le pacte social et en tire les conséquences. Le préambule, écrit après coup, ouvre le chapitre 1.
 
-    | Mouvement | Lieu | Ce qui s'y joue | Lien |
-    | le problème (préambule et chap. 1) | I, 1 | l'homme est né libre, et partout il est dans les fers : qu'est-ce qui peut rendre ce changement légitime ? | point de départ |
-    | les fausses conceptions du lien social | I, 2-4 | ni la nature, ni la force, ni une convention de soumission ne fondent une autorité légitime | réfutation |
-    | la première convention | I, 5 | tout pacte de soumission suppose l'acte par lequel un peuple est un peuple | conséquence |
-    | le pacte social | I, 6 | une association où chacun, s'unissant à tous, n'obéit qu'à lui-même : l'aliénation totale à la communauté | solution |
-    | les effets du pacte | I, 7-9 | les obligations du souverain et des sujets, le passage à l'état civil, la propriété | conséquence |
+    | Mouvement | Lieu | Ce qui s'y joue |
+    | le problème | chap. 1 | « l'homme est né libre, et partout il est dans les fers » : qu'est-ce qui peut rendre ce changement légitime ? |
+    | les fausses conceptions du lien social | chap. 2-4 | ni la nature, ni la force, ni une convention de soumission ne fondent une autorité légitime |
+    | la première convention | chap. 5 | tout pacte de soumission suppose l'acte par lequel un peuple est un peuple |
+    | le pacte social | chap. 6 | une association où chacun, s'unissant à tous, n'obéit qu'à lui-même : l'aliénation totale à la communauté |
+    | les effets du pacte | chap. 7-9 | les obligations du souverain et des sujets, le passage à l'état civil, la propriété |
 
-    {coral}__Ouvert sur la liberté, le livre se referme sur l'égalité__{/coral} : « L'homme est né libre » (I, 1) ; les hommes « deviennent tous égaux par convention et de droit » (I, 9).
+    {coral}__Ouvert sur la **liberté**, le livre se referme sur l'**égalité**__{/coral} : « L'homme est né libre » (I, 1) ; les hommes « deviennent tous égaux par convention et de droit » (I, 9).
 
     ! La partie négative n'est pas un préalable sans contenu : chaque réfutation y pose une thèse positive du droit politique.
   tables:
-  - table: mouvement-lieu-ce-qui-s-y-joue-lien
+  - table: mouvement-lieu-ce-qui-s-y-joue
     exercises:
+    - {kind: order, column: Mouvement}
     - {kind: order, column: Lieu}
-    - {kind: bank, column: Lien}
-    - {kind: cell, column: Lieu}
+    - {kind: bank, column: Ce qui s'y joue}
   points:
   - id: rousseau-contrat-social-livre1-l1-q1
     sentence: "Le livre I du *Contrat social* procède en deux temps : les chapitres 2 à 5 __réfutent les fausses conceptions du__ ___ **social**, les chapitres 6 à 9 forment le pacte social et en tirent les conséquences."
     answer: "lien"
+    alt: []
   - id: rousseau-contrat-social-livre1-l1-q2
     sentence: "Les chapitres 2 à 4 du livre I du *Contrat social* écartent trois fondements de l'autorité : la nature, __la__ ___, et une convention de soumission."
     answer: "force"
+    alt: []
   - id: rousseau-contrat-social-livre1-l1-q3
     sentence: "Le chapitre 6 du livre I du *Contrat social*, « Du pacte social », énonce le « __problème__ ___ » dont le contrat social donne la solution."
     answer: "fondamental"
+    alt: []
   - id: rousseau-contrat-social-livre1-l1-q4
     sentence: "Ouvert sur la liberté, le livre I du *Contrat social* se referme sur l'**égalité** : les hommes « __deviennent tous égaux par__ ___ et de droit » (I, 9, § 8)."
     answer: "convention"
+    alt: []
 - id: rousseau-contrat-social-livre1-l2
   title: "Repérage : le problème (préambule et I, 1)"
   notes: |-
