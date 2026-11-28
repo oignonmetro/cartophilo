@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useMemo, useState } from 'react'
+import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { LibraryCourse, SubjectGroup, TermEntry, Track, TreatiseEntry, Unit } from '@/content/schema'
@@ -32,21 +32,85 @@ import { ChevronLeftIcon, ClockIcon, FlameIcon, StarIcon, UnitIcon } from '@/com
 
 /**
  * Cartes en pile sur téléphone, en grille sur ordinateur, avec autant de
- * colonnes que la largeur en admet. `dense` : le contenu d'un groupe déplié
- * prend toute la largeur, et les cartes suivantes viennent combler la rangée
- * de son en-tête, au-dessus de lui.
+ * colonnes que la largeur en admet. `dense` : un groupe déplié occupe toute
+ * la largeur (voir `Fold`), et les cartes suivantes viennent combler la
+ * rangée qu'il quitte.
  */
 const CARD_GRID =
   'flex flex-col gap-3 lg:grid lg:grid-flow-row-dense lg:grid-cols-[repeat(auto-fill,minmax(min(100%,21rem),1fr))]'
 
-/** Contenu d'un groupe déplié : en retrait sur téléphone, en colonnes sur toute la largeur sur ordinateur. */
-const GROUP_PANEL =
-  'ml-4 flex flex-col gap-2 border-l-2 border-line pl-3 lg:col-span-full lg:grid lg:grid-cols-[repeat(auto-fill,minmax(min(100%,21rem),1fr))]'
+/** Contenu d'un groupe déplié : en retrait sur téléphone, en colonnes dans son bloc sur ordinateur. */
+const FOLD_PANEL =
+  'ml-4 flex flex-col gap-2 border-l-2 border-line pl-3 lg:ml-0 lg:grid lg:grid-cols-[repeat(auto-fill,minmax(min(100%,21rem),1fr))] lg:border-l-0 lg:p-3'
 
-/** Intitulé du groupe en tête de son contenu, sur ordinateur : l'en-tête n'est plus forcément juste au-dessus. */
-function PanelTitle({ title, tone }: { title: string; tone: (typeof TRACK_TONES)[string] }) {
+/**
+ * Repli d'un groupe : un en-tête, puis son contenu quand il est ouvert. Sur
+ * ordinateur, le groupe ouvert devient un seul bloc encadré, en-tête compris,
+ * sur toute la largeur de la grille : séparés, l'en-tête et son contenu ne se
+ * lisaient plus comme un tout.
+ *
+ * Un simple fondu à l'ouverture plutôt qu'une hauteur animée, et rien à la
+ * fermeture, qui laisserait un instant le contenu hors de son bloc.
+ */
+function Fold({
+  open,
+  onToggle,
+  locked = false,
+  tone,
+  header,
+  children,
+}: {
+  open: boolean
+  onToggle: () => void
+  /** Ouvert d'office, sans pouvoir se replier (recherche dans les sujets). */
+  locked?: boolean
+  tone: (typeof TRACK_TONES)[string]
+  /** Vignette et titre de l'en-tête ; le chevron s'y ajoute. */
+  header: React.ReactNode
+  children: React.ReactNode
+}) {
+  const block = useRef<HTMLDivElement>(null)
+  // Le bloc ouvert peut passer à la rangée suivante : on le garde en vue, mais
+  // seulement après un clic, pas quand l'écran revient avec ses replis ouverts.
+  const clicked = useRef(false)
+  useEffect(() => {
+    if (open && clicked.current) block.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+    clicked.current = false
+  }, [open])
+
   return (
-    <p className={`hidden text-xs font-black tracking-widest uppercase lg:col-span-full lg:block ${tone.text}`}>{title}</p>
+    <div
+      ref={block}
+      className={`flex flex-col gap-3 ${
+        open ? `lg:col-span-full lg:gap-0 lg:overflow-hidden lg:rounded-blob lg:border-2 lg:bg-ink/[0.02] ${tone.openBorder}` : ''
+      }`}
+    >
+      <button
+        type="button"
+        onClick={() => {
+          clicked.current = true
+          onToggle()
+        }}
+        aria-expanded={open}
+        disabled={locked}
+        className={`card-3d flex w-full items-center gap-4 px-4 py-4 text-left ${
+          open ? 'lg:rounded-none lg:border-0 lg:border-b-2 lg:border-line lg:shadow-none' : 'lg:flex-1'
+        }`}
+      >
+        {header}
+        {!locked && (
+          <span className={`text-ink-faint transition-transform ${open ? 'rotate-90' : '-rotate-90'}`}>
+            <ChevronLeftIcon size={20} />
+          </span>
+        )}
+      </button>
+
+      {open && (
+        <motion.div initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.15 }} className={FOLD_PANEL}>
+          {children}
+        </motion.div>
+      )}
+    </div>
   )
 }
 
@@ -834,54 +898,31 @@ function GroupSection({
   const mastery = masteryOf(itemIds, cards)
 
   return (
-    <div className="flex flex-col gap-3 lg:contents">
-      <button
-        type="button"
-        onClick={onToggle}
-        aria-expanded={open}
-        className={`card-3d flex w-full items-center gap-4 px-4 py-4 text-left ${open ? tone.openBorder : ''}`}
-      >
-        <ProgressRing
-          ratio={mastery.ratio}
-          seenRatio={mastery.total === 0 ? 0 : mastery.seen / mastery.total}
-          color={tone.css}
-        />
-        <span className="flex-1">
-          <span className="text-base leading-tight font-extrabold">{group}</span>
-          <span className="mt-0.5 block text-xs font-bold text-ink-faint">
-            {units.length} unité{units.length > 1 ? 's' : ''}
+    // Empilées dans leur repli, les unités se lisent comme des sous-cases de
+    // leur groupe ; `compact` sur `UnitCard` (voir plus haut) les distingue en
+    // plus par un relief atténué.
+    <Fold
+      open={open}
+      onToggle={onToggle}
+      tone={tone}
+      header={
+        <>
+          <ProgressRing
+            ratio={mastery.ratio}
+            seenRatio={mastery.total === 0 ? 0 : mastery.seen / mastery.total}
+            color={tone.css}
+          />
+          <span className="flex-1">
+            <span className="text-base leading-tight font-extrabold">{group}</span>
+            <span className="mt-0.5 block text-xs font-bold text-ink-faint">
+              {units.length} unité{units.length > 1 ? 's' : ''}
+            </span>
           </span>
-        </span>
-        <span className={`text-ink-faint transition-transform ${open ? 'rotate-90' : '-rotate-90'}`}>
-          <ChevronLeftIcon size={20} />
-        </span>
-      </button>
-
-      {/* Un simple repli plutôt qu'une hauteur animée : aucun autre écran de
-          l'app n'anime `height: auto`, et le fondu suffit à faire sentir
-          l'ouverture sans réinventer un mécanisme absent d'ailleurs. Empilées
-          et en retrait (indentation, filet à gauche), les unités se lisent
-          comme des sous-cases de leur groupe plutôt que des unités de même
-          rang — une grille les en aurait trop rapprochées visuellement des
-          cartes de la liste, qui leur sont pourtant supérieures d'un
-          niveau ; `compact` sur `UnitCard` (voir plus bas) les distingue en
-          plus par un relief atténué. Sur ordinateur, ce contenu prend toute la
-          largeur de la grille, sous le nom du groupe (voir `GROUP_PANEL`). */}
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, y: -6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.15 }}
-            className={GROUP_PANEL}
-          >
-            <PanelTitle title={group} tone={tone} />
-            {children}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+        </>
+      }
+    >
+      {children}
+    </Fold>
   )
 }
 
@@ -962,77 +1003,60 @@ function TreatiseIndexView({
       {groups.map(({ key, badge, cover, title, entries: group }) => {
         const open = openGroups.has(key)
         return (
-          <div key={key} className="flex flex-col gap-3 lg:contents">
-            <button
-              type="button"
-              onClick={() => onToggleGroup(key)}
-              aria-expanded={open}
-              className={`card-3d flex w-full items-center gap-4 px-4 py-4 text-left ${open ? tone.openBorder : ''}`}
-            >
-              {cover ? (
-                <img src={cover} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-line" />
-              ) : (
+          <Fold
+            key={key}
+            open={open}
+            onToggle={() => onToggleGroup(key)}
+            tone={tone}
+            header={
+              <>
+                {cover ? (
+                  <img src={cover} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-line" />
+                ) : (
+                  <span
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} font-black ${tone.text} ${
+                      badge.length > 3 ? 'text-[0.65rem]' : 'text-sm'
+                    }`}
+                  >
+                    {badge}
+                  </span>
+                )}
+                <span className="flex-1">
+                  <span className="text-base leading-tight font-extrabold">{title}</span>
+                  <span className="mt-0.5 block text-xs font-bold text-ink-faint">
+                    {group.length} traité{group.length > 1 ? 's' : ''}
+                  </span>
+                </span>
+              </>
+            }
+          >
+            {group.map((entry) => (
+              <button
+                key={entry.id}
+                type="button"
+                onClick={() => onOpenTreatise(entry)}
+                className="flex w-full items-center gap-3 rounded-2xl border-2 border-line/60 bg-ink/[0.03] px-3 py-2.5 text-left"
+              >
+                <span className={`shrink-0 text-xs font-black ${tone.text}`}>
+                  {order === 'chrono' ? entry.chrono : `${ENNEAD_NUMERALS[entry.ennead - 1]}, ${entry.numberInEnnead}`}
+                </span>
+                <span className={`flex-1 text-sm leading-snug text-ink ${entry.highlight ? 'font-black' : 'font-normal'}`}>
+                  {entry.title}
+                </span>
+                {entry.unit && (
+                  <ProgressMini mastery={unitMasteryOf(entry.unit)} tone={tone} />
+                )}
                 <span
-                  className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} font-black ${tone.text} ${
-                    badge.length > 3 ? 'text-[0.65rem]' : 'text-sm'
-                  }`}
+                  className="shrink-0 text-[0.65rem] font-bold text-ink-faint"
+                  title={order === 'chrono' ? "Place chez Porphyre (Ennéade, rang)" : 'Rang chronologique de rédaction'}
                 >
-                  {badge}
+                  {order === 'chrono'
+                    ? `[${ENNEAD_NUMERALS[entry.ennead - 1]}, ${entry.numberInEnnead}]`
+                    : `[${entry.chrono}]`}
                 </span>
-              )}
-              <span className="flex-1">
-                <span className="text-base leading-tight font-extrabold">{title}</span>
-                <span className="mt-0.5 block text-xs font-bold text-ink-faint">
-                  {group.length} traité{group.length > 1 ? 's' : ''}
-                </span>
-              </span>
-              <span className={`text-ink-faint transition-transform ${open ? 'rotate-90' : '-rotate-90'}`}>
-                <ChevronLeftIcon size={20} />
-              </span>
-            </button>
-
-            {/* Même mécanique de repli que `GroupSection`, et même parti pris
-                de sous-cases empilées en retrait : voir sa remarque. */}
-            <AnimatePresence initial={false}>
-              {open && (
-                <motion.div
-                  initial={{ opacity: 0, y: -6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.15 }}
-                  className={GROUP_PANEL}
-                >
-                  <PanelTitle title={title} tone={tone} />
-                  {group.map((entry) => (
-                    <button
-                      key={entry.id}
-                      type="button"
-                      onClick={() => onOpenTreatise(entry)}
-                      className="flex w-full items-center gap-3 rounded-2xl border-2 border-line/60 bg-ink/[0.03] px-3 py-2.5 text-left"
-                    >
-                      <span className={`shrink-0 text-xs font-black ${tone.text}`}>
-                        {order === 'chrono' ? entry.chrono : `${ENNEAD_NUMERALS[entry.ennead - 1]}, ${entry.numberInEnnead}`}
-                      </span>
-                      <span className={`flex-1 text-sm leading-snug text-ink ${entry.highlight ? 'font-black' : 'font-normal'}`}>
-                        {entry.title}
-                      </span>
-                      {entry.unit && (
-                        <ProgressMini mastery={unitMasteryOf(entry.unit)} tone={tone} />
-                      )}
-                      <span
-                        className="shrink-0 text-[0.65rem] font-bold text-ink-faint"
-                        title={order === 'chrono' ? "Place chez Porphyre (Ennéade, rang)" : 'Rang chronologique de rédaction'}
-                      >
-                        {order === 'chrono'
-                          ? `[${ENNEAD_NUMERALS[entry.ennead - 1]}, ${entry.numberInEnnead}]`
-                          : `[${entry.chrono}]`}
-                      </span>
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+              </button>
+            ))}
+          </Fold>
         )
       })}
     </div>
@@ -1190,65 +1214,48 @@ function SubjectsView({
           const open = Boolean(needle) || openGroups.has(key)
           const treated = group.subjects.filter((subject) => subject.unit).length
           return (
-            <div key={key} className={`flex flex-col gap-3 ${needle ? '' : 'lg:contents'}`}>
-              <button
-                type="button"
-                onClick={() => onToggleGroup(key)}
-                aria-expanded={open}
-                disabled={Boolean(needle)}
-                className={`card-3d flex w-full items-center gap-4 px-4 py-4 text-left ${open && !needle ? tone.openBorder : ''}`}
-              >
-                <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} text-sm font-black ${tone.text}`}>
-                  {group.subjects.length}
-                </span>
-                <span className="flex-1">
-                  <span className="text-base leading-tight font-extrabold">{group.title}</span>
-                  <span className="mt-0.5 block text-xs font-bold text-ink-faint">
-                    {group.subjects.length} sujet{group.subjects.length > 1 ? 's' : ''}
-                    {treated > 0 && `, ${treated} traité${treated > 1 ? 's' : ''}`}
+            <Fold
+              key={key}
+              open={open}
+              onToggle={() => onToggleGroup(key)}
+              locked={Boolean(needle)}
+              tone={tone}
+              header={
+                <>
+                  <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${tone.soft} text-sm font-black ${tone.text}`}>
+                    {group.subjects.length}
                   </span>
-                </span>
-                {!needle && (
-                  <span className={`text-ink-faint transition-transform ${open ? 'rotate-90' : '-rotate-90'}`}>
-                    <ChevronLeftIcon size={20} />
+                  <span className="flex-1">
+                    <span className="text-base leading-tight font-extrabold">{group.title}</span>
+                    <span className="mt-0.5 block text-xs font-bold text-ink-faint">
+                      {group.subjects.length} sujet{group.subjects.length > 1 ? 's' : ''}
+                      {treated > 0 && `, ${treated} traité${treated > 1 ? 's' : ''}`}
+                    </span>
                   </span>
-                )}
-              </button>
-
-              <AnimatePresence initial={false}>
-                {open && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.15 }}
-                    className={GROUP_PANEL}
+                </>
+              }
+            >
+              {group.note && !needle && (
+                <p className="px-1 text-xs leading-snug text-ink-soft italic lg:col-span-full">{group.note}</p>
+              )}
+              {group.subjects.map((subject) =>
+                subject.unit ? (
+                  <button
+                    key={subject.title}
+                    type="button"
+                    onClick={() => onOpenUnit(subject.unit!)}
+                    className="flex w-full items-center gap-3 rounded-2xl border-2 border-line/60 bg-ink/[0.03] px-3 py-2.5 text-left"
                   >
-                    {!needle && <PanelTitle title={group.title} tone={tone} />}
-                    {group.note && !needle && (
-                      <p className="px-1 text-xs leading-snug text-ink-soft italic lg:col-span-full">{group.note}</p>
-                    )}
-                    {group.subjects.map((subject) =>
-                      subject.unit ? (
-                        <button
-                          key={subject.title}
-                          type="button"
-                          onClick={() => onOpenUnit(subject.unit!)}
-                          className="flex w-full items-center gap-3 rounded-2xl border-2 border-line/60 bg-ink/[0.03] px-3 py-2.5 text-left"
-                        >
-                          <span className="flex-1 text-sm leading-snug font-extrabold text-ink">{subject.title}</span>
-                          <ProgressMini mastery={unitMasteryOf(subject.unit)} tone={tone} />
-                        </button>
-                      ) : (
-                        <p key={subject.title} className="px-3 py-1.5 text-sm leading-snug text-ink">
-                          {subject.title}
-                        </p>
-                      ),
-                    )}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+                    <span className="flex-1 text-sm leading-snug font-extrabold text-ink">{subject.title}</span>
+                    <ProgressMini mastery={unitMasteryOf(subject.unit)} tone={tone} />
+                  </button>
+                ) : (
+                  <p key={subject.title} className="px-3 py-1.5 text-sm leading-snug text-ink">
+                    {subject.title}
+                  </p>
+                ),
+              )}
+            </Fold>
           )
         })}
       </div>
