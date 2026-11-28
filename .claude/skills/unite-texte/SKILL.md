@@ -1,6 +1,6 @@
 ---
 name: unite-texte
-description: Crée de A à Z une unité de texte Cartophilo (piste « Textes » de Marx ou de Plotin, ou unité de texte dans une piste du Hors-programme ou de La vie) à partir d'un texte à étudier (seul, l'analyse étant alors écrite et vérifiée d'abord), d'un PDF (y compris scanné ou sans texte sélectionnable), d'un commentaire, de notes d'édition ou d'un export Quizlet de cartes déjà écrites : leçons d'introduction, une leçon par paragraphe avec texte intégral et rappel explicatif, cartes-citation aux trous choisis, cartes-explication, validation, branchement dans le cours, commit et push. À utiliser dès qu'on demande de « faire une unité-texte », « ficher ce texte pour l'app », « créer les cartes de ce passage », ou d'importer des cartes Quizlet portant sur un texte précis.
+description: Crée de A à Z une unité de texte Cartophilo (piste « Textes » de Marx ou de Plotin, ou unité de texte dans une piste du Hors-programme ou de La vie) à partir d'un texte à étudier (seul, l'analyse étant alors écrite et vérifiée d'abord), d'un PDF (y compris scanné ou sans texte sélectionnable), d'un commentaire, de notes d'édition ou d'un export Quizlet de cartes déjà écrites, ou règle sur une unité existante son niveau de citations (part du texte à apprendre par cœur, niveaux 1 à 4) : leçons d'introduction, une leçon par paragraphe avec texte intégral et rappel explicatif, cartes-citation aux trous choisis, cartes-explication, validation, branchement dans le cours, commit et push. À utiliser dès qu'on demande de « faire une unité-texte », « ficher ce texte pour l'app », « créer les cartes de ce passage », ou d'importer des cartes Quizlet portant sur un texte précis.
 ---
 
 # Créer une unité de texte
@@ -622,6 +622,51 @@ et affiche les astérisques ; sortir le titre du gras.
   `answer` les donne dans l'ordre, séparés par ` ; `.
 - **La réponse est exactement le texte masqué**, même une phrase entière.
 
+### Le niveau de citations
+
+La quantité de cartes-citation **varie d'un texte à l'autre** : l'un est plein
+de phrases chocs, de passages célèbres, de formules utiles et de définitions,
+un autre se comprend plus qu'il ne se cite. Elle se mesure par la **part des
+mots du texte qui passent dans au moins un trou**, et se demande par niveau, à
+l'écriture ou **une fois l'unité faite** (« niveau 3 sur le Léviathan XIII »,
+« monte cette leçon au niveau 4 »). Demandé sur une unité restée vide, un
+niveau autorise ses cartes-citation, sans les rappels ni les
+cartes-explication.
+
+| Niveau | Part apprise | Ce qu'on fait apprendre |
+| --- | --- | --- |
+| **1, formules** | jusqu'à 25 % environ | les phrases chocs, les passages célèbres, les définitions, les formules utiles : de quoi citer le texte dans une copie |
+| **2, essentiel** | 35 à 50 % | de plus, la thèse de chaque leçon et les mots clefs de chaque articulation |
+| **3, large** | 65 à 80 % | de plus, tous les membres de l'argument, par morceaux de phrases, et quelques phrases entières |
+| **4, par cœur** | 90 % au moins | tout le texte, en cascade : mots clefs, puis morceaux de phrases, puis parfois la phrase entière (modèle : `plotin/units/t1c9`, 96 cartes) |
+
+- Le niveau de citations est **indépendant de `depth`**, qui règle le grain du
+  découpage et l'ampleur du rappel.
+- **Sans demande**, le choisir d'après le texte, et le dire dans le compte
+  rendu avec la part mesurée.
+- La part vaut pour l'unité, **répartie selon la richesse** : une phrase
+  célèbre ou une définition reçoit sa cascade complète même au niveau 1, une
+  transition peut n'avoir aucune carte. Au niveau 4, chaque leçon atteint 90 %.
+- À tout niveau, dans un fragment, **les trous vont du plus court au plus
+  long** (le mot décisif, le membre de phrase, la phrase).
+- Au niveau 4, les règles 4 et 7 ci-dessous cèdent devant les grands trous : un
+  mot qu'on devinerait ou un détail s'apprend dans le membre qui le contient,
+  jamais par un trou à lui seul.
+- **Monter le niveau d'une unité** : seulement ajouter. Les cartes existantes
+  gardent leur identifiant (la révision espacée s'y rattache) et celles de
+  l'utilisateur restent telles quelles ; les nouvelles prennent des
+  identifiants à la suite, s'insèrent à leur place dans la progression et ne
+  doublent aucune carte.
+- **Le baisser** : retirer une carte efface son historique de révision ; lister
+  celles qu'on retirerait et attendre l'accord.
+- **Mesurer** avant et après, depuis la racine du dépôt :
+  ```bash
+  node .claude/skills/unite-texte/couverture.mjs content/courses/<cours>/units/<id>.yaml
+  ```
+  La commande donne la part de chaque leçon, le total et le niveau atteint, et
+  signale toute carte dont le texte ne se retrouve pas dans sa leçon (à
+  corriger, sauf substitution voulue comme un grec translittéré).
+
 ### Choisir les trous
 
 Jamais au hasard. Le trou porte sur **ce qu'il faudrait restituer en citant
@@ -770,6 +815,8 @@ Pour toute l'unité, vérifier :
 - [ ] chaque trou choisi d'après la règle (§ 5) : thèse d'abord, ce que le
       commentaire juge décisif, pas de trou qui se devine, pas de doublon,
       aucune thèse sans carte ;
+- [ ] la quantité de cartes-citation au niveau demandé, ou choisi d'après le
+      texte, et mesurée avec `couverture.mjs` (§ 5) ;
 - [ ] chaque carte-explication attestée par une source ; les points douteux
       signalés, pas appris ;
 - [ ] tout le commentaire couvert, digressions comprises, chaque carte dans
@@ -789,8 +836,8 @@ Pour toute l'unité, vérifier :
    français : « Ajoute l'unité de texte <titre> (<cours>) », avec en corps
    les leçons et les cartes, et ce qui a été corrigé ou laissé de côté. Faire
    `git fetch` avant de pousser.
-3. Rapporter en quelques lignes : leçons et cartes créées, passages
-   illisibles ou douteux, points à vérifier sur le texte ; sans commentaire,
+3. Rapporter en quelques lignes : leçons et cartes créées, niveau de
+   citations et part mesurée, passages illisibles ou douteux, points à vérifier sur le texte ; sans commentaire,
    les sources consultées et les choix d'interprétation.
 
 Les fichiers écrits restent en fins de ligne LF : en Python, écrire avec

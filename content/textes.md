@@ -162,6 +162,11 @@ lessons:
   cartes qui se recoupent restent utiles quand elles varient les trous ou
   font apprendre une citation pas à pas (A, puis A+B, puis A+B+C).
   Règles détaillées dans la skill `unite-texte`.
+- **La quantité de cartes-citation varie avec le texte**, et se demande par
+  niveau, même une fois l'unité faite : 1, les formules à citer (jusqu'à 25 %
+  des mots dans un trou) ; 2, l'essentiel (35 à 50 %) ; 3, large (65 à 80 %) ;
+  4, par cœur (90 % au moins). Détail dans la skill `unite-texte`, § 5, « Le
+  niveau de citations » ; mesure : `couverture.mjs`, dans le même dossier.
 - **Rappels** : jamais d'italique à l'intérieur d'un gras
   (`**L'*Éthique* dit…**`) ; l'analyseur ne sait pas les imbriquer et affiche
   les astérisques.
